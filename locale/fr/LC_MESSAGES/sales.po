@@ -15,8 +15,8 @@
 # Priscilla (prs) Odoo <prs@odoo.com>, 2022
 # Fernanda Marques <fem@odoo.com>, 2022
 # Maxime Chambreuil <mchambreuil@ursainfosystems.com>, 2023
-# Martin Trigaux, 2023
 # Cécile Collart <cco@odoo.com>, 2023
+# Martin Trigaux, 2023
 # Jolien De Paepe, 2023
 # 
 #, fuzzy
@@ -24,7 +24,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-06 08:12+0000\n"
+"POT-Creation-Date: 2023-04-13 05:55+0000\n"
 "PO-Revision-Date: 2022-10-04 12:54+0000\n"
 "Last-Translator: Jolien De Paepe, 2023\n"
 "Language-Team: French (https://app.transifex.com/odoo/teams/41243/fr/)\n"
@@ -116,11 +116,10 @@ msgstr ""
 #: ../../content/applications/sales/sales/send_quotations/orders_and_variants.rst:9
 #: ../../content/applications/sales/sales/send_quotations/quote_template.rst:9
 #: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst:16
-#: ../../content/applications/sales/subscriptions/configuration.rst:5
-#: ../../content/applications/sales/subscriptions/configuration/subscription_products.rst:16
-#: ../../content/applications/sales/subscriptions/configuration/subscription_templates.rst:32
-#: ../../content/applications/sales/subscriptions/sales_flow/closing.rst:31
-#: ../../content/applications/sales/subscriptions/sales_flow/upselling.rst:25
+#: ../../content/applications/sales/subscriptions/closing.rst:31
+#: ../../content/applications/sales/subscriptions/plans.rst:10
+#: ../../content/applications/sales/subscriptions/products.rst:15
+#: ../../content/applications/sales/subscriptions/upselling.rst:25
 msgid "Configuration"
 msgstr "Configuration"
 
@@ -1794,7 +1793,7 @@ msgid ""
 msgstr ""
 "Cliquez ensuite sur le champ de date à côté de l'option :guilabel:`Prendre "
 "en compte les pistes créées à partir du :` pour sélectionner la date à "
-"partir de laquelle la notation prédictive des pistes commencera ses calculs."
+"partir de laquelle la notation prédictive des pistes commencera à calculer."
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:79
 msgid "Lastly, click :guilabel:`Confirm` to save changes."
@@ -1991,12 +1990,18 @@ msgid ""
 "have a probability of success of 20% or greater, create a :guilabel:`Domain`"
 " line that reads: `Probability >= 20`."
 msgstr ""
+"Pour configurer une règle d'assignation de manière à ce qu'une équipe "
+"commerciale reçoive les pistes avec une probabilité de réussite plus grande "
+"ou égale à 20%, créez une ligne de :guilabel:`Domaine` comme suit : "
+"`Probabilité >= 20`."
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:0
 msgid ""
 "Sales team domain set to probability greater than or equal to twenty "
 "percent."
 msgstr ""
+"Domaine d'équipe commerciale défini sur une probabilité plus grande ou égale"
+" à vingt pour cent."
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:160
 msgid ""
@@ -2005,6 +2010,11 @@ msgid ""
 "the :guilabel:`Members` tab, then edit the :guilabel:`Domain` section. Click"
 " :guilabel:`Save` to save changes."
 msgstr ""
+"Des règles d'assignation séparées peuvent également être configurées pour "
+"chaque membre de l'équipe. Depuis la page de configuration de l'équipe "
+"commerciale, cliquez sur un membre de l'équipe dans l'onglet "
+":guilabel:`Membres` et éditez la section :guilabel:`Domaine`. Cliquez sur "
+":guilabel:`Sauvegarder` pour sauvegarder les changements."
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:164
 msgid ""
@@ -2015,6 +2025,14 @@ msgid ""
 "feature. If :guilabel:`Skip auto assignment` is activated, the sales team or"
 " salesperson can still be assigned leads manually."
 msgstr ""
+"Si l'assignation automatique des pistes est configurée dans les paramètres, "
+"l'équipe commerciale et chaque membre de l'équipe ont la possibilité "
+"d':guilabel:`Ignorer l'assignation automatique`. Cochez cette case pour "
+"éviter qu'une équipe commerciale ou un vendeur ne se voie assigner des "
+"pistes automatiquement par la fonctionnalité d'assignation basée sur des "
+"règles d'Odoo. Si l'option :guilabel:`Ignorer l'assignation automatique` est"
+" activée, l'équipe commerciale ou le vendeur peut toujours se voir assigner "
+"des pistes manuellement."
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:170
 msgid ""
@@ -2023,6 +2041,11 @@ msgid ""
 "assign any leads that are currently unassigned and match this team's "
 "specified domain."
 msgstr ""
+"Pour assigner manuellement des pistes à cette équipe commerciale, cliquez "
+"sur le bouton :guilabel:`Assigner des pistes` en haut de la page de "
+"configuration de l'équipe commerciale. Cette opération permet d'assigner des"
+" pistes qui n'ont pas encore été assignées et qui correspondent au domaine "
+"spécifique de l'équipe."
 
 #: ../../content/applications/sales/crm/track_leads/prospect_visits.rst:3
 msgid "Track your prospects visits"
@@ -2571,7 +2594,7 @@ msgstr "Vue d'ensemble"
 
 #: ../../content/applications/sales/point_of_sale/overview/customer_note.rst:3
 msgid "Customer note"
-msgstr ""
+msgstr "Note pour le client"
 
 #: ../../content/applications/sales/point_of_sale/overview/customer_note.rst:5
 msgid ""
@@ -2580,10 +2603,15 @@ msgid ""
 "maintenance tips. They can also be used to track a customer’s particular "
 "request, such as not wanting the product to be assembled for them."
 msgstr ""
+"La fonctionnalité **Note pour le client** vous permet de fournir à vos "
+"clients des informations complémentaires sur un produit spécifique. Il peut "
+"s'agir, par exemple, de conseils de nettoyage et d'entretien. Elle peut "
+"également être utilisée pour suivre la demande particulière d'un client, par"
+" exemple s'il ne souhaite pas que le produit soit assemblé pour lui."
 
 #: ../../content/applications/sales/point_of_sale/overview/customer_note.rst:10
 msgid "Add a customer note"
-msgstr ""
+msgstr "Ajouter une note pour le client"
 
 #: ../../content/applications/sales/point_of_sale/overview/customer_note.rst:12
 msgid ""
@@ -2591,21 +2619,29 @@ msgid ""
 "session>`. To do so, click :guilabel:`Customer Note` on the pad. Doing so "
 "opens a pop-up window in which you can add content for the note."
 msgstr ""
+"Vous pouvez ajouter des notes directement depuis une :ref:`session PdV "
+"<pos/start-session>` ouverte. Pour ce faire, cliquez sur :guilabel:`Note "
+"pour le client` sur le pavé. Cela ouvre une fenêtre contextuelle dans "
+"laquelle vous pouvez ajouter le contenu de la note."
 
 #: ../../content/applications/sales/point_of_sale/overview/customer_note.rst:17
 msgid ""
 "Product notes from an :doc:`imported SO <../shop/sales_order>` are displayed"
 " identically in the cart."
 msgstr ""
+"Les notes de produit d'une :doc:`commande importée <../shop/sales_order>` "
+"sont affichées de manière identique dans le panier."
 
 #: ../../content/applications/sales/point_of_sale/overview/customer_note.rst-1
 msgid ""
 "customer note button and notes (SO and POS session) on products in the cart"
 msgstr ""
+"Bouton Note pour le client et notes (commande et session PdV) sur les "
+"produits dans le panier"
 
 #: ../../content/applications/sales/point_of_sale/overview/customer_note.rst:25
 msgid "Modify a customer note"
-msgstr ""
+msgstr "Modifier une note pour le client"
 
 #: ../../content/applications/sales/point_of_sale/overview/customer_note.rst:27
 msgid ""
@@ -2613,21 +2649,30 @@ msgid ""
 ":guilabel:`Customer Note`. Doing so reopens the previous pop-up window. "
 "Alter the text and click :guilabel:`Add`."
 msgstr ""
+"Sélectionnez le produit dans le panier pour modifier une note existante et "
+"cliquez sur :guilabel:`Note pour le client`. Cette opération rouvre la "
+"fenêtre contextuelle précédente. Modifiez le texte et cliquez sur "
+":guilabel:`Ajouter`."
 
 #: ../../content/applications/sales/point_of_sale/overview/customer_note.rst:31
 msgid "Receipts and invoices"
-msgstr ""
+msgstr "Reçus et factures"
 
 #: ../../content/applications/sales/point_of_sale/overview/customer_note.rst:33
 msgid ""
 "Customer notes appear on customers' receipts and invoices similarly to how "
 "they appear in the cart, meaning under the related product."
 msgstr ""
+"Les notes pour le client apparaissent sur les reçus et les factures des "
+"clients de la même manière qu'elles apparaissent dans le panier, c'est-à-"
+"dire sous le produit concerné."
 
 #: ../../content/applications/sales/point_of_sale/overview/customer_note.rst-1
 msgid ""
 "customer receipt with notes from an SO and from the customer note feature"
 msgstr ""
+"Reçu client avec des notes provenant d'une commande et de la fonctionnalité "
+"de note pour le client"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:5
 msgid "Self-signed certificate for ePOS printers"
@@ -2639,6 +2684,10 @@ msgid ""
 "Once connected, the two devices automatically share information, enabling "
 "the direct printing of tickets from the POS system to the ePOS printer."
 msgstr ""
+"Les imprimantes ePOS sont conçues pour fonctionner en toute transparence "
+"avec les systèmes de Point de Vente. Une fois connectés, les deux appareils "
+"partagent automatiquement les informations, permettant l'impression directe "
+"des tickets du système PdV vers l'imprimante ePOS."
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:12
 msgid ""
@@ -2646,6 +2695,9 @@ msgid ""
 "biz.com/modules/community/index.php?content_id=91>`_ are compatible with "
 "Odoo:"
 msgstr ""
+"Ces `imprimantes Epson ePOS <https://c4b.epson-"
+"biz.com/modules/community/index.php?content_id=91>`_ sont compatibles avec "
+"Odoo :"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:15
 msgid "TM-H6000IV-DT (Receipt printer only)"
@@ -2719,14 +2771,22 @@ msgid ""
 "the printer. However, trying to reach the printer's IP address using HTTPS "
 "leads to a warning page on most web browsers."
 msgstr ""
+"Pour fonctionner avec Odoo, certains modèles qui peuvent être utilisés sans "
+"une :doc:`IoT Box <../../../productivity/iot/config/connect>` peuvent "
+"nécessiter :doc:`le protocole HTTPS <https>` pour établir une connexion "
+"sécurisée entre le navigateur et l'imprimante. Cependant, le fait d'essayer "
+"d'atteindre l'adresse IP de l'imprimante utilisant HTTPS conduit à une page "
+"d'avertissement sur la plupart des navigateurs web."
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:41
 msgid "warning page about the connection privacy on Google Chrome"
 msgstr ""
+"Page d'avertissement sur la confidentialité de la connexion dans Google "
+"Chrome"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:41
 msgid "Warning page on Google Chrome, Windows 10"
-msgstr ""
+msgstr "Page d'avertissement dans Google Chrome, Windows 10"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:43
 msgid ""
@@ -2735,12 +2795,18 @@ msgid ""
 " so allows you to reach the page in HTTPS and use the ePOS printer in Odoo "
 "as long as the browser window stays open."
 msgstr ""
+"Dans ce cas, vous pouvez temporairement forcer la connexion en cliquant sur "
+":guilabel:`Avancé` et :guilabel:`Procéder à [adresse IP] (non sécurisé)`. "
+"Cela vous permet d'accéder à la page en HTTPS et d'utiliser l'imprimante "
+"ePOS dans Odoo tant que la fenêtre du navigateur reste ouverte."
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:48
 msgid ""
 "The previous instructions apply to Google Chrome but are similar to other "
 "browsers."
 msgstr ""
+"Les instructions précédentes s'appliquent à Google Chrome, mais sont "
+"similaires pour les autres navigateurs."
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:51
 msgid ""
@@ -2748,16 +2814,23 @@ msgid ""
 "method should only be used as a **workaround** or as a pre-requisite for the"
 " :ref:`following instructions <epos_ssc/instructions>`."
 msgstr ""
+"La connexion est perdue après la fermeture de la fenêtre du navigateur. Par "
+"conséquent, cette méthode ne doit être utilisée que comme solution de "
+"**contournement** ou comme un prérequis pour les :ref:`instructions "
+"suivantes <epos_ssc/instructions>`."
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:58
 msgid "Generate, export, and import self-signed certificates"
-msgstr ""
+msgstr "Générer, exporter et importer des certificats auto-signés"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:60
 msgid ""
 "For a long-term solution, you must generate a **self-signed certificate**. "
 "Then, export and import it into your browser."
 msgstr ""
+"Pour une solution à long terme, vous devez générer un **certificat auto-"
+"signé**. Ensuite, vous pouvez l'exporter et l'importer dans votre "
+"navigateur."
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:64
 msgid ""
@@ -2765,14 +2838,17 @@ msgid ""
 "create another certificate, devices using the previous one will lose HTTPS "
 "access."
 msgstr ""
+"La **génération** d'un certificat SSL ne doit être fait qu'**une seule "
+"fois**. Si vous créez un autre certificat, les appareils utilisant le "
+"précédent perdront l'accès HTTPS."
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:69
 msgid "Windows 10 & Linux OS"
-msgstr ""
+msgstr "Windows 10 & Linux OS"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:73
 msgid "Generate a self-signed certificate"
-msgstr ""
+msgstr "Générer un certificat auto-signé"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:75
 msgid ""
@@ -2781,6 +2857,11 @@ msgid ""
 ":guilabel:`ID` field and your printer serial number in the "
 ":guilabel:`Password` field."
 msgstr ""
+"Après avoir forcé la connexion, ouvrez une session en utilisant les "
+"identifiants de votre imprimante pour accéder aux paramètres de l'imprimante"
+" ePOS. Pour ouvrir une session, saisissez `epson` dans le champ "
+":guilabel:`ID` et le numéro de série de votre imprimante dans le champ "
+":guilabel:`Mot de passe`."
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:79
 msgid ""
@@ -2792,6 +2873,14 @@ msgid ""
 "click :guilabel:`Create`, and :guilabel:`Reset` or manually restart the "
 "printer."
 msgstr ""
+"Cliquez sur :guilabel:`Liste des certificats` dans la section "
+":guilabel:`Authentification` et cliquez sur :guilabel:`créer` pour générer "
+"un nouveau **Certificat auto-signé**. Le :guilabel:`Nom commun` devrait être"
+" complété automatiquement. Si ce n'est pas le cas, complétez-le avec le "
+"numéro d'adresse IP de l'imprimante. Sélectionnez les années de validité du "
+"certificat dans le champ :guilabel:`Période de validité`, cliquez sur "
+":guilabel:`Créer` et :guilabel:`Réinitialiser` ou redémarrez l'imprimante "
+"manuellement."
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:86
 msgid ""
@@ -2800,10 +2889,14 @@ msgid ""
 "**Selfsigned Certificate** is correctly selected in the :guilabel:`Server "
 "Certificate` section."
 msgstr ""
+"Le certificat auto-signé est généré. Rechargez la page et cliquez sur "
+":guilabel:`SSL/TLS` dans la section :guilabel:`Sécurité` pour vous assurer "
+"que le **Certificat auto-signé** est correctement sélectionné dans la "
+"section :guilabel:`Certificat du serveur`."
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:90
 msgid "Export a self-signed certificate"
-msgstr ""
+msgstr "Exporter un certificat auto-signé"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:92
 msgid ""
@@ -2813,89 +2906,114 @@ msgid ""
 "`https://192.168.1.25`. Then, force the connection as explained in the "
 ":ref:`introduction <epos_ssc/ePOS printers>`."
 msgstr ""
+"La procédure d'exportation dépend fortement du système d'exploitation et du "
+"navigateur. Commencez par accéder aux paramètres de votre imprimante ePOS "
+"sur votre navigateur web en allant à son adresse IP, par exemple, "
+"`https://192.168.1.25`. Ensuite, forcez la connexion comme il est expliqué "
+"dans l':ref:`introduction <epos_ssc/ePOS printers>`."
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:97
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:160
 msgid "If you are using **Google Chrome**,"
-msgstr ""
+msgstr "Si vous utilisez **Google Chrome**,"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:99
 msgid ""
 "click :guilabel:`Not secure` next to the search bar, and "
 ":guilabel:`Certificate is not valid`;"
 msgstr ""
+"cliquez sur :guilabel:`Non sécurisé` à côté de la barre de recherche et "
+":guilabel:`Certificat non valide` ;"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:0
 msgid "Connection to the printer not secure button in Google Chrome browser."
 msgstr ""
+"Le bouton dans la navigateur Google Chrome signalant que la Connexion à "
+"l'imprimante n'est pas sécurisée."
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:106
 msgid "go to the :guilabel:`Details` tab and click :guilabel:`Export`;"
 msgstr ""
+"allez à l'onglet :guilabel:`Détails` et cliquez sur :guilabel:`Exporter` ;"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:107
 msgid ""
 "add `.crt` at the end of the file name to ensure it has the correct "
 "extension;"
 msgstr ""
+"ajoutez `.crt` à la fin du nom de fichier pour vous assurer qu'il a "
+"l'extension correcte ;"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:108
 msgid ""
 "select :guilabel:`Base64-encoded ASCII, single certificate`, at the bottom "
 "of the pop-up window;"
 msgstr ""
+"sélectionnez :guilabel:`ASCII encodé en Base64, certificat unique`, en bas "
+"de la fenêtre contextuelle ;"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:110
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:128
 msgid "save, and the certificate is exported."
-msgstr ""
+msgstr "sauvegardez et le certificat est exporté."
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:113
 msgid ""
 "Make sure that the certificate ends with the extension `.crt`. Otherwise, "
 "some browsers might not see the file during the import process."
 msgstr ""
+"Assurez-vous que le certificat se termine par l'extension `.crt`. Sinon, "
+"certains navigateurs risquent de ne pas voir le fichier pendant la procédure"
+" d'importation."
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:116
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:172
 msgid "If you are using **Mozilla Firefox**,"
-msgstr ""
+msgstr "Si vous utilisez **Mozilla Firefox**,"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:118
 msgid "click the **lock-shaped** icon on the left of the address bar;"
 msgstr ""
+"cliquez sur l'icône en forme de **cadenas** à gauche de la barre d'adresse ;"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:119
 msgid ""
 "go to :menuselection:`Connection not secure --> More information --> "
 "Security tab --> View certificate`;"
 msgstr ""
+"allez à :menuselection:`Connexion non sécurisée --> Plus d'informations --> "
+"Onglet Sécurité --> Afficher le certificat` ;"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:0
 msgid "Connection is not secure button in Mozilla Firefox browser"
 msgstr ""
+"Le bouton dans le navigateur Mozilla Firefox signalant que la connexion "
+"n'est pas sécurisée."
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:126
 msgid "scroll down to the :guilabel:`Miscellaneous` section;"
-msgstr ""
+msgstr "descendez jusqu'à la section :guilabel:`Divers` ;"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:127
 msgid "click :guilabel:`PEM (cert)` in the :guilabel:`Download` section;"
 msgstr ""
+"cliquez sur :guilabel:`PEM (cert)` dans la section :guilabel:`Télécharger` ;"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:130
 msgid "Import a self-signed certificate"
-msgstr ""
+msgstr "Importer un certificat auto-signé"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:132
 msgid ""
 "The import process is heavily dependent on the :abbr:`OS (Operating System)`"
 " and the browser."
 msgstr ""
+"La procédure d'importation dépend fortement du système d'exploitation et du "
+"navigateur."
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:137
 msgid "Windows 10"
-msgstr ""
+msgstr "Windows 10"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:139
 msgid ""
@@ -2903,17 +3021,24 @@ msgid ""
 "must be imported from the certification file rather than the browser. To do "
 "so,"
 msgstr ""
+"Windows 10 gère les certificats, ce qui signifie que les certificats auto-"
+"signés doivent être importés depuis le fichier de certification plutôt que "
+"depuis le navigateur. Procédez comme suit :"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:142
 msgid ""
 "open the Windows File Explorer and locate the downloaded certification file;"
 msgstr ""
+"ouvrez l'explorateur de fichiers de Windows et localisez le fichier de "
+"certification téléchargé ;"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:143
 msgid ""
 "right-click on the certification file and click :guilabel:`Install "
 "Certificate`;"
 msgstr ""
+"cliquez droit sur le fichier de certification et cliquez sur "
+":guilabel:`Installer le certificat` ;"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:145
 msgid ""
@@ -2921,6 +3046,9 @@ msgid ""
 ":guilabel:`Current User` or all users (:guilabel:`Local Machine`). Then, "
 "click :guilabel:`Next`;"
 msgstr ""
+"sélectionnez où installer le certificat et pour qui - soit pour "
+"l':guilabel:`utilisateur actuel`, soit pour tous les utilisateurs "
+"(:guilabel:`Ordinateur local`). Cliquez ensuite sur :guilabel:`Suivant` ;"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:148
 msgid ""
@@ -2928,14 +3056,22 @@ msgid ""
 " the following store`, click :guilabel:`Browse...`, and select "
 ":guilabel:`Trusted Root Certification Authorities`;"
 msgstr ""
+"sur l'écran du `Magasin de certificats`, cochez :guilabel:`Placer tous les "
+"certificats dans le magasin suivant`, cliquez sur :guilabel:`Parcourir...` "
+"et sélectionnez :guilabel:`Autorités de certification racines de confiance` "
+";"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:155
 msgid "click :guilabel:`Finish`, accept the pop-up security window;"
 msgstr ""
+"cliquez sur :guilabel:`Terminer`, acceptez la fenêtre contextuelle de "
+"sécurité ;"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:156
 msgid "restart the computer to make sure that the changes are applied."
 msgstr ""
+"redémarrez l'ordinateur pour vous assurer que tous les changements sont "
+"appliqués."
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:158
 msgid "Linux"
@@ -2943,78 +3079,90 @@ msgstr "Linux"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:162
 msgid "open Chrome;"
-msgstr ""
+msgstr "ouvrez Chrome ;"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:163
 msgid ""
 "go to :menuselection:`Settings --> Privacy and security --> Security --> "
 "Manage certificates`;"
 msgstr ""
+"allez à :menuselection:`Paramètres --> Confidentialité et sécurité --> "
+"Sécurité --> Gérer les certificats` ;"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:165
 msgid ""
 "go to the :guilabel:`Authorities` tab, click :guilabel:`Import`, and select "
 "the exported certification file;"
 msgstr ""
+"allez à l'onglet :guilabel:`Autorités`, cliquez sur :guilabel:`Importer` et "
+"sélectionnez le fichier de certification importé ;"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:167
 msgid "accept all warnings;"
-msgstr ""
+msgstr "acceptez tous les avertissements ;"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:168
 msgid "click :guilabel:`ok`;"
-msgstr ""
+msgstr "cliquez sur :guilabel:`ok` ;"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:169
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:179
 msgid "restart your browser."
-msgstr ""
+msgstr "redémarrez votre navigateur."
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:174
 msgid "open Firefox;"
-msgstr ""
+msgstr "ouvrez Firefox ;"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:175
 msgid ""
 "go to :menuselection:`Settings --> Privacy & Security --> Security --> View "
 "Certificates... --> Import`;"
 msgstr ""
+"allez à :menuselection:`Paramètres --> Confidentialité & Sécurité --> "
+"Sécurité --> Afficher les certificats... --> Importer` ; "
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:177
 msgid "select the exported certification file;"
-msgstr ""
+msgstr "sélectionnez le fichier de certification exporté ;"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:178
 msgid "tick the checkboxes and validate;"
-msgstr ""
+msgstr "cochez les cases à cocher et validez ;"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:181
 msgid "Mac OS"
-msgstr ""
+msgstr "Mac OS"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:183
 msgid "To secure the connection on a Mac:"
-msgstr ""
+msgstr "Pour sécuriser la connexion sur un Mac :"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:185
 msgid ""
 "open Safari and navigate to your printer's IP address. Doing so leads to a "
 "warning page;"
 msgstr ""
+"ouvrez Safari et allez à l'adresse IP de votre imprimante. Une page "
+"d'avertissement s'affiche ;"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:186
 msgid ""
 "on the warning page,  go to :menuselection:`Show Details --> visit this "
 "website --> Visit Website`, validate;"
 msgstr ""
+"sur la page d'avertissement, allez à :menuselection:`Afficher les détails "
+"--> visiter ce site web --> Visiter le site web`, validez ;"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:188
 msgid "reboot the printer so you can use it with any other browser."
 msgstr ""
+"redémarrez l'imprimante pour pouvoir l'utiliser avec n'importe quel autre "
+"navigateur."
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:190
 msgid "Android OS"
-msgstr ""
+msgstr "Android OS"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:192
 msgid ""
@@ -3022,24 +3170,33 @@ msgid ""
 " it from a computer. Next, transfer the `.crt` file to the device using "
 "email, Bluetooth, or USB. Once the file is on the device,"
 msgstr ""
+"Pour importer un certificat SSL sur un appareil Android, il faut d'abord le "
+"créer et l'exporter à partir d'un ordinateur. Ensuite, transférez le fichier"
+" `.crt` vers l'appareil par email, Bluetooth ou USB. Une fois le fichier sur"
+" l'appareil,"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:196
 msgid "open the settings and search for `certificate`;"
-msgstr ""
+msgstr "ouvrez les paramètres et recherchez le `certificat` ;"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:197
 msgid "click :guilabel:`Certificate AC` (Install from device storage);"
 msgstr ""
+"cliquez sur :guilabel:`Certificate AC` (Installer à partir du stockage de "
+"l'appareil) ;"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:198
 msgid "select the certificate file to install it on the device."
 msgstr ""
+"sélectionnez le fichier de certificat pour l'installer sur l'appareil."
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:201
 msgid ""
 "The specific steps for installing a certificate may vary depending on the "
 "version of Android and the device manufacturer."
 msgstr ""
+"Les étapes spécifiques pour l'installation d'un certificat peuvent dépendre "
+"fortement de la version d'Android et du fabriquant de l'appareil."
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:206
 msgid ""
@@ -3048,6 +3205,10 @@ msgid ""
 "`the name of your browser or operating system` in your preferred search "
 "engine."
 msgstr ""
+"Si vous devez exporter des certificats SSL à partir d'un système "
+"d'exploitation ou d'un navigateur qui n'a pas été mentionné, recherchez "
+"`exporter certificat SSL` + `le nom de votre navigateur ou système "
+"d'exploitation` dans votre moteur de recherche préféré."
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:209
 msgid ""
@@ -3055,10 +3216,14 @@ msgid ""
 "search for `import SSL certificate root authority` + `the name of your "
 "browser or operating system` in your preferred search engine."
 msgstr ""
+"De même, pour importer des certificats SSL à partir d'un système "
+"d'exploitation ou d'un navigateur, recherchez `importer certificat SSL "
+"autorité racine` + `le nom de votre navigateur ou système d'opération` dans "
+"votre moteur de recherche préféré."
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:214
 msgid "Check if the certificate was imported correctly"
-msgstr ""
+msgstr "Vérifiez si le certificat est correctement importé"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:216
 msgid ""
@@ -3068,6 +3233,12 @@ msgid ""
 "longer see a warning page, and the address bar should display a padlock "
 "icon, indicating that the connection is secure."
 msgstr ""
+"Pour confirmer que la connexion de votre imprimante est sécurisée, "
+"connectez-vous à son adresse IP en utilisant HTTPS. Par exemple, allez à "
+"`https://192.168.1.25` dans votre navigateur. Si le certificat SSL a été "
+"correctement appliqué, vous ne devriez plus voir de page d'avertissement et "
+"la barre d'adresse devrait afficher une icône de cadenas, indiquant que la "
+"connexion est sécurisée."
 
 #: ../../content/applications/sales/point_of_sale/overview/getting_started.rst:3
 msgid "Getting started"
@@ -4748,7 +4919,7 @@ msgstr ":doc:`floors_tables`"
 
 #: ../../content/applications/sales/point_of_sale/restaurant/fiscal_position.rst:3
 msgid "Flexible taxes (fiscal positions)"
-msgstr ""
+msgstr "Taxes flexibles (positions fiscales)"
 
 #: ../../content/applications/sales/point_of_sale/restaurant/fiscal_position.rst:5
 msgid ""
@@ -4756,21 +4927,28 @@ msgid ""
 "transactions on various accounts based on the location and type of business "
 "of your customers and providers."
 msgstr ""
+"Lorsque vous gérez une entreprise, vous pouvez être amené à appliquer "
+"différentes taxes et à enregistrer des transactions sur différents comptes "
+"en fonction de la localisation et du type d'activité de vos clients et "
+"fournisseurs."
 
 #: ../../content/applications/sales/point_of_sale/restaurant/fiscal_position.rst:8
 msgid ""
 "The **fiscal positions** feature enables you to establish rules that "
 "automatically select the right taxes and accounts used for each transaction."
 msgstr ""
+"La fonctionnalité **positions fiscales** vous permet d'établir des règles "
+"qui sélectionnent automatiquement les bonnes taxes et les bons comptes à "
+"utiliser pour chaque transaction."
 
 #: ../../content/applications/sales/point_of_sale/restaurant/fiscal_position.rst:12
 #: ../../content/applications/sales/point_of_sale/restaurant/fiscal_position.rst:51
 msgid ":doc:`../../../finance/accounting/taxation/taxes/fiscal_positions`"
-msgstr ""
+msgstr ":doc:`../../../finance/accounting/taxation/taxes/fiscal_positions`"
 
 #: ../../content/applications/sales/point_of_sale/restaurant/fiscal_position.rst:13
 msgid ":doc:`../../../finance/accounting/taxation/taxes/taxes`"
-msgstr ""
+msgstr ":doc:`../../../finance/accounting/taxation/taxes/taxes`"
 
 #: ../../content/applications/sales/point_of_sale/restaurant/fiscal_position.rst:18
 msgid ""
@@ -4778,6 +4956,9 @@ msgid ""
 " --> Settings`, scroll down to the :guilabel:`Accounting` section, and "
 "enable :guilabel:`Flexible Taxes`."
 msgstr ""
+"Pour activer la fonctionnalité, allez à :menuselection:`Point de Vente --> "
+"Configuration --> Paramètres`, descendez jusqu'à la section "
+":guilabel:`Comptabilité` et activez :guilabel:`Taxes flexibles`."
 
 #: ../../content/applications/sales/point_of_sale/restaurant/fiscal_position.rst:21
 msgid ""
@@ -4785,6 +4966,10 @@ msgid ""
 "the selected POS in the :guilabel:`Default` field. You can also add more "
 "fiscal positions to choose from in the :guilabel:`Allowed` field."
 msgstr ""
+"Ensuite, définissez une position fiscale qui devrait s'appliquer à toutes "
+"les ventes dans le PdV sélectionnez dans le champ :guilabel:`Par défaut`. "
+"Vous pouvez également ajouter d'autres positions fiscales dans le champ "
+":guilabel:`Autorisé`."
 
 #: ../../content/applications/sales/point_of_sale/restaurant/fiscal_position.rst:28
 msgid ""
@@ -4793,16 +4978,23 @@ msgid ""
 " are preconfigured and can be set and used in POS. However, you can also "
 ":ref:`create new fiscal positions <fiscal_positions/mapping>`."
 msgstr ""
+"Selon le :doc:`package de localisation fiscale "
+"<../../../finance/fiscal_localizations>` activé, plusieurs positions "
+"fiscales sont préconfigurées et peuvent être définies et utilisées dans le "
+"PdV. Cependant, vous pouvez également :ref:`créer de nouvelles positions "
+"fiscales <fiscal_positions/mapping>`."
 
 #: ../../content/applications/sales/point_of_sale/restaurant/fiscal_position.rst:33
 msgid ""
 "If you do not set a fiscal position, the tax remains as defined in the "
 "**customer taxes** field on the product form."
 msgstr ""
+"Si vous ne définissez pas de position fiscale, la taxe reste telle qu'elle "
+"est définie dans le champ **taxes client** de la fiche produit."
 
 #: ../../content/applications/sales/point_of_sale/restaurant/fiscal_position.rst:37
 msgid "Use fiscal positions"
-msgstr ""
+msgstr "Utiliser des positions fiscales"
 
 #: ../../content/applications/sales/point_of_sale/restaurant/fiscal_position.rst:39
 msgid ""
@@ -4812,12 +5004,20 @@ msgid ""
 "the defined rules automatically to all the products subject to the chosen "
 "fiscal position's regulations."
 msgstr ""
+"Ouvrez une :ref:`session PdV <pos/start-session>` pour utiliser l'une des "
+"positions fiscales autorisées. Cliquez ensuite sur le bouton "
+":guilabel:`Taxe` à côté de l'icône en forme de **livre** et sélectionnez une"
+" position fiscale dans la liste. Les règles définies s'appliquent alors "
+"automatiquement à tous les produits soumis aux réglementations de la "
+"position fiscale choisie."
 
 #: ../../content/applications/sales/point_of_sale/restaurant/fiscal_position.rst:48
 msgid ""
 "If a default fiscal position is set, the tax button displays the name of the"
 " fiscal position."
 msgstr ""
+"Si une position fiscale par défaut est définie, le bouton de taxe affiche le"
+" nom de la position fiscale."
 
 #: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:3
 msgid "Floors and tables management"
@@ -8086,41 +8286,6 @@ msgstr ""
 "Lorsque vous cliquez sur envoyer, Odoo vous enverra un email avec la facture"
 " pro forma en pièce jointe."
 
-#: ../../content/applications/sales/sales/invoicing/subscriptions.rst:3
-msgid "Sell subscriptions"
-msgstr "Vendre des abonnements"
-
-#: ../../content/applications/sales/sales/invoicing/subscriptions.rst:5
-msgid ""
-"Selling subscription products will give you predictable revenue, making "
-"planning ahead much easier."
-msgstr ""
-"Vendre des produits d'abonnement vous procurera des revenus prévisibles, ce "
-"qui facilitera grandement la planification."
-
-#: ../../content/applications/sales/sales/invoicing/subscriptions.rst:9
-msgid "Make a subscription from a sales order"
-msgstr "Créer un abonnement à partir d'une commande client"
-
-#: ../../content/applications/sales/sales/invoicing/subscriptions.rst:11
-msgid ""
-"From the sales app, create a quotation to the desired customer, and select "
-"the subscription product your previously created from the Subscriptions App."
-msgstr ""
-"Dans l'application Ventes, créez un devis pour le client souhaité et "
-"sélectionnez le produit d'abonnement que vous avez précédemment créé dans "
-"l'application Abonnements."
-
-#: ../../content/applications/sales/sales/invoicing/subscriptions.rst:14
-msgid ""
-"When you confirm the sale the subscription will be created automatically. "
-"You will see a direct link from the sales order to the Subscription in the "
-"upper right corner."
-msgstr ""
-"Lorsque vous confirmez la vente, l'abonnement sera créé automatiquement. "
-"Vous verrez un lien direct depuis le bon de commande vers l'abonnement dans "
-"le coin supérieur droit."
-
 #: ../../content/applications/sales/sales/invoicing/time_materials.rst:3
 msgid "Invoice based on time and materials"
 msgstr "Facturation en fonction du temps et des matériaux"
@@ -10855,7 +11020,6 @@ msgid "How to enable quotation builder on Odoo Sales?"
 msgstr "Comment activer le constructeur de devis dans Odoo Ventes ?"
 
 #: ../../content/applications/sales/sales/send_quotations/quote_template.rst:29
-#: ../../content/applications/sales/subscriptions/configuration/subscription_templates.rst:47
 msgid "Create your first template"
 msgstr "Créer votre premier modèle"
 
@@ -11179,22 +11343,26 @@ msgstr ""
 "Avec Odoo Ventes, il est désormais très simple de gérer les conditions "
 "générales."
 
-#: ../../content/applications/sales/subscriptions.rst:8
+#: ../../content/applications/sales/subscriptions.rst:5
 msgid "Subscriptions"
 msgstr "Abonnements"
 
-#: ../../content/applications/sales/subscriptions.rst:10
+#: ../../content/applications/sales/subscriptions.rst:7
 msgid ""
-"**Odoo Subscriptions** is used to run recurring businesses: sell new "
-"contracts, upsell customers, keep the churn under control and have reporting"
-" on the main KPIs: MRR, ARR, retention, churn, upselling, etc."
+"**Odoo Subscriptions** is used to run recurring businesses: :ref:`sell new "
+"contracts <subscriptions/quotations>`, :doc:`upsell customers "
+"<subscriptions/upselling>`, keep the churn under control, and :doc:`generate"
+" reports <subscriptions/reports>` on the main KPIs: MRR, ARR, retention, "
+"churn, upselling, etc."
 msgstr ""
 "**Odoo Abonnements** est utilisé pour gérer les activités récurrentes : "
-"vendre de nouveaux contrats, réaliser de la vente incitative, garder le taux"
-" d'attrition sous contrôle et obtenir des rapports sur les principaux KPIs :"
-" MRR, ARR, rétention, attrition, vente incitative, etc."
+":ref:`vendre de nouveaux contrats <subscriptions/quotations>`, "
+":doc:`réaliser de la vente incitative <subscriptions/upselling>`, garder le "
+"taux d'attrition sous contrôle et :doc:`générer des rapports "
+"<subscriptions/reports>` sur les principaux KPIs : MRR, ARR, rétention, "
+"attrition, vente incitative, etc."
 
-#: ../../content/applications/sales/subscriptions.rst:15
+#: ../../content/applications/sales/subscriptions.rst:13
 msgid ""
 "`Odoo Tutorials: Subscriptions "
 "<https://www.odoo.com/slides/subscription-20>`_"
@@ -11202,323 +11370,150 @@ msgstr ""
 "`Tutoriels Odoo : Abonnements "
 "<https://www.odoo.com/slides/subscription-20>`_"
 
-#: ../../content/applications/sales/subscriptions/configuration/subscription_products.rst:3
-msgid "Add subscription products"
-msgstr "Ajouter des produits d'abonnement"
+#: ../../content/applications/sales/subscriptions.rst:14
+msgid ":doc:`subscriptions/products`"
+msgstr ":doc:`subscriptions/products`"
 
-#: ../../content/applications/sales/subscriptions/configuration/subscription_products.rst:5
+#: ../../content/applications/sales/subscriptions.rst:15
+msgid ":doc:`subscriptions/plans`"
+msgstr ":doc:`subscriptions/plans`"
+
+#: ../../content/applications/sales/subscriptions.rst:16
+msgid ":doc:`subscriptions/upselling`"
+msgstr ":doc:`subscriptions/upselling`"
+
+#: ../../content/applications/sales/subscriptions.rst:17
+msgid ":doc:`subscriptions/renewals`"
+msgstr ":doc:`subscriptions/renewals`"
+
+#: ../../content/applications/sales/subscriptions.rst:18
+msgid ":doc:`subscriptions/closing`"
+msgstr ":doc:`subscriptions/closing`"
+
+#: ../../content/applications/sales/subscriptions.rst:19
+msgid ":doc:`subscriptions/automatic_alerts`"
+msgstr ":doc:`subscriptions/automatic_alerts`"
+
+#: ../../content/applications/sales/subscriptions.rst:20
+msgid ":doc:`subscriptions/reports`"
+msgstr ":doc:`subscriptions/reports`"
+
+#: ../../content/applications/sales/subscriptions.rst:25
+msgid "Subscription quotations"
+msgstr "Devis d'abonnement"
+
+#: ../../content/applications/sales/subscriptions.rst:28
+msgid "Sales orders with a defined recurrence become subscriptions."
+msgstr ""
+"Les commandes avec une récurrence définie se transforment en abonnements."
+
+#: ../../content/applications/sales/subscriptions.rst:30
 msgid ""
-"To properly sell your subscriptions using our amazing **Odoo Subscriptions**"
-" application, you must follow these steps:"
+"To create a new subscription, click on :guilabel:`New` from the Subscription"
+" or the :doc:`Sales <sales>` app. You can either:"
 msgstr ""
-"Pour vendre correctement vos abonnements à l'aide de notre magnifique "
-"application **Odoo Abonnements**, vous devez suivre les étapes suivantes :"
+"Pour créer un nouvel abonnement, cliquez sur :guilabel:`Nouveau` depuis "
+"l'abonnement ou l'application :doc:`Ventes <sales>`. Vous pouvez soit :"
 
-#: ../../content/applications/sales/subscriptions/configuration/subscription_products.rst:8
-msgid "**Create your own subscription templates**"
-msgstr "**Créez vos propres modèles d'abonnement**"
-
-#: ../../content/applications/sales/subscriptions/configuration/subscription_products.rst:9
-msgid "**Create your own subscription products with the right settings**"
-msgstr "**Créez vos propres produits d'abonnement avec les bons paramètres**"
-
-#: ../../content/applications/sales/subscriptions/configuration/subscription_products.rst:11
+#: ../../content/applications/sales/subscriptions.rst:33
 msgid ""
-"As a result, you will be able to manage your subscriptions like any other "
-"product, create your quotations and continue the sales flow to track the "
-"number of subscriptions you sell and manage the revenue they generate."
+"Select a :doc:`subscription plan <subscriptions/plans>` to prefill the "
+"quotation instantly, or"
 msgstr ""
-"De ce fait, vous pourrez gérer vos abonnements comme n'importe quel autre "
-"produit, créer vos devis et poursuivre le flux des ventes pour suivre le "
-"nombre d'abonnements que vous vendez et gérer les revenus qu'ils génèrent."
+"Sélectionner un :doc:`plan abonnement <subscriptions/plans>` pour préremplir"
+" le devis instantanément, ou"
 
-#: ../../content/applications/sales/subscriptions/configuration/subscription_products.rst:18
+#: ../../content/applications/sales/subscriptions.rst:34
 msgid ""
-"Go to :menuselection:`Subscriptions --> Subscription products` to learn how "
-"you can configure your own subscription products. You have the possibility "
-"to create a new product or edit an existing one. Once named, be careful to "
-"select the option *Can be sold* and deselect *Can be purchased*. For the "
-"product type, it is recommended to use *Service* for subscription products "
-"as they are non-material products that you provide to your customers. "
-"Finally, you can adapt your prices and also add an internal reference."
+"Fill out the quotation normally, making sure to select a recurrence and an "
+"end date if necessary and adding :doc:`recurrent products "
+"<subscriptions/products>`."
 msgstr ""
-"Allez à :menuselection:`Abonnements --> Produits d'abonnement` pour "
-"apprendre comment vous pouvez configurer vos propres produits d'abonnement. "
-"Vous avez la possibilité de créer un nouveau produit ou modifier un produit "
-"existant. Après avoir donné un nom au produit, veillez à cocher l'option "
-"*Peut être vendu* et décocher l'option *Peut être acheté*. Pour le type de "
-"produit, il est recommandé d'utiliser *Service* pour les produits "
-"d'abonnement, car ce sont des produits immatériels que vous fournissez à vos"
-" clients. Enfin, vous pouvez adapter vos prix et également ajouter une "
-"référence interne."
+"Compléter le devis normalement, veillant à sélectionner une récurrence et "
+"une date de fin si nécessaire et à ajouter des :doc:`produits récurrents "
+"<subscriptions/products>`."
 
-#: ../../content/applications/sales/subscriptions/configuration/subscription_products.rst-1
-#: ../../content/applications/sales/subscriptions/configuration/subscription_products.rst:0
-msgid "View of a subscription product form in Odoo Subscriptions"
-msgstr "Vue d'un formulaire de produit d'abonnement dans Odoo Abonnements"
-
-#: ../../content/applications/sales/subscriptions/configuration/subscription_products.rst:30
+#: ../../content/applications/sales/subscriptions.rst:38
 msgid ""
-"In the Sales tab, underneath the Subscriptions section, make sure the "
-"*Subscription products* option is activated. In fact, if you create a "
-"subscription product from the **Odoo Subscriptions** application, this "
-"option is selected by default. However, if you create a product from another"
-" application, it is not the case."
+"You can define different invoice and delivery addresses by enabling the "
+":doc:`Customer Addresses <sales/send_quotations/different_addresses>` "
+"feature."
 msgstr ""
-"Dans l'onglet Vente, dans la section Abonnements, assurez-vous que l'option "
-"*Produits d'abonnement* est activée. En effet, si vous créez un produit "
-"d'abonnement à partir de l'application **Odoo Abonnements**, cette option "
-"est sélectionnée par défaut. Cependant, si vous créez un produit à partir "
-"d'une autre application, ce n'est pas le cas."
+"Vous pouvez définir différentes adresses de facturation et de livraison en "
+"activant la fonctionnalité :doc:`Adresses client "
+"<sales/send_quotations/different_addresses>`."
 
-#: ../../content/applications/sales/subscriptions/configuration/subscription_products.rst:39
-msgid "You can also choose the subscription templates you want to use."
-msgstr ""
-"Vous pouvez également choisir les modèles d'abonnement que vous souhaitez "
-"utiliser."
+#: ../../content/applications/sales/subscriptions.rst:44
+msgid "Confirmation"
+msgstr "Confirmation"
 
-#: ../../content/applications/sales/subscriptions/configuration/subscription_products.rst:46
+#: ../../content/applications/sales/subscriptions.rst:46
 msgid ""
-"Be sure to check out our documentation on how to create, edit and manage "
-"your own :doc:`Subscription templates "
-"<../../subscriptions/configuration/subscription_templates>` before creating "
-"your own subscription products. Once created, check out our documentation on"
-" how to :doc:`Create a quotation using subscription products "
-"<../../subscriptions/sales_flow/create_a_quotation>`, to complete the sales "
-"flow."
+"Send the quotation to the customer for confirmation by clicking on "
+":guilabel:`Send by email`, or confirm it immediately by clicking on "
+":guilabel:`Confirm`."
 msgstr ""
-"N'hésitez pas à consulter notre documentation sur la façon de créer, "
-"modifier et gérer vos propres :doc:`modèles d'abonnement "
-"<../../subscriptions/configuration/subscription_templates>` avant de créer "
-"vos propres produits d'abonnement. Après la création de vos produits, "
-"consultez notre documentation sur la façon de :doc:`Créer un devis en "
-"utilisant des produits d'abonnement "
-"<../../subscriptions/sales_flow/create_a_quotation>`, pour compléter le flux"
-" de vente."
+"Envoyez le devis au client pour confirmation en cliquant sur "
+":guilabel:`Envoyer par email` ou confirmez-le immédiatement en cliquant sur "
+":guilabel:`Confirmer`."
 
-#: ../../content/applications/sales/subscriptions/configuration/subscription_products.rst:53
-#: ../../content/applications/sales/subscriptions/follow_up/automatic_alerts.rst:83
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst:120
-#: ../../content/applications/sales/subscriptions/sales_flow/closing.rst:105
-#: ../../content/applications/sales/subscriptions/sales_flow/create_a_quotation.rst:79
-#: ../../content/applications/sales/subscriptions/sales_flow/renewals.rst:80
-#: ../../content/applications/sales/subscriptions/sales_flow/upselling.rst:83
-msgid ":doc:`../../subscriptions/configuration/subscription_templates`"
-msgstr ":doc:`../../subscriptions/configuration/subscription_templates`"
-
-#: ../../content/applications/sales/subscriptions/configuration/subscription_products.rst:54
-#: ../../content/applications/sales/subscriptions/follow_up/automatic_alerts.rst:85
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst:122
-#: ../../content/applications/sales/subscriptions/sales_flow/closing.rst:107
-#: ../../content/applications/sales/subscriptions/sales_flow/renewals.rst:82
-#: ../../content/applications/sales/subscriptions/sales_flow/upselling.rst:85
-msgid ":doc:`../../subscriptions/sales_flow/create_a_quotation`"
-msgstr ":doc:`../../subscriptions/sales_flow/create_a_quotation`"
-
-#: ../../content/applications/sales/subscriptions/configuration/subscription_templates.rst:3
-msgid "Use subscription templates"
-msgstr "Utiliser des modèles d'abonnement"
-
-#: ../../content/applications/sales/subscriptions/configuration/subscription_templates.rst:5
+#: ../../content/applications/sales/subscriptions.rst:50
 msgid ""
-"The subscription business model is becoming more popular. Are you wondering "
-"why?"
+"Click on :guilabel:`Customer Preview` to preview the customer portal where "
+"the customer can view their quotation, sign and pay it, and communicate with"
+" you."
 msgstr ""
-"Le modèle commercial par abonnement devient de plus en plus populaire. Vous "
-"vous demandez pourquoi ?"
+"Cliquez sur :guilabel:`Aperçu client` pour afficher un aperçu du portail "
+"client où le client peut voir son devis, le signer, le payer et le "
+"communiquer avec vous."
 
-#: ../../content/applications/sales/subscriptions/configuration/subscription_templates.rst:7
-msgid "For **customers**, value lies in **convenience**:"
-msgstr "Pour les **clients**, la valeur réside dans la **commodité** :"
+#: ../../content/applications/sales/subscriptions.rst:56
+msgid "Automatic payments"
+msgstr "Paiements automatiques"
 
-#: ../../content/applications/sales/subscriptions/configuration/subscription_templates.rst:9
+#: ../../content/applications/sales/subscriptions.rst:58
 msgid ""
-"Subscriptions simplify the business process. Indeed, subscribers never have "
-"to remember to renew their orders every month, which gives them the "
-"assurance that they will have everything they need before they actually need"
-" it."
+"You can require the customer to set an automatic payment method and pre-pay "
+"the subscription's first occurrence before they can confirm their quotation."
+" To do so, go to the :guilabel:`Other Info` tab of the quotation and check "
+"the :guilabel:`Payment` option in the :guilabel:`Online confirmation` field."
 msgstr ""
-"Les abonnements simplifient le processus commercial. En effet, les abonnés "
-"n'ont jamais à penser à renouveler leurs commandes tous les mois, ce qui "
-"leur donne l'assurance qu'ils auront tout ce dont ils ont besoin avant d'en "
-"avoir réellement besoin."
+"Vous pouvez demander au client de définir un mode de paiement automatique et"
+" payer à l'avance la première occurrence de l'abonnement avant de pouvoir "
+"confirmer son devis. Pour ce faire, allez à l'onglet :guilabel:`Autres "
+"informations` du devis et cochez l'option :guilabel:`Paiement` dans le champ"
+" :guilabel:`Confirmation en ligne`."
 
-#: ../../content/applications/sales/subscriptions/configuration/subscription_templates.rst:12
-msgid "Subscriptions help customers stay on budget."
-msgstr "Les abonnements aident les clients à respecter leur budget."
-
-#: ../../content/applications/sales/subscriptions/configuration/subscription_templates.rst:14
+#: ../../content/applications/sales/subscriptions.rst:63
 msgid ""
-"For **businesses**, value lies in the **ability to predict recurring "
-"revenue**:"
+"If you leave :guilabel:`Payment` unchecked, the customer doesn't have to "
+"pre-pay to start the subscription. This means that the payment is not "
+"automatic and that the customer must pay each invoice manually."
 msgstr ""
-"Pour les **entreprises**, la valeur réside dans la **capacité à prévoir les "
-"revenus récurrents** :"
+"Si vous ne cochez pas l'option :guilabel:`Paiement`, le client ne doit pas "
+"payer à l'avance pour démarrer l'abonnement. Cela signifie que le paiement "
+"n'est pas automatique et que le client doit payer chaque facture "
+"manuellement."
 
-#: ../../content/applications/sales/subscriptions/configuration/subscription_templates.rst:16
+#: ../../content/applications/sales/subscriptions.rst:68
 msgid ""
-"Subscriptions reduce customer churn rate and significantly increase customer"
-" retention."
+"If the online confirmation requires a pre-payment, your customer can select "
+"only the :ref:`payment providers <payment_providers/supported_providers>` "
+"that have the :ref:`tokenization feature "
+"<payment_providers/features/tokenization>`. This ensures that the customer "
+"is automatically charged at each new period."
 msgstr ""
-"Les abonnements réduisent le taux d'attrition des clients et augmentent "
-"considérablement leur fidélisation."
+"Si la confirmation en ligne demande un paiement à l'avance, votre client "
+"peut uniquement sélectionner les :ref:`fournisseurs de paiement "
+"<payment_providers/supported_providers>` qui disposent de la :ref:`fonction "
+"de tokenisation <payment_providers/features/tokenization>`. Cela garantit "
+"que le client est automatiquement débité à chaque nouvelle période."
 
-#: ../../content/applications/sales/subscriptions/configuration/subscription_templates.rst:17
-msgid ""
-"Subscriptions provide much higher payment security for your business. They "
-"stabilize and maintain recurring revenue streams by guaranteeing monthly "
-"revenues and adding value to your business."
-msgstr ""
-"Les abonnements offrent une sécurité de paiement beaucoup plus élevée pour "
-"votre entreprise. Ils stabilisent et maintiennent des flux de revenus "
-"récurrents en garantissant des revenus mensuels et en ajoutant de la valeur "
-"à votre entreprise."
+#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:3
+msgid "Automatic alerts"
+msgstr "Alertes automatiques"
 
-#: ../../content/applications/sales/subscriptions/configuration/subscription_templates.rst:27
-msgid ""
-"**Odoo Subscriptions** help you save time and money. Subscription templates "
-"can help you generate recurring invoices and manage renewals at a fast pace."
-" With Odoo you have the possibility to create, edit, and manage your own "
-"subscription templates."
-msgstr ""
-"**Odoo Abonnements** vous aide à gagner du temps et de l'argent. Les modèles"
-" d'abonnement peuvent vous aider à générer des factures récurrentes et à "
-"gérer les renouvellements à un rythme soutenu. Avec Odoo, vous avez la "
-"possibilité de créer, modifier et gérer vos propres modèles d'abonnement."
-
-#: ../../content/applications/sales/subscriptions/configuration/subscription_templates.rst:34
-msgid ""
-"Go to :menuselection:`Subscriptions --> Configuration --> Subscription "
-"templates`. By default, Odoo suggests you two types of subscription (MON - "
-"Monthly subscription *vs* YEA - Yearly subscription). You can also create "
-"your own ones."
-msgstr ""
-"Allez à :menuselection:`Abonnements --> Configuration --> Modèles "
-"d'abonnement`. Par défaut, Odoo vous propose deux types d'abonnement (MON - "
-"Monthly subscription (abonnement mensuel) *vs* YEA - Yearly subscription "
-"(abonnement annuel)). Vous pouvez également créer vos propres modèles."
-
-#: ../../content/applications/sales/subscriptions/configuration/subscription_templates.rst-1
-msgid "Default subscription templates on Odoo Subscriptions"
-msgstr "Modèles d'abonnement par défaut dans Odoo Abonnements"
-
-#: ../../content/applications/sales/subscriptions/configuration/subscription_templates.rst:43
-msgid ""
-"The **Odoo Subscriptions** application automatically installs **Odoo Sales**"
-" and **Odoo Invoicing** as they work integrated."
-msgstr ""
-"L'application **Odoo Abonnements** installe automatiquement **Odoo Ventes** "
-"et **Odoo Facturation**, car ces applications fonctionnent de manière "
-"intégrée."
-
-#: ../../content/applications/sales/subscriptions/configuration/subscription_templates.rst:49
-msgid ""
-"You can create a new template or edit an existing one. The first thing you "
-"need to do is give your template a name. After that, choose an *Invoicing "
-"period* and specify whether you would like to invoice your customers per "
-"*Days*, *Weeks*, *Months* or *Years*. On *Duration*, determine if the "
-"subscription must go on *Forever* (until it’s manually closed), or for a "
-"*Fixed amount* of time. Among the payment options, an additional field "
-"called *Invoice email* appears when you choose *Send*, *Send & try to "
-"charge* or *Send after successful payment*. This field allows you to add an "
-"invoice email template to your subscription templates."
-msgstr ""
-"Vous pouvez créer un nouveau modèle ou modifier un modèle existant. La "
-"première chose que vous devez faire est de donner un nom à votre modèle. "
-"Ensuite, choisissez une *période de facturation* et précisez si vous "
-"souhaitez facturer vos clients par *jours*, *semaines*, *mois* ou *années*. "
-"En ce qui concerne la *durée*, déterminez si l'abonnement doit durer "
-"*toujours* (jusqu'à ce qu'il soit résilié manuellement) ou avoir une *durée "
-"fixe*. Parmi les options de paiement, un champ additionnel intitulé *email "
-"de facturation* apparaît lorsque vous choisissez *Envoyer*, *Envoyer & "
-"essayer de facturer* ou *Envoyer après paiement réussi*. Ce champ vous "
-"permet d'ajouter un modèle d'email de facturation à vos modèles "
-"d'abonnement."
-
-#: ../../content/applications/sales/subscriptions/configuration/subscription_templates.rst-1
-msgid "Create your own subscription templates on Odoo Subscriptions"
-msgstr "Créez vos propres modèles d'abonnement dans Odoo Abonnements"
-
-#: ../../content/applications/sales/subscriptions/configuration/subscription_templates.rst:61
-msgid ""
-"For each template, you can also choose if you want your customers to be able"
-" to close their subscriptions or not. If enabled, you can set an *Automatic "
-"closing* limit and specify the *Group of subscription* and *Journal* "
-"options."
-msgstr ""
-"Pour chaque modèle, vous pouvez également choisir si vous souhaitez que vos "
-"clients puissent résilier leurs abonnements ou non. Si cette option est "
-"activée, vous pouvez définir une limite de *résiliation automatique* et "
-"préciser les options *Groupe d'abonnement* et *Journal*."
-
-#: ../../content/applications/sales/subscriptions/configuration/subscription_templates.rst:66
-msgid ""
-"On each template, you can add your **Terms and Conditions**. Specifying "
-"terms and conditions is essential to set out important contractual points "
-"between the customers and the sellers (payment, refund policy, cancellation,"
-" complaints, etc.)."
-msgstr ""
-"Sur chaque modèle, vous pouvez ajouter vos **Conditions générales**. La "
-"définition des conditions générales est essentielle pour fixer des éléments "
-"contractuels importants entre les clients et les vendeurs (paiement, "
-"politique de remboursement, annulation, réclamations, etc.)."
-
-#: ../../content/applications/sales/subscriptions/configuration/subscription_templates.rst:0
-msgid "Terms & conditions on Odoo Subscriptions"
-msgstr "Conditions générales dans Odoo Abonnements"
-
-#: ../../content/applications/sales/subscriptions/configuration/subscription_templates.rst:74
-msgid ""
-"Finally, if you want to know the basic running health status of your "
-"subscriptions, you also have access to a specific tab called **Health "
-"Check**. There, you can edit and create your own filters to define what is a"
-" subscription in good health *vs* bad health. The system automatically "
-"summarizes all the records corresponding to these filters and you are able "
-"to manage them in one click."
-msgstr ""
-"Finalement, si vous voulez connaître l'état de santé de base de vos "
-"abonnements en cours, vous avez également accès à un onglet spécifique "
-"intitulé **Bilan de santé**. Vous pouvez y modifier et définir vos propres "
-"filtres pour déterminer ce qu'est un abonnement en bonne santé *vs* en "
-"mauvaise santé. Le système résume automatiquement tous les enregistrements "
-"correspondant à ces filtres et vous pouvez les gérer en un seul clic."
-
-#: ../../content/applications/sales/subscriptions/configuration/subscription_templates.rst:0
-msgid "Health check on Odoo Subscriptions"
-msgstr "Bilan de santé dans Odoo Abonnements"
-
-#: ../../content/applications/sales/subscriptions/configuration/subscription_templates.rst:85
-msgid ""
-"After creating your own subscription templates, be sure to check out our "
-"documentation on how to create, edit and manage your own :doc:`Subscription "
-"products <../../subscriptions/configuration/subscription_products>`, to "
-"complete the sales flow."
-msgstr ""
-"Après avoir créé vos propres modèles d'abonnement, n'hésitez pas à consulter"
-" notre documentation sur la façon de créer, modifier et gérer vos propres "
-":doc:`produits d'abonnement "
-"<../../subscriptions/configuration/subscription_products>`, pour compléter "
-"le flux de vente."
-
-#: ../../content/applications/sales/subscriptions/configuration/subscription_templates.rst:91
-#: ../../content/applications/sales/subscriptions/follow_up/automatic_alerts.rst:84
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst:121
-#: ../../content/applications/sales/subscriptions/sales_flow/closing.rst:106
-#: ../../content/applications/sales/subscriptions/sales_flow/create_a_quotation.rst:80
-#: ../../content/applications/sales/subscriptions/sales_flow/renewals.rst:81
-#: ../../content/applications/sales/subscriptions/sales_flow/upselling.rst:84
-msgid ":doc:`../../subscriptions/configuration/subscription_products`"
-msgstr ":doc:`../../subscriptions/configuration/subscription_products`"
-
-#: ../../content/applications/sales/subscriptions/follow_up.rst:5
-msgid "Follow-up"
-msgstr "Suivi"
-
-#: ../../content/applications/sales/subscriptions/follow_up/automatic_alerts.rst:3
-msgid "Set up automatic alerts"
-msgstr "Configurer des alertes automatiques"
-
-#: ../../content/applications/sales/subscriptions/follow_up/automatic_alerts.rst:5
+#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:5
 msgid ""
 "Now that your subscriptions are up and running, you want to stay up-to-date "
 "with your customers. Some automation would be appreciated since you would "
@@ -11531,7 +11526,7 @@ msgstr ""
 " vérifier comment les choses se passent. C'est à cela que sert la "
 "fonctionnalité *Alertes automatiques*."
 
-#: ../../content/applications/sales/subscriptions/follow_up/automatic_alerts.rst:9
+#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:9
 msgid ""
 "For example, when customers subscribe to your magazine, you would probably "
 "want to send them an email to welcome them and express your gratitude. Or, "
@@ -11545,7 +11540,7 @@ msgstr ""
 "dessous de 50%, vous voudrez le contacter pour comprendre les raisons de "
 "leur insatisfaction."
 
-#: ../../content/applications/sales/subscriptions/follow_up/automatic_alerts.rst:14
+#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:14
 msgid ""
 "With **Odoo Subscriptions**, you can set automatic emails, create a \"Call\""
 " task for one of your salespeople so that he/she can try to understand your "
@@ -11559,11 +11554,11 @@ msgstr ""
 "envoyer automatiquement des enquêtes de satisfaction pour que les clients "
 "puissent évaluer vos services ? Tout cela est désormais possible."
 
-#: ../../content/applications/sales/subscriptions/follow_up/automatic_alerts.rst:20
+#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:20
 msgid "Create a new automatic alert"
 msgstr "Créer une nouvelle alerte automatique"
 
-#: ../../content/applications/sales/subscriptions/follow_up/automatic_alerts.rst:22
+#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:22
 msgid ""
 "The following example shows how to create a new automatic alert to send "
 "satisfaction surveys to your customers, by email, after one month of "
@@ -11575,11 +11570,11 @@ msgstr ""
 " mois d'abonnement. Pour ce faire, allez à :menuselection:`Abonnements --> "
 "Configuration --> Alertes`, et créez une nouvelle alerte."
 
-#: ../../content/applications/sales/subscriptions/follow_up/automatic_alerts.rst-1
+#: ../../content/applications/sales/subscriptions/automatic_alerts.rst-1
 msgid "New automatic alert in Odoo Subscriptions"
 msgstr "Nouvelle alerte automatique dans Odoo Abonnements"
 
-#: ../../content/applications/sales/subscriptions/follow_up/automatic_alerts.rst:30
+#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:30
 msgid ""
 "On the *Apply on* section, first give the alert a name. Then, you can choose"
 " to apply this alert on a subscription template, on a specific customer, or "
@@ -11596,7 +11591,7 @@ msgstr ""
 " de satisfaction et même l'étape sur laquelle vous voulez appliquer cette "
 "alerte."
 
-#: ../../content/applications/sales/subscriptions/follow_up/automatic_alerts.rst:37
+#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:37
 msgid ""
 "In this example, the alert is applied to a specific product, and the stage "
 "goes from *Undefined* to *In Progress*."
@@ -11604,7 +11599,7 @@ msgstr ""
 "Dans cet exemple, l'alerte est appliquée sur un produit spécifique et "
 "l'étape va de *Non défini* à *En cours*."
 
-#: ../../content/applications/sales/subscriptions/follow_up/automatic_alerts.rst:40
+#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:40
 msgid ""
 "For the *Action* section, specify the *Action* and the *Trigger on*. If the "
 "*Trigger on* is set to *Modification*, the action is triggered every time "
@@ -11628,7 +11623,7 @@ msgstr ""
 "l'abonnement*, *Marquer comme À renouveler*, *Envoyer un email au client* et"
 " *Envoyer un SMS au client*."
 
-#: ../../content/applications/sales/subscriptions/follow_up/automatic_alerts.rst:50
+#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:50
 msgid ""
 "In the example above, the *Trigger on* is set to *Timed condition*, "
 "therefore, a *Trigger date* and *Delay after trigger* need to be specified. "
@@ -11640,7 +11635,7 @@ msgstr ""
 " un \"Délai après déclenchement*. Et comme l'action *Envoyer un email au "
 "client* a été choisie, un *Modèle d'email* peut être choisi."
 
-#: ../../content/applications/sales/subscriptions/follow_up/automatic_alerts.rst:54
+#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:54
 msgid ""
 "As a result, this alert will send a rating survey after one month, to the "
 "customers who have purchased that specific product. The survey will appear "
@@ -11650,15 +11645,15 @@ msgstr ""
 " aux clients qui ont acheté ce produit spécifique. L'enquête apparaîtra dans"
 " le chatter de votre abonnement respectif."
 
-#: ../../content/applications/sales/subscriptions/follow_up/automatic_alerts.rst-1
+#: ../../content/applications/sales/subscriptions/automatic_alerts.rst-1
 msgid "Satisfaction survey in Odoo Subscriptions"
 msgstr "Enquête de satisfaction dans Odoo Abonnements"
 
-#: ../../content/applications/sales/subscriptions/follow_up/automatic_alerts.rst:63
+#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:63
 msgid "Modify an existing automatic alert"
 msgstr "Modifier une alerte automatique existante"
 
-#: ../../content/applications/sales/subscriptions/follow_up/automatic_alerts.rst:65
+#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:65
 msgid ""
 "By default, Odoo suggests you an automatic alert called *Take action on less"
 " satisfied clients*."
@@ -11666,11 +11661,11 @@ msgstr ""
 "Par défaut, Odoo vous propose une alerte automatique appelée *Prendre des "
 "mesures à l'égard des clients moins satisfaits*."
 
-#: ../../content/applications/sales/subscriptions/follow_up/automatic_alerts.rst-1
+#: ../../content/applications/sales/subscriptions/automatic_alerts.rst-1
 msgid "Modify an existing automatic alert in Odoo Subscriptions"
 msgstr "Modifier une alerte automatique existante dans Odoo Abonnements"
 
-#: ../../content/applications/sales/subscriptions/follow_up/automatic_alerts.rst:71
+#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:71
 msgid ""
 "This alert is applied to the *Rating Satisfaction* of your customers, and "
 "the action is triggered on *Timed condition*. If their satisfaction rate is "
@@ -11689,7 +11684,7 @@ msgstr ""
 "prises s'ils ne le sont pas. Elle contribue à maintenir un taux de rétention"
 " des clients très élevé."
 
-#: ../../content/applications/sales/subscriptions/follow_up/automatic_alerts.rst:79
+#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:79
 msgid ""
 "By editing the alert, you can modify the *Apply on*, the *Action* and "
 "*Activity* sections, and adapt them to your own needs."
@@ -11697,19 +11692,676 @@ msgstr ""
 "En éditant l'alerte, vous pouvez modifier l'action *Appliquer sur*, les "
 "sections *Action* et *Activité* et les adapter à vos propres besoins."
 
-#: ../../content/applications/sales/subscriptions/follow_up/automatic_alerts.rst:86
-msgid ":doc:`../../subscriptions/reporting/subscription_reports`"
-msgstr ":doc:`../../subscriptions/reporting/subscription_reports`"
+#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:83
+#: ../../content/applications/sales/subscriptions/closing.rst:105
+#: ../../content/applications/sales/subscriptions/renewals.rst:80
+#: ../../content/applications/sales/subscriptions/reports.rst:120
+#: ../../content/applications/sales/subscriptions/upselling.rst:83
+msgid ":doc:`../subscriptions`"
+msgstr ":doc:`../subscriptions`"
 
-#: ../../content/applications/sales/subscriptions/reporting.rst:5
-msgid "Reporting"
-msgstr "Analyse"
+#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:84
+#: ../../content/applications/sales/subscriptions/closing.rst:106
+#: ../../content/applications/sales/subscriptions/renewals.rst:81
+#: ../../content/applications/sales/subscriptions/reports.rst:121
+#: ../../content/applications/sales/subscriptions/upselling.rst:84
+msgid ":doc:`plans`"
+msgstr ":doc:`plans`"
 
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst:3
-msgid "Generate subscription reports"
-msgstr "Générer des rapports sur les abonnements"
+#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:85
+#: ../../content/applications/sales/subscriptions/closing.rst:107
+#: ../../content/applications/sales/subscriptions/renewals.rst:82
+#: ../../content/applications/sales/subscriptions/reports.rst:122
+#: ../../content/applications/sales/subscriptions/upselling.rst:85
+msgid ":doc:`products`"
+msgstr ":doc:`products`"
 
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst:5
+#: ../../content/applications/sales/subscriptions/closing.rst:3
+msgid "Close a subscription"
+msgstr "Résilier un abonnement"
+
+#: ../../content/applications/sales/subscriptions/closing.rst:5
+msgid ""
+"Losing a customer is always difficult, especially if you put a lot of effort"
+" into getting them to sign up for your products/services. However, many "
+"companies come up with dubious methods to reduce the probability of this "
+"happening."
+msgstr ""
+"Perdre un client est toujours difficile, surtout si vous faites beaucoup "
+"d'efforts pour qu'il souscrivent à vos produits/services. Cependant, de "
+"nombreuses entreprises proposent des méthodes douteuses pour réduire la "
+"probabilité que cela se produise."
+
+#: ../../content/applications/sales/subscriptions/closing.rst:14
+msgid ""
+"If you adopt such methods, you are among companies that actively and "
+"indirectly spread the phobia of subscriptions, who do not think about how "
+"negatively dissatisfied customers could impact their business and, who "
+"frustrate the customers in a way or another. However, at some point, it is "
+"understandable that you do not want your customers to be involved in your "
+"subscription status."
+msgstr ""
+"Si vous adoptez de telles méthodes, vous faites partie des entreprises qui "
+"propagent activement et indirectement la phobie des abonnements, qui ne "
+"pensent pas à l'impact négatif que des clients insatisfaits pourraient avoir"
+" sur leur entreprise et qui frustrent les clients d'une manière ou d'une "
+"autre. Cependant, à un moment donné, il est compréhensible que vous ne "
+"souhaitiez pas que vos clients soient impliqués dans votre positionnement "
+"sur les abonnements."
+
+#: ../../content/applications/sales/subscriptions/closing.rst:19
+msgid ""
+"If you do not adopt such methods, you are among companies that continue to "
+"evolve in a long-term subscription business model, especially in an era of "
+"ultra-fast communications between dissatisfied customers, and who retain "
+"their customers by making it easier for them to leave if they want to. By "
+"giving them the opportunity to close their own subscriptions, your customers"
+" do not feel trapped because they subscribed to your products/services."
+msgstr ""
+"Si vous n'adoptez pas de telles méthodes, vous faites partie des entreprises"
+" qui continuent d'évoluer dans un modèle économique d'abonnement à long "
+"terme, en particulier à l'ère des communications ultrarapides entre clients "
+"insatisfaits, et qui fidélisent leurs clients en leur permettant de partir "
+"plus facilement s'ils le souhaitent. En leur donnant la possibilité de "
+"résilier leurs propres abonnements, vos clients ne se sentent pas piégés "
+"parce qu'ils ont souscrit à vos produits/services."
+
+#: ../../content/applications/sales/subscriptions/closing.rst:25
+msgid ""
+"In summary, the **Odoo Subscriptions** application gives you the "
+"**possibility to choose what you want to apply**. Indeed, you can decide "
+"whether to give your customers the option to close their subscriptions "
+"whenever they want to or to restrict this possibility. It depends on you and"
+" we will show you how to do that in our amazing application."
+msgstr ""
+"En résumé, l'application **Odoo Abonnements** vous donne la **possibilité de"
+" choisir ce que vous souhaitez appliquer**. En effet, vous pouvez décider de"
+" donner à vos clients la possibilité de résilier leurs abonnements quand ils"
+" le souhaitent ou de restreindre cette possibilité. Cela dépend de vous et "
+"nous vous montrerons comment le faire dans notre incroyable application."
+
+#: ../../content/applications/sales/subscriptions/closing.rst:33
+msgid ""
+"Go to :menuselection:`Subscriptions --> Configuration --> Subscription "
+"templates`. From there, you can create a new *Subscription template* or "
+"modify an existing one. When editing your template, underneath the Invoicing"
+" tab, you have the possibility to activate the option *Closable by "
+"customer*. Once enabled, this option gives your customers the right to close"
+" their own subscriptions."
+msgstr ""
+"Allez à :menuselection:`Abonnements --> Configuration --> Modèles "
+"d'abonnement`. À partir de là, vous pouvez créer un nouveau *modèle "
+"d'abonnement* ou en modifier un existant. Lors de l'édition de votre modèle,"
+" sous l'onglet Facturation, vous avez la possibilité d'activer l'option "
+"*Résiliable par le client*. Une fois activée, cette option donne à vos "
+"clients le droit de résilier leurs propres abonnements."
+
+#: ../../content/applications/sales/subscriptions/closing.rst-1
+msgid "Configuration to close your subscription with Odoo Subscriptions"
+msgstr "Comment résilier votre abonnement dans Odoo Abonnements"
+
+#: ../../content/applications/sales/subscriptions/closing.rst:43
+msgid ""
+"Be sure to check out our documentation on how to :doc:`Use subscription "
+"templates <plans>` to fully understand the importance of this feature in a "
+"basic flow using the **Odoo Subscriptions** application."
+msgstr ""
+"N'hésitez pas à consulter notre documentation sur la façon d':doc:`Utiliser "
+"les modèles d'abonnement <plans>` pour bien comprendre l'importance de cette"
+" fonctionnalité dans un flux de base utilisant l'application **Odoo "
+"Abonnements**."
+
+#: ../../content/applications/sales/subscriptions/closing.rst:49
+msgid "Close your first subscription"
+msgstr "Résilier votre premier abonnement"
+
+#: ../../content/applications/sales/subscriptions/closing.rst:52
+msgid "Administrator view"
+msgstr "Vue administrateur"
+
+#: ../../content/applications/sales/subscriptions/closing.rst:54
+msgid ""
+"Once confirmed, a quotation becomes a sales order and a new subscription is "
+"automatically created. Therefore, this subscription has the status *In "
+"progress*. From there, you have the possibility to close the subscription."
+msgstr ""
+"Une fois confirmé, un devis devient un bon de commande et un nouvel "
+"abonnement est automatiquement créé. Cet abonnement a donc le statut *En "
+"cours*. À partir de là, vous avez la possibilité de résilier l'abonnement."
+
+#: ../../content/applications/sales/subscriptions/closing.rst-1
+msgid ""
+"Close your subscription from an administration point of view with Odoo "
+"Subscriptions"
+msgstr ""
+"Formulaire de résiliation d'abonnement du point de vue administrateur avec "
+"Odoo Abonnements"
+
+#: ../../content/applications/sales/subscriptions/closing.rst:62
+msgid ""
+"By using the smart button *Close*, you have to enter a close reason. For "
+"example, \"Subscription too expensive\", \"Subscription does not meet my "
+"requirements\", \"Subscription reached its end date\", etc. Immediately "
+"after confirming your close reason, you can observe that the status of the "
+"subscription is now *Closed* and that the close reason is mentioned on the "
+"subscription."
+msgstr ""
+"En utilisant le bouton intelligent *Résilier*, vous devez donner un motif de"
+" résiliation. Par exemple, \"Abonnement trop cher\", \"L'abonnement ne "
+"répond pas à mes besoins\", \"L'abonnement a atteint sa date de fin\", etc. "
+"Immédiatement après avoir confirmé votre motif de résiliation, vous pouvez "
+"constater que le statut de l'abonnement est désormais *Résilié* et que le "
+"motif de résiliation figure sur l'abonnement."
+
+#: ../../content/applications/sales/subscriptions/closing.rst-1
+msgid "What happens when you close your subscription with Odoo Subscriptions?"
+msgstr ""
+"Que se passe-t-il quand vous résiliez votre abonnement avec Odoo Abonnements"
+" ?"
+
+#: ../../content/applications/sales/subscriptions/closing.rst:72
+msgid "Customer view"
+msgstr "Vue client"
+
+#: ../../content/applications/sales/subscriptions/closing.rst:74
+msgid ""
+"As previously explained in the *Administrator view* part, from the "
+"subscription form, you also have the possibility to visualize what your "
+"customers see when managing their subscriptions thanks to the *Customer "
+"preview* button. In this example, the customer has the choice to close "
+"his/her subscription whenever he/she wants to, due to the *Close "
+"Subscription* button."
+msgstr ""
+"Comme expliqué précédemment dans la partie *Vue administrateur*, depuis le "
+"formulaire d'abonnement, vous avez également la possibilité de visualiser ce"
+" que voient vos clients lors de la gestion de leurs abonnements grâce au "
+"bouton *Aperçu client*. Dans cet exemple, le client a le choix de résilier "
+"son abonnement quand il le souhaite, grâce au bouton *Résilier "
+"l'abonnement*."
+
+#: ../../content/applications/sales/subscriptions/closing.rst-1
+msgid ""
+"Close your subscription from a customer point of view with Odoo "
+"Subscriptions"
+msgstr ""
+"Résilier votre abonnement du point de vue client avec Odoo Abonnements"
+
+#: ../../content/applications/sales/subscriptions/closing.rst:83
+msgid ""
+"By using this button, the customer can specify the reason for cancelling "
+"his/her subscription and he/she can even leave a message."
+msgstr ""
+"En utilisant ce bouton, le client peut préciser le motif de la résiliation "
+"de son abonnement et il peut même laisser un message."
+
+#: ../../content/applications/sales/subscriptions/closing.rst-1
+msgid ""
+"What happens when customers close their subscription with Odoo "
+"Subscriptions?"
+msgstr ""
+"Que se passe-t-il lorsqu'un client résilie son abonnement avec Odoo "
+"Abonnements ?"
+
+#: ../../content/applications/sales/subscriptions/closing.rst:90
+msgid ""
+"By confirming the cancellation, the customer is redirected to his/her "
+"portal. The administrator is informed of this modification. Indeed, the "
+"status of the subscription becomes *Closed* and a note appears in the "
+"chatter with the new stage, the end date, the close reason, and the closing "
+"text added by the customer."
+msgstr ""
+"En confirmant l'annulation, le client est redirigé vers son portail. "
+"L'administrateur est informé de cette modification. En effet, le statut de "
+"l'abonnement passe à *Résilié* et une note apparaît dans le chatter "
+"contenant la nouvelle étape, la date de fin, le motif de résiliation et le "
+"texte de résiliation ajouté par le client."
+
+#: ../../content/applications/sales/subscriptions/closing.rst-1
+msgid ""
+"What happens when customers close their subscription in Odoo Subscriptions?"
+msgstr ""
+"Que se passe-t-il lorsque des clients résilient leur abonnement dans Odoo "
+"Abonnements ?"
+
+#: ../../content/applications/sales/subscriptions/closing.rst:100
+msgid ""
+"Before closing a subscription, check out our documentation on how to "
+":doc:`Create a quotation using subscription products <../subscriptions>` to "
+"understand how subscriptions are managed in the **Odoo Subscriptions** "
+"application."
+msgstr ""
+"Avant de résilier un abonnement, consultez notre documentation sur la façon "
+"de :doc:`Créer un devis avec des produits d'abonnement <../subscriptions>` "
+"pour bien comprendre comment les abonnements sont gérés dans l'application "
+"**Odoo Abonnements**."
+
+#: ../../content/applications/sales/subscriptions/plans.rst:3
+msgid "Subscription plans"
+msgstr "Plans d'abonnement"
+
+#: ../../content/applications/sales/subscriptions/plans.rst:5
+msgid ""
+"Subscription plans are :doc:`quotation templates "
+"<../sales/send_quotations/quote_template>` specific to **subscriptions** "
+"used to preconfigure selectable **plans** and **recurrence periods** to "
+"configure quotations quickly."
+msgstr ""
+"Les plans d'abonnement sont des :doc:`modèles de devis "
+"<../sales/send_quotations/quote_template>` spécifiques aux **abonnements** "
+"utilisés pour préconfigurer les **plans** et **périodes de récurrence** "
+"sélectionnables pour configurer rapidement les devis."
+
+#: ../../content/applications/sales/subscriptions/plans.rst:12
+msgid ""
+"To create a new subscription plan or edit an existing one, go to "
+":menuselection:`Subscriptions --> Configuration --> Plans`, and click "
+":guilabel:`New` or select an existing plan."
+msgstr ""
+"Pour créer un nouveau plan d'abonnement ou en éditer un existant, allez à "
+":menuselection:`Abonnements --> Configuration --> Plans` et cliquez sur "
+":guilabel:`Nouveau` ou sélectionnez un plan existant."
+
+#: ../../content/applications/sales/subscriptions/plans.rst-1
+msgid "Subscription plan (quotation template) configuration"
+msgstr "Configuration d'un plan d'abonnement (modèle de devis)"
+
+#: ../../content/applications/sales/subscriptions/plans.rst:18
+msgid "When creating a subscription plan, several options are available:"
+msgstr ""
+"Lors de la création d'un plan d'abonnement, vous disposez de plusieurs "
+"options :"
+
+#: ../../content/applications/sales/subscriptions/plans.rst:20
+msgid "The **name** of the plan;"
+msgstr "Le **nom** du plan ;"
+
+#: ../../content/applications/sales/subscriptions/plans.rst:21
+msgid ""
+":guilabel:`Quotation expires after`: after how many days the quotation "
+"expires;"
+msgstr ""
+":guilabel:`Le devis expire après` : après combien de jours le devis expire ;"
+
+#: ../../content/applications/sales/subscriptions/plans.rst:22
+msgid ""
+":guilabel:`Online confirmation`: if the customer's :guilabel:`Signature` or "
+":guilabel:`Payment` confirms the order. Enable both to leave the choice to "
+"the customer;"
+msgstr ""
+":guilabel:`Confirmation en ligne` : si la :guilabel:`Signature` ou le "
+":guilabel:`Paiement` du client confirme la commande. L'activation des deux "
+"options permet de laisser le choix au client ;"
+
+#: ../../content/applications/sales/subscriptions/plans.rst:24
+msgid ""
+":guilabel:`Confirmation Mail`: the **mail template** used for the order "
+"confirmation mail;"
+msgstr ""
+":guilabel:`Email de confirmation` : le **modèle d'email** utilisé pour "
+"l'email de confirmation de la commande ;"
+
+#: ../../content/applications/sales/subscriptions/plans.rst:25
+msgid ""
+":guilabel:`Recurrence`: the recurrence of **recurring products** used with "
+"this template."
+msgstr ""
+":guilabel:`Récurrence` : la récurrence des **produits récurrents** utilisés "
+"avec ce modèle."
+
+#: ../../content/applications/sales/subscriptions/plans.rst:27
+msgid ""
+"Selecting a :guilabel:`Recurrence` enables the following additional options:"
+msgstr ""
+"La sélection d'une :guilabel:`Récurrence` active les options supplémentaires"
+" suivantes :"
+
+#: ../../content/applications/sales/subscriptions/plans.rst:29
+msgid ""
+":guilabel:`Duration`: whether **recurring products** used with this template"
+" have no **end date**, or if they have a :guilabel:`Fixed` duration. "
+"Selecting :guilabel:`Fixed` enables an additional option to select the "
+"**duration**;"
+msgstr ""
+":guilabel:`Durée` : si les **produits récurrents** utilisés avec ce modèle "
+"n'ont pas de **date de fin**, ou s'ils ont une durée :guilabel:`fixe`. Si "
+"vous sélectionnez :guilabel:`fixe`, une option supplémentaire vous permet de"
+" sélectionner la **durée** ;"
+
+#: ../../content/applications/sales/subscriptions/plans.rst:32
+msgid ""
+":guilabel:`Self Closable`: if enabled, the **customer** can terminate their "
+"subscription from their **customer portal**;"
+msgstr ""
+":guilabel:`Auto-résiliable` : si cette option est activée, le **client** "
+"peut résilier son abonnement depuis son **portail client** ;"
+
+#: ../../content/applications/sales/subscriptions/plans.rst:34
+msgid ""
+":guilabel:`Automatic Closing`: the number of days after which **unpaid** "
+"subscriptions *past* the due date are automatically closed;"
+msgstr ""
+":guilabel:`Résiliation automatique` : le nombre de jours après lesquels les "
+"abonnements **impayés** dont la date d'échéance est *dépassée* sont "
+"automatiquement résiliés ;"
+
+#: ../../content/applications/sales/subscriptions/plans.rst:36
+msgid ""
+":guilabel:`Invoicing Journal`: if set, subscriptions with this template are "
+"invoiced in the set journal. If none, the sales journal with the lowest "
+"sequence is used."
+msgstr ""
+":guilabel:`Journal de facturation` : si cette option est activée, les "
+"abonnements avec ce modèle sont facturés dans le journal défini. S'il n'y en"
+" a pas, c'est le journal des ventes avec la séquence la plus basse qui est "
+"utilisé."
+
+#: ../../content/applications/sales/subscriptions/plans.rst:40
+msgid ""
+"On each template, you can add specific :doc:`Terms & Conditions "
+"<../sales/send_quotations/terms_and_conditions>`. If **terms and "
+"conditions** are specified on a template, these will be used instead of the "
+"default **terms and conditions** set in the **Sales** app settings (if any "
+"are set)."
+msgstr ""
+"Sur chaque modèle, vous pouvez ajouter des :doc:`Conditions générales "
+"<../sales/send_quotations/terms_and_conditions>`. Si des **conditions "
+"générales** sont spécifiées sur un modèle, celles-ci seront utilisées à la "
+"place des **conditions générales** par défaut définies dans les paramètres "
+"de l'application **Ventes** (s'il y en a)."
+
+#: ../../content/applications/sales/subscriptions/plans.rst-1
+msgid "Terms and conditions of subscription plan"
+msgstr "Les conditions générales d'un plan d'abonnement"
+
+#: ../../content/applications/sales/subscriptions/products.rst:3
+msgid "Recurring products"
+msgstr "Produits récurrents"
+
+#: ../../content/applications/sales/subscriptions/products.rst:5
+msgid ""
+"When creating a subscription, at least one product on the order lines must "
+"be configured as :ref:`recurring <subscriptions/product/recurring>`."
+msgstr ""
+"Lors de la création d'un abonnement, au moins un produit de la ligne de "
+"commande doit être configuré comme :ref:`récurrent "
+"<subscriptions/product/recurring>`."
+
+#: ../../content/applications/sales/subscriptions/products.rst:8
+msgid ""
+"If a single product is sold using more than one recurrence period, configure"
+" the product's :ref:`time-based pricing <subscriptions/product/time-based-"
+"pricing>` to automatically adapt the unit price on the subscription based on"
+" the recurrence set."
+msgstr ""
+"Si un seul produit est vendu avec plusieurs périodes de récurrence, "
+"configurez la :ref:`tarification basée sur le temps "
+"<subscriptions/product/time-based-pricing>` du produit pour adapter "
+"automatiquement le prix unitaire de l'abonnement en fonction de la période "
+"de récurrence définie."
+
+#: ../../content/applications/sales/subscriptions/products.rst:17
+msgid ""
+"To create a recurring product, go to :menuselection:`Subscriptions --> "
+"Subscriptions --> Products` and click :guilabel:`New`. Choose a "
+":guilabel:`Product Name` and leave :guilabel:`Recurring` and :guilabel:`Can "
+"be Sold` enabled."
+msgstr ""
+"Pour créer un produit récurrent, allez à :menuselection:`Abonnements --> "
+"Abonnements --> Produits` et cliquez sur :guilabel:`Nouveau`. Choisissez un "
+":guilabel:`Nom du produit` et laissez les options :guilabel:`Récurrent` et "
+":guilabel:`Peut être vendu` activées."
+
+#: ../../content/applications/sales/subscriptions/products.rst:24
+msgid "Time-based pricing"
+msgstr "Tarification basée sur le temps"
+
+#: ../../content/applications/sales/subscriptions/products.rst:26
+msgid ""
+"To set a recurring product's time-based pricing, go to "
+":menuselection:`Subscriptions --> Subscriptions --> Products`, select a "
+"product, and open the :guilabel:`Time-based pricing` tab. Click "
+":guilabel:`Add a price`, select a :guilabel:`Period`, and set a "
+":guilabel:`Price`. Add as many prices as needed."
+msgstr ""
+"Pour définir la tarification basée sur le temps d'un produit, allez à "
+":menuselection:`Abonnements --> Abonnements --> Produits`, sélectionnez un "
+"produit et ouvrez l'onglet :guilabel:`Tarification basée sur le temps`. "
+"Cliquez sur :guilabel:`Ajouter un prix`, sélectionnez une "
+":guilabel:`Période` et définissez un :guilabel:`Prix`. Ajoutez autant de "
+"prix que nécessaire."
+
+#: ../../content/applications/sales/subscriptions/products.rst:32
+msgid ""
+":guilabel:`Daily` and :guilabel:`Hourly` periods cannot be used on recurring"
+" products."
+msgstr ""
+"Les périodes :guilabel:`Journalier` et :guilabel:`Horaire` ne peuvent pas "
+"être utilisées sur les produits récurrents."
+
+#: ../../content/applications/sales/subscriptions/products.rst:37
+msgid "Pricelists"
+msgstr "Listes de prix"
+
+#: ../../content/applications/sales/subscriptions/products.rst:39
+msgid ""
+":doc:`Pricelists <../sales/products_prices/prices/pricing>` can be used with"
+" recurring products. To do so, go to :menuselection:`Sales --> Products --> "
+"Pricelists`, click :guilabel:`New`, name the pricelist, and open the "
+":guilabel:`Time-based rules` tab. Click :guilabel:`Add a line`, select a "
+":guilabel:`Period`, and set a :guilabel:`Price`. Add as many lines as "
+"needed. Once done, the product's :ref:`time-based pricing "
+"<subscriptions/product/time-based-pricing>` tab is automatically updated."
+msgstr ""
+"Les :doc:`Listes de prix <../sales/products_prices/prices/pricing>` peuvent "
+"être utilisées avec des produits récurrents. Pour ce faire, allez à "
+":menuselection:`Ventes --> Produits --> Listes de prix`, cliquez sur "
+":guilabel:`Nouveau`, donnez un nom à la liste de prix et ouvrez l'onglet "
+":guilabel:`Règles basées sur le temps`. Cliquez sur :guilabel:`Ajouter une "
+"ligne`, sélectionnez une :guilabel:`Période` et définissez un "
+":guilabel:`Prix`. Ajoutez autant de lignes que nécessaire. Une fois que vous"
+" avez fini, l'onglet :ref:`Tarification basée sur le temps "
+"<subscriptions/product/time-based-pricing>` du produit est automatiquement "
+"mis à jour."
+
+#: ../../content/applications/sales/subscriptions/products.rst:49
+msgid "eCommerce"
+msgstr "eCommerce"
+
+#: ../../content/applications/sales/subscriptions/products.rst:51
+msgid ""
+"When a recurring product uses :ref:`time-based pricing "
+"<subscriptions/product/time-based-pricing>`, only the shortest period is "
+"used on the eCommerce product page by default."
+msgstr ""
+"Lorsqu'un produit récurrent utilise la :ref:`tarification basée sur le temps"
+" <subscriptions/product/time-based-pricing>`, seule la période la plus "
+"courte est utilisée par défaut sur la page du produit eCommerce."
+
+#: ../../content/applications/sales/subscriptions/products.rst:54
+msgid ""
+"To let the customer select the period, go to :menuselection:`Subscriptions "
+"--> Subscriptions --> Products`, select a product, and open the "
+":guilabel:`Attributes & Variants` tab. Name the :guilabel:`Attribute`, "
+"create :guilabel:`Values` for the different periods that should be "
+"available, and save manually. Open the :guilabel:`Time-based pricing` tab "
+"and select the correct :guilabel:`Product Variants` for each "
+":guilabel:`Period`."
+msgstr ""
+"Pour permettre au client de sélectionner la période, allez à "
+":menuselection:`Abonnements --> Abonnements --> Produits`, sélectionnez un "
+"produit et ouvrez l'onglet :guilabel:`Attributs & Variantes`. Nommez "
+"l':guilabel:`Attribut`, créez des :guilabel:`Valeurs` pour les différentes "
+"périodes disponibles et sauvegardez manuellement. Ouvrez l'onglet "
+":guilabel:`Tarification basée sur le temps` et sélectionnez les bonnes "
+":guilabel:`Variantes de produits` pour chaque :guilabel:`Période`."
+
+#: ../../content/applications/sales/subscriptions/products.rst:61
+msgid ":doc:`../../websites/ecommerce/managing_products/variants`"
+msgstr ":doc:`../../websites/ecommerce/managing_products/variants`"
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:3
+msgid "Renew a subscription"
+msgstr "Renouveler un abonnement"
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:5
+msgid ""
+"The key feature of a subscription business model is the recurring nature of "
+"payments. In this model, customers pay a recurring amount in exchange for "
+"access to a product or a service."
+msgstr ""
+"La principale caractéristique d'un modèle commercial d'abonnement est la "
+"nature récurrente des paiements. Dans ce modèle, les clients paient un "
+"montant récurrent en échange de l'accès à un produit ou à un service."
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:14
+msgid ""
+"Each subscriber experiences this renewal process monthly, annually, or "
+"sometimes more, depending on the duration of the contract. Most subscription"
+" companies choose to automate their renewal processes but, in some cases, "
+"manual subscription renewals are still the preferred option."
+msgstr ""
+"Chaque abonné passe par ce processus de renouvellement tous les mois, tous "
+"les ans ou parfois plus, en fonction de la durée du contrat. La plupart des "
+"sociétés d'abonnement choisissent d'automatiser leurs processus de "
+"renouvellement mais, dans certains cas, le renouvellement manuel de "
+"l'abonnement reste l'option privilégiée."
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:18
+msgid ""
+"With **Odoo Subscriptions**, you can have all your subscriptions in one "
+"application, suggest an automatic subscription renewal to your customers (as"
+" well as a manual one) and, finally, filter all your subscriptions and "
+"easily find those to renew (with the help of the tag *To renew*)."
+msgstr ""
+"Grâce à **Odoo Abonnements**, vous pouvez regrouper tous vos abonnements "
+"dans une seule application, proposer un renouvellement d'abonnement "
+"automatique à vos clients (ainsi qu'un manuel) et, enfin, filtrer tous vos "
+"abonnements et trouver facilement ceux à renouveler (à l'aide de l'étiquette"
+" *À renouveler*)."
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:23
+msgid "Renew your first subscription"
+msgstr "Renouveler votre premier abonnement"
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:25
+msgid ""
+"Before renewing a subscription, be sure to check out our documentation on "
+"how to :doc:`Create a quotation <../subscriptions>` using subscription "
+"products. Indeed, once confirmed, a quotation becomes a sales order and a "
+"new subscription is automatically created. Therefore, this subscription has "
+"the status *In progress*. From there, you have the possibility to renew the "
+"subscription. In the Other Info tab, underneath the To Renew section, you "
+"can activate the *To renew* option. When activated, a yellow tag "
+"automatically appears in the upper right corner of the subscription."
+msgstr ""
+"Avant de renouveler un abonnement, n'hésitez pas à consulter notre "
+"documentation sur la façon de :doc:`Créer un devis <../subscriptions>` avec "
+"des produits d'abonnement. Une fois confirmé, un devis se transforme en "
+"commande et un nouvel abonnement se crée automatiquement. Par conséquent, "
+"cet abonnement a le statut *En cours*. À partir de là, vous avez la "
+"possibilité de renouveler l'abonnement. Dans l'onglet *Autres informations*,"
+" vous pouvez activer l'option *À renouveler*. Lorsqu'elle est activée, une "
+"étiquette jaune apparaît automatiquement dans le coin supérieur droit de "
+"l'abonnement."
+
+#: ../../content/applications/sales/subscriptions/renewals.rst-1
+msgid "Renew your subscription with Odoo Subscriptions"
+msgstr "Renouvelez votre abonnement avec Odoo Abonnements"
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:38
+msgid ""
+"The *To renew* tag is automatically ticked when a payment fails. This "
+"indicator also appears on the customer portal. To visualize that, you just "
+"have to click on the *Customer preview* button. The tag *To renew* appears "
+"on the top right corner."
+msgstr ""
+"La case *À renouveler* est automatiquement cochée lorsqu'un paiement échoue."
+" Cet indicateur apparaît également sur le portail client. Pour le "
+"visualiser, il suffit de cliquer sur le bouton *Aperçu client*. L'étiquette "
+"*À renouveler* apparaît dans le coin supérieur droit."
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:0
+msgid "Customer preview of a renewal with Odoo Subscriptions"
+msgstr "Aperçu client d'un renouvellement avec Odoo Abonnements"
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:46
+msgid ""
+"When a subscription needs to be renewed, you have the possibility to use a "
+"new button called *Renewal quotation*. By clicking on it, a new quotation is"
+" created. From there, start a basic sales flow allowing you to send the "
+"quotation by email to your customers or to confirm it. It is better to first"
+" *Send by email* the quotation to your customers in order to have their "
+"confirmation and, then, *Confirm* it in **Odoo Sales**."
+msgstr ""
+"Lorsqu'un abonnement doit être renouvelé, vous avez la possibilité "
+"d'utiliser un nouveau bouton appelé *Devis de renouvellement*. En cliquant "
+"dessus, un nouveau devis est créé. À partir de là, démarrez un flux de vente"
+" de base qui vous permet d'envoyer le devis par email à vos clients ou de le"
+" confirmer. Il est préférable de d'abord *Envoyer* le devis *par email* à "
+"vos clients afin d'avoir leur confirmation et, ensuite, le *Confirmer* dans "
+"**Odoo Ventes**."
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:53
+msgid ""
+"In the Chatter of this new quotation, it is mentioned that \"This renewal "
+"order has been created from the previous subscription\". Once confirmed by "
+"your customers, this quotation becomes a sales order and a new sale is "
+"mentioned in the upper right corner of the subscription."
+msgstr ""
+"Dans le chatter de ce nouveau devis, il est mentionné que \"Cette commande "
+"de renouvellement a été créée à partir de l'abonnement précédent\". Une fois"
+" validé par vos clients, ce devis devient un bon de commande et une nouvelle"
+" vente est mentionnée dans le coin supérieur droit de l'abonnement."
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:0
+msgid "Renew a quotation with Odoo Subscriptions"
+msgstr "Devis de renouvellement dans Odoo Abonnements"
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:61
+msgid ""
+"By clicking on the *Sales* button, you have a summary of your sales orders "
+"in a list view. The only difference between your two quotations is the "
+"description underneath the *Subscription Management* category. There, you "
+"can easily visualize which one is your renewal."
+msgstr ""
+"En cliquant sur le bouton *Ventes*, vous disposez d'un récapitulatif de vos "
+"bons de commande sous forme de liste. La seule différence entre vos deux "
+"devis est la description sous la catégorie *Gestion des abonnements*. Vous "
+"pouvez facilement y voir lequel est votre renouvellement."
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:0
+msgid "Renewal as Subscription Management form in Odoo Subscriptions"
+msgstr ""
+"Renouvellement comme formulaire de gestion des abonnements dans Odoo "
+"Abonnements"
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:70
+msgid "Visualize your subscriptions to renew"
+msgstr "Visualiser vos abonnements à renouveler"
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:72
+msgid ""
+"Finally, if you want to visualize all your subscriptions and easily find "
+"those to renew, you can go to your *Subscriptions dashboard* and use the "
+"filter *To renew*."
+msgstr ""
+"Enfin, si vous souhaitez visualiser tous vos abonnements et facilement "
+"trouver ceux qui doivent être renouvelés, vous pouvez aller à votre *tableau"
+" de bord des abonnements* et utiliser le filtre *À renouveler*."
+
+#: ../../content/applications/sales/subscriptions/renewals.rst-1
+msgid ""
+"List view of all subscriptions and use of the filter to renew in Odoo "
+"Subscriptions"
+msgstr ""
+"Vue de liste de tous les abonnements et utilisation du filtre pour "
+"renouveler dans Odoo Abonnements"
+
+#: ../../content/applications/sales/subscriptions/reports.rst:3
+msgid "Reports"
+msgstr "Rapports"
+
+#: ../../content/applications/sales/subscriptions/reports.rst:5
 msgid ""
 "As we know, understanding how our business is going, and where it is going, "
 "is key to success. And particularly so when we offer subscription services "
@@ -11719,7 +12371,7 @@ msgstr ""
 " développent, est la clé du succès. Et c'est particulièrement vrai lorsqu'on"
 " offre des services ou des produits par abonnement."
 
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst:8
+#: ../../content/applications/sales/subscriptions/reports.rst:8
 msgid ""
 "Before getting to the heart of the matter, it is very important to recall "
 "certain essential concepts to the proper understanding of the following "
@@ -11729,7 +12381,7 @@ msgstr ""
 "certaines notions essentielles à la bonne compréhension des rapports "
 "suivants :"
 
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst:11
+#: ../../content/applications/sales/subscriptions/reports.rst:11
 msgid ""
 "**Monthly Recurring Revenue (MRR)**: MRR is arguably the most important "
 "metric for subscription businesses. It shows the monthly revenue earned with"
@@ -11742,7 +12394,7 @@ msgstr ""
 "Il s'agit d'un chiffre cohérent utilisé pour suivre tous les revenus "
 "récurrents dans le temps, par incréments mensuels."
 
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst:15
+#: ../../content/applications/sales/subscriptions/reports.rst:15
 msgid ""
 "**Annual Run-Rate (ARR)**: ARR is the yearly version of MRR, which is based "
 "on the current MRR, to estimate the coming year's performance. However, this"
@@ -11753,11 +12405,11 @@ msgstr ""
 "venir. Cependant, cette estimation ne prend pas en compte les variations et "
 "la croissance."
 
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst-1
+#: ../../content/applications/sales/subscriptions/reports.rst-1
 msgid "Difference between MRR and ARR in Odoo Subscriptions"
 msgstr "Différence entre le MRR et l'ARR dans Odoo Abonnements"
 
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst:23
+#: ../../content/applications/sales/subscriptions/reports.rst:23
 msgid ""
 "**Non-Recurring Revenue (NRR)**: NRR shows the revenue earned for everything"
 " else than subscription-based products or services. This includes gains of a"
@@ -11769,7 +12421,7 @@ msgstr ""
 "recettes rares ou uniques qui ne sont pas susceptibles de se produire dans "
 "le cours normal des affaires."
 
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst:27
+#: ../../content/applications/sales/subscriptions/reports.rst:27
 msgid ""
 "**Customer Retention**: Practices to engage existing customers to continue "
 "buying products or services from your business. Customer retention can be a "
@@ -11780,7 +12432,7 @@ msgstr ""
 "entreprise. La rétention des clients peut être un défi, parce que vous devez"
 " prouver que vous êtes digne de la confiance de vos clients."
 
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst:31
+#: ../../content/applications/sales/subscriptions/reports.rst:31
 msgid ""
 "**Churn Rate**: Also known as the Rate of Attrition or Customer Churn, the "
 "churn rate can be defined, in this case, as the percentage of subscribers "
@@ -11792,12 +12444,12 @@ msgstr ""
 "qui ont interrompu leurs abonnements au cours d'une période donnée. Nous "
 "pouvons distinguer deux types d'attrition :"
 
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst:35
+#: ../../content/applications/sales/subscriptions/reports.rst:35
 msgid "**Logo Churn**: It corresponds to the subscription cancellation rate."
 msgstr ""
 "**Perte de clients**: Il correspond au taux d'annulation des abonnements."
 
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst:37
+#: ../../content/applications/sales/subscriptions/reports.rst:37
 msgid ""
 "**Revenue Churn**: It corresponds to the monthly recurring revenue loss "
 "rate."
@@ -11805,11 +12457,11 @@ msgstr ""
 "**Perte de revenus**: Il correspond au taux de perte de revenus mensuels "
 "récurrents."
 
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst:40
+#: ../../content/applications/sales/subscriptions/reports.rst:40
 msgid "Let's imagine a 2$ increase in a subscription service."
 msgstr "Imaginons une augmentation de 2$ dans un service d'abonnement."
 
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst:42
+#: ../../content/applications/sales/subscriptions/reports.rst:42
 msgid ""
 "We lost 3 customers out of the initial 20, which generates a **Logo Churn** "
 "of 15%."
@@ -11817,7 +12469,7 @@ msgstr ""
 "Nous avons perdu 3 clients sur un total initial de 20 clients, ce qui "
 "entraîne une **perte de clients** de 15%."
 
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst:0
+#: ../../content/applications/sales/subscriptions/reports.rst:0
 msgid ""
 "Therefore, the 56$ of MRR difference out of the initial 600$ causes a "
 "**Revenue Churn**"
@@ -11825,17 +12477,17 @@ msgstr ""
 "Par conséquent, les 56$ de différence de MRR sur les 600$ initiaux "
 "entraînent une **perte de revenus**"
 
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst:0
+#: ../../content/applications/sales/subscriptions/reports.rst:0
 msgid "of 9,33%."
 msgstr "de 9,33%."
 
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst:0
+#: ../../content/applications/sales/subscriptions/reports.rst:0
 msgid "Difference between logo churn and revenue churn in Odoo Subscriptions"
 msgstr ""
 "Différence entre la perte de clients et la perte de revenus dans Odoo "
 "Abonnements"
 
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst:50
+#: ../../content/applications/sales/subscriptions/reports.rst:50
 msgid ""
 "Reminder: even though they seem to evolve in the same direction most of the "
 "time, it might not be the case all the time."
@@ -11843,7 +12495,7 @@ msgstr ""
 "Rappel : même s'ils semblent évoluer dans la même direction la plupart du "
 "temps, ce n'est pas toujours le cas."
 
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst:53
+#: ../../content/applications/sales/subscriptions/reports.rst:53
 msgid ""
 "**Customer Lifetime Value (CLV)**: Indicates how much revenue can be "
 "expected for a customer during his/her entire contract. This approach "
@@ -11855,7 +12507,7 @@ msgstr ""
 "met l'accent sur l'importance de la rétention des clients, en passant d'une "
 "approche trimestrielle ou annuelle à une approche à long terme."
 
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst:57
+#: ../../content/applications/sales/subscriptions/reports.rst:57
 msgid ""
 "Check out the different kinds of reports you can access from the **Odoo "
 "Subscriptions** application."
@@ -11863,11 +12515,11 @@ msgstr ""
 "Découvrez les différents types de rapports auxquels vous pouvez accéder "
 "depuis l'application **Odoo Abonnements**."
 
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst:61
+#: ../../content/applications/sales/subscriptions/reports.rst:61
 msgid "Subscriptions analysis report"
 msgstr "Rapport d'analyse des abonnements"
 
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst:63
+#: ../../content/applications/sales/subscriptions/reports.rst:63
 msgid ""
 "Go to :menuselection:`Subscriptions --> Reporting --> Subscriptions`. From "
 "there, you can change the *Measures*. By default, Odoo uses the *Monthly "
@@ -11885,15 +12537,15 @@ msgstr ""
 "même temps. Vous pouvez même *Regrouper par date de début* et, plus "
 "précisément, par *Semaine* pour obtenir une vue d'ensemble de votre rapport."
 
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst-1
+#: ../../content/applications/sales/subscriptions/reports.rst-1
 msgid "Subscriptions analysis report in Odoo Subscriptions"
 msgstr "Rapport d'analyse des abonnements dans Odoo Abonnements"
 
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst:74
+#: ../../content/applications/sales/subscriptions/reports.rst:74
 msgid "Retention analysis report"
 msgstr "Rapport d'analyse de la rétention"
 
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst:76
+#: ../../content/applications/sales/subscriptions/reports.rst:76
 msgid ""
 "Go to :menuselection:`Subscriptions --> Reporting --> Retention`. The "
 "default measure applied is *Count*, but you can change to the appropriate "
@@ -11907,15 +12559,15 @@ msgstr ""
 " sélectionné et la périodicité *Par mois* reste inchangée. En utilisant ces "
 "critères, vous pouvez voir l'évolution de la rétention depuis le début."
 
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst-1
+#: ../../content/applications/sales/subscriptions/reports.rst-1
 msgid "Retention analysis report in Odoo Subscriptions"
 msgstr "Rapport d'analyse de la rétention dans Odoo Abonnements"
 
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst:86
+#: ../../content/applications/sales/subscriptions/reports.rst:86
 msgid "Revenue KPIs report"
 msgstr "Rapport des KPIs des revenus"
 
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst:88
+#: ../../content/applications/sales/subscriptions/reports.rst:88
 msgid ""
 "Go to :menuselection:`Subscriptions --> Reporting --> Revenue KPIs`. From "
 "there, you can check different KPIs: *Monthly Recurring Revenue*, *Net "
@@ -11931,11 +12583,11 @@ msgstr ""
 "informations sur les abonnements, les sociétés et les équipes commerciales. "
 "Ceci est utile si vous recherchez des informations spécifiques."
 
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst-1
+#: ../../content/applications/sales/subscriptions/reports.rst-1
 msgid "Revenue KPIs report in Odoo Subscriptions"
 msgstr "Rapport des KPIs des revenus dans Odoo Abonnements"
 
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst:98
+#: ../../content/applications/sales/subscriptions/reports.rst:98
 msgid ""
 "The example below shows the *Monthly Recurring Revenue* detailed report. At "
 "the moment, there is no data, which is the typical scenario for a new "
@@ -11950,15 +12602,15 @@ msgstr ""
 "données. Une fois encore, vous pouvez filtrer ces KPIs spécifiques sur les "
 "abonnements, les entreprises et les équipes commerciales."
 
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst-1
+#: ../../content/applications/sales/subscriptions/reports.rst-1
 msgid "Detailed MRR report in Odoo Subscriptions"
 msgstr "Rapport détaillé sur le MRR dans Odoo Abonnements"
 
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst:108
+#: ../../content/applications/sales/subscriptions/reports.rst:108
 msgid "Salesperson dashboard report"
 msgstr "Rapport sur le tableau de bord d'un vendeur"
 
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst:110
+#: ../../content/applications/sales/subscriptions/reports.rst:110
 msgid ""
 "Go to :menuselection:`Subscriptions --> Reporting --> Salesperson "
 "Dashboard`. This page gives you a summary of your *Monthly Recurring "
@@ -11972,561 +12624,15 @@ msgstr ""
 " non récurrentes* pour chacun de vos vendeurs. Vous pouvez choisir la "
 "période que vous voulez appliquer et le vendeur que vous voulez analyser."
 
-#: ../../content/applications/sales/subscriptions/reporting/subscription_reports.rst-1
+#: ../../content/applications/sales/subscriptions/reports.rst-1
 msgid "Salesperson dashboard report in Odoo Subscriptions"
 msgstr "Rapport sur le tableau de bord d'un vendeur dans Odoo Abonnements"
 
-#: ../../content/applications/sales/subscriptions/sales_flow.rst:5
-msgid "Sales flow"
-msgstr "Flux de vente"
-
-#: ../../content/applications/sales/subscriptions/sales_flow/closing.rst:3
-msgid "Close a subscription"
-msgstr "Résilier un abonnement"
-
-#: ../../content/applications/sales/subscriptions/sales_flow/closing.rst:5
-msgid ""
-"Losing a customer is always difficult, especially if you put a lot of effort"
-" into getting them to sign up for your products/services. However, many "
-"companies come up with dubious methods to reduce the probability of this "
-"happening."
-msgstr ""
-"Perdre un client est toujours difficile, surtout si vous faites beaucoup "
-"d'efforts pour qu'il souscrivent à vos produits/services. Cependant, de "
-"nombreuses entreprises proposent des méthodes douteuses pour réduire la "
-"probabilité que cela se produise."
-
-#: ../../content/applications/sales/subscriptions/sales_flow/closing.rst:14
-msgid ""
-"If you adopt such methods, you are among companies that actively and "
-"indirectly spread the phobia of subscriptions, who do not think about how "
-"negatively dissatisfied customers could impact their business and, who "
-"frustrate the customers in a way or another. However, at some point, it is "
-"understandable that you do not want your customers to be involved in your "
-"subscription status."
-msgstr ""
-"Si vous adoptez de telles méthodes, vous faites partie des entreprises qui "
-"propagent activement et indirectement la phobie des abonnements, qui ne "
-"pensent pas à l'impact négatif que des clients insatisfaits pourraient avoir"
-" sur leur entreprise et qui frustrent les clients d'une manière ou d'une "
-"autre. Cependant, à un moment donné, il est compréhensible que vous ne "
-"souhaitiez pas que vos clients soient impliqués dans votre positionnement "
-"sur les abonnements."
-
-#: ../../content/applications/sales/subscriptions/sales_flow/closing.rst:19
-msgid ""
-"If you do not adopt such methods, you are among companies that continue to "
-"evolve in a long-term subscription business model, especially in an era of "
-"ultra-fast communications between dissatisfied customers, and who retain "
-"their customers by making it easier for them to leave if they want to. By "
-"giving them the opportunity to close their own subscriptions, your customers"
-" do not feel trapped because they subscribed to your products/services."
-msgstr ""
-"Si vous n'adoptez pas de telles méthodes, vous faites partie des entreprises"
-" qui continuent d'évoluer dans un modèle économique d'abonnement à long "
-"terme, en particulier à l'ère des communications ultrarapides entre clients "
-"insatisfaits, et qui fidélisent leurs clients en leur permettant de partir "
-"plus facilement s'ils le souhaitent. En leur donnant la possibilité de "
-"résilier leurs propres abonnements, vos clients ne se sentent pas piégés "
-"parce qu'ils ont souscrit à vos produits/services."
-
-#: ../../content/applications/sales/subscriptions/sales_flow/closing.rst:25
-msgid ""
-"In summary, the **Odoo Subscriptions** application gives you the "
-"**possibility to choose what you want to apply**. Indeed, you can decide "
-"whether to give your customers the option to close their subscriptions "
-"whenever they want to or to restrict this possibility. It depends on you and"
-" we will show you how to do that in our amazing application."
-msgstr ""
-"En résumé, l'application **Odoo Abonnements** vous donne la **possibilité de"
-" choisir ce que vous souhaitez appliquer**. En effet, vous pouvez décider de"
-" donner à vos clients la possibilité de résilier leurs abonnements quand ils"
-" le souhaitent ou de restreindre cette possibilité. Cela dépend de vous et "
-"nous vous montrerons comment le faire dans notre incroyable application."
-
-#: ../../content/applications/sales/subscriptions/sales_flow/closing.rst:33
-msgid ""
-"Go to :menuselection:`Subscriptions --> Configuration --> Subscription "
-"templates`. From there, you can create a new *Subscription template* or "
-"modify an existing one. When editing your template, underneath the Invoicing"
-" tab, you have the possibility to activate the option *Closable by "
-"customer*. Once enabled, this option gives your customers the right to close"
-" their own subscriptions."
-msgstr ""
-"Allez à :menuselection:`Abonnements --> Configuration --> Modèles "
-"d'abonnement`. À partir de là, vous pouvez créer un nouveau *modèle "
-"d'abonnement* ou en modifier un existant. Lors de l'édition de votre modèle,"
-" sous l'onglet Facturation, vous avez la possibilité d'activer l'option "
-"*Résiliable par le client*. Une fois activée, cette option donne à vos "
-"clients le droit de résilier leurs propres abonnements."
-
-#: ../../content/applications/sales/subscriptions/sales_flow/closing.rst-1
-msgid "Configuration to close your subscription with Odoo Subscriptions"
-msgstr "Comment résilier votre abonnement dans Odoo Abonnements"
-
-#: ../../content/applications/sales/subscriptions/sales_flow/closing.rst:43
-msgid ""
-"Be sure to check out our documentation on how to :doc:`Use subscription "
-"templates <../../subscriptions/configuration/subscription_templates>` to "
-"fully understand the importance of this feature in a basic flow using the "
-"**Odoo Subscriptions** application."
-msgstr ""
-"Assurez-vous de consulter notre documentation sur la façon d':doc:`Utiliser "
-"des modèles d'abonnement "
-"<../../subscriptions/configuration/subscription_templates>` pour bien "
-"comprendre l'importance de cette fonctionnalité dans un flux de base "
-"utilisant l'application **Odoo Abonnements**."
-
-#: ../../content/applications/sales/subscriptions/sales_flow/closing.rst:49
-msgid "Close your first subscription"
-msgstr "Résilier votre premier abonnement"
-
-#: ../../content/applications/sales/subscriptions/sales_flow/closing.rst:52
-msgid "Administrator view"
-msgstr "Vue administrateur"
-
-#: ../../content/applications/sales/subscriptions/sales_flow/closing.rst:54
-msgid ""
-"Once confirmed, a quotation becomes a sales order and a new subscription is "
-"automatically created. Therefore, this subscription has the status *In "
-"progress*. From there, you have the possibility to close the subscription."
-msgstr ""
-"Une fois confirmé, un devis devient un bon de commande et un nouvel "
-"abonnement est automatiquement créé. Cet abonnement a donc le statut *En "
-"cours*. À partir de là, vous avez la possibilité de résilier l'abonnement."
-
-#: ../../content/applications/sales/subscriptions/sales_flow/closing.rst-1
-msgid ""
-"Close your subscription from an administration point of view with Odoo "
-"Subscriptions"
-msgstr ""
-"Formulaire de résiliation d'abonnement du point de vue administrateur avec "
-"Odoo Abonnements"
-
-#: ../../content/applications/sales/subscriptions/sales_flow/closing.rst:62
-msgid ""
-"By using the smart button *Close*, you have to enter a close reason. For "
-"example, \"Subscription too expensive\", \"Subscription does not meet my "
-"requirements\", \"Subscription reached its end date\", etc. Immediately "
-"after confirming your close reason, you can observe that the status of the "
-"subscription is now *Closed* and that the close reason is mentioned on the "
-"subscription."
-msgstr ""
-"En utilisant le bouton intelligent *Résilier*, vous devez donner un motif de"
-" résiliation. Par exemple, \"Abonnement trop cher\", \"L'abonnement ne "
-"répond pas à mes besoins\", \"L'abonnement a atteint sa date de fin\", etc. "
-"Immédiatement après avoir confirmé votre motif de résiliation, vous pouvez "
-"constater que le statut de l'abonnement est désormais *Résilié* et que le "
-"motif de résiliation figure sur l'abonnement."
-
-#: ../../content/applications/sales/subscriptions/sales_flow/closing.rst-1
-msgid "What happens when you close your subscription with Odoo Subscriptions?"
-msgstr ""
-"Que se passe-t-il quand vous résiliez votre abonnement avec Odoo Abonnements"
-" ?"
-
-#: ../../content/applications/sales/subscriptions/sales_flow/closing.rst:72
-msgid "Customer view"
-msgstr "Vue client"
-
-#: ../../content/applications/sales/subscriptions/sales_flow/closing.rst:74
-msgid ""
-"As previously explained in the *Administrator view* part, from the "
-"subscription form, you also have the possibility to visualize what your "
-"customers see when managing their subscriptions thanks to the *Customer "
-"preview* button. In this example, the customer has the choice to close "
-"his/her subscription whenever he/she wants to, due to the *Close "
-"Subscription* button."
-msgstr ""
-"Comme expliqué précédemment dans la partie *Vue administrateur*, depuis le "
-"formulaire d'abonnement, vous avez également la possibilité de visualiser ce"
-" que voient vos clients lors de la gestion de leurs abonnements grâce au "
-"bouton *Aperçu client*. Dans cet exemple, le client a le choix de résilier "
-"son abonnement quand il le souhaite, grâce au bouton *Résilier "
-"l'abonnement*."
-
-#: ../../content/applications/sales/subscriptions/sales_flow/closing.rst-1
-msgid ""
-"Close your subscription from a customer point of view with Odoo "
-"Subscriptions"
-msgstr ""
-"Résilier votre abonnement du point de vue client avec Odoo Abonnements"
-
-#: ../../content/applications/sales/subscriptions/sales_flow/closing.rst:83
-msgid ""
-"By using this button, the customer can specify the reason for cancelling "
-"his/her subscription and he/she can even leave a message."
-msgstr ""
-"En utilisant ce bouton, le client peut préciser le motif de la résiliation "
-"de son abonnement et il peut même laisser un message."
-
-#: ../../content/applications/sales/subscriptions/sales_flow/closing.rst-1
-msgid ""
-"What happens when customers close their subscription with Odoo "
-"Subscriptions?"
-msgstr ""
-"Que se passe-t-il lorsqu'un client résilie son abonnement avec Odoo "
-"Abonnements ?"
-
-#: ../../content/applications/sales/subscriptions/sales_flow/closing.rst:90
-msgid ""
-"By confirming the cancellation, the customer is redirected to his/her "
-"portal. The administrator is informed of this modification. Indeed, the "
-"status of the subscription becomes *Closed* and a note appears in the "
-"chatter with the new stage, the end date, the close reason, and the closing "
-"text added by the customer."
-msgstr ""
-"En confirmant l'annulation, le client est redirigé vers son portail. "
-"L'administrateur est informé de cette modification. En effet, le statut de "
-"l'abonnement passe à *Résilié* et une note apparaît dans le chatter "
-"contenant la nouvelle étape, la date de fin, le motif de résiliation et le "
-"texte de résiliation ajouté par le client."
-
-#: ../../content/applications/sales/subscriptions/sales_flow/closing.rst-1
-msgid ""
-"What happens when customers close their subscription in Odoo Subscriptions?"
-msgstr ""
-"Que se passe-t-il lorsque des clients résilient leur abonnement dans Odoo "
-"Abonnements ?"
-
-#: ../../content/applications/sales/subscriptions/sales_flow/closing.rst:100
-msgid ""
-"Before closing a subscription, check out our documentation on how to "
-":doc:`Create a quotation using subscription products "
-"<../../subscriptions/sales_flow/create_a_quotation>` to understand how "
-"subscriptions are managed in the **Odoo Subscriptions** application."
-msgstr ""
-"Avant de résilier un abonnement, consultez notre documentation sur la façon "
-"de :doc:`Créer un devis à l'aide de produits d'abonnement "
-"<../../subscriptions/sales_flow/create_a_quotation>` pour comprendre comment"
-" les abonnements sont gérés dans l'application **Odoo Abonnements**."
-
-#: ../../content/applications/sales/subscriptions/sales_flow/create_a_quotation.rst:3
-msgid "Create a quotation using subscription products"
-msgstr "Créer un devis à l'aide de produits d'abonnement"
-
-#: ../../content/applications/sales/subscriptions/sales_flow/create_a_quotation.rst:5
-msgid ""
-"Selling a digital product or service gives instant gratification. However, "
-"you have to work hard for a new customer to make a purchase. It costs time "
-"and money. By convincing customers to sign up for a subscription, you "
-"maximize your income and streamline your cash flow. You can sell any type of"
-" product or service through a subscription business model."
-msgstr ""
-"Vendre un produit ou un service numérique apporte une satisfaction "
-"immédiate. Cependant, vous devez travailler dur pour qu'un nouveau client "
-"fasse un achat. Cela coûte du temps et de l'argent. En convainquant les "
-"clients de souscrire à un abonnement, vous maximisez vos revenus et "
-"rationalisez votre trésorerie. Vous pouvez vendre tout type de produit ou de"
-" service via un modèle commercial d'abonnement."
-
-#: ../../content/applications/sales/subscriptions/sales_flow/create_a_quotation.rst:15
-msgid ""
-"Here is a scenario using **Odoo Subscriptions** to create a quotation "
-"including subscription products."
-msgstr ""
-"Voici un scénario utilisant **Odoo Abonnements** pour créer un devis "
-"comprenant des produits d'abonnement."
-
-#: ../../content/applications/sales/subscriptions/sales_flow/create_a_quotation.rst:19
-msgid "Create your first quotation"
-msgstr "Créer votre premier devis"
-
-#: ../../content/applications/sales/subscriptions/sales_flow/create_a_quotation.rst:21
-msgid ""
-"Before creating your first quotation, be sure to check out our documentation"
-" on how to create and manage your own :doc:`Subscription templates "
-"<../../subscriptions/configuration/subscription_templates>` and on how to "
-"add :doc:`Subscription products "
-"<../../subscriptions/configuration/subscription_products>` to your "
-"templates."
-msgstr ""
-"Avant de créer votre premier devis, assurez-vous de consulter notre "
-"documentation sur la façon de créer et de gérer vos propres :doc:`modèles "
-"d'abonnement <../../subscriptions/configuration/subscription_templates>` et "
-"la façon d'ajouter des :doc:` produits d'abonnement "
-"<../../subscriptions/configuration/subscription_products>` à vos modèles."
-
-#: ../../content/applications/sales/subscriptions/sales_flow/create_a_quotation.rst:30
-msgid ""
-"These steps are **mandatory** to make a basic sales flow using **Odoo "
-"Subscriptions**."
-msgstr ""
-"Ces étapes sont **obligatoires** pour créer un flux de vente de base à "
-"l'aide de **Odoo Abonnements**."
-
-#: ../../content/applications/sales/subscriptions/sales_flow/create_a_quotation.rst:32
-msgid ""
-"Go to **Odoo Sales** and create a new quotation. Then, choose a customer and"
-" add a product. Be careful to select a product that you previously "
-"configured as a *Subscription product*."
-msgstr ""
-"Allez à **Odoo Ventes** et créez un nouveau devis. Choisissez ensuite un "
-"client et ajoutez un produit. Veillez à sélectionner un produit que vous "
-"avez préalablement configuré comme un *Produit d'abonnement*."
-
-#: ../../content/applications/sales/subscriptions/sales_flow/create_a_quotation.rst-1
-msgid "View of a quotation form in Odoo Sales"
-msgstr "Vue d'un formulaire de devis dans Odoo Ventes"
-
-#: ../../content/applications/sales/subscriptions/sales_flow/create_a_quotation.rst:39
-msgid ""
-"When your quotation is ready, you have the possibility to send it to your "
-"customers or to confirm it. It is better to first *Send by email* the "
-"quotation to your customers to have their confirmation and, then, *Confirm* "
-"it in **Odoo Sales**. By clicking on *Customer preview*, you have an idea of"
-" what your customers will see when receiving your quotation."
-msgstr ""
-"Lorsque votre devis est prêt, vous avez la possibilité de l'envoyer à vos "
-"clients ou de le confirmer. Il est préférable de d'abord *Envoyer* le devis "
-"*par email* à vos clients pour avoir leur confirmation et, ensuite, le "
-"*confirmer* dans **Odoo Ventes**. En cliquant sur *Aperçu client*, vous avez"
-" une idée de ce que verront vos clients lorsqu'ils recevront votre devis."
-
-#: ../../content/applications/sales/subscriptions/sales_flow/create_a_quotation.rst-1
-msgid "Customer preview of a quotation form in Odoo Sales"
-msgstr "Aperçu client d'un formulaire de devis dans Odoo Ventes"
-
-#: ../../content/applications/sales/subscriptions/sales_flow/create_a_quotation.rst:48
-msgid ""
-"From there, your customers have three choices: *Sign & Pay* the quotation, "
-"give you a *Feedback* or *Reject* the quotation. It appears that they are "
-"very happy and accept the option *Sign & Pay*. Then, they have to validate "
-"the order with a signature and by choosing a payment method. When it is "
-"done, you can check out the quotation in **Odoo Sales** and *Confirm* it."
-msgstr ""
-"À ce moment, vos clients ont trois choix : *Signer & Payer* le devis, vous "
-"donner un *Retour d'expérience* ou *Refuser* le devis. Il semble qu'ils "
-"soient très satisfaits et acceptent l'option *Signer & Payer*. Ensuite, ils "
-"doivent valider la commande par une signature et un choix de mode de "
-"paiement. Lorsque c'est fait, vous pouvez consulter le devis dans **Odoo "
-"Ventes** et le *Confirmer*."
-
-#: ../../content/applications/sales/subscriptions/sales_flow/create_a_quotation.rst:54
-msgid "Manage your subscriptions from your SO"
-msgstr "Gérer vos abonnements depuis votre bon de commande"
-
-#: ../../content/applications/sales/subscriptions/sales_flow/create_a_quotation.rst:56
-msgid ""
-"Once confirmed, the quotation becomes a sales order and a new button "
-"appears, *Subscriptions*. Indeed, a subscription is automatically created."
-msgstr ""
-"Une fois validé, le devis devient un bon de commande et un nouveau bouton "
-"*Abonnements* apparaît. Un abonnement est en effet créé automatiquement."
-
-#: ../../content/applications/sales/subscriptions/sales_flow/create_a_quotation.rst-1
-msgid "Quotation form in Odoo Sales with a button \"Subscriptions\""
-msgstr "Formulaire de devis dans Odoo ventes avec un bouton \"Abonnements\""
-
-#: ../../content/applications/sales/subscriptions/sales_flow/create_a_quotation.rst:63
-msgid ""
-"By clicking on the *Subscriptions* button, you can see that the status of "
-"the subscription is *In progress*. From there, you will have three options: "
-":doc:`Renew <../../subscriptions/sales_flow/renewals>`, :doc:`Close "
-"<../../subscriptions/sales_flow/closing>` or :doc:`Upsell "
-"<../../subscriptions/sales_flow/upselling>` your subscription."
-msgstr ""
-"En cliquant sur le bouton *Abonnements*, vous pouvez voir que le statut de "
-"l'abonnement est *En cours*. À partir de là, vous aurez trois options : "
-":doc:`Renouveler <../../subscriptions/sales_flow/renewals>`, :doc:`Résilier "
-"<../../subscriptions/sales_flow/closing>` ou :doc:`Maximiser "
-"<../../subscriptions/sales_flow/upselling>` votre abonnement."
-
-#: ../../content/applications/sales/subscriptions/sales_flow/create_a_quotation.rst-1
-msgid "Use of the intelligent button \"Subscriptions\" in Odoo Sales"
-msgstr "Utilisation du bouton intelligent \"Abonnements\" dans Odoo Ventes"
-
-#: ../../content/applications/sales/subscriptions/sales_flow/create_a_quotation.rst:73
-msgid ""
-"In the top-right corner, you can see the status of the subscription. When a "
-"subscription is new and created from **Odoo Subscriptions**, the status is "
-"*Draft*. When a sales order has been validated, the status is *In progress*."
-" Finally, when a customer decides to close his subscription, the status "
-"becomes *Closed*."
-msgstr ""
-"Dans le coin supérieur droit, vous pouvez voir le statut de l'abonnement. "
-"Lorsqu'un abonnement est nouveau et créé à partir de **Odoo Abonnements**, "
-"le statut est *Brouillon*. Lorsqu'un bon de commande a été validé, le statut"
-" est *En cours*. Enfin, lorsqu'un client décide de résilier son abonnement, "
-"le statut passe en *Résilié*."
-
-#: ../../content/applications/sales/subscriptions/sales_flow/create_a_quotation.rst:81
-msgid ":doc:`../../subscriptions/sales_flow/renewals`"
-msgstr ":doc:`../../subscriptions/sales_flow/renewals`"
-
-#: ../../content/applications/sales/subscriptions/sales_flow/create_a_quotation.rst:82
-msgid ":doc:`../../subscriptions/sales_flow/closing`"
-msgstr ":doc:`../../subscriptions/sales_flow/closing`"
-
-#: ../../content/applications/sales/subscriptions/sales_flow/create_a_quotation.rst:83
-msgid ":doc:`../../subscriptions/sales_flow/upselling`"
-msgstr ":doc:`../../subscriptions/sales_flow/upselling`"
-
-#: ../../content/applications/sales/subscriptions/sales_flow/renewals.rst:3
-msgid "Renew a subscription"
-msgstr "Renouveler un abonnement"
-
-#: ../../content/applications/sales/subscriptions/sales_flow/renewals.rst:5
-msgid ""
-"The key feature of a subscription business model is the recurring nature of "
-"payments. In this model, customers pay a recurring amount in exchange for "
-"access to a product or a service."
-msgstr ""
-"La principale caractéristique d'un modèle commercial d'abonnement est la "
-"nature récurrente des paiements. Dans ce modèle, les clients paient un "
-"montant récurrent en échange de l'accès à un produit ou à un service."
-
-#: ../../content/applications/sales/subscriptions/sales_flow/renewals.rst:14
-msgid ""
-"Each subscriber experiences this renewal process monthly, annually, or "
-"sometimes more, depending on the duration of the contract. Most subscription"
-" companies choose to automate their renewal processes but, in some cases, "
-"manual subscription renewals are still the preferred option."
-msgstr ""
-"Chaque abonné passe par ce processus de renouvellement tous les mois, tous "
-"les ans ou parfois plus, en fonction de la durée du contrat. La plupart des "
-"sociétés d'abonnement choisissent d'automatiser leurs processus de "
-"renouvellement mais, dans certains cas, le renouvellement manuel de "
-"l'abonnement reste l'option privilégiée."
-
-#: ../../content/applications/sales/subscriptions/sales_flow/renewals.rst:18
-msgid ""
-"With **Odoo Subscriptions**, you can have all your subscriptions in one "
-"application, suggest an automatic subscription renewal to your customers (as"
-" well as a manual one) and, finally, filter all your subscriptions and "
-"easily find those to renew (with the help of the tag *To renew*)."
-msgstr ""
-"Grâce à **Odoo Abonnements**, vous pouvez regrouper tous vos abonnements "
-"dans une seule application, proposer un renouvellement d'abonnement "
-"automatique à vos clients (ainsi qu'un manuel) et, enfin, filtrer tous vos "
-"abonnements et trouver facilement ceux à renouveler (à l'aide de l'étiquette"
-" *À renouveler*)."
-
-#: ../../content/applications/sales/subscriptions/sales_flow/renewals.rst:23
-msgid "Renew your first subscription"
-msgstr "Renouveler votre premier abonnement"
-
-#: ../../content/applications/sales/subscriptions/sales_flow/renewals.rst:25
-msgid ""
-"Before renewing a subscription, be sure to check out our documentation on "
-"how to :doc:`Create a quotation "
-"<../../subscriptions/sales_flow/create_a_quotation>` using subscription "
-"products. Indeed, once confirmed, a quotation becomes a sales order and a "
-"new subscription is automatically created. Therefore, this subscription has "
-"the status *In progress*. From there, you have the possibility to renew the "
-"subscription. In the Other Info tab, underneath the To Renew section, you "
-"can activate the *To renew* option. When activated, a yellow tag "
-"automatically appears in the upper right corner of the subscription."
-msgstr ""
-"Avant de renouveler un abonnement, assurez-vous de consulter notre "
-"documentation sur la façon de :doc:`Créer un devis "
-"<../../subscriptions/sales_flow/create_a_quotation>` à l'aide des produits "
-"d'abonnement. En effet, une fois validé, un devis devient un bon de commande"
-" et un nouvel abonnement est automatiquement créé. Par conséquent, cet "
-"abonnement a le statut *En cours*. À partir de là, vous avez la possibilité "
-"de renouveler l'abonnement. Dans l'onglet \"Autres informations\", sous la "
-"section \"À renouveler\", vous pouvez activer l'option *À renouveler*. "
-"Lorsqu'elle est activée, une étiquette jaune apparaît automatiquement dans "
-"le coin supérieur droit de l'abonnement."
-
-#: ../../content/applications/sales/subscriptions/sales_flow/renewals.rst-1
-msgid "Renew your subscription with Odoo Subscriptions"
-msgstr "Renouvelez votre abonnement avec Odoo Abonnements"
-
-#: ../../content/applications/sales/subscriptions/sales_flow/renewals.rst:38
-msgid ""
-"The *To renew* tag is automatically ticked when a payment fails. This "
-"indicator also appears on the customer portal. To visualize that, you just "
-"have to click on the *Customer preview* button. The tag *To renew* appears "
-"on the top right corner."
-msgstr ""
-"La case *À renouveler* est automatiquement cochée lorsqu'un paiement échoue."
-" Cet indicateur apparaît également sur le portail client. Pour le "
-"visualiser, il suffit de cliquer sur le bouton *Aperçu client*. L'étiquette "
-"*À renouveler* apparaît dans le coin supérieur droit."
-
-#: ../../content/applications/sales/subscriptions/sales_flow/renewals.rst:0
-msgid "Customer preview of a renewal with Odoo Subscriptions"
-msgstr "Aperçu client d'un renouvellement avec Odoo Abonnements"
-
-#: ../../content/applications/sales/subscriptions/sales_flow/renewals.rst:46
-msgid ""
-"When a subscription needs to be renewed, you have the possibility to use a "
-"new button called *Renewal quotation*. By clicking on it, a new quotation is"
-" created. From there, start a basic sales flow allowing you to send the "
-"quotation by email to your customers or to confirm it. It is better to first"
-" *Send by email* the quotation to your customers in order to have their "
-"confirmation and, then, *Confirm* it in **Odoo Sales**."
-msgstr ""
-"Lorsqu'un abonnement doit être renouvelé, vous avez la possibilité "
-"d'utiliser un nouveau bouton appelé *Devis de renouvellement*. En cliquant "
-"dessus, un nouveau devis est créé. À partir de là, démarrez un flux de vente"
-" de base qui vous permet d'envoyer le devis par email à vos clients ou de le"
-" confirmer. Il est préférable de d'abord *Envoyer* le devis *par email* à "
-"vos clients afin d'avoir leur confirmation et, ensuite, le *Confirmer* dans "
-"**Odoo Ventes**."
-
-#: ../../content/applications/sales/subscriptions/sales_flow/renewals.rst:53
-msgid ""
-"In the Chatter of this new quotation, it is mentioned that \"This renewal "
-"order has been created from the previous subscription\". Once confirmed by "
-"your customers, this quotation becomes a sales order and a new sale is "
-"mentioned in the upper right corner of the subscription."
-msgstr ""
-"Dans le chatter de ce nouveau devis, il est mentionné que \"Cette commande "
-"de renouvellement a été créée à partir de l'abonnement précédent\". Une fois"
-" validé par vos clients, ce devis devient un bon de commande et une nouvelle"
-" vente est mentionnée dans le coin supérieur droit de l'abonnement."
-
-#: ../../content/applications/sales/subscriptions/sales_flow/renewals.rst:0
-msgid "Renew a quotation with Odoo Subscriptions"
-msgstr "Devis de renouvellement dans Odoo Abonnements"
-
-#: ../../content/applications/sales/subscriptions/sales_flow/renewals.rst:61
-msgid ""
-"By clicking on the *Sales* button, you have a summary of your sales orders "
-"in a list view. The only difference between your two quotations is the "
-"description underneath the *Subscription Management* category. There, you "
-"can easily visualize which one is your renewal."
-msgstr ""
-"En cliquant sur le bouton *Ventes*, vous disposez d'un récapitulatif de vos "
-"bons de commande sous forme de liste. La seule différence entre vos deux "
-"devis est la description sous la catégorie *Gestion des abonnements*. Vous "
-"pouvez facilement y voir lequel est votre renouvellement."
-
-#: ../../content/applications/sales/subscriptions/sales_flow/renewals.rst:0
-msgid "Renewal as Subscription Management form in Odoo Subscriptions"
-msgstr ""
-"Renouvellement comme formulaire de gestion des abonnements dans Odoo "
-"Abonnements"
-
-#: ../../content/applications/sales/subscriptions/sales_flow/renewals.rst:70
-msgid "Visualize your subscriptions to renew"
-msgstr "Visualiser vos abonnements à renouveler"
-
-#: ../../content/applications/sales/subscriptions/sales_flow/renewals.rst:72
-msgid ""
-"Finally, if you want to visualize all your subscriptions and easily find "
-"those to renew, you can go to your *Subscriptions dashboard* and use the "
-"filter *To renew*."
-msgstr ""
-"Enfin, si vous souhaitez visualiser tous vos abonnements et facilement "
-"trouver ceux qui doivent être renouvelés, vous pouvez aller à votre *tableau"
-" de bord des abonnements* et utiliser le filtre *À renouveler*."
-
-#: ../../content/applications/sales/subscriptions/sales_flow/renewals.rst-1
-msgid ""
-"List view of all subscriptions and use of the filter to renew in Odoo "
-"Subscriptions"
-msgstr ""
-"Vue de liste de tous les abonnements et utilisation du filtre pour "
-"renouveler dans Odoo Abonnements"
-
-#: ../../content/applications/sales/subscriptions/sales_flow/upselling.rst:3
+#: ../../content/applications/sales/subscriptions/upselling.rst:3
 msgid "Upsell a subscription"
 msgstr "Appliquer la vente incitative à un abonnement"
 
-#: ../../content/applications/sales/subscriptions/sales_flow/upselling.rst:5
+#: ../../content/applications/sales/subscriptions/upselling.rst:5
 msgid ""
 "Subscriptions are recurrent and go on indefinitely. As time passes by, our "
 "customers may want to modify them. We must then be able to adapt the prices "
@@ -12538,7 +12644,7 @@ msgstr ""
 "mesure d'adapter les prix ou de changer les quantités des produits pour "
 "répondre à leurs besoins. Deux situations peuvent se produire :"
 
-#: ../../content/applications/sales/subscriptions/sales_flow/upselling.rst:9
+#: ../../content/applications/sales/subscriptions/upselling.rst:9
 msgid ""
 "**Loyal customers:** This kind of customers already trust you as a brand. "
 "Therefore, you are confident regarding what you offer since they keep paying"
@@ -12550,7 +12656,7 @@ msgstr ""
 "continuent à payer pour vos produits et services. Par conséquent, il est "
 "plus facile de leur vendre quelque chose de plus qu'à un nouveau client."
 
-#: ../../content/applications/sales/subscriptions/sales_flow/upselling.rst:14
+#: ../../content/applications/sales/subscriptions/upselling.rst:14
 msgid ""
 "**New customers:** For this kind of customers, you have to come with "
 "something new, something attractive. What about discounts? Typically, every "
@@ -12564,7 +12670,7 @@ msgstr ""
 "ce type d'offres aux nouveaux clients, vous renforcez vos relations avec eux"
 " et vous les fidélisez davantage."
 
-#: ../../content/applications/sales/subscriptions/sales_flow/upselling.rst:27
+#: ../../content/applications/sales/subscriptions/upselling.rst:27
 msgid ""
 "As previously explained, to upsell a subscription to new customers, it is "
 "recommended to offer *Discounts*. To activate this option, go to "
@@ -12578,38 +12684,37 @@ msgstr ""
 "Paramètres` et, sous la catégorie *Tarif*, vous avez la possibilité "
 "d'appliquer des remises sur les lignes de bon de commande."
 
-#: ../../content/applications/sales/subscriptions/sales_flow/upselling.rst-1
+#: ../../content/applications/sales/subscriptions/upselling.rst-1
 msgid "Activation of the discount option in Odoo Sales"
 msgstr "Activation de l'option de remise dans Odoo Ventes"
 
-#: ../../content/applications/sales/subscriptions/sales_flow/upselling.rst:36
+#: ../../content/applications/sales/subscriptions/upselling.rst:36
 msgid "Upsell your first subscription"
 msgstr "Appliquer la vente incitative à votre premier abonnement"
 
-#: ../../content/applications/sales/subscriptions/sales_flow/upselling.rst:38
+#: ../../content/applications/sales/subscriptions/upselling.rst:38
 msgid ""
 "Before upselling a subscription, be sure to check out our documentation on "
-"how to :doc:`Create a quotation "
-"<../../subscriptions/sales_flow/create_a_quotation>` using subscription "
+"how to :doc:`Create a quotation <../subscriptions>` using subscription "
 "products. Indeed, once confirmed, a quotation becomes a sales order and a "
 "new subscription is automatically created. Therefore, this subscription has "
 "the status *In progress*. From there, you have the possibility to upsell "
 "your subscription."
 msgstr ""
-"Avant d'appliquer une vente incitative sur un abonnement, assurez-vous de "
+"Avant d'appliquer une vente incitative à un abonnement, n'hésitez pas à "
 "consulter notre documentation sur la façon de :doc:`Créer un devis "
-"<../../subscriptions/sales_flow/create_a_quotation>` à l'aide des produits "
-"d'abonnement. En effet, une fois validé, un devis devient un bon de commande"
-" et un nouvel abonnement est créé automatiquement. Par conséquent, cet "
-"abonnement a le statut *En cours*. Vous avez alors la possibilité "
-"d'appliquer la vente incitative à votre abonnement."
+"<../subscriptions>` avec des produits d'abonnement. En effet, une fois "
+"confirmé, un devis se transforme en commande et un nouvel abonnement se crée"
+" automatiquement. Par conséquent, cet abonnement a le statut *En cours*. À "
+"partir de là, vous avez la possibilité d'appliquer une vente incitative à "
+"votre abonnement."
 
-#: ../../content/applications/sales/subscriptions/sales_flow/upselling.rst-1
+#: ../../content/applications/sales/subscriptions/upselling.rst-1
 msgid "Upsell your subscription with Odoo Subscriptions"
 msgstr ""
 "Appliquer la vente incitative à votre abonnement avec Odoo Abonnements"
 
-#: ../../content/applications/sales/subscriptions/sales_flow/upselling.rst:48
+#: ../../content/applications/sales/subscriptions/upselling.rst:48
 msgid ""
 "By using the smart button *Upsell*, you are able to create a new quotation "
 "with new subscription products and send it to your customers for approval."
@@ -12618,7 +12723,7 @@ msgstr ""
 "nouveau devis avec de nouveaux produits d'abonnement et l'envoyer à vos "
 "clients pour approbation."
 
-#: ../../content/applications/sales/subscriptions/sales_flow/upselling.rst-1
+#: ../../content/applications/sales/subscriptions/upselling.rst-1
 msgid ""
 "Add products to your subscription via the upsell option in Odoo "
 "Subscriptions"
@@ -12626,7 +12731,7 @@ msgstr ""
 "Ajouter des produits à votre abonnement via l'option de vente incitative "
 "dans Odoo Abonnements"
 
-#: ../../content/applications/sales/subscriptions/sales_flow/upselling.rst:56
+#: ../../content/applications/sales/subscriptions/upselling.rst:56
 msgid ""
 "When the quotation is confirmed by your customers, the products are added to"
 " the initial subscription. Quotation prices are, then, prorated to the "
@@ -12636,7 +12741,7 @@ msgstr ""
 "l'abonnement initial. Les prix du devis sont alors calculés au prorata du "
 "temps restant de la période de facturation en cours."
 
-#: ../../content/applications/sales/subscriptions/sales_flow/upselling.rst:60
+#: ../../content/applications/sales/subscriptions/upselling.rst:60
 msgid ""
 "Of course, before sending this new quotation to your customers, you can "
 "change the unit price, taxes, and, even the discount you want to offer. The "
@@ -12658,12 +12763,12 @@ msgstr ""
 " qu'une ligne additionnelle a été ajoutée à l'abonnement avec le nouveau "
 "service supplémentaire que le client voulait acheter."
 
-#: ../../content/applications/sales/subscriptions/sales_flow/upselling.rst-1
+#: ../../content/applications/sales/subscriptions/upselling.rst-1
 msgid "Visualize all your subscriptions updates with Odoo Subscriptions"
 msgstr ""
 "Visualiser toutes les mises à jour de vos abonnements avec Odoo Abonnements"
 
-#: ../../content/applications/sales/subscriptions/sales_flow/upselling.rst:72
+#: ../../content/applications/sales/subscriptions/upselling.rst:72
 msgid ""
 "In addition, by clicking on the *Sales* button, you have a summary of your "
 "sales orders in a list view."
@@ -12671,11 +12776,11 @@ msgstr ""
 "De plus, en cliquant sur le bouton *Ventes*, vous disposez d'un "
 "récapitulatif de vos bons de commande sous forme de liste."
 
-#: ../../content/applications/sales/subscriptions/sales_flow/upselling.rst-1
+#: ../../content/applications/sales/subscriptions/upselling.rst-1
 msgid "List view of all sales orders created for a subscription"
 msgstr "Vue de liste de tous les bons de commande créés pour un abonnement"
 
-#: ../../content/applications/sales/subscriptions/sales_flow/upselling.rst:79
+#: ../../content/applications/sales/subscriptions/upselling.rst:79
 msgid ""
 "The only difference between your two sales orders is the description "
 "underneath the *Subscription Management* category. There, you can easily "

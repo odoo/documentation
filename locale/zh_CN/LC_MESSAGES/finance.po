@@ -43,7 +43,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-06 08:12+0000\n"
+"POT-Creation-Date: 2023-04-13 05:55+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
 "Last-Translator: Martin Trigaux, 2023\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/odoo/teams/41243/zh_CN/)\n"
@@ -164,7 +164,7 @@ msgstr ""
 #: ../../content/applications/finance/accounting/receivables/customer_invoices/epc_qr_code.rst:21
 #: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:46
 #: ../../content/applications/finance/accounting/receivables/customer_invoices/snailmail.rst:12
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:15
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:11
 #: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:20
 #: ../../content/applications/finance/accounting/receivables/customer_payments/check.rst:39
 #: ../../content/applications/finance/accounting/receivables/customer_payments/check.rst:103
@@ -1173,6 +1173,7 @@ msgid "Bank Account (BANK B)"
 msgstr "银行账户（银行B）"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:5
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:55
 msgid "Bank reconciliation"
 msgstr "银行对账"
 
@@ -2656,7 +2657,6 @@ msgid "Total to pay"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/getting_started/cheat_sheet.rst:188
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:80
 #: ../../content/applications/finance/accounting/reporting/overview/main_reports.rst:144
 msgid "Bank Reconciliation"
 msgstr "银行对账"
@@ -8249,8 +8249,8 @@ msgid ""
 msgstr "对于订阅, 开票会定期地, 自动地生成。生成开票频率以及服务／产品已经在合同上定义好了."
 
 #: ../../content/applications/finance/accounting/receivables/customer_invoices/overview.rst:106
-msgid ":doc:`/applications/sales/sales/invoicing/subscriptions`"
-msgstr ":doc：'/应用程序/销售/销售/开票/订阅”"
+msgid ":doc:`/applications/sales/subscriptions`"
+msgstr ""
 
 #: ../../content/applications/finance/accounting/receivables/customer_invoices/overview.rst:112
 msgid "Creating an invoice manually"
@@ -8724,167 +8724,106 @@ msgid "Customer payments"
 msgstr "客户付款"
 
 #: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:3
-msgid "Batch payments: Batch deposits (checks, cash etc.)"
-msgstr "批量付款：批量存款（支票、现金等）"
+msgid "Batch payments by bank deposit"
+msgstr ""
 
 #: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:5
 msgid ""
-"A **Batch Deposit** groups multiple payments in a single batch. This allows "
-"you to deposit several payments into your bank account with a single "
-"transaction. This is particularly useful to deposit cash and checks."
-msgstr "一个 **批量存款** 在一个批次中对多个付款进行分组。这允许你在一次交易中将几笔付款存入你的银行账户。这对存入现金和支票特别有用."
-
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:9
-msgid ""
-"This feature allows you to list several customer payments and print a "
-"**deposit slip**. This ticket contains the details of the transactions and a"
-" reference to the batch deposit. You can then select this reference during a"
-" bank reconciliation to match the single bank statement line with all the "
-"transactions listed in the batch deposit."
+"A **batch deposit** is a convenient way to group customer payments and "
+"deposit them into your bank account. The feature lets you list multiple "
+"payments and generate a detailed deposit slip with a batch reference. This "
+"reference can be used when reconciling to match bank statement lines with "
+"transactions in the batch deposit."
 msgstr ""
-"该功能允许您列出几个客户付款并打印一张**存款凭条**。此票据包含交易的详细信息和批量存款的引用。然后，您可以在银行余额调节期间选择此引用，以便将单个银行对账单行与批量存款中列出的所有交易相匹配."
+
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:13
+msgid ""
+"Go to :menuselection:`Accounting --> Configuration --> Settings --> Customer"
+" Payments` and tick :guilabel:`Batch Payments` to activate the feature."
+msgstr ""
 
 #: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:17
-msgid ""
-"To activate the feature, go to :menuselection:`Accounting --> Configuration "
-"--> Settings --> Customer Payments`, activate **Batch Payments**, and click "
-"on *Save*."
-msgstr ""
-"要激活该功能，请进入 :menuselection:`会计 --> 配置 --> 设定--> 客户付款`，激活 **批量付款** ，然后点击 *保存* "
-"."
-
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:21
-msgid "Payment Method Types"
-msgstr "付款方式类型"
-
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:23
-msgid ""
-"To record new payments as part of a Batch Deposit, you have to configure "
-"first the Journal on which you record them."
-msgstr "要将新付款记录为批量存款的一部分，您必须首先配置要记录新付款的日记帐."
-
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:26
-msgid ""
-"To do so, go to :menuselection:`Accounting --> Configuration --> Journals`, "
-"open the Journal you want to edit, click on *Edit*, and open the *Advanced "
-"Settings* tab. In the *Payment Method Types* section, enable **Batch "
-"Deposit**, and click on *Save*."
-msgstr ""
-"为此，请转到 :menuselection:`会计 --> 配置 --> 日记帐`，打开要编辑的日志，单击 *编辑* ，然后打开 *高级设置* 标签。 "
-"在 *付款方式类型* 部分中，启用 *批量存款* ，然后单击*保存* ."
-
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst-1
-msgid "Payment Method Types in a journal's advanced settings"
-msgstr "日记账高级设置中的付款方式类型"
-
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:35
-msgid ""
-"Your main bank accounts are automatically configured to process batch "
-"payments when you activate the feature."
-msgstr "激活该功能后，您的主要银行帐户将自动配置为处理批量付款."
-
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:39
 msgid "Deposit multiple payments in batch"
 msgstr "批量存入多笔款项"
 
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:20
+msgid "Register payments"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:22
+msgid ""
+"Before performing a batch deposit, it is necessary to register each "
+"transaction's payment. To do so, open the corresponding customer invoice and"
+" click :guilabel:`Register Payment`. In the pop-up window, select the "
+":guilabel:`Journal` linked to your bank account and :guilabel:`Batch "
+"Deposit` as the :guilabel:`Payment Method`, and click :guilabel:`Create "
+"Payment`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst-1
+msgid "Registering a customer payment as part of a batch deposit"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:32
+msgid "Add payments to a batch deposit"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:34
+msgid ""
+"To add payments to a batch deposit, go to :menuselection:`Accounting --> "
+"Customers --> Batch Payments`, and click :guilabel:`New`. Next, select the "
+":guilabel:`Bank` and choose :guilabel:`Batch Deposit` as the "
+":guilabel:`Payment Method`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst-1
+msgid "Filling out a new inbound batch payment form"
+msgstr ""
+
 #: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:42
-msgid "Record payments to deposit in batch"
-msgstr "记录要分批的付款"
-
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:44
 msgid ""
-":doc:`Register the payments <recording>` on the bank account on which you "
-"plan to deposit them by opening the *Customer Invoice* for which you "
-"received a payment, and clicking on *Register Payment*. There, select the "
-"appropriate Journal linked to your bank account and select *Batch Deposit* "
-"as Payment Method."
+"Click :guilabel:`Add a line`. In the pop-up window, tick all payments to "
+"include in the batch deposit, then click :guilabel:`Select`."
 msgstr ""
-":doc:`注册付款 <recording>` 在您打算将其存入银行帐户的银行帐户上，打开已收到付款的 *客户开票* ，然后单击 *注册付款* 。 "
-"在此处，选择链接到您的银行帐户的适当日记帐，然后选择 *批量存款* 作为付款方式."
 
 #: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst-1
-msgid ""
-"Registering a customer payment as part of a Batch Deposit in Odoo Accounting"
-msgstr "在Odoo会计应用程序中将客户付款登记为批量存款的一部分"
-
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:53
-msgid "Do this step for all checks or payments you want to process in batch."
-msgstr "对要批量处理的所有支票或付款执行此步骤."
-
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:56
-msgid "Make sure to write the payment reference in the **Memo** field."
-msgstr "确保在 *备注* 字段中填写付款参考."
-
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:59
-msgid "Add payments to a Batch Deposit"
-msgstr "将付款添加到批量存款"
-
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:61
-msgid ""
-"To add the payments to a Batch Deposit, go to :menuselection:`Accounting -->"
-" Customers --> Batch Payments`, and click on *Create*. Next, select the Bank"
-" and Payment Method, then click on *Add a line*."
+msgid "Selecting all payments to include in the batch deposit"
 msgstr ""
-"要将付款添加到批量存款中，请转到 :menuselection:` 会计 --> 客户 --> 批量付款` 然后单击 *创建* 。 "
-"接下来，选择银行和付款方式，然后单击 *添加行* ."
 
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst-1
-msgid "Filling out a new Inbound Batch Payment form on Odoo Accounting"
-msgstr "在Odoo会计应用程序中填写新的入站批量付款表单"
-
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:69
-msgid ""
-"Select all payments to include in the current Batch Deposit and click on "
-"*Select*. You can also record a new payment and add it to the list by "
-"clicking on *Create*."
-msgstr "选择要包括在当前批量存款中的所有付款，然后单击*选择*。 您还可以记录新的付款并将其添加到列表中，方法是单击*创建*."
-
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst-1
-msgid "Selection of all payments to include in the Batch Deposit"
-msgstr "选择所有要纳入批量存款的付款"
-
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:76
-msgid ""
-"Once done, click on *Validate* to finalize your Batch Deposit. You can then "
-"click on *Print* to download a PDF file to include with the deposit slip "
-"that the bank usually requires to fill out."
-msgstr "完成后，单击 *确认* 以完成您的批量存款。 然后，您可以单击 *打印* 以下载PDF文件，以包括银行通常要求填写的存款单."
-
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:82
-msgid ""
-"Once the bank statements are on your database, you can reconcile the bank "
-"statement line with the *Batch Payment* reference. To do so, start your "
-"**Bank Reconciliation** by going to your Accounting dashboard and clicking "
-"on *Reconcile Items* on the related bank account. At the bank statement "
-"line, click on *Choose counterpart or Create Write-off* to display more "
-"options, open the *Batch Payments* tab, and select your Batch Payment. All "
-"related payments are automatically added."
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:49
+msgid "Once done, click :guilabel:`Validate` to finalize the batch deposit."
 msgstr ""
-"一旦银行对账单进入数据库，您就可以将银行对账单行与 *批量付款* 引用进行协调。 为此，请转到会计”仪表板，然后单击相关银行帐户上的 *对帐项目* "
-"，以启动 **银行对帐** 。 在银行对帐单行中，单击 *选择对口方或创建冲销* 以显示更多选项，打开 *批量付款* 选项卡，然后选择您的批量付款。 "
-"所有相关的付款都会自动添加."
 
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:89
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:52
 msgid ""
-"The *Batch Payments* tab won't appear if a Partner is selected for this bank"
-" statement line."
-msgstr "如果为此银行对帐单行选择了合作伙伴，则不会显示 *批量付款* 标签."
+"Click :guilabel:`Print` to download a PDF file to include with the deposit "
+"slip."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:57
+msgid ""
+"Once the bank transactions are on your database, you can reconcile bank "
+"statement lines with the batch payment. To do so, go to the "
+":guilabel:`Accounting Dashboard` and click :guilabel:`Reconcile Items` on "
+"the related bank account. Go to the :guilabel:`Batch Payments` tab to select"
+" a specific batch and click :guilabel:`Validate` to finalize the process."
+msgstr ""
 
 #: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst-1
-msgid "Reconciliation of the Batch Payment with all its transactions"
-msgstr "批量付款及涵盖交易对账"
+msgid "Reconciling the batch payment with all its transactions"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:95
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:67
 msgid ""
-"If a check, or a payment, couldn't be processed by the bank and is missing, "
-"remove the related payment before validating the bank reconciliation."
-msgstr "如果银行无法处理支票或丢失了支票或付款，请在验证银行对帐前删除相关付款."
+"If a specific payment could not be processed by the bank or is missing, "
+"remove the related payment before reconciling."
+msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:99
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:71
 msgid ":doc:`recording`"
 msgstr ":doc:`recording`"
 
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:100
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:72
 msgid ":doc:`batch_sdd`"
 msgstr ":doc:`batch_sdd`"
 
@@ -11471,7 +11410,7 @@ msgid ""
 msgstr "确认所有 **已收到的付款** 已输入并准确记录."
 
 #: ../../content/applications/finance/accounting/taxation/fiscal_year/close_fiscal_year.rst:23
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1229
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1230
 msgid "Year-end checklist"
 msgstr "年终检查表"
 
@@ -11526,7 +11465,7 @@ msgid ""
 msgstr "年底手动调整, 使用 **顾问日记条目** 菜单(例如, **当年收入** 和 **留存收益** 报告)."
 
 #: ../../content/applications/finance/accounting/taxation/fiscal_year/close_fiscal_year.rst:54
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1251
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1252
 msgid "**Work in Progress**."
 msgstr "*工作进程** ."
 
@@ -11535,7 +11474,7 @@ msgid "**Depreciation Journal Entries**."
 msgstr "**折旧分类账分录**."
 
 #: ../../content/applications/finance/accounting/taxation/fiscal_year/close_fiscal_year.rst:58
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1253
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1254
 msgid "**Loans**."
 msgstr "**贷款** ."
 
@@ -19560,7 +19499,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:18
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1503
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1504
 #: ../../content/applications/finance/spreadsheet.rst:25
 msgid "Glossary"
 msgstr "词汇表"
@@ -20013,7 +19952,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:249
 #: ../../content/applications/finance/fiscal_localizations/egypt.rst:172
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:377
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:378
 msgid "Products"
 msgstr "产品"
 
@@ -20168,7 +20107,7 @@ msgid "Document types for Ecuador."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:334
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:252
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:253
 msgid "Workflows"
 msgstr "工作流"
 
@@ -25501,11 +25440,13 @@ msgstr "对公司所需的所有销售税执行相同的操作，无论是Odoo�
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:177
 msgid ""
-"For the 0% VAT tax, select the option *Exento* instead of *Tasa* within the "
-"**Factor Type** field."
-msgstr "对于 0% 的增值税，请在〖因子类型〗字段中选择选项 *Exento* 而不是 *Tasa*。"
+"For the 0% VAT tax, select the option :guilabel:`Tasa` within the "
+":guilabel:`Factor Type` field. For the 0% VAT **exempt** tax, select the "
+"option :guilabel:`Exento` instead of :guilabel:`Tasa` within the "
+":guilabel:`Factor Type` field."
+msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:180
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:181
 msgid ""
 "When registering a payment, Odoo will carry out the movement of taxes from "
 "the **Cash Basis Transition Account** to the account set in the "
@@ -25521,17 +25462,17 @@ msgstr ""
 msgid "Taxes accounts"
 msgstr "税项科目"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:190
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:191
 msgid "Products Configuration"
 msgstr "产品配置"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:192
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:193
 msgid ""
 "All products to be sold need to have the SAT code associated with their "
 "classification so that the invoices do not give an error when validating."
 msgstr "所有要销售的产品都需要具有与其分类关联的SAT代码，以便开票在验证时不会给出错误。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:195
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:196
 msgid ""
 "To configure products, go to the **General Information** tab and in the "
 "**UNSPSC Product Category** field select the category that represents that "
@@ -25543,18 +25484,18 @@ msgstr ""
 msgid "Configure products"
 msgstr "配置产品"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:204
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:205
 msgid "PAC Configuration to sign invoices"
 msgstr "用于签署开票的 PAC 配置"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:206
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:207
 msgid ""
 "Another important step to configure electronic invoicing in Odoo is to enter"
 " the PAC which you are working with and the credentials. That way, "
 "electronic invoicing will be enabled."
 msgstr "在Odoo中配置电子开票的另一个重要步骤是输入您正在使用的PAC和凭据。这样，将启用电子开票。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:210
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:211
 msgid ""
 "Remember that you must register directly with the PAC of your choice before "
 "you start creating invoices from Odoo. We have the following PACs available:"
@@ -25567,7 +25508,7 @@ msgstr ""
 "<https://solucionfactible.com/>`_ 和 `SW Sapien - Smarter Web "
 "<https://sw.com.mx/>`_。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:215
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:216
 msgid ""
 "You must process your **Private Key (CSD)** with the SAT institution before "
 "following these steps. If you do not have this information, try with the "
@@ -25577,7 +25518,7 @@ msgstr ""
 "在执行以下步骤之前，您必须通过 SAT 机构处理您的  **钥 （CSD）**。如果您没有此信息，请尝试使用测试凭证，并在您拥有用于生产环境的 SAT "
 "凭证以处理实际事务时返回到此过程。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:220
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:221
 msgid ""
 "To add the credentials, go to :menuselection:`Settings --> Accounting --> "
 "Electronic Invoicing (MX)`. Under the **PAC MX** section, enter the name of "
@@ -25590,14 +25531,14 @@ msgstr ""
 msgid "PAC credentials"
 msgstr "PAC凭证"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:229
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:230
 msgid ""
 "If you check the checkbox **Test Environment**, it is not necessary to enter"
 " a PAC username and/or password, but you must select a PAC from the drop-"
 "down list."
 msgstr "如果选中“测试环** ”复选框，则无需输入 PAC 用户名和/或密码，但必须从下拉列表中选择 PAC。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:232
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:233
 msgid ""
 "Finally, upload the digital certificates of the company within the section "
 "**MX Certificates**. Click on *Add a line*, a window will open, click on "
@@ -25611,35 +25552,35 @@ msgstr ""
 msgid "Certificate and key"
 msgstr "证书和密钥"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:241
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:242
 msgid ""
 "If you still do not have one of the contracted PACs and you want to test "
 "electronic invoicing you can use the following SAT test certificates:"
 msgstr "如果您仍然没有一个合同 PAC，并且想要测试电子开票，则可以使用以下 SAT 测试证书："
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:244
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:245
 msgid ":download:`Certificate <mexico/certificate.cer>`"
 msgstr ":download:`证书<mexico/certificate.cer>`"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:245
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:246
 msgid ":download:`Certificate Key <mexico/certificate.key>`"
 msgstr ":download:`证书密钥<mexico/certificate.key>`"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:246
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:247
 msgid "**Password:** ``12345678a``"
 msgstr "**密码：** ``12345678a``"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:248
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:249
 msgid ""
 "You must also configure the company with a real address within Mexico "
 "(including all fields) and add ``EKU9003173C9`` as the **VAT** number."
 msgstr "您还必须使用墨西哥境内的真实地址（包括所有字段）配置公司，并添加“EKU9003173C9”作** VAT **。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:255
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:256
 msgid "Electronic invoicing"
 msgstr "电子开票"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:257
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:258
 msgid ""
 "The invoicing process in Odoo is based on `Annex 20 "
 "<http://omawww.sat.gob.mx/tramitesyservicios/Paginas/anexo_20_version3-3.htm>`_"
@@ -25647,14 +25588,14 @@ msgid ""
 msgstr ""
 "Odoo中的开票流程基于SAT电子开票的“附件20<http://omawww.sat.gob.mx/tramitesyservicios/Paginas/anexo_20_version3-3.htm>”_版本3.3。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:261
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:262
 msgid ""
 "To start invoicing from Odoo, an invoice must be created using the standard "
 "invoicing flow, that is, either from a sales order or from the invoice menu "
 "in the Accounting application."
 msgstr "要从 Odoo 开始开票，必须使用标准开票流程（即从销售订单或会计应用程序中的开票菜单）创建开票。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:264
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:265
 msgid ""
 "The invoice will be stamped after clicking on *Validate*, before that the "
 "status is still in draft mode and changes can be made to it. After "
@@ -25667,7 +25608,7 @@ msgstr ""
 msgid "Creating an invoice"
 msgstr "新建开票"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:272
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:273
 msgid ""
 "The details of the invoice will be reflected in the Chatter, which is what "
 "you see on the right of the invoice in the attached image. There you can "
@@ -25677,7 +25618,7 @@ msgstr ""
 "开票的详细信息将反映在 Chatter 中，这是您在附加图像中开票右侧看到的内容。在那里，您可以找到发送到 SAT 的 XML "
 "和盖章的状态，即，它是否经过验证。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:276
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:277
 msgid ""
 "To send the stamped invoice to your client, you can send the XML together "
 "with the PDF file directly from Odoo, by clicking the *Send and Print* "
@@ -25686,21 +25627,21 @@ msgid ""
 msgstr ""
 "要将盖章的开票发送给您的客户，您可以通过单击*发送和打印*按钮直接从Odoo发送XML和PDF文件。您也可以通过单击“*打印*”按钮并选择所需的选项，将PDF文件直接下载到您的计算机。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:281
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:282
 msgid ""
 "Depending on the size of the screen, the Chatter can be seen next to or "
 "below the document."
 msgstr "根据屏幕的大小，可以在文档旁边或下方看到 Chatter。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:284
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:285
 msgid "Invoicing Special Cases"
 msgstr "特殊情况开票"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:287
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:288
 msgid "Foreign Trade Invoice"
 msgstr "外贸开票"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:289
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:290
 msgid ""
 "The foreign trade invoicing process in Odoo is based on the corresponding "
 "`SAT regulation "
@@ -25709,96 +25650,96 @@ msgid ""
 msgstr ""
 "Odoo的外贸开票流程基于相应的“SAT法规<http://omawww.sat.gob.mx/tramitesyservicios/Paginas/complemento_comercio_exterior.htm>”_。SAT电子开票版本是3.3。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:294
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:295
 msgid "What do we mean when we talk about foreign trade?"
 msgstr "当我们谈论外贸时，我们指的是什么？"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:296
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:297
 msgid ""
 "Since January 2018, the SAT requires a Foreign Trade Supplement in export "
 "transactions."
 msgstr "自 2018 年 1 月起，国家税务总局要求在出易中提供外贸补充。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:299
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:300
 msgid "What is the Foreign Trade complement?"
 msgstr "什么是外贸补充？"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:301
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:302
 msgid ""
 "It is an Annex to the electronic invoice that allows the identification of "
 "exporters and importers, in addition to expanding the description of the "
 "merchandise sold."
 msgstr "它是电子开票的附件，除了扩大所售商品的描述外，还可以识别出口商和进口商。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:305
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:306
 msgid "What information can be incorporated in this new complement?"
 msgstr "哪些信息可以纳入这一新的补充？"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:307
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:308
 msgid "Information on the operation type it covers."
 msgstr "有关其涵盖的操作类型的信息。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:308
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:309
 msgid ""
 "Tax identification data of the issuer, receiver or recipient of the "
 "merchandise."
 msgstr "商品发行人、接收人或收件人的税务识别数据。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:309
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:310
 msgid "Description of the goods to be exported."
 msgstr "要出口的货物的描述。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:312
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:313
 msgid "Who is obliged to generate it?"
 msgstr "谁有义务生成它？"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:314
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:315
 msgid "Taxpayers who carry out export operations of A1 type."
 msgstr "开展A1类出口业务的纳税人。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:317
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:318
 msgid "To which exports does the A1 type apply?"
 msgstr "A1 类型适用于哪些出口？"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:319
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:320
 msgid ""
 "Entry of goods of foreign origin to remain in national territory for an "
 "unlimited time."
 msgstr "外国原产货物入境，无限期停留在国家境内。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:320
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:321
 msgid "Exit of goods from the country to stay abroad for an unlimited time."
 msgstr "货物出境到国外无限期停留。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:321
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:322
 msgid ""
 "Definitive importation of vehicles by diplomatic and consular missions and "
 "offices of international organizations and their foreign personnel, in "
 "accordance with the import of vehicles in diplomatic exemption."
 msgstr "外交和领事使团和国际组织办事处及其外国人员根据外交豁免进口车辆的最终进口。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:326
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:327
 msgid "Is Foreign Trade the same as Pedimentos?"
 msgstr "外贸和山墙铁矿一样吗？"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:328
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:329
 msgid ""
 "Not necessarily, the Pedimentos are directly related to the process of "
 "Importing goods, while the Foreign Trade Complement is related to the "
 "Exporting process."
 msgstr "不一定，山墙与进口货物的过程直接相关，而外贸补充与出口过程有关。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:332
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:333
 msgid "Required Modules"
 msgstr "必需的模块"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:334
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:335
 msgid ""
 "In order to generate foreign trade invoices, the following modules must be "
 "installed."
 msgstr "为了生成外贸开票，必须安装以下模块。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:336
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:337
 msgid "EDI for Mexico (l10n_mx_edi)"
 msgstr "墨西哥的电子数据交换 （l10n_mx_edi）"
 
@@ -25806,7 +25747,7 @@ msgstr "墨西哥的电子数据交换 （l10n_mx_edi）"
 msgid "EDI para México"
 msgstr "EDI para México"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:342
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:343
 msgid "EDI for Mexico (l10n_mx_edi_extended)"
 msgstr "墨西哥的电子数据交换 （l10n_mx_edi_extended）"
 
@@ -25814,11 +25755,11 @@ msgstr "墨西哥的电子数据交换 （l10n_mx_edi_extended）"
 msgid "EDI Advanced Features"
 msgstr "EDI高级功能"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:349
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:350
 msgid "Company"
 msgstr "公司"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:351
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:352
 msgid ""
 "Configure the company with a valid postal code, and if you have a colony "
 "code, this should match with the corresponding Zip Code. At the same time, "
@@ -25829,11 +25770,11 @@ msgstr "使用有效的邮政编码配置公司，如果您有殖民地代码，
 msgid "Contact address configuration"
 msgstr "联系人地址配置"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:360
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:361
 msgid "Receiving Client"
 msgstr "接收客户端"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:362
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:363
 msgid ""
 "Generally it will be a foreign client, in which you must verify that you "
 "have at least the following fields completed with the corresponding "
@@ -25844,23 +25785,23 @@ msgstr "通常，它将是一个外国客户，您必须验证您是否至少填
 msgid "External trade invoice"
 msgstr "对外贸易开票"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:370
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:371
 msgid "The customer's delivery address must also contain the zip code."
 msgstr "客户的送货地址还必须包含邮政编码。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:371
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:372
 msgid ""
 "The format of the foreign VAT (Tax Identification Number) will be validated "
 "as appropriate in each Country (Example: Colombia ``123456789-1``)"
 msgstr "外国增值税（税务标识号）的格式将在每个国家/地区进行适当的验证（例如：哥伦比亚“123456789-1”）"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:373
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:374
 msgid ""
 "In the XML, the VAT is automatically replaced by the Generic VAT for abroad "
 "transactions: ``XEXX010101000``"
 msgstr "在 XML 中，增值税自动替换为国外交易记录的通用增值税：“XEXX010101000`"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:379
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:380
 msgid ""
 "At the product level there must also configure some parameters in the "
 "following fields."
@@ -25874,31 +25815,31 @@ msgstr "SAT产品代码"
 msgid "Tariff fraction"
 msgstr "关税部分"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:390
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:391
 msgid ""
 "You must select the **UMT Aduana** (Unit of Measure) in *KG* since it is "
 "only accepted by the SAT"
 msgstr "您必须选择*KG*中** UMT Aduana**（测量单位），因为它仅被SAT接受"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:391
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:392
 msgid "The weight refers to **the unit weight** of the product"
 msgstr "重量是指产品的 **单位重量**"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:392
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:393
 msgid "The tariff item must be from the code UoM of Kilograms (**UoM = 01**)"
 msgstr "关税项目必须来自千克的代码UoM（**UoM = 01**）"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:394
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:395
 msgid ""
 "Although the product is sold in pieces or in units, the value that must be "
 "registered with customs in the tariff item must be reported in Kilograms."
 msgstr "虽然产品是分段或单位销售的，但关税项目中必须在海关注册的价值必须以千克为单位报告。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:398
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:399
 msgid "Invoicing Flow"
 msgstr "开票流程"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:400
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:401
 msgid ""
 "When creating the foreign sales invoice, you must select the **Incoterm** "
 "corresponding and the **Need external trade?** checkbox must be checked. "
@@ -25909,11 +25850,11 @@ msgstr ""
 "创建外贸销售开票时，必须选择对应的 **际贸易术语解释通** ，并且必须勾选 **要外贸？ **选框。启用此配置后，开票** PDF **补** XML"
 " **具有符合SAT法规的必要信息。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:406
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:407
 msgid "What is the certificate of origin and when is it used?"
 msgstr "什么是原产地证书，何时使用？"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:408
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:409
 msgid ""
 "The **Certificate Source** (or proof of origin) is the document that allows "
 "an importer or exporter to prove the country or region from which a good is "
@@ -25929,17 +25870,17 @@ msgstr "开票中的国际贸易术语解释通则"
 msgid "PDF external Trade"
 msgstr "对外贸易PDF"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:421
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:422
 msgid "Assign Pedimentos"
 msgstr "分配山墙"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:423
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:424
 msgid ""
 "If your company imports products and you need to add the **Pedimentos** "
 "number in your invoices, you can also configure Odoo to record the process."
 msgstr "如果您的公司进口产品，并且您需要在开票中添** Pedimentos **号，您还可以配置Odoo来记录该过程。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:426
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:427
 msgid ""
 "First, go to :menuselection:`Apps`, remove the \"Apps\" filter and search "
 "for ``Mexico``, ``mx`` or ``l10n_mx``. Then, install **Odoo Mexico "
@@ -25952,7 +25893,7 @@ msgstr ""
 msgid "MX stock module"
 msgstr "MX库存模块"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:435
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:436
 msgid ""
 "The l10n_mx_edi_landing module depends on the **Inventory** and **Sales** "
 "apps, since the products must be entered into inventory to be able to add "
@@ -25961,7 +25902,7 @@ msgstr ""
 "l10n_mx_edi_landing模块取决于 **储存 ** "
 "**销售**用程序，因为必须将产品输入到库存中才能将其Pedimentos编号添加到相应的产品收据中."
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:439
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:440
 msgid ""
 "Then, go to :menuselection:`Inventory --> Settings --> Settings`. Within the"
 " options, activate **Landed Costs**. This option will allow adding the "
@@ -25974,14 +25915,14 @@ msgstr ""
 msgid "Costos en destino"
 msgstr "Costos en destino"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:448
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:449
 msgid ""
 "In order to use landed costs, the accounting configuration of the inventory "
 "valuation of the products must be configured as *Automated* and its costing "
 "method *Average* or *FIFO* (first in, first out)."
 msgstr "为了使用到岸成本，必须将产品库存评估的会计配置配置为*自动化*，其成本核算方法*平均*或*FIFO*（先进先出）。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:452
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:453
 msgid ""
 "To associate the Pedimentos number indicated with an import (merchandise "
 "reception) a new **Landed Cost** must be created. They can be accessed "
@@ -25995,23 +25936,23 @@ msgstr ""
 msgid "Customs number"
 msgstr "海关编号"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:461
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:462
 msgid ""
 "You can only add the Pedimentos number once, so be careful when associating "
 "the correct number with the transfer(s)."
 msgstr "您只能添加一次山脚石编号，因此在将正确的数字与传输相关联时要小心。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:465
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:466
 msgid ""
 ":doc:`/applications/inventory_and_mrp/inventory/management/reporting/integrating_landed_costs`."
 msgstr ""
 ":doc:`/applications/inventory_and_mrp/inventory/management/reporting/integrating_landed_costs`。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:468
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:469
 msgid "Payment Terms"
 msgstr "付款条件"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:470
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:471
 msgid ""
 "The **Payment Terms** are already configured in Odoo when installing the "
 "Mexican localization, this means that if you go to "
@@ -26020,18 +25961,18 @@ msgid ""
 msgstr ""
 "在安装墨西哥本地化时， **款条款 **经在Odoo中配置，这意味着如果您转到：“会计 - >配置 - >付款条件”，您将在Odoo中找到默认列表。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:478
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:479
 msgid ""
 "In Mexico you can have 2 types of payments: PPD or PUE. These are given by "
 "the **Payment Term** chosen (or if there is no chosen payment term it will "
 "be based on the due date of the invoice)."
 msgstr "在墨西哥，您可以有两种类型的付款：PPD或PUE。这些由所选的 **款期限 **出（或者如果没有选择的付款条件，它将基于开票的到期日）。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:482
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:483
 msgid "PPD Payments"
 msgstr "PPD付款"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:484
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:485
 msgid ""
 "To configure PPD payments (payment in installments or deferred) it is only "
 "necessary to choose a date expiration date for your invoice and Odoo will "
@@ -26042,11 +25983,11 @@ msgstr ""
 "要配置PPD付款（分期付款或延期付款），只需为您的开票选择一个到期日期，Odoo就会检测到它是否在下个月的第一天之后（在这种情况下，没有设置付款条件 -"
 " 付款条件您还可以规定它是否将是PPDo PUE）。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:490
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:491
 msgid "PUE"
 msgstr "普埃"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:492
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:493
 msgid ""
 "To configure PUE payments (payment in a single payment) you must select an "
 "invoice due date within the same month or choose a payment term that does "
@@ -26056,11 +25997,11 @@ msgstr ""
 "要配置 PUE 付款（单笔付款），您必须选择同一个月内的开票到期日期，或者选择不意味着更改到期月份的付款条件（立即付款，15 天，21 "
 "天，全部在当前月份内）。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:497
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:498
 msgid "Payments"
 msgstr "支付"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:499
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:500
 msgid ""
 "`According to the SAT documentation "
 "<https://www.sat.gob.mx/consultas/92764/comprobante-de-recepcion-de-"
@@ -26073,7 +26014,7 @@ msgstr ""
 "pagos>”_，可能有2种类型的付款：**PUE "
 "****PPD**。在这两种情况下，Odoo中的付款流程是相同的，付款是PUE还是PPD的区别在于开票的付款条件 - 如 **款条款 **的上一点所示。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:505
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:506
 msgid ""
 "If the payment is a PPD type, Odoo will generate the corresponding payment "
 "complement automatically when you *Confirm* it. If the payment is PUE, the "
@@ -26088,7 +26029,7 @@ msgstr ""
 msgid "Payment policy"
 msgstr "付款政策"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:514
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:515
 msgid ""
 "When configuring the contacts that will be used when making payments, you "
 "must configure the banks in the **Accounting** tab, place both the Bank, "
@@ -26099,18 +26040,18 @@ msgstr "配置付款时将使用的联系人时，必须在“ **** ”选项卡
 msgid "Contact bank account"
 msgstr "联系人银行账户"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:522
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:523
 msgid "Register PPD Payments"
 msgstr "登记PPD付款"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:524
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:525
 msgid ""
 "If at the time of registering a payment it is of type PPD then a Payment "
 "Complement (XML) will be generated with its details."
 msgstr "如果在注册付款时，它是PPD类型，则将生成付款补充（XML）及其详细信息。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:527
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:572
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:528
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:573
 msgid ""
 "The payment can be registered from the invoice and once it is confirmed, the"
 " invoice will be paid and with its payment associated."
@@ -26124,7 +26065,7 @@ msgstr "PPD付款"
 msgid "PPD payment information"
 msgstr "PPD付款信息"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:539
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:540
 msgid ""
 "The journal will be the payment method where you receive or send the payment"
 " from. You must also associate a **Payment Way** and a Recipient Bank "
@@ -26132,14 +26073,14 @@ msgid ""
 "the invoice)."
 msgstr "日记帐将是您接收或发送付款的付款方式。您还必须关联 **款方式 **收款人银行帐户（最后一个必须在与开票关联的联系人中创建）。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:543
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:544
 msgid ""
 "Once the payment is made, it will be associated with the corresponding "
 "invoice and its status will be *In Payment* since the payment will be "
 "effectively validated when it is bank reconciled."
 msgstr "付款完成后，它将与相应的开票相关联，其状态将为“付款中”，因为付款将在银行对账时得到有效验证。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:547
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:548
 msgid ":doc:`../accounting/bank/reconciliation/use_cases`."
 msgstr ""
 
@@ -26147,14 +26088,14 @@ msgstr ""
 msgid "PPD payment created"
 msgstr "创建的PPD付款"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:554
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:555
 msgid ""
 "The **Recipient Bank Account** is the one attached to the **Accounting** tab"
 " in the contact associated with the invoice, it must be valid so that the "
 "stamped payment complement can be created."
 msgstr "**收款人银行帐户 **附加到与开票关联的联系人中的 **计 **项卡的帐户，它必须有效，以便可以创建加盖邮票的付款补充."
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:559
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:560
 msgid ""
 "When making a payment in MXN for an invoice in USD, the payment must be "
 "created using the :guilabel:`Register Payment` button **on the invoice "
@@ -26163,18 +26104,18 @@ msgid ""
 msgstr ""
 "要使用墨西哥元支付美元开票，在**开票视图**中，点击:guilabel:`登记付款`按钮，以创建付款，不能作为单独付款，否则，无法正确生成付款CFDI。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:562
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:563
 msgid ""
 "As such, a payment in MXN cannot be used to pay multiple invoices in USD. "
 "Rather, the payment should be separated into multiple payments created using"
 " the :guilabel:`Register Payment` button on the corresponding invoices."
 msgstr "而且，墨西哥元付款无法用于支付多张美元开票。所以，应点击开票中的:guilabel:`登记付款`按钮，创建多项付款。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:567
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:568
 msgid "Register PUE Payments"
 msgstr "注册 PUE 付款"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:569
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:570
 msgid ""
 "If at the time of registering a payment it is of the PUE type then in this "
 "case a Payment Complement (XML) will not be generated since it is not "
@@ -26193,78 +26134,78 @@ msgstr "PUE付款信息"
 msgid "PUE payment created"
 msgstr "创建的PUE付款"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:588
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:589
 msgid ""
 "In this case it is not created as a payment supplement by the nature of it."
 msgstr "在这种情况下，它不会因其性质而创建为付款补充。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:591
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:592
 msgid "Down Payments"
 msgstr "首付款"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:593
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:594
 msgid ""
 "This is a special case in which we must receive an advance payment from a "
 "client to later be applied to an invoice."
 msgstr "这是一种特殊情况，我们必须从客户那里收到预付款，以便以后应用于开票。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:597
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:598
 msgid ""
 "`The official documentation for registration of down payments in Mexico "
 "<http://omawww.sat.gob.mx/tramitesyservicios/Paginas/documentos/Caso_uso_Anticipo.pdf>`_."
 msgstr ""
 "“墨西哥首付登记的官方文件<http://omawww.sat.gob.mx/tramitesyservicios/Paginas/documentos/Caso_uso_Anticipo.pdf>”_。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:601
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:602
 msgid "Process to create advance in Mexico"
 msgstr "在墨西哥创造进步的进程"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:603
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:604
 msgid ""
 "Issuance of electronic invoicing with the amount of the advance payment "
 "received."
 msgstr "开具电子开票，其中包含收到的预付款金额。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:604
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:605
 msgid ""
 "Issuance of the electronic invoice for the total value of the operation "
 "(full invoice). (CFDI Origin: 07 | Advance invoice, point 1)"
 msgstr "开具操作总价值的电子开票（全票）。（CFDI原产地：07|预付开票，第 1 点）"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:606
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:607
 msgid ""
 "Issuance of the electronic invoice with the *Egreso* type. (CFDI Origin: 07 "
 "| Invoice_total, point 2)"
 msgstr "开具*Egreso*类型的电子开票。（CFDI原产地：07|Invoice_total，第2点）"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:610
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:611
 msgid "Steps to follow in Odoo"
 msgstr "在Odoo中要遵循的步骤"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:612
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:613
 msgid "Preparation: Create the product"
 msgstr "准备：创建产品"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:613
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:614
 msgid ""
 "Down Payment issuance of the electronic invoice for the amount of the "
 "advance payment received"
 msgstr "预付款 开具收到的预付款金额的电子开票"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:614
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:615
 msgid ""
 "Issuance of the electronic invoice for the total value of the operation"
 msgstr "开具操作总价值的电子开票"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:615
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:616
 msgid "Add a credit note from the down payment invoice"
 msgstr "从预付款开票添加贷方通知单"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:618
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:619
 msgid "Preparation: Create the Product"
 msgstr "准备：创建产品"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:620
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:621
 msgid ""
 "The Down Payment product must be type *Service* and must use the **NSPSC "
 "Product Category**: *84111506 Servicios de facturación*."
@@ -26274,7 +26215,7 @@ msgstr "首付产品必须类型为*服务*，并且必须使** NSPSC产品类**
 msgid "Down payment product"
 msgstr "预付订金产品"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:627
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:628
 msgid ""
 "Add the down payment product as default to be used from the Odoo "
 "configurations."
@@ -26284,12 +26225,12 @@ msgstr "将首付产品添加为默认产品，以便在 Odoo 配置中使用。
 msgid "Down payment configuration"
 msgstr "订金配置"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:634
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:635
 msgid ""
 "Issuance of the electronic invoice for the value of the advance received"
 msgstr "为收到的预付款开具电子开票"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:636
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:637
 msgid ""
 "Create the Advance Payment Invoice: From the sales order, create an advance "
 "payment invoice for the percentage of the purchase to be paid in advance (or"
@@ -26300,7 +26241,7 @@ msgstr "创建预付款开票：从销售订单中，为要提前支付的采购
 msgid "Applying down payment"
 msgstr "应用订金"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:643
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:644
 msgid "Validate invoice with the down payment product."
 msgstr "使用首付款产品验证开票。"
 
@@ -26312,7 +26253,7 @@ msgstr "确认订金"
 msgid "Folio fiscal down payment"
 msgstr "对开财务预付订金"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:653
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:654
 msgid "Register Payment to the advance payment invoice."
 msgstr "将付款登记到预付款开票。"
 
@@ -26324,12 +26265,12 @@ msgstr "预付订金开票"
 msgid "Down payment registered"
 msgstr "注册的预付订金"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:664
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:665
 msgid ""
 "Issuance of the electronic invoice for the total value of the operation."
 msgstr "开具操作总价值的电子开票。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:666
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:667
 msgid ""
 "From the sales order, create an invoice for the total, that is, for all the "
 "order lines without discounting the advance."
@@ -26339,18 +26280,18 @@ msgstr "从销售订单中，为总计创建开票，即为所有订单行创建
 msgid "Full invoice"
 msgstr "全额开票"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:674
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:675
 msgid "Remove the check mark from the **Deduct down payments** field."
 msgstr "从“ **除预付** ”字段中删除复选标记。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:676
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:677
 msgid ""
 "Add the original CFDI of the advance payment invoice by adding ``07 |`` at "
 "the beginning + Folio Fiscal of the advance payment Invoice created in the "
 "previous step."
 msgstr "通过在上一步中创建的预付款开票的开头 + Folio Fiscal 添加“07 |”来添加预付款开票的原始 CFDI。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:679
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:680
 msgid "Copy the Folio Fiscal of the following invoice following this example:"
 msgstr "在此示例之后复制以下开票的帐目会计："
 
@@ -26358,7 +26299,7 @@ msgstr "在此示例之后复制以下开票的帐目会计："
 msgid "Folio full invoice"
 msgstr "对开全额开票"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:685
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:686
 msgid ""
 "And paste it in the draft invoice created from the Sales Order without "
 "deducting the advances:"
@@ -26368,17 +26309,17 @@ msgstr "并将其粘贴到从销售订单创建的草稿开票中，而不扣除
 msgid "CFDI origen folio"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:691
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:692
 msgid ""
 "Validate and copy the Folio Fiscal for later (in the example the Folio "
 "Fiscal copy is: 50E4FF06-4341-4006-A7C3-A7F653CBEFAE )"
 msgstr "验证并复制作品集会计以供以后使用（在示例中，作品集会计副本为：50E4FF06-4341-4006-A7C3-A7F653CBEFAE）"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:695
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:696
 msgid "Add credit note from invoice"
 msgstr "从开票添加贷方通知单"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:697
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:698
 msgid ""
 "Create a **Credit Note** from the down payment invoice (the corrective "
 "invoice must be edited prior to confirming it, see explanation below the 2 "
@@ -26393,7 +26334,7 @@ msgstr "新建退款单"
 msgid "Matching down payment"
 msgstr "匹配预付订金"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:708
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:709
 msgid ""
 "Before you *Confirm* the Credit Note, edit the Origin CFDI with ``07 | XXX``"
 " instead of the prefix ``01 | XXX``"
@@ -26407,7 +26348,7 @@ msgstr "修改对开财务"
 msgid "CFDI origen type"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:719
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:720
 msgid "Now the invoice can be confirmed."
 msgstr "现在可以确认开票。"
 
@@ -26415,7 +26356,7 @@ msgstr "现在可以确认开票。"
 msgid "Post credit note"
 msgstr "退款单过账"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:725
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:726
 msgid ""
 "Now the Credit Note (Advance Payment) must be applied to the total invoice, "
 "this is added at the bottom below the amount owed."
@@ -26429,7 +26370,7 @@ msgstr "添加退款单"
 msgid "Down payment applied"
 msgstr "应用的预付订金"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:736
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:737
 msgid ""
 "Register a payment for the difference of the down payment and the total of "
 "the sale."
@@ -26439,7 +26380,7 @@ msgstr "登记首付款和销售总额的差额。"
 msgid "Residual amount payment"
 msgstr "余额付款"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:742
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:743
 msgid ""
 "If you go to the XML of the invoice, you should see in CFDI related the type"
 " of relationship 07 and the Folio Fiscal of the advance payment invoice."
@@ -26449,11 +26390,11 @@ msgstr "如果转到开票的 XML，则应在 CFDI 中看到与预付款开票�
 msgid "XML down payment"
 msgstr "XML预付订金"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:750
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:751
 msgid "Discounts based on payment days"
 msgstr "基于付款天数的折扣"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:752
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:753
 msgid ""
 "Cash discounts are incentives that you can offer to motivate customers to "
 "pay within a specified time period. For example, you offer a 2% discount if "
@@ -26464,22 +26405,22 @@ msgstr ""
 "现金折扣是您可以提供的激励措施，用于激励客户在指定时间段内付款。例如，如果客户在开票的最初 5 天内向您付款（即在 30 天内到期），则提供 2% "
 "d的折扣。这种方法可以大大缩短您的平均客户付款期。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:757
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:762
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:758
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:763
 msgid "Create and assign the corresponding Payment Term"
 msgstr "创建并分配相应的付款条件"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:758
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:781
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:759
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:782
 msgid "Register the Payment within the days of the discount"
 msgstr "在折扣后的几天内注册付款"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:759
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:807
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:760
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:808
 msgid "Create a credit note"
 msgstr "创建退款通知"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:764
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:765
 msgid ""
 "To configure the discount for advance payment, go to "
 ":menuselection:`Accounting --> Configuration --> Payment Terms` and click on"
@@ -26495,7 +26436,7 @@ msgstr ""
 msgid "Discount payment term"
 msgstr "折扣付款条款"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:774
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:775
 msgid ""
 "Then when creating our Sales Order or Sales Invoice, assign the Payment Term"
 " created previously."
@@ -26505,7 +26446,7 @@ msgstr "然后，在创建销售订单或销售开票时，分配之前创建的
 msgid "discount on invoice"
 msgstr "开票中的折扣"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:783
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:784
 msgid ""
 "Register the payment within the days in which the application of the "
 "discount was specified, in our case it is within 5 days after the creation "
@@ -26516,7 +26457,7 @@ msgstr "在指定折扣应用的天内注册付款，在我们的例子中，是
 msgid "Discount payment"
 msgstr "折扣付款"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:790
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:791
 msgid ""
 "Then go to the bottom of the invoice where the totals are located and there "
 "you will see 2 payments created, reset to draft and cancel the payment that "
@@ -26535,7 +26476,7 @@ msgstr ""
 msgid "Cancel payment"
 msgstr "取消付款"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:809
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:810
 msgid ""
 "Finally to close the cycle we must close the invoice, but as in this case we"
 " apply a discount, to close it correctly we must create a credit note "
@@ -26553,7 +26494,7 @@ msgstr "折扣退款单"
 msgid "Reason of credit note"
 msgstr "退款单原因"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:821
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:822
 msgid "Adjust the amount to the remaining balance in the original invoice."
 msgstr "将金额调整为原始开票中的余额。"
 
@@ -26561,7 +26502,7 @@ msgstr "将金额调整为原始开票中的余额。"
 msgid "Total credit note"
 msgstr "退款单总计"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:827
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:828
 msgid "Add the Credit Note to the original invoice so that it is settled."
 msgstr "将贷方通知单添加到原始开票，以便结算。"
 
@@ -26569,21 +26510,21 @@ msgstr "将贷方通知单添加到原始开票，以便结算。"
 msgid "Add credit note for discount"
 msgstr "为折扣添加退款单"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:834
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:835
 msgid "Cancellation of invoices"
 msgstr "取消开票"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:837
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:838
 msgid "Before 72 Hours"
 msgstr "72 小时前"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:839
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:840
 msgid ""
 "If it is necessary to cancel an invoice validated and sent to the SAT in "
 "less than 72 hours follow the steps below."
 msgstr "如果需要取消在72小时内验证并发送给SAT的开票，请按照以下步骤操作。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:842
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:843
 msgid "Request Cancellation"
 msgstr "申请取消"
 
@@ -26591,11 +26532,11 @@ msgstr "申请取消"
 msgid "Cancel within 72 hours"
 msgstr "在72小时内取消"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:848
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:849
 msgid "The status of the **Electronic invoicing** changes to *Cancelled*"
 msgstr "“电子开票”的状态更改为“已取消`"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:849
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:850
 msgid "Click on *RESET TO DRAFT*"
 msgstr "点击*重置为草稿*"
 
@@ -26603,7 +26544,7 @@ msgstr "点击*重置为草稿*"
 msgid "Invoice to draft"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:855
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:856
 msgid "Click on *CANCEL ENTRY*"
 msgstr "点击*取消参赛*"
 
@@ -26611,18 +26552,18 @@ msgstr "点击*取消参赛*"
 msgid "Cancel journal entry"
 msgstr "取消日记账记项"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:862
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:863
 msgid "After 72 Hours"
 msgstr "72 小时后"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:864
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:865
 msgid ""
 "If It is necessary to cancel an invoice validated and sent to the SAT more "
 "than 72 hours, the client must be asked to accept the cancellation, for this"
 " the following steps must be followed."
 msgstr "如果需要取消超过72小时验证并发送给SAT的开票，则必须要求客户接受取消，为此必须遵循以下步骤。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:867
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:868
 msgid ""
 "Click on *Request EDI Cancellation* to inform the SAT that you want to "
 "cancel the invoice, in this case the client has to enter the SAT webpage and"
@@ -26631,14 +26572,14 @@ msgid ""
 msgstr ""
 "点击*请求EDI取消*通知SAT您要取消开票，在这种情况下，客户必须进入SAT网页并批准它。（Odoo中 **子开票 **段的状态更改为*取消*）"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:870
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:871
 msgid ""
 "When the client (Receiver / Customer) approves the Cancellation in their SAT"
 " portal it is now possible to Change the invoice to Draft and then click on "
 "*Cancel entry*."
 msgstr "当客户（收件人/客户）在其SAT门户中批准取消时，现在可以将开票更改为草稿，然后单击*取消条目*。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:872
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:873
 msgid ""
 "Odoo synchronizes with the SAT to update the status of the **Electronic "
 "invoicing** with a scheduled action, Invoices canceled in the SAT will be "
@@ -26649,7 +26590,7 @@ msgstr "Odoo与SAT同步，通过预定操作更新 **子开票 **状态，在SA
 msgid "Cancel after 72 hours"
 msgstr "72小时后取消"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:879
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:880
 msgid ""
 "After clicking on **Request EDI cancellation**, the status of the "
 "**Electronic invoicing** field will be *To Cancel* but the status of the SAT"
@@ -26663,7 +26604,7 @@ msgstr ""
 msgid "Check estado del PAC"
 msgstr "Check estado del PAC"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:887
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:888
 msgid ""
 "Once canceled in the SAT, Odoo will synchronize the status of the SAT "
 "through scheduled actions that are executed every day to synchronize the "
@@ -26672,7 +26613,7 @@ msgid ""
 msgstr ""
 "一旦在SAT中取消，Odoo将通过每天执行的计划操作来同步SAT的状态，以同步SAT，电子开票和Odoo的状态（此计划操作可以通过进入开发人员模式手动执行）。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:891
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:892
 msgid ""
 "If the invoice is canceled in the SAT, in Odoo it is also canceled, which "
 "allows you to switch the invoice to draft and finally cancel the invoice "
@@ -26683,11 +26624,11 @@ msgstr "如果开票在SAT中被取消，在Odoo中也会被取消，这允许�
 msgid "PAC scheduled action"
 msgstr "PAC计划动作"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:899
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:900
 msgid "Cancel Paid Invoices"
 msgstr "取消已付开票"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:901
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:902
 msgid ""
 "If the invoice has already been paid, a credit note must be created from the"
 " invoice so that the originating CFDI is recognized and later cancel the "
@@ -26702,15 +26643,15 @@ msgstr "取消已付开票"
 msgid "Credit note to cancel"
 msgstr "待取消退款单"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:913
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:914
 msgid "Cancel Invoices from the previous period"
 msgstr "取消上一期间的开票"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:916
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:917
 msgid "Problem"
 msgstr "问题"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:918
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:919
 msgid ""
 "If the invoice is from the previous month and the period is closed, the "
 "income has already been declared in Financial Reports and to the government."
@@ -26720,14 +26661,14 @@ msgid ""
 msgstr ""
 "如果开票是上个月的开票，并且该期间已关闭，则该收入已在财务报告和政府中申报。在Odoo中，取消开票时，日记帐分录被消除，就好像已经报告的收入不存在一样，这代表了一个财政问题，因为收入已经在上个月申报了。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:923
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:924
 msgid ""
 "The problem resides when the fiscal period has been closed, in the current "
 "period you have to make the reverse entry and save the cancellation "
 "information."
 msgstr "当会计期间已关闭时，问题就出在当前期间，您必须进行反向输入并保存取消信息。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:926
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:927
 msgid "Invoice to be canceled"
 msgstr "要取消的开票"
 
@@ -26735,7 +26676,7 @@ msgstr "要取消的开票"
 msgid "Previous period"
 msgstr "上期"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:932
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:933
 msgid "This is how the Balance Sheet looks like:"
 msgstr "资产负债表是这样的："
 
@@ -26743,7 +26684,7 @@ msgstr "资产负债表是这样的："
 msgid "Previous BS"
 msgstr "之前BS"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:938
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:939
 msgid ""
 "If the invoice is canceled, the journal entry and the Balance Sheet looks "
 "like this after canceling:"
@@ -26753,37 +26694,37 @@ msgstr "如果开票被取消，则注销后日记帐分录和资产负债表将
 msgid "AR in BS"
 msgstr "BS中的AR"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:945
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:946
 msgid "Solution"
 msgstr "解决方案"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:947
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:948
 msgid ""
 "Close the fiscal period every month (Best Practice Mexican Localization)"
 msgstr "每月关闭会计期间（墨西哥本地化最佳实践）"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:948
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:949
 msgid "Cancel invoice in SAT"
 msgstr "在 SAT 取消开票"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:949
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:950
 msgid "Create a Manual Reversion entry (Journal Entry)"
 msgstr "创建手动回归分录（日记帐分录）"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:950
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:951
 msgid "Reconcile the open invoice with the reversal entry (Journal Entry)"
 msgstr "将未结开票与冲销分录（日记帐分录）对帐"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:951
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:952
 msgid "Change Electronic invoicing status to Cancelled with server action"
 msgstr "将电子开票状态更改为“已取消”，并执行服务器操作"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:954
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:955
 msgid ""
 "Close accounting period each month (Best Practice Mexican Localization)"
 msgstr "每月结束会计期间（最佳实践墨西哥本地化）"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:956
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:957
 msgid ""
 "If the accounting period is closed due to the blocking dates, Odoo will not "
 "allow to modify or add accounting entries of a date corresponding to that "
@@ -26794,11 +26735,11 @@ msgstr "如果会计期间因封锁日期而关闭，Odoo将不允许修改或�
 msgid "Closing fiscal period"
 msgstr "关闭财务期间"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:964
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:965
 msgid "Cancel invoice in the SAT"
 msgstr "在 SAT 中取消开票"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:966
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:967
 msgid ""
 "If the accounting period is closed, and the invoice was canceled in the SAT,"
 " the status in Odoo will be published while the **Electronic invoicing** "
@@ -26809,18 +26750,18 @@ msgstr "如果会计期间关闭，开票在SAT中被取消，Odoo中的状态�
 msgid "Cancel in SAT"
 msgstr "在SAT中取消"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:975
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:976
 msgid "Create Manual Reversal Journal Entry"
 msgstr "创建手动冲销日记帐分录"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:977
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:978
 msgid ""
 "The solution is to create the reversal journal entry manually dated in the "
 "current fiscal period and reconcile the open invoice with the reversion "
 "created manually."
 msgstr "解决方案是在当前会计期间手动创建冲销日记帐分录，并将未结开票与手动创建的回退进行对帐。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:980
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:981
 msgid ""
 "It must be clearly indicated in the reference that it is a cancellation (you"
 " can use a cancellation account for invoices from previous periods such as "
@@ -26831,7 +26772,7 @@ msgstr "必须在参考文献中明确指出这是取消（您可以将取消帐
 msgid "Manual reversal"
 msgstr "手动反转"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:988
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:989
 msgid "Reconcile the open invoice with the reversal entry"
 msgstr "将未结开票与冲销分录进行对帐"
 
@@ -26843,7 +26784,7 @@ msgstr "未结开票对账"
 msgid "Open invoice paid"
 msgstr "未结的已付开票"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:998
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:999
 msgid ""
 "In the Balance Sheet and Trial balance they are now with the correct "
 "balances."
@@ -26861,11 +26802,11 @@ msgstr "最新BS"
 msgid "Balanza de comprobación"
 msgstr "Balanza de comprobación"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1013
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1014
 msgid "Change status of Electronic invoicing to Cancelled with server action"
 msgstr "将电子开票的状态更改为“已取消，并带有服务器操作`"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1015
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1016
 msgid ""
 "A server action can be created that modifies the status of the invoice to "
 "*Cancelled* once it is reconciled with the reversal entry (You should check "
@@ -26882,34 +26823,34 @@ msgstr "计划动作PAC状态"
 msgid "Execute server action"
 msgstr "执行服务器动作"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1028
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1029
 msgid "Electronic Accounting"
 msgstr "电子会计"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1030
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1031
 msgid "Accounting for Mexico in Odoo is composed of 3 reports:"
 msgstr "在Odoo中对墨西哥的会计由3份报告组成："
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1032
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1046
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1033
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1047
 msgid "Electronic Chart of Accounts (Called and displayed as COA)."
 msgstr "电子会计科目表（称为 COA 并显示为 COA）。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1033
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1034
 msgid "Electronic Trial Balance."
 msgstr "电算试平衡."
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1034
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1035
 msgid "DIOT report."
 msgstr "DIOT report."
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1036
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1037
 msgid ""
 "1. and 2. are considered electronic accounting, and DIOT is a report only "
 "available in the context of accounting."
 msgstr "1. 和 2.被视为电子会计，DIOT是仅在会计环境中可用的报告。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1039
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1040
 msgid ""
 "You can find all of those reports in :menuselection:`Accounting --> "
 "Reporting --> Mexico`"
@@ -26919,7 +26860,7 @@ msgstr "您可以在：menuselection：`会计 -->报告 --> 墨西哥` 中找�
 msgid "MX reports"
 msgstr "MX报告"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1048
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1049
 msgid ""
 "Electronic invoicing has never been so easy, just go to "
 ":menuselection:`Accounting -> Reports -> Mexico -> COA` and click the button"
@@ -26932,17 +26873,17 @@ msgstr ""
 msgid "COA for SAT"
 msgstr "用于SAT的COA"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1056
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1057
 msgid "How to add new accounts ?"
 msgstr "How to add new accounts ?"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1058
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1059
 msgid ""
 "If you add an account with the NNN.YY.ZZ encoding convention where NNN.YY is"
 " a SAT encoding group, your account will be set up automatically."
 msgstr "如果使用 NNN 添加帐户。是的。ZZ 编码约定，其中 NNN.YY是一个SAT编码组，您的帐户将自动设置。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1061
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1062
 msgid ""
 "Example to add an Account for a new Bank account go to "
 ":menuselection:`Accounting --> Settings --> Chart of Account` and then "
@@ -26958,11 +26899,11 @@ msgstr ""
 msgid "Create account"
 msgstr "新建账户"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1072
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1073
 msgid "What is the meaning of the tags?"
 msgstr "标签的含义是什么？"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1074
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1075
 msgid ""
 "To know all the possible labels, you can read `Annex 24 "
 "<http://www.sat.gob.mx/fichas_tematicas/buzon_tributario/Documents/Anexo24_05012015.pdf>`_"
@@ -26972,7 +26913,7 @@ msgstr ""
 "要了解所有可能的标签，您可以在SAT网站上阅读“附件24<http://www.sat.gob.mx/fichas_tematicas/buzon_tributario/Documents/Anexo24_05012015.pdf>”_，该部分名为**Código"
 " agrupador de cuentas del SAT**。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1079
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1080
 msgid ""
 "When you install the l10n_mx module and your chart of accounts depends on it"
 " (this happens automatically when you install the configuration of Mexico as"
@@ -26981,11 +26922,11 @@ msgid ""
 msgstr ""
 "当您安装l10n_mx模块并且您的会计科目表依赖于它时（当您在数据库中安装墨西哥作为国家/地区的配置时，这会自动发生），默认情况下，它将具有最常用的标签。如果未创建所需的标记，则可以创建它。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1085
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1086
 msgid "Trial Balance"
 msgstr "试算平衡表"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1087
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1088
 msgid ""
 "Exactly like the COA but with the credit and debit of the initial balance, "
 "once you have correctly configured your COA, you can go to "
@@ -27000,27 +26941,27 @@ msgstr ""
 msgid "Electronic verification balance"
 msgstr "电子余额确认"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1096
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1097
 msgid ""
 "All normal analysis and listed functions are available here as well as any "
 "normal Odoo Report."
 msgstr "所有正常的分析和列出的功能都可以在这里找到，以及任何正常的Odoo报告。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1099
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1100
 msgid "DIOT Report (Requires Accounting App)"
 msgstr "DIOT Report (Requires Accounting App)"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1102
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1103
 msgid "What is DIOT and the importance of presenting it SAT"
 msgstr "什么是 DIOT 以及展示 SAT 的重要性"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1104
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1105
 msgid ""
 "When it comes to procedures with the SAT Administration Service, we know "
 "that we should not neglect what we present."
 msgstr "当涉及到SAT管理服务的程序时，我们知道我们不应该忽视我们所呈现的内容。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1107
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1108
 msgid ""
 "The DIOT is the Informative Declaration of Operations with Third Parties "
 "(DIOT), which is an additional obligation with VAT, where we must give the "
@@ -27029,25 +26970,25 @@ msgid ""
 msgstr ""
 "DIOT是第三方运营信息声明（DIOT），这是增值税的一项额外义务，我们必须将我们的运营状态提供给第三方，或者与我们的供应商一起被认为是相同的。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1111
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1112
 msgid ""
 "This applies to both individuals and Personas Morales, so if we have VAT to "
 "present to the SAT and also deal with suppliers it is necessary to send the "
 "DIOT."
 msgstr "这适用于个人和角色莫拉莱斯，因此，如果我们有增值税要提交给SAT并与供应商打交道，则必须发送DIOT。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1115
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1116
 msgid "When to file the DIOT and in what format ?"
 msgstr "When to file the DIOT and in what format ?"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1117
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1118
 msgid ""
 "It is easy to present the DIOT, since, like all formats, you can obtain it "
 "on the SAT page, it is the electronic form A-29 that you can find on the SAT"
 " website."
 msgstr "展示DIOT很容易，因为像所有格式一样，您可以在SAT页面上获得它，这是您可以在SAT网站上找到的电子表格A-29。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1120
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1121
 msgid ""
 "Every month if you have operations with third parties, it is necessary to "
 "present the DIOT, as we do with VAT, so if in January we have deals with "
@@ -27056,24 +26997,24 @@ msgid ""
 msgstr ""
 "如果您每个月与第三方有业务往来，则有必要像我们对增值税所做的那样出示DIOT，因此，如果在一月份我们与供应商达成协议，那么到2月份，我们必须提供与所述数据相关的信息。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1125
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1126
 msgid "Where is DIOT presented?"
 msgstr "DIOT在哪里展示？"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1127
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1128
 msgid ""
 "You can present DIOT in different ways, it is up to you which one you will "
 "choose and which one will be more comfortable for you since you will present"
 " it every month or every time you have dealings with suppliers."
 msgstr "您可以以不同的方式展示DIOT，这取决于您将选择哪一个，哪一个会更适合您，因为您每个月或每次与供应商打交道时都会展示它。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1131
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1132
 msgid ""
 "The A-29 form is electronic so you can present it on the SAT page, but this "
 "after having made up to 500 registrations."
 msgstr "A-29表格是电子的，因此您可以在SAT页面上显示它，但这是在进行了多达500次注册之后。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1134
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1135
 msgid ""
 "Once these 500 records have been entered in the SAT, you must submit them to"
 " the Local Taxpayer Services Administration (ALSC) with correspondence to "
@@ -27085,18 +27026,18 @@ msgstr ""
 "一旦这500条记录被输入SAT，您必须将它们提交给当地纳税人服务管理局（ALSC），并与您的税务地址通信，这些记录可以在CD或USB等数字存储介质上提交，一旦验证，他们将返回您，所以毫无疑问，您仍然会有这些光盘，当然，"
 " 您的 CD 或 USB。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1140
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1141
 msgid "One more thing to know: batch loading?"
 msgstr "还有一件事要知道：批量装载？"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1142
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1143
 msgid ""
 "When reviewing the official SAT documents in DIOT, you will find the Batch "
 "load, and of course the first thing we think is what is that ?, and "
 "according to the SAT site it is:"
 msgstr "在DIOT中查看官方SAT文件时，您会发现批量加载，当然，我们认为的第一件事是什么？，根据SAT网站，它是："
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1145
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1146
 msgid ""
 "The \"batch load\" is the conversion of databases from records of "
 "transactions with suppliers made by taxpayers in text files (.txt). These "
@@ -27107,7 +27048,7 @@ msgid ""
 msgstr ""
 "“批量加载”是将数据库从纳税人在文本文件中与供应商进行的交易记录（.txt）进行转换。这些文件具有必要的结构，可以应用并导入到第三方系统的操作信息声明中，从而避免直接捕获，从而优化了在集成中投入的时间，以便及时和形式地向SAT进行演示。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1151
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1152
 msgid ""
 "You can use it to present the DIOT, since it is allowed, which will "
 "facilitate this operation, so that it does not exist to avoid being in line "
@@ -27115,18 +27056,18 @@ msgid ""
 "Third Parties."
 msgstr "您可以使用它来呈现DIOT，因为它是允许的，这将促进此操作，因此它不存在，以避免在与第三方操作的信息声明方面与SAT保持一致。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1156
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1157
 msgid ""
 "`official information "
 "<http://www.sat.gob.mx/fichas_tematicas/declaraciones_informativas/Paginas/declaracion_informativa_terceros.aspx>`_"
 msgstr ""
 "“官方信息<http://www.sat.gob.mx/fichas_tematicas/declaraciones_informativas/Paginas/declaracion_informativa_terceros.aspx>”_"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1160
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1161
 msgid "How to generate this report in Odoo?"
 msgstr "如何在Odoo中生成此报告？"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1162
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1163
 msgid ""
 "Go to :menuselection:`Accounting --> Reports --> Mexico --> Transactions "
 "with third partied (DIOT)`."
@@ -27138,7 +27079,7 @@ msgstr ""
 msgid "DIOT report"
 msgstr "DIOT报告"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1169
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1170
 msgid ""
 "A report view is displayed, select the last month to report the immediately "
 "preceding month or leave the current month if it suits you."
@@ -27148,7 +27089,7 @@ msgstr "将显示报告视图，选择上个月以报告上个月，或者如果
 msgid "DIOT filter"
 msgstr "DIOT筛选器"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1176
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1177
 msgid "Click on *Export (XLSX)* or *Print (TXT)*"
 msgstr "单击*导出 （XLSX）* 或 *打印 （TXT）*"
 
@@ -27156,17 +27097,17 @@ msgstr "单击*导出 （XLSX）* 或 *打印 （TXT）*"
 msgid "Print DIOT"
 msgstr "打印DIOT"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1182
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1183
 msgid ""
 "Save the downloaded file in a safe place, go to the SAT website and follow "
 "the necessary steps to declare it."
 msgstr "将下载的文件保存在安全的地方，转到SAT网站并按照必要的步骤进行声明。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1186
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1187
 msgid "Important considerations about your supplier and invoice data for DIOT"
 msgstr "有关 DIOT 的供应商和开票数据的重要注意事项"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1188
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1189
 msgid ""
 "All suppliers must have the fields configured in the accounting tab called "
 "\"DIOT Information\", the L10N MX Nationality field is completed by simply "
@@ -27181,34 +27122,34 @@ msgstr ""
 msgid "DIOT configuration"
 msgstr "DIOT配置"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1197
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1198
 msgid ""
 "There are 3 VAT options for this report, 16%, 0% and exempt, one invoice "
 "line in Odoo is considered exempt if there is no tax on it, the other 2 "
 "taxes are already configured correctly."
 msgstr "此报告有 3 个增值税选项，16%，0% and 免税，Odoo 中的一个开票行如果没有税收，则被视为免税，其他 2 个税种已正确配置。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1199
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1200
 msgid ""
 "Remember that to pay an invoice that represents a prepayment, you must first"
 " request the invoice and then pay it and properly reconcile the payment "
 "following the standard Odoo procedure."
 msgstr "请记住，要支付代表预付款的开票，您必须首先请求开票，然后付款并按照标准Odoo程序正确对帐付款。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1201
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1202
 msgid ""
 "You do not need to fill in all your partner data to try to generate the "
 "supplier invoice, you can correct this information when you generate the "
 "report."
 msgstr "您不需要填写所有合作伙伴数据来尝试生成供应商开票，您可以在生成报告时更正此信息。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1203
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1204
 msgid ""
 "Remember that this report only shows vendor invoices that were actually "
 "paid."
 msgstr "请记住，此报表仅显示实际支付的供应商开票。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1205
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1206
 msgid ""
 "If some of these considerations are not taken into account, a message like "
 "this will appear when you generate the DIOT in TXT with all the partners you"
@@ -27223,69 +27164,69 @@ msgstr ""
 msgid "DIOT Error"
 msgstr "DIOT错误"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1216
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1217
 msgid "Closing Fiscal Period in Odoo"
 msgstr "Odoo的结束财政期"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1218
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1219
 msgid ""
 "Before proceeding to the close of the fiscal year, there are some steps that"
 " you should normally take to ensure that your accounting is correct, updated"
 " and accurate:"
 msgstr "在进入会计年度结束之前，您通常应采取一些步骤来确保您的会计正确，更新和准确："
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1221
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1222
 msgid ""
 "Make sure that you have fully reconciled your bank account (s) through the "
 "end of the year and confirm that the closing book balances match the "
 "balances on your bank statements."
 msgstr "确保您在年底之前已完全对账，并确认期末账面余额与银行对账单上的余额匹配。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1223
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1224
 msgid "Verify that all customer invoices have been entered and approved."
 msgstr "验证是否已输入并审核所有客户开票。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1224
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1225
 msgid "Confirm that you have entered and approved all vendor bills."
 msgstr "确认您已输入并审核所有供应商帐单。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1225
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1226
 msgid "Validate all expenses, ensuring their accuracy."
 msgstr "验证所有费用，确保其准确性。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1226
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1227
 msgid ""
 "Check that all payments received have been entered and recorded exactly."
 msgstr "检查收到的所有付款是否已准确输入和记录。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1231
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1232
 msgid "Run a **Tax Report**, and verify that your tax information is correct."
 msgstr "运行 **务报** ，并验证您的税务信息是否正确。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1232
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1233
 msgid "Reconcile all accounts on your **Balance Sheet**"
 msgstr "核对 **产负债表 **的所有账户"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1234
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1235
 msgid ""
 "Compare your bank balances in Odoo against the current bank balances on your"
 " statements. Use the report **Bank Reconciliation** to help you with this."
 msgstr "将Odoo中的银行余额与对账单上的当前银行余额进行比较。使用报告 **行对帐 **帮助您完成此操作。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1236
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1237
 msgid ""
 "Reconcile all cash and bank account transactions by running your **Old "
 "Accounts Receivable** and **Old Accounts Payable** reports"
 msgstr "通过运行“旧应收账款”和“ **应付帐款”报表来核对所有现金和银行帐户交易"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1238
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1239
 msgid ""
 "Audit your accounts, making sure you fully understand the transactions that "
 "affect them and the nature of the transactions, making sure to include loans"
 " and fixed assets."
 msgstr "审核您的帐户，确保您完全了解影响他们的交易以及交易的性质，确保包括贷款和固定资产。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1241
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1242
 msgid ""
 "Run the optional function **Payments Matching**, under the *More* drop-down "
 "on the Journal options from the Accounting dashboard, validating any Vendor "
@@ -27296,28 +27237,28 @@ msgstr ""
 "运行会计仪表板中日记帐选项上的 *更多* 下拉列表下的可选函数  **款匹** "
 "，验证任何供应商帐单和客户开票及其付款。此步骤是可选的，但是，如果所有待处理的付款和开票都已对帐，则它可以帮助年终流程，并且可能导致在系统中查找错误或错误。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1246
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1247
 msgid ""
 "Your accountant will probably like to check your items in the balance sheet "
 "and do some Journal Entries for:"
 msgstr "您的会计师可能希望检查您在资产负债表中的项目，并为以下各项做一些日记帐分录："
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1249
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1250
 msgid ""
 "Manual year-end adjustments, using the **Journal Audit** report (For "
 "example, the **Current Earnings for the Year** and **Retained Earnings "
 "reports**)."
 msgstr "使用 **记帐审计 **告（例如， **度的当前收益 ** **存收益报** ）手动进行年终调整。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1252
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1253
 msgid "**Depreciation Journals**."
 msgstr "**旧日记**."
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1254
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1255
 msgid "**Tax Adjustments**."
 msgstr "税金调整."
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1256
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1257
 msgid ""
 "If your accountant is on the year-end audit, they will want to have copies "
 "of the balance sheet items (such as loans, bank accounts, prepayments, sales"
@@ -27325,7 +27266,7 @@ msgid ""
 msgstr ""
 "如果您的会计师正在进行年终审计，他们将希望拥有资产负债表项目（例如贷款，银行帐户，预付款，销售税报告等）的副本进行比较。您在Odoo中的余额。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1260
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1261
 msgid ""
 "During this process, it is a good practice setting the **Closing Date for "
 "Non-Advisers** to the last day of the preceding financial year, which is set"
@@ -27335,11 +27276,11 @@ msgid ""
 msgstr ""
 "在此过程中，将非顾问的**关闭日期**设置为会计设置下上一个财政年度的最后一天是一种很好的做法。通过这种方式，会计师可以相信在审计账簿时没有其他人更改前一年的交易。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1270
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1271
 msgid "Accounting Closing Process"
 msgstr "会计结算流程"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1272
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1273
 msgid ""
 "In Odoo there is no need to make a specific year-end entry to close the "
 "reporting income accounts . The result of the exercise is automatically "
@@ -27348,7 +27289,7 @@ msgid ""
 msgstr ""
 "在Odoo中，无需进行特定的年终条目来关闭报告收入账户。练习的结果在账户类型（当年收入）中自动计算，收入 - 支出之间的差额将被累积以计算它。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1276
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1277
 msgid ""
 "The reports are created in real-time, which means that the **Income Report**"
 " corresponds directly to the closing date of the year that you specify in "
@@ -27359,7 +27300,7 @@ msgstr ""
 "这些报告是实时创建的，这意味着 **入报告 **接对应于您在Odoo中指定的年份的截止日期。此外，在您生成 **入报告 **任何时候，开始日期将对应于 "
 "**计年度 **开始日期，帐户余额将全部为0。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1281
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1282
 msgid ""
 "As of December 31, the Balance Sheet shows the earnings of the Current Year "
 "that do not have been recognized (Account type Total Current Year "
@@ -27371,14 +27312,14 @@ msgstr ""
 msgid "Balance sheet closing"
 msgstr "资产负债表关闭"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1289
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1290
 msgid ""
 "The accountant should create a Journal Entry to recognize the result of the "
 "year in Accumulated Earnings from previous years on the account \"previous "
 "years results\" account (304.01.01 in Mexico) - that is an equity account."
 msgstr "会计师应创建一个日记帐分录，以确认“往年结果”账户（墨西哥为304.01.01）上往年累计收益中的年度结果 - 这是一个股票账户。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1293
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1294
 msgid ""
 "After posting the Journal Entry, click on *Mark as Closing Entry for the "
 "Fiscal Year*. This step is important because it is linked to the Trial "
@@ -27387,7 +27328,7 @@ msgid ""
 msgstr ""
 "过帐日记帐分录后，单击*标记为会计年度的结算分录*。此步骤很重要，因为它链接到试算表报告。如果此日记帐分录未标记为收盘分录，则试算表将不正确。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1297
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1298
 msgid "The simplified accounting entry would look like this:"
 msgstr "简化的会计分录将如下所示："
 
@@ -27395,7 +27336,7 @@ msgstr "简化的会计分录将如下所示："
 msgid "Closing journal entry"
 msgstr "关闭日记账记项"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1303
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1304
 msgid ""
 "Once the accountant has created the journal entry to locate the **Current "
 "Earnings for the Year**, they must set the **Closing Date** to the last day "
@@ -27410,26 +27351,26 @@ msgstr ""
 msgid "Check BS closing"
 msgstr "查看BS关闭"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1313
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1314
 msgid "Extra Recommended features"
 msgstr "Extra Recommended features"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1316
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1317
 msgid "Contacts App (Free)"
 msgstr "通讯录应用（免费）"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1318
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1319
 msgid ""
 "If you want to properly manage your customers, suppliers and addresses, this"
 " module, even if it is not a technical need, it is highly recommended to "
 "install it."
 msgstr "如果您想正确管理您的客户，供应商和地址，这个模块，即使它不是技术需求，也强烈建议安装它。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1322
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1323
 msgid "Multi-currency (Requires Accounting application)"
 msgstr "多币种（需要会计申请）"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1324
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1325
 msgid ""
 "In Mexico, almost all companies send and receive payments in different "
 "currencies. If you want to do this you can enable the use of multi-currency."
@@ -27440,7 +27381,7 @@ msgstr ""
 "在墨西哥，几乎所有公司都以不同的货币发送和接收付款。如果要执行此操作，可以启用多币种的使用。您还应该启用与 **西哥银行服务 "
 "**同步，因为这将允许您自动获得SAT的汇率，而无需每天在Odoo中手动创建此信息。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1329
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1330
 msgid "Go to settings and enable the multi-currency feature."
 msgstr "转到设置并启用多币种功能。"
 
@@ -27448,7 +27389,7 @@ msgstr "转到设置并启用多币种功能。"
 msgid "Multi currency configuration"
 msgstr "多币种配置"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1336
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1337
 msgid ""
 "Enabling Explicit errors on the CFDI using the XSD local validator (CFDI "
 "3.3)"
@@ -27456,7 +27397,7 @@ msgstr ""
 "Enabling Explicit errors on the CFDI using the XSD local validator (CFDI "
 "3.3)"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1338
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1339
 msgid ""
 "Frequently you want receive explicit errors from the fields incorrectly set "
 "on the xml, those errors are better informed to the user if the check is "
@@ -27466,21 +27407,21 @@ msgstr ""
 "通常，您希望从xml上错误设置的字段中收到显式错误，如果启用检查，则这些错误会更好地通知用户，以启用与xsd一起检查功能，请按照以下步骤操作（启用：ref：`developer"
 " mode <developer-mode>`）。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1343
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1344
 msgid ""
 "Go to :menuselection:`Settings --> Technical --> Actions --> Server Actions`"
 msgstr ""
 "Go to :menuselection:`Settings --> Technical --> Actions --> Server Actions`"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1344
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1345
 msgid "Look for the Action called \"Download XSD files to CFDI\""
 msgstr "Look for the Action called \"Download XSD files to CFDI\""
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1345
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1346
 msgid "Click on button \"Create Contextual Action\""
 msgstr "Click on button \"Create Contextual Action\""
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1346
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1347
 msgid ""
 "Go to the company form :menuselection:`Settings --> Users&Companies --> "
 "Companies`"
@@ -27488,11 +27429,11 @@ msgstr ""
 "Go to the company form :menuselection:`Settings --> Users&Companies --> "
 "Companies`"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1347
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1348
 msgid "Open any company you have."
 msgstr "Open any company you have."
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1348
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1349
 msgid "Click on \"Action\" and then on \"Download XSD file to CFDI\"."
 msgstr "Click on \"Action\" and then on \"Download XSD file to CFDI\"."
 
@@ -27500,7 +27441,7 @@ msgstr "Click on \"Action\" and then on \"Download XSD file to CFDI\"."
 msgid "Download XSD files to CFDI from the Companies list view on Odoo"
 msgstr "从Odoo公司列表视图将XSD文件下载到CFDI"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1354
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1355
 msgid ""
 "Now you can make an invoice with any error (for example a product without "
 "code which is pretty common) and an explicit error will be shown instead a "
@@ -27510,7 +27451,7 @@ msgstr ""
 "code which is pretty common) and an explicit error will be shown instead a "
 "generic one with no explanation."
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1359
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1360
 msgid "If you see an error like this:"
 msgstr "If you see an error like this:"
 
@@ -27528,30 +27469,30 @@ msgstr ""
 "'{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoRelacion' 不解析为 "
 "a（n） 简单类型定义。第 36 行。”"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1366
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1367
 msgid ""
 "This can be caused by a database backup restored in another server, or when "
 "the XSD files are not correctly downloaded. Follow the same steps as above "
 "but:"
 msgstr "这可能是由在另一台服务器中还原的数据库备份引起的，也可能是由于未正确下载 XSD 文件引起的。请按照与上述相同的步骤操作，但："
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1370
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1371
 msgid "Go to the company in which the error occurs."
 msgstr "Go to the company in which the error occurs."
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1371
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1372
 msgid "Click on *Action* and then on *Download XSD file to CFDI*."
 msgstr "单击*操作*，然后单击*将XSD文件下载到CFDI*。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1374
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1375
 msgid "Common problems and errors"
 msgstr "常见问题和错误"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1376
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1377
 msgid "**Error messages** (Only applicable on CFDI 3.3):"
 msgstr "**Error messages** (Only applicable on CFDI 3.3):"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1378
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1379
 msgid ""
 "``9:0:ERROR:SCHEMASV:SCHEMAV_CVC_MINLENGTH_VALID: Element "
 "'{http://www.sat.gob.mx/cfd/3}Concepto', attribute 'NoIdentificacion': "
@@ -27562,7 +27503,7 @@ msgstr ""
 "'{http://www.sat.gob.mx/cfd/3}Concepto'， 属性 'NoIdentificacion'： [facet "
 "'minLength'] 值 '' 的长度为 '0';这低于允许的最小长度'1'。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1383
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1384
 msgid ""
 "``9:0:ERROR:SCHEMASV:SCHEMAV_CVC_PATTERN_VALID: Element "
 "'{http://www.sat.gob.mx/cfd/3}Concepto', attribute 'NoIdentificacion': "
@@ -27573,7 +27514,7 @@ msgstr ""
 "'{http://www.sat.gob.mx/cfd/3}Concepto'， 属性 'NoIdentificacion'： [facet "
 "'pattern'] 值 '' 不被模式 '[^|] 接受{1,100}'.''"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1387
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1388
 msgid ""
 "**Solution**: You forgot to set the proper \"Reference\" field in the "
 "product, please go to the product form and set your internal reference "
@@ -27583,15 +27524,15 @@ msgstr ""
 "product, please go to the product form and set your internal reference "
 "properly."
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1391
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1432
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1463
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1484
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1492
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1392
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1433
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1464
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1485
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1493
 msgid "**Error messages**:"
 msgstr "**Error messages**:"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1393
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1394
 msgid ""
 "``6:0:ERROR:SCHEMASV:SCHEMAV_CVC_COMPLEX_TYPE_4: Element "
 "'{http://www.sat.gob.mx/cfd/3}RegimenFiscal': The attribute 'Regimen' is "
@@ -27600,7 +27541,7 @@ msgstr ""
 "''6：0：ERROR：SCHEMASV：SCHEMAV_CVC_COMPLEX_TYPE_4： Element "
 "'{http://www.sat.gob.mx/cfd/3}RegimenFiscal'： 属性 'Regimen' 是必需的，但缺少。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1396
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1397
 msgid ""
 "``5:0:ERROR:SCHEMASV:SCHEMAV_CVC_COMPLEX_TYPE_4: Element "
 "'{http://www.sat.gob.mx/cfd/3}Emisor': The attribute 'RegimenFiscal' is "
@@ -27609,7 +27550,7 @@ msgstr ""
 "''5：0：ERROR：SCHEMASV：SCHEMAV_CVC_COMPLEX_TYPE_4： 元素 "
 "'{http://www.sat.gob.mx/cfd/3}Emisor'： 属性 'RegimenFiscal' 是必需的，但缺少。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1399
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1400
 msgid ""
 "**Solution**: You forgot to set the proper \"Fiscal Position\" on the "
 "partner of the company. Go to customers, remove the customer filter and look"
@@ -27621,7 +27562,7 @@ msgstr ""
 " **解决方案** "
 "：您忘记在公司的合作伙伴上设置适当的“财务状况”。转到客户，删除客户筛选器并查找称为您公司的合作伙伴，并设置适当的财务状况，这是您的公司所做的与SAT可能值列表相关的业务类型，另一种选择可能是您忘记遵循有关财务状况的注意事项。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1406
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1407
 msgid ""
 "You need to go to Fiscal Position settings and set the proper code (it is "
 "the first 3 numbers of the name), for example, for the test, you need to set"
@@ -27632,18 +27573,18 @@ msgstr "您需要转到财政头寸设置并设置正确的代码（它是名称
 msgid "Fiscal position error"
 msgstr "账务状况错误"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1414
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1415
 msgid ""
 "For testing purposes this value must be set to ``601 - General de Ley "
 "Personas Morales`` which is the one required for the VAT demo."
 msgstr "出于测试目的，此值必须设置为“601 - General de Ley Personas Morales”，这是增值税演示所需的值。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1417
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1449
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1418
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1450
 msgid "**Error message**:"
 msgstr "**Error message**:"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1419
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1420
 msgid ""
 "``2:0:ERROR:SCHEMASV:SCHEMAV_CVC_ENUMERATION_VALID: Element "
 "'{http://www.sat.gob.mx/cfd/3}Comprobante', attribute 'FormaPago': [facet "
@@ -27657,7 +27598,7 @@ msgstr ""
 "'13'， '14'， '15'， '17'， '23'， '24'， '25'， '26'， '27'， '28'， '29'， '30'， "
 "'99'}''"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1425
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1426
 msgid "**Solution**: The payment method is required on your invoice."
 msgstr "**Solution**: The payment method is required on your invoice."
 
@@ -27665,7 +27606,7 @@ msgstr "**Solution**: The payment method is required on your invoice."
 msgid "Payment method error"
 msgstr "付款方式错误"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1434
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1435
 msgid ""
 "``2:0:ERROR:SCHEMASV:SCHEMAV_CVC_ENUMERATION_VALID: Element "
 "'{http://www.sat.gob.mx/cfd/3}Comprobante', attribute 'LugarExpedicion': "
@@ -27675,8 +27616,8 @@ msgstr ""
 "'{http://www.sat.gob.mx/cfd/3}Comprobante'， attribute 'LugarExpedicion'： "
 "[facet 'enumeration'] 值 '' 不是集合 {'00'' 的元素"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1437
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1451
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1438
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1452
 msgid ""
 "``2:0:ERROR:SCHEMASV:SCHEMAV_CVC_DATATYPE_VALID_1_2_1: Element "
 "'{http://www.sat.gob.mx/cfd/3}Comprobante', attribute 'LugarExpedicion': '' "
@@ -27687,7 +27628,7 @@ msgstr ""
 "'{http://www.sat.gob.mx/cfd/3}Comprobante'， 属性 'LugarExpedicion'： '' 不是原子类型 "
 "'{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_CodigoPostal' 的有效值。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1440
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1441
 msgid ""
 "``5:0:ERROR:SCHEMASV:SCHEMAV_CVC_COMPLEX_TYPE_4: Element "
 "'{http://www.sat.gob.mx/cfd/3}Emisor': The attribute 'Rfc' is required but "
@@ -27696,7 +27637,7 @@ msgstr ""
 "''5：0：ERROR：SCHEMASV：SCHEMAV_CVC_COMPLEX_TYPE_4： 元素 "
 "'{http://www.sat.gob.mx/cfd/3}Emisor'：属性 'Rfc' 是必需的，但缺少。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1443
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1444
 msgid ""
 "**Solution**: You must configure your company address correctly, this is a "
 "mandatory group of fields, you can go to your company configuration in "
@@ -27708,7 +27649,7 @@ msgstr ""
 "：您必须正确配置公司地址，这是一组必填字段，您可以在：menuselection中转到您的公司配置：`设置-->用户和公司-->公司`，然后按照本节中的步骤填写地址的所有必填字段：：ref：`mx-"
 "legal-info`。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1456
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1457
 msgid ""
 "**Solution**: The postal code of your company address is not valid for "
 "Mexico, please correct it."
@@ -27718,7 +27659,7 @@ msgstr " **解决方案** ：您的公司地址的邮政编码对墨西哥无效
 msgid "ZIP code error"
 msgstr "邮编错误"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1465
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1466
 msgid ""
 "``18:0:ERROR:SCHEMASV:SCHEMAV_CVC_COMPLEX_TYPE_4: Element "
 "'{http://www.sat.gob.mx/cfd/3}Traslado': The attribute 'TipoFactor' is "
@@ -27727,7 +27668,7 @@ msgstr ""
 "''18：0：ERROR：SCHEMASV：SCHEMAV_CVC_COMPLEX_TYPE_4： Element "
 "'{http://www.sat.gob.mx/cfd/3}Traslado'： 属性 'TipoFactor' 是必需的，但缺少。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1468
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1469
 msgid ""
 "``34:0:ERROR:SCHEMASV:SCHEMAV_CVC_COMPLEX_TYPE_4: Element "
 "'{http://www.sat.gob.mx/cfd/3}Traslado': The attribute 'TipoFactor' is "
@@ -27736,7 +27677,7 @@ msgstr ""
 "''34：0：ERROR：SCHEMASV：SCHEMAV_CVC_COMPLEX_TYPE_4： Element "
 "'{http://www.sat.gob.mx/cfd/3}Traslado'： 属性 'TipoFactor' 是必需的，但缺少。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1472
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1473
 msgid ""
 "**Solution**: Set the Mexican name for the 0% and 16% tax in your system and"
 " use it on the invoice. Your tax, which represents 16% VAT and 0%, must have"
@@ -27765,7 +27706,7 @@ msgstr ""
 "“如果 cce11： ComercioExterior： TipoOperacion registered 是 '1' 或 '2'，则必须注册 XXXX"
 " 属性。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1490
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1491
 msgid "**Solution**: It is necessary to specify the Incoterm."
 msgstr "**解决方案** ：有必要指定国际贸易术语解释通则。"
 
@@ -27782,23 +27723,23 @@ msgstr ""
 "''属性 cce11： 外贸： 货物： 货物： 海关单位必须具有目录 catCFDI： c_FraccionArancelaria 列 'UMT' "
 "当属性 cce11： 外贸： 货物： 我 ''"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1499
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1500
 msgid ""
 "**Solution**: The Tariff Fraction must have the code of the unit of measure "
 "01, corresponding to Kilograms."
 msgstr "**解决方案** ：关税分数必须具有计量单位01的代码，对应于千克。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1505
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1506
 msgid ""
 ":abbr:`CFDI (Comprobante Fiscal Digital por Internet)`: Online Digital Tax "
 "Receipt"
 msgstr "：缩写：`CFDI（Comprobante Fiscal Digital por Internet）`：在线数字税收收据"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1506
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1507
 msgid ":abbr:`CSD (Certificado de Sello Digital)`: Digital Seal Certificate"
 msgstr "：缩写：`CSD （Certificado de Sello Digital）`： Digital Seal Certificate"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1507
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1508
 msgid ""
 ":abbr:`PAC (Proveedores Autorizados de Certificación)`: Authorized "
 "Certification Provider"
@@ -27806,11 +27747,11 @@ msgstr ""
 "：abbr：`PAC （Proveedores Autorizados de Certificación）`： Authorized "
 "Certification Provider"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1508
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1509
 msgid "Stamp: Digital signature of the electronic invoice"
 msgstr "印花：电子开票的数字签名"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1509
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1510
 msgid ""
 "Addenda: Complement of information that can be attached to an Internet "
 "Digital Tax Receipt (CFDI) normally required by certain companies in Mexico "
@@ -27818,7 +27759,7 @@ msgid ""
 msgstr ""
 "附录：可以附加到互联网数字税收收据（CFDI）的信息补充，这些信息通常是墨西哥某些公司（如沃尔玛，Tiendas Sorianas等）所要求的。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1511
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1512
 msgid ""
 ":abbr:`UUID (Universally Unique Identifier)`: It is the acronym in English "
 "of the Universally Unique Identifier. The UUID is the equivalent of Folio "
@@ -27828,7 +27769,7 @@ msgstr ""
 "：abbr：`UUID（通用唯一标识符）`：它是通用唯一标识符的英文首字母缩写。UUID 相当于 Folio Fiscal，它由 32 "
 "个十六进制数字组成，以连字符分隔的 5 个组显示。"
 
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1514
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:1515
 msgid ""
 "LCO: List of Obliged Taxpayers (LCO) is a list issued by the SAT that "
 "accounts for all the taxpayers whom it authorizes the issuance of invoices "

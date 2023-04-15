@@ -12,7 +12,6 @@
 # liAnGjiA <liangjia@qq.com>, 2022
 # zhao yonghui, 2023
 # fausthuang, 2023
-# Martin Trigaux, 2023
 # Richard yang <yanglinqiangdata@hotmail.com>, 2023
 # Raymond Yu <cl_yu@hotmail.com>, 2023
 # Mandy Choy <mnc@odoo.com>, 2023
@@ -21,15 +20,16 @@
 # Jeffery CHEN <jeffery9@gmail.com>, 2023
 # Benson <Benson.Dr@Gmail.com>, 2023
 # Datasource International <Hennessy@datasourcegroup.com>, 2023
+# Martin Trigaux, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-06 08:12+0000\n"
+"POT-Creation-Date: 2023-04-13 05:55+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
-"Last-Translator: Datasource International <Hennessy@datasourcegroup.com>, 2023\n"
+"Last-Translator: Martin Trigaux, 2023\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/odoo/teams/41243/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -558,7 +558,6 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/management/incoming/two_steps.rst:6
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/cycle_counts.rst:14
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:13
-#: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:18
 #: ../../content/applications/inventory_and_mrp/inventory/management/misc/wave_transfers.rst:16
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:45
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/uom.rst:14
@@ -575,6 +574,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/third_party_shipper.rst:14
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:23
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:9
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:10
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:31
 msgid "Configuration"
 msgstr "配置"
@@ -651,159 +651,134 @@ msgid "Warehouse Management"
 msgstr "仓库管理"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:3
-msgid "Send Products to Customers Directly from Suppliers (Drop-shipping)"
-msgstr "从供应商直接向客户发送产品（直运）"
+msgid "Use dropshipping to ship directly from suppliers to customers"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:6
-msgid "What is Drop-Shipping?"
-msgstr "什么是直运？"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:8
+#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:5
 msgid ""
-"Drop-Shipping is a system that allows orders taken from your store to be "
-"shipped straight from your supplier to your customer. On a usual delivery "
-"system, products are sent from your supplier to your warehouse to be put in "
-"stock and then shipped to your customers after ordering."
-msgstr "直运系统可将订单商品直接从供应商发给客户。在常规发货系统中，产品从供应商发到你的仓库，然后在客户下单后从仓库发给客户。"
+"Dropshipping is an order fulfillment strategy that allows sellers to have "
+"items shipped directly from suppliers to customers. Normally, a seller "
+"purchases a product from a supplier, stores it in their inventory, and ships"
+" it to the end customer once an order is placed. With dropshipping, the "
+"supplier is responsible for storing and shipping the item. This benefits the"
+" seller by reducing inventory costs, including the price of operating "
+"warehouses."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:13
+#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:12
+msgid "Configure products to be dropshipped"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:14
 msgid ""
-"With drop-shipping, no item is stocked. When a customer places an order in "
-"your shop, the item is delivered straight from the supplier to the customer."
-" Therefore, the product doesn't need to get through your warehouse."
-msgstr "在直运模式中，无需保有库存。当客户在门店下单后，商品直接从供应商发给客户。因此，产品无需经过你的仓库。"
+"To use dropshipping as a fulfillment strategy, navigate to the "
+":guilabel:`Purchase` app and select :menuselection:`Configuration --> "
+"Settings`. Under the :guilabel:`Logistics` heading, click the "
+":guilabel:`Dropshipping` checkbox, and :guilabel:`Save` to finish."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:19
-msgid "Points to be Considered while Implementing Drop-Shipping"
-msgstr "实施直运模式需要考虑的要点"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:24
+#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:18
 msgid ""
-"Use drop-shipping only for the products you can't or don't want to keep in "
-"stock."
-msgstr "直运仅适合你无法或不愿意保有库存的产品。"
+"Next, go to the :guilabel:`Sales` app, click :menuselection:`Products --> "
+"Products` and choose an existing product or select :guilabel:`Create` to "
+"configure a new one. On the product page, make sure that the :guilabel:`Can "
+"be Sold` and :guilabel:`Can be Purchased` checkboxes are enabled."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:22
+#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst-1
 msgid ""
-"One reason is that you'll always make smaller margins on items that are "
-"drop-shipped, so you should keep it only for items that take up a lot of "
-"space in your warehouse."
-msgstr "其中一个原因是你在直运商品上获得的利润率往往较低，因此仅适合需要占用大量库存空间的商品。"
+"Enable the \"Can be Sold\" and \"Can be Purchased\" checkboxes on the "
+"product form."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:30
-msgid "Drop-shipping is best for niche products."
-msgstr "直运最适合小众产品。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:27
+#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:26
 msgid ""
-"Chances are that products that are in high demand are being offered by large"
-" suppliers at a fraction of the price you'll be able to charge, so using a "
-"more costly shipping method won't be financially rewarding. But if your "
-"product is unique, then it makes sense!"
-msgstr "大需求量的产品往往由大供应商提供，价格可能比你优惠，因此使用费用更高的发货方式从经济上看不合算。但如果你的产品非常独特，情况就不同了！"
+"Click on the :guilabel:`Purchase` tab and specify a vendor and the price "
+"that they sell the product for. Multiple vendors can be added, but the "
+"vendor at the top of the list will be the one automatically selected for "
+"purchase orders."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:33
-msgid "To protect your customers from bad experiences."
-msgstr "避免给客户带来不良体验。"
+#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst-1
+msgid "The product form with a vendor specified."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:33
+#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:34
 msgid ""
-"Test drop-shipping companies for yourself beforehand and list the best ones."
-msgstr "事先自行测试直运公司，列出最好的公司。"
+"Finally, select the :guilabel:`Inventory` tab and enable the "
+":guilabel:`Dropship` checkbox in the :guilabel:`Routes` section."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:37
-msgid "Make sure time is not against you."
-msgstr "确保时间可控。"
+#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst-1
+msgid "Enable the Dropship option in the product inventory tab."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:36
-msgid ""
-"Drop-shipping should take a reasonable amount of time and surely not more "
-"than it would have taken you to handle it all by yourself. It's also nice to"
-" be able to provide your customers with a tracking number."
-msgstr "直运应有合理的时间，绝对不能超出你自己处理发货事宜的时间。如能向客户提供运单号更好。"
+#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:42
+msgid "Fulfill orders using dropshipping"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:44
-msgid "Items have to be available from your supplier."
-msgstr "要确保在供应商那边有足够的库存。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:40
 msgid ""
-"It's good to know if the product you're selling is available upstream. If "
-"you don't have that information, inform your customers that you don't hold "
-"the item in stock and that it's subject to availability from a third party."
-msgstr "知晓产品在供应链上游的状况是很有用的。如果你没有这些信息，就告诉客户现在没有库存，并且这取决第三方的库存。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:47
-msgid ""
-"For more information and insights about Drop-Shipping, you can read our "
-"blog: `*What is drop-shipping and how to use it* "
-"<https://www.odoo.com/blog/business-hacks-1/post/what-is-drop-shipping-and-"
-"how-to-use-it-250>`__."
+"When a customer completes an online purchase for a dropshipped product, a "
+"sales order will be automatically created with an associated request for "
+"quotation (:abbr:`RFQ (Request for Quotation)`) for the supplier. Sales "
+"orders can be viewed in the :guilabel:`Sales` app by selecting "
+":menuselection:`Orders --> Orders`. Click the :guilabel:`Purchase` smart "
+"button at the top right of a sales order to view the associated :abbr:`RFQ "
+"(Request for Quotation)`."
 msgstr ""
-"关于直运的详情及见解，请阅读我们的博客 *直运是什么以及如何使用*  <https://www.odoo.com/blog/business-"
-"hacks-1/post/what-is-drop-shipping-and-how-to-use-it-250>`__。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:52
-msgid "Configure Drop-Shipping"
-msgstr "配置直运"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:54
+#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:51
 msgid ""
-"Activate the functionality in the *Purchase* application by going to "
-":menuselection:`Configuration --> Settings`."
-msgstr "前往 :menuselection:`配置 --> 设置`，在*采购*应用程序中启用此功能。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:60
-msgid ""
-"Then, go to the *Inventory* app, in :menuselection:`Configuration --> "
-"Settings` to activate the *Multi-Step Routes* feature. It will allow you to "
-"make the *Route* field appear on the sale order lines to specify you send a "
-"product via drop-shipping."
+"Dropship sales orders can also be created manually through the "
+":guilabel:`Sales` app by selecting :menuselection:`Orders --> Orders --> "
+"Create` and adding a product configured for dropshipping."
 msgstr ""
-"然后，前往*库存*应用程序，在 :menuselection:`配置 --> "
-"设置`中，启用*多步骤路线*功能。然后，你可在销售订单行的*路线*字段，指定通过直运发送产品。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:68
+#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst-1
 msgid ""
-"Now, in the *Sales* app, go to :menuselection:`Products --> Products`. "
-"Select the product you would like to drop-ship and add a vendor pricelist "
-"which contains the right supplier, via the purchase tab."
+"A dropship sales order with the Purchase smart button in the top right "
+"corner."
 msgstr ""
-"现在，在*销售*应用程序中，前往 :menuselection:`产品 --> 产品`。选择想要直运的产品，并通过采购选项卡添加合适供应商的价格表。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:76
-msgid "Send Products from the Suppliers Directly to the Customers"
-msgstr "从供应商直接向客户发送产品"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:78
+#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:58
 msgid ""
-"Create a *Sales Order* and add the product on which you just set the vendor."
-" Add the *Route* field thanks to the widget on the right of the sale order "
-"line. Now, you are able to specify that your products’ route is *Drop-"
-"Shipping*."
-msgstr "创建*销售订单*并添加你刚才设置供应商的产品。通过销售订单行右侧的小工具添加*路线*字段。现在，你可将产品路线指定为*直运*。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:89
-msgid ""
-"Once the sale order is confirmed, Odoo automatically generates a *Request "
-"for Quotation* for the supplier who will proceed to the drop-shipping. You "
-"can find it in the *Purchase* app, with the sale order as *Source Document*."
-msgstr "确认销售订单后，Odoo为处理直运的供应商自动生成*报价请求*。你可在*采购*应用程序中查看，销售订单为*源单据*。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:97
-msgid ""
-"Once this *Purchase Order* is confirmed, a *Receipt Order* is created and "
-"linked to it. The source location is the vendor location and the destination"
-" location is the customer location. Then, the product won’t go through your "
-"own stock when you validate the dropship document."
+"Once the :abbr:`RFQ (Request for Quotation)` is confirmed, it becomes a "
+"purchase order and a dropship receipt is created and linked to it. The "
+"receipt can be viewed by clicking the :guilabel:`Receipt` smart button in "
+"the top right corner of the purchase order form."
 msgstr ""
-"在确认*采购订单*后，系统将创建*收货单*并与之关联。源库位是供应商所在地，目标库位是客户所在地。然后，你在确认直运文件后，产品不会经过你的库存。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:105
+#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst-1
 msgid ""
-"You can also easily access the dropship document directly from your "
-"inventory dashboard."
-msgstr "你还可从库存仪表板上直接访问直运文件。"
+"A dropship purchase order with the Receipt smart button in the top right "
+"corner."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:66
+msgid ""
+"The dropship receipt will list the supplier in the :guilabel:`Receive From` "
+"section and the customer in the :guilabel:`Destination Location` section. "
+"Upon delivery of the product to the customer, click on the "
+":guilabel:`Validate` button at the top left of the dropship receipt to "
+"confirm the delivered quantity."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst-1
+msgid "Validate the dropship receipt after delivery."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst:75
+msgid ""
+"To view all dropship orders, simply navigate to the :guilabel:`Inventory` "
+"dashboard and click the teal :guilabel:`# TO PROCESS` button on the "
+":guilabel:`Dropship` card."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst-1
+msgid ""
+"Click the green button on the Dropship card to view all dropship orders."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/delivery/inventory_flow.rst:3
 msgid "How to choose the right inventory flow to handle delivery orders?"
@@ -2623,58 +2598,205 @@ msgid ""
 msgstr "拣完所有产品后，单击*验证*（在最后一页）将批量转移标记为完成。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:3
-msgid "Manage Stock that you don't own"
-msgstr "管理不属于你的库存"
+msgid "Consignment: buy and sell stock without owning it"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:5
 msgid ""
-"Sometimes, suppliers can offer you to store and sell products without having"
-" to buy those items. This technique is called *consignee stock*."
-msgstr "有时，供应商会向门店提供产品，且你无需事先采购它们。这种情况被称为 **销库** 。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:8
-msgid ""
-"Consignee stock is a great way for manufacturers and suppliers to launch new"
-" products. As resellers may be reluctant to buy a product they are not sure "
-"to be able to sell, consignee stock will allow them to offer an item to "
-"check its market without having to pay for it in the first place."
-msgstr "代销库存是工厂和供应商发布新产品的好办法。因为零售商可能不愿意购买不确定能否卖掉的产品，代销库存能让他们先不付款并在市场上试销。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:14
-msgid ""
-"Of course, Odoo has the ability to manage those consignee stocks through "
-"advanced settings."
-msgstr "当然，Odoo能通过高级设置管理代销库存。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:20
-msgid ""
-"To use this feature, go to :menuselection:`Inventory --> Configuration --> "
-"Settings` in the inventory app. Then, enable the *Consignment* feature in "
-"the *Traceability* section. Now, hit save."
+"Most of the time, products stored in a company's warehouse are either "
+"purchased from suppliers, or are manufactured in-house. However, suppliers "
+"will sometimes let companies store and sell products in the company's "
+"warehouse, without having to buy those items up-front. This is called "
+"*consignment*."
 msgstr ""
-"如要使用此功能，在库存应用程序中打开 :menuselection:`库存 --> 配置 --> "
-"设置`。然后，在*可追溯性*部分启用*代销*功能。现在，点击保存。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:10
+msgid ""
+"Consignment is a useful method for suppliers to launch new products, and "
+"easily deliver to their customers. It's also a great way for the company "
+"storing the products (the consignee) to earn something back for their "
+"efforts. Consignees can even charge a fee for the convenience of storing "
+"products they don't actually own."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:16
+msgid "Enable the consignment setting"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:18
+msgid ""
+"To receive, store, and sell consignment stock, the feature needs to be "
+"enabled in the settings. To do this, go to :menuselection:`Inventory --> "
+"Configuration --> Settings`, and under the :guilabel:`Traceability` section,"
+" check the box next to :guilabel:`Consignment`, and then click "
+":guilabel:`Save` to finish."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst-1
+msgid "Enabled Consignment setting in Inventory configuration."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:28
-msgid "Reception of Consignee Stock"
-msgstr "代销库存的收货"
+msgid "Receive (and store) consignment stock"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:30
 msgid ""
-"When in the *Inventory* app, open the receipts and create a new reception. "
-"On the right side, you will see that a new line called *Assign Owner* has "
-"appeared. There, you can specify the partner which owns the stock."
-msgstr "在*库存*应用程序中，打开收货页面并创建新的收货记录。你可看到页面右侧出现名为*分配所有者*的新行。你可在此指定拥有库存的合作伙伴。"
+"With the feature enabled in Odoo, consignment stock can now be received into"
+" a warehouse. From the main :menuselection:`Inventory` dashboard, click into"
+" the :guilabel:`Receipts` section. Then, click :guilabel:`Create`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:35
+msgid ""
+"Consignment stock is not actually purchased from the vendor; it is simply "
+"received and stored. Because of this, there are no quotations or purchase "
+"orders involved in receiving consignment stock. So, *every* receipt of "
+"consignment stock will start by creating manual receipts."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:39
-msgid "If you are the owner, you can leave the field blank."
-msgstr "如你是所有者，你可将此字段留空。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:41
 msgid ""
-"Once the receipt is validated, the products enter your stock but still "
-"belong to the owner. They don’t impact your inventory valuation."
-msgstr "在确认收货后，产品进入你的仓库但仍属于所有者。它们不会影响你的库存估值。"
+"Choose a vendor to enter in the :guilabel:`Receive From` field, and then "
+"choose the same vendor to enter in the :guilabel:`Assign Owner` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:43
+msgid ""
+"Since the products received from the vendor will be owned by the same "
+"vendor, the :guilabel:`Receive From` and :guilabel:`Assign Owner` fields "
+"must match."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:46
+msgid ""
+"Once the vendor-related fields are set, enter products into the "
+":guilabel:`Product` lines, and set the quantities to be received into the "
+"warehouse under the :guilabel:`Done` column. If the :guilabel:`Units of "
+"Measure` feature is enabled, the :abbr:`UoM (Units of Measure)` can be "
+"changed, as well. Once all the consignment stock has been received, "
+":guilabel:`Validate` the receipt."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst-1
+msgid "Matching vendor fields in consignment Receipt creation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:56
+msgid "Sell and deliver consignment stock"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:58
+msgid ""
+"Once consignment stock has been received into the warehouse, it can be sold "
+"the same as any other in-stock product that has the :guilabel:`Can Be Sold` "
+"option enabled on the product form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:61
+msgid ""
+"To create a sales order, navigate to the :menuselection:`Sales` app, and "
+"from the :guilabel:`Quotations` overview, click :guilabel:`Create`. Next, "
+"choose a customer to enter into the :guilabel:`Customer` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:66
+msgid ""
+"The :guilabel:`Customer` *must* be different from the :guilabel:`Vendor` "
+"that supplied the consignment stock received (and stored) in the warehouse."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:69
+msgid ""
+"Add the consignment product under the :guilabel:`Product` column in the "
+"order lines, set the :guilabel:`Quantity`, and fill out any other pertinent "
+"product details on the form. Once the quotation is complete, click "
+":guilabel:`Confirm`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst-1
+msgid "Sales order of consignment stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:77
+msgid ""
+"Once the :abbr:`RFQ (Request for Quotation)` has been confirmed, it will "
+"become a sales order. From here, the products can be delivered by clicking "
+"on the :guilabel:`Delivery` smart button, and selecting :guilabel:`Validate`"
+" to validate the delivery."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:82
+msgid "Traceability and reporting of consignment stock"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:84
+msgid ""
+"Although consignment stock is owned by the vendor who supplied it, and not "
+"by the company storing it in their warehouse, consignment products will "
+"*still* appear in certain inventory reports."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:87
+msgid ""
+"To find inventory reports, go to :menuselection:`Inventory --> Reporting`, "
+"and choose a report to view."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:91
+msgid ""
+"Since the consignee does not actually own consigment stock, these products "
+"are *not* reflected in the :guilabel:`Stock Valuation` report, and have no "
+"impact on the consignee's inventory valuation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:96
+msgid "Product moves report"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:98
+msgid ""
+"To view all information about on-hand stock moves, navigate to the the "
+":guilabel:`Product Moves` dashboard by going to :menuselection:`Inventory "
+"--> Reporting --> Product Moves`. For consignment products, the information "
+"in this report is the same as any other product: the history of its product "
+"moves can be reviewed; the :guilabel:`Quantity Done` and "
+":guilabel:`Reference` document are available; and its :guilabel:`Locations` "
+"are available, as well. The consignment stock will originate from "
+":guilabel:`Partner Location/Vendors`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:106
+msgid ""
+"To view a consignment product's moves by ownership, select the "
+":guilabel:`Group By` filter, choose the :guilabel:`Add Custom Group` "
+"parameter, and then select :guilabel:`From Owner`, and :guilabel:`Apply` to "
+"finish."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst-1
+msgid "Consignment stock moves history."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:115
+msgid ""
+"To see forecasted units of consignment stock, go to "
+":menuselection:`Inventory --> Reporting --> Forecasted Inventory`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:119
+msgid "Stock on hand report"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:121
+msgid ""
+"View the :guilabel:`Stock On Hand` dashboard by navigating to "
+":menuselection:`Inventory --> Reporting --> Inventory Report`. From this "
+"report, the :guilabel:`Locations` of all stock on-hand are displayed, in "
+"addition to the quantities per location. For consigment products, the "
+":guilabel:`Owner` column will be populated with the owner of those products,"
+" or the original vendor who supplied the products in the first place."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/misc/wave_transfers.rst:3
 msgid "Process wave transfers"
@@ -8950,6 +9072,184 @@ msgstr ""
 msgid "Quality control"
 msgstr ""
 
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_alerts.rst:3
+msgid "Create quality alerts"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_alerts.rst:5
+msgid ""
+"Configuring quality control points is a great way to ensure that quality "
+"checks are performed at routine stages during specific operations. However, "
+"quality issues can often appear outside of these scheduled checks. Using "
+"Odoo *Quality*, users can create quality alerts for issues that are not "
+"detected by automated processes."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_alerts.rst:11
+msgid ":doc:`Add quality control points <quality_control_points>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_alerts.rst:14
+msgid "Find and fill out the quality alerts form"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_alerts.rst:16
+msgid ""
+"In some situations, it is necessary to manually create quality alerts within"
+" the *Quality* module."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_alerts.rst:19
+msgid ""
+"A helpdesk user who is notified of a product defect by a customer ticket can"
+" create an alert that brings the issue to the attention of the relevant "
+"quality team."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_alerts.rst:22
+msgid ""
+"To create a new quality alert, start from the :menuselection:`Quality` "
+"module and select :menuselection:`Quality Control --> Quality Alerts --> "
+"Create`. The quality alert form can then be filled out as follows:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_alerts.rst:26
+msgid ""
+":guilabel:`Title`: choose a concise, yet descriptive title for the quality "
+"alert"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_alerts.rst:27
+msgid ""
+":guilabel:`Product`: the product about which the quality alert is being "
+"created"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_alerts.rst:28
+msgid ""
+":guilabel:`Product Variant`: the specific variant of the product that has "
+"the quality issue, if applicable"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_alerts.rst:30
+msgid ":guilabel:`Lot`: the lot number assigned to the product"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_alerts.rst:31
+msgid ""
+":guilabel:`Work Center`: the work center where the quality issue originated"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_alerts.rst:32
+msgid ""
+":guilabel:`Picking`: the picking operation during which the quality issue "
+"originated"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_alerts.rst:33
+msgid ""
+":guilabel:`Team`: the quality team that will be notified by the quality "
+"alert"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_alerts.rst:34
+msgid ""
+":guilabel:`Responsible`: the individual responsible for managing the quality"
+" alert"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_alerts.rst:35
+msgid ""
+":guilabel:`Tags`: classify the quality alert based on user-created tags"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_alerts.rst:36
+msgid ":guilabel:`Root Cause`: the cause of the quality issue, if known"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_alerts.rst:37
+msgid ""
+":guilabel:`Priority`: assign a priority between one and three stars to "
+"ensure more urgent issues are prioritized"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_alerts.rst:40
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_control_points.rst:40
+msgid ""
+"The tabs at the bottom of the form can be used to provide additional "
+"information to quality teams:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_alerts.rst:42
+msgid ""
+":guilabel:`Description`: provide additional details about the quality issue"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_alerts.rst:43
+msgid ""
+":guilabel:`Corrective Actions`: the method for fixing affected products"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_alerts.rst:44
+msgid ""
+":guilabel:`Preventive Actions`: procedures for preventing the issue from "
+"occurring in the future"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_alerts.rst:46
+msgid ""
+":guilabel:`Miscellaneous`: the product vendor (if applicable), the company "
+"that produces the product, and the date assigned"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_alerts.rst-1
+msgid "An example of a completed quality alert form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_alerts.rst:54
+msgid "Add quality alerts during the manufacturing process"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_alerts.rst:56
+msgid ""
+"Odoo enables manufacturing employees to create quality alerts within a work "
+"order without accessing the *Quality* module. From the work order tablet "
+"view, click the :guilabel:` ☰ ` hamburger menu icon in the top left corner "
+"and select :guilabel:`Quality Alert`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_alerts.rst-1
+msgid "Access the work order menu."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_alerts.rst:64
+msgid ""
+"The quality alert form can then be filled out as detailed in the previous "
+"section. After saving the form, a new alert will appear on the "
+":guilabel:`Quality Alerts` dashboard that can be found through the "
+":menuselection:`Quality --> Quality Control` menu."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_alerts.rst:69
+msgid "Manage existing quality alerts"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_alerts.rst:71
+msgid ""
+"By default, quality alerts are organized in a kanban board view. The stages "
+"of the kanban board are fully configurable and alerts can be moved from one "
+"stage to the next by dragging and dropping or from within each alert. "
+"Additional options are available for viewing alerts, including graph, "
+"calendar, and pivot table views."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_alerts.rst:77
+msgid ""
+"Filter alerts based on diverse criteria like date assigned or date closed. "
+"Alerts can also be grouped by quality team, root cause, or other parameters "
+"found under the :guilabel:`Filters` button menu."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_control_points.rst:3
 msgid "Add quality controls"
 msgstr ""
@@ -9033,12 +9333,6 @@ msgstr ""
 msgid ""
 ":guilabel:`Responsible`: add a point person to manage the status and "
 "evolution of the quality control point over time"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_control_points.rst:40
-msgid ""
-"The tabs at the bottom of the form can be used to provide additional "
-"information to quality teams:"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_control_points.rst:42
@@ -9619,217 +9913,246 @@ msgid "Confirm an order in Odoo Purchase"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:3
-msgid "Control and know when vendor bills should be paid"
-msgstr "控制并知道何时应支付供应商账单"
+msgid "Bill control policies"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:5
 msgid ""
-"With Odoo, you can define how your vendor bills are controlled. For each "
-"purchase order, you can decide when the related vendor bill should be paid: "
-"either before or after you have received your products. You can also check "
-"at a glance what is the billing status of each purchase order."
+"In Odoo, the *bill control* policy determines the quantities billed by "
+"vendors on every purchase order, for ordered or received quantities. The "
+"policy selected in the settings will act as the default value and will be "
+"applied to any new product created."
 msgstr ""
-"使用Odoo，您可以定义如何控制供应商账单。对于每个采购订单，您可以决定何时支付相关的供应商账单：在收到产品之前或之后。您还可以一目了然地查看每个采购订单的账单状态。"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:9
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:12
 msgid ""
-"With the 3-way matching feature, Odoo compares the information appearing on "
-"the *Purchase Order*, the *Vendor Bill* and the *Receipt*, and lets you know"
-" if you should pay the bill. This way you can avoid paying incorrect or "
-"fraudulent vendor bills."
+"To view the default bill control policy and make changes, go to "
+":menuselection:`Purchase --> Configuration --> Settings`, and scroll down to"
+" the :guilabel:`Invoicing` section. Here, there are the two :guilabel:`Bill "
+"Control` policy options: :guilabel:`Ordered quantities` and "
+":guilabel:`Received quantities`."
 msgstr ""
-"通过三方匹配功能，Odoo可以比较*采购订单*、*供应商账单*和*收据*上显示的信息，并告诉您是否应该付款。这样可以避免支付不正确或欺诈性的供应商账单。"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:14
-msgid "Vendor bills default control policy"
-msgstr "供应商账单默认控制策略"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:16
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:17
 msgid ""
-"As a first step, open your Purchase app and go to "
-":menuselection:`Configuration --> Settings` to set the default bill control "
-"policy for all the products created onwards."
-msgstr "首先，打开您的购买应用程序，进入：菜单选择：`配置-->设置`，为以后创建的所有产品设置默认账单控制策略。"
+"The policy selected will be the default for any new product created. The "
+"definition of each policy is as follows:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:20
+msgid ""
+":guilabel:`Ordered quantities`: creates a vendor bill as soon as a purchase "
+"order is confirmed. The products and quantities in the purchase order are "
+"used to generate a draft bill."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:22
+msgid ""
+":guilabel:`Received quantities`: a bill is created only *after* part of the "
+"total order has been received. The products and quantities *received* are "
+"used to generate a draft bill. An error message will appear if creation of a"
+" vendor bill is attempted without receiving anything."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst-1
-msgid "Vendor bills default control setting for new products in Odoo Purchase"
+msgid "Bill control policy draft bill error message."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:23
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:31
 msgid ""
-"By selecting *On ordered quantities*, you can create a vendor bill as soon "
-"as you confirm an order. The quantities mentioned in the purchase order are "
-"used to generate the draft bill."
-msgstr "通过选择*按订购数量*，您可以在确认订单后立即创建供应商账单。采购订单中提及的数量用于生成账单。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:26
-msgid ""
-"If you choose *On received quantities* instead, you can only create one once"
-" you have at least received some of the products you have ordered. The "
-"quantities you have received are used to generate the draft bill. If you try"
-" to create one without having received any product, you get an error "
-"message."
-msgstr ""
-"如果您选择*收到的数量*，您只能在至少收到您订购的部分产品后创建一个。您收到的数量用于生成账单数量清单草稿。如果您在没有收到任何产品的情况下尝试创建一个，则会收到一条错误消息。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst-1
-msgid "No invoiceable line error message in Odoo Purchase"
+"If one or two products need a different control policy, the default bill "
+"control setting can be overridden by going to the :guilabel:`Purchase` tab "
+"in a product's template and modifying its :guilabel:`Control Policy` field."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:36
-msgid "Change a specific product's control policy"
-msgstr "更改特定产品的控制策略"
+msgid "Example flow: Ordered quantities"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:38
 msgid ""
-"If you want to modify a specific product's control policy, go to "
-":menuselection:`Products --> Products`, open it, click on *Edit* and go to "
-"the *Purchase tab*. There you can change a product's default bill control "
-"policy."
-msgstr ""
-"如果要修改特定产品的控制策略，请转到:menuselection:“Products --> Products”，打开它，单击*Edit* "
-"并转到*Purchase tab*。您可以在此处更改产品的默认账单控制策略。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:47
-msgid "View a purchase order's billing status"
-msgstr "查看采购订单的帐单状态"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:49
-msgid ""
-"Once you confirm an order, you can view its *Billing Status* by going to the"
-" *Other Information* tab."
-msgstr "确认订单后，您可以通过*其他信息*选项卡查看其*账单状态*。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst-1
-msgid "Purchase order billing status in Odoo Purchase"
+"To complete an example workflow using the *ordered quantities* bill control "
+"policy, first go to :menuselection:`Purchase --> Configuration --> "
+"Settings`, scroll down to the :guilabel:`Invoicing` section, and select "
+":guilabel:`Ordered quantities`. Then, :guilabel:`Save` changes."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:56
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:42
 msgid ""
-"Below you can find a list of the different *Billing Status*, and when they "
-"are displayed, depending on the products' bill control policy."
-msgstr "下面你可以找到不同的*账单状态*的列表，以及它们显示的时间，取决于产品的账单控制策略。"
+"In the :guilabel:`Purchase` app, create a new :abbr:`RFQ (Request for "
+"Quotation)`. Fill out the information on the quotation form, add products to"
+" the invoice lines, and click :guilabel:`Confirm Order`. Then, click "
+":guilabel:`Create Bill`. Since the policy is set to *ordered quantities*, "
+"the draft bill can be confirmed as soon as it is created, without any "
+"products actually being received."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:60
-msgid "**Billing status**"
-msgstr " **单状** "
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:48
+msgid "Example flow: Received quantities"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:60
-msgid "**Conditions**"
-msgstr " **** "
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:50
+msgid ""
+"To complete an example workflow using the *received quantities* bill control"
+" policy, first go to :menuselection:`Purchase --> Configuration --> "
+"Settings`, scroll down to the :guilabel:`Invoicing` section, and select "
+":guilabel:`Received quantities`. Then, :guilabel:`Save` changes."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:62
-msgid "*On received quantities*"
-msgstr "*收到的数量*"
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:54
+msgid ""
+"In the :guilabel:`Purchase` app, create a new :abbr:`RFQ (Request for "
+"Quotation)`. Fill out the information on the quotation form, add products to"
+" the invoice lines, and click :guilabel:`Confirm Order`. Then, click on the "
+":guilabel:`Receipt smart button`. Set the quantities in the :guilabel:`Done`"
+" column to match the quantities in the :guilabel:`Demand` column, and "
+":guilabel:`Validate` the changes. Then, in the purchase order, click "
+":guilabel:`Create Bill` and :guilabel:`Confirm`. Since the policy is set to "
+"*received quantities*, the draft bill can be confirmed *only* when at least "
+"some of the quantities are received."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:62
-msgid "*On ordered quantities*"
-msgstr "*订购的数量*"
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:63
+msgid "3-way matching"
+msgstr "3方匹配"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:64
-msgid "*Nothing to Bill*"
-msgstr "*无需开单*"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:64
-msgid "PO confirmed; no products received"
-msgstr "采购订单已确认；未收到任何产品"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:64
-msgid "*(Not applicable)*"
-msgstr "*（不适用）*"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:66
-msgid "*Waiting Bills*"
-msgstr "*等待开单*"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:66
-msgid "All/some products received; bill not created"
-msgstr "收到的所有/部分产品；未创建票据"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:66
-msgid "PO confirmed"
-msgstr "订单已确认"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:68
-msgid "*Fully Billed*"
-msgstr "*全额账单*"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:68
-msgid "All/some products received; draft bill created"
-msgstr "收到的所有/部分产品；已创建账单"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:68
-msgid "Draft bill created"
-msgstr "已创建账单"
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:65
+msgid ""
+"Activating :guilabel:`3-way matching` ensures that vendor bills are only "
+"paid once some or all of the products included in the purchase order have "
+"actually been received. To activate it, go to :menuselection:`Purchase --> "
+"Configuration --> Settings`, and scroll down to the :guilabel:`Invoicing` "
+"section. Then, click :guilabel:`3-way matching: purchases, receptions, and "
+"bills`."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:72
-msgid "Determine when to pay with 3-way matching"
-msgstr "确定何时使用三方匹配付款"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:74
 msgid ""
-"First, go to :menuselection:`Configuration --> Settings` and activate *3-way"
-" matching*."
-msgstr "首先，转到：菜单选择：`配置-->设置`并激活*3方匹配*。"
+"3-way matching is *only* intended to work when the bill control policy is "
+"set to *received quantities*."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:76
+msgid "Pay vendor bills with 3-way matching"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:78
+msgid ""
+"When :guilabel:`3-way matching` is activated, vendor bills will display the "
+":guilabel:`Should Be Paid` field under the :guilabel:`Other Info` tab. When "
+"a new vendor bill is created, the field will be set to :guilabel:`Yes`, "
+"since a bill can't be created until at least some of the products included "
+"in a purchase order have been received."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst-1
-msgid "3-way-matching setting in Odoo Purchase"
+msgid "Draft bill should be paid field status."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:81
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:88
 msgid ""
-"3-way matching is intended to work with the bill control policy set to *On "
-"received quantities*."
-msgstr "三方匹配旨在将*收货数量*上的账单控制策略设置。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:84
-msgid "Should I pay the vendor bill?"
-msgstr "我应该支付此供应商账单吗？"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:86
-msgid ""
-"With the feature activated, your vendor bills now display the *Should Be "
-"Paid* field under the *Other info* tab."
-msgstr "激活该功能后，您的供应商账单现在显示*其他信息*选项卡下的*应付款*字段。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst-1
-msgid "Should Be Paid field under a vendor bill in Odoo Purchase"
+"If the total quantity of products from a purchase order has not been "
+"received, Odoo only includes the products that *have* been received in the "
+"draft vendor bill."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:93
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:91
 msgid ""
-"As you can't create a bill until you have received your products - and if "
-"you haven't received all of them, Odoo only includes the products you have "
-"received in the draft bill - the *Should Be Paid* status is set to *Yes* "
-"when you create one."
+"Draft bills can be edited to increase the billed quantity, change the price "
+"of the products in the bill, and add additional products to the bill. If "
+"this is done, the :guilabel:`Should Be Paid` field status will be set to "
+":guilabel:`Exception`. This means that Odoo notices the discrepancy, but "
+"doesn't block the changes or display an error message, since there might be "
+"a valid reason for making changes to the draft bill."
 msgstr ""
-"由于您在收到产品之前无法创建账单 - 并且如果您还没有收到所有产品，Odoo 只会将您收到的产品包含在账单草稿中 - "
-"当您创建一个时，*应该支付*状态设置为 *是*。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:97
 msgid ""
-"If you edit a draft bill to increase the billed quantity, change the price, "
-"or add other products, the *Should Be Paid* status is set to *Exception*. It"
-" means Odoo notices the discrepancy, but that you might have a valid reason "
-"to have done so."
+"Once payment has been registered for a vendor bill and displays the green "
+":guilabel:`Paid` banner, the :guilabel:`Should Be Paid` field status will be"
+" set to :guilabel:`No`."
 msgstr ""
-"如果您编辑开票以增加开票数量、更改价格或添加其他产品，则*应付款*状态设置为*例外*。这意味着Odoo注意到了差异，但你可能有充分的理由这么做。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:101
 msgid ""
-"Once the payment has been registered and mentions *Paid*, the *Should Be "
-"Paid* status is set to *No*."
-msgstr "一旦付款已注册并提及“已支付”，“应支付”状态设置为“否”。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst-1
-msgid "Paid bill in Odoo Purchase"
+"The :guilabel:`Should Be Paid` status on bills is set automatically by Odoo."
+" However, the status can be changed manually by clicking the field's drop-"
+"down menu inside the :guilabel:`Other Info` tab."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:109
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:106
+msgid "View a purchase order's billing status"
+msgstr "查看采购订单的帐单状态"
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:108
 msgid ""
-"The *Should Be Paid* status is set automatically by Odoo. However, you can "
-"change the status manually when you are viewing a bill in edit mode."
-msgstr "“应付款”状态由Odoo自动设置。但是，在编辑模式下查看票据时，可以手动更改状态。"
+"When a purchase order is confirmed, its :guilabel:`Billing Status` can be "
+"viewed under the :guilabel:`Other Information` tab on the purchase order "
+"form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst-1
+msgid "Purchase order billing status."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:115
+msgid ""
+"Below is a list of the different statuses that a :guilabel:`Billing Status` "
+"could appear as and when they are displayed, depending on the bill control "
+"policy used."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:119
+msgid ":guilabel:`Billing Status`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:119
+msgid "**Conditions**"
+msgstr " **** "
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:121
+msgid "*On received quantities*"
+msgstr "*收到的数量*"
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:121
+msgid "*On ordered quantities*"
+msgstr "*订购的数量*"
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:123
+msgid ":guilabel:`Nothing to Bill`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:123
+msgid "PO confirmed; no products received"
+msgstr "采购订单已确认；未收到任何产品"
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:123
+msgid "*Not applicable*"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:125
+msgid ":guilabel:`Waiting Bills`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:125
+msgid "All/some products received; bill not created"
+msgstr "收到的所有/部分产品；未创建票据"
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:125
+msgid "PO confirmed"
+msgstr "订单已确认"
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:127
+msgid ":guilabel:`Fully Billed`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:127
+msgid "All/some products received; draft bill created"
+msgstr "收到的所有/部分产品；已创建账单"
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:127
+msgid "Draft bill created"
+msgstr "已创建账单"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:3
 msgid "Manage vendor bills"
@@ -10164,164 +10487,163 @@ msgstr ""
 "当然建立一个供应商账单并选择合适的采购订单，你可以继续选择增加的采购订单.Odoo将根据你选择的采购订单增加行项目。如果你没有从首个采购订单删除之前的行项目，供应商账单将会链接到所有合适的采购单."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:3
-msgid "Don’t run out of stock with reordering rules"
-msgstr "根据重新订购规则，不要缺货"
+msgid "Configure reordering rules"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:5
 msgid ""
-"To make sure you never run out of stock, you can define *Reordering Rules* "
-"on products. Thanks to them, Odoo can help you replenish your stock "
-"automatically when it reaches set quantities or whenever a sales order is "
-"created."
-msgstr "为了确保您永远不会缺货，您可以定义产品的“重新订购规则”。多亏了它们，当库存达到设定数量或创建销售订单时，Odoo可以帮助您自动补充库存。"
+"For certain products, it is necessary to ensure that there is always a "
+"minimum amount available on hand at any given time. By adding a reordering "
+"rule to a product, it is possible to automate the reordering process so that"
+" a purchase order is automatically created whenever the amount on hand falls"
+" below a set threshold."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:9
-msgid "You need to install the *Inventory app* to use reordering rules."
-msgstr "您需要安装*库存应用程序*才能使用重新排序规则。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:12
-msgid "Configure your storable product"
-msgstr "配置可存储产品"
+#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:11
+msgid "The *Inventory* module must be installed to use reordering rules."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:14
+msgid "Configure products for reordering"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:16
 msgid ""
-"Open or create a product with its *Product Type* set to *Storable Product*."
-msgstr "打开或创建其*产品类型*设置为*可存储产品*的产品。"
+"Products must be configured in a specific way before a reordering rule can "
+"be added to them."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:18
+msgid ""
+"Starting from the :menuselection:`Inventory`, "
+":menuselection:`Manufacturing`, :menuselection:`Purchase`, or "
+":menuselection:`Sales` module, navigate to :menuselection:`Products --> "
+"Products` and then click :guilabel:`Create` to make a new product. "
+"Alternatively, find a product that already exists in the database and click "
+"into it's product form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:23
+msgid ""
+"Next, on the product form, enable reordering by checking the :guilabel:`Can "
+"be Purchased` option underneathe the :guilabel:`Product Name` field. "
+"Finally, set the :guilabel:`Product Type` to `Storable Product` under the "
+":guilabel:`General Information` tab."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst-1
-msgid "Set the product type in Odoo"
+msgid "Configure a product for reordering in Odoo."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:20
-msgid ""
-"As you are purchasing this product from a vendor, go to the product's "
-"*Purchase tab* and add a vendor by clicking on *Add a line*. You can add "
-"multiple vendors, but make sure to order them correctly, since reordering "
-"rules always use the first vendor in a list. You can add a price, but it "
-"isn't necessary for the reordering rule to work. In addition, you can add a "
-"minimum quantity you must order to benefit from that price."
+#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:32
+msgid "Add a reordering rule to a product"
 msgstr ""
-"当您从供应商购买此产品时，请进入该产品的*购买选项卡*，并通过单击*添加一行*添加供应商。您可以添加多个供应商，但要确保对它们进行正确订购，因为重新订购规则总是使用列表中的第一个供应商。您可以添加价格，但重新订购规则不是必须的。此外，你可以添加一个必须订购的最低数量，以受益于该价格。"
 
-#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:27
+#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:34
 msgid ""
-"If the quantity Odoo has to reorder doesn't match the minimum quantity "
-"specified, Odoo selects the next vendor on your list. If you don't have "
-"another vendor on your list, the reordering rule won't work. For that "
-"purpose, you can add the same vendor multiple times with different prices "
-"for different quantities."
+"After properly configuring a product, a reordering rule can be added to it "
+"by selecting the now visible :guilabel:`Reordering Rules` tab at the top of "
+"that product's form, and then clicking :guilabel:`Create` on the "
+":guilabel:`Reordering Rules` dashboard."
 msgstr ""
-"如果 Odoo 必须重新订购的数量与指定的最小数量不匹配，Odoo "
-"会选择您列表中的下一个供应商。如果您的列表中没有其他供应商，则重新订购规则将不起作用。为此，您可以多次添加同一供应商，但数量不同，价格不同。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst-1
-msgid "Add vendor to a product in Odoo"
+msgid "Access reordering rules for a product from the product page in Odoo."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:37
+#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:42
 msgid ""
-"By default, a draft purchase order is created. However, if you have enabled "
-"*Purchase Agreements*, you can *Propose a call for tenders* instead as shown"
-" in the image above. For more information, see "
-":doc:`../manage_deals/agreements`"
+"Once created, the reordering rule can be configured to generate purchase "
+"orders automatically by defining the following fields:"
 msgstr ""
-"默认情况下，将创建采购草稿单。但是，如果您启用了*采购协议*，您可以*提出招标*而不是如上图所示。有关详细信息，请参阅：文档：`../manage_deals/agreements`"
 
-#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:41
+#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:45
 msgid ""
-"Next, make sure the correct route is selected under the Inventory tab of "
-"your product. If you created your product within the Purchase app, the *Buy*"
-" route is selected by default. If you are looking to dropship your product, "
-"select *Dropship*."
-msgstr ""
-"接下来，确保在产品的“库存”选项卡下选择了正确的路线。如果您在购买应用程序中创建了产品，则默认情况下会选择“购买”路线。如果您希望放弃发货，请选择“dropship”。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst-1
-msgid "Choose product routes in Odoo"
+":guilabel:`Location` specifies where the ordered quantities should be stored"
+" once they are received and entered into stock."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:50
-msgid "Set up your reordering rule"
-msgstr "设置重新订购规则"
+#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:47
+msgid ""
+":guilabel:`Min Quantity` sets the lower threshold for the reordering rule "
+"while :guilabel:`Max Quantity` sets the upper threshold. If the stock on "
+"hand falls below the minimum quantity, a new purchase order will be created "
+"to replenish it up to the maximum quantity."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:52
-msgid "Open your product and click on the *Reordering Rules* button."
-msgstr "打开产品并单击*重新订购规则*按钮。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst-1
-msgid "Reordering rules button on a product in Odoo"
+msgid ""
+"If :guilabel:`Min Quantity` is set to `5` and :guilabel:`Max Quantity` is "
+"set to `25` and the stock on hand falls to four, a purchase order will be "
+"created for 21 units of the product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:58
+#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:55
 msgid ""
-"Once you are on the product's reordering rules page, click on *Create*."
-msgstr "进入产品的重新订购规则页面后，单击*创建*。"
+":guilabel:`Multiple Quantity` can be configured so that products are only "
+"ordered in batches of a certain quantity. Depending on the number entered, "
+"this can result in the creation of a purchase order that would put the "
+"resulting stock on hand above what is specified in the :guilabel:`Max "
+"Quantity` field."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:61
 msgid ""
-"You can access and create reordering rules from :menuselection:`Inventory "
-"--> Configuration --> Reordering Rules` and from :menuselection:`Inventory "
-"--> Operations --> Replenishment`. By default, the replenishment view "
-"presents a summary of all the products that you might need to purchase to "
-"fulfill your sales orders. From there, you can ask Odoo with a single click "
-"to order a product once or automate all orders for that product, future "
-"orders included."
+"If :guilabel:`Max Quantity` is set to `100` but :guilabel:`Multiple "
+"Quantity` is set to order the product in batches of `200`, a purchase order "
+"will be created for 200 units of the product."
 msgstr ""
-"您可以从以下位置访问和创建重新订购规则：菜单选择：`库存-->配置-->重新排序规则`和菜单选择：`库存-->操作-->补货`。默认情况下，“补货”视图显示为完成销售订单而可能需要购买的所有产品的摘要。从那里，您可以通过单击一次来要求Odoo订购一个产品，或自动执行该产品的所有订单，包括未来的订单。"
 
-#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:68
-msgid "Define quantities"
-msgstr "定义数量"
-
-#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:70
+#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:65
 msgid ""
-"You can set a **minimum quantity** your stock should always have. Once set, "
-"if your stock goes below the minimum quantity, and if you selected the Buy "
-"route, a request for quotation is automatically generated to reach that "
-"minimum quantity, plus any additional quantity needed to fill in a sales "
-"order for example."
+":guilabel:`UoM` specifies the unit of measurement by which the quantity will"
+" be ordered. For discrete products, this should be set to `Units`. However, "
+"it can also be set to units of measurement like `Volume` or `Weight` for "
+"non-discrete products like water or bricks."
 msgstr ""
-"您可以设置您的库存应始终具有的 **小数** "
-"。设置后，如果您的库存低于最低数量，并且您选择了购买路线，则会自动生成报价请求以达到该最低数量，再加上填写销售订单所需的任何额外数量。"
 
-#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:75
-msgid ""
-"If you set a **maximum quantity**, every time the product has to be "
-"replenished, enough products are reordered to reach the maximum quantity."
-msgstr "如果设置 **大数** ，则每次必须补充产品时，都会重新订购足够的产品以达到最大数量。"
+#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst-1
+msgid "Configure the reordering rule in Odoo."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:78
+#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:74
+msgid "Manually trigger reordering rules using the scheduler"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:76
 msgid ""
-"If you want to order only the exact quantity needed to fill in a sales order"
-" for example, set both both the minimum and maximum quantity to **zero**. "
-"The quantity mentioned in the sales order is then used by the reordering "
-"rule."
-msgstr "例如，如果您只想订购填写销售订单所需的确切数量，请将最小和最大数量都设置为 ****。然后，销售订单中提及的数量由重新订购规则使用。"
+"Reordering rules will be automatically triggered by the scheduler, which "
+"runs once a day by default. To trigger reordering rules manually, navigate "
+"to :menuselection:`Inventory --> Operations --> Run Scheduler`. On the pop-"
+"up window, confirm the manual action by clicking :guilabel:`Run Scheduler`."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:82
 msgid ""
-"You can also add a **quantity multiple** to only order products in batches "
-"of a certain quantity. Click on the optional columns drop-down menu, and "
-"select *Multiple Quantity* to show the column. Bear in mind that you might "
-"go over the maximum quantity you set if your rule includes a quantity "
-"multiple, as Odoo orders enough products to reach the maximum quantity and "
-"respect the set quantity multiple."
-msgstr ""
-"您还可以添加 **量倍** "
-"，以仅批量订购一定数量的产品。单击可选列下拉菜单，然后选择*多个数量*以显示列。请记住，如果您的规则包括数量倍数，您可能会超过您设定的最大数量，因为Odoo订购的产品足以达到最大数量，并遵守设定的数量倍数。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst-1
-msgid "Create a reordering rule in Odoo"
+"Manually triggering reordering rules will also trigger any other scheduled "
+"actions."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:92
+#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:85
+msgid "Manage reordering rules"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:87
 msgid ""
-"If you selected multiple routes for the same product under its Inventory "
-"tab, make sure to select your *Preferred Route* on your reordering rule by "
-"clicking on the optional columns drop-down menu, adding the *Preferred "
-"Route* column, and selecting the right route."
+"To manage the reordering rules for a single product, navigate to that "
+"product page's form and select the :guilabel:`Reordering Rules` tab at the "
+"top of the form."
 msgstr ""
-"如果您在同一产品的*库存*选项卡下选择了多条路线，请确保通过单击“可选列”下拉菜单，添加*首选路线*列，然后选择正确的路线，在重新订货规则上选择*首选路线*。"
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:90
+msgid ""
+"To manage all reordering rules for every product, go to "
+":menuselection:`Inventory --> Configuration --> Reordering Rules`. From this"
+" dashboard, typical bulk actions in Odoo can be performed such as exporting "
+"data or archiving rules that are no longer needed. As well, the "
+":guilabel:`Filters`, :guilabel:`Group By` or triple-dotted menu on the form "
+"are available to search for and/or organize the reordering rules as desired."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/uom.rst:3
 msgid "Purchase in different units of measure than sales"
