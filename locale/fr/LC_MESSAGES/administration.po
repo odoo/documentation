@@ -308,6 +308,14 @@ msgid ""
 "database-list`` startup parameter to prevent listing your databases, and to "
 "block access to the database management screens. See also security_."
 msgstr ""
+"La configuration d'un :option:`--db-filter <odoo-bin --db-filter>` approprié"
+" est une partie importante de la sécurisation de votre déploiement. Une fois"
+" qu'il fonctionne correctement et qu'il ne correspond qu'à une seule base de"
+" données par nom d'hôte, il est fortement recommandé de bloquer l'accès aux "
+"écrans du gestionnaire de base de données et d'utiliser le paramètre de "
+"démarrage ``--no-database-list`` pour empêcher l'énumération de vos bases de"
+" données et bloquer l'accès aux écrans de gestion de la base de données. "
+"Consultez également sécurité_."
 
 #: ../../content/administration/install/deploy.rst:76
 #: ../../content/administration/install/install.rst:339
@@ -557,7 +565,7 @@ msgstr "Règle de base : (#CPU * 2) + 1"
 
 #: ../../content/administration/install/deploy.rst:202
 msgid "Cron workers need CPU"
-msgstr ""
+msgstr "Workers cron nécessitent un CPU"
 
 #: ../../content/administration/install/deploy.rst:203
 msgid "1 worker ~= 6 concurrent users"
@@ -731,6 +739,13 @@ msgid ""
 ":mod:`odoo.tools.config` rather than through the command-line or a "
 "configuration file."
 msgstr ""
+"Il est également possible de monter Odoo comme une application WSGI_ "
+"standard. Odoo fournit la base d'un script de lancement WSGI sous la forme "
+"de ``odoo-wsgi.example.py``. Ce script doit être personnalisé "
+"(éventuellement après l'avoir copié depuis le directoire de configuration) "
+"pour définir correctement la configuration directement dans "
+":mod:`odoo.tools.config` plutôt que par ligne de commande ou un fichier de "
+"configuration."
 
 #: ../../content/administration/install/deploy.rst:351
 msgid ""
@@ -745,11 +760,13 @@ msgstr ""
 
 #: ../../content/administration/install/deploy.rst:356
 msgid "Cron Workers"
-msgstr ""
+msgstr "Workers cron"
 
 #: ../../content/administration/install/deploy.rst:358
 msgid "To run cron jobs for an Odoo deployment as a WSGI application requires"
 msgstr ""
+"Pour exécuter des tâches cron pour un déploiement d'Odoo en tant "
+"qu'application WSGI, il faut"
 
 #: ../../content/administration/install/deploy.rst:360
 msgid "A classical Odoo (run via ``odoo-bin``)"
@@ -760,6 +777,8 @@ msgid ""
 "Connected to the database in which cron jobs have to be run (via "
 ":option:`odoo-bin -d`)"
 msgstr ""
+"Connecté à la base de données dans laquelle les tâches cron doivent être "
+"exécutées (via :option:`odoo-bin -d`)"
 
 #: ../../content/administration/install/deploy.rst:363
 msgid ""
@@ -768,6 +787,10 @@ msgid ""
 "entirely with :option:`odoo-bin --no-http` or setting ``http_enable = "
 "False`` in the configuration file"
 msgstr ""
+"Qui ne doit pas être exposé au réseau. Pour s'assurer que les cron runners "
+"ne sont pas accessibles au réseau, il est possible de désactiver "
+"complètement le serveur HTTP intégré avec :option:`odoo-bin --no-http` ou le"
+" paramètre ``http_enable = False`` dans le fichier de configuration."
 
 #: ../../content/administration/install/deploy.rst:371
 msgid ""
@@ -776,6 +799,11 @@ msgid ""
 " process for the next request, LiveChat require a long-lived connection for "
 "each client in order to implement near-real-time notifications."
 msgstr ""
+"Le deuxième sous-système problématique pour les déploiements WSGI est le "
+"Live Chat : alors que la plupart des connexion HTTP sont relativement "
+"courtes et libèrent rapidement leurs workers pour la requête suivante, le "
+"Live Chat nécessite une connexion de longue durée pour chaque client afin "
+"d'implémenter des notifications en temps quasi réel."
 
 #: ../../content/administration/install/deploy.rst:376
 msgid ""
@@ -784,6 +812,11 @@ msgid ""
 "those long-lived connections do very little and mostly stay parked waiting "
 "for notifications."
 msgstr ""
+"Cette exigence est en contradiction avec le modèle de worker basé sur les "
+"processus, car elle immobilise les processus de worker et empêche les "
+"nouveaux utilisateurs d'accéder au système. Toutefois, ces connexions de "
+"longue durée ne font pas grand-chose et restent le plus souvent en attente "
+"de notifications."
 
 #: ../../content/administration/install/deploy.rst:381
 msgid ""
@@ -1185,11 +1218,11 @@ msgstr ""
 
 #: ../../content/administration/install/deploy.rst:560
 msgid "Database Manager Security"
-msgstr ""
+msgstr "Sécurité du gestionnaire des bases de données"
 
 #: ../../content/administration/install/deploy.rst:562
 msgid ":ref:`setup/deploy/odoo` mentioned ``admin_passwd`` in passing."
-msgstr ""
+msgstr ":ref:`setup/deploy/odoo` a mentionné en passant ``admin_passwd``."
 
 #: ../../content/administration/install/deploy.rst:564
 msgid ""
@@ -1345,6 +1378,9 @@ msgid ""
 "networks, but that is mostly for software which can only be used over UNIX "
 "sockets"
 msgstr ""
+"techniquement, un outil tel que socat_ peut être utilisé pour transmettre "
+"les sockets UNIX à travers les réseaux, mais il s'agit principalement de "
+"logiciels qui ne peuvent être utilisés que sur des sockets UNIX."
 
 #: ../../content/administration/install/deploy.rst:631
 msgid ""
@@ -1355,6 +1391,12 @@ msgid ""
 "certificates are easier to deploy on a controlled environment than over the "
 "internet."
 msgstr ""
+"ou n'être accessible que sur un réseau interne à commutation de paquets, "
+"mais cela nécessite des commutateurs sécurisés, des protections contre le "
+"`ARP spoofing`_ et exclut l'utilisation du WiFi. Même sur des réseaux à "
+"commutation de paquets sécurisés, le déploiement sur HTTPS est recommandé et"
+" les coûts éventuels sont réduits, car les certificats \"auto-signés\" sont "
+"plus faciles à déployés dans un environnement contrôlé que sur internet."
 
 #: ../../content/administration/install/email_gateway.rst:3
 msgid "Email gateway"
@@ -1518,6 +1560,10 @@ msgid ""
 "accessing the code is restricted to Enterprise customers and partners. The "
 "Community version is freely available to anyone."
 msgstr ""
+"Il y a deux Éditions_ différentes d'Odoo : les versions Community et "
+"Enterprise. L'utilisation de la version Enterprise est possible sur `Odoo "
+"Online`_ et l'accès au code est réservé aux clients et partenaires "
+"Enterprise. La version Community est librement accessible à tous."
 
 #: ../../content/administration/install/install.rst:40
 msgid ""
@@ -1570,6 +1616,11 @@ msgid ""
 "with custom modules or the Odoo Apps Store) without having to install it "
 "locally."
 msgstr ""
+"Simple à démarrer, entièrement géré et migré par Odoo S.A., `Odoo Online`_ "
+"fournit des instances privées et est lancé gratuitement. Il peut être "
+"utilisé pour découvrir et tester Odoo et faire des personnalisations non "
+"codées (c'est-à-dire incompatibles avec des modules personnalisés ou Odoo "
+"Apps Store) sans devoir l'installer localement."
 
 #: ../../content/administration/install/install.rst:66
 msgid "Can be used for both testing Odoo and long-term production use."
@@ -1582,6 +1633,8 @@ msgid ""
 "Like demo_ instances, `Odoo Online`_ instances require no local "
 "installation, a web browser is sufficient."
 msgstr ""
+"À l'instar des instances démo_, les instances `Odoo Online`_ ne requièrent "
+"aucune installation locale, juste un navigateur web."
 
 #: ../../content/administration/install/install.rst:75
 msgid "Packaged installers"
@@ -1646,11 +1699,11 @@ msgstr ""
 
 #: ../../content/administration/install/install.rst:0
 msgid "Click on **More Info** and then on **Run anyway**."
-msgstr ""
+msgstr "Cliquez sur **Plus d'infos** et ensuite sur **Exécuter quand même**."
 
 #: ../../content/administration/install/install.rst:99
 msgid "Accept the UAC_ prompt."
-msgstr ""
+msgstr "Acceptez le prompt UAC_."
 
 #: ../../content/administration/install/install.rst:100
 msgid "Go through the various installation steps."
@@ -1707,11 +1760,16 @@ msgid ""
 "<https://github.com/odoo/odoo/wiki/Wkhtmltopdf>`_ for more details on the "
 "various versions."
 msgstr ""
+"`wkhtmltopdf` n'est pas installé par **pip** et doit être installé "
+"manuellement dans la `0.12.5 <the wkhtmltopdf download page_>`_ pour qu'il "
+"prenne en charge les en-têtes et les pieds de page. Consultez notre `wiki "
+"<https://github.com/odoo/odoo/wiki/Wkhtmltopdf>`_ pour plus de détails sur "
+"les différentes versions."
 
 #: ../../content/administration/install/install.rst:130
 #: ../../content/administration/install/install.rst:206
 msgid "Repository"
-msgstr ""
+msgstr "Répositoire"
 
 #: ../../content/administration/install/install.rst:132
 msgid ""
@@ -1725,11 +1783,15 @@ msgid ""
 "You can then use the usual `apt-get upgrade` command to keep your "
 "installation up-to-date."
 msgstr ""
+"Vous pouvez ensuite utiliser la commande habituelle `apt-get upgrade` pour "
+"garder votre installation à jour."
 
 #: ../../content/administration/install/install.rst:143
 msgid ""
 "At this moment, there is no nightly repository for the Enterprise Edition."
 msgstr ""
+"Pour l'instant, il n'y a pas de répositoire nightly pour l'Édition "
+"Enterprise."
 
 #: ../../content/administration/install/install.rst:146
 msgid "Deb Package"
@@ -1741,10 +1803,13 @@ msgid ""
 "both the *Community* and *Enterprise* editions can be downloaded from the "
 "`official download page <download_>`_."
 msgstr ""
+"Au lieu d'utiliser le répositoire comme décrit ci-dessus, les packages 'deb'"
+" pour les éditions *Community* et *Enterprise* peuvent être téléchargés à "
+"partir de la `page de téléchargement officielle <download_>`_."
 
 #: ../../content/administration/install/install.rst:151
 msgid "Next, execute the following commands **as root**:"
-msgstr ""
+msgstr "Ensuite, exécutez les commandes suivantes **comme racine** :"
 
 #: ../../content/administration/install/install.rst:159
 msgid ""
@@ -1759,6 +1824,8 @@ msgid ""
 "The `python3-xlwt` Debian package does not exists in Debian Buster nor "
 "Ubuntu 18.04. This python module is needed to export into xls format."
 msgstr ""
+"Le package Debian `python3-xlwt` n'existe pas dans Debian Buster ni dans "
+"Ubuntu 18.04. Ce module python est nécessaire pour exporter au format xls."
 
 #: ../../content/administration/install/install.rst:165
 msgid "If you need the feature, you can install it manually with:"
@@ -1772,6 +1839,9 @@ msgid ""
 "18.04. Textual amounts will not be rendered by Odoo and this could cause "
 "problems with the `l10n_mx_edi` module."
 msgstr ""
+"Le package python `num2words` n'existe pas dans Debian Buster ni dans Ubuntu"
+" 18.04. Les montants textuels ne seront pas rendus par Odoo et cela pourrait"
+" causer des problèmes avec le module `l10n_mx_edi`."
 
 #: ../../content/administration/install/install.rst:175
 msgid "If you need this feature, you can install manually with:"
@@ -1793,6 +1863,10 @@ msgid ""
 " command is available and well configured and, only then, execute the "
 "following command in order to install the PostgreSQL server:"
 msgstr ""
+"Odoo a besoin d'un serveur `PostgreSQL`_ pour fonctionner correctement. "
+"Assurez-vous que la commande `sudo` est disponible et bien configurée et, "
+"ensuite seulement, exécutez la commande suivante afin d'installer le serveur"
+" PostgreSQL :"
 
 #: ../../content/administration/install/install.rst:208
 msgid ""
@@ -1800,6 +1874,9 @@ msgid ""
 "distributions. It can be used to install *Odoo Community Edition* by "
 "executing the following commands:"
 msgstr ""
+"Odoo S.A. fournit un répositoire qu peut être utilisé avec les distributions"
+" Fedora. Il peut être utilisé pour installer l'*Édition Odoo Community* en "
+"exécutant les commandes suivantes :"
 
 #: ../../content/administration/install/install.rst:220
 msgid "RPM package"
@@ -1811,12 +1888,17 @@ msgid ""
 "both the *Community* and *Enterprise* editions can be downloaded from the "
 "`official download page <download_>`_."
 msgstr ""
+"Au lieu d'utiliser le répositoire comme décrit ci-dessus, les packages 'rpm'"
+" pour les éditions *Community* et *Enterprise* peuvent être téléchargés à "
+"partir de la `page de téléchargement officielle <download_>`_."
 
 #: ../../content/administration/install/install.rst:225
 msgid ""
 "Once downloaded, the package can be installed using the 'dnf' package "
 "manager:"
 msgstr ""
+"Une fois téléchargé, le package peut être installé en utilisant le "
+"gestionnaire de package 'dnf' :"
 
 #: ../../content/administration/install/install.rst:237
 msgid "Source Install"
@@ -1827,12 +1909,17 @@ msgid ""
 "The source \"installation\" is really about not installing Odoo, and running"
 " it directly from source instead."
 msgstr ""
+"L'*installation* de source consiste en fait à ne pas installer Odoo et à "
+"l'exécuter directement à partir de la source à la place."
 
 #: ../../content/administration/install/install.rst:242
 msgid ""
 "It can be more convenient for module developers as the Odoo source is more "
 "easily accessible than using packaged installation."
 msgstr ""
+"Cela peut être plus pratique pour les développeurs de modules, car les "
+"sources d'Odoo sont plus facilement accessibles qu'avec une installation "
+"packagée."
 
 #: ../../content/administration/install/install.rst:245
 msgid ""
@@ -1841,6 +1928,11 @@ msgid ""
 "settings using :ref:`command-line parameters <reference/cmdline>` without "
 "needing to edit a configuration file."
 msgstr ""
+"Elle rend le démarrage et l'arrêt d'Odoo plus flexible et plus explicite que"
+" les services configurés par les installations packagées et permet "
+"d'outrepasser les paramètres en utilisant les :ref:`paramètres de la ligne "
+"de commande <reference/cmdline>` sans avoir besoin d'éditer un fichier de "
+"configuration."
 
 #: ../../content/administration/install/install.rst:249
 msgid ""
@@ -1855,7 +1947,7 @@ msgstr ""
 #: ../../content/administration/install/install.rst:448
 #: ../../content/administration/install/install.rst:643
 msgid "Fetch the sources"
-msgstr ""
+msgstr "Récupérer les sources"
 
 #: ../../content/administration/install/install.rst:260
 #: ../../content/administration/install/install.rst:450
@@ -1930,6 +2022,13 @@ msgid ""
 " developer tutorial, or plan on contributing to Odoo source code, choose "
 "SSH."
 msgstr ""
+"La procédure suivante nécessite que `Git <git_>`_ soit installé sur votre "
+"appareil et que vous ayez une connaissance de base des commandes de Git. "
+"Pour cloner un répositoire Git, vous devez choisir entre le clonage avec "
+"HTTPS ou SSH. Si vous ne connaissez pas la différence entre les deux, la "
+"meilleure option est probablement HTTPS. Si vous suivez le tutoriel "
+"développeur :doc:`Démarrer </developer/tutorials/getting_started>` ou si "
+"vous prévoyez de contribuer au code source d'Odoo, choisissez plutôt SSH."
 
 #: ../../content/administration/install/install.rst:288
 #: ../../content/administration/install/install.rst:478
@@ -1944,18 +2043,27 @@ msgid ""
 "installation. See :ref:`setup/install/editions` to get access to the "
 "Enterprise repository."
 msgstr ""
+"**Le répositoire Enterprise Git ne contient pas l'intégralité du côté source"
+" d'Odoo**. Il ne s'agit que d'une collection de modules complémentaires. Le "
+"code principal du serveur se trouve dans la version Community. L'exécution "
+"de la version Enterprise signifie en fait l'exécution du serveur à partir de"
+" la version Community avec l'option addons-path configurée sur le dossier "
+"contenant la version Enterprise. Vous devez cloner à la fois le répositoire "
+"Community et Enterprise pour avoir une installation Odoo Enterprise qui "
+"fonctionne. Consultez :ref:`setup/install/editions` pour avoir accès au "
+"répositoire Enterprise."
 
 #: ../../content/administration/install/install.rst:297
 #: ../../content/administration/install/install.rst:487
 #: ../../content/administration/install/install.rst:682
 msgid "Clone with HTTPS"
-msgstr ""
+msgstr "Cloner avec HTTPS"
 
 #: ../../content/administration/install/install.rst:304
 #: ../../content/administration/install/install.rst:494
 #: ../../content/administration/install/install.rst:689
 msgid "Clone with SSH"
-msgstr ""
+msgstr "Cloner avec SSH"
 
 #: ../../content/administration/install/install.rst:317
 #: ../../content/administration/install/install.rst:507
@@ -1979,6 +2087,8 @@ msgid ""
 "During installation, check **Add Python 3 to PATH**, then click **Customize "
 "Installation** and make sure that **pip** is checked."
 msgstr ""
+"Pendant l'installation, cochez **Ajouter Python 3 au PATH**, ensuite cliquez"
+" sur **Personnaliser l'installation** et assurez-vous que **pip** est coché."
 
 #: ../../content/administration/install/install.rst:325
 #: ../../content/administration/install/install.rst:512
@@ -2029,6 +2139,8 @@ msgstr ""
 #: ../../content/administration/install/install.rst:349
 msgid "Create a postgres user with a password using the pg admin gui:"
 msgstr ""
+"Créez un utilisateur postgres avec un mot de passe en utilisant le guide pg "
+"admin :"
 
 #: ../../content/administration/install/install.rst:351
 msgid "Open **pgAdmin**."
@@ -2040,11 +2152,13 @@ msgstr "Double-cliquez sur le serveur pour créer une connexion."
 
 #: ../../content/administration/install/install.rst:353
 msgid "Select :menuselection:`Object --> Create --> Login/Group Role`."
-msgstr ""
+msgstr "Sélectionnez :menuselection:`Objet --> Créer --> Rôle Login/Groupe`."
 
 #: ../../content/administration/install/install.rst:354
 msgid "Enter the username in the **Role Name** field (e.g. `odoo`)."
 msgstr ""
+"Saisissez le nom d'utilisateur dans le champ **Nom de rôle** (par ex. "
+"`odoo`)."
 
 #: ../../content/administration/install/install.rst:355
 msgid ""
@@ -2057,6 +2171,8 @@ msgid ""
 "Open the **Privileges** tab and switch **Can login?** to `Yes` and **Create "
 "database?** to `Yes`."
 msgstr ""
+"Ouvrez l'onglet **Privilèges** et définissez **Peut se connecter ?** sur "
+"`Oui` et **Créer une base de données ?** sur `Oui`."
 
 #: ../../content/administration/install/install.rst:360
 #: ../../content/administration/install/install.rst:549
@@ -2072,6 +2188,11 @@ msgid ""
 "studio-2019>`_. When prompted, select **C++ build tools** in the "
 "**Workloads** tab and install them."
 msgstr ""
+"Avant d'installer les dépendances, vous devez télécharger et installer les "
+"`Build Tools pour Visual Studio "
+"<https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-"
+"studio-2019>`_. Lorsque vous y êtes invité, sélectionnez **C++ build tools**"
+" dans l'onglet **Charges de travail** et installez-les."
 
 #: ../../content/administration/install/install.rst:366
 #: ../../content/administration/install/install.rst:563
@@ -2080,6 +2201,8 @@ msgid ""
 "Odoo dependencies are listed in the `requirements.txt` file located at the "
 "root of the Odoo community directory."
 msgstr ""
+"Les dépendances Odoo sont énumérées dans le fichier `requirements.txt` situé"
+" à la racine du directoire d'Odoo community."
 
 #: ../../content/administration/install/install.rst:369
 #: ../../content/administration/install/install.rst:566
@@ -2089,6 +2212,9 @@ msgid ""
 "instances of Odoo or with your system. You can use virtualenv_ to create "
 "isolated Python environments."
 msgstr ""
+"Il peut être préférable de ne pas mélanger les packages de modules python "
+"entre les différentes instances d'Odoo ou avec votre système. Vous pouvez "
+"utiliser virtualenv_ pour créer des environnements Python isolés."
 
 #: ../../content/administration/install/install.rst:372
 msgid ""
@@ -2096,6 +2222,9 @@ msgid ""
 "and run **pip** on the requirements file in a terminal **with Administrator "
 "privileges**:"
 msgstr ""
+"Naviguez jusqu'au chemin de votre installation Odoo Community "
+"(`CommunityPath`) et exécutez **pip** sur le fichier d'exigences dans un "
+"terminal **avec privilèges d'administration**:"
 
 #: ../../content/administration/install/install.rst:386
 #: ../../content/administration/install/install.rst:583
@@ -2104,16 +2233,18 @@ msgid ""
 "For languages with right-to-left interface (such as Arabic or Hebrew), the "
 "package `rtlcss` is needed:"
 msgstr ""
+"Pour les langues avec une interface de droite à gauche (comme l'arabe ou "
+"l'hébreu), le package `rtlcss` est nécessaire :"
 
 #: ../../content/administration/install/install.rst:389
 msgid "Download and install `nodejs <https://nodejs.org/en/download/>`_."
-msgstr ""
+msgstr "Téléchargez et installez `nodejs <https://nodejs.org/en/download/>`_."
 
 #: ../../content/administration/install/install.rst:390
 #: ../../content/administration/install/install.rst:587
 #: ../../content/administration/install/install.rst:780
 msgid "Install `rtlcss`:"
-msgstr ""
+msgstr "Installez `rtlcss` :"
 
 #: ../../content/administration/install/install.rst:396
 msgid ""
@@ -2126,7 +2257,7 @@ msgstr ""
 #: ../../content/administration/install/install.rst:594
 #: ../../content/administration/install/install.rst:787
 msgid "Running Odoo"
-msgstr ""
+msgstr "Exécuter Odoo"
 
 #: ../../content/administration/install/install.rst:402
 #: ../../content/administration/install/install.rst:596
@@ -2136,6 +2267,9 @@ msgid ""
 "bin`, the command-line interface of the server. It is located at the root of"
 " the Odoo Community directory."
 msgstr ""
+"Une fois que toutes les dépendances sont installées, Odoo peut être lancé en"
+" exécutant `odoo-bin`, l'interface en ligne de commande du serveur. Elle se "
+"situe à la racine du directoire Odoo Community."
 
 #: ../../content/administration/install/install.rst:405
 #: ../../content/administration/install/install.rst:599
@@ -2145,6 +2279,9 @@ msgid ""
 " <reference/cmdline/server>` or a :ref:`configuration file "
 "<reference/cmdline/config>`."
 msgstr ""
+"Pour configurer le serveur, vous pouvez soit spécifier des :ref:`arguments "
+"de ligne de commande <reference/cmdline/server>`, soit un :ref:`fichier de "
+"configuration <reference/cmdline/config>`."
 
 #: ../../content/administration/install/install.rst:408
 #: ../../content/administration/install/install.rst:602
@@ -2154,28 +2291,35 @@ msgid ""
 " to the `addons-path` argument. Note that it must come before the other "
 "paths in `addons-path` for addons to be loaded correctly."
 msgstr ""
+"Pour l'édition Enterprise, vous devez ajouter le chemin d'accès aux modules "
+"complémentaires `enterprise` à l'argument `addons-path`. Notez qu'il doit "
+"précéder les autres chemins dans `addons-path` pour que les modules "
+"complémentaires soient chargés correctement."
 
 #: ../../content/administration/install/install.rst:412
 #: ../../content/administration/install/install.rst:606
 #: ../../content/administration/install/install.rst:799
 msgid "Common necessary configurations are:"
 msgstr ""
+"Les configurations nécessaires les plus courantes sont les suivantes :"
 
 #: ../../content/administration/install/install.rst:414
 msgid "PostgreSQL user and password."
-msgstr ""
+msgstr "Utilisateur et mot de passe PostgreSQL."
 
 #: ../../content/administration/install/install.rst:415
 #: ../../content/administration/install/install.rst:611
 #: ../../content/administration/install/install.rst:804
 msgid "Custom addon paths beyond the defaults, to load your own modules."
 msgstr ""
+"Chemins d'accès personnalisés au-delà des chemins par défaut, pour charger "
+"vos propres modules."
 
 #: ../../content/administration/install/install.rst:417
 #: ../../content/administration/install/install.rst:613
 #: ../../content/administration/install/install.rst:806
 msgid "A typical way to run the server would be:"
-msgstr ""
+msgstr "Une façon typique d'exécuter le serveur serait :"
 
 #: ../../content/administration/install/install.rst:424
 msgid ""
@@ -2194,6 +2338,12 @@ msgid ""
 ":guilabel:`Email` and, again, `admin` for the :guilabel:`Password`. That's "
 "it, you just logged into your own Odoo database!"
 msgstr ""
+"Une fois que le serveur a démarré (le journal INFO `odoo.modules.loading: "
+"Modules loaded.` est imprimé), ouvrez http://localhost:8069 dans votre "
+"navigateur web et connectez-vous avec le compte administrateur de la base : "
+"Utilisez `admin` pour l':guilabel:`Email` et, de nouveau, `admin` pour le "
+":guilabel:`Mot de passe`. Ça y est, vous venez de vous connecter à votre "
+"propre base de données Odoo !"
 
 #: ../../content/administration/install/install.rst:434
 #: ../../content/administration/install/install.rst:629
@@ -2202,6 +2352,8 @@ msgid ""
 "From there, you can create and manage new :doc:`users "
 "</applications/general/users/manage_users>`."
 msgstr ""
+"À partir de là, vous pouvez créer et gérer de nouveaux :doc:`utilisateurs "
+"</applications/general/users/manage_users>`."
 
 #: ../../content/administration/install/install.rst:436
 #: ../../content/administration/install/install.rst:631
@@ -2210,6 +2362,8 @@ msgid ""
 "The user account you use to log into Odoo's web interface differs from the "
 ":option:`--db_user <odoo-bin -r>` CLI argument."
 msgstr ""
+"Le compte utilisateur que vous utilisez pour vous connecter à l'interface "
+"web d'Odoo diffère de l'argument CLI :option:`--db_user <odoo-bin -r>`."
 
 #: ../../content/administration/install/install.rst:440
 #: ../../content/administration/install/install.rst:635
@@ -2218,12 +2372,17 @@ msgid ""
 ":doc:`The exhaustive list of CLI arguments for odoo-bin "
 "</developer/reference/cli>`."
 msgstr ""
+":doc:`La liste exhaustive des arguments CLI pour odoo-bin "
+"</developer/reference/cli>`."
 
 #: ../../content/administration/install/install.rst:509
 msgid ""
 "Odoo requires Python 3.7 or later to run. Use your package manager to "
 "download and install Python 3 on your machine if it is not already done."
 msgstr ""
+"Odoo nécessite Python 3.7 ou une version ultérieure pour fonctionner. "
+"Utilisez votre gestionnaire de packages pour télécharger et installer Python"
+" 3 sur votre appareil si ce n'est pas encore fait."
 
 #: ../../content/administration/install/install.rst:528
 msgid ""
@@ -2241,6 +2400,8 @@ msgid ""
 "Because your PostgreSQL user has the same name as your Unix login, you will "
 "be able to connect to the database without password."
 msgstr ""
+"Puisque votre utilisateur PostgreSQL a le même nom que votre login Unix, "
+"vous pourrez vous connecter à la base de données sans mot de passe."
 
 #: ../../content/administration/install/install.rst:551
 msgid ""
@@ -2262,10 +2423,14 @@ msgid ""
 "Navigate to the path of your Odoo Community installation (`CommunityPath`) "
 "and run **pip** on the requirements file:"
 msgstr ""
+"Naviguez jusqu'au chemin de votre installation Odoo Community "
+"(`CommunityPath`) et exécutez **pip** sur le fichier d'exigences :"
 
 #: ../../content/administration/install/install.rst:586
 msgid "Download and install **nodejs** and **npm** with your package manager."
 msgstr ""
+"Téléchargez et installez **nodejs** et **npm** avec votre gestionnaire de "
+"paquets."
 
 #: ../../content/administration/install/install.rst:608
 #: ../../content/administration/install/install.rst:801
@@ -2284,7 +2449,7 @@ msgstr ""
 
 #: ../../content/administration/install/install.rst:640
 msgid "Mac OS"
-msgstr ""
+msgstr "Mac OS"
 
 #: ../../content/administration/install/install.rst:704
 msgid ""
@@ -2292,6 +2457,10 @@ msgid ""
 " (homebrew_, macports_) to download and install Python 3 on your machine if "
 "it is not already done."
 msgstr ""
+"Odoo nécessite Python 3.7 ou une version ultérieure pour fonctionner. "
+"Utilisez votre gestionnaire de packages préféré (homebrew_, macports_) pour "
+"télécharger et installer Python 3 sur votre appareil si ce n'est pas déjà "
+"fait."
 
 #: ../../content/administration/install/install.rst:723
 msgid ""
@@ -2306,30 +2475,40 @@ msgid ""
 "sure to setup your `$PATH` variable by following the `Postgres.app CLI Tools"
 " Instructions <https://postgresapp.com/documentation/cli-tools.html>`_."
 msgstr ""
+"Pour que les outils de ligne de commande fournis avec `postgres.app` soient "
+"disponibles, assurez-vous de configurer votre variable `$PATH` en suivant "
+"les `Instructions relatives aux outils CLI de Postgres.app "
+"<https://postgresapp.com/documentation/cli-tools.html>`_."
 
 #: ../../content/administration/install/install.rst:760
 msgid "Non-Python dependencies need to be installed with a package manager:"
 msgstr ""
+"Les dépendances non-python doivent être installées avec un gestionnaire de "
+"paquets :"
 
 #: ../../content/administration/install/install.rst:762
 msgid "Download and install the **Command Line Tools**:"
-msgstr ""
+msgstr "Téléchargez et installez les **Outils de ligne de commande** :"
 
 #: ../../content/administration/install/install.rst:768
 msgid ""
 "Download and install the package manager of your choice (homebrew_, "
 "macports_)."
 msgstr ""
+"Téléchargez et installez le gestionnaire de paquets de votre choix "
+"(homebrew_, macports_)."
 
 #: ../../content/administration/install/install.rst:769
 msgid "Install non-python dependencies."
-msgstr ""
+msgstr "Installer des dépendances non-python."
 
 #: ../../content/administration/install/install.rst:779
 msgid ""
 "Download and install **nodejs** with your preferred package manager "
 "(homebrew_, macports_)."
 msgstr ""
+"Téléchargez et installez **nodejs** avec votre gestionnaire de paquets "
+"préféré (homebrew_, macports_)."
 
 #: ../../content/administration/install/install.rst:817
 msgid ""
@@ -2341,13 +2520,16 @@ msgstr ""
 #: ../../content/administration/install/install.rst:838
 #: ../../content/administration/maintain/update.rst:149
 msgid "Docker"
-msgstr ""
+msgstr "Docker"
 
 #: ../../content/administration/install/install.rst:840
 msgid ""
 "The full documentation on how to use Odoo with Docker can be found on the "
 "official Odoo `docker image <https://hub.docker.com/_/odoo/>`_ page."
 msgstr ""
+"La documentation complète sur l'utilisation d'Odoo avec Docker est "
+"disponible sur la page de `docker images <https://hub.docker.com/_/odoo/>`_ "
+"officielle pour Odoo."
 
 #: ../../content/administration/maintain.rst:5
 msgid "Maintain"
