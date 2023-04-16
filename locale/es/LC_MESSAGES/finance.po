@@ -12412,7 +12412,7 @@ msgstr ":doc:`main_reports`"
 
 #: ../../content/applications/finance/accounting/reporting/overview/data_inalterability.rst:3
 msgid "Data inalterability check report"
-msgstr ""
+msgstr "Reporte de comprobación de inalterabilidad de datos"
 
 #: ../../content/applications/finance/accounting/reporting/overview/data_inalterability.rst:5
 msgid ""
@@ -12420,6 +12420,10 @@ msgid ""
 "accounting entries are inalterable**, meaning that once an entry has been "
 "posted, it can no longer be changed."
 msgstr ""
+"Las autoridades fiscales de algunos países exigen que las empresas "
+"**demuestren que sus asientos contables registrados son inalterables**, lo "
+"que significa que una vez que se registra un asiento, ya no se puede "
+"modificar."
 
 #: ../../content/applications/finance/accounting/reporting/overview/data_inalterability.rst:8
 msgid ""
@@ -12434,6 +12438,17 @@ msgid ""
 "change the resulting hash. Consequently, the SHA-256 algorithm is often "
 "used, among others, for data integrity verification purposes."
 msgstr ""
+"Para ello, Odoo puede usar el **algoritmo SHA-256** para crear una huella "
+"digital única para cada asiento registrado. Esta huella se denomina hash. El"
+" hash se genera tomando los datos esenciales del asiento (los valores de "
+"`fecha`, `journal_id`, `company_id`, `débito`, `crédito`, `account_id` y "
+"`partner_id` fields) Los concatena y los introduce en la función hash "
+"SHA-256, la cual produce una cadena de caracteres de tamaño fijo (256-bit). "
+"La función hash es determinista (:dfn:`la misma entrada crea siempre los "
+"mismos resultados`): cualquier modificación de los datos originales, por "
+"pequeña que sea, cambiaría por completo el hash resultante. Por ello, el "
+"algoritmo SHA-256 se utiliza a menudo, entre otras cosas, para verificar la "
+"integridad de los datos."
 
 #: ../../content/applications/finance/accounting/reporting/overview/data_inalterability.rst:17
 msgid ""
@@ -12442,6 +12457,10 @@ msgid ""
 "afterward between two posted entries, as doing so would break the hash "
 "chain."
 msgstr ""
+"Además, el hash del asiento anterior siempre se agrega al siguiente asiento "
+"para formar una **cadena de hash**. Esta se utiliza para garantizar que no "
+"se agrega un nuevo asiento después de dos asientos registrados, ya que el "
+"hacerlo rompería la cadena de hash."
 
 #: ../../content/applications/finance/accounting/reporting/overview/data_inalterability.rst:22
 msgid ""
@@ -12450,6 +12469,11 @@ msgid ""
 "exceptionally high: 2²⁵⁶, which is a lot bigger than the number of atoms in "
 "the known universe. This is why hashes are considered unique in practice."
 msgstr ""
+"En teoría, los hashes generados por el algoritmo SHA-256 no son únicos, ya "
+"que existe un número finito de valores posibles. Sin embargo, este número es"
+" excepcionalmente alto: 2²⁵⁶, el cual es mucho mayor que el número de átomos"
+" en el universo conocido. Por eso los hashes se consideran prácticamente "
+"únicos."
 
 #: ../../content/applications/finance/accounting/reporting/overview/data_inalterability.rst:30
 msgid "Lock posted entries with hash"
