@@ -10,13 +10,13 @@ Multi-company Guidelines
     This tutorial requires good knowledge of Odoo.
     Please refer to the :ref:`basic tutorial <howto/base>` first if needed.
 
-As of version 13.0, a user can be logged in multiple companies at once. This allows the user to
-access information from multiple companies but also to create/edit records in a multi-company
+As of version 13.0, a user can be logged in to multiple companies at once. This allows the user to
+access information from multiple companies, but also to create/edit records in a multi-company
 environment.
 
-If not handled correctly, it may be the source of a lot of inconsistent multi-company behaviors.
-For instance, a user logged in both companies A and B could create a sales order in company A and
-add products belonging to company B to it. It is only when the user will log out from company B that
+If not managed correctly, it may be the source of a lot of inconsistent multi-company behaviors.
+For instance, a user logged in to both companies A and B could create a sales order in company A and
+add products belonging to company B to it. It is only when the user logs out from company B that
 access errors will occur for the sales order.
 
 To correctly manage multi-company behaviors, Odoo's ORM provides multiple features:
@@ -35,7 +35,7 @@ Company-dependent fields
 When a record is available from multiple companies, we must expect that different values will be
 assigned to a given field depending on the company from which the value is set.
 
-For the field of a same record to support several values, it must be defined with the attribute
+For the field of the same record to support several values, it must be defined with the attribute
 `company_dependent` set to `True`.
 
 .. code-block:: python
@@ -59,19 +59,19 @@ For the field of a same record to support several values, it must be defined wit
           depending on the current company (`self.env.company`).
 
 When a company-dependent field is read, the current company is used to retrieve its value. In other
-words, if a user is logged in companies A and B with A as main company and creates a record for
-company B, the values of company-dependent fields will be that of company A.
+words, if a user is logged in to companies A and B with A as the main company and creates a record for
+company B, the value of company-dependent fields will be that of company A.
 
-To read the values of company-dependent fields set from another company than the current one, we need
+To read the values of company-dependent fields set by another company than the current one, we need
 to ensure the company we are using is the correct one.  This can be done with :meth:`~odoo.models.Model.with_company`,
 which updates the current company.
 
 .. code-block:: python
 
-   # Accessed as main company (self.env.company)
+   # Accessed as the main company (self.env.company)
    val = record.company_dependent_field
 
-   # Accessed as desired company (company_B)
+   # Accessed as the desired company (company_B)
    val = record.with_company(company_B).company_dependent_field
    # record.with_company(company_B).env.company == company_B
 
@@ -80,7 +80,7 @@ which updates the current company.
     Whenever you are computing/creating/... things that may behave differently
     in different companies, you should make sure whatever you are doing is done
     in the right company. It doesn't cost much to always use `with_company` to
-    avoid problems later on.
+    avoid problems later.
 
     .. code-block:: python
 
@@ -100,7 +100,7 @@ which updates the current company.
 Multi-company consistency
 -------------------------
 
-When a record is made shareable between several companies by the mean of a `company_id` field, we
+When a record is made shareable between several companies by the means of a `company_id` field, we
 must take care that it cannot be linked to the record of another company through a relational field.
 For instance, we do not want to have a sales order and its invoice belonging to different companies.
 
@@ -129,8 +129,8 @@ will be triggered to ensure the multi-company consistency of the record.
 .. currentmodule:: odoo.models
 .. automethod:: Model._check_company
 
-.. warning:: The `check_company` feature performs a strict check ! It means that if a record has no
-             `company_id` (i.e. the field is not required), it cannot be linked to a record whose
+.. warning:: The `check_company` feature performs a strict check! It means that if a record has no
+             `company_id` (i.e., the field is not required), it cannot be linked to a record whose
              `company_id` is set.
 
 .. note::
@@ -145,8 +145,8 @@ Default company
 
 When the field `company_id` is made required on a model, a good practice is to set a default
 company. It eases the setup flow for the user or even guarantees its validity when the company is
-hidden from the view. Indeed, the company is usually hidden if the user does not have access to
-multiple companies (i.e. when the user does not have the group `base.group_multi_company`).
+hidden from view. Indeed, the company is usually hidden if the user does not have access to
+multiple companies (i.e., when the user does not have the group `base.group_multi_company`).
 
 .. code-block:: python
 
@@ -168,7 +168,7 @@ Views
 -----
 
 As stated in :ref:`above <howto/company/default_company>`, the company is usually hidden
-from the view if the user does not have access to multiple companies. This is tested with the group
+from view if the user does not have access to multiple companies. This is assessed with the group
 `base.group_multi_company`.
 
 .. code-block:: xml
@@ -199,7 +199,7 @@ Security rules
 When working with records shared across companies or restricted to a single company, we must take
 care that a user does not have access to records belonging to other companies.
 
-This is achieved with security rules based on `company_ids`, which contains the current companies of
+This is achieved with security rules based on `company_ids`, which contain the current companies of
 the user (the companies the user checked in the multi-company widget).
 
 .. code-block:: xml
