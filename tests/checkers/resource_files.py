@@ -1,5 +1,6 @@
 from pathlib import Path
 
+from PIL import Image
 import sphinxlint
 
 
@@ -7,6 +8,10 @@ MAX_IMAGE_SIZES = {  # in bytes
     '.png': 505000,
     '.gif': 2100000,
 }
+MODE_TO_BPP = {
+    '1': 1, 'L': 8, 'P': 8, 'RGB': 24, 'RGBA': 32, 'CMYK': 32, 'YCbCr': 24, 'I': 32, 'F': 32
+}
+
 
 def log_error(file, line, msg, checker_name):
     """ Log an error in sphinx-lint's log format to ease the processing of linting errors on Runbot.
@@ -28,6 +33,29 @@ def check_image_size(file):
             'image-size',
         )
 
+def check_image_color_depth(file):
+    """ Check that PNG images are compressed to 8-bit color depth with PNGQuant. """
+    file_path = Path(file)
+    if file_path.suffix.lower() == '.png':
+        data = Image.open(file)
+        bpp = MODE_TO_BPP[data.mode]
+        if bpp > 8:
+            log_error(
+                file_path,
+                0,
+                f"the file has a color depth of {bpp} instead of 8; compress it with pngquant",
+                'image-color-depth'
+            )
+
+def check_resource_file_name(file_path):
+    """ Check that resource file names use hyphens rather than underscores. """
+    if '_' in file_path.split('/')[-1]:
+        log_error(
+            file_path,
+            0,
+            "the resource file should have hyphens rather than underscores",
+            'resource-file-name'
+        )
 
 @sphinxlint.checker('')
 def check_file_extensions(file, lines, options=None):

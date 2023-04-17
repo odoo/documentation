@@ -128,7 +128,7 @@ def check_early_line_breaks(file, lines, options=None):
                 '#.': lambda x: x.split('#. ', 1)[0],
                 'default': lambda x: x.split(' ', 1)[0]
             }
-            return next_line_dict.get(next_line_.lstrip()[:2], next_line_dict["default"])(
+            return next_line_dict.get(next_line_.lstrip()[:2], next_line_dict['default'])(
                 next_line_.lstrip()
             )
         else:
@@ -141,7 +141,7 @@ def check_early_line_breaks(file, lines, options=None):
                 and is_valid_line(next_line, ('+', '|', '- ', '* ', '#. '))
             ):
                 current_line_remaining_space = options.max_line_length - len(line)
-                next_line_first_word = get_next_line_first_word(next_line)
+                next_line_first_word = get_next_line_first_word(next_line).rstrip()
                 if current_line_remaining_space > len(next_line_first_word):
                     yield lno + 1, f"consider moving \"{next_line_first_word}\" to line {lno + 1}"
 
