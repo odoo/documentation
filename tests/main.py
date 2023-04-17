@@ -1,3 +1,5 @@
+import argparse
+import os
 import re
 import sys
 from itertools import chain
@@ -15,11 +17,18 @@ CUSTOM_RST_DIRECTIVES = [
     'tab', 'tabs', 'group-tab', 'code-tab',  # sphinx_tabs
 ]
 
+ADDITIONAL_CHECKERS = [
+    checkers.resource_files.check_image_size,
+    checkers.resource_files.check_resource_file_name,
+]
+
 
 def run_additional_checks(argv=None):
     _enabled_checkers, args = sphinxlint.parse_args(argv)
     for path in chain.from_iterable(sphinxlint.walk(path, args.ignore) for path in args.paths):
-        checkers.resource_files.check_image_size(path)
+        if not path.endswith('.rst'):
+            for checker in ADDITIONAL_CHECKERS:
+                checker(path)
 
 
 """
@@ -75,5 +84,9 @@ if __name__ == '__main__':
         'sphinxlint.three_dot_directive_re',
         re.compile(rf'\.\.\. {sphinxlint.ALL_DIRECTIVES}::'),
     ):
-        run_additional_checks()
+        parser = argparse.ArgumentParser()
+        if os.getenv('REVIEW') == '1':  # Enable checkers for `make review`.
+            setattr(sphinxlint.check_line_too_long, 'enabled', True)
+            setattr(checkers.rst_style.check_early_line_breaks, 'enabled', True)
+            ADDITIONAL_CHECKERS.extend([checkers.resource_files.check_image_color_depth])
         sys.exit(sphinxlint.main())
