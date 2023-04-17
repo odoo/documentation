@@ -31,12 +31,17 @@ Any country-specific localizations are set up in the :guilabel:`Localization` se
 during the creation of the database. It is not recommended to alter the localization settings unless
 specifically required.
 
+.. _payroll/work-entries-config:
+
 Work entries
 ============
 
 A *work entry* is an individual record on an employee's timesheet. Work entries can be configured to
 account for all types of work and time off, such as :guilabel:`Attendance`, :guilabel:`Sick Time
 Off`, :guilabel:`Training`, or :guilabel:`Public Holiday`.
+
+.. seealso::
+   :doc:`Manage work entries <payroll/work_entries>`
 
 Work entry types
 ----------------
@@ -361,4 +366,5 @@ Resume
 .. toctree::
    :titlesonly:
 
+   payroll/work_entries
    payroll/contracts
