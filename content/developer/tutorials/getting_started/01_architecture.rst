@@ -1,105 +1,102 @@
 .. _tutorials/getting_started/01_architecture:
 
 ================================
-Chapter 1: Architecture Overview
+Розділ 1: Огляд архітектури
 ================================
 
-Multitier application
+Багаторівневий додаток
 =====================
 
-Odoo follows a `multitier architecture`_, meaning that the presentation, the business
-logic and the data storage are separated. More specifically, it uses a three-tier architecture
-(image from Wikipedia):
+Odoo дотримується "багаторівневої архітектури", що означає, що презентація, бізнес-логіка
+логіка та зберігання даних розділені. Більш конкретно, він використовує трирівневу архітектуру
+(зображення з Вікіпедії):
 
 .. image:: 01_architecture/three_tier.svg
     :align: center
     :alt: Three-tier architecture
 
-The presentation tier is a combination of HTML5, JavaScript and CSS. The logic tier is exclusively
-written in Python, while the data tier only supports PostgreSQL as an RDBMS.
+Презентаційний рівень - це комбінація HTML5, JavaScript та CSS. Логічний рівень написаний виключно на 
+Python, тоді як рівень даних підтримує лише PostgreSQL як СУБД.
 
-Depending on the scope of your module, Odoo development can be done in any of these tiers.
-Therefore, before going any further, it may be a good idea to refresh your memory if you don't have
-an intermediate level in these topics.
+Залежно від обсягу вашого модуля, розробка Odoo може бути виконана на будь-якому з цих рівнів.
+Тому, перш ніж йти далі, буде корисно освіжити пам'ять, якщо ви не маєте середнього рівня в цих темах.
 
-In order to go through this tutorial, you will need a very basic knowledge of HTML and an intermediate
-level of Python. Advanced topics will require more knowledge in the other subjects. There are
-plenty of tutorials freely accessible, so we cannot recommend one over another since it depends
-on your background.
+Для того, щоб пройти цей туторіал, вам знадобляться базові знання HTML і середній рівень володіння 
+мовою Python. Більш складні теми потребують глибших знань з інших предметів. У вільному доступі є 
+багато підручників, але ми не можемо рекомендувати один з них, оскільки це залежить від від вашого 
+досвіду.
 
-For reference this is the official `Python tutorial`_.
+Для довідки пропонуємо вам офіційний підручник `Python tutorial`_.
 
 .. note::
-  Since version 15.0, Odoo is actively transitioning to using its own in-house developed `OWL
-  framework <https://odoo.github.io/owl/>`_ as part of its presentation tier. The legacy JavaScript
-  framework is still supported but will be deprecated over time. This will be discussed further in
-  advanced topics.
+  Починаючи з версії 15.0, Odoo активно переходить на використання власного фреймворку `OWL
+  framework <https://odoo.github.io/owl/>`_ як частину презентаційного рівня. Попередній 
+  фреймворк JavaScript все ще підтримується але з часом буде застарілим. Це буде обговорено 
+  в наступних темах.
 
-Odoo modules
+Модулі Odoo
 ============
 
-Both server and client extensions are packaged as *modules* which are
-optionally loaded in a *database*. A module is a collection of functions and data that target a
-single purpose.
+І серверні, і клієнтські розширення упаковані як *modules*, які за бажанням завантажуються в 
+*database*. Модуль - це набір функцій і даних, які призначені для однієї цілі.
 
-Odoo modules can either add brand new business logic to an Odoo system or
-alter and extend existing business logic. One module can be created to add your
-country's accounting rules to Odoo's generic accounting support, while
-a different module can add support for real-time visualisation of a bus fleet.
+Модулі Odoo можуть додавати абсолютно нову бізнес-логіку до системи Odoo або змінювати та 
+розширювати існуючу. Один модуль може бути створений для додавання правил бухгалтерського 
+обліку вашої країни до загальної бухгалтерської підтримки Odoo, в той час як інший модуль 
+може додати підтримку візуалізації автобусного парку в режимі реального часу.
 
-Everything in Odoo starts and ends with modules.
 
-Terminology: developers group their business features in Odoo *modules*. The main user-facing
-modules are flagged and exposed as *Apps*, but a majority of the modules aren't Apps. *Modules*
-may also be referred to as *addons* and the directories where the Odoo server finds them
-form the ``addons_path``.
+Все в Odoo починається і закінчується модулями.
 
-Composition of a module
+Термінологія: розробники групують свої бізнес-функції в *modules* Odoo. Основні користувацькі
+модулі позначені і відображаються як додатки (*Apps*), але більшість модулів не є додатками. 
+*Modules* можуть також називатися *addons*, а директорії, де їх знаходить сервер Odooутворюють 
+``addons_path``.
+
+Композиція модуля
 -----------------------
 
-An Odoo module **can** contain a number of elements:
+Модуль Odoo **може** містити декілька елементів:
 
 :ref:`Business objects <reference/orm>`
-    A business object (e.g. an invoice) is declared as a Python class. The fields defined in
-    these classes are automatically mapped to database columns thanks to the
-    :abbr:`ORM (Object-Relational Mapping)` layer.
+     Бізнес-об'єкт (наприклад, інвойс) оголошується як клас Python. Поля, визначені в цих класах, 
+     автоматично зіставляються зі стовпцями бази даних завдяки шарові :abbr:`ORM (Object-Relational 
+     Mapping)`.
 
 :ref:`Object views <reference/views>`
-    Define UI display
+    Визначення UI відображення
 
 :ref:`Data files <reference/data>`
-    XML or CSV files declaring the model data:
+    XML або CSV файли, що декларують дані моделі:
 
-    * :ref:`views <reference/views>` or :ref:`reports <reference/reports>`,
-    * configuration data (modules parametrization, :ref:`security rules <reference/security>`),
-    * demonstration data
-    * and more
+    * :ref:`views <reference/views>` чи :ref:`reports <reference/reports>`,
+    * конфігураційні дані (параметризація модулів, :ref:`правила безпеки <reference/security>`),
+    * демонстраційні дані
+    * та багато іншого
 
 :ref:`Web controllers <reference/controllers>`
-    Handle requests from web browsers
+    Обробка запитів від веб-браузерів
 
-Static web data
-    Images, CSS or JavaScript files used by the web interface or website
+Статичні веб-дані
+    Зображення, файли CSS або JavaScript, що використовуються веб-інтерфейсом або веб-сайтом
 
-None of these elements are mandatory. Some modules may only add data files (e.g. country-specific
-accounting configuration), while others may only add business objects. During this training, we will
-create business objects, object views and data files.
+Жоден з цих елементів не є обов'язковим. Деякі модулі можуть додавати лише файли даних (наприклад, 
+конфігурацію обліку для конкретної країни), тоді як інші можуть додавати лише бізнес-об'єкти. Під 
+час цього тренінгу ми створимо business objects (бізнес-об'єкти), object views (представлення об'єктів) 
+і data files (файли даних).
 
-Module structure
+Структура модуля
 ----------------
+Кожен модуль є директорією всередині *module directory*. Каталоги модулів задаються за допомогою опції
+:option:`--addons-path <odoo-bin --addons-path>`.
 
-Each module is a directory within a *module directory*. Module directories
-are specified by using the :option:`--addons-path <odoo-bin --addons-path>`
-option.
+Модуль Odoo оголошується за допомогою його :ref:`manifest <reference/module/manifest>`.
 
-An Odoo module is declared by its :ref:`manifest <reference/module/manifest>`.
-
-When an Odoo module includes business objects (i.e. Python files), they are organized as a
+Коли модуль Odoo включає бізнес-об'єкти (тобто файли Python), вони організовуються як
 `Python package <https://docs.python.org/3/tutorial/modules.html#packages>`_
-with a ``__init__.py`` file. This file contains import instructions for various Python
-files in the module.
+з файлом ``__init__.py``. Цей файл містить інструкції імпорту для різних Python файлів у модулі.
 
-Here is a simplified module directory:
+Нижче наведено спрощений каталог модулів:
 
 .. code-block:: bash
 
@@ -115,15 +112,15 @@ Here is a simplified module directory:
 Odoo Editions
 =============
 
-Odoo is available in `two versions`_: Odoo Enterprise (licensed & shared sources) and Odoo Community
-(open-source). In addition to services such as support or upgrades, the Enterprise version provides extra
-functionalities to Odoo. From a technical point-of-view, these functionalities are simply
-new modules installed on top of the modules provided by the Community version.
+Odoo доступний у `two versions`_: Odoo Enterprise (ліцензована & shared sources) та Odoo Community 
+(відкритий вихідний код). На додаток до таких послуг, як підтримка або оновлення, версія Enterprise 
+надає додатковий функціонал для Odoo. З технічної точки зору, ці функції - це просто нові модулі, 
+встановлені поверх модулів, що надаються версією Community.
 
-Ready to start? Before writing actual code, let's go to the :doc:`next chapter <02_setup>` to review
-the Odoo installation process. Even if Odoo is already running on your system, we strongly suggest
-you go through this chapter to make sure we start on the same page during the development of our new
-application.
+Готові почати? Перш ніж писати власне код, давайте перейдемо до :doc:`next chapter <02_setup>` щоб 
+ознайомитися з процесом встановлення Odoo. Навіть якщо Odoo вже працює у вашій системі, ми наполегливо 
+рекомендуємо вам прочитати цей розділ, щоб переконатися, що ми починаємо з однакових позицій під час 
+розробки нашого нового додатку.
 
 .. _multitier architecture:
     https://en.wikipedia.org/wiki/Multitier_architecture
