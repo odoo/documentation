@@ -24,19 +24,13 @@ Odoo automatically installs the appropriate package for your company, according 
 selected at the creation of the database.
 
 .. important::
-   As long as you haven't posted any entry, you can still add and select another package.
+   As long as you haven't posted any entry, you can still select another package.
 
-To install a new package, go to :menuselection:`Accounting --> Configuration --> Fiscal
-Localization`, click on **Install More Packages**, and install your country's module.
+To select a fiscal localization package for your company, go to :menuselection:`Accounting -->
+Configuration --> Settings --> Fiscal Localization`, select the appropriate package from the list
+and save.
 
-.. image:: fiscal_localizations/packages_modules.png
-   :align: center
-   :alt: Install the appropriate module as fiscal localization package in Odoo Accounting.
-
-Once done, select your country's package, and click on *Save*.
-
-.. image:: fiscal_localizations/packages_selection.png
-   :align: center
+.. image:: fiscal_localizations/package-selection.png
    :alt: Select your country's fiscal localization package in Odoo Accounting.
 
 Use
