@@ -40,7 +40,7 @@ Select the payment method and click :guilabel:`Validate`. The **invoice** is aut
 and ready to be downloaded and/or printed.
 
 .. seealso::
-   - :doc:`../overview/getting_started`
+   - :doc:`../general/getting_started`
 
 Retrieve invoices
 -----------------

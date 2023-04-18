@@ -17,7 +17,7 @@ is able to continue working even if you are offline.
 .. toctree::
    :titlesonly:
 
-   point_of_sale/overview
+   point_of_sale/general
    point_of_sale/shop
    point_of_sale/restaurant
    point_of_sale/payment

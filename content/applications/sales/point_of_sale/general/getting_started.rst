@@ -2,23 +2,8 @@
 Getting started
 ===============
 
-**Point of Sale** is a fully integrated application that allows you to sell products (online or
-offline) with any device. It also automatically registers product moves in your stock, gives you
-real-time statistics, and consolidations across all shops.
-
 Configuration
 =============
-
-Make products available
------------------------
-
-To make products available for sale, go to :menuselection:`Point of Sale --> Products --> Products`,
-and select a product to open the product form. In the :guilabel:`Sales` tab, enable
-:guilabel:`Available in POS`.
-
-.. image:: getting_started/pos-available.png
-   :align: center
-   :alt: Making a product available in your POS.
 
 Configure payment methods
 -------------------------
@@ -144,13 +129,3 @@ the **POS dashboard**.
    - It is strongly advised to close your POS session at the end of each day.
    - To look at all your previous sessions, go to :menuselection:`Point of Sale --> Orders -->
      Sessions`.
-
-View statistics
-===============
-
-To access your statistics, go to :menuselection:`Point of Sale --> Reporting --> Orders`. Or, from
-the **POS dashboard**, click the vertical ellipsis (:guilabel:`⋮`) button, :guilabel:`Reporting`,
-and :guilabel:`Orders`.
-
-These statistics are available in a graph or pivot view that you can filter or group depending on
-your needs.
