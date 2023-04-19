@@ -20,5 +20,6 @@ is able to continue working even if you are offline.
    point_of_sale/general
    point_of_sale/shop
    point_of_sale/restaurant
+   point_of_sale/payment_methods
    point_of_sale/payment
    point_of_sale/advanced_pricing_features
