@@ -366,5 +366,6 @@ Resume
 .. toctree::
    :titlesonly:
 
-   payroll/work_entries
    payroll/contracts
+   payroll/payslips
+   payroll/work_entries
