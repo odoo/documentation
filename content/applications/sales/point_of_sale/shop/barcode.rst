@@ -55,7 +55,7 @@ You can also enter the barcode number manually in the search bar to look for the
 click it to add it to the cart.
 
 .. seealso::
-   - :doc:`Get started <../general/getting_started>`
+   - :doc:`Get started <../general/sessions>`
 
 Log employees
 -------------

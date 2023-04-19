@@ -74,7 +74,7 @@ your needs.
 .. toctree::
    :titlesonly:
 
-   general/getting_started
+   general/sessions
    general/customer_note
    general/register
    general/https

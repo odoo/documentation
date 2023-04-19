@@ -3,7 +3,7 @@ Tips
 ====
 
 Tipping is customary in multiple countries. Point of Sale allows tipping in :doc:`shops
-<../general/getting_started>`, :doc:`bars <../restaurant>`, or :doc:`restaurants <../restaurant>`.
+<../general/sessions>`, :doc:`bars <../restaurant>`, or :doc:`restaurants <../restaurant>`.
 
 .. _configuration:
 
@@ -59,7 +59,7 @@ and the waiter. That bill indicates the tip value the customer chooses to give a
 Add tips
 ========
 
-To add tips to an order, :doc:`access the payment screen <../general/getting_started>` and click
+To add tips to an order, :doc:`access the payment screen <../general/sessions>` and click
 :guilabel:`♥ Tip`. Then, enter the tipping amount, click :guilabel:`Confirm` to validate, and
 process the payment.
 
