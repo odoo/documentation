@@ -42,9 +42,9 @@ checkbox, and click :guilabel:`Save & Close`.
 Tip using an Adyen terminal
 ---------------------------
 
-If you use an :doc:`Adyen <../payment/adyen>` payment terminal and wish to enable **tips**
-using the terminal, check :guilabel:`Add tip through payment terminal (Adyen)` below the :ref:`tip
-settings <configuration>`.
+If you use an :doc:`Adyen <../payment_methods/payment/adyen>` payment terminal and wish to enable
+**tips** using the terminal, check :guilabel:`Add tip through payment terminal (Adyen)` below the
+:ref:`tip settings <configuration>`.
 
 Tip after payment
 -----------------

@@ -24,13 +24,19 @@ payments, or :guilabel:`Bank` to use it for card payments.
    - Credentials are mandatory to use a payment terminal. To learn how to configure the different
      terminals, check out the following documentation pages:
 
-     - :doc:`Adyen configuration <payment/adyen>`
-     - :doc:`Vantiv configuration <payment/vantiv>`
-     - :doc:`Ingenico configuration <payment/ingenico>`
-     - :doc:`Six configuration <payment/six>`
-     - :doc:`Worldline configuration <payment/worldline>`
+     - :doc:`Adyen configuration <payment_methods/payment/adyen>`
+     - :doc:`Ingenico configuration <payment_methods/payment/ingenico>`
+     - :doc:`Six configuration <payment_methods/payment/six>`
+     - :doc:`Stripe configuration <payment_methods/payment/stripe>`
+     - :doc:`Vantiv configuration <payment_methods/payment/vantiv>`
+     - :doc:`Worldline configuration <payment_methods/payment/worldline>`
 
 Once the payment method is created, you can select it to be used in your POS. To do so, go to the
 :ref:`POS settings <general/settings>`, select the POS for which you wish to make the payment
 method available in the :guilabel:`Point of Sale` field, and add the payment method(s) under the
 :guilabel:`Payment` section.
+
+.. toctree::
+   :titlesonly:
+
+   payment_methods/payment

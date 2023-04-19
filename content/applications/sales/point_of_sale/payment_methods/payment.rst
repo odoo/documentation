@@ -1,7 +1,7 @@
 :nosearch:
 
 =================
-Payment Terminals
+Payment terminals
 =================
 
 .. toctree::
@@ -9,8 +9,7 @@ Payment Terminals
 
    payment/adyen
    payment/ingenico
-   payment/vantiv
-   payment/six
-   payment/worldline
    payment/stripe
-
+   payment/six
+   payment/vantiv
+   payment/worldline
