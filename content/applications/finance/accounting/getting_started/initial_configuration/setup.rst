@@ -2,25 +2,21 @@
 Initial setup of Odoo Accounting and Odoo Invoicing
 ===================================================
 
-When you first open your Odoo Accounting app, the *Accounting Overview* page welcomes you with a
-step-by-step onboarding banner, a wizard that helps you get started. This onboarding banner is
-displayed until you choose to close it.
-
-The settings visible in the onboarding banner can still be modified later by going to
-:menuselection:`Accounting --> Configuration --> Settings`.
+When first setting up Odoo Accounting, a step-by-step onboarding banner is available to support the
+first necessary configurations. The onboarding wizard is displayed until closed. The settings
+visible in the onboarding banner can still be modified later.
 
 .. note::
-   Odoo Accounting automatically installs the appropriate **Fiscal Localization Package** for your
-   company, according to the country selected at the creation of the database. This way, the right
-   accounts, reports, and taxes are ready-to-go. :ref:`Click here <fiscal_localizations/packages>`
-   for more information about Fiscal Localization Packages.
+   Odoo Accounting automatically installs the appropriate :ref:`Fiscal Localization Package
+   <fiscal_localizations/packages>` for your company, according to the country selected at the
+   creation of the database. This way, the right accounts, reports, and taxes are ready-to-go.
 
 Accounting onboarding banner
 ============================
 
 The step-by-step Accounting onboarding banner is composed of four steps:
 
-.. image:: setup/setup_accounting_onboarding.png
+.. image:: setup/setup-wizard.png
    :align: center
    :alt: Step-by-step onboarding banner in Odoo Accounting
 
