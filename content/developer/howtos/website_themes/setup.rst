@@ -29,9 +29,9 @@ with backend and frontend views.
 Models
 ~~~~~~
 
-The basis of Odoo is models. Models use fields to record the data. Records are stored in a database:
-they are therefore linked to a model. In Odoo, you can find the different models in the
-backend by enabling the :ref:`developer mode <developer-mode>` and then going to
+The basis of Odoo are models. Models use fields to record the data. Records are stored in a
+database: they are therefore linked to a model. In Odoo, you can find the different models in the
+backend by enabling the :ref:`developer mode <developer-mode>` then going to
 :menuselection:`Settings --> Technical --> Database Structure: Models`.
 
 .. image:: setup/models-page.png
@@ -41,9 +41,6 @@ Fields
 ~~~~~~
 
 In a model, we will centralize fields (field names we need to target in our code).
-
-.. seealso::
-   :doc:`/applications/productivity/studio/fields`
 
 Classic fields
 **************
@@ -67,7 +64,7 @@ on this linked record.
 - **One2many** fields are reverse searches of existing many2one relations. For example, you could
   list on a contact all their existing quotations (from *one* record, you display *many*).
 - **Many2many** fields are filled in by choosing one or several records from a list of records on
-  another model. For example, you can put several tags on one product, and several products can use
+  another model. For example, you can put several tags on one product and several products can use
   the same tags (from *many* records, you can select *many*).
 
 Views
@@ -181,9 +178,9 @@ Running Odoo
 Once all dependencies are set up, Odoo can be launched by running `odoo-bin`, the command-line
 interface of the server. It is located at the root of the Odoo Community directory.
 
-- :ref:`Windows <setup/install/source/windows/running_odoo>`
+- :ref:`Windows <setup/install/source/linux/running_odoo>`
 - :ref:`Linux <setup/install/source/linux/running_odoo>`
-- :ref:`Mac OS <setup/install/source/mac_os/running_odoo>`
+- :ref:`Mac OS <setup/install/source/linux/running_odoo>`
 - `Docker <https://hub.docker.com/_/odoo/>`_
 
 To configure the server, you can specify command-line arguments or a configuration file. The first
@@ -255,4 +252,4 @@ The developer mode, also known as debug mode, is useful for development as it gi
 additional tools. In the next chapters, it is assumed that you have enabled the developer mode.
 
 .. seealso::
-   :doc:`/applications/general/developer_mode`
+   :ref:`How to enable the developer mode <developer-mode>`

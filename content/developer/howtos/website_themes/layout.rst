@@ -13,7 +13,7 @@ In this chapter, you will learn how to:
 Default
 =======
 
-An Odoo page combines cross-page and unique elements. Cross-page elements are the same on every
+An Odoo page combines cross-page and unique elements. Cross-pages elements are the same on every
 page, while unique elements are only related to a specific page. By default, a page has two
 cross-page elements, the header and the footer, and a unique main element that contains the specific
 content of that page.
@@ -115,8 +115,8 @@ expression to target the right element. The most useful ones are listed below.
    * - /
      - Selects from the root node.
    * - //
-     - Selects nodes in the document from the current node that matches the selection no matter
-       where they are.
+     - Selects nodes in the document from the current node that match the selection no matter where
+       they are.
 
 .. list-table::
    :header-rows: 1
@@ -233,7 +233,7 @@ You can define a color or an image as the background of your website.
        )
    );
 
-**Image/pattern**
+**Image / pattern**
 
 .. code-block:: scss
    :caption: ``/website_airproof/static/src/scss/primary_variables.scss``

@@ -141,7 +141,7 @@ Add an item to a dropdown menu.
 Mega menu
 =========
 
-A mega menu is a dropdown menu with additional possibilities and not just a list of links. In a
+A mega menu is a dropdown menu with additional possibilities, and not just a list of links. In a
 mega menu, you can use any kind of content (text, images, icons, ...).
 
 **Declaration**
@@ -176,7 +176,7 @@ mega menu, you can use any kind of content (text, images, icons, ...).
    * - mega_menu_classes
      - Custom classes to be added to the main element
    * - mega_menu_content
-     - The default content of the mega menu
+     - Default content of the mega menu
 
 Custom template
 ---------------

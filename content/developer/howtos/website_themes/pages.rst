@@ -93,7 +93,7 @@ Alternatively, replace the default content of these pages using XPath.
 .. seealso::
    - `Odoo eLearning: Search Engine Optimization (SEO)
      <https://www.odoo.com/slides/slide/search-engine-optimization-seo-648>`_
-   - :doc:`Odoo Documentation on SEO <../../../applications/websites/website/pages/seo>`
+   - :doc:`Odoo Documentation on SEO <../../../applications/websites/website/optimize/seo>`
 
 Theme pages
 ===========
@@ -207,13 +207,13 @@ The Website Builder supports the following image file formats: JPG, GIF, PNG, an
    * - res_model
      - Name of the wizard model
 
-Use it as a background image.
+Use as a background image.
 
 .. code-block:: xml
 
    <section style="background-image: url('/web/image/website_airproof.img_about_01');">
 
-Use it as a regular image.
+Use as a regular image.
 
 .. code-block:: xml
 

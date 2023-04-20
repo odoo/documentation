@@ -132,7 +132,7 @@ always required. It usually contains much more information.
    * - license
      - Distribution license for the module
    * - depends
-     - Odoo modules must be loaded before this one, either because this module uses features
+     - Odoo modules which must be loaded before this one, either because this module uses features
        they create or because it alters resources they define
    * - data
      - List of XML files
@@ -157,7 +157,7 @@ First, try to construct your theme by using Odoo's default options. This ensures
    features may rely on it.
 
 .. tip::
-   - Use four spaces per indentation level.
+   - Use 4 spaces per indentation level.
    - Do not use tabs.
    - Never mix spaces and tabs.
 
@@ -222,7 +222,7 @@ Global
 Fonts
 ~~~~~
 
-You can embed any font on your website. The Website Builder automatically makes them available in
+You can embed any font on your website. The Website Builder automatically makes the available in
 the font selector.
 
 **Declaration**
@@ -588,7 +588,7 @@ Odoo supports three different kinds of JavaScript files:
 - :ref:`native JavaScript module <frontend/modules/native_js>`, and
 - :ref:`Odoo modules <frontend/modules/odoo_module>` (using a custom module system).
 
-Most new Odoo JavaScript codes should use the native JavaScript module system. It's simpler and
+Most new Odoo JavaScript code should use the native JavaScript module system. It's simpler and
 brings the benefit of a better developer experience with better integration with the IDE.
 
 .. important::
@@ -622,9 +622,9 @@ brings the benefit of a better developer experience with better integration with
    - Add `'use strict';` on top of every Odoo JavaScript module.
    - Variables and functions should be *camelcased* (`myVariable`) instead of *snakecased*
      (`my_variable`).
-   - Do not name a variable `event`; use `ev.` instead. This is to avoid bugs on non-Chrome
-     browsers, as Chrome is magically assigning a global event variable (so if you use the event
-     variable without declaring it, it will work fine on Chrome but crash on every other browser).
+   - Do not name a variable `event`, use `ev.` instead. This is to avoid bugs on non-Chrome browsers
+     as Chrome is magically assigning a global event variable (so if you use the event variable
+     without declaring it, it will work fine on Chrome but crash on every other browser).
    - Use strict comparisons (`===` instead of `==`).
    - Use double quotes for all textual strings (such as `"Hello"`) and single quotes for all other
      strings, such as a CSS selector `.x_nav_item`.
