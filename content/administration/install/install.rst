@@ -396,6 +396,8 @@ needed:
 #. Edit the System Environment's variable `PATH` to add the folder where `rtlcss.cmd` is located
    (typically: `C:\\Users\\<user>\\AppData\\Roaming\\npm\\`).
 
+.. _setup/install/source/windows/running_odoo:
+
 Running Odoo
 ~~~~~~~~~~~~
 
@@ -615,6 +617,8 @@ Other Dependencies
 
          $ sudo npm install -g rtlcss
 
+.. _setup/install/source/linux/running_odoo:
+
 Running Odoo
 ~~~~~~~~~~~~
 
@@ -807,6 +811,8 @@ needed:
    .. code-block:: console
 
        $ sudo npm install -g rtlcss
+
+.. _setup/install/source/mac_os/running_odoo:
 
 Running Odoo
 ~~~~~~~~~~~~
