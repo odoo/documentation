@@ -1409,50 +1409,72 @@ Char (`char`)
 
     - Supported field types: `char`
 
-date (FieldDate)
-  This is the default field type for fields of type *date*. Note that it also
-  works with datetime fields.  It uses the session timezone when formatting
-  dates.
+.. _reference/javascript_reference/date_field:
 
-  - Supported field types: *date*, *datetime*
+Date (`date`)
+    This is the default field type for fields of type `date`. It consists of a text
+    box and a date picker.
 
-  Options:
+    - Supported field types: `date`
 
-  - datepicker: extra settings for the datepicker_ widget.
+    Options:
 
-  .. code-block:: xml
+    - `min_date` / `max_date`: sets limit dates for accepted values. By default, the earliest
+        accepted date is **1000-01-01** and the latest is **9999-12-31**.
+        Accepted values are SQL-formatted dates (`yyyy-MM-dd HH:mm:ss`) or `"today"`.
 
-      <field name="datefield" options='{"datepicker": {"daysOfWeekDisabled": [0, 6]}}'/>
+        .. code-block:: xml
 
-datetime (FieldDateTime)
-  This is the default field type for fields of type *datetime*.
+            <field name="datefield" options="{'min_date': 'today', 'max_date': '2023-12-31'}" />
 
-  - Supported field types: *date*, *datetime*
+    - warn_future: displays a warning if the value is in the future (based on today).
 
-  Options:
+        .. code-block:: xml
 
-  - datepicker: extra settings for the datepicker_ widget.
+            <field name="datefield" options="{'warn_future': true}" />
 
-  .. code-block:: xml
+.. _reference/javascript_reference/datetime_field:
 
-      <field name="datetimefield" options='{"datepicker": {"daysOfWeekDisabled": [0, 6]}}'/>
+Date & Time (`datetime`)
+    This is the default field type for fields of type `datetime`. The values are always
+    in the client's timezone.
 
-daterange (FieldDateRange)
-  This widget allows the user to select start and end date into a single picker.
+    - Supported field types: `datetime`
 
-  - Supported field types: *date*, *datetime*
+    Options:
 
-  Options:
+    - see :ref:`Date Field <reference/javascript_reference/date_field>` options
 
-  - related_start_date: apply on end date field to get start date value which
-    is used to display range in the picker.
-  - related_end_date: apply on start date field to get end date value which
-    is used to display range in the picker.
-  - picker_options: extra settings for picker.
+    - `rounding`: increment used to generate available minutes in the time picker. This
+        does not affect the actual value, just the amount of available options in the
+        select dropdown (default: `5`).
 
-  .. code-block:: xml
+        .. code-block:: xml
 
-      <field name="start_date" widget="daterange" options='{"related_end_date": "end_date"}'/>
+            <field name="datetimefield" options="{'rounding': 10}" />
+
+Date Range (`daterange`)
+    This widget allows the user to select start and end date from a single picker.
+
+    - Supported field types: `date`, `datetime`
+
+    Options:
+
+    - see :ref:`Date Field <reference/javascript_reference/date_field>` or :ref:`Date & Time Field <reference/javascript_reference/datetime_field>` options
+
+    - `start_date_field`: field used to get/set the start value of the date range (cannot be used with
+        `end_date_field`).
+
+        .. code-block:: xml
+
+            <field name="end_date" widget="daterange" options="{'start_date_field': 'start_date'}" />
+
+    - `end_date_field`: field used to get/set the end value of the date range (cannot be used with
+        `start_date_field`).
+
+        .. code-block:: xml
+
+            <field name="start_date" widget="daterange" options="{'end_date_field': 'end_date'}" />
 
 Remaining Days (`remaining_days`)
     This widget can be used on date and datetime fields. In readonly, it displays
