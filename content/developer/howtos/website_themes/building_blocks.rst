@@ -57,7 +57,7 @@ Snippets are editable by the user using the Website Builder. Some Bootstrap clas
 Wrapper
 -------
 
-The standard main container of any snippet is `section`. Any section element can be edited like a
+The standard main container of any snippet is a `section`. Any section element can be edited like a
 block of content that you can move or duplicate.
 
 .. code-block:: xml
@@ -95,10 +95,10 @@ The system automatically adds the `data-name` and `data-snippet` attributes duri
 drop based on the template's name.
 
 .. warning::
-   Those attributes should be specifically added when a snippet is declared in a theme page.
+   Those attributes should be specifically added when a snippet is declared on a theme page.
 
 .. warning::
-   Avoid adding a `section` tag inside an other `section` tag: this will trigger twice the Website
+   Avoid adding a `section` tag inside another `section` tag: this will trigger twice the Website
    Builder's options. You can use inner content snippets instead.
 
 Columns
@@ -117,7 +117,7 @@ Add padding on columns and sections.
 
    class="pt80 pb80"
 
-Add background based on the color palette for columns and sections.
+Add a background based on the color palette for columns and sections.
 
 .. code-block:: xml
 
@@ -260,7 +260,7 @@ Create the snippet's content.
    </odoo>
 
 .. warning::
-   `data-name` and `data-snippet` attributes have to be specified when a snippet is declared in a
+   `data-name` and `data-snippet` attributes have to be specified when a snippet is declared on a
    theme page.
 
 .. tip::
@@ -349,7 +349,7 @@ choose, the user interface will behave differently.
 
 `data-select-class="..."`
 
-More `data-select-class` in the same group define a list of classes the user can apply. Only one
+More `data-select-class` in the same group defines a list of classes the user can apply. Only one
 option can be enabled at a time.
 
 .. code-block:: xml
@@ -442,7 +442,7 @@ Blog posts
    * - Attribute
      - Description
    * - id
-     - ID of the template. Has to start with `dynamic_filter_template_blog_post_`
+     - The ID of the template. Has to start with `dynamic_filter_template_blog_post_`
    * - name
      - Human-readable name of the template
 
@@ -467,7 +467,7 @@ Products
    * - Attribute
      - Description
    * - id
-     - ID of the template. Has to start with `dynamic_filter_template_product_product_`
+     - The ID of the template. Has to start with `dynamic_filter_template_product_product_`
    * - name
      - Human-readable name of the template
    * - data-number-of-elements
@@ -475,7 +475,7 @@ Products
    * - data-number-of-elements-sm
      - Number of products per slide on mobile
    * - data-number-of-elements-fetch
-     - Total amount of fetched products
+     - The total amount of fetched products
 
 Events
 ~~~~~~
@@ -498,6 +498,6 @@ Events
    * - Attribute
      - Description
    * - id
-     - ID of the template. Has to start with `dynamic_filter_template_event_event_`
+     - The ID of the template. Has to start with `dynamic_filter_template_event_event_`
    * - name
      - Human-readable name of the template

@@ -7,8 +7,7 @@ Website themes
 ==============
 
 .. image:: website_themes/web-design.png
-   :align: center
-   :alt: Web design
+   :alt: Artistic illustration of "Web design"
    :width: 600
 
 The Odoo Website Builder is an excellent tool for creating a website fully integrated with other

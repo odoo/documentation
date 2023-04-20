@@ -42,7 +42,7 @@ Export
 Once you are done translating, you need to export the translations to integrate them into your
 module. To export everything at once, open your database, activate :ref:`developer mode
 <developer-mode>`, and go to :menuselection:`Settings --> Translations --> Export Translation`.
-Select the :guilabel:`Language` you translated, *PO File* under :guilabel:`File Format` and
+Select the :guilabel:`Language` you translated, *PO File* under :guilabel:`File Format`, and
 *website_airproof* as the :guilabel:`Apps To Export`.
 
 Download the file and move it to the :file:`i18n` folder. If needed, you can manually edit the
@@ -51,7 +51,7 @@ Download the file and move it to the :file:`i18n` folder. If needed, you can man
 PO file
 =======
 
-You can translate directly by editing a :file:`.po` file or create a the file yourself. Check out
+You can translate directly by editing a :file:`.po` file or creating the file yourself. Check out
 the :doc:`translating modules documentation <../translations>` to write your translations.
 
 .. code-block:: po

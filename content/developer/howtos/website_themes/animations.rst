@@ -21,7 +21,7 @@ You can easily define an animation on a column in your custom theme. You need to
 `o_animate` and `o_anim_fade_in`. The second class changes depending on the type of animation you
 want to use.
 
-Add the `o_animate_both_scroll` class to launch the animation everytime the column appears on the
+Add the `o_animate_both_scroll` class to launch the animation every time the column appears on the
 screen. The animation is only launched once by default.
 
 You can also define an `animation-duration` and an `animation-delay` directly in the `style`
