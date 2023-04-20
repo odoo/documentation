@@ -1,3 +1,6 @@
+:show-content:
+:show-toc:
+
 =======
 Payroll
 =======
@@ -369,3 +372,4 @@ Resume
    payroll/contracts
    payroll/payslips
    payroll/work_entries
+   payroll/reporting
