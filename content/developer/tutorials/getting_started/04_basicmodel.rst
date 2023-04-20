@@ -110,6 +110,8 @@ the **Goal**.
 
     Add a ``_description`` to your model to get rid of one of the warnings.
 
+.. _developer/fields:
+
 Model fields
 ============
 
