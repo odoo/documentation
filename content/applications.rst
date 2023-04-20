@@ -4,9 +4,9 @@
 :show-toc:
 
 
-=========
-User Docs
-=========
+==================
+User Documentation
+==================
 
 Discover our user guides and configuration tutorials per application.
 
