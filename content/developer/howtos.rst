@@ -17,6 +17,7 @@ How-to guides
     howtos/create_reports
     howtos/accounting_localization
     howtos/translations
+    howtos/website_themes
     howtos/provide_iap_services
     howtos/connect_device
 
@@ -67,6 +68,11 @@ How-to guides
       :target: howtos/translations
 
       Learn how to provide translation abilities to your module.
+
+   .. card:: Website themes
+      :target: howtos/website_themes
+
+      Learn how to customize your website by creating a custom theme.
 
    .. card:: Provide IAP services
       :target: howtos/provide_iap_services
