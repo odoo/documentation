@@ -645,6 +645,8 @@ Dependencies
    <the wkhtmltopdf download page_>`_ for it to support headers and footers. See our `wiki
    <https://github.com/odoo/odoo/wiki/Wkhtmltopdf>`_ for more details on the various versions.
 
+.. _setup/install/source/running_odoo:
+
 Running Odoo
 ------------
 
