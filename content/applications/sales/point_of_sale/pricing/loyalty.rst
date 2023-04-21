@@ -1,6 +1,6 @@
-========================
-Manage a loyalty program
-========================
+================
+Loyalty programs
+================
 
 Encourage your customers to continue to shop at your point of sale with
 a *Loyalty Program*.
