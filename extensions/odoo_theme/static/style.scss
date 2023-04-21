@@ -254,30 +254,6 @@ header {
             &.o_deepest_active_toc_entry > .o_toc_entry_wrapper i {
                 color: $white;
             }
-
-            > .o_toc_entry_wrapper > i:before {
-                @include o-inline-icon(0 $o-icon-margin 0 0);
-            }
-        }
-
-        &.o_menu_applications > .o_toc_entry_wrapper > i:before {
-            content:'#{$i-doc-apps}';
-        }
-
-        &.o_menu_administration > .o_toc_entry_wrapper > i:before {
-            content:'#{$i-doc-admin}';
-        }
-
-        &.o_menu_developer > .o_toc_entry_wrapper > i:before {
-            content:'#{$i-doc-dev}';
-        }
-
-        &.o_menu_services > .o_toc_entry_wrapper > i:before {
-            content:'#{$i-doc-services}';
-        }
-
-        &.o_menu_contributing > .o_toc_entry_wrapper > i:before {
-            content:'#{$i-doc-contribute}';
         }
     }
 }
@@ -296,6 +272,13 @@ header {
         color: $o-gray-color;
         font-weight: $font-weight-normal;
         @include font-size($font-size-sm);
+        color: $gray-700;
+        font-weight: 500;
+
+        &:hover {
+            color: black;
+            text-decoration: none;
+        }
     }
 
     ul {
@@ -313,14 +296,6 @@ header {
                 > .o_toc_entry_wrapper a, > a {
                     color: inherit;
                     font-weight: inherit;
-                }
-
-                &.o_deepest_active_toc_entry {
-                    > a,  > .o_toc_entry_wrapper, > .o_toc_entry_wrapper a {
-                        background-color: $secondary;
-                        color: $white;
-                        font-weight: inherit;
-                    }
                 }
             }
 
@@ -630,8 +605,8 @@ article.doc-body {
 
         > h1 {
             margin-bottom: $o-margin-s;
-            color: $secondary;
-            font-weight: $font-weight-bolder;
+            color: $gray-900;
+            font-weight: 600;
 
             @include media-breakpoint-up(lg) {
                 max-width: calc(100% - 120px);
