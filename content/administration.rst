@@ -8,9 +8,9 @@
 
     <section class="o_content_fw_banner"></section>
 
-====================
-Install and Maintain
-====================
+==========
+Deployment
+==========
 
 These guides provide instructions on how to install, maintain and upgrade Odoo databases.
 
