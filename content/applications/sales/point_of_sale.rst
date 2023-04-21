@@ -20,5 +20,15 @@ is able to continue working even if you are offline.
    point_of_sale/overview
    point_of_sale/shop
    point_of_sale/restaurant
+<<<<<<< HEAD
    point_of_sale/payment
    point_of_sale/advanced_pricing_features
+||||||| parent of b40c05bbf (temp)
+   point_of_sale/payment_methods
+   point_of_sale/pricing
+   point_of_sale/reporting
+=======
+   point_of_sale/pricing
+   point_of_sale/payment_methods
+   point_of_sale/reporting
+>>>>>>> b40c05bbf (temp)

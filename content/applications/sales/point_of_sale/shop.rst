@@ -1,7 +1,7 @@
 :nosearch:
 
 =============
-Shop Features
+Shop features
 =============
 
 .. toctree::
