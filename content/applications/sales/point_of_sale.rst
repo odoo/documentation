@@ -115,6 +115,6 @@ To close your session,
    point_of_sale/configuration
    point_of_sale/shop
    point_of_sale/restaurant
-   point_of_sale/payment_methods
    point_of_sale/pricing
+   point_of_sale/payment_methods
    point_of_sale/reporting
