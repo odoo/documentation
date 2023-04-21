@@ -1,16 +1,12 @@
 :nosearch:
 
 =============
-Shop Features
+Shop features
 =============
 
 .. toctree::
    :titlesonly:
 
-   shop/invoice
-   shop/barcode
    shop/sales_order
-   shop/multicashiers
-   shop/receipts
-   shop/cash_rounding
+   shop/barcode
    shop/serial_numbers

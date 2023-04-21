@@ -2,8 +2,8 @@
 Tips
 ====
 
-Tipping is customary in multiple countries. Point of Sale allows tipping in :doc:`shops
-<../overview/getting_started>`, :doc:`bars <../restaurant>`, or :doc:`restaurants <../restaurant>`.
+Tipping is customary in multiple countries. Point of Sale allows tipping in :ref:`shops <pos/sell>`,
+:doc:`bars <../restaurant>`, or :doc:`restaurants <../restaurant>`.
 
 .. _configuration:
 
@@ -17,7 +17,6 @@ enabled, add a :guilabel:`Tip Product` in the corresponding field, and save. The
 will be used as a reference on customers' receipts.
 
 .. image:: tips/tips-setup.png
-   :align: center
    :alt: enable tips in a POS
 
 .. _tip-product:
@@ -42,9 +41,9 @@ checkbox, and click :guilabel:`Save & Close`.
 Tip using an Adyen terminal
 ---------------------------
 
-If you use an :doc:`Adyen <../payment/adyen>` payment terminal and wish to enable **tips**
-using the terminal, check :guilabel:`Add tip through payment terminal (Adyen)` below the :ref:`tip
-settings <configuration>`.
+If you use an :doc:`Adyen <../payment_methods/terminals/adyen>` payment terminal and wish to enable
+**tips** using the terminal, check :guilabel:`Add tip through payment terminal (Adyen)` below the
+:ref:`tip settings <configuration>`.
 
 Tip after payment
 -----------------
@@ -59,12 +58,10 @@ and the waiter. That bill indicates the tip value the customer chooses to give a
 Add tips
 ========
 
-To add tips to an order, :doc:`access the payment screen <../overview/getting_started>` and click
-:guilabel:`♥ Tip`. Then, enter the tipping amount, click :guilabel:`Confirm` to validate, and
-process the payment.
+To add tips to an order, :ref:`access the payment screen <pos/sell>` and click :guilabel:`♥ Tip`.
+Then, enter the tipping amount, click :guilabel:`Confirm` to validate, and process the payment.
 
 .. image:: tips/add-tip.png
-   :align: center
    :alt: tip popup window
 
 Alternatively, you can select the :ref:`tip product <tip-product>` on the POS interface to add it to
@@ -85,7 +82,6 @@ At checkout, select a card payment method and click :guilabel:`Close Tab`. Doing
 to complete by the customer.
 
 .. image:: tips/tipping-bill.png
-   :align: center
    :alt: tipping bill after payment to complete by customers
 
 On the following screen, click the percentage (:guilabel:`15%`, :guilabel:`20%`, :guilabel:`25%`),
@@ -93,5 +89,4 @@ On the following screen, click the percentage (:guilabel:`15%`, :guilabel:`20%`,
 :guilabel:`Settle` to move to the following order.
 
 .. image:: tips/tip-after-payment.png
-   :align: center
    :alt: screen to select a tip amount to collect after payment
