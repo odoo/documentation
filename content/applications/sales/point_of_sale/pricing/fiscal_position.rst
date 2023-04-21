@@ -36,7 +36,7 @@ can also :ref:`create new fiscal positions <fiscal_positions/mapping>`.
 Use fiscal positions
 ====================
 
-Open a :ref:`POS session <pos/start-session>` to use one of the allowed fiscal positions. Then,
+Open a :ref:`POS session <pos/session-start>` to use one of the allowed fiscal positions. Then,
 click the :guilabel:`Tax` button next to the **book-shaped** icon and select a fiscal position from
 the list. Doing so applies the defined rules automatically to all the products subject to the chosen
 fiscal position's regulations.
