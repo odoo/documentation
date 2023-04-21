@@ -1,6 +1,6 @@
-===================
-Sales orders in PoS
-===================
+============
+Sales orders
+============
 
 When working in retail, you might need to order products directly from your Point of sale.
 Fortunately, Odoo Point of Sale is fully integrated with Odoo Sales, meaning that you can create a
@@ -13,7 +13,7 @@ From the **Point of Sale** application, open a new session. Then, click on
 :guilabel:`Quotations/Orders` to get the complete list of quotations and sales orders created on the
 sales application.
 
-.. image:: salesorder/pos-interface.png
+.. image:: sales_order/pos-interface.png
    :align: center
    :alt: Quotations and sales order button on the Point of Sale interface
 
@@ -27,7 +27,7 @@ Apply a down payment or settle the order
 
 From the list of sales order, select one to make a payment.
 
-.. image:: salesorder/list-of-so.png
+.. image:: sales_order/list-of-so.png
    :align: center
    :alt: list view of sales orders and quotations
 
