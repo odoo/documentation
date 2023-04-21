@@ -54,9 +54,6 @@ of products using the keypad.
 You can also enter the barcode number manually in the search bar to look for the product. Then,
 click it to add it to the cart.
 
-.. seealso::
-   - :doc:`Get started <../overview/getting_started>`
-
 Log employees
 -------------
 

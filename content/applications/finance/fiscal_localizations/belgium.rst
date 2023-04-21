@@ -72,9 +72,9 @@ POS.
   - Sell products without a valid VAT number.
   - Use a POS that is not connected to an IoT box.
 
-- The :doc:`cash rounding <../../sales/point_of_sale/shop/cash_rounding>` feature must be activated
-  and set to a :guilabel:`Rounding Precision` of `0,05` and a :guilabel:`Rounding Method` set as
-  :guilabel:`Half-Up`.
+- The :doc:`cash rounding <../../sales/point_of_sale/pricing/cash_rounding>` feature must be
+  activated and set to a :guilabel:`Rounding Precision` of `0,05` and a :guilabel:`Rounding Method`
+  set as :guilabel:`Half-Up`.
 - Taxes must be set as included in the price. To set it up, go to :menuselection:`Point of Sale -->
   Configuration --> Settings`, and from the :guilabel:`Taxes` section, open the :guilabel:`Default
   Sales Tax` form by clicking the arrow next to the default sales tax field. There, click

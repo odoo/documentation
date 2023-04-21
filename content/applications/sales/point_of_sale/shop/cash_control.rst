@@ -1,6 +1,6 @@
-====================================
-Set-up Cash Control in Point of Sale
-====================================
+============
+Cash control
+============
 
 Cash control allows you to check the amount of the cashbox at the
 opening and closing. You can thus make sure no error has been made and
