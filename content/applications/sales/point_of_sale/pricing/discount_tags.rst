@@ -1,6 +1,6 @@
-==========================================
-Using discount tags with a barcode scanner
-==========================================
+===============================
+Discount tags (barcode scanner)
+===============================
 
 If you want to sell your products with a discount, for a product getting
 close to its expiration date for example, you can use discount tags.
