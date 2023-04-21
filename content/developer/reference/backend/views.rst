@@ -462,6 +462,8 @@ calendar view are:
     (the field to which this values is saved can be controlled through
     ``rec_name``) and tries to create a new event with just that and the clicked
     event time. Falls back to a full form dialog if the quick creation fails
+``quick_create_form_view_id``
+    view to open when the user tries to quick create a record.
 ``create_name_field``
     name of the record's field holding the textual representation of the record,
     this is used when creating records through the 'quick create' mechanism
