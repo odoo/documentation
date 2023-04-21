@@ -14,7 +14,7 @@ Once the POS is set to be used in a restaurant or a bar, you can:
 - :doc:`communicate with the kitchen or the bar through the POS <restaurant/kitchen_printing>`;
 - :doc:`print bills in advance and split them <restaurant/bill_printing>`;
 - :doc:`collect tips <restaurant/tips>`; and
-- :doc:`set different taxes for takeaway food <restaurant/fiscal_position>`.
+- :doc:`set different taxes for takeaway food <pricing/fiscal_position>`.
 
 Configuration
 =============
@@ -32,5 +32,4 @@ select your POS, and click :menuselection:`Edit --> Is a Bar/Restaurant --> Save
    restaurant/bill_printing
    restaurant/floors_tables
    restaurant/kitchen_printing
-   restaurant/fiscal_position
    restaurant/tips
