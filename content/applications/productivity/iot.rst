@@ -12,4 +12,3 @@ Internet of Things (IoT)
 
    iot/config
    iot/devices
-   ../sales/point_of_sale/payment
