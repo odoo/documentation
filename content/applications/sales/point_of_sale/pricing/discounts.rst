@@ -1,6 +1,6 @@
-===============
-Apply Discounts
-===============
+=========
+Discounts
+=========
 
 By offering discounts, you can entice your customers and drastically
 increase your revenue. It is vital to offer discounts, whether they are
