@@ -1,6 +1,6 @@
-=================================
-Using Pricelists in Point of Sale
-=================================
+==========
+Pricelists
+==========
 
 You probably know the concept of happy hour: during a certain period of
 time, the barman gives a discount on some drinks (usually 50% off or a
