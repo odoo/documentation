@@ -1,5 +1,10 @@
 :show-content:
 :hide-page-toc:
+:classes: pt-0
+
+.. raw:: html
+
+    <section class="o_content_fw_banner"></section>
 
 ============
 Contributing
