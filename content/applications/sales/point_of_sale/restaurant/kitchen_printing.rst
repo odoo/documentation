@@ -42,7 +42,7 @@ to your installation:
 .. seealso::
    - :doc:`../../../productivity/iot/config/connect`
    - :doc:`../../../productivity/iot/devices/printer`
-   - :doc:`../overview/epos_ssc`
+   - :doc:`../configuration/epos_ssc`
 
 Set your printer to print specific products based on their POS category. To do so, click
 :guilabel:`Add a line` in the :guilabel:`Printed Product Categories` field. If you leave this field
