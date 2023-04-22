@@ -20,8 +20,8 @@
 # AleEscandon <alejandra.escandon@jarsa.com.mx>, 2023
 # Pablo Rojas <rojaspablo88@gmail.com>, 2023
 # Lucia Pacheco <lpo@odoo.com>, 2023
-# Braulio D. López Vázquez <bdl@odoo.com>, 2023
 # Martin Trigaux, 2023
+# Braulio D. López Vázquez <bdl@odoo.com>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -30,7 +30,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-13 05:55+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
-"Last-Translator: Martin Trigaux, 2023\n"
+"Last-Translator: Braulio D. López Vázquez <bdl@odoo.com>, 2023\n"
 "Language-Team: Spanish (https://app.transifex.com/odoo/teams/41243/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -5700,10 +5700,16 @@ msgid ""
 "and after the transfer. This document will detail the method for conducting "
 "an inter-warehouse transfer using replenishment."
 msgstr ""
+"Las empresas que utilizan múltiples almacenes a menudo necesitan trasladar "
+"artículos entre ellos. Esto se conoce como un *traslado interalmacén*. La "
+"aplicación *Inventario* de Odoo gestiona los procesos administrativos de los"
+" traslados internos para garantizar que el conteo de inventario sea preciso "
+"durante y después del traslado. Este documento explicará cómo llevar a cabo "
+"un traslado entre almacenes mediante el reabastecimiento."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:12
 msgid "Configure warehouses for inter-warehouse replenishment"
-msgstr ""
+msgstr "Configurar los almacenes para el reabastecimiento interalmacenes"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:14
 msgid ""
@@ -5713,6 +5719,12 @@ msgid ""
 "additional configuration options when creating a second warehouse that are "
 "needed for inter-warehouse replenishment."
 msgstr ""
+"Primero, asegúrese de que la función :guilabel:`rutas multietapa` está "
+"habilitada. Para hacerlo, vaya a :menuselection:`Inventario --> "
+"Configuración --> Ajustes` y seleccione la casilla correspondiente en la "
+"sección :guilabel:`almacén`. Esto proporciona opciones de configuración "
+"adicionales al crear un segundo almacén, las cuales son necesarias para los "
+"reabastecimientos interalmacén."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:19
 msgid ""
@@ -5723,18 +5735,29 @@ msgid ""
 "be transferred to from the :guilabel:`Warehouses` page and then click "
 ":guilabel:`Edit` to change its settings. Configure the warehouse as follows:"
 msgstr ""
+"De forma predeterminada, Odoo tiene configurado un almacén principal. Si no "
+"ha creado un almacén adicional, puede hacerlo en el módulo "
+":guilabel:`Inventario`, en :menuselection:`Configuración --> Almacenes --> "
+"Crear`. También puede seleccionar el almacén al que se transferirán los "
+"productos en la página de :guilabel:`almacenes` y hacer clic en "
+":guilabel:`editar` para cambiar sus ajustes. Configure el almacén como se "
+"muestra a continuación:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:25
 msgid ""
 ":guilabel:`Warehouse`: choose a name that is not already being used for "
 "another warehouse (e.g. `Alternative Warehouse`)"
 msgstr ""
+":guilabel:`Almacén`: elija un nombre que no se utilice para otro almacén "
+"(por ejemplo, `almacén alterno`)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:27
 msgid ""
 ":guilabel:`Short Name`: choose a short name by which the warehouse will be "
 "identified (e.g. `ALT_WH`)"
 msgstr ""
+":guilabel:`Nombre corto`: elija un nombre corto que se utilizará para "
+"identificar el almacén (por ejemplo, `ALT_WH`)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:30
 msgid ""
@@ -5743,12 +5766,19 @@ msgid ""
 "Click :guilabel:`Edit` and then check the box next to the warehouse that "
 "will be used to resupply the warehouse that is currently being configured."
 msgstr ""
+"Haga clic en :guilabel:`guardar` y se creará el nuevo almacén. Además, "
+"aparecerá un nuevo campo :guilabel:`reabastecer de` en el formulario del "
+"almacén. Haga clic en :guilabel:`editar` y luego marque la casilla a lado "
+"del almacén que se utilizará para reabastecer el almacén que está "
+"configurando."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst-1
 msgid ""
 "A warehouse settings form configured to allow resupplying between "
 "warehouses."
 msgstr ""
+"Formulario de ajustes de un almacén configurado para permitir el "
+"reabastecimiento entre almacenes."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:39
 msgid ""
@@ -5757,10 +5787,13 @@ msgid ""
 "warehouse that products are transferred to (incoming) will be titled \"San "
 "Francisco 2\"."
 msgstr ""
+"Con propósitos de demostración, el almacén del que se transfieren los "
+"productos (salida) se llamará \"San Francisco\", y el almacén al que se "
+"transfieren los productos (entrada) se llamará \"San Francisco 2\"."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:44
 msgid "Configure products for inter-warehouse replenishment"
-msgstr ""
+msgstr "Configurar productos para reabastecimientos interalmacenes"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:46
 msgid ""
@@ -5769,6 +5802,10 @@ msgid ""
 "Products --> Products` and select an existing product or :guilabel:`Create` "
 "a new one, if necessary."
 msgstr ""
+"También debe configurar los productos de forma adecuada para que se puedan "
+"transferir entre almacenes. Vaya a :menuselection:`Inventario --> Productos "
+"--> Productos` y seleccione un producto existente o :guilabel:`cree` uno "
+"nuevo si es necesario."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:50
 msgid ""
@@ -5777,14 +5814,18 @@ msgid ""
 "warehouse receiving the transferred products and *Y* being the warehouse "
 "that products are transferred from."
 msgstr ""
+"Posteriormente, vaya a la pestaña :guilabel:`inventario` del formulario de "
+"producto y seleccione la casilla :guilabel:`X: suministrar producto de Y`, "
+"donde *X* es el almacén que recibe los productos del traslado y *Y* es el "
+"almacén del que se trasladan los productos."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst-1
 msgid "Enable the checkbox to resupply one warehouse from another."
-msgstr ""
+msgstr "Casilla para reabastecer productos de un almacén a otro."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:59
 msgid "Replenish one warehouse from another"
-msgstr ""
+msgstr "Reabastecer de un almacén a otro"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:61
 msgid ""
@@ -5793,22 +5834,31 @@ msgid ""
 " be replenished. Click the :guilabel:`Replenish` button on the top left of "
 "the product page and fill out the pop-up form as follows:"
 msgstr ""
+"En el módulo :menuselection:`Inventario`, seleccione "
+":menuselection:`Productos --> Productos` y elija el producto que se "
+"reabastecerá. Haga clic en el botón :guilabel:`reabastecer` en la parte "
+"superior izquierda de la página de producto y complete el formulario "
+"emergente como se muestra a continuación:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:65
 msgid ""
 ":guilabel:`Quantity`: the number of units that will be sent to the warehouse"
 " being replenished"
 msgstr ""
+":guilabel:`Cantidad`: el número de unidades que se enviarán al almacén que "
+"se debe reabastecer."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:66
 msgid ""
 ":guilabel:`Scheduled Date`: the date that the replenishment is scheduled to "
 "take place"
 msgstr ""
+":guilabel:`Fecha programada`: la fecha programada en la que se llevará  a "
+"cabo el reabastecimiento."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:67
 msgid ":guilabel:`Warehouse`: the warehouse that will be replenished"
-msgstr ""
+msgstr ":guilabel:`Almacén`: el almacén que se reabastecerá."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:68
 msgid ""
@@ -5816,10 +5866,13 @@ msgid ""
 "being the warehouse to be replenished and *Y* being the warehouse that the "
 "product will be transferred from"
 msgstr ""
+":guilabel:`Rutas preferidas`: seleccione `X: suministrar producto de Y`, "
+"donde *X* es el almacén que se reabastecerá y *Y* es el almacén del que se "
+"trasladarán los productos."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst-1
 msgid "The form for replenishing a product."
-msgstr ""
+msgstr "Formulario de reabastecimiento de producto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:75
 msgid ""
@@ -5830,10 +5883,16 @@ msgid ""
 "between one and three steps. This document will detail how to process one-"
 "step deliveries and receipts."
 msgstr ""
+"Hacer clic en :guilabel:`confirmar` creará una orden de entrega para la "
+"salida del almacén, junto con una recepción para el almacén que recibirá el "
+"producto. Dependiendo de los ajustes de configuración para la entrada y "
+"salida de los almacenes, procesar las órdenes de entrega y recepciones puede"
+" necesitar de entre uno y tres pasos. Este documento explicará cómo procesar"
+" entregas y recepciones en un solo paso."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:82
 msgid "Process the delivery order"
-msgstr ""
+msgstr "Procesar la orden de entrega"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:84
 msgid ""
@@ -5847,14 +5906,24 @@ msgid ""
 " been dispatched, click the :guilabel:`Validate` button to register the "
 "quantities shipped."
 msgstr ""
+"La primera etapa de una orden de reabastecimiento es procesar la entrega del"
+" almacén del que se traslada el producto. En el tablero de "
+":menuselection:`Inventario`, seleccione el botón :guilabel:`X por procesar` "
+"en la tarjeta :guilabel:`órdenes de entrega` para la salida del almacén, "
+"luego seleccione la orden de entrega que se creó para el reabastecimiento. "
+"En la página de la orden de entrega, haga clic en el botón "
+":guilabel:`comprobar disponibilidad` en la parte superior izquierda para "
+"reservar la cantidad del producto que se trasladará. Una vez que se realice "
+"la entrega, haga clic en el botón :guilabel:`validar` para registrar las "
+"cantidades enviadas."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst-1
 msgid "The delivery orders card for the outgoing warehouse."
-msgstr ""
+msgstr "La tarjeta de órdenes de entrega para la saida del almacén."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:97
 msgid "Process the receipt"
-msgstr ""
+msgstr "Procesar la recepción"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:99
 msgid ""
@@ -5866,6 +5935,13 @@ msgid ""
 ":guilabel:`Validate` button in the top left of the page to register the "
 "quantities received."
 msgstr ""
+"Una vez que la mercancía llega al almacén de entrada, también se debe "
+"procesar la recepción que se crea para ese almacén. Regrese al tablero de "
+":menuselection:`Inventario` y seleccione el botón :guilabel:`X por procesar`"
+" en la tarjeta de :guilabel:`recepciones` para el almacén de entrada, luego "
+"en la recepción que se creó para el reabastecimiento. En la página de "
+"recepciones, haga clic en el botón :guilabel:`validar` en la parte superior "
+"izquierda de la página para registrar las cantidades recibidas."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:109
 msgid ""
@@ -5874,16 +5950,23 @@ msgid ""
 "warehouses can be viewed by returning to the product page and selecting the "
 ":guilabel:`X Units On Hand` button at the top of the screen."
 msgstr ""
+"Después de procesar la recepción, los productos transferidos ahora "
+"aparecerán en el inventario del almacén de entrada. Puede ver los números de"
+" existencias para ambos almacenes si regresa a la página de producto y "
+"selecciona el botón :guilabel:`X unidades a la mano` en la parte superior de"
+" la pantalla."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:114
 msgid "Automate inter-warehouse replenishment"
-msgstr ""
+msgstr "Automatizar el reabastecimiento interalmacenes"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:116
 msgid ""
 "Using reordering rules, it is possible to automate the process of "
 "replenishing one warehouse from another."
 msgstr ""
+"Al utilizar las reglas de reordenamiento es posible automatizar el proceso "
+"de reabastecimiento de un almacén a otro."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:119
 msgid ""
@@ -5893,24 +5976,38 @@ msgid ""
 "top of the form, and then on the next page, click :guilabel:`Create` to "
 "configure the form as follows:"
 msgstr ""
+"Para empezar, vaya a :menuselection:`Inventario --> Productos --> Productos`"
+" y elija el producto que se reabastecerá. En la página de producto, "
+"seleccione el botón inteligente :guilabel:`reglas de reordenamiento` en la "
+"parte superior del formulario. Después, en la siguiente página, haga clic en"
+" :guilabel:`crear` para configurar el formulario como se muestra a "
+"continuación:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:124
 msgid ""
 ":guilabel:`Location`: the location that the reordering rule will replenish "
 "when triggered, in this case, the incoming warehouse"
 msgstr ""
+":guilabel:`Ubicación`: la ubicación que la regla de reordenamiento "
+"reabastecerá cuando se activa. En este caso, es el almacén de entrada."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:126
 msgid ""
 ":guilabel:`Min Quantity`: when the quantity on hand at the incoming "
 "warehouse falls below this number, the reordering rule will be triggered"
 msgstr ""
+":guilabel:`Cantidad mínima`: la regla de reordenamiento se activará cuando "
+"la cantidad a la mano en el almacén de entrada esté por debajo de este "
+"número."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:128
 msgid ""
 ":guilabel:`Max Quantity`: when the reordering rule is triggered, the product"
 " will be replenished at the incoming warehouse up to this quantity"
 msgstr ""
+":guilabel:`Cantidad máxima`: cuando se activa la regla de reordenamiento, el"
+" producto se reabastecerá en el almacén de entrada hasta la cantidad "
+"indicada."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:130
 msgid ""
@@ -5918,6 +6015,9 @@ msgid ""
 "in batches of a certain quantity; for example, a product could be "
 "replenished in batches of 20"
 msgstr ""
+":guilabel:`Cantidad múltiple`: especifique si el producto se debe "
+"reabastecer por lotes de una cantidad determinada. Por ejemplo, un producto "
+"se puede reabastecer en lotes de 20."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:132
 msgid ""
@@ -5925,10 +6025,13 @@ msgid ""
 "value can simply be `Units`, or a specific unit of measurement for weight, "
 "length, etc."
 msgstr ""
+":guilabel:`UdM`: la unidad de medida que se utiliza para reordenar el "
+"producto. Este valor puede ser simplemente `unidades`, o una unidad de "
+"medida específica para peso, longitud, etc."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst-1
 msgid "A fully configured reordering rule."
-msgstr ""
+msgstr "Una regla de reordenamiento configurada por completo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:139
 msgid ""
@@ -5936,6 +6039,9 @@ msgid ""
 " Now, when the scheduler runs automatically each day, a transfer will be "
 "created for each reordering rule that has been triggered."
 msgstr ""
+"Para terminar, haga clic en :guilabel:`guardar`, esto creará la orden de "
+"reordenamiento. Cuando el planificador se ejecute de forma automática cada "
+"día, se creará un traslado para cada regla de reordenamiento activada."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:144
 msgid ""
@@ -5944,6 +6050,10 @@ msgid ""
 "Run Scheduler`, then click the green :guilabel:`Run Scheduler` button in the"
 " pop-up that appears."
 msgstr ""
+"Para activar las reglas de reordenamiento de forma manual, vaya al módulo "
+":menuselection:`Inventario` y seleccione :menuselection:`Operación --> "
+"Ejecutar planificador`, luego haga clic en el botón de color verde "
+":guilabel:`ejecutar planificador` de la ventana emergente."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:148
 msgid ""
@@ -5951,6 +6061,10 @@ msgid ""
 "the outgoing and incoming warehouses, respectively. Both the delivery order "
 "and receipt should be processed using the same method as detailed above."
 msgstr ""
+"Después de la ejecución del planificador, se crearán una orden de entrega y "
+"una recepción para la salida y entrada al almacén, respectivamente. Tanto la"
+" orden de entrega como la recepción se deben procesar con el mismo método "
+"que se explicó anteriormente."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouses_locations.rst:3
 msgid "Manage Warehouses and Locations"
@@ -6995,12 +7109,17 @@ msgid ""
 ":guilabel:`Take From Stock`: the products are taken from the available stock"
 " of the source location."
 msgstr ""
+":guilabel:`Tomar de las existencias`: los productos se toman de las "
+"existencias disponibles en la ubicación de origen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst:265
 msgid ""
 ":guilabel:`Trigger Another Rule`: the system tries to find a stock rule to "
 "bring the products to the source location. The available stock is ignored."
 msgstr ""
+":guilabel:`Activar otra regla`: el sistema trata de encontrar una regla de "
+"existencias para traer los productos a la ubicación de origen. Se ignoran "
+"las existencias disponibles."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst:267
 msgid ""
@@ -7009,6 +7128,10 @@ msgid ""
 " is no stock available, the system tries to find a rule to bring the "
 "products to the source location."
 msgstr ""
+":guilabel:`Tomar de las existencias, si no hay disponibles, activar otra "
+"regla.`: los productos se toman de las existencias disponibles en la "
+"ubicación de origen. Si no hay existencias disponibles, el sistema trata de "
+"encontrar una regla para traer los productos a la ubicación de origen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst:271
 msgid ""
@@ -7016,22 +7139,30 @@ msgid ""
 "the chain's pickings is rescheduled. In case you decide to **Propagate "
 "Rescheduling**, the next move is also to be rescheduled."
 msgstr ""
+"En la sección *planeación* puede determinar cómo se comporta Odoo cuando se "
+"reprograma una de las recolecciones de la cadena. En caso de que decida "
+"**propagar la reprogramación**, también se reprograma el próximo movimiento."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst:275
 msgid ""
 "If you prefer having the choice to reschedule the next move, you can decide "
 "to receive an alert in the form of a *next activity*."
 msgstr ""
+"Si prefiere tener la opción de reprogramar el siguiente movimiento, puede "
+"elegir recibir una alerta mediante una *próxima actividad*."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst:279
 msgid "Sample full route flow"
-msgstr ""
+msgstr "Ejemplo de un flujo de ruta completo"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst:281
 msgid ""
 "In this example, let's use a custom *Pick - Pack - Ship* route to try a full"
 " flow with an advanced custom route."
 msgstr ""
+"En este ejemplo utilizaremos una ruta personalizada de *recolectar - "
+"empaquetar - enviar* para revisar un flujo completo con una ruta "
+"personalizada avanzada."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst:284
 msgid ""
@@ -7039,6 +7170,9 @@ msgid ""
 " three rules, all :guilabel:`Pull From` rules. The :guilabel:`Supply "
 "Methods` for each rule are the following:"
 msgstr ""
+"Para empezar, echemos un vistazo a las reglas de la ruta y sus métodos de "
+"suministro. Tenemos tres reglas, todas son reglas :guilabel:`pull`. Los "
+":guilabel:`métodos de suministro` para cada regla son los siguientes:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst:287
 msgid ""
@@ -7047,6 +7181,10 @@ msgid ""
 ":guilabel:`WH/Stock` to :guilabel:`WH/Packing Zone`) are created from "
 ":guilabel:`WH/Stock` to fulfill the need."
 msgstr ""
+":guilabel:`Tomar de las existencias`: cuando se necesitan productos en la "
+":guilabel:`WH/Zona de empaquetado`, se crean *recolecciones* (traslados "
+"internos de :guilabel:`WH/Stock` a :guilabel:`WH/Zona de empaquetado`) en "
+":guilabel:`WH/Stock` para satisfacer la necesidad."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst:290
 msgid ""
@@ -7055,6 +7193,10 @@ msgid ""
 ":guilabel:`WH/Packing Zone` to :guilabel:`WH/Output`) are created from "
 ":guilabel:`WH/Packing Zone` to fulfill the need."
 msgstr ""
+":guilabel:`Activar otra regla`: cuando se necesitan productos en "
+":guilabel:`WH/Salida`, se crean *paquetes* (traslados internos de "
+":guilabel:`WH/Zona de empaquetado` a :guilabel:`WH/Salida`) en "
+":guilabel:`WH/Zona de empaquetado` para satisfacer la necesidad."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst:293
 msgid ""
@@ -7062,20 +7204,30 @@ msgid ""
 ":guilabel:`Partner Locations/Customers`, *delivery orders* are created from "
 ":guilabel:`WH/Output` to fulfill the need."
 msgstr ""
+":guilabel:`Activar otra regla`: cuando se necesitan productos en "
+":guilabel:`ubicaciones de partner o clientes`, se crean *órdenes de entrega*"
+" de :guilabel:`WH/Salida` para satisfacer la necesidad."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst-1
 msgid "Overview of all the transfers created by the pick - pack - ship route."
 msgstr ""
+"Vista general de todos los traslados que se crearon a partir de la ruta "
+"\"recolectar - empaquetar - enviar\"."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst:301
 msgid ""
 "This means that, when a customer orders products that have a *pick - pack - "
 "ship* route set on it, a delivery order is created to fulfill the order."
 msgstr ""
+"Esto significa que, cuando un cliente ordena productos que tienen "
+"establecida una ruta *recolectar - empaquetar - enviar*, se crea una orden "
+"de entrega para satisfacer la orden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst-1
 msgid "View of the operations created by a pull from transfer."
 msgstr ""
+"Vista de las operaciones que se crearon a partir de un traslado con regla "
+"pull."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst:309
 msgid ""
@@ -7083,23 +7235,31 @@ msgid ""
 "status is not the same. The status will be :guilabel:`Waiting Another "
 "Operation` if the previous transfer in the list is not done yet."
 msgstr ""
+"Aunque el documento de origen de varios traslados sea la misma orden de "
+"venta, el estado no es el mismo. El estado será :guilabel:`en espera de otra"
+" operación` si aún no se realiza el estado anterior en la lista."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst-1
 msgid ""
 "View of the transfers' various statuses at the beginning of the process."
-msgstr ""
+msgstr "Vista de los distintos estados de traslados al inicio del proceso."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst:317
 msgid ""
 "To prepare the delivery order, packed products are needed at the output "
 "area, so an internal transfer is requested from the packing zone."
 msgstr ""
+"Para preparar la orden de entrega se necesita que los productos empaquetados"
+" estén en el área de salida, por lo que se solicita un traslado interno de "
+"la zona de empaquetado."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst-1
 msgid ""
 "View of the detailed operations for a transfer between the packing and "
 "output zones."
 msgstr ""
+"Vista de las operaciones detalladas para un traslado entre las zonas de "
+"empaquetado y de salida."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst:324
 msgid ""
@@ -7117,6 +7277,8 @@ msgid ""
 "View of the detailed operations for a transfer between the stock and packing"
 " zones."
 msgstr ""
+"Vista de las operaciones detalladas para un traslado entre las zonas de "
+"existencias y de empaquetado."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst:331
 msgid ""
@@ -7127,16 +7289,24 @@ msgid ""
 "everything is ready to be processed so the customer can get the ordered "
 "items."
 msgstr ""
+"Como se explicó en la introducción de este documento, el último paso del "
+"proceso (en el caso de esta ruta, la orden de entrega) es el primero que se "
+"debe activar, y este activa otras reglas hasta llegar al primer paso en el "
+"proceso (en este caso, el traslado interno de las existencias al área de "
+"empaquetado). Ahora todo está listo para procesarse y el cliente pueda "
+"recibir los productos ordenados."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst:336
 msgid ""
 "In this example, the product is delivered to the customer when all the rules"
 " have been triggered and the transfers are done."
 msgstr ""
+"En este ejemplo, el producto se entrega a los clientes cuando se han "
+"activado todas las reglas y se han realizado todos los traslados."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst-1
 msgid "View of the transfers' statuses when the route is completed."
-msgstr ""
+msgstr "Vista de los estados de los traslados cuando se completa la ruta."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies.rst:5
 msgid "Putaway & Removal Strategies"
@@ -7144,7 +7314,7 @@ msgstr "Estrategias de remoción y almacenamiento"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:3
 msgid "Putaway rules"
-msgstr ""
+msgstr "Reglas de almacenamiento"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:6
 msgid "What is a Putaway Rule?"
@@ -7157,6 +7327,11 @@ msgid ""
 " uses *Putaway Rules*. Putaway is the process of taking products from the "
 "received shipments and putting them into the appropriate location."
 msgstr ""
+"Una buena implementación de almacén se asegura de que los productos se "
+"muevan de forma automática a su ubicación de destino. Para facilitar este "
+"proceso, Odoo utiliza *reglas de almacenamiento*. El almacenamiento es el "
+"proceso de tomar los productos recibidos y ponerlos en la ubicación "
+"adecuada."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:13
 msgid ""
@@ -7165,6 +7340,10 @@ msgid ""
 "because of a potential chemical reaction. That's where putaway rules "
 "intervene, to avoid storing products wrongly."
 msgstr ""
+"Si, por ejemplo, un almacén contiene sustancias volátiles, es importante "
+"asegurarse de que ciertos productos no se almacenan cerca debido a una "
+"potencial reacción química. Aquí es donde intervienen las reglas de "
+"almacenamiento, para evitar almacenar productos erróneamente."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:20
 msgid ""
@@ -7173,14 +7352,19 @@ msgid ""
 "so, the :guilabel:`Storage Locations` feature is also automatically "
 "activated."
 msgstr ""
+"En la aplicación :guilabel:`Inventario`, vaya a "
+":menuselection:`Configuración --> Ajustes` y active la función "
+":guilabel:`rutas multietapa`. Hacer esto activa la función "
+":guilabel:`ubicaciones de almacenamiento` de forma automática."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst-1
 msgid "Activate Multi-Step Routes in Inventory configuration settings."
 msgstr ""
+"Activar las rutas multietapa en los ajustes de la aplicación Inventario."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:29
 msgid "Setting up a putaway rule"
-msgstr ""
+msgstr "Configurar una regla de almacenamiento"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:31
 msgid ""
@@ -7189,44 +7373,50 @@ msgid ""
 "factors like frequency, size, product category, specific environment needs, "
 "and so on."
 msgstr ""
+"En algunos casos, como el de una tienda minorista que almacena frutas y "
+"verduras, los productos se deben almacenar en ubicaciones distintas "
+"dependiendo de varios factores, como la frecuencia, el tamaño, la categoría "
+"de producto, las necesidades específicas del entorno, etc."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:35
 msgid ""
 "In this example, suppose there is one warehouse location, **WH/Stock**, with"
 " the following sub-locations:"
 msgstr ""
+"En este ejemplo, suponga que hay una ubicación de almacén, **WH/Stock**, con"
+" las siguientes sububicaciones:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:38
 msgid "WH/Stock/Pallets"
-msgstr ""
+msgstr "WH/Stock/Palés"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:40
 msgid "WH/Stock/Pallets/PAL1"
-msgstr ""
+msgstr "WH/Stock/Palés/PAL1"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:41
 msgid "WH/Stock/Pallets/PAL2"
-msgstr ""
+msgstr "WH/Stock/Palés/PAL2"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:42
 msgid "WH/Stock/Pallets/PAL3"
-msgstr ""
+msgstr "WH/Stock/Palés/PAL3"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:44
 msgid "WH/Stock/Shelf 1"
-msgstr ""
+msgstr "WH/Stock/Estante 1"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:46
 msgid "WH/Stock/Shelf 2"
-msgstr ""
+msgstr "WH/Stock/Estante 2"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:48
 msgid "WH/Stock/Shelf 2/Small Refrigerator"
-msgstr ""
+msgstr "WH/Stock/Estante 2/Refrigerador pequeño"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:50
 msgid "WH/Stock/Shelf 3"
-msgstr ""
+msgstr "WH/Stock/Estante 3"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:52
 msgid ""
@@ -7236,6 +7426,12 @@ msgid ""
 "rule that indicated the main location the product will enter before being "
 "redirected to the right storage location."
 msgstr ""
+"Debe gestionar todas estas ubicaciones con reglas de almacenamiento. Para "
+"crear una regla de almacenamiento, abra la aplicación :guilabel:`Inventario`"
+" y vaya a :menuselection:`Configuración --> Reglas de almacenamiento`. "
+"Luego, haga clic en :guilabel:`crear` y configure una regla de "
+"almacenamiento que indique la ubicación principal a la que entrará el "
+"producto antes de ser redirigido a la ubicación de almacenamiento correcta."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:58
 msgid ""
@@ -7243,42 +7439,54 @@ msgid ""
 "package type (the :guilabel:`Packages` setting must be enabled for that). "
 "Putaway rules are read sequentially until a match is found."
 msgstr ""
+"Las reglas de almacenamiento se pueden definir por producto/categoría de "
+"producto y/o por tipo de paquete (se debe habilitar la función "
+":guilabel:`paquetes` para hacerlo). Las reglas de almacenamiento se leen de "
+"forma secuencial hasta que se encuentra una coincidencia."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:62
 msgid "Take the following example:"
-msgstr ""
+msgstr "Considere el siguiente ejemplo:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:64
 msgid ""
 "If water (category All/drinks) is received, whatever the package, it will be"
 " redirected to WH/Stock/Shelf 2/Small Refrigerator."
 msgstr ""
+"Si se recibe agua (pertenece a la categoría Todos/bebidas), sin importar el "
+"paquete, se redirigirá a WH/Stock/Estante 2/Refrigerador pequeño."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:66
 msgid ""
 "If orange juice cans, packaged in boxes, are received, they will be "
 "redirected to WH/Stock/Shelf 2."
 msgstr ""
+"Si se reciben latas de jugo de naranja, empaquetadas en cajas, se "
+"redirigirán a WH/Stock/Estante 2."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:68
 msgid ""
 "If water or apple juice bottles, packaged in boxes, are received, they will "
 "be redirected to WH/Stock/Shelf 3."
 msgstr ""
+"Si se reciben botellas de agua o de jugo de manzana, empaquetadas en cajas, "
+"se redirigirán a WH/Stock/Estante 3."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:70
 msgid ""
 "If a pallet of lemonade cans are receieved, it will be redirected to "
 "WH/Stock/Pallets/PAL1."
 msgstr ""
+"Si se recibe un palé de latas de limonada, se redirigirá a "
+"WH/Stock/Palés/PAL1."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst-1
 msgid "Some examples of putaway rules."
-msgstr ""
+msgstr "Algunos ejemplos de reglas de almacenamiento."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:77
 msgid "Using Storage Categories"
-msgstr ""
+msgstr "Utilizar categorías de almacenamiento"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:79
 msgid ""
@@ -7286,6 +7494,10 @@ msgid ""
 "allow the user to define the quantity of products that can be stored in the "
 "location and how the location will be selected with putaway rules."
 msgstr ""
+"Las *categorías de almacenamiento* son atributos adicionales de las "
+"ubicaciones. Permiten al usuario definir la cantidad de productos que se "
+"pueden almacenar en la ubicación y cómo la ubicación selecciona las reglas "
+"de almacenamiento."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:86
 msgid ""
@@ -7294,10 +7506,14 @@ msgid ""
 "so, the :guilabel:`Storage Locations` feature is also automatically "
 "activated."
 msgstr ""
+"En la aplicación :guilabel:`Inventario`, vaya a "
+":menuselection:`Configuración --> Ajustes` y active la función "
+":guilabel:`Categorías de almacenamiento`. Hacer esto activa la función "
+":guilabel:`ubicaciones de almacenamiento` de forma automática."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:91
 msgid "Create a Storage Category"
-msgstr ""
+msgstr "Crear una categoría de almacenamiento"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:93
 msgid ""
@@ -7307,16 +7523,26 @@ msgid ""
 ":menuselection:`Configuration --> Storage Categories` to create a new "
 "storage category."
 msgstr ""
+"Para crear una categoría de almacenamiento, vaya a "
+":menuselection:`Inventario --> Configuración --> Categorías de "
+"almacenamiento` y haga clic en :guilabel:`crear`. Luego, haga clic en "
+":guilabel:`guardar` y luego en :guilabel:`categorías de almacenamiento`, o "
+"vaya a :menuselection:`Configuración --> Categorías de almacenamiento` para "
+"crear una nueva categoría de almacenamiento."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst-1
 msgid ""
 "Create Storage Categories inside Odoo Inventory configuration settings."
 msgstr ""
+"Crear categorías de almacenamiento en los ajustes de configuración de la "
+"aplicación Inventario de Odoo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:102
 msgid ""
 "First, click :guilabel:`Create` and type a name for the storage category."
 msgstr ""
+"Primero, haga clic en :guilabel:`crear` y escriba el nombre de la categoría "
+"de almacenamiento."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:104
 msgid ""
@@ -7324,74 +7550,94 @@ msgid ""
 "package type. The :guilabel:`Allow New Product` field defines when the "
 "location is considered available to store a product:"
 msgstr ""
+"También hay opciones para limitar la capacidad por peso, por producto o por "
+"tipo de paquete. El campo :guilabel:`permitir nuevo producto` define cuándo "
+"se define la ubicación como disponible para almacenar un producto:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:108
 msgid ""
 ":guilabel:`If location is empty`: a product can be added there only if the "
 "location is empty."
 msgstr ""
+":guilabel:`Si la ubicación está vacía`: se puede agregar un producto solo si"
+" la ubicación está vacía."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:109
 msgid ""
 ":guilabel:`If products are the same`: a product can be added there only if "
 "the same product is already there."
 msgstr ""
+":guilabel:`Si los productos son los mismos`: se puede agregar un producto "
+"solo si ya hay un producto igual ahí."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:111
 msgid ""
 ":guilabel:`Allow mixed products`: several different products can be stored "
 "in this location at the same time."
 msgstr ""
+":guilabel:`Permitir productos mezclados`: se pueden almacenar varios "
+"productos distintos al mismo tiempo en esta ubicación."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:114
 msgid ""
 "Once the storage category settings are saved, the storage category can be "
 "linked to a location."
 msgstr ""
+"Una vez que guarde los ajustes de categoría de almacenamiento, puede "
+"vincularla a una ubicación."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst-1
 msgid ""
 "When a Storage Category is created, it can be linked to a warehouse "
 "location."
 msgstr ""
+"Cuando se crea una categoría de almacenamiento, se puede vincular a una "
+"ubicación de almacén."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:121
 msgid "Storage categories in putaway rules"
-msgstr ""
+msgstr "Usar categorías de almacenamiento en reglas de almacenamiento"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:123
 msgid ""
 "To continue the example from above, apply the \"High Frequency Pallets\" on "
 "the PAL1 and PAL2 locations and rework the putaway rules as follows:"
 msgstr ""
+"Para continuar el ejemplo anterior, aplique la categoría \"palés de alta "
+"frecuencia\" en las ubicaciones PAL1 y PAL2 y reconfigure las reglas de "
+"almacenamiento como se muestra a continuación:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:126
 msgid "Assume one pallet of lemonade cans is received:"
-msgstr ""
+msgstr "Suponga que se recibe un palé de latas de limonada:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:128
 msgid ""
 "If PAL1 and PAL2 are empty, the pallet will be redirected to "
 "WH/Stock/Pallets/PAL1."
 msgstr ""
+"Si PAL1 y PAL2 están vacíos, el palé se redirigirá a WH/Stock/Palés/PAL1."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:129
 msgid ""
 "If PAL1 is full, the pallet will be redirected to WH/Stock/Pallets/PAL2."
-msgstr ""
+msgstr "Si PAL1 está lleno, el palé se redirigirá a WH/Stock/Palés/PAL2."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:130
 msgid ""
 "If PAL1 and 2 are full, the pallet will be redirected to WH/Stock/Pallets."
-msgstr ""
+msgstr "Si PAL1 y PAL2 están llenos, el palé se redirigirá a WH/Stock/Palés."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst-1
 msgid "Storage Categories used in a variety of putaway rules."
 msgstr ""
+"Uso de categorías de almacenamiento en varias reglas de almacenamiento."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:3
 msgid "What is a Removal Strategy (FIFO, LIFO, FEFO, Closest location)?"
 msgstr ""
+"¿Qué es una estrategia de remoción (PEPS, UEPS, FEFO, ubicación más "
+"cercana)?"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:5
 msgid ""
@@ -7399,6 +7645,10 @@ msgid ""
 "the best products, optimize the distance for the worker, for quality control"
 " purposes, or to first move products with the closest expiration date."
 msgstr ""
+"Normalmente, las *estrategias de remoción* se definen en las operaciones de "
+"recolección para seleccionar los mejores productos, optimizar la distancia "
+"para el trabajador, con fines de control de calidad, o para mover primero "
+"los productos con la fecha de caducidad más próxima."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:9
 msgid ""
@@ -7423,10 +7673,15 @@ msgid ""
 "through all these locations, but some rules, such as removal strategies, can"
 " have an effect on which products are taken for the pickings."
 msgstr ""
+"Imagine un plan de almacén genérico, con áreas y muelles de recepción, "
+"ubicaciones de almacenamiento, áreas de recolección y empaquetado, y muelles"
+" de envío. Todos los productos pasan por estas ubicaciones, pero algunas "
+"reglas, como las estrategias de remoción, pueden afectar qué productos se "
+"toman en las recolecciones."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst-1
 msgid "Empty stock waiting for deliveries at the docks."
-msgstr ""
+msgstr "En espera de entrega de existencias en los muelles."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:24
 msgid ""
@@ -7435,10 +7690,15 @@ msgid ""
 "product has an expiration date, the expiration date. After that, products "
 "are stored in their respective locations."
 msgstr ""
+"Aquí, los camiones de los proveedores descargan palés de mercancías en los "
+"muelles. Posteriormente, los operadores escanean los productos en el área de"
+" recepción, con su fecha de recepción y, si la hay, su fecha de caducidad. "
+"Después de esto, los productos se almacenan en sus respectivas ubicaciones."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst-1
 msgid "Products entering stock via the receiving area."
 msgstr ""
+"Productos que ingresan a las existencias a través del área de recepción."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:32
 msgid ""
@@ -7448,18 +7708,28 @@ msgid ""
 "closest date first is preferred. Depending on the chosen removal strategy, "
 "Odoo generates a transfer with the products that fit the settings the best."
 msgstr ""
+"A continuación, se crean varias órdenes para el mismo producto, pero en este"
+" ejemplo no se recibieron las mercancías el mismo día y no tienen fecha de "
+"caducidad. En ese caso, lógicamente, es preferible enviar primero los "
+"productos con la fecha más cercana. Dependiendo de la estrategia de "
+"remoción, Odoo genera un traslado con los productos que son más compatibles "
+"con sus ajustes."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst-1
 msgid ""
 ":alt: Products being packed at the packing area for delivery, taking expiration dates into\n"
 "account."
 msgstr ""
+":alt: Productos que se empaquetan en el área de empaquetado para enviarse, se consideran las fechas de\n"
+"caducidad."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:43
 msgid ""
 "To pick for delivery, the product's lot/serial number can be found on the "
 "transfer form."
 msgstr ""
+"Para recolectar productos para una entrega, puede encontrar sus números de "
+"lote o de serie en el formulario de traslado."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:46
 msgid "How does it work?"
@@ -7475,6 +7745,10 @@ msgid ""
 "products triggers a removal rule, which requests a transfer for the "
 "lot/serial number that has entered the stock first."
 msgstr ""
+"Al utilizar la estrategia *primeras entradas, primeras salidas* (PEPS), la "
+"demanda de algunos productos activa una regla de remoción que solicita un "
+"traslado del número de lote o de serie que ingresó primero a sus "
+"existencias."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:54
 msgid ""
@@ -7482,6 +7756,9 @@ msgid ""
 "three have the following lot numbers: :guilabel:`00001`, :guilabel:`00002`, "
 ":guilabel:`00003`, each with five boxes of nails in it."
 msgstr ""
+"Por ejemplo, imagine que hay tres lotes de clavos en el almacén. Tienen los "
+"siguientes números de lote: :guilabel:`00001`, :guilabel:`00002`, "
+":guilabel:`00003`, cada uno con cinco cajas de clavos."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:58
 msgid ""
@@ -7494,6 +7771,14 @@ msgid ""
 ":guilabel:`00002` is taken next because it has the oldest reception date "
 "after :guilabel:`00001`."
 msgstr ""
+":guilabel:`00001` ingresó a las existencias el 23 de mayo, :guilabel:`00002`"
+" el 25 de mayo y :guilabel:`00003` el 1 de junio. Un cliente ordena seis "
+"cajas el 11 de junio. Si se selecciona la estrategia de remoción :abbr:`PEPS"
+" (primeras entradas, primeras salidas)`, se solicita un traslado para las "
+"cinco cajas de :guilabel:`00001` y una de las cajas de :guilabel:`00002`. "
+"Esto sucede porque :guilabel:`00001` ingresó a las existencias antes que los"
+" demás. La caja de :guilabel:`00002` es la siguiente porque tiene la fecha "
+"de recepción más antigua, después de :guilabel:`00001`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:65
 msgid ""
@@ -7501,6 +7786,9 @@ msgid ""
 " strategy selected, Odoo requests a transfer for the products that have been"
 " in the stock for the longest period."
 msgstr ""
+"Así, para cada orden de un producto con la estrategia :abbr:`PEPS (primeras "
+"entradas, primeras salidas)`, Odoo solicita un traslado de los productos que"
+" llevan en sus existencias la mayor cantidad de tiempo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:69
 msgid "Last In, First Out (LIFO)"
@@ -7513,6 +7801,12 @@ msgid ""
 "Here, a demand for some products triggers a removal rule that requests a "
 "transfer for the lot/serial number that has entered the stock most recently."
 msgstr ""
+"Al igual que para :abbr:`PEPS (primeras entradas, primeras salidas)`, la "
+"estrategia de remoción *últimas entradas, primeras salidas* (UEPS) mueve "
+"productos según la fecha en la que ingresaron a las existencias. En este "
+"caso, la demanda de algunos productos activa una regla de remoción que "
+"solicita un traslado del número de lote o de serie con el ingreso a las "
+"existencias más reciente."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:76
 msgid ""
@@ -7520,6 +7814,9 @@ msgid ""
 "three have the following numbers: :guilabel:`10001`, :guilabel:`10002`, and "
 ":guilabel:`10003`, each with 10 boxes of screws in it."
 msgstr ""
+"Por ejemplo, imagine que hay tres lotes de tornillos en el almacén. Tienen "
+"los siguientes números de lote: :guilabel:`10001`, :guilabel:`10002` y "
+":guilabel:`10003`, cada uno con 10 cajas de tornillos."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:80
 msgid ""
@@ -7530,6 +7827,12 @@ msgid ""
 ":guilabel:`10003` because that lot is the last one to have entered the "
 "stock."
 msgstr ""
+":guilabel:`10001` ingresó a las existencias el 1 de junio, :guilabel:`10002`"
+" el 3 de junio y :guilabel:`10003` el 6 de junio. Un cliente ordena siete "
+"cajas el 8 de junio. Si se selecciona la estrategia de remoción :abbr:`UEPS "
+"(últimas entradas, primeras salidas)`, se solicita un traslado de siete "
+"cajas de :guilabel:`10003` porque ese fue el último lote que ingresó a las "
+"existencias."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:85
 msgid ""
@@ -7537,12 +7840,18 @@ msgid ""
 " Out)` strategy used, a transfer for the last lot to have entered the stock "
 "is requested."
 msgstr ""
+"Básicamente, para cada orden de un producto con la estrategia :abbr:`UEPS "
+"(últimas entradas, primeras salidas)`, se solicita un traslado para el "
+"último lote que ingresó a las existencias."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:89
 msgid ""
 "The :abbr:`LIFO (Last In, First Out)` strategy is banned in many countries "
 "and can lead to only having old or obsolete products in the stock."
 msgstr ""
+"La estrategia :abbr:`UEPS (últimas entradas, primeras salidas)` está "
+"prohibida en muchos países y puede llevar a tener solo productos antiguos u "
+"obsoletos en sus existencias."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:93
 msgid "First Expire, First Out (FEFO)"
@@ -7555,6 +7864,11 @@ msgid ""
 "the expiration date is important, not the date the product entered the "
 "stock."
 msgstr ""
+"La estrategia *primero en expirar, primera salida* (FEFO, por sus siglas en "
+"inglés) es un poco diferente de las dos estrategias de remoción anteriores. "
+"Para :abbr:`FEFO (primero en expirar, primera salida, por sus siglas en "
+"inglés)`, lo que importa es la fecha de expiración y no la fecha de ingreso "
+"a las existencias."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:99
 msgid ""
@@ -7564,6 +7878,11 @@ msgid ""
 "numbers: :guilabel:`20001`, :guilabel:`20002`, and :guilabel:`20003`, each "
 "with five boxes in it."
 msgstr ""
+"Por ejemplo, imagine que hay tres lotes de cajas con seis huevos (en este "
+"caso en específico, no olvide utilizar :doc:`unidades de medida "
+"<../../management/products/uom>`). Los lotes tienen los siguientes números: "
+":guilabel:`20001`, :guilabel:`20002` y :guilabel:`20003`, cada uno con cinco"
+" cajas."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:103
 msgid ""
@@ -7578,6 +7897,16 @@ msgid ""
 ":guilabel:`20001` because has the next closest expiration date after lot "
 ":guilabel:`20002`."
 msgstr ""
+":guilabel:`20001` ingresó a las existencias el 1 de julio y expira el 15 de "
+"julio, :guilabel:`20002` ingresó el 2 de julio y expira el 14 de julio, y "
+":guilabel:`20003` ingresó el 4 de julio y expira el 21 de julio. Un cliente "
+"ordena seis cajas el 5 de julio. Si se selecciona la estrategia :abbr:`FEFO "
+"(primero en expirar, primera salida, por sus siglas en inglés)`, se solicita"
+" un traslado para las cinco cajas de :guilabel:`20002` y una de "
+":guilabel:`20001`. El traslado de todas las cajas en el lote "
+":guilabel:`20002` es debido a que tiene la fecha de expiración más próxima. "
+"El traslado también solicita una caja de :guilabel:`20001` porque tiene la "
+"fecha de expiración más próxima después de :guilabel:`20002`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:112
 msgid ""
@@ -7585,10 +7914,14 @@ msgid ""
 "Expired, First Out)` strategy, a transfer is requested for the product that "
 "has the nearest expiration date from the order date."
 msgstr ""
+"Básicamente, para cada orden de venta de un producto con la estrategia "
+":abbr:`FEFO (primero en expirar, por sus siglas en inglés)`, se solicita un "
+"traslado del producto que tiene la fecha de expiración más próxima a la "
+"orden de la fecha."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:117
 msgid "Closest Location"
-msgstr ""
+msgstr "Ubicación más cercana"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:119
 msgid ""
@@ -7597,6 +7930,10 @@ msgid ""
 " but rather the location of the product. It is commonly used for products "
 "that do not deteriorate with time."
 msgstr ""
+"La estrategia de *ubicación más cercana* es completamente diferente a las "
+"demás estrategias de remoción. No se relaciona con la fecha de ingreso al "
+"almacén, sino a la ubicación del producto. Se utiliza normalmente con "
+"productos que no se deterioran con el tiempo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:123
 msgid ""
@@ -7606,10 +7943,15 @@ msgid ""
 "is on. The closest location is actually the one that comes first in the "
 "alphabetic order."
 msgstr ""
+"El objetivo es evitar que el trabajador del almacén tenga que buscar en lo "
+"más profundo del almacén cuando el producto también se ubica en una "
+"ubicación cercana. Este método solo está disponible si el ajuste "
+":guilabel:`ubicaciones de almacenamiento` está activado. De hecho, la "
+"ubicación más cercana es la que aparece primero en el orden alfabético."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:129
 msgid "Use removal strategies"
-msgstr ""
+msgstr "Utilizar estrategias de remoción"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:131
 msgid ""
@@ -7619,26 +7961,40 @@ msgid ""
 "the :guilabel:`Storage Location`, :guilabel:`Multi-Step Routes`, and "
 ":guilabel:`Lots & Serial Numbers` settings."
 msgstr ""
+"Para diferenciar algunas unidades de otras, debe rastrearlas. Puede hacerlo "
+"por *número de lote* o *de serie*. Para hacerlo, vaya a "
+":menuselection:`Inventario --> Configuración --> Ajustes`. Luego, active las"
+" funciones :guilabel:`ubicación de almacenamiento`, :guilabel:`rutas "
+"multietapa` y :guilabel:`números de lote y de serie`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst-1
 msgid "Features to enable in order to properly use removal strategies."
 msgstr ""
+"Funciones por habilitar para utilizar las estrategias de remoción de forma "
+"adecuada."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:141
 msgid ""
 "To work with the :abbr:`FEFO (First Expired, First Out)` strategy, also "
 "activate the :guilabel:`Expiration Dates` feature."
 msgstr ""
+"Para utilizar la estrategia :abbr:`FEFO (primero en expirar, primera "
+"salida)` también debe activar la función :guilabel:`fechas de expiración`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:144
 msgid ""
 "Next, go to :menuselection:`Inventory --> Configuration --> Product "
 "Categories` to define the removal strategy on a product category."
 msgstr ""
+"A continuación, vaya a :menuselection:`Inventario --> Configuración --> "
+"Categorías de producto` para definir la estrategia de remoción en una "
+"categoría de producto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst-1
 msgid "Force removal strategy set up as first in first out."
 msgstr ""
+"Forzar la estrategia de remoción que se configuró como primeras entradas, "
+"primeras salidas."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:152
 msgid "FIFO (First In, First Out)"
@@ -7651,6 +8007,11 @@ msgid ""
 " if they are selling products with short demand cycles, such as clothes, and"
 " to ensure they are not stuck with outdated styles in stock."
 msgstr ""
+"Como se explicó anteriormente, una estrategia de remoción :abbr:`PEPS "
+"(primeras entradas, primeras salidas)` implica que los productos que se "
+"almacenaron primero son los primeros en salir. Las empresas deben usar este "
+"método si venden productos con ciclos de demanda cortos, como ropa, y así "
+"garantizar que no se quedarán con estilos anticuados en sus existencias."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:158
 msgid ""
@@ -7659,16 +8020,22 @@ msgid ""
 "strategy. In the stock location (:guilabel:`WH/Stock`), the user can find "
 "the three lots available."
 msgstr ""
+"En este ejemplo, tenemos tres lotes de camisas blancas. Las camisas "
+"pertenecen a la categoría :guilabel:`Todos/Ropa`, en la cual se estableció "
+"*PEPS* como su estrategia de remoción. El usuario puede encontrar los tres "
+"lotes disponibles en la ubicación de existencias (:guilabel:`WH/Stock`)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst-1
 msgid "View of the white shirt lots inventory valuation."
-msgstr ""
+msgstr "Vista de la valoración de inventario de los lotes de camisas blancas."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:166
 msgid ""
 "Lot :guilabel:`000001` contains five shirts, :guilabel:`000002` contains "
 "three shirts, and :guilabel:`000003` contains two shirts."
 msgstr ""
+"El lote :guilabel:`000001` contiene cinco camisas, :guilabel:`000002` "
+"contiene tres camisas y :guilabel:`000003` contiene dos camisas."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:169
 msgid ""
@@ -7676,6 +8043,9 @@ msgid ""
 "sales order of six white shirts to check that those products from lot "
 ":guilabel:`000001` are the first ones to move out."
 msgstr ""
+"Como vemos, :guilabel:`000001` ingresó primero a las existencias. Ahora cree"
+" una orden de venta de seis camisas blancas para comprobar que los productos"
+" del lote :guilabel:`000001` son los primeros en salir."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:172
 msgid ""
@@ -7683,10 +8053,13 @@ msgid ""
 "have been reserved thanks to the :abbr:`FIFO (First In, First Out)` "
 "strategy."
 msgstr ""
+"En la orden de entrega vinculada con la recolección se debieron reservar los"
+" números de lote más antiguos gracias a la estrategia :abbr:`PEPS (primeras "
+"entradas, primeras salidas)`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst-1
 msgid "Two lots being reserved for a sales order with the FIFO strategy."
-msgstr ""
+msgstr "Dos lotes reservados para una orden de venta con la estrategia PEPS."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:180
 msgid "LIFO (Last In, First Out)"
@@ -7698,6 +8071,10 @@ msgid ""
 "that are received last move out first. :abbr:`LIFO (Last In, First Out)` is "
 "mostly used for products without a shelf life."
 msgstr ""
+"La estrategia *UEPS* es lo contrario. De hecho, los productos que ingresaron"
+" al último son los primeros en salir. La estrategia :abbr:`UEPS (últimas "
+"entradas, primeras salidas)` se utiliza principalmente con productos sin "
+"vida útil."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:185
 msgid ""
@@ -7706,30 +8083,42 @@ msgid ""
 ":menuselection:`Inventory --> Configuration --> Product Categories` and "
 "change the removal strategy to :abbr:`LIFO (Last In, First Out)`."
 msgstr ""
+"En este ejemplo, volvamos a usar las camisas blancas para probar la "
+"estrategia :abbr:`UEPS (últimas entradas, primeras salidas)`. Primero, abra "
+"la categoría de producto en :menuselection:`Inventario --> Configuración -->"
+" Categorías de producto` y cambie la estrategia de remoción a :abbr:`UEPS "
+"(últimas entradas, primeras salidas)`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst-1
 msgid "Last in first out strategy set up as forced removal strategy."
 msgstr ""
+"Estrategia \"últimas entradas, primeras salidas\" establecida para forzar la"
+" estrategia de remoción."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:193
 msgid ""
 "Then, create a sales order for four white shirts and check that the reserved"
 " products are from lots :guilabel:`000003` and :guilabel:`000002`."
 msgstr ""
+"Luego, cree una orden de venta para cuatro camisas blancas y compruebe que "
+"los productos reservados son de los lotes :guilabel:`000003` y "
+":guilabel:`000002`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst-1
 msgid "Two lots being reserved for sale with the LIFO strategy."
-msgstr ""
+msgstr "Dos lotes reservados para una venta con la estrategia UEPS."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:201
 msgid ""
 "Don't forget that the :abbr:`LIFO (Last In, First Out)` strategy is banned "
 "in many countries!"
 msgstr ""
+"¡No olvide que la estrategia :abbr:`UEPS (últimas entradas, primeras "
+"salidas)` está prohibida en muchos países!"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:204
 msgid "FEFO (First Expired, First Out)"
-msgstr ""
+msgstr "FEFO (primero en expirar, primera salida, por sus siglas en inglés)"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:206
 msgid ""
@@ -7737,6 +8126,10 @@ msgid ""
 "products are picked is not based on the reception date. In this particular "
 "case, they are dispatched according to their expiration date."
 msgstr ""
+"Con la estrategia de remoción :abbr:`FEFO (primero en expirar, primera "
+"salida, por sus siglas en inglés)`, la recolección de los productos no se "
+"basa en la fecha de recepción. En este caso en particular, se envían según "
+"su fecha de expiración."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:211
 msgid ""
@@ -7744,6 +8137,9 @@ msgid ""
 ":doc:`the related doc "
 "<../../management/lots_serial_numbers/expiration_dates>`."
 msgstr ""
+"Para obtener más información sobre fechas de expiración, consulte :doc:`la "
+"documentación relacionada "
+"<../../management/lots_serial_numbers/expiration_dates>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:214
 msgid ""
@@ -7753,10 +8149,15 @@ msgid ""
 "be set by going to :menuselection:`Inventory --> Products --> Lots/Serial "
 "Numbers`."
 msgstr ""
+"Al activar la función :guilabel:`fechas de expiración` es posible definir "
+"distintas fechas de expiración en los números de lote o de serie que se "
+"utilizarán en la estrategia :abbr:`FEFO (primero en expirar, primera "
+"salida)`. Se pueden establecer estas fechas en :menuselection:`Inventario "
+"--> Productos --> Números de lote/de serie`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst-1
 msgid "View of the removal date for 0000001."
-msgstr ""
+msgstr "Vista de la fecha de remoción para 0000001."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:223
 msgid ""
@@ -7784,16 +8185,23 @@ msgid ""
 ":abbr:`FEFO (First Expired, First Out)` in the :guilabel:`Force Removal "
 "Strategy` field."
 msgstr ""
+"Para utilizar la estrategia :abbr:`FEFO (primero en expirar, primera salida,"
+" por sus siglas en inglés)` vaya a :menuselection:`Inventario --> "
+"Configuración --> Categorías de producto` y establezca :abbr:`FEFO (primero "
+"en expirar, primera salida, por sus siglas en inglés)` en el campo "
+":guilabel:`forzar estrategia de remoción`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst-1
 msgid "View of the FEFO strategy being set up as forced removal strategy."
-msgstr ""
+msgstr "Establecer la estrategia FEFO como estrategia de remoción."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:238
 msgid ""
 "For this particular case, the stock has hand cream. There are three lots of "
 "them."
 msgstr ""
+"En este caso en particular, el producto es crema para manos. Tenemos tres "
+"lotes."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:241
 msgid "**Lot / Serial No**"
@@ -7843,10 +8251,15 @@ msgid ""
 " reserves the lots with the closest expiration date, :guilabel:`0000001` and"
 " :guilabel:`0000003`."
 msgstr ""
+"Cuando se crea una orden de venta para 25 unidades de crema para manos, Odoo"
+" reserva de forma automática los lotes con la fecha de expiración más "
+"próxima, :guilabel:`0000001` y :guilabel:`0000003`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst-1
 msgid "Two hand cream lots reserved for sell with the FEFO strategy."
 msgstr ""
+"Dos lotes de crema para manos reservados para la venta con la estrategia "
+"FEFO."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping.rst:5
 msgid "Shipping"
@@ -8565,7 +8978,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:3
 msgid "Set up Sendcloud shipping services in Odoo"
-msgstr ""
+msgstr "Configurar los servicios de envío de Sendcloud en Odoo"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:5
 msgid ""
@@ -8573,20 +8986,27 @@ msgid ""
 "of European shipping carriers with Odoo. Once integrated, users can select "
 "shipping carriers on inventory operations in their Odoo database."
 msgstr ""
+"Sendcloud es un agregador de servicio de envío que facilita la integración "
+"de transportistas europeos en Odoo. Una vez integrado, los usuarios pueden "
+"seleccionar transportistas en las operaciones de inventario de su base de "
+"datos de Odoo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:10
 msgid ""
 "`Sendcloud integration documentation <https://support.sendcloud.com/hc/en-"
 "us/articles /360059470491-Odoo-integration>`_"
 msgstr ""
+"`Documentación de Sendcloud sobre la integración "
+"<https://support.sendcloud.com/hc/en-us/articles /360059470491-Odoo-"
+"integration>`_"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:14
 msgid "Setup in Sendcloud"
-msgstr ""
+msgstr "Configuración en Sendcloud"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:17
 msgid "Create an account and activate carriers"
-msgstr ""
+msgstr "Crear una cuenta y activar transportistas"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:19
 msgid ""
@@ -8594,6 +9014,10 @@ msgid ""
 " configure the account and generate the connector credentials. Log in with "
 "the Sendcloud account, or create a new one if needed."
 msgstr ""
+"Para empezar, vaya a la `plataforma de Sendcloud "
+"<https://www.sendcloud.com>`_ para configurar su cuenta y generar las "
+"credenciales de conector. Inicie sesión con su cuenta de Sendcloud, o cree "
+"una si es necesario."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:24
 msgid ""
@@ -8603,6 +9027,11 @@ msgid ""
 "(or deactivate) the shipping carriers that will be used in the Odoo "
 "database."
 msgstr ""
+"Para crear una nueva cuenta, Sendcloud le solicitará un número de "
+":abbr:`registro de IVA` o un número :abbr:`EORI (identificación y registro "
+"de operadores económicos, por sus siglas en inglés)`. Después de completar "
+"la configuración de la cuenta, active (o desactive) los transportistas que "
+"se utilizarán en la base de datos de Odoo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:30
 msgid ""
@@ -8611,6 +9040,11 @@ msgid ""
 "rules or individual custom carrier contacts, a paid plan of Sendcloud is "
 "required."
 msgstr ""
+"La integración entre Odoo y Sencloud funciona en los planes gratuitos de "
+"Sendcloud *solo* si se vincula una cuenta bancaria, ya que Sendcloud no "
+"realiza envíos gratis. Para utilizar reglas de envío o contactos de "
+"transportistas individuales personalizados se necesita un plan de pago de "
+"Sendcloud."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:37
 msgid ""
@@ -8618,10 +9052,13 @@ msgid ""
 " --> Shipping --> Addresses`, and fill in the field for :guilabel:`Warehouse"
 " address`."
 msgstr ""
+"Una vez que inice sesión en la cuenta de Sendcloud, vaya a "
+":menuselection:`Ajustes --> Envío --> Direcciones` y complete el campo "
+":guilabel:`dirección de almacén`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst-1
 msgid "Adding addresses in the Sendcloud settings."
-msgstr ""
+msgstr "Agregar direcciones en los ajustes de Sendcloud."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:44
 msgid ""
@@ -8630,52 +9067,59 @@ msgid ""
 "called :guilabel:`Address Name (optional)`. The Odoo warehouse name should "
 "be entered here, and the characters should be exactly the same."
 msgstr ""
+"Para permitir que Sendcloud también procese devoluciones se necesita de una "
+":guilabel:`dirección de devolución`. En la sección :guilabel:`varios`, hay "
+"un campo denominado :guilabel:`nombre de la dirección (opcional)`. Ahí debe "
+"ingresar el nombre del almacén en Odoo, y los caracteres deben ser "
+"exactamente los mismos."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:0
 msgid "**SendClould configuration**"
-msgstr ""
+msgstr "**Configuración en Sendclould**"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:0
 msgid ":guilabel:`Miscellaneous`"
-msgstr ""
+msgstr ":guilabel:`Varios`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:0
 msgid ":guilabel:`Address Name (optional)`: `Warehouse #1`"
-msgstr ""
+msgstr ":guilabel:`Nombre de la dirección (opcional)`: `Almacén #1`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:0
 msgid ":guilabel:`Brand`: `Default`"
-msgstr ""
+msgstr ":guilabel:`Marca`: `predeterminada`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:0
 msgid "**Odoo warehouse configuration**"
-msgstr ""
+msgstr "**Configuración del almacén en Odoo**"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:0
 msgid ":guilabel:`Warehouse`: `Warehouse #1`"
-msgstr ""
+msgstr ":guilabel:`Almacén`: `Almacén #1`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:0
 msgid ":guilabel:`Short Name`: `WH`"
-msgstr ""
+msgstr ":guilabel:`Nombre corto`: `WH`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:0
 msgid ":guilabel:`Company`: `My company (San Francisco)`"
-msgstr ""
+msgstr ":guilabel:`Empresa`: `Mi empresa (San Francisco)`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:0
 msgid ":guilabel:`Address`: `My Company (San Francisco)`"
-msgstr ""
+msgstr ":guilabel:`Dirección`: `Mi empresa (San Francisco)`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:61
 msgid ""
 "Notice how the inputs for the :guilabel:`Warehouse` field, for both the Odoo"
 " configuration and the Sendcloud configuration, are the exact same."
 msgstr ""
+"Note como la información ingresada en el campo :guilabel:`almacén` para "
+"ambas configuraciones es exactamente igual."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:65
 msgid "Generate Sendcloud credentials"
-msgstr ""
+msgstr "Generar credenciales Sendcloud"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:67
 msgid ""
@@ -8683,6 +9127,9 @@ msgid ""
 "Integrations` in the menu on the right. Next, search for :guilabel:`Odoo "
 "Native`. Then, click on :guilabel:`Connect`."
 msgstr ""
+"En su cuenta de Sendcloud, vaya a :menuselection:`Ajustes --> Integraciones`"
+" en el menú a la derecha. A continuación, busque :guilabel:`Odoo nativo`. "
+"Posteriormente, haga clic en :guilabel:`conectar`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:70
 msgid ""
@@ -8693,6 +9140,12 @@ msgid ""
 "CompanyName`, with the user's company name replacing `CompanyName` (e.g. "
 "`Odoo StealthyWood`)."
 msgstr ""
+"Después de hacer clic en :guilabel:`conectar`, la página lo redirigirá a la "
+"página de ajustes :guilabel:`API de Sendcloud`, en donde se generan las "
+":guilabel:`claves pública y secreta`. El siguiente paso es darle un nombre a"
+" la :guilabel:`integración`. La convención para los nombres es la siguiente:"
+" `Odoo NombredeEmpresa`, en donde `NombredeEmpresa` es el nombre de la "
+"empresa del usuario (por ejemplo, `Odoo StealthyWood`)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:75
 msgid ""
@@ -8700,10 +9153,14 @@ msgid ""
 "shipping services for this integration. After saving, the :guilabel:`Public "
 "and Secret Keys` are generated."
 msgstr ""
+"Después, seleccione la casilla a lado de :guilabel:`Puntos de servicio` y "
+"seleccione los servicios de envío para esta integración. Después de guardar,"
+" se generan las :guilabel:`claves pública y secreta`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst-1
 msgid "Configuring the Sendcloud integration and receiving the credentials."
 msgstr ""
+"Configuración de la integración con Sendcloud para recibir las credenciales."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:83
 msgid "Setup in Odoo"
@@ -8711,7 +9168,7 @@ msgstr "Configuración en Odoo"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:86
 msgid "Install the Sendcloud shipping module"
-msgstr ""
+msgstr "Instalar el módulo Envío por Sendcloud"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:88
 msgid ""
@@ -8719,14 +9176,17 @@ msgid ""
 " the Odoo database. To get started, go to Odoo's :guilabel:`Apps` module,  "
 "search for the :guilabel:`Sendcloud Shipping` integration, and install it."
 msgstr ""
+"Tras la configuración de la cuenta de Sendcloud debe configurar la base de "
+"datos de Odoo. Para empezar, vaya al módulo :guilabel:`Aplicaciones` de "
+"Odoo, busque la integración de :guilabel:`envío por Sendcloud` e instálela."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst-1
 msgid "Sendcloud Shipping module in the Odoo Apps module."
-msgstr ""
+msgstr "Módulo de envío por Sendcloud en el módulo Aplicaciones de Odoo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:97
 msgid "Sendcloud shipping connector configuration"
-msgstr ""
+msgstr "Configuración del conector de envío por Sendcloud"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:99
 msgid ""
@@ -8735,6 +9195,10 @@ msgid ""
 ":guilabel:`Sendcloud Connector` setting is found under the "
 ":guilabel:`Shipping Connectors` section."
 msgstr ""
+"Una vez instalado, active el módulo :guilabel:`Envío por Sendcloud` en "
+":menuselection:`Inventario --> Configuración --> Ajustes`. El ajuste "
+":guilabel:`conector de Sendcloud` se encuentra en la sección "
+":guilabel:`conectores de envío`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:103
 msgid ""
@@ -8742,6 +9206,10 @@ msgid ""
 ":guilabel:`Sendcloud Shipping Methods` link below the listed connector. Once"
 " on the :guilabel:`Shipping Methods` page, click :guilabel:`Create`."
 msgstr ""
+"Después de activar el :guilabel:`conector de Sendcloud`, haga clic en el "
+"enlace de :guilabel:`métodos de envío de Sendcloud` que se encuentra debajo "
+"del conector. Una vez que esté en la página de :guilabel:`métodos de envío`,"
+" haga clic en :guilabel:`crear`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:108
 msgid ""
@@ -8749,50 +9217,67 @@ msgid ""
 ":menuselection:`Inventory --> Configuration --> Delivery --> Shipping "
 "Methods`."
 msgstr ""
+"También puede acceder a los :guilabel:`métodos de envío` en "
+":menuselection:`Inventario --> Configuración --> Entrega --> Métodos de "
+"envío`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:111
 msgid ""
 "Fill out the following fields in the :guilabel:`New Shipping Method` form:"
 msgstr ""
+"Complete los siguientes campos del formulario del :guilabel:`nuevo método de"
+" envío` form:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:113
 msgid ":guilabel:`Shipping Method`: type `Sendcloud DPD`."
-msgstr ""
+msgstr ":guilabel:`Método de envío`: escriba `Sendcloud DPD`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:114
 msgid ""
 ":guilabel:`Provider`: select :guilabel:`Sendcloud` from the drop-down menu."
 msgstr ""
+":guilabel:`Proveedor`: seleccione :guilabel:`Sendcloud` en el menú "
+"desplegable."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:115
 msgid ""
 ":guilabel:`Delivery Product`: set the product that was configured for this "
 "shipping method or create a new product."
 msgstr ""
+":guilabel:`Producto de envío`: establezca el producto que se configuró para "
+"este método de envío o cree un nuevo producto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:117
 msgid ""
 "In the :guilabel:`SendCloud Configuration` tab, enter the "
 ":guilabel:`Sendcloud Public Key`."
 msgstr ""
+"En la pestaña :guilabel:`configuración de SendCloud`, introduzca la "
+":guilabel:`clave pública de Sendcloud`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:118
 msgid ""
 "In the :guilabel:`SendCloud Configuration` tab, enter the "
 ":guilabel:`Sendcloud Secret Key`."
 msgstr ""
+"En la pestaña :guilabel:`configuración de SendCloud`, introduzca la "
+":guilabel:`clave secreta de Sendcloud`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:119
 msgid ""
 "Manually :guilabel:`Save` the form by clicking the cloud icon next to the "
 ":guilabel:`Shipping Methods / New` breadcrumbs."
 msgstr ""
+":guilabel:`Guarde` el formulario de forma manual al hacer clic en el icono "
+"de nube a lado de las migas de pan :guilabel:`Métodos de envío / Nuevo`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:122
 msgid ""
 "After configuring and saving the form, follow these steps to load the "
 "shipping products:"
 msgstr ""
+"Después de configurar y guardar el formulario, siga los siguientes pasos "
+"para guardar los productos de envío:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:124
 msgid ""
@@ -8800,12 +9285,17 @@ msgid ""
 "Shipping Method` form, click on the :guilabel:`Load your SendCloud shipping "
 "products` link."
 msgstr ""
+"En la pestaña :guilabel:`configuración de SendCloud` del formulario del "
+":guilabel:`nuevo método de envío` haga clic en el enlace que dice "
+":guilabel:`Cargar sus productos de envío de Sendcloud`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:126
 msgid ""
 "Select the shipping products the company would like to use for deliveries "
 "and returns."
 msgstr ""
+"Seleccione los productos de envío que la empresa desea usar para entregas y "
+"devoluciones."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/sendcloud_shipping.rst:127
 msgid "Click :guilabel:`Select`."
