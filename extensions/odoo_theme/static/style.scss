@@ -15,8 +15,6 @@ div[aria-label="related navigation"] {
 }
 
 body {
-    position: relative;
-
     font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
 
     a {
@@ -42,12 +40,6 @@ body {
 
 }
 
-.hidden {
-    display: none !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-}
-
 //------------------------------------------------------------------------------
 // Header with logo, searchbar and switchers
 //------------------------------------------------------------------------------
@@ -66,11 +58,6 @@ header {
         z-index: 10;
     }
 
-    .o_menus button {
-        color: black;
-        color: $gray-800;
-        font-weight: bold;
-}
     .o_main_header {
         height: $o-header-height;
         padding: 0 $o-padding-s;
@@ -182,7 +169,7 @@ header {
         left: -100%;
         z-index: 10;
         width: 90%;
-        height: calc(100% - #{$o-headers-mobile-height});
+        height: calc(100% - #{$o-headers-height});
         transition: all, .3s;
         overflow-y: auto;
         padding-left: $o-padding-s;
@@ -201,10 +188,6 @@ header {
 
         &::-webkit-scrollbar {
             width: 5px;
-        }
-
-        &::-webkit-scrollbar-track {
-            background: $white;
         }
 
         &::-webkit-scrollbar-thumb {
