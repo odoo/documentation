@@ -53,12 +53,18 @@ body {
 //------------------------------------------------------------------------------
 
 header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
+
+    background-color: $o-gray-bg;
+
+    @include media-breakpoint-up(lg) {
+        background-color: white;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+    }
 
     .o_menus button {
         color: black;
@@ -66,12 +72,10 @@ header {
         font-weight: bold;
 }
     .o_main_header {
-        height: $o-header-mobile-height;
+        height: $o-header-height;
         padding: 0 $o-padding-s;
-        background-color: $o-header-bg;
 
         @include media-breakpoint-up(lg) {
-            height: $o-header-height;
             padding: 0 $o-padding-m;
         }
 
@@ -379,7 +383,6 @@ aside.o_page_toc {
     display: grid;
     grid-template-areas: "main";
     grid-template-columns: minmax(0,100%);
-    margin-top: $o-headers-mobile-height;
 
     @include media-breakpoint-up(lg) {
         grid-template-areas: "sidebar main toc";
@@ -577,7 +580,9 @@ main.container-fluid {
 
 article.doc-body {
     position: relative;
-    padding-top: $o-padding-s;
+    @include media-breakpoint-up(lg) {
+        padding-top: $o-padding-s;
+    }
 
     .o_git_link {
         @include o-position-absolute($top: 0px, $right: $o-margin-s);
