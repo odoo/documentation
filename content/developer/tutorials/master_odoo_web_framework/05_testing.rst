@@ -1,5 +1,5 @@
 ==================
-Chapter 7: Testing
+Chapter 5: Testing
 ==================
 
 Automatically testing code is important when working on a codebase. It helps ensure we don't
@@ -48,7 +48,7 @@ It is also useful to test independently a component or a piece of code. :ref:`QU
    #. In the `awesome_tshirt` addon, add a :file:`static/tests/counter_tests.js` file.
    #. Add a QUnit test that instantiates a counter, clicks on it, and makes sure it is incremented.
 
-   .. image:: 07_testing/component_test.png
+   .. image:: 05_testing/component_test.png
       :align: center
 
 .. seealso::
@@ -63,7 +63,7 @@ Many components need more setup to be tested. In particular, we often need to mo
 Let us see how to do that.
 
 .. note::
-   This depends on our Gallery View from :doc:`06_creating_view_from_scratch`.
+   This depends on our Gallery View from :doc:`04_creating_view_from_scratch`.
 
 .. exercise::
 
@@ -72,7 +72,7 @@ Let us see how to do that.
    #. Add another test that checks that when the user clicks on an image, it is switched to the form
       view of the corresponding order.
 
-   .. image:: 07_testing/view_test.png
+   .. image:: 05_testing/view_test.png
       :align: center
 
 .. seealso::

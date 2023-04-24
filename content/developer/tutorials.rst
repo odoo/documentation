@@ -10,6 +10,7 @@ Tutorials
 
     tutorials/getting_started
     tutorials/discover_js_framework
+    tutorials/master_odoo_web_framework
     tutorials/define_module_data
     tutorials/restrict_data_access
     tutorials/unit_tests
@@ -31,9 +32,16 @@ Tutorials
       :tag: Beginner
       :large:
 
-      Learn everything you need to know about the JavaScript framework of Odoo. This tutorial will
-      teach you how to build custom components and views, give life to your application, and even
-      re-introduce the kitten mode.
+      Learn the basics of the JavaScript framework of Odoo. This tutorial will teach you how to work
+      with Owl components and introduce the basic principles underlying the Odoo JavaScript
+      codebase.
+
+   .. card:: Master the Odoo Web Framework
+      :target: tutorials/master_odoo_web_framework
+      :tag: Advanced
+
+      Become an expert in the Odoo Web Framework. A large variety of features are covered such as
+      fields, views, and even the kitten mode.
 
    .. card:: Define module data
       :target: tutorials/define_module_data

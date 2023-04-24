@@ -1,5 +1,5 @@
 ========================
-Chapter 4: Miscellaneous
+Chapter 2: Miscellaneous
 ========================
 
 In the previous task, we learned how to create fields and views. There is still much more to
@@ -29,16 +29,16 @@ discover in the feature-rich Odoo web framework, so let's dive in and explore mo
 
 ..     odoo[Odoo JavaScript framework] --> Owl
 
-.. figure:: 04_miscellaneous/previously_learned.svg
+.. figure:: 02_miscellaneous/previously_learned.svg
    :align: center
    :width: 70%
 
    This is the progress that we have made in discovering the JavaScript web framework at the end of
-   :doc:`03_fields_and_views`.
+   :doc:`01_fields_and_views`.
 
 .. admonition:: Goal
 
-   .. image:: 04_miscellaneous/kitten_mode.png
+   .. image:: 02_miscellaneous/kitten_mode.png
       :align: center
 
 .. spoiler:: Solutions
@@ -50,7 +50,7 @@ discover in the feature-rich Odoo web framework, so let's dive in and explore mo
 ===========================================
 
 .. note::
-   This task depends on :doc:`the previous exercises <03_fields_and_views>`.
+   This task depends on :doc:`the previous exercises <01_fields_and_views>`.
 
 After using the :guilabel:`Print Label` button for some t-shirt tasks, it is apparent that there
 should be some feedback that the `print_label` action is completed (or failed, for example, the
@@ -61,7 +61,7 @@ printer is not connected or ran out of paper).
       completed successfully, and a warning if it failed.
    #. If it failed, the notification should be permanent.
 
-   .. image:: 04_miscellaneous/notification.png
+   .. image:: 02_miscellaneous/notification.png
       :align: center
       :scale: 60%
 
@@ -87,7 +87,7 @@ notifications and provide access to certain features.
    #. Bonus point: avoid making the initial RPC by adding the information to the session info. The
       session info is given to the web client by the server in the initial response.
 
-   .. image:: 04_miscellaneous/systray.png
+   .. image:: 02_miscellaneous/systray.png
       :align: center
 
 .. seealso::
@@ -139,7 +139,7 @@ by pressing `CTRL+K` in the Odoo interface.
 
    Make sure that the command is only active whenever a field preview is visible in the screen.
 
-   .. image:: 04_miscellaneous/new_command.png
+   .. image:: 02_miscellaneous/new_command.png
       :align: center
 
 .. seealso::
@@ -197,11 +197,11 @@ these terms?".
    #. Update the code to display the message on click by using the dialog service. You can use
       `ConfirmationDialog`.
 
-   .. image:: 04_miscellaneous/bafien_eye.png
+   .. image:: 02_miscellaneous/bafien_eye.png
       :align: center
       :scale: 60%
 
-   .. image:: 04_miscellaneous/confirmation_dialog.png
+   .. image:: 02_miscellaneous/confirmation_dialog.png
       :align: center
       :scale: 60%
 
@@ -236,7 +236,7 @@ from a given customer.
    #. Update the code to fetch the list of customers with the tshirt service, and display it in the
       autocomplete component, filtered by the `fuzzyLookup` method.
 
-   .. image:: 04_miscellaneous/autocomplete.png
+   .. image:: 02_miscellaneous/autocomplete.png
       :align: center
       :scale: 60%
 
@@ -274,7 +274,7 @@ the background of Odoo, because we like kittens.
    #. Add a command to the command palette to toggle the kitten mode. Toggling the kitten mode
       should toggle the `.o-kitten-mode` class and update the current URL accordingly.
 
-   .. image:: 04_miscellaneous/kitten_mode.png
+   .. image:: 02_miscellaneous/kitten_mode.png
       :align: center
 
 8. Lazy loading our dashboard
