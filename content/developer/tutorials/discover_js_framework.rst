@@ -1,8 +1,8 @@
 :show-content:
 
-=================================
-Discover the JavaScript Framework
-=================================
+=========================
+Discover the JS Framework
+=========================
 
 .. toctree::
     :titlesonly:
@@ -10,50 +10,36 @@ Discover the JavaScript Framework
 
     discover_js_framework/*
 
-For this training, we will step into the shoes of the IT staff at the fictional company Awesome
-T-Shirt, which is dedicated to printing custom t-shirts for online customers. The Awesome T-Shirt
-company uses Odoo to manage orders and has created a dedicated Odoo module to manage their workflow.
-The project is currently a simple kanban view, with a few columns.
+This tutorial is designed to introduce you to the basics of the Odoo Javascript framework. Whether
+you are new to the framework or have some prior experience, this tutorial will provide you with a
+solid foundation for using the Odoo JavaScript framework in your projects.
 
-The usual process is as follows: a customer looking for a nice t-shirt can simply order it from the
-Awesome T-Shirt site and give the url for any image they want. They must also fill in some basic
-information, such as the desired size and quantity of t-shirts. Once they have confirmed their
-order, and once the payment has been validated, the system will create a task in our application.
+This tutorial is divided into two parts. The first part covers the basics of Owl components, which
+are a key part of the Odoo JS framework. Owl components are reusable UI components that can be used
+to build complex web interfaces quickly and efficiently. We will explore how to create and use Owl
+components in Odoo.
 
-The big boss of Awesome T-shirt, Bafien Carpink, is unhappy with our implementation. He believes
-that by micromanaging more, he will be able to get more revenue from his employees. As the IT staff
-for Awesome T-shirt, we are responsible with improving the system. Various independent tasks must be
-performed.
+The second part of the tutorial focuses on creating a dashboard using various features of Odoo.
+Dashboards are an essential part of any web application, and provide a nice starting point to use
+and interact with the Odoo codebase.
 
-Let us now practice our Odoo skills!
+This tutorial assumes that you have some basic knowledge of development with Odoo in general
+(models, controllers, QWeb, ...). If you are new to Odoo, we recommend that you start with the
+:doc:`Getting started </developer/tutorials/getting_started>` tutorial before proceeding with this
+one.
 
-.. _howtos/discover_js_framework/setup:
+.. _tutorials/discover_js_framework/setup:
 
 Setup
 =====
 
-To follow the training, it is necessary to have basic knowledge on Git and a recent version of Odoo
-installed. If you have not installed it yet, we recommend installing it from :ref:`source
-<setup/install/source>` (:dfn:`running Odoo from source code`).
+#. Clone the `official Odoo tutorials repository <https://github.com/odoo/tutorials>`_ and switch to
+   the branch `{BRANCH}`.
+#. Add the cloned repository to the :option:`--addons-path <odoo-bin --addons-path>`.
+#. Start a new Odoo database and install the modules `owl_playground` and `awesome_tshirt`.
 
-To setup your development environment, you can also follow the dedicated chapter in :doc:`Getting
-Started: Development environment setup <../tutorials/getting_started/02_setup>` tutorial.
+Content
+=======
 
-The last things to do are:
-
-- Clone the `official Odoo tutorials repository <https://github.com/odoo/tutorials>`_ and switch to
-  the branch `{BRANCH}`.
-- Add the cloned repository to the :option:`--addons-path <odoo-bin --addons-path>`.
-- Start a new Odoo database and install the modules `owl_playground`, `awesome_tshirt`, and
-  `awesome_gallery`.
-
-Exercises
-=========
-
-* :doc:`discover_js_framework/01_components`
-* :doc:`discover_js_framework/02_odoo_web_framework`
-* :doc:`discover_js_framework/03_fields_and_views`
-* :doc:`discover_js_framework/04_miscellaneous`
-* :doc:`discover_js_framework/05_custom_kanban_view`
-* :doc:`discover_js_framework/06_creating_view_from_scratch`
-* :doc:`discover_js_framework/07_testing`
+- :doc:`discover_js_framework/01_owl_components`
+- :doc:`discover_js_framework/02_web_framework`

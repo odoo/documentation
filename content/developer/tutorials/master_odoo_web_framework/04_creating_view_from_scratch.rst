@@ -1,9 +1,9 @@
 =======================================
-Chapter 6: Creating a view from scratch
+Chapter 4: Creating a view from scratch
 =======================================
 
 .. warning::
-   It is highly recommended that you complete :doc:`03_fields_and_views` before starting this
+   It is highly recommended that you complete :doc:`01_fields_and_views` before starting this
    chapter. The concepts introduced in Chapter 3, including views and examples, will be essential
    for understanding the material covered in this chapter.
 
@@ -30,7 +30,7 @@ addon includes the necessary server files to add a new view.
 
 .. admonition:: Goal
 
-   .. image:: 06_creating_view_from_scratch/overview.png
+   .. image:: 04_creating_view_from_scratch/overview.png
       :align: center
 
 .. spoiler:: Solutions
@@ -53,10 +53,10 @@ First step is to create a JavaScript implementation with a simple component.
    #. Add `gallery` as one of the view type in the orders action.
    #. Make sure that you can see your hello world component when switching to the gallery view.
 
-   .. image:: 06_creating_view_from_scratch/view_button.png
+   .. image:: 04_creating_view_from_scratch/view_button.png
       :align: center
 
-   .. image:: 06_creating_view_from_scratch/new_view.png
+   .. image:: 04_creating_view_from_scratch/new_view.png
       :align: center
 
 2. Use the Layout component
@@ -71,7 +71,7 @@ have the standard features like other views.
    #. Update the template to use `Layout`. It needs a `display` prop, which can be found in
       `props.display`.
 
-   .. image:: 06_creating_view_from_scratch/layout.png
+   .. image:: 04_creating_view_from_scratch/layout.png
       :align: center
 
 3. Parse the arch
@@ -134,7 +134,7 @@ Let us now get some real data.
    .. note::
       The loading data code will be moved into a proper model in the next exercise.
 
-   .. image:: 06_creating_view_from_scratch/gallery_data.png
+   .. image:: 04_creating_view_from_scratch/gallery_data.png
       :align: center
 
 5. Reorganize code
@@ -157,7 +157,7 @@ to learn how to structure code in Odoo. Also, this will scale better with changi
    Update the renderer to display images in a nice way, if the field is set. If `image_field` is
    empty, display an empty box instead.
 
-   .. image:: 06_creating_view_from_scratch/tshirt_images.png
+   .. image:: 04_creating_view_from_scratch/tshirt_images.png
       :align: center
 
 7. Switch to form view on click
@@ -189,7 +189,7 @@ It is useful to have some additional information on mouse hover.
       char field, a number field or a many2one field.
    #. Update the orders gallery view to add the customer as tooltip field.
 
-   .. image:: 06_creating_view_from_scratch/image_tooltip.png
+   .. image:: 04_creating_view_from_scratch/image_tooltip.png
       :align: center
       :scale: 60%
 
@@ -204,7 +204,7 @@ It is useful to have some additional information on mouse hover.
    Let's add a pager on the control panel and manage all the pagination like in a normal Odoo view.
    Note that it is surprisingly difficult.
 
-   .. image:: 06_creating_view_from_scratch/pagination.png
+   .. image:: 04_creating_view_from_scratch/pagination.png
       :align: center
 
 .. seealso::
