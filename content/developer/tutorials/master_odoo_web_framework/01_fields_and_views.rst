@@ -1,117 +1,93 @@
 ===========================
-Chapter 3: Fields and Views
+Chapter 1: Fields and Views
 ===========================
 
 In the previous chapter, we learned a range of skills, including how to create and use services,
 work with the Layout component, make the dashboard translatable, and lazy load a JavaScript library
-like Chart.js. Now, let's move on to learning how to create new fields and views.
+like Chart.js. Now, let's learn how to create new fields and views.
 
-.. graph TD
-..     subgraph "Owl"
-..         C[Component]
-..         T[Template]
-..         H[Hook]
-..         S[Slot]
-..         E[Event]
-..     end
+.. spoiler:: Solutions
 
-..     subgraph "odoo"[Odoo Javascript framework]
-..         Services
-..         Translation
-..         lazy[Lazy loading libraries]
-..         SCSS
-..         action --> Services
-..         rpc --> Services
-..     end
-
-..     odoo[Odoo JavaScript framework] --> Owl
-
-.. figure:: 03_fields_and_views/previously_learned.svg
-   :align: center
-   :width: 60%
-
-   This is the progress that we have made in discovering the JavaScript web framework at the end of
-   :doc:`02_odoo_web_framework`.
+   The solutions for each exercise of the chapter are hosted on the `official Odoo tutorials
+   repository <https://github.com/odoo/tutorials/commits/{BRANCH}-solutions/awesome_tshirt>`_. It is
+   recommended not to look at them before trying the exercises.
 
 Fields and views are among the most important concepts in the Odoo user interface. They are key to
-many important user interactions, and should therefore work perfectly.
-
-In the context of the JavaScript framework, fields are components specialized for
-visualizing/editing a specific field for a given record.
-
-For example, a (Python) model may define a char field, which will be represented by a field
-component `CharField`.
+many important user interactions, and should therefore work perfectly. In the context of the
+JavaScript framework, fields are components specialized for visualizing/editing a specific field for
+a given record. For example, a (Python) model may define a char field, which will be represented by
+a field component `CharField`.
 
 A field component is basically just a component registered in the `fields` :ref:`registry
 <frontend/registries>`. The field component may define some additional static keys (metadata), such
 as `displayName` or `supportedTypes`, and the most important one: `extractProps`, which prepare the
 base props received by the `CharField`.
 
-.. example::
-   Let us discuss a simplified implementation of a `CharField`.
+Example: a simple field
+=======================
 
-   First, here is the template:
+Let us discuss a simplified implementation of a `CharField`. First, here is the template:
 
-   .. code-block:: xml
+.. code-block:: xml
 
-      <t t-name="web.CharField" owl="1">
-          <t t-if="props.readonly">
-              <span t-esc="formattedValue" />
-          </t>
-          <t t-else="">
-              <input
-                  class="o_input"
-                  t-att-type="props.isPassword ? 'password' : 'text'"
-                  t-att-placeholder="props.placeholder"
-                  t-on-change="updateValue"
-               />
-          </t>
-      </t>
+   <t t-name="web.CharField" owl="1">
+       <t t-if="props.readonly">
+           <span t-esc="formattedValue" />
+       </t>
+       <t t-else="">
+           <input
+               class="o_input"
+               t-att-type="props.isPassword ? 'password' : 'text'"
+               t-att-placeholder="props.placeholder"
+               t-on-change="updateValue"
+           />
+       </t>
+   </t>
 
-   It features a readonly mode and an edit mode, which is an input with a few attributes. Now, here
-   is the JavaScript code:
+It features a readonly mode and an edit mode, which is an input with a few attributes. Now, here
+is the JavaScript code:
 
-   .. code-block:: js
+.. code-block:: js
 
-      export class CharField extends Component {
-          get formattedValue() {
-              return formatChar(this.props.value, { isPassword: this.props.isPassword });
-          }
+   export class CharField extends Component {
+       get formattedValue() {
+           return formatChar(this.props.value, { isPassword: this.props.isPassword });
+       }
 
-          updateValue(ev) {
-             let value = ev.target.value;
-             if (this.props.shouldTrim) {
-                 value = value.trim();
-             }
-             this.props.update(value);
-          }
-      }
+       updateValue(ev) {
+           let value = ev.target.value;
+           if (this.props.shouldTrim) {
+               value = value.trim();
+           }
+           this.props.update(value);
+       }
+   }
 
-      CharField.template = "web.CharField";
-      CharField.displayName = _lt("Text");
-      CharField.supportedTypes = ["char"];
+   CharField.template = "web.CharField";
+   CharField.displayName = _lt("Text");
+   CharField.supportedTypes = ["char"];
 
-      CharField.extractProps = ({ attrs, field }) => {
-          return {
-              shouldTrim: field.trim && !archParseBoolean(attrs.password),
-              maxLength: field.size,
-              isPassword: archParseBoolean(attrs.password),
-              placeholder: attrs.placeholder,
-          };
-      };
+   CharField.extractProps = ({ attrs, field }) => {
+       return {
+           shouldTrim: field.trim && !archParseBoolean(attrs.password),
+           maxLength: field.size,
+           isPassword: archParseBoolean(attrs.password),
+           placeholder: attrs.placeholder,
+       };
+   };
 
-      registry.category("fields").add("char", CharField);
+   registry.category("fields").add("char", CharField);
 
-   There are a few important things to notice:
+There are a few important things to notice:
 
-   - The `CharField` receives its (raw) value in props. It needs to format it before displaying it.
-   - It receives an `update` function in its props, which is used by the field to notify the owner
-     of the state that the value of this field has been changed. Note that the field does not (and
-     should not) maintain a local state with its value. Whenever the change has been applied, it
-     will come back (possibly after an onchange) by the way of the props.
-   - It defines an `extractProps` function. This is a step that translates generic standard props,
-     specific to a view, to specialized props, useful to the component. This allows the component to
-     have a better API, and may make it so that it is reusable.
+- The `CharField` receives its (raw) value in props. It needs to format it before displaying it.
+- It receives an `update` function in its props, which is used by the field to notify the owner of
+  the state that the value of this field has been changed. Note that the field does not (and should
+  not) maintain a local state with its value. Whenever the change has been applied, it will come
+  back (possibly after an onchange) by the way of the props.
+- It defines an `extractProps` function. This is a step that translates generic standard props,
+  specific to a view, to specialized props, useful to the component. This allows the component to
+  have a better API, and may make it so that it is reusable.
 
 Fields have to be registered in the `fields` registry. Once it's done, they can be used in some
 views (namely: `form`, `list`, `kanban`) by using the `widget` attribute.
@@ -121,16 +97,6 @@ views (namely: `form`, `list`, `kanban`) by using the `widget` attribute.
    .. code-block:: xml
 
       <field name="preview_moves" widget="account_resequence_widget"/>
-
-.. admonition:: Goal
-
-   .. image:: 03_fields_and_views/overview_03.png
-      :align: center
-
-.. spoiler:: Solutions
-
-   The solutions for each exercise of the chapter are hosted on the `official Odoo tutorials
-   repository <https://github.com/odoo/tutorials/commits/{BRANCH}-solutions/awesome_tshirt>`_.
 
 1. An `image_preview` field
 ===========================
@@ -154,13 +120,13 @@ field, so it can be edited.
    #. Register your field in the proper :ref:`registry <frontend/registries>`.
    #. Update the arch of the form view to use your new field by setting the `widget` attribute.
 
-   .. note::
-      It is possible to solve this exercise by inheriting `CharField` , but the goal of this
-      exercise is to create a field from scratch.
+.. note::
+   It is possible to solve this exercise by inheriting `CharField` , but the goal of this exercise
+   is to create a field from scratch.
 
-   .. image:: 03_fields_and_views/image_field.png
-      :align: center
-      :scale: 50%
+.. image:: 01_fields_and_views/image_field.png
+   :align: center
+   :scale: 50%
 
 .. seealso::
 
@@ -175,8 +141,8 @@ field, so it can be edited.
    some action should be done. In particular, we want to display a warning "MISSING TSHIRT DESIGN"
    in red if there is no image URL specified on the order.
 
-   .. image:: 03_fields_and_views/missing_image.png
-      :align: center
+.. image:: 01_fields_and_views/missing_image.png
+   :align: center
 
 3. Customizing a field component
 ================================
@@ -195,8 +161,8 @@ whenever it is set to true.
    #. Use it in the list/kanban/form view.
    #. Modify it to add a red `Late` next to it, as requested.
 
-   .. image:: 03_fields_and_views/late_field.png
-      :align: center
+.. image:: 01_fields_and_views/late_field.png
+   :align: center
 
 .. seealso::
 
@@ -222,8 +188,8 @@ insert arbitrary components in the form view. Let us see how we can use it.
      material".
    - Make sure that your widget is updated in real time.
 
-   .. image:: 03_fields_and_views/warning_widget.png
-      :align: center
+.. image:: 01_fields_and_views/warning_widget.png
+   :align: center
 
 .. seealso::
 
@@ -247,11 +213,11 @@ the data has been marked explicitly with a `markup` function.
    #. Modify the previous exercise to put the `image` and `material` words in bold.
    #. The warnings should be markuped, and the template should be modified to use `t-out`.
 
-   .. note::
-      This is an example of a safe use of `t-out` , since the string is static.
+.. note::
+   This is an example of a safe use of `t-out` , since the string is static.
 
-   .. image:: 03_fields_and_views/warning_widget2.png
-      :align: center
+.. image:: 01_fields_and_views/warning_widget2.png
+   :align: center
 
 6. Add buttons in the control panel
 ===================================
@@ -334,7 +300,7 @@ Most (or all?) Odoo views share a common architecture:
 ..     A --- C
 .. ```
 
-.. image:: 03_fields_and_views/view_architecture.svg
+.. image:: 01_fields_and_views/view_architecture.svg
    :align: center
    :width: 75%
    :class: o-no-modal
@@ -389,7 +355,7 @@ There is a service dedicated to calling models methods: `orm_service`, located i
       task stage is `printed`. Otherwise, it is displayed as a secondary button.
    #. Bonus point: clicking twice on the button should not trigger 2 RPCs.
 
-   .. image:: 03_fields_and_views/form_button.png
+   .. image:: 01_fields_and_views/form_button.png
       :align: center
 
 .. seealso::
