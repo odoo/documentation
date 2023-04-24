@@ -1,6 +1,6 @@
-=====================
-Chapter 1: Components
-=====================
+=========================
+Chapter 1: Owl Components
+=========================
 
 This chapter introduces the `Owl framework <https://github.com/odoo/owl>`_, a tailor-made component
 system for Odoo. The main building blocks of OWL are `components
@@ -10,58 +10,64 @@ In Owl, every part of user interface is managed by a component: they hold the lo
 templates that are used to render the user interface. In practice, a component is represented by a
 small JavaScript class subclassing the `Component` class.
 
-.. _jstraining/chapter1/intro_example:
-
-.. example::
-   The `Counter` class implements a component that holds the internal state of a counter and defines
-   how it should be incremented.
-
-   .. code-block:: js
-
-      const { Component, useState } = owl;
-
-       class Counter extends Component {
-           static template = "my_module.Counter";
-
-           state = useState({ value: 0 });
-
-           increment() {
-               this.state.value++;
-           }
-       }
-
-   The `Counter` class specifies the name of the template to render. The template is written in XML
-   and defines a part of user interface.
-
-   .. code-block:: xml
-
-      <templates xml:space="preserve">
-          <t t-name="my_module.Counter" owl="1">
-              <p>Counter: <t t-esc="state.value"/></p>
-              <button class="btn btn-primary" t-on-click="increment">Increment</button>
-          </t>
-      </templates>
-
-   You maybe noticed the `owl="1"` temporary attribute, it allows Odoo to differentiate Owl
-   templates from the old JavaScript framework templates.
-
-Let us take some time to get used to Owl itself. Below, you will find a series of exercises
-intended to quickly understand and practice the basics of Owl.
-
-.. todo:: update screenshot
-
-.. admonition:: Goal
-
-   Here is an overview of what we are going to achieve in this chapter.
-
-   .. image:: 01_components/overview.png
-      :scale: 50%
-      :align: center
+Before getting into the exercises, make sure you have followed all the steps described in this
+:ref:`tutorial introduction <tutorials/discover_js_framework/setup>`.
 
 .. spoiler:: Solutions
 
    The solutions for each exercise of the chapter are hosted on the `official Odoo tutorials
-   repository <https://github.com/odoo/tutorials/commits/{BRANCH}-solutions/owl_playground>`_.
+   repository <https://github.com/odoo/tutorials/commits/{BRANCH}-solutions/owl_playground>`_. It is
+   recommended to try to solve them first without looking at the solution!
+
+.. tip::
+   If you use Chrome as your web browser, you can install the `Owl Devtools` extension. This
+   extension provides many features to help you understand and profile any Owl application.
+
+   `Video: How to use the DevTools <https://www.youtube.com/watch?v=IUyQjwnrpzM>`_
+
+In this chapter, we use the `owl_playground` addon, which provides a simplified environment that
+only contains Owl and a few other files. The goal is to learn Owl itself, without relying on Odoo
+web client code. To get started, open the `/owl_playground/playground` route with your browser: it
+should display an Owl component with the text *hello world*.
+
+Example: a `Counter` component
+==============================
+
+First, let us have a look at a simple example. The `Counter` component shown below is a component
+that maintains an internal number value, displays it, and updates it whenever the user clicks on the
+button.
+
+.. code-block:: js
+
+   import { Component, useState } from "@odoo/owl";
+
+   class Counter extends Component {
+      static template = "my_module.Counter";
+
+      setup() {
+         state = useState({ value: 0 });
+      }
+
+      increment() {
+         this.state.value++;
+      }
+   }
+
+The `Counter` component specifies the name of the template to render. The template is written in XML
+and defines a part of user interface:
+
+.. code-block:: xml
+
+   <templates xml:space="preserve">
+      <t t-name="my_module.Counter" owl="1">
+         <p>Counter: <t t-esc="state.value"/></p>
+         <button class="btn btn-primary" t-on-click="increment">Increment</button>
+      </t>
+   </templates>
+
+You maybe noticed the `owl="1"` temporary attribute, it allows Odoo to differentiate Owl
+templates from the old JavaScript framework templates. Note that Owl templates are not the same
+as QWeb templates: they can contain additional directives, such as `t-on-click`. 
 
 1. Displaying a counter
 =======================
@@ -70,14 +76,10 @@ As a first exercise, let us implement a counter in the `Playground` component lo
 :file:`owl_playground/static/src/`. To see the result, you can go to the `/owl_playground/playground`
 route with your browser.
 
-.. tip::
-   The Odoo JavaScript files downloaded by the browser are minified. For debugging purpose, it's
-   easier when the files are not minified. Switch to :ref:`debug mode with assets <developer-mode/url>` so that the files are not minified.
-
 .. exercise::
 
-   #. Modify :file:`playground.js` so that it acts as a counter like in :ref:`the example above
-      <jstraining/chapter1/intro_example>`. You will need to use the `useState
+   #. Modify :file:`playground.js` so that it acts as a counter like in the example above. You will
+      need to use the `useState
       <{OWL_PATH}/doc/reference/hooks.md#usestate>`_ function so that the component is re-rendered
       whenever any part of the state object has been read by this component is modified.
    #. In the same component, create an `increment` method.
@@ -87,12 +89,14 @@ route with your browser.
       <{OWL_PATH}/doc/reference/event_handling.md#event-handling>`_ attribute in the button to
       trigger the `increment` method whenever the button is clicked.
 
-   .. image:: 01_components/counter.png
-      :scale: 70%
-      :align: center
+.. image:: 01_owl_components/counter.png
+   :scale: 70%
+   :align: center
 
-.. seealso::
-   `Video: How to use the DevTools <https://www.youtube.com/watch?v=IUyQjwnrpzM>`_
+.. tip::
+   The Odoo JavaScript files downloaded by the browser are minified. For debugging purpose, it's
+   easier when the files are not minified. Switch to
+   :ref:`debug mode with assets <developer-mode/url>` so that the files are not minified.
 
 2. Extract counter in a component
 =================================
@@ -138,9 +142,9 @@ todos. This will be done incrementally in multiple exercises that will introduce
                 this.todo = { id: 3, description: "buy milk", done: false };
             }
 
-   .. image:: 01_components/todo.png
-      :scale: 70%
-      :align: center
+.. image:: 01_owl_components/todo.png
+   :scale: 70%
+   :align: center
 
 .. seealso::
    `Owl: Dynamic class attributes <{OWL_PATH}/doc/reference/templates.md#dynamic-class-attribute>`_
@@ -178,9 +182,9 @@ list.
       <{OWL_PATH}/doc/reference/templates.md#loops>`_ in the template.
    #. Think about how it should be keyed with the `t-key` directive.
 
-   .. image:: 01_components/todo_list.png
-      :scale: 70%
-      :align: center
+.. image:: 01_owl_components/todo_list.png
+   :scale: 70%
+   :align: center
 
 6. Adding a todo
 ================
@@ -207,9 +211,9 @@ a todo to the list.
 
          this.todos = useState([]);
 
-   .. image:: 01_components/create_todo.png
-      :scale: 70%
-      :align: center
+.. image:: 01_owl_components/create_todo.png
+   :scale: 70%
+   :align: center
 
 .. seealso::
    `Owl: Reactivity <{OWL_PATH}/doc/reference/reactivity.md>`_
@@ -248,9 +252,9 @@ way to do this is by using a `callback prop
       `toggleState` function with the todo id.
    #. Make it work!
 
-   .. image:: 01_components/toggle_todo.png
-      :scale: 70%
-      :align: center
+.. image:: 01_owl_components/toggle_todo.png
+   :scale: 70%
+   :align: center
 
 9. Deleting todos
 =================
@@ -260,27 +264,25 @@ The final touch is to let the user delete a todo.
 .. exercise::
 
    #. Add a new callback prop `removeTodo`.
-
-   .. tip::
-
-      If you're using an array to store your todo list, you can use the JavaScript `splice` function
-      to remove a todo from it.
-
-      .. code-block::
-
-         // find the index of the element to delete
-         const index = list.findIndex((elem) => elem.id === elemId);
-         if (index >= 0) {
-               // remove the element at index from list
-               list.splice(index, 1);
-         }
-
    #. Insert :code:`<span class="fa fa-remove">` in the template of the `Todo` component.
    #. Whenever the user clicks on it, it should call the `removeTodo` method.
 
-   .. image:: 01_components/delete_todo.png
-      :scale: 70%
-      :align: center
+.. tip::
+   If you're using an array to store your todo list, you can use the JavaScript `splice` function
+   to remove a todo from it.
+
+   .. code-block::
+
+      // find the index of the element to delete
+      const index = list.findIndex((elem) => elem.id === elemId);
+      if (index >= 0) {
+          // remove the element at index from list
+          list.splice(index, 1);
+      }
+
+.. image:: 01_owl_components/delete_todo.png
+   :scale: 70%
+   :align: center
 
 10. Generic components with slots
 =================================
@@ -322,9 +324,9 @@ components. This is useful to factorize the common layout between different part
 
    #. Bonus point: if the `title` slot is not given, the `h5` should not be rendered at all.
 
-    .. image:: 01_components/card.png
-       :scale: 70%
-       :align: center
+.. image:: 01_owl_components/card.png
+   :scale: 70%
+   :align: center
 
 .. seealso::
    `Bootstrap: documentation on cards <https://getbootstrap.com/docs/5.2/components/card/>`_

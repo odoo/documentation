@@ -1,9 +1,9 @@
 =============================
-Chapter 2: Odoo web framework
+Chapter 2: Odoo Web Framework
 =============================
 
-In the previous chapter, we learned to use Owl framework and its different concepts. We can now
-learn how to use the Odoo JavaScript framework which is built on top of Owl.
+The first part of this tutorial introduced you to most of Owl ideas. It is now time to learn
+about the Odoo JavaScript framework in its entirety, as used by the web client.
 
 .. graph TD
 ..     subgraph "Owl"
@@ -16,19 +16,16 @@ learn how to use the Odoo JavaScript framework which is built on top of Owl.
 
 ..     odoo[Odoo JavaScript framework] --> Owl
 
-.. figure:: 02_odoo_web_framework/previously_learned.svg
+.. figure:: 02_web_framework/previously_learned.svg
    :align: center
    :width: 50%
 
-   This is the progress that we have made in discovering the JavaScript web framework at the end of
-   :doc:`01_components`.
-
-In the `awesome_tshirt` module, we will build our Awesome dashboard. This will be a good
-opportunity to discover many useful features in the Odoo JavaScript framework.
+For this chapter, we will start from the empty dashboard provided by the `awesome_tshirt`
+addon. We will progressively add features to it, using the odoo framework.
 
 .. admonition:: Goal
 
-   .. image:: 02_odoo_web_framework/overview_02.png
+   .. image:: 02_web_framework/overview_02.png
       :align: center
 
 .. spoiler:: Solutions
@@ -49,8 +46,8 @@ and a main content zone just below. This is done using a `Layout component
    `Layout` component. You can use :code:`{ "top-right": false, "bottom-right": false }` for the
    `display` props of the `Layout` component.
 
-   .. image:: 02_odoo_web_framework/new_layout.png
-      :align: center
+.. image:: 02_web_framework/new_layout.png
+   :align: center
 
 .. seealso::
 
@@ -97,8 +94,8 @@ services, and components can import a service with the `useService()` hooks.
    #. A button `Cancelled Order`, which opens a list of all orders created in the last 7 days, but
       already cancelled.
 
-   .. image:: 02_odoo_web_framework/navigation_buttons.png
-      :align: center
+.. image:: 02_web_framework/navigation_buttons.png
+   :align: center
 
 .. seealso::
    - `Example: doAction use
@@ -150,8 +147,8 @@ Here is a short explanation on the various arguments:
       - Number of cancelled orders this month
       - Average time for an order to go from 'new' to 'sent' or 'cancelled'
 
-   .. image:: 02_odoo_web_framework/statistics.png
-      :align: center
+.. image:: 02_web_framework/statistics.png
+   :align: center
 
 .. seealso::
 
@@ -222,9 +219,9 @@ chartjs code every time if they don't need it).
       correct quantity for each sold t-shirts in each size (that information is available in the
       statistics route).
 
-      .. image:: 02_odoo_web_framework/pie_chart.png
-         :align: center
-         :scale: 50%
+.. image:: 02_web_framework/pie_chart.png
+   :align: center
+   :scale: 50%
 
 .. seealso::
    - `Example: lazy loading a js file
@@ -245,7 +242,7 @@ Here is a list of some small improvements you could try to do if you have the ti
       corresponding size.
    #. Add a SCSS file and see if you can change the background color of the dashboard action.
 
-   .. image:: 02_odoo_web_framework/misc.png
+   .. image:: 02_web_framework/misc.png
       :align: center
       :scale: 50%
 
