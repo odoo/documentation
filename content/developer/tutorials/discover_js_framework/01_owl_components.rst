@@ -251,7 +251,7 @@ way to do this is by using a `callback prop
       be checked if the state `done` is true.
 
       .. tip::
-         QWeb does not create attributes computed with the `t-att` directive it it evaluates to a
+         QWeb does not create attributes computed with the `t-att` directive if it evaluates to a
          falsy value.
 
    #. Add a callback props `toggleState`.
@@ -309,12 +309,12 @@ components. This is useful to factorize the common layout between different part
          <div class="card" style="width: 18rem;">
              <img src="..." class="card-img-top" alt="..." />
              <div class="card-body">
-             <h5 class="card-title">Card title</h5>
-             <p class="card-text">
-                 Some quick example text to build on the card title and make up the bulk
-                 of the card's content.
-             </p>
-             <a href="#" class="btn btn-primary">Go somewhere</a>
+                 <h5 class="card-title">Card title</h5>
+                 <p class="card-text">
+                     Some quick example text to build on the card title and make up the bulk
+                     of the card's content.
+                 </p>
+                 <a href="#" class="btn btn-primary">Go somewhere</a>
              </div>
          </div>
 
