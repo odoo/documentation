@@ -8,3 +8,4 @@ Tasks
    :titlesonly:
 
    tasks/email_alias
+   tasks/recurring_tasks
