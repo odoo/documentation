@@ -51,21 +51,25 @@ and then push them to GitHub. Skip this section and go to
 
          .. code-block:: console
 
+            $ cd /CommunityPath
             $ git remote add dev git@github.com:<your_github_account>/odoo.git
 
          If you have access to `odoo/enterprise`, configure the related remote too.
 
          .. code-block:: console
 
+            $ cd /EnterprisePath
             $ git remote add dev git@github.com:<your_github_account>/enterprise.git
 
       .. tab:: Link Git with odoo-dev
 
          .. code-block:: console
 
+            $ cd /CommunityPath
             $ git remote add dev git@github.com:odoo-dev/odoo.git
             $ git remote set-url --push origin no_push
 
+            $ cd /EnterprisePath
             $ git remote add dev git@github.com:odoo-dev/enterprise.git
             $ git remote set-url --push origin no_push
 
