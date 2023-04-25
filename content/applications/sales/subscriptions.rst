@@ -4,20 +4,23 @@
 Subscriptions
 =============
 
-**Odoo Subscriptions** is used to run recurring businesses: :ref:`sell new contracts
-<subscriptions/quotations>`, :doc:`upsell customers <subscriptions/upselling>`, keep the churn under
-control, and :doc:`generate reports <subscriptions/reports>` on the main KPIs: MRR, ARR, retention,
-churn, upselling, etc.
+Odoo *Subscriptions* is used to run recurring businesses: :ref:`sell new contracts
+<subscriptions/quotations>`, :doc:`upsell customers </applications/sales/subscriptions/upselling>`,
+keep the churn under control, and :doc:`generate reports
+</applications/sales/subscriptions/reports>` on the main :abbr:`KPIs (Key Performance Indicators)`:
+:abbr:`MRR (Monthly Recurring Revenue)`, :abbr:`ARR (Annual Recurring Revenue)`, retention, churn,
+etc.
 
 .. seealso::
    - `Odoo Tutorials: Subscriptions <https://www.odoo.com/slides/subscription-20>`_
-   - :doc:`subscriptions/products`
-   - :doc:`subscriptions/plans`
-   - :doc:`subscriptions/upselling`
-   - :doc:`subscriptions/renewals`
-   - :doc:`subscriptions/closing`
-   - :doc:`subscriptions/automatic_alerts`
-   - :doc:`subscriptions/reports`
+   - :doc:`/applications/sales/subscriptions/products`
+   - :doc:`/applications/sales/subscriptions/ecommerce`
+   - :doc:`/applications/sales/subscriptions/plans`
+   - :doc:`/applications/sales/subscriptions/upselling`
+   - :doc:`/applications/sales/subscriptions/renewals`
+   - :doc:`/applications/sales/subscriptions/closing`
+   - :doc:`/applications/sales/subscriptions/automatic_alerts`
+   - :doc:`/applications/sales/subscriptions/reports`
 
 .. _subscriptions/quotations:
 
@@ -27,16 +30,17 @@ Subscription quotations
 .. important::
    Sales orders with a defined recurrence become subscriptions.
 
-To create a new subscription, click on :guilabel:`New` from the Subscription or the :doc:`Sales
-<sales>` app. You can either:
+To create a new subscription, click on :guilabel:`New` from the *Subscription* or the :doc:`Sales
+</applications/sales>` app. You can either:
 
-- Select a :doc:`subscription plan <subscriptions/plans>` to prefill the quotation instantly, or
+- Select a :doc:`subscription plan </applications/sales/subscriptions/plans>` to prefill the
+  quotation instantly, or
 - Fill out the quotation normally, making sure to select a recurrence and an end date if necessary
-  and adding :doc:`recurrent products <subscriptions/products>`.
+  and adding :doc:`recurrent products </applications/sales/subscriptions/products>`.
 
 .. tip::
    You can define different invoice and delivery addresses by enabling the :doc:`Customer Addresses
-   <sales/send_quotations/different_addresses>` feature.
+   </applications/sales/sales/send_quotations/different_addresses>` feature.
 
 .. _subscriptions/confirmation:
 
@@ -74,6 +78,7 @@ invoice manually.
    :titlesonly:
 
    subscriptions/products
+   subscriptions/ecommerce
    subscriptions/plans
    subscriptions/upselling
    subscriptions/renewals
