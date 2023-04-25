@@ -639,8 +639,8 @@ API
 .. js:function:: rpc(route, params, settings)
 
     :param string route: route targeted by the request
-    :param Object params: parameters sent to the server
-    :param Object settings (optional): request settings (see below)
+    :param Object params: (optional) parameters sent to the server
+    :param Object settings: (optional) request settings (see below)
 
     The ``settings`` object can contain:
 
