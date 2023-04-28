@@ -85,3 +85,4 @@ Go to :menuselection:`Website --> Configuration --> Settings`, access your chann
 
    livechat/ratings
    livechat/responses
+   livechat/chatbots
