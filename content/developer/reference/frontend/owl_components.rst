@@ -1,7 +1,7 @@
 .. _frontend/components:
 
 ==============
-Owl Components
+Owl components
 ==============
 
 The Odoo Javascript framework uses a custom component framework called Owl. It
