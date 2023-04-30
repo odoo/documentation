@@ -97,6 +97,8 @@ Getters and setters are supported too:
       },
     });
 
+.. _frontend/patching_class:
+
 Patching a javascript class
 ===========================
 
