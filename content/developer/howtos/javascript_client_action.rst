@@ -1,4 +1,6 @@
 
+.. _howtos/javascript_client_action:
+
 ======================
 Create a client action
 ======================
