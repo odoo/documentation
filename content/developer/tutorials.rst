@@ -12,6 +12,7 @@ Tutorials
     tutorials/define_module_data
     tutorials/restrict_data_access
     tutorials/unit_tests
+    tutorials/git
     tutorials/pdf_reports
     tutorials/dashboards
 
@@ -34,7 +35,6 @@ Tutorials
 
    .. card:: Restrict access to data
       :target: tutorials/restrict_data_access
-      :tag: Beginner
 
       Implement security measures to restrict access to sensitive data with the help of groups,
       access rights, and record rules.
@@ -45,6 +45,13 @@ Tutorials
 
       Write effective unit tests in Python to ensure the resilience of your code and safeguard it
       against unexpected behaviors and regressions.
+
+   .. card:: Collaborate using git
+      :target: tutorials/git
+      :tag: Beginner
+
+      Hands on git and github, the two softwares that are used by both Odoo employees and external
+      people to work together on the source code and this documentation.
 
    .. card:: Build PDF reports
       :target: tutorials/pdf_reports
