@@ -6,6 +6,8 @@ In Odoo, there are a variety of ways to specify the amount of products being bou
 sold. *Units of measure*, *packages*, and *packagings* are all available to streamline inventory
 flows, allowing for a variety of configurations for products as they enter and leave the warehouse.
 
+.. _inventory/management/uom-example:
+
 Units of measure
 ================
 
