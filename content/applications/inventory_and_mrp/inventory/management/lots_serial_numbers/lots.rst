@@ -30,6 +30,8 @@ click the :guilabel:`Save` button to save changes.
    :align: center
    :alt: Enabled lots and serial numbers feature in inventory settings.
 
+.. _inventory/management/track_products_by_lots:
+
 Track products by lots
 ======================
 
