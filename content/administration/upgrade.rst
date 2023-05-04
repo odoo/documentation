@@ -196,7 +196,7 @@ Help
 
 .. _upgrade/contact:
 
-Contact our Upgrade service support
+Contact our upgrade service support
 -----------------------------------
 
 Should you have any more questions about the upgrade, do not hesitate to send a message to `Odoo
@@ -219,39 +219,46 @@ upgrade again).
 
 .. _upgrade/sla:
 
-Service Level Agreement
-=======================
+Service-level agreement (SLA)
+=============================
 
-What is covered by the Enterprise Licence?
-------------------------------------------
+With Odoo Enterprise, upgrading a database to the most recent version of Odoo is **free**, including
+any support required to rectify potential discrepancies in the upgraded database.
 
-Databases hosted on Odoo's Cloud platforms (Odoo Online and Odoo.sh) or On-Premise (Self-Hosting)
-enjoy the following services at all times.
+Information about the upgrade services included in the Enterprise Licence is available in the
+:ref:`Odoo Enterprise Subscription Agreement <upgrade>`. However, this section clarifies what
+upgrade services you can expect.
 
-The upgrade of:
+Upgrade services covered by the SLA
+-----------------------------------
 
-* standard applications
-* Studio customization (as long as the :guilabel:`Studio` app is still active)
-* customizations *if* they are covered by a "Maintenance of Customizations" subscription
+Databases hosted on Odoo's cloud platforms (Odoo Online and Odoo.sh) or self-hosted (On-Premise) can
+benefit from upgrade services at all times for:
 
-The Upgrade Service is limited to your database's technical conversion and adaptation (standard
-modules and data) to make it compatible with the targeted version.
+- the upgrade of all **standard applications**;
+- the upgrade of all **customizations created with the Studio app**, as long as Studio is still
+  installed and the respective subscription is still active; and
+- the upgrade of all **developments and customizations covered by a maintenance of customizations
+  subscription**.
 
-What upgrading does NOT cover
------------------------------
+Upgrade services are limited to the technical conversion and adaptation of a database (standard
+modules and data) to make it compatible with the version targeted by the upgrade.
 
-* The cleaning of pre-existing data & configuration while upgrading
-* Any new developments and/or upgrades of your own :ref:`custom modules
-  <upgrade-faq/custom-modules>`
-* Lines of code added to standard modules that are not created with Odoo Studio.
-* `Training <https://www.odoo.com/learn>`_ on the latest version
+Upgrade services not covered by the SLA
+---------------------------------------
 
-You can get more information about your Enterprise Licence on our :ref:`Odoo Enterprise Subscription
-Agreement <upgrade>` page.
+The following upgrade-related services are **not** included:
+
+- the **cleaning** of pre-existing data and configurations while upgrading;
+- the upgrade of **custom modules created in-house or by third parties**, including Odoo partners;
+- lines of **code added to standard modules**, i.e., customizations created outside the Studio app,
+  code entered manually, and :ref:`automated actions using Python code
+  <studio/automated-actions/action>`; and
+- **training** on using the upgraded version's features and workflows.
 
 .. note:: |assistance-contact|
 
 .. seealso::
-   - :doc:`upgrade/faq`
-   - :doc:`odoo_sh`
-   - :doc:`maintain/supported_versions`
+   - :doc:`Upgrade FAQ <upgrade/faq>`
+   - :doc:`Odoo.sh documentation <odoo_sh>`
+   - :doc:`Supported Odoo versions <maintain/supported_versions>`
