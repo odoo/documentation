@@ -4,6 +4,16 @@ PDF reports
 
 With Studio, you can edit existing PDF reports (e.g., orders and quotations) or create new ones.
 
+.. important::
+   To edit a standard PDF report, it is strongly recommended to **duplicate** it and make changes to
+   the duplicated version, as changes made to standard reports will be overwritten after an Odoo
+   upgrade. To duplicate a report, go to :menuselection:`Studio --> Reports`. Hover the mouse
+   pointer on the top right corner of the report, click the vertical ellipsis icon (:guilabel:`⋮`),
+   and then select :guilabel:`Duplicate`.
+
+   .. image:: pdf_reports/duplicate-report.png
+      :alt: Duplicating a PDF report
+
 .. _studio/pdf-reports/default-layout:
 
 Default layout
@@ -29,25 +39,21 @@ Four layouts are available.
    .. tab:: Light
 
       .. image:: pdf_reports/light.png
-         :align: center
          :alt: Light report layout sample
 
    .. tab:: Boxed
 
       .. image:: pdf_reports/boxed.png
-         :align: center
          :alt: Boxed report layout sample
 
    .. tab:: Bold
 
       .. image:: pdf_reports/bold.png
-         :align: center
          :alt: Bold report layout sample
 
    .. tab:: Striped
 
       .. image:: pdf_reports/striped.png
-         :align: center
          :alt: Striped report layout sample
 
 .. _studio/pdf-reports/default-layout/font:
@@ -133,11 +139,10 @@ Use the :guilabel:`Paper format` field to change the paper size of reports. You 
 
 .. tip::
    You can change the :guilabel:`Paper format` on individual reports. Open the app containing the
-   report, then :menuselection:`Toggle Studio --> Reports --> Select or Create a report --> Report
+   report, then go to :menuselection:`Studio --> Reports --> Select or Create a report --> Report
    --> Select a Paper format`.
 
 .. image:: pdf_reports/default-layout.png
-   :align: center
    :alt: Configuration pop-up window for the default layout of PDF reports
 
 .. _studio/pdf-reports/header-footer:
@@ -164,7 +169,6 @@ set on the *Company* model: the :guilabel:`Company Name`, :guilabel:`Phone`, :gu
    To change a company's information, go to :menuselection:`Settings --> Companies --> Update Info`.
 
 .. image:: pdf_reports/external-header.png
-   :align: center
    :alt: Example of an External header
 
 The footer displays the values set on the :ref:`studio/pdf-reports/default-layout/footer`,
@@ -172,7 +176,6 @@ The footer displays the values set on the :ref:`studio/pdf-reports/default-layou
 :ref:`studio/pdf-reports/default-layout/tagline` fields, as well as the page number.
 
 .. image:: pdf_reports/external-footer.png
-   :align: center
    :alt: Example of an External footer
 
 .. _studio/pdf-reports/header-footer/internal:
@@ -226,7 +229,6 @@ Block elements start on a new line and occupy the full width of the page.
   model): *Name*, *Address*, *Phone*, *Mobile*, and *Email*.
 
   .. image:: pdf_reports/address-block.png
-     :align: center
      :alt: Example of an Address Block
 
 .. _studio/pdf-reports/elements/inline:
@@ -257,7 +259,6 @@ Table elements are used together to create a data table.
   <studio/fields/relational-fields/one2many>` field on your model.
 
   .. image:: pdf_reports/data-table.png
-     :align: center
      :alt: Example of a Data table
 
 - :guilabel:`Field Column`: add a new column to the table displaying the values of a :ref:`Related
@@ -307,7 +308,6 @@ Options tab
 Select an element on the report to access the element's options and edit it.
 
 .. image:: pdf_reports/text-options-tab.png
-   :align: center
    :alt: The Options tab for a text element
 
 .. note::
