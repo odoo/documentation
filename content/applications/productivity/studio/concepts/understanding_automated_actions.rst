@@ -39,6 +39,9 @@ For every Trigger option, **conditions** can be applied, such as:
   (*Action To Do*), and after the update.
 
 | The **Active** option is to be turned off when the rule should be hidden and not executed.
+
+.. _studio/automated-actions/actions:
+
 | Under **Action To Do** choose the type of server action that must be executed once records meet
   the *Trigger* conditions:
 
