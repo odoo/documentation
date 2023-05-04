@@ -2,6 +2,8 @@
 What's the difference between lots and serial numbers?
 ======================================================
 
+.. _inventory/management/lots-serial-numbers:
+
 Introduction
 ============
 
