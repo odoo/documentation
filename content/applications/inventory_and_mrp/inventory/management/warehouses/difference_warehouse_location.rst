@@ -6,6 +6,8 @@ In Odoo, a **Warehouse** is the actual building/place in which your items
 are stocked. You can setup multiple warehouses and create moves between
 warehouses.
 
+.. _inventory/warehouses/location-definition:
+
 A **Location**, is a specific space within your warehouse. It can be
 considered as a sublocation of your warehouse, as a shelf, a floor, an
 aisle, etc. Therefore, a location is part of one warehouse only and it
