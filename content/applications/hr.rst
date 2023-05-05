@@ -9,3 +9,4 @@ Human resources
    hr/attendances
    hr/employees
    hr/payroll
+   hr/recruitment
