@@ -6,7 +6,6 @@
 # Translators:
 # Jeana Jiang, 2022
 # Miao Zhou <zhoumiao_nuaa@outlook.com>, 2022
-# Emily Jia <eji@odoo.com>, 2022
 # mrshelly <mrshelly@hotmail.com>, 2022
 # diaojiaolou <124412206@qq.com>, 2022
 # liAnGjiA <liangjia@qq.com>, 2022
@@ -21,15 +20,16 @@
 # Benson <Benson.Dr@Gmail.com>, 2023
 # Datasource International <Hennessy@datasourcegroup.com>, 2023
 # Martin Trigaux, 2023
+# Emily Jia <eji@odoo.com>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-13 05:55+0000\n"
+"POT-Creation-Date: 2023-05-02 14:02+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
-"Last-Translator: Martin Trigaux, 2023\n"
+"Last-Translator: Emily Jia <eji@odoo.com>, 2023\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/odoo/teams/41243/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -4883,6 +4883,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouses_locations.rst:56
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:41
 msgid "Create a new warehouse"
 msgstr ""
 
@@ -5043,72 +5044,359 @@ msgid ""
 msgstr "交货单现已准备好，你可处理并确认交货单。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:3
-msgid "Taking stock from different warehouses"
-msgstr "从不同的仓库盘点库存"
+msgid "Sell stock from multiple warehouses using virtual locations"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:5
 msgid ""
-"When you plan to deliver a customer, you don't know in advance if the "
-"products will come from Warehouse A or Warehouse B. You may, in some cases, "
-"need to take stock from different warehouses. With *Odoo*, you can configure"
-" this by using the concept of virtual warehouses. Let us show you how to set"
-" those virtual warehouses."
+"While keeping stock and selling inventory from one warehouse might work for "
+"smaller companies, bigger companies might need to keep stock in, or sell "
+"from, multiple warehouses in multiple locations."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:11
-msgid "Set up virtual warehouses"
-msgstr "设置虚拟仓库"
-
-#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:13
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:9
 msgid ""
-"Let's say you have two warehouses: Warehouse A and Warehouse B. Create a new"
-" warehouse, that will be a virtual one. It will allow you to take the stock "
-"from A or B. To do so, go to your inventory app settings and enable the "
-"multi-warehouses feature. Then, go to the warehouses menu and click on "
-"create."
+"In Odoo, sometimes products included in a single sales order might take "
+"stock from two (or more) warehouses. In Odoo, pulling products from multiple"
+" warehouses to satisfy sales demands can be done by using *virtual "
+"locations*."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:22
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:14
 msgid ""
-"The *Storage Location* feature will be automatically enabled. Good news, "
-"because you will need it later in the process."
-msgstr "*储存位置*功能将自动开启，因为你在之后的流程中也将使用它。"
+"In order to create virtual locations in warehouses and proceed to the "
+"following steps, the :guilabel:`Storage Locations` and :guilabel:`Multi-Step"
+" Routes` features will need to be enabled in the :menuselection:`Settings` "
+"app."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:18
+msgid ""
+"To do so, go to :menuselection:`Inventory --> Configuration --> Settings`, "
+"scroll down to the :guilabel:`Warehouse` section, and click the checkboxes "
+"next to :guilabel:`Storage Locations` and :guilabel:`Multi-Step Routes`. "
+"Then, :guilabel:`Save` the changes to finish."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:23
+msgid "Create and configure a virtual parent location"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:25
 msgid ""
-"Now, you have to make sure that the main stock locations of warehouse A and "
-"warehouse B are children locations of the main stock location of warehouse A"
-" + B. Go to the locations menu, and edit the main location of your two "
-"warehouses. Then, change their parent location to main location of warehouse"
-" A+B."
+"Before creating any virtual stock locations, a new warehouse will need to be"
+" created. This new warehouse will act as a *virtual* warehouse, and will be "
+"the *parent* location of other physical warehouses."
 msgstr ""
-"现在，你需要确保A仓库和B仓库的主要库存位置是A+B仓库主要库存未知的子库位。前往库位菜单，并编辑两个仓库的主库位。然后，将其父库位更改为A+B仓库的主库位。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:34
-msgid "Sell a product from the virtual warehouse"
-msgstr "从虚拟仓库销售产品"
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:31
+msgid ""
+"Virtual warehouses are great for companies with multiple physical "
+"warehouses. This is because a situation might arise when one warehouse runs "
+"out of stock of a particular product, but another warehouse still has stock "
+"on-hand. In this case, stock from these two (or more) warehouses could be "
+"used to fulfill a single sales order."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:36
 msgid ""
-"Let's say you have two products, one stored in warehouse A and one stored in"
-" warehouse B. Now, you can create a new quotation for one of each product. "
-"Go to other information and choose Warehouse A+B in the shipping "
-"information."
+"The \"virtual\" warehouse acts as a single aggregator of all the inventory "
+"stored in a company's physical warehouses, and is used (for traceability "
+"purposes) to create a hierarchy of locations in Odoo."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:41
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:43
 msgid ""
-"You might find it handy to set the Warehouse A+B as the default warehouse "
-"for each sales person. This way each sale will use the Warehouse A+B as the "
-"default warehouse option."
+"To create a new warehouse, go to :menuselection:`Inventory --> Configuration"
+" --> Warehouses`, and click :guilabel:`Create`. From here, the warehouse "
+":guilabel:`Name` and :guilabel:`Short Name` can be changed, and other "
+"warehouse details can be changed under the :guilabel:`Warehouse "
+"Configuration` tab."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:47
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:48
 msgid ""
-"Once you have done it, you can convert it to a sales order. Then, a delivery"
-" order will be automatically generated, with a product reserved in warehouse"
-" A and one in warehouse B."
-msgstr "完成后，你可将它转换为销售订单。然后，系统将自动生成交货单，在A仓库中预留一种产品，在B仓库中预留另一种产品。"
+"Under the :guilabel:`Shipments` heading, set the number of steps used to "
+"process :guilabel:`Incoming Shipments` and :guilabel:`Outgoing Shipments` by"
+" selecting between the :guilabel:`1 step`, :guilabel:`2 steps`, and "
+":guilabel:`3 steps` radio buttons. The desired option for "
+":guilabel:`Incoming Shipments` and :guilabel:`Outgoing Shipments` will "
+"depend on the warehouse's procurement process, and might differ for "
+"individual products or product categories."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:55
+msgid ""
+":doc:`How to choose the right flow to handle receipts? "
+"</applications/inventory_and_mrp/inventory/management/incoming/handle_receipts>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:57
+msgid ""
+":doc:`How to choose the right inventory flow to handle delivery orders? "
+"</applications/inventory_and_mrp/inventory/management/delivery/inventory_flow>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:60
+msgid ""
+"Under the :guilabel:`Resupply` heading, configure the method(s) for how the "
+"warehouse resupplies its inventory:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:63
+msgid ""
+":guilabel:`Resupply Subcontractors`: resupply subcontractors with components"
+" from this warehouse."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:64
+msgid ""
+":guilabel:`Manufacture to Resupply`: when products are manufactured, they "
+"can be manufactured in this warehouse."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:66
+msgid ""
+":guilabel:`Manufacture`: to produce right away, move the components to the "
+"production location directly and start the manufacturing process; to pick "
+"first and then produce, unload the components from the stock to input "
+"location first, and then transfer it to the production location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:70
+msgid ""
+":guilabel:`Buy to Resupply`: when products are bought, they can be delivered"
+" to this warehouse."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:71
+msgid ""
+":guilabel:`Resupply From`: automatically create routes to resupply this "
+"warehouse from another chosen warehouse"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:75
+msgid ""
+"*Routes* can be set and configured directly from the :guilabel:`Warehouse` "
+"form, by clicking on the :guilabel:`Routes` smart button. Once the warehouse"
+" is configured, virtual *Locations* can be created."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst-1
+msgid "The edit screen for creating a new warehouse."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:83
+msgid ""
+"In order to apply this virtual warehouse as the *parent* location of two "
+"*child* location warehouses, there need to be two warehouses configured with"
+" physical stock locations."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:0
+msgid "**Parent Warehouse**"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:0
+msgid ":guilabel:`Warehouse`: `Virtual Warehouse`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:0
+msgid ":guilabel:`Location`: `VWH`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:0
+msgid "**Child Warehouses**"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:0
+msgid ":guilabel:`Warehouses`: `Warehouse A` and `Warehouse B`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:0
+msgid ":guilabel:`Locations`: `WHA/Stock` and `WHB/Stock`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:97
+msgid "Create a virtual parent location"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:100
+msgid ""
+"In order to take stock from multiple warehouses to fulfill a sales order, "
+"there need to be at least **two** warehouses acting as *child locations* of "
+"the *virtual parent location* warehouse."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:103
+msgid ""
+"To create and edit *Locations*, go to :menuselection:`Inventory --> "
+"Configuration --> Locations`. All :guilabel:`Locations` are listed here, "
+"including the *Stock* :guilabel:`Location` of the virtual warehouse that was"
+" created. Click into the *Stock* :guilabel:`Location` for the virtual "
+"warehouse that was previously created (:dfn:`Warehouse Name/Stock`)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:108
+msgid ""
+"Then, under the :guilabel:`Additional Information` section, change the "
+":guilabel:`Location Type` from :guilabel:`Internal Location` to "
+":guilabel:`View`. :guilabel:`Save` the changes."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:111
+msgid ""
+"This identifies this :guilabel:`Location` as a *virtual location*, which is "
+"used to create a hierarchical structure for a warehouse and aggregate its "
+"*child locations*."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:115
+msgid ""
+"Products can *not* be stored in a :guilabel:`View` :guilabel:`Location "
+"Type`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst-1
+msgid "Warehouse location types in location creation screen."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:122
+msgid "Configure physical warehouse locations"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:124
+msgid ""
+"Navigate back to the :guilabel:`Locations` overview (via the breadcrumbs), "
+"and remove any filters in the :guilabel:`Search Bar`. Then, click into the "
+"first physical warehouse :guilabel:`Location` that was previously created to"
+" be a *child location*, and click :guilabel:`Edit`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:128
+msgid ""
+"Under :guilabel:`Parent Location`, select the virtual warehouse from the "
+"drop-down menu, and :guilabel:`Save` changes. Then, navigate back to the "
+":guilabel:`Locations` overview, and repeat this step for the second physical"
+" warehouse stock location. Be sure to :guilabel:`Save` changes again."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:132
+msgid ""
+"Both locations are now *child locations* of the virtual warehouse *parent "
+"location*. This allows stock to be taken from multiple locations to fulfill "
+"a single sales order, if there is not enough stock in any one location "
+"(provided they are both tied to the same virtual warehouse *parent "
+"location*)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:138
+msgid "Example flow: Sell a product from a virtual warehouse"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:141
+msgid ""
+"To sell products from multiple warehouses using a virtual *parent* location "
+"in this flow, there must be at least **two** products and at least **two** "
+"warehouses configured - with at least **one** product with quantity on-hand "
+"in each warehouse, respectively."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:145
+msgid ""
+"To create a new request for quotation, or RFQ, navigate to the "
+":menuselection:`Sales` app, and click :guilabel:`Create` from the "
+":guilabel:`Quotations` overview. Fill out the information on the new "
+"quotation by adding a :guilabel:`Customer`, and click :guilabel:`Add a "
+"product` to add the two products stored in the two warehouses."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:150
+msgid ""
+"Then, click the :guilabel:`Other Info` tab on the sales order form. Under "
+"the :guilabel:`Delivery` section, change the :guilabel:`Warehouse` field "
+"value listed to the virtual warehouse that was previously created. Once the "
+"warehouse has been changed, click :guilabel:`Confirm` to convert the "
+"quotation into a sales order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:155
+msgid ""
+"Now that the quotation has been confirmed as a sales order, click the "
+":guilabel:`Delivery` smart button. From the warehouse delivery form, confirm"
+" that the :guilabel:`Source Location` value matches the "
+":guilabel:`Warehouse` field value from the sales order. Both should list the"
+" virtual warehouse location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:161
+msgid ""
+"The :guilabel:`Source Location` on the warehouse delivery form and the "
+":guilabel:`Warehouse` under the :guilabel:`Other Info` tab on the sales "
+"order form *must* match in order for the products included in the sales "
+"order to be pulled from different warehouses."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:165
+msgid ""
+"If the virtual warehouse is not the value in the :guilabel:`Source Location`"
+" field on the warehouse delivery form, then click :guilabel:`Edit`, make the"
+" change, and click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:168
+msgid ""
+"If the virtual warehouse is not the value in the :guilabel:`Warehouse` field"
+" on the sales order, then a new quotation may need to be generated."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:170
+msgid ""
+"If whe :guilabel:`Warehouse` field is missing on the sales order form, then "
+"the virtual warehouse (and its children warehouses) may not have been set up"
+" correctly, in which case, review the documentation above again to make sure"
+" all settings/configuration were done properly."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst-1
+msgid "Delivery order with matching source and child locations."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:178
+msgid ""
+"Finally, on the warehouse delivery form, under the :guilabel:`Detailed "
+"Operations` tab, confirm that the *Locations* values under the "
+":guilabel:`From` column for each product matches to the *child locations* "
+"that are tied to the virtual *parent location*."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:183
+msgid ""
+"To view which *Locations* the products are coming from on the drop-down "
+"menus, click the :guilabel:`internal link (arrow)` icon to expand the "
+"*Location* information. If needed, it can be changed from here (granted "
+"there is quantity on hand for the product in that location)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:187
+msgid ""
+"Once everything has been properly set, click :guilabel:`Validate` and then "
+":guilabel:`Apply` to validate the delivery. Then, navigate back to the sales"
+" order form (via the breadcrumbs), and click :guilabel:`Create Invoice` to "
+"invoice for the sales order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:192
+msgid ""
+"To use a virtual *parent* location as the default warehouse for sales "
+"orders, each salesperson can have the virtual warehouse assigned to them "
+"from the drop-down menu next to :guilabel:`Default Warehouse` on their "
+"employee form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst-1
+msgid "Default warehouse location on employee form."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst:3
 msgid "Routes and Pull/Push Rules"
@@ -7720,6 +8008,191 @@ msgstr "`Odoo教程：MRP <https://www.odoo.com/slides/mrp-29>`_"
 msgid ":doc:`IoT Boxes (MES) </applications/productivity/iot>`"
 msgstr ":doc:`IoT Boxes (MES) </applications/productivity/iot>`"
 
+#: ../../content/applications/inventory_and_mrp/manufacturing/maintenance.rst:5
+msgid "Maintenance"
+msgstr "维护保养"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:3
+msgid "Add new equipment"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:5
+msgid ""
+"In Odoo, **equipment** refers to any item that is used in everyday "
+"operations, including the manufacturing of products. This can mean a piece "
+"of machinery on a production line, a tool that is used in different "
+"locations, or a computer in an office space. Equipment registered in Odoo "
+"can be owned by the company that uses the Odoo database, or by a third "
+"party, such as a vendor in the case of equipment rentals."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:11
+msgid ""
+"Using Odoo **Maintenance**, it is possible to track individual pieces of "
+"equipment, along with information about their maintenance requirements. To "
+"add a new piece of equipment, navigate to the :guilabel:`Maintenance` "
+"module, select :menuselection:`Equipments --> Machines & Tools --> Create`, "
+"and configure the equipment as follows:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:16
+msgid ":guilabel:`Equipment Name`: the product name of the piece of equipment"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:17
+msgid ""
+":guilabel:`Equipment Category`: the category that the equipment belongs to; "
+"for example, computers, machinery, tools, etc.; new categories can be "
+"created by navigating to :menuselection:`Configuration --> Equipment "
+"Categories` and clicking :guilabel:`Create`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:20
+msgid ""
+":guilabel:`Company`: the company that owns the equipment; again, this can be"
+" the company that uses the Odoo database, or a third-party company"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:22
+msgid ""
+":guilabel:`Used By`: specify if the equipment is used by a specific "
+"employee, department, or both; select :guilabel:`Other` to specify both an "
+"employee and a department"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:24
+msgid ""
+":guilabel:`Maintenance Team`: the team responsible for servicing the "
+"equipment; new teams can be created by navigating to "
+":menuselection:`Configuration --> Maintenance Teams` and selecting "
+":guilabel:`Create`; the members of each team can also be assigned from this "
+"page"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:27
+msgid ""
+":guilabel:`Technician`: the person responsible for servicing the equipment; "
+"this can be used to assign a specific individual in the event that no "
+"maintenance team is assigned or when a specific member of the assigned team "
+"should always be responsible for the equipment; any person added to Odoo as "
+"a user can be assigned as a technician"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:31
+msgid ""
+":guilabel:`Used in location`: the location where the equipment is used; this"
+" is a simple text field that can be used to specify locations that are not "
+"work centers, like an office, for example"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:34
+msgid ""
+":guilabel:`Work Center`: if the equipment is used at a work center, specify "
+"it here; equipment can also be assigned to a work center by navigating to "
+":menuselection:`Maintenance --> Equipments --> Work Centers`, selecting a "
+"work center or creating a new one using the :guilabel:`Create` button, and "
+"clicking the :guilabel:`Equipment` tab on the work center form"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst-1
+msgid "An example of a fully configured new equipment form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:44
+msgid "Include additional product information"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:46
+msgid ""
+"The :guilabel:`Product Information` tab at the bottom of the form can be "
+"used to provide further details about the piece of equipment:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:49
+msgid ":guilabel:`Vendor`: the vendor that the equipment was purchased from"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:50
+msgid ""
+":guilabel:`Vendor Reference`: the reference code assigned to the vendor"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:51
+msgid ":guilabel:`Model`: the specific model of the piece of equipment"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:52
+msgid ":guilabel:`Serial Number`: the unique serial number of the equipment"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:53
+msgid ""
+":guilabel:`Effective Date`: the date that the equipment became available for"
+" use; this is used to calculate the :abbr:`MTBF (Mean Time Between "
+"Failures)`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:55
+msgid ":guilabel:`Cost`: the amount the equipment was purchased for"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:56
+msgid ""
+":guilabel:`Warranty Expiration Date`: the date on which the equipment's "
+"warranty will expire"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst-1
+msgid "The product information tab for the new piece of equipment."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:63
+msgid "Add maintenance details"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:65
+msgid ""
+"The :guilabel:`Maintenance` tab includes information that can be useful to "
+"maintenance teams:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:67
+msgid ""
+":guilabel:`Preventive Maintenance Frequency`: specifies how often "
+"maintenance should be performed to prevent equipment failure"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:69
+msgid ""
+":guilabel:`Maintenance Duration`: the amount of time required to fix the "
+"equipment when it fails"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:70
+msgid ""
+":guilabel:`Expected Mean Time Between Failure`: the average amount of time "
+"that the equipment is expected to operate before failing"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst-1
+msgid "The maintenance tab for the new piece of equipment."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:78
+msgid ""
+"The :guilabel:`Maintenance` tab also includes sections for :guilabel:`Mean "
+"Time Between Failure`, :guilabel:`Estimated Next Failure`, :guilabel:`Latest"
+" Failure`, and :guilabel:`Mean Time To Repair`. These values are calculated "
+"automatically based on maintenance requests if any exist."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:84
+msgid ""
+"To see the maintenance requests for a piece of equipment, go to the page for"
+" the equipment and select :guilabel:`Maintenance` in the top right corner of"
+" the form."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/manufacturing/management.rst:5
 msgid "Manufacturing management"
 msgstr ""
@@ -9651,265 +10124,793 @@ msgstr "您可以在电子表格应用程序中直接插入透视表的数据，
 msgid "Manage deals"
 msgstr "管理交易"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst:3
-msgid "Purchase agreements: blanket orders and calls for tenders"
-msgstr "采购协议：一揽子订单和招标"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst:5
-msgid ""
-"There are two main types of purchase agreements preconfigured in Odoo: "
-"blanket orders and call for tenders."
-msgstr "在Odoo中预配置了两种主要的采购协议：一揽子订单和招标。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst:8
-msgid ""
-"Blanket orders are long-term agreements between a company and a vendor to "
-"deliver products on a recurring basis with predetermined pricing. Your "
-"company should consider using them when you frequently purchase the same "
-"products from the same vendor in varying quantities and/or at different "
-"times. Among their many benefits, you can save time as the ordering process "
-"is simplified, and money thanks to more advantageous bulk pricing."
-msgstr ""
-"一揽子订单是公司和供应商之间的长期协议，以预定价格定期交付产品。当您经常从同一供应商处购买不同数量和/或不同时间的相同产品时，您的公司应该考虑使用它们。在它们的诸多优点中，您可以通过简化订购过程节省时间，并通过更有利的批量定价节省资金。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst:14
-msgid ""
-"Calls for tenders use a special procedure to request offers from multiple "
-"vendors at the same time. While public sector organizations are often "
-"legally bound to release calls for tenders when they want to purchase goods "
-"or services, private organizations can also use them to get the best deal "
-"among several vendors."
-msgstr ""
-"招标使用特殊程序同时向多个供应商请求报价。虽然公共部门组织在购买商品或服务时通常在法律上有义务发出招标，但私营组织也可以利用它们在几个供应商中获得最佳交易。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst:20
-msgid "Enable purchase agreements"
-msgstr "启用采购协议"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst:22
-msgid ""
-"From the Purchase app, go to :menuselection:`Configuration --> Settings` and"
-" activate *Purchase Agreements*."
-msgstr "从采购进入：菜单选择：`配置-->设置`并激活*购买协议*。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst-1
-msgid "Enable purchase agreements in Odoo Purchase"
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:3
+msgid "Use blanket orders to create purchase agreements with vendors"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst:30
-msgid "Configure or create new types of purchase agreements"
-msgstr "配置或创建新类型的采购协议"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst:32
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:5
 msgid ""
-"Before you start using purchase agreements, make sure they are configured "
-"the way you want by going to :menuselection:`Configuration --> Purchase "
-"Agreement Types`. From there, you can edit the way blanket orders and calls "
-"for tenders or *Create* a new type of purchase agreement. You can configure "
-"the:"
+"Blanket orders are long-term purchase agreements between a company and a "
+"vendor to deliver products on a recurring basis with predetermined pricing. "
+"Using blanket orders are useful when products are always purchased from the "
+"same vendor, but in different quantities at different times."
 msgstr ""
-"在开始使用采购协议之前，请确保按照您想要的方式对其进行配置，方法是：菜单选择：`配置-->采购协议类型`。从那里，你可以编辑一揽子订单和招标的方式，或者*创建*一种新型的采购协议。您可以配置："
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst:37
-msgid "Agreement Type: the name you want to give to the agreement."
-msgstr "协议类型：要为协议指定的名称。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst:39
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:9
 msgid ""
-"Agreement Selection Type: you can either select multiple offers using "
-"*Select multiple RFQ (non-exclusive)*, which is the default setting for both"
-" blanket orders and calls for tenders, or a single offer using *Select only "
-"one RFQ (exclusive)*, which is sometimes needed for calls for tenders where "
-"you only want to select a single vendor."
+"By simplifying the ordering process, blanket orders not only save time, they"
+" also save money, since they can be advantageous when negotiating bulk "
+"pricing with vendors."
 msgstr ""
-"协议选择类型：您可以使用*选择多个询价单（非排他性）*选择多个报价，这是一揽子订单和招标的默认设置，也可以使用*选择一个询价单（独家）*选择单个报价，在您只想选择单个供应商的招标中，有时需要此选项。"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst:44
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:13
+msgid ":doc:`calls_for_tenders`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:16
+msgid "Create a new blanket order"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:18
 msgid ""
-"Lines: generally, you would always want to select *Use lines of agreement*, "
-"which are the different product lines you can configure when you set up your"
-" purchase agreement. However, you can select *Do not create RfQ lines "
-"automatically* if you don't want your requests for quotations to be pre-"
-"filled in with that information."
+"To create blanket orders, the *Purchase Agreements* feature first needs to "
+"be enabled in the settings of the *Purchase* app. To do this, go to "
+":menuselection:`Purchase --> Configuration --> Settings`, and under the "
+":guilabel:`Orders` section, click the checkbox next to :guilabel:`Purchase "
+"Agreements`. Doing so will enable the ability to create blanket orders, as "
+"well as alternative requests for quotation (RFQs)."
 msgstr ""
-"行：通常，您总是希望选择*使用协议行*，这是您在设置采购协议时可以配置的不同产品线。但是，如果您不希望在报价请求中预先填写该信息，您可以选择*不自动创建"
-" RfQ 行*。"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst:49
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst-1
+msgid "Purchase Agreements enabled in the Purshase app settings."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:28
 msgid ""
-"Quantities: if you use lines of agreements, you can also specify "
-"independently if the products' quantities should be used to pre-fill new "
-"requests for quotations. The default option for blanket orders is *Set "
-"quantities manually*, while for calls for tenders are set to *Use quantities"
-" of agreement*."
-msgstr ""
-"数量：如果您使用协议行，您还可以单独指定是否应使用产品数量来预先填写新的报价请求。一揽子订单的默认选项是*手动设置数量*，而招标设置为*使用协议数量*。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst-1
-msgid "Configure purchase agreements types in Odoo Purchase"
+"To create a blanket order, go to :menuselection:`Purchase --> Orders --> "
+"blanket orders`, and click :guilabel:`New`. This creates (and navigates to) "
+"a new blanket order form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst:59
-msgid "Set up a blanket order"
-msgstr "建立一揽子订单"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst:61
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:31
 msgid ""
-"Go to :menuselection:`Orders --> Purchase Agreements` and click on *Create*."
-" Select *Blanket Order* as your *Agreement Type*. Next, select the vendor. "
-"The other fields aren't mandatory."
+"From this new blanket order form, different fields and settings can be "
+"configured, so there are pre-determined rules that the recurring long-term "
+"agreement must follow:"
 msgstr ""
-"转到 :menuselection:“Orders --> Purchase Agreements” 并单击 "
-"*Create*。选择*一揽子订单*作为您的*协议类型*。接下来，选择供应商。其他字段不是强制性的。"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst:64
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:34
 msgid ""
-"Next, add the products you want to order and their price. Note that you can "
-"also add a *Quantity* for each product, for example, if you have agreed with"
-" your vendor to order a specific minimum quantity each time or in total. If "
-"you have configured your blanket order to *Set quantities manually*, this is"
-" only used for informational purposes."
-msgstr ""
-"接下来，添加您想要订购的产品及其价格。请注意，您还可以为每个产品添加*数量*，例如，如果您已与供应商约定每次或总共订购特定的最小数量。如果您已将一揽子订单配置为*手动设置数量*，则这仅用于提供信息。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst-1
-msgid "Set up a blanket order in Odoo Purchase"
+":guilabel:`Purchase Representative`: is the user assigned to this specific "
+"blanket order. By default, this is the user who created the agreement; the "
+"user can be changed directly from the drop-down menu next to this field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst:73
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:37
 msgid ""
-"You can also write any *Terms and Conditions* at the bottom of the "
-"agreement. Once you are satisfied with your blanket order, click on "
-"*Confirm*. Its status then changes from *Draft* to *Ongoing* and it's ready "
-"to be used."
-msgstr ""
-"您还可以在协议底部写下任何*期限和条件*。一旦您对一揽子订单感到满意，请单击 *Confirm*。然后它的状态从 *Draft* 变为 "
-"*Ongoing* 并且可以使用了。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst:78
-msgid "Create requests for quotation from the blanket order"
-msgstr "从一揽子订单中创建报价请求"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst:80
-msgid ""
-"You can now create new quotations from the blanket order whenever you need "
-"it by clicking on *New Quotation*. Odoo automatically fills in requests for "
-"quotation with the information initially defined when you set up the blanket"
-" order. Depending on the way you configured the *Purchase Agreement Type*, "
-"product lines can also be pre-filled."
-msgstr ""
-"现在，您可以在需要时通过单击*新报价*，从一揽子订单中创建新报价。Odoo会自动使用您设置一揽子订单时最初定义的信息填写报价请求。根据您配置*采购协议类型*的方式，还可以预填充产品线。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst:85
-msgid ""
-"From here, you can quickly view all the requests for quotations made under "
-"that blanket order by clicking on *RFQs/Orders*."
-msgstr "从这里，您可以通过单击*询价单/订单*快速查看该一揽子订单下的所有报价请求。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst-1
-msgid "Create new quotations for an ongoing blanket order in Odoo Purchase"
+":guilabel:`Agreement Type`: is the type of purchase agreement this blanket "
+"order is classified as. In Odoo, blanket orders are the only official "
+"purchase agreement."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst:93
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:39
 msgid ""
-"You can also create a *Request for Quotation* the usual way and then link it"
-" to an existing *Blanket Order*."
-msgstr "你也可以用通常的方式创建一个*询价单*，然后将其链接到现有的*一揽子订单*。"
+":guilabel:`Vendor`: is the supplier to whom this agreement is tied, either "
+"once or on a recurring basis. The vendor can be selected directly from the "
+"drop-down menu next to this field."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst:97
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:41
+msgid ""
+":guilabel:`Currency`: is the agreed-upon currency that will be used for this"
+" exchange. If multiple currencies have been activated in the database, the "
+"currency can be changed from the drop-down menu next to this field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:44
+msgid ""
+":guilabel:`Agreement Deadline`: is the date that this purchase agreement "
+"will be set to expire on (if desired). If this blanket order should not "
+"expire, leave this field blank."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:46
+msgid ""
+":guilabel:`Ordering Date`: is the date that this blanket order should be "
+"placed on if a new quotation is created directly from the blanket order "
+"form. If a new quotation is created, this value will automatically populate "
+"the *Order Deadline* field on the :abbr:`RFQ (Request for Quotation)`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:50
+msgid ""
+":guilabel:`Delivery Date`: is the expected delivery date that the products "
+"included in an :abbr:`RFQ (Request for Quotation)` created directly from the"
+" blanket order form will be expected to arrive. If a new quotation is "
+"created, this value will automatically populate the *Expected Arrival* field"
+" on the :abbr:`RFQ (Request for Quotation)`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:54
+msgid ""
+":guilabel:`Source Document`: is the source purchase order (PO) that this "
+"blanket order will be tied to. If this blanket order should not be tied to "
+"any existing :abbr:`POs (Purchase Orders)`, leave this field blank."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:57
+msgid ""
+":guilabel:`Company`: is the company assigned to this specific blanket order."
+" By default, this is the company that the user creating the blanket order is"
+" listed under. If the database is not a multi-company database, this field "
+"can not be changed, and will default to the only company listed in the "
+"database."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst-1
+msgid "New blanket order purchase agreement with added products."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:66
+msgid ""
+"Once all relevant fields have been filled out, click :guilabel:`Add a line` "
+"to add products under the :guilabel:`Product` column. Then, change the "
+"quantity of each product in the :guilabel:`Quantity` column (if desired), "
+"and set a price in the :guilabel:`Unit Price` column."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:71
+msgid ""
+"When adding products to a new blanket order, the pre-existing prices of "
+"products will not be added automatically to the product lines. The prices "
+"must be manually assigned by changing the value in the :guilabel:`Unit "
+"Price` column to an agreed-upon price with the listed vendor. Otherwise, the"
+" price will remain **0**."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:76
+msgid ""
+"To view and change the default purchase agreement settings for blanket "
+"orders directly from the blanket order form, click the :guilabel:`internal "
+"link (arrow icon)` next to the :guilabel:`Agreement Type` field where "
+":guilabel:`Blanket Order` is listed. This navigates to the blanket order "
+"settings."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:81
+msgid ""
+"From here, the settings for blanket orders can be edited. Under the "
+":guilabel:`Agreement Type` section, the name of the :guilabel:`Agreement "
+"Type` can be changed (if desired), and the :guilabel:`Agreement Selection "
+"Type` can be changed, as well. There are two options that can be activated "
+"for the type of selection:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:86
+msgid ""
+":guilabel:`Select only one RFQ (exclusive)`: when a purchase order is "
+"confirmed, the remaining purchase orders will be canceled."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:88
+msgid ""
+":guilabel:`Select multiple RFQ (non-exclusive)`: when a purchase order is "
+"confirmed, remaining purchase orders will ***not** be canceled. Instead, "
+"multiple purchase orders are allowed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:91
+msgid ""
+"Under the :guilabel:`Data For New Quotations` section, the settings for how "
+"product lines and quantities will be populated on new quotations using this "
+"purchase agreeement can be changed next to the :guilabel:`Lines` and "
+":guilabel:`Quantities` fields."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst-1
+msgid "Purchase Agreement type edit screen for blanket orders."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:99
+msgid "There are two options that can be activated for :guilabel:`Lines`:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:101
+msgid ""
+":guilabel:`Use lines of agreement`: when creating a new quotation, the "
+"product lines will pre-populate with the same products listed on the blanket"
+" order, if said blanket order is chosen on the new quotation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:104
+msgid ""
+":guilabel:`Do not create RfQ lines automatically`: when creating a new "
+"quotation and selecting an existing blanket order, the settings will carry "
+"over to the new quotation, but the product lines will not populate."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:108
+msgid ""
+"And, there are two options that can be activated for :guilabel:`Quantities`:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:110
+msgid ""
+":guilabel:`Use quantities of agreement`: when creating a new quotation, the "
+"product quantities listed on the blanket order will pre-populate on the "
+"product lines, if said blanket order is chosen on the new quotation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:113
+msgid ""
+":guilabel:`Set quantities manually`: when creating a new quotation and "
+"selecting an existing blanket order, the product lines will pre-populate, "
+"but all quantities will be set to **0**. The quantities will need to be "
+"manually set by the user."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:117
+msgid ""
+"Once the desired changes have been made (if any), click :guilabel:`New` (via"
+" the breadcrumbs, at the top of the page) to navigate back to the blanket "
+"order form, and click :guilabel:`Confirm` to save this new purchase "
+"agreement. Once confirmed, the blanket order changes from *Draft* to "
+"*Ongoing*, meaning this agreement can be selected and used when creating new"
+" :abbr:`RFQs (Requests for Quotation)`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:124
+msgid ""
+"After creating and confirming a blanket order, products, quantities, and "
+"prices can still be edited, added, and removed from the purchase agreement."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:128
+msgid ""
+"Create a new :abbr:`RFQ (Request for Quotation)` from the blanket order"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:130
+msgid ""
+"After confirming a blanket order, new quotations can be created directly "
+"from the blanket order form that will use the rules set on the form and pre-"
+"populate the new quotation with the correct information. Additionally, this "
+"new quotation will be automatically linked to this blanket order form via "
+"the :guilabel:`RFQs/Orders` smart button at the top right of the form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:135
+msgid ""
+"To create a new quotation from the blanket order form, click :guilabel:`New "
+"Quotation`. This creates (and navigates to) a new :abbr:`RFQ (Request for "
+"Quotation)`, that is pre-populated with the correct information, depending "
+"on the settings configured on the blanket order form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:139
+msgid ""
+"From the new :abbr:`RFQ (Request for Quotation)` form, click :guilabel:`Send"
+" by Email` to compose and send an email to the listed vendor; click "
+":guilabel:`Print RFQ` to generate a printable PDF of the quotation; or, once"
+" ready, click :guilabel:`Confirm Order` to confirm the purchase order (PO)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst-1
+msgid "New quotation with copied products and rules from blanket order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:147
+msgid ""
+"Once the :abbr:`PO (Purchase Order)` has been confirmed, click back to the "
+"blanket order form (via the breadcrumbs, at the top of the page). From the "
+"blanket order form, there is now one :abbr:`RFQ (Request for Quotation)` "
+"listed in the :guilabel:`RFQs/Orders` smart button at the top right of the "
+"form. Click the :guilabel:`RFQs/Orders` smart button to see the purchase "
+"order that was just created."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst-1
+msgid "RFQs and Orders smart button from blanket order form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:157
+msgid "Create a new blanket order from an :abbr:`RFQ (Request for Quotation)`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:159
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:49
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:148
+msgid ""
+"To create a new :abbr:`RFQ (Request for Quotation)`, navigate to the "
+":menuselection:`Purchase` app, and click :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:162
+msgid ""
+"Then, add information to the :abbr:`RFQ (Request for Quotation)` form: add a"
+" vendor from the drop-down menu next to the :guilabel:`Vendor` field, and "
+"click :guilabel:`Add a product` to select a product from the drop-down menu "
+"in the :guilabel:`Product` column. Then, set the desired purchase quantity "
+"in the :guilabel:`Quantity` column, and change the purchase price in the "
+":guilabel:`Unit Price` column, if desired."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:168
+msgid ""
+"Clicking the :guilabel:`additional options (two-dots)` icon provides "
+"additional visibility options to add to the line item. Repeat these steps to"
+" add as many additional options as desired, including the :guilabel:`UoM` "
+"(Units of Measure) to purchase the products in, and the :guilabel:`Expected "
+"Arrival` date."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:173
+msgid ""
+"Before confirming the new quotation and creating a purchase order, click the"
+" drop-down menu next to the :guilabel:`Blanket Order` field, and type a new "
+"name for the new blanket order. This creates a brand new purchase agreement,"
+" and saves the information entered in the fields of the purchase order form,"
+" as well as the product information entered on the product lines."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:178
+msgid ""
+"From the new :abbr:`RFQ (Request for Quotation)` form, click :guilabel:`Send"
+" by Email` to compose and send an email to the listed vendor; click "
+":guilabel:`Print RFQ` to generate a printable PDF of the quotation; or, once"
+" ready, click :guilabel:`Confirm Order` to confirm the :abbr:`PO (purchase "
+"order)`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst-1
+msgid "New blanket order created directly from quotation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:188
+msgid ""
+"To see the newly-created blanket order purchase agreement, go to "
+":menuselection:`Orders --> Blanket Orders`, and click into the new blanket "
+"order. From here, settings and rules can be changed, if desired."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:193
 msgid "Blanket orders and replenishment"
 msgstr "一揽子订单和补货"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst:99
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:195
 msgid ""
-"Blanket orders can be used for :doc:`automated replenishment "
-"<../../purchase/products/reordering>`, as once a blanket order is confirmed,"
-" a new vendor line is added to your product. Make sure the related vendor is"
-" in the first position if you have several vendors linked to your product."
-msgstr ""
-"一揽子订单可用于:doc:`自动补货 "
-"<../../purchase/products/reordering>`，因为一旦确认一揽子订单，就会向产品中添加新的供应商行。如果有多个供应商链接到您的产品，请确保相关供应商位于第一位。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst-1
-msgid "Blanket order added to product configuration in Odoo Purchase"
+"Once a blanket order is confirmed, a new vendor line is added under the "
+":guilabel:`Purchase` tab of of the products included in the :abbr:`BO "
+"(Blanket Order)`. This makes blanket orders useful with :doc:`automated "
+"replenishment <../../purchase/products/reordering>`, because information "
+"about the :guilabel:`Vendor`, :guilabel:`Price`, and the "
+":guilabel:`Agreement` are referenced on the vendor line. This information is"
+" used to determine where, when, and for what price this product could be "
+"replenished."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst:108
-msgid "Set up a call for tenders"
-msgstr "设置招标"
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst-1
+msgid "Product form with replenishment agreement linked to blanket order."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst:110
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:3
+msgid "Create alternative requests for quotation for multiple vendors"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:5
 msgid ""
-"Go to :menuselection:`Orders --> Purchase Agreements` and click on *Create*."
-" Select *Call for Tenders* as your *Agreement Type*. The other fields aren't"
-" mandatory, but you can add the date you want to be delivered and set an "
-"agreement deadline. You usually don't want to select a vendor for calls for "
-"tenders as you are looking to get quotations from multiple vendors."
+"Sometimes, companies might want to request offers from multiple vendors at "
+"the same time, by inviting those vendors to submit offers for similar goods "
+"or services all at once. This helps companies to select the cheapest (and "
+"fastest) vendors, depending on their specific business needs."
 msgstr ""
-"转到 :menuselection:“Orders --> Purchase Agreements” 并单击 "
-"*Create*。选择*招标*作为您的*协议类型*。其他字段不是强制性的，但您可以添加要交付的日期并设置协议截止日期。您通常不想选择一个供应商进行招标，因为您希望从多个供应商处获得报价。"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst:115
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:9
 msgid ""
-"Next, add the products you want to order and in what quantity. For calls for"
-" tenders, you typically don't add a price, as the vendors should give you "
-"their best quote."
-msgstr "接下来，添加您要订购的产品和数量。对于招标，您通常不会添加价格，因为供应商应该给您他们最好的报价。"
+"In Odoo, this can be done by adding alternative requests for quotation "
+"(RFQs) for different vendors. Once a response is received from each vendor, "
+"the product lines from each :abbr:`RFQ (Request for Quotation)` can be "
+"compared, and a decision can be made for which products to purchase from "
+"which vendors."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst:118
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:14
 msgid ""
-"You can also write any *Terms and Conditions* at the bottom of the "
-"agreement. Once you are ready, click on *Confirm*."
-msgstr "你也可以在协议底部写下任何期限和条件。准备好后，单击*确认*。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst-1
-msgid "Set up a call for tenders in Odoo Purchase"
+"Sometimes referred to as a *call for tender*, this process is primarily used"
+" by organizations in the public sector, who are legally bound to use it when"
+" making a purchase. However, private companies can also use alternative "
+":abbr:`RFQs (Requests for Quotation)` to spend money efficiently, as well."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst:126
-msgid "Requests quotations from the call for tenders"
-msgstr "请求招标报价"
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:20
+msgid ":doc:`blanket_orders`"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst:128
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:23
+msgid "Configure purchase agreement settings"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:25
 msgid ""
-"You can now request new quotations from the call for tenders. Click on *New "
-"Quotation* and select one of your vendors you want to invite to the call for"
-" tenders. Product lines should also be pre-filled in, depending on how you "
-"configured the *Purchase Agreement Type*. Click on *Send by email* to send "
-"it to the vendor. Go back to the call for tenders and repeat this process "
-"for each vendor."
-msgstr ""
-"您现在可以从招标中请求新的报价。点击*新报价*并选择您想要邀请参加招标的供应商之一。产品线也应预先填写，具体取决于您如何配置*采购协议类型*。单击*通过电子邮件发送*将其发送给供应商。返回招标，对每个供应商重复此过程。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst-1
-msgid "Request a quotation from a call for tenders in Odoo Purchase"
+"To create alternative :abbr:`RFQs (Requests for Quotation)` directly from a "
+"quotation, the *Purchase Agreements* feature first needs to be enabled in "
+"the settings of the *Purchase* app. To do this, go to "
+":menuselection:`Purchase --> Configuration --> Settings`, and under the "
+":guilabel:`Orders` section, click the checkbox next to :guilabel:`Purchase "
+"Agreements`. Doing so will enable the ability to create alternative "
+":abbr:`RFQs (Requests for Quotation)`, as well as the ability to create "
+"*blanket orders*."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst:138
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst-1
+msgid "Purchase Agreements enabled in the Purchase app settings."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:37
 msgid ""
-"Once you have sent a request for quotation to every vendor and receiving "
-"their quotes, click on *Validate* to proceed to the bid selection. Next, "
-"click on the RFQs/Orders smart button to view all your vendors' quotations."
+"To save time on a *call for tender*, custom vendors, prices, and delivery "
+"lead times can be set in the :guilabel:`Purchase` tab on a product form. To "
+"do so, navigate to :menuselection:`Purchase --> Products --> Products`, and "
+"select a product to edit. From the product form, click the "
+":guilabel:`Purchase tab`, then click :guilabel:`Add a line`. From the drop-"
+"down menu, choose a vendor to set under the :guilabel:`Vendor` column, and "
+"set a :guilabel:`Price` and :guilabel:`Delivery Lead Time` if desired. "
+"Clicking the :guilabel:`additional options (two-dots)` icon provides "
+"additional visibility options to add to the line item."
 msgstr ""
-"向每个供应商发送报价请求并收到他们的报价后，单击 *Validate* 继续进行投标选择。 接下来，单击 RFQs/Orders "
-"智能按钮以查看所有供应商的报价。"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst-1
-msgid "Validate a call for tenders and view all quotations in Odoo Purchase"
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:47
+msgid "Create an :abbr:`RFQ (Request for Quotation)`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst:146
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:52
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:151
 msgid ""
-"Click on each request for quotation to add the price communicated by your "
-"vendors manually. When that's done, select the most advantageous offer and "
-"click on *Confirm Order*. This automatically closes the call for tenders. "
-"You can now proceed with the purchase order as you would for a regular one."
+"Then, add information to the :abbr:`RFQ (Request for Quotation)` form: add a"
+" vendor from the drop-down next to the :guilabel:`Vendor` field, and click "
+":guilabel:`Add a product` to select a product from the drop-down menu in the"
+" :guilabel:`Product` column. Then, set the desired purchase quantity in the "
+":guilabel:`Quantity` column, and change the purchase price in the "
+":guilabel:`Unit Price` column, if desired."
 msgstr ""
-"单击每个报价请求以手动添加供应商传达的价格。完成后，选择最有利的报价并单击 *Confirm "
-"Order*。这会自动关闭招标。您现在可以像处理普通订单一样处理采购订单。"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/agreements.rst-1
-msgid "Confirm an order in Odoo Purchase"
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:58
+msgid ""
+"Clicking the :guilabel:`additional options (two-dots)` icon provides "
+"additional visibility options to add to the line item. Repeat these steps to"
+" add as many options as desired, including the :guilabel:`UoM` (Units of "
+"Measure) to purchase the products in, and the :guilabel:`Expected Arrival` "
+"date."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:63
+msgid ""
+"Once ready, click :guilabel:`Send by Email`. This causes a "
+":guilabel:`Compose Email` pop-up window to appear, wherein the message to "
+"the vendor can be customized. Once ready, click :guilabel:`Send`. This turns"
+" the :abbr:`RFQ (Request for Quotation)` into a purchase order (PO), and "
+"sends an email to the vendor listed on the purchase order form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst-1
+msgid "Compose and send quotation email pop-up."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:73
+msgid ""
+"Sending emails to each vendor can be useful when creating alternative "
+":abbr:`RFQs (Requests for Quotation)`, because vendors can confirm if their "
+"past prices still hold today, which can help companies choose the best "
+"offers for them."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:78
+msgid "Create alternatives to an :abbr:`RFQ (Request for Quotation)`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:80
+msgid ""
+"Once a :abbr:`PO (Purchase Order)` is created and sent by email to a vendor,"
+" alternative :abbr:`RFQs (Requests for Quotation)` can be created and sent "
+"to additional, alternate vendors to compare prices, delivery times, and "
+"other factors to make a decision from which vendors to order which products."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:85
+msgid ""
+"To create alternative :abbr:`RFQs (Requests for Quotation)`, click the "
+":guilabel:`Alternatives` tab from the purchase order form, then click "
+":guilabel:`Create Alternative`. When clicked, a :guilabel:`Create "
+"alternative` pop-up window appears."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst-1
+msgid "Calls for tenders pop-up to create alternative quotation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:93
+msgid ""
+"From this window, select a new/different vendor from the drop-down menu next"
+" to the :guilabel:`Vendor` field to assign this alternative quotation to."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:96
+msgid ""
+"Next to this, there is a :guilabel:`Copy Products` checkbox that is selected"
+" by default. When selected, the product quantities of the original :abbr:`PO"
+" (Purchase Order)` are copied to the alternative. For this first alternative"
+" quotation, leave the checkbox checked. Once finished, click "
+":guilabel:`Create Alternative`. This creates (and navigates to) a new "
+":abbr:`PO (Purchase Order)`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:101
+msgid ""
+"Since the :guilabel:`Create Alternative` checkbox was left checked, this new"
+" purchase order form is already populated with the same products, "
+"quantities, and other details as the previous, original :abbr:`PO (Purchase "
+"Order)`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:106
+msgid ""
+"When the :guilabel:`Copy Products` checkbox is selected while creating an "
+"alternative quotation, additional products do not need to be added on the "
+"purchase order form unless desired. However, if a chosen vendor is listed in"
+" the :guilabel:`Vendor` column under the :guilabel:`Purchase` tab on a "
+"product form included in the purchase order, the values set on the product "
+"form carry over to the :abbr:`PO (Purchase Order)`, and have to be changed "
+"manually, if desired."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:112
+msgid ""
+"Once ready, create a second alternative quotation by clicking the "
+":guilabel:`Alternatives` tab, and once again, click :guilabel:`Create "
+"Alternative`. This causes the :guilabel:`Create alternative` pop-up window "
+"to appear again. This time, choose a different vendor from the drop-down "
+"menu next to :guilabel:`Vendor`, and this time, *uncheck* the "
+":guilabel:`Copy Products` checkbox. Then, click :guilabel:`Create "
+"Alternative`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:119
+msgid ""
+"If an alternative quotation needs to be removed from the "
+":guilabel:`Alternatives` tab, they can be individually removed by clicking "
+"on the :guilabel:`Remove (X)` icon at the end of their row."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:122
+msgid ""
+"This creates a third, new purchase order. But, since the product quantities "
+"of the original :abbr:`PO (Purchase Order)` were *not* copied over, the "
+"product lines are empty, and new products need to be added by clicking "
+":guilabel:`Add a product`, and selecting the desired products from the drop-"
+"down menu. Once the desired number of products are added, click "
+":guilabel:`Send by Email`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst-1
+msgid "Blank alternative quotation with alternatives in breadcrumbs."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:131
+msgid ""
+"This causes a :guilabel:`Compose Email` pop-up window to appear, wherein the"
+" message to the vendor can be customized. Once ready, click :guilabel:`Send`"
+" to send an email to the vendor listed on the purchase order form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:135
+msgid ""
+"From this newest purchase order form, click the :guilabel:`Alternatives` "
+"tab. Under this tab, all three purchase orders can be seen in the "
+":guilabel:`Reference` column. Additionally, the vendors are listed under the"
+" :guilabel:`Vendor` column, and the order :guilabel:`Total` and "
+":guilabel:`Status` of the orders are in the rows, as well."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:141
+msgid "Link a new :abbr:`RFQ (Request for Quotation)` to existing quotations"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:143
+msgid ""
+"Creating alternative quotations directly from a purchase order form under "
+"the :guilabel:`Alternatives` tab is the easiest way to create and link "
+"quotations. However, separate :abbr:`RFQs (Requests for Quotation)` can also"
+" be linked *after* the fact, even if they are created completely separately "
+"at first."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:157
+msgid ""
+"Once ready, click :guilabel:`Send by Email`. This causes a "
+":guilabel:`Compose Email` pop-up window to appear, wherein the message to "
+"the vendor can be customized. Once ready, click :guilabel:`Send` to send an "
+"email to the vendor listed on the purchase order form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:161
+msgid ""
+"Then, click the :guilabel:`Alternatives` tab once more. Since this new "
+":abbr:`PO (Purchase Order)` was created separately, there are no other "
+"orders linked yet. To link this order with the alternatives created "
+"previously, click :guilabel:`Link to Existing RfQ` on the first line in the "
+":guilabel:`Vendor` column."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst-1
+msgid "pop-up to link new quotation to existing RFQs."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:170
+msgid ""
+"This causes an :guilabel:`Add: Alternative POs` pop-up window to appear. "
+"Select the three purchase orders created previously, and click "
+":guilabel:`Select`. All of these orders are now copied to this :abbr:`PO "
+"(Purchase Order)` under the :guilabel:`Alternatives` tab."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:175
+msgid ""
+"If a large number of purchase orders are being processed and the previous "
+":abbr:`POs (Purchase Orders)` can't be located, try clicking "
+":menuselection:`Group By --> Vendor` under the search bar at the top of the "
+"pop-up window to group by the vendors selected on the previous orders."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:181
+msgid "Compare product lines"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:183
+msgid ""
+"When there are multiple :abbr:`RFQs (Requests for Quotation)` linked as "
+"alternatives, they can be compared side-by-side in order to determine which "
+"vendors offer the best deals on which products. To compare each quotation, "
+"go to the :menuselection:`Purchase` app, and select one of the quotations "
+"created previously."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:188
+msgid ""
+"Then, click the :guilabel:`Alternatives` tab to see all the linked "
+":abbr:`RFQs (Requests for Quotation)`. Next, under the :guilabel:`Create "
+"Alternative` tab, click :guilabel:`Compare Product Lines`. This navigates to"
+" a Compare Order Lines page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst-1
+msgid "Compare Product Lines page for alternative RFQs."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:196
+msgid ""
+"The Compare Order Lines page, by default, groups by :guilabel:`Product`. "
+"Each product included in any of the :abbr:`RFQs (Requests for Quotation)` is"
+" displayed in its own drop-down, along with all of the :abbr:`PO (Purchase "
+"Order)` numbers in the :guilabel:`Reference` column."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:200
+msgid ""
+"Additional columns on this page include the :guilabel:`Vendor` from which "
+"products were ordered, the :guilabel:`Status` of the quotation (i.e., RFQ, "
+"RFQ Sent); the :guilabel:`Quantity` of products ordered from each vendor; "
+"the :guilabel:`Unit Price` per product and :guilabel:`Total` price of the "
+"order, and more."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:206
+msgid ""
+"To remove product lines from the Compare Order Lines page, click "
+":guilabel:`Clear` at the far right end of that product line's row. This "
+"removes this product as a chooseable option from the page, and changes the "
+":guilabel:`Total` price of that product on the page to **0**. On the "
+"purchase order form in which that product was included, its ordered quantity"
+" is changed to **0**, as well."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:212
+msgid ""
+"Once the best offers have been identified, at the end of each row, "
+"individual products can be selected by clicking :guilabel:`Choose`. Once all"
+" the desired products have been chosen, click :guilabel:`Requests for "
+"Quotation` (in the breadcrumbs, at the top of the page) to navigate back to "
+"an overview of all :abbr:`RFQs (Requests for Quotation)`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:218
+msgid "Cancel (or keep) alternatives"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:220
+msgid ""
+"Now that the desired products have been chosen, based on which vendors "
+"provided the best offer, the other :abbr:`RFQs (Requests for Quotation)` "
+"(from which no products were chosen) can be canceled."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:223
+msgid ""
+"Under the :guilabel:`Total` column, at the far right of each row, the orders"
+" from which no products were chosen have automatically had their total cost "
+"set to **0**. Although they haven't been canceled yet, this means that they "
+"can ultimately be canceled without repercussions, *after* the desired "
+"purchase orders have been confirmed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst-1
+msgid "Canceled quotations in the Purchase app overview."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:232
+msgid ""
+"To confirm a quotation that contains the chosen product quantities, click "
+"into one. Then, click :guilabel:`Confirm Order`. This causes an "
+":guilabel:`Alternative Warning` pop-up window to appear. From there, either "
+":guilabel:`Cancel Alternatives` or :guilabel:`Keep Alternatives` can be "
+"clicked. If this :abbr:`PO (Purchase Order)` should *not* be confirmed, "
+"click :guilabel:`Cancel`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:237
+msgid ""
+":guilabel:`Cancel Alternatives` automatically cancels the alternative "
+"purchase orders. :guilabel:`Keep Alternatives` keeps the alternative "
+"purchase orders open, so they can still be accessed if any additional "
+"product quantities need to be ordered. Once all products are ordered, "
+":guilabel:`Cancel Alternatives` can be selected from whichever :abbr:`PO "
+"(Purchase Order)` is open."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:242
+msgid ""
+"To view a detailed form of one of the :abbr:`RFQs (Requests for Quotation)` "
+"listed, click the line item for that quotation. This causes an "
+":guilabel:`Open: Alternative POs` pop-up window to appear, from which all "
+"details of that particular quotation can be viewed. Click :guilabel:`Close` "
+"when finished."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst-1
+msgid "Keep or cancel pop-up for alternative RFQs."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:251
+msgid ""
+"From the :guilabel:`Alternative Warning` pop-up window, click "
+":guilabel:`Keep Alternatives` to keep all alternative quotations open for "
+"now. Then, click :guilabel:`Requests for Quotation` (in the breadcrumbs, at "
+"the top of the page) to navigate back to an overview of all :abbr:`RFQs "
+"(Requests for Quotation)`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:256
+msgid ""
+"Click into the remaining quotation(s) that contain products that need to be "
+"ordered, and click :guilabel:`Confirm Order`. This causes the "
+":guilabel:`Alternative Warning` pop-up window to appear again. This time, "
+"click :guilabel:`Cancel Alternatives` to cancel all other alternative "
+":abbr:`RFQs` linked with this quotation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:261
+msgid ""
+"Finally, click :guilabel:`Requests for Quotation` (in the breadcrumbs, at "
+"the top of the page) to navigate back to an overview of all :abbr:`RFQs "
+"(Requests for Quotation)`. The canceled orders can be seen greyed out and "
+"listed with a :guilabel:`Cancelled` status under the :guilabel:`Status` "
+"column at the far right of their rows."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:266
+msgid ""
+"Now that all product quantities have been ordered, the purchase process can "
+"be followed, and continued to completion, until the products are received "
+"into the warehouse."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:3

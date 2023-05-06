@@ -17,9 +17,9 @@
 # romrik_, 2023
 # Richard Mathot <rim@odoo.com>, 2023
 # Khadija Mbazaa <khadija.mbazaa@gmail.com>, 2023
-# Cécile Collart <cco@odoo.com>, 2023
 # Martin Trigaux, 2023
 # Rémi CAZENAVE, 2023
+# Cécile Collart <cco@odoo.com>, 2023
 # Jolien De Paepe, 2023
 # 
 #, fuzzy
@@ -27,7 +27,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-06 08:12+0000\n"
+"POT-Creation-Date: 2023-05-02 14:02+0000\n"
 "PO-Revision-Date: 2023-01-13 14:30+0000\n"
 "Last-Translator: Jolien De Paepe, 2023\n"
 "Language-Team: French (https://app.transifex.com/odoo/teams/41243/fr/)\n"
@@ -2884,8 +2884,8 @@ msgid ":doc:`/applications/general/auth/azure`"
 msgstr ":doc:`/applications/general/auth/azure`"
 
 #: ../../content/administration/maintain/azure_oauth.rst:16
-msgid ":doc:`/applications/general/calendars/outlook/outlook_calendar`"
-msgstr ":doc:`/applications/general/calendars/outlook/outlook_calendar`"
+msgid ":doc:`/applications/productivity/calendar/outlook`"
+msgstr ":doc:`/applications/productivity/calendar/outlook`"
 
 #: ../../content/administration/maintain/azure_oauth.rst:19
 msgid "Setup in Microsoft Azure Portal"
@@ -2966,7 +2966,7 @@ msgstr "API autorisées"
 #: ../../content/administration/maintain/azure_oauth.rst:49
 msgid ""
 "The :guilabel:`API permissions` should be set next. Odoo will need specific "
-"API permissions to be able to read (IMAP) and send (IMAP) emails in the "
+"API permissions to be able to read (IMAP) and send (SMTP) emails in the "
 "Microsoft 365 setup. First, click the :guilabel:`API permissions` link, "
 "located in the left menu bar. Next, click on the :guilabel:`(+) Add a "
 "Permission` button and select :guilabel:`Microsoft Graph` under "
@@ -2974,7 +2974,7 @@ msgid ""
 ":guilabel:`Delegated Permissions` option."
 msgstr ""
 "Il faut ensuite définir les :guilabel:`API autorisées`. Odoo aura besoin "
-"d'autorisations API spécifiques pour pouvoir lire (IMAP) et envoyer (IMAP) "
+"d'autorisations API spécifiques pour pouvoir lire (IMAP) et envoyer (SMTP) "
 "des emails dans la configuration Microsoft 365. Cliquez d'abord sur le lien "
 ":guilabel:`API autorisées` situé dans la barre de menu à gauche. Cliquez "
 "ensuite sur le bouton :guilabel:`(+) Ajouter une autorisation` et "
@@ -3089,10 +3089,10 @@ msgstr ""
 "Maintenant que l'application Microsoft Azure est configurée, des "
 "identifiants doivent être créées pour la configuration d'Odoo. Il s'agit de "
 "l':guilabel:`ID Client` et du :guilabel:`Secret Client`. Pour commencer, "
-"l':guilabel:`ID Client` peut être copié depuis la page :guilabel:`Vue "
-"d'ensemble` de l'application. L':guilabel:`ID Client` ou l':guilabel:`ID "
-"d'application` se situe en-dessous du :guilabel:`Nom d'affichage` dans la "
-":guilabel:`Vue d'ensemble` de l'application."
+"l':guilabel:`ID Client` peut être copié depuis la page :guilabel:`Aperçu` de"
+" l'application. L':guilabel:`ID Client` ou l':guilabel:`ID d'application` se"
+" situe en-dessous du :guilabel:`Nom d'affichage` dans l'aperçu "
+":guilabel:`Essentials` de l'application."
 
 #: ../../content/administration/maintain/azure_oauth.rst-1
 msgid "Application/Client ID located in the Overview of the app."
@@ -3105,11 +3105,11 @@ msgid ""
 "menu. Then, a :guilabel:`Client Secret` needs to be produced. In order to do"
 " this, click on the :guilabel:`(+) New Client Secret` button."
 msgstr ""
-"Ensuite, il faut récupérer la :guilabel:`Valeur de Secret client`. Pour "
-"obtenir cette valeur, cliquez sur :guilabel:`Certificats & secrets` dans le "
+"Ensuite, il faut récupérer la :guilabel:`Valeur du Secret Client`. Pour "
+"obtenir cette valeur, cliquez sur :guilabel:`Certificats & Secrets` dans le "
 "menu latéral de gauche. Ensuite, il faut produire un :guilabel:`Secret "
-"client`. Pour ce faire, cliquez sur le bouton :guilabel:`(+) Nouveau secret "
-"client`."
+"Client`. Pour ce faire, cliquez sur le bouton :guilabel:`(+) Nouveau Secret "
+"Client`."
 
 #: ../../content/administration/maintain/azure_oauth.rst:110
 msgid ""
@@ -3119,8 +3119,8 @@ msgid ""
 msgstr ""
 "Une fenêtre sur la droite s'affiche avec un bouton intitulé "
 ":guilabel:`Ajouter un secret client`. Sous :guilabel:`Description`, "
-"saisissez `Odoo Fetchmail` ou un autre nom significatif, puis définissez la "
-":guilabel:`date d'expiration`."
+"saisissez `Odoo Fetchmail` ou quelque chose de reconnaissable, puis "
+"définissez la :guilabel:`date d'expiration`."
 
 #: ../../content/administration/maintain/azure_oauth.rst:115
 msgid ""
@@ -3129,7 +3129,7 @@ msgid ""
 "service, so the expiration date should be noted and set to the furthest "
 "possible date."
 msgstr ""
-"Un nouveau :guilabel:`Secret client` devra être produit et configuré si le "
+"Un nouveau :guilabel:`Secret Client` devra être produit et configuré si le "
 "premier expire. Dans ce cas, il pourrait y avoir une interruption de "
 "service, il faut donc noter la date d'expiration et la fixer à la date la "
 "plus éloignée possible."
@@ -3143,16 +3143,16 @@ msgid ""
 "The :guilabel:`Secret ID` is not needed."
 msgstr ""
 "Cliquez ensuite sur :guilabel:`Ajouter` lorsque ces deux valeurs sont "
-"saisies. Une :guilabel:`Valeur de secret client` et un :guilabel:`ID de "
-"secret` seront créés. Il est importer de copier la :guilabel:`Valeur` ou la "
-":guilabel:`Valeur de secret client` dans un bloc-notes, car elle sera "
-"chiffrée après avoir quitté cette page. L':guilabel:`ID de secret` n'est pas"
-" nécessaire."
+"saisies. Une :guilabel:`Valeur de Secret Client` et un :guilabel:`ID Secret`"
+" seront créés. Il est importer de copier la :guilabel:`Valeur` ou la "
+":guilabel:`Valeur du Secret Client` dans un bloc-notes, car elle sera "
+"chiffrée après avoir quitté cette page. L':guilabel:`ID Secret` n'est pas "
+"nécessaire."
 
 #: ../../content/administration/maintain/azure_oauth.rst-1
 msgid "Client Secret Value or Value in the app's credentials."
 msgstr ""
-"Valeur de secret client ou Valeur dans les identifiants de l'application."
+"Valeur du Secret Client ou Valeur dans les identifiants de l'application."
 
 #: ../../content/administration/maintain/azure_oauth.rst:128
 msgid ""
@@ -3168,7 +3168,7 @@ msgstr "Un ID client (:guilabel:`ID Client` ou :guilabel:`ID d'application`)"
 #: ../../content/administration/maintain/azure_oauth.rst:131
 msgid "A client secret (:guilabel:`Value` or :guilabel:`Client Secret Value`)"
 msgstr ""
-"Un secret client (:guilabel:`Valeur` ou :guilabel:`Valeur de secret client`)"
+"Un secret client (:guilabel:`Valeur` ou :guilabel:`Valeur du Secret Client`)"
 
 #: ../../content/administration/maintain/azure_oauth.rst:133
 msgid ""
@@ -3178,7 +3178,7 @@ msgstr ""
 "Azure` "
 
 #: ../../content/administration/maintain/azure_oauth.rst:136
-#: ../../content/administration/maintain/google_oauth.rst:88
+#: ../../content/administration/maintain/google_oauth.rst:111
 msgid "Setup in Odoo"
 msgstr "Configuration dans Odoo"
 
@@ -3221,7 +3221,7 @@ msgid ""
 "and :guilabel:`Save` the settings."
 msgstr ""
 "Ensuite, copiez et collez l':guilabel:`ID Client` (ID d'application) et le "
-":guilabel:`Secret client (Valeur de secret client)` dans les champs "
+":guilabel:`Secret Client (Valeur du Secret Client)` dans les champs "
 "respectifs et :guilabel:`sauvegardez` les paramètres."
 
 #: ../../content/administration/maintain/azure_oauth.rst-1
@@ -3229,7 +3229,7 @@ msgid "Outlook Credentials in Odoo General Settings."
 msgstr "Identifiants Outlook dans les Paramètres généraux d'Odoo."
 
 #: ../../content/administration/maintain/azure_oauth.rst:159
-#: ../../content/administration/maintain/google_oauth.rst:102
+#: ../../content/administration/maintain/google_oauth.rst:127
 msgid "Configure outgoing email server"
 msgstr "Configurer le serveur de messagerie sortant"
 
@@ -3576,8 +3576,8 @@ msgstr ""
 " gérés par d'autres fournisseurs."
 
 #: ../../content/administration/maintain/domain_names.rst:74
-msgid ":doc:`/applications/websites/website/optimize/seo`"
-msgstr ":doc:`/applications/websites/website/optimize/seo`"
+msgid ":doc:`/applications/websites/website/pages/seo`"
+msgstr ":doc:`/applications/websites/website/pages/seo`"
 
 #: ../../content/administration/maintain/domain_names.rst:75
 msgid ""
@@ -4522,10 +4522,8 @@ msgid ":doc:`/applications/general/auth/google`"
 msgstr ":doc:`/applications/general/auth/google`"
 
 #: ../../content/administration/maintain/google_oauth.rst:16
-msgid ""
-":doc:`/applications/general/calendars/google/google_calendar_credentials`"
-msgstr ""
-":doc:`/applications/general/calendars/google/google_calendar_credentials`"
+msgid ":doc:`/applications/productivity/calendar/google`"
+msgstr ":doc:`/applications/productivity/calendar/google`"
 
 #: ../../content/administration/maintain/google_oauth.rst:19
 msgid "Setup in Google"
@@ -4537,79 +4535,120 @@ msgstr "Créer un nouveau projet"
 
 #: ../../content/administration/maintain/google_oauth.rst:24
 msgid ""
-"To get started, go to the `Google API Platform "
-"<https://console.cloud.google.com/apis/credentials/consent>`_. Log in with "
-"your *Google Workspace* account if you have one, otherwise log in with your "
-"personal Gmail account (this should match the email address you want to "
-"configure in Odoo)."
+"To get started, go to the `Google API Console "
+"<https://console.developers.google.com>`_. Log in with your *Google "
+"Workspace* account if you have one, otherwise log in with your personal "
+"Gmail account (this should match the email address you want to configure in "
+"Odoo)."
 msgstr ""
-"Pour commencer, allez à la `plateforme Google API "
-"<https://console.cloud.google.com/apis/credentials/consent>`_. Connectez-"
-"vous avec votre compte *Google Workspace* si vous en avez en, sinon "
-"connectez-vous avec votre compte Gmail personnel (cela doit correspondre à "
-"l'adresse email que vous souhaitez configurer dans Odoo)."
+"Pour commencer, allez à la `Console Google API "
+"<https://console.developers.google.com>`_. Connectez-vous avec votre compte "
+"*Google Workspace* si vous en avez un, sinon connectez-vous avec votre "
+"compte Gmail personnel (ceci devrait correspondre à l'adresse email que vous"
+" souhaitez configurer dans Odoo)."
 
-#: ../../content/administration/maintain/google_oauth.rst:29
+#: ../../content/administration/maintain/google_oauth.rst:28
 msgid ""
 "After that, click on :guilabel:`Create Project`, located on the far right of"
-" the OAuth consent screen. If a project has already been created in this "
-"account, then the :guilabel:`New Project` option will be located on the top "
-"left under the :guilabel:`Select a project` drop-down menu."
+" the :guilabel:`OAuth consent screen`. If a project has already been created"
+" in this account, then the :guilabel:`New Project` option will be located on"
+" the top right under the :guilabel:`Select a project` drop-down menu."
 msgstr ""
 "Ensuite, cliquez sur :guilabel:`Créer un projet` situé à l'extrême droite de"
-" l'écran de consentement OAuth. Si un projet a déjà été créé dans ce compte,"
-" l'option :guilabel:`Nouveau projet` sera disponible en haut à gauche sous "
-"le menu déroulant :guilabel:`Sélectionnez un projet`."
+" l':guilabel:`écran de consentement OAuth`. Si un projet a déjà été créé "
+"dans ce compte, l'option :guilabel:`Nouveau projet` sera disponible en haut "
+"à droite sous le menu déroulant :guilabel:`Sélectionner un projet`."
 
 #: ../../content/administration/maintain/google_oauth.rst:33
 msgid ""
-"On the :guilabel:`New Project` screen, rename the :guilabel:`Project name` "
-"to `Odoo` and browse for the :guilabel:`Location`. Set the "
-":guilabel:`Location` as the `Google Workspace` organization. If you are "
-"using a personal Gmail account, then leave the :guilabel:`Location` as `No "
-"Organization`."
+"On the :menuselection:`New Project` screen, rename the :guilabel:`Project "
+"name` to `Odoo` and browse for the :guilabel:`Location`. Set the "
+":guilabel:`Location` as the *Google Workspace organization*. If you are "
+"using a personal Gmail account, then leave the :guilabel:`Location` as "
+":guilabel:`No Organization`."
 msgstr ""
-"Sur la page :guilabel:`Nouveau projet`, saisissez `Odoo` dans le champ "
+"Sur la page :menuselection:`Nouveau projet`, saisissez `Odoo` dans le champ "
 ":guilabel:`Nom du projet` et recherchez la :guilabel:`Zone`. Définissez la "
-":guilabel:`Zone` sur l'organisation `Google Workspace`. Si vous utilisez un "
-"compte Gmail personnel, définissez la :guilabel:`Zone` sur `Aucune "
+":guilabel:`Zone` sur l'*organisation Google Workspace*. Si vous utilisez un "
+"compte Gmail personnel, laissez la :guilabel:`Zone` sur :guilabel:`Aucune "
 "organisation`."
 
 #: ../../content/administration/maintain/google_oauth.rst-1
-msgid "Project Name and Location for Google Oauth."
-msgstr "Nom du projet et Zone pour Google Oauth."
+msgid "Project Name and Location for Google OAuth."
+msgstr "Nom du projet et Zone pour Google OAuth."
 
-#: ../../content/administration/maintain/google_oauth.rst:41
+#: ../../content/administration/maintain/google_oauth.rst:42
+msgid "Click on :guilabel:`Create` to finish this step."
+msgstr "Cliquez sur :guilabel:`Créer` pour finaliser cette étape."
+
+#: ../../content/administration/maintain/google_oauth.rst:45
+msgid "OAuth consent screen"
+msgstr "Écran de consentement OAuth"
+
+#: ../../content/administration/maintain/google_oauth.rst:47
 msgid ""
-"Click on :guilabel:`Create` to finish this step. On the next screen, "
-":guilabel:`User Type` options, select the :guilabel:`External` option, and "
-"then click on :guilabel:`Create` again, which will finally navigate to the "
-":guilabel:`Edit app registration` page."
+"If the page doesn't redirect to the :menuselection:`User Type` options, "
+"click on :guilabel:`OAuth consent screen` in the left menu."
 msgstr ""
-"Cliquez sur :guilabel:`Créer` pour finaliser cette étape. Sur la page "
-"suivante, parmi les options de :guilabel:`User Type`, sélectionnez l'option "
-":guilabel:`Externes` et cliquez de nouveau sur :guilabel:`Créer`, ce qui "
-"vous amènera à la page permettant de :guilabel:`Modifier l'enregistrement de"
-" l'application`."
+"Si la page ne redirige pas vers les options :menuselection:`Type "
+"d'utilisateur`, cliquez sur l':guilabel:`écran de consentement OAuth` dans "
+"le menu de gauche."
 
-#: ../../content/administration/maintain/google_oauth.rst:46
+#: ../../content/administration/maintain/google_oauth.rst:50
+msgid ""
+"Under :guilabel:`User Type` options, select the appropriate :guilabel:`User "
+"Type`, and then click on :guilabel:`Create` again, which will finally "
+"navigate to the :menuselection:`Edit app registration` page."
+msgstr ""
+"Sous les options de :guilabel:`Type d'utilisateur`, sélectionnez le "
+":guilabel:`Type d'utilisateur` approprié et cliquez de nouveau sur "
+":guilabel:`Créer`, ce qui vous amènera à la page permettant de "
+":menuselection:`Modifier l'inscription de l'application`."
+
+#: ../../content/administration/maintain/google_oauth.rst:55
+msgid ""
+"*Personal* Gmail Accounts are only allowed to be **External** User Type, "
+"which means Google may require an approval, or for *Scopes* to be added on. "
+"However, using a *Google WorkSpace* account allows for **Internal** User "
+"Type to be used."
+msgstr ""
+"Les comptes Gmail *personnels* ne peuvent être que de type d'utilisateur "
+"**externe**, ce qui signifie que Google peut exiger une approbation ou "
+"l'ajout de *Champs d'application*. Cependant, l'utilisation d'un compte "
+"*Google WorkSpace* permet d'utiliser le type d'utilisateur **interne**."
+
+#: ../../content/administration/maintain/google_oauth.rst:59
+msgid ""
+"Note, as well, that while the API connection is in the *External* testing "
+"mode, then no approval is necessary from Google. User limits in this testing"
+" mode is set to 100 users."
+msgstr ""
+"Notez également que lorsque la connexion API est en mode de test *externe*, "
+"aucune approbation n'est nécessaire de la part de Google. Les limites "
+"d'utilisateurs dans ce mode de test sont fixées à 100 utilisateurs."
+
+#: ../../content/administration/maintain/google_oauth.rst:63
 msgid "Edit app registration"
 msgstr "Modifier l'enregistrement de l'application"
 
-#: ../../content/administration/maintain/google_oauth.rst:48
+#: ../../content/administration/maintain/google_oauth.rst:65
+msgid "Next we will configure the app registration of the project."
+msgstr "Ensuite, nous configurerons l'inscription de l'application du projet."
+
+#: ../../content/administration/maintain/google_oauth.rst:67
 msgid ""
-"On the :guilabel:`Oauth consent screen` step, under the :guilabel:`App "
+"On the :guilabel:`OAuth consent screen` step, under the :guilabel:`App "
 "information` section, enter `Odoo` in the :guilabel:`App name` field. Select"
 " the organization's email address under the :guilabel:`User support` email "
 "field."
 msgstr ""
-"À l'étape de l':guilabel:`écran de consentement Oauth`, dans la section "
+"À l'étape de l':guilabel:`écran de consentement OAuth`, sous la section "
 ":guilabel:`Informations sur l'application`, saisissez `Odoo` dans le champ "
 ":guilabel:`Nom de l'application`. Sélectionnez l'adresse email de "
-"l'organisation dans le champ d'adresse email d':guilabel:`assistance "
+"l'organisation dans le champ d'adresse mail d':guilabel:`assistance "
 "utilisateur`."
 
-#: ../../content/administration/maintain/google_oauth.rst:51
+#: ../../content/administration/maintain/google_oauth.rst:71
 msgid ""
 "Next, under :menuselection:`App Domain --> Authorized domains`, click on "
 ":guilabel:`Add Domain` and enter `odoo.com`."
@@ -4618,7 +4657,7 @@ msgstr ""
 "autorisés`, cliquez sur :guilabel:`Ajouter un domaine` et saisissez "
 "`odoo.com`."
 
-#: ../../content/administration/maintain/google_oauth.rst:53
+#: ../../content/administration/maintain/google_oauth.rst:74
 msgid ""
 "After that, under the :guilabel:`Developer contact information` section, "
 "enter the organization's email address. Google uses this email address to "
@@ -4628,52 +4667,52 @@ msgstr ""
 "l'adresse email de l'organisation. Google utilise cette adresse email pour "
 "notifier l'organisation de toute modification apportée à votre projet."
 
-#: ../../content/administration/maintain/google_oauth.rst:56
-msgid "Next, click on the :guilabel:`Save and Continue` button."
-msgstr "Ensuite, cliquez sur le bouton :guilabel:`Enregistrer et Continuer`."
-
-#: ../../content/administration/maintain/google_oauth.rst:57
+#: ../../content/administration/maintain/google_oauth.rst:78
 msgid ""
-"Then, skip the :guilabel:`Scopes` page by scrolling to the bottom and "
-"clicking on :guilabel:`Save and Continue`."
+"Next, click on the :guilabel:`Save and Continue` button. Then, skip the "
+":menuselection:`Scopes` page by scrolling to the bottom and clicking on "
+":guilabel:`Save and Continue`."
 msgstr ""
-"Passez la page :guilabel:`Champs d'application` en défilant jusqu'en bas et "
-"en cliquant sur :guilabel:`Enregistrer et Continuer`."
+"Ensuite, cliquez sur le bouton :guilabel:`Enregistrer et continuer`. Passez "
+"la page :menuselection:`Champs d'application` en défilant vers le bas et en "
+"cliquant sur :guilabel:`Enregistrer et continuer`."
 
-#: ../../content/administration/maintain/google_oauth.rst:59
+#: ../../content/administration/maintain/google_oauth.rst:81
 msgid ""
-"Next, add the email being configured under the :guilabel:`Test users` step "
-"by clicking on :guilabel:`Add Users` and then the :guilabel:`Save and "
-"Continue` button. A summary of the :guilabel:`App registration` appears."
+"If continuing in testing mode (External), add the email addresses being "
+"configured under the :guilabel:`Test users` step, by clicking on "
+":guilabel:`Add Users`, and then the :guilabel:`Save and Continue` button. A "
+"summary of the app registration appears."
 msgstr ""
-"Ensuite, ajoutez l'email en cours de confirmation à l'étape "
-":guilabel:`Utilisateurs tests` en cliquant sur :guilabel:`Add users` et "
-"ensuite sur le bouton :guilabel:`Enregistrer et Continuer`. Un récapitulatif"
-" de l':guilabel:`Enregistrement de l'application` s'affiche."
+"Si vous continuez en mode de test (Externe), ajoutez les adresses email en "
+"cours de configuration à l'étape :guilabel:`utilisateurs test`, en cliquant "
+"sur :guilabel:`Ajouter des utilisateurs` et ensuite sur le bouton "
+":guilabel:`Enregistrer et continuer`. Un résumé de l'inscription de "
+"l'application s'affiche."
 
-#: ../../content/administration/maintain/google_oauth.rst:62
+#: ../../content/administration/maintain/google_oauth.rst:85
 msgid ""
-"Finally, scroll to the bottom and click on :guilabel:`Back to Dashboard`."
+"Finally, scroll to the bottom and click on :guilabel:`Back to Dashboard` to "
+"finish setting up the project."
 msgstr ""
-"Finalement, défilez jusqu'en bas et cliquez sur :guilabel:`Revenir au "
-"tableau de bord`."
+"Finalement, défilez vers le bas et cliquez sur :guilabel:`Revenir au tableau"
+" de bord` pour finaliser la configuration du projet."
 
-#: ../../content/administration/maintain/google_oauth.rst:65
+#: ../../content/administration/maintain/google_oauth.rst:89
 msgid "Create Credentials"
 msgstr "Créer des identifiants"
 
-#: ../../content/administration/maintain/google_oauth.rst:67
+#: ../../content/administration/maintain/google_oauth.rst:91
 msgid ""
-"Now that you have set up the project, you need to create credentials, which "
-"includes the :guilabel:`Client ID` and :guilabel:`Client Secret`. First, "
-"click on :guilabel:`Credentials` in the left sidebar menu."
+"Now that the project is set up, credentials should be created, which "
+"includes the *Client ID* and *Client Secret*. First, click on "
+":guilabel:`Credentials` in the left sidebar menu."
 msgstr ""
-"Maintenant que vous avez configuré le projet, vous devez créer des "
-"identifiants, qui comprennent l':guilabel:`ID Client` et le "
-":guilabel:`Secret client`. Cliquez d'abord sur :guilabel:`Identifiants` dans"
-" le menu latéral de gauche."
+"Maintenant que le projet est configuré, vous devez créer des identifiants, "
+"qui comprennent l'*ID client* et le *Code secret du client*. Cliquez d'abord"
+" sur :guilabel:`Identifiants` dans le menu latéral de gauche."
 
-#: ../../content/administration/maintain/google_oauth.rst:71
+#: ../../content/administration/maintain/google_oauth.rst:94
 msgid ""
 "Then, click on :guilabel:`Create Credentials` in the top menu and select "
 ":guilabel:`OAuth client ID` from the dropdown menu."
@@ -4682,7 +4721,7 @@ msgstr ""
 "supérieur et sélectionnez :guilabel:`ID client OAuth` dans le menu "
 "déroulant."
 
-#: ../../content/administration/maintain/google_oauth.rst:74
+#: ../../content/administration/maintain/google_oauth.rst:97
 msgid ""
 "Under :guilabel:`Application Type`, select :guilabel:`Web Application` from "
 "the dropdown menu."
@@ -4690,44 +4729,44 @@ msgstr ""
 "Dans le menu déroulant, définissiez le :guilabel:`Type d'application` sur "
 ":guilabel:`Application Web`."
 
-#: ../../content/administration/maintain/google_oauth.rst:75
-msgid "In the :guilabel:`Client ID` field, enter `Odoo`."
-msgstr "Dans le champ :guilabel:`ID Client`, saisissez `Odoo`."
+#: ../../content/administration/maintain/google_oauth.rst:98
+msgid "In the :guilabel:`Name` field, enter `Odoo`."
+msgstr "Saisissez `Odoo` dans le champ :guilabel:`Nom`."
 
-#: ../../content/administration/maintain/google_oauth.rst:76
+#: ../../content/administration/maintain/google_oauth.rst:99
 msgid ""
 "Under the :guilabel:`Authorized redirect URIs` label, click the button "
 ":guilabel:`ADD URI`, and then input "
 "`https://yourdbname.odoo.com/google_gmail/confirm` in the :guilabel:`URIs 1`"
-" field. Be sure to replace the *yourdbname* part of the URL with your actual"
-" Odoo database name."
+" field. Be sure to replace the *yourdbname* part of the URL with the actual "
+"Odoo database name."
 msgstr ""
 "Sous le libellé :guilabel:`URl de redirection autorisés`, cliquez sur le "
 "bouton :guilabel:`AJOUTER UN URl` et saisissez "
 "`https://yourdbname.odoo.com/google_gmail/confirm` dans le champ "
-":guilabel:`URI 1`. Veillez à remplacer le partie *yourdbname* de l'URL par "
+":guilabel:`URI 1`. Veillez à remplacer la partie *yourdbname* de l'URL par "
 "le nom réel de votre base de données Odoo."
 
-#: ../../content/administration/maintain/google_oauth.rst:79
+#: ../../content/administration/maintain/google_oauth.rst:102
 msgid ""
 "Next, click on :guilabel:`Create` to generate an OAuth :guilabel:`Client ID`"
 " and :guilabel:`Client Secret`. Finally, copy each generated value for later"
 " use when configuring in Odoo, and then navigate to the Odoo database."
 msgstr ""
-"Ensuite, cliquez sur :guilabel:`Créer` pour générer un :guilabel:`ID Client`"
+"Ensuite, cliquez sur :guilabel:`Créer` pour générer un :guilabel:`ID client`"
 " et un :guilabel:`Secret client` OAuth. Finalement, copiez chaque valeur "
 "générée pour pouvoir les utiliser ultérieurement lors de la configuration "
 "dans Odoo et allez ensuite à la base de données Odoo."
 
 #: ../../content/administration/maintain/google_oauth.rst-1
 msgid "Client ID and Client Secret for Google OAuth."
-msgstr "ID Client et Secret client pour Google OAuth."
+msgstr "ID Client et Secret Client pour Google OAuth."
 
-#: ../../content/administration/maintain/google_oauth.rst:91
+#: ../../content/administration/maintain/google_oauth.rst:114
 msgid "Enter Google Credentials"
 msgstr "Saisir des identifiants Google"
 
-#: ../../content/administration/maintain/google_oauth.rst:93
+#: ../../content/administration/maintain/google_oauth.rst:116
 msgid ""
 "First, open Odoo and navigate to the :guilabel:`Apps` module. Then, remove "
 "the :guilabel:`Apps` filter from the search bar and type in `Google`. "
@@ -4737,73 +4776,83 @@ msgstr ""
 "le filtre :guilabel:`Applications` de la barre de recherche et saisissez "
 "`Google`. Installez le module intitulé :guilabel:`Google Gmail`."
 
-#: ../../content/administration/maintain/google_oauth.rst:96
+#: ../../content/administration/maintain/google_oauth.rst:120
 msgid ""
 "Next, navigate to :menuselection:`Settings --> General Settings`, and under "
 "the :guilabel:`Discuss` section, ensure that the checkbox for "
-":guilabel:`Custom Email Servers` is checked. This populates a new option for"
-" :guilabel:`Gmail Credentials`. Then, copy and paste the :guilabel:`Client "
-"ID` and :guilabel:`Client Secret` into the respective fields and "
+":guilabel:`Custom Email Servers` or :guilabel:`External Email Servers` is "
+"checked. This populates a new option for :guilabel:`Gmail Credentials` or "
+":guilabel:`Use a Gmail Sever`. Then, copy and paste the respective values "
+"into the :guilabel:`Client ID` and :guilabel:`Client Secret` fields and "
 ":guilabel:`Save` the settings."
 msgstr ""
-"Allez ensuite aux :menuselection:`Paramètres --> Paramètres généraux`, et "
+"Ensuite, allez aux :menuselection:`Paramètres --> Paramètres généraux` et "
 "dans la section :guilabel:`Discussion`, assurez-vous que la case à cocher à "
-"côté de :guilabel:`Serveurs de messagerie personnalisés` est cochée. Une "
-"nouvelle option s'affiche alors pour les :guilabel:`Identifiants Gmail`. "
-"Ensuite, copiez et collez l':guilabel:`ID Client` et le :guilabel:`Secret "
-"Client` dans les champs respectifs et :guilabel:`sauvegardez` les "
-"paramètres."
+"côté de :guilabel:`Serveurs de messagerie personnalisés` ou "
+":guilabel:`Serveurs de messagerie externes` est cochée. Une nouvelle option "
+"s'affiche alors pour les :guilabel:`Identifiants Gmail` ou "
+":guilabel:`Utiliser un serveur Gmail`. Ensuite, copiez et collez les valeurs"
+" respectives dans les champs :guilabel:`ID client` et :guilabel:`Secret "
+"client` et :guilabel:`sauvegardez` les paramètres."
 
-#: ../../content/administration/maintain/google_oauth.rst:104
+#: ../../content/administration/maintain/google_oauth.rst:129
 msgid ""
-"After that, on the :guilabel:`General Settings` page, under "
-":guilabel:`Custom Email Servers`, click :guilabel:`Outgoing Email Servers` "
-"to configure the external Gmail account."
+"To configure the external Gmail account, return to the top of the "
+":guilabel:`Custom Email Servers` setting and then click the "
+":guilabel:`Outgoing Email Servers` link."
 msgstr ""
-"Après cela, sur la page des :guilabel:`Paramètres généraux`, sous "
-":guilabel:`Serveurs de messagerie personnalisés`, cliquez sur "
-":guilabel:`Serveurs de messagerie sortants` pour configurer le compte Gmail "
-"externe."
+"Pour configurer un compte Gmail externe, revenez en haut du paramètre "
+":guilabel:`Serveurs de messagerie personnalisés` et cliquez sur le lien "
+":guilabel:`Serveurs de messagerie sortants`."
 
 #: ../../content/administration/maintain/google_oauth.rst-1
 msgid "Configure Outgoing Email Servers in Odoo."
 msgstr "Configurer des serveurs de messagerie sortants dans Odoo."
 
-#: ../../content/administration/maintain/google_oauth.rst:111
+#: ../../content/administration/maintain/google_oauth.rst:136
 msgid ""
-"Then, :guilabel:`Create` a new email server and select the option for "
-":guilabel:`Gmail`. Next, fill in the :guilabel:`Description` (can be "
-"anything) and the email :guilabel:`Username` and click on :guilabel:`Connect"
-" your Gmail account`."
+"Then, click on :guilabel:`New` or :guilabel:`Create` to create a new email "
+"server, and fill in the :guilabel:`Name`, :guilabel:`Description`, and the "
+"email :guilabel:`Username` (if required)."
 msgstr ""
-"Ensuite, :guilabel:`créez` un nouveau serveur de messagerie et sélectionnez "
-"l'option pour :guilabel:`Gmail`. Complétez ensuite la "
-":guilabel:`Description` (cela peut être n'importe quoi) et le :guilabel:`Nom"
-" d'utilisateur` de l'email et cliquez sur :guilabel:`Connecter votre compte "
-"Gmail`."
+"Ensuite, cliquez sur :guilabel:`Nouveau` ou :guilabel:`Créer` pour créer un "
+"nouveau serveur de messagerie et complétez le :guilabel:`Nom`, la "
+":guilabel:`Description`, et le :guilabel:`Nom d'utilisateur` de l'email (si "
+"requis)."
 
-#: ../../content/administration/maintain/google_oauth.rst:115
+#: ../../content/administration/maintain/google_oauth.rst:139
 msgid ""
-"A new window from :guilabel:`Google` opens to complete the authorization "
+"Next, click on :guilabel:`Gmail OAuth Authentication` or :guilabel:`Gmail` "
+"(under the :guilabel:`Authenticate with` or :guilabel:`Connection` section)."
+" Finally, click on :guilabel:`Connect your Gmail Account`."
+msgstr ""
+"Ensuite cliquez sur :guilabel:`Authentification OAuth Gmail` ou "
+":guilabel:`Gmail` (dans la section :guilabel:`S'authentifier avec` ou "
+":guilabel:`Connexion`). Enfin, cliquez sur :guilabel:`Connecter votre compte"
+" Gmail`."
+
+#: ../../content/administration/maintain/google_oauth.rst:143
+msgid ""
+"A new window labeled :guilabel:`Google` opens to complete the authorization "
 "process. Select the appropriate email address that is being configured in "
 "Odoo."
 msgstr ""
 "Une nouvelle fenêtre de :guilabel:`Google` s'ouvre vous permettant de "
 "finaliser le processus d'authentification. Sélectionnez l'adresse email "
-"personnalisée en cours de configuration dans Odoo."
+"appropriée en cours de configuration dans Odoo."
 
-#: ../../content/administration/maintain/google_oauth.rst:118
+#: ../../content/administration/maintain/google_oauth.rst:146
 msgid ""
-"If the email address is a personal account, an extra step pops up, click "
-":guilabel:`Continue` to allow the verification and connect the Gmail account"
-" to Odoo."
+"If the email address is a personal account, then an extra step pops up, so "
+"click :guilabel:`Continue` to allow the verification and connect the Gmail "
+"account to Odoo."
 msgstr ""
 "Si l'adresse email est un compte personnel, une fenêtre contextuelle "
 "comportant une étape additionnelle apparaît, cliquez sur "
 ":guilabel:`Continuer` pour permettre la vérification et la connexion du "
 "compte Gmail à Odoo."
 
-#: ../../content/administration/maintain/google_oauth.rst:121
+#: ../../content/administration/maintain/google_oauth.rst:149
 msgid ""
 "Then, allow Odoo to access the Google account by clicking on "
 ":guilabel:`Continue` or :guilabel:`Allow`. After that, the page navigates "
@@ -4817,39 +4866,39 @@ msgstr ""
 "configuration charge automatiquement le jeton dans Odoo et une étiquette "
 "indiquant :guilabel:`Jeton Gmail valide` apparaît en vert."
 
-#: ../../content/administration/maintain/google_oauth.rst:130
+#: ../../content/administration/maintain/google_oauth.rst:158
 msgid ""
-"Finally, save the settings and :guilabel:`Test the Connection`. A "
-"confirmation message should appear. The Odoo database can now send safe, "
-"secure emails through Google using OAuth authentication."
+"Finally, :guilabel:`Test the Connection`. A confirmation message should "
+"appear. The Odoo database can now send safe, secure emails through Google "
+"using OAuth authentication."
 msgstr ""
-"Finalement, sauvegardez les paramètres et procédez au :guilabel:`Test de "
-"connexion`. Un message de confirmation devrait apparaître. La base de "
-"données Odoo peut désormais envoyer des emails sûrs et sécurisés par le "
-"biais de Google en utilisant l'authentification OAuth."
+"Enfin, faites un :guilabel:`Test de connexion`. Un message de configuration "
+"devrait apparaître. La base de données Odoo peut désormais envoyer des "
+"emails sûrs et sécurisés par le biais de Google en utilisant "
+"l'authentification OAuth."
 
-#: ../../content/administration/maintain/google_oauth.rst:135
+#: ../../content/administration/maintain/google_oauth.rst:162
 msgid "Google OAuth FAQ"
 msgstr "FAQ Google OAuth"
 
-#: ../../content/administration/maintain/google_oauth.rst:138
+#: ../../content/administration/maintain/google_oauth.rst:165
 msgid "Production VS Testing Publishing Status"
 msgstr "Statut de publication Production VS Test"
 
-#: ../../content/administration/maintain/google_oauth.rst:140
+#: ../../content/administration/maintain/google_oauth.rst:167
 msgid ""
 "Choosing :guilabel:`Production` as the :guilabel:`Publishing Status` "
-"(instead of Testing) will display the following warning message:"
+"(instead of :guilabel:`Testing`) will display the following warning message:"
 msgstr ""
 "Si vous définissez l':guilabel:`État de publication` sur "
-":guilabel:`Production` (au lieu de Test), le message d'avertissement suivant"
-" s'affichera :"
+":guilabel:`Production` (au lieu de :guilabel:`Test`), le message "
+"d'avertissement suivant s'affichera :"
 
 #: ../../content/administration/maintain/google_oauth.rst-1
 msgid "OAuth is Limited to 100 Sensitive Scope Logins."
 msgstr "OAuth est limité à 100 connexions de champ d'application sensible."
 
-#: ../../content/administration/maintain/google_oauth.rst:147
+#: ../../content/administration/maintain/google_oauth.rst:174
 msgid ""
 "To correct this warning, navigate to the `Google API Platform "
 "<https://console.cloud.google.com/apis/credentials/consent>`_. If the "
@@ -4861,11 +4910,11 @@ msgstr ""
 "l':guilabel:`État de publication` est :guilabel:`En production`, cliquez sur"
 " :guilabel:`Retour à l'état de test` pour corriger le problème."
 
-#: ../../content/administration/maintain/google_oauth.rst:152
+#: ../../content/administration/maintain/google_oauth.rst:179
 msgid "No Test Users Added"
 msgstr "Aucun utilisateur test ajouté"
 
-#: ../../content/administration/maintain/google_oauth.rst:154
+#: ../../content/administration/maintain/google_oauth.rst:181
 msgid ""
 "If no test users are added to the OAuth consent screen, then a 403 access "
 "denied error will populate."
@@ -4877,7 +4926,7 @@ msgstr ""
 msgid "403 Access Denied Error."
 msgstr "Erreur 403 Accès Interdit."
 
-#: ../../content/administration/maintain/google_oauth.rst:161
+#: ../../content/administration/maintain/google_oauth.rst:188
 msgid ""
 "To correct this error, return to the :guilabel:`OAuth consent screen` under "
 ":guilabel:`APIs & Services` and add test user(s) to the app. Add the email "
@@ -4888,16 +4937,16 @@ msgstr ""
 "l’application. Ajoutez l'email que vous êtes en train de configurer dans "
 "Odoo."
 
-#: ../../content/administration/maintain/google_oauth.rst:166
+#: ../../content/administration/maintain/google_oauth.rst:192
 msgid "Gmail Module not updated"
 msgstr "Module Gmail non mis à jour"
 
-#: ../../content/administration/maintain/google_oauth.rst:168
+#: ../../content/administration/maintain/google_oauth.rst:194
 msgid ""
-"If the :guilabel:`Gmail Module` in Odoo has not been updated to the latest "
+"If the *Google Gmail* module in Odoo has not been updated to the latest "
 "version, then a :guilabel:`Forbidden` error message populates."
 msgstr ""
-"Si le :guilabel:`module Gmail` dans Odoo n'a pas été mis à jour à la "
+"Si le module *Google Gmail* dans Odoo n'a pas été mis à jour vers la "
 "dernière version, un message d'erreur :guilabel:`Interdit` s'affichera."
 
 #: ../../content/administration/maintain/google_oauth.rst-1
@@ -4906,56 +4955,53 @@ msgid ""
 msgstr ""
 "Interdit. Vous n'avez pas l'autorisation d'accéder à la ressource demandée."
 
-#: ../../content/administration/maintain/google_oauth.rst:175
+#: ../../content/administration/maintain/google_oauth.rst:201
 msgid ""
-"To correct this error, go to the :guilabel:`Apps` module and clear out the "
-"search terms. Then, search for `Gmail` or `Google` and upgrade the "
+"To correct this error, go to the :menuselection:`Apps` module and clear out "
+"the search terms. Then, search for `Gmail` or `Google` and upgrade the "
 ":guilabel:`Google Gmail` module. Finally, click on the three dots on the "
 "upper right of the module and select :guilabel:`Upgrade`."
 msgstr ""
-"Pour corriger cette erreur, allez au module :guilabel:`Applications` et "
-"effacez la recherche. Recherchez ensuite `Gmail` ou `Google` et mettez à "
+"Pour corriger cette erreur, allez au module :menuselection:`Applications` et"
+" effacez la recherche. Recherchez ensuite `Gmail` ou `Google` et mettez à "
 "niveau le module :guilabel:`Google Gmail`. Enfin, cliquez sur les trois "
 "points dans le coin supérieur droit du module et sélectionnez "
 ":guilabel:`Mettre à niveau`."
 
-#: ../../content/administration/maintain/google_oauth.rst:180
+#: ../../content/administration/maintain/google_oauth.rst:206
 msgid "Application Type"
 msgstr "Type d'application"
 
-#: ../../content/administration/maintain/google_oauth.rst:182
+#: ../../content/administration/maintain/google_oauth.rst:208
 msgid ""
-"When creating the :guilabel:`Credentials` (OAuth Client ID and Client "
-"Secret), if :guilabel:`Desktop App` is selected for the "
-":guilabel:`Application Type`, an :guilabel:`Authorization Error` appears."
+"When creating the credentials (OAuth *Client ID* and *Client Secret*), if "
+":guilabel:`Desktop App` is selected for the :guilabel:`Application Type`, an"
+" :guilabel:`Authorization Error` appears."
 msgstr ""
-"Lors de la création des :guilabel:`Identifiants` (ID Client et Secret client"
-" OAuth), si le :guilabel:`Type d'application` est défini sur "
-":guilabel:`Application de bureau`, une :guilabel:`Erreur d'autorisation` "
-"s'affichera."
+"Lors de la création des identifiants (*ID client* et *Secret client* OAuth),"
+" si le :guilabel:`Type d'application` est défini sur :guilabel:`Application "
+"de bureau`, une :guilabel:`Erreur d'autorisation` apparaît."
 
 #: ../../content/administration/maintain/google_oauth.rst-1
 msgid "Error 400 Redirect URI Mismatch."
 msgstr "Erreur 400 URL de redirection incorrecte."
 
-#: ../../content/administration/maintain/google_oauth.rst:190
+#: ../../content/administration/maintain/google_oauth.rst:215
 msgid ""
 "To correct this error, delete the credentials already created and create new"
 " credentials, selecting :guilabel:`Web Application` for the "
 ":guilabel:`Application Type`. Then, under :guilabel:`Authorized redirect "
 "URIs`, click :guilabel:`ADD URI` and type: "
-"`https://yourdbname.odoo.com/google_gmail/confirm` in the field."
+"`https://yourdbname.odoo.com/google_gmail/confirm` in the field, being sure "
+"to replace *yourdbname* in the URL with the Odoo database name."
 msgstr ""
 "Pour corriger cette erreur, supprimez les identifiants déjà créés et créez "
 "de nouveaux identifiants en définissant le :guilabel:`Type d'application` "
-"sur l':guilabel:`Application Web`. Ensuite, sous :guilabel:`URl de "
-"redirection autorisés`, cliquez sur :guilabel:`AJOUTER UN URl` et saisissez "
-"`https://yourdbname.odoo.com/google_gmail/confirm` dans le champ."
-
-#: ../../content/administration/maintain/google_oauth.rst:196
-msgid "Replace *yourdbname* in the URL with the Odoo database name."
-msgstr ""
-"Remplacez *yourdbname* dans l'URL par le nom de la base de données Odoo."
+"sur :guilabel:`Application Web`. Ensuite, sous :guilabel:`URl de redirection"
+" autorisés`, cliquez sur :guilabel:`AJOUTER UN URl` et saisissez "
+"`https://yourdbname.odoo.com/google_gmail/confirm` dans le champ, en "
+"veillant à remplacer *yourdbname* dans l'URL par le nom de la base de "
+"données Odoo."
 
 #: ../../content/administration/maintain/hosting_changes.rst:6
 msgid "Change hosting solution"
