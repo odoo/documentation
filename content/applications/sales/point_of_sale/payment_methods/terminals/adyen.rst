@@ -5,6 +5,10 @@ Adyen
 Connecting an **Adyen payment terminal** allows you to offer a fluid payment flow to your customers
 and ease the work of your cashiers.
 
+.. note::
+   Adyen works only with businesses processing **more** than **10 million annually** or invoicing a
+   **minimum** of **1,000** transactions **per month**.
+
 Configuration
 =============
 
