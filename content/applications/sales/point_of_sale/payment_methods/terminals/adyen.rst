@@ -84,7 +84,7 @@ click on :guilabel:`Send`. Once the payment is successful, the status changes to
 Successful`.
 
 .. note::
-   - | In case of connexion issues between Odoo and the payment terminal, force the payment by
+   - | In case of connection issues between Odoo and the payment terminal, force the payment by
        clicking on :guilabel:`Force Done`, which allows you to validate the order.
      | This option is only available after receiving an error message informing you that the
        connection failed.
