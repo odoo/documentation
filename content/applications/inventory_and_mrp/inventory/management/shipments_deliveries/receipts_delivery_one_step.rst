@@ -20,12 +20,11 @@ Configure the warehouse
 If another receiving or shipping configuration is set on the warehouse, they can easily be set back
 to the one step setting.
 
-Begin by navigating to :menuselection:`Inventory --> Configuration -->
-Warehouses`, click on the desired warehouse, and click :guilabel:`Edit`. Next, on the
-:guilabel:`Warehouse Configuration` tab, under the :guilabel:`Shipments` section, select
-:guilabel:`Receive goods directly (1 step)` for :guilabel:`Incoming Shipments` and/or
-:guilabel:`Deliver goods directly (1 step)` for :guilabel:`Outgoing Shipments`, and :guilabel:`Save`
-the changes to finish.
+Begin by navigating to :menuselection:`Inventory --> Configuration --> Warehouses`, and click on the
+desired warehouse to edit. Next, on the :guilabel:`Warehouse Configuration` tab, under the
+:guilabel:`Shipments` section, select :guilabel:`Receive goods directly (1 step)` for
+:guilabel:`Incoming Shipments` and/or :guilabel:`Deliver goods directly (1 step)` for
+:guilabel:`Outgoing Shipments`.
 
 .. image:: receipts_delivery_one_step/one-step-warehouse-config.png
    :align: center
@@ -38,7 +37,7 @@ Create a purchase order
 -----------------------
 
 On the main :menuselection:`Purchase` application dashboard, start by making a new quote by clicking
-:guilabel:`Create`. Then, select (or create) a :guilabel:`Vendor` from the drop-down field, add a
+:guilabel:`New`. Then, select (or create) a :guilabel:`Vendor` from the drop-down field, add a
 storable :guilabel:`Product` to the order lines, and click :guilabel:`Confirm Order` to finalize the
 quote as a new purchase order.
 
@@ -90,8 +89,8 @@ Create a sales order
 --------------------
 
 Start my navigating to the main :menuselection:`Sales` app dashboard, and make a new quote by
-clicking :guilabel:`Create`. Then select (or create) a :guilabel:`Customer` from the drop-down
-field, add a storable :guilabel:`Product` that is in stock to the order lines, and click
+clicking :guilabel:`New`. Then select (or create) a :guilabel:`Customer` from the drop-down field,
+add a storable :guilabel:`Product` that is in stock to the order lines, and click
 :guilabel:`Confirm` to finalize the quotation as a sales order.
 
 A :guilabel:`Receipt` smart button will appear in the top-right corner of the :abbr:`PO (purchase
