@@ -5,9 +5,9 @@
 :classes: pt-0
 :showbanner:
 
-=======================
-Developer Documentation
-=======================
+=========
+Developer
+=========
 
 Learn through tutorials and get help using reference guides.
 

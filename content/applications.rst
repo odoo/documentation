@@ -5,9 +5,9 @@
 :classes: pt-0
 :showbanner:
 
-==================
-User Documentation
-==================
+====
+User
+====
 
 Discover our user guides and configuration tutorials per application.
 
