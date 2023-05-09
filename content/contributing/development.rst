@@ -67,15 +67,14 @@ and then push them to GitHub. Skip this section and go to
 
             $ cd /CommunityPath
             $ git remote add dev git@github.com:odoo-dev/odoo.git
-            $ git remote set-url --push origin no_push
+            $ git remote set-url --push origin you_should_not_push_on_this_repository
 
             $ cd /EnterprisePath
             $ git remote add dev git@github.com:odoo-dev/enterprise.git
-            $ git remote set-url --push origin no_push
+            $ git remote set-url --push origin you_should_not_push_on_this_repository
 
 #. That's it! You are ready to :ref:`make your first contribution
    <contributing/development/first-contribution>`.
-
 
 .. _contributing/development/first-contribution:
 
