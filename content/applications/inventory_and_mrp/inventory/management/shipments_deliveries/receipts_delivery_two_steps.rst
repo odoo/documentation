@@ -44,12 +44,12 @@ setting, :guilabel:`Save` the changes.
    :alt: Activate multi-step routes and storage locations in inventory settings.
 
 Next, the warehouse needs to be configured for two-step receipts and deliveries. Go to
-:menuselection:`Inventory --> Configuration --> Warehouses`, and click :guilabel:`Edit` to change
+:menuselection:`Inventory --> Configuration --> Warehouses`, and click on the warehouse to change
 the warehouse settings.
 
 Then, select :guilabel:`Receive goods in input and then stock (2 steps)` for :guilabel:`Incoming
 Shipments`, and :guilabel:`Send goods in output and then deliver (2 steps)` for :guilabel:`Outgoing
-Shipments`. :guilabel:`Save` the changes to finish.
+Shipments`.
 
 .. image:: receipts_delivery_two_steps/two-step-warehouse-config.png
    :align: center
@@ -59,9 +59,8 @@ Shipments`. :guilabel:`Save` the changes to finish.
    Activating two-step receipts and deliveries will create new *input* and *output* locations, which
    by default, are labeled :guilabel:`WH/Input` and :guilabel:`WH/Output`, respectively, on the
    :guilabel:`Locations` dashboard. To rename these locations, go to :menuselection:`Configuration
-   --> Locations`, select the :guilabel:`Location` to change, and then click :guilabel:`Edit`. On
-   the location form, update the :guilabel:`Location Name`, make any other changes (if necessary)
-   and :guilabel:`Save` the changes.
+   --> Locations`, and select the :guilabel:`Location` to change. On the location form, update the
+   :guilabel:`Location Name`, and make any other changes (if necessary).
 
 Process a receipt in two steps (input + stock)
 ==============================================
@@ -70,7 +69,7 @@ Create a purchase order
 -----------------------
 
 On the main :menuselection:`Purchase` application dashboard, start by making a new quote by clicking
-:guilabel:`Create`. Then, select (or create) a :guilabel:`Vendor` from the drop-down field, add a
+:guilabel:`New`. Then, select (or create) a :guilabel:`Vendor` from the drop-down field, add a
 storable :guilabel:`Product` to the order lines, and click :guilabel:`Confirm Order` to finalize the
 quote as a new purchase order.
 
@@ -82,8 +81,7 @@ quote as a new purchase order.
    name.
 
 After confirming the :abbr:`PO (Purchase Order)`, a :guilabel:`Receipt` smart button will appear in
-the top-right corner of the :abbr:`PO (Purchase Order)` form — click it to reveal the associated
-receipt.
+the top of the :abbr:`PO (Purchase Order)` form — click it to reveal the associated receipt.
 
 .. image:: receipts_delivery_two_steps/two-step-po-receipt.png
    :align: center
@@ -142,13 +140,13 @@ Process a delivery order in two steps (pick + ship)
 Create a sales order
 --------------------
 
-In the :menuselection:`Sales` application, create a new quote by clicking :guilabel:`Create`. Select
-or create a :guilabel:`Customer`, add a storable :guilabel:`Product` to the order lines, and then
+In the :menuselection:`Sales` application, create a new quote by clicking :guilabel:`New`. Select
+(or create) a :guilabel:`Customer`, add a storable :guilabel:`Product` to the order lines, and then
 click :guilabel:`Confirm`.
 
 After confirming the :abbr:`SO (Sales Order)`, a :guilabel:`Delivery` smart button will appear in
-the top-right corner of the :abbr:`SO (Sales Order)` form. Click it to reveal the associated
-delivery forms.
+the top, above the :abbr:`SO (Sales Order)` form. Click the :guilabel:`Delivery` smart button to
+reveal the associated receipt.
 
 .. image:: receipts_delivery_two_steps/two-step-sales-quote.png
    :align: center
