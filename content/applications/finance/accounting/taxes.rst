@@ -13,11 +13,11 @@ supports all kinds of uses and computations.
 Default taxes
 =============
 
-**Default Taxes** define which taxes are automatically selected when there is no
-other indication about which tax to use. For example, Odoo prefills the **Taxes** field with the
-Default Taxes when you create a new product or add a new line on an invoice.
+**Default Taxes** define which taxes are automatically selected when creating a new product. They
+are also used to prefill the :guilabel:`Taxes` field when adding a new line on an invoice in
+**Accounting Firms** mode.
 
-.. image:: taxes/default-invoice-line.png
+.. image:: taxes/default-taxes-product.png
    :alt: Odoo fills out the Tax field automatically according to the Default Taxes
 
 To change your **Default Taxes**, go to :menuselection:`Accounting --> Configuration --> Settings
