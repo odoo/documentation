@@ -56,9 +56,8 @@ Prepare the addon directory
       :align: center
       :alt: The new module appears in the list
 
-The first step of module creation is to create a new directory. To ease the development, we
-suggest you first create the directory ``/home/$USER/src/custom``. In this directory we add
-another directory ``estate``, which is our module.
+The first step of module creation is to create its directory. In the `technical-training-sandbox`
+directory, add a new directory :file:`estate`.
 
 A module must contain at least 2 files: the ``__manifest__.py`` file and a ``__init__.py`` file.
 The ``__init__.py`` file can remain empty for now and we'll come back to it in the next chapter.
@@ -78,21 +77,15 @@ be uninstalled**. Think about your favorite Linux distribution package manager
 
     Create the following folders and files:
 
-    - ``/home/$USER/src/custom/estate/__init__.py``
-    - ``/home/$USER/src/custom/estate/__manifest__.py``
+    - ``/home/$USER/src/technical-training-sandbox/estate/__init__.py``
+    - ``/home/$USER/src/technical-training-sandbox/estate/__manifest__.py``
 
     The ``__manifest__.py`` file should only define the name and the dependencies of our modules.
     The only necessary framework module for now is ``base``.
 
 
-Restart the Odoo server and add the ``custom`` folder to the ``addons-path``:
-
-.. code-block:: console
-
-    $ ./odoo-bin --addons-path=../custom,../enterprise/,addons
-
-Go to Apps, click on Update Apps List, search for ``estate`` and... tadaaa, your module appears!
-Did it not appear? Maybe try removing the default 'Apps' filter ;-)
+Restart the Odoo server and go to Apps. Click on Update Apps List, search for ``estate`` and...
+tadaaa, your module appears! Did it not appear? Maybe try removing the default 'Apps' filter ;-)
 
 .. warning::
    Remember to enable the :ref:`developer mode <developer-mode>` as explained in the previous
