@@ -2,156 +2,65 @@
 Chapter 2: Development environment setup
 ========================================
 
-Depending on the intended use case, there are multiple ways to install Odoo. This tutorial will
-stick to the :ref:`source install <setup/install/source>` (:dfn:`running Odoo from the source
-code`), which is best suited for Odoo developers.
+Depending on the intended use case, there are multiple ways to install Odoo. For developers of the
+Odoo community and Odoo employees alike, the preferred way is to perform a source install
+(:dfn:`running Odoo from the source code`).
 
-Throughout this document, we assume that you are installing your development environment on a
-laptop provided by Odoo with Linux Mint installed and up-to-date. If that is not the case, switch to
-the appropriate section of the installation guide, depending on whether you are on :ref:`Windows
-<setup/install/source/windows>` or :ref:`Mac OS <setup/install/source/mac_os>`. The steps remain
-essentially the same.
+Prepare the environment
+=======================
 
-Set up Git
-==========
+First, follow the :ref:`contributing/development/setup` section of the contributing guide to prepare
+your environment.
 
-Install and configure Git
--------------------------
+.. important::
+   The following steps are intended only for Odoo employees. The mentioned repositories are not
+   accessible to third parties.
 
-The very first step of the installation process is to install the `Git version control system
-<https://git-scm.com/>`_ because the Odoo source code is managed on `GitHub <https://github.com/>`_.
+By now, you should have downloaded the source code into two local repositories, one for `odoo/odoo`
+and one for `odoo/enterprise`. These repositories are set up to push changes to pre-defined shared
+forks on GitHub. This will prove to be convenient when you start contributing to the codebase, but
+for the scope of this tutorial, we want to avoid polluting the shared repositories with training
+material. Let's then develop your own module in a third repository `technical-training-sandbox`.
+Like the first two repositories, it will be part of the `addons-path` that references all
+directories containing Odoo modules.
 
-.. code-block:: console
-
-   $ sudo apt install git
-
-.. tip::
-   Check if Git is installed by trying to print Git's version with the following command:
+#. Following the same process as with the `odoo/odoo` and `odoo/enterprise` repositories, visit
+   `github.com/odoo/technical-training-sandbox
+   <https://github.com/odoo/technical-training-sandbox>`_ and click the :guilabel:`Fork` button to
+   create a fork of the repository under your account.
+#. Clone the repository on your machine with:
 
    .. code-block:: console
 
-      $ git --version
+      $ git clone git@github.com:odoo/technical-training-sandbox.git
 
-Once installed, register your name and email:
+#. Configure the repository to push changes to your fork:
 
-.. code-block:: console
+   .. code-block:: console
 
-   $ git config --global user.name "Your full name (trigram)"
-   $ git config --global user.email "xyz@odoo.com"
+      $ cd technical-training-sandbox/
+      $ git remote add dev git@github.com:<your_github_account>/technical-training-sandbox.git
+      $ git remote set-url --push origin you_should_not_push_on_this_repository
 
-Configure GitHub
-----------------
+That's it! Your environment is now prepared to run Odoo from the sources, and you have successfully
+created a repository to serve as an addons directory. This will allow you to push your work to
+GitHub.
 
-You need a GitHub account to fetch the sources and contribute to Odoo's development. If you don't
-have one yet, create it. For the username, we recommend using your trigram "xyz" (or quadrigam)
-followed by '-odoo': 'xyz-odoo'.
+Now, make a small change in the `technical-training-sandbox` repository, such as updating the
+:file:`README.md` file. Then, follow the :ref:`contributing/development/first-contribution` section
+of the contributing guide to push your changes to GitHub and create a :abbr:`PR (Pull Request)`.
+This will enable you to share your upcoming work and receive feedback. Adjust the instructions to
+use the branch `master` and the repository `technical-training-sandbox`.
 
-The easiest way to authenticate with GitHub is to use an SSH connection. Using SSH authentication
-allows you to connect to GitHub without supplying your username and password every time you type a
-command.
+To ensure a continuous feedback loop, we recommend pushing a new commit as soon as you reach a new
+milestone, such as completing a chapter of the tutorial.
 
 .. note::
-   The following step-by-step procedure is based based on the `official GitHub documentation
-   <https://docs.github.com/en/authentication/connecting-to-github-with-ssh>`_.
-
-#. Generate a new SSH key, add it to the ssh-agent, and copy the SSH key to your clipboard.
-
-   .. code-block:: console
-
-      $ ssh-keygen -t ed25519 -C "xyz@odoo.com"
-      $ ssh-add ~/.ssh/id_ed25519
-      $ sudo apt install xclip
-      $ xclip -sel clip < ~/.ssh/id_ed25519.pub
-
-#. Go to `GitHub.com <https://github.com/>`_, then click on your profile picture in the upper-right
-   corner of the page and then on :guilabel:`Settings`.
-
-   .. image:: 02_setup/account-settings.png
-
-#. On the user settings sidebar, click on :guilabel:`SSH and GPG keys`.
-
-   .. image:: 02_setup/settings-sidebar-ssh-keys.png
-
-#. Click on :guilabel:`New SSH key` or on :guilabel:`Add SSH key`.
-
-   .. image:: 02_setup/ssh-add-ssh-key.png
-
-#. In the :guilabel:`Title` field, add a descriptive label for the new key.
-#. Paste your key into the :guilabel:`Key` field.
-
-   .. image:: 02_setup/ssh-key-paste.png
-
-#. Click on :guilabel:`Add SSH key`.
-
-Fetch the sources
-=================
-
-It is time to fetch the source code of Odoo. First, let's create a home for the Git repositories in
-:file:`$HOME/src/`.
-
-.. code-block:: console
-
-   $ mkdir -p $HOME/src
-   $ cd $HOME/src
-
-Then, clone the two repositories with SSH as explained in the :ref:`Installing Odoo guide
-<setup/install/source/linux/git>`.
-
-.. tip::
-   Cloning the repositories will take a while, enjoy a cup of coffee while you wait.
-
-.. _tutorials/getting_started/02_setup/development_repository:
-
-Configure the Git repositories
-==============================
-
-To contribute to an Odoo repository, you first need to `fork it
-<https://docs.github.com/en/get-started/quickstart/contributing-to-projects>`_, then create a branch
-containing your changes on the fork, and finally submit a `Pull Request
-<https://docs.github.com/en/get-started/quickstart/github-glossary#pull-request>`_ to the
-repository.
-
-.. tip::
-   If you are lucky enough to work at Odoo, the forks already exist. They are hosted on
-   https://github.com/odoo-dev/odoo and https://github.com/odoo-dev/enterprise.
-
-After your two forks are created, their remote address can be added in your local repositories. In
-the commands below, replace `odoo-dev/odoo` and `odoo-dev/enterprise` with the name of your forks if
-needed.
-
-.. code-block:: console
-
-   $ cd  $HOME/src/odoo
-   $ git remote add odoo-dev git@github.com:odoo-dev/odoo.git  # Add odoo-dev as a new remote.
-   $ git remote rename origin odoo  # Change the name of origin (the odoo repository) to odoo.
-   $ git remote set-url --push odoo no_push  # Remove the possibility to push directly to odoo (you can only push to odoo-dev).
-
-   $ cd  $HOME/src/enterprise
-   $ git remote add enterprise-dev git@github.com:odoo-dev/enterprise.git
-   $ git remote rename origin enterprise
-   $ git remote set-url --push enterprise no_push
-
-Install the dependencies
-========================
-
-As seen in :ref:`tutorials/getting_started/01_architecture`, Odoo's server runs on Python and uses
-PostgreSQL as an RDBMS. In the context of a development machine, the easiest approach is to install
-everything locally. To do so, follow once again the :ref:`Installing Odoo guide
-<setup/install/source/linux/prepare>`.
-
-.. tip::
-   Some useful SQL commands:
-
-   .. code-block:: console
-
-      $ createdb $DB_NAME  # Create a database.
-      $ dropdb $DB_NAME  # Drop a database.
-
-      $ psql $DB_NAME  # Connect to a database.
-          \l  #List all the available databases.
-          \dt  #List all the tables of the $DB_NAME database.
-          \d $TABLE_NAME  #Show the structure of the table $TABLE_NAME.
-          \q  #Quit the psql environment (ctrl + d).
+   The specific location of the repositories on your file system is not crucial. However, for the
+   sake of simplicity, we will assume that you have cloned all the repositories under the same
+   directory. If this is not the case, make sure to adjust the following commands accordingly,
+   providing the appropriate relative path from the `odoo/odoo` repository to the
+   `odoo/technical-training-sandbox` repository.
 
 Run the server
 ==============
@@ -165,7 +74,7 @@ interface of the server.
 .. code-block:: console
 
     $ cd $HOME/src/odoo/
-    $ ./odoo-bin --addons-path="addons/,../enterprise/" -d rd-demo
+    $ ./odoo-bin --addons-path="addons/,../enterprise/,../technical-training-sandbox" -d rd-demo
 
 There are multiple :ref:`command-line arguments <reference/cmdline/server>` that you can use to run
 the server. In this training you will only need some of them.
