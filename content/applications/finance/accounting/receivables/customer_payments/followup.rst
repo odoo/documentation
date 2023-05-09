@@ -17,11 +17,11 @@ To configure a :guilabel:`Follow-Up Action`, go to :menuselection:`Accounting --
 Follow-up Levels`. Several follow-up actions are available by default, and you can customize them
 any way you want or create new ones to trigger the following actions:
 
-- Send an Email
-- :ref:`Send an SMS Message <pricing/pricing_and_faq>`
-- Print a Letter
-- :ref:`Send a Letter <customer_invoices/snailmail>`
-- Manual Action (creates a task)
+- Send an email;
+- :ref:`Send an SMS message <pricing/pricing_and_faq>`;
+- Print a letter;
+- :ref:`Send a letter <customer_invoices/snailmail>`;
+- Manual action (creates a task).
 
 It is also possible to automatically send a reminder by enabling the :guilabel:`Auto Execute`
 option, within a specific :guilabel:`Follow-Up Action`.
@@ -73,3 +73,8 @@ Send reminders in batches
 You can send reminder emails in batches from the :guilabel:`Follow-up Reports` page. To do so,
 select all the reports you would like to process, click on the :guilabel:`Action` gear icon, and
 select :guilabel:`Process follow-ups`.
+
+.. seealso::
+   - :doc:`../../../../general/in_app_purchase`
+   - :doc:`../../../../marketing/sms_marketing/pricing/pricing_and_faq`
+   - :doc:`../customer_invoices/snailmail`
