@@ -44,4 +44,4 @@ Ready? Let's get started!
 * :doc:`getting_started/13_inheritance`
 * :doc:`getting_started/14_other_module`
 * :doc:`getting_started/15_qwebintro`
-* :doc:`getting_started/16_guidelines_pr`
+* :doc:`getting_started/16_final_word`

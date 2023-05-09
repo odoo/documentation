@@ -126,7 +126,7 @@ be convenient to use the ``--dev xml`` parameter when launching the server:
 
 .. code-block:: console
 
-    $ ./odoo-bin --addons-path=../custom,../enterprise/,addons -d rd-demo -u estate --dev xml
+    $ ./odoo-bin --addons-path=addons,../enterprise/,../technical-training-sandbox/ -d rd-demo -u estate --dev xml
 
 This parameter allows you to just refresh the page to view your view modifications.
 
