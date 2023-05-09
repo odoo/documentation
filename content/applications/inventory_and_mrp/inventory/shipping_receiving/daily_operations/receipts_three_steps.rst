@@ -25,29 +25,31 @@ three-step receipts. First, make sure the *Multi-Step Routes* option is enabled 
    :align: center
    :alt: Activate multi-step routes and storage locations in Inventory settings.
 
-Next, the warehouse needs to be configured for three-step receipts. Go to :menuselection:`Inventory
---> Configuration --> Warehouses`, and click :guilabel:`Edit` to edit the warehouse. Then, select
-:guilabel:`Receive goods in input, then quality and then stock (3 steps)` for :guilabel:`Incoming
-Shipments`. Then, :guilabel:`Save` the changes.
+Next, the warehouse needs to be configured for three-step receipts. To do that, go to
+:menuselection:`Inventory app --> Configuration --> Warehouses`, and select the desired warehouse to
+be edited. Doing so reveals the detail form for that specific warehouse.
+
+On that :guilabel:`Warehouse` detail form page, select :guilabel:`Receive goods in input, then
+quality and then stock (3 steps)` for :guilabel:`Incoming Shipments`.
 
 .. image:: receipts_three_steps/three-step-receipt-settings.png
    :align: center
    :alt: Set incoming shipment option to receive in three steps.
 
-Activating three-step receipts and deliveries will create two new internal locations:
-*Input* (WH/Input), and *Quality Control* (WH/Quality Control). To rename these locations, go to
-:menuselection:`Configuration --> Locations`, select the :guilabel:`Location` to change, click
-:guilabel:`Edit`, update the name, and finally, click :guilabel:`Save`.
+Activating three-step receipts and deliveries creates two new internal locations: *Input*
+(WH/Input), and *Quality Control* (WH/Quality Control). To rename these locations, go to
+:menuselection:`Inventory app --> Configuration --> Locations`, then click on the desired location
+to change (or update) the name.
 
-Process a receipt in three steps (input + quality + stock)
-==========================================================
+Receive in three steps (input + quality + stock)
+================================================
 
 Create a purchase order
 -----------------------
 
-In the :menuselection:`Purchase` application, create a new quote by clicking :guilabel:`Create`.
-Select a :guilabel:`Vendor`, add a storable :guilabel:`Product`, and click :guilabel:`Confirm
-Order`.
+To create a new :abbr:`RfQ (Request for Quotation)`, navigate to :menuselection:`Purchase app -->
+New`, which reveals a blank :abbr:`RfQ (Request for Quotation)` form page. On this page, select a
+:guilabel:`Vendor`, add a storable :guilabel:`Product`, and click :guilabel:`Confirm Order`.
 
 A :guilabel:`Receipt` smart button will appear in the top right, and the receipt will be associated
 with the purchase order. Clicking on the :guilabel:`Receipt` smart button will show the receipt
