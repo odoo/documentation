@@ -124,10 +124,6 @@ Kanban views are a typical example of how it is always a good idea to start from
 view and fine tune it instead of starting from scratch. There are many options and classes
 available, so... read and learn!
 
-It is now time to add the
-:ref:`final touches to our application and submit it on GitHub
-<tutorials/getting_started/16_guidelines_pr>`!
-
 .. _templating:
     https://en.wikipedia.org/wiki/Template_processor
 .. _kanban board:
