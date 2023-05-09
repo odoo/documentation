@@ -196,3 +196,4 @@ Send yourself a sample invoice by email to make sure everything is correctly con
    get_started/chart_of_accounts
    get_started/multi_currency
    get_started/avg_price_valuation
+   get_started/vat_units
