@@ -28,30 +28,31 @@ three step deliveries. First, make sure the *Multi-Step Routes* option is enable
    :alt: Activate multi-step routes and storage locations in inventory settings.
 
 Next, the warehouse needs to be configured for three step deliveries. To do this, go to
-:menuselection:`Inventory --> Configuration --> Warehouses`, and click :guilabel:`Edit` to edit the
-:guilabel:`Warehouse`. Then, select :guilabel:`Pack goods, send goods in output and then deliver
-(3 steps)` for :guilabel:`Outgoing Shipments`. Then :guilabel:`Save` the changes.
+:menuselection:`Inventory app --> Configuration --> Warehouses`, and click on the
+:guilabel:`warehouse` to edit. Then, select :guilabel:`Pack goods, send goods in output and then
+deliver (3 steps)` for :guilabel:`Outgoing Shipments`.
 
 .. image:: delivery_three_steps/three-step-warehouse-config.png
    :align: center
    :alt: Set outgoing shipment option to deliver in three steps.
 
-Activating three-step receipts and deliveries will create two new internal locations: a
-*Packing Zone* (WH/Packing Zone), and *Output* (WH/Output). To rename these locations, go to
-:menuselection:`Configuration --> Locations`, select the :guilabel:`Location` to change, click
-:guilabel:`Edit`, update the name, and finally, click :guilabel:`Save`.
+Activating three-step receipts and deliveries creates two new internal locations: a *Packing Zone*
+(WH/Packing Zone), and *Output* (WH/Output). To rename these locations, go to
+:menuselection:`Inventory app --> Configuration --> Locations`, click on the :guilabel:`Location` to
+change, and update the name.
 
-Process a delivery order in three steps (pick + pack + ship)
-============================================================
+Deliver in three steps (pick + pack + ship)
+===========================================
 
 Create a sales order
 --------------------
 
-In the :menuselection:`Sales` application, create a new quote by clicking :guilabel:`Create`. Select
-a :guilabel:`Customer`, add a storable :guilabel:`Product`, and click :guilabel:`Confirm`.
+To create a new quote, navigate to :menuselection:`Sales app --> Create`, which reveals a blank
+quotation form. On the blank quotation form, select a :guilabel:`Customer`, add a storable
+:guilabel:`Product`, and click :guilabel:`Confirm`.
 
-A :guilabel:`Delivery` smart button will appear in the top right. Clicking on it will show the
-picking order, packing order, and the delivery order, which are all associated with the sales order.
+A :guilabel:`Delivery` smart button appears in the top right of the quotation form. Clicking it
+shows the picking order, packing order, and the delivery order associated with the sales order.
 
 .. image:: delivery_three_steps/three-step-delivery-so.png
    :align: center
