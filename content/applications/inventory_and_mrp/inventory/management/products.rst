@@ -8,6 +8,7 @@ Products
    :titlesonly:
    :glob:
 
+   products/mto
    products/uom
    products/usage
    products/strategies
