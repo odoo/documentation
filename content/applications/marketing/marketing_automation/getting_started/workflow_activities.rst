@@ -62,7 +62,9 @@ Odoo provides a number of triggering options to launch a :guilabel:`Child Activi
 depend on the trigger configurations related to the parent activity. Under the desired parent
 activity, hover over :guilabel:`Add child activity`, and select the trigger:
 
-- :guilabel:`Add Another Activity`: add another activity. Compared to adding an activity not as a child, a child activity will be triggered instantly whilst "usual" activities would be triggered at least one hour after the other activity.
+- :guilabel:`Add Another Activity`: adds another activity. Compared to a standard (non-child
+  activity), a child activity is triggered instantly, while standard activities are triggered at
+  least one hour after the preceding activity.
 - :guilabel:`Opened`: the next activity will be triggered if the (email) recipient opens the
   mailing.
 - :guilabel:`Not Opened`: the next activity will be triggered if the recipient does not open the
