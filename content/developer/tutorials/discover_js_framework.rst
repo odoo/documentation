@@ -32,7 +32,7 @@ Setup
 =====
 
 #. Clone the `official Odoo tutorials repository <https://github.com/odoo/tutorials>`_ and switch to
-   the branch `{CURRENT_MAJOR_BRANCH}`.
+   the branch `master-js-training-revamp-ged`.
 #. Add the cloned repository to the :option:`--addons-path <odoo-bin --addons-path>`.
 #. Start a new Odoo database and install the modules `owl_playground` and `awesome_dashboard`.
 
