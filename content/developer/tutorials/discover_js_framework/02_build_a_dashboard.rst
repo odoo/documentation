@@ -180,7 +180,9 @@ Let us now add two buttons to our control panel:
 Let us now improve our content. 
 
 #. Create a generic `DashboardItem` component that display its default slot in a nice card layout
-#. Add one card in the dashboard content
+   It should take an optional `size` number props, that default to `1`
+   The width should be hardcoded to `(18*size)rem`.
+#. Add a few cards in the dashboard, with no size and a size of 2.
 
 .. seealso::
    - `Owl slot system <{OWL_PATH}/doc/reference/slots.md>`_
@@ -268,7 +270,7 @@ the chartjs code every time if they don't need it.
 #. Use the `PieChart` component in a `DashboardItem` to display a `pie chart
    <https://www.chartjs.org/docs/2.8.0/charts/doughnut.html>`_ that shows the
    correct quantity for each sold t-shirts in each size (that information is available in the
-   statistics route).
+   statistics route). Note that you can use the `size` property to make it look larger
 #. The `PieChart` component will need to render a canvas, and draw on it using `chart.js`.
 #. Make it work!
 
@@ -314,14 +316,118 @@ changes.
 8. Lazy loading the dashboard
 =============================
 
-todo 
+Let us imagine that our dashboard is getting quite big, and is only of interest to some
+of our users. In that case, it could make sense to lazy load our dashboard, and all
+related assets, so we only pay the cost of loading the code when we actually want to
+look at it.
 
-9. Making it generic with registries
-====================================
+To do that, we will need to create a new bundle containing all our dashboard assets,
+then use the `LazyComponent` (located in `@web/core/assets`).
 
-todo
+#. Move all dashboard assets into a sub folder `/dashboard` to make it easier to
+   add to a bundle.
+#. Create a `awesome_dashboard.dashboard` assets bundle containing all content of
+   the `/dashboard` folder
+#. Modify `dashboard.js` to register itself in the `lazy_components` registry, and not
+   in the `action` registry.
+#. Add in `src/` a file `dashboard_action` that import `LazyComponent` and register
+   it to the `action` registry
 
-10. Going further
+9. Making our dashboard generic
+===============================
+
+So far, we have a nice working dashboard. But it is currently hardcoded in the dashboard
+template. What if we want to customize our dashboard? Maybe some users have different
+needs, and want to see some other data.
+
+So, the next step is then to make our dashboard generic: instead of hardcoding its content
+in the template, it can just iterate over a list of dashboard items. But then, many
+questions comes up: how to represent a dashboard item, how to register it, what data
+should it receive, and so on. There are many different ways to design such a system,
+with different trade offs. 
+
+For this tutorial, we will say that a dashboard item is an object with the folowing structure: 
+
+.. code-block:: js
+
+   const item = {
+      id: "average_quantity",
+      description: "Average amount of t-shirt",
+      Component: StandardItem,
+      // size and props are optionals
+      size: 3,
+      props: (data) => ({
+         title: "Average amount of t-shirt by order this month",
+         value: data.average_quantity
+      }),
+   };
+
+The `description` value will be useful in a later exercise to show the name of items that the
+user can choose to add to his dashboard. The `size` number is optional, and simply describes
+the size of the dashboard item that will be displayed. Finally, the `props` function is optional.
+If not given, we will simply give the `statistics` object as data. But if it is defined, it will
+be used to compute specific props for the component.
+
+The goal is to replace the content of the dashboard with the following snippet:
+
+.. code-block:: xml
+
+   <t t-foreach="items" t-as="item" t-key="item.id">
+      <DashboardItem size="item.size || 1">
+         <t t-set="itemProp" t-value="item.props ? item.props(statistics) : {'data': statistics}"/>
+         <t t-component="item.Component" t-props="itemProp" />
+      </DashboardItem>
+   </t>
+
+Note that the above example features two advanced features of Owl: dynamic components, and dynamic props.
+
+We currently have two kinds of item components: number cards, with a title and a number, and pie cards, with 
+some label and a pie chart.
+
+#. create and implement two components: `NumberCard` and `PieChartCard`, with the corresponding props
+#. create a file `dashboard_items.js` in which you define and export a list of items, using `NumberCard`
+   and `PieChartCard` to recreate our current dashboard
+#. import that list of items in our `Dashboard` component, add it to the component, and update the template
+   to use a `t-foreach` like shown above
+
+   .. code-block:: js
+
+         setup() {
+            this.items = items;
+         }
+
+And now, our dashboard template is now generic!
+
+10. Making our dashboard extensible
+===================================
+
+However, the content of our item list is still hardcoded. Let us fix that by using a registry:
+
+#. Instead of exporting a list, register all dashboard items in a `awesome_dashboard` registry
+#. Import all the items of the `awesome_dashboard` registry in the `Dashboard` component
+
+The dashboard is now easily extensible. Any other odoo addon that want to register a new item to the
+dashboard can just add it to the registry.
+
+11. Add and remove dashboard items
+==================================
+
+Let us see how we can make our dashboard customizable. To make it simple, we will save the user
+dashboard configuration in the local storage, so it is persistent, but we don't have to deal
+with the server for now.
+
+The dashboard configuration will be saved as a list of removed item ids.
+
+#. Add a button in the control panel with a gear icon, to indicate that it is a settings button
+#. Clicking on that button should open a dialog
+#. In that dialog, we want to see a list of all existing dashboard items, each with a checkbox 
+#. There should be a `Apply` button in the footer. Clicking on it will build a list of all item ids
+   that are unchecked
+#. We want to store that value in the local storage
+#. And modify the `Dashboard` component to filter the current items by removing the ids of items
+   from the configuration
+
+12. Going further
 =================
 
 Here is a list of some small improvements you could try to do if you have the time:
@@ -332,11 +438,8 @@ Here is a list of some small improvements you could try to do if you have the ti
       `env._t`).
    #. Clicking on a section of the pie chart should open a list view of all orders which have the
       corresponding size.
-   #. Add a SCSS file and see if you can change the background color of the dashboard action.
-
-   .. image:: 02_web_framework/misc.png
-      :align: center
-      :scale: 50%
+   #. Save the content of the dashboard in a user settings on the server!
+   #. Make it responsive: in mobile mode, each card should take 100% of the width 
 
 .. seealso::
    - `Example: use of env._t function
