@@ -159,7 +159,7 @@ Online payment providers
 
 .. note::
    Some of these online payment providers can also be added as :doc:`bank accounts
-   <../finance/accounting/bank/setup/bank_accounts>`, but this is **not** the same process as adding
+   <../finance/accounting/bank>`, but this is **not** the same process as adding
    them as payment providers. Payment providers allow customers to pay online, and bank accounts are
    added and configured on your Accounting app to do a bank reconciliation, which is an accounting
    control process.
@@ -180,7 +180,7 @@ Bank payments
     approve the payment manually once you have received it on your bank account.
 - | SEPA Direct Debit
   | Your customers can sign a SEPA Direct Debit mandate online and get their bank account charged
-    directly. :doc:`Click here <../finance/accounting/receivables/customer_payments/batch_sdd>` for
+    directly. :doc:`Click here <../finance/accounting/payments/batch_sdd>` for
     more information about this payment method.
 
 .. _payment_providers/features:

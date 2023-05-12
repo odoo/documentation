@@ -545,7 +545,7 @@ Once the payment is made, it will be associated with the corresponding invoice a
 be *In Payment* since the payment will be effectively validated when it is bank reconciled.
 
 .. seealso::
-   :doc:`../accounting/bank/reconciliation/use_cases`.
+   :doc:`../accounting/bank/reconciliation`.
 
 .. image:: mexico/mx_ft_18.png
    :align: center
