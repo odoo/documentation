@@ -122,7 +122,7 @@ Most of these codes are handled automatically by Odoo, provided that your :ref:`
 .. seealso::
    - `Egyptian eInvoicing & eReceipt SDK - Code Tables
      <https://sdk.preprod.invoicing.eta.gov.eg/codes/>`_
-   - :doc:`../accounting/taxation/taxes/taxes`
+   - :doc:`../accounting/taxes`
 
 .. _egypt/e-invoicing-branches:
 
