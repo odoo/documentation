@@ -352,7 +352,7 @@ Return Period** if it does not exist. GST Return file-in is done in **three step
 
 .. note::
    **Tax Return Periodicity** can be
-   :doc:`configured <../accounting/reporting/declarations/tax_returns>` according to the user's
+   :doc:`configured <../accounting/reporting/tax_returns>` according to the user's
    needs.
 
 .. _india/gstr-1:
