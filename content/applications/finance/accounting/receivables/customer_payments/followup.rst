@@ -3,7 +3,7 @@ Follow-up on invoices
 =====================
 
 A follow-up message can be sent to customers when a payment is overdue. Odoo helps you identify late
-payments and allows you to schedule and send the appropriate reminders, using **follow-up actions**
+payments and allows you to schedule and send the appropriate reminders using **follow-up actions**
 that trigger automatically one or more actions according to the number of overdue days. You can send
 your follow-ups via different means such as email, post, or SMS.
 
@@ -14,17 +14,38 @@ Configuration
 =============
 
 To configure a :guilabel:`Follow-Up Action`, go to :menuselection:`Accounting --> Configuration -->
-Follow-up Levels`. Several follow-up actions are available by default, and you can customize them
-any way you want or create new ones to trigger the following actions:
+Follow-up Levels`. Several follow-up actions are available by default, but you can create new ones
+if required, and can change the **name** and the **number of days** after which the follow-up
+actions are triggered. The follow-up :guilabel:`Actions` available are:
 
-- Send an email;
+- :guilabel:`Send an email`;
 - :ref:`Send an SMS message <pricing/pricing_and_faq>`;
-- Print a letter;
+- :guilabel:`Print a letter`;
 - :ref:`Send a letter <customer_invoices/snailmail>`;
-- Manual action (creates a task).
+- :guilabel:`Manual action` (creates a task).
 
-It is also possible to automatically send a reminder by enabling the :guilabel:`Auto Execute`
-option, within a specific :guilabel:`Follow-Up Action`.
+It is possible to automatically send a reminder by enabling the :guilabel:`Auto Execute` option, and
+attaching the *open* invoice(s) by enabling :guilabel:`Join open invoices`, within a specific
+follow-up action.
+
+Depending on the :guilabel:`Actions` enabled, the :guilabel:`Message` tab contains different message
+options:
+
+- The :guilabel:`Email Subject` and the :guilabel:`Description` or content of the email
+  automatically used;
+- If you selected :guilabel:`SMS`, the content of the SMS text;
+- If you enabled :guilabel:`Manual Action`, you can assign someone in the :guilabel:`Assign a
+  Responsible` field to manage that follow-up and the :guilabel:`Manual Action Type`
+  (:guilabel:`Email`, :guilabel:`Call`, etc.), as well as input a description of the
+  :guilabel:`Action To Do`.
+
+.. note:: The text between `%(text)s` automatically fetches the partner's info.
+
+   - **%(partner_name)s**: Partner name;
+   - **%(date)s**: Current date;
+   - **%(amount_due)s**: Amount due by the partner;
+   - **%(user_signature)s**: User name;
+   - **%(company_name)s**: User's company name.
 
 .. tip::
    To send a reminder before the actual due date is reached, set a negative number of due days.
@@ -32,13 +53,13 @@ option, within a specific :guilabel:`Follow-Up Action`.
 Follow-up reports
 =================
 
-The overdue invoices you need to follow up on are available in :menuselection:`Accounting -->
-Customers --> Follow-up Reports`. From there, you  can identify all the customers that have late
-unpaid invoices.
+Overdue invoices you need to follow up on are available in :menuselection:`Accounting --> Customers
+--> Follow-up Reports`. By default, Odoo filters by :guilabel:`Customer Invoices` that are
+:guilabel:`In need of action`.
 
-When you open a customer, you see all their unpaid invoices (overdue or not). The due dates of the
-late invoices appear in red. Select the invoices that are not late yet in the :guilabel:`Excluded`
-column to exclude them from the reminder you send.
+When selecting an invoice, you see all of the customer's unpaid invoices (overdue or not), and their
+payments. The due dates of late invoices appear in red. Select the invoices that are *not* late by
+clicking the :guilabel:`Excluded` column to exclude them from the reminder you send.
 
 It is up to you to decide how to remind your customer. You can select :guilabel:`Print Letter`,
 :guilabel:`Send By Email`, :guilabel:`Send By Post`, :guilabel:`Send By SMS`. Then, click on
