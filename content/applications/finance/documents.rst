@@ -209,4 +209,4 @@ digitize, click on :guilabel:`Create Bill`, :guilabel:`Create Customer Invoice` 
 :guilabel:`Create credit note`, and then click on :guilabel:`Send for Digitization`.
 
 .. seealso::
-   :doc:`AI-powered document digitization <../finance/accounting/payables/supplier_bills/invoice_digitization>`
+   :doc:`AI-powered document digitization <../finance/accounting/vendor_bills/invoice_digitization>`
