@@ -75,7 +75,7 @@ Once the credit note has been posted, a :guilabel:`Credit Notes` smart button wi
    :alt: View of smart buttons on a ticket focusing on the credit note button.
 
 .. seealso::
-   :doc:`/applications/finance/accounting/receivables/customer_invoices/credit_notes`
+   :doc:`/applications/finance/accounting/customer_invoices/credit_notes`
 
 Generate coupons from a ticket
 ==============================

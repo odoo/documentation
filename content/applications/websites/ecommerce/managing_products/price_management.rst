@@ -13,13 +13,13 @@ Tax configuration
 
 To add a tax on a product, you can either set a tax in the :guilabel:`Customer Taxes` field of the
 **product template** or use
-:doc:`fiscal positions </applications/finance/accounting/taxation/taxes/fiscal_positions>`.
+:doc:`fiscal positions </applications/finance/accounting/taxes/fiscal_positions>`.
 
 .. seealso::
-   - :doc:`/applications/finance/accounting/taxation/taxes/taxes`
-   - :doc:`/applications/finance/accounting/taxation/taxes/avatax`
-   - :doc:`/applications/finance/accounting/taxation/taxes/taxcloud`
-   - :doc:`/applications/finance/accounting/taxation/taxes/fiscal_positions`
+   - :doc:`/applications/finance/accounting/taxes`
+   - :doc:`/applications/finance/accounting/taxes/avatax`
+   - :doc:`/applications/finance/accounting/taxes/taxcloud`
+   - :doc:`/applications/finance/accounting/taxes/fiscal_positions`
 
 Tax display
 -----------
@@ -48,7 +48,7 @@ You can choose to display the type of pricing next to the product price by going
    :alt: Tax type displayed on the product page
 
 .. seealso::
-   :doc:`/applications/finance/accounting/taxation/taxes/B2B_B2C`
+   :doc:`/applications/finance/accounting/taxes/B2B_B2C`
 
 Price per unit
 ==============
