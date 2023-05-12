@@ -163,8 +163,8 @@ To record the payment or pay by check, click *Register a Payment*.
 
 See how you can easily manage the payment process in Odoo:
 
-* :doc:`accounting/payables/pay/check`
-* :doc:`accounting/payables/pay/sepa`
+* :doc:`accounting/payments/pay_checks`
+* :doc:`accounting/payments/pay_sepa`
 
 
 How to re-invoice expenses to your customers

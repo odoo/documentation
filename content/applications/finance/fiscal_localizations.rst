@@ -46,8 +46,8 @@ These packages require you to fine-tune your chart of accounts according to your
 taxes you use, and configure your country-specific statements and certifications.
 
 .. seealso::
-   - :doc:`accounting/getting_started/initial_configuration/chart_of_accounts`
-   - :doc:`accounting/taxation/taxes/taxes`
+   - :doc:`accounting/get_started/chart_of_accounts`
+   - :doc:`accounting/taxes`
 
 .. _fiscal_localizations/countries-list:
 
