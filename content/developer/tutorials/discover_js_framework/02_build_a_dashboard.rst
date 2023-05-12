@@ -44,10 +44,11 @@ Most screens in the Odoo web client uses a common layout: a control panel on top
 and a main content zone just below. This is done using the `Layout component
 <{GITHUB_PATH}/addons/web/static/src/search/layout.js>`_, available in `@web/search/layout`.
 
-Update the `AwesomeDashboard` component located in :file:`awesome_tshirt/static/src/` to use the
+#. Update the `AwesomeDashboard` component located in :file:`awesome_tshirt/static/src/` to use the
 `Layout` component. You can use
 :code:`{controlPanel: { "top-right": false, "bottom-right": false } }` for the `display` props of
 the `Layout` component.
+#. Bonus: add some scss or bootstrap class to make the background of the content dark
 
 Open http://localhost:8069/web, then open the :guilabel:`Awesome T-Shirts` app, and see the
 result.
@@ -176,7 +177,6 @@ Let us now add two buttons to our control panel:
 
 Let us now improve our content. 
 
-#. Make the background of the content dark
 #. Create a generic `DashboardItem` component that display its default slot in a nice card layout
 #. Add one card in the dashboard content
 

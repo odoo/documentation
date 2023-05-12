@@ -76,8 +76,8 @@ as QWeb templates: they can contain additional directives such as `t-on-click`.
 =======================
 
 As a first exercise, let us modify the `Playground` component located in
-:file:`owl_playground/static/src/` to turn it into a counter. To see the result, you can go to the `/owl_playground/playground`
-route with your browser.
+:file:`owl_playground/static/src/` to turn it into a counter. To see the result, you can go to the
+`/owl_playground` route with your browser.
 
 
 #. Modify :file:`playground.js` so that it acts as a counter like in the example above. You will
@@ -305,8 +305,6 @@ a todo to the list.
    case, create a new todo with the current content of the input as the description and clear the
    input of all content.
 #. Make sure the todo has a unique id. It can be just a counter that increments at each todo.
-#. Wrap the todo list in a `useState` hook to let Owl know that it should update the UI when the
-   list is modified.
 #. Bonus point: don't do anything if the input is empty.
 
 
