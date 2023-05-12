@@ -44,7 +44,7 @@ Number/Email Address` field depending on the type you chose.
    :alt: FPS bank account configuration
 
 .. seealso::
-   :doc:`../accounting/bank/setup/bank_accounts`
+   :doc:`../accounting/bank`
 
 Bank journal configuration
 --------------------------

@@ -47,7 +47,7 @@ To download it, go to :menuselection:`Accounting --> Report --> Audit Reports --
 click on :guilabel:`Export eCDF declaration`.
 
 .. seealso::
-   - :doc:`../accounting/reporting/declarations/tax_returns`
+   - :doc:`../accounting/reporting/tax_returns`
    - `Platform for electronic gathering of financial data (eCDF) <http://www.ecdf.lu>`_
 
 Annual tax report

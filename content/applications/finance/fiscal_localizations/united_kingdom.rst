@@ -61,7 +61,7 @@ To edit existing taxes or to :guilabel:`Create` a new tax, go to :menuselection:
 Configuration --> Accounting: Taxes`.
 
 .. seealso::
-   - :doc:`taxes <../accounting/taxation/taxes>`
+   - :doc:`taxes <../accounting/taxes>`
    - Tutorial: `Tax report and return
      <https://www.odoo.com/slides/slide/tax-report-and-return-1719?fullscreen=1>`_.
 

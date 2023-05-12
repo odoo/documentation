@@ -116,7 +116,7 @@ Taxes
 =====
 
 To access your taxes, go to :menuselection:`Accounting --> Configuration --> Taxes`.
-Activate/deactivate, or :doc:`configure </applications/finance/accounting/taxation/taxes/taxes>` the
+Activate/deactivate, or :doc:`configure </applications/finance/accounting/taxes/>` the
 taxes relevant to your business by clicking on them. Remember to only set tax accounts on the **5%**
 tax group, as other groups do not need closing. To do so, enable the :doc:`developer mode
 <../../general/developer_mode>` and go to :menuselection:`Configuration --> Tax Groups`. Then, set a
