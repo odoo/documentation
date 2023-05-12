@@ -99,7 +99,7 @@ XML file can be found in the **chatter** of the invoice.
    :alt: Electronic invoicing status (waiting for confirmation)
 
 .. seealso::
-   :doc:`../accounting/receivables/customer_invoices/electronic_invoicing`
+   :doc:`../accounting/customer_invoices/electronic_invoicing`
 
 File processing authorization (Odoo)
 ------------------------------------
