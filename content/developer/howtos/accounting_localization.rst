@@ -120,7 +120,7 @@ Accounts
 
 .. seealso::
    - :ref:`Account References <reference/account_account>`
-   - :doc:`/applications/finance/accounting/getting_started/initial_configuration/chart_of_accounts`
+   - :doc:`/applications/finance/accounting/get_started/chart_of_accounts`
 
 Obviously, :guilabel:`Chart of Accounts` cannot exist without :guilabel:`Accounts`. You need to specify them in :file:`data/account.account.template.csv`.
 
@@ -189,7 +189,7 @@ Taxes
 
 .. seealso::
    - :ref:`Tax References <reference/account_tax>`
-   - :doc:`/applications/finance/accounting/taxation/taxes/taxes`
+   - :doc:`/applications/finance/accounting/taxes/`
 
 To add taxes you first need to specify tax groups. You normally need just one tax group for every tax rate, except for the 0% as you need to often distinguish between exempt, 0%, not subject, ... taxes.
 This model only has two required fields: *name* and *country*. Create the file :file:`data/account_tax_group_data.xml` and list the groups:
@@ -249,7 +249,7 @@ The tax report is declared in the :guilabel:`Invoicing` (`account`) app, but the
 
 .. seealso::
    - :ref:`Tax Report Line References <reference/account_tax_report_line>`
-   - :doc:`/applications/finance/accounting/reporting/declarations/tax_returns`
+   - :doc:`/applications/finance/accounting/reporting/tax_returns`
 
 In the previous section, you noticed the fields `invoice_repartition_line_ids` or `refund_repartition_line_ids` and probably understood nothing about them. Good news: you are not alone on this incomprehension. Bad news: you have to figure it out a bit. The topic is complicated. Indeed:
 
@@ -296,7 +296,7 @@ Fiscal positions
 
 .. seealso::
    - :ref:`Fiscal Position References <reference/account_fiscal_position>`
-   - :doc:`/applications/finance/accounting/taxation/taxes/fiscal_positions`
+   - :doc:`/applications/finance/accounting/taxes/fiscal_positions`
 
 Specify fiscal positions in the :file:`data/account_fiscal_position_template_data.xml` file.
 
@@ -343,7 +343,7 @@ Accounting reports
    <div><span class="badge" style="background-color:#AD5E99">Enterprise feature</span><div>
 
 .. seealso::
-  :doc:`/applications/finance/accounting/reporting/overview`
+  :doc:`/applications/finance/accounting/reporting`
 
 Accounting reports should be added via a separate module `l10n_XX_reports` that should go to the `enterprise repository <{GITHUB_ENT_PATH}>`_.
 
@@ -367,7 +367,7 @@ Basic :file:`__manifest__.py` file for such a module looks as following:
     }
 
 
-Functional overview of financial reports is here: :doc:`/applications/finance/accounting/reporting/overview/main_reports`.
+Functional overview of financial reports is here: :doc:`/applications/finance/accounting/reporting`.
 
 Some good examples:
 
