@@ -54,7 +54,7 @@ localization:
      - `l10n_ec_edi`
      - Includes all the technical and functional requirements to generate and validate
        :doc:`Electronics Documents
-       <../accounting/receivables/customer_invoices/electronic_invoicing>`, based on the Technical
+       <../accounting/customer_invoices/electronic_invoicing>`, based on the Technical
        documentation published by the SRI. The authorized documents are: Invoices, Credit Notes,
        Debit Notes, Withholdings and Purchase liquidations.
 
@@ -176,7 +176,7 @@ Customer Invoice, Credit Notes and Debit Notes need to use the same journal as t
    enable it for Ecuador.
 
 .. seealso::
-   :doc:`../accounting/receivables/customer_invoices/electronic_invoicing`
+   :doc:`../accounting/customer_invoices/electronic_invoicing`
 
 Withholding
 -----------
@@ -236,7 +236,7 @@ Configure master data
 Chart of accounts
 ~~~~~~~~~~~~~~~~~
 
-The :doc:`chart of accounts <../accounting/getting_started/initial_configuration/chart_of_accounts>`
+The :doc:`chart of accounts <../accounting/get_started/chart_of_accounts>`
 is installed by default as part of the set of data included in the localization module, the accounts
 are mapped automatically in Taxes, Default Account Payable, Default Account Receivable.
 
@@ -357,7 +357,7 @@ documents can be created from your sales order or manually. They must contain th
 Customer credit note
 ~~~~~~~~~~~~~~~~~~~~
 
-The :doc:`Customer credit note <../accounting/receivables/customer_invoices/credit_notes>` is an
+The :doc:`Customer credit note <../accounting/customer_invoices/credit_notes>` is an
 electronic document that, when validated, is sent to SRI. It is necessary to have a validated
 (posted) invoice in order to register a credit note. On the invoice there is a button named
 :guilabel:`Credit note`, click on this button to be directed to the :guilabel:`Create credit note`
