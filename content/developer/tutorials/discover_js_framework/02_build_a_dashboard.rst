@@ -45,10 +45,12 @@ and a main content zone just below. This is done using the `Layout component
 <{GITHUB_PATH}/addons/web/static/src/search/layout.js>`_, available in `@web/search/layout`.
 
 #. Update the `AwesomeDashboard` component located in :file:`awesome_tshirt/static/src/` to use the
-`Layout` component. You can use
-:code:`{controlPanel: { "top-right": false, "bottom-right": false } }` for the `display` props of
-the `Layout` component.
-#. Bonus: add some scss or bootstrap class to make the background of the content dark
+   `Layout` component. You can use
+   :code:`{controlPanel: { "top-right": false, "bottom-right": false } }` for the `display` props of
+   the `Layout` component.
+#. Add a `className` prop to `Layout`: `className="'o_dashboard h-100'"`
+#. Add a `dashboard.scss` file in which you set the background-color of `.o_dashboard` to gray (or your
+   favorite color)
 
 Open http://localhost:8069/web, then open the :guilabel:`Awesome T-Shirts` app, and see the
 result.
@@ -320,7 +322,7 @@ todo
 todo
 
 10. Going further
-================
+=================
 
 Here is a list of some small improvements you could try to do if you have the time:
 
