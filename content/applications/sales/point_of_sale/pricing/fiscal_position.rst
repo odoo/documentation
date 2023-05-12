@@ -9,8 +9,8 @@ The **fiscal positions** feature enables you to establish rules that automatical
 taxes and accounts used for each transaction.
 
 .. seealso::
-   - :doc:`../../../finance/accounting/taxation/taxes/fiscal_positions`
-   - :doc:`../../../finance/accounting/taxation/taxes/taxes`
+   - :doc:`../../../finance/accounting/taxes/fiscal_positions`
+   - :doc:`../../../finance/accounting/taxes`
 
 Configuration
 =============
@@ -48,4 +48,4 @@ fiscal position's regulations.
    If a default fiscal position is set, the tax button displays the name of the fiscal position.
 
 .. seealso::
-   :doc:`../../../finance/accounting/taxation/taxes/fiscal_positions`
+   :doc:`../../../finance/accounting/taxes/fiscal_positions`
