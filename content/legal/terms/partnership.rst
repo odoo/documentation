@@ -21,11 +21,11 @@ Odoo Partnership Agreement
 
 | BETWEEN:
 |  Odoo S.A., having its registered office at Chaussée de Namur, 40, 1367 Grand-Rosière,
-|  Belgium, and its affiliates (collectively referred to as “ODOO”)
+|  Belgium, and its affiliates (collectively referred to as "ODOO")
 | AND:
 |  _____________________________________________, a company having its registered office at
 |  _____________________________________________________________________________________.
-|  (hereinafter referred to as “PARTNER”)
+|  (hereinafter referred to as "PARTNER")
 
 ODOO and PARTNER are individually referred to as a "Party" and collectively referred to as
 "the Parties".
@@ -46,7 +46,7 @@ like "Odoo Community Edition", should it be needed.
 
 2 Term of the Agreement
 =======================
-The duration of this Agreement (the “Term”) shall be one year beginning on the date of the signature.
+The duration of this Agreement (the "Term") shall be one year beginning on the date of the signature.
 It is automatically renewed for an equal Term unless either party provides written notice of
 termination minimum 30 days before the end of the Term to the other party.
 
@@ -86,9 +86,9 @@ Edition and to collect statistics that are needed for that purpose.
 4.1 Partnership levels
 ----------------------
 The Odoo partner program consists of two types of partnerships and four levels;
-“Learning Partners” is for companies who want everything necessary to start implementing Odoo,
+"Learning Partners" is for companies who want everything necessary to start implementing Odoo,
 without visibility as an official partner until they get the required experience;
-“Official Partners” is for companies who want the visibility as Ready, Silver, and Gold,
+"Official Partners" is for companies who want the visibility as Ready, Silver, and Gold,
 according to their experience with Odoo.
 
 Partnership level granted to PARTNER depends on the annual new Odoo Enterprise revenue generated
@@ -229,7 +229,7 @@ of contact of the customer.
 PARTNER shall only receive the commission for the Maintenance of Covered Extra Modules
 as long as the customer does not notify ODOO that they want to stop Working with PARTNER.
 
-.. [#pcom1] “Working with an Odoo Partner” and “Covered Extra Modules” are defined in the Odoo
+.. [#pcom1] "Working with an Odoo Partner" and "Covered Extra Modules" are defined in the Odoo
    Enterprise Subscription Agreement between ODOO and customers.
 
 5 Fees
@@ -248,7 +248,7 @@ a breach has not been remedied within 30 calendar days from the written notice o
 breach, this Agreement may be terminated immediately by the non-breaching Party.
 
 Surviving Provisions:
-  The sections ":ref:`restrictions`”, “:ref:`p_liability`”, and “:ref:`gov_law`” will survive
+  The sections ":ref:`restrictions`", ":ref:`p_liability`", and ":ref:`gov_law`" will survive
   any termination or expiration of this Agreement.
 
 6.1 Consequence of termination
@@ -265,7 +265,7 @@ On expiry or termination of this Agreement, PARTNER:
 ===========================
 Both Parties are bound by a best endeavours obligation hereunder.
 
-To the maximum extent permitted by law, ODOO’s liability for any and all claims, losses, damages or
+To the maximum extent permitted by law, ODOO's liability for any and all claims, losses, damages or
 expenses from any cause whatsoever and howsoever arising under this Agreement will be limited to
 the direct damages proved, but will in no event exceed for all damage-causing event or series of
 connected events causing damages the total amount for the fees paid by PARTNER in the course of the
@@ -291,7 +291,7 @@ ODOO authorizes PARTNER to use the "Odoo" mark to promote its products and servi
 for the duration of this agreement only, as long as:
 
 - There is no possible confusion that the service is provided by PARTNER, not ODOO;
-- PARTNER does not use the word “Odoo” in their company name, product name, domain name,
+- PARTNER does not use the word "Odoo" in their company name, product name, domain name,
   and does not register any trademark that includes it.
 
 Both Parties shall refrain from harming the brand image and reputation of the other Party,
