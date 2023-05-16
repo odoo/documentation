@@ -75,9 +75,9 @@ In the :guilabel:`Optional Products` tab, enter any optional products that the c
 their quotation before confirming the order.
 
 If the subscription plan has unique :doc:`terms and conditions
-</applications/sales/sales/send_quotations/terms_and_conditions>`, add them in the :guilabel:`Terms
-& Conditions` tab. If terms conditions are specified on a plan, these will be used instead of the
-default terms and conditions set up in the *Sales* app settings.
+</applications/finance/accounting/customer_invoices/terms_conditions>`, add them in the
+:guilabel:`Terms & Conditions` tab. If terms conditions are specified on a plan, these will be used
+instead of the default terms and conditions set up in the *Sales* app settings.
 
 .. image:: plans/subplan-terms-conditions.png
    :align: center
