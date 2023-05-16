@@ -229,6 +229,7 @@ the material has been shipped to the customer.
 
    customer_invoices/overview
    customer_invoices/payment_terms
+   customer_invoices/terms_conditions
    customer_invoices/cash_discounts
    customer_invoices/credit_notes
    customer_invoices/cash_rounding
