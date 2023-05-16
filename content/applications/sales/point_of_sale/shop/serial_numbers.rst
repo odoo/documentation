@@ -54,6 +54,7 @@ tracked products, click on **enter** to validate and start a new line.
    - :guilabel:`Lot & Serial Number(s)` are :guilabel:`required` on tracked products but not
      mandatory. Meaning that not attributing some or any does **not** prevent from completing the
      sale.
+   - there are thirdparty apps in the Odoo App Store, which can link your stock from inventory module to your PoS (e.g. selling a product in PoS reduces the stock of this product in your inventory.). For now selling products in PoS does not reduce your Odoo inventory stock. You can only find the PoS movements in the product form under the smartbutton "Units Sold" and it influences the "forecasted" amount like this: I sell 13 products in the PoS and I have 2 on stock --> forecasted units = -11
 
 .. seealso::
    - :doc:`/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers`
