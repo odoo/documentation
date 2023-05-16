@@ -396,7 +396,7 @@ some label and a pie chart.
             this.items = items;
          }
 
-And now, our dashboard template is now generic!
+And now, our dashboard template is generic!
 
 10. Making our dashboard extensible
 ===================================

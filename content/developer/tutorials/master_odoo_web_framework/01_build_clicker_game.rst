@@ -1,6 +1,6 @@
-========================
-Chapter 2: Miscellaneous
-========================
+===============================
+Chapter 1: Build a Clicker game
+===============================
 
 In the previous task, we learned how to create fields and views. There is still much more to
 discover in the feature-rich Odoo web framework, so let's dive in and explore more in this chapter!
@@ -29,7 +29,7 @@ discover in the feature-rich Odoo web framework, so let's dive in and explore mo
 
 ..     odoo[Odoo JavaScript framework] --> Owl
 
-.. figure:: 02_miscellaneous/previously_learned.svg
+.. figure:: 01_build_clicker_game/previously_learned.svg
    :align: center
    :width: 70%
 
@@ -38,7 +38,7 @@ discover in the feature-rich Odoo web framework, so let's dive in and explore mo
 
 .. admonition:: Goal
 
-   .. image:: 02_miscellaneous/kitten_mode.png
+   .. image:: 01_build_clicker_game/kitten_mode.png
       :align: center
 
 .. spoiler:: Solutions
@@ -62,7 +62,7 @@ printer is not connected or ran out of paper).
       completed successfully, and a warning if it failed.
    #. If it failed, the notification should be permanent.
 
-   .. image:: 02_miscellaneous/notification.png
+   .. image:: 01_build_clicker_game/notification.png
       :align: center
       :scale: 60%
 
@@ -88,7 +88,7 @@ notifications and provide access to certain features.
    #. Bonus point: avoid making the initial RPC by adding the information to the session info. The
       session info is given to the web client by the server in the initial response.
 
-   .. image:: 02_miscellaneous/systray.png
+   .. image:: 01_build_clicker_game/systray.png
       :align: center
 
 .. seealso::
@@ -142,7 +142,7 @@ by pressing `CTRL+K` in the Odoo interface.
 
    Ensure the command is only active whenever a field preview is visible on the screen.
 
-   .. image:: 02_miscellaneous/new_command.png
+   .. image:: 01_build_clicker_game/new_command.png
       :align: center
 
 .. seealso::
@@ -194,11 +194,11 @@ be used in legal proceedings if necessary. Do you agree to these terms?"
            }
          }
 
-   .. image:: 02_miscellaneous/bafien_eye.png
+   .. image:: 01_build_clicker_game/bafien_eye.png
       :align: center
       :scale: 60%
 
-   .. image:: 02_miscellaneous/confirmation_dialog.png
+   .. image:: 01_build_clicker_game/confirmation_dialog.png
       :align: center
       :scale: 60%
 
@@ -228,7 +228,7 @@ from a given customer.
       component, filtered by the `fuzzyLookup
       <{GITHUB_PATH}/addons/web/static/src/core/utils/search.js>`_ method.
 
-   .. image:: 02_miscellaneous/autocomplete.png
+   .. image:: 01_build_clicker_game/autocomplete.png
       :align: center
       :scale: 60%
 
@@ -260,7 +260,7 @@ the background of Odoo, because we like kittens.
    #. Add a command to the command palette to toggle the kitten mode. Toggling the kitten mode
       should toggle the class `o-kitten-mode` and update the current URL accordingly.
 
-   .. image:: 02_miscellaneous/kitten_mode.png
+   .. image:: 01_build_clicker_game/kitten_mode.png
       :align: center
 
 8. Lazy loading our dashboard

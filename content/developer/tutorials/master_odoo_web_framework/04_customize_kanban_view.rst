@@ -1,6 +1,6 @@
-=============================
-Chapter 3: Custom kanban view
-=============================
+==================================
+Chapter 4: Customize a kanban view
+==================================
 
 .. todo:: It'd be cool to follow the naming convention of the previous chapters: "Chapter N: The concept studied in the chapter"
 
@@ -21,7 +21,7 @@ orders linked to that customer.
 
 .. admonition:: Goal
 
-   .. image:: 03_custom_kanban_view/overview.png
+   .. image:: 04_customize_kanban_view/overview.png
       :align: center
 
 .. spoiler:: Solutions
@@ -58,7 +58,7 @@ We will need to display a list of customers, so we might as well create the comp
    #. Subclass the kanban controller to add `CustomerList` in its sub-components.
    #. Make sure you see your component in the kanban view.
 
-   .. image:: 03_custom_kanban_view/customer_list.png
+   .. image:: 04_customize_kanban_view/customer_list.png
       :align: center
       :scale: 60%
 
@@ -71,7 +71,7 @@ We will need to display a list of customers, so we might as well create the comp
    #. Display the list in the template with a `t-foreach`.
    #. Whenever a customer is selected, call the `selectCustomer` function prop.
 
-   .. image:: 03_custom_kanban_view/customer_data.png
+   .. image:: 04_customize_kanban_view/customer_data.png
       :align: center
       :scale: 60%
 
@@ -96,7 +96,7 @@ We will need to display a list of customers, so we might as well create the comp
          });
       }
 
-   .. image:: 03_custom_kanban_view/customer_filter.png
+   .. image:: 04_customize_kanban_view/customer_filter.png
       :align: center
       :scale: 60%
 
@@ -112,7 +112,7 @@ customers with an active order.
       next to it.
    #. Changing the value of the checkbox should filter the list on customers with an active order.
 
-   .. image:: 03_custom_kanban_view/active_customer.png
+   .. image:: 04_customize_kanban_view/active_customer.png
       :align: center
       :scale: 60%
 
@@ -127,7 +127,7 @@ customers with an active order.
    .. tip::
       You can use the `fuzzyLookup` function to perform the filter.
 
-   .. image:: 03_custom_kanban_view/customer_search.png
+   .. image:: 04_customize_kanban_view/customer_search.png
       :align: center
       :scale: 60%
 
@@ -166,6 +166,6 @@ us see how we could do it in a more declarative way, with the `t-model
    This is actually pretty hard, in particular in combination with the filtering done in the
    previous exercise. There are many edge cases to take into account.
 
-   .. image:: 03_custom_kanban_view/customer_pager.png
+   .. image:: 04_customize_kanban_view/customer_pager.png
       :align: center
       :scale: 60%

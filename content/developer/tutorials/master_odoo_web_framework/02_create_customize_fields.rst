@@ -1,6 +1,6 @@
-===========================
-Chapter 1: Fields and Views
-===========================
+======================================
+Chapter 2: Create and Customize fields
+======================================
 
 In the previous chapter, we learned a range of skills, including how to create and use services,
 work with the Layout component, make the dashboard translatable, and lazy load a JavaScript library
@@ -122,7 +122,7 @@ to see the image itself in the form view.
    It is possible to solve this exercise by inheriting `CharField`, but the goal of this exercise is
    to create a field from scratch.
 
-.. image:: 01_fields_and_views/image_field.png
+.. image:: 02_create_customize_fields/image_field.png
    :align: center
    :scale: 50%
 
@@ -140,7 +140,7 @@ action should be done.
 
    Display a warning "MISSING TSHIRT DESIGN" in red if there is no image URL specified on the order.
 
-.. image:: 01_fields_and_views/missing_image.png
+.. image:: 02_create_customize_fields/missing_image.png
    :align: center
 
 3. Customizing a field component
@@ -160,7 +160,7 @@ whenever it is set to `true`.
    #. Use it in the list/kanban/form view.
    #. Modify it to add a red `Late` next to it, as requested.
 
-.. image:: 01_fields_and_views/late_field.png
+.. image:: 02_create_customize_fields/late_field.png
    :align: center
 
 .. seealso::
@@ -187,7 +187,7 @@ insert arbitrary components in the form view. Let us see how we can use it.
    .. tip::
       Try to evaluate `props.record` in the :guilabel:`Console` tab of your browser's dev tools.
 
-.. image:: 01_fields_and_views/warning_widget.png
+.. image:: 02_create_customize_fields/warning_widget.png
    :align: center
 
 .. seealso::
@@ -216,7 +216,7 @@ is injected as HTML.
 .. note::
    This is an example of a safe use of `t-out`, since the string is static.
 
-.. image:: 01_fields_and_views/warning_widget2.png
+.. image:: 02_create_customize_fields/warning_widget2.png
    :align: center
 
 6. Add buttons in the control panel
@@ -300,7 +300,7 @@ Most (or all?) Odoo views share a common architecture:
 ..     A --- C
 .. ```
 
-.. image:: 01_fields_and_views/view_architecture.svg
+.. image:: 02_create_customize_fields/view_architecture.svg
    :align: center
    :width: 75%
    :class: o-no-modal
@@ -365,7 +365,7 @@ There is a service dedicated to calling models methods: `orm_service`, located i
       task stage is `printed`. Otherwise, it should be displayed as a secondary button.
    #. Bonus point: clicking twice on the button should not trigger 2 RPCs.
 
-   .. image:: 01_fields_and_views/form_button.png
+   .. image:: 02_create_customize_fields/form_button.png
       :align: center
 
 .. seealso::

@@ -11,7 +11,10 @@ Master the Odoo Web Framework
     master_odoo_web_framework/*
 
 This tutorial is designed for those who have completed the :doc:`discover_js_framework` tutorial and
-are looking to deepen their knowledge of the Odoo web framework.
+are looking to deepen their knowledge of the Odoo web framework. It is organized in four independant
+chapters, each focusing on different features of Odoo.
+
+Each of these chapters can be done independantly, in any order. 
 
 For this training, we will step into the shoes of the IT staff at the fictional company Awesome
 T-Shirt, which is dedicated to printing custom t-shirts for online customers. The Awesome T-Shirt
@@ -35,8 +38,7 @@ Setup
 Content
 =======
 
-- :doc:`master_odoo_web_framework/01_fields_and_views`
-- :doc:`master_odoo_web_framework/02_miscellaneous`
-- :doc:`master_odoo_web_framework/03_custom_kanban_view`
-- :doc:`master_odoo_web_framework/04_creating_view_from_scratch`
-- :doc:`master_odoo_web_framework/05_testing`
+- :doc:`master_odoo_web_framework/01_build_clicker_game`
+- :doc:`master_odoo_web_framework/02_create_customize_fields`
+- :doc:`master_odoo_web_framework/03_create_gallery_view`
+- :doc:`master_odoo_web_framework/04_customize_kanban_view`
