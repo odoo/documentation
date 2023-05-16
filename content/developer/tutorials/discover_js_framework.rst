@@ -1,7 +1,7 @@
 :show-content:
 
 =========================
-Discover the JS Framework
+Discover the JS framework
 =========================
 
 .. toctree::
@@ -17,7 +17,7 @@ solid foundation for using the Odoo JavaScript framework in your projects.
 The first part covers the basics of Owl components, which
 are a key part of the Odoo JS framework. Owl components are reusable UI components that can be used
 to build complex web interfaces quickly and efficiently. We will explore how to create and use Owl
-components in Odoo. The second part of the tutorial focuses on creating a dashboard using various
+components in Odoo. Then, in the second part of this tutorial, we focus on creating a dashboard using various
 features of Odoo. Dashboards are an essential part of any web application, and provide a nice starting
 point to use and interact with the Odoo codebase.
 
@@ -25,6 +25,11 @@ This tutorial assumes that you have some basic knowledge of development with Odo
 (models, controllers, QWeb, ...). If you are new to Odoo, we recommend that you start with the
 :doc:`Getting started </developer/tutorials/getting_started>` tutorial before proceeding with this
 one.
+
+.. note::
+
+    Each chapter of this tutorial is an independant project.  If you feel comfortable with Owl, you can
+    start with chapter 2.
 
 .. _tutorials/discover_js_framework/setup:
 
@@ -34,7 +39,8 @@ Setup
 #. Clone the `official Odoo tutorials repository <https://github.com/odoo/tutorials>`_ and switch to
    the branch `master-js-training-revamp-ged`.
 #. Add the cloned repository to the :option:`--addons-path <odoo-bin --addons-path>`.
-#. Start a new Odoo database and install the modules `owl_playground` and `awesome_dashboard`.
+#. Start a new Odoo database and install the modules `owl_playground` (for chapter 1) and `awesome_dashboard`
+   (for chapter 2).
 
 Content
 =======

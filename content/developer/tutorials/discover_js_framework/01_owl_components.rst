@@ -1,5 +1,5 @@
 =========================
-Chapter 1: Owl Components
+Chapter 1: Owl components
 =========================
 
 This chapter introduces the `Owl framework <https://github.com/odoo/owl>`_, a tailor-made component
