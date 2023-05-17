@@ -20,16 +20,16 @@ into the exercises, make sure you have followed all the steps described in this
 
    `Video: How to use the DevTools <https://www.youtube.com/watch?v=IUyQjwnrpzM>`_
 
-In this chapter, we use the `owl_playground` addon, which provides a simplified environment that
+In this chapter, we use the `awesome_owl` addon, which provides a simplified environment that
 only contains Owl and a few other files. The goal is to learn Owl itself, without relying on Odoo
-web client code. To get started, open the `/owl_playground` route with your browser: it
+web client code. To get started, open the `/awesome_owl` route with your browser: it
 should display an Owl component with the text *hello world*.
 
 .. spoiler:: Solutions
 
    The solutions for each exercise of the chapter are hosted on the `official Odoo tutorials
    repository
-   <https://github.com/odoo/tutorials/commits/{CURRENT_MAJOR_BRANCH}-solutions/owl_playground>`_. It
+   <https://github.com/odoo/tutorials/commits/{CURRENT_MAJOR_BRANCH}-solutions/awesome_owl>`_. It
    is recommended to try to solve them first without looking at the solution!
 
 Example: a `Counter` component
@@ -69,15 +69,15 @@ using the QWeb language:
 
 The `owl="1"` attribute allows Odoo to differentiate Owl templates from the old JavaScript
 framework templates. In the future, this attribute will no longer be necessary, since all
-static templates will be rendered by Owl anyway. Note that Owl templates are not the same
+static templates will be rendered by Owl anyway. Note that Owl templates are not exactly the same
 as QWeb templates: they can contain additional directives such as `t-on-click`. 
 
 1. Displaying a counter
 =======================
 
 As a first exercise, let us modify the `Playground` component located in
-:file:`owl_playground/static/src/` to turn it into a counter. To see the result, you can go to the
-`/owl_playground` route with your browser.
+:file:`awesome_owl/static/src/` to turn it into a counter. To see the result, you can go to the
+`/awesome_owl` route with your browser.
 
 
 #. Modify :file:`playground.js` so that it acts as a counter like in the example above. You will
@@ -105,11 +105,11 @@ The `useState` function wraps a value in a proxy so Owl can keep track of which 
 needs which part of the state, so it can be updated whenever a value has been changed. Try
 removing the `useState` function and see what happens.
 
-2. Extract counter in a sub component
-=====================================
+2. Extract `Counter` in a sub component
+=======================================
 
-For now we have the logic of a counter in the `Playground` component, let us see how to create a
-`sub-component <{OWL_PATH}/doc/reference/component.md#sub-components>`_ from it:
+For now we have the logic of a counter in the `Playground` component, but it is not reusable. Let us
+see how to create a `sub-component <{OWL_PATH}/doc/reference/component.md#sub-components>`_ from it:
 
 #. Extract the counter code from the `Playground` component into a new `Counter` component.
 #. You can do it in the same file first, but once it's done, update your code to move the
@@ -189,7 +189,8 @@ The `Card` component has an implicit API. It expects to receive two strings in i
 and the `content`. Let us make that API more
 explicit. We can add a props definition that will let Owl perform a validation step in `dev mode
 <{OWL_PATH}/doc/reference/app.md#dev-mode>`_. You can activate the dev mode in the `App
-configuration <{OWL_PATH}/doc/reference/app.md#configuration>`_.
+configuration <{OWL_PATH}/doc/reference/app.md#configuration>`_ (but it is activated by default
+on the `awesome_owl` playground).
 
  It is a good practice to do props validation for every component.
 
@@ -203,9 +204,7 @@ configuration <{OWL_PATH}/doc/reference/app.md#configuration>`_.
 
 We saw in a previous exercise that `props` can be used to provide information from a parent
 to a child component. Now, let us see how we can communicate information in the opposite
-direction.
-
-In this exercise, we want to display two `Counter` components, and below them, the sum of
+direction: in this exercise, we want to display two `Counter` components, and below them, the sum of
 their values. So, the parent component (`Playground`) need to be informed whenever one of
 the `Counter` value is changed. 
 
@@ -225,7 +224,7 @@ be called whenever the `Counter` component is incremented.
 
 .. important::
 
-   There is a subtlety with callback props: they usually should be called with the `.bind`
+   There is a subtlety with callback props: they usually should be defined with the `.bind`
    suffix. See the `documentation <{OWL_PATH}/doc/reference/props.md#binding-function-props>`_
 
 7. A todo list
@@ -315,52 +314,82 @@ a todo to the list.
 .. seealso::
    `Owl: Reactivity <{OWL_PATH}/doc/reference/reactivity.md>`_
 
-Component lifecycle, hooks and rendering
-========================================
+Theory: Component lifecycle and hooks
+=====================================
 
 So far, we have seen one example of a hook function: `useState`. A `hook <{OWL_PATH}/doc/reference/hooks.md>`_
 is a special function that *hook into* the internals of the component. In the case of
 `useState`, it generates a proxy object linked to the current component. This is why
 hook functions have to be called in the `setup` method, and no later!
 
+
+.. flowchart LR
+
+..     classDef hook fill:#ccf
+
+    
+..     subgraph "creation"
+..     direction TB
+..     A:::hook
+..     B:::hook
+..     M:::hook
+..     A[setup]-->B
+..     B[onWillStart] --> C(render)
+..     C --> D("mount (in DOM)")
+..     D --> M[onMounted]
+..     end
+
+..     subgraph updates
+..     direction TB
+..     E:::hook
+..     F:::hook
+..     H:::hook
+..     E["(onWillUpdateProps)"] --> L(render)
+..     L --> F[onWillPatch]
+..     F --> G(patch DOM)
+..     G --> H[onPatched]
+..     end
+
+..     subgraph destruction
+..     direction TB
+..     I:::hook
+..     J:::hook
+..     I[onWillUnmount] --> J[onWillDestroy]
+..     J --> N(removed from DOM)
+    
+..     end
+
+..     creation --> updates
+..     updates --> destruction
+
+
+.. figure:: 01_owl_components/component_lifecycle.svg
+   :align: center
+   :width: 50%
+
+
+
+An Owl component goes through a lot of phases: it can be instantiated, rendered,
+mounted, updated, detached, destroyed, ... This is the `component lifecycle <{OWL_PATH}/doc/reference/component.md#lifecycle>`_.
+The figure above show the most important events in the life of a component (hooks are shown in purple).
+Roughly speaking, a component is created, then updated (potentially many times), then is destroyed.
+
+Owl provides a variety of built-in `hooks functions <{OWL_PATH}/doc/reference/hooks.md>`_. All of them have to be called in
+the `setup` function. For example, if you want to execute some code when your component is mounted, you can use the `onMounted`
+hook:
+
+.. code-block:: javascript
+
+   setup() {
+     onMounted(() => {
+       // do something here
+     });
+   }
+
 .. tip::
 
    All hook functions start with `use` or `on`. For example: `useState` or `onMounted`.
 
-An Owl component goes through a lot of phases: it can be instantiated, rendered,
-mounted, updated, detached, destroyed, ... This is the `component lifecycle <{OWL_PATH}/doc/reference/component.md#lifecycle>`_.
-
-
-It is sometimes necessary to execute some code at one or more of these events, so Owl provides 
-a large variety of hooks to do just that.
-
-Here is a short informal description of how Owl handle creating components, and their lifecycle:
-
-#. First, a component is created (`setup`)
-#. if there is a `onWillStart` callback, Owl will then execute it
-#. when the `onWillStart` callback is done, the component template will be rendered
-   (`onWillRender` and `onRendered` will be called if defined). Note that the
-   result of the rendering is a virtual dom, there are no html element yet.
-#. if there are any sub component in the template, they will go through the same phases as above
-#. when all components are rendered, Owl will wait for the next animation frame
-#. Then, it will process the virtual dom to generate the actual html element (so each
-   component has now some real html element) and attach it to the document window.
-#. Finally, Owl will call all `onMounted` callbacks (in the *child before parent* order)
-
-Now, here is what happens when a component has to be updated:
-
-#. The component template is rendered (`onWillRender` and `onRendered`)
-#. if there are any new sub component, they will go through the above process
-#. if the rendering encounter existing components, Owl will compare the new props with 
-   the previous props (shallow comparison). If they are equal, the sub component will be
-   left alone. If they are different, it will be updated
-#. Each updated sub component will have the opportunity to load data (with `onWillUpdateProps`)
-#. Then, they will also be rendered...
-#. Finally, when all components are rendered, Owl will wait for the next animation frame
-#. Finally, it will apply compare the old and new virtual dom to apply the correct
-   changes to the dom:
-   #. It will call `onWillPatch` and `onPatched` for each updated component.
-   #. If some components are no longer present, they will be unmounted (`onWillUnmount`), then destroyed (`onWillDestroy`).
 
 10. Focusing the input
 ======================
@@ -393,7 +422,7 @@ component is mounted.
 #. Focus the `input` from the previous exercise. This this should be done from the
    `TodoList` component (note that there is a `focus` method on the input html element). 
 #. Bonus point: extract the code into a specialized `hook <{OWL_PATH}/doc/reference/hooks.md>`_
-   `useAutofocus` in a new :file:`owl_playground/utils.js` file.
+   `useAutofocus` in a new :file:`awesome_owl/utils.js` file.
 
 .. tip::
 

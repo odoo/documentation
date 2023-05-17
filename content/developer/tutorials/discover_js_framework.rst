@@ -29,7 +29,7 @@ one.
 .. note::
 
     Each chapter of this tutorial is an independant project.  If you feel comfortable with Owl, you can
-    start with chapter 2.
+    start directly with chapter 2.
 
 .. _tutorials/discover_js_framework/setup:
 
@@ -37,9 +37,9 @@ Setup
 =====
 
 #. Clone the `official Odoo tutorials repository <https://github.com/odoo/tutorials>`_ and switch to
-   the branch `master-js-training-revamp-ged`.
+   the branch `{CURRENT_MAJOR_BRANCH}`.
 #. Add the cloned repository to your :option:`--addons-path <odoo-bin --addons-path>`.
-#. Start a new Odoo database and install the modules `owl_playground` (for chapter 1) and `awesome_dashboard`
+#. Start a new Odoo database and install the modules `awesome_owl` (for chapter 1) and `awesome_dashboard`
    (for chapter 2).
 
 Content
