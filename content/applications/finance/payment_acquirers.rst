@@ -135,10 +135,9 @@ Bank payments
 - | :doc:`Wire Transfer <payment_acquirers/wire_transfer>`
   | When selected, Odoo displays your payment information with a payment reference. You have to
     approve the payment manually once you have received it on your bank account.
-- | SEPA Direct Debit
+- | :doc:`SEPA Direct Debit <../finance/accounting/payments/batch_sdd>`
   | Your customers can sign a SEPA Direct Debit mandate online and get their bank account charged
-    directly. :doc:`Click here <../finance/accounting/payments/batch_sdd>` for
-    more information about this payment method.
+    directly.
 
 .. _payment_acquirers/features:
 
