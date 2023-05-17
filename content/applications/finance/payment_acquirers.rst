@@ -50,10 +50,9 @@ Bank Payments
 - | :doc:`Wire Transfer <payment_acquirers/wire_transfer>`
   | When selected, Odoo displays your payment information with a payment reference. You have to
     approve the payment manually once you have received it on your bank account.
-- | SEPA Direct Debit
+- | :doc:`SEPA Direct Debit <../finance/accounting/receivables/customer_payments/batch_sdd>`
   | Your customers can sign a SEPA Direct Debit mandate online and get their bank account charged
-    directly. :doc:`Click here <../finance/accounting/receivables/customer_payments/batch_sdd>` for more
-    information about this payment method.
+    directly.
 
 .. _payment_acquirers/online_providers:
 
@@ -107,7 +106,7 @@ Add a new Payment Acquirer
 --------------------------
 
 To add a new Payment acquirer and make it available to your customers, go to
-:menuselection:`Accounting / Website --> Configuration --> eCommerce: Payment Acquirers`, look for
+:menuselection:`Accounting / Website --> Configuration --> Payment Acquirers`, look for
 your payment acquirer, install the related module, and activate it. To do so, open the payment
 acquirer and change its state from *Disabled* to *Enabled*.
 
@@ -212,7 +211,7 @@ Multi-company environment
 
 If you have multiple companies on your database and wish to use the same payment acquirer for
 several or all of them, switch to the company on which the payment acquirer is configured, then go
-to :menuselection:`Accounting / Website --> Configuration --> Payments: Payment Acquirers` and
+to :menuselection:`Accounting / Website --> Configuration --> Payment Acquirers` and
 select the payment acquirer to use. Then, click :menuselection:`Action --> Duplicate`, and in the
 :guilabel:`Company` field, set the company for which you want to have that payment acquirer
 available. Configure the rest of the fields according to your needs, and :guilabel:`Save`.
