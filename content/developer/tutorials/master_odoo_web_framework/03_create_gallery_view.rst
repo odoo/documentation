@@ -3,7 +3,7 @@ Chapter 3: Create a Gallery View
 ================================
 
 .. warning::
-   It is highly recommended that you complete :doc:`01_fields_and_views` before starting this
+   It is highly recommended that you complete :doc:`02_create_customize_fields` before starting this
    chapter. The concepts introduced in Chapter 3, including views and examples, will be essential
    for understanding the material covered in this chapter.
 

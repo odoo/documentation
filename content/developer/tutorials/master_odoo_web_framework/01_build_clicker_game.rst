@@ -34,7 +34,7 @@ discover in the feature-rich Odoo web framework, so let's dive in and explore mo
    :width: 70%
 
    This is the progress that we have made in discovering the JavaScript web framework at the end of
-   :doc:`01_fields_and_views`.
+   :doc:`02_create_customize_fields`.
 
 .. admonition:: Goal
 
@@ -51,7 +51,7 @@ discover in the feature-rich Odoo web framework, so let's dive in and explore mo
 ===========================================
 
 .. note::
-   This task depends on :doc:`the previous exercises <01_fields_and_views>`.
+   This task depends on :doc:`the previous exercises <02_create_customize_fields>`.
 
 After using the :guilabel:`Print Label` button for some t-shirt tasks, it is apparent that there
 should be some feedback that the `print_label` action is completed (or failed, for example, the
