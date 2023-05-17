@@ -2161,21 +2161,8 @@ do that, several steps should be done.
 
       var MyClientAction = AbstractAction.extend({
           hasControlPanel: true,
-          loadControlPanel: true, // default: false
           ...
       });
-
-  .. warning::
-      When the ``loadControlPanel`` is set to true, the client action will automatically get the content of a search view or a control panel view.
-      In this case, a model name should be specified like this:
-
-      .. code-block:: javascript
-
-          init: function (parent, action, options) {
-              ...
-              this.controlPanelParams.modelName = 'model.name';
-              ...
-          }
 
 - Call the method *updateControlPanel* whenever we need to update the control panel.
   For example:
