@@ -1,51 +1,52 @@
-===================================
-Get a signature to confirm an order
-===================================
+=========================================
+Online signatures for order confirmations
+=========================================
 
-Online signatures are like electronic "fingerprints". By using them on Odoo, you will get
-automatic orders confirmation. You and your customers will save a lot of time by using this
-feature compared to a traditional process.
+The Odoo *Sales* application provides customers with the ability to confirm orders via an online
+signature directly on the sales order. Once the sales order is electronically signed by the
+customer, the salesperson attached to the sales order is automatically notified that the order is
+confirmed.
 
-Activate online signature
-=========================
+Activate online signatures
+==========================
 
-Go to :menuselection:`Sales --> Configuration --> Settings` and activate the **Online Signature**
-feature.
+To activate the *online signature* feature, go to :menuselection:`Sales app --> Configuration -->
+Settings`, scroll to the :guilabel:`Quotations & Orders` heading, and activate the :guilabel:`Online
+Signature` feature by checking the box beside it. Then, click the :guilabel:`Save` button in the
+top-left corner.
 
-.. image:: get_signature_to_validate/signature_1.png
+.. image:: get_signature_to_validate/signature-setting.png
    :align: center
-   :class: img-thumbnail
-   :alt: How to enable online signature on Odoo Sales?
+   :alt: How to enable online signature in Odoo Sales settings.
 
 .. note::
-   If you are familiar with this documentation: :doc:`quote_template`, you can activate or not the
-   **Online Signature** feature for each quotation template you use, under their confirmation tab.
-   Example:
+   On quotation templates, the :guilabel:`Online Signature` feature is located under the
+   :guilabel:`Confirmation` tab.
 
-   .. image:: get_signature_to_validate/signature_2.png
+   .. image:: get_signature_to_validate/signature-confirmation-tab.png
       :align: center
-      :class: img-thumbnail
-      :alt: How to enable online signature on Odoo Sales?
+      :alt: How to enable online signature on a quotation template.
 
-Confirm an order with a signature
-=================================
+   On standard quotations, the :guilabel:`Online Signature` feature is located under the
+   :guilabel:`Other Info` tab.
 
-When you send quotations to clients, they can instantly accept and sign it online. When they
-click on **Sign & Pay**, they have the choice to draw their own signature, automatically fill in the
-field with an automated signature or load a file from their computer. Here below, it is an example
-of an automated signature:
+   .. image:: get_signature_to_validate/signature-other-info-tab.png
+      :align: center
+      :alt: How to enable online signature on standard quotations.
 
-.. image:: get_signature_to_validate/signature_3.png
+Order confirmations with online signatures
+==========================================
+
+When quotations are sent to clients, there's an option for them to :guilabel:`Sign & Pay` directly
+on the quotation in the online customer portal. When clicked, clients have the option to draw a
+signature, fill in the field with an automated signature, or load a file from their computer.
+
+.. image:: get_signature_to_validate/signature-validate-order.png
    :align: center
-   :class: img-thumbnail
-   :alt: How to confirm an order with a signature on Odoo Sales?
+   :alt: How to confirm an order with a signature on Odoo Sales.
 
-Once signed, you will have the possibility to choose your payment methods. Then, when the quotation
-will be paid and confirmed, a delivery order will be created automatically by Odoo.
-
-.. tip::
-   Be careful that delivery orders are only generated for storable products and if the
-   **Inventory app** is already installed.
+Once signed, the various payment method options become available. Then, when the quotation is paid
+and confirmed, a delivery order is automatically created (if the Odoo *Inventory* app is installed).
 
 .. seealso::
-   - :doc:`quote_template`
+   :doc:`/applications/sales/sales/send_quotations/quote_template`
