@@ -40,7 +40,7 @@ modify it to suit our needs. Also, it is a realistic project, that will feature 
 that arises while working on Odoo.
 
 
-.. _howtos/master_odoo_web_framework/setup:
+.. _tutorials/master_odoo_web_framework/setup:
 
 Setup
 =====
