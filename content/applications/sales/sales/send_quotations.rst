@@ -12,4 +12,5 @@ Send Quotations
    send_quotations/get_signature_to_validate
    send_quotations/get_paid_to_validate
    send_quotations/deadline
+   send_quotations/different_addresses
    send_quotations/orders_and_variants
