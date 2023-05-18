@@ -66,8 +66,8 @@ result.
    - `Example: use of Layout in kanban view
      <{GITHUB_PATH}/addons/web/static/src/views/kanban/kanban_controller.xml>`_
 
-Services
-========
+Theory: Services
+================
 
 In practice, every component (except the root component) may be destroyed at any time and replaced
 (or not) with another component. This means that each component internal state is not persistent.

@@ -17,7 +17,7 @@ projects, each focusing on different features of Odoo.
 .. note::
 
     Each of these chapters can be done independantly, in any order. Also, be aware that some of them
-    are not simple and may take a few hours to complete.
+    cover a lot of material, so they may be quite long.
 
 The first project is about building a `clicker game <https://en.wikipedia.org/wiki/Incremental_game>`_.
 While working on it, you will learn various aspects of the web framework: systray, command palette,

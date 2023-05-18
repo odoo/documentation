@@ -487,8 +487,8 @@ The final touch is to let the user delete a todo.
 
 .. _tutorials/discover_js_framework/generic_card:
 
-13. Generic card with slots
-===========================
+13. Generic `Card` with slots
+=============================
 
 In a :ref:`previous exercise <tutorials/discover_js_framework/simple_card>`, we built
 a simple `Card` component. But it is honestly quite limited. What if we want
