@@ -44,8 +44,7 @@ To create a new subscription product, navigate to the :menuselection:`Subscripti
 Enter a :guilabel:`Product Name`.
 
 The :guilabel:`Product Type` for the new product is automatically set to :guilabel:`Service`.
-Subscription products can be set to other types as well; however, they currently *cannot* be set to
-:guilabel:`Storable Product`.
+Subscription products can be set to other types, as well.
 
 The new product automatically has the :guilabel:`Recurring` checkbox activated. This enables Odoo to
 recognize it as a subscription product. Be sure to leave the :guilabel:`Recurring` and
