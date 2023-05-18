@@ -1019,6 +1019,31 @@ The shape of a `group` is the following:
       :alt: Example of SelectMenu used with multiple selection
       :align: center
 
+   For more advanced use cases, you can customize the bottom area of the dropdown, using the `bottomArea` slot. Here, we choose to display
+   a button with the corresponding value set in the search input.
+
+   .. code-block:: javascript
+
+      MyComponent.template = owl.tags.xml`
+        <SelectMenu
+            choices="choices"
+        >
+            <span class="select_menu_test">Select something</span>
+            <t t-set-slot="bottomArea" t-slot-scope="select">
+                <div t-if="select.data.searchValue">
+                    <button class="btn text-primary" t-on-click="() => this.onCreate(select.data.searchValue)">
+                        Create this article "<i t-esc="select.data.searchValue" />"
+                    </button>
+                </div>
+            </t>
+        </SelectMenu>
+      `;
+
+   .. image:: owl_components/select_menu_bottomArea.png
+      :width: 400 px
+      :alt: Example of SelectMenu's bottom area customization
+      :align: center
+
 .. _frontend/tags_list:
 
 TagsList
@@ -1062,6 +1087,7 @@ Props
 The shape of a `tag` is the following:
 
     - `colorIndex` is an optional color id.
+    - `icon` is an optional icon displayed just before the displayed text.
     - `id` is a unique identifier for the tag.
     - `img` is an optional image displayed in a circle, just before the displayed text.
     - `onClick` is an optional callback that can be given to the element. This allows the parent element to handle any functionality depending on the tag clicked.
