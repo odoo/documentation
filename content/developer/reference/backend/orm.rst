@@ -407,6 +407,13 @@ Automatic fields
 
     Raise an Error otherwise.
 
+.. attribute:: Model.display_name
+
+    Name :class:`field <odoo.fields.Char>` displayed by default in the web client
+
+    By default, it equals to :attr:`~odoo.models.BaseModel._rec_name` value field
+    but the behavior can be customized by overriding :attr:`~odoo.models.BaseModel._compute_display_name`
+
 .. _reference/fields/automatic/log_access:
 
 Access Log fields
@@ -470,13 +477,6 @@ behavior is desired:
   .. automethod:: Model.toggle_active
   .. automethod:: Model.action_archive
   .. automethod:: Model.action_unarchive
-
-.. .. attribute:: sequence
-
-..   Alterable ordering criteria, allows drag-and-drop reordering of models
-..   in list views.
-
-..   :class:`~odoo.fields.Integer`
 
 .. attribute:: Model.state
 
@@ -994,8 +994,6 @@ Record(set) information
 .. automethod:: Model.exists
 
 .. automethod:: Model.ensure_one
-
-.. automethod:: Model.name_get
 
 .. automethod:: Model.get_metadata
 

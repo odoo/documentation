@@ -1856,7 +1856,7 @@ radio (FieldRadio)
   valid choices as radio buttons.
 
   Note that if used on a many2one records, then more rpcs will be done to fetch
-  the name_gets of the related records.
+  the display_name of the related records.
 
   - Supported field types: *selection, many2one*
 
@@ -1900,8 +1900,8 @@ many2one (FieldMany2One)
   - no_create_edit: hide the "Create and Edit..." dropdown menu item (default: false)
   - create_name_field: when creating a related record, if this option is set, the value of the *create_name_field* will be filled with the value of the input (default: *name*)
   - always_reload: boolean, default to false.  If true, the widget will always
-    do an additional name_get to fetch its name value.  This is used for the
-    situations where the name_get method is overridden (please do not do that)
+    do an additional read to fetch its display_name value.  This is used for the
+    situations where the _compute_display_name method is overridden
   - no_open: boolean, default to false.  If set to true, the many2one will not
     redirect on the record when clicking on it (in readonly mode)
 

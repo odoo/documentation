@@ -904,7 +904,7 @@ Symbols and Conventions
         def _onchange_date_begin(self):
             ...
 
-        # CRUD methods (and name_get, name_search, ...) overrides
+        # CRUD methods (and name_search, _search, ...) overrides
         def create(self, values):
             ...
 
