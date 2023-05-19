@@ -20,8 +20,9 @@ Odoo Partnership Agreement (FR)
 .. v9a: minor clarification to allow OE commission even without maintenance
 .. v9b: 2021-01-12 - update requirements for Partnership levels
 .. v10: 2023-01-09 - change Odoo SH commission rate to 50%
+.. v11: 2023-05-19 - updated partnership requirements, some clarifications
 
-.. note:: Version 10 - 2023-01-09
+.. note:: Version 11 - 2023-05-19
 
 | ENTRE:
 |  Odoo S.A., une entreprise dont le siège social se situe Chaussée de Namur, 40,
@@ -84,6 +85,10 @@ Nonobstant ce qui précède, le PARTENAIRE s’engage à préserver totalement l
 d’Odoo Enterprise Edition requis pour vérifier la validité de l’utilisation d’Odoo Enterprise Edition
 et recueillir les données statistiques nécessaires à cette fin.
 
+Le PARTENAIRE n'est pas autorisé à bloquer, restreindre ou limiter d'aucune manière l'accès et
+l'usage de la licence Odoo Enterprise Edition pour les clients, sauf en cas de consultation préalable
+et accord écrit d'ODOO.
+
 4 Services du partenariat
 =========================
 
@@ -95,29 +100,33 @@ mise en oeuvre d'Odoo, mais sans la visibilité d'un partenaire officiel, en att
 l'expérience requise; tandis qu' "Official Partners" est prévu pour les sociétés qui veulent la visibilité
 en tant que partenaire Ready, Silver ou Gold, suivant leur niveau d'expérience.
 
-Le niveau de partenariat accordé au PARTENAIRE dépend des nouvelles recettes annuelles Odoo Enterprise
-générées par le PARTENAIRE pour ODOO (en terme du nombre de nouveaux utilisateur Odoo Enterprise vendus),
-du nombre de ressources internes certifiées, et du taux de rétention de clients.
-Les renouvellements de contrats existants
-n’entrent pas en ligne de compte pour le nombre de nouveaux utilisateurs vendus, mais le PARTENAIRE
-reçoit tout de même une commission sur ces contrats, comme indiqué dans la section :ref:`benefits_fr`.
+Le niveau de partenariat accordé au PARTENAIRE dépend du *nombre net de nouveaux utilisateurs Odoo Enterprise
+vendus* au cours des 12 derniers mois, du nombre de ressources internes certifiées, et du Taux de Rétention
+de clients. Le *nombre net de nouveaux utilisateurs Odoo Enterprise vendus* comprend les nouveaux clients,
+les ventes supplémentaires aux clients existants, les ventes réduites aux clients existants ainsi que
+la perte de clients.
+
+Les renouvellements des contrats existants ne sont pas pris en compte dans le nombre d'utilisateurs
+vendus, mais le PARTENAIRE reçoit toujours une commission sur ces contrats, comme indiqué à la section
+:ref:`benefits_fr`.
 
 Le tableau ci-dessous résume les exigences pour chaque niveau de partenariat.
+
+Le *Taux de Rétention* de clients est calculé en divisant le nombre total de clients Odoo Enterprise
+acquis par le PARTENAIRE au cours des 3 dernières années et actuellement actifs par le nombre total
+de clients Odoo Enterprise acquis par le PARTENAIRE au cours des 3 dernières années.
 
 +----------------------------------------------+------------------+--------------------+--------------------+--------------------+
 |                                              | Learning Partner | Official: Ready    | Official: Silver   | Official: Gold     |
 +==============================================+==================+====================+====================+====================+
-| Nouveaux utilisateurs Odoo Enterprise vendus |   0              |  10                | 75                 | 200                |
+| Nouveaux utilisateurs net Odoo Enterprise    |   0              |  10                | 75                 | 300                |
+| vendus annuellement                          |                  |                    |                    |                    |
 +----------------------------------------------+------------------+--------------------+--------------------+--------------------+
-| Nombre d'employés certifiés sur au moins une |   0              |  1                 |  2                 |  3                 |
+| Nombre d'employés certifiés sur au moins une |   0              |  1                 |  3                 |  6                 |
 | des 3 dernières version d'Odoo               |                  |                    |                    |                    |
 +----------------------------------------------+------------------+--------------------+--------------------+--------------------+
 | Taux de Rétention minimum                    |   n/a            |  n/a               | 70%                |  80%               |
 +----------------------------------------------+------------------+--------------------+--------------------+--------------------+
-
-Le Taux de Rétention est défini comme le rapport entre le nombre de contrats Odoo Enterprise qui sont
-toujours en cours, et le nombre de contrats Odoo Enterprise qui ont été actifs à un moment au cours
-des 12 derniers mois.
 
 Les certifications sont personnelles, donc lorsqu’un membre du personnel quitte ou rejoint l’entreprise,
 le PARTENAIRE doit en informer ODOO.
@@ -186,8 +195,8 @@ Les avantages de chaque niveau de partenariat sont détaillés dans le tableau c
 | promotion                             |                  |                    |                    |                    |
 +---------------------------------------+------------------+--------------------+--------------------+--------------------+
 
-.. [#s1f] jusqu'à un maximum de 150€ (ou 180$) de commission mensuelle par contrat Odoo.SH.
-
+.. [#s1f] jusqu'à un maximum de 150€ (ou $180) de commission mensuelle par contrat Odoo.SH, ou 1440€
+   (ou $1728) de commission annuelle par contrat Odoo.SH.
 
 4.3 Reconnaissance du partenaire
 --------------------------------
@@ -250,6 +259,11 @@ Contrat.
 
 Le PARTENAIRE accepte que les frais de partenariat susmentionnés ne soient pas remboursables.
 
+Tous les frais et tarifs sont indiqués hors taxes, frais et charges fédérales, provinciales, locales
+ou autres taxes gouvernementales applicables (collectivement, les "Taxes"). Le PARTENAIRE est
+responsable du paiement de toutes les Taxes liées aux achats effectués par le PARTENAIRE en vertu
+de ce Contrat, sauf lorsque ODOO est légalement tenu de payer ou de percevoir les Taxes dont
+le PARTENAIRE est responsable.
 
 6 Résiliation
 =============
@@ -276,14 +290,14 @@ Maintien des dispositions:
 ==============================
 Les deux Parties sont liées par l’obligation de moyens ci-après.
 
-Dans les limites autorisées par la loi, la responsabilité d’ODOO pour quelque réclamation, perte,
+Dans les limites autorisées par la loi, la responsabilité de chaque Partie pour quelque réclamation, perte,
 dommage ou dépense que ce soit découlant de n’importe quelle cause et survenant de quelque manière
 que ce soit dans le cadre de ce Contrat sera limitée aux dommages directs prouvés, mais ne dépassera
 en aucun cas, pour tous les événements ou séries d’événements connexes entraînant des dommages,
 le montant total des frais payés par le PARTENAIRE au cours de six (6) mois précédant immédiatement
 la date de l’événement donnant naissance à une telle plainte.
 
-En aucun cas, ODOO ne sera responsable pour tout dommage indirect ou consécutif, y compris, mais
+En aucun cas chaque Partie ne sera responsable pour tout dommage indirect ou consécutif, y compris, mais
 sans s’y restreindre, aux plaintes, pertes de revenu, de recettes, d’économies, d’entreprise ou
 autre perte financière, coûts d’arrêt ou de retard, pertes de données ou données corrompues
 de tiers ou de clients résultant de ou en lien avec l’exécution de ses obligations dans le cadre
