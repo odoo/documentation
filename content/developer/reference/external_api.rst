@@ -760,20 +760,20 @@ a record).
 
          models.execute_kw(db, uid, password, 'res.partner', 'write', [[id], {'name': "Newer partner"}])
          # get record name after having changed it
-         models.execute_kw(db, uid, password, 'res.partner', 'name_get', [[id]])
+         models.execute_kw(db, uid, password, 'res.partner', 'read', [[id], ['display_name']])
 
       .. code-tab:: ruby
 
          models.execute_kw(db, uid, password, 'res.partner', 'write', [[id], {name: "Newer partner"}])
          # get record name after having changed it
-         models.execute_kw(db, uid, password, 'res.partner', 'name_get', [[id]])
+         models.execute_kw(db, uid, password, 'res.partner', 'read', [[id], ['display_name']])
 
       .. code-tab:: php
 
          $models->execute_kw($db, $uid, $password, 'res.partner', 'write', array(array($id), array('name'=>"Newer partner")));
          // get record name after having changed it
          $models->execute_kw($db, $uid, $password,
-             'res.partner', 'name_get', array(array($id)));
+             'res.partner', 'read', array(array($id), array('display_name')));
 
       .. code-tab:: java
 
@@ -788,8 +788,8 @@ a record).
          // get record name after having changed it
          asList((Object[])models.execute("execute_kw", asList(
              db, uid, password,
-             "res.partner", "name_get",
-             asList(asList(id))
+             "res.partner", "read",
+             asList(asList(id), asList("display_name"))
          )));
 
    Result:
