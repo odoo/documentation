@@ -24,8 +24,9 @@ Odoo Partnership Agreement (ES)
 .. v8a: minor clarifications and simplifications
 .. v... !missing updates!
 .. v10: 2023-01-09 - change Odoo SH commission rate to 50%
+.. v11: 2023-05-19 - updated partnership requirements, some clarifications
 
-.. note:: Versión 8a - 2019-08-09
+.. note:: Versión 11 - 2023-05-19
 
 | ENTRE:
 |  Odoo S.A., una empresa que tiene su sede social en Chaussée de Namur, 40, 1367 Grand-Rosière,
@@ -39,7 +40,7 @@ ODOO y EL COLABORADOR se denominan individualmente “Parte” y conjuntamente �
 
 1 Objeto
 ========
-El presente contrato tiene por objeto regular las condiciones bajo las cuales ODOO presta servicios
+El presente Contrato tiene por objeto regular las condiciones bajo las cuales ODOO presta servicios
 a EL COLABORADOR, acceso al software Odoo Enterprise Edition, y bajo las cuales EL COLABORADOR
 cumple con las obligaciones establecidas a continuación.
 
@@ -71,6 +72,9 @@ Contrato.
 Además, ODOO otorga a EL COLABORADOR acceso gratuito a la plataforma ODOO.SH con fines de prueba
 y desarrollo.
 
+EL COLABORADOR no tiene permitido bloquear, restringir o limitar de ninguna manera el acceso y uso
+de la Licencia Odoo Enterprise Edition por parte del cliente, sin consulta previa y autorización
+por escrito de ODOO.
 
 .. _restrictions_es:
 
@@ -101,28 +105,32 @@ sin visibilidad como socio oficial hasta que obtengan la experiencia requerida;
 "Official Partners" es para empresas que desean la visibilidad como Ready, Silver y Gold,
 según su experiencia con Odoo.
 
-El nivel de colaboración otorgado a EL COLABORADOR depende de los ingresos anuales de
-Odoo Enterprise generados para ODOO (en términos de Usuarios de Odoo Enterprise vendidos).
-Las renovaciones de los contratos existentes no cuentan para el número de Usuarios vendidos,
-pero EL COLABORADOR sigue recibiendo una comisión por estos
-contratos, tal como se indica en la sección :ref:`benefits_es`..
+El nivel de colaboración otorgado a EL COLABORADOR depende de los *nuevos usuarios netos de
+Odoo Enterprise vendidos* en los últimos 12 meses, el número de recursos certificados y la Tasa
+de Retención de clientes. Los *nuevos usuarios netos de Odoo Enterprise vendidos* incluyen nuevos
+clientes, ventas adicionales a clientes existentes, reducciones en ventas a clientes existentes y
+la pérdida de clientes.
+Las renovaciones de contratos existentes no se cuentan como parte del número de usuarios vendidos,
+pero EL COLABORADOR aún recibe una comisión por estos contratos según se establece en la sección
+:ref:`benefits_es`.
 
 La tabla siguiente resume los requisitos para cada nivel de colaboración.
+
+La *Tasa de Retención* de clientes se calcula dividiendo el número total de clientes de Odoo Enterprise
+adquiridos por EL COLABORADOR en los últimos 3 años que están actualmente activos, entre el
+número total de clientes de Odoo Enterprise adquiridos por EL COLABORADOR en los últimos 3 años.
 
 +--------------------------------------------------+------------------+--------------------+--------------------+--------------------+
 |                                                  | Learning Partner | Official: Ready    | Official: Silver   | Official: Gold     |
 +==================================================+==================+====================+====================+====================+
-| Usuarios de Odoo Enterprise anuales vendidos     |   0              |  10                | 50                 | 150                |
+| Nuevos Usuarios netos de Odoo Enterprise         |   0              |  10                | 50                 | 300                |
+| vendidos anualmente                              |                  |                    |                    |                    |
 +--------------------------------------------------+------------------+--------------------+--------------------+--------------------+
-| Número de empleados certificados en al menos uno |   0              |  1                 |  2                 |  3                 |
+| Número de empleados certificados en al menos uno |   0              |  1                 |  3                 |  6                 |
 | de las 3 últimas versiones de Odoo               |                  |                    |                    |                    |
 +--------------------------------------------------+------------------+--------------------+--------------------+--------------------+
-| Tasa de retención mínima                         |   n/a            |  n/a               | 70%                |  80%               |
+| Tasa de Retención mínima                         |   n/a            |  n/a               | 70%                |  80%               |
 +--------------------------------------------------+------------------+--------------------+--------------------+--------------------+
-
-La Tasa de Retención se define como la relación entre el número de contratos de Odoo Enterprise que
-están actualmente activos y la cantidad de contratos de Odoo Enterprise que han estado activos en
-algún momento en los últimos 12 meses.
 
 Las certificaciones son personales, por lo que cuando un miembro certificado del personal deja
 la empresa, EL COLABORADOR debe notificarlo a ODOO para que actualice la cantidad de recursos
@@ -190,7 +198,8 @@ En la tabla siguiente se describen los detalles de las ventajas para cada nivel 
 | y promoción de ODOO                   |                  |                    |                    |                    |
 +---------------------------------------+------------------+--------------------+--------------------+--------------------+
 
-.. [#s1] hasta un máximo de 150€ (o 180 $) de comisión mensual por suscripción
+.. [#s1] hasta un máximo de 150€ (o $180) de comisión mensual por suscripción, o 1440€
+   (o $1728) de comisión anual por suscripción.
 
 4.3 Reconocimiento de socios
 ----------------------------
@@ -234,6 +243,12 @@ enviada por ODOO. La tarifa se especificará por escrito al momento de la firma 
 
 EL COLABORADOR reconoce que la tarifa de colaboración mencionadas anteriormente no son reembolsables.
 
+Todos los honorarios y cargos son exclusivos de todos los impuestos, tarifas o cargos gubernamentales,
+federales, provinciales, estatales, locales u otros aplicables (en conjunto, "Impuestos").
+EL COLABORADOR es responsable de pagar todos los Impuestos asociados a las compras realizadas por
+EL COLABORADOR bajo este Contrato, excepto cuando ODOO esté legalmente obligado a pagar o recaudar
+Impuestos de los cuales EL COLABORADOR es responsable.
+
 6 Resolución
 ============
 En el caso de que cualquiera de las Partes no cumpla con cualquiera de sus obligaciones que se
@@ -259,17 +274,18 @@ En el momento de la resolución de este contrato, EL COLABORADOR:
 ===================================
 Ambas Partes están vinculadas por una obligación de medios aquí descrita.
 
-En la medida máxima permitida por la ley, la responsabilidad de ODOO por cualquier reclamo,
+En la medida máxima permitida por la ley, la responsabilidad de cada Parte por cualquier reclamo,
 pérdida, daño o gasto derivado de cualquier manera o bajo cualquier circunstancia del presente
 contrato se limitará a los daños directos demostrados, pero en ningún caso excederá por todos los
 eventos o series de eventos relacionados que ocasionen daños la cantidad total de las tarifas
 pagadas por EL COLABORADOR en el transcurso de los seis (6) meses inmediatamente anteriores a la
 fecha del evento que dio lugar a dicha reclamación.
 
-En ningún caso ODOO será responsable de ningún daño indirecto o consecuente, incluyendo,
-entre otros, reclamaciones de clientes o terceros, pérdidas de ingresos, ganancias, ahorros,
-pérdidas de negocios y otras pérdidas financieras, costos de paralización y retraso, datos perdidos
-o dañados derivados o relacionados con el cumplimiento de sus obligaciones en virtud de este contrato.
+En ningún caso cada Parte será responsable de ningún daño indirecto o consecuente, incluyendo,
+entre otros, pero no limitándose a, reclamaciones de clientes o terceros, pérdidas de ingresos,
+ganancias, ahorros, pérdidas de negocios y otras pérdidas financieras, costos de paralización y
+retraso, datos perdidos o dañados derivados o relacionados con el cumplimiento de sus obligaciones
+en virtud de este Contrato.
 
 EL COLABORADOR reconoce que no tiene ninguna expectativa y que no ha recibido garantías de recuperar
 ninguna inversión realizada en la ejecución de este contrato y el programa de socios de Odoo o de
