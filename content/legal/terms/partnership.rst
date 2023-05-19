@@ -16,8 +16,9 @@ Odoo Partnership Agreement
 .. v9a: minor clarification to allow OE commission even without maintenance
 .. v9b: 2021-01-12 - update requirements for Partnership levels
 .. v10: 2023-01-09 - change Odoo SH commission rate to 50%
+.. v11: 2023-05-19 - updated partnership requirements, some clarifications
 
-.. note:: Version 10 - 2023-01-09
+.. note:: Version 11 - 2023-05-19
 
 | BETWEEN:
 |  Odoo S.A., having its registered office at Chaussée de Namur, 40, 1367 Grand-Rosière,
@@ -79,6 +80,9 @@ Notwithstanding the above, PARTNER commits to wholly preserve the integrity of t
 Odoo Enterprise Edition code that is required to verify the validity of usage of Odoo Enterprise
 Edition and to collect statistics that are needed for that purpose.
 
+PARTNER is not allowed to block, restrict or limit in any way the customer's access and use of
+the Odoo Enterprise Edition License, without prior consultation and written authorisation from ODOO.
+
 
 4 Partnership Services
 ======================
@@ -91,28 +95,29 @@ without visibility as an official partner until they get the required experience
 “Official Partners” is for companies who want the visibility as Ready, Silver, and Gold,
 according to their experience with Odoo.
 
-Partnership level granted to PARTNER depends on the annual new Odoo Enterprise revenue generated
-for ODOO (in terms of Odoo Enterprise Users sold), the number of certified resources and the customer
-Retention Rate.
+Partnership level granted to PARTNER depends on the *net new Odoo Enterprise users sold* in
+the last 12 months, the number of certified resources and the customer
+Retention Rate. The *net new Odoo Enterprise users sold* includes new customers, upsells on existing
+customer, downsells on existing customers, and customer churn.
 Renewals of existing contracts do not count towards the number of Users Sold, but PARTNER
 still gets a commission on these contracts as stated in section :ref:`benefits`.
 
 The table below summarizes the requirements that have to be met for each partnership level.
 
+The customer *Retention Rate* is calculated by dividing the total number of Odoo Enterprise customers
+acquired by PARTNER in the last 3 years that are currently active by the total number of Odoo Enterprise
+customers acquired by PARTNER in the last 3 years.
+
 +--------------------------------------------+------------------+--------------------+--------------------+--------------------+
 |                                            | Learning Partner | Official: Ready    | Official: Silver   | Official: Gold     |
 +============================================+==================+====================+====================+====================+
-| Annual New Odoo Enterprise Users Sold      |   0              |  10                | 75                 | 200                |
+| Annual Net New Odoo Enterprise Users Sold  |   0              |  10                | 75                 | 300                |
 +--------------------------------------------+------------------+--------------------+--------------------+--------------------+
-| Number of Certified Employees on at least  |   0              |  1                 |  2                 |  3                 |
+| Number of Certified Employees on at least  |   0              |  1                 | 3                  | 6                  |
 | one of the 3 last Odoo versions            |                  |                    |                    |                    |
 +--------------------------------------------+------------------+--------------------+--------------------+--------------------+
 | Minimum Retention Rate                     |   n/a            |  n/a               | 70%                |  80%               |
 +--------------------------------------------+------------------+--------------------+--------------------+--------------------+
-
-The Retention Rate is defined as the ratio between the number of Odoo Enterprise contracts that
-are currently active, and the number of Odoo Enterprise contracts that have been active at some point
-in the last 12 months
 
 Certifications are personal, so when a certified staff member leaves or joins the company,
 PARTNER must notify ODOO.
@@ -181,7 +186,8 @@ The details of the benefits for each level of the partnership are described in t
 | Promotion                             |                  |                    |                    |                    |
 +---------------------------------------+------------------+--------------------+--------------------+--------------------+
 
-.. [#s1] up to a maximum of 150€ (or 180$) of monthly commission per subscription
+.. [#s1] up to a maximum of 150€ (or $180) of monthly commission per subscription, or 1440€
+   (or $1728) of yearly commission per subscription
 
 
 4.3 Partner Recognition
@@ -240,6 +246,11 @@ agreement.
 
 PARTNER acknowledges that the above-mentioned Partnership fee is not refundable.
 
+All fees and charges are exclusive of all applicable federal, provincial, state, local or other
+governmental taxes, fees or charges (collectively, “Taxes”). PARTNER is responsible for paying
+all Taxes associated with purchases made by PARTNER under this Agreement, except when ODOO is
+legally obliged to pay or collect Taxes for which PARTNER is responsible.
+
 
 6 Termination
 =============
@@ -265,13 +276,13 @@ On expiry or termination of this Agreement, PARTNER:
 ===========================
 Both Parties are bound by a best endeavours obligation hereunder.
 
-To the maximum extent permitted by law, ODOO’s liability for any and all claims, losses, damages or
+To the maximum extent permitted by law, the liability of each Party for any and all claims, losses, damages or
 expenses from any cause whatsoever and howsoever arising under this Agreement will be limited to
 the direct damages proved, but will in no event exceed for all damage-causing event or series of
 connected events causing damages the total amount for the fees paid by PARTNER in the course of the
 six (6) months immediately preceding the date of the event giving rise to such claim.
 
-In no event will ODOO be liable for any indirect or consequential damages, including but not limited
+In no event will each Party be liable for any indirect or consequential damages, including but not limited
 third parties or customer claims, loss of revenue, profits, savings, loss of business or other
 financial loss, costs of standstill or delay, lost or corrupted data arising out of or in connection
 with the performance of its obligations under this Agreement.
@@ -302,7 +313,7 @@ Non-compliance with the provisions of this section shall be a cause for terminat
 
 8.1 Publicity
 -------------
-PARTNER grants ODOO the nonexclusive right to use PARTNER's name or trademarks in press releases,
+PARTNER grants ODOO the non-exclusive right to use PARTNER's name or trademarks in press releases,
 advertisements or other public announcements.
 
 In particular, PARTNER accepts to be mentioned in the official list of Odoo Partners on odoo.com,
