@@ -71,7 +71,7 @@ way to verify the ownership of your domain name is by adding a DNS record. You c
 other providers.
 
 .. seealso::
-   - :doc:`/applications/websites/website/pages/seo`
+   - :doc:`../pages/seo`
    - `Google Search Console Help - Verify your site ownership <https://support.google.com/webmasters/answer/9008080>`_
    - `Bing Webmaster Tools - Add and Verify site <https://www.bing.com/webmasters/help/add-and-verify-site-12184f8b>`_
 
@@ -352,4 +352,4 @@ In the :guilabel:`Domain` field, fill in the web address of your website (e.g.,
    <https://search.google.com/search-console>`_ to fix this.
 
 .. seealso::
-  - :doc:`/applications/general/email_communication/email_servers`
+  - :doc:`../../../general/email_communication/email_servers`

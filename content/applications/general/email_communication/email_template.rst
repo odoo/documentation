@@ -271,7 +271,7 @@ link established with the website from which the order was made. As a result, th
 the sales orders uses the domain name defined for the corresponding website to generate the links.
 
 For more information about how to configure your domains, we invite you to check :doc:`our domain name
-documentation </administration/maintain/domain_names>`.
+documentation <../../websites/website/configuration/domain_names>`.
 
 Updating translations within email templates
 ********************************************
