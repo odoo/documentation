@@ -2,316 +2,164 @@
 Multiple websites
 =================
 
-.. image:: multi_website/multi_website04.png
-  :align: center
-
-Odoo’s Multi-Websites opens up broad possibilities of diversification and
-customer segmentation for your business. A multiplied audience and
-boosted revenue are now just a few clicks away!
-
-Each website can work in a fully independent way, with its theme,
-branding, domain name, header & footer, pages, languages, products, blog
-posts, forum, slides, events, live chat channels, etc. Let’s go for a
-tour!
-
-Setup
-=====
-
-To create a new website, go to :menuselection:`Website --> Configuration --> Settings`.
-The button, *Create a new website*, lays in the first section.
-
-
-
-.. image:: multi_website/multi_website05.png
-  :align: center
-
-In the upcoming prompt, set a name for your new website and a specific
-domain name. Leave empty to publish the new website under the default
-domain of your Odoo database. You can later set some country groups to
-redirect visitors to it using Geo IP.
-
-.. image:: multi_website/multi_website01.png
-  :align: center
-
-Then, select a theme. This new website might have an entirely different
-purpose or audience than the first one. So feel free to go for a
-different theme!
-
-Once the theme is selected, you can start to build the homepage of your
-website. Follow the purple drops; they will help you in the first steps.
-
-.. image:: multi_website/multi_website08.png
-  :align: center
-
-
-.. note::
-   If you run Odoo Online, don’t forget to redirect any new domain name to your Odoo database
-   (``CNAME``) and to authorize it Odoo-side. See :ref:`domain-name/existing`.
-
-Create the menu
-===============
-
-The new website has a default menu with all the installed applications.
-To edit it, click :menuselection:`Pages --> Edit Menu`. Moving forward you only edit
-the menu of the current website.
-
-Switch from one website to another
-==================================
-
-
-As easy as ABC! There is a website switcher in the right corner of the
-edit bar. Switching to another website will connect to the domain of
-this website. If you use another domain for the website, the user is
-requested to sign in.
-
-.. image:: multi_website/multi_website03.png
-  :align: center
-
-.. note::
-   When switching, you are redirected to the same domain path on the other website
-   (e.g., ``/shop/myproduct``). If this URL is not used, you will be redirected to a 404 page but
-   prompted to create a new page from there.
-
-Add features
-============
-
-The website apps you install (e.g., Slides, Blogs) are made available on
-all your websites. You can, of course, keep them hidden in one website by
-removing the menu item.
-
-Each website comes with a high range of specific options in the
-settings. First, select the website to configure.
-
-.. image:: multi_website/multi_website15.png
-  :align: center
-
-Then, take a look at the options flagged with the earth icon. It means
-they only impact the very website you are working on.
-
-.. image:: multi_website/multi_website12.png
-  :align: center
-
-You can, for instance, set specific :
-
--  languages,
-
--  domain names,
-
--  social media links,
-
--  customer portal mode (B2C vs. B2B),
-
--  dedicated live chat channels,
-
--  etc.
-
-The other options are global and apply to all your websites.
-
-Manage domain names
-===================
-
-As said earlier, your websites can either share the same domain name or
-use a specific one. If you share it and want to adapt the content per
-region, set country groups in the setting of each website. Visitors will
-be redirected to the right website using GeoIP.
-
-.. image:: multi_website/multi_website18.png
-  :align: center
-
-.. note::
-  Geo IP is installed by default in Odoo Online. If you run Odoo
-  on-premise, don’t forget to install *GeoIP* library.
-  See :doc:`on-premise_geo-ip-installation`
-
-.. seealso::
-   - :doc:`/administration/maintain/domain_names`
-
-If you setup an extra website and specify the domain name you will have to
-do three things to get this feature to work:
-
-#. Setup an A-record in the DNS configuration of your hosting provider so
-   that "www.mywebsite2.ext" is redirected to the IP of your Odoo instance.
-#. Create an extra Nginx ``server`` block in which you set the
-   ``server_name`` that you've set in the :guilabel:`Website domain` field.
-#. Reload and restart your Nginx instance to use the new ``server`` block.
-
-Customize the visitor experience
-================================
-
-
-The customer experience can be customized very profoundly thanks to the menu
-\*Customize\*. All the visual options available there are specific to
-each website. Go through the different pages to adapt them to this new
-audience. Focus on workflows, and automatic pages (eCommerce checkout,
-blogs, events, etc.) as the number of available options is higher there.
-
-.. image:: multi_website/multi_website14.png
-  :align: center
-
-Publish specific content per website
-------------------------------------
-
-
-Like static pages, any content created from the front-end (product, blog
-post, etc.) is always only published in the current website. You can
-change that from the edit form view in the backend and leave the
-*Website* field blank. This will publish it in all the websites.
-
-.. image:: multi_website/multi_website06.png
-  :align: center
-
-Here are all the objects that you can link to *either one or all the
-websites*:
-
-1. Products
-
-2. Product Categories for eCommerce
-
-3. Blogs
-
-4. Slide Channels
-
-5. Forums
-
-6. Events
-
-7. Job Positions
-
-.. note::
-    When you create the record from the backend and publish it,
-    typically a product or an event, it is made available in all websites.
-
-Publish a page in all websites
-------------------------------
-
-A new static page is created and only made available in the current
-website. You can duplicate it to other websites from
-:menuselection:`Website --> Configuration --> Pages`. To do so, leave the *Website* field empty.
-
-If you want to duplicate it in just one other website, duplicate the
-page and set the new website.
-
-.. image:: multi_website/multi_website09.png
-  :align: center
-
-When you edit the page again, the change only affects the current
-website. A new page is duplicated and tied up to the website.
-The original page still being linked to all websites.
+Odoo allows you to create multiple websites from the same database. This can be useful, for example,
+if you have multiple brands operating under your organization, or to create separate websites for
+different products/services, or different audiences. In these cases, having different websites can
+help avoid confusion and make it easier to tailor your digital outreach strategies and reach your
+target audience.
+
+Each website can be designed and configured independently with its own :doc:`domain name
+</administration/maintain/domain_names>`, theme, pages,
+menus, :doc:`languages <translate>`, :doc:`products <../../ecommerce/managing_products/products>`,
+assigned sales team, etc. They can also :ref:`share content and pages
+<multi-website/website_content>`.
 
 .. tip::
-      By grouping pages by URL in the page manager, you quickly find
-      the original page behind each edited page.
+   Duplicate content (i.e., pages and content shared between multiple websites) can have a negative
+   impact on :doc:`../pages/seo`.
 
-.. image:: multi_website/multi_website10.png
-  :align: center
+Website creation
+================
 
-Multi-companies
-===============
+To create a new website, proceed as follows:
 
-Each website can be linked to a specific company of your system, in a
-multi-companies environment.
+#. Go to :menuselection:`Website --> Configuration --> Settings`.
+#. Click :guilabel:`+ New Website`.
 
-.. image:: multi_website/multi_website16.png
-  :align: center
+   .. image:: multi_website/create-website.png
+      :alt: New website button
 
-With such a configuration, only company-related data appear on the
-website (products, jobs, events, etc.).
+#. Specify the :guilabel:`Website Name` and :guilabel:`Website domain`. Each website must be
+   published under its own :doc:`domain </administration/maintain/domain_names>`.
+#. Adapt the :guilabel:`Company name`, :guilabel:`Languages` and :guilabel:`Default language`
+   if needed.
+#. Click the :guilabel:`Create` button.
 
-Website editors can only view and edit the pages of the records they
-have access to, typically the ones belonging to their current company
-(and to their subsidiaries, or child companies in Odoo language). And so
-is it for visitors.
+You can then start building your new website.
 
 .. note::
-      If websites are multi-companies, you don’t change company when switching websites. To change the company and see the related content, use the company selector in the menu.
+   By default, all website-related apps that you have installed (e.g. **eCommerce**,
+   **Forum**, **Blog**, etc.) and their related website pages are also available on the
+   new website. You can remove them by amending the website's menu.
 
-.. image:: multi_website/multi_website02.png
-  :align: center
+Switching websites
+==================
 
-Configure your eCommerce website
-================================
+To switch from one website to another, click the menu next to the :guilabel:`+New` button in the
+top right corner and select the website you want to switch to.
 
-eCommerce is a crucial feature in the multi-websites environment. We made it
-so that the entire flow can be customized to fit the very audience of
-each website.
+.. image:: multi_website/switch-websites.png
+   :alt: Website selector
 
-Products only available on one website
---------------------------------------
+.. note::
+   When you switch websites, you are redirected to the other website, to the same page (URL) as the
+   current one. If the page you are currently viewing does not exist on the other website, you are
+   redirected to a 404 error page. Once redirected, click :guilabel:`Create page` to create the
+   page.
 
-We already saw earlier how to publish a specific record in only one
-website. You will find the \*Website\* field in the eCommerce tab of the
-product edit form. Empty means available in all websites.
+   .. image:: multi_website/404-create-page.png
+      :alt: Create a page from a 404 error page
 
-.. image:: multi_website/multi_website13.png
-  :align: center
+Website-specific configuration
+==============================
 
-Products available on *some* websites
--------------------------------------
+Most website settings are website-specific, which means they can be enabled/disabled per website. To
+adapt the settings for a website, go to :menuselection:`Website --> Configuration --> Settings`.
+Select the desired website in the field :guilabel:`Settings of Website` at the top of the
+:guilabel:`Settings` page, in the **yellow** banner. Then, adapt the options for that specific
+website.
 
-To make a product available on some websites, but not all of them, you
-should duplicate the product for each website.
+.. note::
+   - Websites are created with the default settings; the settings are not copied from one website to
+     the other.
+   - In a :doc:`multi-company environment <../../../general/users/companies>`, each website can be
+     linked to a specific company in your database so that only company-related data (e.g.,
+     products, jobs, events, etc.) is displayed on the website. To display company-specific data,
+     set the desired company in the :guilabel:`Company` field.
 
-If you need a unique reference to manage in your inventory, you should
-install *Manufacturing\ and create *Kits* BoMs (bills of materials).
-Each kit will link each published “virtual” product to the main
-reference managed in your inventory. That way, any item sold from your
-website will be converted into the storable item in the delivery order.
+.. _multi-website/website_content:
 
-Pricelists
-----------
+Content availability
+--------------------
 
-To manage specific prices by websites, you can activate *Multiple Sales
-Prices per Product* in Website settings.
+By default, pages, products, events, etc. created from the frontend (using the
+:guilabel:`+New` button) are only available on the website from which it was created. Records
+created from the backend, however, are made available on all websites by default. The content's
+availability can be changed in the backend, in the :guilabel:`Website` field. For example, for
+products, go to :menuselection:`eCommerce --> Products`, then select the product and go to the
+:guilabel:`Sales` tab. For forums, go to :menuselection:`Configuration --> Forums`, then select the
+forum.
 
-Then, go to :menuselection:`Website --> Products --> Pricelists` to create additional pricelists.
-You can also choose to have a pricelist available *only* on a specific website.
+.. image:: multi_website/forum-multi-website.png
+   :alt: Website field in Forum form
 
-.. seealso::
-   :doc:`../../ecommerce/managing_products/price_management`.
+.. _website_field:
 
-.. image:: multi_website/multi_website07.png
-  :align: center
+Records and features can be made available:
 
-Leaving the field empty means that you make it work in all websites if
-*Selectable* is selected. Otherwise, it makes it only available for
-backend operations of Sales and Point of Sale applications.
+- On all websites: leave the :guilabel:`Website` field empty;
+- Only on one website: set the :guilabel:`Website` field accordingly;
+- On some websites: in this case, you should duplicate the item and set the :guilabel:`Website`
+  field.
 
-Payment Providers and Delivery Methods
---------------------------------------
+Website pages
+~~~~~~~~~~~~~
 
-By default, published payment providers and delivery methods are deployed in all websites.
-You could already use specific payment providers per country using Geo
-IP by defining countries in their configuration. Now you can also do it
-per website by filling in the *Website* field.
+To modify the website on which a page is to be published, proceed as follows:
+
+#. Go to :menuselection:`Website --> Site --> Pages`.
+#. Select the website on which the page is currently published.
+
+   .. image:: multi_website/pages-switch-websites.png
+      :alt: Display pages per website
+
+#. Tick the check box next to the page(s) you want to change.
+#. Click the :guilabel:`Website` field and select the website, or empty it to publish the page on
+   all websites.
+
+.. note::
+   Each website must have its own homepage; you may not use the same homepage for several websites.
+
+eCommerce features
+==================
+
+eCommerce features such as products, eCommerce categories, pricelists, discounts, payment providers,
+etc. can be restricted to :ref:`a specific website <website_field>`.
 
 Customer accounts
 -----------------
 
-There is a setting to choose how to manage customer accounts in Website
-settings. You can either allow customers to use one account through all
-the websites or compel them to create one account for each website. This
-last option is convenient if your websites shouldn’t be related to each
-other in the visitor mind.
+You can :doc:`allow your customers to use the same account
+<../../ecommerce/ecommerce_management/customer_accounts>` on all of your websites by enabling the
+:guilabel:`Shared Customer Accounts` check box in the website settings.
 
-.. image:: multi_website/multi_website17.png
-  :align: center
+Pricing
+-------
 
-Technical hints for customization
-=================================
+Products can be priced differently based on the website using :ref:`pricelists
+<ecommerce/pricelists>`. The following configuration is required:
 
-If you want to publish custom objects on the website, here are a few
-tips to make it work with multi websites:
+#. Go to :menuselection:`Website --> Configuration --> Settings`.
+#. Scroll down to the :guilabel:`Shop - Products` section and select the :guilabel:`Pricelists`
+   option :guilabel:`Multiple prices per product`.
+#. Click :guilabel:`Pricelists` to define new pricelists or edit existing ones.
+#. Select the pricelist or click :guilabel:`New` to create a new one, then select the
+   :guilabel:`Configuration` tab and set the :guilabel:`Website` field.
 
--  Sitemap: don’t forget the domain in the route to only publish
-       available records in each website’s sitemap.
+Reporting
+=========
 
--  Access: you should call the method
-       *can_access_from_current_website* in the controller to make
-       sure the visitor can see a record in the current website.
+Analytics
+---------
 
--  Search: when a list of records is displayed, don’t forget to specify
-       the domain to only display records available for the current
-       website.
+Each website has its own :doc:`analytics <../reporting/plausible>`. To switch between websites,
+click the buttons in the upper right corner.
 
-.. image:: multi_website/multi_website11.png
-  :align: center
+.. image:: multi_website/analytics-switch-websites.png
+   :alt: Switch websites in analytics
+
+Other reporting data
+--------------------
+
+Other reporting data such as eCommerce dashboard data, online sales analyses and visitors can be
+grouped by website if necessary. Click :guilabel:`Group by --> Website`.
