@@ -145,7 +145,7 @@ Use the `abbr` markup to write a self-defining abbreviation that is displayed as
 
 .. _contributing/markups/guilabel:
 
-:abbr:`GUI (Graphical User Interface)` element
+:abbr:`GUI (graphical user interface)` element
 ----------------------------------------------
 
 Use the `guilabel` markup to identify any text of the interactive user interface (e.g., button
