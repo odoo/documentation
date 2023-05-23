@@ -77,6 +77,8 @@ page.
 .. seealso::
    :doc:`/applications/inventory_and_mrp/inventory/management/products/uom`
 
+.. _ecommerce/pricelists:
+
 Price configuration: pricelists
 -------------------------------
 
