@@ -1,81 +1,75 @@
-====================
-Log in with employee
-====================
+=========================
+Multi-employee management
+=========================
 
-With Odoo *Point of Sale*, you can manage multiple cashiers. This
-feature allows you to keep track of who is working, when and how much
-each cashier made for that session.
+Odoo Point of Sale allows you to manage access to a specific POS by enabling the **Multi Employees
+per Session** feature. When activated, :ref:`you can select which users can log into the POS
+<employee_login/use>` and :ref:`keep track of the employees involved in each order
+<employee_login/analytics>`.
 
-There are three ways to switch cashiers in Odoo: by *selecting the
-cashier*, by *entering a PIN code* or by *scanning a barcode*.
+.. _employee_login/configuration:
 
-.. note::
-   To manage multiple cashiers, you need several employees (at least two).
+Configuration
+=============
 
-.. _restrict-employee-pos:
+:ref:`Access the POS settings <configuration/settings>` and select your POS, or click the vertical
+ellipsis button (:guilabel:`⋮`) on a POS card and click :guilabel:`Edit`. Then, enable
+:guilabel:`Multi Employees per Session`, and add the allowed employees in the :guilabel:`Allowed
+Employees` field.
 
-Set up log in with employees
-============================
+.. image:: employee_login/setting.png
+   :alt: setting to enable multiple cashiers in POS
 
-To enable the feature, go to your *PoS settings* and check log in with
-employees on your *PoS form*. Then, add the employees that have access
-to the cash register.
+.. _employee_login/use:
 
-.. image:: employee_login/multicashiers01.png
-    :align: center
+Practical application
+=====================
 
-Now, you can switch cashier easily.
+Once the feature is activated, cashiers can log in :ref:`by scanning their badge
+<employee_login/badge>` or selecting their name from the list of allowed employees to :ref:`open the
+session <pos/session-start>`.
 
-Switch without pin codes
-========================
+.. image:: employee_login/open-session.png
+   :alt: window to open a session when the multiple cashiers feature is enabled
 
-The easiest way to switch cashiers is without a code. To do so, click on
-the cashier name in your PoS interface.
+To switch to another user :ref:`from an open session <pos/session-start>`, click the employee name
+at the top-right of the screen and select the employee to swap with from the list.
 
-.. image:: employee_login/multicashiers02.png
-    :align: center
+.. image:: employee_login/switch-user.png
+   :alt: button to switch from one cashier to another.
 
-Now, you just have to click on your name.
+You can also require your employees to enter a pin code every time they log into a POS to prevent
+them from logging in as someone else. To define the code, go to the **Employees** app, open the
+employee form, and click the :guilabel:`HR settings` tab. Then, enter a pin code of your choice in
+the :guilabel:`PIN Code` field of the :guilabel:`Attendance/Point of Sale` category.
 
-.. image:: employee_login/multicashiers03.png
-    :align: center
+.. image:: employee_login/pin-and-badgeid.png
+   :alt: setting on the employee form to assign a badge ID and a PIN code.
 
-.. _set-pin-code:
+.. _employee_login/badge:
 
-Switch cashier with pin codes
-=============================
+Log in using badges
+-------------------
 
-You can set a pin code on each cashier. To set up a pin code, go to the
-employee form and add a security PIN, in the *HR settings tab*.
+For your employees to be able to log in by scanning their badge, they must have a badge ID assigned.
+To do so, go to the **Employees** app, open the employee form, and click the :guilabel:`HR settings`
+tab. Then, enter the badge ID of your choice in the :guilabel:`Badge ID` field of the
+:guilabel:`Attendance/Point of Sale` category or click :guilabel:`Generate`.
 
-.. image:: employee_login/multicashiers04.png
-    :align: center
+To switch to another user, lock the session by clicking the lock-shaped icon (:guilabel:`🔓`) at the
+top-right of the screen and scan your badge.
 
-Now, when switching cashier, a PIN password will be asked.
+.. _employee_login/analytics:
 
-.. image:: employee_login/multicashiers05.png
-    :align: center
+Analytics
+=========
 
-.. _employee-barcode:
+Once you close and post the POS session, access the comprehensive report to review all session
+activities, including who initiated the session and who handled specific orders. To access the
+session's report, click the vertical ellipsis button (:guilabel:`⋮`) on the POS card and select
+:guilabel:`Sessions` from the :guilabel:`View` section. Then, select a specific session for more
+detailed information, and click the :guilabel:`Orders` button to view a list of all orders placed
+during that session.
 
-Switch cashier with barcodes
-============================
-
-You can ask your employees to log themselves with their badges. To do
-so, set up a barcode at the same place you add the PIN code. Print the
-badge and when they will scan it, the cashier will be switched to that
-employee.
-
-.. image:: employee_login/multicashiers06.png
-    :align: center
-
-Find who was the cashier
-========================
-
-Once you have closed your *PoS session*, you can have an overview of
-the amount each cashier sold for. To do so, go to the orders menu.
-
-.. image:: employee_login/multicashiers07.png
-    :align: center
-
-Now, you can open the order and have a summary of the sold products.
+To get an overview of all orders, regardless of the session, click the vertical ellipsis button
+(:guilabel:`⋮`) on the POS card and select :guilabel:`Orders` from the :guilabel:`View` section.
