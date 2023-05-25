@@ -607,15 +607,58 @@ válida com os mesmos efeitos e objetivos.
 9 Anexo A: Licença do Odoo Enterprise Edition
 =============================================
 
-.. only:: latex
+A versão Enterprise do Odoo tem a licença Odoo Enterprise Edition v1.0, que é
+definida da seguinte forma:
 
-   A versão Enterprise do Odoo tem a licença Odoo Enterprise Edition v1.0, que é
-   definida da seguinte forma:
+.. warning::
+    Esta é uma tradução em português da "Licença Odoo Enterprise Edition v1.0".
+    A tradução é fornecida com o intuito de facilitar a sua compreensão, mas não tem valor legal.
+    A única referência oficial aos termos da "Licença Odoo Enterprise Edition"
+    é a :ref:`versão original em inglês <odoo_enterprise_license>`
 
-    .. highlight:: none
+.. raw:: html
 
-    .. literalinclude:: ../../licenses/enterprise_license.txt
+    <tt>
 
-.. only:: html
+.. raw:: latex
 
-    Veja :ref:`odoo_enterprise_license`.
+    {\tt
+
+
+Licença Odoo Enterprise Edition v1.0
+
+Este software e arquivos associados (o "Software") só podem ser usados (executados, modificados,
+executados após modificações) com uma Assinatura do Odoo Enterprise válida para o número correto
+de usuários.
+
+Com um Acordo de Parceria válido com a Odoo S.A., as permissões acima também são concedidas,
+desde que o uso seja limitado a um ambiente de testes ou desenvolvimento.
+
+Você pode desenvolver módulos Odoo com base no Software e distribuí-los sob a licença de sua
+escolha, desde que seja compatível com os termos da Licença Odoo Enterprise Edition (por exemplo:
+LGPL, MIT ou licenças proprietárias similares a esta).
+
+Você pode usar módulos Odoo publicados sob qualquer licença junto com o Software, desde que a
+licença deles seja compatível com os termos da Licença Odoo Enterprise (incluindo, mas não se
+limitando a, qualquer módulo publicado na Odoo Apps Store em odoo.com/apps).
+
+É proibido publicar, distribuir, sublicenciar ou vender cópias do Software ou cópias modificadas
+do Software.
+
+O aviso de direitos autorais acima e este aviso de permissão devem ser incluídos em todas
+as cópias ou partes substanciais do Software.
+
+O SOFTWARE É FORNECIDO "COMO ESTÁ", SEM GARANTIA DE QUALQUER TIPO, EXPRESSA OU IMPLÍCITA,
+INCLUINDO, MAS NÃO SE LIMITANDO A, GARANTIAS DE COMERCIALIZAÇÃO, ADEQUAÇÃO A UM PROPÓSITO
+ESPECÍFICO E NÃO VIOLAÇÃO. EM NENHUMA CIRCUNSTÂNCIA, OS AUTORES OU TITULARES DE DIREITOS
+AUTORAIS SERÃO RESPONSÁVEIS POR QUALQUER REIVINDICAÇÃO, DANOS OU OUTRA RESPONSABILIDADE,
+SEJA EM AÇÃO DE CONTRATO, DELITO OU DE OUTRA FORMA, DECORRENTE DE, OU EM CONEXÃO COM
+O SOFTWARE OU O USO OU OUTRAS TRANSAÇÕES NO SOFTWARE.
+
+.. raw:: latex
+
+    }
+
+.. raw:: html
+
+    </tt>
