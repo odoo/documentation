@@ -5,4 +5,4 @@
    :maxdepth: 4
    :hidden:
 
-   enterprise_pt
+   enterprise_pt_BR
