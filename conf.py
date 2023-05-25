@@ -318,13 +318,16 @@ latex_documents = [
      'Odoo Enterprise Subscription Agreement (ES)', '', 'howto'),
     ('legal/terms/i18n/partnership_tex_es',
      'odoo_partnership_agreement_es.tex', 'Odoo Partnership Agreement (ES)', '', 'howto'),
+
+    ('legal/terms/i18n/enterprise_tex_pt_BR', 'odoo_enterprise_agreement_pt_BR.tex',
+     'Odoo Enterprise Subscription Agreement (PT)', '', 'howto'),
 ]
 
 # List of languages that have legal translations (excluding EN). The keys must be in
 # `languages_names`. These translations will have a link to their versions of the legal
 # contracts, instead of the default EN one. The main legal documents are not part of the
 # translations since they have legal meaning.
-legal_translations = ['de', 'es', 'fr', 'nl']
+legal_translations = ['de', 'es', 'fr', 'nl', 'pt_BR']
 
 # The name of an image file (relative to this directory) to place at the top of the title page.
 latex_logo = 'static/img/odoo_logo.png'
