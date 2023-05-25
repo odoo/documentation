@@ -160,6 +160,16 @@ expression's **label** (ex. **code.label**).
    The value of the arithmetic expression will be returned only if it is strictly between the
    provided bounds. Otherwise, it will be brought back to the closest bound.
 
+`if_other_expr_above(LINE_CODE.EXPRESSION_LABEL, CUR(amount))`
+   The value of the arithmetic expression will be returned only if the value of the expression
+   denoted by the provided line code and expression label is greater than the provided bound.
+   Otherwise, the result will be `0`.
+
+`if_other_expr_below(LINE_CODE.EXPRESSION_LABEL, CUR(amount))`
+   The value of the arithmetic expression will be returned only if the value of the expression
+   denoted by the provided line code and expression label is lower than the provided bound.
+   Otherwise, the result will be `0`.
+
 `CUR` is the currency code in capital letters, and `amount` is the amount of the bound expressed in
 that currency.
 
