@@ -676,10 +676,18 @@ A typical way to run the server would be:
 
           C:\> cd CommunityPath/
           C:\> python odoo-bin -r dbuser -w dbpassword --addons-path=addons -d mydb
+          
+          or
+          
+          if there is any error
+          C:\> python odoo-bin -r dbuser -w dbpassword --addons-path=addons -d mydb -i base
 
-      Where `CommunityPath` is the path of the Odoo Community installation, `dbuser` is the
-      PostgreSQL login, `dbpassword` is the PostgreSQL password, and `mydb` is the name of the
-      PostgreSQL database.
+      Where `CommunityPath` is the path of the Odoo Community installation,
+      `dbuser` is the PostgreSQL login id,
+      `dbpassword` is the PostgreSQL password, 
+      `--addons-path=addons` is the path of addons,
+      `mydb` is the name of the PostgreSQL database,
+      `-i base` is the command of CLI.
 
    .. group-tab:: Linux
 
