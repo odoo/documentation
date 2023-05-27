@@ -25733,6 +25733,10 @@ msgid ""
 "available by the **Agenzia delle Entrate**. Saving this change directs all "
 "companies on the database to use this configuration."
 msgstr ""
+"Este modo envía las facturas a un servicio que no es de producción (es "
+"decir, de prueba) facilitado por la **Agenzia delle Entrate**. Guardar este "
+"cambio hace que todas las empresas en la base de datos utilicen esta "
+"configuración."
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:127
 msgid ":guilabel:`Official`"
@@ -25752,6 +25756,10 @@ msgid ""
 "ticking :guilabel:`Allow Odoo to process invoices`, and then "
 ":guilabel:`Save`. You can now record your transactions in Odoo Accounting."
 msgstr ""
+"Una vez que seleccionó un modo, debe aceptar los **términos y condiciones**,"
+" marque la casilla :guilabel:`Permitir que Odoo procese las facturas` y "
+"después haga clic en :guilabel:`Guardar`, ahora puede registrar sus "
+"transacciones en Contabilidad de Odoo."
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:134
 msgid ""
@@ -25761,6 +25769,11 @@ msgid ""
 ":guilabel:`Test (experimental)`. We recommend creating a separate database "
 "for testing purposes only."
 msgstr ""
+"**No puede revertir** la selección de :guilabel:`Prueba (experimental)` u "
+":guilabel:`Oficial`. Una vez que se encuentra en el modo :guilabel:`Oficial`"
+" no puede seleccionar :guilabel:`Prueba (experimental)` o :guilabel:`Demo`, "
+"lo mismo sucede con :guilabel:`Test (experimental)`. Recomendamos crear una "
+"base de datos separada solo con fines de prueba."
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:140
 msgid ""
@@ -25770,6 +25783,12 @@ msgid ""
 "Any real production :guilabel:`Codice Destinario` of your customers will not"
 " be recognized as valid by the test service."
 msgstr ""
+"Cuando el modo :guilabel:`Prueba (Experimental)` está activo, todas las "
+"facturas enviadas *deben* tener un partner que utilice uno de los siguientes"
+" :guilabel:`Codice Destinatario` falsos proporcionados por la **Agenzia "
+"Delle Entrate**: `0803HR0` - `N8MIMM9` - `X9XXZ`. Cualquier "
+":guilabel:`Codice Destinario` de producción real perteneciente a sus "
+"clientes no será reconocido como válido por el servicio de prueba."
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rstNone
 msgid "Italy's electronic document invoicing options"
@@ -25790,18 +25809,26 @@ msgid ""
 " customer for the VAT but, instead, the customer pays the VAT *themselves* "
 "to their government. There are **two** main types:"
 msgstr ""
+"Muchas de las funciones de facturación electrónica se implementan utilizando"
+" el sistema tributario de Odoo, por lo que es muy importante que los "
+"impuestos se configuren de manera adecuada para generar facturas correctas y"
+" poder gestionar otros casos de uso de facturación. Por ejemplo, se "
+"necesitan configuraciones específicas para el tipo de impuestos de **cobro "
+"revertido**. En ese caso, el vendedor *no* le cobra el IVA al cliente, sino "
+"que el cliente paga el IVA *por su cuenta* a su gobierno. Hay **dos** tipos "
+"principales:"
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:159
 msgid ":ref:`external reverse charge <italy/external-reverse>`;"
-msgstr ""
+msgstr ":ref:`cobro revertido externo <italy/external-reverse>`;"
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:160
 msgid ":ref:`internal reverse charge  <italy/internal-reverse>`."
-msgstr ""
+msgstr ":ref:`cobro revertido interno  <italy/internal-reverse>`."
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:165
 msgid "External reverse charge"
-msgstr ""
+msgstr "Cobro revertido externo"
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:168
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:399
@@ -25822,7 +25849,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rstNone
 msgid "External reverse charge settings"
-msgstr ""
+msgstr "Ajustes de cobro revertido externo"
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:182
 msgid ""
@@ -25845,6 +25872,9 @@ msgid ""
 ":guilabel:`Taxes` field. You can find the following **additional info** by "
 "opening the **XML** file of the issued invoice:"
 msgstr ""
+"En su factura, seleccione el impuesto correspondiente que necesita en el "
+"campo :guilabel:`Impuestos`. Puede encontrar la siguiente **información "
+"adicional** abriendo el archivo **XML** de la factura emitida:"
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:194
 msgid ""
@@ -25875,6 +25905,8 @@ msgid ""
 ":guilabel:`Fiscal Code`: for foreign entities without an actual **Codice "
 "Fiscale**, any recognizable identifier is valid."
 msgstr ""
+":guilabel:`Código fiscal`: para entidades extranjeras sin un **Codice "
+"Fiscale** cualquier identificador reconocible es válido."
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:205
 msgid "Odoo does not support sending user-modified XML files."
@@ -25885,10 +25917,12 @@ msgid ""
 "For **invoices**, multiple configurations are technically identified by a "
 ":guilabel:`Tipo Documento` code:"
 msgstr ""
+"Para las **facturas**, las configuraciones múltiples están técnicamente "
+"identificadas por un código :guilabel:`Tipo Documento`:"
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:210
 msgid "`TD02` - Down payments;"
-msgstr ""
+msgstr "`TD02` - Anticipos;"
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:211
 msgid "`TDO7` - Simplified invoice;"
@@ -25912,7 +25946,7 @@ msgstr "`TD02`"
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:220
 msgid "Down payments."
-msgstr ""
+msgstr "Anticipos."
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:222
 msgid ""
@@ -25924,6 +25958,8 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:226
 msgid "Odoo exports moves as `TD02` if the following conditions are met:"
 msgstr ""
+"Odoo exporta los movimientos como `TD02` si se cumplen las siguientes "
+"condiciones:"
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:228
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:286
@@ -25935,6 +25971,9 @@ msgid ""
 "All invoice lines are related to **sales order lines** that have the flag "
 "`is_downpayment` set as `True`."
 msgstr ""
+"Todas las líneas de la factura están relacionadas con las **líneas de "
+"órdenes de venta** que tienen el indicador `is_downpayment` establecido como"
+" `True`."
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:232
 msgid "`TD07`, `TD08`, and `TD09`"
@@ -25942,7 +25981,7 @@ msgstr "`TD07`, `TD08` y `TD09`"
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:234
 msgid "Simplified invoices, and credit/debit notes."
-msgstr ""
+msgstr "Facturas simplificadas y notas de crédito y débito."
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:236
 msgid ""
@@ -25953,7 +25992,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:240
 msgid "For a **simplified** invoice to be established, it must include:"
-msgstr ""
+msgstr "Para establecer una factura **simplificada**, debe incluir:"
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:242
 msgid ""
@@ -25963,7 +26002,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:243
 msgid ":guilabel:`Invoice Date`: issue **date** of the invoice;"
-msgstr ""
+msgstr ":guilabel:`Fecha de factura`: **fecha** de emisión de la factura;"
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:244
 msgid ""
@@ -25989,11 +26028,12 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:251
 msgid "It is a **domestic** transaction (i.e., the partner is from Italy);"
-msgstr ""
+msgstr "Es una transacción **nacional** (es decir, el partner es de Italia);"
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:252
 msgid "The buyer's data is **insufficient** for a regular invoice;"
 msgstr ""
+"Los datos del comprador son **insuficientes** para una factura regular;"
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:253
 msgid ""
@@ -26028,6 +26068,10 @@ msgid ""
 "has to be issued at the latest within the **15th day** of the month "
 "following the delivery covered by the document."
 msgstr ""
+"La factura **diferida** es una factura **emitida después de** la venta de "
+"bienes o la prestación de servicios. Una **factura diferida** deberá "
+"emitirse a más tardar el **quinceavo día** del mes siguiente a la entrega "
+"cubierta por el documento."
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:270
 msgid ""
