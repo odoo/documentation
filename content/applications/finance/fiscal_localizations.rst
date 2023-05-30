@@ -108,7 +108,7 @@ available on Odoo.
 - Portugal - Accounting
 - Romania - Accounting
 - Saudi Arabia - Accounting
-- Singapore - Accounting
+- :doc:`Singapore - Accounting <fiscal_localizations/singapore>`
 - Slovak - Accounting
 - Slovenian - Accounting
 - South Africa - Accounting
@@ -148,6 +148,7 @@ available on Odoo.
    fiscal_localizations/mexico
    fiscal_localizations/netherlands
    fiscal_localizations/peru
+   fiscal_localizations/singapore
    fiscal_localizations/spain
    fiscal_localizations/switzerland
    fiscal_localizations/united_arab_emirates
