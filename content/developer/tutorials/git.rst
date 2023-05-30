@@ -52,7 +52,7 @@ You can open the file at ``odoo/release.py`` in a text editor (Windows users can
 In the introduction, we said git was also used to keep an history of all the changes done, you can consult this history using the ``git log`` command:
 
 .. code-block:: console
-   :caption: all commits (revisions) in the history for the ``odoo/release.py`` file, one per line
+   :caption: all commits (revisions) in the history of the 16.0 version for the ``odoo/release.py`` file, one per line
 
    $ git log --oneline odoo/release.py
    fa58938b3e24 [REL] 16.0 FINAL
@@ -118,7 +118,160 @@ Each commit is separated in three sections, some meta informations, the commit m
 
 Reading all those informations we learn that this commit was the one at released Odoo 16.0, from a beta version, to the final release.
 
-*at the time of writing there were ... commits in the history of the version 16*
+We can also study the history of other versions, like to list all commits that modified this ``odoo/release.py`` but this time inside of the 15.0 version
+
+.. code-block:: test
+   :caption: all commits (revisions) in the history of the 15.0 version for the ``odoo/release.py`` file, one per line
+
+   $ git log --oneline 15.0 odoo/release.py
+   b50796d51607 [REL] 15.0
+   15b4cc97f302 [REL] saas-14.5
+   c2179731372d [IMP] core: bump master release version to 14.5 alpha
+   6f9aa96c16a2 [IMP] core: bump master version to 14.4 alpha1
+   55986ffa21da [IMP] core: bump master version to 14.3 alpha1
+   8fd7232a0e7c [IMP] core: bump master version to 14.2 alpha1
+   ...
+   a84070f3ba49 [REL] 9.saas~13
+   9e64f9f95141 [REF] openerp: move `openerp` to `odoo`
+
+Again, using ``-p`` instead of ``--oneline`` to show all details:
+
+.. code-block:: console
+   :caption: meta informations of the commit b50796d51607…
+
+   $ git log -p 15.0 odoo/release.py
+   commit b50796d5160745d9f85992467d632d9ce2476697
+   Author: Christophe Monniez <moc@odoo.com>
+   Date:   Tue Oct 5 09:28:30 2021 +0200
+
+.. code-block:: text
+   :caption: free description (message) of the commit b50796d51607…
+
+       [REL] 15.0
+
+.. code-block:: udiff
+   :caption: lines changed (diff) by the commit b50796d51607…
+
+   diff --git a/odoo/release.py b/odoo/release.py
+   index 7c114b120700..546d1c49a12f 100644
+   --- a/odoo/release.py
+   +++ b/odoo/release.py
+   @@ -12,7 +12,7 @@ RELEASE_LEVELS_DISPLAY = {ALPHA: ALPHA,
+    # properly comparable using normal operarors, for example:
+    #  (6,1,0,'beta',0) < (6,1,0,'candidate',1) < (6,1,0,'candidate',2)
+    #  (6,1,0,'candidate',2) < (6,1,0,'final',0) < (6,1,2,'final',0)
+   -version_info = ('saas~14', 5, 0, FINAL, 0, '')
+   +version_info = (15, 0, 0, FINAL, 0, '')
+    version = '.'.join(str(s) for s in version_info[:2]) + RELEASE_LEVELS_DISPLAY[version_info[3]] + str(version_info[4] or '') + version_info[5]
+    series = serie = major_version = '.'.join(str(s) for s in version_info[:2])
+
+Reading all those informations, we learn the version saas-14.5 became known as 15.0. Please note that usually new saas releases are forked from master. The full release (e.g. 14.0, 15.0) are an exception as they are generally based on the lastest saas-x.5 release (itself forked from master).
+
+Show
+----
+
+A second way to study the history is to look at a precise commit. Say you are reading the *oneline* history and that one of the commit titles get your attention, that you want to print all the details of that specific commit. That's what ``show`` is for. Let's say you wonder how long your session is going to last, like how often <odoo.com> is going to ask you to type your password again because your session would had expired. Technically this is known as the "session lifetime" so you can search the history looking for those two words:
+
+.. code-block:: console
+   :caption: all commits in 16.0 mentionning session lifetime, one per line
+
+   $ git log --oneline --grep 'session lifetime'
+   02cbb81afbc4 [FIX] http: make session lifetime consistent and configurable
+   f61aa39ff119 [REF] core: HTTPocalypse (9) ORM initialization
+   17e6a69b9189 [IMP] core: use Savepoint object in TestCursor
+   1fbafa4e69ee [MERGE][IMP] im_livechat: random assignation of conversation
+
+The commit ``[FIX] http: make session lifetime consistent and configurable`` gets your attention, using ``show`` you can reveal all its secrets:
+
+.. code-block:: console
+   :caption: meta informations of the commit 02cbb81afbc4…
+
+   commit 02cbb81afbc4178f73c1a8d4efb063bb1599cece
+   Author: Olivier Dony <odo@odoo.com>
+   Date:   Tue May 30 12:59:42 2023 +0200
+
+.. code-block:: text
+   :caption: free description (message) of the commit 02cbb81afbc4…
+
+       [FIX] http: make session lifetime consistent and configurable
+       
+       Before 16.0 and https://github.com/odoo/odoo/pull/78857 the session
+       cookie duration was set to 3 months, but the server-side garbage
+       collection of inactive session was reaping them after 7 days of
+       inactivity. The cookie lifetime was essentially superseded by the
+       server-side GC.
+       
+       After https://github.com/odoo/odoo/pull/78857 these limits were made
+       consistent with each other, but the lifetime value was kept at 3 months,
+       which is a bit too long as a default.
+       
+       This commit changes the default SESSION_LIFETIME back to 7 days for both
+       limits.
+       
+       In addition, since the server-side GC is now implemented by a
+       database-specific cron job, this commit introduces an optional system
+       parameter `sessions.max_inactivity_seconds` that can be set to override
+       the default server-side GC threshold, to make it shorter.
+       
+       Note 1: the ICP does not modify the cookie lifetime which will remain set
+       to the default 7 days. This means normal browser sessions won't stay
+       alive for longer than 7 days of inactivity. So `sessions.max_inactivity_seconds`
+       can't be effectively set to a longer expiration time.
+       This seems like a reasonably safe default.
+       
+       Note 2: the session GC happens during the execution of the autovacuum
+       cron job ("Base: Auto-vacuum internal data") which is scheduled once per
+       day by default. When setting a small `sessions.max_inactivity_seconds`
+       value, it may be necessary to increase the frequency of that cron job
+       accordingly.
+
+.. code-block:: udiff
+   :caption: lines changed (diff) by the commit 02cbb81afbc4…
+
+   diff --git a/odoo/addons/base/models/ir_http.py b/odoo/addons/base/models/ir_http.py
+   index 951459bbc4be..a35e0b5afa7c 100644
+   --- a/odoo/addons/base/models/ir_http.py
+   +++ b/odoo/addons/base/models/ir_http.py
+   @@ -216,7 +216,9 @@ class IrHttp(models.AbstractModel):
+    
+        @api.autovacuum
+        def _gc_sessions(self):
+   -        http.root.session_store.vacuum()
+   +        ICP = self.env["ir.config_parameter"]
+   +        max_lifetime = int(ICP.get_param('sessions.max_inactivity_seconds', http.SESSION_LIFETIME))
+   +        http.root.session_store.vacuum(max_lifetime=max_lifetime)
+    
+        @api.model
+        def get_translations_for_webclient(self, modules, lang):
+   diff --git a/odoo/http.py b/odoo/http.py
+   index aa7369e9a5f2..6b3f3fb1ce2d 100644
+   --- a/odoo/http.py
+   +++ b/odoo/http.py
+   @@ -261,9 +261,10 @@ if parse_version(werkzeug.__version__) >= parse_version('2.0.2'):
+        # let's add the websocket key only when appropriate.
+        ROUTING_KEYS.add('websocket')
+    
+   -# The duration of a user session before it is considered expired,
+   -# three months.
+   -SESSION_LIFETIME = 60 * 60 * 24 * 90
+   +# The default duration of a user session cookie. Inactive sessions are reaped
+   +# server-side as well with a threshold that can be set via an optional
+   +# config parameter `sessions.max_inactivity_seconds` (default: SESSION_LIFETIME)
+   +SESSION_LIFETIME = 60 * 60 * 24 * 7
+    
+    # The cache duration for static content from the filesystem, one week.
+    STATIC_CACHE = 60 * 60 * 24 * 7
+   @@ -858,8 +859,8 @@ class FilesystemSessionStore(sessions.FilesystemSessionStore):
+            session.should_rotate = False
+            self.save(session)
+    
+   -    def vacuum(self):
+   -        threshold = time.time() - SESSION_LIFETIME
+   +    def vacuum(self, max_lifetime=SESSION_LIFETIME):
+   +        threshold = time.time() - max_lifetime
+            for fname in glob.iglob(os.path.join(root.session_store.path, '*', '*')):
+                path = os.path.join(root.session_store.path, fname)
+                with contextlib.suppress(OSError):
 
 
 Modify files
