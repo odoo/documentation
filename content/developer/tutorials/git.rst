@@ -163,10 +163,10 @@ Show
 A second way to study the history is to look at a precise commit. Say you are reading the *oneline* history and that one of the commit titles get your attention, that you want to print all the details of that specific commit. That's what ``show`` is for. Let's say you wonder how long your session is going to last, like how often <odoo.com> is going to ask you to type your password again because your session would had expired. Technically this is known as the "session lifetime" so you can search the history looking for those two words:
 
 .. code-block:: console
-   :caption: all commits in 16.0 mentionning session lifetime, one per line
+   :caption: all commits in 16.0 mentionning *session* and *lifetime*, one per line
 
-   $ git log --oneline --grep 'session lifetime'
-   02cbb81afbc4 [FIX] http: make session lifetime consistent and configurable
+   $ git log --oneline --grep 'session' --grep 'lifetime' --all-match
+   05ff9a2db32c [FIX] http: make session lifetime consistent and configurable
    f61aa39ff119 [REF] core: HTTPocalypse (9) ORM initialization
    17e6a69b9189 [IMP] core: use Savepoint object in TestCursor
    1fbafa4e69ee [MERGE][IMP] im_livechat: random assignation of conversation
@@ -174,95 +174,104 @@ A second way to study the history is to look at a precise commit. Say you are re
 The commit ``[FIX] http: make session lifetime consistent and configurable`` gets your attention, using ``show`` you can reveal all its secrets:
 
 .. code-block:: console
-   :caption: meta informations of the commit 02cbb81afbc4…
+   
+   $ git show 05ff9a2db32c
 
-   commit 02cbb81afbc4178f73c1a8d4efb063bb1599cece
-   Author: Olivier Dony <odo@odoo.com>
-   Date:   Tue May 30 12:59:42 2023 +0200
+.. tabs::
 
-.. code-block:: text
-   :caption: free description (message) of the commit 02cbb81afbc4…
+   .. group-tab:: Headers & Trailers
 
-       [FIX] http: make session lifetime consistent and configurable
-       
-       Before 16.0 and https://github.com/odoo/odoo/pull/78857 the session
-       cookie duration was set to 3 months, but the server-side garbage
-       collection of inactive session was reaping them after 7 days of
-       inactivity. The cookie lifetime was essentially superseded by the
-       server-side GC.
-       
-       After https://github.com/odoo/odoo/pull/78857 these limits were made
-       consistent with each other, but the lifetime value was kept at 3 months,
-       which is a bit too long as a default.
-       
-       This commit changes the default SESSION_LIFETIME back to 7 days for both
-       limits.
-       
-       In addition, since the server-side GC is now implemented by a
-       database-specific cron job, this commit introduces an optional system
-       parameter `sessions.max_inactivity_seconds` that can be set to override
-       the default server-side GC threshold, to make it shorter.
-       
-       Note 1: the ICP does not modify the cookie lifetime which will remain set
-       to the default 7 days. This means normal browser sessions won't stay
-       alive for longer than 7 days of inactivity. So `sessions.max_inactivity_seconds`
-       can't be effectively set to a longer expiration time.
-       This seems like a reasonably safe default.
-       
-       Note 2: the session GC happens during the execution of the autovacuum
-       cron job ("Base: Auto-vacuum internal data") which is scheduled once per
-       day by default. When setting a small `sessions.max_inactivity_seconds`
-       value, it may be necessary to increase the frequency of that cron job
-       accordingly.
+      commit
+         05ff9a2db32c2fb1afa107ac005423218f452290
 
-.. code-block:: udiff
-   :caption: lines changed (diff) by the commit 02cbb81afbc4…
+      Author
+         Olivier Dony <odo@odoo.com>
+      
+      Date
+         Tue May 30 10:59:42 2023 +0000
 
-   diff --git a/odoo/addons/base/models/ir_http.py b/odoo/addons/base/models/ir_http.py
-   index 951459bbc4be..a35e0b5afa7c 100644
-   --- a/odoo/addons/base/models/ir_http.py
-   +++ b/odoo/addons/base/models/ir_http.py
-   @@ -216,7 +216,9 @@ class IrHttp(models.AbstractModel):
-    
-        @api.autovacuum
-        def _gc_sessions(self):
-   -        http.root.session_store.vacuum()
-   +        ICP = self.env["ir.config_parameter"]
-   +        max_lifetime = int(ICP.get_param('sessions.max_inactivity_seconds', http.SESSION_LIFETIME))
-   +        http.root.session_store.vacuum(max_lifetime=max_lifetime)
-    
-        @api.model
-        def get_translations_for_webclient(self, modules, lang):
-   diff --git a/odoo/http.py b/odoo/http.py
-   index aa7369e9a5f2..6b3f3fb1ce2d 100644
-   --- a/odoo/http.py
-   +++ b/odoo/http.py
-   @@ -261,9 +261,10 @@ if parse_version(werkzeug.__version__) >= parse_version('2.0.2'):
-        # let's add the websocket key only when appropriate.
-        ROUTING_KEYS.add('websocket')
-    
-   -# The duration of a user session before it is considered expired,
-   -# three months.
-   -SESSION_LIFETIME = 60 * 60 * 24 * 90
-   +# The default duration of a user session cookie. Inactive sessions are reaped
-   +# server-side as well with a threshold that can be set via an optional
-   +# config parameter `sessions.max_inactivity_seconds` (default: SESSION_LIFETIME)
-   +SESSION_LIFETIME = 60 * 60 * 24 * 7
-    
-    # The cache duration for static content from the filesystem, one week.
-    STATIC_CACHE = 60 * 60 * 24 * 7
-   @@ -858,8 +859,8 @@ class FilesystemSessionStore(sessions.FilesystemSessionStore):
-            session.should_rotate = False
-            self.save(session)
-    
-   -    def vacuum(self):
-   -        threshold = time.time() - SESSION_LIFETIME
-   +    def vacuum(self, max_lifetime=SESSION_LIFETIME):
-   +        threshold = time.time() - max_lifetime
-            for fname in glob.iglob(os.path.join(root.session_store.path, '*', '*')):
-                path = os.path.join(root.session_store.path, fname)
-                with contextlib.suppress(OSError):
+      closes
+         odoo/odoo#122888
+      
+      Signed-off-by
+         Julien Castiaux (juc) <juc@odoo.com>
 
+   .. group-tab:: Message
+
+      **[FIX] http: make session lifetime consistent and configurable**
+
+      Before 16.0 and `HTTPocalypse <HTTPocalypse_>`_ the session cookie duration was set to 3 months, but the server-side garbage collection of inactive session was reaping them after 7 days of inactivity. The cookie lifetime was essentially superseded by the server-side GC.
+
+      After `HTTPocalypse <HTTPocalypse_>`_ these limits were made consistent with each other, but the lifetime value was kept at 3 months, which is a bit too long as a default.
+
+      This commit changes the default ``SESSION_LIFETIME`` back to 7 days for both limits.
+
+      In addition, since the server-side GC is now implemented by a database-specific cron job, this commit introduces an optional system parameter ``sessions.max_inactivity_seconds`` that can be set to override the default server-side GC threshold, to make it shorter.
+
+      Note 1: the ICP does not modify the cookie lifetime which will remain set to the default 7 days. This means normal browser sessions won't stay alive for longer than 7 days of inactivity. So ``sessions.max_inactivity_seconds`` can't be effectively set to a longer expiration time. This seems like a reasonably safe default.
+
+      Note 2: the session GC happens during the execution of the autovacuum cron job ("Base: Auto-vacuum internal data") which is scheduled once per day by default. When setting a small ``sessions.max_inactivity_seconds`` value, it may be necessary to increase the frequency of that cron job accordingly.
+
+   .. group-tab:: Diff
+
+      .. code-block:: udiff
+
+         diff --git a/odoo/addons/base/models/ir_http.py b/odoo/addons/base/models/ir_http.py
+         index 951459bbc4be..a35e0b5afa7c 100644
+         --- a/odoo/addons/base/models/ir_http.py
+         +++ b/odoo/addons/base/models/ir_http.py
+         @@ -216,7 +216,9 @@ class IrHttp(models.AbstractModel):
+          
+              @api.autovacuum
+              def _gc_sessions(self):
+         -        http.root.session_store.vacuum()
+         +        ICP = self.env["ir.config_parameter"]
+         +        max_lifetime = int(ICP.get_param('sessions.max_inactivity_seconds', http.SESSION_LIFETIME))
+         +        http.root.session_store.vacuum(max_lifetime=max_lifetime)
+          
+              @api.model
+              def get_translations_for_webclient(self, modules, lang):
+         diff --git a/odoo/http.py b/odoo/http.py
+         index aa7369e9a5f2..6b3f3fb1ce2d 100644
+         --- a/odoo/http.py
+         +++ b/odoo/http.py
+         @@ -261,9 +261,10 @@ if parse_version(werkzeug.__version__) >= parse_version('2.0.2'):
+              # let's add the websocket key only when appropriate.
+              ROUTING_KEYS.add('websocket')
+          
+         -# The duration of a user session before it is considered expired,
+         -# three months.
+         -SESSION_LIFETIME = 60 * 60 * 24 * 90
+         +# The default duration of a user session cookie. Inactive sessions are reaped
+         +# server-side as well with a threshold that can be set via an optional
+         +# config parameter `sessions.max_inactivity_seconds` (default: SESSION_LIFETIME)
+         +SESSION_LIFETIME = 60 * 60 * 24 * 7
+          
+          # The cache duration for static content from the filesystem, one week.
+          STATIC_CACHE = 60 * 60 * 24 * 7
+         @@ -858,8 +859,8 @@ class FilesystemSessionStore(sessions.FilesystemSessionStore):
+                  session.should_rotate = False
+                  self.save(session)
+          
+         -    def vacuum(self):
+         -        threshold = time.time() - SESSION_LIFETIME
+         +    def vacuum(self, max_lifetime=SESSION_LIFETIME):
+         +        threshold = time.time() - max_lifetime
+                  for fname in glob.iglob(os.path.join(root.session_store.path, '*', '*')):
+                      path = os.path.join(root.session_store.path, fname)
+                      with contextlib.suppress(OSError):
+
+.. _HTTPocalypse: https://github.com/odoo/odoo/pull/78857
+
+If you have had a prior experience with Git, you might be surprised to read such a lenghty commit message. It is the company policy to thoroughly describe the context of every change and to explain why they are necessary. This way we make sure that all contributors can understand the scope and rationnals of every feature and give feedback even if they were not part of the original design/specification of said feature. This is quite important for an open-source software company.
+
+Contrary to ``git log`` that can list all commits that modified to a single file, ``git show`` lists all modifications over all the files that a single commit modified. In this example we see that two files were modified: ``odoo/addons/base/models/ir_http.py`` and ``odoo/http.py``. It is not relevant to this tutorial to understand what actually changed but you can give it a try.
+
+
+Blame
+-----
+
+*todo*
 
 Modify files
 ============
