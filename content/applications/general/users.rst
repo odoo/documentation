@@ -16,4 +16,4 @@ can be applied. Users and access rights can be added and changed at any point.
    users/access_rights
    users/companies
    users/portal
-   users/delete_account
+   users/odoo_account
