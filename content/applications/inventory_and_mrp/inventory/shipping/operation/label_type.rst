@@ -13,15 +13,15 @@ Configuration
 =============
 
 In the :menuselection:`Inventory` module, go to :menuselection:`Configuration --> Delivery -->
-Shipping Methods.` Choose a delivery method and click :guilabel:`Edit`. For the following example,
-*FedEx International* will be used.
+Shipping Methods.` Click on a delivery method to choose it. For the following example, *FedEx
+International* will be used.
 
 .. image:: label_type/shipping-options.png
    :align: center
    :alt: Different shipping methods.
 
 In the :guilabel:`Configuration` tab, under :guilabel:`Label Type`, choose one of the label types
-available. The availability will vary depending on the carrier. :guilabel:`Save` the changes.
+available. The availability varies depending on the carrier.
 
 .. image:: label_type/label-type-dropdown.png
    :align: center
