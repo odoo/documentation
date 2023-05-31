@@ -29,11 +29,6 @@ Enable the Intrastat report by going to :menuselection:`Accounting --> Configura
 Under the :guilabel:`Customer Invoices` section, tick :guilabel:`Intrastat` and then
 :guilabel:`Save`.
 
-.. important::
-   If your Odoo database was created before **January 13, 2022**, first :ref:`upgrade
-   <general/upgrade>` the `account_intrastat` module to add the new transaction codes and
-   :ref:`install <general/install>` the `account_intrastat_expiry` module to archive the old codes.
-
 .. _intrastat/default-transaction-codes:
 
 Default transaction codes: invoice and refund
@@ -43,16 +38,6 @@ You can set a default :ref:`transaction code <intrastat/transaction-code>` for a
 invoice and refund transactions. Under :menuselection:`Accounting --> Configuration --> Settings`,
 select a :guilabel:`Default invoice transaction code` and/or a :guilabel:`Default refund transaction
 code` and then :guilabel:`Save`. The code will be set automatically on all respective invoice lines.
-
-.. _intrastat/default-incoterm:
-
-Default Incoterm rule
----------------------
-
-You can set a default :ref:`Incoterm rule <intrastat/incoterm>` to automatically populate the
-Incoterm field on all newly created invoices and bills. Under :menuselection:`Accounting -->
-Configuration --> Settings`, select the company's :guilabel:`Default Incoterm` and then
-:guilabel:`Save`.
 
 .. _intrastat/region-code:
 
@@ -143,22 +128,6 @@ to select a transaction code.
    `National Bank of Belgium - Intrastat: Nature of transactions from January 2022
    <https://www.nbb.be/doc/dd/onegate/data/new_natures_of_transaction_2022_en.pdf>`_
 
-.. _intrastat/incoterm:
-
-Incoterm rule
--------------
-
-Incoterms are 11 internationally recognized rules defining the responsibilities of sellers and
-buyers, specifying who is responsible for paying and managing the shipment, insurance,
-documentation, customs clearance, and other logistical activities. A :ref:`default Incoterm
-<intrastat/default-incoterm>` can be set for all invoices and bills.
-
-To set the Incoterm manually, create an invoice or a bill, click the :guilabel:`Other Info` tab, and
-select the :guilabel:`Incoterm`.
-
-.. seealso::
-   `Wikipedia: Incoterms <https://en.wikipedia.org/wiki/Incoterms>`_
-
 .. _intrastat/partner-country:
 
 Partner country
@@ -223,7 +192,7 @@ Each report line refers to a single invoice line and contains the following info
 - :ref:`Origin Country <intrastat/origin-country>`;
 - :ref:`Partner VAT <intrastat/partner>`;
 - :ref:`Transport Code <intrastat/transport-code>`;
-- :ref:`Incoterm Code <intrastat/incoterm>`;
+- :doc:`Incoterm Code <../customer_invoices/incoterms>`;
 - :ref:`Weight <intrastat/quantity>`;
 - :ref:`Supplementary Units <intrastat/quantity>`; and
 - :ref:`Value <intrastat/value>`, which is always expressed in euros even if the original invoice or
