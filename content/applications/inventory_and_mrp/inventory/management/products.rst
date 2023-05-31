@@ -11,3 +11,4 @@ Products
    products/uom
    products/usage
    products/strategies
+   products/reordering_rules
