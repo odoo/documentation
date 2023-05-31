@@ -33,11 +33,11 @@ Before doing anything complicated, we'll start with the command that show "what'
 
 If you haven't done anything (beside changing the configuration), this is what the status should looks like. 
 
+The first line reads "On branch 16.0" (it is ok if it reports another version), it means that you are looking at the state of the Odoo source code as it is for the version 16. The second line reads "Your branch is up to date with 'origin/16.0'.", it means that your local copy of Odoo 16.0 is up to date with the remote copy of Odoo 16.0 on Github, in this context ``origin`` refers to https://github.com/odoo/odoo. The third line reads "nothing to commit, working tree clean", it means that you haven't modified any file.
+
 .. warning::
 
    Depending on your system configuration, the message may have been printed in French or in another language than English. We suggest you `configure <https://stackoverflow.com/a/10872202>`_ git to always print the messages in English, at least for this tutorial.
-
-The first line reads "On branch 16.0" (it is ok if it reports another version), it means that you are looking at the state of the Odoo source code as it is for the version 16. The second line reads "Your branch is up to date with 'origin/16.0'.", it means that your local copy of Odoo 16.0 is up to date with the remote copy of Odoo 16.0 on Github, in this context ``origin`` refers to https://github.com/odoo/odoo. The third line reads "nothing to commit, working tree clean", it means that you haven't modified any file.
 
 Log
 ---
@@ -54,7 +54,7 @@ In the introduction, we said git was also used to keep an history of all the cha
 .. code-block:: console
    :caption: all commits (revisions) in the history of the 16.0 version for the ``odoo/release.py`` file, one per line
 
-   $ git log --oneline odoo/release.py
+   $ git log 16.0 --oneline odoo/release.py
    fa58938b3e24 [REL] 16.0 FINAL
    1c0d46b68b1e [FIX] release: change version level to beta
    2636bea44775 [REL] 16.0
@@ -78,7 +78,7 @@ Using ``-p`` instead of ``--oneline``, we can show each commit with all its deta
 .. code-block:: console
    :caption: meta informations of the commit fa58938b3e24…
 
-   $ git log -p odoo/release.py
+   $ git log 16.0 -p odoo/release.py
    commit fa58938b3e2477f0db22cc31d4f5e6b5024f478b
    Author: Christophe Monniez <moc@odoo.com>
    Date:   Tue Oct 11 14:01:40 2022 +0000
@@ -95,20 +95,10 @@ Using ``-p`` instead of ``--oneline``, we can show each commit with all its deta
 .. code-block:: udiff
    :caption: lines changed (diff) by the commit fa58938b3e24…
 
-   diff --git a/odoo/release.py b/odoo/release.py
-   index c7e8e067a231..2a8ad3d36b86 100644
-   --- a/odoo/release.py
-   +++ b/odoo/release.py
-   @@ -12,7 +12,7 @@ RELEASE_LEVELS_DISPLAY = {ALPHA: ALPHA,
-    # properly comparable using normal operators, for example:
-    #  (6,1,0,'beta',0) < (6,1,0,'candidate',1) < (6,1,0,'candidate',2)
-    #  (6,1,0,'candidate',2) < (6,1,0,'final',0) < (6,1,2,'final',0)
    -version_info = (16, 0, 0, BETA, 0, '')
    +version_info = (16, 0, 0, FINAL, 0, '')
-    version = '.'.join(str(s) for s in version_info[:2]) + RELEASE_LEVELS_DISPLAY[version_info[3]] + str(version_info[4] or '') + version_info[5]
-    series = serie = major_version = '.'.join(str(s) for s in version_info[:2])
 
-We only show here the first (most recent) commit that changed of file ``odoo/release.py`` in the history of the 16.0 branche. In your own terminal there is a pager that shows you all the commits that modified this file, you can quit it by pressing ``q``.
+We only show here the first (most recent) commit that changed of file ``odoo/release.py`` in the history of the 16.0 branch. In your own terminal there is a pager that shows you all the commits that modified this file, you can quit it by pressing ``q``.
 
 Each commit is separated in three sections, some meta informations, the commit message and the commit *diff*:
 
@@ -123,7 +113,7 @@ We can also study the history of other versions, like to list all commits that m
 .. code-block:: test
    :caption: all commits (revisions) in the history of the 15.0 version for the ``odoo/release.py`` file, one per line
 
-   $ git log --oneline 15.0 odoo/release.py
+   $ git log 15.0 --oneline odoo/release.py
    b50796d51607 [REL] 15.0
    15b4cc97f302 [REL] saas-14.5
    c2179731372d [IMP] core: bump master release version to 14.5 alpha
