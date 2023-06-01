@@ -2,8 +2,8 @@
 Colombia (ES)
 =============
 
-Introducción
-============
+Introducción!
+=============
 
 La Facturación Electrónica para Colombia está disponible en Odoo 12 y
 requiere los siguientes Módulos:
@@ -14,6 +14,7 @@ requiere los siguientes Módulos:
 
    - Plan Contable
    - Impuestos
+   - Testing
    - Retenciones
    - Tipos de Documentos de Identificación
 
