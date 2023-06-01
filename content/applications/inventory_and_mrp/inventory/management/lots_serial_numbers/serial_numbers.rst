@@ -92,9 +92,9 @@ serial number.
 Manage serial numbers for shipping and receiving
 ================================================
 
-Serial numbers can be assigned for both **incoming** and **outgoing** goods. For incoming goods, lot
-numbers are assigned directly on the purchase order form. For outgoing goods, lot numbers are
-assigned directly on the sales order form.
+Serial numbers can be assigned for both **incoming** and **outgoing** goods. For incoming goods,
+serial numbers are assigned directly on the purchase order form. For outgoing goods, serial numbers
+are assigned directly on the sales order form.
 
 Manage serial numbers on receipts
 ---------------------------------
