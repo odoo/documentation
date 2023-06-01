@@ -90,11 +90,17 @@ menu (e.g. :guilabel:`Standard`, :guilabel:`Average Cost (AVCO)`, or :guilabel:`
    </applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation>`
 
 .. note::
-   When choosing :guilabel:`Average Cost (AVCO)` as the :guilabel:`Costing Method`, the numerical
-   value in the :guilabel:`Cost` field for products in the respective product category will no
-   longer be editable, and will appear grayed out. The :guilabel:`Cost` amount will instead
-   automatically update based on the average purchase price both of inventory on hand and the costs
-   accumulated from validated purchase orders.
+   When choosing :guilabel:`Average Cost (AVCO)` as the :guilabel:`Costing Method`, changing the
+   numerical value in the :guilabel:`Cost` field for products in the respective product category
+   creates a new record in the *Inventory Valuation* report to adjust the value of the product. The
+   :guilabel:`Cost` amount will then automatically update based on the average purchase price both
+   of inventory on hand and the costs accumulated from validated purchase orders.
+
+When the :guilabel:`Costing Method` is changed, products already in stock that were using the
+:guilabel:`Standard` costing method **do not** change value; rather, the existing units keep their
+value, and any product moves from then on affect the average cost, and the cost of the product will
+change. If the value in the :guilabel:`Cost` field on a product form is changed manually, Odoo will
+generate a corresponding record in the *Inventory Valuation* report.
 
 On the same screen, the :guilabel:`Account Stock Properties` fields will appear, as they are now
 required fields given the change to automated inventory valuation. These accounts are defined as
