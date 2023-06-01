@@ -263,15 +263,39 @@ The commit ``[FIX] http: make session lifetime consistent and configurable`` get
 
 .. _HTTPocalypse: https://github.com/odoo/odoo/pull/78857
 
-If you have had a prior experience with Git, you might be surprised to read such a lenghty commit message. It is the company policy to thoroughly describe the context of every change and to explain why they are necessary. This way we make sure that all contributors can understand the scope and rationnals of every feature and give feedback even if they were not part of the original design/specification of said feature. This is quite important for an open-source software company.
+If you have had a prior experience with Git, you might be surprised to read such a lenghty commit message. It is the company policy to thoroughly describe the context of every change and to explain why they are necessary. This way we make sure that all contributors can understand the scope and rationnals of every feature and give feedback even if they were not part of the original design/specification of that feature. This is quite important for an open-source software company with hundreds external contributors
 
 Contrary to ``git log`` that can list all commits that modified to a single file, ``git show`` lists all modifications over all the files that a single commit modified. In this example we see that two files were modified: ``odoo/addons/base/models/ir_http.py`` and ``odoo/http.py``. It is not relevant to this tutorial to understand what actually changed but you can give it a try.
 
+Understand the branching model
+==============================
 
-Blame
------
+The last section was about discovering git, discovering what the history and commits are for, it was also about understanding that multiple versions co-exist. This section is about going deeper in this notion of co-existing versions, called *branches* in git jargon. What's the difference between the various branches out there, namely the differences between *master*, stable and development branches.
 
-*todo*
+Stable branches
+---------------
+
+Stable branches are branches that are deployed on Odoo Online for customers to use. Those branches are labelled *stable* because developers try to not add new features and instead focus on fixing bugs as they are discovered by customers. 
+
+.. note::
+
+   Since its release in late 2020, there have been more than 6.000 new commits on the 14.0 branch, of them 84% are bug fixes and 7% are feature improvement.
+
+   .. image:: git/plot-commits-14-0.png
+      :alt: Plot of the various [IMP] and [FIX] commits in the 14.0 branch indexed per month in the period Sept 2022 - March 2023
+
+
+Master branch
+-------------
+
+.. note::
+
+   Since the release of the 14.0, there have been more than 18.000 new commits on the master branch,
+   of them 58% are bug fixes, 32% are features and 5% are refactors.
+
+   .. image:: git/plot-commits-master.png
+      :alt: Plot of the various [IMP] and [FIX] commits in the master branch indexed per month in the period Sept 2022 - March 2023
+
 
 Modify files
 ============
