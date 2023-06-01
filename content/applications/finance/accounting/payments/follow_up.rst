@@ -4,8 +4,8 @@ Follow-up on invoices
 
 A follow-up message can be sent to customers when a payment is overdue. Odoo helps you identify late
 payments and allows you to schedule and send the appropriate reminders using **follow-up actions**
-that trigger automatically one or more actions according to the number of overdue days. You can send
-your follow-ups via different means such as email, post, or SMS.
+that automatically trigger one or more actions according to the number of overdue days. You can send
+your follow-ups via different means, such as email, post, or SMS.
 
 .. seealso::
    - `Odoo Tutorials: Payment Follow-up <https://www.odoo.com/slides/slide/payment-follow-up-1682>`_
@@ -48,7 +48,7 @@ options:
    - **%(company_name)s**: User's company name.
 
 .. tip::
-   To send a reminder before the actual due date is reached, set a negative number of due days.
+   Set a negative number of days to send a reminder before the actual due date.
 
 Follow-up reports
 =================
@@ -66,16 +66,15 @@ It is up to you to decide how to remind your customer. You can select :guilabel:
 :guilabel:`Done` to view the next follow-up that needs your attention.
 
 .. note::
-   - The contact information available on the invoice or on the contact form is used to send the
-     reminder.
+   - The contact information on the invoice or the contact form is used to send the reminder.
    - When the reminder is sent, it is documented in the chatter of the invoice.
    - If it is not the right time for a reminder, you can specify the :guilabel:`Next Reminder Date`
      and click on :guilabel:`Remind me later`. You will get the next report according to the next
      reminder date set on the statement.
 
 .. tip::
-   Reconcile your bank statements right before launching your follow-up process to avoid sending a
-   reminder to a customer that has already paid you.
+   Reconcile all bank statements right before launching the follow-up process to avoid sending a
+   reminder to a customer that has already paid.
 
 Debtor's trust level
 --------------------
