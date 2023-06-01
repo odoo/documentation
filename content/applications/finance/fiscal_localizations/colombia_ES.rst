@@ -16,6 +16,7 @@ requiere los siguientes Módulos:
    - Impuestos
    - Retenciones
    - Tipos de Documentos de Identificación
+   - test and
 
 #. **l10n_co_edi**: Este módulo incluye todos los campos adicionales que son
    requeridos para la Integración entre Carvajal y la generación de la
