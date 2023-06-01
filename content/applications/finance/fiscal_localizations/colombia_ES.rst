@@ -1,5 +1,5 @@
 =============
-Colombia (ES)
+Colombia (ESPANIOL)
 =============
 
 Introducción
