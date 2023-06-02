@@ -271,8 +271,8 @@ Enable one of the header default templates.
 .. code-block:: xml
    :caption: ``/website_airproof/data/presets.xml``
 
-   <record id="website.template_header_contact" model="ir.ui.view">
-      <field name="active" eval="True"/>
+   <record id="website.template_header_default" model="ir.ui.view">
+      <field name="active" eval="False"/>
    </record>
 
 Custom
@@ -421,6 +421,17 @@ Call to action
       <t t-set="_div_classes" t-valuef="..."/>
    </t>
 
+Cart link
+~~~~~~~~~
+
+.. code-block:: xml
+
+   <t t-call="website_sale.header_cart_link">
+      <t t-set="_icon" t-value="True"/>
+      <t t-set="_item_class" t-value="'nav-item mx-lg-3'"/>
+      <t t-set="_link_class" t-value="'nav-link'"/>
+   </t>
+
 Navbar toggler
 ~~~~~~~~~~~~~~
 
@@ -443,42 +454,46 @@ or create your own template.
 Standard
 --------
 
-Enable one of the default footer templates. Don't forget that you may need to disable the active
-footer template first.
+Enable one of the default footer templates.
+
+.. important::
+   Don't forget that you may need to disable the active footer template first.
 
 .. code-block:: scss
    :caption: ``/website_airproof/static/src/scss/primary_variables.scss``
 
    $o-website-values-palettes: (
       (
-         'header-template': 'Contact',
+         'footer-template': 'Contact',
       ),
    );
 
 .. code-block:: xml
    :caption: ``/website_airproof/data/presets.xml``
 
-   <record id="website.template_header_contact" model="ir.ui.view">
-      <field name="active" eval="True"/>
+   <record id="website.footer_custom" model="ir.ui.view">
+      <field name="active" eval="False"/>
    </record>
 
 Custom
 ------
 
-Create your own template and add it to the list. Don't forget that you may need to disable the
-active footer template first.
+Create your own template and add it to the list.
+
+.. important::
+   Don't forget that you may need to disable the active footer template first.
 
 **Option**
 
 .. code-block:: xml
    :caption: ``/website_airproof/data/presets.xml``
 
-   <template id="template_header_opt" inherit_id="website.snippet_options" name="Footer Template - Option">
+   <template id="footer_opt" inherit_id="website.snippet_options" name="Footer Template - Option">
       <xpath expr="//we-select[@data-variable='footer-template']" position="inside">
          <we-button title="airproof"
             data-customize-website-views="website_airproof.footer"
             data-customize-website-variable="'airproof'"
-            data-img="/website_airproof/static/src/img/wbuilder/template_header_opt.svg"/>
+            data-img="/website_airproof/static/src/img/wbuilder/template_footer_opt.svg"/>
       </xpath>
    </template>
 
