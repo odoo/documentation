@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-30 12:32+0000\n"
+"POT-Creation-Date: 2023-06-02 08:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -438,7 +438,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:78
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:25
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:6
-#: ../../content/applications/finance/payment_providers.rst:303
+#: ../../content/applications/finance/payment_providers.rst:302
 #: ../../content/applications/finance/payment_providers/adyen.rst:17
 #: ../../content/applications/finance/payment_providers/alipay.rst:12
 #: ../../content/applications/finance/payment_providers/authorize.rst:9
@@ -446,6 +446,7 @@ msgstr ""
 #: ../../content/applications/finance/payment_providers/mollie.rst:8
 #: ../../content/applications/finance/payment_providers/paypal.rst:122
 #: ../../content/applications/finance/payment_providers/sips.rst:9
+#: ../../content/applications/finance/payment_providers/wire_transfer.rst:30
 msgid "Configuration"
 msgstr ""
 
@@ -21496,138 +21497,138 @@ msgid "When selected, Odoo displays your payment information with a payment refe
 msgstr ""
 
 #: ../../content/applications/finance/payment_providers.rst:0
-msgid "SEPA Direct Debit"
+msgid ":doc:`SEPA Direct Debit <../finance/accounting/payments/batch_sdd>`"
 msgstr ""
 
 #: ../../content/applications/finance/payment_providers.rst:0
-msgid "Your customers can sign a SEPA Direct Debit mandate online and get their bank account charged directly. :doc:`Click here <../finance/accounting/payments/batch_sdd>` for more information about this payment method."
+msgid "Your customers can sign a SEPA Direct Debit mandate online and get their bank account charged directly."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:189
+#: ../../content/applications/finance/payment_providers.rst:188
 msgid "Additional features"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:191
+#: ../../content/applications/finance/payment_providers.rst:190
 msgid "Some payment providers support additional features for the payment flow. Refer to the :ref:`table above <payment_providers/online_providers>` to check if your payment provider supports these features."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:198
+#: ../../content/applications/finance/payment_providers.rst:197
 msgid "Tokenization"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:200
+#: ../../content/applications/finance/payment_providers.rst:199
 msgid "If your payment provider supports this feature, customers can choose to save their card for later. A **payment token** is created in Odoo and can be used as a payment method for subsequent payments without having to enter the card details again. This is particularly useful for the eCommerce conversion rate and for subscriptions that use recurring payments."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:205
+#: ../../content/applications/finance/payment_providers.rst:204
 msgid "Enable this feature by navigating to the :guilabel:`Configuration` tab from your payment provider and by ticking the :guilabel:`Allow Saving Payment Methods` checkbox."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:209
+#: ../../content/applications/finance/payment_providers.rst:208
 msgid "You remain fully PCI-compliant when you enable this feature because Odoo does not store the card details directly. Instead, it creates a payment token that only holds a reference to the card details stored on the payment provider's server."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:216
+#: ../../content/applications/finance/payment_providers.rst:215
 msgid "Manual capture"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:218
+#: ../../content/applications/finance/payment_providers.rst:217
 msgid "If your payment provider supports this feature, you can authorize and capture payments in two steps instead of one. When you authorize a payment, the funds are reserved on the customer's payment method but they are not immediately charged. The charge is only made when you manually capture the payment later on. You can also void the authorization to release the reserved funds; this is equivalent to a regular cancellation. Capturing payments manually can prove itself useful in many situations:"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:225
+#: ../../content/applications/finance/payment_providers.rst:224
 msgid "Receive the payment confirmation and wait until the order is shipped to capture the payment."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:226
+#: ../../content/applications/finance/payment_providers.rst:225
 msgid "Review and verify that orders are legitimate before the payment is completed and the fulfillment process starts."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:228
+#: ../../content/applications/finance/payment_providers.rst:227
 msgid "Avoid potentially high processing fees for cancelled payments: payment providers will not charge you for voiding an authorization."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:230
+#: ../../content/applications/finance/payment_providers.rst:229
 msgid "Hold a security deposit to return later, minus any deductions (e.g., after a damage)."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:232
+#: ../../content/applications/finance/payment_providers.rst:231
 msgid "Enable this feature by navigating to the :guilabel:`Configuration` tab from your payment provider and by ticking the :guilabel:`Capture Amount Manually` checkbox."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:235
+#: ../../content/applications/finance/payment_providers.rst:234
 msgid "To capture the payment after it was authorized, go to the related sales order or invoice and click on the :guilabel:`CAPTURE TRANSACTION` button. To release the funds, click on the :guilabel:`VOID TRANSACTION` button."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:240
+#: ../../content/applications/finance/payment_providers.rst:239
 msgid "Some payment providers support capturing only part of the authorized amount. The remaining amount can then be either captured or voided. These providers have the value **Full and partial** in the :ref:`table above <payment_providers/online_providers>`. The providers that only support capturing or voiding the full amount have the value **Full only**."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:244
+#: ../../content/applications/finance/payment_providers.rst:243
 msgid "The funds are likely not reserved forever. After a certain time, they may be automatically released back to the customer's payment method. Refer to your payment provider's documentation for the exact reservation duration."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:247
+#: ../../content/applications/finance/payment_providers.rst:246
 msgid "Odoo does not support this feature for all payment providers but some allow the manual capture from their website interface."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:253
+#: ../../content/applications/finance/payment_providers.rst:252
 msgid "Refunds"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:255
+#: ../../content/applications/finance/payment_providers.rst:254
 msgid "If your payment provider supports this feature, you can refund payments directly from Odoo. It does not need to be enabled first. To refund a customer payment, navigate to it and click on the :guilabel:`REFUND` button."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:260
+#: ../../content/applications/finance/payment_providers.rst:259
 msgid "Some payment providers support refunding only part of the amount. The remaining amount can then optionally be refunded too. These providers have the value **Full and partial** in the :ref:`table above <payment_providers/online_providers>`. The providers that only support refunding the full amount have the value **Full only**."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:264
+#: ../../content/applications/finance/payment_providers.rst:263
 msgid "Odoo does not support this feature for all payment providers but some allow to refund payments from their website interface."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:270
+#: ../../content/applications/finance/payment_providers.rst:269
 msgid "Express checkout"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:272
+#: ../../content/applications/finance/payment_providers.rst:271
 msgid "If your payment provider supports this feature, customers can use the **Google Pay** and **Apple Pay** buttons to pay their eCommerce orders in one click without filling the contact form. Using one of those buttons, customers go straight from the cart to the confirmation page, stopping by the payment form of Google or Apple to validate the payment."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:277
+#: ../../content/applications/finance/payment_providers.rst:276
 msgid "Enable this feature by navigating to the :guilabel:`Configuration` tab from your payment provider and by ticking the :guilabel:`Allow Express Checkout` checkbox."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:281
+#: ../../content/applications/finance/payment_providers.rst:280
 msgid "All prices shown in the express checkout payment form are always taxes included."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:286
+#: ../../content/applications/finance/payment_providers.rst:285
 msgid "Extra Fees"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:288
+#: ../../content/applications/finance/payment_providers.rst:287
 msgid "If supported by the payment provider, you can add **extra fees** to online transactions. Fees can be configured either as **fixed** amounts and percentages, **variable** amounts and percentages, or *both* simultaneously. These can be applied according to **domestic** or **international** geolocation."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:293
+#: ../../content/applications/finance/payment_providers.rst:292
 msgid "To enable fees, from the *eCommerce* or *Accounting* app, head to :menuselection:`Configuration --> Payment Providers` and select the desired supported provider. Click on the :guilabel:`Fees` tab and check the :guilabel:`Add Extra Fees` box. Configure the settings to your needs."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:298
+#: ../../content/applications/finance/payment_providers.rst:297
 msgid "Fees are calculated on the tax-included price."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:306
+#: ../../content/applications/finance/payment_providers.rst:305
 msgid "Each provider has its specific configuration flow, depending on :ref:`which feature is available <payment_providers/online_providers>`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:312
+#: ../../content/applications/finance/payment_providers.rst:311
 msgid "Add a new payment provider"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:314
+#: ../../content/applications/finance/payment_providers.rst:313
 msgid "To add a new payment provider and make it available to your customers, go to :menuselection:`Accounting --> Configuration --> Payment Providers`, look for your payment provider, install the related module, and activate it. To do so, open the payment provider and change its state from *Disabled* to *Enabled*."
 msgstr ""
 
@@ -21635,11 +21636,11 @@ msgstr ""
 msgid "Click on install, then on activate to make the payment provider available on Odoo."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:324
+#: ../../content/applications/finance/payment_providers.rst:323
 msgid "We recommend using the *Test Mode* on a duplicated database or a test database. The Test Mode is meant to be used with your test/sandbox credentials, but Odoo generates Sales Orders and Invoices as usual. It isn't always possible to cancel an invoice, and this could create some issues with your invoices numbering if you were to test your payment providers on your main database."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:332
+#: ../../content/applications/finance/payment_providers.rst:331
 #: ../../content/applications/finance/payment_providers/adyen.rst:23
 #: ../../content/applications/finance/payment_providers/alipay.rst:18
 #: ../../content/applications/finance/payment_providers/authorize.rst:15
@@ -21650,89 +21651,89 @@ msgstr ""
 msgid "Credentials tab"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:334
+#: ../../content/applications/finance/payment_providers.rst:333
 msgid "If not done yet, go to the online payment provider website, create an account, and make sure to have the credentials required for third-party use. Odoo requires these credentials to communicate with the payment provider."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:338
+#: ../../content/applications/finance/payment_providers.rst:337
 msgid "The form in this section is specific to the payment provider you are configuring. Please refer to the related documentation for more information."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:344
+#: ../../content/applications/finance/payment_providers.rst:343
 #: ../../content/applications/finance/payment_providers/authorize.rst:40
 #: ../../content/applications/finance/payment_providers/stripe.rst:119
 msgid "Configuration tab"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:346
+#: ../../content/applications/finance/payment_providers.rst:345
 msgid "You can change the payment provider's front-end appearance by modifying its name under the **Displayed as** field and which credit card icons to display under the **Supported Payment Icons** field."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:353
+#: ../../content/applications/finance/payment_providers.rst:352
 msgid "Countries"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:355
+#: ../../content/applications/finance/payment_providers.rst:354
 msgid "Restrict the use of the payment provider to a selection of countries. Leave this field blank to make the payment provider available in all countries."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:361
+#: ../../content/applications/finance/payment_providers.rst:358
 msgid "Maximum Amount"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:363
+#: ../../content/applications/finance/payment_providers.rst:360
 msgid "Restrict the maximum amount that can be paid with the selected provider. Leave this field to `0.00` to make the payment provider available regardless of the payment amount."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:367
+#: ../../content/applications/finance/payment_providers.rst:364
 msgid "This feature is not intended to work on pages which allow the customer to update the payment amount. For example, the **Donation** snippet of the Website app, and the **Checkout** page of the **eCommerce** app when paid delivery methods are enabled."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:372
+#: ../../content/applications/finance/payment_providers.rst:371
 msgid "Payment journal"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:374
+#: ../../content/applications/finance/payment_providers.rst:373
 msgid "The **Payment journal** selected for your payment provider must be a *Bank* journal."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:379
+#: ../../content/applications/finance/payment_providers.rst:378
 msgid "Publish on the website"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:381
+#: ../../content/applications/finance/payment_providers.rst:380
 msgid "By default, payment providers are *unpublished*, which means that only internal users can see them on the website. Your customers cannot make payments through an unpublished provider but they can still manage :dfn:`(delete and assign to a subscription)` their already existing tokens linked to such an provider. This conveniently allows you to test an provider while preventing making payments and registering new tokens."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:387
+#: ../../content/applications/finance/payment_providers.rst:386
 msgid "Click on the :guilabel:`Publish` button located in the top right corner of the provider's form to publish it on the website and make it available to your customers. Click on the :guilabel:`Unpublish` button to unpublish it."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:392
+#: ../../content/applications/finance/payment_providers.rst:391
 msgid "Payment providers are automatically published and unpublished when you respectively change their state to `enabled` and `test`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:398
+#: ../../content/applications/finance/payment_providers.rst:397
 msgid "Accounting perspective"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:400
+#: ../../content/applications/finance/payment_providers.rst:399
 msgid "The **Bank Payments** that go directly to one of your bank accounts follow their usual reconciliation workflows. However, payments recorded with **Online Payment Providers** require you to consider how you want to record your payments' journal entries. We recommend you to ask your accountant for advice."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:405
+#: ../../content/applications/finance/payment_providers.rst:404
 msgid "You need to select a *Payment Journal* on your provider configuration to record the payments, on a **Outstanding Account**. The Journal's **type** must be *Bank Journal*."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:408
+#: ../../content/applications/finance/payment_providers.rst:407
 msgid "You can use a single journal for many payment methods. And for each payment method, you can either:"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:410
+#: ../../content/applications/finance/payment_providers.rst:409
 msgid "Define an **Accounting Account** to separate these payments from another payment method."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:411
+#: ../../content/applications/finance/payment_providers.rst:410
 msgid "Leave blank to fallback on the default account, which you can see or change in the settings."
 msgstr ""
 
@@ -21740,67 +21741,67 @@ msgstr ""
 msgid "A bank journal in the \"Incoming Payments Tab\"."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:417
+#: ../../content/applications/finance/payment_providers.rst:416
 msgid "You can have the same bank account for the whole company, or for some journals only, or a single payment method... What best suit your needs."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:421
+#: ../../content/applications/finance/payment_providers.rst:420
 msgid ":doc:`payment_providers/wire_transfer`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:422
+#: ../../content/applications/finance/payment_providers.rst:421
 msgid ":doc:`payment_providers/adyen`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:423
+#: ../../content/applications/finance/payment_providers.rst:422
 msgid ":doc:`payment_providers/alipay`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:424
+#: ../../content/applications/finance/payment_providers.rst:423
 msgid ":doc:`payment_providers/authorize`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:425
+#: ../../content/applications/finance/payment_providers.rst:424
 msgid ":doc:`payment_providers/asiapay`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:426
+#: ../../content/applications/finance/payment_providers.rst:425
 msgid ":doc:`payment_providers/buckaroo`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:427
+#: ../../content/applications/finance/payment_providers.rst:426
 msgid ":doc:`payment_providers/demo`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:428
+#: ../../content/applications/finance/payment_providers.rst:427
 msgid ":doc:`payment_providers/mercado_pago`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:429
+#: ../../content/applications/finance/payment_providers.rst:428
 msgid ":doc:`payment_providers/mollie`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:430
+#: ../../content/applications/finance/payment_providers.rst:429
 msgid ":doc:`payment_providers/ogone`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:431
+#: ../../content/applications/finance/payment_providers.rst:430
 msgid ":doc:`payment_providers/paypal`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:432
+#: ../../content/applications/finance/payment_providers.rst:431
 msgid ":doc:`payment_providers/razorpay`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:433
+#: ../../content/applications/finance/payment_providers.rst:432
 msgid ":doc:`payment_providers/sips`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:434
+#: ../../content/applications/finance/payment_providers.rst:433
 msgid ":doc:`payment_providers/stripe`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:435
+#: ../../content/applications/finance/payment_providers.rst:434
 msgid ":doc:`../websites/ecommerce/checkout_payment_shipping/payments`"
 msgstr ""
 
@@ -21839,7 +21840,6 @@ msgstr ""
 #: ../../content/applications/finance/payment_providers/razorpay.rst:46
 #: ../../content/applications/finance/payment_providers/sips.rst:32
 #: ../../content/applications/finance/payment_providers/stripe.rst:142
-#: ../../content/applications/finance/payment_providers/wire_transfer.rst:39
 msgid ":doc:`../payment_providers`"
 msgstr ""
 
@@ -23055,39 +23055,75 @@ msgid "This operation must be repeated whenever your web domain changes."
 msgstr ""
 
 #: ../../content/applications/finance/payment_providers/wire_transfer.rst:3
-msgid "How to get paid with wire transfers"
+msgid "Wire transfers"
 msgstr ""
 
 #: ../../content/applications/finance/payment_providers/wire_transfer.rst:5
-msgid "**Wire Transfer** is the default payment method available. The aim is providing your customers with your bank details so they can pay on their own. This is very easy to start with but slow and inefficient process-wise. Opt for payment providers as soon as you can!"
+msgid "The **Wire transfer** payment method allows you to provide payment instructions to your customers, such as the bank details and communication. They are displayed:"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/wire_transfer.rst:10
-msgid "How to provide customers with payment instructions"
+#: ../../content/applications/finance/payment_providers/wire_transfer.rst:8
+msgid "at the end of the checkout process, once the customer has selected :guilabel:`Wire transfer` as a payment method and clicked the :guilabel:`Pay now` button:"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/wire_transfer.rst:12
-msgid "Put your payment instructions in the **Thanks Message** of your payment method."
+#: ../../content/applications/finance/payment_providers/wire_transfer.rst:0
+msgid "Payment instructions at checkout"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/wire_transfer.rst:17
-msgid "They will appear to the customers when they place an order."
+#: ../../content/applications/finance/payment_providers/wire_transfer.rst:14
+msgid "on the customer portal:"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/wire_transfer.rst:23
-msgid "How to manage an order once you get paid"
+#: ../../content/applications/finance/payment_providers/wire_transfer.rst:0
+msgid "Payment instructions on the customer portal"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/wire_transfer.rst:25
-msgid "Whenever a customer pays by wire transfer, the order stays in an intermediary stage **Quotation Sent** (i.e. unpaid order). When you get paid, you confirm the order manually to launch the delivery."
+#: ../../content/applications/finance/payment_providers/wire_transfer.rst:20
+msgid "While this method is very accessible and requires minimal setup, it is very inefficient process-wise. We recommend setting up a :doc:`payment provider <../payment_providers>` instead."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/wire_transfer.rst:30
-msgid "How to create other manual payment methods"
+#: ../../content/applications/finance/payment_providers/wire_transfer.rst:22
+msgid "Online orders remain in the :guilabel:`Quotation sent` (i.e., unpaid order) stage until you receive the payment and :guilabel:`Confirm` the order."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/wire_transfer.rst:26
+msgid "**Wire transfer** can be used as a template for other payment methods that are processed manually, such as checks, by renaming or duplicating it."
 msgstr ""
 
 #: ../../content/applications/finance/payment_providers/wire_transfer.rst:32
-msgid "If you manage a B2B business, you can create other manually-processed payment methods like paying by check. To do so, just rename *Wire Transfer* or duplicate it."
+msgid "To configure **Wire Transfer**, go to :menuselection:`Accounting / Website --> Configuration --> Payment Providers`, and open the :guilabel:`Wire Transfer` card. Then, in the :guilabel:`Configuration` tab:"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/wire_transfer.rst:36
+msgid "Select the :guilabel:`Communication` to be used;"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/wire_transfer.rst:38
+msgid ":guilabel:`Based on Document Reference`: sales order or invoice number"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/wire_transfer.rst:39
+msgid ":guilabel:`Based on Customer ID`: customer identifier"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/wire_transfer.rst:41
+msgid "Tick the :guilabel:`Enable QR codes` check box to activate :doc:`QR code payments <../accounting/customer_invoices/epc_qr_code>`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/wire_transfer.rst:44
+msgid "Define the payment instructions in the :guilabel:`Messages` tab:"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/wire_transfer.rst:-1
+msgid "Define payment instructions"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/wire_transfer.rst:49
+msgid "If you have already defined :doc:`a bank account <../accounting/bank>`, the account number will be automatically added to the default message generated by Odoo."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/wire_transfer.rst:53
+msgid ":ref:`payment_providers/journal`"
 msgstr ""
 
 #: ../../content/applications/finance/sign.rst:3
