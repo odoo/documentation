@@ -29,19 +29,12 @@ regulation by creating and configuring new :doc:`fiscal positions <fiscal_positi
 Configuration
 =============
 
-Go to :menuselection:`Accounting/Invoicing --> Settings --> Taxes`, then enable **EU intra-community
-Distance Selling** (or **EU Digital Goods VAT** if you created your database before July 1, 2021),
-and *Save*.
+Go to :menuselection:`Accounting/Invoicing --> Settings --> Taxes` and enable **EU intra-community
+Distance Selling**.
 
 .. image:: eu_distance_selling/enable-feature.png
    :align: center
    :alt: EU intra-community Distance Selling feature in Odoo Accounting settings
-
-.. important::
-   Please :ref:`upgrade the module <general/upgrade>` `l10n_eu_service` if you already installed it
-   before **July 1, 2021**, or if you activated the feature **EU Digital Goods VAT** in the
-   Accounting settings. Then, make sure to :ref:`refresh the tax mapping
-   <eu_distance_selling/refresh-mapping>`.
 
 .. _eu_distance_selling/taxes:
 
