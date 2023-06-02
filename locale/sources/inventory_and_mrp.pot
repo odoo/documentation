@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-30 12:32+0000\n"
+"POT-Creation-Date: 2023-06-02 08:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1098,7 +1098,7 @@ msgid "Manage serial numbers for shipping and receiving"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:95
-msgid "Serial numbers can be assigned for both **incoming** and **outgoing** goods. For incoming goods, lot numbers are assigned directly on the purchase order form. For outgoing goods, lot numbers are assigned directly on the sales order form."
+msgid "Serial numbers can be assigned for both **incoming** and **outgoing** goods. For incoming goods, serial numbers are assigned directly on the purchase order form. For outgoing goods, serial numbers are assigned directly on the sales order form."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:100
@@ -2426,38 +2426,42 @@ msgid ":doc:`Using the inventory valuation </applications/inventory_and_mrp/inve
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:93
-msgid "When choosing :guilabel:`Average Cost (AVCO)` as the :guilabel:`Costing Method`, the numerical value in the :guilabel:`Cost` field for products in the respective product category will no longer be editable, and will appear grayed out. The :guilabel:`Cost` amount will instead automatically update based on the average purchase price both of inventory on hand and the costs accumulated from validated purchase orders."
+msgid "When choosing :guilabel:`Average Cost (AVCO)` as the :guilabel:`Costing Method`, changing the numerical value in the :guilabel:`Cost` field for products in the respective product category creates a new record in the *Inventory Valuation* report to adjust the value of the product. The :guilabel:`Cost` amount will then automatically update based on the average purchase price both of inventory on hand and the costs accumulated from validated purchase orders."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:99
-msgid "On the same screen, the :guilabel:`Account Stock Properties` fields will appear, as they are now required fields given the change to automated inventory valuation. These accounts are defined as follows:"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:103
-msgid ":guilabel:`Stock Valuation Account`: when automated inventory valuation is enabled on a product, this account will hold the current value of the products."
+msgid "When the :guilabel:`Costing Method` is changed, products already in stock that were using the :guilabel:`Standard` costing method **do not** change value; rather, the existing units keep their value, and any product moves from then on affect the average cost, and the cost of the product will change. If the value in the :guilabel:`Cost` field on a product form is changed manually, Odoo will generate a corresponding record in the *Inventory Valuation* report."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:105
-msgid ":guilabel:`Stock Input Account`: counterpart journal items for all incoming stock moves will be posted in this account, unless there is a specific valuation account set on the source location. This is the default value for all products in a given category, and can also be set directly on each product."
+msgid "On the same screen, the :guilabel:`Account Stock Properties` fields will appear, as they are now required fields given the change to automated inventory valuation. These accounts are defined as follows:"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:109
-msgid ":guilabel:`Stock Output Account`: counterpart journal items for all outgoing stock moves will be posted in this account, unless there is a specific valuation account set on the destination location. This is the default value for all products in a given category, and can also be set directly on each product."
+msgid ":guilabel:`Stock Valuation Account`: when automated inventory valuation is enabled on a product, this account will hold the current value of the products."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:111
+msgid ":guilabel:`Stock Input Account`: counterpart journal items for all incoming stock moves will be posted in this account, unless there is a specific valuation account set on the source location. This is the default value for all products in a given category, and can also be set directly on each product."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:115
+msgid ":guilabel:`Stock Output Account`: counterpart journal items for all outgoing stock moves will be posted in this account, unless there is a specific valuation account set on the destination location. This is the default value for all products in a given category, and can also be set directly on each product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:121
 msgid "Access reporting data generated by inventory valuation"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:117
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:123
 msgid "To start, go to :menuselection:`Accounting --> Reporting --> Balance Sheet`. At the top of the dashboard, change the :guilabel:`As of` field value to :guilabel:`Today`, and adjust the filtering :guilabel:`Options` to :guilabel:`Unfold All` in order to see all of the latest data displayed, all at once."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:122
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:128
 msgid "Under the parent :guilabel:`Current Assets` line item, look for the nested :guilabel:`Stock Valuation Account` line item, where the total valuation of all of the inventory on hand is displayed."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:132
 msgid "Access more specific information with the :guilabel:`Stock Valuation Account` drop-down menu, by selecting either the :guilabel:`General Ledger` to see an itemized view of all of the journal entries, or by selecting :guilabel:`Journal Items` to review all of the individualized journal entries that were submitted to the account. As well, annotations to the :guilabel:`Balance Sheet` can be added by choosing :guilabel:`Annotate`, filling in the text box, and clicking :guilabel:`Save`."
 msgstr ""
 
