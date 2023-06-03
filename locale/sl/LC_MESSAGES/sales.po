@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-22 07:00+0000\n"
+"POT-Creation-Date: 2023-05-30 12:32+0000\n"
 "PO-Revision-Date: 2022-10-04 12:54+0000\n"
 "Last-Translator: Jasmina Macur <jasmina@hbs.si>, 2023\n"
 "Language-Team: Slovenian (https://app.transifex.com/odoo/teams/41243/sl/)\n"
@@ -99,7 +99,6 @@ msgstr ""
 #: ../../content/applications/sales/sales/send_quotations/quote_template.rst:9
 #: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst:16
 #: ../../content/applications/sales/subscriptions/closing.rst:31
-#: ../../content/applications/sales/subscriptions/plans.rst:10
 #: ../../content/applications/sales/subscriptions/upselling.rst:25
 msgid "Configuration"
 msgstr "Nastavitve"
@@ -9382,99 +9381,199 @@ msgstr ""
 
 #: ../../content/applications/sales/subscriptions/plans.rst:5
 msgid ""
-"Subscription plans are :doc:`quotation templates "
-"<../sales/send_quotations/quote_template>` specific to **subscriptions** "
-"used to preconfigure selectable **plans** and **recurrence periods** to "
-"configure quotations quickly."
+"*Subscription plans* are :doc:`quotation templates "
+"</applications/sales/sales/send_quotations/quote_template>` used to "
+"preconfigure quotations with subscription products. Use subscription plans "
+"to quickly create subscription orders."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/plans.rst:10
+msgid "Configure subscription plans"
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/plans.rst:12
 msgid ""
-"To create a new subscription plan or edit an existing one, go to "
-":menuselection:`Subscriptions --> Configuration --> Plans`, and click "
-":guilabel:`New` or select an existing plan."
+"To configure subscription plans, go to :menuselection:`Subscriptions --> "
+"Configuration --> Plans`. Then, click :guilabel:`New` to create a new plan, "
+"or select an existing plan to edit it."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/plans.rst:15
+msgid ""
+"Since the Odoo *Subscriptions* app is integrated closely with the *Sales* "
+"app, subscription plans use the same form as quotation templates."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/plans.rst-1
-msgid "Subscription plan (quotation template) configuration"
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/plans.rst:18
-msgid "When creating a subscription plan, several options are available:"
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/plans.rst:20
-msgid "The **name** of the plan;"
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/plans.rst:21
-msgid ""
-":guilabel:`Quotation expires after`: after how many days the quotation "
-"expires;"
+msgid "Subscription plan (quotation template) configuration form."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/plans.rst:22
-msgid ""
-":guilabel:`Online confirmation`: if the customer's :guilabel:`Signature` or "
-":guilabel:`Payment` confirms the order. Enable both to leave the choice to "
-"the customer;"
+msgid "The subscription plan form contains the following options:"
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/plans.rst:24
 msgid ""
-":guilabel:`Confirmation Mail`: the **mail template** used for the order "
-"confirmation mail;"
+":guilabel:`Name`: Enter a name for the subscription plan at the top of the "
+"page."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/plans.rst:25
 msgid ""
-":guilabel:`Recurrence`: the recurrence of **recurring products** used with "
-"this template."
+":guilabel:`Quotation expires after`: Enter the number of days after which "
+"the quotation expires, starting from the day the quotation is sent to the "
+"customer. Leave this field at zero for the quotation to never expire."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/plans.rst:27
+#: ../../content/applications/sales/subscriptions/plans.rst:28
 msgid ""
-"Selecting a :guilabel:`Recurrence` enables the following additional options:"
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/plans.rst:29
-msgid ""
-":guilabel:`Duration`: whether **recurring products** used with this template"
-" have no **end date**, or if they have a :guilabel:`Fixed` duration. "
-"Selecting :guilabel:`Fixed` enables an additional option to select the "
-"**duration**;"
+":guilabel:`Online Confirmation`: Check the boxes next to "
+":guilabel:`Signature` or :guilabel:`Payment` to enable the customer to "
+"confirm their subscription order by signing or paying for the quotation. "
+"Enable both to leave the choice to the customer. Enable neither to only "
+"confirm the quotation in the backend."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/plans.rst:32
 msgid ""
-":guilabel:`Self Closable`: if enabled, the **customer** can terminate their "
-"subscription from their **customer portal**;"
+":guilabel:`Confirmation Mail`: Select an :doc:`email template "
+"</applications/general/email_communication/email_template>` for the "
+"confirmation email that is automatically sent to the customer after the "
+"quotation is confirmed. Leave this field blank to send nothing."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/plans.rst:34
+#: ../../content/applications/sales/subscriptions/plans.rst:37
 msgid ""
-":guilabel:`Automatic Closing`: the number of days after which **unpaid** "
-"subscriptions *past* the due date are automatically closed;"
+"To create a new email template, enter a name for the template, then click "
+":guilabel:`Create and edit`."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/plans.rst:36
+#: ../../content/applications/sales/subscriptions/plans.rst:39
 msgid ""
-":guilabel:`Invoicing Journal`: if set, subscriptions with this template are "
-"invoiced in the set journal. If none, the sales journal with the lowest "
-"sequence is used."
+"To edit an existing email template, select one from the drop-down menu, then"
+" click on the :guilabel:`Internal link` arrow at the end of the line."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/plans.rst:40
+#: ../../content/applications/sales/subscriptions/plans.rst:42
 msgid ""
-"On each template, you can add specific :doc:`Terms & Conditions "
-"<../sales/send_quotations/terms_and_conditions>`. If **terms and "
-"conditions** are specified on a template, these will be used instead of the "
-"default **terms and conditions** set in the **Sales** app settings (if any "
-"are set)."
+":guilabel:`Recurrence`: Select the recurrence period used for the plan. The "
+"recurrence periods available here are the same ones that are configured in "
+":menuselection:`Subscriptions --> Configuration --> Recurrence Periods`."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/plans.rst:46
+msgid ""
+"Selecting a :guilabel:`Recurrence` turns the quotation template into a "
+"subscription plan and enables the following additional options:"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/plans.rst:49
+msgid ""
+":guilabel:`Duration`: Choose whether the subscription plan has no end date "
+"(:guilabel:`Forever`) or a :guilabel:`Fixed` duration."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/plans.rst:52
+msgid ""
+"If the duration is :guilabel:`Forever`, then the subscription plan will "
+"continually renew until either the customer or the company manually ends the"
+" subscription."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/plans.rst:54
+msgid ""
+"If the duration is :guilabel:`Fixed`, then enter an :guilabel:`End After` "
+"date, which determines the amount of time after which the subscription will "
+"automatically end."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/plans.rst:57
+msgid ""
+":guilabel:`Self Closable`: Check this box to enable the customer to "
+"terminate their subscription from the :doc:`customer portal "
+"</applications/websites/ecommerce/ecommerce_management/customer_accounts>`."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/plans.rst:60
+msgid ""
+":guilabel:`Automatic Closing`: Enter the number of days after which *unpaid*"
+" subscriptions *past* the due date are automatically closed."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/plans.rst:62
+msgid ""
+":guilabel:`Invoicing Journal`: Select the accounting journal in which "
+"invoices for this subscription plan are recorded. Leave this field blank to "
+"use the sales journal with the lowest sequence."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/plans.rst-1
-msgid "Terms and conditions of subscription plan"
+msgid "Subscription plan with Recurrence selected."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/plans.rst:70
+msgid ""
+"In the :guilabel:`Lines` tab, create the order lines for the quotation. "
+"Click :guilabel:`Add a product`, select a product to include in the plan, "
+"and then enter the :guilabel:`Quantity` and :guilabel:`Unit of Measure`. Add"
+" as many products as desired to the order lines."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/plans.rst:74
+msgid ""
+"In the :guilabel:`Optional Products` tab, enter any optional products that "
+"the customer can add to their quotation before confirming the order."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/plans.rst:77
+msgid ""
+"If the subscription plan has unique :doc:`terms and conditions "
+"</applications/sales/sales/send_quotations/terms_and_conditions>`, add them "
+"in the :guilabel:`Terms & Conditions` tab. If terms conditions are specified"
+" on a plan, these will be used instead of the default terms and conditions "
+"set up in the *Sales* app settings."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/plans.rst-1
+msgid "Subscription plan Terms & Conditions tab."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/plans.rst:87
+msgid "Use subscription plans on quotations"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/plans.rst:89
+msgid ""
+"Quotations for subscription products can be created in both the "
+"*Subscriptions* app and the *Sales* app."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/plans.rst:92
+msgid ""
+"From the :guilabel:`Subscriptions` dashboard, click :guilabel:`New` to "
+"create a new quotation. Then, select a subscription plan in the "
+":guilabel:`Subscription Plan` field."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/plans.rst:95
+msgid ""
+"The :guilabel:`Recurrence`, products, and other information from the plan "
+"are automatically filled in. The quotation can then be modified further as "
+"needed."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/plans.rst:98
+msgid ""
+"From the :guilabel:`Sales` dashboard, click :guilabel:`New` to create a new "
+"quotation. Then, select a subscription plan in the :guilabel:`Quotation "
+"Template` field."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/plans.rst:101
+msgid ""
+"All subscription orders will appear on the :guilabel:`Subscriptions` "
+"dashboard regardless of whether they were created in the *Subscriptions* app"
+" or the *Sales* app."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/products.rst:3

@@ -12,6 +12,7 @@
 # Martin Trigaux, 2023
 # Braulio D. López Vázquez <bdl@odoo.com>, 2023
 # Aimée Mendoza Sánchez, 2023
+# Iran Villalobos López, 2023
 # Fernanda Alvarez, 2023
 # 
 #, fuzzy
@@ -19,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-22 07:00+0000\n"
+"POT-Creation-Date: 2023-06-02 08:43+0000\n"
 "PO-Revision-Date: 2022-10-04 12:54+0000\n"
 "Last-Translator: Fernanda Alvarez, 2023\n"
 "Language-Team: Spanish (https://app.transifex.com/odoo/teams/41243/es/)\n"
@@ -68,7 +69,6 @@ msgid ":doc:`../../inventory_and_mrp/inventory`"
 msgstr ""
 
 #: ../../content/applications/services/field_service/default_warehouse.rst:16
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:13
 #: ../../content/applications/services/project/project_management.rst:17
 msgid "Configuration"
 msgstr "Configuración"
@@ -874,6 +874,451 @@ msgid ""
 " :menuselection:`My Account --> Tickets`."
 msgstr ""
 
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:3
+msgid "Track and bill time"
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:5
+msgid ""
+"Odoo *Helpdesk* provides teams with the ability to track the amount of hours"
+" spent working on a ticket, and to bill a customer for that time. Through "
+"integrations with the *Sales*, *Timesheets* and *Accounting* applications, "
+"customers can be charged once the work is completed, or before it has even "
+"begun."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:11
+msgid ""
+"Since the *Track & Bill Time* features require integration with other "
+"applications, enabling them may result in the installation of additional "
+"modules (or applications)."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:14
+msgid ""
+"Installing a new application on a *One-App-Free* database triggers a 15-day "
+"trial. At the end of the trial, if a paid subscription has not been added to"
+" the database, it will no longer be active or accessible."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:19
+msgid "Configure track and bill time features"
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:21
+msgid ""
+"Before a customer can be invoiced for support services, the *Track & Bill "
+"Time* features must first be enabled. These features must be enabled on each"
+" *Helpdesk* team where they will be utilized."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:25
+msgid "Enable track and bill time on a helpdesk team"
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:27
+msgid ""
+"To view and enable the :guilabel:`Track & Bill Time` features on a "
+"*Helpdesk* team, first navigate to :menuselection:`Helpdesk --> "
+"Configuration --> Teams`. Then select a team from the list or :doc:`create a"
+" new one </applications/services/helpdesk/overview/getting_started>`. This "
+"will reveal a team's settings page."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:32
+msgid ""
+"On the team's settings page, scroll to the :guilabel:`Track & Bill Time` "
+"section. Check the boxes labeled :guilabel:`Timesheets` and :guilabel:`Time "
+"Billing`."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:35
+msgid ""
+"Once the :guilabel:`Timesheets` box is checked, a new field appears, labeled"
+" :guilabel:`Project`."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:37
+msgid ""
+"The project selected in this field is where all the timesheets for this "
+"team's tickets will be recorded. Click into the drop-down menu to select a "
+":guilabel:`Project`."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:40
+msgid ""
+"To create a new project where the timesheets will be recorded, click into "
+"the drop-down menu, type a name for the project, and then click "
+":guilabel:`Create`."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst-1
+msgid ""
+"View of a helpdesk team settings page emphasizing the track and bill time "
+"settings."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:50
+msgid "Configure service products"
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:52
+msgid ""
+"When the :guilabel:`Time Billing` feature is enabled, a new product is "
+"created in the *Sales* app called :guilabel:`Service on Timesheets`. This "
+"product can be found under :menuselection:`Sales --> Products --> Products`."
+" Search for `Service on Timesheets` in the :guilabel:`Search...` bar. This "
+"is the product that will be used when invoicing for *post-paid support "
+"services* after they have been completed."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:58
+msgid ""
+"Select :guilabel:`Service on Timesheets` from the product page. This reveals"
+" the product detail form. The product is configured with the "
+":guilabel:`Product Type` set to :guilabel:`Service` and the "
+":guilabel:`Invoicing Policy` set to :guilabel:`Based on Timesheets`."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst-1
+msgid ""
+"View of a service product with the invoicing policy set to 'Based on "
+"timesheets'."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:66
+msgid ""
+"In order to invoice for support services before the work has been completed "
+"(also known as *prepaid support services*), a separate product with a "
+"different invoicing policy must be created."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:69
+msgid ""
+"To create a new service product, go to :menuselection:`Sales --> Products "
+"--> Products` and click :guilabel:`New`. This will reveal a blank product "
+"detail form."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:72
+msgid ""
+"On the new product form, add a :guilabel:`Product Name`, and set the "
+":guilabel:`Product Type` to :guilabel:`Service`. Then, set the "
+":guilabel:`Invoicing Policy` to :guilabel:`Prepaid/Fixed Price`. This means "
+"an invoice can be generated and payment can be received for this product "
+"before any timesheets entries have been recorded for these services."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst-1
+msgid ""
+"View of a service product with the invoicing policy set to 'prepaid/fixed'."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:81
+msgid ""
+"Finally, set the :guilabel:`Sales Price`, and confirm that the "
+":guilabel:`Unit of Measure` is set to :guilabel:`Hours`."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:85
+msgid "Invoice prepaid support services"
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:87
+msgid ""
+"When support services are billed on a fixed price, an invoice can be created"
+" before any work is completed on the issue. In this case, a service product "
+"with the invoicing policy set to :guilabel:`Prepaid/Fixed Price` would be "
+"used, just like :ref:`the section above <helpdesk/advanced/configure-"
+"service-products>`."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:93
+msgid "Create a sales order with prepaid product"
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:95
+msgid ""
+"To invoice a customer for prepaid support services, first create a sales "
+"order (SO) with the support services product. To do this, go to "
+":menuselection:`Sales --> Orders --> Quotations --> New`, which reveals a "
+"blank quotation form."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:99
+msgid "Then, fill out the quotation form with the customer information."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:101
+msgid ""
+"Go to the :guilabel:`Order Lines` tab of the quotation and click "
+":guilabel:`Add a Product`. Then, select the *prepaid services product* "
+"configured in the steps above. Update the :guilabel:`Quantity` field with "
+"the number of hours."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:105
+msgid ""
+"After updating any other necessary information, :guilabel:`Confirm` the "
+"quotation. This converts the quotation into an :abbr:`SO (sales order)`."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:109
+msgid "Create and send an invoice for prepaid services"
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:111
+msgid ""
+"Once the :abbr:`SO (sales order)` has been confirmed, click the "
+":guilabel:`Create Invoice` button. This will open a :guilabel:`Create "
+"Invoices` pop-up window."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:114
+msgid ""
+"If no down payment will be collected, the :guilabel:`Create Invoice` type "
+"can remain as :guilabel:`Regular Invoice`. If a down payment will be "
+"collected, choose between either :guilabel:`Down payment (percentage)` or "
+":guilabel:`Down payment (fixed amount)`."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:118
+msgid ""
+"When the necessary information has been entered, click :guilabel:`Create "
+"Draft Invoice`."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:120
+msgid "The invoice can then be sent to the customer for payment."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:123
+msgid "Create helpdesk ticket for prepaid services"
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:125
+msgid ""
+"To create a *Helpdesk* ticket for prepaid services, navigate to "
+":menuselection:`Helpdesk` and click the :guilabel:`Tickets` button to reveal"
+" a specific team's pipeline. Click :guilabel:`New` to create a new ticket."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:129
+msgid ""
+"On the blank ticket form, create a ticket :guilabel:`Title`, and enter the "
+":guilabel:`Customer` information."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:132
+msgid ""
+"When the customer name is added, the :guilabel:`Sales Order Item` field will"
+" automatically populate with the most recent prepaid sales order item that "
+"has time remaining."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:136
+msgid "Track hours on helpdesk ticket"
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:138
+msgid ""
+"Time spent working on a *Helpdesk* ticket is tracked on the *Timesheets* tab"
+" on the specific ticket."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:140
+msgid ""
+"On the ticket detail form, click on the :guilabel:`Timesheets` tab and click"
+" :guilabel:`Add a line`. Choose an :guilabel:`Employee`, add a "
+":guilabel:`Description` of the task, and enter the number of "
+":guilabel:`Hours Spent`."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:144
+msgid ""
+"As new lines are added to :guilabel:`Timesheets` tab, the "
+":guilabel:`Remaining Hours on SO` field is automatically updated."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst-1
+msgid ""
+"View of the timesheets tab on a ticket with an emphasis on the remaining "
+"hours on an SO."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:152
+msgid ""
+"If the number of hours on the :guilabel:`Timesheets` tab exceeds the number "
+"of hours sold, the :guilabel:`Remaining Hours of SO` will turn red."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:155
+msgid ""
+"As hours are added to the :guilabel:`Timesheets` tab, they are automatically"
+" updated in the :guilabel:`Delivered` field on the :abbr:`SO (sales order)`,"
+" as well."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:159
+msgid "Invoice post-paid support services"
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:161
+msgid ""
+"When support services are billed based on the amount of time spent on an "
+"issue, an invoice cannot be created before the total number of hours "
+"required to solve the problem have been entered on a timesheet. In this "
+"case, a service product with the invoicing policy set to :guilabel:`Based on"
+" Timesheets` would be used, like the one created above."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:167
+msgid "Create a sales order with a time-tracked product"
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:169
+msgid ""
+"To invoice a customer for post-paid support services, first create a sales "
+"order (SO) with the *support services product*. To do this, go to "
+":menuselection:`Sales --> Orders --> Quotations --> New`."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:173
+msgid "Fill out the quotation with the customer information."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:175
+msgid ""
+"On the :guilabel:`Order Lines` tab, click :guilabel:`Add a Product`. Select "
+"the post-paid services product configured in the steps above. After updating"
+" any other necessary information, :guilabel:`Confirm` the quotation."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:180
+msgid ""
+"Unlike with the prepaid services quotation, Odoo will not allow an invoice "
+"to be created at this time. That is because no services have been performed;"
+" in other words nothing has been delivered, therefore, there is nothing to "
+"invoice."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:185
+msgid "Create a helpdesk ticket for time-tracked services"
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:187
+msgid ""
+"To record a *Timesheet* entry for time-tracker services, go to "
+":menuselection:`Helpdesk` and select the appropriate team for which these "
+"services apply."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:190
+msgid ""
+"If there is already an existing ticket for this issue, select it from the "
+"kanban view. This will open the ticket details form. If there is no existing"
+" ticket for this customer issue, click :guilabel:`New` to create a new "
+"ticket and enter the necessary customer information on the blank ticket "
+"details form."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:195
+msgid ""
+"After selecting or creating a ticket, go to the :guilabel:`Sales Order Line`"
+" drop-down menu. Select the :abbr:`SO (sales order)` created in the previous"
+" step."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:199
+msgid "Track support hours on a ticket"
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:201
+msgid ""
+"In order to create an invoice for a product based on timesheets, hours need "
+"to be tracked and recorded. At this point, the service is considered "
+"*delivered*. To record hours for this support service, click on the "
+":guilabel:`Timesheets` tab of the ticket."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:205
+msgid ""
+"Click :guilabel:`Add a Line` to record a new entry. Select an "
+":guilabel:`Employee` from the drop-down menu, and record the time spent in "
+"the :guilabel:`Hours Spent` column."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:208
+msgid ""
+"Repeat these steps as needed until all time spent on the issues has been "
+"recorded."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst-1
+msgid "View of the timesheets tab on a helpdesk ticket."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:215
+msgid "Create an invoice for hours tracked on a ticket"
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:217
+msgid ""
+"After the customer's issue has been solved, and it is determined no new "
+"timesheet entries will be made, an invoice can be created, and the customer "
+"can be billed."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:220
+msgid ""
+"To do this, return to the :abbr:`SO (sales order)` by clicking on the "
+":guilabel:`Sales Order` smart button at the top of the ticket."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:223
+msgid ""
+"Before creating the invoice, confirm that the number in the "
+":guilabel:`Delivered` column matches the total number of :guilabel:`Hours "
+"Spent` listed in the :guilabel:`Timesheets` tab on the ticket."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst-1
+msgid "View of a sales order with emphasis on the delivered column."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:230
+msgid ""
+"Then, click :guilabel:`Create Invoice`. This will open a :guilabel:`Create "
+"Invoices` pop-up window. If no down payment will be collected, the "
+":guilabel:`Create Invoice` type can remain as :guilabel:`Regular Invoice`. "
+"If a down payment will be collected, choose between either :guilabel:`Down "
+"payment (percentage)` or :guilabel:`Down payment (fixed amount)`."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:236
+msgid ""
+"Use the :guilabel:`Timesheets Period` field if this invoice should only "
+"include timesheets from a certain time period. If this field is left blank, "
+"*all* applicable timesheets that have not yet been invoiced will be "
+"included."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst-1
+msgid "View of create invoices pop up showing timesheets period fields."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:244
+msgid ""
+"When the necessary information has been entered, click :guilabel:`Create "
+"Invoice`. The invoice can then be sent to the customer for payment."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:248
+msgid ""
+":doc:`/applications/inventory_and_mrp/inventory/management/products/uom`"
+msgstr ""
+":doc:`/applications/inventory_and_mrp/inventory/management/products/uom`"
+
 #: ../../content/applications/services/helpdesk/overview.rst:5
 #: ../../content/applications/services/timesheets/overview.rst:5
 msgid "Overview"
@@ -905,7 +1350,6 @@ msgstr ""
 
 #: ../../content/applications/services/helpdesk/overview/forum_and_elearning.rst:14
 #: ../../content/applications/services/helpdesk/overview/forum_and_elearning.rst:52
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:11
 msgid "Set up"
 msgstr "Configuración"
 
@@ -3196,6 +3640,9 @@ msgid ""
 "filtered to show the number of SLAs failed and the failure rate over the "
 "last 30 days, grouped by team."
 msgstr ""
+"De forma predeterminada, el reporte se muestra en una vista de "
+":guilabel:`tabla dinámica` y se filtra para mostrar el número de SLA "
+"fallidos y la tasa de fallos en los últimos 30 días, agrupados por equipo."
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst-1
 msgid "View of the SLA status analysis report in Odoo Helpdesk"
@@ -3213,6 +3660,13 @@ msgid ""
 "corresponding new column will emerge in the pivot table to show the relevant"
 " calculations."
 msgstr ""
+"Para agregar el número de SLA aprobados o en curso, haga clic en el botón "
+":guilabel:`Medidas` para mostrar un menú desplegable con los criterios para "
+"reporte y elija entre las opciones disponibles según las medidas que "
+"prefiera. Cada que selecciona una, aparecerá una marca de verificación en el"
+" menú desplegable para indicar que está incluida, luego aparecerá una nueva "
+"columna correspondiente en la tabla dinámica para mostrar los cálculos "
+"pertinentes."
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:135
 msgid ""
@@ -3220,6 +3674,10 @@ msgid ""
 "next to :guilabel:`Total`, and then select one of the groups. To remove one,"
 " click the minus :guilabel:` - ` button and deselect."
 msgstr ""
+"Para agregar un grupo a una fila o columna, haga clic en el botón más "
+":guilabel:`+` junto a :guilabel:`Total` y después seleccione uno de los "
+"grupos. Para quitar uno, haga clic en el botón menos :guilabel:` - ` y "
+"deseleccione."
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:140
 msgid "Using the Graph view"
@@ -3267,6 +3725,10 @@ msgid ""
 ":guilabel:`Stacked`. This presents two or more groups to appear on top of "
 "each other instead of next to each other, making it easier to compare data."
 msgstr ""
+"Tanto el :guilabel:`gráfico de barras` como el :guilabel:`gráfico de líneas`"
+" se pueden visualizar de forma :guilabel:`apilada`, la cual presenta dos o "
+"más grupos uno encima del otro, en lugar de uno junto al otro, lo que "
+"facilita la comparación de datos."
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:172
 msgid "Using the Cohort view"
@@ -3279,6 +3741,10 @@ msgid ""
 ":guilabel:`Cohort` view, click the icon in the top right corner above the "
 "chart."
 msgstr ""
+"La vista de :guilabel:`cohorte` se utiliza para realizar un seguimiento de "
+"los cambios en los datos durante un período de tiempo. Para mostrar el "
+"reporte :guilabel:`Análisis del estado` en una vista de :guilabel:`cohorte` "
+"haga clic en el icono en la esquina superior derecha sobre el gráfico."
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst-1
 msgid "View of the SLA status analysis report in cohort view"
@@ -3295,485 +3761,6 @@ msgid ""
 msgstr ""
 ":doc:`Permita que los clientes cierren sus tickets "
 "</applications/services/helpdesk/advanced/close_tickets>`"
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice.rst:5
-msgid "Timesheet and Invoice"
-msgstr "Hoja de horas y facturación"
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:3
-msgid "Invoice Time Spent on Tickets (Prepaid Support Services)"
-msgstr ""
-"Facturar el tiempo dedicado en tickets (servicios de soporte prepagados)"
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:5
-msgid ""
-"Have the option to work with prepaid support services, meaning that a sales "
-"order and a corresponding invoice are issued and, once the service is done, "
-"you can deduct the time spent. Odoo allows it to happen because the "
-"applications are fully integrated, resulting in faster responses to your "
-"customer needs."
-msgstr ""
-"Tiene la opción de trabajar con servicios de soporte prepagados, lo que "
-"significa que se emite una orden de venta y una factura correspondiente y, "
-"una vez realizado el servicio, se puede deducir el tiempo dedicado. Odoo lo "
-"permite porque las aplicaciones están totalmente integradas, lo que da lugar"
-" a respuestas más rápidas a las necesidades de sus clientes."
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:14
-msgid "Step 1: Set up a helpdesk team"
-msgstr "Paso 1: configurar un equipo de Servicio de asistencia"
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:17
-msgid ""
-"Go to :menuselection:`Helpdesk --> Configuration --> Helpdesk Teams`, create"
-" or edit an existing team, and enable *Timesheet on Ticket* and *Time "
-"Reinvoicing*."
-msgstr ""
-"Vaya a :menuselection:`Servicio de asistencia --> Configuración --> Equipos "
-"de Servicio de asistencia`, cree o edite un equipo existente y habilite las "
-"funciones *Hoja de horas en el ticket* y *Volver a facturar el tiempo*."
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:20
-msgid ""
-"Select or create a project under *Timesheet on Ticket*. The selected/created"
-" is the one at which employees timesheet on by default. However, it can be "
-"ultimately modified on each ticket."
-msgstr ""
-"Seleccione o cree un proyecto en *Hoja de horas en el ticket*. El "
-"seleccionado/creado es aquel en el que los empleados registran sus hojas de "
-"horas de manera predeterminada. Sin embargo, se puede modificar fácilmente "
-"en cada ticket."
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst-1
-msgid ""
-"View of a helpdesk team settings page emphasizing the timesheet on ticket and time\n"
-"reinvoicing features in Odoo Helpdesk"
-msgstr ""
-"Vista de la página de ajustes del equipo de servicio de asistencia, con énfasis las funciones de hojas de horas en el ticket y\n"
-"volver a facturar el tiempo en la aplicación Servicio de asistencia de Odoo"
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:28
-msgid "Step 2: Set up a service"
-msgstr "Paso 2: configurar un servicio"
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:31
-msgid ""
-"Go to :menuselection:`Sales --> Configuration --> Settings` and enable "
-"*Units of Measure* to optionally be able to choose *hours* (for example) as "
-"the unit of measure of your service."
-msgstr ""
-"Vaya a :menuselection:`Ventas --> Configuración --> Ajustes` y habilite "
-"*Unidades de medida* para poder elegir de forma opcional *horas* (por "
-"ejemplo) como unidad de medida de su servicio."
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:33
-msgid ""
-"Then, go to :menuselection:`Sales --> Products --> Products`, create or edit"
-" an existing one, and set its *Product Type* as *Service*."
-msgstr ""
-"Posteriormente, vaya a :menuselection:`Ventas --> Productos --> Productos`, "
-"cree o edite uno existente y configure su *tipo de producto* como *servicio*"
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst-1
-msgid ""
-"View of a product's form emphasizing the product type and unit of measure fields in Odoo\n"
-"Sales"
-msgstr ""
-"Vista de un formulario de producto con énfasis en los campos de tipo de producto y unidad de medida\n"
-"en la aplicación Ventas de Odoo"
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:40
-msgid ""
-"Now, select the invoicing management you would like to have under the "
-"*Sales* tab. We recommend the following configuration:"
-msgstr ""
-"Seleccione la gestión de facturación que desea tener en la pestaña *Ventas*."
-" Recomendamos la siguiente configuración:"
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst-1
-msgid ""
-"View of a product form and the invoicing options under the tab sales in Odoo"
-" Sales"
-msgstr ""
-"Vista de un formulario de producto y las opciones de facturación en la "
-"pestaña de ventas en la aplicación Ventas de Odoo"
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:47
-msgid ""
-"This configuration ensures that the customer is invoiced by the number of "
-"hours predicted in the sales order, meaning that less or extra hours "
-"recorded are not taken into account. It also ensures that every time a sales"
-" order is confirmed, a new task is created under the right project, "
-"automating the process."
-msgstr ""
-"Esta configuración garantiza que se facture al cliente por el número de "
-"horas pronosticadas en la orden de venta, lo que significa que no se tienen "
-"en cuenta las horas adicionales o no usadas. También garantiza que cada vez "
-"que se confirma una orden de venta, se crea una nueva tarea en el proyecto "
-"correspondiente, lo que automatiza el proceso."
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:53
-msgid ""
-"We recommend setting up a specific project, as it was done for this flow "
-"example. The important thing to remember is that the sales order item needs "
-"to be set on the corresponding project or task, in order to reinvoice the "
-"time spent on a ticket."
-msgstr ""
-"Le recomendamos configurar un proyecto en específico, así como se hizo en "
-"este ejemplo. Debe tener en cuenta que el artículo en la orden de venta se "
-"debe establecer en el proyecto/tarea correspondiente, de esta manera, se "
-"podrá volver a facturar el tiempo dedicado en el ticket."
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:58
-msgid "Prevision an invoice and record time"
-msgstr "Previsión de una factura y registro del tiempo"
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:61
-msgid "Step 1: Place an order"
-msgstr "Paso 1: Crear una orden"
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:63
-msgid ""
-"Go to :menuselection:`Sales --> Orders --> Orders` and create one for the "
-"helpdesk service product you have previously set up, with the customer who "
-"needs the ticket to be opened. Set the number of hours needed to assist the "
-"customer and *Confirm* the order."
-msgstr ""
-"Vaya a :menuselection:`Ventas --> Órdenes --> Órdenes` y cree uno para el "
-"producto de servicio de asistencia que configuró previamente, con el cliente"
-" que necesita que se abra el ticket. Establezca el número de horas "
-"necesarias y *Confirme* la orden."
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst-1
-msgid "View of a sales order emphasizing the order lines in Odoo Sales"
-msgstr ""
-"Vista de una orden de venta que destaca las líneas de orden en la aplicación"
-" de Ventas de Odoo"
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:72
-msgid "Step 2: Invoice the customer"
-msgstr "Paso 2: Facturar al cliente"
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:74
-msgid "In *Sales*, select the respective sales order to *Create Invoice*."
-msgstr ""
-"En *Ventas*, seleccione la orden de venta correspondiente para *Crear "
-"factura*."
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst-1
-msgid ""
-"View of a sales order emphasizing the create invoice button in Odoo Sales"
-msgstr ""
-"Vista de una orden de venta en la que se destaca el botón de crear factura "
-"en la aplicación de Ventas de Odoo"
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:82
-msgid "Step 3: Link the task to the ticket"
-msgstr "Paso 3: Vincular la tarea al ticket"
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:84
-msgid ""
-"Now, in *Helpdesk*, create or edit the respective ticket and link it to the "
-"task created by the confirmation of the sales order."
-msgstr ""
-"En la aplicación *Servicio de asistencia* puede crear o editar el ticket "
-"correspondiente y vincularlo a la tarea creada al confirmar la orden de "
-"venta."
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst-1
-msgid "View of a helpdesk ticket emphasizing the field task in Odoo Helpdesk"
-msgstr ""
-"Vista de un ticket de servicio de asistencia que destaca el campo tarea en "
-"la aplicación de Servicio de asistencia de Odoo"
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:92
-msgid "Step 4: Record the time spent"
-msgstr "Paso 4: Registrar el tiempo dedicado"
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:94
-msgid ""
-"Still on the respective helpdesk ticket, record the hours performed under "
-"the *Timesheets* tab."
-msgstr ""
-"En la pestaña *Hojas de horas*, registre las horas dedicadas en el ticket de"
-" servicio de asistencia correspondiente."
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst-1
-msgid ""
-"View of a helpdesk ticket emphasizing the timesheets tab in Odoo Helpdesk"
-msgstr ""
-"Vista de un ticket de servicio de asistencia que destaca la pestaña de hojas"
-" de horas en la aplicación de Servicio de asistencia de Odoo"
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:100
-msgid ""
-"Note that the hours recorded on the ticket form are shown on the *Delivered*"
-" column in the sales order."
-msgstr ""
-"Tenga en cuenta que las horas registradas en el formulario del ticket se "
-"muestran en la columna *Entregado* de la orden de venta."
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst-1
-msgid "View of a sales order emphasizing the delivered column in Odoo Sales"
-msgstr ""
-"Vista de una orden de venta que destaca la columna entregado en la "
-"aplicación de Ventas de Odoo"
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:108
-msgid ""
-"Hours recorded on the ticket are automatically shown in *Timesheets* and on "
-"the dedicated task."
-msgstr ""
-"Las horas registradas en el ticket se muestran automáticamente en *Hojas de "
-"horas* y en la tarea correspondiente."
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:111
-msgid ":doc:`reinvoice_from_project`"
-msgstr ":doc:`reinvoice_from_project`"
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:112
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:104
-msgid ""
-":doc:`/applications/inventory_and_mrp/inventory/management/products/uom`"
-msgstr ""
-":doc:`/applications/inventory_and_mrp/inventory/management/products/uom`"
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:3
-msgid "Invoice Time Spent on Tickets (Postpaid Support Services)"
-msgstr ""
-"Facturación del tiempo dedicado en los tickets (servicio de asistencia de "
-"pospago)"
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:5
-msgid ""
-"The :guilabel:`Timesheets` integration provides more control and "
-"transparency over how clients are charged, and what they're specifically "
-"billed for."
-msgstr ""
-"La integración :guilabel:`Hojas de horas` proporciona más control y "
-"transparencia sobre cómo se cobra a los clientes y qué se les factura de "
-"forma específica."
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:8
-msgid ""
-"In Odoo, the Helpdesk agent can use the ticket to record timesheets. Once a "
-"ticket is solved, the client can be billed for the time spent on the ticket."
-" Odoo will pull from the ticket's timesheet to accurately bill the client."
-msgstr ""
-"En Odoo, el agente de servicio de asistencia puede usar el ticket para "
-"registrar las hojas de horas. Una vez que se resuelva el ticket, el cliente "
-"puede facturar el tiempo dedicado en el ticket. Odoo sacará la información "
-"correcta de las hojas de horas."
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:15
-msgid ""
-"To turn on the :guilabel:`Timesheets` feature, go to "
-":menuselection:`Helpdesk --> Configuration --> Helpdesk Teams`, select a "
-"Helpdesk team, and then, click :guilabel:`Edit`. Next, enable the options "
-":guilabel:`Timesheets` and :guilabel:`Time Billing`. Then, click "
-":guilabel:`Save` to apply these changes to the Helpdesk team settings."
-msgstr ""
-"Para activar la función :guilabel:`Hojas de horas`, vaya a :menuselection: "
-"`Servicio de asistencia --> Configuración --> Equipos del servicio de "
-"asistencia`, seleccione un equipo del servicio de asistencia y, a "
-"continuación, haga clic en :guilabel:`Editar`. Active las opciones "
-":guilabel:`Hojas de horas` y :guilabel:`Facturación de horas`. "
-"Posteriormente, haga clic en :guilabel:`Guardar` para aplicar estos cambios "
-"a la configuración del equipo de servicio de asistencia."
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:20
-msgid ""
-"Once the :guilabel:`Timesheets` feature is enabled, a :guilabel:`Project` "
-"drop-down option will appear below :guilabel:`Timesheets`. The "
-":guilabel:`Project` drop-down option will automatically be set to a project "
-"that Odoo created for the Helpdesk team. The tickets' timesheets will be "
-"stored in the selected project."
-msgstr ""
-"Una vez que la función :guilabel:`Hojas de horas` esté activada, aparecerá "
-"la opción desplegable :guilabel:`Proyecto` debajo de :guilabel:`Hojas de "
-"horas`. Se establecerá de manera automática la opción :guilabel:`Proyecto` "
-"en un proyecto que Odoo haya creado para el equipo de Servicio de "
-"asistencia. A su vez, se almacenarán las hojas de horas de los tickets en el"
-" proyecto seleccionado."
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:26
-msgid "Create a sales order"
-msgstr "Crear una orden de venta"
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:28
-msgid ""
-"After a ticket comes into the pipeline, go to :menuselection:`Sales --> "
-"Create`. Then, add the customer from the ticket to the :guilabel:`Customer` "
-"field in the new quotation. In the :guilabel:`Order Lines` tab, create or "
-"select a product to charge the customer for the time spent on their Helpdesk"
-" ticket."
-msgstr ""
-"Una vez que un ticket entre en el flujo, vaya a :menuselection:`Ventas --> "
-"Crear`. Añada el cliente del ticket al campo :guilabel: `Cliente` de la "
-"nueva cotización. En la pestaña :guilabel:`Líneas de orden`, cree o "
-"seleccione un producto para cobrar al cliente por el tiempo empleado en su "
-"ticket de servicio de asistencia."
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:33
-msgid ""
-"If creating a new product from the sales order form, first give the product "
-"a name by typing it in the :guilabel:`Product` column. Then, click "
-":guilabel:`Create and edit`."
-msgstr ""
-"Si crea un nuevo producto desde el formulario de orden de venta, primero "
-"debe nombrarlo en la columna :guilabel:`Producto`. Haga clic en "
-":guilabel:`Crear y editar`."
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:36
-msgid ""
-"First, in the :guilabel:`General Information` tab, set the "
-":guilabel:`Product Type` to :guilabel:`Service` and the :guilabel:`Sales "
-"Price` to the Helpdesk agent's service rate. Then, set the "
-":guilabel:`Invoicing Policy` to :guilabel:`Based on Timesheets`. Finally, "
-"click :guilabel:`Save` to create the new product and add it to the "
-"quotation."
-msgstr ""
-"En la pestaña :guilabel:`Información general` defina el :guilabel:`Tipo de "
-"producto` como :guilabel:`Servicio` y el :guilabel:`Precio de venta` como la"
-" tarifa de servicio del personal del servicio de asistencia. Después, "
-"establezca la :guilabel:`Política de facturación` a :guilabel:`Basado en "
-"hojas de horas`. Por último, haga clic en :guilabel:`Guardar` para crear el "
-"nuevo producto y añadirlo a la cotización."
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:41
-msgid ""
-"Once the product is added, click :guilabel:`Confirm` to turn the quotation "
-"into a sales order."
-msgstr ""
-"Una vez que añada el producto, haga clic en :guilabel:`Confirmar` para "
-"convertir la cotización en orden de venta."
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst-1
-msgid "Create a sales order and add a product."
-msgstr "Crear una orden de venta y añada un producto."
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:48
-msgid "Record a timesheet"
-msgstr "Registrar una hoja de horas"
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:50
-msgid ""
-"To record a timesheet, jump back to the Helpdesk ticket by going to the "
-":guilabel:`Helpdesk` dashboard, clicking :guilabel:`Tickets` on the team's "
-"card, and locating the correct ticket. Then, click :guilabel:`Edit` and use "
-"the :guilabel:`Timesheets` tab to record the time spent on the ticket."
-msgstr ""
-"Para registrar una hoja de horas, regrese al ticket del servicio de "
-"asistencia en el panel :guilabel:`Servicio de asistencia`, haga clic en "
-":guilabel:`Tickets` en la tarjeta del equipo y busque el ticket "
-"correspondiente. Haga clic en :guilabel:`Editar` y utilice la pestaña "
-":guilabel:`Hojas de horas` para registrar el tiempo dedicado al ticket."
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst-1
-msgid "Record time spent on a ticket."
-msgstr "Registrar el tiempo dedicado en el ticket."
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:60
-msgid ""
-"The ticket's timesheets can be recorded before or after the sales order is "
-"made, the order doesn't matter."
-msgstr ""
-"Se pueden registrar las hojas de horas del ticket antes o después de hacer "
-"la orden de venta, el orden no es importante."
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:64
-msgid "Link the Helpdesk ticket to the SO"
-msgstr "Vincule el ticket del servicio de asistencia a una orden de venta"
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:66
-msgid ""
-"To link the :guilabel:`Sales Order` to the ticket, start on the ticket form "
-"and click :guilabel:`Edit`. Next, select the :guilabel:`Sales Order` that "
-"was created earlier from the :guilabel:`Sales Order Item` drop-down menu. "
-"Odoo will automatically filter the options to only show sales orders that "
-"are connected to the ticket's customer. Lastly, click :guilabel:`Save` to "
-"connect the ticket and the :guilabel:`Sales Order Item`."
-msgstr ""
-"Para vincular la :guilabel:`Orden de venta` al ticket, vaya al formulario "
-"del ticket y haga clic en :guilabel:`Editar`. Seleccione la :guilabel:`Orden"
-" de venta`  creada desde el menú desplegable del :guilabel:`Artículo de la "
-"orden de venta`. De esta manera Odoo filtrará las opciones de manera que "
-"solo se mostrarán las órdenes de venta que estén vinculadas al ticket del "
-"cliente. Por último, haga clic en :guilabel:`Guardar` para vincular el "
-"ticket y el :guilabel:`Artículo de la orden de venta`."
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst-1
-msgid "Link the SO item to the ticket."
-msgstr "Vincular el artículo de la orden de venta al ticket."
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:77
-msgid ""
-"The :guilabel:`Sales Order Item` can be connected to the ticket before or "
-"after any timesheets are recorded, the order doesn't matter."
-msgstr ""
-"Se puede vincular el :guilabel:`Artículo de orden de venta` al ticket antes "
-"o después de haber registrado cualquier hoja de horas, el orden no importa."
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:81
-msgid "Modify billing rates"
-msgstr "Modificar tasas de facturación"
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:83
-msgid ""
-"If a timesheet entry is recorded, but the agent does not want to bill the "
-"client for that time, go to the :guilabel:`Timesheets` tab and toggle on the"
-" visibility of the :guilabel:`Sales Order Item` column. When filling out the"
-" information for the timesheet entry, make sure to leave the non-billable "
-"timesheet entry's :guilabel:`Sales Order Item` field blank."
-msgstr ""
-"Si se registra una entrada de hoja de horas, pero el agente no desea "
-"facturar al cliente por ese tiempo, vaya a la pestaña :guilabel:`Hoja de "
-"horas` y active la visibilidad de la columna :guilabel:`Artículo de la orden"
-" de venta`. Al completar la información de la entrada de hoja de horas, "
-"asegúrese de dejar en blanco el campo :guilabel:`Artículo de la orden de "
-"venta` de la entrada de hojas de horas no facturables."
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:88
-msgid ""
-"If the agent wants to charge a different rate for a timesheet entry, first, "
-"add a new product to the connected :abbr:`SO (Sales Order)` priced at the "
-"new rate. Then, select the new product in the timesheet entry's "
-":guilabel:`Sales Order Item` field."
-msgstr ""
-"Si el agente desea cobrar un precio diferente para una entrada de hoja de "
-"horas, primero debe añadir un nuevo producto a la :abbr:`Orden de venta` que"
-" tenga el precio deseado. Después, seleccione el nuevo producto en el campo "
-":guilabel:`Artículo de la orden de venta` de la entrada de la hoja de horas."
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:93
-msgid "Create the invoice"
-msgstr "Crear factura"
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:95
-msgid ""
-"When the Helpdesk ticket is completed and the client is ready to be billed "
-"for time, begin by clicking the :guilabel:`Sales Order` smart button on the "
-"ticket form to navigate to the sales order. The :guilabel:`Delivered` column"
-" should match the number of hours recorded on the ticket's timesheet. After "
-"checking and filling out the relevant information, click :guilabel:`Create "
-"Invoice` to bill the client for the time spent on the ticket. Odoo will "
-"automatically generate an invoice to send to the client and the Helpdesk "
-"ticket can officially be closed."
-msgstr ""
-"Cuando se haya resuelto el ticket del servicio de asistencia y el cliente "
-"esté listo para recibir la factura por el tiempo dedicado, comience por "
-"hacer clic en el botón inteligente :guilabel:`Orden de venta` en el "
-"formulario del ticket para acceder a la orden de venta. La columna "
-":guilabel: `Entregado` debe coincidir con el número de horas registradas en "
-"la hoja de horas del ticket. Después de revisar y completar la información "
-"correspondiente, haga clic en :guilabel:`Crear factura` para facturar al "
-"cliente por el tiempo dedicado al ticket. De esta manera, Odoo generará "
-"automáticamente una factura para el cliente y el ticket se podrá marcar como"
-" cerrado."
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:103
-msgid ":doc:`invoice_time`"
-msgstr ":doc:`invoice_time`"
 
 #: ../../content/applications/services/project.rst:8
 msgid "Project"
@@ -4233,7 +4220,7 @@ msgstr ""
 
 #: ../../content/services/support/what_can_i_expect.rst:37
 msgid ":ref:`upgrade/sla`"
-msgstr ""
+msgstr ":ref:`upgrade/sla`"
 
 #: ../../content/services/support/what_can_i_expect.rst:38
 msgid ":doc:`/administration/maintain/supported_versions`"

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-15 06:38+0000\n"
+"POT-Creation-Date: 2023-06-02 08:43+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
 "Last-Translator: Benson <Benson.Dr@Gmail.com>, 2023\n"
 "Language-Team: Chinese (Taiwan) (https://app.transifex.com/odoo/teams/41243/zh_TW/)\n"
@@ -311,8 +311,6 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/internal.rst:37
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:50
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:45
 msgid "Receipts"
 msgstr "收據"
 
@@ -957,7 +955,6 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:16
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:18
 msgid "Application configuration"
 msgstr ""
 
@@ -969,7 +966,6 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:26
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:28
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/operation/labels.rst:68
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/third_party_shipper.rst:90
 msgid "Product configuration"
@@ -1035,302 +1031,1024 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:3
-msgid "Manage lots of identical products"
+msgid "Use lots to manage groups of products"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:5
 msgid ""
-"Lots are useful for products you receive in great quantity and for which a "
-"lot number can help in reporting, quality controls, or any other info. Lots "
-"will help identify a number of pieces having, for instance, a production "
-"fault. It can be useful for a batch production of clothes or food."
+"*Lots* are one of the two ways to identify and track products in Odoo. A lot"
+" usually indicates a specific batch of an item that was received, is "
+"currently stored, or was shipped from a warehouse, but can also pertain to a"
+" batch of products manufactured in-house, as well."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:11
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:9
 msgid ""
-"Odoo has the capacity to manage lots, ensuring compliance with the "
-"traceability requirements imposed by the majority of industries."
+"Manufacturers assign lot numbers to groups of products that have common "
+"properties; this can lead to multiple goods sharing the same lot number. "
+"This helps to identify a number of products in a single group, and allows "
+"for end-to-end traceability of these products through each step in their "
+"lifecycles."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:14
 msgid ""
-"The double-entry management in Odoo enables you to run very advanced "
-"traceability."
+"Lots are useful for products that are manufactured or received in large "
+"quantities (such as clothes or food), and can be used to trace a product "
+"back to a group. This is especially useful when managing product recalls or "
+"expiration dates."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:18
-msgid "Setting Up"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:21
-msgid "Application Configuration"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:23
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:19
 msgid ""
-"First, you need to activate the tracking of lot numbers. To do so, go to "
-":menuselection:`Inventory --> Configuration --> Settings` and tick *Lots & "
-"Serial Numbers*. Then, click on save."
+":doc:`/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:31
-msgid "Product Configuration"
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:22
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:20
+msgid "Enable lots & serial numbers"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:33
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:24
 msgid ""
-"Now, you have to configure which products you want to track by serial "
-"numbers."
+"To track products using lots, the *Lots & Serial Numbers* feature must be "
+"enabled. Go to the :menuselection:`Inventory app --> Configuration --> "
+"Settings`, scroll down to the :guilabel:`Traceability` section, and click "
+"the box next to :guilabel:`Lots & Serial Numbers`. Then, click the "
+":guilabel:`Save` button to save changes."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst-1
+msgid "Enabled lots and serial numbers feature in inventory settings."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:34
+msgid "Track products by lots"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:36
 msgid ""
-"Go to :menuselection:`Master Data --> Products` and open the product of your"
-" choice. There, click on *Edit* and select *Tracking by Lots* in the "
-"inventory tab."
+"Once the :guilabel:`Lots & Serial Numbers` setting has been activated, "
+"individual products can now be configured to be tracked using lots. To do "
+"this, go to the :menuselection:`Inventory app --> Products --> Products`, "
+"and choose a product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:47
-msgid "Manage Lots"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:52
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:40
 msgid ""
-"In order to receive a product tracked by lots, you have to specify its lot "
-"numbers. You have several ways of doing so:"
+"Once on the product form, click :guilabel:`Edit` to make changes to the "
+"form. Then, click the :guilabel:`Inventory` tab. In the "
+":guilabel:`Traceability` section, click :guilabel:`By Lots`. Then, click "
+":guilabel:`Save` to save changes. Existing or new lot numbers can now be "
+"assigned to newly-received or manufactured batches of this product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:55
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:65
-msgid "Manually assign the different lot numbers"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:57
-msgid "Copy/paste lot numbers from an Excel file"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:59
-msgid "First, you need to open the detailed operations of your picking."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:67
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:46
 msgid ""
-"When opening the detailed operations, you can click on *Add a line*. Then, "
-"you will be able to fill the lot number in. Once done, you can click on *Add"
-" a line* again to register a new lot number."
+"If a product has stock on-hand prior to activating tracking by lots or "
+"serial numbers, an inventory adjustment might need to be performed to assign"
+" lot numbers to the existing stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst-1
+msgid "Enabled tracking by lots feature on product form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:54
+msgid "Create new lots for products already in stock"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:56
+msgid ""
+"New lots can be created for products already in stock with no assigned lot "
+"number. To do this, go to the :menuselection:`Inventory app --> Products -->"
+" Lots/Serial Numbers`, and click :guilabel:`Create`. Doing so reveals a "
+"separate page where a new :guilabel:`Lot/Serial Number` is generated "
+"automatically."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:62
+msgid ""
+"While Odoo automatically generates a new :guilabel:`Lot/Serial Number` to "
+"follow the most recent number, it can be edited and changed to any desired "
+"number, by clicking the line under the :guilabel:`Lot/Serial Number` field, "
+"and changing the generated number."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:66
+msgid ""
+"Once the new :guilabel:`Lot/Serial Number` is generated, click the blank "
+"field next to :guilabel:`Product` to reveal a drop-down menu. From this "
+"menu, select the product to which this new number will be assigned."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:70
+msgid ""
+"This form also provides the option to adjust the :guilabel:`Quantity`, "
+"assign a unique :guilabel:`Internal Reference` number (for traceability "
+"purposes), and assign this specific lot or serial number configuration to a "
+"specific website in the :guilabel:`Website` field (if working in a multi-"
+"website environment)."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:75
-msgid "Copy/paste lot number from an Excel file"
+msgid ""
+"A detailed description of this specific lot or serial number can also be "
+"added in the :guilabel:`Description` tab below."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:77
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:78
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:79
 msgid ""
-"Once the spreadsheet containing the lot numbers you received from your "
-"supplier and copy the list. Then, you can paste them in the *Lot/Serial "
-"Number Name* column for Odoo to automatically create the necessary lines. "
-"After that, you will have to manually enter the number of products that are "
-"contained in each one of the lots."
+"When all desired configurations are complete, click the :guilabel:`Save` "
+"button to save all changes."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst-1
+msgid "New lot number creation form with assigned product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:84
+msgid ""
+"After a new lot number has been created, saved, and assigned to the desired "
+"product, navigate back to the product form in the :menuselection:`Inventory`"
+" app, by going to :menuselection:`Products --> Products`, and selecting the "
+"product to which this newly-created lot number was just assigned."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:88
+msgid ""
+"On that product's detail form, click the :guilabel:`Lot/Serial Numbers` "
+"smart button to view the new lot number. When additional quantity of this "
+"product is received or manufactured, this new lot number can be selected and"
+" assigned to it."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:93
-msgid "Operation Types"
-msgstr "作業類型"
+msgid "Manage lots for shipping and receiving"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:95
 msgid ""
-"Of course, you also have the possibility to define how you will manage lots "
-"for each operation type. To do so, open the *Inventory* app and go to "
-":menuselection:`Configuration --> Operation Types`."
+"Lot numbers can be assigned for both **incoming** and **outgoing** goods. "
+"For incoming goods, lot numbers are assigned directly on the purchase order "
+"form. For outgoing goods, lot numbers are assigned directly on the sales "
+"order form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:99
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:100
+msgid "Manage lots on receipts"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:102
 msgid ""
-"For each type (receipts, internal transfers, deliveries, …), you can decide "
-"if you allow to create new lot numbers or only use existing ones. By "
-"default, the creation of new lots is only allowed at product reception, and "
-"using existing lot numbers isn’t allowed in this operation. If you have "
-"inter-warehouse transfers and track products by lots, it can be useful to "
-"allow using existing lot numbers in receipts too."
+"Assigning lot numbers to **incoming** goods can be done directly from the "
+"purchase order (PO)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:104
+msgid ""
+"To create a :abbr:`PO (purchase order)`, go to :menuselection:`Purchase app "
+"--> Create`. Doing so reveals a new, blank request for quotation (RFQ) form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:107
+msgid ""
+"On this :abbr:`RFQ (request for quotation)`, fill out the necessary "
+"information by adding a :guilabel:`Vendor`, and adding the desired products "
+"to the :guilabel:`Product` lines, by clicking :guilabel:`Add a product` "
+"(under the :guilabel:`Products` tab)."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:111
+msgid ""
+"Choose the desired quantity of the product to order by changing the number "
+"in the :guilabel:`Quantity` column."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:114
+msgid ""
+"Once the :abbr:`RFQ (request for quotation)` has been filled out, click "
+":guilabel:`Confirm Order`. When the :abbr:`RFQ (request for quotation)` is "
+"confirmed, it becomes a :guilabel:`Purchase Order`, and a "
+":guilabel:`Receipt` smart button appears. Click the :guilabel:`Receipt` "
+"smart button to be taken to the warehouse receipt form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:120
+msgid ""
+"Clicking :guilabel:`Validate` before assigning a lot number to the ordered "
+"product quantities will result in a :guilabel:`User Error` pop-up. The pop-"
+"up requires entry of a lot or serial number for the ordered products. The "
+":abbr:`RFQ (request for quotation)` **cannot** be validated without a lot "
+"number being assigned."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst-1
+msgid "Add lot/serial number user error popup."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:129
+msgid ""
+"From here, click the :guilabel:`Additional Options` menu, represented by a "
+":guilabel:`hamburger (four horizontal lines)` icon, located to the right of "
+"the :guilabel:`Unit of Measure` column in the :guilabel:`Operations` tab). "
+"Clicking that icon reveals a :guilabel:`Detailed Operations` pop-up."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:133
+msgid ""
+"In this pop-up, configure a number of different fields, including the "
+"assignation of a lot number, under the :guilabel:`Lot/Serial Number Name` "
+"column, located at the bottom of the pop-up."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:136
+msgid ""
+"There are two ways to assign lot numbers: **manually** and **copy/paste**."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:138
+msgid ""
+"**Manually assign lot numbers**: Click :guilabel:`Add a line` and choose the"
+" location the products will be stored in under the :guilabel:`To` column. "
+"Then, type a new :guilabel:`Lot Number Name` and set the :guilabel:`Done` "
+"quantity."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:0
+msgid "Assign lot number detailed operations popup."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:147
+msgid ""
+"If quantities should be processed in multiple locations and lots, click "
+":guilabel:`Add a line` and type a new :guilabel:`Lot Number Name` for "
+"additional quantities. Repeat until the :guilabel:`Quantity Done` matches "
+"the :guilabel:`Demand`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:151
+msgid ""
+"**Copy/paste lot numbers from a spreadsheet**: Populate a spreadsheet with "
+"all of the lot numbers received from the supplier (or manually chosen to "
+"assign upon receipt). Then, copy and paste them in the :guilabel:`Lot/Serial"
+" Number Name` column. Odoo will automatically create the necessary number of"
+" lines based on the amount of numbers pasted in the column. From here, the "
+":guilabel:`To` locations and :guilabel:`Done` quantities can be manually "
+"entered in each of the lot number lines."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:0
+msgid "List of lot numbers copied on excel spreadsheet."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:161
+msgid ""
+"Once all product quantities have been assigned a lot number, click "
+":guilabel:`Confirm` to close the pop-up. Then, click :guilabel:`Validate`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:164
+msgid ""
+"A :guilabel:`Traceability` smart button appears upon validating the receipt."
+" Click the :guilabel:`Traceability` smart button to see the updated "
+":guilabel:`Traceability Report`, which includes: a :guilabel:`Reference` "
+"document, the :guilabel:`Product` being traced, the :guilabel:`Lot/Serial #`"
+" assigned, and more."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:170
+msgid "Manage lots on delivery orders"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:172
+msgid ""
+"Assigning lot numbers to **outgoing** goods can be done directly from the "
+"sales order (SO)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:174
+msgid ""
+"To create an :abbr:`SO (sales order)`, go to the :menuselection:`Sales app "
+"--> Create`. Doing so reveals a new, blank quotation form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:177
+msgid ""
+"On this blank quotation form, fill out the necessary information by adding a"
+" :guilabel:`Customer`, and adding products to the :guilabel:`Product` lines "
+"(in the :guilabel:`Order Lines` tab) by clicking :guilabel:`Add a product`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:181
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:219
+msgid ""
+"Then, choose the desired quantity to sell by changing the number in the "
+":guilabel:`Quantity` column."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:183
+msgid ""
+"Once the quotation has been filled out, click the :guilabel:`Confirm` button"
+" to confirm the quotation. When the quotation is confirmed, it becomes an "
+":abbr:`SO (sales order)`, and a :guilabel:`Delivery` smart button appears."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:187
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:225
+msgid ""
+"Click the :guilabel:`Delivery` smart button to view the warehouse receipt "
+"form for that specific :abbr:`SO (sales order)`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:190
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:130
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:228
+msgid ""
+"From here, click the :guilabel:`Additional Options` menu, represented by a "
+"`hamburger` icon (four horizontal lines, located to the right of the "
+":guilabel:`Unit of Measure` column in the :guilabel:`Operations` tab). "
+"Clicking that icon reveals a :guilabel:`Detailed Operations` pop-up."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:194
+msgid ""
+"In the pop-up, a :guilabel:`Lot/Serial Number` will be chosen by default, "
+"with the full :guilabel:`Reserved` quantity taken from that specific lot (if"
+" there is enough stock in that particular lot)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:198
+msgid ""
+"If there is insufficient stock in that lot, or if partial quantities of the "
+":guilabel:`Demand` should be taken from multiple lots, change the quantity "
+"in the :guilabel:`Done` column to only include that specific part of the "
+"total quantity."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:203
+msgid ""
+"The lot automatically chosen for delivery orders varies, depending on the "
+"selected removal strategy (:abbr:`FIFO (First In, First Out)`, :abbr:`LIFO "
+"(Last In, First Out)`, or :abbr:`FEFO (First Expiry, First Out)`). It will "
+"also depend on the quantity ordered, and if there is enough quantity in one "
+"lot to fulfill the order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:209
+msgid ""
+":doc:`/applications/inventory_and_mrp/inventory/routes/strategies/removal`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:211
+msgid ""
+"Then, click :guilabel:`Add a line`, select an additional (different) "
+":guilabel:`Lot/Serial Number`, apply the rest of the :guilabel:`Done` "
+"quantities, and click :guilabel:`Confirm` to close the pop-up. Lastly, click"
+" the :guilabel:`Validate` button to deliver the products."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst-1
+msgid "Detailed operations popup for source lot number on sales order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:219
+msgid ""
+"Upon validating the delivery order, a :guilabel:`Traceability` smart button "
+"appears. Click the :guilabel:`Traceability` smart button to see the updated "
+":guilabel:`Traceability Report`, which includes a :guilabel:`Reference` "
+"document, the :guilabel:`Product` being traced, the :guilabel:`Date`, and "
+"the :guilabel:`Lot/Serial #` assigned."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:224
+msgid ""
+"The :guilabel:`Traceability Report` can also include a :guilabel:`Reference`"
+" receipt from the previous purchase order, if the product quantities shared "
+"the same lot number."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:228
+msgid "Manage lots for different operations types"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:230
+msgid ""
+"In Odoo, the creation of new lots is only allowed upon **receiving** "
+"products from a purchase order, by default. **Existing** lot numbers cannot "
+"be used."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:233
+msgid ""
+"For sales orders, the opposite is true: new lot numbers cannot be created on"
+" the delivery order, only existing lot numbers can be used."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:236
+msgid ""
+"To change the ability to use new (or existing) lot numbers on any operation "
+"type, go to the :menuselection:`Inventory app --> Configuration --> "
+"Operations Types`, and select the desired :guilabel:`Operation Type`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:240
+msgid ""
+"For :guilabel:`Receipts`, found on the :menuselection:`Operations Types` "
+"page, the :guilabel:`Use Existing Lots/Serial Numbers` option can be "
+"enabled, by clicking :guilabel:`Edit`, and then clicking the checkbox beside"
+" the :guilabel:`Use Existing Lots/Serial Numbers` option (in the "
+":guilabel:`Traceability` section). Lastly, click the :guilabel:`Save` button"
+" to save the changes."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:245
+msgid ""
+"For :guilabel:`Delivery Orders`, the :guilabel:`Create New Lots/Serial "
+"Numbers` option can be enabled, by clicking :guilabel:`Edit`, and clicking "
+"the checkbox beside the :guilabel:`Create New Lots/Serial Numbers` option. "
+"Be sure to click the :guilabel:`Save` button to save all changes."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst-1
+msgid "Enabled traceability setting on operations type form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:254
+msgid ""
+"For inter-warehouse transfers involving products tracked by lots, it can be "
+"useful to enable the :guilabel:`Use Existing Lots/Serial Numbers` option for"
+" warehouse receipts."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:258
 msgid "Lots traceability"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:113
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:260
 msgid ""
-"The lot number given to the products allows you to keep track of where they "
-"were received, put in stock, to whom they were sold and where they were "
-"shipped to."
+"Manufacturers and companies can refer to traceability reports to see the "
+"entire lifecycle of a product: where (and when) it came from, where it was "
+"stored, and who (and when) it went to."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:117
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:263
 msgid ""
-"To track an item, open the *Inventory* module and, in :menuselection:`Master"
-" Data --> Lots/Serial Numbers`, click on the lot number corresponding to "
-"your search."
+"To see the full traceability of a product, or group by lots, go to the "
+":menuselection:`Inventory app --> Products --> Lots/Serial Numbers`. Doing "
+"so reveals the :menuselection:`Lots/Serial Numbers` dashboard."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:124
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:267
 msgid ""
-"When you open the *Traceability* information, you see in which documents the"
-" lot number has been used."
+"From here, products with lot numbers assigned to them will be listed by "
+"default, and can be expanded to show the lot numbers those products have "
+"assigned to them."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:130
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:270
 msgid ""
-"Now, if you want to locate the lot number, you can do so by clicking on the "
-"*Location* stat button."
+"To group by lots (or serial numbers), begin by removing any filters in the "
+"search bar. Then, click the :guilabel:`Group By` drop-down, select "
+":guilabel:`Add Custom Group`, and select :guilabel:`Lot/Serial Number` from "
+"the drop-down menu. Then, click :guilabel:`Apply`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:274
+msgid ""
+"Doing so displays all existing lots and serial numbers, and can be expanded "
+"to show all quantities of products with that assigned number."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst-1
+msgid "Lots and serial numbers traceability report."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:282
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:317
+msgid ""
+":doc:`/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/differences`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:3
-msgid "Work with serial numbers"
+msgid "Use serial numbers to track products"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:5
 msgid ""
-"To track products with serial numbers, you can use the serial number "
-"tracking. With them, you can track the current location of the product and, "
-"when the products are moved from one location to another, the system will "
-"automatically identify the current location of the product, based on its "
-"last movement."
+"*Serial numbers* are one of the two ways to identify and track products in "
+"Odoo. A serial number is a unique identifier assigned incrementally (or "
+"sequentially) to an item or product, used to distinguish it from other items"
+" and products."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:11
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:9
 msgid ""
-"If you want to do it or run very advanced traceability, the Odoo double-"
-"entry management is the feature you need."
+"Serial numbers can consist of many different types of characters: they can "
+"be strictly numerical, they can contain letters and other typographical "
+"symbols, or they can be a mix of all of the above."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:15
-msgid "Configurations"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:20
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:12
 msgid ""
-"First, you need to activate the serial numbers tracking. To do so, go to "
-":menuselection:`Configuration --> Settings` in the *Inventory* application. "
-"Then, enable the feature and hit save."
+"The goal of assigning serial numbers to individual products is to make sure "
+"that every item's history is identifiable when it travels through the supply"
+" chain. This can be especially useful for manufacturers that provide after-"
+"sales services to products that they sell and deliver."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:30
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:17
 msgid ""
-"Now, you have to configure the products you want to track by serial numbers."
-" To do so, go to :menuselection:`Master Data --> Products` and open the "
-"product of your choice. Edit it and select *Tracking By Unique Serial "
-"Number* in the *Inventory tab*. Then, click on save."
+":doc:`/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:42
-msgid "Manage Serial Numbers"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:47
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:22
 msgid ""
-"To receive a product that is tracked by serial number, you have to specify "
-"its serial number. Of course, you have several ways of doing so:"
+"To track products using serial numbers, the :guilabel:`Lots & Serial "
+"Numbers` feature must be enabled. To enable this, go to "
+":menuselection:`Inventory app --> Configuration --> Settings`, scroll down "
+"to the :guilabel:`Traceability` section, and click the box next to "
+":guilabel:`Lots & Serial Numbers`. Remember to click the :guilabel:`Save` "
+"button to save changes."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst-1
+msgid "Enabled lots and serial numbers setting."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:32
+msgid "Configure serial number tracking on products"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:34
+msgid ""
+"Once the :guilabel:`Lots & Serial Numbers` setting has been activated, "
+"individual products can now be tracked using serial numbers. To configure "
+"this, go to :menuselection:`Inventory app --> Products --> Products`, and "
+"choose a desired product to track."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:38
+msgid ""
+"Once on the product form, click :guilabel:`Edit`, and click the "
+":guilabel:`Inventory` tab."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:40
+msgid ""
+"Once on the product form, click :guilabel:`Edit`, navigate to the "
+":guilabel:`Inventory` tab, and scroll to the :guilabel:`Traceability` "
+"section. Then, select the :guilabel:`By Unique Serial Number` option, and "
+"click :guilabel:`Save` to save the changes. Existing or new serial numbers "
+"can now be selected and assigned to newly-received or manufactured batches "
+"of this product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst-1
+msgid "Enabled serial number tracking on product form."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:50
-msgid "Manual assignation"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:52
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:73
-msgid "Multi-assignation"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:54
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:89
-msgid "Copy/pasting from an Excel file"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:56
 msgid ""
-"Whatever could be your favorite way to assign serial numbers, you firstly "
-"need to open the detailed operations of your picking."
+"If a product doesn't have a serial number assigned to it, a user error pop-"
+"up window will appear. The error message states that the product(s) in stock"
+" have no lot/serial number. However, a lot/serial number can be assigned to "
+"the product by making an inventory adjustment."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:55
+msgid "Create new serial numbers for products already in stock"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:57
+msgid ""
+"New serial numbers can be created for products already in stock with no "
+"assigned serial number. To do this, go to :menuselection:`Inventory --> "
+"Products --> Lots/Serial Numbers`, and click :guilabel:`Create`. Doing so "
+"reveals a blank lots/serial numbers form. On this form, a new "
+":guilabel:`Lot/Serial Number` is generated automatically."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:63
-msgid "Manual assignation of the different serial numbers"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:65
 msgid ""
-"When opening the detailed operations, you can click on *Add a line*. Then, "
-"you will be able to fill in the serial number field. Once done, you can "
-"click again on *Add a line* to register a new serial number."
+"While Odoo automatically generates a new lot/serial number to follow the "
+"most recent number, it can be edited and changed to any desired number, by "
+"clicking the line under the :guilabel:`Lot/Serial Number` field, and "
+"changing the generated number."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:75
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:67
 msgid ""
-"By using the multi-assignation of serial numbers, Odoo will automatically "
-"create the necessary lines. To do so, you have to enter the first serial "
-"number of your set and the number of products you have to assign a serial "
-"number to."
+"Once the :guilabel:`Lot/Serial Number` is generated, click the blank field "
+"next to :guilabel:`Product` to reveal a drop-down menu. From this menu, "
+"select the product to which this new number will be assigned."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:80
-msgid "Once done, click on *Assign Serial Numbers* and Odoo will do the rest."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:91
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:71
 msgid ""
-"To use copy/pasting, open the spreadsheet containing the serial numbers you "
-"received and copy the list. Then, past them in the *Lot/Serial Number Name* "
-"column of the wizard. Doing so, Odoo will automatically create the lines you"
-" need."
+"This form also provides the option to adjust the :guilabel:`Quantity`, to "
+"assign a unique :guilabel:`Internal Reference` number (for traceability "
+"purposes), and to assign this specific lot/serial number configuration to a "
+"specific website in the :guilabel:`Website` field (if working in a multi-"
+"website environment)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:106
-msgid "Operation types"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:108
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:76
 msgid ""
-"You also have the possibility to define how you will manage lots for each "
-"operation type. To define it, go to :menuselection:`Configuration --> "
-"Operation Types` in the *Inventory* app."
+"A detailed description of this specific lot/serial number can also be added "
+"in the :guilabel:`Description` tab below."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:112
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst-1
+msgid "New serial number created for existing product stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:85
 msgid ""
-"For each type, you can decide if you allow the creation of new lot numbers "
-"or want to use existing ones. By default, the creation of new lots is only "
-"allowed at product reception."
+"After a new serial number has been created, assigned to the desired product,"
+" and saved, navigate back to the product form, by going to "
+":menuselection:`Products --> Products`, and selecting the product that this "
+"newly-created serial number was just assigned to."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:120
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:89
 msgid ""
-"If you have inter-warehouse transfers and track products by lots, it can be "
-"useful to allow using existing lot numbers in receipts too."
+"On that product's detail form, click the :guilabel:`Lot/Serial Numbers` "
+"smart button to view the new serial number."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:124
-msgid "Serial Number traceability"
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:93
+msgid "Manage serial numbers for shipping and receiving"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:95
 msgid ""
-"Using serial numbers allows you to keep track of where the products were "
-"received, put in stock, to whom they were sold, and where they were shipped "
-"to."
+"Serial numbers can be assigned for both **incoming** and **outgoing** goods."
+" For incoming goods, serial numbers are assigned directly on the purchase "
+"order form. For outgoing goods, serial numbers are assigned directly on the "
+"sales order form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:130
-msgid ""
-"Tracking an item is easy: open the *Inventory* app, and go to "
-":menuselection:`Master Data --> Lots/Serial Numbers` and click on the serial"
-" number corresponding to your search. Then, open the *Traceability* "
-"information. There, you will see in which documents the serial number has "
-"been used."
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:100
+msgid "Manage serial numbers on receipts"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:140
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:102
 msgid ""
-"And, if you want to locate a serial number, you can do so by clicking on the"
-" *Location* button available on the serial number form."
+"Assigning serial numbers to **incoming** goods can be done directly from the"
+" purchase order (PO)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:104
+msgid ""
+"To create a :abbr:`PO (purchase order)`, go to the :menuselection:`Purchase "
+"app --> Create`. Doing so reveals a new, blank request for quotation (RFQ) "
+"form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:107
+msgid ""
+"On this :abbr:`RFQ (request for quotation)` form, fill out the necessary "
+"information, by adding a :guilabel:`Vendor`, and by adding the desired "
+"products to the :guilabel:`Product` lines, by clicking :guilabel:`Add a "
+"product`, under the :guilabel:`Products` tab."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:111
+msgid ""
+"Choose the desired quantity of the product to order, by changing the number "
+"in the :guilabel:`Quantity` column."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:114
+msgid ""
+"When the necessary configurations are complete, click :guilabel:`Confirm "
+"Order`. This will convert the :abbr:`RFQ (request for quotation)` to a "
+"purchase order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:117
+msgid ""
+"Then, click the :guilabel:`Receipt` smart button to be taken to the "
+"warehouse receipt form page for that specific :abbr:`PO (purchase order)`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:121
+msgid ""
+"Clicking :guilabel:`Validate` before assigning a serial number to the "
+"ordered product quantities will cause a :guilabel:`User Error` pop-up to "
+"appear. The pop-up requires entry of a lot or serial number for the ordered "
+"products. The :abbr:`RFQ (request for quotation)` **cannot** be validated "
+"without a serial number being assigned."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst-1
+msgid "User error popup prompting serial number entry."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:134
+msgid ""
+"In this pop-up, configure a number of different fields, including the "
+"assignation of a serial number (or serial numbers) under the "
+":guilabel:`Lot/Serial Number Name` column, located at the bottom of the pop-"
+"up."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:138
+msgid ""
+"There are three ways to do this: manually assigning serial numbers, "
+"automatically assigning serial numbers, and copy/pasting serial numbers from"
+" a spreadsheet."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:142
+msgid "Assign serial numbers manually"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:144
+msgid ""
+"To assign serial numbers manually, click :guilabel:`Add a line` from the "
+":guilabel:`Detailed Operations` pop-up, and first choose the location where "
+"the product will be stored under the :guilabel:`To` column."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:148
+msgid ""
+"Then, type a new :guilabel:`Serial Number Name`, and set the "
+":guilabel:`Done` quantity in the appropriate columns."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:151
+msgid ""
+"Repeat this process for the quantity of products shown in the "
+":guilabel:`Demand` field, and until the :guilabel:`Quantity Done` field "
+"displays the correct (matching) number of products processed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:155
+msgid "Assign serial numbers automatically"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:157
+msgid ""
+"If a large quantity of products need individual serial numbers assigned to "
+"them, Odoo can automatically generate and assign serial numbers to each of "
+"the individual products."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:160
+msgid ""
+"To accomplish this, start with the :guilabel:`First SN` field in the "
+":guilabel:`Detailed Operations` pop-up window, and type the first serial "
+"number in the desired order to be assigned."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:163
+msgid ""
+"Then, in the :guilabel:`Number of SN` field, type the total number of items "
+"that need newly-generated unique serial numbers assigned to them."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:166
+msgid ""
+"Finally, click :guilabel:`Assign Serial Numbers`, and a list will populate "
+"with new serial numbers matching the ordered quantity of products."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst-1
+msgid "Automatic serial number assignment in detailed operations popup."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:174
+msgid "Copy/paste serial numbers from a spreadsheet"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:176
+msgid ""
+"To copy and paste serial numbers from an existing spreadsheet, first "
+"populate a spreadsheet with all of the serial numbers received from the "
+"supplier (or manually chosen upon receipt). Then, copy and paste them in the"
+" :guilabel:`Lot/Serial Number Name` column. Odoo will automatically create "
+"the necessary number of lines based on the amount of numbers pasted in the "
+"column."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:181
+msgid ""
+"From here, the :guilabel:`To` locations and :guilabel:`Done` quantities can "
+"be manually entered in each of the serial number lines."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst-1
+msgid "List of serial numbers copied in Excel spreadsheet."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:189
+msgid ""
+"For purchase orders that include large quantities of products to receive, "
+"the best method of serial number assignment is to automatically assign "
+"serial numbers using the :guilabel:`Assign Serial Numbers` button located on"
+" the :abbr:`PO (purchase order)`. This prevents any serial numbers from "
+"being reused or duplicated, and improves traceability reporting."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:194
+msgid ""
+"Once all product quantities have been assigned a serial number, click the "
+":guilabel:`Confirm` button to close the pop-up. Then, click "
+":guilabel:`Validate`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:197
+msgid ""
+"A :guilabel:`Traceability` smart button appears upon validating the receipt."
+" Click the :guilabel:`Traceability` smart button to see the updated "
+":guilabel:`Traceability Report`, which includes: a :guilabel:`Reference` "
+"document, the :guilabel:`Product` being traced, the :guilabel:`Lot/Serial "
+"#`, and more."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:202
+msgid ""
+"Once all product quantities have been assigned a serial number, click "
+":guilabel:`Confirm` to close the popup, and click :guilabel:`Validate`. A "
+":guilabel:`Traceability` smart button will appear upon validating the "
+"receipt. Click the :guilabel:`Traceability` smart button to see the updated "
+":guilabel:`Traceability Report`, which includes: a :guilabel:`Reference` "
+"document, the :guilabel:`Product` being traced, the :guilabel:`Lot/Serial "
+"#`, and more."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:209
+msgid "Manage serial numbers on delivery orders"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:211
+msgid ""
+"Assigning serial numbers to **outgoing** goods can be done directly from the"
+" sales order (SO)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:213
+msgid ""
+"To create an :abbr:`SO (sales order)`, navigate to the "
+":menuselection:`Sales` app, and click the :guilabel:`Create` button. Doing "
+"so reveals a new, blank quotation form. On this blank quotation form, fill "
+"out the necessary information, by adding a :guilabel:`Customer`, and adding "
+"products to the :guilabel:`Product` lines (in the :guilabel:`Order Lines` "
+"tab), by clicking :guilabel:`Add a product`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:221
+msgid ""
+"Once the quotation has been filled out, click the :guilabel:`Confirm` button"
+" to confirm the quotation. When the quotation is confirmed, the quotation "
+"becomes an :abbr:`SO (sales order)`, and a :guilabel:`Delivery` smart button"
+" appears."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:232
+msgid ""
+"In the pop-up, a :guilabel:`Lot/Serial Number` will be chosen by default, "
+"with each product of the total :guilabel:`Reserved` quantity listed with "
+"their unique serial numbers (most likely listed in sequential order)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:236
+msgid ""
+"To manually change a product's serial number, click the drop-down menu under"
+" :guilabel:`Lot/Serial Number`, and choose (or type) the desired serial "
+"number. Then, mark the :guilabel:`Done` quantities, and click "
+":guilabel:`Confirm` to close the pop-up."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:240
+msgid ""
+"Finally, click the :guilabel:`Validate` button to deliver the products."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst-1
+msgid "Serial numbers listed in detailed operations popup."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:246
+msgid ""
+"Upon validating the delivery order, a :guilabel:`Traceability` smart button "
+"appears. Click the :guilabel:`Traceability` smart button to see the updated "
+":guilabel:`Traceability Report`, which includes: a :guilabel:`Reference` "
+"document, the :guilabel:`Product` being traced, the :guilabel:`Date`, and "
+"the :guilabel:`Lot/Serial #` assigned."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:251
+msgid ""
+"The :guilabel:`Traceability Report` can also include a :guilabel:`Reference`"
+" receipt from the previous purchase order (PO), if any of the product "
+"quantities shared a serial number assigned during receipt of that specific "
+":abbr:`PO (purchase order)`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:256
+msgid "Manage serial numbers for different operations types"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:258
+msgid ""
+"By default in Odoo, the creation of new serial numbers is only allowed upon "
+"**receiving** products from a purchase order. **Existing** serial numbers "
+"cannot be used. For sales orders, the opposite is true: new serial numbers "
+"cannot be created on the delivery order, only existing serial numbers can be"
+" used."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:263
+msgid ""
+"To change the ability to use new (or existing) serial numbers on any "
+"operation type, go to :menuselection:`Inventory app --> Configuration --> "
+"Operations Types`, and select the desired :guilabel:`Operation Type`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:267
+msgid ""
+"For the :guilabel:`Receipts` operation type, found on the "
+":guilabel:`Operations Types` page, the :guilabel:`Use Existing Lots/Serial "
+"Numbers` option can be enabled, by selecting :guilabel:`Receipts` from the "
+":guilabel:`Operations Types` page, clicking :guilabel:`Edit`, and then "
+"clicking the checkbox beside the :guilabel:`Use Existing Lots/Serial "
+"Numbers` option (in the :guilabel:`Traceability` section). Lastly, click the"
+" :guilabel:`Save` button to save the changes."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:273
+msgid ""
+"For the :guilabel:`Delivery Orders` operation type, located on the "
+":guilabel:`Operations Types` page, the :guilabel:`Create New Lots/Serial "
+"Numbers` option can be enabled, by selecting :guilabel:`Delivery Orders` "
+"from the :guilabel:`Operations Types` page, clicking :guilabel:`Edit`, and "
+"clicking the checkbox beside the :guilabel:`Create New Lots/Serial Numbers` "
+"option (in the :guilabel:`Traceability` section). Be sure to click "
+":guilabel:`Save` to save changes."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst-1
+msgid "Enabled traceability setting in operations type form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:284
+msgid "Serial number traceability"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:286
+msgid ""
+"Manufacturers and companies can refer to the traceability reports to see the"
+" entire lifecycle of a product: where it came from (and when), where it was "
+"stored, and who it went to."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:289
+msgid ""
+"To see the full traceability of a product, or group by serial numbers, go to"
+" :menuselection:`Inventory app --> Products --> Lots/Serial Numbers`. Doing "
+"so reveals the :guilabel:`Lots/Serial Numbers` dashboard."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:293
+msgid ""
+"From here, products with serial numbers assigned to them will be listed by "
+"default, and can be expanded to show what serial numbers have been "
+"specifically assigned to them."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:296
+msgid ""
+"To group by serial numbers (or lots), first remove any default filters from "
+"the search bar in the upper-right corner. Then, click :guilabel:`Group By`, "
+"and select :guilabel:`Add Custom Group`, which reveals a mini drop-down "
+"menu. From this mini drop-down menu, select :guilabel:`Lot/Serial Number`, "
+"and click :guilabel:`Apply`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:301
+msgid ""
+"Doing so reveals all existing serial numbers and lots, and can be expanded "
+"to show all quantities of products with that assigned number. For unique "
+"serial numbers that are not reused, there should be just one product per "
+"serial number."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst-1
+msgid "Serial numbers reporting page with drop-down lists."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:310
+msgid ""
+"For additional information regarding an individual serial number (or lot "
+"number), click the line item for the serial number to reveal that specific "
+"serial number's :guilabel:`Serial Number` form. From this form, click the "
+":guilabel:`Location` and :guilabel:`Traceability` smart buttons to see all "
+"stock on-hand using that serial number, and any operations made using that "
+"serial number."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/misc.rst:5
@@ -3052,28 +3770,40 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:93
 msgid ""
 "When choosing :guilabel:`Average Cost (AVCO)` as the :guilabel:`Costing "
-"Method`, the numerical value in the :guilabel:`Cost` field for products in "
-"the respective product category will no longer be editable, and will appear "
-"grayed out. The :guilabel:`Cost` amount will instead automatically update "
-"based on the average purchase price both of inventory on hand and the costs "
-"accumulated from validated purchase orders."
+"Method`, changing the numerical value in the :guilabel:`Cost` field for "
+"products in the respective product category creates a new record in the "
+"*Inventory Valuation* report to adjust the value of the product. The "
+":guilabel:`Cost` amount will then automatically update based on the average "
+"purchase price both of inventory on hand and the costs accumulated from "
+"validated purchase orders."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:99
+msgid ""
+"When the :guilabel:`Costing Method` is changed, products already in stock "
+"that were using the :guilabel:`Standard` costing method **do not** change "
+"value; rather, the existing units keep their value, and any product moves "
+"from then on affect the average cost, and the cost of the product will "
+"change. If the value in the :guilabel:`Cost` field on a product form is "
+"changed manually, Odoo will generate a corresponding record in the "
+"*Inventory Valuation* report."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:105
 msgid ""
 "On the same screen, the :guilabel:`Account Stock Properties` fields will "
 "appear, as they are now required fields given the change to automated "
 "inventory valuation. These accounts are defined as follows:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:103
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:109
 msgid ""
 ":guilabel:`Stock Valuation Account`: when automated inventory valuation is "
 "enabled on a product, this account will hold the current value of the "
 "products."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:105
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:111
 msgid ""
 ":guilabel:`Stock Input Account`: counterpart journal items for all incoming "
 "stock moves will be posted in this account, unless there is a specific "
@@ -3082,7 +3812,7 @@ msgid ""
 "product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:109
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:115
 msgid ""
 ":guilabel:`Stock Output Account`: counterpart journal items for all outgoing"
 " stock moves will be posted in this account, unless there is a specific "
@@ -3091,11 +3821,11 @@ msgid ""
 "product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:115
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:121
 msgid "Access reporting data generated by inventory valuation"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:117
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:123
 msgid ""
 "To start, go to :menuselection:`Accounting --> Reporting --> Balance Sheet`."
 " At the top of the dashboard, change the :guilabel:`As of` field value to "
@@ -3104,14 +3834,14 @@ msgid ""
 " at once."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:122
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:128
 msgid ""
 "Under the parent :guilabel:`Current Assets` line item, look for the nested "
 ":guilabel:`Stock Valuation Account` line item, where the total valuation of "
 "all of the inventory on hand is displayed."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:132
 msgid ""
 "Access more specific information with the :guilabel:`Stock Valuation "
 "Account` drop-down menu, by selecting either the :guilabel:`General Ledger` "

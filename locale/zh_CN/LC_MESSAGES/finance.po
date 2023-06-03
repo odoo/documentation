@@ -35,17 +35,17 @@
 # 山西清水欧度(QQ:54773801) <54773801@qq.com>, 2023
 # Jeffery CHEN <jeffery9@gmail.com>, 2023
 # Raymond Yu <cl_yu@hotmail.com>, 2023
-# Emily Jia <eji@odoo.com>, 2023
 # Martin Trigaux, 2023
+# Emily Jia <eji@odoo.com>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-22 07:00+0000\n"
+"POT-Creation-Date: 2023-06-02 08:43+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
-"Last-Translator: Martin Trigaux, 2023\n"
+"Last-Translator: Emily Jia <eji@odoo.com>, 2023\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/odoo/teams/41243/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -86,227 +86,331 @@ msgstr "复式记账"
 
 #: ../../content/applications/finance/accounting.rst:58
 msgid ""
-"Odoo automatically creates all the behind-the-scenes journal entries for "
-"each of your accounting transactions: customer invoices, point of sale "
-"order, expenses, inventory moves, etc."
-msgstr "Odoo为每个会计交易自动创建背后的日记账分录, 包括 :客户开票, 销售点订单, 报销, 库存移动, 等等."
+"Odoo automatically creates all the underlying journal entries for all "
+"accounting transactions (e.g., customer invoices, vendor bills, point-of-"
+"sales orders, expenses, inventory valuations, etc.)."
+msgstr ""
 
-#: ../../content/applications/finance/accounting.rst:62
+#: ../../content/applications/finance/accounting.rst:61
 msgid ""
-"Odoo uses the rules of double-entry bookkeeping system: all journal entries "
-"are automatically balanced (sum of debits = sum of credits)."
-msgstr "Odoo采用复式记账规则 : 所有日记账分录自动平衡（借方总和 = 贷方总和）."
+"Odoo uses the double-entry bookkeeping system, whereby every entry needs a "
+"corresponding and opposite counterpart in a different account, with one "
+"account debited and the other credited. It ensures that all transactions are"
+" recorded accurately and consistently and that the accounts always balance."
+msgstr ""
 
-#: ../../content/applications/finance/accounting.rst:66
-msgid ""
-":doc:`Understand Odoo's accounting transactions per document "
-"<accounting/get_started/cheat_sheet>`"
+#: ../../content/applications/finance/accounting.rst:67
+#: ../../content/applications/finance/accounting.rst:217
+msgid ":doc:`Accounting Cheat Sheet <accounting/get_started/cheat_sheet>`"
 msgstr ""
 
 #: ../../content/applications/finance/accounting.rst:70
-msgid "Accrual and Cash Basis Methods"
-msgstr "权责发生制和现金收付制方法"
+msgid "Accrual and cash basis"
+msgstr ""
 
 #: ../../content/applications/finance/accounting.rst:72
 msgid ""
-"Odoo supports both accrual and cash basis reporting. This allows you to "
-"report income / expense at the time transactions occur (i.e., accrual "
-"basis), or when payment is made or received (i.e., cash basis)."
-msgstr "Odoo支持权责发生制和收付实现制的报告。这允许你在交易发生时报告收入/费用（即权责发生制），或者收付款时（即收付实现制）报告."
+"Both accrual and cash basis accounting are supported in Odoo. This allows "
+"reporting income and expense either when the transaction occurs (accrual "
+"basis) or when the payment is made or received (cash basis)."
+msgstr ""
 
 #: ../../content/applications/finance/accounting.rst:77
-msgid "Multi-companies"
-msgstr "多公司"
-
-#: ../../content/applications/finance/accounting.rst:79
-msgid ""
-"Odoo allows one to manage several companies within the same database. Each "
-"company has its own chart of accounts and rules. You can get consolidation "
-"reports following your consolidation rules."
-msgstr "Odoo允许在同一个数据库管理几个公司。每个公司有自己的科目表以及规则。依据你的合并规则，你可以得到合并报告."
-
-#: ../../content/applications/finance/accounting.rst:83
-msgid ""
-"Users can access several companies but always work in one company at a time."
-msgstr "用户可以访问几家公司，但在某个时间总是在一个公司工作."
-
-#: ../../content/applications/finance/accounting.rst:87
-msgid "Multi-currencies"
-msgstr "多币种"
-
-#: ../../content/applications/finance/accounting.rst:89
-msgid ""
-"Every transaction is recorded in the default currency of the company. For "
-"transactions occurring in another currency, Odoo stores both the value in "
-"the currency of the company and the value in the currency of the "
-"transaction. Odoo can generate currencies gains and losses after the "
-"reconciliation of the journal items."
+msgid ":doc:`Cash basis <accounting/taxes/cash_basis>`"
 msgstr ""
-"每一笔交易以公司的默认币种记录。对于以其他币种发生的交易, Odoo同时以公司的币种的价值，以及以交易币种的价值存储。 "
-"Odoo可以在分类账项目的调节后生成币种增益和损失."
 
-#: ../../content/applications/finance/accounting.rst:95
-msgid ""
-"Currency rates are updated once a day using a yahoo.com online web-service."
-msgstr "货币汇率使用yahoo.com在线网络服务每天更新一次."
-
-#: ../../content/applications/finance/accounting.rst:99
-msgid "International Standards"
-msgstr "国际标准"
-
-#: ../../content/applications/finance/accounting.rst:101
-msgid ""
-"Odoo accounting supports more than 50 countries. The Odoo core accounting "
-"implements accounting standards that are common to all countries. Specific "
-"modules exist per country for the specificities of the country like the "
-"chart of accounts, taxes, or bank interfaces."
+#: ../../content/applications/finance/accounting.rst:80
+msgid "Multi-company"
 msgstr ""
-"Odoo会计应用程序支持超过50个国家。Odoo核心会计应用程序实施所有国家共用的会计准则。每个国家还有特定的模块，例如科目表、税收或银行接口."
 
-#: ../../content/applications/finance/accounting.rst:107
-msgid "In particular, Odoo's core accounting engine supports:"
-msgstr "特别是, Odoo 核心会计引擎支持 :"
-
-#: ../../content/applications/finance/accounting.rst:109
+#: ../../content/applications/finance/accounting.rst:82
 msgid ""
-"Anglo-Saxon Accounting (U.S., U.K.,, and other English-speaking countries "
-"including Ireland, Canada, Australia, and New Zealand) where costs of good "
-"sold are reported when products are sold/delivered."
-msgstr "盎格鲁 - 撒克逊会计准则（美国、英国、以及爱尔兰、加拿大、澳大利亚和新西兰等其他英语国家）在产品售出/交付完成时报告销货成本."
+"Several companies can be managed within the same database. Each company has "
+"its :doc:`chart of accounts <accounting/get_started/chart_of_accounts>`, "
+"which is also useful to generate consolidation reports. Users can access "
+"several companies but can only work on a single company's accounting at a "
+"time."
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:88
+msgid "Multi-currency environment"
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:90
+msgid ""
+"A :doc:`multi-currency <accounting/get_started/multi_currency>` environment "
+"with an automated exchange rate to ease international transactions is "
+"available in Odoo. Every transaction is recorded in the company's default "
+"currency; for transactions occurring in another currency, Odoo stores both "
+"the value in the company's currency and the transactions' currency value. "
+"Odoo generates currency gains and losses after reconciling the journal "
+"items."
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:97
+msgid ""
+":doc:`Manage a bank in a foreign currency "
+"<accounting/bank/foreign_currency>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:100
+msgid "International standards"
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:102
+msgid ""
+"Odoo Accounting supports more than 70 countries. It provides the central "
+"standards and mechanisms common to all nations, and thanks to country-"
+"specific modules, local requirements are fulfilled. Fiscal positions exist "
+"to address regional specificities like the chart of accounts, taxes, or any "
+"other requirements."
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:108
+msgid ":doc:`Fiscal localization packages <fiscal_localizations>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:111
+msgid "Accounts receivable and payable"
+msgstr ""
 
 #: ../../content/applications/finance/accounting.rst:113
-msgid "European accounting where expenses are accounted at the supplier bill."
-msgstr "欧洲会计, 费用记账在供应商帐单."
+msgid ""
+"By default, there is a single account for the account receivable entries and"
+" one for the account payable entries. As transactions are linked to your "
+"**contacts**, you can run a report per customer, vendor, or supplier."
+msgstr ""
 
-#: ../../content/applications/finance/accounting.rst:116
-msgid "Odoo has modules to comply with IFRS rules."
-msgstr "Odoo有符合IFRS规则的模块。"
-
-#: ../../content/applications/finance/accounting.rst:119
-msgid "Accounts Receivable and Payable"
-msgstr "应收账款和应付账款"
+#: ../../content/applications/finance/accounting.rst:117
+msgid ""
+"The **Partner Ledger** report displays the balance of your customers and "
+"suppliers. It is available by going to :menuselection:`Accounting --> "
+"Reporting --> Partner Ledger`."
+msgstr ""
 
 #: ../../content/applications/finance/accounting.rst:121
-msgid ""
-"By default, Odoo uses a single account for all account receivable entries "
-"and one for all accounts payable entries. You can create separate accounts "
-"per customers/suppliers, but you don't need to."
-msgstr ""
-"默认, odoo使用单一科目用于所有的应收账款分录，以及另外一个用于所有的应付账款分录。你可以每个客户/供应商创建独立的科目, 但是没有必要这样做."
+#: ../../content/applications/finance/accounting/reporting.rst:5
+msgid "Reporting"
+msgstr "报告"
 
-#: ../../content/applications/finance/accounting.rst:126
+#: ../../content/applications/finance/accounting.rst:123
 msgid ""
-"As transactions are associated to customers or suppliers, you get reports to"
-" perform analysis per customer/supplier such as the customer statement, "
-"revenues per customers, aged receivable/payables, ..."
-msgstr "由于交易关联了客户或供应商，你得到对每个客户/供应商进行分析的报告, , 如客户对账, 每客户收入, 到期的应收/应付款, ..."
+"The following financial :doc:`reports <accounting/reporting>` are available "
+"and updated in real-time:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:127
+msgid "Financial reports"
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:129
+msgid "Statement"
+msgstr "对账单"
+
+#: ../../content/applications/finance/accounting.rst:129
+#: ../../content/applications/finance/accounting/customer_invoices.rst:214
+msgid "Balance sheet"
+msgstr "资产负债表"
 
 #: ../../content/applications/finance/accounting.rst:131
-msgid "Wide range of financial reports"
-msgstr "更宽广范围的财务报表"
+#: ../../content/applications/finance/accounting/customer_invoices.rst:204
+msgid "Profit and loss"
+msgstr "损益表"
 
 #: ../../content/applications/finance/accounting.rst:133
-msgid ""
-"In Odoo, you can generate financial reports in real time. Odoo's reports "
-"range from basic accounting reports to advanced management reports. Odoo's "
-"reports include:"
-msgstr "在Odoo, 你可以实时生成财务报告。 Odoo的报告范围从基本的会计报告到高级的管理报告。 Odoo的报告包括 :"
+msgid "Cash flow statement"
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:135
+#: ../../content/applications/finance/accounting.rst:174
+#: ../../content/applications/finance/accounting/get_started/vat_units.rst:77
+msgid "Tax report"
+msgstr "税务报告"
 
 #: ../../content/applications/finance/accounting.rst:137
-msgid "Performance reports (such as Profit and Loss, Budget Variance)"
-msgstr "绩效报告（如损益表, 预算差异）"
+msgid "ES sales list"
+msgstr ""
 
-#: ../../content/applications/finance/accounting.rst:138
-msgid ""
-"Position reports (such as Balance Sheet, Aged Payables, Aged Receivables)"
-msgstr "状况报告(如资产负债表, 到期应付款, 到期应收款)"
+#: ../../content/applications/finance/accounting.rst:139
+msgid "Audit"
+msgstr "审计"
 
-#: ../../content/applications/finance/accounting.rst:140
-msgid "Cash reports (such as Bank Summary)"
-msgstr "现金报告（例如银行摘要）"
+#: ../../content/applications/finance/accounting.rst:139
+msgid "General ledger"
+msgstr ""
 
 #: ../../content/applications/finance/accounting.rst:141
-msgid "Detail reports (such as Trial Balance and General Ledger)"
-msgstr "详细报告（如试算表和总账）"
+msgid "Trial balance"
+msgstr "试算表"
 
-#: ../../content/applications/finance/accounting.rst:142
-msgid "Management reports (such as Budgets, Executive Summary)"
-msgstr "管理报告（如预算, 执行概要）"
-
-#: ../../content/applications/finance/accounting.rst:144
-msgid ""
-"Odoo's report engine allows you to customize your own report based on your "
-"own formulae."
-msgstr "Odoo的报告引擎可让您根据自己的公式来定制您自己的报告."
-
-#: ../../content/applications/finance/accounting.rst:148
-msgid "Import bank feeds automatically"
-msgstr "自动导入银行回单"
-
-#: ../../content/applications/finance/accounting.rst:150
-msgid ""
-"Bank reconciliation is a process that matches your bank statement lines, as "
-"supplied by the bank, to your accounting transactions in the general ledger."
-" Odoo makes bank reconciliation easy by frequently importing bank statement "
-"lines from your bank directly into your Odoo account. This means you can "
-"have a daily view of your cashflow without having to log into your online "
-"banking or wait for your paper bank statements."
+#: ../../content/applications/finance/accounting.rst:143
+msgid "Journal report"
 msgstr ""
-"银行对帐是一个过程, 匹配银行提供的银行对账单明细和总账中的会计交易。 "
-"Odoo使得银行对帐容易，频繁的直接从你的银行导入银行对帐单明细到你的Odoo会计。这意味着你可以有现金流的每日视图, "
-"而无需登录到您的网上银行，或等候纸质银行对账单."
 
-#: ../../content/applications/finance/accounting.rst:158
-msgid ""
-"Odoo speeds up bank reconciliation by matching most of your imported bank "
-"statement lines to your accounting transactions. Odoo also remembers how "
-"you've treated other bank statement lines and provides suggested general "
-"ledger transactions."
+#: ../../content/applications/finance/accounting.rst:145
+msgid "Intrastat report"
 msgstr ""
-"Odoo通过匹配大部分导入的银行对帐单明细到你的会计交易，加快银行对账。 Odoo还记住你是如何处理其他的银行对帐单明细，并提供建议的总帐交易."
 
-#: ../../content/applications/finance/accounting.rst:164
-msgid "Calculate the tax you owe your tax authority"
-msgstr "计算你欠税务机关的税金"
+#: ../../content/applications/finance/accounting.rst:147
+msgid "Check register"
+msgstr ""
 
-#: ../../content/applications/finance/accounting.rst:166
-msgid ""
-"Odoo totals all your accounting transactions for your tax period and uses "
-"these totals to calculate your tax obligation. You can then check your sales"
-" tax by running Odoo's Tax Report."
-msgstr "Odoo为你的纳税期间合计所有的会计交易，并使用这些汇总计算纳税的义务。然后, 您可以通过运行Odoo的税务报表来检查你的销售税金."
+#: ../../content/applications/finance/accounting.rst:149
+#: ../../content/applications/finance/fiscal_localizations/argentina.rst:135
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:161
+#: ../../content/applications/finance/fiscal_localizations/colombia.rst:89
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:321
+msgid "Partner"
+msgstr "业务伙伴"
+
+#: ../../content/applications/finance/accounting.rst:149
+msgid "Partner ledger"
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:151
+msgid "Aged receivable"
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:153
+msgid "Aged payable"
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:155
+msgid "Management"
+msgstr "管理"
+
+#: ../../content/applications/finance/accounting.rst:155
+msgid "Invoice analysis"
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:157
+msgid "Unrealized currency gains/losses"
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:159
+msgid "Depreciation schedule"
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:161
+msgid "Disallowed expenses"
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:163
+msgid "Budget analysis"
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:165
+msgid "Product margins"
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:167
+msgid "1099 report"
+msgstr ""
 
 #: ../../content/applications/finance/accounting.rst:171
-msgid "Inventory Valuation"
-msgstr "库存计价"
-
-#: ../../content/applications/finance/accounting.rst:173
 msgid ""
-"Odoo support both periodic (manual) and perpetual (automated) inventory "
-"valuations. The available methods are standard price, average price, LIFO "
-"(for countries allowing it) and FIFO."
+":doc:`Create and customize reports <accounting/reporting/customize>` with "
+"Odoo's report engine."
 msgstr ""
-"Odoo支持定期(手动)以及永续(自动)库存估价。可用的成本方法有标准价、平均价、后进先出（LIFO对于允许的国家而言）以及先进先出(FIFO)"
 
-#: ../../content/applications/finance/accounting.rst:178
+#: ../../content/applications/finance/accounting.rst:176
 msgid ""
-":doc:`View impact of the valuation method on your transactions "
-"</applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config>`"
+"Odoo computes all accounting transactions for the specific tax period and "
+"uses these totals to calculate the tax obligation."
 msgstr ""
-":doc：'查看评估方法对交易</应用程序/inventory_and_mrp/库存/管理/报告/inventory_valuation_config>的影响”"
 
-#: ../../content/applications/finance/accounting.rst:182
-msgid "Easy retained earnings"
-msgstr "容易的留存收益"
-
-#: ../../content/applications/finance/accounting.rst:184
+#: ../../content/applications/finance/accounting.rst:180
 msgid ""
-"Retained earnings are the portion of income retained by your business. Odoo "
-"automatically calculates your current year earnings in real time so no year-"
-"end journal or rollover is required.  This is calculated by reporting the "
-"profit and loss balance to your balance sheet report automatically."
+"Once the tax report has been generated for a period, Odoo locks it and "
+"prevents the creation of new journal entries involving VAT. Any correction "
+"to customer invoices or vendor bills has to be recorded in the next period."
 msgstr ""
-"留存收益是指企业留存的部分收入。Odoo实时自动计算你的当年盈利，所以不需要进行年终分录或翻转。留存收益通过自动将损益表报告到资产负债表计算得出."
+
+#: ../../content/applications/finance/accounting.rst:185
+msgid ""
+"Depending on the country's localization, an XML version of the tax report "
+"can be generated to be uploaded to the VAT platform of the relevant taxation"
+" authority."
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:189
+#: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:5
+msgid "Bank synchronization"
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:191
+msgid ""
+"The bank synchronization system directly connects with your bank institution"
+" to automatically import all transactions into your database. It gives an "
+"overview of your cash flow without logging into an online banking system or "
+"waiting for paper bank statements."
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:196
+msgid ":doc:`Bank synchronization <accounting/bank/bank_synchronization>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:199
+msgid "Inventory valuation"
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:201
+msgid ""
+"Both periodic (manual) and perpetual (automated) inventory valuations are "
+"supported in Odoo. The available methods are standard price, average price, "
+":abbr:`LIFO (Last-In, First-Out)` and :abbr:`FIFO (First-In, First-Out).`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:206
+msgid ""
+":doc:`View the impact of the valuation methods on transactions "
+"<../inventory_and_mrp/inventory/management/reporting/inventory_valuation_config>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:210
+msgid "Retained earnings"
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:212
+msgid ""
+"Retained earnings are the portion of income retained by a business. Odoo "
+"calculates current year earnings in real-time, so no year-end journal or "
+"rollover is required. The profit and loss balance is automatically reported "
+"on the balance sheet report."
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:220
+msgid "Fiduciaries"
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:222
+msgid ""
+"The :guilabel:`Accounting Firms` mode can be activated by going to "
+":menuselection:`Accounting --> Configuration --> Settings --> Accounting "
+"Firms mode`. When enabled:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:225
+msgid "The document's sequence becomes editable on all documents;"
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:226
+msgid ""
+"The :guilabel:`Total (tax incl.)` field appears to speed up and control the "
+"encoding by automating line creation with the right account and tax;"
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:228
+msgid ""
+":guilabel:`Invoice Date` and :guilabel:`Bill Date` are pre-filled when "
+"encoding a transaction."
+msgstr ""
+
+#: ../../content/applications/finance/accounting.rst:229
+msgid ""
+"A :guilabel:`Quick encoding` option is available for customer invoices and "
+"vendor bills."
+msgstr ""
 
 #: ../../content/applications/finance/accounting/bank.rst:5
 msgid "Bank and cash accounts"
@@ -452,6 +556,7 @@ msgstr "要编辑现有银行日记账，转到:menuselection:`会计-->配置--
 #: ../../content/applications/finance/accounting/customer_invoices/payment_terms.rst:46
 #: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:12
 #: ../../content/applications/finance/accounting/get_started/multi_currency.rst:15
+#: ../../content/applications/finance/accounting/get_started/vat_units.rst:22
 #: ../../content/applications/finance/accounting/payments/batch.rst:11
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:20
 #: ../../content/applications/finance/accounting/payments/checks.rst:39
@@ -468,7 +573,7 @@ msgstr "要编辑现有银行日记账，转到:menuselection:`会计-->配置--
 #: ../../content/applications/finance/accounting/taxes/B2B_B2C.rst:60
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:14
 #: ../../content/applications/finance/accounting/taxes/eu_distance_selling.rst:30
-#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:27
+#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:20
 #: ../../content/applications/finance/accounting/taxes/retention.rst:23
 #: ../../content/applications/finance/accounting/taxes/vat_validation.rst:13
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:18
@@ -488,7 +593,7 @@ msgstr "要编辑现有银行日记账，转到:menuselection:`会计-->配置--
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:78
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:25
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:6
-#: ../../content/applications/finance/payment_providers.rst:303
+#: ../../content/applications/finance/payment_providers.rst:302
 #: ../../content/applications/finance/payment_providers/adyen.rst:17
 #: ../../content/applications/finance/payment_providers/alipay.rst:12
 #: ../../content/applications/finance/payment_providers/authorize.rst:9
@@ -496,6 +601,7 @@ msgstr "要编辑现有银行日记账，转到:menuselection:`会计-->配置--
 #: ../../content/applications/finance/payment_providers/mollie.rst:8
 #: ../../content/applications/finance/payment_providers/paypal.rst:122
 #: ../../content/applications/finance/payment_providers/sips.rst:9
+#: ../../content/applications/finance/payment_providers/wire_transfer.rst:30
 msgid "Configuration"
 msgstr "配置"
 
@@ -684,10 +790,6 @@ msgid ""
 "outstanding payments account, when a payment is registered, the invoice or "
 "bill's status is directly set to :guilabel:`Paid`."
 msgstr "如果您的主要银行科目添加为未结收据科目或未结付款科目，在登记付款时，开票或账单状态将直接设置为:guilabel:`已付`。"
-
-#: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:5
-msgid "Bank synchronization"
-msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:7
 msgid ""
@@ -2688,10 +2790,6 @@ msgid ""
 " collection efforts."
 msgstr "账龄表用以确定逾期客户并开始收集工作."
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:204
-msgid "Profit and loss"
-msgstr "损益表"
-
 #: ../../content/applications/finance/accounting/customer_invoices.rst:206
 msgid ""
 "The Profit and Loss statement displays your revenue and expense details. "
@@ -2699,10 +2797,6 @@ msgid ""
 "sometimes referred to as the \"Income Statement\" or \"Statement of Revenues"
 " and Expenses.\""
 msgstr "损益表显示收入和费用的明细。它将提供一个清晰的净损益清单。有时称之为“损益表”或“收入与费用的状态”。"
-
-#: ../../content/applications/finance/accounting/customer_invoices.rst:214
-msgid "Balance sheet"
-msgstr "资产负债表"
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:216
 msgid ""
@@ -3810,101 +3904,115 @@ msgid ""
 msgstr "Odoo支持**Peppol BIS Billing 3.0**格式，可以通过现有访问点使用。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:3
-msgid "EPC QR Codes"
+msgid "EPC QR codes"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:5
 msgid ""
-"European Payments Council Quick Response Code, or **EPC QR Code**, are two-"
-"dimensional barcodes that customers can scan with their **mobile banking "
-"applications** to initiate a **SEPA Credit Transfer (SCT)**, and pay their "
+"European Payments Council quick response codes, or **EPC QR codes**, are "
+"two-dimensional barcodes that customers can scan with their **mobile banking"
+" applications** to initiate a **SEPA credit transfer (SCT)** and pay their "
 "invoices instantly."
 msgstr ""
-"欧洲支付委员会快速响应代码，又称为**EPC二维码**，是一种二维条码，客户可用**手机银行应用程序**扫描该二维码并启动**SEPA贷记转账(SCT)**，并立即支付开票."
 
-#: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:11
+#: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:9
 msgid ""
 "In addition to bringing ease of use and speed, it greatly reduces typing "
 "errors that would potentially make for payment issues."
 msgstr "除了使用方便和速度快之外，它还大大减少了输入错误可能导致的付款问题."
 
-#: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:16
+#: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:13
 msgid ""
-"This feature is only available in several European countries such as "
-"Austria, Belgium, Finland, Germany, and The Netherlands."
-msgstr "这项功能仅在奥地利、比利时、芬兰、德国和荷兰等欧洲国家可用."
+"This feature is only available for companies in several European countries "
+"such as Austria, Belgium, Finland, Germany, and the Netherlands."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:17
+#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:127
+msgid ":doc:`../bank`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:18
+msgid ""
+"`Odoo Academy: QR Code on Invoices for European Customers "
+"<https://www.odoo.com/r/VuU>`_"
+msgstr "`Odoo学院：在欧洲客户的开票上添加二维码 <https://www.odoo.com/r/VuU>`_"
 
 #: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:23
 msgid ""
 "Go to :menuselection:`Accounting --> Configuration --> Settings` and "
-"activate the **SEPA QR Code** feature."
-msgstr "前往 :menuselection:`会计 --> 配置 --> 设置`并启用**SEPA二维码**功能."
+"activate the :guilabel:`QR Codes` feature in the :guilabel:`Customer "
+"Payments` section."
+msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:30
-msgid "Configure your Bank Account’s journal"
-msgstr "配置你的银行账户日记账"
+#: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:27
+msgid "Configure your bank account's journal"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:32
+#: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:29
 msgid ""
-"Make sure that your *Bank Account* is correctly configured on Odoo with your"
-" IBAN and BIC."
-msgstr "确保在Odoo中正确配置你的*银行账户*，检查IBAN和BIC是否正确."
+"Make sure that your :guilabel:`Bank Account` is correctly configured in Odoo"
+" with your IBAN and BIC."
+msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:35
+#: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:31
 msgid ""
 "To do so, go to :menuselection:`Accounting --> Configuration --> Journals`, "
-"open your *bank journal*, then fill out the *Bank Account* and *Bank* under "
-"the *Bank Account* tab."
+"open your bank journal, then fill out the :guilabel:`Account Number` and "
+":guilabel:`Bank` under the :guilabel:`Bank Account Number` column."
 msgstr ""
-"为此，前往 :menuselection:`会计 --> 配置 --> 日记账`，打开 *银行日记账*，然  *银行账户* 选项卡下填写 *银行账户* "
-"和 *银行* ."
 
-#: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:43
-msgid "Issue Invoices with EPC QR Codes"
-msgstr "开具带EPC二维码的开票"
+#: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst-1
+msgid "Bank account number column in the bank journal"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:45
+#: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:39
+msgid "Issue invoices with EPC QR codes"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:41
 msgid ""
-"EPC QR Codes are added automatically to your invoices, as long as you issue "
-"them to customers that are located in a country where this feature is "
-"available."
-msgstr "只要你向位于此功能可用的国家的客户签发此类开票，EPC二维码将自动添加到你的开票中."
+"EPC QR codes are added automatically to your invoices. Customers whose bank "
+"supports making payments via EPC QR codes will be able to scan the code and "
+"pay the invoice."
+msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:49
+#: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:44
 msgid ""
 "Go to :menuselection:`Accounting --> Customers --> Invoices`, and create a "
 "new invoice."
 msgstr "前往 :menuselection:`会计 --> 客户 --> 开票`，并创建新开票."
 
-#: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:52
+#: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:46
 msgid ""
-"Before posting it, open the *Other Info* tab. Odoo automatically fills out "
-"the *Bank Account* field with your IBAN."
-msgstr "在过账之前，打开*其他信息*选项卡。Odoo将自动填写*银行账户*字段和IBAN."
-
-#: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:55
-msgid ""
-"Make sure that the account indicated is the one you want to use to receive "
-"your customer’s payment as Odoo uses this field to generate the EPC QR Code."
-msgstr "确保填写的账户是你想要用来接收客户付款的账户，因为Odoo将用此字段生成EPC二维码."
-
-#: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:63
-msgid ""
-"If you want to issue an invoice without an EPC QR Code, remove the IBAN "
-"indicated in the *Bank Account* field, under the *Other Info* tab of the "
-"invoice."
-msgstr "如你想要开具不含EPC二维码的开票，只需在开票的*其他信息*选项卡的*银行账户*字段中删除IBAN."
-
-#: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:68
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:127
-msgid ":doc:`../bank`"
+"Before posting it, open the :guilabel:`Other Info` tab. Odoo automatically "
+"fills out the :guilabel:`Recipient Bank` field with your IBAN."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:69
+#: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:50
 msgid ""
-"`Odoo Academy: QR Code on Invoices for European Customers "
-"<https://www.odoo.com/r/VuU>`_"
-msgstr "`Odoo学院：在欧洲客户的开票上添加二维码 <https://www.odoo.com/r/VuU>`_"
+"In the :guilabel:`Other Info` tab, the account indicated in the "
+":guilabel:`Recipient Bank` field is used to receive your customer's payment."
+" Odoo automatically populates this field with your IBAN by default and uses "
+"it to generate the EPC QR code."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:54
+msgid ""
+"When the invoice is printed or previewed, the QR code is included at the "
+"bottom."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst-1
+msgid "QR code on a customer invoice"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:60
+msgid ""
+"If you want to issue an invoice without an EPC QR code, remove the IBAN "
+"indicated in the :guilabel:`Recipient Bank` field, under the "
+":guilabel:`Other Info` tab of the invoice."
+msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices/overview.rst:3
 msgid "Invoicing processes"
@@ -6404,6 +6512,130 @@ msgstr "要查看**汇兑差额日记账记项**，转到:menuselection:`会计�
 msgid "Exchange rate journal entry."
 msgstr "汇率日记账记项。"
 
+#: ../../content/applications/finance/accounting/get_started/vat_units.rst:3
+msgid "VAT units"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started/vat_units.rst:6
+msgid "This is only applicable to multi-company environments."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started/vat_units.rst:8
+msgid ""
+"A **VAT unit** is a group of VAT-taxable enterprises that are legally "
+"independent of each other but are closely linked financially, "
+"organizationally, and economically and therefore considered the same VAT-"
+"taxable enterprise. **VAT units** are not mandatory, but if created, "
+"constituent companies of the unit must belong to the same **country**, use "
+"the same **currency**, and one company must be designated as the "
+"**representative** company of the **VAT unit**. **VAT units** receive a "
+"specific **tax ID** intended only for **tax returns**. **Constituent** "
+"companies keep their **tax ID** used for **commercial purposes**."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started/vat_units.rst:17
+msgid ""
+"Enterprise **A** owes €300.000,00 of VAT taxes and enterprise **B** can "
+"recover €280.000,00 of VAT taxes. They form up as a **VAT unit** so that the"
+" two amounts balance out and must conjointly only pay €20.000,00 of VAT "
+"taxes."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started/vat_units.rst:24
+msgid ""
+"To configure a **VAT unit**, go to :menuselection:`Settings --> General "
+"Settings`, scroll down to the :guilabel:`Companies` section, and click "
+":guilabel:`Manage Companies`. Select the company to serve the "
+"**representative** role, and in the :guilabel:`General Information` tab, "
+"fill in the mandatory fields for the .XML export when exporting the **tax "
+"report**: :guilabel:`Company Name`, :guilabel:`Address`, :guilabel:`VAT`, "
+":guilabel:`Currency`, :guilabel:`Phone`, and :guilabel:`Email`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started/vat_units.rst-1
+msgid "General information tab"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started/vat_units.rst:35
+msgid ""
+"Then, click on the :guilabel:`VAT Units` tab, :guilabel:`Add a line`, and "
+"either select an existing **VAT unit**, or create a new one. Enter a "
+"**name** for the unit, :guilabel:`Country` of the constituent companies and "
+"tax report, the :guilabel:`Companies`, the :guilabel:`Main Company` that "
+"serves the **representative** role, and the :guilabel:`Tax ID` of the **VAT "
+"unit**."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started/vat_units.rst-1
+msgid "VAT units tab"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started/vat_units.rst:45
+msgid "Fiscal position"
+msgstr "财政状况"
+
+#: ../../content/applications/finance/accounting/get_started/vat_units.rst:47
+msgid ""
+"As transactions between constituents of the same **VAT unit** are not "
+"subject to VAT, it is possible to create a :doc:`tax mapping (fiscal "
+"position) <../taxes/fiscal_positions>` to avoid the application of VAT on "
+"inter-constituent transactions."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started/vat_units.rst:51
+msgid ""
+"Be sure a constituent company has been selected before, then go to "
+":menuselection:`Accounting --> Configuration --> Fiscal Positions`, and "
+":guilabel:`Create` a new **fiscal position**. Click the :guilabel:`Tax "
+"Mapping` tab, select the :guilabel:`Tax on Product` usually applied for "
+"**non-constituent** transactions, and in :guilabel:`Tax to Apply`, select "
+"the 0% tax to apply for **constituent** transactions."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started/vat_units.rst:57
+msgid ""
+"Do the same for the :guilabel:`Account Mapping` tab if required, and repeat "
+"this process for **each** constituent company on your database."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started/vat_units.rst:61
+msgid ""
+"Depending on your :doc:`localization package "
+"</applications/finance/fiscal_localizations>`, taxes may vary from the "
+"screenshot displayed."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started/vat_units.rst:0
+msgid "Tax mapping of fiscal position for VAT unit"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started/vat_units.rst:68
+msgid ""
+"Then, assign the fiscal position by opening the **Contacts** app. Search for"
+" a **constituent** company, and open the contact's **card**. Click the "
+":guilabel:`Sales & Purchase` tab, and in the :guilabel:`Fiscal Position` "
+"field, input the **fiscal position** created for the **VAT unit**. Repeat "
+"the process for each **constituent** company card form, on each company "
+"database."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started/vat_units.rst:74
+msgid ":doc:`../taxes/fiscal_positions`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started/vat_units.rst:79
+msgid ""
+"The **representative** company can access the aggregated tax report of the "
+"**VAT unit** by going to :menuselection:`Accounting --> Reporting --> Tax "
+"Report`, and selecting the **VAT unit** in :guilabel:`Tax Unit`. This report"
+" contains the aggregated transactions of all **constituents** and the .XML "
+"export contains the name and VAT number of the **main** company."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/get_started/vat_units.rst-1
+msgid "VAT unit tax report"
+msgstr ""
+
 #: ../../content/applications/finance/accounting/payments.rst:5
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:498
 msgid "Payments"
@@ -8126,10 +8358,6 @@ msgid ""
 "with it."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting.rst:5
-msgid "Reporting"
-msgstr "报告"
-
 #: ../../content/applications/finance/accounting/reporting.rst:8
 msgid "Main reports available"
 msgstr "可用的主要报告"
@@ -8985,7 +9213,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:104
-#: ../../content/applications/finance/accounting/reporting/customize.rst:224
+#: ../../content/applications/finance/accounting/reporting/customize.rst:234
 msgid "`sum`"
 msgstr ""
 
@@ -9109,23 +9337,45 @@ msgid ""
 "the closest bound."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/customize.rst:163
+#: ../../content/applications/finance/accounting/reporting/customize.rst:166
+msgid "`if_other_expr_above(LINE_CODE.EXPRESSION_LABEL, CUR(amount))`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/customize.rst:164
+msgid ""
+"The value of the arithmetic expression will be returned only if the value of"
+" the expression denoted by the provided line code and expression label is "
+"greater than the provided bound. Otherwise, the result will be `0`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/customize.rst:171
+msgid "`if_other_expr_below(LINE_CODE.EXPRESSION_LABEL, CUR(amount))`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/customize.rst:169
+msgid ""
+"The value of the arithmetic expression will be returned only if the value of"
+" the expression denoted by the provided line code and expression label is "
+"lower than the provided bound. Otherwise, the result will be `0`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/customize.rst:173
 msgid ""
 "`CUR` is the currency code in capital letters, and `amount` is the amount of"
 " the bound expressed in that currency."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/customize.rst:166
+#: ../../content/applications/finance/accounting/reporting/customize.rst:176
 msgid ""
 "You can also use the `cross_report` subformula to match an expression found "
 "in another report."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/customize.rst:169
+#: ../../content/applications/finance/accounting/reporting/customize.rst:179
 msgid "'Prefix of Account Codes' engine"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/customize.rst:171
+#: ../../content/applications/finance/accounting/reporting/customize.rst:181
 msgid ""
 "This engine is used to match amounts made on accounts using the prefixes of "
 "these accounts' codes as variables in an arithmetic expression."
@@ -9150,7 +9400,7 @@ msgid ""
 "accounts with the prefix `5`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/customize.rst:183
+#: ../../content/applications/finance/accounting/reporting/customize.rst:193
 msgid "It is also possible to ignore a selection of sub-prefixes."
 msgstr ""
 
@@ -9164,7 +9414,7 @@ msgid ""
 "prefixes `101`, `102`, and `57`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/customize.rst:190
+#: ../../content/applications/finance/accounting/reporting/customize.rst:200
 msgid ""
 "You can apply 'sub-filtering' on **credits and debits** using the `C` and "
 "`D` suffixes. In this case, an account will only be considered if its prefix"
@@ -9172,14 +9422,14 @@ msgid ""
 "is **credit/debit**."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/customize.rst:195
+#: ../../content/applications/finance/accounting/reporting/customize.rst:205
 msgid ""
 "Account `210001` has a balance of -42 and account `210002` has a balance of "
 "25. The formula `21D` only matches the account `210002`, and hence returns "
 "25. `210001` is not matched, as its balance is *credit*."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/customize.rst:199
+#: ../../content/applications/finance/accounting/reporting/customize.rst:209
 msgid "Prefix exclusions can be mixed with the `C` and `D` suffixes."
 msgstr ""
 
@@ -9195,7 +9445,7 @@ msgid ""
 "accounts with the prefix `5`, ignoring the prefix `57`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/customize.rst:207
+#: ../../content/applications/finance/accounting/reporting/customize.rst:217
 msgid ""
 "To match the letter `C` or `D` in a prefix and not use it as a suffix, use "
 "an empty exclusion `()`."
@@ -9211,11 +9461,11 @@ msgid ""
 "their balance sign."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/customize.rst:214
+#: ../../content/applications/finance/accounting/reporting/customize.rst:224
 msgid "'External Value' engine"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/customize.rst:216
+#: ../../content/applications/finance/accounting/reporting/customize.rst:226
 msgid ""
 "The 'external value' engine is used to refer to **manual** and **carryover "
 "values**. Those values are not stored using `account.move.line`, but with "
@@ -9224,53 +9474,53 @@ msgid ""
 "selection here."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/customize.rst:221
+#: ../../content/applications/finance/accounting/reporting/customize.rst:231
 msgid "**Formulas** can be one of the following:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/customize.rst:224
+#: ../../content/applications/finance/accounting/reporting/customize.rst:234
 msgid ""
 "If the result must be the sum of all the external values in the period."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/customize.rst:227
+#: ../../content/applications/finance/accounting/reporting/customize.rst:237
 msgid "`most_recent`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/customize.rst:227
+#: ../../content/applications/finance/accounting/reporting/customize.rst:237
 msgid ""
 "If the result must be the value of the latest external value in the period."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/customize.rst:229
+#: ../../content/applications/finance/accounting/reporting/customize.rst:239
 msgid "In addition, **subformulas** can be used in two ways:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/customize.rst:232
+#: ../../content/applications/finance/accounting/reporting/customize.rst:242
 msgid "`rounding=X`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/customize.rst:232
+#: ../../content/applications/finance/accounting/reporting/customize.rst:242
 msgid ""
 "Replacing `X` with a number instructs to round the amount to X decimals."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/customize.rst:236
+#: ../../content/applications/finance/accounting/reporting/customize.rst:246
 msgid "`editable`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/customize.rst:235
+#: ../../content/applications/finance/accounting/reporting/customize.rst:245
 msgid ""
 "Indicates this expression can be edited manually, triggering the display of "
 "an icon in the report, allowing the user to perform this action."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/customize.rst:239
+#: ../../content/applications/finance/accounting/reporting/customize.rst:249
 msgid ""
 "Manual values are created at the `date_to` currently selected in the report."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/customize.rst:241
+#: ../../content/applications/finance/accounting/reporting/customize.rst:251
 msgid "Both subformulas can be mixed by separating them with a `;`."
 msgstr ""
 
@@ -9282,11 +9532,11 @@ msgstr ""
 msgid "is a correct subformula mixing both behaviors."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/customize.rst:248
+#: ../../content/applications/finance/accounting/reporting/customize.rst:258
 msgid "'Custom Python Function' engine"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/customize.rst:250
+#: ../../content/applications/finance/accounting/reporting/customize.rst:260
 msgid ""
 "This engine is a means for developers to introduce custom computation of "
 "expressions on a case-by-case basis. The formula is the name of a **python "
@@ -9295,11 +9545,11 @@ msgid ""
 "custom module of your own."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/customize.rst:256
+#: ../../content/applications/finance/accounting/reporting/customize.rst:266
 msgid "Columns"
 msgstr "列"
 
-#: ../../content/applications/finance/accounting/reporting/customize.rst:258
+#: ../../content/applications/finance/accounting/reporting/customize.rst:268
 msgid ""
 "Reports can have an **indefinite number** of columns to display. Each column"
 " gets its values from the **expressions** declared on the **lines**. The "
@@ -9313,7 +9563,7 @@ msgstr ""
 msgid "Columns of report."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/customize.rst:268
+#: ../../content/applications/finance/accounting/reporting/customize.rst:278
 msgid ""
 "When using the **period comparison** feature found under the "
 ":guilabel:`Options` tab of an accounting report, all columns are repeated in"
@@ -10142,7 +10392,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting/tax_returns.rst:121
 #: ../../content/applications/finance/accounting/taxes/eu_distance_selling.rst:69
-#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:111
+#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:114
 #: ../../content/applications/finance/accounting/taxes/retention.rst:70
 msgid ":doc:`../taxes`"
 msgstr ""
@@ -11566,191 +11816,168 @@ msgstr "财政状况（税项和科目映射）"
 #: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:5
 msgid ""
 "Default taxes and accounts are set on products and customers to create new "
-"transactions on the fly. However, you might have to use different taxes and "
-"record the transactions on different accounts, according to your customers' "
-"and providers' localizations and business types."
+"transactions on the fly. However, depending on the customers' and providers'"
+" localization and business type, using different taxes and accounts for a "
+"transaction might be necessary."
 msgstr ""
-"为产品和客户设置默认税金和帐户，以即时创建新交易。 但是，根据客户和提供者的本地化需要和业务类型，您可能必须使用不同的税金并在不同的帐户上记录交易."
 
 #: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:9
 msgid ""
-"**Fiscal Positions** allow you to create *sets of rules* to automatically "
-"adapt the taxes and the accounts used for a transaction."
-msgstr "**财政状况** 允许您创建 *规则集* ，以自动调整用于交易的税收和帐户."
+"**Fiscal positions** allow the creation of rules to adapt the taxes and "
+"accounts used for a transaction automatically."
+msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst-1
+#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:12
 msgid ""
-"Example: Belgian to Intra-Community tax mapping with Fiscal Positions in "
-"Odoo Accounting"
-msgstr "示例：在Odoo会计应用程序中，比利时到欧盟境内的税项映射和财政状况"
+"They can be applied :ref:`automatically <fiscal_positions/automatic>`, "
+":ref:`manually <fiscal_positions/manual>`, or :ref:`assigned to a partner "
+"<fiscal_positions/partner>`."
+msgstr ""
 
 #: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:16
-msgid "They can be applied in various ways:"
-msgstr "它们可以以多种方式应用："
-
-#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:18
 msgid ""
-":ref:`automatically applied, based on some rules "
-"<fiscal_positions/automatic>`"
-msgstr ":ref:`自动应用可以根据某些规则 <fiscal_positions/automatic>`"
-
-#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:19
-msgid ":ref:`manually applied on a transaction <fiscal_positions/partner>`"
-msgstr ":ref:`手动应用于交易 <fiscal_positions/partner>`"
-
-#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:20
-msgid ""
-":ref:`assigned to a partner, on its contact form "
-"<fiscal_positions/transaction>`"
-msgstr ":ref:`在联系表上分配给合作伙伴 <fiscal_positions/transaction>`"
-
-#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:23
-msgid ""
-"A few Fiscal Positions are already preconfigured on your database, as part "
-"of your :ref:`fiscal localization package <fiscal_localizations/packages>`."
+"Several default fiscal positions are available as part of your :ref:`fiscal "
+"localization package <fiscal_localizations/packages>`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:32
-msgid "Tax and Account Mapping"
-msgstr "税收和账户映射"
-
-#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:34
-msgid ""
-"To edit or create a Fiscal Position, go to :menuselection:`Accounting --> "
-"Configuration --> Fiscal Positions`, and open the entry you want to modify "
-"or click on *Create*."
+#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:25
+msgid "Tax and account mapping"
 msgstr ""
-"要编辑或创建财政头寸，请转到 :menuselection:`会计 --> 设置 --> 财政状况`打开您要修改的条目，或单击 *创建* ."
 
-#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:37
+#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:27
+msgid ""
+"To edit or create a fiscal position, go to :menuselection:`Accounting --> "
+"Configuration --> Fiscal Positions`, and open the entry to modify or click "
+"on :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:30
 msgid ""
 "The mapping of taxes and accounts is based on the default taxes and accounts"
-" defined in the products' forms."
-msgstr "税金和帐户的映射基于产品表单中定义的默认税金和帐户."
+" defined in the product form."
+msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:40
+#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:33
 msgid ""
-"To map to another tax or account, fill out the right column (**Tax to "
-"Apply**/**Account to Use Instead**)."
-msgstr "要映射到其他税种或帐户，请填写右列（ **要应用的税** /  **要使用的帐户** ）."
+"To map to another tax or account, fill out the right column (:guilabel:`Tax "
+"to Apply`/ :guilabel:`Account to Use Instead`)."
+msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:42
+#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst-1
+msgid "Example of a fiscal position's tax mapping"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst-1
+msgid "Example of a fiscal position's account mapping"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:44
+msgid "To remove a tax, leave the field :guilabel:`Tax to Apply` empty."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:45
 msgid ""
-"To remove a tax, rather than replacing it with another, leave the field "
-"**Tax to Apply** empty."
-msgstr "要删除税款，而不是用另一种税款代替，请将 **应纳税款** 字段留空."
+"To replace a tax with several other taxes, add multiple lines using the same"
+" :guilabel:`Tax on Product`."
+msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:43
-msgid ""
-"To replace a tax with multiple other taxes, add multiple lines with the same"
-" **Tax on Product**."
-msgstr "要将税项替换为其他多种税项，请添加多行带有相同 **产品税** 的行."
-
-#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:46
+#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:49
 msgid ""
 "The mapping only works with *active* taxes. Therefore, make sure they are "
 "active by going to :menuselection:`Accounting --> Configuration --> Taxes`."
 msgstr "该映射仅适用于 *有效* 税。 因此，请转到：menuselection：?会计 --> 配置 --> 税收`，确保它们处于活动状态."
 
-#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:52
-msgid "Automatic application"
-msgstr "自动申请"
-
-#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:54
-msgid ""
-"You can configure your Fiscal Positions to be applied automatically, "
-"following a set of conditions."
-msgstr ""
-"您可以按照一系列条件将自己的财政状况\n"
-"配置为自动应用."
-
-#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:56
-msgid ""
-"To do so, open the Fiscal Position you want to modify and click on **Detect "
-"Automatically**. You can configure a few conditions:"
-msgstr "为此，请打开您要修改的财政状况，然后单击 *自动检测* 。 您可以配置一些条件："
-
-#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:59
-msgid ""
-"**VAT Required**: The VAT number *must* be indicated in the customer's "
-"contact form."
-msgstr "**需要增值税** ： *必须* 在客户的联系表格中注明增值税号."
-
-#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:60
-msgid ""
-"**Country Group** / **Country**: The Fiscal Position is applied to these "
-"countries."
-msgstr "**国家群**  / **国家** ：财政状况适用于这些国家."
-
-#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst-1
-msgid "Example of settings to apply a Fiscal Position automatically"
-msgstr "自动应用财政状况的设置示例"
-
-#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:67
-msgid ""
-"Taxes on **eCommerce orders** are automatically updated once the visitor has"
-" logged in or filled out their billing details."
-msgstr "访客登录或填写帐单详细信息后，**电子商务订单** 的税费会自动更新."
-
-#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:71
-msgid ""
-"The Fiscal Positions' **sequence** - the order in which they are arranged - "
-"defines which Fiscal Position to apply if the conditions are met in multiple"
-" Fiscal Positions."
-msgstr "财政状况的 *排序* - 它们的排列顺序 - 定义了在多个财政状况中都满足条件时要应用的财政状况."
-
-#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:74
-msgid ""
-"For example, if the first Fiscal Position targets *country A*, and the "
-"second Fiscal Position targets a *Country Group* that also comprises "
-"*country A*, only the first Fiscal Position will be applied to customers "
-"from *country A*."
-msgstr ""
-"例如，如果第一个财政状况定位为 *国家A*  ，第二个财政状况定位为 *国家组* ，该国集团也包括 *国家A*  ，则只有第一个财政状况将应用于 "
-"*国家A* ."
-
-#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:81
+#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:53
 msgid "Application"
 msgstr "应用程序"
 
-#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:86
-msgid "Assign a Fiscal Position to a partner"
-msgstr "向合作伙伴分配财政状况"
+#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:58
+msgid "Automatic application"
+msgstr "自动申请"
 
-#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:88
+#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:60
 msgid ""
-"You can manually define which Fiscal Position must be used by default for a "
-"specific partner."
-msgstr "您可以手动定义特定伙伴默认情况下必须使用哪个财政状况."
+"To automatically apply a fiscal position following a set of conditions, go "
+"to :menuselection:`Accounting --> Configuration --> Fiscal Positions`, open "
+"the fiscal position to modify, and tick :guilabel:`Detect Automatically`."
+msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:90
+#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:64
+msgid "From there, several conditions can be activated:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:66
 msgid ""
-"To do so, open the partner's contact form, go to the **Sales & Purchase** "
-"tab, edit the **Fiscal Position** field, and click on *Save*."
-msgstr "为此，请打开合作伙伴的联系表，转到 *销售与采购* 选项卡，编辑 **财政状况** 字段，然后单击 *保存* ."
+":guilabel:`VAT Required`: the customer's VAT number must be present on their"
+" contact form."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:67
+msgid ""
+":guilabel:`Country Group` and :guilabel:`Country`: the fiscal position is "
+"only applied to the selected country or country group."
+msgstr ""
 
 #: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst-1
-msgid ""
-"Selection of a Fiscal Position on a Sales Order / Invoice / Bill in Odoo "
-"Accounting"
-msgstr "在Odoo会计应用程序中选择销售订单/开票/账单的财政状况"
+msgid "Example of a fiscal position automatic application settings"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:100
-msgid "Choose Fiscal Positions manually on Sales Orders, Invoices, and Bills"
-msgstr "在销售订单，开票和开票上手动选择财政状况"
+#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:75
+msgid ""
+"Taxes on **eCommerce orders** are automatically updated once the customer "
+"has logged in or filled out their billing details."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:79
+msgid ""
+"The fiscal positions' **sequence** defines which fiscal position is applied "
+"if all conditions set on multiple fiscal positions are met simultaneously."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:82
+msgid ""
+"For example, suppose the first fiscal position in a sequence targets "
+"*country A* while the second fiscal position targets a *country group* that "
+"comprises *country A*. In that case, only the first fiscal position will be "
+"applied to customers from *country A*."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:89
+msgid "Manual application"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:91
+msgid ""
+"To manually select a fiscal position, open a sales order, invoice, or bill, "
+"go to the :guilabel:`Other Info` tab and select the desired "
+":guilabel:`Fiscal Position` before adding product lines."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst-1
+msgid "Selection of a fiscal position on a sales order, invoice, or bill"
+msgstr ""
 
 #: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:102
-msgid ""
-"To manually select which Fiscal Position to use for a new Sales Order, "
-"Invoice, or Bill, go to the **Other Info** tab and select the right **Fiscal"
-" Position** *before* adding product lines."
-msgstr "要手动选择用于新销售订单，开票或账单的财务状况，请转到 *其他信息* 选项卡，然后在添加产品线之前选择正确的 *财务状况*."
+msgid "Assign to a partner"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:112
+#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:104
+msgid ""
+"To define which fiscal position must be used by default for a specific "
+"partner, go to :menuselection:`Accounting --> Customers --> Customers`, "
+"select the partner, open the :guilabel:`Sales & Purchase` tab, and select "
+"the :guilabel:`Fiscal Position`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst-1
+msgid "Selection of a fiscal position on a customer"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:115
 msgid ":doc:`taxcloud`"
 msgstr ":doc:`taxcloud`"
 
-#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:113
+#: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:116
 msgid ":doc:`B2B_B2C`"
 msgstr ":doc:`B2B_B2C`"
 
@@ -14636,13 +14863,6 @@ msgid ""
 "Invoice validated locally because it is in a testing environment without testing\n"
 "certificate/keys."
 msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/argentina.rst:135
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:161
-#: ../../content/applications/finance/fiscal_localizations/colombia.rst:89
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:321
-msgid "Partner"
-msgstr "业务伙伴"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:138
 msgid "Identification type and VAT"
@@ -30153,22 +30373,20 @@ msgid ""
 msgstr "选中后，Odoo将显示您的付款信息以及付款参考。 在您的银行帐户中收到付款后，您必须手动批准付款。"
 
 #: ../../content/applications/finance/payment_providers.rst:0
-msgid "SEPA Direct Debit"
-msgstr "SEPA 直接借记"
+msgid ":doc:`SEPA Direct Debit <../finance/accounting/payments/batch_sdd>`"
+msgstr ""
 
 #: ../../content/applications/finance/payment_providers.rst:0
 msgid ""
 "Your customers can sign a SEPA Direct Debit mandate online and get their "
-"bank account charged directly. :doc:`Click here "
-"<../finance/accounting/payments/batch_sdd>` for more information about this "
-"payment method."
+"bank account charged directly."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:189
+#: ../../content/applications/finance/payment_providers.rst:188
 msgid "Additional features"
 msgstr "其他功能"
 
-#: ../../content/applications/finance/payment_providers.rst:191
+#: ../../content/applications/finance/payment_providers.rst:190
 msgid ""
 "Some payment providers support additional features for the payment flow. "
 "Refer to the :ref:`table above <payment_providers/online_providers>` to "
@@ -30177,11 +30395,11 @@ msgstr ""
 "某些支付服务提供商支持付款流的其他功能。请参阅:ref:`table above "
 "<payment_providers/online_providers>`，以确认您的支付服务提供商是否支持相关功能。"
 
-#: ../../content/applications/finance/payment_providers.rst:198
+#: ../../content/applications/finance/payment_providers.rst:197
 msgid "Tokenization"
 msgstr "符号化"
 
-#: ../../content/applications/finance/payment_providers.rst:200
+#: ../../content/applications/finance/payment_providers.rst:199
 msgid ""
 "If your payment provider supports this feature, customers can choose to save"
 " their card for later. A **payment token** is created in Odoo and can be "
@@ -30191,14 +30409,14 @@ msgid ""
 msgstr ""
 "如果您的支付服务提供商支持此功能，客户可以选择保存银行卡，以备之后使用。在Odoo中创建**支付令牌**，可作为后续付款方式，无需再次输入银行卡详细信息，这对于电子商务转换率和定期付款订阅特别有用。"
 
-#: ../../content/applications/finance/payment_providers.rst:205
+#: ../../content/applications/finance/payment_providers.rst:204
 msgid ""
 "Enable this feature by navigating to the :guilabel:`Configuration` tab from "
 "your payment provider and by ticking the :guilabel:`Allow Saving Payment "
 "Methods` checkbox."
 msgstr "要启用此功能，从支付服务提供商导航到:guilabel:`配置`选项卡，勾选:guilabel:`允许保存付款方式`框。"
 
-#: ../../content/applications/finance/payment_providers.rst:209
+#: ../../content/applications/finance/payment_providers.rst:208
 msgid ""
 "You remain fully PCI-compliant when you enable this feature because Odoo "
 "does not store the card details directly. Instead, it creates a payment "
@@ -30207,11 +30425,11 @@ msgid ""
 msgstr ""
 "启用此功能后，Odoo不会直接存客户储银行卡的详细信息，因此，您仍然完全符合PCI。Odoo创建支付令牌，令牌只是引用存储在支付服务提供商服务器中的客户银行卡详细信息。"
 
-#: ../../content/applications/finance/payment_providers.rst:216
+#: ../../content/applications/finance/payment_providers.rst:215
 msgid "Manual capture"
 msgstr "手动捕获"
 
-#: ../../content/applications/finance/payment_providers.rst:218
+#: ../../content/applications/finance/payment_providers.rst:217
 msgid ""
 "If your payment provider supports this feature, you can authorize and "
 "capture payments in two steps instead of one. When you authorize a payment, "
@@ -30223,38 +30441,38 @@ msgid ""
 msgstr ""
 "如果您的支付服务提供商支持此功能，您可以通过两个而非一个步骤授权和捕获付款。在您授权付款时，资金将保留在客户的付款方式中，不会立即收取费用。只有在您手动捕获付款后，才会收取费用。您也可以取消释放保留资金授权，这相当于定期取消。手动捕获付款在许多情况下都很有用："
 
-#: ../../content/applications/finance/payment_providers.rst:225
+#: ../../content/applications/finance/payment_providers.rst:224
 msgid ""
 "Receive the payment confirmation and wait until the order is shipped to "
 "capture the payment."
 msgstr "收到付款确认，在订单发货后获取付款。"
 
-#: ../../content/applications/finance/payment_providers.rst:226
+#: ../../content/applications/finance/payment_providers.rst:225
 msgid ""
 "Review and verify that orders are legitimate before the payment is completed"
 " and the fulfillment process starts."
 msgstr "在付款完成、付款流程开始前，审核并验证订单是否合法。"
 
-#: ../../content/applications/finance/payment_providers.rst:228
+#: ../../content/applications/finance/payment_providers.rst:227
 msgid ""
 "Avoid potentially high processing fees for cancelled payments: payment "
 "providers will not charge you for voiding an authorization."
 msgstr "避免因取消付款而支付高额处理费：支付服务提供商不会因您撤销授权而收取费用。"
 
-#: ../../content/applications/finance/payment_providers.rst:230
+#: ../../content/applications/finance/payment_providers.rst:229
 msgid ""
 "Hold a security deposit to return later, minus any deductions (e.g., after a"
 " damage)."
 msgstr "提供保证金，用于日后退款和扣除任何款项（例如，损坏赔偿）。"
 
-#: ../../content/applications/finance/payment_providers.rst:232
+#: ../../content/applications/finance/payment_providers.rst:231
 msgid ""
 "Enable this feature by navigating to the :guilabel:`Configuration` tab from "
 "your payment provider and by ticking the :guilabel:`Capture Amount Manually`"
 " checkbox."
 msgstr "要启用此功能，从支付服务提供商导航到:guilabel:`配置`选项卡，勾选:guilabel:`手动捕获金额`框。"
 
-#: ../../content/applications/finance/payment_providers.rst:235
+#: ../../content/applications/finance/payment_providers.rst:234
 msgid ""
 "To capture the payment after it was authorized, go to the related sales "
 "order or invoice and click on the :guilabel:`CAPTURE TRANSACTION` button. To"
@@ -30262,7 +30480,7 @@ msgid ""
 msgstr ""
 "要在授权后捕获付款，转到相关销售订单或开票，然后点击:guilabel:`捕获交易`按钮。要释放资金，点击:guilabel:`作废交易`按钮。"
 
-#: ../../content/applications/finance/payment_providers.rst:240
+#: ../../content/applications/finance/payment_providers.rst:239
 msgid ""
 "Some payment providers support capturing only part of the authorized amount."
 " The remaining amount can then be either captured or voided. These providers"
@@ -30273,24 +30491,24 @@ msgstr ""
 "某些支付服务提供商仅支持捕获部分授权金额。剩余金额可以捕获或作废。此类支付服务提供商在:ref:`table "
 "above<payment_providers/online_providers>`中设置**全额和部分金额**值。仅支持捕获或作废全额的支付服务提供商设置的值为**仅限全额**。"
 
-#: ../../content/applications/finance/payment_providers.rst:244
+#: ../../content/applications/finance/payment_providers.rst:243
 msgid ""
 "The funds are likely not reserved forever. After a certain time, they may be"
 " automatically released back to the customer's payment method. Refer to your"
 " payment provider's documentation for the exact reservation duration."
 msgstr "资金不会永远保留，一段时间后，可能会自动返回至客户的付款方式。请参阅支付服务提供商的文档，以了解准确的保留时长。"
 
-#: ../../content/applications/finance/payment_providers.rst:247
+#: ../../content/applications/finance/payment_providers.rst:246
 msgid ""
 "Odoo does not support this feature for all payment providers but some allow "
 "the manual capture from their website interface."
 msgstr "Odoo中并非所有支付服务提供商均支持此功能，但允许某些支付服务提供商在其网站界面手动捕获。"
 
-#: ../../content/applications/finance/payment_providers.rst:253
+#: ../../content/applications/finance/payment_providers.rst:252
 msgid "Refunds"
 msgstr "退款"
 
-#: ../../content/applications/finance/payment_providers.rst:255
+#: ../../content/applications/finance/payment_providers.rst:254
 msgid ""
 "If your payment provider supports this feature, you can refund payments "
 "directly from Odoo. It does not need to be enabled first. To refund a "
@@ -30298,7 +30516,7 @@ msgid ""
 msgstr ""
 "如果您的支付服务提供商支持此功能，您可以直接从Odoo进行退款，无需事先启用。要向客户返还付款，导航至付款，然后点击:guilabel:`退款`按钮。"
 
-#: ../../content/applications/finance/payment_providers.rst:260
+#: ../../content/applications/finance/payment_providers.rst:259
 msgid ""
 "Some payment providers support refunding only part of the amount. The "
 "remaining amount can then optionally be refunded too. These providers have "
@@ -30309,17 +30527,17 @@ msgstr ""
 "某些支付服务提供商仅支持退还部分金额。剩余金额也可以退还。此类支付服务提供商在:ref:`table "
 "above<payment_providers/online_providers>`中设置**全额和部分金额**值。仅支持全额退款的支付服务提供商设置的值为**仅限全额**。"
 
-#: ../../content/applications/finance/payment_providers.rst:264
+#: ../../content/applications/finance/payment_providers.rst:263
 msgid ""
 "Odoo does not support this feature for all payment providers but some allow "
 "to refund payments from their website interface."
 msgstr "Odoo中并非所有支付服务提供商均支持此功能，但允许某些支付服务提供商在其网站界面进行退款。"
 
-#: ../../content/applications/finance/payment_providers.rst:270
+#: ../../content/applications/finance/payment_providers.rst:269
 msgid "Express checkout"
 msgstr "快速结账"
 
-#: ../../content/applications/finance/payment_providers.rst:272
+#: ../../content/applications/finance/payment_providers.rst:271
 msgid ""
 "If your payment provider supports this feature, customers can use the "
 "**Google Pay** and **Apple Pay** buttons to pay their eCommerce orders in "
@@ -30328,24 +30546,24 @@ msgid ""
 "the payment form of Google or Apple to validate the payment."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:277
+#: ../../content/applications/finance/payment_providers.rst:276
 msgid ""
 "Enable this feature by navigating to the :guilabel:`Configuration` tab from "
 "your payment provider and by ticking the :guilabel:`Allow Express Checkout` "
 "checkbox."
 msgstr "要启用此功能，从支付服务提供商导航到:guilabel:`配置`选项卡，勾选:guilabel:`允许快速结账`框。"
 
-#: ../../content/applications/finance/payment_providers.rst:281
+#: ../../content/applications/finance/payment_providers.rst:280
 msgid ""
 "All prices shown in the express checkout payment form are always taxes "
 "included."
 msgstr "快速结账付款表单中显示的所有价格均包含税费。"
 
-#: ../../content/applications/finance/payment_providers.rst:286
+#: ../../content/applications/finance/payment_providers.rst:285
 msgid "Extra Fees"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:288
+#: ../../content/applications/finance/payment_providers.rst:287
 msgid ""
 "If supported by the payment provider, you can add **extra fees** to online "
 "transactions. Fees can be configured either as **fixed** amounts and "
@@ -30354,7 +30572,7 @@ msgid ""
 "geolocation."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:293
+#: ../../content/applications/finance/payment_providers.rst:292
 msgid ""
 "To enable fees, from the *eCommerce* or *Accounting* app, head to "
 ":menuselection:`Configuration --> Payment Providers` and select the desired "
@@ -30362,11 +30580,11 @@ msgid ""
 ":guilabel:`Add Extra Fees` box. Configure the settings to your needs."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:298
+#: ../../content/applications/finance/payment_providers.rst:297
 msgid "Fees are calculated on the tax-included price."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:306
+#: ../../content/applications/finance/payment_providers.rst:305
 msgid ""
 "Each provider has its specific configuration flow, depending on :ref:`which "
 "feature is available <payment_providers/online_providers>`."
@@ -30374,11 +30592,11 @@ msgstr ""
 "各支付服务提供商有其特定配置流程，取决于:ref:`which feature is available "
 "<payment_providers/online_providers>`。"
 
-#: ../../content/applications/finance/payment_providers.rst:312
+#: ../../content/applications/finance/payment_providers.rst:311
 msgid "Add a new payment provider"
 msgstr "添加支付服务提供商"
 
-#: ../../content/applications/finance/payment_providers.rst:314
+#: ../../content/applications/finance/payment_providers.rst:313
 msgid ""
 "To add a new payment provider and make it available to your customers, go to"
 " :menuselection:`Accounting --> Configuration --> Payment Providers`, look "
@@ -30394,7 +30612,7 @@ msgid ""
 " Odoo."
 msgstr "点击“安装”，然后点击“激活”，使支付服务提供商在Odoo中可用。"
 
-#: ../../content/applications/finance/payment_providers.rst:324
+#: ../../content/applications/finance/payment_providers.rst:323
 msgid ""
 "We recommend using the *Test Mode* on a duplicated database or a test "
 "database. The Test Mode is meant to be used with your test/sandbox "
@@ -30405,7 +30623,7 @@ msgid ""
 msgstr ""
 "建议您在复制数据库或测试数据库中使用*测试模式*。测试模式用于测试/沙盒凭证，但Odoo仍会生成销售订单和开票。并非总能取消开票，如果您要在主数据库中测试支付服务提供商，开票编号可能出现问题。"
 
-#: ../../content/applications/finance/payment_providers.rst:332
+#: ../../content/applications/finance/payment_providers.rst:331
 #: ../../content/applications/finance/payment_providers/adyen.rst:23
 #: ../../content/applications/finance/payment_providers/alipay.rst:18
 #: ../../content/applications/finance/payment_providers/authorize.rst:15
@@ -30416,54 +30634,54 @@ msgstr ""
 msgid "Credentials tab"
 msgstr "凭据选项卡"
 
-#: ../../content/applications/finance/payment_providers.rst:334
+#: ../../content/applications/finance/payment_providers.rst:333
 msgid ""
 "If not done yet, go to the online payment provider website, create an "
 "account, and make sure to have the credentials required for third-party use."
 " Odoo requires these credentials to communicate with the payment provider."
 msgstr "如果尚未完成，转到在线支付服务提供商网站，创建账户，同时确保具有第三方使用所需的凭证，Odoo需要此类凭据与支付服务提供商通信。"
 
-#: ../../content/applications/finance/payment_providers.rst:338
+#: ../../content/applications/finance/payment_providers.rst:337
 msgid ""
 "The form in this section is specific to the payment provider you are "
 "configuring. Please refer to the related documentation for more information."
 msgstr "本部分的表单特定于您正在配置的支付服务提供商。有关详细信息，请参阅相关文档。"
 
-#: ../../content/applications/finance/payment_providers.rst:344
+#: ../../content/applications/finance/payment_providers.rst:343
 #: ../../content/applications/finance/payment_providers/authorize.rst:40
 #: ../../content/applications/finance/payment_providers/stripe.rst:119
 msgid "Configuration tab"
 msgstr "配置选项卡"
 
-#: ../../content/applications/finance/payment_providers.rst:346
+#: ../../content/applications/finance/payment_providers.rst:345
 msgid ""
 "You can change the payment provider's front-end appearance by modifying its "
 "name under the **Displayed as** field and which credit card icons to display"
 " under the **Supported Payment Icons** field."
 msgstr "您可以修改**显示为**字段下的名称，以及**支持支付图标**字段下显示的信用卡图标，以更改支付服务提供商的前端外观。"
 
-#: ../../content/applications/finance/payment_providers.rst:353
+#: ../../content/applications/finance/payment_providers.rst:352
 msgid "Countries"
 msgstr "国家"
 
-#: ../../content/applications/finance/payment_providers.rst:355
+#: ../../content/applications/finance/payment_providers.rst:354
 msgid ""
 "Restrict the use of the payment provider to a selection of countries. Leave "
 "this field blank to make the payment provider available in all countries."
 msgstr "将支付服务提供商的使用限制在选定国家。将此字段留空，使支付服务提供商在所有国家可用。"
 
-#: ../../content/applications/finance/payment_providers.rst:361
+#: ../../content/applications/finance/payment_providers.rst:358
 msgid "Maximum Amount"
 msgstr "最大金额"
 
-#: ../../content/applications/finance/payment_providers.rst:363
+#: ../../content/applications/finance/payment_providers.rst:360
 msgid ""
 "Restrict the maximum amount that can be paid with the selected provider. "
 "Leave this field to `0.00` to make the payment provider available regardless"
 " of the payment amount."
 msgstr "限制可以通过所选支付服务提供商支付的最高金额。将此字段设置为`0.00`，则不限制付款金额。"
 
-#: ../../content/applications/finance/payment_providers.rst:367
+#: ../../content/applications/finance/payment_providers.rst:364
 msgid ""
 "This feature is not intended to work on pages which allow the customer to "
 "update the payment amount. For example, the **Donation** snippet of the "
@@ -30472,21 +30690,21 @@ msgid ""
 msgstr ""
 "此功能不适用于允许客户更新付款金额的页面，例如，启用付费交货方式后，网站应用程序的**捐款**片段和**电子商务**应用程序的***结账**页面。"
 
-#: ../../content/applications/finance/payment_providers.rst:372
+#: ../../content/applications/finance/payment_providers.rst:371
 msgid "Payment journal"
 msgstr "付款日记账"
 
-#: ../../content/applications/finance/payment_providers.rst:374
+#: ../../content/applications/finance/payment_providers.rst:373
 msgid ""
 "The **Payment journal** selected for your payment provider must be a *Bank* "
 "journal."
 msgstr "为支付服务提供商选择的**付款日记账**须为*银行*日记账。"
 
-#: ../../content/applications/finance/payment_providers.rst:379
+#: ../../content/applications/finance/payment_providers.rst:378
 msgid "Publish on the website"
 msgstr "在网站发布"
 
-#: ../../content/applications/finance/payment_providers.rst:381
+#: ../../content/applications/finance/payment_providers.rst:380
 msgid ""
 "By default, payment providers are *unpublished*, which means that only "
 "internal users can see them on the website. Your customers cannot make "
@@ -30498,7 +30716,7 @@ msgstr ""
 "在默认情况下，支付服务提供商*未发布*，这意味着仅在网站中对内部用户可见。您的客户无法通过未发布的支付服务提供商进行付款，但可以管理:dfn:`(delete"
 " and assign to a subscription)`关联至该等提供商的现有令牌。您可以轻松测试支付服务提供者，同时防止支付和注册新令牌。"
 
-#: ../../content/applications/finance/payment_providers.rst:387
+#: ../../content/applications/finance/payment_providers.rst:386
 msgid ""
 "Click on the :guilabel:`Publish` button located in the top right corner of "
 "the provider's form to publish it on the website and make it available to "
@@ -30506,17 +30724,17 @@ msgid ""
 msgstr ""
 "点击支付服务提供商表单右上角的:guilabel:`发布`按钮，以在网站中发布提供商，并对您的客户可见。点击:guilabel:`取消发布`按钮，以取消发布提供商。"
 
-#: ../../content/applications/finance/payment_providers.rst:392
+#: ../../content/applications/finance/payment_providers.rst:391
 msgid ""
 "Payment providers are automatically published and unpublished when you "
 "respectively change their state to `enabled` and `test`."
 msgstr "将支付服务提供商状态分别变为`已启用`或`测试`后，自动发布/取消发布提供商。"
 
-#: ../../content/applications/finance/payment_providers.rst:398
+#: ../../content/applications/finance/payment_providers.rst:397
 msgid "Accounting perspective"
 msgstr "会计的观点"
 
-#: ../../content/applications/finance/payment_providers.rst:400
+#: ../../content/applications/finance/payment_providers.rst:399
 msgid ""
 "The **Bank Payments** that go directly to one of your bank accounts follow "
 "their usual reconciliation workflows. However, payments recorded with "
@@ -30527,26 +30745,26 @@ msgstr ""
 "直接转到您的一个银行帐户的 **银行付款** 遵循其通常的对帐工作流程。 但是，使用 **在线付款提供商** "
 "记录的付款要求您考虑如何记录付款的日记帐分录。 我们建议您向会计师咨询。"
 
-#: ../../content/applications/finance/payment_providers.rst:405
+#: ../../content/applications/finance/payment_providers.rst:404
 msgid ""
 "You need to select a *Payment Journal* on your provider configuration to "
 "record the payments, on a **Outstanding Account**. The Journal's **type** "
 "must be *Bank Journal*."
 msgstr "您需要在支付服务提供商配置中选择*付款日记账*，以便在**未付科目**记录付款。日记账**类型**须为*银行日记账*。"
 
-#: ../../content/applications/finance/payment_providers.rst:408
+#: ../../content/applications/finance/payment_providers.rst:407
 msgid ""
 "You can use a single journal for many payment methods. And for each payment "
 "method, you can either:"
 msgstr "您可以将一个日记账用于多种付款方式。对于各种付款方式，您可以："
 
-#: ../../content/applications/finance/payment_providers.rst:410
+#: ../../content/applications/finance/payment_providers.rst:409
 msgid ""
 "Define an **Accounting Account** to separate these payments from another "
 "payment method."
 msgstr "定义**会计科目**，以将付款与其他付款方式分开。"
 
-#: ../../content/applications/finance/payment_providers.rst:411
+#: ../../content/applications/finance/payment_providers.rst:410
 msgid ""
 "Leave blank to fallback on the default account, which you can see or change "
 "in the settings."
@@ -30556,69 +30774,69 @@ msgstr "留空，以回退至默认科目，您可以在设置中查看或更改
 msgid "A bank journal in the \"Incoming Payments Tab\"."
 msgstr "“入站付款选项卡”中的银行日记账。"
 
-#: ../../content/applications/finance/payment_providers.rst:417
+#: ../../content/applications/finance/payment_providers.rst:416
 msgid ""
 "You can have the same bank account for the whole company, or for some "
 "journals only, or a single payment method... What best suit your needs."
 msgstr "您可以根据实际需要，为整个公司、某些日记账或某个付款方式设置相同的银行科目。"
 
-#: ../../content/applications/finance/payment_providers.rst:421
+#: ../../content/applications/finance/payment_providers.rst:420
 msgid ":doc:`payment_providers/wire_transfer`"
 msgstr ":doc:`payment_providers/wire_transfer`"
 
-#: ../../content/applications/finance/payment_providers.rst:422
+#: ../../content/applications/finance/payment_providers.rst:421
 msgid ":doc:`payment_providers/adyen`"
 msgstr ":doc:`payment_providers/adyen`"
 
-#: ../../content/applications/finance/payment_providers.rst:423
+#: ../../content/applications/finance/payment_providers.rst:422
 msgid ":doc:`payment_providers/alipay`"
 msgstr ":doc:`payment_providers/alipay`"
 
-#: ../../content/applications/finance/payment_providers.rst:424
+#: ../../content/applications/finance/payment_providers.rst:423
 msgid ":doc:`payment_providers/authorize`"
 msgstr ":doc:`payment_providers/authorize`"
 
-#: ../../content/applications/finance/payment_providers.rst:425
+#: ../../content/applications/finance/payment_providers.rst:424
 msgid ":doc:`payment_providers/asiapay`"
 msgstr ":doc:`payment_providers/asiapay`"
 
-#: ../../content/applications/finance/payment_providers.rst:426
+#: ../../content/applications/finance/payment_providers.rst:425
 msgid ":doc:`payment_providers/buckaroo`"
 msgstr ":doc:`payment_providers/buckaroo`"
 
-#: ../../content/applications/finance/payment_providers.rst:427
+#: ../../content/applications/finance/payment_providers.rst:426
 msgid ":doc:`payment_providers/demo`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:428
+#: ../../content/applications/finance/payment_providers.rst:427
 msgid ":doc:`payment_providers/mercado_pago`"
 msgstr ":doc:`payment_providers/mercado_pago`"
 
-#: ../../content/applications/finance/payment_providers.rst:429
+#: ../../content/applications/finance/payment_providers.rst:428
 msgid ":doc:`payment_providers/mollie`"
 msgstr ":doc:`payment_providers/mollie`"
 
-#: ../../content/applications/finance/payment_providers.rst:430
+#: ../../content/applications/finance/payment_providers.rst:429
 msgid ":doc:`payment_providers/ogone`"
 msgstr ":doc:`payment_providers/ogone`"
 
-#: ../../content/applications/finance/payment_providers.rst:431
+#: ../../content/applications/finance/payment_providers.rst:430
 msgid ":doc:`payment_providers/paypal`"
 msgstr ":doc:`payment_providers/paypal`"
 
-#: ../../content/applications/finance/payment_providers.rst:432
+#: ../../content/applications/finance/payment_providers.rst:431
 msgid ":doc:`payment_providers/razorpay`"
 msgstr ":doc:`payment_providers/razorpay`"
 
-#: ../../content/applications/finance/payment_providers.rst:433
+#: ../../content/applications/finance/payment_providers.rst:432
 msgid ":doc:`payment_providers/sips`"
 msgstr ":doc:`payment_providers/sips`"
 
-#: ../../content/applications/finance/payment_providers.rst:434
+#: ../../content/applications/finance/payment_providers.rst:433
 msgid ":doc:`payment_providers/stripe`"
 msgstr ":doc:`payment_providers/stripe`"
 
-#: ../../content/applications/finance/payment_providers.rst:435
+#: ../../content/applications/finance/payment_providers.rst:434
 msgid ":doc:`../websites/ecommerce/checkout_payment_shipping/payments`"
 msgstr ""
 
@@ -30659,7 +30877,6 @@ msgstr ":ref:`payment_providers/add_new`"
 #: ../../content/applications/finance/payment_providers/razorpay.rst:46
 #: ../../content/applications/finance/payment_providers/sips.rst:32
 #: ../../content/applications/finance/payment_providers/stripe.rst:142
-#: ../../content/applications/finance/payment_providers/wire_transfer.rst:39
 msgid ":doc:`../payment_providers`"
 msgstr ":doc:`../payment_providers`"
 
@@ -32564,53 +32781,97 @@ msgid "This operation must be repeated whenever your web domain changes."
 msgstr "web域每次变更后，均须重复此操作。"
 
 #: ../../content/applications/finance/payment_providers/wire_transfer.rst:3
-msgid "How to get paid with wire transfers"
-msgstr "如何电汇付款"
+msgid "Wire transfers"
+msgstr ""
 
 #: ../../content/applications/finance/payment_providers/wire_transfer.rst:5
 msgid ""
-"**Wire Transfer** is the default payment method available. The aim is "
-"providing your customers with your bank details so they can pay on their "
-"own. This is very easy to start with but slow and inefficient process-wise. "
-"Opt for payment providers as soon as you can!"
+"The **Wire transfer** payment method allows you to provide payment "
+"instructions to your customers, such as the bank details and communication. "
+"They are displayed:"
 msgstr ""
-"**电汇付款**是可用的默认付款方式，旨在向您的客户提供您的银行详细信息，以便客户进行付款。操作简单，但付款过程较慢，效率不高。请尽快选择支付服务提供商！"
 
-#: ../../content/applications/finance/payment_providers/wire_transfer.rst:10
-msgid "How to provide customers with payment instructions"
-msgstr "如何向顾客提供付款指引"
-
-#: ../../content/applications/finance/payment_providers/wire_transfer.rst:12
+#: ../../content/applications/finance/payment_providers/wire_transfer.rst:8
 msgid ""
-"Put your payment instructions in the **Thanks Message** of your payment "
-"method."
-msgstr "将付款指引置于付款方式的 **感谢电邮** 中。"
+"at the end of the checkout process, once the customer has selected "
+":guilabel:`Wire transfer` as a payment method and clicked the :guilabel:`Pay"
+" now` button:"
+msgstr ""
 
-#: ../../content/applications/finance/payment_providers/wire_transfer.rst:17
-msgid "They will appear to the customers when they place an order."
-msgstr "顾客下单后即显示。"
+#: ../../content/applications/finance/payment_providers/wire_transfer.rst:0
+msgid "Payment instructions at checkout"
+msgstr ""
 
-#: ../../content/applications/finance/payment_providers/wire_transfer.rst:23
-msgid "How to manage an order once you get paid"
-msgstr "收款后如何进行订单管理"
+#: ../../content/applications/finance/payment_providers/wire_transfer.rst:14
+msgid "on the customer portal:"
+msgstr ""
 
-#: ../../content/applications/finance/payment_providers/wire_transfer.rst:25
+#: ../../content/applications/finance/payment_providers/wire_transfer.rst:0
+msgid "Payment instructions on the customer portal"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/wire_transfer.rst:20
 msgid ""
-"Whenever a customer pays by wire transfer, the order stays in an "
-"intermediary stage **Quotation Sent** (i.e. unpaid order). When you get "
-"paid, you confirm the order manually to launch the delivery."
-msgstr "顾客电汇后，订单停留在中间状态 **报价已发送** （即未付款的订单）。付款后，需要你手动确认订单，启动送货流程。"
+"While this method is very accessible and requires minimal setup, it is very "
+"inefficient process-wise. We recommend setting up a :doc:`payment provider "
+"<../payment_providers>` instead."
+msgstr ""
 
-#: ../../content/applications/finance/payment_providers/wire_transfer.rst:30
-msgid "How to create other manual payment methods"
-msgstr "如何创建其他的手动付款方法"
+#: ../../content/applications/finance/payment_providers/wire_transfer.rst:22
+msgid ""
+"Online orders remain in the :guilabel:`Quotation sent` (i.e., unpaid order) "
+"stage until you receive the payment and :guilabel:`Confirm` the order."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/wire_transfer.rst:26
+msgid ""
+"**Wire transfer** can be used as a template for other payment methods that "
+"are processed manually, such as checks, by renaming or duplicating it."
+msgstr ""
 
 #: ../../content/applications/finance/payment_providers/wire_transfer.rst:32
 msgid ""
-"If you manage a B2B business, you can create other manually-processed "
-"payment methods like paying by check. To do so, just rename *Wire Transfer* "
-"or duplicate it."
-msgstr "如果你管理一个B2B业务，可以创建其他需要人工处理的付款方式，如支票付款。只需要重新命名*电汇*或复制之。"
+"To configure **Wire Transfer**, go to :menuselection:`Accounting / Website "
+"--> Configuration --> Payment Providers`, and open the :guilabel:`Wire "
+"Transfer` card. Then, in the :guilabel:`Configuration` tab:"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/wire_transfer.rst:36
+msgid "Select the :guilabel:`Communication` to be used;"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/wire_transfer.rst:38
+msgid ":guilabel:`Based on Document Reference`: sales order or invoice number"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/wire_transfer.rst:39
+msgid ":guilabel:`Based on Customer ID`: customer identifier"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/wire_transfer.rst:41
+msgid ""
+"Tick the :guilabel:`Enable QR codes` check box to activate :doc:`QR code "
+"payments <../accounting/customer_invoices/epc_qr_code>`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/wire_transfer.rst:44
+msgid "Define the payment instructions in the :guilabel:`Messages` tab:"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/wire_transfer.rst-1
+msgid "Define payment instructions"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/wire_transfer.rst:49
+msgid ""
+"If you have already defined :doc:`a bank account <../accounting/bank>`, the "
+"account number will be automatically added to the default message generated "
+"by Odoo."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/wire_transfer.rst:53
+msgid ":ref:`payment_providers/journal`"
+msgstr ""
 
 #: ../../content/applications/finance/sign.rst:3
 msgid "Sign"
