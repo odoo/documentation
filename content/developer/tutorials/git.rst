@@ -110,7 +110,7 @@ Reading all those informations we learn that this commit was the one at released
 
 We can also study the history of other versions, like to list all commits that modified this ``odoo/release.py`` but this time inside of the 15.0 version
 
-.. code-block:: test
+.. code-block:: text
    :caption: all commits (revisions) in the history of the 15.0 version for the ``odoo/release.py`` file, one per line
 
    $ git log 15.0 --oneline odoo/release.py
@@ -270,14 +270,16 @@ Contrary to ``git log`` that can list all commits that modified to a single file
 Understand the branching model
 ==============================
 
-The last section was about discovering git, discovering what the history and commits are for, it was also about understanding that multiple versions co-exist. This section is about going deeper in this notion of co-existing versions, called *branches* in git jargon. What's the difference between the various branches out there, namely the differences between *master*, stable and development branches.
+The last section was about discovering git, discovering what the history and commits are for, it was also about understanding that multiple versions co-exist. This section is about going deeper in this notion of co-existing versions, called *branches* in git jargon. What's the difference between the various branches out there, namely the differences between stable, *master* and development branches.
 
 Stable branches
 ---------------
 
-Stable branches are branches that are deployed on Odoo Online for customers to use. Those branches are labelled *stable* because developers try to not add new features and instead focus on fixing bugs as they are discovered by customers. 
+Stable branches are branches that are deployed on Odoo Online and that are used by customers for their business. Those branches are labelled *stable* because developers don't try anything new on those branches, the list of features is frozen at the moment of the release and developers focus on fixing bugs.
 
-.. note::
+The stable branches all reside in the official odoo/odoo github repository, they are the versions named "xx.0" and "saas-xx.y". The "xx.0" versions (e.g. 14.0, 15.0, 16.0, ...) are released every year during the Odoo Experience, most customers and partners use those versions. The "saas-xx.y" versions (saas-15.2, saas-16.1, ...) are released every two/three months and while available for all are generally only used by customers on Odoo Online.
+
+.. example::
 
    Since its release in late 2020, there have been more than 6.000 new commits on the 14.0 branch, of them 84% are bug fixes and 7% are feature improvement.
 
@@ -288,13 +290,54 @@ Stable branches are branches that are deployed on Odoo Online for customers to u
 Master branch
 -------------
 
+The master branch is the branch where all new features are integrated once ready, tested and validated. This branch is halfway stable and halfway development, it is expected to always work bug-free but this assumption often fails because programming is hard and integrating many applications together is even more so. Because it is not that stable, the master branch is never deployed.
+
+The master branch is split every two/three months and the new branch becomes the new stable release. The new branch isn't immediately deployed on Odoo Online, it first undergoes a stabilization process where the applications are extensively tested. Usually the new branch is made available to customers on Odoo Online after a few weeks. 
+
+The master branch is also hosted in the official odoo/odoo github repository.
+
 .. note::
 
-   Since the release of the 14.0, there have been more than 18.000 new commits on the master branch,
-   of them 58% are bug fixes, 32% are features and 5% are refactors.
+   Because new features will be rarely added on the new stable branch, the process of splitting master in two is known at Odoo as the *freeze* even though bugfix commits will still be added.
+
+.. example::
+
+   Since late 2020, there have been more than 18.000 new commits on the master branch, of them 58% are bug fixes, 32% are features and 5% are refactors.
 
    .. image:: git/plot-commits-master.png
       :alt: Plot of the various [IMP] and [FIX] commits in the master branch indexed per month in the period Sept 2022 - March 2023
+
+Development branches
+--------------------
+
+The development branches are the branches were new features are being imagined, developed and tested. They are usually based on the latest revision of one of the official branches (stables or master) in which they will be ultimately integrated (if validated).
+
+Contrary to the official branches, development branches are not hosted on the official odoo/odoo GitHub repository. All companies all individuals that contributes to Odoo work on their own *fork* (copy) of the official odoo/odoo repository, by example Odoo employees host their development branches on odoo-dev/odoo.
+
+The integration is done via pull-requests (PR) on GitHub, a pull-request is a place where the developers publish their work for others to review and test. Reviews are mandatory at Odoo, all works must be validated by someone with "r+ rights" (a senior Odoo developer). Tests are mandatory too, every pull-request is ran against an extensible automated test suite that will block the pull-request in case of failure.
+
+.. important::
+
+   The operation to integrate the work done in a development branch into an official one is known as *merging the branch into master/16.0/...*. This can be misleading as development branches are usually not integrated using a merge commit but are instead rebased and fast-forwaded, more on that later. Still "merge" is somewhat the de-facto way of designing this operation.
+
+Branching model visualized
+--------------------------
+
+.. image:: git/odoo-workflow.drawio.png
+   :alt: Graph of the git workflow at Odoo
+
+The graph shows a summary of the branching model inside the odoo/odoo (top half) and odoo-dev/odoo (bottom half) repositories. The graph features 8 branches: 2 stable branches (15.0 and 16.0), the master branch and 5 unammed development branches. 
+
+Each solid circle is a commit, blue for a new feature, greed for a release, yellow for a bugfix. Each callout poinThe callouts point to the last commit of their branch. the solid arrows show the order of the commits. The first commit of the master branch (top-left blue one) is present in all branches, the second commit of the master branch (second blue one) is present in 16.0, master and 4 of the unammed developemnt branches.
+
+When a commit has two next commits it means that the branch was split. When the new branch is hosted in odoo/odoo, it means that there has been a new release, hence the green [REL] commits. When the new branch is hosted in odoo-dev/odoo (or in any other company or individual fork) it means that a new development has started.
+
+New features are usually reserved for the master branch, the graph reflects that situation as once released stable branches only receive bugfixes.
+
+Most features and bugfix can generally be grouped into a single comprehensive commit but sometime it is welcome to have multiple commits inside of a single branch, e.g. to fix a pre-existing bug that is revealed by a new feature. The development branches reflect that, most of them hold a single commit, except for the branch based on the latest master that hold multiple commits.
+
+Not all development branches are ready for review, some features require several days/weeks to be completed but the branch is still saved on GitHub for the sake of saving it somewhere. The third unamed branch on the graph reflects that. That branch is also based on an outdated revision of the 16.0 official branch, the new commits from 16.0 should be integrated in the development branch via a *rebase*, more on that later.
+
 
 
 Modify files
