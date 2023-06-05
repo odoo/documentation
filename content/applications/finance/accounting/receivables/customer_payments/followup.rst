@@ -75,6 +75,6 @@ select all the reports you would like to process, click on the :guilabel:`Action
 select :guilabel:`Process follow-ups`.
 
 .. seealso::
-   - :doc:`../../../../general/in_app_purchase`
+   - :doc:`/applications/productivity/in_app_purchase`
    - :doc:`../../../../marketing/sms_marketing/pricing/pricing_and_faq`
    - :doc:`../customer_invoices/snailmail`

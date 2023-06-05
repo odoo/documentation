@@ -10,4 +10,5 @@ Productivity
     productivity/discuss
     productivity/calendar
     productivity/iot
-    productivity/studio
+    productivity/voip
+    productivity/in_app_purchase
