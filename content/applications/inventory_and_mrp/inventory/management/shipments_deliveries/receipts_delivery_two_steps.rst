@@ -32,7 +32,7 @@ Configure multi-step routes
 ===========================
 
 First, make sure the :guilabel:`Multi-Step Routes` option is enabled in :menuselection:`Inventory
---> Configuration --> Settings`, under the ::guilabel:`Warehouse` heading. After enabling the
+--> Configuration --> Settings`, under the :guilabel:`Warehouse` heading. After enabling the
 setting, :guilabel:`Save` the changes.
 
 .. note::
@@ -60,7 +60,7 @@ Shipments`. :guilabel:`Save` the changes to finish.
    by default, are labeled :guilabel:`WH/Input` and :guilabel:`WH/Output`, respectively, on the
    :guilabel:`Locations` dashboard. To rename these locations, go to :menuselection:`Configuration
    --> Locations`, select the :guilabel:`Location` to change, and then click :guilabel:`Edit`. On
-   the location form, update the ::guilabel:`Location Name`, make any other changes (if necessary)
+   the location form, update the :guilabel:`Location Name`, make any other changes (if necessary)
    and :guilabel:`Save` the changes.
 
 Process a receipt in two steps (input + stock)
@@ -76,12 +76,12 @@ quote as a new purchase order.
 
 .. important::
    For businesses with multiple warehouses that have different step configurations, the
-   :guilabel:`Deliver To` field on the ::abbr:`PO (Purchase Order)` form may need to be specifed as
+   :guilabel:`Deliver To` field on the :abbr:`PO (Purchase Order)` form may need to be specified as
    the correct *input location* connected to the two-step warehouse, which can be done by selecting
    the warehouse from the drop-down selection that includes the `Receipts` label at the end of the
    name.
 
-After confirming the ::abbr:`PO (Purchase Order)`, a :guilabel:`Receipt` smart button will appear in
+After confirming the :abbr:`PO (Purchase Order)`, a :guilabel:`Receipt` smart button will appear in
 the top-right corner of the :abbr:`PO (Purchase Order)` form — click it to reveal the associated
 receipt.
 
@@ -90,8 +90,8 @@ receipt.
    :alt: After confirming a purchase order, a Receipt smart button will appear.
 
 .. tip::
-   Purchase order receipts can also be found in the :menuselection:`Inventory` application. In
-   the :guilabel:`Overview` dashboard, click the :guilabel:`# to Process` smart button in the
+   Purchase order receipts can also be found in the :menuselection:`Inventory` application. In the
+   :guilabel:`Overview` dashboard, click the :guilabel:`# to Process` smart button in the
    :guilabel:`Receipts` kanban card.
 
    .. image:: receipts_delivery_two_steps/two-step-receipts-kanban.png
@@ -143,12 +143,12 @@ Create a sales order
 --------------------
 
 In the :menuselection:`Sales` application, create a new quote by clicking :guilabel:`Create`. Select
-(or create) a :guilabel:`Customer`, add a storable :guilabel:`Product` to the order lines, and then
+or create a :guilabel:`Customer`, add a storable :guilabel:`Product` to the order lines, and then
 click :guilabel:`Confirm`.
 
-After confirming the ::abbr:`SO (Sales Order)`, a :guilabel:`Receipt` smart button will appear in
-the top-right corner of the :abbr:`PO (Sales Order)` form — click it to reveal the associated
-receipt.
+After confirming the :abbr:`SO (Sales Order)`, a :guilabel:`Delivery` smart button will appear in
+the top-right corner of the :abbr:`SO (Sales Order)` form. Click it to reveal the associated
+delivery forms.
 
 .. image:: receipts_delivery_two_steps/two-step-sales-quote.png
    :align: center
@@ -168,8 +168,8 @@ Process the picking
 -------------------
 
 The picking and delivery order will be created once the sales order is confirmed. When the
-:guilabel:`Delivery` smart button appears, click it to arrive to the :guilabel:`Transfers`
-dashboard, which lists both the picking and the delivery orders.
+:guilabel:`Delivery` smart button appears, click it to reveal the :guilabel:`Transfers` dashboard,
+which lists both the picking and the delivery orders.
 
 The status of the picking will be :guilabel:`Ready`, since the product must be picked from stock
 before it can be shipped. The status of the delivery order will be :guilabel:`Waiting Another
@@ -201,8 +201,8 @@ the :guilabel:`# To Process` smart button in the :guilabel:`Delivery Orders` kan
 
 .. tip::
    The delivery order associated with the :abbr:`SO (Sales Order)` can also be quickly accessed by
-   clicking on the ::guilabel:`Delivery` smart button again, and choosing the delivery order on the
-   ::guilabel:`Transfers` page (which should now be marked as ::guilabel:`Ready`).
+   clicking on the :guilabel:`Delivery` smart button again, and choosing the delivery order on the
+   :guilabel:`Transfers` page (which should now be marked as :guilabel:`Ready`).
 
 .. image:: receipts_delivery_two_steps/deliver-two-step-kanban.png
    :align: center
@@ -217,5 +217,5 @@ Click on the delivery order associated with the :abbr:`SO (Sales Order)`, then c
          the customer location.
 
 Once the delivery order is validated, the product leaves the :guilabel:`WH/Output` location on the
-:guilabel:`Transfers` dashboard and moves to the :guilabel:`Partners/Customers` location. Then,
-the status of the document will change to :guilabel:`Done`.
+:guilabel:`Transfers` dashboard and moves to the :guilabel:`Partners/Customers` location. Then, the
+status of the document will change to :guilabel:`Done`.
