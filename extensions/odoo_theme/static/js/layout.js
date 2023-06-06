@@ -34,7 +34,25 @@
         // Make all external links open in a new tab by default.
         content.querySelectorAll('a.external').forEach(externalLink => {
             externalLink.setAttribute('target', '_blank');
-        })
+        });
+
+        let canAccessAllL1Toctrees = true; // Whether all direct children have a ref.
+        const toctreeWrapper = document.querySelector('.toctree-wrapper');
+        toctreeWrapper?.querySelectorAll('.toctree-l1').forEach(l1Toctree => {
+            // Flag L2 toctrees that have L3 children.
+            if (l1Toctree.querySelector('.toctree-l3')) {
+                l1Toctree.querySelectorAll('.toctree-l2').forEach (l2Toctree => {
+                    l2Toctree.classList.add('o_toc_contains_l3');
+                });
+            }
+            if (l1Toctree.querySelector('a').getAttribute('href') === '#') {
+                canAccessAllL1Toctrees = false;
+            }
+        });
+        if (canAccessAllL1Toctrees) {
+            // Use the style of L2 toctrees on L1 toctrees.
+            toctreeWrapper?.classList.add('o_toc_l1_to_l2');
+        }
     });
 
 })();
