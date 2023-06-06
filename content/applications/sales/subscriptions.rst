@@ -40,7 +40,7 @@ To create a new subscription, click on :guilabel:`New` from the *Subscription* o
 
 .. tip::
    You can define different invoice and delivery addresses by enabling the :doc:`Customer Addresses
-   </applications/sales/sales/send_quotations/different_addresses>` feature.
+   </applications/finance/accounting/customer_invoices/customer_addresses>` feature.
 
 .. _subscriptions/confirmation:
 
