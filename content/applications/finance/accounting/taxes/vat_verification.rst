@@ -1,6 +1,6 @@
-===========================
-VIES VAT numbers validation
-===========================
+===============================
+VAT numbers verification (VIES)
+===============================
 
 **VAT Information Exchange System** - abbreviated **VIES** - is a tool provided by the European
 Commission that allows you to check the validity of VAT numbers of companies registered in the
@@ -15,7 +15,7 @@ Configuration
 To enable this feature, go to :menuselection:`Accounting --> Configuration --> Settings --> Taxes`,
 enable the **Verify VAT Numbers** feature, and click on *Save*.
 
-.. image:: vat_validation/vat-validation-configuration.png
+.. image:: vat_verification/vat-validation-configuration.png
    :align: center
    :alt: Enable "Verify VAT Numbers" in Odoo Accounting
 
@@ -24,14 +24,14 @@ VAT Number validation
 
 Whenever you create or modify a contact, make sure to fill out the **Country** and **VAT** fields.
 
-.. image:: vat_validation/vat-validation-contact-form.png
+.. image:: vat_verification/vat-validation-contact-form.png
    :align: center
    :alt: Fill out the contact form with the country and VAT number before clicking on *Save*
 
 When you click on *Save*, Odoo runs a VIES VAT number check, and displays an error message if the
 VAT number is invalid.
 
-.. image:: vat_validation/vat-validation-error.png
+.. image:: vat_verification/vat-validation-error.png
    :align: center
    :alt: Odoo displays an error message instead of saving when the VAT number is invalid
 
