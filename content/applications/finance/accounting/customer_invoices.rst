@@ -228,6 +228,7 @@ the material has been shipped to the customer.
    :titlesonly:
 
    customer_invoices/overview
+   customer_invoices/customer_addresses
    customer_invoices/payment_terms
    customer_invoices/cash_discounts
    customer_invoices/credit_notes
