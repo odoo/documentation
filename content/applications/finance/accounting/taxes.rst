@@ -304,7 +304,7 @@ directly to a product line.
 
    taxes/cash_basis
    taxes/retention
-   taxes/vat_validation
+   taxes/vat_verification
    taxes/fiscal_positions
    taxes/avatax
    taxes/taxcloud
