@@ -586,28 +586,42 @@ main.container-fluid {
 }
 
 .toctree-wrapper {
+    %toctree-custom-link {
+        > a:not([href="#"]){
+            --o-link-color: #{$o-gray-color};
+            --o-link-hover-color: #{$primary};
+
+            &:after {
+                content: ' #{$i-link}';
+                @include o-inline-icon(auto, baseline, 0.7em, $font-weight-bold);
+                color: $primary;
+            }
+        }
+    }
+
     > ul, .toctree-l1 > ul {
         padding-left: 0;
         list-style: none;
     }
 
-    .toctree-l1 > a {
-        display: block;
-        margin-top: $o-padding-m;
-        margin-bottom: $o-margin-s;
-        padding-bottom: $o-padding-xs;
-        border-bottom: 1px solid $o-gray-border;
-        @include font-size($h2-font-size);
-        font-weight: 600;
-    }
-
-    .toctree-l1 {
+    &:not(.o_toc_l1_to_l2) .toctree-l1 {
+        @extend %toctree-custom-link;
         margin-bottom: 2rem;
+
+        > a {
+            display: block;
+            margin-top: $o-padding-m;
+            margin-bottom: $o-margin-s;
+            padding-bottom: $o-padding-xs;
+            border-bottom: 1px solid $o-gray-border;
+            @include font-size($h2-font-size);
+            font-weight: $font-weight-bolder;
+        }
     }
 
-    .toctree-l2 > a[href="#"] {
-        margin-top: 0.7rem;
-        display: inline-block;
+    .toctree-l2.o_toc_contains_l3 {
+        margin-top: map-get($spacers, 3);
+        @extend %toctree-custom-link;
     }
 
     a[href="#"] {
@@ -615,6 +629,10 @@ main.container-fluid {
         font-weight: $font-weight-bold;
         pointer-events: none;
         cursor: default;
+    }
+
+    .toctree-l3 > a {
+        --o-link-fontweight: #{$font-weight-medium};
     }
 }
 
