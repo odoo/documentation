@@ -180,9 +180,8 @@ can now send safe, secure emails through Microsoft Outlook using OAuth authentic
    Outlook.
 
 .. note::
-   The :guilabel:`System Parameters` can be accessed by activating
-   :doc:`../../applications/general/developer_mode` in the :menuselection:`Settings --> Technical
-   --> Parameters --> System Parameters` menu.
+   The :guilabel:`System Parameters` can be accessed by activating :ref:`developer-mode` in the
+   :menuselection:`Settings --> Technical --> Parameters --> System Parameters` menu.
 
 .. seealso::
-   - :doc:`../../applications/general/email_communication/email_domain`
+   - :doc:`/applications/general/email_communication/email_domain`

@@ -97,7 +97,7 @@ Domains
 Configure custom domains to access the database via another URL.
 
 .. seealso::
-   - :doc:`domain_names`
+   - :doc:`/applications/general/domain_names`
 
 .. _odoo_online/tags:
 

@@ -6,9 +6,6 @@ Maintain
 
 .. toctree::
 
-    maintain/domain_names
-    maintain/azure_oauth
-    maintain/google_oauth
     maintain/update
     maintain/enterprise
     maintain/hosting_changes

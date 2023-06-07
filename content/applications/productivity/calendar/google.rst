@@ -7,7 +7,7 @@ both directions). This integration helps organize schedules, so a meeting is nev
 
 .. seealso::
    - :doc:`/applications/general/auth/google`
-   - :doc:`/administration/maintain/google_oauth`
+   - :doc:`/applications/general/email_communication/google_oauth`
 
 Setup in Google
 ===============

@@ -7,4 +7,4 @@ is NOT compatible with Odoo at the moment.
 
 .. seealso::
    - :doc:`../../productivity/calendar/outlook`
-   - :doc:`/administration/maintain/azure_oauth`
+   - :doc:`/applications/general/email_communication/azure_oauth`
