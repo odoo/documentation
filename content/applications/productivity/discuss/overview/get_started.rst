@@ -1,87 +1,96 @@
 ========================
-Get Started with Discuss
+Get started with Discuss
 ========================
 
-Discuss allows you to bring all of your company’s communication together through messages, notes,
-and chat. Share information, projects, files, prioritize tasks, and stay connected with colleagues
-and partners throughout applications. Forge better relationships, increase productivity and
-transparency by promoting a convenient way of communicating.
+Odoo *Discuss* is an internal communication app that allows users to connect through messages,
+notes, and file sharing, either through a persistent chat window that works across applications, or
+through the dedicated *Discuss* dashboard.
 
 .. _discuss_app/notification_preferences:
 
-Choose your notifications preference
-====================================
+Choose notifications preference
+===============================
 
-Access your *Preferences* and choose how you would like your notifications to be handled.
+Access user-specific preferences for the *Discuss* app by navigating to :menuselection:`Settings app
+--> Users --> User --> Preferences tab`.
 
-.. image:: get_started/change_preferences.png
+.. image:: get_started/preferences-user.png
    :align: center
-   :alt: View of the preferences page for Odoo Discuss
+   :alt: View of the Preferences tab for Odoo Discuss.
 
-| By default, the field is set as *Handle by Emails* making messages, notes, and notifications where
-  you were mentioned or that you follow, to be sent through email. By choosing *Handle in Odoo*,
-  they are shown in the *Inbox*.
-| Messages can then be *Marked as Todo*, *Replied*, or *Marked as Read*.
+By default, the :guilabel:`Notification` field is set as :guilabel:`Handle by Emails`. With this
+setting enabled, a notification email will be sent by Odoo every time a message is sent from the
+chatter, a note is sent with an `@` mention (from chatter), or a notification is sent for a record
+that the user follows. Something that triggers a notification is changing of the stage (if an email\
+is configured to be sent, for example if the task is set to :guilabel:`Done`).
 
-.. image:: get_started/inbox_actions.png
+By choosing :guilabel:`Handle in Odoo`, the above notifications are shown in the *Discuss* app's
+*inbox*. Messages can have the following actions taken on them: respond with an emoji by clicking
+:guilabel:`Add a Reaction`, or reply to the message by clicking on :guilabel:`Reply`. Additional
+actions may include starring the message by clicking :guilabel:`Marked as Todo`, or pinning the
+message by selecting :guilabel:`Pin` or even mark the message as unread by selecting
+:guilabel:`Marked as unread`.
+
+.. image:: get_started/reactions-discuss.png
    :align: center
-   :alt: View of an inbox message and its action options in Odoo Discuss
+   :alt: View of an inbox message and its action options in Odoo Discuss.
 
-The messages tagged as *Mark as Todo* are also shown in *Starred*, while the ones *Marked as Read*
-are moved to *History*.
+Clicking :guilabel:`Mark as Todo` on a message causes it to appear on the :guilabel:`Starred` page,
+while clicking :guilabel:`Mark as Read` moves the message to :guilabel:`History`.
 
-.. image:: get_started/starred_messages.png
+.. image:: get_started/starred-messages.png
    :align: center
-   :alt: View of messages marked as todo in Odoo Discuss
+   :alt: View of messages marked as todo in Odoo Discuss.
 
-Start Chatting
+Start chatting
 ==============
 
-The first time you log in to your account, OdooBot sends you a message asking for permission to
-receive desktop notifications to chats. If accepted, you receive push notifications to the messages
-sent to you despite of where you are in Odoo.
+The first time a user logs in to their account, OdooBot sends a message asking for permission to
+send desktop notifications for chats. If accepted, the user will receive push notifications on their
+desktop for the messages they receive, regardless of where the user is in Odoo.
 
-.. image:: get_started/odoobot_push.png
+.. image:: get_started/odoobot-push.png
    :align: center
    :alt: View of the messages under the messaging menu emphasizing the request for push
-         notifications for Odoo Discuss
+         notifications for Odoo Discuss.
 
 .. tip::
-   To stop receiving desktop notifications, reset the notifications settings of your browser.
+   To stop receiving desktop notifications, reset the notifications settings of the browser.
 
-To start a chat, click on *New Message* on the *Messaging Menu*, or go to *Discuss* and send a
-*Direct Message*.
+To start a chat, go to the :menuselection:`Discuss` app and click on the :guilabel:`+ (plus)` icon
+next to :guilabel:`Direct Messages` or :guilabel:`Channels` in the left menu of the dashboard.
 
-.. image:: get_started/channels_direct_messages.png
+.. image:: get_started/channels-direct-messages.png
    :align: center
    :height: 400
-   :alt: View of discuss’s panel emphasizing the titles channels and direct messages in Odoo Discuss
+   :alt: View of Discuss's panel emphasizing the titles channels and direct messages in Odoo
+         Discuss.
 
-You can also create :doc:`public and private channels <team_communication>`.
+A company can also easily create :doc:`public and private channels
+</applications/productivity/discuss/overview/team_communication>`.
 
-Mentions in the chat and on the Chatter
+Mentions in the chat and on the chatter
 ---------------------------------------
 
-| To mention a user within a chat or the chatter type *@user-name*; to refer to a channel, type
-  *#channel-name*.
-| A notification is sent to the user mentioned either to his *Inbox* or through email, depending
-  on his settings.
+To mention a user within a chat or the chatter, type `@user-name`; to refer to a channel, type
+`#channel-name`. The user mentioned will be notified in their *inbox* or through an email, depending
+on their communication settings.
 
-.. image:: get_started/chat_windows.png
+.. image:: get_started/chat-windows.png
    :align: center
-   :alt: View of a couple of chat window messages for Odoo Discuss
+   :alt: View of a couple of chat window messages for Odoo Discuss.
 
 .. tip::
    When a user is mentioned, the search list (list of names) suggests values first based on the
-   task’s followers, and secondly on *Employees*. If the record being searched does not match with
+   task's followers, and secondly on employees. If the record being searched does not match with
    either a follower or employee, the scope of the search becomes all partners.
 
-Chat status
+User status
 -----------
 
 It is helpful to see what colleagues are up to and how quickly they can respond to messages by
-checking their *Status*. The status is shown on the left side of a contact’s names on Discuss’
-sidebar and on the *Messaging menu*.
+checking their *status*. The status is shown on the left side of a contact's name on the
+:guilabel:`Discuss` sidebar, on the *messaging menu* and when listed in the *chatter*.
 
 - Green = online
 - Orange = away
@@ -91,8 +100,8 @@ sidebar and on the *Messaging menu*.
 .. image:: get_started/status.png
    :align: center
    :height: 300
-   :alt: View of the contacts’ status for Odoo Discuss
+   :alt: View of the contacts' status for Odoo Discuss.
 
 .. seealso::
-   - :doc:`team_communication`
-   - :doc:`/applications/general/email_communication/email_servers`
+   - :doc:`/applications/productivity/discuss/overview/team_communication`
+   - :doc:`/applications/productivity/discuss/overview/plan_activities`
