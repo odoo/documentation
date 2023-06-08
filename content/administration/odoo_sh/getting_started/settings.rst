@@ -45,41 +45,101 @@ these databases if they have one, using their regular credentials.
 
 In addition, they cannot use the webshell nor have access to the server logs.
 
-+---------------------+-----------------+-----------+-----------+
-|                     |                 | User      | Admin     |
-+=====================+=================+===========+===========+
-|Development          | History         |     X     |     X     |
-+---------------------+-----------------+-----------+-----------+
-|                     | 1-click connect |     X     |     X     |
-+---------------------+-----------------+-----------+-----------+
-|                     | Logs            |     X     |     X     |
-+---------------------+-----------------+-----------+-----------+
-|                     | Shell/SSH       |     X     |     X     |
-+---------------------+-----------------+-----------+-----------+
-|                     | Mails           |     X     |     X     |
-+---------------------+-----------------+-----------+-----------+
-|                     | Settings        |     X     |     X     |
-+---------------------+-----------------+-----------+-----------+
-|Production & Staging | History         |     X     |     X     |
-+---------------------+-----------------+-----------+-----------+
-|                     | 1-click connect |           |     X     |
-+---------------------+-----------------+-----------+-----------+
-|                     | Logs            |           |     X     |
-+---------------------+-----------------+-----------+-----------+
-|                     | Shell/SSH       |           |     X     |
-+---------------------+-----------------+-----------+-----------+
-|                     | Mails           |           |     X     |
-+---------------------+-----------------+-----------+-----------+
-|                     | Monitoring      |           |     X     |
-+---------------------+-----------------+-----------+-----------+
-|                     | Backups         |           |     X     |
-+---------------------+-----------------+-----------+-----------+
-|                     | Settings        |     X     |     X     |
-+---------------------+-----------------+-----------+-----------+
-|Status               |                 |     X     |     X     |
-+---------------------+-----------------+-----------+-----------+
-|Settings             |                 |           |     X     |
-+---------------------+-----------------+-----------+-----------+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * -
+     -
+     - User
+     - Admin
+   * - Development
+     - History
+     - |green|
+     - |green|
+   * -
+     - 1-click connect
+     - |green|
+     - |green|
+   * -
+     - Logs
+     - |green|
+     - |green|
+   * -
+     - Shell/SSH
+     - |green|
+     - |green|
+   * -
+     - Mails
+     - |green|
+     - |green|
+   * -
+     - Upgrade
+     - |green|
+     - |green|
+   * -
+     - Settings
+     - |green|
+     - |green|
+   * - Production & Staging
+     - History
+     - |green|
+     - |green|
+   * -
+     - 1-click connect
+     -
+     - |green|
+   * -
+     - Logs
+     -
+     - |green|
+   * -
+     - Shell/SSH
+     -
+     - |green|
+   * -
+     - Mails
+     -
+     - |green|
+   * -
+     - Monitoring
+     -
+     - |green|
+   * -
+     - Backups
+     -
+     - |green|
+   * -
+     - Upgrade
+     -
+     - |green|
+   * -
+     - Settings
+     - |green|\*
+     - |green|
+   * - Status
+     -
+     - |green|
+     - |green|
+   * - Settings
+     -
+     -
+     - |green|
+
+.. note::
+    \* Only in staging branches
+
+.. |green| raw:: html
+
+   <span class="text-success" style="font-size: 32px; line-height: 0.5">●</span>
+
+.. |orange| raw:: html
+
+   <span class="text-warning" style="font-size: 32px; line-height: 0.5">●</span>
+
+.. |red| raw:: html
+
+   <span class="text-danger" style="font-size: 32px; line-height: 0.5">●</span>
 
 Public Access
 =============
