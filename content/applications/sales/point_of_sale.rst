@@ -23,17 +23,17 @@ Control` screen, click :guilabel:`Open Session` to start a POS session, or click
 Selling` if the session is already opened.
 
 .. note::
-   Multiple users can be connected to the same session at the same time. However, the session can
-   only be opened once on the same browser.
+   :doc:`Multiple users <point_of_sale/employee_login>` can be logged into the same session at the
+   same time. However, the session can only be opened once on the same browser.
 
 .. _pos/sell:
 
 Sell products
 =============
 
-Click products to add them to the cart. To change the **quantity**, click :guilabel:`Qty` and enter
-the number of products using the keypad. To add a **discount** or modify the product **price**,
-click respectively :guilabel:`% Disc` or :guilabel:`Price` and enter the amounts.
+Click on products to add them to the cart. To change the **quantity**, click :guilabel:`Qty` and
+enter the number of products using the keypad. To add a **discount** or modify the product
+**price**, click respectively :guilabel:`% Disc` or :guilabel:`Price` and enter the amounts.
 
 Once an order is completed, proceed to checkout by clicking :guilabel:`Payment`. Select the
 **payment method**, enter the received amount, and click :guilabel:`Validate`. Click
@@ -48,28 +48,17 @@ Once an order is completed, proceed to checkout by clicking :guilabel:`Payment`.
 
 .. _pos/customers:
 
-Register customers
-==================
+Set customers
+=============
 
-Registering your customers gives you the ability to grant them various privileges such as discounts,
-loyalty program, specific communication. It is also required if they want an invoice and registering
-them makes any future interaction with them faster.
+You can create and set customers from an :ref:`open POS session <pos/session-start>`. Registering
+your customer is necessary to :doc:`collect their loyalty points and grant them rewards
+<point_of_sale/pricing/loyalty>`, automatically apply the :doc:`attributed pricelist
+<point_of_sale/pricing/pricelists>`, or :ref:`generate and print an invoice
+<receipts-invoices/invoices>`.
 
-From your session interface, use the customer button.
-
-.. image:: point_of_sale/customer-button.png
-
-Create a new one by using this button.
-
-.. image:: point_of_sale/customer-add.png
-
-You will be invited to fill out the customer form with their
-information.
-
-.. image:: point_of_sale/customer-form.png
-
-Use the save button when you are done. You can then select that customer
-in any future transactions.
+To access the list of customers, click :guilabel:`Customer` on the POS interface. Then, select a
+customer or create a new one by clicking :guilabel:`Create`, completing the form, and saving.
 
 .. _pos/customer-notes:
 
