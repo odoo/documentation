@@ -33,7 +33,7 @@ localization in Odoo, it is necessary to meet the following requirements:
    <https://www.gob.mx/sat/acciones-y-programas/certificado-de-sello-digital>`_ (CSD).
 #. Choose a PAC and purchase stamps. Currently the Mexican location in Odoo works with the following
    PACs: `Solución Factible <https://solucionfactible.com/>`_, `Quadrum (formerly Finkok)
-   <https://cfdiquadrum.com.mx/index.html>`_ and `SW Sapien - Smarter Web <https://sw.com.mx/>`_.
+   <https://cfdiquadrum.com.mx/index.html>`_ and `SW Sapien - Smarter Web <https://info.sw.com.mx/sw-smarter-odoo/>`_.
 #. Have knowledge and experience with billing, sales and accounting in Odoo. This documentation
    contains only the information necessary to enable the use of Odoo in a company based in Mexico.
 
@@ -211,7 +211,7 @@ working with and the credentials. That way, electronic invoicing will be enabled
    Remember that you must register directly with the PAC of your choice before you start creating
    invoices from Odoo. We have the following PACs available: `Quadrum
    <https://cfdiquadrum.com.mx/index.html>`_, `Solución Factible <https://solucionfactible.com/>`_
-   and `SW Sapien - Smarter Web <https://sw.com.mx/>`_.
+   and `SW Sapien - Smarter Web <https://info.sw.com.mx/sw-smarter-odoo/>`_.
 
    You must process your **Private Key (CSD)** with the SAT institution before following these
    steps. If you do not have this information, try with the Test Credentials and return to this
