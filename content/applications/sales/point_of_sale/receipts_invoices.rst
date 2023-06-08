@@ -32,6 +32,8 @@ When you use it, you can then reprint your last receipt.
 
 .. image:: receipts_invoices/reprint03.png
 
+.. _receipts-invoices/invoices:
+
 Invoice from the PoS interface
 ==============================
 
