@@ -70,7 +70,7 @@ using the QWeb language:
 The `owl="1"` attribute allows Odoo to differentiate Owl templates from the old JavaScript
 framework templates. In the future, this attribute will no longer be necessary, since all
 static templates will be rendered by Owl anyway. Note that Owl templates are not exactly the same
-as QWeb templates: they can contain additional directives such as `t-on-click`. 
+as QWeb templates: they can contain additional directives such as `t-on-click`.
 
 1. Displaying a counter
 =======================
@@ -115,7 +115,11 @@ see how to create a `sub-component <{OWL_PATH}/doc/reference/component.md#sub-co
 #. You can do it in the same file first, but once it's done, update your code to move the
    `Counter` in its own folder and file. Import it relatively from `./counter/counter`. Make sure
    the template is in its own file, with the same name.
-#. Add two counters in your playground 
+#. Add two counters in your playground.
+
+.. image:: 01_owl_components/double_counter.png
+   :scale: 70%
+   :align: center
 
 .. tip::
    By convention, most components code, template and css should have the same snake-cased name
@@ -159,6 +163,10 @@ The above example should produce some html using bootstrap that look like this:
 #. Create a `Card` component
 #. Import it in `Playground` and display a few cards in its template
 
+.. image:: 01_owl_components/simple_card.png
+   :scale: 90%
+   :align: center
+
 4. Using `markup` to display html
 =================================
 
@@ -167,8 +175,8 @@ its content. For example, if you try to display some html like this: `<Card titl
 the resulting output will simply display the html as a string.
 
 In this case, since the `Card` component may be used to display any kind of content, it makes sense
-to allow the user to display some html. This is done with the 
-`t-out directive <{OWL_PATH}/doc/reference/templates.md#outputting-data>`_. 
+to allow the user to display some html. This is done with the
+`t-out directive <{OWL_PATH}/doc/reference/templates.md#outputting-data>`_.
 
 However, displaying arbitrary content as html is dangerous, it could be used to inject malicious code, so
 by default, Owl will always escape a string unless it has been explicitely marked as safe with the `markup`
@@ -182,6 +190,10 @@ function.
 
    The `t-esc` directive can still be used in Owl templates. It is slightly faster than `t-out`.
 
+.. image:: 01_owl_components/markup.png
+   :scale: 80%
+   :align: center
+
 5. Props validation
 ===================
 
@@ -192,13 +204,13 @@ explicit. We can add a props definition that will let Owl perform a validation s
 configuration <{OWL_PATH}/doc/reference/app.md#configuration>`_ (but it is activated by default
 on the `awesome_owl` playground).
 
- It is a good practice to do props validation for every component.
+It is a good practice to do props validation for every component.
 
 #. Add `props validation <{OWL_PATH}/doc/reference/props.md#props-validation>`_ to the `Card`
    component.
 #. Rename the `title` props into something else in the playground template, then check in the
    :guilabel:`Console` tab of your browser's dev tools that you can see an error.
-   
+
 6. The sum of two `Counter`
 ===========================
 
@@ -206,7 +218,7 @@ We saw in a previous exercise that `props` can be used to provide information fr
 to a child component. Now, let us see how we can communicate information in the opposite
 direction: in this exercise, we want to display two `Counter` components, and below them, the sum of
 their values. So, the parent component (`Playground`) need to be informed whenever one of
-the `Counter` value is changed. 
+the `Counter` value is changed.
 
 This can be done by using a `callback prop <{OWL_PATH}/doc/reference/props.md#binding-function-props>`_:
 a prop that is a function meant to be called back. The child component can choose to call
@@ -222,6 +234,10 @@ be called whenever the `Counter` component is incremented.
 #. Implement an `incrementSum` method in `Playground`
 #. Give that method as a prop to two (or more!) sub `Counter` components.
 
+.. image:: 01_owl_components/sum_counter.png
+   :scale: 90%
+   :align: center
+
 .. important::
 
    There is a subtlety with callback props: they usually should be defined with the `.bind`
@@ -232,13 +248,13 @@ be called whenever the `Counter` component is incremented.
 
 Let us now discover various features of Owl by creating a todo list.  We need two components: a
 `TodoList` component that will display a list of `TodoItem` components. The list of todos is a
-state that should be maintained by the `TodoList`. 
+state that should be maintained by the `TodoList`.
 
 For this tutorial, a `todo` is an object that contains three values: an `id` (number), a `description`
 (string) and a flag `isCompleted` (boolean):
 
 .. code-block:: js
-   
+
    { id: 3, description: "buy milk", isCompleted: false }
 
 #. Create a `TodoList` and a `TodoItem` components
@@ -246,13 +262,16 @@ For this tutorial, a `todo` is an object that contains three values: an `id` (nu
 #. For now, hardcode the list of todos:
 
    .. code-block:: js
-      
+
       // in TodoList
       this.todos = useState([{ id: 3, description: "buy milk", isCompleted: false }]);
 
 #. Use `t-foreach <{OWL_PATH}/doc/reference/templates.md#loops>`_ to display each todo in a `TodoItem`
 #. Display a `TodoList` in the playground
 #. Add props validation to `TodoItem`
+
+.. image:: 01_owl_components/todo_list.png
+   :align: center
 
 Note that the `t-foreach` directive is not exactly the same in Owl as the QWeb python implementation: it
 requires a `t-key` unique value, so Owl can properly reconciliate each element.
@@ -272,8 +291,11 @@ using a `dynamic attributes <{OWL_PATH}/doc/reference/templates.md#dynamic-attri
    if it is completed.
 #. Change the hardcoded `todo` value to check that it is properly displayed.
 
-Even though the directive is named `t-att` (for attribute), it can be used to set a `class` value (and 
+Even though the directive is named `t-att` (for attribute), it can be used to set a `class` value (and
 html properties such as the `value` of an input).
+
+.. image:: 01_owl_components/muted_todo.png
+   :align: center
 
 .. tip::
 
@@ -308,7 +330,6 @@ a todo to the list.
 
 
 .. image:: 01_owl_components/create_todo.png
-   :scale: 70%
    :align: center
 
 .. seealso::
@@ -327,7 +348,6 @@ hook functions have to be called in the `setup` method, and no later!
 
 ..     classDef hook fill:#ccf
 
-    
 ..     subgraph "creation"
 ..     direction TB
 ..     A:::hook
@@ -356,7 +376,7 @@ hook functions have to be called in the `setup` method, and no later!
 ..     J:::hook
 ..     I[onWillUnmount] --> J[onWillDestroy]
 ..     J --> N(removed from DOM)
-    
+
 ..     end
 
 ..     creation --> updates
@@ -366,7 +386,6 @@ hook functions have to be called in the `setup` method, and no later!
 .. figure:: 01_owl_components/component_lifecycle.svg
    :align: center
    :width: 50%
-
 
 
 An Owl component goes through a lot of phases: it can be instantiated, rendered,
@@ -401,7 +420,7 @@ the target element in the component template with a `t-ref`:
 .. code-block:: xml
 
    <div t-ref="some_name">hello</div>
-   
+
 Then you can access it in the JS with the `useRef hook <{OWL_PATH}/doc/reference/hooks.md#useref>`_.
 However, there is a problem if you think about it: the actual html element for a
 component does not exist when the component is created. It only exists when the
@@ -420,19 +439,21 @@ component is mounted.
 
 
 #. Focus the `input` from the previous exercise. This this should be done from the
-   `TodoList` component (note that there is a `focus` method on the input html element). 
+   `TodoList` component (note that there is a `focus` method on the input html element).
 #. Bonus point: extract the code into a specialized `hook <{OWL_PATH}/doc/reference/hooks.md>`_
    `useAutofocus` in a new :file:`awesome_owl/utils.js` file.
 
+.. image:: 01_owl_components/autofocus.png
+   :align: center
+
 .. tip::
 
-   Refs are usually suffixed by `Ref` to make it obvious that they are special objects: 
+   Refs are usually suffixed by `Ref` to make it obvious that they are special objects:
 
    .. code-block:: js
 
       this.inputRef = useRef('refname');
 
-   
 11. Toggling todos
 ==================
 
@@ -455,7 +476,6 @@ way to do this is by using a `callback prop
 #. Make it work!
 
 .. image:: 01_owl_components/toggle_todo.png
-   :scale: 70%
    :align: center
 
 12. Deleting todos
@@ -482,7 +502,6 @@ The final touch is to let the user delete a todo.
    }
 
 .. image:: 01_owl_components/delete_todo.png
-   :scale: 70%
    :align: center
 
 .. _tutorials/discover_js_framework/generic_card:
@@ -497,7 +516,7 @@ it does not work, since the content of the card is described by a string. It wou
 however be very convenient if we could describe the content as a piece of template.
 
 This is exactly what Owl `slot <{OWL_PATH}/doc/reference/slots.md>`_ system is designed
-for: allowing to write generic components. 
+for: allowing to write generic components.
 
 Let us modify the `Card` component to use slots:
 
@@ -506,8 +525,8 @@ Let us modify the `Card` component to use slots:
 #. Insert a few cards with arbitrary content, such as a `Counter` component
 #. (bonus) Add prop validation
 
-.. image:: 01_owl_components/card.png
-   :scale: 70%
+.. image:: 01_owl_components/generic_card.png
+   :scale: 90%
    :align: center
 
 .. seealso::
@@ -522,3 +541,7 @@ want a button to toggle its content (show it or hide it)
 #. Add a state to the `Card` component to track if it is open (the default) or not
 #. Add a `t-if` in the template to conditionally render the content
 #. Add a button in the header, and modify the code to flip the state when the button is clicked
+
+.. image:: 01_owl_components/toggle_card.png
+   :scale: 90%
+   :align: center

@@ -177,12 +177,15 @@ Let us now add two buttons to our control panel:
 3. Add a DashboardItem
 =========================
 
-Let us now improve our content. 
+Let us now improve our content.
 
 #. Create a generic `DashboardItem` component that display its default slot in a nice card layout
    It should take an optional `size` number props, that default to `1`
    The width should be hardcoded to `(18*size)rem`.
 #. Add a few cards in the dashboard, with no size and a size of 2.
+
+.. image:: 02_web_framework/dashboard_item.png
+   :align: center
 
 .. seealso::
    - `Owl slot system <{OWL_PATH}/doc/reference/slots.md>`_
@@ -192,7 +195,7 @@ Let us now improve our content.
 
 Let's improve the dashboard by adding a few dashboard items to display *real* business data.
 The *awesome_dashboard* addon provides a `/awesome_dashboard/statistics` route that is meant
-to return some interesting information. 
+to return some interesting information.
 
 To call a specific controller, we need to use the :ref:`rpc service <frontend/services/rpc>`.
 It only exports a single function that perform the request: :code:`rpc(route, params, settings)`.
@@ -276,7 +279,7 @@ the chartjs code every time if they don't need it.
 
 .. image:: 02_web_framework/pie_chart.png
    :align: center
-   :scale: 50%
+   :scale: 80%
 
 .. seealso::
    - `Example: lazy loading a js file
@@ -295,7 +298,7 @@ fresh data.
 
 This is quite simple to implement, with a `setTimeout` or `setInterval` in the dashboard service.
 However, here is the tricky part: if the dashboard is currently being displayed, it should be
-updated immediately. 
+updated immediately.
 
 To do that, one can use a `reactive` object: it is just like the proxy returned by `useState`,
 but not linked to any component. A component can then do a `useState` on it to subscribe to its
@@ -344,9 +347,9 @@ So, the next step is then to make our dashboard generic: instead of hardcoding i
 in the template, it can just iterate over a list of dashboard items. But then, many
 questions comes up: how to represent a dashboard item, how to register it, what data
 should it receive, and so on. There are many different ways to design such a system,
-with different trade offs. 
+with different trade offs.
 
-For this tutorial, we will say that a dashboard item is an object with the folowing structure: 
+For this tutorial, we will say that a dashboard item is an object with the folowing structure:
 
 .. code-block:: js
 
@@ -381,7 +384,7 @@ The goal is to replace the content of the dashboard with the following snippet:
 
 Note that the above example features two advanced features of Owl: dynamic components, and dynamic props.
 
-We currently have two kinds of item components: number cards, with a title and a number, and pie cards, with 
+We currently have two kinds of item components: number cards, with a title and a number, and pie cards, with
 some label and a pie chart.
 
 #. create and implement two components: `NumberCard` and `PieChartCard`, with the corresponding props
@@ -420,12 +423,17 @@ The dashboard configuration will be saved as a list of removed item ids.
 
 #. Add a button in the control panel with a gear icon, to indicate that it is a settings button
 #. Clicking on that button should open a dialog
-#. In that dialog, we want to see a list of all existing dashboard items, each with a checkbox 
+#. In that dialog, we want to see a list of all existing dashboard items, each with a checkbox
 #. There should be a `Apply` button in the footer. Clicking on it will build a list of all item ids
    that are unchecked
 #. We want to store that value in the local storage
 #. And modify the `Dashboard` component to filter the current items by removing the ids of items
    from the configuration
+
+
+.. image:: 02_web_framework/items_configuration.png
+   :width: 50%
+   :align: center
 
 12. Going further
 =================
@@ -439,7 +447,7 @@ Here is a list of some small improvements you could try to do if you have the ti
    #. Clicking on a section of the pie chart should open a list view of all orders which have the
       corresponding size.
    #. Save the content of the dashboard in a user settings on the server!
-   #. Make it responsive: in mobile mode, each card should take 100% of the width 
+   #. Make it responsive: in mobile mode, each card should take 100% of the width
 
 .. seealso::
    - `Example: use of env._t function
