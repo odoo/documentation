@@ -104,16 +104,18 @@ URLs, proceed as follows:
      :alt: Copy the prefix for the Adyen APIs
 
 #. In Odoo, :ref:`navigate to the payment provider Adyen <payment_providers/add_new>`.
-#. In the :guilabel:`Checkout API URL` field, enter the following URL and replace `yourprefix` with the
-   prefix you previously saved: `https://yourprefix.com/checkout`.
+#. In the :guilabel:`Checkout API URL` field, enter the following URL and replace `yourprefix` with
+   the prefix you previously saved:
+   `https://yourprefix-checkout-live.adyenpayments.com/checkout`
 #. In the :guilabel:`Recurring API URL` field, enter the following URL and replace `yourprefix` with
-   the prefix you previously saved: `https://yourprefix.com/pal/servlet/Recurring`.
+   the prefix you previously saved:
+   `https://yourprefix-pal-live.adyenpayments.com/pal/servlet/Recurring`.
 
 .. note::
    If you are trying Adyen as a test, you can use the following URLs instead:
 
-   - :guilabel:`Checkout API URL`: `https://checkout-test.adyen.com/checkout/`
-   - :guilabel:`Recurring API URL`: `https://pal-test.adyen.com/pal/servlet/Recurring/`
+   - :guilabel:`Checkout API URL`: `https://checkout-test.adyen.com`
+   - :guilabel:`Recurring API URL`: `https://pal-test.adyen.com/pal/servlet/Recurring`
 
 Adyen Account
 -------------
