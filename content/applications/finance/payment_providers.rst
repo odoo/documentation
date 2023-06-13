@@ -148,7 +148,7 @@ Online payment providers
      -
      -
    * - :doc:`Stripe <payment_providers/stripe>`
-     - The provider website
+     - Odoo
      - |V|
      - Full only
      - Full and partial
