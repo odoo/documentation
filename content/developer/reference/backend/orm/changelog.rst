@@ -4,6 +4,13 @@
 Changelog
 =========
 
+Odoo Online version 16.4
+========================
+
+- Since `#124633 <https://github.com/odoo/odoo/pull/124633>`_, it is possible
+  to group and to aggregate on no-store related field with
+  `odoo.models.Model._read_group`.
+
 Odoo Online version 16.3
 ========================
 
