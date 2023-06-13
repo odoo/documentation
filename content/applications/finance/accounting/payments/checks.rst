@@ -2,128 +2,122 @@
 Checks
 ======
 
-There are two ways to handle payments received by checks. Odoo support
-both approaches so that you can use the one that better fits your
-habits.
+There are two ways to handle payments received by checks in Odoo, either by using :ref:`outstanding
+accounts <checks/outstanding-account>` or by :ref:`bypassing the reconciliation process
+<checks/reconciliation-bypass>`.
 
-1. **Undeposited Funds:**
-   once you receive the check, you record a payment
-   by check on the invoice. (using a Check journal and posted on the
-   Undeposited Fund account) Then, once the check arrives in your
-   bank account, move money from Undeposited Funds to your bank
-   account.
+**Using outstanding accounts is recommended**, as your bank account balance stays accurate by taking
+into account checks yet to be cashed.
 
-2. **One journal entry only:**
-   once your receive the check, you record a
-   payment on your bank, paid by check, without going through the
-   **Undeposited Funds**. Once you process your bank statement, you do
-   the matching with your bank feed and the check payment, without
-   creating a dedicated journal entry.
+.. note::
+   Both methods produce the same data in your accounting at the end of the process. But if you
+   have checks that have not been cashed in, the **Outstanding Account** method reports these
+   checks in the **Outstanding Receipts** account. However, funds appear in your bank account
+   whether or not they are reconciled, as the bank value is reflected at the moment of the bank
+   statement.
 
-We recommend the first approach as it is more accurate (your bank
-account balance is accurate, taking into accounts checks that have not
-been cashed yet). Both approaches require the same effort.
+.. seealso::
+   * :ref:`Outstanding accounts <bank/outstanding-accounts>`
+   * :ref:`Bank reconciliation <accounting/reconciliation>`
 
-Even if the first method is cleaner, Odoo support the second approach
-because some accountants are used to it (quickbooks and peachtree
-users).
+.. _checks/outstanding-account:
 
-.. Note::
-  You may have a look at the *Deposit Ticket feature* if you deposit
-  several checks to your bank accounts in batch.
+Method 1: Outstanding account
+=============================
 
-Option 1: Undeposited Funds
-===========================
+When you receive a check, you :doc:`record a payment <../bank/reconciliation>` by check on the
+invoice. Then, when your bank account is credited with the check's amount, you reconcile the payment
+and statement to move the amount from the **Outstanding Receipt** account to the **Bank** account.
 
-Configuration
--------------
+.. tip::
+   You can create a new payment method named *Checks* if you would like to identify such payments
+   quickly. To do so, go to :menuselection:`Accounting --> Configuration --> Journals --> Bank`,
+   click the :guilabel:`Incoming Payments` tab, and :guilabel:`Add a line`. As :guilabel:`Payment
+   Method`, select :guilabel:`Manual`, enter `Checks` as name, and :guilabel:`Save`.
 
--  Create a journal **Checks**
+.. _checks/reconciliation-bypass:
 
--  Set **Undeposited Checks** as a default credit/debit account
+Method 2: Reconciliation bypass
+===============================
 
--  Set the bank account related to this journal as **Allow Reconciliation**
+When you receive a check, you :doc:`record a payment <../bank/reconciliation>` on the related
+invoice. The amount is then moved from the **Account Receivable** to the **Bank** account, bypassing
+the reconciliation and creating only **one journal entry**.
 
-From check payments to bank statements
---------------------------------------
+To do so, you *must* follow the following setup. Go to :menuselection:`Accounting --> Configuration
+--> Journals --> Bank`. Click the :guilabel:`Incoming Payments` tab and then :guilabel:`Add a line`,
+select :guilabel:`Manual` as :guilabel:`Payment Method`, and enter `Checks` as :guilabel:`Name`.
+Click the :guilabel:`⋮` button, tick :guilabel:`Outstanding Receipts accounts`, and in the
+:guilabel:`Outstanding Receipts accounts` column, set the :guilabel:`Bank` account for the
+**Checks** payment method, and :guilabel:`Save`.
 
-The first way to handle checks is to create a check journal. Thus,
-checks become a payment method in itself and you will record two
-transactions.
+.. image:: checks/outstanding-payment-accounts.png
+   :alt: Bypass the Outstanding Receipts account using the Bank account.
 
-Once you receive a customer check, go to the related invoice and click
-on **Register Payment**. Fill in the information about the payment:
+Payment registration
+====================
 
--  Payment method: Check Journal (that you configured with the debit and
-   credit default accounts as **Undeposited Funds**)
+.. note::
+   By default, there are two ways to register payments made by check:
 
--  Memo: write the Check number
+   - **Manual**: for single checks;
+   - **Batch**: for multiple checks at once.
 
-.. image:: checks/check02.png
+   This documentation focuses on **single-check** payments. For **batch deposits**, see :doc:`the
+   batch payments documentation <batch>`.
 
-This operation will produce the following journal entry:
+Once you receive a customer check, go to the related invoice (:menuselection:`Accounting -->
+Customer --> Invoices)`, and click :guilabel:`Register Payment`. Fill in the payment information:
+
+- :guilabel:`Journal: Bank`;
+- :guilabel:`Payment method`: :guilabel:`Manual` (or **Checks** if you have created a specific
+  payment method);
+- :guilabel:`Memo`: enter the check number;
+- Click :guilabel:`Create Payment`.
+
+.. image:: checks/payment-checks.png
+   :alt: Check payment info
+
+The generated journal entries are different depending on the payment registration method chosen.
+
+Journal entries
+===============
+
+Outstanding account
+-------------------
+
+The invoice is marked as :guilabel:`In Payment` as soon as you record the payment. This operation
+produces the following **journal entry**:
 
 +----------------------+-------------------+----------+----------+
 | Account              | Statement Match   | Debit    | Credit   |
 +======================+===================+==========+==========+
 | Account Receivable   |                   |          | 100.00   |
 +----------------------+-------------------+----------+----------+
-| Undeposited Funds    |                   | 100.00   |          |
+| Outstanding Receipts |                   | 100.00   |          |
 +----------------------+-------------------+----------+----------+
 
-The invoice is marked as paid as soon as you record the check.
-
-Then, once you get the bank statements, you will match this statement
-with the check that is in Undeposited Funds.
+Then, once you receive the bank statements, match this statement with the check of the **Outstanding
+Receipts** account. This produces the following **journal entry**:
 
 +---------------------+-------------------+----------+----------+
 | Account             | Statement Match   | Debit    | Credit   |
 +=====================+===================+==========+==========+
-| Undeposited Funds   | X                 |          | 100.00   |
+| Outstanding Receipts|        X          |          | 100.00   |
 +---------------------+-------------------+----------+----------+
 | Bank                |                   | 100.00   |          |
 +---------------------+-------------------+----------+----------+
 
+If you use this approach to manage received checks, you get the list of checks that have not been
+cashed in the **Outstanding Receipt** account (accessible, for example, from the general ledger).
 
-If you use this approach to manage received checks, you get the list of
-checks that have not been cashed in the **Undeposit Funds** account
-(accessible, for example, from the general ledger).
+Reconciliation bypass
+---------------------
 
-.. Note::
-    Both methods will produce the same data in your accounting at the
-    end of the process. But, if you have checks that have not been cashed,
-    this one is cleaner because those checks have not been reported yet on
-    your bank account.
+The invoice is marked as :guilabel:`Paid` as soon as you record the check.
 
-Option 2: One journal entry only
-================================
-
-Configuration
--------------
-
-These is nothing to configure if you plan to manage your checks using
-this method.
-
-From check payments to bank statements
---------------------------------------
-
-Once you receive a customer check, go to the related invoice and click
-on **Register Payment**. Fill in the information about the payment:
-
--  **Payment method:** the bank that will be used for the deposit
-
--  Memo: write the check number
-
-.. image:: checks/check03.png
-
-The invoice is marked as paid as soon as you record the check.
-
-Once you will receive the bank statements, you will do the matching with
-the statement and this actual payment. (technically: point this payment
-and relate it to the statement line)
-
-With this approach, you will get the following journal entry in your
-books:
+With this approach, you bypass the use of **outstanding accounts**, effectively getting only one
+journal entry in your books and bypassing the reconciliation:
 
 +----------------------+-------------------+----------+----------+
 | Account              | Statement Match   | Debit    | Credit   |
@@ -132,17 +126,3 @@ books:
 +----------------------+-------------------+----------+----------+
 | Bank                 |                   | 100.00   |          |
 +----------------------+-------------------+----------+----------+
-
-.. tip::
-    You may also record the payment directly without going on the
-    customer invoice, using the menu :menuselection:`Sales --> Payments`. This method may
-    be more convenient if you have a lot of checks to record in a batch but
-    you will have to reconcile entries afterwards (matching payments with
-    invoices)
-
-If you use this approach to manage received checks, you can use the
-report **Bank Reconciliation Report** to verify which checks have been
-received or paid by the bank. (this report is available from the **More**
-option from the Accounting dashboard on the related bank account).
-
-.. image:: checks/check01.png
