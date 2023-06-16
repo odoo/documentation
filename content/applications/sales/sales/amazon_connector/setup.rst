@@ -24,6 +24,12 @@ Once the account is registered, the marketplaces available to this account are s
 listed under the :guilabel:`Marketplaces` tab. If you wish, you can remove some items from the list
 of synchronized marketplaces to disable their synchronization.
 
+Additionally, you can configure the account to automatically synchronize the available quantity of
+your product present in your offers. To do so, check the :guilabel:`FBM Stock Synchronization` box.
+This will automatically send to Amazon the current available quantities of products in Odoo at
+regular intervals. You'll then need to :ref:`match database products in Amazon <amazon/matching>`
+for Odoo to know which products needs to be send, as well as the Amazon SKU used to recognize them.
+
 Match database products in Amazon
 =================================
 
@@ -47,6 +53,10 @@ found, :ref:`the internal reference is used instead <amazon/matching>`.
    either the product or the SKU of an offer. The offer can be manually created if it was not
    automatically done yet. This is useful if you do not use the internal reference as the SKU or if
    you sell the product under different conditions.
+
+.. note::
+   When synchronizing the available quantity of products, only :guilabel:`Storable Products` are
+   synchronized.
 
 If no database product with a matching internal reference is found for a given SKU or gift wrapping
 code, a default database product **Amazon Sale** is used. The same is done with the default product

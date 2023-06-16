@@ -22,6 +22,8 @@ The connector is able to:
   delivery).
 - Notify Amazon of a shipping confirmed on Odoo (FBM) in order to get paid.
 
+- Synchronize (Odoo to Amazon) all available quantities of your products (FBM).
+
 - Support multiple seller accounts.
 - Support multiple marketplaces per seller account.
 
@@ -37,8 +39,9 @@ The connector is able to:
 | **Gift Wrapping**    | Handled by Amazon          | - Gift wrapping charges             |
 |                      |                            | - Gift message                      |
 +----------------------+----------------------------+-------------------------------------+
-| **Stock Management** | One stock move created     | Handled by the delivery             |
-|                      | per sales order item       |                                     |
+| **Stock Management** | One stock move created     | - Handled by the delivery           |
+|                      | per sales order item       | - Products available quantity       |
+|                      |                            |   updated from Odoo to Amazon       |
 +----------------------+----------------------------+-------------------------------------+
 | **Confirmation**     | Handled by Amazon          | Notify Amazon when confirming       |
 |                      |                            | delivery                            |
