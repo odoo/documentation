@@ -29,7 +29,7 @@ The first step is to create a new directory.
    website_airproof
 
 .. note::
-   Prefix it with `website_` and use only lowercase ASCII alphanumeric characters and underscores.
+   Prefix it with `theme_` and use only lowercase ASCII alphanumeric characters and underscores.
 
    In this documentation, we will use **Airproof** (a fictional project) as an example.
 
