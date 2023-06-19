@@ -523,6 +523,8 @@ Some conversions don't match the pattern:
 * :option:`--i18n-import` and :option:`--i18n-export` aren't available at all
   from configuration files
 
+.. _reference/cmdline/config_file:
+
 The default configuration file is :file:`{$HOME}/.odoorc` which
 can be overridden using :option:`--config <odoo-bin -c>`. Specifying
 :option:`--save <odoo-bin -s>` will save the current configuration state back
