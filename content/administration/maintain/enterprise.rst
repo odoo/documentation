@@ -1,9 +1,9 @@
 
 .. _setup/enterprise:
 
-===============================
-Upgrade Community to Enterprise
-===============================
+===================================
+Switch from Community to Enterprise
+===================================
 
 Depending on your current installation, there are multiple ways to upgrade
 your community version.
@@ -98,7 +98,7 @@ On Windows
 
   .. code-block:: console
 
-    $ odoo.exe -d <database_name> -i web_enterprise --stop-after-init
+    $ ..\python\python.exe odoo-bin -d <database_name> -i web_enterprise --stop-after-init
 
 * No need to manually launch the server, the service is running.
   You should be able to connect to your Odoo Enterprise instance using your usual
