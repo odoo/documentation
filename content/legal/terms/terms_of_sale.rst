@@ -6,7 +6,7 @@ General Terms of Sale
 
 .. only:: html
 
-   `Download PDF <../../terms_of_sale.pdf>`_
+   `Download PDF <https://www.odoo.com/documentation/{CURRENT_BRANCH}/terms_of_sale.pdf>`_
 
 .. note:: Last revision: October 20, 2021.
 
