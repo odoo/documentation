@@ -43,7 +43,7 @@ Configuration samples
 
 * Show only databases with names beginning with 'mycompany'
 
-in ``/etc/odoo.conf`` set:
+in :ref:`the configuration file <reference/cmdline/config_file>` set:
 
 .. code-block:: ini
 
@@ -55,7 +55,7 @@ in ``/etc/odoo.conf`` set:
   was sent to ``www.mycompany.com`` or ``mycompany.co.uk``, but not
   for ``www2.mycompany.com`` or ``helpdesk.mycompany.com``.
 
-in ``/etc/odoo.conf`` set:
+in :ref:`the configuration file <reference/cmdline/config_file>` set:
 
 .. code-block:: ini
 
@@ -150,7 +150,7 @@ Configuration sample
 * with 'pwd' as a password
 * filtering only db with a name beginning with 'mycompany'
 
-in ``/etc/odoo.conf`` set:
+in :ref:`the configuration file <reference/cmdline/config_file>` set:
 
 .. code-block:: ini
 
@@ -238,7 +238,7 @@ Configuration sample
 * We'll use 8 workers + 1 for cron. We'll also use a monitoring system to measure cpu load, and check if it's between 7 and 7.5 .
 * RAM = 9 * ((0.8*150) + (0.2*1024)) ~= 3Go RAM for Odoo
 
-in ``/etc/odoo.conf``:
+in :ref:`the configuration file <reference/cmdline/config_file>`:
 
 .. code-block:: ini
 
@@ -273,7 +273,7 @@ Configuration sample
 * Redirect http requests to https
 * Proxy requests to odoo
 
-in ``/etc/odoo.conf`` set:
+in :ref:`the configuration file <reference/cmdline/config_file>` set:
 
 .. code-block:: ini
 
