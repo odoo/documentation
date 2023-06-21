@@ -33,6 +33,12 @@ The first step is to create a new directory.
 
    In this documentation, we will use **Airproof** (a fictional project) as an example.
 
+.. important::
+   You might notice that default Odoo themes use the `theme_` prefix. These themes require the use
+   of Python to work. Unfortunately, when creating a custom theme, the use of Python is not always
+   ideal as it's not compatible with Saas databases. This is why we use the `website_` prefix as a
+   reference to the Odoo’s Website app.
+
 File structure
 --------------
 
