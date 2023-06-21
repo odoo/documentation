@@ -12,7 +12,6 @@ Manufacturing management
    management/kit_shipping
    management/sub_assemblies
    management/quality_control
-   management/alternative_wc
    management/subcontracting
    management/use_mps
    management/using_work_centers
