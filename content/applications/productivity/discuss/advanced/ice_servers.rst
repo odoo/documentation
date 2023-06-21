@@ -10,7 +10,7 @@ calls, and then, connect that Twilio account to Odoo.
 Create a Twilio account
 =======================
 
-First, go to `Twilio <https://www.twilio.com_>`_ and click :guilabel:`Sign up` to create a new
+First, go to `Twilio <https://www.twilio.com>`_ and click :guilabel:`Sign up` to create a new
 Twilio account. Next, enter your name and email address, create a password, and accept Twilio's
 terms of service. Then, click :guilabel:`Start your free trial`. Verify your email address with
 Twilio, as per their instructions.
