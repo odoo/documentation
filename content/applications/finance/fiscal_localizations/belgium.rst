@@ -2,7 +2,7 @@
 Belgium
 =======
 
-.. _belgium/introduction:
+.. _belgium/pos-restaurant-certification:
 
 Fiscal certification: POS restaurant
 ====================================
@@ -12,14 +12,14 @@ use a government-certified **Cash Register System** for their receipts. This app
 earnings (excluding VAT, drinks, and take-away food) exceed 25,000 euros.
 
 This government-certified system entails the use of a :ref:`certified POS system
-<belgium/certified>`, along with a device called a :ref:`Fiscal Data Module <belgium/fdm>` (or
+<belgium/certified-pos>`, along with a device called a :ref:`Fiscal Data Module <belgium/fdm>` (or
 **black box**) and a :ref:`VAT Signing Card <belgium/vat>`.
 
 .. important::
    Do not forget to register as *foodservice industry manager* on the `Federal Public Service
    Finance registration form <https://www.systemedecaisseenregistreuse.be/fr/enregistrement>`_.
 
-.. _belgium/certified:
+.. _belgium/certified-pos:
 
 Certified POS system
 --------------------
@@ -122,7 +122,6 @@ As a pre-requisite, :ref:`activate <general/install>` the `Belgian Registered Ca
 (technical name: `pos_blackbox_be`).
 
 .. image:: belgium/be-modules.png
-   :align: center
    :alt: black box modules for belgian fiscal certification
 
 Once the module is activated, add your VAT number to your company information. To set it up, go to
@@ -132,7 +131,6 @@ so, go to the :guilabel:`Employees` app and open an employee form. There, go to 
 settings tab --> Attendance`, and fill in the :guilabel:`INSZ or BIS number` field.
 
 .. image:: belgium/bis-number.png
-   :align: center
    :alt: ISNZ or BIS number field on employee form
 
 .. tip::
@@ -161,7 +159,6 @@ database. To verify that the IoT Box recognizes the FDM, go to the IoT homepage 
 :guilabel:`IOT Device` section, which should display the FDM.
 
 .. image:: belgium/iot-devices.png
-   :align: center
    :alt: Hardware status page on a registered IoT Box
 
 Then, add the IoT to your POS. To do so, go to :menuselection:`Point of Sale --> Configuration -->
