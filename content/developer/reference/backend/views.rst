@@ -1819,6 +1819,10 @@ Possible children elements of the list view are:
     ``nolabel``
         if set to "1", the column header will remain empty. Also, the column
         won't be sortable.
+    ``optional``
+        makes the column optional. If set to "hide", the column is hidden by
+        default. If set to "show", the column is visible by default.
+        User visibility choices are stored in the browser local storage.
 
     .. note::
 
