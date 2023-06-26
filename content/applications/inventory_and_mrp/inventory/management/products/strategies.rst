@@ -128,8 +128,7 @@ click the checkbox next to a field to make it visible.
 
 By default, the quantity in the :guilabel:`To Order` field is the quantity required to reach the set
 :guilabel:`Max Quantity`. However, the :guilabel:`To Order` quantity can be adjusted by clicking on
-the field and, changing the value, and clicking :guilabel:`Save`. To replenish a product manually,
-click :guilabel:`Order Once`.
+the field and changing the value. To replenish a product manually, click :guilabel:`Order Once`.
 
 To automate a replenishment from the :guilabel:`Replenishment` page, click :guilabel:`Automate
 Orders` on the right-side of the line, represented by a :guilabel:`🔄 (circular arrow)` icon.
@@ -173,7 +172,7 @@ To activate the |MTO| route in Odoo:
    unarchiving the |MTO| route.
 
 To set a product's procurement route to |MTO|, go to :menuselection:`Inventory app --> Products -->
-Products`, click on the desired product to open its product form, and click :guilabel:`Edit`.
+Products`, and click on the desired product to open its product form.
 
 Then, click the :guilabel:`Inventory` tab, and in the :guilabel:`Routes` section of options, select
 :guilabel:`Replenish on Order (MTO)`.
