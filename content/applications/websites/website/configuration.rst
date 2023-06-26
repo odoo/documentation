@@ -11,4 +11,5 @@ Configuration
    configuration/translate
    configuration/multi_website
    configuration/unsplash
+   configuration/turnstile
    configuration/on-premise_geo-ip-installation
