@@ -307,12 +307,18 @@ provides a few helper functions, located in :file:`@web/core/assets`.
         - a list of urls of css files
 
 
-.. js:function:: useAssets(assets)
+For the `widget` component and anything drived from it (most odoo components are)
+lazy loading css or js libraries is as easy as adding `cssLibs` and `jsLibs` directly
+in the component:
 
-    :param Object assets: a description of various assets that should be loaded
+.. code-block:: javascript
+  
+  export class WidgetStudio extends Widget {
+      jsLibs: ["/web/static/lib/stacktracejs/stacktrace.js"]
+      // ...
+  };
 
-    This hook is useful when components need to load some assets in their
-    `onWillStart` method. It internally calls `loadAssets`.
+
 
 .. _frontend/assets/ir_asset:
 
