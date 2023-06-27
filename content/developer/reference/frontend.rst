@@ -14,6 +14,7 @@ JavaScript framework
     frontend/registries
     frontend/services
     frontend/hooks
+    frontend/fields
     frontend/patching_code
     frontend/javascript_reference
     frontend/mobile
