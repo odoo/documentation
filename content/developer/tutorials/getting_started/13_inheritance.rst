@@ -151,11 +151,12 @@ By convention, each inherited model is defined in its own Python file. In our ex
 
     - Add the following field to ``res.users``:
 
-    ===================== ======================================================
+    ===================== ================================================================
     Field                 Type
-    ===================== ======================================================
-    property_ids          One2many inverse of ``user_id`` to ``estate.property``
-    ===================== ======================================================
+    ===================== ================================================================
+    property_ids          One2many inverse of the field that references the salesperson in
+                          ``estate.property``
+    ===================== ================================================================
 
     - Add a domain to the field so it only lists the available properties.
 
