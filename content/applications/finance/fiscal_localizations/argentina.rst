@@ -58,7 +58,7 @@ Chart of account
 ----------------
 
 In Accounting, there are three different :guilabel:`Chart of Accounts` packages to choose from.
-They are based on a company's AFIP responsibility type, and consider the frence between
+They are based on a company's AFIP responsibility type, and consider the difference between
 companies that do not require as many accounts as the companies that have more complex fiscal
 requirements:
 
@@ -98,8 +98,8 @@ AFIP certificates
 The electronic invoice and other AFIP services work with :guilabel:`Web Services (WS)` provided by
 the AFIP.
 
-In order to enable communication with the AFIP, the first step is to request a
-:guilabel:`Digital Certificate` if you do not have one already.
+In order to enable communication with the AFIP, the first step is to request a :guilabel:`Digital
+Certificate` if you do not have one already.
 
 #. :guilabel:`Generate Certificate Sign Request (Odoo)`. When this option is selected, a file with
    extension `.csr` (certificate signing request) is generated to be used in the AFIP portal to
@@ -137,8 +137,8 @@ Partner
 Identification type and VAT
 ***************************
 
-As part of the Argentinean localization, document types defined by the AFIP are now available
-in the **Partner form**. Information is essential for most transactions. There are six
+As part of the Argentinean localization, document types defined by the AFIP are now available in the
+**Partner form**. Information is essential for most transactions. There are six
 :guilabel:`Identification Types` available by default, as well as 32 inactive types.
 
 .. image:: argentina/identification-types.png
@@ -205,8 +205,8 @@ The document type is an essential piece of information that needs to be clearly 
 printed reports, invoices, and journal entries that list account moves.
 
 Each document type can have a unique sequence per journal where it is assigned. As part of the
-localization, the document type includes the country in which the document is applicable (this
-data is created automatically when the localization module is installed).
+localization, the document type includes the country in which the document is applicable (this data
+is created automatically when the localization module is installed).
 
 The information required for the :guilabel:`Document Types` is included by default so the user does
 not need to fill anything on this view:
@@ -318,10 +318,10 @@ For the first invoice, Odoo synchronizes with the AFIP automatically and display
 used.
 
 .. note::
-   When creating :guilabel:`Purchase Journals`, it's possible to define whether they are related
-   to document types or not. In the case where the option to use documents is selected, there
-   would be no need to manually associate the document type sequences, since the document number is
-   provided by the vendor.
+   When creating :guilabel:`Purchase Journals`, it's possible to define whether they are related to
+   document types or not. In the case where the option to use documents is selected, there would be
+   no need to manually associate the document type sequences, since the document number is provided
+   by the vendor.
 
 Usage and testing
 =================
@@ -423,8 +423,8 @@ starting and ending date, this information can be filled in the tab :guilabel:`O
    :align: center
    :alt: Invoices for Services.
 
-If the dates are not selected manually before the invoice is validated, the values will be
-filled automatically with the first and last day of the invoice's month.
+If the dates are not selected manually before the invoice is validated, the values will be filled
+automatically with the first and last day of the invoice's month.
 
 .. image:: argentina/service-dates.png
    :align: center
@@ -433,8 +433,8 @@ filled automatically with the first and last day of the invoice's month.
 Exportation invoices
 ********************
 
-Invoices related to :guilabel:`Exportation Transactions` require that a journal uses the AFIP
-POS System **Expo Voucher - Web Service** so that the proper document type(s) can be associated.
+Invoices related to :guilabel:`Exportation Transactions` require that a journal uses the AFIP POS
+System **Expo Voucher - Web Service** so that the proper document type(s) can be associated.
 
 .. image:: argentina/exporation-journal.png
    :align: center
@@ -497,8 +497,8 @@ For these transactions it's important to consider the following requirements:
 - specific document types (201, 202, 206, etc);
 - the emitter should be eligible by the AFIP to MiPyME transactions;
 - the amount should be bigger than 100,000 ARS;
-- A bank account type CBU must be related to the emisor, otherwise the invoice cannot
-  be validated, having an error message such as the following.
+- A bank account type CBU must be related to the emisor, otherwise the invoice cannot be validated,
+  having an error message such as the following.
 
 .. image:: argentina/bank-account-relation-error.png
    :align: center
@@ -511,8 +511,8 @@ To set up the :guilabel:`Transmission Mode`, go to settings and select either :g
    :align: center
    :alt: Transmission Mode.
 
-To change the :guilabel:`Transmission Mode` for a specific invoice, go to the
-:guilabel:`Other Info` tab and change it before confirming.
+To change the :guilabel:`Transmission Mode` for a specific invoice, go to the :guilabel:`Other Info`
+tab and change it before confirming.
 
 .. note::
    Changing the :guilabel:`Transmission Mode` will not change the mode selected in
@@ -537,8 +537,8 @@ When creating a :guilabel:`Credit/Debit` note related to a FCE document:
 
 When creating a :guilabel:`Credit Note` we can have two scenarios:
 
-#. the FCE is rejected so the :guilabel:`Credit Note` should have the field :guilabel:`FCE,
-   is Cancellation?` as *True*; or;
+#. the FCE is rejected so the :guilabel:`Credit Note` should have the field :guilabel:`FCE, is
+   Cancellation?` as *True*; or;
 #. the :guilabel:`Credit Note`, is created to annulate the FCE document, in this case the field
    :guilabel:`FCE, is Cancellation?` must be *empty* (false).
 
@@ -607,8 +607,8 @@ Document Number*.
 Validate vendor bill number in AFIP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-As most companies have internal controls to verify that the vendor bill is related to an AFIP
-valid document, an automatic validation can be set in :menuselection:`Accounting --> Settings -->
+As most companies have internal controls to verify that the vendor bill is related to an AFIP valid
+document, an automatic validation can be set in :menuselection:`Accounting --> Settings -->
 Argentinean Localization --> Validate document in the AFIP`, considering the following levels:
 
 - :guilabel:`Not available:` the verification is not done (this is the default value);
@@ -663,17 +663,211 @@ amount, and the perception tax can be added in any of the product lines. As a re
 one tax group for the VAT and another for the perception. The perception default value is always
 :guilabel:`0.10`.
 
-.. image:: argentina/vat-perception.png
-   :align: center
-   :alt: VAT perception.
-
 To edit the VAT perception and set the correct amount, you should use the :guilabel:`Pencil` icon
-that is the next to the :guilabel:`Perception` amount. After the VAT perception amount has been
-set, the invoice can then be validated.
+that is the next to the :guilabel:`Perception` amount. After the VAT perception amount has been set,
+the invoice can then be validated.
 
 .. image:: argentina/enter-perception-amount.png
    :align: center
    :alt: Enter the perception amount.
+
+Check management
+----------------
+
+To install the *Third Party and Deferred/Electronic Checks Management* module, go to
+:menuselection:`Apps` and search for the module by its technical name `l10n_latam_check` and click
+the :guilabel:`Activate` button.
+
+.. image:: argentina/l10n-latam-check-module.png
+   :align: center
+   :alt: l10n_latam_check module.
+
+This module enables the required configuration for journals and payments to:
+
+- Create, manage, and control your different types of checks
+- Optimize the management of *own checks* and *third party checks*
+- Have an easy and effective way to manage expiration dates from your own and third party checks
+
+Once all the configurations are made for the Argentinian electronic invoice flow, it is also needed
+to complete certain configurations for the own checks and the third party checks flows.
+
+Own checks
+~~~~~~~~~~
+
+Configure the bank journal used to create your own checks by going to :menuselection:`Accounting -->
+Configuration --> Journals`, selecting the bank journal, and opening the :guilabel:`Outgoing
+Payments` tab.
+
+- :guilabel:`Checks` should be available as a :guilabel:`Payment Method`. If not, click
+  :guilabel:`Add a line` and type `Checks` under :guilabel:`Payment Method` to add them
+- Enable the :guilabel:`Use electronic and deferred checks` setting.
+
+.. note::
+   This last configuration **disables** the printing ability but enables to:
+
+   - Enter check numbers manually
+   - Adds a field to allocate the payment date of the check
+
+.. image:: argentina/bank-journal-conf.png
+   :align: center
+   :alt: Bank journal configurations.
+
+Management of own checks
+************************
+
+Own checks can be created directly from the vendor bill. For this process, click on the
+:guilabel:`Register Payment` button.
+
+On the payment registration modal, select the bank journal from which the payment is to be made and
+set the :guilabel:`Check Cash-In Date`, and the :guilabel:`Amount`.
+
+.. image:: argentina/payment-popup-vendorbill.png
+   :align: center
+   :alt: Payment pop-up window with own check options enabled.
+
+.. note::
+   To manage current checks, the :guilabel:`Check Cash-In Date` field must be left blank or filled
+   in with the current date. To manage deferred checks, the :guilabel:`Check Cash-In Date` must be
+   set in the future.
+
+To manage your existing own checks, navigate to :menuselection:`Accounting --> Vendors --> Own
+Checks`. This window shows critical information such as the dates when checks need to be paid, the
+total quantity of checks, and the total amount paid in checks.
+
+.. image:: argentina/checks-menu-vendorbill.png
+   :align: center
+   :alt: Own checks menu location.
+
+It is important to note that the list is pre-filtered by checks that are still *not reconciled* with
+a bank statement - that were not yet debited from the bank - which can be verified with the
+:guilabel:`Is Matched with a Bank Statement` field. If you want to see all of your own checks,
+delete the :guilabel:`No Bank Matching` filter by clicking on the :guilabel:`X` symbol.
+
+.. image:: argentina/check-menu-list-vendorbill.png
+   :align: center
+   :alt: Own checks menu organization and filtering.
+
+Cancel an own check
+*******************
+
+To cancel an own check created in Odoo, navigate to :menuselection:`Accounting --> Vendors --> Own
+Checks` and select the check to be canceled, then click on the :guilabel:`Void Check` button. This
+will break the reconciliation with the vendor bills and the bank statements and leave the check in a
+**canceled** state.
+
+.. image:: argentina/empty-check-button.png
+   :align: center
+   :alt: Empty Check button to cancel Own Checks
+
+Third party checks
+~~~~~~~~~~~~~~~~~~
+
+In order to register payments using third party checks, two specific journals need to be configured.
+To do so, navigate to :menuselection:`Accounting --> Configuration --> Journals` and create two new
+journals:
+
+- `Third Party Checks`
+- `Rejected Third Party Checks`
+
+.. note::
+   You can manually create more journals if you have multiple points of sale and need journals for
+   those.
+
+To create the *Third Party Checks* journal, click the :guilabel:`New` button and configure the
+following:
+
+- Type `Third Party Checks` as the :guilabel:`Journal Name`
+- Select :guilabel:`Cash` as :guilabel:`Type`
+- In the :guilabel:`Journal Entries` tab, set :guilabel:`Cash Account`: to `1.1.1.02.010 Cheques de
+  Terceros`, input a :guilabel:`Short Code` of your choice, and select a :guilabel:`Currency`
+
+.. image:: argentina/auto-cash-account.png
+   :align: center
+   :alt: Automatically created cash account.
+
+The available payment methods are listed in the *payments* tabs:
+
+- For new incoming third party checks, go to :menuselection:`Incoming Payments tab --> Add a line`
+  and select :guilabel:`New Third Party Checks`. This method is used to create *new* third party
+  checks.
+- For incoming and outgoing existing third party checks, go to :menuselection:`Incoming Payments tab
+  --> Add a line` and select :guilabel:`Existing Third Party Checks`. Repeat the same step for the
+  :guilabel:`Outgoing Payments` tab. This method is used to receive and/or pay vendor bills using
+  already *existing* checks, as well as for internal transfers.
+
+.. tip::
+   You can delete pre-existing payment methods appearing by default when configuring the third
+   party checks journals.
+
+.. image:: argentina/auto-payment-methods.png
+   :align: center
+   :alt: Payment methods automatically created.
+
+The *Rejected Third Party Checks* journal also needs to be created and/or configured. This journal
+is used to manage rejected third party checks and can be utilized to send checks rejected at the
+moment of collection or when coming from vendors when rejected.
+
+To create the *Rejected Third Party Checks* journal, click the :guilabel:`New` button and configure
+the following:
+
+- Type `Rejected Third Party Checks` as the :guilabel:`Journal Name`
+- Select :guilabel:`Cash` as :guilabel:`Type`
+- In the :guilabel:`Journal Entries` tab, set :guilabel:`Cash Account`: to `1.1.1.01.002 Rejected
+  Third Party Checks`, input a :guilabel:`Short Code` of your choice, and select a
+  :guilabel:`Currency`
+
+Use the same payment methods as the *Third Party Checks* journal.
+
+New third party checks
+**********************
+
+To register a *new* third party check for a customer invoice, click the :guilabel:`Register Payment`
+button. In the pop-up window, you must select :guilabel:`Third Party Checks` as journal for the
+payment registration.
+
+Select :guilabel:`New Third Party Checks` as :guilabel:`Payment Method`, and fill in the
+:guilabel:`Check Number`, :guilabel:`Payment Date`, and :guilabel:`Check Bank`. Optionally, you can
+manually add the :guilabel:`Check Issuer Vat`, but this is automatically filled by the customer's
+VAT number related to the invoice.
+
+.. image:: argentina/third-party-payment-popup.png
+   :align: center
+   :alt: Payment pop-up window with New Third Party Check options enabled.
+
+Existing third party checks
+***************************
+
+To pay a vendor bill with an *existing* check, click the :guilabel:`Register Payment` button. In the
+pop-up window, you must select :guilabel:`Third Party Checks` as journal for the payment
+registration.
+
+Select :guilabel:`Existing Third Party Checks` as :guilabel:`Payment Method`, and select a check
+from the :guilabel:`Check` field. The field shows all **available existing checks** to be used as
+payment for vendor bills.
+
+.. image:: argentina/existing-third-party-popup.png
+   :align: center
+   :alt: Payment pop-up window with Existing Third Party Check options enabled.
+
+When an **existing third party check** is used, you can review the operations related to it. For
+example, you can see if a third party check made to pay a customer invoice was later used as an
+existing third party check to pay a vendor bill.
+
+To do so, either go to :menuselection:`Accounting --> Customers --> Third Party Checks` or
+:menuselection:`Accounting --> Vendors --> Own Checks` depending on the case, and click on a check.
+In the :guilabel:`Check Current Journal` field, click on :guilabel:`=> Check Operations` to bring up
+the check's history and movements.
+
+.. image:: argentina/check-operations-menulist.png
+   :align: center
+   :alt: Check Operations menu.
+
+The menu also displays critical information related to these operations, such as:
+
+- The :guilabel:`Payment Type`, allowing to classify whether it is a payment *sent* to a vendor or a
+  payment *received* from a customer
+- The :guilabel:`Journal` in which the check is currently registered
+- The **partner** associated with the operation (either customer or vendor).
 
 Reports
 =======
