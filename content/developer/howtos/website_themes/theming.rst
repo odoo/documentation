@@ -62,8 +62,9 @@ package its theme like a module.
     │       │   └── wbuilder // For those used in the builder
     │       ├── js
     │       ├── scss
-    │       └── snippets // custom snippets
+    │       └── snippets // custom snippets: styles
     ├── views
+    │   └── snippets // custom snippets: layouts
     ├── __init__.py
     └── __manifest__.py
 

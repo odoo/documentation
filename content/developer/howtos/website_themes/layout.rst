@@ -160,6 +160,8 @@ below:
      - Adds the XPath content after the targeted node.
    * - attributes
      - Adds the XPath content inside an attribute.
+   * - move
+     - Moves the selected element. To be used inside another XPath to define where the element is moved.
 
 .. example::
    This XPath adds a `<div>` before the `<nav>` that is a direct child of the `<header>`.
@@ -200,6 +202,14 @@ below:
 
       <xpath expr="//ul" position="inside">
          <li>Last element of the list</li>
+      </xpath>
+
+   This XPath moves the first element with a `.breadcrumb` class before the `h1` tag.
+
+   .. code-block:: xml
+
+      <xpath expr="//h1" position="before">
+         <xpath expr="//*[hasclass('breadcrumb')]" position="move"/>
       </xpath>
 
 .. seealso::
