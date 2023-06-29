@@ -13,6 +13,25 @@ icon next to the database name, indicating that the database can be upgraded.
    :align: center
    :alt: The database manager page with an upgrade button next to the name of a database.
 
+.. important::
+   - If the database's version is **lower** than the latest major release: the database must be
+     upgraded within two months. After these two months, an automatic upgrade is initiated.
+   - If the database's version is **equal** to or **higher** than the latest major release:
+     you can disregard the invitation to upgrade, as the database probably would not benefit from
+     new features every two months.
+
+If a database is *not* on the latest online version, its administrator should receive an invitation
+to upgrade on the database's dashboard, displayed as an **arrow in a circle**.
+
+.. image:: odoo_online/database-notification.png
+   :alt: Invitation to upgrade on the database dashboard.
+
+.. note::
+   Versions that are not supported anymore become deprecated and must be updated to avoid
+   security issues. It is recommended to initiate the upgrade yourself and not wait for the
+   automatic upgrade, as the former method allows you to request a test upgrade of the database to
+   check for any discrepancies.
+
 Test database
 =============
 
@@ -64,6 +83,10 @@ except that there is now a :guilabel:`Production` option under the :guilabel:`Pu
 Select the :guilabel:`Production` option and then click :guilabel:`Upgrade` to begin the upgrade
 process. As before, a notification email is sent to the email address provided and a red
 :guilabel:`Upgrade in progress` tag appears next to the name of the database.
+
+The production database is then taken offline and will be upgraded automatically. The time it takes
+to upgrade the production database should be similar to the time that was necessary to upgrade the
+test database. Make sure to inform database users of the scheduled downtime.
 
 After the upgrade is finished, the :guilabel:`Upgrade in progress` tag disappears and the database
 is upgraded to the version specified.
