@@ -2,6 +2,8 @@
 What is the difference between warehouses and locations?
 ========================================================
 
+.. _inventory/management/difference-warehouse-location:
+
 In Odoo, a **Warehouse** is the actual building/place in which your items
 are stocked. You can setup multiple warehouses and create moves between
 warehouses.

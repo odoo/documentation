@@ -16,3 +16,4 @@ Manufacturing management
    management/use_mps
    management/using_work_centers
    management/work_center_time_off
+   management/scrap_manufacturing
