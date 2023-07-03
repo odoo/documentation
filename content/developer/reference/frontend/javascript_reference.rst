@@ -1257,41 +1257,21 @@ the AbstractView, AbstractController, AbstractRenderer and AbstractModel classes
 
 .. _reference/js/widgets:
 
-Field Widgets
-=============
+Fields
+======
 
 A good part of the web client experience is about editing and creating data. Most
 of that work is done with the help of field widgets, which are aware of the field
 type and of the specific details on how a value should be displayed and edited.
 
-AbstractField
--------------
-
-The *AbstractField* class is the base class for all widgets in a view, for all
-views that support them (currently: Form, List, Kanban).
-
-There are many differences between the v11 field widgets and the previous versions.
-Let us mention the most important ones:
-
-- the widgets are shared between all views (well, Form/List/Kanban). No need to
-  duplicate the implementation anymore.  Note that it is possible to have a
-  specialized version of a widget for a view, by prefixing it with the view name
-  in the view registry: *list.many2one* will be chosen in priority over *many2one*.
-- the widgets are no longer the owner of the field value.  They only represent
-  the data and communicate with the rest of the view.
-- the widgets do no longer need to be able to switch between edit and readonly
-  mode.  Now, when such a change is necessary, the widget will be destroyed and
-  rerendered again.  It is not a problem, since they do not own their value
-  anyway
-- the field widgets can be used outside of a view.  Their API is slightly
-  awkward, but they are designed to be standalone.
+.. _reference/javascript_reference/field_decoration:
 
 Decorations
 -----------
 
 Like the list view, field widgets have a simple support for decorations. The
 goal of decorations is to have a simple way to specify a text color depending on
-the record current state.  For example,
+the record current state.  For example:
 
 .. code-block:: xml
 
@@ -1299,14 +1279,14 @@ the record current state.  For example,
 
 The valid decoration names are:
 
-- decoration-bf
-- decoration-it
-- decoration-danger
-- decoration-info
-- decoration-muted
-- decoration-primary
-- decoration-success
-- decoration-warning
+- `decoration-bf`
+- `decoration-it`
+- `decoration-danger`
+- `decoration-info`
+- `decoration-muted`
+- `decoration-primary`
+- `decoration-success`
+- `decoration-warning`
 
 Each decoration *decoration-X* will be mapped to a css class *text-X*, which is
 a standard bootstrap css class (except for *text-it* and *text-bf*, which are
@@ -1314,122 +1294,120 @@ handled by odoo and correspond to italic and bold, respectively).  Note that the
 value of the decoration attribute should be a valid python expression, which
 will be evaluated with the record as evaluation context.
 
-Non relational fields
+Non-relational fields
 ---------------------
 
 We document here all non relational fields available by default, in no particular
 order.
 
-integer (FieldInteger)
-  This is the default field type for fields of type *integer*.
+Integer (`integer`)
+    This is the default field type for fields of type `integer`.
 
-  - Supported field types: *integer*
+    - Supported field types: `integer`
 
     Options:
 
-    - type: setting the input type (*text* by default, can be set on *number*)
+    - `type`: setting the input type (`"text"` by default, can be set on `"number"`)
 
-    On edit mode, the field is rendered as an input with the HTML attribute type
-    set on *number* (so user can benefit the native support, especially on
-    mobile). In this case, the default formatting is disabled to avoid incompability.
+        On edit mode, the field is rendered as an input with the HTML attribute type
+        set on `"number"` (so user can benefit the native support, especially on
+        mobile). In this case, the default formatting is disabled to avoid incompability.
 
-    .. code-block:: xml
+        .. code-block:: xml
 
-        <field name="int_value" options='{"type": "number"}'/>
+            <field name="int_value" options="{'type': 'number'}" />
 
-    - step: set the step to the value up and down when the user click on buttons
-      (only for input of type number, 1 by default)
+    - `step`: set the step to the value up and down when the user click on buttons
+      (only for input of type number, `1` by default)
 
-    .. code-block:: xml
+        .. code-block:: xml
 
-        <field name="int_value" options='{"type": "number", "step": 100}'/>
+            <field name="int_value" options="{'type': 'number', 'step': 100}" />
 
-    - format: should the number be formatted. (true by default)
+    - `format`: should the number be formatted. (`true` by default)
 
-    By default, numbers are formatted according to locale parameters.
+        By default, numbers are formatted according to locale parameters.
         This option will prevent the field's value from being formatted.
 
-    .. code-block:: xml
+        .. code-block:: xml
 
-        <field name="int_value" options='{"format": false}'/>
+            <field name="int_value" options='{"format": false}' />
 
-float (FieldFloat)
-    This is the default field type for fields of type *float*.
+Float (`float`)
+    This is the default field type for fields of type `float`.
 
-    - Supported field types: *float*
+    - Supported field types: `float`
 
     Attributes:
 
-    - digits: displayed precision
+    - `digits`: displayed precision
 
-    .. code-block:: xml
+        .. code-block:: xml
 
-        <field name="factor" digits="[42,5]"/>
+            <field name="factor" digits="[42,5]" />
 
     Options:
 
-    - type: setting the input type (*text* by default, can be set on *number*)
+    - `type`: setting the input type (`"text"` by default, can be set on `"number"`)
+        On edit mode, the field is rendered as an input with the HTML attribute type
+        set on `"number"` (so user can benefit the native support, especially on
+        mobile). In this case, the default formatting is disabled to avoid incompability.
 
-    On edit mode, the field is rendered as an input with the HTML attribute type
-    set on *number* (so user can benefit the native support, especially on
-    mobile). In this case, the default formatting is disabled to avoid incompability.
+        .. code-block:: xml
 
-    .. code-block:: xml
+            <field name="int_value" options="{'type': 'number'}" />
 
-        <field name="int_value" options='{"type": "number"}'/>
+    - `step`: set the step to the value up and down when the user click on buttons
+        (only for input of type number, `1` by default)
 
-    - step: set the step to the value up and down when the user click on buttons
-        (only for input of type number, 1 by default)
+        .. code-block:: xml
 
-    .. code-block:: xml
+            <field name="int_value" options="{'type': 'number', 'step': 0.1}" />
 
-        <field name="int_value" options='{"type": "number", "step": 0.1}'/>
-
-    - format: should the number be formatted. (true by default)
-
-    By default, numbers are formatted according to locale parameters.
+    - `format`: should the number be formatted. (`true` by default)
+        By default, numbers are formatted according to locale parameters.
         This option will prevent the field's value from being formatted.
 
+        .. code-block:: xml
+
+            <field name="int_value" options="{'format': false}" />
+
+Time (`float_time`)
+    The goal of this widget is to display properly a float value that represents
+    a time interval (in hours).  So, for example, `0.5` should be formatted as `0:30`,
+    or `4.75` correspond to `4:45`.
+
+    - Supported field types: `float`
+
+Float Factor (`float_factor`)
+    This widget aims to display properly a float value that converted using a factor
+    given in its options. So, for example, the value saved in database is `0.5` and the
+    factor is `3`, the widget value should be formatted as `1.5`.
+
+    - Supported field types: `float`
+
+Float Toggle (`float_toggle`)
+    The goal of this widget is to replace the input field by a button containing a
+    range of possible values (given in the options). Each click allows the user to loop
+    in the range. The purpose here is to restrict the field value to a predefined selection.
+    Also, the widget support the factor conversion as the `float_factor` widget (Range values
+    should be the result of the conversion).
+
+    - Supported field types: `float`
+
     .. code-block:: xml
 
-        <field name="int_value" options='{"format": false}'/>
+        <field name="days_to_close" widget="float_toggle" options="{'factor': 2, 'range': [0, 4, 8]}" />
 
-float_time (FieldFloatTime)
-  The goal of this widget is to display properly a float value that represents
-  a time interval (in hours).  So, for example, 0.5 should be formatted as 0:30,
-  or 4.75 correspond to 4:45.
+Boolean (`boolean`)
+    This is the default field type for fields of type `boolean`.
 
-  - Supported field types: *float*
+    - Supported field types: `boolean`
 
-float_factor (FieldFloatFactor)
-  This widget aims to display properly a float value that converted using a factor
-  given in its options. So, for example, the value saved in database is 0.5 and the
-  factor is 3, the widget value should be formatted as 1.5.
+Char (`char`)
+    This is the default field type for fields of type `char`.
 
-  - Supported field types: *float*
-
-float_toggle (FieldFloatToggle)
-  The goal of this widget is to replace the input field by a button containing a
-  range of possible values (given in the options). Each click allows the user to loop
-  in the range. The purpose here is to restrict the field value to a predefined selection.
-  Also, the widget support the factor conversion as the *float_factor* widget (Range values
-  should be the result of the conversion).
-
-  - Supported field types: *float*
-
-  .. code-block:: xml
-
-      <field name="days_to_close" widget="float_toggle" options='{"factor": 2, "range": [0, 4, 8]}'/>
-
-boolean (FieldBoolean)
-  This is the default field type for fields of type *boolean*.
-
-  - Supported field types: *boolean*
-
-char (FieldChar)
-  This is the default field type for fields of type *char*.
-
-  - Supported field types: *char*
+    - Supported field types: `char`
 
 date (FieldDate)
   This is the default field type for fields of type *date*. Note that it also
@@ -1476,613 +1454,563 @@ daterange (FieldDateRange)
 
       <field name="start_date" widget="daterange" options='{"related_end_date": "end_date"}'/>
 
-remaining_days (RemainingDays)
-  This widget can be used on date and datetime fields. In readonly, it displays
-  the delta (in days) between the value of the field and today. The widget is
-  intended to be used for informative purpose: therefore the value cannot be
-  modified in edit mode.
+Remaining Days (`remaining_days`)
+    This widget can be used on date and datetime fields. In readonly, it displays
+    the delta (in days) between the value of the field and today. The widget turns
+    into a regular date or datetime field in edit mode.
 
-  - Supported field types: *date*, *datetime*
+    - Supported field types: `date`, `datetime`
 
-monetary (FieldMonetary)
-  This is the default field type for fields of type 'monetary'. It is used to
-  display a currency.  If there is a currency fields given in option, it will
-  use that, otherwise it will fall back to the default currency (in the session)
+Monetary (`monetary`)
+    This is the default field type for fields of type `monetary`. It is used to
+    display a currency.  If there is a currency fields given in option, it will
+    use that, otherwise it will fall back to the default currency (in the session)
 
-  - Supported field types: *monetary*, *float*
+    - Supported field types: `monetary`, `float`
 
-  Options:
+    Options:
 
-  - currency_field: another field name which should be a many2one on currency.
+    - `currency_field`: another field name which should be a many2one on currency.
 
-  .. code-block:: xml
+        .. code-block:: xml
 
-      <field name="value" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+            <field name="value" widget="monetary" options="{'currency_field': 'currency_id'}" />
 
-text (FieldText)
-  This is the default field type for fields of type *text*.
+Text (`text`)
+    This is the default field type for fields of type `text`.
 
-  - Supported field types: *text*
-
-
-handle (HandleWidget)
-  This field's job is to be displayed as a *handle*, and allows reordering the
-  various records by drag and dropping them.
-
-  .. warning:: It has to be specified on the field by which records are sorted.
-  .. warning:: Having more than one field with a handle widget on the same list is not supported.
-
-  - Supported field types: *integer*
+    - Supported field types: `text`
 
 
-email (FieldEmail)
-  This field displays email address.  The main reason to use it is that it
-  is rendered as an anchor tag with the proper href, in readonly mode.
+Handle (`handle`)
+    This field's job is to be displayed as a `handle`, and allows reordering the
+    various records by drag and dropping them.
 
-  - Supported field types: *char*
+    .. warning:: It has to be specified on the field by which records are sorted.
+    .. warning:: Having more than one field with a handle widget on the same list is not supported.
 
-phone (FieldPhone)
-  This field displays a phone number.  The main reason to use it is that it
-  is rendered as an anchor tag with the proper href, in readonly mode, but
-  only in some cases: we only want to make it clickable if the device can
-  call this particular number.
+    - Supported field types: `integer`
 
-  - Supported field types: *char*
 
-url (UrlWidget)
+Email (`email`)
+    This field displays email address.  The main reason to use it is that it
+    is rendered as an anchor tag with the proper href, in readonly mode.
+
+    - Supported field types: `char`
+
+Phone (`phone`)
+    This field displays a phone number.  The main reason to use it is that it
+    is rendered as an anchor tag with the proper href, in readonly mode, but
+    only in some cases: we only want to make it clickable if the device can
+    call this particular number.
+
+    - Supported field types: `char`
+
+URL (`url`)
     This field displays an url (in readonly mode). The main reason to use it is
     that it is rendered as an anchor tag with the proper css classes and href.
 
     Also, the text of the anchor tag can be customized with the *text* attribute
     (it won't change the href value).
 
+    - Supported field types: `char`
+
     .. code-block:: xml
 
-        <field name="foo" widget="url" text="Some URL"/>
+        <field name="foo" widget="url" text="Some URL" />
 
     Options:
 
-    - website_path: (default:false) by default, the widget forces (if not already
-      the case) the href value to begin with http:// except if this option is set
-      to true, thus allowing redirections to the database's own website.
+    - `website_path`: (default: `false`) by default, the widget forces (if not already
+        the case) the href value to begin with `"http://"` except if this option is set
+        to true, thus allowing redirections to the database's own website.
 
-    - Supported field types: *char*
+Domain (`domain`)
+    The `domain` field allows the user to construct a technical-prefix domain
+    thanks to a tree-like interface and see the selected records in real time.
+    In debug mode, an input is also there to be able to enter the prefix char
+    domain directly (or to build advanced domains the tree-like interface does
+    not allow to).
 
-domain (FieldDomain)
-  The "Domain" field allows the user to construct a technical-prefix domain
-  thanks to a tree-like interface and see the selected records in real time.
-  In debug mode, an input is also there to be able to enter the prefix char
-  domain directly (or to build advanced domains the tree-like interface does
-  not allow to).
+    Note that this is limited to **static** domains (no dynamic expressions, or access
+    to context variable).
 
-  Note that this is limited to 'static' domain (no dynamic expression, or access
-  to context variable).
+    - Supported field types: `char`
 
-  - Supported field types: *char*
+Link button (`link_button`)
+    The `LinkButton` widget actually simply displays a span with an icon and the
+    text value as content. The link is clickable and will open a new browser
+    window with its value as url.
 
-link_button (LinkButton)
-  The LinkButton widget actually simply displays a span with an icon and the
-  text value as content. The link is clickable and will open a new browser
-  window with its value as url.
+    - Supported field types: `char`
 
-  - Supported field types: *char*
+Image File (`image`)
+    This widget is used to represent a binary value as an image. In some cases,
+    the server returns a `bin_size` instead of the real image (a `bin_size` is a
+    string representing a file size, such as `"6.5kb"`).  In that case, the widget
+    will make an image with a source attribute corresponding to an image on the
+    server.
 
-image (FieldBinaryImage)
-  This widget is used to represent a binary value as an image. In some cases,
-  the server returns a 'bin_size' instead of the real image (a bin_size is a
-  string representing a file size, such as 6.5kb).  In that case, the widget
-  will make an image with a source attribute corresponding to an image on the
-  server.
+    - Supported field types: `binary`
 
-  - Supported field types: *binary*
+    Options:
 
-  Options:
+    - `preview_image`: if the image is only loaded as a `bin_size`, then this
+        option is useful to inform the web client that the default field name is
+        not the name of the current field, but the name of another field.
 
-  - preview_image: if the image is only loaded as a 'bin_size', then this
-    option is useful to inform the web client that the default field name is
-    not the name of the current field, but the name of another field.
+        .. code-block:: xml
 
-  - accepted_file_extensions: the file extension the user can pick from the file input dialog box (default value is `image/\*`)
-    (cf: ``accept`` attribute on <input type="file"/>)
+            <field name="image" widget="image" options="{'preview_image': 'image_128'}" />
 
-  .. code-block:: xml
+    - `accepted_file_extensions`: the file extension the user can pick from the file input dialog box (default value is `image/\*`)
+        (cf: ``accept`` attribute on `<input type="file" />`)
 
-      <field name="image" widget='image' options='{"preview_image":"image_128"}'/>
+Binary File (`binary`)
+    Generic widget to allow saving/downloading a binary file.
 
-binary (FieldBinaryFile)
-  Generic widget to allow saving/downloading a binary file.
+    - Supported field types: `binary`
 
-  - Supported field types: *binary*
+    Attributes:
 
-  Options:
+    - `filename`: saving a binary file will lose its file name, since it only
+        saves the binary value. The file name can be saved in another field. To do
+        that, a `filename` attribute should be set to a field present in the view.
 
-  - accepted_file_extensions: the file extension the user can pick from the file input dialog box
-    (cf: ``accept`` attribute on <input type="file"/>)
+        .. code-block:: xml
 
-  Attribute:
+            <field name="datas" filename="datas_fname" />
 
-  - filename: saving a binary file will lose its file name, since it only
-    saves the binary value. The filename can be saved in another field. To do
-    that, an attribute filename should be set to a field present in the view.
+    Options:
 
-  .. code-block:: xml
+    - `accepted_file_extensions`: the file extension the user can pick from the file input dialog box
+        (cf: ``accept`` attribute on `<input type="file" />`)
 
-      <field name="datas" filename="datas_fname"/>
+Priority (`priority`)
+    This widget is rendered as a set of stars, allowing the user to click on it
+    to select a value or not. This is useful for example to mark a task as high
+    priority.
 
-priority (PriorityWidget)
-  This widget is rendered as a set of stars, allowing the user to click on it
-  to select a value or not. This is useful for example to mark a task as high
-  priority.
+    Note that this widget also works in `readonly` mode, which is unusual.
 
-  Note that this widget also works in 'readonly' mode, which is unusual.
+    - Supported field types: `selection`
 
-  - Supported field types: *selection*
+Image Attachment (`attachment_image`)
+    Image widget for `many2one` fields. If the field is set, this widget will be
+    rendered as an image with the proper src url. This widget does not have a
+    different behaviour in edit or readonly mode, it is only useful to view an
+    image.
 
-attachment_image (AttachmentImage)
-  Image widget for many2one fields.  If the field is set, this widget will be
-  rendered as an image with the proper src url. This widget does not have a
-  different behaviour in edit or readonly mode, it is only useful to view an
-  image.
-
-  - Supported field types: *many2one*
-
-  .. code-block:: xml
-
-      <field name="displayed_image_id" widget="attachment_image"/>
-
-image_selection (ImageSelection)
-  Allow the user to select a value by clicking on an image.
-
-  - Supported field types: *selection*
-
-  Options: a dictionary with a mapping from a selection value to an object with
-  the url for an image (*image_link*) and a preview image (*preview_link*).
-
-  Note that this option is not optional!
-
-  .. code-block:: xml
-
-      <field name="external_report_layout" widget="image_selection" options="{
-          'background': {
-              'image_link': '/base/static/img/preview_background.png',
-              'preview_link': '/base/static/pdf/preview_background.pdf'
-          },
-          'standard': {
-              'image_link': '/base/static/img/preview_standard.png',
-              'preview_link': '/base/static/pdf/preview_standard.pdf'
-          }
-      }"/>
-
-label_selection (LabelSelection)
-  This widget renders a simple non-editable label.  This is only useful to
-  display some information, not to edit it.
-
-  - Supported field types: *selection*
-
-  Options:
-
-  - classes: a mapping from a selection value to a css class
-
-  .. code-block:: xml
-
-      <field name="state" widget="label_selection" options="{
-          'classes': {'draft': 'default', 'cancel': 'default', 'none': 'danger'}
-      }"/>
-
-state_selection (StateSelectionWidget)
-  This is a specialized selection widget. It assumes that the record has some
-  hardcoded fields, present in the view: *stage_id*, *legend_normal*,
-  *legend_blocked*, *legend_done*.  This is mostly used to display and change
-  the state of a task in a project, with additional information displayed in
-  the dropdown.
-
-  - Supported field types: *selection*
-
-  .. code-block:: xml
-
-      <field name="kanban_state" widget="state_selection"/>
-
-kanban_state_selection (StateSelectionWidget)
-  This is exactly the same widget as state_selection
-
-  - Supported field types: *selection*
-
-list.state_selection (ListStateSelectionWidget)
-  In list views, the state_selection widget displays by default the label next to the icon.
-
-  - Supported field types: *selection*
-
-  Options:
-
-  - hide_label: hide the label next to the icon
-
-  .. code-block:: xml
-
-      <field name="kanban_state" widget="state_selection" options="{'hide_label': True}"/>
-
-boolean_favorite (FavoriteWidget)
-  This widget is displayed as an empty (or not) star, depending on a boolean
-  value. Note that it also can be edited in readonly mode.
-
-  - Supported field types: *boolean*
-
-boolean_button (FieldBooleanButton)
-  The Boolean Button widget is meant to be used in a stat button in a form view.
-  The goal is to display a nice button with the current state of a boolean
-  field (for example, 'Active'), and allow the user to change that field when
-  clicking on it.
-
-  Note that it also can be edited in readonly mode.
-
-  - Supported field types: *boolean*
-
-  Options:
-
-  - terminology: it can be either 'active', 'archive', 'close' or a customized
-    mapping with the keys *string_true*, *string_false*, *hover_true*, *hover_false*
-
-  .. code-block:: xml
-
-      <field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
-
-boolean_toggle (BooleanToggle)
-  Displays a toggle switch to represent a boolean. This is a subfield of
-  FieldBoolean, mostly used to have a different look.
-
-statinfo (StatInfo)
-  This widget is meant to represent statistical information in a *stat button*.
-  It is basically just a label with a number.
-
-  - Supported field types: *integer, float*
-
-  Options:
-
-  - label_field: if given, the widget will use the value of the label_field as
-    text.
-
-  .. code-block:: xml
-
-      <button name="%(act_payslip_lines)d"
-          icon="fa-money"
-          type="action">
-          <field name="payslip_count" widget="statinfo"
-              string="Payslip"
-              options="{'label_field': 'label_tasks'}"/>
-      </button>
-
-percentpie (FieldPercentPie)
-  This widget is meant to represent statistical information in a *stat button*.
-  This is similar to a statinfo widget, but the information is represented in
-  a *pie* chart (empty to full).  Note that the value is interpreted as a
-  percentage (a number between 0 and 100).
-
-  - Supported field types: *integer, float*
-
-  .. code-block:: xml
-
-      <field name="replied_ratio" string="Replied" widget="percentpie"/>
-
-progressbar (FieldProgressBar)
-  Represent a value as a progress bar (from 0 to some value)
-
-  - Supported field types: *integer, float*
-
-  Options:
-
-  - editable: boolean if value is editable
-  - current_value: get the current_value from the field that must be present in the view
-  - max_value: get the max_value from the field that must be present in the view
-  - edit_max_value: boolean if the max_value is editable
-  - title: title of the bar, displayed on top of the bar --> not translated,
-    use parameter (not option) "title" instead
-
-  .. code-block:: xml
-
-      <field name="absence_of_today" widget="progressbar"
-          options="{'current_value': 'absence_of_today', 'max_value': 'total_employee', 'editable': false}"/>
-
-toggle_button (FieldToggleBoolean)
-  This widget is intended to be used on boolean fields. It toggles a button
-  switching between a green bullet / gray bullet. It also set up a tooltip,
-  depending on the value and some options.
-
-  - Supported field types: *boolean*
-
-  Options:
-
-  - active: the string for the tooltip that should be set when boolean is true
-  - inactive: the tooltip that should be set when boolean is false
-
-  .. code-block:: xml
-
-      <field name="payslip_status" widget="toggle_button"
-          options='{"active": "Reported in last payslips", "inactive": "To Report in Payslip"}'
-      />
-
-dashboard_graph (JournalDashboardGraph)
-  This is a more specialized widget, useful to display a graph representing a
-  set of data.  For example, it is used in the accounting dashboard kanban view.
-
-  It assumes that the field is a JSON serialization of a set of data.
-
-  - Supported field types: *char*
-
-  Attribute
-
-  - graph_type: string, can be either 'line' or 'bar'
-
-  .. code-block:: xml
-
-      <field name="dashboard_graph_data"
-          widget="dashboard_graph"
-          graph_type="line"/>
-
-ace (AceEditor)
-  This widget is intended to be used on Text fields. It provides Ace Editor
-  for editing XML and Python.
-
-  - Supported field types: *char, text*
-
-- badge (FieldBadge)
-    Displays the value inside a bootstrap badge pill.
-
-    - Supported field types: *char*, *selection*, *many2one*
-
-    By default, the badge has a lightgrey background, but it can be customized
-    by using the decoration-X mechanism. For instance, to display a red badge
-    under a given condition:
+    - Supported field types: `many2one`
 
     .. code-block:: xml
 
-        <field name="foo" widget="badge" decoration-danger="state == 'cancel'"/>
+        <field name="displayed_image_id" widget="attachment_image" />
+
+Label Selection (`label_selection`)
+    This widget renders a simple non-editable label. This is only useful to
+    display some information, not to edit it.
+
+    - Supported field types: `selection`
+
+    Options:
+
+    - `classes`: a mapping from a selection value to a CSS class name
+
+        .. code-block:: xml
+
+            <field
+                name="state"
+                widget="label_selection"
+                options="{
+                    'classes': {
+                        'draft': 'default',
+                        'cancel': 'default',
+                        'none': 'danger',
+                    },
+                }"
+            />
+
+State Selection (`state_selection`)
+    This is a specialized selection widget. It assumes that the record has some
+    hardcoded fields, present in the view: `stage_id`, `legend_normal`,
+    `legend_blocked`, `legend_done`. This is mostly used to display and change
+    the state of a task in a project, with additional information displayed in
+    the dropdown.
+
+    - Supported field types: `selection`
+
+    .. code-block:: xml
+
+        <field name="kanban_state" widget="state_selection" />
+
+State Selection - List View (`list.state_selection`)
+    In list views, the `state_selection` field displays by default the label next to the icon.
+
+    - Supported field types: `selection`
+
+    Options:
+
+    - `hide_label`: hide the label next to the icon
+
+        .. code-block:: xml
+
+            <field name="kanban_state" widget="state_selection" options="{'hide_label': true}" />
+
+Favorite (`boolean_favorite`)
+    This widget is displayed as an empty (or not) star, depending on a boolean
+    value. Note that it also can be edited in readonly mode.
+
+    - Supported field types: `boolean`
+
+Toggle (`boolean_toggle`)
+    Displays a toggle switch to represent a boolean. This is a subfield of the
+    `boolean` field, mostly used to have a different look.
+
+    - Supported field types: `boolean`
+
+Stat Info (`statinfo`)
+    This widget is meant to represent statistical information in a `stat button`.
+    It is basically just a label with a number.
+
+    - Supported field types: `integer`, `float`
+
+    Options:
+
+    - `label_field`: if given, the widget will use the value of the `label_field` as
+        text.
+
+        .. code-block:: xml
+
+            <button
+                name="%(act_payslip_lines)d"
+                icon="fa-money"
+                type="action"
+            >
+                <field
+                    name="payslip_count"
+                    widget="statinfo"
+                    string="Payslip"
+                    options="{'label_field': 'label_tasks'}"
+                />
+            </button>
+
+Percent Pie (`percentpie`)
+    This widget is meant to represent statistical information in a `stat button`.
+    This is similar to a statinfo widget, but the information is represented in
+    a **pie chart** (empty to full).  Note that the value is interpreted as a
+    percentage (a number between `0` and `100`).
+
+    - Supported field types: `integer`, `float`
+
+    .. code-block:: xml
+
+        <field name="replied_ratio" string="Replied" widget="percentpie" />
+
+Progress Bar (`progressbar`)
+    Represent a value as a progress bar (from `0` to some value)
+
+    - Supported field types: `integer`, `float`
+
+    Options:
+
+    - `editable`: boolean determining whether the `value` is editable
+
+    - `current_value`: get the current value from the field that must be present in the view
+
+    - `max_value`: get the maximum value from the field that must be present in the view
+
+    - `edit_max_value`: boolean determining whether the `max_value` is editable
+
+    - `title`: title of the bar, displayed on top of the bar
+        --> not translated, use `title` attribute (not option) instead if the term must be translated
+
+    .. code-block:: xml
+
+        <field
+            name="absence_of_today"
+            widget="progressbar"
+            options="{
+                'current_value': 'absence_of_today',
+                'max_value': 'total_employee',
+                'editable': false,
+            }"
+        />
+
+Journal Dashboard Graph (`dashboard_graph`)
+    This is a more specialized widget, useful to display a graph representing a
+    set of data. For example, it is used in the accounting dashboard kanban view.
+
+    It assumes that the field is a JSON serialization of a set of data.
+
+    - Supported field types: `char`
+
+    Attributes:
+
+    - `graph_type`: string, can be either `"line"` or `"bar"`
+
+        .. code-block:: xml
+
+            <field name="dashboard_graph_data" widget="dashboard_graph" graph_type="line" />
+
+Ace Editor (`ace`)
+    This widget is intended to be used on Text fields. It provides Ace Editor
+    for editing XML and Python.
+
+    - Supported field types: `char`, `text`
+
+Badge (`badge`)
+    Displays the value inside a bootstrap badge pill.
+
+    - Supported field types: `char`, `selection`, `many2one`
+
+    By default, the badge has a light grey background, but it can be customized
+    by using the :ref:`Decoration <reference/javascript_reference/field_decoration>` mechanism.
+    For instance, to display a red badge under a given condition:
+
+    .. code-block:: xml
+
+        <field name="foo" widget="badge" decoration-danger="state == 'cancel'" />
 
 Relational fields
 -----------------
 
-.. class:: web.relational_fields.FieldSelection
+Selection (`selection`)
 
-    Supported field types: *selection*
+    - Supported field types: `selection`
 
-    .. attribute:: placeholder
+    Attributes:
 
-        a string which is used to display some info when no value is selected
+    - `placeholder`: a string which is used to display some info when no value is selected
 
-    .. code-block:: xml
+        .. code-block:: xml
 
-        <field name="tax_id" widget="selection" placeholder="Select a tax"/>
+            <field name="tax_id" widget="selection" placeholder="Select a tax" />
 
-radio (FieldRadio)
-  This is a subfield of FielSelection, but specialized to display all the
-  valid choices as radio buttons.
+Radio (`radio`)
+    This is a subfield of `FielSelection`, but specialized to display all the
+    valid choices as radio buttons.
 
-  Note that if used on a many2one records, then more rpcs will be done to fetch
-  the name_gets of the related records.
+    Note that if used on a many2one records, then more rpcs will be done to fetch
+    the name_gets of the related records.
 
-  - Supported field types: *selection, many2one*
-
-  Options:
-
-  - horizontal: if true, radio buttons will be displayed horizontally.
-
-  .. code-block:: xml
-
-      <field name="recommended_activity_type_id" widget="radio"
-          options="{'horizontal':true}"/>
-
-selection_badge (FieldSelectionBadge)
-  This is a subfield of FieldSelection, but specialized to display all the
-  valid choices as rectangular badges.
-
-  - Supported field types: *selection, many2one*
-
-  .. code-block:: xml
-
-      <field name="recommended_activity_type_id" widget="selection_badge"/>
-
-many2one (FieldMany2One)
-  Default widget for many2one fields.
-
-  - Supported field types: *many2one*
-
-  Attributes:
-
-  - can_create: allow the creation of related records (take precedence over no_create
-    option)
-  - can_write: allow the editing of related records (default: true)
-
-  Options:
-
-  - quick_create: allow the quick creation of related records (default: true)
-  - no_create: prevent the creation of related records - hide both the 'Create "xxx"'
-    and "Create and Edit..." dropdown menu items (default: false)
-  - no_quick_create: prevent the quick creation of related records - hide the 'Create "xxx"'
-    dropdown menu item (default: false)
-  - no_create_edit: hide the "Create and Edit..." dropdown menu item (default: false)
-  - create_name_field: when creating a related record, if this option is set, the value of the *create_name_field* will be filled with the value of the input (default: *name*)
-  - always_reload: boolean, default to false.  If true, the widget will always
-    do an additional name_get to fetch its name value.  This is used for the
-    situations where the name_get method is overridden (please do not do that)
-  - no_open: boolean, default to false.  If set to true, the many2one will not
-    redirect on the record when clicking on it (in readonly mode)
-
-  .. code-block:: xml
-
-      <field name="currency_id" options="{'no_create': True, 'no_open': True}"/>
-
-list.many2one (ListFieldMany2One)
-  Default widget for many2one fields (in list view).
-
-  Specialization of many2one field for list views.  The main reason is that we
-  need to render many2one fields (in readonly mode) as a text, which does not
-  allow opening the related records.
-
-  - Supported field types: *many2one*
-
-many2one_barcode (FieldMany2OneBarcode)
-  Widget for many2one fields allows to open the camera from a mobile device (Android/iOS) to scan a barcode.
-
-  Specialization of many2one field where the user is allowed to use the native camera to scan a barcode.
-  Then it uses name_search to search this value.
-
-  If this widget is set and user is not using the mobile application,
-  it will fallback to regular many2one (FieldMany2One)
-
-  - Supported field types: *many2one*
-
-many2one_avatar (Many2OneAvatar)
-  This widget is only supported on many2one fields pointing to a model which
-  inherits from 'image.mixin'. In readonly, it displays the image of the
-  related record next to its display_name. Note that the display_name isn't a
-  clickable link in this case. In edit, it behaves exactly like the regular
-  many2one.
-
-  - Supported field types: *many2one*
-
-many2one_avatar_user (Many2OneAvatarUser)
-  This widget is a specialization of the Many2OneAvatar. When the avatar is
-  clicked, we open a chat window with the corresponding user. This widget can
-  only be set on many2one fields pointing to the 'res.users' model.
-
-  - Supported field types: *many2one* (pointing to 'res.users')
-
-many2one_avatar_employee (Many2OneAvatarEmployee)
-  Same as Many2OneAvatarUser, but for many2one fields pointing to 'hr.employee'.
-
-  - Supported field types: *many2one* (pointing to 'hr.employee')
-
-kanban.many2one (KanbanFieldMany2One)
-  Default widget for many2one fields (in kanban view). We need to disable all
-  editing in kanban views.
-
-  - Supported field types: *many2one*
-
-many2many (FieldMany2Many)
-  Default widget for many2many fields.
-
-  - Supported field types: *many2many*
-
-  Attributes:
-
-  - mode: string, default view to display
-  - domain: restrict the data to a specific domain
-
-  Options:
-
-  - create_text: allow the customization of the text displayed when adding a
-    new record
-  - link: domain determining whether or not records can be added to the relation (default: True).
-  - unlink: domain determining whether or not records can be removed from the relation (default: True).
-
-many2many_binary (FieldMany2ManyBinaryMultiFiles)
-  This widget helps the user to upload or delete one or more files at the same
-  time.
-
-  Note that this widget is specific to the model 'ir.attachment'.
-
-  - Supported field types: *many2many*
-
-  Options:
-
-  - accepted_file_extensions: the file extension the user can pick from the file input dialog box
-    (cf: ``accept`` attribute on <input type="file"/>)
-
-many2many_tags (FieldMany2ManyTags)
-  Display many2many as a list of tags.
-
-  - Supported field types: *many2many*
-
-  Options:
-
-  - create: domain determining whether or not new tags can be created (default: True).
-
-  .. code-block:: xml
-
-      <field name="category_id" widget="many2many_tags" options="{'create': [['some_other_field', '>', 24]]}"/>
-
-  - color_field: the name of a numeric field, which should be present in the
-    view.  A color will be chosen depending on its value.
-
-  .. code-block:: xml
-
-      <field name="category_id" widget="many2many_tags" options="{'color_field': 'color'}"/>
-
-  - no_edit_color: set to True to remove the possibility to change the color of the tags (default: False).
-
-  .. code-block:: xml
-
-      <field name="category_id" widget="many2many_tags" options="{'color_field': 'color', 'no_edit_color': True}"/>
-
-form.many2many_tags (FormFieldMany2ManyTags)
-  Specialization of many2many_tags widget for form views. It has some extra
-  code to allow editing the color of a tag.
-
-  - Supported field types: *many2many*
-
-kanban.many2many_tags (KanbanFieldMany2ManyTags)
-  Specialization of many2many_tags widget for kanban views.
-
-  - Supported field types: *many2many*
-
-many2many_checkboxes (FieldMany2ManyCheckBoxes)
-  This field displays a list of checkboxes and allows the user to select a
-  subset of the choices. Note that the number of displayed values is limited to
-  100. This limit isn't customizable. It simply allows to handle extreme cases
-  where this widget is wrongly set on a field with a huge comodel. In those
-  cases, a list view is more adequate as it allows pagination and filtering.
-
-  - Supported field types: *many2many*
-
-one2many (FieldOne2Many)
-  Default widget for one2many fields.
-
-  It usually displays data in a sub list view, or a sub kanban view.
-
-  - Supported field types: *one2many*
-
-  Options:
-
-  - create: domain determining whether or not related records can be created (default: True).
-
-  - delete: domain determining whether or not related records can be deleted (default: True).
-
-  .. code-block:: xml
-
-      <field name="turtles" options="{'create': [['some_other_field', '>', 24]]}"/>
-
-  - create_text: a string that is used to customize the 'Add' label/text.
-
-  .. code-block:: xml
-
-      <field name="turtles" options="{\'create_text\': \'Add turtle\'}"/>
-
-statusbar (FieldStatus)
-  This is a really specialized widget for the form views. It is the bar on top
-  of many forms which represent a flow, and allow selecting a specific state.
-
-  - Supported field types: *selection, many2one*
-
-reference (FieldReference)
-  The FieldReference is a combination of a select (for the model) and a
-  FieldMany2One (for its value).  It allows the selection of a record on an
-  arbitrary model.
-
-  - Supported field types: *char, reference*
+    - Supported field types: `selection`, `many2one`
 
     Options:
 
-    - model_field: name of a FieldMany2One('ir.model') containing the model of the records that can be selected.
-       When this option is set, the select part of the FieldReference isn't displayed.
+    - `horizontal`: if true, radio buttons will be displayed horizontally.
+
+        .. code-block:: xml
+
+            <field name="recommended_activity_type_id" widget="radio" options="{'horizontal': true}"/>
+
+Badge Selection (`selection_badge`)
+    This is a subfield of `FieldSelection`, but specialized to display all the
+    valid choices as rectangular badges.
+
+    - Supported field types: `selection`, `many2one`
+
+    .. code-block:: xml
+
+        <field name="recommended_activity_type_id" widget="selection_badge" />
+
+Many2one (`many2one`)
+    Default widget for many2one fields.
+
+    - Supported field types: `many2one`
+
+    Attributes:
+
+    - `can_create`: allow the creation of related records (take precedence over `no_create`
+        option)
+
+    - `can_write`: allow the editing of related records (default: true)
+
+    Options:
+
+    - `quick_create`: allow the quick creation of related records (default: `true`)
+
+    - `no_create`: prevent the creation of related records - hide both the **Create "xxx"**
+        and **Create and Edit** dropdown menu items (default: `false`)
+
+    - `no_quick_create`: prevent the quick creation of related records - hide the **Create "xxx"**
+        dropdown menu item (default: `false`)
+
+    - `no_create_edit`: hide the **Create and Edit** dropdown menu item (default: `false`)
+
+    - `create_name_field`: when creating a related record, if this option is set,
+        the value of the `create_name_field` will be filled with the value of the input (default: `name`)
+
+    - `always_reload`: boolean, default to `false`. If `true`, the widget will always
+        do an additional name_get to fetch its name value. This is used for the
+        situations where the name_get method is overridden (please do not do that)
+
+    - `no_open`: boolean, default to `false`. If set to `true`, the many2one will not
+        redirect on the record when clicking on it (in readonly mode)
+
+    .. code-block:: xml
+
+        <field name="currency_id" options="{'no_create': true, 'no_open': true}" />
+
+Many2one Barcode (`many2one_barcode`)
+    Widget for `many2one` fields allows to open the camera from a mobile device (Android/iOS) to scan a barcode.
+
+    Specialization of `many2one` field where the user is allowed to use the native camera to scan a barcode.
+    Then it uses name_search to search this value.
+
+    If this widget is set and user is not using the mobile application,
+    it will fallback to regular `many2one` (`Many2OneField`)
+
+    - Supported field types: `many2one`
+
+Many2one Avatar (`many2one_avatar`)
+    This widget is only supported on `many2one` fields pointing to a model which
+    inherits from `image.mixin`. In readonly, it displays the image of the
+    related record next to its `display_name`. Note that the `display_name` isn't a
+    clickable link in this case. In edit, it behaves exactly like the regular
+    `many2one`.
+
+    - Supported field types: `many2one`
+
+Many2one Avatar User (`many2one_avatar_user`)
+    This widget is a specialization of the `Many2OneAvatar`. When the avatar is
+    clicked, we open a chat window with the corresponding user. This widget can
+    only be set on `many2one` fields pointing to the `res.users` model.
+
+    - Supported field types: `many2one` (pointing to `res.users`)
+
+Many2one Avatar Employee (`many2one_avatar_employee`)
+    Same as `Many2OneAvatarUser`, but for `many2one` fields pointing to `hr.employee`.
+
+    - Supported field types: `many2one` (pointing to `hr.employee`)
+
+Many2many (`many2many`)
+    Default widget for `many2many` fields.
+
+    - Supported field types: `many2many`
+
+    Attributes:
+
+    - `mode`: string, default view to display
+
+    - `domain`: restrict the data to a specific domain
+
+    Options:
+
+    - `create_text`: allow the customization of the text displayed when adding a new record
+
+    - `link`: domain determining whether records can be added to the relation (default: `true`).
+
+    - `unlink`: domain determining whether records can be removed from the relation (default: `true`).
+
+Many2many Binary File (`many2many_binary`)
+    This widget helps the user to upload or delete one or more files at the same time.
+
+    Note that this widget is specific to the model `ir.attachment`.
+
+    - Supported field types: `many2many`
+
+    Options:
+
+    - `accepted_file_extensions`: the file extension the user can pick from the file input dialog box
+        (cf: ``accept`` attribute on `<input type="file" />`)
+
+Many2many Tags (`many2many_tags`)
+    Display a `many2many` field as a list of tags.
+
+    - Supported field types: `many2many`
+
+    Options:
+
+    - `create`: domain determining whether or not new tags can be created (default: `true`).
+
+        .. code-block:: xml
+
+            <field name="category_id" widget="many2many_tags" options="{'create': [['some_other_field', '>', 24]]}" />
+
+    - `color_field`: the name of a numeric field, which should be present in the view.
+        A color will be chosen depending on its value.
+
+        .. code-block:: xml
+
+            <field name="category_id" widget="many2many_tags" options="{'color_field': 'color'}" />
+
+    - `no_edit_color`: set to `true` to remove the possibility to change the color of the tags (default: `false`).
+
+        .. code-block:: xml
+
+            <field name="category_id" widget="many2many_tags" options="{'color_field': 'color', 'no_edit_color': true}" />
+
+Many2many Tags - Form View (`form.many2many_tags`)
+    Specialization of `many2many_tags` widget for form views. It has some extra
+    code to allow editing the color of a tag.
+
+    - Supported field types: `many2many`
+
+Many2many Tags - Kanban View (`kanban.many2many_tags`)
+    Specialization of `many2many_tags` widget for kanban views.
+
+    - Supported field types: `many2many`
+
+Many2many Checkboxes (`many2many_checkboxes`)
+    This field displays a list of checkboxes and allows the user to select a
+    subset of the choices. Note that the number of displayed values is limited to
+    `100`. This limit isn't customizable. It simply allows to handle extreme cases
+    where this widget is wrongly set on a field with a huge comodel. In those
+    cases, a list view is more adequate as it allows pagination and filtering.
+
+    - Supported field types: `many2many`
+
+One2many (`one2many`)
+    Default widget for `one2many` fields.
+    It usually displays data in a sub list view, or a sub kanban view.
+
+    - Supported field types: `one2many`
+
+    Options:
+
+    - `create`: domain determining whether or not related records can be created (default: `true`).
+
+    - `delete`: domain determining whether or not related records can be deleted (default: `true`).
+
+        .. code-block:: xml
+
+            <field name="turtles" options="{'create': [['some_other_field', '>', 24]]}" />
+
+    - `create_text`: a string that is used to customize the 'Add' label/text.
+
+        .. code-block:: xml
+
+            <field name="turtles" options="{'create_text': 'Add turtle'}" />
+
+Status Bar (`statusbar`)
+    This is a field specific to the form views. It is the bar on top
+    of many forms which represent a flow, and allow selecting a specific state.
+
+    - Supported field types: `selection`, `many2one`
+
+Reference (`reference`)
+    The `reference` field is a combination of a select (for the model) and a
+    `many2one` field (for its value).  It allows the selection of a record on an
+    arbitrary model.
+
+    - Supported field types: `char`, `reference`
+
+    Options:
+
+    - `model_field`: name of an `ir.model` containing the model of the records that can be selected.
+        When this option is set, the select part of the `reference` field isn't displayed.
 
 Widgets
 -------
 
-week_days (WeekDays)
-  This field displays a list of checkboxes for week days, 1 checkbox for each day
-  and allow the user to select a subset of the choices.
+Week Days (`week_days`)
+    This widget displays a list of checkboxes for week days, 1 checkbox for each day
+    and allow the user to select a subset of the choices.
 
-  .. code-block:: xml
+    .. code-block:: xml
 
-      <widget name="week_days"/>
+        <widget name="week_days" />
 
 Client actions
 ==============
