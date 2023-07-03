@@ -48,18 +48,10 @@ section, click :guilabel:`Update info`. From here, fill out the fields:
 - :guilabel:`VAT`: VAT of the company;
 - :guilabel:`Codice Fiscale`: the fiscal code of the company;
 - :guilabel:`Tax System`: the tax system under which the company falls;
-- :guilabel:`PEC address email`: the certified email address of the company.
 
 .. image:: italy/italy-company.png
    :align: center
    :alt: Company information to provide
-
-PEC mail
---------
-
-The **PEC email** is a specific type of **certified** email providing a legal equivalent to the
-traditional registered mail. The **PEC email** of the main company must be the same as the one
-registered by the **Agenzia delle Entrate** authorities.
 
 E-invoicing
 -----------
