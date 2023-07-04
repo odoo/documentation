@@ -91,6 +91,8 @@ Batch Payment`.
   - :doc:`payments/batch`
   - :doc:`payments/batch_sdd`
 
+.. _payments/matching:
+
 Payments matching
 -----------------
 
