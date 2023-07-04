@@ -30,6 +30,8 @@ you want to compare the chosen time period with. You can choose up to 12
 periods back from the date of the report if you don't want to use the
 default **Previous 1 Period** option.
 
+.. _reporting/balance-sheet:
+
 Balance Sheet
 -------------
 
@@ -103,6 +105,8 @@ occurred during a certain period of time.
 
 .. image:: reporting/main_reports05.png
 
+.. _reporting/aged-payable:
+
 Aged Payable
 ------------
 
@@ -111,6 +115,8 @@ bills, credit notes and overpayments owed by you, and how long these
 have gone unpaid.
 
 .. image:: reporting/main_reports02.png
+
+.. _reporting/aged-receivable:
 
 Aged Receivable
 ---------------
@@ -128,6 +134,8 @@ income affect cash and cash equivalents, and breaks the analysis down to
 operating, investing and financing activities.
 
 .. image:: reporting/main_reports03.png
+
+.. _reporting/tax-report:
 
 Tax Report
 ----------
