@@ -188,6 +188,8 @@ you will see the follow-up message and all overdue invoices.
 
 .. image:: customer_invoices/invoice12.png
 
+.. _customer-invoices/aging-report:
+
 Customer aging report:
 ~~~~~~~~~~~~~~~~~~~~~~
 
