@@ -135,12 +135,6 @@ Enable the columns selector.
 
    <div class="container s_allow_columns">
 
-Disable the columns option.
-
-.. code-block:: xml
-
-   <div class="row s_nb_column_fixed">
-
 Disable the size option of all child columns.
 
 .. code-block:: xml
