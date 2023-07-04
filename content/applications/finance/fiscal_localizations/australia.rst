@@ -4,10 +4,10 @@ Australia
 
 .. _australia/employment-hero:
 
-KeyPay Australian Payroll
-=========================
+Employment Hero Australian Payroll
+==================================
 
-The KeyPay Module synchronizes payslip accounting entries (e.g., expenses, social charges,
+The Employment Hero module synchronizes payslip accounting entries (e.g., expenses, social charges,
 liabilities, taxes) from Employment Hero to Odoo automatically. Payroll administration is still done
 in Employment Hero. We only record the journal entries in Odoo.
 
@@ -17,13 +17,15 @@ in Employment Hero. We only record the journal entries in Odoo.
 Configuration
 -------------
 
-#. :ref:`Activate <general/install>` the :guilabel:`Keypay Australian Payroll` module (technical
-   name: `l10n_au_keypay`).
-#. Configure the **KeyPay API** by going to :menuselection:`Accounting --> Configuration -->
-   Settings`. More fields become visible after clicking on :guilabel:`Enable KeyPay Integration`.
+#. :ref:`Activate <general/install>` the :guilabel:`Employment Hero Australian Payroll` module
+   (technical name: `l10n_au_keypay`).
+#. Configure the **Employment Hero API** by going to :menuselection:`Accounting --> Configuration -->
+   Settings`. More fields become visible after clicking on :guilabel:`Enable Employment Hero
+   Integration`.
 
-   .. image:: australia/keypay-integration.png
-      :alt: Enabling KeyPay Integration in Odoo Accounting displays new fields in the settings
+   .. image:: australia/employment-hero-integration.png
+      :alt: Enabling Employment Hero Integration in Odoo Accounting displays new fields in the
+            settings
 
    - You can find the API Key in the :guilabel:`My Account` section of the Employment Hero platform.
 
@@ -32,7 +34,7 @@ Configuration
 
    - The **Payroll URL** is pre-filled with `https://keypay.yourpayroll.com.au`. *Please do not
      change it.*
-   - You can find the **Business ID** in the KeyPay URL. (i.e., `189241`)
+   - You can find the **Business ID** in the Employment Hero URL. (i.e., `189241`)
 
      .. image:: australia/employment-hero-business-id.png
         :alt: The Employment Hero "Business ID" number is in the URL
@@ -50,8 +52,8 @@ the same record in Employment Hero and Odoo.
    :alt: Example of a Employment Hero Journal Entry in Odoo Accounting (Australia)
 
 By default, the synchronization happens once per week. You can fetch the records manually by going
-to :menuselection:`Accounting --> Configuration --> Settings` and, in the :guilabel:`Enable KeyPay
-Integration` option, click on :guilabel:`Fetch Payruns Manually`.
+to :menuselection:`Accounting --> Configuration --> Settings` and, in the :guilabel:`Enable
+Employment Hero Integration` option, click on :guilabel:`Fetch Payruns Manually`.
 
 Employment Hero payslip entries also work based on double-entry bookkeeping.
 
