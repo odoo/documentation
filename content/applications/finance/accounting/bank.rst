@@ -85,6 +85,8 @@ You can edit the accounting information and bank account number according to you
    - :doc:`get_started/multi_currency`
    - :doc:`bank/transactions`
 
+.. _bank_accounts/suspense:
+
 Suspense account
 ----------------
 
