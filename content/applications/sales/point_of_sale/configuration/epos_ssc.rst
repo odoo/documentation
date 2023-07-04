@@ -32,20 +32,9 @@ to the ePOS printer.
 To work with Odoo, some models that can be used without an
 :doc:`IoT box <../../../productivity/iot/config/connect>` may require :doc:`the HTTPS protocol
 <https>` to establish a secure connection between the browser and the printer. However, trying to
-reach the printer's IP address using HTTPS leads to a warning page on most web browsers.
-
-.. figure:: epos_ssc/browser-https-insecure.png
-   :align: center
-   :alt: warning page about the connection privacy on Google Chrome
-
-   Warning page on Google Chrome, Windows 10
-
-In that case, you can temporarily force the connection by clicking :guilabel:`Advanced` and
-:guilabel:`Proceed to [IP address] (unsafe)`. Doing so allows you to reach the page in HTTPS and use
-the ePOS printer in Odoo as long as the browser window stays open.
-
-.. note::
-   The previous instructions apply to Google Chrome but are similar to other browsers.
+reach the printer's IP address using HTTPS leads to a warning page on most web browsers. In that
+case, you can temporarily :ref:`force the connection <epos_ssc/instructions>`, which allows you to
+reach the page in HTTPS and use the ePOS printer in Odoo as long as the browser window stays open.
 
 .. warning::
    The connection is lost after closing the browser window. Therefore, this method should only be
@@ -72,9 +61,19 @@ it into your browser.
 
          .. tab:: Generate a self-signed certificate
 
-            After forcing the connection, sign in using your printer credentials to access the ePOS
-            printer settings. To sign in, enter `epson` in the :guilabel:`ID` field and your printer
-            serial number in the :guilabel:`Password` field.
+            Navigate to the ePOS' IP address (e.g., `https://192.168.1.25`) and force the
+            connection by clicking :guilabel:`Advanced` and :guilabel:`Proceed to [IP address]
+            (unsafe)`.
+
+            .. figure:: epos_ssc/browser-https-insecure.png
+               :scale: 75%
+               :alt: warning page about the connection privacy on Google Chrome
+
+               Warning page on Google Chrome, Windows 10
+
+            Then, sign in using your printer credentials to access the ePOS printer settings. To
+            sign in, enter `epson` in the :guilabel:`ID` field and your printer serial number in the
+            :guilabel:`Password` field.
 
             Click :guilabel:`Certificate List` in the :guilabel:`Authentication` section, and click
             :guilabel:`create` to generate a new **Self-Signed Certificate**. The :guilabel:`Common
@@ -91,8 +90,8 @@ it into your browser.
 
             The export process is heavily dependent on the :abbr:`OS (Operating System)` and the
             browser. Start by accessing your ePOS printer settings on your web browser by navigating
-            to its IP address, for example, `https://192.168.1.25`. Then, force the connection as
-            explained in the :ref:`introduction <epos_ssc/ePOS printers>`.
+            to its IP address (e.g., `https://192.168.1.25`). Then, force the connection as
+            explained in the **Generate a self-signed certificate tab**.
 
             If you are using **Google Chrome**,
 
@@ -100,7 +99,6 @@ it into your browser.
                not valid`;
 
                .. image:: epos_ssc/browser-warning.png
-                  :align: center
                   :alt: Connection to the printer not secure button in Google Chrome browser.
 
             #. go to the :guilabel:`Details` tab and click :guilabel:`Export`;
@@ -120,7 +118,6 @@ it into your browser.
                --> View certificate`;
 
             .. image:: epos_ssc/mozilla-not-secure.png
-               :align: center
                :alt: Connection is not secure button in Mozilla Firefox browser
 
             #. scroll down to the :guilabel:`Miscellaneous` section;
@@ -150,7 +147,6 @@ it into your browser.
                      :guilabel:`Trusted Root Certification Authorities`;
 
                      .. image:: epos_ssc/win-cert-wizard-store.png
-                        :align: center
 
                   #. click :guilabel:`Finish`, accept the pop-up security window;
                   #. restart the computer to make sure that the changes are applied.
