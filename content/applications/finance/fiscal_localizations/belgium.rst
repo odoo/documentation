@@ -11,9 +11,6 @@ Install the :guilabel:`🇧🇪 Belgium` :ref:`fiscal localization package
 <fiscal_localizations/packages>` to get all the default accounting features of the Belgian
 localization, following the :abbr:`IFRS(International Financial Reporting Standards)` rules.
 
-:ref:`Install <general/install>` the :guilabel:`Belgium - Disallowed Expenses Data` module
-(`l10n_be_disallowed_expenses`) to manage :ref:`disallowed expenses <belgium/disallowed-expenses>`.
-
 .. _belgium/coa:
 
 Chart of accounts
