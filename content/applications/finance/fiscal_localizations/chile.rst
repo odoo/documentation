@@ -734,6 +734,9 @@ sales, sampling, consignment, internal transfers, and basically any product move
 Delivery Guide from a Sales Process
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. warning::
+   A delivery guide should **not** be longer than one page or contain more than 60 product lines.
+
 When a Sales Order is created and confirmed, a Delivery Order is generated. After validating the
 Delivery Order, the option to create a Delivery Guide is activated.
 
