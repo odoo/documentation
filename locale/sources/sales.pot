@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo saas-16.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-20 08:18+0000\n"
+"POT-Creation-Date: 2023-07-10 08:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,6 +58,7 @@ msgstr ""
 #: ../../content/applications/sales/crm/track_leads/prospect_visits.rst:12
 #: ../../content/applications/sales/point_of_sale/configuration.rst:6
 #: ../../content/applications/sales/point_of_sale/employee_login.rst:13
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:11
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:13
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:12
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:16
@@ -1835,44 +1836,64 @@ msgstr ""
 msgid "Creating a new payment method for a POS."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods.rst:21
-msgid "Selecting a :guilabel:`bank` journal automatically adds the :guilabel:`Use a Payment Terminal` field in which you can add your terminal's information."
+#: ../../content/applications/sales/point_of_sale/payment_methods.rst:18
+msgid "Selecting a :guilabel:`bank` journal automatically adds the :guilabel:`Use a Payment Terminal` field in which you can add your :doc:`payment terminal's information <payment_methods/terminals>`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods.rst:23
-msgid "Credentials are mandatory to use a payment terminal. To learn how to configure the different terminals, check out the following documentation pages:"
+msgid ":doc:`payment_methods/terminals`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods.rst:26
-msgid ":doc:`Adyen configuration <payment_methods/terminals/adyen>`"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/payment_methods.rst:27
-msgid ":doc:`Ingenico configuration <payment_methods/terminals/ingenico>`"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/payment_methods.rst:28
-msgid ":doc:`Six configuration <payment_methods/terminals/six>`"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/payment_methods.rst:29
-msgid ":doc:`Stripe configuration <payment_methods/terminals/stripe>`"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/payment_methods.rst:30
-msgid ":doc:`Vantiv configuration <payment_methods/terminals/vantiv>`"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/payment_methods.rst:31
-msgid ":doc:`Worldline configuration <payment_methods/terminals/worldline>`"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/payment_methods.rst:33
-msgid "Once the payment method is created, you can select it to be used in your POS. To do so, go to the :ref:`POS settings <configuration/settings>`, select the POS for which you wish to make the payment method available in the :guilabel:`Point of Sale` field, and add the payment method(s) under the :guilabel:`Payment` section."
+#: ../../content/applications/sales/point_of_sale/payment_methods.rst:25
+msgid "Once the payment method is created, you can select it in your POS settings. To do so, go to the :ref:`POS' settings <configuration/settings>`, click :guilabel:`Edit`, and add the payment method under the :guilabel:`Payments` section."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:5
 msgid "Payment terminals"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:7
+msgid "Connecting and integrating a payment terminal with your POS system allows you to accept multiple payment options, including credit and debit cards, making the payment process more efficient."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:13
+msgid "Go to the :doc:`application settings <../configuration>`, scroll down to the :guilabel:`Payment Terminals` section, and tick your terminal's checkbox."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:-1
+msgid "checkbox in the settings to enable a payment terminal"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:19
+msgid "Then, follow the corresponding documentation to configure your device:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:21
+msgid ":doc:`Adyen configuration <terminals/adyen>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:22
+msgid ":doc:`Ingenico configuration <terminals/ingenico>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:23
+msgid ":doc:`SIX configuration <terminals/six>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:24
+msgid ":doc:`Stripe configuration <terminals/stripe>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:25
+msgid ":doc:`Vantiv configuration <terminals/vantiv>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:26
+msgid ":doc:`Worldline configuration <terminals/worldline>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:28
+msgid "Once the terminal is configured, you can :doc:`create the corresponding payment method and add it to the POS <../payment_methods>`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:3
@@ -4155,107 +4176,204 @@ msgid "Invoicing Method"
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:3
-msgid "Request a down payment"
+msgid "Down payments"
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:5
-msgid "A down payment is a partial payment made by the buyer when a sales contract is concluded. This implies both parties' full commitment (seller and buyer) to honor the contract. With a down payment, the buyers show their will to acquire the product and agree to pay the rest later, while the sellers are obliged to provide the goods by accepting it."
+msgid "A down payment is a partial payment made by the buyer when a sales contract is concluded. This implies both parties' (seller and buyer) full commitment to honor the contract."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:10
-msgid "Sometimes a down payment is required for expensive orders or projects. That way, you can protect yourself and make sure that your customer is reliable."
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:8
+msgid "With a down payment, the buyer pays a portion of the total amount owed while agreeing to pay the remaining amount at a later date. In turn, the seller provides goods or services to the buyer after accepting the down payment, trusting that the remaining amount will be paid later on."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:14
-msgid "First time you request a down payment"
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:13
+msgid "Initial down payment request"
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:16
-msgid "When a sales order is confirmed, you then have the possibility to create an invoice. Invoices are automatically created in drafts so that you can review them before validation. To create an invoice, Odoo Sales offers you 3 options:"
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:15
+msgid "When a sales order is confirmed, the option to create an invoice becomes available, via the :guilabel:`Create Invoice` button, located in the upper-left corner of the sales order form. When clicked, a :guilabel:`Create invoices` pop-up appears."
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:20
-msgid "Regular invoice"
-msgstr ""
-
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:21
-msgid "Down payment (percentage)"
+msgid "Invoices are automatically created in drafts, so they can be reviewed before validation."
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:22
-msgid "Down payment (fixed amount)"
+msgid "On the :guilabel:`Create invoices` pop-up, there are 3 options to choose from in the :guilabel:`Create Invoice` field:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:24
-msgid "In terms of down payment, it can either be a fixed amount or a percentage of the total amount. The first time you request a down payment, you can set a percentage or a fixed amount of your choice, and select the right income account and taxes. These settings will be reused for future down payments."
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:27
+msgid ":guilabel:`Regular invoice`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:-1
-msgid "How can you do a down payment on Odoo Sales?"
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:27
+msgid "If :guilabel:`Regular Invoice` is selected the other fields disappear, as they only pertain to down payment configurations."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:29
+msgid ":guilabel:`Down payment (percentage)`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:30
+msgid ":guilabel:`Down payment (fixed amount)`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:32
+msgid "In terms of a down payment, it can either be a fixed amount or a percentage of the total amount."
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:34
-msgid "When you request your first down payment, a new product called **Down payment** will be created. This product will be registered as a **service** product with an invoicing policy of **ordered quantities**. As a reminder, you can edit this product and modify it at any time. Please note that if you choose **delivered quantities** as invoicing policy, **you will not be able to create an invoice**."
+msgid "Once the desired down payment option is selected in the :guilabel:`Create Invoice` field, designate the desired amount (either as a percentage or fixed amount) in the :guilabel:`Down Payment Amount` field."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:41
-msgid "Basic sales flow using down payments"
-msgstr ""
-
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:43
-msgid "For this first example, we will use a 50% amount down payment with a product using **ordered quantities** as invoicing policy. Make sure to check out our documentation about invoicing policies here: :doc:`invoicing_policy` , before requesting your first down payment. When it comes to create and view the invoice, you will only have access to a draft invoice mentioning the down payment (as you can see below)."
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:38
+msgid "Then, select the appropriate income account for the invoice in the :guilabel:`Income Account` field, and add a tax amount, if necessary, in the :guilabel:`Customer Taxes` field. These settings will be reused for future down payments."
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:-1
-msgid "What is a basic sales flow using down payments on Odoo Sales (1)?"
+msgid "How to configure a down payment on Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:53
-msgid "There, you can post the invoice and register the payment of your customer. But, we all know that in real life this flow does not happen immediately. So, for now, you can return to the sales order. There, you will have the possibility to see the order as a customer with the **Customer preview** button or to reach easily the previous draft invoice with the **Invoice** button. In any case, the down payment will be mentioned on both (sales order and draft invoice)."
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:47
+msgid "When a down payment is first requested, a new product called :guilabel:`Down payment` is created. This product is registered as a :guilabel:`Service` product, with an invoicing policy of :guilabel:`Ordered quantities`. This product can be edited and modified at any time."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:52
+msgid "If :guilabel:`Delivered quantities` is chosen as the invoicing policy, an invoice will **not** be able to be created."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:56
+msgid "Request a 50% down payment"
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:58
+msgid "For the following example, the flow involves a 50% amount down payment on a product with :guilabel:`Ordered quantities` as the invoicing policy."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:62
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:184
+msgid ":doc:`/applications/sales/sales/invoicing/invoicing_policy`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:64
+msgid "When the order is confirmed (via the :guilabel:`Confirm` button), it's time to create/view the invoice, by clicking :guilabel:`Create Invoice`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:67
+msgid "Then, on the :guilabel:`Create invoices` pop-up window that appears, select :guilabel:`Down payment (percentage)`, and type `50` in the :guilabel:`Down Payment Amount` field. Lastly, click :guilabel:`Create and View Invoice` to create and view the invoice."
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:-1
-msgid "What is a basic sales flow using down payments on Odoo Sales (2)?"
+msgid "Create invoices pop up window in Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:63
-msgid "To complete the flow, when the customer wants to pay the rest of his sales order, you must create another invoice. Once again, you will have the choice to make another down payment or to deduct all the down payments and so, paying the rest of the invoice as a regular invoice."
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:75
+msgid "Doing so reveals the draft invoice, which mentions the down payment."
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:-1
-msgid "What is a basic sales flow using down payments on Odoo Sales (3)?"
+msgid "A sample draft invoice with down payment mentioned in Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:71
-msgid "This flow is also possible with a down payment taking into account a fixed amount."
-msgstr ""
-
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:74
-msgid "Be careful that if you do a down payment with a product using **delivered quantities** as invoicing policy, you won’t be able to deduct all the down payments when it comes to invoicing your customer. Indeed, you have to deliver a product before creating the final invoice. If nothing has been delivered, you create a **credit note** that cancels the draft invoice created after the down payment. To do so, you have to install the **Inventory App** to confirm the delivery. Otherwise, you can enter the delivered quantity manually on the sales order."
-msgstr ""
-
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:82
-msgid "Modify the income account and customer taxes"
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:81
+msgid "From there, the invoice can be confirmed/posted, and the payment can be registered. Return to the sales order, via the breadcrumbs."
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:84
-msgid "From the products list, search for the **Down Payment** product."
+msgid "On the sales order, the option to view what the customer will see is available, via the :guilabel:`Customer Preview` smart button, and the :guilabel:`Invoice` button reveals the drafted invoice. In either case, the down payment is mentioned on both the sales order and draft invoice."
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:-1
-msgid "Creation of a down payment product on Odoo Sales"
+msgid "How the down payment is mentioned on the sales order in Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:90
-msgid "You can edit it and under the **General Information Tab** you will be able to change the customer taxes. Now, to change the income account, you will need to install the **Accounting App** to have the possibility to see the **Accounting Tab** on the product form."
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:92
+msgid "To confirm and register the first payment of the down payment, click the :guilabel:`Invoices` smart button to return to the invoice. On the :guilabel:`Customer Invoice` page, click :guilabel:`Confirm`, then :guilabel:`Register Payment` to open a :guilabel:`Register Payment` pop-up form."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:-1
+msgid "How the register payment pop up looks in Odoo Sales."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:101
+msgid "On this form, select the appropriate :guilabel:`Journal` and confirm that the down payment amount is correct in the :guilabel:`Amount` field. Then, make any other modifications to the other fields, if necessary, before clicking :guilabel:`Create Payment`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:105
+msgid "Odoo returns to the invoice, which now has a green :guilabel:`In Payment` banner visible in the upper-right corner."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:-1
+msgid "How the initial down payment invoice has a green paid banner in Odoo Sales."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:112
+msgid "Now, when the customer wants to pay the remaining amount of the order, another invoice must be created. To do that, return to the sales order, and click :guilabel:`Create Invoice`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:115
+msgid "On the :guilabel:`Create invoices` pop-up window, there is now an option to :guilabel:`Deduct down payments`, which is selected by default."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:-1
+msgid "The deduct down payment option on the create invoices pop up in Odoo Sales."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:122
+msgid "If the remaining amount is ready to be paid, the :guilabel:`Regular Invoice` option should be selected, and the :guilabel:`Deduct down payments` option should *stay* selected. Then, click :guilabel:`Create and View Invoice`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:126
+msgid "Doing so reveals a separate :guilabel:`Invoices` page, listing all the invoices for that specific sales order. Each invoice line item displays all the necessary information related to each invoice, along with the current :guilabel:`Payment Status`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:-1
+msgid "The down payment invoices page in Odoo Sales."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:134
+msgid "To complete the flow, select the invoice with the :guilabel:`Not Paid` status, which opens that invoice. On the invoice page, click :guilabel:`Confirm`, then :guilabel:`Register Payment`, and confirm that the remaining :guilabel:`Amount` is correct. Then, click :guilabel:`Create Payment`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:138
+msgid "That pop-up window disappears, and a green :guilabel:`In Payment` banner is now present on the invoice. The line items on the invoice show that the total amount has been paid, including mentions of the down payment, and the flow is complete."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:142
+msgid "This flow is also possible with the :guilabel:`Fixed amount` down payment option."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:145
+msgid "If a down payment is used with a product that has a :guilabel:`Delivered quantities` invoicing policy, the down payments will **not** be able to be deducted when it comes time to invoice the customer. This is because, due to the invoicing policy, the product(s) would have to be delivered *before* creating the final invoice."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:150
+msgid "If nothing has been delivered, a :guilabel:`Credit Note` is created, which cancels the draft invoice that was created after the down payment. To utilize the :guilabel:`Credit Note` option, the *Inventory* application must be installed, in order to confirm the delivery. Otherwise, the delivered quantity can be entered manually directly on the sales order."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:156
+msgid "Income account and customer taxes modifications"
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:158
+msgid "To adjust the income account and customer taxes attached to a down payment, navigate to the :guilabel:`Products` page (:menuselection:`Sales app --> Products --> Products`), search for the `Down Payment` product in the search bar, and select it to reveal the product detail page."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:162
+msgid "On the :guilabel:`Down Payment` product page, click :guilabel:`Edit`, then scroll down to the :guilabel:`General Information` tab. In this tab, the customer taxes can be modified in the :guilabel:`Customer Taxes` field."
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:-1
 msgid "How to modify the income account link to down payments"
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:99
-msgid ":doc:`invoicing_policy`"
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:170
+msgid "To change or adjust the income account attached to the :guilabel:`Down Payment` product page, the *Accounting* app **must** be installed. With the *Accounting* app installed, the :guilabel:`Accounting` tab becomes available on the product page. That tab will **not** be accessible without the *Accounting* app installed."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:175
+msgid "In the :guilabel:`Accounting` tab, the income account can be changed in the :guilabel:`Income Account` field, in the :guilabel:`Receivables` section. Once all desired changes are complete, click :guilabel:`Save`."
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/expense.rst:3
