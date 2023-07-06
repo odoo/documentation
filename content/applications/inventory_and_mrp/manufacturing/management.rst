@@ -18,3 +18,4 @@ Manufacturing management
    management/using_work_centers
    management/work_center_time_off
    management/scrap_manufacturing
+   management/manufacturing_backorders
