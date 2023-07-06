@@ -8,6 +8,12 @@ database with their Google account.
 This is particularly helpful if the organization uses Google Workspace, and wants employees within
 the organization to connect to Odoo using their Google Accounts.
 
+.. warning::
+   Databases hosted on Odoo.com should not use Oauth login for the owner or administrator of the
+   database as it would unlink the database from their Odoo.com account. If Oauth is set up for that
+   user, the database will no longer be able to be duplicated, renamed or otherwise managed from
+   the Odoo.com portal.
+
 .. seealso::
    - :doc:`/applications/productivity/calendar/google`
    - :doc:`/administration/maintain/google_oauth`
