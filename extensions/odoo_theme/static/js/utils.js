@@ -134,7 +134,7 @@ const _generateFallbackUrls = async (targetUrl) => {
     const [urlBase, version, language, originalPathParts] = _deconstructUrl(targetUrlObject);
 
     // Generate the fallback URLs.
-    const fallbackUrls = [];
+    const fallbackUrls = [targetUrl]; // Start with the original URL in case we rebuild it wrong.
     for (let i = originalPathParts.length; i >= 0; i--) {
         const fallbackPathParts = originalPathParts.slice(0, i);
 
@@ -168,7 +168,7 @@ const _generateFallbackUrls = async (targetUrl) => {
 };
 
 /**
- * Iterate over the provided URLs and return the first one that points to a valid resource.
+ * Iterate over the provided URLs and return the first one that points to a valid resource, if any.
  *
  * Since URLs don't have a protocol and cannot be fetched when the documentation is built locally
  * without the `ROOT` and `IS_REMOTE_BUILD` Make arguments, the URLs that don't have the protocol
@@ -183,5 +183,5 @@ const _getFirstValidUrl = async (urls) => {
             }
         }
     }
-    return urls[0]; // No valid URL found, return the first one.
+    return null; // No valid URL found.
 };
