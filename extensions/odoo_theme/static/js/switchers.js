@@ -19,7 +19,7 @@
                     if (!targetUrl.startsWith('/')) {  // Don't test for valid URLs if in localhost.
                         event.preventDefault();
                         const fallbackUrls = await _generateFallbackUrls(targetUrl);
-                        const fallbackUrl = await _getFirstValidUrl(fallbackUrls);
+                        const fallbackUrl = await _getFirstValidUrl(fallbackUrls) ?? targetUrl;
                         window.location.href = fallbackUrl;
                     }
                 }
