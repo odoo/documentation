@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo saas-16.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-20 08:18+0000\n"
+"POT-Creation-Date: 2023-07-10 08:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -342,9 +342,8 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/barcode/setup/software.rst:12
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/cycle_counts.rst:14
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:13
 #: ../../content/applications/inventory_and_mrp/inventory/management/misc/wave_transfers.rst:16
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:45
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:51
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/uom.rst:14
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/integrating_landed_costs.rst:9
 #: ../../content/applications/inventory_and_mrp/inventory/management/shipments_deliveries/delivery_three_steps.rst:18
@@ -362,8 +361,8 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/third_party_shipper.rst:14
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:23
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:9
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:15
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:10
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:31
 msgid "Configuration"
 msgstr ""
 
@@ -637,65 +636,306 @@ msgid ":doc:`lots`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:3
-msgid "Expiration Dates"
+msgid "Expiration dates"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:5
-msgid "In many companies, products have expiration dates and they should be managed based on those dates. In the food industry, for example, tracking and managing product stock based on expiration dates is mandatory to avoid selling expired products to customers."
+msgid "In Odoo, *expiration dates* can be used to manage and track the lifecycles of perishable products, from purchase to sale. Using expiration dates reduces product loss due to unexpected expiry, and helps to avoid sending expired products to customers."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:9
-msgid "With Odoo, you can track and manage your products based on their expiration dates, even if they are already tracked by lots or serial numbers."
+msgid "In Odoo, only products that are tracked using *lots* and *serial numbers* can be assigned expiration information. Once a lot or serial number has been assigned, an expiration date can be set. This is especially helpful for companies (such as food manufacturers) that consistently, or exclusively, buy and sell perishable products."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:15
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:17
+msgid ":doc:`/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:16
-msgid "Application configuration"
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:19
+msgid ":doc:`/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:18
-msgid "To use expiration date tracking, open the *Inventory* application and go to :menuselection:`Configuration --> Settings` and activate the *Lots & Serial Numbers* and *Expiration Dates* features."
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:19
+msgid "Enable expiration dates"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:26
-#: ../../content/applications/inventory_and_mrp/inventory/shipping/operation/labels.rst:68
-#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/third_party_shipper.rst:90
-msgid "Product configuration"
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:21
+msgid "To enable the use of *expiration dates*, go to :menuselection:`Inventory app --> Configuration --> Settings`, and scroll down to the :guilabel:`Traceability` section. Then, click the checkbox to enable the :guilabel:`Lots & Serial Numbers` feature."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:28
-msgid "Now, you can define different dates in the *inventory tab* of the product form:"
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:25
+msgid "Once that feature is activated, a new option will appear to enable :guilabel:`Expiration Dates`. Click that checkbox to enable the feature, and be sure to :guilabel:`Save` changes."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:30
-msgid "Product Use Time: the number of days before the goods start deteriorating, without being dangerous. This is used to calculate the Best before date on each lot/serial number received."
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:-1
+msgid "Enabled lots and serial numbers and expiration dates settings."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:32
-msgid "Product Life Time: the number of days before the goods may become dangerous and must not be consumed. This is used to calculate the Expiration date on each lot/serial number received."
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:33
+msgid "Once the :guilabel:`Lots & Serial Numbers` feature is activated, additional features appear to :guilabel:`Display Lots & Serial Numbers on Delivery Slips`; to :guilabel:`Display Lots & Serial Numbers on Invoices`; and to :guilabel:`Display Expiration Dates on Delivery Slips`. Activating these features helps with end-to-end traceability, making it easier to manage product recalls, identify \"bad\" batches of products, and more."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:34
-msgid "Product Removal Time: shows the number of days before the goods should be removed from the stock. This is used to calculate the Removal date on each lot/serial number received."
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:40
+msgid "Configure expiration dates on products"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:36
-msgid "Product Alert Time: refers to the number of days before an alert should be raised on the lot/serial number. This is used to calculate the Alert date on each lot/serial number received. Once the Alert date is reached, an Activity is assigned on the relevant lot/serial number to the Responsible user defined on the Product."
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:42
+msgid "Once the :guilabel:`Lots & Serial Numbers` and :guilabel:`Expiration Dates` features have been enabled in the settings of the *Inventory* app, expiration information can be configured on individual products."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:45
-msgid "Expiration Date on Lots/Serial Numbers"
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:46
+msgid "To do so, go to :menuselection:`Inventory app --> Products --> Products`, and select a product to edit. Selecting a product reveals the product form for that particular item. Once on the product form, click :guilabel:`Edit` in the upper-left corner to make changes."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:47
-msgid "When receiving a product into inventory, the dates will automatically be updated on the corresponding lot/serial number. These updates will be based on the receipt date of the product and the days set on the product form."
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:51
+msgid "To be tracked using lots or serial numbers, or to configure expiration information, products *must* have their :guilabel:`Product Type` set as :guilabel:`Storable Product` under the :guilabel:`General Information` tab."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:58
-msgid "Expiration Alerts"
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:55
+msgid "Then, click the :guilabel:`Inventory` tab, and scroll down to the :guilabel:`Traceability` section. From here, make sure that either :guilabel:`By Unique Serial Number` or :guilabel:`By Lots` is checked."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:60
-msgid "You can access expiration alerts from the *inventory* app. To do so, go to :menuselection:`Master Data --> Lots/Serial Numbers`. There, you can use the pre-existing filter to show all the lots/serial numbers that have exceeded their respective alert dates."
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:59
+msgid "Once it is, a new :guilabel:`Expiration Date` checkbox appears that must also be clicked. When both are enabled, a new :guilabel:`Dates` field appears to the right."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:63
+msgid "If a product has stock on-hand prior to activating tracking by lots or serial numbers, an inventory adjustment might need to be performed in order to assign lot numbers to the existing stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:68
+msgid "For processing large quantities of products on receipts or deliveries, it is recommended to track using lots, so multiple products can be traced back to the same lot, if any issues arise."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:-1
+msgid "Expiration dates configuration on the product form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:75
+msgid "Under the :guilabel:`Dates` field, there are four categories of expiration information to configure for the product:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:78
+msgid ":guilabel:`Expiration Time`: the number of days after receiving products (either from a vendor or in stock after production) in which goods may become dangerous and should not be used or consumed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:80
+msgid ":guilabel:`Best Before Time`: the number of days before the expiration date in which the goods start deteriorating, **without** necessarily being dangerous yet."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:82
+msgid ":guilabel:`Removal Time`: the number of days before the expiration date in which the goods should be removed from stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:84
+msgid ":guilabel:`Alert Time`: the number of days before the expiration date in which an alert should be raised on goods in a particular lot or containing a particular serial number."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:88
+msgid "The values entered into these fields automatically compute the expiration date for goods entered into stock, whether purchased from a vendor or manufactured in-house."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:91
+msgid "Once all the expiration information has been configured, click :guilabel:`Save` to save all changes."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:94
+msgid "If the :guilabel:`Dates` field is not populated with any values for expiration information, dates (and lots) can be manually assigned upon receipts and deliveries in and out of the warehouse. Even when assigned, they can still be overwritten and changed manually if needed, as well."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:99
+msgid "Set expiration dates on receipts with lots & serial numbers"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:101
+msgid "Generating expiration dates for **incoming** goods can be done directly from the purchase order. To create a purchase order, go to the :menuselection:`Purchase` app and click :guilabel:`Create` to create a new request for quotation (RFQ)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:105
+msgid "Then, fill out the information by adding a :guilabel:`Vendor`, and add products to the :guilabel:`Product` lines by clicking :guilabel:`Add a product`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:108
+msgid "Choose the desired quantity to order by changing the number in the :guilabel:`Quantity` column, and click :guilabel:`Confirm Order`. This converts the :abbr:`RFQ (request for quotation)` into a purchase order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:112
+msgid "Click the :guilabel:`Receipt` smart button at the top of the purchase order to be taken to the warehouse receipt form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:116
+msgid "Clicking :guilabel:`Validate` before assigning a serial number to the ordered product quantities causes a :guilabel:`User Error` popup to appear. The popup requires entry of a lot or serial number for the ordered products. The :abbr:`RFQ (request for quotation)` cannot be validated without an assigned lot or serial number."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:0
+msgid "User error popup when validating an order with no lot number."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:125
+msgid "From here, click the :guilabel:`Additional Options` menu (hamburger) icon located on the far-right of the product line. When clicked, a :guilabel:`Detailed Operations` pop-up will appear."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:128
+msgid "In this pop-up, click :guilabel:`Add a line`, and assign a lot or serial number under the :guilabel:`Lot/Serial Number Name` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:131
+msgid "An expiration date automatically populates, based on the configuration on the product form (if previously configured)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:135
+msgid "If the :guilabel:`Dates` field on the product form has not been configured, this date can be manually entered."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:138
+msgid "After the expiration date has been established, mark the :guilabel:`Done` quantities, and click :guilabel:`Confirm` to close the pop-up. Finally, click :guilabel:`Validate`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:-1
+msgid "Detailed operations popup showing expiration dates for ordered products."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:145
+msgid "A :guilabel:`Traceability` smart button will appear upon validating the receipt. Click the :guilabel:`Traceability` smart button to see the updated :guilabel:`Traceability Report`, which includes: a :guilabel:`Reference` document; the :guilabel:`Product` being traced; the :guilabel:`Lot/Serial #`; and more."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:151
+msgid "Set expiration dates on manufactured products"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:153
+msgid "Expiration dates can also be generated for products manufactured in-house. To assign expiration dates to manufactured products, a manufacturing order (MO) needs to be completed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:156
+msgid "To create a :abbr:`MO (manufacturing order)`, go to :menuselection:`Manufacturing app --> Operations --> Manufacturing Orders`, and click :guilabel:`Create`. Choose a product to manufacture from the :guilabel:`Product` field drop-down menu, then select the :guilabel:`Quantity` to produce."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:-1
+msgid "Manufacturing order for product with expiration date."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:165
+msgid "To manufacture a product, there must be materials to consume in the lines in the :guilabel:`Product` column. This can be achieved either by creating a :guilabel:`Bill of Material` for the :guilabel:`Product`, or manually adding materials to consume by clicking :guilabel:`Add a line`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:170
+msgid "Once ready, click :guilabel:`Confirm`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:172
+msgid "Next to :guilabel:`Lot/Serial Number`, either select an existing lot number from the drop-down menu, or click the green :guilabel:`+` sign to automatically assign a new lot number."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:175
+msgid "Then, select a number of units for the :guilabel:`Quantity` field, and click :guilabel:`Mark as Done`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:178
+msgid "Click on the :guilabel:`External Link` icon in the assigned :guilabel:`Lot/Serial Number` field. A pop-up appears, revealing a detail form for that specific number."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:181
+msgid "On that pop-up, under the :guilabel:`Dates` tab, all expiration information that was previously configured for the product is displayed. That same information is also available on the detail form for that specific product, or by going to :menuselection:`Inventory app --> Products --> Lots/Serial Numbers`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:-1
+msgid "Dates tab with expiration information for specific lot number."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:191
+msgid "Sell products with expiration dates"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:193
+msgid "Selling perishable products with expiration dates is done the same as any other type of product. The first step in selling perishable products is to create a sales order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:196
+msgid "To do that, go to :menuselection:`Sales app --> Create` to create a new quotation, and fill out the information on the sales order form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:199
+msgid "Add a :guilabel:`Customer`, click :guilabel:`Add a product` to add the desired products to the :guilabel:`Product` lines, and set a :guilabel:`Quantity` for the products."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:202
+msgid "Then, click the :guilabel:`Other Info` tab. Under the :guilabel:`Delivery` section, change the :guilabel:`Delivery Date` to a date after the expected date, and click the :guilabel:`green checkmark` icon to confirm the date. Finally, click :guilabel:`Confirm` to confirm the sales order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:206
+msgid "Next, click the :guilabel:`Delivery` smart button at the top of the sales order to see the warehouse receipt form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:209
+msgid "On the warehouse receipt form, click :guilabel:`Validate`, and then :guilabel:`Apply` in the accompanying pop-up window, to automatically process all :guilabel:`Done` quantities, and deliver the products to the customer."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:213
+msgid "If the products are delivered before the :guilabel:`Alert Date` set on the product form, then no alerts will be created."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:217
+msgid "To sell perishable products with expiration dates, the :guilabel:`Removal Strategy` for the :guilabel:`Location` the products are stored in must be set to :abbr:`FEFO (First Expiry, First Out)`. If there is not enough stock of perishable products in one lot, Odoo will automatically take the remaining quantity required from a second lot with the next-soonest expiration date. Removal strategies can also be set on :guilabel:`Product Categories`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:224
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:209
+msgid ":doc:`/applications/inventory_and_mrp/inventory/routes/strategies/removal`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:227
+msgid "View expiration dates for lots & serial numbers"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:229
+msgid "To view (and/or group) all products with expiration dates by lot number, go to :menuselection:`Inventory app --> Products --> Lots/Serial Numbers`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:232
+msgid "Once there, remove any default search filters from the :guilabel:`Search...` bar. Then, click :guilabel:`Group By`, choose :guilabel:`Add Custom Group`, and select the :guilabel:`Expiration Date` parameter from the drop-down menu. Finally, click :guilabel:`Apply` to apply the filter."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:236
+msgid "Doing so breaks down all perishable products, their expiration dates, and the assigned lot number."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:-1
+msgid "Group by expiration dates on lots and serial numbers page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:243
+msgid "Expiration alerts"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:245
+msgid "To see expiration alerts, go to :menuselection:`Inventory app --> Products --> Lots/Serial Numbers`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:247
+msgid "Then, click into a :guilabel:`Lot/Serial Number` with perishable products. Doing so reveals the serial number detail form. On the serial number detail form, click the :guilabel:`Dates` tab to see all expiration information related to the products."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:251
+msgid "To edit the form, click :guilabel:`Edit` in the upper-left corner of the form, then change the :guilabel:`Expiration Date` to today's date (or earlier), and click :guilabel:`Save` to save changes."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:255
+msgid "After saving, the lot number form displays a red :guilabel:`Expiration Alert` at the top of the form to indicate that the products in this lot are either expired or expiring soon. From here, click back to the :guilabel:`Lots/Serial Numbers` page (via the breadcrumbs)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:259
+msgid "To see the new expiration alert, or any expiration alerts for products that are expired (or will expire soon), remove all of the search filters from the :guilabel:`Search...` bar on the :guilabel:`Lots/Serial Numbers` dashboard."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:263
+msgid "Then, click :guilabel:`Filters`, and choose :guilabel:`Expiration Alerts`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:-1
+msgid "Expiration alert for product past the expiration date."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:3
@@ -712,10 +952,6 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:14
 msgid "Lots are useful for products that are manufactured or received in large quantities (such as clothes or food), and can be used to trace a product back to a group. This is especially useful when managing product recalls or expiration dates."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:19
-msgid ":doc:`/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:22
@@ -920,10 +1156,6 @@ msgstr ""
 msgid "The lot automatically chosen for delivery orders varies, depending on the selected removal strategy (:abbr:`FIFO (First In, First Out)`, :abbr:`LIFO (Last In, First Out)`, or :abbr:`FEFO (First Expiry, First Out)`). It will also depend on the quantity ordered, and if there is enough quantity in one lot to fulfill the order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:209
-msgid ":doc:`/applications/inventory_and_mrp/inventory/routes/strategies/removal`"
-msgstr ""
-
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:211
 msgid "Then, click :guilabel:`Add a line`, select an additional (different) :guilabel:`Lot/Serial Number`, apply the rest of the :guilabel:`Done` quantities, and click :guilabel:`Confirm` to close the pop-up. Lastly, click the :guilabel:`Validate` button to deliver the products."
 msgstr ""
@@ -1019,10 +1251,6 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:12
 msgid "The goal of assigning serial numbers to individual products is to make sure that every item's history is identifiable when it travels through the supply chain. This can be especially useful for manufacturers that provide after-sales services to products that they sell and deliver."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:17
-msgid ":doc:`/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:22
@@ -1935,142 +2163,514 @@ msgstr ""
 msgid "Products"
 msgstr ""
 
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:3
+msgid "Replenish on order (MTO)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:9
+msgid "*Replenish on order*, also known as *MTO* (make to order), is a replenishment strategy that creates a draft order for a product every time a sales order is created for it. For products that are purchased from a vendor, a request for quotation (RFQ) is created, while a sales order for a product manufactured in-house triggers the creation of a manufacturing order. The creation of a |RFQ| or manufacturing order occurs every time a sales order is created, regardless of the current stock level of the product being ordered."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:17
+msgid "Unarchive the Replenish on Order (MTO) route"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:19
+msgid "By default, Odoo sets the |MTO| route as *archived*. This is because |MTO| is a somewhat niche workflow that is only used by certain companies. However, it is easy to unarchive the route in just a few simple steps."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:23
+msgid "To do so, begin by navigating to :menuselection:`Inventory --> Configuration --> Routes`. On the :guilabel:`Routes` page, click the :guilabel:`Filters` button and select the :guilabel:`Archived` option. This shows all routes that are currently archived."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:-1
+msgid "The archived filter on the Routes page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:31
+msgid "Enable the checkbox next to :guilabel:`Replenish on Order (MTO)`, then click the :guilabel:`Action` button to reveal a drop-down menu. From the drop-down menu, select :guilabel:`Unarchive`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:-1
+msgid "The unarchive action on the Routes page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:38
+msgid "Finally, remove the :guilabel:`Archived` filter from the :guilabel:`Search...` bar. The :guilabel:`Routes` page will now show all available routes, including :guilabel:`Replenish on Order (MTO)`, which is now selectable on the inventory tab of each product page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:-1
+msgid "The MTO route appears on the Routes page after unarchiving it."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:47
+msgid "Configure a product to use the MTO route"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:49
+msgid "With the |MTO| route unarchived, products can now be properly configured to use replenish on order. To do so, begin by going to :menuselection:`Inventory --> Products --> Products`, then select an existing product, or click :guilabel:`Create` to configure a new one."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:53
+msgid "On the product page, select the :guilabel:`Inventory` tab and enable the :guilabel:`Replenish on Order (MTO)` route in the :guilabel:`Routes` section, along with one other route."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:57
+msgid "The :guilabel:`Replenish on Order (MTO)` route **does not** work unless another route is selected as well. This is because Odoo needs to know how to replenish the product when an order is placed for it (buy it, manufacture it, etc.)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:-1
+msgid "Select the MTO route and a second route on the Inventory tab."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:65
+msgid "If the product is purchased from a vendor to fulfill sales orders, enable the :guilabel:`Can be Purchased` checkbox under the product name. Doing so makes the :guilabel:`Purchase` tab appear alongside the other settings tabs below."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:69
+msgid "Select the :guilabel:`Purchase` tab and specify a :guilabel:`Vendor` and the :guilabel:`Price` they sell the product for."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:-1
+msgid "Enable \"Can be Purchased\" and specify a vendor."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:76
+msgid "If the product is manufactured, make sure that it has a bill of materials (BOM) configured for it. To do so, click the :guilabel:`Bill of Materials` smart button at the top of the screen, then click :guilabel:`Create` on the :guilabel:`Bill of Materials` page to configure a new |BOM| for the product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:81
+msgid "On the blank |BOM| form, add the components used to manufacture the product on the :guilabel:`Components` tab, along with the operations required for the manufacturing workflow on the :guilabel:`Operations` tab."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:85
+msgid "Finally, click :guilabel:`Save` to save the |BOM|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:88
+msgid "Fulfill a sales order using the MTO route"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:90
+msgid "After configuring a product to use the |MTO| route, a replenishment order is created for it every time a sales order including the product is confirmed. The type of order created depends on the second route selected in addition to |MTO|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:94
+msgid "For example, if *Buy* was the second route selected, then a purchase order is created upon confirmation of a sales order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:98
+msgid "When the |MTO| route is enabled for a product, a replenishment order is always created upon confirmation of a sales order. This is the case even if there is enough stock of the product on-hand to fulfill the sales order, without buying or manufacturing additional units of it."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:102
+msgid "While the |MTO| route can be used in unison with a variety of other routes, the *Buy* route is used as the example for this workflow. Begin by navigating to the :menuselection:`Sales` app, then click :guilabel:`Create`, which opens a blank quotation form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:106
+msgid "On the blank quotation form, add a :guilabel:`Customer`, then click :guilabel:`Add a product` under the :guilabel:`Order Lines` tab, and enter a product that has been configured to use the *MTO* and *Buy* routes. Click :guilabel:`Confirm` and the quotation is turned into a sales order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:110
+msgid "A :guilabel:`Purchase` smart button now appears in the top-right corner of the sales order. Clicking it opens the |RFQ| associated with the sales order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:113
+msgid "Click :guilabel:`Confirm Order` to confirm the |RFQ|, and turn it into a purchase order. A green :guilabel:`Receive Products` button now appears at the top of the purchase order. Once the products are received, click :guilabel:`Receive Products` to register them into inventory."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:117
+msgid "Return to the sales order by clicking the :guilabel:`SO` breadcrumb, or by navigating to :menuselection:`Sales --> Orders --> Orders`, and selecting the sales order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:120
+msgid "Finally, click the :guilabel:`Delivery` smart button in the top-right of the order to be taken to the delivery order. Once the products have been shipped to the customer, click :guilabel:`Validate` to confirm the delivery."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:3
+msgid "Reordering rules"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:5
+msgid "Reordering rules are used to keep forecasted stock levels above a certain threshold without exceeding a specified upper limit. This is accomplished by specifying a minimum quantity that stock should not fall below and a maximum quantity that stock should not exceed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:9
+msgid "Reordering rules can be configured for each product based on the route used to replenish it. If a product uses the *Buy* route, then a Request for Quotation (RFQ) is created when the reordering rule is triggered. If a product uses the *Manufacture* route, then a Manufacturing Order (MO) is created instead. This is the case regardless of the selected replenishment route."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:15
+msgid "Configure products for reordering rules"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:17
+msgid "In order to use reordering rules for a product, it must first be correctly configured. Begin by navigating to :guilabel:`Inventory --> Products --> Products`, then select an existing product, or create a new one by clicking :guilabel:`Create`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:21
+msgid "First, on the :guilabel:`General Information` tab, make sure that the :guilabel:`Product Type` is set to :guilabel:`Storable Product`. This is necessary because Odoo only tracks stock quantities for storable products, and this number is used to trigger reordering rules."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:-1
+msgid "Set the Product Type as Storable."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:29
+msgid "Next, click on the :guilabel:`Inventory` tab and select one or more routes from the :guilabel:`Routes` section. Doing so tells Odoo which route to use to replenish the product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:-1
+msgid "Select one or more routes on the Inventory tab."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:36
+msgid "If the product is reordered using the :guilabel:`Buy` route, confirm that the :guilabel:`Can be Purchased` checkbox is enabled under the product name. This makes the :guilabel:`Purchase` tab appear. Click on the :guilabel:`Purchase` tab, and specify at least one vendor, and the price that they sell the product for, so that Odoo knows which company the product should be purchased from."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:-1
+msgid "Specify a vendor and price on the Purchase tab."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:45
+msgid "If the product is replenished using the :guilabel:`Manufacture` route, it needs to have at least one Bill of Materials (BoM) associated with it. This is necessary because Odoo only creates manufacturing orders for products with a :abbr:`BoM (Bill of Materials)`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:49
+msgid "If a :abbr:`BoM (Bill of Materials)` does not already exist for the product, select the :guilabel:`Bill of Materials` smart button at the top of the product form, then click :guilabel:`Create` to configure a new :abbr:`BoM (Bill of Materials)`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:-1
+msgid "The Bill of Materials smart button on a product form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:58
+msgid "Create new reordering rules"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:60
+msgid "To create a new reordering rule, navigate to :menuselection:`Inventory --> Configuration --> Reordering Rules`, then click :guilabel:`Create`, and fill out the new line as follows:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:63
+msgid ":guilabel:`Product`: The product that is replenished by the rule."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:64
+msgid ":guilabel:`Location`: The location where the product is stored."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:65
+msgid ":guilabel:`Min Quantity`: The minimum quantity that can be forecasted without the rule being triggered. When forecasted stock falls below this number, a replenishment order for the product is created."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:68
+msgid ":guilabel:`Max Quantity`: The maximum quantity that stock is replenished up to."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:69
+msgid ":guilabel:`Multiple Quantity`: Specify if the product should be replenished in batches of a certain quantity (e.g., a product could be replenished in batches of 20)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:71
+msgid ":guilabel:`UoM`: The unit of measure used for reordering the product. This value can simply be `Units` or a specific unit of measurement for weight, length, etc."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:-1
+msgid "The form for creating a new reordering rule."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:79
+msgid "Reordering rules can also be created from each product form. To do so, navigate to :menuselection:`Inventory --> Products --> Products`, then select a product. Click on :menuselection:`Reordering Rules --> Create`, then fill out the new line as detailed above."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:83
+msgid "Once a reordering rule has been created for a product, if its forecasted quantity is below the rule's minimum quantity when the scheduler runs, a replenishment order for the product is automatically generated. By default, the scheduler runs once each day."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:88
+msgid "To manually trigger a reordering rule before the scheduler runs, select :menuselection:`Inventory --> Operations --> Run Scheduler`. Then, select the green :guilabel:`Run Scheduler` button on the pop-up that appears. Be aware that this also triggers any other scheduled actions."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:92
+msgid "If the :guilabel:`Buy` route is selected, then an :abbr:`RFQ (Request for Quotation)` is generated. To view and manage :abbr:`RFQs (Requests for Quotation)`, navigate to :menuselection:`Purchase --> Orders --> Requests for Quotation`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:96
+msgid "If the :guilabel:`Manufacture` route is selected, then an :abbr:`MO (Manufacturing Order)` is generated. To view and manage :abbr:`MOs (Manufacturing Orders)`, navigate to :menuselection:`Manufacturing --> Operations --> Manufacturing Orders`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:101
+msgid "Set a preferred route for reordering"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:103
+msgid "Odoo allows for multiple routes to be selected under the :guilabel:`Inventory` tab on each product form. For instance, it is possible to select both :guilabel:`Buy` and :guilabel:`Manufacture`, thus enabling the functionality of both routes."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:107
+msgid "Odoo also enables users to set a preferred route for a product's reordering rule. This is the route that the rule defaults to if multiple are selected. To select a preferred route, begin by navigating to :menuselection:`Inventory --> Configuration --> Reordering Rules`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:111
+msgid "By default, the :guilabel:`Preferred Route` column is hidden on the :guilabel:`Reordering Rules` page. Enable it by selecting the :guilabel:`⋮ (three-dot)` option button on the right side of the page and checking the :guilabel:`Preferred Route` checkbox. Doing so reveals the :guilabel:`Preferred Route` column."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:116
+msgid "Click inside of the column on the row of a reordering rule and a drop-down menu shows all available routes for that rule. Select one to set it as the preferred route."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:-1
+msgid "Select a preferred route from the drop-down."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:124
+msgid "If multiple routes are enabled for a product but no preferred route is set for its reordering rule, the product is reordered using the selected route that is listed first on the :guilabel:`Inventory` tab of the product form."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:3
-msgid "Select a replenishment strategy"
+msgid "Selecting a replenishment strategy"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:5
-msgid "In Odoo, there are two strategies for replenishing inventory: **Reordering Rules** and the **Make to Order (MTO)** route. Although these strategies differ slightly, they both have similar consequences: triggering the automatic creation of a purchase or manufacturing order. The choice of which strategy to use depends on the business's manufacturing and delivery processes."
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:10
+msgid "In Odoo, there are two strategies for automatically replenishing inventory: *reordering rules* and the *make to order (MTO)* route. Although these strategies differ slightly, they both have similar consequences: triggering the automatic creation of a |PO| or |MO|. The choice of which strategy to use depends on the business's manufacturing and delivery processes."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:11
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:16
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouses_locations.rst:6
 msgid "Terminology"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:14
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:19
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:54
 msgid "Replenishment report and reordering rules"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:16
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:21
 msgid "The replenishment report is a list of all products that have a negative forecast quantity."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:18
-msgid "Reordering rules are used to ensure that there's always a minimum amount of a product in stock in order to manufacture products and/or fulfill sales orders. When the stock level of a product reaches its minimum, Odoo automatically generates a purchase order with the quantity needed to reach the maximum stock level."
-msgstr ""
-
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:23
-msgid "Reordering rules can be created and managed in the replenishment report or from the product form."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:26
-msgid "Make to Order"
+msgid "*Reordering rules* are used to ensure there's always a minimum amount of a product in-stock, in order to manufacture products and/or fulfill sales orders. When the stock level of a product reaches its minimum, Odoo automatically generates a purchase order with the quantity needed to reach the maximum stock level."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:28
-msgid "Make to Order (MTO) is a procurement route that creates a draft purchase order or manufacturing order each time a sales order is confirmed, *regardless of the current stock level*."
+msgid "Reordering rules can be created and managed in the replenishment report, or from the product form."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:31
-msgid "Unlike products replenished using reordering rules, Odoo automatically links the sales order to the purchase order (PO) or manufacturing order (MO) generated by the MTO route. Another difference between reordering rules and MTO is with MTO, Odoo generates a draft :abbr:`PO (Purchase Order)` or :abbr:`MO (Manufacturing Order)` immediately after the sales order is confirmed. With reordering rules, Odoo generates a draft :abbr:`PO (Purchase Order)` or :abbr:`MO (Manufacturing Order)` when the product's forecasted stock falls below the set minimum quantity. In addition, Odoo will automatically add quantities to the :abbr:`PO (Purchase Order)`/:abbr:`MO (Manufacturing Order)` as the forecast changes, as long as the :abbr:`PO (Purchase Order)`/:abbr:`MO (Manufacturing Order)` is not confirmed."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:41
-msgid "The MTO route is the best replenishment strategy for products that are customized and should be used for this purpose only."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:50
-msgid "To access the replenishment report, go to :menuselection:`Inventory --> Operations --> Replenishment`. By default, the replenishment report shows every product that needs to be manually reordered. If there is no specific rule for a product, Odoo assumes that the :guilabel:`Minimum Quantity` and :guilabel:`Maximum Quantity` stock are both `0.00`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:-1
-msgid "The replenishment report shows products that need to be reordered manually."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:60
-msgid "For products that don't have a set reordering rule, Odoo calculates the forecast as sales orders, deliveries, and receipts are confirmed. For products that have a set reordering rule, Odoo calculates the forecast normally, but also takes into account the purchase/manufacturing lead time and security lead time."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:65
-msgid "Before creating a new reordering rule, make sure the product has a vendor or a bill of materials configured on the product form. Also, make sure the :guilabel:`Product Type` is set to `Storable Product` on the product form. By definition, a consumable product does not have its inventory levels tracked, so Odoo can not account for a consumable product in the stock valuation."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:70
-msgid "To create a new reordering rule from the replenishment report, go to :menuselection:`Inventory --> Operations --> Replenishment`, click :guilabel:`Create`, and set the :guilabel:`Product`. If desired, set a :guilabel:`Min Quantity` and a :guilabel:`Max Quantity`. Finally, click :guilabel:`Save`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:75
-msgid "To create a new reordering rule from the product form, go to :menuselection:`Inventory --> Products --> Products`, select a product to open its product form, click the :guilabel:`Reordering Rules` smart button, and click :guilabel:`Create`. Then, fill out the fields and save the new reordering rule."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:80
-msgid "By default, the quantity in the :guilabel:`To Order` field is the quantity required to reach the set :guilabel:`Max Quantity`. However, the :guilabel:`To Order` quantity can be adjusted by clicking on the field, changing the value, and clicking :guilabel:`Save`. To replenish a product manually, click :guilabel:`Order Once`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:85
-msgid "To automate replenishment, click :guilabel:`Automate Orders`. When this button is clicked, Odoo will automatically generate a draft :abbr:`PO (Purchase Order)`/:abbr:`MO (Manufacturing Order)` every time the forecasted stock level falls below the set :guilabel:`Min Quantity` of the reordering rule."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:91
-msgid "A reordering rule can be temporarily deactivated for a given period by using the :guilabel:`Snooze` button."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:-1
-msgid "Snooze feature to temporarily deactivate reordering rules."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:98
-msgid "A :abbr:`PO (Purchase Order)` or :abbr:`MO (Manufacturing Order)` created by a manual replenishment will have `Replenishment Report` as the source document. A :abbr:`PO (Purchase Order)` or :abbr:`MO (Manufacturing Order)` created by an automated reordering rule will have the sales order(s) reference number(s) that triggered the rule as the source document."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:-1
-msgid "Look at the source panel showing where RFQ/MFG orders originated from."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:108
 msgid "Make to order"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:110
-msgid "Since the Make to Order (MTO) route is only recommended for customized products, the route is hidden by default."
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:33
+msgid "*Make to order (MTO)* is a procurement route that creates a draft purchase order (or manufacturing order) each time a sales order is confirmed, **regardless of the current stock level**."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:113
-msgid "To activate the Make to Order (MTO) route in Odoo:"
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:36
+msgid "Unlike products replenished using reordering rules, Odoo automatically links the sales order to the |PO| or |MO| generated by the |MTO| route."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:115
-msgid "Go to :menuselection:`Inventory --> Configuration --> Settings --> Warehouse`."
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:39
+msgid "Another difference between reordering rules and |MTO| is, with |MTO|, Odoo generates a draft |PO| or |MO| immediately after the |SO| is confirmed. With reordering rules, Odoo generates a draft |PO| or |MO| when the product's forecasted stock falls below the set minimum quantity."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:116
-msgid "Activate :guilabel:`Multi-Step Routes` setting and click :guilabel:`Save`."
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:43
+msgid "In addition, Odoo automatically adds quantities to the |PO| or |MO| as the forecast changes, so long as the |PO| or |MO| is not confirmed."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:117
-msgid "Go to :menuselection:`Inventory --> Configuration --> Routes`."
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:46
+msgid "The |MTO| route is the best replenishment strategy for products that are customized, and/or for products that have no stock kept on-hand."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:118
-msgid "Click on :menuselection:`Filters --> Archived` to show archived routes."
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:56
+msgid "To access the replenishment report, go to :menuselection:`Inventory app --> Operations --> Replenishment.`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:119
-msgid "Select the checkbox next to :guilabel:`Replenish on Order (MTO)`, and click on :menuselection:`Action --> Unarchive`."
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:59
+msgid "By default, the replenishment report dashboard shows every product that needs to be manually reordered. If there is no specific rule for a product, Odoo assumes the :guilabel:`Min Quantity` and :guilabel:`Max Quantity` stock are both `0.00`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:123
-msgid "Activating the :guilabel:`Multi-Step Routes` setting also activates :guilabel:`Storage Locations` setting. If these features aren't applicable to the warehouse, disable these settings after unarchiving the MTO route."
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:64
+msgid "For products that don't have a set reordering rule, Odoo calculates the forecast based on confirmed sales orders, deliveries, and receipts. For products that have a set reordering rule, Odoo calculates the forecast normally, but also takes into account the purchase/manufacturing lead time and security lead time."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:127
-msgid "To set a product's procurement route to MTO, go to :menuselection:`Inventory --> Products --> Products`, click on a product to open the product form, and click :guilabel:`Edit`. Then, click on the :guilabel:`Inventory` tab and in the :guilabel:`Routes` options, select :guilabel:`Replenish on Order (MTO)`. For products purchased directly from a vendor, make sure the :guilabel:`Buy` route is selected in addition to the MTO route and a vendor is configured in the :guilabel:`Purchase` tab. For products manufactured in-house, make sure the :guilabel:`Manufacture` route is selected in addition to the MTO route and a bill of materials is configured for the product. Finally, click :guilabel:`Save`."
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:70
+msgid "Before creating a new reordering rule, make sure the product has a *vendor* or a *bill of materials* configured on the product form. To check this, go to :menuselection:`Inventory app --> Products --> Products`, and select the product to open its product form. The vendor, if configured, is listed in the :guilabel:`Purchase` tab, and the bill on materials, if configured, is found in the :guilabel:`Bill of Materials` smart button at the top of the form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:76
+msgid "The :guilabel:`Product Type`, located in the :guilabel:`General Information` tab on the product form, **must** be set to :guilabel:`Storable Product`. By definition, a consumable product does not have its inventory levels tracked, so Odoo cannot account for a consumable product in the replenishment report."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:-1
-msgid "Enable the Replenish on Order (MTO) route on the product settings."
+msgid "Replenishment report listing all items needing to be purchased to meet current needs."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:85
+msgid "To create a new reordering rule from the replenishment report, go to :menuselection:`Inventory app --> Operations --> Replenishment`, click :guilabel:`Create`, and select the desired product from the drop-down menu in the :guilabel:`Product` column. If necessary, a :guilabel:`Min Quantity` and a :guilabel:`Max Quantity` can be configured in the corresponding columns on the :guilabel:`Replenishment` report page, as well."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:91
+msgid "To create a new reordering rule from the product form, go to :menuselection:`Inventory app --> Products --> Products`, and select a product to open its product form. Click the :guilabel:`Reordering Rules` smart button, click :guilabel:`Create`, and fill out the fields."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:96
+msgid "Replenishment report fields"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:98
+msgid "The following fields are on the :guilabel:`Replenishment` report. If any of these fields are not visible, click the :guilabel:`⋮ (additional options)` icon on the far right side of the report, then click the checkbox next to a field to make it visible."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:102
+msgid ":guilabel:`Product`: the product that requires a replenishment."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:103
+msgid ":guilabel:`Location`: the specific location where the product is stored."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:104
+msgid ":guilabel:`Warehouse`: the warehouse where the product is stored."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:105
+msgid ":guilabel:`On Hand`: the amount of product currently available."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:106
+msgid ":guilabel:`Forecast`: the amount of product available after all current orders (sales, manufacturing, purchase, etc.) are taken into account."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:108
+msgid ":guilabel:`Preferred Route`: how the product is procured, either :guilabel:`Buy`, :guilabel:`Manufactured`, :guilabel:`Dropship`, etc."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:110
+msgid ":guilabel:`Vendor`: the company from which the product is acquired."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:111
+msgid ":guilabel:`Bill of Materials`: the bill of materials for the product (if one is configured)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:112
+msgid ":guilabel:`Trigger`: how the replenishment is created, either :guilabel:`Auto` (automatically, once the :guilabel:`On Hand` quantity goes below the :guilabel:`Min Quantity`) or :guilabel:`Manual` (only when the replenishment is requested)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:115
+msgid ":guilabel:`Procurement Group`: the reference number for how the product is being acquired, such as a sales order, purchase order, or manufacturing order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:117
+msgid ":guilabel:`Min Quantity`: the minimum amount of product that should be available. When inventory levels goes below this number, the replenishment is triggered."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:119
+msgid ":guilabel:`Max Quantity`: the amount of product that should be available after replenishing the product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:121
+msgid ":guilabel:`Multiple Quantity`: if the product should be ordered in specific quantities, enter the number that should be ordered. For example, if the :guilabel:`Multiple Quantity` is set to `5`, and only 3 are needed, 5 products are replenished."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:124
+msgid ":guilabel:`To Order`: the amount of product that is currently needed, and will be ordered, if the :guilabel:`Order Once` or :guilabel:`Automate Orders` button is clicked."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:126
+msgid ":guilabel:`UoM`: the unit of measure used to acquire the product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:127
+msgid ":guilabel:`Company`: the company for which the product is acquired."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:129
+msgid "By default, the quantity in the :guilabel:`To Order` field is the quantity required to reach the set :guilabel:`Max Quantity`. However, the :guilabel:`To Order` quantity can be adjusted by clicking on the field and changing the value. To replenish a product manually, click :guilabel:`Order Once`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:133
+msgid "To automate a replenishment from the :guilabel:`Replenishment` page, click :guilabel:`Automate Orders` on the right-side of the line, represented by a :guilabel:`🔄 (circular arrow)` icon."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:136
+msgid "When this button is clicked, Odoo will automatically generate a draft |PO|/|MO| every time the forecasted stock level falls below the set :guilabel:`Min Quantity` of the reordering rule."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:139
+msgid "On the :guilabel:`Replenishment` page, a reordering rule or manual replenishment can be temporarily deactivated for a given period, by clicking the :guilabel:`🔕 (snooze)` icon on the far-right of the line."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:-1
+msgid "Snooze options to turn off notifications for reordering for a period of time."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:147
+msgid "A |PO| or |MO| created by a manual replenishment has a :guilabel:`Replenishment Report` as the source document. A |PO| or |MO| created by an automated reordering rule has the |SO| reference number(s) that triggered the rule as the source document."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:-1
+msgid "Quote request list shows which quotes are directly from the replenishment report."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:156
+msgid "Make to order (MTO) route"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:158
+msgid "Since the |MTO| route is recommended for customized products, the route is hidden by default."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:167
+msgid "To activate the |MTO| route in Odoo:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:161
+msgid "Go to :menuselection:`Inventory app --> Configuration  --> Settings`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:162
+msgid "Activate the :guilabel:`Multi-Step Routes` setting, located under the :guilabel:`Warehouse` section, and click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:164
+msgid "Then, go to :menuselection:`Inventory app --> Configuration  --> Routes`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:165
+msgid "Click on :menuselection:`Filters --> Archived` to show archived routes."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:166
+msgid "Select the checkbox next to :guilabel:`Replenish on Order (MTO)`, and click on :menuselection:`Action --> Unarchive`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:170
+msgid "Activating the :guilabel:`Multi-Step Routes` setting also activates :guilabel:`Storage Locations`. If these features aren't applicable to the warehouse, disable these settings after unarchiving the |MTO| route."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:174
+msgid "To set a product's procurement route to |MTO|, go to :menuselection:`Inventory app --> Products --> Products`, and click on the desired product to open its product form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:177
+msgid "Then, click the :guilabel:`Inventory` tab, and in the :guilabel:`Routes` section of options, select :guilabel:`Replenish on Order (MTO)`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:180
+msgid "For products purchased directly from a vendor, make sure the :guilabel:`Buy` route is selected, in addition to the :guilabel:`Replenish on Order (MTO)` route. Also, make sure a vendor is configured in the :guilabel:`Purchase` tab of the product form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:184
+msgid "For products manufactured in-house, make sure the :guilabel:`Manufacture` route is selected, in addition to the :guilabel:`Replenish on Order (MTO)` route. Also, make sure a bill of materials is configured for the product, which is accessible via the :guilabel:`Bill of Materials` smart button on the product form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:190
+msgid "The |MTO| route cannot be selected alone. |MTO| **only** works if the :guilabel:`Manufacture` or :guilabel:`Buy` route is also selected."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:-1
+msgid "Replenish on Order selected on the product form."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/uom.rst:3
@@ -2482,127 +3082,159 @@ msgid "In Odoo, this process can be conducted manually— by warehouse employees
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:13
-msgid ":ref:`Inventory valuation configuration <inventory/inventory_valuation_config>`"
+msgid "Automatic inventory valuation"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:16
-msgid "Understand the basics of inventory valuation"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:18
-msgid "In order to understand how moving products in and out of stock affects the company's overall value, consider the following product and stock moves scenario below."
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:15
+msgid "To use Odoo to automatically generate a trail of inventory valuation entries, first navigate to the :menuselection:`Product Categories` list by going to :menuselection:`Inventory app --> Configuration --> Product Categories` and select the desired product category. On the form, set the :guilabel:`Inventory Valuation` as :guilabel:`Automated` and the :guilabel:`Costing Method` to any of the three options."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:22
-msgid "Receive a product"
+msgid ":ref:`Set up inventory valuation <inventory/management/inventory_valuation_config>`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:24
-msgid "For example, consider an physical product, a simple *table*, which is categorized as `Office Furniture` in the product form's :guilabel:`Product Category` field."
+msgid "In order to understand how moving products in and out of stock affects the company's overall value, consider the following product and stock moves scenario below."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:27
-msgid "Navigate to the the product category itself by going to :menuselection:`Inventory app --> Configuration --> Product Categories`, and on the form, set the :guilabel:`Costing Method` as `First In First Out (FIFO)` and the :guilabel:`Inventory Valuation` field as `Automated`."
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:28
+msgid "Receive a product"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:32
-msgid "Alternatively access the :guilabel:`Product Categories` dashboard by clicking on the :guilabel:`internal link` arrow on the individual product's form, by hovering over the :guilabel:`Product Category` field."
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:30
+msgid "To track the value of incoming products, such as a simple *table*, configure the product category on the the product itself. To get there, navigate to :menuselection:`Inventory app --> Products --> Products` and click the desired product. On the product form, click the :guilabel:`➡️ (right arrow)` icon beside the :guilabel:`Product Category` field, which opens an internal link to edit the product category. Next, set the :guilabel:`Costing Method` as :guilabel:`First In First Out (FIFO)` and :guilabel:`Inventory Valuation` as :guilabel:`Automated`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:36
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:38
+msgid "Alternatively access the :guilabel:`Product Categories` dashboard by navigating to :menuselection:`Inventory app --> Configuration --> Product Categories` and select the desired product category."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:42
 msgid "Next, assume 10 tables are purchased at a price of $10.00, each. The :abbr:`PO (Purchase Order)` for those tables will show the subtotal of the purchase as $100, plus any additional costs or taxes."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:-1
-msgid "Purchase order with 10 tables products valued at $10 each."
+msgid "Purchase order with 10 tables products valued at $10.00 each."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:43
-msgid "After selecting :guilabel:`Validate` on the :abbr:`PO (Purchase Order)`, use the :guilabel:`Valuation` smart button to view how the value of inventory was impacted."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:-1
-msgid "Valuation smart button on a receipt."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:51
-msgid ":ref:`Developer mode <developer-mode>` must be turned on to see the *Valuation* smart button."
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:49
+msgid "After selecting :guilabel:`Validate` on the :abbr:`PO (Purchase Order)`, the :guilabel:`Valuation` smart button is enabled. Clicking on this button displays a report showing how the inventory valuation for the table was affected by this purchase."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:54
-msgid "The :doc:`consignment </applications/inventory_and_mrp/inventory/management/misc/owned_stock>` feature allows ownership to items in stock. Thus, products owned by other companies are not accounted for in the host company's inventory valuation."
+msgid ":ref:`Developer mode <developer-mode>` **must** be turned on to see the :guilabel:`Valuation` smart button."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:58
-msgid "The :guilabel:`Stock Valuation` dashboard then displays valuation of all products in the shipment, along with their quantities and valuation. In the example of 10 tables being purchased, the :guilabel:`Total Value` column of the dashboard would display a calculated valuation of $100."
+msgid "The :doc:`consignment </applications/inventory_and_mrp/inventory/management/misc/owned_stock>` feature allows ownership to items in stock. Thus, products owned by other companies are not accounted for in the host company's inventory valuation."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:-1
-msgid "Stock valuation page depicting the products within a shipment."
+msgid "See Valuation smart button on a receipt, with Developer mode enabled."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:66
-msgid "In Odoo, automatic inventory valuation records are also recorded in the *Accounting* app. To access these accounting entries, navigate to :menuselection:`Accounting --> Journal Entries`, and look for inventory valuation entries with the `STJ` prefix in the :guilabel:`Journal` and :guilabel:`Number` columns, respectively."
+msgid "For a comprehensive dashboard that includes the inventory valuation of all product shipments, inventory adjustments, and warehouse operations, refer to the :ref:`stock valuation report <inventory/management/reporting/valuation-report>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:-1
-msgid "Accounting entry for the inventory valuation of 10 tables."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:76
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:71
 msgid "Deliver a product"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:78
-msgid "In the same logic, when a table is shipped to a customer and leaves the warehouse, the stock valuation decreases. The :guilabel:`Valuation` smart button on the :abbr:`DO (Delivery Order)`, likewise, displays the stock valuation record as it does on a :abbr:`PO (Purchase Order)`"
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:73
+msgid "In the same logic, when a table is shipped to a customer and leaves the warehouse, the stock valuation decreases. The :guilabel:`Valuation` smart button on the :abbr:`DO (Delivery Order)`, likewise, displays the stock valuation record as it does on a :abbr:`PO (Purchase Order)`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:-1
 msgid "Decreased stock valuation after a product is shipped."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:87
-msgid "The inventory valuation report"
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:84
+msgid "Inventory valuation report"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:89
-msgid "To view the current value of all products in the warehouse, go to :menuselection:`Inventory app --> Reporting --> Inventory Valuation`. The records in the table are organized by product, and selecting a product's drop-down menu displays detailed records with the :guilabel:`Date`, :guilabel:`Quantity`, and :guilabel:`Total Value` of the inventory."
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:86
+msgid "To view the current value of all products in the warehouse, first turn on :ref:`Developer mode <developer-mode>` and navigate to :menuselection:`Inventory app --> Reporting --> Valuation`. The :guilabel:`Stock Valuation` dashboard displays detailed records of products with the :guilabel:`Date`, :guilabel:`Quantity`, :guilabel:`Unit Value`, and :guilabel:`Total Value` of the inventory."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:93
+msgid ":ref:`Developer mode <developer-mode>` **must** be enabled to see the :guilabel:`Valuation` option under :guilabel:`Reporting`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:-1
 msgid "Inventory valuation report showing multiple products."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:99
-msgid "The :guilabel:`Inventory At Date` button, located in the top-left corner of the :guilabel:`Stock Valuation` dashboard, shows the inventory valuation of products available during a prior specified date."
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:100
+msgid "The :guilabel:`Valuation At Date` button, located in the top-left corner of the :guilabel:`Stock Valuation` page, reveals a pop-up window. In this pop-up, the inventory valuation of products available during a prior specified date can be seen and selected."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:104
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:105
+msgid "View a detailed record of a product's inventory value, stock move, and on-hand stock by selecting the teal :guilabel:`➡️ (right arrow)` button to the right of the :guilabel:`Reference` column value."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:110
 msgid "Update product unit price"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:106
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:112
 msgid "For any company: lead times, supply chain failures, and other risk factors can contribute to invisible costs. Although Odoo attempts to accurately represent the stock value, *manual valuation* serves as an additional tool to update the unit price of products."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:111
-msgid "Manual valuation is intended for products that can be purchased and received for a cost greater than 0, or have product categories set with :guilabel:`Costing Method` set as either `Average Cost (AVCO)` or `First In First Out (FIFO)`."
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:117
+msgid "Manual valuation is intended for products that can be purchased and received for a cost greater than 0, or have product categories set with :guilabel:`Costing Method` set as either :guilabel:`Average Cost (AVCO)` or :guilabel:`First In First Out (FIFO)`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:-1
 msgid "Add manual valuation of stock value to a product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:119
-msgid "Create manual valuation entries on the :guilabel:`Stock Valuation` dashboard by first navigating to :menuselection:`Inventory app --> Reporting --> Inventory Valuation`, and then click the little gray drop-down icon to the left of a product's name, to then reveal stock valuation line items below as well as a teal :guilabel:`+ (plus)` button on the right."
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:125
+msgid "Create manual valuation entries on the :guilabel:`Stock Valuation` dashboard by first navigating to :menuselection:`Inventory app --> Reporting --> Valuation`. Next, to enable the *product revaluation* feature, select :menuselection:`Group by --> Product` to organize all the records by product. Click on the gray :guilabel:`▶️ (drop-down triangle)` icon to reveal stock valuation line items below, as well as a teal :guilabel:`➕ (plus)` button on the right."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:124
-msgid "Click the teal :guilabel:`+ (plus)` button to open up the :guilabel:`Product Revaluation` form, where updates to the calculation of inventory valuation can be made, by increasing or decreasing the unit price of each product."
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:131
+msgid "Click the teal :guilabel:`+ (plus)` button to open up the :guilabel:`Product Revaluation` form. Here, the inventory valuation for a product can be recalculated, by increasing or decreasing the unit price of each product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:136
+msgid "The :guilabel:`▶️ (drop-down triangle)` and :guilabel:`➕ (plus)` buttons are only visible after grouping entries by product."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:-1
 msgid "Product revaluation form adding a value of $1.00 with the reason being inflation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:144
+msgid "Inventory valuation journal entries"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:146
+msgid "In Odoo, automatic inventory valuation records are also recorded in the :menuselection:`Accounting app --> Accounting --> Journal Entries` dashboard. On this comprehensive list of accounting entries, inventory valuation records are identified by checking values in the :guilabel:`Journal` column, or looking for the :guilabel:`Reference` column value which matches the warehouse operation reference (e.g. `WH/IN/00014` for receipts)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:152
+msgid "Clicking on an inventory valuation journal entry opens a *double-entry accounting* record. These records are generated by Odoo to track the change of value in inventory valuation as products are moved in and out of the warehouse."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:157
+msgid "To view the inventory valuation of 10 *tables*, costing $10.00 each, upon reception from the vendor, go to the :menuselection:`Journal Entries` page found in :menuselection:`Accounting app --> Accounting --> Journal Entries`. Here, click the journal line where the :guilabel:`Reference` column value matches the reference on the receipt, `WH/IN/00014`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:0
+msgid "Stock valuation page depicting the products within a shipment."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:166
+msgid "`Stock interim` is a holding account for money intended to pay vendors for the product. The `stock valuation` account stores the value of all on-hand stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:0
+msgid "Accounting entry for the inventory valuation of 10 tables."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:174
+msgid "`Odoo Tutorial: Inventory Valuation <https://www.odoo.com/slides/slide/2795/share>`_"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/shipments_deliveries.rst:6
@@ -5132,7 +5764,7 @@ msgid "In Odoo, there are a variety of different types of shipping labels that c
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/operation/label_type.rst:15
-msgid "In the :menuselection:`Inventory` module, go to :menuselection:`Configuration --> Delivery --> Shipping Methods.` Choose a delivery method and click :guilabel:`Edit`. For the following example, *FedEx International* will be used."
+msgid "In the :menuselection:`Inventory` module, go to :menuselection:`Configuration --> Delivery --> Shipping Methods.` Click on a delivery method to choose it. For the following example, *FedEx International* will be used."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/operation/label_type.rst:-1
@@ -5140,7 +5772,7 @@ msgid "Different shipping methods."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/operation/label_type.rst:23
-msgid "In the :guilabel:`Configuration` tab, under :guilabel:`Label Type`, choose one of the label types available. The availability will vary depending on the carrier. :guilabel:`Save` the changes."
+msgid "In the :guilabel:`Configuration` tab, under :guilabel:`Label Type`, choose one of the label types available. The availability varies depending on the carrier."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/operation/label_type.rst:-1
@@ -5269,6 +5901,11 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/operation/labels.rst:64
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/third_party_shipper.rst:86
 msgid "To check your information, go to the **Settings** application and click on **General Settings**. Click on the first link **Configure your company data**."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/operation/labels.rst:68
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/third_party_shipper.rst:90
+msgid "Product configuration"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/operation/labels.rst:70
@@ -6952,23 +7589,23 @@ msgstr ""
 msgid ":guilabel:`MTBF`, :guilabel:`MTTR`, and :guilabel:`Est. Next Failure` are all calculated automatically based on past failure data, if any exists."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:79
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:81
 msgid "Integrate IoT devices"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:81
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:83
 msgid "The :guilabel:`IoT Triggers` tab enables the integration of :abbr:`IoT (Internet of Things)` devices with a work center:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:84
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:86
 msgid ":guilabel:`Device`: specifies the IoT device to be triggered"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:85
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:87
 msgid ":guilabel:`Key`: the security key for the device"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:86
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:88
 msgid ":guilabel:`Action`: the IoT device action triggered"
 msgstr ""
 
@@ -6976,19 +7613,19 @@ msgstr ""
 msgid "The IoT Triggers tab of the work center form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:93
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:95
 msgid "Use case: configure an alternative work center"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:95
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:97
 msgid "When a work center is at capacity, it cannot accept any new work orders. Instead of waiting for the work center to become available, it is possible to specify an alternative work center where surplus work orders should be carried out."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:99
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:101
 msgid "Begin by creating a new work center. Configure the :guilabel:`Equipment` tab so that it has all of the same equipment as the main work center. This will ensure that the same tasks can be carried out at both work centers. Navigate to the main work center and include the new work center in the :guilabel:`Alternative Workcenters` selection field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:104
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:106
 msgid "Now, create a new manufacturing order that uses the main work center for one of its operations. The main work center will automatically be selected for the operation in the :guilabel:`Work Orders` tab. After confirming the manufacturing order, click the :guilabel:`Plan` button that appears at the top left of the form."
 msgstr ""
 
@@ -6996,7 +7633,7 @@ msgstr ""
 msgid "Click the plan button to automatically select an available work center."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:113
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:115
 msgid "If the main work center is at capacity, the work center selected for the operation will be automatically changed to the alternative work center."
 msgstr ""
 
@@ -7004,28 +7641,144 @@ msgstr ""
 msgid "The alternative work center is automatically selected."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:121
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:123
 msgid "Monitor work center performance"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:123
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:125
 msgid "Performance for an individual work center can be viewed by selecting :menuselection:`Configuration --> Work Centers`, and clicking on a work center. A variety of metrics showing work center performance can be viewed at the top right of the form:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:127
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:129
 msgid ":guilabel:`OEE`: overall effective efficiency, the percentage of time that the work center has been fully productive"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:129
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:131
 msgid ":guilabel:`Lost`: the amount of time lost due to work stoppages"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:130
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:132
 msgid ":guilabel:`Load`: the amount of time it will take to complete the current workload"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:131
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:133
 msgid ":guilabel:`Performance`: the real duration of work time, shown as a percentage of the expected duration"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:3
+msgid "Make work centers unavailable using Time Off"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:5
+msgid "In Odoo, *work centers* are used to carry out manufacturing operations at specific locations. However, if a work center cannot be used for some reason, work orders begin to pile up at the work center until it is operational again."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:9
+msgid "As a result, it is necessary to make the work center unavailable in Odoo so that the platform routes new work orders to alternative work centers that are operational. Using Odoo *Time Off*, it is possible to designate a work center as being unavailable for a set period of time. Doing so ensures that manufacturing operations can continue until the impacted work center is available again."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:17
+msgid "Before a work center can be designated as unavailable, the Odoo platform must be properly configured. First, it is necessary to enable :ref:`developer mode <developer-mode>`. This allows the :guilabel:`Time Off` smart button to appear on each work center's :guilabel:`Working Hours` pop-up window."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:22
+msgid "Enable developer mode by going to :menuselection:`Settings`, scrolling to the bottom of the page, and clicking :guilabel:`Activate the developer mode` under the :guilabel:`Developer Tools` heading."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:-1
+msgid "The \"Activate the developer mode\" button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:29
+msgid "Next, install the *Time Off* app. This is the app used for assigning time off to all resources within Odoo, including employees and work centers. Navigate to :menuselection:`Apps`, then type `Time Off` in the :guilabel:`Search...` bar. The card for the :guilabel:`Time Off` module should be the only one that appears on the page. Click the green :guilabel:`Install` button on the card to install the app."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:-1
+msgid "The Time Off module installation card."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:39
+msgid "The last step is to properly configure work centers. For this workflow, it is necessary to have at least two work centers: one that is made unavailable and a second that receives the work orders that the other cannot accept. If no second work center is configured, Odoo cannot route work orders away from the unavailable work center and they will pile up in its queue."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:44
+msgid "To create a work center, navigate to :menuselection:`Manufacturing --> Configuration --> Work Centers --> Create`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:47
+msgid "Make sure that both work centers have the same equipment listed under the :guilabel:`Equipment` tab. This ensures that operations carried out at one work center can also be performed at the other."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:-1
+msgid "The equipment tab on a work center form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:54
+msgid "For the work center that will be made unavailable, select the second work center on the :guilabel:`Alternative Workcenters` drop-down menu. Now, Odoo knows to send work orders to the second work center when the first is unavailable for any reason."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:-1
+msgid "A work center form configured with an alternative work center."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:63
+msgid "Add time off for a work center"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:65
+msgid "With configuration completed, time off can now be assigned to the work center that will be made unavailable. Begin by navigating to :menuselection:`Manufacturing --> Configuration --> Work Centers` and selecting the affected work center. Click :guilabel:`Edit`, and then the :guilabel:`↗ (external link)` button next to the :guilabel:`Working Hours` drop-down menu."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:-1
+msgid "The Working Hours \"External link\" button on the work center form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:74
+msgid "A pop-up appears, titled :guilabel:`Open: Working Hours`. The standard working hours for the work center are listed here, along with various other details about it. Since developer mode was enabled, there is a :guilabel:`Time Off` button in the top right of the pop-up. Click it to be taken to the :guilabel:`Resource Time Off` page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:-1
+msgid "The Time Off button on the Working Hours pop-up."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:83
+msgid "On this page, click :guilabel:`Create` to configure a new time-off entry. On the time-off form, note the :guilabel:`Reason` for the work center closure (broken, maintenance, etc.), select the affected work center as the :guilabel:`Resource`, and choose a :guilabel:`Start Date` and :guilabel:`End Date` to specify the period during which the work center will be unavailable. Click :guilabel:`Save` and the time off for the work center is logged in Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:-1
+msgid "The \"Resource Time Off\" form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:94
+msgid "Route orders to an alternative work center"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:96
+msgid "Once a work center is within its specified time-off period, work orders sent to it can be automatically routed to an alternative work center using the :guilabel:`Plan` button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:99
+msgid "Begin by creating a new manufacturing order by selecting :menuselection:`Operations --> Manufacturing Orders --> Create`. On the manufacturing order form, specify a :guilabel:`Product` that uses the unavailable work center for one of its operations. Click :guilabel:`Confirm` to confirm the work order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:104
+msgid "On the confirmed work order, select the :guilabel:`Work Orders` tab. By default, the unavailable work center is specified in the :guilabel:`Work Center` column. There is also a green :guilabel:`Plan` button on the top left of the page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:-1
+msgid "The Plan button on a manufacturing order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:112
+msgid "Click :guilabel:`Plan` and the work center listed under the :guilabel:`Work Orders` tab is automatically changed to the alternative work center."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:-1
+msgid "The selected work center updates automatically after clicking the Plan button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:119
+msgid "Once the time-off period for the unavailable work center ends, Odoo recognizes that the work center is available again. At this point, clicking the :guilabel:`Plan` button does not route work orders to an alternative work center unless the first one is at capacity."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/quality_control.rst:5
@@ -7849,6 +8602,7 @@ msgid "Now that all product quantities have been ordered, the purchase process c
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:3
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:15
 msgid "Bill control policies"
 msgstr ""
 
@@ -7861,10 +8615,12 @@ msgid "To view the default bill control policy and make changes, go to :menusele
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:17
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:28
 msgid "The policy selected will be the default for any new product created. The definition of each policy is as follows:"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:20
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:31
 msgid ":guilabel:`Ordered quantities`: creates a vendor bill as soon as a purchase order is confirmed. The products and quantities in the purchase order are used to generate a draft bill."
 msgstr ""
 
@@ -7905,6 +8661,7 @@ msgid "In the :guilabel:`Purchase` app, create a new :abbr:`RFQ (Request for Quo
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:63
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:46
 msgid "3-way matching"
 msgstr ""
 
@@ -8016,212 +8773,239 @@ msgstr ""
 msgid "Manage vendor bills"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:5
-msgid "The **Purchase** application allows you to manage your purchase orders, incoming products, and vendor bills all seamlessly in one place."
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:7
+msgid "A *vendor bill* is an invoice received for products and/or services that a company purchases from a vendor. Vendor bills record payables as they arrive from vendors, and can include amounts owed for the goods and/or services purchased, sales taxes, freight and delivery charges, and more."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:8
-msgid "If you want to set up a vendor bill control process, the first thing you need to do is to have purchase data in Odoo. Knowing what has been purchased and received is the first step towards understanding your purchase management processes."
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:11
+msgid "In Odoo, a vendor bill can be created at different points in the purchasing process, depending on the *bill control* policy chosen in the *Purchase* app settings."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:13
-msgid "Here is the standard work flow in Odoo:"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:15
-msgid "You begin with a **Request for Quotation (RFQ)** to send out to your vendor(s)."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:18
-msgid "Once the vendor has accepted the RFQ, confirm the RFQ into a **Purchase Order (PO)**."
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:17
+msgid "To view and edit the default bill control policy and make changes to it, go to :menuselection:`Purchase app --> Configuration --> Settings`, and scroll down to the :guilabel:`Invoicing` section."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:21
-msgid "Confirming the PO generates an **Incoming Shipment** if you purchased any stockable products."
+msgid "Here, there are two :guilabel:`Bill Control` policy options: :guilabel:`Ordered quantities` and :guilabel:`Received quantities`. After a policy is selected, click :guilabel:`Save` to save changes."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:24
-msgid "Upon receiving a **Vendor Bill** from your Vendor, validate the bill with products received in the previous step to ensure accuracy."
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:-1
+msgid "Bill control policies in purchase app settings."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:27
-msgid "This process may be done by three different people within the company, or only one."
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:33
+msgid ":guilabel:`Received quantities`: a bill is only created **after** part of the total order has been received. The products and quantities **received** are used to generate a draft bill."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:34
-msgid "Installing the Purchase and Inventory applications"
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:37
+msgid "If a product needs a different control policy, the default bill control policy can be overridden by going to the :guilabel:`Purchase` tab in a product's template, and modifying its :guilabel:`Control Policy` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:36
-msgid "From the **Apps** application, search for the **Purchase** module and install it. Due to certain dependencies, installing Purchase will automatically install the **Inventory** and **Accounting** applications."
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:-1
+msgid "Control policy field on product form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:41
-msgid "Creating products"
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:48
+msgid "*3-way matching* ensures vendor bills are only paid once some (or all) of the products included in the purchase order have actually been received."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:43
-msgid "Creating products in Odoo is essential for quick and efficient purchasing within Odoo. Simply navigate to the Products submenu under Purchase and click create."
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:51
+msgid "To activate it, go to :menuselection:`Purchase app --> Configuration --> Settings`, and scroll down to the :guilabel:`Invoicing` section. Then, check the box next to :guilabel:`3-way matching: purchases, receptions, and bills`, and click :guilabel:`Save` to save changes."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:50
-msgid "When creating the product, pay attention to the **Product Type** field, since it is important:"
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:56
+msgid ":guilabel:`3-way matching` is **only** intended to work with the :guilabel:`Bill Control` policy set to :guilabel:`Received quantities`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:53
-msgid "Products that are set as **Stockable or Consumable** will allow you to keep track of their inventory levels. These options imply stock management and will allow for receiving these kinds of products."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:58
-msgid "Conversely, products that are set as a **Service or Digital Product** will not imply stock management, simply due to the fact that there is no inventory to manage. You will not be able to receive products under either of these designations."
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:0
+msgid "Activated three-way matching feature in purchase settings."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:64
-msgid "It is recommended that you create a **Miscellaneous** product for all purchases that occur infrequently and do not require inventory valuation or management. If you create such a product, it is recommended to set the product type to **Service**."
+msgid "Create and manage vendor bills on receipts"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:69
-msgid "Managing your Vendor Bills"
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:66
+msgid "When products are received into a company's warehouse, receipts are created. Once the company processes the received quantities, they can choose to create a vendor bill directly from the warehouse receipt form. Depending on the bill control policy chosen in the settings, vendor bill creation is completed at different steps of the procurement process."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:72
-msgid "Purchasing products or services"
+msgid "With the bill control policy set to ordered quantities"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:74
-msgid "From the purchase application, you can create a purchase order with as many products as you need. If the vendor sends you a confirmation or quotation for an order, you may record the order reference number in the **Vendor Reference** field. This will enable you to easily match the PO with the the vendor bill later (as the vendor bill will probably include the Vendor Reference)"
+msgid "To create and manage vendor bills on receipts using the *ordered quantities* bill control policy, first go to :menuselection:`Purchase app --> Configuration --> Settings`, scroll down to the :guilabel:`Invoicing` section, and select :guilabel:`Ordered quantities` under :guilabel:`Bill Control`. Then, click :guilabel:`Save` to save changes."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:84
-msgid "Validate the purchase order and receive the products from the Inventory application."
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:79
+msgid "Next, go to the :menuselection:`Purchase` app, and click :guilabel:`Create` to create a new request for quotation (RFQ). Doing so reveals a blank :abbr:`RFQ (request for quotation)` detail form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:88
-msgid "Receiving Products"
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:82
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:144
+msgid "On the blank detail form, add a vendor to the :abbr:`RFQ (request for quotation)` in the :guilabel:`Vendor` field, and add products to the :guilabel:`Product` lines by clicking :guilabel:`Add a line`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:86
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:148
+msgid "Then, confirm the :abbr:`RFQ (request for quotation)` by clicking the :guilabel:`Confirm Order` button above the detail form. Doing so turns the :abbr:`RFQ (request for quotation)` into a purchase order."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:90
-msgid "If you purchased any stockable products that you manage the inventory of, you will need to receive the products from the Inventory application after you confirm a purchase order. From the **Inventory dashboard**, you should see a button linking you directly to the transfer of products. This button is outlined in red below:"
+msgid "Then, click the :guilabel:`Create Bill` button to create a vendor bill for the purchase order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:92
+msgid "Clicking the :guilabel:`Create Bill` button reveals the :guilabel:`Draft Bill` page for the purchase order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:95
+msgid "On the :guilabel:`Draft Bill`, click the :guilabel:`Edit` button to modify the bill, and add a bill date in the :guilabel:`Bill Date` field. If needed, add additional products to the :guilabel:`Product` lines by clicking :guilabel:`Add a line` in the :guilabel:`Invoice Lines` tab."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:99
-msgid "Navigating this route will take you to a list of all orders waiting to be received."
+msgid "Next, confirm the bill by clicking the :guilabel:`Confirm` button on the :guilabel:`Draft Bill` page."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:105
-msgid "If you have a lot of awaiting orders, apply a filter using the search bar in the upper right. With this search bar, you may filter based on the vendor (partner), the product, or the source document (also known as the reference of your purchase order). You can also group the orders by different criteria under **Group By**. Selecting an item from this list will open the following screen where you then will receive the products."
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:103
+msgid "Since the bill control policy is set to *ordered quantities*, the draft bill can be confirmed as soon as it is created, before any products have been received."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:116
-msgid "Purchasing service products does not trigger a delivery order."
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:106
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:179
+msgid "On the new :guilabel:`Vendor Bill`, add a :guilabel:`Bill Reference` number, which can be used to match the bill with additional documents (such as the :abbr:`PO (purchase order)`). Then, click :menuselection:`Confirm --> Register Payment`. Doing so causes a pop-up to appear, wherein a payment :guilabel:`Journal` can be chosen; a :guilabel:`Payment Method` selected; and a :guilabel:`Recipient Bank Account` can be selected from a drop-down menu."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:119
-msgid "Managing Vendor Bills"
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:112
+msgid "Additionally, the bill :guilabel:`Amount`, :guilabel:`Payment Date`, and :guilabel:`Memo` (:dfn:`Reference Number`) can be changed from this pop-up. Once ready, click :guilabel:`Create Payment` to finish creating the :guilabel:`Vendor Bill`. Doing so causes a green :guilabel:`In Payment` banner to display on the :abbr:`RFQ (request for quotation)` form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:121
-msgid "When you receive a vendor bill for a previous purchase, be sure to record it in the Purchases application under the **Control Menu**. You need to create a new vendor bill even if you already registered a purchase order."
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:-1
+msgid "Vendor bill form for ordered quantities control policy."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:129
-msgid "The first thing you will need to do upon creating a vendor bill is to select the appropriate vendor, since doing so will also pull up any associated accounting or pricelist information. From there, you can choose to specify one or multiple Purchase Orders to populate the Vendor Bill with. When you select a Purchase Order from the list, Odoo will pull any uninvoiced products associated to that Purchase Order and automatically populate that information below. If you are having a hard time finding the appropriate vendor bill, you may search through the list by inputting the vendor reference number or your internal purchase order number."
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:122
+msgid "Each vendor bill provides the option to either :guilabel:`Add Credit Note` or :guilabel:`Add Debit Note`. A *credit note* is typically issued when a vendor or supplier of goods get some quantity of products back from the customer to whom they were sold, while *debit notes* are reserved for goods returned from the customer/buyer to the vendor or supplier."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:143
-msgid "While the invoice is in a draft state, you can make any modifications you need (i.e. remove or add product lines, modify quantities, and change prices)."
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:128
+msgid "With the bill control policy set to received quantities"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:148
-msgid "Your vendor may send you several bills for the same Purchase Order if:"
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:131
+msgid "If the creation of a vendor bill is attempted without receiving any quantities of a product (while using the *received quantities* bill control policy), an error message appears, and settings must be changed before proceeding."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:150
-msgid "Your vendor is in back-order and is sending you invoices as they ship the products."
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:135
+msgid "To create and manage vendor bills on receipts using the *received quantities* bill control policy, first go to :menuselection:`Purchase app --> Configuration --> Settings`, scroll down to the :guilabel:`Invoicing` section, and select :guilabel:`Received quantities` under :guilabel:`Bill Control`. Then, click :guilabel:`Save` to save changes."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:151
-msgid "Your vendor is sending you a partial bill or asking for a deposit."
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:140
+msgid "Next, go to the :menuselection:`Purchase` app, and click :guilabel:`Create` to create a new :abbr:`RFQ (request for quotation)`. Doing so reveals a blank :abbr:`RFQ (request for quotation)` detail form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:153
-msgid "Every time you record a new vendor bill, Odoo will automatically populate the product quantities based on what has been received from the vendor. If this value is showing a zero, this means that you have not yet received this product and simply serves as a reminder that the product is not in hand and you may need to inquire further into this. At any point in time, before you validate the Vendor Bill, you may override this zero quantity."
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:152
+msgid "Finally, click the :guilabel:`Create Bill` button to create a bill for the purchase order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:162
-msgid "Vendor Bill Matching"
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:155
+msgid "Clicking :guilabel:`Create Bill` before any products have been received will cause a :guilabel:`User Error` pop-up to appear. The :guilabel:`Purchase Order` requires the receipt of at least partial quantity of the items included on the order to create a vendor bill."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:-1
+msgid "User error pop-up for received quantities control policy."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:163
+msgid "Next, click the :guilabel:`Receipt` smart button to view the warehouse receipt form."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:165
-msgid "What to do if your vendor bill does not match what you received"
+msgid "On the warehouse receipt form, click :menuselection:`Validate --> Apply` to mark the :guilabel:`Done` quantities. Then, navigate back to the :menuselection:`Purchase Order` (via the breadcrumbs), and click the :guilabel:`Create Bill` button on the purchase order form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:167
-msgid "If the bill you receive from the vendor has quantities that do not match the quantities automatically populated by Odoo, this could be due to several reasons:"
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:169
+msgid "Doing so reveals the :guilabel:`Draft Bill` for the purchase order. On the :guilabel:`Draft Bill`, click the :guilabel:`Edit` button, and add a :guilabel:`Bill Date`. If needed, add additional products to the :guilabel:`Product` lines by clicking :guilabel:`Add a line`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:171
-msgid "The vendor is incorrectly charging you for products and/or services that you have not ordered."
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:173
+msgid "Next, click the :guilabel:`Confirm` button to confirm the :guilabel:`Draft Bill`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:174
-msgid "The vendor is billing you for products that you might not have received yet, as the invoicing control may be based on ordered or received quantities."
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:176
+msgid "Since the bill control policy is set to *received quantities*, the draft bill can **only** be confirmed when at least some of the quantities are received."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:178
-msgid "The vendor did not bill you for previously purchased products."
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:185
+msgid "Additionally, the bill :guilabel:`Amount`, :guilabel:`Payment Date`, and :guilabel:`Memo` (:dfn:`Reference Number`) can be changed from this pop-up. Once ready, click :guilabel:`Create Payment` to finish creating the vendor bill. Doing so causes a green **In Payment** banner to display on the :abbr:`RFQ (request for quotation)` form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:180
-msgid "In these instances it is recommended that you verify that the bill, and any associated purchase order to the vendor, are accurate and that you understand what you have ordered and what you have already received."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:184
-msgid "If you are unable to find a purchase order related to a vendor bill, this could be due to one of a few reasons:"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:187
-msgid "The vendor has already invoiced you for this purchase order; therefore it is not going to appear anywhere in the selection."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:190
-msgid "Someone in the company forgot to record a purchase order for this vendor."
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:191
+msgid "Create and manage vendor bills in Accounting"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:193
-msgid "The vendor is charging you for something you did not order."
+msgid "Vendor bills can also be created directly from the *Accounting* app, **without** having to create a purchase order first. To do this, go to :menuselection:`Accounting app --> Vendors --> Bills`, and click :guilabel:`Create`. Doing so reveals a blank vendor bill detail form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:198
-msgid "How product quantities are managed"
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:197
+msgid "On this blank vendor bill detail form, add a vendor in the :guilabel:`Vendor` field, and add products to the :guilabel:`Product` lines (under the :guilabel:`Invoice Lines` tab), by clicking :guilabel:`Add a line`. Then, add a bill date in the :guilabel:`Bill Date` field, and any other necessary information. Finally, click :guilabel:`Confirm` to confirm the bill."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:200
-msgid "By default, services are managed based on ordered quantities, while stockables and consumables are managed based on received quantities."
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:202
+msgid "From here, click the :guilabel:`Journal Items` tab to view (or change) the :guilabel:`Account` journals that were populated based on the configuration on the corresponding :guilabel:`Vendor` and :guilabel:`Product` forms."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:203
-msgid "If you need to manage products based on ordered quantities over received quantities, you will need to belong to the group **Purchase Manager**. Ask your system administrator to enable these access on :menuselection:`Settings --> Users --> Users --> Access Rights`. Once you belong to the correct group, select the product(s) you wish to modify, and you should see a new field appear, labeled **Control Purchase Bills**."
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:206
+msgid "Then, click :guilabel:`Add Credit Note` or :guilabel:`Add Debit Note` to add credit or debit notes to the bill. Or, add a :guilabel:`Bill Reference` number (while in :guilabel:`Edit` mode)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:209
+msgid "Then, when ready, click :menuselection:`Register Payment --> Create Payment` to complete the :guilabel:`Vendor Bill`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:213
-msgid "You can then change the default management method for the selected product to be based on either:"
+msgid "To tie the draft bill to an existing purchase order, click the drop-down menu next to :guilabel:`Auto-Complete`, and select a :abbr:`PO (purchase order)` from the menu. The bill will auto-populate with the information from the :abbr:`PO (purchase order)`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:216
-msgid "Ordered quantities"
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:0
+msgid "Auto-complete drop-down list on draft vendor bill."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:218
-msgid "or Received quantities"
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:222
+msgid "Batch billing"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:221
-msgid "Batch Billing"
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:224
+msgid "Vendor bills can be processed and managed in batches in the *Accounting* app."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:223
-msgid "When creating a vendor bill and selecting the appropriate purchase order, you may continue to select additional purchase orders. Odoo will add the additional line items from the purchase orders you select. If you have not deleted the previous line items from the first purchase order, the bill will be linked to all the appropriate purchase orders."
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:226
+msgid "To do this, go to :menuselection:`Accounting app --> Vendors --> Bills`. Then, click the :guilabel:`checkbox` at the top left of the page, beside the :guilabel:`Number` column, under the :guilabel:`Create` button. This selects all existing vendor bills with a :guilabel:`Posted` or :guilabel:`Draft` :guilabel:`Status`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:231
+msgid "From here, click the :guilabel:`Action` gear icon to export, delete, or send & print the bills; click the :guilabel:`Print` icon to print the invoices or bills; or click :guilabel:`Register Payment` to create and process payments for multiple vendor bills at once."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:235
+msgid "When :guilabel:`Register Payment` is selected, a pop-up appears. In this pop-up window, select the appropriate journal in the :guilabel:`Journal` field, choose a payment date in the :guilabel:`Payment Date` field, and choose a :guilabel:`Payment Method`. There is also the option to :guilabel:`Group Payments` on this pop-up, as well."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:240
+msgid "When ready, click the :guilabel:`Create Payment` button, which creates a list of journal entries on a separate page. This list of journal entries are all tied to their appropriate vendor bills."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:-1
+msgid "Batch billing register payment pop-up."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:248
+msgid "The :guilabel:`Register Payment` option for vendor bills in batches will only work for journal entries whose :guilabel:`Status` is set to :guilabel:`Posted`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:252
+msgid ":doc:`/applications/inventory_and_mrp/purchase/manage_deals/control_bills`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:3
