@@ -124,7 +124,7 @@ available on Odoo.
 - United States - Accounting
 - Uruguay - Accounting
 - Venezuela - Accounting
-- Vietnam - Accounting
+- :doc:`Vietnam - Accounting <fiscal_localizations/vietnam>`
 
 .. toctree::
    :titlesonly:
@@ -151,5 +151,6 @@ available on Odoo.
    fiscal_localizations/singapore
    fiscal_localizations/spain
    fiscal_localizations/switzerland
+   fiscal_localizations/vietnam
    fiscal_localizations/united_arab_emirates
    fiscal_localizations/united_kingdom
