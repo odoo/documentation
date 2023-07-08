@@ -11,8 +11,8 @@
 # Renaud de Colombel <rdecolombel@sgen.cfdt.fr>, 2022
 # Jérôme Tanché <jerome.tanche@ouest-dsi.fr>, 2022
 # 5cad1b0f1319985f8413d48b70c3c192_b038c35, 2022
-# Priscilla (prs) Odoo <prs@odoo.com>, 2022
 # Fernanda Marques <fem@odoo.com>, 2022
+# Priscilla (prs) Odoo <prs@odoo.com>, 2022
 # Maxime Chambreuil <mchambreuil@ursainfosystems.com>, 2023
 # Martin Trigaux, 2023
 # Cécile Collart <cco@odoo.com>, 2023
@@ -23,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-15 11:45+0000\n"
+"POT-Creation-Date: 2023-07-03 09:37+0000\n"
 "PO-Revision-Date: 2022-10-04 12:54+0000\n"
 "Last-Translator: Jolien De Paepe, 2023\n"
 "Language-Team: French (https://app.transifex.com/odoo/teams/41243/fr/)\n"
@@ -95,6 +95,7 @@ msgstr ""
 #: ../../content/applications/sales/crm/track_leads/prospect_visits.rst:12
 #: ../../content/applications/sales/point_of_sale/configuration.rst:6
 #: ../../content/applications/sales/point_of_sale/employee_login.rst:13
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:11
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:13
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:12
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:16
@@ -114,7 +115,6 @@ msgstr ""
 #: ../../content/applications/sales/sales/products_prices/products/variants.rst:23
 #: ../../content/applications/sales/sales/send_quotations/orders_and_variants.rst:9
 #: ../../content/applications/sales/sales/send_quotations/quote_template.rst:9
-#: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst:16
 #: ../../content/applications/sales/subscriptions/closing.rst:31
 #: ../../content/applications/sales/subscriptions/upselling.rst:25
 msgid "Configuration"
@@ -3387,67 +3387,101 @@ msgstr ""
 msgid "Creating a new payment method for a POS."
 msgstr "Créer un nouveau mode de paiement pour un PdV."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods.rst:21
+#: ../../content/applications/sales/point_of_sale/payment_methods.rst:18
 msgid ""
 "Selecting a :guilabel:`bank` journal automatically adds the :guilabel:`Use a"
-" Payment Terminal` field in which you can add your terminal's information."
+" Payment Terminal` field in which you can add your :doc:`payment terminal's "
+"information <payment_methods/terminals>`."
 msgstr ""
-"La sélection d'un journal :guilabel:`bank` ajoute automatiquement le champ "
-":guilabel:`Utiliser un terminal de paiement` où vous pouvez saisir les "
-"informations de votre terminal."
+"La sélection d'un journal a :guilabel:`bank` ajoute automatiquement le champ"
+" :guilabel:`Utiliser un terminal de paiement` où vous pouvez saisir les "
+":doc:`informations de votre terminal de paiement "
+"<payment_methods/terminals>`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods.rst:23
+msgid ":doc:`payment_methods/terminals`."
+msgstr ":doc:`payment_methods/terminals`."
+
+#: ../../content/applications/sales/point_of_sale/payment_methods.rst:25
 msgid ""
-"Credentials are mandatory to use a payment terminal. To learn how to "
-"configure the different terminals, check out the following documentation "
-"pages:"
-msgstr ""
-"Les identifiants sont obligatoires pour utiliser un terminal de paiement. "
-"Pour savoir comment configurer les différents terminaux, consultez les pages"
-" de documentation suivantes :"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods.rst:26
-msgid ":doc:`Adyen configuration <payment_methods/terminals/adyen>`"
-msgstr ":doc:`configuration Adyen <payment_methods/terminals/adyen>`"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods.rst:27
-msgid ":doc:`Ingenico configuration <payment_methods/terminals/ingenico>`"
-msgstr ":doc:`configuration Ingenico <payment_methods/terminals/ingenico>`"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods.rst:28
-msgid ":doc:`Six configuration <payment_methods/terminals/six>`"
-msgstr ":doc:`configuration Six <payment_methods/terminals/six>`"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods.rst:29
-msgid ":doc:`Stripe configuration <payment_methods/terminals/stripe>`"
-msgstr ":doc:`configuration Stripe <payment_methods/terminals/stripe>`"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods.rst:30
-msgid ":doc:`Vantiv configuration <payment_methods/terminals/vantiv>`"
-msgstr ":doc:`configuration Vantiv <payment_methods/terminals/vantiv>`"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods.rst:31
-msgid ":doc:`Worldline configuration <payment_methods/terminals/worldline>`"
-msgstr ":doc:`configuration Worldline <payment_methods/terminals/worldline>`"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods.rst:33
-msgid ""
-"Once the payment method is created, you can select it to be used in your "
-"POS. To do so, go to the :ref:`POS settings <configuration/settings>`, "
-"select the POS for which you wish to make the payment method available in "
-"the :guilabel:`Point of Sale` field, and add the payment method(s) under the"
-" :guilabel:`Payment` section."
+"Once the payment method is created, you can select it in your POS settings. "
+"To do so, go to the :ref:`POS' settings <configuration/settings>`, click "
+":guilabel:`Edit`, and add the payment method under the :guilabel:`Payments` "
+"section."
 msgstr ""
 "Une fois le mode de paiement créé, vous pouvez le sélectionner pour "
-"l'utiliser dans votre Point de Vente. Pour ce faire, allez aux "
-":ref:`paramètres du Point de Vente <configuration/settings>`, sélectionnez "
-"le Point de Vente pour lequel vous souhaitez rendre le mode de paiement "
-"disponible dans le champ :guilabel:`Point de Vente` et ajoutez le(s) mode(s)"
-" de paiement dans la section :guilabel:`Paiement`."
+"l'utiliser dans vos paramètres PdV. Pour ce faire, allez aux "
+":ref:`paramètres PdV <configuration/settings>`, cliquez sur "
+":guilabel:`Modifier` et ajoutez le mode de paiement dans la section "
+":guilabel:`Paiements`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:5
 msgid "Payment terminals"
 msgstr "Terminaux de paiement"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:7
+msgid ""
+"Connecting and integrating a payment terminal with your POS system allows "
+"you to accept multiple payment options, including credit and debit cards, "
+"making the payment process more efficient."
+msgstr ""
+"La connexion et l'intégration d'un terminal de paiement à votre système de "
+"point de vente vous permettent d'accepter plusieurs options de paiement, y "
+"compris les cartes de crédit et de débit, ce qui rend le processus de "
+"paiement plus efficace."
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:13
+msgid ""
+"Go to the :doc:`application settings <../configuration>`, scroll down to the"
+" :guilabel:`Payment Terminals` section, and tick your terminal's checkbox."
+msgstr ""
+"Allez aux :doc:`paramètres de l'application <../configuration>`, faites "
+"défiler jusqu'à la section :guilabel:`Terminaux de paiement` et cochez la "
+"case à côté de votre terminal."
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst-1
+msgid "checkbox in the settings to enable a payment terminal"
+msgstr ""
+"case à cocher dans les paramètres permettant d'activer un terminal de "
+"paiement"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:19
+msgid "Then, follow the corresponding documentation to configure your device:"
+msgstr ""
+"Consultez ensuite la documentation correspondante pour configurer votre "
+"appareil :"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:21
+msgid ":doc:`Adyen configuration <terminals/adyen>`"
+msgstr ":doc:`configuration Adyen <terminals/adyen>`"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:22
+msgid ":doc:`Ingenico configuration <terminals/ingenico>`"
+msgstr ":doc:`configuration Ingenico <terminals/ingenico>`"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:23
+msgid ":doc:`SIX configuration <terminals/six>`"
+msgstr ":doc:`configuration SIX <terminals/six>`"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:24
+msgid ":doc:`Stripe configuration <terminals/stripe>`"
+msgstr ":doc:`configuration Stripe <terminals/stripe>`"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:25
+msgid ":doc:`Vantiv configuration <terminals/vantiv>`"
+msgstr ":doc:`configuration Vantiv <terminals/vantiv>`"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:26
+msgid ":doc:`Worldline configuration <terminals/worldline>`"
+msgstr ":doc:`configuration Worldline <terminals/worldline>`"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:28
+msgid ""
+"Once the terminal is configured, you can :doc:`create the corresponding "
+"payment method and add it to the POS <../payment_methods>`."
+msgstr ""
+"Une fois que le terminal est configuré, vous pouvez :doc:`créer le mode de "
+"paiement correspondant et l'ajouter au point de vente <../payment_methods>`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:3
 msgid "Adyen"
@@ -7746,223 +7780,436 @@ msgid "Invoicing Method"
 msgstr "Méthode de facturation"
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:3
-msgid "Request a down payment"
-msgstr "Demander un acompte"
+msgid "Down payments"
+msgstr "Acomptes"
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:5
 msgid ""
 "A down payment is a partial payment made by the buyer when a sales contract "
-"is concluded. This implies both parties' full commitment (seller and buyer) "
-"to honor the contract. With a down payment, the buyers show their will to "
-"acquire the product and agree to pay the rest later, while the sellers are "
-"obliged to provide the goods by accepting it."
+"is concluded. This implies both parties' (seller and buyer) full commitment "
+"to honor the contract."
 msgstr ""
 "Un acompte est un paiement partiel effectué par l'acheteur lors de la "
 "conclusion d'un contrat de vente. Il implique l'engagement total des deux "
-"parties (vendeur et acheteur) à honorer le contrat. Avec un acompte, "
-"l'acheteur montre son intention d'acheter le produit et accepte de payer le "
-"montant restant dû plus tard, alors que le vendeur est tenu de fournir les "
-"marchandises en l'acceptant."
+"parties (vendeur et acheteur) à honorer le contrat."
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:10
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:8
 msgid ""
-"Sometimes a down payment is required for expensive orders or projects. That "
-"way, you can protect yourself and make sure that your customer is reliable."
+"With a down payment, the buyer pays a portion of the total amount owed while"
+" agreeing to pay the remaining amount at a later date. In turn, the seller "
+"provides goods or services to the buyer after accepting the down payment, "
+"trusting that the remaining amount will be paid later on."
 msgstr ""
-"Parfois un acompte est requis pour des commandes ou des projets onéreux. De "
-"cette façon, vous pourrez vous protéger et vous assurer que votre client est"
-" fiable."
+"Avec un acompte, l'acheteur paie une partie du montant total dû tout en "
+"s'engageant à payer le reste à une date ultérieure. En échange, le vendeur "
+"fournit les biens ou les services à l'acheteur après avoir accepté "
+"l'acompte, en espérant que le reste sera payé ultérieurement."
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:14
-msgid "First time you request a down payment"
-msgstr "La première fois que vous demandez un acompte"
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:13
+msgid "Initial down payment request"
+msgstr "Demande d'acompte initial"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:16
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:15
 msgid ""
-"When a sales order is confirmed, you then have the possibility to create an "
-"invoice. Invoices are automatically created in drafts so that you can review"
-" them before validation. To create an invoice, Odoo Sales offers you 3 "
-"options:"
+"When a sales order is confirmed, the option to create an invoice becomes "
+"available, via the :guilabel:`Create Invoice` button, located in the upper-"
+"left corner of the sales order form. When clicked, a :guilabel:`Create "
+"invoices` pop-up appears."
 msgstr ""
-"Lorsqu'une commande client est confirmée, vous avez la possibilité de créer "
-"une facture. Les factures sont automatiquement créées en brouillon, pour que"
-" vous puissiez les revoir avant validation. Pour créer une facture, Odoo "
-"Ventes vous propose 3 options :"
+"Lorsqu'une commande client est confirmée, il est possible de créer une "
+"facture en cliquant sur le bouton :guilabel:`Créer une facture`, situé dans "
+"le coin supérieur gauche du formulaire de commande. Lorsque l'on clique sur "
+"le bouton, une fenêtre contextuelle :guilabel:`Créer les factures` apparaît."
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:20
-msgid "Regular invoice"
-msgstr "Facture normale"
-
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:21
-msgid "Down payment (percentage)"
-msgstr "Acompte (pourcentage)"
+msgid ""
+"Invoices are automatically created in drafts, so they can be reviewed before"
+" validation."
+msgstr ""
+"Les factures sont automatiquement créées en brouillon pour qu'elles puissent"
+" être révisées avant d'être validées."
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:22
-msgid "Down payment (fixed amount)"
-msgstr "Acompte (montant fixe)"
-
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:24
 msgid ""
-"In terms of down payment, it can either be a fixed amount or a percentage of"
-" the total amount. The first time you request a down payment, you can set a "
-"percentage or a fixed amount of your choice, and select the right income "
-"account and taxes. These settings will be reused for future down payments."
+"On the :guilabel:`Create invoices` pop-up, there are 3 options to choose "
+"from in the :guilabel:`Create Invoice` field:"
 msgstr ""
-"L'acompte peut donc être un montant fixe ou un pourcentage du montant total."
-" La première fois que vous demandez un acompte, vous pouvez fixer le "
-"pourcentage ou le montant fixe de votre choix et sélectionner le compte des "
-"revenus et les taxes appropriés. Ces paramètres seront réutilisés pour les "
-"acomptes ultérieurs."
+"Dans la fenêtre contextuelle :guilabel:`Créer les factures`, vous avez le "
+"choix entre trois options dans le champ :guilabel:`Créer une facture` :"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst-1
-msgid "How can you do a down payment on Odoo Sales?"
-msgstr "Comment payer un acompte dans Odoo Ventes ?"
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:27
+msgid ":guilabel:`Regular invoice`"
+msgstr ":guilabel:`Facture normale`"
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:27
+msgid ""
+"If :guilabel:`Regular Invoice` is selected the other fields disappear, as "
+"they only pertain to down payment configurations."
+msgstr ""
+"Si l'option :guilabel:`Facture normale` est sélectionnée, les autres champs "
+"disparaissent, car ils ne concernent que les configurations de l'acompte."
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:29
+msgid ":guilabel:`Down payment (percentage)`"
+msgstr ":guilabel:`Acompte (pourcentage)`"
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:30
+msgid ":guilabel:`Down payment (fixed amount)`"
+msgstr ":guilabel:`Acompte (montant fixe)`"
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:32
+msgid ""
+"In terms of a down payment, it can either be a fixed amount or a percentage "
+"of the total amount."
+msgstr ""
+"L'acompte peut être soit un montant fixe, soit un pourcentage du montant "
+"total."
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:34
 msgid ""
-"When you request your first down payment, a new product called **Down "
-"payment** will be created. This product will be registered as a **service** "
-"product with an invoicing policy of **ordered quantities**. As a reminder, "
-"you can edit this product and modify it at any time. Please note that if you"
-" choose **delivered quantities** as invoicing policy, **you will not be able"
-" to create an invoice**."
+"Once the desired down payment option is selected in the :guilabel:`Create "
+"Invoice` field, designate the desired amount (either as a percentage or "
+"fixed amount) in the :guilabel:`Down Payment Amount` field."
 msgstr ""
-"Lorsque vous demandez votre premier acompte, un nouveau produit appelé "
-"**Acompte** sera créé. Ce produit sera enregistré comme un **service** avec "
-"une politique de facturation basée sur les **quantités commandées**. Pour "
-"rappel, vous pouvez modifier ce produit à tout moment. Notez que si vous "
-"choisissez une politique de facturation basée sur les **quantités livrées*, "
-"**vous ne serez pas en mesure de créer une facture**."
+"Une fois que l'option d'acompte souhaitée est sélectionnée dans le champ "
+":guilabel:`Créer une facture`, définissez le montant souhaité (soit un "
+"pourcentage, soit un montant fixe) dans le champ :guilabel:`Montant de "
+"l'acompte`."
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:41
-msgid "Basic sales flow using down payments"
-msgstr "Flux de vente de base avec acomptes"
-
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:43
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:38
 msgid ""
-"For this first example, we will use a 50% amount down payment with a product"
-" using **ordered quantities** as invoicing policy. Make sure to check out "
-"our documentation about invoicing policies here: :doc:`invoicing_policy` , "
-"before requesting your first down payment. When it comes to create and view "
-"the invoice, you will only have access to a draft invoice mentioning the "
-"down payment (as you can see below)."
+"Then, select the appropriate income account for the invoice in the "
+":guilabel:`Income Account` field, and add a tax amount, if necessary, in the"
+" :guilabel:`Customer Taxes` field. These settings will be reused for future "
+"down payments."
 msgstr ""
-"Pour ce premier exemple, nous utiliserons un acompte de 50 % avec un produit"
-" utilisant une politique de facturation basée sur les **quantités "
-"commandées**. N'hésitez pas à consulter notre documentation sur les "
-"politiques de facturation ici : :doc:`invoicing_policy`, avant de demander "
-"votre premier acompte. Au moment de créer et de visualiser la facture, vous "
-"aurez uniquement accès à une facture brouillon mentionnant l'acompte (comme "
-"vous pouvez le voir ci-dessous)."
+"Ensuite, sélectionnez le compte des revenus approprié pour la facture dans "
+"le champ :guilabel:`Compte des revenus` et ajoutez un montant de taxe, le "
+"cas échéant, dans le champ :guilabel:`Taxes à la vente`. Ces paramètres "
+"seront réutilisés pour les acomptes futurs."
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst-1
-msgid "What is a basic sales flow using down payments on Odoo Sales (1)?"
-msgstr ""
-"Quel est le flux de vente de base utilisant des acomptes dans Odoo Ventes "
-"(1) ?"
+msgid "How to configure a down payment on Odoo Sales."
+msgstr "Comment configurer un acompte dans Odoo Ventes."
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:53
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:47
 msgid ""
-"There, you can post the invoice and register the payment of your customer. "
-"But, we all know that in real life this flow does not happen immediately. "
-"So, for now, you can return to the sales order. There, you will have the "
-"possibility to see the order as a customer with the **Customer preview** "
-"button or to reach easily the previous draft invoice with the **Invoice** "
-"button. In any case, the down payment will be mentioned on both (sales order"
-" and draft invoice)."
+"When a down payment is first requested, a new product called :guilabel:`Down"
+" payment` is created. This product is registered as a :guilabel:`Service` "
+"product, with an invoicing policy of :guilabel:`Ordered quantities`. This "
+"product can be edited and modified at any time."
 msgstr ""
-"Vous pouvez y comptabiliser la facture et enregistrer le paiement de votre "
-"client. Toutefois, nous savons tous que, dans la vraie vie, ce flux n'est "
-"pas immédiat. Donc, pour l'instant, retournez simplement à la commande "
-"client. Vous y aurez la possibilité d'afficher la commande comme un client "
-"grâce au bouton **Aperçu client** ou d'accéder facilement à la facture "
-"brouillon précédente grâce au bouton **Facture**. Dans tous les cas, "
-"l'acompte sera mentionné sur la commande client et la facture brouillon."
+"Lorsqu'un acompte est demandé pour la première fois, un nouveau produit "
+"appelé :guilabel:`Acompte` est créé. Ce produit est enregistré comme un "
+"produit :guilabel:`Service`, avec une politique de facturation de "
+":guilabel:`Quantités commandées`. Ce produit peut être modifié à tout "
+"moment."
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:52
+msgid ""
+"If :guilabel:`Delivered quantities` is chosen as the invoicing policy, an "
+"invoice will **not** be able to be created."
+msgstr ""
+"Si vous choisissez les :guilabel:`Quantités livrées` comme politique de "
+"facturation, il ne sera **pas** possible de créer une facture."
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:56
+msgid "Request a 50% down payment"
+msgstr "Demander un acompte de 50%"
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:58
+msgid ""
+"For the following example, the flow involves a 50% amount down payment on a "
+"product with :guilabel:`Ordered quantities` as the invoicing policy."
+msgstr ""
+"Dans l'exemple suivant, le flux implique un acompte de 50% sur un produit "
+"dont la politique de facturation est définie sur :guilabel:`Quantités "
+"commandées`."
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:62
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:184
+msgid ":doc:`/applications/sales/sales/invoicing/invoicing_policy`"
+msgstr ":doc:`/applications/sales/sales/invoicing/invoicing_policy`"
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:64
+msgid ""
+"When the order is confirmed (via the :guilabel:`Confirm` button), it's time "
+"to create/view the invoice, by clicking :guilabel:`Create Invoice`."
+msgstr ""
+"Lorsque la commande est confirmée (via le bouton :guilabel:`Confirmer`), il "
+"est temps de créer/voir la facture en cliquant sur :guilabel:`Créer une "
+"facture`."
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:67
+msgid ""
+"Then, on the :guilabel:`Create invoices` pop-up window that appears, select "
+":guilabel:`Down payment (percentage)`, and type `50` in the :guilabel:`Down "
+"Payment Amount` field. Lastly, click :guilabel:`Create and View Invoice` to "
+"create and view the invoice."
+msgstr ""
+"Ensuite, dans la fenêtre contextuelle :guilabel:`Créer les factures` qui "
+"s'affiche, sélectionnez :guilabel:`Acompte (pourcentage)` et saisissez `50` "
+"dans le champ :guilabel:`Montant de l'acompte`. Enfin, cliquez sur "
+":guilabel:`Créer et voir la facture` pour créer et voir la facture."
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst-1
-msgid "What is a basic sales flow using down payments on Odoo Sales (2)?"
+msgid "Create invoices pop up window in Odoo Sales."
 msgstr ""
-"Quel est le flux de vente de base utilisant des acomptes dans Odoo ventes "
-"(2) ?"
+"Fenêtre contextuelle permettant de créer des factures dans Odoo Ventes."
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:63
-msgid ""
-"To complete the flow, when the customer wants to pay the rest of his sales "
-"order, you must create another invoice. Once again, you will have the choice"
-" to make another down payment or to deduct all the down payments and so, "
-"paying the rest of the invoice as a regular invoice."
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:75
+msgid "Doing so reveals the draft invoice, which mentions the down payment."
 msgstr ""
-"Pour compléter le flux, lorsque le client veut payer le montant restant dû "
-"de cette commande client, vous devez créer une autre facture. Là encore, "
-"vous aurez le choix de verser un autre acompte ou de déduire tous les "
-"acomptes et ainsi, payer le montant restant dû de la facture comme une "
-"facture normale."
+"Cette opération permet d'afficher la facture brouillon, qui reprend "
+"l'acompte."
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst-1
-msgid "What is a basic sales flow using down payments on Odoo Sales (3)?"
+msgid "A sample draft invoice with down payment mentioned in Odoo Sales."
 msgstr ""
-"Quel est le flux de vente de base utilisant des acomptes dans Odoo Ventes "
-"(3) ?"
+"Un exemple de facture brouillon avec acompte mentionné dans Odoo Ventes."
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:71
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:81
 msgid ""
-"This flow is also possible with a down payment taking into account a fixed "
-"amount."
+"From there, the invoice can be confirmed/posted, and the payment can be "
+"registered. Return to the sales order, via the breadcrumbs."
 msgstr ""
-"Ce flux est également possible avec un acompte tenant compte d'un montant "
-"fixe."
-
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:74
-msgid ""
-"Be careful that if you do a down payment with a product using **delivered "
-"quantities** as invoicing policy, you won’t be able to deduct all the down "
-"payments when it comes to invoicing your customer. Indeed, you have to "
-"deliver a product before creating the final invoice. If nothing has been "
-"delivered, you create a **credit note** that cancels the draft invoice "
-"created after the down payment. To do so, you have to install the "
-"**Inventory App** to confirm the delivery. Otherwise, you can enter the "
-"delivered quantity manually on the sales order."
-msgstr ""
-"Attention, si vous effectuez un acompte avec un produit utilisant la "
-"politique de facturation basée sur les **quantités livrées**, vous ne "
-"pourrez pas déduire tous les acomptes au moment de facturer votre client. En"
-" effet, vous devez livrer un produit avant de créer la facture finale. Si "
-"rien n'a été livré, vous créez une **note de crédit** qui annule la facture "
-"brouillon créée après le versement de l'acompte. Pour ce faire, vous devez "
-"installer l'**application Inventaire** pour confirmer la livraison. Sinon, "
-"vous pouvez saisir la quantité livrée manuellement sur la commande client."
-
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:82
-msgid "Modify the income account and customer taxes"
-msgstr "Modifier le compte des revenus et les taxes à la vente"
+"À partir de là, la facture peut être confirmée/comptabilisée et le paiement "
+"peut être enregistrée. Retournez à la commande client via le fil d'Ariane."
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:84
-msgid "From the products list, search for the **Down Payment** product."
-msgstr "À partir de la liste des produits, cherchez le produit **Acompte**."
+msgid ""
+"On the sales order, the option to view what the customer will see is "
+"available, via the :guilabel:`Customer Preview` smart button, and the "
+":guilabel:`Invoice` button reveals the drafted invoice. In either case, the "
+"down payment is mentioned on both the sales order and draft invoice."
+msgstr ""
+"Sur la commande, vous avez la possibilité de voir ce que le client verra, "
+"via le bouton intelligent :guilabel:`Aperçu client` et le bouton "
+":guilabel:`Facture` permet d'afficher la facture brouillon. Dans les deux "
+"cas, l'acompte est mentionné sur la commande client et la facture brouillon."
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst-1
-msgid "Creation of a down payment product on Odoo Sales"
-msgstr "Création d'un produit appelé acompte dans Odoo Ventes"
+msgid "How the down payment is mentioned on the sales order in Odoo Sales."
+msgstr "Comment l'acompte est indiqué sur la commande dans Odoo Ventes."
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:90
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:92
 msgid ""
-"You can edit it and under the **General Information Tab** you will be able "
-"to change the customer taxes. Now, to change the income account, you will "
-"need to install the **Accounting App** to have the possibility to see the "
-"**Accounting Tab** on the product form."
+"To confirm and register the first payment of the down payment, click the "
+":guilabel:`Invoices` smart button to return to the invoice. On the "
+":guilabel:`Customer Invoice` page, click :guilabel:`Confirm`, then "
+":guilabel:`Register Payment` to open a :guilabel:`Register Payment` pop-up "
+"form."
 msgstr ""
-"Vous pouvez le modifier et sous l'onglet **Informations générales**, vous "
-"pourrez modifier les taxes à la vente. À présent, pour changer le compte des"
-" revenus, vous devrez installer l'**application Comptabilité** pour avoir la"
-" possibilité de voir l'onglet **Comptabilité** sur la fiche produit."
+"Pour confirmer et enregistrer le premier paiement de l'acompte, cliquez sur "
+"le bouton intelligent :guilabel:`Factures` pour retourner à la facture. Sur "
+"la page :guilabel:`Facture client`, cliquez sur :guilabel:`Confirmer`, puis "
+":guilabel:`Enregistrer un paiement` pour ouvrir un formulaire "
+":guilabel:`Enregistrer un paiement`."
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst-1
+msgid "How the register payment pop up looks in Odoo Sales."
+msgstr ""
+"Comment se présente la fenêtre contextuelle permettant d'enregistrer un "
+"paiement dans Odoo Ventes."
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:101
+msgid ""
+"On this form, select the appropriate :guilabel:`Journal` and confirm that "
+"the down payment amount is correct in the :guilabel:`Amount` field. Then, "
+"make any other modifications to the other fields, if necessary, before "
+"clicking :guilabel:`Create Payment`."
+msgstr ""
+"Sur ce formulaire, sélectionnez le :guilabel:`Journal` approprié et "
+"confirmez que le montant de l'acompte est correct dans le champ "
+":guilabel:`Montant`. Apportez d'autres modifications aux autres champs si "
+"nécessaire avant de cliquer sur :guilabel:`Créer un paiement`."
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:105
+msgid ""
+"Odoo returns to the invoice, which now has a green :guilabel:`In Payment` "
+"banner visible in the upper-right corner."
+msgstr ""
+"Odoo revient à la facture, qui comporte désormais une bannière verte "
+":guilabel:`En paiement` dans le coin supérieur droit."
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst-1
+msgid ""
+"How the initial down payment invoice has a green paid banner in Odoo Sales."
+msgstr ""
+"Comment la facture d'acompte initial a une bannière verte affichant payé "
+"dans Odoo Ventes."
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:112
+msgid ""
+"Now, when the customer wants to pay the remaining amount of the order, "
+"another invoice must be created. To do that, return to the sales order, and "
+"click :guilabel:`Create Invoice`."
+msgstr ""
+"À présent, lorsque le client souhaite payer le montant restant de la "
+"commande, une autre facture doit être créée. Pour ce faire, retournez à la "
+"commande et cliquez sur :guilabel:`Créer une facture`."
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:115
+msgid ""
+"On the :guilabel:`Create invoices` pop-up window, there is now an option to "
+":guilabel:`Deduct down payments`, which is selected by default."
+msgstr ""
+"Dans la fenêtre contextuelle :guilabel:`Créer les factures`, vous avez "
+"maintenant l'option :guilabel:`Déduire les acomptes`, qui est sélectionnée "
+"par défaut."
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst-1
+msgid ""
+"The deduct down payment option on the create invoices pop up in Odoo Sales."
+msgstr ""
+"L'option de déduction des acomptes sur la fenêtre contextuelle de création "
+"de factures dans Odoo Ventes."
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:122
+msgid ""
+"If the remaining amount is ready to be paid, the :guilabel:`Regular Invoice`"
+" option should be selected, and the :guilabel:`Deduct down payments` option "
+"should *stay* selected. Then, click :guilabel:`Create and View Invoice`."
+msgstr ""
+"Si le montant restant est prêt à être payé, l'option :guilabel:`Facture "
+"normale` doit être sélectionnée et l'option :guilabel:`Déduire les acomptes`"
+" doit *rester* sélectionnée. Cliquez ensuite sur :guilabel:`Créer et voir la"
+" facture`."
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:126
+msgid ""
+"Doing so reveals a separate :guilabel:`Invoices` page, listing all the "
+"invoices for that specific sales order. Each invoice line item displays all "
+"the necessary information related to each invoice, along with the current "
+":guilabel:`Payment Status`."
+msgstr ""
+"Cette opération permet d'afficher une page :guilabel:`Factures` distinctes, "
+"qui répertorie toutes les factures relatives à cette commande client. Chaque"
+" ligne de facture présente toutes les informations nécessaires relatives à "
+"chaque facture, ainsi que le :guilabel:`Statut de paiement` actuel."
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst-1
+msgid "The down payment invoices page in Odoo Sales."
+msgstr "La page des factures d'acompte dans Odoo Ventes."
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:134
+msgid ""
+"To complete the flow, select the invoice with the :guilabel:`Not Paid` "
+"status, which opens that invoice. On the invoice page, click "
+":guilabel:`Confirm`, then :guilabel:`Register Payment`, and confirm that the"
+" remaining :guilabel:`Amount` is correct. Then, click :guilabel:`Create "
+"Payment`."
+msgstr ""
+"Pour compléter le flux, sélectionnez la facture dont le statut est "
+":guilabel:`Non payé`, qui permet d'ouvrir la facture. Sur la page de la "
+"facture, cliquez sur :guilabel:`Confirmer`, puis :guilabel:`Enregistrer un "
+"paiement`, et confirmez que le :guilabel:`Montant` restant est correct. Puis"
+" cliquez sur :guilabel:`Créer un paiement`."
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:138
+msgid ""
+"That pop-up window disappears, and a green :guilabel:`In Payment` banner is "
+"now present on the invoice. The line items on the invoice show that the "
+"total amount has been paid, including mentions of the down payment, and the "
+"flow is complete."
+msgstr ""
+"La fenêtre contextuelle disparaît et une bannière verte :guilabel:`En "
+"paiement` s'affiche maintenant sur la facture. Les lignes de la facture "
+"indiquent que le montant total a été payé, y compris les mentions de "
+"l'acompte et que le flux est terminé."
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:142
+msgid ""
+"This flow is also possible with the :guilabel:`Fixed amount` down payment "
+"option."
+msgstr ""
+"Ce flux est également possible avec l'option d'acompte :guilabel:`Montant "
+"fixe`."
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:145
+msgid ""
+"If a down payment is used with a product that has a :guilabel:`Delivered "
+"quantities` invoicing policy, the down payments will **not** be able to be "
+"deducted when it comes time to invoice the customer. This is because, due to"
+" the invoicing policy, the product(s) would have to be delivered *before* "
+"creating the final invoice."
+msgstr ""
+"Si un acompte est utilisé avec un produit dont la politique de facturation "
+"est :guilabel:`Quantités livrées`, l'acompte ne pourra **pas** être déduite "
+"au moment de facturer le client. En effet, en raison de la politique de "
+"facturation, le ou les produits doivent être livrés *avant* de créer la "
+"facture finale."
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:150
+msgid ""
+"If nothing has been delivered, a :guilabel:`Credit Note` is created, which "
+"cancels the draft invoice that was created after the down payment. To "
+"utilize the :guilabel:`Credit Note` option, the *Inventory* application must"
+" be installed, in order to confirm the delivery. Otherwise, the delivered "
+"quantity can be entered manually directly on the sales order."
+msgstr ""
+"Si rien n'a été livré, un :guilabel:`Avoir` est créé, qui annule la facture "
+"brouillon qui a été créée après l'acompte. Pour utiliser l'option "
+":guilabel:`Avoir`, l'application *Inventaire* doit être installée, afin de "
+"confirmer la livraison. Sinon, la quantité livrée peut être saisie "
+"manuellement directement sur la commande client."
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:156
+msgid "Income account and customer taxes modifications"
+msgstr "Modifications du compte des revenus et des taxes à la vente"
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:158
+msgid ""
+"To adjust the income account and customer taxes attached to a down payment, "
+"navigate to the :guilabel:`Products` page (:menuselection:`Sales app --> "
+"Products --> Products`), search for the `Down Payment` product in the search"
+" bar, and select it to reveal the product detail page."
+msgstr ""
+"Pour ajuster le compte des revenus et les taxes à la vente liés à un "
+"acompte, allez à la page :guilabel:`Produits` (:menuselection:`App Ventes "
+"--> Produits --> Produits`), recherchez le produit `Acompte` dans la barre "
+"de recherche et sélectionnez-le pour afficher les détails du produit."
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:162
+msgid ""
+"On the :guilabel:`Down Payment` product page, click :guilabel:`Edit`, then "
+"scroll down to the :guilabel:`General Information` tab. In this tab, the "
+"customer taxes can be modified in the :guilabel:`Customer Taxes` field."
+msgstr ""
+"Sur la page du produit :guilabel:`Acompte`, cliquez sur "
+":guilabel:`Modifier`, puis faites défiler jusqu'à l'onglet "
+":guilabel:`Informations générales`. Dans cet onglet, les taxes à la vente "
+"peuvent être modifiées dans le champ :guilabel:`Taxes à la vente`."
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst-1
 msgid "How to modify the income account link to down payments"
 msgstr "Comment modifier le compte des revenus liés aux acomptes"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:99
-msgid ":doc:`invoicing_policy`"
-msgstr ":doc:`invoicing_policy`"
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:170
+msgid ""
+"To change or adjust the income account attached to the :guilabel:`Down "
+"Payment` product page, the *Accounting* app **must** be installed. With the "
+"*Accounting* app installed, the :guilabel:`Accounting` tab becomes available"
+" on the product page. That tab will **not** be accessible without the "
+"*Accounting* app installed."
+msgstr ""
+"Pour modifier ou ajuster le compte des revenus liés à la page du produit "
+":guilabel:`Acompte`, l'application *Comptabilité* **doit** est installée. "
+"Une fois que l'application *Comptabilité* est installée, l'onglet "
+":guilabel:`Comptabilité` devient disponible sur la page du produit. Cet "
+"onglet ne sera **pas** accessible si l'application *Comptabilité* n'est pas "
+"installée."
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:175
+msgid ""
+"In the :guilabel:`Accounting` tab, the income account can be changed in the "
+":guilabel:`Income Account` field, in the :guilabel:`Receivables` section. "
+"Once all desired changes are complete, click :guilabel:`Save`."
+msgstr ""
+"Dans l'onglet :guilabel:`Comptabilité`, le compte des revenus peut être "
+"modifié dans le champ :guilabel:`Compte des revenus`, dans la section "
+":guilabel:`Créances clients`. Une fois que tous les changements souhaités "
+"sont apportés, cliquez sur :guilabel:`Enregistrer`."
 
 #: ../../content/applications/sales/sales/invoicing/expense.rst:3
 msgid "Re-invoice expenses to customers"
@@ -8311,54 +8558,124 @@ msgid "You can then invoice that first milestone."
 msgstr "Vous pouvez ensuite facturer ce premier jalon."
 
 #: ../../content/applications/sales/sales/invoicing/proforma.rst:3
-#: ../../content/applications/sales/sales/invoicing/proforma.rst:22
-msgid "Send a pro-forma invoice"
-msgstr "Envoyer une facture pro forma"
+msgid "Pro-forma invoices"
+msgstr "Factures pro forma"
 
 #: ../../content/applications/sales/sales/invoicing/proforma.rst:5
 msgid ""
-"A pro-forma invoice is an abridged or estimated invoice in advance of a "
-"delivery of goods. It notes the kind and quantity of goods, their value, and"
-" other important information such as weight and transportation charges. Pro-"
-"forma invoices are commonly used as preliminary invoices with a quotation, "
-"or for customs purposes in importation. They differ from a normal invoice in"
-" not being a demand or request for payment."
+"A *pro-forma invoice* is an abridged or estimated invoice sent in advance of"
+" a delivery of goods. It notes the kind and quantity of goods, their value, "
+"and other important information, such as weight and transportation charges."
 msgstr ""
-"Une facture pro forma est une facture abrégée ou estimée avant une livraison"
-" de marchandises. Elle indique le type et la quantité de marchandises, leur "
-"valeur et d'autres informations importantes telles que le poids et les frais"
-" de transport. Les factures pro forma sont habituellement utilisées comme "
-"factures préliminaires à un devis ou à des fins douanières lors d'une "
-"importation. Elles diffèrent d'une facture normale en ce qu'elles ne "
-"constituent pas une demande ou une requête de paiement."
+"Une *facture pro forma* est une facture abrégée ou estimée envoyée avant la "
+"livraison des marchandises. Elle indique la nature et la quantité des "
+"marchandises, leur valeur et d'autres informations importantes, telles que "
+"le poids et les frais de transport."
 
-#: ../../content/applications/sales/sales/invoicing/proforma.rst:13
+#: ../../content/applications/sales/sales/invoicing/proforma.rst:9
+msgid ""
+"Pro-forma invoices are commonly used as preliminary invoices with a "
+"quotation. They are also used for customs purposes during importation. They "
+"differ from a normal invoice in that they are not a demand (or request) for "
+"payment."
+msgstr ""
+"Les factures pro forma sont généralement utilisées comme factures "
+"préliminaires à un devis. Elles sont également utilisées à des fins "
+"douanières lors de l'importation. Elles diffèrent d'une facture normale en "
+"ce sens qu'elles ne constituent pas une demande de paiement."
+
+#: ../../content/applications/sales/sales/invoicing/proforma.rst:14
 msgid "Activate the feature"
 msgstr "Activer la fonctionnalité"
 
-#: ../../content/applications/sales/sales/invoicing/proforma.rst:15
+#: ../../content/applications/sales/sales/invoicing/proforma.rst:16
 msgid ""
-"Go to :menuselection:`SALES --> Configuration --> Settings` and activate the"
-" *Pro-Forma Invoice* feature."
+"In order to utilize pro-forma invoices, the *Pro-Forma Invoice* feature "
+"**must** be activated. To do that, navigate to :menuselection:`Sales app -->"
+" Configuration --> Settings`, and in the :guilabel:`Quotations & Orders` "
+"section, click the checkbox next to :guilabel:`Pro-Forma Invoice`. Then, "
+"click :guilabel:`Save` to save all changes."
 msgstr ""
-"Allez à :menuselection:`Ventes --> Configuration --> Paramètres` et activez "
-"la fonctionnalité *Facture pro forma*."
+"Pour utiliser les factures pro forma, vous **devez** activer la "
+"fonctionnalité *Facture pro forma*. Pour ce faire, allez à l'application "
+":menuselection:`Ventes --> Configuration --> Paramètres` et dans la section "
+":guilabel:`Devis & Commandes`, cochez la case à côté de :guilabel:`Facture "
+"pro forma`. Cliquez ensuite sur :guilabel:`Enregistrer` pour enregistrer "
+"tous les changements."
 
-#: ../../content/applications/sales/sales/invoicing/proforma.rst:24
-msgid ""
-"From any quotation or sales order, you know have an option to send a pro-"
-"forma invoice."
+#: ../../content/applications/sales/sales/invoicing/proforma.rst-1
+msgid "The Pro-Forma Invoice feature setting in the Odoo Sales application."
 msgstr ""
-"À partir de n'importe quel devis ou commande client, vous avez l'option "
-"d'envoyer une facture pro forma."
+"La fonctionnalité de facture pro forma dans l'application Ventes d'Odoo."
 
-#: ../../content/applications/sales/sales/invoicing/proforma.rst:30
+#: ../../content/applications/sales/sales/invoicing/proforma.rst:26
+msgid "Send a pro-forma invoice"
+msgstr "Envoyer une facture pro forma"
+
+#: ../../content/applications/sales/sales/invoicing/proforma.rst:28
 msgid ""
-"When you click on send, Odoo will send an email with the pro-forma invoice "
-"in attachment."
+"With the :guilabel:`Pro-Forma Invoice` feature activated, the option to send"
+" a pro-forma invoice is now available on any quotation or sales order, via "
+"the :guilabel:`Send Pro-Forma Invoice` button."
 msgstr ""
-"Lorsque vous cliquez sur envoyer, Odoo vous enverra un email avec la facture"
-" pro forma en pièce jointe."
+"Une fois que la fonctionnalité :guilabel:`Facture pro forma` est activée, "
+"l'option d'envoyer une facture pro forma est désormais disponible sur tous "
+"les devis ou commandes clients, en cliquant sur le bouton :guilabel:`Envoyer"
+" la facture pro forma`."
+
+#: ../../content/applications/sales/sales/invoicing/proforma.rst-1
+msgid ""
+"The Send Pro-Forma Invoice button on a typical sales order in Odoo Sales."
+msgstr ""
+"Le bouton Envoyer la facture pro forma sur une commande typique dans Odoo "
+"Ventes."
+
+#: ../../content/applications/sales/sales/invoicing/proforma.rst:35
+msgid ""
+"When the :guilabel:`Send Pro-Forma Invoice` button is clicked, an email pop-"
+"up appears. The :guilabel:`Recipients` field is auto-populated with the "
+"customer from the sales order or quotation. Then, if needed, modify the "
+":guilabel:`Subject` field and the body of the email. The pro-forma invoice "
+"is automatically added as an attachment to the email."
+msgstr ""
+"Lorsque vous cliquez sur le bouton :guilabel:`Envoyer la facture pro forma`,"
+" une fenêtre contextuelle d'email s'affiche. Le champ "
+":guilabel:`Destinataires` est automatiquement rempli avec le client de la "
+"commande ou du devis. Ensuite, le cas échéant, modifiez le champ "
+":guilabel:`Sujet` et le corps de l'email. La facture pro forma est "
+"automatiquement ajoutée en pièce jointe à l'email."
+
+#: ../../content/applications/sales/sales/invoicing/proforma.rst:40
+msgid ""
+"When ready, click :guilabel:`Send`, and Odoo instantly sends the email, with"
+" the attached pro-forma invoice, to the customer."
+msgstr ""
+"Quand l'email est prêt, cliquez sur :guilabel:`Envoyer` et Odoo envoie "
+"l'email instantanément avec la facture pro forma en pièce jointe au client."
+
+#: ../../content/applications/sales/sales/invoicing/proforma.rst-1
+msgid ""
+"The email pop-up window that appears with pro-forma invoice attached in Odoo"
+" Sales."
+msgstr ""
+"La fenêtre contextuelle de l'email apparaît avec la facture pro forma en "
+"pièce jointe dans Odoo Ventes."
+
+#: ../../content/applications/sales/sales/invoicing/proforma.rst:48
+msgid ""
+"To preview what the pro-forma invoice looks like, click on the PDF at the "
+"bottom of the email pop-up window *before* clicking :guilabel:`Send`. When "
+"clicked, the pro-forma invoice is downloaded instantly. Open that PDF to "
+"view (and review) the pro-forma invoice."
+msgstr ""
+"Pour avoir un aperçu de la facture pro forma, cliquez sur le PDF en bas de "
+"la fenêtre contextuelle d'email *avant* de cliquer sur :guilabel:`Envoyer`. "
+"Lorsque vous cliquez sur ce bouton, la facture pro forma est immédiatement "
+"téléchargée. Ouvrez ce PDF pour voir (et réviser) la facture pro forma."
+
+#: ../../content/applications/sales/sales/invoicing/proforma.rst:0
+msgid "Sample pro-forma invoice PDF from Odoo Sales."
+msgstr "Exemple d'une facture pro forma au format PDF dans Odoo Ventes."
 
 #: ../../content/applications/sales/sales/invoicing/time_materials.rst:3
 msgid "Invoice based on time and materials"
@@ -8948,7 +9265,6 @@ msgstr ""
 "</applications/sales/sales/products_prices/prices/pricing>`."
 
 #: ../../content/applications/sales/sales/products_prices/loyalty_discount.rst:11
-#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:10
 msgid "Configure the settings"
 msgstr "Configurer les paramètres"
 
@@ -9616,8 +9932,8 @@ msgid ""
 msgstr ""
 "Pour appliquer des prix différents par produit, sélectionnez *Prix "
 "différents par segment de clients* dans :menuselection:`Ventes --> "
-"Paramètres`. Ouvrez ensuite l'onglet *Ventes* dans la fiche du produit. Vous"
-" pouvez définir les stratégies suivantes."
+"Paramètres`. Ouvrez ensuite l'onglet *Ventes* dans la fiche détaillée du "
+"produit. Vous pouvez définir les stratégies suivantes."
 
 #: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:31
 msgid "Prices per customer segment"
@@ -9637,8 +9953,8 @@ msgid ""
 "Pricelist* in the *Sales & Purchases* tab."
 msgstr ""
 "La liste de prix par défaut appliquée à tout nouveau client est la *liste de"
-" prix publique*. Pour segmenter vos clients, ouvrez la fiche du client et "
-"changez la *liste de prix* dans l'onglet *Ventes & Achats*."
+" prix publique*. Pour segmenter vos clients, ouvrez la fiche détaillée du "
+"client et changez la *liste de prix* dans l'onglet *Ventes & Achats*."
 
 #: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:46
 msgid "Temporary prices"
@@ -10959,141 +11275,8 @@ msgstr "Comment sont affichées les échéances dans Odoo Ventes ?"
 #: ../../content/applications/sales/sales/send_quotations/get_paid_to_validate.rst:50
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:51
 #: ../../content/applications/sales/sales/send_quotations/optional_products.rst:65
-#: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst:115
 msgid ":doc:`quote_template`"
 msgstr ":doc:`quote_template`"
-
-#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:3
-msgid "Deliver and invoice to different addresses"
-msgstr "Livrer et facturer à des adresses différentes"
-
-#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:5
-msgid ""
-"People and businesses often use separate addresses for billing (invoicing) "
-"and shipping (delivery) purposes. With the Odoo *Sales* app, contacts can "
-"have different specified addresses for delivery and invoicing."
-msgstr ""
-"Les particuliers et les sociétés utilisent souvent des adresses distinctes "
-"pour la facturation et la livraison. Avec l'application *Ventes* d'Odoo, les"
-" contacts peuvent préciser différentes adresses pour la livraison et la "
-"facturation."
-
-#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:12
-msgid ""
-"Go to :menuselection:`Invoicing --> Configuration --> Settings` and scroll "
-"down to the :guilabel:`Customer Invoices` section. Then, check the box next "
-"to :guilabel:`Customer Addresses`, and click :guilabel:`Save`."
-msgstr ""
-"Allez à :menuselection:`Facturation --> Configuration --> Paramètres` et "
-"faites défiler jusqu'à la section :guilabel:`Factures clients`. Ensuite, "
-"cochez la case à côté de :guilabel:`Adresses du client` et cliquez sur "
-":guilabel:`Enregistrer`."
-
-#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:17
-msgid ""
-"Navigating through the *Invoicing* app will not be possible if the "
-"*Accounting* app has been installed. Instead, go through "
-":menuselection:`Accounting --> Configuration --> Settings` to enable the "
-":guilabel:`Customer Addresses` feature."
-msgstr ""
-"Il ne sera pas possible d'aller à l'application *Facturation* lorsque "
-"l'application *Comptabilité* a été installée. Allez plutôt à "
-":menuselection:`Comptabilité --> Configuration --> Paramètres` pour activer "
-"la fonctionnalité :guilabel:`Adresses du client`."
-
-#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst-1
-msgid "Activate the Customer Addresses setting."
-msgstr "Activez le paramètre Adresses du client."
-
-#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:26
-msgid "Configure the contact form"
-msgstr "Configurer le formulaire de contact"
-
-#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:28
-msgid ""
-"Navigate to the :menuselection:`Contacts` app (or to :menuselection:`Sales "
-"--> Orders --> Customers`), and click on a customer to open their contact "
-"form."
-msgstr ""
-"Allez à l'application :menuselection:`Contacts` (ou à :menuselection:`Ventes"
-" --> Commandes --> Clients`) et cliquez sur un client pour ouvrir sa fiche "
-"de contact."
-
-#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:31
-msgid "Under the :guilabel:`Contacts & Addresses` tab, click :guilabel:`Add`."
-msgstr ""
-"Dans l'onglet :guilabel:`Contacts & Adresses`, cliquez sur "
-":guilabel:`Ajouter`."
-
-#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst-1
-msgid "Add a contact/address to the contact form"
-msgstr "Ajouter un contact/une adresse à la fiche de contact"
-
-#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:37
-msgid ""
-"Then, select which type of address to add to the contact form (i.e. "
-":guilabel:`Invoice Address` or :guilabel:`Delivery Address`)."
-msgstr ""
-"Ensuite, sélectionnez le type d'adresse que vous voulez ajouter à la fiche "
-"de contact (par ex. :guilabel:`Adresse de facturation` ou :guilabel:`Adresse"
-" de livraison`)."
-
-#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst-1
-msgid "Create a new contact/address on a contact form."
-msgstr ""
-"Créez un nouveau contact/une nouvelle adresse sur une fiche de contact."
-
-#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:44
-msgid ""
-"Enter the address information. Then click :guilabel:`Save & Close` to save "
-"the address and close the :guilabel:`Create Contact` window. Or, click "
-":guilabel:`Save & New` to save this address and immediately input another "
-"one."
-msgstr ""
-"Saisissez les informations d'adresse. Cliquez ensuite sur "
-":guilabel:`Enregistrer & Fermer` pour enregistrer l'adresse et fermer la "
-"fenêtre :guilabel:`Créer contact`. Ou cliquez sur :guilabel:`Enregistrer & "
-"Nouveau` pour enregistrer cette adresse et immédiatement créer un autre "
-"contact."
-
-#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:49
-msgid "Add addresses to the quotation"
-msgstr "Ajouter des adresses au devis"
-
-#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:51
-msgid ""
-"When a customer is added to a quotation, the :guilabel:`Invoice Address` and"
-" :guilabel:`Delivery Address` fields will autopopulate according to the "
-"addresses specified on the customer's contact form."
-msgstr ""
-"Lorsqu'un client est ajouté à un devis, les champs :guilabel:`Adresse de "
-"facturation` et :guilabel:`Adresse de livraison` se remplissent "
-"automatiquement en fonction des adresses précisées sur la fiche de contact "
-"du client."
-
-#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst-1
-msgid "Invoice and Delivery Addresses autopopulate on a quotation."
-msgstr ""
-"Les adresses de facturation et de livraison se remplissent automatiquement "
-"dans un devis."
-
-#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:59
-msgid ""
-"The :guilabel:`Invoice Address` and :guilabel:`Delivery Address` can also be"
-" edited directly from the quotation by clicking on the :guilabel:`Internal "
-"link` buttons next to each address line."
-msgstr ""
-"Il est également possible de modifier l':guilabel:`Adresse de facturation` "
-"et l':guilabel:`Adresse de livraison` à partir du devis en cliquant sur les "
-"boutons de :guilabel:`Lien interne` à côté de chaque ligne d'adresse."
-
-#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:62
-msgid ""
-"These addresses can be updated at any time to ensure accurate invoicing and "
-"delivery."
-msgstr ""
-"Ces adresses peuvent être mises à jour à tout moment pour garantir "
-"l'exactitude de la facturation et de la livraison."
 
 #: ../../content/applications/sales/sales/send_quotations/get_paid_to_validate.rst:3
 msgid "Get paid to confirm an order"
@@ -11578,369 +11761,178 @@ msgid "Line items for grid variants."
 msgstr "Ligne par élément de la grille des variantes"
 
 #: ../../content/applications/sales/sales/send_quotations/quote_template.rst:3
-msgid "Use quotation templates"
-msgstr "Utiliser des modèles de devis"
+msgid "Quotation templates"
+msgstr "Modèles de devis"
 
 #: ../../content/applications/sales/sales/send_quotations/quote_template.rst:5
 msgid ""
-"By creating custom quotation templates, you will save a lot of time. Indeed,"
-" with the use of templates, you will be able to send complete quotations at "
-"a fast pace."
+"Using quotation templates speeds up the creation of sales orders by filling "
+"in most quotation fields automatically."
 msgstr ""
-"La création des modèles de devis personnalisés vous permet de gagner "
-"beaucoup de temps. En effet, grâce à l'utilisation de modèles, vous pourrez "
-"envoyer des devis complets rapidement."
+"L'utilisation des modèles de devis accélère la création des commandes "
+"clients en complétant automatiquement la plupart des champs du devis."
 
 #: ../../content/applications/sales/sales/send_quotations/quote_template.rst:11
 msgid ""
-"To enable this feature, go to :menuselection:`Sales --> Configuration --> "
-"Settings` and activate **Quotation Templates**."
+"Go to :menuselection:`Sales --> Configuration --> Settings` and enable "
+":guilabel:`Quotation Templates`."
 msgstr ""
-"Pour activer cette fonctionnalité, allez à :menuselection:`Ventes --> "
-"Configuration --> Paramètres` et activez les **Modèles de devis**."
+"Allez à :menuselection:`Ventes --> Configuration --> Paramètres` et activez "
+"l'option :guilabel:`Modèles de devis`."
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst-1
-msgid "How to enable quotation templates on Odoo Sales?"
-msgstr "Comment activer les modèles de devis dans Odoo Ventes ?"
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:15
+msgid "Create a template"
+msgstr "Créer un modèle"
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:19
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:17
 msgid ""
-"For even more convenience, it is also recommended to add the **Quotation "
-"Builder** feature which will help you design your quotation templates very "
-"easily. This option will automatically install the Odoo Website App."
+"Go to :menuselection:`Sales --> Configuration --> Quotations Templates` and "
+"click :guilabel:`New`."
 msgstr ""
-"Pour encore plus de facilité, il est également recommandé d'ajouter la "
-"fonctionnalité **Constructeur de devis** qui vous aidera à construire très "
-"facilement vos modèles de devis. Cette option installe automatiquement "
-"l'application Site Web d'Odoo."
+"Allez à :menuselection:`Ventes --> Configuration --> Modèles de devis` et "
+"cliquez sur :guilabel:`Nouveau`."
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst-1
-msgid "How to enable quotation builder on Odoo Sales?"
-msgstr "Comment activer le constructeur de devis dans Odoo Ventes ?"
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:20
+msgid "Apart from the name, all template fields are optional."
+msgstr "À l'exception du nom, tous les champs du modèle sont optionnels."
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:22
+msgid ""
+"After having named the template, choose default values for the following "
+"fields:"
+msgstr ""
+"Après avoir nommé le modèle, choisissez les valeurs par défaut pour les "
+"champs suivants :"
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:24
+msgid ""
+":guilabel:`Quotation expires after`: choose the number of days for which the"
+" quotation is valid."
+msgstr ""
+":guilabel:`Le devis expire après` : choisissez le nombre de jours pendant "
+"lesquels le devis est valable."
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:25
+msgid ""
+":guilabel:`Online confirmation`: after sending the quotation by email, it is"
+" possible to ask the customer to confirm it online on their customer portal:"
+msgstr ""
+":guilabel:`Confirmation en ligne` : après avoir envoyé le devis par email, "
+"vous pouvez demander au client de le confirmer en ligne sur son portail "
+"client :"
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:28
+msgid "by providing a :guilabel:`Signature`,"
+msgstr "en fournissant une :guilabel:`Signature`,"
 
 #: ../../content/applications/sales/sales/send_quotations/quote_template.rst:29
-msgid "Create your first template"
-msgstr "Créer votre premier modèle"
+msgid "by making a :guilabel:`Payment`,"
+msgstr "en effectuant un :guilabel:`Paiement`,"
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:31
-msgid ""
-"Quotation templates are under :menuselection:`Sales --> Configuration`."
-msgstr ""
-"Les modèles de devis se trouvent dans :menuselection:`Ventes --> "
-"Configuration`."
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:30
+msgid "or both."
+msgstr "ou les deux."
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:33
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:32
 msgid ""
-"You can create a new template or edit an existing one. Once named, you will "
-"be able to select products and quantities as well as the expiration time of "
-"the quotation."
+":guilabel:`Confirmation Mail`: select an email template to automatically "
+"send an email to the customer upon confirming the quotation."
 msgstr ""
-"Vous pouvez alors créer un nouveau modèle ou modifier un modèle existant. "
-"Une fois nommé, vous pourrez sélectionner les produits et les quantités, "
-"ainsi que la date d'expiration du devis."
+":guilabel:`Email de confirmation` : sélectionnez un modèle d'email pour "
+"envoyer automatiquement un email au client lors de la confirmation du devis."
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:35
+msgid ""
+"On the :guilabel:`Lines` tab, add the default products and their quantity. "
+"Add :doc:`optional products <optional_products>` in the :guilabel:`Optional "
+"Products` tab."
+msgstr ""
+"Dans l'onglet :guilabel:`Lignes`, ajoutez les produits par défaut, ainsi que"
+" leur quantité. Ajoutez les :doc:`produits optionnels <optional_products>` "
+"dans l'onglet :guilabel:`Produits optionnels`."
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:38
+msgid ""
+"Finally, add any specific sales terms and conditions on the :guilabel:`Terms"
+" & Conditions` tab."
+msgstr ""
+"Enfin, ajoutez des conditions générales de vente spécifiques dans l'onglet "
+":guilabel:`Conditions générales`."
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:41
+msgid ""
+"If the terms and conditions are standard across all quotations, :doc:`set "
+"them globally in the Accounting/Invoicing settings "
+"</applications/finance/accounting/customer_invoices/terms_conditions>` "
+"instead."
+msgstr ""
+"Si les conditions générales sont standards pour tous les devis, "
+":doc:`définissez-les plutôt dans les paramètres Comptabilité/Facturation "
+"</applications/finance/accounting/customer_invoices/terms_conditions>`."
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:46
+msgid "Design a template"
+msgstr "Concevoir un modèle"
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:48
+msgid ""
+"Customize the appearance of quotations on the customer portal by going to "
+":menuselection:`Sales --> Configuration --> Settings` and enabling the "
+":guilabel:`Quotation Builder` feature."
+msgstr ""
+"Personnalisez l'apparence des devis sur le portail client en allant à "
+":menuselection:`Ventes --> Configuration --> Paramètres` et en activant la "
+"fonctionnalité :guilabel:`Constructeur de devis`."
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:52
+msgid ""
+"If necessary, Odoo automatically activates the :doc:`Website "
+"</applications/websites/website>` app when enabling this feature."
+msgstr ""
+"Si nécessaire, Odoo active automatiquement l'application :doc:`Site Web "
+"</applications/websites/website>` lors de l'activation de cette "
+"fonctionnalité."
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:55
+msgid ""
+"Select a template by going to :menuselection:`Sales --> Configuration --> "
+"Quotations Templates` and clicking on a template. Then click the "
+":guilabel:`Design Template` button. On the website builder, click "
+":guilabel:`Edit`. Drag and drop the building blocks, edit the content, and "
+":guilabel:`Save`."
+msgstr ""
+"Sélectionnez un modèle en allant à :menuselection:`Ventes --> Configuration "
+"--> Modèles de devis` et en cliquant sur un modèle. Cliquez ensuite sur le "
+"bouton :guilabel:`Concevoir un modèle`. Sur le constructeur de site web, "
+"cliquez sur :guilabel:`Modifier`. Glissez et déposez les blocs de "
+"construction et :guilabel:`Enregistrez`."
 
 #: ../../content/applications/sales/sales/send_quotations/quote_template.rst-1
-msgid "Create a new quotation template on Odoo Sales"
-msgstr "Créer un nouveau modèle de devis dans Odoo Ventes"
-
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:42
-msgid "Design your template"
-msgstr "Concevoir votre modèle"
-
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:44
-msgid ""
-"You will have the possibility to design your template and edit the customer "
-"interface in order to manage what clients will see before accepting and "
-"paying the quotation. For example, you will be able to describe your "
-"company, your services and your products. To do so, you can click on "
-"**Edit** and you will be brought to the quotation builder."
-msgstr ""
-"Vous avez la possibilité de concevoir votre modèle et de modifier "
-"l'interface client afin de gérer ce que les clients verront avant d'accepter"
-" et de payer le devis. Par exemple, vous pourrez décrire votre entreprise, "
-"vos services et vos produits. Pour ce faire, cliquez sur **Modifier** et "
-"vous serez conduit au constructeur de devis."
-
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst-1
-msgid "Design your quotation template on Odoo Sales"
-msgstr "Créer votre modèle de devis dans Odoo Ventes"
-
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:54
-msgid ""
-"You can easily edit the content of your template by dragging & dropping "
-"different building blocks to organize your quotation. For example, you can "
-"add a content block to describe your products."
-msgstr ""
-"Vous pouvez facilement modifier le contenu de votre modèle en glissant & "
-"déposant différents blocs de construction pour organiser votre devis. Par "
-"exemple, vous pouvez ajouter un bloc de contenu pour décrire vos produits."
-
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst-1
-msgid ""
-"Drag & drop building blocks to create your quotation template on Odoo Sales"
-msgstr ""
-"Glisser & déposer des blocs de construction pour créer votre modèle de devis"
-" dans Odoo Ventes"
+msgid "Using the quotation builder"
+msgstr "Utilisez le constructeur de devis"
 
 #: ../../content/applications/sales/sales/send_quotations/quote_template.rst:63
-msgid "Use a quotation template"
-msgstr "Utiliser un modèle de devis"
+msgid "Use a template"
+msgstr "Utiliser un modèle"
 
 #: ../../content/applications/sales/sales/send_quotations/quote_template.rst:65
-msgid "When creating a quotation, you can choose a specific template."
-msgstr ""
-"Lors de la création d'un devis, vous pouvez choisir un modèle spécifique."
-
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst-1
-msgid "Select a specific template on Odoo Sales"
-msgstr "Sélectionner un modèle spécifique dans Odoo Ventes"
-
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:73
 msgid ""
-"You can select any template of your choice and suggest it as the default "
-"template in the **Sales** settings."
+"When creating a quotation, choose a template under the :guilabel:`Quotation "
+"Template` field. All the fields are then filled accordingly. Manually edit "
+"any pre-filled field if needed."
 msgstr ""
-"Vous pouvez sélectionner le modèle de votre choix et le suggérer comme "
-"modèle par défaut dans les paramètres de **Ventes**."
+"Lors de la création d'un devis, choisissez un modèle dans le champ "
+":guilabel:`Modèle de devis`. Tous les champs sont ensuite complétés en "
+"conséquence. Si nécessaire, vous pouvez modifier manuellement les champs "
+"préremplis."
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:77
-msgid "Confirm the quotation"
-msgstr "Confirmer le devis"
-
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:79
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:69
 msgid ""
-"Templates facilitate the confirmation process by allowing customers to sign "
-"electronically or to pay online. You can activate these two options directly"
-" in the quotation template itself."
+"Go to :menuselection:`Sales --> Configuration --> Settings` to select a "
+":guilabel:`Default Template`."
 msgstr ""
-"Les modèles facilitent le processus de confirmation en permettant à vos "
-"clients de signer électroniquement ou de payer en ligne. Vous pouvez "
-"activement ces deux options directement dans le modèle de devis lui-même. "
-
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst-1
-msgid ""
-"Allow your customers to sign electronically or to pay online on Odoo Sales"
-msgstr ""
-"Autoriser vos clients à signer électroniquement ou à payer en ligne dans "
-"Odoo Ventes"
-
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:88
-msgid ""
-"Every quotation will now have this setting. Of course you can always change "
-"it and make it specific for each quotation."
-msgstr ""
-"Tous les devis seront désormais configurés de cette manière. Bien entendu, "
-"vous pouvez toujours le modifier et le rendre spécifique chaque devis. "
-
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:92
-#: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst:116
-msgid ":doc:`get_signature_to_validate`"
-msgstr ":doc:`get_signature_to_validate`"
-
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:93
-#: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst:117
-msgid ":doc:`get_paid_to_validate`"
-msgstr ":doc:`get_paid_to_validate`"
-
-#: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst:3
-msgid "Add terms & conditions"
-msgstr "Ajouter des conditions générales"
-
-#: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst:5
-msgid ""
-"Specifying terms and conditions is essential to set out important "
-"contractual points such as payment terms, limitation of liability and "
-"delivery terms between customers and sellers. Every seller must declare all "
-"formal information concerning products and company policy. On the other "
-"hand, each customer must take note of all these conditions before committing"
-" to anything. With Odoo Sales, it is very easy to include your default terms"
-" and conditions on every quotation, sales order, and invoice that you "
-"manage."
-msgstr ""
-"Il est essentiel de définir des conditions générales pour fixer les éléments"
-" contractuels importants tels que les conditions de paiement, la limitation "
-"de la responsabilité et les délais de livraison entre les clients et les "
-"vendeurs. Chaque vendeur doit déclarer toutes les informations formelles "
-"concernant les produits et la politique de l'entreprise. D'autre part, "
-"chaque client doit prendre connaissance de ces conditions avant de s'engager"
-" à quoi que ce soit. Avec Odoo Ventes, il est très facile d'inclure vos "
-"conditions générales par défaut sur chaque devis, commande client et facture"
-" que vous gérez."
-
-#: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst:13
-msgid "Default Terms & Conditions"
-msgstr "Conditions générales par défaut"
-
-#: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst:18
-msgid ""
-"Go to :menuselection:`Accounting --> Configuration --> Settings` and "
-"activate *Default Terms & Conditions*."
-msgstr ""
-"Allez à :menuselection:`Comptabilité --> Configuration --> Paramètres` et "
-"activez les *Conditions générales par défaut*."
-
-#: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst-1
-msgid "How to enable Default Terms & Conditions on Odoo Sales?"
-msgstr ""
-"Comment activer des conditions générales par défaut dans Odoo Ventes ?"
-
-#: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst:27
-msgid ""
-"Please note that this feature is activated via the settings of the "
-"**Invoicing App** and **not** via the settings of the **Sales App**. "
-"Moreover, you don't need to install the invoicing application since it is "
-"done automatically with the installation of the sales application."
-msgstr ""
-"Notez que cette fonctionnalité s'active dans les paramètres de "
-"l'**application Comptabilité** et **pas** dans les paramètres de "
-"l'**application Ventes**. De plus, vous n'avez pas besoin d'installer "
-"l'application Comptabilité, car cela se fait automatiquement avec "
-"l'installation de l'application Ventes."
-
-#: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst:32
-msgid "DT&C on your quotations, sales orders, and invoices"
-msgstr ""
-"Conditions générales par défaut sur vos devis, commandes clients et factures"
-
-#: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst:34
-msgid ""
-"In the settings of the **Invoicing App**, you have the possibility to insert"
-" your default terms and conditions."
-msgstr ""
-"Dans les paramètres de **l'application Comptabilité**, vous avez la "
-"possibilité d'insérer vos conditions générales par défaut."
-
-#: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst-1
-msgid "Default Terms & Conditions on quotation on Odoo Sales"
-msgstr "Conditions générales par défaut sur un devis dans Odoo Ventes"
-
-#: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst:42
-msgid "They appear subsequently on every quotation, sales order, and invoice."
-msgstr ""
-"Elles apparaissent ensuite sur chaque devis, commande client et facture."
-
-#: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst:45
-msgid "DT&C on your quotation templates"
-msgstr "Conditions générales par défaut sur vos modèles de devis"
-
-#: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst:47
-msgid ""
-"According to your business needs, you can specify your terms and conditions "
-"on your quotation templates. This is interesting if you have different terms"
-" and conditions within your company."
-msgstr ""
-"Selon les besoins de votre entreprise, vous pouvez définir vos conditions "
-"générales sur vos modèles de devis. Ceci est intéressant si vous avez des "
-"conditions générales différentes au sein de votre entreprise."
-
-#: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst-1
-msgid ""
-"Add Default Terms & Conditions to your quotation templates on Odoo Sales"
-msgstr ""
-"Ajouter des conditions générales par défaut à vos modèles de devis sur Odoo "
-"Ventes"
-
-#: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst:56
-msgid ""
-"Be sure to check out our documentation about quotation templates: "
-":doc:`quote_template`, to master each step of this amazing feature."
-msgstr ""
-"N'oubliez pas de consulter notre documentation sur les modèles de devis : "
-":doc:`quote_template` pour maîtriser chaque étape de cette fonctionnalité "
-"étonnante."
-
-#: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst:60
-msgid "General Terms & Conditions"
-msgstr "Conditions générales"
-
-#: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst:63
-msgid "GT&C on your website"
-msgstr "Conditions générales sur votre site web"
-
-#: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst:65
-msgid ""
-"Use the **Website App** and create your own general terms and conditions "
-"page. For example, here is the Odoo terms and conditions page:"
-msgstr ""
-"Utilisez l'**application Site Web** et créez votre propre page de conditions"
-" générales. Par exemple, voici la page des conditions générales d'Odoo :"
-
-#: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst-1
-msgid "General Terms & Conditions on your website"
-msgstr "Conditions générales sur votre site web"
-
-#: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst:73
-msgid ""
-"You can refer to this page in the footer of all your documents. The layout "
-"is available in the **General Settings** under the **Business Documents** "
-"category. For example, this footer appears in every document from Odoo."
-msgstr ""
-"Vous pouvez faire référence à cette page dans le pied de page de tous vos "
-"documents. La mise en page est disponible dans les **Paramètres généraux** "
-"sous la catégorie **Documents commerciaux**. Par exemple, ce pied de page "
-"apparaît dans tous les documents d'Odoo."
-
-#: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst-1
-msgid "General Terms & Conditions in your business documents"
-msgstr "Conditions générales dans vos documents commerciaux"
-
-#: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst:83
-msgid "GT&C as attachment in your emails"
-msgstr "Conditions générales en pièce jointe à vos emails"
-
-#: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst:85
-msgid ""
-"Attach an external document with your general terms and conditions when you "
-"are about to send your quotation by email to your customers."
-msgstr ""
-"Joignez un document externe avec vos conditions générales lorsque vous êtes "
-"sur le point d'envoyer votre devis par email à vos clients."
-
-#: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst-1
-msgid "General Terms & conditions as attachment in your email"
-msgstr "Conditions générales en pièce jointe à votre email"
-
-#: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst:94
-msgid "GT&C as attachment in your quotation templates"
-msgstr "Conditions générales en pièce jointe à vos modèles de devis"
-
-#: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst:96
-msgid ""
-"Create and edit email templates to set a default attachment for all "
-"quotation emails that you will send in the future. To do so, you have to go "
-"to :menuselection:`Sales --> Configuration --> Quotation templates` and "
-"create a new quotation template or modify an existing one. Under the "
-"confirmation tab, you are now able to activate online signatures, online "
-"payments and to set a confirmation mail in which you have the possibility to"
-" configure the default attachment. There, you can put your general terms & "
-"conditions."
-msgstr ""
-"Créez et modifiez des modèles d'email pour définir une pièce jointe par "
-"défaut pour tous les emails de devis que vous enverrez à l'avenir. Pour ce "
-"faire, vous devez vous rendre à :menuselection:`Ventes --> Configuration -->"
-" Modèles de devis` et modifier un modèle de devis existant ou en créer un "
-"nouveau. Sous l'onglet de confirmation, vous pouvez à présent activer les "
-"signatures en ligne, les paiements en ligne et définir un mail de "
-"confirmation dans lequel vous avez la possibilité de configurer la pièce "
-"jointe par défaut. Vous pouvez y insérer vos conditions générales."
-
-#: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst-1
-msgid "General Terms & conditions as attachment in your quotation templates"
-msgstr "Conditions générales en pièce jointe à vos modèles de devis"
-
-#: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst:109
-msgid ""
-"To customize your email templates, activate the **developer mode** and go to"
-" :menuselection:`Settings --> Technical --> Email --> Templates`."
-msgstr ""
-"Pour personnaliser vos modèles d'email, activez le **mode développeur** et "
-"allez à :menuselection:`Paramètres --> Technique --> Email --> Modèles`."
-
-#: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst:112
-msgid "With Odoo Sales it is now very simple to deal with terms & conditions."
-msgstr ""
-"Avec Odoo Ventes, il est désormais très simple de gérer les conditions "
-"générales."
+"Allez à :menuselection:`Ventes --> Configuration --> Paramètres` pour "
+"sélectionner un :guilabel:`Modèle par défaut`."
 
 #: ../../content/applications/sales/subscriptions.rst:5
 msgid "Subscriptions"
@@ -12047,11 +12039,12 @@ msgstr ""
 msgid ""
 "You can define different invoice and delivery addresses by enabling the "
 ":doc:`Customer Addresses "
-"</applications/sales/sales/send_quotations/different_addresses>` feature."
+"</applications/finance/accounting/customer_invoices/customer_addresses>` "
+"feature."
 msgstr ""
-"Vous pouvez définir différentes adresses de facturation et de livraison en "
-"activant la fonctionnalité :doc:`Adresses du client "
-"</applications/sales/sales/send_quotations/different_addresses>`."
+"Vous pouvez définir des adresses de facturation et de livraison différentes "
+"en activant la fonctionnalité :doc:`Adresses du client "
+"</applications/finance/accounting/customer_invoices/customer_addresses>`."
 
 #: ../../content/applications/sales/subscriptions.rst:48
 msgid "Confirmation"
@@ -12896,14 +12889,14 @@ msgstr ""
 #: ../../content/applications/sales/subscriptions/plans.rst:77
 msgid ""
 "If the subscription plan has unique :doc:`terms and conditions "
-"</applications/sales/sales/send_quotations/terms_and_conditions>`, add them "
-"in the :guilabel:`Terms & Conditions` tab. If terms conditions are specified"
-" on a plan, these will be used instead of the default terms and conditions "
-"set up in the *Sales* app settings."
+"</applications/finance/accounting/customer_invoices/terms_conditions>`, add "
+"them in the :guilabel:`Terms & Conditions` tab. If terms conditions are "
+"specified on a plan, these will be used instead of the default terms and "
+"conditions set up in the *Sales* app settings."
 msgstr ""
 "Si le plan d'abonnement a des :doc:`Conditions générales "
-"</applications/sales/sales/send_quotations/terms_and_conditions>` uniques, "
-"ajoutez-les dans l'onglet :guilabel:`Conditions générales`. Si les "
+"</applications/finance/accounting/customer_invoices/terms_conditions>` "
+"uniques, ajoutez-les dans l'onglet :guilabel:`Conditions générales`. Si les "
 "conditions générales sont précisées sur un plan, celles-ci seront utilisées "
 "au lieu des conditions générales par défaut définies dans les paramètres de "
 "l'application *Ventes*."

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-02 14:02+0000\n"
+"POT-Creation-Date: 2023-07-03 09:37+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
 "Last-Translator: Abe Manyo, 2023\n"
 "Language-Team: Indonesian (https://app.transifex.com/odoo/teams/41243/id/)\n"
@@ -158,7 +158,7 @@ msgstr "Otentifikasi"
 
 #: ../../content/applications/general/auth/2fa.rst:3
 msgid "Two-factor Authentication"
-msgstr ""
+msgstr "Autentikasi Dua-faktor"
 
 #: ../../content/applications/general/auth/2fa.rst:5
 msgid ""
@@ -1016,7 +1016,7 @@ msgstr ""
 
 #: ../../content/applications/general/digest_emails.rst:103
 msgid "All Sales"
-msgstr ""
+msgstr "Semua Sales"
 
 #: ../../content/applications/general/digest_emails.rst:103
 msgid "`kpi_all_sale_total_value`"
@@ -1975,6 +1975,61 @@ msgid ""
 "This value can be changed in :ref:`developer mode <developer-mode>`. Go to "
 ":menuselection:`Settings --> Technical --> Automation --> Scheduled Actions`"
 " and look for :guilabel:`Mail: Fetchmail Service`."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers.rst:276
+msgid "System parameters that prevent feedback loops"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers.rst:278
+msgid ""
+"There are two system parameters that help prevent email loops from occurring"
+" in Odoo. These parameters were introduced in Odoo 16 to prevent aliases "
+"from creating too many records and to prevent feedback loops on the catchall"
+" reply-to email address. They are present in database but not in the *System"
+" Parameters*. To override the following defaults they need to be added in."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers.rst:283
+msgid "The two system parameters are as follows:"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers.rst:285
+msgid "`mail.incoming.limit.period` (60 minutes by default)"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers.rst:286
+msgid "`mail.incoming.limit.alias` (5 by default)"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers.rst:288
+msgid ""
+"Add these fields in Odoo by first enabling :ref:`developer mode <developer-"
+"mode>`, and then navigating to :menuselection:`Settings --> Technical Menu "
+"--> Parameters --> System Parameters`. Change the value of these parameters,"
+" as needed."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers.rst:292
+msgid ""
+"When an email is received in the Odoo database on the catchall email address"
+" or on any alias, Odoo looks at the mail received for the given period of "
+"time defined in the system parameter `mail.incoming.limit.period`. If the "
+"received email was sent to an alias then Odoo will reference the "
+"`mail.incoming.limit.alias` system parameter and determine the value as the "
+"number of records this alias is allowed to create in the given period of "
+"time (value of `mail.incoming.limit.period`)."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers.rst:298
+msgid ""
+"In addition, when email is received to the catchall email address, Odoo will"
+" reference the emails received to the database during the set period of time"
+" (as stated by the value in the system parameter: "
+"`mail.incoming.limit.period`). Odoo will then determine whether any of the "
+"emails received match that of the email(s) being received during the "
+"specified time-frame, and will prevent a feedback loop from occurring if a "
+"duplicate email is detected."
 msgstr ""
 
 #: ../../content/applications/general/email_communication/email_template.rst:3
@@ -3653,9 +3708,9 @@ msgstr ""
 
 #: ../../content/applications/general/search.rst:95
 msgid ""
-"You can also **custom groups** by using a wide selection of fields present "
-"on the model. To do so, click :menuselection:`Group By --> Add Custom "
-"Group`, select a field, and click :guilabel:`Apply`."
+"You can **customize groups** by using a wide selection of fields present on "
+"the model. To do so, click :menuselection:`Group By --> Add Custom Group`, "
+"select a field, and click :guilabel:`Apply`."
 msgstr ""
 
 #: ../../content/applications/general/search.rst:99
@@ -3939,32 +3994,31 @@ msgstr ""
 #: ../../content/applications/general/users/companies.rst:87
 msgid ""
 ":doc:`Chart of Accounts "
-"<../../finance/accounting/getting_started/initial_configuration/chart_of_accounts>`"
+"<../../finance/accounting/get_started/chart_of_accounts>`"
+msgstr ""
+
+#: ../../content/applications/general/users/companies.rst:88
+msgid ":doc:`Taxes <../../finance/accounting/taxes>`"
 msgstr ""
 
 #: ../../content/applications/general/users/companies.rst:89
-msgid ":doc:`Taxes <../../finance/accounting/taxation/taxes/default_taxes>`"
+msgid ""
+":doc:`Fiscal Positions <../../finance/accounting/taxes/fiscal_positions>`"
 msgstr ""
 
 #: ../../content/applications/general/users/companies.rst:90
-msgid ""
-":doc:`Fiscal Positions "
-"<../../finance/accounting/taxation/taxes/fiscal_positions>`"
+msgid ":doc:`Journals <../../finance/accounting/bank>`"
 msgstr ""
 
 #: ../../content/applications/general/users/companies.rst:91
-msgid ":doc:`Journals <../../finance/accounting/bank/setup/bank_accounts>`"
-msgstr ""
-
-#: ../../content/applications/general/users/companies.rst:92
 msgid ":doc:`Fiscal Localizations <../../finance/fiscal_localizations>`"
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:93
+#: ../../content/applications/general/users/companies.rst:92
 msgid ":doc:`Pricelists <../../sales/sales/products_prices/prices/pricing>`"
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:95
+#: ../../content/applications/general/users/companies.rst:94
 msgid ""
 "Now, activate the *Inter-Company Transactions* option under *Settings*. With"
 " the respective company *activated* and *selected*, choose if you would like"
@@ -3978,13 +4032,13 @@ msgid ""
 " Odoo"
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:103
+#: ../../content/applications/general/users/companies.rst:102
 msgid ""
 "**Synchronize invoice/bills**: generates a bill/invoice when a company "
 "confirms a bill/invoice for the selected company."
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:106
+#: ../../content/applications/general/users/companies.rst:105
 msgid ""
 "*Example:* an invoice posted on JS Store Belgium, for JS Store US, "
 "automatically creates a vendor bill on the JS Store US, from the JS Store "
@@ -3995,7 +4049,7 @@ msgstr ""
 msgid "View of an invoice for JS Store US created on JS Store Belgium in Odoo"
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:113
+#: ../../content/applications/general/users/companies.rst:112
 msgid ""
 "**Synchronize sales/purchase order**: generates a drafted purchase/sales "
 "order using the selected company warehouse when a sales/purchase order is "
@@ -4003,7 +4057,7 @@ msgid ""
 "order you rather have it validated, enable *Automatic Validation*."
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:117
+#: ../../content/applications/general/users/companies.rst:116
 msgid ""
 "*Example:* when a sale order for JS Store US is confirmed on JS Store "
 "Belgium, a purchase order on JS Store Belgium is automatically created (and "
@@ -4015,23 +4069,23 @@ msgid ""
 "View of the purchase created on JS Store US from JS Store Belgium in Odoo"
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:126
+#: ../../content/applications/general/users/companies.rst:125
 msgid ""
 "Products have to be configured as *Can be sold* and must be shared between "
 "the companies."
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:129
+#: ../../content/applications/general/users/companies.rst:128
 msgid ""
 "Remember to test all workflows as an user other than the administrator."
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:132
+#: ../../content/applications/general/users/companies.rst:131
 msgid ":doc:`Multi-company Guidelines </developer/howtos/company>`"
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:133
-msgid ":doc:`../../finance/accounting/others/multi_currency`"
+#: ../../content/applications/general/users/companies.rst:132
+msgid ":doc:`../../finance/accounting/get_started/multi_currency`"
 msgstr ""
 
 #: ../../content/applications/general/users/delete_account.rst:3
