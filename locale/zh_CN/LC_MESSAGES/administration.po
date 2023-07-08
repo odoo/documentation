@@ -10,26 +10,25 @@
 # 洋 汪 <wonrence@163.com>, 2022
 # 黎伟杰 <674416404@qq.com>, 2022
 # John Lin <linyinhuan@139.com>, 2022
-# 稀饭~~ <wangwhai@qq.com>, 2022
 # Gary Wei <Gary.wei@elico-corp.com>, 2022
 # Datasource International <Hennessy@datasourcegroup.com>, 2022
 # Mandy Choy <mnc@odoo.com>, 2022
 # Jeffery CHEN <jeffery9@gmail.com>, 2022
-# 山西清水欧度(QQ:54773801) <54773801@qq.com>, 2022
 # diaojiaolou <124412206@qq.com>, 2022
 # Jeana Jiang, 2022
 # Emily Jia <eji@odoo.com>, 2022
-# Martin Trigaux, 2022
 # Raymond Yu <cl_yu@hotmail.com>, 2023
+# Martin Trigaux, 2023
+# 山西清水欧度(QQ:54773801) <54773801@qq.com>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-03 11:23+0000\n"
+"POT-Creation-Date: 2023-07-07 06:24+0000\n"
 "PO-Revision-Date: 2022-03-18 14:59+0000\n"
-"Last-Translator: Raymond Yu <cl_yu@hotmail.com>, 2023\n"
+"Last-Translator: 山西清水欧度(QQ:54773801) <54773801@qq.com>, 2023\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/odoo/teams/41243/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -57,98 +56,182 @@ msgid "Install"
 msgstr "安装"
 
 #: ../../content/administration/install/cdn.rst:3
-msgid "Setting up a Content Delivery Network (CDN)"
-msgstr "设置内容交付网络 （CDN）"
+msgid "Set up a content delivery network (CDN)"
+msgstr ""
 
 #: ../../content/administration/install/cdn.rst:8
-msgid "Deploying with KeyCDN_"
-msgstr "使用KeyCDN_进行部署"
+msgid "Deploying with KeyCDN"
+msgstr ""
 
-#: ../../content/administration/install/cdn.rst:12
+#: ../../content/administration/install/cdn.rst:10
 msgid ""
-"This document will guide you through the setup of a KeyCDN_ account with "
-"your Odoo powered website."
-msgstr "本文档将指导您通过Odoo驱动的网站设置KeyCDN_帐户。"
+"A :abbr:`CDN (Content Delivery Network)` or *content distribution network*, "
+"is a geographically distributed network of servers that provides high speed "
+"internet content. The :abbr:`CDN (Content Delivery Network)` provides quick,"
+" high-quality content delivery for content-heavy websites."
+msgstr ""
 
-#: ../../content/administration/install/cdn.rst:16
-msgid "Step 1: Create a pull zone in the KeyCDN dashboard"
-msgstr "步骤 1：在 KeyCDN 仪表板中创建拉取区域"
-
-#: ../../content/administration/install/cdn.rst:21
+#: ../../content/administration/install/cdn.rst:14
 msgid ""
-"When creating the zone, enable the CORS option in the :guilabel:`advanced "
-"features` submenu. (more on that later)"
-msgstr "创建区域时，请在 ：guilabel：`高级功能` 子菜单中启用 CORS 选项。（稍后将详细介绍）"
+"This document will guide you through the setup of a KeyCDN_ account with an "
+"Odoo powered website."
+msgstr ""
 
-#: ../../content/administration/install/cdn.rst:27
-msgid ""
-"Once done, you'll have to wait a bit while KeyCDN_ is crawling your website."
-msgstr "完成后，您必须等待一段时间，KeyCDN_抓取您的网站。"
+#: ../../content/administration/install/cdn.rst:17
+msgid "Create a pull zone in the KeyCDN dashboard"
+msgstr ""
 
-#: ../../content/administration/install/cdn.rst:32
+#: ../../content/administration/install/cdn.rst:19
 msgid ""
-"a new URL has been generated for your Zone, in this case it is "
-"``http://pulltest-b49.kxcdn.com``"
-msgstr "已为您的区域生成了一个新的URL，在本例中为“http://pulltest-b49.kxcdn.com`"
+"On the KeyCDN dashboard, start by navigating to the :menuselection:`Zones` "
+"menu item on the left. On the form, give a value to the :guilabel:`Zone "
+"Name`, which will appear as part of the :abbr:`CDN (Content Delivery "
+"Network)`'s :abbr:`URL (Uniform Resource Locator)`. Then, set the "
+":guilabel:`Zone Status` to :guilabel:`active` to engage the zone. For the "
+":guilabel:`Zone Type` set the value to :guilabel:`Pull`, and then, finally, "
+"under the :guilabel:`Pull Settings`, enter the :guilabel:`Origin URL`— this "
+"address should be the full Odoo database :abbr:`URL (Uniform Resource "
+"Locator)`."
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst:28
+msgid ""
+"Use ``https://yourdatabase.odoo.com`` and replace the *yourdatabase* "
+"subdomain prefix with the actual name of the database. A custom :abbr:`URL "
+"(Uniform Resource Locator)` can be used, as well, in place of the Odoo "
+"subdomain that was provided to the database."
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst-1
+msgid "KeyCDN's Zone configuration page."
+msgstr ""
 
 #: ../../content/administration/install/cdn.rst:36
-msgid "Step 2: Configure the odoo instance with your zone"
-msgstr "步骤 2：使用您的区域配置 odoo 实例"
-
-#: ../../content/administration/install/cdn.rst:38
 msgid ""
-"In the Odoo back end, go to the :guilabel:`Website Settings`: menu, then "
-"activate the CDN support and copy/paste your zone URL in the :guilabel:`CDN "
-"Base URL` field. This field is only visible and configurable if you have "
-"developer mode activated."
+"Under the :guilabel:`General Settings` heading below the zone form, click "
+"the :guilabel:`Show all settings` button to expand the zone options. This "
+"should be the last option on the page. After expanding the "
+":guilabel:`General Settings` ensure that the :guilabel:`CORS` option is "
+":guilabel:`enabled`."
 msgstr ""
-"在 Odoo 后端，转到 ：guilabel：`网站设置`： 菜单，然后激活 CDN 支持并将您的区域 URL 复制/粘贴到 "
-"：guilabel：`CDN 基本 URL` 字段中。仅当激活了开发人员模式时，此字段才可见且可配置。"
 
-#: ../../content/administration/install/cdn.rst:46
+#: ../../content/administration/install/cdn.rst:41
 msgid ""
-"Now your website is using the CDN for the resources matching the "
-":guilabel:`CDN filters` regular expressions."
-msgstr "现在，您的网站正在将 CDN 用于与 ：guilabel：`CDN 筛选器` 正则表达式匹配的资源。"
+"Next, scroll to the bottom of the zone configuration page and "
+":guilabel:`Save` the changes. KeyCDN will indicate that the new zone will be"
+" deployed. This can take about 10 minutes."
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst-1
+msgid "KeyCDN deploying the new Zone."
+msgstr ""
 
 #: ../../content/administration/install/cdn.rst:49
 msgid ""
-"You can have a look to the HTML of your website in order to check if the CDN"
-" integration is properly working."
-msgstr "您可以查看网站的HTML，以检查CDN集成是否正常工作。"
+"A new :guilabel:`Zone URL` has been generated for your Zone, in this example"
+" it is ``pulltest-xxxxx.kxcdn.com``. This value will differ for each "
+"database."
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst:52
+msgid ""
+"Copy this :guilabel:`Zone URL` to a text editor for later, as it will be "
+"used in the next steps."
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst:55
+msgid "Configure the Odoo instance with the new zone"
+msgstr ""
 
 #: ../../content/administration/install/cdn.rst:57
-msgid "Why should I activate CORS?"
-msgstr "为什么要激活 CORS？"
-
-#: ../../content/administration/install/cdn.rst:59
 msgid ""
-"A security restriction in some browsers (Firefox and Chrome at time of "
-"writing) prevents a remotely linked CSS file to fetch relative resources on "
-"this same external server."
-msgstr "某些浏览器（在撰写本文时的Firefox和Chrome）中的安全限制会阻止远程链接的CSS文件在同一外部服务器上获取相关资源。"
+"In the Odoo :guilabel:`Website` app, go to the :menuselection:`Settings` and"
+" then activate the :guilabel:`Content Delivery Network (CDN)` setting and "
+"copy/paste the :guilabel:`Zone URL` value from the earlier step into the "
+":guilabel:`CDN Base URL` field. This field is only visible and configurable "
+"when :doc:`Developer Mode <../../applications/general/developer_mode>` is "
+"activated."
+msgstr ""
 
 #: ../../content/administration/install/cdn.rst:63
 msgid ""
-"If you don't activate the CORS option in the CDN zone, the more obvious "
-"resulting problem on a default Odoo website will be the lack of font-awesome"
-" icons because the font file declared in the font-awesome CSS won't be "
-"loaded on the remote server."
+"Ensure that there are two *forward slashes* (`//`) before the :guilabel:`CDN"
+" Base URL` and one forward slash (`/`) after the :guilabel:`CDN Base URL`."
 msgstr ""
-"如果您没有在CDN区域中激活CORS选项，那么默认Odoo网站上更明显的问题将是缺少字体真棒图标，因为在font-awesome "
-"CSS中声明的字体文件不会加载到远程服务器上。"
 
-#: ../../content/administration/install/cdn.rst:68
-msgid "Here's what you would see on your homepage in such a case:"
-msgstr "在这种情况下，您可以在主页上看到以下内容："
+#: ../../content/administration/install/cdn.rst:66
+msgid ":guilabel:`Save` the settings when complete."
+msgstr ""
 
-#: ../../content/administration/install/cdn.rst:73
-msgid "A security error message will also appear in the browser's console:"
-msgstr "浏览器控制台中还会出现一条安全错误消息："
+#: ../../content/administration/install/cdn.rst-1
+msgid "Activate the CDN setting in Odoo."
+msgstr ""
 
-#: ../../content/administration/install/cdn.rst:78
-msgid "Enabling the CORS option in the CDN fixes this issue."
-msgstr "在 CDN 中启用 CORS 选项可解决此问题。"
+#: ../../content/administration/install/cdn.rst:72
+msgid ""
+"Now the website is using the CDN for the resources matching the "
+":guilabel:`CDN filters` regular expressions."
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst:75
+msgid ""
+"In the HTML of the Odoo website, the :abbr:`CDN (content delivery network)` "
+"integration is evidenced as working properly by checking the :abbr:`URL "
+"(Uniform Resource Locators)` of images. The *CDN Base URL* value can be seen"
+" by using your web browser's :guilabel:`Inspect` feature on the Odoo "
+"website. Look for it's record by searching within the :guilabel:`Network` "
+"tab inside of devtools."
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst-1
+msgid ""
+"The CDN Base URL can be seen using the inspect function on the Odoo website."
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst:85
+msgid ""
+"Prevent security issues by activating cross-origin resource sharing (CORS)"
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst:87
+msgid ""
+"A security restriction in some browsers (such as Mozilla Firefox and Google "
+"Chrome) prevents a remotely linked CSS file to fetch relative resources on "
+"this same external server."
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst:90
+msgid ""
+"If the :abbr:`CORS (Cross-Origin Resource Sharing)` option isn't enabled in "
+"the :guilabel:`CDN Zone`, the more obvious resulting problem on a standard "
+"Odoo website will be the lack of *Font Awesome* icons because the font file "
+"declared in the *Font Awesome* CSS won't be loaded from the remote server."
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst:95
+msgid ""
+"When these cross-origin resource issues occur, a security error message "
+"similar to the output below will appear in the web browser's developer "
+"console:"
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst:98
+msgid ""
+"``Font from origin 'http://pulltest-xxxxx.kxcdn.com' has been blocked from "
+"loading /shop:1 by Cross-Origin Resource Sharing policy: No 'Access-Control-"
+"Allow-Origin' header is present on the requested resource. Origin "
+"'http://yourdatabase.odoo.com' is therefore not allowed access.``"
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst-1
+msgid "Error message populated in the browser console."
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst:106
+msgid ""
+"Enabling the :abbr:`CORS (Cross-Origin Resource Sharing)` option in the "
+":abbr:`CDN (Content Delivery Network)` settings fixes this issue."
+msgstr ""
 
 #: ../../content/administration/install/deploy.rst:3
 msgid "System configuration"
@@ -231,8 +314,8 @@ msgstr "仅显示名称以“mycompany”开头的数据库"
 #: ../../content/administration/install/deploy.rst:58
 #: ../../content/administration/install/deploy.rst:153
 #: ../../content/administration/install/deploy.rst:276
-msgid "in ``/etc/odoo.conf`` set:"
-msgstr "在 ``/etc/odoo.conf`` set 中："
+msgid "in :ref:`the configuration file <reference/cmdline/config_file>` set:"
+msgstr ""
 
 #: ../../content/administration/install/deploy.rst:53
 msgid ""
@@ -259,8 +342,8 @@ msgstr ""
 
 #: ../../content/administration/install/deploy.rst:76
 #: ../../content/administration/install/install.rst:339
-#: ../../content/administration/install/install.rst:526
-#: ../../content/administration/install/install.rst:721
+#: ../../content/administration/install/install.rst:528
+#: ../../content/administration/install/install.rst:725
 msgid "PostgreSQL"
 msgstr "PostgreSQL"
 
@@ -561,8 +644,8 @@ msgid "RAM = 9 * ((0.8*150) + (0.2*1024)) ~= 3Go RAM for Odoo"
 msgstr "RAM = 9 * （（0.8*150） + （0.2*1024）） ~= 3Go RAM for Odoo"
 
 #: ../../content/administration/install/deploy.rst:241
-msgid "in ``/etc/odoo.conf``:"
-msgstr "在 ``/etc/odoo.conf`` 中："
+msgid "in :ref:`the configuration file <reference/cmdline/config_file>`:"
+msgstr ""
 
 #: ../../content/administration/install/deploy.rst:257
 msgid "HTTPS"
@@ -1301,7 +1384,7 @@ msgstr "Demo_实例不需要本地安装，只需要一个 Web 浏览器。"
 #: ../../content/administration/install/install.rst:59
 #: ../../content/administration/maintain/domain_names.rst:166
 #: ../../content/administration/maintain/domain_names.rst:236
-#: ../../content/administration/maintain/supported_versions.rst:27
+#: ../../content/administration/maintain/supported_versions.rst:31
 #: ../../content/administration/upgrade/odoo_online.rst:3
 msgid "Odoo Online"
 msgstr "Odoo Online"
@@ -1391,7 +1474,7 @@ msgid "Odoo will automatically be started at the end of the installation."
 msgstr "Odoo将在安装结束时自动启动。"
 
 #: ../../content/administration/install/install.rst:105
-#: ../../content/administration/install/install.rst:445
+#: ../../content/administration/install/install.rst:447
 msgid "Linux"
 msgstr "Linux"
 
@@ -1408,8 +1491,8 @@ msgstr ""
 #: ../../content/administration/install/install.rst:114
 #: ../../content/administration/install/install.rst:187
 #: ../../content/administration/install/install.rst:314
-#: ../../content/administration/install/install.rst:504
-#: ../../content/administration/install/install.rst:699
+#: ../../content/administration/install/install.rst:506
+#: ../../content/administration/install/install.rst:703
 msgid "Prepare"
 msgstr "准备"
 
@@ -1426,8 +1509,8 @@ msgstr ""
 #: ../../content/administration/install/install.rst:124
 #: ../../content/administration/install/install.rst:200
 #: ../../content/administration/install/install.rst:381
-#: ../../content/administration/install/install.rst:578
-#: ../../content/administration/install/install.rst:771
+#: ../../content/administration/install/install.rst:580
+#: ../../content/administration/install/install.rst:775
 msgid ""
 "`wkhtmltopdf` is not installed through **pip** and must be installed "
 "manually in version `0.12.5 <the wkhtmltopdf download page_>`_ for it to "
@@ -1582,73 +1665,73 @@ msgid ""
 msgstr "最后，它提供了对系统设置的更大控制，并允许更轻松地并排保存（和运行）多个版本的Odoo。"
 
 #: ../../content/administration/install/install.rst:258
-#: ../../content/administration/install/install.rst:448
-#: ../../content/administration/install/install.rst:643
+#: ../../content/administration/install/install.rst:450
+#: ../../content/administration/install/install.rst:647
 msgid "Fetch the sources"
 msgstr "获取源"
 
 #: ../../content/administration/install/install.rst:260
-#: ../../content/administration/install/install.rst:450
-#: ../../content/administration/install/install.rst:645
+#: ../../content/administration/install/install.rst:452
+#: ../../content/administration/install/install.rst:649
 msgid ""
 "There are two ways to obtain the source code of Odoo: as a zip **archive** "
 "or through **git**."
 msgstr "有两种方法可以获得Odoo的源代码：作为zip **archive **通** git**。"
 
 #: ../../content/administration/install/install.rst:263
-#: ../../content/administration/install/install.rst:453
-#: ../../content/administration/install/install.rst:648
+#: ../../content/administration/install/install.rst:455
+#: ../../content/administration/install/install.rst:652
 msgid "Archive"
 msgstr "存档"
 
 #: ../../content/administration/install/install.rst:265
-#: ../../content/administration/install/install.rst:455
-#: ../../content/administration/install/install.rst:650
+#: ../../content/administration/install/install.rst:457
+#: ../../content/administration/install/install.rst:654
 msgid "Community Edition:"
 msgstr "(社区版)"
 
 #: ../../content/administration/install/install.rst:267
 #: ../../content/administration/install/install.rst:273
-#: ../../content/administration/install/install.rst:457
-#: ../../content/administration/install/install.rst:463
-#: ../../content/administration/install/install.rst:652
-#: ../../content/administration/install/install.rst:658
+#: ../../content/administration/install/install.rst:459
+#: ../../content/administration/install/install.rst:465
+#: ../../content/administration/install/install.rst:656
+#: ../../content/administration/install/install.rst:662
 msgid "`Official download page <download_>`_"
 msgstr "`官方下载页面<download_>`_"
 
 #: ../../content/administration/install/install.rst:268
-#: ../../content/administration/install/install.rst:458
-#: ../../content/administration/install/install.rst:653
+#: ../../content/administration/install/install.rst:460
+#: ../../content/administration/install/install.rst:657
 msgid "`GitHub repository <community-repository_>`_"
 msgstr "`GitHub repository <community-repository_>`_"
 
 #: ../../content/administration/install/install.rst:269
-#: ../../content/administration/install/install.rst:459
-#: ../../content/administration/install/install.rst:654
+#: ../../content/administration/install/install.rst:461
+#: ../../content/administration/install/install.rst:658
 msgid "`Nightly server <nightly_>`_"
 msgstr "“夜间服务器<nightly_>”_"
 
 #: ../../content/administration/install/install.rst:271
-#: ../../content/administration/install/install.rst:461
-#: ../../content/administration/install/install.rst:656
+#: ../../content/administration/install/install.rst:463
+#: ../../content/administration/install/install.rst:660
 msgid "Enterprise Edition:"
 msgstr "（企业版）"
 
 #: ../../content/administration/install/install.rst:274
-#: ../../content/administration/install/install.rst:464
-#: ../../content/administration/install/install.rst:659
+#: ../../content/administration/install/install.rst:466
+#: ../../content/administration/install/install.rst:663
 msgid "`GitHub repository <enterprise-repository_>`_"
 msgstr "`GitHub repository <enterprise-repository_>`_"
 
 #: ../../content/administration/install/install.rst:279
-#: ../../content/administration/install/install.rst:469
-#: ../../content/administration/install/install.rst:664
+#: ../../content/administration/install/install.rst:471
+#: ../../content/administration/install/install.rst:668
 msgid "Git"
 msgstr "Git"
 
 #: ../../content/administration/install/install.rst:281
-#: ../../content/administration/install/install.rst:471
-#: ../../content/administration/install/install.rst:666
+#: ../../content/administration/install/install.rst:473
+#: ../../content/administration/install/install.rst:670
 msgid ""
 "The following requires `Git <git_>`_ to be installed on your machine and "
 "that you have basic knowledge of Git commands. To clone a Git repository, "
@@ -1660,8 +1743,8 @@ msgid ""
 msgstr ""
 
 #: ../../content/administration/install/install.rst:288
-#: ../../content/administration/install/install.rst:478
-#: ../../content/administration/install/install.rst:673
+#: ../../content/administration/install/install.rst:480
+#: ../../content/administration/install/install.rst:677
 msgid ""
 "**The Enterprise Git repository does not contain the full Odoo source "
 "code**. It is only a collection of extra add-ons. The main server code is in"
@@ -1677,20 +1760,20 @@ msgstr ""
 " Odoo 企业版安装。"
 
 #: ../../content/administration/install/install.rst:297
-#: ../../content/administration/install/install.rst:487
-#: ../../content/administration/install/install.rst:682
+#: ../../content/administration/install/install.rst:489
+#: ../../content/administration/install/install.rst:686
 msgid "Clone with HTTPS"
 msgstr "使用HTTPS克隆"
 
 #: ../../content/administration/install/install.rst:304
-#: ../../content/administration/install/install.rst:494
-#: ../../content/administration/install/install.rst:689
+#: ../../content/administration/install/install.rst:496
+#: ../../content/administration/install/install.rst:693
 msgid "Clone with SSH"
 msgstr "使用SSH克隆"
 
 #: ../../content/administration/install/install.rst:317
-#: ../../content/administration/install/install.rst:507
-#: ../../content/administration/install/install.rst:702
+#: ../../content/administration/install/install.rst:509
+#: ../../content/administration/install/install.rst:706
 msgid "Python"
 msgstr "Python"
 
@@ -1711,16 +1794,16 @@ msgid ""
 msgstr "在安装过程中，选中“ ** Python 3 添加到 PATH**”，然后单击“ **定义安** ”并确保选中“**pip**”。"
 
 #: ../../content/administration/install/install.rst:325
-#: ../../content/administration/install/install.rst:512
-#: ../../content/administration/install/install.rst:707
+#: ../../content/administration/install/install.rst:514
+#: ../../content/administration/install/install.rst:711
 msgid ""
 "If Python 3 is already installed, make sure that the version is 3.7 or "
 "above, as previous versions are not compatible with Odoo."
 msgstr "如果已经安装了Python 3，请确保版本为3.7或更高版本，因为以前的版本与Odoo不兼容。"
 
 #: ../../content/administration/install/install.rst:332
-#: ../../content/administration/install/install.rst:519
-#: ../../content/administration/install/install.rst:714
+#: ../../content/administration/install/install.rst:521
+#: ../../content/administration/install/install.rst:718
 msgid "Verify also that pip_ is installed for this version."
 msgstr "还要验证是否为此版本安装了pip_。"
 
@@ -1734,8 +1817,8 @@ msgstr ""
 "<https://www.postgresql.org/download/windows/>”_（支持的版本：10.0 及更高版本）。"
 
 #: ../../content/administration/install/install.rst:344
-#: ../../content/administration/install/install.rst:537
-#: ../../content/administration/install/install.rst:731
+#: ../../content/administration/install/install.rst:539
+#: ../../content/administration/install/install.rst:735
 msgid ""
 "By default, the only user is `postgres` but Odoo forbids connecting as "
 "`postgres`, so you need to create a new PostgreSQL user:"
@@ -1783,8 +1866,8 @@ msgid ""
 msgstr "打开“权限”选项卡，将“可以登录？”切换为“是”，将“创建数据库？”切换为“是”。"
 
 #: ../../content/administration/install/install.rst:360
-#: ../../content/administration/install/install.rst:549
-#: ../../content/administration/install/install.rst:743
+#: ../../content/administration/install/install.rst:551
+#: ../../content/administration/install/install.rst:747
 msgid "Dependencies"
 msgstr "相关性"
 
@@ -1801,16 +1884,16 @@ msgstr ""
 "studio-2019>的生成工具”。</a）出现提示时，在“工作负载”选项卡中选择“C++生成工** ”并进行安装。"
 
 #: ../../content/administration/install/install.rst:366
-#: ../../content/administration/install/install.rst:563
-#: ../../content/administration/install/install.rst:745
+#: ../../content/administration/install/install.rst:565
+#: ../../content/administration/install/install.rst:749
 msgid ""
 "Odoo dependencies are listed in the `requirements.txt` file located at the "
 "root of the Odoo community directory."
 msgstr "Odoo依赖项列在位于Odoo社区目录根目录的“需求.txt”文件中。"
 
 #: ../../content/administration/install/install.rst:369
-#: ../../content/administration/install/install.rst:566
-#: ../../content/administration/install/install.rst:748
+#: ../../content/administration/install/install.rst:568
+#: ../../content/administration/install/install.rst:752
 msgid ""
 "It can be preferable to not mix python modules packages between different "
 "instances of Odoo or with your system. You can use virtualenv_ to create "
@@ -1825,8 +1908,8 @@ msgid ""
 msgstr "导航到 Odoo 社区安装的路径（“CommunityPath”），并在终端中对需求文件运行 **pip**，使用管理员权** ："
 
 #: ../../content/administration/install/install.rst:386
-#: ../../content/administration/install/install.rst:583
-#: ../../content/administration/install/install.rst:776
+#: ../../content/administration/install/install.rst:585
+#: ../../content/administration/install/install.rst:780
 msgid ""
 "For languages with right-to-left interface (such as Arabic or Hebrew), the "
 "package `rtlcss` is needed:"
@@ -1837,8 +1920,8 @@ msgid "Download and install `nodejs <https://nodejs.org/en/download/>`_."
 msgstr "下载并安装 `nodejs <https://nodejs.org/en/download/>`_。"
 
 #: ../../content/administration/install/install.rst:390
-#: ../../content/administration/install/install.rst:587
-#: ../../content/administration/install/install.rst:780
+#: ../../content/administration/install/install.rst:589
+#: ../../content/administration/install/install.rst:784
 msgid "Install `rtlcss`:"
 msgstr "安装 `rtlcss`："
 
@@ -1850,24 +1933,24 @@ msgid ""
 msgstr ""
 "编辑系统环境的变量“PATH”以添加“rtlcss.cmd”所在的文件夹（通常为：“C：\\\\Users\\\\<user>\\\\AppData\\\\Roaming\\\\npm\\\\”）。</user>"
 
-#: ../../content/administration/install/install.rst:400
-#: ../../content/administration/install/install.rst:594
-#: ../../content/administration/install/install.rst:787
+#: ../../content/administration/install/install.rst:402
+#: ../../content/administration/install/install.rst:598
+#: ../../content/administration/install/install.rst:793
 msgid "Running Odoo"
 msgstr "运行 Odoo"
 
-#: ../../content/administration/install/install.rst:402
-#: ../../content/administration/install/install.rst:596
-#: ../../content/administration/install/install.rst:789
+#: ../../content/administration/install/install.rst:404
+#: ../../content/administration/install/install.rst:600
+#: ../../content/administration/install/install.rst:795
 msgid ""
 "Once all dependencies are set up, Odoo can be launched by running `odoo-"
 "bin`, the command-line interface of the server. It is located at the root of"
 " the Odoo Community directory."
 msgstr "一旦设置了所有依赖项，就可以通过运行服务器的命令行界面“odoo-bin”来启动Odoo。它位于Odoo社区目录的根目录。"
 
-#: ../../content/administration/install/install.rst:405
-#: ../../content/administration/install/install.rst:599
-#: ../../content/administration/install/install.rst:792
+#: ../../content/administration/install/install.rst:407
+#: ../../content/administration/install/install.rst:603
+#: ../../content/administration/install/install.rst:798
 msgid ""
 "To configure the server, you can either specify :ref:`command-line arguments"
 " <reference/cmdline/server>` or a :ref:`configuration file "
@@ -1876,47 +1959,47 @@ msgstr ""
 "要配置服务器，您可以指定 ：ref：`命令行参数<reference/cmdline/server>` 或 ：ref：`配置文件 "
 "<reference/cmdline/config>`。"
 
-#: ../../content/administration/install/install.rst:408
-#: ../../content/administration/install/install.rst:602
-#: ../../content/administration/install/install.rst:795
+#: ../../content/administration/install/install.rst:410
+#: ../../content/administration/install/install.rst:606
+#: ../../content/administration/install/install.rst:801
 msgid ""
 "For the Enterprise edition, you must add the path to the `enterprise` addons"
 " to the `addons-path` argument. Note that it must come before the other "
 "paths in `addons-path` for addons to be loaded correctly."
 msgstr "对于企业版，必须将“企业”插件的路径添加到“插件路径”参数中。请注意，它必须位于“插件路径”中的其他路径之前，才能正确加载插件。"
 
-#: ../../content/administration/install/install.rst:412
-#: ../../content/administration/install/install.rst:606
-#: ../../content/administration/install/install.rst:799
+#: ../../content/administration/install/install.rst:414
+#: ../../content/administration/install/install.rst:610
+#: ../../content/administration/install/install.rst:805
 msgid "Common necessary configurations are:"
 msgstr "常见的必要配置有："
 
-#: ../../content/administration/install/install.rst:414
+#: ../../content/administration/install/install.rst:416
 msgid "PostgreSQL user and password."
 msgstr "PostgreSQL 用户和密码。"
 
-#: ../../content/administration/install/install.rst:415
-#: ../../content/administration/install/install.rst:611
-#: ../../content/administration/install/install.rst:804
+#: ../../content/administration/install/install.rst:417
+#: ../../content/administration/install/install.rst:615
+#: ../../content/administration/install/install.rst:810
 msgid "Custom addon paths beyond the defaults, to load your own modules."
 msgstr "超出默认值的自定义插件路径，以加载您自己的模块。"
 
-#: ../../content/administration/install/install.rst:417
-#: ../../content/administration/install/install.rst:613
-#: ../../content/administration/install/install.rst:806
+#: ../../content/administration/install/install.rst:419
+#: ../../content/administration/install/install.rst:617
+#: ../../content/administration/install/install.rst:812
 msgid "A typical way to run the server would be:"
 msgstr "运行服务器的典型方法是："
 
-#: ../../content/administration/install/install.rst:424
+#: ../../content/administration/install/install.rst:426
 msgid ""
 "Where `CommunityPath` is the path of the Odoo Community installation, "
 "`dbuser` is the PostgreSQL login, `dbpassword` is the PostgreSQL password "
 "and `mydb` is the name of the PostgreSQL database."
 msgstr ""
 
-#: ../../content/administration/install/install.rst:428
-#: ../../content/administration/install/install.rst:623
-#: ../../content/administration/install/install.rst:821
+#: ../../content/administration/install/install.rst:430
+#: ../../content/administration/install/install.rst:627
+#: ../../content/administration/install/install.rst:827
 msgid ""
 "After the server has started (the INFO log `odoo.modules.loading: Modules "
 "loaded.` is printed), open http://localhost:8069 in your web browser and log"
@@ -1925,54 +2008,54 @@ msgid ""
 "it, you just logged into your own Odoo database!"
 msgstr ""
 
-#: ../../content/administration/install/install.rst:434
-#: ../../content/administration/install/install.rst:629
-#: ../../content/administration/install/install.rst:827
+#: ../../content/administration/install/install.rst:436
+#: ../../content/administration/install/install.rst:633
+#: ../../content/administration/install/install.rst:833
 msgid ""
 "From there, you can create and manage new :doc:`users "
 "</applications/general/users/manage_users>`."
 msgstr ""
 
-#: ../../content/administration/install/install.rst:436
-#: ../../content/administration/install/install.rst:631
-#: ../../content/administration/install/install.rst:829
+#: ../../content/administration/install/install.rst:438
+#: ../../content/administration/install/install.rst:635
+#: ../../content/administration/install/install.rst:835
 msgid ""
 "The user account you use to log into Odoo's web interface differs from the "
 ":option:`--db_user <odoo-bin -r>` CLI argument."
 msgstr ""
 
-#: ../../content/administration/install/install.rst:440
-#: ../../content/administration/install/install.rst:635
-#: ../../content/administration/install/install.rst:833
+#: ../../content/administration/install/install.rst:442
+#: ../../content/administration/install/install.rst:639
+#: ../../content/administration/install/install.rst:839
 msgid ""
 ":doc:`The exhaustive list of CLI arguments for odoo-bin "
 "</developer/reference/cli>`."
 msgstr ""
 
-#: ../../content/administration/install/install.rst:509
+#: ../../content/administration/install/install.rst:511
 msgid ""
 "Odoo requires Python 3.7 or later to run. Use your package manager to "
 "download and install Python 3 on your machine if it is not already done."
 msgstr "Odoo需要Python 3.7或更高版本才能运行。使用包管理器在计算机上下载并安装 Python 3（如果尚未完成）。"
 
-#: ../../content/administration/install/install.rst:528
+#: ../../content/administration/install/install.rst:530
 msgid ""
 "Odoo uses PostgreSQL as database management system. Use your package manager"
 " to download and install PostgreSQL (supported version: 10.0 and later)."
 msgstr "Odoo使用PostgreSQL作为数据库管理系统。使用包管理器下载并安装 PostgreSQL（支持的版本：10.0 及更高版本）。"
 
-#: ../../content/administration/install/install.rst:531
+#: ../../content/administration/install/install.rst:533
 msgid "On Debian/Unbuntu, it can be achieved by executing the following:"
 msgstr "在 Debian/Unbuntu 上，可以通过执行以下命令来实现："
 
-#: ../../content/administration/install/install.rst:545
-#: ../../content/administration/install/install.rst:739
+#: ../../content/administration/install/install.rst:547
+#: ../../content/administration/install/install.rst:743
 msgid ""
 "Because your PostgreSQL user has the same name as your Unix login, you will "
 "be able to connect to the database without password."
 msgstr "由于您的PostgreSQL用户与您的Unix登录名同名，因此您将能够在没有密码的情况下连接到数据库。"
 
-#: ../../content/administration/install/install.rst:551
+#: ../../content/administration/install/install.rst:553
 msgid ""
 "For libraries using native code, it is necessary to install development "
 "tools and native dependencies before the Python dependencies of Odoo. They "
@@ -1981,25 +2064,25 @@ msgid ""
 msgstr ""
 "对于使用原生代码的库，有必要在Odoo的Python依赖之前安装开发工具和原生依赖项。它们可用于Python，PostgreSQL，libxml2，libxslt1，libevent，libsasl2和libldap2的`-dev`或`-devel`包。"
 
-#: ../../content/administration/install/install.rst:555
+#: ../../content/administration/install/install.rst:557
 msgid ""
 "On Debian/Unbuntu, the following command should install all the required "
 "libraries:"
 msgstr "在 Debian/Unbuntu 上，以下命令应该安装所有必需的库："
 
-#: ../../content/administration/install/install.rst:569
-#: ../../content/administration/install/install.rst:751
+#: ../../content/administration/install/install.rst:571
+#: ../../content/administration/install/install.rst:755
 msgid ""
 "Navigate to the path of your Odoo Community installation (`CommunityPath`) "
 "and run **pip** on the requirements file:"
 msgstr "导航到 Odoo 社区安装的路径（“CommunityPath”），并在需求文件上运行 **pip**："
 
-#: ../../content/administration/install/install.rst:586
+#: ../../content/administration/install/install.rst:588
 msgid "Download and install **nodejs** and **npm** with your package manager."
 msgstr "使用包管理器下载并安装 **nodejs** 和 **npm**。"
 
-#: ../../content/administration/install/install.rst:608
-#: ../../content/administration/install/install.rst:801
+#: ../../content/administration/install/install.rst:612
+#: ../../content/administration/install/install.rst:807
 msgid ""
 "PostgreSQL user and password. Odoo has no defaults beyond `psycopg2's "
 "defaults <http://initd.org/psycopg/docs/module.html>`_: connects over a UNIX"
@@ -2008,18 +2091,18 @@ msgstr ""
 "PostgreSQL "
 "用户和密码。Odoo除了“psycopg2的默认值<http://initd.org/psycopg/docs/module.html>”_之外没有默认值：通过端口“5432”上的UNIX套接字与当前用户连接，没有密码。"
 
-#: ../../content/administration/install/install.rst:620
-#: ../../content/administration/install/install.rst:813
+#: ../../content/administration/install/install.rst:624
+#: ../../content/administration/install/install.rst:819
 msgid ""
 "Where `CommunityPath` is the path of the Odoo Community installation and "
 "`mydb` is the name of the PostgreSQL database."
 msgstr ""
 
-#: ../../content/administration/install/install.rst:640
+#: ../../content/administration/install/install.rst:644
 msgid "Mac OS"
 msgstr "Mac OS"
 
-#: ../../content/administration/install/install.rst:704
+#: ../../content/administration/install/install.rst:708
 msgid ""
 "Odoo requires Python 3.7 or later to run. Use your preferred package manager"
 " (homebrew_, macports_) to download and install Python 3 on your machine if "
@@ -2028,7 +2111,7 @@ msgstr ""
 "Odoo需要Python 3.7或更高版本才能运行。使用首选的包管理器（homebrew_、macports_）在计算机上下载并安装 Python "
 "3（如果尚未完成）。"
 
-#: ../../content/administration/install/install.rst:723
+#: ../../content/administration/install/install.rst:727
 msgid ""
 "Odoo uses PostgreSQL as database management system. Use `postgres.app "
 "<https://postgresapp.com>`_ to download and install PostgreSQL (supported "
@@ -2037,7 +2120,7 @@ msgstr ""
 "Odoo使用PostgreSQL作为数据库管理系统。使用`postgres.app "
 "<https://postgresapp.com>`_下载并安装PostgreSQL（支持的版本：10.0及更高版本）。"
 
-#: ../../content/administration/install/install.rst:727
+#: ../../content/administration/install/install.rst:731
 msgid ""
 "To make the command line tools bundled with `postgres.app` available, make "
 "sure to setup your `$PATH` variable by following the `Postgres.app CLI Tools"
@@ -2046,31 +2129,31 @@ msgstr ""
 "要使与 `postgres.app` 捆绑在一起的命令行工具可用，请确保按照 `Postgres.app CLI工具说明 "
 "<https://postgresapp.com/documentation/cli-tools.html>`_设置您的 `$PATH` 变量。"
 
-#: ../../content/administration/install/install.rst:760
+#: ../../content/administration/install/install.rst:764
 msgid "Non-Python dependencies need to be installed with a package manager:"
 msgstr "非Python依赖项需要与包管理器一起安装："
 
-#: ../../content/administration/install/install.rst:762
+#: ../../content/administration/install/install.rst:766
 msgid "Download and install the **Command Line Tools**:"
 msgstr "下载并安装命令行工** ："
 
-#: ../../content/administration/install/install.rst:768
+#: ../../content/administration/install/install.rst:772
 msgid ""
 "Download and install the package manager of your choice (homebrew_, "
 "macports_)."
 msgstr "下载并安装您选择的软件包管理器（homebrew_、macports_）。"
 
-#: ../../content/administration/install/install.rst:769
+#: ../../content/administration/install/install.rst:773
 msgid "Install non-python dependencies."
 msgstr "安装非 python 依赖项。"
 
-#: ../../content/administration/install/install.rst:779
+#: ../../content/administration/install/install.rst:783
 msgid ""
 "Download and install **nodejs** with your preferred package manager "
 "(homebrew_, macports_)."
 msgstr "使用您的首选包管理器下载并安** nodejs**（homebrew_，macports_）。"
 
-#: ../../content/administration/install/install.rst:817
+#: ../../content/administration/install/install.rst:823
 msgid ""
 "Some versions of python on Mac might lead to the following error message: "
 "`current limit exceeds maximum limit`. In that case, add the following "
@@ -2079,12 +2162,12 @@ msgstr ""
 "Mac上某些版本的python可能会导致以下错误消息：`限流超出最大限制`。在这种情况下，添加以下参数 `--limit-memory-hard 0` "
 "以避免该问题。"
 
-#: ../../content/administration/install/install.rst:838
+#: ../../content/administration/install/install.rst:844
 #: ../../content/administration/maintain/update.rst:149
 msgid "Docker"
 msgstr "Docker"
 
-#: ../../content/administration/install/install.rst:840
+#: ../../content/administration/install/install.rst:846
 msgid ""
 "The full documentation on how to use Odoo with Docker can be found on the "
 "official Odoo `docker image <https://hub.docker.com/_/odoo/>`_ page."
@@ -2117,14 +2200,22 @@ msgid ""
 msgstr ""
 
 #: ../../content/administration/maintain/azure_oauth.rst:15
+msgid ":doc:`/applications/general/auth/azure`"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:16
+msgid ":doc:`/applications/productivity/calendar/outlook`"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:19
 msgid "Setup in Microsoft Azure Portal"
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:18
+#: ../../content/administration/maintain/azure_oauth.rst:22
 msgid "Create a new application"
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:20
+#: ../../content/administration/maintain/azure_oauth.rst:24
 msgid ""
 "To get started, go to `Microsoft's Azure Portal "
 "<https://portal.azure.com/>`_. Log in with the :guilabel:`Microsoft Outlook "
@@ -2135,7 +2226,7 @@ msgid ""
 "Directory`."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:26
+#: ../../content/administration/maintain/azure_oauth.rst:30
 msgid ""
 "Now, click on :guilabel:`Add (+)`, located in the top menu, and then select "
 ":guilabel:`App registration`. On the :guilabel:`Register an application` "
@@ -2145,7 +2236,7 @@ msgid ""
 "- Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)`."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:32
+#: ../../content/administration/maintain/azure_oauth.rst:36
 msgid ""
 "Under the :guilabel:`Redirect URL` section, select :guilabel:`Web` as the "
 "platform, and then input `https://<odoo base url>/microsoft_outlook/confirm`"
@@ -2153,26 +2244,26 @@ msgid ""
 "which your Odoo instance can be reached in the URL field."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:37
+#: ../../content/administration/maintain/azure_oauth.rst:41
 msgid ""
 "*mydatabase.odoo.com*, where *mydatabase* is the actual prefix of the "
 "database's subdomain, assuming it's hosted on Odoo.com"
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:40
+#: ../../content/administration/maintain/azure_oauth.rst:44
 msgid ""
 "After the URL has been added to the field, :guilabel:`Register` the "
 "application so it is created."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:43
+#: ../../content/administration/maintain/azure_oauth.rst:47
 msgid "API permissions"
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:45
+#: ../../content/administration/maintain/azure_oauth.rst:49
 msgid ""
 "The :guilabel:`API permissions` should be set next. Odoo will need specific "
-"API permissions to be able to read (IMAP) and send (IMAP) emails in the "
+"API permissions to be able to read (IMAP) and send (SMTP) emails in the "
 "Microsoft 365 setup. First, click the :guilabel:`API permissions` link, "
 "located in the left menu bar. Next, click on the :guilabel:`(+) Add a "
 "Permission` button and select :guilabel:`Microsoft Graph` under "
@@ -2180,41 +2271,41 @@ msgid ""
 ":guilabel:`Delegated Permissions` option."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:51
+#: ../../content/administration/maintain/azure_oauth.rst:55
 msgid ""
 "In the search bar, search for the following :guilabel:`Deregulated "
 "permissions` and click :guilabel:`Add permissions` for each one:"
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:54
+#: ../../content/administration/maintain/azure_oauth.rst:58
 msgid ":guilabel:`SMTP.Send`"
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:55
+#: ../../content/administration/maintain/azure_oauth.rst:59
 msgid ":guilabel:`IMAP.AccessAsUser.All`"
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:58
+#: ../../content/administration/maintain/azure_oauth.rst:62
 msgid "The :guilabel:`User.Read` permission will be added by default."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rstNone
+#: ../../content/administration/maintain/azure_oauth.rst-1
 msgid ""
 "API permissions needed for Odoo integration are listed under the Microsoft "
 "Graph."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:65
+#: ../../content/administration/maintain/azure_oauth.rst:69
 msgid "Assign users and groups"
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:67
+#: ../../content/administration/maintain/azure_oauth.rst:71
 msgid ""
 "After adding the API permissions, navigate back to the :guilabel:`Overview` "
 "of the :guilabel:`Application` in the top of the left sidebar menu."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:70
+#: ../../content/administration/maintain/azure_oauth.rst:74
 msgid ""
 "Now, add users to this application. Under the :guilabel:`Essentials` "
 "overview table, click on the link labeled :guilabel:`Managed Application in "
@@ -2222,13 +2313,13 @@ msgid ""
 "table."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rstNone
+#: ../../content/administration/maintain/azure_oauth.rst-1
 msgid ""
 "Add users/groups by clicking the Managed application in local directory link for the\n"
 "created application."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:79
+#: ../../content/administration/maintain/azure_oauth.rst:83
 msgid ""
 "In the left sidebar menu, select :guilabel:`Users and Groups`. Next, click "
 "on :guilabel:`(+) Add User/Group`. Depending on the account, either a "
@@ -2237,7 +2328,7 @@ msgid ""
 "to be added."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:84
+#: ../../content/administration/maintain/azure_oauth.rst:88
 msgid ""
 "Under :guilabel:`Users` or :guilabel:`Groups`, click on :guilabel:`None "
 "Selected` and add the users or group of users that will be sending emails "
@@ -2246,11 +2337,11 @@ msgid ""
 "the application."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:90
+#: ../../content/administration/maintain/azure_oauth.rst:94
 msgid "Create credentials"
 msgstr "创建凭据"
 
-#: ../../content/administration/maintain/azure_oauth.rst:92
+#: ../../content/administration/maintain/azure_oauth.rst:96
 msgid ""
 "Now that the Microsoft Azure app is set up, credentials need to be created "
 "for the Odoo setup. These include the :guilabel:`Client ID` and "
@@ -2260,11 +2351,11 @@ msgid ""
 " the :guilabel:`Essentials` overview of the app."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rstNone
+#: ../../content/administration/maintain/azure_oauth.rst-1
 msgid "Application/Client ID located in the Overview of the app."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:102
+#: ../../content/administration/maintain/azure_oauth.rst:106
 msgid ""
 "Next, the :guilabel:`Client Secret Value` needs to be retrieved. To get this"
 " value, click on :guilabel:`Certificates & Secrets` in the left sidebar "
@@ -2272,14 +2363,14 @@ msgid ""
 " this, click on the :guilabel:`(+) New Client Secret` button."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:106
+#: ../../content/administration/maintain/azure_oauth.rst:110
 msgid ""
 "A window on the right will populate with a button labeled :guilabel:`Add a "
 "client secret`. Under :guilabel:`Description`, type in `Odoo Fetchmail` or "
 "something recognizable, and then set the :guilabel:`expiration date`."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:111
+#: ../../content/administration/maintain/azure_oauth.rst:115
 msgid ""
 "A new :guilabel:`Client Secret` will need to be produced and configured if "
 "the first one expires. In this event, there could be an interruption of "
@@ -2287,7 +2378,7 @@ msgid ""
 "possible date."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:115
+#: ../../content/administration/maintain/azure_oauth.rst:119
 msgid ""
 "Next, click on :guilabel:`Add` when these two values are entered. A "
 ":guilabel:`Client Secret Value` and :guilabel:`Secret ID` will be created. "
@@ -2296,38 +2387,38 @@ msgid ""
 "The :guilabel:`Secret ID` is not needed."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rstNone
+#: ../../content/administration/maintain/azure_oauth.rst-1
 msgid "Client Secret Value or Value in the app's credentials."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:124
+#: ../../content/administration/maintain/azure_oauth.rst:128
 msgid ""
 "After these steps, the following items should be ready to be set up in Odoo:"
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:126
+#: ../../content/administration/maintain/azure_oauth.rst:130
 msgid "A client ID (:guilabel:`Client ID` or :guilabel:`Application ID`)"
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:127
+#: ../../content/administration/maintain/azure_oauth.rst:131
 msgid "A client secret (:guilabel:`Value` or :guilabel:`Client Secret Value`)"
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:129
+#: ../../content/administration/maintain/azure_oauth.rst:133
 msgid ""
 "This completes the setup on the :guilabel:`Microsoft Azure Portal` side."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:132
-#: ../../content/administration/maintain/google_oauth.rst:84
+#: ../../content/administration/maintain/azure_oauth.rst:136
+#: ../../content/administration/maintain/google_oauth.rst:111
 msgid "Setup in Odoo"
 msgstr "设置Odoo"
 
-#: ../../content/administration/maintain/azure_oauth.rst:135
+#: ../../content/administration/maintain/azure_oauth.rst:139
 msgid "Enter Microsoft Outlook credentials"
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:137
+#: ../../content/administration/maintain/azure_oauth.rst:141
 msgid ""
 "First, open the Odoo database and navigate to the :guilabel:`Apps` module. "
 "Then, remove the :guilabel:`Apps` filter from the search bar and type in "
@@ -2335,7 +2426,7 @@ msgid ""
 "Outlook`."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:141
+#: ../../content/administration/maintain/azure_oauth.rst:145
 msgid ""
 "Next, navigate to :menuselection:`Settings --> General Settings`, and under "
 "the :guilabel:`Discuss` section, ensure that the checkbox for "
@@ -2343,62 +2434,62 @@ msgid ""
 " :guilabel:`Outlook Credentials`."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:145
+#: ../../content/administration/maintain/azure_oauth.rst:149
 msgid ":guilabel:`Save` the progress."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:147
+#: ../../content/administration/maintain/azure_oauth.rst:151
 msgid ""
 "Then, copy and paste the :guilabel:`Client ID` (Application ID) and "
 ":guilabel:`Client Secret (Client Secret Value)` into the respective fields "
 "and :guilabel:`Save` the settings."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rstNone
+#: ../../content/administration/maintain/azure_oauth.rst-1
 msgid "Outlook Credentials in Odoo General Settings."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:155
-#: ../../content/administration/maintain/google_oauth.rst:98
+#: ../../content/administration/maintain/azure_oauth.rst:159
+#: ../../content/administration/maintain/google_oauth.rst:127
 msgid "Configure outgoing email server"
 msgstr "配置邮件外发服务器"
 
-#: ../../content/administration/maintain/azure_oauth.rst:157
+#: ../../content/administration/maintain/azure_oauth.rst:161
 msgid ""
 "On the :guilabel:`General Settings` page, under the :guilabel:`Custom Email "
 "Servers` setting, click the :guilabel:`Outgoing Email Servers` link to "
 "configure the Microsoft account."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:160
+#: ../../content/administration/maintain/azure_oauth.rst:164
 msgid ""
 "Then, create a new email server and check the box for :guilabel:`Outlook`. "
 "Next, fill in the :guilabel:`Name` (it can be anything) and the Microsoft "
 "Outlook email :guilabel:`Username`."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:163
+#: ../../content/administration/maintain/azure_oauth.rst:167
 msgid ""
 "If the :guilabel:`From Filter` field is empty, enter either a :ref:`domain "
-"or email address <email_communication/default_from>`."
+"or email address <email_communication/default>`."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:166
-msgid "Then, cick on :guilabel:`Connect your Outlook account`."
+#: ../../content/administration/maintain/azure_oauth.rst:170
+msgid "Then, click on :guilabel:`Connect your Outlook account`."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:168
+#: ../../content/administration/maintain/azure_oauth.rst:172
 msgid ""
 "A new window from Microsoft opens to complete the :guilabel:`authorization "
 "process`. Select the appropriate email address that is being configured in "
 "Odoo."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rstNone
+#: ../../content/administration/maintain/azure_oauth.rst-1
 msgid "Permission page to grant access between newly created app and Odoo."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:175
+#: ../../content/administration/maintain/azure_oauth.rst:179
 msgid ""
 "Then, allow Odoo to access the Microsoft account by clicking on "
 ":guilabel:`Yes`. After this, the page will navigate back to the newly "
@@ -2407,22 +2498,22 @@ msgid ""
 ":guilabel:`Outlook Token Valid` appears in green."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rstNone
+#: ../../content/administration/maintain/azure_oauth.rst-1
 msgid "Valid Outlook Token indicator."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:184
+#: ../../content/administration/maintain/azure_oauth.rst:188
 msgid ""
 "Finally, click :guilabel:`Test Connection`. A confirmation message should "
 "appear. The Odoo database can now send safe, secure emails through Microsoft"
 " Outlook using OAuth authentication."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:188
+#: ../../content/administration/maintain/azure_oauth.rst:192
 msgid "Multiple user configuration"
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:190
+#: ../../content/administration/maintain/azure_oauth.rst:194
 msgid ""
 "Each user should have a separate server set up. The :guilabel:`from-filter` "
 "should be set so that only the user's email is sent from that server. In "
@@ -2430,7 +2521,7 @@ msgid ""
 ":guilabel:`from-filter` is able to use this server."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:194
+#: ../../content/administration/maintain/azure_oauth.rst:198
 msgid ""
 "After setting the :guilabel:`from-filter`, set up a fallback email account "
 "to allow for the sending of :guilabel:`notifications`. The fallback email "
@@ -2441,7 +2532,7 @@ msgid ""
 "<email_communication/default>`."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:201
+#: ../../content/administration/maintain/azure_oauth.rst:205
 #: ../../content/administration/maintain/mailjet_api.rst:213
 msgid ""
 "The :guilabel:`System Parameters` can be accessed by activating "
@@ -2450,11 +2541,11 @@ msgid ""
 " menu."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:206
+#: ../../content/administration/maintain/azure_oauth.rst:210
 msgid "Configure incoming email server"
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:208
+#: ../../content/administration/maintain/azure_oauth.rst:212
 msgid ""
 "The incoming account should be configured in a similar way to the outgoing "
 "email account. Navigate to the :guilabel:`Incoming Mail Servers` in the "
@@ -2466,11 +2557,12 @@ msgid ""
 "account. The account should be ready to receive email to the Odoo database."
 msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:216
+#: ../../content/administration/maintain/azure_oauth.rst:220
 msgid ":doc:`../../applications/general/email_communication/email_servers`"
 msgstr ""
 
 #: ../../content/administration/maintain/domain_names.rst:3
+#: ../../content/administration/maintain/odoo_online.rst:70
 msgid "Domain names"
 msgstr "网站域名"
 
@@ -2605,7 +2697,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/administration/maintain/domain_names.rst:74
-msgid ":doc:`/applications/websites/website/optimize/seo`"
+msgid ":doc:`/applications/websites/website/pages/seo`"
 msgstr ""
 
 #: ../../content/administration/maintain/domain_names.rst:75
@@ -2668,7 +2760,7 @@ msgstr ""
 "-->域名`。或者，打开“数据库管理器<https://www.odoo.com/my/databases>”_，单击数据库旁边的 "
 "：guilabel：`settings` 按钮，然后单击 ：guilabel：`域名`。"
 
-#: ../../content/administration/maintain/domain_names.rstNone
+#: ../../content/administration/maintain/domain_names.rst-1
 msgid "Clicking on Domain Names from an Odoo website"
 msgstr ""
 
@@ -2678,7 +2770,7 @@ msgid ""
 "select the one you want to register for your website."
 msgstr "搜索您选择的域名以检查其可用性，然后选择要为您的网站注册的域名。"
 
-#: ../../content/administration/maintain/domain_names.rstNone
+#: ../../content/administration/maintain/domain_names.rst-1
 msgid ""
 "The search of the domain name example.com shows which associated domains are"
 " available."
@@ -2725,7 +2817,7 @@ msgstr ""
 "要管理您在Odoo注册的域名的DNS记录或可视化与其关联的联系人，请打开“数据库管理器<https://www.odoo.com/my/databases>”_，单击数据库旁边的：guilabel：`settings`按钮，在：guilabel：`Domain"
 " names`上，然后在：guilabel：`Contacts`或：guilabel：`DNS`上。"
 
-#: ../../content/administration/maintain/domain_names.rstNone
+#: ../../content/administration/maintain/domain_names.rst-1
 msgid "Management of the domain names linked to an Odoo database"
 msgstr ""
 
@@ -2792,7 +2884,7 @@ msgstr "目标地址是数据库的当前地址，在创建时定义（例如，
 
 #: ../../content/administration/maintain/domain_names.rst:171
 #: ../../content/administration/maintain/domain_names.rst:250
-#: ../../content/administration/maintain/supported_versions.rst:27
+#: ../../content/administration/maintain/supported_versions.rst:32
 #: ../../content/administration/odoo_sh.rst:5
 #: ../../content/administration/upgrade/odoo_sh.rst:3
 msgid "Odoo.sh"
@@ -3160,7 +3252,7 @@ msgid ""
 msgstr ""
 "在：guilabel：`Domain`字段中，填写您网站的网址（例如，``https://www.example.com``），然后单击：guilabel：`Save`。"
 
-#: ../../content/administration/maintain/domain_names.rstNone
+#: ../../content/administration/maintain/domain_names.rst-1
 msgid "Configuring https://www.example.com as the Domain of the website"
 msgstr ""
 
@@ -3196,8 +3288,8 @@ msgid ":doc:`/applications/general/email_communication/email_servers`"
 msgstr ":doc:`/applications/general/email_communication/email_servers`"
 
 #: ../../content/administration/maintain/enterprise.rst:6
-msgid "Upgrade Community to Enterprise"
-msgstr "将社区升级到企业"
+msgid "Switch from Community to Enterprise"
+msgstr ""
 
 #: ../../content/administration/maintain/enterprise.rst:8
 msgid ""
@@ -3345,201 +3437,246 @@ msgid ""
 msgstr ""
 
 #: ../../content/administration/maintain/google_oauth.rst:15
+msgid ":doc:`/applications/general/auth/google`"
+msgstr ""
+
+#: ../../content/administration/maintain/google_oauth.rst:16
+msgid ":doc:`/applications/productivity/calendar/google`"
+msgstr ""
+
+#: ../../content/administration/maintain/google_oauth.rst:19
 msgid "Setup in Google"
 msgstr "在Google中设定"
 
-#: ../../content/administration/maintain/google_oauth.rst:18
+#: ../../content/administration/maintain/google_oauth.rst:22
 msgid "Create a new project"
 msgstr "创建一个新的项目"
 
-#: ../../content/administration/maintain/google_oauth.rst:20
+#: ../../content/administration/maintain/google_oauth.rst:24
 msgid ""
-"To get started, go to the `Google API Platform "
-"<https://console.cloud.google.com/apis/credentials/consent>`_. Log in with "
-"your *Google Workspace* account if you have one, otherwise log in with your "
-"personal Gmail account (this should match the email address you want to "
-"configure in Odoo)."
+"To get started, go to the `Google API Console "
+"<https://console.developers.google.com>`_. Log in with your *Google "
+"Workspace* account if you have one, otherwise log in with your personal "
+"Gmail account (this should match the email address you want to configure in "
+"Odoo)."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:25
+#: ../../content/administration/maintain/google_oauth.rst:28
 msgid ""
 "After that, click on :guilabel:`Create Project`, located on the far right of"
-" the OAuth consent screen. If a project has already been created in this "
-"account, then the :guilabel:`New Project` option will be located on the top "
-"left under the :guilabel:`Select a project` drop-down menu."
+" the :guilabel:`OAuth consent screen`. If a project has already been created"
+" in this account, then the :guilabel:`New Project` option will be located on"
+" the top right under the :guilabel:`Select a project` drop-down menu."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:29
+#: ../../content/administration/maintain/google_oauth.rst:33
 msgid ""
-"On the :guilabel:`New Project` screen, rename the :guilabel:`Project name` "
-"to `Odoo` and browse for the :guilabel:`Location`. Set the "
-":guilabel:`Location` as the `Google Workspace` organization. If you are "
-"using a personal Gmail account, then leave the :guilabel:`Location` as `No "
-"Organization`."
+"On the :menuselection:`New Project` screen, rename the :guilabel:`Project "
+"name` to `Odoo` and browse for the :guilabel:`Location`. Set the "
+":guilabel:`Location` as the *Google Workspace organization*. If you are "
+"using a personal Gmail account, then leave the :guilabel:`Location` as "
+":guilabel:`No Organization`."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rstNone
-msgid "Project Name and Location for Google Oauth."
-msgstr ""
-
-#: ../../content/administration/maintain/google_oauth.rst:37
-msgid ""
-"Click on :guilabel:`Create` to finish this step. On the next screen, "
-":guilabel:`User Type` options, select the :guilabel:`External` option, and "
-"then click on :guilabel:`Create` again, which will finally navigate to the "
-":guilabel:`Edit app registration` page."
+#: ../../content/administration/maintain/google_oauth.rst-1
+msgid "Project Name and Location for Google OAuth."
 msgstr ""
 
 #: ../../content/administration/maintain/google_oauth.rst:42
+msgid "Click on :guilabel:`Create` to finish this step."
+msgstr ""
+
+#: ../../content/administration/maintain/google_oauth.rst:45
+msgid "OAuth consent screen"
+msgstr "OAuth 同意屏幕"
+
+#: ../../content/administration/maintain/google_oauth.rst:47
+msgid ""
+"If the page doesn't redirect to the :menuselection:`User Type` options, "
+"click on :guilabel:`OAuth consent screen` in the left menu."
+msgstr ""
+
+#: ../../content/administration/maintain/google_oauth.rst:50
+msgid ""
+"Under :guilabel:`User Type` options, select the appropriate :guilabel:`User "
+"Type`, and then click on :guilabel:`Create` again, which will finally "
+"navigate to the :menuselection:`Edit app registration` page."
+msgstr ""
+
+#: ../../content/administration/maintain/google_oauth.rst:55
+msgid ""
+"*Personal* Gmail Accounts are only allowed to be **External** User Type, "
+"which means Google may require an approval, or for *Scopes* to be added on. "
+"However, using a *Google WorkSpace* account allows for **Internal** User "
+"Type to be used."
+msgstr ""
+
+#: ../../content/administration/maintain/google_oauth.rst:59
+msgid ""
+"Note, as well, that while the API connection is in the *External* testing "
+"mode, then no approval is necessary from Google. User limits in this testing"
+" mode is set to 100 users."
+msgstr ""
+
+#: ../../content/administration/maintain/google_oauth.rst:63
 msgid "Edit app registration"
 msgstr "编辑应用程序注册"
 
-#: ../../content/administration/maintain/google_oauth.rst:44
+#: ../../content/administration/maintain/google_oauth.rst:65
+msgid "Next we will configure the app registration of the project."
+msgstr ""
+
+#: ../../content/administration/maintain/google_oauth.rst:67
 msgid ""
-"On the :guilabel:`Oauth consent screen` step, under the :guilabel:`App "
+"On the :guilabel:`OAuth consent screen` step, under the :guilabel:`App "
 "information` section, enter `Odoo` in the :guilabel:`App name` field. Select"
 " the organization's email address under the :guilabel:`User support` email "
 "field."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:47
+#: ../../content/administration/maintain/google_oauth.rst:71
 msgid ""
 "Next, under :menuselection:`App Domain --> Authorized domains`, click on "
 ":guilabel:`Add Domain` and enter `odoo.com`."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:49
+#: ../../content/administration/maintain/google_oauth.rst:74
 msgid ""
 "After that, under the :guilabel:`Developer contact information` section, "
 "enter the organization's email address. Google uses this email address to "
 "notify the organization about any changes to your project."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:52
-msgid "Next, click on the :guilabel:`Save and Continue` button."
-msgstr ""
-
-#: ../../content/administration/maintain/google_oauth.rst:53
+#: ../../content/administration/maintain/google_oauth.rst:78
 msgid ""
-"Then, skip the :guilabel:`Scopes` page by scrolling to the bottom and "
-"clicking on :guilabel:`Save and Continue`."
+"Next, click on the :guilabel:`Save and Continue` button. Then, skip the "
+":menuselection:`Scopes` page by scrolling to the bottom and clicking on "
+":guilabel:`Save and Continue`."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:55
+#: ../../content/administration/maintain/google_oauth.rst:81
 msgid ""
-"Next, add the email being configured under the :guilabel:`Test users` step "
-"by clicking on :guilabel:`Add Users` and then the :guilabel:`Save and "
-"Continue` button. A summary of the :guilabel:`App registration` appears."
+"If continuing in testing mode (External), add the email addresses being "
+"configured under the :guilabel:`Test users` step, by clicking on "
+":guilabel:`Add Users`, and then the :guilabel:`Save and Continue` button. A "
+"summary of the app registration appears."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:58
+#: ../../content/administration/maintain/google_oauth.rst:85
 msgid ""
-"Finally, scroll to the bottom and click on :guilabel:`Back to Dashboard`."
+"Finally, scroll to the bottom and click on :guilabel:`Back to Dashboard` to "
+"finish setting up the project."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:61
+#: ../../content/administration/maintain/google_oauth.rst:89
 msgid "Create Credentials"
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:63
+#: ../../content/administration/maintain/google_oauth.rst:91
 msgid ""
-"Now that you have set up the project, you need to create credentials, which "
-"includes the :guilabel:`Client ID` and :guilabel:`Client Secret`. First, "
-"click on :guilabel:`Credentials` in the left sidebar menu."
+"Now that the project is set up, credentials should be created, which "
+"includes the *Client ID* and *Client Secret*. First, click on "
+":guilabel:`Credentials` in the left sidebar menu."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:67
+#: ../../content/administration/maintain/google_oauth.rst:94
 msgid ""
 "Then, click on :guilabel:`Create Credentials` in the top menu and select "
 ":guilabel:`OAuth client ID` from the dropdown menu."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:70
+#: ../../content/administration/maintain/google_oauth.rst:97
 msgid ""
 "Under :guilabel:`Application Type`, select :guilabel:`Web Application` from "
 "the dropdown menu."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:71
-msgid "In the :guilabel:`Client ID` field, enter `Odoo`."
+#: ../../content/administration/maintain/google_oauth.rst:98
+msgid "In the :guilabel:`Name` field, enter `Odoo`."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:72
+#: ../../content/administration/maintain/google_oauth.rst:99
 msgid ""
 "Under the :guilabel:`Authorized redirect URIs` label, click the button "
 ":guilabel:`ADD URI`, and then input "
 "`https://yourdbname.odoo.com/google_gmail/confirm` in the :guilabel:`URIs 1`"
-" field. Be sure to replace the *yourdbname* part of the URL with your actual"
-" Odoo database name."
+" field. Be sure to replace the *yourdbname* part of the URL with the actual "
+"Odoo database name."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:75
+#: ../../content/administration/maintain/google_oauth.rst:102
 msgid ""
 "Next, click on :guilabel:`Create` to generate an OAuth :guilabel:`Client ID`"
 " and :guilabel:`Client Secret`. Finally, copy each generated value for later"
 " use when configuring in Odoo, and then navigate to the Odoo database."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rstNone
+#: ../../content/administration/maintain/google_oauth.rst-1
 msgid "Client ID and Client Secret for Google OAuth."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:87
+#: ../../content/administration/maintain/google_oauth.rst:114
 msgid "Enter Google Credentials"
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:89
+#: ../../content/administration/maintain/google_oauth.rst:116
 msgid ""
 "First, open Odoo and navigate to the :guilabel:`Apps` module. Then, remove "
 "the :guilabel:`Apps` filter from the search bar and type in `Google`. "
 "Install the module called :guilabel:`Google Gmail`."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:92
+#: ../../content/administration/maintain/google_oauth.rst:120
 msgid ""
 "Next, navigate to :menuselection:`Settings --> General Settings`, and under "
 "the :guilabel:`Discuss` section, ensure that the checkbox for "
-":guilabel:`Custom Email Servers` is checked. This populates a new option for"
-" :guilabel:`Gmail Credentials`. Then, copy and paste the :guilabel:`Client "
-"ID` and :guilabel:`Client Secret` into the respective fields and "
+":guilabel:`Custom Email Servers` or :guilabel:`External Email Servers` is "
+"checked. This populates a new option for :guilabel:`Gmail Credentials` or "
+":guilabel:`Use a Gmail Sever`. Then, copy and paste the respective values "
+"into the :guilabel:`Client ID` and :guilabel:`Client Secret` fields and "
 ":guilabel:`Save` the settings."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:100
+#: ../../content/administration/maintain/google_oauth.rst:129
 msgid ""
-"After that, on the :guilabel:`General Settings` page, under "
-":guilabel:`Custom Email Servers`, click :guilabel:`Outgoing Email Servers` "
-"to configure the external Gmail account."
+"To configure the external Gmail account, return to the top of the "
+":guilabel:`Custom Email Servers` setting and then click the "
+":guilabel:`Outgoing Email Servers` link."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rstNone
-#: ../../content/administration/maintain/google_oauth.rstNone
+#: ../../content/administration/maintain/google_oauth.rst-1
 msgid "Configure Outgoing Email Servers in Odoo."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:107
+#: ../../content/administration/maintain/google_oauth.rst:136
 msgid ""
-"Then, :guilabel:`Create` a new email server and select the option for "
-":guilabel:`Gmail`. Next, fill in the :guilabel:`Description` (can be "
-"anything) and the email :guilabel:`Username` and click on :guilabel:`Connect"
-" your Gmail account`."
+"Then, click on :guilabel:`New` or :guilabel:`Create` to create a new email "
+"server, and fill in the :guilabel:`Name`, :guilabel:`Description`, and the "
+"email :guilabel:`Username` (if required)."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:111
+#: ../../content/administration/maintain/google_oauth.rst:139
 msgid ""
-"A new window from :guilabel:`Google` opens to complete the authorization "
+"Next, click on :guilabel:`Gmail OAuth Authentication` or :guilabel:`Gmail` "
+"(under the :guilabel:`Authenticate with` or :guilabel:`Connection` section)."
+" Finally, click on :guilabel:`Connect your Gmail Account`."
+msgstr ""
+
+#: ../../content/administration/maintain/google_oauth.rst:143
+msgid ""
+"A new window labeled :guilabel:`Google` opens to complete the authorization "
 "process. Select the appropriate email address that is being configured in "
 "Odoo."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:114
+#: ../../content/administration/maintain/google_oauth.rst:146
 msgid ""
-"If the email address is a personal account, an extra step pops up, click "
-":guilabel:`Continue` to allow the verification and connect the Gmail account"
-" to Odoo."
+"If the email address is a personal account, then an extra step pops up, so "
+"click :guilabel:`Continue` to allow the verification and connect the Gmail "
+"account to Odoo."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:117
+#: ../../content/administration/maintain/google_oauth.rst:149
 msgid ""
 "Then, allow Odoo to access the Google account by clicking on "
 ":guilabel:`Continue` or :guilabel:`Allow`. After that, the page navigates "
@@ -3548,32 +3685,32 @@ msgid ""
 ":guilabel:`Gmail Token Valid` appears in green."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:126
+#: ../../content/administration/maintain/google_oauth.rst:158
 msgid ""
-"Finally, save the settings and :guilabel:`Test the Connection`. A "
-"confirmation message should appear. The Odoo database can now send safe, "
-"secure emails through Google using OAuth authentication."
+"Finally, :guilabel:`Test the Connection`. A confirmation message should "
+"appear. The Odoo database can now send safe, secure emails through Google "
+"using OAuth authentication."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:131
+#: ../../content/administration/maintain/google_oauth.rst:162
 msgid "Google OAuth FAQ"
 msgstr "谷歌OAuth常见问题解答"
 
-#: ../../content/administration/maintain/google_oauth.rst:134
+#: ../../content/administration/maintain/google_oauth.rst:165
 msgid "Production VS Testing Publishing Status"
 msgstr "生产VS测试发布状态"
 
-#: ../../content/administration/maintain/google_oauth.rst:136
+#: ../../content/administration/maintain/google_oauth.rst:167
 msgid ""
 "Choosing :guilabel:`Production` as the :guilabel:`Publishing Status` "
-"(instead of Testing) will display the following warning message:"
+"(instead of :guilabel:`Testing`) will display the following warning message:"
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rstNone
+#: ../../content/administration/maintain/google_oauth.rst-1
 msgid "OAuth is Limited to 100 Sensitive Scope Logins."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:143
+#: ../../content/administration/maintain/google_oauth.rst:174
 msgid ""
 "To correct this warning, navigate to the `Google API Platform "
 "<https://console.cloud.google.com/apis/credentials/consent>`_. If the "
@@ -3581,77 +3718,74 @@ msgid ""
 ":guilabel:`Back to Testing` to correct the issue."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:148
+#: ../../content/administration/maintain/google_oauth.rst:179
 msgid "No Test Users Added"
 msgstr "无新增测试用户"
 
-#: ../../content/administration/maintain/google_oauth.rst:150
+#: ../../content/administration/maintain/google_oauth.rst:181
 msgid ""
 "If no test users are added to the OAuth consent screen, then a 403 access "
 "denied error will populate."
 msgstr "如果没有将测试用户添加到OAuth同意屏幕，则会出现403访问拒绝错误。"
 
-#: ../../content/administration/maintain/google_oauth.rstNone
+#: ../../content/administration/maintain/google_oauth.rst-1
 msgid "403 Access Denied Error."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:157
+#: ../../content/administration/maintain/google_oauth.rst:188
 msgid ""
 "To correct this error, return to the :guilabel:`OAuth consent screen` under "
 ":guilabel:`APIs & Services` and add test user(s) to the app. Add the email "
 "that you are configuring in Odoo."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:162
+#: ../../content/administration/maintain/google_oauth.rst:192
 msgid "Gmail Module not updated"
 msgstr "Gmail模块未更新"
 
-#: ../../content/administration/maintain/google_oauth.rst:164
+#: ../../content/administration/maintain/google_oauth.rst:194
 msgid ""
-"If the :guilabel:`Gmail Module` in Odoo has not been updated to the latest "
+"If the *Google Gmail* module in Odoo has not been updated to the latest "
 "version, then a :guilabel:`Forbidden` error message populates."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rstNone
+#: ../../content/administration/maintain/google_oauth.rst-1
 msgid ""
 "Forbidden you don't have the permission to access the requested resource."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:171
+#: ../../content/administration/maintain/google_oauth.rst:201
 msgid ""
-"To correct this error, go to the :guilabel:`Apps` module and clear out the "
-"search terms. Then, search for `Gmail` or `Google` and upgrade the "
+"To correct this error, go to the :menuselection:`Apps` module and clear out "
+"the search terms. Then, search for `Gmail` or `Google` and upgrade the "
 ":guilabel:`Google Gmail` module. Finally, click on the three dots on the "
 "upper right of the module and select :guilabel:`Upgrade`."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:176
+#: ../../content/administration/maintain/google_oauth.rst:206
 msgid "Application Type"
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:178
+#: ../../content/administration/maintain/google_oauth.rst:208
 msgid ""
-"When creating the :guilabel:`Credentials` (OAuth Client ID and Client "
-"Secret), if :guilabel:`Desktop App` is selected for the "
-":guilabel:`Application Type`, an :guilabel:`Authorization Error` appears."
+"When creating the credentials (OAuth *Client ID* and *Client Secret*), if "
+":guilabel:`Desktop App` is selected for the :guilabel:`Application Type`, an"
+" :guilabel:`Authorization Error` appears."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rstNone
+#: ../../content/administration/maintain/google_oauth.rst-1
 msgid "Error 400 Redirect URI Mismatch."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:186
+#: ../../content/administration/maintain/google_oauth.rst:215
 msgid ""
 "To correct this error, delete the credentials already created and create new"
 " credentials, selecting :guilabel:`Web Application` for the "
 ":guilabel:`Application Type`. Then, under :guilabel:`Authorized redirect "
 "URIs`, click :guilabel:`ADD URI` and type: "
-"`https://yourdbname.odoo.com/google_gmail/confirm` in the field."
+"`https://yourdbname.odoo.com/google_gmail/confirm` in the field, being sure "
+"to replace *yourdbname* in the URL with the Odoo database name."
 msgstr ""
-
-#: ../../content/administration/maintain/google_oauth.rst:192
-msgid "Replace *yourdbname* in the URL with the Odoo database name."
-msgstr "将URL中的 *yourdbname* 替换为Odoo数据库名称。"
 
 #: ../../content/administration/maintain/hosting_changes.rst:6
 msgid "Change hosting solution"
@@ -3915,7 +4049,7 @@ msgid ""
 "API Settings`."
 msgstr ""
 
-#: ../../content/administration/maintain/mailjet_api.rstNone
+#: ../../content/administration/maintain/mailjet_api.rst-1
 msgid ""
 "SMTP and Send API Settings link in the Senders & Domains section of Mailjet."
 msgstr ""
@@ -3944,7 +4078,7 @@ msgid ""
 "reference here <email_servers/restriction>`."
 msgstr ""
 
-#: ../../content/administration/maintain/mailjet_api.rstNone
+#: ../../content/administration/maintain/mailjet_api.rst-1
 msgid "SMTP configuration from Mailjet."
 msgstr ""
 
@@ -3977,7 +4111,7 @@ msgid ""
 "section."
 msgstr ""
 
-#: ../../content/administration/maintain/mailjet_api.rstNone
+#: ../../content/administration/maintain/mailjet_api.rst-1
 msgid "Add a sender domain or address in the Mailjet interface."
 msgstr ""
 
@@ -4096,7 +4230,7 @@ msgid ""
 "System)` provider to complete validation."
 msgstr ""
 
-#: ../../content/administration/maintain/mailjet_api.rstNone
+#: ../../content/administration/maintain/mailjet_api.rst-1
 msgid "The TXT record information to input on the domain's DNS."
 msgstr ""
 
@@ -4141,7 +4275,7 @@ msgid ""
 "correctly."
 msgstr ""
 
-#: ../../content/administration/maintain/mailjet_api.rstNone
+#: ../../content/administration/maintain/mailjet_api.rst-1
 msgid "Check DNS record in Mailjet."
 msgstr ""
 
@@ -4153,7 +4287,7 @@ msgid ""
 "Mail) records to input into the :abbr:`DNS (Domain Name System)` provider."
 msgstr ""
 
-#: ../../content/administration/maintain/mailjet_api.rstNone
+#: ../../content/administration/maintain/mailjet_api.rst-1
 msgid "Authenticate the domain with SPF/DKIM records in Mailjet."
 msgstr ""
 
@@ -4196,7 +4330,7 @@ msgid ""
 "server(s). Finally, save the settings and :guilabel:`Test the Connection`."
 msgstr ""
 
-#: ../../content/administration/maintain/mailjet_api.rstNone
+#: ../../content/administration/maintain/mailjet_api.rst-1
 msgid "Odoo outgoing email server settings."
 msgstr ""
 
@@ -4211,7 +4345,7 @@ msgid ""
 "The :guilabel:`From Filter` needs to be set on the server configuration. It "
 "is recommended to set it as a domain and not a full email address. It should"
 " match the domain in the two proceeding steps. More information can be "
-"referenced :ref:`here <email_servers/outgoing-email-server>`."
+"referenced :ref:`here <email_communication/from_filter>`."
 msgstr ""
 
 #: ../../content/administration/maintain/mailjet_api.rst:205
@@ -4246,275 +4380,219 @@ msgstr ""
 
 #: ../../content/administration/maintain/odoo_online.rst:5
 msgid ""
-"To manage a database, sign in to https://www.odoo.com and access the "
-"`database management page <https://www.odoo.com/my/databases>`_ by clicking "
-"on the user icon, then on *My Databases*."
-msgstr ""
-"要管理数据库，请登录 https://www.odoo.com "
-"并通过单击用户图标，然后单击“我的数据库”*访问“数据库管理页面<https://www.odoo.com/my/databases>”_。"
-
-#: ../../content/administration/maintain/odoo_online.rstNone
-msgid ""
-"Clicking on the user icon opens a drop-down menu. \"My databases\" button is"
-" highlighted."
+"To manage a database, go to the `database manager "
+"<https://www.odoo.com/my/databases>`_ and sign in as the database "
+"administrator."
 msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:13
+#: ../../content/administration/maintain/odoo_online.rst:8
 msgid ""
-"Make sure you are connected as the administrator of the database you want to"
-" manage."
-msgstr "确保您以要管理的数据库的管理员身份进行连接。"
-
-#: ../../content/administration/maintain/odoo_online.rstNone
-msgid "Clicking on the gear icon opens the drop-down menu."
+"All the main database management options are available by clicking the "
+"database name, except the upgrade option, which can be accessed by clicking "
+"the **arrow in a circle** icon next to the database name. It is only "
+"displayed if an upgrade is available."
 msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:19
-msgid ""
-"Open the drop-down menu next to the database you want to manage by clicking "
-"on the gear icon."
-msgstr "通过单击齿轮图标打开要管理的数据库旁边的下拉菜单。"
+#: ../../content/administration/maintain/odoo_online.rst-1
+msgid "Accessing the database management options"
+msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:21
-msgid "Several actions are available:"
-msgstr "有几种措施可供选择："
-
-#: ../../content/administration/maintain/odoo_online.rst:23
+#: ../../content/administration/maintain/odoo_online.rst:15
 msgid ":ref:`odoo_online/upgrade`"
 msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:24
+#: ../../content/administration/maintain/odoo_online.rst:16
 msgid ":ref:`odoo_online/duplicate`"
 msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:25
+#: ../../content/administration/maintain/odoo_online.rst:17
 msgid ":ref:`odoo_online/rename`"
 msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:26
+#: ../../content/administration/maintain/odoo_online.rst:18
 msgid ":ref:`odoo_online/download`"
 msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:27
+#: ../../content/administration/maintain/odoo_online.rst:19
 msgid ":ref:`odoo_online/domains`"
 msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:28
+#: ../../content/administration/maintain/odoo_online.rst:20
 msgid ":ref:`odoo_online/tags`"
 msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:29
+#: ../../content/administration/maintain/odoo_online.rst:21
 msgid ":ref:`odoo_online/delete`"
 msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:30
+#: ../../content/administration/maintain/odoo_online.rst:22
 msgid ":ref:`odoo_online/contact-support`"
 msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:31
+#: ../../content/administration/maintain/odoo_online.rst:23
 msgid ":ref:`odoo_online/users`"
 msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:36
+#: ../../content/administration/maintain/odoo_online.rst:28
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:293
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:77
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:113
 #: ../../content/administration/upgrade.rst:10
 msgid "Upgrade"
 msgstr "升级"
 
-#: ../../content/administration/maintain/odoo_online.rst:38
-msgid ""
-"If you are *not* on the latest **Online version**, you should receive an "
-"invitation to :doc:`upgrade <../upgrade>` your database. A **Rolling Release"
-" button** on your database's main screen proposes an upgrade to the latest "
-"version (e.g., 13.0 to 15.1)."
+#: ../../content/administration/maintain/odoo_online.rst:30
+msgid "Trigger a database upgrade."
 msgstr ""
-"如果您*不是*最新的**在线版本**，您应该会收到:d "
-"oc：'升级<....的邀请。/upgrade>'数据库。数据库主屏幕上的“滚动发布”按钮建议升级到最新版本（例如，13.0 到 15.1）。"
 
-#: ../../content/administration/maintain/odoo_online.rst:0
+#: ../../content/administration/maintain/odoo_online.rst:33
 msgid ""
-"**If your Odoo database's version is lower than the latest major release:**"
-msgstr "**如果您的 Odoo 数据库的版本低于最新的主要版本：**"
-
-#: ../../content/administration/maintain/odoo_online.rst:0
-msgid ""
-"You must upgrade your database within two months. After these two months, an"
-" automatic upgrade is initiated."
-msgstr "您必须在两个月内升级数据库。这两个月后，将启动自动升级。"
-
-#: ../../content/administration/maintain/odoo_online.rst:0
-msgid ""
-"**If your Odoo database's version is equal to or higher than the latest "
-"major release:**"
-msgstr "**如果您的 Odoo 数据库的版本等于或高于最新的主要版本：**"
-
-#: ../../content/administration/maintain/odoo_online.rst:0
-msgid ""
-"You can disregard the invitation to upgrade as you probably wouldn't benefit"
-" from new features every two months."
-msgstr "您可以忽略升级邀请，因为您可能不会每两个月从新功能中受益。"
-
-#: ../../content/administration/maintain/odoo_online.rst:51
-msgid ""
-"Versions that are not supported anymore become deprecated and need to be "
-"updated to avoid security issues. We recommend you initiate the upgrade of "
-"the database yourself, as this method allows you to request a test upgrade "
-"of your database to check for any discrepancies."
+"For more information about the upgrade process, check out the :doc:`Odoo "
+"Online upgrade documentation <../upgrade/odoo_online>`."
 msgstr ""
-"不再受支持的版本将被弃用，需要更新以避免安全问题。我们建议您自己启动数据库的升级，因为此方法允许您请求数据库的测试升级以检查是否存在任何差异。"
 
-#: ../../content/administration/maintain/odoo_online.rst:56
-msgid ":doc:`../upgrade`"
-msgstr ":doc:`../升级`"
-
-#: ../../content/administration/maintain/odoo_online.rst:57
-msgid ":doc:`supported_versions`"
-msgstr ":doc:`supported_versions`"
-
-#: ../../content/administration/maintain/odoo_online.rst:62
+#: ../../content/administration/maintain/odoo_online.rst:39
 msgid "Duplicate"
 msgstr "复制"
 
-#: ../../content/administration/maintain/odoo_online.rst:64
+#: ../../content/administration/maintain/odoo_online.rst:41
 msgid ""
-"Make an exact copy of the database to be able to perform testing without "
-"compromising the daily operations."
-msgstr "制作数据库的精确副本，以便能够在不影响日常操作的情况下执行测试。"
+"Create an exact copy of the database, which can be used to perform testing "
+"without compromising daily operations."
+msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:68
+#: ../../content/administration/maintain/odoo_online.rst:45
 msgid ""
-"By checking *For testing purposes*, all external communication (emails, "
+"By checking :guilabel:`For testing purposes`, all external actions (emails, "
 "payments, delivery orders, etc.) are disabled by default on the duplicated "
 "database."
-msgstr "通过选中*出于测试目的*，默认情况下，在重复的数据库上禁用所有外部通信（电子邮件，付款，交货订单等）。"
+msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:70
-msgid "Duplicate databases expire automatically after 15 days."
-msgstr "数据库副本将在15天后自动过期。"
+#: ../../content/administration/maintain/odoo_online.rst:47
+msgid "Duplicated databases expire automatically after 15 days."
+msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:75
+#: ../../content/administration/maintain/odoo_online.rst:52
 msgid "Rename"
 msgstr "重命名"
 
-#: ../../content/administration/maintain/odoo_online.rst:77
+#: ../../content/administration/maintain/odoo_online.rst:54
 msgid "Rename the database and its URL."
 msgstr "重命名数据库及其 URL。"
 
-#: ../../content/administration/maintain/odoo_online.rst:82
+#: ../../content/administration/maintain/odoo_online.rst:59
 msgid "Download"
 msgstr "下载"
 
-#: ../../content/administration/maintain/odoo_online.rst:84
-msgid "Download instantly a ZIP file with a backup of the database."
-msgstr "立即下载带有数据库备份的ZIP文件。"
+#: ../../content/administration/maintain/odoo_online.rst:61
+msgid "Download a ZIP file containing a backup of the database."
+msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:87
+#: ../../content/administration/maintain/odoo_online.rst:64
 msgid ""
-"Databases are backed up daily according to the `Odoo Cloud SLA "
+"Databases are backed up daily as per the `Odoo Cloud Hosting SLA "
 "<https://www.odoo.com/cloud-sla>`_."
-msgstr "数据库每天根据“Odoo Cloud SLA <https://www.odoo.com/cloud-sla>”进行备份。"
+msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:93
-msgid "Domains"
-msgstr "域名"
+#: ../../content/administration/maintain/odoo_online.rst:72
+msgid ""
+"Use a custom :doc:`domain name <domain_names>` to access the database via "
+"another URL."
+msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:95
-msgid "Configure custom domains to access the database via another URL."
-msgstr "将自定义域配置为通过其他 URL 访问数据库。"
+#: ../../content/administration/maintain/odoo_online.rst:75
+msgid ""
+"You can :ref:`register a domain name for free <domain-name/odoo-register>`."
+msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:98
-msgid ":doc:`domain_names`"
-msgstr ":d：`domain_names`"
-
-#: ../../content/administration/maintain/odoo_online.rst:103
+#: ../../content/administration/maintain/odoo_online.rst:80
 msgid "Tags"
 msgstr "标签"
 
-#: ../../content/administration/maintain/odoo_online.rst:105
-msgid ""
-"Add tags to sort your databases out. You can search the tags in the search "
-"bar."
-msgstr "添加标记以对数据库进行排序。您可以在搜索栏中搜索标签。"
+#: ../../content/administration/maintain/odoo_online.rst:82
+msgid "Add tags to easily identify and sort your databases."
+msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:110
+#: ../../content/administration/maintain/odoo_online.rst:85
+msgid "You can search for tags in the search bar."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:90
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:550
 msgid "Delete"
 msgstr "删除"
 
-#: ../../content/administration/maintain/odoo_online.rst:112
+#: ../../content/administration/maintain/odoo_online.rst:92
 msgid "Delete a database instantly."
 msgstr "立即删除数据库。"
 
-#: ../../content/administration/maintain/odoo_online.rst:115
+#: ../../content/administration/maintain/odoo_online.rst:95
 msgid ""
 "Deleting a database means that all data is permanently lost. The deletion is"
-" instant and for all users. It is recommended to create a backup of the "
-"database before deleting it."
-msgstr "删除数据库意味着所有数据都将永久丢失。删除是即时的，适用于所有用户。建议在删除数据库之前创建数据库的备份。"
-
-#: ../../content/administration/maintain/odoo_online.rst:118
-msgid ""
-"Read carefully the warning message that pops up and proceed only if you "
-"fully understand the implications of deleting a database:"
-msgstr "请仔细阅读弹出的警告消息，只有在您完全了解删除数据库的含义后，才能继续操作："
-
-#: ../../content/administration/maintain/odoo_online.rstNone
-msgid "A warning message is prompted before deleting a database."
+" instant and applies to all users. It is recommended to create a backup of "
+"the database before deleting it."
 msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:126
+#: ../../content/administration/maintain/odoo_online.rst:98
+msgid ""
+"Carefully read the warning message and only proceed if the implications of "
+"deleting a database are fully understood."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst-1
+msgid "The warning message displayed before deleting a database"
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:105
 msgid "Only an administrator can delete a database."
 msgstr "只有管理员才能删除数据库。"
 
-#: ../../content/administration/maintain/odoo_online.rst:127
-msgid "The database name is immediately available for a new database."
-msgstr "数据库名称立即可用于新数据库。"
+#: ../../content/administration/maintain/odoo_online.rst:106
+msgid "The database name is immediately made available to anyone."
+msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:128
+#: ../../content/administration/maintain/odoo_online.rst:107
 msgid ""
-"It is not possible to delete a database if it is expired or linked to a "
-"subscription. If needed, please get in touch with `Odoo Support "
+"Deleting a database if it has expired or is linked to a subscription is "
+"impossible. In that case, contact `Odoo Support "
 "<https://www.odoo.com/help>`_."
 msgstr ""
-"如果数据库已过期或链接到订阅，则无法删除该数据库。如果需要，请与“Odoo支持<https://www.odoo.com/help>”联系。"
 
-#: ../../content/administration/maintain/odoo_online.rst:130
+#: ../../content/administration/maintain/odoo_online.rst:113
+msgid "Contact us"
+msgstr "联系我们"
+
+#: ../../content/administration/maintain/odoo_online.rst:115
 msgid ""
-"To delete your account, please get in touch with `Odoo Support "
-"<https://www.odoo.com/help>`_."
-msgstr "要删除您的帐户，请与“Odoo支持<https://www.odoo.com/help>”联系。"
-
-#: ../../content/administration/maintain/odoo_online.rst:135
-msgid "Contact Support"
-msgstr "联系支持"
-
-#: ../../content/administration/maintain/odoo_online.rst:137
-msgid ""
-"Access the Odoo `support page <https://www.odoo.com/help>`_ with your "
+"Access the `Odoo.com support page <https://www.odoo.com/help>`_ with the "
 "database's details already pre-filled."
-msgstr "访问Odoo的“支持页面<https://www.odoo.com/help>”_，其中已经预先填写了数据库的详细信息。"
-
-#: ../../content/administration/maintain/odoo_online.rst:143
-msgid "Invite / Remove Users"
-msgstr "邀请/删除用户"
-
-#: ../../content/administration/maintain/odoo_online.rst:145
-msgid ""
-"To invite users, fill out the email address of the new user and click on "
-"*Invite*. To add multiple users, click on *Add more users*."
-msgstr "要邀请用户，请填写新用户的电子邮件地址，然后单击*邀请*。要添加多个用户，请单击“*添加更多用户*”。"
-
-#: ../../content/administration/maintain/odoo_online.rstNone
-msgid "Clicking on \"Add more users\" adds additional email fields."
 msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:152
-msgid "To remove users, select the users to remove and click on *Remove*."
-msgstr "要删除用户，请选择要删除的用户，然后单击*删除*。"
+#: ../../content/administration/maintain/odoo_online.rst:121
+msgid "Invite / remove users"
+msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:155
-msgid ":doc:`/applications/general/users/manage_users`"
-msgstr ":doc:`/applications/general/users/manage_users`"
+#: ../../content/administration/maintain/odoo_online.rst:123
+msgid ""
+"To invite users, fill out the new user's email address and click "
+":guilabel:`Invite`. To add multiple users, click :guilabel:`Add more users`."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst-1
+msgid "Inviting a user on a database"
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:129
+msgid "To remove users, select them and click :guilabel:`Remove`."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:132
+msgid ":doc:`../../applications/general/users/manage_users`"
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:133
+msgid ":doc:`../../applications/general/users/delete_account`"
+msgstr ""
 
 #: ../../content/administration/maintain/on_premise.rst:3
 msgid "On-premise database management"
@@ -4546,7 +4624,7 @@ msgid ""
 "message:"
 msgstr "如你无法注册数据库，可能会遇到以下信息："
 
-#: ../../content/administration/maintain/on_premise.rstNone
+#: ../../content/administration/maintain/on_premise.rst-1
 msgid ""
 "Something went wrong while registering your database, you can try again or contact Odoo\n"
 "Help"
@@ -4667,7 +4745,7 @@ msgid ""
 " Enterprise subscription, you may encounter this message:"
 msgstr "如你本地数据库的用户数高于Odoo企业订阅的购买量，可能会收到以下提示："
 
-#: ../../content/administration/maintain/on_premise.rstNone
+#: ../../content/administration/maintain/on_premise.rst-1
 msgid ""
 "This database will expire in X days, you have more users than your "
 "subscription allows"
@@ -4714,7 +4792,7 @@ msgid ""
 "subscription, you will encounter this message:"
 msgstr "如果在更新订阅之前数据库临近过期日期，你会收到以下消息提示："
 
-#: ../../content/administration/maintain/on_premise.rstNone
+#: ../../content/administration/maintain/on_premise.rst-1
 msgid "This database has expired."
 msgstr "此数据库已过期."
 
@@ -4829,272 +4907,344 @@ msgstr "下表是每个版本的支持状态。"
 msgid "**Major releases are in bold type.**"
 msgstr " **要版本以粗体显示。**"
 
-#: ../../content/administration/maintain/supported_versions.rst:27
+#: ../../content/administration/maintain/supported_versions.rst:33
 #: ../../content/administration/upgrade/on_premise.rst:3
 msgid "On-Premise"
 msgstr "本地部署"
 
-#: ../../content/administration/maintain/supported_versions.rst:27
+#: ../../content/administration/maintain/supported_versions.rst:34
 msgid "Release date"
 msgstr "发布日期"
 
-#: ../../content/administration/maintain/supported_versions.rst:27
+#: ../../content/administration/maintain/supported_versions.rst:35
 msgid "End of support"
 msgstr "终止支持"
 
-#: ../../content/administration/maintain/supported_versions.rst:29
-msgid "**Odoo 16.0**"
+#: ../../content/administration/maintain/supported_versions.rst:36
+msgid "Odoo saas~16.3"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:29
-#: ../../content/administration/maintain/supported_versions.rst:29
-#: ../../content/administration/maintain/supported_versions.rst:29
-#: ../../content/administration/maintain/supported_versions.rst:31
-#: ../../content/administration/maintain/supported_versions.rst:35
-#: ../../content/administration/maintain/supported_versions.rst:35
-#: ../../content/administration/maintain/supported_versions.rst:35
 #: ../../content/administration/maintain/supported_versions.rst:37
-#: ../../content/administration/maintain/supported_versions.rst:37
-#: ../../content/administration/maintain/supported_versions.rst:37
+#: ../../content/administration/maintain/supported_versions.rst:43
+#: ../../content/administration/maintain/supported_versions.rst:55
+#: ../../content/administration/maintain/supported_versions.rst:56
+#: ../../content/administration/maintain/supported_versions.rst:57
+#: ../../content/administration/maintain/supported_versions.rst:73
+#: ../../content/administration/maintain/supported_versions.rst:74
+#: ../../content/administration/maintain/supported_versions.rst:75
+#: ../../content/administration/maintain/supported_versions.rst:79
+#: ../../content/administration/maintain/supported_versions.rst:80
+#: ../../content/administration/maintain/supported_versions.rst:81
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:58
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:59
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:62
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:63
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:66
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:67
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:70
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:71
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:74
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:75
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:78
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:79
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:82
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:83
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:86
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:87
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:91
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:95
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:99
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:103
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:107
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:111
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:115
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:119
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:122
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:123
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:127
 msgid "|green|"
 msgstr "|green|"
 
-#: ../../content/administration/maintain/supported_versions.rst:29
+#: ../../content/administration/maintain/supported_versions.rst:38
 #: ../../content/administration/maintain/supported_versions.rst:39
-msgid "October 2022"
-msgstr ""
-
-#: ../../content/administration/maintain/supported_versions.rst:29
-msgid "October 2025 (planned)"
-msgstr ""
-
-#: ../../content/administration/maintain/supported_versions.rst:31
-msgid "Odoo saas~15.2"
-msgstr "Odoo saas~15.2"
-
-#: ../../content/administration/maintain/supported_versions.rst:31
-#: ../../content/administration/maintain/supported_versions.rst:31
-#: ../../content/administration/maintain/supported_versions.rst:33
-#: ../../content/administration/maintain/supported_versions.rst:33
-#: ../../content/administration/maintain/supported_versions.rst:41
-#: ../../content/administration/maintain/supported_versions.rst:41
+#: ../../content/administration/maintain/supported_versions.rst:44
 #: ../../content/administration/maintain/supported_versions.rst:45
-#: ../../content/administration/maintain/supported_versions.rst:45
-#: ../../content/administration/maintain/supported_versions.rst:49
-#: ../../content/administration/maintain/supported_versions.rst:49
+#: ../../content/administration/maintain/supported_versions.rst:50
 #: ../../content/administration/maintain/supported_versions.rst:51
-#: ../../content/administration/maintain/supported_versions.rst:51
-#: ../../content/administration/maintain/supported_versions.rst:55
-#: ../../content/administration/maintain/supported_versions.rst:55
-#: ../../content/administration/maintain/supported_versions.rst:57
-#: ../../content/administration/maintain/supported_versions.rst:59
-#: ../../content/administration/maintain/supported_versions.rst:59
-#: ../../content/administration/maintain/supported_versions.rst:61
+#: ../../content/administration/maintain/supported_versions.rst:62
+#: ../../content/administration/maintain/supported_versions.rst:63
+#: ../../content/administration/maintain/supported_versions.rst:68
+#: ../../content/administration/maintain/supported_versions.rst:69
+#: ../../content/administration/maintain/supported_versions.rst:92
+#: ../../content/administration/maintain/supported_versions.rst:93
+#: ../../content/administration/maintain/supported_versions.rst:104
+#: ../../content/administration/maintain/supported_versions.rst:105
+#: ../../content/administration/maintain/supported_versions.rst:116
+#: ../../content/administration/maintain/supported_versions.rst:117
+#: ../../content/administration/maintain/supported_versions.rst:122
+#: ../../content/administration/maintain/supported_versions.rst:123
+#: ../../content/administration/maintain/supported_versions.rst:134
+#: ../../content/administration/maintain/supported_versions.rst:135
+#: ../../content/administration/maintain/supported_versions.rst:140
+#: ../../content/administration/maintain/supported_versions.rst:146
+#: ../../content/administration/maintain/supported_versions.rst:147
+#: ../../content/administration/maintain/supported_versions.rst:152
 msgid "N/A"
 msgstr "无"
 
-#: ../../content/administration/maintain/supported_versions.rst:31
-msgid "March 2022"
-msgstr "三月 2022"
-
-#: ../../content/administration/maintain/supported_versions.rst:31
-msgid "January 2023"
+#: ../../content/administration/maintain/supported_versions.rst:40
+msgid "June 2023"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:33
-msgid "Odoo saas~15.1"
-msgstr "Odoo saas~15.1"
-
-#: ../../content/administration/maintain/supported_versions.rst:33
-#: ../../content/administration/maintain/supported_versions.rst:39
-#: ../../content/administration/maintain/supported_versions.rst:39
-#: ../../content/administration/maintain/supported_versions.rst:39
 #: ../../content/administration/maintain/supported_versions.rst:41
-#: ../../content/administration/maintain/supported_versions.rst:43
-#: ../../content/administration/maintain/supported_versions.rst:43
-#: ../../content/administration/maintain/supported_versions.rst:43
-#: ../../content/administration/maintain/supported_versions.rst:45
+msgid "September 2023 (planned)"
+msgstr ""
+
+#: ../../content/administration/maintain/supported_versions.rst:42
+msgid "Odoo saas~16.2"
+msgstr ""
+
+#: ../../content/administration/maintain/supported_versions.rst:46
+msgid "March 2023"
+msgstr ""
+
 #: ../../content/administration/maintain/supported_versions.rst:47
-#: ../../content/administration/maintain/supported_versions.rst:47
-#: ../../content/administration/maintain/supported_versions.rst:47
+msgid "July 2023 (planned)"
+msgstr ""
+
+#: ../../content/administration/maintain/supported_versions.rst:48
+msgid "Odoo saas~16.1"
+msgstr ""
+
 #: ../../content/administration/maintain/supported_versions.rst:49
-#: ../../content/administration/maintain/supported_versions.rst:51
-#: ../../content/administration/maintain/supported_versions.rst:53
-#: ../../content/administration/maintain/supported_versions.rst:53
-#: ../../content/administration/maintain/supported_versions.rst:53
-#: ../../content/administration/maintain/supported_versions.rst:55
-#: ../../content/administration/maintain/supported_versions.rst:57
-#: ../../content/administration/maintain/supported_versions.rst:57
-#: ../../content/administration/maintain/supported_versions.rst:59
 #: ../../content/administration/maintain/supported_versions.rst:61
-#: ../../content/administration/maintain/supported_versions.rst:61
+#: ../../content/administration/maintain/supported_versions.rst:67
+#: ../../content/administration/maintain/supported_versions.rst:85
+#: ../../content/administration/maintain/supported_versions.rst:86
+#: ../../content/administration/maintain/supported_versions.rst:87
+#: ../../content/administration/maintain/supported_versions.rst:91
+#: ../../content/administration/maintain/supported_versions.rst:97
+#: ../../content/administration/maintain/supported_versions.rst:98
+#: ../../content/administration/maintain/supported_versions.rst:99
+#: ../../content/administration/maintain/supported_versions.rst:103
+#: ../../content/administration/maintain/supported_versions.rst:109
+#: ../../content/administration/maintain/supported_versions.rst:110
+#: ../../content/administration/maintain/supported_versions.rst:111
+#: ../../content/administration/maintain/supported_versions.rst:115
+#: ../../content/administration/maintain/supported_versions.rst:121
+#: ../../content/administration/maintain/supported_versions.rst:127
+#: ../../content/administration/maintain/supported_versions.rst:128
+#: ../../content/administration/maintain/supported_versions.rst:129
+#: ../../content/administration/maintain/supported_versions.rst:133
+#: ../../content/administration/maintain/supported_versions.rst:139
+#: ../../content/administration/maintain/supported_versions.rst:141
+#: ../../content/administration/maintain/supported_versions.rst:145
+#: ../../content/administration/maintain/supported_versions.rst:151
+#: ../../content/administration/maintain/supported_versions.rst:153
 msgid "|red|"
 msgstr "|red|"
 
-#: ../../content/administration/maintain/supported_versions.rst:33
+#: ../../content/administration/maintain/supported_versions.rst:52
+msgid "February 2023"
+msgstr ""
+
+#: ../../content/administration/maintain/supported_versions.rst:53
+msgid "April 2023"
+msgstr ""
+
+#: ../../content/administration/maintain/supported_versions.rst:54
+msgid "**Odoo 16.0**"
+msgstr ""
+
+#: ../../content/administration/maintain/supported_versions.rst:58
+#: ../../content/administration/maintain/supported_versions.rst:89
+msgid "October 2022"
+msgstr ""
+
+#: ../../content/administration/maintain/supported_versions.rst:59
+msgid "October 2025 (planned)"
+msgstr ""
+
+#: ../../content/administration/maintain/supported_versions.rst:60
+msgid "Odoo saas~15.2"
+msgstr "Odoo saas~15.2"
+
+#: ../../content/administration/maintain/supported_versions.rst:64
+msgid "March 2022"
+msgstr "三月 2022"
+
+#: ../../content/administration/maintain/supported_versions.rst:65
+msgid "January 2023"
+msgstr ""
+
+#: ../../content/administration/maintain/supported_versions.rst:66
+msgid "Odoo saas~15.1"
+msgstr "Odoo saas~15.1"
+
+#: ../../content/administration/maintain/supported_versions.rst:70
 msgid "February 2022"
 msgstr "二月 2022"
 
-#: ../../content/administration/maintain/supported_versions.rst:33
+#: ../../content/administration/maintain/supported_versions.rst:71
 msgid "July 2022"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:35
+#: ../../content/administration/maintain/supported_versions.rst:72
 msgid "**Odoo 15.0**"
 msgstr "**Odoo 15.0**"
 
-#: ../../content/administration/maintain/supported_versions.rst:35
-#: ../../content/administration/maintain/supported_versions.rst:43
+#: ../../content/administration/maintain/supported_versions.rst:76
+#: ../../content/administration/maintain/supported_versions.rst:101
 msgid "October 2021"
 msgstr "十月 2021"
 
-#: ../../content/administration/maintain/supported_versions.rst:35
+#: ../../content/administration/maintain/supported_versions.rst:77
 msgid "October 2024 (planned)"
 msgstr "2024年10月（计划）"
 
-#: ../../content/administration/maintain/supported_versions.rst:37
+#: ../../content/administration/maintain/supported_versions.rst:78
 msgid "**Odoo 14.0**"
 msgstr "**Odoo 14.0**"
 
-#: ../../content/administration/maintain/supported_versions.rst:37
-#: ../../content/administration/maintain/supported_versions.rst:47
+#: ../../content/administration/maintain/supported_versions.rst:82
+#: ../../content/administration/maintain/supported_versions.rst:113
 msgid "October 2020"
 msgstr "2020年10月"
 
-#: ../../content/administration/maintain/supported_versions.rst:37
+#: ../../content/administration/maintain/supported_versions.rst:83
 msgid "October 2023 (planned)"
 msgstr "2023年10月（计划）"
 
-#: ../../content/administration/maintain/supported_versions.rst:39
+#: ../../content/administration/maintain/supported_versions.rst:84
 msgid "**Odoo 13.0**"
 msgstr "**Odoo 13.0**"
 
-#: ../../content/administration/maintain/supported_versions.rst:39
-#: ../../content/administration/maintain/supported_versions.rst:53
+#: ../../content/administration/maintain/supported_versions.rst:88
+#: ../../content/administration/maintain/supported_versions.rst:131
 msgid "October 2019"
 msgstr "2019年10月"
 
-#: ../../content/administration/maintain/supported_versions.rst:41
+#: ../../content/administration/maintain/supported_versions.rst:90
 msgid "Odoo saas~12.3"
 msgstr "Odoo saas~12.3"
 
-#: ../../content/administration/maintain/supported_versions.rst:41
+#: ../../content/administration/maintain/supported_versions.rst:94
 msgid "August 2019"
 msgstr "2019年8月"
 
-#: ../../content/administration/maintain/supported_versions.rst:43
+#: ../../content/administration/maintain/supported_versions.rst:96
 msgid "**Odoo 12.0**"
 msgstr "**Odoo 12.0**"
 
-#: ../../content/administration/maintain/supported_versions.rst:43
-#: ../../content/administration/maintain/supported_versions.rst:57
+#: ../../content/administration/maintain/supported_versions.rst:100
+#: ../../content/administration/maintain/supported_versions.rst:143
 msgid "October 2018"
 msgstr "2018年10月"
 
-#: ../../content/administration/maintain/supported_versions.rst:45
+#: ../../content/administration/maintain/supported_versions.rst:102
 msgid "Odoo saas~11.3"
 msgstr "Odoo saas~11.3"
 
-#: ../../content/administration/maintain/supported_versions.rst:45
+#: ../../content/administration/maintain/supported_versions.rst:106
 msgid "April 2018"
 msgstr "2018年4月"
 
-#: ../../content/administration/maintain/supported_versions.rst:47
+#: ../../content/administration/maintain/supported_versions.rst:108
 msgid "**Odoo 11.0**"
 msgstr "**Odoo 11.0**"
 
-#: ../../content/administration/maintain/supported_versions.rst:47
-#: ../../content/administration/maintain/supported_versions.rst:61
+#: ../../content/administration/maintain/supported_versions.rst:112
+#: ../../content/administration/maintain/supported_versions.rst:155
 msgid "October 2017"
 msgstr "2017年10月"
 
-#: ../../content/administration/maintain/supported_versions.rst:49
+#: ../../content/administration/maintain/supported_versions.rst:114
 msgid "Odoo 10.saas~15"
 msgstr "Odoo 10.saas~15"
 
-#: ../../content/administration/maintain/supported_versions.rst:49
+#: ../../content/administration/maintain/supported_versions.rst:118
 msgid "March 2017"
 msgstr "2017年3月"
 
-#: ../../content/administration/maintain/supported_versions.rst:51
+#: ../../content/administration/maintain/supported_versions.rst:120
 msgid "Odoo 10.saas~14"
 msgstr "Odoo 10.saas~14"
 
-#: ../../content/administration/maintain/supported_versions.rst:51
+#: ../../content/administration/maintain/supported_versions.rst:124
 msgid "January 2017"
 msgstr "2017年1月"
 
-#: ../../content/administration/maintain/supported_versions.rst:53
+#: ../../content/administration/maintain/supported_versions.rst:126
 msgid "**Odoo 10.0**"
 msgstr "**Odoo 10.0**"
 
-#: ../../content/administration/maintain/supported_versions.rst:53
+#: ../../content/administration/maintain/supported_versions.rst:130
 msgid "October 2016"
 msgstr "2016年10月"
 
-#: ../../content/administration/maintain/supported_versions.rst:55
+#: ../../content/administration/maintain/supported_versions.rst:132
 msgid "Odoo 9.saas~11"
 msgstr "Odoo 9.saas~11"
 
-#: ../../content/administration/maintain/supported_versions.rst:55
+#: ../../content/administration/maintain/supported_versions.rst:136
 msgid "May 2016"
 msgstr "2016年5月"
 
-#: ../../content/administration/maintain/supported_versions.rst:57
+#: ../../content/administration/maintain/supported_versions.rst:138
 msgid "**Odoo 9.0**"
 msgstr "**Odoo 9.0**"
 
-#: ../../content/administration/maintain/supported_versions.rst:57
+#: ../../content/administration/maintain/supported_versions.rst:142
 msgid "October 2015"
 msgstr "2015年10月"
 
-#: ../../content/administration/maintain/supported_versions.rst:59
+#: ../../content/administration/maintain/supported_versions.rst:144
 msgid "Odoo 8.saas~6"
 msgstr "Odoo 8.saas~6"
 
-#: ../../content/administration/maintain/supported_versions.rst:59
+#: ../../content/administration/maintain/supported_versions.rst:148
 msgid "February 2015"
 msgstr "2015年2月"
 
-#: ../../content/administration/maintain/supported_versions.rst:61
+#: ../../content/administration/maintain/supported_versions.rst:150
 msgid "**Odoo 8.0**"
 msgstr "**Odoo 8.0**"
 
-#: ../../content/administration/maintain/supported_versions.rst:61
+#: ../../content/administration/maintain/supported_versions.rst:154
 msgid "September 2014"
 msgstr "2014年9月"
 
-#: ../../content/administration/maintain/supported_versions.rst:66
+#: ../../content/administration/maintain/supported_versions.rst:159
 msgid "|green| Supported version"
 msgstr "|green| 支持的版本"
 
-#: ../../content/administration/maintain/supported_versions.rst:68
+#: ../../content/administration/maintain/supported_versions.rst:161
 msgid "|red| End-of-support"
 msgstr "|red| 结束支持"
 
-#: ../../content/administration/maintain/supported_versions.rst:70
+#: ../../content/administration/maintain/supported_versions.rst:163
 msgid "N/A Never released for this platform"
 msgstr "不适用  从未在此平台发布"
 
-#: ../../content/administration/maintain/supported_versions.rst:72
+#: ../../content/administration/maintain/supported_versions.rst:165
 msgid "🏁 Future version, not released yet"
 msgstr "🏁 未来版本，尚未发布"
 
-#: ../../content/administration/maintain/supported_versions.rst:83
+#: ../../content/administration/maintain/supported_versions.rst:176
 msgid "I run an older version of Odoo/OpenERP/TinyERP"
 msgstr "我仍在使用老版本的 Odoo/OpenERP/TinyERP"
 
-#: ../../content/administration/maintain/supported_versions.rst:85
+#: ../../content/administration/maintain/supported_versions.rst:178
 msgid ""
 "OpenERP 7.0, 6.1, 6.0 and 5.0 is not supported anymore, on any platform."
 msgstr "OpenERP 7.0、6.1、6.0和5.0在任何平台上均不再提供支持。"
 
-#: ../../content/administration/maintain/supported_versions.rst:87
+#: ../../content/administration/maintain/supported_versions.rst:180
 msgid ""
 "TinyERP 4.0, 3.0, 2.0 and 1.0 is not supported anymore, on any platform."
 msgstr "TinyERP 4.0、3.0、2.0和1.0在任何平台上均不再提供支持。"
 
-#: ../../content/administration/maintain/supported_versions.rst:89
+#: ../../content/administration/maintain/supported_versions.rst:182
 msgid ""
 "Even though we don't support older versions, you can always `upgrade from "
 "any version <https://upgrade.odoo.com/>`_."
@@ -5646,7 +5796,7 @@ msgid ""
 "code/function/method you want to debug."
 msgstr "最后，*通过*Odoo Shell，您可以触发要调试的代码/函数/方法。"
 
-#: ../../content/administration/odoo_sh/advanced/containers.rstNone
+#: ../../content/administration/odoo_sh/advanced/containers.rst-1
 msgid "Console screenshot showing ``pdb`` running in an Odoo.sh shell."
 msgstr ""
 
@@ -5714,7 +5864,7 @@ msgstr ""
 "您计划的操作应该是“幂等<https://stackoverflow.com/a/1077421/3332416>”_：如果它们开始的频率高于预期，则它们不得引起副作用。"
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:6
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:110
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:170
 msgid "Submodules"
 msgstr "子模块"
 
@@ -6059,7 +6209,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:88
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:81
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:51
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:56
 msgid "Development"
 msgstr "开发"
 
@@ -6196,8 +6346,8 @@ msgid "Tabs"
 msgstr "页卡"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:155
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:51
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:63
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:57
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:85
 msgid "History"
 msgstr "历史"
 
@@ -6227,8 +6377,8 @@ msgstr ""
 " *connect* 按钮访问数据库。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:173
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:59
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:71
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:73
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:101
 msgid "Mails"
 msgstr "邮件"
 
@@ -6278,7 +6428,7 @@ msgid ""
 msgstr "用于编辑源代码的在线集成开发环境 （IDE）。您还可以打开终端，Python控制台甚至Odoo Shell控制台。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:212
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:73
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:105
 msgid "Monitoring"
 msgstr "监控"
 
@@ -6294,8 +6444,8 @@ msgid ""
 msgstr "您可以缩放、更改时间范围或在每个图表上选择特定指标。在图表上，注释可帮助您与构建（数据库导入，git推送等）的更改相关联。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:225
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:55
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:67
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:65
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:93
 msgid "Logs"
 msgstr "纪录"
 
@@ -6346,7 +6496,7 @@ msgid ""
 msgstr "您可以通过单击视图右上角的相应按钮来暂停日志提取。抓取会在 5 分钟后自动停止。您可以使用播放按钮重新启动它。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:249
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:75
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:109
 msgid "Backups"
 msgstr "备份"
 
@@ -6454,9 +6604,9 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:303
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:3
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:61
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:77
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:81
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:117
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:124
 msgid "Settings"
 msgstr "设置"
 
@@ -7532,11 +7682,9 @@ msgid "|pic1|  |pic2|"
 msgstr "|图片1| |图片2|"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:40
-#: ../../content/administration/odoo_sh/getting_started/first_module.rst:40
 msgid "pic1"
 msgstr ""
 
-#: ../../content/administration/odoo_sh/getting_started/first_module.rst:43
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:43
 msgid "pic2"
 msgstr ""
@@ -8434,92 +8582,72 @@ msgid ""
 "logs."
 msgstr "此外，他们不能使用 Webshell，也无法访问服务器日志。"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:49
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:54
 msgid "User"
 msgstr "用户"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:49
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:55
 msgid "Admin"
 msgstr "管理员"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:51
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:51
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:53
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:53
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:55
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:55
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:57
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:57
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:59
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:59
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:61
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:61
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:63
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:63
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:65
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:67
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:69
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:71
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:73
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:75
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:77
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:77
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:79
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:79
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:81
-msgid "X"
-msgstr "X"
-
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:53
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:65
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:89
 msgid "1-click connect"
 msgstr "一键连接"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:57
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:69
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:97
 msgid "Shell/SSH"
 msgstr "Shell/SSH"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:63
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:84
 msgid "Production & Staging"
 msgstr "生产与舞台"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:79
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:118
+msgid "|green|\\*"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:120
 #: ../../content/administration/odoo_sh/getting_started/status.rst:3
 msgid "Status"
 msgstr "状态"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:85
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:130
+msgid "\\* Only in staging branches"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:145
 msgid "Public Access"
 msgstr "公共访问"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:87
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:147
 msgid "Allow public access to your development builds."
 msgstr "允许对开发版本进行公共访问。"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:92
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:152
 msgid ""
 "If activated, this option exposes the Builds page publicly, allowing "
 "visitors to connect to your development builds."
 msgstr "如果激活，此选项将公开“生成”页，允许访问者连接到开发生成。"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:95
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:155
 msgid ""
 "In addition, visitors have access to the logs, shell and mails of your "
 "development builds."
 msgstr "此外，访问者还可以访问开发版本的日志、shell 和邮件。"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:97
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:157
 msgid ""
 "Production and staging builds are excluded, visitors can only see their "
 "status."
 msgstr "生产和过渡版本被排除在外，访问者只能看到他们的状态。"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:102
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:162
 msgid "Custom domains"
 msgstr "自定义域"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:104
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:164
 msgid ""
 "To configure additional domains please refer to the corresponding branch's "
 ":ref:`settings tab <odoosh-gettingstarted-branches-tabs-settings>`."
@@ -8527,13 +8655,13 @@ msgstr ""
 "要配置其他域，请参阅相应分支的 ：ref：'settings 选项卡 <odoosh-gettingstarted-branches-tabs-"
 "settings>'。</odoosh-gettingstarted-branches-tabs-settings>"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:112
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:172
 msgid ""
 "Configure the deploy keys for the private repositories you use as submodules"
 " in your branches to allow Odoo.sh to download them."
 msgstr "为在分支中用作子模块的私有仓库配置部署密钥，以允许 Odoo.sh 下载它们。"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:116
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:176
 msgid ""
 "These settings are required for **private repositories** only. If you are "
 "looking on how to set up your submodules, instructions are available in the "
@@ -8543,7 +8671,7 @@ msgstr ""
 "仅对于“私有仓库”，这些设置是必需的。如果您正在研究如何设置子模块，请参阅本文档的章节：ref：`Submodules <odoosh-"
 "advanced-submodules>`。"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:123
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:183
 msgid ""
 "When a repository is private, it is not possible to publicly download its "
 "branches and revisions. For that reason, you need to configure a deploy key "
@@ -8553,108 +8681,108 @@ msgstr ""
 "当存储库是私有的时，无法公开下载其分支和修订版。因此，您需要为 Odoo.sh 配置部署密钥，以便远程 Git "
 "服务器允许我们的平台下载此私有存储库的修订版。"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:128
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:188
 msgid ""
 "To configure the deploy key for a private repository, proceed as follows:"
 msgstr "要为私有存储库配置部署密钥，请按以下步骤操作："
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:130
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:190
 msgid ""
 "in the input, paste the SSH URL of your private sub-repository and click on "
 "*Add*,"
 msgstr "在输入中，粘贴私有子存储库的 SSH URL，然后单击“*添加”，"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:132
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:192
 msgid "e.g. *git@github.com:USERNAME/REPOSITORY.git*"
 msgstr "例如 *git@github.com：USERNAME/REPOSITORY.git*"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:133
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:193
 msgid ""
 "it can be another Git server than Github, such as Bitbucket, Gitlab or even "
 "your own self-hosted server"
 msgstr "它可以是Github以外的另一个Git服务器，例如Bitbucket，Gitlab甚至您自己的自托管服务器"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:136
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:196
 msgid "copy the public key,"
 msgstr "复制公钥，"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:138
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:198
 msgid "it should look like *ssh-rsa some...random...characters...here...==*"
 msgstr "它应该看起来像*ssh-rsa一些...随机。。。字符。。。这里...==*"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:140
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:200
 msgid ""
 "in the settings of the private sub-repository, add the public key amongst "
 "the deploy keys."
 msgstr "在私有子存储库的设置中，在部署密钥之间添加公钥。"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:142
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:202
 msgid ""
 "Github.com: :menuselection:`Settings --> Deploy keys --> Add deploy key`"
 msgstr ""
 "Github.com： ：menuselection：`Settings --> Deploy key --> Add deploy key`"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:143
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:203
 msgid "Bitbucket.com: :menuselection:`Settings --> Access keys --> Add key`"
 msgstr "Bitbucket.com： ：菜单选择：“设置 --> 访问键 --> 添加键`"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:144
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:204
 msgid "Gitlab.com: :menuselection:`Settings --> Repository --> Deploy Keys`"
 msgstr "Gitlab.com： ：菜单选择：`设置 -->存储库 -->部署密钥`"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:145
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:205
 msgid ""
 "Self-hosted: append the key to the git user’s authorized_keys file in its "
 ".ssh directory"
 msgstr "自托管：将密钥附加到 git 用户的 authorized_keys 文件在其 .ssh 目录中"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:148
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:208
 msgid "Storage Size"
 msgstr "存储大小"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:150
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:210
 msgid "This section shows the storage size used by your project."
 msgstr "本部分显示项目使用的存储大小。"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:155
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:215
 msgid "Storage size is computed as follows:"
 msgstr "存储大小的计算方法如下："
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:157
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:217
 msgid "the size of the PostgreSQL database"
 msgstr "PostgreSQL 数据库的大小"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:159
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:219
 msgid ""
 "the size of the disk files available in your container: database filestore, "
 "sessions storage directory..."
 msgstr "容器中可用磁盘文件的大小：数据库文件存储、会话存储目录..."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:162
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:222
 msgid ""
 "In case you want to analyze disk usage, you can run the tool `ncdu "
 "<https://dev.yorhel.nl/ncdu/man>`_ in your Web Shell."
 msgstr ""
 "如果要分析磁盘使用情况，可以在 Web Shell 中运行工具“ncdu <https://dev.yorhel.nl/ncdu/man>”。。"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:165
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:225
 msgid ""
 "Should your production database size grow to exceed what's provisioned in "
 "your subscription, it will automatically be synchronized with it."
 msgstr "如果生产数据库大小增长到超过订阅中预配的大小，它将自动与订阅同步。"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:169
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:229
 msgid "Database Workers"
 msgstr "数据库工作线程"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:171
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:231
 msgid ""
 "Additional database workers can be configured here. More workers help "
 "increase the load your production database is able to handle. If you add "
 "more, it will automatically be synchronized with your subscription."
 msgstr "可以在此处配置其他数据库工作线程。更多的工作人员有助于增加生产数据库能够处理的负载。如果添加更多，它将自动与你的订阅同步。"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:179
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:239
 msgid ""
 "Adding more workers will not magically solve all performance issues. It only"
 " allows the server to handle more connections at the same time. If some "
@@ -8664,22 +8792,22 @@ msgid ""
 msgstr ""
 "增加更多的工作人员并不能神奇地解决所有性能问题。它只允许服务器同时处理更多连接。如果某些操作异常缓慢，则很可能是代码有问题，如果不是由于您自己的自定义，则可以打开工单“这里<https://www.odoo.com/help>”_。"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:185
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:245
 msgid "Staging Branches"
 msgstr "暂存分支"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:187
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:247
 msgid ""
 "Additional staging branches allow you to develop and test more features at "
 "the same time. If you add more, it will automatically be synchronized with "
 "your subscription."
 msgstr "其他暂存分支允许您同时开发和测试更多功能。如果添加更多，它将自动与你的订阅同步。"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:194
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:254
 msgid "Activation"
 msgstr "启用"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:196
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:256
 msgid ""
 "Shows the status of the project's activation. You can change the project's "
 "activation code if needed."
@@ -8729,7 +8857,7 @@ msgstr "从另一个 ERP 迁移到 Odoo"
 
 #: ../../content/administration/upgrade.rst:29
 #: ../../content/administration/upgrade.rst:148
-#: ../../content/administration/upgrade.rst:252
+#: ../../content/administration/upgrade.rst:259
 #: ../../content/administration/upgrade/faq.rst:81
 #: ../../content/administration/upgrade/faq.rst:92
 #: ../../content/administration/upgrade/faq.rst:119
@@ -8906,7 +9034,7 @@ msgid ""
 "<https://upgrade.odoo.com>`_ and select *Testing* purpose."
 msgstr "按照“网站表单<https://upgrade.odoo.com>”_上每种托管类型的可用说明进行操作，然后选择“*测试*目的”。"
 
-#: ../../content/administration/upgrade.rstNone
+#: ../../content/administration/upgrade.rst-1
 msgid "Selection of the \"Testing\" purpose in the upgrade form on Odoo"
 msgstr ""
 
@@ -9045,8 +9173,8 @@ msgid "Help"
 msgstr "求助"
 
 #: ../../content/administration/upgrade.rst:200
-msgid "Contact our Upgrade service support"
-msgstr "联系我们的升级服务支持"
+msgid "Contact our upgrade service support"
+msgstr ""
 
 #: ../../content/administration/upgrade.rst:202
 msgid ""
@@ -9069,87 +9197,102 @@ msgid ""
 msgstr "这是升级前要考虑的一个因素。如果您使用的是旧版本，我们建议您更喜欢最新版本，以便从更长的支持中受益（在必须再次升级之前）。"
 
 #: ../../content/administration/upgrade.rst:218
-#: ../../content/administration/upgrade.rst:257
 msgid ":doc:`maintain/supported_versions`"
 msgstr ":doc:`维护/supported_versions`"
 
 #: ../../content/administration/upgrade.rst:223
-msgid "Service Level Agreement"
-msgstr "服务水平协议"
+msgid "Service-level agreement (SLA)"
+msgstr ""
 
-#: ../../content/administration/upgrade.rst:226
-msgid "What is covered by the Enterprise Licence?"
-msgstr "企业牌照涵盖哪些内容？"
+#: ../../content/administration/upgrade.rst:225
+msgid ""
+"With Odoo Enterprise, upgrading a database to the most recent version of "
+"Odoo is **free**, including any support required to rectify potential "
+"discrepancies in the upgraded database."
+msgstr ""
 
 #: ../../content/administration/upgrade.rst:228
 msgid ""
-"Databases hosted on Odoo's Cloud platforms (Odoo Online and Odoo.sh) or On-"
-"Premise (Self-Hosting) enjoy the following services at all times."
+"Information about the upgrade services included in the Enterprise Licence is"
+" available in the :ref:`Odoo Enterprise Subscription Agreement <upgrade>`. "
+"However, this section clarifies what upgrade services you can expect."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:231
-msgid "The upgrade of:"
-msgstr "升级："
-
 #: ../../content/administration/upgrade.rst:233
-msgid "standard applications"
-msgstr "标准应用"
-
-#: ../../content/administration/upgrade.rst:234
-msgid ""
-"Studio customization (as long as the :guilabel:`Studio` app is still active)"
-msgstr "工作室自定义（只要 ：guilabel：`Studio` 应用仍处于活动状态）"
+msgid "Upgrade services covered by the SLA"
+msgstr ""
 
 #: ../../content/administration/upgrade.rst:235
 msgid ""
-"customizations *if* they are covered by a \"Maintenance of Customizations\" "
-"subscription"
+"Databases hosted on Odoo's cloud platforms (Odoo Online and Odoo.sh) or "
+"self-hosted (On-Premise) can benefit from upgrade services at all times for:"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:237
+#: ../../content/administration/upgrade.rst:238
+msgid "the upgrade of all **standard applications**;"
+msgstr ""
+
+#: ../../content/administration/upgrade.rst:239
 msgid ""
-"The Upgrade Service is limited to your database's technical conversion and "
-"adaptation (standard modules and data) to make it compatible with the "
-"targeted version."
-msgstr "升级服务仅限于数据库的技术转换和调整（标准模块和数据），以使其与目标版本兼容。"
+"the upgrade of all **customizations created with the Studio app**, as long "
+"as Studio is still installed and the respective subscription is still "
+"active; and"
+msgstr ""
 
 #: ../../content/administration/upgrade.rst:241
-msgid "What upgrading does NOT cover"
-msgstr "升级不包括哪些内容"
-
-#: ../../content/administration/upgrade.rst:243
-msgid "The cleaning of pre-existing data & configuration while upgrading"
-msgstr "升级时清理预先存在的数据和配置"
+msgid ""
+"the upgrade of all **developments and customizations covered by a "
+"maintenance of customizations subscription**."
+msgstr ""
 
 #: ../../content/administration/upgrade.rst:244
 msgid ""
-"Any new developments and/or upgrades of your own :ref:`custom modules "
-"<upgrade-faq/custom-modules>`"
-msgstr "您自己的任何新开发和/或升级：ref：`自定义模块<升级-faq/自定义-模块>`"
-
-#: ../../content/administration/upgrade.rst:246
-msgid ""
-"Lines of code added to standard modules that are not created with Odoo "
-"Studio."
+"Upgrade services are limited to the technical conversion and adaptation of a"
+" database (standard modules and data) to make it compatible with the version"
+" targeted by the upgrade."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:247
-msgid "`Training <https://www.odoo.com/learn>`_ on the latest version"
-msgstr "最新版本上的“培训<https://www.odoo.com/learn>”_"
+#: ../../content/administration/upgrade.rst:248
+msgid "Upgrade services not covered by the SLA"
+msgstr ""
 
-#: ../../content/administration/upgrade.rst:249
+#: ../../content/administration/upgrade.rst:250
+msgid "The following upgrade-related services are **not** included:"
+msgstr ""
+
+#: ../../content/administration/upgrade.rst:252
 msgid ""
-"You can get more information about your Enterprise Licence on our :ref:`Odoo"
-" Enterprise Subscription Agreement <upgrade>` page."
-msgstr "您可以在我们的：ref：`Odoo企业订阅协议`页面上获取有关您的企业许可证 <upgrade>的更多信息。</upgrade>"
+"the **cleaning** of pre-existing data and configurations while upgrading;"
+msgstr ""
 
-#: ../../content/administration/upgrade.rst:255
-msgid ":doc:`upgrade/faq`"
-msgstr ":doc:`升级/常见问题`"
+#: ../../content/administration/upgrade.rst:253
+msgid ""
+"the upgrade of **custom modules created in-house or by third parties**, "
+"including Odoo partners;"
+msgstr ""
 
-#: ../../content/administration/upgrade.rst:256
-msgid ":doc:`odoo_sh`"
-msgstr ":d：`odoo_sh`"
+#: ../../content/administration/upgrade.rst:254
+msgid ""
+"lines of **code added to standard modules**, i.e., customizations created "
+"outside the Studio app, code entered manually, and :ref:`automated actions "
+"using Python code <studio/automated-actions/action>`; and"
+msgstr ""
+
+#: ../../content/administration/upgrade.rst:257
+msgid "**training** on using the upgraded version's features and workflows."
+msgstr ""
+
+#: ../../content/administration/upgrade.rst:262
+msgid ":doc:`Upgrade FAQ <upgrade/faq>`"
+msgstr ""
+
+#: ../../content/administration/upgrade.rst:263
+msgid ":doc:`Odoo.sh documentation <odoo_sh>`"
+msgstr ""
+
+#: ../../content/administration/upgrade.rst:264
+msgid ":doc:`Supported Odoo versions <maintain/supported_versions>`"
+msgstr ""
 
 #: ../../content/administration/upgrade/faq.rst:8
 msgid "FAQ"
@@ -9545,56 +9688,156 @@ msgid ""
 "test upgrade before upgrading your production instance."
 msgstr "如果您使用的是网站或 Studio 应用程序，我们建议您始终在升级生产实例之前执行测试升级。"
 
-#: ../../content/administration/upgrade/odoo_online.rst:6
-msgid "Requesting a test upgrade"
-msgstr "请求测试升级"
+#: ../../content/administration/upgrade/odoo_online.rst:5
+msgid ""
+"Odoo databases can be manually upgraded directly from the main Odoo website."
+" To upgrade an Odoo database, navigate to the `database manager "
+"<https://www.odoo.com/my/databases>`_ page and sign in."
+msgstr ""
 
 #: ../../content/administration/upgrade/odoo_online.rst:8
-msgid "Go to your `database manager <https://www.odoo.com/my/databases/>`_"
-msgstr "转至“数据库管理器<https://www.odoo.com/my/databases/>”_"
-
-#: ../../content/administration/upgrade/odoo_online.rst:9
-msgid "Click on your profile icon and select *My Databases*."
-msgstr "单击您的个人资料图标，然后选择“*我的数据库*”。"
-
-#: ../../content/administration/upgrade/odoo_online.rst:0
-msgid "Selecting My Databases under my profile"
-msgstr ""
-
-#: ../../content/administration/upgrade/odoo_online.rst:14
 msgid ""
-"Click on the up arrow button next to your main database name to proceed to "
-"the test upgrade."
+"The database manager page displays all of the Odoo databases associated with"
+" the user's account. Any databases that are not already on the most recent "
+"version of Odoo display an **arrow in a circle** icon next to the database "
+"name, indicating that the database can be upgraded."
 msgstr ""
 
-#: ../../content/administration/upgrade/odoo_online.rst:0
-msgid "Selecting the action settings icon"
+#: ../../content/administration/upgrade/odoo_online.rst-1
+msgid ""
+"The database manager page with an upgrade button next to the name of a "
+"database."
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst:17
+msgid ""
+"If the database's version is **lower** than the latest major release: the "
+"database must be upgraded within two months. After these two months, an "
+"automatic upgrade is initiated."
 msgstr ""
 
 #: ../../content/administration/upgrade/odoo_online.rst:19
 msgid ""
-"In the pop-up message that appears, select the target version and then "
-":guilabel:`Test` as purpose."
+"If the database's version is **equal** to or **higher** than the latest "
+"major release: you can disregard the invitation to upgrade, as the database "
+"probably would not benefit from new features every two months."
 msgstr ""
 
 #: ../../content/administration/upgrade/odoo_online.rst:23
 msgid ""
-"The :guilabel:`Production` purpose doesn't appear if you didn't test your "
-"upgraded database at least once."
+"If a database is *not* on the latest online version, its administrator "
+"should receive an invitation to upgrade on the database's dashboard, "
+"displayed as an **arrow in a circle**."
 msgstr ""
 
-#: ../../content/administration/upgrade/odoo_online.rst:26
-msgid ""
-"This triggers the automated upgrade process. A confirmation email is then "
-"sent to you with the the link to the upgraded database or to provide "
-"information if the upgrade failed."
-msgstr "这将触发自动升级过程。然后，系统会向您发送一封确认电子邮件，其中包含指向已升级数据库的链接，或者在升级失败时提供信息。"
+#: ../../content/administration/upgrade/odoo_online.rst-1
+msgid "Invitation to upgrade on the database dashboard."
+msgstr ""
 
 #: ../../content/administration/upgrade/odoo_online.rst:30
 msgid ""
-"You can also see and access your test database from your *My Databases* "
-"page."
-msgstr "您还可以从“我的数据库”页面查看和访问测试数据库。"
+"Versions that are not supported anymore become deprecated and must be "
+"updated to avoid security issues. It is recommended to initiate the upgrade "
+"yourself and not wait for the automatic upgrade, as the former method allows"
+" you to request a test upgrade of the database to check for any "
+"discrepancies."
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst:36
+msgid "Test database"
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst:38
+msgid ""
+"Click on the **arrow in a circle** icon to start the upgrade process. On the"
+" :guilabel:`Upgrade your database` pop-up, select the version of Odoo that "
+"the platform will be upgraded to. In the :guilabel:`Email to notify` field, "
+"enter an email address that will receive email notifications about the "
+"database upgrade."
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst:43
+msgid ""
+"There is also a :guilabel:`Purpose` section on the pop-up that is used to "
+"specify the reason for the upgrade. However, at this stage of the process, "
+"the only selectable option is :guilabel:`Test`, as Odoo requires users to "
+"create a test copy of the upgraded database before converting the actual "
+"database."
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst-1
+msgid "The \"Upgrade your database\" pop-up."
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst:52
+msgid ""
+"After filling out the form, click the :guilabel:`Upgrade` button. The pop-up"
+" disappears and the database being upgraded shows a red :guilabel:`Upgrade "
+"in progress` tag next to its name. An email confirming that the upgrade is "
+"in progress is also sent to the email address specified on the pop-up."
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst-1
+msgid "The \"Upgrade in progress\" tag next to the database name."
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst:61
+msgid ""
+"Once the upgrade is complete, a new test database appears on the `database "
+"manager <https://www.odoo.com/my/databases>`_ page. To access the test "
+"database, click the drop-down arrow (:guilabel:`⯆`) to the left of the main "
+"database's name. Doing so makes the test version appear below it. Finally, "
+"click the green :guilabel:`Connect` button on the right side of the test "
+"version's row to go to the database."
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst-1
+msgid "A test database on the database manager page."
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst:71
+msgid ""
+"Except for being on the newer version of Odoo, the test database is an exact"
+" copy of the one being upgraded. It is important to do extensive testing in "
+"this database to ensure that the upgrade has not altered or corrupted any "
+"data, and that all workflows still proceed as expected."
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst:76
+msgid "Production database"
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst:78
+msgid ""
+"After confirming the integrity of the new version, return to the `database "
+"manager <https://www.odoo.com/my/databases>`_ page. Once again, click on the"
+" **arrow in a circle** icon next to the database being upgraded. The "
+":guilabel:`Upgrade your database` pop-up appears as before, except that "
+"there is now a :guilabel:`Production` option under the :guilabel:`Purpose` "
+"section."
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst:83
+msgid ""
+"Select the :guilabel:`Production` option and then click :guilabel:`Upgrade` "
+"to begin the upgrade process. As before, a notification email is sent to the"
+" email address provided and a red :guilabel:`Upgrade in progress` tag "
+"appears next to the name of the database."
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst:87
+msgid ""
+"The production database is then taken offline and will be upgraded "
+"automatically. The time it takes to upgrade the production database should "
+"be similar to the time that was necessary to upgrade the test database. Make"
+" sure to inform database users of the scheduled downtime."
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst:91
+msgid ""
+"After the upgrade is finished, the :guilabel:`Upgrade in progress` tag "
+"disappears and the database is upgraded to the version specified."
+msgstr ""
 
 #: ../../content/administration/upgrade/odoo_sh.rst:10
 msgid ""
@@ -9608,7 +9851,7 @@ msgid ""
 "available for valid projects with a valid production build."
 msgstr ""
 
-#: ../../content/administration/upgrade/odoo_sh.rstNone
+#: ../../content/administration/upgrade/odoo_sh.rst-1
 msgid "Click on the upgrade menu"
 msgstr ""
 
@@ -9683,7 +9926,7 @@ msgid ""
 " Then, click on :guilabel:`Test Upgrade`."
 msgstr ""
 
-#: ../../content/administration/upgrade/odoo_sh.rstNone
+#: ../../content/administration/upgrade/odoo_sh.rst-1
 msgid "Odoo.sh project and tabs"
 msgstr ""
 
@@ -9760,7 +10003,7 @@ msgid ""
 "Upgrade` button."
 msgstr ""
 
-#: ../../content/administration/upgrade/odoo_sh.rstNone
+#: ../../content/administration/upgrade/odoo_sh.rst-1
 msgid "View from the upgrade tab"
 msgstr ""
 
@@ -9777,7 +10020,7 @@ msgid ""
 "tab of the main branch."
 msgstr ""
 
-#: ../../content/administration/upgrade/odoo_sh.rstNone
+#: ../../content/administration/upgrade/odoo_sh.rst-1
 msgid "View showing the progress of the upgrade"
 msgstr ""
 

@@ -5,22 +5,22 @@
 # 
 # Translators:
 # Emanuel Bruda, 2023
-# Cozmin Candea <office@terrabit.ro>, 2023
 # Foldi Robert <foldirobert@nexterp.ro>, 2023
 # Claudia Baisan, 2023
 # Martin Trigaux, 2023
-# Dorin Hongu <dhongu@gmail.com>, 2023
 # Hongu Cosmin <cosmin513@gmail.com>, 2023
 # Lyall Kindmurr, 2023
+# Cozmin Candea <office@terrabit.ro>, 2023
+# Dorin Hongu <dhongu@gmail.com>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-03 11:23+0000\n"
+"POT-Creation-Date: 2023-07-07 06:24+0000\n"
 "PO-Revision-Date: 2022-03-18 14:59+0000\n"
-"Last-Translator: Lyall Kindmurr, 2023\n"
+"Last-Translator: Dorin Hongu <dhongu@gmail.com>, 2023\n"
 "Language-Team: Romanian (https://app.transifex.com/odoo/teams/41243/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -51,118 +51,182 @@ msgid "Install"
 msgstr "Instalați"
 
 #: ../../content/administration/install/cdn.rst:3
-msgid "Setting up a Content Delivery Network (CDN)"
-msgstr "Configurarea unei rețele de distribuție de conținut (CDN)"
+msgid "Set up a content delivery network (CDN)"
+msgstr ""
 
 #: ../../content/administration/install/cdn.rst:8
-msgid "Deploying with KeyCDN_"
-msgstr "Implementarea cu KeyCDN_"
-
-#: ../../content/administration/install/cdn.rst:12
-msgid ""
-"This document will guide you through the setup of a KeyCDN_ account with "
-"your Odoo powered website."
+msgid "Deploying with KeyCDN"
 msgstr ""
-"Acest document vă va ghida prin configurarea unui cont KeyCDN_ cu site-ul "
-"web al dvs. alimentat de Odoo."
 
-#: ../../content/administration/install/cdn.rst:16
-msgid "Step 1: Create a pull zone in the KeyCDN dashboard"
-msgstr "Pasul 1: Creați o zonă de tragere în tabloul de bord KeyCDN"
-
-#: ../../content/administration/install/cdn.rst:21
+#: ../../content/administration/install/cdn.rst:10
 msgid ""
-"When creating the zone, enable the CORS option in the :guilabel:`advanced "
-"features` submenu. (more on that later)"
+"A :abbr:`CDN (Content Delivery Network)` or *content distribution network*, "
+"is a geographically distributed network of servers that provides high speed "
+"internet content. The :abbr:`CDN (Content Delivery Network)` provides quick,"
+" high-quality content delivery for content-heavy websites."
 msgstr ""
-"Când creați zona, activați opțiunea CORS în submeniul :guilabel:`advanced "
-"features`. (mai multe despre asta mai târziu)"
 
-#: ../../content/administration/install/cdn.rst:27
+#: ../../content/administration/install/cdn.rst:14
 msgid ""
-"Once done, you'll have to wait a bit while KeyCDN_ is crawling your website."
+"This document will guide you through the setup of a KeyCDN_ account with an "
+"Odoo powered website."
 msgstr ""
-"Odată terminat, va trebui să așteptați puțin în timp ce KeyCDN_ scanează "
-"site-ul dvs. web."
 
-#: ../../content/administration/install/cdn.rst:32
-msgid ""
-"a new URL has been generated for your Zone, in this case it is "
-"``http://pulltest-b49.kxcdn.com``"
+#: ../../content/administration/install/cdn.rst:17
+msgid "Create a pull zone in the KeyCDN dashboard"
 msgstr ""
-"un nou URL a fost generat pentru zona dvs., în acest caz este "
-"``http://pulltest-b49.kxcdn.com``"
+
+#: ../../content/administration/install/cdn.rst:19
+msgid ""
+"On the KeyCDN dashboard, start by navigating to the :menuselection:`Zones` "
+"menu item on the left. On the form, give a value to the :guilabel:`Zone "
+"Name`, which will appear as part of the :abbr:`CDN (Content Delivery "
+"Network)`'s :abbr:`URL (Uniform Resource Locator)`. Then, set the "
+":guilabel:`Zone Status` to :guilabel:`active` to engage the zone. For the "
+":guilabel:`Zone Type` set the value to :guilabel:`Pull`, and then, finally, "
+"under the :guilabel:`Pull Settings`, enter the :guilabel:`Origin URL`— this "
+"address should be the full Odoo database :abbr:`URL (Uniform Resource "
+"Locator)`."
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst:28
+msgid ""
+"Use ``https://yourdatabase.odoo.com`` and replace the *yourdatabase* "
+"subdomain prefix with the actual name of the database. A custom :abbr:`URL "
+"(Uniform Resource Locator)` can be used, as well, in place of the Odoo "
+"subdomain that was provided to the database."
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst-1
+msgid "KeyCDN's Zone configuration page."
+msgstr ""
 
 #: ../../content/administration/install/cdn.rst:36
-msgid "Step 2: Configure the odoo instance with your zone"
-msgstr "Pasul 2: Configurați instanța odoo cu zona dvs."
-
-#: ../../content/administration/install/cdn.rst:38
 msgid ""
-"In the Odoo back end, go to the :guilabel:`Website Settings`: menu, then "
-"activate the CDN support and copy/paste your zone URL in the :guilabel:`CDN "
-"Base URL` field. This field is only visible and configurable if you have "
-"developer mode activated."
+"Under the :guilabel:`General Settings` heading below the zone form, click "
+"the :guilabel:`Show all settings` button to expand the zone options. This "
+"should be the last option on the page. After expanding the "
+":guilabel:`General Settings` ensure that the :guilabel:`CORS` option is "
+":guilabel:`enabled`."
 msgstr ""
-"În spatele Odoo, mergeți la meniul :guilabel:`Setări Website`, apoi activați"
-" suportul CDN și copiați/adiționați URL-ul zonei dvs. în câmpul "
-":guilabel:`CDN Base URL`. Acest câmp este vizibil și configurabil numai dacă"
-" aveți activat modul dezvoltator."
 
-#: ../../content/administration/install/cdn.rst:46
+#: ../../content/administration/install/cdn.rst:41
 msgid ""
-"Now your website is using the CDN for the resources matching the "
-":guilabel:`CDN filters` regular expressions."
+"Next, scroll to the bottom of the zone configuration page and "
+":guilabel:`Save` the changes. KeyCDN will indicate that the new zone will be"
+" deployed. This can take about 10 minutes."
 msgstr ""
-"Acum site-ul dvs. web utilizează CDN-ul pentru resursele care se potrivesc "
-"cu expresiile regulate :guilabel:`CDN filters`."
+
+#: ../../content/administration/install/cdn.rst-1
+msgid "KeyCDN deploying the new Zone."
+msgstr ""
 
 #: ../../content/administration/install/cdn.rst:49
 msgid ""
-"You can have a look to the HTML of your website in order to check if the CDN"
-" integration is properly working."
+"A new :guilabel:`Zone URL` has been generated for your Zone, in this example"
+" it is ``pulltest-xxxxx.kxcdn.com``. This value will differ for each "
+"database."
 msgstr ""
-"Puteți verifica HTML-ul site-ului dvs. web pentru a verifica dacă integrarea"
-" CDN funcționează corect."
+
+#: ../../content/administration/install/cdn.rst:52
+msgid ""
+"Copy this :guilabel:`Zone URL` to a text editor for later, as it will be "
+"used in the next steps."
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst:55
+msgid "Configure the Odoo instance with the new zone"
+msgstr ""
 
 #: ../../content/administration/install/cdn.rst:57
-msgid "Why should I activate CORS?"
-msgstr "De ce ar trebui să activați CORS?"
-
-#: ../../content/administration/install/cdn.rst:59
 msgid ""
-"A security restriction in some browsers (Firefox and Chrome at time of "
-"writing) prevents a remotely linked CSS file to fetch relative resources on "
-"this same external server."
+"In the Odoo :guilabel:`Website` app, go to the :menuselection:`Settings` and"
+" then activate the :guilabel:`Content Delivery Network (CDN)` setting and "
+"copy/paste the :guilabel:`Zone URL` value from the earlier step into the "
+":guilabel:`CDN Base URL` field. This field is only visible and configurable "
+"when :doc:`Developer Mode <../../applications/general/developer_mode>` is "
+"activated."
 msgstr ""
-"O restricție de securitate în unele browsere (Firefox și Chrome la momentul "
-"scrierii) împiedică un fișier CSS legat la distanță să preia resurse "
-"relative pe același server extern."
 
 #: ../../content/administration/install/cdn.rst:63
 msgid ""
-"If you don't activate the CORS option in the CDN zone, the more obvious "
-"resulting problem on a default Odoo website will be the lack of font-awesome"
-" icons because the font file declared in the font-awesome CSS won't be "
-"loaded on the remote server."
+"Ensure that there are two *forward slashes* (`//`) before the :guilabel:`CDN"
+" Base URL` and one forward slash (`/`) after the :guilabel:`CDN Base URL`."
 msgstr ""
-"Dacă nu activați opțiunea CORS în zona CDN, problema mai evidentă rezultată "
-"pe un site web Odoo implicit va fi lipsa font-urilor-awesome deoarece "
-"fișierul font declarat în CSS-ul font-awesome nu va fi încărcat pe serverul "
-"la distanță."
 
-#: ../../content/administration/install/cdn.rst:68
-msgid "Here's what you would see on your homepage in such a case:"
-msgstr "Așa arată pagina dvs. principală într-un astfel de caz:"
-
-#: ../../content/administration/install/cdn.rst:73
-msgid "A security error message will also appear in the browser's console:"
+#: ../../content/administration/install/cdn.rst:66
+msgid ":guilabel:`Save` the settings when complete."
 msgstr ""
-"Un mesaj de eroare de securitate va apărea și în consola browser-ului:"
 
-#: ../../content/administration/install/cdn.rst:78
-msgid "Enabling the CORS option in the CDN fixes this issue."
-msgstr "Activarea opțiunii CORS în CDN rezolvă această problemă."
+#: ../../content/administration/install/cdn.rst-1
+msgid "Activate the CDN setting in Odoo."
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst:72
+msgid ""
+"Now the website is using the CDN for the resources matching the "
+":guilabel:`CDN filters` regular expressions."
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst:75
+msgid ""
+"In the HTML of the Odoo website, the :abbr:`CDN (content delivery network)` "
+"integration is evidenced as working properly by checking the :abbr:`URL "
+"(Uniform Resource Locators)` of images. The *CDN Base URL* value can be seen"
+" by using your web browser's :guilabel:`Inspect` feature on the Odoo "
+"website. Look for it's record by searching within the :guilabel:`Network` "
+"tab inside of devtools."
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst-1
+msgid ""
+"The CDN Base URL can be seen using the inspect function on the Odoo website."
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst:85
+msgid ""
+"Prevent security issues by activating cross-origin resource sharing (CORS)"
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst:87
+msgid ""
+"A security restriction in some browsers (such as Mozilla Firefox and Google "
+"Chrome) prevents a remotely linked CSS file to fetch relative resources on "
+"this same external server."
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst:90
+msgid ""
+"If the :abbr:`CORS (Cross-Origin Resource Sharing)` option isn't enabled in "
+"the :guilabel:`CDN Zone`, the more obvious resulting problem on a standard "
+"Odoo website will be the lack of *Font Awesome* icons because the font file "
+"declared in the *Font Awesome* CSS won't be loaded from the remote server."
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst:95
+msgid ""
+"When these cross-origin resource issues occur, a security error message "
+"similar to the output below will appear in the web browser's developer "
+"console:"
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst:98
+msgid ""
+"``Font from origin 'http://pulltest-xxxxx.kxcdn.com' has been blocked from "
+"loading /shop:1 by Cross-Origin Resource Sharing policy: No 'Access-Control-"
+"Allow-Origin' header is present on the requested resource. Origin "
+"'http://yourdatabase.odoo.com' is therefore not allowed access.``"
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst-1
+msgid "Error message populated in the browser console."
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst:106
+msgid ""
+"Enabling the :abbr:`CORS (Cross-Origin Resource Sharing)` option in the "
+":abbr:`CDN (Content Delivery Network)` settings fixes this issue."
+msgstr ""
 
 #: ../../content/administration/install/deploy.rst:3
 msgid "System configuration"
@@ -267,8 +331,8 @@ msgstr "Afișează doar bazele de date cu nume care încep cu 'mycompany'"
 #: ../../content/administration/install/deploy.rst:58
 #: ../../content/administration/install/deploy.rst:153
 #: ../../content/administration/install/deploy.rst:276
-msgid "in ``/etc/odoo.conf`` set:"
-msgstr "în ``/etc/odoo.conf`` setează:"
+msgid "in :ref:`the configuration file <reference/cmdline/config_file>` set:"
+msgstr ""
 
 #: ../../content/administration/install/deploy.rst:53
 msgid ""
@@ -301,8 +365,8 @@ msgstr ""
 
 #: ../../content/administration/install/deploy.rst:76
 #: ../../content/administration/install/install.rst:339
-#: ../../content/administration/install/install.rst:526
-#: ../../content/administration/install/install.rst:721
+#: ../../content/administration/install/install.rst:528
+#: ../../content/administration/install/install.rst:725
 msgid "PostgreSQL"
 msgstr "PostgreSQL"
 
@@ -645,8 +709,8 @@ msgid "RAM = 9 * ((0.8*150) + (0.2*1024)) ~= 3Go RAM for Odoo"
 msgstr "RAM = 9 * ((0.8*150) + (0.2*1024)) ~= 3Go RAM pentru Odoo"
 
 #: ../../content/administration/install/deploy.rst:241
-msgid "in ``/etc/odoo.conf``:"
-msgstr "în ``/etc/odoo.conf``:"
+msgid "in :ref:`the configuration file <reference/cmdline/config_file>`:"
+msgstr ""
 
 #: ../../content/administration/install/deploy.rst:257
 msgid "HTTPS"
@@ -1565,7 +1629,7 @@ msgstr ""
 #: ../../content/administration/install/install.rst:59
 #: ../../content/administration/maintain/domain_names.rst:166
 #: ../../content/administration/maintain/domain_names.rst:236
-#: ../../content/administration/maintain/supported_versions.rst:27
+#: ../../content/administration/maintain/supported_versions.rst:31
 #: ../../content/administration/upgrade/odoo_online.rst:3
 msgid "Odoo Online"
 msgstr "Odoo Online"
@@ -1669,7 +1733,7 @@ msgid "Odoo will automatically be started at the end of the installation."
 msgstr "Odoo va fi pornit automat la sfârșitul instalării."
 
 #: ../../content/administration/install/install.rst:105
-#: ../../content/administration/install/install.rst:445
+#: ../../content/administration/install/install.rst:447
 msgid "Linux"
 msgstr "Linux"
 
@@ -1686,8 +1750,8 @@ msgstr ""
 #: ../../content/administration/install/install.rst:114
 #: ../../content/administration/install/install.rst:187
 #: ../../content/administration/install/install.rst:314
-#: ../../content/administration/install/install.rst:504
-#: ../../content/administration/install/install.rst:699
+#: ../../content/administration/install/install.rst:506
+#: ../../content/administration/install/install.rst:703
 msgid "Prepare"
 msgstr "Pregătiți"
 
@@ -1706,8 +1770,8 @@ msgstr ""
 #: ../../content/administration/install/install.rst:124
 #: ../../content/administration/install/install.rst:200
 #: ../../content/administration/install/install.rst:381
-#: ../../content/administration/install/install.rst:578
-#: ../../content/administration/install/install.rst:771
+#: ../../content/administration/install/install.rst:580
+#: ../../content/administration/install/install.rst:775
 msgid ""
 "`wkhtmltopdf` is not installed through **pip** and must be installed "
 "manually in version `0.12.5 <the wkhtmltopdf download page_>`_ for it to "
@@ -1892,14 +1956,14 @@ msgstr ""
 " Odoo alături de alte versiuni."
 
 #: ../../content/administration/install/install.rst:258
-#: ../../content/administration/install/install.rst:448
-#: ../../content/administration/install/install.rst:643
+#: ../../content/administration/install/install.rst:450
+#: ../../content/administration/install/install.rst:647
 msgid "Fetch the sources"
 msgstr "Preluați sursele"
 
 #: ../../content/administration/install/install.rst:260
-#: ../../content/administration/install/install.rst:450
-#: ../../content/administration/install/install.rst:645
+#: ../../content/administration/install/install.rst:452
+#: ../../content/administration/install/install.rst:649
 msgid ""
 "There are two ways to obtain the source code of Odoo: as a zip **archive** "
 "or through **git**."
@@ -1908,59 +1972,59 @@ msgstr ""
 " sau prin **git**."
 
 #: ../../content/administration/install/install.rst:263
-#: ../../content/administration/install/install.rst:453
-#: ../../content/administration/install/install.rst:648
+#: ../../content/administration/install/install.rst:455
+#: ../../content/administration/install/install.rst:652
 msgid "Archive"
 msgstr "Arhivează"
 
 #: ../../content/administration/install/install.rst:265
-#: ../../content/administration/install/install.rst:455
-#: ../../content/administration/install/install.rst:650
+#: ../../content/administration/install/install.rst:457
+#: ../../content/administration/install/install.rst:654
 msgid "Community Edition:"
 msgstr "Ediția Comunitară:"
 
 #: ../../content/administration/install/install.rst:267
 #: ../../content/administration/install/install.rst:273
-#: ../../content/administration/install/install.rst:457
-#: ../../content/administration/install/install.rst:463
-#: ../../content/administration/install/install.rst:652
-#: ../../content/administration/install/install.rst:658
+#: ../../content/administration/install/install.rst:459
+#: ../../content/administration/install/install.rst:465
+#: ../../content/administration/install/install.rst:656
+#: ../../content/administration/install/install.rst:662
 msgid "`Official download page <download_>`_"
 msgstr "`Pagina de descărcare oficială <download_>`_"
 
 #: ../../content/administration/install/install.rst:268
-#: ../../content/administration/install/install.rst:458
-#: ../../content/administration/install/install.rst:653
+#: ../../content/administration/install/install.rst:460
+#: ../../content/administration/install/install.rst:657
 msgid "`GitHub repository <community-repository_>`_"
 msgstr "`Depozitul GitHub <community-repository_>`_"
 
 #: ../../content/administration/install/install.rst:269
-#: ../../content/administration/install/install.rst:459
-#: ../../content/administration/install/install.rst:654
+#: ../../content/administration/install/install.rst:461
+#: ../../content/administration/install/install.rst:658
 msgid "`Nightly server <nightly_>`_"
 msgstr "`Server nightly <nightly_>`_"
 
 #: ../../content/administration/install/install.rst:271
-#: ../../content/administration/install/install.rst:461
-#: ../../content/administration/install/install.rst:656
+#: ../../content/administration/install/install.rst:463
+#: ../../content/administration/install/install.rst:660
 msgid "Enterprise Edition:"
 msgstr "Ediția Enterprise:"
 
 #: ../../content/administration/install/install.rst:274
-#: ../../content/administration/install/install.rst:464
-#: ../../content/administration/install/install.rst:659
+#: ../../content/administration/install/install.rst:466
+#: ../../content/administration/install/install.rst:663
 msgid "`GitHub repository <enterprise-repository_>`_"
 msgstr "`Depozitul GitHub <enterprise-repository_>`_"
 
 #: ../../content/administration/install/install.rst:279
-#: ../../content/administration/install/install.rst:469
-#: ../../content/administration/install/install.rst:664
+#: ../../content/administration/install/install.rst:471
+#: ../../content/administration/install/install.rst:668
 msgid "Git"
 msgstr "Git"
 
 #: ../../content/administration/install/install.rst:281
-#: ../../content/administration/install/install.rst:471
-#: ../../content/administration/install/install.rst:666
+#: ../../content/administration/install/install.rst:473
+#: ../../content/administration/install/install.rst:670
 msgid ""
 "The following requires `Git <git_>`_ to be installed on your machine and "
 "that you have basic knowledge of Git commands. To clone a Git repository, "
@@ -1972,8 +2036,8 @@ msgid ""
 msgstr ""
 
 #: ../../content/administration/install/install.rst:288
-#: ../../content/administration/install/install.rst:478
-#: ../../content/administration/install/install.rst:673
+#: ../../content/administration/install/install.rst:480
+#: ../../content/administration/install/install.rst:677
 msgid ""
 "**The Enterprise Git repository does not contain the full Odoo source "
 "code**. It is only a collection of extra add-ons. The main server code is in"
@@ -1994,20 +2058,20 @@ msgstr ""
 " acces la depozitul Enterprise."
 
 #: ../../content/administration/install/install.rst:297
-#: ../../content/administration/install/install.rst:487
-#: ../../content/administration/install/install.rst:682
+#: ../../content/administration/install/install.rst:489
+#: ../../content/administration/install/install.rst:686
 msgid "Clone with HTTPS"
 msgstr "Clonare cu HTTPS"
 
 #: ../../content/administration/install/install.rst:304
-#: ../../content/administration/install/install.rst:494
-#: ../../content/administration/install/install.rst:689
+#: ../../content/administration/install/install.rst:496
+#: ../../content/administration/install/install.rst:693
 msgid "Clone with SSH"
 msgstr "Clonare cu SSH"
 
 #: ../../content/administration/install/install.rst:317
-#: ../../content/administration/install/install.rst:507
-#: ../../content/administration/install/install.rst:702
+#: ../../content/administration/install/install.rst:509
+#: ../../content/administration/install/install.rst:706
 msgid "Python"
 msgstr "Python"
 
@@ -2031,8 +2095,8 @@ msgstr ""
 "pe **Customize Installation** și asigurați-vă că **pip** este bifat."
 
 #: ../../content/administration/install/install.rst:325
-#: ../../content/administration/install/install.rst:512
-#: ../../content/administration/install/install.rst:707
+#: ../../content/administration/install/install.rst:514
+#: ../../content/administration/install/install.rst:711
 msgid ""
 "If Python 3 is already installed, make sure that the version is 3.7 or "
 "above, as previous versions are not compatible with Odoo."
@@ -2041,8 +2105,8 @@ msgstr ""
 " recentă, deoarece versiunile anterioare nu sunt compatibile cu Odoo."
 
 #: ../../content/administration/install/install.rst:332
-#: ../../content/administration/install/install.rst:519
-#: ../../content/administration/install/install.rst:714
+#: ../../content/administration/install/install.rst:521
+#: ../../content/administration/install/install.rst:718
 msgid "Verify also that pip_ is installed for this version."
 msgstr "Verificați și că pip_ este instalat pentru această versiune."
 
@@ -2054,8 +2118,8 @@ msgid ""
 msgstr ""
 
 #: ../../content/administration/install/install.rst:344
-#: ../../content/administration/install/install.rst:537
-#: ../../content/administration/install/install.rst:731
+#: ../../content/administration/install/install.rst:539
+#: ../../content/administration/install/install.rst:735
 msgid ""
 "By default, the only user is `postgres` but Odoo forbids connecting as "
 "`postgres`, so you need to create a new PostgreSQL user:"
@@ -2109,8 +2173,8 @@ msgstr ""
 "**Create database?** la `Yes`."
 
 #: ../../content/administration/install/install.rst:360
-#: ../../content/administration/install/install.rst:549
-#: ../../content/administration/install/install.rst:743
+#: ../../content/administration/install/install.rst:551
+#: ../../content/administration/install/install.rst:747
 msgid "Dependencies"
 msgstr "Dependențe"
 
@@ -2129,8 +2193,8 @@ msgstr ""
 "**Workloads** și instalați-le."
 
 #: ../../content/administration/install/install.rst:366
-#: ../../content/administration/install/install.rst:563
-#: ../../content/administration/install/install.rst:745
+#: ../../content/administration/install/install.rst:565
+#: ../../content/administration/install/install.rst:749
 msgid ""
 "Odoo dependencies are listed in the `requirements.txt` file located at the "
 "root of the Odoo community directory."
@@ -2139,8 +2203,8 @@ msgstr ""
 "rădăcina directorului comunității Odoo."
 
 #: ../../content/administration/install/install.rst:369
-#: ../../content/administration/install/install.rst:566
-#: ../../content/administration/install/install.rst:748
+#: ../../content/administration/install/install.rst:568
+#: ../../content/administration/install/install.rst:752
 msgid ""
 "It can be preferable to not mix python modules packages between different "
 "instances of Odoo or with your system. You can use virtualenv_ to create "
@@ -2161,8 +2225,8 @@ msgstr ""
 "Administrator**:"
 
 #: ../../content/administration/install/install.rst:386
-#: ../../content/administration/install/install.rst:583
-#: ../../content/administration/install/install.rst:776
+#: ../../content/administration/install/install.rst:585
+#: ../../content/administration/install/install.rst:780
 msgid ""
 "For languages with right-to-left interface (such as Arabic or Hebrew), the "
 "package `rtlcss` is needed:"
@@ -2175,8 +2239,8 @@ msgid "Download and install `nodejs <https://nodejs.org/en/download/>`_."
 msgstr "Descărcați și instalați `nodejs <https://nodejs.org/en/download/>`_."
 
 #: ../../content/administration/install/install.rst:390
-#: ../../content/administration/install/install.rst:587
-#: ../../content/administration/install/install.rst:780
+#: ../../content/administration/install/install.rst:589
+#: ../../content/administration/install/install.rst:784
 msgid "Install `rtlcss`:"
 msgstr "Instalați `rtlcss`:"
 
@@ -2187,15 +2251,15 @@ msgid ""
 "`C:\\\\Users\\\\<user>\\\\AppData\\\\Roaming\\\\npm\\\\`)."
 msgstr ""
 
-#: ../../content/administration/install/install.rst:400
-#: ../../content/administration/install/install.rst:594
-#: ../../content/administration/install/install.rst:787
+#: ../../content/administration/install/install.rst:402
+#: ../../content/administration/install/install.rst:598
+#: ../../content/administration/install/install.rst:793
 msgid "Running Odoo"
 msgstr "Rularea Odoo"
 
-#: ../../content/administration/install/install.rst:402
-#: ../../content/administration/install/install.rst:596
-#: ../../content/administration/install/install.rst:789
+#: ../../content/administration/install/install.rst:404
+#: ../../content/administration/install/install.rst:600
+#: ../../content/administration/install/install.rst:795
 msgid ""
 "Once all dependencies are set up, Odoo can be launched by running `odoo-"
 "bin`, the command-line interface of the server. It is located at the root of"
@@ -2205,9 +2269,9 @@ msgstr ""
 "executarea `odoo-bin`, interfața de linie de comandă a serverului. Se "
 "găsește la rădăcina directorului Odoo Community."
 
-#: ../../content/administration/install/install.rst:405
-#: ../../content/administration/install/install.rst:599
-#: ../../content/administration/install/install.rst:792
+#: ../../content/administration/install/install.rst:407
+#: ../../content/administration/install/install.rst:603
+#: ../../content/administration/install/install.rst:798
 msgid ""
 "To configure the server, you can either specify :ref:`command-line arguments"
 " <reference/cmdline/server>` or a :ref:`configuration file "
@@ -2217,9 +2281,9 @@ msgstr ""
 "de comandă <reference/cmdline/server>` fie un :ref:`fișier de configurare "
 "<reference/cmdline/config>`."
 
-#: ../../content/administration/install/install.rst:408
-#: ../../content/administration/install/install.rst:602
-#: ../../content/administration/install/install.rst:795
+#: ../../content/administration/install/install.rst:410
+#: ../../content/administration/install/install.rst:606
+#: ../../content/administration/install/install.rst:801
 msgid ""
 "For the Enterprise edition, you must add the path to the `enterprise` addons"
 " to the `addons-path` argument. Note that it must come before the other "
@@ -2230,38 +2294,38 @@ msgstr ""
 "înainte de celelalte căi în `addons-path` pentru ca addon-urile să fie "
 "încărcate corect."
 
-#: ../../content/administration/install/install.rst:412
-#: ../../content/administration/install/install.rst:606
-#: ../../content/administration/install/install.rst:799
+#: ../../content/administration/install/install.rst:414
+#: ../../content/administration/install/install.rst:610
+#: ../../content/administration/install/install.rst:805
 msgid "Common necessary configurations are:"
 msgstr "Configurări necesare comune sunt:"
 
-#: ../../content/administration/install/install.rst:414
+#: ../../content/administration/install/install.rst:416
 msgid "PostgreSQL user and password."
 msgstr "Utilizatorul și parola PostgreSQL."
 
-#: ../../content/administration/install/install.rst:415
-#: ../../content/administration/install/install.rst:611
-#: ../../content/administration/install/install.rst:804
+#: ../../content/administration/install/install.rst:417
+#: ../../content/administration/install/install.rst:615
+#: ../../content/administration/install/install.rst:810
 msgid "Custom addon paths beyond the defaults, to load your own modules."
 msgstr "Modulele de addon personalizate, pentru a încărca modulele proprii."
 
-#: ../../content/administration/install/install.rst:417
-#: ../../content/administration/install/install.rst:613
-#: ../../content/administration/install/install.rst:806
+#: ../../content/administration/install/install.rst:419
+#: ../../content/administration/install/install.rst:617
+#: ../../content/administration/install/install.rst:812
 msgid "A typical way to run the server would be:"
 msgstr "O modalitate tipică de a rula serverul ar fi:"
 
-#: ../../content/administration/install/install.rst:424
+#: ../../content/administration/install/install.rst:426
 msgid ""
 "Where `CommunityPath` is the path of the Odoo Community installation, "
 "`dbuser` is the PostgreSQL login, `dbpassword` is the PostgreSQL password "
 "and `mydb` is the name of the PostgreSQL database."
 msgstr ""
 
-#: ../../content/administration/install/install.rst:428
-#: ../../content/administration/install/install.rst:623
-#: ../../content/administration/install/install.rst:821
+#: ../../content/administration/install/install.rst:430
+#: ../../content/administration/install/install.rst:627
+#: ../../content/administration/install/install.rst:827
 msgid ""
 "After the server has started (the INFO log `odoo.modules.loading: Modules "
 "loaded.` is printed), open http://localhost:8069 in your web browser and log"
@@ -2275,9 +2339,9 @@ msgstr ""
 " :guilabel:`Email` și, din nou, `admin` pentru :guilabel:`Password`. Acesta "
 "este totul, tocmai v-ați conectat la propria bază de date Odoo!"
 
-#: ../../content/administration/install/install.rst:434
-#: ../../content/administration/install/install.rst:629
-#: ../../content/administration/install/install.rst:827
+#: ../../content/administration/install/install.rst:436
+#: ../../content/administration/install/install.rst:633
+#: ../../content/administration/install/install.rst:833
 msgid ""
 "From there, you can create and manage new :doc:`users "
 "</applications/general/users/manage_users>`."
@@ -2285,9 +2349,9 @@ msgstr ""
 "De acolo, puteți crea și gestiona noi :doc:`utilizatori "
 "</applications/general/users/manage_users>`."
 
-#: ../../content/administration/install/install.rst:436
-#: ../../content/administration/install/install.rst:631
-#: ../../content/administration/install/install.rst:829
+#: ../../content/administration/install/install.rst:438
+#: ../../content/administration/install/install.rst:635
+#: ../../content/administration/install/install.rst:835
 msgid ""
 "The user account you use to log into Odoo's web interface differs from the "
 ":option:`--db_user <odoo-bin -r>` CLI argument."
@@ -2295,15 +2359,15 @@ msgstr ""
 "Contul de utilizator pe care îl utilizați pentru a vă conecta la interfața "
 "web Odoo diferă de argumentul CLI :option:`--db_user <odoo-bin -r>`."
 
-#: ../../content/administration/install/install.rst:440
-#: ../../content/administration/install/install.rst:635
-#: ../../content/administration/install/install.rst:833
+#: ../../content/administration/install/install.rst:442
+#: ../../content/administration/install/install.rst:639
+#: ../../content/administration/install/install.rst:839
 msgid ""
 ":doc:`The exhaustive list of CLI arguments for odoo-bin "
 "</developer/reference/cli>`."
 msgstr ""
 
-#: ../../content/administration/install/install.rst:509
+#: ../../content/administration/install/install.rst:511
 msgid ""
 "Odoo requires Python 3.7 or later to run. Use your package manager to "
 "download and install Python 3 on your machine if it is not already done."
@@ -2312,18 +2376,18 @@ msgstr ""
 "managerul de pachete pentru a descărca și instala Python 3 pe mașina dvs. "
 "dacă nu este deja făcut."
 
-#: ../../content/administration/install/install.rst:528
+#: ../../content/administration/install/install.rst:530
 msgid ""
 "Odoo uses PostgreSQL as database management system. Use your package manager"
 " to download and install PostgreSQL (supported version: 10.0 and later)."
 msgstr ""
 
-#: ../../content/administration/install/install.rst:531
+#: ../../content/administration/install/install.rst:533
 msgid "On Debian/Unbuntu, it can be achieved by executing the following:"
 msgstr ""
 
-#: ../../content/administration/install/install.rst:545
-#: ../../content/administration/install/install.rst:739
+#: ../../content/administration/install/install.rst:547
+#: ../../content/administration/install/install.rst:743
 msgid ""
 "Because your PostgreSQL user has the same name as your Unix login, you will "
 "be able to connect to the database without password."
@@ -2331,7 +2395,7 @@ msgstr ""
 "Deoarece utilizatorul dvs. PostgreSQL are același nume ca și utilizatorul "
 "Unix, veți putea să vă conectați la baza de date fără parolă."
 
-#: ../../content/administration/install/install.rst:551
+#: ../../content/administration/install/install.rst:553
 msgid ""
 "For libraries using native code, it is necessary to install development "
 "tools and native dependencies before the Python dependencies of Odoo. They "
@@ -2339,14 +2403,14 @@ msgid ""
 "libxml2, libxslt1, libevent, libsasl2 and libldap2."
 msgstr ""
 
-#: ../../content/administration/install/install.rst:555
+#: ../../content/administration/install/install.rst:557
 msgid ""
 "On Debian/Unbuntu, the following command should install all the required "
 "libraries:"
 msgstr ""
 
-#: ../../content/administration/install/install.rst:569
-#: ../../content/administration/install/install.rst:751
+#: ../../content/administration/install/install.rst:571
+#: ../../content/administration/install/install.rst:755
 msgid ""
 "Navigate to the path of your Odoo Community installation (`CommunityPath`) "
 "and run **pip** on the requirements file:"
@@ -2354,31 +2418,31 @@ msgstr ""
 "Accesați calea instalării Odoo Community (`CommunityPath`) și rulați **pip**"
 " pe fișierul de cerințe:"
 
-#: ../../content/administration/install/install.rst:586
+#: ../../content/administration/install/install.rst:588
 msgid "Download and install **nodejs** and **npm** with your package manager."
 msgstr ""
 "Descărcați și instalați **nodejs** și **npm** cu managerul de pachete."
 
-#: ../../content/administration/install/install.rst:608
-#: ../../content/administration/install/install.rst:801
+#: ../../content/administration/install/install.rst:612
+#: ../../content/administration/install/install.rst:807
 msgid ""
 "PostgreSQL user and password. Odoo has no defaults beyond `psycopg2's "
 "defaults <http://initd.org/psycopg/docs/module.html>`_: connects over a UNIX"
 " socket on port `5432` with the current user and no password."
 msgstr ""
 
-#: ../../content/administration/install/install.rst:620
-#: ../../content/administration/install/install.rst:813
+#: ../../content/administration/install/install.rst:624
+#: ../../content/administration/install/install.rst:819
 msgid ""
 "Where `CommunityPath` is the path of the Odoo Community installation and "
 "`mydb` is the name of the PostgreSQL database."
 msgstr ""
 
-#: ../../content/administration/install/install.rst:640
+#: ../../content/administration/install/install.rst:644
 msgid "Mac OS"
 msgstr "Mac OS"
 
-#: ../../content/administration/install/install.rst:704
+#: ../../content/administration/install/install.rst:708
 msgid ""
 "Odoo requires Python 3.7 or later to run. Use your preferred package manager"
 " (homebrew_, macports_) to download and install Python 3 on your machine if "
@@ -2388,14 +2452,14 @@ msgstr ""
 "managerul de pachete preferat (homebrew_, macports_) pentru a descărca și "
 "instala Python 3 pe mașina dvs. dacă nu este deja făcut."
 
-#: ../../content/administration/install/install.rst:723
+#: ../../content/administration/install/install.rst:727
 msgid ""
 "Odoo uses PostgreSQL as database management system. Use `postgres.app "
 "<https://postgresapp.com>`_ to download and install PostgreSQL (supported "
 "version: 10.0 and later)."
 msgstr ""
 
-#: ../../content/administration/install/install.rst:727
+#: ../../content/administration/install/install.rst:731
 msgid ""
 "To make the command line tools bundled with `postgres.app` available, make "
 "sure to setup your `$PATH` variable by following the `Postgres.app CLI Tools"
@@ -2406,26 +2470,26 @@ msgstr ""
 "instrucțiunile `Postgres.app CLI Tools Instructions "
 "<https://postgresapp.com/documentation/cli-tools.html>`_."
 
-#: ../../content/administration/install/install.rst:760
+#: ../../content/administration/install/install.rst:764
 msgid "Non-Python dependencies need to be installed with a package manager:"
 msgstr "Dependențele non-Python trebuie instalate cu un manager de pachete:"
 
-#: ../../content/administration/install/install.rst:762
+#: ../../content/administration/install/install.rst:766
 msgid "Download and install the **Command Line Tools**:"
 msgstr "Descărcați și instalați **Command Line Tools**:"
 
-#: ../../content/administration/install/install.rst:768
+#: ../../content/administration/install/install.rst:772
 msgid ""
 "Download and install the package manager of your choice (homebrew_, "
 "macports_)."
 msgstr ""
 "Descărcați și instalați managerul de pachete ales (homebrew_, macports_)."
 
-#: ../../content/administration/install/install.rst:769
+#: ../../content/administration/install/install.rst:773
 msgid "Install non-python dependencies."
 msgstr "Instalați dependențele non-Python."
 
-#: ../../content/administration/install/install.rst:779
+#: ../../content/administration/install/install.rst:783
 msgid ""
 "Download and install **nodejs** with your preferred package manager "
 "(homebrew_, macports_)."
@@ -2433,19 +2497,19 @@ msgstr ""
 "Descărcați și instalați **nodejs** cu managerul de pachete preferat "
 "(homebrew_, macports_)."
 
-#: ../../content/administration/install/install.rst:817
+#: ../../content/administration/install/install.rst:823
 msgid ""
 "Some versions of python on Mac might lead to the following error message: "
 "`current limit exceeds maximum limit`. In that case, add the following "
 "parameter `--limit-memory-hard 0` to avoid the problem."
 msgstr ""
 
-#: ../../content/administration/install/install.rst:838
+#: ../../content/administration/install/install.rst:844
 #: ../../content/administration/maintain/update.rst:149
 msgid "Docker"
 msgstr "Docker"
 
-#: ../../content/administration/install/install.rst:840
+#: ../../content/administration/install/install.rst:846
 msgid ""
 "The full documentation on how to use Odoo with Docker can be found on the "
 "official Odoo `docker image <https://hub.docker.com/_/odoo/>`_ page."
@@ -2486,14 +2550,22 @@ msgstr ""
 "directory/develop/quickstart-register-app>`_"
 
 #: ../../content/administration/maintain/azure_oauth.rst:15
+msgid ":doc:`/applications/general/auth/azure`"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:16
+msgid ":doc:`/applications/productivity/calendar/outlook`"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:19
 msgid "Setup in Microsoft Azure Portal"
 msgstr "Configurare în portalul Microsoft Azure"
 
-#: ../../content/administration/maintain/azure_oauth.rst:18
+#: ../../content/administration/maintain/azure_oauth.rst:22
 msgid "Create a new application"
 msgstr "Creați o aplicație nouă"
 
-#: ../../content/administration/maintain/azure_oauth.rst:20
+#: ../../content/administration/maintain/azure_oauth.rst:24
 msgid ""
 "To get started, go to `Microsoft's Azure Portal "
 "<https://portal.azure.com/>`_. Log in with the :guilabel:`Microsoft Outlook "
@@ -2511,7 +2583,7 @@ msgstr ""
 "configurare. În continuare, navigați la secțiunea denumită :guilabel:`Manage"
 " Azure Active Directory`."
 
-#: ../../content/administration/maintain/azure_oauth.rst:26
+#: ../../content/administration/maintain/azure_oauth.rst:30
 msgid ""
 "Now, click on :guilabel:`Add (+)`, located in the top menu, and then select "
 ":guilabel:`App registration`. On the :guilabel:`Register an application` "
@@ -2527,7 +2599,7 @@ msgstr ""
 ":guilabel:`Accounts in any organizational directory (Any Azure AD directory "
 "- Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)`."
 
-#: ../../content/administration/maintain/azure_oauth.rst:32
+#: ../../content/administration/maintain/azure_oauth.rst:36
 msgid ""
 "Under the :guilabel:`Redirect URL` section, select :guilabel:`Web` as the "
 "platform, and then input `https://<odoo base url>/microsoft_outlook/confirm`"
@@ -2540,7 +2612,7 @@ msgstr ""
 "Odoo este domeniul canonical la care instanța Odoo poate fi accesată în "
 "câmpul URL."
 
-#: ../../content/administration/maintain/azure_oauth.rst:37
+#: ../../content/administration/maintain/azure_oauth.rst:41
 msgid ""
 "*mydatabase.odoo.com*, where *mydatabase* is the actual prefix of the "
 "database's subdomain, assuming it's hosted on Odoo.com"
@@ -2548,7 +2620,7 @@ msgstr ""
 "*mydatabase.odoo.com*, unde *mydatabase* este prefixul actual al "
 "subdomeniului bazei de date, presupunând că este găzduit pe Odoo.com"
 
-#: ../../content/administration/maintain/azure_oauth.rst:40
+#: ../../content/administration/maintain/azure_oauth.rst:44
 msgid ""
 "After the URL has been added to the field, :guilabel:`Register` the "
 "application so it is created."
@@ -2556,30 +2628,22 @@ msgstr ""
 "După ce URL-ul a fost adăugat în câmp, :guilabel:`Register` aplicația astfel"
 " încât să fie creată."
 
-#: ../../content/administration/maintain/azure_oauth.rst:43
+#: ../../content/administration/maintain/azure_oauth.rst:47
 msgid "API permissions"
 msgstr "Permisiuni API"
 
-#: ../../content/administration/maintain/azure_oauth.rst:45
+#: ../../content/administration/maintain/azure_oauth.rst:49
 msgid ""
 "The :guilabel:`API permissions` should be set next. Odoo will need specific "
-"API permissions to be able to read (IMAP) and send (IMAP) emails in the "
+"API permissions to be able to read (IMAP) and send (SMTP) emails in the "
 "Microsoft 365 setup. First, click the :guilabel:`API permissions` link, "
 "located in the left menu bar. Next, click on the :guilabel:`(+) Add a "
 "Permission` button and select :guilabel:`Microsoft Graph` under "
 ":guilabel:`Commonly Used Microsoft APIs`. After, select the "
 ":guilabel:`Delegated Permissions` option."
 msgstr ""
-"Următoarele :guilabel:`API permissions` trebuie să fie setate. Odoo va avea "
-"nevoie de permisiuni API specifice pentru a putea citi (IMAP) și trimite "
-"(IMAP) e-mailuri în configurarea Microsoft 365. În primul rând, faceți clic "
-"pe link-ul :guilabel:`API permissions`, localizat în bara de meniu din "
-"stânga. În continuare, faceți clic pe butonul :guilabel:`(+) Add a "
-"Permission` și selectați :guilabel:`Microsoft Graph` sub :guilabel:`Commonly"
-" Used Microsoft APIs`. După aceea, selectați opțiunea :guilabel:`Delegated "
-"Permissions`."
 
-#: ../../content/administration/maintain/azure_oauth.rst:51
+#: ../../content/administration/maintain/azure_oauth.rst:55
 msgid ""
 "In the search bar, search for the following :guilabel:`Deregulated "
 "permissions` and click :guilabel:`Add permissions` for each one:"
@@ -2587,19 +2651,19 @@ msgstr ""
 "În bara de căutare, căutați următoarele :guilabel:`Deregulated permissions` "
 "și faceți clic pe :guilabel:`Add permissions` pentru fiecare dintre ele:"
 
-#: ../../content/administration/maintain/azure_oauth.rst:54
+#: ../../content/administration/maintain/azure_oauth.rst:58
 msgid ":guilabel:`SMTP.Send`"
 msgstr ":guilabel:`SMTP.Send`"
 
-#: ../../content/administration/maintain/azure_oauth.rst:55
+#: ../../content/administration/maintain/azure_oauth.rst:59
 msgid ":guilabel:`IMAP.AccessAsUser.All`"
 msgstr ":guilabel:`IMAP.AccessAsUser.All`"
 
-#: ../../content/administration/maintain/azure_oauth.rst:58
+#: ../../content/administration/maintain/azure_oauth.rst:62
 msgid "The :guilabel:`User.Read` permission will be added by default."
 msgstr " :guilabel:`User.Read` permisiunea va fi adăugată în mod implicit."
 
-#: ../../content/administration/maintain/azure_oauth.rstNone
+#: ../../content/administration/maintain/azure_oauth.rst-1
 msgid ""
 "API permissions needed for Odoo integration are listed under the Microsoft "
 "Graph."
@@ -2607,11 +2671,11 @@ msgstr ""
 "Permisiunile API necesare pentru integrarea Odoo sunt listate sub Microsoft "
 "Graph."
 
-#: ../../content/administration/maintain/azure_oauth.rst:65
+#: ../../content/administration/maintain/azure_oauth.rst:69
 msgid "Assign users and groups"
 msgstr "Atribuie utilizatori și grupuri"
 
-#: ../../content/administration/maintain/azure_oauth.rst:67
+#: ../../content/administration/maintain/azure_oauth.rst:71
 msgid ""
 "After adding the API permissions, navigate back to the :guilabel:`Overview` "
 "of the :guilabel:`Application` in the top of the left sidebar menu."
@@ -2620,7 +2684,7 @@ msgstr ""
 ":guilabel:`Overview` al :guilabel:`Application` în partea de sus a meniului "
 "din bara laterală stângă."
 
-#: ../../content/administration/maintain/azure_oauth.rst:70
+#: ../../content/administration/maintain/azure_oauth.rst:74
 msgid ""
 "Now, add users to this application. Under the :guilabel:`Essentials` "
 "overview table, click on the link labeled :guilabel:`Managed Application in "
@@ -2632,7 +2696,7 @@ msgstr ""
 "Application in Local Directory`, sau ultima opțiune din partea dreaptă jos a"
 " tabelului."
 
-#: ../../content/administration/maintain/azure_oauth.rstNone
+#: ../../content/administration/maintain/azure_oauth.rst-1
 msgid ""
 "Add users/groups by clicking the Managed application in local directory link for the\n"
 "created application."
@@ -2640,7 +2704,7 @@ msgstr ""
 "Adăugați utilizatori/grupuri făcând clic pe link-ul Managed application in "
 "local directory pentru aplicația creată."
 
-#: ../../content/administration/maintain/azure_oauth.rst:79
+#: ../../content/administration/maintain/azure_oauth.rst:83
 msgid ""
 "In the left sidebar menu, select :guilabel:`Users and Groups`. Next, click "
 "on :guilabel:`(+) Add User/Group`. Depending on the account, either a "
@@ -2654,7 +2718,7 @@ msgstr ""
 "doar :guilabel:`Users`. Conturile personale vor permite doar adăugarea "
 ":guilabel:`Users`."
 
-#: ../../content/administration/maintain/azure_oauth.rst:84
+#: ../../content/administration/maintain/azure_oauth.rst:88
 msgid ""
 "Under :guilabel:`Users` or :guilabel:`Groups`, click on :guilabel:`None "
 "Selected` and add the users or group of users that will be sending emails "
@@ -2668,11 +2732,11 @@ msgstr ""
 ":guilabel:`Add` utilizatorii/grupurile, faceți clic pe :guilabel:`Select`, "
 "și apoi :guilabel:`Assign` lor la aplicație."
 
-#: ../../content/administration/maintain/azure_oauth.rst:90
+#: ../../content/administration/maintain/azure_oauth.rst:94
 msgid "Create credentials"
 msgstr "Creați credențiale"
 
-#: ../../content/administration/maintain/azure_oauth.rst:92
+#: ../../content/administration/maintain/azure_oauth.rst:96
 msgid ""
 "Now that the Microsoft Azure app is set up, credentials need to be created "
 "for the Odoo setup. These include the :guilabel:`Client ID` and "
@@ -2685,11 +2749,11 @@ msgstr ""
 "create pentru configurarea Odoo. Acestea includ :guilabel:`Client ID` și "
 ":guilabel:`Client Secret`. Pentru a începe, :guilabel:`Client ID` poate fi "
 
-#: ../../content/administration/maintain/azure_oauth.rstNone
+#: ../../content/administration/maintain/azure_oauth.rst-1
 msgid "Application/Client ID located in the Overview of the app."
 msgstr "Aplicația/Client ID localizat în Overview-ul aplicației."
 
-#: ../../content/administration/maintain/azure_oauth.rst:102
+#: ../../content/administration/maintain/azure_oauth.rst:106
 msgid ""
 "Next, the :guilabel:`Client Secret Value` needs to be retrieved. To get this"
 " value, click on :guilabel:`Certificates & Secrets` in the left sidebar "
@@ -2702,7 +2766,7 @@ msgstr ""
 " un :guilabel:`Client Secret` trebuie să fie produs. Pentru a face acest "
 "lucru, faceți clic pe butonul :guilabel:`(+) New Client Secret`."
 
-#: ../../content/administration/maintain/azure_oauth.rst:106
+#: ../../content/administration/maintain/azure_oauth.rst:110
 msgid ""
 "A window on the right will populate with a button labeled :guilabel:`Add a "
 "client secret`. Under :guilabel:`Description`, type in `Odoo Fetchmail` or "
@@ -2712,7 +2776,7 @@ msgstr ""
 "client secret`. Sub :guilabel:`Description`, tastați `Odoo Fetchmail` sau "
 "ceva ce poate fi recunoscut, și apoi setați :guilabel:`expiration date`."
 
-#: ../../content/administration/maintain/azure_oauth.rst:111
+#: ../../content/administration/maintain/azure_oauth.rst:115
 msgid ""
 "A new :guilabel:`Client Secret` will need to be produced and configured if "
 "the first one expires. In this event, there could be an interruption of "
@@ -2724,7 +2788,7 @@ msgstr ""
 " încât data de expirare trebuie să fie notată și setată la cea mai "
 "îndepărtată posibilă."
 
-#: ../../content/administration/maintain/azure_oauth.rst:115
+#: ../../content/administration/maintain/azure_oauth.rst:119
 msgid ""
 "Next, click on :guilabel:`Add` when these two values are entered. A "
 ":guilabel:`Client Secret Value` and :guilabel:`Secret ID` will be created. "
@@ -2738,43 +2802,43 @@ msgstr ""
 ":guilabel:`Client Secret Value` într-un notepad, deoarece va deveni criptat "
 "după părăsirea acestei pagini. :guilabel:`Secret ID` nu este necesar."
 
-#: ../../content/administration/maintain/azure_oauth.rstNone
+#: ../../content/administration/maintain/azure_oauth.rst-1
 msgid "Client Secret Value or Value in the app's credentials."
 msgstr "Client Secret Value sau Value în credențialele aplicației."
 
-#: ../../content/administration/maintain/azure_oauth.rst:124
+#: ../../content/administration/maintain/azure_oauth.rst:128
 msgid ""
 "After these steps, the following items should be ready to be set up in Odoo:"
 msgstr ""
 "După aceste pași, următoarele elemente ar trebui să fie gata pentru a fi "
 "configurate în Odoo:"
 
-#: ../../content/administration/maintain/azure_oauth.rst:126
+#: ../../content/administration/maintain/azure_oauth.rst:130
 msgid "A client ID (:guilabel:`Client ID` or :guilabel:`Application ID`)"
 msgstr "Un client ID (:guilabel:`Client ID` sau :guilabel:`Application ID`)"
 
-#: ../../content/administration/maintain/azure_oauth.rst:127
+#: ../../content/administration/maintain/azure_oauth.rst:131
 msgid "A client secret (:guilabel:`Value` or :guilabel:`Client Secret Value`)"
 msgstr ""
 "Un secret client (:guilabel:`Value` sau :guilabel:`Client Secret Value`)"
 
-#: ../../content/administration/maintain/azure_oauth.rst:129
+#: ../../content/administration/maintain/azure_oauth.rst:133
 msgid ""
 "This completes the setup on the :guilabel:`Microsoft Azure Portal` side."
 msgstr ""
 "Aceasta încheie configurarea de pe partea :guilabel:`Microsoft Azure "
 "Portal`."
 
-#: ../../content/administration/maintain/azure_oauth.rst:132
-#: ../../content/administration/maintain/google_oauth.rst:84
+#: ../../content/administration/maintain/azure_oauth.rst:136
+#: ../../content/administration/maintain/google_oauth.rst:111
 msgid "Setup in Odoo"
 msgstr "Setare în Odoo"
 
-#: ../../content/administration/maintain/azure_oauth.rst:135
+#: ../../content/administration/maintain/azure_oauth.rst:139
 msgid "Enter Microsoft Outlook credentials"
 msgstr "Introduceți credențialele Microsoft Outlook"
 
-#: ../../content/administration/maintain/azure_oauth.rst:137
+#: ../../content/administration/maintain/azure_oauth.rst:141
 msgid ""
 "First, open the Odoo database and navigate to the :guilabel:`Apps` module. "
 "Then, remove the :guilabel:`Apps` filter from the search bar and type in "
@@ -2786,7 +2850,7 @@ msgstr ""
 "bara de căutare și tastați `Outlook`. După aceea, instalați modulul numit "
 ":guilabel:`Microsoft Outlook`."
 
-#: ../../content/administration/maintain/azure_oauth.rst:141
+#: ../../content/administration/maintain/azure_oauth.rst:145
 msgid ""
 "Next, navigate to :menuselection:`Settings --> General Settings`, and under "
 "the :guilabel:`Discuss` section, ensure that the checkbox for "
@@ -2798,11 +2862,11 @@ msgstr ""
 ":guilabel:`Custom Email Servers` este bifată. Aceasta populează o nouă "
 "opțiune pentru :guilabel:`Outlook Credentials`."
 
-#: ../../content/administration/maintain/azure_oauth.rst:145
+#: ../../content/administration/maintain/azure_oauth.rst:149
 msgid ":guilabel:`Save` the progress."
 msgstr ":guilabel:`Salvați` progresul."
 
-#: ../../content/administration/maintain/azure_oauth.rst:147
+#: ../../content/administration/maintain/azure_oauth.rst:151
 msgid ""
 "Then, copy and paste the :guilabel:`Client ID` (Application ID) and "
 ":guilabel:`Client Secret (Client Secret Value)` into the respective fields "
@@ -2812,16 +2876,16 @@ msgstr ""
 ":guilabel:`Client Secret (Client Secret Value)` în câmpurile respective și "
 ":guilabel:`Salvați` setările."
 
-#: ../../content/administration/maintain/azure_oauth.rstNone
+#: ../../content/administration/maintain/azure_oauth.rst-1
 msgid "Outlook Credentials in Odoo General Settings."
 msgstr "Credențiale Outlook în Setări generale Odoo."
 
-#: ../../content/administration/maintain/azure_oauth.rst:155
-#: ../../content/administration/maintain/google_oauth.rst:98
+#: ../../content/administration/maintain/azure_oauth.rst:159
+#: ../../content/administration/maintain/google_oauth.rst:127
 msgid "Configure outgoing email server"
 msgstr "Configurați serverul de e-mail de ieșire"
 
-#: ../../content/administration/maintain/azure_oauth.rst:157
+#: ../../content/administration/maintain/azure_oauth.rst:161
 msgid ""
 "On the :guilabel:`General Settings` page, under the :guilabel:`Custom Email "
 "Servers` setting, click the :guilabel:`Outgoing Email Servers` link to "
@@ -2831,7 +2895,7 @@ msgstr ""
 "Servers`, faceți clic pe link-ul :guilabel:`Outgoing Email Servers` pentru a"
 " configura contul Microsoft."
 
-#: ../../content/administration/maintain/azure_oauth.rst:160
+#: ../../content/administration/maintain/azure_oauth.rst:164
 msgid ""
 "Then, create a new email server and check the box for :guilabel:`Outlook`. "
 "Next, fill in the :guilabel:`Name` (it can be anything) and the Microsoft "
@@ -2841,19 +2905,17 @@ msgstr ""
 ":guilabel:`Outlook`. În continuare, completați :guilabel:`Nume` (poate fi "
 "orice) și e-mail-ul Microsoft Outlook :guilabel:`Username`."
 
-#: ../../content/administration/maintain/azure_oauth.rst:163
+#: ../../content/administration/maintain/azure_oauth.rst:167
 msgid ""
 "If the :guilabel:`From Filter` field is empty, enter either a :ref:`domain "
-"or email address <email_communication/default_from>`."
+"or email address <email_communication/default>`."
 msgstr ""
-"Dacă câmpul :guilabel:`From Filter` este gol, introduceți fie un "
-":ref:`domeniu sau o adresă de e-mail <email_communication/default_from>`."
 
-#: ../../content/administration/maintain/azure_oauth.rst:166
-msgid "Then, cick on :guilabel:`Connect your Outlook account`."
-msgstr "Apoi, faceți clic pe :guilabel:`Conectați-vă la contul Outlook`."
+#: ../../content/administration/maintain/azure_oauth.rst:170
+msgid "Then, click on :guilabel:`Connect your Outlook account`."
+msgstr ""
 
-#: ../../content/administration/maintain/azure_oauth.rst:168
+#: ../../content/administration/maintain/azure_oauth.rst:172
 msgid ""
 "A new window from Microsoft opens to complete the :guilabel:`authorization "
 "process`. Select the appropriate email address that is being configured in "
@@ -2863,13 +2925,13 @@ msgstr ""
 ":guilabel:`procesul de autorizare`. Selectați adresa de e-mail potrivită "
 "care este configurată în Odoo."
 
-#: ../../content/administration/maintain/azure_oauth.rstNone
+#: ../../content/administration/maintain/azure_oauth.rst-1
 msgid "Permission page to grant access between newly created app and Odoo."
 msgstr ""
 "Pagina de permisiune pentru a acorda accesul între aplicația nou creată și "
 "Odoo."
 
-#: ../../content/administration/maintain/azure_oauth.rst:175
+#: ../../content/administration/maintain/azure_oauth.rst:179
 msgid ""
 "Then, allow Odoo to access the Microsoft account by clicking on "
 ":guilabel:`Yes`. After this, the page will navigate back to the newly "
@@ -2883,11 +2945,11 @@ msgstr ""
 "încarcă automat :guilabel:`token` în Odoo, și o etichetă care spune "
 ":guilabel:`Outlook Token Valid` apare în verde."
 
-#: ../../content/administration/maintain/azure_oauth.rstNone
+#: ../../content/administration/maintain/azure_oauth.rst-1
 msgid "Valid Outlook Token indicator."
 msgstr "Indicator de token Outlook valid."
 
-#: ../../content/administration/maintain/azure_oauth.rst:184
+#: ../../content/administration/maintain/azure_oauth.rst:188
 msgid ""
 "Finally, click :guilabel:`Test Connection`. A confirmation message should "
 "appear. The Odoo database can now send safe, secure emails through Microsoft"
@@ -2898,11 +2960,11 @@ msgstr ""
 "e-mailuri sigure și securizate prin Microsoft Outlook folosind "
 "autentificarea OAuth."
 
-#: ../../content/administration/maintain/azure_oauth.rst:188
+#: ../../content/administration/maintain/azure_oauth.rst:192
 msgid "Multiple user configuration"
 msgstr "Configurarea utilizatorilor multipli"
 
-#: ../../content/administration/maintain/azure_oauth.rst:190
+#: ../../content/administration/maintain/azure_oauth.rst:194
 msgid ""
 "Each user should have a separate server set up. The :guilabel:`from-filter` "
 "should be set so that only the user's email is sent from that server. In "
@@ -2915,7 +2977,7 @@ msgstr ""
 "utilizator cu o adresă de e-mail care se potrivește cu setarea "
 ":guilabel:`from-filter` este capabil să utilizeze acest server."
 
-#: ../../content/administration/maintain/azure_oauth.rst:194
+#: ../../content/administration/maintain/azure_oauth.rst:198
 msgid ""
 "After setting the :guilabel:`from-filter`, set up a fallback email account "
 "to allow for the sending of :guilabel:`notifications`. The fallback email "
@@ -2933,7 +2995,7 @@ msgstr ""
 "tranzacțional general. Pentru mai multe informații, consultați "
 ":ref:`Utilizați o adresă de e-mail implicită <email_communication/default>`."
 
-#: ../../content/administration/maintain/azure_oauth.rst:201
+#: ../../content/administration/maintain/azure_oauth.rst:205
 #: ../../content/administration/maintain/mailjet_api.rst:213
 msgid ""
 "The :guilabel:`System Parameters` can be accessed by activating "
@@ -2945,11 +3007,11 @@ msgstr ""
 ":doc:`../../applications/general/developer_mode` în meniul "
 ":menuselection:`Setări --> Tehnic --> Parametri --> Parametri de sistem`."
 
-#: ../../content/administration/maintain/azure_oauth.rst:206
+#: ../../content/administration/maintain/azure_oauth.rst:210
 msgid "Configure incoming email server"
 msgstr "Configurați serverul de e-mail de intrare"
 
-#: ../../content/administration/maintain/azure_oauth.rst:208
+#: ../../content/administration/maintain/azure_oauth.rst:212
 msgid ""
 "The incoming account should be configured in a similar way to the outgoing "
 "email account. Navigate to the :guilabel:`Incoming Mail Servers` in the "
@@ -2969,11 +3031,12 @@ msgstr ""
 ":guilabel:`Outlook Token Valid` Acum :guilabel:`Test and Confirm` contul. "
 "Contul ar trebui să fie gata să primească e-mailuri în baza de date Odoo."
 
-#: ../../content/administration/maintain/azure_oauth.rst:216
+#: ../../content/administration/maintain/azure_oauth.rst:220
 msgid ":doc:`../../applications/general/email_communication/email_servers`"
 msgstr ":doc:`../../applications/general/email_communication/email_servers`"
 
 #: ../../content/administration/maintain/domain_names.rst:3
+#: ../../content/administration/maintain/odoo_online.rst:70
 msgid "Domain names"
 msgstr "Nume de domeniu"
 
@@ -3134,7 +3197,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/administration/maintain/domain_names.rst:74
-msgid ":doc:`/applications/websites/website/optimize/seo`"
+msgid ":doc:`/applications/websites/website/pages/seo`"
 msgstr ""
 
 #: ../../content/administration/maintain/domain_names.rst:75
@@ -3205,7 +3268,7 @@ msgid ""
 "button next to your database, then on :guilabel:`Domain names`."
 msgstr ""
 
-#: ../../content/administration/maintain/domain_names.rstNone
+#: ../../content/administration/maintain/domain_names.rst-1
 msgid "Clicking on Domain Names from an Odoo website"
 msgstr "Faceți clic pe Nume de domenii dintr-un site Odoo"
 
@@ -3217,7 +3280,7 @@ msgstr ""
 "Căutați numele de domeniu dorit pentru a verifica disponibilitatea, apoi "
 "selectați cel pe care doriți să-l înregistrați pentru site-ul dvs."
 
-#: ../../content/administration/maintain/domain_names.rstNone
+#: ../../content/administration/maintain/domain_names.rst-1
 msgid ""
 "The search of the domain name example.com shows which associated domains are"
 " available."
@@ -3276,7 +3339,7 @@ msgstr ""
 "pe butonul :guilabel:`settings` lângă baza de date, pe :guilabel:`Nume de "
 "domenii`, apoi pe :guilabel:`Contacte` sau :guilabel:`DNS`."
 
-#: ../../content/administration/maintain/domain_names.rstNone
+#: ../../content/administration/maintain/domain_names.rst-1
 msgid "Management of the domain names linked to an Odoo database"
 msgstr "Gestionarea numelui de domenii legate de o bază de date Odoo"
 
@@ -3360,7 +3423,7 @@ msgstr ""
 
 #: ../../content/administration/maintain/domain_names.rst:171
 #: ../../content/administration/maintain/domain_names.rst:250
-#: ../../content/administration/maintain/supported_versions.rst:27
+#: ../../content/administration/maintain/supported_versions.rst:32
 #: ../../content/administration/odoo_sh.rst:5
 #: ../../content/administration/upgrade/odoo_sh.rst:3
 msgid "Odoo.sh"
@@ -3809,7 +3872,7 @@ msgstr ""
 "În câmpul :guilabel:`Domain`, completați adresa web a site-ului dvs. (de "
 "exemplu, ``https://www.example.com``) și faceți clic pe :guilabel:`Save`."
 
-#: ../../content/administration/maintain/domain_names.rstNone
+#: ../../content/administration/maintain/domain_names.rst-1
 msgid "Configuring https://www.example.com as the Domain of the website"
 msgstr "Configurarea https://www.example.com ca Domeniu al site-ului"
 
@@ -3850,8 +3913,8 @@ msgid ":doc:`/applications/general/email_communication/email_servers`"
 msgstr ":doc:`/applications/general/email_communication/email_servers`"
 
 #: ../../content/administration/maintain/enterprise.rst:6
-msgid "Upgrade Community to Enterprise"
-msgstr "Actualizați Community la Enterprise"
+msgid "Switch from Community to Enterprise"
+msgstr ""
 
 #: ../../content/administration/maintain/enterprise.rst:8
 msgid ""
@@ -4032,84 +4095,104 @@ msgstr ""
 "OAuth."
 
 #: ../../content/administration/maintain/google_oauth.rst:15
+msgid ":doc:`/applications/general/auth/google`"
+msgstr ""
+
+#: ../../content/administration/maintain/google_oauth.rst:16
+msgid ":doc:`/applications/productivity/calendar/google`"
+msgstr ""
+
+#: ../../content/administration/maintain/google_oauth.rst:19
 msgid "Setup in Google"
 msgstr "Configurare în Google"
 
-#: ../../content/administration/maintain/google_oauth.rst:18
+#: ../../content/administration/maintain/google_oauth.rst:22
 msgid "Create a new project"
 msgstr "Creare Proiect Nou"
 
-#: ../../content/administration/maintain/google_oauth.rst:20
+#: ../../content/administration/maintain/google_oauth.rst:24
 msgid ""
-"To get started, go to the `Google API Platform "
-"<https://console.cloud.google.com/apis/credentials/consent>`_. Log in with "
-"your *Google Workspace* account if you have one, otherwise log in with your "
-"personal Gmail account (this should match the email address you want to "
-"configure in Odoo)."
+"To get started, go to the `Google API Console "
+"<https://console.developers.google.com>`_. Log in with your *Google "
+"Workspace* account if you have one, otherwise log in with your personal "
+"Gmail account (this should match the email address you want to configure in "
+"Odoo)."
 msgstr ""
-"Pentru a începe, accesați `Platforma API Google "
-"<https://console.cloud.google.com/apis/credentials/consent>`_. Conectați-vă "
-"cu contul dvs. *Google Workspace* dacă aveți unul, altfel conectați-vă cu "
-"contul dvs. personal Gmail (acesta ar trebui să se potrivească cu adresa de "
-"e-mail pe care doriți să o configurați în Odoo)."
 
-#: ../../content/administration/maintain/google_oauth.rst:25
+#: ../../content/administration/maintain/google_oauth.rst:28
 msgid ""
 "After that, click on :guilabel:`Create Project`, located on the far right of"
-" the OAuth consent screen. If a project has already been created in this "
-"account, then the :guilabel:`New Project` option will be located on the top "
-"left under the :guilabel:`Select a project` drop-down menu."
+" the :guilabel:`OAuth consent screen`. If a project has already been created"
+" in this account, then the :guilabel:`New Project` option will be located on"
+" the top right under the :guilabel:`Select a project` drop-down menu."
 msgstr ""
-"După aceea, faceți clic pe :guilabel:`Create Project`, localizat în partea "
-"dreaptă a ecranului de consimțământ OAuth. Dacă un proiect a fost deja creat"
-" în acest cont, atunci opțiunea :guilabel:`New Project` va fi localizată în "
-"partea stângă de sus sub meniul derulant :guilabel:`Select a project`."
 
-#: ../../content/administration/maintain/google_oauth.rst:29
+#: ../../content/administration/maintain/google_oauth.rst:33
 msgid ""
-"On the :guilabel:`New Project` screen, rename the :guilabel:`Project name` "
-"to `Odoo` and browse for the :guilabel:`Location`. Set the "
-":guilabel:`Location` as the `Google Workspace` organization. If you are "
-"using a personal Gmail account, then leave the :guilabel:`Location` as `No "
-"Organization`."
+"On the :menuselection:`New Project` screen, rename the :guilabel:`Project "
+"name` to `Odoo` and browse for the :guilabel:`Location`. Set the "
+":guilabel:`Location` as the *Google Workspace organization*. If you are "
+"using a personal Gmail account, then leave the :guilabel:`Location` as "
+":guilabel:`No Organization`."
 msgstr ""
-"Pe ecranul :guilabel:`New Project`, redenumiți :guilabel:`Project name` în "
-"`Odoo` și răsfoiți pentru :guilabel:`Location`. Setați :guilabel:`Location` "
-"ca organizarea `Google Workspace`. Dacă utilizați un cont personal Gmail, "
-"lăsați :guilabel:`Location` ca `No Organization`."
 
-#: ../../content/administration/maintain/google_oauth.rstNone
-msgid "Project Name and Location for Google Oauth."
-msgstr "Numele proiectului și locația pentru Google Oauth."
-
-#: ../../content/administration/maintain/google_oauth.rst:37
-msgid ""
-"Click on :guilabel:`Create` to finish this step. On the next screen, "
-":guilabel:`User Type` options, select the :guilabel:`External` option, and "
-"then click on :guilabel:`Create` again, which will finally navigate to the "
-":guilabel:`Edit app registration` page."
+#: ../../content/administration/maintain/google_oauth.rst-1
+msgid "Project Name and Location for Google OAuth."
 msgstr ""
-"Faceți clic pe :guilabel:`Create` pentru a finaliza această etapă. Pe "
-"următorul ecran, opțiunile :guilabel:`User Type`, selectați opțiunea "
-":guilabel:`External` și apoi faceți clic pe :guilabel:`Create` din nou, care"
-" va naviga în sfârșit la pagina :guilabel:`Editare înregistrare aplicație`."
 
 #: ../../content/administration/maintain/google_oauth.rst:42
+msgid "Click on :guilabel:`Create` to finish this step."
+msgstr ""
+
+#: ../../content/administration/maintain/google_oauth.rst:45
+msgid "OAuth consent screen"
+msgstr "Ecran de consimțământ OAuth"
+
+#: ../../content/administration/maintain/google_oauth.rst:47
+msgid ""
+"If the page doesn't redirect to the :menuselection:`User Type` options, "
+"click on :guilabel:`OAuth consent screen` in the left menu."
+msgstr ""
+
+#: ../../content/administration/maintain/google_oauth.rst:50
+msgid ""
+"Under :guilabel:`User Type` options, select the appropriate :guilabel:`User "
+"Type`, and then click on :guilabel:`Create` again, which will finally "
+"navigate to the :menuselection:`Edit app registration` page."
+msgstr ""
+
+#: ../../content/administration/maintain/google_oauth.rst:55
+msgid ""
+"*Personal* Gmail Accounts are only allowed to be **External** User Type, "
+"which means Google may require an approval, or for *Scopes* to be added on. "
+"However, using a *Google WorkSpace* account allows for **Internal** User "
+"Type to be used."
+msgstr ""
+
+#: ../../content/administration/maintain/google_oauth.rst:59
+msgid ""
+"Note, as well, that while the API connection is in the *External* testing "
+"mode, then no approval is necessary from Google. User limits in this testing"
+" mode is set to 100 users."
+msgstr ""
+
+#: ../../content/administration/maintain/google_oauth.rst:63
 msgid "Edit app registration"
 msgstr "Editare înregistrare aplicație"
 
-#: ../../content/administration/maintain/google_oauth.rst:44
+#: ../../content/administration/maintain/google_oauth.rst:65
+msgid "Next we will configure the app registration of the project."
+msgstr ""
+
+#: ../../content/administration/maintain/google_oauth.rst:67
 msgid ""
-"On the :guilabel:`Oauth consent screen` step, under the :guilabel:`App "
+"On the :guilabel:`OAuth consent screen` step, under the :guilabel:`App "
 "information` section, enter `Odoo` in the :guilabel:`App name` field. Select"
 " the organization's email address under the :guilabel:`User support` email "
 "field."
 msgstr ""
-"Pe etapa :guilabel:`Oauth consent screen`, în secțiunea :guilabel:`App "
-"information`, introduceți `Odoo` în câmpul :guilabel:`App name`. Selectați "
-"adresa de e-mail a organizației sub câmpul :guilabel:`User support` email."
 
-#: ../../content/administration/maintain/google_oauth.rst:47
+#: ../../content/administration/maintain/google_oauth.rst:71
 msgid ""
 "Next, under :menuselection:`App Domain --> Authorized domains`, click on "
 ":guilabel:`Add Domain` and enter `odoo.com`."
@@ -4118,7 +4201,7 @@ msgstr ""
 "autorizate`, faceți clic pe :guilabel:`Add Domain` și introduceți "
 "`odoo.com`."
 
-#: ../../content/administration/maintain/google_oauth.rst:49
+#: ../../content/administration/maintain/google_oauth.rst:74
 msgid ""
 "After that, under the :guilabel:`Developer contact information` section, "
 "enter the organization's email address. Google uses this email address to "
@@ -4129,51 +4212,39 @@ msgstr ""
 "adresă de e-mail pentru a notifica organizația despre orice modificări la "
 "proiectul dvs."
 
-#: ../../content/administration/maintain/google_oauth.rst:52
-msgid "Next, click on the :guilabel:`Save and Continue` button."
-msgstr "În continuare, faceți clic pe butonul :guilabel:`Save and Continue`."
-
-#: ../../content/administration/maintain/google_oauth.rst:53
+#: ../../content/administration/maintain/google_oauth.rst:78
 msgid ""
-"Then, skip the :guilabel:`Scopes` page by scrolling to the bottom and "
-"clicking on :guilabel:`Save and Continue`."
+"Next, click on the :guilabel:`Save and Continue` button. Then, skip the "
+":menuselection:`Scopes` page by scrolling to the bottom and clicking on "
+":guilabel:`Save and Continue`."
 msgstr ""
-"Apoi, treceți peste pagina :guilabel:`Scopes` prin derularea în jos și "
-"faceți clic pe :guilabel:`Save and Continue`."
 
-#: ../../content/administration/maintain/google_oauth.rst:55
+#: ../../content/administration/maintain/google_oauth.rst:81
 msgid ""
-"Next, add the email being configured under the :guilabel:`Test users` step "
-"by clicking on :guilabel:`Add Users` and then the :guilabel:`Save and "
-"Continue` button. A summary of the :guilabel:`App registration` appears."
+"If continuing in testing mode (External), add the email addresses being "
+"configured under the :guilabel:`Test users` step, by clicking on "
+":guilabel:`Add Users`, and then the :guilabel:`Save and Continue` button. A "
+"summary of the app registration appears."
 msgstr ""
-"În continuare, adăugați adresa de e-mail care este configurată în etapa "
-":guilabel:`Test users` prin făcând clic pe :guilabel:`Add Users` și apoi pe "
-"butonul :guilabel:`Save and Continue`. Un rezumat a :guilabel:`App "
-"registration` apare."
 
-#: ../../content/administration/maintain/google_oauth.rst:58
+#: ../../content/administration/maintain/google_oauth.rst:85
 msgid ""
-"Finally, scroll to the bottom and click on :guilabel:`Back to Dashboard`."
+"Finally, scroll to the bottom and click on :guilabel:`Back to Dashboard` to "
+"finish setting up the project."
 msgstr ""
-"În cele din urmă, derulați în jos și faceți clic pe :guilabel:`Back to "
-"Dashboard`."
 
-#: ../../content/administration/maintain/google_oauth.rst:61
+#: ../../content/administration/maintain/google_oauth.rst:89
 msgid "Create Credentials"
 msgstr "Creare credențiale"
 
-#: ../../content/administration/maintain/google_oauth.rst:63
+#: ../../content/administration/maintain/google_oauth.rst:91
 msgid ""
-"Now that you have set up the project, you need to create credentials, which "
-"includes the :guilabel:`Client ID` and :guilabel:`Client Secret`. First, "
-"click on :guilabel:`Credentials` in the left sidebar menu."
+"Now that the project is set up, credentials should be created, which "
+"includes the *Client ID* and *Client Secret*. First, click on "
+":guilabel:`Credentials` in the left sidebar menu."
 msgstr ""
-"Acum că ați configurat proiectul, trebuie să creați credențiale, care "
-"include :guilabel:`Client ID` și :guilabel:`Client Secret`. În primul rând, "
-"faceți clic pe :guilabel:`Credentials` în meniul din bara laterală stângă."
 
-#: ../../content/administration/maintain/google_oauth.rst:67
+#: ../../content/administration/maintain/google_oauth.rst:94
 msgid ""
 "Then, click on :guilabel:`Create Credentials` in the top menu and select "
 ":guilabel:`OAuth client ID` from the dropdown menu."
@@ -4181,7 +4252,7 @@ msgstr ""
 "Apoi, faceți clic pe :guilabel:`Create Credentials` în meniul din partea de "
 "sus și selectați :guilabel:`OAuth client ID` din meniul dropdown."
 
-#: ../../content/administration/maintain/google_oauth.rst:70
+#: ../../content/administration/maintain/google_oauth.rst:97
 msgid ""
 "Under :guilabel:`Application Type`, select :guilabel:`Web Application` from "
 "the dropdown menu."
@@ -4189,25 +4260,20 @@ msgstr ""
 "Sub :guilabel:`Application Type`, selectați :guilabel:`Web Application` din "
 "meniul dropdown."
 
-#: ../../content/administration/maintain/google_oauth.rst:71
-msgid "In the :guilabel:`Client ID` field, enter `Odoo`."
-msgstr "În câmpul :guilabel:`Client ID`, introduceți `Odoo`."
+#: ../../content/administration/maintain/google_oauth.rst:98
+msgid "In the :guilabel:`Name` field, enter `Odoo`."
+msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:72
+#: ../../content/administration/maintain/google_oauth.rst:99
 msgid ""
 "Under the :guilabel:`Authorized redirect URIs` label, click the button "
 ":guilabel:`ADD URI`, and then input "
 "`https://yourdbname.odoo.com/google_gmail/confirm` in the :guilabel:`URIs 1`"
-" field. Be sure to replace the *yourdbname* part of the URL with your actual"
-" Odoo database name."
+" field. Be sure to replace the *yourdbname* part of the URL with the actual "
+"Odoo database name."
 msgstr ""
-"Sub eticheta :guilabel:`Authorized redirect URIs`, faceți clic pe butonul "
-":guilabel:`ADD URI`, apoi introduceți "
-"`https://yourdbname.odoo.com/google_gmail/confirm` în câmpul :guilabel:`URIs"
-" 1`. Asigurați-vă că înlocuiți partea *yourdbname* a URL-ului cu numele real"
-" al bazei de date Odoo."
 
-#: ../../content/administration/maintain/google_oauth.rst:75
+#: ../../content/administration/maintain/google_oauth.rst:102
 msgid ""
 "Next, click on :guilabel:`Create` to generate an OAuth :guilabel:`Client ID`"
 " and :guilabel:`Client Secret`. Finally, copy each generated value for later"
@@ -4218,15 +4284,15 @@ msgstr ""
 "urmă, copiați fiecare valoare generată pentru utilizare ulterioară la "
 "configurarea în Odoo, apoi navigați către baza de date Odoo."
 
-#: ../../content/administration/maintain/google_oauth.rstNone
+#: ../../content/administration/maintain/google_oauth.rst-1
 msgid "Client ID and Client Secret for Google OAuth."
 msgstr "Client ID și Client Secret pentru Google OAuth."
 
-#: ../../content/administration/maintain/google_oauth.rst:87
+#: ../../content/administration/maintain/google_oauth.rst:114
 msgid "Enter Google Credentials"
 msgstr "Introduceți credențialele Google"
 
-#: ../../content/administration/maintain/google_oauth.rst:89
+#: ../../content/administration/maintain/google_oauth.rst:116
 msgid ""
 "First, open Odoo and navigate to the :guilabel:`Apps` module. Then, remove "
 "the :guilabel:`Apps` filter from the search bar and type in `Google`. "
@@ -4236,69 +4302,57 @@ msgstr ""
 "Apoi, eliminați filtrul :guilabel:`Apps` din bara de căutare și tastați "
 "`Google`. Instalați modulul numit :guilabel:`Google Gmail`."
 
-#: ../../content/administration/maintain/google_oauth.rst:92
+#: ../../content/administration/maintain/google_oauth.rst:120
 msgid ""
 "Next, navigate to :menuselection:`Settings --> General Settings`, and under "
 "the :guilabel:`Discuss` section, ensure that the checkbox for "
-":guilabel:`Custom Email Servers` is checked. This populates a new option for"
-" :guilabel:`Gmail Credentials`. Then, copy and paste the :guilabel:`Client "
-"ID` and :guilabel:`Client Secret` into the respective fields and "
+":guilabel:`Custom Email Servers` or :guilabel:`External Email Servers` is "
+"checked. This populates a new option for :guilabel:`Gmail Credentials` or "
+":guilabel:`Use a Gmail Sever`. Then, copy and paste the respective values "
+"into the :guilabel:`Client ID` and :guilabel:`Client Secret` fields and "
 ":guilabel:`Save` the settings."
 msgstr ""
-"În continuare, navigați către :menuselection:`Settings --> General "
-"Settings`, și sub secțiunea :guilabel:`Discuss`, asigurați-vă că caseta de "
-"selectare pentru :guilabel:`Custom Email Servers` este bifată. Aceasta "
-"populează o nouă opțiune pentru :guilabel:`Gmail Credentials`. Apoi, copiați"
-" și lipiți :guilabel:"
 
-#: ../../content/administration/maintain/google_oauth.rst:100
+#: ../../content/administration/maintain/google_oauth.rst:129
 msgid ""
-"After that, on the :guilabel:`General Settings` page, under "
-":guilabel:`Custom Email Servers`, click :guilabel:`Outgoing Email Servers` "
-"to configure the external Gmail account."
+"To configure the external Gmail account, return to the top of the "
+":guilabel:`Custom Email Servers` setting and then click the "
+":guilabel:`Outgoing Email Servers` link."
 msgstr ""
-"După aceea, pe pagina :guilabel:`General Settings`, sub :guilabel:`Custom "
-"Email Servers`, faceți clic pe :guilabel:`Outgoing Email Servers` pentru a "
-"configura contul Gmail extern."
 
-#: ../../content/administration/maintain/google_oauth.rstNone
-#: ../../content/administration/maintain/google_oauth.rstNone
+#: ../../content/administration/maintain/google_oauth.rst-1
 msgid "Configure Outgoing Email Servers in Odoo."
 msgstr "Configurați serverele de e-mail de ieșire în Odoo."
 
-#: ../../content/administration/maintain/google_oauth.rst:107
+#: ../../content/administration/maintain/google_oauth.rst:136
 msgid ""
-"Then, :guilabel:`Create` a new email server and select the option for "
-":guilabel:`Gmail`. Next, fill in the :guilabel:`Description` (can be "
-"anything) and the email :guilabel:`Username` and click on :guilabel:`Connect"
-" your Gmail account`."
+"Then, click on :guilabel:`New` or :guilabel:`Create` to create a new email "
+"server, and fill in the :guilabel:`Name`, :guilabel:`Description`, and the "
+"email :guilabel:`Username` (if required)."
 msgstr ""
-"Apoi, :guilabel:`Create` un nou server de e-mail și selectați opțiunea "
-"pentru :guilabel:`Gmail`. În continuare, completați :guilabel:`Description` "
-"(poate fi orice) și :guilabel:`Username` și faceți clic pe "
-":guilabel:`Connect your Gmail account`."
 
-#: ../../content/administration/maintain/google_oauth.rst:111
+#: ../../content/administration/maintain/google_oauth.rst:139
 msgid ""
-"A new window from :guilabel:`Google` opens to complete the authorization "
+"Next, click on :guilabel:`Gmail OAuth Authentication` or :guilabel:`Gmail` "
+"(under the :guilabel:`Authenticate with` or :guilabel:`Connection` section)."
+" Finally, click on :guilabel:`Connect your Gmail Account`."
+msgstr ""
+
+#: ../../content/administration/maintain/google_oauth.rst:143
+msgid ""
+"A new window labeled :guilabel:`Google` opens to complete the authorization "
 "process. Select the appropriate email address that is being configured in "
 "Odoo."
 msgstr ""
-"O nouă fereastră din :guilabel:`Google` se deschide pentru a completa "
-"procesul de autorizare. Selectați adresa de e-mail potrivită care este "
-"configurată în Odoo."
 
-#: ../../content/administration/maintain/google_oauth.rst:114
+#: ../../content/administration/maintain/google_oauth.rst:146
 msgid ""
-"If the email address is a personal account, an extra step pops up, click "
-":guilabel:`Continue` to allow the verification and connect the Gmail account"
-" to Odoo."
+"If the email address is a personal account, then an extra step pops up, so "
+"click :guilabel:`Continue` to allow the verification and connect the Gmail "
+"account to Odoo."
 msgstr ""
-"Dacă adresa de e-mail este un cont personal, apare un pas suplimentar, "
-"faceți clic pe :guilabel:`Continue` pentru a permite verificarea și "
-"conectarea contului Gmail la Odoo."
 
-#: ../../content/administration/maintain/google_oauth.rst:117
+#: ../../content/administration/maintain/google_oauth.rst:149
 msgid ""
 "Then, allow Odoo to access the Google account by clicking on "
 ":guilabel:`Continue` or :guilabel:`Allow`. After that, the page navigates "
@@ -4312,37 +4366,32 @@ msgstr ""
 "încarcă automat token-ul în Odoo, și o etichetă care afirmă :guilabel:`Gmail"
 " Token Valid` apare în verde."
 
-#: ../../content/administration/maintain/google_oauth.rst:126
+#: ../../content/administration/maintain/google_oauth.rst:158
 msgid ""
-"Finally, save the settings and :guilabel:`Test the Connection`. A "
-"confirmation message should appear. The Odoo database can now send safe, "
-"secure emails through Google using OAuth authentication."
+"Finally, :guilabel:`Test the Connection`. A confirmation message should "
+"appear. The Odoo database can now send safe, secure emails through Google "
+"using OAuth authentication."
 msgstr ""
-"În cele din urmă, salvați setările și :guilabel:`Test the Connection`. Un "
-"mesaj de confirmare ar trebui să apară. Baza de date Odoo poate acum trimite"
-" e-mailuri sigure și securizate prin Google utilizând autentificarea OAuth."
 
-#: ../../content/administration/maintain/google_oauth.rst:131
+#: ../../content/administration/maintain/google_oauth.rst:162
 msgid "Google OAuth FAQ"
 msgstr "Întrebări frecvente despre Google OAuth"
 
-#: ../../content/administration/maintain/google_oauth.rst:134
+#: ../../content/administration/maintain/google_oauth.rst:165
 msgid "Production VS Testing Publishing Status"
 msgstr "Starea publicării de producție VS testare"
 
-#: ../../content/administration/maintain/google_oauth.rst:136
+#: ../../content/administration/maintain/google_oauth.rst:167
 msgid ""
 "Choosing :guilabel:`Production` as the :guilabel:`Publishing Status` "
-"(instead of Testing) will display the following warning message:"
+"(instead of :guilabel:`Testing`) will display the following warning message:"
 msgstr ""
-"Alegerea :guilabel:`Production` ca :guilabel:`Publishing Status` (în loc de "
-"Testing) va afișa următorul mesaj de avertizare:"
 
-#: ../../content/administration/maintain/google_oauth.rstNone
+#: ../../content/administration/maintain/google_oauth.rst-1
 msgid "OAuth is Limited to 100 Sensitive Scope Logins."
 msgstr "OAuth este limitat la 100 de logări cu sensibilitate."
 
-#: ../../content/administration/maintain/google_oauth.rst:143
+#: ../../content/administration/maintain/google_oauth.rst:174
 msgid ""
 "To correct this warning, navigate to the `Google API Platform "
 "<https://console.cloud.google.com/apis/credentials/consent>`_. If the "
@@ -4354,11 +4403,11 @@ msgstr ""
 ":guilabel:`Publishing status` este :guilabel:`In Production`, faceți clic pe"
 " :guilabel:`Back to Testing` pentru a corecta problema."
 
-#: ../../content/administration/maintain/google_oauth.rst:148
+#: ../../content/administration/maintain/google_oauth.rst:179
 msgid "No Test Users Added"
 msgstr "Nu s-au adăugat utilizatori de test"
 
-#: ../../content/administration/maintain/google_oauth.rst:150
+#: ../../content/administration/maintain/google_oauth.rst:181
 msgid ""
 "If no test users are added to the OAuth consent screen, then a 403 access "
 "denied error will populate."
@@ -4366,11 +4415,11 @@ msgstr ""
 "Dacă nu sunt adăugați utilizatori de test la ecranul de consimțământ OAuth, "
 "atunci o eroare de acces 403 refuzat va popula."
 
-#: ../../content/administration/maintain/google_oauth.rstNone
+#: ../../content/administration/maintain/google_oauth.rst-1
 msgid "403 Access Denied Error."
 msgstr "Eroare de acces 403 refuzat."
 
-#: ../../content/administration/maintain/google_oauth.rst:157
+#: ../../content/administration/maintain/google_oauth.rst:188
 msgid ""
 "To correct this error, return to the :guilabel:`OAuth consent screen` under "
 ":guilabel:`APIs & Services` and add test user(s) to the app. Add the email "
@@ -4380,71 +4429,53 @@ msgstr ""
 "screen` sub :guilabel:`APIs & Services` și adăugați utilizator(i) de test la"
 " aplicație. Adăugați adresa de e-mail pe care o configurați în Odoo."
 
-#: ../../content/administration/maintain/google_oauth.rst:162
+#: ../../content/administration/maintain/google_oauth.rst:192
 msgid "Gmail Module not updated"
 msgstr "Modulul Gmail nu este actualizat"
 
-#: ../../content/administration/maintain/google_oauth.rst:164
+#: ../../content/administration/maintain/google_oauth.rst:194
 msgid ""
-"If the :guilabel:`Gmail Module` in Odoo has not been updated to the latest "
+"If the *Google Gmail* module in Odoo has not been updated to the latest "
 "version, then a :guilabel:`Forbidden` error message populates."
 msgstr ""
-"Dacă :guilabel:`Gmail Module` în Odoo nu a fost actualizat la cea mai "
-"recentă versiune, atunci un mesaj de eroare :guilabel:`Forbidden`"
 
-#: ../../content/administration/maintain/google_oauth.rstNone
+#: ../../content/administration/maintain/google_oauth.rst-1
 msgid ""
 "Forbidden you don't have the permission to access the requested resource."
 msgstr "Interzis nu aveți permisiunea de a accesa resursa solicitată."
 
-#: ../../content/administration/maintain/google_oauth.rst:171
+#: ../../content/administration/maintain/google_oauth.rst:201
 msgid ""
-"To correct this error, go to the :guilabel:`Apps` module and clear out the "
-"search terms. Then, search for `Gmail` or `Google` and upgrade the "
+"To correct this error, go to the :menuselection:`Apps` module and clear out "
+"the search terms. Then, search for `Gmail` or `Google` and upgrade the "
 ":guilabel:`Google Gmail` module. Finally, click on the three dots on the "
 "upper right of the module and select :guilabel:`Upgrade`."
 msgstr ""
-"Pentru a corecta această eroare, mergeți la modulul :guilabel:`Apps` și "
-"ștergeți termenii de căutare. Apoi, căutați `Gmail` sau `Google` și "
-"actualizați modulul :guilabel:`Google Gmail`. În cele din urmă, faceți clic "
-"pe cele trei puncte din partea dreaptă de sus a modulului și selectați "
-":guilabel:`Upgrade`."
 
-#: ../../content/administration/maintain/google_oauth.rst:176
+#: ../../content/administration/maintain/google_oauth.rst:206
 msgid "Application Type"
 msgstr "Tipul aplicației"
 
-#: ../../content/administration/maintain/google_oauth.rst:178
+#: ../../content/administration/maintain/google_oauth.rst:208
 msgid ""
-"When creating the :guilabel:`Credentials` (OAuth Client ID and Client "
-"Secret), if :guilabel:`Desktop App` is selected for the "
-":guilabel:`Application Type`, an :guilabel:`Authorization Error` appears."
+"When creating the credentials (OAuth *Client ID* and *Client Secret*), if "
+":guilabel:`Desktop App` is selected for the :guilabel:`Application Type`, an"
+" :guilabel:`Authorization Error` appears."
 msgstr ""
-"Când creați :guilabel:`Credentials` (OAuth Client ID și Client Secret), dacă"
-" :guilabel:`Desktop App` este selectat pentru :guilabel:`Application Type`, "
-"apare o eroare de autorizare :guilabel:`Authorization Error`."
 
-#: ../../content/administration/maintain/google_oauth.rstNone
+#: ../../content/administration/maintain/google_oauth.rst-1
 msgid "Error 400 Redirect URI Mismatch."
 msgstr "Eroare 400 Redirect URI Mismatch."
 
-#: ../../content/administration/maintain/google_oauth.rst:186
+#: ../../content/administration/maintain/google_oauth.rst:215
 msgid ""
 "To correct this error, delete the credentials already created and create new"
 " credentials, selecting :guilabel:`Web Application` for the "
 ":guilabel:`Application Type`. Then, under :guilabel:`Authorized redirect "
 "URIs`, click :guilabel:`ADD URI` and type: "
-"`https://yourdbname.odoo.com/google_gmail/confirm` in the field."
+"`https://yourdbname.odoo.com/google_gmail/confirm` in the field, being sure "
+"to replace *yourdbname* in the URL with the Odoo database name."
 msgstr ""
-"Pentru a corecta această eroare, ștergeți credențialele deja create și "
-"creați credentiale noi, selectând :guilabel:`Web Application` pentru "
-":guilabel:`Application Type`. Apoi, sub :guilabel:`Authorized redirect "
-"URIs`, faceți clic pe :guilabel:`ADD URI` și tastați: "
-"`https://yourdbname.odoo.com/google_gmail/confirm` în câmp."
-
-#: ../../content/administration/maintain/google_oauth.rst:192
-msgid "Replace *yourdbname* in the URL with the Odoo database name."
-msgstr "Înlocuiți *yourdbname* în URL cu numele bazei de date Odoo."
 
 #: ../../content/administration/maintain/hosting_changes.rst:6
 msgid "Change hosting solution"
@@ -4759,7 +4790,7 @@ msgstr ""
 ":guilabel:`Expeditori și domenii` și faceți clic pe :guilabel:`Setări SMTP "
 "și API SEND`."
 
-#: ../../content/administration/maintain/mailjet_api.rstNone
+#: ../../content/administration/maintain/mailjet_api.rst-1
 msgid ""
 "SMTP and Send API Settings link in the Senders & Domains section of Mailjet."
 msgstr ""
@@ -4802,7 +4833,7 @@ msgstr ""
 "Odoo blochează portul 25 pe bazele de date Odoo Online și Odoo.sh. "
 ":ref:`Vedeți referința aici <email_servers/restriction>`."
 
-#: ../../content/administration/maintain/mailjet_api.rstNone
+#: ../../content/administration/maintain/mailjet_api.rst-1
 msgid "SMTP configuration from Mailjet."
 msgstr "Configurare SMTP din Mailjet."
 
@@ -4850,7 +4881,7 @@ msgstr ""
 ":guilabel:`Adăugați un domeniu sau o adresă de expeditor` din secțiunea "
 ":guilabel:`Expeditori și domenii`."
 
-#: ../../content/administration/maintain/mailjet_api.rstNone
+#: ../../content/administration/maintain/mailjet_api.rst-1
 msgid "Add a sender domain or address in the Mailjet interface."
 msgstr "Adăugați un domeniu sau o adresă de expeditor în interfața Mailjet."
 
@@ -5020,7 +5051,7 @@ msgstr ""
 "providerul :abbr:`DNS (Domain Name System)` al domeniului pentru a completa "
 "validarea."
 
-#: ../../content/administration/maintain/mailjet_api.rstNone
+#: ../../content/administration/maintain/mailjet_api.rst-1
 msgid "The TXT record information to input on the domain's DNS."
 msgstr ""
 "Informațiile înregistrării TXT pentru a introduce pe DNS-ul domeniului."
@@ -5083,7 +5114,7 @@ msgstr ""
 "înregistrarea TXT care a fost adăugată pe domeniu. O ecran de succes va "
 "apărea dacă domeniul este configurat corect."
 
-#: ../../content/administration/maintain/mailjet_api.rstNone
+#: ../../content/administration/maintain/mailjet_api.rst-1
 msgid "Check DNS record in Mailjet."
 msgstr "Verificați înregistrarea DNS în Mailjet."
 
@@ -5100,7 +5131,7 @@ msgstr ""
 "Mail) înregistrări pentru a introduce în providerul :abbr:`DNS (Domain Name "
 "System)`."
 
-#: ../../content/administration/maintain/mailjet_api.rstNone
+#: ../../content/administration/maintain/mailjet_api.rst-1
 msgid "Authenticate the domain with SPF/DKIM records in Mailjet."
 msgstr "Autentificați domeniul cu înregistrările SPF/DKIM în Mailjet."
 
@@ -5162,7 +5193,7 @@ msgstr ""
 "transacțional(e). În final, salvați setările și :guilabel:`Testați "
 "conexiunea`."
 
-#: ../../content/administration/maintain/mailjet_api.rstNone
+#: ../../content/administration/maintain/mailjet_api.rst-1
 msgid "Odoo outgoing email server settings."
 msgstr "Setări server de email ieșire Odoo."
 
@@ -5179,13 +5210,8 @@ msgid ""
 "The :guilabel:`From Filter` needs to be set on the server configuration. It "
 "is recommended to set it as a domain and not a full email address. It should"
 " match the domain in the two proceeding steps. More information can be "
-"referenced :ref:`here <email_servers/outgoing-email-server>`."
+"referenced :ref:`here <email_communication/from_filter>`."
 msgstr ""
-":guilabel:`Filtrul De la` trebuie să fie setat pe configurația serverului. "
-"Este recomandat să fie setat ca un domeniu și nu ca o adresă de email "
-"completă. Trebuie să se potrivească cu domeniul în cele două pași "
-"precedente. Mai multe informații pot fi găsite :ref:`aici "
-"<email_servers/outgoing-email-server>`."
 
 #: ../../content/administration/maintain/mailjet_api.rst:205
 msgid ""
@@ -5229,327 +5255,219 @@ msgstr "Gestionarea bazei de date Odoo Online"
 
 #: ../../content/administration/maintain/odoo_online.rst:5
 msgid ""
-"To manage a database, sign in to https://www.odoo.com and access the "
-"`database management page <https://www.odoo.com/my/databases>`_ by clicking "
-"on the user icon, then on *My Databases*."
+"To manage a database, go to the `database manager "
+"<https://www.odoo.com/my/databases>`_ and sign in as the database "
+"administrator."
 msgstr ""
-"Pentru a gestiona o bază de date, conectați-vă la https://www.odoo.com și "
-"accesați pagina de `gestionare bază de date "
-"<https://www.odoo.com/my/databases>`_ apăsând pe pictograma utilizatorului, "
-"apoi pe *My Databases*."
 
-#: ../../content/administration/maintain/odoo_online.rstNone
+#: ../../content/administration/maintain/odoo_online.rst:8
 msgid ""
-"Clicking on the user icon opens a drop-down menu. \"My databases\" button is"
-" highlighted."
+"All the main database management options are available by clicking the "
+"database name, except the upgrade option, which can be accessed by clicking "
+"the **arrow in a circle** icon next to the database name. It is only "
+"displayed if an upgrade is available."
 msgstr ""
-"Apăsând pe pictograma utilizatorului se deschide un meniu drop-down. \"My "
-"databases\" este evidențiat."
 
-#: ../../content/administration/maintain/odoo_online.rst:13
-msgid ""
-"Make sure you are connected as the administrator of the database you want to"
-" manage."
+#: ../../content/administration/maintain/odoo_online.rst-1
+msgid "Accessing the database management options"
 msgstr ""
-"Asigurați-vă că sunteți conectat ca administrator al bazei de date pe care "
-"doriți să o gestionați."
 
-#: ../../content/administration/maintain/odoo_online.rstNone
-msgid "Clicking on the gear icon opens the drop-down menu."
-msgstr "Făcând clic pe pictograma roții se deschide meniul drop-down."
-
-#: ../../content/administration/maintain/odoo_online.rst:19
-msgid ""
-"Open the drop-down menu next to the database you want to manage by clicking "
-"on the gear icon."
-msgstr ""
-"Deschideți meniul drop-down lângă baza de date pe care doriți să o "
-"gestionați făcând clic pe pictograma roții."
-
-#: ../../content/administration/maintain/odoo_online.rst:21
-msgid "Several actions are available:"
-msgstr "Sunt disponibile mai multe acțiuni:"
-
-#: ../../content/administration/maintain/odoo_online.rst:23
+#: ../../content/administration/maintain/odoo_online.rst:15
 msgid ":ref:`odoo_online/upgrade`"
 msgstr ":ref:`odoo_online/upgrade`"
 
-#: ../../content/administration/maintain/odoo_online.rst:24
+#: ../../content/administration/maintain/odoo_online.rst:16
 msgid ":ref:`odoo_online/duplicate`"
 msgstr ":ref:`odoo_online/duplicate`"
 
-#: ../../content/administration/maintain/odoo_online.rst:25
+#: ../../content/administration/maintain/odoo_online.rst:17
 msgid ":ref:`odoo_online/rename`"
 msgstr ":ref:`odoo_online/rename`"
 
-#: ../../content/administration/maintain/odoo_online.rst:26
+#: ../../content/administration/maintain/odoo_online.rst:18
 msgid ":ref:`odoo_online/download`"
 msgstr ":ref:`odoo_online/download`"
 
-#: ../../content/administration/maintain/odoo_online.rst:27
+#: ../../content/administration/maintain/odoo_online.rst:19
 msgid ":ref:`odoo_online/domains`"
 msgstr ":ref:`odoo_online/domains`"
 
-#: ../../content/administration/maintain/odoo_online.rst:28
+#: ../../content/administration/maintain/odoo_online.rst:20
 msgid ":ref:`odoo_online/tags`"
 msgstr ":ref:`odoo_online/tags`"
 
-#: ../../content/administration/maintain/odoo_online.rst:29
+#: ../../content/administration/maintain/odoo_online.rst:21
 msgid ":ref:`odoo_online/delete`"
 msgstr ":ref:`odoo_online/delete`"
 
-#: ../../content/administration/maintain/odoo_online.rst:30
+#: ../../content/administration/maintain/odoo_online.rst:22
 msgid ":ref:`odoo_online/contact-support`"
 msgstr ":ref:`odoo_online/contact-support`"
 
-#: ../../content/administration/maintain/odoo_online.rst:31
+#: ../../content/administration/maintain/odoo_online.rst:23
 msgid ":ref:`odoo_online/users`"
 msgstr ":ref:`odoo_online/users`"
 
-#: ../../content/administration/maintain/odoo_online.rst:36
+#: ../../content/administration/maintain/odoo_online.rst:28
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:293
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:77
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:113
 #: ../../content/administration/upgrade.rst:10
 msgid "Upgrade"
 msgstr "Actualizează"
 
-#: ../../content/administration/maintain/odoo_online.rst:38
-msgid ""
-"If you are *not* on the latest **Online version**, you should receive an "
-"invitation to :doc:`upgrade <../upgrade>` your database. A **Rolling Release"
-" button** on your database's main screen proposes an upgrade to the latest "
-"version (e.g., 13.0 to 15.1)."
+#: ../../content/administration/maintain/odoo_online.rst:30
+msgid "Trigger a database upgrade."
 msgstr ""
-"Dacă *nu* sunteți pe **versiunea Online** cea mai recentă, ar trebui să "
-"primești o invitație pentru :doc:`upgrade <../upgrade>` bazei de date. Un "
-"**Rolling Release button** pe ecranul principal al bazei de date propune o "
-"actualizare la cea mai recentă versiune (de exemplu, 13.0 la 15.1)."
 
-#: ../../content/administration/maintain/odoo_online.rst:0
+#: ../../content/administration/maintain/odoo_online.rst:33
 msgid ""
-"**If your Odoo database's version is lower than the latest major release:**"
+"For more information about the upgrade process, check out the :doc:`Odoo "
+"Online upgrade documentation <../upgrade/odoo_online>`."
 msgstr ""
-"**Dacă versiunea bazei de date Odoo este mai mică decât cea mai recentă "
-"versiune majoră:**"
 
-#: ../../content/administration/maintain/odoo_online.rst:0
-msgid ""
-"You must upgrade your database within two months. After these two months, an"
-" automatic upgrade is initiated."
-msgstr ""
-"Trebuie să actualizați baza de date în două luni. După aceste două luni, o "
-"actualizare automată este inițiată."
-
-#: ../../content/administration/maintain/odoo_online.rst:0
-msgid ""
-"**If your Odoo database's version is equal to or higher than the latest "
-"major release:**"
-msgstr ""
-"**Dacă versiunea bazei de date Odoo este egală sau mai mare decât cea mai "
-"recentă versiune majoră:**"
-
-#: ../../content/administration/maintain/odoo_online.rst:0
-msgid ""
-"You can disregard the invitation to upgrade as you probably wouldn't benefit"
-" from new features every two months."
-msgstr ""
-"Puteți ignora invitația de actualizare deoarece probabil nu ar beneficia de "
-"noile caracteristici la fiecare două luni."
-
-#: ../../content/administration/maintain/odoo_online.rst:51
-msgid ""
-"Versions that are not supported anymore become deprecated and need to be "
-"updated to avoid security issues. We recommend you initiate the upgrade of "
-"the database yourself, as this method allows you to request a test upgrade "
-"of your database to check for any discrepancies."
-msgstr ""
-"Versiunile care nu mai sunt acceptate devin învechite și trebuie actualizate"
-" pentru a evita problemele de securitate. Vă recomandăm să inițiați "
-"actualizarea bazei de date, deoarece această metodă vă permite să solicitați"
-" o actualizare de test a bazei de date pentru a verifica orice discrepanțe."
-
-#: ../../content/administration/maintain/odoo_online.rst:56
-msgid ":doc:`../upgrade`"
-msgstr ":doc:`../upgrade`"
-
-#: ../../content/administration/maintain/odoo_online.rst:57
-msgid ":doc:`supported_versions`"
-msgstr ":doc:`supported_versions`"
-
-#: ../../content/administration/maintain/odoo_online.rst:62
+#: ../../content/administration/maintain/odoo_online.rst:39
 msgid "Duplicate"
 msgstr "Duplicare"
 
-#: ../../content/administration/maintain/odoo_online.rst:64
+#: ../../content/administration/maintain/odoo_online.rst:41
 msgid ""
-"Make an exact copy of the database to be able to perform testing without "
-"compromising the daily operations."
+"Create an exact copy of the database, which can be used to perform testing "
+"without compromising daily operations."
 msgstr ""
-"Creați o copie exactă a bazei de date pentru a putea efectua testarea fără a"
-" compromite operațiunile zilnice."
 
-#: ../../content/administration/maintain/odoo_online.rst:68
+#: ../../content/administration/maintain/odoo_online.rst:45
 msgid ""
-"By checking *For testing purposes*, all external communication (emails, "
+"By checking :guilabel:`For testing purposes`, all external actions (emails, "
 "payments, delivery orders, etc.) are disabled by default on the duplicated "
 "database."
 msgstr ""
-"Prin bifarea *For testing purposes*, toate comunicările externe (e-mailuri, "
-"plăți, comenzi de livrare, etc.) sunt dezactivate în mod implicit pe baza de"
-" date duplicată."
 
-#: ../../content/administration/maintain/odoo_online.rst:70
-msgid "Duplicate databases expire automatically after 15 days."
-msgstr "Bazele de date duplicate expiră automat după 15 zile."
+#: ../../content/administration/maintain/odoo_online.rst:47
+msgid "Duplicated databases expire automatically after 15 days."
+msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:75
+#: ../../content/administration/maintain/odoo_online.rst:52
 msgid "Rename"
 msgstr "Redenumire"
 
-#: ../../content/administration/maintain/odoo_online.rst:77
+#: ../../content/administration/maintain/odoo_online.rst:54
 msgid "Rename the database and its URL."
 msgstr "Redenumiți baza de date și URL-ul său."
 
-#: ../../content/administration/maintain/odoo_online.rst:82
+#: ../../content/administration/maintain/odoo_online.rst:59
 msgid "Download"
 msgstr "Descarcă"
 
-#: ../../content/administration/maintain/odoo_online.rst:84
-msgid "Download instantly a ZIP file with a backup of the database."
-msgstr "Descărcați rapid un fișier ZIP cu o copie de rezervă a bazei de date."
+#: ../../content/administration/maintain/odoo_online.rst:61
+msgid "Download a ZIP file containing a backup of the database."
+msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:87
+#: ../../content/administration/maintain/odoo_online.rst:64
 msgid ""
-"Databases are backed up daily according to the `Odoo Cloud SLA "
+"Databases are backed up daily as per the `Odoo Cloud Hosting SLA "
 "<https://www.odoo.com/cloud-sla>`_."
 msgstr ""
-"Bazele de date sunt salvate zilnic în conformitate cu `Odoo Cloud SLA "
-"<https://www.odoo.com/cloud-sla>`_."
 
-#: ../../content/administration/maintain/odoo_online.rst:93
-msgid "Domains"
-msgstr "Domenii"
-
-#: ../../content/administration/maintain/odoo_online.rst:95
-msgid "Configure custom domains to access the database via another URL."
+#: ../../content/administration/maintain/odoo_online.rst:72
+msgid ""
+"Use a custom :doc:`domain name <domain_names>` to access the database via "
+"another URL."
 msgstr ""
-"Configurați domenii personalizate pentru a accesa baza de date prin alt "
 
-#: ../../content/administration/maintain/odoo_online.rst:98
-msgid ":doc:`domain_names`"
-msgstr ":doc:`domain_names`"
+#: ../../content/administration/maintain/odoo_online.rst:75
+msgid ""
+"You can :ref:`register a domain name for free <domain-name/odoo-register>`."
+msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:103
+#: ../../content/administration/maintain/odoo_online.rst:80
 msgid "Tags"
 msgstr "Etichete"
 
-#: ../../content/administration/maintain/odoo_online.rst:105
-msgid ""
-"Add tags to sort your databases out. You can search the tags in the search "
-"bar."
+#: ../../content/administration/maintain/odoo_online.rst:82
+msgid "Add tags to easily identify and sort your databases."
 msgstr ""
-"Adăugați etichete pentru a sorta bazele de date. Puteți căuta etichetele în "
-"bara de căutare."
 
-#: ../../content/administration/maintain/odoo_online.rst:110
+#: ../../content/administration/maintain/odoo_online.rst:85
+msgid "You can search for tags in the search bar."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:90
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:550
 msgid "Delete"
 msgstr "Șterge"
 
-#: ../../content/administration/maintain/odoo_online.rst:112
+#: ../../content/administration/maintain/odoo_online.rst:92
 msgid "Delete a database instantly."
 msgstr "Ștergeți o bază de date instantaneu."
 
-#: ../../content/administration/maintain/odoo_online.rst:115
+#: ../../content/administration/maintain/odoo_online.rst:95
 msgid ""
 "Deleting a database means that all data is permanently lost. The deletion is"
-" instant and for all users. It is recommended to create a backup of the "
-"database before deleting it."
+" instant and applies to all users. It is recommended to create a backup of "
+"the database before deleting it."
 msgstr ""
-"Ștergerea unei baze de date înseamnă că toate datele sunt pierdute "
-"permanent. Ștergerea este instantanee și pentru toți utilizatorii. Este "
-"recomandat să creați o copie de rezervă a bazei de date înainte de a o "
-"șterge."
 
-#: ../../content/administration/maintain/odoo_online.rst:118
+#: ../../content/administration/maintain/odoo_online.rst:98
 msgid ""
-"Read carefully the warning message that pops up and proceed only if you "
-"fully understand the implications of deleting a database:"
+"Carefully read the warning message and only proceed if the implications of "
+"deleting a database are fully understood."
 msgstr ""
-"Citiți cu atenție mesajul de avertizare care apare și continuați numai dacă "
-"înțelegeți în totalitate consecințele ștergerii unei baze de date:"
 
-#: ../../content/administration/maintain/odoo_online.rstNone
-msgid "A warning message is prompted before deleting a database."
+#: ../../content/administration/maintain/odoo_online.rst-1
+msgid "The warning message displayed before deleting a database"
 msgstr ""
-"Un mesaj de avertizare este afișat înainte de a șterge o bază de date."
 
-#: ../../content/administration/maintain/odoo_online.rst:126
+#: ../../content/administration/maintain/odoo_online.rst:105
 msgid "Only an administrator can delete a database."
 msgstr "Numai un administrator poate șterge o bază de date."
 
-#: ../../content/administration/maintain/odoo_online.rst:127
-msgid "The database name is immediately available for a new database."
+#: ../../content/administration/maintain/odoo_online.rst:106
+msgid "The database name is immediately made available to anyone."
 msgstr ""
-"Numele bazei de date este imediat disponibil pentru o nouă bază de date."
 
-#: ../../content/administration/maintain/odoo_online.rst:128
+#: ../../content/administration/maintain/odoo_online.rst:107
 msgid ""
-"It is not possible to delete a database if it is expired or linked to a "
-"subscription. If needed, please get in touch with `Odoo Support "
+"Deleting a database if it has expired or is linked to a subscription is "
+"impossible. In that case, contact `Odoo Support "
 "<https://www.odoo.com/help>`_."
 msgstr ""
-"Nu este posibil să ștergeți o bază de date dacă aceasta este expirată sau "
-"asociată unei abonamente. Dacă este necesar, vă rugăm să contactați `Odoo "
-"Support <https://www.odoo.com/help>`_."
 
-#: ../../content/administration/maintain/odoo_online.rst:130
+#: ../../content/administration/maintain/odoo_online.rst:113
+msgid "Contact us"
+msgstr "Contactați-ne"
+
+#: ../../content/administration/maintain/odoo_online.rst:115
 msgid ""
-"To delete your account, please get in touch with `Odoo Support "
-"<https://www.odoo.com/help>`_."
-msgstr ""
-"Pentru a șterge contul dvs., vă rugăm să contactați `Odoo Support "
-"<https://www.odoo.com/help>`_."
-
-#: ../../content/administration/maintain/odoo_online.rst:135
-msgid "Contact Support"
-msgstr "Contactați suportul"
-
-#: ../../content/administration/maintain/odoo_online.rst:137
-msgid ""
-"Access the Odoo `support page <https://www.odoo.com/help>`_ with your "
+"Access the `Odoo.com support page <https://www.odoo.com/help>`_ with the "
 "database's details already pre-filled."
 msgstr ""
-"Accesați pagina de `suport Odoo <https://www.odoo.com/help>`_ cu detaliile "
-"bazei de date deja completate."
 
-#: ../../content/administration/maintain/odoo_online.rst:143
-msgid "Invite / Remove Users"
-msgstr "Invitați / Eliminați utilizatori"
+#: ../../content/administration/maintain/odoo_online.rst:121
+msgid "Invite / remove users"
+msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:145
+#: ../../content/administration/maintain/odoo_online.rst:123
 msgid ""
-"To invite users, fill out the email address of the new user and click on "
-"*Invite*. To add multiple users, click on *Add more users*."
+"To invite users, fill out the new user's email address and click "
+":guilabel:`Invite`. To add multiple users, click :guilabel:`Add more users`."
 msgstr ""
-"Pentru a invita utilizatori, completați adresa de e-mail a utilizatorului "
-"nou și faceți clic pe *Invitați*. Pentru a adăuga mai mulți utilizatori, "
-"faceți clic pe *Adăugați mai mulți utilizatori*."
 
-#: ../../content/administration/maintain/odoo_online.rstNone
-msgid "Clicking on \"Add more users\" adds additional email fields."
+#: ../../content/administration/maintain/odoo_online.rst-1
+msgid "Inviting a user on a database"
 msgstr ""
-"Faceți clic pe \"Adăugați mai mulți utilizatori\" pentru a adăuga câmpuri de"
-" e-mail suplimentare."
 
-#: ../../content/administration/maintain/odoo_online.rst:152
-msgid "To remove users, select the users to remove and click on *Remove*."
+#: ../../content/administration/maintain/odoo_online.rst:129
+msgid "To remove users, select them and click :guilabel:`Remove`."
 msgstr ""
-"Pentru a elimina utilizatori, selectați utilizatorii de eliminat și faceți "
-"clic pe *Eliminați*."
 
-#: ../../content/administration/maintain/odoo_online.rst:155
-msgid ":doc:`/applications/general/users/manage_users`"
-msgstr ":doc:`/applications/general/users/manage_users`"
+#: ../../content/administration/maintain/odoo_online.rst:132
+msgid ":doc:`../../applications/general/users/manage_users`"
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:133
+msgid ":doc:`../../applications/general/users/delete_account`"
+msgstr ""
 
 #: ../../content/administration/maintain/on_premise.rst:3
 msgid "On-premise database management"
@@ -5586,7 +5504,7 @@ msgid ""
 msgstr ""
 "Dacă nu puteți înregistra baza de date, probabil veți întâmpina acest mesaj:"
 
-#: ../../content/administration/maintain/on_premise.rstNone
+#: ../../content/administration/maintain/on_premise.rst-1
 msgid ""
 "Something went wrong while registering your database, you can try again or contact Odoo\n"
 "Help"
@@ -5732,7 +5650,7 @@ msgstr ""
 "Dacă aveți mai mulți utilizatori în baza de date locală decât în abonamentul"
 " dvs. Odoo Enterprise, puteți întâmpina acest mesaj:"
 
-#: ../../content/administration/maintain/on_premise.rstNone
+#: ../../content/administration/maintain/on_premise.rst-1
 msgid ""
 "This database will expire in X days, you have more users than your "
 "subscription allows"
@@ -5790,7 +5708,7 @@ msgstr ""
 "Dacă baza de date atinge data de expirare înainte de a vă reînnoi "
 "abonamentul, veți întâmpina acest mesaj:"
 
-#: ../../content/administration/maintain/on_premise.rstNone
+#: ../../content/administration/maintain/on_premise.rst-1
 msgid "This database has expired."
 msgstr "Această bază de date a expirat."
 
@@ -5930,274 +5848,346 @@ msgstr "Această matrice arată starea de suport pentru fiecare versiune."
 msgid "**Major releases are in bold type.**"
 msgstr "**Lansările majore sunt în bold.**"
 
-#: ../../content/administration/maintain/supported_versions.rst:27
+#: ../../content/administration/maintain/supported_versions.rst:33
 #: ../../content/administration/upgrade/on_premise.rst:3
 msgid "On-Premise"
 msgstr "On-Premise"
 
-#: ../../content/administration/maintain/supported_versions.rst:27
+#: ../../content/administration/maintain/supported_versions.rst:34
 msgid "Release date"
 msgstr "Data lansării"
 
-#: ../../content/administration/maintain/supported_versions.rst:27
+#: ../../content/administration/maintain/supported_versions.rst:35
 msgid "End of support"
 msgstr "Sfârșitul suportului"
 
-#: ../../content/administration/maintain/supported_versions.rst:29
-msgid "**Odoo 16.0**"
-msgstr "**Odoo 16.0**"
+#: ../../content/administration/maintain/supported_versions.rst:36
+msgid "Odoo saas~16.3"
+msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:29
-#: ../../content/administration/maintain/supported_versions.rst:29
-#: ../../content/administration/maintain/supported_versions.rst:29
-#: ../../content/administration/maintain/supported_versions.rst:31
-#: ../../content/administration/maintain/supported_versions.rst:35
-#: ../../content/administration/maintain/supported_versions.rst:35
-#: ../../content/administration/maintain/supported_versions.rst:35
 #: ../../content/administration/maintain/supported_versions.rst:37
-#: ../../content/administration/maintain/supported_versions.rst:37
-#: ../../content/administration/maintain/supported_versions.rst:37
+#: ../../content/administration/maintain/supported_versions.rst:43
+#: ../../content/administration/maintain/supported_versions.rst:55
+#: ../../content/administration/maintain/supported_versions.rst:56
+#: ../../content/administration/maintain/supported_versions.rst:57
+#: ../../content/administration/maintain/supported_versions.rst:73
+#: ../../content/administration/maintain/supported_versions.rst:74
+#: ../../content/administration/maintain/supported_versions.rst:75
+#: ../../content/administration/maintain/supported_versions.rst:79
+#: ../../content/administration/maintain/supported_versions.rst:80
+#: ../../content/administration/maintain/supported_versions.rst:81
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:58
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:59
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:62
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:63
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:66
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:67
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:70
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:71
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:74
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:75
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:78
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:79
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:82
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:83
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:86
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:87
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:91
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:95
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:99
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:103
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:107
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:111
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:115
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:119
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:122
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:123
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:127
 msgid "|green|"
 msgstr "|green|"
 
-#: ../../content/administration/maintain/supported_versions.rst:29
+#: ../../content/administration/maintain/supported_versions.rst:38
 #: ../../content/administration/maintain/supported_versions.rst:39
-msgid "October 2022"
-msgstr "Octombrie 2022"
-
-#: ../../content/administration/maintain/supported_versions.rst:29
-msgid "October 2025 (planned)"
-msgstr "Octombrie 2025 (planificat)"
-
-#: ../../content/administration/maintain/supported_versions.rst:31
-msgid "Odoo saas~15.2"
-msgstr "Odoo saas~15.2"
-
-#: ../../content/administration/maintain/supported_versions.rst:31
-#: ../../content/administration/maintain/supported_versions.rst:31
-#: ../../content/administration/maintain/supported_versions.rst:33
-#: ../../content/administration/maintain/supported_versions.rst:33
-#: ../../content/administration/maintain/supported_versions.rst:41
-#: ../../content/administration/maintain/supported_versions.rst:41
+#: ../../content/administration/maintain/supported_versions.rst:44
 #: ../../content/administration/maintain/supported_versions.rst:45
-#: ../../content/administration/maintain/supported_versions.rst:45
-#: ../../content/administration/maintain/supported_versions.rst:49
-#: ../../content/administration/maintain/supported_versions.rst:49
+#: ../../content/administration/maintain/supported_versions.rst:50
 #: ../../content/administration/maintain/supported_versions.rst:51
-#: ../../content/administration/maintain/supported_versions.rst:51
-#: ../../content/administration/maintain/supported_versions.rst:55
-#: ../../content/administration/maintain/supported_versions.rst:55
-#: ../../content/administration/maintain/supported_versions.rst:57
-#: ../../content/administration/maintain/supported_versions.rst:59
-#: ../../content/administration/maintain/supported_versions.rst:59
-#: ../../content/administration/maintain/supported_versions.rst:61
+#: ../../content/administration/maintain/supported_versions.rst:62
+#: ../../content/administration/maintain/supported_versions.rst:63
+#: ../../content/administration/maintain/supported_versions.rst:68
+#: ../../content/administration/maintain/supported_versions.rst:69
+#: ../../content/administration/maintain/supported_versions.rst:92
+#: ../../content/administration/maintain/supported_versions.rst:93
+#: ../../content/administration/maintain/supported_versions.rst:104
+#: ../../content/administration/maintain/supported_versions.rst:105
+#: ../../content/administration/maintain/supported_versions.rst:116
+#: ../../content/administration/maintain/supported_versions.rst:117
+#: ../../content/administration/maintain/supported_versions.rst:122
+#: ../../content/administration/maintain/supported_versions.rst:123
+#: ../../content/administration/maintain/supported_versions.rst:134
+#: ../../content/administration/maintain/supported_versions.rst:135
+#: ../../content/administration/maintain/supported_versions.rst:140
+#: ../../content/administration/maintain/supported_versions.rst:146
+#: ../../content/administration/maintain/supported_versions.rst:147
+#: ../../content/administration/maintain/supported_versions.rst:152
 msgid "N/A"
 msgstr "N/A"
 
-#: ../../content/administration/maintain/supported_versions.rst:31
-msgid "March 2022"
-msgstr "Martie 2022"
+#: ../../content/administration/maintain/supported_versions.rst:40
+msgid "June 2023"
+msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:31
-msgid "January 2023"
-msgstr "Ianuarie 2023"
-
-#: ../../content/administration/maintain/supported_versions.rst:33
-msgid "Odoo saas~15.1"
-msgstr "Odoo saas~15.1"
-
-#: ../../content/administration/maintain/supported_versions.rst:33
-#: ../../content/administration/maintain/supported_versions.rst:39
-#: ../../content/administration/maintain/supported_versions.rst:39
-#: ../../content/administration/maintain/supported_versions.rst:39
 #: ../../content/administration/maintain/supported_versions.rst:41
-#: ../../content/administration/maintain/supported_versions.rst:43
-#: ../../content/administration/maintain/supported_versions.rst:43
-#: ../../content/administration/maintain/supported_versions.rst:43
-#: ../../content/administration/maintain/supported_versions.rst:45
+msgid "September 2023 (planned)"
+msgstr ""
+
+#: ../../content/administration/maintain/supported_versions.rst:42
+msgid "Odoo saas~16.2"
+msgstr ""
+
+#: ../../content/administration/maintain/supported_versions.rst:46
+msgid "March 2023"
+msgstr ""
+
 #: ../../content/administration/maintain/supported_versions.rst:47
-#: ../../content/administration/maintain/supported_versions.rst:47
-#: ../../content/administration/maintain/supported_versions.rst:47
+msgid "July 2023 (planned)"
+msgstr ""
+
+#: ../../content/administration/maintain/supported_versions.rst:48
+msgid "Odoo saas~16.1"
+msgstr ""
+
 #: ../../content/administration/maintain/supported_versions.rst:49
-#: ../../content/administration/maintain/supported_versions.rst:51
-#: ../../content/administration/maintain/supported_versions.rst:53
-#: ../../content/administration/maintain/supported_versions.rst:53
-#: ../../content/administration/maintain/supported_versions.rst:53
-#: ../../content/administration/maintain/supported_versions.rst:55
-#: ../../content/administration/maintain/supported_versions.rst:57
-#: ../../content/administration/maintain/supported_versions.rst:57
-#: ../../content/administration/maintain/supported_versions.rst:59
 #: ../../content/administration/maintain/supported_versions.rst:61
-#: ../../content/administration/maintain/supported_versions.rst:61
+#: ../../content/administration/maintain/supported_versions.rst:67
+#: ../../content/administration/maintain/supported_versions.rst:85
+#: ../../content/administration/maintain/supported_versions.rst:86
+#: ../../content/administration/maintain/supported_versions.rst:87
+#: ../../content/administration/maintain/supported_versions.rst:91
+#: ../../content/administration/maintain/supported_versions.rst:97
+#: ../../content/administration/maintain/supported_versions.rst:98
+#: ../../content/administration/maintain/supported_versions.rst:99
+#: ../../content/administration/maintain/supported_versions.rst:103
+#: ../../content/administration/maintain/supported_versions.rst:109
+#: ../../content/administration/maintain/supported_versions.rst:110
+#: ../../content/administration/maintain/supported_versions.rst:111
+#: ../../content/administration/maintain/supported_versions.rst:115
+#: ../../content/administration/maintain/supported_versions.rst:121
+#: ../../content/administration/maintain/supported_versions.rst:127
+#: ../../content/administration/maintain/supported_versions.rst:128
+#: ../../content/administration/maintain/supported_versions.rst:129
+#: ../../content/administration/maintain/supported_versions.rst:133
+#: ../../content/administration/maintain/supported_versions.rst:139
+#: ../../content/administration/maintain/supported_versions.rst:141
+#: ../../content/administration/maintain/supported_versions.rst:145
+#: ../../content/administration/maintain/supported_versions.rst:151
+#: ../../content/administration/maintain/supported_versions.rst:153
 msgid "|red|"
 msgstr "|red|"
 
-#: ../../content/administration/maintain/supported_versions.rst:33
+#: ../../content/administration/maintain/supported_versions.rst:52
+msgid "February 2023"
+msgstr ""
+
+#: ../../content/administration/maintain/supported_versions.rst:53
+msgid "April 2023"
+msgstr ""
+
+#: ../../content/administration/maintain/supported_versions.rst:54
+msgid "**Odoo 16.0**"
+msgstr "**Odoo 16.0**"
+
+#: ../../content/administration/maintain/supported_versions.rst:58
+#: ../../content/administration/maintain/supported_versions.rst:89
+msgid "October 2022"
+msgstr "Octombrie 2022"
+
+#: ../../content/administration/maintain/supported_versions.rst:59
+msgid "October 2025 (planned)"
+msgstr "Octombrie 2025 (planificat)"
+
+#: ../../content/administration/maintain/supported_versions.rst:60
+msgid "Odoo saas~15.2"
+msgstr "Odoo saas~15.2"
+
+#: ../../content/administration/maintain/supported_versions.rst:64
+msgid "March 2022"
+msgstr "Martie 2022"
+
+#: ../../content/administration/maintain/supported_versions.rst:65
+msgid "January 2023"
+msgstr "Ianuarie 2023"
+
+#: ../../content/administration/maintain/supported_versions.rst:66
+msgid "Odoo saas~15.1"
+msgstr "Odoo saas~15.1"
+
+#: ../../content/administration/maintain/supported_versions.rst:70
 msgid "February 2022"
 msgstr "Februarie 2022"
 
-#: ../../content/administration/maintain/supported_versions.rst:33
+#: ../../content/administration/maintain/supported_versions.rst:71
 msgid "July 2022"
 msgstr "Iulie 2022"
 
-#: ../../content/administration/maintain/supported_versions.rst:35
+#: ../../content/administration/maintain/supported_versions.rst:72
 msgid "**Odoo 15.0**"
 msgstr "**Odoo 15.0**"
 
-#: ../../content/administration/maintain/supported_versions.rst:35
-#: ../../content/administration/maintain/supported_versions.rst:43
+#: ../../content/administration/maintain/supported_versions.rst:76
+#: ../../content/administration/maintain/supported_versions.rst:101
 msgid "October 2021"
 msgstr "Octombrie 2021"
 
-#: ../../content/administration/maintain/supported_versions.rst:35
+#: ../../content/administration/maintain/supported_versions.rst:77
 msgid "October 2024 (planned)"
 msgstr "Octombrie 2024 (planificat)"
 
-#: ../../content/administration/maintain/supported_versions.rst:37
+#: ../../content/administration/maintain/supported_versions.rst:78
 msgid "**Odoo 14.0**"
 msgstr "**Odoo 14.0**"
 
-#: ../../content/administration/maintain/supported_versions.rst:37
-#: ../../content/administration/maintain/supported_versions.rst:47
+#: ../../content/administration/maintain/supported_versions.rst:82
+#: ../../content/administration/maintain/supported_versions.rst:113
 msgid "October 2020"
 msgstr "Octombrie 2020"
 
-#: ../../content/administration/maintain/supported_versions.rst:37
+#: ../../content/administration/maintain/supported_versions.rst:83
 msgid "October 2023 (planned)"
 msgstr "Octombrie 2023 (planificat)"
 
-#: ../../content/administration/maintain/supported_versions.rst:39
+#: ../../content/administration/maintain/supported_versions.rst:84
 msgid "**Odoo 13.0**"
 msgstr "**Odoo 13.0**"
 
-#: ../../content/administration/maintain/supported_versions.rst:39
-#: ../../content/administration/maintain/supported_versions.rst:53
+#: ../../content/administration/maintain/supported_versions.rst:88
+#: ../../content/administration/maintain/supported_versions.rst:131
 msgid "October 2019"
 msgstr "Octombrie 2019"
 
-#: ../../content/administration/maintain/supported_versions.rst:41
+#: ../../content/administration/maintain/supported_versions.rst:90
 msgid "Odoo saas~12.3"
 msgstr "Odoo saas~12.3"
 
-#: ../../content/administration/maintain/supported_versions.rst:41
+#: ../../content/administration/maintain/supported_versions.rst:94
 msgid "August 2019"
 msgstr "August 2019"
 
-#: ../../content/administration/maintain/supported_versions.rst:43
+#: ../../content/administration/maintain/supported_versions.rst:96
 msgid "**Odoo 12.0**"
 msgstr "**Odoo 12.0**"
 
-#: ../../content/administration/maintain/supported_versions.rst:43
-#: ../../content/administration/maintain/supported_versions.rst:57
+#: ../../content/administration/maintain/supported_versions.rst:100
+#: ../../content/administration/maintain/supported_versions.rst:143
 msgid "October 2018"
 msgstr "Octombrie 2018"
 
-#: ../../content/administration/maintain/supported_versions.rst:45
+#: ../../content/administration/maintain/supported_versions.rst:102
 msgid "Odoo saas~11.3"
 msgstr "Odoo saas~11.3"
 
-#: ../../content/administration/maintain/supported_versions.rst:45
+#: ../../content/administration/maintain/supported_versions.rst:106
 msgid "April 2018"
 msgstr "Aprilie 2018"
 
-#: ../../content/administration/maintain/supported_versions.rst:47
+#: ../../content/administration/maintain/supported_versions.rst:108
 msgid "**Odoo 11.0**"
 msgstr "**Odoo 11.0**"
 
-#: ../../content/administration/maintain/supported_versions.rst:47
-#: ../../content/administration/maintain/supported_versions.rst:61
+#: ../../content/administration/maintain/supported_versions.rst:112
+#: ../../content/administration/maintain/supported_versions.rst:155
 msgid "October 2017"
 msgstr "Octombrie 2017"
 
-#: ../../content/administration/maintain/supported_versions.rst:49
+#: ../../content/administration/maintain/supported_versions.rst:114
 msgid "Odoo 10.saas~15"
 msgstr "Odoo 10.saas~15"
 
-#: ../../content/administration/maintain/supported_versions.rst:49
+#: ../../content/administration/maintain/supported_versions.rst:118
 msgid "March 2017"
 msgstr "Martie 2017"
 
-#: ../../content/administration/maintain/supported_versions.rst:51
+#: ../../content/administration/maintain/supported_versions.rst:120
 msgid "Odoo 10.saas~14"
 msgstr "Odoo 10.saas~14"
 
-#: ../../content/administration/maintain/supported_versions.rst:51
+#: ../../content/administration/maintain/supported_versions.rst:124
 msgid "January 2017"
 msgstr "Ianuarie 2017"
 
-#: ../../content/administration/maintain/supported_versions.rst:53
+#: ../../content/administration/maintain/supported_versions.rst:126
 msgid "**Odoo 10.0**"
 msgstr "**Odoo 10.0**"
 
-#: ../../content/administration/maintain/supported_versions.rst:53
+#: ../../content/administration/maintain/supported_versions.rst:130
 msgid "October 2016"
 msgstr "Octombrie 2016"
 
-#: ../../content/administration/maintain/supported_versions.rst:55
+#: ../../content/administration/maintain/supported_versions.rst:132
 msgid "Odoo 9.saas~11"
 msgstr "Odoo 9.saas~11"
 
-#: ../../content/administration/maintain/supported_versions.rst:55
+#: ../../content/administration/maintain/supported_versions.rst:136
 msgid "May 2016"
 msgstr "Mai 2016"
 
-#: ../../content/administration/maintain/supported_versions.rst:57
+#: ../../content/administration/maintain/supported_versions.rst:138
 msgid "**Odoo 9.0**"
 msgstr "**Odoo 9.0**"
 
-#: ../../content/administration/maintain/supported_versions.rst:57
+#: ../../content/administration/maintain/supported_versions.rst:142
 msgid "October 2015"
 msgstr "Octombrie 2015"
 
-#: ../../content/administration/maintain/supported_versions.rst:59
+#: ../../content/administration/maintain/supported_versions.rst:144
 msgid "Odoo 8.saas~6"
 msgstr "Odoo 8.saas~6"
 
-#: ../../content/administration/maintain/supported_versions.rst:59
+#: ../../content/administration/maintain/supported_versions.rst:148
 msgid "February 2015"
 msgstr "Februarie 2015"
 
-#: ../../content/administration/maintain/supported_versions.rst:61
+#: ../../content/administration/maintain/supported_versions.rst:150
 msgid "**Odoo 8.0**"
 msgstr "**Odoo 8.0**"
 
-#: ../../content/administration/maintain/supported_versions.rst:61
+#: ../../content/administration/maintain/supported_versions.rst:154
 msgid "September 2014"
 msgstr "Septembrie 2014"
 
-#: ../../content/administration/maintain/supported_versions.rst:66
+#: ../../content/administration/maintain/supported_versions.rst:159
 msgid "|green| Supported version"
 msgstr "|green| Versiune suportată"
 
-#: ../../content/administration/maintain/supported_versions.rst:68
+#: ../../content/administration/maintain/supported_versions.rst:161
 msgid "|red| End-of-support"
 msgstr "|red| Sfârșitul suportului"
 
-#: ../../content/administration/maintain/supported_versions.rst:70
+#: ../../content/administration/maintain/supported_versions.rst:163
 msgid "N/A Never released for this platform"
 msgstr "N/A Nu a fost niciodată lansat pentru această platformă"
 
-#: ../../content/administration/maintain/supported_versions.rst:72
+#: ../../content/administration/maintain/supported_versions.rst:165
 msgid "🏁 Future version, not released yet"
 msgstr "🏁 Versiune viitoare, nu a fost încă lansată"
 
-#: ../../content/administration/maintain/supported_versions.rst:83
+#: ../../content/administration/maintain/supported_versions.rst:176
 msgid "I run an older version of Odoo/OpenERP/TinyERP"
 msgstr "Rulez o versiune mai veche de Odoo/OpenERP/TinyERP"
 
-#: ../../content/administration/maintain/supported_versions.rst:85
+#: ../../content/administration/maintain/supported_versions.rst:178
 msgid ""
 "OpenERP 7.0, 6.1, 6.0 and 5.0 is not supported anymore, on any platform."
 msgstr ""
 "OpenERP 7.0, 6.1, 6.0 și 5.0 nu mai sunt suportate, pe orice platformă."
 
-#: ../../content/administration/maintain/supported_versions.rst:87
+#: ../../content/administration/maintain/supported_versions.rst:180
 msgid ""
 "TinyERP 4.0, 3.0, 2.0 and 1.0 is not supported anymore, on any platform."
 msgstr ""
 "TinyERP 4.0, 3.0, 2.0 și 1.0 nu mai sunt suportate, pe orice platformă."
 
-#: ../../content/administration/maintain/supported_versions.rst:89
+#: ../../content/administration/maintain/supported_versions.rst:182
 msgid ""
 "Even though we don't support older versions, you can always `upgrade from "
 "any version <https://upgrade.odoo.com/>`_."
@@ -6880,7 +6870,7 @@ msgstr ""
 "În cele din urmă, *prin* Odoo Shell, puteți declanșa bucata de "
 "cod/funcție/metodă pe care doriți să o depanați."
 
-#: ../../content/administration/odoo_sh/advanced/containers.rstNone
+#: ../../content/administration/odoo_sh/advanced/containers.rst-1
 msgid "Console screenshot showing ``pdb`` running in an Odoo.sh shell."
 msgstr ""
 "Captură de ecran a consolii care arată ``pdb`` care rulează într-o shell "
@@ -6967,7 +6957,7 @@ msgstr ""
 "efecte secundare dacă sunt lansate mai des decât este așteptat."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:6
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:110
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:170
 msgid "Submodules"
 msgstr "Submodule"
 
@@ -7390,7 +7380,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:88
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:81
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:51
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:56
 msgid "Development"
 msgstr "Dezvoltare"
 
@@ -7569,8 +7559,8 @@ msgid "Tabs"
 msgstr "Tab-uri"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:155
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:51
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:63
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:57
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:85
 msgid "History"
 msgstr "Istoric"
 
@@ -7606,8 +7596,8 @@ msgstr ""
 "prin butonul *connect*."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:173
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:59
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:71
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:73
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:101
 msgid "Mails"
 msgstr "Mail-uri"
 
@@ -7669,7 +7659,7 @@ msgstr ""
 "Shell."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:212
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:73
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:105
 msgid "Monitoring"
 msgstr "Monitorizare"
 
@@ -7689,8 +7679,8 @@ msgstr ""
 "modificările construcției (importul bazei de date, git push, etc...)."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:225
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:55
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:67
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:65
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:93
 msgid "Logs"
 msgstr "Jurnale"
 
@@ -7751,7 +7741,7 @@ msgstr ""
 "după 5 minute. Puteți reporni utilizând butonul de redare."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:249
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:75
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:109
 msgid "Backups"
 msgstr "Copii de rezervă"
 
@@ -7890,9 +7880,9 @@ msgstr ":doc:`Upgrade - Odoo.sh <../../upgrade/odoo_sh>`"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:303
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:3
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:61
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:77
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:81
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:117
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:124
 msgid "Settings"
 msgstr "Setări"
 
@@ -9213,11 +9203,9 @@ msgid "|pic1|  |pic2|"
 msgstr "|pic1|  |pic2|"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:40
-#: ../../content/administration/odoo_sh/getting_started/first_module.rst:40
 msgid "pic1"
 msgstr "pic1"
 
-#: ../../content/administration/odoo_sh/getting_started/first_module.rst:43
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:43
 msgid "pic2"
 msgstr "pic2"
@@ -10286,70 +10274,50 @@ msgstr ""
 "În plus, ei nu pot utiliza webshell-ul și nu au acces la jurnalele "
 "serverului."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:49
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:54
 msgid "User"
 msgstr "Utilizator"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:49
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:55
 msgid "Admin"
 msgstr "Admin"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:51
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:51
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:53
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:53
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:55
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:55
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:57
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:57
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:59
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:59
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:61
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:61
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:63
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:63
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:65
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:67
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:69
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:71
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:73
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:75
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:77
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:77
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:79
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:79
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:81
-msgid "X"
-msgstr "X"
-
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:53
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:65
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:89
 msgid "1-click connect"
 msgstr "conectare 1-clic"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:57
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:69
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:97
 msgid "Shell/SSH"
 msgstr "Shell/SSH"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:63
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:84
 msgid "Production & Staging"
 msgstr "Producție și stagiu"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:79
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:118
+msgid "|green|\\*"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:120
 #: ../../content/administration/odoo_sh/getting_started/status.rst:3
 msgid "Status"
 msgstr "Stare"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:85
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:130
+msgid "\\* Only in staging branches"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:145
 msgid "Public Access"
 msgstr "Acces public"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:87
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:147
 msgid "Allow public access to your development builds."
 msgstr "Permite accesul public la construcțiile de dezvoltare."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:92
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:152
 msgid ""
 "If activated, this option exposes the Builds page publicly, allowing "
 "visitors to connect to your development builds."
@@ -10357,7 +10325,7 @@ msgstr ""
 "Dacă este activată, această opțiune expune pagina Construcții public, "
 "permitând vizitatorilor să se conecteze la build-urile de dezvoltare."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:95
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:155
 msgid ""
 "In addition, visitors have access to the logs, shell and mails of your "
 "development builds."
@@ -10365,7 +10333,7 @@ msgstr ""
 "În plus, vizitatorii au acces la jurnale, shell și e-mail-uri ale build-"
 "urilor de dezvoltare."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:97
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:157
 msgid ""
 "Production and staging builds are excluded, visitors can only see their "
 "status."
@@ -10373,11 +10341,11 @@ msgstr ""
 "Build-urile de producție și stagiu sunt excluse, vizitatorii pot vedea doar "
 "starea lor."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:102
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:162
 msgid "Custom domains"
 msgstr "Domenii personalizate"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:104
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:164
 msgid ""
 "To configure additional domains please refer to the corresponding branch's "
 ":ref:`settings tab <odoosh-gettingstarted-branches-tabs-settings>`."
@@ -10386,7 +10354,7 @@ msgstr ""
 "de setări <odoosh-gettingstarted-branches-tabs-settings>` al ramurii "
 "corespunzătoare."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:112
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:172
 msgid ""
 "Configure the deploy keys for the private repositories you use as submodules"
 " in your branches to allow Odoo.sh to download them."
@@ -10395,7 +10363,7 @@ msgstr ""
 "folosiți ca submodule în ramurile dvs. pentru a permite Odoo.sh să le "
 "descarce."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:116
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:176
 msgid ""
 "These settings are required for **private repositories** only. If you are "
 "looking on how to set up your submodules, instructions are available in the "
@@ -10407,7 +10375,7 @@ msgstr ""
 "disponibile în capitolul :ref:`Submodule <odoosh-advanced-submodules>` din "
 "această documentație."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:123
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:183
 msgid ""
 "When a repository is private, it is not possible to publicly download its "
 "branches and revisions. For that reason, you need to configure a deploy key "
@@ -10419,14 +10387,14 @@ msgstr ""
 "implementare pentru Odoo.sh, astfel încât serverul Git la distanță să "
 "permită platformei noastre să descarce reviziile acestui depozit privat."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:128
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:188
 msgid ""
 "To configure the deploy key for a private repository, proceed as follows:"
 msgstr ""
 "Pentru a configura cheia de implementare pentru un depozit privat, "
 "procedeziți astfel:"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:130
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:190
 msgid ""
 "in the input, paste the SSH URL of your private sub-repository and click on "
 "*Add*,"
@@ -10434,11 +10402,11 @@ msgstr ""
 "în intrare, lipiți URL-ul SSH al sub-repozitorului privat și faceți clic pe "
 "*Adăugare*,"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:132
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:192
 msgid "e.g. *git@github.com:USERNAME/REPOSITORY.git*"
 msgstr "e.g. *git@github.com:USERNAME/REPOSITORY.git*"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:133
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:193
 msgid ""
 "it can be another Git server than Github, such as Bitbucket, Gitlab or even "
 "your own self-hosted server"
@@ -10446,16 +10414,16 @@ msgstr ""
 "poate fi un alt server Git decât Github, cum ar fi Bitbucket, Gitlab sau "
 "chiar serverul propriu de găzduire"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:136
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:196
 msgid "copy the public key,"
 msgstr "copiați cheia publică,"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:138
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:198
 msgid "it should look like *ssh-rsa some...random...characters...here...==*"
 msgstr ""
 "ar trebui să arate ca *ssh-rsa some...random...characters...here...==*"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:140
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:200
 msgid ""
 "in the settings of the private sub-repository, add the public key amongst "
 "the deploy keys."
@@ -10463,24 +10431,24 @@ msgstr ""
 "în setările sub-repozitorului privat, adăugați cheia publică printre cheile "
 "de implementare."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:142
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:202
 msgid ""
 "Github.com: :menuselection:`Settings --> Deploy keys --> Add deploy key`"
 msgstr ""
 "Github.com: :menuselection:`Setări --> Chei de implementare --> Adăugare "
 "cheie de implementare`"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:143
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:203
 msgid "Bitbucket.com: :menuselection:`Settings --> Access keys --> Add key`"
 msgstr ""
 "Bitbucket.com: :menuselection:`Setări --> Chei de acces --> Adăugare cheie`"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:144
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:204
 msgid "Gitlab.com: :menuselection:`Settings --> Repository --> Deploy Keys`"
 msgstr ""
 "Gitlab.com: :menuselection:`Setări --> Depozit --> Chei de implementare`"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:145
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:205
 msgid ""
 "Self-hosted: append the key to the git user’s authorized_keys file in its "
 ".ssh directory"
@@ -10488,25 +10456,25 @@ msgstr ""
 "Auto-găzduit: adăugați cheia la fișierul authorized_keysutilizatorului git "
 "în directorul său .ssh"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:148
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:208
 msgid "Storage Size"
 msgstr "Dimensiunea spațiului de stocare"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:150
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:210
 msgid "This section shows the storage size used by your project."
 msgstr ""
 "Această secțiune arată dimensiunea spațiului de stocare utilizat de "
 "proiectul dvs."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:155
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:215
 msgid "Storage size is computed as follows:"
 msgstr "Dimensiunea spațiului de stocare se calculează astfel:"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:157
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:217
 msgid "the size of the PostgreSQL database"
 msgstr "dimensiunea bazei de date PostgreSQL"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:159
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:219
 msgid ""
 "the size of the disk files available in your container: database filestore, "
 "sessions storage directory..."
@@ -10514,7 +10482,7 @@ msgstr ""
 "dimensiunea fișierelor de disc disponibile în containerul dvs.: fișierul "
 "bazei de date, directorul de stocare sesiuni..."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:162
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:222
 msgid ""
 "In case you want to analyze disk usage, you can run the tool `ncdu "
 "<https://dev.yorhel.nl/ncdu/man>`_ in your Web Shell."
@@ -10522,7 +10490,7 @@ msgstr ""
 "Dacă doriți să analizați utilizarea spațiului de disc, puteți rula "
 "instrumentul `ncdu <https://dev.yorhel.nl/ncdu/man>`_ în Web Shell."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:165
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:225
 msgid ""
 "Should your production database size grow to exceed what's provisioned in "
 "your subscription, it will automatically be synchronized with it."
@@ -10530,11 +10498,11 @@ msgstr ""
 "Dacă dimensiunea bazei de date de producție crește pentru a depăși ceea ce "
 "este provisionat în abonamentul dvs., va fi automat sincronizat cu ea."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:169
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:229
 msgid "Database Workers"
 msgstr "Database Workers"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:171
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:231
 msgid ""
 "Additional database workers can be configured here. More workers help "
 "increase the load your production database is able to handle. If you add "
@@ -10545,7 +10513,7 @@ msgstr ""
 "poate gestiona. Dacă adăugați mai multe, vor fi automat sincronizate cu "
 "abonamentul dvs."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:179
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:239
 msgid ""
 "Adding more workers will not magically solve all performance issues. It only"
 " allows the server to handle more connections at the same time. If some "
@@ -10560,11 +10528,11 @@ msgstr ""
 "personalizărilor dvs. puteți deschide un ticket `aici "
 "<https://www.odoo.com/help>`_."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:185
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:245
 msgid "Staging Branches"
 msgstr "Staging Branches"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:187
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:247
 msgid ""
 "Additional staging branches allow you to develop and test more features at "
 "the same time. If you add more, it will automatically be synchronized with "
@@ -10574,11 +10542,11 @@ msgstr ""
 "mai multe funcții în același timp. Dacă adăugați mai multe, vor fi automat "
 "sincronizate cu abonamentul dvs."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:194
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:254
 msgid "Activation"
 msgstr "Activare"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:196
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:256
 msgid ""
 "Shows the status of the project's activation. You can change the project's "
 "activation code if needed."
@@ -10639,7 +10607,7 @@ msgstr "Migrarea de la un alt ERP la Odoo"
 
 #: ../../content/administration/upgrade.rst:29
 #: ../../content/administration/upgrade.rst:148
-#: ../../content/administration/upgrade.rst:252
+#: ../../content/administration/upgrade.rst:259
 #: ../../content/administration/upgrade/faq.rst:81
 #: ../../content/administration/upgrade/faq.rst:92
 #: ../../content/administration/upgrade/faq.rst:119
@@ -10863,7 +10831,7 @@ msgstr ""
 "formularul `website <https://upgrade.odoo.com>`_ și selectați scopul "
 "*Testing*."
 
-#: ../../content/administration/upgrade.rstNone
+#: ../../content/administration/upgrade.rst-1
 msgid "Selection of the \"Testing\" purpose in the upgrade form on Odoo"
 msgstr "Selectarea scopului \"Testing\" în formularul de actualizare pe Odoo"
 
@@ -11038,8 +11006,8 @@ msgid "Help"
 msgstr "Suport"
 
 #: ../../content/administration/upgrade.rst:200
-msgid "Contact our Upgrade service support"
-msgstr "Contactați serviciul nostru de asistență pentru actualizări"
+msgid "Contact our upgrade service support"
+msgstr ""
 
 #: ../../content/administration/upgrade.rst:202
 msgid ""
@@ -11071,99 +11039,102 @@ msgstr ""
 "actualizați din nou)."
 
 #: ../../content/administration/upgrade.rst:218
-#: ../../content/administration/upgrade.rst:257
 msgid ":doc:`maintain/supported_versions`"
 msgstr ":doc:`maintain/supported_versions`"
 
 #: ../../content/administration/upgrade.rst:223
-msgid "Service Level Agreement"
-msgstr "Acord de nivel de serviciu"
+msgid "Service-level agreement (SLA)"
+msgstr ""
 
-#: ../../content/administration/upgrade.rst:226
-msgid "What is covered by the Enterprise Licence?"
-msgstr "Ce este acoperit de licența Enterprise?"
+#: ../../content/administration/upgrade.rst:225
+msgid ""
+"With Odoo Enterprise, upgrading a database to the most recent version of "
+"Odoo is **free**, including any support required to rectify potential "
+"discrepancies in the upgraded database."
+msgstr ""
 
 #: ../../content/administration/upgrade.rst:228
 msgid ""
-"Databases hosted on Odoo's Cloud platforms (Odoo Online and Odoo.sh) or On-"
-"Premise (Self-Hosting) enjoy the following services at all times."
+"Information about the upgrade services included in the Enterprise Licence is"
+" available in the :ref:`Odoo Enterprise Subscription Agreement <upgrade>`. "
+"However, this section clarifies what upgrade services you can expect."
 msgstr ""
-"Bazele de date găzduite pe platformele de cloud Odoo (Odoo Online și "
-"Odoo.sh) sau locale (Self-Hosting) beneficiază de următoarele servicii în "
-"orice moment."
-
-#: ../../content/administration/upgrade.rst:231
-msgid "The upgrade of:"
-msgstr "Actualizarea:"
 
 #: ../../content/administration/upgrade.rst:233
-msgid "standard applications"
-msgstr "aplicații standard"
-
-#: ../../content/administration/upgrade.rst:234
-msgid ""
-"Studio customization (as long as the :guilabel:`Studio` app is still active)"
+msgid "Upgrade services covered by the SLA"
 msgstr ""
-"Personalizarea Studio (atât timp cât aplicația :guilabel:`Studio` este încă "
-"activă)"
 
 #: ../../content/administration/upgrade.rst:235
 msgid ""
-"customizations *if* they are covered by a \"Maintenance of Customizations\" "
-"subscription"
+"Databases hosted on Odoo's cloud platforms (Odoo Online and Odoo.sh) or "
+"self-hosted (On-Premise) can benefit from upgrade services at all times for:"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:237
-msgid ""
-"The Upgrade Service is limited to your database's technical conversion and "
-"adaptation (standard modules and data) to make it compatible with the "
-"targeted version."
+#: ../../content/administration/upgrade.rst:238
+msgid "the upgrade of all **standard applications**;"
 msgstr ""
-"Serviciul de actualizare este limitat la conversia tehnică a bazei de date "
-"și adaptarea acesteia (module standard și date) pentru a o face compatibilă "
-"cu versiunea țintă."
+
+#: ../../content/administration/upgrade.rst:239
+msgid ""
+"the upgrade of all **customizations created with the Studio app**, as long "
+"as Studio is still installed and the respective subscription is still "
+"active; and"
+msgstr ""
 
 #: ../../content/administration/upgrade.rst:241
-msgid "What upgrading does NOT cover"
-msgstr "Ce nu acoperă actualizarea"
-
-#: ../../content/administration/upgrade.rst:243
-msgid "The cleaning of pre-existing data & configuration while upgrading"
-msgstr "Curățarea datelor și a configurației existente în timpul actualizării"
+msgid ""
+"the upgrade of all **developments and customizations covered by a "
+"maintenance of customizations subscription**."
+msgstr ""
 
 #: ../../content/administration/upgrade.rst:244
 msgid ""
-"Any new developments and/or upgrades of your own :ref:`custom modules "
-"<upgrade-faq/custom-modules>`"
+"Upgrade services are limited to the technical conversion and adaptation of a"
+" database (standard modules and data) to make it compatible with the version"
+" targeted by the upgrade."
 msgstr ""
-"Orice dezvoltări noi și / sau actualizări ale propriilor :ref:`module "
-"personalizate <upgrade-faq/custom-modules>`"
 
-#: ../../content/administration/upgrade.rst:246
+#: ../../content/administration/upgrade.rst:248
+msgid "Upgrade services not covered by the SLA"
+msgstr ""
+
+#: ../../content/administration/upgrade.rst:250
+msgid "The following upgrade-related services are **not** included:"
+msgstr ""
+
+#: ../../content/administration/upgrade.rst:252
 msgid ""
-"Lines of code added to standard modules that are not created with Odoo "
-"Studio."
+"the **cleaning** of pre-existing data and configurations while upgrading;"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:247
-msgid "`Training <https://www.odoo.com/learn>`_ on the latest version"
-msgstr "`Training <https://www.odoo.com/learn>`_ pe ultima versiune"
-
-#: ../../content/administration/upgrade.rst:249
+#: ../../content/administration/upgrade.rst:253
 msgid ""
-"You can get more information about your Enterprise Licence on our :ref:`Odoo"
-" Enterprise Subscription Agreement <upgrade>` page."
+"the upgrade of **custom modules created in-house or by third parties**, "
+"including Odoo partners;"
 msgstr ""
-"Puteți obține mai multe informații despre licența dvs. Enterprise pe pagina "
-"noastră :ref:`Acordul de abonament Odoo Enterprise <upgrade>`."
 
-#: ../../content/administration/upgrade.rst:255
-msgid ":doc:`upgrade/faq`"
-msgstr ":doc:`upgrade/faq`"
+#: ../../content/administration/upgrade.rst:254
+msgid ""
+"lines of **code added to standard modules**, i.e., customizations created "
+"outside the Studio app, code entered manually, and :ref:`automated actions "
+"using Python code <studio/automated-actions/action>`; and"
+msgstr ""
 
-#: ../../content/administration/upgrade.rst:256
-msgid ":doc:`odoo_sh`"
-msgstr ":doc:`odoo_sh`"
+#: ../../content/administration/upgrade.rst:257
+msgid "**training** on using the upgraded version's features and workflows."
+msgstr ""
+
+#: ../../content/administration/upgrade.rst:262
+msgid ":doc:`Upgrade FAQ <upgrade/faq>`"
+msgstr ""
+
+#: ../../content/administration/upgrade.rst:263
+msgid ":doc:`Odoo.sh documentation <odoo_sh>`"
+msgstr ""
+
+#: ../../content/administration/upgrade.rst:264
+msgid ":doc:`Supported Odoo versions <maintain/supported_versions>`"
+msgstr ""
 
 #: ../../content/administration/upgrade/faq.rst:8
 msgid "FAQ"
@@ -11669,68 +11640,156 @@ msgstr ""
 "întotdeauna o actualizare de test înainte de a actualiza instanța dvs. de "
 "producție."
 
-#: ../../content/administration/upgrade/odoo_online.rst:6
-msgid "Requesting a test upgrade"
-msgstr "Cererea unei actualizări de test"
+#: ../../content/administration/upgrade/odoo_online.rst:5
+msgid ""
+"Odoo databases can be manually upgraded directly from the main Odoo website."
+" To upgrade an Odoo database, navigate to the `database manager "
+"<https://www.odoo.com/my/databases>`_ page and sign in."
+msgstr ""
 
 #: ../../content/administration/upgrade/odoo_online.rst:8
-msgid "Go to your `database manager <https://www.odoo.com/my/databases/>`_"
-msgstr "Mergi la `database manager <https://www.odoo.com/my/databases/>`_"
-
-#: ../../content/administration/upgrade/odoo_online.rst:9
-msgid "Click on your profile icon and select *My Databases*."
-msgstr ""
-"Faceți clic pe pictograma profilului dvs. și selectați *My Databases*."
-
-#: ../../content/administration/upgrade/odoo_online.rst:0
-msgid "Selecting My Databases under my profile"
-msgstr "Selectarea My Databases sub profilul meu"
-
-#: ../../content/administration/upgrade/odoo_online.rst:14
 msgid ""
-"Click on the up arrow button next to your main database name to proceed to "
-"the test upgrade."
+"The database manager page displays all of the Odoo databases associated with"
+" the user's account. Any databases that are not already on the most recent "
+"version of Odoo display an **arrow in a circle** icon next to the database "
+"name, indicating that the database can be upgraded."
 msgstr ""
-"Faceți clic pe butonul săgeată în sus lângă numele bazei de date principale "
-"pentru a continua cu actualizarea de test."
 
-#: ../../content/administration/upgrade/odoo_online.rst:0
-msgid "Selecting the action settings icon"
-msgstr "Selectarea pictogramei setărilor de acțiune"
+#: ../../content/administration/upgrade/odoo_online.rst-1
+msgid ""
+"The database manager page with an upgrade button next to the name of a "
+"database."
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst:17
+msgid ""
+"If the database's version is **lower** than the latest major release: the "
+"database must be upgraded within two months. After these two months, an "
+"automatic upgrade is initiated."
+msgstr ""
 
 #: ../../content/administration/upgrade/odoo_online.rst:19
 msgid ""
-"In the pop-up message that appears, select the target version and then "
-":guilabel:`Test` as purpose."
+"If the database's version is **equal** to or **higher** than the latest "
+"major release: you can disregard the invitation to upgrade, as the database "
+"probably would not benefit from new features every two months."
 msgstr ""
-"În mesajul pop-up care apare, selectați versiunea țintă și apoi "
-":guilabel:`Test` ca scop."
 
 #: ../../content/administration/upgrade/odoo_online.rst:23
 msgid ""
-"The :guilabel:`Production` purpose doesn't appear if you didn't test your "
-"upgraded database at least once."
+"If a database is *not* on the latest online version, its administrator "
+"should receive an invitation to upgrade on the database's dashboard, "
+"displayed as an **arrow in a circle**."
 msgstr ""
-" :guilabel:`Production` scopul nu apare dacă nu ați testat baza de date "
-"actualizată cel puțin o dată."
 
-#: ../../content/administration/upgrade/odoo_online.rst:26
-msgid ""
-"This triggers the automated upgrade process. A confirmation email is then "
-"sent to you with the the link to the upgraded database or to provide "
-"information if the upgrade failed."
+#: ../../content/administration/upgrade/odoo_online.rst-1
+msgid "Invitation to upgrade on the database dashboard."
 msgstr ""
-"Acest lucru declanșează procesul automat de actualizare. Un e-mail de "
-"confirmare vă este trimis cu link-ul către baza de date actualizată sau "
-"pentru a furniza informații dacă actualizarea a eșuat."
 
 #: ../../content/administration/upgrade/odoo_online.rst:30
 msgid ""
-"You can also see and access your test database from your *My Databases* "
-"page."
+"Versions that are not supported anymore become deprecated and must be "
+"updated to avoid security issues. It is recommended to initiate the upgrade "
+"yourself and not wait for the automatic upgrade, as the former method allows"
+" you to request a test upgrade of the database to check for any "
+"discrepancies."
 msgstr ""
-"De asemenea, puteți vedea și accesa baza de date de test din pagina *My "
-"Databases*."
+
+#: ../../content/administration/upgrade/odoo_online.rst:36
+msgid "Test database"
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst:38
+msgid ""
+"Click on the **arrow in a circle** icon to start the upgrade process. On the"
+" :guilabel:`Upgrade your database` pop-up, select the version of Odoo that "
+"the platform will be upgraded to. In the :guilabel:`Email to notify` field, "
+"enter an email address that will receive email notifications about the "
+"database upgrade."
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst:43
+msgid ""
+"There is also a :guilabel:`Purpose` section on the pop-up that is used to "
+"specify the reason for the upgrade. However, at this stage of the process, "
+"the only selectable option is :guilabel:`Test`, as Odoo requires users to "
+"create a test copy of the upgraded database before converting the actual "
+"database."
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst-1
+msgid "The \"Upgrade your database\" pop-up."
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst:52
+msgid ""
+"After filling out the form, click the :guilabel:`Upgrade` button. The pop-up"
+" disappears and the database being upgraded shows a red :guilabel:`Upgrade "
+"in progress` tag next to its name. An email confirming that the upgrade is "
+"in progress is also sent to the email address specified on the pop-up."
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst-1
+msgid "The \"Upgrade in progress\" tag next to the database name."
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst:61
+msgid ""
+"Once the upgrade is complete, a new test database appears on the `database "
+"manager <https://www.odoo.com/my/databases>`_ page. To access the test "
+"database, click the drop-down arrow (:guilabel:`⯆`) to the left of the main "
+"database's name. Doing so makes the test version appear below it. Finally, "
+"click the green :guilabel:`Connect` button on the right side of the test "
+"version's row to go to the database."
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst-1
+msgid "A test database on the database manager page."
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst:71
+msgid ""
+"Except for being on the newer version of Odoo, the test database is an exact"
+" copy of the one being upgraded. It is important to do extensive testing in "
+"this database to ensure that the upgrade has not altered or corrupted any "
+"data, and that all workflows still proceed as expected."
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst:76
+msgid "Production database"
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst:78
+msgid ""
+"After confirming the integrity of the new version, return to the `database "
+"manager <https://www.odoo.com/my/databases>`_ page. Once again, click on the"
+" **arrow in a circle** icon next to the database being upgraded. The "
+":guilabel:`Upgrade your database` pop-up appears as before, except that "
+"there is now a :guilabel:`Production` option under the :guilabel:`Purpose` "
+"section."
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst:83
+msgid ""
+"Select the :guilabel:`Production` option and then click :guilabel:`Upgrade` "
+"to begin the upgrade process. As before, a notification email is sent to the"
+" email address provided and a red :guilabel:`Upgrade in progress` tag "
+"appears next to the name of the database."
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst:87
+msgid ""
+"The production database is then taken offline and will be upgraded "
+"automatically. The time it takes to upgrade the production database should "
+"be similar to the time that was necessary to upgrade the test database. Make"
+" sure to inform database users of the scheduled downtime."
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst:91
+msgid ""
+"After the upgrade is finished, the :guilabel:`Upgrade in progress` tag "
+"disappears and the database is upgraded to the version specified."
+msgstr ""
 
 #: ../../content/administration/upgrade/odoo_sh.rst:10
 msgid ""
@@ -11749,7 +11808,7 @@ msgstr ""
 "Este disponibil numai pentru proiecte valide cu o versiune de producție "
 "validă."
 
-#: ../../content/administration/upgrade/odoo_sh.rstNone
+#: ../../content/administration/upgrade/odoo_sh.rst-1
 msgid "Click on the upgrade menu"
 msgstr "Faceți clic pe meniul de actualizare"
 
@@ -11846,7 +11905,7 @@ msgstr ""
 "Mergi la fila :guilabel:`Upgrade` și selectați :guilabel:`versiunea țintă`. "
 "Apoi, faceți clic pe :guilabel:`Test Upgrade`."
 
-#: ../../content/administration/upgrade/odoo_sh.rstNone
+#: ../../content/administration/upgrade/odoo_sh.rst-1
 msgid "Odoo.sh project and tabs"
 msgstr "Proiectul Odoo.sh și filele"
 
@@ -11954,7 +12013,7 @@ msgstr ""
 ":guilabel:`Upgrade`, selectați :guilabel:`versiunea țintă` și faceți clic pe"
 " butonul :guilabel:`start Upgrade`."
 
-#: ../../content/administration/upgrade/odoo_sh.rstNone
+#: ../../content/administration/upgrade/odoo_sh.rst-1
 msgid "View from the upgrade tab"
 msgstr "Afișare din fila de actualizare"
 
@@ -11976,7 +12035,7 @@ msgstr ""
 "Puteți vedea progresul actualizării mergând la fila :guilabel:`Upgrade` a "
 "branch-ului principal."
 
-#: ../../content/administration/upgrade/odoo_sh.rstNone
+#: ../../content/administration/upgrade/odoo_sh.rst-1
 msgid "View showing the progress of the upgrade"
 msgstr "Vedere care arată progresul actualizării"
 
