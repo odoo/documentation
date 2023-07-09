@@ -197,26 +197,26 @@ database:
          if err != nil {
              log.Fatalln(err)
          }
-         
+
          info := struct {
              Url      string `xmlrpc:"url"`
              Db       string `xmlrpc:"db"`
              Username string `xmlrpc:"username"`
              Password string `xmlrpc:"password"`
          }{}
-         
+
          if err := client.Call("start", nil, &info); err != nil {
              log.Fatalln(err)
          }
-         
+
          url := info.Url
          db := info.Db
          username := info.Username
          password := info.Password 
 
-	       if err := client.Close(); err != nil {
+         if err := client.Close(); err != nil {
              log.Fatalln(err)
-	       }
+         }
 
       .. note::
          These examples use the `github.com/kolo/xmlrpc library <https://github.com/kolo/xmlrpc>`_.
@@ -262,7 +262,7 @@ the login.
       client.execute(common_config, "version", emptyList());
 
    .. code-tab:: go
-   
+
       client, err := xmlrpc.NewClient(fmt.Sprintf("%s/xmlrpc/2/common", url), nil)
       if err != nil {
           log.Fatalln(err)
@@ -278,13 +278,13 @@ the login.
       if err := client.Call("version", nil, &common); err != nil {
           log.Fatalln(err)
       }
-      
+
       json, err := json.MarshalIndent(common, "", "    ")
       if err != nil {
           log.Fatalln(err)
       }
       fmt.Println(string(json))
-  
+
       if err := client.Close(); err != nil {
           log.Fatalln(err)
       }
@@ -318,9 +318,9 @@ Result:
    .. code-tab:: java
 
       int uid = (int)client.execute(common_config, "authenticate", asList(db, username, password, emptyMap()));
-      
+
    .. code-tab:: go
-   
+
       var uid int64
 
       if err := client.Call("authenticate", []any{
@@ -330,7 +330,7 @@ Result:
           log.Fatalln(err)
       }
       fmt.Println(uid)
-           
+
       if err := client.Close(); err != nil {
           log.Fatalln(err)
       }
@@ -390,9 +390,9 @@ Each call to ``execute_kw`` takes the following parameters:
              asList("read"),
              new HashMap() {{ put("raise_exception", false); }}
          ));
-         
+
       .. code-tab:: go
-      
+
          models, err := xmlrpc.NewClient(fmt.Sprintf("%s/xmlrpc/2/object", url), nil)
          if err != nil {
              log.Fatalln(err)
@@ -410,7 +410,7 @@ Each call to ``execute_kw`` takes the following parameters:
              log.Fatalln(err)
          }
          fmt.Println(result)
-  
+
          if err := models.Close(); err != nil {
              log.Fatalln(err)
          }
@@ -456,9 +456,9 @@ database identifiers of all records matching the filter.
              asList(asList(
                  asList("is_company", "=", true)))
          )));
-         
+
       .. code-tab:: go
-      
+
          var records []int64
          if err := models.Call("execute_kw", []any{
              db, uid, password,
@@ -512,9 +512,9 @@ available to only retrieve a subset of all matched records.
                  asList("is_company", "=", true))),
              new HashMap() {{ put("offset", 10); put("limit", 5); }}
          )));
-         
+
       .. code-tab:: go
-               
+
          var records []int64
          if err := models.Call("execute_kw", []any{
              db, uid, password,
@@ -705,7 +705,7 @@ which tends to be a huge amount.
          )));
 
       .. code-tab:: go
-      
+
          var recordFields []map[string]any
          if err := models.Call("execute_kw", []any{
              db, uid, password,
@@ -717,7 +717,7 @@ which tends to be a huge amount.
          }, &recordFields); err != nil {
              log.Fatalln(err)
          }
-         
+
          json, err := json.MarshalIndent(recordFields, "", "    ")
          if err != nil {
              log.Fatalln(err)
@@ -771,7 +771,7 @@ updating a record).
                    put("attributes", asList("string", "help", "type"));
                }}
            ));
-           
+
        .. code-tab:: go
 
            recordFields := map[string]struct {
@@ -878,7 +878,7 @@ if that list is not provided it will fetch all fields of matched records).
                  put("limit", 5);
              }}
          )));
-         
+
       .. code-tab:: go
 
          var recordFields []map[string]any
@@ -970,9 +970,9 @@ set through the mapping argument, the default value will be used.
              "res.partner", "create",
              asList(new HashMap() {{ put("name", "New Partner"); }})
          ));
-         
+
       .. code-tab:: go
-      
+
          var id int64
          if err := models.Call("execute_kw", []any{
              db, uid, password,
@@ -1054,9 +1054,9 @@ a record).
              "res.partner", "name_get",
              asList(asList(id))
          )));
-         
+
       .. code-tab:: go
-      
+
          var result bool
          if err := models.Call("execute_kw", []any{
              db, uid, password,
@@ -1137,9 +1137,9 @@ Records can be deleted in bulk by providing their ids to
              "res.partner", "search",
              asList(asList(asList("id", "=", 78)))
          )));
-         
+
       .. code-tab:: go
-      
+
          var result bool
          if err := models.Call("execute_kw", []any{
              db, uid, password,
@@ -1491,7 +1491,7 @@ custom fields without using Python code.
          ));
 
       .. code-tab:: go
-      
+
          var id int64
          if err := models.Call("execute_kw", []any{
              db, uid, password,
