@@ -72,6 +72,15 @@ If you already have an Odoo server installed, you can just use its parameters.
                username = "admin",
                password = <insert password for your admin user (default: admin)>;
 
+   .. code-tab:: go
+
+       const (
+           url      = <insert server URL>
+           db       = <insert database name>
+           username = "admin"
+           password = <insert password for your admin user (default: admin)>
+       )
+
 .. _api/external_api/keys:
 
 API Keys
@@ -180,6 +189,41 @@ database:
          The examples do not include imports as these imports couldn't be
          pasted in the code.
 
+   .. group-tab:: Go
+
+      .. code-block:: go
+
+         client, err := xmlrpc.NewClient("https://demo.odoo.com/start", nil)
+         if err != nil {
+             log.Fatalln(err)
+         }
+         
+         info := struct {
+             Url      string `xmlrpc:"url"`
+             Db       string `xmlrpc:"db"`
+             Username string `xmlrpc:"username"`
+             Password string `xmlrpc:"password"`
+         }{}
+         
+         if err := client.Call("start", nil, &info); err != nil {
+             log.Fatalln(err)
+         }
+         
+         url := info.Url
+         db := info.Db
+         username := info.Username
+         password := info.Password 
+
+	       if err := client.Close(); err != nil {
+             log.Fatalln(err)
+	       }
+
+      .. note::
+         These examples use the `github.com/kolo/xmlrpc library <https://github.com/kolo/xmlrpc>`_.
+
+         The examples do not include imports as these imports couldn't be
+         pasted in the code.
+
 Logging in
 ----------
 
@@ -217,6 +261,34 @@ the login.
       common_config.setServerURL(new URL(String.format("%s/xmlrpc/2/common", url)));
       client.execute(common_config, "version", emptyList());
 
+   .. code-tab:: go
+   
+      client, err := xmlrpc.NewClient(fmt.Sprintf("%s/xmlrpc/2/common", url), nil)
+      if err != nil {
+          log.Fatalln(err)
+      }
+
+      common := struct {
+          ProtocolVersion   int    `xmlrpc:"protocol_version"`
+          ServerSerie       string `xmlrpc:"server_serie"`
+          ServerVersion     string `xmlrpc:"server_version"`
+          ServerVersionInfo []any  `xmlrpc:"server_version_info"`
+      }{}
+
+      if err := client.Call("version", nil, &common); err != nil {
+          log.Fatalln(err)
+      }
+      
+      json, err := json.MarshalIndent(common, "", "    ")
+      if err != nil {
+          log.Fatalln(err)
+      }
+      fmt.Println(string(json))
+  
+      if err := client.Close(); err != nil {
+          log.Fatalln(err)
+      }
+
 Result:
 
 .. code-block:: json
@@ -246,6 +318,22 @@ Result:
    .. code-tab:: java
 
       int uid = (int)client.execute(common_config, "authenticate", asList(db, username, password, emptyMap()));
+      
+   .. code-tab:: go
+   
+      var uid int64
+
+      if err := client.Call("authenticate", []any{
+          db, username, password,
+          []any{},
+      }, &uid); err != nil {
+          log.Fatalln(err)
+      }
+      fmt.Println(uid)
+           
+      if err := client.Close(); err != nil {
+          log.Fatalln(err)
+      }
 
 .. _api/external_api/calling_methods:
 
@@ -302,6 +390,30 @@ Each call to ``execute_kw`` takes the following parameters:
              asList("read"),
              new HashMap() {{ put("raise_exception", false); }}
          ));
+         
+      .. code-tab:: go
+      
+         models, err := xmlrpc.NewClient(fmt.Sprintf("%s/xmlrpc/2/object", url), nil)
+         if err != nil {
+             log.Fatalln(err)
+         }
+
+         var result bool
+         if err := models.Call("execute_kw", []any{
+             db, uid, password,
+             "res.partner", "check_access_rights",
+             []string{"read"},
+             map[string]bool{
+                 "raise_exception": false,
+             },
+         }, &result); err != nil {
+             log.Fatalln(err)
+         }
+         fmt.Println(result)
+  
+         if err := models.Close(); err != nil {
+             log.Fatalln(err)
+         }
 
    Result:
 
@@ -344,6 +456,23 @@ database identifiers of all records matching the filter.
              asList(asList(
                  asList("is_company", "=", true)))
          )));
+         
+      .. code-tab:: go
+      
+         var records []int64
+         if err := models.Call("execute_kw", []any{
+             db, uid, password,
+             "res.partner", "search",
+             []any{[]any{[]any{"is_company", "=", true}}},
+         }, &records); err != nil {
+             log.Fatalln(err)
+         }
+
+         json, err := json.MarshalIndent(records, "", "    ")
+         if err != nil {
+             log.Fatalln(err)
+         }
+         fmt.Println(string(json))
 
    Result:
 
@@ -383,6 +512,24 @@ available to only retrieve a subset of all matched records.
                  asList("is_company", "=", true))),
              new HashMap() {{ put("offset", 10); put("limit", 5); }}
          )));
+         
+      .. code-tab:: go
+               
+         var records []int64
+         if err := models.Call("execute_kw", []any{
+             db, uid, password,
+             "res.partner", "search",
+             []any{[]any{[]any{"is_company", "=", true}}},
+             map[string]int64{"offset": 10, "limit":  5},
+         }, &records); err != nil {
+             log.Fatalln(err)
+         }
+
+         json, err := json.MarshalIndent(records, "", "    ")
+         if err != nil {
+             log.Fatalln(err)
+         }
+         fmt.Println(string(json))
 
    Result:
 
@@ -423,6 +570,18 @@ only the number of records matching the query. It takes the same
              asList(asList(
                  asList("is_company", "=", true)))
          ));
+
+      .. code-tab:: go
+
+         var counter int64
+         if err := models.Call("execute_kw", []any{
+             db, uid, password,
+             "res.partner", "search_count",
+             []any{[]any{[]any{"is_company", "=", true}}},
+         }, &counter); err != nil {
+             log.Fatalln(err)
+         }
+         fmt.Println(counter)
 
    Result:
 
@@ -488,6 +647,30 @@ which tends to be a huge amount.
           // count the number of fields fetched by default
           record.size();
 
+      .. code-tab:: go
+
+         var ids []int64
+         if err := models.Call("execute_kw", []any{
+             db, uid, password,
+             "res.partner", "search",
+             []any{[]any{[]any{"is_company", "=", true}}},
+             map[string]int64{"limit": 1},
+         }, &ids); err != nil {
+             log.Fatalln(err)
+         }
+
+         var records []any
+         if err := models.Call("execute_kw", []any{
+             db, uid, password,
+             "res.partner", "read",
+             ids,
+         }, &records); err != nil {
+             log.Fatalln(err)
+         }
+
+         // count the number of fields fetched by default
+         fmt.Println(len(records))
+
    Result:
 
    .. code-block:: json
@@ -520,6 +703,26 @@ which tends to be a huge amount.
                  put("fields", asList("name", "country_id", "comment"));
              }}
          )));
+
+      .. code-tab:: go
+      
+         var recordFields []map[string]any
+         if err := models.Call("execute_kw", []any{
+             db, uid, password,
+             "res.partner", "read",
+             ids,
+             map[string][]string{
+                 "fields": {"name", "country_id", "comment"},
+             },
+         }, &recordFields); err != nil {
+             log.Fatalln(err)
+         }
+         
+         json, err := json.MarshalIndent(recordFields, "", "    ")
+         if err != nil {
+             log.Fatalln(err)
+         }
+         fmt.Println(string(json))
 
    Result:
 
@@ -568,6 +771,30 @@ updating a record).
                    put("attributes", asList("string", "help", "type"));
                }}
            ));
+           
+       .. code-tab:: go
+
+           recordFields := map[string]struct {
+               String string `xmlrpc:"string"`
+               Type   string `xmlrpc:"type"`
+               Help   string `xmlrpc:"help"`
+           }{}
+           if err := models.Call("execute_kw", []any{
+               db, uid, password,
+               "res.partner", "fields_get",
+               []any{},
+               map[string][]string{
+                   "attributes": {"string", "help", "type"},
+               },
+           }, &recordFields); err != nil {
+               log.Fatalln(err)
+           }
+
+           json, err := json.MarshalIndent(recordFields, "", "    ")
+           if err != nil {
+               log.Fatalln(err)
+           }
+           fmt.Println(string(json))
 
    Result:
 
@@ -651,6 +878,27 @@ if that list is not provided it will fetch all fields of matched records).
                  put("limit", 5);
              }}
          )));
+         
+      .. code-tab:: go
+
+         var recordFields []map[string]any
+         if err := models.Call("execute_kw", []any{
+             db, uid, password,
+             "res.partner", "search_read",
+             []any{[]any{[]any{"is_company", "=", true}}},
+             map[string]any{
+                 "fields": []string{"name", "country_id", "comment"},
+                 "limit":  5,
+             },
+         }, &recordFields); err != nil {
+             log.Fatalln(err)
+         }
+
+         json, err := json.MarshalIndent(recordFields, "", "    ")
+         if err != nil {
+             log.Fatalln(err)
+         }
+         fmt.Println(string(json))
 
    Result:
 
@@ -722,6 +970,21 @@ set through the mapping argument, the default value will be used.
              "res.partner", "create",
              asList(new HashMap() {{ put("name", "New Partner"); }})
          ));
+         
+      .. code-tab:: go
+      
+         var id int64
+         if err := models.Call("execute_kw", []any{
+             db, uid, password,
+             "res.partner", "create",
+             []map[string]string{
+                 {"name": "New Partner"},
+             },
+         }, &id); err != nil {
+             log.Fatalln(err)
+         }
+
+         fmt.Println(id)
 
    Result:
 
@@ -791,6 +1054,40 @@ a record).
              "res.partner", "name_get",
              asList(asList(id))
          )));
+         
+      .. code-tab:: go
+      
+         var result bool
+         if err := models.Call("execute_kw", []any{
+             db, uid, password,
+             "res.partner", "write",
+             []any{
+                 []int64{id},
+                 map[string]string{"name": "Newer partner"},
+             },
+         }, &result); err != nil {
+             log.Fatalln(err)
+         }
+         fmt.Println(result)
+
+         // get record name after having changed it
+
+         var record []any
+         if err := models.Call("execute_kw", []any{
+             db, uid, password,
+             "res.partner", "name_get",
+             []any{
+                 []int64{id},
+             },
+         }, &record); err != nil {
+             log.Fatalln(err)
+         }
+
+         json, err := json.MarshalIndent(record, "", "    ")
+         if err != nil {
+             log.Fatalln(err)
+         }
+         fmt.Println(string(json))
 
    Result:
 
@@ -840,6 +1137,41 @@ Records can be deleted in bulk by providing their ids to
              "res.partner", "search",
              asList(asList(asList("id", "=", 78)))
          )));
+         
+      .. code-tab:: go
+      
+         var result bool
+         if err := models.Call("execute_kw", []any{
+             db, uid, password,
+             "res.partner", "unlink",
+             []any{
+                 []int64{id},
+             },
+         }, &result); err != nil {
+             log.Fatalln(err)
+         }
+         fmt.Println(result)
+
+         // check if the deleted record is still in the database
+
+         var record []any
+         if err := models.Call("execute_kw", []any{
+             db, uid, password,
+             "res.partner", "search",
+             []any{
+                 []any{
+                     []any{"id", "=", id},
+                 },
+             },
+         }, &record); err != nil {
+             log.Fatalln(err)
+         }
+
+         json, err := json.MarshalIndent(record, "", "    ")
+         if err != nil {
+             log.Fatalln(err)
+         }
+         fmt.Println(string(json))
 
    Result:
 
@@ -952,6 +1284,46 @@ Provides information about Odoo models via its various fields.
                              "type"));
                  }}
          ));
+
+      .. code-tab:: go
+
+         var id int64
+         if err := models.Call("execute_kw", []any{
+             db, uid, password,
+             "ir.model", "create",
+             []map[string]string{
+                 {
+                     "name":  "Custom Model",
+                     "model": "x_custom_model",
+                     "state": "manual",
+                 },
+             },
+         }, &id); err != nil {
+             log.Fatalln(err)
+         }
+         fmt.Println(id)
+
+         recordFields := map[string]struct {
+             String string `xmlrpc:"string"`
+             Type   string `xmlrpc:"type"`
+             Help   string `xmlrpc:"help"`
+         }{}
+         if err := models.Call("execute_kw", []any{
+             db, uid, password,
+             "x_custom_model", "fields_get",
+             []any{},
+             map[string][]string{
+                 "attributes": {"string", "help", "type"},
+             },
+         }, &recordFields); err != nil {
+             log.Fatalln(err)
+         }
+
+         json, err := json.MarshalIndent(recordFields, "", "    ")
+         if err != nil {
+             log.Fatalln(err)
+         }
+         fmt.Println(string(json))
 
    Result:
 
@@ -1117,6 +1489,68 @@ custom fields without using Python code.
                  "x_custom", "read",
                  asList(asList(record_id))
          ));
+
+      .. code-tab:: go
+      
+         var id int64
+         if err := models.Call("execute_kw", []any{
+             db, uid, password,
+             "ir.model", "create",
+             []map[string]string{
+                 {
+                     "name":  "Custom Model",
+                     "model": "x_custom",
+                     "state": "manual",
+                 },
+             },
+         }, &id); err != nil {
+             log.Fatalln(err)
+         }
+
+         var fieldId int64
+         if err := models.Call("execute_kw", []any{
+             db, uid, password,
+             "ir.model.fields", "create",
+             []map[string]any{
+                 {
+                     "model_id": id,
+                     "name":     "x_name",
+                     "ttype":    "char",
+                     "state":    "manual",
+                     "required": true,
+                 },
+             },
+         }, &fieldId); err != nil {
+             log.Fatalln(err)
+         }
+         fmt.Println(fieldId)
+
+         var recordId int64
+         if err := models.Call("execute_kw", []any{
+             db, uid, password,
+             "x_custom", "create",
+             []map[string]string{
+                 {"x_name": "test record"},
+             },
+         }, &recordId); err != nil {
+             log.Fatalln(err)
+         }
+         fmt.Println(recordId)
+
+         var recordFields []map[string]any
+         if err := models.Call("execute_kw", []any{
+             db, uid, password,
+             "x_custom", "read",
+             [][]int64{{recordId}},
+         }, recordFields); err != nil {
+             log.Fatalln(err)
+         }
+
+         json, err := json.MarshalIndent(recordFields, "", "    ")
+         if err != nil {
+             log.Fatalln(err)
+         }
+         fmt.Println(string(json))
 
    Result:
 
