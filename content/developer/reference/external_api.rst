@@ -212,7 +212,7 @@ database:
          url := info.Url
          db := info.Db
          username := info.Username
-         password := info.Password 
+         password := info.Password
 
          if err := client.Close(); err != nil {
              log.Fatalln(err)
