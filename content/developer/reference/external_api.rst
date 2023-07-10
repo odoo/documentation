@@ -197,26 +197,19 @@ database:
          if err != nil {
              log.Fatalln(err)
          }
-
          info := struct {
              Url      string `xmlrpc:"url"`
              Db       string `xmlrpc:"db"`
              Username string `xmlrpc:"username"`
              Password string `xmlrpc:"password"`
          }{}
-
          if err := client.Call("start", nil, &info); err != nil {
              log.Fatalln(err)
          }
-
          url := info.Url
          db := info.Db
          username := info.Username
          password := info.Password
-
-         if err := client.Close(); err != nil {
-             log.Fatalln(err)
-         }
 
       .. note::
          These examples use the `github.com/kolo/xmlrpc library <https://github.com/kolo/xmlrpc>`_.
@@ -267,25 +260,13 @@ the login.
       if err != nil {
           log.Fatalln(err)
       }
-
       common := struct {
           ProtocolVersion   int    `xmlrpc:"protocol_version"`
           ServerSerie       string `xmlrpc:"server_serie"`
           ServerVersion     string `xmlrpc:"server_version"`
           ServerVersionInfo []any  `xmlrpc:"server_version_info"`
       }{}
-
       if err := client.Call("version", nil, &common); err != nil {
-          log.Fatalln(err)
-      }
-
-      json, err := json.MarshalIndent(common, "", "    ")
-      if err != nil {
-          log.Fatalln(err)
-      }
-      fmt.Println(string(json))
-
-      if err := client.Close(); err != nil {
           log.Fatalln(err)
       }
 
@@ -322,16 +303,10 @@ Result:
    .. code-tab:: go
 
       var uid int64
-
       if err := client.Call("authenticate", []any{
           db, username, password,
           []any{},
       }, &uid); err != nil {
-          log.Fatalln(err)
-      }
-      fmt.Println(uid)
-
-      if err := client.Close(); err != nil {
           log.Fatalln(err)
       }
 
@@ -397,7 +372,6 @@ Each call to ``execute_kw`` takes the following parameters:
          if err != nil {
              log.Fatalln(err)
          }
-
          var result bool
          if err := models.Call("execute_kw", []any{
              db, uid, password,
@@ -407,11 +381,6 @@ Each call to ``execute_kw`` takes the following parameters:
                  "raise_exception": false,
              },
          }, &result); err != nil {
-             log.Fatalln(err)
-         }
-         fmt.Println(result)
-
-         if err := models.Close(); err != nil {
              log.Fatalln(err)
          }
 
@@ -468,12 +437,6 @@ database identifiers of all records matching the filter.
              log.Fatalln(err)
          }
 
-         json, err := json.MarshalIndent(records, "", "    ")
-         if err != nil {
-             log.Fatalln(err)
-         }
-         fmt.Println(string(json))
-
    Result:
 
    .. code-block:: json
@@ -525,12 +488,6 @@ available to only retrieve a subset of all matched records.
              log.Fatalln(err)
          }
 
-         json, err := json.MarshalIndent(records, "", "    ")
-         if err != nil {
-             log.Fatalln(err)
-         }
-         fmt.Println(string(json))
-
    Result:
 
    .. code-block:: json
@@ -581,7 +538,6 @@ only the number of records matching the query. It takes the same
          }, &counter); err != nil {
              log.Fatalln(err)
          }
-         fmt.Println(counter)
 
    Result:
 
@@ -658,7 +614,6 @@ which tends to be a huge amount.
          }, &ids); err != nil {
              log.Fatalln(err)
          }
-
          var records []any
          if err := models.Call("execute_kw", []any{
              db, uid, password,
@@ -667,9 +622,8 @@ which tends to be a huge amount.
          }, &records); err != nil {
              log.Fatalln(err)
          }
-
          // count the number of fields fetched by default
-         fmt.Println(len(records))
+         count := len(records)
 
    Result:
 
@@ -717,12 +671,6 @@ which tends to be a huge amount.
          }, &recordFields); err != nil {
              log.Fatalln(err)
          }
-
-         json, err := json.MarshalIndent(recordFields, "", "    ")
-         if err != nil {
-             log.Fatalln(err)
-         }
-         fmt.Println(string(json))
 
    Result:
 
@@ -789,12 +737,6 @@ updating a record).
            }, &recordFields); err != nil {
                log.Fatalln(err)
            }
-
-           json, err := json.MarshalIndent(recordFields, "", "    ")
-           if err != nil {
-               log.Fatalln(err)
-           }
-           fmt.Println(string(json))
 
    Result:
 
@@ -894,12 +836,6 @@ if that list is not provided it will fetch all fields of matched records).
              log.Fatalln(err)
          }
 
-         json, err := json.MarshalIndent(recordFields, "", "    ")
-         if err != nil {
-             log.Fatalln(err)
-         }
-         fmt.Println(string(json))
-
    Result:
 
    .. code-block:: json
@@ -984,8 +920,6 @@ set through the mapping argument, the default value will be used.
              log.Fatalln(err)
          }
 
-         fmt.Println(id)
-
    Result:
 
    .. code-block:: json
@@ -1068,10 +1002,7 @@ a record).
          }, &result); err != nil {
              log.Fatalln(err)
          }
-         fmt.Println(result)
-
          // get record name after having changed it
-
          var record []any
          if err := models.Call("execute_kw", []any{
              db, uid, password,
@@ -1082,12 +1013,6 @@ a record).
          }, &record); err != nil {
              log.Fatalln(err)
          }
-
-         json, err := json.MarshalIndent(record, "", "    ")
-         if err != nil {
-             log.Fatalln(err)
-         }
-         fmt.Println(string(json))
 
    Result:
 
@@ -1150,10 +1075,7 @@ Records can be deleted in bulk by providing their ids to
          }, &result); err != nil {
              log.Fatalln(err)
          }
-         fmt.Println(result)
-
          // check if the deleted record is still in the database
-
          var record []any
          if err := models.Call("execute_kw", []any{
              db, uid, password,
@@ -1166,12 +1088,6 @@ Records can be deleted in bulk by providing their ids to
          }, &record); err != nil {
              log.Fatalln(err)
          }
-
-         json, err := json.MarshalIndent(record, "", "    ")
-         if err != nil {
-             log.Fatalln(err)
-         }
-         fmt.Println(string(json))
 
    Result:
 
@@ -1301,8 +1217,6 @@ Provides information about Odoo models via its various fields.
          }, &id); err != nil {
              log.Fatalln(err)
          }
-         fmt.Println(id)
-
          recordFields := map[string]struct {
              String string `xmlrpc:"string"`
              Type   string `xmlrpc:"type"`
@@ -1318,12 +1232,6 @@ Provides information about Odoo models via its various fields.
          }, &recordFields); err != nil {
              log.Fatalln(err)
          }
-
-         json, err := json.MarshalIndent(recordFields, "", "    ")
-         if err != nil {
-             log.Fatalln(err)
-         }
-         fmt.Println(string(json))
 
    Result:
 
@@ -1506,7 +1414,6 @@ custom fields without using Python code.
          }, &id); err != nil {
              log.Fatalln(err)
          }
-
          var fieldId int64
          if err := models.Call("execute_kw", []any{
              db, uid, password,
@@ -1523,8 +1430,6 @@ custom fields without using Python code.
          }, &fieldId); err != nil {
              log.Fatalln(err)
          }
-         fmt.Println(fieldId)
-
          var recordId int64
          if err := models.Call("execute_kw", []any{
              db, uid, password,
@@ -1535,8 +1440,6 @@ custom fields without using Python code.
          }, &recordId); err != nil {
              log.Fatalln(err)
          }
-         fmt.Println(recordId)
-
          var recordFields []map[string]any
          if err := models.Call("execute_kw", []any{
              db, uid, password,
@@ -1545,12 +1448,6 @@ custom fields without using Python code.
          }, recordFields); err != nil {
              log.Fatalln(err)
          }
-
-         json, err := json.MarshalIndent(recordFields, "", "    ")
-         if err != nil {
-             log.Fatalln(err)
-         }
-         fmt.Println(string(json))
 
    Result:
 
