@@ -13,3 +13,4 @@ Products
    products/usage
    products/strategies
    products/reordering_rules
+   products/scrap_inventory
