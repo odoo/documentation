@@ -50,6 +50,27 @@ customer's card, but not charged yet.
 .. seealso::
    - :doc:`../payment_acquirers`
 
+ACH payments (USA only)
+=======================
+
+:abbr:`ACH (automated clearing house)` is an electronic funds transfer system used between bank
+accounts in the United States.
+
+Configuration
+-------------
+
+To give customers the possibility to pay using ACH, `sign up for Authorize.Net eCheck's service
+<https://www.authorize.net/payments/echeck.html>`_. Once eCheck is activated, duplicate the
+previously configured Authorize.Net payment acquirer on Odoo by going to :menuselection:`Accounting
+--> Configuration --> Payment Acquirers --> Authorize.net --> ⛭ Action --> Duplicate`. Then, change
+the acquirer's name to differentiate both versions (e.g., `Authorize.net - Banks`).
+
+Open the :guilabel:`Configuration` tab, click :guilabel:`Edit` and set the :guilabel:`Allow Payments
+From` field to :guilabel:`Bank Account (USA only)`. Finally, click :guilabel:`Save`.
+
+When ready, change the acquirer's :guilabel:`State` to :guilabel:`Enabled` for a regular account or
+:guilabel:`Test Mode` for a sandbox account, and :guilabel:`Save`.
+
 Import an Authorize.Net statement
 =================================
 
