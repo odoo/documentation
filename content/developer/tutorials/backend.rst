@@ -614,7 +614,7 @@ instead of a single view its ``arch`` field is composed of any number of
    * Using view inheritance, display this fields in the partner form view
 
 Domains
-~~~~~~~
+=======
 
 In Odoo, :ref:`reference/orm/domains` are values that encode conditions on
 records. A domain is a  list of criteria used to select a subset of a model's
