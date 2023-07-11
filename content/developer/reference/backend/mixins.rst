@@ -81,8 +81,8 @@ to manage followers on your record:
     Post a new message in an existing thread, returning the new
     mail.message ID.
 
-    :param str body: body of the message, usually raw HTML that will
-        be sanitized
+    :param str | Markup body: body of the message. Will be escaped if `str`. Use
+        a :class:`~markupsafe.Markup` object for HTML content.
     :param str message_type: see mail_message.message_type field
     :param int parent_id: handle reply to a previous message by adding the
         parent partners to the message in case of private discussion
