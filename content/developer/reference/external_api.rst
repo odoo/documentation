@@ -74,9 +74,9 @@ If you already have an Odoo server installed, you can just use its parameters.
 
    .. code-tab:: go
 
-       const (
-           url      = <insert server URL>
-           db       = <insert database name>
+       var (
+           url = <insert server URL>
+           db = <insert database name>
            username = "admin"
            password = <insert password for your admin user (default: admin)>
        )
@@ -196,10 +196,10 @@ database:
          client, _ := xmlrpc.NewClient("https://demo.odoo.com/start", nil)
          info := map[string]string{}
          client.Call("start", nil, &info)
-         url := info["host"].(string)
-         db := info["database"].(string)
-         username := info["user"].(string)
-         password := info["password"].(string)
+         url = info["host"].(string)
+         db = info["database"].(string)
+         username = info["user"].(string)
+         password = info["password"].(string)
 
       .. note::
          These examples use the `github.com/kolo/xmlrpc library <https://github.com/kolo/xmlrpc>`_.
