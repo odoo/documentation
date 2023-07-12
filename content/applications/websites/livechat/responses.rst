@@ -66,6 +66,10 @@ Create a ticket from a live chat
 If an operator types `/helpdesk` in the chat window, the conversation is used to create a *Helpdesk*
 ticket.
 
+.. important::
+   In version 16.3, the command to create a new ticket is `/ticket`. This only applies to databases
+   running version 16.3.
+
 After entering the `/helpdesk` command, type a title for the ticket into the chat window, then press
 `Enter`.
 
@@ -89,6 +93,10 @@ Search for a ticket from a live chat
 
 If an operator types `/helpdesk_search` in the chat window, they can search through *Helpdesk*
 tickets by ticket number or keyword.
+
+.. important::
+   In version 16.3, the command to search through *Helpdesk* tickets is `/search_tickets`. This only
+   applies to databases running version 16.3.
 
 After entering the `/helpdesk_search` command, type a keyword or ticket number, then press `Enter`.
 If one or more related tickets are found, a list of links will be generated in the conversation
