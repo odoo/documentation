@@ -283,7 +283,7 @@ Result:
    .. code-tab:: go
 
       var uid int64
-      client.Call("authenticate", []any{db, username, password, []any{}}, &uid)
+      client.Call("authenticate", []any{db, username, password, map[string]any{}}, &uid)
 
 .. _api/external_api/calling_methods:
 
