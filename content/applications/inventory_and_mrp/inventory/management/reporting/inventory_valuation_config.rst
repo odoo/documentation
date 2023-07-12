@@ -32,7 +32,7 @@ between locations in a company's inventory.
 Types of accounting
 -------------------
 
-Accounting entries will depend on the accounting mode: *Continental* or *Anglo-Saxon*.
+Accounting entries will depend on the accounting mode: *Anglo-Saxon* or *Continental*.
 
 .. tip::
    Verify the accounting mode by activating the :ref:`developer-mode` and navigating to
@@ -44,8 +44,112 @@ invoiced for a product. *Interim Stock Accounts* are used for the input and outp
 both *Asset Accounts* in the balance sheet.
 
 In *Continental* accounting, the cost of a good is reported as soon as a product is received into
-stock. Additionally, a single *Expense* account is used for both input and output accounts in
+stock. Additionally, a single *Current Assets* account is used for both input and output accounts in
 the balance sheet.
+
+Examples
+~~~~~~~~
+
+Below are accounting tables with example journal entries for the creation and payment of a vendor
+bill, using each of the two accounting modes: **Anglo-Saxon** and **Continental**.
+
+.. tabs::
+
+   .. group-tab:: Anglo-Saxon
+
+      At the end of the year, companies do physical inventory counts, or rely on the recorded
+      inventory in Odoo to value the stock into their books. Then, the purchase balance is broken
+      down into both the inventory and the cost of goods sold (COGS), using the following formula:
+      `Cost of goods sold (COGS) = Starting inventory value + Purchases - Closing inventory value`.
+
+      .. list-table::
+         :header-rows: 1
+         :stub-columns: 1
+
+         * -
+           - Debit
+           - Credit
+         * - Assets: Inventory
+           - 50
+           -
+         * - Assets: Deferred Tax Assets
+           - 4.68
+           -
+         * - Liabilities: Accounts Payable
+           -
+           - 54.68
+
+      **Configuration:**
+        - **Purchased Goods:** defined on the product or on the internal category of a related
+          product (Expense Account Field).
+        - **Deferred Tax Assets:** defined on the tax used on the purchase order line.
+        - **Accounts Payable:** defined on the vendor related to the bill.
+
+      .. list-table::
+         :header-rows: 1
+         :stub-columns: 1
+
+         * -
+           - Debit
+           - Credit
+         * - Assets: Inventory (closing value)
+           - X
+           -
+         * - Expenses: Cost of Goods Sold
+           - X
+           -
+         * - Expenses: Purchased Goods
+           -
+           - X
+         * - Assets: Inventory (starting value)
+           -
+           - X
+
+   .. group-tab:: Continental
+
+      At the end of the year, companies do physical inventory counts, or rely on the recorded
+      inventory in Odoo to value the stock into their books. Then, a journal entry must be created
+      to move the stock variation value from the Profit & Loss sheet into their assets.
+
+      .. list-table::
+         :header-rows: 1
+         :stub-columns: 1
+
+         * -
+           - Debit
+           - Credit
+         * - Assets: Inventory
+           - 50
+           -
+         * - Assets: Deferred Tax Assets
+           - 4.68
+           -
+         * - Liabilities: Accounts Payable
+           -
+           - 54.68
+
+      **Configuration:**
+        - **Purchased Goods:** defined on the product or on the internal category of a related
+          product (Expense Account Field).
+        - **Deferred Tax Assets:** defined on the tax used on the purchase order line.
+        - **Accounts Payable:** defined on the vendor related to the bill.
+
+      .. list-table::
+         :header-rows: 1
+         :stub-columns: 1
+
+         * -
+           - Debit
+           - Credit
+         * - Assets: Inventory
+           - X
+           -
+         * - Expenses: Inventory Variations
+           -
+           - X
+
+      If the value of the stock decreased, the :guilabel:`Inventory` account is credited, and the
+      :guilabel:`Inventory Variations` account is debited.
 
 Costing methods
 ---------------
@@ -70,6 +174,138 @@ Below are the three costing methods that can be used in Odoo for inventory valua
    Changing the costing method greatly impacts inventory valuation. It's highly recommended to
    consult an accountant first before making any adjustments here.
 
+Examples
+~~~~~~~~
+
+Below are accounting tables with example journal entries using each of the three costing methods in
+Odoo: **Standard Price**, **Average Cost (AVCO)**, and **First In First Out (FIFO)**.
+
+.. tabs::
+
+   .. group-tab:: Standard Price
+
+       Using **Standard Price**, products are valued at the cost manually defined on the product
+       form. Usually, this cost is an estimation based on the material and labor needed to obtain
+       the product. This cost must be reviewed periodically.
+
+      .. list-table::
+         :header-rows: 1
+         :stub-columns: 1
+
+         * - Operation
+           - Unit Cost
+           - Qty. On Hand
+           - Delta Value
+           - Inventory Value
+         * -
+           - $10.00
+           - 0
+           -
+           - $0.00
+         * - Receive 8 products at $10.00
+           - $10.00
+           - 8
+           - +8*$10.00
+           - $80.00
+         * - Receive 4 products at $16.00
+           - $10.00
+           - 12
+           - +4*$10.00
+           - $120.00
+         * - Deliver 10 products
+           - $10.00
+           - 2
+           - -10*$10.00
+           - $20.00
+         * - Receive 2 products at $9.00
+           - $10.00
+           - 4
+           - +2*$10.00
+           - $40.00
+
+   .. group-tab:: Average Cost (AVCO)
+
+      Using **Average Cost (AVCO**), a product's value is the average purchase cost of the product,
+      and the cost of the product is recomputed at each receipt. The average cost does *not* change
+      when products leave the warehouse.
+
+      .. list-table::
+         :header-rows: 1
+         :stub-columns: 1
+
+         * - Operation
+           - Unit Cost
+           - Qty. On Hand
+           - Delta Value
+           - Inventory Value
+         * -
+           - $0.00
+           - 0
+           -
+           - $0.00
+         * - Receive 8 products at $10.00
+           - $10.00
+           - 8
+           - +8*$10.00
+           - $80.00
+         * - Receive 4 products at $16.00
+           - $12.00
+           - 12
+           - +4*$16.00
+           - $144.00
+         * - Deliver 10 products
+           - $12.00
+           - 2
+           - -10*$12.00
+           - $24.00
+         * - Receive 2 products at $6.00
+           - $9.00
+           - 4
+           - +2*$6.00
+           - $36.00
+
+   .. group-tab:: First In First Out (FIFO)
+
+      Using **First In First Out (FIFO)**, products are valued at their purchase cost. When a
+      product leaves the stock, the :abbr:`FIFO (First In First Out)` rule applies, and the first
+      value "in" is the first value "out", no matter the warehouse, location, serial number, etc.
+
+      .. list-table::
+         :header-rows: 1
+         :stub-columns: 1
+
+         * - Operation
+           - Unit Cost
+           - Qty. On Hand
+           - Delta Value
+           - Inventory Value
+         * -
+           - $0.00
+           - 0
+           -
+           - $0.00
+         * - Receive 8 products at $10.00
+           - $10.00
+           - 8
+           - +8*$10.00
+           - $80.00
+         * - Receive 4 products at $16.00
+           - $12.00
+           - 12
+           - +4*$16.00
+           - $144.00
+         * - Deliver 10 products
+           - $16.00
+           - 2
+           - | -8*$10.00
+             | -2*$16.00
+           - $32.00
+         * - Receive 2 products at $6.00
+           - $11.00
+           - 4
+           - +2*$6.00
+           - $44.00
+
 Configure automated inventory valuation in Odoo
 -----------------------------------------------
 
@@ -86,7 +322,7 @@ menu (e.g. :guilabel:`Standard`, :guilabel:`Average Cost (AVCO)`, or :guilabel:`
 (FIFO)`) and switch the :guilabel:`Inventory Valuation` to :guilabel:`Automated`.
 
 .. seealso::
-   :doc:`Using the inventory valuation
+   :doc:`Using inventory valuation
    </applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation>`
 
 .. note::
@@ -97,7 +333,7 @@ menu (e.g. :guilabel:`Standard`, :guilabel:`Average Cost (AVCO)`, or :guilabel:`
    of inventory on hand and the costs accumulated from validated purchase orders.
 
 When the :guilabel:`Costing Method` is changed, products already in stock that were using the
-:guilabel:`Standard` costing method **do not** change value; rather, the existing units keep their
+:guilabel:`Standard` costing method *do not* change value; rather, the existing units keep their
 value, and any product moves from then on affect the average cost, and the cost of the product will
 change. If the value in the :guilabel:`Cost` field on a product form is changed manually, Odoo will
 generate a corresponding record in the *Inventory Valuation* report.
