@@ -88,13 +88,10 @@ know:
   :file:`boot.js` file, which defines the odoo module system.
 
 - `web.assets_backend`: this bundle contains the code specific to the web client
-  (notably the web client/action manager/views)
+  (notably the web client/action manager/views/static XML templates)
 
 - `web.assets_frontend`: this bundle is about all that is specific to the public
   website: ecommerce, portal, forum, blog, ...
-
-- `web.assets_qweb`: all static XML templates used in the backend environment
-  and in the point of sale.
 
 - `web.qunit_suite_tests`: all javascript qunit testing code (tests, helpers, mocks)
 
