@@ -282,14 +282,6 @@ SSH. If you do not know the difference between the two, the best option is most 
 are following the :doc:`Getting started </developer/tutorials/getting_started>` developer tutorial,
 or plan on contributing to Odoo source code, choose SSH.
 
-.. note::
-   **The Enterprise Git repository does not contain the full Odoo source code**. It is only a
-   collection of extra add-ons. The main server code is in the Community version. Running the
-   Enterprise version actually means running the server from the Community version with the
-   addons-path option set to the folder with the Enterprise version. You need to clone both the
-   Community and Enterprise repository to have a working Odoo Enterprise installation. See
-   :ref:`setup/install/editions` to get access to the Enterprise repository.
-
 .. tabs::
 
    .. group-tab:: Windows
@@ -351,7 +343,8 @@ or plan on contributing to Odoo source code, choose SSH.
    collection of extra add-ons. The main server code is in the Community version. Running the
    Enterprise version actually means running the server from the Community version with the
    addons-path option set to the folder with the Enterprise version. You need to clone both the
-   Community and Enterprise repository to have a working Odoo Enterprise installation.
+   Community and Enterprise repository to have a working Odoo Enterprise installation. See
+   :ref:`setup/install/editions` to get access to the Enterprise repository.
 
 .. _setup/install/source/prepare:
 
