@@ -1,173 +1,231 @@
-===
-FAQ
-===
+============
+Email issues
+============
 
-This document contains an explanation of the most recurring mailing concerns.
-
-We will start by addressing issues of outgoing emails (ex: my client has not received my email),
-and then, of incoming emails (ex: I do not receive responses from my customers in the database).
+This document contains an explanation of the most recurring emailing issues in Odoo.
 
 Outgoing emails
 ===============
 
 .. _red_envelop:
 
-What do you have to check if your email is not sent?
-----------------------------------------------------
+Email is not sent
+-----------------
 
-The first indicator showing you that the email has not been sent is the red envelope next to the
-date and time of the message.
+The first indicator showing that an email has not been sent is the presence of a red :guilabel:`✉️
+(envelope)` icon, next to the date and time of the message, located in the chatter.
 
 .. image:: faq/red-envelop.png
    :align: center
-   :alt: Red envelope displayed in chatter
+   :alt: Red envelope icon displayed in chatter.
+
+Unsent emails also appear in the Odoo email queue. In :ref:`developer mode <developer-mode>`, the
+email queue can be accessed by going to :menuselection:`Settings app --> Technical menu --> Email
+--> Emails`. Unsent emails appear in turquoise, while sent emails appear in grey.
 
 Common error messages
 ~~~~~~~~~~~~~~~~~~~~~
 
 .. _email_communication/daily_limit_mail:
 
-You reached your daily limit:
-*****************************
+Daily limit reached
+*******************
 
 .. image:: faq/email-limit.png
    :align: center
-   :alt: Warning in Odoo upon email limit reached
+   :alt: Warning in Odoo upon email limit reached.
 
-Each email service provider has its own email sending limits. The limits may be daily, hourly,
-and sometimes even per minute. This is the same for Odoo, we have to limit our customers to prevent
-our e-mail servers from being blacklisted.
+Each email service provider has its own email sending limits. The limits may be daily, hourly, or
+sometimes, per minute. This is the same for Odoo, which limits a customer's sending to prevent
+Odoo's email servers from being blacklisted.
 
 Here are the default limits for new databases:
 
-- 200 emails/day for Odoo Online and Odoo.sh databases with an active subscription,
-- 20 emails/day for one-app free databases,
-- 50 emails/day for trial databases,
-- in case of migration, your daily limit might be reset to 50 emails a day.
+- **200 emails per day** for Odoo Online and Odoo.sh databases with an active subscription.
+- **20 emails per day** for one-app free databases.
+- **50 emails per day** for trial databases.
+- In the case of migration, the daily limit might be reset to 50 emails per day.
 
-In case you hit the limit, you can:
+If the daily limit is reached:
 
-- Ask our support team to increase your daily limit. We will analyze the situation of your database
-  depending on (non-exhaustive list):
+- Contact the Odoo support team, who may increase the daily limit depending on the following
+  factors:
 
-  - How many users in your database,
-  - Which apps are installed,
-  - Your bounce rate: the percentage of email addresses that did not receive your emails because
-    it was returned by a mail server on its way to the final recipient. You can contact the `support
-    <https://www.odoo.com/help>`_.
+  #. How many users are in the database?
+  #. Which apps are installed?
+  #. The bounce rate: the percentage of email addresses that did not receive emails because they
+     were returned by a mail server on its way to the final recipient.
 
-- Use your own outgoing email server to be independent of Odoo’s mail limit (please refer
-  to :doc:`the corresponding documentation </applications/general/email_communication/email_servers>`),
-- Wait until 11pm UTC for the reset and click on the retry button: The :ref:`Developer mode <developer-mode>`
-  must be activated. Then, go to :menuselection:`Settings --> Technical --> Emails`
-
-.. image:: faq/email-retry-technical.png
-   :align: center
-   :alt: Retry button of an emails
+- Use an external outgoing email server to be independent of Odoo's mail limit (refer to the
+  corresponding :doc:`email documentation
+  </applications/general/email_communication/email_servers>`).
+- Wait until 11 PM (UTC) for the daily limit to reset, and retry sending the email. In
+  :ref:`developer mode <developer-mode>`, go to :menuselection:`Settings app --> Technical menu -->
+  Email --> Emails`, then click the :guilabel:`Retry` button next to an unsent email.
 
 .. warning::
-   The daily limit is global to your database and can rise quickly! By default an internal message,
-   a notification, a note, etc. counts as an email in your daily limit if it notifies someone.
+   The daily email limit is comprehensive to the database. By default, any internal message,
+   notification, logged note, etc. counts as an email in the daily limit if it notifies someone via
+   email. This can be mitigated by receiving :ref:`notifications in Odoo
+   <discuss_app/notification_preferences>`, instead of emails.
 
-You can mitigate this by receiving your :ref:`notifications in Odoo <discuss_app/notification_preferences>`
-instead of by emails.
-
-SMTP Error
+SMTP error
 **********
 
-You can find out why an email wasn't transmitted successfully by reviewing the Simple Mail
-Transport Protocol (SMTP) error messages. SMTP is a protocol to describe the email structure
-and transmit it over the Internet, and the error messages generated by email services are helpful
-tools to diagnose and troubleshoot email problems.
+Simple Mail Transport Protocol (SMTP) error messages explain why an email wasn't transmitted
+successfully. :abbr:`SMTP (Simple Mail Transport Protocol)` is a protocol to describe the email
+structure, and transmits data from messages over the Internet. The error messages generated by email
+services are helpful tools to diagnose and troubleshoot email problems.
 
-No Error
-********
+.. example::
+   This is an example of a 554 SMTP permanent delivery error: `554: delivery error: Sorry, your
+   message to ------@yahoo.com cannot be delivered. This mailbox is disabled (554.30). -
+   mta4471.mail.bf1.yahoo.com --- Below this line is a copy of the message.`
 
-Odoo is not always capable of providing information for the reason it failed. The different
-providers implement a personalized policy of the bounce emails and it is not always possible
-for Odoo to interpret it correctly.
+The debug menu can be used to investigate SMTP sending issues from a database. To access the menu,
+:ref:`developer mode <developer-mode>` must be activated. Once activated, navigate to the
+:menuselection:`Debug Menu` in the top right of the menu bar (the :guilabel:`🐞 (bug)` icon),
+:menuselection:`Debug Menu --> Manage Messages`
 
-If you have this problem on a recurring basis with the same client or the same domain, please
-do not hesitate to contact `Odoo Support <https://www.odoo.com/help>`_ for help in finding a reason.
+The :guilabel:`Manage Messages` menu opens a list of all the messages sent in a particular record.
+Within each message there is information on sending, including the type, and subtype, of the
+message.
 
-Note: in such case, one of the most common reasons is related to :ref:`SPF <email_communication/spf_compliant>`
-and/or :ref:`DKIM <email_communication/DKIM_compliant>` configuration.
+Other information includes to whom the message was sent, and whether Odoo received a bounce-back
+message from an email server.
 
-Why is my email sent late?
-**************************
+.. image:: faq/manage-messages.png
+   :align: center
+   :alt: Manage messages menu option on the debug menu.
 
-It may happen that you schedule an email campaign but it is not sent on time. We know that
-we use a delayed job to send emails that we consider as not urgent (Newsletters concept
-such as mass mailing, marketing automation, events). The system utility **cron** can be used
-to schedule programs to run automatically at predetermined intervals. We use that policy in order
-to avoid cluttering the mail servers and prioritize the communication.
+.. note::
+   A user must be on a view in Odoo that has a chatter in order for the :guilabel:`Manage Messages`
+   menu option to appear.
 
-The emails considered urgent (communication from one person to another one such as
-Sales Orders, Invoices, Purchase Orders, etc.) are sent directly.
+No error populated
+^^^^^^^^^^^^^^^^^^
+
+Odoo is not always capable of providing information for the reason it failed. The different email
+providers implement a personalized policy of bounced emails, and it is not always possible for Odoo
+to interpret it correctly.
+
+If this is a recurring problem with the same client, or the same domain, do not hesitate to contact
+`Odoo Support <https://www.odoo.com/help>`_ for help in finding a reason.
+
+.. note::
+   One of the most common reasons for an email failing to send with no error message is related to
+   :ref:`SPF <email_communication/spf_compliant>` and/or :ref:`DKIM
+   <email_communication/DKIM_compliant>` configuration. Also, check to make sure the
+   `mail.bounce.alias` is defined in the *system parameters*. Access system parameters in
+   :ref:`developer mode <developer-mode>` by navigating to :menuselection:`Settings app -->
+   Technical menu --> Parameters --> System Parameters`.
+
+Email is sent late
+------------------
+
+Email campaigns send at a scheduled time, using a delay pre-programed in the database. Odoo uses a
+delayed task to send emails that are considered "not urgent" (newsletter formats, such as: mass
+mailing, marketing automation, and events). The system utility **cron** can be used to schedule
+programs to run automatically at predetermined intervals. Odoo uses that policy in order to avoid
+cluttering the mail servers and, instead, prioritizes individual communication. This **cron** is
+called :guilabel:`Mail: Email Queue Manager`, and can be accessed in :ref:`developer mode
+<developer-mode>` by going to :menuselection:`Settings app --> Technical menu --> Automation -->
+Scheduled Actions`.
 
 .. image:: faq/email-scheduled-later.png
    :align: center
    :alt: Email scheduled to be sent later.
 
-By default, the Mass Mailing cron runs every 60 minutes. So, you should wait maximum an hour
-before the campaign is actually sent.
+.. tip::
+   What is a **cron**? A cron is an action that Odoo runs in the background to execute particular
+   code to complete a task.
+
+.. important::
+   By default, the *Mass Mailing cron* runs every 60 minutes. This can be changed to no less than 5
+   minutes. However, running the action every 5 minutes would bog down the Odoo database (stress the
+   system), so this is not recommended. To edit the mass mailing cron, select the scheduled action
+   :guilabel:`Mail: Email Queue Manager`, and proceed to make any necessary adjustments.
+
+Emails that are considered urgent (communication from one person to another, such as sales orders,
+invoices, purchase orders, etc.) are sent immediately.
 
 Incoming emails
 ===============
 
-When you have an issue with incoming emails, there might not be an indication per se in Odoo.
-This is the client who tries to contact a database who will get a bounce (most of the
-time 550: mailbox unavailable).
+When there is an issue with incoming emails, there might not be an indication, per se, in Odoo. It
+is the sending email client, who tries to contact a database, that will get a bounce-back message
+(most of the time a :guilabel:`550: mailbox unavailable` error message).
 
-Emails are not received
------------------------
-
-Depending on the platform you are using:
-
-- The **Odoo.sh** users can find their live logs on the folder :file:`~/logs/`.
-
-- The folder :file:`~/logs/` (preferably accessed by the command line) of an Odoo.sh contains
-  a list of files containing the logs of the database. The log files are created everyday
-  at 5:00 AM UTC. The two last days are not compressed, while the older ones are, in order
-  to gain space. The naming of the files for Today and Yesterday are :file:`odoo.log` and
-  :file:`odoo.log.1`. For the following, they are named with their dates and compressed.
-  See the Odoo.sh documentation about :ref:`logs <odoosh/logs>`. Use the command ``grep`` and
-  ``zgrep`` (for the compressed ones) to search through the files.
-
-- **Odoo Online** users won’t have access to their logs. However you can still contact
-  `Odoo Support <https://www.odoo.com/help>`_ , if you have a recurring issue
-  with the same client or domain.
-
-Get help from support
+Email is not received
 ---------------------
 
+The steps that should be taken depend on the Odoo platform where the database is hosted.
+
+**Odoo.sh** users can find their live logs on the folder :file:`~/logs/`.
+
+Logs are a stored collection of all the tasks completed in a database. They are a text-only
+representation, complete with timestamps of every action taken on the Odoo database. This can be
+helpful to track emails leaving the database. Failure to send can also be seen by logs that indicate
+that the message tried to send repeatedly. Logs will show every action to the email servers from the
+database.
+
+The folder :file:`~/logs/` (accessed by the command line or on the Odoo.sh dashboard) of an Odoo.sh
+database contains a list of files containing the logs of the database. The log files are created
+everyday at 5:00 AM (UTC).
+
+.. tip::
+   The two most recent days (today and yesterday) are not compressed, while the older ones are, in
+   order to save space. The naming of the files for today and yesterday are respectively:
+   :file:`odoo.log` and :file:`odoo.log.1`.
+
+   For the following days, they are named with their dates, and then compressed. Use the command
+   :command:`grep` and :command:`zgrep` (for the compressed ones) to search through the files.
+
+.. seealso::
+   For more information on logs and how to access them via the Odoo.sh dashboard, see :ref:`this
+   administration documentation <odoosh/logs>`.
+
+   For more information on accessing logs via the command line visit :ref:`this developer
+   documentation <reference/cmdline/server/logging>`.
+
+**Odoo Online** users won't have access to the logs. However `Odoo Support
+<https://www.odoo.com/help>`_ can be contacted if there is a recurring issue with the same client or
+domain.
+
+Get help from Odoo support
+==========================
+
 In order to get helped efficiently, please provide as much information as possible. Here is a list
-of what can be helpful:
+of what can be helpful when reaching out to the Odoo Support team about an issue:
 
-- The **EML** of the email, stating for *Electronic Mail*, is the file format containing all the
-  technical information required for an investigation. The documentation of your own email provider
-  might help you on how to get your EML files. Once you get the EML of the email, adding it
-  in the attachment of your ticket is the most efficient way for us to investigate. The support
-  will mainly focus on redundant issues.
+#. Send a copy of the email headers. The `.EML` file (or **headers**) of the email is the file
+   format containing all the technical information required for an investigation. The documentation
+   from the email provider might explain how to access the EML file/header files. Once the headers
+   of the email are obtained, adding it into the Odoo Support ticket is the most efficient way for
+   the Odoo Support team to investigate.
 
-  .. seealso::
-     - `Gmail documentation
-       <https://support.google.com/mail/answer/29436>`_
-     - `Outlook documentation
-       <https://support.microsoft.com/en-us/office/view-internet-message-headers-in-outlook-cd039382-dc6e-4264-ac74-c048563d212c#tab=Web>`_
+   .. seealso::
+      - `Gmail documentation on headers <https://support.google.com/mail/answer/29436>`_
+      - `Outlook documentation on headers
+        <https://support.microsoft.com/en-us/office/view-internet-message-headers-in-outlook-cd039382-dc6e-4264-ac74-c048563d212c#tab=Web>`_
 
-- The exact flow you are following in order to normally receive those emails in Odoo. Here are
-  examples of questions whose answers can be useful:
+#. Explain the exact flow that is being followed to normally receive those emails in Odoo. Here are
+   examples of questions whose answers can be useful:
 
-  - Is this simply a reply from an email going out from Odoo ?
+   - Is this a notification message from a reply being received in Odoo?
+   - Is this a message being sent from the Odoo database?
+   - Is there an incoming email server being used, or is the email somehow being redirected?
+   - Is there an example of an email that has been correctly forwarded?
 
-  - Are you using an incoming email server or somehow redirecting?
+#. Provide answers to the following questions:
 
-  - Can you provide us with an example of an email that has been correctly forwarded ?
+   - Is it a generic issue, or is it specific to a use case? If specific to a use case, which one
+     exactly?
+   - Is it working as expected? In case the email is sent using Odoo, the bounce email should reach
+     the Odoo database, and display the :ref:`red envelope <red_envelop>`.
 
-- Providing answers to the following questions:
-
-  - Is it a generic issue or is it specific to a use case? If yes, which one exactly?
-
-  - Is it working as expected? In case the email is sent using Odoo, the bounce email should reach
-    the Odoo database and display the :ref:`red envelope <red_envelop>`.
+.. note::
+   The bounce system parameter needs to be set in the technical settings in order for the database
+   to correctly receive bounce messages. To access this setting, go to :menuselection:`Settings app
+   --> Technical menu --> Parameters --> System Parameters`. Then select the parameter name
+   :guilabel:`mail.bounce.alias` and set the value to `bounce` if it isn't already set.
