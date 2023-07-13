@@ -2,6 +2,8 @@
 Create a bill of materials
 ==========================
 
+.. _manufacturing/management/bill-configuration:
+
 A *Bill of Materials* (or *BoM* for short) is a document that defines the quantity of each
 component required to make or deliver a finished product. It can also include various operations
 and the individual step guidelines needed to complete a production process.
