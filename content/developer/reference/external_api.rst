@@ -193,7 +193,10 @@ database:
 
       .. code-block:: go
 
-         client, _ := xmlrpc.NewClient("https://demo.odoo.com/start", nil)
+         client, err := xmlrpc.NewClient("https://demo.odoo.com/start", nil)
+         if err != nil {
+             log.Fatal(err)
+         }
          info := map[string]string{}
          client.Call("start", nil, &info)
          url = info["host"].(string)
@@ -246,9 +249,14 @@ the login.
 
    .. code-tab:: go
 
-      client, _ := xmlrpc.NewClient(fmt.Sprintf("%s/xmlrpc/2/common", url), nil)
+      client, err := xmlrpc.NewClient(fmt.Sprintf("%s/xmlrpc/2/common", url), nil)
+      if err != nil {
+          log.Fatal(err)
+      }
       common := map[string]any{}
-      client.Call("version", nil, &common)
+      if err := client.Call("version", nil, &common); err != nil {
+          log.Fatal(err)
+      }
 
 Result:
 
@@ -283,7 +291,12 @@ Result:
    .. code-tab:: go
 
       var uid int64
-      client.Call("authenticate", []any{db, username, password, map[string]any{}}, &uid)
+      if err := client.Call("authenticate", []any{
+          db, username, password,
+          map[string]any{},
+      }, &uid); err != nil {
+          log.Fatal(err)
+      }
 
 .. _api/external_api/calling_methods:
 
@@ -343,14 +356,19 @@ Each call to ``execute_kw`` takes the following parameters:
 
       .. code-tab:: go
 
-         models, _ := xmlrpc.NewClient(fmt.Sprintf("%s/xmlrpc/2/object", url), nil)
+         models, err := xmlrpc.NewClient(fmt.Sprintf("%s/xmlrpc/2/object", url), nil)
+         if err != nil {
+             log.Fatal(err)
+         }
          var result bool
-         models.Call("execute_kw", []any{
+         if err := models.Call("execute_kw", []any{
              db, uid, password,
              "res.partner", "check_access_rights",
              []string{"read"},
              map[string]bool{"raise_exception": false},
-         }, &result)
+         }, &result); err != nil {
+             log.Fatal(err)
+         }
 
    Result:
 
@@ -397,13 +415,15 @@ database identifiers of all records matching the filter.
       .. code-tab:: go
 
          var records []int64
-         models.Call("execute_kw", []any{
+         if err := models.Call("execute_kw", []any{
              db, uid, password,
              "res.partner", "search",
              []any{[]any{
                  []any{"is_company", "=", true},
              }},
-         }, &records)
+         }, &records); err != nil {
+             log.Fatal(err)
+         }
 
    Result:
 
@@ -447,14 +467,16 @@ available to only retrieve a subset of all matched records.
       .. code-tab:: go
 
          var records []int64
-         models.Call("execute_kw", []any{
+         if err := models.Call("execute_kw", []any{
              db, uid, password,
              "res.partner", "search",
              []any{[]any{
                  []any{"is_company", "=", true},
              }},
              map[string]int64{"offset": 10, "limit":  5},
-         }, &records)
+         }, &records); err != nil {
+             log.Fatal(err)
+         }
 
    Result:
 
@@ -499,13 +521,15 @@ only the number of records matching the query. It takes the same
       .. code-tab:: go
 
          var counter int64
-         models.Call("execute_kw", []any{
+         if err := models.Call("execute_kw", []any{
              db, uid, password,
              "res.partner", "search_count",
              []any{[]any{
                  []any{"is_company", "=", true},
              }},
-         }, &counter)
+         }, &counter); err != nil {
+             log.Fatal(err)
+         }
 
    Result:
 
@@ -574,20 +598,24 @@ which tends to be a huge amount.
       .. code-tab:: go
 
          var ids []int64
-         models.Call("execute_kw", []any{
+         if err := models.Call("execute_kw", []any{
              db, uid, password,
              "res.partner", "search",
              []any{[]any{
                  []any{"is_company", "=", true},
              }},
              map[string]int64{"limit": 1},
-         }, &ids)
+         }, &ids); err != nil {
+             log.Fatal(err)
+         }
          var records []any
-         models.Call("execute_kw", []any{
+         if err := models.Call("execute_kw", []any{
              db, uid, password,
              "res.partner", "read",
              ids,
-         }, &records)
+         }, &records); err != nil {
+             log.Fatal(err)
+         }
          // count the number of fields fetched by default
          count := len(records)
 
@@ -627,14 +655,16 @@ which tends to be a huge amount.
       .. code-tab:: go
 
          var recordFields []map[string]any
-         models.Call("execute_kw", []any{
+         if err := models.Call("execute_kw", []any{
              db, uid, password,
              "res.partner", "read",
              ids,
              map[string][]string{
                  "fields": {"name", "country_id", "comment"},
              },
-         }, &recordFields)
+         }, &recordFields); err != nil {
+             log.Fatal(err)
+         }
 
    Result:
 
@@ -694,7 +724,9 @@ updating a record).
                map[string][]string{
                    "attributes": {"string", "help", "type"},
                },
-           }, &recordFields)
+           }, &recordFields); err != nil {
+               log.Fatal(err)
+           }
 
    Result:
 
@@ -782,7 +814,7 @@ if that list is not provided it will fetch all fields of matched records).
       .. code-tab:: go
 
          var recordFields []map[string]any
-         models.Call("execute_kw", []any{
+         if err := models.Call("execute_kw", []any{
              db, uid, password,
              "res.partner", "search_read",
              []any{[]any{
@@ -792,7 +824,9 @@ if that list is not provided it will fetch all fields of matched records).
                  "fields": []string{"name", "country_id", "comment"},
                  "limit":  5,
              },
-         }, &recordFields)
+         }, &recordFields); err != nil {
+             log.Fatal(err)
+         }
 
    Result:
 
@@ -868,13 +902,15 @@ set through the mapping argument, the default value will be used.
       .. code-tab:: go
 
          var id int64
-         models.Call("execute_kw", []any{
+         if err := models.Call("execute_kw", []any{
              db, uid, password,
              "res.partner", "create",
              []map[string]string{
                  {"name": "New Partner"},
              },
-         }, &id)
+         }, &id); err != nil {
+             log.Fatal(err)
+         }
 
    Result:
 
@@ -948,23 +984,27 @@ a record).
       .. code-tab:: go
 
          var result bool
-         models.Call("execute_kw", []any{
+         if err := models.Call("execute_kw", []any{
              db, uid, password,
              "res.partner", "write",
              []any{
                  []int64{id},
                  map[string]string{"name": "Newer partner"},
              },
-         }, &result)
+         }, &result); err != nil {
+             log.Fatal(err)
+         }
          // get record name after having changed it
          var record []any
-         models.Call("execute_kw", []any{
+         if err := models.Call("execute_kw", []any{
              db, uid, password,
              "res.partner", "name_get",
              []any{
                  []int64{id},
              },
-         }, &record)
+         }, &record); err != nil {
+             log.Fatal(err)
+         }
 
    Result:
 
@@ -1018,24 +1058,26 @@ Records can be deleted in bulk by providing their ids to
       .. code-tab:: go
 
          var result bool
-         models.Call("execute_kw", []any{
+         if err := models.Call("execute_kw", []any{
              db, uid, password,
              "res.partner", "unlink",
              []any{
                  []int64{id},
              },
-         }, &result)
+         }, &result); err != nil {
+             log.Fatal(err)
+         }
          // check if the deleted record is still in the database
          var record []any
-         models.Call("execute_kw", []any{
+         if err := models.Call("execute_kw", []any{
              db, uid, password,
              "res.partner", "search",
-             []any{
-                 []any{
-                     []any{"id", "=", id},
-                 },
-             },
-         }, &record)
+             []any{[]any{
+                 []any{"id", "=", id},
+             }},
+         }, &record); err != nil {
+             log.Fatal(err)
+         }
 
    Result:
 
@@ -1152,7 +1194,7 @@ Provides information about Odoo models via its various fields.
       .. code-tab:: go
 
          var id int64
-         models.Call("execute_kw", []any{
+         if err := models.Call("execute_kw", []any{
              db, uid, password,
              "ir.model", "create",
              []map[string]string{
@@ -1162,16 +1204,20 @@ Provides information about Odoo models via its various fields.
                      "state": "manual",
                  },
              },
-         }, &id)
+         }, &id); err != nil {
+             log.Fatal(err)
+         }
          recordFields := map[string]string{}
-         models.Call("execute_kw", []any{
+         if err := models.Call("execute_kw", []any{
              db, uid, password,
              "x_custom_model", "fields_get",
              []any{},
              map[string][]string{
                  "attributes": {"string", "help", "type"},
              },
-         }, &recordFields)
+         }, &recordFields); err != nil {
+             log.Fatal(err)
+         }
 
    Result:
 
@@ -1341,7 +1387,7 @@ custom fields without using Python code.
       .. code-tab:: go
 
          var id int64
-         models.Call("execute_kw", []any{
+         if err := models.Call("execute_kw", []any{
              db, uid, password,
              "ir.model", "create",
              []map[string]string{
@@ -1351,9 +1397,11 @@ custom fields without using Python code.
                      "state": "manual",
                  },
              },
-         }, &id)
+         }, &id); err != nil {
+             log.Fatal(err)
+         }
          var fieldId int64
-         models.Call("execute_kw", []any{
+         if err := models.Call("execute_kw", []any{
              db, uid, password,
              "ir.model.fields", "create",
              []map[string]any{
@@ -1365,21 +1413,27 @@ custom fields without using Python code.
                      "required": true,
                  },
              },
-         }, &fieldId)
+         }, &fieldId); err != nil {
+             log.Fatal(err)
+         }
          var recordId int64
-         models.Call("execute_kw", []any{
+         if err := models.Call("execute_kw", []any{
              db, uid, password,
              "x_custom", "create",
              []map[string]string{
                  {"x_name": "test record"},
              },
-         }, &recordId)
+         }, &recordId); err != nil {
+             log.Fatal(err)
+         }
          var recordFields []map[string]any
-         models.Call("execute_kw", []any{
+         if err := models.Call("execute_kw", []any{
              db, uid, password,
              "x_custom", "read",
              [][]int64{{recordId}},
-         }, recordFields)
+         }, recordFields); err != nil {
+             log.Fatal(err)
+         }
 
    Result:
 
