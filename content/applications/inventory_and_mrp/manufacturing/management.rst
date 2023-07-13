@@ -17,3 +17,4 @@ Manufacturing workflows
    management/work_center_time_off
    management/scrap_manufacturing
    management/manufacturing_backorders
+   management/configure_manufacturing_product
