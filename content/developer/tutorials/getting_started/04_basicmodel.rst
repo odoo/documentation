@@ -57,12 +57,11 @@ model::
     from odoo import models
 
     class TestModel(models.Model):
-        _name = "test.model"
+        _name = "test_model"
 
-This definition is enough for the ORM to generate a database table named ``test_model``. The
-``.`` in the model ``_name`` is automatically converted into a ``_`` by the ORM. By convention all
-models are located in a ``models`` directory and each model is defined in its own Python
-file.
+This definition is enough for the ORM to generate a database table named `test_model`. By
+convention all models are located in a `models` directory and each model is defined in its own
+Python file.
 
 Take a look at how the ``crm_recurring_plan`` table is defined and how the corresponding Python
 file is imported:
@@ -123,7 +122,7 @@ defined as attributes in the model class::
     from odoo import fields, models
 
     class TestModel(models.Model):
-        _name = "test.model"
+        _name = "test_model"
         _description = "Test Model"
 
         name = fields.Char()
