@@ -14,7 +14,6 @@
 # Gabriela Enriquez Manzano <gmz@odoo.com>, 2022
 # Daniela Cervantes <dace@odoo.com>, 2022
 # Rafnix Guzman <rafnixg@gmail.com>, 2022
-# Cristóbal Martí Oliver <info@moblesmarti.com>, 2022
 # Nicolás Broggi <rnbroggi@gmail.com>, 2022
 # Cinthya Yepez <cinthyepez@gmail.com>, 2022
 # Valentino <vgaffuri2018@student.hult.edu>, 2022
@@ -25,31 +24,31 @@
 # Jesús Alan Ramos Rodríguez <alan.ramos@jarsa.com.mx>, 2022
 # Óscar Fonseca <tecnico@extreme-micro.com>, 2022
 # Lina Maria Avendaño Carvajal <lina8823@gmail.com>, 2022
-# Pablo Rojas <rojaspablo88@gmail.com>, 2023
 # jabiri7, 2023
+# Pablo Rojas <rojaspablo88@gmail.com>, 2023
 # marcescu, 2023
 # Jesse Garza <jga@odoo.com>, 2023
 # Lucia Pacheco, 2023
-# jabelchi, 2023
-# Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2023
+# Josep Anton Belchi, 2023
 # Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2023
 # Aimée Mendoza Sánchez, 2023
 # Braulio D. López Vázquez <bdl@odoo.com>, 2023
 # Jon Perez <jop@odoo.com>, 2023
 # AleEscandon <alejandra.escandon@jarsa.com.mx>, 2023
 # Martin Trigaux, 2023
-# Iran Villalobos López, 2023
 # Pedro M. Baeza <pedro.baeza@tecnativa.com>, 2023
 # Fernanda Alvarez, 2023
+# Iran Villalobos López, 2023
+# Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-03 09:37+0000\n"
+"POT-Creation-Date: 2023-07-10 06:06+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
-"Last-Translator: Fernanda Alvarez, 2023\n"
+"Last-Translator: Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2023\n"
 "Language-Team: Spanish (https://app.transifex.com/odoo/teams/41243/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -103,6 +102,9 @@ msgid ""
 "accounting transactions (e.g., customer invoices, vendor bills, point-of-"
 "sales orders, expenses, inventory valuations, etc.)."
 msgstr ""
+"Odoo crea de manera automática todos los asientos de diarios de todas las "
+"transacciones de contabilidad, como facturas, órdenes del punto de venta, "
+"gastos, valoraciones del inventario, etc."
 
 #: ../../content/applications/finance/accounting.rst:61
 msgid ""
@@ -111,15 +113,21 @@ msgid ""
 "account debited and the other credited. It ensures that all transactions are"
 " recorded accurately and consistently and that the accounts always balance."
 msgstr ""
+"Odoo usa el sistema de partida doble, donde cada asiento requiere una "
+"contraparte en una cuenta diferente, con una cuenta de débito y otra de "
+"crédito. De esta manera nos aseguramos de que todas las transacciones se "
+"registran debidamente y de que todas las cuentas siempre están balanceadas."
 
 #: ../../content/applications/finance/accounting.rst:67
 #: ../../content/applications/finance/accounting.rst:217
 msgid ":doc:`Accounting Cheat Sheet <accounting/get_started/cheat_sheet>`"
 msgstr ""
+":doc:`Hoja de referencia de contabilidad "
+"<accounting/get_started/cheat_sheet>`"
 
 #: ../../content/applications/finance/accounting.rst:70
 msgid "Accrual and cash basis"
-msgstr ""
+msgstr "Base de devengo y efectivo"
 
 #: ../../content/applications/finance/accounting.rst:72
 msgid ""
@@ -127,14 +135,18 @@ msgid ""
 "reporting income and expense either when the transaction occurs (accrual "
 "basis) or when the payment is made or received (cash basis)."
 msgstr ""
+"En Odoo es posible llevar la contabilidad con base de devengo y de efectivo."
+" De esta manera podrá reportar un ingreso y un gasto ya sea cuando ocurra "
+"una transacción (base de devengo) o cuando se reciba un pago (base de "
+"efectivo)."
 
 #: ../../content/applications/finance/accounting.rst:77
 msgid ":doc:`Cash basis <accounting/taxes/cash_basis>`"
-msgstr ""
+msgstr ":doc:`Base de efectivo <accounting/taxes/cash_basis>`"
 
 #: ../../content/applications/finance/accounting.rst:80
 msgid "Multi-company"
-msgstr ""
+msgstr "Multiempresa"
 
 #: ../../content/applications/finance/accounting.rst:82
 msgid ""
@@ -144,10 +156,16 @@ msgid ""
 "several companies but can only work on a single company's accounting at a "
 "time."
 msgstr ""
+"Es posible gestionar varias empresas dentro de una misma base de datos de "
+"Odoo. Cada empresa tiene su propio :doc:`plan de cuentas "
+"<accounting/get_started/chart_of_accounts>`, que también es útil para "
+"generar reportes de consolidación. Los usuarios tienen acceso a varias "
+"empresas, pero solo pueden trabajar en la contabilidad de una empresa a la "
+"vez."
 
 #: ../../content/applications/finance/accounting.rst:88
 msgid "Multi-currency environment"
-msgstr ""
+msgstr "Entorno multiempresa"
 
 #: ../../content/applications/finance/accounting.rst:90
 msgid ""
@@ -159,16 +177,25 @@ msgid ""
 "Odoo generates currency gains and losses after reconciling the journal "
 "items."
 msgstr ""
+"En Odoo está disponible un entorno :doc:`multiempresa "
+"<accounting/get_started/multi_currency>` con una tasa de cambio automática "
+"para facilitar transacciones internacionales. Cada transacción se registra "
+"en automático en la divisa de la empresa, para transacciones que se realizan"
+" en otra divisa, Odoo guardará el valor tanto en la divisa que se usa en la "
+"empresa como la divisa de la transacción en sí. Odoo genera las ganancias y "
+"pérdidas de la divisa después de conciliar los apuntes de diario."
 
 #: ../../content/applications/finance/accounting.rst:97
 msgid ""
 ":doc:`Manage a bank in a foreign currency "
 "<accounting/bank/foreign_currency>`"
 msgstr ""
+":doc:`Gestionar un banco en una divisa extranjera "
+"<accounting/bank/foreign_currency>`"
 
 #: ../../content/applications/finance/accounting.rst:100
 msgid "International standards"
-msgstr ""
+msgstr "Estándares internacionales"
 
 #: ../../content/applications/finance/accounting.rst:102
 msgid ""
@@ -178,14 +205,21 @@ msgid ""
 "to address regional specificities like the chart of accounts, taxes, or any "
 "other requirements."
 msgstr ""
+"Es posible utilizar Contabilidad de Odoo en más de 70 países. La aplicación "
+"contiene los mecanismos y estándares que son comunes en todas las naciones. "
+"Además, gracias a que es posible instalar módulos específicos para cada "
+"país, es fácil cumplir con todos los requisitos locales. Las posiciones "
+"fiscales existen para poder gestionar cuestiones específicas de cada región,"
+" como lo es el plan de cuentas, los impuestos y cualquier otro "
+"requerimiento."
 
 #: ../../content/applications/finance/accounting.rst:108
 msgid ":doc:`Fiscal localization packages <fiscal_localizations>`"
-msgstr ""
+msgstr ":doc:`Paquetes de localización fiscal <fiscal_localizations>`"
 
 #: ../../content/applications/finance/accounting.rst:111
 msgid "Accounts receivable and payable"
-msgstr ""
+msgstr "Cuentas por pagar y por cobrar"
 
 #: ../../content/applications/finance/accounting.rst:113
 msgid ""
@@ -193,6 +227,9 @@ msgid ""
 " one for the account payable entries. As transactions are linked to your "
 "**contacts**, you can run a report per customer, vendor, or supplier."
 msgstr ""
+"Por defecto, hay una cuenta para los asientos de cuentas por cobrar y otra "
+"para los asientos de cuentas por pagar. Como las transacciones están ligadas"
+" a tus **contactos**, puede realizar un reporte por cliente o proveedor."
 
 #: ../../content/applications/finance/accounting.rst:117
 msgid ""
@@ -200,6 +237,9 @@ msgid ""
 "suppliers. It is available by going to :menuselection:`Accounting --> "
 "Reporting --> Partner Ledger`."
 msgstr ""
+"El reporte del **libro mayor de la empresa** muestra el balance de sus "
+"clientes y proveedores. Lo puede encontrar en :menuselection:`Contabilidad "
+"--> Reportes --> Libro mayor de la empresa`."
 
 #: ../../content/applications/finance/accounting.rst:121
 #: ../../content/applications/finance/accounting/reporting.rst:5
@@ -211,6 +251,8 @@ msgid ""
 "The following financial :doc:`reports <accounting/reporting>` are available "
 "and updated in real-time:"
 msgstr ""
+"Estos :doc:`reportes financieros <accounting/reporting>` están disponibles y"
+" se actualizan en tiempo real:"
 
 #: ../../content/applications/finance/accounting.rst:127
 msgid "Financial reports"
@@ -218,7 +260,7 @@ msgstr "Reportes financieros"
 
 #: ../../content/applications/finance/accounting.rst:129
 msgid "Statement"
-msgstr "Extracto"
+msgstr "Estado de cuenta"
 
 #: ../../content/applications/finance/accounting.rst:129
 #: ../../content/applications/finance/accounting/customer_invoices.rst:214
@@ -232,7 +274,7 @@ msgstr "Estado de resultados"
 
 #: ../../content/applications/finance/accounting.rst:133
 msgid "Cash flow statement"
-msgstr ""
+msgstr "Estado de flujo de efectivo"
 
 #: ../../content/applications/finance/accounting.rst:135
 #: ../../content/applications/finance/accounting.rst:174
@@ -242,7 +284,7 @@ msgstr "Informe de impuestos"
 
 #: ../../content/applications/finance/accounting.rst:137
 msgid "ES sales list"
-msgstr ""
+msgstr "Declaración recapitulativa de operaciones intracomunitarias"
 
 #: ../../content/applications/finance/accounting.rst:139
 msgid "Audit"
@@ -250,7 +292,7 @@ msgstr "Auditar"
 
 #: ../../content/applications/finance/accounting.rst:139
 msgid "General ledger"
-msgstr ""
+msgstr "Libro mayor"
 
 #: ../../content/applications/finance/accounting.rst:141
 msgid "Trial balance"
@@ -258,15 +300,15 @@ msgstr "Balanza de comprobación"
 
 #: ../../content/applications/finance/accounting.rst:143
 msgid "Journal report"
-msgstr ""
+msgstr "Reporte de diario"
 
 #: ../../content/applications/finance/accounting.rst:145
 msgid "Intrastat report"
-msgstr ""
+msgstr "Reporte Intrastat"
 
 #: ../../content/applications/finance/accounting.rst:147
 msgid "Check register"
-msgstr ""
+msgstr "Registro de caja"
 
 #: ../../content/applications/finance/accounting.rst:149
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:135
@@ -278,15 +320,15 @@ msgstr "Partner"
 
 #: ../../content/applications/finance/accounting.rst:149
 msgid "Partner ledger"
-msgstr ""
+msgstr "Libro mayor de la empresa"
 
 #: ../../content/applications/finance/accounting.rst:151
 msgid "Aged receivable"
-msgstr ""
+msgstr "Cuenta antigua por cobrar"
 
 #: ../../content/applications/finance/accounting.rst:153
 msgid "Aged payable"
-msgstr ""
+msgstr "Cuenta antigua por pagar"
 
 #: ../../content/applications/finance/accounting.rst:155
 msgid "Management"
@@ -294,27 +336,27 @@ msgstr "Administración"
 
 #: ../../content/applications/finance/accounting.rst:155
 msgid "Invoice analysis"
-msgstr ""
+msgstr "Análisis de factura"
 
 #: ../../content/applications/finance/accounting.rst:157
 msgid "Unrealized currency gains/losses"
-msgstr ""
+msgstr "Ganancias/pérdidas de divisa no realizadas"
 
 #: ../../content/applications/finance/accounting.rst:159
 msgid "Depreciation schedule"
-msgstr ""
+msgstr "Programa de depreciación"
 
 #: ../../content/applications/finance/accounting.rst:161
 msgid "Disallowed expenses"
-msgstr ""
+msgstr "Gastos rechazados "
 
 #: ../../content/applications/finance/accounting.rst:163
 msgid "Budget analysis"
-msgstr ""
+msgstr "Análisis de presupuesto"
 
 #: ../../content/applications/finance/accounting.rst:165
 msgid "Product margins"
-msgstr ""
+msgstr "Márgenes de producto"
 
 #: ../../content/applications/finance/accounting.rst:167
 msgid "1099 report"
@@ -325,12 +367,17 @@ msgid ""
 ":doc:`Create and customize reports <accounting/reporting/customize>` with "
 "Odoo's report engine."
 msgstr ""
+":doc:`Cree y personalice reportes <accounting/reporting/customize>` con el "
+"motor de reportes de Odoo."
 
 #: ../../content/applications/finance/accounting.rst:176
 msgid ""
 "Odoo computes all accounting transactions for the specific tax period and "
 "uses these totals to calculate the tax obligation."
 msgstr ""
+"Odoo calcula todas las transacciones de contabilidad del periodo fiscal "
+"específico y usa los totales para calcular las obligaciones relativas a los "
+"impuestos."
 
 #: ../../content/applications/finance/accounting.rst:180
 msgid ""
@@ -338,6 +385,9 @@ msgid ""
 "prevents the creation of new journal entries involving VAT. Any correction "
 "to customer invoices or vendor bills has to be recorded in the next period."
 msgstr ""
+"Una vez que se crea el reporte de impuestos para un periodo, Odoo lo bloquea"
+" y evita que se creen nuevos asientos que incluyan IVA. Si necesita corregir"
+" cualquier factura, lo tendrá que hacer en el siguiente periodo."
 
 #: ../../content/applications/finance/accounting.rst:185
 msgid ""
@@ -345,6 +395,9 @@ msgid ""
 "can be generated to be uploaded to the VAT platform of the relevant taxation"
 " authority."
 msgstr ""
+"Dependiendo de la localización del país, es posible generar una versión XML "
+"del reporte de impuestos para poder subirla a la plataforma de IVA de la "
+"autoridad fiscal correspondiente."
 
 #: ../../content/applications/finance/accounting.rst:189
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:5
@@ -358,14 +411,19 @@ msgid ""
 "overview of your cash flow without logging into an online banking system or "
 "waiting for paper bank statements."
 msgstr ""
+"El sistema de sincronización bancaria se conecta directamente a su "
+"institución bancaria, de esta forma puede importar todas las transacciones "
+"directamente a su base de datos. Podrá obtener un resumen de su flujo de "
+"efectivo sin tener que iniciar sesión en su sistema de banca en línea y sin "
+"tener que esperar a que le entreguen sus estados de cuenta físicos."
 
 #: ../../content/applications/finance/accounting.rst:196
 msgid ":doc:`Bank synchronization <accounting/bank/bank_synchronization>`"
-msgstr ""
+msgstr ":doc:`Sincronización bancaria <accounting/bank/bank_synchronization>`"
 
 #: ../../content/applications/finance/accounting.rst:199
 msgid "Inventory valuation"
-msgstr ""
+msgstr "Valoración del inventario"
 
 #: ../../content/applications/finance/accounting.rst:201
 msgid ""
@@ -373,16 +431,22 @@ msgid ""
 "supported in Odoo. The available methods are standard price, average price, "
 ":abbr:`LIFO (Last-In, First-Out)` and :abbr:`FIFO (First-In, First-Out).`"
 msgstr ""
+"En Odoo se pueden realizar tanto valoraciones del inventario periódicas "
+"(manuales) o perpetuas (automáticas). Los métodos disponibles son precio "
+"estándar, precio promedio, :abbr:`LIFO (último en entrar, primero en salir)`"
+" and :abbr:`FIFO (primero en entrar, primero en salir).`"
 
 #: ../../content/applications/finance/accounting.rst:206
 msgid ""
 ":doc:`View the impact of the valuation methods on transactions "
 "<../inventory_and_mrp/inventory/management/reporting/inventory_valuation_config>`"
 msgstr ""
+":doc:`Vea cómo afecta los métodos de valoración en las transacciones "
+"<../inventory_and_mrp/inventory/management/reporting/inventory_valuation_config>`"
 
 #: ../../content/applications/finance/accounting.rst:210
 msgid "Retained earnings"
-msgstr ""
+msgstr "Ganancias retenidas"
 
 #: ../../content/applications/finance/accounting.rst:212
 msgid ""
@@ -391,10 +455,15 @@ msgid ""
 "rollover is required. The profit and loss balance is automatically reported "
 "on the balance sheet report."
 msgstr ""
+"Las ganancias retenidas son la porción de los ingresos que un negocio "
+"retiene. Odoo calcula las ganancias del año actual en tiempo real, así que "
+"no se necesita un diario de final de año ni renovación. El estado de "
+"resultados se reporta de manera automática en el reporte del balance "
+"general."
 
 #: ../../content/applications/finance/accounting.rst:220
 msgid "Fiduciaries"
-msgstr ""
+msgstr "Fiduciarias"
 
 #: ../../content/applications/finance/accounting.rst:222
 msgid ""
@@ -402,28 +471,38 @@ msgid ""
 ":menuselection:`Accounting --> Configuration --> Settings --> Accounting "
 "Firms mode`. When enabled:"
 msgstr ""
+"El modo de :guilabel:`empresas de contabilidad` se puede activar desde "
+":menuselection:`Contabilidad --> Configuración --> Ajustes --> Modo de "
+"empresas de contabilidad`. Cuando lo active:"
 
 #: ../../content/applications/finance/accounting.rst:225
 msgid "The document's sequence becomes editable on all documents;"
-msgstr ""
+msgstr "Es posible editar la secuencia del documento en cada uno de ellos."
 
 #: ../../content/applications/finance/accounting.rst:226
 msgid ""
 "The :guilabel:`Total (tax incl.)` field appears to speed up and control the "
 "encoding by automating line creation with the right account and tax;"
 msgstr ""
+"Aparecerá un nuevo campo llamado :guilabel:`Total (impuestos incluidos)` con"
+" el que será posible acelerar y controlar la codificación, ya que las líneas"
+" se crearán de inmediato con la cuenta y el impuesto correctos;"
 
 #: ../../content/applications/finance/accounting.rst:228
 msgid ""
 ":guilabel:`Invoice Date` and :guilabel:`Bill Date` are pre-filled when "
 "encoding a transaction."
 msgstr ""
+"Al codificar una transacción, el campo :guilabel:`Fecha de la factura` se "
+"llena de manera predeterminada."
 
 #: ../../content/applications/finance/accounting.rst:229
 msgid ""
 "A :guilabel:`Quick encoding` option is available for customer invoices and "
 "vendor bills."
 msgstr ""
+"La opción de :guilabel:`Codificación rápida` está disponible en sus "
+"facturas."
 
 #: ../../content/applications/finance/accounting/bank.rst:5
 msgid "Bank and cash accounts"
@@ -436,6 +515,10 @@ msgid ""
 "and ready for :doc:`reconciliation <bank/reconciliation>` with your journal "
 "entries."
 msgstr ""
+"En su base de datos puede administrar todas las cuentas bancarias o de "
+"efectivo que necesite. Si las configura de la manera adecuada, podrá tener "
+"toda su información bancaria al día y lista para la :doc:`conciliación "
+"<bank/reconciliation>` con sus asientos contables."
 
 #: ../../content/applications/finance/accounting/bank.rst:11
 msgid ""
@@ -623,6 +706,7 @@ msgstr ""
 #: ../../content/applications/finance/documents.rst:17
 #: ../../content/applications/finance/fiscal_localizations.rst:21
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:14
+#: ../../content/applications/finance/fiscal_localizations/australia.rst:18
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:8
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:413
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:29
@@ -921,7 +1005,7 @@ msgstr "**Yodlee**: En todo el mundo"
 
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:20
 msgid ":doc:`Salt Edge <bank_synchronization/saltedge>`: Worldwide"
-msgstr ""
+msgstr ":doc:`Salt Edge <bank_synchronization/saltedge>`: Global"
 
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:21
 msgid ":doc:`Ponto <bank_synchronization/ponto>`: Europe"
@@ -2477,6 +2561,9 @@ msgid ""
 "refer to :doc:`this documentation <../customer_invoices/cash_discounts>` for"
 " more information."
 msgstr ""
+"Los modelos de conciliación también son útiles para gestionar los "
+"*descuentos en efectivo*. Vea :doc:`esta documentación "
+"<../customer_invoices/cash_discounts>` para más información."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:21
 msgid "Types of Reconciliation Models"
@@ -2756,37 +2843,39 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:24
 msgid "SEPA recommended Cash Management format (CAMT.053);"
-msgstr ""
+msgstr "Formato de gestión de efectivo recomendado por SEPA (CAMT.053);"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:25
 msgid "Comma-separated values (.CSV);"
-msgstr ""
+msgstr "Valores separados por coma (.CSV);"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:26
 msgid "Open Financial Exchange (.OFX);"
-msgstr ""
+msgstr "Open Financial Exchange (.OFX);"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:27
 msgid "Quicken Interchange Format (.QIF);"
-msgstr ""
+msgstr "Quicken Interchange Format (.QIF);"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:28
 msgid "Belgium: Coded Statement of Account (.CODA)."
-msgstr ""
+msgstr "Bélgica: Coded Statement of Account (.CODA)."
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:30
 msgid ""
 "To import a file, go to the :guilabel:`Accounting Dashboard`, and in the "
 ":guilabel:`Bank` journal, click on :guilabel:`Import Transactions`."
 msgstr ""
+"Para importar un archivo vaya al :guilabel:`Tablero de contabilidad` y en el"
+" diario :guilabel:`Banco` haga clic en :guilabel:`Importar transacciones`."
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst-1
 msgid "Import bank transactions from the bank journal"
-msgstr ""
+msgstr "Importe transacciones bancarias desde el diario de banco"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:36
 msgid "Next, select the file and upload it."
-msgstr ""
+msgstr "Después, seleccione al archivo y súbalo."
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:38
 msgid ""
@@ -2794,6 +2883,9 @@ msgid ""
 "with their related Odoo fields, you can run a :guilabel:`Test` and "
 ":guilabel:`Import` your bank transactions."
 msgstr ""
+"Después de configurar las opciones de formato necesarias y mapear las "
+"columnas del archivo con los campos relacionados en Odoo, puede correr una "
+":guilabel:`prueba` e :guilabel:`import` sus transacciones bancarias."
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:42
 msgid ":doc:`/applications/general/export_import_data`"
@@ -2801,7 +2893,7 @@ msgstr ":doc:`/applications/general/export_import_data`"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:47
 msgid "Register bank transactions manually"
-msgstr ""
+msgstr "Registrar transacciones bancarias manualmente"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:49
 msgid ""
@@ -2810,6 +2902,11 @@ msgid ""
 " then on :guilabel:`New`. Make sure to fill out the :guilabel:`Partner` and "
 ":guilabel:`Label` fields to ease the reconciliation process."
 msgstr ""
+"También puede registrar sus transacciones bancarias de manera manual. Para "
+"hacerlo, vaya al :guilabel:`tablero de contabilidad`, haga clic en el diario"
+" :guilabel:`bancario` y después en :guilabel:`Nuevo`. Asegúrese de llenar "
+"los campos :guilabel:`partner` y :guilabel:`etiqueta` para facilitar el "
+"proceso de conciliación."
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:56
 msgid "Statements"
@@ -2821,6 +2918,9 @@ msgid ""
 "institution that lists the transactions that have occurred in a particular "
 "bank account over a specified period of time."
 msgstr ""
+"Un **estado bancario** es un documento que un banco o una institución "
+"financiera crean en el que se enlistan las transacciones que se realizaron "
+"en una cuenta bancaria en particular durante un periodo específico."
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:61
 msgid ""
@@ -2828,6 +2928,10 @@ msgid ""
 "statement, but depending on your business flow, you may want to record them "
 "for control purposes."
 msgstr ""
+"En nuestra aplicación de Contabilidad es opcional agrupar las transacciones "
+"según el estado de cuenta en el que aparecen, pero dependiendo del flujo de "
+"su negocio, puede que quiera registrarlas para llevar un buen control de "
+"dichas transacciones."
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:65
 msgid ""
@@ -2837,6 +2941,11 @@ msgid ""
 "begin synchronizing or importing transactions. This is necessary to ensure "
 "the accuracy of your accounting."
 msgstr ""
+"Si quiere comparar los balances finales de sus estados bancarios con los de "
+"sus registros financieros, *no se le olvide crear una transacción de "
+"apertura* para registrar el balance de su cuenta de banco desde la fecha en "
+"la que empezó a sincronizar o importar transacciones. Este paso es necesario"
+" para que su contabilidad sea correcta."
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:70
 msgid ""
@@ -2844,10 +2953,14 @@ msgid ""
 " click on the vertical ellipsis (:guilabel:`⋮`) button next to the bank or "
 "cash journal you want to check, then on :guilabel:`Statements`"
 msgstr ""
+"Para acceder a la lista de estados, vaya al :guilabel:`tablero de "
+"contabilidad`, haga clic en los tres puntos (:guilabel:`⋮`) junto al diario "
+"de banco o efectivo que quiere revisar y después vaya a :guilabel:`Estados "
+"de cuenta`."
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:75
 msgid "Statement creation from the kanban view"
-msgstr ""
+msgstr "Creación de estados de cuenta desde la vista de kanban"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:77
 msgid ""
@@ -2856,22 +2969,32 @@ msgid ""
 "of your bank statement. Click on the :guilabel:`STATEMENT` button when "
 "hovering on the upper separator line."
 msgstr ""
+"Haga clic en el nombre del diario de banco para abrir la vista de "
+"conciliación bancaria. Identifique la transacción correspondiente a la "
+"última transacción en su estado bancario. Haga clic en el botón "
+":guilabel:`ESTADO DE CUENTA` que aparece al pasar el ratón encima de la "
+"línea de separación superior."
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst-1
 msgid ""
 "A \"STATEMENT\" button is visible when hovering on the line separating two "
 "transactions."
 msgstr ""
+"Al colocar el cursor arriba de la línea que separa dos transacciones podrá "
+"ver un botón \"ESTADO DE CUENTA\"."
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:84
 msgid ""
 "Fill out the statement's details and save. The newly created statement "
 "includes the previous transactions following the last statement."
 msgstr ""
+"Llene los detalles del estado de cuenta y guárdelos. El estado de cuenta que"
+" se acaba de crear incluye las transacciones previas desde el último estado "
+"de cuenta."
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:88
 msgid "Statement creation from the list view"
-msgstr ""
+msgstr "Creación de estado de cuenta desde la vista de lista"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:90
 msgid ""
@@ -2882,6 +3005,12 @@ msgid ""
 ":guilabel:`Create and edit...`, filling out the statement's details, and "
 "saving."
 msgstr ""
+"Haga clic en el nombre del diario de banco para abrir la lista de "
+"transacciones y cambie a la vista de lista. Seleccione todas las "
+"transacciones correspondientes al estado de cuenta bancario y en la columna "
+":guilabel:`Estado de cuenta` seleccione un estado existente o escriba una "
+"referencia y cree uno nuevo en :guilabel:`Crear y editar...`, donde tendrá "
+"que llenar los detalles del estado de cuenta para después guardarlos"
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:5
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:91
@@ -3381,7 +3510,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:3
 msgid "Cash discounts and tax reduction"
-msgstr ""
+msgstr "Descuentos en efectivo y reducción de impuestos"
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:5
 msgid ""
@@ -3391,6 +3520,12 @@ msgid ""
 "are applied if the customer pays within a specified time. Cash discounts can"
 " help the company maintain a steady cash flow."
 msgstr ""
+"Los **descuentos de efectivo** son reducciones a la cantidad que un cliente "
+"tiene que pagar por un bien o servicio; comúnmente se ofrecen para "
+"incentivar al cliente a pagar una factura de inmediato. Usualmente los "
+"descuentos son un porcentaje de la cantidad total en la factura y se aplican"
+" solo si el cliente paga en un plazo específico. Los descuentos de efectivo "
+"ayudan a que la empresa mantenga un flujo de efectivo constante."
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:11
 msgid ""
@@ -3398,18 +3533,25 @@ msgid ""
 "within 30 days, and you also offer a 2% discount if your customer pays you "
 "within seven days."
 msgstr ""
+"Crea una factura de €100 el primero de enero. El pago total se tiene que "
+"hacer dentro de los siguientes 30 días, pero también ofrece un descuento del"
+" 2% si el cliente paga dentro de los primeros 7 días."
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:14
 msgid ""
 "The customer can pay €98 up to the 8th of January. After that date, they "
 "would have to pay €100 by the 31st of January."
 msgstr ""
+"El cliente puede pagar €98 hasta el 8 de enero. Después de esta fecha, "
+"tendrá que pagar €100 antes del 31 de enero."
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:17
 msgid ""
 "A :ref:`tax reduction <cash-discounts/tax-reductions>` can also be applied "
 "depending on the country or region."
 msgstr ""
+"También se puede aplicar una :ref:`reducción de impuestos <cash-"
+"discounts/tax-reductions>` dependiendo del país o la región."
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:25
 msgid ""
@@ -3418,16 +3560,23 @@ msgid ""
 " loss accounts <cash-discounts/gain-loss-accounts>`, and configure new "
 ":ref:`payment terms <cash-discounts/payment-terms>`."
 msgstr ""
+"Para proporcionar descuentos a los clientes, priero debe de configurar un "
+":ref:`tipo de reducción de impuestos <cash-discounts/tax-reductions>`, "
+"verificar las cuentas de :ref:`pérdidas y ganancias <cash-discounts/gain-"
+"loss-accounts>` y configurar nuevos :ref:`términos de pago <cash-"
+"discounts/payment-terms>`."
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:33
 msgid "Tax reductions"
-msgstr ""
+msgstr "Reducciones de impuestos"
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:35
 msgid ""
 "Depending on the country or region, the base amount used to compute the tax "
 "can vary, which can lead to a **tax reduction**."
 msgstr ""
+"Según el país o la región, la cantidad de base que se usa para calcular los "
+"impuestos varía, lo que puede resultar en una **reducción de impuestos**."
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:38
 msgid ""
@@ -3436,17 +3585,25 @@ msgid ""
 ":guilabel:`Taxes` section, in the :guilabel:`Cash Discount Tax Reduction` "
 "feature, select one of the three following options:"
 msgstr ""
+"Para configurar cómo funciona la reducción de impuestos, vaya a "
+":menuselection:`Contabilidad --> Configuración --> Ajustes`. En la sección "
+":guilabel:`Impuestos` vaya a la función :guilabel:`Reducción de impuestos "
+"por diferencia de efectivo` y seleccione una de las siguientes tres "
+"opciones:"
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:44
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:63
 msgid "Always (upon invoice)"
-msgstr "Siempre (en la factura)"
+msgstr "Siempre (al facturar)"
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:43
 msgid ""
 "The tax is always reduced. The base amount used to compute the tax is the "
 "discounted amount, whether the customer benefits from the discount or not."
 msgstr ""
+"El impuesto siempre se reduce. La cantidad de base que se usa para calcular "
+"el impuesto es la cantidad de diferencia, no importa si el cliente obtiene "
+"algún beneficio o no."
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:49
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:78
@@ -3460,6 +3617,11 @@ msgid ""
 "reduction, then the tax is reduced. This means that, depending on the "
 "customer, the tax amount can vary after the invoice is issued."
 msgstr ""
+"El impuesto se reduce solo si el cliente paga antes. La cantidad de base que"
+" se usa para calcular el impuesto es la misma que la venta: si el cliente "
+"obtiene un beneficio de la reducción, entonces se reduce el impuesto. Esto "
+"significa que la cantidad de los impuestos puede variar después de enviar la"
+" factura, dependiendo del cliente."
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:53
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:93
@@ -3471,6 +3633,9 @@ msgid ""
 "The tax is never reduced. The base amount used to compute the tax is the "
 "full amount, whether the customer benefits from the discount or not."
 msgstr ""
+"El impuesto no se reduce. La cantidad de base que se usa para calcular el "
+"impuesto es la cantidad total, no importa si el cliente se beneficia o no "
+"del descuento."
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:57
 msgid ""
@@ -3478,6 +3643,10 @@ msgid ""
 "tax rate. The full payment is due within 30 days, and you also offer a 2% "
 "discount if your customer pays you within seven days."
 msgstr ""
+"Supongamos que usted crea una factura de €100 (libre de impuestos) con una "
+"tasa tributaria del 21%, el 1 de enero. El pago completo se debe de realizar"
+" dentro de los próximos 30 días y también ofrece un descuento del 2% si su "
+"cliente paga dentro de los próximos 7 días."
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:68
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:83
@@ -3490,7 +3659,7 @@ msgstr "Fecha límite"
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:84
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:99
 msgid "Total amount due"
-msgstr ""
+msgstr "Importe total sin pagar"
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:70
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:85
@@ -3502,17 +3671,17 @@ msgstr "Cálculo"
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:86
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:101
 msgid "8th of January"
-msgstr ""
+msgstr "8 de enero"
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:72
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:87
 msgid "€118.58"
-msgstr ""
+msgstr "€118.58"
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:73
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:88
 msgid "(€98 + (21% of €98))"
-msgstr ""
+msgstr "(€98 + (21% of €98))"
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:74
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:89
@@ -3552,6 +3721,9 @@ msgid ""
 " are correctly computed according to the :ref:`type of tax reduction <cash-"
 "discounts/tax-reductions>` you configured."
 msgstr ""
+":ref:`Las tablas de impuestos <tax-returns/tax-grids>`, que se usan para el "
+"reporte de impuestos, se calculan de manera correcta según el :ref:`tipo de "
+"reducción de impuestos <cash-discounts/tax-reductions>` que configuró."
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:112
 msgid ""
@@ -3559,10 +3731,13 @@ msgid ""
 " depending on your :ref:`fiscal localization package "
 "<fiscal_localizations/packages>`."
 msgstr ""
+"El **tipo de reducción de impuestos por diferencia de efectivo** puede "
+"preconfigurarse de manera correcta dependiendo del :ref:`paquete de "
+"localización fiscal <fiscal_localizations/packages>` con el que cuenta."
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:118
 msgid "Cash discount gain/loss accounts"
-msgstr ""
+msgstr "Cuentas de ganancias o pérdidas por descuentos de efectivo"
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:120
 msgid ""
@@ -3570,6 +3745,9 @@ msgid ""
 "benefits from the cash discount or not. This inevitably leads to gains and "
 "losses, which are recorded on default accounts."
 msgstr ""
+"Con un descuento de efectivo, la cantidad que gana depende de cuánto se "
+"beneficia el cliente o no del descuento. Esto siempre lleva a pérdidas o "
+"ganancias, que se registran en cuentas predeterminadas."
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:123
 msgid ""
@@ -3578,6 +3756,11 @@ msgid ""
 "accounts you want to use for the :guilabel:`Cash Discount Gain account` and "
 ":guilabel:`Cash Discount Loss account`."
 msgstr ""
+"Para modificar estas cuentas vaya a :menuselection:`Contabilidad --> "
+"Configuración --> Ajustes`. En la sección :guilabel:`Cuentas "
+"predeterminadas` seleccione las cuentas que quiere usar para la "
+":guilabel:`Cuenta de ganancia por descuento de efectivo` y la "
+":guilabel:`Cuenta de pérdida por descuento de efectivo`."
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:130
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
@@ -3591,12 +3774,19 @@ msgid ""
 "Configuration --> Payment Terms`, and make sure to fill out the fields "
 ":guilabel:`Discount %` and :guilabel:`Discount Days`."
 msgstr ""
+"Los descuentos de efectivo se definen en los :doc:`términos de pago "
+"<payment_terms>`. Para configurarlos como usted quiere vaya a "
+":menuselection:`Contabilidad --> Configuración --> Términos de pago`, y "
+"llene los campos :guilabel:`% de descuento` and :guilabel:`Días de "
+"descuento`."
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst-1
 msgid ""
 "Configuration of payment terms named \"2/7 Net 30\". The field \"Description on Invoices\"\n"
 "reads: \"Payment terms: 30 Days, 2% Early Payment Discount under 7 days\"."
 msgstr ""
+"Configuración de los términos de pago llamados \"2/7 neto 30\". El campo \"Descripción en las facturas\"\n"
+"dice: \"Términos de pago: 30 días, 2% de descuento por pago anticipado antes de 7 días\"."
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:142
 msgid ":doc:`payment_terms`"
@@ -3604,7 +3794,7 @@ msgstr ":doc:`payment_terms`"
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:147
 msgid "Apply a cash discount to a customer invoice"
-msgstr ""
+msgstr "Aplicar un descuento en efectivo a una factura"
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:149
 msgid ""
@@ -3613,6 +3803,10 @@ msgid ""
 "computes the correct amounts, tax amounts, due dates, and accounting "
 "records."
 msgstr ""
+"Para aplicar un descuento en efectivo a una factura de cliente seleccione "
+"los :ref:`términos de pago que usted creó <cash-discounts/payment-terms>`. "
+"Odoo calculará de manera automática las cantidades correctas, los impuestos,"
+" las fechas de vencimiento y los registros de contabilidad."
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:153
 msgid ""
@@ -3620,28 +3814,38 @@ msgid ""
 "details by clicking on the \"toggle\" button and adding the "
 ":guilabel:`Discount Date` and :guilabel:`Discount Amount` columns."
 msgstr ""
+"En la pestaña :guilabel:`asientos de diario` puede mostrar los detalles del "
+"descuento. Para hacerlo tiene que hacer clic en el botón de \"alternar\" y "
+"agregar las columnas :guilabel:`Fecha de descuento` e :guilabel:`Importe del"
+" descuento`."
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst-1
 msgid ""
 "An invoice of €100.00 with \"2/7 Net 30\" selected as payment terms. The \"Journal Items\" tab\n"
 "is open, and the \"Discount Date\" and \"Discount Amount\" columns are displayed."
 msgstr ""
+"Una factura por €100.00 en la que se seleccionó \"2/7 neto 30\" como término de pago. La pestaña de \"asientos de diario\"\n"
+"está abierta, y se muestran las columnas de \"Fecha de descuento\" e \"Importe de descuento\"."
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:161
 msgid ""
 "The discount amount and due date are also displayed on the generated invoice"
 " sent to the customer."
 msgstr ""
+"La cantidad del descuento y la fecha límite también se muestran en la "
+"factura generada que se envía al cliente."
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst-1
 msgid ""
 "An invoice of €100.00 with the following text added to the terms and conditions: \"30 Days,\n"
 "2% Early Payment Discount under 7 days. 118.58 € due if paid before 01/08/2023.\""
 msgstr ""
+"Una factura de €100.00 con el texto a continuación agregado como términos y condiciones: \"30 días,\n"
+"2% de descuento por pago anticipado antes de 7 días. El total es de €118.58 si se paga antes del 01/08/2023.\""
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:169
 msgid "Payment reconciliation"
-msgstr ""
+msgstr "Conciliación de pagos"
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:171
 msgid ""
@@ -3649,6 +3853,9 @@ msgid ""
 "customer payment's date into account to define if they can benefit from the "
 "cash discount or not."
 msgstr ""
+"Cuando registra un pago o concilia sus estados de cuenta bancaria, Odoo toma"
+" en cuenta la fecha del pago del cliente para definir si se pueden "
+"beneficiar del descuento en efectivo o no."
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:175
 msgid ""
@@ -3656,6 +3863,9 @@ msgid ""
 " always decide whether to mark the invoice as fully paid with a write-off or"
 " as partially paid."
 msgstr ""
+"Si el cliente realiza el pago de la cantidad con el descuento después de la "
+"fecha límite para obtener el descuento, usted es quien decide si marca el "
+"pago como completo o parcial."
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:179
 #: ../../content/applications/finance/accounting/payments/batch.rst:71
@@ -3744,7 +3954,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:3
 msgid "Credit notes and refunds"
-msgstr ""
+msgstr "Notas de crédito y reembolsos"
 
 #: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:5
 msgid ""
@@ -3916,10 +4126,10 @@ msgid ""
 "*Create*, or by opening the validated *Vendor Bill*, and clicking on *Add "
 "Credit Note*."
 msgstr ""
-"Puede crear una nota de crédito desde cero yendo a "
-":menuselection:`Contabilidad --> Proveedores --> Reembolso`, y haciendo clic"
-" en *Crear*, o abriendo la *Factura de proveedor* ya validada, y haciendo "
-"clic en *Añadir nota de crédito*."
+"Para crear una nota de crédito desde cero vaya a "
+":menuselection:`Contabilidad --> Proveedores --> Reembolso`, y haga clic en "
+"*Crear*, o abra la *Factura de proveedor* ya validada, y haga clic en "
+"*Añadir nota de crédito*."
 
 #: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:89
 #: ../../content/applications/finance/accounting/customer_invoices/payment_terms.rst:94
@@ -3949,7 +4159,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices/customer_addresses.rst:3
 msgid "Delivery and invoice addresses"
-msgstr ""
+msgstr "Direcciones de entrega y de facturación"
 
 #: ../../content/applications/finance/accounting/customer_invoices/customer_addresses.rst:5
 msgid ""
@@ -3958,10 +4168,15 @@ msgid ""
 "another. Odoo's **Customer Addresses** feature is designed to handle this "
 "scenario by making it easy to specify which address to use for each case."
 msgstr ""
+"Es normal que las empresas tengan más de una oficina, por lo que también es "
+"normal que la factura se deba enviar a una dirección mientras que la entrega"
+" se tenga que realizar en otra. La función de **direcciones del cliente** de"
+" Odoo está diseñada para poder ayudar en esta situación, ya que podrá "
+"especificar qué dirección usar para qué caso."
 
 #: ../../content/applications/finance/accounting/customer_invoices/customer_addresses.rst:10
 msgid ":doc:`overview`"
-msgstr ""
+msgstr ":doc:`resumen`"
 
 #: ../../content/applications/finance/accounting/customer_invoices/customer_addresses.rst:15
 msgid ""
@@ -3970,6 +4185,10 @@ msgid ""
 ":guilabel:`Customer Invoices` section, enable :guilabel:`Customer Addresses`"
 " and click :guilabel:`Save`."
 msgstr ""
+"Para especificar la dirección de factura y entrega de una orden de venta, "
+"primero vaya a :menuselection:`Contabilidad --> Configuración --> Ajustes`. "
+"En la sección :guilabel:`Facturas del cliente` active :guilabel:`Direcciones"
+" del cliente`  y haga clic en :guilabel:`Guardar`."
 
 #: ../../content/applications/finance/accounting/customer_invoices/customer_addresses.rst:19
 msgid ""
@@ -3979,10 +4198,15 @@ msgid ""
 "will use that address by default, but any contact's address can be used "
 "instead."
 msgstr ""
+"Ahora en las cotizaciones y órdenes de venta encontrará los campos para la "
+":guilabel:`Dirección de factura` y la :guilabel:`Dirección de entrega`. Si "
+"en el contacto del cliente hay una dirección de factura o de entrega "
+"enlistadas, el campo correspondiente utilizará esa dirección en automático, "
+"pero si no lo quiere así puede usar cualquier dirección del contacto."
 
 #: ../../content/applications/finance/accounting/customer_invoices/customer_addresses.rst:25
 msgid "Invoice and deliver to different addresses"
-msgstr ""
+msgstr "Facturación y entrega en direcciones diferentes"
 
 #: ../../content/applications/finance/accounting/customer_invoices/customer_addresses.rst:27
 msgid ""
@@ -3991,6 +4215,11 @@ msgid ""
 " show both the shipping address and the invoice address to assure the "
 "customer that the delivery is going to the correct location."
 msgstr ""
+"Las órdenes de entrega y el albarán de entrega usan la dirección que está en"
+" el campo :guilabel:`Dirección de entrega` de la orden de venta. Por "
+"defecto, los reportes de facturación muestran tanto la dirección de envío "
+"como la dirección de facturación para que el cliente pueda estar seguro de "
+"que la entrega se realizará en la dirección correcta."
 
 #: ../../content/applications/finance/accounting/customer_invoices/customer_addresses.rst:31
 msgid ""
@@ -3999,6 +4228,10 @@ msgid ""
 "email of the address set as the :guilabel:`Invoice Address` on the sales "
 "order."
 msgstr ""
+"Los correos también se envían a direcciones diferentes. La cotización y la "
+"orden de venta se envían al correo electrónico principal del contacto, pero "
+"la factura se envía al correo electrónico de la dirección en "
+":guilabel:`Dirección de factura` en la orden de venta."
 
 #: ../../content/applications/finance/accounting/customer_invoices/customer_addresses.rst:36
 msgid ""
@@ -4006,16 +4239,21 @@ msgid ""
 ":doc:`customized using Studio "
 "</applications/productivity/studio/pdf_reports>`."
 msgstr ""
+":doc:`Con Studio </applications/productivity/studio/pdf_reports>` puede "
+"personalizar documentos como el albarán o el reporte de facturación."
 
 #: ../../content/applications/finance/accounting/customer_invoices/customer_addresses.rst:38
 msgid ""
 "If :doc:`Send by Post <snailmail>` is checked when you click :guilabel:`Send"
 " & Print`, the invoice will be mailed to the invoice address."
 msgstr ""
+"Si la opción :doc:`Enviar por correo postal <snailmail>` está marcada cuando"
+" hace clic en :guilabel:`Enviar e imprimir`, la factura se enviará a la "
+"dirección de facturación."
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:3
 msgid "Deferred revenues"
-msgstr ""
+msgstr "Ingresos diferidos"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:5
 msgid ""
@@ -4117,6 +4355,7 @@ msgstr ""
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst-1
 msgid "Configuration of a Deferred Revenue Account in Odoo Accounting"
 msgstr ""
+"Configuración de una cuenta de ingresos diferidos en Contabilidad de Odoo"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:44
 msgid ""
@@ -4145,6 +4384,8 @@ msgid ""
 "Selection of a Deferred Revenue Account on a draft invoice in Odoo "
 "Accounting"
 msgstr ""
+"Selección de la cuenta de ingresos diferidos en el borrador de una factura "
+"en Contabilidad de Odoo"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:60
 msgid "Choose a different Income Account for specific products"
@@ -4160,7 +4401,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst-1
 msgid "Change of the Income Account for a product in Odoo"
-msgstr ""
+msgstr "Cambio de cuenta de ingresos para un producto dentro de Odoo"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:70
 msgid ""
@@ -4236,7 +4477,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst-1
 msgid "Deferred Revenue entry in Odoo Accounting"
-msgstr ""
+msgstr "Asiento de ingresos diferidos en Contabilidad de Odoo"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:104
 msgid ""
@@ -4252,7 +4493,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst-1
 msgid "Revenue Board in Odoo Accounting"
-msgstr ""
+msgstr "Tabla de ingresos en Contabilidad de Odoo"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:113
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:122
@@ -4327,6 +4568,7 @@ msgstr ""
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst-1
 msgid "Create Deferred Entry from a journal item in Odoo Accounting"
 msgstr ""
+"Cree un asiento diferido desde un apunte contable en Contabilidad de Odoo"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:142
 msgid "Deferred Revenue Models"
@@ -4386,7 +4628,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst-1
 msgid "Deferred Revenue model button in Odoo Accounting"
-msgstr ""
+msgstr "Botón de modelo de ingreso diferido en Contabilidad de Odoo"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:170
 msgid "Automate the Deferred Revenues"
@@ -4437,7 +4679,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst-1
 msgid "Automate Deferred Revenue on an account in Odoo Accounting"
-msgstr ""
+msgstr "Ingresos diferidos automáticos en una cuenta de Contabilidad de Odoo"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:190
 msgid ""
@@ -4466,6 +4708,7 @@ msgstr ""
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:3
 msgid "Electronic invoicing (:abbr:`EDI (electronic data interchange)`)"
 msgstr ""
+"Facturación electrónica (:abbr:`EDI (intercambio electrónico de datos)`)"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:5
 msgid ""
@@ -4476,6 +4719,12 @@ msgid ""
 "Various EDI file formats exist and are available depending on your company's"
 " country."
 msgstr ""
+"EDI, o intercambio electrónico de datos, es la comunicación entre empresas "
+"de documentos empresariales, como órdenes de compra y facturas, en formato "
+"estándar. Si envía documentos que cumplen con el estándar EDI se podrá "
+"asegurar de que la máquina que reciba el mensaje podrá interpretar la "
+"información de manera correcta. Hay muchos formatos EDI que están "
+"disponibles dependiendo del país de su empresa."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:10
 msgid ""
@@ -4483,16 +4732,21 @@ msgid ""
 "might also be required by some governments for fiscal control or to "
 "facilitate the administration."
 msgstr ""
+"La función EDI permite automatizar la administración entre empresas, además "
+"de que es posible que algunos gobiernos lo pidan para facilitar el control "
+"fiscal y la administración"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:13
 msgid ""
 "Electronic invoicing of your documents such as customer invoices, credit "
 "notes or vendor bills is one of the application of EDI."
 msgstr ""
+"Uno de los usos de EDI es que podrá crear facturas y notas de crédito en "
+"formato electrónico."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:16
 msgid "Odoo supports, among others, the following formats."
-msgstr ""
+msgstr "Los siguientes formatos, entre otros, son compatibles con Odoo."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:21
 msgid "Format Name"
@@ -4512,13 +4766,15 @@ msgstr "Para las empresas de Francia y Alemania"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:25
 msgid "Peppol BIS Billing 3.0 (UBL)"
-msgstr ""
+msgstr "Peppol BIS Billing 3.0 (UBL)"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:26
 msgid ""
 "For companies whose countries are part of the `EAS list "
 "<https://docs.peppol.eu/poacc/billing/3.0/codelist/eas/>`_"
 msgstr ""
+"Para empresas que están en países que están dentro de `la lista EAS "
+"<https://docs.peppol.eu/poacc/billing/3.0/codelist/eas/>`_"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:28
 msgid "E-FFF"
@@ -4578,15 +4834,15 @@ msgstr "Para las empresas de Colombia"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:42
 msgid "Egyptian Tax Authority"
-msgstr ""
+msgstr "Autoridad fiscal de Egipto"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:43
 msgid "For Egyptian companies"
-msgstr ""
+msgstr "Para empresas egipcias"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:44
 msgid "E-Invoice (IN)"
-msgstr ""
+msgstr "E-Invoice (IN)"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:45
 msgid "For Indian companies"
@@ -4594,11 +4850,11 @@ msgstr "Para las empresas de India"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:46
 msgid "NLCIUS (Netherlands)"
-msgstr ""
+msgstr "NLCIUS (Países Bajos)"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:47
 msgid "For Dutch companies"
-msgstr ""
+msgstr "Para empresas neerlandesas"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:48
 msgid "EHF 3.0"
@@ -4606,15 +4862,15 @@ msgstr "EHF 3.0"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:49
 msgid "For Norwegian companies"
-msgstr ""
+msgstr "Para empresas noruegas"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:50
 msgid "SG BIS Billing 3.0"
-msgstr ""
+msgstr "Facturación SG BIS 3.0"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:51
 msgid "For Singaporean companies"
-msgstr ""
+msgstr "Para empresas singapurenses"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:52
 msgid "A-NZ BIS Billing 3.0"
@@ -4622,7 +4878,7 @@ msgstr "A-NZ BIS Billing 3.0"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:53
 msgid "For Australian/New Zealand companies"
-msgstr ""
+msgstr "Para empresas australianas o neozelandesas"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:56
 msgid ":ref:`fiscal_localizations/packages`"
@@ -4634,10 +4890,13 @@ msgid ""
 " Invoices --> Advanced Settings --> Electronic Invoicing` and enable the "
 "formats you need for this journal."
 msgstr ""
+"Vaya a :menuselection:`Contabilidad --> Configuración --> Diarios --> "
+"Facturas del cliente --> Ajustes avanzados --> Facturación electrónica` y "
+"active los formatos que necesita para este diario."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst-1
 msgid "Select the EDI format you need"
-msgstr ""
+msgstr "Seleccione el formato EDI que necesita"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:70
 msgid ""
@@ -4646,6 +4905,11 @@ msgid ""
 "notes, etc. These documents are either visible in the attachment section, or"
 " embedded in the PDF."
 msgstr ""
+"Después de que active el formato de facturación electrónica, se generarán "
+"los documentos XML cuando haga clic en el botón :guilabel:`Confirmar` que "
+"está en los documentos como facturas, notas de crédito, etc. Podrá encontrar"
+" estos documentos en la sección de archivos adjuntos o incrustados en el "
+"PDF."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:75
 msgid ""
@@ -4653,6 +4917,9 @@ msgid ""
 "(:guilabel:`Print` or :guilabel:`Send & Print` button), since the PDF needs "
 "to be embedded inside the xml."
 msgstr ""
+"Para el formato E-FFF, el archivo xml aparece solo después de generar el PDF"
+" (con el botón :guilabel:`Imprimir` o :guilabel:`Enviar e imprimir`), ya que"
+" el PDF necesita estar insertado en el xml."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:77
 msgid ""
@@ -4662,22 +4929,31 @@ msgid ""
 "invoice and generates a PDF/A-3 compliant file, required by plaftorms like "
 "Chorus Pro."
 msgstr ""
+"Todo PDF generado desde Odoo contiene un archivo XML :guilabel:`Factur-X` "
+"(por motivos de interoperabilidad). Para empresas alemanas y francesas, la "
+"opción :guilabel:`Factur-X (PDF/A-3)` también activa las revisiones de "
+"validación en la factura y genera un archivo PDF/A-3. Este archivo es "
+"necesario para plataformas como Chorus Pro."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:80
 msgid ""
 "The formats available depend on the country registered in your company's "
 ":guilabel:`General Information`."
 msgstr ""
+"Los formatos disponibles dependen del país que está registrado en la "
+":guilabel:`Información general` de la empresa."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:82
 msgid ""
 "Odoo supports the **Peppol BIS Billing 3.0** format that can be used via "
 "existing access points."
 msgstr ""
+"Odoo es compatible con el formato **Peppol BIS Billing 3.0**  que se puede "
+"usar a través de puntos de acceso existentes."
 
 #: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:3
 msgid "EPC QR codes"
-msgstr ""
+msgstr "Códigos EPC QR"
 
 #: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:5
 msgid ""
@@ -4686,6 +4962,11 @@ msgid ""
 " applications** to initiate a **SEPA credit transfer (SCT)** and pay their "
 "invoices instantly."
 msgstr ""
+"El código de respuesta rápida del Consejo Europeo de Pagos, o **código EPC "
+"QR** consiste en un código de barras bidimensional que los clientes pueden "
+"escanear desde sus **aplicaciones de banca móvil** para iniciar una "
+"**Transferencia de crédito SEPA (SCT)** y así pagar sus facturas de "
+"inmediato."
 
 #: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:9
 msgid ""
@@ -4700,6 +4981,8 @@ msgid ""
 "This feature is only available for companies in several European countries "
 "such as Austria, Belgium, Finland, Germany, and the Netherlands."
 msgstr ""
+"Esta función solo está disponible para empresas en varios países europeos, "
+"como Austria, Bélgica, Finlandia, Alemania y Países Bajos."
 
 #: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:17
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:127
@@ -4720,16 +5003,21 @@ msgid ""
 "activate the :guilabel:`QR Codes` feature in the :guilabel:`Customer "
 "Payments` section."
 msgstr ""
+"Vaya a :menuselection:`Contabilidad --> Configuración --> Ajustes`y active "
+"la función de :guilabel:`Códigos QR` en la sección :guilabel:`Pagos del "
+"cliente`."
 
 #: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:27
 msgid "Configure your bank account's journal"
-msgstr ""
+msgstr "Configure su diario de cuenta bancaria"
 
 #: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:29
 msgid ""
 "Make sure that your :guilabel:`Bank Account` is correctly configured in Odoo"
 " with your IBAN and BIC."
 msgstr ""
+"Asegúrese de que su :guilabel:`cuenta bancaria` está configurada en Odoo con"
+" su IBAN y BIC."
 
 #: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:31
 msgid ""
@@ -4737,14 +5025,18 @@ msgid ""
 "open your bank journal, then fill out the :guilabel:`Account Number` and "
 ":guilabel:`Bank` under the :guilabel:`Bank Account Number` column."
 msgstr ""
+"Para hacerlo, vaya a :menuselection:`Contabiliad --> Configuración --> "
+"Diarios`, abra su diario de banco, y llene los campos :guilabel:`Número de "
+"cuenta` y el :guilabel:`Banco` que se encuentran en la columna "
+":guilabel:`Número de cuenta bancaria`."
 
 #: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst-1
 msgid "Bank account number column in the bank journal"
-msgstr ""
+msgstr "Columna de número de cuenta bancaria en el diario de banco"
 
 #: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:39
 msgid "Issue invoices with EPC QR codes"
-msgstr ""
+msgstr "Emitir facturas con códigos EPC QR"
 
 #: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:41
 msgid ""
@@ -4752,6 +5044,9 @@ msgid ""
 "supports making payments via EPC QR codes will be able to scan the code and "
 "pay the invoice."
 msgstr ""
+"Los códigos EPC QR se agregarán de manera automática a tus facturas. Si los "
+"clientes están con bancos que aceptan pagos a través de códigos EPC QR, "
+"podrán escanear el código y pagar la factura"
 
 #: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:44
 msgid ""
@@ -4766,6 +5061,8 @@ msgid ""
 "Before posting it, open the :guilabel:`Other Info` tab. Odoo automatically "
 "fills out the :guilabel:`Recipient Bank` field with your IBAN."
 msgstr ""
+"Antes de publicar, abra la pestaña :guilabel:`más información`. Odoo llena "
+"el campo :guilabel:`Banco destinatario` de manera automática con su IBAN."
 
 #: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:50
 msgid ""
@@ -4774,16 +5071,21 @@ msgid ""
 " Odoo automatically populates this field with your IBAN by default and uses "
 "it to generate the EPC QR code."
 msgstr ""
+"En la pestaña :guilabel:`Otra información`, usamos el campo :guilabel:`Banco"
+" destinatario` para recibir los pagos de sus clientes. Odoo llena este campo"
+" de manera automática con su IBAN y lo usa para generar un código QR EPC."
 
 #: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:54
 msgid ""
 "When the invoice is printed or previewed, the QR code is included at the "
 "bottom."
 msgstr ""
+"Cuando la factura se imprime o se previsualiza, el código QR se incluyo al "
+"final."
 
 #: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst-1
 msgid "QR code on a customer invoice"
-msgstr ""
+msgstr "Código QR en una factura para el cliente"
 
 #: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:60
 msgid ""
@@ -4791,6 +5093,9 @@ msgid ""
 "indicated in the :guilabel:`Recipient Bank` field, under the "
 ":guilabel:`Other Info` tab of the invoice."
 msgstr ""
+"Si desea emitir una factura sin código EPC QR, quite el IBAN indicado en el "
+"campo :guilabel:`Banco destinatario` que se encuentra en la pestaña "
+":guilabel:`Otra información` de la factura."
 
 #: ../../content/applications/finance/accounting/customer_invoices/incoterms.rst:3
 msgid "Incoterms"
@@ -4807,10 +5112,19 @@ msgid ""
 "from the seller to the buyer, the responsibility for transportation, "
 "insurance, customs clearance, and other relevant aspects of the transaction."
 msgstr ""
+"Los :abbr:`incoterms (del sigloide inglés, International Commercial Terms)` "
+"son términos estandarizados que se usan en transacciones internacionales "
+"para definir los derechos y las responsabilidades de los compradores y los "
+"vendedores. Estos términos establecen las obligaciones sobre la entrega de "
+"los bienes, los riesgos de la transferencia y la distribución de los costos "
+"entre las partes involucradas. Los incoterms especifican detalles "
+"importantes, como en qué punto los riesgos y los costos se transfieren del "
+"vendedor al comprador, quién tiene la responsabilidad de transporte, el "
+"seguro, despacho de aduana y otros aspectos relevantes de la transacción."
 
 #: ../../content/applications/finance/accounting/customer_invoices/incoterms.rst:13
 msgid "By default, all 11 Incoterms are available in Odoo:"
-msgstr ""
+msgstr "Los 11 Incoterms están disponibles en Odoo:"
 
 #: ../../content/applications/finance/accounting/customer_invoices/incoterms.rst:15
 msgid "**EXW**: Ex works"
@@ -4818,43 +5132,43 @@ msgstr "**EXW**: En fábrica"
 
 #: ../../content/applications/finance/accounting/customer_invoices/incoterms.rst:16
 msgid "**FCA**: Free carrier"
-msgstr ""
+msgstr "**FCA**: libre transportista"
 
 #: ../../content/applications/finance/accounting/customer_invoices/incoterms.rst:17
 msgid "**FAS**: Free alongside ship"
-msgstr ""
+msgstr "**FAS**: libre al costado del buque"
 
 #: ../../content/applications/finance/accounting/customer_invoices/incoterms.rst:18
 msgid "**FOB**: Free on board"
-msgstr ""
+msgstr "**FOB**: libre a bordo"
 
 #: ../../content/applications/finance/accounting/customer_invoices/incoterms.rst:19
 msgid "**CFR**: Cost and freight"
-msgstr ""
+msgstr "**CFR**: costo y flete"
 
 #: ../../content/applications/finance/accounting/customer_invoices/incoterms.rst:20
 msgid "**CIF**: Cost, insurance and freight"
-msgstr ""
+msgstr "**CIF**: coste, seguro y flete"
 
 #: ../../content/applications/finance/accounting/customer_invoices/incoterms.rst:21
 msgid "**CPT**: Carriage paid to"
-msgstr ""
+msgstr "**CPT**: transporte pagado hasta"
 
 #: ../../content/applications/finance/accounting/customer_invoices/incoterms.rst:22
 msgid "**CIP**: Carriage and insurance paid to"
-msgstr ""
+msgstr "**CIP**: transporte y seguro pagados hasta"
 
 #: ../../content/applications/finance/accounting/customer_invoices/incoterms.rst:23
 msgid "**DPU**: Delivered at place unloaded"
-msgstr ""
+msgstr "**DPU**: entregado en lugar y descargado"
 
 #: ../../content/applications/finance/accounting/customer_invoices/incoterms.rst:24
 msgid "**DPA**: Delivered at place"
-msgstr ""
+msgstr "**DAP**: entregado en un punto"
 
 #: ../../content/applications/finance/accounting/customer_invoices/incoterms.rst:25
 msgid "**DDP**: Delivered duty paid"
-msgstr ""
+msgstr "**DDP**: entregado con derechos pagados"
 
 #: ../../content/applications/finance/accounting/customer_invoices/incoterms.rst:28
 msgid ":doc:`../reporting/intrastat`"
@@ -4869,6 +5183,8 @@ msgid ""
 "To define an Incoterm manually, create an invoice or bill, click the "
 ":guilabel:`Other Info` tab, and select the :guilabel:`Incoterm`."
 msgstr ""
+"Para definir un incoterm de manera manual, cree una factura, haga clic en la"
+" pestaña :guilabel:`Otra información` y seleccione :guilabel:`Incoterm`."
 
 #: ../../content/applications/finance/accounting/customer_invoices/incoterms.rst:41
 msgid "Default Incoterm configuration"
@@ -4882,6 +5198,11 @@ msgid ""
 " down to the :guilabel:`Customer Invoices` section, and select an Incoterm "
 "in the :guilabel:`Default Incoterm` field."
 msgstr ""
+"Puede configurar una regla de incoterm por defecto para que "
+"**automáticamente** se llene el campo Incoterm en todas las facturas nuevas "
+"que cree. En :menuselection:`Contabilidad/Facturas --> Configuración --> "
+"Ajustes` baje a la sección :guilabel:`Facturas de cliente` y seleccione un "
+"incoterm en el campo :guilabel:`Incoterm predeterminado`."
 
 #: ../../content/applications/finance/accounting/customer_invoices/overview.rst:3
 msgid "Invoicing processes"
@@ -5217,12 +5538,16 @@ msgstr ""
 #: ../../content/applications/finance/accounting/customer_invoices/overview.rst:152
 msgid "Invoice digitization with optical character recognition (OCR)"
 msgstr ""
+"Digitalización de facturas con reconocimiento óptico de caracteres (OCR)"
 
 #: ../../content/applications/finance/accounting/customer_invoices/overview.rst:154
 msgid ""
 "**Invoice digitization** is the process of automatically encoding "
 "traditional paper invoices into invoices forms in your accounting."
 msgstr ""
+"La **digitalización de facturas** es el proceso en el que las facturas "
+"impresas se codifican de manera automática y se convierten en formularios de"
+" facturas en su contabilidad en línea."
 
 #: ../../content/applications/finance/accounting/customer_invoices/overview.rst:157
 msgid ""
@@ -5230,6 +5555,9 @@ msgid ""
 "content of the documents. Vendor bills and customer invoices forms are "
 "automatically created and populated based on scanned invoices."
 msgstr ""
+"Odoo usa OCR y tecnología de inteligencia artificial para reconocer el "
+"contenido de los documentos. Los formularios para las facturas de cliente y "
+"proveedor se crean y se llenan según las facturas escaneadas."
 
 #: ../../content/applications/finance/accounting/customer_invoices/overview.rst:162
 msgid ""
@@ -5239,7 +5567,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices/payment_terms.rst:3
 msgid "Payment terms and installment plans"
-msgstr ""
+msgstr "Términos de pago y planes de pago a plazos"
 
 #: ../../content/applications/finance/accounting/customer_invoices/payment_terms.rst:5
 msgid ""
@@ -5363,6 +5691,8 @@ msgid ""
 "`Odoo Tutorials: Payment Terms <https://www.odoo.com/slides/slide/payment-"
 "terms-1679>`_"
 msgstr ""
+"`Tutoriales de Odoo: términos de pago "
+"<https://www.odoo.com/slides/slide/payment-terms-1679>`_"
 
 #: ../../content/applications/finance/accounting/customer_invoices/payment_terms.rst:48
 msgid ""
@@ -5418,6 +5748,8 @@ msgid ""
 "Example of Payment Terms. The last line is the balance due on the 31st of the following\n"
 "month."
 msgstr ""
+"Ejemplo de términos de pago. La última línea es el balance adeudado al 31 del mes\n"
+"que sigue."
 
 #: ../../content/applications/finance/accounting/customer_invoices/payment_terms.rst:71
 msgid "Using Payment Terms"
@@ -5516,6 +5848,8 @@ msgid ""
 "The amount debited on the Account Receivable is split into two Journal Items with distinct\n"
 "Due Dates"
 msgstr ""
+"La cantidad descrita en las cuentas por cobrar se divide en dos apuntes de diario con fechas\n"
+"de pago diferentes."
 
 #: ../../content/applications/finance/accounting/customer_invoices/payment_terms.rst:107
 msgid ""
@@ -5614,26 +5948,35 @@ msgid ""
 "you have the ability to send invoices and follow-up reports through postal "
 "mail worldwide, all from within your database."
 msgstr ""
+"Enviar un correo postal puede ser una estrategia para llamar la atención de "
+"la gente, sobre todo si su bandeja de entrada está llena. Con Odoo, puede "
+"enviar correos postales de seguimientos de pago a todo el mundo, todo desde "
+"su base de datos."
 
 #: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:14
 msgid ""
 "Go to :menuselection:`Accounting --> Configuration --> Settings --> Customer"
 " invoices` section to activate :guilabel:`Snailmail`."
 msgstr ""
+"Vaya a :menuselection:`Contabilidad --> Configuración --> Ajustes --> "
+"Factures de cliente` y active el :guilabel:`Correo postal`."
 
 #: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:17
 msgid ""
 "To make it a by-default feature, select :guilabel:`Send by Post` in the "
 ":guilabel:`Default Sending Options` section."
 msgstr ""
+"Para hacer que esta sea una función por defecto, seleccione "
+":guilabel:`Enviar por correo postal` en la sección :guilabel:`Opciones de "
+"envío predeterminadas`."
 
 #: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst-1
 msgid "Under settings enable the snailmail feature in Odoo Accounting"
-msgstr ""
+msgstr "En ajustes active la función de correo postal en Contabilidad de Odoo"
 
 #: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:25
 msgid "Send invoices by post"
-msgstr ""
+msgstr "Enviar facturas por correo"
 
 #: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:27
 msgid ""
@@ -5641,12 +5984,17 @@ msgid ""
 ":guilabel:`Send by Post`. Make sure your customer’s address is set "
 "correctly, including the country, before sending the letter."
 msgstr ""
+"Abra su factura, haga clic en :guilabel:`Enviar e imprimir` y seleccione "
+":guilabel:`Enviar por correo postal`. Asegúrese de que la dirección de su "
+"cliente está bien, incluyendo el país, antes de enviar la carta."
 
 #: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:31
 msgid ""
 "Your document must respect the following rules to pass the validation before"
 " being sent:"
 msgstr ""
+"Su documento debe seguir las siguientes reglas para poder pasar la "
+"validación antes de enviarse:"
 
 #: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:33
 msgid ""
@@ -5657,17 +6005,28 @@ msgid ""
 ":menuselection:`General Settings --> Technical --> Reporting section: Paper "
 "Format`."
 msgstr ""
+"Los márgenes deben de ser de **5mm** en todos los lados. Odoo llena los "
+"márgenes con blanco antes de enviar el correo postal, por lo que es posible "
+"que se corte la información si se sale de los márgenes.  Para revisar los "
+"márgenes active el :ref:`modo de desarrollador <developer-mode>`, vaya a "
+":menuselection:`Ajustes generales --> Técnico --> En la sección de Reportes:"
+" Formato de papel`."
 
 #: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:38
 msgid ""
 "A square of **15mm by 15mm** on the bottom left corner has to stay clear."
 msgstr ""
+"Debe dejar en blanco un cuadrado de **15 mm por 15mm** en la esquina "
+"inferior izquierda."
 
 #: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:39
 msgid ""
 "The postage area has to stay clear (click :download:`here "
 "<snailmail/snailmail-template.pdf>` to get more info about the area)."
 msgstr ""
+"El franqueo debe dejarse en blanco (haga clic :download:`aquí "
+"<snailmail/snailmail-template.pdf>` para obtener más información sobre el "
+"área)."
 
 #: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:41
 msgid ""
@@ -5675,6 +6034,9 @@ msgid ""
 "address, so if something gets written outside the area, it is not counted as"
 " part of the address."
 msgstr ""
+"Pingen (el proveedor de servicios del correo postal de Odoo) escanea el área"
+" para procesar la dirección, por lo que si escribe algo fuera del área, no "
+"se contará como parte de la dirección."
 
 #: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:45
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:84
@@ -5687,6 +6049,10 @@ msgid ""
 "requires prepaid stamps (=credits) to work. Sending one document consumes "
 "one stamp."
 msgstr ""
+"El correo postal es un servicio de "
+":doc:`/applications/general/in_app_purchase` que requiere de estampas "
+"prepagadas (créditos) para funcionar. Enviar un documento consume una "
+"estampa."
 
 #: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:50
 msgid ""
@@ -5695,6 +6061,8 @@ msgid ""
 "credits`, or go to :menuselection:`Settings --> In-App Purchases: Odoo IAP`,"
 " and click on :guilabel:`View my Services`."
 msgstr ""
+"Para comprar estampas vaya a :menuselection:`Contabilidad --> Configuración "
+"--> Ajustes --> Facturas del cliente: correo postal`"
 
 #: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:55
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:94
@@ -5715,7 +6083,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices/terms_conditions.rst:3
 msgid "Default terms and conditions (T&C)"
-msgstr ""
+msgstr "Términos y condiciones "
 
 #: ../../content/applications/finance/accounting/customer_invoices/terms_conditions.rst:5
 msgid ""
@@ -5723,6 +6091,9 @@ msgid ""
 "contractual points, such as return and refunds, warranty, and after-sale "
 "services."
 msgstr ""
+"Es esencial que especifique los términos y condiciones para que pueda "
+"establecer puntos contractuales que son muy importantes, como las "
+"devoluciones o reembolsos, las garantías y los servicios posventa."
 
 #: ../../content/applications/finance/accounting/customer_invoices/terms_conditions.rst:8
 msgid ""
@@ -5730,12 +6101,16 @@ msgid ""
 "invoices, sales orders, and quotations, either as text or a link to a web "
 "page."
 msgstr ""
+"Puede agregar términos y condiciones al final de todas las facturas, órdenes"
+" de venta y cotizaciones, ya sea como un texto o un enlace a una página web."
 
 #: ../../content/applications/finance/accounting/customer_invoices/terms_conditions.rst:12
 msgid ""
 "`Odoo Tutorial: Terms & Conditions <https://www.odoo.com/slides/slide/terms-"
 "conditions-1680>`_"
 msgstr ""
+"`Tutoriales de Odoo: Términos y condiciones "
+"<https://www.odoo.com/slides/slide/terms-conditions-1680>`_"
 
 #: ../../content/applications/finance/accounting/customer_invoices/terms_conditions.rst:17
 msgid ""
@@ -5745,10 +6120,15 @@ msgid ""
 "the terms and conditions are displayed at the bottom of the document. Enter "
 "the terms and conditions in the text box below."
 msgstr ""
+"Vaya a :menuselection:`Contabilidad --> Configuración --> Ajustes`. En "
+":guilabel:`Facturas del cliente` active :guilabel:`Términos y condiciones "
+"predeterminados`. Por defecto, la opción :guilabel:`está seleccionada` y los"
+" términos y condiciones se muestran al final del documento. Ingrese los "
+"términos y condiciones en el cuadro de texto de abajo."
 
 #: ../../content/applications/finance/accounting/customer_invoices/terms_conditions.rst-1
 msgid "Example of terms and conditions as a note"
-msgstr ""
+msgstr "Ejemplo de términos y condiciones como nota"
 
 #: ../../content/applications/finance/accounting/customer_invoices/terms_conditions.rst:26
 msgid ""
@@ -5756,6 +6136,10 @@ msgid ""
 " when sending the document via email. Edit the email templates if you want "
 "to include them by default."
 msgstr ""
+"También puede agregar una versión PDF de sus términos y condiciones, será un"
+" archivo adjunto que se enviará con el resto del documento via correo "
+"electrónico. Debe de editar las plantillas de correo electrónico si quiere "
+"que se envíen en automático."
 
 #: ../../content/applications/finance/accounting/customer_invoices/terms_conditions.rst:29
 msgid ""
@@ -5765,6 +6149,11 @@ msgid ""
 ":guilabel:`Save`. The link to that page is then added as a note in your "
 "document."
 msgstr ""
+"También puede mostrar los términos y condiciones de una página web si "
+"selecciona la opción :guilabel:`Agregue un enlace a una página web` y haga "
+"clic en :guilabel:`Guardar`. Haga clic en :guilabel:`Actualizar términos`, "
+"edite el contenido y haga clic en :guilabel:`Guardar`. Se agregará un enlace"
+" a la página en una nota en su documento."
 
 #: ../../content/applications/finance/accounting/customer_invoices/terms_conditions.rst:34
 msgid ""
@@ -5773,10 +6162,14 @@ msgid ""
 ":guilabel:`Edit in Website Builder` option then replaces :guilabel:`Update "
 "Terms`."
 msgstr ""
+"Puede editar el diseño del contenido desde la aplicación :doc:`Website "
+"</applications/websites/website>`. Si la aplicación Website está activada, "
+"la opción :guilabel:`Editar en el creador de sitio web` reemplazará a "
+":guilabel:`Actualizar términos`."
 
 #: ../../content/applications/finance/accounting/customer_invoices/terms_conditions.rst-1
 msgid "Example of terms and conditions as a web page"
-msgstr ""
+msgstr "Ejemplos de términos y condiciones en una página web"
 
 #: ../../content/applications/finance/accounting/get_started.rst:5
 msgid "Get started"
@@ -5810,6 +6203,12 @@ msgid ""
 "are ready-to-go. :ref:`Click here <fiscal_localizations/packages>` for more "
 "information about Fiscal Localization Packages."
 msgstr ""
+"La aplicación Contabilidad instala de manera automática el **paquete de "
+"localización fiscal** correspondiente a su empresa dependiendo del país que "
+"se seleccionó en la base de datos. Las cuentas, los reportes y los impuestos"
+" correctos estarán disponibles de inmediato. :ref:`Haga clic aquí "
+"<fiscal_localizations/packages>` para aprender más sobre los paquetes de "
+"localización fiscal."
 
 #: ../../content/applications/finance/accounting/get_started.rst:21
 msgid "Accounting onboarding banner"
@@ -5892,6 +6291,8 @@ msgid ""
 ":doc:`Click here <bank/bank_synchronization>` for more information about "
 "this feature."
 msgstr ""
+":doc:`Haga clic aquí <bank/bank_synchronization>` para obtener más "
+"información sobre esta función."
 
 #: ../../content/applications/finance/accounting/get_started.rst:60
 msgid ""
@@ -5954,6 +6355,8 @@ msgstr ""
 #: ../../content/applications/finance/accounting/get_started.rst:77
 msgid ":doc:`Click here <bank>` for more information about Bank Accounts."
 msgstr ""
+":doc:`Haga clic aquí <bank>` para obtener más información sobre las cuentas "
+"bancarias."
 
 #: ../../content/applications/finance/accounting/get_started.rst:83
 msgid "Accounting Periods"
@@ -6020,6 +6423,8 @@ msgid ""
 ":doc:`Click here <get_started/chart_of_accounts>` for more information on "
 "how to configure your Chart of Accounts."
 msgstr ""
+":doc:`Haga clic aquí <get_started/chart_of_accounts>` para obtener más "
+"información sobre cómo configurar su plan de cuentas."
 
 #: ../../content/applications/finance/accounting/get_started.rst:115
 msgid "Invoicing onboarding banner"
@@ -6186,7 +6591,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:3
 msgid "Inventory average price valuation"
-msgstr ""
+msgstr "Valoración del precio promedio del inventario"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:5
 msgid ""
@@ -6195,6 +6600,10 @@ msgid ""
 " one of the possible costing method you can use in perpetual stock "
 "valuation, is the average cost."
 msgstr ""
+"Como se explicó en :doc:`la página de valoración de inventario "
+"</applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config>`"
+" el costo promedio es uno de los métodos de costo que puede usar en la "
+"valoración perpetua del inventario."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:10
 msgid ""
@@ -7117,12 +7526,16 @@ msgid ""
 "`Odoo Tutorials: Chart of accounts <https://www.odoo.com/slides/slide/chart-"
 "of-accounts-1630>`_"
 msgstr ""
+"`Tutoriales de Odoo: plan de cuentas "
+"<https://www.odoo.com/slides/slide/chart-of-accounts-1630>`_"
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:191
 msgid ""
 "`Odoo Tutorials: Update your chart of accounts "
 "<https://www.odoo.com/slides/slide/update-your-chart-of-accounts-1658>`_"
 msgstr ""
+"`Tutoriales de Odoo: actualiza tu plan de cuenta "
+"<https://www.odoo.com/slides/slide/update-your-chart-of-accounts-1658>`_"
 
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:7
 msgid "Accounting cheat sheet"
@@ -7134,6 +7547,9 @@ msgid ""
 "date (as opposed to the Profit and Loss, which is an analysis over a "
 "period)."
 msgstr ""
+"El **balance general** es una captura de las finanzas de una empresa en una "
+"fecha específica, contrario a las pérdidas y ganancias que es un análisis "
+"que se realiza durante un periodo."
 
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:18
 msgid ""
@@ -7142,6 +7558,10 @@ msgid ""
 "accounts and cash. The money owed by a client is an asset. An employee is "
 "not an asset."
 msgstr ""
+"Los **activos** representan la riqueza de una empresa y los bienes que le "
+"pertenecen. Los edificios y oficinas son activos fijos, mientras que las "
+"cuentas de banco y el efectivo son activos circulantes. Un empleado no es un"
+" activo."
 
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:24
 msgid ""
@@ -7150,6 +7570,11 @@ msgid ""
 "could also be defined as a source of financing which is provided to the "
 "company, also called *leverage*."
 msgstr ""
+"Las **responsabilidades** son obligaciones de eventos pasados por las que la"
+" empresa tendrá que pagar en un futuro (facturas de servicios públicos, "
+"deudas, proveedores a los que no se les ha pagado). También podemos definir "
+"estas responsabilidades como una forma de financiamiento que se le ofrece a "
+"la empresa llamada \"aprovechamiento de recursos\"."
 
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:30
 msgid ""
@@ -7158,6 +7583,11 @@ msgid ""
 "losses). Each year, net profits (or losses) may be reported as retained "
 "earnings or distributed to the shareholders (as a dividend)."
 msgstr ""
+"Los **recursos propios** son los fondos que los dueños de la empresa "
+"(fundadores o accionistas) contribuyen, más los recursos acumulados (o "
+"pérdidas). Cada año, las guanacias (o pérdidas) netas se pueden reportar "
+"como recursos acumulados, o se pueden distribuir a los accionistas (como "
+"dividendo)."
 
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:34
 msgid ""
@@ -7169,7 +7599,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:42
 msgid "A difference is made between **assets** and **expenses**:"
-msgstr ""
+msgstr "Se hace una diferencia entre **activos** y **gastos**:"
 
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:38
 msgid ""
@@ -7179,24 +7609,34 @@ msgid ""
 "They are bought or created to increase a firm's value or benefit its "
 "operations."
 msgstr ""
+"Un **activo** es un recurso con valor económico que le pertenece a un "
+"individuo, corporación o país y se controlan con la esperanza de obtener un "
+"beneficio futuro. Los bienes se reportan en el balance general y se compran "
+"o crean para aumentar el valor de una empresa o mejorar sus operaciones."
 
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:42
 msgid ""
 "An **expense** is the costs of operations a company bears to generate "
 "revenues."
 msgstr ""
+"Un **gasto** son los costos de operaciones en los que incurre una empresa "
+"para generar ganancias."
 
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:48
 msgid ""
 "The **profit and loss** (P&L) report shows the company's performance over a "
 "specific period of time, usually a quarter or a fiscal year."
 msgstr ""
+"El reporte de **pérdidas y ganancias** muestra el rendimiento de la empresa "
+"durante un periodo específico, que usualmente son tres meses o un año fiscal"
 
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:53
 msgid ""
 "The **revenue** refers to the money earned by the company by selling goods "
 "and/or services."
 msgstr ""
+"Las **ganancias** son el dinero que gana la empresa al vender bienes o "
+"brindar servicios."
 
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:57
 msgid ""
@@ -7204,12 +7644,17 @@ msgid ""
 "to the sale of goods' costs (e.g., the cost of the materials and labor used "
 "to create the goods)."
 msgstr ""
+"El **costo de los bienes vendidos** (COGS por sus siglas en inglés) se "
+"refiere a los costos de la venta de bienes (por ejemplo, el costo de los "
+"materiales y el trabajo que se requirió para crear bienes)."
 
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:62
 msgid ""
 "The **Gross profit** equals the revenues from sales minus the cost of goods "
 "sold."
 msgstr ""
+"Las **ganancias brutas** son los ingresos de las venas menos el costo de los"
+" bienes vendidos."
 
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:66
 msgid ""
@@ -7217,6 +7662,10 @@ msgid ""
 "salaries, rent and utilities, miscellaneous costs, insurances, and anything "
 "beyond the costs of products sold or the cost of sale."
 msgstr ""
+"Los **OPEX** (Gastos operativos) incluyen administración, ventas y salarios "
+"de investigación y desarrollo, rentas y utilidades, costos misceláneos, "
+"costos y todo lo que vaya más allá de los costos de productos vendidos o el "
+"costo de las ventas."
 
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:76
 msgid "Assets = Liabilities + Equity"
@@ -9756,6 +10205,11 @@ msgid ""
 "payment is directly linked to the bill and will be automatically reconciled "
 "with it."
 msgstr ""
+"Una vez que registre su pago, no se le olvide confirmarlo. Para pagar las "
+"facturas de proveedor solo tiene que hacer clic en el botón "
+":guilabel:`Registrar pago` que se encuentra en la parte superior de la "
+"factura. El formulario es el mismo, pero el pago está ligado a la factura y "
+"se conciliará de manera automática."
 
 #: ../../content/applications/finance/accounting/reporting.rst:8
 msgid "Main reports available"
@@ -14389,7 +14843,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:5
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:585
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:287
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:279
 msgid "Vendor bills"
 msgstr "Facturas de proveedor"
 
@@ -19325,158 +19779,118 @@ msgid "Australia"
 msgstr "Australia"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:8
-msgid "KeyPay Australian Payroll"
-msgstr "Nómina australiana de KeyPay"
+msgid "Employment Hero Australian Payroll"
+msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:10
 msgid ""
-"The KeyPay Module synchronizes payslip accounting entries (e.g., expenses, "
-"social charges, liabilities, taxes) from KeyPay to Odoo automatically. "
-"Payroll administration is still done in KeyPay. We only record the journal "
-"entries in Odoo."
+"The Employment Hero module synchronizes payslip accounting entries (e.g., "
+"expenses, social charges, liabilities, taxes) from Employment Hero to Odoo "
+"automatically. Payroll administration is still done in Employment Hero. We "
+"only record the journal entries in Odoo."
 msgstr ""
-"El módulo de KeyPay sincroniza los asientos de contabilidad de payslip (como"
-" gastos, costos no monetarios, responsabilidades, impuestos) de KeyPay a "
-"Odoo automáticamente. La administración de la nómina se sigue haciendo con "
-"KeyPay. Solo registramos los asientos de diario con Odoo."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:15
-msgid "Configuration Steps"
-msgstr "Pasos de configuración"
-
-#: ../../content/applications/finance/fiscal_localizations/australia.rst:17
-msgid "Create a company located in Australia."
-msgstr "Crear una empresa localizada en Australia."
-
-#: ../../content/applications/finance/fiscal_localizations/australia.rst:18
-msgid ""
-"Check that the Australian localization module (Australia - Accounting) is "
-"installed."
+msgid "KeyPay was rebranded as **Employment Hero** in March 2023."
 msgstr ""
-"Compruebe que el módulo de localización australiana (Australia - "
-"Contabilidad) está instalado."
 
-#: ../../content/applications/finance/fiscal_localizations/australia.rst:19
-msgid "Configure the *KeyPay API*."
-msgstr "Configuración de la *API de KeyPay*."
+#: ../../content/applications/finance/fiscal_localizations/australia.rst:20
+msgid ""
+":ref:`Activate <general/install>` the :guilabel:`Employment Hero Australian "
+"Payroll` module (technical name: `l10n_au_keypay`)."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/australia.rst:22
+msgid ""
+"Configure the **Employment Hero API** by going to :menuselection:`Accounting"
+" --> Configuration --> Settings`. More fields become visible after clicking "
+"on :guilabel:`Enable Employment Hero Integration`."
+msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:0
 msgid ""
-"Odoo Accounting settings includes a section for the Australian Loclization"
-msgstr ""
-"Los ajustes de la aplicación Contabilidad de Odoo incluyen una sección para "
-"la localización de Australia"
-
-#: ../../content/applications/finance/fiscal_localizations/australia.rst:25
-msgid ""
-"More fields become visible after clicking on *Enable KeyPay Integration*."
-msgstr ""
-"Después de hacer clic en *Habilitar integración con KeyPay* más campos se "
-"volverán visibles."
-
-#: ../../content/applications/finance/fiscal_localizations/australia.rst:0
-msgid ""
-"Enabling KeyPay Integration in Odoo Accounting displays new fields in the "
+"Enabling Employment Hero Integration in Odoo Accounting displays new fields in the\n"
 "settings"
 msgstr ""
-"Habilitar la integración con KeyPay en la aplicación Contabilidad de Odoo "
-"muestra nuevos campos en los ajustes"
 
-#: ../../content/applications/finance/fiscal_localizations/australia.rst:31
+#: ../../content/applications/finance/fiscal_localizations/australia.rst:30
 msgid ""
-"You can find the API Key in the *My Account* section of the KeyPay platform."
+"You can find the API Key in the :guilabel:`My Account` section of the "
+"Employment Hero platform."
 msgstr ""
-"Podrá encontrar la clave API en la sección de *Mi cuenta*  de la plataforma "
-"de KeyPay."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:0
-msgid "\"Account Details\" section on the KeyPay dashboard"
-msgstr "Sección \"detalles de la cuenta\" en el tablero de KeyPay"
+msgid "\"Account Details\" section on the Employment Hero dashboard"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/australia.rst:35
+msgid ""
+"The **Payroll URL** is pre-filled with `https://keypay.yourpayroll.com.au`. "
+"*Please do not change it.*"
+msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:37
 msgid ""
-"The **Payroll URL** is pre-filled with "
-"``https://keypay.yourpayroll.com.au``. *Please do not change it.*"
+"You can find the **Business ID** in the Employment Hero URL. (i.e., "
+"`189241`)"
 msgstr ""
-"El **URL de nómina** se completa automáticamente con "
-"``https://keypay.yourpayroll.com.au``. *No cambie esto.*"
-
-#: ../../content/applications/finance/fiscal_localizations/australia.rst:39
-msgid "You can find the **Business ID** in the KeyPay URL. (i.e., ``189241``)"
-msgstr ""
-"Puede encontrar la **ID Empresarial** en el URL de KeyPay (es decir, "
-"``189241``) "
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:0
-msgid "The KeyPay \"Business ID\" number is in the URL"
-msgstr "Número de \"ID empresarial\" de KeyPay en el URL"
+msgid "The Employment Hero \"Business ID\" number is in the URL"
+msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/australia.rst:45
+#: ../../content/applications/finance/fiscal_localizations/australia.rst:42
 msgid "You can choose any Odoo journal to post the payslip entries."
 msgstr ""
 "Para registrar los apuntes de nómina puede escoger cualquier diario Odoo"
 
-#: ../../content/applications/finance/fiscal_localizations/australia.rst:48
+#: ../../content/applications/finance/fiscal_localizations/australia.rst:45
 msgid "How does the API work?"
 msgstr "¿Cómo funciona la API?"
 
-#: ../../content/applications/finance/fiscal_localizations/australia.rst:50
+#: ../../content/applications/finance/fiscal_localizations/australia.rst:47
 msgid ""
-"The API syncs the journal entries from KeyPay to Odoo and leaves them in "
-"draft mode. The reference includes the KeyPay payslip entry ID in brackets "
-"for the user to easily retrieve the same record in KeyPay and Odoo."
+"The API syncs the journal entries from Employment Hero to Odoo and leaves "
+"them in draft mode. The reference includes the Employment Hero payslip entry"
+" ID in brackets for the user to easily retrieve the same record in "
+"Employment Hero and Odoo."
 msgstr ""
-"La API sincroniza los asientos de diario de KeyPay con Odoo y los deja en el"
-" modo de borrador. La referencia incluye el ID de entrada de la nómina de "
-"KeyPay entre paréntesis para que el usuario pueda recuperar fácilmente el "
-"mismo registro en KeyPay y Odoo."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst-1
-msgid "Example of a KeyPay Journal Entry in Odoo Accounting (Australia)"
+msgid ""
+"Example of a Employment Hero Journal Entry in Odoo Accounting (Australia)"
 msgstr ""
-"Ejemplo de un asiento contable de KeyPay en la aplicación Contabilidad de "
-"Odoo (Australia)"
 
-#: ../../content/applications/finance/fiscal_localizations/australia.rst:59
-msgid "The API sync is triggered by scheduled actions."
-msgstr "La sincronización con el API se activa con acciones programadas."
-
-#: ../../content/applications/finance/fiscal_localizations/australia.rst:0
-msgid "Scheduled Actions settings for KeyPay Payroll in Odoo (debug mode)"
+#: ../../content/applications/finance/fiscal_localizations/australia.rst:54
+msgid ""
+"By default, the synchronization happens once per week. You can fetch the "
+"records manually by going to :menuselection:`Accounting --> Configuration "
+"--> Settings` and, in the :guilabel:`Enable Employment Hero Integration` "
+"option, click on :guilabel:`Fetch Payruns Manually`."
 msgstr ""
-"Ajuste de acciones programadas en la nómina de KeyPay en Odoo (modo de "
-"solución de bugs)"
+
+#: ../../content/applications/finance/fiscal_localizations/australia.rst:58
+msgid ""
+"Employment Hero payslip entries also work based on double-entry bookkeeping."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/australia.rst:60
+msgid ""
+"The accounts used by Employment Hero are defined in the section "
+":guilabel:`Payroll settings`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/australia.rst-1
+msgid "Chart of Accounts menu in Employment Hero"
+msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:65
 msgid ""
-"KeyPay payslip entries also work based on double-entry bookkeeping. Debit "
-"must equal credit (like in Odoo)."
-msgstr ""
-"Los asientos de nómina de KeyPay también funcionan según la contabilidad por"
-" partida doble. El débito debe ser igual al crédito (como en Odoo)."
-
-#: ../../content/applications/finance/fiscal_localizations/australia.rst:68
-msgid ""
-"The accounts used by KeyPay are defined in the section **Payroll settings**."
-msgstr ""
-"Las cuentas que usa KeyPay se definen en la sección **Configuración de "
-"nómina**."
-
-#: ../../content/applications/finance/fiscal_localizations/australia.rst-1
-msgid "Chart of Accounts menu in KeyPay"
-msgstr "Menú del plan de cuentas en KeyPay"
-
-#: ../../content/applications/finance/fiscal_localizations/australia.rst:74
-msgid ""
 "For the API to work, you need to create the same accounts as the default "
-"accounts of your KeyPay business (**same name and same code**) in Odoo. You "
-"also need to choose the correct account types in Odoo to generate accurate "
-"financial reports."
+"accounts of your Employment Hero business (**same name and same code**) in "
+"Odoo. You also need to choose the correct account types in Odoo to generate "
+"accurate financial reports."
 msgstr ""
-"Para que la API funcione, debe crear las mismas cuentas como cuentas "
-"automáticas para su negocio con KeyPay (**con el mismo nombre y el mismo "
-"código**) en Odoo. También debe elegir los tipos de cuenta correctos en Odoo"
-" para generar reportes financieros precisos."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:3
 msgid "Belgium"
@@ -19686,7 +20100,7 @@ msgid ""
 "maintenance of cars. This means a part of these taxes is considered as an "
 "expense."
 msgstr ""
-"En Bélgica, algunos impuestos no son deducibles en tu totalidad, por "
+"En Bélgica, algunos impuestos no son deducibles en su totalidad, por "
 "ejemplo, los impuestos sobre el mantenimiento de automóviles. Esto significa"
 " que una parte de estos impuestos se considera un gasto."
 
@@ -20030,13 +20444,13 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:298
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:179
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:102
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:94
 msgid ":doc:`../accounting/customer_invoices/electronic_invoicing`"
 msgstr ":doc:`../accounting/customer_invoices/electronic_invoicing`"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:303
 msgid "Cash discount"
-msgstr ""
+msgstr "Descuento por pronto pago"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:305
 msgid ""
@@ -20044,12 +20458,18 @@ msgid ""
 "is calculated based on the discounted total amount, whether the customer "
 "benefits from the discount or not."
 msgstr ""
+"En Bélgica, si se ofrece un descuento por pronto pago en una factura, el "
+"impuesto se calcula sobre la base del importe total descontado, ya sea que "
+"el cliente se beneficie del descuento o no."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:308
 msgid ""
 "To apply the right tax amount and report it correctly in your VAT return, "
 "set the tax reduction as :guilabel:`Always (upon invoice)`."
 msgstr ""
+"Para aplicar el importe correcto al impuesto y colocarlo en su declaración "
+"fiscal, al elegir una reducción de impuestos seleccione :guilabel:`Siempre "
+"(al facturar)`."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:312
 msgid ":doc:`../accounting/customer_invoices/cash_discounts`"
@@ -20066,9 +20486,9 @@ msgid ""
 "System** for their receipts. This applies if their yearly earnings "
 "(excluding VAT, drinks, and take-away food) exceed 25,000 euros."
 msgstr ""
-"Por ley, los propietarios de empresas de cocina como restaurantes o food "
+"Por ley, los propietarios de negocios de cocina como restaurantes o food "
 "trucks en Bélgica deben utilizar un **sistema de caja registradora** "
-"certificada por el gobierno para sus recibos. Esto aplica si sus ganancias "
+"certificado por el gobierno para sus recibos. Esto aplica si sus ganancias "
 "anuales (sin incluir IVA, bebidas y órdenes para llevar) sobrepasan los 25 "
 "mil euros."
 
@@ -20079,6 +20499,10 @@ msgid ""
 "Data Module <belgium/fdm>` (or **black box**) and a :ref:`VAT Signing Card "
 "<belgium/vat>`."
 msgstr ""
+"Este sistema certificado por el gobierno requiere el uso de un :ref:`sistema"
+" PdV certificado <belgium/certified-pos>`, junto con un dispositivo "
+"denominado :ref:`módulo de datos fiscales <belgium/fdm>` (o **caja negra**) "
+"y una :ref:`tarjeta de firma de IVA <belgium/vat>`."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:328
 msgid ""
@@ -20173,7 +20597,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:371
 msgid "On a certified POS, you cannot:"
-msgstr "Si su PdV cuenta con la certificación, usted no puede:"
+msgstr "Si su PdV está certificado, no puede:"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:373
 msgid ""
@@ -20196,8 +20620,8 @@ msgid ""
 "Reprint receipts (the `pos_reprint` module is blacklisted and cannot be "
 "activated)."
 msgstr ""
-"Reimprimir recibos (el módulo `pos_reprint` se agrega a la lista negra y no "
-"se puede activar)."
+"Volver a imprimir recibos (el módulo `pos_reprint` se agrega a la lista "
+"negra y no se puede activar)."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:378
 msgid "Modify prices in order lines."
@@ -20209,7 +20633,7 @@ msgstr "Modificar o eliminar líneas en las órdenes de PdV."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:380
 msgid "Sell products without a valid VAT number."
-msgstr "Vender productos sin un IVA válido."
+msgstr "Vender productos sin un número de IVA válido."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:381
 msgid "Use a POS that is not connected to an IoT box."
@@ -20235,12 +20659,11 @@ msgid ""
 ":guilabel:`Advanced Options` and enable :guilabel:`Included in Price`."
 msgstr ""
 "Se deben configurar los impuestos como incluidos en el precio. Para hacerlo,"
-" vaya a :menuselection:`Punto de venta --> Configuración --> Ajustes`, y, en"
-" la sección :guilabel:`Contabilidad`, abra el formulario de "
+" vaya a :menuselection:`Punto de venta --> Configuración --> Ajustes`. En la"
+" sección :guilabel:`Contabilidad`, abra el formulario de "
 ":guilabel:`impuestos de venta predeterminados` al hacer clic en la flecha a "
-"lado del campo impuestos de venta predeterminados. Ahí, haga clic en "
-":guilabel:`opciones avanzadas` y habilite la función :guilabel:`incluido en "
-"el precio`."
+"lado del campo correspondiente. Ahí, haga clic en :guilabel:`opciones "
+"avanzadas` y habilite la función :guilabel:`incluido en el precio`."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:390
 msgid ""
@@ -20251,10 +20674,10 @@ msgid ""
 msgstr ""
 "Al iniciar una sesión de PdV, los usuarios deben hacer clic en "
 ":guilabel:`empezar a trabajar` para registrar su hora de entrada. Esto "
-"permite el registro de órdenes de PdV. Si los usuarios no registran su hora "
-"de entrada, no podrán crear órdenes de PdV. Del mismo modo, deben hacer clic"
-" en :guilabel:`terminar de trabajar` para registrar su hora de salida al "
-"finalizar la sesión."
+"permite el registro de órdenes del PdV. Si los usuarios no registran su hora"
+" de entrada, no podrán crear órdenes en el PdV. Del mismo modo, deben hacer "
+"clic en :guilabel:`terminar de trabajar` para registrar su hora de salida al"
+" finalizar la sesión."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:395
 msgid ""
@@ -20266,7 +20689,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:400
 msgid "The Fiscal Data Module"
-msgstr "El módulo de datos fiscales"
+msgstr "Módulo de datos fiscales"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:402
 msgid ""
@@ -20277,10 +20700,10 @@ msgid ""
 "generated for each POS order and added to its receipt. This allows the "
 "government to verify that all revenue is declared."
 msgstr ""
-"El :abbr:`FDM (módulo de datos fiscales, por sus siglas en inglés)`, también"
+"El :abbr:`FDM (Módulo de datos fiscales, por sus siglas en inglés)`, también"
 " conocido como `caja negra <https://www.boîtenoire.be/fonctionnement>`_, es "
 "un dispositivo certificado por el gobierno que funciona en conjunto con la "
-"aplicación de Punto de venta y guarda la información de sus órdenes de PdV. "
+"aplicación Punto de venta y almacena la información de sus órdenes del PdV. "
 "De forma más concreta, se genera un **hash** (:dfn:`código único`) para cada"
 " orden de PdV y se agrega al recibo. Esto permite al gobierno verificar que "
 "se declaran los ingresos."
@@ -20330,7 +20753,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:422
 msgid "a receipt printer."
-msgstr "una impresora de recibo."
+msgstr "una impresora de recibos."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:427
 msgid "Black box module"
@@ -20341,8 +20764,8 @@ msgid ""
 "As a pre-requisite, :ref:`activate <general/install>` the `Belgian "
 "Registered Cash Register` module (technical name: `pos_blackbox_be`)."
 msgstr ""
-"Como prerrequisito, debe :ref:`activar <general/install>` el módulo `Sistema"
-" de Bélgica de registro de pagos en efectivo` (nombre técnico: "
+"Como requisito previo, debe :ref:`activar <general/install>` el módulo "
+"`Sistema de Bélgica de registro de pagos en efectivo` (nombre técnico: "
 "`pos_blackbox_be`)."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst-1
@@ -20359,13 +20782,13 @@ msgid ""
 " go to :menuselection:`HR settings tab --> Attendance/Point of Sale`, and "
 "fill in the :guilabel:`INSZ or BIS number` field."
 msgstr ""
-"Una vez que se active el módulo, agregue su número de registro de IVA en la "
+"Una vez que active el módulo, agregue su número de registro de IVA a la "
 "información de su empresa. Para configurarlo, vaya a :menuselection:`Ajustes"
-" --> Empresas --> Actualizar información` y completar el campo "
-":guilabel:`IVA`. Posteriormente, introduzca un número de registro nacional "
-"para cada trabajador que operará el sistema PdV. Para hacerlo, vaya a "
-":guilabel:`Empleados` y abra el formulario de un empleado. Ahí, vaya a "
-":menuselection:`pestaña Ajustes RR. HH. --> Asistencia/Punto de venta` y "
+" --> Empresas --> Actualizar información` y complete el campo "
+":guilabel:`IVA`. Después, introduzca un número de registro nacional para "
+"cada trabajador que operará el sistema PdV. Para hacerlo, vaya a "
+":guilabel:`Empleados` y abra el formulario de un empleado. Ahí, vaya a la "
+":menuselection:`pestaña de Ajustes RR. HH. --> Asistencia/Punto de venta` y "
 "complete el campo :guilabel:`número INSZ o BIS`."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst-1
@@ -20378,9 +20801,9 @@ msgid ""
 "Profile --> Preference tab`, and enter your INSZ or BIS number in the "
 "designated field."
 msgstr ""
-"Para introducir su información, haga clic en su avatar, vaya a "
-":menuselection:`Mi perfil --> pestaña Preferencias` e introduzca su número "
-"INSZ o BIS en el campo correspondiente."
+"Para ingresar su información, haga clic en su avatar, vaya a "
+":menuselection:`Mi perfil --> pestaña Preferencias` y escriba su número INSZ"
+" o BIS en el campo correspondiente."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:449
 msgid ""
@@ -20389,8 +20812,8 @@ msgid ""
 "stored within the black box."
 msgstr ""
 "Debe configurar la caja negra directamente en la base de datos de "
-"producción. Utilizarla en un entorno de prueba puede ocasionar que almacene "
-"datos incorrectos en la caja negra."
+"producción. Si la utiliza en un entorno de prueba puede ocasionar que se "
+"almacenen datos incorrectos en la caja negra."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:455
 msgid "IoT Box"
@@ -20426,10 +20849,10 @@ msgid ""
 " the IoT Box recognizes the FDM, go to the IoT homepage and scroll down the "
 ":guilabel:`IOT Device` section, which should display the FDM."
 msgstr ""
-"Una vez su caja IoT esté certificada, :doc:`conéctela "
+"Una vez que su caja IoT esté certificada, :doc:`conéctela "
 "<../../productivity/iot/config/connect>` a su base de datos. Para verificar "
 "que la caja IoT reconoce el FDM, vaya a la página de inicio de IoT y baje a "
-"la sección :guilabel:`dispositivo IoT`, el FDM debería figurar ahí."
+"la sección :guilabel:`dispositivo IoT`, el FDM debería aparecer ahí."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst-1
 msgid "Hardware status page on a registered IoT Box"
@@ -20710,7 +21133,7 @@ msgstr ""
 "representante legal del certificado."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:124
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:871
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:874
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:552
 msgid "Financial Reports"
 msgstr "Reportes financieros"
@@ -21218,7 +21641,7 @@ msgstr ""
 "documento."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:389
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:813
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:816
 msgid "Validation and DTE Status"
 msgstr "Validación y estado del DTE"
 
@@ -21241,8 +21664,8 @@ msgstr ""
 "automática y se agrega en el chatter."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:395
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:759
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:823
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:762
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:826
 msgid "The DTE SII status is set as: Pending to be sent."
 msgstr "El estado del DTE de SII se establece como: envío pendiente."
 
@@ -21976,7 +22399,15 @@ msgstr ""
 msgid "Delivery Guide from a Sales Process"
 msgstr "Guía de entrega a partir de un proceso de venta"
 
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:737
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:738
+msgid ""
+"A delivery guide should **not** be longer than one page or contain more than"
+" 60 product lines."
+msgstr ""
+"Una guía de envío **no** debe tener más de una página o más de 60 líneas de "
+"productos."
+
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:740
 msgid ""
 "When a Sales Order is created and confirmed, a Delivery Order is generated. "
 "After validating the Delivery Order, the option to create a Delivery Guide "
@@ -21990,7 +22421,7 @@ msgstr ""
 msgid "Create Delivery Guide Button"
 msgstr "Botón para crear una guía de entrega"
 
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:744
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:747
 msgid ""
 "When clicking on :guilabel:`Create Delivery Guide` for the first time, a "
 "warning message pops up, showing the following:"
@@ -22004,7 +22435,7 @@ msgstr ""
 "Ejemplo de un error de secuencia durante la creación de una guía de entrega "
 "en Odoo"
 
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:751
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:754
 msgid ""
 "This warning message means the user needs to indicate the next sequence "
 "number Odoo has to take to generate the Delivery Guide, and only only "
@@ -22019,11 +22450,11 @@ msgstr ""
 "correcta, Odoo utiliza el siguiente número de CAF disponible para generar la"
 " siguiente guía de entrega, y así sucesivamente."
 
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:756
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:759
 msgid "After the Delivery Guide is created:"
 msgstr "Después de crear la guía de entrega:"
 
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:758
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:761
 msgid ""
 "The DTE file (Electronic Tax Document) is automatically created and added to"
 " the chatter."
@@ -22035,8 +22466,8 @@ msgstr ""
 msgid "DTE Status in SII and creation of DTE/XML"
 msgstr "Estado de DTE en el SII y creación del DTE/XML"
 
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:765
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:829
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:768
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:832
 msgid ""
 "The DTE Status is automatically updated by Odoo with a scheduled action that"
 " runs every day at night. To get a response from the SII immediately, press "
@@ -22046,7 +22477,7 @@ msgstr ""
 "programada que se ejecuta cada noche. Si necesita obtener la respuesta del "
 "SII de inmediato, haga clic en el botón :guilabel:`enviar ahora al SII`."
 
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:768
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:771
 msgid ""
 "Once the Delivery Guide is sent, it may then be printed by clicking on the "
 ":guilabel:`Print Delivery Guide` button."
@@ -22058,11 +22489,11 @@ msgstr ""
 msgid "Printing Delivery Guide PDF"
 msgstr "Imprimir PDF de la guía de entrega "
 
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:776
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:779
 msgid "Electronic Receipt"
 msgstr "Boleta electrónica"
 
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:778
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:781
 msgid ""
 "To install the Electronic Receipt module, go to :menuselection:`Apps` and "
 "search for :guilabel:`Chile (l10n_cl)`. Then click :guilabel:`Install` on "
@@ -22073,7 +22504,7 @@ msgstr ""
 "haga clic en :guilabel:`instalar` en el módulo :guilabel:`Chile - Boleta "
 "electrónica`."
 
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:783
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:786
 msgid ""
 "*Chile - Electronic Receipt* has a dependency with *Chile - Facturación "
 "Electrónica*. Odoo will install the dependency automatically when the "
@@ -22083,7 +22514,7 @@ msgstr ""
 "Facturación electrónica*. Odoo instalará la dependencia de forma automática "
 "cuando se instala el módulo Guía de entrega de factura electrónica."
 
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:786
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:789
 msgid ""
 "This module contains the electronic receipt and daily sales report, which "
 "are automatically sent to SII."
@@ -22095,7 +22526,7 @@ msgstr ""
 msgid "Install Electronic Receipt module"
 msgstr "Instalación del módulo Boleta electrónica"
 
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:793
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:796
 msgid ""
 "Once all configurations have been made for Electronic Invoices (e.g., "
 "uploading a valid company certificate, setting up master data, etc.), "
@@ -22109,7 +22540,7 @@ msgstr ""
 "Consulte la :ref:`documentación sobre CAF <chile/caf-documentation>` para "
 "saber cómo obtener los CAF para boletas electrónicas."
 
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:798
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:801
 msgid ""
 "Electronic Receipts are useful when clients do not need an Electronic "
 "Invoice. By default, there is a partner in the database called *Anonymous "
@@ -22124,7 +22555,7 @@ msgstr ""
 "partner para boletas electrónicas o se puede crear un nuevo registro con el "
 "mismo propósito."
 
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:803
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:806
 msgid ""
 "Although Electronic Receipts should be used for final consumers with a "
 "generic RUT, it can also be used for specific partners. After the partners "
@@ -22143,7 +22574,7 @@ msgstr ""
 msgid "Select type of Document: (39) Boleta Electrónica"
 msgstr "Selección del tipo de documento: (39) Boleta electrónica"
 
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:815
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:818
 msgid ""
 "When all of the Electronic Receipt information is filled, either manually or"
 " automatically from a Sales Order, proceed to validate the receipt. By "
@@ -22158,11 +22589,11 @@ msgstr ""
 "correcta, asegúrese de editar el tipo de documento y cambiarlo a boleta "
 "electrónica."
 
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:820
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:823
 msgid "After the receipt is posted:"
 msgstr "Después de registrar la boleta:"
 
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:822
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:825
 msgid ""
 "The DTE file (Electronic Tax Document) is created automatically and added to"
 " the chatter."
@@ -22174,7 +22605,7 @@ msgstr ""
 msgid "DTE status in SII and creation of DTE/XML"
 msgstr "Estado de DTE en el SII y creación del DTE/XML"
 
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:832
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:835
 msgid ""
 "Please refer to the :ref:`DTE Workflow <chile/electronic-invoice-"
 "validation>` for Electronic Invoices as the workflow for Electronic Receipt "
@@ -22184,11 +22615,11 @@ msgstr ""
 "validation>` para facturas electrónicas, ya que el flujo de trabajo para "
 "boletas electrónicas sigue el mismo proceso."
 
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:836
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:839
 msgid "Daily Sales Report"
 msgstr "Reporte diario de ventas"
 
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:838
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:841
 msgid ""
 "Once Electronic Receipts have been created, the system creates a daily sales"
 " report containing all Electronic Receipts per day. This report is "
@@ -22209,7 +22640,7 @@ msgstr ""
 "Boletas electrónicas en el menú de reportes, en la sección reportes diarios "
 "de ventas"
 
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:846
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:849
 msgid "A list of daily reports is displayed with all daily DTE sent to SII."
 msgstr ""
 "Una lista de reportes diarios se muestra con todos los DTE diarios que se "
@@ -22219,7 +22650,7 @@ msgstr ""
 msgid "List of Daily Reports"
 msgstr "Lista de reportes diarios"
 
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:852
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:855
 msgid ""
 "If no Electronic Receipt was made on a particular day, the report is sent "
 "but it will not have any receipts in it. The report will also have an answer"
@@ -22235,7 +22666,7 @@ msgstr ""
 msgid "Daily Sales Book example"
 msgstr "Ejemplo de libro de ventas diario"
 
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:861
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:864
 msgid ""
 "For Chilean localization, note that the feature tax included in the price is"
 " *not* supported for the Electronic Receipt."
@@ -22244,7 +22675,7 @@ msgstr ""
 "\"impuestos incluidos en el precio\" *no* es compatible con las boletas "
 "electrónicas."
 
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:864
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:867
 msgid ""
 "If a Daily Sales Report has already been created for a specific day in "
 "another system, the daily report in Odoo will be rejected due to the "
@@ -22261,11 +22692,11 @@ msgstr ""
 " pueden verificar el estado de reporte ante el SII de forma manual o esperar"
 " a que Odoo actualice el estado por la noche."
 
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:874
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:877
 msgid "Balance Tributario de 8 Columnas"
 msgstr "Balance tributario de 8 columnas"
 
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:876
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:879
 msgid ""
 "This report presents the accounts in detail (with their respective "
 "balances), classifying them according to their origin and determining the "
@@ -22277,8 +22708,8 @@ msgstr ""
 "que tuvo la empresa en el periodo de tiempo evaluado, de manera que se tenga"
 " un conocimiento real y completo del estado de una empresa."
 
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:880
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:896
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:883
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:899
 msgid ""
 "You can find this report in :menuselection:`Accounting --> Accounting --> "
 "Reports`"
@@ -22292,11 +22723,11 @@ msgid ""
 msgstr ""
 "Columnas y datos que figuran en el reporte Balance Tributario de 8 Columnas."
 
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:887
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:890
 msgid "Propuesta F29"
 msgstr "Propuesta F29"
 
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:889
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:892
 msgid ""
 "The form F29 is a new system that the SII enabled to taxpayers, and that "
 "replaces the Purchase and Sales Books. This report is integrated by Purchase"
@@ -22309,7 +22740,7 @@ msgstr ""
 "finalidad es apoyar las transacciones relacionadas con el IVA para mejorar "
 "su control y declaración."
 
-#: ../../content/applications/finance/fiscal_localizations/chile.rst:893
+#: ../../content/applications/finance/fiscal_localizations/chile.rst:896
 msgid ""
 "This record is supplied by the electronic tax documents (DTE's) that have "
 "been received by the SII."
@@ -26519,6 +26950,7 @@ msgid "2-digits comparison"
 msgstr "Comparación de 2 dígitos "
 
 #: ../../content/applications/finance/fiscal_localizations/france.rst:184
+#: ../../content/applications/finance/payment_providers/authorize.rst:56
 msgid "Template"
 msgstr "Plantilla"
 
@@ -29503,38 +29935,15 @@ msgstr ""
 ":guilabel:`Sistema tributario`: el sistema tributario bajo el que se "
 "encuentra la empresa;"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:51
-msgid ""
-":guilabel:`PEC address email`: the certified email address of the company."
-msgstr ""
-":guilabel:`Dirección de correo electrónico PEC`: la dirección de correo "
-"electrónico certificada de la empresa."
-
 #: ../../content/applications/finance/fiscal_localizations/italy.rst-1
 msgid "Company information to provide"
 msgstr "Información de la empresa a proporcionar"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:58
-msgid "PEC mail"
-msgstr "Correo PEC"
-
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:60
-msgid ""
-"The **PEC email** is a specific type of **certified** email providing a "
-"legal equivalent to the traditional registered mail. The **PEC email** of "
-"the main company must be the same as the one registered by the **Agenzia "
-"delle Entrate** authorities."
-msgstr ""
-"El **correo PEC** es un tipo específico de correo electrónico "
-"**certificado** que proporciona un equivalente legal al correo certificado "
-"tradicional. El **correo PEC** de la empresa principal debe ser el mismo que"
-" el registrado por las autoridades de la **Agenzia delle Entrate**."
-
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:65
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:57
 msgid "E-invoicing"
 msgstr "Facturación electrónica"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:67
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:59
 msgid ""
 "The :abbr:`SdI (Sistema di Interscambio)` is the electronic invoicing system"
 " used in Italy. It enables to send and receive electronic invoices to and "
@@ -29546,7 +29955,7 @@ msgstr ""
 "electrónicas a y desde los clientes. Los documentos deben estar en formato "
 "XML y el sistema debe validarlos formalmente antes de entregarlos."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:71
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:63
 msgid ""
 "To be able to receive invoices and notifications, the :abbr:`SdI (Sistema di"
 " Interscambio)` service must be notified that the user's files are to be "
@@ -29560,17 +29969,17 @@ msgstr ""
 "configurar el :guilabel:`Codice Destinatario` en el portal de la **Agenzia "
 "Delle Entrate**."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:76
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:68
 msgid ""
 "Go to https://ivaservizi.agenziaentrate.gov.it/portale/ and authenticate;"
 msgstr ""
 "Vaya a https://ivaservizi.agenziaentrate.gov.it/portale/ y autentifique."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:77
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:69
 msgid "Go to section :menuselection:`Fatture e Corrispettivi`;"
 msgstr "Vaya a la sección :menuselection:`Fatture e Corrispettivi`."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:78
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:70
 msgid ""
 "Set the user as Legal Party for the VAT number you wish to configure the "
 "electronic address;"
@@ -29578,7 +29987,7 @@ msgstr ""
 "Configure el usuario como Parte Legal para el número de RFC que desea "
 "configurar a la dirección electrónica;"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:79
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:71
 msgid ""
 "In :menuselection:`Servizi Disponibili --> Fatturazione Elettronica --> "
 "Registrazione dell’indirizzo telematico dove ricevere tutte le fatture "
@@ -29590,11 +29999,11 @@ msgstr ""
 "elettroniche`, escriba el :guilabel:`Codice Destinatario` `K95IV18` de Odoo "
 "y confirme."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:84
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:76
 msgid "Electronic Data Interchange (EDI)"
 msgstr "Intercambio electrónico de datos (EDI)"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:86
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:78
 msgid ""
 "Odoo uses the **FatturaPA** :abbr:`EDI (Electronic Data Interchange)` format"
 " for the Italian localization and is enabled on the default journals when "
@@ -29607,7 +30016,7 @@ msgstr ""
 "**autorización para el procesamiento de archivos**, las **facturas** se "
 "envían en automático."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:91
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:83
 msgid ""
 "You can :ref:`enable electronic invoicing for other sales and purchase "
 "journals <e-invoicing/configuration>` than the default ones."
@@ -29616,7 +30025,7 @@ msgstr ""
 "ventas y compras <e-invoicing/configuration>` que no son los "
 "predeterminados."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:94
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:86
 msgid ""
 "You can check the current status of an invoice by the :guilabel:`Electronic "
 "invoicing` field. The XML file can be found in the **chatter** of the "
@@ -29630,11 +30039,11 @@ msgstr ""
 msgid "Electronic invoicing status (waiting for confirmation)"
 msgstr "Estado de facturación electrónica (en espera de confirmación)"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:105
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:97
 msgid "File processing authorization (Odoo)"
 msgstr "Autorización para el procesamiento de archivos (Odoo)"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:107
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:99
 msgid ""
 "Since the files are transmitted through Odoo's server before being sent to "
 "the :abbr:`SdI (Sistema di Interscambio)` or received by your database, you "
@@ -29648,15 +30057,15 @@ msgstr ""
 " datos. Vaya a :menuselection:`Contabilidad --> Configuración --> Ajustes "
 "--> Documentos de facturación electrónica`."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:112
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:104
 msgid "There are **three** modes available:"
 msgstr "Hay **tres** modos disponibles:"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:116
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:108
 msgid ":guilabel:`Demo`"
 msgstr ":guilabel:`Demo`"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:115
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:107
 msgid ""
 "This mode simulates an environment in which invoices are sent to the "
 "government. In this mode, invoices need to be *manually* downloaded as XML "
@@ -29666,11 +30075,11 @@ msgstr ""
 " este modo, las facturas se deben descargar *de manera manual* como archivos"
 " XML y cargar en el sitio web de la **Agenzia delle Entrate**."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:120
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:112
 msgid ":guilabel:`Test (experimental)`"
 msgstr ":guilabel:`Prueba (experimental)`"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:119
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:111
 msgid ""
 "This mode sends invoices to a non-production (i.e., test) service made "
 "available by the **Agenzia delle Entrate**. Saving this change directs all "
@@ -29681,11 +30090,11 @@ msgstr ""
 "cambio hace que todas las empresas en la base de datos utilicen esta "
 "configuración."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:123
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:115
 msgid ":guilabel:`Official`"
 msgstr ":guilabel:`Oficial`"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:123
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:115
 msgid ""
 "This is a production mode that sends your invoices directly to the **Agenzia"
 " delle Entrate**."
@@ -29693,7 +30102,7 @@ msgstr ""
 "Este es un modo de producción que envía sus facturas directamente a la "
 "**Agenzia delle Entrate**."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:125
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:117
 msgid ""
 "Once a mode is selected, you need to accept the **terms and conditions** by "
 "ticking :guilabel:`Allow Odoo to process invoices`, and then "
@@ -29704,7 +30113,7 @@ msgstr ""
 "después haga clic en :guilabel:`Guardar`, ahora puede registrar sus "
 "transacciones en Contabilidad de Odoo."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:130
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:122
 msgid ""
 "Selecting either :guilabel:`Test (experimental)` or :guilabel:`Official` is "
 "**irreversible**. Once in :guilabel:`Official` mode, it is not possible to "
@@ -29718,7 +30127,7 @@ msgstr ""
 "lo mismo sucede con :guilabel:`Test (experimental)`. Recomendamos crear una "
 "base de datos separada solo con fines de prueba."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:136
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:128
 msgid ""
 "When in :guilabel:`Test (Experimental)` mode, all invoices sent *must* have "
 "a partner using one of the following fake :guilabel:`Codice Destinatario` "
@@ -29737,12 +30146,12 @@ msgstr ""
 msgid "Italy's electronic document invoicing options"
 msgstr "Opciones de facturación electrónica de documentos de Italia"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:146
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:138
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
 msgid "Taxes configuration"
 msgstr "Configuración de impuestos"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:148
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:140
 msgid ""
 "Many of the e-invoicing features are implemented using Odoo's tax system. As"
 " such, it is very important that taxes are properly configured in order to "
@@ -29761,25 +30170,25 @@ msgstr ""
 "que el cliente le paga el IVA *por su cuenta* al gobierno. Hay **dos** tipos"
 " principales:"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:155
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:147
 msgid ":ref:`external reverse charge <italy/external-reverse>`;"
 msgstr ":ref:`cobro revertido externo <italy/external-reverse>`;"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:156
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:148
 msgid ":ref:`internal reverse charge  <italy/internal-reverse>`."
 msgstr ":ref:`cobro revertido interno  <italy/internal-reverse>`."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:161
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:153
 msgid "External reverse charge"
 msgstr "Cobro revertido externo"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:164
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:395
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:156
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:387
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:212
 msgid "Invoices"
 msgstr "Facturas"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:166
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:158
 msgid ""
 "To make an export invoice, make sure that the invoice lines all use a tax "
 "configured for **reverse charge**. The **Italian** localization contains an "
@@ -29805,7 +30214,7 @@ msgstr ""
 msgid "External reverse charge settings"
 msgstr "Ajustes de cobro revertido externo"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:178
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:170
 msgid ""
 "If you need to use a different kind of :guilabel:`Exoneration`, click "
 ":menuselection:`Action --> Duplicate` within the tax menu to create a copy "
@@ -29820,7 +30229,7 @@ msgstr ""
 "proceso tantas veces según necesite diferentes tipos de "
 ":guilabel:`Exoneración` de impuestos."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:184
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:176
 msgid ""
 "**Rename** your taxes in the :guilabel:`Name` field according to their "
 ":guilabel:`Exoneration` to differentiate them easily."
@@ -29828,7 +30237,7 @@ msgstr ""
 "**Renombre** sus impuestos en el campo :guilabel:`Nombre` según su "
 ":guilabel:`exoneración` para diferenciarlos con facilidad."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:187
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:179
 msgid ""
 "On your invoice, select the corresponding tax you need in the "
 ":guilabel:`Taxes` field. You can find the following **additional info** by "
@@ -29838,7 +30247,7 @@ msgstr ""
 "campo :guilabel:`Impuestos`. Puede encontrar la siguiente **información "
 "adicional** abriendo el archivo **XML** de la factura emitida:"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:190
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:182
 msgid ""
 ":guilabel:`SdI address (Codice Destinatario)`: must be filled for both "
 "**EU** or **non-EU**;"
@@ -29846,7 +30255,7 @@ msgstr ""
 ":guilabel:`Dirección del SdI (Codice Destinatario)`: este campo se debe "
 "completar si pertenece a la **UE** y también si **no pertenece a la UE**;"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:191
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:183
 msgid ""
 ":guilabel:`Country Id`: must contain the country of the foreign seller in "
 "the two-letter ISO (Alpha-2) code (ex., `IT` for 'Italy');"
@@ -29854,11 +30263,11 @@ msgstr ""
 ":guilabel:`ID del país`: debe contener el país del vendedor extranjero en el"
 " código ISO de dos letras (Alfa-2) (por ejemplo, `IT` para \"Italia\");"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:193
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:185
 msgid ":guilabel:`CAP`: must be filled with `00000`;"
 msgstr ":guilabel:`CAP`: este campo se debe completar con `00000`;"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:194
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:186
 msgid ""
 ":guilabel:`Partita Iva` (**VAT number**): must contain the **VAT** number "
 "for **EU businesses** and `OO99999999999` (double 'O' **letter**, not "
@@ -29870,7 +30279,7 @@ msgstr ""
 " las **empresas que no están en la UE**. En el caso de clientes privados sin"
 " **NIF** utilice `0000000`;"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:197
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:189
 msgid ""
 ":guilabel:`Fiscal Code`: for foreign entities without an actual **Codice "
 "Fiscale**, any recognizable identifier is valid."
@@ -29878,11 +30287,11 @@ msgstr ""
 ":guilabel:`Código fiscal`: para entidades extranjeras sin un **Codice "
 "Fiscale** cualquier identificador reconocible es válido."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:201
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:193
 msgid "Odoo does not support sending user-modified XML files."
 msgstr "Odoo no admite el envío de archivos XML modificados por el usuario."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:203
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:195
 msgid ""
 "For **invoices**, multiple configurations are technically identified by a "
 ":guilabel:`Tipo Documento` code:"
@@ -29890,35 +30299,35 @@ msgstr ""
 "Para las **facturas**, las configuraciones múltiples están técnicamente "
 "identificadas por un código :guilabel:`Tipo Documento`:"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:206
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:198
 msgid "`TD02` - Down payments;"
 msgstr "`TD02` - Anticipos;"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:207
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:199
 msgid "`TDO7` - Simplified invoice;"
 msgstr "`TDO7` - Factura simplificada;"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:208
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:200
 msgid "`TD08` - Simplified credit note;"
 msgstr "`TD08` - Nota de crédito simplificada;"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:209
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:201
 msgid "`TD09` - Simplified debit note;"
 msgstr "`TD09` - Nota de débito simplificada;"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:210
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:202
 msgid "`TD24` - Deferred invoice."
 msgstr "`TD24` - Factura diferida."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:214
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:206
 msgid "`TD02`"
 msgstr "`TD02`"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:216
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:208
 msgid "Down payments."
 msgstr "Anticipos."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:218
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:210
 msgid ""
 "**Down payment** invoices are imported/exported with a different "
 ":guilabel:`Tipo Documento` code `TDO2` than regular invoices. Upon import of"
@@ -29928,18 +30337,18 @@ msgstr ""
 " :guilabel:`Tipo Documento` distinto a las facturas regulares. Al importar "
 "la factura, crea una factura de vendedor regular."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:222
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:214
 msgid "Odoo exports moves as `TD02` if the following conditions are met:"
 msgstr ""
 "Odoo exporta los movimientos como `TD02` si se cumplen las siguientes "
 "condiciones:"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:224
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:282
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:216
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:274
 msgid "Is an invoice;"
 msgstr "Es una factura,"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:225
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:217
 msgid ""
 "All invoice lines are related to **sales order lines** that have the flag "
 "`is_downpayment` set as `True`."
@@ -29948,15 +30357,15 @@ msgstr ""
 "órdenes de venta** que tienen el indicador `is_downpayment` establecido como"
 " `True`."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:228
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:220
 msgid "`TD07`, `TD08`, and `TD09`"
 msgstr "`TD07`, `TD08` y `TD09`"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:230
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:222
 msgid "Simplified invoices, and credit/debit notes."
 msgstr "Facturas simplificadas y notas de crédito y débito."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:232
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:224
 msgid ""
 "Simplified invoices and credit notes can be used to certify **domestic "
 "transactions** under **400 EUR** (VAT included). Its status is the same as a"
@@ -29967,11 +30376,11 @@ msgstr ""
 "incluido). Su estado es el mismo que una factura normal, pero con menos "
 "requisitos de información."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:236
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:228
 msgid "For a **simplified** invoice to be established, it must include:"
 msgstr "Para establecer una factura **simplificada**, debe incluir:"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:238
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:230
 msgid ""
 ":guilabel:`Customer Invoice` reference: **unique** numbering sequence with "
 "**no gaps**;"
@@ -29979,11 +30388,11 @@ msgstr ""
 "Referencia de la :guilabel:`factura del cliente`: secuencia de numeración "
 "**única sin espacios**;"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:239
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:231
 msgid ":guilabel:`Invoice Date`: issue **date** of the invoice;"
 msgstr ":guilabel:`Fecha de factura`: **fecha** de emisión de la factura;"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:240
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:232
 msgid ""
 ":guilabel:`Company Info`: the **seller**'s full credentials (VAT/TIN number,"
 " name, full address) under :menuselection:`General Settings --> Companies "
@@ -29993,18 +30402,18 @@ msgstr ""
 "**vendedor** (NIF/TIN, nombre, dirección completa) en "
 ":menuselection:`Ajustes generales --> Empresas (sección)`;"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:242
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:234
 msgid ""
 ":guilabel:`VAT`: the **buyer**'s VAT/TIN number (on their profile card);"
 msgstr ""
 ":guilabel:`NIF`: el NIF/TIN del **comprador** (en su tarjeta de perfil);"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:243
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:235
 msgid ":guilabel:`Total`: the total **amount** (VAT included) of the invoice."
 msgstr ""
 ":guilabel:`Total`: el **importe** total (con IVA incluido) de la factura."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:245
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:237
 msgid ""
 "In the :abbr:`EDI (Electronic Data Interchange)`, Odoo exports invoices as "
 "simplified if:"
@@ -30012,16 +30421,16 @@ msgstr ""
 "In the :abbr:`EDI (Intercambio electrónico de datos)`, Odoo exporta facturas"
 " de forma simplificada si:"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:247
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:239
 msgid "It is a **domestic** transaction (i.e., the partner is from Italy);"
 msgstr "Es una transacción **nacional** (es decir, el partner es de Italia);"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:248
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:240
 msgid "The buyer's data is **insufficient** for a regular invoice;"
 msgstr ""
 "Los datos del comprador son **insuficientes** para una factura regular;"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:249
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:241
 msgid ""
 "The **required fields** for a regular invoice (address, ZIP code, city, "
 "country) are provided;"
@@ -30029,11 +30438,11 @@ msgstr ""
 "Se proporcionan los **campos obligatorios** para una factura ordinaria "
 "(dirección, código postal, ciudad, país);"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:251
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:243
 msgid "The total amount VAT included is **less** than **400 EUR**."
 msgstr "El importe total con IVA incluido es **menor** a **400 EUR**."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:254
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:246
 msgid ""
 "The 400 EUR threshold was defined in `the decree of the 10th of May 2019 in "
 "the Gazzetta Ufficiale "
@@ -30045,15 +30454,15 @@ msgstr ""
 "<https://www.gazzettaufficiale.it/eli/id/2019/05/24/19A03271/sg>`_. "
 "Recomendamos que verifique el valor oficial actual."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:258
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:250
 msgid "`TD24`"
 msgstr "`TD24`"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:260
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:252
 msgid "Deferred invoices."
 msgstr "Facturas diferidas."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:262
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:254
 msgid ""
 "The **deferred invoice** is an invoice that is **issued at a later time** "
 "than the sale of goods or the provision of services. A **deferred invoice** "
@@ -30065,7 +30474,7 @@ msgstr ""
 "emitirse a más tardar el **quinceavo día** del mes siguiente a la entrega "
 "cubierta por el documento."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:266
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:258
 msgid ""
 "It usually is a **summary invoice** containing a list of multiple sales of "
 "goods or services, carried out in the month. The business is allowed to "
@@ -30079,7 +30488,7 @@ msgstr ""
 "**final del mes** a efectos contables. Las facturas diferidas son, de forma "
 "predeterminada, para el **distribuidor** que tiene clientes recurrentes."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:271
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:263
 msgid ""
 "If the goods are transported by a **carrier**, every delivery has an "
 "associated **Documento di Transporto (DDT)**, or **Transport Document**. The"
@@ -30091,7 +30500,7 @@ msgstr ""
 " factura diferida **debe** indicar los detalles de toda la información del "
 "**DDT** para tener un mejor seguimiento."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:276
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:268
 msgid ""
 "E-invoicing of deferred invoices requires the `l10n_it_stock_ddt` "
 ":ref:`module <italy/modules>`. In this case, a dedicated :guilabel:`Tipo "
@@ -30102,13 +30511,13 @@ msgstr ""
 " el :guilabel:`Tipo Documento` específico `TD24` para la factura "
 "electrónica."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:280
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:272
 msgid "Odoo exports moves as `TD24` if the following conditions are met:"
 msgstr ""
 "Odoo exporta los movimientos como `TD24` si se cumplen las siguientes "
 "condiciones:"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:283
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:275
 msgid ""
 "Is associated to deliveries whose **DDTs** have a **different** date than "
 "the issuance date of the invoice."
@@ -30116,7 +30525,7 @@ msgstr ""
 "Está asociada a entregas cuyos **DDT** tienen una fecha **distinta** a la "
 "fecha de emisión de la factura."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:289
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:281
 msgid ""
 "Italian companies buying goods or services from EU countries (or services "
 "from non-EU countries) must send the information contained within the bill "
@@ -30139,7 +30548,7 @@ msgstr ""
 ":guilabel:`Cedente/Prestatore`, y las credenciales de su empresa como "
 ":guilabel:`Cessionario/Committente`."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:298
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:290
 msgid ""
 "Self-billing invoices or VAT invoice integrations must be issued and sent to"
 " the tax agency."
@@ -30147,7 +30556,7 @@ msgstr ""
 "Las autofacturas o las integraciones de facturas con IVA se deben emitir y "
 "enviar a la agencia tributaria."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:300
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:292
 msgid ""
 "When inputting taxes in a vendor bill, it is possible to select **reverse "
 "charge** taxes. These are automatically activated in the Italian fiscal "
@@ -30166,7 +30575,7 @@ msgstr ""
 "en automático para garantizar el registro de los asientos contables y la "
 "visualización del reporte de impuestos."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:306
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:298
 msgid ""
 "For **vendor bills**, **three** types of configurations are technically "
 "identified by a code called :guilabel:`Tipo Documento`:"
@@ -30175,17 +30584,17 @@ msgstr ""
 "se identifican técnicamente mediante un código conocido como :guilabel:`Tipo"
 " Documento`:"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:309
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:301
 msgid "`TD17` - Buying services from **EU** and **non-EU** countries;"
 msgstr ""
 "`TD17` - Compra de servicios a países de la **UE** y que **no pertenecen a "
 "la UE**;"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:310
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:302
 msgid "`TD18` - Buying **goods** from **EU**;"
 msgstr "`TD18` - Compra de **bienes** de la **UE**;"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:311
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:303
 msgid ""
 "`TD19` - Buying **goods** from a **foreign** vendor, but the **goods** are "
 "already in **Italy** in a **VAT deposit**."
@@ -30194,17 +30603,17 @@ msgstr ""
 "**bienes** se encuentran en **Italia** en un **almacén donde se aprovisionan"
 " sin estar sujetos al IVA**."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:316
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:308
 msgid "`TD17`"
 msgstr "`TD17`"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:318
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:310
 msgid "Buying **services** from **EU** and **non-EU** countries:"
 msgstr ""
 "Compra de **servicios** a países de la **UE** y que **no pertenecen a la "
 "UE**:"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:320
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:312
 msgid ""
 "The foreign *seller* invoices a service with a **VAT-excluded** price, as it"
 " is not taxable in Italy. The VAT is paid by the *buyer* in Italy;"
@@ -30212,7 +30621,7 @@ msgstr ""
 "El *vendedor* extranjero factura un servicio con un precio **sin IVA** ya "
 "que no es imponible en el país. El IVA lo paga el *comprador* en Italia;"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:323
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:315
 msgid ""
 "Within EU: the *buyer* integrates the invoice received with the **VAT "
 "information** due in Italy (i.e., **vendor bill tax integration**);"
@@ -30221,30 +30630,30 @@ msgstr ""
 "**información IVA** que se debe presentar en Italia (es decir, **integración"
 " fiscal de la factura del proveedor**);"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:325
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:317
 msgid ""
 "Non-EU: the *buyer* sends themselves an invoice (i.e., **self-billing**)."
 msgstr ""
 "Fuera de la UE: el *comprador* se envía a sí mismo la factura (es decir, se "
 "**autofactura**)."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:327
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:319
 msgid ""
 "Odoo exports a transaction as `TD17` if the following conditions are met:"
 msgstr ""
 "Odoo exporta la transacción como `TD17` si se cumplen las siguientes "
 "condiciones: "
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:329
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:343
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:359
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:419
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:321
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:335
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:351
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:411
 msgid "Is a vendor bill;"
 msgstr "Es una factura de proveedor;"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:330
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:344
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:420
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:322
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:336
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:412
 msgid ""
 "At least one tax on the invoice lines targets the tax grids :ref:`VJ "
 "<italy/grids>`;"
@@ -30252,7 +30661,7 @@ msgstr ""
 "Al menos un impuesto en las líneas de la factura está dirigido a las tablas "
 "de impuestos :ref:`VJ <italy/grids>`;"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:331
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:323
 msgid ""
 "All invoice lines either have :guilabel:`Services` as **products**, or a tax"
 " with the :guilabel:`Services` as **tax scope**."
@@ -30261,15 +30670,15 @@ msgstr ""
 "**productos** o un impuesto con :guilabel:`servicios` como **ámbito del "
 "impuesto**."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:334
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:326
 msgid "`TD18`"
 msgstr "`TD18`"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:336
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:328
 msgid "Buying **goods** from **EU**:"
 msgstr "Compra de **bienes** de la **UE**:"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:338
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:330
 msgid ""
 "Invoices issued within the EU follow a **standard format**, therefore only "
 "an integration of the existing invoice is required."
@@ -30277,14 +30686,14 @@ msgstr ""
 "Las facturas emitidas en la UE cumplen con un **formato estándar**, por lo "
 "que solo se requiere una integración de la factura existente."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:341
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:333
 msgid ""
 "Odoo exports a transaction as `TD18` if the following conditions are met:"
 msgstr ""
 "Odoo exporta la transacción como `TD18` si se cumplen las siguientes "
 "condiciones: "
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:345
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:337
 msgid ""
 "All invoice lines either have :guilabel:`Consumable` as **products**, or a "
 "tax with the :guilabel:`Goods` as **tax scope**."
@@ -30293,11 +30702,11 @@ msgstr ""
 "**productos** o un impuesto con :guilabel:`bienes` como **ámbito del "
 "impuesto**."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:348
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:340
 msgid "`TD19`"
 msgstr "`TD19`"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:350
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:342
 msgid ""
 "Buying **goods** from a **foreign** vendor, but the **goods** are already in"
 " **Italy** in a **VAT deposit**:"
@@ -30306,7 +30715,7 @@ msgstr ""
 "encuentran en **Italia** en un **almacén donde se aprovisionan sin estar "
 "sujetos al IVA**:"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:353
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:345
 msgid ""
 "From EU: the *buyer* integrates the invoice received with the **VAT "
 "information** due in Italy (i.e., **vendor bill tax integration**);"
@@ -30315,7 +30724,7 @@ msgstr ""
 "IVA** que se debe presentar en Italia (es decir, **integración fiscal de la "
 "factura del proveedor**);"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:355
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:347
 msgid ""
 "Non-EU: the *buyer* sends an invoice to *themselves* (i.e., **self-"
 "billing**)."
@@ -30323,13 +30732,13 @@ msgstr ""
 "Fuera de la UE: el *comprador* se envía a sí mismo la factura (es decir, se "
 "**autofactura**)."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:357
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:349
 msgid "Odoo exports a move as a `TD19` if the following conditions are met:"
 msgstr ""
 "Odoo exporta el movimiento como `TD19` si se cumplen las siguientes "
 "condiciones:"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:360
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:352
 msgid ""
 "At least one tax on the invoice lines targets the tax grid :ref:`VJ3 "
 "<italy/grids>`;"
@@ -30337,7 +30746,7 @@ msgstr ""
 "Al menos un impuesto en las líneas de la factura está dirigido a la tabla de"
 " impuestos :ref:`VJ3 <italy/grids>`;"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:361
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:353
 msgid ""
 "All invoice lines either have :guilabel:`Consumable` products, or a tax with"
 " :guilabel:`Goods` as tax scope."
@@ -30345,7 +30754,7 @@ msgstr ""
 "Todas las líneas de la factura tienen productos :guilabel:`consumibles` o un"
 " impuesto con :guilabel:`bienes` como **ámbito del impuesto**."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:365
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:357
 msgid ""
 "Odoo does not offer the `Conservazione Sostitutiva "
 "<https://www.agid.gov.it/index.php/it/piattaforme/conservazione>`_ "
@@ -30357,11 +30766,11 @@ msgstr ""
 "proveedores y la **Agenzia delle Entrate** suministran almacenamiento "
 "gratuito y certificado para cumplir con las condiciones solicitadas."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:373
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:365
 msgid "Internal reverse charge"
 msgstr "Cobro revertido interno"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:376
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:368
 msgid ""
 "Odoo currently does not support domestic **internal reverse charge** "
 "processes."
@@ -30369,11 +30778,11 @@ msgstr ""
 "Por el momento, Odoo no es compatible con los procesos nacionales de **cobro"
 " revertido interno**."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:381
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:373
 msgid "'Reverse Charge' tax grids"
 msgstr "Tablas de impuestos de 'cobro revertido'"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:383
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:375
 msgid ""
 "The Italian localization has a specific **tax grid** section for **reverse "
 "charge** taxes. These tax grids are identifiable by the :ref:`VJ "
@@ -30390,11 +30799,11 @@ msgstr ""
 msgid "Italian reverse charge tax grids"
 msgstr "Tablas italianas de impuestos de cobro revertido"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:392
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:384
 msgid "San Marino"
 msgstr "San Marino"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:397
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:389
 msgid ""
 "San Marino and Italy have special agreements on e-invoicing operations. As "
 "such, **invoices** follow the regular **reverse charge** rules. Additional "
@@ -30406,7 +30815,7 @@ msgstr ""
 "**cobro revertido**. Odoo no aplica los requisitos adicionales, sin embargo,"
 " el **Estado** le pide al usuario que:"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:401
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:393
 msgid ""
 "Select a tax with the option :guilabel:`Has exoneration of tax (Italy)` "
 "ticked, and the :guilabel:`Exoneration` set to `N3.3`;"
@@ -30415,7 +30824,7 @@ msgstr ""
 "impuestos (Italia)` marcada y la :guilabel:`exoneración` establecida como "
 "`N3.3`;"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:403
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:395
 msgid ""
 "Use the generic :abbr:`SdI (Sistema di Interscambio)` :guilabel:`Codice "
 "Destinatario` `2R4GT08`. The invoice is then routed by a dedicated office in"
@@ -30425,11 +30834,11 @@ msgstr ""
 "(Sistema di Interscambio)`. Después, una oficina especializada en San Marino"
 " la envía a la empresa correspondiente."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:407
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:399
 msgid "Bills"
 msgstr "Facturas"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:409
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:401
 msgid ""
 "When a **paper bill** is received from San Marino, any Italian company "
 "**must** submit that invoice to the **Agenzia delle Entrate** by indicating "
@@ -30441,25 +30850,25 @@ msgstr ""
 "indicando en el campo :guilabel:`Tipo Documento` de la factura electrónica "
 "con el valor especial `TD28`."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:415
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:407
 msgid "`TD28`"
 msgstr "`TD28`"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:417
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:409
 msgid "Odoo exports a move as `TD28` if the following conditions are met:"
 msgstr ""
 "Odoo exporta el movimiento como `TD28` si se cumplen las siguientes "
 "condiciones:"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:421
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:413
 msgid "The **country** of the partner is **San Marino**."
 msgstr "El **país** del partner es **San Marino**."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:424
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:416
 msgid "Pubblica amministrazione (B2G)"
 msgstr "Pubblica amministrazione (B2G)"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:427
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:419
 msgid ""
 "Odoo does **not** send invoices directly to the government as they need to "
 "be signed. If we see that the codice destinatario is 6 digits, then it is "
@@ -30471,11 +30880,11 @@ msgstr ""
 "envía a PA de manera automática, pero puede descargar el XML, firmarlo con "
 "un programa externo y enviarlo a través del portal."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:432
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:424
 msgid "Digital qualified signature"
 msgstr "Firma digital calificada"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:434
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:426
 msgid ""
 "For invoices and bills intended to the **Pubblica Amministrazione (B2G)**, a"
 " **Digital Qualified Signature** is required for all files sent through the "
@@ -30487,24 +30896,24 @@ msgstr ""
 "enviados a través del :abbr:`SdI (Sistema di Interscambio)`. El archivo "
 "**XML** debe certificarse mediante un certificado que sea:"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:438
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:430
 msgid "a **smart card**;"
 msgstr "una **tarjeta inteligente**;"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:439
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:431
 msgid "a **USB token**;"
 msgstr "un **token USB**;"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:440
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:432
 msgid "a **Hardware Security Module (HSM)**."
 msgstr ""
 "un **módulo de seguridad de hardware (HSM, por sus siglas en inglés)**."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:443
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:435
 msgid "CIG, CUP, DatiOrdineAcquisto"
 msgstr "CIG, CUP, DatiOrdineAcquisto"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:445
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:437
 msgid ""
 "To ensure the effective traceability of payments by public administrations, "
 "electronic invoices issued to the public administrations must contain:"
@@ -30512,7 +30921,7 @@ msgstr ""
 "Para garantizar el seguimiento correcto de los pagos de las administraciones"
 " públicas, las facturas electrónicas que se les expiden deben contener:"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:448
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:440
 msgid ""
 "The :abbr:`CIG (Codice Identificativo Gara)`, except in cases of exclusion "
 "from traceability obligations provided by law n. 136 of August 13, 2010;"
@@ -30521,7 +30930,7 @@ msgstr ""
 "exclusión de las obligaciones de seguimiento previstas por la Ley número 136"
 " del 13 de agosto de 2010;"
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:450
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:442
 msgid ""
 "The :abbr:`CUP (Codice Unico di Progetto)`, in case of invoices related to "
 "public works."
@@ -30529,7 +30938,7 @@ msgstr ""
 "El :abbr:`CUP (Codice Unico di Progetto)` en el caso de las facturas "
 "relacionadas con obras públicas."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:452
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:444
 msgid ""
 "If the **XML** file requires it, the **Agenzia Delle Entrate** can *only* "
 "proceed payments of electronic invoices when the **XML** file contains a "
@@ -30547,7 +30956,7 @@ msgstr ""
 " único que permite al :abbr:`SdI (Sistema di Interscambio)` entregar "
 "correctamente la factura electrónica a la oficina receptora."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:460
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:452
 msgid ""
 "The :abbr:`Codice Unico di Progetto)` and the :abbr:`CIG (Codice "
 "Identificativo Gara)` must be included in one of the **2.1.2** "
@@ -30567,7 +30976,7 @@ msgstr ""
 "tabla se puede encontrar en el `sitio web <http://www.fatturapa.gov.it/>`_ "
 "del gobierno."
 
-#: ../../content/applications/finance/fiscal_localizations/italy.rst:466
+#: ../../content/applications/finance/fiscal_localizations/italy.rst:458
 msgid ""
 "The :abbr:`CUU (Codice Univoco Ufficio)` must be included in the electronic "
 "invoice corresponding to the element **1.1.4** "
@@ -37316,7 +37725,7 @@ msgstr ""
 "configurando. Vea la documentación para más información. "
 
 #: ../../content/applications/finance/payment_providers.rst:343
-#: ../../content/applications/finance/payment_providers/authorize.rst:40
+#: ../../content/applications/finance/payment_providers/authorize.rst:39
 #: ../../content/applications/finance/payment_providers/stripe.rst:122
 msgid "Configuration tab"
 msgstr "Pestaña de configuración"
@@ -37577,7 +37986,7 @@ msgstr ":ref:`payment_providers/add_new`"
 #: ../../content/applications/finance/payment_providers/adyen.rst:163
 #: ../../content/applications/finance/payment_providers/alipay.rst:39
 #: ../../content/applications/finance/payment_providers/asiapay.rst:41
-#: ../../content/applications/finance/payment_providers/authorize.rst:53
+#: ../../content/applications/finance/payment_providers/authorize.rst:138
 #: ../../content/applications/finance/payment_providers/buckaroo.rst:63
 #: ../../content/applications/finance/payment_providers/flutterwave.rst:44
 #: ../../content/applications/finance/payment_providers/mercado_pago.rst:30
@@ -37872,7 +38281,7 @@ msgid "Allows payments originated from a specific domain."
 msgstr "Permite pagos originados desde un dominio específico. "
 
 #: ../../content/applications/finance/payment_providers/adyen.rst:137
-#: ../../content/applications/finance/payment_providers/authorize.rst:43
+#: ../../content/applications/finance/payment_providers/authorize.rst:42
 #: ../../content/applications/finance/payment_providers/stripe.rst:127
 msgid "Place a hold on a card"
 msgstr "Hacer una retención de tarjeta de crédito"
@@ -38304,26 +38713,20 @@ msgstr ""
 msgid ""
 "If you are trying Authorize.Net as a test, with a *sandbox account*, change "
 "the :guilabel:`State` to :guilabel:`Test Mode`. We recommend doing this on a"
-" test Odoo database, rather than on your main database."
+" test Odoo database, rather than on your main database. If you set "
+":guilabel:`Test Mode` on Odoo and use an authorize.net account instead of a "
+"sandbox.authorize.net account, it results in the following error: *The "
+"merchant login ID or password is invalid or the account is inactive*."
 msgstr ""
-"Si está probando Authorize.Net con una *cuenta sandbox* , cambie el "
-":guilabel:`Estado` a :guilabel:`Modo de prueba`. Le recomendamos hacerlo en "
-"una base de datos de prueba de Odoo, en vez de hacerlo en su base de datos "
-"principal. "
+"Su está usando Authorize.Net de prueba con una **cuenta sandbox**, cambie el"
+" :guilabel:`Estado` a :guilabel:`Modo de prueba`. Le recomendamos hacer esto"
+" en una base de datos de prueba de Odoo, en lugar de usar su base de datos "
+"principal. Si establece el :guilabel:`Modo de prueba` en Odoo y utiliza una "
+"cuenta de authorize.net en lugar de una cuenta sandbox.authorize.net, "
+"ocurrirá el siguiente error: *El ID o contraseña del comerciante no es "
+"válido o la cuenta está inactiva*.  "
 
-#: ../../content/applications/finance/payment_providers/authorize.rst:35
-msgid ""
-"If you set :guilabel:`Test Mode` on Odoo and use an authorize.net account "
-"instead of a sandbox.authorize.net account, it results in the following "
-"error: *The merchant login ID or password is invalid or the account is "
-"inactive*."
-msgstr ""
-"Si estableció el :guilabel:`Modo de prueba` en Odoo y usa una cuenta de "
-"Authorize.net en lugar de una cuenta sandbox.authorize.net, aparecerá el "
-"siguiente error: *El ID del comerciante o su contraseña no es válida o la "
-"cuenta está inactiva*."
-
-#: ../../content/applications/finance/payment_providers/authorize.rst:45
+#: ../../content/applications/finance/payment_providers/authorize.rst:44
 msgid ""
 "With Authorize.net, you can enable the :ref:`manual capture "
 "<payment_providers/features/manual_capture>`. If enabled, the funds are "
@@ -38334,13 +38737,223 @@ msgstr ""
 "reservan por 30 dias en la tarjeta del cliente, pero no se hace el cargo "
 "todavía. "
 
-#: ../../content/applications/finance/payment_providers/authorize.rst:50
+#: ../../content/applications/finance/payment_providers/authorize.rst:49
 msgid ""
 "After **30 days**, the transaction is **voided automatically** by "
 "Authorize.net."
 msgstr ""
 "Después de **30 días**, Authorize.net **anula de forma automática** la "
 "transacción."
+
+#: ../../content/applications/finance/payment_providers/authorize.rst:52
+msgid "Authorize.Net statement export"
+msgstr "Exportación de extractos en Authorize.Net"
+
+#: ../../content/applications/finance/payment_providers/authorize.rst:58
+msgid ""
+"You can find the Excel import template `here. "
+"<https://docs.google.com/spreadsheets/d/1CMVtBWLLVIrUpYA92paw-"
+"cL7-WdKLbaa/edit?usp=share_link&ouid=105295722917050444558&rtpof=true&sd=true>`_"
+msgstr ""
+"Puede encontrar la plantilla de importación de Excel `aquí. "
+"<https://docs.google.com/spreadsheets/d/1CMVtBWLLVIrUpYA92paw-"
+"cL7-WdKLbaa/edit?usp=share_link&ouid=105295722917050444558&rtpof=true&sd=true>`_"
+
+#: ../../content/applications/finance/payment_providers/authorize.rst:60
+msgid ""
+"To import a statement, log into your Authorize.Net account, and go to "
+":menuselection:`Account --> Statements --> eCheck.Net Settlement Statement`."
+" Then, define an export range using an **opening** and **closing** batch "
+"settlement. All transactions within the two batch settlements will be "
+"exported to Odoo. Select all transactions within the desired range, and "
+"copy/paste them into the :guilabel:`Report 1 Download` sheet of the "
+":ref:`Excel sheet <excel-file-template>`."
+msgstr ""
+"Para importar un extracto, inicie sesión en su cuenta de Authorize.Net y "
+"vaya a :menuselection:`Cuenta --> Extractos --> eCheck.Net Extracto de "
+"liquidación`. Luego, defina un rango de exportación usando una liquidación "
+"por lotes de *apertura* y de *cierre*. Todas las transacciones dentro de "
+"ambos rangos de liquidación por lotes se exportarán a Odoo. Seleccione las "
+"transacciones dentro del rango deseado y copie y péguelas en la hoja de "
+":guilabel:`Descargar Reporte 1` de la :ref:`Hoja de Excel <excel-file-"
+"template>`."
+
+#: ../../content/applications/finance/payment_providers/authorize.rst-1
+msgid ""
+"Select all transactions for the desired range on Authorize.net, and copy them into\n"
+"'report1' of the Excel template."
+msgstr ""
+"Seleccione todas las transacciones dentro del rango deseado en Authorize.net y cópielas en\n"
+"'report1' de la plantilla de Excel."
+
+#: ../../content/applications/finance/payment_providers/authorize.rst-1
+msgid "Settlement batch of the an Authorize.Net statement"
+msgstr "Liquidación por lotes de un extracto de Authorize.net"
+
+#: ../../content/applications/finance/payment_providers/authorize.rst:76
+msgid ""
+"In this case, the first batch (01/01/2021) of the year belongs to the "
+"settlement of 12/31/2020, so the **opening** settlement is from 12/31/2020."
+msgstr ""
+"En este caso, el primer lote del año (01/01/2021) pertenece a la liquidación"
+" del 31/12/2020, entonces la liquidación de **apertura** es del 31/12/2020. "
+
+#: ../../content/applications/finance/payment_providers/authorize.rst:79
+msgid ""
+"Once you have pasted the data into the :guilabel:`Report 1 Download` sheet, "
+"go to :menuselection:`Authorize.net --> Transaction Search --> Search for a "
+"Transaction`, enter the previously used range of batch settlement dates, and"
+" click :guilabel:`Search`."
+msgstr ""
+"Una vez que haya pegado los datos en la hoja :guilabel:`Descargar Reporte "
+"1`, vaya a :menuselection:`Authorize.net --> Búsqueda de transacciones --> "
+"Buscar una transacción`, introduzca el rango de las fechas de liquidación de"
+" lotes usado previamente  y haga clic en :guilabel:`Buscar`.     "
+
+#: ../../content/applications/finance/payment_providers/authorize.rst:83
+msgid ""
+"When the list has been generated, click :guilabel:`Download to File`. In the"
+" pop-up window, select :guilabel:`Expanded Fields with CAVV Response/Comma "
+"Separated`, enable :guilabel:`Include Column Headings`, and click "
+":guilabel:`Submit`. Open the text file, select :guilabel:`All`, copy the "
+"data and paste it into the :guilabel:`Report 2 Download` sheet of the Excel "
+"file."
+msgstr ""
+"Cuando se genere la lista, haga clic en :guilabel:`Descargar en el archivo`."
+" En la ventana emergente, seleccione :guilabel:`Campos expandidos con "
+"Respuesta CAVV/Separados por comas`, active la  opción :guilabel:`Incluir "
+"columna de encabezados` y haga clic en :guilabel:`Enviar`. Abra el archivo "
+"de texto, seleccione :guilabel:`Todo`, copie los datos y péguelos en la hoja"
+" guilabel:`Descargar Reporte 2` del archivo de Excel.         "
+
+#: ../../content/applications/finance/payment_providers/authorize.rst:88
+msgid ""
+"Transit lines are automatically filled in and updated in the "
+":guilabel:`transit for report 1` and :guilabel:`transit for report 2` sheets"
+" of the Excel file. Make sure all entries are present, and if not, copy the "
+"**formula** from previously filled-in lines of the :guilabel:`transit for "
+"report 1` or :guilabel:`2` and paste it into the empty lines."
+msgstr ""
+"Las líneas de tránsito se completan y actualizan automáticamente en las "
+"hojas del archivo de Excel :guilabel:`tránsito para el reporte 1` y "
+":guilabel:`tránsito para el reporte 2`. Asegúrese de que todos los asientos "
+"estén presentes, y si no es así, copie la **fórmula** de las líneas que ya "
+"están llenas del :guilabel:`tránsito para el reporte 1` o del :guilabel:`2` "
+"y péguela en las líneas vacías.    "
+
+#: ../../content/applications/finance/payment_providers/authorize.rst:94
+msgid ""
+"To get the correct closing balance, do *not* remove any line from the Excel "
+"sheets."
+msgstr ""
+"Para obtener el balance de cierre correcto, *no* elimine ninguna línea de "
+"las hojas de Excel. "
+
+#: ../../content/applications/finance/payment_providers/authorize.rst:97
+msgid "Import into Odoo"
+msgstr "Importar a Odoo "
+
+#: ../../content/applications/finance/payment_providers/authorize.rst:99
+msgid ""
+"To import the data into Odoo, open the Excel file, copy the data from the "
+":guilabel:`transit for report 2` sheet and **paste special** only the "
+"**values** in the :guilabel:`Odoo Import to CSV` sheet. Then, look for "
+"*blue* cells in the :guilabel:`Odoo Import to CSV` sheet. These are "
+"**chargeback** entries without any **reference** number. As they cannot be "
+"imported as such, go to :menuselection:`Authorize.Net --> Account --> "
+"Statements --> eCheck.Net Settlement Statement`, look for :guilabel:`Charge "
+"Transaction/Chargeback`, and click it. Copy the **invoice description**, "
+"paste it into the :guilabel:`Label` cell of the :guilabel:`Odoo Import to "
+"CSV` sheet, and add \"**Chargeback /**\" before the description. If you have"
+" multiple invoices, add a line into the Excel sheet for each invoice and "
+"copy/paste the description into each respective :guilabel:`Label` line."
+msgstr ""
+"Para importar los datos a Odoo, abra el archivo de Excel, copie los datos de"
+" la hoja :guilabel:`tránsito para el reporte 2` y seleccione **pegado "
+"especial** para pegar solo los **valores** en la hoja :guilabel:`Importación"
+" de Odoo a CSV`. Luego, identifique las celdas *azules* en la hoja "
+":guilabel:`Importación de Odoo a CSV`. Estos son asientos de **contracargo**"
+" sin número de **referencia**. Estos no se pueden importar así, por lo que "
+"tiene que ir a  :menuselection:`Authorize.Net --> Cuenta --> Extractos --> "
+"eCheck.Net Extracto de liquidación` y hacer clic en la opción "
+":guilabel:`Cobrar transacción/Contracargo`. Copie la **descripción  de la "
+"factura**, péguela en la celda de :guilabel:`Etiqueta` de la hoja "
+":guilabel:`Importación de Odoo a CSV` y agregue \"**Contracargo /**\" antes "
+"de la descripción. Si tiene varias facturas, agregue una línea en la hoja de"
+" Excel por cada factura y copie y pegue la descripción en cada línea de "
+":guilabel:`Etiqueta` correspondiente.  "
+
+#: ../../content/applications/finance/payment_providers/authorize.rst:110
+msgid ""
+"For combined **chargeback/returns** in the payouts, you need to create a new"
+" line in the Excel file for each invoice."
+msgstr ""
+"Para **contracargos/reembolsos** en los pagos, necesita crear una línea "
+"nueva en el archivo de Excel para cada factura. "
+
+#: ../../content/applications/finance/payment_providers/authorize.rst:0
+msgid "Chargeback description"
+msgstr "Descripción de un contracargo"
+
+#: ../../content/applications/finance/payment_providers/authorize.rst:118
+msgid ""
+"Next, delete **zero transaction** and **void transaction** line items, and "
+"change the **format** of the :guilabel:`Amount` column in the "
+":guilabel:`Odoo Import to CSV` sheet to **Number**. Go back to "
+":menuselection:`eCheck.Net Settlement Statement --> Search for a "
+"Transaction` and search again for the previously used batch settlements "
+"dates. Verify that the batch settlement dates on **eCheck.Net** match the "
+"related payments' dates found in the :guilabel:`Date` column of the "
+":guilabel:`Odoo Import to CSV`. If it does not match, replace the date with "
+"the one from **eCheck.Net**. Sort the column by *date*, and make sure the "
+"format is `MM/DD/YYYY`. Finally, copy the data (column headings included) "
+"from the :guilabel:`Odoo Import to CSV` sheet, paste into a new Excel file "
+"of your choice, and save it as .CSV format."
+msgstr ""
+"Luego, elimine los apuntes de las líneas **sin transacción** y **transacción"
+" nula** y cambie el **formato** de la columna de :guilabel:`Importe` a "
+"**Número** en la hoja de :guilabel:`Importación de Odoo a CSV`. Regrese a "
+":menuselection:`eCheck.Net Extracto de liquidación --> Buscar una "
+"transacción` y vuelva a buscar las fechas de liquidación de lote que uso "
+"anteriormente. Verifique que las fechas de liquidación de lotes en "
+"**eCheck.Net** coincidan con las fechas de los pagos correspondientes de la "
+"columna de :guilabel:`Fecha` de la hoja :guilabel:`Importación de Odoo a "
+"CSV`. Si no es el caso, reemplace la fecha con la que aparece en "
+"**eCheck.Net**. Filtre la columna por *fecha* y asegúrese de que el formato "
+"sea `MM/DD/YYYY`. Por último, copie los datos (incluyendo los encabezados de"
+" las columnas) de la hoja :guilabel:`Importación de Odoo a CSV`, péguelos en"
+" un nuevo archivo de Excel de su elección y guárdelo en formato .CSV.       "
+
+#: ../../content/applications/finance/payment_providers/authorize.rst:128
+msgid ""
+"Open your Accounting app, go to :menuselection:`Configuration --> Journals`,"
+" tick the :guilabel:`Authorize.Net` box, and click :menuselection:`Favorites"
+" --> Import records --> Load file`. Select the file saved as .CSV, and "
+"upload it into Odoo."
+msgstr ""
+"Abra su aplicación Contabilidad, vaya a  :menuselection:`Configuración --> "
+"Diarios`, seleccione la casilla de  :guilabel:`Authorize.Net` y haga clic en"
+" :menuselection:`Favoritos --> Importar registros --> Subir archivo`. "
+"Seleccione el archivo guardado como .CSV y súbalo a Odoo.   "
+
+#: ../../content/applications/finance/payment_providers/authorize.rst:133
+msgid ""
+"List of eCheck.Net `return codes. "
+"<https://support.authorize.net/knowledgebase/Knowledgearticle/?code=000001293>`_"
+msgstr ""
+"Lista de `códigos de reembolso. "
+"<https://support.authorize.net/knowledgebase/Knowledgearticle/?code=000001293>`_"
+" de eCheck.Net. "
+
+#: ../../content/applications/finance/payment_providers/authorize.rst:136
+msgid ""
+"`Authorize.Net: Getting Started Guide "
+"<https://support.authorize.net/s/article/Authorize-Net-Getting-Started-"
+"Guide>`_"
+msgstr ""
+"`Authorize.Net: Guía para empezar "
+"<https://support.authorize.net/s/article/Authorize-Net-Getting-Started-"
+"Guide>`__"
 
 #: ../../content/applications/finance/payment_providers/buckaroo.rst:3
 msgid "Buckaroo"
@@ -39889,9 +40502,9 @@ msgid ""
 " as explained in the :ref:`payment providers documentation "
 "<payment_providers/features/manual_capture>`."
 msgstr ""
-"Para configurarlo, active la opción :guilabel:`Capturar importe manualmente "
-"` en Odoo, como se explica en la :ref:`documentación acerca de los "
-"proveedores de pago <payment_providers/features/manual_capture>`."
+"Para configurarlo, active la opción :guilabel:`Capturar importe manualmente`"
+" en Odoo, cómo se explica en la :ref:`documentación sobre los proveedores de"
+" pago <payment_providers/features/manual_capture>`."
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:137
 msgid ""
