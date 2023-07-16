@@ -4215,7 +4215,7 @@ msgstr "Articles"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:3
 msgid "Replenish on order (MTO)"
-msgstr ""
+msgstr "Réapprovisionner sur commande (MTO)"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:9
 msgid ""
@@ -4228,10 +4228,19 @@ msgid ""
 "sales order is created, regardless of the current stock level of the product"
 " being ordered."
 msgstr ""
+"*Réapprovisionner sur commande*, également connu comme *MTO* (fabrication à "
+"la commande), est une stratégie de réassort qui crée un ordre brouillon pour"
+" un produit chaque fois qu'une commande client est créée pour ce produit. "
+"Pour les produits qui sont achetés auprès d'un fournisseur, une demande de "
+"prix est créée, alors que la commande d'un produit fabriqué en interne "
+"entraîne la création d'un ordre de fabrication. La création d'une demande de"
+" prix ou d'un ordre de fabrication se fait chaque fois qu'une commande "
+"client est créée, indépendamment du niveau de stock actuel du produit "
+"commandé. "
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:17
 msgid "Unarchive the Replenish on Order (MTO) route"
-msgstr ""
+msgstr "Désarchiver la route Réapprovisionner sur commande (MTO)"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:19
 msgid ""
@@ -4239,6 +4248,9 @@ msgid ""
 "is a somewhat niche workflow that is only used by certain companies. "
 "However, it is easy to unarchive the route in just a few simple steps."
 msgstr ""
+"Par défaut, Odoo définit la route |MTO| sur *archivé*, car |MTO| est un flux"
+" de travail de niche qui n'est utilisé que par certaines entreprises. "
+"Cependant, il est facile de désarchiver la route en quelques étapes simples."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:23
 msgid ""
@@ -4247,10 +4259,14 @@ msgid ""
 "button and select the :guilabel:`Archived` option. This shows all routes "
 "that are currently archived."
 msgstr ""
+"Pour ce faire, allez à :menuselection:`Inventaire --> Configuration --> "
+"Routes`. Sur la page des :guilabel:`Routes`, cliquez sur le bouton "
+":guilabel:`Filtres` et sélectionnez l'option :guilabel:`Archivé`. Cette "
+"option permet d'afficher toutes les options qu sont actuellement archivées."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst-1
 msgid "The archived filter on the Routes page."
-msgstr ""
+msgstr "Le filtre archivé sur la page des routes."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:31
 msgid ""
@@ -4258,10 +4274,13 @@ msgid ""
 " the :guilabel:`Action` button to reveal a drop-down menu. From the drop-"
 "down menu, select :guilabel:`Unarchive`."
 msgstr ""
+"Cochez la case à côté de :guilabel:`Réapprovisionner sur commande (MTO)`, "
+"puis cliquez sur le bouton :guilabel:`Action` pour faire apparaître un menu "
+"déroulant. Ans le menu déroulant, sélectionnez :guilabel:`Désarchiver`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst-1
 msgid "The unarchive action on the Routes page."
-msgstr ""
+msgstr "L'action désarchiver sur la page des routes."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:38
 msgid ""
@@ -4270,14 +4289,19 @@ msgid ""
 "available routes, including :guilabel:`Replenish on Order (MTO)`, which is "
 "now selectable on the inventory tab of each product page."
 msgstr ""
+"Enfin, supprimez le filtre :guilabel:`Archivé` de la barre "
+":guilabel:`Rechercher...`. La page :guilabel:`Routes` affiche désormais "
+"toutes les routes disponibles, y compris la route "
+":guilabel:`Réapprovisionner sur commande (MTO)`, qui peut être sélectionnée "
+"dans l'onglet Inventaire de chaque page de produit."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst-1
 msgid "The MTO route appears on the Routes page after unarchiving it."
-msgstr ""
+msgstr "La route MTO apparaît sur la page Routes après avoir été désarchivée."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:47
 msgid "Configure a product to use the MTO route"
-msgstr ""
+msgstr "Configurer un produit pour utiliser la route MTO"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:49
 msgid ""
@@ -4286,6 +4310,11 @@ msgid ""
 ":menuselection:`Inventory --> Products --> Products`, then select an "
 "existing product, or click :guilabel:`Create` to configure a new one."
 msgstr ""
+"La route |MTO| ayant été désarchivée, les produits peuvent maintenant être "
+"correctement configurés pour utiliser le réassort à la commande. Pour ce "
+"faire, allez à :menuselection:`Inventaire --> Produits --> Produits`, puis "
+"sélectionnez un produit existant ou cliquez sur :guilabel:`Créer` pour en "
+"configurer un nouveau."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:53
 msgid ""
@@ -4293,6 +4322,9 @@ msgid ""
 ":guilabel:`Replenish on Order (MTO)` route in the :guilabel:`Routes` "
 "section, along with one other route."
 msgstr ""
+"Sur la page du produit, sélectionnez l'onglet :guilabel:`Inventaire` et "
+"activez la route :guilabel:`Réapprovisionner sur commande (MTO)` dans la "
+"section :guilabel:`Routes`, ainsi qu'une autre route."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:57
 msgid ""
@@ -4301,10 +4333,15 @@ msgid ""
 " replenish the product when an order is placed for it (buy it, manufacture "
 "it, etc.)."
 msgstr ""
+"La route :guilabel:`Réapprovisionner sur commande (MTO)` ne **fonctionne "
+"pas** à moins qu'une autre route ne soit sélectionnée. Odoo a en effet "
+"besoin de savoir comment réapprovisionner le produit lorsqu'une commande est"
+" passée pour celui-ci (acheter, fabriquer, etc.)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst-1
 msgid "Select the MTO route and a second route on the Inventory tab."
 msgstr ""
+"Sélectionnez la route MTO et une seconde route dans l'onglet Inventaire."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:65
 msgid ""
@@ -4313,16 +4350,22 @@ msgid ""
 "makes the :guilabel:`Purchase` tab appear alongside the other settings tabs "
 "below."
 msgstr ""
+"Si le produit est acheté auprès d'un fournisseur pour honorer des commandes,"
+" cochez la case :guilabel:`Peut être acheté` sous le nom du produit. "
+"L'onglet :guilabel:`Achats` apparaît alors à côté des autres onglets de "
+"paramétrage ci-dessous."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:69
 msgid ""
 "Select the :guilabel:`Purchase` tab and specify a :guilabel:`Vendor` and the"
 " :guilabel:`Price` they sell the product for."
 msgstr ""
+"Sélectionnez l'onglet :guilabel:`Achats` et précisez un "
+":guilabel:`Fournisseur` et le :guilabel:`Prix` auquel il vend le produit."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst-1
 msgid "Enable \"Can be Purchased\" and specify a vendor."
-msgstr ""
+msgstr "Activez \"Peut être acheté\" et précisez un fournisseur."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:76
 msgid ""
@@ -4331,6 +4374,11 @@ msgid ""
 "smart button at the top of the screen, then click :guilabel:`Create` on the "
 ":guilabel:`Bill of Materials` page to configure a new |BOM| for the product."
 msgstr ""
+"Si le produit est fabriqué, assurez-vous qu'une nomenclature est configurée "
+"pour ce produit. Pour ce faire, cliquez sur le bouton intelligent "
+":guilabel:`Nomenclature` en haut de l'écran, puis cliquez sur "
+":guilabel:`Créer` sur la page :guilabel:`Nomenclature` pour configurer une "
+"nouvelle nomenclature pour le produit."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:81
 msgid ""
@@ -4338,14 +4386,19 @@ msgid ""
 "on the :guilabel:`Components` tab, along with the operations required for "
 "the manufacturing workflow on the :guilabel:`Operations` tab."
 msgstr ""
+"Sur le formulaire de nomenclature vierge, ajoutez les composants utilisés "
+"pour fabriquer le produit dans l'onglet :guilabel:`Composants`, ainsi que "
+"les opérations requises pour le flux de travail de fabrication dans l'onglet"
+" :guilabel:`Opérations`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:85
 msgid "Finally, click :guilabel:`Save` to save the |BOM|."
 msgstr ""
+"Enfin, cliquez sur :guilabel:`Enregistrer` pour enregistrer la nomenclature."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:88
 msgid "Fulfill a sales order using the MTO route"
-msgstr ""
+msgstr "Honorer une commande client en utilisant la route MTO"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:90
 msgid ""
@@ -4354,12 +4407,18 @@ msgid ""
 " The type of order created depends on the second route selected in addition "
 "to |MTO|."
 msgstr ""
+"Après avoir configuré un produit pour utiliser la route |MTO|, un ordre de "
+"réassort est créé chaque fois qu'une commande client incluant le produit est"
+" créé. Le type d'ordre créé dépend également de la seconde route "
+"sélectionnée en plus de la route |MTO|."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:94
 msgid ""
 "For example, if *Buy* was the second route selected, then a purchase order "
 "is created upon confirmation of a sales order."
 msgstr ""
+"Par exemple, si la seconde route sélectionnée est *Acheter*, un bon de "
+"commande est créé lors de la confirmation d'une commande client."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:98
 msgid ""
@@ -4368,6 +4427,10 @@ msgid ""
 "there is enough stock of the product on-hand to fulfill the sales order, "
 "without buying or manufacturing additional units of it."
 msgstr ""
+"Lorsque la route |MTO| est activée pour un produit, un ordre de réassort est"
+" toujours créé lors de la confirmation d'une commande client. C'est le cas "
+"même si le stock du produit disponible est suffisant pour honorer la "
+"commande, sans acheter ou fabriquer d'unités supplémentaires."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:102
 msgid ""
@@ -4376,6 +4439,10 @@ msgid ""
 "navigating to the :menuselection:`Sales` app, then click :guilabel:`Create`,"
 " which opens a blank quotation form."
 msgstr ""
+"Alors que la route |MTO| peut être utilisée en même temps qu'une variété "
+"d'autres routes, la route *Acheter* est utilisée comme exemple pour ce flux "
+"de travail. Allez à l'application :menuselection:`Ventes`, puis cliquez sur "
+":guilabel:`Créer`, ce qui ouvre un formulaire de devis vierge."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:106
 msgid ""
@@ -4384,6 +4451,11 @@ msgid ""
 " product that has been configured to use the *MTO* and *Buy* routes. Click "
 ":guilabel:`Confirm` and the quotation is turned into a sales order."
 msgstr ""
+"Sur le formulaire de devis vierge, ajoutez un :guilabel:`Client`, puis "
+"cliquez sur :guilabel:`Ajouter un produit` dans l'onglet :guilabel:`Lignes "
+"de la commande` et saisissez un produit qui a été configuré pour utiliser "
+"les routes *MTO* et *Acheter*. Cliquez sur :guilabel:`Confirmer` et le devis"
+" se transforme en commande client."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:110
 msgid ""
@@ -4391,6 +4463,9 @@ msgid ""
 "the sales order. Clicking it opens the |RFQ| associated with the sales "
 "order."
 msgstr ""
+"Un bouton intelligent :guilabel:`Achat` apparaît dans le coin supérieur "
+"droit de la commande client. Le fait de cliquez dessus ouvre la demande de "
+"prix associée à la commande client."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:113
 msgid ""
@@ -4399,6 +4474,11 @@ msgid ""
 "the top of the purchase order. Once the products are received, click "
 ":guilabel:`Receive Products` to register them into inventory."
 msgstr ""
+"Cliquez sur :guilabel:`Confirmer la commande` pour confirmer la demande de "
+"prix et la transformer en bon de commande. Un bouton vert "
+":guilabel:`Recevoir les produits` apparaît en haut du bon de commande. Une "
+"fois que les produits sont reçus, cliquez sur :guilabel:`Recevoir les "
+"produits` pour les enregistrer dans l'inventaire."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:117
 msgid ""
@@ -4406,6 +4486,9 @@ msgid ""
 "navigating to :menuselection:`Sales --> Orders --> Orders`, and selecting "
 "the sales order."
 msgstr ""
+"Retournez à la commande en cliquant sur le fil d'Ariane :guilabel:`Bons de "
+"commande` ou en allant à :menuselection:`Ventes --> Ordres --> Ordres` et en"
+" sélectionnant la commande client."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/mto.rst:120
 msgid ""
@@ -4413,10 +4496,14 @@ msgid ""
 " order to be taken to the delivery order. Once the products have been "
 "shipped to the customer, click :guilabel:`Validate` to confirm the delivery."
 msgstr ""
+"Enfin, cliquez sur le bouton intelligent :guilabel:`Livraison` dans le coin "
+"supérieur droit de la commande pour être redirigé vers le bon de livraison. "
+"Une fois que les produits ont été expédiés au client, cliquez sur "
+":guilabel:`Valider` pour confirmer la livraison."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:3
 msgid "Reordering rules"
-msgstr ""
+msgstr "Règles de réapprovisionnement"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:5
 msgid ""
@@ -4425,6 +4512,10 @@ msgid ""
 " specifying a minimum quantity that stock should not fall below and a "
 "maximum quantity that stock should not exceed."
 msgstr ""
+"Les règles de réapprovisionnement sont utilisées pour maintenir les niveaux "
+"de stock prévus au-dessus d'un certain seuil, sans dépasser un plafond "
+"défini. Pour ce faire, elles précisent une quantité minimale que le stock ne"
+" doit pas dépasser et une quantité maximale qu'il ne doit pas dépasser."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:9
 msgid ""
@@ -4435,10 +4526,16 @@ msgid ""
 "created instead. This is the case regardless of the selected replenishment "
 "route."
 msgstr ""
+"Vous pouvez configurer les règles de réapprovisionnement pour chaque produit"
+" en fonction de la route utilisée pour le réapprovisionner. Si un produit "
+"utilise la route *Acheter*, une demande de prix est créée lorsque la règle "
+"de réapprovisionnement est déclenchée. SI un produit utilise la route "
+"*Fabriquer*, un ordre de fabrication (OF) est créé à la place. Il en est "
+"ainsi quelle que soit la route de réassort sélectionnée."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:15
 msgid "Configure products for reordering rules"
-msgstr ""
+msgstr "Configurer les produits pour les règles de réapprovisionnement"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:17
 msgid ""
@@ -4447,6 +4544,10 @@ msgid ""
 "Products`, then select an existing product, or create a new one by clicking "
 ":guilabel:`Create`."
 msgstr ""
+"Afin d'utiliser des règles de réapprovisionnement pour un produit, celui-ci "
+"doit d'abord être configuré correctement. Allez à l'application "
+":guilabel:`Inventaire --> Produits --> Produits`, puis sélectionnez un "
+"produit existant ou créez-en un nouveau en cliquant sur :guilabel:`Créer`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:21
 msgid ""
@@ -4455,10 +4556,15 @@ msgid ""
 "necessary because Odoo only tracks stock quantities for storable products, "
 "and this number is used to trigger reordering rules."
 msgstr ""
+"Tout d'abord, dans l'onglet :guilabel:`Informations générales`, assurez-vous"
+" que le :guilabel:`Type de produit` est défini sur :guilabel:`Produit "
+"stockable`. C'est nécessaire parce qu'Odoo ne suit que les quantités en "
+"stock pour les produits stockables et ce nombre est utilisé pour déclencher "
+"les règles de réapprovisionnement."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst-1
 msgid "Set the Product Type as Storable."
-msgstr ""
+msgstr "Définissez le type de produit sur stockable."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:29
 msgid ""
@@ -4466,10 +4572,13 @@ msgid ""
 "from the :guilabel:`Routes` section. Doing so tells Odoo which route to use "
 "to replenish the product."
 msgstr ""
+"Ensuite, cliquez sur l'onglet :guilabel:`Inventaire` et sélectionnez une ou "
+"plusieurs routes dans la section :guilabel:`Routes`. Cela indique à Odoo "
+"quelle route utiliser pour réapprovisionner le produit."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst-1
 msgid "Select one or more routes on the Inventory tab."
-msgstr ""
+msgstr "Sélectionnez une ou plusieurs routes dans l'onglet Inventaire."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:36
 msgid ""
@@ -4480,10 +4589,16 @@ msgid ""
 "that they sell the product for, so that Odoo knows which company the product"
 " should be purchased from."
 msgstr ""
+"Si le produit est réapprovisionné à l'aide de la route :guilabel:`Acheter`, "
+"confirmez que la case :guilabel:`Peut être acheté` est cochée sous le nom du"
+" produit. Ceci fait apparaître l'onglet :guilabel:`Achats`. Cliquez sur "
+"l'onglet :guilabel:`Achats` et spécifiez au moins un fournisseur et le prix "
+"auquel il vend le produit, pour qu'Odoo sache auprès de quelle entreprise le"
+" produit doit être acheté."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst-1
 msgid "Specify a vendor and price on the Purchase tab."
-msgstr ""
+msgstr "Précisez un fournisseur et un prix dans l'onglet Achats."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:45
 msgid ""
@@ -4492,6 +4607,10 @@ msgid ""
 "is necessary because Odoo only creates manufacturing orders for products "
 "with a :abbr:`BoM (Bill of Materials)`."
 msgstr ""
+"Si le produit est réapprovisionné à l'aide de la route "
+":guilabel:`Fabriquer`, il doit avoir au moins une nomenclature associée. "
+"C'est nécessaire parce qu'Odoo crée uniquement des ordres de fabrication "
+"pour les produits ayant une nomenclature."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:49
 msgid ""
@@ -4500,14 +4619,17 @@ msgid ""
 "product form, then click :guilabel:`Create` to configure a new :abbr:`BoM "
 "(Bill of Materials)`."
 msgstr ""
+"S'il n'y a pas encore de nomenclature pour le produit, sélectionnez le "
+"bouton intelligent :guilabel:`Nomenclature` en haut de la fiche du produit, "
+"puis cliquez sur :guilabel:`Créer`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst-1
 msgid "The Bill of Materials smart button on a product form."
-msgstr ""
+msgstr "Le bouton intelligent Nomenclature sur une fiche de produit."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:58
 msgid "Create new reordering rules"
-msgstr ""
+msgstr "Créer de nouvelles règles de réapprovisionnement"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:60
 msgid ""
@@ -4515,14 +4637,19 @@ msgid ""
 "Configuration --> Reordering Rules`, then click :guilabel:`Create`, and fill"
 " out the new line as follows:"
 msgstr ""
+"Pour créer une nouvelle règle de réapprovisionnement, allez à l'application "
+":menuselection:`Inventaire --> Configuration --> Règles de "
+"réapprovisionnement`, puis cliquez sur :guilabel:`Créer` et complétez la "
+"nouvelle ligne comme suit :"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:63
 msgid ":guilabel:`Product`: The product that is replenished by the rule."
 msgstr ""
+":guilabel:`Produit` : Le produit qui est réapprovisionné par la règle."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:64
 msgid ":guilabel:`Location`: The location where the product is stored."
-msgstr ""
+msgstr ":guilabel:`Emplacement` : L'emplacement où le produit est stocké."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:65
 msgid ""
@@ -4530,12 +4657,17 @@ msgid ""
 "without the rule being triggered. When forecasted stock falls below this "
 "number, a replenishment order for the product is created."
 msgstr ""
+":guilabel:`Quantité min` : La quantité minimale qui peut être prévue sans "
+"que la règle ne soit déclenchée. Lorsque le stock prévu est inférieur à "
+"cette quantité, un ordre de réapprovisionnement est créé pour ce produit."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:68
 msgid ""
 ":guilabel:`Max Quantity`: The maximum quantity that stock is replenished up "
 "to."
 msgstr ""
+":guilabel:`Quantité max` : La quantité maximale jusqu'à laquelle le stock "
+"est réapprovisionné."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:69
 msgid ""
@@ -4543,6 +4675,9 @@ msgid ""
 "in batches of a certain quantity (e.g., a product could be replenished in "
 "batches of 20)."
 msgstr ""
+":guilabel:`Quantité multiple` : Précisez si le produit doit être "
+"réapprovisionné par lots d'une certaine quantité (par ex. un produit peut "
+"être réapprovisionné par lots de 20)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:71
 msgid ""
@@ -4550,10 +4685,14 @@ msgid ""
 "value can simply be `Units` or a specific unit of measurement for weight, "
 "length, etc."
 msgstr ""
+":guilabel:`UdM` : L'unité de mesure utilisée pour réapprovisionner le "
+"produit. Cette valeur peut être simplement `Unités` ou une unité de mesure "
+"spécifique pour le poids, la longueur, etc."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst-1
 msgid "The form for creating a new reordering rule."
 msgstr ""
+"Le formulaire de création d'une nouvelle règle de réapprovisionnement."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:79
 msgid ""
@@ -4562,6 +4701,11 @@ msgid ""
 "select a product. Click on :menuselection:`Reordering Rules --> Create`, "
 "then fill out the new line as detailed above."
 msgstr ""
+"Il est également possible de créer des règles de réapprovisionnement à "
+"partir de chaque fiche de produit. Pour ce faire, allez à "
+":menuselection:`Inventaire --> Produits --> Produits`, puis sélectionnez un "
+"produit. Cliquez sur :menuselection:`Règles de réapprovisionnement --> "
+"Créer`, puis complétez la nouvelle ligne comme indiqué ci-dessus."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:83
 msgid ""
@@ -4570,6 +4714,10 @@ msgid ""
 "replenishment order for the product is automatically generated. By default, "
 "the scheduler runs once each day."
 msgstr ""
+"Une fois qu'une règle de réapprovisionnement a été créée pour un produit, si"
+" sa quantité prévue est inférieure à la quantité minimale de la règle lors "
+"de l'exécuteur du planificateur, un ordre de réassort est automatiquement "
+"créé pour le produit. Par défaut, planificateur s'exécute une fois par jour."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:88
 msgid ""
@@ -4578,6 +4726,12 @@ msgid ""
 "the green :guilabel:`Run Scheduler` button on the pop-up that appears. Be "
 "aware that this also triggers any other scheduled actions."
 msgstr ""
+"Pour manuellement déclencher une règle de réapprovisionnement avant "
+"l'exécution du planificateur, sélectionnez :menuselection:`Inventaire --> "
+"Opérations --> Lancer le planificateur`. Ensuite, cliquez sur le bouton vert"
+" :guilabel:`Lancer le planificateur` dans la fenêtre contextuelle. Sachez "
+"que cette opération déclenche également toutes les autres actions "
+"planifiées."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:92
 msgid ""
@@ -4586,6 +4740,9 @@ msgid ""
 "Quotation)`, navigate to :menuselection:`Purchase --> Orders --> Requests "
 "for Quotation`."
 msgstr ""
+"Si la route :guilabel:`Acheter` est sélectionnée, une demande de prix est "
+"générée. Pour voir et gérer les demandes de prix, allez à "
+":menuselection:`Achats --> Commandes --> Demandes de prix`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:96
 msgid ""
@@ -4594,10 +4751,14 @@ msgid ""
 "(Manufacturing Orders)`, navigate to :menuselection:`Manufacturing --> "
 "Operations --> Manufacturing Orders`."
 msgstr ""
+"Si la route :guilabel:`Fabriquer` est sélectionnée, un :abbr:`OF (ordre de "
+"fabrication)` est généré. Pour voir et gérer les :abbr:`OF (Ordres de "
+"fabrication)`, allez à :menuselection:`Fabrication --> Opérations --> Ordres"
+" de fabrication`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:101
 msgid "Set a preferred route for reordering"
-msgstr ""
+msgstr "Définir une route préférée pour le réapprovisionnement"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:103
 msgid ""
@@ -4606,6 +4767,10 @@ msgid ""
 " to select both :guilabel:`Buy` and :guilabel:`Manufacture`, thus enabling "
 "the functionality of both routes."
 msgstr ""
+"Odoo permet de sélectionner plusieurs routes dans l'onglet "
+":guilabel:`Inventaire` de chaque fiche produit. Par exemple, il est possible"
+" de sélectionner à la fois :guilabel:`Acheter` et :guilabel:`Fabriquer`, "
+"permettant ainsi l'exécution des deux routes."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:107
 msgid ""
@@ -4614,6 +4779,11 @@ msgid ""
 "To select a preferred route, begin by navigating to "
 ":menuselection:`Inventory --> Configuration --> Reordering Rules`."
 msgstr ""
+"Odoo permet également aux utilisateurs de définir une route préférée pour la"
+" règle de réapprovisionnement d'un produit. Il s'agit de la route que la "
+"règle applique par défaut si plusieurs routes sont sélectionnées. Pour "
+"sélectionner une route préférée, allez à :menuselection:`Inventaire --> "
+"Configuration --> Règles de réapprovisionnement`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:111
 msgid ""
@@ -4623,6 +4793,11 @@ msgid ""
 ":guilabel:`Preferred Route` checkbox. Doing so reveals the "
 ":guilabel:`Preferred Route` column."
 msgstr ""
+"Par défaut, la colonne :guilabel:`Route préférée` est masquée sur la page "
+":guilabel:`Règles de réapprovisionnement`. Activez-la en cliquant sur le "
+"bouton d'option :guilabel:`⋮ (trois points)` sur le côté droit de la page et"
+" en cochant la case :guilabel:`Route préférée`. Cette opération permet "
+"d'afficher la colonne :guilabel:`Route préférée`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:116
 msgid ""
@@ -4630,10 +4805,14 @@ msgid ""
 "menu shows all available routes for that rule. Select one to set it as the "
 "preferred route."
 msgstr ""
+"Cliquez à l'intérieur de la colonne sur la ligne d'une règle de "
+"réapprovisionnement et un menu déroulant vous montre toutes les routes "
+"disponibles pour cette règle. Sélectionnez-en une pour en faire la route "
+"préférée."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst-1
 msgid "Select a preferred route from the drop-down."
-msgstr ""
+msgstr "Sélectionnez une route préférée dans le menu déroulant."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:124
 msgid ""
@@ -4641,6 +4820,10 @@ msgid ""
 "for its reordering rule, the product is reordered using the selected route "
 "that is listed first on the :guilabel:`Inventory` tab of the product form."
 msgstr ""
+"Si plusieurs routes sont activées pour un produit et aucune route préférée "
+"n'est définie pour sa règle de réapprovisionnement, le produit est "
+"réapprovisionné en utilisant la route qui est répertoriée en premier dans "
+"l'onglet :guilabel:`Inventaire` de la fiche du produit."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:3
 msgid "Selecting a replenishment strategy"
@@ -13579,7 +13762,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:3
 msgid "Make work centers unavailable using Time Off"
-msgstr ""
+msgstr "Rendre les postes de travail indisponibles à l'aide de Congés"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:5
 msgid ""
@@ -13588,6 +13771,11 @@ msgid ""
 "reason, work orders begin to pile up at the work center until it is "
 "operational again."
 msgstr ""
+"Dans Odoo, les *postes de travail* sont utilisés pour exécuter des "
+"opérations de fabrication à des emplacements spécifiques. Cependant, si un "
+"poste de travail ne peut pas être utilisé pour une raison quelconque, les "
+"ordres de travail commencent à s'empiler sur le poste de travail jusqu'à ce "
+"qu'il est de nouveau opérationnel."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:9
 msgid ""
@@ -13598,6 +13786,13 @@ msgid ""
 "manufacturing operations can continue until the impacted work center is "
 "available again."
 msgstr ""
+"Par conséquent, il est nécessaire de rendre le poste de travail indisponible"
+" dans Odoo pour que la plateforme envoie les nouveaux ordres de travail à "
+"d'autres postes de travail qui sont opérationnels. Grâce à l'application "
+"*Congés* d'Odoo, il est possible de rendre un poste de travail indisponible "
+"pendant une certaine période. Cela garantit que les opérations de "
+"fabrication peuvent continuer jusqu'à ce que le poste de travail impacté est"
+" de nouveau disponible."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:17
 msgid ""
@@ -13607,6 +13802,12 @@ msgid ""
 " smart button to appear on each work center's :guilabel:`Working Hours` pop-"
 "up window."
 msgstr ""
+"Avant qu'un poste de travail peut être désigné comme indisponible, la "
+"plateforme Odoo doit d'abord être configurée correctement. Tout d'abord, il "
+"est nécessaire d'activer le :ref:`mode développeur <developer-mode>`. Cette "
+"opération permet d'afficher le bouton intelligent :guilabel:`Congés` dans la"
+" fenêtre contextuelle :guilabel:`Heures de travail` sur chaque poste de "
+"travail."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:22
 msgid ""
@@ -13614,10 +13815,13 @@ msgid ""
 "the bottom of the page, and clicking :guilabel:`Activate the developer mode`"
 " under the :guilabel:`Developer Tools` heading."
 msgstr ""
+"Activez le mode développeur en allant aux :menuselection:`Paramètres`, "
+"faites défiler jusqu'en bas de la page et cliquez sur :guilabel:`Activer le "
+"mode développeur` dans l'en-tête :guilabel:`Outils développeur`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst-1
 msgid "The \"Activate the developer mode\" button."
-msgstr ""
+msgstr "Le bouton \"Activer le mode développeur\"."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:29
 msgid ""
@@ -13628,10 +13832,17 @@ msgid ""
 "should be the only one that appears on the page. Click the green "
 ":guilabel:`Install` button on the card to install the app."
 msgstr ""
+"Ensuite, installez l'application *Congés*. Il s'agit de l'application "
+"utilisée pour assigner des congés à toutes les ressources dans Odoo, y "
+"compris les employés et les postes de travail. Allez aux "
+":menuselection:`Apps`, puis saisissez `Congés` dans la barre "
+":guilabel:`Rechercher...`. La carte du module :guilabel:`Congés` devrait "
+"être la seule à apparaître sur la page. Cliquez sur le bouton vert "
+":guilabel:`Installer` sur la carte pour installer l'application."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst-1
 msgid "The Time Off module installation card."
-msgstr ""
+msgstr "La carte d'installation du module Congés."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:39
 msgid ""
@@ -13641,12 +13852,21 @@ msgid ""
 " no second work center is configured, Odoo cannot route work orders away "
 "from the unavailable work center and they will pile up in its queue."
 msgstr ""
+"La dernière étape est de correctement configurer les postes de travail. Pour"
+" ce flux de travail, il est nécessaire d'avoir au moins deux postes de "
+"travail : un qui est rendu indisponible et un deuxième qui reçoit les ordres"
+" de travail que l'autre poste ne peut pas accepter. Si le deuxième poste de "
+"travail n'est pas configuré, Odoo ne peut pas acheminer les ordres de "
+"travail depuis le poste de travail indisponible et ils s'empileront dans sa "
+"file d'attente."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:44
 msgid ""
 "To create a work center, navigate to :menuselection:`Manufacturing --> "
 "Configuration --> Work Centers --> Create`."
 msgstr ""
+"Pour créer un poste de travail, allez à :menuselection:`Fabrication --> "
+"Configuration --> Postes de travail --> Créer`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:47
 msgid ""
@@ -13654,10 +13874,14 @@ msgid ""
 ":guilabel:`Equipment` tab. This ensures that operations carried out at one "
 "work center can also be performed at the other."
 msgstr ""
+"Assurez-vous que les deux postes de travail ont le même équipement "
+"répertorié dans l'onglet :guilabel:`Équipement`.  Cela permet d'assurer que "
+"les opérations effectuées dans un poste de travail peuvent également être "
+"réalisées dans l'autre poste."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst-1
 msgid "The equipment tab on a work center form."
-msgstr ""
+msgstr "L'onglet équipement d'un formulaire de poste de travail."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:54
 msgid ""
@@ -13666,14 +13890,21 @@ msgid ""
 "knows to send work orders to the second work center when the first is "
 "unavailable for any reason."
 msgstr ""
+"Pour le poste de travail qui sera rendu indisponible, sélectionnez le "
+"deuxième poste de travail dans le menu déroulant :guilabel:`Postes de "
+"travail alternatifs`. Odoo sait maintenant qu'il faut envoyer les ordres de "
+"travail au deuxième poste de travail lorsque le premier est indisponible "
+"pour quelque raison que ce soit."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst-1
 msgid "A work center form configured with an alternative work center."
 msgstr ""
+"Un formulaire de poste de travail configuré avec un poste de travail "
+"alternatif."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:63
 msgid "Add time off for a work center"
-msgstr ""
+msgstr "Ajouter des congés pour un poste de travail"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:65
 msgid ""
@@ -13684,10 +13915,18 @@ msgid ""
 ":guilabel:`↗ (external link)` button next to the :guilabel:`Working Hours` "
 "drop-down menu."
 msgstr ""
+"Une fois la configuration terminée, vous pouvez assigner des congés au poste"
+" de travail qui sera rendu indisponible. Allez à :menuselection:`Fabrication"
+" --> Configuration --> Postes de travail` et sélectionnez le poste de "
+"travail affecté. Cliquez sur :guilabel:`Modifier` et ensuite sur le bouton "
+":guilabel:`↗ (lien externe)` à côté du menu déroulant :guilabel:`Heures de "
+"travail`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst-1
 msgid "The Working Hours \"External link\" button on the work center form."
 msgstr ""
+"Le bouton \"Lien externe\" des heures de travail sur le formulaire du poste "
+"de travail."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:74
 msgid ""
@@ -13697,10 +13936,16 @@ msgid ""
 ":guilabel:`Time Off` button in the top right of the pop-up. Click it to be "
 "taken to the :guilabel:`Resource Time Off` page."
 msgstr ""
+"Une fenêtre contextuelle, intitulée :guilabel:`Ouvrir : Heures de travail`, "
+"s'ouvre. Les heures de travail standards pour le poste de travail y sont "
+"répertoriées, ainsi que d'autres informations. Puisque le mode développeur "
+"est activé, un bouton :guilabel:`Congés` se trouve dans le coin supérieur "
+"droit de la fenêtre contextuelle. Cliquez dessus pour être redirigé vers la "
+"page :guilabel:`Congés des ressources`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst-1
 msgid "The Time Off button on the Working Hours pop-up."
-msgstr ""
+msgstr "Le bouton Congés sur la fenêtre contextuelle des Heures de travail."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:83
 msgid ""
@@ -13712,14 +13957,22 @@ msgid ""
 "unavailable. Click :guilabel:`Save` and the time off for the work center is "
 "logged in Odoo."
 msgstr ""
+"Sur cette page, cliquez sur :guilabel:`Créer` pour configurer une nouvelle "
+"entrée de congés. Sur le formulaire des congés, notez le :guilabel:`Motif` "
+"de la fermeture du poste de travail (défaillance, maintenance, etc.-, "
+"sélectionnez le poste de travail affecté comme :guilabel:`Ressource`, et "
+"choisissez une :guilabel:`Date de début` et une :guilabel:`Date de fin` pour"
+" préciser la période pendant laquelle le poste de travail ne sera pas "
+"disponible. Cliquez sur :guilabel:`Enregistrer` et le congé du poste de "
+"travail est enregistré dans Odoo."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst-1
 msgid "The \"Resource Time Off\" form."
-msgstr ""
+msgstr "Le formulaire \"Congés des ressources\"."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:94
 msgid "Route orders to an alternative work center"
-msgstr ""
+msgstr "Acheminer les ordres vers un poste de travail alternatif"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:96
 msgid ""
@@ -13727,6 +13980,10 @@ msgid ""
 " to it can be automatically routed to an alternative work center using the "
 ":guilabel:`Plan` button."
 msgstr ""
+"Une fois qu'un poste de travail se trouve dans la période d'inactivité "
+"précisée, les ordres de travail qui lui sont envoyés peuvent être "
+"automatiquement acheminés vers un autre poste de travail à l'aide du bouton "
+":guilabel:`Planifier`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:99
 msgid ""
@@ -13736,6 +13993,11 @@ msgid ""
 "unavailable work center for one of its operations. Click :guilabel:`Confirm`"
 " to confirm the work order."
 msgstr ""
+"Commencez par créer un nouvel ordre de fabrication en sélectionnant "
+":menuselection:`Opérations --> Ordres de fabrication --> Créer`. Sur le "
+"formulaire de l'ordre de fabrication, précisez un :guilabel:`Produit` qui "
+"utilise le poste de travail indisponible pour l'une de ses opérations. "
+"Cliquez sur :guilabel:`Confirmer` pour confirmer l'ordre de travail."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:104
 msgid ""
@@ -13744,22 +14006,31 @@ msgid ""
 "Center` column. There is also a green :guilabel:`Plan` button on the top "
 "left of the page."
 msgstr ""
+"Sur l'ordre de travail confirmé, sélectionnez l'onglet :guilabel:`Ordres de "
+"travail`. Par défaut, le poste de travail indisponible est spécifié dans la "
+"colonne :guilabel:`Poste de travail`. Vous trouverez également un bouton "
+"vert :guilabel:`Programmer` dans le coin supérieur gauche de la page."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst-1
 msgid "The Plan button on a manufacturing order."
-msgstr ""
+msgstr "Le bouton Programmer sur un ordre de fabrication."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:112
 msgid ""
 "Click :guilabel:`Plan` and the work center listed under the :guilabel:`Work "
 "Orders` tab is automatically changed to the alternative work center."
 msgstr ""
+"Cliquez sur :guilabel:`Programmer` et le poste de travail répertorié dans "
+"l'onglet :guilabel:`Ordres de travail` est automatiquement remplacé par le "
+"poste de travail alternatif."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst-1
 msgid ""
 "The selected work center updates automatically after clicking the Plan "
 "button."
 msgstr ""
+"Le poste de travail sélectionné est mis à jour automatiquement après avoir "
+"cliqué sur le bouton Programmer."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:119
 msgid ""
@@ -13768,6 +14039,11 @@ msgid ""
 "the :guilabel:`Plan` button does not route work orders to an alternative "
 "work center unless the first one is at capacity."
 msgstr ""
+"Une fois que la période d'inactivité du poste de travail indisponible prend "
+"fin, Odoo reconnaît que le poste de travail est de nouveau disponible. À ce "
+"stade, cliquer sur le bouton :guilabel:`Programmer` n'achemine pas les "
+"ordres de travail vers un poste de travail alternatif, à moins que le "
+"premier ne soit à pleine capacité. "
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/quality_control.rst:5
 msgid "Quality control"
@@ -15177,6 +15453,12 @@ msgid ""
 " from vendors, and can include amounts owed for the goods and/or services "
 "purchased, sales taxes, freight and delivery charges, and more."
 msgstr ""
+"Une *facture fournisseur* est une facture reçue pour des produits et/ou des "
+"services qu'une entreprise achète auprès d'un fournisseur. Les factures "
+"fournisseurs enregistrent les dettes au fur et à mesure qu'elles arrivent "
+"des fournisseurs et peuvent inclure des montants dus pour les biens et/ou "
+"les services achetés, les taxes à la vente, les frais de transport et de "
+"livraison, et plus encore."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:11
 msgid ""
@@ -15184,6 +15466,9 @@ msgid ""
 "process, depending on the *bill control* policy chosen in the *Purchase* app"
 " settings."
 msgstr ""
+"Dans Odoo, une facture fournisseur peut être créée à différents moments du "
+"processus d'achat, en fonction de la politique de *contrôle des factures* "
+"choisie dans les paramètres de l'application *Achats*."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:15
 msgid "Bill control policies"
@@ -15195,6 +15480,9 @@ msgid ""
 "to :menuselection:`Purchase app --> Configuration --> Settings`, and scroll "
 "down to the :guilabel:`Invoicing` section."
 msgstr ""
+"Pour voir et modifier la politique de contrôle des factures par défaut, "
+"allez à l'application :menuselection:`Achats --> Configuration --> "
+"Paramètres` et faites défiler jusqu'à la section :guilabel:`Facturation`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:21
 msgid ""
@@ -15202,10 +15490,16 @@ msgid ""
 ":guilabel:`Ordered quantities` and :guilabel:`Received quantities`. After a "
 "policy is selected, click :guilabel:`Save` to save changes."
 msgstr ""
+"Il y a deux options de politique de :guilabel:`Contrôle des factures` : "
+":guilabel:`Quantités commandées` et :guilabel:`Quantités reçues`. Après "
+"avoir sélectionné une politique, cliquez sur :guilabel:`Enregistrer` pour "
+"enregistrer les changements."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst-1
 msgid "Bill control policies in purchase app settings."
 msgstr ""
+"Politiques de contrôle de factures dans les paramètres de l'application "
+"Achats."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:28
 msgid ""
@@ -15231,6 +15525,9 @@ msgid ""
 "the total order has been received. The products and quantities **received** "
 "are used to generate a draft bill."
 msgstr ""
+":guilabel:`Quantités reçues` : la facture n'est créée qu'**après** qu'une "
+"partie de la commande totale a été reçue. Les produits et les quantités "
+"**reçus** sont utilisés pour générer une facture brouillon."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:37
 msgid ""
@@ -15238,10 +15535,14 @@ msgid ""
 "policy can be overridden by going to the :guilabel:`Purchase` tab in a "
 "product's template, and modifying its :guilabel:`Control Policy` field."
 msgstr ""
+"Si un produit a besoin d'une politique de contrôle différente, la politique "
+"de contrôle des factures par défaut peut être remplacée en allant à l'onglet"
+" :guilabel:`Achats` dans un modèle de produit et en modifiant le champ "
+":guilabel:`Politique de contrôle`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst-1
 msgid "Control policy field on product form."
-msgstr ""
+msgstr "Champ de politique de contrôle sur un formulaire de produit."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:46
 msgid "3-way matching"
@@ -15252,6 +15553,9 @@ msgid ""
 "*3-way matching* ensures vendor bills are only paid once some (or all) of "
 "the products included in the purchase order have actually been received."
 msgstr ""
+"La *correspondance à trois voies* garantir que les factures fournisseurs ne "
+"sont payées qu'après avoir reçu une partie des produits ou tous les produits"
+" du bon de commande."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:51
 msgid ""
@@ -15260,20 +15564,30 @@ msgid ""
 " the box next to :guilabel:`3-way matching: purchases, receptions, and "
 "bills`, and click :guilabel:`Save` to save changes."
 msgstr ""
+"Pour l'activer, allez à l'application :menuselection:`Achats --> "
+"Configuration --> Paramètres` et faites défiler jusqu'à la section "
+":guilabel:`Facturation`. Cochez ensuite la case à côté de "
+":guilabel:`Correspondance à trois voies : achats, réceptions et factures` et"
+" cliquez sur :guilabel:`Enregistrer` pour enregistrer les changements."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:56
 msgid ""
 ":guilabel:`3-way matching` is **only** intended to work with the "
 ":guilabel:`Bill Control` policy set to :guilabel:`Received quantities`."
 msgstr ""
+"La :guilabel:`correspondance à trois voies` fonctionnera **uniquement** "
+"lorsque la politique de :guilabel:`Contrôle des factures` est définie sur "
+":guilabel:`Quantités reçues`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:0
 msgid "Activated three-way matching feature in purchase settings."
 msgstr ""
+"Fonctionnalité de correspondance à trois voies activée dans les paramètres "
+"de l'application Achats."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:64
 msgid "Create and manage vendor bills on receipts"
-msgstr ""
+msgstr "Créer et gérer des factures fournisseurs sur les réceptions"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:66
 msgid ""
@@ -15283,10 +15597,19 @@ msgid ""
 "the bill control policy chosen in the settings, vendor bill creation is "
 "completed at different steps of the procurement process."
 msgstr ""
+"Lorsque des produits sont reçus dans l'entrepôt d'une entreprise, des "
+"réceptions sont créées. Une fois que l'entreprise traite les quantités "
+"reçues, elle peut choisir de créer une facture fournisseur directement "
+"depuis la réception de l'entrepôt. En fonction de la politique de contrôle "
+"des factures sélectionnée dans les paramètres, la création de la facture "
+"fournisseur s'effectue à différentes étapes du processus "
+"d'approvisionnement. "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:72
 msgid "With the bill control policy set to ordered quantities"
 msgstr ""
+"Lorsque la politique de contrôle des factures est définie sur quantités "
+"commandées"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:74
 msgid ""
@@ -15296,6 +15619,13 @@ msgid ""
 "section, and select :guilabel:`Ordered quantities` under :guilabel:`Bill "
 "Control`. Then, click :guilabel:`Save` to save changes."
 msgstr ""
+"Pour créer et gérer des factures fournisseurs sur les réceptions en "
+"utilisant la politique de contrôle des factures *quantités commandées*, "
+"allez d'abord à l'application :menuselection:`Achats --> Configuration --> "
+"Paramètres`, faites défiler jusqu'à la section :guilabel:`Facturation` et "
+"définissez :guilabel:`Contrôle des factures` sur :guilabel:`Quantités "
+"commandées`. Cliquez ensuite sur :guilabel:`Enregistrer` pour enregistrer "
+"les changements."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:79
 msgid ""
@@ -15303,6 +15633,9 @@ msgid ""
 "to create a new request for quotation (RFQ). Doing so reveals a blank "
 ":abbr:`RFQ (request for quotation)` detail form."
 msgstr ""
+"Allez ensuite à l'application :menuselection:`Achats` et cliquez sur "
+":guilabel:`Créer` pour créer une nouvelle demande de prix. Cette action fait"
+" apparaître un formulaire détaillé de demande de prix vierge."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:82
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:144
@@ -15311,6 +15644,9 @@ msgid ""
 "quotation)` in the :guilabel:`Vendor` field, and add products to the "
 ":guilabel:`Product` lines by clicking :guilabel:`Add a line`."
 msgstr ""
+"Sur le formulaire détaillé vierge, ajoutez un fournisseur à la demande de "
+"prix dans le champ :guilabel:`Fournisseur` et ajoutez des produits aux "
+"lignes de :guilabel:`Produit` en cliquant sur :guilabel:`Ajouter une ligne`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:86
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:148
@@ -15319,18 +15655,25 @@ msgid ""
 ":guilabel:`Confirm Order` button above the detail form. Doing so turns the "
 ":abbr:`RFQ (request for quotation)` into a purchase order."
 msgstr ""
+"Confirmez ensuite la demande de prix en cliquant sur le bouton "
+":guilabel:`Conformer la commande` en haut du formulaire. Ceci transforme la "
+"demande de prix en bon de commande."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:90
 msgid ""
 "Then, click the :guilabel:`Create Bill` button to create a vendor bill for "
 "the purchase order."
 msgstr ""
+"Cliquez ensuite sur le bouton :guilabel:`Créer une facture fournisseur` pour"
+" créer une facture fournisseur pour le bon de commande."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:92
 msgid ""
 "Clicking the :guilabel:`Create Bill` button reveals the :guilabel:`Draft "
 "Bill` page for the purchase order."
 msgstr ""
+"Le fait de cliquer sur le bouton :guilabel:`Créer une facture fournisseur` "
+"révèle la page :guilabel:`Facture brouillon` pour le bon de commande."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:95
 msgid ""
@@ -15339,12 +15682,20 @@ msgid ""
 " add additional products to the :guilabel:`Product` lines by clicking "
 ":guilabel:`Add a line` in the :guilabel:`Invoice Lines` tab."
 msgstr ""
+"Sur la :guilabel:`Facture brouillon`, cliquez sur le bouton "
+":guilabel:`Modifier` pour modifier la facture et ajoutez une date de "
+"facturation dans le champ :guilabel:`Date de facturation`. le cas échéant, "
+"ajoutez des produits supplémentaires aux lignes de :guilabel:`Produit` en "
+"cliquant sur :guilabel:`Ajouter une ligne` l'onglet :guilabel:`Lignes de "
+"facture`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:99
 msgid ""
 "Next, confirm the bill by clicking the :guilabel:`Confirm` button on the "
 ":guilabel:`Draft Bill` page."
 msgstr ""
+"Ensuite, confirmer la facture en cliquant sur le bouton "
+":guilabel:`Confirmer` sur la page :guilabel:`Facture brouillon`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:103
 msgid ""
@@ -15352,6 +15703,9 @@ msgid ""
 " can be confirmed as soon as it is created, before any products have been "
 "received."
 msgstr ""
+"Puisque la politique de contrôle des factures est définie sur *quantités "
+"commandées*, la facture brouillon peut être confirmée dès qu'elle est créée,"
+" avant la réception des produits."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:106
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:179
@@ -15364,6 +15718,13 @@ msgid ""
 "and a :guilabel:`Recipient Bank Account` can be selected from a drop-down "
 "menu."
 msgstr ""
+"Sur la nouvelle :guilabel:`facture fournisseur`, ajoutez un numéro de "
+":guilabel:`Référence de la facture`, qui peut être utilisé pour faire "
+"correspondre la facture avec d'autres documents (tels que le bon de "
+"commande). Puis cliquez sur :menuselection:`Confirmer --> Enregistrer un "
+"paiement`. Une fenêtre contextuelle apparaît, dans laquelle vous pouvez "
+"choisir un :guilabel:`Journal` de paiement ; un :guilabel:`Mode de paiement`"
+" et un :guilabel:`Compte bancaire destinataire` dans un menu déroulant."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:112
 msgid ""
@@ -15373,10 +15734,18 @@ msgid ""
 ":guilabel:`Vendor Bill`. Doing so causes a green :guilabel:`In Payment` "
 "banner to display on the :abbr:`RFQ (request for quotation)` form."
 msgstr ""
+"De plus, vous pouvez modifier le :guilabel:`Montant` de la facture, la "
+":guilabel:`Date de paiement` et le :guilabel:`Mémo` (:dfn:`Numéro de "
+"référence`) dans cette fenêtre contextuelle. Une fois que vous avez fini, "
+"cliquez sur :guilabel:`Créer un paiement` pour finaliser la création de la "
+":guilabel:`Facture fournisseur`. Une bannière verte :guilabel:`En paiement` "
+"s'affiche sur la demande de prix."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst-1
 msgid "Vendor bill form for ordered quantities control policy."
 msgstr ""
+"Formulaire de facture fournisseur pour la politique de contrôle des "
+"quantités commandées."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:122
 msgid ""
@@ -15386,10 +15755,18 @@ msgid ""
 "customer to whom they were sold, while *debit notes* are reserved for goods "
 "returned from the customer/buyer to the vendor or supplier."
 msgstr ""
+"Chaque facture fournisseur offre la possibilité d':guilabel:`Ajouter un "
+"avoir` ou d':guilabel:`Ajouter une note de débit`. Un *avoir* est "
+"généralement émis lorsqu'un vendeur ou un fournisseur récupère une certaine "
+"quantité de produits auprès du client auquel ils ont été vendus, alors que "
+"les *notes de débit* sont réservées aux marchandises retournées par le "
+"client/l'acheteur au vendeur ou fournisseur."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:128
 msgid "With the bill control policy set to received quantities"
 msgstr ""
+"Lorsque la politique de contrôle des factures est définie sur quantités "
+"reçues"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:131
 msgid ""
@@ -15398,6 +15775,10 @@ msgid ""
 "policy), an error message appears, and settings must be changed before "
 "proceeding."
 msgstr ""
+"Si vous tentez de créer une facture fournisseur sans avoir reçu de quantités"
+" d'un produit (alors que vous utilisez la politique de contrôle de factures "
+"*quantités reçues*), un message d'erreur s'affiche et les paramètres doivent"
+" être modifiés avant de poursuivre."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:135
 msgid ""
@@ -15407,6 +15788,13 @@ msgid ""
 "section, and select :guilabel:`Received quantities` under :guilabel:`Bill "
 "Control`. Then, click :guilabel:`Save` to save changes."
 msgstr ""
+"Pour créer et gérer des factures fournisseurs sur des réceptions en "
+"utilisant la politique de contrôle des factures *quantités reçues*, allez "
+"d'abord à l'application :menuselection:`Achats --> Configuration --> "
+"Paramètres`, faites défiler jusqu'à la section :guilabel:`Facturation` et "
+"définissez le :guilabel:`Contrôle des factures` sur :guilabel:`Quantités "
+"reçues`. Cliquez ensuite sur :guilabel:`Enregistrer` pour enregistrer les "
+"changements."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:140
 msgid ""
@@ -15414,12 +15802,17 @@ msgid ""
 "to create a new :abbr:`RFQ (request for quotation)`. Doing so reveals a "
 "blank :abbr:`RFQ (request for quotation)` detail form."
 msgstr ""
+"Ensuite, allez à l'application :menuselection:`Achats` et cliquez sur "
+":guilabel:`Créer` pour créer une nouvelle demande de prix. Un formulaire "
+"détaillé de demande de prix vierge s'affiche."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:152
 msgid ""
 "Finally, click the :guilabel:`Create Bill` button to create a bill for the "
 "purchase order."
 msgstr ""
+"Enfin, cliquez sur le bouton :guilabel:`Créer une facture fournisseur` pour "
+"créer une facture fournisseur pour le bon de commande. "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:155
 msgid ""
@@ -15428,16 +15821,25 @@ msgid ""
 "Order` requires the receipt of at least partial quantity of the items "
 "included on the order to create a vendor bill."
 msgstr ""
+"Le fait de cliquer sur :guilabel:`Créer une facture fournisseur` avant "
+"d'avoir reçu des produits fera apparaître une fenêtre contextuelle "
+"d':guilabel:`Erreur d'utilisateur`. Le :guilabel:`Bon de commande` requiert "
+"qu'au moins une partie des articles qui figurent sur le bon de commande soit"
+" livrée avant de créer une facture fournisseur."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst-1
 msgid "User error pop-up for received quantities control policy."
 msgstr ""
+"Fenêtre contextuelle d'erreur d'utilisateur pour la politique de contrôle "
+"des quantités reçues."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:163
 msgid ""
 "Next, click the :guilabel:`Receipt` smart button to view the warehouse "
 "receipt form."
 msgstr ""
+"Ensuite, cliquez sur le bouton intelligent :guilabel:`Réception` pour "
+"afficher le formulaire de réception de l'entrepôt."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:165
 msgid ""
@@ -15446,6 +15848,11 @@ msgid ""
 ":menuselection:`Purchase Order` (via the breadcrumbs), and click the "
 ":guilabel:`Create Bill` button on the purchase order form."
 msgstr ""
+"Sur le formulaire de réception de l'entrepôt, cliquez sur "
+":menuselection:`Valider --> Appliquer` pour indiquer les quantités "
+":guilabel:`faites`. Retournez ensuite au :menuselection:`Bon de commande` "
+"(via le fil d'Ariane) et cliquez sur le bouton :guilabel:`Créer une facture "
+"fournisseur` sur le formulaire du bon de commande."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:169
 msgid ""
@@ -15454,12 +15861,19 @@ msgid ""
 ":guilabel:`Bill Date`. If needed, add additional products to the "
 ":guilabel:`Product` lines by clicking :guilabel:`Add a line`."
 msgstr ""
+"Cette opération fait apparaître une :guilabel:`Facture brouillon` pour le "
+"bon de commande. Sur la :guilabel:`Facture brouillon`, cliquez sur le bouton"
+" :guilabel:`Modifier` et ajoutez une :guilabel:`Date de facturation`. Le cas"
+" échéant, ajoutez des produits supplémentaires aux lignes de "
+":guilabel:`Produit` en cliquant sur :guilabel:`Ajouter une ligne`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:173
 msgid ""
 "Next, click the :guilabel:`Confirm` button to confirm the :guilabel:`Draft "
 "Bill`."
 msgstr ""
+"Ensuite, cliquez sur le bouton :guilabel:`Confirmer` pour confirmer la "
+":guilabel:`Facture brouillon`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:176
 msgid ""
@@ -15467,6 +15881,9 @@ msgid ""
 "bill can **only** be confirmed when at least some of the quantities are "
 "received."
 msgstr ""
+"Puisque la politique de contrôle des factures est définie sur *quantités "
+"reçues*, la facture brouillon peut **uniquement** être confirmée lorsqu'au "
+"moins certaines quantités sont reçues."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:185
 msgid ""
@@ -15476,10 +15893,16 @@ msgid ""
 "bill. Doing so causes a green **In Payment** banner to display on the "
 ":abbr:`RFQ (request for quotation)` form."
 msgstr ""
+"De plus, vous pouvez modifier le :guilabel:`Montant` de la acture, la "
+":guilabel:`Date de paiement` et le :guilabel:`Mémo` (:dfn:`Numéro de "
+"référence`) dans cette fenêtre contextuelle. Une fois que vous avez fini, "
+"cliquez sur :guilabel:`Créer un paiement` pour finaliser la création de la "
+"facture fournisseur. Une bannière verte **En paiement** s'affiche sur la "
+"demande de prix."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:191
 msgid "Create and manage vendor bills in Accounting"
-msgstr ""
+msgstr "Créer et gérer des factures fournisseurs dans Comptabilité"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:193
 msgid ""
@@ -15488,6 +15911,11 @@ msgid ""
 ":menuselection:`Accounting app --> Vendors --> Bills`, and click "
 ":guilabel:`Create`. Doing so reveals a blank vendor bill detail form."
 msgstr ""
+"Vous pouvez également créer des factures fournisseurs directement à partir "
+"de l'application *Comptabilité*, **sans** devoir créer un bon de commande "
+"avant. Pour ce faire, allez à l'application :menuselection:`Comptabilité -->"
+" Fournisseurs --> Factures fournisseurs` et cliquez sur :guilabel:`Créer`. "
+"Un formulaire détaillé de facture fournisseur vierge s'affiche."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:197
 msgid ""
@@ -15498,6 +15926,13 @@ msgid ""
 "other necessary information. Finally, click :guilabel:`Confirm` to confirm "
 "the bill."
 msgstr ""
+"Sur le formulaire détaillé de facture fournisseur vierge, ajoutez un "
+"fournisseur dans le champ :guilabel:`Fournisseur` et ajoutez des produits "
+"aux lignes de :guilabel:`Produit` (dans l'onglet :guilabel:`Lignes de "
+"facture`) en cliquant sur :guilabel:`Ajouter une ligne`. Ensuite, ajoutez "
+"une date de facturation dans le champ :guilabel:`Date de facturation` et "
+"toute autre information nécessaire. Cliquez enfin sur :guilabel:`Confirmer` "
+"pour confirmer la facture fournisseur."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:202
 msgid ""
@@ -15505,6 +15940,10 @@ msgid ""
 ":guilabel:`Account` journals that were populated based on the configuration "
 "on the corresponding :guilabel:`Vendor` and :guilabel:`Product` forms."
 msgstr ""
+"À partir de là, cliquez sur l'onglet :guilabel:`Écritures comptables` pour "
+"voir (ou modifier) les journaux de :guilabel:`Compte` qui ont été complétés "
+"en fonction de la configuration des formulaires :guilabel:`Fournisseur` et "
+":guilabel:`Produit` correspondants."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:206
 msgid ""
@@ -15512,12 +15951,19 @@ msgid ""
 " credit or debit notes to the bill. Or, add a :guilabel:`Bill Reference` "
 "number (while in :guilabel:`Edit` mode)."
 msgstr ""
+"Cliquez ensuite sur :guilabel:`Ajouter un avoir` ou :guilabel:`Ajouter une "
+"note de débit` pour avoir un avoir ou une note de débit à la facture. Ou "
+"alors, ajoutez un numéro de :guilabel:`Référence de facture` (en mode "
+":guilabel:`Édition`)."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:209
 msgid ""
 "Then, when ready, click :menuselection:`Register Payment --> Create Payment`"
 " to complete the :guilabel:`Vendor Bill`."
 msgstr ""
+"Une fois que vous avez terminé, cliquez sur :menuselection:`Enregistrer un "
+"paiement --> Créer un paiement` pour finaliser la :guilabel:`Facture "
+"fournisseur`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:213
 msgid ""
@@ -15526,20 +15972,27 @@ msgid ""
 "order)` from the menu. The bill will auto-populate with the information from"
 " the :abbr:`PO (purchase order)`."
 msgstr ""
+"Pour associer la facture fournisseur à un bon de commande existant, cliquez "
+"sur le menu déroulant à côté de :guilabel:`Saisie automatique` et "
+"sélectionnez un bon de commande dans le menu. Les informations du bon de "
+"commande seront automatiquement complétées dans la facture fournisseur."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:0
 msgid "Auto-complete drop-down list on draft vendor bill."
 msgstr ""
+"Liste déroulant de saisie automatique sur une facture fournisseur brouillon."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:222
 msgid "Batch billing"
-msgstr ""
+msgstr "Facturation par lot"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:224
 msgid ""
 "Vendor bills can be processed and managed in batches in the *Accounting* "
 "app."
 msgstr ""
+"Les factures fournisseurs peuvent être traitées et gérées par lots dans "
+"l'application *Comptabilité*."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:226
 msgid ""
@@ -15549,6 +16002,12 @@ msgid ""
 "selects all existing vendor bills with a :guilabel:`Posted` or "
 ":guilabel:`Draft` :guilabel:`Status`."
 msgstr ""
+"Pour ce faire, allez à l'application :menuselection:`Comptabilité --> "
+"Fournisseurs --> Factures fournisseurs`. Puis cochez la :guilabel:`case` "
+"dans le coin supérieur gauche de la page, à côté de la colonne "
+":guilabel:`Numéro`, sous le bouton :guilabel:`Créer`. Cette action permet de"
+" sélectionner toutes les factures fournisseurs sont le :guilabel:`Statut` "
+"est :guilabel:`Comptabilisé` ou :guilabel:`Brouillon`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:231
 msgid ""
@@ -15557,6 +16016,11 @@ msgid ""
 "or bills; or click :guilabel:`Register Payment` to create and process "
 "payments for multiple vendor bills at once."
 msgstr ""
+"À partir de là, cliquez sur l'icône d'engrenage :guilabel:`Action` pour "
+"exporter, supprimer ou envoyer & imprimer les factures ; cliquez sur l'icône"
+" :guilabel:`Imprimer` pour imprimer les factures clients ou fournisseurs ; "
+"ou cliquez sur :guilabel:`Enregistrer un paiement` pour créer et traiter le "
+"paiement de plusieurs factures fournisseurs en une fois."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:235
 msgid ""
@@ -15566,6 +16030,12 @@ msgid ""
 "choose a :guilabel:`Payment Method`. There is also the option to "
 ":guilabel:`Group Payments` on this pop-up, as well."
 msgstr ""
+"Lorsque vous sélectionnez :guilabel:`Enregistrer un paiement`, une fenêtre "
+"contextuelle s'affiche. Dans cette fenêtre contextuelle, sélectionnez le "
+"journal approprié dans le champ :guilabel:`Journal`, choisissez une date de "
+"paiement dans le champ :guilabel:`Date de paiement` et choisissez un "
+":guilabel:`Mode de paiement`. Vous avez également la possibilité de "
+":guilabel:`Regrouper des paiements` dans cette fenêtre contextuelle."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:240
 msgid ""
@@ -15573,10 +16043,15 @@ msgid ""
 "list of journal entries on a separate page. This list of journal entries are"
 " all tied to their appropriate vendor bills."
 msgstr ""
+"Lorsque vous avez terminé, cliquez sur le bouton :guilabel:`Créer un "
+"paiement`, ce qui crée une liste de pièces comptables dans une page séparée."
+" Cette liste de pièces comptables sont toutes associées à leurs factures "
+"fournisseurs appropriées."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst-1
 msgid "Batch billing register payment pop-up."
 msgstr ""
+"Fenêtre contextuelle d'enregistrer un paiement pour une facturation par lot."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:248
 msgid ""
@@ -15584,11 +16059,15 @@ msgid ""
 "only work for journal entries whose :guilabel:`Status` is set to "
 ":guilabel:`Posted`."
 msgstr ""
+"L'option :guilabel:`Enregistrer un paiement` pour les factures fournisseurs "
+"par lot fonctionne uniquement pour les pièces comptables dont le "
+":guilabel:`Statut` est défini sur :guilabel:`Comptabilisé`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:252
 msgid ""
 ":doc:`/applications/inventory_and_mrp/purchase/manage_deals/control_bills`"
 msgstr ""
+":doc:`/applications/inventory_and_mrp/purchase/manage_deals/control_bills`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:3
 msgid "Configure reordering rules"

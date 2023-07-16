@@ -14,14 +14,14 @@
 # Jesús Alan Ramos Rodríguez <alan.ramos@jarsa.com.mx>, 2021
 # Pablo Rojas <rojaspablo88@gmail.com>, 2021
 # José Cabrera Lozano <jose.cabrera@edukative.es>, 2021
-# jabelchi, 2021
+# Josep Anton Belchi, 2021
 # Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2022
 # Lucia Pacheco, 2023
 # Martin Trigaux, 2023
-# Iran Villalobos López, 2023
 # Fernanda Alvarez, 2023
 # Braulio D. López Vázquez <bdl@odoo.com>, 2023
 # Aimée Mendoza Sánchez, 2023
+# Iran Villalobos López, 2023
 # 
 #, fuzzy
 msgid ""
@@ -30,7 +30,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-06 05:52+0000\n"
 "PO-Revision-Date: 2021-05-18 05:18+0000\n"
-"Last-Translator: Aimée Mendoza Sánchez, 2023\n"
+"Last-Translator: Iran Villalobos López, 2023\n"
 "Language-Team: Spanish (https://app.transifex.com/odoo/teams/41243/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -12767,6 +12767,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:3
 msgid "Make work centers unavailable using Time Off"
 msgstr ""
+"Desactive los centros de trabajo utilizando la aplicación Tiempo personal. "
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:5
 msgid ""
@@ -12775,6 +12776,10 @@ msgid ""
 "reason, work orders begin to pile up at the work center until it is "
 "operational again."
 msgstr ""
+"En Odoo, los *centros de trabajo* se usan para llevar a cabo operaciones de "
+"fabricación en ubicaciones específicas. Sin embargo, si no es posible usar "
+"un centro de trabajo por alguna razón, las órdenes de trabajo se comienzan a"
+" acumular en el centro hasta que sea funcional de nuevo. "
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:9
 msgid ""
@@ -12785,6 +12790,13 @@ msgid ""
 "manufacturing operations can continue until the impacted work center is "
 "available again."
 msgstr ""
+"Por ello, es necesario desactivar el centro de trabajo en Odoo para que la "
+"plataforma envíe órdenes de trabajo nuevas a los centros de trabajo alternos"
+" que están en funcioamiento. Utilizando *Tiempo personal* de Odoo, es "
+"posible desactivar un centro de trabajo por un periodo de tiempo "
+"determinado. Al hacerlo, se asegurará de que las operaciones de fabricación "
+"puedan continuar hasta que el centro de trabajo afectado esté disponible de "
+"nuevo. "
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:17
 msgid ""
@@ -12794,6 +12806,11 @@ msgid ""
 " smart button to appear on each work center's :guilabel:`Working Hours` pop-"
 "up window."
 msgstr ""
+"Antes de que pueda desactivar un centro de trabajo, la plataforma de Odoo "
+"debe estar configurada adecuadamente. Primero, debe activar el :ref:`modo "
+"desarrollador <developer-mode>`. Esto permitirá que aparezca el botón "
+"inteligente de :guilabel:`Tiempo personal` en la ventana emergente de "
+":guilabel:`Horas laborables` en cada centro de trabajo."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:22
 msgid ""
@@ -12801,10 +12818,13 @@ msgid ""
 "the bottom of the page, and clicking :guilabel:`Activate the developer mode`"
 " under the :guilabel:`Developer Tools` heading."
 msgstr ""
+"Active el modo desarrollador en :menuselection:`Ajustes`, baje hasta el "
+"final de la página y haga clic en :guilabel:`Activar modo desarrollador` que"
+" está en la sección :guilabel:`Herramientas de desarrollador`.   "
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst-1
 msgid "The \"Activate the developer mode\" button."
-msgstr ""
+msgstr "El botón \"Activar modo desarrollador\"."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:29
 msgid ""
@@ -12815,10 +12835,18 @@ msgid ""
 "should be the only one that appears on the page. Click the green "
 ":guilabel:`Install` button on the card to install the app."
 msgstr ""
+"Luego, instale la aplicación *Tiempo personal*. Esta es la aplicación que se"
+" usa para asignar tiempo perosnal a todos los recursos dentro de Odoo, "
+"incluyendo empleados y centros de trabajo. Vaya a "
+":menuselection:`Aplicaciones` y escriba `Tiempo personal` en la barra de "
+":guilabel:`Buscar...`. La tarjeta para el módulo de :guilabel:`Tiempo "
+"personal` es la única que debe aparecer en la página. Haga clic en el botón "
+"verde de  :guilabel:`Instalar` que aparece en la tarjeta para instalar la "
+"aplicación.      "
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst-1
 msgid "The Time Off module installation card."
-msgstr ""
+msgstr "Tarjeta de instalación del módulo Tiempo personal. "
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:39
 msgid ""
@@ -12828,12 +12856,20 @@ msgid ""
 " no second work center is configured, Odoo cannot route work orders away "
 "from the unavailable work center and they will pile up in its queue."
 msgstr ""
+"El último paso es configurar adecuadamente los centros de trabajo. Para este"
+" flujo de trabajo, es necesario contar con al menos dos centros de trabajo: "
+"uno que esté desactivado y otro que reciba las órdenes de trabajo que el "
+"otro no puede aceptar. Si no tiene un segundo centro de trabajo configurado,"
+" Odoo no podrá enviar a otro lado las órdenes de trabajo y se acumularán en "
+"la cola de este único centro de trabajo. "
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:44
 msgid ""
 "To create a work center, navigate to :menuselection:`Manufacturing --> "
 "Configuration --> Work Centers --> Create`."
 msgstr ""
+"Para crear un centro de trabajo, vaya a  :menuselection:`Fabricación --> "
+"Configuración --> Centros de trabajo --> Crear `. "
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:47
 msgid ""
@@ -12841,10 +12877,14 @@ msgid ""
 ":guilabel:`Equipment` tab. This ensures that operations carried out at one "
 "work center can also be performed at the other."
 msgstr ""
+"Asegúrese de que ambos centros de trabajo tengan configurado el mismo equipo"
+" en la pestaña :guilabel:`Equipo`. Esto garantizará que las operaciones que "
+"se llevan a cabo en un centro de trabajo también puedan realizarse en el "
+"otro.  "
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst-1
 msgid "The equipment tab on a work center form."
-msgstr ""
+msgstr "La pestaña de equipo en el formulario del centro de trabajo. "
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:54
 msgid ""
@@ -12853,14 +12893,20 @@ msgid ""
 "knows to send work orders to the second work center when the first is "
 "unavailable for any reason."
 msgstr ""
+"Para el centro de trabajo que estará desactivado, seleccione el segundo "
+"centro de trabajo en el menú desplegable :guilabel:`Centros de trabajo "
+"alternos`. Ahora, Odoo sabrá que debe enviar órdenes de trabajo al segundo "
+"centro cuando el primero no esté disponible por cualquier motivo.  "
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst-1
 msgid "A work center form configured with an alternative work center."
 msgstr ""
+"Un formulario de centro de trabajo configurado con un centro de trabajo "
+"alterno. "
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:63
 msgid "Add time off for a work center"
-msgstr ""
+msgstr "Utilizar la función tiempo personal en un centro de trabajo"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:65
 msgid ""
@@ -12871,10 +12917,16 @@ msgid ""
 ":guilabel:`↗ (external link)` button next to the :guilabel:`Working Hours` "
 "drop-down menu."
 msgstr ""
+"Con la configuración completa, ahora puede asignar un tiempo de pausa al "
+"centro de trabajo que estará desactivado. Comience por ir a "
+":menuselection:`Fabricación --> Configuración --> Centros de trabajo` y "
+"seleccione el centro de trabajo afectado. Haga clic en :guilabel:`Editar` y "
+"luego en el botón de :guilabel:`↗ (enlace externo)` que está junto al menú "
+"desplegable :guilabel:`Horas laborables`.      "
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst-1
 msgid "The Working Hours \"External link\" button on the work center form."
-msgstr ""
+msgstr "El botón de \""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:74
 msgid ""
@@ -12884,10 +12936,18 @@ msgid ""
 ":guilabel:`Time Off` button in the top right of the pop-up. Click it to be "
 "taken to the :guilabel:`Resource Time Off` page."
 msgstr ""
+"Aparecerá una ventana emergente llamada :guilabel:`Abierto: Horas "
+"laborables`. El estándar de horas laborables para el centro de trabajo "
+"aparece aquí junto con otros detalles más. Ya que tiene activado el modo "
+"desarrollador habrá un botón de :guilabel:`Tiempo personal` en la parte "
+"superior derecha de la ventana emergente. Haga clic sobre él para ir a la "
+"página de :guilabel:`Recurso de tiempo personal`.   "
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst-1
 msgid "The Time Off button on the Working Hours pop-up."
 msgstr ""
+"El botón de tiempo personal en la ventana emergente de las horas laborables."
+" "
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:83
 msgid ""
@@ -12899,14 +12959,22 @@ msgid ""
 "unavailable. Click :guilabel:`Save` and the time off for the work center is "
 "logged in Odoo."
 msgstr ""
+"En esta página, haga clic en :guilabel:`Crear` para configurar una nueva "
+"entrada para tiempo personal. En el formulario, anote el :guilabel:`Motivo` "
+"por el cual no está disponible el centro de trabajo (dañado, en "
+"mantenimiento, etc), seleccione el centro de trabajo afectado como el "
+":guilabel:`Recurso` y elija una :guilabel:`Fecha de inicio` y una "
+":guilabel:`Fecha de finalización` para especificar el periodo durante el "
+"cual el centro de trabajo estará inactivo. Haga clic en  :guilabel:`Guardar`"
+" y el tiempo en pausa para el centro de trabajo se guardará en Odoo.     "
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst-1
 msgid "The \"Resource Time Off\" form."
-msgstr ""
+msgstr "Formulario del \"Recurso de tiempo personal\"."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:94
 msgid "Route orders to an alternative work center"
-msgstr ""
+msgstr "Envie órdenes a un centro de trabajo alterno "
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:96
 msgid ""
@@ -12914,6 +12982,10 @@ msgid ""
 " to it can be automatically routed to an alternative work center using the "
 ":guilabel:`Plan` button."
 msgstr ""
+"Una vez que el centro de trabajo esté configurado dentro del periodo en el "
+"que estará en pausa, las órdenes de trabajo que lleguen ahí, podrán "
+"reenviarse de manera automática al centro de trabajo alterno usando el botón"
+" de :guilabel:`Planear`.  "
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:99
 msgid ""
@@ -12923,6 +12995,11 @@ msgid ""
 "unavailable work center for one of its operations. Click :guilabel:`Confirm`"
 " to confirm the work order."
 msgstr ""
+"Comience por crear una nueva orden de fabricación en "
+":menuselection:`Operaciones --> Órdenes de fabricación --> Crear`. En el "
+"formulario de la orden de fabricación, especifíque un :guilabel:`Producto` "
+"que utilice el centro de trabajo inactivo para una de sus operaciones. Haga "
+"clic en :guilabel:`Confirmar` para confirmar la orden de trabajo.     "
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:104
 msgid ""
@@ -12931,22 +13008,32 @@ msgid ""
 "Center` column. There is also a green :guilabel:`Plan` button on the top "
 "left of the page."
 msgstr ""
+"En la orden de trabajo confirmada, seleccione la pestaña de "
+":guilabel:`Órdenes de trabajo`. De manera predeterminada, el centro de "
+"trabajo que no está disponible estará especificado en la columna de  "
+":guilabel:`Centro de trabajo`. También hay un botón verde en la esquina "
+"superior izquierda de la página que dice :guilabel:`Planear`.      "
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst-1
 msgid "The Plan button on a manufacturing order."
-msgstr ""
+msgstr "El botón de Planear en una orden de fabricación.. "
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:112
 msgid ""
 "Click :guilabel:`Plan` and the work center listed under the :guilabel:`Work "
 "Orders` tab is automatically changed to the alternative work center."
 msgstr ""
+"Haga clic en el botón :guilabel:`Planear` y el centro de trabajo que aparece"
+" en la pestaña  :guilabel:`Órdenes de trabajo` cambia automáticamente al "
+"centro de trabajo alternativo.    "
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst-1
 msgid ""
 "The selected work center updates automatically after clicking the Plan "
 "button."
 msgstr ""
+"El centro de trabajo seleccionado se actualiza automáticamente después de "
+"hacer clic en el botón de Planear. "
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:119
 msgid ""
@@ -12955,6 +13042,11 @@ msgid ""
 "the :guilabel:`Plan` button does not route work orders to an alternative "
 "work center unless the first one is at capacity."
 msgstr ""
+"Una vez que el periodo de inactividad del centro de trabajo termine, Odoo "
+"reconocerá que el centro de trabajo se encuentra disponible de nuevo. En "
+"este punto, hacer clic en el botón de :guilabel:`Planear` ya no reenviará "
+"las órdenes de trabajo al centro de trabajo alterno a menos que el primero "
+"tenga su capacidad llena.  "
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/quality_control.rst:5
 msgid "Quality control"
@@ -14342,6 +14434,11 @@ msgid ""
 " from vendors, and can include amounts owed for the goods and/or services "
 "purchased, sales taxes, freight and delivery charges, and more."
 msgstr ""
+"Una *factura de proveedor* es una factura que se recibe para bienes y/o "
+"servicios que una empresa adquiere de un proveedor. Estas facturas registran"
+" todo lo que llega de los proveedores que se debe pagar y puede incluir "
+"importes adeudados por lo bienes y/o servicios adquiridos, impuestos sobre "
+"las ventas, cargos de transporte, envíos y mucho más. "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:11
 msgid ""
@@ -14349,6 +14446,9 @@ msgid ""
 "process, depending on the *bill control* policy chosen in the *Purchase* app"
 " settings."
 msgstr ""
+"En Odoo, una factura de proveedor se puede crear en diferentes puntos del "
+"proceso de compra, dependinedo de la política de *control de facturas* "
+"configruada en los ajustes de la aplicación *Compra*. "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:15
 msgid "Bill control policies"
@@ -14360,6 +14460,10 @@ msgid ""
 "to :menuselection:`Purchase app --> Configuration --> Settings`, and scroll "
 "down to the :guilabel:`Invoicing` section."
 msgstr ""
+"Para ver y editar las políticas de control de facturas que están "
+"configuradas de manera predeterminada y hacerles cambios, vaya a "
+":menuselection:`Aplicación de compra --> Configuración --> Ajustes` y baje "
+"hasta la sección de :guilabel:`Facturación`.  "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:21
 msgid ""
@@ -14367,10 +14471,14 @@ msgid ""
 ":guilabel:`Ordered quantities` and :guilabel:`Received quantities`. After a "
 "policy is selected, click :guilabel:`Save` to save changes."
 msgstr ""
+"Aquí hay dos opciones de políticas: :guilabel:`Control de facturas` y "
+":guilabel:`Cantidades recibidas`. Después de seleccionar una política, haga "
+"clic en :guilabel:`Guardar` para guardar los cambios.   "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst-1
 msgid "Bill control policies in purchase app settings."
 msgstr ""
+"Política de control de facturas en los ajustes de la aplicación Compra. "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:28
 msgid ""
@@ -14397,6 +14505,9 @@ msgid ""
 "the total order has been received. The products and quantities **received** "
 "are used to generate a draft bill."
 msgstr ""
+":guilabel:`Cantidades recibidas`: se crea una factura solamente **después** "
+"de que una parte o el total de la orden se recibió. Los productos y "
+"cantidades **recibidos** se usan para generar un borrador de factura.  "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:37
 msgid ""
@@ -14404,10 +14515,14 @@ msgid ""
 "policy can be overridden by going to the :guilabel:`Purchase` tab in a "
 "product's template, and modifying its :guilabel:`Control Policy` field."
 msgstr ""
+"Si un producto necesita una política de control diferente, la que está "
+"configurada de manera predeterminada se puede sobreescribir en la pestaña de"
+" :guilabel:`Compra` en el formulario del producto y modifique el campo de "
+":guilabel:`Política de control`.  "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst-1
 msgid "Control policy field on product form."
-msgstr ""
+msgstr "Campo de control de políticas en el formulario del producto. "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:46
 msgid "3-way matching"
@@ -14418,6 +14533,9 @@ msgid ""
 "*3-way matching* ensures vendor bills are only paid once some (or all) of "
 "the products included in the purchase order have actually been received."
 msgstr ""
+"La *verificación en 3 pasos* asegura que las facturas solo se paguen una vez"
+" que reciba una parte de (o todos) los productos incluidos en la orden de "
+"compra. "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:51
 msgid ""
@@ -14426,20 +14544,28 @@ msgid ""
 " the box next to :guilabel:`3-way matching: purchases, receptions, and "
 "bills`, and click :guilabel:`Save` to save changes."
 msgstr ""
+"Para activarlo, vaya a la :menuselection:`Aplicación Compra --> "
+"Configuración --> Ajustes` y baje hasta la sección de "
+":guilabel:`Facturación`. Luego, seleccione la casilla que está junto a "
+":guilabel:`Verificación en 3 pasos: compras, recepciones y facturas` y haga "
+"clic en :guilabel:`Guardar` para guardar los cambios.  "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:56
 msgid ""
 ":guilabel:`3-way matching` is **only** intended to work with the "
 ":guilabel:`Bill Control` policy set to :guilabel:`Received quantities`."
 msgstr ""
+"La :guilabel:`verificación en 3 pasos` **solo** tiene el propósito de "
+"trabajar con la política de :guilabel:`Control de facturas` establecida en "
+":guilabel:`Cantidades recibidas`.    "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:0
 msgid "Activated three-way matching feature in purchase settings."
-msgstr ""
+msgstr "Activación de la verificación de 3 pasos en los ajustes de compra. "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:64
 msgid "Create and manage vendor bills on receipts"
-msgstr ""
+msgstr "Cree y gestione facturas de proveedor en los recibos "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:66
 msgid ""
@@ -14449,10 +14575,17 @@ msgid ""
 "the bill control policy chosen in the settings, vendor bill creation is "
 "completed at different steps of the procurement process."
 msgstr ""
+"Cuando se reciben los productos en el almacén de una empresa se crean los "
+"recibos. Una vez que la empresa procesa las cantidades recibidas, puede "
+"crear una factura de proveedor directamente desde el formulario de recibo "
+"del almacén. Dependiendo de la política de control de facturas que eligió en"
+" los ajustes, crear una factura de proveedor finalizará en diferentes etapas"
+" del proceso de abastecimiento. "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:72
 msgid "With the bill control policy set to ordered quantities"
 msgstr ""
+"Con la política de control de facturas establecida en cantidades ordenadas."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:74
 msgid ""
@@ -14462,6 +14595,12 @@ msgid ""
 "section, and select :guilabel:`Ordered quantities` under :guilabel:`Bill "
 "Control`. Then, click :guilabel:`Save` to save changes."
 msgstr ""
+"Para crear y gestionar facturas de proveedor en los recibos usando la "
+"política de control de facturas de *cantidades ordenadas*, vaya a la "
+":menuselection:`Aplicación Compra --> Configuración --> Ajustes`, baje hasta"
+" la sección de :guilabel:`Facturación` y seleccione :guilabel:`Cantidades "
+"ordenadas` en  :guilabel:`Control de facturas`. Luego, haga clic en "
+":guilabel:`Guardar` para guardar los cambios.  "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:79
 msgid ""
@@ -14469,6 +14608,9 @@ msgid ""
 "to create a new request for quotation (RFQ). Doing so reveals a blank "
 ":abbr:`RFQ (request for quotation)` detail form."
 msgstr ""
+"Luego, vaya a la aplicación :menuselection:`Compra` y haga clic en "
+":guilabel:`Crear` para crear una nueva solicitud de cotización. Al hacerlo, "
+"aparecerá un formulario detallado para una solicitud de cotización.   "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:82
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:144
@@ -14477,6 +14619,10 @@ msgid ""
 "quotation)` in the :guilabel:`Vendor` field, and add products to the "
 ":guilabel:`Product` lines by clicking :guilabel:`Add a line`."
 msgstr ""
+"En el formulario de detalles en blanco, agregue un proveedor a la solicitud "
+"de cotización en el campo :guilabel:`Proveedor` y agregue productos a las "
+"líneas de :guilabel:`Producto` haciendo clic en :guilabel:`Agregar una "
+"línea`.    "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:86
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:148
@@ -14485,18 +14631,26 @@ msgid ""
 ":guilabel:`Confirm Order` button above the detail form. Doing so turns the "
 ":abbr:`RFQ (request for quotation)` into a purchase order."
 msgstr ""
+"Luego, confirme la solicitud de cotización haciendo clic en el botón de "
+":guilabel:`Confirmar orden` que está en la parte superior del formulario de "
+"detalles. De esta manera, la solicitud de cotización se convertirá en una "
+"orden de compra.  "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:90
 msgid ""
 "Then, click the :guilabel:`Create Bill` button to create a vendor bill for "
 "the purchase order."
 msgstr ""
+"Luego, haga clic en el botón de :guilabel:`Crear factura` para crear una "
+"factura de proveedor para la orden de compra.  "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:92
 msgid ""
 "Clicking the :guilabel:`Create Bill` button reveals the :guilabel:`Draft "
 "Bill` page for the purchase order."
 msgstr ""
+"Al hacer clic en el botón de :guilabel:`Crear factura` aparecerá una página "
+"para el :guilabel:`Borrador de factura` para la orden de compra.    "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:95
 msgid ""
@@ -14505,12 +14659,20 @@ msgid ""
 " add additional products to the :guilabel:`Product` lines by clicking "
 ":guilabel:`Add a line` in the :guilabel:`Invoice Lines` tab."
 msgstr ""
+"En el :guilabel:`Borrador de factura`, haga clic en el botón de  "
+":guilabel:`Editar` para modificar la factura y agregue una fecha de "
+"facturación en el campo de :guilabel:`Fecha de factura`. Si es necesario, "
+"agregue productos adicionales en las líneas de :guilabel:`Producto` haciendo"
+" clic en :guilabel:`Agregar línea` en la pestaña de :guilabel:`Líneas de "
+"facturación`.  "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:99
 msgid ""
 "Next, confirm the bill by clicking the :guilabel:`Confirm` button on the "
 ":guilabel:`Draft Bill` page."
 msgstr ""
+"Luego, confirme la factura haciendo clic en el botón de "
+":guilabel:`Confirmar` en la página del :guilabel:`Borrador de factura`. "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:103
 msgid ""
@@ -14518,6 +14680,9 @@ msgid ""
 " can be confirmed as soon as it is created, before any products have been "
 "received."
 msgstr ""
+"Puesto que la política de control de facturas está establecida en "
+"*cantidades ordenadas*, el borrador de factura se puede confirmar tan pronto"
+" como se crea antes de que haya recibido los productos. "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:106
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:179
@@ -14530,6 +14695,13 @@ msgid ""
 "and a :guilabel:`Recipient Bank Account` can be selected from a drop-down "
 "menu."
 msgstr ""
+"En la nueva  :guilabel:`Factura de proveedor` agregue un número de "
+":guilabel:`Referencia de factura` que puede usarse para conciliar la factura"
+" con documentos adicionales (como la orden de compra). Luego, haga clic en "
+":menuselection:`Confirmar --> Registrar pago`. Al hacerlo, aparecerá una "
+"ventana emergente dónde puede escoger un  :guilabel:`Diario` de pagos, un "
+":guilabel:`Método de pago` y una :guilabel:`Cuenta bancaria receptora` desde"
+" un menú desplegable.       "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:112
 msgid ""
@@ -14539,10 +14711,19 @@ msgid ""
 ":guilabel:`Vendor Bill`. Doing so causes a green :guilabel:`In Payment` "
 "banner to display on the :abbr:`RFQ (request for quotation)` form."
 msgstr ""
+"Además, la :guilabel:`Cantidad`, la :guilabel:`Fecha de pago` y el "
+":guilabel:`Memo` (:dfn:`Número de referencia`) de la factura se pueden "
+"cambiar desde esta ventana emergente. Una vez que esté listo, haga clic en "
+":guilabel:`Crear pago` para finalizar la creación de una :guilabel:`Factura "
+"de proveedor`. Al hacerlo, aparecerá un panel de color verde que dirá "
+":guilabel:`En proceso de pago` en el formulario de la solicitud de "
+"cotización.   "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst-1
 msgid "Vendor bill form for ordered quantities control policy."
 msgstr ""
+"Formluario de la factura de proveedor para la política de control sobre "
+"cantidades ordenadas. "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:122
 msgid ""
@@ -14552,10 +14733,18 @@ msgid ""
 "customer to whom they were sold, while *debit notes* are reserved for goods "
 "returned from the customer/buyer to the vendor or supplier."
 msgstr ""
+"Cada factura de proveedor proporciona la opción de :guilabel:`Agregar una "
+"nota de crédito` o :guilabel:`Agregar una nota de débito`. Una *nota de "
+"crédito* se emite normalmente cuando a un proveedor de bienes se le regresa "
+"una parte de la cantidad de los productos que vendió, mientras que las "
+"*notas de débito* son para los bienes que el cliente/comprador le regresa al"
+" proveedor.    "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:128
 msgid "With the bill control policy set to received quantities"
 msgstr ""
+"Con la política de control de factura establecida sobre cantidades recibidas"
+" "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:131
 msgid ""
@@ -14564,6 +14753,10 @@ msgid ""
 "policy), an error message appears, and settings must be changed before "
 "proceeding."
 msgstr ""
+"Si intenta crear una factura de proveedor sin haber recibido ninguno de los "
+"productos (mientras tiene establecida la política de control de facturas en "
+"*cantidades recibidas*), aparecerá un mensaje de error y debe cambiar los "
+"ajustes antes de continuar. "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:135
 msgid ""
@@ -14573,6 +14766,12 @@ msgid ""
 "section, and select :guilabel:`Received quantities` under :guilabel:`Bill "
 "Control`. Then, click :guilabel:`Save` to save changes."
 msgstr ""
+"Para crear y gestionar facturas de proveedor en los recibos usando el "
+"control de políticas de facturas sobre *cantidades recibidas* vaya a la "
+":menuselection:`Aplicación Compra --> Configuración --> Ajustes`, baje hasta"
+" la seccion de :guilabel:`Facturación` y seleccione :guilabel:`Cantidades "
+"recibidas` en el :guilabel:`Control de facturas`. Luego, haga clic en "
+":guilabel:`Guardar` para guardar los cambios.        "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:140
 msgid ""
@@ -14580,12 +14779,18 @@ msgid ""
 "to create a new :abbr:`RFQ (request for quotation)`. Doing so reveals a "
 "blank :abbr:`RFQ (request for quotation)` detail form."
 msgstr ""
+"Luego, vaya a la aplicación :menuselection:`Compra` y haga clic en "
+":guilabel:`Crear` para crear una nueva solicitud de cotización. Al hacerlo, "
+"aparecerá el formulario en blanco de detalles para una solicitud de "
+"cotización.  "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:152
 msgid ""
 "Finally, click the :guilabel:`Create Bill` button to create a bill for the "
 "purchase order."
 msgstr ""
+"Finalemnte, haga clic en el botón de :guilabel:`Crear factura` para crear "
+"una factura para la orden de compra.  "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:155
 msgid ""
@@ -14594,16 +14799,25 @@ msgid ""
 "Order` requires the receipt of at least partial quantity of the items "
 "included on the order to create a vendor bill."
 msgstr ""
+"Hacer clic en :guilabel:`Crear factura` antes de recibir los productos, "
+"aparecerá una ventana emergente con un mensaje de :guilabel:`Error de "
+"usuario`. La :guilabel:`Orden de compra` requiere que reciba por lo menos "
+"una parte de los artículos incluidos en la orden para crear la factura de "
+"proveedor.     "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst-1
 msgid "User error pop-up for received quantities control policy."
 msgstr ""
+"Ventana emergente con el mensaje de error de usuario para la política de "
+"control sobre cantidades recibidas. "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:163
 msgid ""
 "Next, click the :guilabel:`Receipt` smart button to view the warehouse "
 "receipt form."
 msgstr ""
+"Luego, haga clic en el botón inteligente de :guilabel:`Recepción` para ver "
+"el formulario de recepción del almacén.   "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:165
 msgid ""
@@ -14612,6 +14826,11 @@ msgid ""
 ":menuselection:`Purchase Order` (via the breadcrumbs), and click the "
 ":guilabel:`Create Bill` button on the purchase order form."
 msgstr ""
+"En el formulario de recepción del almacén, haga clic en "
+":menuselection:`Validar --> Aplicar` para marcar las cantidades como "
+":guilabel:`Recibidas`. Luego, regrese a la :menuselection:`Orden de compra` "
+"(a través de las migas de pan) y haga clic en el botón de :guilabel:`Crear "
+"factura` en el formulario de la orden de compra.     "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:169
 msgid ""
@@ -14620,12 +14839,19 @@ msgid ""
 ":guilabel:`Bill Date`. If needed, add additional products to the "
 ":guilabel:`Product` lines by clicking :guilabel:`Add a line`."
 msgstr ""
+"Al hacerlo, aparecerá el :guilabel:`Borrador de factura` para la orden de "
+"compra. En el :guilabel:`Borrador de factura`, haga clic en el botón de "
+":guilabel:`Editar` y agregue una :guilabel:`Fecha de factura`. Si es "
+"necesario, agregue productos adicionales a las líneas de "
+":guilabel:`Producto` haciendo clic en :guilabel:`Agregar línea`.      "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:173
 msgid ""
 "Next, click the :guilabel:`Confirm` button to confirm the :guilabel:`Draft "
 "Bill`."
 msgstr ""
+"Luego, haga clic en el botón de :guilabel:`Confirmar` para confirmar el "
+":guilabel:`Borrador de factura`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:176
 msgid ""
@@ -14633,6 +14859,10 @@ msgid ""
 "bill can **only** be confirmed when at least some of the quantities are "
 "received."
 msgstr ""
+"Puesto que la política de control de facturas está establecida en "
+"*cantidades recibidas*, el borrador de factura **solamente** se puede "
+"confirmar cuando reciba por lo menos una parte de las cantidades que ordenó."
+" "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:185
 msgid ""
@@ -14642,10 +14872,16 @@ msgid ""
 "bill. Doing so causes a green **In Payment** banner to display on the "
 ":abbr:`RFQ (request for quotation)` form."
 msgstr ""
+"Además, puede cambiar el :guilabel:`Importe`, la :guilabel:`Fecha de pago` y"
+" el :guilabel:`Memo` (:dfn:`Número de referencia`) desde esta ventana "
+"emergente. Una vez que todo esté listo, haga clic en :guilabel:`Crear pago` "
+"para terminar de crear su factura de proveedor. Al hacerlo, aparecerá un "
+"panel de color verde que dice **En proceso de pago** en el formulario de la "
+"solicitud de cotización.    "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:191
 msgid "Create and manage vendor bills in Accounting"
-msgstr ""
+msgstr "Cree y gestione facturas de proveedor desde Contabilidad"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:193
 msgid ""
@@ -14654,6 +14890,12 @@ msgid ""
 ":menuselection:`Accounting app --> Vendors --> Bills`, and click "
 ":guilabel:`Create`. Doing so reveals a blank vendor bill detail form."
 msgstr ""
+"Las facturas de proveedor también se pueden crear directamente desde la "
+"aplicación *Contabilidad* de Odoo, **sin** tener que crear primero una orden"
+" de compra. Para hacerlo, vaya a la  :menuselection:`Aplicación Contabilidad"
+" --> Proveedores --> Facturas` y haga clic en :guilabel:`Crear`. Al hacerlo,"
+" aparecerá el formulario en blanco para los detalles de una factura de "
+"proveedor.    "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:197
 msgid ""
@@ -14664,6 +14906,13 @@ msgid ""
 "other necessary information. Finally, click :guilabel:`Confirm` to confirm "
 "the bill."
 msgstr ""
+"En este formulario en blanco de detalles de la factura de proveedor, agregue"
+" un proveedor en el campo :guilabel:`Proveedor` y agregue prodcutos en las "
+"líneas de :guilabel:`Producto` (en la pestaña  :guilabel:`Líneas de "
+"factura`) haciendo clic en :guilabel:`Agregar línea`. Luego, agregue una "
+"fecha de factura en el campo :guilabel:`Fecha de factura` y más información "
+"que considere necesaria. Por último, haga clic en :guilabel:`Confirmar` para"
+" confirmar la factura.       "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:202
 msgid ""
@@ -14671,6 +14920,10 @@ msgid ""
 ":guilabel:`Account` journals that were populated based on the configuration "
 "on the corresponding :guilabel:`Vendor` and :guilabel:`Product` forms."
 msgstr ""
+"Desde aquí, haga clic en la pestaña de :guilabel:`Apuntes contables` para "
+"ver (o cambiar) los diarios :guilabel:`Contables` que se llenan con base en "
+"la configuración correspondiente de los formularios de :guilabel:`Proveedor`"
+" y :guilabel:`Producto`.   "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:206
 msgid ""
@@ -14678,12 +14931,18 @@ msgid ""
 " credit or debit notes to the bill. Or, add a :guilabel:`Bill Reference` "
 "number (while in :guilabel:`Edit` mode)."
 msgstr ""
+"Luego, haga clic en :guilabel:`Agregar nota de crédito` o :guilabel:`Agrega "
+"una nota de débito` para agregar notas de crédito o débito a la factura. O, "
+"agregue un número de :guilabel:`Referencia de factura` (mientras está en el "
+"modo :guilabel:`Editar`).    "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:209
 msgid ""
 "Then, when ready, click :menuselection:`Register Payment --> Create Payment`"
 " to complete the :guilabel:`Vendor Bill`."
 msgstr ""
+"Cuando todo esté listo, haga clic en :menuselection:`Registrar pago --> "
+"Crear Pago` para finalizar la :guilabel:`Factura de proveedor`.  "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:213
 msgid ""
@@ -14692,20 +14951,29 @@ msgid ""
 "order)` from the menu. The bill will auto-populate with the information from"
 " the :abbr:`PO (purchase order)`."
 msgstr ""
+"Para conciliar una factura de proveedor con una orden de compra ya "
+"existente, haga clic en el menú desplegable que está junto a "
+":guilabel:`Completar automáticamente` y seleccione la orden de compra en el "
+"menú. La factura se llenará automáticamente con la infromación de la orden "
+"de compra. "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:0
 msgid "Auto-complete drop-down list on draft vendor bill."
 msgstr ""
+"Lista desplegable de autocompletado en el borrador de la factura de "
+"proveedor."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:222
 msgid "Batch billing"
-msgstr ""
+msgstr "Facturación por lotes"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:224
 msgid ""
 "Vendor bills can be processed and managed in batches in the *Accounting* "
 "app."
 msgstr ""
+"Las facturas de proveedor se pueden procesar y gestionar por lotes desde la "
+"aplicación *Contabilidad*. "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:226
 msgid ""
@@ -14715,6 +14983,12 @@ msgid ""
 "selects all existing vendor bills with a :guilabel:`Posted` or "
 ":guilabel:`Draft` :guilabel:`Status`."
 msgstr ""
+"Para hacerlo, vaya a la :menuselection:`Aplicación Contabilidad --> "
+"Proveedores --> Facturas`. Luego, haga clic en la :guilabel:`casilla` que "
+"está en la parte superior izquierda de la página junto a la columna de "
+":guilabel:`Número`, en el botón :guilabel:`Crear`. Esto selecciona todas las"
+" facturas de vendedor existentes en :guilabel:`Estado` de "
+":guilabel:`Publicado` o :guilabel:`Borrador`.       "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:231
 msgid ""
@@ -14723,6 +14997,11 @@ msgid ""
 "or bills; or click :guilabel:`Register Payment` to create and process "
 "payments for multiple vendor bills at once."
 msgstr ""
+"Desde aquí, haga clic en el ícono de engranaje de :guilabel:`Acción` para "
+"exportar, eliminar o enviar e imprimir las facturas. Haga clic en el ícono "
+"de :guilabel:`Imprimir` para imprimir las facturas o haga clic en "
+":guilabel:`Registrar Pago` para crear y procesar los pagos para múltiples "
+"facturas de proveedor de una sola vez.    "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:235
 msgid ""
@@ -14732,6 +15011,11 @@ msgid ""
 "choose a :guilabel:`Payment Method`. There is also the option to "
 ":guilabel:`Group Payments` on this pop-up, as well."
 msgstr ""
+"Cuando seleccione la opción :guilabel:`Registrar pago` aparecerá una ventana"
+" emergente. En esta ventana, seleccione el diario correspondiente en el "
+"campo de :guilabel:`Diario`, elija una fecha de pago en el campo de "
+":guilabel:`Fecha de pago` y un :guilabel:`Método de pago`. También tiene la "
+"opción de :guilabel:`Agrupar pagos` desde esta ventana.      "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:240
 msgid ""
@@ -14739,10 +15023,14 @@ msgid ""
 "list of journal entries on a separate page. This list of journal entries are"
 " all tied to their appropriate vendor bills."
 msgstr ""
+"Cuando esté listo, haga clic en el botón de :guilabel:`Crear pago`, el cual "
+"crea una lista de asientos contables en una página por separado. Está lista "
+"de asientos contables está conciliada con su factura de proveedor "
+"correspondiente.   "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst-1
 msgid "Batch billing register payment pop-up."
-msgstr ""
+msgstr "Ventana emergente de registro de facturación por lotes. "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:248
 msgid ""
@@ -14750,11 +15038,15 @@ msgid ""
 "only work for journal entries whose :guilabel:`Status` is set to "
 ":guilabel:`Posted`."
 msgstr ""
+"La opción de :guilabel:`Registrar pago` para las facturas de proveedor por "
+"lotes solo funcionará para los asientos contables en :guilabel:`Estado` de "
+":guilabel:`Publicado`.    "
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:252
 msgid ""
 ":doc:`/applications/inventory_and_mrp/purchase/manage_deals/control_bills`"
 msgstr ""
+":doc:`/applications/inventory_and_mrp/purchase/manage_deals/control_bills`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:3
 msgid "Configure reordering rules"
