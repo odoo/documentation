@@ -79,10 +79,12 @@ displayed on the event's page by default.
    :align: center
    :alt: View of the ticket tab in Odoo Events.
 
-Send automated emails, text, and social posts to event attendees
-----------------------------------------------------------------
+.. _applications/send-automated-emails-text-and-social-posts-to-event-attendees:
 
-Under the :guilabel:`Communication` tab, configure personalized email, SMS, or social post messages
+Send automated emails, text, WhatsApp and social posts to event attendees
+-------------------------------------------------------------------------
+
+Under the :guilabel:`Communication` tab, configure personalized email, SMS, WhatsApp, or social post messages
 to keep in touch with event attendees. For each communication, click :guilabel:`Add a line` in the
 :guilabel:`Communication` tab form, and then choose (or create) a communications template using
 the drop-down menu under the :guilabel:`Template` column.
