@@ -339,7 +339,7 @@ variables.
 .. code-block:: xml
    :caption: ``/website_airproof/views/website_templates.xml``
 
-   <record id="header" model="ir.ui.view">
+   <record id="template_header" model="ir.ui.view">
       <field name="name">Airproof Header</field>
       <field name="type">qweb</field>
       <field name="key">website_airproof.header</field>
@@ -498,7 +498,7 @@ Create your own template and add it to the list.
 .. code-block:: xml
    :caption: ``/website_airproof/data/presets.xml``
 
-   <template id="footer_opt" inherit_id="website.snippet_options" name="Footer Template - Option">
+   <template id="template_footer_opt" inherit_id="website.snippet_options" name="Footer Template - Option">
       <xpath expr="//we-select[@data-variable='footer-template']" position="inside">
          <we-button title="airproof"
             data-customize-website-views="website_airproof.footer"
@@ -523,7 +523,7 @@ Create your own template and add it to the list.
 .. code-block:: xml
     :caption: ``/website_airproof/views/website_templates.xml``
 
-    <record id="footer" model="ir.ui.view">
+    <record id="template_footer" model="ir.ui.view">
        <field name="name">Airproof Footer</field>
        <field name="type">qweb</field>
        <field name="key">website_airproof.footer</field>
