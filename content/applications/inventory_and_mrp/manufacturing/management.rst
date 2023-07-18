@@ -21,3 +21,4 @@ Manufacturing workflows
    management/split_merge
    management/work_order_dependencies
    management/two_step_manufacturing
+   management/one_step_manufacturing
