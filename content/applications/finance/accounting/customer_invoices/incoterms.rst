@@ -21,7 +21,7 @@ transportation, insurance, customs clearance, and other relevant aspects of the 
    - **CPT**: Carriage paid to
    - **CIP**: Carriage and insurance paid to
    - **DPU**: Delivered at place unloaded
-   - **DPA**: Delivered at place
+   - **DAP**: Delivered at place
    - **DDP**: Delivered duty paid
 
 .. seealso::
