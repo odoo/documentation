@@ -155,25 +155,37 @@ when they form a meaningful whole.
          :alt: Viewing the Sales Analysis report as a pie chart
 
 .. tip::
-   For bar and line charts, you can use the stacked option when you have at least two groups, which
-   then appear on top of each other instead of next to each other.
+   For **bar** and **line** charts, you can use the stacked option when you have at least two
+   groups, which then appear on top of each other instead of next to each other.
 
    .. tabs::
 
       .. tab:: Stacked bar chart
 
-         .. image:: reporting/stacked.png
+         .. image:: reporting/stacked-bar.png
             :align: center
             :alt: Stacked bar chart example
 
       .. tab:: Regular bar chart
 
-         .. image:: reporting/non-stacked.png
+         .. image:: reporting/non-stacked-bar.png
             :align: center
             :alt: Non-stacked bar chart example
 
-   For line charts, you can use the cumulative option to sum values, which is especially useful to
-   show the change in growth over a time period.
+      .. tab:: Stacked line chart
+
+         .. image:: reporting/stacked-line.png
+            :align: center
+            :alt: Stacked line chart example
+
+      .. tab:: Regular line chart
+
+         .. image:: reporting/non-stacked-line.png
+            :align: center
+            :alt: Non-stacked line chart example
+
+   For **line** charts, you can use the cumulative option to sum values, which is especially useful
+   to show the change in growth over a time period.
 
    .. tabs::
 
