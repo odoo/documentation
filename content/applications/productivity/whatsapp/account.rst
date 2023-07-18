@@ -7,5 +7,5 @@ Account
 .. toctree::
    :titlesonly:
 
-   advanced/account_configuration
-   advanced/account_create_on_meta
+   account/account_create_on_meta
+   account/account_configuration
