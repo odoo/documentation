@@ -2185,10 +2185,13 @@ Possible children elements of the search view are:
 
           <filter domain="[('state', '=', 'draft')]"/>
           <separator/>
-          <filter domain="[('delay', '<', 15)]"/>
+          <filter domain="[('delay', '&lt;', 15)]"/>
 
        if both filters are selected, will select the records whose ``state``
        is ``draft`` **and** ``delay`` is below 15.
+
+       .. note:: XML does not allow ``<`` to be used within XML elements,
+          an entity reference (``&lt;``) should be used instead.
 
 ``separator``
     can be used to separates groups of filters in simple search views
