@@ -8,6 +8,7 @@ Productivity
 .. toctree::
 
     productivity/discuss
+    productivity/whatsapp
     productivity/calendar
     productivity/knowledge
     productivity/iot
