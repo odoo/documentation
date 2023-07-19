@@ -218,6 +218,16 @@ services *OR* have a unit price which is *NOT* between 1000 and 2000'::
             ('unit_price', '>=', 1000),
             ('unit_price', '<', 2000)]
 
+.. note:: XML does not allow ``<`` and ``&`` to be used inside XML
+    elements. To avoid parsing errors, entity references should be used:
+    ``&lt;`` for ``<`` and ``&amp;`` for ``&``. Other entity references
+    (``&gt;``, ``&apos;`` & ``&quot;``) are optional.
+
+    .. example::
+        .. code-block:: xml
+
+            <filter name="negative" domain="[('test_val', '&lt;', 0)]"/>
+
 .. exercise:: Add filter and Group By.
 
     The following should be added to the previously created search view:
