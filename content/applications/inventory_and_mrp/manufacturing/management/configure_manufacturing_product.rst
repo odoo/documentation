@@ -2,6 +2,7 @@
 Manufacturing product configuration
 ===================================
 
+.. _manufacturing/management/configure-manufacturing-product:
 .. |BOM| replace:: :abbr:`BoM (Bill of Materials)`
 
 In order to manufacture a product in Odoo *Manufacturing*, the product must be properly configured.
