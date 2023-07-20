@@ -101,8 +101,7 @@ Journals
 If a currency is set on a **journal**, that journal only handles transactions in that currency.
 
 To do so, go to :menuselection:`Accounting --> Configuration --> Journals`, open the journal you
-want to edit, and select a currency in the field :guilabel:`Currency`. If left empty, all active
-currencies are handled instead of just one.
+want to edit, and select a currency in the field :guilabel:`Currency`.
 
 .. image:: multi_currency/journal-currency.png
    :align: center
@@ -118,7 +117,8 @@ Multi-currency accounting
 Invoices, bills, and other documents
 ------------------------------------
 
-For all documents, you can select the currency and journal to use for the transaction.
+For all documents, you can select the currency and journal to use for the transaction on the
+document itself.
 
 .. image:: multi_currency/currency-field.png
    :align: center
@@ -139,13 +139,13 @@ To register a payment in a currency other than your company's main currency, cli
 
 .. _multi-currency/mca-statements:
 
-Bank statements
----------------
+Bank transactions
+-----------------
 
-When creating or importing bank statements, the amount is in the company's main currency. To see
-additional fields related to foreign currencies, click on the **columns dropdown button**
-(:guilabel:`⋮`) next to :guilabel:`Amount`, and check :guilabel:`Amount Currency` and
-:guilabel:`Foreign Currency`.
+When creating or importing bank transactions, the amount is in the company's main currency. To input
+a **foreign currency**, select a currency in the :guilabel:`Foreign Currency`. Once selected, enter
+the :guilabel:`Amount` in your main currency for it to automatically get converted in the foreign
+currency in the :guilabel:`Amount in Currency field`.
 
 .. image:: multi_currency/foreign-fields.png
   :align: center
