@@ -101,8 +101,7 @@ Journals
 If a currency is set on a **journal**, that journal only handles transactions in that currency.
 
 To do so, go to :menuselection:`Accounting --> Configuration --> Journals`, open the journal you
-want to edit, and select a currency in the field :guilabel:`Currency`. If left empty, all active
-currencies are handled instead of just one.
+want to edit, and select a currency in the field :guilabel:`Currency`.
 
 .. image:: multi_currency/journal-currency.png
    :align: center
@@ -118,7 +117,8 @@ Multi-currency accounting
 Invoices, bills, and other documents
 ------------------------------------
 
-For all documents, you can select the currency and journal to use for the transaction.
+For all documents, you can select the currency and journal to use for the transaction on the
+document itself.
 
 .. image:: multi_currency/currency-field.png
    :align: center
