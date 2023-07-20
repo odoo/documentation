@@ -7,7 +7,7 @@
 Timesheets
 ==========
 
-Odoo Timesheets is a tool that allows employees to keep track of their time and activities within a project, making it easier to keep track of a project's pace, to identify bottlenecks, and to make accurate billings. 
+Odoo Timesheets is a tool that allows employees to keep track of their time and activities within a project, making it easier to keep track of a project's pace, to identify bottlenecks, and to make accurate billings.
 
 .. seealso::
    - `Odoo Tutorials: Project and Timesheets
