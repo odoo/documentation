@@ -8,6 +8,7 @@
 # Yenthe Van Ginneken <yenthespam@gmail.com>, 2022
 # Erwin van der Ploeg <erwin@odooexperts.nl>, 2022
 # Martin Trigaux, 2023
+# Gunther Clauwaert <gclauwae@hotmail.com>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-07 06:24+0000\n"
 "PO-Revision-Date: 2022-03-18 14:59+0000\n"
-"Last-Translator: Martin Trigaux, 2023\n"
+"Last-Translator: Gunther Clauwaert <gclauwae@hotmail.com>, 2023\n"
 "Language-Team: Dutch (https://app.transifex.com/odoo/teams/41243/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,13 +27,15 @@ msgstr ""
 
 #: ../../content/administration.rst:8
 msgid "Install and Maintain"
-msgstr ""
+msgstr "Installeren en onderhouden"
 
 #: ../../content/administration.rst:10
 msgid ""
 "These guides provide instructions on how to install, maintain and upgrade "
 "Odoo databases."
 msgstr ""
+"Deze documentatie geeft instructies voor het installeren, onderhouden en "
+"upgraden van Odoo databases."
 
 #: ../../content/administration.rst:13
 msgid ""
@@ -45,11 +48,11 @@ msgstr "Installeren"
 
 #: ../../content/administration/install/cdn.rst:3
 msgid "Set up a content delivery network (CDN)"
-msgstr ""
+msgstr "Zet een content delivery network (CDN) op"
 
 #: ../../content/administration/install/cdn.rst:8
 msgid "Deploying with KeyCDN"
-msgstr ""
+msgstr "Implementeren met KeyCDN"
 
 #: ../../content/administration/install/cdn.rst:10
 msgid ""
@@ -58,16 +61,23 @@ msgid ""
 "internet content. The :abbr:`CDN (Content Delivery Network)` provides quick,"
 " high-quality content delivery for content-heavy websites."
 msgstr ""
+"Een :abbr:`CDN (Content Delivery Network)` of *content distribution "
+"network*, is een gedistribueerd netwerk van servers die zijn ontworpen om "
+"inhoud, zoals webpagina's en media, efficiënt te leveren aan eindgebruikers "
+"over de hele wereld. Het helpt de laadtijd van websites te verminderen en de"
+" prestaties te verbeteren door gegevens dichter bij gebruikers te brengen."
 
 #: ../../content/administration/install/cdn.rst:14
 msgid ""
 "This document will guide you through the setup of a KeyCDN_ account with an "
 "Odoo powered website."
 msgstr ""
+"Dit document leidt je door de setup van een KeyCDN_ account met een Odoo "
+"website."
 
 #: ../../content/administration/install/cdn.rst:17
 msgid "Create a pull zone in the KeyCDN dashboard"
-msgstr ""
+msgstr "Maak een pull zone aan in het KeyCDN dashboard"
 
 #: ../../content/administration/install/cdn.rst:19
 msgid ""
@@ -89,10 +99,14 @@ msgid ""
 "(Uniform Resource Locator)` can be used, as well, in place of the Odoo "
 "subdomain that was provided to the database."
 msgstr ""
+"Gebruik ``https://yourdatabase.odoo.com`` en vervang het *yourdatabase* "
+"subdomein voorvoegsel door de werkelijke naam van de database. Een "
+"aangepaste :abbr:`URL (Uniform Resource Locator)` kan ook worden gebruikt in"
+" plaats van het Odoo-subdomein dat aan de database is verstrekt."
 
 #: ../../content/administration/install/cdn.rst-1
 msgid "KeyCDN's Zone configuration page."
-msgstr ""
+msgstr "KeyCDN's Zone configuratie pagina."
 
 #: ../../content/administration/install/cdn.rst:36
 msgid ""
@@ -102,6 +116,11 @@ msgid ""
 ":guilabel:`General Settings` ensure that the :guilabel:`CORS` option is "
 ":guilabel:`enabled`."
 msgstr ""
+"Klik onder het kopje :guilabel:`Algemene instellingen` onder het "
+"zoneformulier op de knop :guilabel:`Alle instellingen weergeven` om de "
+"opties voor de zone uit te vouwen. Dit moet de laatste optie op de pagina "
+"zijn. Controleer na het uitvouwen van de :guilabel:`Algemene instellingen` "
+"of de :guilabel:`CORS` optie is :guilabel:`ingeschakeld`."
 
 #: ../../content/administration/install/cdn.rst:41
 msgid ""
@@ -109,10 +128,13 @@ msgid ""
 ":guilabel:`Save` the changes. KeyCDN will indicate that the new zone will be"
 " deployed. This can take about 10 minutes."
 msgstr ""
+"Scroll vervolgens naar de onderkant van de zoneconfiguratiepagina en "
+":guilabel:`Save` de wijzigingen. KeyCDN zal aangeven dat de nieuwe zone zal "
+"worden uitgerold. Dit kan ongeveer 10 minuten duren."
 
 #: ../../content/administration/install/cdn.rst-1
 msgid "KeyCDN deploying the new Zone."
-msgstr ""
+msgstr "KeyCDN implementeert de nieuwe Zone."
 
 #: ../../content/administration/install/cdn.rst:49
 msgid ""
@@ -120,16 +142,21 @@ msgid ""
 " it is ``pulltest-xxxxx.kxcdn.com``. This value will differ for each "
 "database."
 msgstr ""
+"Een nieuwe :guilabel:`Zone URL` is gegenereerd voor je Zone, in dit "
+"voorbeeld is dat ``pulltest-xxxxx.kxcdn.com``. Deze waarde verschilt per "
+"database."
 
 #: ../../content/administration/install/cdn.rst:52
 msgid ""
 "Copy this :guilabel:`Zone URL` to a text editor for later, as it will be "
 "used in the next steps."
 msgstr ""
+"Kopieer deze :guilabel:`Zone URL` tijdelijk naar een tekstverwerker zodat u "
+"deze kan kopiëren in de volgende stappen."
 
 #: ../../content/administration/install/cdn.rst:55
 msgid "Configure the Odoo instance with the new zone"
-msgstr ""
+msgstr "Configureer de Odoo-instantie met de nieuwe zone"
 
 #: ../../content/administration/install/cdn.rst:57
 msgid ""
@@ -140,26 +167,37 @@ msgid ""
 "when :doc:`Developer Mode <../../applications/general/developer_mode>` is "
 "activated."
 msgstr ""
+"Ga in de Odoo :guilabel:`Website` app naar de :menuselection:`Instellingen` "
+"en activeer vervolgens de :guilabel:`Content Delivery Network (CDN)` "
+"instelling en kopieer/plak de :guilabel:`Zone URL` waarde van de vorige stap"
+" in het :guilabel:`CDN Base URL` veld. Dit veld is alleen zichtbaar en "
+"configureerbaar als :doc:`Ontwikkelmodus "
+"<../../applicaties/algemeen/deontwikkel_modus>` is geactiveerd."
 
 #: ../../content/administration/install/cdn.rst:63
 msgid ""
 "Ensure that there are two *forward slashes* (`//`) before the :guilabel:`CDN"
 " Base URL` and one forward slash (`/`) after the :guilabel:`CDN Base URL`."
 msgstr ""
+"Zorg ervoor dat er twee *forward slashes* (`//`) staan voor de "
+":guilabel:`CDN Base URL` en één forward slash (`/`) na de :guilabel:`CDN "
+"Base URL`."
 
 #: ../../content/administration/install/cdn.rst:66
 msgid ":guilabel:`Save` the settings when complete."
-msgstr ""
+msgstr ":guilabel:`Sla de instellingen op wanneer u klaar bent."
 
 #: ../../content/administration/install/cdn.rst-1
 msgid "Activate the CDN setting in Odoo."
-msgstr ""
+msgstr "Activeer de CDN-instelling in Odoo."
 
 #: ../../content/administration/install/cdn.rst:72
 msgid ""
 "Now the website is using the CDN for the resources matching the "
 ":guilabel:`CDN filters` regular expressions."
 msgstr ""
+"Nu gebruikt de website het CDN voor de bronnen die overeenkomen met de "
+"reguliere expressies van :guilabel:`CDN filters`."
 
 #: ../../content/administration/install/cdn.rst:75
 msgid ""
@@ -170,6 +208,12 @@ msgid ""
 "website. Look for it's record by searching within the :guilabel:`Network` "
 "tab inside of devtools."
 msgstr ""
+"In de HTML van de Odoo-website wordt de goede werking van de :abbr:`CDN "
+"(content delivery network)` integratie aangetoond door de :abbr:`URL "
+"(Uniform Resource Locators)` van afbeeldingen te controleren. De *CDN Base "
+"URL* waarde kan worden bekeken met de :guilabel:`Inspect` functie van je "
+"webbrowser op de Odoo website. Zoek naar het record door te zoeken in de "
+":guilabel:`Network` tab in devtools."
 
 #: ../../content/administration/install/cdn.rst-1
 msgid ""
