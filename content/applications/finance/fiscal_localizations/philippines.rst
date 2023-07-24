@@ -5,9 +5,7 @@ Philippines
 Introduction
 ============
 
-**l10n_ph** module adds accounting localization features for the Philippines such as Chart of Accounts, Taxes, 
-and the BIR 2307 report.
-These provide a base template to get started with using Philippine accounting.
+**l10n_ph** module adds accounting localization features for the Philippines such as Chart of Accounts, Taxes, and the BIR 2307 report. These provide a base template to get started with using Philippine accounting.
 
 Configuration
 =============
@@ -29,6 +27,7 @@ localization:
 
 Chart of accounts & taxes
 -------------------------
+
 A minimum configuration default chart of accounts is installed and following types of taxes is installed and also linked to the relevant account:
 
 - VAT 12%.
@@ -41,13 +40,13 @@ For the Witholding taxes, there is an additional field under :menuselection:`Phi
    :align: center
    :alt: Philippines ATC code field set on taxes.
 
-This is the ATC code for that tax when it is exported in the BIR 2307 file. 
+This is the ATC code for that tax when it is exported in the BIR 2307 file.
 This will need to be filled in manually if the taxes are manually created.
 
 Contacts
 --------
-In the :guilabel:`Contacts`, if it is set as a :guilabel:`Company` and the :guilabel:`Country` is `Philippines`, 
-fill in the :guilabel:`Tax ID` field with the `Taxpayer Identification Number (TIN)`:
+
+In the :guilabel:`Contacts`, if it is set as a :guilabel:`Company` and the :guilabel:`Country` is `Philippines`, fill in the :guilabel:`Tax ID` field with the `Taxpayer Identification Number (TIN)`:
 
 .. image:: philippines/philippines-contact-company.png
    :align: center
@@ -73,6 +72,7 @@ Workflows
 
 BIR 2307 Report
 ---------------
+
 **BIR 2307** report data also known as *Certificate of Creditable Tax Withheld at Source*
 can be generated for purchase orders and vendor payments with the applicable withholding taxes.
 
@@ -93,14 +93,12 @@ A pop-up will appear to review the selection and then click on :guilabel:`Genera
 .. image:: philippines/philippines-generate.png
    :align: center
    :alt: Pop up menu to generate BIR 2307 XLS file
-   
 This will generate the `Form_2307.xls` file that lists all the vendor bill lines with the applicable withholding tax.
 
 .. note::
    If there is no witholding tax applied then the XLS file will not generate records for those vendor bill lines.
 
-The same process above can be done for a *single* vendor :doc:`payment <../accounting/payments>` as well if they were linked to 
-one or more :doc:`vendor bills <../accounting/payments/multiple>` with applied withholding taxes.
+The same process above can be done for a *single* vendor :doc:`payment <../accounting/payments>` as well if they were linked to one or more :doc:`vendor bills <../accounting/payments/multiple>` with applied withholding taxes.
 
 .. image:: philippines/philippines-payment.png
    :align: center
@@ -108,8 +106,7 @@ one or more :doc:`vendor bills <../accounting/payments/multiple>` with applied w
    
 .. note::
    When grouping payment for multiple bills, Odoo will split the payments based on the contact.
-   When :menuselection:`Payment --> Action --> Download BIR 2307 XLS` 
-   the report will only be for those vendor bills for the single contact only.
+   When :menuselection:`Payment --> Action --> Download BIR 2307 XLS` the report will only be for those vendor bills for the single contact only.
 
 .. important::
    Odoo cannot generate the BIR 2307 PDF report or `DAT` files directly.
