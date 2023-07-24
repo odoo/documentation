@@ -110,6 +110,7 @@ available on Odoo.
 - Pakistan - Accounting
 - Panama - Accounting
 - :doc:`Peru - Accounting <fiscal_localizations/peru>`
+- :doc:`Philippines - Accounting <fiscal_localizations/philippines>`
 - Poland - Accounting
 - Portugal - Accounting
 - Romania - Accounting
@@ -153,6 +154,7 @@ available on Odoo.
    fiscal_localizations/mexico
    fiscal_localizations/netherlands
    fiscal_localizations/peru
+   fiscal_localizations/philippines
    fiscal_localizations/spain
    fiscal_localizations/switzerland
    fiscal_localizations/united_arab_emirates
