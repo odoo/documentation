@@ -18,7 +18,7 @@ localization:
 
 .. image:: philippines/philippines-module.png
    :align: center
-   :alt: Philippines fiscal localisation module
+   :alt: Philippines fiscal localisation module.
 
 .. note::
    - When creating a new database and `Philippines` is selected as a country, the fiscal localization module :guilabel:`Philippines - Accounting` is automatically installed.
@@ -80,19 +80,20 @@ The file can be generated from :menuselection:`Vendor Bills --> Action -->Downlo
 
 .. image:: philippines/philippines-bill.png
    :align: center
-   :alt: Vendor Bill with witholding tax and "download BIR 2307 XLS action
+   :alt: Vendor Bill with witholding tax and "download BIR 2307 XLS action.
 
 The same action can be performed on multiple Vendor Bills:
 
 .. image:: philippines/philippines-multi-bill.png
    :align: center
-   :alt: Multiple Vendor Bill selected with action to "Download BIR 2307 XLS"
+   :alt: Multiple Vendor Bill selected with action to "Download BIR 2307 XLS".
 
 A pop-up will appear to review the selection and then click on :guilabel:`Generate`:
 
 .. image:: philippines/philippines-generate.png
    :align: center
-   :alt: Pop up menu to generate BIR 2307 XLS file
+   :alt: Pop up menu to generate BIR 2307 XLS file.
+
 This will generate the `Form_2307.xls` file that lists all the vendor bill lines with the applicable withholding tax.
 
 .. note::
@@ -102,7 +103,7 @@ The same process above can be done for a *single* vendor :doc:`payment <../accou
 
 .. image:: philippines/philippines-payment.png
    :align: center
-   :alt: Action to Download BIR 2307 XLS from payment
+   :alt: Action to Download BIR 2307 XLS from payment.
    
 .. note::
    When grouping payment for multiple bills, Odoo will split the payments based on the contact.
