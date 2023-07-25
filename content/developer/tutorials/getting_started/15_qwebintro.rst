@@ -25,7 +25,7 @@ Concrete Example: A Kanban View
 ===============================
 
 **Reference**: the documentation related to this topic can be found in
-:ref:`reference/view_architecture/kanban`.
+:ref:`reference/view_architectures/kanban`.
 
 .. note::
 
@@ -111,7 +111,8 @@ it is possible to add it outside of the ``<templates>`` element.
     Refer to the **Goal** of the section for a visual example.
 
 Let's give the final touch to our view: the properties must be grouped by type by default. You
-might want to have a look at the various options described in :ref:`reference/view_architecture/kanban`.
+might want to have a look at the various options described in
+:ref:`reference/view_architectures/kanban`.
 
 .. exercise:: Add default grouping.
 
