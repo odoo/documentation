@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-07 06:24+0000\n"
+"POT-Creation-Date: 2023-07-25 07:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -412,7 +412,6 @@ msgstr ""
 #: ../../content/applications/finance/accounting/reporting/analytic/purchases_expenses.rst:18
 #: ../../content/applications/finance/accounting/reporting/analytic/timesheets.rst:16
 #: ../../content/applications/finance/accounting/reporting/budget.rst:11
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:19
 #: ../../content/applications/finance/accounting/reporting/silverfin.rst:11
 #: ../../content/applications/finance/accounting/taxes.rst:53
 #: ../../content/applications/finance/accounting/taxes/B2B_B2C.rst:60
@@ -4697,23 +4696,23 @@ msgid "If a currency is set on a **journal**, that journal only handles transact
 msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started/multi_currency.rst:103
-msgid "To do so, go to :menuselection:`Accounting --> Configuration --> Journals`, open the journal you want to edit, and select a currency in the field :guilabel:`Currency`. If left empty, all active currencies are handled instead of just one."
+msgid "To do so, go to :menuselection:`Accounting --> Configuration --> Journals`, open the journal you want to edit, and select a currency in the field :guilabel:`Currency`."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started/multi_currency.rst:-1
 msgid "Select the currency for the journal to handle."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:114
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:113
 msgid "Multi-currency accounting"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:119
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:118
 msgid "Invoices, bills, and other documents"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:121
-msgid "For all documents, you can select the currency and journal to use for the transaction."
+#: ../../content/applications/finance/accounting/get_started/multi_currency.rst:120
+msgid "For all documents, you can select the currency and journal to use for the transaction on the document itself."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started/multi_currency.rst:-1
@@ -7183,23 +7182,199 @@ msgid "Intrastat"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting/intrastat.rst:5
-msgid "**Intrastat** is the system for data collection and statistic production of goods traded among the EU Member States. Organizations whose annual trade surpasses a certain threshold must provide data about the goods traded with other EU countries."
+msgid "`Intrastat <https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Intrastat>`_ is the data collection and statistics production system for goods traded among EU member states. It collects data on:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:10
-msgid "`Eurostat Statistics Explained - Glossary: Intrastat <https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Intrastat>`_"
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:9
+msgid "Commercial transactions of goods for use, consumption, investment, or resale with ownership transfer;"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:14
-msgid "As of January 1, 2022, the reporting requirements have changed. One main modification concerns the transaction codes which are now switching to a 2-digits format. All transactions recorded after this date have to follow the new system’s rules."
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:11
+msgid "Goods movements without transfer of ownership (e.g., stock relocations or moves of goods before or after outsourced production or processing, and after maintenance or repair);"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/intrastat.rst:21
-msgid "Go to :menuselection:`Accounting --> Settings --> Customer Invoices`, then enable **Intrastat** and *Save*. Once the Intrastat has been activated you are able to choose the **Default incoterm**."
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:13
+msgid "Returns of goods."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:16
+msgid "Although the Intrastat system continues to be used, the term Intrastat is not used in the `latest legislation <http://data.europa.eu/eli/reg/2019/2152/2022-01-01>`_, preferring instead *intra-Union trade in goods statistics*."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:23
+msgid "General configuration"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting/intrastat.rst:25
-msgid "If you created your Odoo database prior to **January 13, 2022**, please :ref:`upgrade <general/upgrade>` the ``account_intrastat`` module to add the new transaction codes and :ref:`install <general/install>` the ``account_intrastat_expiry`` module to archive the old codes."
+msgid "Enable the Intrastat report by going to :menuselection:`Accounting --> Configuration --> Settings`. Under the **Customer Invoices** section, tick :guilabel:`Intrastat` and :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:31
+msgid "The region code is **only used by Belgian companies**. Under :menuselection:`Accounting --> Configuration --> Settings`, select the :guilabel:`Company Intrastat Region` where the company is located, and then :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:34
+msgid "If your warehouses are located in multiple regions, you can define the region code for each warehouse instead. To do so, go to :menuselection:`Inventory --> Configuration --> Warehouses`, select a warehouse, set its :guilabel:`Intrastat region`, and then :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:0
+msgid "Adding the Intrastat region to a warehouse"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:43
+msgid "Default Incoterm"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:45
+msgid "You can set **default Incoterms** for your company by selecting an Intrastat **code** in the :guilabel:`Default Incoterm` field of the **Customer Invoices** section, and then clicking :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:52
+msgid "Product configuration"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:54
+msgid "All products must be properly configured to be included in the Intrastat report."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:59
+msgid "Commodity code"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:61
+msgid "Commodity codes are internationally recognized reference numbers used to classify goods depending on their **nature**. Intrastat uses the `Combined Nomenclature <https://taxation-customs.ec.europa.eu/customs-4/calculation-customs-duties/customs-tariff/combined-nomenclature_en>`_."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:64
+msgid "To add a commodity code, go to :menuselection:`Accounting --> Customers --> Products` and select a product. Under the :guilabel:`Accounting` tab, set the product's :guilabel:`Commodity Code`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:68
+msgid "`National Bank of Belgium - Intrastat commodity codes <https://www.nbb.be/en/statistics/foreign-trade/nomenclature-and-codes>`_"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:74
+msgid "Country of origin"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:76
+msgid "To add the product's country of origin, go to :menuselection:`Accounting --> Customers --> Products` and select a product. Under the :guilabel:`Accounting` tab, set the :guilabel:`Country of Origin`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:82
+msgid "Invoices and bills configuration"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:84
+msgid "Once products are properly configured, several settings must be enabled on the invoices and bills you create."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:90
+msgid "Transaction code"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:92
+msgid "Transaction codes are used to identify a transaction's nature. To set a transaction code on an invoice line, create an invoice or bill, click the :guilabel:`⋮` button, tick :guilabel:`Intrastat`, and use the newly-added :guilabel:`Intrastat` column to select a transaction code."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:-1
+msgid "Adding the Intrastat column to an invoice or bill"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:101
+msgid "`National Bank of Belgium - Intrastat: Nature of transactions from January 2022 <https://www.nbb.be/doc/dd/onegate/data/new_natures_of_transaction_2022_en.pdf>`_"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:107
+msgid "Partner country"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:109
+msgid "The partner country is the vendor's or customer's country, depending on whether it is an invoice or bill. It is automatically filled in using the :guilabel:`Country` field in the **contact form** of the partner."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:113
+msgid "To edit the partner country manually, click on the :guilabel:`Other Info` tab when on an invoice or bill, and select the :guilabel:`Intrastat Country`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:119
+msgid "Transport code"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:121
+msgid "The transport code identifies the presumed **mode of transport** used to send the goods (arrival or dispatch). Once you have selected a :ref:`partner country <intrastat/partner-country>`, the :guilabel:`Intrastat Transport Mode` becomes available."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:128
+msgid "Value of the goods"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:130
+msgid "The value of a good is the untaxed :guilabel:`Subtotal` (:guilabel:`Price` multiplied by :guilabel:`Quantity`) of an invoice line."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:136
+msgid "Partner configuration"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:138
+msgid "Two fields from the partner's **contact form** are used with Intrastat: :guilabel:`VAT` and :guilabel:`Country`. The country can be :ref:`manually set <intrastat/partner-country>` on the invoice or bill."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:143
+msgid "Generate the Intrastat report"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:145
+msgid "Generate the report by going to :menuselection:`Accounting --> Reporting --> Audit Reports: Intrastat Report`. It is automatically computed based on the :ref:`default configuration <intrastat/general-configuration>` and the information on the :ref:`products <intrastat/product-configuration>`, :ref:`invoices and bills <intrastat/invoice-bill-configuration>`, and :ref:`partners <intrastat/partner>`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:151
+msgid "Export the report as a PDF, XLSX, or XML file to submit it to your legal administration."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:153
+msgid "Each report line refers to a single invoice line and contains the following information:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:155
+msgid "Invoice or bill reference number;"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:156
+msgid ":guilabel:`System`, which is a code automatically generated depending on whether the document is an invoice (dispatch) or a bill (arrival);"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:158
+msgid ":ref:`Country <intrastat/partner-country>`, which is the vendor's country for arrivals and the customer's country for dispatches;"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:160
+msgid ":ref:`Transaction Code <intrastat/transaction-code>`;"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:161
+msgid ":ref:`Region Code <intrastat/region-code>` (if your company is located in Belgium);"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:162
+msgid ":ref:`Commodity Code <intrastat/commodity-code>`;"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:163
+msgid ":ref:`Origin Country <intrastat/origin-country>`;"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:164
+msgid ":ref:`Partner VAT <intrastat/partner>`;"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:165
+msgid ":ref:`Transport Code <intrastat/transport-code>`;"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/intrastat.rst:166
+msgid ":ref:`Value <intrastat/value>`, which is always expressed in EUR even if the original invoice or bill used another currency."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting/silverfin.rst:3
@@ -14717,6 +14892,7 @@ msgid "2-digits comparison"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/france.rst:184
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:61
 msgid "Template"
 msgstr ""
 
@@ -20611,7 +20787,7 @@ msgid "The form in this section is specific to the payment acquirer you are conf
 msgstr ""
 
 #: ../../content/applications/finance/payment_acquirers.rst:267
-#: ../../content/applications/finance/payment_acquirers/authorize.rst:40
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:38
 msgid "Configuration tab"
 msgstr ""
 
@@ -20735,7 +20911,7 @@ msgstr ""
 #: ../../content/applications/finance/payment_acquirers/adyen.rst:10
 #: ../../content/applications/finance/payment_acquirers/adyen.rst:137
 #: ../../content/applications/finance/payment_acquirers/alipay.rst:36
-#: ../../content/applications/finance/payment_acquirers/authorize.rst:53
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:51
 #: ../../content/applications/finance/payment_acquirers/buckaroo.rst:47
 #: ../../content/applications/finance/payment_acquirers/mollie.rst:31
 #: ../../content/applications/finance/payment_acquirers/paypal.rst:162
@@ -20973,23 +21149,167 @@ msgid "To retrieve them, log into your Authorize.Net account, go to :menuselecti
 msgstr ""
 
 #: ../../content/applications/finance/payment_acquirers/authorize.rst:31
-msgid "If you are trying Authorize.Net as a test, with a *sandbox account*, change the :guilabel:`State` to :guilabel:`Test Mode`. We recommend doing this on a test Odoo database, rather than on your main database."
+msgid "To test Authorize.Net with a *sandbox* account, change the :guilabel:`State` to :guilabel:`Test Mode`. We recommend doing this on a test Odoo database, rather than on your main database."
 msgstr ""
 
-#: ../../content/applications/finance/payment_acquirers/authorize.rst:35
-msgid "If you set :guilabel:`Test Mode` on Odoo and use an authorize.net account instead of a sandbox.authorize.net account, it results in the following error: *The merchant login ID or password is invalid or the account is inactive*."
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:34
+msgid "If you use the :guilabel:`Test Mode` with a regular account, it results in the following error: *The merchant login ID or password is invalid or the account is inactive*."
 msgstr ""
 
-#: ../../content/applications/finance/payment_acquirers/authorize.rst:43
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:41
 msgid "Place a hold on a card"
 msgstr ""
 
-#: ../../content/applications/finance/payment_acquirers/authorize.rst:45
-msgid "With Authorize.net, you can enable the :ref:`manual capture <payment_acquirers/features/manual_capture>`. If enabled, the funds are reserved for 30 days on the customer's card, but not charged yet."
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:43
+msgid "With Authorize.Net, you can enable the :ref:`manual capture <payment_acquirers/features/manual_capture>`. If enabled, the funds are reserved for 30 days on the customer's card, but not charged yet."
 msgstr ""
 
-#: ../../content/applications/finance/payment_acquirers/authorize.rst:50
-msgid "After **30 days**, the transaction is **voided automatically** by Authorize.net."
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:48
+msgid "After **30 days**, the transaction is **voided automatically** by Authorize.Net."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:54
+msgid "Import an Authorize.Net statement"
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:57
+msgid "Export from Authorize.Net"
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:63
+msgid "`Download the Excel import template <https://docs.google.com/spreadsheets/d/1CMVtBWLLVIrUpYA92paw-cL7-WdKLbaa/edit?usp=share_link&ouid=105295722917050444558&rtpof=true&sd=true>`_"
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:65
+msgid "To export a statement:"
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:67
+msgid "Log in to Authorize.Net."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:68
+msgid "Go to :menuselection:`Account --> Statements --> eCheck.Net Settlement Statement`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:69
+msgid "Define an export range using an *opening* and *closing* batch settlement. All transactions within the two batch settlements will be exported to Odoo."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:71
+msgid "Select all transactions within the desired range, copy them, and paste them into the :guilabel:`Report 1 Download` sheet of the :ref:`Excel import template <authorize-import-template>`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:-1
+msgid "Selecting Authorize.Net transactions to import"
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:-1
+msgid "Settlement batch of an Authorize.Net statement"
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:84
+msgid "In this case, the first batch (01/01/2021) of the year belongs to the settlement of 12/31/2020, so the **opening** settlement is from 12/31/2020."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:87
+msgid "Once the data is in the :guilabel:`Report 1 Download` sheet:"
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:89
+msgid "Go to the :guilabel:`Transaction Search` tab on Authorize.Net."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:90
+msgid "Under the :guilabel:`Settlement Date` section, select the previously used range of batch settlement dates in the :guilabel:`From:` and :guilabel:`To:` fields and click :guilabel:`Search`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:92
+msgid "When the list has been generated, click :guilabel:`Download to File`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:93
+msgid "In the pop-up window, select :guilabel:`Expanded Fields with CAVV Response/Comma Separated`, enable :guilabel:`Include Column Headings`, and click :guilabel:`Submit`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:95
+msgid "Open the text file, select :guilabel:`All`, copy the data, and paste it into the :guilabel:`Report 2 Download` sheet of the :ref:`Excel import template <authorize-import-template>`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:97
+msgid "Transit lines are automatically filled in and updated in the :guilabel:`transit for report 1` and :guilabel:`transit for report 2` sheets of the :ref:`Excel import template <authorize-import-template>`. Make sure all entries are present, and **if not**, copy the formula from previously filled-in lines of the :guilabel:`transit for report 1` or :guilabel:`2` sheets and paste it into the empty lines."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:104
+msgid "To get the correct closing balance, **do not remove** any line from the Excel sheets."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:107
+msgid "Import into Odoo"
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:109
+msgid "To import the data into Odoo:"
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:111
+msgid "Open the :ref:`Excel import template <authorize-import-template>`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:112
+msgid "Copy the data from the :guilabel:`transit for report 2` sheet and use *paste special* to only paste the values in the :guilabel:`Odoo Import to CSV` sheet."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:114
+msgid "Look for *blue* cells in the :guilabel:`Odoo Import to CSV` sheet. These are chargeback entries without any reference number. As they cannot be imported as such, go to :menuselection:`Authorize.Net --> Account --> Statements --> eCheck.Net Settlement Statement`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:117
+msgid "Look for :guilabel:`Charge Transaction/Chargeback`, and click it."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:118
+msgid "Copy the invoice description, paste it into the :guilabel:`Label` cell of the :guilabel:`Odoo Import to CSV` sheet, and add `Chargeback /` before the description."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:120
+msgid "If there are multiple invoices, add a line into the :ref:`Excel import template <authorize-import-template>` for each invoice and copy/paste the description into each respective :guilabel:`Label` line."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:125
+msgid "For **combined chargeback/returns** in the payouts, create a new line in the :ref:`Excel import template <authorize-import-template>` for each invoice."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:0
+msgid "Chargeback description"
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:133
+msgid "Next, delete *zero transaction* and *void transaction* line items, and change the format of the :guilabel:`Amount` column in the :guilabel:`Odoo Import to CSV` sheet to *Number*."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:135
+msgid "Go back to :menuselection:`eCheck.Net Settlement Statement --> Search for a Transaction` and search again for the previously used batch settlements dates."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:137
+msgid "Verify that the batch settlement dates on eCheck.Net match the related payments' dates found in the :guilabel:`Date` column of the :guilabel:`Odoo Import to CSV`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:139
+msgid "If it does not match, replace the date with the one from eCheck.Net. Sort the column by *date*, and make sure the format is `MM/DD/YYYY`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:141
+msgid "Copy the data - column headings included - from the :guilabel:`Odoo Import to CSV` sheet, paste it into a new Excel file, and save it using the CSV format."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:143
+msgid "Open the Accounting app, go to :menuselection:`Configuration --> Journals`, tick the :guilabel:`Authorize.Net` box, and click :menuselection:`Favorites --> Import records --> Load file`. Select the CSV file and upload it into Odoo."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/authorize.rst:148
+msgid "List of `eCheck.Net return codes <https://support.authorize.net/knowledgebase/Knowledgearticle/?code=000001293>`_"
 msgstr ""
 
 #: ../../content/applications/finance/payment_acquirers/buckaroo.rst:3
