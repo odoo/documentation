@@ -50,17 +50,16 @@ SEPA Direct Debit as a payment method
 -------------------------------------
 
 SDD can be used as a payment method both on your **eCommerce** or on the **Customer Portal** by
-activating SDD as a **Payment Provider**. With this method, your customers can create and sign their
-mandates themselves.
+activating SDD as a **Payment Provider**. With this method, your customers can create their mandates.
+To ensure the validity of the information given by the customer, they will have to confirm each
+mandate with one successful bank transfer of the expected amount.
 
-To do so, go to :menuselection:`Accounting --> Configuration --> Payment Providers`, click on *SEPA
-Direct Debit*, and set it up according to your needs.
-To do so, go to :menuselection:`Accounting app --> Configuration --> Payment Acquirers`, click on
+To do so, go to :menuselection:`Accounting app --> Configuration --> Payment Providers`, click on
 :guilabel:`SEPA Direct Debit`.
 
 .. important::
-   Make sure to change the :guilabel:`State` field to :guilabel:`Enabled`, and to check
-   :guilabel:`Online Signature`, as this is necessary to let your customers sign their mandates.
+   Make sure to change the :guilabel:`State` field to :guilabel:`Enabled` and set the provider as
+   "Published" so that it is available for your customers.
 
 Customers using SDD as payment method get prompted to add their IBAN, email address, and to sign
 their SEPA Direct Debit mandate.
