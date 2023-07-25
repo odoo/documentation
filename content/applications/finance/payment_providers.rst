@@ -179,8 +179,8 @@ Bank payments
   | When selected, Odoo displays your payment information with a payment reference. You have to
     approve the payment manually once you have received it on your bank account.
 - | :doc:`SEPA Direct Debit <../finance/accounting/payments/batch_sdd>`
-  | Your customers can sign a SEPA Direct Debit mandate online and get their bank account charged
-    directly.
+  | Your customers can make a bank transfer to register a SEPA Direct Debit mandate and get their
+    bank account charged directly.
 
 .. _payment_providers/features:
 
