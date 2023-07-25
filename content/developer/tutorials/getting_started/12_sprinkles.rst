@@ -17,7 +17,7 @@ read the reference documentation for a more complete overview.
 
 **Reference**: the documentation related to this chapter can be found in
 :doc:`../../reference/user_interface/view_records` and
-:doc:`../../reference/user_interface/view_architecture`.
+:doc:`../../reference/user_interface/view_architectures`.
 
 Inline Views
 ============
@@ -272,7 +272,7 @@ behavior customizations, we can add the ``options`` attribute to several field w
 In :ref:`tutorials/getting_started/06_firstui`, we saw that reserved fields were used for
 specific behaviors. For example, the ``active`` field is used to automatically filter out
 inactive records. We added the ``state`` as a reserved field as well. It's now time to use it!
-A ``state`` field is used in combination with a ``invisible`` attribute in the view to display
+A ``state`` field can be used in combination with an ``invisible`` attribute in the view to display
 buttons conditionally.
 
 .. exercise:: Add conditional display of buttons.
@@ -283,17 +283,17 @@ buttons conditionally.
     Tip: do not hesitate to search for ``invisible=`` in the Odoo XML files for some examples.
 
 More generally, it is possible to make a field ``invisible``, ``readonly`` or ``required`` based
-on the value of other fields. Note that ``invisible`` can also be appliedto other elements of
+on the value of other fields. Note that ``invisible`` can also be applied to other elements of
 the view such as ``button`` or ``group``.
 
-``invisible``, ``readonly`` or ``required`` can have ``True``, ``False`` or a domain as value.
-The domain gives the condition in which the property applies. For example:
+`invisible`, `readonly` and `required` can have any Python expression as value. The expression
+gives the condition in which the property applies. For example:
 
 .. code-block:: xml
 
     <form>
         <field name="description" invisible="not is_partner"/>
-        <field name="is_partner" invisible="1"/>
+        <field name="is_partner" invisible="True"/>
     </form>
 
 This means that the ``description`` field is invisible when ``is_partner`` is ``False``. It is
@@ -386,7 +386,7 @@ Search
 ------
 
 **Reference**: the documentation related to this section can be found in
-:ref:`reference/view_architecture/search` and :ref:`reference/view_architecture/search/defaults`.
+:ref:`reference/view_architectures/search` and :ref:`reference/view_architectures/search/defaults`.
 
 .. note::
 

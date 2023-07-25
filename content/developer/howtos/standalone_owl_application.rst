@@ -108,7 +108,7 @@ layout.
 ========================================
 
 Now that we have created our assets bundle, we need to create a
-:ref:`QWeb view<reference/view_architecture/qweb>` that uses that assets bundle.
+:ref:`QWeb view <reference/view_architectures/qweb>` that uses that assets bundle.
 
 .. code-block:: xml
 

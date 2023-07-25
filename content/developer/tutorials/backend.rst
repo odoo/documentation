@@ -56,13 +56,13 @@ Business objects
     Declared as Python classes, these resources are automatically persisted
     by Odoo based on their configuration
 
-:doc:`Object views <../reference/user_interface/view_architecture>`
+:doc:`Object views <../reference/user_interface/view_architectures>`
     Definition of business objects UI display
 
 :ref:`Data files <reference/data>`
     XML or CSV files declaring the model metadata :
 
-    * :doc:`views <../reference/user_interface/view_architecture>` or :ref:`reports
+    * :doc:`views <../reference/user_interface/view_architectures>` or :ref:`reports
       <reference/reports>`,
     * configuration data (modules parametrization, :ref:`security rules <reference/security>`),
     * demonstration data
@@ -1289,7 +1289,7 @@ A report is a combination two elements:
      the *report* contextual menu rather than the *action* one. There is no
      technical difference but putting elements in the right place helps users.
 
-* A standard :ref:`QWeb view <reference/view_architecture/qweb>` for the actual report:
+* A standard :ref:`QWeb view <reference/view_architectures/qweb>` for the actual report:
 
   .. code-block:: xml
 
