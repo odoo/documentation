@@ -7,6 +7,8 @@ their specific warehouses, customers, equipment, and contacts. It provides you t
 generate reports of aggregated figures without switching interfaces, which facilitates daily tasks
 and the overall management process.
 
+.. _companies/manage:
+
 Manage companies and records
 ============================
 
