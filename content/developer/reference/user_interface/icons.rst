@@ -1,5 +1,7 @@
 :hide-page-toc:
 
+.. _reference/user_interface/ui_icons:
+
 ========
 UI icons
 ========
