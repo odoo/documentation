@@ -19,3 +19,4 @@ Manufacturing workflows
    management/manufacturing_backorders
    management/configure_manufacturing_product
    management/split_merge
+   management/work_order_dependencies
