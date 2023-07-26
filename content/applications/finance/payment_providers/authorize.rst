@@ -61,15 +61,16 @@ Configuration
 
 To give customers the possibility to pay using ACH, `sign up for Authorize.Net eCheck's service
 <https://www.authorize.net/payments/echeck.html>`_. Once eCheck is activated, duplicate the
-previously configured Authorize.Net payment acquirer on Odoo by going to :menuselection:`Accounting
---> Configuration --> Payment Acquirers --> Authorize.net --> ⛭ Action --> Duplicate`. Then, change
-the acquirer's name to differentiate both versions (e.g., `Authorize.net - Banks`).
+previously configured Authorize.Net payment provider on Odoo by going to :menuselection:`Accounting
+--> Configuration --> Payment Providers --> Authorize.net`. Then, click the cog icon
+(:guilabel:`⛭`) and select :guilabel:`Duplicate`. Change the provider's name to differentiate both
+versions (e.g., `Authorize.net - Banks`).
 
-Open the :guilabel:`Configuration` tab, click :guilabel:`Edit` and set the :guilabel:`Allow Payments
-From` field to :guilabel:`Bank Account (USA only)`. Finally, click :guilabel:`Save`.
+Open the :guilabel:`Configuration` tab, set the :guilabel:`Allow Payments From` field to
+:guilabel:`Bank Account (USA only)`.
 
-When ready, change the acquirer's :guilabel:`State` to :guilabel:`Enabled` for a regular account or
-:guilabel:`Test Mode` for a sandbox account, and :guilabel:`Save`.
+When ready, change the provider's :guilabel:`State` to :guilabel:`Enabled` for a regular account or
+:guilabel:`Test Mode` for a sandbox account.
 
 Import an Authorize.Net statement
 =================================
