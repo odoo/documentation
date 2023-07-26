@@ -74,9 +74,9 @@ Next, the accountant likely verifies balance sheet items and book entries for:
   - tax adjustments,
   - etc.
 
-If the accountant/bookkeeper is going through the year-end audit, they may want to have paper copies
-of all balance sheet items (such as loans, bank accounts, prepayments, sales tax statements, etc.)
-to compare these with the balances in Odoo.
+If the accountant is going through the year-end audit, they may want to have paper copies of all
+balance sheet items (such as loans, bank accounts, prepayments, sales tax statements, etc.) to
+compare these with the balances in Odoo.
 
 .. tip::
    During this process, it is good practice to set a :guilabel:`Journal Entries Lock Date` to the
