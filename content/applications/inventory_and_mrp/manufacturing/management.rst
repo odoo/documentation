@@ -18,3 +18,4 @@ Manufacturing workflows
    management/scrap_manufacturing
    management/manufacturing_backorders
    management/configure_manufacturing_product
+   management/split_merge
