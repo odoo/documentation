@@ -2,7 +2,7 @@
 Add quality controls
 ====================
 
-.. _manufacturing/quality_control/quality-control-points:
+.. _quality/quality-control-points:
 
 Use *Odoo Quality* to control the quality of products before they are registered into stock, during
 picking operations, and when leaving the warehouse for a delivery order. By creating *quality
