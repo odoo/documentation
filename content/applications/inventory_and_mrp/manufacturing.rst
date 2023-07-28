@@ -21,4 +21,5 @@ and allow workers to trigger maintenance operations, feedback loops, quality iss
 
    manufacturing/maintenance
    manufacturing/management
+   manufacturing/plm
    manufacturing/quality_control
