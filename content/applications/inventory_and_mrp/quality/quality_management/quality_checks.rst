@@ -12,7 +12,7 @@ Using a Quality Control Point (QCP), it is possible to create quality checks aut
 regular intervals. When quality checks are created by a |QCP|, they appear on a manufacturing or
 inventory order, where the employee processing the order will be prompted to complete them. For a
 full explanation of how to create and configure a |QCP|, see the documentation on :ref:`quality
-control points <manufacturing/quality_control/quality-control-points>`.
+control points <quality/quality-control-points>`.
 
 While quality checks are most commonly created automatically by a |QCP|, it is also possible to
 manually create a single quality check. Creating a check manually is useful when an employee wants
@@ -81,7 +81,7 @@ specific work order operation, the check is processed in the tablet view for the
    It is not possible to manually create a single quality check that is assigned to a specific work
    order operation. Quality checks for work order operations can only be created by a |QCP|. See the
    documentation on :ref:`Quality Control Points
-   <manufacturing/quality_control/quality-control-points>` for information about how to configure a
+   <quality/quality-control-points>` for information about how to configure a
    |QCP| that will create quality checks for a specific work order operation.
 
 Quality check page
