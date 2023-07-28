@@ -1,15 +1,15 @@
-==========================
-Create a bill of materials
-==========================
+=================
+Bill of materials
+=================
 
 .. _manufacturing/management/bill-configuration:
 
-A *Bill of Materials* (or *BoM* for short) is a document that defines the quantity of each
-component required to make or deliver a finished product. It can also include various operations
-and the individual step guidelines needed to complete a production process.
+A *bill of materials* (or *BoM* for short) is a document that defines the quantity of each component
+required to make or deliver a finished product. It can also include various operations and the
+individual step guidelines needed to complete a production process.
 
 In Odoo Manufacturing, multiple :abbr:`BoMs (Bills of Materials)` can be linked to each product, so
-that even product variants can have their own tailored :abbr:`BoMs (Bills of Materials)`.
+even product variants can have their own tailored :abbr:`BoMs (Bills of Materials)`.
 
 Correctly setting up a :abbr:`BoM (Bill of Materials)` helps optimize the manufacturing process and
 save time.
