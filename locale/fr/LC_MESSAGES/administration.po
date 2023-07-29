@@ -758,6 +758,9 @@ msgid ""
 " listening on :option:`the longpolling port <odoo-bin --longpolling-port>` "
 "but the client will not connect to it."
 msgstr ""
+"En configuration multiprocessing, un worker LiveChat dédié est "
+"automatiquement lancé et écoute sur le :option:`port longpolling <odoo-bin "
+"--longpolling-port>`, mais le client ne s'y connecter pas."
 
 #: ../../content/administration/install/deploy.rst:221
 msgid ""
@@ -765,6 +768,10 @@ msgid ""
 "``/longpolling/`` to the longpolling port. Other request should be proxied "
 "to the :option:`normal HTTP port <odoo-bin --http-port>`"
 msgstr ""
+"Vous devez plutôt avoir un proxy qui redirige les requêtes dont l'URL "
+"commence par ``/longpolling/`` vers le port longpolling. Les autres requêtes"
+" doivent être redirigées vers le :option:`port HTTP normal <odoo-bin --http-"
+"port>`"
 
 #: ../../content/administration/install/deploy.rst:225
 msgid ""
@@ -972,6 +979,10 @@ msgid ""
 "that Odoo, this is the simplest and the longpolling URL can double up as the"
 " cron instance."
 msgstr ""
+"Déployer une version threadée d'Odoo (au lieu d'une version preforking basée"
+" sur les processus) et uniquement rediriger les recoupettes vers les URLs "
+"commençant par ``/longpolling/`` vers ce Odoo, c'est la solution la plus "
+"simple et l'URL du longpolling peut également servir d'instance cron."
 
 #: ../../content/administration/install/deploy.rst:387
 msgid ""
@@ -979,10 +990,13 @@ msgid ""
 "``/longpolling/`` to :option:`the longpolling port <odoo-bin --longpolling-"
 "port>`."
 msgstr ""
+"Déployer un Odoo evented via ``odoo-gevent`` et requêtes proxy commençant "
+"par ``/longpolling/`` vers :option:`le port longpolling <odoo-bin "
+"--longpolling-port>`."
 
 #: ../../content/administration/install/deploy.rst:392
 msgid "Serving Static Files"
-msgstr ""
+msgstr "Servir des fichiers statiques"
 
 #: ../../content/administration/install/deploy.rst:394
 msgid ""
@@ -990,6 +1004,10 @@ msgid ""
 "modules. This may not be ideal when it comes to performances, and static "
 "files should generally be served by a static HTTP server."
 msgstr ""
+"Pour des raisons de commodité de développement, Odoo sert directement tous "
+"les fichiers statiques dans ses modules. Ce n'est peut-être pas idéal en "
+"termes de performances et les fichiers statiques doivent généralement être "
+"servis par un serveur HTTP statique."
 
 #: ../../content/administration/install/deploy.rst:398
 msgid ""
@@ -998,6 +1016,11 @@ msgid ""
 ":samp:`/{MODULE}/static/{FILE}`, and looking up the right module (and file) "
 "in the various addons paths."
 msgstr ""
+"Les fichiers statiques Odoo se situent dans le fichier ``static/`` de chaque"
+" module, donc les fichiers statiques peuvent être servis en interceptant "
+"toutes les requêtes vers :samp:`/{MODULE}/static/{FILE}`, et en recherchant "
+"le bon module (et fichier) dans les différents chemins d'accès aux modules "
+"complémentaires."
 
 #: ../../content/administration/install/deploy.rst:402
 #: ../../content/administration/upgrade.rst:122
@@ -1010,6 +1033,10 @@ msgid ""
 "this, and how (e.g. possibility of mapping ir.attachment id to filestore "
 "hash in the database?)"
 msgstr ""
+"tester s'il serait intéressant de service des pièces jointes stockées dans "
+"des fichiers par ce biais et comment (par ex. possibilité de faire "
+"correspondre l'id ir.attachment avec le hachage du dépôt de fichiers dans la"
+" base de données ?)"
 
 #: ../../content/administration/install/deploy.rst:409
 msgid "Security"
@@ -1867,6 +1894,8 @@ msgid ""
 "Odoo 15 'deb' package currently supports `Debian 11 (Bullseye)`_, `Ubuntu "
 "20.04 (Focal)`_ or above."
 msgstr ""
+"Le package Odoo 15 'deb' prend actuellement en charge `Debian 11 "
+"(Bullseye)`_, `Ubuntu 20.04 (Focal)`_ ou les versions supérieures."
 
 #: ../../content/administration/install/install.rst:114
 #: ../../content/administration/install/install.rst:187
@@ -1917,6 +1946,9 @@ msgid ""
 "distributions. It can be used to install *Odoo Community Edition* by "
 "executing the following commands **as root**:"
 msgstr ""
+"Odoo S.A. fournit un dépôt qui peut être utilisé avec les distributions "
+"Debian et Ubuntu. Il peut être utilisé pour installer l'*Édition Odoo "
+"Community* en exécution les commandes suivantes **en tant que racine** :"
 
 #: ../../content/administration/install/install.rst:141
 msgid ""
@@ -1935,7 +1967,7 @@ msgstr ""
 
 #: ../../content/administration/install/install.rst:146
 msgid "Deb Package"
-msgstr ""
+msgstr "Package Deb"
 
 #: ../../content/administration/install/install.rst:148
 msgid ""
@@ -1995,7 +2027,7 @@ msgstr "Fedora"
 
 #: ../../content/administration/install/install.rst:184
 msgid "Odoo 15 'rpm' package supports Fedora 34."
-msgstr ""
+msgstr "Le package Odoo 15 'rpm' prend en charge Fedora 34."
 
 #: ../../content/administration/install/install.rst:189
 msgid ""
@@ -2042,7 +2074,7 @@ msgstr ""
 
 #: ../../content/administration/install/install.rst:237
 msgid "Source Install"
-msgstr ""
+msgstr "Source Install"
 
 #: ../../content/administration/install/install.rst:239
 msgid ""
@@ -2305,6 +2337,8 @@ msgid ""
 "Open the **Definition** tab and enter the password (e.g. ``odoo``), then "
 "click **Save**."
 msgstr ""
+"Ouvrez l'onglet **Définition** et saisissez le mot de passe (par ex. "
+"``odoo``), puis cliquez sur **Enregistrer**."
 
 #: ../../content/administration/install/install.rst:356
 msgid ""
@@ -2392,6 +2426,9 @@ msgid ""
 "`rtlcss.cmd` is located (typically: "
 "`C:\\\\Users\\\\<user>\\\\AppData\\\\Roaming\\\\npm\\\\`)."
 msgstr ""
+"Modifiez le variable `PATH` de l'environnement système pour ajouter le "
+"fichier où se trouve `rtlcss.cmd` (généralement : "
+"`C:\\\\Users\\\\<user>\\\\AppData\\\\Roaming\\\\npm\\\\`)."
 
 #: ../../content/administration/install/install.rst:402
 #: ../../content/administration/install/install.rst:598
@@ -2467,6 +2504,9 @@ msgid ""
 "`dbuser` is the PostgreSQL login, `dbpassword` is the PostgreSQL password "
 "and `mydb` is the name of the PostgreSQL database."
 msgstr ""
+"Où `CommunityPath` est le chemin de l'installation Odoo Community, `dbuser` "
+"est le login PostgreSQL, `dbpassword` est le mot de passe PostgreSQL et "
+"`mydb` est le nom de la base de données PostgreSQL."
 
 #: ../../content/administration/install/install.rst:430
 #: ../../content/administration/install/install.rst:627
@@ -2529,10 +2569,14 @@ msgid ""
 "Odoo uses PostgreSQL as database management system. Use your package manager"
 " to download and install PostgreSQL (supported version: 10.0 and later)."
 msgstr ""
+"Odoo utilise PostgreSQL comme système de gestion de la base de données. "
+"Utilisez votre gestionnaire de paquets pour télécharger et installer "
+"PostgreSQL (version prise en charge : 10.0 et ultérieure)."
 
 #: ../../content/administration/install/install.rst:533
 msgid "On Debian/Unbuntu, it can be achieved by executing the following:"
 msgstr ""
+"Sur Debian/Ubuntu, il est possible d'y arriver en exécutant ce qui suit :"
 
 #: ../../content/administration/install/install.rst:547
 #: ../../content/administration/install/install.rst:743
@@ -2550,12 +2594,19 @@ msgid ""
 "are available in `-dev` or `-devel` packages for Python, PostgreSQL, "
 "libxml2, libxslt1, libevent, libsasl2 and libldap2."
 msgstr ""
+"Pour les bibliothèques utilisant du code natif, il est nécessaire "
+"d'installer les outils de développement et les dépendances natives avant les"
+" dépendances Python d'Odoo. Ils sont disponibles dans les paquets `-dev` ou "
+"`-devel` pour Python, PostgreSQL, libxml2, libxslt1, libevent, libsasl2 et "
+"libldap2."
 
 #: ../../content/administration/install/install.rst:557
 msgid ""
 "On Debian/Unbuntu, the following command should install all the required "
 "libraries:"
 msgstr ""
+"Sur Debian/Ubuntu, la commande suivante doit installer toutes les "
+"bibliothèques requises :"
 
 #: ../../content/administration/install/install.rst:571
 #: ../../content/administration/install/install.rst:755
@@ -2579,6 +2630,10 @@ msgid ""
 "defaults <http://initd.org/psycopg/docs/module.html>`_: connects over a UNIX"
 " socket on port `5432` with the current user and no password."
 msgstr ""
+"Utilisateur et mot de passe PostgreSQL. Odoo n'a pas de valeurs par défaut "
+"autres que celles de `psycopg2's "
+"<http://initd.org/psycopg/docs/module.html>`_: se connecte sur un socket "
+"UNIX sur le port `5432` avec l'utilisateur actuel et sans mot de passe."
 
 #: ../../content/administration/install/install.rst:624
 #: ../../content/administration/install/install.rst:819
@@ -2586,6 +2641,8 @@ msgid ""
 "Where `CommunityPath` is the path of the Odoo Community installation and "
 "`mydb` is the name of the PostgreSQL database."
 msgstr ""
+"Où `CommunityPath` est le chemin de l'installation Odoo Community et `mydb` "
+"est le nom de la base de données PostgreSQL."
 
 #: ../../content/administration/install/install.rst:644
 msgid "Mac OS"
@@ -2608,6 +2665,9 @@ msgid ""
 "<https://postgresapp.com>`_ to download and install PostgreSQL (supported "
 "version: 10.0 and later)."
 msgstr ""
+"Odoo utilise PostgreSQL comme système de gestion de la base de données. "
+"Utilisez `postgres.app <https://postgresapp.com>`_ pour télécharger et "
+"installer PostgreSQL (version prise en charge : 10.0 et ultérieure)."
 
 #: ../../content/administration/install/install.rst:731
 msgid ""
@@ -2656,6 +2716,9 @@ msgid ""
 "`current limit exceeds maximum limit`. In that case, add the following "
 "parameter `--limit-memory-hard 0` to avoid the problem."
 msgstr ""
+"Certaines versions de Python sur Mac peuvent conduire au message d'erreur "
+"suivant : `current limit exceeds maximum limit`. Dans ce cas, ajoutez le "
+"paramètre suivant `--limit-memory-hard 0` pour éviter le problème."
 
 #: ../../content/administration/install/install.rst:844
 #: ../../content/administration/maintain/update.rst:149
@@ -7031,6 +7094,15 @@ msgid ""
 "file. To have a concrete example, check out the `requirements.txt file of "
 "Odoo <https://github.com/odoo/odoo/blob/15.0/requirements.txt>`_."
 msgstr ""
+"Si votre projet nécessite des dépendances Python supplémentaires ou des "
+"versions plus récentes, vous pouvez définir un fichier "
+":file:`requirements.txt` dans la racine de vos branches pour les "
+"répertorier. La plateforme se charge d'installer ces dépendances dans vos "
+"conteneurs. La documentation relative aux `spécificateurs d'exigences pip "
+"<https://pip.pypa.io/en/stable/reference/pip_install/#requirement-"
+"specifiers>`_ peut vous aider à écrire un fichier :file:`requirements.txt`. "
+"Pour avoir un exemple concret, consultez le `fichier requirements.txt d'Odoo"
+" <https://github.com/odoo/odoo/blob/15.0/requirements.txt>`_."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:22
 msgid ""
@@ -7825,6 +7897,8 @@ msgstr ""
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:75
 msgid "Setting payment acquirers and shipping providers in test mode."
 msgstr ""
+"La configuration des fournisseurs de paiement et des transporteurs en mode "
+"test."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:76
 msgid "Disabling IAP services"

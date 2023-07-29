@@ -14,7 +14,6 @@
 # José Cabrera Lozano <jose.cabrera@edukative.es>, 2021
 # Jesús Alan Ramos Rodríguez <alan.ramos@jarsa.com.mx>, 2021
 # Pablo Rojas <rojaspablo88@gmail.com>, 2021
-# Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2022
 # Lina Maria Avendaño Carvajal <lina8823@gmail.com>, 2022
 # Mariela Moreno <mam@odoo.com>, 2022
 # Lucia Pacheco, 2023
@@ -23,6 +22,7 @@
 # Braulio D. López Vázquez <bdl@odoo.com>, 2023
 # Fernanda Alvarez, 2023
 # Iran Villalobos López, 2023
+# Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -31,7 +31,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-07 06:24+0000\n"
 "PO-Revision-Date: 2021-11-02 08:48+0000\n"
-"Last-Translator: Iran Villalobos López, 2023\n"
+"Last-Translator: Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2023\n"
 "Language-Team: Spanish (https://app.transifex.com/odoo/teams/41243/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -41,7 +41,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp.rst:5
 msgid "Inventory & MRP"
-msgstr ""
+msgstr "Inventario y MRP"
 
 #: ../../content/applications/inventory_and_mrp/inventory.rst:8
 msgid "Inventory"
@@ -843,30 +843,41 @@ msgid ""
 " be made to reconcile the differences, and ensure that the recorded counts "
 "in the database match the actual counts in the warehouse."
 msgstr ""
+"En cualquier sistema de gestión de almacén es posible que los números "
+"registrados del inventario en la base de datos no sean los mismos que los "
+"verdaderos números en el almacén. Esta discrepancia se puede deber a robo, "
+"daños, errores humanos y otros factores. Por lo tanto, se tienen que "
+"realizar ajustes de inventario para conciliar las diferencias y asegurarnos "
+"de que los números registrados en la base de datos sean los mismos que los "
+"número del almacén."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:11
 msgid ""
 "In Odoo, inventory adjustments can be accessed through "
 ":menuselection:`Inventory --> Operations --> Inventory Adjustments`."
 msgstr ""
+"En Odoo, puede acceder a los ajustes de inventario desde "
+":menuselection:`Inventario --> Operaciones --> Ajustes de inventario`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:14
 msgid ""
 "The :guilabel:`Inventory Adjustments` page shows all products that are "
 "currently in stock. Each line contains the following information:"
 msgstr ""
+"La página de :guilabel:`Ajustes de inventario` muestra todos los productos "
+"que están en existencias. Cada línea contiene la siguiente información:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:17
 msgid ":guilabel:`Product`"
-msgstr ""
+msgstr ":guilabel:`Producto`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:18
 msgid ":guilabel:`Lot/Serial Number`"
-msgstr ""
+msgstr ":guilabel:`Lote/Número de serie`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:19
 msgid ":guilabel:`On Hand Quantity`"
-msgstr ""
+msgstr ":guilabel:`Cantidad a la mano`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:22
 msgid "Add a new line"
@@ -878,6 +889,9 @@ msgid ""
 "the :guilabel:`Product` and :guilabel:`Counted Quantity` fields. Then click "
 ":guilabel:`Save`."
 msgstr ""
+"Para agregar una línea de ajuste de inventario, haga clic en "
+":guilabel:`Crear` y llene los campos de guilabel:`Producto` y "
+":guilabel:`Cantidades contadas`. Después haga clic en :guilabel:`Guardar`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:27
 msgid ""
@@ -885,6 +899,9 @@ msgid ""
 "quantity on hand is not yet updated to match the new :guilabel:`Counted "
 "Quantity`."
 msgstr ""
+"Hasta este punto, registramos la cantidad, pero todavía no la *aplicamos*. "
+"Esto significa que la cantidad a la mano no se ha actualizado para que sea "
+"la misma que :guilabel:`las cantidades contadas`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:30
 msgid ""
@@ -893,16 +910,23 @@ msgid ""
 ":guilabel:`Apply All` is clicked, a reference or reason can be entered "
 "before clicking :guilabel:`Apply`."
 msgstr ""
+"Para aplicar la nueva :guilabel:`cantidad contada`, haga clic en "
+":guilabel:`Aplicar` en la línea, o en el botón :guilabel:`Aplicar todo` en "
+"la parte superior de la página. Si hace clic en :guilabel:`Aplicar todo`, "
+"puede ingresar una referencia o una razón antes de hacer clic en "
+":guilabel:`Aplicar`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst-1
 msgid ""
 "Apply all option applies the inventory adjustment once a reason is "
 "specified."
 msgstr ""
+"La opción Aplicar todo aplica el ajuste de inventario una vez que se "
+"especificó la razón."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:40
 msgid "Count products"
-msgstr ""
+msgstr "Conteo de productos"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:42
 msgid ""
@@ -911,6 +935,10 @@ msgid ""
 "Adjustments` to update the :guilabel:`Counted Quantity` column for each "
 "product line."
 msgstr ""
+"Contar productos es una actividad recurrente en los almacenes. Una vez que "
+"se completa la cuenta, vaya a :menuselection:`Inventario --> Operaciones -->"
+" Ajustes de inventario` para actualizar la columna :guilabel:`Cantidad "
+"contada` para cada línea de producto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:46
 msgid ""
@@ -920,6 +948,12 @@ msgid ""
 "Quantity` field. A move with `0.00` :guilabel:`Quantity Done` will be "
 "recorded in the product's inventory adjustment history."
 msgstr ""
+"Si el conteo es el mismo que :guilabel:`la cantidad a la mano` que se "
+"registró en la base de datos, haga clic en :guilabel:`Establecer`. Al hacer "
+"esto se copiará el valor del campo :guilabel:`Cantidad a la mano` y se "
+"pegará en el campo :guilabel:`Cantidades contadas`. En el historial de "
+"ajustes del inventario se registrará un movimiento de `0.00`  en "
+":guilabel:`Cantidad hecha`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:51
 msgid ""
@@ -929,12 +963,20 @@ msgid ""
 ":guilabel:`On Hand Quantity` and :guilabel:`Counted Quantity` will be "
 "recorded in the product's inventory adjustment history."
 msgstr ""
+"Si un conteo *no* es igual a la :guilabel:`cantidad a la mano` registrada en"
+" la base de datos, registre la cantidad en el campo :guilabel:`Cantidades "
+"contadas`. Cuando haga clic en :guilabel:`Establecer` se registrará un "
+"movimiento que muestre la diferencia entre :guilabel:`la cantidad a la mano`"
+" y :guilabel:`las cantidades contadas` en el historial de ajuste de "
+"inventario del producto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst-1
 msgid ""
 "Inventory Adjustments History dashboard detailing a list of prior product "
 "moves."
 msgstr ""
+"Tablero del historial de ajustes de inventario donde se muestra la lista "
+"antes de los movimientos del producto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:61
 msgid ""
@@ -945,22 +987,31 @@ msgid ""
 "quantity. As an extra caution measure, Odoo will ask for confirmation before"
 " applying the inventory adjustment."
 msgstr ""
+"A veces se realiza un conteo que no se puede aplicar a la base de datos de "
+"inmediato. En el tiempo que pase entre que se realizó el conteo y se aplicó "
+"el ajuste de inventario, es posible que ocurran movimientos de inventario. "
+"En ese caso, la :guilabel:`cantidad a la mano` dentro de la base de datos "
+"puede cambiar y no será consistente con la cantidad que se contó. Como una "
+"medida de precaución, Odoo le pedirá confirmación antes de aplicar el ajuste"
+" de inventario."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:68
 msgid "Plan counts"
-msgstr ""
+msgstr "Planear conteos"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:70
 msgid "Each inventory adjustment line contains the following information:"
-msgstr ""
+msgstr "Cada línea de ajuste de inventario contiene la información siguiente:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:72
 msgid ":guilabel:`Scheduled Date`: the date at which a count should be made."
 msgstr ""
+":guilabel:`Fecha programada`: la fecha en la que se tiene que realizar el "
+"conteo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:73
 msgid ":guilabel:`User`: the person in charge of the count."
-msgstr ""
+msgstr ":guilabel:`Usuario`: la persona encargada de realizar el conteo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:74
 msgid ""
@@ -968,12 +1019,17 @@ msgid ""
 "accounted. The column is hidden by default, but can be made visible by "
 "opening the column options icon."
 msgstr ""
+":guilabel:`Fecha contable`: la fecha en la que los ajustes de "
+"contabilizarán. Por defecto, la columna estará oculta, pero se puede abrir "
+"el icono de opciones de columna para desplegarla."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:78
 msgid ""
 "In the Barcode app, users can only view counts assigned to them that are "
 "scheduled for today or earlier."
 msgstr ""
+"En la aplicación Código de barras, los usuarios solo podrán ver los conteos "
+"que se les han asignado y que están programados para el día de hoy o antes."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:81
 msgid ""
@@ -981,20 +1037,26 @@ msgid ""
 ":guilabel:`Inventory Adjustments` page. Then, click :guilabel:`Request a "
 "Count` and fill in the following information:"
 msgstr ""
+"Para planear conteos grandes, seleccione las líneas de producto deseadas en "
+"la página :guilabel:`Ajustes de inventario`. Después, haga clic en "
+":guilabel:`Solicitar un recuento` y llene la siguiente información:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:84
 msgid ":guilabel:`Inventory Date`: the planned date of the count."
 msgstr ""
+":guilabel:`Fecha de inventario`: la fecha en la que se programó el recuento."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:85
 msgid ":guilabel:`User`: the user responsible for the count."
-msgstr ""
+msgstr ":guilabel:`Usuario`: la persona encargada de realizar el recuento."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:86
 msgid ""
 ":guilabel:`Accounting Date`: the date at which the inventory adjustment will"
 " be accounted."
 msgstr ""
+":guilabel:`Fecha contable`: la fecha en la que se registrará el ajuste de "
+"inventario."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:87
 msgid ""
@@ -1003,10 +1065,16 @@ msgid ""
 "Hand Quantity` of each product line with the current value recorded in the "
 "database, select :guilabel:`Set Current Value`."
 msgstr ""
+":guilabel:`Número`: para dejar la :guilabel:`cantidad a la mano` de cada "
+"producto en blanco, seleccione :guilabel:`Dejar en blanco`. Para llenar "
+"desde antes la :guilabel:`cantidad a la mano` de cada línea de producto con "
+"el valor que se registró en la base de datos, seleccione "
+":guilabel:`Configurar valor actual`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:91
 msgid "Finally, click :guilabel:`Confirm` to request the count."
 msgstr ""
+"Finalmente, haga clic en :guilabel:`Confirmar` para solicitar el conteo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:93
 msgid ""
@@ -1016,16 +1084,23 @@ msgid ""
 "--> Settings --> Operations` and change the date in the :guilabel:`Annual "
 "Inventory Day and Month` setting."
 msgstr ""
+"Por defecto, después de que se aplica un ajuste de inventario, la fecha "
+"programada para el siguiente conteo es el 31 de diciembre del año en curso. "
+"Para modificar esta fecha predeterminada, vaya a :menuselection:`Inventario "
+"--> Configuración --> Ajustes --> Operaciones` y cambie la fecha en el "
+"ajuste :guilabel:`Día y mes del inventario anual`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst-1
 msgid ""
 "Adjust the next inventory count date with the Annual Inventory Day and Month"
 " setting."
 msgstr ""
+"Con el ajuste Día y mes del inventario anual podrá ajustar la fecha del "
+"siguiente conteo de inventario."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/cycle_counts.rst:3
 msgid "Cycle counts"
-msgstr ""
+msgstr "Conteo por ciclos"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/cycle_counts.rst:5
 msgid ""
@@ -1034,12 +1109,19 @@ msgid ""
 "for the next count is set on the 31st of December. However, for some "
 "businesses it's crucial to have an accurate inventory count at all times."
 msgstr ""
+"En la mayoría de las empresas, el inventario se cuenta una vez al año. Por "
+"eso la siguiente fecha de conteo que se configura de manera automática "
+"después de realizar un ajuste de inventario es el 31 de diciembre. Sin "
+"embargo, para algunas empresas es muy importante tener un conteo de "
+"inventario correcto en todo momento."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/cycle_counts.rst:10
 msgid ""
 "The goal of cycle counts is to keep critical stock levels accurate by "
 "counting more often at key locations."
 msgstr ""
+"La meta de hacer conteo por ciclos es asegurarnos de que los niveles de "
+"inventario importantes se mantienen correctos en ubicaciones importantes-"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/cycle_counts.rst:16
 msgid ""
@@ -1049,20 +1131,29 @@ msgid ""
 "activate the :guilabel:`Storage Locations` setting. Next, click "
 ":guilabel:`Save` to apply the setting."
 msgstr ""
+"En Odoo, los conteos por ciclo dependen de las ubicaciones; usted define la "
+"frecuencia de las cuentas según la ubicación del almacén. Para activar las "
+"ubicaciones de almacenes vaya a :menuselection:`Inventario --> Configuración"
+" --> Ajustes --> Almacén` y active la opción :guilabel:`Opciones de "
+"almacenamiento`. Después, haga clic en  :guilabel:`Guardar` para aplicar los"
+" ajustes."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/cycle_counts.rst-1
 msgid "Enable Storage Locations in Odoo settings."
-msgstr ""
+msgstr "Activar las ubicaciones de inventario en los ajustes de Odoo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/cycle_counts.rst:26
 msgid "Change the inventory frequency"
-msgstr ""
+msgstr "Cambie la frecuencia de inventario"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/cycle_counts.rst:28
 msgid ""
 "To change a location's inventory frequency, first, go to the locations by "
 "clicking :menuselection:`Inventory --> Configuration --> Locations`."
 msgstr ""
+"Para cambiar la frecuencia de inventario de una ubicación, primero vaya a "
+"las ubicaciones :menuselection:`Inventario --> Configuración --> "
+"Ubicaciones`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/cycle_counts.rst:31
 msgid ""
@@ -1075,10 +1166,19 @@ msgid ""
 "location, the next scheduled count date will be automatically set based on "
 "the number of days in the :guilabel:`Inventory Frequency (Days)` setting."
 msgstr ""
+"Después, haga clic en una ubicación para abrir los ajustes de la ubicación y"
+" haga clic en :guilabel:`Editar`. En el campo de :guilabel:`Frecuencia de "
+"inventario (días)` configure el número de días. Por ejemplo, una ubicación "
+"en la que se necesita contar el inventario cada 30 días, configurará el "
+"valor de :guilabel:`Frecuencia de inventario (días)` a `30`. Una vez que "
+"ingresó el valor, haga clic en :guilabel:`Guardar` para aplicar el ajuste en"
+" la ubicación. Ya que se aplicó el ajuste de inventario en esta ubicación, "
+"la siguiente fecha de conteo se programará según el número de días que se "
+"ingresó en el ajuste :guilabel:`Frecuencia de inventario (días)`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/cycle_counts.rst-1
 msgid "Edit a location to change the inventory frequency."
-msgstr ""
+msgstr "Edite una ubicación para cambiar la frecuencia de inventario."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers.rst:5
 msgid "Lots and Serial Numbers"
@@ -1186,7 +1286,7 @@ msgstr ":doc:`lots`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:3
 msgid "Expiration dates"
-msgstr ""
+msgstr "Días de caducidad"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:5
 msgid ""
@@ -1195,6 +1295,10 @@ msgid ""
 "reduces product loss due to unexpected expiry, and helps to avoid sending "
 "expired products to customers."
 msgstr ""
+"En Odoo, puede usar los *días de caducidad* para gestionar y dar seguimiento"
+" a los ciclos de vida de productos perecederos. SI usa la fecha de caducidad"
+" reducirá la pérdida de productos por una caducidad inesperada, además de "
+"que ayuda a que evitemos enviar productos que ya caducaron a los clientes."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:9
 msgid ""
@@ -1204,6 +1308,11 @@ msgid ""
 "companies (such as food manufacturers) that consistently, or exclusively, "
 "buy and sell perishable products."
 msgstr ""
+"En Odoo solo le puede agregar información de caducidad a productos que usen "
+"*lotes* o *números de serie*. Una vez que asignó un lote o número de serie, "
+"podrá configurar una fecha de caducidad. Esto es muy util para empresas que "
+"siempre, o casi siempre, venden productos perecederos, como empresas de "
+"preparación de alimentos."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:15
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:17
@@ -1221,7 +1330,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:19
 msgid "Enable expiration dates"
-msgstr ""
+msgstr "Activar las fechas de caducidad"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:21
 msgid ""
@@ -1230,6 +1339,10 @@ msgid ""
 ":guilabel:`Traceability` section. Then, click the checkbox to enable the "
 ":guilabel:`Lots & Serial Numbers` feature."
 msgstr ""
+"Para activar el uso de *fechas de caducidad*, vaya a :menuselection:`la "
+"aplicación Inventario --> Configuración --> Ajustes`, y navegue a la sección"
+" :guilabel:`Trazabilidad`. Después haga clic en la caja para activar la "
+"función de :guilabel:`Lotes y números de serie`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:25
 msgid ""
@@ -1237,10 +1350,15 @@ msgid ""
 ":guilabel:`Expiration Dates`. Click that checkbox to enable the feature, and"
 " be sure to :guilabel:`Save` changes."
 msgstr ""
+"Una vez que active la función, aparecerá una nueva opción para activar las "
+":guilabel:`fechas de caducidad`. Marque la casilla para activar la función y"
+" asegúrese de :guilabel:`Guardar` los cambios."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst-1
 msgid "Enabled lots and serial numbers and expiration dates settings."
 msgstr ""
+"Ajustes de los lotes y números de serie activados y fechas de caducidad "
+"activados."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:33
 msgid ""
@@ -1251,10 +1369,17 @@ msgid ""
 "features helps with end-to-end traceability, making it easier to manage "
 "product recalls, identify \"bad\" batches of products, and more."
 msgstr ""
+"Ya que haya activado la función :guilabel:`Lotes y números de serie` "
+"aparecerán más funciones para :guilabel:`Mostrar números de lote y de serie "
+"en recibos de entrega`, :guilabel:`Mostrar números de lote y de serie en las"
+" facturas` y para :guilabel:`Mostrar fecha de caducidad en las notas de "
+"remisión`. Activar estas funcionles le ayudará a tener trazabilidad "
+"completa, lo que facilitará la gestión de productos que se hayan retirado, a"
+" identificar \"malos\" lotes de productos y mucho más."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:40
 msgid "Configure expiration dates on products"
-msgstr ""
+msgstr "Configure fechas de caducidad en productos"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:42
 msgid ""
@@ -1262,6 +1387,10 @@ msgid ""
 "features have been enabled in the settings of the *Inventory* app, "
 "expiration information can be configured on individual products."
 msgstr ""
+"Una vez que haya activado las funciones de :guilabel:`Fechas de caducidad` y"
+" :guilabel:`Lotes y números de serie` en los ajustes de la aplicación "
+"Inventario, podrá configurar a información de caducidad en productos "
+"individuales."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:46
 msgid ""
@@ -1270,6 +1399,11 @@ msgid ""
 "for that particular item. Once on the product form, click :guilabel:`Edit` "
 "in the upper-left corner to make changes."
 msgstr ""
+"Para hacerlo, vaya a :menuselection:`Inventario --> Productos --> Productos`"
+" y seleccione un producto para editarlo. Al seleccionar un producto se "
+"mostrará el formulario de ese artículo en específico. Ya que esté en el "
+"formulario del producto, haga clic en :guilabel:`Editar` en la esquina "
+"superior izquierda para realizar cambios."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:51
 msgid ""
@@ -1277,6 +1411,10 @@ msgid ""
 "information, products *must* have their :guilabel:`Product Type` set as "
 ":guilabel:`Storable Product` under the :guilabel:`General Information` tab."
 msgstr ""
+"Para que los productos se puedan rastrear con lotes o números de serie, o "
+"para configurar la información de caducidad, el :guilabel:`Tipo de producto`"
+" que aparezca en la pestaña de :guilabel:`Información general` *debe* ser "
+":guilabel:`Producto almacenable`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:55
 msgid ""
@@ -1284,6 +1422,9 @@ msgid ""
 ":guilabel:`Traceability` section. From here, make sure that either "
 ":guilabel:`By Unique Serial Number` or :guilabel:`By Lots` is checked."
 msgstr ""
+"Después, haga clic en la pestaña :guilabel:`Inventario` y baje a la sección "
+"titulada :guilabel:`Trazabilidad`. Desde ahí asegúrese de que la casilla de "
+":guilabel:`Por número de serie único` o :guilabel:`Por lotes` esté marcada."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:59
 msgid ""
@@ -1291,6 +1432,9 @@ msgid ""
 "also be clicked. When both are enabled, a new :guilabel:`Dates` field "
 "appears to the right."
 msgstr ""
+"Una vez que esté, aparecerá una nueva casilla de :guilabel:`Fecha de "
+"caducidad` que también debe estar marcada. Cuando ambas casillas estén "
+"marcadas, aparecerá un nuevo campo llamado :guilabel:`Fechas` a la derecha."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:63
 msgid ""
@@ -1298,6 +1442,9 @@ msgid ""
 "serial numbers, an inventory adjustment might need to be performed in order "
 "to assign lot numbers to the existing stock."
 msgstr ""
+"Si un producto tiene existencias a la mano antes de activar el seguimiento "
+"por lote o número de serie, es posible que necesite realizar un ajuste de "
+"inventario para poder asignar lotes a las existencias que ya tiene."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:68
 msgid ""
@@ -1305,16 +1452,21 @@ msgid ""
 " recommended to track using lots, so multiple products can be traced back to"
 " the same lot, if any issues arise."
 msgstr ""
+"Para procesar grandes cantidades de productos que se recibieron o se "
+"entregaron, le recomendamos rastrear los productos con lotes, para que "
+"varios productos se puedan rastrear con el mismo lote si ocurren problemas."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst-1
 msgid "Expiration dates configuration on the product form."
-msgstr ""
+msgstr "Configuración de fechas de caducidad en el formulario del producto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:75
 msgid ""
 "Under the :guilabel:`Dates` field, there are four categories of expiration "
 "information to configure for the product:"
 msgstr ""
+"En el campo de :guilabel:`fechas` hay cuatro categorías de información de "
+"caducidad que debe configurar para el producto:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:78
 msgid ""
@@ -1322,6 +1474,9 @@ msgid ""
 "(either from a vendor or in stock after production) in which goods may "
 "become dangerous and should not be used or consumed."
 msgstr ""
+":guilabel:`Fecha de caducidad`: el número de días después de haber recibido "
+"los productos (ya sea de un proveedor o después de producirlos) en los que "
+"el producto ya no debería usarse o consumirse por seguridad."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:80
 msgid ""
@@ -1329,12 +1484,17 @@ msgid ""
 "in which the goods start deteriorating, **without** necessarily being "
 "dangerous yet."
 msgstr ""
+":guilabel:`Consumir preferentemente antes de`: el número de días antes de la"
+" fecha de caducidad en la que los productos se empezarán a deteriorar "
+"**sin** que sean peligrosos todavía."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:82
 msgid ""
 ":guilabel:`Removal Time`: the number of days before the expiration date in "
 "which the goods should be removed from stock."
 msgstr ""
+":guilabel:`Tiempo de remoción`: el número de días antes de la fecha de "
+"caducidad en los que el producto se debe quitar de existencias."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:84
 msgid ""
@@ -1342,6 +1502,9 @@ msgid ""
 "which an alert should be raised on goods in a particular lot or containing a"
 " particular serial number."
 msgstr ""
+":guilabel:`Periodo de alerta`: el número de días antes de la fecha de "
+"caducidad en los que se debería enviar una alerta sobre los bienes en un "
+"lote que tengan un número de serie en especial. "
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:88
 msgid ""
@@ -1349,12 +1512,17 @@ msgid ""
 "date for goods entered into stock, whether purchased from a vendor or "
 "manufactured in-house."
 msgstr ""
+"Con los valores que ingrese en estos campos se calculará la fecha de "
+"caducidad para bienes que ingrese a sus existencias, no importa si los "
+"compró a un proveedor o si usted los fabricó."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:91
 msgid ""
 "Once all the expiration information has been configured, click "
 ":guilabel:`Save` to save all changes."
 msgstr ""
+"Ya que configuró toda la información de fecha de caducidad, haga clic en "
+":guilabel:`Guardar` para guardar todos los cambios."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:94
 msgid ""
@@ -1363,10 +1531,16 @@ msgid ""
 "receipts and deliveries in and out of the warehouse. Even when assigned, "
 "they can still be overwritten and changed manually if needed, as well."
 msgstr ""
+"Si no ingresó ninguna información de caducidad al campo :guilabel:`Fechas`, "
+"puede asignar fechas (o lotes) de manera manual al recibir y entregar "
+"productos dentro y fuera del almacén. Incluso cuando ya están asignadas las "
+"fechas, las puede cambiar usted mismo si lo necesita."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:99
 msgid "Set expiration dates on receipts with lots & serial numbers"
 msgstr ""
+"Configure fechas de caducidad al momento de recibir el producto con lotes y "
+"números de serie."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:101
 msgid ""
@@ -1375,6 +1549,10 @@ msgid ""
 ":menuselection:`Purchase` app and click :guilabel:`Create` to create a new "
 "request for quotation (RFQ)."
 msgstr ""
+"Puede generar fechas de caducidad para bienes **entrantes** directamente "
+"desde la orden de compra. Para crear una orden de compra, vaya a "
+":menuselection:`Compra` y haga clic en :guilabel:`Crear` para crear una "
+"nueva solicitud de cotización."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:105
 msgid ""
@@ -1382,6 +1560,9 @@ msgid ""
 "products to the :guilabel:`Product` lines by clicking :guilabel:`Add a "
 "product`."
 msgstr ""
+"Después, agregue un :guilabel:`Proveedor` y después haga clic en "
+":guilabel:`Añadir un producto` para agregar :guilabel:`Productos` a las "
+"líneas de productos."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:108
 msgid ""
@@ -1389,12 +1570,18 @@ msgid ""
 ":guilabel:`Quantity` column, and click :guilabel:`Confirm Order`. This "
 "converts the :abbr:`RFQ (request for quotation)` into a purchase order."
 msgstr ""
+"Para elegir la cantidad que desea ordenar cambie el número de la columna "
+":guilabel:`Cantidad`. Haga clic en :guilabel:`Confirmar orden`. De esta "
+"manera convertirá la :abbr:`Solicitud de cotización (RFQ en inglés)` en una "
+"orden de compra."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:112
 msgid ""
 "Click the :guilabel:`Receipt` smart button at the top of the purchase order "
 "to be taken to the warehouse receipt form."
 msgstr ""
+"Haga clic en el botón inteligente :guilabel:`Recepción` en la parte superior"
+" de la orden de compra para llegar al formulario de recepción del almacén."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:116
 msgid ""
@@ -1404,10 +1591,18 @@ msgid ""
 " The :abbr:`RFQ (request for quotation)` cannot be validated without an "
 "assigned lot or serial number."
 msgstr ""
+"Si hace clic en :guilabel:`Validar` antes de asignar un número de serie a "
+"las cantidades del producto ordenado, aparecerá una ventana emergente de "
+":guilabel:`Error del usuario`, que le pedirá que ingrese un número de serie "
+"o lote para los productos ordenados. No se puede validar la :abbr:`Solicitud"
+" de cotización (RFQ en inglés)` si no ha asignado un lote o un número de "
+"serie."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:0
 msgid "User error popup when validating an order with no lot number."
 msgstr ""
+"Ventana emergente de error del usuario cuando se valida una orden sin número"
+" de lote."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:125
 msgid ""
@@ -1415,24 +1610,35 @@ msgid ""
 "located on the far-right of the product line. When clicked, a "
 ":guilabel:`Detailed Operations` pop-up will appear."
 msgstr ""
+"Desde aquí puede hacer clic en el icono de menú de :guilabel:`Opciones "
+"adicionales` que se encuentra hasta la derecha de la línea del producto. Al "
+"hacer clic en este icono, aparecerá una ventana emergente de "
+":guilabel:`Operaciones detalladas`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:128
 msgid ""
 "In this pop-up, click :guilabel:`Add a line`, and assign a lot or serial "
 "number under the :guilabel:`Lot/Serial Number Name` field."
 msgstr ""
+"En esta ventana emergente haga clic en :guilabel:`Agregar una línea` y "
+"asigne un lote o número de serie en el campo :guilabel:`Lote/número de "
+"serie`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:131
 msgid ""
 "An expiration date automatically populates, based on the configuration on "
 "the product form (if previously configured)."
 msgstr ""
+"De manera automática se llena una fecha de caducidad según la configuración "
+"en el formulario del producto (si se configuró antes)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:135
 msgid ""
 "If the :guilabel:`Dates` field on the product form has not been configured, "
 "this date can be manually entered."
 msgstr ""
+"Si no ha configurado el campo :guilabel:`Fechas` en el formulario del "
+"producto, puede ingresar esta fecha de manera manual."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:138
 msgid ""
@@ -1440,11 +1646,16 @@ msgid ""
 "quantities, and click :guilabel:`Confirm` to close the pop-up. Finally, "
 "click :guilabel:`Validate`."
 msgstr ""
+"Después de que se estableció la fecha de caducidad, marque :guilabel:`Hecho`"
+" en las cantidades y haga clic en :guilabel:`Confirmar` para cerrar las "
+"ventanas emergentes. Después, haga clic en :guilabel:`Validar`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst-1
 msgid ""
 "Detailed operations popup showing expiration dates for ordered products."
 msgstr ""
+"Ventana emergente de operaciones detalladas en las que se muestran fechas de"
+" caducidad para productos ordenados"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:145
 msgid ""
@@ -1454,10 +1665,15 @@ msgid ""
 "document; the :guilabel:`Product` being traced; the :guilabel:`Lot/Serial "
 "#`; and more."
 msgstr ""
+"Cuando valide que recibió un producto, aparecerá un botón de "
+":guilabel:`Trazabilidad`. Si hace clic en este botón podrá ver un "
+":guilabel:`Reporte de trazabilidad` actualizado en el que se incluye un "
+"documento de :guilabel:`referencia`, el :guilabel:`producto` que está "
+"rastreando, el :guilabel:`Lote o número de serie` y más."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:151
 msgid "Set expiration dates on manufactured products"
-msgstr ""
+msgstr "Configurar fechas de caducidad en productos fabricados"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:153
 msgid ""
@@ -1465,6 +1681,9 @@ msgid ""
 "To assign expiration dates to manufactured products, a manufacturing order "
 "(MO) needs to be completed."
 msgstr ""
+"También puede generar fechas de caducidad para productos que usted fabrique."
+" Para asignar fechas de caducidad a estos productos, debe completar una "
+"orden de fabricación."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:156
 msgid ""
@@ -1474,10 +1693,15 @@ msgid ""
 ":guilabel:`Product` field drop-down menu, then select the "
 ":guilabel:`Quantity` to produce."
 msgstr ""
+"Para crear una :guilabel:`Orden de fabricación` vaya a "
+":menuselection:`Fabricación --> Operaciones --> Órdenes de fabricación` y "
+"haga clic en :guilabel:`Crear`. Abra el menú extendible del campo "
+":guilabel:`Producto` y elija el producto que quiere crear, después elija la "
+"guilabel:`Cantidad` que quiere producir."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst-1
 msgid "Manufacturing order for product with expiration date."
-msgstr ""
+msgstr "Orden de fabricación para un producto que tiene fecha de caducidad."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:165
 msgid ""
@@ -1486,10 +1710,15 @@ msgid ""
 ":guilabel:`Bill of Material` for the :guilabel:`Product`, or manually adding"
 " materials to consume by clicking :guilabel:`Add a line`."
 msgstr ""
+"Para fabricar un producto, debe haber materiales por consumir en las líneas "
+"de la columna :guilabel:`Producto`. Para hacer esto debe crear una "
+":guilabel:`Lista de materiales` para el  :guilabel:`Producto` o debe agregar"
+" materiales por consumir de manera manual, solo tiene que hacer clic en "
+":guilabel:`Agregar una línea`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:170
 msgid "Once ready, click :guilabel:`Confirm`."
-msgstr ""
+msgstr "Ya que esté listo, haga clic en :guilabel:`Confirmar`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:172
 msgid ""
@@ -1497,12 +1726,17 @@ msgid ""
 "from the drop-down menu, or click the green :guilabel:`+` sign to "
 "automatically assign a new lot number."
 msgstr ""
+"Para asignar un número de lote, seleccione un número de lote existente desde"
+" el menú desplegable junto a :guilabel:`Lote/Número de serie` o haga clic en"
+" el :guilabel:`+` verde."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:175
 msgid ""
 "Then, select a number of units for the :guilabel:`Quantity` field, and click"
 " :guilabel:`Mark as Done`."
 msgstr ""
+"Después, seleccione un número de unidades para el campo :guilabel:`Cantidad`"
+" y después haga clic en :guilabel:`Marcar como hecho`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:178
 msgid ""
@@ -1510,6 +1744,9 @@ msgid ""
 ":guilabel:`Lot/Serial Number` field. A pop-up appears, revealing a detail "
 "form for that specific number."
 msgstr ""
+"Haga clic en el icono :guilabel:`Enlace externo` en el campo de "
+":guilabel:`Lote/Número de serie` asignado. Aparecerá una ventana emergente "
+"donde se mostrará todos los detalles de ese número específico."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:181
 msgid ""
@@ -1519,14 +1756,21 @@ msgid ""
 "or by going to :menuselection:`Inventory app --> Products --> Lots/Serial "
 "Numbers`."
 msgstr ""
+"En esa ventana emergente, vaya a la pestaña :guilabel:`Fechas` y podrá ver "
+"toda la información sobre fecha de caducidad que había configurado antes en "
+"el producto. Esta información también está disponible en el formulario de "
+"detalles de ese producto en específico, para verlo vaya a "
+":menuselection:`Inventario --> Productos --> Lote/Número de serie`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst-1
 msgid "Dates tab with expiration information for specific lot number."
 msgstr ""
+"Pestaña de fechas con información de caducidad para un número de lote "
+"específico."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:191
 msgid "Sell products with expiration dates"
-msgstr ""
+msgstr "Vender productos con fechas de caducidad"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:193
 msgid ""
@@ -1534,12 +1778,17 @@ msgid ""
 "other type of product. The first step in selling perishable products is to "
 "create a sales order."
 msgstr ""
+"Los productos perecederos que tienen fecha de caducidad se venden de la "
+"misma manera que cualquier otro tipo de producto. El primer paso es vender "
+"el producto perecedero para crear una orden de venta."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:196
 msgid ""
 "To do that, go to :menuselection:`Sales app --> Create` to create a new "
 "quotation, and fill out the information on the sales order form."
 msgstr ""
+"Para hacer esto, vaya a :menuselection:`Ventas --> Crear`, cree una nueva "
+"cotización y llene la información en la orden de venta."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:199
 msgid ""
@@ -1547,6 +1796,9 @@ msgid ""
 "desired products to the :guilabel:`Product` lines, and set a "
 ":guilabel:`Quantity` for the products."
 msgstr ""
+"Agregue un :guilabel:`Cliente`, haga clic en :guilabel:`Agregar un producto`"
+" para agregar los productos deseados a las líneas de :guilabel:`Producto` y "
+"configure una :guilabel:`Cantidad` para los productos."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:202
 msgid ""
@@ -1555,12 +1807,20 @@ msgid ""
 "date, and click the :guilabel:`green checkmark` icon to confirm the date. "
 "Finally, click :guilabel:`Confirm` to confirm the sales order."
 msgstr ""
+"Después haga clic en la pestaña :guilabel:`Other Info` tab. En la sección "
+":guilabel:`Entrega` cambie la :guilabel:`Fecha de entrega` a una fecha "
+"después de la fecha esperada y haga clic en :guilabel:`la palomita verde` "
+"para confirmar la fecha. Finalmente, haga clic en :guilabel:`Confirmar` para"
+" confirmar la orden de venta."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:206
 msgid ""
 "Next, click the :guilabel:`Delivery` smart button at the top of the sales "
 "order to see the warehouse receipt form."
 msgstr ""
+"Después, haga clic en el botón inteligente de :guilabel:`Entrega` que se "
+"encuentra en la parte superior de la orden de ventas para poder ver el "
+"formulario de entrega del almacén."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:209
 msgid ""
@@ -1569,12 +1829,18 @@ msgid ""
 "process all :guilabel:`Done` quantities, and deliver the products to the "
 "customer."
 msgstr ""
+"En el formulario de recepción del almacén, haga clic en :guilabel:`Validar`,"
+" y después en :guilabel:`Aplicar` en la ventana emergente que saldrá. Así "
+"podrá procesar todas las cantidades :guilabel:`Hechas` de manera automática "
+"y podrá entregarle los productos al cliente."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:213
 msgid ""
 "If the products are delivered before the :guilabel:`Alert Date` set on the "
 "product form, then no alerts will be created."
 msgstr ""
+"Si los productos se entregan antes de que configure la :guilabel:`Fecha de "
+"alerta` en el formulario del producto, no se crearán advertencias."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:217
 msgid ""
@@ -1586,6 +1852,14 @@ msgid ""
 "expiration date. Removal strategies can also be set on :guilabel:`Product "
 "Categories`."
 msgstr ""
+"Para vender productos perecederos con fechas de caducidad, la "
+":guilabel:`estrategia de remoción` para la :guilabel:`ubicación` en la que "
+"se almacenan los productos debe configurarse como :abbr:`FEFO (primero en "
+"caducar, primero en salir, por sus siglas en inglés)`. Si en un lote no hay "
+"suficientes existencias de un producto perecedero, Odoo tomará de manera "
+"automática la cantidad que todavía se necesita directamente del siguiente "
+"lote que tenga la fecha de caducidad más cercana. Puede gestionar las "
+"estrategias de remoción en las :guilabel:`Categorías de productos`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:224
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:209
@@ -1596,13 +1870,15 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:227
 msgid "View expiration dates for lots & serial numbers"
-msgstr ""
+msgstr "Ver las fechas de caducidad para lotes y números de sere. "
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:229
 msgid ""
 "To view (and/or group) all products with expiration dates by lot number, go "
 "to :menuselection:`Inventory app --> Products --> Lots/Serial Numbers`."
 msgstr ""
+"Para ver (o agrupar) todos los productos con fecha de caducidad por lote, "
+"vaya a :menuselection:`Inventario --> Productos --> Lotes/Números de serie`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:232
 msgid ""
@@ -1611,26 +1887,36 @@ msgid ""
 " and select the :guilabel:`Expiration Date` parameter from the drop-down "
 "menu. Finally, click :guilabel:`Apply` to apply the filter."
 msgstr ""
+"Quite todos los filtros de búsqueda automáticos de la barra "
+":guilabel:`Buscar...`. Después, haga clic en :guilabel:`Agrupar por`, elija "
+":guilabel:`Agregar grupo personalizado` y seleccione el parámetro "
+":guilabel:`Fecha de caducidad` desde el menú desplegable. Para aplicar el "
+"filtro haga clic en :guilabel:`Aplicar`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:236
 msgid ""
 "Doing so breaks down all perishable products, their expiration dates, and "
 "the assigned lot number."
 msgstr ""
+"Si sigue estos pasos obtendrá un desglose de todos los productos "
+"perecederos, como sus fechas de caducidad y el número de lote que se les "
+"asignó."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst-1
 msgid "Group by expiration dates on lots and serial numbers page."
-msgstr ""
+msgstr "Agrupar por fechas de caducidad en lotes y números de serie."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:243
 msgid "Expiration alerts"
-msgstr ""
+msgstr "Alertas de caducidad"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:245
 msgid ""
 "To see expiration alerts, go to :menuselection:`Inventory app --> Products "
 "--> Lots/Serial Numbers`."
 msgstr ""
+"Para ver alertas de caducidad vaya a :menuselection:`Inventario --> "
+"Productos --> Lotes/Números de serie`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:247
 msgid ""
@@ -1639,6 +1925,11 @@ msgid ""
 "form, click the :guilabel:`Dates` tab to see all expiration information "
 "related to the products."
 msgstr ""
+"Después, haga clic en el :guilabel:`Lote/Número de serie` que tenga "
+"productos perecederos para mostrar el formulario que contiene el número de "
+"serie. En el formulario de número de serie, haga clic en la pestaña "
+":guilabel:`Fechas` para ver toda la información de caducidad que se "
+"relaciona a los productos."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:251
 msgid ""
@@ -1646,6 +1937,10 @@ msgid ""
 "form, then change the :guilabel:`Expiration Date` to today's date (or "
 "earlier), and click :guilabel:`Save` to save changes."
 msgstr ""
+"Para editar el formulario haga clic en :guilabel:`Editar` en la esquina "
+"superior izquierda del formulario, después cambie la :guilabel:`Fecha de "
+"caducidad` a la fecha de hoy (o antes) y haga clic en :guilabel:`Guardar` "
+"para guardar los cambios."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:255
 msgid ""
@@ -1654,6 +1949,11 @@ msgid ""
 "either expired or expiring soon. From here, click back to the "
 ":guilabel:`Lots/Serial Numbers` page (via the breadcrumbs)."
 msgstr ""
+"Después de guarder, el formulario de número de lote mostrará una "
+":guilabel:`alerta de caducidad` en rojo en la parte superior del formulario "
+"para indicar que los productos de este lote ya caducaron o caducarán pronto."
+" Desde aquí, regrese a la página de :guilabel:`Lote/Número de serie` (a "
+"través de las migajas de pan)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:259
 msgid ""
@@ -1661,19 +1961,25 @@ msgid ""
 "are expired (or will expire soon), remove all of the search filters from the"
 " :guilabel:`Search...` bar on the :guilabel:`Lots/Serial Numbers` dashboard."
 msgstr ""
+"Para ver la alerta de caducidad nueva, o cualquier alerta de caducidad para "
+"productos que ya caducaron (o caducarán pronto), quite todos los filtros de "
+"búsqueda de la barra :guilabel:`Buscar...` en el tablero de "
+":guilabel:`Lote/Número de serie`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:263
 msgid ""
 "Then, click :guilabel:`Filters`, and choose :guilabel:`Expiration Alerts`."
 msgstr ""
+"Después, haga clic en :guilabel:`Filtros` y elija :guilabel:`alerta de "
+"caducidad`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst-1
 msgid "Expiration alert for product past the expiration date."
-msgstr ""
+msgstr "Alerta de caducidad para un producto que ya caducó."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:3
 msgid "Use lots to manage groups of products"
-msgstr ""
+msgstr "Use lotes para gestionar grupos y productos"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:5
 msgid ""
@@ -1682,6 +1988,10 @@ msgid ""
 "currently stored, or was shipped from a warehouse, but can also pertain to a"
 " batch of products manufactured in-house, as well."
 msgstr ""
+"Hay dos maneras de identificar y rastrear productos en Odoo, la primera son "
+"los *lotes*. Un lote indica un grupo específico de artículos que se recibió,"
+" se almacenó o se envió de un almacén. También puede indicar un grupo de "
+"productos que se fabricaron dentro de la empresa."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:9
 msgid ""
@@ -1691,6 +2001,11 @@ msgid ""
 "for end-to-end traceability of these products through each step in their "
 "lifecycles."
 msgstr ""
+"Los fabricantes asignan un número de lote a grupos de producto que tienen "
+"propiedades en común, por lo que es posible que muchos bienes compartan el "
+"mismo número de lote. Esto ayuda a identificar un número de productos dentro"
+" de un mismo grupo y permite dar seguimiento a estos productos durante todo "
+"su ciclo de vida."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:14
 msgid ""
@@ -1699,11 +2014,15 @@ msgid ""
 "back to a group. This is especially useful when managing product recalls or "
 "expiration dates."
 msgstr ""
+"Los lotes son muy útiles para productos que fabrica o recibe en grandes "
+"cantidades (como ropa y comida), además de que ayuda a saber de qué grupo "
+"salió un producto. Esto le ayudará cuando tenga que retirar un producto del "
+"mercado o al gestionar fechas de caducidad."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:22
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:20
 msgid "Enable lots & serial numbers"
-msgstr ""
+msgstr "Activar lotes y números de serie"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:24
 msgid ""
@@ -1713,14 +2032,21 @@ msgid ""
 "the box next to :guilabel:`Lots & Serial Numbers`. Then, click the "
 ":guilabel:`Save` button to save changes."
 msgstr ""
+"Para rastrear productos por medio de lotes, debe activar la función de "
+"*Números de lote y de serie*. Vaya a :menuselection:`Inventario --> "
+"Configuración --> Ajustes`, baje a la sección :guilabel:`Trazabilidad` y "
+"haga clic en la casilla junto a :guilabel:`Número de serie y lote`. Después,"
+" haga clic en :guilabel:`Guardar` para guardar los cambios."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst-1
 msgid "Enabled lots and serial numbers feature in inventory settings."
 msgstr ""
+"Active las funciones de lote y número de serie desde los ajustes del "
+"inventario."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:34
 msgid "Track products by lots"
-msgstr ""
+msgstr "Rastrear productos por lotes"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:36
 msgid ""
@@ -1729,6 +2055,10 @@ msgid ""
 "this, go to the :menuselection:`Inventory app --> Products --> Products`, "
 "and choose a product."
 msgstr ""
+"Ya que activó los :guilabel:`Lotes y números de serie` podrá configurar "
+"productos individuales para poder rastrearlos con lotes. Para usar esta "
+"función vaya a :menuselection:`Inventario --> Productos --> Productos` y "
+"elija un producto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:40
 msgid ""
@@ -1738,6 +2068,12 @@ msgid ""
 ":guilabel:`Save` to save changes. Existing or new lot numbers can now be "
 "assigned to newly-received or manufactured batches of this product."
 msgstr ""
+"Ya que esté en el formulario del producto, haga clic en :guilabel:`Editar` "
+"para hacer cambios en el formulario y haga clic en la pestaña "
+":guilabel:`Inventario`. En la sección de :guilabel:`Trazabilidad`, haga clic"
+" en :guilabel:`Por lotes`, después haga clic en :guilabel:`Guardar` para "
+"guardar los cambios. Puede asignar los número de lote existentes o nuevos a "
+"grupos de productos que acabe de recibir o fabricar."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:46
 msgid ""
@@ -1745,14 +2081,18 @@ msgid ""
 "serial numbers, an inventory adjustment might need to be performed to assign"
 " lot numbers to the existing stock."
 msgstr ""
+"Si un producto tiene existencias a la mano antes de activar el seguimiento "
+"por lote o número de serie, es posible que necesite realizar un ajuste de "
+"inventario para poder asignar lotes a las existencias que ya tiene."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst-1
 msgid "Enabled tracking by lots feature on product form."
 msgstr ""
+"Función de seguimiento por lotes activada en el formulario del producto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:54
 msgid "Create new lots for products already in stock"
-msgstr ""
+msgstr "Cree nuevos lotes para productos que ya estén en existencias."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:56
 msgid ""
@@ -1762,6 +2102,11 @@ msgid ""
 "separate page where a new :guilabel:`Lot/Serial Number` is generated "
 "automatically."
 msgstr ""
+"Puede crear lotes nuevos para productos que ya están en existencia y que no "
+"tengan número de lote asignado. Para hacerlo, vaya a "
+":menuselection:`Inventario --> Productos --> Lotes/Números de serie` y haga "
+"clic en :guilabel:`Crear`. Al hacer esto obtendrá una nueva página donde se "
+"generará un nuevo :guilabel:`Lote/Número de serie` de manera automática."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:62
 msgid ""
@@ -1770,6 +2115,11 @@ msgid ""
 "number, by clicking the line under the :guilabel:`Lot/Serial Number` field, "
 "and changing the generated number."
 msgstr ""
+"Odoo genera de manera automática un :guilabel:`Lote/Número de serie` con el "
+"que puede seguir los productos más recientes, pero usted puede editar este "
+"número a cualquier otro. Solo tiene que hacer clic en la línea abajo del "
+"campo :guilabel:`Lote/Número de serie` para cambiar el número que se había "
+"generado."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:66
 msgid ""
@@ -1777,6 +2127,10 @@ msgid ""
 "field next to :guilabel:`Product` to reveal a drop-down menu. From this "
 "menu, select the product to which this new number will be assigned."
 msgstr ""
+"Una vez que se genere el nuevo :guilabel:`Lote/Número de serie` haga clic en"
+" el campo vacío junto a :guilabel:`Producto` para mostrar el menú "
+"desplegable. En este menú, seleccione el producto al que se le asignará este"
+" número."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:70
 msgid ""
@@ -1786,12 +2140,18 @@ msgid ""
 "specific website in the :guilabel:`Website` field (if working in a multi-"
 "website environment)."
 msgstr ""
+"Con este formulario también puede ajustar la :guilabel:`Cantidad`, asignar "
+"un número de :guilabel:`Referencia interna` (para trazabilidad) y asignar la"
+" configuración de este lote o número de serie específico a un sitio web en "
+"el campo :guilabel:`Sitio web` (si trabaja con un entorno multiempresa)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:75
 msgid ""
 "A detailed description of this specific lot or serial number can also be "
 "added in the :guilabel:`Description` tab below."
 msgstr ""
+"También puede agregar una descripción detallada de este lote o número de "
+"serie en la pestaña :guilabel:`Descripción` de abajo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:78
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:79
@@ -1799,10 +2159,13 @@ msgid ""
 "When all desired configurations are complete, click the :guilabel:`Save` "
 "button to save all changes."
 msgstr ""
+"Cuando complete de realizar la configuración, haga clic en "
+":guilabel:`Guardar` para guardar los cambios que hizo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst-1
 msgid "New lot number creation form with assigned product."
 msgstr ""
+"Nuevo formulario de creación de número de lote con un producto asignado."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:84
 msgid ""
@@ -1811,6 +2174,11 @@ msgid ""
 " app, by going to :menuselection:`Products --> Products`, and selecting the "
 "product to which this newly-created lot number was just assigned."
 msgstr ""
+"Ya que creó, guardó y asignó el nuevo número de lote al producto deseado, "
+"regrese al formulario de producto en la aplicación "
+":menuselection:`Inventario`. Para hacerlo, vaya a :menuselection:`Productos "
+"--> Productos` y seleccione el producto al que le asignó el número de lote "
+"que acaba de crear."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:88
 msgid ""
@@ -1819,10 +2187,14 @@ msgid ""
 "product is received or manufactured, this new lot number can be selected and"
 " assigned to it."
 msgstr ""
+"En el formulario de detalles de producto haga clic en el botón inteligente "
+":guilabel:`Lote/Número de serie` para ver el nuevo número de lote. Cuando "
+"reciba o fabrique más de este producto, puede seleccionar este número de "
+"lote y asignarlo al nuevo producto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:93
 msgid "Manage lots for shipping and receiving"
-msgstr ""
+msgstr "Gestión de lotes para envío y recepción "
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:95
 msgid ""
@@ -1831,22 +2203,30 @@ msgid ""
 "form. For outgoing goods, lot numbers are assigned directly on the sales "
 "order form."
 msgstr ""
+"Puede asignar números de lote tanto a bienes **entrantes** como a bienes "
+"**salientes**. Para bienes entrantes, usted asigna el número de lote "
+"directamente en la orden de compra, mientras que tiene que asignar el número"
+" en la orden de venta para los bienes salientes."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:100
 msgid "Manage lots on receipts"
-msgstr ""
+msgstr "Gestión de lotes al recibir productos"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:102
 msgid ""
 "Assigning lot numbers to **incoming** goods can be done directly from the "
 "purchase order (PO)."
 msgstr ""
+"Puede asignar lotes a los bienes **entrantes** directamente desde la orden "
+"de compra."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:104
 msgid ""
 "To create a :abbr:`PO (purchase order)`, go to :menuselection:`Purchase app "
 "--> Create`. Doing so reveals a new, blank request for quotation (RFQ) form."
 msgstr ""
+"Para crear una :guilabel:`Orden de compra` vaya a :menuselection:`Compra -->"
+" Crear` y podrá ver una solicitud de cotización en blanco."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:107
 msgid ""
@@ -1855,12 +2235,18 @@ msgid ""
 "to the :guilabel:`Product` lines, by clicking :guilabel:`Add a product` "
 "(under the :guilabel:`Products` tab)."
 msgstr ""
+"En esta :guilabel:`Solicitud de cotización`, llene la información necesaria."
+" Agregue el :guilabel:`Proveedor` y haga clic en :guilabel:`Agregar un "
+"producto` (en la pestaña de :guilabel:`Productos` ) para agregar los "
+"productos deseados en las líneas de :guilabel:`Productos`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:111
 msgid ""
 "Choose the desired quantity of the product to order by changing the number "
 "in the :guilabel:`Quantity` column."
 msgstr ""
+"Si cambia el número en la columna :guilabel:`Cantidad` se establecerá la "
+"cantidad de productos que quiere ordenar."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:114
 msgid ""
