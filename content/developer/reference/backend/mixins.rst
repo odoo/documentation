@@ -88,6 +88,7 @@ to manage followers on your record:
         parent partners to the message in case of private discussion
     :param list(tuple(str,str)) attachments: list of attachment tuples in the form
         ``(name,content)``, where content is NOT base64 encoded
+    :param bool body_is_html: indicates whether `body` should be treated as HTML, even if `str`.
     :param `\**kwargs`: extra keyword arguments will be used as default column values for the
           new mail.message record
     :return: ID of newly created mail.message
