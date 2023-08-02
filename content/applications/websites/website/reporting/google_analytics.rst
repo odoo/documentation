@@ -16,6 +16,16 @@ To follow your website's traffic with Google Analytics:
 
     .. image:: google_analytics/google_analytics_tracking_id.png
         :align: center
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-217266891-1">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-217266891-1');
+</script>
 
 - Go to the *Configuration* menu of your Odoo's Website app.
   In the settings, turn on Google Analytics and paste the tracking ID.
