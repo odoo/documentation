@@ -84,5 +84,13 @@ static: $(HTML_BUILD_DIR)/_static/style.css
 	cp -r extensions/odoo_theme/static/* $(HTML_BUILD_DIR)/_static/
 	cp -r static/* $(HTML_BUILD_DIR)/_static/
 
+# Called by runbot for the ci/documentation_guideline check.
 test:
 	@python tests/main.py $(SOURCE_DIR)/administration $(SOURCE_DIR)/applications $(SOURCE_DIR)/contributing $(SOURCE_DIR)/developer $(SOURCE_DIR)/services redirects
+
+# Similar as `test`, but called only manually by content reviewers to trigger extra checks.
+review:
+	@read -p "Enter content path: " path; read -p "Enter max line length (default: 100): " line_length; \
+	if [ -z "$$path" ]; then echo "Error: Path cannot be empty"; exit 1; fi; \
+	if [ -z "$$line_length" ]; then line_length=100; fi; \
+	python tests/main.py -e line-too-long -e early-line-breaks --max-line-length=$$line_length $(SOURCE_DIR)/$$path
