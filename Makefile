@@ -93,5 +93,9 @@ review:
 	@read -p "Enter content path: " path; read -p "Enter max line length (default: 100): " line_length; \
 	if [ -z "$$path" ]; then echo "Error: Path cannot be empty"; exit 1; fi; \
 	if [ -z "$$line_length" ]; then line_length=100; fi; \
+<<<<<<< HEAD
 	export REVIEW=1; \
 	python tests/main.py --max-line-length=$$line_length $(SOURCE_DIR)/$$path
+=======
+	python tests/main.py -e line-too-long -e early-line-breaks --max-line-length=$$line_length $(SOURCE_DIR)/$$path
+>>>>>>> d36a6cb17 ([IMP] test/rst_style, Makefile: add optional review checkers)
