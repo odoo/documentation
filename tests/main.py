@@ -23,9 +23,7 @@ def run_additional_checks(argv=None):
 
 
 """
-The following checkers are selected.
-
-Base checkers:
+The following checkers are selected for `make test`.
 - backtick-before-role: Search for roles preceded by a backtick.
 - bad-dedent: Check for mis-alignment in indentation in code blocks.
 - carriage-return: Check for carriage returns (\r) in lines.
@@ -49,12 +47,13 @@ Base checkers:
 - role-without-backticks: Search roles without backticks.
 - trailing-whitespace: Check for trailing whitespaces at end of lines.
 - unbalanced-inline-literals-delimiters: Search for unbalanced inline literals delimiters.
+---
+- all the checkers defined in checkers/* files.
 
-Optional checkers:
-- line-too-long: Check for line length; this checker is not run by default.
+The following checkers are only selected for `make review`.
+- line-too-long: Check for line length.
+- early-line-break: Check for early line breaks.
 
-Custom checkers:
-- all the checkers defined in checkers/* files
 """
 if __name__ == '__main__':
     # Patch sphinxlint's global constants to include our custom directives and parse their content.
