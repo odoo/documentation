@@ -17,3 +17,4 @@ With approvals, key stakeholders can review changes before implementation.
    :titlesonly:
 
    plm/manage_changes
+   plm/management
