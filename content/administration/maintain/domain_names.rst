@@ -115,7 +115,7 @@ name with your website <domain-name/website-map>`.
 .. note::
    - Free domain names are also available for free Odoo Online databases (if you installed one app
      only, for example). In this case, Odoo reviews your request and your website to avoid abuse.
-     This process may take up to three days.
+     This process can take several days due to the success of the offer.
    - This is not available for Odoo.sh databases yet.
 
 .. _domain-name/odoo-manage:
