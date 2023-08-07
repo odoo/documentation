@@ -111,7 +111,7 @@ template.
 .. seealso::
    Check out Zebra's instructions on printing :abbr:`ZPL (Zebra Programming Language)` files
    `here
-   <https://supportcommunity.zebra.com/s/article/Print-a-zpl-file-using-the-Generic-Text-Printer_>`_.
+   <https://supportcommunity.zebra.com/s/article/Print-a-zpl-file-using-the-Generic-Text-Printer>`_.
 
 Barcode scanner
 ===============
