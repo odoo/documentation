@@ -59,6 +59,16 @@ registration` from the drop-down menu. On the :guilabel:`Register an application
 :guilabel:`Supported account types` section select the option for :guilabel:`Accounts in this
 organizational directory only (Default Directory only - Single tenant)`.
 
+.. warning::
+   The :guilabel:`Supported account types` can vary by Microsoft account type and end use of the
+   OAuth. For example: Is the login meant for internal users within one organization or is it meant
+   for customer portal access? The above configuration is used for internal users in an
+   organization.
+
+   Choose :guilabel:`Personal Microsoft accounts only` if the target audience is meant for portal
+   users. Choose :guilabel:`Accounts in this organizational directory only (Default Directory only -
+   Single tenant)` if the target audience is company users.
+
 Under the :guilabel:`Redirect URL` section, select :guilabel:`Web` as the platform, and then input
 `https://<odoo base url>/auth_oauth/signin` in the :guilabel:`URL` field. The Odoo base :abbr:`URL
 (Uniform Resource Locator)` is the canonical domain at which your Odoo instance can be reached (e.g.
@@ -96,17 +106,6 @@ to a clipboard / notepad, as this credential will be used in the Odoo configurat
 After finishing this step, click on :guilabel:`Endpoints` on the top menu and click the *copy icon*
 next to :guilabel:`OAuth 2.0 authorization endpoint (v2)` field. Paste this value in the clipboard /
 notepad.
-
-The value should equal `https://login.microsoftonline.com/<directory_id>/oauth2/v2.0/authorize`.
-Replace the `<directory_id>` with the :guilabel:`Directory (tenant) ID` under the
-:guilabel:`Essentials` section of the *Overview* page if it is not already present in the :abbr:`URL
-(uniform resource locator)`.
-
-.. example::
-   Should the :guilabel:`Directory (tenant) ID` be equal to `6729e9df-afbb-4522-a876-f1408d416396`
-   then the new value of the :guilabel:`OAuth 2.0 authorization endpoint (v2)` :abbr:`URL (Uniform
-   Resource Locator)` should be:
-   `https://login.microsoftonline.com/6729e9df-afbb-4522-a876-f1408d416396/oauth2/v2.0/authorize`.
 
 .. image:: azure/overview-azure-app.png
    :align: center
