@@ -46,7 +46,7 @@ Updating Odoo is accomplished by simply reinstalling the latest version of your 
 Edition on top of your current installation. This will preserve your data without any alteration,
 as long as you do not uninstall PostgreSQL (the database engine that comes with Odoo).
 
-The main reference for updating is logically our :ref:`installation guide <setup/install>`,
+The main reference for updating is logically our :doc:`installation guide <../install>`,
 which explains the common installation methods.
 
 Updating is also most appropriately accomplished by the person who deployed Odoo initially,

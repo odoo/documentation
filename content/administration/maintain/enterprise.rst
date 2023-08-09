@@ -61,7 +61,7 @@ have your own favourite. You may need to adapt sections to your usual workflow.
 
 * Shutdown your server
 * Backup your community database
-* Update the ``--addons-path`` parameter of your launch command (see :ref:`setup/install/source`)
+* Update the ``--addons-path`` parameter of your launch command (see :doc:`../install/source`)
 * Install the web_enterprise module by using
 
   .. code-block:: console
