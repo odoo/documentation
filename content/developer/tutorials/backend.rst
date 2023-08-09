@@ -11,7 +11,7 @@ Building a Module
    This tutorial is outdated. We recommend reading :doc:`getting_started` instead.
 
 .. warning::
-   This tutorial requires :ref:`having installed Odoo <setup/install>`
+   This tutorial requires :doc:`having installed Odoo <../../administration/install>`
 
 Start/Stop the Odoo server
 ==========================
@@ -970,8 +970,8 @@ Gantt
 -----
 
 .. warning::
-   The gantt view requires the web_gantt module which is present in :ref:`the enterprise edition
-   <setup/install/editions>` version.
+   The gantt view requires the web_gantt module which is present in the enterprise edition
+   <install/editions>` version.
 
 Horizontal bar charts typically used to show project planning and advancement,
 their root element is ``<gantt>``.

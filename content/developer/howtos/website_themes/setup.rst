@@ -12,8 +12,9 @@ In this chapter, you will learn:
 Install
 =======
 
-There are multiple ways to :doc:`install Odoo <../../../administration/install/install>`, depending on the intended use case. This documentation
-assumes you use the :ref:`source install <setup/install/source>` (running Odoo from the source code), which is best suited
+There are multiple ways to :doc:`install Odoo <../../../administration/install>`, depending on the
+intended use case. This documentation assumes you use the :doc:`source install
+<../../../administration/install/source>` (running Odoo from the source code), which is best suited
 for Odoo designers and developers.
 
 Databases
@@ -181,7 +182,7 @@ Running Odoo
 Once all dependencies are set up, Odoo can be launched by running `odoo-bin`, the command-line
 interface of the server. It is located at the root of the Odoo Community directory.
 
-- :ref:`Running Odoo <setup/install/source/running_odoo>`
+- :ref:`Running Odoo <install/source/running_odoo>`
 - `Docker <https://hub.docker.com/_/odoo/>`_
 
 To configure the server, you can specify command-line arguments or a configuration file. The first

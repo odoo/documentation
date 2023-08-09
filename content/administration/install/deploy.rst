@@ -3,7 +3,7 @@ System configuration
 ====================
 
 This document describes basic steps to set up Odoo in production or on an
-internet-facing server. It follows :ref:`installation <setup/install>`, and is
+internet-facing server. It follows :doc:`installation <../install>`, and is
 not generally necessary for a development systems that is not exposed on the
 internet.
 
@@ -123,7 +123,7 @@ Out of the box, Odoo connects to a local postgres over UNIX socket via port
 <reference/cmdline/server/database>` when your Postgres deployment is not
 local and/or does not use the installation defaults.
 
-The :ref:`packaged installers <setup/install/packaged>` will automatically
+The :doc:`packaged installers <packages>` will automatically
 create a new user (``odoo``) and set it as the database user.
 
 * The database management screens are protected by the ``admin_passwd``
