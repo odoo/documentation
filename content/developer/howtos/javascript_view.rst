@@ -180,7 +180,7 @@ Creating a new view is an advanced topic. This guide highlight only the essentia
           async load() {
               // The keeplast protect against concurrency call
               const { length, records } = await this.keepLast.add(
-                  this.orm.webSearchRead(this.resModel, this.domain, [this.fieldsFromTheArch], {})
+                  this.orm.webSearchRead(this.resModel, this.domain, [this.fieldFromTheArch], {})
               );
               this.records = records;
               this.recordsLength = length;
@@ -224,7 +224,7 @@ Creating a new view is an advanced topic. This guide highlight only the essentia
       import { registry } from "@web/core/registry";
       import { BeautifulController } from "./beautiful_controller";
       import { BeautifulArchParser } from "./beautiful_arch_parser";
-      import { BeautifylModel } from "./beautiful_model";
+      import { BeautifulModel } from "./beautiful_model";
       import { BeautifulRenderer } from "./beautiful_renderer";
 
       export const beautifulView = {
@@ -251,12 +251,12 @@ Creating a new view is an advanced topic. This guide highlight only the essentia
           },
       };
 
-      registry.category("views").add("beautifulView", beautifulView);
+      registry.category("views").add("beautiful", beautifulView);
 
 #. Use the view in an arch.
 
    .. code-block:: xml
 
       ...
-      <beautiful fieldFromTheArch="res.partner"/>
+      <beautiful fieldFromTheArch="name"/>
       ...
