@@ -12,10 +12,10 @@ environment <reference/cmdline/shell>`, :ref:`scaffold an Odoo module <reference
 
 .. important::
    The command to use to call the CLI depends on how you installed Odoo. In the examples below, we
-   assume that you are :ref:`running Odoo from source <setup/install/source>` with the
-   :file:`odoo-bin` file. If you installed Odoo :ref:`from a distribution package
-   <setup/install/packaged>` or :ref:`with Docker <setup/install/docker>`, you must adapt the
-   command.
+   assume that you are :doc:`running Odoo from source <../../administration/install/source>` with
+   the :file:`odoo-bin` file. If you installed Odoo :doc:`from a distribution package
+   <../../administration/install/packages>` or with `Docker <https://hub.docker.com/_/odoo/>`_, you
+   must adapt the command.
 
    .. tabs::
 
