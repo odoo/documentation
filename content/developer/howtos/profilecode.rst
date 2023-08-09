@@ -4,7 +4,7 @@ Profiling Odoo code
 
 .. warning::
 
-    This tutorial requires :ref:`having installed Odoo <setup/install>`
+    This tutorial requires :doc:`having installed Odoo <../../administration/install>`
     and :doc:`writing Odoo code <../tutorials/getting_started>`
 
 Graph a method
