@@ -1,79 +1,116 @@
-===================================================
-Use product variants on quotations and sales orders
-===================================================
+===============================================
+Product variants on quotations and sales orders
+===============================================
 
-Product variants can be added to quotations and sales orders using the Product Configurator,
-Variant Grid Entry, or both.
+Before getting into detail about how to use product variants on quotations and sales orders, it's
+recommended to learn about :doc:`../products_prices/products/variants` in Odoo.
 
-Configuration
-=============
-
-To enable product variants on quotations and sales orders, go to :menuselection:`Sales -->
-Configuration --> Settings --> Product Catalog` and activate one or both of the
-:guilabel:`Product Configurator` and :guilabel:`Variant Grid Entry` settings. Finally, click
-:guilabel:`Save` to apply the settings.
-
-.. image:: orders_and_variants/activating-entry-type-settings.png
-   :align: center
-   :alt: Activating entry type settings.
-
-After saving the settings, configure the product form. Head over to :menuselection:`Sales -->
-Products --> Products` and select any product (or click :guilabel:`Create` to create a new one).
-On the product form, click :guilabel:`Edit`, and then click on the :guilabel:`Variants` tab. Under
-:guilabel:`Sales Variant Selection`, choose either :guilabel:`Product Configurator` or
-:guilabel:`Order Grid Entry`. This selection determines which method is used to add the product to
-quotations or sales orders. Finally, click :guilabel:`Save` to apply the setting.
-
-.. image:: orders_and_variants/sales-variant-selection.png
-   :align: center
-   :alt: Sales variant selection.
+Once familiarized with the basics surrounding product variants, the following covers how product
+variants can be added to quotations and sales orders using the *product configurator* or *order grid
+entry*.
 
 .. note::
-   The product must have at least two variants (one attribute with two values) created in order for
-   the :guilabel:`Sales Variant Selection` option to appear. Click :guilabel:`Add a line` under
-   :guilabel:`Attribute` to add attributes and values to this product and create product variants.
+   It should be noted that the setting is titled, *Variant Grid Entry* on the *Sales* app settings
+   page, and titled, *Order Grid Entry* on product forms. So, be sure to keep that in mind.
 
-Use the Product Configurator
-============================
+Settings
+========
 
-The :guilabel:`Product Configurator` appears on a quotation or sales order when products are added
-that have both variants configured and the :guilabel:`Product Configurator` option selected.
+When working with product variants, Odoo uses the product configurator, by default. To add the
+variant grid entry option, that feature **must** be enabled in the Odoo *Sales* application. The
+variant grid entry option provides a pop-up window on the quotation/sales order to simplify the
+variant selection process.
 
-The :guilabel:`Product Configurator` lets salespeople choose exactly which product variant to add
-to the quotation or sales order using a format similar to online shopping. Color options display
-any HTML color codes set up in the :guilabel:`Color` attribute. Features with an additional cost
-will display the additional cost next to their name. Once the desired product variant attributes
-are selected, click :guilabel:`Add` to add the product variant to the quotation or sales order.
+To enable that setting, go to :menuselection:`Sales app --> Configuration --> Settings`, and scroll
+to the :guilabel:`Product Catalog` section. Then, check the box next to the :guilabel:`Variant Grid
+Entry` option, and click :guilabel:`Save`.
 
-.. image:: orders_and_variants/configurator-price-extras.png
+.. image:: orders_and_variants/order-grid-entry-setting.png
    :align: center
-   :alt: Product Configurator and Price Extras.
+   :alt: The variant grid entry setting in the Odoo Sales application.
 
-By default, the product variant attributes are displayed on the quotation or sales order in the
-:guilabel:`Description` column, but the :guilabel:`Product Variant` column can be added through the
-additional options menu (3 vertical dots icon).
+.. note::
+   Of course, the :guilabel:`Variants` feature **must** also be activated, in order to use product
+   variants on quotations and sales orders.
 
-Use Variant Grid Entries
-========================
+Product configuration
+=====================
 
-:guilabel:`Variant Grid Entries` appear on a quotation or sales order when products are added that
-have both variants configured and the :guilabel:`Order Grid Entry` option selected. Grid entry can
-streamline the process of creating large, varied quotations by letting salespeople enter exact
-quantities of each product variant all at once.
+Once the :guilabel:`Variant Grid Entry` setting is enabled, both options (*Product Configurator* and
+*Order Grid Entry*) become available on every product form.
 
-:guilabel:`Variant Grid Entry` displays a grid of every variant available for the selected product.
-Choose the exact quantities of each product variant for a quotation or sales order by typing in the
-number or using the arrows. :guilabel:`Not Available` is displayed when a particular variant has
-been deactivated in the database. Once all the product variants and their quantities have been set,
-click :guilabel:`Confirm` to add them to the quotation or sales order.
+To configure a product form to use either a product configurator or variant grid entry, start by
+navigating to :menuselection:`Sales app --> Products --> Products` to view all the products in the
+database.
 
-.. image:: orders_and_variants/grid-entry-popup-amounts.png
+Then, select the desired product to configure, or click :guilabel:`New`, to create a new product
+from scratch. Once on the product form, click into the :guilabel:`Attributes \& Variants` tab, where
+product variants can be viewed, modified, and added.
+
+At the bottom of the :guilabel:`Attributes \& Variants` tab, there is a :guilabel:`Sales Variant
+Selection` section with two options: :guilabel:`Product Configurator` and :guilabel:`Order Grid
+Entry`.
+
+.. note::
+   It should be noted that these options **only** appear if at least two values of an attribute have
+   been added to the record.
+
+.. image:: orders_and_variants/attributes-variants-tab-selection-options.png
    :align: center
-   :alt: Variant Grid Entry pop-up.
+   :alt: Sales variant selection options on the attributes and variants tab on product form.
 
-Each product variant appears as an individual line item on the quotation or sales order, because
-each of these items has its own stock.
+These options determine which method is used when adding product variants to quotations or sales
+orders.
 
-.. image:: orders_and_variants/grid-variants-line-items.png
+The :guilabel:`Product Configurator` provides a pop-up window that neatly displays all the available
+product variants for that particular product when it's added to a quotation. However, only one
+variant can be selected/added at a time.
+
+The :guilabel:`Order Grid Entry` provides the same information as the :guilabel:`Product
+Configurator` in a table layout, allowing the user to select larger numbers of unique product
+variants, and add them to a quotation/sales order, in a single view.
+
+Product configurator
+====================
+
+The product configurator feature appears as a :guilabel:`Configure` pop-up window, as soon as a
+product with (at least two) variants is added to a quotation or sales order, but **only** if the
+:guilabel:`Product Configurator` option is selected on its product form.
+
+.. image:: orders_and_variants/product-configurator-window.png
    :align: center
-   :alt: Line items for grid variants.
+   :alt: The product configurator pop-up window that appears on a quotation or sales order.
+
+.. note::
+   This :guilabel:`Configure` pop-up window also appears if the :guilabel:`Order Grid Entry` setting
+   is **not** activated, as it is the default option Odoo uses when dealing with product variants on
+   quotations and/or sales orders.
+
+The :guilabel:`Product Configurator` option lets salespeople choose exactly which product variant to
+add to the quotation or sales order using a format similar to online shopping.
+
+Order grid entry
+================
+
+The order grid entry feature appears as a :guilabel:`Choose Product Variants` pop-up window, as soon
+as a product with (at least two) variants is added to a quotation or sales order, but **only** if
+the :guilabel:`Order Grid Entry` option is selected on its product form.
+
+.. image:: orders_and_variants/choose-product-variants-popup.png
+   :align: center
+   :alt: The choose product variants pop-up window that appears on a quotation in Odoo.
+
+The :guilabel:`Choose Product Variants` pop-up window features all the variant options for that
+particular product. From this pop-up window, the salesperson can designate how many of each variant
+they'd like to add to the quotation/sales order at once.
+
+When all the desired quantities and variants have been selected, the salesperson simply clicks
+:guilabel:`Confirm`, and those orders are instantly added to the quotation/sales order in the
+:guilabel:`Order Lines` tab.
+
+.. image:: orders_and_variants/order-grid-entry-order-lines-tab.png
+   :align: center
+   :alt: Populated order lines tab after order grid entry has been chosen to select products.
+
+.. seealso::
+   :doc:`../products_prices/products/variants`
