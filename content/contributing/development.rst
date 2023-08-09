@@ -37,8 +37,8 @@ and then push them to GitHub. Skip this section and go to
    affecting the main codebase. Skip this step if you work at Odoo.
 #. .. include:: install_git.rst
 #. .. include:: configure_git_authorship.rst
-#. :ref:`Install Odoo from the sources <setup/install/source>`. Make sure to fetch the sources
-   through Git with SSH.
+#. :doc:`Install Odoo from the sources <../administration/install/source>`. Make sure to fetch the
+   sources through Git with SSH.
 #. Configure Git to push changes to your fork(s) rather than to the main codebase. If you work at
    Odoo, configure Git to push changes to the shared forks created on the account **odoo-dev**.
 
