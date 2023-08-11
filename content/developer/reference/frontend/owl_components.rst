@@ -647,8 +647,8 @@ Example: Multi-level Dropdown (nested)
     <DropdownItem onSelected="() => this.onItemSelected('file-save')">Save</DropdownItem>
     <Dropdown>
       <t t-set-slot="toggler">Save as...</t>
-      <DropdownItem onSelected="() => this.onItemSelected('file-save-)as-csv'">CSV</DropdownItem>
-      <DropdownItem onSelected="() => this.onItemSelected('file-save-)as-pdf'">PDF</DropdownItem>
+      <DropdownItem onSelected="() => this.onItemSelected('file-save-as-csv')">CSV</DropdownItem>
+      <DropdownItem onSelected="() => this.onItemSelected('file-save-as-pdf')">PDF</DropdownItem>
     </Dropdown>
   </Dropdown>
 
