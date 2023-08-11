@@ -44,7 +44,7 @@ can be done in a few steps:
 
       <?xml version="1.0" encoding="UTF-8" ?>
       <templates>
-          <t t-name="my_module.CustomKanbanView" t-inherit="web.KanbanView" owl="1">
+          <t t-name="my_module.CustomKanbanView" t-inherit="web.KanbanView">
               <xpath expr="//Layout" position="before">
                   <div>
                       Hello world !
@@ -121,7 +121,7 @@ Creating a new view is an advanced topic. This guide highlight only the essentia
 
       <?xml version="1.0" encoding="UTF-8"?>
       <templates xml:space="preserve">
-          <t t-name="my_module.View" owl="1">
+          <t t-name="my_module.View">
               <Layout display="props.display" className="'h-100 overflow-auto'">
                   <t t-component="props.Renderer" records="model.records" propsYouWant="'Hello world'"/>
               </Layout>
@@ -146,7 +146,7 @@ Creating a new view is an advanced topic. This guide highlight only the essentia
 
       <?xml version="1.0" encoding="UTF-8"?>
       <templates xml:space="preserve">
-          <t t-name="my_module.Renderer" owl="1">
+          <t t-name="my_module.Renderer">
               <t t-esc="props.propsYouWant"/>
               <t t-foreach="props.records" t-as="record" t-key="record.id">
                   // Show records

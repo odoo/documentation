@@ -31,7 +31,7 @@ Let us discuss a simplified implementation of a `CharField`. First, here is the 
 
 .. code-block:: xml
 
-   <t t-name="web.CharField" owl="1">
+   <t t-name="web.CharField">
        <t t-if="props.readonly">
            <span t-esc="formattedValue" />
        </t>

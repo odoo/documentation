@@ -60,15 +60,12 @@ and defines a part of user interface:
 .. code-block:: xml
 
    <templates xml:space="preserve">
-      <t t-name="my_module.Counter" owl="1">
+      <t t-name="my_module.Counter">
          <p>Counter: <t t-esc="state.value"/></p>
          <button class="btn btn-primary" t-on-click="increment">Increment</button>
       </t>
    </templates>
 
-You maybe noticed the `owl="1"` temporary attribute, it allows Odoo to differentiate Owl
-templates from the old JavaScript framework templates. Note that Owl templates are not the same
-as QWeb templates: they can contain additional directives, such as `t-on-click`.
 
 1. Displaying a counter
 =======================

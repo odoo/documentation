@@ -33,7 +33,7 @@ displaying "Late!" in red whenever the checkbox is checked.
 
       <?xml version="1.0" encoding="UTF-8" ?>
       <templates xml:space="preserve">
-          <t t-name="my_module.LateOrderBooleanField" t-inherit="web.BooleanField" owl="1">
+          <t t-name="my_module.LateOrderBooleanField" t-inherit="web.BooleanField">
               <xpath expr="//CheckBox" position="after">
                     <span t-if="props.value" class="text-danger"> Late! </span>
               </xpath>

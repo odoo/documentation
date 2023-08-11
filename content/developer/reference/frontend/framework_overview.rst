@@ -69,7 +69,7 @@ simplified version of its template:
 
 .. code-block:: xml
 
-    <t t-name="web.WebClient" owl="1">
+    <t t-name="web.WebClient">
         <body class="o_web_client">
             <NavBar/>
             <ActionContainer/>
