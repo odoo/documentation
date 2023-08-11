@@ -81,22 +81,13 @@ And the template is now located in the corresponding xml file:
     <?xml version="1.0" encoding="UTF-8" ?>
     <templates xml:space="preserve">
 
-    <t t-name="myaddon.MyComponent" owl="1">
+    <t t-name="myaddon.MyComponent">
       <div t-on-click="increment">
         <t t-esc="state.value"/>
       </div>
     </t>
 
     </templates>
-
-Odoo code is not yet completely made in Owl, so it needs a way to tell the
-difference between Owl templates (new code) and old templates (for components). To
-do that in a backward-compatible way, all new templates should be defined with
-the `owl` attribute set to 1.
-
-.. note::
-
-   Do not forget to set `owl="1"` in your Owl templates!
 
 .. note::
 
@@ -612,7 +603,7 @@ the `New` and `Save as...` sub elements.
 
 .. code-block:: xml
 
-  <t t-name="addon.Dropdown.File" owl="1">
+  <t t-name="addon.Dropdown.File">
     <Dropdown>
       <t t-set-slot="toggler">File</t>
       <DropdownItem onSelected="() => this.onItemSelected('file-open')">Open</DropdownItem>
@@ -622,7 +613,7 @@ the `New` and `Save as...` sub elements.
     </Dropdown>
   </t>
 
-  <t t-name="addon.Dropdown.File.New" owl="1">
+  <t t-name="addon.Dropdown.File.New">
     <Dropdown>
       <t t-set-slot="toggler">New</t>
       <DropdownItem onSelected="() => this.onItemSelected('file-new-document')">Document</DropdownItem>
@@ -630,7 +621,7 @@ the `New` and `Save as...` sub elements.
     </Dropdown>
   </t>
 
-  <t t-name="addon.Dropdown.File.Save.As" owl="1">
+  <t t-name="addon.Dropdown.File.Save.As">
     <Dropdown>
       <t t-set-slot="toggler">Save as...</t>
       <DropdownItem onSelected="() => this.onItemSelected('file-save-as-csv')">CSV</DropdownItem>
@@ -666,7 +657,7 @@ In this example, we recursively call a template to display a tree-like structure
 
 .. code-block:: xml
 
-  <t t-name="addon.MainTemplate" owl="1">
+  <t t-name="addon.MainTemplate">
     <div>
       <t t-call="addon.RecursiveDropdown">
         <t t-set="name" t-value="'Main Menu'" />
@@ -675,7 +666,7 @@ In this example, we recursively call a template to display a tree-like structure
     </div>
   </t>
 
-  <t t-name="addon.RecursiveDropdown" owl="1">
+  <t t-name="addon.RecursiveDropdown">
     <Dropdown>
       <t t-set-slot="toggler"><t t-esc="name"/></t>
         <t t-foreach="items" t-as="item" t-key="item.id">

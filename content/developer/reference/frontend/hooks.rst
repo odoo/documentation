@@ -79,7 +79,7 @@ soon as it appears in the DOM and if it was not displayed before.
 
 .. code-block:: xml
 
-    <t t-name="Comp" owl="1">
+    <t t-name="Comp">
       <input t-ref="autofocus" type="text"/>
     </t>
 
@@ -328,7 +328,7 @@ spellcheck completely on elements that might be enabled by the hook, set explici
 
    .. code-block:: xml
 
-       <t t-name="Comp" owl="1">
+       <t t-name="Comp">
          <input t-ref="spellcheck" type="text"/>
          <textarea t-ref="custom"/>
          <div t-ref="container">
