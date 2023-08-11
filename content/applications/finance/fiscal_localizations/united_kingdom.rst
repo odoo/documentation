@@ -81,6 +81,8 @@ The **UK - Accounting Reports** module enables you to comply with the `HM Revenu
    it through Odoo, as Odoo only retrieves open bonds from the last three months. Your submission
    has to be done manually by contacting HMRC.
 
+.. _uk_localization/hmrc-registration:
+
 Register your company to HMRC before the first submission
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -106,10 +108,11 @@ each submission:
 
 #. Log into the company for which the submission has to be done.
 #. Go to :guilabel:`General Settings`, and in the :guilabel:`Users` section, click
-   :guilabel:`Manage Users`. Select the user who will submit the VAT return.
+   :guilabel:`Manage Users`. Select the user who is connected to HMRC.
 #. Go to the :guilabel:`UK HMRC Integration` tab and click :guilabel:`Reset Authentication
-   Credentials` or :guilabel:`Remove Authentication Credentials` button. Then click again to create
-   new credentials. It is now possible to submit the tax report for this company.
+   Credentials` or :guilabel:`Remove Authentication Credentials` button.
+#. You can now :ref:`register your company to HMRC <uk_localization/hmrc-registration>` and submit
+   the tax report for this company.
 #. Repeat the steps for other companies' HMRC submissions.
 
 .. note::
