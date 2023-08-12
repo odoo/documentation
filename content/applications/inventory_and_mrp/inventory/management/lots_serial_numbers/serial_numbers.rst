@@ -28,6 +28,8 @@ Numbers`. Remember to click the :guilabel:`Save` button to save changes.
    :align: center
    :alt: Enabled lots and serial numbers setting.
 
+.. _inventory/serial_numbers/configure:
+
 Configure serial number tracking on products
 ============================================
 
