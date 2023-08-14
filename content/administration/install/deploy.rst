@@ -439,51 +439,71 @@ Odoo static files are located in each module's :file:`static/` folder, so static
 by intercepting all requests to :samp:`/{MODULE}/static/{FILE}`, and looking up the right module
 (and file) in the various addons paths.
 
+It is recommended to set the ``Content-Security-Policy: default-src 'none'`` header on all images
+delivered by the web server. It is not strictly necessary as users cannot modify/inject content
+inside of modules' :file:`static/` folder and existing images are final (they do not fetch new
+resources by themselves). However, it is good practice.
+
+Using the above NGINX (https) configuration, the following ``map`` and ``location`` blocks should be
+added to serve static files via NGINX.
+
+.. code-block:: nginx
+
+    map $sent_http_content_type $content_type_csp {
+        default "";
+        ~image/ "default-src 'none'";
+    }
+
+    server {
+        # the rest of the configuration
+
+        location @odoo {
+            # copy-paste the content of the / location block
+        }
+
+        # Serve static files right away
+        location ~ ^/[^/]+/static/.+$ {
+            # root and try_files both depend on your addons paths
+            root ...;
+            try_files ... @odoo;
+            expires 24h;
+            add_header Content-Security-Policy $content_type_csp;
+        }
+    }
+
+The actual ``root`` and ``try_files`` directives are dependant on your installation, specifically on
+your :option:`--addons-path <odoo-bin --addons-path>`.
+
 .. example::
-   Say Odoo has been installed via the **debian packages** for Community and Enterprise and the
-   :option:`--addons-path <odoo-bin --addons-path>` is ``'/usr/lib/python3/dist-packages/odoo/addons'``.
 
-   Using the above NGINX (https) configuration, the following location block should be added to
-   serve static files via NGINX.
+   .. tabs::
 
-   .. code-block:: nginx
+      .. group-tab:: Debian package
 
-       location @odoo {
-           # copy-paste the content of the / location block
-       }
+         Say Odoo has been installed via the **debian packages** for Community and Enterprise, and
+         that the :option:`--addons-path <odoo-bin --addons-path>` is
+         ``'/usr/lib/python3/dist-packages/odoo/addons'``.
 
-       # Serve static files right away
-       location ~ ^/[^/]+/static/.+$ {
-           root /usr/lib/python3/dist-packages/odoo/addons;
-           try_files $uri @odoo;
-           expires 24h;
-       }
+         The ``root`` and ``try_files`` should be:
 
-.. example::
-   Say Odoo has been installed via the **source**. The two git repositories for Community and
-   Enterprise have been cloned in :file:`/opt/odoo/community` and :file:`/opt/odoo/enterprise`
-   respectively and the :option:`--addons-path <odoo-bin --addons-path>` is
-   ``'/opt/odoo/community/odoo/addons,/opt/odoo/community/addons,/opt/odoo/enterprise'``.
+         .. code-block:: nginx
 
-   Using the above NGINX (https) configuration, the following location block should be added to
-   serve static files via NGINX.
+            root /usr/lib/python3/dist-packages/odoo/addons;
+            try_files $uri @odoo;
 
-   .. code-block:: nginx
+      .. group-tab:: Git sources
 
-       location @odoo {
-           # copy-paste the content of the / location block
-       }
+         Say Odoo has been installed via the **sources**, that both the Community and Enterprise git
+         repositories were cloned in :file:`/opt/odoo/community` and :file:`/opt/odoo/enterprise`
+         respectively, and that the :option:`--addons-path <odoo-bin --addons-path>` is
+         ``'/opt/odoo/community/odoo/addons,/opt/odoo/community/addons,/opt/odoo/enterprise'``.
 
-       # Serve static files right away
-       location ~ ^/[^/]+/static/.+$ {
-           root /opt/odoo;
-           try_files /community/odoo/addons$uri /community/addons$uri /enterprise$uri @odoo;
-           expires 24h;
-       }
+         The ``root`` and ``try_files`` should be:
 
-.. warning::
-   The actual NGINX configuration you need is highly dependent on your own installation. The two
-   above snippets only highlight two possible configurations and may not be used as-is.
+         .. code-block:: nginx
+
+            root /opt/odoo;
+            try_files /community/odoo/addons$uri /community/addons$uri /enterprise$uri @odoo;
 
 Serving attachments
 -------------------
