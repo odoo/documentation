@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-25 14:24+0000\n"
+"POT-Creation-Date: 2023-08-14 15:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3744,7 +3744,7 @@ msgid "The Amazon Connector supports all the current marketplaces. If a marketpl
 msgstr ""
 
 #: ../../content/applications/sales/sales/amazon_connector/features.rst:63
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:114
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:132
 msgid ":doc:`setup`"
 msgstr ""
 
@@ -3829,35 +3829,55 @@ msgstr ""
 msgid "Issue invoices and register payments"
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:81
-msgid "You can issue invoices for Amazon orders in Odoo. Click **Create Invoice** in the sales order to do so. You can also do it in batch from the list view of orders. Then, confirm and send the invoices to your customers."
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:82
+msgid "Issue invoices"
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:86
-msgid "To display only Amazon-related orders on the list view, you can filter orders based on the sales team."
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:84
+msgid "Sending invoices to Amazon customers directly from Odoo is not feasible due to Amazon's policy of not sharing customer email addresses. Instead, it is possible to manually upload the invoices generated on Odoo to the Amazon backend."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:89
-msgid "As the customer has paid Amazon as an intermediary, you should register invoice payments in a payment journal dedicated to Amazon (e.g. Amazon Payments, with a dedicated intermediary account). You can do the same with the vendor bill received from Amazon and dedicated to commissions. When you receive the balance on your bank account at the end of the month and record your bank statements in Odoo, you simply credit the Amazon intermediary account by the amount received."
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:88
+msgid "In addition, for your B2B clients, it is currently required to manually retrieve VAT numbers from the Amazon backend before creating the invoice in Odoo."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:96
-msgid "Follow your Amazon sales in sales reporting"
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:92
+msgid "For :doc:`TaxCloud <../../../finance/accounting/taxes/taxcloud>` users: invoices created from Amazon sales orders are **not** synchronized with TaxCloud, since Amazon already includes them in its own tax report to TaxCloud."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:98
-msgid "As a sales team is set on your account under the tab **Order Follow-up**, this helps you give quick glances at the figures in just a few clicks in Sales reporting. By default, your account's sales team is shared between all of your company's accounts."
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:97
+msgid "Register payments"
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:99
+msgid "As customers pay Amazon as an intermediary, creating a dedicated *Bank* journal (for example, named `Amazon payments`) with a dedicated *Bank and Cash* intermediary account is recommended."
 msgstr ""
 
 #: ../../content/applications/sales/sales/amazon_connector/manage.rst:102
+msgid "In addition, as Amazon makes a single monthly payment, selecting all the invoices linked to a single payment is necessary when registering payments. Use the dedicated `Amazon payments` :guilabel:`Journal` and select :guilabel:`Batch Deposit` as the :guilabel:`Payment Method`. Then, select all the payments generated and click :menuselection:`Actions --> Create batch payment --> Validate`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:109
+msgid "The same can be done with vendor bills from Amazon dedicated to commissions. When the balance is received in the bank account at the end of the month and the banks statements are recorded, credit the Amazon intermediary account by the amount received."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:114
+msgid "Follow your Amazon sales in sales reporting"
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:116
+msgid "As a sales team is set on your account under the tab **Order Follow-up**, this helps you give quick glances at the figures in just a few clicks in Sales reporting. By default, your account's sales team is shared between all of your company's accounts."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:120
 msgid "If you wish, you can change the sales team on your account for another to perform a separate reporting for the sales of this account."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:106
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:124
 msgid "It is also possible to perform reporting on a per-marketplace basis in a similar fashion. First, remove the marketplace you wish to track separately from the list of synchronized marketplaces. Then, create another registration for this account and remove all marketplaces, except the one to isolate from the others. Finally, assign another sales team to one of the two registrations of your account."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:113
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:131
 #: ../../content/applications/sales/sales/amazon_connector/setup.rst:104
 msgid ":doc:`features`"
 msgstr ""
@@ -4447,83 +4467,91 @@ msgid "Different business policies might require different options for invoicing
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:7
-msgid "The **Invoice what is ordered** rule is used as **default mode** in Odoo Sales, which means that customers will be invoiced once the sales order is confirmed."
+msgid "The *Invoice what is ordered* rule is used as the default mode in Odoo *Sales*, which means customers are invoiced once the sales order is confirmed."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:10
-msgid "The **Invoice what is delivered** rule will invoice customers once the delivery is done. This rule concerns businesses that sell materials, liquids or food in large quantities. In these cases, the quantity might diverge a little bit and it is, therefore, preferable to invoice the quantity actually delivered."
+#: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:9
+msgid "The *Invoice what is delivered* rule invoices customers once the delivery is done. This rule is often used for businesses that sell materials, liquids, or food in large quantities. In these cases, the ordered quantity may differ slightly from the delivered quantity, making it preferable to invoice the quantity actually delivered."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:15
-msgid "Being able to have different invoicing options allow you more flexibility. Indeed, you need to know exactly how to invoice your customers for different situations."
+#: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:14
+msgid "Being able to have different invoicing options provides more flexibility."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:17
+msgid "Invoicing policy features"
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:19
-msgid "Activate these features"
-msgstr ""
-
-#: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:21
-msgid "Go to :menuselection:`Sales --> Configuration --> Settings` and under **Invoicing policy** choose the rule you want to apply."
+msgid "To activate the necessary invoicing policy features, go to :menuselection:`Sales app --> Configuration --> Settings`, and under the :guilabel:`Invoicing` heading, select an :guilabel:`Invoicing Policy` rule: :guilabel:`Invoice what is ordered` or :guilabel:`Invoice what is delivered`."
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:-1
-msgid "How to choose your invoicing policy on Odoo Sales?"
+msgid "Choosing an invoicing policy on Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:30
-msgid "If you decide to choose the **Invoice what is delivered** rule, you will not be able to activate the feature called **Automatic invoice**, which automatically generates invoices when the online payment is confirmed."
+#: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:29
+msgid "If the :guilabel:`Invoice what is delivered` rule is chosen, it is **not** possible to activate the :guilabel:`Automatic Invoice` feature, which automatically generates invoices when an online payment is confirmed."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:35
-msgid "Choose an invoicing policy on a product form"
+#: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:34
+msgid "Invoicing policy on product form"
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:37
-msgid "From any product page, under the **Sales tab**, you will find the invoicing policy, which can be manually changed."
+#: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:36
+msgid "On any product page, via the :menuselection:`Sales app --> Products --> Products dashboard`, locate the :guilabel:`Invoicing Policy` option located under the :guilabel:`General Information` tab. It can be changed manually using the drop-down menu."
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:-1
-msgid "How to change your invoicing policy on a product form on Odoo Sales?"
+msgid "How to change your invoicing policy on a product form on Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:46
+#: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:45
 msgid "Impact on sales flow"
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:48
-msgid "On Odoo Sales, the basic sales flow will be to create a quotation, send it to your customer, wait for confirmation, confirm the sales order and create an invoice."
+#: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:47
+msgid "In Odoo *Sales*, the basic sales flow starts with the creation of a quotation. Then, that quotation is sent to a customer. Next, it needs to be confirmed, which turns the quotation into a sales order. This, in turn, creates an invoice."
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:51
-msgid "**Invoice what is ordered**: No impact on this basic sales flow. Indeed, you can invoice as soon as the sale is confirmed."
+msgid "The following is a breakdown of how invoicing policy rules impact the aforementioned sales flow:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:54
-msgid "**Invoice what is delivered**: Small impact on sales flow because you will have to manually enter the delivered quantity on the sales order or to install the **Inventory App** to confirm the delivered quantity before creating an invoice, with the **Sales App**. Indeed, if you try to create an invoice without validating the delivered quantity, you will receive an error message as below."
+#: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:53
+msgid ":guilabel:`Invoice what is ordered`: No impact on the basic sales flow. An invoice is created as soon as a sale is confirmed."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:55
+msgid ":guilabel:`Invoice what is delivered`: Minor impact on sales flow, because the delivered quantity needs to be manually entered on the sales order. Or, the *Inventory* app can be installed and used to confirm the delivered quantity before creating an invoice with the *Sales* app."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:60
+msgid "If a user attempts to create an invoice without validating the delivered quantity, the following error message appears: :guilabel:`There is no invoiceable line. If a product has a Delivered quantities invoicing policy, please make sure that a quantity has been delivered.`"
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:0
-msgid "How the choice of your invoicing policy impacts your sales flow on Odoo Sales?"
+msgid "If Delivered Quantities invoicing policy is chosen, ensure a quantity has been delivered."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:65
-msgid "Once the quotation is confirmed and that the status went from **Quotation sent** to **Sales order**, you are able to see your delivered and invoiced quantities directly from your sales order (it is true for both rules)."
+#: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:69
+msgid "Once a quotation is confirmed, and the status changes from :guilabel:`Quotation sent` to :guilabel:`Sales order`, the delivered and invoiced quantities are available to view, directly from the sales order. This is true for both invoicing policy rule options."
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:-1
-msgid "How to see your delivered and invoiced quantities on Odoo Sales?"
+msgid "How to see your delivered and invoiced quantities on Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:74
-msgid "Odoo will automatically add the quantities to the invoice (even if it is a partial delivery)."
-msgstr ""
-
-#: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:76
-msgid "Finally, to create an invoice, you will have different possibilities: regular invoice or down payment (percentage or fixed amount)."
+#: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:77
+msgid "Odoo automatically adds the quantities to the invoice, both :guilabel:`Delivered` and :guilabel:`Invoiced`, even if it's a partial delivery, when the quotation is confirmed."
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:80
-msgid "Be sure to check out our documentation about down payment here: :doc:`down_payment`, to master this incredible feature."
+msgid "Finally, there are a few different options to create an invoice: :guilabel:`Regular invoice`, :guilabel:`Down payment (percentage)` or :guilabel:`Down payment (fixed amount)`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:84
+msgid "Be sure to check out the documentation explaining down payment options to learn more: :doc:`/applications/sales/sales/invoicing/down_payment`"
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/milestone.rst:3
@@ -5902,50 +5930,72 @@ msgid "Send Quotations"
 msgstr ""
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:3
-msgid "Use quotations deadline to stimulate your customers"
+msgid "Quotation deadlines"
 msgstr ""
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:5
-msgid "When sending quotations, it is important to set a deadline to encourage your customers to act. Indeed, this will stimulate them because they will be afraid of missing a good deal and it will also allow you to protect yourself in case you have to fulfill an order at a price that is no longer profitable for you."
+msgid "In the Odoo *Sales* application, it is possible to set deadlines on sales quotations. Doing so encourages customers to act quickly during sales negotiations, for they might fear for missing out on a good deal. As well, deadlines also can also act as protection for a company in case an order has to be fulfilled at a price that is no longer profitable for the business."
 msgstr ""
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:11
-msgid "Set a deadline"
+msgid "Expiration date deadlines"
 msgstr ""
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:13
-msgid "With Odoo Sales, it is possible to instantly add an **Expiration Date** from the quotation or the sales order."
+msgid "On an Odoo *Sales* quotation, add an expiration date in the :guilabel:`Expiration` field located at the top of the quotation or sales order form."
+msgstr ""
+
+#: ../../content/applications/sales/sales/send_quotations/deadline.rst:16
+msgid "To add an expiration date to a quotation, navigate to :menuselection:`Sales app`, and select a desired quotation, or create a new one by clicking :guilabel:`Create`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/send_quotations/deadline.rst:19
+msgid "On the quotation form, click :guilabel:`Edit` (if modifying a pre-existing quotation), and click the :guilabel:`Expiration` field. Doing so reveals a drop-down calendar, in which the month and date can be designated as the expiration date of the quotation."
 msgstr ""
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:-1
-msgid "How to configure deadlines on Odoo Sales?"
+msgid "How to configure deadlines on Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/deadline.rst:22
-msgid "Use deadline in your quotation templates"
+#: ../../content/applications/sales/sales/send_quotations/deadline.rst:27
+msgid "Once the expiration date is selected, click :guilabel:`Save` to save all changes."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/deadline.rst:24
-msgid "It is also possible to add a deadline to every quotation template created. Whenever a specific quotation template is used in a quote, its associated deadline will be automatically applied. Be sure to check out our documentation about :doc:`quote_template` to excel in their use."
+#: ../../content/applications/sales/sales/send_quotations/deadline.rst:30
+msgid "Deadlines in quotation templates"
+msgstr ""
+
+#: ../../content/applications/sales/sales/send_quotations/deadline.rst:32
+msgid "The Odoo *Sales* application also makes it possible to add a deadline to every quotation template. Whenever a specific quotation template is used in a quote, its associated deadline is automatically applied."
+msgstr ""
+
+#: ../../content/applications/sales/sales/send_quotations/deadline.rst:36
+msgid "To add a deadline to a quotation template, navigate to :menuselection:`Sales app --> Configuration --> Quotation Templates`, and either select the desired quotation template to which a deadline should be added, or click :guilabel:`Create` to build a new quotation template from scratch."
+msgstr ""
+
+#: ../../content/applications/sales/sales/send_quotations/deadline.rst:40
+msgid "On the quotation template detail page, click the :guilabel:`Edit` button to edit the quotation."
+msgstr ""
+
+#: ../../content/applications/sales/sales/send_quotations/deadline.rst:42
+msgid "Then, add a specific number of days to the :guilabel:`Quotation expires after` field, located beneath the quotation template name. The number of days represents how long the quotation will be valid for, before it expires. When done, click :guilabel:`Save`."
 msgstr ""
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:-1
-msgid "How to use deadline in a quotation template on Odoo Sales?"
+msgid "How to use deadline in a quotation template on Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/deadline.rst:34
-msgid "By clicking on the **Customer Preview** button, you will be able to see when the offer expires. For your information, the number of days will be the same as those mentioned in the quotation template."
+#: ../../content/applications/sales/sales/send_quotations/deadline.rst:51
+msgid "By clicking the :guilabel:`Customer Preview` button on a quotation, Odoo clearly displays when that specific offer expires. As a reminder, the number of days is the same as those mentioned in the quotation template (if a quotation template was used for the initial quotation)."
 msgstr ""
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:0
-msgid "How customers will see deadlines on Odoo Sales?"
+msgid "How customers will see deadlines on Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/deadline.rst:44
-#: ../../content/applications/sales/sales/send_quotations/get_paid_to_validate.rst:50
-#: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:51
-#: ../../content/applications/sales/sales/send_quotations/optional_products.rst:65
-msgid ":doc:`quote_template`"
+#: ../../content/applications/sales/sales/send_quotations/deadline.rst:60
+#: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:52
+msgid ":doc:`/applications/sales/sales/send_quotations/quote_template`"
 msgstr ""
 
 #: ../../content/applications/sales/sales/send_quotations/get_paid_to_validate.rst:3
@@ -5992,6 +6042,11 @@ msgstr ""
 msgid "By clicking on the **Customer Preview** button, you will be able to see what your customers will have to choose when it comes to payment."
 msgstr ""
 
+#: ../../content/applications/sales/sales/send_quotations/get_paid_to_validate.rst:50
+#: ../../content/applications/sales/sales/send_quotations/optional_products.rst:65
+msgid ":doc:`quote_template`"
+msgstr ""
+
 #: ../../content/applications/sales/sales/send_quotations/get_paid_to_validate.rst:51
 msgid ":doc:`/applications/finance/payment_providers`"
 msgstr ""
@@ -6005,48 +6060,55 @@ msgid ":doc:`/applications/finance/payment_providers/authorize`"
 msgstr ""
 
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:3
-msgid "Get a signature to confirm an order"
+msgid "Online signatures for order confirmations"
 msgstr ""
 
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:5
-msgid "Online signatures are like electronic \"fingerprints\". By using them on Odoo, you will get automatic orders confirmation. You and your customers will save a lot of time by using this feature compared to a traditional process."
+msgid "The Odoo *Sales* application provides customers with the ability to confirm orders via an online signature directly on the sales order. Once the sales order is electronically signed by the customer, the salesperson attached to the sales order is automatically notified that the order is confirmed."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:10
-msgid "Activate online signature"
+#: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:11
+msgid "Activate online signatures"
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:12
-msgid "Go to :menuselection:`Sales --> Configuration --> Settings` and activate the **Online Signature** feature."
+#: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:13
+msgid "To activate the *online signature* feature, go to :menuselection:`Sales app --> Configuration --> Settings`, scroll to the :guilabel:`Quotations & Orders` heading, and activate the :guilabel:`Online Signature` feature by checking the box beside it. Then, click the :guilabel:`Save` button in the top-left corner."
 msgstr ""
 
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:-1
+msgid "How to enable online signature in Odoo Sales settings."
+msgstr ""
+
+#: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:23
+msgid "On quotation templates, the :guilabel:`Online Signature` feature is located under the :guilabel:`Confirmation` tab."
+msgstr ""
+
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:0
-msgid "How to enable online signature on Odoo Sales?"
+msgid "How to enable online signature on a quotation template."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:21
-msgid "If you are familiar with this documentation: :doc:`quote_template`, you can activate or not the **Online Signature** feature for each quotation template you use, under their confirmation tab. Example:"
+#: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:30
+msgid "On standard quotations, the :guilabel:`Online Signature` feature is located under the :guilabel:`Other Info` tab."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:31
-msgid "Confirm an order with a signature"
+#: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:0
+msgid "How to enable online signature on standard quotations."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:33
-msgid "When you send quotations to clients, they can instantly accept and sign it online. When they click on **Sign & Pay**, they have the choice to draw their own signature, automatically fill in the field with an automated signature or load a file from their computer. Here below, it is an example of an automated signature:"
+#: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:38
+msgid "Order confirmations with online signatures"
+msgstr ""
+
+#: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:40
+msgid "When quotations are sent to clients, there's an option for them to :guilabel:`Sign & Pay` directly on the quotation in the online customer portal. When clicked, clients have the option to draw a signature, fill in the field with an automated signature, or load a file from their computer."
 msgstr ""
 
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:-1
-msgid "How to confirm an order with a signature on Odoo Sales?"
+msgid "How to confirm an order with a signature on Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:43
-msgid "Once signed, you will have the possibility to choose your payment methods. Then, when the quotation will be paid and confirmed, a delivery order will be created automatically by Odoo."
-msgstr ""
-
-#: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:47
-msgid "Be careful that delivery orders are only generated for storable products and if the **Inventory app** is already installed."
+#: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:48
+msgid "Once signed, the various payment method options become available. Then, when the quotation is paid and confirmed, a delivery order is automatically created (if the Odoo *Inventory* app is installed)."
 msgstr ""
 
 #: ../../content/applications/sales/sales/send_quotations/optional_products.rst:3
