@@ -50,18 +50,18 @@ a form view. For example:
     from odoo import fields, models
 
     class TestModel(models.Model):
-        _name = "test.model"
+        _name = "test_model"
         _description = "Test Model"
 
         description = fields.Char()
-        line_ids = fields.One2many("test.model.line", "model_id")
+        line_ids = fields.One2many("test_model_line", "model_id")
 
 
     class TestModelLine(models.Model):
-        _name = "test.model.line"
+        _name = "test_model_line"
         _description = "Test Model Line"
 
-        model_id = fields.Many2one("test.model")
+        model_id = fields.Many2one("test_model")
         field_1 = fields.Char()
         field_2 = fields.Char()
         field_3 = fields.Char()
@@ -78,7 +78,7 @@ a form view. For example:
         </field>
     </form>
 
-In the form view of the ``test.model``, we define a specific list view for ``test.model.line``
+In the form view of the `test_model`, we define a specific list view for `test_model_line`
 with fields ``field_1`` and ``field_2``.
 
 An example can be found
@@ -166,7 +166,7 @@ It will be converted to an order_by_ clause in SQL. For example:
     from odoo import fields, models
 
     class TestModel(models.Model):
-        _name = "test.model"
+        _name = "test_model"
         _description = "Test Model"
         _order = "id desc"
 
