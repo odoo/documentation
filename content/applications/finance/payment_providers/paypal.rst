@@ -92,26 +92,12 @@ Settings in Odoo
 .. seealso::
    :ref:`payment_providers/add_new`
 
-Credentials
------------
-
 Odoo needs your **API Credentials** to connect with your PayPal account. To do so, go to
 :menuselection:`Accounting --> Configuration --> Payment Providers` and :guilabel:`Activate` PayPal.
 Then, enter your PayPal account credentials in the :guilabel:`Credentials` tab:
 
 - :guilabel:`Email`: the login email address in Paypal;
 - :guilabel:`PDT Identity Token`: the key used to verify the authenticity of transactions.
-
-Extra fees
-----------
-
-You can charge :ref:`extra fees <payment_providers/features/extra_fees>` to customers choosing to
-pay with PayPal in order to cover the transaction fees PayPal charges you.
-
-.. note::
-   -  You can refer to `Paypal Fees <https://www.paypal.com/webapps/mpp/paypal-fees>`_ to set up
-      fees.
-   - `Traders in the EU <https://europa.eu/youreurope/citizens/consumers/shopping/pricing-payments/index_en.htm>`_ are not allowed to charge extra fees for paying with credit cards.
 
 .. _paypal/testing:
 
