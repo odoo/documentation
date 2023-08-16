@@ -92,7 +92,7 @@ access) and a set of permissions: create, read, write and unlink\ [#unlink]_. Su
 rights are usually defined in a CSV file named
 ``ir.model.access.csv``.
 
-Here is an example for our previous ``test.model``:
+Here is an example for our previous `test_model`:
 
 .. code-block:: text
 
