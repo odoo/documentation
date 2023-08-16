@@ -70,13 +70,13 @@ advanced topic. In our Real Estate example, we would like to link a menu to the 
 model, so we are able to create a new record. The action can be viewed as the link between the menu
 and the model.
 
-A basic action for our ``test.model`` is:
+A basic action for our `test_model` is:
 
 .. code-block:: xml
 
     <record id="test_model_action" model="ir.actions.act_window">
         <field name="name">Test action</field>
-        <field name="res_model">test.model</field>
+        <field name="res_model">test_model</field>
         <field name="view_mode">tree,form</field>
     </record>
 
@@ -135,7 +135,7 @@ A basic menu for our ``test_model_action`` is:
     <menuitem id="test_model_menu_action" action="test_model_action"/>
 
 The menu ``test_model_menu_action`` is linked to the action ``test_model_action``, and the action
-is linked to the model ``test.model``. As previously mentioned, the action can be seen as the link
+is linked to the model `test_model`. As previously mentioned, the action can be seen as the link
 between the menu and the model.
 
 However, menus always follow an architecture, and in practice there are three levels of menus:
