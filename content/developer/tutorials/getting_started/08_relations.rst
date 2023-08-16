@@ -217,7 +217,7 @@ A one2many is the inverse of a many2one. For example, we defined
 on our test model a link to the ``res.partner`` model thanks to the field ``partner_id``.
 We can define the inverse relation, i.e. the list of test models linked to our partner::
 
-    test_ids = fields.One2many("test.model", "partner_id", string="Tests")
+    test_ids = fields.One2many("test_model", "partner_id", string="Tests")
 
 The first parameter is called the ``comodel`` and the second parameter is the field we want to
 inverse.
