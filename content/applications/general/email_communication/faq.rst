@@ -41,9 +41,8 @@ our e-mail servers from being blacklisted.
 Here are the default limits for new databases:
 
 - 200 emails/day for Odoo Online and Odoo.sh databases with an active subscription,
-
-- 50 emails/day for one-app free and trial databases,
-
+- 20 emails/day for one-app free databases,
+- 50 emails/day for trial databases,
 - in case of migration, your daily limit might be reset to 50 emails a day.
 
 In case you hit the limit, you can:
