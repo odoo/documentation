@@ -40,7 +40,7 @@ Python inheritance::
     from odoo import fields, models
 
     class TestModel(models.Model):
-        _name = "test.model"
+        _name = "test_model"
         _description = "Test Model"
 
         ...
@@ -55,7 +55,7 @@ specific business logic::
     from odoo import fields, models
 
     class TestModel(models.Model):
-        _name = "test.model"
+        _name = "test_model"
         _description = "Test Model"
 
         ...
