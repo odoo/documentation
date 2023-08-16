@@ -138,12 +138,12 @@ made human readable with the :class:`~odoo.fields.Command` namespace. This names
 a triplet command to execute on a set of records. The triplet was originally the only option to
 do these commands, but it is now standard to use the namespace instead. The format is to place
 them in a list which is executed sequentially. Here is a simple example to include a One2many
-field ``line_ids`` at creation of a ``test.model``::
+field ``line_ids`` at creation of a ``test_model``::
 
     from odoo import Command
 
     def inherited_action(self):
-        self.env["test.model"].create(
+        self.env["test_model"].create(
             {
                 "name": "Test",
                 "line_ids": [
