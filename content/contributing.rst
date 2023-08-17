@@ -20,3 +20,4 @@ Odoo community alike, in all of its open-source `GitHub repositories
 
    contributing/development
    contributing/documentation
+   contributing/translations
