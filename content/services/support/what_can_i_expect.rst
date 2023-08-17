@@ -1,4 +1,5 @@
 :orphan:
+:nosearch:
 
 .. _support-expectations:
 
