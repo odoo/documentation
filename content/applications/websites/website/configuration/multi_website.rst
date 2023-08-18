@@ -152,7 +152,7 @@ Reporting
 Analytics
 ---------
 
-Each website has its own :doc:`analytics <../reporting/plausible>`. To switch between websites,
+Each website has its own :ref:`analytics <website/analytics/plausible>`. To switch between websites,
 click the buttons in the upper right corner.
 
 .. image:: multi_website/analytics-switch-websites.png
