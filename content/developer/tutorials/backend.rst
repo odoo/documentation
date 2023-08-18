@@ -971,7 +971,7 @@ Gantt
 -----
 
 .. warning::
-   The gantt view requires the web_gantt module which is present in the enterprise edition
+   The gantt view requires the web_gantt module which is present in the :ref:`enterprise edition
    <install/editions>` version.
 
 Horizontal bar charts typically used to show project planning and advancement,
