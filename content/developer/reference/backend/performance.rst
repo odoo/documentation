@@ -388,23 +388,18 @@ When working with recordsets, it is almost always better to batch operations.
               domain = [('related_id', '=', record.id)]
               record.count = other_model.search_count(domain)
 
-   Instead, replace the `search_count` with a `read_group` to execute one SQL query for the entire
+   Instead, replace the `search_count` with a `_read_group` to execute one SQL query for the entire
    batch of records.
 
    .. rst-class:: good-example
    .. code-block:: python
 
       def _compute_count(self):
-          if self.ids:
-              domain = [('related_id', 'in', self.ids)]
-              counts_data = other_model.read_group(domain, ['related_id'], ['related_id'])
-              mapped_data = {
-                  count['related_id'][0]: count['related_id_count'] for count in counts_data
-              }
-          else:
-              mapped_data = {}
+          domain = [('related_id', 'in', self.ids)]
+          counts_data = other_model._read_group(domain, ['related_id'], ['__count'])
+          mapped_data = dict(counts_data)
           for record in self:
-              record.count = mapped_data.get(record.id, 0)
+              record.count = mapped_data.get(record, 0)
 
    .. note::
       This example is not optimal nor correct in all cases. It is only a substitute for a
