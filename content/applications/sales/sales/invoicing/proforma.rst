@@ -7,23 +7,24 @@ notes the kind and quantity of goods, their value, and other important informati
 and transportation charges.
 
 Pro-forma invoices are commonly used as preliminary invoices with a quotation. They are also used
-for customs purposes during importation. They differ from a normal invoice in that they are not a
+during importation for customs purposes. They differ from a normal invoice, in that they are *not* a
 demand (or request) for payment.
 
-Activate the feature
-====================
+Configuration
+=============
 
-In order to utilize pro-forma invoices, the *Pro-Forma Invoice* feature **must** be activated. To do
-that, navigate to :menuselection:`Sales app --> Configuration --> Settings`, and in the
-:guilabel:`Quotations & Orders` section, click the checkbox next to :guilabel:`Pro-Forma Invoice`.
-Then, click :guilabel:`Save` to save all changes.
+In order to utilize pro-forma invoices, the *Pro-Forma Invoice* feature **must** be activated.
+
+To enable this feature, navigate to :menuselection:`Sales app --> Configuration --> Settings`, and
+in the :guilabel:`Quotations \& Orders` section, click the checkbox next to :guilabel:`Pro-Forma
+Invoice`. Then, click :guilabel:`Save` to save all changes.
 
 .. image:: proforma/pro-forma-setting.png
    :align: center
    :alt: The Pro-Forma Invoice feature setting in the Odoo Sales application.
 
-Send a pro-forma invoice
-========================
+Send pro-forma invoice
+======================
 
 With the :guilabel:`Pro-Forma Invoice` feature activated, the option to send a pro-forma invoice is
 now available on any quotation or sales order, via the :guilabel:`Send Pro-Forma Invoice` button.
@@ -32,15 +33,28 @@ now available on any quotation or sales order, via the :guilabel:`Send Pro-Forma
    :align: center
    :alt: The Send Pro-Forma Invoice button on a typical sales order in Odoo Sales.
 
-When the :guilabel:`Send Pro-Forma Invoice` button is clicked, an email pop-up appears. The
-:guilabel:`Recipients` field is auto-populated with the customer from the sales order or quotation.
-Then, if needed, modify the :guilabel:`Subject` field and the body of the email. The pro-forma
-invoice is automatically added as an attachment to the email.
+.. note::
+   Pro-forma invoices can **not** be sent for a sales order or quotation if an invoice for a down
+   payment has already been sent, or for a recurring subscription.
+
+   In either case, the :guilabel:`Send Pro-Froma Invoice` button does **not** appear.
+
+   However, pro-forma invoices **can** be sent for services, event registrations, courses, and/or
+   new subscriptions. Pro-forma invoices are not limited to physical, consumable, or storable goods.
+
+When the :guilabel:`Send Pro-Forma Invoice` button is clicked, a pop-up window appears, from which
+an email can be sent.
+
+In the pop-up window, the :guilabel:`Recipients` field is auto-populated with the customer from the
+sales order or quotation. The :guilabel:`Subject` field and the body of the email can be modified,
+if necessary.
+
+The pro-forma invoice is automatically added as an attachment to the email.
 
 When ready, click :guilabel:`Send`, and Odoo instantly sends the email, with the attached pro-forma
 invoice, to the customer.
 
-.. image:: proforma/pro-forma-email-message-popup.png
+.. image:: proforma/pro-forma-email-message-pop-up.png
    :align: center
    :alt: The email pop-up window that appears with pro-forma invoice attached in Odoo Sales.
 
@@ -52,3 +66,6 @@ invoice, to the customer.
    .. image:: proforma/pro-forma-pdf.png
       :align: center
       :alt: Sample pro-forma invoice PDF from Odoo Sales.
+
+.. seealso::
+   :doc:`invoicing_policy`
