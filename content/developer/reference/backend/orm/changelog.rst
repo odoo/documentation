@@ -4,6 +4,12 @@
 Changelog
 =========
 
+Odoo Online version 17.2
+========================
+
+- We can now group/aggregate/order by related no-store field with
+  `#127353 <https://github.com/odoo/odoo/pull/127353>`_.
+
 Odoo Online version 17.1
 ========================
 
