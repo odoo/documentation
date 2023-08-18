@@ -7,6 +7,5 @@ Reporting
 .. toctree::
    :titlesonly:
 
+   reporting/analytics
    reporting/link_tracker
-   reporting/plausible
-   reporting/google_analytics
