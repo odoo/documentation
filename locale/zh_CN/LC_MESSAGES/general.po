@@ -25,7 +25,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-07 06:24+0000\n"
+"POT-Creation-Date: 2023-08-14 09:23+0000\n"
 "PO-Revision-Date: 2021-11-02 08:47+0000\n"
 "Last-Translator: Emily Jia <eji@odoo.com>, 2023\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/odoo/teams/41243/zh_CN/)\n"
@@ -172,6 +172,7 @@ msgid ""
 msgstr "卸载应用还会卸载其所有依赖项并永久擦除其数据。"
 
 #: ../../content/applications/general/auth.rst:5
+#: ../../content/applications/general/auth/azure.rst:79
 msgid "Authentication"
 msgstr "认证"
 
@@ -347,17 +348,301 @@ msgstr ""
 
 #: ../../content/applications/general/auth/azure.rst:5
 msgid ""
-"Due to specific requirements in Azure's OAuth implementation, Microsoft "
-"Azure OAuth identification is NOT compatible with Odoo at the moment."
-msgstr "因Azure云平台OAuth鉴权接口实现中的特殊需求，微软Azure云OAuth身份认证当前与Odoo不兼容."
+"The Microsoft Azure OAuth sign-in authentication is a useful function that "
+"allows Odoo users to sign in to their database with their Microsoft Azure "
+"account."
+msgstr ""
 
-#: ../../content/applications/general/auth/azure.rst:9
+#: ../../content/applications/general/auth/azure.rst:8
+msgid ""
+"This is particularly helpful if the organization uses Azure Workspace, and "
+"wants employees within the organization to connect to Odoo using their "
+"Microsoft Accounts."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:12
+msgid ""
+"Databases hosted on Odoo.com should not use OAuth login for the owner or "
+"administrator of the database as it would unlink the database from their "
+"Odoo.com account. If OAuth is set up for that user, the database will no "
+"longer be able to be duplicated, renamed, or otherwise managed from the "
+"Odoo.com portal."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:19
 msgid ":doc:`../../productivity/calendar/outlook`"
 msgstr ""
 
-#: ../../content/applications/general/auth/azure.rst:10
+#: ../../content/applications/general/auth/azure.rst:20
 #: ../../content/applications/general/email_communication/email_servers.rst:67
 msgid ":doc:`/administration/maintain/azure_oauth`"
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:23
+#: ../../content/applications/general/auth/google.rst:24
+#: ../../content/applications/general/voip/axivox.rst:16
+#: ../../content/applications/general/voip/onsip.rst:13
+msgid "Configuration"
+msgstr "基础配置"
+
+#: ../../content/applications/general/auth/azure.rst:25
+msgid ""
+"Integrating the Microsoft sign-in function requires configuration on "
+"Microsoft and Odoo."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:28
+msgid "Odoo System Parameter"
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:30
+msgid ""
+"First activate the :ref:`developer mode <developer-mode>`, and then go to "
+":menuselection:`Settings --> Technical --> System Parameters`."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:33
+msgid ""
+"Click :guilabel:`Create` and on the new/blank form that appears, add the "
+"following system parameter `auth_oauth.authorization_header` to the "
+":guilabel:`Key` field, and set the :guilabel:`Value` to `1`. Then click "
+":guilabel:`Save` to finish."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:38
+msgid "Microsoft Azure dashboard"
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:41
+msgid "Create a new application"
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:43
+msgid ""
+"Now that the system parameters in Odoo have been set up, it's time to create"
+" a corresponding application inside of Microsoft Azure. To get started "
+"creating the new application, go to `Microsoft's Azure Portal "
+"<https://portal.azure.com/>`_. Log in with the :guilabel:`Microsoft Outlook "
+"Office 365` account if there is one, otherwise, log in with a personal "
+":guilabel:`Microsoft account`."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:50
+msgid ""
+"A user with administrative access to the *Azure Settings* must connect and "
+"perform the following configuration steps below."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:53
+msgid ""
+"Next, navigate to the section labeled :guilabel:`Manage Azure Active "
+"Directory`. The location of this link is usually in the center of the page."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:56
+msgid ""
+"Now, click on the :guilabel:`Add (+)` icon, located in the top menu, and "
+"then select :guilabel:`App registration` from the drop-down menu. On the "
+":guilabel:`Register an application` screen, rename the :guilabel:`Name` "
+"field to `Odoo Login OAuth` or a similarly recognizable title. Under the "
+":guilabel:`Supported account types` section select the option for "
+":guilabel:`Accounts in this organizational directory only (Default Directory"
+" only - Single tenant)`."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:63
+msgid ""
+"The :guilabel:`Supported account types` can vary by Microsoft account type "
+"and end use of the OAuth. For example: Is the login meant for internal users"
+" within one organization or is it meant for customer portal access? The "
+"above configuration is used for internal users in an organization."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:68
+msgid ""
+"Choose :guilabel:`Personal Microsoft accounts only` if the target audience "
+"is meant for portal users. Choose :guilabel:`Accounts in this organizational"
+" directory only (Default Directory only - Single tenant)` if the target "
+"audience is company users."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:72
+msgid ""
+"Under the :guilabel:`Redirect URL` section, select :guilabel:`Web` as the "
+"platform, and then input `https://<odoo base url>/auth_oauth/signin` in the "
+":guilabel:`URL` field. The Odoo base :abbr:`URL (Uniform Resource Locator)` "
+"is the canonical domain at which your Odoo instance can be reached (e.g. "
+"*mydatabase.odoo.com* if you are hosted on Odoo.com) in the :guilabel:`URL` "
+"field. Then, click :guilabel:`Register`, and the application is created."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:81
+msgid ""
+"Edit the new app's authentication by clicking on the "
+":guilabel:`Authentication` menu item in the left menu after being redirected"
+" to the application's settings from the previous step."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:84
+msgid ""
+"Next, the type of *tokens* needed for the OAuth authentication will be "
+"chosen. These are not currency tokens but rather authentication tokens that "
+"are passed between Microsoft and Odoo. Therefore, there is no cost for these"
+" tokens; they are used merely for authentication purposes between two "
+":abbr:`APIs (application programming interfaces)`. Select the tokens that "
+"should be issued by the authorization endpoint by scrolling down the screen "
+"and check the boxes labeled: :guilabel:`Access tokens (used for implicit "
+"flows)` and :guilabel:`ID tokens (used for implicit and hybrid flows)`."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst-1
+msgid "Authentication settings and endpoint tokens."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:96
+msgid "Click :guilabel:`Save` to ensure these settings are saved."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:99
+msgid "Gather credentials"
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:101
+msgid ""
+"With the application created and authenticated in the Microsoft Azure "
+"console, credentials will be gathered next. To do so, click on the "
+":guilabel:`Overview` menu item in the left-hand column. Select and copy the "
+":guilabel:`Application (client) ID` in the window that appears. Paste this "
+"credential to a clipboard / notepad, as this credential will be used in the "
+"Odoo configuration later."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:106
+msgid ""
+"After finishing this step, click on :guilabel:`Endpoints` on the top menu "
+"and click the *copy icon* next to :guilabel:`OAuth 2.0 authorization "
+"endpoint (v2)` field. Paste this value in the clipboard / notepad."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst-1
+msgid "Application ID and OAuth 2.0 authorization endpoint (v2) credentials."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:115
+msgid "Odoo setup"
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:117
+msgid ""
+"Finally, the last step in the Microsoft Azure OAuth configuration is to "
+"configure some settings in Odoo. Navigate to :menuselection:`Settings --> "
+"Integrations --> OAuth Authentication` and check the box to activate the "
+"OAuth login feature. Click :guilabel:`Save` to ensure the progress is saved."
+" Then, sign in to the database once the login screen loads."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:122
+msgid ""
+"Once again, navigate to :menuselection:`Settings --> Integrations --> OAuth "
+"Authentication` and click on :guilabel:`OAuth Providers`. Now, select "
+":guilabel:`New` in the upper-left corner and name the provider `Azure`."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:126
+msgid ""
+"Paste the :guilabel:`Application (client) ID` from the previous section into"
+" the :guilabel:`Client ID` field. After completing this, paste the new "
+":guilabel:`OAuth 2.0 authorization endpoint (v2)` value into the "
+":guilabel:`Authorization URL` field."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:130
+msgid ""
+"For the :guilabel:`UserInfo URL` field, paste the following :abbr:`URL "
+"(Uniform Resource Locator)`: `https://graph.microsoft.com/oidc/userinfo`"
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:133
+msgid ""
+"In the :guilabel:`Scope` field, paste the following value: `openid profile "
+"email`. Next, the Windows logo can be used as the CSS class on the login "
+"screen by entering the following value: `fa fa-fw fa-windows`, in the "
+":guilabel:`CSS class` field."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:137
+msgid ""
+"Check the box next to the :guilabel:`Allowed` field to enable the OAuth "
+"provider. Finally, add `Microsoft Azure` to the :guilabel:`Login button "
+"label` field. This text will appear next to the Windows logo on the login "
+"page."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst-1
+msgid "Odoo provider setup in the Settings application."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:145
+msgid ""
+":guilabel:`Save` the changes to complete the OAuth authentication setup in "
+"Odoo."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:148
+msgid "User experience flows"
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:150
+msgid ""
+"For a user to log in to Odoo using Microsoft Azure, the user must be on the "
+":menuselection:`Odoo password reset page`. This is the only way that Odoo is"
+" able to link the Microsoft Azure account and allow the user to log in."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:155
+msgid ""
+"Existing users must :ref:`reset their password <users/reset-password>` to "
+"access the :menuselection:`Odoo password reset page`. New Odoo users must "
+"click the new user invitation link that was sent via email, then click on "
+":guilabel:`Microsoft Azure`. Users should not set a new password."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:160
+msgid ""
+"To sign in to Odoo for the first time using the Microsoft Azure OAuth "
+"provider, navigate to the :menuselection:`Odoo password reset page` (using "
+"the new user invitation link). A password reset page should appear. Then, "
+"click on the option labeled :guilabel:`Microsoft Azure`. The page will "
+"redirect to the Microsoft login page."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst-1
+msgid "Microsoft Outlook login page."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:169
+msgid ""
+"Enter the :guilabel:`Microsoft Email Address` and click :guilabel:`Next`. "
+"Follow the process to sign in to the account. Should :abbr:`2FA (Two Factor "
+"Authentication)` be turned on, then an extra step may be required."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst-1
+msgid "Enter Microsoft login credentials."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:177
+msgid ""
+"Finally, after logging in to the account, the page will redirect to a "
+"permissions page where the user will be prompted to :guilabel:`Accept` the "
+"conditions that the Odoo application will access their Microsoft "
+"information."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst-1
+msgid ""
+"Accept Microsoft conditions for permission access to your account "
+"information."
 msgstr ""
 
 #: ../../content/applications/general/auth/google.rst:3
@@ -378,36 +663,39 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/general/auth/google.rst:12
+msgid ""
+"Databases hosted on Odoo.com should not use Oauth login for the owner or "
+"administrator of the database as it would unlink the database from their "
+"Odoo.com account. If Oauth is set up for that user, the database will no "
+"longer be able to be duplicated, renamed or otherwise managed from the "
+"Odoo.com portal."
+msgstr ""
+
+#: ../../content/applications/general/auth/google.rst:18
 msgid ":doc:`/applications/productivity/calendar/google`"
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:13
+#: ../../content/applications/general/auth/google.rst:19
 #: ../../content/applications/general/email_communication/email_servers.rst:66
 msgid ":doc:`/administration/maintain/google_oauth`"
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:18
-#: ../../content/applications/general/voip/axivox.rst:16
-#: ../../content/applications/general/voip/onsip.rst:13
-msgid "Configuration"
-msgstr "基础配置"
-
-#: ../../content/applications/general/auth/google.rst:20
+#: ../../content/applications/general/auth/google.rst:26
 msgid ""
 "The integration of the Google sign-in function requires configuration both "
 "on Google *and* Odoo."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:25
+#: ../../content/applications/general/auth/google.rst:31
 msgid "Google API Dashboard"
 msgstr "Google API Dashboard"
 
-#: ../../content/applications/general/auth/google.rst:27
+#: ../../content/applications/general/auth/google.rst:33
 msgid ""
 "Go to the `Google API Dashboard <https://console.developers.google.com/>`_."
 msgstr "转到“Google API Dashboard <https://console.developers.google.com/>”_。"
 
-#: ../../content/applications/general/auth/google.rst:28
+#: ../../content/applications/general/auth/google.rst:34
 msgid ""
 "Make sure the right project is opened. If there isn't a project yet, click "
 "on :guilabel:`Create Project`, fill out the project name and other details "
@@ -418,15 +706,15 @@ msgstr ""
 msgid "Filling out the details of a new project."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:37
+#: ../../content/applications/general/auth/google.rst:43
 msgid "Choose the name of the company from the drop-down menu."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:42
+#: ../../content/applications/general/auth/google.rst:48
 msgid "OAuth consent screen"
 msgstr "OAuth 同意屏幕"
 
-#: ../../content/applications/general/auth/google.rst:44
+#: ../../content/applications/general/auth/google.rst:50
 msgid "On the left side menu, click on :menuselection:`OAuth consent screen`."
 msgstr "在左侧菜单中，单击：menuselection：`OAuth同意屏幕`。"
 
@@ -434,7 +722,7 @@ msgstr "在左侧菜单中，单击：menuselection：`OAuth同意屏幕`。"
 msgid "Google OAuth consent selection menu."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:50
+#: ../../content/applications/general/auth/google.rst:56
 msgid ""
 "Choose one of the options (:guilabel:`Internal` / :guilabel:`External`), and"
 " click on :guilabel:`Create`."
@@ -444,7 +732,7 @@ msgstr ""
 msgid "Choice of a user type in OAuth consent."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:58
+#: ../../content/applications/general/auth/google.rst:64
 msgid ""
 "*Personal* Gmail Accounts are only allowed to be **External** User Type, "
 "which means Google may require an approval, or for *Scopes* to be added on. "
@@ -452,26 +740,26 @@ msgid ""
 "Type to be used."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:62
+#: ../../content/applications/general/auth/google.rst:68
 msgid ""
 "Note, as well, that while the API connection is in the *External* testing "
 "mode, then no approval is necessary from Google. User limits in this testing"
 " mode is set to 100 users."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:65
+#: ../../content/applications/general/auth/google.rst:71
 msgid ""
 "Fill out the required details and domain info, then click on :guilabel:`Save"
 " and Continue`."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:66
+#: ../../content/applications/general/auth/google.rst:72
 msgid ""
 "On the :menuselection:`Scopes` page, leave all fields as is, and click on "
 ":guilabel:`Save and Continue`."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:68
+#: ../../content/applications/general/auth/google.rst:74
 msgid ""
 "Next, if continuing in testing mode (*External*), add the email addresses "
 "being configured under the :guilabel:`Test users` step by clicking on "
@@ -479,16 +767,16 @@ msgid ""
 "summary of the app registration appears."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:71
+#: ../../content/applications/general/auth/google.rst:77
 msgid ""
 "Finally, scroll to the bottom, and click on :guilabel:`Back to Dashboard`."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:76
+#: ../../content/applications/general/auth/google.rst:82
 msgid "Credentials"
 msgstr "授权认证"
 
-#: ../../content/applications/general/auth/google.rst:78
+#: ../../content/applications/general/auth/google.rst:84
 msgid "On the left side menu, click on :menuselection:`Credentials`."
 msgstr "在左侧菜单中，单击：menuselection：`凭据`。"
 
@@ -496,7 +784,7 @@ msgstr "在左侧菜单中，单击：menuselection：`凭据`。"
 msgid "Credentials button menu."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:84
+#: ../../content/applications/general/auth/google.rst:90
 msgid ""
 "Click on :guilabel:`Create Credentials`, and select :guilabel:`OAuth client "
 "ID`."
@@ -506,13 +794,13 @@ msgstr ""
 msgid "OAuth client id selection."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:90
+#: ../../content/applications/general/auth/google.rst:96
 msgid ""
 "Select :guilabel:`Web Application` as the :guilabel:`Application Type`. Now,"
 " configure the allowed pages on which Odoo will be redirected."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:93
+#: ../../content/applications/general/auth/google.rst:99
 msgid ""
 "In order to achieve this, in the :guilabel:`Authorized redirect URIs` field,"
 " enter the database's domain immediately followed by `/auth_oauth/signin`. "
@@ -520,7 +808,7 @@ msgid ""
 ":guilabel:`Create`."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:97
+#: ../../content/applications/general/auth/google.rst:103
 msgid ""
 "Now that the *OAuth client* has been created, a screen will appear with the "
 ":guilabel:`Client ID` and :guilabel:`Client Secret`. Copy the "
@@ -528,15 +816,15 @@ msgid ""
 "configuration in Odoo, which will be covered in the following steps."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:104
+#: ../../content/applications/general/auth/google.rst:110
 msgid "Google Authentication on Odoo"
 msgstr "谷歌身份验证在Odoo上"
 
-#: ../../content/applications/general/auth/google.rst:109
+#: ../../content/applications/general/auth/google.rst:115
 msgid "Retrieve the Client ID"
 msgstr "检索客户端 ID"
 
-#: ../../content/applications/general/auth/google.rst:111
+#: ../../content/applications/general/auth/google.rst:117
 msgid ""
 "Once the previous steps are complete, two keys are generated on the Google "
 "API Dashboard: :guilabel:`Client ID` and :guilabel:`Client Secret`. Copy the"
@@ -547,21 +835,21 @@ msgstr ""
 msgid "Google OAuth Client ID generated."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:121
+#: ../../content/applications/general/auth/google.rst:127
 msgid "Odoo activation"
 msgstr "Odoo 激活"
 
-#: ../../content/applications/general/auth/google.rst:123
+#: ../../content/applications/general/auth/google.rst:129
 msgid ""
 "Go to :menuselection:`Odoo General Settings --> Integrations` and activate "
 ":guilabel:`OAuth Authentication`."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:127
+#: ../../content/applications/general/auth/google.rst:133
 msgid "Odoo may prompt the user to log-in again after this step."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:129
+#: ../../content/applications/general/auth/google.rst:135
 msgid ""
 "Go back to :menuselection:`General Settings --> Integrations --> OAuth "
 "Authentication`, activate the selection and :guilabel:`Save`. Next, return "
@@ -575,18 +863,18 @@ msgstr ""
 msgid "Filling out the client id in Odoo settings."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:139
+#: ../../content/applications/general/auth/google.rst:145
 msgid ""
 "Google OAuth2 configuration can also be accessed by clicking on "
 ":guilabel:`OAuth Providers` under the :guilabel:`OAuth Authentication` "
 "heading in :menuselection:`Integrations`."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:145
+#: ../../content/applications/general/auth/google.rst:151
 msgid "Log in to Odoo with Google"
 msgstr "使用谷歌登录Odoo"
 
-#: ../../content/applications/general/auth/google.rst:147
+#: ../../content/applications/general/auth/google.rst:153
 msgid ""
 "To link the Google account to the Odoo profile, click on :guilabel:`Log in "
 "with Google` when first logging into Odoo."
@@ -596,7 +884,7 @@ msgstr ""
 msgid "Reset password screen with \"Log in with Google\" button."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:155
+#: ../../content/applications/general/auth/google.rst:161
 msgid ""
 "Existing users must :ref:`reset their password <users/reset-password>` to "
 "access the :menuselection:`Reset Password` page, while new users can "
@@ -604,7 +892,7 @@ msgid ""
 "password."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:160
+#: ../../content/applications/general/auth/google.rst:166
 msgid ""
 "`Google Cloud Platform Console Help - Setting up OAuth 2.0 "
 "<https://support.google.com/cloud/answer/6158849>`_"
