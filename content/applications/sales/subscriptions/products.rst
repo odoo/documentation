@@ -2,7 +2,7 @@
 Subscription products
 =====================
 
-By integrating closely with the Odoo *Sales* app, the *Subscriptions* app enables users to sell
+By closely integrating with the Odoo *Sales* app, the *Subscriptions* app enables users to sell
 subscription products alongside regular sales products. While regular products are sold on a
 one-time basis, subscription products are sold on a renewing basis, generating recurring revenue.
 
@@ -11,78 +11,107 @@ In Odoo, subscription products are also called *recurring* products.
 Configure recurrence periods
 ============================
 
-To get started with subscriptions, first make sure that the *recurrence periods* are configured as
-needed.
+To get started with subscriptions, the *recurrence periods* must be properly configured, as needed.
 
 Recurrence periods are the time periods in which subscriptions renew. They designate how often the
 customer pays for (and receives) subscription products.
 
-To configure recurrence periods, go to :menuselection:`Subscriptions --> Configuration -->
-Recurrence Periods`.
+To configure recurrence periods, go to :menuselection:`Subscriptions app --> Configuration -->
+Recurrence periods`.
 
-The *Subscriptions* app comes with some basic recurrence periods already configured: Daily, Monthly,
-Quarterly, Weekly, Yearly, 3 Years, and 5 Years. These can be edited as needed, and any number of
-new recurrence periods can be added.
+.. image:: products/recurrence-periods-page.png
+   :align: center
+   :alt: The recurrence periods page in Odoo Subscriptions application.
 
-To create a new recurrence period, click :guilabel:`New` on the recurrence periods dashboard. Then,
-type in the :guilabel:`Name` and :guilabel:`Duration` of the recurrence period, and select the
+The *Subscriptions* app comes with some basic recurrence periods already configured:
+
+- :guilabel:`Monthly`
+- :guilabel:`Quarterly`
+- :guilabel:`Weekly`
+- :guilabel:`2 Weeks`
+- :guilabel:`Yearly`
+- :guilabel:`3 Years`
+- :guilabel:`5 Years`
+
+New recurrence periods can be added and/or edited at any time.
+
+To create a new recurrence period, click :guilabel:`New` on the :guilabel:`Recurrence Periods` page.
+Doing so reveals a blank recurrence period form.
+
+.. image:: products/recurrence-period-form.png
+   :align: center
+   :alt: A recurrence period form in Odoo Subscriptions application.
+
+Then, type in the :guilabel:`Name` and :guilabel:`Duration` of the recurrence period, and select the
 :guilabel:`Unit` that defines the duration.
 
-.. example::
-   To create a recurrence period for a subscription that will renew every two weeks, set the
-   :guilabel:`Duration` to `2` and the :guilabel:`Unit` to `Weeks`.
+.. important::
+   The unit :guilabel:`Days` *cannot* be used as a recurrence period on subscriptions. The daily
+   recurrence is meant for rentals, and **cannot** be added on recurring subscription sales orders.
 
-   .. image:: products/recurrence-period-form.png
-      :align: center
-      :alt: A recurrence period of 2 weeks.
+   This limitation is there to avoid sales orders that would generate daily invoices.
 
-Configure the product form
+Product form configuration
 ==========================
 
-To create a new subscription product, navigate to the :menuselection:`Subscriptions` app. Then go to
-:menuselection:`Subscriptions --> Products`, and click :guilabel:`New` to create a new product.
-Enter a :guilabel:`Product Name`.
+To create a new subscription product, navigate to :menuselection:`Subscriptions app --> Products -->
+Products`, and click :guilabel:`New`.
 
-The :guilabel:`Product Type` for the new product is automatically set to :guilabel:`Service`.
-Subscription products can be set to other types as well; however, they currently *cannot* be set to
-:guilabel:`Storable Product`.
+Doing so reveals a blank product form, which can be configured and customized in a number of ways.
 
-The new product automatically has the :guilabel:`Recurring` checkbox activated. This enables Odoo to
-recognize it as a subscription product. Be sure to leave the :guilabel:`Recurring` and
-:guilabel:`Can be Sold` options enabled.
+.. note::
+   By default, the :guilabel:`Recurring` option is already enabled, prompting Odoo to recognize it
+   as a subscription product. Be sure to leave the :guilabel:`Recurring` and :guilabel:`Can be Sold`
+   options enabled.
 
-.. image:: products/recurring-product-form.png
+   The :guilabel:`Product Type` field is set to :guilabel:`Service` by default, as well. However,
+   subscription products *can* be set to other types, if needed.
+
+.. image:: products/subscription-product-form.png
    :align: center
-   :alt: The "Recurring" checkbox on the product form.
+   :alt: A basic subscription product form in Odoo Subscriptions application.
 
 Time-based pricing
 ------------------
 
-Next, configure the :guilabel:`Time-based pricing` tab on the product form.
+Once the desired fields in the :guilabel:`General Information` tab have been entered, click the
+:guilabel:`Time-based pricing` tab on the product form.
 
-Click :guilabel:`Add a price` to begin defining recurring prices. In the :guilabel:`Period` column,
-select a recurrence period. In the :guilabel:`Price` column, enter the price for that recurrence
-period.
+.. image:: products/time-based-pricing-tab.png
+   :align: center
+   :alt: The time-based pricing tab on a subscription product form in Odoo Subscriptions.
+
+From here, click :guilabel:`Add a price` to begin defining recurring prices.
+
+In the :guilabel:`Period` column, select a desired recurrence period. In the :guilabel:`Pricelist`
+column, select a pricelist, if needed. Then, in the :guilabel:`Price` column, enter the price for
+that recurrence period.
 
 .. note::
-   :guilabel:`Daily` and :guilabel:`Hourly` periods cannot be used on recurring products.
+   :guilabel:`Daily` and :guilabel:`Hourly` periods **cannot** be used on recurring products.
 
-Add as many lines as needed to the :guilabel:`Time-based pricing` table.
+   .. image:: products/validation-error-popup.png
+      :align: center
+      :alt: The validation error pop-up window that appears in Odoo Subscriptions.
 
 .. note::
-   An existing product can be made into a subscription product simply by marking it as
-   :guilabel:`Recurring` and configuring :guilabel:`Time-based pricing` on the product form.
+   There is *no limit* to how many lines can be added to the :guilabel:`Time-based pricing` table.
 
-   A subscription product can still be sold as a regular product by adding it to a quotation and
+.. tip::
+   An existing product can be made into a subscription product, simply by marking it as
+   :guilabel:`Recurring`, and configuring :guilabel:`Time-based pricing` on the product form.
+
+   A subscription product can still be sold as a regular product, by adding it to a quotation and
    *not* selecting a :guilabel:`Recurrence` on the quotation.
 
 Pricelists
 ~~~~~~~~~~
 
-Use :doc:`pricelists </applications/sales/sales/products_prices/prices/pricing>` with subscription
-products to give special pricing to customers included in pricelists. This can be configured either
-in the :guilabel:`Time-based pricing` tab of the product form, or on the pricelist form in the
-*Sales* app.
+:doc:`Pricelists <../sales/products_prices/prices/pricing>` can be used with subscription products
+to give special pricing to customers included in pricelists.
+
+This can be configured either in the :guilabel:`Time-based pricing` tab of the product form, or on
+the pricelist form in the *Sales* application.
 
 To create recurring price rules for specific pricelists in the :guilabel:`Time-based pricing` tab of
 the product form, select a pricelist in the :guilabel:`Pricelist` column.
@@ -94,13 +123,28 @@ the product form, select a pricelist in the :guilabel:`Pricelist` column.
 When pricelists are added to the :guilabel:`Time-based pricing` tab, the pricelist form in the
 *Sales* app is automatically updated.
 
-Time-based pricing rules can also be configured directly on the pricelist form. To do this, go to
-:menuselection:`Sales --> Products --> Pricelists` and select a pricelist (or click :guilabel:`New`
-to create a new pricelist). In the :guilabel:`Time-based rules` tab, click :guilabel:`Add a line`.
+Time-based pricing rules can also be configured directly on the pricelist form.
+
+To do this, go to :menuselection:`Sales app --> Products --> Pricelists`, and select a pricelist (or
+click :guilabel:`New` to create a new pricelist).
+
+.. note::
+   Pricelists are also accessible through the Odoo *Subscriptions* app by following the same menu
+   steps.
+
+Then, on the pricelist form, under the :guilabel:`Time-based rules` tab, click :guilabel:`Add a
+line`.
+
+.. image:: products/pricelist-form-time-based-rules-tab.png
+   :align: center
+   :alt: The time-based rules tab on a pricelist form in Odoo Sales.
 
 Then, select a subscription product in the :guilabel:`Products` column, and select a recurrence
-period in the :guilabel:`Period` column. Enter a :guilabel:`Price` for that particular product and
-period. Add as many lines as needed.
+period in the :guilabel:`Period` column. Lastly, enter a :guilabel:`Price` for that particular
+product and period. Add as many lines as needed.
 
 When :guilabel:`Time-based rules` are added to the pricelist form, the :guilabel:`Time-based
 pricing` tab of the product form is automatically updated.
+
+.. seealso::
+   :doc:`ecommerce`
