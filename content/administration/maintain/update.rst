@@ -142,7 +142,7 @@ version, you can use the following command::
 
      git reset --hard
 
-Now update your database with the newly downloaded source code:
+Now update your database with the newly downloaded source code::
 
      odoo-bin -c <your-configuration-file> -u all -d <your-database-name> --stop-after-init
 
