@@ -2,18 +2,18 @@
 Sign
 ====
 
-**Odoo Sign** allows you to send, sign and approve documents online, using electronic signatures.
+**Odoo Sign** allows you to send, sign, and approve documents online, using electronic signatures.
 
 An **electronic signature** shows a person's agreement to the content of a document. Just like a
 handwritten signature, the electronic one represents a legal bounding by the terms of the signed
 document.
 
-With Sign, you can upload any PDF file and add fields to it. These fields are automatically filled
-in with the user's details present in your database.
+With Sign, you can upload any PDF file and add fields to it. These fields can be automatically
+filled in with the user's details present in your database.
 
 .. seealso::
    - `Odoo Sign: product page <https://www.odoo.com/app/sign>`_
-   - `Odoo Tutorials: Sign <https://www.odoo.com/slides/sign-61>`_
+   - `Odoo Tutorials: Sign [video] <https://www.odoo.com/slides/sign-61>`_
 
 Validity of electronic signatures
 =================================
@@ -82,16 +82,60 @@ Overall, to be recognized as valid, electronic signatures have to meet five crit
    is up-to-date. We advise contacting a local attorney for legal advice regarding electronic
    signature compliance and validity.
 
+Send a document to sign
+=======================
+
+One-time signature
+------------------
+
+You can click :guilabel:`Upload a PDF to sign` from your dashboard for a one-time signature. Select
+your document, open it, and drag and drop the required :ref:`fields <sign/fields>` in your document.
+You can modify the :ref:`role <sign/role>` assigned to a field by clicking on it and selecting the
+one you want.
+
+When ready, click :guilabel:`Send`, and fill in the required fields. Once sent, your document
+remains available. Go to :menuselection:`Documents --> All Documents` to see your document
+and the status of the signatures.
+
+.. image:: sign/signature-status.png
+   :alt: Signature status
+
+Templates
+---------
+
+You can create document templates when you have to send the same document several times. From your
+dashboard, click :guilabel:`Upload a PDF template`. Select the document and add the required
+:ref:`fields <sign/fields>`. You can modify the :ref:`role <sign/role>` of a field by clicking on it
+and selecting the one you want.
+
+Click :guilabel:`Template Properties` to add :guilabel:`Tags` to your template, define a
+:guilabel:`Signed Document Workspace`, add :guilabel:`Signed Document Tags`, set a
+:guilabel:`Redirect Link` that will be available in the signature confirmation message received
+after the signature, or define :guilabel:`Authorized Users` if you want to restrict the use of your
+template to specific authorized users or groups.
+
+Your templates are visible by default on your dashboard. You can click :guilabel:`Send` to quickly
+send a document template to a signer or :guilabel:`Sign Now` if you are ready to sign your document
+immediately.
+
+.. tip::
+   You can **create a template from a document that was previously sent**. To do so, go to
+   :menuselection:`Documents --> All Documents`. On the document you want to retrieve, click on
+   ⋮, then :guilabel:`Template`. Click on ⋮ again, then :guilabel:`Restore`. Your document now
+   appears on your dashboard next to your other templates.
+
+.. _sign/role:
+
 Roles
 =====
 
-Each field in a Sign document is related to a role that corresponds to a specific person. When a
-document is being signed, the person assigned to the role needs to fill in their assigned fields and
+Each field in a Sign document is related to a role corresponding to a specific person. When a
+document is being signed, the person assigned to the role must fill in their assigned fields and
 sign it.
 
 Roles are available by going to :menuselection:`Sign --> Configuration --> Roles`.
 
-It is possible to update existing roles or to create new roles by clicking on :guilabel:`Create`.
+It is possible to update existing roles or to create new roles by clicking on :guilabel:`New`.
 Choose a :guilabel:`Role Name`, add an :guilabel:`Extra Authentication Step` to confirm the
 identity of the signing person, and if the document can be reassigned to another contact, select
 :guilabel:`Change Authorized` for the role. A :guilabel:`Color` can also be chosen for the role.
@@ -101,14 +145,16 @@ template.
 Secured identification
 ----------------------
 
-As the owner of a document, you may request an :guilabel:`Extra Authentication Step` through an SMS
-verification or via Itsme® (available in Belgium and the Netherlands). Both authentication options
-require :ref:`credits <iap/buying_credits>`. If you do not have any credits left, the authentication
-steps will be skipped.
+As the owner of a document, you may request an :guilabel:`Extra Authentication Step` through
+:ref:`SMS verification <sign/sms>` or via :ref:`Itsme® <sign/itsme>` (available in Belgium and the
+Netherlands). Both authentication options require :ref:`credits <iap/buying_credits>`. If you do not
+have any credits left, the authentication steps will be skipped.
 
 .. seealso::
    - :doc:`In-App Purchase (IAP) <../general/in_app_purchase>`
    - :doc:`SMS pricing and FAQ <../marketing/sms_marketing/pricing/pricing_and_faq>`
+
+.. _sign/sms:
 
 SMS verification
 ~~~~~~~~~~~~~~~~
@@ -116,64 +162,116 @@ SMS verification
 Go to :menuselection:`Sign --> Configuration --> Roles`. Click in the :guilabel:`Extra
 Authentication Step` column for the role, and select :guilabel:`Unique Code Via SMS`.
 
+.. note::
+   Before being able to send SMS Text Messages, you need to register your phone number. To do so, go
+   to :menuselection:`Sign --> Configuration --> Settings` and click :guilabel:`Buy credits` under
+   :guilabel:`Authenticate by SMS`.
+
+Go to the document to sign, add the field for which the SMS verification is required, for example,
+the :guilabel:`Signature` field, and click :guilabel:`Send`. On the new page, select the
+:guilabel:`customer` and click :guilabel:`Send`.
+
+The person signing the document fills in the :guilabel:`Signature` field, then :guilabel:`Sign`, and
+clicks :guilabel:`Validate & Send Completed Document`. A :guilabel:`Final Validation` page pops up
+where to add their phone number. One-time codes are sent by SMS.
+
 .. image:: sign/sms-verification.png
-   :align: center
    :alt: Add a hash to your document
-
-Go to the document to sign, add the field for which the SMS verification is required, for example
-the :guilabel:`Signature` field, and click :guilabel:`Send`. A page pops up, select the customer,
-and click :guilabel:`Send`.
-
-The person signing the document fills in the :guilabel:`Signature` field and clicks
-:guilabel:`Validate & Send Completed Document`. A :guilabel:`Final Validation` page pops up where to
-add their phone number. One-time codes are sent by SMS.
-
-.. image:: sign/final-validation.png
-   :align: center
-   :alt: fill in your phone number for final validation
 
 .. note::
    - This feature is enabled by default.
    - As soon as the :guilabel:`Extra Authentication Step` applies to a role, this validation step is
      requested for any field assigned to this role.
 
+.. _sign/itsme:
+
 Itsme®
 ~~~~~~
 
-Go to :menuselection:`Sign --> Configuration --> Settings` and enable :guilabel:`Identify with
-itsme®`.
+Itsme® authentication can be used to allow signatories to provide their identity using itsme®. This
+feature is only available in **Belgium** and the **Netherlands**.
 
-Then, go to :menuselection:`Sign --> Configuration --> Roles`. Click in the :guilabel:`Extra
-Authentication Step` column for the role, and select :guilabel:`Via itsme®`.
+The feature can be enabled in :guilabel:`Sign Settings` and applies automatically to the
+:guilabel:`Customer (identified with itsme®)` role. To enable it for other roles, go to
+:menuselection:`Sign --> Configuration --> Roles`. Click in the :guilabel:`Extra Authentication
+Step` column for the role, and select :guilabel:`Via itsme®`.
 
-Go to the document that needs to be signed and add the :guilabel:`Signature` field. Switch the role
-to :guilabel:`customer (identified with itsme®)`, and click :guilabel:`Validate`, and
-:guilabel:`Send`.
+Go to the document that needs to be signed and add the :guilabel:`Signature` field. Switch to any
+role configured to use the feature, and click :guilabel:`Validate` and :guilabel:`Send`.
 
 .. image:: sign/itsme-identification.png
-   :align: center
    :alt: select customer identified with itsme®
 
-The person signing the document fills in the :guilabel:`Signature` field and clicks
-:guilabel:`Validate & Send Completed Document`. A :guilabel:`Final Validation` page pops up, and the
-person must authenticate with itsme®.
+Upon signing the document, the signer completes the :guilabel:`Signature` field and proceeds by
+clicking on :guilabel:`Validate & Send Completed Document`, triggering a
+:guilabel:`Final verification` page where authentication via itsme® is required.
 
-.. note::
-   This feature is only available in Belgium and the Netherlands.
+Signatory hash
+==============
+
+Each time someone signs a document, a **hash** - a unique digital signature of the operation - is
+generated to ensure traceability, integrity, and inalterability. This process guarantees that any
+changes made after a signature is affixed can be easily detected, maintaining the document's
+authenticity and security throughout its lifecycle.
+
+A visual security frame displaying the beginning of the hash is added to the signatures. Internal
+users can hide or show it by turning the :guilabel:`Frame` option on or off when signing the
+document.
+
+.. image:: sign/sign-hash.png
+   :alt: Adding the visual security frame to a signature.
 
 .. _sign/field-types:
 
-Field Types
+Tags
+====
+
+Tags can be used to categorize and organize documents, allowing users to search for and filter
+documents based on specific criteria quickly.
+
+You can manage tags by going to :menuselection:`Configuration --> Tags`. To create a tag, click
+:guilabel:`New`. On the new line, add the :guilabel:`Tag Name` and select a :guilabel:`Color Index`
+for your tag.
+
+To apply a tag to a document, use the dropdown list available in your document.
+
+Sign order
+==========
+
+When a document needs to be signed by different parties, the signing order lets you control the
+order in which your recipients receive it for signature.
+
+By going to :menuselection:`Configuration --> Settings`, you can :guilabel:`Enable Signing Order`.
+Each recipient receives the signature request notification only once the previous recipient has
+completed their action.
+
+Add at least two :guilabel:`Signature` fields with different roles to your document. Click
+:guilabel:`Send`, go to the :guilabel:`Options` tab, and tick the :guilabel:`Specify signing order`
+box.
+
+Add the signer's :guilabel:`Name or email` information. You can decide on the :guilabel:`Sign Order`
+by typing :guilabel:`1` or :guilabel:`2` in the :guilabel:`Sign Order` column.
+
+.. seealso::
+   `Odoo Quick Tips: Sign order [video] <https://www.youtube.com/watch?v=2KUq7RPt1cU/>`_
+
+.. _sign/fields:
+
+Field types
 ===========
 
-Various field types can be used to sign documents (placeholder, autocompletion, ...). By configuring
-your own field types, also known as signature item types, the signing process can be even faster for
-your customers, partners, and employees.
+Fields are used in a document to indicate what information must be completed by the signers. You can
+add fields to your document simply by dragging and dropping them for the left column into your
+document.
+
+Various field types can be used to sign documents (placeholder, autocompletion, etc.). By
+configuring your own field types, also known as signature item types, the signing process can be
+even faster for your customers, partners, and employees.
 
 To create and edit field types, go to :menuselection:`Sign --> Configuration --> Settings -->
 Edit field types`.
 
-You can select an existing field by clicking on it or you can :guilabel:`Create` a new one. First,
+You can select an existing field by clicking on it, or you can :guilabel:`Create` a new one. First,
 edit the :guilabel:`Field Name`. Then, select a :guilabel:`Field Type`:
 
 - :guilabel:`Signature`: users are asked to enter their signature either by drawing it, generating
@@ -199,10 +297,10 @@ the person signing the document. To do so, enter the contact model field's techn
    document.
 
 The size of the fields can also be changed by editing the :guilabel:`Default Width` and
-:guilabel:`Default Height`. Both sizes are defined as a percentage of the full-page expressed as a
-decimal, with 1 equalling the full-page's width or height. By default, the width of new fields you
-create is set to 15% (0.150) of a full-page's width, while their height is set to 1.5% (0.015) of a
-full-page's height.
+:guilabel:`Default Height`. Both sizes are defined as a percentage of the full page expressed as a
+decimal, with 1 equalling the full page's width or height. By default, the width of new fields you
+create is set to 15% (0.150) of a full page's width, while their height is set to 1.5% (0.015) of a
+full page's height.
 
 Next, write a :guilabel:`Tip`. Tips are displayed inside arrows on the left-hand side of the user's
 screen during the signing process to help them understand what the step entails (e.g., "Sign here"
@@ -210,23 +308,4 @@ or “Fill in your birthdate”). You can also use a :guilabel:`Placeholder` tex
 the field before it is completed.
 
 .. image:: sign/tip-placeholder.png
-   :align: center
    :alt: Tip and placeholder example in Odoo Sign
-
-Signatory hash
-==============
-
-A :guilabel:`hash` can be added to a document that is shared (attached to an email or printed, for
-example) to indicate that the signature is electronic and that there is some traceability behind
-it. The :guilabel:`hash` corresponds to a unique ID number related to the signed document.
-
-If you are an :doc:`internal user <../general/users/manage_users>`,
-you can choose to tick or untick the frame option when signing the document. Tick the box to have
-the frame and hash visible.
-
-.. image:: sign/sign-hash.png
-   :align: center
-   :alt: Add a hash to your document
-
-.. note::
-   The :guilabel:`hash` is only applicable to the signature field.
