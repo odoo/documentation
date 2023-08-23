@@ -1,8 +1,8 @@
 :nosearch:
 
-========================
-Manufacturing management
-========================
+=======================
+Manufacturing workflows
+=======================
 
 .. toctree::
    :titlesonly:
