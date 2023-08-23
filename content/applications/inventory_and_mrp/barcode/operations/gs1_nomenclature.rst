@@ -2,11 +2,24 @@
 GS1 barcode nomenclature
 ========================
 
-`GS1 nomenclature <https://www.gs1us.org/>`_ consolidates multiple pieces of information in a single
-barcode. Each piece needs to follow a specific barcode pattern—which is a defined format of numbers,
-letters, special characters, and character length—to ensure proper interpretation of the barcode. By
-scanning the barcode on an unopened box, GS1 nomenclature can identify the product, lot number,
-number of units contained, and more.
+.. _barcode/operations/gs1:
+
+.. |AI| replace:: :abbr:`A.I. (Application Identifier)`
+.. |GTIN| replace:: :abbr:`GTIN (Global Trade Item Number)`
+.. |GTINs| replace:: :abbr:`GTINs (Global Trade Item Numbers)`
+
+
+`GS1 nomenclature <https://www.gs1us.org/>`_ consolidates various product and supply chain data into
+a single barcode. Odoo takes in `unique Global Trade Item Numbers
+<https://www.gs1.org/standards/get-barcodes>`_ (GTIN), purchased by businesses, to enable global
+shipping, sales, and eCommerce product listing.
+
+Configure GS1 nomenclature to scan barcodes of sealed boxes and identify essential product
+information, such as |GTIN|, lot number, quantity information, and more.
+
+.. important::
+   |GTINs| are unique product identification that **must** be `purchased from GS1
+   <https://www.gs1.org/standards/get-barcodes>`_ to use GS1 barcodes.
 
 .. seealso::
    - `All GS1 barcodes <https://www.gs1.org/standards/barcodes/application-identifiers>`_
@@ -25,233 +38,74 @@ barcode nomenclature options.
 
 .. image:: gs1_nomenclature/setup-gs1-nomenclature.png
    :align: center
-   :alt: Choose GS1 from dropdown and click the internal link to see the list of GS1 rules.
+   :alt: Choose GS1 from dropdown and click the external link to see the list of GS1 rules.
 
-To view and edit a list of GS1 *rules* and *barcode patterns* Odoo supports by default, click the
-:guilabel:`➡️ (External link)` icon to the right of the :guilabel:`Barcode Nomenclature` selection.
+The list of GS1 *rules* and *barcode patterns* Odoo supports by default is accessible by clicking
+the :guilabel:`➡️ (arrow)` icon to the right of the :guilabel:`Barcode Nomenclature` selection.
 
-Opening the pop-up table provides an editable view of GS1 :guilabel:`Rule Names` available in Odoo.
-The table contains all the information that can be condensed with a GS1 barcode, along with the
-corresponding :guilabel:`Barcode Pattern`.
+In the :guilabel:`Open: Nomenclature` pop-up table, view and edit the GS1 :guilabel:`Rule Names`
+available in Odoo. The table contains all the information that can be condensed with a GS1 barcode,
+along with the corresponding :guilabel:`Barcode Pattern`.
 
 .. tip::
-   After setting GS1 as the barcode nomenclature, :menuselection:`Barcode Nomenclatures` can also be
-   accessed by first enabling :ref:`developer mode <developer-mode>`. Navigate to
-   :menuselection:`Inventory app --> Configuration --> Barcode Nomenclatures` and finally, select
-   :guilabel:`Default GS1 Nomenclature`.
+   After setting GS1 as the barcode nomenclature, the :menuselection:`Barcode Nomenclatures`
+   settings can also be accessed by a hidden menu that's discoverable after enabling :ref:`developer
+   mode <developer-mode>`. Once enabled, navigate to the :menuselection:`Inventory app -->
+   Configuration --> Barcode Nomenclatures` menu and finally, select :guilabel:`Default GS1
+   Nomenclature`.
 
 .. _barcode/operations/create-GS1-barcode:
 
-Use GS1 barcode
-===============
+Use GS1 barcodes in Odoo
+========================
 
-To build GS1 barcodes in Odoo, combine multiple pieces of information using the specified barcode
-pattern. The `application identifier
-<https://www.gs1.org/standards/barcodes/application-identifiers>`_ (A.I.) serves as the universal
-prefix for GS1 for barcode identification. Odoo uses regular expressions to describe barcode
-patterns concisely. Each barcode pattern begins with a required 2-4 digit :abbr:`A.I. (application
-identifier)`, which corresponds to the rule defined in the system's :ref:`barcode nomenclature list
-<barcode/operations/set-up-barcode-nomenclature>`. By including the appropriate :abbr:`A.I.
-(application identifier)` from the list, Odoo can accurately interpret GS1 barcodes. While most
-barcode patterns have a flexible length, some specific patterns, such as barcodes for dates, have
-defined length requirements.
+For product identification using GS1 barcodes in Odoo, businesses obtain a `unique GTIN
+<https://www.gs1.org/standards/get-barcodes>`_ as an internationally distinct product identifier
+purchased from GS1. This |GTIN| is combined with specific product details following GS1's designated
+*barcode pattern*. The barcode pattern's arrangement of numbers and letters must adhere to GS1
+conventions for accurate interpretation by global systems along the supply chain.
+
+Every barcode starts with a 2-4 digit `application identifier
+<https://www.gs1.org/standards/barcodes/application-identifiers>`_ (A.I.). This required prefix
+universally indicates what kind of information the barcode contains. Odoo follows GS1 rules for
+identifying information, as detailed in the :ref:`default GS1 rules list
+<barcode/operations/default-gs1-nomenclature-list>`. Including the relevant |AI| from the list
+enables Odoo to correctly interpret GS1 barcodes. While most barcode patterns have a fixed length
+requirement, certain ones, such as lots and serial numbers, have flexible length.
 
 .. tip::
-   Use the FNC1 separator (`\x1D`) to end the barcode without needing to reach the maximum character
-   length.
+   For flexible-length barcode patterns not placed at the end of the GS1 barcode, use the FNC1
+   separator (`\\x1D`) to end the barcode.
+
+   Example: The barcode pattern for lot numbers is 20 characters long. Instead of creating a
+   20-character lot number barcode, like `LOT00000000000000001`, use the FNC1 separator to make it
+   shorter: `LOT001\x1D`.
 
 Refer to the :ref:`GS1 nomenclature list <barcode/operations/default-gs1-nomenclature-list>` to see
-a comprehensive list of all barcode patterns and rules to follow. Otherwise, the following section
-contains examples of how to generate a barcode for common items in a warehouse.
-
-Product + quantity + lot
-------------------------
-
-To build a GS1 barcode for a box that contains a product, number of units in it, and the lot number,
-the following barcode patterns are used:
-
-+------------+--------------------------+------+----------------------------------+------------------------------------------+
-|    Name    |        Rule Name         | A.I. |       Barcode Pattern            |              Field in Odoo               |
-+============+==========================+======+==================================+==========================================+
-| Product    | Global Trade Item Number | 01   | (01)(\\d{14})                    | :guilabel:`Barcode` field on product form|
-|            | (GTIN)                   |      |                                  |                                          |
-+------------+--------------------------+------+----------------------------------+------------------------------------------+
-| Quantity   | Variable count of items  | 30   | (30)(\\d{0,8})                   | :guilabel:`Units` field on transfer form |
-+------------+--------------------------+------+----------------------------------+------------------------------------------+
-| Lot Number | Batch or lot number      | 10   | (10)([!"%-/0-9:-?A-Z_a-z]{0,20}) | :guilabel:`Lot` on Detailed Operations   |
-|            |                          |      |                                  | pop-up                                   |
-+------------+--------------------------+------+----------------------------------+------------------------------------------+
-
-.. _barcode/operations/lot-setup:
-
-Configuration
-~~~~~~~~~~~~~
-
-To track products using lots, first enable the :ref:`Lots and Serial Numbers
-<inventory/management/track_products_by_lots>` feature. To do so, navigate to
-:menuselection:`Inventory app --> Configuration --> Settings`. Next, under the
-:guilabel:`Traceability` heading, check the box for :guilabel:`Lots & Serial Numbers`.
-
-Then, set up the product barcode by navigating to the intended product form in
-:menuselection:`Inventory app --> Products --> Products` and selecting the product. On the product
-form, click :guilabel:`Edit`. Then, in the :guilabel:`General Information` tab, fill in the
-:guilabel:`Barcode` field with the 14-digit `Global Trade Item Number (GTIN)
-<https://www.gs1.org/standards/get-barcodes>`_, which is a universal and unique identifying number
-from GS1.
-
-.. important::
-   On the product form, omit the :abbr:`A.I. (application identifier)` `01` for GTIN product barcode
-   pattern, as it is only used to encode multiple barcodes into a single barcode that contains
-   detailed information about the package contents.
-
-.. example::
-   To create a barcode for the product, `Fuji Apple`, enter the 14-digit GTIN `12345678901231` in
-   the :guilabel:`Barcode` field on the product form.
-
-   .. image:: gs1_nomenclature/barcode-field.png
-      :align: center
-      :alt: Enter 14-digit GTIN into the Barcode field on product form.
-
-.. tip::
-   It is also possible to view a list of all products and barcodes. To access this list, go to
-   :menuselection:`Inventory --> Configuration --> Settings`. Under the :guilabel:`Barcode` heading,
-   click on the :guilabel:`Configure Product Barcodes` button under the :guilabel:`Barcode Scanner`
-   section. Enter the 14-digit GTIN into the :guilabel:`Barcode` column, then click
-   :guilabel:`Save`.
-
-   .. image:: gs1_nomenclature/product-barcodes-page.png
-      :align: center
-      :alt: View the Product Barcodes page from inventory settings.
-
-.. _barcode/operations/lot-setup-on-product:
-
-Next, enable lots and serial number tracking on the product. Select the :guilabel:`Inventory` tab on
-the product form. Under :guilabel:`Tracking`, choose the :guilabel:`By Lots` radio button.
-
-.. image:: gs1_nomenclature/track-by-lots.png
-   :align: center
-   :alt: Enable product tracking by lots in the "Inventory" tab of the product form.
-
-Scan barcode on receipt
-~~~~~~~~~~~~~~~~~~~~~~~
-
-To ensure accurate lot interpretation in Odoo on product barcodes scanned during a receipt
-operation, navigate to the :menuselection:`Barcode` app to manage the :ref:`receipt picking process
-<barcode/operations/scan-received-products>`.
-
-From the :guilabel:`Barcode Scanning` dashboard, click the :guilabel:`Operations` button, then the
-:guilabel:`Receipts` button to view the list of vendor receptions to process. Receipts generated
-from :abbr:`POs (Purchase Orders)` are listed, but new receipt operations can also be created
-directly through the :menuselection:`Barcode` app using the :guilabel:`Create` button.
-
-On the list of receipts, click on the warehouse operation (`WH/IN`) and scan product barcodes and
-lot numbers with a barcode scanner. The scanned product then appears on the list. Use the
-:guilabel:`✏️ (pencil)` button to open a window and manually enter quantities for specific lot
-numbers.
-
-.. example::
-   After placing a :abbr:`PO (Purchase Order)` for 50 apples, navigate to the associated receipt.
-   Scan the product barcode, and Odoo will prompt for the lot number.
-
-   .. image:: gs1_nomenclature/receive-50-apples.png
-      :align: center
-      :alt: Scan the barcode for a product on the reception picking page in the *Barcode* app.
-
-   Scan the lot number to process 1 of 50 apples. To avoid scanning 49 remaining barcodes, click
-   the :guilabel:`✏️ (pencil)` button next to the desired lot number.
-
-   .. image:: gs1_nomenclature/scan-apple-lot-number.png
-      :align: center
-      :alt: Scan lot number and click the pencil to edit quantities.
-
-   Doing so opens a mobile-friendly keypad page to specify received quantities. Use the keypad to
-   specify the :guilabel:`Units` for the lot number. When finished, click :guilabel:`Confirm`.
-
-   .. image:: gs1_nomenclature/edit-lot-quantities.png
-      :align: center
-      :alt: Change scanned quantities using pencil button.
-
-Repeat this process to specify additional lot numbers and quantities in this receipt. Once the
-:guilabel:`Units` are all accounted for, finish the reception by clicking the :guilabel:`Validate`
-button.
-
-Alternatively, scan the barcode containing the product, lot number, and quantity to complete the
-receipt operation in fewer steps.
-
-Product + non-unit quantity
----------------------------
-
-To build a GS1 barcode that contains products measured in a non-unit quantity, like kilograms, for
-example, the following barcode patterns are used:
-
-+-------------+--------------------------+----------+--------------------+----------------------------+
-|    Name     |        Rule Name         |   A.I.   |  Barcode Pattern   |       Field in Odoo        |
-+=============+==========================+==========+====================+============================+
-| Product     | Global Trade Item Number | 01       | (01)(\\d{14})      | :guilabel:`Barcode` field  |
-|             | (GTIN)                   |          |                    | on product form            |
-+-------------+--------------------------+----------+--------------------+----------------------------+
-| Quantity in | Variable count of items  | 310[0-5] | (310[0-5])(\\d{6}) | :guilabel:`Units` field on |
-| kilograms   |                          |          |                    | transfer form              |
-+-------------+--------------------------+----------+--------------------+----------------------------+
-
-Scan barcode on receipt
-~~~~~~~~~~~~~~~~~~~~~~~
-
-To confirm that quantities are correctly interpreted in Odoo, place an order in the *Purchase* app
-using the appropriate unit of measure (:guilabel:`UoM`) for the quantity of products to be
-purchased.
+a comprehensive list of all barcode patterns and rules to follow. Otherwise, refer to :ref:`this
+GS1 usage doc <barcode/operations/gs1_usage>` for specific examples of combining |GTIN| to product
+information and configuring the workflow.
 
 .. seealso::
-   :ref:`Simplify vendor unit conversions with UoMs <inventory/management/uom-example>`
-
-After the order is placed, navigate to the :menuselection:`Barcode` app to :ref:`receive the vendor
-shipment <barcode/operations/scan-received-products>`.
-
-.. example::
-   On the receipt in the *Barcode* app, receive an order for `52.1 kg` of peaches by scanning the
-   barcode. If `52.1 / 52.1` :guilabel:`kg` appears on the page, this means the reception was
-   processed without issue. Finally, press :guilabel:`Validate`.
-
-   Note: the :abbr:`A.I. (application identifier)` for kilograms, `310` + `1`, was used to represent
-   `52.1` kg as a barcode: `000521`. This is because the `1` represents how many digits from the
-   right to place the decimal point.
-
-   .. image:: gs1_nomenclature/scan-barcode-peaches.png
-      :align: center
-      :alt: Scan barcode screen for a reception operation in the Barcode app.
-
-For additional verification purposes, the quantities of received products are also recorded on the
-:guilabel:`Product Moves` report, accessible by navigating to :menuselection:`Inventory app -->
-Reporting --> Product Moves`.
-
-The items on the :guilabel:`Product Moves` report are grouped by product by default. To confirm the
-received quantities, click on a product line to open its collapsible drop-down menu, which displays
-a list of *stock move lines* for the product. The latest stock move matches the warehouse reception
-reference number (e.g. `WH/IN/00013`) and quantity processed in the barcode scan, demonstrating that
-the records processed in the *Barcode* app were properly stored in *Inventory*.
-
-.. image:: gs1_nomenclature/stock-moves-peach.png
-   :align: center
-   :alt: Reception stock move record for 52.1 kg of peaches.
+   - :ref:`Lots workflow <barcode/operations/gs1-lots>`
+   - :ref:`Non-unit quantities workflow <barcode/operations/quantity-ex>`
 
 .. _barcode/operations/create-new-rules:
 
 Create rules
 ------------
 
-If a supplier uses a GS1 barcode with a field not supported by Odoo's :ref:`default GS1 list
-<barcode/operations/default-gs1-nomenclature-list>`, Odoo will fail to interpret the entire barcode.
-To ensure the complete reading of the barcode, it is necessary to add the missing barcode to Odoo's
-list.
+GS1 rules are a specific format of information contained in the barcode, beginning with an |AI| and
+containing a defined length of characters. Scanning GS1 barcodes from the :ref:`default GS1 list
+<barcode/operations/default-gs1-nomenclature-list>` auto-fills corresponding data in the Odoo
+database.
 
-.. important::
-   While the new field will be read, the information won't link to an existing field in Odoo without
-   developer customizations. However, adding new rules is still useful to ensure the rest of the
-   fields in the barcode are interpreted correctly.
+Adding GS1 barcode rules in Odoo ensures accurate interpretation of unique, non-standard GS1
+formats.
 
-Begin by turning on :ref:`developer mode <developer-mode>` and navigating to the :guilabel:`Barcode
-Nomenclatures` list in :menuselection:`Inventory app --> Configuration --> Barcode Nomenclatures`.
-Then, select the :guilabel:`Default GS1 Nomenclature` list item.
+To do so, begin by turning on :ref:`developer mode <developer-mode>` and navigating to the
+:guilabel:`Barcode Nomenclatures` list in :menuselection:`Inventory app --> Configuration -->
+Barcode Nomenclatures`. Then, select the :guilabel:`Default GS1 Nomenclature` list item.
 
 On the :guilabel:`Default GS1 Nomenclature` page, select :guilabel:`Add a line` at the bottom of the
 table, which opens a window to create a new rule. The :guilabel:`Rule Name` field is used internally
@@ -288,6 +142,23 @@ not working as expected:
 #. When a single barcode contains multiple encoded fields, Odoo requires all rules to be listed in
    the barcode nomenclature for Odoo to read the barcode. :ref:`This section
    <barcode/operations/create-new-rules>` details how to add new rules in the barcode nomenclature.
+
+#. Test barcodes containing multiple encoded fields, piece by piece, to figure out which field is
+   causing the issue.
+
+   .. example::
+      When testing a barcode containing the |GTIN|, lot number, and quantity, start by scanning the
+      |GTIN| alone. Then, test the |GTIN| with the lot number, and finally, try scanning the whole
+      barcode.
+
+#. After diagnosing the encoded field is unknown, :ref:`add new rules
+   <barcode/operations/create-new-rules>` to Odoo's default list to recognize GS1 barcodes with
+   unique specifications.
+
+   .. important::
+      While the new field will be read, the information won't link to an existing field in Odoo
+      without developer customizations. However, adding new rules is necessary to ensure the rest of
+      the fields in the barcode are interpreted correctly.
 
 .. _barcode/operations/default-gs1-nomenclature-list:
 
