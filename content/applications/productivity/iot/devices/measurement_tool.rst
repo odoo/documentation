@@ -63,8 +63,8 @@ usually needs to be changed manually, is automatically updated while the tool is
    :menuselection:`Quality app --> Quality Control --> Quality Checks --> New`.
 
 .. seealso::
-   - :doc:`../../../inventory_and_mrp/manufacturing/quality_control/quality_control_points`
-   - :doc:`../../../inventory_and_mrp/manufacturing/quality_control/quality_alerts`
+   - :doc:`../../../inventory_and_mrp/quality/quality_management/quality_control_points`
+   - :doc:`../../../inventory_and_mrp/quality/quality_management/quality_alerts`
 
 Link a measurement tool to a work center in the Manufacturing app
 =================================================================

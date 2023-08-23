@@ -7,13 +7,11 @@
 Inventory
 =========
 
-**Odoo Inventory** is both an inventory application and a warehouse management system, with an
-advanced barcode scanner app. Learn how to manage lead times, automate replenishments, and configure
-advanced routes like drop-shipping, cross-docks, etc.
+Odoo *Inventory* is both an inventory application and a warehouse management system. The app allows
+users to easily manage lead times, automate replenishment, configure advanced routes, and more.
 
 .. seealso::
    - `Odoo Tutorials: Inventory <https://www.odoo.com/slides/inventory-24>`_
-   - `Odoo Tutorials: Barcode Scanner <https://www.odoo.com/slides/barcode-30>`_
 
 .. toctree::
    :titlesonly:
@@ -21,4 +19,3 @@ advanced routes like drop-shipping, cross-docks, etc.
    inventory/management
    inventory/shipping
    inventory/routes
-   inventory/barcode
