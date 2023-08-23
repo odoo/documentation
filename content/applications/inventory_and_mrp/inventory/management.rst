@@ -1,7 +1,7 @@
 :nosearch:
 
 ====================
-Warehouse Management
+Warehouse management
 ====================
 
 .. toctree::
