@@ -113,5 +113,5 @@ If the payment terminal is unavailable in your Stripe account, you must add it m
 
 .. note::
    You must provide a **registration code**. To retrieve that code, swipe right on your device,
-   enter the admin PIN code (by default: `07319`), validate, and click :guilabel:`Generate a
+   enter the admin PIN code (by default: `07139`), validate, and click :guilabel:`Generate a
    registration code`.
