@@ -1,7 +1,7 @@
 :nosearch:
 
 ===============
-Advanced Routes
+Advanced routes
 ===============
 
 .. toctree::
