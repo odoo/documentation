@@ -63,9 +63,15 @@ the locations barcodes in :menuselection:`Inventory --> Configuration --> Locati
 Barcode Formats
 ===============
 
-Most retail products use EAN-13 barcodes. They cannot be made up without
-proper authorization. You must pay the International Article Numbering
-Association a fee in exchange for an EAN code sequence.
+Most retail products use EAN-13 barcodes, also known as GTIN (Global Trade Identification Numbers).
+GTIN are used by companies to uniquely identify their products and services. While GTIN and UPC are
+often used synonymously, GTIN refers to the number a barcode represents, while UPC refers to the
+barcode itself. More information about GTIN can be found on the GS1 website.
 
-Still, as Odoo supports any string as a barcode, you can always define
-your own barcode format for internal use.
+In order to create GTIN for items, a company must have a GS1 Company Prefix. This prefix is the
+number that will appear at the beginning of each GTIN, and will identify the company as the owner of
+the barcode any the products it appears on. To learn more about GS1 Company Prefixes, or purchase a
+license for a prefix, visit the GS1 Company Prefix page.
+
+Odoo users are able to use GTIN barcodes to identify their products. However, since Odoo supports
+any numeric string as a barcode, it is also possible to define a custom barcode for internal use.
