@@ -55,8 +55,8 @@ is reached during the manufacturing process, the database prompts the operator t
    to create a new quality check from the :guilabel:`Quality Checks` page.
 
 .. seealso::
-   - :doc:`../../../inventory_and_mrp/manufacturing/quality_control/quality_control_points`
-   - :doc:`../../../inventory_and_mrp/manufacturing/quality_control/quality_alerts`
+   - :doc:`/applications/inventory_and_mrp/quality/quality_management/quality_control_points`
+   - :doc:`/applications/inventory_and_mrp/quality/quality_management/quality_alerts`
 
 Link camera to a work center in the Manufacturing app
 =====================================================
