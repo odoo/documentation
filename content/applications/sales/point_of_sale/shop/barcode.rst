@@ -18,8 +18,8 @@ To use a barcode scanner, you must enable the feature in the Inventory app. Go t
    :alt: barcode setting in the Inventory application
 
 .. seealso::
-   - :doc:`Set up a barcode scanner<../../../inventory_and_mrp/inventory/barcode/setup/hardware>`
-   - :doc:`Activate barcode scanners<../../../inventory_and_mrp/inventory/barcode/setup/software>`
+   - :doc:`Set up a barcode scanner </applications/inventory_and_mrp/barcode/setup/hardware>`
+   - :doc:`Activate barcode scanners </applications/inventory_and_mrp/barcode/setup/software>`
 
 Once enabled in **Inventory**, you can use the barcode feature in **Point of Sale** with products
 that have a barcode number assigned.
