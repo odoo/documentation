@@ -1,7 +1,7 @@
 :nosearch:
 
 ================
-Daily Operations
+Daily operations
 ================
 
 .. toctree::
