@@ -119,10 +119,9 @@ Odoo supports the following local payment methods:
 To enable some of these local payment methods with Stripe, list them as supported payment icons. To
 do so, go to :menuselection:`Payment Acquirers --> Stripe --> Configuration` and add the desired
 payment methods in the **Supported Payment Icons** field. If the desired payment method is already
-listed, you don't have anything to do.
+listed, you do not have anything to do.
 
-.. image:: stripe/stripe_enable_local_payment_method.png
-   :align: center
+.. image:: stripe/payments-config.png
    :alt: Select and add icons of the payment methods you want to enable
 
 .. note::
