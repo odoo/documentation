@@ -1,110 +1,88 @@
-=======================
-Manage product variants
-=======================
+================
+Product variants
+================
 
-Product variants are used to offer variations of the same product to your customers on the product's
-page.
+Product variants are variations, such as different colors, materials, etc., of the same product.
+These variations can differ in price and availability from the product. Product variants can either
+be :doc:`created <../../../sales/sales/products_prices/products/variants>` or
+:doc:`imported <../../../sales/sales/products_prices/products/import>`.
 
-Let's say one of your customers selects a T-shirt from your product catalog.
+To use product variants, go to :menuselection:`Website --> Configuration --> Settings`, tick the
+:guilabel:`Variants` check box in the :guilabel:`Products` section and click :guilabel:`Save`.
 
-Then, they choose the size and color they want. The various size and color combinations are known as
-product variants.
+.. seealso::
+   - :doc:`../../../sales/sales/products_prices/products/variants`
+   - :doc:`../../../sales/sales/products_prices/products/import`
 
-Create attributes & variants
-============================
+Create product attributes and variants
+======================================
 
-In order to create various attributes and variants for your products, you first need to turn on
-*Variants* in :menuselection:`Sales --> Configuration --> Settings`.
+Product variants are created by adding attributes and values to a product template. This allows the
+enabling of the **product configurator** on the product page, which customers can use to configure
+and select the product variant of their choice; or, in the case of multiple attributes, combine
+them to create a specific variant.
 
-Then, select a product from the Products list (:menuselection:`Sales / Website --> Products -->
-Products`). When the product detail form opens, click on *Edit*, and go to the *Variants* tab.
+.. image:: variants/variants-configurator.png
+   :alt: Variants configurator
 
-Here, you can add as many different attributes as you'd like by clicking on *Add a line*.
+To create variants for your products, proceed as follows:
 
-These attributes appear as three different types:
-
-- Radio buttons
-- Color buttons
-- Drop-down menu
-
-Several variants appear as soon as there are two values for one attribute.
-
-Don't forget to hit *Save* once all variants have been entered.
+#. Go to :menuselection:`Website --> Products --> Products` and select the product from the list.
+#. Select the :guilabel:`Attributes & Variants` tab and click :guilabel:`Add a line`.
+#. In the :guilabel:`Attribute` field, select an existing attribute or create a new one.
+#. Specify the possible values for the attribute (i.e. the different options) in the
+   :guilabel:`Values` field.
+#. Click :guilabel:`Save` to save your changes.
 
 .. image:: variants/values.png
-   :align: center
-   :alt: ecommerce product variants values
+   :alt: eCommerce product variants
 
-Edit variants
-=============
+.. tip::
+   To prevent customers from selecting specific combinations of values, you can exclude these
+   combinations from the product configurator. To do so, click the :guilabel:`Configure` button
+   corresponding to the attribute in the :guilabel:`Attributes and Variants` tab in the product
+   template. Then, select the attribute value for which you wish to exclude other attribute values
+   and, in the :guilabel:`Exclude for` section, select a :guilabel:`Product Template` and the
+   :guilabel:`Attribute Values` to exclude. For example, with the following configuration, customers
+   cannot select the color black for the customizable desk or if they also selected aluminum legs.
 
-After you hit *Save*, you are able to see all the variants from the product template detail form via
-the *Variants* smart button.
+   .. image:: variants/exclude_value_combinations.png
+      :alt: Exclude specific combinations of values from the product configurator.
 
-.. image:: variants/smart-button.png
-   :align: center
-   :alt: ecommerce product variants smart button
+Display type
+------------
 
-Clicking the *Variants* smart button takes you to the Product Variants page, where you can edit the
-following data for each specific variant:
+To edit the **display type** of the attributes used in the product configurator, go to
+:menuselection:`Website --> Configuration --> Attributes` and select an attribute, or go to
+:menuselection:`Website --> Products --> Products` and select an attribute in the
+:guilabel:`Attributes and Variants` tab.
 
-- Picture(s)
-- Internal Reference (SKU #)
-- Barcode
-- Volume
-- Weight
-- Cost
+Four options are available:
 
-.. note::
-   Both the Barcode and the Internal Reference are variant-specific. You need to populate them once
-   the variants are generated.
+  - :guilabel:`Radio`: attribute values appear as radio buttons
+  - :guilabel:`Pills`: attribute values appear as buttons
+  - :guilabel:`Select`: attribute values appear in a dropdown menu
+  - :guilabel:`Color`: attribute values appear as small colored disks; you can select the color of
+    the disk for each attribute value by clicking the corresponding disk in the
+    :guilabel:`Attribute values` tab, then picking a color.
+
+Edit product variants
+=====================
+
+You can edit product variant-specific data such as their picture, internal reference, barcode,
+volume, weight and cost. To do so, go to :menuselection:`Website --> Products --> Products`, select
+the product from the list and click the :guilabel:`Variants` smart button. Then, select the product
+variant and click :guilabel:`Edit`.
 
 Set specific prices per variant
 ===============================
 
-You can set a specific public price per variant by clicking on *Configure Variants* in the product
-detail form (top-left corner). That takes you to the *Product Variant Values* page for that product.
-
-.. image:: variants/configure-variants.png
-   :align: center
-   :alt: ecommerce product variants configure variants
-
-To set a specific public price for a particular variant, simply click on the variant you want to
-modify, then click on *Edit*.
-
-The *Value Price Extra* field represents the monetary value that is added to the original product
-price whenever the corresponding attribute value is selected.
-
-.. image:: variants/value-price-extra.png
-   :align: center
-   :alt: ecommerce value price extra
-
-This is how the *Value Price Extra* looks on your website:
-
-.. image:: variants/value-price-extra-frontend.png
-   :align: center
-   :alt: ecommerce value price extra on the frontend
+To add extra costs to a product's standard price for a specific product variant, go to
+:menuselection:`Website --> Products --> Products` and select the product from the list. Select the
+:guilabel:`Attributes & Variants` tab and click the :guilabel:`Configure` button. Then, select the
+attribute value for which you wish to add extra costs and specify the additional cost in the
+:guilabel:`Value Price Extra` field. It is displayed next to the attribute value on your website.
 
 .. note::
-   Pricelist formulas let you set advanced price computation methods for product variants. See
-   :doc:`../maximizing_revenue/pricing`.
-
-Disable/archive variants
-========================
-
-You can disable/archive specific variants so they are no longer available in quotes or on your
-website (not existing in your stock, deprecated, etc.). Simply select *Archive* in their detail
-form. You can reactivate them the same way.
-
-.. image:: variants/archive.png
-   :align: center
-   :alt: ecommerce product variants archive
-
-To retrieve such items, hit *Archived* in the *Filters* category while searching the variants list.
-
-.. image:: variants/archive-search.png
-   :align: center
-   :alt: ecommerce product variants archive search
-
-.. seealso::
-   - :doc:`../../../sales/sales/products_prices/products/variants`
+   Advanced price computation methods for product variants can be defined using :doc:`Pricelist
+   formulas </applications/sales/sales/products_prices/prices/pricing>`.
