@@ -12,7 +12,7 @@ Units of measure
 ================
 
 A *unit of measure (UoM)* refers to any of the different standards used to measure and handle a
-quanitifiable amount of products, such a units, weight, time, or size. Different :abbr:`UoMs (Units
+quantifiable amount of products, such a units, weight, time, or size. Different :abbr:`UoMs (Units
 of Measure)` for weight, for example, can be kilos, pounds, ounces, grams, and so on.
 
 In Odoo, stock management and purchasing from suppliers are streamlined by specifying different
