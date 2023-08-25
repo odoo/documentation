@@ -120,11 +120,18 @@ These options provide various ways to specify and organize the information seen 
 
    .. tab:: Group By
 
-      This drop-down menu provides different ways to filter email information on the dashboard. The
-      options are: :guilabel:`My Mailings`, :guilabel:`Sent Date`, :guilabel:`Archived`, and
-      :guilabel:`Add Custom Filter`. If :guilabel:`Add Custom Filter` is selected, Odoo reveals an
-      additional drop-down menu, with three customizable fields to fill in, and Odoo reveals the
-      appropriate results that fit that specific criteria.
+      This drop-down menu provides additional ways to organize the data on the dashboard by grouping
+      them in specific ways. Using this drop-down menu, the data can be grouped by the messages'
+      :guilabel:`Status`, or who it was :guilabel:`Sent By`.
+
+      There is also the option to group the data by :guilabel:`Sent Period`, which has its own
+      sub-menu of options to choose from. The :guilabel:`Sent Period` options are :guilabel:`Year`,
+      :guilabel:`Quarter`, :guilabel:`Month`, :guilabel:`Week`, and :guilabel:`Day`.
+
+      If none of the above :guilabel:`Group By` options deliver the desired results, click
+      :guilabel:`Add Custom Group` at the bottom of the drop-down menu. Doing so reveals a new
+      field, wherein custom criteria can be selected and applied, thus delivering any grouping of
+      data that may be desired.
 
       .. image:: email_marketing/group-by-dropdown.png
          :alt: View of the Group By drop-down menu on the Odoo Email Marketing application.
