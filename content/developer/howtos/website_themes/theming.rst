@@ -185,7 +185,7 @@ bundle.
 
    'assets': {
       'web._assets_primary_variables': [
-         ('prepend', 'website_airproof/static/src/scss/primary_variables.scss'),
+         'website_airproof/static/src/scss/primary_variables.scss',
       ],
    },
 
