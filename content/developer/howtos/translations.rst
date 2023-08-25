@@ -12,8 +12,8 @@ This section explains how to provide translation abilities to your module.
 Exporting translatable term
 ===========================
 
-A number of terms in your modules are "implicitly translatable" as a result,
-even if you haven't done any specific work towards translation you can export
+A number of terms in your modules are implicitly translatable. As a result,
+even if you haven't done any specific work towards translation, you can export
 your module's translatable terms and may find content to work with.
 
 .. todo:: needs technical features
