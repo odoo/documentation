@@ -9,6 +9,7 @@
 # Chris Egal <sodaswed@web.de>, 2022
 # Friederike Fasterling-Nesselbosch, 2022
 # Martin Trigaux, 2023
+# MIRIAM SOPHIE KELLER, 2023
 # Larissa Manderfeld, 2023
 # 
 #, fuzzy
@@ -3160,6 +3161,12 @@ msgid ""
 "instead of overwriting them through extra CSS lines, resulting in a smaller "
 "file."
 msgstr ""
+"**Vorverarbeitet:** Das von Odoo verwendete CSS-Framework ist Bootstrap. "
+"Obwohl ein Designmotiv ein anderes Framework verwenden kann, erweitern und "
+"passen die meisten `Odoo-Designmotive <https://www.odoo.com/apps/themes>`__ "
+"Bootstrap direkt an. Da Odoo Less und Sass unterstützt, können Sie CSS-"
+"Regeln ändern, anstatt sie durch zusätzliche CSS-Zeilen zu überschreiben, "
+"was zu einer kleineren Datei führt."
 
 #: ../../content/applications/websites/website/pages/seo.rst:396
 msgid ""
@@ -3172,6 +3179,16 @@ msgid ""
 "files like .JS and .CSS. Thus, the time to load CSS resources depends more "
 "on the number of requests to be done than the actual file size."
 msgstr ""
+"**Verkettet:** Jedes Modul oder jede Bibliothek, die Sie in Odoo verwenden, "
+"hat einen eigenen Satz von CSS-, Less- oder Sass-Dateien (E-Commerce, Blogs,"
+" Designmotive usw.). Mehrere CSS-Dateien zu haben ist gut für die "
+"Modularität, aber nicht gut für die Leistung, da die meisten Browser nur 6 "
+"Anfragen parallel ausführen können, was dazu führt, dass viele Dateien "
+"nacheinander geladen werden. Die Latenzzeit für die Übertragung einer Datei "
+"ist in der Regel viel länger als die eigentliche Datenübertragungszeit, vor "
+"allem bei kleinen Dateien wie .JS und .CSS. Die Zeit zum Laden von CSS-"
+"Ressourcen hängt also eher von der Anzahl der Anfragen als von der "
+"tatsächlichen Dateigröße ab."
 
 #: ../../content/applications/websites/website/pages/seo.rst:406
 msgid ""
@@ -3181,54 +3198,60 @@ msgid ""
 "shared amongst all pages, when the visitor clicks on another page, the "
 "browser does not even have to load a new CSS file!"
 msgstr ""
+"Um dieses Problem zu beheben, werden alle CSS-/Less-/Sass-Dateien in einer "
+"einzigen .CSS-Datei zusammengefasst und an den Browser gesendet. So muss der"
+" Besucher **nur eine einzige .CSS-Datei pro Seite laden**, was besonders "
+"effizient ist. Da das CSS von allen Seiten gemeinsam genutzt wird, muss der "
+"Browser nicht einmal eine neue CSS-Datei laden, wenn der Besucher auf eine "
+"andere Seite klickt!"
 
 #: ../../content/applications/websites/website/pages/seo.rst:413
 msgid "**Both files in the <head>**"
-msgstr ""
+msgstr "**Beide Dateien in <head>**"
 
 #: ../../content/applications/websites/website/pages/seo.rst:413
 msgid "**What the visitor gets (only one file)**"
-msgstr ""
+msgstr "**Was der Besucher erhält (nur eine Datei)**"
 
 #: ../../content/applications/websites/website/pages/seo.rst:415
 msgid "/\\* From bootstrap.css \\*/"
-msgstr ""
+msgstr "/\\* From bootstrap.css \\*/"
 
 #: ../../content/applications/websites/website/pages/seo.rst:415
 #: ../../content/applications/websites/website/pages/seo.rst:416
 #: ../../content/applications/websites/website/pages/seo.rst:422
 #: ../../content/applications/websites/website/pages/seo.rst:448
 msgid ".text-muted {"
-msgstr ""
+msgstr ".text-muted {"
 
 #: ../../content/applications/websites/website/pages/seo.rst:416
 #: ../../content/applications/websites/website/pages/seo.rst:423
 #: ../../content/applications/websites/website/pages/seo.rst:449
 msgid "color: #666;"
-msgstr ""
+msgstr "color: #666;"
 
 #: ../../content/applications/websites/website/pages/seo.rst:417
 msgid "color: #777;"
-msgstr ""
+msgstr "color: #777;"
 
 #: ../../content/applications/websites/website/pages/seo.rst:417
 msgid "background: yellow"
-msgstr ""
+msgstr "background: yellow"
 
 #: ../../content/applications/websites/website/pages/seo.rst:418
 msgid "background: yellow;"
-msgstr ""
+msgstr "background: yellow;"
 
 #: ../../content/applications/websites/website/pages/seo.rst:418
 #: ../../content/applications/websites/website/pages/seo.rst:419
 #: ../../content/applications/websites/website/pages/seo.rst:424
 #: ../../content/applications/websites/website/pages/seo.rst:450
 msgid "}"
-msgstr ""
+msgstr "}"
 
 #: ../../content/applications/websites/website/pages/seo.rst:421
 msgid "/\\* From my-theme.css \\*/"
-msgstr ""
+msgstr "/\\* From my-theme.css \\*/"
 
 #: ../../content/applications/websites/website/pages/seo.rst:427
 msgid ""
@@ -3241,6 +3264,15 @@ msgid ""
 "is the backend that is only loaded when the visitor logs in and accesses the"
 " backend (/web)."
 msgstr ""
+"Das von Odoo gesendete CSS enthält alle CSS / Less / Sass aller "
+"Seiten/Module. Auf diese Weise müssen weitere Seitenaufrufe desselben "
+"Besuchers keine CSS-Dateien mehr laden. Einige Module können jedoch große "
+"CSS-/Javascript-Ressourcen enthalten, die Sie nicht auf der ersten Seite "
+"vorladen möchten, weil sie zu groß sind. In diesem Fall teilt Odoo diese "
+"Ressourcen in ein zweites Bündel auf, das erst geladen wird, wenn die Seite,"
+" die sie verwendet, aufgerufen wird. Ein Beispiel hierfür ist das Backend, "
+"das nur geladen wird, wenn sich der Besucher anmeldet und auf das Backend "
+"(/web) zugreift."
 
 #: ../../content/applications/websites/website/pages/seo.rst:437
 msgid ""
@@ -3248,33 +3280,40 @@ msgid ""
 "avoid the 4095 selectors limit per sheet of Internet Explorer. But most "
 "themes fit below this limit."
 msgstr ""
+"Wenn die CSS-Datei sehr groß ist, teilt Odoo sie in zwei kleinere Dateien "
+"auf, um das Limit von 4095 Selektoren pro Blatt im Internet Explorer zu "
+"umgehen. Die meisten Designmotive liegen jedoch unter dieser Grenze."
 
 #: ../../content/applications/websites/website/pages/seo.rst:441
 msgid ""
 "**Minified:** After being pre-processed and concatenated, the resulting CSS "
 "is minified to reduce its size."
 msgstr ""
+"**Verkleinert:** Nach der Vorverarbeitung und Verkettung wird das "
+"resultierende CSS verkleinert, um seine Größe zu reduzieren."
 
 #: ../../content/applications/websites/website/pages/seo.rst:445
 msgid "**Before minification**"
-msgstr ""
+msgstr "**Vor Verkleinerung**"
 
 #: ../../content/applications/websites/website/pages/seo.rst:445
 msgid "**After minification**"
-msgstr ""
+msgstr "**Nach Verkleinerung**"
 
 #: ../../content/applications/websites/website/pages/seo.rst:447
 msgid "/\\* some comments \\*/"
-msgstr ""
+msgstr "/\\* some comments \\*/"
 
 #: ../../content/applications/websites/website/pages/seo.rst:447
 msgid ".text-muted {color: #666}"
-msgstr ""
+msgstr ".text-muted {color: #666}"
 
 #: ../../content/applications/websites/website/pages/seo.rst:453
 msgid ""
 "The final result is then compressed, before being delivered to the browser."
 msgstr ""
+"Das Endergebnis wird dann komprimiert, bevor es an den Browser übermittelt "
+"wird."
 
 #: ../../content/applications/websites/website/pages/seo.rst:456
 msgid ""
@@ -3282,37 +3321,49 @@ msgid ""
 "process, concatenate, minify at every request) and browser-side (so the same"
 " visitor will load the CSS only once for all pages they visit)."
 msgstr ""
+"Dann wird eine zwischengespeicherte Version serverseitig (damit wir nicht "
+"bei jeder Anfrage vorverarbeiten, verketten und verkleinern müssen) und "
+"browserseitig (damit derselbe Besucher das CSS nur einmal für alle Seiten, "
+"die er besucht, lädt) gespeichert."
 
 #: ../../content/applications/websites/website/pages/seo.rst:462
 msgid "Static Resources: Javascript"
-msgstr ""
+msgstr "Statische Ressourcen: Javascript"
 
 #: ../../content/applications/websites/website/pages/seo.rst:464
 msgid ""
 "As with CSS resources, Javascript resources are also concatenated, minified,"
 " compressed and cached (server-side and browser-side)."
 msgstr ""
+"Wie CSS-Ressourcen werden auch Javascript-Ressourcen verkettet, verkleinert,"
+" komprimiert und zwischengespeichert (serverseitig und browserseitig)."
 
 #: ../../content/applications/websites/website/pages/seo.rst:467
 msgid "Odoo creates three Javascript bundles:"
-msgstr ""
+msgstr "Odoo erstellt drei Javascript-Bündel:"
 
 #: ../../content/applications/websites/website/pages/seo.rst:469
 msgid ""
 "One for all pages of the website (including code for parallax effects, form "
 "validation, etc.)"
 msgstr ""
+"Eine für alle Seiten der Website (einschließlich Code für Parallax-Effekte, "
+"Formularvalidierung usw.)"
 
 #: ../../content/applications/websites/website/pages/seo.rst:472
 msgid ""
 "One for common Javascript code shared among frontend and backend (Bootstrap)"
 msgstr ""
+"Eine für gemeinsamen Javascript-Code, der von Frontend und Backend gemeinsam"
+" genutzt wird (Bootstrap)"
 
 #: ../../content/applications/websites/website/pages/seo.rst:475
 msgid ""
 "One for backend specific Javascript code (Odoo Web Client interface for your"
 " employees using Odoo)"
 msgstr ""
+"Eine für Backend-spezifischen Javascript-Code (Odoo-Web-Client-Schnittstelle"
+" für Ihre Mitarbeiter, die Odoo verwenden)"
 
 #: ../../content/applications/websites/website/pages/seo.rst:478
 msgid ""
@@ -3321,6 +3372,11 @@ msgid ""
 "As these files are shared across all pages, further clicks by the same "
 "visitor will not load any other Javascript resource."
 msgstr ""
+"Die meisten Besucher Ihrer Website werden nur die ersten beiden Pakete "
+"benötigen, sodass maximal zwei Javascript-Dateien geladen werden müssen, um "
+"eine Seite zu rendern. Da diese Dateien auf allen Seiten gemeinsam genutzt "
+"werden, werden bei weiteren Klicks desselben Besuchers keine weiteren "
+"Javascript-Ressourcen geladen."
 
 #: ../../content/applications/websites/website/pages/seo.rst:484
 msgid ""
@@ -3329,10 +3385,15 @@ msgid ""
 "But it allows you to easily debug with the Chrome debugger as CSS and "
 "Javascript resources are not transformed from their original versions."
 msgstr ""
+"Wenn Sie im :ref:`Entwicklermodus <developer-mode>` arbeiten, werden CSS und"
+" Javascript weder verkettet, noch verkleinert. Daher ist es viel langsamer. "
+"Aber Sie können mit dem Chrome-Debugger problemlos Fehler beheben, da die "
+"CSS- und Javascript-Ressourcen nicht von ihren Originalversionen abgeändert "
+"werden."
 
 #: ../../content/applications/websites/website/pages/seo.rst:489
 msgid "CDN"
-msgstr ""
+msgstr "CDN"
 
 #: ../../content/applications/websites/website/pages/seo.rst:491
 msgid ""
@@ -3340,18 +3401,25 @@ msgid ""
 "images) are loaded from a Content Delivery Network. Using a Content Delivery"
 " Network has three advantages:"
 msgstr ""
+"Wenn Sie die CDN-Funktion in Odoo aktivieren, werden statische Ressourcen "
+"(Javascript, CSS, Bilder) von einem Content Delivery Network geladen. Die "
+"Verwendung eines Content Delivery Network hat drei Vorteile:"
 
 #: ../../content/applications/websites/website/pages/seo.rst:495
 msgid ""
 "Load resources from a nearby server (most CDN have servers in main countries"
 " around the globe)"
 msgstr ""
+"Laden Sie Ressourcen von einem Server in Ihrer Nähe (die meisten CDN haben "
+"Server in den wichtigsten Ländern der Welt)"
 
 #: ../../content/applications/websites/website/pages/seo.rst:498
 msgid ""
 "Cache resources efficiently (no computation resources usage on your own "
 "server)"
 msgstr ""
+"Speichern Sie Ressourcen effizient zwischen (keine Nutzung von "
+"Rechenressourcen auf Ihrem eigenen Server)"
 
 #: ../../content/applications/websites/website/pages/seo.rst:501
 msgid ""
@@ -3359,22 +3427,30 @@ msgid ""
 "resources in parallel (since the Chrome limit of 6 parallel requests is by "
 "domain)"
 msgstr ""
+"Teilen Sie die Ressourcenbelastung auf verschiedene Dienste auf, sodass mehr"
+" Ressourcen parallel geladen werden können (da das Chrome-Limit von 6 "
+"parallelen Anfragen pro Domain gilt)"
 
 #: ../../content/applications/websites/website/pages/seo.rst:505
 msgid ""
 "You can configure your CDN options from the **Website Admin** app, using the"
 " Configuration menu. Here is an example of configuration you can use:"
 msgstr ""
+"Sie können Ihre CDN-Optionen in der App **Website-Admin** über das "
+"Konfigurationsmenü konfigurieren. Hier ist ein Beispiel für eine "
+"Konfiguration, die Sie verwenden können:"
 
 #: ../../content/applications/websites/website/pages/seo.rst:512
 msgid "HTML Pages"
-msgstr ""
+msgstr "HTML-Seiten"
 
 #: ../../content/applications/websites/website/pages/seo.rst:514
 msgid ""
 "The HTML pages can be compressed, but this is usually handled by your web "
 "server (NGINX or Apache)."
 msgstr ""
+"Die HTML-Seiten können komprimiert werden, aber das wird normalerweise von "
+"Ihrem Webserver (NGINX oder Apache) erledigt."
 
 #: ../../content/applications/websites/website/pages/seo.rst:517
 msgid ""
@@ -3382,6 +3458,9 @@ msgid ""
 "HTML code. Building blocks have been developed to produce clean HTML code, "
 "usually using Bootstrap and the HTML editor."
 msgstr ""
+"Der Odoo Website-Builder wurde optimiert, um sauberen und kurzen HTML-Code "
+"zu gewährleisten. Es wurden Bausteine entwickelt, um sauberen HTML-Code zu "
+"erzeugen, in der Regel mit Bootstrap und dem HTML-Editor."
 
 #: ../../content/applications/websites/website/pages/seo.rst:521
 msgid ""
@@ -3389,24 +3468,28 @@ msgid ""
 "paragraph to the primary color of your website, Odoo will produce the "
 "following code:"
 msgstr ""
+"Wenn Sie zum Beispiel die Farbauswahl verwenden, um die Farbe eines Absatzes"
+" in die Grundfarbe Ihrer Website zu ändern, erzeugt Odoo den folgenden Code:"
 
 #: ../../content/applications/websites/website/pages/seo.rst:525
 msgid "``<p class=\"text-primary\">My Text</p>``"
-msgstr ""
+msgstr "``<p class=\"text-primary\">My Text</p>``"
 
 #: ../../content/applications/websites/website/pages/seo.rst:527
 msgid ""
 "Whereas most HTML editors (such as CKEditor) will produce the following "
 "code:"
 msgstr ""
+"Die meisten HTML-Editoren (z.B. CKEditor) erzeugen dagegen den folgenden "
+"Code:"
 
 #: ../../content/applications/websites/website/pages/seo.rst:530
 msgid "``<p style=\"color: #AB0201\">My Text</p>``"
-msgstr ""
+msgstr "``<p style=\"color: #AB0201\">My Text</p>``"
 
 #: ../../content/applications/websites/website/pages/seo.rst:533
 msgid "Responsive Design"
-msgstr ""
+msgstr "Reaktionsfähiges Design"
 
 #: ../../content/applications/websites/website/pages/seo.rst:535
 msgid ""
@@ -3414,16 +3497,22 @@ msgid ""
 "engine rankings. All Odoo themes rely on Bootstrap to render efficiently "
 "according to the device: desktop, tablet or mobile."
 msgstr ""
+"Websites, die nicht mobilfreundlich sind, werden in den "
+"Suchmaschinenrankings negativ bewertet. Alle Odoo-Designmotive basieren auf "
+"Bootstrap, damit sie je nach Gerät – Desktop, Tablet oder Handy – effizient "
+"dargestellt werden."
 
 #: ../../content/applications/websites/website/pages/seo.rst:542
 msgid ""
 "As all Odoo modules share the same technology, absolutely all pages in your "
 "website are mobile friendly."
 msgstr ""
+"Da alle Odoo-Module dieselbe Technologie nutzen, sind alle Seiten Ihrer "
+"Website absolut mobilfreundlich."
 
 #: ../../content/applications/websites/website/pages/seo.rst:546
 msgid "Browser Caching"
-msgstr ""
+msgstr "Browser-Caching"
 
 #: ../../content/applications/websites/website/pages/seo.rst:548
 msgid ""
@@ -3434,32 +3523,46 @@ msgid ""
 "The ``457-0da1d9d`` part of this URL will change if you modify the CSS of "
 "your website."
 msgstr ""
+"Javascript, Bilder und CSS-Ressourcen haben eine URL, die sich dynamisch "
+"ändert, wenn sich ihr Inhalt ändert. Zum Beispiel werden alle CSS-Dateien "
+"über diese URL geladen: "
+"`localhost:8069/web/content/457-0da1d9d/web.assets\\_common.0.css "
+"<http://localhost:8069/web/content/457-0da1d9d/web.assets_common.0.css>`__. "
+"Der Teil ``457-0da1d9d`` dieser URL ändert sich, wenn Sie das CSS Ihrer "
+"Website ändern."
 
 #: ../../content/applications/websites/website/pages/seo.rst:555
 msgid ""
 "This allows Odoo to set a very long cache delay (XXX) on these resources: "
 "XXX secs, while being updated instantly if you update the resource."
 msgstr ""
+"Dadurch kann Odoo eine sehr lange Cache-Verzögerung (XXX) für diese "
+"Ressourcen festlegen: XXX Sekunden bei der sofortigen Aktualisierung, wenn "
+"Sie die Ressource aktualisieren."
 
 #: ../../content/applications/websites/website/pages/seo.rst:560
 msgid "Scalability"
-msgstr ""
+msgstr "Skalierbarkeit"
 
 #: ../../content/applications/websites/website/pages/seo.rst:562
 msgid ""
 "In addition to being fast, Odoo is also more scalable than traditional CMS "
 "and eCommerce (Drupal, Wordpress, Magento, Prestashop)."
 msgstr ""
+"Odoo ist nicht nur schnell, sondern auch skalierbarer als herkömmliche CMS "
+"und E-Commerce (Drupal, Wordpress, Magento, Prestashop)."
 
 #: ../../content/applications/websites/website/pages/seo.rst:565
 msgid ""
 "Here is the slide that summarizes the scalability of Odoo Website & "
 "eCommerce."
 msgstr ""
+"Hier ist die Folie, die die Skalierbarkeit von Odoo Website & E-Commerce "
+"zusammenfasst."
 
 #: ../../content/applications/websites/website/pages/seo.rst:571
 msgid "Search Engines Files"
-msgstr ""
+msgstr "Suchmaschinendateien"
 
 #: ../../content/applications/websites/website/pages/seo.rst:574
 msgid "Sitemap"
@@ -3471,6 +3574,10 @@ msgid ""
 "generates a ``/sitemap.xml`` file automatically for you. For performance "
 "reasons, this file is cached and updated every 12 hours."
 msgstr ""
+"Die Sitemap zeigt den Suchmaschinenrobotern die zu indexierenden Seiten an. "
+"Odoo generiert automatisch eine ``/sitemap.xml``-Datei für Sie. Aus "
+"Leistungsgründen wird diese Datei zwischengespeichert und alle 12 Stunden "
+"aktualisiert."
 
 #: ../../content/applications/websites/website/pages/seo.rst:580
 msgid ""
@@ -3480,14 +3587,20 @@ msgid ""
 "<http://www.sitemaps.org/protocol.html>`__ grouping sitemap URL's in 45000 "
 "chunks per file."
 msgstr ""
+"Standardmäßig werden alle URLs in einer einzigen ``/sitemap.xml``-Datei "
+"gespeichert. Wenn Sie jedoch viele Seiten haben, erstellt Odoo automatisch "
+"eine Sitemap-Indexdatei, die das  `sitemaps.org-Protokoll "
+"<http://www.sitemaps.org/protocol.html>`__  beachtet und die Sitemap-URLs in"
+" 45000 Chunks pro Datei gruppiert."
 
 #: ../../content/applications/websites/website/pages/seo.rst:586
 msgid "Every sitemap entry has 4 attributes that are computed automatically:"
 msgstr ""
+"Jeder Sitemap-Eintrag hat 4 Attribute, die automatisch berechnet werden:"
 
 #: ../../content/applications/websites/website/pages/seo.rst:588
 msgid "``<loc>`` : the URL of a page"
-msgstr ""
+msgstr "``<loc>`` : die URL der Seite"
 
 #: ../../content/applications/websites/website/pages/seo.rst:590
 msgid ""
@@ -3495,6 +3608,10 @@ msgid ""
 "automatically based on related object. For a page related to a product, this"
 " could be the last modification date of the product or the page."
 msgstr ""
+"``<lastmod>`` : Datum der letzten Änderung der Ressource, das automatisch "
+"anhand des zugehörigen Objekts berechnet wird. Bei einer Seite, die sich auf"
+" ein Produkt bezieht, könnte dies das Datum der letzten Änderung des "
+"Produkts oder der Seite sein."
 
 #: ../../content/applications/websites/website/pages/seo.rst:595
 msgid ""
@@ -3503,10 +3620,15 @@ msgid ""
 " of votes on a specific post). The priority of a static page is defined by "
 "it's priority field, which is normalized (16 is the default)."
 msgstr ""
+"``<priority>`` : Module können ihren eigenen Prioritätsalgorithmus auf der "
+"Grundlage ihres Inhalts implementieren (Beispiel: ein Forum könnte eine "
+"Priorität auf der Grundlage der Anzahl der Stimmen für einen bestimmten "
+"Beitrag zuweisen). Die Priorität einer statischen Seite wird durch ihr "
+"Prioritätsfeld definiert, das normalisiert ist (16 ist der Standardwert)."
 
 #: ../../content/applications/websites/website/pages/seo.rst:602
 msgid "Structured Data Markup"
-msgstr ""
+msgstr "Auszeichnung für strukturierte Daten"
 
 #: ../../content/applications/websites/website/pages/seo.rst:604
 msgid ""
@@ -3515,12 +3637,20 @@ msgid ""
 "engine robots; helping them understand your content and create well-"
 "presented search results."
 msgstr ""
+"Auszeichnungen für strukturierte Daten wird verwendet, um Rich-Snippets in "
+"Suchmaschinenergebnissen zu erzeugen. Es ist eine Möglichkeit für Website-"
+"Besitzer, strukturierte Daten an Suchmaschinenroboter zu senden, die ihnen "
+"helfen, Ihre Inhalte zu verstehen und gut präsentierte Suchergebnisse zu "
+"erstellen."
 
 #: ../../content/applications/websites/website/pages/seo.rst:609
 msgid ""
 "Google supports a number of rich snippets for content types, including: "
 "Reviews, People, Products, Businesses, Events and Organizations."
 msgstr ""
+"Google unterstützt eine Reihe von Rich-Snippets für Inhaltstypen, darunter: "
+"Bewertungen, Personen, Produkte, Unternehmen, Veranstaltungen und "
+"Organisationen."
 
 #: ../../content/applications/websites/website/pages/seo.rst:612
 msgid ""
@@ -3529,10 +3659,15 @@ msgid ""
 "posts and contact addresses. This allows your product pages to be displayed "
 "in Google using extra information like the price and rating of a product:"
 msgstr ""
+"Odoo implementiert Mikrodaten, wie sie in der `schema.org "
+"<http://schema.org>`__-Spezifikation für Ereignisse, E-Commerce-Produkte, "
+"Forenbeiträge und Kontaktadressen definiert sind. Dadurch können Ihre "
+"Produktseiten in Google mit zusätzlichen Informationen wie dem Preis und der"
+" Bewertung eines Produkts angezeigt werden:"
 
 #: ../../content/applications/websites/website/pages/seo.rst:622
 msgid "robots.txt"
-msgstr ""
+msgstr "robots.txt"
 
 #: ../../content/applications/websites/website/pages/seo.rst:624
 msgid ""
@@ -3540,10 +3675,13 @@ msgid ""
 "indexing rules of the ``/robots.txt`` file (allowed robots, sitemap path, "
 "etc.). Odoo automatically creates it. Its content is:"
 msgstr ""
+"Bei der Indizierung Ihrer Website sehen sich die Suchmaschinen zunächst die "
+"allgemeinen Indizierungsregeln der ``/robots.txt``-Datei an (erlaubte "
+"Robots, Sitemap-Pfad usw.). Odoo erstellt sie automatisch. Ihr Inhalt ist:"
 
 #: ../../content/applications/websites/website/pages/seo.rst:628
 msgid "User-agent: \\* Sitemap: https://www.odoo.com/sitemap.xml"
-msgstr ""
+msgstr "Benutzer-Agent: \\* Sitemap: https://www.odoo.com/sitemap.xml"
 
 #: ../../content/applications/websites/website/pages/seo.rst:631
 msgid ""
@@ -3551,6 +3689,9 @@ msgid ""
 "other indexing rule than specified in the sitemap to be found at following "
 "address."
 msgstr ""
+"Das bedeutet, dass alle Robots Ihre Website indizieren dürfen und es keine "
+"andere Indizierungsregel gibt als die in der Sitemap angegebene, die Sie "
+"unter folgender Adresse finden."
 
 #: ../../content/applications/websites/website/pages/seo.rst:635
 msgid ""
@@ -3560,6 +3701,12 @@ msgid ""
 "Data of the view *Non Updatable* to not reset the file after system "
 "upgrades."
 msgstr ""
+"Sie können die Datei *robots* im :ref:`Entwicklermodus <developer-mode>` aus"
+" den *Einstelllungen --> Technisch --> Benutzerschnittstelle --> Ansichten* "
+"(robots ausschließen, einige Seiten ausschließen, auf eine "
+"benutzerdefinierte Sitemap umleiten). Machen Sie die Modelldaten der Ansicht"
+" *nicht aktualisierbar*, damit die Datei nach Systemaktualisierungen nicht "
+"zurückgesetzt wird."
 
 #: ../../content/applications/websites/website/reporting.rst:5
 msgid "Reporting"
@@ -3728,7 +3875,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:3
 msgid "Link trackers"
-msgstr ""
+msgstr "Link-Tracker"
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:5
 msgid ""
@@ -3756,10 +3903,12 @@ msgid ""
 "View of Website settings page emphasizing the link trackers field in Odoo "
 "Website"
 msgstr ""
+"Ansicht der Website-Einstellungsseite mit Hervorhebung des Feldes „Link-"
+"Tracker“ in Odoo Website"
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:19
 msgid "Set up traceable URLs"
-msgstr ""
+msgstr "Verfolgbare Links einrichten"
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:21
 msgid ""
@@ -3767,41 +3916,53 @@ msgid ""
 "page`. Here, you are able to get a specific tracked URL based on the "
 "campaign, medium, and source being used."
 msgstr ""
+"Gehen Sie auf :menuselection:`Website --> Gehe zu Website --> Werbung --> "
+"Diese Seite verfolgen`. Hier können Sie eine spezifische, nachverfolgte URL "
+"auf der Grundlage der verwendeten Kampagne, des Mediums und der Quelle "
+"erhalten."
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst-1
 msgid "View of the link tracker fields for Odoo Website"
-msgstr ""
+msgstr "Ansicht des Felds „Link-Tracker“ für Odoo Website"
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:28
 msgid ""
 "**URL**: url of the page you want to track (e.g. the home page or a "
 "product's page)."
 msgstr ""
+"**URL**: URL der Seite, die Sie verfolgen möchten (z. B. die Homepage oder "
+"die Seite eines Produkts)."
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:29
 msgid "**Campaign**: context of your link (e.g. a special promotion)."
-msgstr ""
+msgstr "**Kampagne**: Kontext Ihres Links (z. B. eine spezielle Werbeaktion)."
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:30
 msgid ""
 "**Medium**: channel used to share (deliver) your link (e.g. an email or a "
 "Facebook ad)."
 msgstr ""
+"**Medium**: Kanal, über den Ihr Link verbreitet wird (z. B. eine E-Mail oder"
+" eine Facebook-Anzeige)."
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:31
 msgid ""
 "**Source**: platform where the traffic originates (e.g. Google or Twitter)."
 msgstr ""
+"**Quelle**: Plattform, von der der Datenverkehr stammt (z. B. Google oder "
+"Twitter)."
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:33
 msgid ""
 "Now, click on *Get tracked link* to generate a URL that you can post or send"
 " by the source you have decided on."
 msgstr ""
+"Klicken Sie nun auf *Verfolgten Link abrufen*,  die Sie veröffentlichen oder"
+" über die von Ihnen gewählte Quelle versenden können."
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:37
 msgid "Follow-up on tracked links"
-msgstr ""
+msgstr "Nachverfolgung von Links"
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:39
 msgid ""
@@ -3811,6 +3972,12 @@ msgid ""
 "statistics by clicking on *Stats*, including the number of clicks, and the "
 "country of origin for those clicks."
 msgstr ""
+"Um die Statistiken Ihrer Links einzusehen, gehen Sie zu "
+":menuselection:`Website --> Gehe zu Website --> Werbung --> Diese Seite "
+"verfolgen`. Sie können nicht nur die *meistgeklickten* und *zuletzt "
+"verwendeten* Links sehen, sondern auch vollständige Statistiken, indem Sie "
+"auf *Statistik* klicken, einschließlich der Anzahl der Klicks und des "
+"Herkunftslandes dieser Klicks."
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst-1
 msgid ""
@@ -3841,6 +4008,9 @@ msgid ""
 "allow you to see the number of clicks and visitors to keep you on top of "
 "your marketing campaigns."
 msgstr ""
+"Integriert mit :doc:`Google Analytics <google_analytics>`, ermöglichen Ihnen"
+" diese Tracker, die Anzahl der Klicks und Besucher zu sehen, damit Sie Ihre "
+"Marketingkampagnen im Griff haben."
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:55
 msgid ""
@@ -3848,3 +4018,6 @@ msgid ""
 "</applications/sales/crm/track_leads/prospect_visits>` application allows "
 "you to understand where your leads and opportunities are coming from."
 msgstr ""
+"Die Integration mit der :doc:`CRM "
+"</applications/sales/crm/track_leads/prospect_visits>`-App ermöglicht es "
+"Ihnen zu verstehen, woher Ihre Leads und Verkaufschancen kommen."

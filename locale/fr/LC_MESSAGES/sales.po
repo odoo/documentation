@@ -19,8 +19,8 @@
 # Maxime Chambreuil <mchambreuil@ursainfosystems.com>, 2023
 # Cécile Collart <cco@odoo.com>, 2023
 # Martin Trigaux, 2023
-# Jolien De Paepe, 2023
 # Wil Odoo, 2023
+# Jolien De Paepe, 2023
 # 
 #, fuzzy
 msgid ""
@@ -29,7 +29,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-08-14 09:23+0000\n"
 "PO-Revision-Date: 2021-11-02 08:49+0000\n"
-"Last-Translator: Wil Odoo, 2023\n"
+"Last-Translator: Jolien De Paepe, 2023\n"
 "Language-Team: French (https://app.transifex.com/odoo/teams/41243/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -6416,7 +6416,7 @@ msgstr "Émettre des factures et enregistrer les paiements"
 
 #: ../../content/applications/sales/sales/amazon_connector/manage.rst:82
 msgid "Issue invoices"
-msgstr ""
+msgstr "Émettre des factures"
 
 #: ../../content/applications/sales/sales/amazon_connector/manage.rst:84
 msgid ""
@@ -6425,6 +6425,11 @@ msgid ""
 "possible to manually upload the invoices generated on Odoo to the Amazon "
 "backend."
 msgstr ""
+"Il n'est pas possible d'envoyer les factures aux clients d'Amazon "
+"directement à partir d'Odoo en raison de la politique d'Amazon de ne pas "
+"partager les adresses mail des clients. Au lieu de cela, il est possible de "
+"charger manuellement les factures générées dans Odoo vers le backend "
+"d'Amazon. "
 
 #: ../../content/applications/sales/sales/amazon_connector/manage.rst:88
 msgid ""
@@ -6432,6 +6437,9 @@ msgid ""
 "retrieve VAT numbers from the Amazon backend before creating the invoice in "
 "Odoo."
 msgstr ""
+"De plus, pour vos clients B2B, il est actuellement nécessaire de récupérer "
+"manuellement les numéros de TVA à partir du backend d'Amazon avant de créer "
+"la facture dans Odoo."
 
 #: ../../content/applications/sales/sales/amazon_connector/manage.rst:92
 msgid ""
@@ -6440,6 +6448,10 @@ msgid ""
 "TaxCloud, since Amazon already includes them in its own tax report to "
 "TaxCloud."
 msgstr ""
+"Pour les utilisateurs de :doc:`TaxCloud "
+"<../../../finance/accounting/taxes/taxcloud>` : les factures créées à partir"
+" des commandes Amazon ne sont **pas** synchronisées avec TaxCloud, "
+"puisqu'Amazon les inclut déjà sans sa propre déclaration de TVA à TaxCloud."
 
 #: ../../content/applications/sales/sales/amazon_connector/manage.rst:97
 msgid "Register payments"
@@ -6451,6 +6463,9 @@ msgid ""
 "journal (for example, named `Amazon payments`) with a dedicated *Bank and "
 "Cash* intermediary account is recommended."
 msgstr ""
+"Comme les clients paient Amazon en tant qu'intermédiaire, il est recommandé "
+"de créer un journal de *Banque* dédié (par exemple, intitulé `paiements "
+"Amazon`) avec un compte intermédiaire *Banque et Espèces* dédié."
 
 #: ../../content/applications/sales/sales/amazon_connector/manage.rst:102
 msgid ""
@@ -6461,6 +6476,13 @@ msgid ""
 "all the payments generated and click :menuselection:`Actions --> Create "
 "batch payment --> Validate`."
 msgstr ""
+"De plus, comme Amazon effectue un seul paiement mensuel, il est nécessaire "
+"de sélectionner toutes les factures liées à un seul paiement lors de "
+"l'enregistrement des paiements. Utilisez le :guilabel:`Journal` `Paiements "
+"Amazon` dédié et sélectionnez :guilabel:`Dépôt par lot` comme "
+":guilabel:`mode de paiement`. Sélectionnez ensuite tous les paiements "
+"générés et cliquez sur :menuselection:`Actions --> Créer un paiement par lot"
+" --> Valider`."
 
 #: ../../content/applications/sales/sales/amazon_connector/manage.rst:109
 msgid ""
@@ -6469,6 +6491,10 @@ msgid ""
 "and the banks statements are recorded, credit the Amazon intermediary "
 "account by the amount received."
 msgstr ""
+"La même chose peut être fait pour les factures fournisseurs d'Amazon dédiées"
+" aux commissions. Lorsque le solde est reçu sur le compte bancaire à la fin "
+"du mois et les relevés bancaires sont enregistrés, créditez le compte "
+"intermédiaire Amazon du montant reçu."
 
 #: ../../content/applications/sales/sales/amazon_connector/manage.rst:114
 msgid "Follow your Amazon sales in sales reporting"
@@ -9865,7 +9891,7 @@ msgstr "Envoyer des devis"
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:3
 msgid "Quotation deadlines"
-msgstr ""
+msgstr "Échéances des devis"
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:5
 msgid ""
@@ -9875,10 +9901,16 @@ msgid ""
 "deadlines also can also act as protection for a company in case an order has"
 " to be fulfilled at a price that is no longer profitable for the business."
 msgstr ""
+"Dans l'application *Ventes* d'Odoo, il est possible de définir des échéances"
+" sur des devis. Cela encourage les clients à agir rapidement pendant les "
+"négociations de vente, car ils peuvent craindre de manquer une bonne "
+"affaire. En outre, les délais peuvent également servir de protection pour "
+"une entreprise au cas où une commande devrait être exécutée à un prix qui "
+"n'est plus rentable pour l'entreprise."
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:11
 msgid "Expiration date deadlines"
-msgstr ""
+msgstr "Échéances d'expiration"
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:13
 msgid ""
@@ -9886,6 +9918,8 @@ msgid ""
 ":guilabel:`Expiration` field located at the top of the quotation or sales "
 "order form."
 msgstr ""
+"Sur un devis d'Odoo *Ventes*, ajoutez une date d'expiration dans le champ "
+":guilabel:`Expiration` situé en haut du devis ou de la commande."
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:16
 msgid ""
@@ -9893,6 +9927,9 @@ msgid ""
 "app`, and select a desired quotation, or create a new one by clicking "
 ":guilabel:`Create`."
 msgstr ""
+"Pour ajouter une date d'expiration à un devis, allez à l'application "
+":menuselection:`Ventes` et sélectionnez un devis ou créez-en un nouveau en "
+"cliquant sur :guilabel:`Créer`."
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:19
 msgid ""
@@ -9901,20 +9938,27 @@ msgid ""
 "drop-down calendar, in which the month and date can be designated as the "
 "expiration date of the quotation."
 msgstr ""
+"Sur le formulaire de devis, cliquez sur :guilabel:`Modifier` (si vous "
+"modifiez un devis préexistant) et cliquez sur le champ "
+":guilabel:`Expiration`. Cela fait apparaître un calendrier déroulant, dans "
+"lequel vous pouvez désigner le mois et la date comme date d'expiration du "
+"devis."
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst-1
 msgid "How to configure deadlines on Odoo Sales."
-msgstr ""
+msgstr "Comment configurer des échéances dans Odoo Ventes."
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:27
 msgid ""
 "Once the expiration date is selected, click :guilabel:`Save` to save all "
 "changes."
 msgstr ""
+"Une fois que vous avez sélectionné la date d'expiration, cliquez sur "
+":guilabel:`Enregistrer` pour enregistrer tous les changements. "
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:30
 msgid "Deadlines in quotation templates"
-msgstr ""
+msgstr "Échéances dans les modèles de devis"
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:32
 msgid ""
@@ -9922,6 +9966,9 @@ msgid ""
 "every quotation template. Whenever a specific quotation template is used in "
 "a quote, its associated deadline is automatically applied."
 msgstr ""
+"L'application *Ventes* d'Odoo vous permet également d'ajouter une échéance à"
+" chaque modèle de devis. Lorsqu'un modèle de devis spécifique est utilisé "
+"dans un devis, l'échéance y associée s'applique automatiquement."
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:36
 msgid ""
@@ -9930,12 +9977,19 @@ msgid ""
 "desired quotation template to which a deadline should be added, or click "
 ":guilabel:`Create` to build a new quotation template from scratch."
 msgstr ""
+"Pour ajouter une échéance à un modèle de devis, allez à l'application "
+":menuselection:`Ventes --> Configuration --> Modèles de devis` et "
+"sélectionnez le modèle de devis souhaité auquel vous voulez ajouter une "
+"échéance ou cliquez sur :guilabel:`Créer` pour créer un nouveau modèle de "
+"devis à partir de zéro."
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:40
 msgid ""
 "On the quotation template detail page, click the :guilabel:`Edit` button to "
 "edit the quotation."
 msgstr ""
+"Sur la page détaillée du modèle de devis, cliquez sur le bouton "
+":guilabel:`Modifier` pour modifier le devis."
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:42
 msgid ""
@@ -9944,10 +9998,15 @@ msgid ""
 "days represents how long the quotation will be valid for, before it expires."
 " When done, click :guilabel:`Save`."
 msgstr ""
+"Ajoutez ensuite un nombre de jours spécifiques dans le champ :guilabel:`Le "
+"devise expire après`, situé en-dessous du nom du modèle de devis. Le nombre "
+"de jours représente la durée de validité du devis avant son expiration. "
+"Lorsque vous avez terminé, cliquez sur :guilabel:`Enregistrer`."
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst-1
 msgid "How to use deadline in a quotation template on Odoo Sales."
 msgstr ""
+"Comment utiliser les dates limites dans un modèle de devis dans Odoo Ventes."
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:51
 msgid ""
@@ -9956,17 +10015,21 @@ msgid ""
 " of days is the same as those mentioned in the quotation template (if a "
 "quotation template was used for the initial quotation)."
 msgstr ""
+"En cliquant sur le bouton :guilabel:`Aperçu client` sur un devis, Odoo "
+"affiche clairement la date d'expiration de cette offre spécifique. Pour "
+"rappel, le nombre de jours est le même que celui mentionné dans le modèle de"
+" devis (si un modèle de devis a été utilisé pour le devis initial)."
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:0
 msgid "How customers will see deadlines on Odoo Sales."
-msgstr ""
+msgstr "Comment les clients voient les dates limites dans Odoo Ventes."
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:60
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:52
 #: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst:68
 #: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst:149
 msgid ":doc:`/applications/sales/sales/send_quotations/quote_template`"
-msgstr ""
+msgstr ":doc:`/applications/sales/sales/send_quotations/quote_template`"
 
 #: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:3
 msgid "Deliver and invoice to different addresses"
@@ -10215,7 +10278,7 @@ msgstr ":doc:`/applications/finance/payment_acquirers/authorize`"
 
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:3
 msgid "Online signatures for order confirmations"
-msgstr ""
+msgstr "Signatures en ligne pour les confirmations de commande"
 
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:5
 msgid ""
@@ -10224,10 +10287,15 @@ msgid ""
 "order is electronically signed by the customer, the salesperson attached to "
 "the sales order is automatically notified that the order is confirmed."
 msgstr ""
+"L'application Odoo *Ventes* offre aux clients la possibilité de confirmer "
+"les commandes par une signature en ligne directement sur la commande. Une "
+"fois que la commande est signée électroniquement par le client, le vendeur "
+"mentionné sur la commande est automatiquement notifié que la commande est "
+"confirmée."
 
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:11
 msgid "Activate online signatures"
-msgstr ""
+msgstr "Activer les signatures en ligne"
 
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:13
 msgid ""
@@ -10237,34 +10305,45 @@ msgid ""
 "checking the box beside it. Then, click the :guilabel:`Save` button in the "
 "top-left corner."
 msgstr ""
+"Pour activer la fonctionnalité *signature en ligne*, allez à l'application "
+":menuselection:`Ventes --> Configuration --> Paramètres`, faites défiler "
+"jusqu'à la section :guilabel:`Devis & Commandes` et activez la "
+"fonctionnalité :guilabel:`Signature en ligne` en cochant la case à côté de "
+"l'option. Cliquez ensuite sur le bouton :guilabel:`Enregistrer` dans le coin"
+" supérieur gauche."
 
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst-1
 msgid "How to enable online signature in Odoo Sales settings."
 msgstr ""
+"Comment activer les signatures en ligne dans les paramètres d'Odoo Ventes."
 
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:23
 msgid ""
 "On quotation templates, the :guilabel:`Online Signature` feature is located "
 "under the :guilabel:`Confirmation` tab."
 msgstr ""
+"Sur les modèles de devis, la fonctionnalité :guilabel:`Signature en ligne` "
+"se situe en-dessous de l'onglet :guilabel:`Confirmation`."
 
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:0
 msgid "How to enable online signature on a quotation template."
-msgstr ""
+msgstr "Comment activer les signatures en ligne sur un modèle de devis."
 
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:30
 msgid ""
 "On standard quotations, the :guilabel:`Online Signature` feature is located "
 "under the :guilabel:`Other Info` tab."
 msgstr ""
+"Sur les devis standards, la fonctionnalité :guilabel:`Signature en ligne` se"
+" situe en-dessous de l'onglet :guilabel:`Autres informations`."
 
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:0
 msgid "How to enable online signature on standard quotations."
-msgstr ""
+msgstr "Comment activer les signatures en ligne sur les devis standards."
 
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:38
 msgid "Order confirmations with online signatures"
-msgstr ""
+msgstr "Confirmer la commande par une signature en ligne"
 
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:40
 msgid ""
@@ -10273,10 +10352,15 @@ msgid ""
 "portal. When clicked, clients have the option to draw a signature, fill in "
 "the field with an automated signature, or load a file from their computer."
 msgstr ""
+"Lorsque les devis sont envoyés aux clients, ils ont la possibilité de "
+":guilabel:`Signer & Payer` directement sur le devis dans le portail client "
+"en ligne. En cliquant sur ce bouton, les clients peuvent dessiner une "
+"signature, remplir le champ avec une signature automatisée ou charger un "
+"fichier à partir de leur ordinateur."
 
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst-1
 msgid "How to confirm an order with a signature on Odoo Sales."
-msgstr ""
+msgstr "Comment confirmer une commande par une signature dans Odoo Ventes."
 
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:48
 msgid ""
@@ -10284,6 +10368,10 @@ msgid ""
 " the quotation is paid and confirmed, a delivery order is automatically "
 "created (if the Odoo *Inventory* app is installed)."
 msgstr ""
+"Une fois la signature apposée, les différentes options de paiement "
+"deviennent disponibles. Ensuite, lorsque le devis est payé et confirmé, un "
+"bon de livraison est créé automatiquement (si l'application Odoo "
+"*Inventaire* est installée)."
 
 #: ../../content/applications/sales/sales/send_quotations/optional_products.rst:3
 msgid "Add optional products"
