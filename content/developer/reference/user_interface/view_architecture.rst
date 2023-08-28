@@ -239,7 +239,7 @@ can have the following attributes:
 
   .. code-block:: xml
 
-    <field name="fname_a" invisible="True"/> <!-- necessary to evaluate invisible attribute of 'fname_b' field -->
+    <!-- 'fname_a' is loaded automatically (as invisible and readonly) to evaluate invisible attribute of 'fname_b' field -->
     <field name="fname_b" invisible="fname_c != 3 and fname_a == parent.fname_d"/>
     <field name="fname_c"/>
 
