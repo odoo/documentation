@@ -26,3 +26,4 @@ convert visitors into leads or revenues.
    website/pages
    website/configuration
    website/reporting
+   website/mail_groups
