@@ -1320,6 +1320,12 @@ root can have the following attributes_:
   when the list view is grouped, automatically open the first level of groups if set
   to true. (Warning: It may be slow depending on the number of groups)
 
+:open_form_view:
+  boolean_ (default: ``False``)
+
+  display a button at the end of each records to open the record in a form view.
+  Only useful when the view is editable.
+
 Possible children elements of the list view are: ``button``, ``field``, ``groupby``,
 ``header`` or ``control``
 
