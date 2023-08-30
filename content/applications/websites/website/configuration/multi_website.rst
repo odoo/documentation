@@ -257,6 +257,8 @@ Each kit will link each published “virtual” product to the main
 reference managed in your inventory. That way, any item sold from your
 website will be converted into the storable item in the delivery order.
 
+.. _multi_website/pricelists:
+
 Pricelists
 ----------
 
