@@ -350,8 +350,8 @@ line item to view the suggested changes.
    :align: center
    :alt: "Show Instructions" icon in the *Operations* tab of a BoM.
 
-On the :ref:`quality control point <quality/quality-control-points>` form, ensure the following form
-fields are accurately filled out to give detailed instructions for operators:
+On the :ref:`quality control point <quality/quality_management/quality-control-points>` form, ensure
+the following form fields are accurately filled out to give detailed instructions for operators:
 
 - :guilabel:`Title`: rename to give a concise description of the new instruction.
 - :guilabel:`Control per`: using the drop-down menu, determine whether this instruction applies
@@ -360,10 +360,11 @@ fields are accurately filled out to give detailed instructions for operators:
 - :guilabel:`Type`: categorizes the control point type. From the drop-down menu, select
   :guilabel:`Instructions` to detail an instruction for the worker. To receive input from the
   workers, select the :guilabel:`Take a Picture`, :guilabel:`Register Consumed Materials`,
-  :guilabel:`Print Label`, or other :ref:`quality check options <quality/quality-control-points>`.
+  :guilabel:`Print Label`, or other :ref:`quality check options
+  <quality/quality_management/quality-control-points>`.
 
 .. seealso::
-   :ref:`Configure quality control points <quality/quality-control-points>`
+   :ref:`Configure quality control points <quality/quality_management/quality-control-points>`
 
 Once the quality control point is configured, return to the :guilabel:`Steps` list using the
 breadcrumbs. Finally, drag the last quality control line item to its intended order of instructions.
