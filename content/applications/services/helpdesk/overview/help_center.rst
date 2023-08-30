@@ -2,7 +2,7 @@
 Help center
 ===========
 
-Odoo *Helpdesk* integrates with the *Forums*, *eLearning*, and *Knowledge* apps to create the *help
+Odoo *Helpdesk* integrates with the *Forum*, *eLearning*, and *Knowledge* apps to create the *help
 center*.
 
 .. image:: help_center/help-center-enable-features.png
@@ -171,6 +171,8 @@ make any necessary additions or edits to the template, then click :guilabel:`Sen
    Doing so will not replace the existing text in a ticket's description. The template will be added
    as additional text.
 
+.. _helpdesk/forum:
+
 Community Forum
 ===============
 
@@ -199,91 +201,9 @@ menu to enable that forum.
 To create a new forum, type a name into the blank :guilabel:`Forums` field, then click the
 :guilabel:`Create and Edit` option. Multiple forums can be selected in this field.
 
-Set up a forum
---------------
-
-The settings on a forum are managed through either the *Website* or *eLearning* applications. From
-the Odoo Dashboard, navigate to :menuselection:`Website --> Configuration --> Forums` or
-:menuselection:`eLearning --> Forum --> Forums`. In either case, select a forum to edit from the
-list.
-
-On the forum detail form, select a mode.
-
-The :guilabel:`Questions` mode allows for one answer/response for each post, while
-:guilabel:`Discussion` mode allows for multiple responses. To limit the forum to a single website,
-select it from the :guilabel:`Website` field.
-
-Under the :guilabel:`Order and Visibility` section, in the :guilabel:`Options` tab, choose how the
-posts should be sorted, by modifying the :guilabel:`Default Sort` field. Change the
-:guilabel:`Privacy` setting to change which users will have access to the forum.
-
-Below these settings, there is space to add a description for the forum. This description will be
-visible on the website where the forum is published.
-
-.. image:: help_center/help-center-forum-settings.png
-   :align: center
-   :alt: Overview of a forum's settings page in Odoo Helpdesk.
-
-Karma gains and karma related rights
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-When users interact on forums - either through posting questions, submitting answers, or upvoting
-responses - they earn points, called *karma*.
-
-Karma points are used to build the credibility of a user within the community. The more positive
-interactions a user has on the forum, the more karma points they gain. Certain activities, such as
-posting without validation, or editing posts, require users to have earned a specific level of karma
-points to prove their legitimacy and trustworthiness.
-
-These figures can be adjusted on the :guilabel:`Karma gains` and :guilabel:`Karma related rights`
-tabs, located on the forums detail form.
-
-.. tabs::
-
-   .. tab:: Karma gains
-
-      In the :guilabel:`Karma gains` tab, there are listed actions that will cause users to gain
-      (or lose) karma points. Those actions are:
-
-      - Asking a question
-      - Question upvoted
-      - Question downvoted
-      - Answer upvoted
-      - Answer downvoted
-      - Accepting an answer
-      - Answer accepted
-      - Answer flagged
-
-   .. tab:: Karma related rights
-
-      In the :guilabel:`Karma related rights` tab, there are listed activities that users cannot
-      complete, without having a specific level of karma points. Those activities are:
-
-      - Ask questions
-      - Answer questions
-      - Upvote
-      - Downvote
-      - Edit own posts
-      - Edit all posts
-      - Close own posts
-      - Close all posts
-      - Delete own posts
-      - Delete all posts
-      - Nofollow links
-      - Accept an answer on own question
-      - Accept an answer to all questions
-      - Editor features: image and links
-      - Comment on own posts
-      - Comment on all posts
-      - Convert own answers to comments (and vice versa)
-      - Convert all answers to comments (and vice versa)
-      - Unlink own comments
-      - Unlink all comments
-      - Ask questions without validation
-      - Flag a post as offensive
-      - Moderate posts
-      - Change question tags
-      - Create new tags
+.. seealso::
+   Check out the :doc:`Forum documentation <../../../websites/forum>` to learn how to configure,
+   use, and moderate a forum.
 
 Create a forum post from a Helpdesk ticket
 ------------------------------------------
