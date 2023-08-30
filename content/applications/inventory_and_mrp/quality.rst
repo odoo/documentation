@@ -19,3 +19,4 @@ when issues arise.
    :titlesonly:
 
    quality/quality_management
+   quality/quality_check_types
