@@ -16,15 +16,15 @@ Configuration
 =============
 
 To set up a user default warehouse, the :doc:`storage locations
-<../../inventory_and_mrp/inventory/management/warehouses/warehouses_locations>` feature needs to be
-activated in the **Inventory** app. It is also necessary to have more than one warehouse in your
-database.
+</applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations>`
+feature needs to be activated in the **Inventory** app. It is also necessary to have more than one
+warehouse in your database.
 
 You can either set it up :ref:`for your profile <default-warehouse/my-profile>`, or :ref:`for all
 users <default-warehouse/all-users>`.
 
 .. seealso::
-   :doc:`../../inventory_and_mrp/inventory/management/warehouses/warehouses_locations`
+   :doc:`/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations`
 
 .. _default-warehouse/my-profile:
 

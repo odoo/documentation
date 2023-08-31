@@ -80,9 +80,9 @@ enable the feature in the settings of the
    manually to reserve products in stock.
 
 .. seealso::
-   - :doc:`/applications/inventory_and_mrp/inventory/shipping/operation/invoicing`
-   - :doc:`/applications/inventory_and_mrp/inventory/shipping/operation/labels`
-   - :doc:`/applications/inventory_and_mrp/inventory/shipping/operation/multipack`
+   - :doc:`/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing`
+   - :doc:`/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels`
+   - :doc:`/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/multipack`
 
 Returns and refunds
 -------------------
