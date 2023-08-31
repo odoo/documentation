@@ -32,7 +32,7 @@ Standard units of measure
 -------------------------
 
 A variety of units of measure are available by default in your database. Each belongs to one of the
-five pre-configured units of measure categories: *Length / Distance*, *Unit*, *Volume*, *Weight* and
+six pre-configured units of measure categories: *Length / Distance*, *Unit*, *Volume*, *Weight*, *Surface* and
 *Working Time*.
 
 .. tip::
