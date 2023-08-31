@@ -245,4 +245,4 @@ When the necessary information has been entered, click :guilabel:`Create Invoice
 then be sent to the customer for payment.
 
 .. seealso::
-   :doc:`/applications/inventory_and_mrp/inventory/management/products/uom`
+   :doc:`/applications/inventory_and_mrp/inventory/product_management/product_replenishment/uom`
