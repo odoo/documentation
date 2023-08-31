@@ -60,6 +60,8 @@ the :guilabel:`Unit of Measure`. Then, when the product is received by clicking 
 .. seealso::
    :ref:`Use Different Units of Measure <inventory/management/products/units_of_measure>`
 
+.. _inventory/management/packages:
+
 Packages
 ========
 
