@@ -46,7 +46,7 @@ button.
        static template = "my_module.Counter";
 
        setup() {
-           state = useState({ value: 0 });
+           this.state = useState({ value: 0 });
        }
 
        increment() {
