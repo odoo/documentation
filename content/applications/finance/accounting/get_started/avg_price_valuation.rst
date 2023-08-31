@@ -3,7 +3,6 @@ Average price on returned goods
 ===============================
 
 .. |AVCO| replace:: :abbr:`AVCO (Average Cost Valuation)`
-
 .. _inventory/avg_cost/definition:
 
 *Average cost valuation* (AVCO) is an inventory valuation method that evaluates cost based on the

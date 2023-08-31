@@ -56,5 +56,5 @@ tracked products, click on **enter** to validate and start a new line.
      sale.
 
 .. seealso::
-   - :doc:`/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers`
-   - :doc:`/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots`
+   - :doc:`/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers`
+   - :doc:`/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots`
