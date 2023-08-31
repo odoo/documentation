@@ -18,8 +18,8 @@ You can create your own custom shipping methods and define rules to compute ship
 so, go to :menuselection:`Website --> Configuration --> Shipping Methods`, and either select an
 **existing** shipping method, or :guilabel:`Create` one. When creating a shipping method, you can
 choose between
-:doc:`Fixed Price </applications/inventory_and_mrp/inventory/shipping/setup/delivery_method>`,
-:doc:`Based on Rules </applications/inventory_and_mrp/inventory/shipping/setup/delivery_method>`,
+:doc:`Fixed Price </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/delivery_method>`,
+:doc:`Based on Rules </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/delivery_method>`,
 and :guilabel:`Pickup in store`.
 
 Pickup in store
@@ -31,10 +31,10 @@ Picking`. Once enabled, you can select and :guilabel:`Customize Pickup Sites`. :
 sites` can be made **website-specific**, but are by default available for *all* websites.
 
 .. seealso::
-   - :doc:`/applications/inventory_and_mrp/inventory/shipping/setup/delivery_method`
-   - :doc:`/applications/inventory_and_mrp/inventory/shipping/operation/invoicing`
-   - :doc:`/applications/inventory_and_mrp/inventory/shipping/operation/multipack`
-   - :doc:`/applications/inventory_and_mrp/inventory/shipping/operation/cancel`
+   - :doc:`/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/delivery_method`
+   - :doc:`/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing`
+   - :doc:`/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/multipack`
+   - :doc:`/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/cancel`
 
 .. _ecommerce-shipping-providers:
 
@@ -46,10 +46,10 @@ of using an integration is that delivery costs are automatically computed based 
 well as generating shipping labels.
 
 .. seealso::
-   - :doc:`/applications/inventory_and_mrp/inventory/shipping/setup/third_party_shipper`
-   - :doc:`/applications/inventory_and_mrp/inventory/shipping/setup/ups_credentials`
-   - :doc:`/applications/inventory_and_mrp/inventory/shipping/setup/dhl_credentials`
-   - :doc:`/applications/inventory_and_mrp/inventory/shipping/operation/labels`
+   - :doc:`/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper`
+   - :doc:`/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials`
+   - :doc:`/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials`
+   - :doc:`/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels`
 
 Website availability
 ====================
