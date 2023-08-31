@@ -16,6 +16,6 @@ users to easily manage lead times, automate replenishment, configure advanced ro
 .. toctree::
    :titlesonly:
 
-   inventory/management
-   inventory/shipping
-   inventory/routes
+   inventory/product_management
+   inventory/warehouses_storage
+   inventory/shipping_receiving

@@ -51,7 +51,7 @@ turn, notify the customer that the order (or a part of it) is on its way.
      tracking reference are displayed in the email to the customer.
 
 .. seealso::
-   - :doc:`../../../inventory_and_mrp/inventory/shipping/setup/third_party_shipper`
+   - :doc:`/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper`
 
 Follow deliveries in FBA
 ========================
