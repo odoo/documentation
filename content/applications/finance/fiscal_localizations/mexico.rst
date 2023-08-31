@@ -364,6 +364,9 @@ of payments:
 - `PUE` (Pago en una Sola Exhibición/Payment in a Single Exhibition)
 - `PPD` (Pago en Parcialidades o Diferido/Payment in Installements or Deferred)
 
+   .. seealso::
+      :doc:`../../inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/integrating_landed_costs`
+
 The difference lies in the *Due Date* or *Payment Terms* of the invoice.
 
 To configure |PUE| invoices, you must select an invoice :guilabel:`Due Date` within the same month
@@ -846,9 +849,9 @@ configured.
 Configuration
 ~~~~~~~~~~~~~
 
-In order to track the correct customs number for a specific invoice, Odoo uses :doc:`landed costs
-</applications/inventory_and_mrp/inventory/management/reporting/integrating_landed_costs>`. Go to
-:menuselection:`Inventory --> Configuration --> Settings --> Valuation`. Make sure that
+In order to track the correct customs number for a specific invoice, Odoo uses
+:doc:`landed costs <../../inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/integrating_landed_costs>`.
+Go to :menuselection:`Inventory --> Configuration --> Settings --> Valuation`. Make sure that
 :guilabel:`Landed Costs` is activated.
 
 First, a *service*-type product called `Pedimento` has to be created. In the :guilabel:`Purchase`
