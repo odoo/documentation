@@ -2,6 +2,8 @@
 Batch picking
 =============
 
+.. _inventory/misc/batch_picking:
+
 *Batch picking* enables a single picker to handle multiple orders at once, reducing the time needed
 to navigate to the same location in a warehouse.
 
