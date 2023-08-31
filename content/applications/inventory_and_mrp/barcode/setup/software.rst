@@ -43,6 +43,8 @@ directly at creation on the product form.
          the template product. Otherwise, you won’t be able to differentiate
          them.
 
+.. _barcode/setup/location:
+
 Set Locations Barcodes
 ======================
 
