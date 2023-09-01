@@ -16,7 +16,7 @@ One could argue that we can already do these things by changing the state manual
 this is not really convenient. Moreover, we want to add some extra processing: when an offer is
 accepted we want to set the selling price and the buyer for the property.
 
-Action Type
+Object Type
 ===========
 
 **Reference**: the documentation related to this topic can be found in
@@ -122,7 +122,7 @@ and its
 
       Pay attention: in real life only one offer can be accepted for a given property!
 
-Object Type
+Action Type
 ===========
 
 In :ref:`tutorials/getting_started/06_firstui`, we created an action that was linked to a menu. You
