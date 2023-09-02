@@ -37,8 +37,8 @@ msgid ""
 " out of work, while managers can see who is available at any given time."
 msgstr ""
 "La aplicación **Asistencias** de Odoo funciona como un reloj checador. Los "
-"empleados entran y salen de sus jornadas laborales, mientras que los "
-"gerentes pueden ver quién está disponible en un momento determinado."
+"empleados registran la entrada y salida de sus jornadas laborales, mientras "
+"que los gerentes pueden ver quién está disponible en un momento determinado."
 
 #: ../../content/applications/hr/attendances.rst:14
 msgid ""
@@ -1169,6 +1169,11 @@ msgid ""
 "working time entry for each company that uses the 40-hour standard work "
 "week."
 msgstr ""
+"Cada empresa utiliza sus propias horas laborables y también deben "
+"identificar el tipo de horas que utilizan. Por ejemplo, una base de datos de"
+" Odoo que contiene varias empresas que utilizan una semana laboral estándar "
+"de 40 horas debe tener una entrada de horas laborables por separado para "
+"cada empresa que utiliza la semana laboral estándar de 40 horas."
 
 #: ../../content/applications/hr/payroll.rst-1
 msgid "All working times currently set up in the database."
@@ -1253,6 +1258,13 @@ msgid ""
 "how often an employee gets paid, the working hours, and if wages are based "
 "on a salary (fixed) or how many hours the employee worked (varied)."
 msgstr ""
+"En Odoo, el recibo de nómina de un empleado depende de *estructuras* y "
+"*tipos de estructura*, esto afecta a la forma en que un empleado ingresa "
+"datos a las hojas de horas. Cada tipo de estructura es un conjunto "
+"individual de reglas para procesar una entrada en la hoja de horas y "
+"consiste en diferentes estructuras anidadas. También definen la frecuencia "
+"con la que se paga a un empleado y si se proporciona por salario (fijo) o "
+"por las horas que trabajó (variadas), además de sus horas laborables."
 
 #: ../../content/applications/hr/payroll.rst:150
 msgid ""
@@ -1394,6 +1406,9 @@ msgid ""
 "--> Rules`. Click on a structure (such as :guilabel:`Regular Pay`) to view "
 "all the rules."
 msgstr ""
+"Para consultar todas las reglas, vaya a la aplicación :menuselection:`Nómina"
+" --> Configuración --> Reglas`. Haga clic en una estructura (por ejemplo, en"
+" :guilabel:`pago regular`) para ver todas las reglas."
 
 #: ../../content/applications/hr/payroll.rst-1
 msgid "Rules for each salary structure type."
@@ -1404,6 +1419,9 @@ msgid ""
 "To make a new rule, click :guilabel:`Create`. A new rule form appears. Enter"
 " the information in the fields, then click :guilabel:`Save`."
 msgstr ""
+"Para crear una nueva regla, haga clic en :guilabel:`Nuevo`. Se desplegará un"
+" formulario en blanco, complete los campos con la información "
+"correspondiente y haga clic en :guilabel:`guardar`."
 
 #: ../../content/applications/hr/payroll.rst-1
 msgid "Enter the information for the new rule."
@@ -1431,6 +1449,9 @@ msgid ""
 "recommended to coordinate with the accounting department for a code as this "
 "will affect them."
 msgstr ""
+":guilabel:`Código`: introduzca el código que se utilizará para esta nueva "
+"regla. Se recomienda que se coordine con el Departamento de contabilidad, ya"
+" que esto les afectará."
 
 #: ../../content/applications/hr/payroll.rst:230
 msgid ""
@@ -1448,6 +1469,12 @@ msgid ""
 " beneath the selection), or a :guilabel:`Python Expression` (the code is "
 "entered beneath the selection)."
 msgstr ""
+":guilabel:`Condición basada en`: en la pestaña :guilabel:`General` se "
+"encuentra el menú desplegable para seleccionar si la regla es "
+":guilabel:`siempre verdadero` (siempre aplica), :guilabel:`intervalo` (se "
+"aplica a un intervalo específico, que se introduce debajo de la selección) o"
+" una :guilabel:`expresión de Python` (el código se escribe debajo de la "
+"selección)."
 
 #: ../../content/applications/hr/payroll.rst:236
 msgid ""
@@ -1457,6 +1484,10 @@ msgid ""
 "is selected, the fixed amount, percentage, or Python code needs to be "
 "entered next."
 msgstr ""
+":guilabel:`Tipo de importe`: en la pestaña :guilabel:`General`, seleccione "
+"en el menú desplegable si el importe es un :guilabel:`importe fijo`, un "
+":guilabel:`porcentaje (%)` o un :guilabel:`código Python`. Según lo que "
+"seleccione, deberá escribir el importe fijo, porcentaje o código de Python."
 
 #: ../../content/applications/hr/payroll.rst:242
 msgid "Rule parameters"
@@ -1469,10 +1500,15 @@ msgid ""
 "and only serves a specific use case for Belgian markets. The documentation "
 "will be updated when this section has matured to more markets."
 msgstr ""
+"Por el momento, la función :guilabel:`Parámetros de regla` que se encuentra "
+"en :menuselection:`Nómina --> Configuración` sigue en desarrollo y solo "
+"funciona para un caso de uso específico en el mercado de Bélgica. La "
+"documentación se actualizará cuando esta sección se haya expandido a otros "
+"mercados."
 
 #: ../../content/applications/hr/payroll.rst:250
 msgid "Other input types"
-msgstr ""
+msgstr "Otros tipos de entrada"
 
 #: ../../content/applications/hr/payroll.rst:252
 msgid ""
@@ -1481,6 +1517,10 @@ msgid ""
 "other inputs can be configured by going to :menuselection:`Payroll --> "
 "Configuration --> Other Input Types`."
 msgstr ""
+"Al crear recibos de nómina, a veces es necesario agregar otras entradas para"
+" circunstancias específicas como gastos, reembolsos o deducciones. Puede "
+"configurar estas otras entradas desde :menuselection:`Nómina --> "
+"Configuración --> Otros tipos de entrada`."
 
 #: ../../content/applications/hr/payroll.rst-1
 msgid "Other input types for payroll."
@@ -1494,6 +1534,11 @@ msgid ""
 ":guilabel:`Save` button to save the changes, or click :guilabel:`Discard` to"
 " delete the entry."
 msgstr ""
+"Para crear un nuevo tipo de entrada, haga clic en el botón "
+":guilabel:`Nuevo`. Escriba la :guilabel:`descripción`, el :guilabel:`código`"
+" y a qué estructura se aplica en el campo :guilabel:`Disponibilidad en "
+"estructura`. Haga clic en el botón correspondiente para :guilabel:`guardar` "
+"los cambios o en :guilabel:`descartar` para eliminar la entrada."
 
 #: ../../content/applications/hr/payroll.rst-1
 msgid "Create a new Input Type."
@@ -1511,6 +1556,11 @@ msgid ""
 ":guilabel:`Personal Info`, and :guilabel:`Resume`) specify what benefits can"
 " be offered to an employee in their salary package."
 msgstr ""
+"En la sección :guilabel:`Configurador del paquete salarial` del menú "
+":menuselection:`Nómina --> Configuración` hay varias opciones que afectan el"
+" salario potencial de un empleado. Estas secciones (:guilabel:`Ventajas`, "
+":guilabel:`Información personal` y :guilabel:`Currículo`) especifican qué "
+"beneficios se pueden ofrecer a un empleado en su paquete salarial."
 
 #: ../../content/applications/hr/payroll.rst:277
 msgid ""
@@ -1520,6 +1570,12 @@ msgid ""
 ":guilabel:`Salary Package Configurator` directly affect what the applicant "
 "sees, and what is populated as the applicant enters information."
 msgstr ""
+"El salario de un empleado se ajusta según la información que ingrese, como "
+"sus deducciones, personas que dependen de él o ella y otros datos más. "
+"Cuando un candidato solicita un trabajo en el sitio web de la empresa, las "
+"secciones en :guilabel:`Configurador del paquete salarial` afectan "
+"directamente lo que el solicitante ve y, por lo tanto, lo que se completa "
+"conforme el candidato introduce información."
 
 #: ../../content/applications/hr/payroll.rst:283
 msgid "Advantages"
@@ -1532,12 +1588,18 @@ msgid ""
 "appealing (such as extra time off, access to a company car, reimbursement "
 "for a phone or internet, etc.)."
 msgstr ""
+"Al ofrecer un puesto a los empleados potenciales, puede establecer ciertas "
+"*ventajas* en Odoo además del salario para que la oferta sea más atractiva. "
+"Puede agregar tiempo personal adicional, acceso a un vehículo de la empresa,"
+" reembolso por gastos de teléfono o internet, etc."
 
 #: ../../content/applications/hr/payroll.rst:289
 msgid ""
 "To see the advantages, go to :menuselection:`Payroll --> Configuration --> "
 "Advantages`. Advantages are grouped by :guilabel:`Structure type`."
 msgstr ""
+"Para consultar las ventajas, vaya a :menuselection:`Nómina --> Configuración"
+" --> Ventajas`, estas se agrupan por :guilabel:`tipo de estructura`."
 
 #: ../../content/applications/hr/payroll.rst-1
 msgid "Settings available for payroll."
@@ -1549,6 +1611,9 @@ msgid ""
 "information in the fields, then click the :guilabel:`Save` button to save "
 "the changes, or click :guilabel:`Discard` to delete the entry."
 msgstr ""
+"Para crear una nueva ventaja, haga clic en el botón :guilabel:`Nuevo`. "
+"Complete los campos con la información correspondiente y  :guilabel:`guarde`"
+" los cambios o haga clic en :guilabel:`descartar` para eliminar la entrada."
 
 #: ../../content/applications/hr/payroll.rst-1
 msgid "List of advantages employee's can have."
@@ -1556,17 +1621,19 @@ msgstr "Lista con las ventajas que puede tener un empleado."
 
 #: ../../content/applications/hr/payroll.rst:304
 msgid "The required fields for an advantage are:"
-msgstr "Los campos necesarios para una ventaja son los siguientes:"
+msgstr "Los campos necesarios para crear una ventaja son los siguientes:"
 
 #: ../../content/applications/hr/payroll.rst:306
 msgid ":guilabel:`Name`: Enter the name for the advantage."
-msgstr ":guilabel:`Nombre`: escriba el nombre para la ventaja."
+msgstr ":guilabel:`Nombre`: escriba el nombre de la ventaja."
 
 #: ../../content/applications/hr/payroll.rst:307
 msgid ""
 ":guilabel:`Advantage Field`: Select from the drop-down menu what field in "
 "the payslip this advantage appears under."
 msgstr ""
+":guilabel:`Campo de ventaja`: seleccione en el menú desplegable en qué campo"
+" del recibo de nómina aparece esta ventaja."
 
 #: ../../content/applications/hr/payroll.rst:309
 msgid ""
@@ -1575,12 +1642,19 @@ msgid ""
 ":guilabel:`Monthly Advantages in Net`, :guilabel:`Monthly Advantages in "
 "Cash`, or :guilabel:`Yearly Advantages in Cash`."
 msgstr ""
+":guilabel:`Tipo de ventaja`: seleccione en el menú desplegable qué tipo de "
+"ventaja corresponde al beneficio. Seleccione si es un :guilabel:`beneficio "
+"mensual en especie`, :guilabel:`ventajas mensuales en neto`, "
+":guilabel:`ventajas mensuales en efectivo` o :guilabel:`ventajas anuales en "
+"efectivo`."
 
 #: ../../content/applications/hr/payroll.rst:312
 msgid ""
 ":guilabel:`Salary Structure Type`: Select from the drop-down menu which "
 "salary structure type this advantage applies to."
 msgstr ""
+":guilabel:`Tipo de estructura salarial`: seleccione en el menú desplegable a"
+" qué tipo de estructura salarial se aplica esta ventaja."
 
 #: ../../content/applications/hr/payroll.rst:316
 msgid "Personal info"
@@ -1595,10 +1669,19 @@ msgid ""
 " --> Employees` and click on the employee's card. Employee cards can also be"
 " viewed by going to the :menuselection:`Employees` app."
 msgstr ""
+"En Odoo, cada empleado tiene una *tarjeta de empleado* que incluye toda su "
+"información personal, currículo, información de trabajo y documentos. Para "
+"ver la tarjeta de un empleado, vaya al tablero principal de la aplicación "
+":menuselection:`Nómina` y haga clic en la tarjeta o vaya a "
+":menuselection:`Nómina --> Empleados --> Empleados` y seleccione una "
+"tarjeta. También puede ver las tarjetas de los empleados desde la aplicación"
+" :menuselection:`Empleados`."
 
 #: ../../content/applications/hr/payroll.rst:325
 msgid "An employee card can be thought of as an employee personnel file."
 msgstr ""
+"Una tarjeta de empleado se puede considerar el expediente personal de un "
+"empleado."
 
 #: ../../content/applications/hr/payroll.rst:327
 msgid ""
@@ -1606,10 +1689,14 @@ msgid ""
 "available to enter on the employee's card. To access this section, go to "
 ":menuselection:`Payroll --> Configuration --> Personal Info`."
 msgstr ""
+"La sección *información personal* agrupa todos los campos que están "
+"disponibles para introducir en la tarjeta del empleado. Para ingresar a esta"
+" sección, vaya a :menuselection:`Nómina --> Configuración --> Información "
+"personal`."
 
 #: ../../content/applications/hr/payroll.rst-1
 msgid "Personal information that appear on employee cards to enter."
-msgstr ""
+msgstr "Información personal de un empleado que aparece en una tarjeta."
 
 #: ../../content/applications/hr/payroll.rst:335
 msgid ""
@@ -1617,10 +1704,14 @@ msgid ""
 "button, and modify the entry. When done, click :guilabel:`Save` or "
 ":guilabel:`Discard` to save the information or cancel the edits."
 msgstr ""
+"Para editar una entrada, selecciónela de la lista y luego haga clic en el "
+"botón :guilabel:`editar` para realizar las modificaciones correspondientes. "
+"Cuando haya terminado, haga clic en :guilabel:`guardar` o en "
+":guilabel:`descartar` para cancelar las ediciones."
 
 #: ../../content/applications/hr/payroll.rst-1
 msgid "New personal information entry."
-msgstr ""
+msgstr "Nueva entrada de información personal."
 
 #: ../../content/applications/hr/payroll.rst:343
 msgid ""
@@ -1628,6 +1719,10 @@ msgid ""
 "Required` and :guilabel:`Display Type`. Checking the :guilabel:`Is Required`"
 " box makes the field mandatory on the employee's card."
 msgstr ""
+"Los dos campos más importantes en el formulario de información personal son "
+":guilabel:`Es necesario` y :guilabel:`Mostrar tipo`. Al seleccionar la "
+"casilla :guilabel:`Es necesario` hace que el campo en la tarjeta del "
+"empleado sea obligatorio."
 
 #: ../../content/applications/hr/payroll.rst:347
 msgid ""
@@ -1636,12 +1731,18 @@ msgid ""
 "customizable :guilabel:`Radio` button, a :guilabel:`Checkbox`, a "
 ":guilabel:`Document`, and more."
 msgstr ""
+"El menú desplegable :guilabel:`Mostrar tipo` permite introducir la "
+"información de varias maneras, puede elegir entre un cuadro de "
+":guilabel:`texto`, un botón de :guilabel:`opción` personalizable, una "
+":guilabel:`casilla`, un :guilabel:`documento` y otros."
 
 #: ../../content/applications/hr/payroll.rst:351
 msgid ""
 "Once the information is entered, click the :guilabel:`Save` button to save "
 "the entry."
 msgstr ""
+"Una vez que terminó de ingresar la información, haga clic en el botón "
+":guilabel:`guardar` para almacenar la entrada."
 
 #: ../../content/applications/hr/payroll.rst:354
 msgid "Resume"
@@ -1654,3 +1755,8 @@ msgid ""
 "and only serves a specific use case for Belgian markets. The documentation "
 "will be updated when this section has matured to more markets."
 msgstr ""
+"Por el momento, la función :guilabel:`Currículo` que se encuentra en "
+":menuselection:`Nómina --> Configuración` sigue en desarrollo y solo "
+"funciona para un caso de uso específico en el mercado de Bélgica. La "
+"documentación se actualizará cuando esta sección se haya expandido a otros "
+"mercados."
