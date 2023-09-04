@@ -36,6 +36,17 @@ Upgrade request via the Odoo Upgrade Portal
    - For security reasons, only the person who submitted the upgrade request is able to download it.
    - Any problem found during testing should be reported via the `helpdesk
      <https://odoo.com/help>`_.
+   - For storage reasons, the copy of your database is submitted without a filestore to the upgrade
+     server. Therefore, the upgraded database does not contain the production filestore.
+   - Before restoring the upgraded database, its filestore must be merged with the production
+     filestore to be able to perform tests in the same conditions as it would be in the new version.
+   - The upgraded database contains:
+
+      - A `dump.sql` file containing the upgraded database.
+      - A `filestore` folder containing files that were extracted from in-database records into
+        attachments (if there are any) and new standard Odoo files from the targeted Odoo version
+        (like new images, icons, payment provider's logos, etc.). This is the folder that should be
+        merged with the production filestore in order to get the full upgraded filestore.
 
 Upgrade your production database
 ================================
@@ -43,6 +54,12 @@ Upgrade your production database
 Once you have completed the testing successfully, you can proceed to upgrade your live database in
 production. Download your upgraded database from the link in the email and import it onto your live
 environment.
+
+.. important::
+   - Same as in the test phase, when requesting an upgrade for production purposes, the copy of your
+     database is submitted without a filestore.
+   - Therefore, the upgraded database filestore must be merged with the production filestore before
+     deploying the new version.
 
 Custom modules (if applicable)
 ==============================
