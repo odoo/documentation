@@ -97,7 +97,7 @@ services, and components can import a service with the `useService()` hook.
       odoo/addons/base/views/res_partner_views.xml#L525>`_).
    #. A button `New Orders`, which opens a list view with all orders created in the last 7 days. Use
       the `Domain <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
-      odoo/addons/web/static/src/core/domain.js#L19>`_ helper class to represent the domain.
+      /addons/web/static/src/core/domain.js#L19>`_ helper class to represent the domain.
 
       .. tip::
          One way to represent the desired domain could be
