@@ -1,87 +1,111 @@
-
-.. _db_management/hosting_changes:
-
 =======================
 Change hosting solution
 =======================
 
-You may want to move your Odoo database from one hosting solution to another.
-Depending on the platforms, you have to do it by yourself or contact our support team first.
+The instructions to change the hosting type of a database depend on the current solution used and to
+which solution the database should be moved.
 
-From on-premises to Odoo Online
-===============================
+Transferring an on-premise database
+===================================
 
-1. Create a :ref:`duplicate <duplicate_premise>` of your database: in this duplicate, uninstall all the **non-standard apps**.
-2. Grab a "dump with filestore" of your database by using the Database Manager.
-3. **If you have time constraints, contact us earlier to schedule the transfer.**
-4. `Create a support ticket <https://www.odoo.com/help>`_ and attach the dump (if the file is too large, use any file transfer service and attach the link to your ticket). Also include your subscription number and the URL you want to use for your database (e.g.: my-company.odoo.com).
-5. We will make sure your database is compatible and upload it to our cloud. In case of technical issues, we will get in touch with you.
-6. It's done!
+To Odoo Online
+--------------
 
 .. important::
-   - Odoo Online is not compatible with **non-standard apps**.
-   - The database you are moving to Odoo Online must be in a :doc:`supported version
-     <supported_versions>`.
+   - Odoo Online is *not* compatible with **non-standard apps**.
+   - The database's current version must be :doc:`supported <supported_versions>`.
 
-From on-premises to Odoo.sh
-===========================
+#. Create a :ref:`duplicate <duplicate_premise>` of the database.
+#. In this duplicate, uninstall all **non-standard apps**.
+#. Use the database manager to grab a *dump with filestore*.
+#. `Submit a support ticket <https://www.odoo.com/help>`_ including the following:
 
-1. Follow the :ref:`Import your database section of the Odoo.sh documentation <odoo_sh_import_your_database>`.
-2. ...and voilà!
+   - your **subscription number**,
+   - the **URL** you want to use for the database (e.g., `company.odoo.com`), and
+   - the **dump** as an attachment or as a link to the file (required for 60 MB+ files).
 
-From Odoo Online to on-premises
-===============================
-
-1. Log into `your Odoo Online user portal <https://accounts.odoo.com/my/databases/manage>`_ and look for the version number of your database.
-2. If your database does not run a :ref:`major version <supported_versions>` of Odoo, you cannot host it on-premises yet, you have to upgrade it first to a new major version. (*e.g.: If your database runs Odoo 12.3 which is not a major version, you have to upgrade it first to Odoo 13.0 or 14.0.*)
-3. Download a backup of your database by clicking on the "Gear" icon next to your database name then :menuselection:`Download` (if the download fails due to your backup file being too large, contact `our support <https://www.odoo.com/help>`_)
-4. Restore it from the database manager on your local server.
-
-From Odoo Online to Odoo.sh
-===========================
-
-1. Log into `your Odoo Online user portal <https://accounts.odoo.com/my/databases/manage>`_ and look for the version number of your database.
-2. If your database does not run a :ref:`major version <supported_versions>` of Odoo, you cannot host it on Odoo.sh yet, you have to upgrade it first to a new major version. (*e.g.: If your database runs Odoo 12.3 which is not a major version, you have to upgrade it first to Odoo 13.0 or 14.0.*)
-3. Download a backup of your database by clicking on the "Gear" icon next to your database name then :menuselection:`Download` (if the download fails due to your backup file being too large, contact `our support <https://www.odoo.com/help>`_)
-4. Follow the :ref:`Import your database section of the Odoo.sh documentation <odoo_sh_import_your_database>`.
-
-From Odoo.sh to Odoo Online
-===========================
-
-#. Uninstall all the **non-standard apps**.
-#. `Create a support ticket <https://www.odoo.com/help>`_ and include the following:
-
-   - Your subscription number
-   - The URL you want to use for your database (e.g., `example.odoo.com`)
-   - Which branch you want to migrate
-   - In which region you want to be hosted:
-
-     - Americas
-     - Europe
-     - Asia
-
-   - Which user(s) will be the administrator(s)
-   - When (and in which timezone) you want the database to be up and running
-
-#. We will make sure your database is compatible and upload it to our cloud. In case of technical
-   issues, we will get in touch with you.
-#. All done!
-
-.. important::
-   - Odoo Online is not compatible with **non-standard apps**.
-   - Make sure to uninstall all the **non-standard apps** in a staging build before doing it in your
-     production build.
+#. Odoo then makes sure the database is compatible before putting it online. In case of technical
+   issues during the process, Odoo might contact you.
 
 .. note::
-   - Make sure you select the **region** that is closest to your users to reduce latency.
-   - The future **administrator(s)** must have an odoo.com account.
-   - The specific **date and time** at which you want the database to be up and running are mainly
-     helpful to organize the switch from the odoo.sh server to the Odoo Online servers.
+   If you have time constraints, `submit a support ticket <https://www.odoo.com/help>`_ as soon as
+   possible to schedule the transfer.
+
+To Odoo.sh
+----------
+
+Follow the instructions found in :ref:`the Import your database section
+<odoo_sh_import_your_database>` of the Odoo.sh *Create your project* documentation.
+
+Transferring an Odoo Online database
+====================================
+
+.. important::
+   Odoo Online's :ref:`intermediary versions <supported_versions>` cannot be hosted on-premise as
+   that type of hosting does not support those versions. Therefore, if the database to transfer
+   is running an intermediary version, it must be upgraded first to the next :ref:`major version
+   <supported_versions>`, waiting for its release if necessary.
+
+   .. example::
+      Transferring an online database running on Odoo 16.3 would require first upgrading it to Odoo
+      17.0.
+
+   .. tip::
+      Click the gear icon (:guilabel:`⚙`) next to the database name on the `Odoo Online database
+      manager <https://www.odoo.com/my/databases/>`_ to display its version number.
+
+To on-premise
+-------------
+
+#. Sign in to `the Odoo Online database manager <https://www.odoo.com/my/databases/>`_ and click the
+   gear icon (:guilabel:`⚙`) next to the database name to :guilabel:`Download` a backup. If the
+   download fails due to the file being too large, `contact Odoo support
+   <https://www.odoo.com/help>`_.
+#. Restore the database from the database manager on your local server using the backup.
+
+To Odoo.sh
+----------
+
+#. Sign in to `the Odoo Online database manager <https://www.odoo.com/my/databases/>`_ and click the
+   gear icon (:guilabel:`⚙`) next to the database name to :guilabel:`Download` a backup. If the
+   download fails due to the file being too large, `contact Odoo support
+   <https://www.odoo.com/help>`_.
+#. Follow the instructions found in :ref:`the Import your database section
+   <odoo_sh_import_your_database>` of the Odoo.sh *Create your project* documentation.
+
+Transferring an Odoo.sh database
+================================
+
+To Odoo Online
+--------------
+
+.. important::
+   Odoo Online is *not* compatible with **non-standard apps**.
+
+#. Uninstall all **non-standard apps** in a staging build before doing it in the production build.
+#. `Create a support ticket <https://www.odoo.com/help>`_ including the following:
+
+   - your **subscription number**,
+   - the **URL** you want to use for the database (e.g., `company.odoo.com`),
+   - which **branch** should be migrated,
+   - in which **region** you want the database to be hosted (Americas, Europe, or Asia),
+   - which user(s) will be the **administrator(s)**, and
+   - **when** (and in which timezone) you want the database to be up and running.
+
+#. Odoo then makes sure the database is compatible before putting it online. In case of technical
+   issues during the process, Odoo might contact you.
+
+.. note::
+   - If you have time constraints, `submit a support ticket <https://www.odoo.com/help>`_ as soon as
+     possible to schedule the transfer.
+   - Select the **region** closest to most of your users to reduce latency.
+   - Future **administrator(s)** must have an Odoo.com account.
+   - The **date and time** you want the database to be up and running are helpful to organize the
+     switch from the Odoo.sh server to the Odoo Online servers.
    - Databases are **not reachable** during their migration.
-   - **If you have time constraints, contact us earlier to schedule the transfer**.
 
-From Odoo.sh to on-premises
-===========================
+To on-premise
+-------------
 
-1.  Grab a :ref:`backup of your Odoo.sh production database <odoo_sh_branches_backups>`.
-2.  Restore it from the database manager on your local server.
+#. Download a :ref:`backup of your Odoo.sh production database <odoo_sh_branches_backups>`.
+#. Restore the database from the database manager on your local server using the backup.
