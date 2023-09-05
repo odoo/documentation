@@ -14,6 +14,9 @@ Withholds.
 The localization also Includes automations to easily predict the withholding tax to be applied to
 each purchase invoice.
 
+.. seealso::
+   `Smart Tutorial - Localización de Ecuador <https://www.odoo.com/r/TnE>`_
+
 Glossary
 --------
 
