@@ -2,6 +2,8 @@
 Connect a measurement tool
 ==========================
 
+.. _iot/devices/measurement-tool:
+
 With Odoo's :abbr:`IoT (Internet of Things)` box, it is possible to connect measurement tools to the
 Odoo database for use in the *Quality app* on a quality control point/quality check, or for use in a
 work center during the manufacturing process.
