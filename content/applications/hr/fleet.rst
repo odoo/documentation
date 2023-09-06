@@ -1,6 +1,5 @@
 :nosearch:
 :show-content:
-:hide-page-toc:
 :show-toc:
 
 =====
@@ -13,4 +12,5 @@ Odoo *Fleet* organizes all the vehicles, contracts, and repairs of all the vehic
    :titlesonly:
 
    fleet/configuration
+   fleet/new_vehicle
    fleet/service
