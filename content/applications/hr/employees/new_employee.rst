@@ -344,6 +344,8 @@ information.
   fields. Last, if the employee is not a resident of the country they are working in, activate the
   check box next to the :guilabel:`Non-resident` field.
 
+.. _employees/hr-settings:
+
 HR Settings tab
 ---------------
 
