@@ -280,6 +280,8 @@ box, or typing in the information.
    :align: center
    :alt: Add the private information to the Private Information tab.
 
+.. _employees/hr-settings:
+
 HR settings tab
 ---------------
 
