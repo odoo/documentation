@@ -2,7 +2,7 @@
 Odoo.sh
 =======
 
-.. _upgrade/odoo_sh/overview:
+.. _upgrade/request/odoo_sh/overview:
 
 Overview
 ========
@@ -27,10 +27,10 @@ The suggested upgrade steps on Odoo.sh are:
 
 .. seealso::
    - :doc:`../../administration/upgrade`
-   - :doc:`Upgrade FAQ <../upgrade/faq>`
-   - :doc:`Introduction to Odoo.sh <../odoo_sh/overview/introduction>`
+   - :doc:`Upgrade FAQ <../faq>`
+   - :doc:`Introduction to Odoo.sh <../../administration/odoo_sh/overview/introduction>`
 
-.. _upgrade/odoo_sh/custom-modules:
+.. _upgrade/request/odoo_sh/custom-modules:
 
 Upgrade your custom modules
 ===========================
@@ -45,7 +45,7 @@ correctly.
    Depending on your contract, the upgrade of your custom modules can be done by yourself, by your
    Partner or by Odoo (if you hold a subscription including maintenance of customizations).
 
-.. _upgrade/odoo_sh/testing-phase:
+.. _upgrade/request/odoo_sh/testing-phase:
 
 Upgrade your database on a staging branch
 =========================================

@@ -12,10 +12,10 @@ Upgrade
 .. toctree::
    :titlesonly:
 
-   upgrade/odoo_online
-   upgrade/odoo_sh
-   upgrade/on_premise
-   upgrade/faq
+   ../upgrade/request/odoo_online
+   ../upgrade/request/odoo_sh
+   ../upgrade/request/on_premise
+   ../upgrade/faq
 
 An upgrade is switching to a newer version of Odoo (e.g., Odoo 14.0 to Odoo 15.0).
 
@@ -54,9 +54,9 @@ The upgrade process in a nutshell:
    newly upgraded database (this is done automatically on Odoo Online).
 
 .. seealso::
-   - :doc:`Upgrade process for Odoo Online <upgrade/odoo_online>`
-   - :doc:`Upgrade process for Odoo.sh <upgrade/odoo_sh>`
-   - :doc:`Upgrade process for On-Premise <upgrade/on_premise>`
+   - :doc:`Upgrade process for Odoo Online <../upgrade/request/odoo_online>`
+   - :doc:`Upgrade process for Odoo.sh <../upgrade/request/odoo_sh>`
+   - :doc:`Upgrade process for On-Premise <../upgrade/request/on_premise>`
 
 .. _upgrade/testing-phase:
 
@@ -105,7 +105,7 @@ Request a test database
 Follow the instructions available per hosting type on the `website form
 <https://upgrade.odoo.com>`_ and select *Testing* purpose.
 
-.. image:: upgrade/test-purpose.png
+.. image:: ../upgrade/request/test-purpose.png
    :align: center
    :alt: Selection of the "Testing" purpose in the upgrade form on Odoo
 
@@ -131,7 +131,7 @@ via the `Odoo Support page <https://www.odoo.com/help>`_.
 
 Under the *Ticket Description* section, select *An issue related to my upgrade* ticket type.
 
-   .. image:: upgrade/test-assistance.png
+   .. image:: ../upgrade/request/test-assistance.png
       :align: center
       :alt: Selection of "An issue related to my upgrade" as Ticket Type in the support form on Odoo
 
@@ -259,6 +259,6 @@ The following upgrade-related services are **not** included:
 .. note:: |assistance-contact|
 
 .. seealso::
-   - :doc:`Upgrade FAQ <upgrade/faq>`
+   - :doc:`Upgrade FAQ <../upgrade/faq>`
    - :doc:`Odoo.sh documentation <odoo_sh>`
    - :doc:`Supported Odoo versions <maintain/supported_versions>`

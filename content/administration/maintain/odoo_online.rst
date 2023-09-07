@@ -31,7 +31,7 @@ Trigger a database upgrade.
 
 .. seealso::
    For more information about the upgrade process, check out the :doc:`Odoo Online upgrade
-   documentation <../upgrade/odoo_online>`.
+   documentation <../../upgrade/request/odoo_online>`.
 
 .. _odoo_online/duplicate:
 

@@ -114,7 +114,7 @@ Switching the hosting types (On-premise vs. Odoo Online vs. Odoo.sh)
 An upgrade does not cover a change of `Hosting types <https://www.odoo.com/page/hosting-types>`_.
 
 Open the following link to get :doc:`more information about how to change your hosting type
-<../maintain/hosting_changes>`.
+<../administration/maintain/hosting_changes>`.
 
 .. note:: |assistance-contact|
 
