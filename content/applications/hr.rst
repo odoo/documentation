@@ -8,5 +8,6 @@ Human resources
 
    hr/attendances
    hr/employees
+   hr/fleet
    hr/payroll
    hr/recruitment
