@@ -11,4 +11,5 @@ Websites
     websites/ecommerce
     websites/elearning
     websites/forum
+    websites/blog
     websites/livechat
