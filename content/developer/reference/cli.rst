@@ -555,18 +555,18 @@ Multiprocessing
 
     .. option:: --limit-memory-soft <limit>
 
-        Maximum allowed virtual memory per worker. If the limit is exceeded,
+        Maximum allowed virtual memory per worker in bytes. If the limit is exceeded,
         the worker is killed and recycled at the end of the current request.
 
-        Defaults to *2048MiB*.
+        Defaults to *2048MiB (2048\*1024\*1024B)*.
 
     .. option:: --limit-memory-hard <limit>
 
-        Hard limit on virtual memory, any worker exceeding the limit will be
+        Hard limit on virtual memory in bytes, any worker exceeding the limit will be
         immediately killed without waiting for the end of the current request
         processing.
 
-        Defaults to *2560MiB*.
+        Defaults to *2560MiB (2560\*1024\*1024B)*.
 
     .. option:: --limit-time-cpu <limit>
 
