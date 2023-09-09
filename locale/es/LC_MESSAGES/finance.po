@@ -37,8 +37,8 @@
 # Pablo Rojas <rojaspablo88@gmail.com>, 2023
 # Wil Odoo, 2023
 # Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2023
-# Lucia Pacheco, 2023
 # Iran Villalobos López, 2023
+# Lucia Pacheco, 2023
 # Fernanda Alvarez, 2023
 # 
 #, fuzzy
@@ -13911,6 +13911,13 @@ msgid ""
 "generated, the beginning date corresponds with the beginning of the **fiscal"
 " year** and all account balances should equal zero."
 msgstr ""
+"Un asiento específico de cierre de ejercicio es **opcional** para cerrar el "
+"**estado de resultados**. Los reportes se crean en tiempo real, lo que "
+"significa que el estado de resultados corresponde directamente con la fecha "
+"de cierre de año especificada en Odoo. Por lo tanto, cada vez que se genera "
+"el **estado de resultados**, la fecha de inicio corresponde con el inicio "
+"del **año fiscal** y todos los balances de las cuentas deben ser iguales a "
+"cero."
 
 #: ../../content/applications/finance/accounting/taxes.rst:7
 msgid ""
@@ -16288,6 +16295,8 @@ msgid ""
 ":guilabel:`Vendor`: Odoo automatically fills some information based on the "
 "vendor's registered information, previous purchase orders, or bills."
 msgstr ""
+":guilabel:`Proveedor`: Odoo completa la información registrada en órdenes de"
+" compra o facturas del proveedor."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:39
 msgid ""
@@ -16295,6 +16304,9 @@ msgid ""
 "vendor and is used to do the :ref:`matching <payments/matching>` when you "
 "receive the products."
 msgstr ""
+":guilabel:`Referencia de factura`: añade la referencia de la orden de venta "
+"y se usa para hacer la :ref:`conciliación <payments/matching>` al recibir "
+"los productos."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:41
 msgid ""
@@ -16302,54 +16314,73 @@ msgid ""
 "automatically complete the document. The :guilabel:`Vendor` field should be "
 "completed prior to completing this field."
 msgstr ""
+":guilabel:`Autocompletar`: seleccione una factura u orden de compra para que"
+" el documento se complete de forma automática. Debe haber completado el "
+"campo de :guilabel:`proveedor` antes de este campo."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:43
 msgid ":guilabel:`Bill Date`: is the issuance date of the document."
 msgstr ""
+":guilabel:`Fecha de factura`: es la fecha de la emisión de la factura."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:44
 msgid ""
 ":guilabel:`Accounting Date`: is the date on which the document is registered"
 " in your accounting."
 msgstr ""
+":guilabel:`Fecha contable`: es la fecha en la cuál se registra el documento "
+"en su contabilidad."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:45
 msgid ""
 ":guilabel:`Payment Reference`: when registering the payment, it is "
 "automatically indicated in the :guilabel:`Memo` field."
 msgstr ""
+":guilabel:`Referencia de pago`: se indica automáticamente en el campo "
+":guilabel:`Memo` al registrar un pago."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:47
 msgid ""
 ":guilabel:`Recipient Bank`: to indicate to which account number the payment "
 "has to be made."
 msgstr ""
+":guilabel:`Banco destinatario`: indica el número de cuenta al que se tiene "
+"que hacer el pago."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:48
 msgid ":guilabel:`Due Date` or :guilabel:`Terms` to pay the bill."
 msgstr ""
+":guilabel:`Fecha de vencimiento` o :guilabel:`Términos` de la factura a "
+"pagar."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:49
 msgid ""
 ":guilabel:`Journal`: select in which journal the bill should be recorded and"
 " the :doc:`Currency <get_started/multi_currency>`."
 msgstr ""
+":guilabel:`Diario`: selecciona el diario en el cuál se registrará la factura"
+" y su :doc:`divisa <get_started/multi_currency>`."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst-1
 msgid "filling the vendor bill"
-msgstr ""
+msgstr "factura de proveedor"
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:57
 msgid ""
 "Bills can be :doc:`digitized <vendor_bills/invoice_digitization>` for "
 "automatic completion by clicking :guilabel:`Send for Digitization`."
 msgstr ""
+"Las facturas se pueden :doc:`digitalizar "
+"<vendor_bills/invoice_digitization>` para agilizar la completación "
+"automática, solo debe hacer clic en :guilabel:`Enviar para digitalización`."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:59
 msgid ""
 "If you upload the bill, the PDF document is displayed on the right of the "
 "screen, allowing you to easily fill in the bill information."
 msgstr ""
+"Si carga la factura verá el PDF de lado derecho, de esta manera podrá ver "
+"mejor su información."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:63
 msgid "Bill confirmation"
@@ -16361,12 +16392,17 @@ msgid ""
 " document changes to :guilabel:`Posted` and a journal entry is generated "
 "based on the configuration on the invoice."
 msgstr ""
+"Haga clic en :guilabel:`confirmar` cuando termine un documento. El estado de"
+" su documento cambiará a :guilabel:`Publicado` y se creará un asiento de "
+"diario según la configuración de la factura."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:69
 msgid ""
 "Once confirmed, it is no longer possible to update it. Click "
 ":guilabel:`Reset to draft` if changes are required."
 msgstr ""
+"Una vez que se confirme no podrá editarlo. Si desea hacer algún cambio, "
+"tendrá que hacer clic :guilabel:`Restablecer a borrador`."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:73
 msgid "Bill Payment"
@@ -16377,6 +16413,8 @@ msgid ""
 "Upon payment of the vendor bill, click on :guilabel:`Register Payment`. A "
 "new window pops up."
 msgstr ""
+"Una vez pagada la factura del proveedor, haga clic en :guilabel:`Registrar "
+"pago`, esto hará que aparezca una nueva ventana."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:77
 msgid ""
@@ -16387,16 +16425,24 @@ msgid ""
 "bill. If the field is empty, we recommend you select the vendor invoice "
 "number as a reference."
 msgstr ""
+"Seleccione el :guilabel:`diario`, el :guilabel:`método de pago`, el "
+":guilabel:`importe` a pagar (completo o parcial), y la :guilabel:`divisa`. "
+"Odoo completa el campo :guilabel:`Memo` de manera automática si la "
+":guilabel:`referencia de pago` se estableció correctamente en la factura de "
+"proveedor; se recomienda que seleccione el número de factura de proveedor "
+"como referencia."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:82
 msgid ""
 "Once confirmed, an :guilabel:`In Payment` banner appears on the bill until "
 "it is :doc:`reconciled <bank/reconciliation>`."
 msgstr ""
+"Una vez confirmada aparecerá un banner con el lema :guilabel:`en proceso de "
+"pago` hasta que se :doc:`concilia <bank/reconciliation>` la factura."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:86
 msgid "Aged payable report"
-msgstr ""
+msgstr "Reporte de cuentas antiguas por pagar"
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:88
 msgid ""
@@ -16404,12 +16450,18 @@ msgid ""
 "you can use the **Aged Payable report**. Go to :menuselection:`Accounting "
 "--> Reporting --> Partner Reports: Aged payable`."
 msgstr ""
+"Si desea obtener una vista general de sus facturas de proveedor pendientes y"
+" sus fechas de vencimiento correspondientes, use el **reporte de cuentas "
+"antiguas por pagar**. Vaya a :menuselection:`Contabilidad --> Reportes --> "
+"Reportes de contacto: Cuenta antigua por pagar`."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:92
 msgid ""
 "Click on a vendor's name to open up the details of all outstanding bills, "
 "the amounts due, the due dates, etc."
 msgstr ""
+"Haga clic en el nombre de un proveedor para ver la información de todas las "
+"facturas con pagos pendientes, su importe, fechas de vencimiento, etc."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:96
 msgid ""
@@ -16417,6 +16469,9 @@ msgid ""
 "available on the screen as a PDF or XLSX file and save it in the folder of "
 "your choice."
 msgstr ""
+"Si hace clic en el botón :guilabel:`Guardar` podrá exportar toda la "
+"información disponible como archivo PDF o XLSX y guardarlo en sus "
+"documentos."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:98
 msgid ""
@@ -16424,10 +16479,12 @@ msgid ""
 "is in back-order and is sending you invoices as they ship the products, or "
 "if your vendor is sending you a partial bill or asking for a deposit."
 msgstr ""
+"Si su proveedor tiene órdenes parciales y le envía facturas cada que envía "
+"productos, es posible que reciba varias facturas."
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:3
 msgid "Non-current assets and fixed assets"
-msgstr "Activos no circulantes y activos fijos"
+msgstr "Activos no circulantes y fijos"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:5
 msgid ""
@@ -16783,7 +16840,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst-1
 msgid "Gross Increase smart button in Odoo Accounting"
-msgstr ""
+msgstr "Botón inteligente de incremento bruto"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:184
 msgid "Disposal of Fixed Assets"
@@ -16794,8 +16851,8 @@ msgid ""
 "To **sell** an asset or **dispose** of it implies that it must be removed "
 "from the Balance Sheet."
 msgstr ""
-"**Vender** un activo o **eliminarlo** implica que debe ser retirado del "
-"balance."
+"**Vender** un activo o **eliminarlo** implica que se debe retirar del "
+"balance general."
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:188
 msgid ""
@@ -16807,7 +16864,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst-1
 msgid "Disposal of Assets in Odoo Accounting"
-msgstr ""
+msgstr "Disposición de bienes"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:194
 msgid ""
@@ -16876,7 +16933,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst-1
 msgid "Assets model button in Odoo Accounting"
-msgstr ""
+msgstr "Botón de activos"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:232
 msgid "Automate the Assets"
@@ -16920,7 +16977,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst-1
 msgid "Automate Assets on an account in Odoo Accounting"
-msgstr ""
+msgstr " Automatizar activos en Contabilidad de Odoo"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:252
 msgid ""
@@ -16934,7 +16991,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:3
 msgid "Deferred expenses and prepayments"
-msgstr ""
+msgstr "Gastos diferidos y prepagos"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:5
 msgid ""
@@ -17007,6 +17064,7 @@ msgstr "Configurar una cuenta de gastos diferidos"
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst-1
 msgid "Configuration of a Deferred Expense Account in Odoo Accounting"
 msgstr ""
+"Configuración de una cuenta de gastos diferidos en Contabilidad de Odoo"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:45
 msgid "This account's type must be either *Current Assets* or *Prepayments*"
@@ -17024,10 +17082,12 @@ msgstr ""
 msgid ""
 "Selection of a Deferred Expense Account on a draft bill in Odoo Accounting"
 msgstr ""
+"Selección de la cuenta de gastos diferidos en el borrador de una factura en "
+"Contabilidad de Odoo"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst-1
 msgid "Change of the Expense Account for a product in Odoo"
-msgstr ""
+msgstr "Cambio de la cuenta de gastos para un producto en Odoo"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:71
 msgid ""
@@ -17072,7 +17132,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst-1
 msgid "Deferred Expense entry in Odoo Accounting"
-msgstr ""
+msgstr "Asiento de gastos diferidos en Contabilidad de Odoo"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:105
 msgid ""
@@ -17088,7 +17148,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst-1
 msgid "Expense Board in Odoo Accounting"
-msgstr ""
+msgstr "Tabla de gastos en Contabilidad de Odoo"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:116
 msgid ""
@@ -17189,7 +17249,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst-1
 msgid "Deferred Expense model button in Odoo Accounting"
-msgstr ""
+msgstr "Botón de modelo de gasto diferido en Contabilidad de Odoo"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:170
 msgid "Automate the Deferred Expenses"
@@ -17234,7 +17294,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst-1
 msgid "Automate Deferred Expense on an account in Odoo Accounting"
-msgstr ""
+msgstr "Gastos diferidos automáticos en una cuenta de Contabilidad de Odoo"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:190
 msgid ""
@@ -17248,13 +17308,16 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:3
 msgid "AI-powered document digitization"
-msgstr ""
+msgstr "Digitalización de documentos impulsada por la IA"
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:5
 msgid ""
 "**Invoice digitization** is the process of converting paper documents into "
 "vendor bill and customer invoice forms in your accounting."
 msgstr ""
+"La **digitalización de facturas** es el proceso en el que los documentos "
+"impresos se convierten en formularios de facturas en su contabilidad en "
+"línea."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:8
 msgid ""
@@ -17263,18 +17326,26 @@ msgid ""
 "bill and customer invoice forms are automatically created and populated "
 "based on the scanned invoices."
 msgstr ""
+"Odoo usa :abbr:`OCR (reconocimiento óptico de caracteres)` y tecnología de "
+"inteligencia artificial para reconocer el contenido de los documentos. Los "
+"formularios para las facturas de cliente y proveedor se crean y se llenan "
+"según las facturas escaneadas."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:13
 msgid ""
 "`Test Odoo's invoice digitization <https://www.odoo.com/app/invoice-"
 "automation>`_"
 msgstr ""
+"`Prueba de la digitalización de facturas de Odoo "
+"<https://www.odoo.com/app/invoice-automation>`_"
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:14
 msgid ""
 "`Odoo Tutorials: Invoice Digitization with OCR "
 "<https://www.odoo.com/slides/slide/digitize-bills-with-ocr-1712>`_"
 msgstr ""
+"`Tutoriales de Odoo: digitalización de facturas mediante el OCR "
+"<https://www.odoo.com/slides/slide/digitize-bills-with-ocr-1712>`_"
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:20
 msgid ""
@@ -17284,6 +17355,11 @@ msgid ""
 "includes customer credit notes) should be processed automatically or on "
 "demand."
 msgstr ""
+"Vaya a :menuselection:`Contabilidad --> Configuración --> Ajustes --> "
+"Digitización`, marque la casilla :guilabel:`Digitalización de documentos` y "
+"defina si las :guilabel:`facturas de proveedor` y :guilabel:`facturas de "
+"clientes` (esto incluye notas de crédito de cliente) se deberían procesar de"
+" forma automática o manual."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:25
 msgid ""
@@ -17291,14 +17367,17 @@ msgid ""
 "line is created per tax in the new bill, regardless of the number of lines "
 "on the invoice."
 msgstr ""
+"Si habilita la opción :guilabel:`línea de factura única por impuesto`, solo "
+"se creará una línea por impuesto en la nueva factura, sin importar el número"
+" de líneas en la factura."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:29
 msgid "Invoice upload"
-msgstr ""
+msgstr "Cargar facturas"
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:32
 msgid "Upload invoices manually"
-msgstr ""
+msgstr "Cargar facturas de forma manual"
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:34
 msgid ""
@@ -17308,10 +17387,15 @@ msgid ""
 ":menuselection:`Accounting --> Vendors --> Bills` and select "
 ":guilabel:`Upload`."
 msgstr ""
+"Desde el :guilabel:`tablero de Contabilidad`, haga clic en el botón "
+":guilabel:`Subir` de su diario de facturas de proveedor. Si lo prefiere, "
+"vaya a :menuselection:`Contabilidad --> Clientes --> Facturas` o "
+":menuselection:`Contabilidad --> Proveedores --> Facturas` y seleccione "
+":guilabel:`Subir`."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:42
 msgid "Upload invoices using an email alias"
-msgstr ""
+msgstr "Cargar facturas usando un seudónimo de correo electrónico"
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:44
 msgid ""
@@ -17319,6 +17403,10 @@ msgid ""
 "email alias. Emails sent to these aliases are converted into new draft "
 "customer invoices or vendor bills."
 msgstr ""
+"Puede configurar su escáner conectado de forma que envíe los documentos "
+"escaneados a un seudónimo de correo electrónico. Los correos electrónicos "
+"que se envíen a estos seudónimos se convertirán en nuevos borradores de "
+"facturas de clientes/proveedores."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:47
 msgid ""
@@ -17327,6 +17415,11 @@ msgid ""
 "enable :guilabel:`Custom Email Servers`, add an :guilabel:`Alias Domain`, "
 "and :guilabel:`Save`."
 msgstr ""
+"Puede modificar el seudónimo de correo electrónico de un diario desde la "
+"aplicación :guilabel:`Configuración`. Solo debe ir a "
+":guilabel:`Configuración General: Conversaciones`, active "
+":guilabel:`Servidores personalizados de correo electrónico`, añada un "
+":guilabel:`Dominio de seudónimo`, y :guilabel:`Guardar`."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:51
 msgid ""
@@ -17334,6 +17427,10 @@ msgid ""
 " the journal. Emails sent to this address will be converted automatically "
 "into new invoices or bills."
 msgstr ""
+"El seudónimo de correo electrónico está ahora disponible en la pestaña "
+":guilabel:`Configuración avanzada` del diario. Los correos electrónicos que "
+"se envíen a esta dirección se convertirán automáticamente en nuevas facturas"
+" o recibos."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:55
 msgid ""
@@ -17341,6 +17438,9 @@ msgid ""
 " send your scanned invoices to the :guilabel:`Finance` workspace (e.g., "
 "`inbox-financial@example.odoo.com`)."
 msgstr ""
+"Si usa la aplicación :doc:`Documentos <../../documents>` podrá enviar de "
+"manera automática sus facturas escaneadas al espacio de trabajo compartido "
+"de :guilabel:`finanzas` (por ejemplo, `inbox-finanzas@example.odoo.com`)."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:58
 msgid ""
@@ -17350,6 +17450,12 @@ msgid ""
 "respectively. Emails sent to these addresses are converted automatically "
 "into new invoices or bills."
 msgstr ""
+"El seudónimo predeterminado de correo electrónico `facturas-proveedor@` y "
+"`facturas-clientes@` seguido del :guilabel:`dominio del seudónimo` que "
+"establezca, se crearán automáticamente para los diarios de "
+":guilabel:`facturas de proveedor` y :guilabel:`facturas de clientes`. Los "
+"correos electrónicos enviados a estas direcciones se convierten "
+"automáticamente en nuevas facturas o recibos."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:63
 msgid ""
@@ -17358,6 +17464,10 @@ msgid ""
 "edit, click on the :guilabel:`Advanced Settings` tab, and edit the `Email "
 "Alias`."
 msgstr ""
+"Si desea cambiar el seudónimo de correo electrónico predeterminado vaya a "
+":menuselection:`Contabilidad --> Configuración --> Contabilidad: Diarios`. "
+"Seleccione el diario a editar y haga clic en la pestaña :guilabel:`Ajustes "
+"avanzados`, ahí podrá editar el `seudónimo de correo electrónico`."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:68
 msgid "Invoice digitization"
@@ -17368,6 +17478,9 @@ msgid ""
 "According to your settings, the document is either processed automatically, "
 "or you need to click on :guilabel:`Send for digitization` to do it manually."
 msgstr ""
+"Según su configuración, se podrá procesar el documento de manera automática "
+"o manual, si es manual deberá hacer clic en :guilabel:`Enviar para "
+"digitalizzción`."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:73
 msgid ""
@@ -17375,10 +17488,13 @@ msgid ""
 "clicking on the respective tags (available in :guilabel:`Edit` mode) and "
 "selecting the proper information instead."
 msgstr ""
+"Una vez que se hayan extraído los datos del PDF, si lo necesita, también los"
+" puede corregir haciendo clic en la etiqueta correspondiente (disponible en "
+"modo de :guilabel:`edición`) y seleccionando la información correcta."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:77
 msgid "Data recognition with AI"
-msgstr ""
+msgstr "Reconocimiento de datos por IA"
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:79
 msgid ""
@@ -17387,6 +17503,10 @@ msgid ""
 ":guilabel:`Confirm`. In this manner, the AI learns, and the system "
 "identifies the correct data for future digitizations."
 msgstr ""
+"Es necesario revisar y corregir (si es necesario) la información registrada "
+"durante la digitalización. Después, deberá publicar el documento haciendo "
+"clic en :guilabel:`Confirmar`. De esta forma, la IA aprenderá y el sistema "
+"identificará los datos correctos para futuras digitalizaciones."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:86
 msgid ""
@@ -17394,6 +17514,9 @@ msgid ""
 "requires prepaid credits to work. Digitizing one document consumes one "
 "credit."
 msgstr ""
+"La *digitalización de facturas** es un servicio de compras dentro de la "
+"aplicación (IAP, por sus siglas en inglés) que requiere de créditos "
+"prepagados para funcionar. Digitalizar un documento consume un crédito."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:89
 msgid ""
@@ -17402,6 +17525,10 @@ msgid ""
 ":menuselection:`Settings --> Odoo IAP` and click on :guilabel:`View My "
 "Services`."
 msgstr ""
+"Para comprar créditos, vaya a :menuselection:`Contabilidad --> Configuración"
+" --> Ajustes --> Digitalización` y haga clic en :guilabel:`comprar "
+"créditos`, o vaya a :menuselection:`Ajustes --> Odoo IAP` y haga clic en "
+":guilabel:`ver mis servicios`."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:98
 msgid "`Our Privacy Policy <https://iap.odoo.com/privacy#header_6>`_"
@@ -17955,6 +18082,8 @@ msgid ""
 ":doc:`AI-powered document digitization "
 "<../finance/accounting/vendor_bills/invoice_digitization>`"
 msgstr ""
+":doc:`Digitalización de documentos con tecnología de IA "
+"<../finance/accounting/vendor_bills/invoice_digitization>`"
 
 #: ../../content/applications/finance/expenses.rst:5
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:104
@@ -17971,6 +18100,10 @@ msgid ""
 "accounting teams. Once approved, payments can then be processed and "
 "disbursed back to the employee for reimbursement(s)."
 msgstr ""
+"La aplicación **Gastos** de Odoo optimiza la gestión de los gastos. Después "
+"de que un empleado envíe sus gastos en Odoo, los equipos de gestión y "
+"contabilidad deberán revisarlos. Si se aprueban, se pueden procesar los "
+"pagos y devolverlos al empleado para su reembolso."
 
 #: ../../content/applications/finance/expenses.rst:12
 msgid "`Odoo Expenses: product page <https://www.odoo.com/app/expenses>`_"
@@ -17979,7 +18112,7 @@ msgstr ""
 
 #: ../../content/applications/finance/expenses.rst:15
 msgid "Set expense categories"
-msgstr ""
+msgstr "Establecer categorías de gastos"
 
 #: ../../content/applications/finance/expenses.rst:17
 msgid ""
@@ -17989,16 +18122,25 @@ msgid ""
 ":menuselection:`Expenses app --> Configuration --> Expense Categories` to "
 "view the current expensable categories in a default list view."
 msgstr ""
+"El primer paso para llevar un seguimiento de los gastos es configurar los "
+"diferentes tipos de gastos de la empresa (como *categorías de gastos* en "
+"Odoo). Cada categoría puede ser tan específica o general como sea necesario."
+" Vaya a :menuselection:`Gastos --> Configuración --> Categorías de gastos` "
+"para ver las categorías de gastos actuales en una vista de lista "
+"predeterminada."
 
 #: ../../content/applications/finance/expenses.rst-1
 msgid "Set expense costs on products."
-msgstr ""
+msgstr "Establecer costos de gastos en los productos"
 
 #: ../../content/applications/finance/expenses.rst:26
 msgid ""
 "To create a new expense category, click :guilabel:`New`. A product form will"
 " appear, with the description field labeled :guilabel:`Product Name`."
 msgstr ""
+"Si desea crear una nueva categoría de gastos haga clic en :guilabel:`Nuevo`."
+" Aparecerá un formulario de producto con un campo denominado "
+":guilabel:`Nombre de producto`."
 
 #: ../../content/applications/finance/expenses.rst:30
 msgid ""
@@ -18008,6 +18150,11 @@ msgid ""
 "throughout this document since the main menu refers to these as "
 ":guilabel:`Expense Categories`."
 msgstr ""
+"Las categorías de gastos se gestionan como productos. El formulario de "
+"categoría de gasto usa el formulario estándar de producto en Odoo, y la "
+"información ingresada es similar. Los productos de gastos se denominarán "
+"como categorías de gastos a lo largo de este documento ya que el menú "
+"principal se refiere a estos como :guilabel:`Categorías de gastos`."
 
 #: ../../content/applications/finance/expenses.rst:35
 msgid ""
@@ -18016,6 +18163,11 @@ msgid ""
 "field, and select the :guilabel:`Unit of Measure` from the drop-down menu "
 "(most products will be set to :guilabel:`Units`)."
 msgstr ""
+"Solo son necesarios dos campos, :guilabel:`nombre del producto` y "
+":guilabel:`unidad de medida`. Introduzca el :guilabel:`nombre del producto` "
+"en el campo y seleccione la :guilabel:`unidad de medida` en el menú "
+"desplegable (la mayoría de los productos se establecerán en "
+":guilabel:`unidades`)."
 
 #: ../../content/applications/finance/expenses.rst:40
 msgid ""
@@ -18028,6 +18180,15 @@ msgid ""
 "</applications/inventory_and_mrp/inventory/management/products/uom>` to "
 "learn more about units of measure and how to configure them."
 msgstr ""
+"La aplicación *Ventas* es donde se crean y editan las especificaciones sobre"
+" las unidades de medida (por ejemplo, unidades, millas, noches, etc.). Vaya "
+"a la aplicación :menuselection:Ventas --> Configuración --> Ajustes` y "
+"asegúrese de que la opción `Unidades de medida` esté activada en la sección "
+"`Catálogo de productos`. Haga clic en el enlace interno :guilabel:`Unidades "
+"de medida` para ver, crear y editar las unidades de medida. Consulte "
+":doc:`este documento "
+"</applications/inventory_and_mrp/inventory/management/products/uom>` para "
+"obtener más información sobre las unidades de medida y cómo configurarlas."
 
 #: ../../content/applications/finance/expenses.rst:51
 msgid ""
@@ -18037,6 +18198,12 @@ msgid ""
 "Otherwise, leave the :guilabel:`Cost` set to `0.00`, and employees will "
 "report the actual cost when submitting an expense report."
 msgstr ""
+"El campo :guilabel:`Costo` del formulario de producto se completa con un "
+"valor de `0.00` de forma predeterminada. Cuando se debe reembolsar un gasto "
+"específico por un precio determinado, introduzca esa cantidad en el campo "
+":guilabel:`Costo`. De lo contrario, deje el campo :guilabel:`Costo` en "
+"`0.00`, y los empleados informarán el coste real cuando envíen un reporte de"
+" gastos."
 
 #: ../../content/applications/finance/expenses.rst:57
 msgid ""
@@ -18045,12 +18212,20 @@ msgid ""
 ":guilabel:`Sales Price` is selected under the :guilabel:`Re-Invoice "
 "Expenses` section. Otherwise, the :guilabel:`Sales Price` field is hidden."
 msgstr ""
+"El campo :guilabel:`Costos` siempre está visible en el formulario de "
+"categoría de gastos, pero el campo :guilabel:`Precio de venta` *solo* estará"
+" visible si se selecciona :guilabel:`Precio de venta` en la sección "
+":guilabel:`Volver a facturar gastos`. De lo contrario, el campo "
+":guilabel:`Precio de venta` estará oculto."
 
 #: ../../content/applications/finance/expenses.rst:63
 msgid ""
 "Here are some examples for when to set a specific :guilabel:`Cost` on a "
 "product vs. leaving the :guilabel:`Cost` at `0.00`:"
 msgstr ""
+"Estos son algunos ejemplos de cuándo es mejor establecer un "
+":guilabel:`costo` específico en un producto en lugar de dejar el "
+":guilabel:`costo` en `0.00`:"
 
 #: ../../content/applications/finance/expenses.rst:66
 msgid ""
@@ -18059,6 +18234,10 @@ msgid ""
 "reimbursed for that amount. An expense for a meal costing $95.23 would equal"
 " a reimbursement for $95.23."
 msgstr ""
+"**Alimentos**: Establezca `0.00` en la etiqueta :guilabel:`costo`. Cuando un"
+" empleado registra un gasto por una comida, se debe introducir el importe "
+"real de la factura y se le reembolsará dicho importe. Un gasto por una "
+"comida de 95.23 dólares equivaldría a un reembolso de 95.23 dólares."
 
 #: ../../content/applications/finance/expenses.rst:69
 msgid ""
@@ -18067,6 +18246,11 @@ msgid ""
 ":guilabel:`Quantity` field, and are reimbursed 0.30 per mile they entered. "
 "An expense for 100 miles would equal a reimbursement for $30.00."
 msgstr ""
+"**Kilometraje**: Establezca `0.30` en la etiqueta :guilabel:`costo`. Cuando "
+"un empleado registra un gasto por \"kilometraje\", se debe introducir el "
+"número de km recorridos en el campo :guilabel:`cantidad`, y se le "
+"reembolsarán 0.19 por kilómetro introducido. Un gasto de 100 km equivaldría "
+"a un reembolso de 19.00 dólares."
 
 #: ../../content/applications/finance/expenses.rst:73
 msgid ""
@@ -18495,6 +18679,7 @@ msgstr ""
 #: ../../content/applications/finance/expenses.rst-1
 msgid "Enter a short description and select a manager for the report."
 msgstr ""
+"Escriba una breve descripción y seleccione a un gerente para el reporte."
 
 #: ../../content/applications/finance/expenses.rst:317
 msgid ""
@@ -18510,7 +18695,7 @@ msgstr ""
 
 #: ../../content/applications/finance/expenses.rst-1
 msgid "Add more expenses to the report before submitting."
-msgstr ""
+msgstr "Agregue más gastos al reporte antes de presentarlo."
 
 #: ../../content/applications/finance/expenses.rst:329
 msgid "Expense reports can be created in one of three places:"
@@ -18564,7 +18749,7 @@ msgstr ""
 
 #: ../../content/applications/finance/expenses.rst-1
 msgid "Submit the report to the manager."
-msgstr ""
+msgstr "Presentar el reporte al gerente."
 
 #: ../../content/applications/finance/expenses.rst:360
 msgid ""
@@ -18752,7 +18937,7 @@ msgstr ""
 #: ../../content/applications/finance/expenses.rst-1
 #: ../../content/applications/finance/expenses.rst:0
 msgid "Send messages in the chatter."
-msgstr ""
+msgstr "Enviar mensajes en el chatter."
 
 #: ../../content/applications/finance/expenses.rst:458
 msgid ""
@@ -21281,7 +21466,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst-1
 msgid "Chart of Accounts menu in Employment Hero"
-msgstr ""
+msgstr "Menú del plan de cuentas en Employment Hero"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:65
 msgid ""
