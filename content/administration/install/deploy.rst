@@ -602,6 +602,10 @@ security-related topics:
 - Setup daily backups of your databases and filestore data, and copy them to a remote
   archiving server that is not accessible from the server itself.
 
+- Deploying Odoo on Linux is strongly recommended over Windows. Should you choose nevertheless
+  to deploy on a Windows platform, a thorough security hardening review of the server should be
+  conducted and is outside of the scope of this guide.
+
 
 .. _login_brute_force:
 
