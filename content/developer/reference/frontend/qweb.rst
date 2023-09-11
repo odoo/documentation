@@ -1,4 +1,3 @@
-
 .. highlight:: xml
 
 .. _reference/qweb:
@@ -439,12 +438,12 @@ Debugging
 .. rst-class:: o-definition-list
 
 ``t-debug``
-    invokes a debugger using PDB's ``set_trace`` API. The parameter should
-    be the name of a module, on which a ``set_trace`` method is called::
+    with an empty value, invokes the :func:`breakpoint` builtin
+    function, which usually invokes a debugger (:mod:`pdb` by
+    default).
 
-        <t t-debug="pdb"/>
-
-    is equivalent to ``importlib.import_module("pdb").set_trace()``
+    The behaviour can be configured via :envvar:`PYTHONBREAKPOINT` or
+    :func:`sys.breakpointhook`.
 
 Rendering cache:
 ----------------
