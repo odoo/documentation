@@ -147,6 +147,11 @@ be downloaded from the `Odoo download page <https://www.odoo.com/page/download>`
 Windows
 =======
 
+   .. warning::
+      Windows packaging is offered for the convenience of testing or running single-user local
+      instances but production deployment is discouraged due to a number of limitations and risks
+      associated with deploying Odoo on a Windows platform.
+
 #. Download the installer from the `nightly server <https://nightly.odoo.com>`_ (Community only) or
    the Windows installer from the `Odoo download page <https://www.odoo.com/page/download>`_ (any
    edition.
