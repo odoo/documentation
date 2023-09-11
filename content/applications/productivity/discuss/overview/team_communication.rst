@@ -94,6 +94,21 @@ drop-down menu.
    :align: center
    :alt: View of a channel being searched through filters in Odoo Discuss
 
+Linking channel in chatter
+==========================
+
+Channels can be linked in the chatter (log note) of a record in Odoo. To do so, simply type: `#` and
+the channel name. Click or press enter on the *channel* name. Upon logging the note a link to the
+channel will appear. After clicking on the link a chat window with the channel conversation will
+pop up in the lower right corner of the screen.
+
+Users are able to contribute to this group channel (either public or member based) by typing
+messages in window and pressing *enter*.
+
+.. image:: team_communication/chatter-channel.png
+   :align: center
+   :alt: Channel linked in chatter with the channel open on the lower right quadrant.
+
 .. seealso::
    - :doc:`get_started`
    - :doc:`plan_activities`
