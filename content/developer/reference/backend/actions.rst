@@ -189,9 +189,15 @@ via two fields:
 
 ``url``
     the address to open when activating the action
-``target``
-    opens the address in a new window/page if ``new``, replaces
-    the current content with the page if ``self``. Defaults to ``new``
+``target`` (default= ``new``)
+    the available values are :
+
+    * ``new``: opens the URL in a new window/page
+    * ``self``: opens the URL in the current window/page (replaces the actual content)
+    * ``download``: redirects to a download URL
+
+
+    example:
 
 ::
 
@@ -201,7 +207,7 @@ via two fields:
         "target": "self",
     }
 
-will replace the current content section by the Odoo home page.
+This will replace the current content section by the Odoo home page.
 
 .. _reference/actions/server:
 
