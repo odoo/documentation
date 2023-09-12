@@ -1,66 +1,30 @@
-======================
-Unsplash (free images)
-======================
+========
+Unsplash
+========
 
-Generate an Unsplash access key
-===============================
+**Unsplash** is a recognized stock photography library integrated with Odoo.
 
-.. tip::
-   **As an Odoo Online user**, you are ready to use Unsplash. You won't need to follow this guide to
-   set up Unsplash information since you will use our own Odoo Unsplash key in a transparent way.
+If your database is hosted on **Odoo Online**, you can access Unsplash pictures without
+configuration.
 
-Generate an Unsplash access key for non-Odoo Online users
----------------------------------------------------------
+If your database is hosted on **Odoo.sh or on-premise**, proceed as follows:
 
-- Create an account on `Unsplash.com <https://unsplash.com/join>`_.
+#. To **generate an Unsplash access key**, create or sign in to an `Unsplash account
+   <https://unsplash.com>`_.
 
-- Go to your `applications dashboard <https://unsplash.com/oauth/applications>`_ and click on **New
-  Application**.
+#. Access your `applications dashboard <https://unsplash.com/oauth/applications>`_, click
+   :guilabel:`New Application`, select all checkboxes, and click :guilabel:`Accept terms`.
 
-.. image:: unsplash/create_app.png
-   :align: center
+#. In the pop-up window, enter your :guilabel:`Application Name`, starting with the
+   prefix `Odoo:` (e.g., `Odoo: connection`), so Unsplash recognizes it as an Odoo instance. Then,
+   add a :guilabel:`Description` and click :guilabel:`Create application`.
 
-- Accept the conditions and click on **Accept terms**.
+#. On the application details page, scroll down to the :guilabel:`Keys` section and copy the
+   :guilabel:`Access Key` and :guilabel:`Application ID`.
 
-.. image:: unsplash/accept_terms.png
-   :align: center
-
-- You will be prompted to insert an **Application name** and a **Description**. Please prefix your
-  application name by "**Odoo:** " so that Unsplash can recognize it as an Odoo instance. Once done,
-  click on **Create application**.
-
-.. image:: unsplash/app_infos.png
-   :align: center
-
-- You should be redirected to your application details page. Scroll down a bit to find your **access
-  key**.
-
-.. image:: unsplash/access_key.png
-   :align: center
+#. In Odoo, go to :menuselection:`General Settings` and enable the :guilabel:`Unsplash Image
+   Library` feature. Then, enter the Unsplash :guilabel:`Access Key` and :guilabel:`Application ID`.
 
 .. warning::
-   **As a non-Odoo Online user**, you won't be able to register for a production Unsplash key and
-   will be limited to your test key that has a restriction of 50 Unsplash requests per hour.
-
-Generate an Unsplash application ID
-===================================
-
-.. tip::
-   You should first create and set up your Unsplash application.
-
-- Go to your `applications dashboard <https://unsplash.com/oauth/applications>`_ and click on your
-  newly created Unsplash application under **Your applications**.
-
-.. image:: unsplash/select_app.png
-    :align: center
-
-- You will be redirected to your application details page. The **application ID** will be visible in
-  your browser's URL. The URL should be something like
-  ``https://unsplash.com/oauth/applications/<application_id>``
-
-.. image:: unsplash/app_id_url.png
-   :align: center
-
-.. warning::
-   **As a non-Odoo Online user**, you won't be able to register for a production Unsplash key and
-   will be limited to your test key that has a 50 Unsplash requests per hour restriction.
+   As a non-Odoo Online user, you are limited to a test key with a maximum of 50 Unsplash requests
+   per hour.
