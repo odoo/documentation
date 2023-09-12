@@ -315,11 +315,15 @@ latex_documents = [
 
     ('legal/terms/i18n/enterprise_tex_de', 'odoo_enterprise_agreement_de.tex',
      'Odoo Enterprise Subscription Agreement (DE)', '', 'howto'),
+    ('legal/terms/i18n/terms_of_sale_de', 'terms_of_sale_de.tex',
+     'Allgemeine Verkaufsbedingungen Odoo', '', 'howto'),
 
     ('legal/terms/i18n/enterprise_tex_es', 'odoo_enterprise_agreement_es.tex',
      'Odoo Enterprise Subscription Agreement (ES)', '', 'howto'),
     ('legal/terms/i18n/partnership_tex_es',
      'odoo_partnership_agreement_es.tex', 'Odoo Partnership Agreement (ES)', '', 'howto'),
+    ('legal/terms/i18n/terms_of_sale_es', 'terms_of_sale_es.tex',
+     'Términos Generales de Venta Odoo', '', 'howto'),
 
     ('legal/terms/i18n/enterprise_tex_pt_BR', 'odoo_enterprise_agreement_pt_BR.tex',
      'Odoo Enterprise Subscription Agreement (PT)', '', 'howto'),
