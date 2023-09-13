@@ -23,6 +23,7 @@ Payment providers (credit cards, online payments)
    payment_providers/razorpay
    payment_providers/sips
    payment_providers/stripe
+   payment_providers/xendit
 
 Odoo embeds several **payment providers** that allow your customers to pay on their *Customer
 Portals* or your *eCommerce website*. They can pay sales orders, invoices, or subscriptions with
@@ -153,6 +154,13 @@ Online payment providers
      - Full only
      - Full and partial
      - |V|
+     -
+   * - :doc:`Xendit <payment_providers/xendit>`
+     - The provider website
+     - |V|
+     -
+     - Full and partial
+     -
      -
 
 .. |V| replace:: ✔
@@ -455,4 +463,5 @@ payment method... What best suit your needs.
    - :doc:`payment_providers/razorpay`
    - :doc:`payment_providers/sips`
    - :doc:`payment_providers/stripe`
+   - :doc:`payment_providers/xendit`
    - :doc:`../websites/ecommerce/checkout_payment_shipping/payments`
