@@ -89,7 +89,7 @@ when you need to call the parent method with a modified recordset.
 
 .. exercise:: Add business logic to the CRUD methods.
 
-    - Prevent deletion of a property if its state is not 'New' or 'Canceled'
+    - Allow deletion of a property only if its state is 'New' or 'Canceled'
 
     Tip: create a new method with the :func:`~odoo.api.ondelete` decorator and remember that
     ``self`` can be a recordset with more than one record.
