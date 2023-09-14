@@ -25,7 +25,7 @@ An upgrade does not cover:
 .. note:: |assistance-contact|
 
 .. seealso::
-   - :ref:`upgrade/sla`
+   - :doc:`/upgrade/sla`
 
 .. toctree::
 
@@ -35,3 +35,5 @@ An upgrade does not cover:
     upgrade/full_process
     upgrade/request
     upgrade/advanced
+    upgrade/faq
+    upgrade/sla

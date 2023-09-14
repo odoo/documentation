@@ -32,11 +32,11 @@ Odoo is compliant with the **Egyptian Tax Authority (ETA) e-invoicing** requirem
 
 .. important::
    Egyptian e-invoicing is available from Odoo 15.0. If needed, :doc:`upgrade
-   </administration/upgrade>` your database.
+   </upgrade>` your database.
 
 .. seealso::
    - `Video: Egypt E-invoicing <https://www.youtube.com/watch?v=NXuBPLR4pVw>`_
-   - :doc:`/administration/upgrade`
+   - :doc:`/upgrade`
 
 .. _egypt/e-invoicing-eta-portal:
 

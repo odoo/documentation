@@ -7,15 +7,7 @@
 FAQ
 ===
 
-.. _upgrade-faq/why:
-
-Why upgrade
-===========
-
-* You benefit from the latest features of the :ref:`new major version
-  <upgrade-faq/release-notes>` released by Odoo.
-* If you are in an :ref:`unsupported version <upgrade/supported-versions>`, you get a new version
-  with support.
+TODO merge FAQ into sections
 
 .. _upgrade-faq/when:
 

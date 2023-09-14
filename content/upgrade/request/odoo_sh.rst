@@ -26,7 +26,7 @@ The suggested upgrade steps on Odoo.sh are:
 #. Trigger the production upgrade from your :guilabel:`Production` branch and sit tight.
 
 .. seealso::
-   - :doc:`../../administration/upgrade`
+   - :doc:`/upgrade`
    - :doc:`Upgrade FAQ <../faq>`
    - :doc:`Introduction to Odoo.sh <../../administration/odoo_sh/overview/introduction>`
 

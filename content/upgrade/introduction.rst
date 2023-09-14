@@ -44,7 +44,45 @@ In those situations, running the newest version of Odoo on an older database wil
 
 At this point, the intervention of a developer is required for your upgrade to be successful.
 
+Why upgrading ?
+===============
+
+TODO make the link between two bullet points and the two paragraphs below more natural
+
+* You benefit from the latest features of the :ref:`new major version <upgrade-faq/release-notes>` released by Odoo.
+* If you are in an :doc:`unsupported version </administration/maintain/supported_versions>`, you get a new version with support.
+
+Please note that Odoo provides support and bug fixing only for the three last major versions of Odoo.
+
+This is a factor to take into consideration before upgrading. If you are on an older version, we suggest you to prefer the most recent version to benefit from longer support (before having to upgrade again).
+
+.. seealso::
+   :doc:`/administration/maintain/supported_versions`
+
+.. _upgrade/process-workflow:
+
 Upgrade in a nutshell
 =====================
 
-TODO add the summary of AVG from knowledge
+TODO merge the summary of AVG from knowledge with this
+
+#. You create a test upgrade request.
+#. Odoo processes the request automatically by running the database through an upgrade script, which
+   takes between 20 and 120 minutes.
+#. Odoo delivers a test database.
+#. You test your database for possible discrepancies (see :ref:`upgrade/testing-phase`).
+#. If there are any discrepancies, you report them to the Upgrade support team via the help portal
+   (see :ref:`upgrade/test-assistance`).
+#. We fix the issues and send you a new test database.
+#. Once you have completed the testing and are happy with the result, you decide on a date and time
+   when you stop users from accessing Odoo, freeze all data entries, and create an upgrade request
+   for the production upgrade.
+#. Odoo delivers the production database through the automated process.
+#. You restore it in your Production environment a few short hours later and continue working on the
+   newly upgraded database (this is done automatically on Odoo Online).
+
+.. seealso::
+   - :doc:`Upgrade process for Odoo Online <../upgrade/request/odoo_online>`
+   - :doc:`Upgrade process for Odoo.sh <../upgrade/request/odoo_sh>`
+   - :doc:`Upgrade process for On-Premise <../upgrade/request/on_premise>`
+
