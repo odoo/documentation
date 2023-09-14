@@ -2,8 +2,6 @@
 :hide-page-toc:
 :show-toc:
 
-.. _upgrade/request:
-
 ==============================
 Request your upgraded database
 ==============================

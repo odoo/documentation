@@ -126,6 +126,8 @@ information.
 Assistance
 ----------
 
+TODO refactor section and add info from "Requesting help from Odoo" (smartclass)
+
 If you encounter an issue in the **test database**, please get in touch with Odoo Upgrade Support
 via the `Odoo Support page <https://www.odoo.com/help>`_.
 
@@ -152,6 +154,8 @@ This will avoid clarifying questions and speed up the resolution process signifi
 The production launch
 =====================
 
+TODO this could be moved to a new module "Finalizing the upgrade"
+
 The production upgrade request is when you decide to upgrade your current database with all your
 production data (invoices, VAT returns, inventories, current orders) to a new version of your
 choice.
@@ -170,6 +174,8 @@ Select *Production* purpose.
 
 Assistance
 ----------
+
+TODO this could be moved to a new module "Finalizing the upgrade"
 
 If you encounter issues or problems in the **production database**, please get in touch with **Odoo
 Support**:
@@ -193,6 +199,8 @@ Support**:
 
 Help
 ====
+
+TODO find out what to do with this
 
 .. _upgrade/contact:
 

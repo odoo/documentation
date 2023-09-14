@@ -47,6 +47,6 @@ In those situations, running the newest version of Odoo on an older database wil
 At this point, the intervention of a developer is required for your upgrade to be successful.
 
 Upgrade in a nutshell
-=============
+=====================
 
 TODO add the summary of AVG from knowledge
