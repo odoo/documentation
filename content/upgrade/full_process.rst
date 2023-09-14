@@ -32,19 +32,6 @@ Once you finished planning the upgrade, the next step is to request your first u
 
 You will then be notified of the status of your request. At the end, if the request is successful, you will be given instructions on how to access your test database, but if it is not, you might have to fix a few things in your database or contact the Odoo Upgrade Support for them to help you with your blocking upgrade request. You can find more information in regards to the assistance Odoo provides in :ref:`upgrade/test-assistance`.
 
-Are your customizations necessary?
----------------------------------
-
-You won't be surprised to learn that Odoo is a very fluid software that releases a new version with lots of changes every year. Those changes are very carefully researched and developed to ensure a compatibility with the most amount of user, while avoiding creating unnecessary complexity.
-
-Unfortunately, such compatibility is hard to achieve and developers at Odoo must balance two extremes between developing all the features any company could ever use and only developing features that all company will use. The right balance is difficult to find, this is why there are probably many apps that you don't need in your company, and many features that you would love to have but are not present in the standard package of Odoo. 
-
-During an upgrade, especially given the fact that you might skip multiple versions of Odoo, it is very likely that, in the plethora of new features added in the years of development between 2 versions, what you added in your database as a customisation might be part of the standard of Odoo now.
-
-This is why we recommend every database manager to take the time to explore the new features of Odoo and to compare them with the current customisations implemented. With a little bit of luck, you might be able to delete some chunks of your customisation, leading to less time and money spent on its maintenance.
-
-Upgrade your customisations
----------------------------
 
 Testing and requesting help
 ---------------------------
@@ -54,6 +41,14 @@ Once you receive your test database, it is very important to spend a significant
 TODO add a section "how to test your database" ?
 
 Therefore, we recommend that you test all the different actions you do on your database, whether it is actions that you do multiple times per day, or only once every few weeks, months, or even once a year. The more you test, the less likely you are to encounter a problem once you upgrade your production database.
+
+Upgrade your customisations
+---------------------------
+
+In the case that your database is running a modified version of Odoo, that is a version with custom modules or custom code, you will still have a little bit work more to do !
+
+Since the various models and fields of Odoo might have changed during the upgrade of the database, you might have to adapt your customization to be compatible with it. Furthermore, if you do some changes to the structure of your custom code, you must not forget to migrate the data. For example if you rename a field in the code, you must also ensure that the corresponding PSQL data is renamed as well. This is usually done in migration scripts, TODO we will explain in later section
+
 
 Planning the upgrade day and upgrading
 --------------------------------------

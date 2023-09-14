@@ -30,8 +30,8 @@ An upgrade does not cover:
 .. toctree::
 
     upgrade/introduction
+    upgrade/preparing
     upgrade/upgrade_process
     upgrade/full_process
-    upgrade/version_target
     upgrade/request
     upgrade/advanced
