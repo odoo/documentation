@@ -40,7 +40,7 @@ To make it simple, we would always recommend that you chose to upgrade to the la
         For Odoo SH, it gets a little bit more complicated, but we'll make it simple ! There are 3 possibilities with Odoo SH : 
 
         - You are in charge of your own code and you use Odoo SH to manage and run it.
-        - You delegated the responsibility of developing and maintaining the code of your customisation to the Service department of Odoo. 
+        - You delegated the responsibility of developing and maintaining the code of your customizations to the Service department of Odoo. 
         - The development and maintenance of your code hosted on Odoo SH is handled by a third party (such as an Odoo partner)
 
         In those cases, we recommend jumping to the latest major Odoo version since Odoo SH does not support intermediary versionsif you are currently running a version that is not supported anymore. Unlike on premise where you are in charge of the hardware and operating system, with Odoo SH it is always Odoo that takes care of that, regardless of the situation that you are in. 
@@ -56,13 +56,13 @@ To make it simple, we would always recommend that you chose to upgrade to the la
         This is why we recommend that you upgrade your database as soon as possible to one of the 3 latest version. Obviously this is no easy feat, and to avoid doing the process more times than necessary, our best suggestion is therefore to upgrade to the latest version possible. You also get the added bonus of receiving as many of the new features as possible, making your database even faster and more user-friendly ⭐
 
 
-Are your customisations still necessary ?
+Are your customizations still necessary ?
 -----------------------------------------
 
 You won't be surprised to learn that Odoo is a very fluid software that releases a new version with lots of changes every year. Those changes are very carefully researched and developed to ensure a compatibility with the most amount of user, while avoiding creating unnecessary complexity.
 
 Unfortunately, such compatibility is hard to achieve and developers at Odoo must balance two extremes between developing all the features any company could ever use and only developing features that all company will use. The right balance is difficult to find, this is why there are probably many apps that you don't need in your company, and many features that you would love to have but are not present in the standard package of Odoo. 
 
-During an upgrade, especially given the fact that you might skip multiple versions of Odoo, it is very likely that, in the plethora of new features added in the years of development between 2 versions, what you added in your database as a customisation might be part of the standard of Odoo now.
+During an upgrade, especially given the fact that you might skip multiple versions of Odoo, it is very likely that, in the plethora of new features added in the years of development between 2 versions, what you added in your database as a customization might be part of the standard of Odoo now.
 
-This is why we recommend every database manager to take the time to explore the new features of Odoo and to compare them with the current customisations implemented. With a little bit of luck, you might be able to delete some chunks of your customisation, leading to less time and money spent on its maintenance.
+This is why we recommend every database manager to take the time to explore the new features of Odoo and to compare them with the current customizations implemented. With a little bit of luck, you might be able to delete some chunks of your customization, leading to less time and money spent on its maintenance.

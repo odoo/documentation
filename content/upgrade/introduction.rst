@@ -3,19 +3,54 @@
 :hide-page-toc:
 :show-toc:
 
-====================
-What is an Upgrade ?
-====================
 
-TODO : Merge/remove slowly all the info from administration/upgrade into this page
+.. |assistance-contact| replace::
+   If you need Odoo assistance on this matter, please get in touch with your Odoo Account Manager or
+   our `Sales department`_.
+.. _Sales department: mailto:sales@odoo.com
+
+=======================
+Introduction to Upgrade
+=======================
+
+What is an Upgrade ?
+--------------------
+
+In Odoo, an upgrade is the process of moving your database from an older version of Odoo to a newer, supported version. Each new version of Odoo comes with new features, bug fixes, security patches, and improvements. Depending on your hosting type and the size of the database, the upgrade process can be very straightforward and be done automatically, or require some assistance from our Upgrade department.
+
+.. important::
+   Odoo only supports the three last major versions of Odoo, as well as the latest minor version of Odoo. See :doc:`/administration/maintain/supported_versions` for more information.
+
+   However, it is always possible to upgrade from any version of Odoo to a supported version.
+
+Here are a few examples of supported upgrades:
+
+* Odoo 12 to Odoo 15
+* Odoo 8 to Odoo 16
+* TinyERP 4.0 to Odoo 17
+
+An upgrade does not cover:
+
+* Downgrading to a previous version of Odoo (i.e., Odoo 15 to Odoo 12)
+* Changing :ref:`editions <upgrade-faq/editions-change>` (i.e., Community to Enterprise edition)
+* Switching :ref:`hosting type <upgrade-faq/hosting-types-switch>` (i.e., On-Premise to Odoo Online
+  or Odoo.sh)
+* Migration from another ERP to Odoo
+
+.. note:: |assistance-contact|
+
+TODO remove those 2 following introductory paragraphs ?
 
 Let's say you are digging into the files on your very old computer and you stumble onto a personal Microsoft Word document from years ago. You feel very nostalgic and try to open the file when suddenly **ERROR**, the file cannot be read ! Indeed, this file was written with the program Microsoft Word 2007 and we are now years later trying to open with Microsoft Word 2022, a lot of things changed between those 2 versions and,therefore, files written with the old version are not accessible with the newer version of the program, what a shame for your nostalgia !
 
 Since there are also version changes in Odoo, databases developed and used in Odoo 12 might not be compatible when running them on a Odoo 16 server. However, thanks to our incredible framework, version changes comes with their additional lines of code specifically written to translate the data from the previous version to the next one. This means that for a huge proportion of our users, changing version is as simple as the click of a button, because all the changes between versions are known, and therefore are taking into consideration during the Upgrade process.
 
-.. note::
+Factors influencing the complexity of the upgrade
+-------------------------------------------------
 
-   **An Upgrade is the process that takes place to allow your Odoo database from an older version to be ran on a newer version of Odoo**
+For most databases, the upgrade process is actually very straightforward and can be done by the database administrator at any time (see :doc:`/upgrade/request`). However, for more complex databases such as those with a lot of custom modules or a lot of data, the upgrade should be executed in collaboration with the Upgrade department.
+
+This is because with each changes in the standard of Odoo, any customization (Modified reports, web pages, custom views, custom code, ... ) might be impacted by the upgrade and could potentially not work anymore. Therefore, the more customization you have, the more likely your upgrade will require :ref:`Assistance <upgrade/test-assistance>` from the Upgrade department.
 
 Let's view an example by comparing screenshots from different two different versions of Odoo : Odoo 14 and Odoo 16.
 
@@ -38,14 +73,13 @@ Those changes might not be important to end user but for programmers developing 
 .. important::
    Changes between version of the standard code of Odoo might impact your custom instance of Odoo
 
-Now, this example highlight a very minor change, as nothing is deleted, but this is not always the case between 2 versions. Sometimes, fields are removed entirely from the database, whole modules are changed, models are renamed, etc ... 
+Now, this example highlight a very minor change, as nothing is deleted, but this is not always the case between 2 versions. Sometimes, fields are renamed or removed entirely from the database, whole modules are changed, models are renamed, etc ...  Thankfully the standard code of Odoo is written in a way that it will automatically move the data from the old field to the new one, but this is not the case for cuztomisations
 
-In those situations, running the newest version of Odoo on an older database will probably result in issues when navigating your database, such as error messages, data not showing or showing incorrectly, values wrongly computed, and many more.
+In those situations, running the newest version of Odoo on an older database will probably result in issues when navigating your database, such as error messages, data loss, data showing incorrectly, values wrongly computed, and many more. Therefore, the intervention of a developer will be required for your upgrade to be successful.
 
-At this point, the intervention of a developer is required for your upgrade to be successful.
 
 Why upgrading ?
-===============
+---------------
 
 TODO make the link between two bullet points and the two paragraphs below more natural
 
@@ -62,7 +96,7 @@ This is a factor to take into consideration before upgrading. If you are on an o
 .. _upgrade/process-workflow:
 
 Upgrade in a nutshell
-=====================
+---------------------
 
 TODO merge the summary of AVG from knowledge with this
 

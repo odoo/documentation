@@ -1,6 +1,5 @@
 .. |assistance-contact| replace::
-   If you need Odoo assistance on this matter, please get in touch with your Odoo Account Manager or
-   our `Sales department`_.
+   If you need Odoo assistance on this matter, please get in touch with your Odoo Account Manager or our `Sales department`_.
 .. _Sales department: mailto:sales@odoo.com
 
 ===
@@ -11,16 +10,16 @@ TODO merge FAQ into sections
 
 .. _upgrade-faq/when:
 
-When to upgrade
-===============
+When should I upgrade ?
+=======================
 
 Whenever you want. You can make your upgrade request as soon as a new version is released or when
 your version turns unsupported, and you still wish to enjoy support.
 
 .. _upgrade-faq/availability:
 
-Availability of the new version
-===============================
+When can I upgrade to a the newly released version?
+===================================================
 
 As soon as Odoo announces the release of a new major version, you can create a test upgrade request
 to try the latest version. Please note that at this point, the upgrade scripts will only have been
@@ -30,52 +29,52 @@ requesting the upgrade of your database in production.
 
 .. _upgrade-faq/duration:
 
-Duration of the upgrade
-=======================
+How long does it take to upgrade my database?
+=============================================
 
-It is impossible to give time estimates for every upgrade request.
+It is impossible to give time estimates for every upgrade request. However, it is heavily correlated to the size of the database, the number of installed apps, and the amount of users. The more data you have, the longer it will take to upgrade.
 
-In general, the "smaller" the database, the quickest the upgrade request is completed. A single-user
-database that uses only CRM will be processed faster than a multi-company, multi-user database that
-uses Accounting, Sales, Purchase, and Manufacturing.
+For example, a single-user database that only uses CRM will be processed faster than a multi-company, multi-user database that uses Accounting, Sales, Purchase, and Manufacturing.
 
-You can expect the time it takes for the platform to upgrade the test database to be similar to the
-production upgrade.
-
-.. _upgrade-faq/project:
-
-Duration of the upgrade project
--------------------------------
-
-It depends on the user involvement (the time spent on testing, reporting problems, etc.) and the
-issues encountered that might need to be addressed by our technical team.
-
-So, in a nutshell, what can impact your upgrade lead time?
+In a nutshell, the lead time of your upgrade can be impacted by the following aspects:
 
 * Source & targeted versions
 * Installed apps
 * Volume of data
 * Amount of customization (models, fields, methods, workflows, reports, website, etc.)
 * Installation of new apps or configuration changes after the start of the test phase
-* User commitment
+* Users and database administrator commitment
+
+You can expect the time it takes for the platform to upgrade the test database to be similar to the
+production upgrade.
+
+.. _upgrade-faq/project:
+
+What is the time frame for an upgrade project?
+----------------------------------------------
+
+TODO check with AVG project duration, what we should communicate
+
+It depends on the user involvement (the time spent on testing, reporting problems, etc.) and the
+issues encountered that might need to be addressed by our technical team.
 
 .. _upgrade-faq/custom-modules:
 
-Upgrade of the custom modules
-=============================
+Who will I upgrade my custom modules?
+=====================================
 
-As stated in our :doc:`/legal/terms/enterprise`, section :ref:`charges_standard`, this optional
-service is subject to additional fees.
+The responsible for the maintenance of your custom modules should be responsible for the upgrade of your custom modules. If you have a contract with Odoo for the maintenance of your custom modules as stated in our :doc:`/legal/terms/enterprise`, section :ref:`charges_standard`, we will upgrade your custom modules as covered by your contract.
 
-Depending on your situation, the custom code could be upgraded by our services, by one of our
-partners, or you can do it yourself.
+If you do not have a contract with Odoo for the maintenance of your custom modules, you can either upgrade them yourself or ask Odoo to do it for you. In this case, you will be charged for the time spent by our developers to upgrade your custom modules.
+
+Finally, if an Odoo partner developed your custom modules, you should contact them to upgrade your custom modules.
 
 .. note:: |assistance-contact|
 
 .. _upgrade-faq/upgrade-or-migration:
 
-Upgrade or Migration
-====================
+What is the difference between an upgrade and a migration?
+==========================================================
 
 An upgrade is switching to a newer version of Odoo, while a migration reflects the change of
 :ref:`editions <upgrade-faq/editions-change>` or change of :ref:`hosting type
@@ -85,52 +84,46 @@ An upgrade is switching to a newer version of Odoo, while a migration reflects t
 
 .. _upgrade-faq/editions-change:
 
-Editions change (from Community to Enterprise)
-==============================================
+Why do I get an Enterprise edition after my upgrade?
+====================================================
 
-The upgrade always returns an Enterprise edition of Odoo, whether the database you sent was a
-community or enterprise edition. It is required to have an enterprise subscription to upgrade.
+The upgrade always returns an Enterprise edition of Odoo, whether the database you sent was a community or enterprise edition since it is required to have an enterprise subscription to upgrade.
 
- .. note::
-    If you need assistance on this matter,  please contact us via the `Odoo Support page
-    <https://www.odoo.com/help>`_.
+.. note::
+   If you need assistance on this matter,  please contact us via the `Odoo Support page <https://www.odoo.com/help>`_.
 
 .. seealso::
    - `Editions <https://www.odoo.com/page/editions>`_
 
 .. _upgrade-faq/hosting-types-switch:
 
-Switching the hosting types (On-premise vs. Odoo Online vs. Odoo.sh)
-====================================================================
+How can I change my hosting type (On-premise vs. Odoo Online vs. Odoo.sh) ?
+===========================================================================
 
 An upgrade does not cover a change of `Hosting types <https://www.odoo.com/page/hosting-types>`_.
 
-Open the following link to get :doc:`more information about how to change your hosting type
-<../administration/maintain/hosting_changes>`.
+You can find more information about how to change your hosting type  :doc:`here </administration/maintain/hosting_changes>`.
 
 .. note:: |assistance-contact|
 
 .. _upgrade-faq/upgrade-report:
 
-The Upgrade Report
-==================
+What is an upgrade report ?
+===========================
 
 When an upgrade request completes successfully (test or production), you receive an email
-notification about it that includes an 'Upgrade Report'. This report is also sent to you via the
-Discuss app. It contains valuable information regarding changes that occurred during the upgrade.
-While it serves as a guide to possible issues to look out for, it is not an exhaustive list. It
-remains imperative that you test the upgraded database thoroughly and report any discrepancies you
-might find, before you decide to upgrade your production database.
+notification about it that includes an 'Upgrade Report'. It contains valuable information regarding changes that occurred during the upgrade. While it serves as a guide to possible issues to look out for, it is not an exhaustive list. It remains imperative that you :ref:`test <upgrade/testing-phase>` the upgraded database thoroughly and report any discrepancies you might find, before you decide to upgrade your production database.
+
+..note::
+   The upgrade report is sent to you via email after an upgrade request successfully completes (test or production), and is also available in the Discuss app of your database.
 
 .. _upgrade-faq/custom-views:
 
-Custom views
-============
+Why are there issues with my custom views after the upgrade?
+============================================================
 
 During the upgrade, some custom views might get disabled for technical reasons. Therefore they might
-have to be fixed after the upgrade. The :ref:`Upgrade Report <upgrade-faq/upgrade-report>` that is
-generated after the upgrade is available in the Discuss app, and lists all the custom views that
-might be impacted by this.
+have to be fixed after the upgrade. The :ref:`Upgrade Report <upgrade-faq/upgrade-report>` that is generated after the upgrade lists all the custom views that might be impacted by this. You can find more information about how to fix custom views :doc:`here <upgrade_views>` and how to fix studio views :doc:`here <upgrade_studio_views>`.
 
 .. _upgrade-faq/release-notes:
 

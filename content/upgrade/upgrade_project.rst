@@ -4,15 +4,14 @@
 :show-toc:
 
 .. |assistance-contact| replace::
-   If you need Odoo assistance on this matter, please get in touch with your Odoo Account Manager or
-   our `Sales department`_.
+    If you need Odoo assistance on this matter, please get in touch with your Odoo Account Manager or our `Sales department`_.
 .. _Sales department: mailto:sales@odoo.com
 
-===========================
-From planning to production
-===========================
+=============================================
+Upgrade project : From planning to production
+=============================================
 
-In this section, we will explore the whole procedure of upgrading an Odoo database,
+An upgrade project represents the whole procedure of upgrading an Odoo database,
 from the decision of the upgrade, all the way to having the database running the upgraded version.
 It will serve as an introduction to upgrading but also as a summary of the whole class, since all the
 steps will be explained more in depth in the course. It is quite a journey, so hang in there ! 🚢
@@ -27,8 +26,7 @@ Depending on the size of your database, the amount of apps installed, the amount
 .. important::
     Since upgrading can bring a lot of changes to the business flow, you should also plan for a significant amount of time in testing before the upgrade of your production database. This will allow you to catch all of the possible bugs and issues that could have appeared during the upgrade, as well as to get familiar with latest changes that the new version brings. It is more convenient to discover problems during the testing phase than to have to deal with an issue when operating your database in the middle of a busy day.
 
-TODO
-How much time should they allocate exactly ?
+TODO How much time should they allocate exactly ?
 
 Submitting your first request
 -----------------------------
@@ -77,7 +75,7 @@ via the `Odoo Support page <https://www.odoo.com/help>`_.
 
 Under the *Ticket type* section, select *An issue related to my future upgrade (I am testing an upgrade)* ticket type.
 
-    .. image:: ../upgrade/full_process/test-assistance.png
+    .. image:: ../upgrade/upgrade_project/test-assistance.png
         :width: 50%
         :align: center
         :alt: Selection of "An issue related to my future upgrade (I am testing an upgrade)" as Ticket Type in the support form on Odoo
@@ -93,7 +91,7 @@ This will avoid clarifying questions and speed up the resolution process signifi
    * |assistance-contact|
 
 
-Upgrading your customisations
+Upgrading your customizations
 -----------------------------
 
 In the case that your database is running a modified version of Odoo, that is a version with custom modules or custom code, you will still have a little bit work more to do !
@@ -140,4 +138,4 @@ Support**:
 After the upgrade
 -----------------
 
-Once your production database is running the upgraded version, you can continue using it as your main Odoo database as usual. If you encounter any new issue, you can still request :ref:`upgrade/test-assistance`
+Once your production database is running the upgraded version, you can continue using it as your main Odoo database as usual. If you encounter any new issue, you can still request :ref:`upgrade/production-assistance`

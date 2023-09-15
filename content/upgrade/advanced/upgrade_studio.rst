@@ -5,6 +5,7 @@ Upgrading your studio customization
 Warning during the upgrade : The different types
 ------------------------------------------------
 
+.. _upgrade_studio_views:
 Missing views customization and how to retrieve them
 ----------------------------------------------------
 
