@@ -72,33 +72,6 @@ You can define a specific e-invoicing format for each customer. To do so, go to
 .. image:: electronic_invoicing/customer-form.png
    :alt: Select an EDI format for a specific customer
 
-Peppol formats
---------------
-
-Use the fields :guilabel:`Peppol e-address (EAS)` and :guilabel:`Peppol Endpoint` to identify the
-recipient in the Peppol Network.
-
-.. seealso::
-   `Peppol BIS Billing 3.0 - Electronic Address Scheme (EAS) code list
-   <https://docs.peppol.eu/poacc/billing/3.0/codelist/eas/>`_
-
-.. example::
-   .. list-table::
-      :header-rows: 1
-
-      * - Partner's country
-        - Peppol e-address (EAS)
-        - Peppol Endpoint
-      * - Luxembourg
-        - 9938 - Luxemburg VAT number
-        - a valid Luxemburgish VAT number
-      * - Netherlands
-        - 0190 - Dutch Originator's Identification Number
-        - a valid OIN number
-      * - Belgium
-        - 9925 - Belgium VAT number
-        - a valid Belgian VAT number
-
 National electronic invoicing
 -----------------------------
 
@@ -121,3 +94,45 @@ e-invoicing option to generate and attach the e-invoice file.
 
 .. image:: electronic_invoicing/send-window.png
    :alt: The Peppol option is checked and an e-invoicing XML file is attached to the email.
+
+Peppol
+======
+
+The `Peppol <https://peppol.org/about/>`_ network ensures the exchange of documents and information
+between enterprises and governmental authorities. It is primarily used for electronic invoicing, and
+its access points (connectors to the Peppol network) allow enterprises to exchange electronic
+documents.
+Odoo is now an **access point** enabling electronic invoicing transactions without the need to send
+invoices and bills by email or post.
+
+Configuration
+-------------
+
+First, :ref:`install <general/install>` the :guilabel:`Peppol` module (`account_peppol`).
+
+.. image:: electronic_invoicing/peppol-module.png
+   :alt: Peppol module install
+
+Then, go to :menuselection:`Accounting --> Configuration --> Settings`, tick the
+:guilabel:`Use PEPPOL Invoicing`, and fill in the following information:
+
+- `PEPPOL EAS <https://ec.europa.eu/digital-building-blocks/wikis/display/DIGITAL/Code+lists/>`_
+- :guilabel:`Peppol Endpoint`
+- :guilabel:`Phone Number`, including the country code (e.g., `+32` in Belgium)
+- :guilabel:`Primary contact email`
+
+If you are migrating from another access point, insert the :guilabel:`Migration key` from
+the previous provider.
+
+.. image:: electronic_invoicing/peppol-settings.png
+   :alt: Configuration for peppol
+
+Finally, click on :guilabel:`Validate registration`.
+
+A text message containing a code is sent to the phone number provided to finalize the registration
+process.
+
+.. image:: electronic_invoicing/phone-registration.png
+   :alt: phone validation
+
+All invoices and vendor bills are now sent directly using the Peppol network.
