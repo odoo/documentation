@@ -6,20 +6,22 @@
 # Translators:
 # Emanuel Bruda, 2023
 # Vacaru Adrian <adrian.vacaru@gmail.com>, 2023
-# Foldi Robert <foldirobert@nexterp.ro>, 2023
-# Martin Trigaux, 2023
 # Dragos Vasile, 2023
-# Dorin Hongu <dhongu@gmail.com>, 2023
 # Cozmin Candea <office@terrabit.ro>, 2023
+# Foldi Robert <foldirobert@nexterp.ro>, 2023
+# Claudia Baisan, 2023
+# Hongu Cosmin <cosmin513@gmail.com>, 2023
+# Dorin Hongu <dhongu@gmail.com>, 2023
+# Martin Trigaux, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-14 15:32+0000\n"
+"POT-Creation-Date: 2023-09-12 13:54+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
-"Last-Translator: Cozmin Candea <office@terrabit.ro>, 2023\n"
+"Last-Translator: Martin Trigaux, 2023\n"
 "Language-Team: Romanian (https://app.transifex.com/odoo/teams/41243/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -361,6 +363,891 @@ msgstr ""
 "Când modelul de cod de bare conține .*, înseamnă că poate conține orice "
 "număr de caractere, aceste caractere fiind orice număr."
 
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:3
+msgid "GS1 barcode nomenclature"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:5
+msgid ""
+"`GS1 nomenclature <https://www.gs1us.org/>`_ consolidates multiple pieces of"
+" information in a single barcode. Each piece needs to follow a specific "
+"barcode pattern—which is a defined format of numbers, letters, special "
+"characters, and character length—to ensure proper interpretation of the "
+"barcode. By scanning the barcode on an unopened box, GS1 nomenclature can "
+"identify the product, lot number, number of units contained, and more."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:12
+msgid ""
+"`All GS1 barcodes <https://www.gs1.org/standards/barcodes/application-"
+"identifiers>`_"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:13
+msgid ""
+":ref:`Odoo's default GS1 rules <barcode/operations/default-gs1-nomenclature-"
+"list>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:14
+msgid ""
+":ref:`Why's my barcode not working? <barcode/operations/troubleshooting>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:19
+msgid "Set up barcode nomenclature"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:21
+msgid ""
+"To use GS1 nomenclature, navigate to the :menuselection:`Inventory app --> "
+"Configuration --> Settings`. Then under the :guilabel:`Barcode` section, "
+"check the :guilabel:`Barcode Scanner` box. Next, select "
+":menuselection:`Barcode Nomenclature --> Default GS1 Nomenclature` from the "
+"default barcode nomenclature options."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst-1
+msgid ""
+"Choose GS1 from dropdown and click the internal link to see the list of GS1 "
+"rules."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:30
+msgid ""
+"To view and edit a list of GS1 *rules* and *barcode patterns* Odoo supports "
+"by default, click the :guilabel:`➡️ (External link)` icon to the right of "
+"the :guilabel:`Barcode Nomenclature` selection."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:33
+msgid ""
+"Opening the pop-up table provides an editable view of GS1 :guilabel:`Rule "
+"Names` available in Odoo. The table contains all the information that can be"
+" condensed with a GS1 barcode, along with the corresponding "
+":guilabel:`Barcode Pattern`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:38
+msgid ""
+"After setting GS1 as the barcode nomenclature, :menuselection:`Barcode "
+"Nomenclatures` can also be accessed by first enabling :ref:`developer mode "
+"<developer-mode>`. Navigate to :menuselection:`Inventory app --> "
+"Configuration --> Barcode Nomenclatures` and finally, select "
+":guilabel:`Default GS1 Nomenclature`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:46
+msgid "Use GS1 barcode"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:48
+msgid ""
+"To build GS1 barcodes in Odoo, combine multiple pieces of information using "
+"the specified barcode pattern. The `application identifier "
+"<https://www.gs1.org/standards/barcodes/application-identifiers>`_ (A.I.) "
+"serves as the universal prefix for GS1 for barcode identification. Odoo uses"
+" regular expressions to describe barcode patterns concisely. Each barcode "
+"pattern begins with a required 2-4 digit :abbr:`A.I. (application "
+"identifier)`, which corresponds to the rule defined in the system's "
+":ref:`barcode nomenclature list <barcode/operations/set-up-barcode-"
+"nomenclature>`. By including the appropriate :abbr:`A.I. (application "
+"identifier)` from the list, Odoo can accurately interpret GS1 barcodes. "
+"While most barcode patterns have a flexible length, some specific patterns, "
+"such as barcodes for dates, have defined length requirements."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:60
+msgid ""
+"Use the FNC1 separator (`\\x1D`) to end the barcode without needing to reach"
+" the maximum character length."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:63
+msgid ""
+"Refer to the :ref:`GS1 nomenclature list <barcode/operations/default-"
+"gs1-nomenclature-list>` to see a comprehensive list of all barcode patterns "
+"and rules to follow. Otherwise, the following section contains examples of "
+"how to generate a barcode for common items in a warehouse."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:68
+msgid "Product + quantity + lot"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:70
+msgid ""
+"To build a GS1 barcode for a box that contains a product, number of units in"
+" it, and the lot number, the following barcode patterns are used:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:74
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:188
+msgid "Name"
+msgstr "Nume"
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:74
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:188
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:302
+msgid "Rule Name"
+msgstr "Numele regulii"
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:74
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:188
+msgid "A.I."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:74
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:188
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:302
+msgid "Barcode Pattern"
+msgstr "Șablon cod bare"
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:74
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:188
+msgid "Field in Odoo"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:76
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:190
+msgid "Product"
+msgstr "Produs"
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:76
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:190
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:306
+msgid "Global Trade Item Number (GTIN)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:76
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:190
+msgid "01"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:76
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:190
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:306
+msgid "(01)(\\\\d{14})"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:76
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:190
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:306
+msgid ":guilabel:`Barcode` field on product form"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:79
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:335
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:337
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:340
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:342
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:344
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:346
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:348
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:350
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:352
+msgid "Quantity"
+msgstr "Cantitate"
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:79
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:193
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:335
+msgid "Variable count of items"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:79
+msgid "30"
+msgstr "30"
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:79
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:335
+msgid "(30)(\\\\d{0,8})"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:79
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:193
+msgid ":guilabel:`Units` field on transfer form"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:81
+msgid "Lot Number"
+msgstr "Numărul lotului"
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:81
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:320
+msgid "Batch or lot number"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:81
+msgid "10"
+msgstr "10"
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:81
+msgid "(10)([!\"%-/0-9:-?A-Z_a-z]{0,20})"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:81
+msgid ":guilabel:`Lot` on Detailed Operations pop-up"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:88
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/setup/software.rst:14
+#: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/cycle_counts.rst:14
+#: ../../content/applications/inventory_and_mrp/inventory/management/misc/wave_transfers.rst:16
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:51
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/uom.rst:16
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/integrating_landed_costs.rst:9
+#: ../../content/applications/inventory_and_mrp/inventory/management/shipments_deliveries/delivery_three_steps.rst:18
+#: ../../content/applications/inventory_and_mrp/inventory/management/shipments_deliveries/receipts_three_steps.rst:16
+#: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/resupply_warehouses.rst:11
+#: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouses_locations.rst:42
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/cross_dock.rst:18
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:18
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:84
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/operation/invoicing.rst:16
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/operation/label_type.rst:13
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/operation/labels.rst:15
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/operation/multipack.rst:11
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/delivery_method.rst:17
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/third_party_shipper.rst:14
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:23
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:9
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:15
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:10
+msgid "Configuration"
+msgstr "Configurare"
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:90
+msgid ""
+"To track products using lots, first enable the :ref:`Lots and Serial Numbers"
+" <inventory/management/track_products_by_lots>` feature. To do so, navigate "
+"to :menuselection:`Inventory app --> Configuration --> Settings`. Next, "
+"under the :guilabel:`Traceability` heading, check the box for "
+":guilabel:`Lots & Serial Numbers`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:95
+msgid ""
+"Then, set up the product barcode by navigating to the intended product form "
+"in :menuselection:`Inventory app --> Products --> Products` and selecting "
+"the product. On the product form, click :guilabel:`Edit`. Then, in the "
+":guilabel:`General Information` tab, fill in the :guilabel:`Barcode` field "
+"with the 14-digit `Global Trade Item Number (GTIN) "
+"<https://www.gs1.org/standards/get-barcodes>`_, which is a universal and "
+"unique identifying number from GS1."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:103
+msgid ""
+"On the product form, omit the :abbr:`A.I. (application identifier)` `01` for"
+" GTIN product barcode pattern, as it is only used to encode multiple "
+"barcodes into a single barcode that contains detailed information about the "
+"package contents."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:108
+msgid ""
+"To create a barcode for the product, `Fuji Apple`, enter the 14-digit GTIN "
+"`12345678901231` in the :guilabel:`Barcode` field on the product form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:0
+msgid "Enter 14-digit GTIN into the Barcode field on product form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:116
+msgid ""
+"It is also possible to view a list of all products and barcodes. To access "
+"this list, go to :menuselection:`Inventory --> Configuration --> Settings`. "
+"Under the :guilabel:`Barcode` heading, click on the :guilabel:`Configure "
+"Product Barcodes` button under the :guilabel:`Barcode Scanner` section. "
+"Enter the 14-digit GTIN into the :guilabel:`Barcode` column, then click "
+":guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:0
+msgid "View the Product Barcodes page from inventory settings."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:128
+msgid ""
+"Next, enable lots and serial number tracking on the product. Select the "
+":guilabel:`Inventory` tab on the product form. Under :guilabel:`Tracking`, "
+"choose the :guilabel:`By Lots` radio button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst-1
+msgid ""
+"Enable product tracking by lots in the \"Inventory\" tab of the product "
+"form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:136
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:198
+msgid "Scan barcode on receipt"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:138
+msgid ""
+"To ensure accurate lot interpretation in Odoo on product barcodes scanned "
+"during a receipt operation, navigate to the :menuselection:`Barcode` app to "
+"manage the :ref:`receipt picking process <barcode/operations/scan-received-"
+"products>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:142
+msgid ""
+"From the :guilabel:`Barcode Scanning` dashboard, click the "
+":guilabel:`Operations` button, then the :guilabel:`Receipts` button to view "
+"the list of vendor receptions to process. Receipts generated from :abbr:`POs"
+" (Purchase Orders)` are listed, but new receipt operations can also be "
+"created directly through the :menuselection:`Barcode` app using the "
+":guilabel:`Create` button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:147
+msgid ""
+"On the list of receipts, click on the warehouse operation (`WH/IN`) and scan"
+" product barcodes and lot numbers with a barcode scanner. The scanned "
+"product then appears on the list. Use the :guilabel:`✏️ (pencil)` button to "
+"open a window and manually enter quantities for specific lot numbers."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:153
+msgid ""
+"After placing a :abbr:`PO (Purchase Order)` for 50 apples, navigate to the "
+"associated receipt. Scan the product barcode, and Odoo will prompt for the "
+"lot number."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:0
+msgid ""
+"Scan the barcode for a product on the reception picking page in the "
+"*Barcode* app."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:160
+msgid ""
+"Scan the lot number to process 1 of 50 apples. To avoid scanning 49 "
+"remaining barcodes, click the :guilabel:`✏️ (pencil)` button next to the "
+"desired lot number."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:0
+msgid "Scan lot number and click the pencil to edit quantities."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:167
+msgid ""
+"Doing so opens a mobile-friendly keypad page to specify received quantities."
+" Use the keypad to specify the :guilabel:`Units` for the lot number. When "
+"finished, click :guilabel:`Confirm`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:0
+msgid "Change scanned quantities using pencil button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:174
+msgid ""
+"Repeat this process to specify additional lot numbers and quantities in this"
+" receipt. Once the :guilabel:`Units` are all accounted for, finish the "
+"reception by clicking the :guilabel:`Validate` button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:178
+msgid ""
+"Alternatively, scan the barcode containing the product, lot number, and "
+"quantity to complete the receipt operation in fewer steps."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:182
+msgid "Product + non-unit quantity"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:184
+msgid ""
+"To build a GS1 barcode that contains products measured in a non-unit "
+"quantity, like kilograms, for example, the following barcode patterns are "
+"used:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:193
+msgid "Quantity in kilograms"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:193
+msgid "310[0-5]"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:193
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:340
+msgid "(310[0-5])(\\\\d{6})"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:200
+msgid ""
+"To confirm that quantities are correctly interpreted in Odoo, place an order"
+" in the *Purchase* app using the appropriate unit of measure "
+"(:guilabel:`UoM`) for the quantity of products to be purchased."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:205
+msgid ""
+":ref:`Simplify vendor unit conversions with UoMs <inventory/management/uom-"
+"example>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:207
+msgid ""
+"After the order is placed, navigate to the :menuselection:`Barcode` app to "
+":ref:`receive the vendor shipment <barcode/operations/scan-received-"
+"products>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:211
+msgid ""
+"On the receipt in the *Barcode* app, receive an order for `52.1 kg` of "
+"peaches by scanning the barcode. If `52.1 / 52.1` :guilabel:`kg` appears on "
+"the page, this means the reception was processed without issue. Finally, "
+"press :guilabel:`Validate`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:215
+msgid ""
+"Note: the :abbr:`A.I. (application identifier)` for kilograms, `310` + `1`, "
+"was used to represent `52.1` kg as a barcode: `000521`. This is because the "
+"`1` represents how many digits from the right to place the decimal point."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:0
+msgid "Scan barcode screen for a reception operation in the Barcode app."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:223
+msgid ""
+"For additional verification purposes, the quantities of received products "
+"are also recorded on the :guilabel:`Product Moves` report, accessible by "
+"navigating to :menuselection:`Inventory app --> Reporting --> Product "
+"Moves`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:227
+msgid ""
+"The items on the :guilabel:`Product Moves` report are grouped by product by "
+"default. To confirm the received quantities, click on a product line to open"
+" its collapsible drop-down menu, which displays a list of *stock move lines*"
+" for the product. The latest stock move matches the warehouse reception "
+"reference number (e.g. `WH/IN/00013`) and quantity processed in the barcode "
+"scan, demonstrating that the records processed in the *Barcode* app were "
+"properly stored in *Inventory*."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst-1
+msgid "Reception stock move record for 52.1 kg of peaches."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:240
+msgid "Create rules"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:242
+msgid ""
+"If a supplier uses a GS1 barcode with a field not supported by Odoo's "
+":ref:`default GS1 list <barcode/operations/default-gs1-nomenclature-list>`, "
+"Odoo will fail to interpret the entire barcode. To ensure the complete "
+"reading of the barcode, it is necessary to add the missing barcode to Odoo's"
+" list."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:248
+msgid ""
+"While the new field will be read, the information won't link to an existing "
+"field in Odoo without developer customizations. However, adding new rules is"
+" still useful to ensure the rest of the fields in the barcode are "
+"interpreted correctly."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:252
+msgid ""
+"Begin by turning on :ref:`developer mode <developer-mode>` and navigating to"
+" the :guilabel:`Barcode Nomenclatures` list in :menuselection:`Inventory app"
+" --> Configuration --> Barcode Nomenclatures`. Then, select the "
+":guilabel:`Default GS1 Nomenclature` list item."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:256
+msgid ""
+"On the :guilabel:`Default GS1 Nomenclature` page, select :guilabel:`Add a "
+"line` at the bottom of the table, which opens a window to create a new rule."
+" The :guilabel:`Rule Name` field is used internally to identify what the "
+"barcode represents. The barcode :guilabel:`Types` are different "
+"classifications of information that can be understood by the system (e.g. "
+"product, quantity, best before date, package, coupon). The "
+":guilabel:`Sequence` represents the priority of the rule; this means the "
+"smaller the value, the higher the rule appears on the table. Odoo follows "
+"the sequential order of this table and will use the first rule it matches "
+"based on the sequence. The :guilabel:`Barcode Pattern` is how the sequence "
+"of letters or numbers is recognized by the system to contain information "
+"about the product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:266
+msgid ""
+"After filling in the information, click the :guilabel:`Save & New` button to"
+" make another rule or click :guilabel:`Save & Close` to save and return to "
+"the table of rules."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:272
+msgid "Barcode troubleshooting"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:274
+msgid ""
+"Since GS1 barcodes are challenging to work with, here are some checks to try"
+" when the barcodes are not working as expected:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:277
+msgid ""
+"Ensure that the :guilabel:`Barcode Nomenclature` setting is set as "
+":menuselection:`Default GS1 Nomenclature`. Jump to the :ref:`nomenclature "
+"setup section <barcode/operations/set-up-barcode-nomenclature>` for more "
+"details."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:280
+msgid ""
+"Ensure that the fields scanned in the barcode are enabled in Odoo. For "
+"example, to scan a barcode containing lots and serial numbers, make sure the"
+" :guilabel:`Lots & Serial Numbers` feature is enabled in :ref:`Odoo's "
+"settings <barcode/operations/lot-setup>` and :ref:`on the product "
+"<barcode/operations/lot-setup-on-product>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:284
+msgid ""
+"Omit punctuation such as parentheses `()` or brackets `[]` between the "
+":abbr:`A.I. (Application Identifier)` and the barcode sequence. These are "
+"typically used in examples for ease of reading and should **not** be "
+"included in the final barcode. For more details on building GS1 barcodes, go"
+" to :ref:`this section <barcode/operations/create-GS1-barcode>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:288
+msgid ""
+"When a single barcode contains multiple encoded fields, Odoo requires all "
+"rules to be listed in the barcode nomenclature for Odoo to read the barcode."
+" :ref:`This section <barcode/operations/create-new-rules>` details how to "
+"add new rules in the barcode nomenclature."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:295
+msgid "GS1 nomenclature list"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:297
+msgid ""
+"The table below contains Odoo's default list of GS1 rules. Barcode patterns "
+"are written in regular expressions. Only the first three rules require a "
+"`check digit <https://www.gs1.org/services/check-digit-calculator>`_ as the "
+"final character."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:302
+msgid "Type"
+msgstr "Tip"
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:302
+msgid "GS1 Content Type"
+msgstr "Tip conținut GS1"
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:302
+msgid "Odoo field"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:304
+msgid "Serial Shipping Container Code"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:304
+msgid "Package"
+msgstr "Pachet"
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:304
+msgid "(00)(\\\\d{18})"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:304
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:306
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:309
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:312
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:315
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:318
+msgid "Numeric identifier"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:304
+msgid "Package name"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:306
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:309
+msgid "Unit Product"
+msgstr "Unitate produs"
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:309
+msgid "GTIN of contained trade items"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:309
+msgid "(02)(\\\\d{14})"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:309
+msgid "Packaging"
+msgstr "Ambalare"
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:312
+msgid "Ship to / Deliver to global location"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:312
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:315
+msgid "Destination location"
+msgstr "Locația destinație"
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:312
+msgid "(410)(\\\\d{13})"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:315
+msgid "Ship / Deliver for forward"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:315
+msgid "(413)(\\\\d{13})"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:315
+msgid "Source location"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:318
+msgid "I.D. of a physical location"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:318
+#: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouses_locations.rst:15
+msgid "Location"
+msgstr "Locatie"
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:318
+msgid "(414)(\\\\d{13})"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:320
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:323
+msgid "Lot"
+msgstr "Lot"
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:320
+msgid "(10) ([!\"%-/0-9:-?A-Z_a-z]{0,20})"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:320
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:323
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:354
+msgid "Alpha-numeric name"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:323
+msgid "Serial number"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:323
+msgid "(21) ([!\"%-/0-9:-?A-Z_a-z]{0,20})"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:326
+msgid "Packaging date (YYMMDD)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:326
+msgid "Packaging Date"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:326
+msgid "(13)(\\\\d{6})"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:326
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:329
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:332
+msgid "Date"
+msgstr "Dată"
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:326
+msgid "Pack date"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:329
+msgid "Best before date (YYMMDD)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:329
+msgid "Best before Date"
+msgstr "Consum înainte de"
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:329
+msgid "(15)(\\\\d{6})"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:329
+msgid "Best before date"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:332
+msgid "Expiration date (YYMMDD)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:332
+msgid "Expiration Date"
+msgstr "Data expirării"
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:332
+msgid "(17)(\\\\d{6})"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:332
+msgid "Expiry date"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:335
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:337
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:340
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:342
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:344
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:346
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:348
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:350
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:352
+msgid "Measure"
+msgstr "Măsurare"
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:335
+msgid "UoM: Units"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:337
+msgid "Count of trade items"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:337
+msgid "(37)(\\\\d{0,8})"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:337
+msgid "Qty in units for containers (AI 02)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:340
+msgid "Net weight: kilograms (kg)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:340
+msgid "Qty in kg"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:342
+msgid "Length in meters (m)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:342
+msgid "(311[0-5])(\\\\d{6})"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:342
+msgid "Qty in m"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:344
+msgid "Net volume: liters (L)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:344
+msgid "(315[0-5])(\\\\d{6})"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:344
+msgid "Qty in L"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:346
+msgid "Net volume: cubic meters (m\\ :sup:`3`)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:346
+msgid "(316[0-5])(\\\\d{6})"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:346
+msgid "Qty in m\\ :sup:`3`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:348
+msgid "Length in inches (in)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:348
+msgid "(321[0-5])(\\\\d{6})"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:348
+msgid "Qty in inches"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:350
+msgid "Net weight/volume: ounces (oz)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:350
+msgid "(357[0-5])(\\\\d{6})"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:350
+msgid "Qty in oz"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:352
+msgid "Net volume: cubic feet (ft\\ :sup:`3`)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:352
+msgid "(365[0-5])(\\\\d{6})"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:352
+msgid "Qty in ft\\ :sup:`3`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:354
+msgid "Packaging type"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:354
+msgid "Packaging Type"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:354
+msgid "(91) ([!\"%-/0-9:-?A-Z_a-z]{0,90})"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:354
+msgid "Package type"
+msgstr "Tip pachet"
+
 #: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/internal.rst:3
 msgid "Process to Transfers"
 msgstr "Procesare transferuri"
@@ -407,11 +1294,11 @@ msgstr ""
 "Dacă aveți diferite locații de stocare în depozitul dvs., puteți adăuga pași"
 " suplimentari pentru diferitele tipuri de operațiuni."
 
-#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/internal.rst:39
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/internal.rst:41
 msgid "Receipts"
 msgstr "Recepții"
 
-#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/internal.rst:41
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/internal.rst:43
 msgid ""
 "When receiving a product in stock, you need to scan its barcode in order to "
 "identify it in the system. Once done, you can either make it enter the main "
@@ -424,7 +1311,7 @@ msgstr ""
 " sau scanați codul de bare al locației pentru a face ca produsul să intre în"
 " o sublocație a locației principale."
 
-#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/internal.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/internal.rst:52
 msgid ""
 "If you want the product to enter WH/Stock in our example, you can simply "
 "scan the next product."
@@ -432,11 +1319,11 @@ msgstr ""
 "Dacă doriți ca produsul să intre în WH/Stock în exemplul nostru, puteți "
 "scana pur și simplu următorul produs."
 
-#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/internal.rst:54
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/internal.rst:56
 msgid "Delivery Orders"
 msgstr "Comenzi de livrare"
 
-#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/internal.rst:56
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/internal.rst:58
 msgid ""
 "When delivering a product, you have to scan the source location if it is "
 "different than the one initially set on the transfer. Then, you can start "
@@ -446,7 +1333,7 @@ msgstr ""
 "de cea inițială setată pe transfer. Apoi, puteți începe să scanați produsele"
 " care sunt livrate din această locație specifică."
 
-#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/internal.rst:64
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/internal.rst:66
 msgid ""
 "Once the different products have been scanned, you have the possibility to "
 "scan another location, such as WH/Stock, and another page will be added to "
@@ -458,7 +1345,7 @@ msgstr ""
 "comanda dvs. de livrare. Puteți trece de la una la alta prin intermediul "
 "butoanelor *Anterior* și *Următor*."
 
-#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/internal.rst:72
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/internal.rst:74
 msgid ""
 "Now, you can validate your transfer. To do so, click on *Next* until you "
 "reach the last page of the transfer. There, you will be able to validate it."
@@ -467,11 +1354,11 @@ msgstr ""
 "pe *Următor* până când ajungeți la ultima pagină a transferului. Acolo, veți"
 " putea să-l validați."
 
-#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/internal.rst:80
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/internal.rst:82
 msgid "Internal Transfers"
 msgstr "Transferuri interne"
 
-#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/internal.rst:82
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/internal.rst:84
 msgid ""
 "When realizing an internal transfer with multi-location, you first have to "
 "scan the source location of the product. Then, you can scan the product in "
@@ -481,7 +1368,7 @@ msgstr ""
 "scanați locația sursă a produsului. Apoi, puteți scana produsul în sine, "
 "înainte de a trebui să scanați codul de bare al locației destinație."
 
-#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/internal.rst:87
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/internal.rst:89
 msgid ""
 "If the source and destination of the internal transfers are already correct,"
 " you don’t need to scan them."
@@ -489,11 +1376,11 @@ msgstr ""
 "Dacă sursa și destinația transferurilor interne sunt deja corecte, nu "
 "trebuie să le scanați."
 
-#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/internal.rst:91
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/internal.rst:93
 msgid "Transfers with Tracked Products"
 msgstr "Transferuri cu produse urmărite"
 
-#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/internal.rst:93
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/internal.rst:95
 msgid ""
 "If you work with products tracked by lot/serial numbers, you have two ways "
 "of working:"
@@ -501,7 +1388,7 @@ msgstr ""
 "Dacă lucrați cu produse urmărite de loturi/numere de serie, aveți două "
 "modalități de lucru:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/internal.rst:96
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/internal.rst:98
 msgid ""
 "If you work with serial/lot numbers taking all products into consideration, "
 "you can scan the barcode of the lot/serial number and Odoo will increase the"
@@ -511,7 +1398,7 @@ msgstr ""
 " puteți scana codul de bare al lotului/numărului de serie și Odoo va crește "
 "cantitatea de produs, setând lotul/numărul de serie."
 
-#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/internal.rst:101
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/internal.rst:103
 msgid ""
 "If you have the same lot/serial number for different products, you can work "
 "by scanning the product barcode first, and then the barcode of the "
@@ -554,7 +1441,7 @@ msgstr "Configurare"
 msgid "Set up your barcode scanner"
 msgstr "Configurați cititorul de coduri de bare"
 
-#: ../../content/applications/inventory_and_mrp/inventory/barcode/setup/hardware.rst:5
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/setup/hardware.rst:7
 msgid ""
 "Getting started with barcode scanning in Odoo is fairly easy. Yet, a good "
 "user experience relies on an appropriate hardware setup. This guide will "
@@ -565,11 +1452,11 @@ msgstr ""
 " corespunzătoare. Această ghid va ajuta să treceți prin procesul de alegere "
 "și configurare a cititorului de coduri de bare."
 
-#: ../../content/applications/inventory_and_mrp/inventory/barcode/setup/hardware.rst:11
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/setup/hardware.rst:13
 msgid "Find the barcode scanner that suits your needs"
 msgstr "Găsiți cititorul de coduri de bare care se potrivește nevoilor dvs."
 
-#: ../../content/applications/inventory_and_mrp/inventory/barcode/setup/hardware.rst:13
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/setup/hardware.rst:15
 msgid ""
 "The 3 recommended type of barcode scanners to work with the Odoo "
 "**Inventory** and **Barcode Scanning** apps are the **USB scanner**, **the "
@@ -579,7 +1466,7 @@ msgstr ""
 "aplicațiile **Inventar** și **Scanning Barcode** din Odoo sunt **cititorul "
 "USB**, **cititorul bluetooth** și **cititorul de computer mobil**."
 
-#: ../../content/applications/inventory_and_mrp/inventory/barcode/setup/hardware.rst:20
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/setup/hardware.rst:22
 msgid ""
 "If you scan products at a computer location, the **USB scanner** is the way "
 "to go. Simply plug it in the computer to start scanning. Just make sure when"
@@ -591,7 +1478,7 @@ msgstr ""
 " când cumpărați că cititorul este compatibil cu configurația tastaturii dvs."
 " sau poate fi configurat pentru a fi."
 
-#: ../../content/applications/inventory_and_mrp/inventory/barcode/setup/hardware.rst:25
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/setup/hardware.rst:27
 msgid ""
 "The **bluetooth scanner** can be paired with a smartphone or a tablet and is"
 " a good choice if you want to be mobile but don't need a big investment. An "
@@ -606,7 +1493,7 @@ msgstr ""
 "depozit cu posibilitatea de a verifica smartphone-ul de când în când și de a"
 " utiliza software-ul 'manual'."
 
-#: ../../content/applications/inventory_and_mrp/inventory/barcode/setup/hardware.rst:32
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/setup/hardware.rst:34
 msgid ""
 "For heavy use, the **mobile computer scanner** is the handiest solution. It "
 "consists of a small computer with a built-in barcode scanner. This one can "
@@ -625,15 +1512,15 @@ msgstr ""
 "cauza varietății de modele și configurații pe piață, este esențial să o "
 "testați încă de la început."
 
-#: ../../content/applications/inventory_and_mrp/inventory/barcode/setup/hardware.rst:42
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/setup/hardware.rst:44
 msgid "Configure your barcode scanner"
 msgstr "Configurați cititorul de coduri de bare"
 
-#: ../../content/applications/inventory_and_mrp/inventory/barcode/setup/hardware.rst:45
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/setup/hardware.rst:47
 msgid "Keyboard layout"
 msgstr "Configurația tastaturii"
 
-#: ../../content/applications/inventory_and_mrp/inventory/barcode/setup/hardware.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/setup/hardware.rst:52
 msgid ""
 "An USB barcode scanner needs to be configured to use the same keyboard "
 "layout as your operating system. Otherwise, your scanner won't translate "
@@ -646,11 +1533,11 @@ msgstr ""
 " de exemplu). Majoritatea cititoarelor sunt configurate prin scanarea "
 "codului de bare corespunzător din manualul de utilizare."
 
-#: ../../content/applications/inventory_and_mrp/inventory/barcode/setup/hardware.rst:57
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/setup/hardware.rst:59
 msgid "Automatic carriage return"
 msgstr "Returnare automată a caruselului"
 
-#: ../../content/applications/inventory_and_mrp/inventory/barcode/setup/hardware.rst:59
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/setup/hardware.rst:61
 msgid ""
 "By default, Odoo has a 50 milliseconds delay between each successive scan "
 "(it helps avoid accidental double scanning). If you want to suppress this "
@@ -684,32 +1571,6 @@ msgstr ""
 "codurilor de bare produselor, locațiilor de ridicare, etc. vă permite să "
 "lucrați mai eficient prin controlarea software-ului aproape exclusiv cu "
 "cititorul de coduri de bare."
-
-#: ../../content/applications/inventory_and_mrp/inventory/barcode/setup/software.rst:14
-#: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/cycle_counts.rst:14
-#: ../../content/applications/inventory_and_mrp/inventory/management/misc/wave_transfers.rst:16
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:51
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/uom.rst:16
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/integrating_landed_costs.rst:9
-#: ../../content/applications/inventory_and_mrp/inventory/management/shipments_deliveries/delivery_three_steps.rst:18
-#: ../../content/applications/inventory_and_mrp/inventory/management/shipments_deliveries/receipts_three_steps.rst:16
-#: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/resupply_warehouses.rst:11
-#: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouses_locations.rst:42
-#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/cross_dock.rst:18
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:18
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:84
-#: ../../content/applications/inventory_and_mrp/inventory/shipping/operation/invoicing.rst:16
-#: ../../content/applications/inventory_and_mrp/inventory/shipping/operation/label_type.rst:13
-#: ../../content/applications/inventory_and_mrp/inventory/shipping/operation/labels.rst:15
-#: ../../content/applications/inventory_and_mrp/inventory/shipping/operation/multipack.rst:11
-#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/delivery_method.rst:17
-#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/third_party_shipper.rst:14
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:23
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:9
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:15
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:10
-msgid "Configuration"
-msgstr "Configurare"
 
 #: ../../content/applications/inventory_and_mrp/inventory/barcode/setup/software.rst:16
 msgid ""
@@ -1842,7 +2703,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:224
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:209
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:211
 msgid ""
 ":doc:`/applications/inventory_and_mrp/inventory/routes/strategies/removal`"
 msgstr ""
@@ -1971,11 +2832,11 @@ msgstr ""
 msgid "Enabled lots and serial numbers feature in inventory settings."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:34
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:36
 msgid "Track products by lots"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:36
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:38
 msgid ""
 "Once the :guilabel:`Lots & Serial Numbers` setting has been activated, "
 "individual products can now be configured to be tracked using lots. To do "
@@ -1983,7 +2844,7 @@ msgid ""
 "and choose a product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:40
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:42
 msgid ""
 "Once on the product form, click :guilabel:`Edit` to make changes to the "
 "form. Then, click the :guilabel:`Inventory` tab. In the "
@@ -1992,7 +2853,7 @@ msgid ""
 "assigned to newly-received or manufactured batches of this product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:46
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:48
 msgid ""
 "If a product has stock on-hand prior to activating tracking by lots or "
 "serial numbers, an inventory adjustment might need to be performed to assign"
@@ -2003,11 +2864,11 @@ msgstr ""
 msgid "Enabled tracking by lots feature on product form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:54
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:56
 msgid "Create new lots for products already in stock"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:56
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:58
 msgid ""
 "New lots can be created for products already in stock with no assigned lot "
 "number. To do this, go to the :menuselection:`Inventory app --> Products -->"
@@ -2016,7 +2877,7 @@ msgid ""
 "automatically."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:62
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:64
 msgid ""
 "While Odoo automatically generates a new :guilabel:`Lot/Serial Number` to "
 "follow the most recent number, it can be edited and changed to any desired "
@@ -2024,14 +2885,14 @@ msgid ""
 "and changing the generated number."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:66
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:68
 msgid ""
 "Once the new :guilabel:`Lot/Serial Number` is generated, click the blank "
 "field next to :guilabel:`Product` to reveal a drop-down menu. From this "
 "menu, select the product to which this new number will be assigned."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:70
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:72
 msgid ""
 "This form also provides the option to adjust the :guilabel:`Quantity`, "
 "assign a unique :guilabel:`Internal Reference` number (for traceability "
@@ -2040,13 +2901,13 @@ msgid ""
 "website environment)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:75
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:77
 msgid ""
 "A detailed description of this specific lot or serial number can also be "
 "added in the :guilabel:`Description` tab below."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:78
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:80
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:79
 msgid ""
 "When all desired configurations are complete, click the :guilabel:`Save` "
@@ -2057,7 +2918,7 @@ msgstr ""
 msgid "New lot number creation form with assigned product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:84
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:86
 msgid ""
 "After a new lot number has been created, saved, and assigned to the desired "
 "product, navigate back to the product form in the :menuselection:`Inventory`"
@@ -2065,7 +2926,7 @@ msgid ""
 "product to which this newly-created lot number was just assigned."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:88
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:90
 msgid ""
 "On that product's detail form, click the :guilabel:`Lot/Serial Numbers` "
 "smart button to view the new lot number. When additional quantity of this "
@@ -2073,11 +2934,11 @@ msgid ""
 " assigned to it."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:93
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:95
 msgid "Manage lots for shipping and receiving"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:95
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:97
 msgid ""
 "Lot numbers can be assigned for both **incoming** and **outgoing** goods. "
 "For incoming goods, lot numbers are assigned directly on the purchase order "
@@ -2085,23 +2946,23 @@ msgid ""
 "order form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:100
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:102
 msgid "Manage lots on receipts"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:102
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:104
 msgid ""
 "Assigning lot numbers to **incoming** goods can be done directly from the "
 "purchase order (PO)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:104
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:106
 msgid ""
 "To create a :abbr:`PO (purchase order)`, go to :menuselection:`Purchase app "
 "--> Create`. Doing so reveals a new, blank request for quotation (RFQ) form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:107
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:109
 msgid ""
 "On this :abbr:`RFQ (request for quotation)`, fill out the necessary "
 "information by adding a :guilabel:`Vendor`, and adding the desired products "
@@ -2109,13 +2970,13 @@ msgid ""
 "(under the :guilabel:`Products` tab)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:113
 msgid ""
 "Choose the desired quantity of the product to order by changing the number "
 "in the :guilabel:`Quantity` column."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:116
 msgid ""
 "Once the :abbr:`RFQ (request for quotation)` has been filled out, click "
 ":guilabel:`Confirm Order`. When the :abbr:`RFQ (request for quotation)` is "
@@ -2124,7 +2985,7 @@ msgid ""
 "smart button to be taken to the warehouse receipt form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:120
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:122
 msgid ""
 "Clicking :guilabel:`Validate` before assigning a lot number to the ordered "
 "product quantities will result in a :guilabel:`User Error` pop-up. The pop-"
@@ -2137,7 +2998,7 @@ msgstr ""
 msgid "Add lot/serial number user error popup."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:129
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:131
 msgid ""
 "From here, click the :guilabel:`Additional Options` menu, represented by a "
 ":guilabel:`hamburger (four horizontal lines)` icon, located to the right of "
@@ -2145,19 +3006,19 @@ msgid ""
 "Clicking that icon reveals a :guilabel:`Detailed Operations` pop-up."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:133
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:135
 msgid ""
 "In this pop-up, configure a number of different fields, including the "
 "assignation of a lot number, under the :guilabel:`Lot/Serial Number Name` "
 "column, located at the bottom of the pop-up."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:136
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:138
 msgid ""
 "There are two ways to assign lot numbers: **manually** and **copy/paste**."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:138
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:140
 msgid ""
 "**Manually assign lot numbers**: Click :guilabel:`Add a line` and choose the"
 " location the products will be stored in under the :guilabel:`To` column. "
@@ -2169,7 +3030,7 @@ msgstr ""
 msgid "Assign lot number detailed operations popup."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:147
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:149
 msgid ""
 "If quantities should be processed in multiple locations and lots, click "
 ":guilabel:`Add a line` and type a new :guilabel:`Lot Number Name` for "
@@ -2177,7 +3038,7 @@ msgid ""
 "the :guilabel:`Demand`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:151
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:153
 msgid ""
 "**Copy/paste lot numbers from a spreadsheet**: Populate a spreadsheet with "
 "all of the lot numbers received from the supplier (or manually chosen to "
@@ -2192,13 +3053,13 @@ msgstr ""
 msgid "List of lot numbers copied on excel spreadsheet."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:161
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:163
 msgid ""
 "Once all product quantities have been assigned a lot number, click "
 ":guilabel:`Confirm` to close the pop-up. Then, click :guilabel:`Validate`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:164
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:166
 msgid ""
 "A :guilabel:`Traceability` smart button appears upon validating the receipt."
 " Click the :guilabel:`Traceability` smart button to see the updated "
@@ -2207,51 +3068,51 @@ msgid ""
 " assigned, and more."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:170
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:172
 msgid "Manage lots on delivery orders"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:172
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:174
 msgid ""
 "Assigning lot numbers to **outgoing** goods can be done directly from the "
 "sales order (SO)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:174
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:176
 msgid ""
 "To create an :abbr:`SO (sales order)`, go to the :menuselection:`Sales app "
 "--> Create`. Doing so reveals a new, blank quotation form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:177
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:179
 msgid ""
 "On this blank quotation form, fill out the necessary information by adding a"
 " :guilabel:`Customer`, and adding products to the :guilabel:`Product` lines "
 "(in the :guilabel:`Order Lines` tab) by clicking :guilabel:`Add a product`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:181
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:183
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:219
 msgid ""
 "Then, choose the desired quantity to sell by changing the number in the "
 ":guilabel:`Quantity` column."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:183
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:185
 msgid ""
 "Once the quotation has been filled out, click the :guilabel:`Confirm` button"
 " to confirm the quotation. When the quotation is confirmed, it becomes an "
 ":abbr:`SO (sales order)`, and a :guilabel:`Delivery` smart button appears."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:187
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:189
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:225
 msgid ""
 "Click the :guilabel:`Delivery` smart button to view the warehouse receipt "
 "form for that specific :abbr:`SO (sales order)`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:190
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:192
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:130
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:228
 msgid ""
@@ -2261,14 +3122,14 @@ msgid ""
 "Clicking that icon reveals a :guilabel:`Detailed Operations` pop-up."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:194
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:196
 msgid ""
 "In the pop-up, a :guilabel:`Lot/Serial Number` will be chosen by default, "
 "with the full :guilabel:`Reserved` quantity taken from that specific lot (if"
 " there is enough stock in that particular lot)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:198
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:200
 msgid ""
 "If there is insufficient stock in that lot, or if partial quantities of the "
 ":guilabel:`Demand` should be taken from multiple lots, change the quantity "
@@ -2276,7 +3137,7 @@ msgid ""
 "total quantity."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:203
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:205
 msgid ""
 "The lot automatically chosen for delivery orders varies, depending on the "
 "selected removal strategy (:abbr:`FIFO (First In, First Out)`, :abbr:`LIFO "
@@ -2285,7 +3146,7 @@ msgid ""
 "lot to fulfill the order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:211
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:213
 msgid ""
 "Then, click :guilabel:`Add a line`, select an additional (different) "
 ":guilabel:`Lot/Serial Number`, apply the rest of the :guilabel:`Done` "
@@ -2297,7 +3158,7 @@ msgstr ""
 msgid "Detailed operations popup for source lot number on sales order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:219
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:221
 msgid ""
 "Upon validating the delivery order, a :guilabel:`Traceability` smart button "
 "appears. Click the :guilabel:`Traceability` smart button to see the updated "
@@ -2306,38 +3167,38 @@ msgid ""
 "the :guilabel:`Lot/Serial #` assigned."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:224
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:226
 msgid ""
 "The :guilabel:`Traceability Report` can also include a :guilabel:`Reference`"
 " receipt from the previous purchase order, if the product quantities shared "
 "the same lot number."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:228
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:230
 msgid "Manage lots for different operations types"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:230
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:232
 msgid ""
 "In Odoo, the creation of new lots is only allowed upon **receiving** "
 "products from a purchase order, by default. **Existing** lot numbers cannot "
 "be used."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:233
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:235
 msgid ""
 "For sales orders, the opposite is true: new lot numbers cannot be created on"
 " the delivery order, only existing lot numbers can be used."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:236
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:238
 msgid ""
 "To change the ability to use new (or existing) lot numbers on any operation "
 "type, go to the :menuselection:`Inventory app --> Configuration --> "
 "Operations Types`, and select the desired :guilabel:`Operation Type`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:240
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:242
 msgid ""
 "For :guilabel:`Receipts`, found on the :menuselection:`Operations Types` "
 "page, the :guilabel:`Use Existing Lots/Serial Numbers` option can be "
@@ -2347,7 +3208,7 @@ msgid ""
 " to save the changes."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:245
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:247
 msgid ""
 "For :guilabel:`Delivery Orders`, the :guilabel:`Create New Lots/Serial "
 "Numbers` option can be enabled, by clicking :guilabel:`Edit`, and clicking "
@@ -2359,39 +3220,39 @@ msgstr ""
 msgid "Enabled traceability setting on operations type form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:254
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:256
 msgid ""
 "For inter-warehouse transfers involving products tracked by lots, it can be "
 "useful to enable the :guilabel:`Use Existing Lots/Serial Numbers` option for"
 " warehouse receipts."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:258
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:260
 msgid "Lots traceability"
 msgstr "Urmărire loturi"
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:260
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:262
 msgid ""
 "Manufacturers and companies can refer to traceability reports to see the "
 "entire lifecycle of a product: where (and when) it came from, where it was "
 "stored, and who (and when) it went to."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:263
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:265
 msgid ""
 "To see the full traceability of a product, or group by lots, go to the "
 ":menuselection:`Inventory app --> Products --> Lots/Serial Numbers`. Doing "
 "so reveals the :menuselection:`Lots/Serial Numbers` dashboard."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:267
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:269
 msgid ""
 "From here, products with lot numbers assigned to them will be listed by "
 "default, and can be expanded to show the lot numbers those products have "
 "assigned to them."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:270
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:272
 msgid ""
 "To group by lots (or serial numbers), begin by removing any filters in the "
 "search bar. Then, click the :guilabel:`Group By` drop-down, select "
@@ -2399,7 +3260,7 @@ msgid ""
 "the drop-down menu. Then, click :guilabel:`Apply`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:274
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:276
 msgid ""
 "Doing so displays all existing lots and serial numbers, and can be expanded "
 "to show all quantities of products with that assigned number."
@@ -2409,7 +3270,7 @@ msgstr ""
 msgid "Lots and serial numbers traceability report."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:282
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:284
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:317
 msgid ""
 ":doc:`/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/differences`"
@@ -5197,19 +6058,19 @@ msgid ""
 "configurations for products as they enter and leave the warehouse."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:10
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:12
 msgid "Units of measure"
 msgstr "Unități de măsură"
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:12
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:14
 msgid ""
 "A *unit of measure (UoM)* refers to any of the different standards used to "
-"measure and handle a quanitifiable amount of products, such a units, weight,"
-" time, or size. Different :abbr:`UoMs (Units of Measure)` for weight, for "
+"measure and handle a quantifiable amount of products, such a units, weight, "
+"time, or size. Different :abbr:`UoMs (Units of Measure)` for weight, for "
 "example, can be kilos, pounds, ounces, grams, and so on."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:16
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:18
 msgid ""
 "In Odoo, stock management and purchasing from suppliers are streamlined by "
 "specifying different :abbr:`UoMs (Units of Measure)` for both buying and "
@@ -5220,7 +6081,7 @@ msgstr ""
 msgid "Specify unit of measure for selling a product vs purchasing."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:23
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:25
 msgid ""
 "Once a product has a default :guilabel:`Unit of Measure` and "
 ":guilabel:`Purchase Unit of Measure` set on the product form, Odoo "
@@ -5228,25 +6089,25 @@ msgid ""
 "orders and the corresponding delivery orders/receipts."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:27
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:29
 msgid ""
 "The only condition is that all of the units have to be in the *same "
 "category* (unit, weight, volume, length, etc.)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:31
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:33
 msgid "On the product form for `Rope`, the following fields are set as:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:33
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:35
 msgid ":guilabel:`Unit of Measure` in `ft` (feet), and"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:34
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:36
 msgid ":guilabel:`Purchase Unit of Measure` in `cm` (centimeters)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:36
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:38
 msgid ""
 "Because the vendor sells rope in `cm`, the purchase :guilabel:`UoM` is used "
 "to represent the quantity on the :abbr:`PO (Purchase Order)`, which is also "
@@ -5257,7 +6118,7 @@ msgstr ""
 msgid "Display purchase order for the product, rope, in centimeters."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:43
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:45
 msgid ""
 "After confirming the :abbr:`PO (Purchase Order)`, the quantity of product "
 "(found under the now visible :guilabel:`Demand` column) is converted from "
@@ -5267,7 +6128,7 @@ msgid ""
 "automatically adjusted to match the :guilabel:`Demand` column."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:52
 msgid ""
 "On the *receipt* for `Rope`, the quantities are automatically converted from"
 " `500 cm` that was requested on the purchase order, to `16.40 ft` to match "
@@ -5278,17 +6139,17 @@ msgstr ""
 msgid "Rope quantity is converted from cm to ft during warehouse reception."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:59
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:61
 msgid ""
 ":ref:`Use Different Units of Measure "
 "<inventory/management/products/units_of_measure>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:62
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:64
 msgid "Packages"
 msgstr "Pachete"
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:64
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:66
 msgid ""
 "Packages are a physical container that holds one or several products from a "
 "picking, typically used for outgoing deliveries or internal transfers. "
@@ -5296,7 +6157,7 @@ msgid ""
 "specific to a product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:68
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:70
 msgid ""
 "Reusable boxes temporarily hold products during a picking to be brought to "
 "either a packing or shipping area. Disposable boxes are the actual shipping "
@@ -5304,7 +6165,7 @@ msgid ""
 "used to ship the products out to customers."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:72
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:74
 msgid ""
 "Multiple items in a sales order (SO) can be separated into different "
 "packages to accommodate the products. For example, an :abbr:`SO (Sales "
@@ -5313,21 +6174,21 @@ msgid ""
 " of erasers."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:78
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:80
 msgid ""
 "Products do *not* have to be divided equally. Products can be divided into "
 "as many packages that are needed to accommodate the :abbr:`SO (Sales "
 "Order)`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:81
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:83
 msgid ""
 "In Odoo, the quantity of products in each package needs to be recorded, so "
 "there is a full history for each product, including which package each item "
 "is shipped out in."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:84
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:86
 msgid ""
 "To use this method, ensure the :guilabel:`Packages` option is enabled, by "
 "navigating to :menuselection:`Inventory app --> Configuration --> Settings "
@@ -5335,7 +6196,7 @@ msgid ""
 ":guilabel:`Save` to activate the feature."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:88
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:90
 msgid ""
 "On a delivery order, assign which package to use by clicking on the "
 ":guilabel:`≣ (Detailed Operations)` icon to the right of each product in the"
@@ -5346,7 +6207,7 @@ msgstr ""
 msgid "Find detailed operations icon to the right on the product line."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:95
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:97
 msgid ""
 "Clicking the :guilabel:`≣ (Detailed Operations)` icon of a product reveals a"
 " pop-up window. In this window, the :guilabel:`Product` name, "
@@ -5354,7 +6215,7 @@ msgid ""
 "above the customizable product line."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:99
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:101
 msgid ""
 "Here, the warehouse location the product is coming from can be modified, in "
 "addition to the :guilabel:`Source Package` and :guilabel:`Destination "
@@ -5362,18 +6223,18 @@ msgid ""
 "into."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:103
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:105
 msgid ""
 "Click :guilabel:`Add a line` to include each additional package used. Enter "
 "the desired amount in the :guilabel:`Done` field to specify the amount of "
 "products that will go into the :guilabel:`Destination Package`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:108
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:110
 msgid "Multiple packages in a single delivery"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:110
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:112
 msgid ""
 "Although a :abbr:`DO (Delivery Order)` is typically associated with a single"
 " package, orders can be split by clicking the :guilabel:`≣ (Detailed "
@@ -5382,7 +6243,7 @@ msgid ""
 " to specify which products are intended for which package."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:116
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:118
 msgid ""
 "To package 10 boxes of pencils with 2 boxes of erasers from the same "
 ":abbr:`SO (Sales Order)`, begin by navigating to the :abbr:`DO (Delivery "
@@ -5392,7 +6253,7 @@ msgid ""
 "like the 20 `Box of Pencils`, are packaged."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:122
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:124
 msgid ""
 "Type in `10` under the :guilabel:`Done` field to package 10 products into "
 "the :guilabel:`Destination Package`. To specify the destination package, "
@@ -5409,7 +6270,7 @@ msgid ""
 "be specified."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:132
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:134
 msgid ""
 "Select :guilabel:`Detailed Operations` on the product line for `Box of "
 "Erasers` and similarly set 2 :guilabel:`Done` products to `PACK0000006` and "
@@ -5420,13 +6281,13 @@ msgstr ""
 msgid "Put in pack button to match the done amount matches the demand."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:139
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:141
 msgid ""
 "Once all the products for each line have been entered, click "
 ":guilabel:`Confirm` to return to the :abbr:`DO (Delivery Order)`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:142
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:144
 msgid ""
 "The :guilabel:`Done` quantity on the :abbr:`DO (Delivery Order)` updates as "
 "products are selected for each package. When the :guilabel:`Done` amount "
@@ -5434,7 +6295,7 @@ msgid ""
 " to complete the delivery order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:147
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:149
 msgid ""
 "The :guilabel:`Put In Pack` button is intended to quickly package all "
 "products in the :abbr:`DO (Delivery Order)` into one new package. The option"
@@ -5442,18 +6303,18 @@ msgid ""
 ":guilabel:`Detailed Operations` pop-up."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:151
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:153
 msgid ""
 "Clicking on the :guilabel:`Packages` smart button in the upper-right corner "
 "of the delivery order reveals a separate page, showing all the packages used"
 " in that :abbr:`DO (Delivery Order)`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:155
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:157
 msgid "Packagings"
 msgstr "Impachetare"
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:157
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:159
 msgid ""
 "*Packaging* is product specific, and refers to a disposable container that "
 "holds several units of a specific product. Unlike packages, packagings "
@@ -5461,7 +6322,7 @@ msgid ""
 "individual product form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:161
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:163
 msgid ""
 "For example, different packages for cans of soda can be configured as a "
 "6-pack, a 12-pack, or a case of 36. Each flavor of soda would need a `6`, "
@@ -5469,11 +6330,11 @@ msgid ""
 "packagings are product specific, not generic."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:166
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:168
 msgid "Set up packagings"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:168
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:170
 msgid ""
 "To use packagings, ensure the :guilabel:`Product Packagings` feature is "
 "enabled. To do that, navigate to :menuselection:`Inventory app --> "
@@ -5482,20 +6343,20 @@ msgid ""
 ":guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:173
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:175
 msgid ""
 "In Odoo, product packagings are used on sales/purchase orders and inventory "
 "transfers."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:175
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:177
 msgid ""
 "Next, to create packagings, navigate to :menuselection:`Inventory app --> "
 "Products --> Products` and click on the desired product, then click "
 ":guilabel:`Edit` on the product page."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:178
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:180
 msgid ""
 "Under the :guilabel:`Inventory` tab, scroll down to the "
 ":guilabel:`Packaging` section, and click :guilabel:`Add a line`. Then, a "
@@ -5503,31 +6364,31 @@ msgid ""
 " should be entered:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:182
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:184
 msgid ""
 ":guilabel:`Packaging`: name of packaging that appears on sales/purchase "
 "orders as a packaging option for the product"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:184
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:186
 msgid ":guilabel:`Contained quantity`: amount of product in the packaging"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:185
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:187
 msgid ""
 ":guilabel:`Barcode`: identifier used with the :ref:`Barcode app "
 "<barcode/operations/intro>` to trace the packaging of a product during stock"
 " moves or pickings. Leave blank if not in use"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:187
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:189
 msgid ""
 ":guilabel:`Company`: indicates the packaging is only available at the "
 "selected company. Leave blank to make the packaging available across all "
 "companies."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:191
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:193
 msgid ""
 "Create a packaging type for 6 cans of the product, `Grape Soda`, by naming "
 "the :guilabel:`Packaging` to `6-pack` and setting the :guilabel:`Contained "
@@ -5539,7 +6400,7 @@ msgstr ""
 msgid "Create 6-pack case for product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:199
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:201
 msgid ""
 "When all the necessary information has been entered, either click "
 ":guilabel:`Save & Close` to save the packaging and return to the product "
@@ -5547,7 +6408,7 @@ msgid ""
 "another one in a fresh pop-up window."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:204
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:206
 msgid ""
 "View all product packagings in the :guilabel:`Inventory` tab of the product "
 "form."
@@ -5559,11 +6420,11 @@ msgid ""
 "Inventory tab."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:212
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:214
 msgid "View all packagings"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:214
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:216
 msgid ""
 "To view all packagings that have been created, go to "
 ":menuselection:`Inventory app --> Configuration --> Product Packagings`. "
@@ -5572,7 +6433,7 @@ msgid ""
 "packagings by clicking :guilabel:`Create`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:220
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:222
 msgid ""
 "Two soda products, `Grape Soda` and `Diet Coke`, have three types of "
 "packaging configured. On the :guilabel:`Product Packagings` page, each "
@@ -5584,11 +6445,11 @@ msgstr ""
 msgid "List of different packagings for products."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:229
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:231
 msgid "Apply packagings"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:231
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:233
 msgid ""
 "When creating a sales order in the :menuselection:`Sales` app, specify the "
 "packagings that should be used for the product(s). The chosen packaging is "
@@ -5596,7 +6457,7 @@ msgid ""
 "field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:236
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:238
 msgid ""
 "18 cans of the product, `Grape Soda`, is packed using three 6-pack "
 "packagings."
@@ -5606,7 +6467,7 @@ msgstr ""
 msgid "Assign packagings on the Sales Order Line."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:243
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:245
 msgid ""
 "Packaging can be used in conjunction with Odoo :ref:`Barcode "
 "<inventory/barcode/software>`. When receiving products from suppliers, "
@@ -8051,10 +8912,6 @@ msgstr ""
 "unei companii. Mai multe depozite pot fi configurate in Odoo si utilizatorul"
 " poate crea mutari intre depozite."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouses_locations.rst:15
-msgid "Location"
-msgstr "Locatie"
-
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouses_locations.rst:17
 msgid ""
 "A **Location** is a specific space within the warehouse. It can be a "
@@ -8647,7 +9504,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:168
 msgid ""
-"If whe :guilabel:`Warehouse` field is missing on the sales order form, then "
+"If the :guilabel:`Warehouse` field is missing on the sales order form, then "
 "the virtual warehouse (and its children warehouses) may not have been set up"
 " correctly, in which case, review the documentation above again to make sure"
 " all settings/configuration were done properly."
@@ -12703,86 +13560,103 @@ msgstr "Utilizați kit-uri"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:5
 msgid ""
-"A *kit* is a set of unassembled components. Kits may be sold as products, "
-"but are also useful tools for managing more complex bills of materials "
-"(BoMs). To use kits, the :guilabel:`Manufacturing` and :guilabel:`Inventory`"
-" applications need to be installed."
+"In Odoo, a *kit* is a type of bill of materials (BoM) that can be "
+"manufactured and sold. Kits are sets of unassembled components sold to "
+"customers. They may be sold as standalone products, but are also useful "
+"tools for managing more complex bills of materials (BoMs)."
 msgstr ""
-"Un *kit* este un set de componente neasamblate. Kit-urile pot fi vândute ca "
-"produse, dar sunt și instrumente utile pentru gestionarea listelor de "
-"materiale (LdM) mai complexe. Pentru a utiliza kit-urile, aplicațiile "
-":guilabel:`Producție` și :guilabel:`Inventar` trebuie instalate."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:10
+msgid ""
+"To use, manufacture, and sell kits, both the :guilabel:`Manufacturing` and "
+":guilabel:`Inventory` apps need to be installed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:14
 msgid "Create the kit as a product"
 msgstr "Creați kit-ul ca un produs"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:12
-msgid ""
-"To use a kit as a sellable product or simply as a component organization "
-"tool, the kit should first be created as a product. To create a kit product,"
-" go to :menuselection:`Manufacturing or Inventory --> Products --> "
-"Products`, and then click :guilabel:`Create`."
-msgstr ""
-"Pentru a utiliza un kit ca un produs vândut sau pur și simplu ca un "
-"instrument de organizare a componentelor, kit-ul trebuie creat mai întâi ca "
-"un produs. Pentru a crea un produs kit, accesați :menuselection:`Producție "
-"sau Inventar --> Produse --> Produse`, apoi faceți clic pe "
-":guilabel:`Creare`."
-
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:16
 msgid ""
-"Next, set the :guilabel:`Product Type` to :guilabel:`Storable Product`: this"
-" allows for management of kit inventory. The :guilabel:`Route` designation "
-"under the :guilabel:`Inventory` tab does not matter, since Odoo uses the "
-"routes of the kit's components for replenishment purposes. All other "
-"parameters for the kit product may be modified according to preference. "
-"Finally, click :guilabel:`Save`."
+"To use a kit as a sellable product, or simply as a component organization "
+"tool, the kit should first be created as a product."
 msgstr ""
-"În continuare, setați :guilabel:`Tipul de produs` la :guilabel:`Produs "
-"stocabil`: acest lucru permite gestionarea inventarului kit-ului. Desemnarea"
-" :guilabel:`Rutei` din tabul :guilabel:`Inventar` nu contează, deoarece Odoo"
-" utilizează rutele componentelor kit-ului pentru scopuri de reaprovizionare."
-" Toti parametri produsului kit pot fi modificati conform preferințelor. În "
-"final, faceți clic pe :guilabel:`Salvați`."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:19
+msgid ""
+"To create a kit product, go to :menuselection:`Inventory app --> Products "
+"--> Products`, and click :guilabel:`Create`."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:22
 msgid ""
-"The kit's components must also be configured as products via "
-":menuselection:`Manufacturing or Inventory --> Products --> Products`. These"
-" components require no specific configuration."
+"Then, assign a name to the new kit product. Next, under the "
+":guilabel:`General Information` tab, set the :guilabel:`Product Type` to "
+":guilabel:`Consumable`. Kit products work best as consumables, because the "
+"stock on-hand for kits is typically not tracked."
 msgstr ""
-"Componentele kit-ului trebuiesc configurate ca produse la "
-":menuselection:`Producție sau Inventar --> Produse --> Produse`. Aceste "
-"componente nu necesită configurări specifice."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:26
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:27
+msgid ""
+"Although kits should almost always be set to :guilabel:`Consumable`, "
+"companies using **Anglo-Saxon** accounting might need to create kits as a "
+":guilabel:`Storable Product`. This is because when processing invoices for "
+"kits, the Cost of Goods Sold (COGS) will be posted in accounting journals."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:32
+msgid ""
+"Unlike storable products, the :guilabel:`Routes` designation under the "
+":guilabel:`Inventory` tab does not matter for kits, since Odoo uses the "
+"routes of the kit's individual components for replenishment purposes. All "
+"other parameters for the kit product may be modified according to "
+"preference. Once ready, click :guilabel:`Save` to save the new product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:37
+msgid ""
+"The kit's components must also be configured as products via "
+":menuselection:`Inventory app --> Products --> Products`. These components "
+"require no specific configuration."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:41
 msgid "Set up the kit BoM"
 msgstr "Configurați BOM-ul kit-ului"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:28
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:43
 msgid ""
-"After fully configuring the kit product and its components, create a "
-":abbr:`BoM (Bill of Materials)` for the kit product. Go to "
-":menuselection:`Manufacturing --> Products --> Bills of Materials`, and then"
-" click :guilabel:`Create`. Next, set the :guilabel:`Product` field to the "
-"previously configured kit product. Then, set the :guilabel:`BoM Type` to "
-":guilabel:`Kit`. Finally, add each component and specify its quantity. Make "
-"sure to :guilabel:`Save` the changes."
+"After fully configuring the kit product and its components, a new :abbr:`BoM"
+" (bill of materials)` can be created for the kit product."
 msgstr ""
-"După ce ați configurat complet produsul kit și componente, creați un "
-":abbr:`LdM (Listă de materiale)` pentru produsul kit. Accesați "
-":menuselection:`Producție --> Produse --> LdM-uri`, apoi faceți clic pe "
-":guilabel:`Creare`. În continuare, setați câmpul :guilabel:`Produs` la "
-"produsul kit configurat anterior. Apoi, setați :guilabel:`Tipul LdM` la "
-":guilabel:`Kit`. În final, adăugați fiecare componentă și specificați "
-"cantitatea. Asigurați-vă că :guilabel:`Salvați` modificările."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:46
+msgid ""
+"To do so, go to :menuselection:`Manufacturing app --> Products --> Bills of "
+"Materials`, and click :guilabel:`Create`. Next to the :guilabel:`Product` "
+"field, click the drop-down menu to reveal a list of products, and select the"
+" previously configured kit product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:50
+msgid ""
+"Then, for the :guilabel:`BoM Type` field, select the :guilabel:`Kit` option."
+" Finally, under the :guilabel:`Components` tab, click :guilabel:`Add a "
+"line`, and add each desired component, and specify their quantities under "
+"the :guilabel:`Quantity` column."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:54
+msgid ""
+"Once ready, click :guilabel:`Save` to save the newly-created :abbr:`BoM "
+"(bill of materials)`."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst-1
 msgid "Kit selection on the bill of materials."
 msgstr "Selectarea kit-ului în lista de materiale."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:38
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:60
 msgid ""
 "If the kit is solely being used as a sellable product, then only components "
 "need to be added under the :guilabel:`Components` tab, and configuring "
@@ -12792,7 +13666,7 @@ msgstr ""
 "adăugate doar componente sub tabul :guilabel:`Componente`, iar configurarea "
 "operațiunilor de producție nu este necesară."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:42
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:64
 msgid ""
 "When a kit is sold as a product, it appears as a single line item on the "
 "quotation and sales order. However, on delivery orders, each component of "
@@ -12802,77 +13676,82 @@ msgstr ""
 "și comanda de vânzare. Cu toate acestea, pe documentele de livrare, fiecare "
 "componentă a kit-ului este listată."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:46
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:68
 msgid "Use kits to manage complex BoMs"
 msgstr "Folosiți kit-urile pentru a gestiona LdM-uri complexe"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:48
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:70
 msgid ""
-"Kits are also used to manage *multilevel* :abbr:`BoMs (Bills of Materials)`."
-" These are products that contain other products as components and therefore "
-"require nested :abbr:`BoMs (Bills of Materials)`. Incorporating pre-"
-"configured kits into multilevel :abbr:`BoMs (Bills of Materials)` allows for"
-" cleaner organization of bundled products. Under :guilabel:`Components`, "
-"list a kit as a component in a higher-level product's :abbr:`BoM (Bills of "
-"Material)` to eliminate the need to add the kit's parts individually. Any "
-":guilabel:`BoM Type` can be used for the higher-level product's :abbr:`BoM "
-"(Bill of Materials)`."
+"Kits are also used to manage multi-level :abbr:`BoMs (bills of materials)`. "
+"These are products that contain **other** :abbr:`BoM (bill of materials)` "
+"products as components, and therefore require *nested* :abbr:`BoMs (bills of"
+" materials)`. Incorporating pre-configured kits into multi-level :abbr:`BoMs"
+" (bills of materials)` allows for cleaner organization of bundled products."
 msgstr ""
-"Kit-urile sunt de asemenea utilizate pentru a gestiona :abbr:`LdM (Liste de "
-"materiale)` *multinivel*. Acestea sunt produse care conțin alte produse ca "
-"șicomponente, prin urmare, necesită :abbr:`LdM-uri (Liste de materiale)`. "
-"Incorporarea kit-urilor preconfigurate în :abbr:`LdM-uri multinivel (Liste "
-"de materiale)` permite o organizare mai curată a produselor împachetate. Sub"
-" :guilabel:`Componente`, listați un kit ca și componentă în :abbr:`LdM-ul "
-"(Lista de materiale)` a unui produs de nivel superior pentru a elimina "
-"nevoia de a adăuga partile kit-ului individual. Orice :guilabel:`Tip LdM` "
-"poate fi utilizat pentru :abbr:`LdM-ul (Lista de materiale)` produsului de "
-"nivel superior."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:75
+msgid ""
+"To configure this type of :abbr:`BoM (bill of materials)` with a kit as a "
+"component, go to :menuselection:`Manufacturing app --> Products --> Bills of"
+" Materials`, and click :guilabel:`Create`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:79
+msgid ""
+"Next to the :guilabel:`Product` field, click the drop-down menu to reveal a "
+"list of products, and select the desired :abbr:`BoM (bill of materials)` "
+"product. Then, for the :guilabel:`BoM Type` field, select the "
+":guilabel:`Manufacture this product` option."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:83
+msgid ""
+"Under the :guilabel:`Components` tab, click :guilabel:`Add a line`, and "
+"select a kit as the component. Adding the kit as a component eliminates the "
+"need to add the kit's components individually. Any :guilabel:`BoM Type` can "
+"be used for the higher-level product's :abbr:`BoM (bill of materials)`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:88
+msgid "Once ready, click :guilabel:`Save` to save changes."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst-1
 msgid "Kit as a component in a multilevel bill of materials."
 msgstr "Kit ca și componentă într-o listă de materiale multinivel."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:60
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:95
+msgid "Structure & cost"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:97
 msgid ""
-"To access a comprehensive overview of the multilevel :abbr:`BoM's (Bill of "
-"Material's)` components, click on the :guilabel:`Structure & Cost` smart "
-"button. Sublevel :abbr:`BoMs (Bills of Materials)` can be expanded and "
+"To access a comprehensive overview of the multi-level :abbr:`BoM's (bill of "
+"material's)` components, click on the :guilabel:`Structure & Cost` smart "
+"button. Sublevel :abbr:`BoMs (bills of materials)` can be expanded and "
 "viewed from this report."
 msgstr ""
-"Pentru a accesa o prezentare generală a componentelor :abbr:`LdM-ului "
-"(Listei de materiale)` multinivel, faceți clic pe butonul inteligent "
-":guilabel:`Structură și cost`. :abbr:`LdM-urile (Listele de materiale)` "
-"subnivel pot fi extinse și vizualizate din acest raport."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst-1
 msgid "Expanded kit in the Structure and Cost report."
 msgstr "Kit extins în raportul Structură și Cost."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:68
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:105
 msgid ""
-"When creating a manufacturing order for a product with a multilevel "
-":abbr:`BoM (Bill of Materials)`, the kit product automatically expands to "
-"show all components. Any operations in the kit's :abbr:`BoM (Bill of "
-"Materials)` are also added to the list of work orders on the manufacturing "
+"When creating a manufacturing order for a product with a multi-level "
+":abbr:`BoM (bill of materials)`, the kit product automatically expands to "
+"show all components. Any operations in the kit's :abbr:`BoM (bill of "
+"materials)` are also added to the list of work orders on the manufacturing "
 "order."
 msgstr ""
-"Când creați o comandă de producție pentru un produs cu :abbr:`LdM-ul (Lista "
-"de materiale)` multinivel, produsul kit se extinde automat pentru a afișa "
-"toate componentele. Orice operații din :abbr:`LdM-ul (Lista de materiale)` "
-"kit-ului sunt de asemenea adăugate la lista de ordine de lucru din comanda "
-"de producție."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:74
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:111
 msgid ""
 "Kits are primarily used to bundle components together for organization or "
-"sale. To manage multilevel products that require manufactured subcomponents,"
-" refer to :doc:`this documentation <sub_assemblies>` on sub-assemblies."
+"sale. To manage multi-level products that require manufactured sub-"
+"components, refer to :doc:`this documentation <sub_assemblies>` on sub-"
+"assemblies."
 msgstr ""
-"Kit-urile sunt utilizate în principal pentru a împacheta componentele "
-"împreună pentru organizare sau vânzare. Pentru a gestiona produse multinivel"
-" care necesită subcomponente fabricate, consultați :doc:`această "
-"documentație <sub_assemblies>` despre sub-asamblări."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/product_variants.rst:3
 msgid "Managing BoMs for product variants"

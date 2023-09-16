@@ -20,18 +20,18 @@
 # Martin Trigaux, 2023
 # Pablo Rojas <rojaspablo88@gmail.com>, 2023
 # Braulio D. López Vázquez <bdl@odoo.com>, 2023
-# Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2023
 # Fernanda Alvarez, 2023
 # Iran Villalobos López, 2023
+# Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-14 15:32+0000\n"
+"POT-Creation-Date: 2023-09-12 13:54+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
-"Last-Translator: Iran Villalobos López, 2023\n"
+"Last-Translator: Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2023\n"
 "Language-Team: Spanish (https://app.transifex.com/odoo/teams/41243/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -436,6 +436,9 @@ msgid ""
 "allows Odoo users to sign in to their database with their Microsoft Azure "
 "account."
 msgstr ""
+"La autenticación de inicio de sesión de Microsoft OAuth con Azure es una "
+"función útil que permite que los usuarios de Odoo inicien sesión con su "
+"cuenta de Microsoft Azure en su base de datos."
 
 #: ../../content/applications/general/auth/azure.rst:8
 msgid ""
@@ -443,6 +446,8 @@ msgid ""
 "wants employees within the organization to connect to Odoo using their "
 "Microsoft Accounts."
 msgstr ""
+"Esto es muy útil, en especial si la empresa usa un área de trabajo de Azure "
+"y quiere que los empleados se conecten a Odoo con su cuenta de Microsoft."
 
 #: ../../content/applications/general/auth/azure.rst:12
 msgid ""
@@ -452,6 +457,11 @@ msgid ""
 "longer be able to be duplicated, renamed, or otherwise managed from the "
 "Odoo.com portal."
 msgstr ""
+"Las bases de datos que estén alojadas en Odoo.com no pueden iniciar sesión "
+"con OAuth si el usuario es el dueño o administrador de la base de datos; si "
+"esto ocurre, la base de datos se desvinculará de su cuenta de Odoo.com. Si "
+"configura OAuth para ese usuario, ya no podrá duplicar, cambiar el nombre, o"
+" gestionar esa base de datos desde el portal de Odoo.com."
 
 #: ../../content/applications/general/auth/azure.rst:19
 msgid ":doc:`../../productivity/calendar/outlook`"
@@ -465,7 +475,7 @@ msgstr ":doc:`/administration/maintain/azure_oauth`"
 #: ../../content/applications/general/auth/azure.rst:23
 #: ../../content/applications/general/auth/google.rst:24
 #: ../../content/applications/general/voip/axivox.rst:16
-#: ../../content/applications/general/voip/onsip.rst:13
+#: ../../content/applications/general/voip/onsip.rst:17
 msgid "Configuration"
 msgstr "Configuración"
 
@@ -474,16 +484,20 @@ msgid ""
 "Integrating the Microsoft sign-in function requires configuration on "
 "Microsoft and Odoo."
 msgstr ""
+"Para poder integrar la función de inicio de sesión de Microsoft es necesario"
+" realizar la configuración entre Microsoft y Odoo."
 
 #: ../../content/applications/general/auth/azure.rst:28
 msgid "Odoo System Parameter"
-msgstr ""
+msgstr "Parámetros del sistema de Odoo"
 
 #: ../../content/applications/general/auth/azure.rst:30
 msgid ""
 "First activate the :ref:`developer mode <developer-mode>`, and then go to "
 ":menuselection:`Settings --> Technical --> System Parameters`."
 msgstr ""
+"Primero active el :ref:`modo desarrollador <developer-mode>` y después vaya "
+"a :menuselection:`Ajustes --> Técnico --> Parámetros del sistema`."
 
 #: ../../content/applications/general/auth/azure.rst:33
 msgid ""
@@ -492,6 +506,11 @@ msgid ""
 ":guilabel:`Key` field, and set the :guilabel:`Value` to `1`. Then click "
 ":guilabel:`Save` to finish."
 msgstr ""
+"Haga clic en :guilabel:`Nuevo` y en el formulario en blanco agregue el "
+"parámetro `auth_oauth.authorization_header` como :guilabel:`Clave` y ponga "
+"to `1` como :guilabel:`Valor`. Después los cambios se guardarán de forma "
+"automática, pero también puede dar clic en el :guilabel:`icono con forma de "
+"nube` para guardarlos de forma manual."
 
 #: ../../content/applications/general/auth/azure.rst:38
 msgid "Microsoft Azure dashboard"
@@ -510,18 +529,30 @@ msgid ""
 "Office 365` account if there is one, otherwise, log in with a personal "
 ":guilabel:`Microsoft account`."
 msgstr ""
+"Ya que configuró los parámetros de sistema desde Odoo, ahora debe crear una "
+"aplicación correspondiente dentro de Microsoft Azure. Para crear una nueva "
+"aplicación, vaya al `portal de Microsoft Azure "
+"<https://portal.azure.com/>`_. Inicie sesión con la cuenta de la empresa de "
+":guilabel:`Microsoft Outlook Office 365`, si no tiene una, inicie sesión con"
+" su :guilabel:`cuenta de Microsoft` personal."
 
 #: ../../content/applications/general/auth/azure.rst:50
 msgid ""
 "A user with administrative access to the *Azure Settings* must connect and "
 "perform the following configuration steps below."
 msgstr ""
+"Para poder realizar los pasos de configuración a continuación es necesario "
+"iniciar sesión con un usuario que tenga acceso de administrador a los "
+"*ajustes de Azure*. "
 
 #: ../../content/applications/general/auth/azure.rst:53
 msgid ""
 "Next, navigate to the section labeled :guilabel:`Manage Azure Active "
 "Directory`. The location of this link is usually in the center of the page."
 msgstr ""
+"Ahora, navegue a la sección:guilabel:`Manage Azure Active Directory` "
+"(Administración del directorio activo de Azure). La ubicación de este enlace"
+" usualmente está en el centro de la página."
 
 #: ../../content/applications/general/auth/azure.rst:56
 msgid ""
@@ -533,6 +564,16 @@ msgid ""
 ":guilabel:`Accounts in this organizational directory only (Default Directory"
 " only - Single tenant)`."
 msgstr ""
+"Haga clic en el icono :guilabel:`Add (+)` (Agregar) que se encuentra en el "
+"menú superior y después seleccione :guilabel:`App registration` (registro de"
+" aplicación) del menú desplegable. En la pantalla :guilabel:`Register an "
+"application` (registrar una aplicación) cambie el campo :guilabel:`Name` "
+"(nombre) a `Inicio de sesión Odoo en OAuth` u otro título que pueda "
+"reconocer. En la sección :guilabel:`Supported account types` (tipos de "
+"cuenta compatibles) seleccione la opción :guilabel:`Accounts in this "
+"organizational directory only (Default Directory only - Single tenant)` "
+"(Solo las cuentas de este directorio organizativo (solo el directorio "
+"predeterminado: inquilino único))."
 
 #: ../../content/applications/general/auth/azure.rst:63
 msgid ""
@@ -541,6 +582,11 @@ msgid ""
 " within one organization or is it meant for customer portal access? The "
 "above configuration is used for internal users in an organization."
 msgstr ""
+"Los :guilabel:`Supported account types` (tipos de cuentas compatibles) "
+"dependen del tipo de cuenta de Microsoft y el uso que se le quiere dar a "
+"OAuth. Por ejemplo, ¿el inicio de sesión es para usuarios dentro de una "
+"organización o para darle acceso de portal al cliente? La configuración de "
+"arriba es para usuarios dentro de una organización."
 
 #: ../../content/applications/general/auth/azure.rst:68
 msgid ""
@@ -549,6 +595,12 @@ msgid ""
 " directory only (Default Directory only - Single tenant)` if the target "
 "audience is company users."
 msgstr ""
+"Si la audiencia será usuarios del portal, elija :guilabel:`Personal "
+"Microsoft accounts only` (solo cuentas personales de Microsoft). Si la "
+"audiencia será usuarios de la empresa, elija :guilabel:`Accounts in this "
+"organizational directory only (Default Directory only - Single tenant)` "
+"(Solo las cuentas de este directorio organizativo (solo el directorio "
+"predeterminado: inquilino único))."
 
 #: ../../content/applications/general/auth/azure.rst:72
 msgid ""
@@ -559,6 +611,13 @@ msgid ""
 "*mydatabase.odoo.com* if you are hosted on Odoo.com) in the :guilabel:`URL` "
 "field. Then, click :guilabel:`Register`, and the application is created."
 msgstr ""
+"En la sección :guilabel:`Redirect URL`  (URL de redirección), seleccione "
+":guilabel:`Web` como la plataforma y después ingrese `https://<odoo base "
+"url>/auth_oauth/signin` en el campo :guilabel:`URL`. La :abbr:`URL "
+"(Localizador de recursos uniforme)` base de Odoo es el elemento canonical en"
+" el campo :guilabel:`URL` por el cual se puede llegar a su instancia de Odoo"
+" (por ejemplo, *mibasededatos.odoo.com* si está alojado en Odoo.com). "
+"Después, haga clic en :guilabel:`Registrar` para crear la aplicación."
 
 #: ../../content/applications/general/auth/azure.rst:81
 msgid ""
@@ -566,6 +625,10 @@ msgid ""
 ":guilabel:`Authentication` menu item in the left menu after being redirected"
 " to the application's settings from the previous step."
 msgstr ""
+"Para editar la autenticación de la nueva aplicación haga clic en "
+":guilabel:`Authentication` (autenticación) que se encuentra en el menú de la"
+" izquierda. Haga esto después de que se le haya redirigido a los ajustes de "
+"la aplicación después del paso previo."
 
 #: ../../content/applications/general/auth/azure.rst:84
 msgid ""
@@ -578,18 +641,29 @@ msgid ""
 "and check the boxes labeled: :guilabel:`Access tokens (used for implicit "
 "flows)` and :guilabel:`ID tokens (used for implicit and hybrid flows)`."
 msgstr ""
+"Ahora es necesario elegir qué tipo de *tokens* se necesitan para la "
+"autenticación OAuth. Estos tokens no son monetarios, sino tokens de "
+"autenticación que pasen de Microsoft a Odoo. Estos tokens no cuestan, solo "
+"se usa para propósitos de autenticación entre dos :abbr:`API (interfaz de "
+"programación de aplicaciones, por su sigla en inglés)`. Para seleccionar qué"
+" tokens le debería dar el punto de conexión deslícese hacia abajo en la "
+"pantalla y marque las casillas que digan :guilabel:`Access tokens (used for "
+"implicit flows)` (Tokens de acceso [para flujos implícitos]) y :guilabel:`ID"
+" tokens (used for implicit and hybrid flows)` (Tokens de id. [para flujos "
+"híbridos e implícitos])."
 
 #: ../../content/applications/general/auth/azure.rst-1
 msgid "Authentication settings and endpoint tokens."
-msgstr ""
+msgstr "Ajustes de autenticación y tokens de punto de conexión."
 
 #: ../../content/applications/general/auth/azure.rst:96
 msgid "Click :guilabel:`Save` to ensure these settings are saved."
 msgstr ""
+"Haga clic en :guilabel:`Guardar` para asegurar que sus cambios se guardaron"
 
 #: ../../content/applications/general/auth/azure.rst:99
 msgid "Gather credentials"
-msgstr ""
+msgstr "Obtener las credenciales"
 
 #: ../../content/applications/general/auth/azure.rst:101
 msgid ""
@@ -600,6 +674,13 @@ msgid ""
 "credential to a clipboard / notepad, as this credential will be used in the "
 "Odoo configuration later."
 msgstr ""
+"Ya que se creó y autenticó la aplicación en la consola de Microsoft Azure, "
+"ahora necesitamos obtener las credenciales. Para hacerlo, haga clic en la "
+"opción  :guilabel:`Overview`  (vista general) que se encuentra en la columna"
+" de la derecha. Seleccione y copie el :guilabel:`Application (client) ID` "
+"(identificador de aplicación [cliente]) en la ventana que aparece. Pegue "
+"esta credencial en el portapapeles o un bloc de notas, ya que usaremos esta "
+"credencial en Odoo más adelante."
 
 #: ../../content/applications/general/auth/azure.rst:106
 msgid ""
@@ -3341,24 +3422,26 @@ msgstr ""
 "200 correos electrónicos por día para bases de datos de Odoo en línea y "
 "Odoo.sh con una suscripción activa."
 
-#: ../../content/applications/general/email_communication/faq.rst:45
-msgid "50 emails/day for one-app free and trial databases,"
+#: ../../content/applications/general/email_communication/faq.rst:44
+msgid "20 emails/day for one-app free databases,"
 msgstr ""
-"50 correos electrónicos por día para bases de datos de prueba y de una "
-"aplicación gratis."
 
-#: ../../content/applications/general/email_communication/faq.rst:47
+#: ../../content/applications/general/email_communication/faq.rst:45
+msgid "50 emails/day for trial databases,"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/faq.rst:46
 msgid ""
 "in case of migration, your daily limit might be reset to 50 emails a day."
 msgstr ""
 "En el caso de migración, su límite diario se puede restablecer a 50 correos "
 "electrónicos por día."
 
-#: ../../content/applications/general/email_communication/faq.rst:49
+#: ../../content/applications/general/email_communication/faq.rst:48
 msgid "In case you hit the limit, you can:"
 msgstr "En caso de alcanzar el límite, puede:"
 
-#: ../../content/applications/general/email_communication/faq.rst:51
+#: ../../content/applications/general/email_communication/faq.rst:50
 msgid ""
 "Ask our support team to increase your daily limit. We will analyze the "
 "situation of your database depending on (non-exhaustive list):"
@@ -3366,15 +3449,15 @@ msgstr ""
 "Solicitar al equipo de soporte que incremente su límite diario. Analizaremos"
 " la situación de su base de datos en función de (lista no exhaustiva):"
 
-#: ../../content/applications/general/email_communication/faq.rst:54
+#: ../../content/applications/general/email_communication/faq.rst:53
 msgid "How many users in your database,"
 msgstr "Cuántos usuarios hay en su base de datos."
 
-#: ../../content/applications/general/email_communication/faq.rst:55
+#: ../../content/applications/general/email_communication/faq.rst:54
 msgid "Which apps are installed,"
 msgstr "Qué aplicaciones se instalaron."
 
-#: ../../content/applications/general/email_communication/faq.rst:56
+#: ../../content/applications/general/email_communication/faq.rst:55
 msgid ""
 "Your bounce rate: the percentage of email addresses that did not receive "
 "your emails because it was returned by a mail server on its way to the final"
@@ -3385,7 +3468,7 @@ msgstr ""
 "servidor de correo durante su camino al destinatario final. Puede contactar "
 "al `soporte <https://www.odoo.com/help>`_."
 
-#: ../../content/applications/general/email_communication/faq.rst:60
+#: ../../content/applications/general/email_communication/faq.rst:59
 msgid ""
 "Use your own outgoing email server to be independent of Odoo’s mail limit "
 "(please refer to :doc:`the corresponding documentation "
@@ -3396,7 +3479,7 @@ msgstr ""
 " correspondiente "
 "</applications/general/email_communication/email_servers>`),"
 
-#: ../../content/applications/general/email_communication/faq.rst:62
+#: ../../content/applications/general/email_communication/faq.rst:61
 msgid ""
 "Wait until 11pm UTC for the reset and click on the retry button: The "
 ":ref:`Developer mode <developer-mode>` must be activated. Then, go to "
@@ -3411,7 +3494,7 @@ msgstr ""
 msgid "Retry button of an emails"
 msgstr "Botón de volver a intentar en correos electrónicos"
 
-#: ../../content/applications/general/email_communication/faq.rst:70
+#: ../../content/applications/general/email_communication/faq.rst:69
 msgid ""
 "The daily limit is global to your database and can rise quickly! By default "
 "an internal message, a notification, a note, etc. counts as an email in your"
@@ -3422,7 +3505,7 @@ msgstr ""
 "entre otros, cuentan en su límite diario como un correo electrónico si "
 "notifican a alguien."
 
-#: ../../content/applications/general/email_communication/faq.rst:73
+#: ../../content/applications/general/email_communication/faq.rst:72
 msgid ""
 "You can mitigate this by receiving your :ref:`notifications in Odoo "
 "<discuss_app/notification_preferences>` instead of by emails."
@@ -3431,11 +3514,11 @@ msgstr ""
 "<discuss_app/notification_preferences>` en lugar de por correos "
 "electrónicos."
 
-#: ../../content/applications/general/email_communication/faq.rst:77
+#: ../../content/applications/general/email_communication/faq.rst:76
 msgid "SMTP Error"
 msgstr "Error SMTP"
 
-#: ../../content/applications/general/email_communication/faq.rst:79
+#: ../../content/applications/general/email_communication/faq.rst:78
 msgid ""
 "You can find out why an email wasn't transmitted successfully by reviewing "
 "the Simple Mail Transport Protocol (SMTP) error messages. SMTP is a protocol"
@@ -3451,11 +3534,11 @@ msgstr ""
 "herramientas útiles para diagnosticar y solucionar sus problemas de correo "
 "electrónico."
 
-#: ../../content/applications/general/email_communication/faq.rst:85
+#: ../../content/applications/general/email_communication/faq.rst:84
 msgid "No Error"
 msgstr "Sin error"
 
-#: ../../content/applications/general/email_communication/faq.rst:87
+#: ../../content/applications/general/email_communication/faq.rst:86
 msgid ""
 "Odoo is not always capable of providing information for the reason it "
 "failed. The different providers implement a personalized policy of the "
@@ -3467,7 +3550,7 @@ msgstr ""
 " los correos electrónicos devueltos y no siempre es posible para Odoo "
 "interpretarlas de forma adecuada."
 
-#: ../../content/applications/general/email_communication/faq.rst:91
+#: ../../content/applications/general/email_communication/faq.rst:90
 msgid ""
 "If you have this problem on a recurring basis with the same client or the "
 "same domain, please do not hesitate to contact `Odoo Support "
@@ -3477,7 +3560,7 @@ msgstr ""
 "dominio, no dude en contactar al `soporte de Odoo "
 "<https://www.odoo.com/help>`_ para que le ayuden a encontrar el motivo."
 
-#: ../../content/applications/general/email_communication/faq.rst:94
+#: ../../content/applications/general/email_communication/faq.rst:93
 msgid ""
 "Note: in such case, one of the most common reasons is related to :ref:`SPF "
 "<email_communication/spf_compliant>` and/or :ref:`DKIM "
@@ -3488,11 +3571,11 @@ msgstr ""
 "<email_communication/spf_compliant>` o :ref:`DKIM "
 "<email_communication/DKIM_compliant>`."
 
-#: ../../content/applications/general/email_communication/faq.rst:98
+#: ../../content/applications/general/email_communication/faq.rst:97
 msgid "Why is my email sent late?"
 msgstr "¿Por qué mi correo electrónico se envía tarde?"
 
-#: ../../content/applications/general/email_communication/faq.rst:100
+#: ../../content/applications/general/email_communication/faq.rst:99
 msgid ""
 "It may happen that you schedule an email campaign but it is not sent on "
 "time. We know that we use a delayed job to send emails that we consider as "
@@ -3509,7 +3592,7 @@ msgstr ""
 "predeterminados. Usamos esa política para evitar saturar los servidores de "
 "correo y priorizar la comunicación."
 
-#: ../../content/applications/general/email_communication/faq.rst:106
+#: ../../content/applications/general/email_communication/faq.rst:105
 msgid ""
 "The emails considered urgent (communication from one person to another one "
 "such as Sales Orders, Invoices, Purchase Orders, etc.) are sent directly."
@@ -3522,7 +3605,7 @@ msgstr ""
 msgid "Email scheduled to be sent later."
 msgstr "Correo electrónico programado para enviarse más tarde."
 
-#: ../../content/applications/general/email_communication/faq.rst:113
+#: ../../content/applications/general/email_communication/faq.rst:112
 msgid ""
 "By default, the Mass Mailing cron runs every 60 minutes. So, you should wait"
 " maximum an hour before the campaign is actually sent."
@@ -3530,11 +3613,11 @@ msgstr ""
 "De forma predeterminada, el cron de correos masivos se ejecuta cada 60 "
 "minutos. Debe esperar máximo una hora antes de que la campaña se envíe."
 
-#: ../../content/applications/general/email_communication/faq.rst:117
+#: ../../content/applications/general/email_communication/faq.rst:116
 msgid "Incoming emails"
 msgstr "Correos electrónicos entrantes"
 
-#: ../../content/applications/general/email_communication/faq.rst:119
+#: ../../content/applications/general/email_communication/faq.rst:118
 msgid ""
 "When you have an issue with incoming emails, there might not be an "
 "indication per se in Odoo. This is the client who tries to contact a "
@@ -3546,15 +3629,15 @@ msgstr ""
 "mayoría de las veces se debe al error 550, este indica que la bandeja de "
 "entrada no está disponible)."
 
-#: ../../content/applications/general/email_communication/faq.rst:124
+#: ../../content/applications/general/email_communication/faq.rst:123
 msgid "Emails are not received"
 msgstr "No se reciben correos electrónicos"
 
-#: ../../content/applications/general/email_communication/faq.rst:126
+#: ../../content/applications/general/email_communication/faq.rst:125
 msgid "Depending on the platform you are using:"
 msgstr "Según la plataforma que utiliza:"
 
-#: ../../content/applications/general/email_communication/faq.rst:128
+#: ../../content/applications/general/email_communication/faq.rst:127
 msgid ""
 "The **Odoo.sh** users can find their live logs on the folder "
 ":file:`~/logs/`."
@@ -3562,7 +3645,7 @@ msgstr ""
 "Los usuarios de **Odoo.sh** pueden encontrar sus registros en tiempo real en"
 " la carpeta :file:`~/logs/`."
 
-#: ../../content/applications/general/email_communication/faq.rst:130
+#: ../../content/applications/general/email_communication/faq.rst:129
 msgid ""
 "The folder :file:`~/logs/` (preferably accessed by the command line) of an "
 "Odoo.sh contains a list of files containing the logs of the database. The "
@@ -3585,7 +3668,7 @@ msgstr ""
 "<odoosh/logs>`. Utilice los comandos ``grep`` y ``zgrep`` (para los "
 "comprimidos) para buscar en los archivos."
 
-#: ../../content/applications/general/email_communication/faq.rst:138
+#: ../../content/applications/general/email_communication/faq.rst:137
 msgid ""
 "**Odoo Online** users won’t have access to their logs. However you can still"
 " contact `Odoo Support <https://www.odoo.com/help>`_ , if you have a "
@@ -3595,11 +3678,11 @@ msgstr ""
 "embargo, puede contactar al `soporte de Odoo <https://www.odoo.com/help>`_  "
 "si tiene un problema recurrente con el mismo cliente o dominio."
 
-#: ../../content/applications/general/email_communication/faq.rst:143
+#: ../../content/applications/general/email_communication/faq.rst:142
 msgid "Get help from support"
 msgstr "Recibir ayuda del equipo de soporte "
 
-#: ../../content/applications/general/email_communication/faq.rst:145
+#: ../../content/applications/general/email_communication/faq.rst:144
 msgid ""
 "In order to get helped efficiently, please provide as much information as "
 "possible. Here is a list of what can be helpful:"
@@ -3607,7 +3690,7 @@ msgstr ""
 "Proporcione tanta información como sea posible para recibir ayuda de forma "
 "eficiente. A continuación se encuentra una lista de lo que puede ser útil:"
 
-#: ../../content/applications/general/email_communication/faq.rst:148
+#: ../../content/applications/general/email_communication/faq.rst:147
 msgid ""
 "The **EML** of the email, stating for *Electronic Mail*, is the file format "
 "containing all the technical information required for an investigation. The "
@@ -3624,12 +3707,12 @@ msgstr ""
 " como archivo adjunto en su ticket. El equipo de soporte se enfocará "
 "principalmente en problemas redundantes."
 
-#: ../../content/applications/general/email_communication/faq.rst:155
+#: ../../content/applications/general/email_communication/faq.rst:154
 msgid "`Gmail documentation <https://support.google.com/mail/answer/29436>`_"
 msgstr ""
 "`Documentación de Gmail <https://support.google.com/mail/answer/29436>`_"
 
-#: ../../content/applications/general/email_communication/faq.rst:157
+#: ../../content/applications/general/email_communication/faq.rst:156
 msgid ""
 "`Outlook documentation <https://support.microsoft.com/en-us/office/view-"
 "internet-message-headers-in-outlook-"
@@ -3639,7 +3722,7 @@ msgstr ""
 "internet-message-headers-in-outlook-"
 "cd039382-dc6e-4264-ac74-c048563d212c#tab=Web>`_"
 
-#: ../../content/applications/general/email_communication/faq.rst:160
+#: ../../content/applications/general/email_communication/faq.rst:159
 msgid ""
 "The exact flow you are following in order to normally receive those emails "
 "in Odoo. Here are examples of questions whose answers can be useful:"
@@ -3647,16 +3730,16 @@ msgstr ""
 "El flujo exacto que sigue para recibir esos correos electrónicos en Odoo. "
 "Las respuestas a las siguientes preguntas podrían ser útiles:"
 
-#: ../../content/applications/general/email_communication/faq.rst:163
+#: ../../content/applications/general/email_communication/faq.rst:162
 msgid "Is this simply a reply from an email going out from Odoo ?"
 msgstr "¿Solo es una respuesta de un correo electrónico que sale de Odoo?"
 
-#: ../../content/applications/general/email_communication/faq.rst:165
+#: ../../content/applications/general/email_communication/faq.rst:164
 msgid "Are you using an incoming email server or somehow redirecting?"
 msgstr ""
 "¿Usa un servidor de correo electrónico entrante o redirige de alguna forma?"
 
-#: ../../content/applications/general/email_communication/faq.rst:167
+#: ../../content/applications/general/email_communication/faq.rst:166
 msgid ""
 "Can you provide us with an example of an email that has been correctly "
 "forwarded ?"
@@ -3664,17 +3747,17 @@ msgstr ""
 "¿Puede proporcionarnos un ejemplo de un correo electrónico que se haya "
 "reenviado correctamente?"
 
-#: ../../content/applications/general/email_communication/faq.rst:169
+#: ../../content/applications/general/email_communication/faq.rst:168
 msgid "Providing answers to the following questions:"
 msgstr "Responda estas preguntas:"
 
-#: ../../content/applications/general/email_communication/faq.rst:171
+#: ../../content/applications/general/email_communication/faq.rst:170
 msgid ""
 "Is it a generic issue or is it specific to a use case? If yes, which one "
 "exactly?"
 msgstr "¿Es un problema genérico o es específico de un caso de uso? "
 
-#: ../../content/applications/general/email_communication/faq.rst:173
+#: ../../content/applications/general/email_communication/faq.rst:172
 msgid ""
 "Is it working as expected? In case the email is sent using Odoo, the bounce "
 "email should reach the Odoo database and display the :ref:`red envelope "
@@ -6910,7 +6993,7 @@ msgstr ""
 "servidor Asterisk, ya que toda la infraestructura está alojada y gestionada "
 "por OnSIP."
 
-#: ../../content/applications/general/voip/onsip.rst:10
+#: ../../content/applications/general/voip/onsip.rst:12
 msgid ""
 "You will need to open an account with OnSIP to use this service. Before "
 "doing so, make sure that your area and the areas you wish to call are "
@@ -6922,11 +7005,11 @@ msgstr ""
 "cubiertas por el servicio. Después de abrir una cuenta OnSIP, siga el "
 "procedimiento de configuración que se indica a continuación."
 
-#: ../../content/applications/general/voip/onsip.rst:15
+#: ../../content/applications/general/voip/onsip.rst:19
 msgid "Go to Apps and install the module **VoIP OnSIP**."
 msgstr "Vaya a aplicaciones e instale el módulo **VoIP OnSIP**."
 
-#: ../../content/applications/general/voip/onsip.rst:20
+#: ../../content/applications/general/voip/onsip.rst:24
 msgid ""
 "Go to Settings/General Settings. In the section Integrations/Asterisk "
 "(VoIP), fill in the 3 fields:"
@@ -6934,7 +7017,7 @@ msgstr ""
 "Vaya a Ajustes/Configuración general. En la sección Integraciones/Asterisk "
 "(VoIP), complete los 3 campos:"
 
-#: ../../content/applications/general/voip/onsip.rst:22
+#: ../../content/applications/general/voip/onsip.rst:26
 msgid ""
 "**OnSIP Domain** is the domain you chose when creating an account on "
 "www.onsip.com. If you don't know it, log in to https://admin.onsip.com/ and "
@@ -6944,15 +7027,15 @@ msgstr ""
 "www.onsip.com. Si no lo conoce, inicie sesión en https://admin.onsip.com/ y "
 "lo verá en la esquina superior derecha de la pantalla."
 
-#: ../../content/applications/general/voip/onsip.rst:23
+#: ../../content/applications/general/voip/onsip.rst:29
 msgid "**WebSocket** should contain wss://edge.sip.onsip.com"
 msgstr "**WebSocket** debe contener wss://edge.sip.onsip.com"
 
-#: ../../content/applications/general/voip/onsip.rst:24
+#: ../../content/applications/general/voip/onsip.rst:30
 msgid "**Mode** should be Production"
 msgstr "El **Modo** debe ser producción"
 
-#: ../../content/applications/general/voip/onsip.rst:29
+#: ../../content/applications/general/voip/onsip.rst:35
 msgid ""
 "Go to **Settings/Users**. In the form view of each VoIP user, in the "
 "Preferences tab, fill in the section **PBX Configuration**:"
@@ -6961,26 +7044,26 @@ msgstr ""
 "usuario de VoIP, en la pestaña Preferencias, complete la sección "
 "**Configuración de la PBX**:"
 
-#: ../../content/applications/general/voip/onsip.rst:31
+#: ../../content/applications/general/voip/onsip.rst:38
 msgid "**SIP Login / Browser's Extension**: the OnSIP 'Username'"
 msgstr ""
 "**Inicio de sesión SIP / Extensión del navegador**: el 'nombre de usuario' "
 "de OnSIP"
 
-#: ../../content/applications/general/voip/onsip.rst:32
+#: ../../content/applications/general/voip/onsip.rst:39
 msgid "**OnSIP authorization User**: the OnSIP 'Auth Username'"
 msgstr ""
 "**Autorización OnSIP Usuario**: el 'Usuario de autenticación' de OnSIP"
 
-#: ../../content/applications/general/voip/onsip.rst:33
+#: ../../content/applications/general/voip/onsip.rst:40
 msgid "**SIP Password**: the OnSIP 'SIP Password'"
 msgstr "**Contraseña SIP**: la 'Contraseña SIP' de OnSIP"
 
-#: ../../content/applications/general/voip/onsip.rst:34
+#: ../../content/applications/general/voip/onsip.rst:41
 msgid "**Handset Extension**: the OnSIP 'Extension'"
 msgstr "**Extensión de manos libres**: la 'Extensión' de OnSIP"
 
-#: ../../content/applications/general/voip/onsip.rst:36
+#: ../../content/applications/general/voip/onsip.rst:43
 msgid ""
 "You can find all this information by logging in at "
 "https://admin.onsip.com/users, then select the user you want to configure "
@@ -6990,7 +7073,7 @@ msgstr ""
 "continuación, seleccione el usuario que desee configurar y consulte los "
 "campos como se muestra en la siguiente imagen."
 
-#: ../../content/applications/general/voip/onsip.rst:41
+#: ../../content/applications/general/voip/onsip.rst:49
 msgid ""
 "You can now make phone calls by clicking the phone icon in the top right "
 "corner of Odoo (make sure you are logged in as a user properly configured in"
@@ -7000,7 +7083,7 @@ msgstr ""
 "superior derecha de Odoo (asegúrese de estar conectado como un usuario "
 "correctamente configurado en Odoo y en OnSIP)."
 
-#: ../../content/applications/general/voip/onsip.rst:45
+#: ../../content/applications/general/voip/onsip.rst:53
 msgid ""
 "If you see a *Missing Parameters* message in the Odoo softphone, make sure "
 "to refresh your Odoo window and try again."
@@ -7008,19 +7091,15 @@ msgstr ""
 "Si ve un mensaje de *Parámetros faltantes* en el softphone de Odoo, "
 "actualice su ventana de Odoo e inténtelo de nuevo."
 
-#: ../../content/applications/general/voip/onsip.rst:52
+#: ../../content/applications/general/voip/onsip.rst:60
 msgid ""
 "If you see an *Incorrect Number* message in the Odoo softphone, make sure to"
 " use the international format, leading with the plus (+) sign followed by "
-"the international country code. E.g.: +16506913277 (where +1 is the "
+"the international country code. E.g.: `+16506913277` (where `+1` is the "
 "international prefix for the United States)."
 msgstr ""
-"Si ve un mensaje de *Número incorrecto* en el softphone de Odoo, asegúrese "
-"de usar el formato internacional, comenzando con el signo más (+) seguido "
-"por el código internacional del país. Por ejemplo, +16506913277 (donde +1 es"
-" el prefijo internacional para los Estados Unidos)."
 
-#: ../../content/applications/general/voip/onsip.rst:57
+#: ../../content/applications/general/voip/onsip.rst:67
 msgid ""
 "You can now also receive phone calls. Your number is the one provided by "
 "OnSIP. Odoo will ring and display a notification."
@@ -7029,11 +7108,11 @@ msgstr ""
 " proporcionado por OnSIP. Odoo emitirá un sonido y mostrará una "
 "notificación."
 
-#: ../../content/applications/general/voip/onsip.rst:63
+#: ../../content/applications/general/voip/onsip.rst:74
 msgid "OnSIP on Your Cell Phone"
 msgstr "OnSIP en su celular"
 
-#: ../../content/applications/general/voip/onsip.rst:65
+#: ../../content/applications/general/voip/onsip.rst:76
 msgid ""
 "In order to make and receive phone calls when you are not in front of your "
 "computer, you can use a softphone app on your cell phone in parallel of Odoo"
@@ -7046,39 +7125,35 @@ msgstr ""
 "asegurarse de escuchar las llamadas entrantes, o simplemente por comodidad. "
 "Funciona con cualquier softphone SIP."
 
-#: ../../content/applications/general/voip/onsip.rst:67
+#: ../../content/applications/general/voip/onsip.rst:80
 msgid ""
 "On Android and iOS, OnSIP has been successfully tested with `Grandstream "
-"Wave <https://play.google.com/store/apps/details?id=com.grandstream.wave>`_."
-" When creating an account, select OnSIP in the list of carriers. You will "
+"Wave <https://play.google.com/store/apps/details?id=com.grandstream.ucm>`_. "
+"When creating an account, select OnSIP in the list of carriers. You will "
 "then have to configure it as follows:"
 msgstr ""
-"Se ha probado con éxito OnSIP en Android e iOS con `Grandstream Wave "
-"<https://play.google.com/store/apps/details?id=com.grandstream.wave>`_. Al "
-"crear una cuenta, seleccione OnSIP en la lista de operadores. Tendrá que "
-"configurarlo de la siguiente manera:"
 
-#: ../../content/applications/general/voip/onsip.rst:69
+#: ../../content/applications/general/voip/onsip.rst:84
 msgid "**Account name**: OnSIP"
 msgstr "**Nombre de la cuenta**: OnSIP"
 
-#: ../../content/applications/general/voip/onsip.rst:70
+#: ../../content/applications/general/voip/onsip.rst:85
 msgid "**SIP Server**: the OnSIP 'Domain'"
 msgstr "**Servidor SIP**: el 'dominio' de OnSIP"
 
-#: ../../content/applications/general/voip/onsip.rst:71
+#: ../../content/applications/general/voip/onsip.rst:86
 msgid "**SIP User ID**: the OnSIP 'Username'"
 msgstr "**Identificación de usuario SIP**: el 'nombre de usuario' de OnSIP"
 
-#: ../../content/applications/general/voip/onsip.rst:72
+#: ../../content/applications/general/voip/onsip.rst:87
 msgid "**SIP Authentication ID**: the OnSIP 'Auth Username'"
 msgstr "**Identificación SIP**: el 'Usuario de autenticación' de OnSIP"
 
-#: ../../content/applications/general/voip/onsip.rst:73
+#: ../../content/applications/general/voip/onsip.rst:88
 msgid "**Password**: the OnSIP 'SIP Password'"
 msgstr "**Contraseña**: la 'contraseña SIP' de OnSIP"
 
-#: ../../content/applications/general/voip/onsip.rst:75
+#: ../../content/applications/general/voip/onsip.rst:90
 msgid ""
 "Aside from initiating calls from Grandstream Wave on your phone, you can "
 "also initiate calls by clicking phone numbers in your browser on your PC. "
@@ -7086,22 +7161,12 @@ msgid ""
 "the other party. This approach is useful to avoid wasting time dialing phone"
 " numbers. In order to do so, you will need the Chrome extension `OnSIP Call "
 "Assistant <https://chrome.google.com/webstore/detail/onsip-call-"
-"assistant/pceelmncccldedfkcgjkpemakjbapnpg?hl=en>`_."
+"assistant/pceelmncccldedfkcgjkpemakjbapnpg>`_."
 msgstr ""
-"Además de iniciar llamadas desde Grandstream Wave en su celular, también "
-"podrá iniciar llamadas haciendo clic en los números de teléfono en el "
-"navegador de su PC. Esto hará que Grandstream Wave emita un sonido y dirija "
-"la llamada a través de su celular a la otra parte. Este método es útil para "
-"evitar perder tiempo marcando números de teléfono. Para ello, necesitará la "
-"extensión de Chrome `OnSIP Call Assistant "
-"<https://chrome.google.com/webstore/detail/onsip-call-"
-"assistant/pceelmncccldedfkcgjkpemakjbapnpg?hl=en>`_."
 
-#: ../../content/applications/general/voip/onsip.rst:79
+#: ../../content/applications/general/voip/onsip.rst:97
 msgid ""
 "The downside of using a softphone on your cell phone is that your calls will"
-" not be logged in Odoo as the softphone acts as an independent separate app."
+" not be logged in Odoo, as the softphone acts as an independent, separate "
+"app."
 msgstr ""
-"La desventaja de usar un softphone en su celular es que sus llamadas no se "
-"registrarán en Odoo ya que el softphone actúa como una aplicación "
-"independiente."
