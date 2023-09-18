@@ -1,5 +1,4 @@
 :nosearch:
-:hide-page-toc:
 :show-toc:
 
 ==============================

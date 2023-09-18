@@ -1,3 +1,6 @@
+:nosearch:
+:show-toc:
+
 ======================
 Preparing your upgrade
 ======================
