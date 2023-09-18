@@ -16,9 +16,8 @@ Upgrade
 
     upgrade/introduction
     upgrade/preparing
-    upgrade/upgrade_process
-    upgrade/upgrade_project
     upgrade/request
     upgrade/advanced
+    upgrade/assistance
     upgrade/faq
     upgrade/sla

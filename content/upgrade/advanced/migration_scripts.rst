@@ -1,5 +1,3 @@
-.. _upgrade/advanced/migration_scripts:
-
 ============================
-What are Migration Scripts ?
+What are migration scripts ?
 ============================

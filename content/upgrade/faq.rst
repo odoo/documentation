@@ -122,8 +122,7 @@ notification about it that includes an 'Upgrade Report'. It contains valuable in
 Why are there issues with my custom views after the upgrade?
 ============================================================
 
-During the upgrade, some custom views might get disabled for technical reasons. Therefore they might
-have to be fixed after the upgrade. The :ref:`Upgrade Report <upgrade-faq/upgrade-report>` that is generated after the upgrade lists all the custom views that might be impacted by this. You can find more information about how to fix custom views :doc:`here <upgrade_views>` and how to fix studio views :doc:`here <upgrade_studio_views>`.
+During the upgrade, some custom views might get disabled for technical reasons. Therefore they might have to be fixed after the upgrade. The :ref:`Upgrade Report <upgrade-faq/upgrade-report>` that is generated after the upgrade lists all the custom views that might be impacted by this. You can find more information about how to fix custom views :ref:`here <upgrade_views>` and how to fix studio views :ref:`here <upgrade_studio_views>`.
 
 .. _upgrade-faq/release-notes:
 

@@ -5,7 +5,7 @@ The upgrade process
 In this section, we will take a deeper look into the technical aspects that take place behind the scene when creating a request for an upgraded duplicated database. We will solely focus on the different steps that your data goes through, while the rest of the smartclass will focus on the aspects of the upgrade in general, from the planning to after the upgrade was applied in production. Even if some steps are done automatically, depending on what type of hosting you are on, we will still describe the process in depth just to give you a better understanding of what is happening behind the scenes. 
 
 
-.. image:: upgrade_process/schema_upgrade_process.png
+.. image:: /upgrade/advanced/upgrade_process/schema_upgrade_process.png
     :alt: Upgrade Process Schema
     :align: center
 
@@ -37,10 +37,10 @@ Before any modifications are applied to the database received, a series of tests
 .. note::
     Those tests are extremely likely to succeed, as only a very wrong usage of Odoo will yield to one of those tests failing such as modifying the tables or columns of the database directly via PSQL in an unsupported way.
 
-Once all the tests have successfully been executed, the standard upgrade scripts will be ran. This part consists of thousands of migrations scripts being executed one after the other on the database, taking it through all the versions all the way to the targeted version. Those scripts are executed in an order related to their placement in folders and their file name, as we saw it in the section about migration scripts.
+Once all the tests have successfully been executed, the standard upgrade scripts will be ran. This part consists of thousands of migrations scripts being executed one after the other on the database, taking it through all the versions all the way to the targeted version. Those scripts are executed in an order related to their placement in folders and their file name.
 
 .. seealso::
-    :doc:`/upgrade/advanced/migration_scripts`
+    :doc:`Advanced : What are migration scripts ? </upgrade/advanced/migration_scripts>`
 
 It is possible that a Python exception is raised during the execution of those scripts, in which case you might have to fix the ill-formed data on your production database. Otherwise, if the issue is unrelated to the integrity of your data, you can ask the help of the Upgrade Support Analysts at Odoo (see :ref:`upgrade/test-assistance`)
 
@@ -72,4 +72,4 @@ Optional : executing custom upgrade scripts
 
 In the case that your database is running a modified version of Odoo, that is a version with custom modules or custom code, you will still have a little bit work more to do !
 
-Since the various models and fields of Odoo might have changed during the upgrade of the database, you might have to adapt your customization to be compatible with it. Furthermore, if you do some changes to the structure of your custom code, you must not forget to migrate the data. For example if you rename a field in the code, you must also ensure that the corresponding PSQL data is renamed as well. This is usually done with :ref:`migration scripts <upgrade/advanced/migration_scripts>` by using PSQL queries or methods of the util package.
+Since the various models and fields of Odoo might have changed during the upgrade of the database, you might have to adapt your customization to be compatible with it. Furthermore, if you do some changes to the structure of your custom code, you must not forget to migrate the data. For example if you rename a field in the code, you must also ensure that the corresponding PSQL data is renamed as well. This is usually done with :doc:`migration scripts </upgrade/advanced/migration_scripts>` by using PSQL queries or methods of the util package.

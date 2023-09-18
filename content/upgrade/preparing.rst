@@ -1,9 +1,9 @@
 :nosearch:
 :show-toc:
 
-======================
-Preparing your upgrade
-======================
+=====================
+Planning your upgrade
+=====================
 
 Which version should you target ?
 ---------------------------------
