@@ -8,3 +8,4 @@ Quality check types
    :titlesonly:
 
    quality_check_types/instructions_check
+   quality_check_types/pass_fail_check
