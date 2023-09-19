@@ -16,8 +16,8 @@ open the :guilabel:`Website payments` menu.
    :alt: PayPal account menu
 
 .. important::
-   Note that for PayPal to work **in Odoo**, the options :ref:`Auto Return <paypal/auto-return>`,
-   :ref:`PDT <paypal/pdt>`, and :ref:`IPN <paypal/ipn>` **must** all be enabled.
+   Note that for PayPal to work **in Odoo**, the options :ref:`Auto Return <paypal/auto-return>` and
+   :ref:`PDT <paypal/pdt>` **must** be enabled.
 
 .. _paypal/auto-return:
 
@@ -47,17 +47,6 @@ preferences --> Update`, scroll down to :guilabel:`Payment data transfer` and se
    PayPal displays your **PDT Identity Token** as soon as :ref:`Auto return <paypal/auto-return>`
    and :ref:`Payment Data Transfer (PDT) <paypal/pdt>` are enabled. If you need the **PDT Identity
    Token**, disable and re-enable :guilabel:`Payment data transfer` to display the token again.
-
-.. _paypal/ipn:
-
-Instant Payment Notification (IPN)
-----------------------------------
-
-:abbr:`IPN (Instant Payment Notifications)` is similar to **PDT**, but allows for more
-notifications, such as chargeback notifications. To enable **IPN**, go to :menuselection:`Website
-payments --> Instant payment notifications --> Update` and click :guilabel:`Choose IPN settings`.
-Enter a :guilabel:`Notification URL`, select :guilabel:`Receive IPN messages (Enabled)`, and
-:guilabel:`Save`.
 
 PayPal Account Optional
 -----------------------
