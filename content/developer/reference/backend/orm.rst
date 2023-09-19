@@ -955,21 +955,19 @@ Domain criteria can be combined using logical operators in *prefix* form:
 
 .. example::
 
-    To search for partners named *ABC*, from belgium or germany, whose language
+    To search for partners named *ABC*, from belgium or whose language
     is not english::
 
-        [('name','=','ABC'),
-         ('language.code','!=','en_US'),
-         '|',('country_id.code','=','be'),
-             ('country_id.code','=','de')]
+        [('name', '=', 'ABC'),
+         '|', ('lang', '!=', 'en_US'),
+              ('country_id.code', '=', 'be')]
 
     This domain is interpreted as:
 
     .. code-block:: text
 
             (name is 'ABC')
-        AND (language is NOT english)
-        AND (country is Belgium OR Germany)
+        AND (language is NOT english OR country is Belgium)
 
 Unlink
 ------
