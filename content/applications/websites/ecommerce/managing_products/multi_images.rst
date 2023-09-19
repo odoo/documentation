@@ -1,19 +1,23 @@
-=========================================
-How to display several images per product
-=========================================
+===========================
+Multiple images per product
+===========================
 
-By default your product web page displays the main image of your product only.
-If you like to show your products under several angles, you can turn the image into a carrousel.
+When you register several images for a product, only the first image is shown on the main products
+page. By clicking on the product, visitors can see additional images with the carousel view.
 
-.. image:: multi_images/multi_images01.png
-   :align: center
+.. image:: multi_images/carousel-view.png
+   :alt: Showing the carousel view.
 
-* Check *Several images per product* in :menuselection:`Website Admin --> Configuration --> Settings`.
+Adding multiple images to a product
+-----------------------------------
 
-* Open a product detail form and upload images from *Images* tab. Hit *Create* in Edit mode to get the upload wizard.
+#. Go to :menuselection:`Website --> Products`, and select a product.
+#. Go to the :guilabel:`Sales` tab, click :guilabel:`Edit`, and :guilabel:`Add a media`.
+#. Click the pencil icon to add an image, then click :guilabel:`Save & New` to add additional ones.
+#. Click :guilabel:`Save & Close` when you are done.
 
-.. image:: multi_images/multi_images02.png
-   :align: center
+.. image:: multi_images/multi-images.png
+   :alt: Creating extra product media.
 
 .. note::
-    Such extra image are common to all the product variants (if any).
+    Such extra images are common to all the product variants (if any).
