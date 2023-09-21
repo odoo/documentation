@@ -122,4 +122,6 @@ Upgrading your reports
 
 Fixing Studio report customisations is fortunately very similar to fixing Studio view customisations as both of them are based on the same xpath mechanis. The only difference being that the reports are built manually using `<t/>`, `<div/>`, `<table/>`, ... elements, and therefore the xpath take action on those tags, instead of the usual `<field/>`, `<group/>`, `<page/>`, ... tags.
 
-By following the processes explained in :ref:`upgrade_studio_views` and :ref:`upgrade_views`, you should be able to fix your reports in the same way you would fix your views.
+By following the processes explained in :ref:`upgrade_studio_views` and :ref:`upgrade_views`, you should be able to fix your customization on reports in the same way you would fix your views.
+
+However, when dealing with entirely custom report, there is another situation that can arise. In Odoo, when duplicating a standard report, a copy of it is created at the time of the duplication with the same structure as the original. This means that once the source code of the original report is upgraded to match the new name of the various fields that were changed, the copy of the report will not be upgraded automatically. Thanfkully, this can be fixed quite easily by re-duplicating the original report, either with the Duplicate action, or by manually copying the source code from the original report to the copy. Then, you can apply the same process as explained in :ref:`upgrade_studio_views` and :ref:`upgrade_views` to fix the customization on the copied report.
