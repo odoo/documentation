@@ -94,5 +94,32 @@ You can make use of the function `edit_view` of util package TODO link util pack
 Missing x_studio fields and how to retrieve them
 ------------------------------------------------
 
+During the upgrade process, the migration scripts will ensure a certain synchronisation between the fields defined in the source code of your Odoo instance and the actual column names in the table of your PSQL database. In case of a mismatch, some actions can be taken on those columns, such as removing them.
+
+This happens frequently with fields created by Odoo Studio, which we call x_studio fields, on models that have been removed or fields that are related to such models. In those cases, the standard migration scripts will drop the table from the PSQL database after moving the standard data of the fields to the new table, *and not any custom field*. Thus the data of the x_studio fields will be lost.
+
+.. example::
+    In the upgrade between Odoo 12 and Odoo 13, the model `account.invoice` was merged with `account.move` and was then subsequentely removed. The standard migrations scripts took care of moving the standard data from the PSQL table `account_invoice` to `account_move`, such as the columns `partner_id`, `name`, `amount_residual`, ...  but any custom field created by the user will not be automatically moved. Then, once the migration of the data to `account_move` is completed, the table `account_invoice` is dropped, with all the custom data still in it.
+
+This is why we insist on thoroughly testing your upgraded database since any data loss will be unrecoverable once the upgrade of your production database is completed.
+
+Retrieving the fields
+=====================
+
+Since the removal of your custom studio fields are executed by the standard migration scripts, you can not retrieve them by writing a custom migration script that is executed after the standard ones. Retrieving such fields is a manual process that can be done by the Upgrade team at Odoo. 
+
+You can contact the Upgrade team by following the instructions in :doc:`/upgrade/assistance` and by specifying the following : 
+- The name of the field(s) removed from your database
+- The name of the model(s) they were on
+- The reason why they were removed (model removed, relation removed, related field removed, ...)
+- Which new model, relation, or related field they should be on
+- Any additional information that could help us retrieve the fields
+
+With that information, the Upgrade team will be able to save your field(s) by changing their definition before their deletion. This is usually done with PSQL queries or with methods from the util package TODO link util package at a very specific time during the standard upgrade process : between when the new model or the related field is created and when the old model or field is removed
+
 Upgrading your reports
 ----------------------
+
+Fixing Studio report customisations is fortunately very similar to fixing Studio view customisations as both of them are based on the same xpath mechanis. The only difference being that the reports are built manually using `<t/>`, `<div/>`, `<table/>`, ... elements, and therefore the xpath take action on those tags, instead of the usual `<field/>`, `<group/>`, `<page/>`, ... tags.
+
+By following the processes explained in :ref:`upgrade_studio_views` and :ref:`upgrade_views`, you should be able to fix your reports in the same way you would fix your views.
