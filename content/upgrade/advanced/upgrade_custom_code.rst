@@ -13,23 +13,29 @@ There are many ways to go about upgrading your custom modules. Here are the reco
 - Fix the errors during the installation and during the testing.
 
 
-How to make your module installable
------------------------------------
+Making your custom module installable
+-------------------------------------
 
 The first step of upgrading a custom module is to make it installable in the new version of Odoo. To do so, you will have to make sure that the module is compatible with that version of Odoo. This means that you must not reference deprecated fields, models, views, etc. in your module.
 
 .. example::
     Between Odoo 14 and Odoo 15, the field `user_id` of the model `project.task` has been renamed to `user_ids`. Therefore, if you are upgrading your module from before Odoo 14 to after Odoo 15, you will have to make sure that you change any reference of `user_id` to `user_ids` in the code of your module.
 
+This requires a static analysis of the code to find all the references to deprecated elements, but it can be also done by trying to install the module, and fixing the errors that occur during the installation.
 
 
 Upgrading your method overriding
---------------------------------
+================================
 
 Upgrading your fields and models inheritance
---------------------------------------------
+=============================================
 
 .. _upgrade_views:
 
 Upgrading your view inheritance
--------------------------------
+================================
+
+Making your custom data compatible
+----------------------------------
+
+Now that your custom module works just as well in the new version of Odoo, the last step of upgrading it is to ensure that your custom data is compatible with the new version of the module. This is done with :doc:`/upgrade/advanced/migration_scripts`
