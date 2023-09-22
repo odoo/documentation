@@ -53,8 +53,6 @@ production upgrade.
 What is the time frame for an upgrade project?
 ----------------------------------------------
 
-TODO check with AVG project duration, what we should communicate
-
 It depends on the user involvement (the time spent on testing, reporting problems, etc.) and the
 issues encountered that might need to be addressed by our technical team.
 
