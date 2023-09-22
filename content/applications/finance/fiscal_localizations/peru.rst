@@ -23,7 +23,7 @@ available:
 
 .. seealso::
    - `App Tour - Localización de Peru <https://youtu.be/Ic3mGovkf8Y>`_
-   - `Smart Tutorial - Localización de Peru <https://www.odoo.com/r/xUtO>`_
+   - `Smart Tutorial - Localización de Peru <https://www.odoo.com/slides/smart-tutorial-localizacion-de-peru-133>`_
 
 Configuration
 =============
