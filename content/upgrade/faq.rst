@@ -186,6 +186,8 @@ are permanently deleted following that period.
 You can learn more about privacy and data handling at Odoo by visiting our `General Data Protection
 Regulation page <https://www.odoo.com/gdpr>`_.
 
+.. _upgrade_faq/rolling_release:
+
 Rolling Release (applicable to Odoo Online databases)
 =====================================================
 
