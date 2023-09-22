@@ -19,7 +19,7 @@ modules are available:
 
 .. seealso::
    - `App Tour - Localización de Chile <https://www.youtube.com/watch?v=3qYkgbmBYHw>`_
-   - `Smart Tutorial - Localización de Chile <https://www.odoo.com/r/Ose>`_
+   - `Smart Tutorial - Localización de Chile <https://www.odoo.com/slides/smart-tutorial-localizacion-de-chile-131>`_
 
 Configuration
 =============
