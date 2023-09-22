@@ -77,6 +77,8 @@ statement.
 .. seealso::
    - :doc:`bank/reconciliation`
 
+.. _payments/batch-payments:
+
 Batch payment
 -------------
 
