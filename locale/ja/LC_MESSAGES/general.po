@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-25 14:24+0000\n"
+"POT-Creation-Date: 2023-09-12 13:54+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
 "Last-Translator: Junko Augias, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/odoo/teams/41243/ja/)\n"
@@ -156,6 +156,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/general/auth.rst:5
+#: ../../content/applications/general/auth/azure.rst:79
 msgid "Authentication"
 msgstr "認証"
 
@@ -319,17 +320,301 @@ msgstr ""
 
 #: ../../content/applications/general/auth/azure.rst:5
 msgid ""
-"Due to specific requirements in Azure's OAuth implementation, Microsoft "
-"Azure OAuth identification is NOT compatible with Odoo at the moment."
+"The Microsoft Azure OAuth sign-in authentication is a useful function that "
+"allows Odoo users to sign in to their database with their Microsoft Azure "
+"account."
 msgstr ""
 
-#: ../../content/applications/general/auth/azure.rst:9
+#: ../../content/applications/general/auth/azure.rst:8
+msgid ""
+"This is particularly helpful if the organization uses Azure Workspace, and "
+"wants employees within the organization to connect to Odoo using their "
+"Microsoft Accounts."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:12
+msgid ""
+"Databases hosted on Odoo.com should not use OAuth login for the owner or "
+"administrator of the database as it would unlink the database from their "
+"Odoo.com account. If OAuth is set up for that user, the database will no "
+"longer be able to be duplicated, renamed, or otherwise managed from the "
+"Odoo.com portal."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:19
 msgid ":doc:`../../productivity/calendar/outlook`"
 msgstr ""
 
-#: ../../content/applications/general/auth/azure.rst:10
+#: ../../content/applications/general/auth/azure.rst:20
 #: ../../content/applications/general/email_communication/email_servers.rst:67
 msgid ":doc:`/administration/maintain/azure_oauth`"
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:23
+#: ../../content/applications/general/auth/google.rst:24
+#: ../../content/applications/general/voip/axivox.rst:16
+#: ../../content/applications/general/voip/onsip.rst:17
+msgid "Configuration"
+msgstr "コンフィグレーション"
+
+#: ../../content/applications/general/auth/azure.rst:25
+msgid ""
+"Integrating the Microsoft sign-in function requires configuration on "
+"Microsoft and Odoo."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:28
+msgid "Odoo System Parameter"
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:30
+msgid ""
+"First activate the :ref:`developer mode <developer-mode>`, and then go to "
+":menuselection:`Settings --> Technical --> System Parameters`."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:33
+msgid ""
+"Click :guilabel:`Create` and on the new/blank form that appears, add the "
+"following system parameter `auth_oauth.authorization_header` to the "
+":guilabel:`Key` field, and set the :guilabel:`Value` to `1`. Then click "
+":guilabel:`Save` to finish."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:38
+msgid "Microsoft Azure dashboard"
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:41
+msgid "Create a new application"
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:43
+msgid ""
+"Now that the system parameters in Odoo have been set up, it's time to create"
+" a corresponding application inside of Microsoft Azure. To get started "
+"creating the new application, go to `Microsoft's Azure Portal "
+"<https://portal.azure.com/>`_. Log in with the :guilabel:`Microsoft Outlook "
+"Office 365` account if there is one, otherwise, log in with a personal "
+":guilabel:`Microsoft account`."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:50
+msgid ""
+"A user with administrative access to the *Azure Settings* must connect and "
+"perform the following configuration steps below."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:53
+msgid ""
+"Next, navigate to the section labeled :guilabel:`Manage Azure Active "
+"Directory`. The location of this link is usually in the center of the page."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:56
+msgid ""
+"Now, click on the :guilabel:`Add (+)` icon, located in the top menu, and "
+"then select :guilabel:`App registration` from the drop-down menu. On the "
+":guilabel:`Register an application` screen, rename the :guilabel:`Name` "
+"field to `Odoo Login OAuth` or a similarly recognizable title. Under the "
+":guilabel:`Supported account types` section select the option for "
+":guilabel:`Accounts in this organizational directory only (Default Directory"
+" only - Single tenant)`."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:63
+msgid ""
+"The :guilabel:`Supported account types` can vary by Microsoft account type "
+"and end use of the OAuth. For example: Is the login meant for internal users"
+" within one organization or is it meant for customer portal access? The "
+"above configuration is used for internal users in an organization."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:68
+msgid ""
+"Choose :guilabel:`Personal Microsoft accounts only` if the target audience "
+"is meant for portal users. Choose :guilabel:`Accounts in this organizational"
+" directory only (Default Directory only - Single tenant)` if the target "
+"audience is company users."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:72
+msgid ""
+"Under the :guilabel:`Redirect URL` section, select :guilabel:`Web` as the "
+"platform, and then input `https://<odoo base url>/auth_oauth/signin` in the "
+":guilabel:`URL` field. The Odoo base :abbr:`URL (Uniform Resource Locator)` "
+"is the canonical domain at which your Odoo instance can be reached (e.g. "
+"*mydatabase.odoo.com* if you are hosted on Odoo.com) in the :guilabel:`URL` "
+"field. Then, click :guilabel:`Register`, and the application is created."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:81
+msgid ""
+"Edit the new app's authentication by clicking on the "
+":guilabel:`Authentication` menu item in the left menu after being redirected"
+" to the application's settings from the previous step."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:84
+msgid ""
+"Next, the type of *tokens* needed for the OAuth authentication will be "
+"chosen. These are not currency tokens but rather authentication tokens that "
+"are passed between Microsoft and Odoo. Therefore, there is no cost for these"
+" tokens; they are used merely for authentication purposes between two "
+":abbr:`APIs (application programming interfaces)`. Select the tokens that "
+"should be issued by the authorization endpoint by scrolling down the screen "
+"and check the boxes labeled: :guilabel:`Access tokens (used for implicit "
+"flows)` and :guilabel:`ID tokens (used for implicit and hybrid flows)`."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst-1
+msgid "Authentication settings and endpoint tokens."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:96
+msgid "Click :guilabel:`Save` to ensure these settings are saved."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:99
+msgid "Gather credentials"
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:101
+msgid ""
+"With the application created and authenticated in the Microsoft Azure "
+"console, credentials will be gathered next. To do so, click on the "
+":guilabel:`Overview` menu item in the left-hand column. Select and copy the "
+":guilabel:`Application (client) ID` in the window that appears. Paste this "
+"credential to a clipboard / notepad, as this credential will be used in the "
+"Odoo configuration later."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:106
+msgid ""
+"After finishing this step, click on :guilabel:`Endpoints` on the top menu "
+"and click the *copy icon* next to :guilabel:`OAuth 2.0 authorization "
+"endpoint (v2)` field. Paste this value in the clipboard / notepad."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst-1
+msgid "Application ID and OAuth 2.0 authorization endpoint (v2) credentials."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:115
+msgid "Odoo setup"
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:117
+msgid ""
+"Finally, the last step in the Microsoft Azure OAuth configuration is to "
+"configure some settings in Odoo. Navigate to :menuselection:`Settings --> "
+"Integrations --> OAuth Authentication` and check the box to activate the "
+"OAuth login feature. Click :guilabel:`Save` to ensure the progress is saved."
+" Then, sign in to the database once the login screen loads."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:122
+msgid ""
+"Once again, navigate to :menuselection:`Settings --> Integrations --> OAuth "
+"Authentication` and click on :guilabel:`OAuth Providers`. Now, select "
+":guilabel:`New` in the upper-left corner and name the provider `Azure`."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:126
+msgid ""
+"Paste the :guilabel:`Application (client) ID` from the previous section into"
+" the :guilabel:`Client ID` field. After completing this, paste the new "
+":guilabel:`OAuth 2.0 authorization endpoint (v2)` value into the "
+":guilabel:`Authorization URL` field."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:130
+msgid ""
+"For the :guilabel:`UserInfo URL` field, paste the following :abbr:`URL "
+"(Uniform Resource Locator)`: `https://graph.microsoft.com/oidc/userinfo`"
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:133
+msgid ""
+"In the :guilabel:`Scope` field, paste the following value: `openid profile "
+"email`. Next, the Windows logo can be used as the CSS class on the login "
+"screen by entering the following value: `fa fa-fw fa-windows`, in the "
+":guilabel:`CSS class` field."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:137
+msgid ""
+"Check the box next to the :guilabel:`Allowed` field to enable the OAuth "
+"provider. Finally, add `Microsoft Azure` to the :guilabel:`Login button "
+"label` field. This text will appear next to the Windows logo on the login "
+"page."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst-1
+msgid "Odoo provider setup in the Settings application."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:145
+msgid ""
+":guilabel:`Save` the changes to complete the OAuth authentication setup in "
+"Odoo."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:148
+msgid "User experience flows"
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:150
+msgid ""
+"For a user to log in to Odoo using Microsoft Azure, the user must be on the "
+":menuselection:`Odoo password reset page`. This is the only way that Odoo is"
+" able to link the Microsoft Azure account and allow the user to log in."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:155
+msgid ""
+"Existing users must :ref:`reset their password <users/reset-password>` to "
+"access the :menuselection:`Odoo password reset page`. New Odoo users must "
+"click the new user invitation link that was sent via email, then click on "
+":guilabel:`Microsoft Azure`. Users should not set a new password."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:160
+msgid ""
+"To sign in to Odoo for the first time using the Microsoft Azure OAuth "
+"provider, navigate to the :menuselection:`Odoo password reset page` (using "
+"the new user invitation link). A password reset page should appear. Then, "
+"click on the option labeled :guilabel:`Microsoft Azure`. The page will "
+"redirect to the Microsoft login page."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst-1
+msgid "Microsoft Outlook login page."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:169
+msgid ""
+"Enter the :guilabel:`Microsoft Email Address` and click :guilabel:`Next`. "
+"Follow the process to sign in to the account. Should :abbr:`2FA (Two Factor "
+"Authentication)` be turned on, then an extra step may be required."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst-1
+msgid "Enter Microsoft login credentials."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst:177
+msgid ""
+"Finally, after logging in to the account, the page will redirect to a "
+"permissions page where the user will be prompted to :guilabel:`Accept` the "
+"conditions that the Odoo application will access their Microsoft "
+"information."
+msgstr ""
+
+#: ../../content/applications/general/auth/azure.rst-1
+msgid ""
+"Accept Microsoft conditions for permission access to your account "
+"information."
 msgstr ""
 
 #: ../../content/applications/general/auth/google.rst:3
@@ -350,36 +635,39 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/general/auth/google.rst:12
+msgid ""
+"Databases hosted on Odoo.com should not use Oauth login for the owner or "
+"administrator of the database as it would unlink the database from their "
+"Odoo.com account. If Oauth is set up for that user, the database will no "
+"longer be able to be duplicated, renamed or otherwise managed from the "
+"Odoo.com portal."
+msgstr ""
+
+#: ../../content/applications/general/auth/google.rst:18
 msgid ":doc:`/applications/productivity/calendar/google`"
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:13
+#: ../../content/applications/general/auth/google.rst:19
 #: ../../content/applications/general/email_communication/email_servers.rst:66
 msgid ":doc:`/administration/maintain/google_oauth`"
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:18
-#: ../../content/applications/general/voip/axivox.rst:16
-#: ../../content/applications/general/voip/onsip.rst:13
-msgid "Configuration"
-msgstr "コンフィグレーション"
-
-#: ../../content/applications/general/auth/google.rst:20
+#: ../../content/applications/general/auth/google.rst:26
 msgid ""
 "The integration of the Google sign-in function requires configuration both "
 "on Google *and* Odoo."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:25
+#: ../../content/applications/general/auth/google.rst:31
 msgid "Google API Dashboard"
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:27
+#: ../../content/applications/general/auth/google.rst:33
 msgid ""
 "Go to the `Google API Dashboard <https://console.developers.google.com/>`_."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:28
+#: ../../content/applications/general/auth/google.rst:34
 msgid ""
 "Make sure the right project is opened. If there isn't a project yet, click "
 "on :guilabel:`Create Project`, fill out the project name and other details "
@@ -390,15 +678,15 @@ msgstr ""
 msgid "Filling out the details of a new project."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:37
+#: ../../content/applications/general/auth/google.rst:43
 msgid "Choose the name of the company from the drop-down menu."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:42
+#: ../../content/applications/general/auth/google.rst:48
 msgid "OAuth consent screen"
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:44
+#: ../../content/applications/general/auth/google.rst:50
 msgid "On the left side menu, click on :menuselection:`OAuth consent screen`."
 msgstr ""
 
@@ -406,7 +694,7 @@ msgstr ""
 msgid "Google OAuth consent selection menu."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:50
+#: ../../content/applications/general/auth/google.rst:56
 msgid ""
 "Choose one of the options (:guilabel:`Internal` / :guilabel:`External`), and"
 " click on :guilabel:`Create`."
@@ -416,7 +704,7 @@ msgstr ""
 msgid "Choice of a user type in OAuth consent."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:58
+#: ../../content/applications/general/auth/google.rst:64
 msgid ""
 "*Personal* Gmail Accounts are only allowed to be **External** User Type, "
 "which means Google may require an approval, or for *Scopes* to be added on. "
@@ -424,26 +712,26 @@ msgid ""
 "Type to be used."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:62
+#: ../../content/applications/general/auth/google.rst:68
 msgid ""
 "Note, as well, that while the API connection is in the *External* testing "
 "mode, then no approval is necessary from Google. User limits in this testing"
 " mode is set to 100 users."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:65
+#: ../../content/applications/general/auth/google.rst:71
 msgid ""
 "Fill out the required details and domain info, then click on :guilabel:`Save"
 " and Continue`."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:66
+#: ../../content/applications/general/auth/google.rst:72
 msgid ""
 "On the :menuselection:`Scopes` page, leave all fields as is, and click on "
 ":guilabel:`Save and Continue`."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:68
+#: ../../content/applications/general/auth/google.rst:74
 msgid ""
 "Next, if continuing in testing mode (*External*), add the email addresses "
 "being configured under the :guilabel:`Test users` step by clicking on "
@@ -451,16 +739,16 @@ msgid ""
 "summary of the app registration appears."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:71
+#: ../../content/applications/general/auth/google.rst:77
 msgid ""
 "Finally, scroll to the bottom, and click on :guilabel:`Back to Dashboard`."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:76
+#: ../../content/applications/general/auth/google.rst:82
 msgid "Credentials"
 msgstr "認証情報"
 
-#: ../../content/applications/general/auth/google.rst:78
+#: ../../content/applications/general/auth/google.rst:84
 msgid "On the left side menu, click on :menuselection:`Credentials`."
 msgstr ""
 
@@ -468,7 +756,7 @@ msgstr ""
 msgid "Credentials button menu."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:84
+#: ../../content/applications/general/auth/google.rst:90
 msgid ""
 "Click on :guilabel:`Create Credentials`, and select :guilabel:`OAuth client "
 "ID`."
@@ -478,13 +766,13 @@ msgstr ""
 msgid "OAuth client id selection."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:90
+#: ../../content/applications/general/auth/google.rst:96
 msgid ""
 "Select :guilabel:`Web Application` as the :guilabel:`Application Type`. Now,"
 " configure the allowed pages on which Odoo will be redirected."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:93
+#: ../../content/applications/general/auth/google.rst:99
 msgid ""
 "In order to achieve this, in the :guilabel:`Authorized redirect URIs` field,"
 " enter the database's domain immediately followed by `/auth_oauth/signin`. "
@@ -492,7 +780,7 @@ msgid ""
 ":guilabel:`Create`."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:97
+#: ../../content/applications/general/auth/google.rst:103
 msgid ""
 "Now that the *OAuth client* has been created, a screen will appear with the "
 ":guilabel:`Client ID` and :guilabel:`Client Secret`. Copy the "
@@ -500,15 +788,15 @@ msgid ""
 "configuration in Odoo, which will be covered in the following steps."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:104
+#: ../../content/applications/general/auth/google.rst:110
 msgid "Google Authentication on Odoo"
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:109
+#: ../../content/applications/general/auth/google.rst:115
 msgid "Retrieve the Client ID"
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:111
+#: ../../content/applications/general/auth/google.rst:117
 msgid ""
 "Once the previous steps are complete, two keys are generated on the Google "
 "API Dashboard: :guilabel:`Client ID` and :guilabel:`Client Secret`. Copy the"
@@ -519,21 +807,21 @@ msgstr ""
 msgid "Google OAuth Client ID generated."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:121
+#: ../../content/applications/general/auth/google.rst:127
 msgid "Odoo activation"
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:123
+#: ../../content/applications/general/auth/google.rst:129
 msgid ""
 "Go to :menuselection:`Odoo General Settings --> Integrations` and activate "
 ":guilabel:`OAuth Authentication`."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:127
+#: ../../content/applications/general/auth/google.rst:133
 msgid "Odoo may prompt the user to log-in again after this step."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:129
+#: ../../content/applications/general/auth/google.rst:135
 msgid ""
 "Go back to :menuselection:`General Settings --> Integrations --> OAuth "
 "Authentication`, activate the selection and :guilabel:`Save`. Next, return "
@@ -547,18 +835,18 @@ msgstr ""
 msgid "Filling out the client id in Odoo settings."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:139
+#: ../../content/applications/general/auth/google.rst:145
 msgid ""
 "Google OAuth2 configuration can also be accessed by clicking on "
 ":guilabel:`OAuth Providers` under the :guilabel:`OAuth Authentication` "
 "heading in :menuselection:`Integrations`."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:145
+#: ../../content/applications/general/auth/google.rst:151
 msgid "Log in to Odoo with Google"
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:147
+#: ../../content/applications/general/auth/google.rst:153
 msgid ""
 "To link the Google account to the Odoo profile, click on :guilabel:`Log in "
 "with Google` when first logging into Odoo."
@@ -568,7 +856,7 @@ msgstr ""
 msgid "Reset password screen with \"Log in with Google\" button."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:155
+#: ../../content/applications/general/auth/google.rst:161
 msgid ""
 "Existing users must :ref:`reset their password <users/reset-password>` to "
 "access the :menuselection:`Reset Password` page, while new users can "
@@ -576,7 +864,7 @@ msgid ""
 "password."
 msgstr ""
 
-#: ../../content/applications/general/auth/google.rst:160
+#: ../../content/applications/general/auth/google.rst:166
 msgid ""
 "`Google Cloud Platform Console Help - Setting up OAuth 2.0 "
 "<https://support.google.com/cloud/answer/6158849>`_"
@@ -955,7 +1243,7 @@ msgstr ""
 
 #: ../../content/applications/general/digest_emails.rst:87
 msgid "Messages Sent"
-msgstr ""
+msgstr "メッセージ送信済"
 
 #: ../../content/applications/general/digest_emails.rst:87
 msgid "`kpi_mail_message_total_value`"
@@ -2267,48 +2555,52 @@ msgid ""
 "subscription,"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:45
-msgid "50 emails/day for one-app free and trial databases,"
+#: ../../content/applications/general/email_communication/faq.rst:44
+msgid "20 emails/day for one-app free databases,"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:47
+#: ../../content/applications/general/email_communication/faq.rst:45
+msgid "50 emails/day for trial databases,"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/faq.rst:46
 msgid ""
 "in case of migration, your daily limit might be reset to 50 emails a day."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:49
+#: ../../content/applications/general/email_communication/faq.rst:48
 msgid "In case you hit the limit, you can:"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:51
+#: ../../content/applications/general/email_communication/faq.rst:50
 msgid ""
 "Ask our support team to increase your daily limit. We will analyze the "
 "situation of your database depending on (non-exhaustive list):"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:54
+#: ../../content/applications/general/email_communication/faq.rst:53
 msgid "How many users in your database,"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:55
+#: ../../content/applications/general/email_communication/faq.rst:54
 msgid "Which apps are installed,"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:56
+#: ../../content/applications/general/email_communication/faq.rst:55
 msgid ""
 "Your bounce rate: the percentage of email addresses that did not receive "
 "your emails because it was returned by a mail server on its way to the final"
 " recipient. You can contact the `support <https://www.odoo.com/help>`_."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:60
+#: ../../content/applications/general/email_communication/faq.rst:59
 msgid ""
 "Use your own outgoing email server to be independent of Odoo’s mail limit "
 "(please refer to :doc:`the corresponding documentation "
 "</applications/general/email_communication/email_servers>`),"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:62
+#: ../../content/applications/general/email_communication/faq.rst:61
 msgid ""
 "Wait until 11pm UTC for the reset and click on the retry button: The "
 ":ref:`Developer mode <developer-mode>` must be activated. Then, go to "
@@ -2319,24 +2611,24 @@ msgstr ""
 msgid "Retry button of an emails"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:70
+#: ../../content/applications/general/email_communication/faq.rst:69
 msgid ""
 "The daily limit is global to your database and can rise quickly! By default "
 "an internal message, a notification, a note, etc. counts as an email in your"
 " daily limit if it notifies someone."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:73
+#: ../../content/applications/general/email_communication/faq.rst:72
 msgid ""
 "You can mitigate this by receiving your :ref:`notifications in Odoo "
 "<discuss_app/notification_preferences>` instead of by emails."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:77
+#: ../../content/applications/general/email_communication/faq.rst:76
 msgid "SMTP Error"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:79
+#: ../../content/applications/general/email_communication/faq.rst:78
 msgid ""
 "You can find out why an email wasn't transmitted successfully by reviewing "
 "the Simple Mail Transport Protocol (SMTP) error messages. SMTP is a protocol"
@@ -2345,11 +2637,11 @@ msgid ""
 " troubleshoot email problems."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:85
+#: ../../content/applications/general/email_communication/faq.rst:84
 msgid "No Error"
 msgstr "エラーなし"
 
-#: ../../content/applications/general/email_communication/faq.rst:87
+#: ../../content/applications/general/email_communication/faq.rst:86
 msgid ""
 "Odoo is not always capable of providing information for the reason it "
 "failed. The different providers implement a personalized policy of the "
@@ -2357,25 +2649,25 @@ msgid ""
 "correctly."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:91
+#: ../../content/applications/general/email_communication/faq.rst:90
 msgid ""
 "If you have this problem on a recurring basis with the same client or the "
 "same domain, please do not hesitate to contact `Odoo Support "
 "<https://www.odoo.com/help>`_ for help in finding a reason."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:94
+#: ../../content/applications/general/email_communication/faq.rst:93
 msgid ""
 "Note: in such case, one of the most common reasons is related to :ref:`SPF "
 "<email_communication/spf_compliant>` and/or :ref:`DKIM "
 "<email_communication/DKIM_compliant>` configuration."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:98
+#: ../../content/applications/general/email_communication/faq.rst:97
 msgid "Why is my email sent late?"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:100
+#: ../../content/applications/general/email_communication/faq.rst:99
 msgid ""
 "It may happen that you schedule an email campaign but it is not sent on "
 "time. We know that we use a delayed job to send emails that we consider as "
@@ -2385,7 +2677,7 @@ msgid ""
 "avoid cluttering the mail servers and prioritize the communication."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:106
+#: ../../content/applications/general/email_communication/faq.rst:105
 msgid ""
 "The emails considered urgent (communication from one person to another one "
 "such as Sales Orders, Invoices, Purchase Orders, etc.) are sent directly."
@@ -2395,38 +2687,38 @@ msgstr ""
 msgid "Email scheduled to be sent later."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:113
+#: ../../content/applications/general/email_communication/faq.rst:112
 msgid ""
 "By default, the Mass Mailing cron runs every 60 minutes. So, you should wait"
 " maximum an hour before the campaign is actually sent."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:117
+#: ../../content/applications/general/email_communication/faq.rst:116
 msgid "Incoming emails"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:119
+#: ../../content/applications/general/email_communication/faq.rst:118
 msgid ""
 "When you have an issue with incoming emails, there might not be an "
 "indication per se in Odoo. This is the client who tries to contact a "
 "database who will get a bounce (most of the time 550: mailbox unavailable)."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:124
+#: ../../content/applications/general/email_communication/faq.rst:123
 msgid "Emails are not received"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:126
+#: ../../content/applications/general/email_communication/faq.rst:125
 msgid "Depending on the platform you are using:"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:128
+#: ../../content/applications/general/email_communication/faq.rst:127
 msgid ""
 "The **Odoo.sh** users can find their live logs on the folder "
 ":file:`~/logs/`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:130
+#: ../../content/applications/general/email_communication/faq.rst:129
 msgid ""
 "The folder :file:`~/logs/` (preferably accessed by the command line) of an "
 "Odoo.sh contains a list of files containing the logs of the database. The "
@@ -2439,24 +2731,24 @@ msgid ""
 "through the files."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:138
+#: ../../content/applications/general/email_communication/faq.rst:137
 msgid ""
 "**Odoo Online** users won’t have access to their logs. However you can still"
 " contact `Odoo Support <https://www.odoo.com/help>`_ , if you have a "
 "recurring issue with the same client or domain."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:143
+#: ../../content/applications/general/email_communication/faq.rst:142
 msgid "Get help from support"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:145
+#: ../../content/applications/general/email_communication/faq.rst:144
 msgid ""
 "In order to get helped efficiently, please provide as much information as "
 "possible. Here is a list of what can be helpful:"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:148
+#: ../../content/applications/general/email_communication/faq.rst:147
 msgid ""
 "The **EML** of the email, stating for *Electronic Mail*, is the file format "
 "containing all the technical information required for an investigation. The "
@@ -2466,48 +2758,48 @@ msgid ""
 "will mainly focus on redundant issues."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:155
+#: ../../content/applications/general/email_communication/faq.rst:154
 msgid "`Gmail documentation <https://support.google.com/mail/answer/29436>`_"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:157
+#: ../../content/applications/general/email_communication/faq.rst:156
 msgid ""
 "`Outlook documentation <https://support.microsoft.com/en-us/office/view-"
 "internet-message-headers-in-outlook-"
 "cd039382-dc6e-4264-ac74-c048563d212c#tab=Web>`_"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:160
+#: ../../content/applications/general/email_communication/faq.rst:159
 msgid ""
 "The exact flow you are following in order to normally receive those emails "
 "in Odoo. Here are examples of questions whose answers can be useful:"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:163
+#: ../../content/applications/general/email_communication/faq.rst:162
 msgid "Is this simply a reply from an email going out from Odoo ?"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:165
+#: ../../content/applications/general/email_communication/faq.rst:164
 msgid "Are you using an incoming email server or somehow redirecting?"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:167
+#: ../../content/applications/general/email_communication/faq.rst:166
 msgid ""
 "Can you provide us with an example of an email that has been correctly "
 "forwarded ?"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:169
+#: ../../content/applications/general/email_communication/faq.rst:168
 msgid "Providing answers to the following questions:"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:171
+#: ../../content/applications/general/email_communication/faq.rst:170
 msgid ""
 "Is it a generic issue or is it specific to a use case? If yes, which one "
 "exactly?"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/faq.rst:173
+#: ../../content/applications/general/email_communication/faq.rst:172
 msgid ""
 "Is it working as expected? In case the email is sent using Odoo, the bounce "
 "email should reach the Odoo database and display the :ref:`red envelope "
@@ -3873,11 +4165,11 @@ msgid ""
 "overall management process."
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:11
+#: ../../content/applications/general/users/companies.rst:13
 msgid "Manage companies and records"
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:13
+#: ../../content/applications/general/users/companies.rst:15
 msgid ""
 "Go to :menuselection:`Settings --> Manage Companies` and fill in the form "
 "with your company’s information. If a *Parent Company* is selected, records "
@@ -3889,7 +4181,7 @@ msgstr ""
 msgid "Overview of a new company's form in Odoo"
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:22
+#: ../../content/applications/general/users/companies.rst:24
 msgid ""
 "Activate the :ref:`developer mode <developer-mode>` to choose a *Favicon* "
 "for each of your companies, and easily identify them by the browser tabs. "
@@ -3902,7 +4194,7 @@ msgid ""
 "View of a web browser and the favicon for a specific company chosen in Odoo"
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:31
+#: ../../content/applications/general/users/companies.rst:33
 msgid ""
 "Switch between or select multiple companies by enabling their selection "
 "boxes to activate them. The grayed company is the one which environment is "
@@ -3915,17 +4207,17 @@ msgstr ""
 msgid "View of the companies menu through the main dashboard in Odoo"
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:40
+#: ../../content/applications/general/users/companies.rst:42
 msgid ""
 "Data such as Products, Contacts, and Equipment can be shared or set to be "
 "shown for a specific company only. To do so, on their forms, choose between:"
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:43
+#: ../../content/applications/general/users/companies.rst:45
 msgid "*A blank field*: the record is shared within all companies."
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:44
+#: ../../content/applications/general/users/companies.rst:46
 msgid ""
 "*Adding a company*: the record is visible to users logged in to that "
 "specific company."
@@ -3935,11 +4227,11 @@ msgstr ""
 msgid "View of a product's form emphasizing the company field in Odoo Sales"
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:51
+#: ../../content/applications/general/users/companies.rst:53
 msgid "Employees' access"
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:53
+#: ../../content/applications/general/users/companies.rst:55
 msgid ""
 "Once companies are created, manage your employees' :doc:`Access Rights "
 "<access_rights>` for *Multi Companies*."
@@ -3951,42 +4243,42 @@ msgid ""
 "in Odoo"
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:62
+#: ../../content/applications/general/users/companies.rst:64
 msgid ""
 "If a user has multiple companies *activated* on his database, and he is "
 "**editing** a record, the editing happens on the record's related company."
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:65
+#: ../../content/applications/general/users/companies.rst:67
 msgid ""
 "Example: if editing a sale order issued under JS Store US while working on "
 "the JS Store Belgium environment, the changes are applied under JS Store US "
 "(the company from which the sale order was issued)."
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:66
+#: ../../content/applications/general/users/companies.rst:68
 msgid "When **creating** a record, the company taken into account is:"
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:68
+#: ../../content/applications/general/users/companies.rst:70
 msgid "The current company (the one active) or,"
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:69
+#: ../../content/applications/general/users/companies.rst:71
 msgid "No company is set (on products and contacts’ forms for example) or,"
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:70
+#: ../../content/applications/general/users/companies.rst:72
 msgid ""
 "The company set is the one linked to the document (the same as if a record "
 "is being edited)."
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:73
+#: ../../content/applications/general/users/companies.rst:75
 msgid "Documents’ format"
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:75
+#: ../../content/applications/general/users/companies.rst:77
 msgid ""
 "To set documents' formats according to each company, *activate* and *select*"
 " the respective one and, under *Settings*, click on *Configure Document "
@@ -3998,43 +4290,43 @@ msgid ""
 "View of the settings page emphasizing the document layout field in Odoo"
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:83
+#: ../../content/applications/general/users/companies.rst:85
 msgid "Inter-Company Transactions"
 msgstr "会社間取引"
 
-#: ../../content/applications/general/users/companies.rst:85
+#: ../../content/applications/general/users/companies.rst:87
 msgid ""
 "First, make sure each one of your companies is properly set in relation to:"
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:87
+#: ../../content/applications/general/users/companies.rst:89
 msgid ""
 ":doc:`Chart of Accounts "
 "<../../finance/accounting/get_started/chart_of_accounts>`"
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:88
+#: ../../content/applications/general/users/companies.rst:90
 msgid ":doc:`Taxes <../../finance/accounting/taxes>`"
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:89
+#: ../../content/applications/general/users/companies.rst:91
 msgid ""
 ":doc:`Fiscal Positions <../../finance/accounting/taxes/fiscal_positions>`"
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:90
+#: ../../content/applications/general/users/companies.rst:92
 msgid ":doc:`Journals <../../finance/accounting/bank>`"
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:91
+#: ../../content/applications/general/users/companies.rst:93
 msgid ":doc:`Fiscal Localizations <../../finance/fiscal_localizations>`"
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:92
+#: ../../content/applications/general/users/companies.rst:94
 msgid ":doc:`Pricelists <../../sales/sales/products_prices/prices/pricing>`"
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:94
+#: ../../content/applications/general/users/companies.rst:96
 msgid ""
 "Now, activate the *Inter-Company Transactions* option under *Settings*. With"
 " the respective company *activated* and *selected*, choose if you would like"
@@ -4048,13 +4340,13 @@ msgid ""
 " Odoo"
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:102
+#: ../../content/applications/general/users/companies.rst:104
 msgid ""
 "**Synchronize invoice/bills**: generates a bill/invoice when a company "
 "confirms a bill/invoice for the selected company."
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:105
+#: ../../content/applications/general/users/companies.rst:107
 msgid ""
 "*Example:* an invoice posted on JS Store Belgium, for JS Store US, "
 "automatically creates a vendor bill on the JS Store US, from the JS Store "
@@ -4065,7 +4357,7 @@ msgstr ""
 msgid "View of an invoice for JS Store US created on JS Store Belgium in Odoo"
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:112
+#: ../../content/applications/general/users/companies.rst:114
 msgid ""
 "**Synchronize sales/purchase order**: generates a drafted purchase/sales "
 "order using the selected company warehouse when a sales/purchase order is "
@@ -4073,7 +4365,7 @@ msgid ""
 "order you rather have it validated, enable *Automatic Validation*."
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:116
+#: ../../content/applications/general/users/companies.rst:118
 msgid ""
 "*Example:* when a sale order for JS Store US is confirmed on JS Store "
 "Belgium, a purchase order on JS Store Belgium is automatically created (and "
@@ -4085,22 +4377,22 @@ msgid ""
 "View of the purchase created on JS Store US from JS Store Belgium in Odoo"
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:125
+#: ../../content/applications/general/users/companies.rst:127
 msgid ""
 "Products have to be configured as *Can be sold* and must be shared between "
 "the companies."
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:128
+#: ../../content/applications/general/users/companies.rst:130
 msgid ""
 "Remember to test all workflows as an user other than the administrator."
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:131
+#: ../../content/applications/general/users/companies.rst:133
 msgid ":doc:`Multi-company Guidelines </developer/howtos/company>`"
 msgstr ""
 
-#: ../../content/applications/general/users/companies.rst:132
+#: ../../content/applications/general/users/companies.rst:134
 msgid ":doc:`../../finance/accounting/get_started/multi_currency`"
 msgstr ""
 
@@ -4952,7 +5244,7 @@ msgid ""
 "the whole infrastructure is hosted and managed by OnSIP."
 msgstr ""
 
-#: ../../content/applications/general/voip/onsip.rst:10
+#: ../../content/applications/general/voip/onsip.rst:12
 msgid ""
 "You will need to open an account with OnSIP to use this service. Before "
 "doing so, make sure that your area and the areas you wish to call are "
@@ -4960,92 +5252,92 @@ msgid ""
 "configuration procedure below."
 msgstr ""
 
-#: ../../content/applications/general/voip/onsip.rst:15
+#: ../../content/applications/general/voip/onsip.rst:19
 msgid "Go to Apps and install the module **VoIP OnSIP**."
 msgstr ""
 
-#: ../../content/applications/general/voip/onsip.rst:20
+#: ../../content/applications/general/voip/onsip.rst:24
 msgid ""
 "Go to Settings/General Settings. In the section Integrations/Asterisk "
 "(VoIP), fill in the 3 fields:"
 msgstr ""
 
-#: ../../content/applications/general/voip/onsip.rst:22
+#: ../../content/applications/general/voip/onsip.rst:26
 msgid ""
 "**OnSIP Domain** is the domain you chose when creating an account on "
 "www.onsip.com. If you don't know it, log in to https://admin.onsip.com/ and "
 "you will see it in the top right corner of the screen."
 msgstr ""
 
-#: ../../content/applications/general/voip/onsip.rst:23
+#: ../../content/applications/general/voip/onsip.rst:29
 msgid "**WebSocket** should contain wss://edge.sip.onsip.com"
 msgstr ""
 
-#: ../../content/applications/general/voip/onsip.rst:24
+#: ../../content/applications/general/voip/onsip.rst:30
 msgid "**Mode** should be Production"
 msgstr ""
 
-#: ../../content/applications/general/voip/onsip.rst:29
+#: ../../content/applications/general/voip/onsip.rst:35
 msgid ""
 "Go to **Settings/Users**. In the form view of each VoIP user, in the "
 "Preferences tab, fill in the section **PBX Configuration**:"
 msgstr ""
 
-#: ../../content/applications/general/voip/onsip.rst:31
+#: ../../content/applications/general/voip/onsip.rst:38
 msgid "**SIP Login / Browser's Extension**: the OnSIP 'Username'"
 msgstr ""
 
-#: ../../content/applications/general/voip/onsip.rst:32
+#: ../../content/applications/general/voip/onsip.rst:39
 msgid "**OnSIP authorization User**: the OnSIP 'Auth Username'"
 msgstr ""
 
-#: ../../content/applications/general/voip/onsip.rst:33
+#: ../../content/applications/general/voip/onsip.rst:40
 msgid "**SIP Password**: the OnSIP 'SIP Password'"
 msgstr ""
 
-#: ../../content/applications/general/voip/onsip.rst:34
+#: ../../content/applications/general/voip/onsip.rst:41
 msgid "**Handset Extension**: the OnSIP 'Extension'"
 msgstr ""
 
-#: ../../content/applications/general/voip/onsip.rst:36
+#: ../../content/applications/general/voip/onsip.rst:43
 msgid ""
 "You can find all this information by logging in at "
 "https://admin.onsip.com/users, then select the user you want to configure "
 "and refer to the fields as pictured below."
 msgstr ""
 
-#: ../../content/applications/general/voip/onsip.rst:41
+#: ../../content/applications/general/voip/onsip.rst:49
 msgid ""
 "You can now make phone calls by clicking the phone icon in the top right "
 "corner of Odoo (make sure you are logged in as a user properly configured in"
 " Odoo and in OnSIP)."
 msgstr ""
 
-#: ../../content/applications/general/voip/onsip.rst:45
+#: ../../content/applications/general/voip/onsip.rst:53
 msgid ""
 "If you see a *Missing Parameters* message in the Odoo softphone, make sure "
 "to refresh your Odoo window and try again."
 msgstr ""
 
-#: ../../content/applications/general/voip/onsip.rst:52
+#: ../../content/applications/general/voip/onsip.rst:60
 msgid ""
 "If you see an *Incorrect Number* message in the Odoo softphone, make sure to"
 " use the international format, leading with the plus (+) sign followed by "
-"the international country code. E.g.: +16506913277 (where +1 is the "
+"the international country code. E.g.: `+16506913277` (where `+1` is the "
 "international prefix for the United States)."
 msgstr ""
 
-#: ../../content/applications/general/voip/onsip.rst:57
+#: ../../content/applications/general/voip/onsip.rst:67
 msgid ""
 "You can now also receive phone calls. Your number is the one provided by "
 "OnSIP. Odoo will ring and display a notification."
 msgstr ""
 
-#: ../../content/applications/general/voip/onsip.rst:63
+#: ../../content/applications/general/voip/onsip.rst:74
 msgid "OnSIP on Your Cell Phone"
 msgstr ""
 
-#: ../../content/applications/general/voip/onsip.rst:65
+#: ../../content/applications/general/voip/onsip.rst:76
 msgid ""
 "In order to make and receive phone calls when you are not in front of your "
 "computer, you can use a softphone app on your cell phone in parallel of Odoo"
@@ -5053,35 +5345,35 @@ msgid ""
 "incoming calls, or simply for convenience. Any SIP softphone will work."
 msgstr ""
 
-#: ../../content/applications/general/voip/onsip.rst:67
+#: ../../content/applications/general/voip/onsip.rst:80
 msgid ""
 "On Android and iOS, OnSIP has been successfully tested with `Grandstream "
-"Wave <https://play.google.com/store/apps/details?id=com.grandstream.wave>`_."
-" When creating an account, select OnSIP in the list of carriers. You will "
+"Wave <https://play.google.com/store/apps/details?id=com.grandstream.ucm>`_. "
+"When creating an account, select OnSIP in the list of carriers. You will "
 "then have to configure it as follows:"
 msgstr ""
 
-#: ../../content/applications/general/voip/onsip.rst:69
+#: ../../content/applications/general/voip/onsip.rst:84
 msgid "**Account name**: OnSIP"
 msgstr ""
 
-#: ../../content/applications/general/voip/onsip.rst:70
+#: ../../content/applications/general/voip/onsip.rst:85
 msgid "**SIP Server**: the OnSIP 'Domain'"
 msgstr ""
 
-#: ../../content/applications/general/voip/onsip.rst:71
+#: ../../content/applications/general/voip/onsip.rst:86
 msgid "**SIP User ID**: the OnSIP 'Username'"
 msgstr ""
 
-#: ../../content/applications/general/voip/onsip.rst:72
+#: ../../content/applications/general/voip/onsip.rst:87
 msgid "**SIP Authentication ID**: the OnSIP 'Auth Username'"
 msgstr ""
 
-#: ../../content/applications/general/voip/onsip.rst:73
+#: ../../content/applications/general/voip/onsip.rst:88
 msgid "**Password**: the OnSIP 'SIP Password'"
 msgstr ""
 
-#: ../../content/applications/general/voip/onsip.rst:75
+#: ../../content/applications/general/voip/onsip.rst:90
 msgid ""
 "Aside from initiating calls from Grandstream Wave on your phone, you can "
 "also initiate calls by clicking phone numbers in your browser on your PC. "
@@ -5089,11 +5381,12 @@ msgid ""
 "the other party. This approach is useful to avoid wasting time dialing phone"
 " numbers. In order to do so, you will need the Chrome extension `OnSIP Call "
 "Assistant <https://chrome.google.com/webstore/detail/onsip-call-"
-"assistant/pceelmncccldedfkcgjkpemakjbapnpg?hl=en>`_."
+"assistant/pceelmncccldedfkcgjkpemakjbapnpg>`_."
 msgstr ""
 
-#: ../../content/applications/general/voip/onsip.rst:79
+#: ../../content/applications/general/voip/onsip.rst:97
 msgid ""
 "The downside of using a softphone on your cell phone is that your calls will"
-" not be logged in Odoo as the softphone acts as an independent separate app."
+" not be logged in Odoo, as the softphone acts as an independent, separate "
+"app."
 msgstr ""
