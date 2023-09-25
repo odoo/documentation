@@ -188,23 +188,96 @@ configuration automatically loads the :guilabel:`token` in Odoo, and a tag stati
 Finally, click :guilabel:`Test Connection`. A confirmation message should appear. The Odoo database
 can now send safe, secure emails through Microsoft Outlook using OAuth authentication.
 
-Multiple user configuration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. _azure_oauth/notifications:
 
-Each user should have a separate server set up. The :guilabel:`from-filter` should be set so that
-only the user's email is sent from that server. In other words, only a user with an email address
-that matches the set :guilabel:`from-filter` is able to use this server.
+Configuration with a single outgoing mail server
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-After setting the :guilabel:`from-filter`, set up a fallback email account to allow for the sending
-of :guilabel:`notifications`. The fallback email must be configured as a :guilabel:`general
-transactional server`. The :guilabel:`mail.default.from` system parameter must be set to the
-:guilabel:`username` of the general transactional server account. For more information see
-:ref:`Use a default email address <email_communication/default>`.
+Configuring a single outgoing server is the simplest configuration available for Microsoft Azure
+and it doesn't require extensive access rights for the users in the database.
+
+A generic email address would be used to send emails for all users within the database. For example
+it could be structured with a `notifications` alias (`notifications@example.com`) or `contact` alias
+(`contact@example.com`). This address must be set as the :guilabel:`FROM Filtering` on the server.
+This address must also match the `{mail.default.from}@{mail.catchall.domain}` key combination in the
+system parameters.
+
+.. seealso::
+   For more information on the from filter visit: :ref:`email_communication/default`.
 
 .. note::
-   The :guilabel:`System Parameters` can be accessed by activating
-   :doc:`../../applications/general/developer_mode` in the :menuselection:`Settings --> Technical
-   --> Parameters --> System Parameters` menu.
+   The :guilabel:`System Parameters` can be accessed by activating :ref:`developer-mode` in the
+   :menuselection:`Settings --> Technical --> Parameters --> System Parameters` menu.
+
+When using this configuration, every email that is sent from the database will use the address of
+the configured `notification` mailbox. However it should be noted that the name of the sender will
+appear but their email address will change:
+
+.. image:: azure_oauth/from-name-remain.png
+   :align: center
+   :alt: Name from real sender with static email.
+
+.. example::
+   Single outgoing mail server configuration:
+
+   - Outgoing mail server **username** (login) = `notifications@example.com`
+   - Outgoing mail server :guilabel:`FROM Filtering` = `notifications@example.com`
+   - `mail.catchall.domain` in system parameters = `example.com`
+   - `mail.default.from` in system parameters = `notifications`
+
+User-specific (multiple user) configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In addition to a generic email server, individual email servers can be set up for users in a
+database. These email addresses must be set as the :guilabel:`FROM Filtering` on each individual
+server for this configuration to work.
+
+This configuration is the more difficult of the two Microsoft Azure configurations, in that it
+requires all users configured with email servers to have access rights to settings in order to
+establish a connection to the email server.
+
+Setup
+*****
+
+Each user should have a separate email server set up. The :guilabel:`FROM Filtering` should be set
+so that only the user's email is sent from that server. In other words, only a user with an email
+address that matches the set :guilabel:`FROM Filtering` is able to use this server.
+
+.. seealso::
+   For more information on the from filter visit: :ref:`email_communication/default`.
+
+A :ref:`fallback server <azure_oauth/notifications>` must be setup to allow for the sending of
+:guilabel:`notifications`. The :guilabel:`FROM Filtering` for this server should have the value of
+the `{mail.default.from}@{mail.catchall.domain}`.
+
+.. note::
+   The :guilabel:`System Parameters` can be accessed by activating :ref:`developer-mode` in the
+   :menuselection:`Settings --> Technical --> Parameters --> System Parameters` menu.
+
+.. important::
+   The configuration for this transactional email server can work alongside an outgoing mass-mailing
+   email server. The :guilabel:`FROM Filtering` for the mass-mailing email server can remain empty,
+   but it's require to be added in the settings of the *Email Marketing* application.
+
+   .. seealso::
+      For more information on setting the mass-mailing email server visit
+      :ref:`email_communication/mass_mails`.
+
+.. example::
+   Multiple user outgoing mail server configuration:
+
+   - User #1 mailbox
+      - Outgoing mail server #1 **username** (login) = `john@example.com`
+      - Outgoing mail server #1 :guilabel:`FROM Filtering` = `john@example.com`
+   - User #2 mailbox
+      - Outgoing mail server #2 **username** (login) = `jane@example.com`
+      - Outgoing mail server #2 :guilabel:`FROM Filtering` = `jane@example.com`
+   - Notifications mailbox
+      - Outgoing mail server #3 **username** (login) = `notifications@example.com`
+      - Outgoing mail server #3 :guilabel:`FROM Filtering` = `notifications@example.com`
+   - System Parameters
+      - `mail.catchall.domain` in system parameters = `example.com`
+      - `mail.default.from` in system parameters = `notifications`
 
 Configure incoming email server
 -------------------------------
