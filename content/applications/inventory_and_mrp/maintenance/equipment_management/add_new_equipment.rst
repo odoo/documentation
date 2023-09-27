@@ -2,13 +2,15 @@
 Add new equipment
 =================
 
-In Odoo, **equipment** refers to any item that is used in everyday operations, including the
+.. _maintenance/equipment_management/add_new_equipment:
+
+In Odoo, *equipment* refers to any item that is used in everyday operations, including the
 manufacturing of products. This can mean a piece of machinery on a production line, a tool that is
 used in different locations, or a computer in an office space. Equipment registered in Odoo can be
 owned by the company that uses the Odoo database, or by a third party, such as a vendor in the case
 of equipment rentals.
 
-Using Odoo **Maintenance**, it is possible to track individual pieces of equipment, along with
+Using Odoo *Maintenance*, it is possible to track individual pieces of equipment, along with
 information about their maintenance requirements. To add a new piece of equipment, navigate to the
 :guilabel:`Maintenance` module, select :menuselection:`Equipments --> Machines & Tools --> Create`,
 and configure the equipment as follows:
