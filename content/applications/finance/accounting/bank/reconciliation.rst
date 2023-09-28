@@ -53,7 +53,7 @@ Resulting entry
    The resulting entry section on the top right displays the selected bank transaction matched with
    the counterpart entries and includes any remaining debits or credits. In this section, you can
    validate the reconciliation or mark it as :guilabel:`To Check`. Any :ref:`reconciliation model
-   buttons <reconciliation_models_button>` are also available in the resulting entry section.
+   buttons <reconciliation/button>` are also available in the resulting entry section.
 
 Reconcile transactions
 ======================
@@ -62,13 +62,13 @@ Transactions can be matched automatically with the use of :doc:`reconciliation m
 <reconciliation_models>`, or they can be matched with :ref:`existing entries
 <reconciliation/existing-entries>`, :ref:`batch payments <reconciliation/batch-payments>`,
 :ref:`manual operations <reconciliation/manual-operations>`, and :ref:`reconciliation model buttons
-<reconciliation_models_button>`.
+<reconciliation/button>`.
 
 #. Select a transaction among unmatched bank transactions.
 #. Define the counterpart. There are several options for defining a counterpart, including
    :ref:`matching existing entries <reconciliation/existing-entries>`, :ref:`manual operations
    <reconciliation/manual-operations>`, :ref:`batch payments <reconciliation/batch-payments>`, and
-   :ref:`reconciliation model buttons <reconciliation_models_button>`.
+   :ref:`reconciliation model buttons <reconciliation/button>`.
 #. If the resulting entry is not fully balanced, balance it by adding another existing counterpart
    entry or writing it off with a :ref:`manual operation <reconciliation/manual-operations>`.
 #. Click the :guilabel:`Validate` button to confirm the reconciliation and move to the next
@@ -90,8 +90,8 @@ Match existing entries
 ----------------------
 
 This tab contains matching entries Odoo automatically pre-selects according to the reconciliation
-models. The entry order is based on :ref:`reconciliation models <reconciliation_models_suggestion>`,
-with suggested entries appearing first.
+models. The entry order is based on :doc:`reconciliation models <reconciliation_models>`, with
+suggested entries appearing first.
 
 .. tip::
    The search bar within the :guilabel:`Match Existing Entries` tab allows you to search for
@@ -130,10 +130,11 @@ of the relevant optional fields.
    .. image:: reconciliation/fully-paid.png
       :alt: Click on fully paid to manually set an invoice as entirely paid.
 
+.. _reconciliation/button:
 
 Reconciliation model buttons
 ----------------------------
 
-Use a :ref:`reconciliation model button <reconciliation_models_button>` for manual operations that
-are frequently used. These custom buttons allow you to quickly reconcile bank transactions manually
-and can also be used in combination with existing entries.
+Use a :doc:`reconciliation model <reconciliation_models>` button for manual operations that are
+frequently used. These custom buttons allow you to quickly reconcile bank transactions manually and
+can also be used in combination with existing entries.
