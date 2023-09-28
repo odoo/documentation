@@ -10,7 +10,7 @@ Accounting cheat sheet
 
    .. rst-class:: intro-balance
 
-   The **Balance Sheet** is a snapshot of the company's finances at a specific date (as opposed to
+   The **balance sheet** is a snapshot of the company's finances at a specific date (as opposed to
    the Profit and Loss, which is an analysis over a period).
 
    * .. rst-class:: intro-assets
