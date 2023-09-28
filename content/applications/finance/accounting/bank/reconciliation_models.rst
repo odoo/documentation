@@ -1,129 +1,123 @@
 =====================
-Reconciliation Models
+Reconciliation models
 =====================
 
-Once the bank statements are correctly imported, it is essential to *reconcile* the records properly
-and ensure all *Journal Entries* are balanced and in agreement. To ease and speed up the
-reconciliation process, you can configure **Reconciliation Models**, which are particularly useful
-with recurrent entries such as bank fees.
+Reconciliation models are used to automate the :doc:`bank reconciliation <reconciliation>` process,
+which is especially handy when dealing with recurring entries like bank fees. Reconciliation models
+can also be helpful in handling :doc:`cash discounts <../customer_invoices/cash_discounts>`.
 
-.. todo:: Add a link to the Reconciliation process in the paragraph above, once the doc will have
-   been updated.
-
-.. note::
-   Reconciliation Models are also useful to handle *Cash Discounts*. Please refer to
-   :doc:`this documentation <../customer_invoices/cash_discounts>` for more
-   information.
-
-.. _reconciliation_models_types:
-
-Types of Reconciliation Models
-==============================
-
-There are three types of Reconciliation Models:
-
-#. :ref:`Write-off Button <reconciliation_models_button>`
-#. :ref:`Suggestion of counterpart values <reconciliation_models_suggestion>`
-#. :ref:`Match existing invoices/bills <reconciliation_models_match>`
-
-.. _reconciliation_models_button:
-
-Manually create a write-off on clicked button
----------------------------------------------
-
-When you are reconciling an entry with an *Open Balance*, you can use the buttons available under
-the *Manual Operations* tab to pre-fill all the values automatically, before validating the
-reconciliation. Each button is a different Reconciliation Model.
-
-.. image:: reconciliation_models/reconciliation_models_button.png
-   :align: center
-   :alt: Example of a Reconciliation Model with a write-off button in Odoo Accounting
-
-.. _reconciliation_models_suggestion:
-
-Suggest counterpart values
---------------------------
-
-This type of Reconciliation Model suggests immediately counterpart values that only need to be
-validated. This automation is based on a set of rules defined in the reconciliation model.
-
-.. image:: reconciliation_models/reconciliation_models_suggestion.png
-   :align: center
-   :alt: Example of a Reconciliation Model that suggests counterpart values in Odoo Accounting
-
-.. _reconciliation_models_match:
-
-Match existing invoices/bills
------------------------------
-
-This type of Reconciliation Model automatically selects the right Customer Invoice or Vendor Bill
-that matches the payment. All that is left to do is to validate the entry. This automation is based
-on a set of rules defined in the reconciliation model.
-
-.. image:: reconciliation_models/reconciliation_models_match.png
-   :align: center
-   :alt: Example of a Reconciliation Model that matches existing invoices and bills automatically
-         in Odoo Accounting
-
-Configuration
-=============
-
-To manage or create new **Reconciliation Models**, go to :menuselection:`Accounting -->
-Reconciliation --> Reconciliation Models`. Alternatively, you can also open this menu from the
-Accounting Overview, by going to your Bank Journal card, clicking on the three little dots, and then
-on *Reconciliation Models*.
-
-.. image:: reconciliation_models/reconciliation_models_overview.png
-   :align: center
-   :alt: Open the Reconciliation Model menu from the overview dashboard in Odoo Accounting
-
-.. important::
-   The first entry, named *Invoices Matching Rule*, is the one responsible for the current matching
-   of invoices and bills. Therefore, it is advised to leave it at the top of the list and not to
-   delete it.
-
-Open the model you want to modify, or click on *Create* to create a new one, then fill out the form.
-
-Type
-----
-
-See :ref:`above <reconciliation_models_types>` for an explanation about the different types of
-Reconciliation Models.
-
-.. note::
-   If the *Documents* application is installed on your database, an additional **Activity type**
-   field appears when *To check* is ticked. Selecting the value *Reconciliation request* implies
-   that, whenever you use this model, a *Request Document* window pops up to request a document from
-   a user.
-
-Conditions on Bank Statement Line
----------------------------------
-
-Define here all the conditions that are required for a Reconciliation Model to be applied.
-
-.. important::
-   If a record matches with several Reconciliation Models, the first one in the *sequence* of models
-   will be applied. The sequence is simply the order of the models in the *list view*. They can be
-   rearranged by dragging-and-dropping the handle next to the name.
-
-.. image:: reconciliation_models/reconciliation_models_conditions.png
-   :align: center
-   :alt: Conditions for the Reconciliation Model to be applied in Odoo Accounting
-
-Counterpart Values
-------------------
-
-This section comprises the values that are applied by the Reconciliation Model.
-
-If the value to reconcile needs to be written-off in two separate accounts, click on *Add a second
-line*.
-
-.. image:: reconciliation_models/reconciliation_models_counterparts.png
-   :align: center
-   :alt: Counterparts values of a Reconciliation Model in Odoo Accounting
+Each model is created based on a :ref:`model type <models/type>` and :guilabel:`bank transaction
+conditions`.
 
 .. seealso::
-
-   - :doc:`reconciliation`
    - :doc:`bank_synchronization`
-   - :doc:`../customer_invoices/cash_discounts`
+   - `Odoo Tutorials: Reconciliation models <https://www.odoo.com/slides/slide/reconciliation-models-1841?fullscreen=1>`_
+
+.. _models/type:
+
+Reconciliation model types
+==========================
+
+The reconciliation models are available by going to :menuselection:`Accounting --> Configuration
+--> Banks: Reconciliation Models`. For each reconciliation model, a :guilabel:`Type` must be set.
+Three types of models exist:
+
+- :guilabel:`Button to generate counterpart entry`: a button is created in the resulting entry
+  section of the bank reconciliation view. If clicked, this button generates a counterpart entry to
+  reconcile with the active transaction based on the rules set in the model. The rules specified in
+  the model determine the counterpart entry's account(s), amount(s), label(s), and analytic
+  distribution;
+- :guilabel:`Rule to suggest counterpart entry`: used for recurring transactions to match the
+  transaction to a new entry based on conditions that must match the information on the transaction;
+- :guilabel:`Rule to match invoices/bills`: used for recurring transactions to match the transaction
+  to existing invoices, bills, or payments based on conditions that must match the information on
+  the transaction.
+
+Default reconciliation models
+=============================
+
+In Odoo, different models are available by default depending on the company's fiscal localization.
+These can be updated if needed. Users can also create their own reconciliation models by clicking
+:guilabel:`New`.
+
+.. important::
+   If a record matches with several reconciliation models, the first one in the *sequence* of models
+   is applied. You can rearrange the order by dragging and dropping the handle next to the name.
+
+   .. image:: reconciliation_models/list-view.png
+      :alt: Rearrange the sequence of models in the list view.
+
+Invoices/Bills perfect match
+----------------------------
+
+This model should be at the top of the *sequence* of models, as it enables Odoo to suggest matching
+existing invoices or bills with a bank transaction based on set conditions.
+
+.. image:: reconciliation_models/invoices-bills-perfect-match.png
+   :alt: Set rules to trigger the reconciliation.
+
+Odoo automatically reconciles the payment when the :guilabel:`Auto-validate` option is selected, and
+the model conditions are perfectly met. In this case, it expects to find on the bank statement's
+line the invoice/payment's reference (as :guilabel:`Label` is selected) and the partner's name
+(as :guilabel:`Partner is set` is selected) to suggest the correct counterpart entry and reconcile
+the payment automatically.
+
+Invoices/Bills partial match if underpaid
+-----------------------------------------
+
+This model suggests a customer invoice or vendor bill that partially matches the payment when the
+amount received is slightly lower than the invoice amount, for example in the case of
+**cash discounts**. The difference is reconciled with the account indicated in the
+:guilabel:`counterpart entries` tab.
+
+The reconciliation model :guilabel:`Type` is :guilabel:`Rule to match invoices/bills`, and the
+:guilabel:`Payment tolerance` should be set.
+
+.. image:: reconciliation_models/partial-match.png
+   :alt: Set rules to trigger the reconciliation.
+
+.. note::
+   The :guilabel:`Payment tolerance` is only applicable to lower payments. It is disregarded when an
+   overpayment is received.
+
+.. seealso::
+   :doc:`../customer_invoices/cash_discounts`
+
+Line with bank fees
+-------------------
+
+This model suggests a counterpart entry according to the rules set in the model. In this case, the
+reconciliation model :guilabel:`Type` is :guilabel:`Rule to suggest counterpart entry`, and the
+:guilabel:`Label` can be used for example, to identify the information referring to the
+:guilabel:`Bank fees` in the label of the transaction.
+
+.. image:: reconciliation_models/bank-fees.png
+   :alt: Set rules to trigger the reconciliation.
+
+.. note::
+   `Regular expressions <https://regexone.com/>`_, often abbreviated as **Regex**, can be used in
+   Odoo in various ways to search, validate, and manipulate data within the system. Regex can be
+   powerful but also complex, so it's essential to use it judiciously and with a good understanding
+   of the patterns you're working with.
+
+   To use regular expressions in your reconciliation models, set the :guilabel:`Transaction Type`
+   to :guilabel:`Match Regex` and add your expression. Odoo automatically retrieves the
+   transactions that match your Regex expression and the conditions specified in your model.
+
+   .. image:: reconciliation_models/regex.png
+      :alt: Using Regex in Odoo
+
+Partner mapping
+===============
+
+Partner mapping allows you to establish rules for automatically matching transactions to the correct
+partner account, saving time and reducing the risk of errors that can occur during manual
+reconciliation. For example, you can create a partner mapping rule for incoming payments with
+specific reference numbers or keywords in the transaction description. When an incoming payment
+meets these criteria, Odoo automatically maps it to the corresponding customer's account.
+
+To create a partner mapping rule, go to the :guilabel:`Partner Mapping` tab and enter the
+:guilabel:`Find Text in Label`, :guilabel:`Find Text in Notes`, and :guilabel:`Partner`.
+
+.. image:: reconciliation_models/partner-mapping.png
+   :alt: defining partner mapping
