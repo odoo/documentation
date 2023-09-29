@@ -68,7 +68,7 @@ The `Upgrade website <https://upgrade.odoo.com/>`_ is the main platform for requ
         - The email to receive the link to the upgraded database
         - The purpose of the upgrade, which must be set to "Test"
 
-        Once submitted, a new database will be added to the database manager page in the selected version. It might take some time before the database is ready to be used, at which point an email will be sent to the email address provided in the pop-up.
+        After submitting the form, the upgrade process will begin and a new database will be displayed on the database manager page. Once the process succeeded, the upgraded database will be ready to be used, at which point an email will also be sent to the email address provided with instructions on how to access the upgraded database. In case of an issue during the upgrade process, an email will also be sent with instructions on how to proceed.
 
     .. group-tab:: Odoo SH
 
@@ -79,11 +79,16 @@ The `Upgrade website <https://upgrade.odoo.com/>`_ is the main platform for requ
 
         .. image:: /administration/upgrade/odoo_sh/odoo-sh-staging.png
             :align: center
-            :alt: Click on the upgrade menu
+            :alt: Odoo.sh project and tabs
 
-        .. important::
-            Most users of Odoo SH have custom modules installed on their database. In those situations, the source code of those modules must be up-to-date with the target version of Odoo before the upgrade can be performed. See :ref:`TODOUPG upgrade your customizations` for more information.
+        The **latest production daily automatic backup** is then sent to the `upgrade platform <https://www.upgrade.odoo.com>`_ 
 
+        Once the upgrade platform finished upgrading the backup and uploading it on the branch, it is now in a **special mode**: each time a **commit is pushed** on the branch, a **restore operation** of the upgraded backup occurs, and an **update of all the custom modules** happens. This allows you to quickly iterate on your custom modules upgrade scripts. The log file of the upgrade process can be found at :file:`~/logs/upgrade.log` in your newly upgraded staging build.
+
+
+
+        .. note::
+            Most users of Odoo SH have custom modules installed on their database. In those situations, the source code of those modules must be up-to-date with the target version of Odoo before the upgrade can be performed. See :ref:`TODOUPG upgrade your customizations` for more information. It is also possible that the modules are not needed after the upgrade, refer to :ref:`TODOUPG remove unused modules` for more information.
 
     .. group-tab:: On-Premise
         
@@ -95,6 +100,16 @@ The `Upgrade website <https://upgrade.odoo.com/>`_ is the main platform for requ
 
         An upgraded test database can also be requested via the `Upgrade website <https://upgrade.odoo.com/>`_.
 
+        .. note::
+            - For security reasons, only the person who submitted the upgrade request is able to download it.
+            - For storage reasons, the copy of your database is submitted without a filestore to the upgrade                server. Therefore, the upgraded database will not contain the production filestore.
+            - Before restoring the upgraded database, its filestore must be merged with the production                 filestore to be able to perform tests in the same conditions as it would be in the new version.
+            - The upgraded database contains:
+                - A `dump.sql` file containing the upgraded database.
+                - A `filestore` folder containing files that were extracted from in-database records into
+                    attachments (if there are any) and new standard Odoo files from the targeted Odoo version
+                    (like new images, icons, payment provider's logos, etc.). This is the folder that should be
+                    merged with the production filestore in order to get the full upgraded filestore.
 
 
 .. _upgrade/test_your_db:
