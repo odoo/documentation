@@ -41,17 +41,7 @@ Upgrade request via the Odoo Upgrade Portal
 
 Upgrade your production database
 ================================
-
-Once you have completed the testing successfully, you can proceed to upgrade your live database in
-production. Download your upgraded database from the link in the email and import it onto your live
-environment.
-
-.. important::
-   - Same as in the test phase, when requesting an upgrade for production purposes, the copy of your
-     database is submitted without a filestore.
-   - Therefore, the upgraded database filestore must be merged with the production filestore before
-     deploying the new version.
-
+moved
 Custom modules (if applicable)
 ==============================
 

@@ -71,41 +71,4 @@ to upgrade your production database.
 Production upgrade
 ==================
 
-Once you are happy with your testing, you can start the process on the :guilabel:`Production`
-branch.
-
-On your :guilabel:`Production` branch, go to the :guilabel:`Upgrade` tab, select the
-:guilabel:`targeted version` and click on the :guilabel:`start Upgrade` button.
-
-.. image:: odoo_sh/odoo-sh-prod.png
-   :align: center
-   :alt: View from the upgrade tab
-
-The actual process is **triggered as soon as you push a new commit** in your branch. Make sure you
-are pushing code that is compatible with the new version. For example by merging the code from your
-upgraded staging branch.
-
-.. note::
-   You can see the progress of the upgrade by going to the :guilabel:`Upgrade` tab of the main
-   branch.
-
-.. image:: odoo_sh/odoo-sh-progress.png
-   :align: center
-   :alt: View showing the progress of the upgrade
-
-.. important::
-   Your database is unavailable throughout the process.
-
-.. note::
-   If anything goes wrong, the platform automatically reverts the upgrade, the same as it would be
-   for a regular update. In case of success, a backup is always made.
-
-The update of your custom modules must be successful to complete the entire upgrade process. Make
-sure the status of your staging upgrade is :guilabel:`successful` before trying it in production.
-
-.. note::
-   It may happen that custom modules are no longer needed after an upgrade. Custom modules in the
-   upgraded database are set to be updated. If the modules are missing in the code, the update
-   fails, thus failing the whole process. An empty module with a manifest and possibly some custom
-   upgrade script are necessary to clean up the database. The complete removal of the module has to
-   be handled afterwards.
+moved
