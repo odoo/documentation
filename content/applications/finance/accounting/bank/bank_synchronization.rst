@@ -51,19 +51,20 @@ Now you can search for your bank institution. Select it and follow the steps to 
    web browser doesn't block pop-ups and that your ad-blocker is disabled.
 
 .. important::
-   When choosing the date for the first bank statement synchronization, pick the date when you
-   start recording accounting transaction on your Odoo accounting database. For example, if you
-   import your closing balance in Odoo on the 31/12/2022 and you start recording accounting
-   transactions on the 01/01/2023, your synchronization date should be 01/01/2023.
+   When setting up the bank statement synchronization, Odoo automatically starts recording the
+   accounting transactions from the last transaction’s date +1 day (if the last transaction day is
+   31/12/2022, the recording starts on 01/01/2023). If the journal contains no transaction, Odoo
+   retrieves transactions as far back as possible. You can limit how far back Odoo retrieves
+   transactions by opening the Accounting app, going to :menuselection:`Accounting --> Lock Dates`,
+   and setting a date in the :guilabel:`Journal Entries Lock Date` field.
 
 You must provide a phone number during your first synchronization to secure your account. We ask for
 such information because we don't want your data falling into the wrong hands. Therefore, if we
 detect suspicious activities on your account, we block all requests coming from your account, and
 you need to reactivate it using that phone number.
 
-The third-party provider may request more information in order to connect with your
-bank institution.
-This information is not stored on Odoo's servers.
+The third-party provider may request more information in order to connect with your bank
+institution. This information is not stored on Odoo's servers.
 
 By default, transactions fetched from an online source are grouped inside the same statement, and
 one bank statement is created per month. You can change the bank statement creation periodicity
