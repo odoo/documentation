@@ -10,16 +10,7 @@ There are two ways to create your upgrade request.
 Upgrade request via command line
 --------------------------------
 
-For technically-advanced users and partners, the upgrade process can be initiated via the following
-command line on the server where the database is hosted:
-
-:command:`python <(curl -s https://upgrade.odoo.com/upgrade) test -d <your db name> -t
-<target version>`
-
-The above command creates the database dump, sends it to the upgrade platform, and initiates the
-automated upgrade process. During the upgrade, you can follow the live logs on your screen.
-Once the upgrade process is completed successfully, the upgraded database is restored onto the
-server (as a duplicate test database).
+moved
 
 Upgrade request via the Odoo Upgrade Portal
 -------------------------------------------

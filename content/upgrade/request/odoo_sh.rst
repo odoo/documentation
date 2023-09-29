@@ -7,28 +7,7 @@ Odoo.sh
 Overview
 ========
 
-Odoo.sh is integrated with the upgrade platform to make the upgrade process easier.
-
-.. note::
-   The :guilabel:`Upgrade` tab is available in the branches view. It is only available for valid
-   projects with a valid production build.
-
-.. image:: odoo_sh/odoo-sh-menu.png
-   :align: center
-   :alt: Click on the upgrade menu
-
-The suggested upgrade steps on Odoo.sh are:
-
-#. On a :guilabel:`Development` branch, upgrade your custom modules to keep them compatible with the
-   new version and thoroughly **test them**.
-#. Switch that branch to the :guilabel:`Staging` branch, **upgrade** the last daily production
-   backup and **test it**. Write upgrade scripts if necessary.
-#. Trigger the production upgrade from your :guilabel:`Production` branch and sit tight.
-
-.. seealso::
-   - :doc:`/upgrade`
-   - :doc:`Upgrade FAQ <../faq>`
-   - :doc:`Introduction to Odoo.sh <../../administration/odoo_sh/overview/introduction>`
+moved
 
 .. _upgrade/request/odoo_sh/custom-modules:
 

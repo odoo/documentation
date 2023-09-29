@@ -2,35 +2,7 @@
 Odoo Online
 ===========
 
-Odoo databases can be manually upgraded directly from the main Odoo website. To upgrade an Odoo
-database, navigate to the `database manager <https://www.odoo.com/my/databases>`_ page and sign in.
-
-The database manager page displays all of the Odoo databases associated with the user's account. Any
-databases that are not already on the most recent version of Odoo display an **arrow in a circle**
-icon next to the database name, indicating that the database can be upgraded.
-
-.. image:: odoo_online/databases-page.png
-   :align: center
-   :alt: The database manager page with an upgrade button next to the name of a database.
-
-.. important::
-   - If the database's version is **lower** than the latest major release: the database must be
-     upgraded within two months. After these two months, an automatic upgrade is initiated.
-   - If the database's version is **equal** to or **higher** than the latest major release:
-     you can disregard the invitation to upgrade, as the database probably would not benefit from
-     new features every two months.
-
-If a database is *not* on the latest online version, its administrator should receive an invitation
-to upgrade on the database's dashboard, displayed as an **arrow in a circle**.
-
-.. image:: odoo_online/database-notification.png
-   :alt: Invitation to upgrade on the database dashboard.
-
-.. note::
-   Versions that are not supported anymore become deprecated and must be updated to avoid
-   security issues. It is recommended to initiate the upgrade yourself and not wait for the
-   automatic upgrade, as the former method allows you to request a test upgrade of the database to
-   check for any discrepancies.
+moved
 
 Test database
 =============
