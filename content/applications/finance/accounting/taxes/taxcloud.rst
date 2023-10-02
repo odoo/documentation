@@ -2,9 +2,17 @@
 TaxCloud integration
 ====================
 
+.. warning::
+   The Odoo TaxCloud integration has begun its decommissioning, starting in Odoo 17. New
+   installations are prohibited in Odoo 17. In Odoo 18, the TaxCloud module(s) will **not** exist at
+   all. Odoo recommends the use of the Avatax platform, instead.
+
+.. seealso::
+   :doc:`avatax`
+
 TaxCloud calculates the sales tax rate in real time for every state, city, and special jurisdiction
-in the United States. It keeps track of which products are exempt from sales tax and in which states
-each exemption applies.
+in the United States. It keeps track of which products are exempt from sales tax, and in which
+states each exemption applies.
 
 TaxCloud registration
 =====================
