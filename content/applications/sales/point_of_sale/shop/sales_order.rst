@@ -21,6 +21,10 @@ sales application.
    To ease finding the right sales order, you can filter that list on the **customer** or on the
    **order reference**. You can also set the customer before clicking on
    :guilabel:`Quotations/Orders` to reduce the list to one particular customer.
+   
+.. note::
+   When the sale order is at draft state (quotation), all service type sale order lines have quantity set to zero on POS.
+   Quantities are set to correct number after the sale order has been confirmed.
 
 Apply a down payment or settle the order
 ========================================
