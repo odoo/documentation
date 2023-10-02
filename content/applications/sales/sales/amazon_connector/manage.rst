@@ -109,11 +109,6 @@ generated on Odoo to the Amazon backend.
 In addition, for your B2B clients, it is currently required to manually retrieve VAT numbers from
 the Amazon backend before creating the invoice in Odoo.
 
-.. note::
-   For :doc:`TaxCloud <../../../finance/accounting/taxes/taxcloud>` users: invoices created from
-   Amazon sales orders are **not** synchronized with TaxCloud, since Amazon already includes them in
-   its own tax report to TaxCloud.
-
 Register payments
 -----------------
 

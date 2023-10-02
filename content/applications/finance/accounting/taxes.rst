@@ -296,7 +296,6 @@ directly to a product line.
 
   - :doc:`taxes/fiscal_positions`
   - :doc:`taxes/B2B_B2C`
-  - :doc:`taxes/taxcloud`
   - :doc:`reporting/tax_returns`
 
 .. toctree::
