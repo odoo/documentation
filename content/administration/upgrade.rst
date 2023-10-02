@@ -27,6 +27,7 @@ Upgrading to an :doc:`unsupported version </administration/maintain/supported_ve
    * Migration from another ERP to Odoo
 
 TODOUPG : put link to developer docs for upgrading module
+
 .. important::
     If your database contain any custom module, :ref:`their source code has to be upgraded <TODOUPG>` to the new version of Odoo before going through with the upgrade.
 
@@ -35,10 +36,19 @@ In case of issues with the upgrade, you can contact the :ref:`support team <http
 
 .. _upgrade/request-test-database:
 
-Requesting an upgraded test database
-------------------------------------
+Obtaining an upgraded test database
+-----------------------------------
 
 The `Upgrade website <https://upgrade.odoo.com/>`_ is the main platform for requesting an upgraded database but depending on your hosting, you are be able to upgrade your database from the command line, from `<https://odoo.com/my/databases>`_, or from your `Odoo SH project <https//odoo.sh/project>`_.
+
+In all cases, your data follows the same process as described in the following diagram:
+
+.. image:: /upgrade/advanced/upgrade_process/schema_upgrade_process.png
+    :width: 50%
+    :alt: Schema of the upgrade process : Export the database to a file, upload to the upgrade server, standard upgrade scripts, download the upgraded database, import the file into a database, (Optional : Custom upgrade scripts)
+    :align: center
+
+Where the standard upgrade scripts consists of a sequence of :ref:`reference/upgrade/migration-scripts`, each responsible for upgrading a specific part of a module's data. 
 
 .. note::
     You can always request a new upgraded test database in case you want to test the upgrade again or if you want to test the upgrade to a different version of Odoo.
@@ -118,6 +128,9 @@ Testing the new version of your database
 ----------------------------------------
 
 Once in possession of an upgraded test database, it is important to spend some time testing it to ensure that, once the upgrade goes live, you are not stuck in your day-to-day activities by a change in views, behavior, or an error message.
+
+.. note::
+    When an upgrade request completes successfully (test or production), an email that contains an "Upgrade Report" is automatically sent and is made available in the Discuss app. It contains valuable information regarding new feature and changes brought by the new version of Odoo.
 
 Test databases are neutered and some features are disabled to prevent them from having an impact on the production database:
 
@@ -235,5 +248,43 @@ FAQ
 Which version of Odoo should I upgrade to ?
 ===========================================
 
-We always recommend upgrading to the latest version of Odoo to benefit from the latest features, improvements, and security fixes.
+We always recommend upgrading **to the latest version of Odoo** to benefit from the latest features, improvements, and security fixes. If you are hosted on Odoo Online, you will automatically be enrolled in the rolling release program and will always be on the latest version of Odoo if your database can be upgraded automatically.
 
+What is the Rolling Release (applicable to Odoo Online databases) ?
+=============================
+
+
+This feature allows customers to upgrade their database directly from a message prompt sent to the database administrator as soon as the new version is released. Odoo first tests the upgrade to the next version and if no issues are detected, the database administrator receives a message with 2 options:
+
+#. To 'Upgrade Now', which immediately triggers the upgrade of your live production database. (Discouraged)
+
+#. To take you to your `database manager <https://www.odoo.com/my/databases/>`_ where you can `request an upgraded test database <https://upgrade.odoo.com/#online/>`_ and check the upgraded test database for any discrepancies. (Recommended)
+
+If a database cannot be successfully upgraded automatically, then a ticket is automatically created to allow the upgrade technicians of Odoo to investigate the issue and fix it. Once the issue is fixed, the database is unblocked from the process and is available to be tested automatically again
+
+.. note::
+    In case of a database running a version that will soon be unsupported, the database can be automatically upgraded to the latest supported version of Odoo through the rolling release process.
+
+
+How is my data handled in the Upgrade Platform?
+===============================================
+
+The Odoo Upgrade platform uses the same Privacy Policy as the rest of Odoo.com services.
+
+Your data is hosted on servers that follow our security guidelines, namely:
+
+- SSL - All web connections to client instances are protected with 256-bit SSL encryption (HTTPS with a 2048-bit modulus SSL certificate), and running behind Grade A SSL stacks. All our certificate chains are using SHA-2 already.
+- Safe System - Our servers are running recent Linux distribution with up-to-date security patches, with firewall and intrusion countermeasures (not disclosed for obvious reasons).
+
+Servers are located at the same locations as our Cloud providers with the following services:
+
+- Restricted perimeter, physically accessed by authorized data center employees only
+- Physical access control with security badges or biometrical security
+- Security cameras monitoring the data center locations 24/7
+- Security personnel on-site 24/7
+
+The uploaded and migrated databases uploaded to the Upgrade platform are kept for up to 3 months and are permanently deleted following that period.
+
+You can learn more about privacy and data handling at Odoo by visiting our `General Data Protection Regulation page <https://www.odoo.com/gdpr>`_.
+
+.. _upgrade_faq/rolling_release:
