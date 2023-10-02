@@ -115,5 +115,4 @@ To define which fiscal position must be used by default for a specific partner, 
 .. seealso::
 
   * :doc:`../taxes`
-  * :doc:`taxcloud`
   * :doc:`B2B_B2C`
