@@ -276,7 +276,19 @@ directly to a product line.
 
 .. seealso::
 
-  - :doc:`fiscal_positions`
-  - :doc:`B2B_B2C`
-  - :doc:`taxcloud`
-  - :doc:`../../reporting/declarations/tax_returns`
+  - :doc:`taxes/fiscal_positions`
+  - :doc:`taxes/B2B_B2C`
+  - :doc:`taxes/taxcloud` (decommissioning TaxCloud integration in Odoo 17+)
+  - :doc:`reporting/tax_returns`
+
+.. toctree::
+   :titlesonly:
+
+   taxes/cash_basis
+   taxes/retention
+   taxes/vat_verification
+   taxes/fiscal_positions
+   taxes/avatax
+   taxes/taxcloud
+   taxes/eu_distance_selling
+   taxes/B2B_B2C

@@ -106,6 +106,6 @@ To manually select which Fiscal Position to use for a new Sales Order, Invoice, 
 
 .. seealso::
 
-  * :doc:`taxes`
-  * :doc:`taxcloud`
+  * :doc:`../taxes`
+  * :doc:`taxcloud` (decommissioning TaxCloud integration in Odoo 17+)
   * :doc:`B2B_B2C`
