@@ -6,7 +6,7 @@ import time
 import requests
 
 account_token = "integration_token"  # Use your token
-domain_name = "https://iap-extract.odoo.com"
+domain_name = "https://extract.api.odoo.com/"
 path_to_pdf = "/path/to/your/pdf"
 doc_type = "invoice"  # invoice, expense or applicant
 
