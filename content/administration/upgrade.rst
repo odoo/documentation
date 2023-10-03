@@ -31,7 +31,7 @@ TODOUPG : put link to developer docs for upgrading module
 .. important::
     If your database contain any custom module, :ref:`their source code has to be upgraded <TODOUPG>` to the new version of Odoo before going through with the upgrade.
 
-In case of issues with the upgrade, you can contact the :ref:`support team <https://www.odoo.com/help>` for assistance.
+In case of issues with the upgrade, you can contact the `support team <https://www.odoo.com/help>` for assistance.
 
 
 .. _upgrade/request-test-database:
@@ -57,7 +57,7 @@ Where the standard upgrade scripts consists of a sequence of :ref:`reference/upg
 
     .. group-tab:: Odoo Online
 
-        Odoo databases can be manually upgraded directly from the main Odoo website. To upgrade an Odoo database, navigate to the `database manager <https://www.odoo.com/my/databases>`_ page and sign in.
+        Odoo databases can be manually upgraded directly from the main Odoo website. To upgrade an Odoo database, navigate to the `database manager <https://www.odoo.com/my/databases>` page and sign in.
 
         The database manager page displays all of the Odoo databases associated with the user's account. Any databases that are not already on the most recent version of Odoo display an **arrow in a circle** icon next to the database name, indicating that the database can be upgraded.
 
@@ -250,15 +250,17 @@ Which version of Odoo should I upgrade to ?
 
 We always recommend upgrading **to the latest version of Odoo** to benefit from the latest features, improvements, and security fixes. If you are hosted on Odoo Online, you will automatically be enrolled in the rolling release program and will always be on the latest version of Odoo if your database can be upgraded automatically.
 
+.. _upgrade_faq/rolling_release:
+
 What is the Rolling Release (applicable to Odoo Online databases) ?
-=============================
+===================================================================
 
 
 This feature allows customers to upgrade their database directly from a message prompt sent to the database administrator as soon as the new version is released. Odoo first tests the upgrade to the next version and if no issues are detected, the database administrator receives a message with 2 options:
 
 #. To 'Upgrade Now', which immediately triggers the upgrade of your live production database. (Discouraged)
 
-#. To take you to your `database manager <https://www.odoo.com/my/databases/>`_ where you can `request an upgraded test database <https://upgrade.odoo.com/#online/>`_ and check the upgraded test database for any discrepancies. (Recommended)
+#. To take you to your `database manager <https://www.odoo.com/my/databases/>` where you can `request an upgraded test database <https://upgrade.odoo.com/#online/>`_ and check the upgraded test database for any discrepancies. (Recommended)
 
 If a database cannot be successfully upgraded automatically, then a ticket is automatically created to allow the upgrade technicians of Odoo to investigate the issue and fix it. Once the issue is fixed, the database is unblocked from the process and is available to be tested automatically again
 
@@ -287,4 +289,9 @@ The uploaded and migrated databases uploaded to the Upgrade platform are kept fo
 
 You can learn more about privacy and data handling at Odoo by visiting our `General Data Protection Regulation page <https://www.odoo.com/gdpr>`_.
 
-.. _upgrade_faq/rolling_release:
+Why does some issues require a developer from Odoo ?
+====================================================
+
+The upgrade process is split in 2 parts : the standard upgrade process, and the upgrade of the custom modules. If some important data is removed during the standard upgrade process, a migration script must be injected to save them. Since the standard migration scripts are executed on a server owned by Odoo S.A., only trusted code can be injected in the process.
+
+Custom migration scripts are of no use in those situations since the data is removed before the custom migration scripts are executed. In situation where the standard upgrade process does not complete due to an error, the custom migration scripts are not executed either.
