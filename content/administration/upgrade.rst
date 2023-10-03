@@ -295,3 +295,10 @@ Why does some issues require a developer from Odoo ?
 The upgrade process is split in 2 parts : the standard upgrade process, and the upgrade of the custom modules. If some important data is removed during the standard upgrade process, a migration script must be injected to save them. Since the standard migration scripts are executed on a server owned by Odoo S.A., only trusted code can be injected in the process.
 
 Custom migration scripts are of no use in those situations since the data is removed before the custom migration scripts are executed. In situation where the standard upgrade process does not complete due to an error, the custom migration scripts are not executed either.
+
+Why can't you make my view be exactly like it was before ?
+==========================================================
+
+With each new version of Odoo, standard views, features, fields, and models are changed to improve the user experience and the performance of the application. Therefore, asking the upgrade team to downgrade a feature of your database so that it matches the previous version of Odoo is not possible, as it would cancel out the benefits of the upgrade.
+
+However, if you are paying Odoo for the maintenance of your customizations and that the view in question is part of it, in case of issues with that view during the upgrade, Odoo will take care of fixing the customization so that it becomes compatible with the new version of Odoo.
