@@ -295,7 +295,7 @@ Upgrade
 Available for production and staging branches for valid projects.
 
 .. seealso::
-    :doc:`Upgrade - Odoo.sh <../../../upgrade/request/odoo_sh>`
+    :ref:`Upgrade - Odoo.sh <upgrade/request-test-database/odoo-sh>`
 
 .. _odoosh-gettingstarted-branches-tabs-settings:
 

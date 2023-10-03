@@ -22,14 +22,12 @@ Upgrading to an :doc:`unsupported version </administration/maintain/supported_ve
     An upgrade does not cover : 
 
    * Downgrading to a previous version of Odoo (i.e., Odoo 15 to Odoo 12)
-   * Changing :ref:`editions <upgrade-faq/editions-change>` (i.e., Community to Enterprise edition)
-   * Switching :ref:`hosting type <upgrade-faq/hosting-types-switch>` (i.e., On-Premise to Odoo Online or Odoo.sh)
+   * Changing :ref:`editions <install/editions>` (i.e., Community to Enterprise edition)
+   * Switching :doc:`hosting type </administration/maintain/hosting_changes>` (i.e., On-Premise to Odoo Online or Odoo.sh)
    * Migration from another ERP to Odoo
 
-TODOUPG : put link to developer docs for upgrading module
-
 .. important::
-    If your database contain any custom module, :ref:`their source code has to be upgraded <TODOUPG>` to the new version of Odoo before going through with the upgrade.
+    If your database contain a custom module, :doc:`its source code must be upgraded </developer/reference/upgrade>` to the new version of Odoo before going through with the upgrade.
 
 In case of issues with the upgrade, you can contact the `support team <https://www.odoo.com/help>` for assistance.
 
@@ -43,7 +41,7 @@ The `Upgrade website <https://upgrade.odoo.com/>`_ is the main platform for requ
 
 In all cases, your data follows the same process as described in the following diagram:
 
-.. image:: /upgrade/advanced/upgrade_process/schema_upgrade_process.png
+.. image:: /administration/upgrade/schema_upgrade_process.png
     :width: 50%
     :alt: Schema of the upgrade process : Export the database to a file, upload to the upgrade server, standard upgrade scripts, download the upgraded database, import the file into a database, (Optional : Custom upgrade scripts)
     :align: center
@@ -56,6 +54,8 @@ Where the standard upgrade scripts consists of a sequence of :ref:`reference/upg
 .. tabs::
 
     .. group-tab:: Odoo Online
+
+        .. _upgrade/request-test-database/odoo-online:
 
         Odoo databases can be manually upgraded directly from the main Odoo website. To upgrade an Odoo database, navigate to the `database manager <https://www.odoo.com/my/databases>` page and sign in.
 
@@ -80,7 +80,10 @@ Where the standard upgrade scripts consists of a sequence of :ref:`reference/upg
 
         After submitting the form, the upgrade process will begin and a new database will be displayed on the database manager page. Once the process succeeded, the upgraded database will be ready to be used, at which point an email will also be sent to the email address provided with instructions on how to access the upgraded database. In case of an issue during the upgrade process, an email will also be sent with instructions on how to proceed.
 
+
     .. group-tab:: Odoo SH
+
+        .. _upgrade/request-test-database/odoo-sh:
 
         Odoo SH is integrated with the upgrade platform to make the upgrade process easier.
 
@@ -95,12 +98,12 @@ Where the standard upgrade scripts consists of a sequence of :ref:`reference/upg
 
         Once the upgrade platform finished upgrading the backup and uploading it on the branch, it is now in a **special mode**: each time a **commit is pushed** on the branch, a **restore operation** of the upgraded backup occurs, and an **update of all the custom modules** happens. This allows you to quickly iterate on your custom modules upgrade scripts. The log file of the upgrade process can be found at :file:`~/logs/upgrade.log` in your newly upgraded staging build.
 
-
-
         .. note::
-            Most users of Odoo SH have custom modules installed on their database. In those situations, the source code of those modules must be up-to-date with the target version of Odoo before the upgrade can be performed. See :ref:`TODOUPG upgrade your customizations` for more information. It is also possible that the modules are not needed after the upgrade, refer to :ref:`TODOUPG remove unused modules` for more information.
+            Most users of Odoo SH have custom modules installed on their database. In those situations, the source code of those modules must be up-to-date with the target version of Odoo before the upgrade can be performed. See :doc:`/developer/reference/upgrade` for more information. It is also possible that the modules are not needed after the upgrade, refer to :ref:`upgrade/remove_customizations` for more information.
 
     .. group-tab:: On-Premise
+
+        .. _upgrade/request-test-database/on-premise:
         
         The standard upgrade process can be initiated via the following command line on the machine where the database is hosted:
         `python <(curl -s https://upgrade.odoo.com/upgrade) test -d <your db name> -t <target version>`
@@ -128,6 +131,8 @@ Testing the new version of your database
 ----------------------------------------
 
 Once in possession of an upgraded test database, it is important to spend some time testing it to ensure that, once the upgrade goes live, you are not stuck in your day-to-day activities by a change in views, behavior, or an error message.
+
+.. _upgrade/upgrade_report:
 
 .. note::
     When an upgrade request completes successfully (test or production), an email that contains an "Upgrade Report" is automatically sent and is made available in the Discuss app. It contains valuable information regarding new feature and changes brought by the new version of Odoo.
@@ -232,7 +237,7 @@ The process of upgrading a database to production is similar to the one of upgra
 In case of an issue with your production database, you can request the assistance of Odoo via the `support page <https://odoo.com/help>`_.
 
 .. seealso::
-    :doc:`/upgrade/sla`
+    :doc:`/applications/services/helpdesk/overview/sla`
 
 Comparing customizations to the new version
 -------------------------------------------

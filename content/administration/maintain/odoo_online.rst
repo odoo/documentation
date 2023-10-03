@@ -30,8 +30,8 @@ Upgrade
 Trigger a database upgrade.
 
 .. seealso::
-   For more information about the upgrade process, check out the :doc:`Odoo Online upgrade
-   documentation <../../upgrade/request/odoo_online>`.
+   For more information about the upgrade process, check out the :ref:`Odoo Online upgrade
+   documentation <upgrade/request-test-database>`.
 
 .. _odoo_online/duplicate:
 

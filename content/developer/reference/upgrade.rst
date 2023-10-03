@@ -16,7 +16,7 @@ A migration script is a Python file containing a function called `migrate` which
     `Migrations in Django <https://docs.djangoproject.com/en/4.2/topics/migrations/>`_
 
 
-.. example:: Two similar migration scripts that each add an exclamation mark at the end of the name of each partner
+.. spoiler:: Two similar migration scripts that each add an exclamation mark at the end of the name of each partner
 
     .. code-block:: python
 
@@ -51,6 +51,20 @@ A migration script is a Python file containing a function called `migrate` which
 
             _logger.info("Updated %s partners", len(partners))
 
+.. spoiler:: A migration script that fixes a studio view
+    .. code-block:: python
+
+        import logging
+        from odoo.upgrade import util  # TODOUPG: link to util package
+
+        _logger = logging.getLogger(__name__)
+
+
+        def migrate(cr, version):
+            with util.edit_view(cr, "studio_customization.odoo_studio_project__e2f15f1a-2bdb-4003-a36e-ed731a1b9fae") as arch:
+                node = arch.xpath("""//xpath[@expr="//group[field[@name='activity_summary']]"]""")[0]
+                node.attrib["expr"] = "//field[@name='activity_summary']"
+
 
 Positioning a migration script
 ------------------------------
@@ -71,7 +85,7 @@ Migration scripts are executed depending on their module, the version of Odoo, t
 
 .. important::
 
-    Only employees of Odoo can develop a migration script specifically targetted at one database to be executed during the standard upgrade process. Migration scripts that are part of custom modules will be executed after retrieval of the database from the upgrade server. More information about this process is available in :ref:`<upgrade/request-test-database>`.
+    Only employees of Odoo can develop a migration script specifically targetted at one database to be executed during the standard upgrade process. Migration scripts that are part of custom modules will be executed after retrieval of the database from the upgrade server. More information about this process is available in :ref:`upgrade/request-test-database`.
 
 .. _upgrade/migration-scripts-phases:
 
@@ -112,6 +126,14 @@ Custom modules developed by third parties are maintained by their developers, th
     - :ref:`reference/fields`
     - :ref:`reference/orm/models`
 
+
+.. _upgrade/remove_customizations:
+
+Removing customizations
+-----------------------
+
+During an upgrade
+
 Upgrading fields definitions
 ----------------------------
 
@@ -121,14 +143,14 @@ For upgrading fields definitions, we recommend looking at the properties of the 
     In Odoo 12 and before, the model `account.invoice` had a field named `refund_invoice_id` (`source code <https://github.com/odoo/odoo/blob/f7431b180834a73fe8d3aed290c275cc6f8dfa31/addons/account/models/account_invoice.py#L273>`) which cannot is absent on the model `account.move` after Odoo 13. This field was actually renamed to `reversed_entry_id` during the upgrade process. It is possible to find this information by searching for another Many2one field in `account.move` that is related to `account.move` in the upgraded version of Odoo.
 
 .. important::
-    When changing the name of fields in the code, their data stored in a PSQL column must be moved with :doc:`migration scripts <reference/upgrade/migration-scripts>` to the new column. Furthermore, fields can also be referenced in other parts of the database such as automated actions, views, reports, etc ... which can be stored in the database independently from the code.
+    When changing the name of fields in the code, their data stored in a PSQL column must be moved with :ref:`migration scripts <reference/upgrade/migration-scripts>` to the new column. Furthermore, fields can also be referenced in other parts of the database such as automated actions, views, reports, etc ... which can be stored in the database independently from the code.
 
 The logs of the upgrade process can also be helpful to determine the corresponding field since some migration scripts will explicitely log the renaming.
 
 Upgrading models and methods definitions
 ----------------------------------------
 
-For upgrading models definitions (which does not happen often), it is simply a matter of comparing the filenames of the models in the old and new version of Odoo. The :ref:`upgrade report <upgrade-faq/upgrade-report>` can also contain useful information about the big changes in the new version of Odoo.
+For upgrading models definitions (which does not happen often), it is simply a matter of comparing the filenames of the models in the old and new version of Odoo. The :ref:`upgrade report <upgrade/upgrade_report>` can also contain useful information about the big changes in the new version of Odoo.
 
 Methods names can also change between two versions of Odoo. For any override of standard method in a custom module, it is necessary to check if the method has been renamed or refactored in the new version of Odoo. The best way to find the new name of a method is to look at the source code of that method in the old version of Odoo and try to match it with the source code of a method in the new version of Odoo. This works wonderfully for methods that have simply been renamed, but it can be more difficult for methods that have been refactored.
 
@@ -179,9 +201,9 @@ When the upgrade platform upgrades a database, an exception can be raised in the
 
 
 .. seealso::
-    :ref:`reference/exceptions`
-    :doc:`application/general/users/access_rights`
-    :doc:`application/general/users/manage_users`
+    - :ref:`reference/exceptions`
+    - :doc:`/applications/general/users/access_rights`
+    - :doc:`/applications/general/users/manage_users`
 
 Upgrading server & automated actions
 ====================================
@@ -192,15 +214,19 @@ If such action is removed during the standard upgrade process, an intervention f
 
 .. seealso::
     - :ref:`reference/actions/server`
-    - :doc:`/upgrade/advanced/migration_scripts`
+    - :ref:`reference/upgrade/migration-scripts`
 
 Upgrading studio customizations
 -------------------------------
 
-Warning with studio views
-=========================
+.. _reference/upgrade/studio_views:
 
-Issues with the data of Odoo Studio customizations will generally not raise a blocking exception, but a warning instead. This means that the upgrade process will not stop and therefore custom migration scripts can be written to fix the issue raised in the logs
+Studio views
+============
+
+Issues with the data of Odoo Studio customizations will generally not raise a blocking exception, but will archive the view and issue a warning in the logs. This means that the upgrade process will not stop and therefore custom migration scripts can be written to fix the issue raised in the logs
+
+Unarchiving the view in your database will trigger the validation error if the view is not valid and will show the complete error message, allowing you to find the tag that is causing the issue. However, that might not be the case for invisible or restricted fields. In any case, navigating to the view and opening Odoo Studio will show you the validation error message in most cases.
 
 .. note::
     Custom views generated by Odoo Studio do not always contain immuable target in their xpath definition. Therefore we recommend to take a look at the generated view to see if any improvement can be applied to ensure more robust xpath expressions.
@@ -225,11 +251,37 @@ Issues with the data of Odoo Studio customizations will generally not raise a bl
             Disabling it for the migration ...
 
     Fixing this issue can be done by ensuring all the elements used as target of the xpath are still present in the parent view. This might require retargetting the xpath if its target has moved position, or if the field was renamed, etc ...
-    Our recommendation is to find the element targetted by the xpath in the base version of Odoo, and then write a new xpath to target it in the upgraded version.
-
+    Our recommendation is to find the element targetted by the xpath in the base version of Odoo, and then modify the target of the xpath to match the same position it in the upgraded version.
 
 .. seealso::
-    :ref:`reference/exceptions`
-    :ref:`reference/views`
-    :ref:`reference/views/inheritance`
-    
+    - :ref:`reference/exceptions`
+    - :ref:`reference/views`
+    - :ref:`reference/views/inheritance`
+
+Studio fields
+=============
+
+In case of invalid references on a field created by studio, such as the `model`, `related`, or `relation`, the field will be removed by the standard upgrade process and will therefore not be accessible for the custom migration scripts or on the upgraded database.
+
+This is why we insist on thoroughly testing your upgraded database since any data loss will be unrecoverable once the upgrade of your production database is completed.
+
+.. example::
+    In the upgrade between Odoo 12 and Odoo 13, the model `account.invoice` was merged with `account.move` and was then subsequentely removed. The standard migrations scripts took care of moving the standard data from the PSQL table `account_invoice` to `account_move`, such as the columns `partner_id`, `name`, `amount_residual`, ...  but any custom field created by the user will not be automatically moved. Then, once the migration of the data to `account_move` is completed, the table `account_invoice` is dropped, with all the custom data still in it.
+
+In those situations, you can `request assistance <https://www.odoo.com/help>`_ from Odoo to upgrade your custom fields during the standard upgrade process by specifying the following:
+
+- The name of the field(s) removed from your database
+- The name of the model(s) they were on
+- The reason why they were removed (model removed, relation removed, related field removed, ...)
+- Which new model, relation, or related field they should be on
+- Any additional information that could help retrieving the fields
+
+Studio reports
+==============
+
+The mechanism behind reports customization generated by Odoo Studio is the same as the one used for :ref:`reference/upgrade/studio_views`, but there could be other issues related to the duplication of a report.
+
+When duplicating a report to customize it, Odoo Studio will create a new report by copying the code of the original report. The original report might change throughout the version but since the copy can be altered by the user, the copy remains untouched. This means that the copy might not be compatible anymore with the new version of Odoo.
+
+This can be fixed easily by re-copying the content of the upgraded report, and writing it over the content of the duplicated report. Please note that this might lead to issue with the studio customizations made on the duplicated, such as xpath targets that are not valid anymore.
+
