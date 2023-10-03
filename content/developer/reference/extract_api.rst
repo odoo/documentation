@@ -22,7 +22,7 @@ Overview
 ========
 
 The extract API uses the JSON-RPC2_ protocol; its endpoint routes are located at
-`https://iap-extract.odoo.com`.
+`https://extract.api.odoo.com`.
 
 Version
 -------
@@ -516,9 +516,6 @@ fields we can extract from an expense report.
 +-------------------------+------------------------------------------------------------------------+
 | ``currency``            | ``content`` is a string                                                |
 +-------------------------+------------------------------------------------------------------------+
-| ``bill_reference``      | ``content`` is a string                                                |
-+-------------------------+------------------------------------------------------------------------+
-
 
 Applicant
 ~~~~~~~~~
