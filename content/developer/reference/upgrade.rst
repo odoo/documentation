@@ -114,6 +114,7 @@ Migration scripts are grouped according to the first part of their filenames int
     - end-aaa.py
     - end-~migrate.py
 
+.. _upgrade/upgrading_customizations:
 
 Upgrading customizations
 ========================
@@ -132,18 +133,21 @@ Custom modules developed by third parties are maintained by their developers, th
 Removing customizations
 -----------------------
 
-During an upgrade
+During an upgrade when :ref:`comparing customizations with the new version of Odoo <upgrade/comparing_customizations>`, there might be some part of the customizations that are not necessary anymore and that can be removed. To do so, a :ref:`migration script <reference/upgrade/migration-scripts>` must be used to uninstall the module from the database during the upgrade process. However, this will only remove the table and columns from the database, and won't have any impact on views, reports, filters, mail templates, automated & server actions, etc ... that refer those fields. Those references must be found and removed from the database in a :ref:`migration script <reference/upgrade/migration-scripts>` ensure a smooth uninstallation.
 
-Upgrading fields definitions
-----------------------------
+.. important::
+    :ref:`upgrade/test_your_db` is crucial, especially when uninstalling a module that adds new fields. Any view customization refering an uninstall field will prevent the view from being rendered and will therefore not be accessible.
 
-For upgrading fields definitions, we recommend looking at the properties of the field in the current version of Odoo, and match them with the properties of the fields and models in the new version of Odoo.
+Upgrading custom fields and their data
+--------------------------------------
+
+During an upgrade, standard fields can be renamed or moved, in which cases any custom field that has a reference to them must be adapted to the new version of Odoo. To do so, we recommend looking at the properties of the field in the current version of Odoo, and match them with the properties of the fields in the new version of Odoo to find the new name of the field.
 
 .. example::
     In Odoo 12 and before, the model `account.invoice` had a field named `refund_invoice_id` (`source code <https://github.com/odoo/odoo/blob/f7431b180834a73fe8d3aed290c275cc6f8dfa31/addons/account/models/account_invoice.py#L273>`) which cannot is absent on the model `account.move` after Odoo 13. This field was actually renamed to `reversed_entry_id` during the upgrade process. It is possible to find this information by searching for another Many2one field in `account.move` that is related to `account.move` in the upgraded version of Odoo.
 
 .. important::
-    When changing the name of fields in the code, their data stored in a PSQL column must be moved with :ref:`migration scripts <reference/upgrade/migration-scripts>` to the new column. Furthermore, fields can also be referenced in other parts of the database such as automated actions, views, reports, etc ... which can be stored in the database independently from the code.
+    When changing the name of fields in the code, their data stored in a PSQL column must be moved with :ref:`migration scripts <reference/upgrade/migration-scripts>` to the new column. Furthermore, fields can also be referenced in other parts of the database such as automated actions, views, reports, etc ... which can be stored in the database independently from the code that also needs to be moved.
 
 The logs of the upgrade process can also be helpful to determine the corresponding field since some migration scripts will explicitely log the renaming.
 
@@ -164,13 +168,13 @@ Views defined in Odoo have an external identifier that corresponds to the attrib
 
 Most of the time, the incompatibility of a custom view will be expressed via an error when parsing the view which can happen during the update of a module, or when rendering it.
 
-TODOUPG talk about custom standalone view vs custom view inheritance. For standalone : probably need to find the new name for the fields, for view inheritance : probably need to change the xpath target
+Custom views on custom models rarely require changes during an upgrade since they do not depend on a model maintained by Odoo S.A., while custom views inheriting from standard views can be impacted by changes in the standard views. In this case, the solution is to compare the same view in the two versions to see how the xpath currently used in the custom view can be adapted to the new version of the standard view.
 
 Upgrading data
---------------
+==============
 
 Errors during upgrade
-=====================
+---------------------
 
 When the upgrade platform upgrades a database, an exception can be raised in the code, stopping the upgrade process. In those situation, an intervention of a developer (either from Odoo via the `assistance page <https://www.odoo.com/help>`_ or from the maintainer of the module) is required to fix the issue and restart the upgrade process. **It is important to test the fix on a duplicated database before applying to your production database, in case of any side effects.**
 
@@ -206,7 +210,7 @@ When the upgrade platform upgrades a database, an exception can be raised in the
     - :doc:`/applications/general/users/manage_users`
 
 Upgrading server & automated actions
-====================================
+------------------------------------
 
 Since server and automated actions contain reference to fields, those references might be deprecated when changing version. This is usually applicable to server actions that are set to "Execute Python Code", "Create a new Record", or "Update the Record".
 
@@ -217,12 +221,12 @@ If such action is removed during the standard upgrade process, an intervention f
     - :ref:`reference/upgrade/migration-scripts`
 
 Upgrading studio customizations
--------------------------------
+===============================
 
 .. _reference/upgrade/studio_views:
 
 Studio views
-============
+------------
 
 Issues with the data of Odoo Studio customizations will generally not raise a blocking exception, but will archive the view and issue a warning in the logs. This means that the upgrade process will not stop and therefore custom migration scripts can be written to fix the issue raised in the logs
 
@@ -259,7 +263,7 @@ Unarchiving the view in your database will trigger the validation error if the v
     - :ref:`reference/views/inheritance`
 
 Studio fields
-=============
+-------------
 
 In case of invalid references on a field created by studio, such as the `model`, `related`, or `relation`, the field will be removed by the standard upgrade process and will therefore not be accessible for the custom migration scripts or on the upgraded database.
 
@@ -277,7 +281,7 @@ In those situations, you can `request assistance <https://www.odoo.com/help>`_ f
 - Any additional information that could help retrieving the fields
 
 Studio reports
-==============
+--------------
 
 The mechanism behind reports customization generated by Odoo Studio is the same as the one used for :ref:`reference/upgrade/studio_views`, but there could be other issues related to the duplication of a report.
 

@@ -151,6 +151,9 @@ Test databases are neutered and some features are disabled to prevent them from 
     - Are your reports (Invoice, Sales Order, etc.) correctly generated ?
     - Are your website pages working correctly ?
     - Are you able to create and modify records ? (Sales order, invoices, purchases, users, contacts, companies, etc ... ) 
+    - Is there any issues with your mail templates ?
+    - Are your search filters still present ?
+    - Can you export your data ?
 
 It is strongly receommend to test as many of your business flows as possible to ensure that they are working properly and to get more familiar with the new version of Odoo.
 
@@ -222,7 +225,7 @@ The process of upgrading a database to production is similar to the one of upgra
         .. important::
             The database is unavailable throughout the process. If anything goes wrong, the platform automatically reverts the upgrade, the same as it would be for a regular update. In case of success, a backup of the database before the upgrade is created and the database is made available in the new version of Odoo.
 
-        The update of your custom modules must be successful to complete the entire upgrade process. Make sure the status of your staging upgrade is :guilabel:`successful` before trying it in production. More information on how to upgrade your custom modules can be found in :ref:`TODOUPG upgrade your customizations`.
+        The update of your custom modules must be successful to complete the entire upgrade process. Make sure the status of your staging upgrade is :guilabel:`successful` before trying it in production. More information on how to upgrade your custom modules can be found in :ref:`upgrade/upgrading_customizations`.
 
     .. group-tab:: On-Premise
         
@@ -238,6 +241,8 @@ In case of an issue with your production database, you can request the assistanc
 
 .. seealso::
     :doc:`/applications/services/helpdesk/overview/sla`
+
+.. _upgrade/comparing_customizations:
 
 Comparing customizations to the new version
 -------------------------------------------
