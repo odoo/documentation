@@ -71,7 +71,7 @@ Positioning a migration script
 
 Migration scripts are executed depending on their module, the version of Odoo, the version of the module, the phase of the migration script, and finally its name. The path of a migration script is as follows:
 
-`<module_name>/migrations/<major_version>.<minor_version>/{pre|post|end}-*.py``
+`<module_name>/migrations/<major_version>.<minor_version>/{pre|post|end}-*.py`
 
 - `<module_name>` Corresponds to the name of the folder of a module. For example `account` for the Accounting module, or `sale_subscription` for the Subscription module.
 
@@ -94,7 +94,7 @@ Phases of migration scripts
 
 The upgrade process consists of three phases for each version of each module. It starts with the pre-phase, followed by post- and then end-. Migration scripts are grouped according to the first part of their filenames into the corresponding phase.
 
-The pre-phase is executed before the module and its dependencies are loaded, meaning that you cannot use the ORM to access any model or record, but executing PSQL queries in that phase is possible. The post-phase is executed after the module and its dependencies are loaded and upgraded. At that time, the ORM becomes available and you can refer any model or record. 
+The pre-phase is executed before the module and its dependencies are loaded, meaning that you cannot use the ORM to access any model or record, but executing PSQL queries in that phase is possible. The post-phase is executed after the module and its dependencies are loaded and upgraded. At that time, the ORM becomes available and you can refer any model or record.
 
 The end-phase is a little bit different, as it is executed after all modules have been upgraded for the major version. This phase is useful to perform operations that require the whole database to be upgraded, or to perform operations for which the order is not important such as modifying views.
 
@@ -144,7 +144,7 @@ Upgrading custom fields and their data
 During an upgrade, standard fields can be renamed or moved, in which cases any custom field that has a reference to them must be adapted to the new version of Odoo. To do so, we recommend looking at the properties of the field in the current version of Odoo, and match them with the properties of the fields in the new version of Odoo to find the new name of the field.
 
 .. example::
-    In Odoo 12 and before, the model `account.invoice` had a field named `refund_invoice_id` (`source code <https://github.com/odoo/odoo/blob/f7431b180834a73fe8d3aed290c275cc6f8dfa31/addons/account/models/account_invoice.py#L273>`) which cannot is absent on the model `account.move` after Odoo 13. This field was actually renamed to `reversed_entry_id` during the upgrade process. It is possible to find this information by searching for another Many2one field in `account.move` that is related to `account.move` in the upgraded version of Odoo.
+    In Odoo 12 and before, the model `account.invoice` had a field named `refund_invoice_id` (`source code <https://github.com/odoo/odoo/blob/f7431b180834a73fe8d3aed290c275cc6f8dfa31/addons/account/models/account_invoice.py#L273>`_) which is absent on the model `account.move` after Odoo 13. This field was actually renamed to `reversed_entry_id` during the upgrade process. It is possible to find this information by searching for another Many2one field in `account.move` that is related to `account.move` in the upgraded version of Odoo, for example in `Odoo 16 <https://github.com/odoo/odoo/blob/a0c1e2aa602ae46598a350ea6ae8d8b4a0c1c823/addons/account/models/account_move.py#L453>_`.
 
 .. important::
     When changing the name of fields in the code, their data stored in a PSQL column must be moved with :ref:`migration scripts <reference/upgrade/migration-scripts>` to the new column. Furthermore, fields can also be referenced in other parts of the database such as automated actions, views, reports, etc ... which can be stored in the database independently from the code that also needs to be moved.
@@ -250,7 +250,7 @@ Unarchiving the view in your database will trigger the validation error if the v
             xmlid: studio_customization.odoo_studio_crm_lead_378fc723-a146-2f5b-b6a7-a2f7e15922f8
             view.model: crm.lead
             view.parent: ir.ui.view(902,)
-            
+
             2023-09-04 15:04:34,315 28 WARNING db_1146520 odoo.addons.base.maintenance.migrations.base.pre-models-ir_ui_view: The custom view `Odoo Studio: crm.lead.tree.opportunity customization` (ID: 1137, Inherit: 902, Model: crm.lead) caused validation issues.
             Disabling it for the migration ...
 

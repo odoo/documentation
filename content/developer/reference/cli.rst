@@ -679,7 +679,7 @@ This enables direct interaction with the :ref:`orm <reference/orm>` and its func
            ...:
 
         In [4]: env.cr.commit()
-    
+
     .. important::
         By default, the shell is running in transaction mode. This means that any change made to the database will be rolled back when exiting the shell. To commit changes, use ``env.cr.commit()``.
 
