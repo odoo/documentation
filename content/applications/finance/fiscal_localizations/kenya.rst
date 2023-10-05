@@ -115,6 +115,6 @@ If you click on :guilabel:`Send and Print`, a .pdf of the invoice is generated. 
 
 .. note::
    To verify KRA has received the invoice information, take the :guilabel:`CU Invoice Number` and
-   and enter it in the :guilabel:`Invoice Number Checker` section on
+   enter it in the :guilabel:`Invoice Number Checker` section on
    `Kenya Revenue Authority website <https://itax.kra.go.ke/KRA-Portal>`_. Click
    :guilabel:`Validate` and find the invoice details.
