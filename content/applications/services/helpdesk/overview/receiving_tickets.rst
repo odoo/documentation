@@ -189,7 +189,7 @@ invitation to continue the conversation.
 Edit the :guilabel:`Chat Input Placeholder` to change the text that appears in the box where
 visitors will type their replies.
 
-Change the :guilabel:`Livechat Button Color` and and the :guilabel:`Channel Header Color` by
+Change the :guilabel:`Livechat Button Color` and the :guilabel:`Channel Header Color` by
 clicking a color bubble to open the color selection window. Click the refresh icon to the right of
 the color bubbles to reset the colors to the default selection.
 
