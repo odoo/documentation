@@ -46,7 +46,7 @@ interacted with the campaign in one way or another.
 
 .. image:: understanding_metrics/campaign-records-vs-participants.png
    :align: center
-   :alt: Difference between real-time record count and total participants on a markeing campaign.
+   :alt: Difference between real-time record count and total participants on a marketing campaign.
 
 Whenever the system runs, updating numbers and triggering actions, it will look at the
 :guilabel:`Target` model, and check if new :guilabel:`Records` have been added (or modified), which
