@@ -143,7 +143,7 @@ times, etc.)
 .. tip::
    Type `/` in either text field (:guilabel:`Note` or :guilabel:`Ticket instructions`) to reveal a
    sub-menu of :guilabel:`Structure` options. These options provide various formatting options to
-   ensure vital internal information is organzied for event staff to review.
+   ensure vital internal information is organized for event staff to review.
 
 .. image:: event_essentials/events-notes-tab.png
    :align: center
@@ -210,7 +210,7 @@ drag-and-drop web builder, located on the right sidebar.
 
 .. tip::
    To build an email event invite from scratch, select the :guilabel:`Plain Text` template, and
-   Odoo will provide a blank email canvas, which can be customized either by using the front-end
+   Odoo will provide a blank email canvas, which can be customized either by using the frontend
    rich text editor that accepts slash (`/`) commands, or the XML code editor when :ref:`developer
    mode <developer-mode>` is engaged and the :guilabel:`</>` icon is pressed.
 
@@ -266,15 +266,15 @@ Publish events
 ==============
 
 Until an event is published, it will remain hidden from public view on the website and registering
-for it will not be possible. To publish an event, navigate to it either from the back end of Odoo
-through the :guilabel:`Events` application, or access the hidden event page through the front end
+for it will not be possible. To publish an event, navigate to it either from the backend of Odoo
+through the :guilabel:`Events` application, or access the hidden event page through the frontend
 as either a priveliged user or administrator.
 
-If navigating from the back end, go to the event form, and click the :guilabel:`Go to Website`
-smart button to reach the event page on the website (on the front end). If starting from the front
-end, simply navigate to the event page that needs to be published.
+If navigating from the backend, go to the event form, and click the :guilabel:`Go to Website`
+smart button to reach the event page on the website (on the frontend). If starting from the frontend
+, simply navigate to the event page that needs to be published.
 
-No matter the route, an event page can only be published from the front end. In the upper right
+No matter the route, an event page can only be published from the frontend. In the upper right
 corner of the event page on the website, toggle the switch from the red :guilabel:`Unpublished`
 status to the green :guilabel:`Published` status. Doing so instantly makes the event page
 accessible to the public on the website.
