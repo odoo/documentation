@@ -1981,6 +1981,13 @@ msgid ""
 "contained in the record match, this guarantees that the message is authentic"
 " and has not been altered during transport."
 msgstr ""
+"Wenn Sie eine E-Mail versenden, fügt der Odoo-Server eine eindeutige "
+":abbr:`DKIM (DomainKeys Identified Mail)`-Signatur in die Kopfzeile ein. Der"
+" Server des Empfängers entschlüsselt diese Signatur mit Hilfe des "
+":abbr:`DKIM (DomainKeys Identified Mail)`-Datensatzes im Domainnamen der "
+"Datenbank. Wenn die Signatur und der im Datensatz enthaltene Schlüssel "
+"übereinstimmen, garantiert dies, dass die Nachricht authentisch ist und "
+"während des Transports nicht verändert wurde."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:83
 msgid ""
@@ -1988,10 +1995,13 @@ msgid ""
 "(Canonical Name)` record to the :abbr:`DNS (Domain Name System)` zone of the"
 " domain name:"
 msgstr ""
+"Um :abbr:`DKIM (DomainKeys Identified Mail)` zu aktivieren, fügen Sie einen "
+":abbr:`CNAME (Canonical Name)`-Datensatz in die :abbr:`DNS (Domain Name "
+"System)`-Zone des Domainnamens ein:"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:86
 msgid "`odoo._domainkey IN CNAME odoo._domainkey.odoo.com.`"
-msgstr ""
+msgstr "`odoo._domainkey IN CNAME odoo._domainkey.odoo.com.`"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:89
 msgid ""
@@ -1999,6 +2009,9 @@ msgid ""
 "`odoo._domainkey.mycompany.com` whose canonical name is "
 "`odoo._domainkey.odoo.com.`."
 msgstr ""
+"Wenn der Domainname `mycompany.com` lautet, stellen Sie sicher, dass Sie "
+"eine Unterdomain `odoo._domainkey.mycompany.com` erstellen, deren "
+"kanonischer Name `odoo._domainkey.odoo.com.` lautet."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:92
 msgid ""
@@ -2007,6 +2020,10 @@ msgid ""
 "domain name. The most common providers are :ref:`listed below "
 "<email_communication/SPFDKIM_common_providers>`."
 msgstr ""
+"Wie Sie einen :abbr:`CNAME (Canonical Name)`-Datensatz erstellen oder "
+"ändern, hängt von dem Provider ab, der die :abbr:`DNS (Domain Name "
+"System)`-Zone des Domainnamens hostet. Die gängigsten Provider sind "
+":ref:`unter aufgelistet <email_communication/SPFDKIM_common_providers>`."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:96
 msgid ""
@@ -2014,10 +2031,13 @@ msgid ""
 "a free tool like `DKIM Core <https://dkimcore.org/tools/>`_. If a selector "
 "is asked, enter `odoo`."
 msgstr ""
+"Prüfen Sie, ob der :abbr:`DKIM (DomainKeys Identified Mail)`-Datensatz mit "
+"einem kostenlosen Tool wie `DKIM Core <https://dkimcore.org/tools/>`_ gültig"
+" ist. Wenn Sie nach einem Selektor gefragt werden, geben Sie `odoo` ein."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:100
 msgid "Check the DMARC policy"
-msgstr ""
+msgstr "Die DMARC-Richtlinie prüfen"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:102
 msgid ""
@@ -2029,33 +2049,43 @@ msgid ""
 " with an incoming email that fails the :abbr:`SPF (Sender Policy Framework)`"
 " and/or :abbr:`DKIM (DomainKeys Identified Mail)` check."
 msgstr ""
+"Der DMARC-Datensatz (Domain-based Message Authentication, Reporting & "
+"Conformance) ist ein Protokoll, das :abbr:`SPF (Sender Policy Framework)` "
+"und :abbr:`DKIM (DomainKeys Identified Mail)` vereinigt. Die Anweisungen, "
+"die im :abbr:`DMARC (Domain-based Message Authentication, Reporting, & "
+"Conformance)`-Datensatz eines Domainnamens enthalten sind, teilen dem "
+"Zielserver mit, was mit einer eingehenden E-Mail geschehen soll, die die "
+":abbr:`SPF (Sender Policy Framework)`- und/oder :abbr:`DKIM (DomainKeys "
+"Identified Mail)`-Prüfung nicht besteht."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:110
 msgid "DMARC: TXT record"
-msgstr ""
+msgstr "DMARC: TXT-Datensatz"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:112
 msgid "`v=DMARC1; p=none;`"
-msgstr ""
+msgstr "`v=DMARC1; p=none;`"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:114
 msgid ""
 "There are three :abbr:`DMARC (Domain-based Message Authentication, "
 "Reporting, & Conformance)` policies:"
 msgstr ""
+"Es gibt drei :abbr:`DMARC (Domain-based Message Authentication, Reporting, &"
+" Conformance)`-Richtlinien:"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:117
 msgid "`p=none`"
-msgstr ""
+msgstr "`p=none`"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:118
 #: ../../content/applications/general/email_communication/email_domain.rst:171
 msgid "`p=quarantine`"
-msgstr ""
+msgstr "`p=quarantine`"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:119
 msgid "`p=reject`"
-msgstr ""
+msgstr "`p=reject`"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:121
 msgid ""
@@ -2063,6 +2093,10 @@ msgid ""
 "quarantine that email or ignore it if the :abbr:`SPF (Sender Policy "
 "Framework)` and/or :abbr:`DKIM (DomainKeys Identified Mail)` check fails."
 msgstr ""
+"`p=quarantine` und `p=reject` weisen den Server, der eine E-Mail empfängt, "
+"an, diese E-Mail unter Quarantäne zu stellen oder zu ignorieren, wenn die "
+":abbr:`SPF (Sender Policy Framework)`- und/oder :abbr:`DKIM (DomainKeys "
+"Identified Mail)`-Prüfung fehlschlägt."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:125
 msgid ""
@@ -2071,6 +2105,10 @@ msgid ""
 " must be :abbr:`SPF (Sender Policy Framework)` compliant or enable "
 ":abbr:`DKIM (DomainKeys Identified Mail)`."
 msgstr ""
+"Wenn der Domainname :abbr:`DMARC (Domain-based Message Authentication, "
+"Reporting, & Conformance)` verwendet und eine dieser Richtlinien definiert "
+"hat, muss die Domain :abbr:`SPF (Sender Policy Framework)`-konform sein oder"
+" :abbr:`DKIM (DomainKeys Identified Mail)` aktivieren."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:130
 msgid ""
@@ -2080,6 +2118,11 @@ msgid ""
 "*@aol.com* address for the database users. These emails will never reach "
 "their recipient."
 msgstr ""
+"Yahoo oder AOL sind Beispiele für E-Mail-Anbieter mit einer auf `p=reject` "
+"eingestellten Richtlinie :abbr:`DMARC (Domain-based Message Authentication, "
+"Reporting, & Conformance)`. Odoo rät dringend davon ab, eine *@yahoo.com* "
+"oder *@aol.com*-Adresse für die Datenbankbenutzer zu verwenden. Diese "
+"E-Mails werden ihren Empfänger nie erreichen."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:135
 msgid ""
@@ -2088,6 +2131,11 @@ msgid ""
 ":abbr:`DMARC (Domain-based Message Authentication, Reporting, & "
 "Conformance)` check fails."
 msgstr ""
+"`p=none` wird für den Besitzer der Domain verwendet, um Berichte über "
+"Einrichtungen zu erhalten, die ihre Domain verwenden. Es sollte keine "
+"Auswirkungen auf die Zustellbarkeit haben, wenn die :abbr:`DMARC (Domain-"
+"based Message Authentication, Reporting, & Conformance)`-Prüfung "
+"fehlschlägt."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:139
 msgid ""
@@ -2103,10 +2151,21 @@ msgid ""
 "Authentication, Reporting, & Conformance)` policy should not start out being"
 " too restrictive."
 msgstr ""
+":abbr:`DMARC (Domain-based Message Authentication, Reporting, & "
+"Conformance)`-Datensätze bestehen aus Tags in Form von :abbr:`DNS (Domain "
+"Name System)`-Datensätzen. Diese Tags/Parameter ermöglichen Berichte wie "
+":abbr:`RUA (Reporting URI of aggregate reports)` und :abbr:`RUF (Reporting "
+"URI for forensic reports)`, zusammen mit genaueren Angaben wie :abbr: `PCT "
+"(Prozentsatz der Nachrichten, die gefiltert werden)`, :abbr:`P (Richtlinie "
+"für die Organisationsdomain)`, :abbr:`SP (Richtlinie für Unterdomains der "
+"Organisationsdomain)` :abbr:`ADKIM (Ausrichtungsmodus für DKIM)` & "
+":abbr:`ASPF (Ausrichtungsmodus für SPF)`. Die Richtlinie :abbr:`DMARC "
+"(Domain-based Message Authentication, Reporting, & Conformance)` sollte "
+"nicht zu restriktiv sein, um sich zu bewähren."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:148
 msgid "The following chart displays available tags:"
-msgstr ""
+msgstr "Die folgende Tabelle zeigt die verfügbaren Tags an:."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:154
 msgid "Tag Name"
@@ -2122,95 +2181,95 @@ msgstr "Beispiel"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:157
 msgid "v"
-msgstr ""
+msgstr "v"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:158
 msgid "Protocol version"
-msgstr ""
+msgstr "Protokollversion"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:159
 msgid "`v=DMARC1`"
-msgstr ""
+msgstr "`v=DMARC1`"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:160
 msgid "pct"
-msgstr ""
+msgstr "pct"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:161
 msgid "Percentage of messages subjected to filtering"
-msgstr ""
+msgstr "Prozentsatz der Nachrichten, die gefiltert wurden"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:162
 msgid "`pct=20`"
-msgstr ""
+msgstr "`pct=20`"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:163
 msgid "ruf"
-msgstr ""
+msgstr "ruf"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:164
 msgid "Reporting URI for forensic reports"
-msgstr ""
+msgstr "Berichts-URI für forensische Berichte"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:165
 msgid "`ruf=mailto:authfail@example.com`"
-msgstr ""
+msgstr "`ruf=mailto:authfail@example.com`"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:166
 msgid "rua"
-msgstr ""
+msgstr "rua"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:167
 msgid "Reporting URI of aggregate reports"
-msgstr ""
+msgstr "Berichts-URI von aggregierten Berichten"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:168
 msgid "`rua=mailto:aggrep@example.com`"
-msgstr ""
+msgstr "`rua=mailto:aggrep@example.com`"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:169
 msgid "p"
-msgstr ""
+msgstr "p"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:170
 msgid "Policy for organizational domain"
-msgstr ""
+msgstr "Richtlinie für Organisationsdomain"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:172
 msgid "sp"
-msgstr ""
+msgstr "sp"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:173
 msgid "Policy for subdomains of the OD"
-msgstr ""
+msgstr "Richtlinie für Unterdomains der Organisationsdomain"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:174
 msgid "`sp=reject`"
-msgstr ""
+msgstr "`sp=reject`"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:175
 msgid "adkim"
-msgstr ""
+msgstr "adkim"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:176
 msgid "Alignment mode for DKIM"
-msgstr ""
+msgstr "Ausrichtungsmodus für DKIM"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:177
 msgid "`adkim=s`"
-msgstr ""
+msgstr "`adkim=s`"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:178
 msgid "aspf"
-msgstr ""
+msgstr "aspf"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:179
 msgid "Alignment mode for SPF"
-msgstr ""
+msgstr "Ausrichtungsmodus für SPF"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:180
 msgid "`aspf=r`"
-msgstr ""
+msgstr "`aspf=r`"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:182
 msgid ""
@@ -2218,41 +2277,51 @@ msgid ""
 "Conformance)` record of a domain name with a tool like `MXToolbox DMARC "
 "<https://mxtoolbox.com/DMARC.aspx>`_."
 msgstr ""
+"Überprüfen Sie den :abbr:`DMARC (Domain-based Message Authentication, "
+"Reporting, & Conformance)`-Eintrag eines Domainnamens mit einem Tool wie "
+"`MXToolbox DMARC <https://mxtoolbox.com/DMARC.aspx>`_."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:186
 msgid ""
 "`DMARC.org is another great resource to learn about DMARC records. "
 "<https://dmarc.org/overview/>`_"
 msgstr ""
+"`DMARC.org ist eine weitere gute Quelle, um mehr über DMARC-Datensätze zu "
+"erfahren. <https://dmarc.org/overview/>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:192
 msgid "SPF, DKIM & DMARC documentation of common providers"
-msgstr ""
+msgstr "SPF-, DKIM- & DMARC-Dokumentation der gängigen Anbieter"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:194
 msgid ""
 "`OVH DNS "
 "<https://docs.ovh.com/us/en/domains/web_hosting_how_to_edit_my_dns_zone/>`_"
 msgstr ""
+"`OVH DNS "
+"<https://docs.ovh.com/us/en/domains/web_hosting_how_to_edit_my_dns_zone/>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:195
 msgid ""
 "`OVH SPF <https://docs.ovh.com/us/en/domains/web_hosting_the_spf_record/>`_"
 msgstr ""
+"`OVH SPF <https://docs.ovh.com/us/en/domains/web_hosting_the_spf_record/>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:196
 msgid ""
 "`GoDaddy TXT record <https://www.godaddy.com/help/add-a-txt-record-19232>`_"
 msgstr ""
+"`GoDaddy TXT record <https://www.godaddy.com/help/add-a-txt-record-19232>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:197
 msgid "`GoDaddy SPF <https://www.godaddy.com/help/add-an-spf-record-19218>`_"
-msgstr ""
+msgstr "`GoDaddy SPF <https://www.godaddy.com/help/add-an-spf-record-19218>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:198
 msgid ""
 "`GoDaddy DKIM <https://www.godaddy.com/help/add-a-cname-record-19236>`_"
 msgstr ""
+"`GoDaddy DKIM <https://www.godaddy.com/help/add-a-cname-record-19236>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:199
 msgid ""
@@ -2260,12 +2329,17 @@ msgid ""
 "<https://www.namecheap.com/support/knowledgebase/article.aspx/317/2237/how-"
 "do-i-add- txtspfdkimdmarc-records-for-my-domain/>`_"
 msgstr ""
+"`NameCheap "
+"<https://www.namecheap.com/support/knowledgebase/article.aspx/317/2237/how-"
+"do-i-add- txtspfdkimdmarc-records-for-my-domain/>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:201
 msgid ""
 "`CloudFlare DNS <https://support.cloudflare.com/hc/en-"
 "us/articles/360019093151>`_"
 msgstr ""
+"`CloudFlare DNS <https://support.cloudflare.com/hc/en-"
+"us/articles/360019093151>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:202
 msgid ""
@@ -2278,6 +2352,8 @@ msgid ""
 "`Azure DNS <https://docs.microsoft.com/en-us/azure/dns/dns-getstarted-"
 "portal>`_"
 msgstr ""
+"`Azure DNS <https://docs.microsoft.com/en-us/azure/dns/dns-getstarted-"
+"portal>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:205
 msgid ""
@@ -2286,20 +2362,27 @@ msgid ""
 "configuration in one sent email. Mail-Tester can also be used to configure "
 "records for other, lesser-known providers."
 msgstr ""
+"Um die Konfiguration vollständig zu testen, verwenden Sie das Tool `Mail-"
+"Tester <https://www.mail-tester.com/>`_, das einen vollständigen Überblick "
+"über den Inhalt und die Konfiguration in einer gesendeten E-Mail gibt. Mail-"
+"Tester kann auch verwendet werden, um Einträge für andere, weniger bekannte "
+"Anbieter zu konfigurieren."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:210
 msgid ""
 "`Using Mail-Tester to set SPF Records for specific carriers "
 "<https://www.mail-tester.com/spf/>`_"
 msgstr ""
+"`Verwendung von Mail-Tester zum Einstellen von SPF-Datensätzen für bestimmte"
+" Anbieter <https://www.mail-tester.com/spf/>`_"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:3
 msgid "Send and receive emails in Odoo with an email server"
-msgstr ""
+msgstr "E-Mails in Odoo mit einem E-Mail-Server versenden und erhalten"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:6
 msgid "Odoo Online or Odoo.sh users"
-msgstr ""
+msgstr "Odoo-Online- oder Odoo.sh-Benutzer"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:8
 msgid ""
@@ -2307,6 +2390,10 @@ msgid ""
 "incoming emails already work out-of-the-box. So for **Odoo Online** and "
 "**Odoo.sh** customers, nothing needs to be configured!"
 msgstr ""
+"Da **Odoo seine eigenen Mailserver für die Datenbank einrichtet**, "
+"funktionieren ausgehende und eingehende E-Mails bereits problemlos. Für "
+"Kunden von **Odoo Online** und **Odoo.sh** muss also nichts konfiguriert "
+"werden!"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:12
 msgid ""
@@ -2314,6 +2401,9 @@ msgid ""
 "emails, simply use the standard online Odoo database normally since it has "
 "already been pre-configured to send email."
 msgstr ""
+"Wenn Sie keinen externen Mailserver benötigen, um große Mengen an Massen-E-"
+"Mails zu versenden, verwenden Sie einfach die Standard-Online-Datenbank von "
+"Odoo, da diese bereits für den E-Mail-Versand vorkonfiguriert ist."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:16
 msgid ""
@@ -2323,10 +2413,15 @@ msgid ""
 "conditions. See the :doc:`FAQ <faq>` or contact support for more "
 "information."
 msgstr ""
+"Der Odoo-Server unterliegt einem täglichen E-Mail-Limit, um Missbrauch zu "
+"verhindern. Das Standardlimit beträgt 200 E-Mails pro Tag für Datenbanken "
+"mit einem **Enterprise**-Abonnement. Dieses Limit kann unter bestimmten "
+"Bedingungen erhöht werden. Weitere Informationen finden Sie in den :doc:`FAQ"
+" <faq>` oder kontaktieren Sie den Support."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:22
 msgid "Scope of this documentation"
-msgstr ""
+msgstr "Umfang dieser Dokumentation"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:24
 msgid ""
@@ -2336,12 +2431,19 @@ msgid ""
 "<https://www.odoo.sh>`_. Incoming and outgoing servers must be configured "
 "for on-premise databases."
 msgstr ""
+"Dieses Dokument ist **vor allem für Odoo-On-Premise-Datenbanken** gedacht, "
+"die im Gegensatz zu `Odoo Online <https://www.odoo. com/trial>`_ und "
+"`Odoo.sh <https://www.odoo.sh>`_ nicht von einer sofort einsatzbereiten "
+"Lösung zum Senden und Empfangen von E-Mails in Odoo profitieren. Eingangs- "
+"und Ausgangsserver müssen für On-Premise-Datenbanken konfiguriert werden."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:29
 msgid ""
 "The following sections below contain information on how to integrate an "
 "external email server with Odoo."
 msgstr ""
+"In den folgenden Abschnitten finden Sie Informationen darüber, wie Sie einen"
+" externen E-Mail-Server in Odoo integrieren."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:33
 msgid ""
@@ -2352,16 +2454,25 @@ msgid ""
 "manage the email server's reputation themselves. For more information see "
 ":doc:`Configure DNS records to send emails in Odoo <email_domain>`"
 msgstr ""
+"Wenn in Ihrem Unternehmen niemand für die Verwaltung von E-Mail-Servern "
+"zuständig ist, sind Odoo Online und Odoo.sh sehr zu empfehlen. Bei diesen "
+"Odoo-Hostingtypen funktioniert das Senden und Empfangen von E-Mails sofort "
+"und wird von Profis überwacht. Ein Unternehmen kann jedoch auch seinen "
+"eigenen E-Mail-Server verwenden, wenn es den E-Mail-Server selbst verwalten "
+"möchte. Weitere Informationen finden Sie unter :doc:`DNS-Datensätze für den "
+"E-Mail-Versand in Odoo konfigurieren `"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:42
 msgid "Default notifications system"
-msgstr ""
+msgstr "Standard-Benachrichtigungssystem"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:44
 msgid ""
 "Documents in Odoo (such as a CRM opportunity, a sales order, an invoice, "
 "etc.) have a discussion thread, called *chatter*."
 msgstr ""
+"Dokumente in Odoo (wie z. B. eine CRM-Chance, ein Verkaufsauftrag, eine "
+"Rechnung usw.) haben einen Diskussionsthread, der *Chatter* genannt wird."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:47
 msgid ""
@@ -2373,6 +2484,14 @@ msgid ""
 "in the chatter from their respective email, or as the name listed in their "
 "*Contacts* record."
 msgstr ""
+"Wenn ein Datenbankbenutzer eine Nachricht im Chatter hinterlässt, wird diese"
+" Nachricht per E-Mail an die Follower des Dokuments als Benachrichtigung "
+"gesendet (außer an den Absender). Wenn ein Follower auf die Nachricht "
+"antwortet, aktualisiert die Antwort den Chatter, und Odoo leitet eine "
+"weitere Antwort als Benachrichtigung an die Follower weiter. Nachrichten, "
+"die von Benutzern oder externen Benutzern an den Chatter zurückgesendet "
+"werden, erscheinen im Chatter unter ihrer jeweiligen E-Mail oder unter dem "
+"Namen, der in ihrem *Kontakte*-Datensatz aufgeführt ist."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:53
 msgid ""
@@ -2380,10 +2499,13 @@ msgid ""
 "information see :ref:`Use a default email address "
 "<email_communication/default>`."
 msgstr ""
+"Diese Benachrichtigungen werden über eine Standard-Absenderadresse gesendet."
+" Weitere Informationen finden Sie unter :ref:`Verwendung einer Standard-E-"
+"Mail-Adresse <email_communication/default>`."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:57
 msgid "Manage outbound messages"
-msgstr ""
+msgstr "Ausgehende Nachrichten verwalten"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:59
 msgid ""
@@ -2394,6 +2516,15 @@ msgid ""
 " Odoo. Reference the SMTP data of the external email server. Once all the "
 "information has been filled out, click :guilabel:`Test Connection`."
 msgstr ""
+"Gehen Sie als Systemadministrator in Odoo zu :guilabel:`Einstellungen --> "
+"Allgemeine Einstellungen --> Dialog` und aktivieren Sie die Option "
+":guilabel:`Benutzerdefinierte E-Mail-Server`. Klicken Sie dann auf "
+":guilabel:`Speichern`. Klicken Sie anschließend auf "
+":guilabel:`Postausgangsserver` und klicken Sie auf :guilabel:`Neu`, um einen"
+" neuen Eintrag für den Postausgangsserver in Odoo zu erstellen. Verweisen "
+"Sie auf die SMTP-Daten des externen E-Mail-Servers. Wenn Sie alle "
+"Informationen ausgefüllt haben, klicken Sie auf :guilabel:`Verbindung "
+"testen`."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:70
 msgid ""
@@ -2403,26 +2534,36 @@ msgid ""
 "(Domain Name System)` will improve deliverability. For more information see "
 ":doc:`email_domain`."
 msgstr ""
+"Wenn Sie sicherstellen, dass die Ausgangsdomain :abbr:`SPF (Sender Policy "
+"Framework)`, :abbr:`DKIM (DomainKeys Identified Mail)` und :abbr:`DMARC "
+"(Domain-based Message Authentication, Reporting, & Conformance)` auf dem "
+":abbr:`DNS (Domain Name System)` eingerichtet hat, wird die Zustellbarkeit "
+"verbessert. Weitere Informationen finden Sie unter :doc:`email_domain`."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:78
 msgid "Port restriction"
-msgstr ""
+msgstr "Port-Einschränkung"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:80
 msgid ""
 "Note that port 25 is blocked for security reasons on the Odoo Online and "
 "Odoo.sh platforms. Try using ports 465, 587, or 2525 instead."
 msgstr ""
+"Beachten Sie, dass Port 25 aus Sicherheitsgründen auf den Plattformen Odoo "
+"Online und Odoo.sh blockiert ist. Versuchen Sie stattdessen die Ports 465, "
+"587 oder 2525 zu verwenden."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:86
 msgid "Use a default \"From\" email address"
-msgstr ""
+msgstr "Standardmäßige „Von“-E-Mail-Adresse verwenden"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:88
 msgid ""
 "Sometimes, an email's \"From\" (outgoing) address can belong to a different "
 "domain, and that can be a problem."
 msgstr ""
+"Manchmal kann die Absenderadresse einer E-Mail zu einer anderen Domain "
+"gehören, und das kann ein Problem darstellen."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:91
 msgid ""
@@ -2433,12 +2574,20 @@ msgid ""
 " security, the email that Odoo is trying to redistribute would get rejected "
 "by some recipients' email servers."
 msgstr ""
+"Wenn zum Beispiel ein Kunde mit der E-Mail-Adresse "
+"`mary\\@customer.example.com` auf eine Nachricht antwortet, versucht Odoo, "
+"dieselbe E-Mail an die anderen Abonnenten im Thread weiterzuleiten. Wenn "
+"jedoch die Domain `customer.example.com` diese Art der Verwendung aus "
+"Sicherheitsgründen verbietet, würde die E-Mail, die Odoo weiterzuleiten "
+"versucht, von den E-Mail-Servern einiger Empfänger abgewiesen werden."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:96
 msgid ""
 "To avoid that problem, Odoo sends all emails using a \"From\" address from "
 "the same authorized domain."
 msgstr ""
+"Um dieses Problem zu vermeiden, sendet Odoo alle E-Mails mit einer "
+"„Von“-Adresse von derselben autorisierten Domain."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:99
 msgid ""
@@ -2446,24 +2595,35 @@ msgid ""
 "<developer-mode>` and going to :menuselection:`Settings --> Technical --> "
 "Parameters --> System Parameters` menu."
 msgstr ""
+"Rufen Sie die :guilabel:`Systemparameter` auf, indem Sie den "
+":ref:`Entwicklermodus <developer-mode>` aktivieren und das Menü "
+":menuselection:`Einstellungen --> Technisch --> Parameter --> "
+"Systemparameter` aufrufen."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:102
 msgid ""
 "To force the email address from which emails are sent, a combination of the "
 "following keys needs to be set in the system parameters of the database:"
 msgstr ""
+"Um die E-Mail-Adresse zu erzwingen, von der aus E-Mails versendet werden, "
+"muss eine Kombination der folgenden Schlüssel in den Systemparametern der "
+"Datenbank eingestellt werden:"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:105
 msgid ""
 "`mail.default.from`: accepts the local part or a complete email address as "
 "value"
 msgstr ""
+"`mail.default.from`: akzeptiert den lokalen Teil oder eine vollständige "
+"E-Mail-Adresse als Wert"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:106
 msgid ""
 "`mail.default.from_filter`: accepts a domain name or a full email address as"
 " value"
 msgstr ""
+"`mail.default.from_filter`: akzeptiert einen Domainnamen oder eine "
+"vollständige E-Mail-Adresse als Wert"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:109
 msgid ""
@@ -2471,6 +2631,10 @@ msgid ""
 "the default Odoo email server, otherwise this parameter can be set using the"
 " `from_filter` field on `ir.mail_server`."
 msgstr ""
+"Der `mail.default.from_filter` funktioniert nur bei Konfigurationen mit "
+"`odoo-bin` oder dem Standard-Odoo-E-Mail-Server. Andernfalls können Sie "
+"diesen Parameter über das Feld `from_filter` auf `ir.mail_server` "
+"einstellen."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:112
 msgid ""
@@ -2479,6 +2643,11 @@ msgid ""
 "the email will be encapsulated using a combination of the two system "
 "parameters: `mail.default.from` and `mail.catchall.domain`."
 msgstr ""
+"Das Feld kann ein Domainname oder eine vollständige E-Mail-Adresse sein oder"
+" es kann leer bleiben. Wenn die E-Mail-Adresse des Absenders nicht mit "
+"diesem eingestellten Filter übereinstimmt, wird die E-Mail mit einer "
+"Kombination aus den beiden Systemparametern gekapselt: `mail.default.from` "
+"und `mail.catchall.domain`."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:117
 msgid ""
@@ -2488,6 +2657,11 @@ msgid ""
 "in Odoo: ``“Admin” <admin@example.com>`` => ``“Admin” "
 "<notifications@mycompany.com>``."
 msgstr ""
+"Im folgenden Beispiel wird die Absender-E-Mail-Adresse durch die Kombination"
+" der beiden Systemparameter (`mail.default.from` und `mail.catchall.domain`)"
+" ersetzt. Dies ist die Standardkonfiguration für Benachrichtigungen in Odoo:"
+" ``„Admin“ <admin@example.com>`` => ``„Admin“ "
+"<notifications@mycompany.com>``."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:122
 msgid ""
@@ -2496,6 +2670,11 @@ msgid ""
 "`mail.default.from` (if it contains a full email address) or a combination "
 "of `mail.default.from` and `mail.catchall.domain`."
 msgstr ""
+"Mit anderen Worten, wenn die E-Mail-Adresse des Autors nicht mit "
+"`mail.default.from_filter` übereinstimmt, wird die E-Mail-Adresse durch "
+"`mail.default.from` (wenn sie eine vollständige E-Mail-Adresse enthält) oder"
+" eine Kombination aus `mail.default.from` und `mail.catchall.domain` "
+"ersetzt."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:126
 msgid ""
@@ -2504,10 +2683,14 @@ msgid ""
 "addresses that are different from `mail.default.from` will be encapsulated "
 "in `mail.default.from`."
 msgstr ""
+"Wenn der `from_filter` eine vollständige E-Mail-Adresse enthält und die "
+"`mail.default.from` mit dieser Adresse übereinstimmt, dann werden alle "
+"E-Mail-Adressen, die sich von der `mail.default.from` unterscheiden, in die "
+"`mail.default.from` eingekapselt."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:133
 msgid "Utilizing the \"From\" filter on an outgoing email server"
-msgstr ""
+msgstr "Verwendung des „Von“-Filters auf einem Postausgangsserver"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:135
 msgid ""
@@ -2520,16 +2703,30 @@ msgid ""
 "field in Odoo by navigating to :menuselection:`Settings --> Discuss --> "
 "Custom Mail Servers --> Outgoing Mail Servers --> New`."
 msgstr ""
+"Das Feld :guilabel:`VON-Filterung` ermöglicht die Verwendung eines "
+"bestimmten Postausgangsservers in Abhängigkeit von der "
+":guilabel:`Von`-E-Mail-Adresse oder -Domain, in deren Namen Odoo sendet. "
+"Diese Einstellung kann verwendet werden, um die Zustellbarkeit oder die "
+"Erfolgsquote beim Versand von E-Mails aus der Datenbank zu verbessern. Die "
+"Einstellung des Feldes :guilabel:`VON-Filterung` kann auch verwendet werden,"
+" um in einer Umgebung mit mehreren Unternehmen von verschiedenen Domains aus"
+" zu versenden. Sie können auf dieses Feld in Odoo zugreifen, indem Sie zu "
+":menuselection:`Einstellungen --> Dialog --> Benutzerdefinierte E-Mail-"
+"Server --> Postausgangsserver --> Neu` navigieren."
 
 #: ../../content/applications/general/email_communication/email_servers.rst-1
 msgid "Outgoing email server settings and the FROM filter settings."
 msgstr ""
+"Einstellungen für den Postausgangsserver und die VON-Filtereinstellungen."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:146
 msgid ""
 "When an email is sent from Odoo while the :guilabel:`FROM Filtering` field "
 "is set, an email server is chosen in the following sequence:"
 msgstr ""
+"Wenn eine E-Mail von Odoo aus versendet wird und das Feld :guilabel:`VON-"
+"Filterung` gesetzt ist, wird ein E-Mail-Server in der folgenden Reihenfolge "
+"ausgewählt:"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:149
 msgid ""
@@ -2539,6 +2736,12 @@ msgid ""
 "address) is `test\\@example.com`, only the email servers that have the "
 ":guilabel:`FROM Filtering` value equal to `test\\@example.com` are returned."
 msgstr ""
+"Zunächst sucht Odoo nach einem E-Mail-Server, der denselben Wert für "
+":guilabel:`VON-Filterung` hat wie der :guilabel:`Von`-Wert (E-Mail-Adresse),"
+" der in der ausgehenden E-Mail definiert ist. Wenn der :guilabel:`Von`-Wert "
+"(E-Mail-Adresse) zum Beispiel `test\\@example.com` lautet, werden nur die "
+"E-Mail-Server zurückgegeben, deren Wert für :guilabel:`VON-Filterung` gleich"
+" `test\\@example.com` ist."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:153
 msgid ""
@@ -2549,6 +2752,13 @@ msgid ""
 " the email servers that have the :guilabel:`FROM Filtering` value equal to "
 "`example.com` are returned."
 msgstr ""
+"Wenn jedoch keine E-Mail-Server gefunden werden, die den Wert "
+":guilabel:`Von` verwenden, sucht Odoo nach einem E-Mail-Server, der die "
+"gleiche *Domain* hat wie der in der ausgehenden E-Mail definierte Wert "
+":guilabel:`Von` (E-Mail-Adresse). Wenn die E-Mail-Adresse :guilabel:`Von` "
+"beispielsweise `test\\@example.com` lautet, werden nur die E-Mail-Server "
+"zurückgegeben, bei denen der Wert :guilabel:`VON-Filterung` gleich "
+"`example.com` ist."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:159
 msgid ""
@@ -2556,6 +2766,9 @@ msgid ""
 "returns all email servers that do not have any :guilabel:`FROM Filtering` "
 "value(s) set."
 msgstr ""
+"Wenn nach der Suche nach der Domain keine E-Mail-Server gefunden werden, "
+"gibt Odoo alle E-Mail-Server zurück, für die keine Werte für :guilabel:`VON-"
+"Filterung` festgelegt wurden."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:162
 msgid ""
@@ -2565,6 +2778,11 @@ msgid ""
 "attempts to find a match. If no email server is found, Odoo returns the "
 "first outgoing email server (sorted by priority)."
 msgstr ""
+"Sollte diese Abfrage keine Ergebnisse liefern, führt Odoo eine Suche nach "
+"einem E-Mail-Server mit dem Systemparameter `mail.default.from` durch. "
+"Zuerst versucht die aufgelistete E-Mail-Adresse, einen E-Mail-Server zu "
+"finden, und dann die Domain.. Wenn kein E-Mail-Server gefunden wird, gibt "
+"Odoo den ersten ausgehenden E-Mail-Server zurück (sortiert nach Priorität)."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:168
 msgid ""
@@ -2573,10 +2791,16 @@ msgid ""
 "priority of `10` and the other with a priority of `20`, then the email "
 "server with a priority of `10` is used first."
 msgstr ""
+"Wenn mehrere E-Mail-Server gefunden werden, dann verwendet Odoo den ersten "
+"entsprechend seiner Priorität. Wenn es zum Beispiel zwei E-Mail-Server gibt,"
+" von denen einer die Priorität `10` und der andere die Priorität `20` hat, "
+"dann wird der E-Mail-Server mit der Priorität `10` zuerst verwendet."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:175
 msgid "Set up different dedicated servers for transactional and mass emails"
 msgstr ""
+"Verschiedene dedizierte Server für Transaktions- und Massen-E-Mails "
+"einrichten"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:177
 msgid ""
@@ -2585,6 +2809,10 @@ msgid ""
 " and Amazon SES, Mailgun, Sendgrid or :doc:`Mailjet "
 "</administration/maintain/mailjet_api>` for mass mailings."
 msgstr ""
+"In Odoo kann ein separater E-Mail-Server für Transaktionsmails und "
+"Massenmails verwendet werden. Beispiel: Verwenden Sie Postmark oder "
+"SendinBlue für Transaktionsmails und Amazon SES, Mailgun, Sendgrid oder "
+":doc:`Mailjet` für Massenmails."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:182
 msgid ""
@@ -2592,6 +2820,9 @@ msgid ""
 "alternative one unless a specific external outgoing email server is needed "
 "for technical reasons."
 msgstr ""
+"Es ist bereits ein Standard-Server für ausgehende E-Mails konfiguriert. "
+"Legen Sie keinen alternativen Server an, es sei denn, ein bestimmter "
+"externer Postausgangsserver ist aus technischen Gründen erforderlich."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:185
 msgid ""
@@ -2602,6 +2833,13 @@ msgid ""
 "priority to the transactional server over the mass mailing server by "
 "providing a lower priority number for the transactional email server."
 msgstr ""
+"Aktivieren Sie dazu zunächst den :ref:`Entwicklermodus <developer-mode>`, "
+"und gehen Sie dann zu :menuselection:`Einstellungen --> Technisch --> "
+"Postausgangsserver`. Legen Sie dort zwei Server für ausgehende E-Mails an: "
+"einen für Transaktionsmails und einen für den Server für Massenmails. "
+"Stellen Sie sicher, dass der Transaktionsserver Vorrang vor dem "
+"Massenversand hat, indem Sie dem Transaktionsserver eine niedrigere "
+"Prioritätsnummer zuweisen."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:191
 msgid ""
@@ -2612,18 +2850,27 @@ msgid ""
 " in this case, the domain's Sender Policy Framework (SPF) records must be "
 "set to include both transactional and mass mail servers."
 msgstr ""
+"Gehen Sie nun zu :menuselection:`E-Mail-Marketing --> Einstellungen` und "
+"aktivieren Sie :guilabel:`Dedizierter Server`. Wählen Sie den entsprechenden"
+" E-Mail-Server. Mit diesen Einstellungen verwendet Odoo den Server mit der "
+"niedrigeren Priorität für Transaktionsmails und den hier ausgewählten Server"
+" für Massenmails. Beachten Sie, dass in diesem Fall die SPF-Datensätze "
+"(Sender Policy Framework) der Domain so eingestellt sein müssen, dass sie "
+"sowohl Transaktions- als auch Massenmailserver umfassen."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:198
 msgid ":doc:`email_domain`"
-msgstr ""
+msgstr ":doc:`email_domain`"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:203
 msgid "Manage inbound messages"
-msgstr ""
+msgstr "Eingehende Nachrichten verwalten"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:205
 msgid "Odoo relies on generic email aliases to fetch incoming messages."
 msgstr ""
+"Odoo verlässt sich auf generische E-Mail-Aliase, um eingehende Nachrichten "
+"abzurufen."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:207
 msgid ""
@@ -2635,6 +2882,14 @@ msgid ""
 "not have another action attached to it like other aliases might, it is only "
 "used to collect replies."
 msgstr ""
+"**Antwortnachrichten** auf von Odoo gesendete Nachrichten werden über den "
+"Alias des Modells (falls vorhanden) oder über den Catchall-Alias "
+"(**catchall@**) an den ursprünglichen Diskussionsthread (und an den "
+"Posteingang aller seiner Follower) weitergeleitet. Antworten auf Nachrichten"
+" von Modellen, die keinen eigenen Alias haben, verwenden den Catchall-Alias "
+"(`catchall@mycompany.odoo.com`). Die catchall-Adresse ist jedoch nicht mit "
+"einer anderen Aktion verknüpft, wie es bei anderen Aliasen der Fall sein "
+"kann, sondern dient nur dazu, Antworten zu sammeln."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:212
 msgid ""
@@ -2648,6 +2903,17 @@ msgid ""
 "is added on the contact under :guilabel:`Blacklisted Email Addresses` on the"
 " :guilabel:`Email Marketing Configuration Menu`."
 msgstr ""
+"**Unzustellbare Nachrichten** werden als Return-Path verwendet. Ein "
+"Beispiel, für das dies besonders nützlich ist, ist in `Odoo E-Mail-Marketing"
+" <https://www.odoo.com/page/email-marketing>`__. In diesem Fall werden "
+"unzustellbare Nachrichten ausgeschlossen, wenn die E-Mail im letzten Monat "
+"zu oft (5) zurückgewiesen wurde und die unzustellbaren Nachrichten durch "
+"eine Woche getrennt sind. Auf diese Weise wird vermieden, dass jemand "
+"aufgrund eines Fehlers des Mailservers auf die schwarze Liste gesetzt wird. "
+"Wenn diese Bedingungen erfüllt sind, wird die E-Mail als ungültig betrachtet"
+" und kommt auf die schwarze Liste. Unter :guilabel:`E-Mail-Adressen auf der "
+"schwarzen Liste` im :guilabel:`E-Mail-Marketing-Konfigurationsmenü` wird "
+"eine Protokollnotiz zu dem Kontakt hinzugefügt."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:220
 msgid ""
@@ -2656,36 +2922,50 @@ msgid ""
 "to know that a Sales Order or an Invoice did not reach its final "
 "destination."
 msgstr ""
+"Nachrichten, die im Chatter (außerhalb des E-Mail-Marketings) nicht "
+"ankommen, werden mit einem roten Umschlag versehen, der die fehlgeschlagene "
+"Zustellung anzeigt. Dies kann hilfreich sein, um zu wissen, dass ein Auftrag"
+" oder eine Rechnung nicht zugestellt werden konnte."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:223
 msgid ""
 "**Original messages**: several business objects have their own alias to "
 "create new records in Odoo from incoming emails:"
 msgstr ""
+"**Originalnachrichten**: Mehrere Geschäftsobjekte haben ihren eigenen Alias,"
+" um aus eingehenden E-Mails neue Datensätze in Odoo zu erstellen:"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:226
 msgid ""
 "Sales channel (to create *Leads* or *Opportunities* in `Odoo CRM "
 "<https://www.odoo.com/page/ crm>`_)"
 msgstr ""
+"Verkaufskanal (um *Leads* oder *Verkaufschancen* in `Odoo CRM "
+"<https://www.odoo.com/page/ crm>`_ zu erstellen)"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:228
 msgid ""
 "Support channel (to create *Tickets* in `Odoo Helpdesk "
 "<https://www.odoo.com/page/helpdesk>`_)"
 msgstr ""
+"Support-Kanal (um *Tickets* in `Odoo Kundendienst "
+"<https://www.odoo.com/page/helpdesk>`_ erstellen)"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:229
 msgid ""
 "Projects (to create new *Tasks* in `Odoo Project <https://www.odoo.com/page "
 "/project-management>`_)"
 msgstr ""
+"Projekte (um neue *Aufgaben* in `Odoo Projekte <https://www.odoo.com/page "
+"/project-management>`_ erstellen)"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:231
 msgid ""
 "Job positions (to create *Applicants* in `Odoo Recruitment "
 "<https://www.odoo.com/page /recruitment>`_)"
 msgstr ""
+"Stellen (um *Bewerber* in `Odoo Personalbeschaffung "
+"<https://www.odoo.com/page /recruitment>`_ zu erstellen)"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:234
 msgid ""
@@ -2693,12 +2973,17 @@ msgid ""
 "emails. The easiest and most recommended method is to manage one email "
 "address per Odoo alias in the mail server."
 msgstr ""
+"Je nach Mailserver gibt es verschiedene Methoden zum Abrufen von E-Mails. "
+"Die einfachste und empfehlenswerteste Methode ist, eine E-Mail-Adresse pro "
+"Odoo-Alias im Mailserver zu verwalten."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:237
 msgid ""
 "Create the corresponding email addresses in the mail server (**catchall@**, "
 "**bounce@**, **sales@**, etc.)."
 msgstr ""
+"Legen Sie die entsprechenden E-Mail-Adressen auf dem Mailserver an "
+"(**catchall@**, **bounce@**, **sales@**, usw.)."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:239
 msgid ""
@@ -2706,6 +2991,10 @@ msgid ""
 "General Settings --> Discuss`. Changing the :guilabel:`Alias Domain` will "
 "change the catchall's domain for the database."
 msgstr ""
+"Setzen Sie den Namen :guilabel:`Alias-Domain` in "
+":menuselection:`Einstellungen --> Allgemeine Einstellungen --> Dialog`. Wenn"
+" Sie das :guilabel:`Alias-Domain` ändern, wird die Catchall-Domain für die "
+"Datenbank geändert."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:242
 msgid ""
@@ -2717,10 +3006,18 @@ msgid ""
 "Incoming Mails` field blank. Once all the information has been filled out, "
 "click on :guilabel:`TEST & CONFIRM`."
 msgstr ""
+"Wenn die Datenbank in Odoo vor Ort gehostet wird, erstellen Sie in Odoo für "
+"jeden Alias einen :guilabel:`Posteingangsserver`. Um einen neuen "
+"Posteingangsserver zu erstellen, gehen Sie zu: :guilabel:`Einstellungen --> "
+"Dialog --> Benutzerdefinierte E-Mail-Server --> Posteingangsserver --> Neu` "
+"Füllen Sie das Formular entsprechend den Einstellungen des E-Mail-Anbieters "
+"aus. Lassen Sie das Feld :guilabel:`Aktionen für eingehende Mails` leer. "
+"Sobald Sie alle Informationen ausgefüllt haben, klicken Sie auf "
+":guilabel:`TESTEN & BESTÄTIGEN`."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:0
 msgid "Incoming mail server configuration on Odoo."
-msgstr ""
+msgstr "Konfiguratoin des Posteingangservers in Odoo."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:252
 msgid ""
@@ -2731,6 +3028,13 @@ msgid ""
 "domain name in the email server (e.g. `catchall\\@mydomain.ext` to "
 "`catchall\\@mycompany.odoo.com`)."
 msgstr ""
+"Wenn es sich bei dem Hostingtyp der Datenbank um Odoo Online oder Odoo.sh "
+"handelt, empfiehlt es sich, eingehende Nachrichten an den Domainnamen von "
+"Odoo statt an den externen E-Mail-Server umzuleiten oder weiterzuleiten. Auf"
+" diese Weise können eingehende Nachrichten ohne Verzögerung empfangen "
+"werden. Die Umleitungen für alle E-Mail-Adressen sollten im E-Mail-Server "
+"auf den Domainnamen von Odoo eingestellt werden (z. B. "
+"`catchall\\@mydomain.ext` auf `catchall\\@mycompany.odoo.com`)."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:258
 msgid ""
@@ -2738,6 +3042,10 @@ msgid ""
 "their respective configuration view by navigating to "
 ":menuselection:`Settings --> Technical Menu --> Email --> Aliases`."
 msgstr ""
+"Alle Aliase sind in Odoo anpassbar. Objekt-Aliase können in ihrer jeweiligen"
+" Konfigurationsansicht bearbeitet werden, indem Sie zu "
+":menuselection:`Einstellungen --> Technisch --> E-Mail --> Aliase` "
+"navigieren."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:262
 msgid ""
@@ -2749,12 +3057,22 @@ msgid ""
 "a change is made then the system will not recognize the old alias and the "
 "reply won't be received."
 msgstr ""
+"Um Catchall- und Bounce-Aliase zu bearbeiten, aktivieren Sie zunächst den "
+":ref:`Entwicklermodus <developer-mode>`. Gehen Sie dann zu "
+":menuselection:`Einstellungen --> Technisch --> Parameter --> "
+"Systemparameter`, um die Aliase (`mail.catchall.alias` & "
+"`mail.bounce.alias`) anzupassen. Diese Art von Änderungen sollten Sie "
+"vornehmen, bevor die Datenbank in Betrieb genommen wird. Wenn ein Kunde nach"
+" einer Änderung antwortet, erkennt das System den alten Alias nicht und die "
+"Antwort wird nicht empfangen."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:268
 msgid ""
 "By default, inbound messages are fetched every 5 minutes for on-premise "
 "databases."
 msgstr ""
+"Standardmäßig werden eingehende Nachrichten bei lokalen Datenbanken alle 5 "
+"Minuten abgerufen."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:271
 msgid ""
@@ -2762,10 +3080,14 @@ msgid ""
 ":menuselection:`Settings --> Technical --> Automation --> Scheduled Actions`"
 " and look for :guilabel:`Mail: Fetchmail Service`."
 msgstr ""
+"Dieser Wert kann im :ref:`Entwicklermodus <developer-mode>` geändert werden."
+" Gehen Sie zu :menuselection:`Einstellungen --> Technisch --> "
+"Automatisierung --> Geplante Aktionen` und suchen Sie nach :guilabel:`Mail: "
+"Fetchmail Service`."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:276
 msgid "System parameters that prevent feedback loops"
-msgstr ""
+msgstr "Systemparameter, die Rückkopplungsschleifen verhindern"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:278
 msgid ""
@@ -2775,18 +3097,24 @@ msgid ""
 " reply-to email address. They are present in database but not in the *System"
 " Parameters*. To override the following defaults they need to be added in."
 msgstr ""
+"Es gibt zwei Systemparameter, die das Auftreten von E-Mail-Schleifen in Odoo"
+" verhindern. Diese Parameter wurden in Odoo 16 eingeführt, um zu verhindern,"
+" dass Aliase zu viele Datensätze erzeugen und um Rückkopplungsschleifen bei "
+"der Catchall-Antwort-E-Mail-Adresse zu vermeiden. Sie sind in der Datenbank "
+"vorhanden, aber nicht in den *Systemparametern*. Um die folgenden "
+"Standardeinstellungen außer Kraft zu setzen, müssen sie hinzugefügt werden."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:283
 msgid "The two system parameters are as follows:"
-msgstr ""
+msgstr "Die beiden Systemparameter lauten wie folgt:"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:285
 msgid "`mail.incoming.limit.period` (60 minutes by default)"
-msgstr ""
+msgstr "`mail.incoming.limit.period` (standardmäßig 60 Minuten)"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:286
 msgid "`mail.incoming.limit.alias` (5 by default)"
-msgstr ""
+msgstr "`mail.incoming.limit.alias` (standardmäßig 5)"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:288
 msgid ""
@@ -2795,6 +3123,11 @@ msgid ""
 "--> Parameters --> System Parameters`. Change the value of these parameters,"
 " as needed."
 msgstr ""
+"Fügen Sie diese Felder in Odoo hinzu, indem Sie zunächst den "
+":ref:`Entwicklermodus <developer-mode>` aktivieren und dann zu "
+":menuselection:`Einstellungen --> Technisch --> Parameter --> "
+"Systemparameter` navigieren. Ändern Sie den Wert dieser Parameter, falls "
+"erforderlich."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:292
 msgid ""
@@ -2806,6 +3139,14 @@ msgid ""
 "number of records this alias is allowed to create in the given period of "
 "time (value of `mail.incoming.limit.period`)."
 msgstr ""
+"Wenn in der Odoo-Datenbank eine E-Mail an die Catchall-E-Mail-Adresse oder "
+"einen beliebigen Alias eingeht, prüft Odoo, wie viele E-Mails innerhalb des "
+"im Systemparameter `mail.incoming.limit.period` festgelegten Zeitraums "
+"eingegangen sind. Wenn die empfangene E-Mail an einen Alias gesendet wurde, "
+"bezieht sich Odoo auf den Systemparameter `mail.incoming.limit.alias` und "
+"legt den Wert für die Anzahl der Datensätze fest, die dieser Alias innerhalb"
+" des angegebenen Zeitraums (Wert von `mail.incoming.limit.period`) erstellen"
+" darf."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:298
 msgid ""
@@ -2817,6 +3158,13 @@ msgid ""
 "specified time-frame, and will prevent a feedback loop from occurring if a "
 "duplicate email is detected."
 msgstr ""
+"Wenn eine E-Mail an die Catchall-E-Mail-Adresse eingeht, bezieht sich Odoo "
+"außerdem auf die E-Mails, die innerhalb des festgelegten Zeitraums in der "
+"Datenbank eingegangen sind (wie durch den Wert im Systemparameter "
+"`mail.incoming.limit.period` angegeben). Odoo stellt dann fest, ob eine der "
+"empfangenen E-Mails mit der oder den E-Mails übereinstimmt, die während des "
+"festgelegten Zeitraums empfangen wurden, und verhindert, dass eine "
+"Rückkopplungsschleife entsteht, wenn eine doppelte E-Mail entdeckt wird."
 
 #: ../../content/applications/general/email_communication/email_template.rst:3
 msgid "Email Templates"
@@ -2831,6 +3179,13 @@ msgid ""
 "templates also let you deliver the right message to the right audience, "
 "improving their overall experience with the company."
 msgstr ""
+"Wir alle wissen, dass das Schreiben guter E-Mails für eine hohe Antwortquote"
+" unerlässlich ist, aber Sie möchten nicht jedes Mal dieselbe Struktur neu "
+"schreiben, oder? Genau hier kommen E-Mail-Vorlagen ins Spiel. Da Sie nicht "
+"jedes Mal die gesamte E-Mail-Struktur neu schreiben müssen, gewinnen Sie "
+"Zeit, um sich auf den Inhalt zu konzentrieren. Mehrere Vorlagen ermöglichen "
+"es Ihnen außerdem, die richtige Botschaft an die richtige Zielgruppe zu "
+"übermitteln und so deren Gesamterlebnis mit dem Unternehmen zu verbessern."
 
 #: ../../content/applications/general/email_communication/email_template.rst:12
 msgid ""
@@ -2838,10 +3193,13 @@ msgid ""
 "their final rendering, making customizations more robust as you don’t have "
 "to edit code."
 msgstr ""
+"Die E-Mail-Vorlagen verwenden QWeb. Der Editor ermöglicht es Ihnen, E-Mails "
+"in ihrer endgültigen Form zu bearbeiten, was die Anpassungen robuster macht,"
+" da Sie keinen Code bearbeiten müssen."
 
 #: ../../content/applications/general/email_communication/email_template.rst:16
 msgid "Defining a default reply to on your mail template"
-msgstr ""
+msgstr "Definition einer Standardantwortadresse auf Ihrer E-Mail-Vorlage"
 
 #: ../../content/applications/general/email_communication/email_template.rst:18
 msgid ""
@@ -2852,18 +3210,26 @@ msgid ""
 " on the action button. If you have an option to send an email, you will see "
 "a mail composer with possible values to define:"
 msgstr ""
+"Obwohl das Feld *Antwort an* in den E-Mail-Vorlagen zur Verfügung steht, "
+"wird **dieses Feld nur für den Massenversand**-Modus verwendet (d. h. beim "
+"Versenden von Vorlagen über das, was wir Massenversand nennen). Sie können "
+"in fast jeder App, die über eine Listenansicht verfügt, E-Mails in Massen "
+"versenden. Wählen Sie die gewünschten Datensätze aus und klicken Sie auf die"
+" Aktionsschaltfläche. Wenn Sie eine Option zum Senden einer E-Mail haben, "
+"sehen Sie einen E-Mail-Editor mit möglichen Werten, die Sie festlegen "
+"können:"
 
 #: ../../content/applications/general/email_communication/email_template.rst-1
 msgid "Composer in mass mailing mode after selecting multiple quotations."
-msgstr ""
+msgstr "Editor im Massenmailingmodus nach Auswahl mehrerer Fragen"
 
 #: ../../content/applications/general/email_communication/email_template.rst:28
 msgid "You can also define them by default on the template:"
-msgstr ""
+msgstr "Sie können sie auch standardmäßig in der Vorlage definieren:"
 
 #: ../../content/applications/general/email_communication/email_template.rst-1
 msgid "Reply-to field on template."
-msgstr ""
+msgstr "Antwort-an-Feld auf Vorlage."
 
 #: ../../content/applications/general/email_communication/email_template.rst:34
 msgid ""
@@ -2874,10 +3240,17 @@ msgid ""
 "please check :ref:`how to manage inbound messages "
 "<email_communication/inbound_messages>`."
 msgstr ""
+"Aus diesem Grund ist die Eingabe eines Wertes in diesem Feld nutzlos, da der"
+" definierte Wert vollständig ignoriert wird. Der Standardwert *Antwort an* "
+"ist die Standard-Catchall-E-Mail-Adresse, um die Kommunikation zwischen "
+"Ihrem Kunden und Ihrer Odoo-Datenbank sicherzustellen. Weitere Informationen"
+" über die Funktionsweise der Catchall-Adresse finden Sie in :ref:`wie "
+"eingehende Nachrichten verwaltet werdeb "
+"<email_communication/inbound_messages>`."
 
 #: ../../content/applications/general/email_communication/email_template.rst:40
 msgid "Transactional emails and corresponding URL for each company"
-msgstr ""
+msgstr "Transaktionsmails und die entsprechende URL für jedes Unternehmen"
 
 #: ../../content/applications/general/email_communication/email_template.rst:42
 msgid ""
@@ -2885,6 +3258,10 @@ msgid ""
 "These emails are known as transactional emails and sometimes contain links "
 "pointing to your Odoo database."
 msgstr ""
+"Bei der Verwendung von Odoo lösen mehrere Ereignisse den Versand von "
+"automatisierten E-Mails aus. Diese E-Mails werden als Transaktionsmails "
+"bezeichnet und enthalten manchmal Links, die auf Ihre Odoo-Datenbank "
+"verweisen."
 
 #: ../../content/applications/general/email_communication/email_template.rst:45
 msgid ""
@@ -2892,12 +3269,17 @@ msgid ""
 " defined in the system parameters. More information about this "
 ":ref:`parameter <domain-name/web-base-url>`."
 msgstr ""
+"Standardmäßig verwenden die von der Datenbank generierten Links den "
+"dynamischen Schlüssel web.base.url, der in den Systemparametern definiert "
+"ist. Mehr Informationen über diesen Parameter."
 
 #: ../../content/applications/general/email_communication/email_template.rst:48
 msgid ""
 "If the website application isn't installed, the web.base.url key will always"
 " be the default parameter used to generate all the links."
 msgstr ""
+"Wenn die Website-App nicht installiert ist, wird der Schlüssel web.base.url "
+"immer als Standardparameter für die Erstellung aller Links verwendet."
 
 #: ../../content/applications/general/email_communication/email_template.rst:51
 msgid ""
@@ -2907,6 +3289,13 @@ msgid ""
 "document or within a transactional email might remain the same, whatever the"
 " website/company related to the sending of the email/document."
 msgstr ""
+"Es ist wichtig zu wissen, dass dieser Schlüssel nur einen einzigen Wert "
+"haben kann. Das bedeutet, dass in einer Datenbankumgebung mit mehreren "
+"Websites/Unternehmen die Links, die für die Freigabe eines Dokuments oder in"
+" einer Transaktionsmail generiert werden, unabhängig von der Website/des "
+"Unternehmens, die mit dem Versand der E-Mail/des Dokuments verbunden ist, "
+"gleich bleiben können, selbst wenn Sie für jede Website einen eigenen "
+"Domainnamen haben."
 
 #: ../../content/applications/general/email_communication/email_template.rst:56
 msgid ""
@@ -2916,6 +3305,11 @@ msgid ""
 "generated in the email template will use the domain defined on the "
 "corresponding website of the company."
 msgstr ""
+"Dies ist nicht immer der Fall, da einige Odoo-Apps in der Datenbank mit der "
+"Website-App verknüpft sind. Das bedeutet, dass in diesem Fall, wenn für die "
+"Websites eine bestimmte Domain definiert ist, die in der E-Mail-Vorlage "
+"generierte URL die auf der entsprechenden Website des Unternehmens "
+"definierte Domain verwendet."
 
 #: ../../content/applications/general/email_communication/email_template.rst:62
 msgid ""
@@ -2925,6 +3319,11 @@ msgid ""
 "web.base.url key value), whatever the company it's shared from, this is a "
 "known limitation!"
 msgstr ""
+"Ein über die Dokumente-App freigegebenes Dokument verwendet immer den "
+"Schlüssel web.base.url, da das freigegebene Dokument nicht mit einer "
+"bestimmten Website verknüpft ist. Das bedeutet, dass die URL immer dieselbe "
+"ist (der Wert des Schlüssels web.base.url), unabhängig davon, von welchem "
+"Unternehmen das Dokument freigegeben wird – eine bekannte Einschränkung!"
 
 #: ../../content/applications/general/email_communication/email_template.rst:67
 msgid ""
@@ -2933,6 +3332,11 @@ msgid ""
 "order was made. As a result, the e-mail sent for the sales orders uses the "
 "domain name defined for the corresponding website to generate the links."
 msgstr ""
+"Andererseits sind die Bestellungen, die ein Kunde auf einer Ihrer Odoo-E-"
+"Commerce-Websites aufgegeben hat, mit der Website verknüpft, von der aus die"
+" Bestellung aufgegeben wurde. Die E-Mail, die für die Bestellungen "
+"verschickt wird, verwendet daher den für die entsprechende Website "
+"definierten Domainnamen, um die Links zu generieren."
 
 #: ../../content/applications/general/email_communication/email_template.rst:71
 msgid ""
@@ -2940,10 +3344,13 @@ msgid ""
 "check :doc:`our domain name documentation "
 "</administration/maintain/domain_names>`."
 msgstr ""
+"Weitere Informationen zur Konfiguration Ihrer Domains finden Sie in "
+":doc:`unserer Dokumentation zu Domainnamen "
+"</administration/maintain/domain_names>`."
 
 #: ../../content/applications/general/email_communication/email_template.rst:75
 msgid "Updating translations within email templates"
-msgstr ""
+msgstr "Übersetzungen innerhalb von E-Mail-Vorlagen aktualisieren"
 
 #: ../../content/applications/general/email_communication/email_template.rst:77
 msgid ""
@@ -2951,6 +3358,9 @@ msgid ""
 "shouldn’t be necessary. However, if for a specific reason you’d like to "
 "change some of the translations, this can be done."
 msgstr ""
+"E-Mail-Vorlagen werden automatisch übersetzt. Das Ändern der Übersetzungen "
+"sollte nicht notwendig sein. Wenn Sie jedoch aus einem bestimmten Grund "
+"einige der Übersetzungen ändern möchten, können Sie dies tun."
 
 #: ../../content/applications/general/email_communication/email_template.rst:80
 msgid ""
@@ -2958,19 +3368,26 @@ msgid ""
 "aren’t done correctly (for example modifications leading to bad syntax) can "
 "break the template, as a result, the template will appear blank."
 msgstr ""
+"Wie bei jeder Änderung im Code müssen Sie auch hier beachten, dass "
+"Änderungen, die nicht korrekt durchgeführt werden (z. B. Änderungen, die zu "
+"einer fehlerhaften Syntax führen), die Vorlage zerstören können, sodass sie "
+"leer erscheint."
 
 #: ../../content/applications/general/email_communication/email_template.rst:84
 msgid ""
 "In order to edit your translations, follow these steps from the template."
 msgstr ""
+"Um Ihre Übersetzungen zu bearbeiten, folgen Sie diesen Schritten aus der "
+"Vorlage."
 
 #: ../../content/applications/general/email_communication/email_template.rst:86
 msgid "Click on the edit button, then on the language button"
 msgstr ""
+"Klicken Sie auf die Bearbeitungsschaltfläche auf die Sprache-Schaltfläche"
 
 #: ../../content/applications/general/email_communication/email_template.rst:0
 msgid "Edit the language of a template"
-msgstr ""
+msgstr "Die Sprache einer Vorlage bearbeiten"
 
 #: ../../content/applications/general/email_communication/email_template.rst:92
 msgid ""
@@ -2978,12 +3395,18 @@ msgid ""
 "be displayed. From here, editing the translations will be possible. Don't "
 "forget to hit the save button to preserve your changes."
 msgstr ""
+"Es wird ein Popup-Fenster mit den verschiedenen in der Datenbank "
+"installierten Sprachen angezeigt. Von hier aus können Sie die Übersetzungen "
+"bearbeiten. Vergessen Sie nicht, auf die Schaltfläche „Speichern“ zu "
+"klicken, um Ihre Änderungen zu speichern."
 
 #: ../../content/applications/general/email_communication/email_template.rst:0
 msgid ""
 "Translation of the body of the Application template in the different "
 "languages installed."
 msgstr ""
+"Übersetzung des Textes der Anwendungsvorlage in die verschiedenen "
+"installierten Sprachen."
 
 #: ../../content/applications/general/email_communication/faq.rst:3
 msgid "FAQ"
@@ -2994,6 +3417,8 @@ msgid ""
 "This document contains an explanation of the most recurring mailing "
 "concerns."
 msgstr ""
+"Dieses Dokument enthält eine Erläuterung der am häufigsten auftretenden "
+"Probleme bei Mailings."
 
 #: ../../content/applications/general/email_communication/faq.rst:7
 msgid ""
@@ -3001,36 +3426,41 @@ msgid ""
 " received my email), and then, of incoming emails (ex: I do not receive "
 "responses from my customers in the database)."
 msgstr ""
+"Wir beginnen mit Problemen bei ausgehenden E-Mails (z. B.: Mein Kunde hat "
+"meine E-Mail nicht erhalten) und dann bei eingehenden E-Mails (z. B.: Ich "
+"erhalte keine Antworten von meinen Kunden in der Datenbank)."
 
 #: ../../content/applications/general/email_communication/faq.rst:11
 msgid "Outgoing emails"
-msgstr ""
+msgstr "Ausgehende E-Mails"
 
 #: ../../content/applications/general/email_communication/faq.rst:16
 msgid "What do you have to check if your email is not sent?"
-msgstr ""
+msgstr "Was müssen Sie überprüfen, wenn Ihre E-Mail nicht gesendet wird?"
 
 #: ../../content/applications/general/email_communication/faq.rst:18
 msgid ""
 "The first indicator showing you that the email has not been sent is the red "
 "envelope next to the date and time of the message."
 msgstr ""
+"Der erste Indikator, der Ihnen anzeigt, dass die E-Mail nicht gesendet "
+"wurde, ist der rote Umschlag neben dem Datum und der Uhrzeit der Nachricht."
 
 #: ../../content/applications/general/email_communication/faq.rst-1
 msgid "Red envelope displayed in chatter"
-msgstr ""
+msgstr "Roter Umschlag wird im Chatter angezeigt"
 
 #: ../../content/applications/general/email_communication/faq.rst:26
 msgid "Common error messages"
-msgstr ""
+msgstr "Häufige Fehlermeldungen"
 
 #: ../../content/applications/general/email_communication/faq.rst:31
 msgid "You reached your daily limit:"
-msgstr ""
+msgstr "Sie haben Ihr tägliches Limit erreicht:"
 
 #: ../../content/applications/general/email_communication/faq.rst-1
 msgid "Warning in Odoo upon email limit reached"
-msgstr ""
+msgstr "Warnung in Odoo bei Erreichen des E-Mail-Limits"
 
 #: ../../content/applications/general/email_communication/faq.rst:37
 msgid ""
@@ -3039,47 +3469,57 @@ msgid ""
 " we have to limit our customers to prevent our e-mail servers from being "
 "blacklisted."
 msgstr ""
+"Jeder E-Mail-Dienstanbieter hat seine eigenen E-Mail-Versandlimits. Die "
+"Grenzen können täglich, stündlich und manchmal sogar pro Minute liegen. Das "
+"gilt auch für Odoo. Wir müssen unsere Kunden einschränken, um zu verhindern,"
+" dass unsere E-Mail-Server auf eine schwarze Liste gesetzt werden."
 
 #: ../../content/applications/general/email_communication/faq.rst:41
 msgid "Here are the default limits for new databases:"
-msgstr ""
+msgstr "Hier sind die Standardlimits für neue Datenbanken:"
 
 #: ../../content/applications/general/email_communication/faq.rst:43
 msgid ""
 "200 emails/day for Odoo Online and Odoo.sh databases with an active "
 "subscription,"
 msgstr ""
+"200 E-Mails/Tag für Odoo-Online- und Odoo.sh- Datenbanken mit einem aktiven "
+"Abonnement,"
 
 #: ../../content/applications/general/email_communication/faq.rst:44
 msgid "20 emails/day for one-app free databases,"
-msgstr ""
+msgstr "20 E-Mails/Tag für 1-App-gratis-Datenbanken,"
 
 #: ../../content/applications/general/email_communication/faq.rst:45
 msgid "50 emails/day for trial databases,"
-msgstr ""
+msgstr "50 E-Mails/Tag für Testdatenbanken,"
 
 #: ../../content/applications/general/email_communication/faq.rst:46
 msgid ""
 "in case of migration, your daily limit might be reset to 50 emails a day."
 msgstr ""
+"Im Falle einer Migration wird Ihr tägliches Limit möglicherweise auf 50 "
+"E-Mails pro Tag zurückgesetzt."
 
 #: ../../content/applications/general/email_communication/faq.rst:48
 msgid "In case you hit the limit, you can:"
-msgstr ""
+msgstr "Falls Sie das Limit erreichen, können Sie:"
 
 #: ../../content/applications/general/email_communication/faq.rst:50
 msgid ""
 "Ask our support team to increase your daily limit. We will analyze the "
 "situation of your database depending on (non-exhaustive list):"
 msgstr ""
+"Bitten Sie unser Support-Team, Ihr Tageslimit zu erhöhen. Wir werden die "
+"Situation Ihrer Datenbank analysieren, abhängig von (unvollständige Liste):"
 
 #: ../../content/applications/general/email_communication/faq.rst:53
 msgid "How many users in your database,"
-msgstr ""
+msgstr "der Anzahl der Benutzer Ihrer Datenbank,"
 
 #: ../../content/applications/general/email_communication/faq.rst:54
 msgid "Which apps are installed,"
-msgstr ""
+msgstr "welche Apps installiert sind,"
 
 #: ../../content/applications/general/email_communication/faq.rst:55
 msgid ""
@@ -3087,6 +3527,10 @@ msgid ""
 "your emails because it was returned by a mail server on its way to the final"
 " recipient. You can contact the `support <https://www.odoo.com/help>`_."
 msgstr ""
+"Ihre Unzustellbarkeitsrate: der Prozentsatz der E-Mail-Adressen, die Ihre "
+"E-Mails nicht erhalten haben, weil sie von einem Mailserver auf dem Weg zum "
+"Endempfänger zurückgeschickt wurden. Sie können den `Support "
+"<https://www.odoo.com/help>`_ kontaktieren."
 
 #: ../../content/applications/general/email_communication/faq.rst:59
 msgid ""
@@ -3094,6 +3538,9 @@ msgid ""
 "(please refer to :doc:`the corresponding documentation "
 "</applications/general/email_communication/email_servers>`),"
 msgstr ""
+"Verwenden Sie einen eigenen Postausgangsserver, um unabhängig vom Odoo-Mail-"
+"Limit zu sein (lesen Sie dazu  :doc:`die entsprechende Dokumentation "
+"</applications/general/email_communication/email_servers>`),"
 
 #: ../../content/applications/general/email_communication/faq.rst:61
 msgid ""
@@ -3101,10 +3548,14 @@ msgid ""
 ":ref:`Developer mode <developer-mode>` must be activated. Then, go to "
 ":menuselection:`Settings --> Technical --> Emails`"
 msgstr ""
+"Warten Sie bis 23 Uhr UTC mit dem Zurücksetzen und klicken Sie auf die "
+"Schaltfläche Wiederholen: Der :ref:`Entwicklermodus <developer-mode>` muss "
+"aktiviert sein. Gehen Sie dann zu :menuselection:`Einstellungen --> "
+"Technisch --> E-Mails`"
 
 #: ../../content/applications/general/email_communication/faq.rst-1
 msgid "Retry button of an emails"
-msgstr ""
+msgstr "Wiederholen-Schaltfläche einer E-Mail"
 
 #: ../../content/applications/general/email_communication/faq.rst:69
 msgid ""
@@ -3112,16 +3563,22 @@ msgid ""
 "an internal message, a notification, a note, etc. counts as an email in your"
 " daily limit if it notifies someone."
 msgstr ""
+"Das Tageslimit gilt global für Ihre Datenbank und kann schnell ansteigen! "
+"Standardmäßig zählt eine interne Nachricht, eine Benachrichtigung, eine "
+"Notiz usw. als eine E-Mail in Ihrem Tageslimit, wenn sie jemanden "
+"benachrichtigt."
 
 #: ../../content/applications/general/email_communication/faq.rst:72
 msgid ""
 "You can mitigate this by receiving your :ref:`notifications in Odoo "
 "<discuss_app/notification_preferences>` instead of by emails."
 msgstr ""
+"Sie können dies abmildern, indem Sie Ihre :ref:`Benachrichtigungen in Odoo "
+"<discuss_app/notification_preferences>` statt per E-Mail erhalten."
 
 #: ../../content/applications/general/email_communication/faq.rst:76
 msgid "SMTP Error"
-msgstr ""
+msgstr "SMTP-Fehler"
 
 #: ../../content/applications/general/email_communication/faq.rst:78
 msgid ""
@@ -3131,6 +3588,12 @@ msgid ""
 "error messages generated by email services are helpful tools to diagnose and"
 " troubleshoot email problems."
 msgstr ""
+"Sie können herausfinden, warum eine E-Mail nicht erfolgreich übertragen "
+"wurde, indem Sie sich die Fehlermeldungen des Simple Mail Transport Protocol"
+" (SMTP) ansehen. SMTP ist ein Protokoll zur Beschreibung der E-Mail-Struktur"
+" und zur Übertragung über das Internet. Die von den E-Mail-Diensten "
+"generierten Fehlermeldungen sind hilfreiche Werkzeuge zur Diagnose und "
+"Behebung von E-Mail-Problemen."
 
 #: ../../content/applications/general/email_communication/faq.rst:84
 msgid "No Error"
@@ -3143,6 +3606,10 @@ msgid ""
 "bounce emails and it is not always possible for Odoo to interpret it "
 "correctly."
 msgstr ""
+"Odoo ist nicht immer in der Lage, Informationen über den Grund des Fehlers "
+"zu liefern. Die verschiedenen Anbieter wenden eine personalisierte Politik "
+"der unzustellbaren Mails an, und es ist Odoo nicht immer möglich, diese "
+"richtig zu interpretieren."
 
 #: ../../content/applications/general/email_communication/faq.rst:90
 msgid ""
@@ -3150,6 +3617,9 @@ msgid ""
 "same domain, please do not hesitate to contact `Odoo Support "
 "<https://www.odoo.com/help>`_ for help in finding a reason."
 msgstr ""
+"Wenn Sie dieses Problem immer wieder mit demselben Kunden oder derselben "
+"Domain haben, zögern Sie bitte nicht, den `Odoo Support "
+"<https://www.odoo.com/help>`_ zu kontaktieren, um die Ursache zu finden."
 
 #: ../../content/applications/general/email_communication/faq.rst:93
 msgid ""
@@ -3157,10 +3627,13 @@ msgid ""
 "<email_communication/spf_compliant>` and/or :ref:`DKIM "
 "<email_communication/DKIM_compliant>` configuration."
 msgstr ""
+"Hinweis: In diesem Fall ist einer der häufigsten Gründe die :ref:`SPF "
+"<email_communication/spf_compliant>` und/oder :ref:`DKIM "
+"<email_communication/DKIM_compliant>`-Konfiguration."
 
 #: ../../content/applications/general/email_communication/faq.rst:97
 msgid "Why is my email sent late?"
-msgstr ""
+msgstr "Warum wurde meine E-Mail zu spät gesendet?"
 
 #: ../../content/applications/general/email_communication/faq.rst:99
 msgid ""
@@ -3171,26 +3644,39 @@ msgid ""
 " automatically at predetermined intervals. We use that policy in order to "
 "avoid cluttering the mail servers and prioritize the communication."
 msgstr ""
+"Es kann vorkommen, dass Sie eine E-Mail-Kampagne planen, diese aber nicht "
+"rechtzeitig versendet wird. Wir wissen, dass wir einen verzögerten Auftrag "
+"verwenden, um E-Mails zu versenden, die wir als nicht dringend erachten "
+"(Newsletter-Konzept wie Massenversand, Marketing-Automatisierung, "
+"Veranstaltungen). Mit dem Systemdienstprogramm **cron** können Sie Programme"
+" so planen, dass sie automatisch in bestimmten Abständen ausgeführt werden. "
+"Wir verwenden diese Richtlinie, um eine Überlastung der Mailserver zu "
+"vermeiden und die Kommunikation zu priorisieren."
 
 #: ../../content/applications/general/email_communication/faq.rst:105
 msgid ""
 "The emails considered urgent (communication from one person to another one "
 "such as Sales Orders, Invoices, Purchase Orders, etc.) are sent directly."
 msgstr ""
+"Die als dringend eingestuften E-Mails (Mitteilungen von einer Person an eine"
+" andere, wie z.B. Verkaufsaufträge, Rechnungen, Einkaufsaufträge usw.) "
+"werden direkt gesendet."
 
 #: ../../content/applications/general/email_communication/faq.rst-1
 msgid "Email scheduled to be sent later."
-msgstr ""
+msgstr "E-Mail-Versand für später geplant."
 
 #: ../../content/applications/general/email_communication/faq.rst:112
 msgid ""
 "By default, the Mass Mailing cron runs every 60 minutes. So, you should wait"
 " maximum an hour before the campaign is actually sent."
 msgstr ""
+"Standardmäßig läuft der Massenmailingscron alle 60 Minuten. Sie sollten also"
+" maximal eine Stunde warten, bevor die Kampagne tatsächlich versendet wird."
 
 #: ../../content/applications/general/email_communication/faq.rst:116
 msgid "Incoming emails"
-msgstr ""
+msgstr "Eingehende E-Mails"
 
 #: ../../content/applications/general/email_communication/faq.rst:118
 msgid ""
@@ -3198,20 +3684,26 @@ msgid ""
 "indication per se in Odoo. This is the client who tries to contact a "
 "database who will get a bounce (most of the time 550: mailbox unavailable)."
 msgstr ""
+"Wenn Sie ein Problem mit eingehenden E-Mails haben, gibt es in Odoo unter "
+"Umständen keinen Hinweis darauf. Der Kunde, der versucht, eine Datenbank zu "
+"kontaktieren, erhält eine Unzustellbarkeitsnachricht (meistens 550: Mailbox "
+"nicht verfügbar)."
 
 #: ../../content/applications/general/email_communication/faq.rst:123
 msgid "Emails are not received"
-msgstr ""
+msgstr "E-Mails werden nicht empfangen"
 
 #: ../../content/applications/general/email_communication/faq.rst:125
 msgid "Depending on the platform you are using:"
-msgstr ""
+msgstr "Anhängig von der Plattform, die Sie verwenden:"
 
 #: ../../content/applications/general/email_communication/faq.rst:127
 msgid ""
 "The **Odoo.sh** users can find their live logs on the folder "
 ":file:`~/logs/`."
 msgstr ""
+"Die **Odoo.sh**-Benutzer können ihre Live-Protokolle im Ordner "
+":file:`~/logs/` finden."
 
 #: ../../content/applications/general/email_communication/faq.rst:129
 msgid ""
@@ -3225,6 +3717,16 @@ msgid ""
 "Use the command ``grep`` and ``zgrep`` (for the compressed ones) to search "
 "through the files."
 msgstr ""
+"Der Ordner :file:`~/logs/` (vorzugsweise über die Befehlszeile zugänglich) "
+"einer Odoo.sh enthält eine Liste von Dateien mit den Protokollen der "
+"Datenbank. Die Protokolldateien werden täglich um 5:00 Uhr UTC erstellt. Die"
+" beiden letzten Tage werden nicht komprimiert, während die älteren Tage "
+"komprimiert werden, um Platz zu gewinnen. Die Benennung der Dateien für "
+"Heute und Gestern lautet :file:`odoo.log` und :file:`odoo.log.1`. Im "
+"Folgenden werden sie mit ihrem Datum benannt und komprimiert. Sehen Sie sich"
+" die Odoo.sh Dokumentation zu :ref:`logs <odoosh/logs>` an. Verwenden Sie "
+"den Befehl ``grep`` und ``zgrep`` (für die komprimierten Dateien), um die "
+"Dateien zu durchsuchen."
 
 #: ../../content/applications/general/email_communication/faq.rst:137
 msgid ""
@@ -3232,16 +3734,23 @@ msgid ""
 " contact `Odoo Support <https://www.odoo.com/help>`_ , if you have a "
 "recurring issue with the same client or domain."
 msgstr ""
+"**Odoo-Online**-Benutzer haben keinen Zugang zu ihren Protokollen. Sie "
+"können sich jedoch weiterhin an den **Odoo Support "
+"<https://www.odoo.com/help>`_ wenden, wenn Sie ein wiederkehrendes Problem "
+"mit demselben Client oder derselben Domain haben."
 
 #: ../../content/applications/general/email_communication/faq.rst:142
 msgid "Get help from support"
-msgstr ""
+msgstr "Hilfe vom Support erhalten"
 
 #: ../../content/applications/general/email_communication/faq.rst:144
 msgid ""
 "In order to get helped efficiently, please provide as much information as "
 "possible. Here is a list of what can be helpful:"
 msgstr ""
+"Um Ihnen effizient helfen zu können, geben Sie uns bitte so viele "
+"Informationen wie möglich. Hier ist eine Liste mit Informationen, die "
+"hilfreich sein können:"
 
 #: ../../content/applications/general/email_communication/faq.rst:147
 msgid ""
@@ -3252,6 +3761,13 @@ msgid ""
 " your ticket is the most efficient way for us to investigate. The support "
 "will mainly focus on redundant issues."
 msgstr ""
+"Die **EML** der E-Mail, die für *Electronic Mail* steht, ist das "
+"Dateiformat, das alle für eine Untersuchung erforderlichen technischen "
+"Informationen enthält. Die Dokumentation Ihres eigenen E-Mail-Anbieters kann"
+" Ihnen helfen, die EML-Dateien zu erhalten. Sobald Sie die EML der E-Mail "
+"erhalten haben, ist es für uns am effizientesten, diese in den Anhang Ihres "
+"Tickets einzufügen. Der Support wird sich hauptsächlich auf überflüssige "
+"Probleme konzentrieren."
 
 #: ../../content/applications/general/email_communication/faq.rst:154
 msgid "`Gmail documentation <https://support.google.com/mail/answer/29436>`_"
@@ -3272,30 +3788,37 @@ msgid ""
 "The exact flow you are following in order to normally receive those emails "
 "in Odoo. Here are examples of questions whose answers can be useful:"
 msgstr ""
+"Den genauen Ablauf, den Sie befolgen, um diese E-Mails normalerweise in Odoo"
+" zu erhalten. Hier finden Sie Beispiele für Fragen, deren Antworten nützlich"
+" sein können:"
 
 #: ../../content/applications/general/email_communication/faq.rst:162
 msgid "Is this simply a reply from an email going out from Odoo ?"
-msgstr ""
+msgstr "Ist dies einfach eine Antwort auf eine von Odoo versandte E-Mail?"
 
 #: ../../content/applications/general/email_communication/faq.rst:164
 msgid "Are you using an incoming email server or somehow redirecting?"
 msgstr ""
+"Verwenden Sie einen Posteingangsserver oder leiten Sie diese irgendwie um?"
 
 #: ../../content/applications/general/email_communication/faq.rst:166
 msgid ""
 "Can you provide us with an example of an email that has been correctly "
 "forwarded ?"
 msgstr ""
+"Können Sie uns ein Beispiel für eine korrekt weitergeleitete E-Mail geben?"
 
 #: ../../content/applications/general/email_communication/faq.rst:168
 msgid "Providing answers to the following questions:"
-msgstr ""
+msgstr "Beantworten Sie die folgenden Fragen:"
 
 #: ../../content/applications/general/email_communication/faq.rst:170
 msgid ""
 "Is it a generic issue or is it specific to a use case? If yes, which one "
 "exactly?"
 msgstr ""
+"Handelt es sich um ein allgemeines Problem oder ist es spezifisch für einen "
+"Anwendungsfall? Wenn ja, welchen genau?"
 
 #: ../../content/applications/general/email_communication/faq.rst:172
 msgid ""
@@ -3303,14 +3826,17 @@ msgid ""
 "email should reach the Odoo database and display the :ref:`red envelope "
 "<red_envelop>`."
 msgstr ""
+"Funktioniert es wie erwartet? Wenn die E-Mail mit Odoo versendet wird, "
+"sollte die unuzstellbare E-Mail die Odoo-Datenbank erreichen und den "
+":ref:`roten Umschlag <red_envelop>` anzeigen."
 
 #: ../../content/applications/general/export_import_data.rst:3
 msgid "Export and import data"
-msgstr ""
+msgstr "Daten exportieren und importieren"
 
 #: ../../content/applications/general/export_import_data.rst:8
 msgid "Export data from Odoo"
-msgstr ""
+msgstr "Daten von Odoo exportieren"
 
 #: ../../content/applications/general/export_import_data.rst:10
 msgid ""
@@ -3319,6 +3845,10 @@ msgid ""
 "(even if Odoo offers a precise and easy reporting tool with each available "
 "application)."
 msgstr ""
+"Wenn Sie mit einer Datenbank arbeiten, ist es manchmal notwendig, Ihre Daten"
+" in eine separate Datei zu exportieren. Dies kann bei der Erstellung von "
+"Berichten über Ihre Aktivitäten hilfreich sein (auch wenn Odoo mit jeder "
+"verfügbaren Anwendung ein präzises und einfaches Berichtstool anbietet)."
 
 #: ../../content/applications/general/export_import_data.rst:14
 msgid ""
@@ -3326,10 +3856,15 @@ msgid ""
 " activate the list view on the items that need to be exported, click on "
 "*Action*, and, then, on *Export*."
 msgstr ""
+"Mit Odoo können Sie die Werte aus jedem Feld in jedem Datensatz exportieren."
+" Aktivieren Sie dazu die Listenansicht der Elemente, die exportiert werden "
+"sollen, klicken Sie auf *Aktion* und dann auf *Exportieren*."
 
 #: ../../content/applications/general/export_import_data.rst-1
 msgid "view of the different things to enable/click to export data"
 msgstr ""
+"Ansicht der verschiedenen Dinge, die Sie zum Exportieren von Daten "
+"aktivieren/anklicken müssen"
 
 #: ../../content/applications/general/export_import_data.rst:22
 msgid ""
@@ -3337,11 +3872,16 @@ msgid ""
 "when clicking on *Export*, a pop-up window appears with several options for "
 "the data to export:"
 msgstr ""
+"Diese Aktion ist zwar recht einfach, weist aber dennoch einige "
+"Besonderheiten auf. Wenn Sie nämlich auf *Exportieren* klicken, erscheint "
+"ein Pop-up-Fenster mit mehreren Optionen für die zu exportierenden Daten:"
 
 #: ../../content/applications/general/export_import_data.rst-1
 msgid ""
 "overview of all the options to take into account when exporting data in Odoo"
 msgstr ""
+"Übersicht über alle Optionen, die beim Export von Daten in Odoo zu "
+"berücksichtigen sind"
 
 #: ../../content/applications/general/export_import_data.rst:30
 msgid ""
@@ -3351,6 +3891,12 @@ msgid ""
 "box unticked gives way more field options because it shows all the fields, "
 "not just the ones which can be imported."
 msgstr ""
+"Wenn die Option *Ich will Daten aktualisieren* aktiviert ist, zeigt das "
+"System nur die Felder an, die importiert werden können. Dies ist sehr "
+"hilfreich, wenn Sie bestehende Datensätze aktualisieren möchten. Im Grunde "
+"funktioniert dies wie ein Filter. Wenn Sie das Kästchen nicht ankreuzen, "
+"stehen Ihnen wesentlich mehr Feldoptionen zur Verfügung, da alle Felder "
+"angezeigt werden, nicht nur die, die importiert werden können."
 
 #: ../../content/applications/general/export_import_data.rst:36
 msgid ""
@@ -3358,6 +3904,10 @@ msgid ""
 ".csv, items are separated with a comma, while .xls holds information about "
 "all the worksheets in a file, including both content and formatting."
 msgstr ""
+"Beim Exportieren können Sie zwischen zwei Formaten wählen: .csv und .xls. "
+"Bei .csv werden die Elemente durch ein Komma getrennt, während .xls "
+"Informationen zu allen Arbeitsblättern in einer Datei enthält, "
+"einschließlich Inhalt und Formatierung."
 
 #: ../../content/applications/general/export_import_data.rst:39
 msgid ""
@@ -3366,10 +3916,17 @@ msgid ""
 "fields more easily. To use the search option more efficiently, display all "
 "the fields by clicking on all the arrows!"
 msgstr ""
+"Dies sind die Elemente, die Sie exportieren möchten. Verwenden Sie die "
+"Pfeile, um weitere Optionen für Unterfelder anzuzeigen. Sie können natürlich"
+" auch die Suchleiste verwenden, um bestimmte Felder leichter zu finden. Um "
+"die Suchoption effizienter zu nutzen, zeigen Sie alle Felder an, indem Sie "
+"auf alle Pfeile klicken!"
 
 #: ../../content/applications/general/export_import_data.rst:44
 msgid "The + button is there to add fields to the \"to export\" list."
 msgstr ""
+"Mit der Schaltfläche + können Sie der Liste „Zu exportieren“ Felder "
+"hinzufügen."
 
 #: ../../content/applications/general/export_import_data.rst:45
 msgid ""
@@ -3377,10 +3934,13 @@ msgid ""
 "and down to change the order in which they must be displayed in the exported"
 " file."
 msgstr ""
+"Mit den „Griffen“ neben den ausgewählten Feldern können Sie die Felder nach "
+"oben und unten verschieben, um die Reihenfolge zu ändern, in der sie in der "
+"exportierten Datei angezeigt werden sollen."
 
 #: ../../content/applications/general/export_import_data.rst:48
 msgid "The trashcan is there if you need to remove fields."
-msgstr ""
+msgstr "Der Mülleimer ist da, wenn Sie Felder entfernen müssen."
 
 #: ../../content/applications/general/export_import_data.rst:49
 msgid ""
@@ -3389,6 +3949,11 @@ msgid ""
 "*New template* and give a name to yours. The next time you need to export "
 "the same list, simply select the related template."
 msgstr ""
+"Für wiederkehrende Berichte kann es interessant sein, Exportvorgaben zu "
+"speichern. Wählen Sie alle benötigten Vorlagen aus und klicken Sie auf die "
+"Vorlagenleiste. Klicken Sie dort auf *Neue Vorlage* und geben Sie Ihrer "
+"Vorlage einen Namen. Wenn Sie das nächste Mal die gleiche Liste exportieren "
+"müssen, wählen Sie einfach die entsprechende Vorlage aus."
 
 #: ../../content/applications/general/export_import_data.rst:56
 msgid ""
@@ -3396,14 +3961,18 @@ msgid ""
 "*Related Company* is equal to *parent_id*. Doing so helps export only what "
 "you would like to import next."
 msgstr ""
+"Es ist gut, wenn Sie den externen Bezeichner des Feldes im Hinterkopf "
+"behalten. Zum Beispiel ist *Zugehöriges Unternehmen* gleich *parent_id*. Auf"
+" diese Weise können Sie nur das exportieren, was Sie als nächstes "
+"importieren möchten."
 
 #: ../../content/applications/general/export_import_data.rst:63
 msgid "Import data into Odoo"
-msgstr ""
+msgstr "Daten in Odoo importieren"
 
 #: ../../content/applications/general/export_import_data.rst:66
 msgid "How to start"
-msgstr ""
+msgstr "Loslegen"
 
 #: ../../content/applications/general/export_import_data.rst:68
 msgid ""
@@ -3411,12 +3980,17 @@ msgid ""
 " or CSV (.csv) formats: contacts, products, bank statements, journal entries"
 " and even orders!"
 msgstr ""
+"Sie können Daten zu jedem Odoo-Geschäftsobjekt entweder im Excel- (.xlsx) "
+"oder CSV-Format (.csv) importieren: Kontakte, Produkte, Kontoauszüge, "
+"Journalbuchungen und sogar Aufträgen!"
 
 #: ../../content/applications/general/export_import_data.rst:72
 msgid ""
 "Open the view of the object you want to populate and click on "
 ":menuselection:`Favorites --> Import records`."
 msgstr ""
+"Öffnen Sie die Ansicht des Objekts, das Sie befüllen möchten, und klicken "
+"Sie auf :menuselection:`Favoriten --> Datensätze importieren`."
 
 #: ../../content/applications/general/export_import_data.rst:78
 msgid ""
@@ -3424,18 +3998,25 @@ msgid ""
 "data. Such templates can be imported in one click; The data mapping is "
 "already done."
 msgstr ""
+"Dort werden Ihnen Vorlagen zur Verfügung gestellt, die Sie einfach mit Ihren"
+" eigenen Daten füllen können. Solche Vorlagen können mit einem Klick "
+"importiert werden; die Datenzuordnung ist bereits erledigt."
 
 #: ../../content/applications/general/export_import_data.rst:83
 msgid "How to adapt the template"
-msgstr ""
+msgstr "Wie die Vorlage angepasst wird"
 
 #: ../../content/applications/general/export_import_data.rst:85
 msgid "Add, remove and sort columns to fit at best your data structure."
 msgstr ""
+"Fügen Sie Spalten hinzu, entfernen Sie sie und sortieren Sie sie so, dass "
+"sie am besten zu Ihrer Datenstruktur passen."
 
 #: ../../content/applications/general/export_import_data.rst:86
 msgid "We advise to not remove the **ID** one (see why in the next section)."
 msgstr ""
+"Wir raten Ihnen, die **ID** nicht zu entfernen (warum, erfahren Sie im "
+"nächsten Abschnitt)."
 
 #: ../../content/applications/general/export_import_data.rst:87
 #: ../../content/applications/general/export_import_data.rst:376
@@ -3452,16 +4033,23 @@ msgid ""
 "columns manually when you test the import. Search the list for the "
 "corresponding field."
 msgstr ""
+"Wenn Sie eine neue Spalte hinzufügen, ist Odoo möglicherweise nicht in der "
+"Lage, sie automatisch zuzuordnen, wenn ihre Bezeichnung zu keinem Feld in "
+"Odoo passt. Machen Sie sich keine Sorgen! Sie können neue Spalten manuell "
+"zuordnen, wenn Sie den Import testen. Suchen Sie in der Liste nach dem "
+"entsprechenden Feld."
 
 #: ../../content/applications/general/export_import_data.rst:100
 msgid ""
 "Then, use this field's label in your file in order to make it work straight "
 "on the very next time."
 msgstr ""
+"Verwenden Sie dann die Bezeichnung dieses Feldes in Ihrer Datei, damit es "
+"beim nächsten Mal direkt funktioniert."
 
 #: ../../content/applications/general/export_import_data.rst:104
 msgid "How to import from another application"
-msgstr ""
+msgstr "Wie aus einer anderen App importiert wird"
 
 #: ../../content/applications/general/export_import_data.rst:106
 msgid ""
@@ -3472,6 +4060,14 @@ msgid ""
 "unique identifier. You can also find this record using its name but you will"
 " be stuck if at least 2 records have the same name."
 msgstr ""
+"Um Beziehungen zwischen verschiedenen Datensätzen neu zu erstellen, sollten "
+"Sie den eindeutigen Bezeichner aus der ursprünglichen Anwendung verwenden "
+"und ihn der Spalte **ID** (Externe ID) in Odoo zuordnen. Wenn Sie einen "
+"weiteren Datensatz importieren, der mit dem ersten Datensatz verknüpft ist, "
+"verwenden Sie **XXX/ID** (XXX/Externe ID) für den ursprünglichen eindeutigen"
+" Bezeichner. Sie können diesen Datensatz auch über seinen Namen finden, aber"
+" Sie werden nicht weiterkommen, wenn mindestens 2 Datensätze denselben Namen"
+" haben."
 
 #: ../../content/applications/general/export_import_data.rst:114
 msgid ""
@@ -3479,10 +4075,13 @@ msgid ""
 "re-import modified data later, it's thus good practice to specify it "
 "whenever possible."
 msgstr ""
+"Die **ID** wird auch verwendet, um den ursprünglichen Import zu "
+"aktualisieren, wenn Sie später geänderte Daten erneut importieren müssen. Es"
+" ist daher eine gute Praxis, sie wann immer möglich anzugeben."
 
 #: ../../content/applications/general/export_import_data.rst:120
 msgid "I cannot find the field I want to map my column to"
-msgstr ""
+msgstr "Ich kann das Feld, dem ich meine Spalte zuordnen möchte, nicht finden"
 
 #: ../../content/applications/general/export_import_data.rst:122
 msgid ""
@@ -3494,6 +4093,13 @@ msgid ""
 "wrong or that you want to map your column to a field that is not proposed by"
 " default."
 msgstr ""
+"Odoo versucht, anhand der ersten zehn Zeilen der Dateien mit einer Heuristik"
+" den Feldtyp für jede Spalte in Ihrer Datei zu finden. Wenn Sie zum Beispiel"
+" eine Spalte haben, die nur Zahlen enthält, werden nur die Felder vom Typ "
+"*Ganzzahl* zur Auswahl angezeigt. Obwohl dieses Verhalten in den meisten "
+"Fällen gut und einfach ist, ist es auch möglich, dass es schief geht oder "
+"dass Sie Ihre Spalte einem Feld zuordnen möchten, das nicht standardmäßig "
+"vorgeschlagen wird."
 
 #: ../../content/applications/general/export_import_data.rst:131
 msgid ""
@@ -3501,10 +4107,13 @@ msgid ""
 "fields (advanced)** option, you will then be able to choose from the "
 "complete list of fields for each column."
 msgstr ""
+"In diesem Fall müssen Sie nur die Option **Felder der Beziehungsfelder "
+"anzeigen (erweitert)** aktivieren, dann können Sie aus der vollständigen "
+"Liste der Felder für jede Spalte wählen."
 
 #: ../../content/applications/general/export_import_data.rst:139
 msgid "Where can I change the date import format?"
-msgstr ""
+msgstr "Wo kann ich das Format für den Datumsimport ändern?"
 
 #: ../../content/applications/general/export_import_data.rst:141
 msgid ""
@@ -3515,6 +4124,13 @@ msgid ""
 "difficult to guess which part of a date format is the day and which part is "
 "the month in a date such as '01-03-2016'."
 msgstr ""
+"Odoo kann automatisch erkennen, ob es sich bei einer Spalte um ein Datum "
+"handelt, und es versucht, das Datumsformat aus einer Reihe der am häufigsten"
+" verwendeten Datumsformate zu erraten. Dieser Prozess kann zwar für viele "
+"Datumsformate funktionieren, aber einige Datumsformate werden nicht erkannt."
+" Dies kann aufgrund von Tag-Monat-Invertierungen zu Verwirrung führen; es "
+"ist schwierig zu erraten, welcher Teil eines Datumsformats der Tag und "
+"welcher Teil der Monat in einem Datum wie „01-03-2016“ ist."
 
 #: ../../content/applications/general/export_import_data.rst:147
 msgid ""
@@ -3523,6 +4139,11 @@ msgid ""
 "selector. If this format is incorrect you can change it to your liking using"
 " the *ISO 8601* to define the format."
 msgstr ""
+"Um zu sehen, welches Datumsformat Odoo in Ihrer Datei gefunden hat, können "
+"Sie das **Datumsformat** überprüfen, das angezeigt wird, wenn Sie auf "
+"**Optionen** unter der Dateiauswahl klicken. Wenn dieses Format nicht "
+"korrekt ist, können Sie es nach Ihren Wünschen ändern, indem Sie das Format "
+"mit *ISO 8601* definieren."
 
 #: ../../content/applications/general/export_import_data.rst:152
 msgid ""
@@ -3531,10 +4152,15 @@ msgid ""
 " stored. That way you will be sure that the date format is correct in Odoo "
 "whatever your locale date format is."
 msgstr ""
+"Wenn Sie eine Excel-Datei (.xls, .xlsx) importieren, können Sie Datumszellen"
+" zum Speichern von Datumsangaben verwenden, da die Anzeige von Datumsangaben"
+" in Excel anders ist als die Speicherung. Auf diese Weise können Sie sicher "
+"sein, dass das Datumsformat in Odoo korrekt ist, unabhängig vom Datumsformat"
+" Ihres Gebietsschemas."
 
 #: ../../content/applications/general/export_import_data.rst:157
 msgid "Can I import numbers with currency sign (e.g.: $32.00)?"
-msgstr ""
+msgstr "Kann ich Zahlen mit Währungszeichen importieren (z. B.: 32,00 $)?"
 
 #: ../../content/applications/general/export_import_data.rst:159
 msgid ""
@@ -3545,55 +4171,64 @@ msgid ""
 "known to Odoo, it might not be recognized as a number though and it will "
 "crash."
 msgstr ""
+"Ja, wir unterstützen Zahlen mit Klammern, um negative Vorzeichen "
+"darzustellen, sowie Zahlen mit angehängtem Währungszeichen. Odoo erkennt "
+"auch automatisch, welches Tausender-/Dezimaltrennzeichen Sie verwenden (Sie "
+"können dies unter **Optionen** ändern). Wenn Sie ein Währungssymbol "
+"verwenden, das Odoo nicht bekannt ist, wird es möglicherweise nicht als Zahl"
+" erkannt und es kommt zu einem Absturz."
 
 #: ../../content/applications/general/export_import_data.rst:164
 msgid ""
 "Examples of supported numbers (using thirty-two thousands as an example):"
 msgstr ""
+"Beispiele für unterstützte Zahlen (am Beispiel von zweiunddreißigtausend):"
 
 #: ../../content/applications/general/export_import_data.rst:166
 msgid "32.000,00"
-msgstr ""
+msgstr "32.000,00"
 
 #: ../../content/applications/general/export_import_data.rst:167
 msgid "32000,00"
-msgstr ""
+msgstr "32000,00"
 
 #: ../../content/applications/general/export_import_data.rst:168
 msgid "32,000.00"
-msgstr ""
+msgstr "32,000.00"
 
 #: ../../content/applications/general/export_import_data.rst:169
 msgid "-32000.00"
-msgstr ""
+msgstr "-32000.00"
 
 #: ../../content/applications/general/export_import_data.rst:170
 msgid "(32000.00)"
-msgstr ""
+msgstr "(32000.00)"
 
 #: ../../content/applications/general/export_import_data.rst:171
 msgid "$ 32.000,00"
-msgstr ""
+msgstr "$ 32.000,00"
 
 #: ../../content/applications/general/export_import_data.rst:172
 msgid "(32000.00 €)"
-msgstr ""
+msgstr "(32000.00 €)"
 
 #: ../../content/applications/general/export_import_data.rst:174
 msgid "Example that will not work:"
-msgstr ""
+msgstr "Beispiel, was nicht funktionieren wird:"
 
 #: ../../content/applications/general/export_import_data.rst:176
 msgid "ABC 32.000,00"
-msgstr ""
+msgstr "ABC 32.000,00"
 
 #: ../../content/applications/general/export_import_data.rst:177
 msgid "$ (32.000,00)"
-msgstr ""
+msgstr "$ (32.000,00)"
 
 #: ../../content/applications/general/export_import_data.rst:180
 msgid "What can I do when the Import preview table isn't displayed correctly?"
 msgstr ""
+"Was kann ich tun, wenn die Tabelle der Importvorschau nicht korrekt "
+"angezeigt wird?"
 
 #: ../../content/applications/general/export_import_data.rst:182
 msgid ""
@@ -3602,6 +4237,11 @@ msgid ""
 "settings, you can modify the File Format Options (displayed under the Browse"
 " CSV file bar after you select your file)."
 msgstr ""
+"Die Importvorschau ist standardmäßig auf Kommas als Feldtrenner und "
+"Anführungszeichen als Textbegrenzer eingestellt. Wenn Ihre csv-Datei nicht "
+"über diese Einstellungen verfügt, können Sie die Dateiformatoptionen ändern "
+"(angezeigt unter der Leiste CSV-Datei durchsuchen, nachdem Sie Ihre Datei "
+"ausgewählt haben)."
 
 #: ../../content/applications/general/export_import_data.rst:186
 msgid ""
@@ -3609,12 +4249,18 @@ msgid ""
 "detect the separations. You will need to change the file format options in "
 "your spreadsheet application. See the following question."
 msgstr ""
+"Beachten Sie, dass Odoo die Trennungen nicht erkennt, wenn Ihre CSV-Datei "
+"eine Tabellierung als Trennzeichen enthält. Sie müssen die "
+"Dateiformatoptionen in Ihrer Tabellenkalkulationsanwendung ändern. Siehe die"
+" folgende Frage."
 
 #: ../../content/applications/general/export_import_data.rst:191
 msgid ""
 "How can I change the CSV file format options when saving in my spreadsheet "
 "application?"
 msgstr ""
+"Wie kann ich die Optionen für das CSV-Dateiformat beim Speichern in meiner "
+"Tabellenkalkulationsapp ändern?"
 
 #: ../../content/applications/general/export_import_data.rst:193
 msgid ""
@@ -3624,6 +4270,12 @@ msgid ""
 "modify all three options (in :menuselection:`'Save As' dialog box --> Check "
 "the box 'Edit filter settings' --> Save`)."
 msgstr ""
+"Wenn Sie CSV-Dateien in Tabellenkalkulationsprogrammen bearbeiten und "
+"speichern, werden die regionalen Einstellungen Ihres Computers für das "
+"Trennzeichen und den Begrenzer übernommen. Wir empfehlen Ihnen, OpenOffice "
+"oder LibreOffice Calc zu verwenden, da Sie dort alle drei Optionen ändern "
+"können (in :menuselection:`Dialogfeld „Speichern als“ --> Feld "
+"„Filtereinstellungen bearbeiten“ ankreuzen --> Speichern`)."
 
 #: ../../content/applications/general/export_import_data.rst:198
 msgid ""
@@ -3631,10 +4283,13 @@ msgid ""
 ":menuselection:`'Save As' dialog box --> click 'Tools' dropdown list --> "
 "Encoding tab`)."
 msgstr ""
+"In Microsoft Excel können Sie beim Speichern nur die Codierung ändern (in "
+":menuselection:`Dialogfeld „Speichern als“ --> Drop-down-Liste „Tools“ --> "
+"Reiter „Codierung“ anklicken)."
 
 #: ../../content/applications/general/export_import_data.rst:202
 msgid "What's the difference between Database ID and External ID?"
-msgstr ""
+msgstr "Was ist der Unterschied zwischen Datenbank-ID und externer ID?"
 
 #: ../../content/applications/general/export_import_data.rst:204
 msgid ""
@@ -3645,44 +4300,59 @@ msgid ""
 "mechanisms. You must use one and only one mechanism per field you want to "
 "import."
 msgstr ""
+"Einige Felder definieren eine Beziehung zu einem anderen Objekt. Zum "
+"Beispiel ist das Land eines Kontakts eine Verknüpfung zu einem Datensatz des"
+" Objekts „Land“. Wenn Sie solche Felder importieren möchten, muss Odoo die "
+"Verknüpfungen zwischen den verschiedenen Datensätzen neu erstellen. Damit "
+"Sie solche Felder importieren können, bietet Odoo drei Mechanismen. Sie "
+"müssen für jedes Feld, das Sie importieren möchten, einen und nur einen "
+"Mechanismus verwenden."
 
 #: ../../content/applications/general/export_import_data.rst:209
 msgid ""
 "For example, to reference the country of a contact, Odoo proposes you 3 "
 "different fields to import:"
 msgstr ""
+"Wenn Sie z. B. das Land eines Kontakts referenzieren möchten, schlägt Odoo "
+"Ihnen 3 verschiedene Felder zum Importieren vor:"
 
 #: ../../content/applications/general/export_import_data.rst:211
 msgid "Country: the name or code of the country"
-msgstr ""
+msgstr "Land: der Name oder Code des Landes"
 
 #: ../../content/applications/general/export_import_data.rst:212
 msgid ""
 "Country/Database ID: the unique Odoo ID for a record, defined by the ID "
 "postgresql column"
 msgstr ""
+"Land/Datenbank-ID: die eindeutige Odoo-ID für einen Datensatz, definiert "
+"durch die Spalte „ID postgresql“"
 
 #: ../../content/applications/general/export_import_data.rst:213
 msgid ""
 "Country/External ID: the ID of this record referenced in another application"
 " (or the .XML file that imported it)"
 msgstr ""
+"Land/Externe ID: die ID dieses Datensatzes, auf den in einer anderen App "
+"verwiesen wird (oder die .XML-Datei, die ihn importiert hat)"
 
 #: ../../content/applications/general/export_import_data.rst:216
 msgid "For the country Belgium, you can use one of these 3 ways to import:"
 msgstr ""
+"Für das Land Belgien können Sie eine dieser 3 Möglichkeiten zum Import "
+"nutzen:"
 
 #: ../../content/applications/general/export_import_data.rst:218
 msgid "Country: Belgium"
-msgstr ""
+msgstr "Land: Belgien"
 
 #: ../../content/applications/general/export_import_data.rst:219
 msgid "Country/Database ID: 21"
-msgstr ""
+msgstr "Land/Datenbank-ID: 21"
 
 #: ../../content/applications/general/export_import_data.rst:220
 msgid "Country/External ID: base.be"
-msgstr ""
+msgstr "Land/Externe ID: base.be"
 
 #: ../../content/applications/general/export_import_data.rst:222
 msgid ""
@@ -3690,12 +4360,17 @@ msgid ""
 "records in relations. Here is when you should use one or the other, "
 "according to your need:"
 msgstr ""
+"Je nach Bedarf sollten Sie eine dieser 3 Möglichkeiten verwenden, um auf "
+"Datensätze in Beziehungen zu verweisen. Hier erfahren Sie, wann Sie je nach "
+"Bedarf die eine oder die andere Methode verwenden sollten:"
 
 #: ../../content/applications/general/export_import_data.rst:225
 msgid ""
 "Use Country: This is the easiest way when your data come from CSV files that"
 " have been created manually."
 msgstr ""
+"Land verwenden: Dies ist der einfachste Weg, wenn Ihre Daten aus CSV-Dateien"
+" stammen, die manuell erstellt wurden."
 
 #: ../../content/applications/general/export_import_data.rst:227
 msgid ""
@@ -3704,12 +4379,19 @@ msgid ""
 "may have several records with the same name, but they always have a unique "
 "Database ID)"
 msgstr ""
+"Land/Datenbank-ID verwenden: Sie sollten diese Bezeichnung nur selten "
+"verwenden. Sie wird hauptsächlich von Entwicklern verwendet, da ihr "
+"Hauptvorteil darin besteht, dass es nie zu Konflikten kommt (Sie können "
+"mehrere Datensätze mit demselben Namen haben, aber sie haben immer eine "
+"eindeutige Datenbank-ID)."
 
 #: ../../content/applications/general/export_import_data.rst:230
 msgid ""
 "Use Country/External ID: Use External ID when you import data from a third "
 "party application."
 msgstr ""
+"Land/externe ID verwenden: Verwenden Sie die externe ID, wenn Sie Daten aus "
+"einer App eines Drittanbieters importieren."
 
 #: ../../content/applications/general/export_import_data.rst:232
 msgid ""
@@ -3719,22 +4401,31 @@ msgid ""
 "\"Field/External ID\". The following two CSV files give you an example for "
 "Products and their Categories."
 msgstr ""
+"Wenn Sie externe IDs verwenden, können Sie CSV-Dateien mit der Spalte "
+"„Externe ID“ importieren, um die externe ID jedes Datensatzes zu definieren,"
+" den Sie importieren. Dann können Sie mit Spalten wie „Feld/Externe ID“ "
+"einen Verweis auf diesen Datensatz erstellen. Die folgenden zwei CSV-Dateien"
+" geben Ihnen ein Beispiel für Produkte und ihre Kategorien."
 
 #: ../../content/applications/general/export_import_data.rst:237
 msgid ""
 ":download:`CSV file for categories "
 "<export_import_data/External_id_3rd_party_application_product_categories.csv>`."
 msgstr ""
+":download:`CSV-Datei für Kategorien "
+"<export_import_data/External_id_3rd_party_application_product_categories.csv>`."
 
 #: ../../content/applications/general/export_import_data.rst:240
 msgid ""
 ":download:`CSV file for Products "
 "<export_import_data/External_id_3rd_party_application_products.csv>`."
 msgstr ""
+":download:`CSV-Datei für Produkte "
+"<export_import_data/External_id_3rd_party_application_products.csv>`."
 
 #: ../../content/applications/general/export_import_data.rst:244
 msgid "What can I do if I have multiple matches for a field?"
-msgstr ""
+msgstr "Was kann ich tun, wenn ich mehrere Treffer für ein Feld habe?"
 
 #: ../../content/applications/general/export_import_data.rst:246
 msgid ""
@@ -3746,6 +4437,14 @@ msgid ""
 "Category list (\"Misc. Products/Sellable\"). We recommend you modify one of "
 "the duplicates' values or your product category hierarchy."
 msgstr ""
+"Wenn Sie z. B. zwei Produktkategorien mit dem untergeordneten Namen "
+"„Verkäuflich“ haben (d. h. „Sonstige Produkte/Verkäuflich“ & „Andere "
+"Produkte/Verkäuflich“), wird Ihre Validierung gestoppt, aber Sie können Ihre"
+" Daten trotzdem importieren. Wir empfehlen Ihnen jedoch, die Daten nicht zu "
+"importieren, da sie alle mit der ersten Kategorie „Verkäuflich“ in der "
+"Produktkategorienliste („Sonstige Produkte/Verkäuflich“) verknüpft werden. "
+"Wir empfehlen Ihnen, einen der Werte der Duplikate oder Ihre "
+"Produktkategorie-Hierarchie zu ändern."
 
 #: ../../content/applications/general/export_import_data.rst:252
 msgid ""
@@ -3753,12 +4452,17 @@ msgid ""
 "categories, we recommend you use make use of the external ID for this field "
 "'Category'."
 msgstr ""
+"Wenn Sie jedoch Ihre Konfiguration der Produktkategorien nicht ändern "
+"möchten, empfehlen wir Ihnen, die externe ID für dieses Feld „Kategorie“ zu "
+"verwenden."
 
 #: ../../content/applications/general/export_import_data.rst:256
 msgid ""
 "How can I import a many2many relationship field (e.g. a customer that has "
 "multiple tags)?"
 msgstr ""
+"Wie kann ich ein many2many-Beziehungsfeld importieren (z. B. einen Kunden, "
+"der mehrere Stichwörter hat)?"
 
 #: ../../content/applications/general/export_import_data.rst:258
 msgid ""
@@ -3767,18 +4471,26 @@ msgid ""
 "'Retailer' then you will encode \"Manufacturer,Retailer\" in the same column"
 " of your CSV file."
 msgstr ""
+"Die Stichwörter sollten durch ein Komma getrennt werden, ohne dass ein "
+"Zwischenraum entsteht. Wenn Sie z. B. möchten, dass Ihr Kunde mit den beiden"
+" Stichwörtern „Hersteller“ und „Händler“ verknüpft wird, codieren Sie "
+"„Hersteller, Händler“ in derselben Spalte Ihrer CSV-Datei."
 
 #: ../../content/applications/general/export_import_data.rst:262
 msgid ""
 ":download:`CSV file for Manufacturer, Retailer "
 "<export_import_data/m2m_customers_tags.csv>`"
 msgstr ""
+":download:`CSV-Datei für Hersteller, Händler "
+"<export_import_data/m2m_customers_tags.csv>`"
 
 #: ../../content/applications/general/export_import_data.rst:266
 msgid ""
 "How can I import a one2many relationship (e.g. several Order Lines of a "
 "Sales Order)?"
 msgstr ""
+"Wie kann ich eine one2many-Beziehung importieren (z. B. mehrere "
+"Auftragszeilen eines Verkaufsauftrags)?"
 
 #: ../../content/applications/general/export_import_data.rst:268
 msgid ""
@@ -3790,40 +4502,58 @@ msgid ""
 "``purchase.order_functional_error_line_cant_adpat.CSV`` file of some "
 "quotations you can import, based on demo data."
 msgstr ""
+"Wenn Sie einen Verkaufsauftrag mit mehreren Auftragszeilen importieren "
+"möchten, müssen Sie für jede Auftragszeile eine bestimmte Zeile in der CSV-"
+"Datei reservieren. Die erste Auftragszeile wird in dieselbe Zeile "
+"importiert, in der auch die Informationen zum Auftrag stehen. Für jede "
+"weitere Zeile wird eine zusätzliche Zeile benötigt, die keine Informationen "
+"in den Feldern für den Auftrag enthält. Als Beispiel sehen Sie hier die "
+"Datei ``purchase.order_functional_error_line_cant_adpat.CSV`` mit einigen "
+"Angeboten, die Sie auf der Grundlage von Demo-Daten importieren können."
 
 #: ../../content/applications/general/export_import_data.rst:275
 msgid ""
 ":download:`File for some Quotations "
 "<export_import_data/purchase.order_functional_error_line_cant_adpat.csv>`."
 msgstr ""
+":download:`Datei für einige Angebote "
+"<export_import_data/purchase.order_functional_error_line_cant_adpat.csv>`."
 
 #: ../../content/applications/general/export_import_data.rst:277
 msgid ""
 "The following CSV file shows how to import purchase orders with their "
 "respective purchase order lines:"
 msgstr ""
+"Die folgende CSV-Datei zeigt, wie Sie Einkaufsaufträge mit den "
+"entsprechenden Einkaufsauftragszeilen importieren können:"
 
 #: ../../content/applications/general/export_import_data.rst:280
 msgid ""
 ":download:`Purchase orders with their respective purchase order lines "
 "<export_import_data/o2m_purchase_order_lines.csv>`."
 msgstr ""
+":download:`Einkaufsaufträge mit den entsprechenden Einkaufsauftragszeilen "
+"<export_import_data/o2m_purchase_order_lines.csv>`."
 
 #: ../../content/applications/general/export_import_data.rst:282
 msgid ""
 "The following CSV file shows how to import customers and their respective "
 "contacts:"
 msgstr ""
+"Die folgende CSV-Datei zeigt, wie Sie Kunden und die entsprechenden Kontakte"
+" importieren können:"
 
 #: ../../content/applications/general/export_import_data.rst:284
 msgid ""
 ":download:`Customers and their respective contacts "
 "<export_import_data/o2m_customers_contacts.csv>`."
 msgstr ""
+":download:`Kunden und deren entsprechenden Kontakte "
+"<export_import_data/o2m_customers_contacts.csv>`."
 
 #: ../../content/applications/general/export_import_data.rst:287
 msgid "Can I import several times the same record?"
-msgstr ""
+msgstr "Kann ich denselben Datensatz mehrmals importieren?"
 
 #: ../../content/applications/general/export_import_data.rst:289
 msgid ""
@@ -3834,16 +4564,25 @@ msgid ""
 "two imports. Odoo will take care of creating or modifying each record "
 "depending if it's new or not."
 msgstr ""
+"Wenn Sie eine Datei importieren, die eine der Spalten „Externe ID“ oder "
+"„Datenbank-ID“ enthält, werden bereits importierte Datensätze geändert, "
+"anstatt sie neu zu erstellen. Dies ist sehr nützlich, da Sie so dieselbe "
+"CSV-Datei mehrmals importieren können, während Sie zwischen zwei Importen "
+"Änderungen vorgenommen haben. Odoo kümmert sich darum, jeden Datensatz zu "
+"erstellen oder zu ändern, je nachdem, ob er neu ist oder nicht."
 
 #: ../../content/applications/general/export_import_data.rst:294
 msgid ""
 "This feature allows you to use the Import/Export tool of Odoo to modify a "
 "batch of records in your favorite spreadsheet application."
 msgstr ""
+"Mit dieser Funktion können Sie das Import/Export-Tool von Odoo verwenden, um"
+" eine Reihe von Datensätzen in Ihrer bevorzugten Tabellenkalkulationsapp zu "
+"ändern."
 
 #: ../../content/applications/general/export_import_data.rst:298
 msgid "What happens if I do not provide a value for a specific field?"
-msgstr ""
+msgstr "Was passiert, wenn ich keinen Wert für ein bestimmtes Feld eingebe?"
 
 #: ../../content/applications/general/export_import_data.rst:300
 msgid ""
@@ -3852,10 +4591,16 @@ msgid ""
 "in your CSV file, Odoo will set the EMPTY value in the field, instead of "
 "assigning the default value."
 msgstr ""
+"Wenn Sie nicht alle Felder in Ihrer CSV-Datei festlegen, weist Odoo für alle"
+" nicht definierten Felder den Standardwert zu. Wenn Sie jedoch Felder mit "
+"leeren Werten in Ihrer CSV-Datei festlegen, setzt Odoo den Wert LEER in das "
+"Feld, anstatt den Standardwert zuzuweisen."
 
 #: ../../content/applications/general/export_import_data.rst:305
 msgid "How to export/import different tables from an SQL application to Odoo?"
 msgstr ""
+"Wie exportiere/importiere ich verschiedene Tabellen aus einer SQL-Anwendung "
+"in Odoo?"
 
 #: ../../content/applications/general/export_import_data.rst:307
 msgid ""
@@ -3864,6 +4609,11 @@ msgid ""
 " companies and persons, you will have to recreate the link between each "
 "person and the company they work for)."
 msgstr ""
+"Wenn Sie Daten aus verschiedenen Tabellen importieren müssen, müssen Sie die"
+" Beziehungen zwischen Datensätzen, die zu verschiedenen Tabellen gehören, "
+"neu erstellen. (Wenn Sie z. B. Unternehmen und Personen importieren, müssen "
+"Sie die Verbindung zwischen jeder Person und dem Unternehmen, für die sie "
+"arbeitet, neu erstellen)."
 
 #: ../../content/applications/general/export_import_data.rst:311
 msgid ""
@@ -3874,6 +4624,12 @@ msgid ""
 "this \"External ID\" with the name of the application or table. (like "
 "'company_1', 'person_1' instead of '1')"
 msgstr ""
+"Um Beziehungen zwischen Tabellen zu verwalten, können Sie die Funktionen "
+"„Externe ID“ von Odoo nutzen. Die „Externe ID“ eines Datensatzes ist die "
+"eindeutige Kennung dieses Datensatzes in einer anderen Anwendung. Diese "
+"„Externe ID“ muss für alle Datensätze aller Objekte eindeutig sein, daher "
+"ist es eine gute Praxis, dieser „Externen ID“ den Namen der App oder Tabelle"
+" voranzustellen. (z. B. 'Unternehmen_1', 'Person_1' anstelle von '1')"
 
 #: ../../content/applications/general/export_import_data.rst:317
 msgid ""
@@ -3883,26 +4639,36 @@ msgid ""
 " (If you want to test this example, here is a :download:`dump of such a "
 "PostgreSQL database <export_import_data/database_import_test.sql>`)"
 msgstr ""
+"Nehmen wir an, Sie haben eine SQL-Datenbank mit zwei Tabellen, die Sie "
+"importieren möchten: Unternehmen und Personen. Jede Person gehört zu einem "
+"Unternehmen, also müssen Sie die Verknüpfung zwischen einer Person und dem "
+"Unternehmen, für das sie arbeitet, neu erstellen. (Wenn Sie dieses Beispiel "
+"testen möchten, finden Sie hier einen :download:`Dump einer solchen "
+"PostgreSQL-Datenbank <export_import_data/database_import_test.sql>`)"
 
 #: ../../content/applications/general/export_import_data.rst:322
 msgid ""
 "We will first export all companies and their \"External ID\". In PSQL, write"
 " the following command:"
 msgstr ""
+"Zunächst exportieren wir alle Unternehmen und ihre „Externe ID“. Schreiben "
+"Sie in PSQL den folgenden Befehl:"
 
 #: ../../content/applications/general/export_import_data.rst:328
 msgid "This SQL command will create the following CSV file:"
-msgstr ""
+msgstr "Dieser SQL-Befehl erstellt die folgende CSV-Datei:"
 
 #: ../../content/applications/general/export_import_data.rst:337
 msgid ""
 "To create the CSV file for persons, linked to companies, we will use the "
 "following SQL command in PSQL:"
 msgstr ""
+"Um die CSV-Datei für Personen, die mit Unternehmen verknüpft sind, zu "
+"erstellen, verwenden wir den folgenden SQL-Befehl in PSQL:"
 
 #: ../../content/applications/general/export_import_data.rst:343
 msgid "It will produce the following CSV file:"
-msgstr ""
+msgstr "Die folgende CSV-Datei wird erstellt:"
 
 #: ../../content/applications/general/export_import_data.rst:353
 msgid ""
@@ -3913,6 +4679,13 @@ msgid ""
 "avoid a conflict of ID between persons and companies (person_1 and company_1"
 " who shared the same ID 1 in the original database)."
 msgstr ""
+"Wie Sie in dieser Datei sehen können, arbeiten Fabien und Laurence für das "
+"Unternehmen Bigees (Unternehmen_1) und Eric arbeitet für das Unternehmen "
+"Organi. Die Beziehung zwischen Personen und Unternehmen wird über die "
+"externe ID der Unternehmen hergestellt. Wir mussten der „Externen ID“ den "
+"Namen der Tabelle voranstellen, um einen ID-Konflikt zwischen Personen und "
+"Unternehmen zu vermeiden (Person_1 und Unternehmen_1, die in der "
+"ursprünglichen Datenbank die gleiche ID 1 hatten)."
 
 #: ../../content/applications/general/export_import_data.rst:359
 msgid ""
@@ -3921,10 +4694,15 @@ msgid ""
 "contacts and 3 companies. (the firsts two contacts are linked to the first "
 "company). You must first import the companies and then the persons."
 msgstr ""
+"Die beiden erzeugten Dateien können ohne Änderungen in Odoo importiert "
+"werden. Nachdem Sie diese beiden CSV-Dateien importiert haben, haben Sie 4 "
+"Kontakte und 3 Unternehmen. (die ersten beiden Kontakte sind mit dem ersten "
+"Unternehmen verknüpft). Sie müssen zuerst die Unternehmen und dann die "
+"Personen importieren."
 
 #: ../../content/applications/general/export_import_data.rst:364
 msgid "How to adapt an import template"
-msgstr ""
+msgstr "Wie eine Importvorlage angepasst wird"
 
 #: ../../content/applications/general/export_import_data.rst:366
 msgid ""
@@ -3933,6 +4711,10 @@ msgid ""
 "any spreadsheets software (Microsoft Office, OpenOffice, Google Drive, "
 "etc.)."
 msgstr ""
+"Im Import-Tool werden Importvorlagen für die am häufigsten zu importierenden"
+" Daten (Kontakte, Produkte, Kontoauszüge usw.) bereitgestellt. Sie können "
+"sie mit jeder Tabellenkalkulationssoftware (Microsoft Office, OpenOffice, "
+"Google Drive usw.) öffnen."
 
 #: ../../content/applications/general/export_import_data.rst:372
 msgid "How to customize the file"
@@ -3943,6 +4725,8 @@ msgid ""
 "Remove columns you don't need. We advise to not remove the *ID* one (see why"
 " here below)."
 msgstr ""
+"Entfernen Sie Spalten, die Sie nicht benötigen. Wir raten Ihnen jedoch, die "
+"*ID* nicht zu entfernen (siehe unten, warum)."
 
 #: ../../content/applications/general/export_import_data.rst:381
 msgid ""
@@ -3950,16 +4734,22 @@ msgid ""
 " its label doesn't fit any field of the system. If so, find the "
 "corresponding field using the search."
 msgstr ""
+"Wenn Sie eine neue Spalte hinzufügen, ist Odoo möglicherweise nicht in der "
+"Lage, sie automatisch zuzuordnen, wenn ihre Bezeichnung zu keinem Feld des "
+"Systems passt. Wenn dies der Fall ist, suchen Sie das entsprechende Feld "
+"über die Suche."
 
 #: ../../content/applications/general/export_import_data.rst:388
 msgid ""
 "Then, use the label you found in your import template in order to make it "
 "work straight away the very next time you try to import."
 msgstr ""
+"Verwenden Sie dann die Bezeichnung, die Sie in Ihrer Importvorlage gefunden "
+"haben, damit es beim nächsten Importversuch sofort funktioniert."
 
 #: ../../content/applications/general/export_import_data.rst:392
 msgid "Why an “ID” column"
-msgstr ""
+msgstr "Warum eine „ID“-Spalte?"
 
 #: ../../content/applications/general/export_import_data.rst:394
 msgid ""
@@ -3967,17 +4757,24 @@ msgid ""
 "free to use the one of your previous software to ease the transition to "
 "Odoo."
 msgstr ""
+"Die **ID** (Externe ID) ist ein eindeutiger Bezeichner für die Position. Sie"
+" können gerne die aus Ihrer vorherigen Software verwenden, um den Übergang "
+"zu Odoo zu erleichtern."
 
 #: ../../content/applications/general/export_import_data.rst:397
 msgid ""
 "Setting an ID is not mandatory when importing but it helps in many cases:"
 msgstr ""
+"Die Angabe einer ID ist beim Importieren nicht zwingend erforderlich, aber "
+"in vielen Fällen hilfreich:"
 
 #: ../../content/applications/general/export_import_data.rst:399
 msgid ""
 "Update imports: you can import the same file several times without creating "
 "duplicates;"
 msgstr ""
+"Aktualisierungsimporte: Sie können dieselbe Datei mehrmals importieren, ohne"
+" Duplikate zu erzeugen."
 
 #: ../../content/applications/general/export_import_data.rst:400
 msgid "Import relation fields (see here below)."
@@ -3994,6 +4791,10 @@ msgid ""
 "relations you need to import the records of the related object first from "
 "their own list menu."
 msgstr ""
+"Ein Odoo-Objekt ist immer mit vielen anderen Objekten verbunden (z. B. ist "
+"ein Produkt mit Produktkategorien, Attributen, Lieferanten usw. verbunden). "
+"Um diese Beziehungen zu importieren, müssen Sie zunächst die Datensätze der "
+"verknüpften Objekte aus deren eigenem Listenmenü importieren."
 
 #: ../../content/applications/general/export_import_data.rst:409
 msgid ""
@@ -4002,6 +4803,10 @@ msgid ""
 "ID\" at the end of the column title (e.g. for product attributes: Product "
 "Attributes / Attribute / ID)."
 msgstr ""
+"Sie können dazu den Namen des Bezugsdatensatzes oder seine ID verwenden. Die"
+" ID wird erwartet, wenn zwei Datensätze den gleichen Namen haben. Fügen Sie "
+"in einem solchen Fall „ / ID“ am Ende des Spaltentitels hinzu (z. B. für "
+"Produktattribute: Produktattribute / Attribut / ID)."
 
 #: ../../content/applications/general/in_app_purchase.rst:3
 msgid "In-App Purchase (IAP)"
@@ -4890,10 +5695,16 @@ msgid ""
 "figures without switching interfaces, which facilitates daily tasks and the "
 "overall management process."
 msgstr ""
+"Eine zentralisierte Verwaltungsumgebung ermöglicht es Ihnen, mehrere "
+"Unternehmen gleichzeitig auszuwählen und deren spezifische Lager, Kunden, "
+"Ausrüstung und Kontakte festzulegen. Es bietet Ihnen die Möglichkeit, "
+"Berichte mit aggregierten Zahlen zu erstellen, ohne die Schnittstellen zu "
+"wechseln, was die täglichen Aufgaben und den gesamten Verwaltungsprozess "
+"erleichtert."
 
 #: ../../content/applications/general/users/companies.rst:13
 msgid "Manage companies and records"
-msgstr ""
+msgstr "Unternehmen und Datensätze verwalten"
 
 #: ../../content/applications/general/users/companies.rst:15
 msgid ""
@@ -4902,10 +5713,15 @@ msgid ""
 "are shared between the two companies (as long as both environments are "
 "active)."
 msgstr ""
+"Gehen Sie zu :menuselection:`Einstellungen --> Unternehmen verwalten` und "
+"füllen Sie das Formular mit den Informationen zu Ihrem Unternehmen aus. Wenn"
+" ein *Übergeordnetes Unternehmen* ausgewählt ist, werden die Datensätze "
+"zwischen den beiden Unternehmen ausgetauscht (solange beide Umgebungen aktiv"
+" sind)."
 
 #: ../../content/applications/general/users/companies.rst-1
 msgid "Overview of a new company's form in Odoo"
-msgstr ""
+msgstr "Übersicht des Formulars eines neuen Unternehmens in Odoo"
 
 #: ../../content/applications/general/users/companies.rst:24
 msgid ""
@@ -4914,11 +5730,17 @@ msgid ""
 "Set your favicons’ files size to 16x16 or 32x32 pixels. JPG, PNG, GIF, and "
 "ICO are extensions accepted."
 msgstr ""
+"Aktivieren Sie den :ref:`Entwicklermodus <developer-mode>`, um für jede "
+"Ihrer Unternehmen ein *Favicon* auszuwählen, das Sie leicht in den Browser-"
+"Tabs erkennen können. Stellen Sie die Dateigröße Ihrer Favicons auf 16x16 "
+"oder 32x32 Pixel ein. JPG, PNG, GIF und ICO sind akzeptierte Erweiterungen."
 
 #: ../../content/applications/general/users/companies.rst:0
 msgid ""
 "View of a web browser and the favicon for a specific company chosen in Odoo"
 msgstr ""
+"Ansicht eines Webbrowsers und des Favicons für ein bestimmtes in Odoo "
+"ausgewähltes Unternehmen"
 
 #: ../../content/applications/general/users/companies.rst:33
 msgid ""
@@ -4928,52 +5750,73 @@ msgid ""
 "below, the user has access to three companies, two are activated, and the "
 "environment in use is of *JS Store US*."
 msgstr ""
+"Wechseln Sie zwischen den Unternehmen oder wählen Sie mehrere aus, indem Sie"
+" die Auswahlfelder aktivieren, um sie zu aktivieren. Das ausgegraute "
+"Unternehmen ist das, deren Umgebung gerade verwendet wird. Um die Umgebung "
+"zu wechseln, klicken Sie auf den Namen des Unternehmens. Im folgenden "
+"Beispiel hat der Benutzer Zugriff auf drei Unternehmen, zwei sind aktiviert,"
+" und die verwendete Umgebung ist *JS Store US*."
 
 #: ../../content/applications/general/users/companies.rst-1
 msgid "View of the companies menu through the main dashboard in Odoo"
-msgstr ""
+msgstr "Ansicht des Unternehmensmenüs über das Hauptdashboard in Odoo"
 
 #: ../../content/applications/general/users/companies.rst:42
 msgid ""
 "Data such as Products, Contacts, and Equipment can be shared or set to be "
 "shown for a specific company only. To do so, on their forms, choose between:"
 msgstr ""
+"Daten wie Produkte, Kontakte und Ausrüstung können gemeinsam genutzt oder so"
+" eingestellt werden, dass sie nur für ein bestimmtes Unternehmen angezeigt "
+"werden. Wählen Sie dazu in den entsprechenden Formularen zwischen:"
 
 #: ../../content/applications/general/users/companies.rst:45
 msgid "*A blank field*: the record is shared within all companies."
 msgstr ""
+"*Ein leeres Feld*: Der Datensatz wird zwischen allen Unternehmen geteilt."
 
 #: ../../content/applications/general/users/companies.rst:46
 msgid ""
 "*Adding a company*: the record is visible to users logged in to that "
 "specific company."
 msgstr ""
+"*Hinzufügen eines Unternehmen*: Der Datensatz ist für Benutzer sichtbar, die"
+" bei diesem bestimmten Unternehmen angemeldet sind."
 
 #: ../../content/applications/general/users/companies.rst-1
 msgid "View of a product's form emphasizing the company field in Odoo Sales"
 msgstr ""
+"Ansicht eines Produktformulars mit Hervorhebung des Unternehmensfelds in "
+"Odoo Verkauf"
 
 #: ../../content/applications/general/users/companies.rst:53
 msgid "Employees' access"
-msgstr ""
+msgstr "Mitarbeiterzugriff"
 
 #: ../../content/applications/general/users/companies.rst:55
 msgid ""
 "Once companies are created, manage your employees' :doc:`Access Rights "
 "<access_rights>` for *Multi Companies*."
 msgstr ""
+"Sobald die Unternehmen erstellt sind, verwalten Sie die :doc:`Zugriffsrechte"
+" <access_rights>` Ihrer Mitarbeiter für *Mehrere Unternehmen*."
 
 #: ../../content/applications/general/users/companies.rst-1
 msgid ""
 "View of an user form emphasizing the multi companies field under the access rights tabs\n"
 "in Odoo"
 msgstr ""
+"Ansicht des Benutzerformulars mit Hervorhebung des Felds „Mehrere "
+"Unternehmen“ im Reiter „Zugriffsrechte“ in Odoo"
 
 #: ../../content/applications/general/users/companies.rst:64
 msgid ""
 "If a user has multiple companies *activated* on his database, and he is "
 "**editing** a record, the editing happens on the record's related company."
 msgstr ""
+"Wenn ein Benutzer mehrere Unternehmen in seiner Datenbank *aktiviert* hat "
+"und einen Datensatz **bearbeitet**, erfolgt die Bearbeitung im zugehörigen "
+"Unternehmen des Datensatzes."
 
 #: ../../content/applications/general/users/companies.rst:67
 msgid ""
@@ -4981,28 +5824,38 @@ msgid ""
 "the JS Store Belgium environment, the changes are applied under JS Store US "
 "(the company from which the sale order was issued)."
 msgstr ""
+"Beispiel: Wenn Sie einen Verkaufsauftrag bearbeiten, der unter JS Store US "
+"ausgestellt wurde, während Sie in der Umgebung von JS Store Belgium "
+"arbeiten, werden die Änderungen unter JS Store US (dem Unternehmen, von dem "
+"der Verkaufsauftrag ausgestellt wurde) übernommen."
 
 #: ../../content/applications/general/users/companies.rst:68
 msgid "When **creating** a record, the company taken into account is:"
 msgstr ""
+"Bei der **Erstellung** eines Datensatzes wird das Unternehmen "
+"berücksichtigt:"
 
 #: ../../content/applications/general/users/companies.rst:70
 msgid "The current company (the one active) or,"
-msgstr ""
+msgstr "Das aktuelle Unternehmen (das aktive) oder,"
 
 #: ../../content/applications/general/users/companies.rst:71
 msgid "No company is set (on products and contacts’ forms for example) or,"
 msgstr ""
+"Es ist kein Unternehmen eingestellt (z. B. auf den Formularen für Produkte "
+"und Kontakte) oder,"
 
 #: ../../content/applications/general/users/companies.rst:72
 msgid ""
 "The company set is the one linked to the document (the same as if a record "
 "is being edited)."
 msgstr ""
+"Das eingestellte Unternehmen ist dasjenige, das mit dem Dokument verknüpft "
+"ist (genau wie bei der Bearbeitung eines Datensatzes)."
 
 #: ../../content/applications/general/users/companies.rst:75
 msgid "Documents’ format"
-msgstr ""
+msgstr "Format der Dokumente"
 
 #: ../../content/applications/general/users/companies.rst:77
 msgid ""
@@ -5010,11 +5863,16 @@ msgid ""
 " the respective one and, under *Settings*, click on *Configure Document "
 "Layout*."
 msgstr ""
+"Um die Formate der Dokumente für die einzelnen Unternehmen einzustellen, "
+"*aktivieren* Sie das jeweilige Unternehmen und *wählen* Sie unter "
+"*Einstellungen* die Option *Dokumentenlayout konfigurieren*."
 
 #: ../../content/applications/general/users/companies.rst-1
 msgid ""
 "View of the settings page emphasizing the document layout field in Odoo"
 msgstr ""
+"Ansicht der Einstellungsseite mit Hervorhebung des Feldes „Dokumentlayout“ "
+"in Odoo"
 
 #: ../../content/applications/general/users/companies.rst:85
 msgid "Inter-Company Transactions"
@@ -5024,33 +5882,38 @@ msgstr "Unternehmensinterne Transaktionen"
 msgid ""
 "First, make sure each one of your companies is properly set in relation to:"
 msgstr ""
+"Vergewissern Sie sich zunächst, dass jedes Ihrer Unternehmen in einem "
+"angemessenen Verhältnis zueinander steht:"
 
 #: ../../content/applications/general/users/companies.rst:89
 msgid ""
 ":doc:`Chart of Accounts "
 "<../../finance/accounting/get_started/chart_of_accounts>`"
 msgstr ""
+":doc:`Kontenplan <../../finance/accounting/get_started/chart_of_accounts>`"
 
 #: ../../content/applications/general/users/companies.rst:90
 msgid ":doc:`Taxes <../../finance/accounting/taxes>`"
-msgstr ""
+msgstr ":doc:`Steuern <../../finance/accounting/taxes>`"
 
 #: ../../content/applications/general/users/companies.rst:91
 msgid ""
 ":doc:`Fiscal Positions <../../finance/accounting/taxes/fiscal_positions>`"
 msgstr ""
+":doc:`Steuerpositionen <../../finance/accounting/taxes/fiscal_positions>`"
 
 #: ../../content/applications/general/users/companies.rst:92
 msgid ":doc:`Journals <../../finance/accounting/bank>`"
-msgstr ""
+msgstr ":doc:`Journale <../../finance/accounting/bank>`"
 
 #: ../../content/applications/general/users/companies.rst:93
 msgid ":doc:`Fiscal Localizations <../../finance/fiscal_localizations>`"
 msgstr ""
+":doc:`Steuerliche Lokalisierungen <../../finance/fiscal_localizations>`"
 
 #: ../../content/applications/general/users/companies.rst:94
 msgid ":doc:`Pricelists <../../sales/sales/products_prices/prices/pricing>`"
-msgstr ""
+msgstr ":doc:`Preislisten <../../sales/sales/products_prices/prices/pricing>`"
 
 #: ../../content/applications/general/users/companies.rst:96
 msgid ""
@@ -5059,18 +5922,27 @@ msgid ""
 " operations between companies to be synchronized at an invoice/bills level "
 "or at a sales/purchase orders level."
 msgstr ""
+"Aktivieren Sie nun die Option *Zwischenbetriebliche Transaktionen* unter "
+"*Einstellungen*. Wenn das jeweilige Unternehmen *aktiviert* und *ausgewählt*"
+" ist, wählen Sie aus, ob die Vorgänge zwischen den Unternehmen auf der Ebene"
+" der Rechnungen oder auf der Ebene der Verkaufs-/Einkaufsaufträge "
+"synchronisiert werden sollen."
 
 #: ../../content/applications/general/users/companies.rst-1
 msgid ""
 "View of the settings page emphasizing the inter company transaction field in"
 " Odoo"
 msgstr ""
+"Ansicht der Einstellungsseite mit Hervorhebung des Feldes "
+"„Unternehmenstransaktion“ in Odoo"
 
 #: ../../content/applications/general/users/companies.rst:104
 msgid ""
 "**Synchronize invoice/bills**: generates a bill/invoice when a company "
 "confirms a bill/invoice for the selected company."
 msgstr ""
+"**Ein-/Ausgangsrechnungen synchronisieren**: erzeugt eine Rechnung, wenn ein"
+" Unternehmen eine Rechnung für das ausgewählte Unternehmen bestätigt."
 
 #: ../../content/applications/general/users/companies.rst:107
 msgid ""
@@ -5078,10 +5950,15 @@ msgid ""
 "automatically creates a vendor bill on the JS Store US, from the JS Store "
 "Belgium."
 msgstr ""
+"*Beispiel:* eine Rechnung, die im JS Store Belgium für den JS Store US "
+"gebucht wurde, erstellt automatisch eine Lieferantenrechnung im JS Store US "
+"aus dem JS Store Belgium"
 
 #: ../../content/applications/general/users/companies.rst-1
 msgid "View of an invoice for JS Store US created on JS Store Belgium in Odoo"
 msgstr ""
+"Ansicht einer Rechnung für JS Store US, die mit JS Store Belgium in Odoo "
+"erstellt wurde"
 
 #: ../../content/applications/general/users/companies.rst:114
 msgid ""
@@ -5090,6 +5967,12 @@ msgid ""
 "confirmed for the selected company. If instead of a drafted purchase/sales "
 "order you rather have it validated, enable *Automatic Validation*."
 msgstr ""
+"**Verkaufs-/Einkaufsauftrag synchronisieren**: erzeugt einen Entwurf eines "
+"Verkaufs-/Einkaufsauftrags unter Verwendung des Lagers des ausgewählten "
+"Unternehmens, wenn ein Verkaufs-/Einkaufsauftrag für das ausgewählte "
+"Unternehmen bestätigt wird. Wenn Sie anstelle eines Entwurfs eines "
+"Verkaufs-/Einkaufsauftrags lieber eine Validierung wünschen, aktivieren Sie "
+"*Automatische Validierung*."
 
 #: ../../content/applications/general/users/companies.rst:118
 msgid ""
@@ -5097,34 +5980,44 @@ msgid ""
 "Belgium, a purchase order on JS Store Belgium is automatically created (and "
 "confirmed if the *Automatic Validation* feature was enabled)."
 msgstr ""
+"*Beispiel:* Wenn ein Verkaufsauftrag für JS Store US im JS Store Belgium "
+"bestätigt wird, wird automatisch ein Einkaufsauftrag im JS Store Belgium "
+"erstellt (und bestätigt, wenn die Funktion *Automatische Validierung* "
+"aktiviert wurde)."
 
 #: ../../content/applications/general/users/companies.rst-1
 msgid ""
 "View of the purchase created on JS Store US from JS Store Belgium in Odoo"
 msgstr ""
+"Ansicht des Einkaufs, der in JS Store US von JS Store Belgium in Odoo "
+"erstellt wurde"
 
 #: ../../content/applications/general/users/companies.rst:127
 msgid ""
 "Products have to be configured as *Can be sold* and must be shared between "
 "the companies."
 msgstr ""
+"Produkte müssen als *Kann verkauft werden* konfiguriert werden und müssen "
+"zwischen den Unternehmen geteilt werden."
 
 #: ../../content/applications/general/users/companies.rst:130
 msgid ""
 "Remember to test all workflows as an user other than the administrator."
 msgstr ""
+"Denken Sie daran, alle Arbeitsabläufe als ein anderer Benutzer als der "
+"Administrator zu testen."
 
 #: ../../content/applications/general/users/companies.rst:133
 msgid ":doc:`Multi-company Guidelines </developer/howtos/company>`"
-msgstr ""
+msgstr ":doc:`Leitfaden für mehrere Unternehmen </developer/howtos/company>`"
 
 #: ../../content/applications/general/users/companies.rst:134
 msgid ":doc:`../../finance/accounting/get_started/multi_currency`"
-msgstr ""
+msgstr ":doc:`../../finance/accounting/get_started/multi_currency`"
 
 #: ../../content/applications/general/users/delete_account.rst:3
 msgid "Deleting an Odoo.com Account"
-msgstr ""
+msgstr "Ein Odoo.com-Konto löschen"
 
 #: ../../content/applications/general/users/delete_account.rst:5
 msgid ""
@@ -5133,24 +6026,37 @@ msgid ""
 " Account --> Edit Security Settings --> Delete Account`. It can also be "
 "accessed by going to https://www.odoo.com/my/home."
 msgstr ""
+"Um Ihr Odoo.com-Konto zu löschen, rufen Sie die Löschoption auf, indem Sie "
+"auf das Benutzersymbol klicken. Die Option zum Löschen können Sie über "
+":menuselection:`Mein Konto --> Sicherheitseinstellungen bearbeiten --> Konto"
+" löschen` aufrufen. Sie kann auch über https://www.odoo.com/my/home "
+"aufgerufen werden."
 
 #: ../../content/applications/general/users/delete_account.rst:10
 msgid ""
 "Deleting an Odoo account is irreversible. Take caution when performing this "
 "action as the Odoo.com account will not be retrievable."
 msgstr ""
+"Die Löschung eines Odoo-Kontos ist nicht rückgängig zu machen. Seien Sie "
+"vorsichtig, wenn Sie diese Aktion durchführen, da das Odoo.com-Konto nicht "
+"wiederhergestellt werden kann."
 
 #: ../../content/applications/general/users/delete_account.rst:13
 msgid ""
 "Upon clicking the :guilabel:`Delete Account` button, a pop-up window will "
 "appear, asking you to confirm the account deletion."
 msgstr ""
+"Wenn Sie auf die Schaltfläche :guilabel:`Konto löschen` klicken, erscheint "
+"ein Pop-up-Fenster, in dem Sie aufgefordert werden, die Kontolöschung zu "
+"bestätigen."
 
 #: ../../content/applications/general/users/delete_account.rst-1
 msgid ""
 "Clicking on the Delete Account button will populate a window verifying the "
 "change."
 msgstr ""
+"Beim Klick auf die Schaltfläche „Konto löschen“ erscheint ein Fenster, in "
+"dem die Änderung bestätigt wird."
 
 #: ../../content/applications/general/users/delete_account.rst:20
 msgid ""
@@ -5158,6 +6064,9 @@ msgid ""
 ":guilabel:`login` for the account being deleted. Click the :guilabel:`Delete"
 " Account` button to confirm the deletion."
 msgstr ""
+"Bestätigen Sie die Löschung, indem Sie das :guilabel:`Passwort` und den "
+":guilabel:`Login` für das zu löschende Konto eingeben. Klicken Sie auf die "
+"Schaltfläche :guilabel:`Konto löschen`, um die Löschung zu bestätigen."
 
 #: ../../content/applications/general/users/language.rst:3
 msgid "Change language"
@@ -5932,34 +6841,49 @@ msgid ""
 "allow websocket connections. All of these config lines should be under the "
 "peer itself; setting these config lines globally might not work:"
 msgstr ""
+"Bearbeiten Sie als nächstes die Datei sip.conf. Für den WebRTC-Peer müssen "
+"Verschlüsselung, avpf und icesupport aktiviert sein. In den meisten Fällen "
+"sollte directmedia deaktiviert sein. Auch unter dem WebRTC-Client muss der "
+"Transport als „ws“ aufgeführt sein, um Websocket-Verbindungen zuzulassen. "
+"Alle diese Konfigurationszeilen sollten sich unter dem Peer selbst befinden;"
+" eine globale Einstellung dieser Konfigurationszeilen funktioniert "
+"möglicherweise nicht:"
 
 #: ../../content/applications/general/voip/asterisk.rst:197
 msgid ""
 "In the sip.conf and rtp.conf files you also need to add or uncomment the "
 "lines:"
 msgstr ""
+"In den Dateien sip.conf und rtp.conf müssen Sie außerdem die Zeilen "
+"hinzufügen oder auskommentieren:"
 
 #: ../../content/applications/general/voip/asterisk.rst:204
 msgid "Lastly, set up extensions.conf:"
-msgstr ""
+msgstr "Zum Schluss richten Sie die extensions.conf ein:"
 
 #: ../../content/applications/general/voip/asterisk.rst:213
 msgid "Configure Odoo VOIP"
-msgstr ""
+msgstr "Odoo VOIP konfigurieren"
 
 #: ../../content/applications/general/voip/asterisk.rst:215
 msgid "In Odoo, the configuration should be done in the user's preferences."
 msgstr ""
+"In Odoo sollte die Konfiguration in den Einstellungen des Benutzers "
+"vorgenommen werden."
 
 #: ../../content/applications/general/voip/asterisk.rst:221
 msgid ""
 "The SIP Login/Browser's Extension is the number you configured previously in"
 " the sip.conf file (in our example: 1060)."
 msgstr ""
+"Die Erweiterung des SIP-Logins/Browses ist die Nummer, die Sie zuvor in der "
+"Datei sip.conf konfiguriert haben (in unserem Beispiel: 1060)."
 
 #: ../../content/applications/general/voip/asterisk.rst:224
 msgid "The SIP Password is the secret you chose in the sip.conf file."
 msgstr ""
+"Das SIP-Passwort ist das Geheimnis, das Sie in der Datei sip.conf festgelegt"
+" haben."
 
 #: ../../content/applications/general/voip/asterisk.rst:226
 msgid ""
@@ -5967,18 +6891,25 @@ msgid ""
 "if you want to transfer your call from Odoo to an external phone also "
 "configured in the sip.conf file."
 msgstr ""
+"Die Durchwahl Ihres Bürotelefons ist kein Pflichtfeld, wird aber verwendet, "
+"wenn Sie Ihren Anruf von Odoo an ein externes Telefon weiterleiten möchten, "
+"das ebenfalls in der Datei sip.conf konfiguriert ist."
 
 #: ../../content/applications/general/voip/asterisk.rst:230
 msgid ""
 "The configuration should also be done in the General Settings under the "
 "\"Integrations\" section."
 msgstr ""
+"Die Konfiguration sollte auch in den Allgemeinen Einstellungen unter dem "
+"Abschnitt „Integrationen“ vorgenommen werden."
 
 #: ../../content/applications/general/voip/asterisk.rst:235
 msgid ""
 "The PBX Server IP should be the same as the IP you define in the http.conf "
 "file."
 msgstr ""
+"Die IP des PBX-Servers sollte mit der IP übereinstimmen, die Sie in der "
+"Datei http.conf definieren."
 
 #: ../../content/applications/general/voip/asterisk.rst:237
 msgid ""
@@ -5986,10 +6917,13 @@ msgid ""
 " be the same as the IP defined previously and \"XXXX\" needs to be the port "
 "defined in the http.conf file."
 msgstr ""
+"Der WebSocket sollte lauten: ws://localhost:XXXX/ws, wobei „localhost“ mit "
+"der zuvor definierten IP-Adresse übereinstimmen muss und „XXXX“ der in der "
+"Datei http.conf definierte Port ist."
 
 #: ../../content/applications/general/voip/axivox.rst:3
 msgid "Use VoIP services in Odoo with Axivox"
-msgstr ""
+msgstr "VoIP-Dienste in Odoo mit Axivox verwenden"
 
 #: ../../content/applications/general/voip/axivox.rst:6
 #: ../../content/applications/general/voip/onsip.rst:6
@@ -6003,6 +6937,10 @@ msgid ""
 "<asterisk>` is not necessary as the infrastructure is hosted and managed by "
 "Axivox."
 msgstr ""
+"Odoo VoIP kann so eingerichtet werden, dass es mit `Axivox "
+"<https://www.axivox.com/>`_ zusammenarbeitet. In diesem Fall ist ein "
+":doc:`Asterisk-Server <asterisk>` nicht erforderlich, da die Infrastruktur "
+"von Axivox gehostet und verwaltet wird."
 
 #: ../../content/applications/general/voip/axivox.rst:12
 msgid ""
@@ -6010,42 +6948,51 @@ msgid ""
 "open an account. Before doing so, verify that Axivox covers your area and "
 "the areas you wish to call."
 msgstr ""
+"Um diesen Service zu nutzen, `wenden Sie sich an Axivox "
+"<https://www.axivox.com/contact/>`_, um ein Konto zu eröffnen. Vergewissern "
+"Sie sich vorher, dass Axivox Ihr Gebiet und die Gebiete, die Sie anrufen "
+"möchten, abdeckt."
 
 #: ../../content/applications/general/voip/axivox.rst:18
 msgid "Go to :menuselection:`Apps` and install the **VoIP Module**."
 msgstr ""
+"Gehen Sie zu :menuselection:`Apps` und installieren Sie das **VoIP-Modul**."
 
 #: ../../content/applications/general/voip/axivox.rst-1
 msgid "VoIP module installation on an Odoo database"
-msgstr ""
+msgstr "Installation des VoIP-Moduls in einer Odoo-Datenbank"
 
 #: ../../content/applications/general/voip/axivox.rst:24
 msgid ""
 "Go to :menuselection:`Settings --> General Settings --> Integrations`, and "
 "fill out the **Asterisk (VoIP)** field:"
 msgstr ""
+"Gehen Sie zu :menuselection:`Einstellungen --> Allgemeine Einstellungen --> "
+"Integrationen`, füllen Sie das Feld **Asterisk (VoIP)** aus:"
 
 #: ../../content/applications/general/voip/axivox.rst:27
 msgid ""
 "**PBX Server IP**: set the domain created by Axivox for your account (e.g., "
 "*yourcompany.axivox.com*)"
 msgstr ""
+"**PBX-Server-IP**: Geben Sie die von Axivox für das Konto erstellte Domain "
+"ein (z. B. *yourcompany.axivox.com*)."
 
 #: ../../content/applications/general/voip/axivox.rst:29
 msgid "**WebSocket**: type in ``wss://pabx.axivox.com:3443``"
-msgstr ""
+msgstr "**WebSocket**: Geben Sie ``wss://pabx.axivox.com:3443`` ein."
 
 #: ../../content/applications/general/voip/axivox.rst:30
 msgid "**VoIP Environment**: set as *Production*"
-msgstr ""
+msgstr "**VoIP-Umgebung**: auf *Produktion* eingestellt"
 
 #: ../../content/applications/general/voip/axivox.rst-1
 msgid "Integration of Axivox as VoIP provider in an Odoo database"
-msgstr ""
+msgstr "Integration von Axivox als VoIP-Anbieter in eine Odoo-Datenbank"
 
 #: ../../content/applications/general/voip/axivox.rst:37
 msgid "Configure the VOIP user in the Odoo's user"
-msgstr ""
+msgstr "VOIP-Benutzer im Benutzer von Odoo konfigurieren"
 
 #: ../../content/applications/general/voip/axivox.rst:39
 msgid ""
@@ -6053,18 +7000,22 @@ msgid ""
 "the user's form you want to configure. Under the **Preferences** tab, fill "
 "out the section **PBX Configuration**:"
 msgstr ""
+"Gehen Sie zu :menuselection:`Einstellungen --> Benutzer & Unternehmen --> "
+"Benutzer` und öffnen Sie dann das Formular des Benutzers, den Sie "
+"konfigurieren möchten. Füllen Sie unter den Reiter **Einstellungen** den "
+"Abschnitt **PBX-Konfiguration** aus:"
 
 #: ../../content/applications/general/voip/axivox.rst:42
 msgid "**SIP Login / Browser's Extension**: the Axivox *username*"
-msgstr ""
+msgstr "**Erweiterung des SIP-Logins/Browsers**: der Axivox-*Benutzername*"
 
 #: ../../content/applications/general/voip/axivox.rst:43
 msgid "**SIP Password**: the Axivox *SIP Password*"
-msgstr ""
+msgstr "**SIP-Passwort**: das Axivox-*SIP-Passwort*"
 
 #: ../../content/applications/general/voip/axivox.rst-1
 msgid "Integration of Axivox user in the Odoo user preference"
-msgstr ""
+msgstr "Integration von Axivox-Benutzern in die Odoo-Benutzerpräferenzen"
 
 #: ../../content/applications/general/voip/axivox.rst:50
 msgid ""
@@ -6072,10 +7023,13 @@ msgid ""
 "https://manage.axivox.com/, selecting the user you want to configure, and "
 "referring to the fields as pictured below."
 msgstr ""
+"Sie finden all diese Informationen, indem Sie sich unter "
+"https://manage.axivox.com/ anmelden, den Benutzer auswählen, den Sie "
+"konfigurieren möchten, und sich die Felder wie unten abgebildet ansehen."
 
 #: ../../content/applications/general/voip/axivox.rst:0
 msgid "SIP credentials in the Axivox manager"
-msgstr ""
+msgstr "SIP-Anmeldedaten im Axivox-Manager"
 
 #: ../../content/applications/general/voip/axivox.rst:58
 msgid "Phone Calls"
@@ -6086,29 +7040,35 @@ msgid ""
 "You can make phone calls by clicking on the phone icon in the navigation "
 "bar."
 msgstr ""
+"Sie können Anrufe tätigen, indem Sie auf das Telefonsymbol in der "
+"Navigationsleiste klicken."
 
 #: ../../content/applications/general/voip/axivox.rst:62
 msgid ""
 "You can also receive phone calls. Odoo rings and displays a notification."
 msgstr ""
+"Sie können auch Telefonanrufe empfangen. Odoo klingelt und zeigt eine "
+"Benachrichtigung an."
 
 #: ../../content/applications/general/voip/axivox.rst:65
 msgid "Your number is the one provided by Axivox."
-msgstr ""
+msgstr "Ihre Nummer ist die von Axivox angegebene."
 
 #: ../../content/applications/general/voip/axivox.rst-1
 msgid "Incoming VoIP call in Odoo"
-msgstr ""
+msgstr "Eingehender VoIP-Anruf in Odoo"
 
 #: ../../content/applications/general/voip/axivox.rst:72
 msgid ""
 "If you see a *Missing Parameter* message in the **Odoo softphone**, refresh "
 "your Odoo window and try again."
 msgstr ""
+"Wenn Sie die Meldung *Parameter fehlt* im **Odoo-Softphone** sehen, "
+"aktualisieren Sie Ihr Odoo-Fenster und versuchen Sie es erneut."
 
 #: ../../content/applications/general/voip/axivox.rst:0
 msgid "\"Missing Parameter\" error message in the Odoo softphone"
-msgstr ""
+msgstr "Fehlermeldung „Parameter fehlt“ im Odoo-Softphone"
 
 #: ../../content/applications/general/voip/axivox.rst:80
 msgid ""
@@ -6117,14 +7077,19 @@ msgid ""
 "the international country code. E.g., +16506913277 (where +1 is the "
 "international prefix for the United States)."
 msgstr ""
+"Wenn Sie im Odoo-Softphone die Meldung *Falsche Nummer* sehen, stellen Sie "
+"sicher, dass Sie das internationale Format verwenden, das mit dem "
+"Pluszeichen (+) gefolgt von der internationalen Landesvorwahl beginnt. Z. B."
+" +16506913277 (wobei +1 die internationale Vorwahl für die Vereinigten "
+"Staaten ist)."
 
 #: ../../content/applications/general/voip/axivox.rst:0
 msgid "\"Incorrect Number\" error message in the Odoo softphone"
-msgstr ""
+msgstr "Fehlermeldung „Falsche Nummer“ im Odoo-Softphone"
 
 #: ../../content/applications/general/voip/onsip.rst:3
 msgid "Use VoIP services in Odoo with OnSIP"
-msgstr ""
+msgstr "VoIP-Dienste in Odoo mit OnSIP verwenden"
 
 #: ../../content/applications/general/voip/onsip.rst:8
 msgid ""
@@ -6132,6 +7097,10 @@ msgid ""
 " case, the installation and setup of an Asterisk server is not necessary as "
 "the whole infrastructure is hosted and managed by OnSIP."
 msgstr ""
+"Odoo VoIP kann so eingerichtet werden, dass es mit OnSIP (www.onsip.com) "
+"zusammenarbeitet. In diesem Fall ist die Installation und Einrichtung eines "
+"Asterisk-Servers nicht erforderlich, da die gesamte Infrastruktur von OnSIP "
+"gehostet und verwaltet wird."
 
 #: ../../content/applications/general/voip/onsip.rst:12
 msgid ""
@@ -6140,16 +7109,23 @@ msgid ""
 "covered by the service. After opening an OnSIP account, follow the "
 "configuration procedure below."
 msgstr ""
+"Um diesen Dienst nutzen zu können, müssen Sie ein Konto bei OnSIP eröffnen. "
+"Vergewissern Sie sich zuvor, dass Ihr Gebiet und die Gebiete, die Sie "
+"anrufen möchten, von diesem Dienst abgedeckt werden. Nachdem Sie ein OnSIP-"
+"Konto eröffnet haben, folgen Sie den nachstehenden "
+"Konfigurationsanweisungen."
 
 #: ../../content/applications/general/voip/onsip.rst:19
 msgid "Go to Apps and install the module **VoIP OnSIP**."
-msgstr ""
+msgstr "Gehen Sie zu Apps und installieren Sie das Modul **VoIP OnSIP**."
 
 #: ../../content/applications/general/voip/onsip.rst:24
 msgid ""
 "Go to Settings/General Settings. In the section Integrations/Asterisk "
 "(VoIP), fill in the 3 fields:"
 msgstr ""
+"Gehen Sie zu Einstellungen/Allgemeine Einstellungen. Füllen Sie im Abschnitt"
+" Integrationen/Asterisk (VoIP) die 3 Felder aus:"
 
 #: ../../content/applications/general/voip/onsip.rst:26
 msgid ""
@@ -6157,36 +7133,43 @@ msgid ""
 "www.onsip.com. If you don't know it, log in to https://admin.onsip.com/ and "
 "you will see it in the top right corner of the screen."
 msgstr ""
+"**OnSIP-Domain** ist die Domain, die Sie bei der Erstellung eines Kontos auf"
+" www.onsip.com gewählt haben. Wenn Sie sie nicht kennen, melden Sie sich bei"
+" https://admin.onsip.com/ an und Sie sehen sie in der oberen rechten Ecke "
+"des Bildschirms."
 
 #: ../../content/applications/general/voip/onsip.rst:29
 msgid "**WebSocket** should contain wss://edge.sip.onsip.com"
-msgstr ""
+msgstr "**WebSocket** sollte wss://edge.sip.onsip.com enthalten"
 
 #: ../../content/applications/general/voip/onsip.rst:30
 msgid "**Mode** should be Production"
-msgstr ""
+msgstr "**Modus** sollte Produktion sein"
 
 #: ../../content/applications/general/voip/onsip.rst:35
 msgid ""
 "Go to **Settings/Users**. In the form view of each VoIP user, in the "
 "Preferences tab, fill in the section **PBX Configuration**:"
 msgstr ""
+"Gehen Sie zu **Einstellungen/Benutzer**. Füllen Sie in der Formularansicht "
+"jedes VoIP-Benutzers auf der Reiter Präferenzen den Abschnitt **PBX-"
+"Konfiguration** aus:"
 
 #: ../../content/applications/general/voip/onsip.rst:38
 msgid "**SIP Login / Browser's Extension**: the OnSIP 'Username'"
-msgstr ""
+msgstr "**Erweiterung des SIP-Logins/Browsers**: der OnSIP-„Benutzername“"
 
 #: ../../content/applications/general/voip/onsip.rst:39
 msgid "**OnSIP authorization User**: the OnSIP 'Auth Username'"
-msgstr ""
+msgstr "**OnSIP-Autorisierungsbenutzer**: der OnSIP-„Auth-Benutzername“"
 
 #: ../../content/applications/general/voip/onsip.rst:40
 msgid "**SIP Password**: the OnSIP 'SIP Password'"
-msgstr ""
+msgstr "**SIP-Passwort**: das OnSIP-*SIP-Passwort*"
 
 #: ../../content/applications/general/voip/onsip.rst:41
 msgid "**Handset Extension**: the OnSIP 'Extension'"
-msgstr ""
+msgstr "**Handset-Erweiterung**: die OnSIP-„Erweiterung“"
 
 #: ../../content/applications/general/voip/onsip.rst:43
 msgid ""
@@ -6194,6 +7177,9 @@ msgid ""
 "https://admin.onsip.com/users, then select the user you want to configure "
 "and refer to the fields as pictured below."
 msgstr ""
+"Sie finden all diese Informationen, indem Sie sich unter "
+"https://admin.onsip.com/users anmelden, dann den Benutzer auswählen, den Sie"
+" konfigurieren möchten, und sich die Felder wie unten abgebildet ansehen."
 
 #: ../../content/applications/general/voip/onsip.rst:49
 msgid ""
@@ -6201,12 +7187,17 @@ msgid ""
 "corner of Odoo (make sure you are logged in as a user properly configured in"
 " Odoo and in OnSIP)."
 msgstr ""
+"Sie können nun telefonieren, indem Sie auf das Telefonsymbol in der oberen "
+"rechten Ecke von Odoo klicken (stellen Sie sicher, dass Sie als "
+"ordnungsgemäß in Odoo und in OnSIP konfigurierter Benutzer angemeldet sind)."
 
 #: ../../content/applications/general/voip/onsip.rst:53
 msgid ""
 "If you see a *Missing Parameters* message in the Odoo softphone, make sure "
 "to refresh your Odoo window and try again."
 msgstr ""
+"Wenn Sie die Meldung *Parameter fehlen* im **Odoo-Softphone** sehen, "
+"aktualisieren Sie Ihr Odoo-Fenster und versuchen Sie es erneut."
 
 #: ../../content/applications/general/voip/onsip.rst:60
 msgid ""
@@ -6215,16 +7206,24 @@ msgid ""
 "the international country code. E.g.: `+16506913277` (where `+1` is the "
 "international prefix for the United States)."
 msgstr ""
+"Wenn Sie im Odoo-Softphone die Meldung *Falsche Nummer* sehen, stellen Sie "
+"sicher, dass Sie das internationale Format verwenden, das mit dem "
+"Pluszeichen (+) gefolgt von der internationalen Landesvorwahl beginnt. Z. B."
+" `+16506913277` (wobei `+1` die internationale Vorwahl für die Vereinigten "
+"Staaten ist)."
 
 #: ../../content/applications/general/voip/onsip.rst:67
 msgid ""
 "You can now also receive phone calls. Your number is the one provided by "
 "OnSIP. Odoo will ring and display a notification."
 msgstr ""
+"Sie können jetzt auch Anrufe empfangen. Ihre Nummer ist die von OnSIP "
+"bereitgestellte Nummer. Odoo wird klingeln und eine Benachrichtigung "
+"anzeigen."
 
 #: ../../content/applications/general/voip/onsip.rst:74
 msgid "OnSIP on Your Cell Phone"
-msgstr ""
+msgstr "OnSIP auf Ihrem Mobiltelefon"
 
 #: ../../content/applications/general/voip/onsip.rst:76
 msgid ""
@@ -6233,6 +7232,11 @@ msgid ""
 " VoIP. This is useful for on-the-go calls, but also to make sure to hear "
 "incoming calls, or simply for convenience. Any SIP softphone will work."
 msgstr ""
+"Um Telefonanrufe zu tätigen und zu empfangen, wenn Sie nicht vor Ihrem "
+"Computer sitzen, können Sie parallel zu Odoo VoIP eine Softphone-App auf "
+"Ihrem Mobiltelefon verwenden. Dies ist nützlich für Anrufe von unterwegs, "
+"aber auch um sicherzustellen, dass Sie eingehende Anrufe hören, oder einfach"
+" aus Bequemlichkeit. Jedes SIP-Softphone funktioniert."
 
 #: ../../content/applications/general/voip/onsip.rst:80
 msgid ""
@@ -6241,26 +7245,30 @@ msgid ""
 "When creating an account, select OnSIP in the list of carriers. You will "
 "then have to configure it as follows:"
 msgstr ""
+"Auf Android und iOS wurde OnSIP erfolgreich mit `Grandstream Wave "
+"<https://play.google.com/store/apps/details?id=com.grandstream.ucm>`_ "
+"getestet. Wenn Sie ein Konto erstellen, wählen Sie OnSIP in der Liste der "
+"Anbieter aus. Anschließend müssen Sie es wie folgt konfigurieren:"
 
 #: ../../content/applications/general/voip/onsip.rst:84
 msgid "**Account name**: OnSIP"
-msgstr ""
+msgstr "**Kontoname**: OnSIP"
 
 #: ../../content/applications/general/voip/onsip.rst:85
 msgid "**SIP Server**: the OnSIP 'Domain'"
-msgstr ""
+msgstr "**SIP-Server**: die OnSIP-„Domain“"
 
 #: ../../content/applications/general/voip/onsip.rst:86
 msgid "**SIP User ID**: the OnSIP 'Username'"
-msgstr ""
+msgstr "**SIP-Benutzer-ID**: der OnSIP-„Benutzername“"
 
 #: ../../content/applications/general/voip/onsip.rst:87
 msgid "**SIP Authentication ID**: the OnSIP 'Auth Username'"
-msgstr ""
+msgstr "**OnSIP-Authentifizierungsbenutzer**: der OnSIP-„Auth-Benutzername“"
 
 #: ../../content/applications/general/voip/onsip.rst:88
 msgid "**Password**: the OnSIP 'SIP Password'"
-msgstr ""
+msgstr "**Passwort**: das OnSIP-*SIP-Passwort*"
 
 #: ../../content/applications/general/voip/onsip.rst:90
 msgid ""
@@ -6272,6 +7280,14 @@ msgid ""
 "Assistant <https://chrome.google.com/webstore/detail/onsip-call-"
 "assistant/pceelmncccldedfkcgjkpemakjbapnpg>`_."
 msgstr ""
+"Sie können Anrufe nicht nur über das Grandstream Wave auf Ihrem Telefon "
+"einleiten, sondern auch, indem Sie in Ihrem Browser auf Ihrem PC auf eine "
+"Telefonnummer klicken. Dadurch klingelt das Grandstream Wave und leitet den "
+"Anruf über Ihr Telefon an die andere Partei weiter. Diese Vorgehensweise ist"
+" nützlich, um keine Zeit mit dem Wählen von Telefonnummern zu verschwenden. "
+"Dazu benötigen Sie die Chrome-Erweiterung `OnSIP Call Assistant "
+"<https://chrome.google.com/webstore/detail/onsip-call-"
+"assistant/pceelmncccldedfkcgjkpemakjbapnpg>`_."
 
 #: ../../content/applications/general/voip/onsip.rst:97
 msgid ""
@@ -6279,3 +7295,6 @@ msgid ""
 " not be logged in Odoo, as the softphone acts as an independent, separate "
 "app."
 msgstr ""
+"Der Nachteil der Verwendung eines Softphones auf Ihrem Mobiltelefon ist, "
+"dass Ihre Anrufe nicht in Odoo protokolliert werden, da das Softphone als "
+"unabhängige, separate Anwendung fungiert."
