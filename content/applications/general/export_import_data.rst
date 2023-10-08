@@ -19,9 +19,9 @@ on *Export*.
    :align: center
    :alt: view of the different things to enable/click to export data
 
-Pretty simple, this action still comes with some specificities. In fact,
-when clicking on *Export*, a pop-up window appears with several
-options for the data to export:
+That's pretty simple. But this action also comes with additional options. After 
+clicking on *Export*, a pop-up window appears which allows further configuration 
+of the export:
 
 .. image:: export_import_data/export-data-overview.png
    :align: center
