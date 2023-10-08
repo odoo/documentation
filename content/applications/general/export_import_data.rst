@@ -75,7 +75,7 @@ records`.
 .. image:: export_import_data/import_button.png
    :align: center
 
-There you are provided with templates you can easily populate
+Some business objects provide templates you can easily populate
 with your own data. Such templates can be imported in one click;
 The data mapping is already done.
 
