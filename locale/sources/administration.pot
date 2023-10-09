@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 14:17+0000\n"
+"POT-Creation-Date: 2023-10-09 07:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -231,7 +231,7 @@ msgstr ""
 #: ../../content/administration/install/deploy.rst:46
 #: ../../content/administration/install/deploy.rst:58
 #: ../../content/administration/install/deploy.rst:153
-#: ../../content/administration/install/deploy.rst:276
+#: ../../content/administration/install/deploy.rst:280
 msgid "in :ref:`the configuration file <reference/cmdline/config_file>` set:"
 msgstr ""
 
@@ -266,8 +266,8 @@ msgstr ""
 
 #: ../../content/administration/install/deploy.rst:95
 #: ../../content/administration/install/deploy.rst:145
-#: ../../content/administration/install/deploy.rst:231
-#: ../../content/administration/install/deploy.rst:271
+#: ../../content/administration/install/deploy.rst:235
+#: ../../content/administration/install/deploy.rst:275
 msgid "Configuration sample"
 msgstr ""
 
@@ -352,297 +352,277 @@ msgid "Builtin server"
 msgstr ""
 
 #: ../../content/administration/install/deploy.rst:182
-msgid "Odoo includes built-in HTTP servers, using either multithreading or multiprocessing."
+msgid "Odoo includes built-in HTTP, cron, and live-chat servers, using either multi-threading or multi-processing."
 msgstr ""
 
 #: ../../content/administration/install/deploy.rst:185
-msgid "For production use, it is recommended to use the multiprocessing server as it increases stability, makes somewhat better use of computing resources and can be better monitored and resource-restricted."
+msgid "The **multi-threaded** server is a simpler server primarily used for development, demonstrations, and its compatibility with various operating systems (including Windows). A new thread is spawned for every new HTTP request, even for long-running requests such as long polling. Extra daemonic cron threads are spawned too. Due to a Python limitation (GIL), it doesn't make the best use of the hardware."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:189
-msgid "Multiprocessing is enabled by configuring :option:`a non-zero number of worker processes <odoo-bin --workers>`, the number of workers should be based on the number of cores in the machine (possibly with some room for cron workers depending on how much cron work is predicted)"
+#: ../../content/administration/install/deploy.rst:191
+msgid "The multi-threaded server is the default server, also for docker containers. It is selected by leaving the :option:`--workers <odoo-bin --workers>` option out or setting it to ``0``."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:193
-msgid "Worker limits can be configured based on the hardware configuration to avoid resources exhaustion"
-msgstr ""
-
-#: ../../content/administration/install/deploy.rst:196
-msgid "multiprocessing mode currently isn't available on Windows"
-msgstr ""
-
-#: ../../content/administration/install/deploy.rst:199
-msgid "Worker number calculation"
+#: ../../content/administration/install/deploy.rst:194
+msgid "The **multi-processing** server is a full-blown server primarily used for production. It is not liable to the same Python limitation (GIL) on resource usage and hence makes the best use of the hardware. A pool of workers is created upon server startup. New HTTP requests are queued by the OS until there are workers ready to process them. An extra event-driven HTTP worker for the live chat is spawned on an alternative port. Extra cron workers are spawned too. A configurable process reaper monitors resource usage and can kill/restart failed workers."
 msgstr ""
 
 #: ../../content/administration/install/deploy.rst:201
-msgid "Rule of thumb : (#CPU * 2) + 1"
+msgid "The multi-processing server is opt-in. It is selected by setting the :option:`--workers <odoo-bin --workers>` option to a non-null integer."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:202
-msgid "Cron workers need CPU"
-msgstr ""
-
-#: ../../content/administration/install/deploy.rst:203
-msgid "1 worker ~= 6 concurrent users"
-msgstr ""
-
-#: ../../content/administration/install/deploy.rst:206
-msgid "memory size calculation"
-msgstr ""
-
-#: ../../content/administration/install/deploy.rst:208
-msgid "We consider 20% of the requests are heavy requests, while 80% are simpler ones"
+#: ../../content/administration/install/deploy.rst:205
+msgid "Because it is highly customized for Linux servers, the multi-processing server is not available on Windows."
 msgstr ""
 
 #: ../../content/administration/install/deploy.rst:209
-msgid "A heavy worker, when all computed field are well designed, SQL requests are well designed, ... is estimated to consume around 1GB of RAM"
+msgid "Worker number calculation"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:210
-msgid "A lighter worker, in the same scenario, is estimated to consume around 150MB of RAM"
+#: ../../content/administration/install/deploy.rst:211
+msgid "Rule of thumb : (#CPU * 2) + 1"
 msgstr ""
 
 #: ../../content/administration/install/deploy.rst:212
+msgid "Cron workers need CPU"
+msgstr ""
+
+#: ../../content/administration/install/deploy.rst:213
+msgid "1 worker ~= 6 concurrent users"
+msgstr ""
+
+#: ../../content/administration/install/deploy.rst:216
+msgid "memory size calculation"
+msgstr ""
+
+#: ../../content/administration/install/deploy.rst:218
+msgid "We consider 20% of the requests are heavy requests, while 80% are simpler ones"
+msgstr ""
+
+#: ../../content/administration/install/deploy.rst:219
+msgid "A heavy worker, when all computed field are well designed, SQL requests are well designed, ... is estimated to consume around 1GB of RAM"
+msgstr ""
+
+#: ../../content/administration/install/deploy.rst:220
+msgid "A lighter worker, in the same scenario, is estimated to consume around 150MB of RAM"
+msgstr ""
+
+#: ../../content/administration/install/deploy.rst:222
 msgid "Needed RAM = #worker * ( (light_worker_ratio * light_worker_ram_estimation) + (heavy_worker_ratio * heavy_worker_ram_estimation) )"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:215
-#: ../../content/administration/install/deploy.rst:369
+#: ../../content/administration/install/deploy.rst:225
+#: ../../content/administration/install/deploy.rst:373
 msgid "LiveChat"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:217
-msgid "In multiprocessing, a dedicated LiveChat worker is automatically started and listening on :option:`the longpolling port <odoo-bin --longpolling-port>` but the client will not connect to it."
-msgstr ""
-
-#: ../../content/administration/install/deploy.rst:221
-msgid "Instead you must have a proxy redirecting requests whose URL starts with ``/longpolling/`` to the longpolling port. Other request should be proxied to the :option:`normal HTTP port <odoo-bin --http-port>`"
-msgstr ""
-
-#: ../../content/administration/install/deploy.rst:225
-msgid "To achieve such a thing, you'll need to deploy a reverse proxy in front of Odoo, like nginx or apache. When doing so, you'll need to forward some more http Headers to Odoo, and activate the proxy_mode in Odoo configuration to have Odoo read those headers."
-msgstr ""
-
-#: ../../content/administration/install/deploy.rst:233
-msgid "Server with 4 CPU, 8 Thread"
-msgstr ""
-
-#: ../../content/administration/install/deploy.rst:234
-msgid "60 concurrent users"
-msgstr ""
-
-#: ../../content/administration/install/deploy.rst:236
-msgid "60 users / 6 = 10 <- theorical number of worker needed"
+#: ../../content/administration/install/deploy.rst:227
+msgid "In multi-processing, a dedicated LiveChat worker is automatically started and listens on the :option:`--longpolling-port <odoo-bin --longpolling-port>`. By default, the HTTP requests will keep accessing the normal HTTP workers instead of the LiveChat one. You must deploy a proxy in front of Odoo and redirect incoming requests whose path starts with ``/longpolling`` to the LiveChat worker. You must also start Odoo in :option:`--proxy-mode <odoo-bin --proxy-mode>` so it uses the real client headers (such as hostname, scheme, and IP) instead of the proxy ones."
 msgstr ""
 
 #: ../../content/administration/install/deploy.rst:237
-msgid "(4 * 2) + 1 = 9 <- theorical maximal number of worker"
+msgid "Server with 4 CPU, 8 Thread"
 msgstr ""
 
 #: ../../content/administration/install/deploy.rst:238
-msgid "We'll use 8 workers + 1 for cron. We'll also use a monitoring system to measure cpu load, and check if it's between 7 and 7.5 ."
+msgid "60 concurrent users"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:239
-msgid "RAM = 9 * ((0.8*150) + (0.2*1024)) ~= 3Go RAM for Odoo"
+#: ../../content/administration/install/deploy.rst:240
+msgid "60 users / 6 = 10 <- theorical number of worker needed"
 msgstr ""
 
 #: ../../content/administration/install/deploy.rst:241
+msgid "(4 * 2) + 1 = 9 <- theorical maximal number of worker"
+msgstr ""
+
+#: ../../content/administration/install/deploy.rst:242
+msgid "We'll use 8 workers + 1 for cron. We'll also use a monitoring system to measure cpu load, and check if it's between 7 and 7.5 ."
+msgstr ""
+
+#: ../../content/administration/install/deploy.rst:243
+msgid "RAM = 9 * ((0.8*150) + (0.2*1024)) ~= 3Go RAM for Odoo"
+msgstr ""
+
+#: ../../content/administration/install/deploy.rst:245
 msgid "in :ref:`the configuration file <reference/cmdline/config_file>`:"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:257
+#: ../../content/administration/install/deploy.rst:261
 msgid "HTTPS"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:259
+#: ../../content/administration/install/deploy.rst:263
 msgid "Whether it's accessed via website/web client or web service, Odoo transmits authentication information in cleartext. This means a secure deployment of Odoo must use HTTPS\\ [#switching]_. SSL termination can be implemented via just about any SSL termination proxy, but requires the following setup:"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:264
+#: ../../content/administration/install/deploy.rst:268
 msgid "Enable Odoo's :option:`proxy mode <odoo-bin --proxy-mode>`. This should only be enabled when Odoo is behind a reverse proxy"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:265
+#: ../../content/administration/install/deploy.rst:269
 msgid "Set up the SSL termination proxy (`Nginx termination example`_)"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:266
+#: ../../content/administration/install/deploy.rst:270
 msgid "Set up the proxying itself (`Nginx proxying example`_)"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:267
+#: ../../content/administration/install/deploy.rst:271
 msgid "Your SSL termination proxy should also automatically redirect non-secure connections to the secure port"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:273
+#: ../../content/administration/install/deploy.rst:277
 msgid "Redirect http requests to https"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:274
+#: ../../content/administration/install/deploy.rst:278
 msgid "Proxy requests to odoo"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:282
+#: ../../content/administration/install/deploy.rst:286
 msgid "in ``/etc/nginx/sites-enabled/odoo.conf`` set:"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:343
+#: ../../content/administration/install/deploy.rst:347
 msgid "Odoo as a WSGI Application"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:345
+#: ../../content/administration/install/deploy.rst:349
 msgid "It is also possible to mount Odoo as a standard WSGI_ application. Odoo provides the base for a WSGI launcher script as ``odoo-wsgi.example.py``. That script should be customized (possibly after copying it from the setup directory) to correctly set the configuration directly in :mod:`odoo.tools.config` rather than through the command-line or a configuration file."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:351
+#: ../../content/administration/install/deploy.rst:355
 msgid "However the WSGI server will only expose the main HTTP endpoint for the web client, website and webservice API. Because Odoo does not control the creation of workers anymore it can not setup cron or livechat workers"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:356
+#: ../../content/administration/install/deploy.rst:360
 msgid "Cron Workers"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:358
-msgid "To run cron jobs for an Odoo deployment as a WSGI application requires"
+#: ../../content/administration/install/deploy.rst:362
+msgid "Starting one of the built-in Odoo servers next to the WSGI server is required to process cron jobs. That server must be configured to only process crons and not HTTP requests using the :option:`--no-http <odoo-bin --no-http>` cli option or the ``http_enable = False`` configuration file setting."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:360
-msgid "A classical Odoo (run via ``odoo-bin``)"
+#: ../../content/administration/install/deploy.rst:367
+msgid "On Linux-like systems, using the multi-processing server over the multi-threading one is recommended to benefit from better hardware usage and increased stability, i.e., using the :option:`--workers=-1 <odoo-bin --workers>` and :option:`--max-cron-threads=n <odoo-bin --max-cron-threads>` cli options."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:361
-msgid "Connected to the database in which cron jobs have to be run (via :option:`odoo-bin -d`)"
-msgstr ""
-
-#: ../../content/administration/install/deploy.rst:363
-msgid "Which should not be exposed to the network. To ensure cron runners are not network-accessible, it is possible to disable the built-in HTTP server entirely with :option:`odoo-bin --no-http` or setting ``http_enable = False`` in the configuration file"
-msgstr ""
-
-#: ../../content/administration/install/deploy.rst:371
-msgid "The second problematic subsystem for WSGI deployments is the LiveChat: where most HTTP connections are relatively short and quickly free up their worker process for the next request, LiveChat require a long-lived connection for each client in order to implement near-real-time notifications."
-msgstr ""
-
-#: ../../content/administration/install/deploy.rst:376
-msgid "This is in conflict with the process-based worker model, as it will tie up worker processes and prevent new users from accessing the system. However, those long-lived connections do very little and mostly stay parked waiting for notifications."
+#: ../../content/administration/install/deploy.rst:375
+msgid "Using a gevent-compatible WSGI server is required for the correct operation of the live chat feature. That server should be able to handle many simultaneous long-lived HTTP requests but doesn't need a lot of processing power. All requests whose path starts with ``/longpolling`` should be directed to that server. A regular (thread/process-based) WSGI server should be used for all other requests."
 msgstr ""
 
 #: ../../content/administration/install/deploy.rst:381
-msgid "The solutions to support livechat/motifications in a WSGI application are:"
+msgid "The Odoo cron server can also be used to serve the live chat requests. Just drop the :option:`--no-http <odoo-bin --no-http>` cli option from the cron server and make sure requests whose path starts with ``/longpolling`` are directed to this server, either on the :option:`--http-port <odoo-bin --http-port>` (multi-threading server) or on the :option:`--longpolling-port <odoo-bin --longpolling-port>` (multi-processing server)."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:383
-msgid "Deploy a threaded version of Odoo (instead of a process-based preforking one) and redirect only requests to URLs starting with ``/longpolling/`` to that Odoo, this is the simplest and the longpolling URL can double up as the cron instance."
-msgstr ""
-
-#: ../../content/administration/install/deploy.rst:387
-msgid "Deploy an evented Odoo via ``odoo-gevent`` and proxy requests starting with ``/longpolling/`` to :option:`the longpolling port <odoo-bin --longpolling-port>`."
-msgstr ""
-
-#: ../../content/administration/install/deploy.rst:392
+#: ../../content/administration/install/deploy.rst:388
 msgid "Serving Static Files"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:394
+#: ../../content/administration/install/deploy.rst:390
 msgid "For development convenience, Odoo directly serves all static files in its modules. This may not be ideal when it comes to performances, and static files should generally be served by a static HTTP server."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:398
+#: ../../content/administration/install/deploy.rst:394
 msgid "Odoo static files live in each module's ``static/`` folder, so static files can be served by intercepting all requests to :samp:`/{MODULE}/static/{FILE}`, and looking up the right module (and file) in the various addons paths."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:402
+#: ../../content/administration/install/deploy.rst:398
 #: ../../content/administration/upgrade.rst:122
 msgid "Todo"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:402
+#: ../../content/administration/install/deploy.rst:398
 msgid "test whether it would be interesting to serve filestored attachments via this, and how (e.g. possibility of mapping ir.attachment id to filestore hash in the database?)"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:409
+#: ../../content/administration/install/deploy.rst:405
 msgid "Security"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:411
+#: ../../content/administration/install/deploy.rst:407
 msgid "For starters, keep in mind that securing an information system is a continuous process, not a one-shot operation. At any moment, you will only be as secure as the weakest link in your environment."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:415
+#: ../../content/administration/install/deploy.rst:411
 msgid "So please do not take this section as the ultimate list of measures that will prevent all security problems. It's only intended as a summary of the first important things you should be sure to include in your security action plan. The rest will come from best security practices for your operating system and distribution, best practices in terms of users, passwords, and access control management, etc."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:421
+#: ../../content/administration/install/deploy.rst:417
 msgid "When deploying an internet-facing server, please be sure to consider the following security-related topics:"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:424
+#: ../../content/administration/install/deploy.rst:420
 msgid "Always set a strong super-admin admin password, and restrict access to the database management pages as soon as the system is set up. See :ref:`db_manager_security`."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:427
+#: ../../content/administration/install/deploy.rst:423
 msgid "Choose unique logins and strong passwords for all administrator accounts on all databases. Do not use 'admin' as the login. Do not use those logins for day-to-day operations, only for controlling/managing the installation. *Never* use any default passwords like admin/admin, even for test/staging databases."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:432
+#: ../../content/administration/install/deploy.rst:428
 msgid "Do **not** install demo data on internet-facing servers. Databases with demo data contain default logins and passwords that can be used to get into your systems and cause significant trouble, even on staging/dev systems."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:436
+#: ../../content/administration/install/deploy.rst:432
 msgid "Use appropriate database filters ( :option:`--db-filter <odoo-bin --db-filter>`) to restrict the visibility of your databases according to the hostname. See :ref:`db_filter`. You may also use :option:`-d <odoo-bin -d>` to provide your own (comma-separated) list of available databases to filter from, instead of letting the system fetch them all from the database backend."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:443
+#: ../../content/administration/install/deploy.rst:439
 msgid "Once your ``db_name`` and ``db_filter`` are configured and only match a single database per hostname, you should set ``list_db`` configuration option to ``False``, to prevent listing databases entirely, and to block access to the database management screens (this is also exposed as the :option:`--no-database-list <odoo-bin --no-database-list>` command-line option)"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:449
+#: ../../content/administration/install/deploy.rst:445
 msgid "Make sure the PostgreSQL user (:option:`--db_user <odoo-bin --db_user>`) is *not* a super-user, and that your databases are owned by a different user. For example they could be owned by the ``postgres`` super-user if you are using a dedicated non-privileged ``db_user``. See also :ref:`setup/deploy/odoo`."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:454
+#: ../../content/administration/install/deploy.rst:450
 msgid "Keep installations updated by regularly installing the latest builds, either via GitHub or by downloading the latest version from https://www.odoo.com/page/download or http://nightly.odoo.com"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:458
+#: ../../content/administration/install/deploy.rst:454
 msgid "Configure your server in multi-process mode with proper limits matching your typical usage (memory/CPU/timeouts). See also :ref:`builtin_server`."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:461
+#: ../../content/administration/install/deploy.rst:457
 msgid "Run Odoo behind a web server providing HTTPS termination with a valid SSL certificate, in order to prevent eavesdropping on cleartext communications. SSL certificates are cheap, and many free options exist. Configure the web proxy to limit the size of requests, set appropriate timeouts, and then enable the :option:`proxy mode <odoo-bin --proxy-mode>` option. See also :ref:`https_proxy`."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:468
+#: ../../content/administration/install/deploy.rst:464
 msgid "If you need to allow remote SSH access to your servers, make sure to set a strong password for **all** accounts, not just `root`. It is strongly recommended to entirely disable password-based authentication, and only allow public key authentication. Also consider restricting access via a VPN, allowing only trusted IPs in the firewall, and/or running a brute-force detection system such as `fail2ban` or equivalent."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:474
+#: ../../content/administration/install/deploy.rst:470
 msgid "Consider installing appropriate rate-limiting on your proxy or firewall, to prevent brute-force attacks and denial of service attacks. See also :ref:`login_brute_force` for specific measures."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:478
+#: ../../content/administration/install/deploy.rst:474
 msgid "Many network providers provide automatic mitigation for Distributed Denial of Service attacks (DDOS), but this is often an optional service, so you should consult with them."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:482
+#: ../../content/administration/install/deploy.rst:478
 msgid "Whenever possible, host your public-facing demo/test/staging instances on different machines than the production ones. And apply the same security precautions as for production."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:486
+#: ../../content/administration/install/deploy.rst:482
 msgid "If your public-facing Odoo server has access to sensitive internal network resources or services (e.g. via a private VLAN), implement appropriate firewall rules to protect those internal resources. This will ensure that the Odoo server cannot be used accidentally (or as a result of malicious user actions) to access or disrupt those internal resources. Typically this can be done by applying an outbound default DENY rule on the firewall, then only explicitly authorizing access to internal resources that the Odoo server needs to access. `Systemd IP traffic access control <http://0pointer.net/blog/ip-accounting-and-access-lists-with-systemd.html>`_ may also be useful to implement per-process network access control."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:497
+#: ../../content/administration/install/deploy.rst:493
 msgid "If your public-facing Odoo server is behind a Web Application Firewall, a load-balancer, a transparent DDoS protection service (like CloudFlare) or a similar network-level device, you may wish to avoid direct access to the Odoo system. It is generally difficult to keep the endpoint IP addresses of your Odoo servers secret. For example they can appear in web server logs when querying public systems, or in the headers of emails posted from Odoo. In such a situation you may want to configure your firewall so that the endpoints are not accessible publicly except from the specific IP addresses of your WAF, load-balancer or proxy service. Service providers like CloudFlare usually maintain a public list of their IP address ranges for this purpose."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:508
+#: ../../content/administration/install/deploy.rst:504
 msgid "If you are hosting multiple customers, isolate customer data and files from each other using containers or appropriate \"jail\" techniques."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:511
+#: ../../content/administration/install/deploy.rst:507
 msgid "Setup daily backups of your databases and filestore data, and copy them to a remote archiving server that is not accessible from the server itself."
+msgstr ""
+
+#: ../../content/administration/install/deploy.rst:510
+msgid "Deploying Odoo on Linux is strongly recommended over Windows. Should you choose nevertheless to deploy on a Windows platform, a thorough security hardening review of the server should be conducted and is outside of the scope of this guide."
 msgstr ""
 
 #: ../../content/administration/install/deploy.rst:518
@@ -1007,27 +987,31 @@ msgstr ""
 msgid "Windows"
 msgstr ""
 
-#: ../../content/administration/install/packages.rst:150
+#: ../../content/administration/install/packages.rst:151
+msgid "Windows packaging is offered for the convenience of testing or running single-user local instances but production deployment is discouraged due to a number of limitations and risks associated with deploying Odoo on a Windows platform."
+msgstr ""
+
+#: ../../content/administration/install/packages.rst:155
 msgid "Download the installer from the `nightly server <https://nightly.odoo.com>`_ (Community only) or the Windows installer from the `Odoo download page <https://www.odoo.com/page/download>`_ (any edition."
 msgstr ""
 
-#: ../../content/administration/install/packages.rst:153
+#: ../../content/administration/install/packages.rst:158
 msgid "Execute the downloaded file."
 msgstr ""
 
-#: ../../content/administration/install/packages.rst:156
+#: ../../content/administration/install/packages.rst:161
 msgid "On Windows 8 and later, a warning titled *Windows protected your PC* may be displayed. Click **More Info** and then **Run anyway** to proceed."
 msgstr ""
 
-#: ../../content/administration/install/packages.rst:159
+#: ../../content/administration/install/packages.rst:164
 msgid "Accept the `UAC <https://en.wikipedia.org/wiki/User_Account_Control>`_ prompt."
 msgstr ""
 
-#: ../../content/administration/install/packages.rst:160
+#: ../../content/administration/install/packages.rst:165
 msgid "Go through the installation steps."
 msgstr ""
 
-#: ../../content/administration/install/packages.rst:162
+#: ../../content/administration/install/packages.rst:167
 msgid "Odoo launches automatically at the end of the installation."
 msgstr ""
 
