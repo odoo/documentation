@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo saas-15.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-12 05:05+0000\n"
+"POT-Creation-Date: 2023-10-09 12:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1430,7 +1430,7 @@ msgid "Connect a supported receipt printer to a :abbr:`USB (Universal Serial Bus
 msgstr ""
 
 #: ../../content/applications/productivity/iot/config/pos.rst:43
-#: ../../content/applications/productivity/iot/config/troubleshooting.rst:149
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:391
 msgid "Cash drawer"
 msgstr ""
 
@@ -1439,7 +1439,7 @@ msgid "The cash drawer should be connected to the printer with an RJ25 cable."
 msgstr ""
 
 #: ../../content/applications/productivity/iot/config/pos.rst:45
-#: ../../content/applications/productivity/iot/config/troubleshooting.rst:117
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:359
 msgid "Barcode scanner"
 msgstr ""
 
@@ -1596,42 +1596,386 @@ msgid "Epson and Star receipt printers and Zebra label printers do not need a dr
 msgstr ""
 
 #: ../../content/applications/productivity/iot/config/troubleshooting.rst:103
-msgid "The Zebra printer doesn't print anything"
+msgid "Epson configuration special case"
 msgstr ""
 
 #: ../../content/applications/productivity/iot/config/troubleshooting.rst:105
-msgid "Zebra printers are quite sensitive to the format of the Zebra Programming Language (ZPL) code that is printed. If nothing comes out of the printer or blank labels are printed, try changing the format of the report that is sent to the printer by accessing :menuselection:`Settings --> Technical --> User Interface --> Views` in :ref:`developer mode <developer-mode>` and look for the corresponding template."
+msgid "Most Epson printers support printing receipts in Odoo :abbr:`POS (Point of Sale)` using the `GS v 0` command. However, the following Epson printer models do not support this command:"
 msgstr ""
 
-#: ../../content/applications/productivity/iot/config/troubleshooting.rst:112
-msgid "Check out Zebra's instructions on printing :abbr:`ZPL (Zebra Programming Language)` files `here <https://supportcommunity.zebra.com/s/article/Print-a-zpl-file-using-the-Generic-Text-Printer>`_."
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:108
+msgid "TM-U220"
 msgstr ""
 
-#: ../../content/applications/productivity/iot/config/troubleshooting.rst:120
-msgid "The characters read by the barcode scanner don't match the barcode"
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:109
+msgid "TM-U230"
 msgstr ""
 
-#: ../../content/applications/productivity/iot/config/troubleshooting.rst:122
-msgid "By default, most barcode scanners are configured in the US QWERTY format. If the barcode scanner uses a different layout, go to the form view of the device (:menuselection:`IoT App --> Devices --> Barcode Device`) and select the correct format."
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:110
+msgid "TM-P60"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:111
+msgid "TMP-P60II"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:113
+msgid "Bypass this issue by configuring the printer to use the `ESC *` command instead."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:116
+msgid "Process to force ESC * command"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:119
+msgid "Epson printer compatibility"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:121
+msgid "The first step is to check whether the printer is incompatible with `GS v 0` command."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:125
+msgid "`Epson GS v 0 documentation <https://reference.epson-biz.com/modules/ref_escpos/index.php? content_id=94>`_ for `GS v 0` compatible printers."
 msgstr ""
 
 #: ../../content/applications/productivity/iot/config/troubleshooting.rst:127
-msgid "Nothing happens when a barcode is scanned"
+msgid "`Epson ESC * documentation <https://reference.epson-biz.com/modules/ref_escpos/index.php ?content_id=88>`_ for `ESC *` compatible printers."
 msgstr ""
 
-#: ../../content/applications/productivity/iot/config/troubleshooting.rst:129
-msgid "Make sure that the correct device is selected in the :menuselection:`Point of Sale` configuration and that the barcode is configured to send an `ENTER` character (keycode 28) at the end of every barcode. To do so, navigate to :menuselection:`PoS app --> 3-Dot Menu on the PoS --> IoT Box section --> Edit`."
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:130
+msgid "If the printer is not compatible with the `ESC *` command then the following process is not possible. Should the printer be compatible to use the `ESC *` command to print, follow this process to configure the printer with the :abbr:`IoT (Internet of Things)` box."
 msgstr ""
 
 #: ../../content/applications/productivity/iot/config/troubleshooting.rst:135
+msgid "IoT box configuration for ESC *"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:137
+msgid "To configure the :abbr:`IoT (Internet of Things)` box to use the `ESC *` command to print, go to the :abbr:`IoT (Internet of Things)` box homepage by navigating to :menuselection:`IoT app --> IoT Boxes`. Then click on the :guilabel:`IP address` and this will direct to the :abbr:`IoT (Internet of Things)` box homepage."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:142
+msgid "**Choosing the printer**"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:144
+msgid "Now click on the :guilabel:`Printers server` button. This will redirect the browser to the *CUPS* page. Next, go to :menuselection:`Administration --> Printers --> Add Printer`, choose the printer that should be modified, and then click :guilabel:`Continue`."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:149
+msgid "If the name of the printer is still uncertain, take the following steps:"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:151
+msgid "Take note of the listed printers on the *CUPS* page."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:152
+msgid "Turn the printer off and refresh the page."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:153
+msgid "Now compare the difference with the first list to see which printer disappeared."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:154
+msgid "Turn the printer back on and refresh the page again."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:155
+msgid "Double-check the list again to see if the printer re-appears."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:156
+msgid "The printer that disappeared and reappears again on the listed printers is the name of the printer in question."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:160
+msgid "This can be :guilabel:`Unknown` under :guilabel:`Local printers`."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:162
+msgid "**CUPS naming convention**"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:164
+msgid "`CUPS` will prompt the admin for three pieces of information: the :guilabel:`Name`, :guilabel:`Description` and the :guilabel:`Location`. The last two pieces of information do not need to be specific, however, the :guilabel:`Name` should follow a particular convention to work with the `ESC *` command."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:169
+msgid "The :guilabel:`Name` should match this convention: `<printer_name>__IMC_<param_1>_<param_2>_..._<param_n>__`"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:172
+msgid "A breakdown of the naming convention:"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:174
+msgid "`printer_name`: This is the printer name. It can be any character as long as it does not contain `_`, `/`, `#`, or ` ` (space character)."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:176
+msgid "`IMC`: This stands for *Image Mode Column* (the simplified name for `ESC *`)."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:177
+msgid "`param_1`: This stands for the specific parameter:"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:179
+msgid "`SCALE<X>`: Scale of the picture (with the same aspect ratio). `X` should be an integer describing the scale percentage that should be used."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:183
+msgid "`100` is the original size, `50` is half the size, `200` is twice the size."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:185
+msgid "`LDV`: *Low Density Vertical* (will be set to *High Density Vertical* if not specified)."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:186
+msgid "`LDH`: *Low Density Horizontal* (will be set to *High Density Horizontal* if not specified)."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:189
+msgid "*Density* parameters might need to be configured in a particular way depending on the printer model."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:193
+msgid "Visit `Epson's ESC * documentation <https://reference.epson-biz.com/modules/ref_escpos/index.php?content_id=88>`_ and click on the printer model printer in the table above to see if the printer should set these parameters."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:198
+msgid "The following are examples of proper and improper name formatting:"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:200
+msgid "Proper name formatting:"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:202
+msgid "`EPSONTMm30II__IMC__`"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:203
+msgid "`EPSON_TM_U220__IMC_LDV_LDH_SCALE80__`"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:205
+msgid "Improper name formatting (this will not prevent printing, but the result might not have the expected printed output):"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:208
+msgid "`EPSON TMm 30II` -> The name can't have spaces."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:209
+msgid "`EPSONTMm30II` -> The name itself is correct, but it won't use `ESC *`."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:210
+msgid "`EPSONTMm30II__IMC` -> This name is missing the end `__`."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:211
+msgid "`EPSONTMm30II__IMC_XDV__` -> The parameter `XDV` does not match any existing parameters."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:212
+msgid "`EPSONTMm30II__IMC_SCALE__` -> The parameter `SCALE` is missing the scale value."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:214
+msgid "**Finish adding a printer**"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:216
+msgid "After setting the name of the printer with the appropriate naming convention, click :guilabel:`Continue`. Next, set the :guilabel:`Make` value to :guilabel:`Raw` and for the :guilabel:`Model` value, set this to :guilabel:`Raw Queue (en)`."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:220
+msgid "After completing these steps, click :guilabel:`Add Printer`. If everything was done correctly, the page should redirect to the *Banners* page."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:223
+msgid "At this point the printer should have been created, now the :abbr:`IoT (Internet of Things)` box just needs to detect it and then sync to Odoo's server (this could take a few minutes)."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:226
+msgid "**Adding the printer to Odoo PoS**"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:228
+msgid "Once the printer is visible on the Odoo database, don't forget to choose it in the :abbr:`PoS (Point of Sale)`configuration as the :abbr:`IoT (Internet of Things)` printer. Navigate to :menuselection:`Pos App --> Settings --> Connected Devices --> IoT Box --> Receipt Printer --> Save`."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:234
+msgid "If the printer was set up incorrectly (it is still printing random text or the printed receipt is too big or small), then it cannot be modified via the printer name with *CUPS*. Instead, the above process can be repeated to set up another printer from scratch to create one with modified parameters."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:239
+msgid "**Example setup of the Epson TM-U220B printer using ESC**"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:244
+msgid "The following is an example of the troubleshooting process for a TM-U220B printer model using the `ESC *` command. The receipt pictured below is an example of a receipt that is printing correctly due to proper formatting (in theory):"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:0
+msgid "Properly formatted receipt picture from a demo database."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:252
+msgid "Trying to print this receipt right-away prior to the proper formatting will not work as the TM-U220B printer model does not support `GS v 0`. Instead random characters will print:"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:0
+msgid "Printer paper with seemingly random characters."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:259
+msgid "To properly configure formatting for the Epson TM-U220B printer model take the following steps."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:261
+msgid "After consulting Epson's website for compatibility for both of the commands: `GS v 0 <https://reference.epson-biz.com/modules/ref_escpos/index.php?content_id=94>`_ and `ESC * <https://reference.epson-biz.com/modules/ref_escpos/index.php?content_id=88>`_, it can be seen that indeed the TM-U220B is not compatible with `GS v 0`, but is compatible with `ESC *`."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:0
+msgid "Epson compatibility evaluation from Epson website."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:270
+msgid "When adding the printer, *CUPS* will ask which printer should be added:"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:0
+msgid "Administration menu, add printer selection."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:276
+msgid "In this case, the printer is connected via :abbr:`USB (Universal Serial Bus)` so it won' be part of the :guilabel:`Discovered Network Printers`. Instead it is likely part of the :guilabel:`Unknown` selection under :guilabel:`Local Printers`. By unplugging the printer's :abbr:`USB (Universal Serial Bus)` cable from the :abbr:`IoT (Internet of Things)` box and refreshing the page, the :guilabel:`Unknown` printer disappears. By plugging it back in, the printer reappears, so it can be said that this is the printer in question."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:283
+msgid "For the naming convention, since it will need to print using the `ESC *` command, it is imperative to add `__IMC`. Reference the printer model on `Epson's ESC * site <https://reference.epson-biz.com/modules/ref_escpos/index.php?content_id=88>`_ to find out more about the *density* parameters."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:0
+msgid "Epson TM-U220 specifications on manufacturer's website."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:292
+msgid "For this particular model, TM-U220, `m` should be equal to 0 or 1. While referencing the :guilabel:`Description` below the pink box in the above picture, the `m` values could be 0, 1, 32 or 33. So in this printers case, the `m` value can NOT be 32 or 33 (otherwise there will be random characters printed)."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:297
+msgid "The table includes the numeric values: 32 and 33, they both occur if the :guilabel:`Number of bits for vertical data` is set to 24. This means that is a *High Vertical Density*. In the case of configuring the Epson TM-U220, the *Low Vertical Density* will need to be forced, as this printer model does not support *High Vertical Density* for this command `ESC *`."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:302
+msgid "To add a *Low Vertical Density*, add the `LDV` parameter to the naming convention."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:0
+msgid "Add a *Low Vertical Density* (the `LDV` parameter) to the naming convention."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:308
+msgid "Click :guilabel:`Continue` to proceed. Next, set the :guilabel:`Make` value to :guilabel:`Raw` and for the :guilabel:`Model` value, set this to :guilabel:`Raw Queue (en)`."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:0
+msgid "Epson TM-U220 specifications on manufacturers website."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:315
+msgid "However when trying to print with the naming convention: `EpsonTMU220B__IMC_LDV__`, it will print the receipt, but it will be too big and outside the margin. To resolve this, add a new printer (and naming convention) with the `SCALE<X>` parameter to adapt to our receipt size."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:319
+msgid "Here are some examples:"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:324
+msgid "Printer Naming Convention"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:325
+msgid "`EpsonTMU220B__IMC_LDV__`"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:326
+msgid "`EpsonTMU220B__IMC_LDV_SCALE75__`"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:327
+msgid "`EpsonTMU220B__IMC_LDV_LDH__`"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:328
+msgid "`EpsonTMU220B__IMC_LDV_LDH_SCALE35__`"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:0
+msgid "Receipt example format."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:0
+msgid "Receipt format using naming convention: EpsonTMU220B__IMC_LDV__."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:0
+msgid "Receipt format using naming convention: EpsonTMU220B__IMC_LDV_SCALE75__."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:0
+msgid "Receipt format using naming convention: EpsonTMU220B__IMC_LDV_LDH__."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:0
+msgid "Receipt format using naming convention: EpsonTMU220B__IMC_LDV_LDH_SCALE35__."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:346
+msgid "The Zebra printer doesn't print anything"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:348
+msgid "Zebra printers are quite sensitive to the format of the Zebra Programming Language (ZPL) code that is printed. If nothing comes out of the printer or blank labels are printed, try changing the format of the report that is sent to the printer by accessing :menuselection:`Settings --> Technical --> User Interface --> Views` in :ref:`developer mode <developer-mode>` and look for the corresponding template."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:355
+msgid "Check out Zebra's instructions on printing :abbr:`ZPL (Zebra Programming Language)` files `here <https://supportcommunity.zebra.com/s/article/Print-a-zpl-file-using-the-Generic-Text-Printer>`_."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:362
+msgid "The characters read by the barcode scanner don't match the barcode"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:364
+msgid "By default, most barcode scanners are configured in the US QWERTY format. If the barcode scanner uses a different layout, go to the form view of the device (:menuselection:`IoT App --> Devices --> Barcode Device`) and select the correct format."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:369
+msgid "Nothing happens when a barcode is scanned"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:371
+msgid "Make sure that the correct device is selected in the :menuselection:`Point of Sale` configuration and that the barcode is configured to send an `ENTER` character (keycode 28) at the end of every barcode. To do so, navigate to :menuselection:`PoS app --> 3-Dot Menu on the PoS --> IoT Box section --> Edit`."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:377
 msgid "The barcode scanner is detected as a keyboard"
 msgstr ""
 
-#: ../../content/applications/productivity/iot/config/troubleshooting.rst:138
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:380
 msgid "Some barcode scanners do not advertise themselves as barcode scanners but as a USB keyboard instead, and will not be recognized by the :abbr:`IoT (Internet of Things)` box."
 msgstr ""
 
-#: ../../content/applications/productivity/iot/config/troubleshooting.rst:141
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:383
 msgid "The device type can be manually changed by going to its form view (:menuselection:`IoT App --> Devices --> Barcode Device`) and activating the :guilabel:`Is scanner` option."
 msgstr ""
 
@@ -1639,11 +1983,11 @@ msgstr ""
 msgid "Modifying the form view of the barcode scanner."
 msgstr ""
 
-#: ../../content/applications/productivity/iot/config/troubleshooting.rst:152
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:394
 msgid "The cash drawer does not open"
 msgstr ""
 
-#: ../../content/applications/productivity/iot/config/troubleshooting.rst:154
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:396
 msgid "The cash drawer should be connected to the printer and the :guilabel:`Cash drawer` checkbox should be ticked in the :abbr:`PoS (Point of Sale)` configuration. To do so, navigate to :menuselection:`POS app --> 3-Dot Menu on the POS --> IoT Box section --> Edit --> Receipt Printer --> Cashdrawer checkbox`."
 msgstr ""
 
