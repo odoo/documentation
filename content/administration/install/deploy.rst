@@ -345,12 +345,42 @@ in ``/etc/nginx/sites-enabled/odoo.conf`` set:
       proxy_set_header X-Real-IP $remote_addr;
       proxy_redirect off;
       proxy_pass http://odoo;
+
+      # Enable HSTS
+      add_header Strict-Transport-Security "max-age=31536000; includeSubDomains";
+      # requires nginx 1.19.8
+      proxy_cookie_flags session_id samesite=lax secure;
     }
 
     # common gzip
     gzip_types text/css text/scss text/plain text/xml application/xml application/json application/javascript;
     gzip on;
   }
+
+HTTPS Hardening
+---------------
+
+Add the `Strict-Transport-Security` header to all requests, in order to prevent
+browsers from ever sending a plain HTTP request to this domain. You will need
+to maintain a working HTTPS service with a valid certificate on this domain at
+all times, otherwise your users will see security alerts or be entirely unable
+to access it.
+
+Force HTTPS connections during a year for every visitor in NGINX with the line:
+
+.. code-block:: nginx
+
+  add_header Strict-Transport-Security "max-age=31536000; includeSubDomains";
+
+Additional configuration can be defined for the `session_id` cookie. The `Secure`
+flag can be added to ensure it is never transmitted over HTTP and `SameSite=Lax`
+to prevent authenticated `CSRF`_.
+
+.. code-block:: nginx
+
+  # requires nginx 1.19.8
+  proxy_cookie_flags session_id samesite=lax secure;
+
 
 Odoo as a WSGI Application
 ==========================
@@ -727,6 +757,7 @@ Here are the supported browsers:
     environment than over the internet.
 
 .. _regular expression: https://docs.python.org/3/library/re.html
+.. _CSRF: https://en.wikipedia.org/wiki/Cross-site_request_forgery
 .. _ARP spoofing: https://en.wikipedia.org/wiki/ARP_spoofing
 .. _Nginx termination example:
     https://nginx.com/resources/admin-guide/nginx-ssl-termination/
