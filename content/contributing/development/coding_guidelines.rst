@@ -1070,20 +1070,20 @@ top, followed by an empty line separating them from other declarations.
 .. code-block:: html
 
    .o_element {
-      $-inner-gap: $border-width + $legend-margin-bottom;
+       $-inner-gap: $border-width + $legend-margin-bottom;
 
-      --element-margin: 1rem;
-      --element-size: 3rem;
+       --element-margin: 1rem;
+       --element-size: 3rem;
 
-      @include o-position-absolute(1rem);
-      display: block;
-      margin: var(--element-margin);
-      width: calc(var(--element-size) + #{$-inner-gap});
-      border: 0;
-      padding: 1rem;
-      background: blue;
-      font-size: 1rem;
-      filter: blur(2px);
+       @include o-position-absolute(1rem);
+       display: block;
+       margin: var(--element-margin);
+       width: calc(var(--element-size) + #{$-inner-gap});
+       border: 0;
+       padding: 1rem;
+       background: blue;
+       font-size: 1rem;
+       filter: blur(2px);
    }
 
 .. _contributing/coding_guidelines/scss/naming_conventions:
@@ -1112,11 +1112,11 @@ Avoid creating hyper-specific classes and variable names. When naming nested ele
       .. code-block:: html
 
          <div class=“o_element_wrapper”>
-            <div class=“o_element_wrapper_entries”>
-               <span class=“o_element_wrapper_entries_entry”>
-                  <a class=“o_element_wrapper_entries_entry_link”>Entry</a>
-               </span>
-            </div>
+             <div class=“o_element_wrapper_entries”>
+                 <span class=“o_element_wrapper_entries_entry”>
+                     <a class=“o_element_wrapper_entries_entry_link”>Entry</a>
+                 </span>
+             </div>
          </div>
 
    .. container:: alert alert-success
@@ -1126,11 +1126,11 @@ Avoid creating hyper-specific classes and variable names. When naming nested ele
       .. code-block:: html
 
          <div class=“o_element_wrapper”>
-            <div class=“o_element_entries”>
-               <span class=“o_element_entry”>
-                  <a class=“o_element_link”>Entry</a>
-               </span>
-            </div>
+             <div class=“o_element_entries”>
+                 <span class=“o_element_entry”>
+                     <a class=“o_element_link”>Entry</a>
+                 </span>
+             </div>
          </div>
 
 Besides being more compact, this approach eases maintenance because it limits the need of renaming
@@ -1175,13 +1175,13 @@ Our standard convention is `$-[variable name]`.
    .. code-block:: html
 
       .o_element {
-         $-inner-gap: compute-something;
+          $-inner-gap: compute-something;
 
-         margin-right: $-inner-gap;
+          margin-right: $-inner-gap;
 
-         .o_element_child {
-            margin-right: $-inner-gap * 0.5;
-         }
+          .o_element_child {
+              margin-right: $-inner-gap * 0.5;
+          }
       }
 
 .. seealso::
@@ -1204,15 +1204,15 @@ Name optional arguments in the :ref:`scoped variables form
    .. code-block:: html
 
       @mixin o-avatar($-size: 1.5em, $-radius: 100%) {
-         width: $-size;
-         height: $-size;
-         border-radius: $-radius;
+          width: $-size;
+          height: $-size;
+          border-radius: $-radius;
       }
 
       @function o-invert-color($-color, $-amount: 100%) {
-         $-inverse: change-color($-color, $-hue: hue($-color) + 180);
+          $-inverse: change-color($-color, $-hue: hue($-color) + 180);
 
-         @return mix($-inverse, $-color, $-amount);
+          @return mix($-inverse, $-color, $-amount);
       }
 
 .. seealso::
@@ -1243,16 +1243,16 @@ Our standard convention is BEM, so `--[root]__[element]-[property]--[modifier]`,
   .. code-block:: scss
 
      .o_kanban_record {
-        --KanbanRecord-width: value;
-        --KanbanRecord__picture-border: value;
-        --KanbanRecord__picture-border--active: value;
+         --KanbanRecord-width: value;
+         --KanbanRecord__picture-border: value;
+         --KanbanRecord__picture-border--active: value;
      }
 
      // Adapt the component when rendered in another context.
      .o_form_view {
-        --KanbanRecord-width: another-value;
-        --KanbanRecord__picture-border: another-value;
-        --KanbanRecord__picture-border--active: another-value;
+         --KanbanRecord-width: another-value;
+         --KanbanRecord__picture-border: another-value;
+         --KanbanRecord__picture-border--active: another-value;
      }
 
 .. _contributing/coding_guidelines/scss/variables_use:
@@ -1272,15 +1272,15 @@ We define these properties inside the component's main block, providing default 
       :caption: :file:`my_component.scss`
 
       .o_MyComponent {
-         color: var(--MyComponent-color, #313131);
+          color: var(--MyComponent-color, #313131);
       }
 
    .. code-block:: scss
       :caption: :file:`my_dashboard.scss`
 
       .o_MyDashboard {
-         // Adapt the component in this context only
-         --MyComponent-color: #017e84;
+          // Adapt the component in this context only
+          --MyComponent-color: #017e84;
       }
 
 .. seealso::
@@ -1319,14 +1319,14 @@ gain control at the top-level and ensure consistency with other components.
       :caption: :file:`component.scss`
 
       .o_component {
-         color: var(--MyComponent-color, #{$o-component-color});
+          color: var(--MyComponent-color, #{$o-component-color});
       }
 
    .. code-block:: text
       :caption: :file:`dashboard.scss`
 
       .o_dashboard {
-         --MyComponent-color: #{$o-dashboard-color};
+          --MyComponent-color: #{$o-dashboard-color};
       }
 
 .. _contributing/coding_guidelines/scss/root:
