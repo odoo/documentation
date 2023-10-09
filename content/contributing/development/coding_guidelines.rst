@@ -981,30 +981,33 @@ Syntax and Formatting
 
    .. code-tab:: html SCSS
 
-      .o_foo, .o_foo_bar, .o_baz {
-         height: $o-statusbar-height;
+      $o-statusbar-height: 32px;
+      $o-list-footer-bg-color: #EAEAEA;
 
-         .o_qux {
-            height: $o-statusbar-height * 0.5;
-         }
+      .o_foo, .o_foo_bar, .o_baz {
+          height: $o-statusbar-height;
+
+          .o_qux {
+              height: $o-statusbar-height * 0.5;
+          }
       }
 
       .o_corge {
-         background: $o-list-footer-bg-color;
+          background: $o-list-footer-bg-color;
       }
 
    .. code-tab:: css CSS
 
       .o_foo, .o_foo_bar, .o_baz {
-         height: 32px;
+          height: 32px;
       }
 
-      .o_foo .o_quux, .o_foo_bar .o_quux, .o_baz .o_qux {
-         height: 16px;
+      .o_foo .o_qux, .o_foo_bar .o_qux, .o_baz .o_qux {
+          height: 16px;
       }
 
       .o_corge {
-         background: #EAEAEA;
+          background: #EAEAEA;
       }
 
 - four (4) space indents, no tabs;
