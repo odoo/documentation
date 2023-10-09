@@ -165,7 +165,7 @@ location.
     :guilabel:`Save`.
   - If the virtual warehouse is not the value in the :guilabel:`Warehouse` field on the sales order,
     then a new quotation may need to be generated.
-  - If whe :guilabel:`Warehouse` field is missing on the sales order form, then the virtual
+  - If the :guilabel:`Warehouse` field is missing on the sales order form, then the virtual
     warehouse (and its children warehouses) may not have been set up correctly, in which case,
     review the documentation above again to make sure all settings/configuration were done properly.
 

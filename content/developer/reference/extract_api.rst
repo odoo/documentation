@@ -22,7 +22,7 @@ Overview
 ========
 
 The extract API uses the JSON-RPC2_ protocol; its endpoint routes are located at
-`https://iap-extract.odoo.com`.
+`https://extract.api.odoo.com`.
 
 Version
 -------
@@ -235,12 +235,8 @@ Routes
 ------
 
     - /api/extract/invoice/1/get_result
-    - /api/extract/invoice/1/get_result_batch
     - /api/extract/expense/1/get_result
-    - /api/extract/expense/1/get_result_batch
     - /api/extract/applicant/1/get_result
-    - /api/extract/applicant/1/get_result_batch
-    - |ss| /api/extract/invoice/1/get_results |se| (deprecated)
     - |ss| /iap/invoice_extract/get_result |se| (deprecated)
     - |ss| /iap/expense_extract/get_result |se| (deprecated)
 
@@ -262,10 +258,10 @@ Request
 
     ``version`` (required)
         |SAME_AS_PARSE|
-    ``documents_uuids`` (required, replaces ``documents_ids``)
-        The list of ``document_id`` for which you want to get the current parsing status.
-    ``documents_ids`` (deprecated)
-        The list of ``document_id`` for which you want to get the current parsing status.
+    ``documents_uuid`` (required, replaces ``documents_id``)
+        The ``document_uuid`` for which you want to get the current parsing status.
+    ``documents_id`` (deprecated)
+        The ``document_id`` for which you want to get the current parsing status.
 
 .. code-block:: js
 
@@ -274,17 +270,11 @@ Request
         "method": "call",
         "params": {
             "version": int,
-            // "documents_ids": [],  // deprecated
-            "documents_uuids": [],
+            // "documents_id": int,  // deprecated
+            "documents_uuid": int,
         },
         "id": string,
     }
-
-.. note::
-    The code snippet shows the request to the ``/api/extract/invoice/1/get_result_batch`` route.
-    You can use the endpoint ``/api/extract/invoice/1/get_result`` to get the result of a single
-    document. In that case, you don't need to provide a list of ``document_uuids`` but a single
-    ``document_uuid``.
 
 Response
 --------
@@ -324,47 +314,20 @@ are the name of the field and the value is the value of the field.
         "jsonrpc": "2.0",
         "id": string,
         "result": {
-            "document_id_1": {
-                "status": string,
-                "status_code": int,  // deprecated
-                "status_msg": string,
-                "results": [
-                    {
-                        "full_text_annotation": string,
-                        "feature_1_name": feature_1_result,
-                        "feature_2_name": feature_2_result,
-                        ...
-                    },
+            "status": string,
+            "status_code": int,  // deprecated
+            "status_msg": string,
+            "results": [
+                {
+                    "full_text_annotation": string,
+                    "feature_1_name": feature_1_result,
+                    "feature_2_name": feature_2_result,
                     ...
-                ]
-            },
-            "document_id_2": {
-                "status": string,
-                "status_code": int,  // deprecated
-                "status_msg": string,
-                "results": [
-                    {
-                        "full_text_annotation": string,
-                        "feature_1_name": feature_1_result,
-                        "feature_2_name": feature_2_result,
-                        ...
-                    },
-                    ...
-                ]
-            },
-            ...
+                },
+                ...
+            ]
         }
     }
-
-.. note::
-    The example shows the response from the ``/api/extract/invoice/1/get_result_batch`` route.
-    When using the ``/api/extract/invoice/1/get_result`` route (note the singularity), the response
-    will be the value of the key associated to the invoice.
-
-.. warning::
-    Result keys are strings despite the fact that the ``document_ids`` given in the request body are
-    integers.
-
 
 Common fields
 ~~~~~~~~~~~~~
@@ -553,9 +516,6 @@ fields we can extract from an expense report.
 +-------------------------+------------------------------------------------------------------------+
 | ``currency``            | ``content`` is a string                                                |
 +-------------------------+------------------------------------------------------------------------+
-| ``bill_reference``      | ``content`` is a string                                                |
-+-------------------------+------------------------------------------------------------------------+
-
 
 Applicant
 ~~~~~~~~~

@@ -143,7 +143,7 @@ correspondant au nombre réel d'Utilisateurs.
 Pour la durée de ce Contrat, Odoo SA s'engage à déployer tous les efforts raisonnables pour
 corriger tout Bug du Logiciel ou des Modules Supplémentaires Couverts qui pourrait être signalé
 par le Client en suivant la procédure appropriée (généralement par le biais du formulaire en ligne
-ou des numéros de téléphone indiqués sur http://www.odoo.com.help, ou en cas de travail avec
+ou des numéros de téléphone indiqués sur http://www.odoo.com/help, ou en cas de travail avec
 un Partenaire Odoo, le canal prévu par le partenaire), et de commencer à traiter ces signalements
 du Client dans un délai de 2 jours ouvrables.
 

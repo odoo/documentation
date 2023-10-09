@@ -253,10 +253,16 @@ Creating a new view is an advanced topic. This guide highlight only the essentia
 
       registry.category("views").add("beautifulView", beautifulView);
 
-#. Use the view in an arch.
+#. Declare the :ref:`view <reference/views/structure>` in the arch.
 
    .. code-block:: xml
 
       ...
-      <beautiful fieldFromTheArch="res.partner"/>
+      <record id="my_beautiful_view" model="ir.ui.view">
+        <field name="name">my_view</field>
+        <field name="model">my_model</field>
+        <field name="arch" type="xml">
+            <beautiful fieldFromTheArch="res.partner"/>
+        </field>
+      </record>
       ...

@@ -80,8 +80,7 @@ encoding formats as :guilabel:`UTF-8`.
 
 .. tip::
    - For Encrypted Website Payments & EWP_SETTINGS error, please check the `Paypal documentation
-     <https://developer.paypal.com/docs/classic/paypal-payments-standard/integration-guide/
-     encryptedwebpayments#encrypted-website-payments-ewp>`_.
+     <https://developer.paypal.com/docs/online/>`_.
    - Configure your :ref:`Paypal Sandbox account <paypal/testing>`, then follow this
      `link <https://sandbox.paypal.com/cgi-bin/customerprofileweb?cmd=_profile-language-encoding>`_
      to configure the encoding format in a test environment.

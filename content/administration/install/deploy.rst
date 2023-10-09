@@ -179,21 +179,31 @@ or 'verify-full'
 Builtin server
 ==============
 
-Odoo includes built-in HTTP servers, using either multithreading or
-multiprocessing.
+Odoo includes built-in HTTP, cron, and live-chat servers, using either multi-threading or
+multi-processing.
 
-For production use, it is recommended to use the multiprocessing server as it
-increases stability, makes somewhat better use of computing resources and can
-be better monitored and resource-restricted.
+The **multi-threaded** server is a simpler server primarily used for development, demonstrations,
+and its compatibility with various operating systems (including Windows). A new thread is spawned
+for every new HTTP request, even for long-lived connections such as websocket. Extra daemonic cron
+threads are spawned too. Due to a Python limitation (GIL), it doesn't make the best use of the
+hardware.
 
-* Multiprocessing is enabled by configuring :option:`a non-zero number of
-  worker processes <odoo-bin --workers>`, the number of workers should be based
-  on the number of cores in the machine (possibly with some room for cron
-  workers depending on how much cron work is predicted)
-* Worker limits can be configured based on the hardware configuration to avoid
-  resources exhaustion
+The multi-threaded server is the default server, also for docker containers. It is selected by
+leaving the :option:`--workers <odoo-bin --workers>` option out or setting it to ``0``.
 
-.. warning:: multiprocessing mode currently isn't available on Windows
+The **multi-processing** server is a full-blown server primarily used for production. It is not
+liable to the same Python limitation (GIL) on resource usage and hence makes the best use of the
+hardware. A pool of workers is created upon server startup. New HTTP requests are queued by the OS
+until there are workers ready to process them. An extra event-driven HTTP worker for the live chat
+is spawned on an alternative port. Extra cron workers are spawned too. A configurable process
+reaper monitors resource usage and can kill/restart failed workers.
+
+The multi-processing server is opt-in. It is selected by setting the :option:`--workers
+<odoo-bin --workers>` option to a non-null integer.
+
+.. note::
+   Because it is highly customized for Linux servers, the multi-processing server is not available
+   on Windows.
 
 Worker number calculation
 -------------------------
@@ -214,18 +224,12 @@ Needed RAM = #worker * ( (light_worker_ratio * light_worker_ram_estimation) + (h
 LiveChat
 --------
 
-In multiprocessing, a dedicated LiveChat worker is automatically started and
-listening on :option:`the gevent port <odoo-bin --gevent-port>` but
-the client will not connect to it.
-
-Instead you must have a proxy redirecting requests whose URL starts with
-``/websocket/`` to the gevent port. Other request should be proxied to
-the :option:`normal HTTP port <odoo-bin --http-port>`
-
-To achieve such a thing, you'll need to deploy a reverse proxy in front of Odoo,
-like nginx or apache. When doing so, you'll need to forward some more http Headers
-to Odoo, and activate the proxy_mode in Odoo configuration to have Odoo read those
-headers.
+In multi-processing, a dedicated LiveChat worker is automatically started and listens on
+the :option:`--gevent-port <odoo-bin --gevent-port>`. By default, the HTTP requests will keep
+accessing the normal HTTP workers instead of the LiveChat one. You must deploy a proxy in front of
+Odoo and redirect incoming requests whose path starts with ``/websocket/`` to the LiveChat worker.
+You must also start Odoo in :option:`--proxy-mode <odoo-bin --proxy-mode>` so it uses the real
+client headers (such as hostname, scheme, and IP) instead of the proxy ones.
 
 Configuration sample
 --------------------
@@ -364,38 +368,30 @@ of workers anymore it can not setup cron or livechat workers
 Cron Workers
 ------------
 
-To run cron jobs for an Odoo deployment as a WSGI application requires
+Starting one of the built-in Odoo servers next to the WSGI server is required to process cron jobs.
+That server must be configured to only process crons and not HTTP requests using the
+:option:`--no-http <odoo-bin --no-http>` cli option or the ``http_enable = False`` configuration
+file setting.
 
-* A classical Odoo (run via ``odoo-bin``)
-* Connected to the database in which cron jobs have to be run (via
-  :option:`odoo-bin -d`)
-* Which should not be exposed to the network. To ensure cron runners are not
-  network-accessible, it is possible to disable the built-in HTTP server
-  entirely with :option:`odoo-bin --no-http` or setting ``http_enable = False``
-  in the configuration file
+On Linux-like systems, using the multi-processing server over the multi-threading one is recommended
+to benefit from better hardware usage and increased stability, i.e., using
+the :option:`--workers=-1 <odoo-bin --workers>` and :option:`--max-cron-threads=n
+<odoo-bin --max-cron-threads>` cli options.
 
 LiveChat
 --------
 
-The second problematic subsystem for WSGI deployments is the LiveChat: where
-most HTTP connections are relatively short and quickly free up their worker
-process for the next request, LiveChat require a long-lived connection for
-each client in order to implement near-real-time notifications.
+Using a gevent-compatible WSGI server is required for the correct operation of the live chat
+feature. That server should be able to handle many simultaneous long-lived connections but doesn't
+need a lot of processing power. All requests whose path starts with ``/websocket/`` should be
+directed to that server. A regular (thread/process-based) WSGI server should be used for all other
+requests.
 
-This is in conflict with the process-based worker model, as it will tie
-up worker processes and prevent new users from accessing the system. However,
-those long-lived connections do very little and mostly stay parked waiting for
-notifications.
-
-The solutions to support livechat/motifications in a WSGI application are:
-
-* Deploy a threaded version of Odoo (instead of a process-based preforking
-  one) and redirect only requests to URLs starting with ``/websocket/`` to
-  that Odoo, this is the simplest and the websocket URL can double up as the cron
-  instance.
-* Deploy an evented Odoo via ``odoo-gevent`` and proxy requests starting
-  with ``/websocket/`` to
-  :option:`the gevent port <odoo-bin --gevent-port>`.
+The Odoo cron server can also be used to serve the live chat requests. Just drop
+the :option:`--no-http <odoo-bin --no-http>` cli option from the cron server and make sure requests
+whose path starts with ``/websocket/`` are directed to this server, either on
+the :option:`--http-port <odoo-bin --http-port>` (multi-threading server) or on
+the :option:`--gevent-port <odoo-bin --gevent-port>` (multi-processing server).
 
 .. _deploy/streaming:
 
@@ -601,6 +597,10 @@ security-related topics:
 
 - Setup daily backups of your databases and filestore data, and copy them to a remote
   archiving server that is not accessible from the server itself.
+
+- Deploying Odoo on Linux is strongly recommended over Windows. Should you choose nevertheless
+  to deploy on a Windows platform, a thorough security hardening review of the server should be
+  conducted and is outside of the scope of this guide.
 
 
 .. _login_brute_force:

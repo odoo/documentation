@@ -99,7 +99,7 @@ disable the tests or allow specific tests to be run with custom tags in the :ref
 <odoosh-gettingstarted-branches-tabs-settings>`.
 
 Similar to staging branches, the emails are not sent but are intercepted by a mailcatcher and
-scheduled actions are not triggered as often is the database is not in use.
+scheduled actions are not triggered as long as the database is not in use.
 
 The databases created for development branches are meant to live around three days.
 After that, they can be automatically garbage collected to make room for new databases without prior notice.

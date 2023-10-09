@@ -7,8 +7,11 @@ Webinars
 
 Below you can find videos with a general description of the localization, and how to configure it.
 
-- `VIDEO WEBINAR <https://www.youtube.com/watch?v=_H1HbU-wKVg>`_.
-- `VIDEO WEBINAR ECOMMERCE <https://www.youtube.com/watch?v=5gUi2WWfRuI>`_.
+- `Webinar - Localización de Argentina <https://www.youtube.com/watch?v=_H1HbU-wKVg>`_.
+- `eCommerce - Localización de Argentina <https://www.youtube.com/watch?v=5gUi2WWfRuI>`_.
+
+.. seealso::
+   `Smart Tutorial - Localización de Argentina <https://www.odoo.com/slides/smart-tutorial-localizacion-de-argentina-130>`_
 
 Configuration
 =============

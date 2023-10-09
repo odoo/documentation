@@ -21,6 +21,10 @@ available:
   The features of this module are based on the resolutions published on the
   `SUNAT Legislation <https://www.sunat.gob.pe/legislacion/general/index.html/>`_.
 
+.. seealso::
+   - `App Tour - Localización de Peru <https://youtu.be/Ic3mGovkf8Y>`_
+   - `Smart Tutorial - Localización de Peru <https://www.odoo.com/slides/smart-tutorial-localizacion-de-peru-133>`_
+
 Configuration
 =============
 

@@ -77,3 +77,7 @@ servers.
 .. image:: ice_servers/ice-servers-page.png
    :align: center
    :alt: The "ICE servers" page in Odoo.
+
+.. note::
+   For on-premise instances of Odoo, the package `python3-gevent` is necessary for the Discuss
+   module to run calls/video calls on Ubuntu (Linux) servers.

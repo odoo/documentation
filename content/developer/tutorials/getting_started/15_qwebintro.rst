@@ -83,9 +83,9 @@ conditionally, we can use the ``t-if`` directive (see :ref:`reference/qweb/condi
             <t t-name="kanban-box">
                 <div class="oe_kanban_global_click">
                     <field name="name"/>
-                </div>
-                <div t-if="record.state.raw_value == 'new'">
-                    This is new!
+                    <div t-if="record.state.raw_value == 'new'">
+                        This is new!
+                    </div>
                 </div>
             </t>
         </templates>

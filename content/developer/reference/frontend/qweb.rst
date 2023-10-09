@@ -376,7 +376,7 @@ Creating safe content using :class:`~markupsafe.Markup`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 See the official documentation for explanations, but the big advantage of
-:class:`~markupsafe.Markup` is that it's a very rich type overrinding
+:class:`~markupsafe.Markup` is that it's a very rich type overriding
 :class:`str` operations to *automatically escape parameters*.
 
 This means that it's easy to create *safe* html snippets by using

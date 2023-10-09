@@ -110,7 +110,7 @@ to replace the installation directory with a newer version. First download the l
 from Odoo.com. They are updated daily and include the latest security fixes (see step #1)
 After downloading the package, extract it to a temporary location on your server.
 
-You will get a folder labelled with the version of the source code, for example "odoo-13.0+e.20190719",
+You will get a folder labeled with the version of the source code, for example "odoo-13.0+e.20190719",
 that contains a folder "odoo.egg-info" and the actual source code folder named "odoo" (for Odoo 10
 and later) or "openerp" for older versions.
 You can ignore the odoo.egg-info folder. Locate the folder where your current installation is deployed,

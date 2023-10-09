@@ -2,14 +2,6 @@
 Chile
 =====
 
-Webinars
-========
-
-Below you can find videos with a general description of the localization, and how to configure it.
-
-- `VIDEO WEBINAR OF CHILEAN LOCALIZATION: INTRO AND DEMO <https://youtu.be/BHnByZiyYcM>`_.
-- `VIDEO WEBINAR OF DELIVERY GUIDE <https://youtu.be/X7i4PftnEdU>`_.
-
 Introduction
 ============
 
@@ -24,6 +16,10 @@ modules are available:
   Electronic Invoice via web service, based on the SII regulations.
 
 - **l10n_cl_reports:** Adds the reports Propuesta F29 y Balance Tributario (8 columnas).
+
+.. seealso::
+   - `App Tour - Localización de Chile <https://www.youtube.com/watch?v=3qYkgbmBYHw>`_
+   - `Smart Tutorial - Localización de Chile <https://www.odoo.com/slides/smart-tutorial-localizacion-de-chile-131>`_
 
 Configuration
 =============

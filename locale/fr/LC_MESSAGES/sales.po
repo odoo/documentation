@@ -14,8 +14,8 @@
 # Fernanda Marques <fem@odoo.com>, 2022
 # Priscilla (prs) Odoo <prs@odoo.com>, 2022
 # Maxime Chambreuil <mchambreuil@ursainfosystems.com>, 2023
-# Martin Trigaux, 2023
 # Cécile Collart <cco@odoo.com>, 2023
+# Martin Trigaux, 2023
 # Jolien De Paepe, 2023
 # 
 #, fuzzy
@@ -23,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-14 15:32+0000\n"
+"POT-Creation-Date: 2023-09-12 13:54+0000\n"
 "PO-Revision-Date: 2022-10-04 12:54+0000\n"
 "Last-Translator: Jolien De Paepe, 2023\n"
 "Language-Team: French (https://app.transifex.com/odoo/teams/41243/fr/)\n"
@@ -114,7 +114,7 @@ msgstr ""
 #: ../../content/applications/sales/sales/products_prices/products/product_images.rst:13
 #: ../../content/applications/sales/sales/products_prices/products/variants.rst:23
 #: ../../content/applications/sales/sales/send_quotations/orders_and_variants.rst:9
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:9
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:13
 #: ../../content/applications/sales/subscriptions/closing.rst:31
 #: ../../content/applications/sales/subscriptions/upselling.rst:25
 msgid "Configuration"
@@ -4239,12 +4239,12 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:115
 msgid ""
 "You must provide a **registration code**. To retrieve that code, swipe right"
-" on your device, enter the admin PIN code (by default: `07319`), validate, "
+" on your device, enter the admin PIN code (by default: `07139`), validate, "
 "and click :guilabel:`Generate a registration code`."
 msgstr ""
 "Vous devez fournir un **code d'enregistrement**. Pour récupérer ce code, "
 "balayez vers la droite, saisissez le code PIN administrateur (par défaut : "
-"`07319`), validez et cliquez sur :guilabel:`Générer un code "
+"`07139`), validez et cliquez sur :guilabel:`Générer un code "
 "d'enregistrement`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/vantiv.rst:3
@@ -7041,7 +7041,7 @@ msgstr "Émettre des factures et enregistrer des paiements"
 
 #: ../../content/applications/sales/sales/amazon_connector/manage.rst:82
 msgid "Issue invoices"
-msgstr ""
+msgstr "Émettre des factures"
 
 #: ../../content/applications/sales/sales/amazon_connector/manage.rst:84
 msgid ""
@@ -7050,6 +7050,11 @@ msgid ""
 "possible to manually upload the invoices generated on Odoo to the Amazon "
 "backend."
 msgstr ""
+"Il n'est pas possible d'envoyer les factures aux clients d'Amazon "
+"directement à partir d'Odoo en raison de la politique d'Amazon de ne pas "
+"partager les adresses mail des clients. Au lieu de cela, il est possible de "
+"charger manuellement les factures générées dans Odoo vers le backend "
+"d'Amazon. "
 
 #: ../../content/applications/sales/sales/amazon_connector/manage.rst:88
 msgid ""
@@ -7057,6 +7062,9 @@ msgid ""
 "retrieve VAT numbers from the Amazon backend before creating the invoice in "
 "Odoo."
 msgstr ""
+"De plus, pour vos clients B2B, il est actuellement nécessaire de récupérer "
+"manuellement les numéros de TVA à partir du backend d'Amazon avant de créer "
+"la facture dans Odoo."
 
 #: ../../content/applications/sales/sales/amazon_connector/manage.rst:92
 msgid ""
@@ -7065,6 +7073,10 @@ msgid ""
 "TaxCloud, since Amazon already includes them in its own tax report to "
 "TaxCloud."
 msgstr ""
+"Pour les utilisateurs de :doc:`TaxCloud "
+"<../../../finance/accounting/taxes/taxcloud>` : les factures créées à partir"
+" des commandes Amazon ne sont **pas** synchronisées avec TaxCloud, "
+"puisqu'Amazon les inclut déjà sans sa propre déclaration de TVA à TaxCloud."
 
 #: ../../content/applications/sales/sales/amazon_connector/manage.rst:97
 msgid "Register payments"
@@ -7076,6 +7088,9 @@ msgid ""
 "journal (for example, named `Amazon payments`) with a dedicated *Bank and "
 "Cash* intermediary account is recommended."
 msgstr ""
+"Comme les clients paient Amazon en tant qu'intermédiaire, il est recommandé "
+"de créer un journal de *Banque* dédié (par exemple, intitulé `Paiements "
+"Amazon`) avec un compte intermédiaire *Banque et Espèces* dédié."
 
 #: ../../content/applications/sales/sales/amazon_connector/manage.rst:102
 msgid ""
@@ -7086,6 +7101,13 @@ msgid ""
 "all the payments generated and click :menuselection:`Actions --> Create "
 "batch payment --> Validate`."
 msgstr ""
+"De plus, comme Amazon effectue un seul paiement mensuel, il est nécessaire "
+"de sélectionner toutes les factures liées à un seul paiement lors de "
+"l'enregistrement des paiements. Utilisez le :guilabel:`Journal` `Paiements "
+"Amazon` dédié et sélectionnez :guilabel:`Dépôt par lot` comme "
+":guilabel:`mode de paiement`. Sélectionnez ensuite tous les paiements "
+"générés et cliquez sur :menuselection:`Actions --> Créer un paiement par lot"
+" --> Valider`."
 
 #: ../../content/applications/sales/sales/amazon_connector/manage.rst:109
 msgid ""
@@ -7094,6 +7116,10 @@ msgid ""
 "and the banks statements are recorded, credit the Amazon intermediary "
 "account by the amount received."
 msgstr ""
+"La même chose peut être faite pour les factures fournisseurs d'Amazon "
+"dédiées aux commissions. Lorsque le solde est reçu sur le compte bancaire à "
+"la fin du mois et les relevés bancaires sont enregistrés, créditez le compte"
+" intermédiaire Amazon du montant reçu."
 
 #: ../../content/applications/sales/sales/amazon_connector/manage.rst:114
 msgid "Follow your Amazon sales in sales reporting"
@@ -8353,6 +8379,9 @@ msgid ""
 "*Sales*, which means customers are invoiced once the sales order is "
 "confirmed."
 msgstr ""
+"La règle *Facturer les produits commandés* est utilisée par défaut dans Odoo"
+" *Ventes*, ce qui signifie que les clients sont facturés une fois que le bon"
+" de commande est confirmé."
 
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:9
 msgid ""
@@ -8362,15 +8391,23 @@ msgid ""
 " slightly from the delivered quantity, making it preferable to invoice the "
 "quantity actually delivered."
 msgstr ""
+"La règle *Facturer les produits livrés* facture les clients une fois que la "
+"livraison est effectuée. Cette règle est souvent utilisée pour les "
+"entreprises qui vendent des matériaux, des liquides ou des denrées "
+"alimentaires en grande quantité. Dans ces cas, la quantité commandée peut "
+"différer légèrement de la quantité livrée et il est donc préférable de "
+"facturer la quantité effectivement livrée."
 
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:14
 msgid ""
 "Being able to have different invoicing options provides more flexibility."
 msgstr ""
+"Le fait de pouvoir disposer de différentes options de facturation offre une "
+"plus grande flexibilité."
 
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:17
 msgid "Invoicing policy features"
-msgstr ""
+msgstr "Fonctionnalités de la politique de facturation"
 
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:19
 msgid ""
@@ -8380,10 +8417,15 @@ msgid ""
 ":guilabel:`Invoice what is ordered` or :guilabel:`Invoice what is "
 "delivered`."
 msgstr ""
+"Pour activer les fonctionnalités nécessaires de la politique de facturation,"
+" allez à l'application :menuselection:`Ventes --> Configuration --> "
+"Paramètres`, et dans la section :guilabel:`Facturation`, sélectionnez une "
+"règle de :guilabel:`Politique de facturation` : :guilabel:`Facturer les "
+"produits commandés` ou :guilabel:`Facturer les produits livrés`."
 
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst-1
 msgid "Choosing an invoicing policy on Odoo Sales."
-msgstr ""
+msgstr "Choisir une politique de facturation dans Odoo Ventes."
 
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:29
 msgid ""
@@ -8391,10 +8433,14 @@ msgid ""
 "possible to activate the :guilabel:`Automatic Invoice` feature, which "
 "automatically generates invoices when an online payment is confirmed."
 msgstr ""
+"Si vous choisissez la règle :guilabel:`Facturer les produits livrés`, il "
+"n'est **pas** possible d'activer la fonctionnalité :guilabel:`Facture "
+"automatique`, qui permet de générer automatiquement des factures une fois "
+"qu'un paiement en ligne est confirmé."
 
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:34
 msgid "Invoicing policy on product form"
-msgstr ""
+msgstr "Politique de facturation sur la fiche du produit"
 
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:36
 msgid ""
@@ -8403,10 +8449,17 @@ msgid ""
 "under the :guilabel:`General Information` tab. It can be changed manually "
 "using the drop-down menu."
 msgstr ""
+"Sur n'importe quelle page de produit, via l'application "
+":menuselection:`Ventes --> Produits --> Tableau de bord des produits`, "
+"trouver l'option :guilabel:`Politique de facturation` dans l'onglet "
+":guilabel:`Informations générales`. Il est possible de la modifier "
+"manuellement à l'aide du menu déroulant."
 
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst-1
 msgid "How to change your invoicing policy on a product form on Odoo Sales."
 msgstr ""
+"Comment modifier votre politique de facturation sur une fiche de produit "
+"dans Odoo Ventes."
 
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:45
 msgid "Impact on sales flow"
@@ -8419,18 +8472,26 @@ msgid ""
 "confirmed, which turns the quotation into a sales order. This, in turn, "
 "creates an invoice."
 msgstr ""
+"Dans Odoo *Ventes*, le flux de vente de base commence par la création d'un "
+"devis. Ce devis est ensuite envoyé au client. Il doit alors être confirmé, "
+"ce qui transforme le devis en bon de commande. Ce dernier crée à son tour "
+"une facture."
 
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:51
 msgid ""
 "The following is a breakdown of how invoicing policy rules impact the "
 "aforementioned sales flow:"
 msgstr ""
+"Voici une analyse de l'impact des règles de politique de facturation sur un "
+"flux de vente :"
 
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:53
 msgid ""
 ":guilabel:`Invoice what is ordered`: No impact on the basic sales flow. An "
 "invoice is created as soon as a sale is confirmed."
 msgstr ""
+":guilabel:`Facturer les produits commandés` : Aucun impact sur le flux de "
+"vente de base. Une facture est créée dès qu'une vente est confirmée."
 
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:55
 msgid ""
@@ -8439,6 +8500,11 @@ msgid ""
 "the *Inventory* app can be installed and used to confirm the delivered "
 "quantity before creating an invoice with the *Sales* app."
 msgstr ""
+":guilabel:`Facturer les produits livrés` : Impact mineur sur le flux de "
+"vente, car la quantité livrée doit être saisie manuellement sur le bon de "
+"commande. Toutefois, vous pouvez installer et utiliser l'application "
+"*Inventaire* pour confirmer la quantité livrée avant de créer une facture "
+"avec l'application *Ventes*."
 
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:60
 msgid ""
@@ -8447,12 +8513,18 @@ msgid ""
 "invoiceable line. If a product has a Delivered quantities invoicing policy, "
 "please make sure that a quantity has been delivered.`"
 msgstr ""
+"Si un utilisateur tente de créer une facture sans valider la quantité "
+"livrée, le message d'erreur suivant apparaît : :guilabel:`Il n'y a aucune "
+"ligne facturable. Si un produit a une politique de facturation basée sur les"
+" quantités livrées, veuillez vous assurer qu'une quantité a été livrée.`"
 
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:0
 msgid ""
 "If Delivered Quantities invoicing policy is chosen, ensure a quantity has "
 "been delivered."
 msgstr ""
+"Si la politique de facturation basée sur les quantités livrées est choisie, "
+"assurez-vous qu'une quantité a été livrée."
 
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:69
 msgid ""
@@ -8461,10 +8533,14 @@ msgid ""
 "invoiced quantities are available to view, directly from the sales order. "
 "This is true for both invoicing policy rule options."
 msgstr ""
+"Une fois qu'un devis est confirmé et que le statut passe de :guilabel:`Devis"
+" envoyé` à :guilabel:`Bon de commande`, vous pouvez voir les quantités "
+"livrées et facturées directement à partir du bon de commande. C'est vrai "
+"pour les deux options de règles de politique de facturation."
 
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst-1
 msgid "How to see your delivered and invoiced quantities on Odoo Sales."
-msgstr ""
+msgstr "Comment voir vos quantités livrées et facturées dans Odoo Ventes."
 
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:77
 msgid ""
@@ -8472,6 +8548,9 @@ msgid ""
 ":guilabel:`Delivered` and :guilabel:`Invoiced`, even if it's a partial "
 "delivery, when the quotation is confirmed."
 msgstr ""
+"Odoo ajoute automatiquement les quantités à la facture, à la fois les "
+"quantités :guilabel:`livrées` et :guilabel:`facturées`, même s'il s'agit "
+"d'une livraison partielle, lorsque le devis est confirmé."
 
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:80
 msgid ""
@@ -8479,12 +8558,17 @@ msgid ""
 ":guilabel:`Regular invoice`, :guilabel:`Down payment (percentage)` or "
 ":guilabel:`Down payment (fixed amount)`."
 msgstr ""
+"Enfin, il existe différentes options pour créer une facture : "
+":guilabel:`Facture normale`, :guilabel:`Acompte (pourcentage)` ou "
+":guilabel:`Acompte (montant fixe)`."
 
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:84
 msgid ""
 "Be sure to check out the documentation explaining down payment options to "
 "learn more: :doc:`/applications/sales/sales/invoicing/down_payment`"
 msgstr ""
+"Pour en savoir plus, consultez la documentation expliquant les options "
+"d'acompte : :doc:`/applications/sales/sales/invoicing/down_payment`"
 
 #: ../../content/applications/sales/sales/invoicing/milestone.rst:3
 msgid "Invoice project milestones"
@@ -11191,7 +11275,7 @@ msgstr "Envoyer des devis"
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:3
 msgid "Quotation deadlines"
-msgstr ""
+msgstr "Dates limites des devis"
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:5
 msgid ""
@@ -11201,10 +11285,16 @@ msgid ""
 "deadlines also can also act as protection for a company in case an order has"
 " to be fulfilled at a price that is no longer profitable for the business."
 msgstr ""
+"Dans l'application *Ventes* d'Odoo, il est possible de définir des dates "
+"limites sur des devis. Cela encourage les clients à agir rapidement pendant "
+"les négociations de vente, car ils peuvent craindre de manquer une bonne "
+"affaire. En outre, les dates limites peuvent également servir de protection "
+"pour une entreprise au cas où une commande devrait être exécutée à un prix "
+"qui n'est plus rentable pour l'entreprise."
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:11
 msgid "Expiration date deadlines"
-msgstr ""
+msgstr "Dates limites d'expiration"
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:13
 msgid ""
@@ -11212,6 +11302,8 @@ msgid ""
 ":guilabel:`Expiration` field located at the top of the quotation or sales "
 "order form."
 msgstr ""
+"Sur un devis d'Odoo *Ventes*, ajoutez une date d'expiration dans le champ "
+":guilabel:`Expiration` situé en haut du devis ou de la commande."
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:16
 msgid ""
@@ -11219,6 +11311,9 @@ msgid ""
 "app`, and select a desired quotation, or create a new one by clicking "
 ":guilabel:`Create`."
 msgstr ""
+"Pour ajouter une date d'expiration à un devis, allez à l'application "
+":menuselection:`Ventes` et sélectionnez un devis ou créez-en un nouveau en "
+"cliquant sur :guilabel:`Créer`."
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:19
 msgid ""
@@ -11227,20 +11322,27 @@ msgid ""
 "drop-down calendar, in which the month and date can be designated as the "
 "expiration date of the quotation."
 msgstr ""
+"Sur le formulaire de devis, cliquez sur :guilabel:`Modifier` (si vous "
+"modifiez un devis préexistant) et cliquez sur le champ "
+":guilabel:`Expiration`. Cela fait apparaître un calendrier déroulant, dans "
+"lequel vous pouvez désigner le mois et la date comme date d'expiration du "
+"devis."
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst-1
 msgid "How to configure deadlines on Odoo Sales."
-msgstr ""
+msgstr "Comment configurer des dates limites dans Odoo Ventes."
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:27
 msgid ""
 "Once the expiration date is selected, click :guilabel:`Save` to save all "
 "changes."
 msgstr ""
+"Une fois que vous avez sélectionné la date d'expiration, cliquez sur "
+":guilabel:`Enregistrer` pour enregistrer tous les changements. "
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:30
 msgid "Deadlines in quotation templates"
-msgstr ""
+msgstr "Dates limites sur les modèles de devis"
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:32
 msgid ""
@@ -11248,6 +11350,9 @@ msgid ""
 "every quotation template. Whenever a specific quotation template is used in "
 "a quote, its associated deadline is automatically applied."
 msgstr ""
+"L'application *Ventes* d'Odoo vous permet également d'ajouter une date "
+"limite à chaque modèle de devis. Lorsqu'un modèle de devis spécifique est "
+"utilisé dans un devis, la date limite y associée s'applique automatiquement."
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:36
 msgid ""
@@ -11256,12 +11361,19 @@ msgid ""
 "desired quotation template to which a deadline should be added, or click "
 ":guilabel:`Create` to build a new quotation template from scratch."
 msgstr ""
+"Pour ajouter une date limite à un modèle de devis, allez à l'application "
+":menuselection:`Ventes --> Configuration --> Modèles de devis` et "
+"sélectionnez le modèle de devis souhaité auquel vous voulez ajouter une date"
+" limite ou cliquez sur :guilabel:`Créer` pour créer un nouveau modèle de "
+"devis à partir de zéro."
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:40
 msgid ""
 "On the quotation template detail page, click the :guilabel:`Edit` button to "
 "edit the quotation."
 msgstr ""
+"Sur la page détaillée du modèle de devis, cliquez sur le bouton "
+":guilabel:`Modifier` pour modifier le devis."
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:42
 msgid ""
@@ -11270,10 +11382,15 @@ msgid ""
 "days represents how long the quotation will be valid for, before it expires."
 " When done, click :guilabel:`Save`."
 msgstr ""
+"Ajoutez ensuite un nombre de jours spécifiques dans le champ :guilabel:`Le "
+"devise expire après`, situé en-dessous du nom du modèle de devis. Le nombre "
+"de jours représente la durée de validité du devis avant son expiration. "
+"Lorsque vous avez terminé, cliquez sur :guilabel:`Enregistrer`."
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst-1
 msgid "How to use deadline in a quotation template on Odoo Sales."
 msgstr ""
+"Comment utiliser les dates limites dans un modèle de devis dans Odoo Ventes."
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:51
 msgid ""
@@ -11282,15 +11399,222 @@ msgid ""
 " of days is the same as those mentioned in the quotation template (if a "
 "quotation template was used for the initial quotation)."
 msgstr ""
+"En cliquant sur le bouton :guilabel:`Aperçu client` sur un devis, Odoo "
+"affiche clairement la date d'expiration de cette offre spécifique. Pour "
+"rappel, le nombre de jours est le même que celui mentionné dans le modèle de"
+" devis (si un modèle de devis a été utilisé pour le devis initial)."
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:0
 msgid "How customers will see deadlines on Odoo Sales."
-msgstr ""
+msgstr "Comment les clients voient les dates limites dans Odoo Ventes."
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:60
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:52
+#: ../../content/applications/sales/sales/send_quotations/optional_products.rst:90
 msgid ":doc:`/applications/sales/sales/send_quotations/quote_template`"
+msgstr ":doc:`/applications/sales/sales/send_quotations/quote_template`"
+
+#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:3
+msgid "Deliveries and invoices to different addresses"
+msgstr "Livrer et facturer à des adresses différentes"
+
+#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:5
+msgid ""
+"People and businesses often use separate addresses for billing (invoicing) "
+"and shipping (delivery) purposes. With the Odoo *Sales* app, contacts can "
+"have different specified addresses for delivery and invoicing."
 msgstr ""
+"Les particuliers et les sociétés utilisent souvent des adresses distinctes "
+"pour la facturation et la livraison. Avec l'application *Ventes* d'Odoo, les"
+" contacts peuvent préciser différentes adresses pour la livraison et la "
+"facturation."
+
+#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:10
+msgid "Settings"
+msgstr "Paramètres"
+
+#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:12
+msgid ""
+"To properly utilize multiple addresses in Odoo, go to :menuselection:`Sales "
+"app --> Configuration --> Settings` and scroll down to the "
+":guilabel:`Quotations & Orders` heading. Then, check the box next to "
+":guilabel:`Customer Addresses`, and click :guilabel:`Save`."
+msgstr ""
+"Pour correctement utiliser plusieurs adresses dans Odoo, allez à "
+"l'application :menuselection:`Ventes --> Configuration --> Paramètres` et "
+"faites défiler jusqu'à la section :guilabel:`Devis & Commandes`. Cochez "
+"ensuite la case à côté de l'option :guilabel:`Adresses du client` et cliquez"
+" sur :guilabel:`Enregistrer`."
+
+#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst-1
+msgid "Activate the Customer Addresses setting."
+msgstr "Activez le paramètre Adresses du client."
+
+#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:21
+msgid "Contact form configuration"
+msgstr "Configuration du formulaire de contact"
+
+#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:23
+msgid ""
+"To add multiple addresses to a contact, go to :menuselection:`Sales app --> "
+"Orders --> Customers`, and clear any default filters from the search bar. "
+"Then, click on the desired customer to open their contact form."
+msgstr ""
+"Pour ajouter plusieurs adresses à un contact, allez à l'application "
+":menuselection:`Ventes --> Commandes --> Clients` et supprimez tous les "
+"filtres par défaut de la barre de recherche. Cliquez ensuite sur le client "
+"souhaité pour ouvrir leur formulaire de contact."
+
+#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:28
+msgid "Contact forms can be accessed in the *Contacts* application, as well."
+msgstr ""
+"Vous pouvez également accéder aux formulaires de contact via l'application "
+"*Contacts*."
+
+#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:30
+msgid ""
+"From the contact form, click :guilabel:`Edit`, and then select "
+":guilabel:`Add`, which is located under the :guilabel:`Contacts & Addresses`"
+" tab. Doing so reveals a :guilabel:`Create Contact` pop-up form, in which "
+"additional addresses can be configured."
+msgstr ""
+"Sur le formulaire de contact, cliquez sur :guilabel:`Modifier`, puis sur "
+":guilabel:`Ajouter`, qui se trouve dans l'onglet :guilabel:`Contacts & "
+"Adresses`. Cette opération fait apparaître un formulaire contextuel "
+":guilabel:`Créer contact` dans lequel vous pouvez configurer des adresses "
+"supplémentaires."
+
+#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst-1
+msgid "Add a contact/address to the contact form."
+msgstr "Ajoutez un contact/une adresse au formulaire de contact."
+
+#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:38
+msgid ""
+"On the :guilabel:`Create Contact` pop-up form, start by clicking the default"
+" :guilabel:`Other Address` field to reveal a drop-down menu of address-"
+"related options."
+msgstr ""
+"Dans le formulaire contextuel :guilabel:`Créer contact`, commencez par "
+"cliquer sur le champ :guilabel:`Autre adresse` par défaut pour afficher un "
+"menu déroulant d'options relatives à l'adresse."
+
+#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:41
+msgid "Select any of the following options:"
+msgstr "Sélectionnez l'une des options suivantes :"
+
+#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:43
+msgid ""
+":guilabel:`Contact`: adds another contact to the existing contact form."
+msgstr ""
+":guilabel:`Contact` : ajoute un autre contact au formulaire de contact "
+"existant."
+
+#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:44
+msgid ""
+":guilabel:`Invoice Address`: adds a specific invoice address to the existing"
+" contact form."
+msgstr ""
+":guilabel:`Adresse de facturation` : ajoute une adresse de facturation "
+"spécifique à un formulaire de contact existant."
+
+#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:45
+msgid ""
+":guilabel:`Delivery Address`: adds a specific delivery address to the "
+"existing contact form."
+msgstr ""
+":guilabel:`Adresse de livraison` : ajoute une adresse de livraison "
+"spécifique au formulaire de contact existant."
+
+#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:46
+msgid ""
+":guilabel:`Other Address`: adds an alternate address to the existing contact"
+" form."
+msgstr ""
+":guilabel:`Autre adresse` : ajoute une adresse alternative au formulaire de "
+"contact existant."
+
+#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:47
+msgid ""
+":guilabel:`Private Address`: adds a private address to the existing contact "
+"form."
+msgstr ""
+":guilabel:`Adresse personnelle` : ajoute une adresse personnelle au "
+"formulaire de contact existant."
+
+#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:49
+msgid ""
+"Once an option is selected, proceed to enter the corresponding contact "
+"information that should be used for the specified address type."
+msgstr ""
+"Lorsque vous avez sélectionné une option, saisissez les informations de "
+"contact correspondantes à utiliser pour ce type d'adresse spécifié. "
+
+#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst-1
+msgid "Create a new contact/address on a contact form."
+msgstr ""
+"Créez un nouveau contact/une nouvelle adresse sur un formulaire de contact."
+
+#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:56
+msgid ""
+"Then, click :guilabel:`Save & Close` to save the address and close the "
+":guilabel:`Create Contact` window. Or, click :guilabel:`Save & New` to save "
+"the address and immediately input another one."
+msgstr ""
+"Cliquez ensuite sur :guilabel:`Enregistrer & Fermer` pour enregistrer "
+"l'adresse et fermer la fenêtre :guilabel:`Créer contact`. Ou cliquez sur "
+":guilabel:`Enregistrer & Nouveau` pour enregistrer l'adresse et "
+"immédiatement en saisir une autre."
+
+#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:60
+msgid "Address added to quotations"
+msgstr "Adresse ajoutée aux devis"
+
+#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:62
+msgid ""
+"When a customer is added to a quotation, the :guilabel:`Invoice Address` and"
+" :guilabel:`Delivery Address` fields autopopulate with the corresponding "
+"addresses specified on the customer's contact form."
+msgstr ""
+"Lorsqu'un client est ajouté à un devis, les champs :guilabel:`Adresse de "
+"facturation` et :guilabel:`Adresse de livraison` se remplissent "
+"automatiquement en fonction des adresses précisées sur le formulaire de "
+"contact du client. "
+
+#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst-1
+msgid "Invoice and Delivery Addresses autopopulate on a quotation."
+msgstr ""
+"Les adresses de facturation et de livraison se remplissent automatiquement "
+"dans un devis."
+
+#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:70
+msgid ""
+"The :guilabel:`Invoice Address` and :guilabel:`Delivery Address` can also be"
+" edited directly from the quotation by clicking the :guilabel:`Edit` button,"
+" and then clicking the :guilabel:`➡️ (right arrow)` internal link buttons "
+"next to each address line."
+msgstr ""
+"Il est également possible de modifier l':guilabel:`Adresse de facturation` "
+"et l':guilabel:`Adresse de livraison` directement à partir du devis en "
+"cliquant sur le bouton :guilabel:`Modifier`, puis sur les boutons de lien "
+"interne :guilabel:`➡️ (flèche droite)` à côté de chaque ligne d'adresse."
+
+#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:74
+msgid ""
+"These addresses can be updated at any time to ensure accurate invoicing and "
+"delivery."
+msgstr ""
+"Ces adresses peuvent être mises à jour à tout moment pour garantir "
+"l'exactitude de la facturation et de la livraison."
+
+#: ../../content/applications/sales/sales/send_quotations/different_addresses.rst:77
+msgid ""
+"If any changes are made on a form in Odoo, include *Contacts* forms, "
+"remember to click :guilabel:`Save` to save the changes to the database."
+msgstr ""
+"Si des modifications sont apportées à un formulaire dans Odoo, y compris aux"
+" formulaires de *Contact*, n'oubliez pas de cliquer sur "
+":guilabel:`Enregistrer` pour enregistrer les modifications dans la base de "
+"données."
 
 #: ../../content/applications/sales/sales/send_quotations/get_paid_to_validate.rst:3
 msgid "Get paid to confirm an order"
@@ -11385,7 +11709,6 @@ msgstr ""
 "possibilités de vos clients en matière de paiement."
 
 #: ../../content/applications/sales/sales/send_quotations/get_paid_to_validate.rst:50
-#: ../../content/applications/sales/sales/send_quotations/optional_products.rst:65
 msgid ":doc:`quote_template`"
 msgstr ":doc:`quote_template`"
 
@@ -11403,7 +11726,7 @@ msgstr ":doc:`/applications/finance/payment_providers/authorize`"
 
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:3
 msgid "Online signatures for order confirmations"
-msgstr ""
+msgstr "Signatures en ligne pour les confirmations de commande"
 
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:5
 msgid ""
@@ -11412,10 +11735,15 @@ msgid ""
 "order is electronically signed by the customer, the salesperson attached to "
 "the sales order is automatically notified that the order is confirmed."
 msgstr ""
+"L'application Odoo *Ventes* offre aux clients la possibilité de confirmer "
+"les commandes par une signature en ligne directement sur la commande. Une "
+"fois que la commande est signée électroniquement par le client, le vendeur "
+"mentionné sur la commande est automatiquement notifié que la commande est "
+"confirmée."
 
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:11
 msgid "Activate online signatures"
-msgstr ""
+msgstr "Activer les signatures en ligne"
 
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:13
 msgid ""
@@ -11425,34 +11753,45 @@ msgid ""
 "checking the box beside it. Then, click the :guilabel:`Save` button in the "
 "top-left corner."
 msgstr ""
+"Pour activer la fonctionnalité *signature en ligne*, allez à l'application "
+":menuselection:`Ventes --> Configuration --> Paramètres`, faites défiler "
+"jusqu'à la section :guilabel:`Devis & Commandes` et activez la "
+"fonctionnalité :guilabel:`Signature en ligne` en cochant la case à côté de "
+"l'option. Cliquez ensuite sur le bouton :guilabel:`Enregistrer` dans le coin"
+" supérieur gauche."
 
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst-1
 msgid "How to enable online signature in Odoo Sales settings."
 msgstr ""
+"Comment activer les signatures en ligne dans les paramètres d'Odoo Ventes."
 
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:23
 msgid ""
 "On quotation templates, the :guilabel:`Online Signature` feature is located "
 "under the :guilabel:`Confirmation` tab."
 msgstr ""
+"Sur les modèles de devis, la fonctionnalité :guilabel:`Signature en ligne` "
+"se situe en-dessous de l'onglet :guilabel:`Confirmation`."
 
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:0
 msgid "How to enable online signature on a quotation template."
-msgstr ""
+msgstr "Comment activer les signatures en ligne sur un modèle de devis."
 
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:30
 msgid ""
 "On standard quotations, the :guilabel:`Online Signature` feature is located "
 "under the :guilabel:`Other Info` tab."
 msgstr ""
+"Sur les devis standards, la fonctionnalité :guilabel:`Signature en ligne` se"
+" situe en-dessous de l'onglet :guilabel:`Autres informations`."
 
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:0
 msgid "How to enable online signature on standard quotations."
-msgstr ""
+msgstr "Comment activer les signatures en ligne sur les devis standards."
 
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:38
 msgid "Order confirmations with online signatures"
-msgstr ""
+msgstr "Confirmer la commande par une signature en ligne"
 
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:40
 msgid ""
@@ -11461,10 +11800,15 @@ msgid ""
 "portal. When clicked, clients have the option to draw a signature, fill in "
 "the field with an automated signature, or load a file from their computer."
 msgstr ""
+"Lorsque les devis sont envoyés aux clients, ils ont la possibilité de "
+":guilabel:`Signer & Payer` directement sur le devis dans le portail client "
+"en ligne. En cliquant sur ce bouton, les clients peuvent dessiner une "
+"signature, remplir le champ avec une signature automatisée ou charger un "
+"fichier à partir de leur ordinateur."
 
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst-1
 msgid "How to confirm an order with a signature on Odoo Sales."
-msgstr ""
+msgstr "Comment confirmer une commande par une signature dans Odoo Ventes."
 
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:48
 msgid ""
@@ -11472,123 +11816,210 @@ msgid ""
 " the quotation is paid and confirmed, a delivery order is automatically "
 "created (if the Odoo *Inventory* app is installed)."
 msgstr ""
+"Une fois la signature apposée, les différentes options de paiement "
+"deviennent disponibles. Ensuite, lorsque le devis est payé et confirmé, un "
+"bon de livraison est créé automatiquement (si l'application Odoo "
+"*Inventaire* est installée)."
 
 #: ../../content/applications/sales/sales/send_quotations/optional_products.rst:3
-msgid "Add optional products"
-msgstr "Ajouter des produits optionnels"
+msgid "Optional products"
+msgstr "Produits optionnels"
 
 #: ../../content/applications/sales/sales/send_quotations/optional_products.rst:5
 msgid ""
-"The use of optional products is a marketing strategy for cross-selling "
-"products along with a core product. The aim is to offer useful and related "
-"products to your customers. For instance, if a customer wants to buy a car, "
-"he has the choice to order an automatic opening trunk and massaging seats, "
-"or not to order such high-quality products and simply buy his car."
+"The use of optional products is a marketing strategy that involves the "
+"cross-selling of products along with a core product. The aim is to offer "
+"useful and related products to customers, which may result in an increased "
+"sale."
 msgstr ""
-"L'utilisation de produits optionnels est une stratégie marketing de vente "
-"croisée de produits avec un produit phare. L'objectif est de proposer des "
-"produits utiles et connexes à vos clients. Par exemple, si un client veut "
-"acheter une voiture, il a le choix de commander un coffre à ouverture "
-"automatique et des sièges massants ou de ne pas commander ces produits de "
-"haute qualité et de simplement acheter sa voiture."
+"L'utilisation de produits optionnels est une stratégie de marketing qui "
+"implique la vente croisée de produits avec un produit principal. L'objectif "
+"est d'offrir aux clients des produits utiles et connexes, ce qui peut se "
+"traduire par une augmentation des ventes."
 
-#: ../../content/applications/sales/sales/send_quotations/optional_products.rst:11
-msgid "Add optional products to your quotations"
-msgstr "Ajouter des produits optionnels à vos devis"
-
-#: ../../content/applications/sales/sales/send_quotations/optional_products.rst:13
+#: ../../content/applications/sales/sales/send_quotations/optional_products.rst:9
 msgid ""
-"With Odoo Sales, it is possible to add or modify optional products directly "
-"on quotations (under the **Optional Products** tab, as you can see below)."
+"For instance, if a customer wants to buy a car, they have the choice to "
+"order massaging seats, as well, or ignore the offer and simply buy the car. "
+"Presenting the choice to purchase optional products enhances the customer "
+"experience."
 msgstr ""
-"Dans Odoo Ventes, il est possible d'ajouter ou de modifier des produits "
-"optionnels directement sur les devis (sous l'onglet **Produits optionnels**,"
-" comme vous pouvez voir ci-dessous)."
+"Par exemple, si un client souhaite acheter une voiture, il a le choix de "
+"commander des sièges massants ou d'ignorer l'offre et d'acheter simplement "
+"la voiture. Le fait de proposer au client d'acheter des produits optionnels "
+"améliorer son expérience."
+
+#: ../../content/applications/sales/sales/send_quotations/optional_products.rst:14
+msgid "Optional products on quotations"
+msgstr "Produits optionnels sur les devis"
+
+#: ../../content/applications/sales/sales/send_quotations/optional_products.rst:16
+msgid ""
+"With the Odoo *Sales* application, it is possible to add or modify optional "
+"products directly on quotations by navigating to the :guilabel:`Optional "
+"Products` tab on a quotation form."
+msgstr ""
+"Dans l'application *Ventes* d'Odoo, il est possible d'ajouter ou de modifier"
+" les produits optionnels directement sur les devis en allant à l'onglet "
+":guilabel:`Produits optionnels` d'un formulaire de devis."
 
 #: ../../content/applications/sales/sales/send_quotations/optional_products.rst-1
-msgid "How to add optional products to your quotations on Odoo Sales"
-msgstr "Comment ajouter des produits optionnels à vos devis dans Odoo Ventes"
+msgid "How to add optional products to your quotations on Odoo Sales."
+msgstr "Comment ajouter des produits optionnels à vos devis dans Odoo Ventes."
 
-#: ../../content/applications/sales/sales/send_quotations/optional_products.rst:22
+#: ../../content/applications/sales/sales/send_quotations/optional_products.rst:24
 msgid ""
-"By clicking on the **Customer Preview** button, you will be able to see what"
-" your customers will have as possibilities after opening a quotation from "
-"their received email."
+"Click the :guilabel:`Customer Preview` button to reveal a preview of the "
+"quotation customers would receive via email, along with the optional "
+"products they have a chance of adding to their order."
 msgstr ""
-"En cliquant sur **Aperçu client**, vous pourrez voir ce que vos clients "
-"auront comme possibilités après avoir ouvert un devis à partir de l'email "
-"qu'ils ont reçu. "
+"Cliquez sur le bouton :guilabel:`Aperçu client` pour afficher un aperçu du "
+"devis que les clients recevront par email, avec les produits optionnels "
+"qu'ils ont la possibilité d'ajouter à leur commande."
 
 #: ../../content/applications/sales/sales/send_quotations/optional_products.rst:0
-msgid "Preview your quotations on Odoo Sales"
-msgstr "Aperçu de vos devis dans Odoo Ventes"
+msgid "Preview your quotations on Odoo Sales."
+msgstr "Aperçu de vos devis dans Odoo Ventes."
 
-#: ../../content/applications/sales/sales/send_quotations/optional_products.rst:30
+#: ../../content/applications/sales/sales/send_quotations/optional_products.rst:32
 msgid ""
-"In practice, your customers will be able to add different optional products "
-"to their order by using associated carts, with a user-friendly layout. More "
-"than that, if a customer selects all the optional products suggested, these "
-"additional items will automatically fill in the quotation managed by the "
-"salesman."
+"In practice, customers are able to add different optional products to an "
+"order by clicking the :guilabel:`🛒 (shopping cart)` icon, located to the "
+"right of the optional product line. If a customer selects all the optional "
+"products suggested, these additional items are automatically filled in on "
+"the quotation that is managed by the salesperson."
 msgstr ""
-"En pratique, vos clients pourront ajouter plusieurs produits optionnels à "
-"leur commande en utilisant des paniers associés, avec une mise en page "
-"conviviale. De plus, si un client sélectionne tous les produits optionnels "
-"suggérés, ces articles supplémentaires viendront automatiquement compléter "
-"le devis généré par le vendeur."
+"En pratique, les clients peuvent ajouter différents produits optionnels à "
+"une commande en cliquant sur l'icône :guilabel:`🛒 (panier)`, située à droite"
+" de la ligne du produit optionnel. Si un client sélectionne tous les "
+"produits optionnels proposés, ces articles supplémentaires sont "
+"automatiquement renseignés sur le devis qui est géré par le vendeur."
 
 #: ../../content/applications/sales/sales/send_quotations/optional_products.rst-1
-msgid "How to select optional products on Odoo Sales"
-msgstr "Comment sélectionner des produits optionnels dans Odoo Ventes"
+msgid "How to select optional products on Odoo Sales."
+msgstr "Comment sélectionner les produits optionnels dans Odoo Ventes."
 
-#: ../../content/applications/sales/sales/send_quotations/optional_products.rst:40
+#: ../../content/applications/sales/sales/send_quotations/optional_products.rst:41
 msgid ""
-"Like this, salespeople will see each movement made by the customer and "
-"tracking the order will be all the better."
+"When the customer adds an optional product(s) to an order, the salesperson "
+"is instantly notified about the change, along with any other change the "
+"customer makes to an order. This allows salespeople to stay up-to-date with "
+"everything related to an order in the backend of the *Sales* application."
 msgstr ""
-"Ainsi, les vendeurs verront chaque mouvement effectué par le client et le "
-"suivi de la commande n'en sera que meilleur."
+"Lorsque le client ajoute un ou des produits optionnels à une commande, le "
+"vendeur est instantanément informé du changement, ainsi que de toute autre "
+"modification apportée par le client à une commande. Les vendeurs restent "
+"alors au courant de tout ce qui concerne une commande dans le backend de "
+"l'application *Ventes*."
 
 #: ../../content/applications/sales/sales/send_quotations/optional_products.rst-1
-msgid "How to follow each movement made by your customers on Odoo Sales"
+msgid "How to follow each movement made by your customers on Odoo Sales."
 msgstr ""
-"Comment suivre chaque mouvement effectué par le client dans Odoo Ventes"
-
-#: ../../content/applications/sales/sales/send_quotations/optional_products.rst:49
-msgid "Add optional products to your quotation templates"
-msgstr "Ajouter des produits optionnels à vos modèles de devis"
+"Comment suivre chaque mouvement effectué par vos clients dans Odoo Ventes."
 
 #: ../../content/applications/sales/sales/send_quotations/optional_products.rst:51
-msgid ""
-"Be sure to check out our documentation about :doc:`quote_template` to "
-"understand how you can enable, create, design and manage your own quotation "
-"templates before reading this part."
-msgstr ""
-"Vous pouvez consulter notre documentation sur :doc:`quote_template` pour "
-"comprendre comment vous pouvez activer, créer, concevoir et gérer vos "
-"propres modèles de devis avant de lire cette partie."
+msgid "Optional products on quotation templates"
+msgstr "Produits optionnels sur les modèles de devis"
 
 #: ../../content/applications/sales/sales/send_quotations/optional_products.rst:54
 msgid ""
-"For quotation templates, you also have an **Optional Products** tab where "
-"you can add related products or services."
+"Be sure to review the documentation on how to "
+":doc:`/applications/sales/sales/send_quotations/quote_template` to better "
+"understand how quotation templates work before reading the following "
+"information."
 msgstr ""
-"Pour les modèles de devis, vous disposez également d'un onglet **Produits "
-"optionnels* dans lequel vous pouvez ajouter des produits ou services "
-"connexes."
+"Assurez-vous de consulter la documentation sur les "
+":doc:`/applications/sales/sales/send_quotations/quote_template` pour mieux "
+"comprendre le fonctionnement des modèles de devis avant de lire les "
+"informations suivantes."
+
+#: ../../content/applications/sales/sales/send_quotations/optional_products.rst:58
+msgid ""
+"For quotation templates, just like a typical quotation form, there is also "
+"an :guilabel:`Optional Products` tab, wherein related products or services "
+"can be added to a quotation template."
+msgstr ""
+"Pour les modèles de devis, tout comme un formulaire de devis typique, il y a"
+" également un onglet :guilabel:`Produits optionnels`, dans lequel des "
+"produits ou des services connexes peuvent être ajoutés à un modèle de devis."
+" "
+
+#: ../../content/applications/sales/sales/send_quotations/optional_products.rst:61
+msgid ""
+"To add optional products to a quotation template, navigate to "
+":menuselection:`Sales app --> Configuration --> Quotation Templates`. Then, "
+"either select an existing quotation template to edit, or create a new one by"
+" clicking :guilabel:`New`."
+msgstr ""
+"Pour ajouter des produits optionnels à un modèle de devis, allez à "
+"l'application :menuselection:`Ventes --> Configuration --> Modèles de "
+"devis`. Ensuite, sélectionnez un modèle de devis existant à modifier ou "
+"créez-en un nouveau en cliquant sur :guilabel:`Nouveau`."
+
+#: ../../content/applications/sales/sales/send_quotations/optional_products.rst:65
+msgid ""
+"On the quotation form, click :guilabel:`Edit`, then click the "
+":guilabel:`Optional Products` tab. Under the :guilabel:`Optional Products` "
+"tab, click :guilabel:`Add a line`, and select the desired product to add as "
+"an optional product to the quotation template."
+msgstr ""
+"Sur le formulaire du devis, cliquez sur :guilabel:`Modifier`, puis cliquez "
+"sur l'onglet :guilabel:`Produits optionnels`. Dans l'onglet "
+":guilabel:`Produits optionnels`, cliquez sur :guilabel:`Ajouter une ligne` "
+"et sélectionnez le produit souhaité à ajouter en tant que produit optionnel "
+"au modèle de devis."
+
+#: ../../content/applications/sales/sales/send_quotations/optional_products.rst:70
+msgid ""
+"It's best to offer optional products that would encourage a customer to add "
+"additional items to their order, or entice them to purchase a more expensive"
+" version of their initially selected product."
+msgstr ""
+"Il est préférable de proposer des produits optionnels qui encouragent le "
+"client à ajouter des articles supplémentaires à leur commande ou qui "
+"l'incitent à acheter une version plus chère du produit qu'il a initialement "
+"sélectionné."
+
+#: ../../content/applications/sales/sales/send_quotations/optional_products.rst:74
+msgid ""
+"For example, if a customer purchases a wooden chair, some optional products "
+"could be: a warranty on that chair and/or a wooden chair with leather seats."
+msgstr ""
+"Par exemple, si un client achète une chaise en bois, les produits optionnels"
+" pourraient être : une garantie sur cette chaise et/ou une chaise en bois "
+"avec des sièges en cuir."
+
+#: ../../content/applications/sales/sales/send_quotations/optional_products.rst:77
+msgid ""
+"When the desired optional product(s) have been added, click :guilabel:`Save`"
+" to save all changes."
+msgstr ""
+"Lorsque le ou les produits optionnels souhaités ont été ajoutés, cliquez sur"
+" :guilabel:`Enregistrer` pour enregistrer tous les changements."
+
+#: ../../content/applications/sales/sales/send_quotations/optional_products.rst:80
+msgid ""
+"There is no limit to how many optional products can be added to a quotation "
+"template."
+msgstr ""
+"Le nombre de produits optionnels pouvant être ajoutés à un modèle de devis "
+"n'est pas limité."
+
+#: ../../content/applications/sales/sales/send_quotations/optional_products.rst:82
+msgid ""
+"The products added in the :guilabel:`Optional Products` tab are present in "
+"the quotation, by default, whenever that particular quotation template is "
+"used."
+msgstr ""
+"Les produits ajoutés dans l'onglet :guilabel:`Produits optionnels` figurent "
+"sur le devis par défaut chaque fois que ce modèle de devis est utilisé."
 
 #: ../../content/applications/sales/sales/send_quotations/optional_products.rst-1
-msgid "How to add optional products to your quotation templates on Odoo Sales"
+msgid ""
+"How to add optional products to your quotation templates on Odoo Sales."
 msgstr ""
 "Comment ajouter des produits optionnels à vos modèles de devis dans Odoo "
-"Ventes"
-
-#: ../../content/applications/sales/sales/send_quotations/optional_products.rst:62
-msgid ""
-"With Odoo Sales, it is now very easy to understand your customer's needs."
-msgstr ""
-"Avec Odoo Ventes, il est très facile de comprendre les besoins de vos "
-"clients."
+"Ventes."
 
 #: ../../content/applications/sales/sales/send_quotations/orders_and_variants.rst:3
 msgid "Use product variants on quotations and sales orders"
@@ -11772,173 +12203,325 @@ msgstr "Modèles de devis"
 
 #: ../../content/applications/sales/sales/send_quotations/quote_template.rst:5
 msgid ""
-"Using quotation templates speeds up the creation of sales orders by filling "
-"in most quotation fields automatically."
+"In Odoo *Sales*, salespeople have the ability to create reusable quotation "
+"templates for common product or service offerings that the business offers. "
+"By using these templates, quotations can be tailored and sent to customers "
+"at a much faster pace, without having to create new quotations from scratch "
+"every time a sales negotiation occurs."
 msgstr ""
-"L'utilisation des modèles de devis accélère la création des commandes "
-"clients en complétant automatiquement la plupart des champs du devis."
-
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:11
-msgid ""
-"Go to :menuselection:`Sales --> Configuration --> Settings` and enable "
-":guilabel:`Quotation Templates`."
-msgstr ""
-"Allez à :menuselection:`Ventes --> Configuration --> Paramètres` et activez "
-"l'option :guilabel:`Modèles de devis`."
+"Dans Odoo *Ventes*, les vendeurs peuvent créer des modèles de devis "
+"réutilisables pour des produits ou services courants proposés par "
+"l'entreprise. En utilisant ces modèles, les devis peuvent être adaptés et "
+"envoyés aux clients plus rapidement, sans devoir créer de nouveaux devis à "
+"partir de zéro chaque fois qu'une négociation a lieu."
 
 #: ../../content/applications/sales/sales/send_quotations/quote_template.rst:15
-msgid "Create a template"
-msgstr "Créer un modèle"
-
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:17
 msgid ""
-"Go to :menuselection:`Sales --> Configuration --> Quotations Templates` and "
-"click :guilabel:`New`."
+"Begin by activating the setting in :menuselection:`Sales app --> "
+"Configuration --> Settings`, and scroll to the :guilabel:`Quotations & "
+"Orders` heading."
 msgstr ""
-"Allez à :menuselection:`Ventes --> Configuration --> Modèles de devis` et "
-"cliquez sur :guilabel:`Nouveau`."
+"Commencez par activer le paramètre dans l'application :menuselection:`Ventes"
+" --> Configuration --> Paramètres`, et faites défiler jusqu'à la section "
+":guilabel:`Devis & Commandes`."
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:20
-msgid "Apart from the name, all template fields are optional."
-msgstr "À l'exception du nom, tous les champs du modèle sont optionnels."
-
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:22
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:18
 msgid ""
-"After having named the template, choose default values for the following "
-"fields:"
+"In that section, check the box beside the :guilabel:`Quotation Templates` "
+"option. Doing so reveals a new :guilabel:`Default Template` field, in which "
+"a default quotation template can be chosen from a drop-down menu."
 msgstr ""
-"Après avoir nommé le modèle, choisissez les valeurs par défaut pour les "
-"champs suivants :"
+"Dans cette section, cochez la case à côté de l'option :guilabel:`Modèles de "
+"devis`. Cette option fait apparaître un nouveau champ :guilabel:`Modèle par "
+"défaut` dans lequel un modèle de devis par défaut peut être sélectionné dans"
+" un menu déroulant."
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:24
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst-1
+msgid "How to enable quotation templates on Odoo Sales."
+msgstr "Comment activer les modèles de devis dans Odoo Ventes."
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:26
 msgid ""
-":guilabel:`Quotation expires after`: choose the number of days for which the"
-" quotation is valid."
+"Also, upon activating the :guilabel:`Quotation Template` feature, an "
+"internal :guilabel:`➡️ Quotation Templates` link appears beneath the "
+":guilabel:`Default Template` field. Clicking that link reveals the "
+":guilabel:`Quotation Templates` page, from which templates can be created, "
+"viewed, and edited."
 msgstr ""
-":guilabel:`Le devis expire après` : choisissez le nombre de jours pendant "
-"lesquels le devis est valable."
-
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:25
-msgid ""
-":guilabel:`Online confirmation`: after sending the quotation by email, it is"
-" possible to ask the customer to confirm it online on their customer portal:"
-msgstr ""
-":guilabel:`Confirmation en ligne` : après avoir envoyé le devis par email, "
-"vous pouvez demander au client de le confirmer en ligne sur son portail "
-"client :"
-
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:28
-msgid "by providing a :guilabel:`Signature`,"
-msgstr "en fournissant une :guilabel:`Signature`,"
-
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:29
-msgid "by making a :guilabel:`Payment`,"
-msgstr "en effectuant un :guilabel:`Paiement`,"
-
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:30
-msgid "or both."
-msgstr "ou les deux."
+"De plus, en activant la fonctionnalité :guilabel:`Modèle de devis`, un lien "
+"interne :guilabel:`➡️ Modèles de devis` apparaît en dessous du champ "
+":guilabel:`Modèle par défaut`. En cliquant sur ce lien, vous accédez à la "
+"page :guilabel:`Modèles de devis`, à partir de laquelle des modèles peuvent "
+"être créés, visualisés et modifiés."
 
 #: ../../content/applications/sales/sales/send_quotations/quote_template.rst:32
 msgid ""
-":guilabel:`Confirmation Mail`: select an email template to automatically "
-"send an email to the customer upon confirming the quotation."
+"Consider activating the :guilabel:`Quotation Builder` option in the "
+":guilabel:`Settings`, as well, which is located in the right column beside "
+"the :guilabel:`Quotation Templates` option. This feature aides in the design"
+" and customization of quotation templates."
 msgstr ""
-":guilabel:`Email de confirmation` : sélectionnez un modèle d'email pour "
-"envoyer automatiquement un email au client lors de la confirmation du devis."
+"Pensez également à activer l'option :guilabel:`Constructeur de devis` dans "
+"les :guilabel:`Paramètres`, qui se trouve dans la colonne de droite à côté "
+"de l'option :guilabel:`Modèles de devis`. Cette fonctionnalité facilite la "
+"conception et la personnalisation des modèles de devis."
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:35
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:36
 msgid ""
-"On the :guilabel:`Lines` tab, add the default products and their quantity. "
-"Add :doc:`optional products <optional_products>` in the :guilabel:`Optional "
-"Products` tab."
+"**Note:** enabling this feature also automatically installs the Odoo "
+"*Website* application."
 msgstr ""
-"Dans l'onglet :guilabel:`Lignes`, ajoutez les produits par défaut, ainsi que"
-" leur quantité. Ajoutez les :doc:`produits optionnels <optional_products>` "
-"dans l'onglet :guilabel:`Produits optionnels`."
+"**Remarque :** l'activation de cette fonctionnalité entraîne automatiquement"
+" l'installation de l'application *Site Web* d'Odoo."
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:38
-msgid ""
-"Finally, add any specific sales terms and conditions on the :guilabel:`Terms"
-" & Conditions` tab."
-msgstr ""
-"Enfin, ajoutez des conditions générales de vente spécifiques dans l'onglet "
-":guilabel:`Conditions générales`."
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst-1
+msgid "How to enable quotation builder on Odoo Sales."
+msgstr "Comment activer le constructeur de devis dans Odoo Ventes."
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:41
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:42
 msgid ""
-"If the terms and conditions are standard across all quotations, :doc:`set "
-"them globally in the Accounting/Invoicing settings "
-"</applications/finance/accounting/customer_invoices/terms_conditions>` "
-"instead."
+"Before leaving the :guilabel:`Settings` page, don't forget to click the "
+":guilabel:`Save` button to activate the feature(s) and save all changes made"
+" during the session."
 msgstr ""
-"Si les conditions générales sont standards pour tous les devis, "
-":doc:`définissez-les plutôt dans les paramètres Comptabilité/Facturation "
-"</applications/finance/accounting/customer_invoices/terms_conditions>`."
+"Avant de quitter la page des :guilabel:`Paramètres`, n'oubliez pas de "
+"cliquer sur le bouton :guilabel:`Enregistrer` pour activer la ou les "
+"fonctionnalités et enregistrer toutes les modifications apportées pendant la"
+" session."
 
 #: ../../content/applications/sales/sales/send_quotations/quote_template.rst:46
-msgid "Design a template"
-msgstr "Concevoir un modèle"
+msgid "Create quotation templates"
+msgstr "Créer des modèles de devis"
 
 #: ../../content/applications/sales/sales/send_quotations/quote_template.rst:48
 msgid ""
-"Customize the appearance of quotations on the customer portal by going to "
-":menuselection:`Sales --> Configuration --> Settings` and enabling the "
-":guilabel:`Quotation Builder` feature."
+"Click the :guilabel:`Quotation Templates` link on the :guilabel:`Settings` "
+"page, or navigate to :menuselection:`Sales app --> Configuration --> "
+"Quotation Templates`. Both options reveal the :guilabel:`Quotation "
+"Templates` page, where quotation templates can be created, viewed, and "
+"edited."
 msgstr ""
-"Personnalisez l'apparence des devis sur le portail client en allant à "
-":menuselection:`Ventes --> Configuration --> Paramètres` et en activant la "
-"fonctionnalité :guilabel:`Constructeur de devis`."
+"Cliquez sur le lien :guilabel:`Modèles de devis` sur la page des "
+":guilabel:`Paramètres` ou allez à l'application :menuselection:`Ventes --> "
+"Configuration --> Modèles de devis`. Les deux options permettent d'afficher "
+"la page des :guilabel:`Modèles de devis` sur laquelle vous pouvez créer, "
+"visualiser et modifier des modèles de devis."
 
 #: ../../content/applications/sales/sales/send_quotations/quote_template.rst:52
 msgid ""
-"If necessary, Odoo automatically activates the :doc:`Website "
-"</applications/websites/website>` app when enabling this feature."
+"To create a new quotation template, click the :guilabel:`Create` button, "
+"located in the upper-left corner. Doing so reveals a blank quotation "
+"template form that can be customized in a number of ways."
 msgstr ""
-"Si nécessaire, Odoo active automatiquement l'application :doc:`Site Web "
-"</applications/websites/website>` lors de l'activation de cette "
-"fonctionnalité."
-
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:55
-msgid ""
-"Select a template by going to :menuselection:`Sales --> Configuration --> "
-"Quotations Templates` and clicking on a template. Then click the "
-":guilabel:`Design Template` button. On the website builder, click "
-":guilabel:`Edit`. Drag and drop the building blocks, edit the content, and "
-":guilabel:`Save`."
-msgstr ""
-"Sélectionnez un modèle en allant à :menuselection:`Ventes --> Configuration "
-"--> Modèles de devis` et en cliquant sur un modèle. Cliquez ensuite sur le "
-"bouton :guilabel:`Concevoir un modèle`. Sur le constructeur de site web, "
-"cliquez sur :guilabel:`Modifier`. Glissez et déposez les blocs de "
-"construction et :guilabel:`Enregistrez`."
+"Pour créer un nouveau modèle de devis, cliquez sur le bouton "
+":guilabel:`Créer` situé dans le coin supérieur gauche. Cette opération fait "
+"apparaître un formulaire de modèle de devis vierge qui peut être "
+"personnalisé de plusieurs façons."
 
 #: ../../content/applications/sales/sales/send_quotations/quote_template.rst-1
-msgid "Using the quotation builder"
-msgstr "Utilisez le constructeur de devis"
+msgid "Create a new quotation template on Odoo Sales."
+msgstr "Créez un nouveau modèle de devis dans Odoo Ventes."
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:59
+msgid ""
+"Start by entering a name for the template in the :guilabel:`Quotation "
+"Template` field. Then, in the :guilabel:`Quotation expires after` field, "
+"designate how many days the quotation template will remain valid for, or "
+"leave the field on the default `0` to keep the template valid indefinitely."
+msgstr ""
+"Commencez par saisir un nom pour le modèle dans le champ :guilabel:`Modèle "
+"de devis`. Ensuite, dans le champ :guilabel:`Le devis expire après`, "
+"indiquez combien de jours le modèle de devis reste valide ou laissez le "
+"champ sur la valeur `0` par défaut pour que le modèle reste valide "
+"indéfiniment."
 
 #: ../../content/applications/sales/sales/send_quotations/quote_template.rst:63
-msgid "Use a template"
-msgstr "Utiliser un modèle"
-
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:65
 msgid ""
-"When creating a quotation, choose a template under the :guilabel:`Quotation "
-"Template` field. All the fields are then filled accordingly. Manually edit "
-"any pre-filled field if needed."
+"In the :guilabel:`Company` field, designate to which company this quotation "
+"template applies, if working in a multi-company environment."
 msgstr ""
-"Lors de la création d'un devis, choisissez un modèle dans le champ "
-":guilabel:`Modèle de devis`. Tous les champs sont ensuite complétés en "
-"conséquence. Si nécessaire, vous pouvez modifier manuellement les champs "
-"préremplis."
+"Dans le champ :guilabel:`Société`, indiquez la société à laquelle ce modèle "
+"de devis s'applique, si vous travaillez dans un environnement multi-"
+"sociétés."
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:66
+msgid ""
+"Beneath those fields are three tabs: :guilabel:`Lines`, :guilabel:`Optional "
+"Products`, :guilabel:`Confirmation`."
+msgstr ""
+"Il y a trois onglets en dessous de ces champs : :guilabel:`Lignes`, "
+":guilabel:`Produits optionnels` et :guilabel:`Confirmation`."
 
 #: ../../content/applications/sales/sales/send_quotations/quote_template.rst:69
+msgid ""
+"In the :guilabel:`Lines` tab, products can be added to the quotation "
+"template by clicking :guilabel:`Add a product`, organized by clicking `Add a"
+" section` (and dragging/dropping section headers accordingly), and further "
+"explained with discretionary information (such as warranty details, terms, "
+"etc.) by clicking :guilabel:`Add a note`."
+msgstr ""
+"Dans l'onglet :guilabel:`Lignes`, les produits peuvent être ajoutés au "
+"modèle de devis en cliquant sur :guilabel:`Ajouter un produit`, organisés en"
+" cliquant sur `Ajouter une section` (et en glissant/déposant les en-têtes de"
+" section en conséquence) et explicités avec des informations "
+"discrétionnaires (telles que les détails de la garantie, les conditions, "
+"etc.) en cliquant sur :guilabel:`Ajouter une note`."
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:74
+msgid ""
+"In the :guilabel:`Optional Products` tab, :guilabel:`Add a line` for each "
+"compatible cross-selling product related to the original items in the "
+":guilabel:`Lines` tab, if applicable. The products added here ideally "
+"compliment the original offering as added value for the prospective buyer."
+msgstr ""
+"Dans l'onglet :guilabel:`Produits optionnels`, guilabel:`ajoutez une ligne` "
+"pour chaque produit de vente croisée compatible avec les articles originaux "
+"dans l'onglet :guilabel:`Lignes`, le cas échéant. Les produits ajoutés ici "
+"complètent l'offre originale en tant que valeur ajoutée pour l'acheteur "
+"potentiel."
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:78
+msgid ""
+"Lastly, in the :guilabel:`Confirmation` tab, enable options, as needed, to "
+"require an :guilabel:`Online Signature` and/or an :guilabel:`Online "
+"Payment`, which each allow buyers to confirm orders automatically using the "
+"web portal view after the required action is taken."
+msgstr ""
+"Enfin, dans l'onglet :guilabel:`Confirmation`, activez les options "
+"nécessaires pour exiger une :guilabel:`Signature en ligne` et/ou un "
+":guilabel:`Paiement en ligne`, ce qui permet aux acheteurs de confirmer "
+"leurs commandes automatiquement à l'aide de la vue du portail web une fois "
+"que l'action requise a été effectuée."
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:82
+msgid ""
+"There's also an option to add a :guilabel:`Confirmation Mail` to the "
+"quotation template, as well - meaning whenever this template is used, and an"
+" order is confirmed, an email is sent to the customer informing them that "
+"their order has been confirmed."
+msgstr ""
+"Il est également possible d'ajouter un :guilabel:`Email de confirmation` au "
+"modèle de devis, ce qui signifie que chaque fois que ce modèle est utilisé "
+"et qu'une commande est confirmée, un email est envoyé au client l'informant "
+"que sa commande a été confirmée."
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst-1
+msgid "Allow customers to sign electronically or to pay online on Odoo Sales."
+msgstr ""
+"Autoriser vos clients à signer électroniquement ou à payer en ligne dans "
+"Odoo Ventes."
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:91
+msgid "Design quotation templates"
+msgstr "Concevoir des modèles de devis"
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:94
+msgid ""
+"The following section on designing quotation templates only applies to "
+"databases that have the *Quotation Builder* feature enabled, which is "
+"accessible by following the :ref:`configuration steps above "
+"<sales/send_quotations/templates>`."
+msgstr ""
+"La section suivante sur la conception de modèles de devis ne s'applique "
+"qu'aux bases de données pour lesquelles la fonctionnalité de *Constructeur "
+"de devis* est activée, ce qui est possible en suivant les :ref:`étapes de "
+"configuration ci-dessus <sales/send_quotations/templates>`."
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:98
+msgid ""
+"In the upper-left corner of the quotation template form, there's a "
+":guilabel:`Design Template` button. When clicked, Odoo reveals a preview of "
+"the quotation template, as it will appear on the front-end of the website, "
+"with a :guilabel:`Template Header` specifying that this content will appear "
+"on all quotations using this specific template."
+msgstr ""
+"Dans le coin supérieur gauche du formulaire de modèle de devis, il y a un "
+"bouton :guilabel:`Concevoir un modèle`. Lorsque vous cliquez dessus, Odoo "
+"affiche un aperçu du modèle de devis, tel qu'il apparaîtra sur le frontend "
+"du site web, avec un :guilabel:`En-tête de modèle` spécifiant que ce contenu"
+" apparaîtra sur tous les devis utilisant ce modèle spécifique."
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:103
+msgid ""
+"To edit the content, look, and overall design of the quotation template, "
+"click the :guilabel:`Edit` button in the upper-right corner. Doing so "
+"reveals a variety of design elements and feature-filled building blocks."
+msgstr ""
+"Pour modifier le contenu, l'apparence et la conception générale du modèle de"
+" devis, cliquez sur le bouton :guilabel:`Modifier` dans le coin supérieur "
+"droit. Cette opération fait apparaître une variété d'éléments de conception "
+"et de blocs de construction remplis de fonctionnalités."
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst-1
+msgid "Design quotation template on Odoo Sales."
+msgstr "Concevoir un modèle de devis dans Odoo Ventes."
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:111
+msgid ""
+"Drag and drop any desired building blocks onto the blank quotation template,"
+" and proceed to further customize the content to fit any business need. When"
+" all blocks and customizations are complete, click the :guilabel:`Save` "
+"button to put those configurations into place."
+msgstr ""
+"Glissez et déposez tous les blocs de construction souhaités sur le modèle de"
+" devis vierge et continuez à personnaliser le contenu pour qu'il réponde aux"
+" besoins de l'entreprise. Lorsque tous les blocs sont placés et toutes les "
+"personnalisations sont terminées, cliquez sur le bouton "
+":guilabel:`Enregistrer` pour mettre ces configurations en place. "
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst-1
+msgid ""
+"Drag and drop building blocks to create your quotation template on Odoo "
+"Sales."
+msgstr ""
+"Faites glisser et déposer les blocs de construction pour créer votre modèle "
+"de devis dans Odoo Ventes."
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:120
+msgid "Use quotation templates"
+msgstr "Utiliser les modèles de devis"
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:122
+msgid ""
+"When creating a quotation (:menuselection:`Sales app --> Create`), choose a "
+"preconfigured template in the :guilabel:`Quotation Template` field drop-down"
+" menu."
+msgstr ""
+"Lors de la création d'un devis (application :menuselection:`Ventes --> "
+"Créer`), choisissez un modèle préconfiguré dans le menu déroulant "
+":guilabel:`Modèle de devis`."
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst-1
+msgid "Select a specific template on Odoo Sales."
+msgstr "Sélectionnez un modèle spécifique dans Odoo Ventes."
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:129
+msgid ""
+"To view what the customer will see, click the :guilabel:`Customer Preview` "
+"smart button to see how the quotation template will look on the front-end of"
+" the website."
+msgstr ""
+"Pour visualiser ce que le client verra, cliquez sur le bouton intelligent "
+":guilabel:`Aperçu client` pour voir à quoi ressemblera le modèle de devis "
+"dans le frontend du site web."
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:133
 msgid ""
 "Go to :menuselection:`Sales --> Configuration --> Settings` to select a "
 ":guilabel:`Default Template`."
 msgstr ""
 "Allez à :menuselection:`Ventes --> Configuration --> Paramètres` pour "
 "sélectionner un :guilabel:`Modèle par défaut`."
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:137
+msgid ""
+":doc:`/applications/sales/sales/send_quotations/get_signature_to_validate`"
+msgstr ""
+":doc:`/applications/sales/sales/send_quotations/get_signature_to_validate`"
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:138
+msgid ":doc:`/applications/sales/sales/send_quotations/get_paid_to_validate`"
+msgstr ":doc:`/applications/sales/sales/send_quotations/get_paid_to_validate`"
 
 #: ../../content/applications/sales/subscriptions.rst:5
 msgid "Subscriptions"

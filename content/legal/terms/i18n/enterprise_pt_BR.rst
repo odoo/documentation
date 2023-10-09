@@ -136,7 +136,7 @@ extra igual a 300% do preço de tabela aplicável ao número real de Usuários.
 Durante a vigência deste Contrato, a Odoo SA se compromete a realizar todos os esforços
 razoáveis para corrigir qualquer Bug do Software e Módulos Extras Cobertos relatados pelo
 Cliente por meio de um canal apropriado (normalmente, o formulário da Web ou os números
-de telefone listados em http://www.odoo.com.help, ou, ao trabalhar com um parceiro Odoo, o canal
+de telefone listados em http://www.odoo.com/help, ou, ao trabalhar com um parceiro Odoo, o canal
 fornecido pelo parceiro) e começar a lidar com essas solicitações do Cliente em 2 dias úteis.
 
 Assim que o Bug for corrigido, uma solução apropriada será comunicada ao Cliente. Se o

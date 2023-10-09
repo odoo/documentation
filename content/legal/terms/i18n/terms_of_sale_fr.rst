@@ -8,7 +8,7 @@ Conditions Générales de Vente
 
    `Download PDF <https://www.odoo.com/documentation/{CURRENT_BRANCH}/terms_of_sale_fr.pdf>`_
 
-.. note:: Dernière modification: 20 octobre 2021.
+.. note:: Dernière modification: 12 septembre 2023.
 
 Ces conditions régissent la vente de produits et services entre
 Odoo S.A. et ses filiales (collectivement, "Odoo S.A.") et le client.
@@ -53,10 +53,17 @@ conformément à leur législation interne. La retenue à la source sera réglé
 le client, auprès de l'administration fiscale. En aucun cas, Odoo S.A. ne sera
 impliquée dans les coûts liés à la législation du pays. Le montant de la facture
 est donc dû à Odoo S.A. dans son intégralité et n’inclus pas les coûts relatifs
-à la législation du pays où se trouve le client. Pour les clients implantés dans
-plusieurs pays, les prix applicables seront toujours basés sur l'implantation
-géographique ayant la liste de prix la plus élevée, sauf stipulation contraire
-par écrit au moment de la commande.
+à la législation du pays où se trouve le client.
+
+Pour les clients implantés dans plusieurs pays, les prix applicables seront
+toujours basés sur l'implantation géographique ayant la liste de prix la plus
+élevée, sauf stipulation contraire par écrit au moment de la commande.
+
+Les abonnements mensuels sont uniquement disponibles pour l'hébergement sur la
+Plate-forme Cloud (Odoo SaaS et Odoo SH). Le paiement des abonnements mensuels
+ne peut être effectué que par carte de crédit ou par une méthode de prélèvement
+automatique équivalente prise en charge. Odoo S.A. se réserve le droit de refuser
+tout abonnement mensuel ne respectant pas ces conditions.
 
 Odoo S.A. s'engage à faire ses meilleurs efforts en vue de fournir en temps
 utile des services performants. Toutefois, aucune de ses obligations ne peut

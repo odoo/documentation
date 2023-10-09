@@ -134,8 +134,7 @@ Reason:
 Solution:
     .. warning::
        Consult with your system or network administrator should this issue arise. This error code
-       depends on the network infrastructure and goes beyond :doc:`Odoo support's service scope
-       </services/support/what_can_i_expect>`.
+       depends on the network infrastructure and goes beyond Odoo support's service scope.
 
 `ERR_IOT_HTTPS_LOAD_REQUEST_STATUS`
 -----------------------------------
@@ -256,5 +255,4 @@ Domain Name System (DNS) issue solution
 
    .. warning::
       Consult with your system or network administrator should this issue arise. This error code
-      depends on the network infrastructure, and it goes beyond :doc:`Odoo support's service scope
-      </services/support/what_can_i_expect>`.
+      depends on the network infrastructure, and it goes beyond Odoo support's service scope.

@@ -214,6 +214,8 @@ It appears in the course content on your website.
   :align: center
   :alt: Additional ressources
 
+.. _elearning/quiz:
+
 Quiz tab
 --------
 

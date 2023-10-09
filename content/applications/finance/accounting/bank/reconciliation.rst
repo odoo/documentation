@@ -2,94 +2,134 @@
 Bank reconciliation
 ===================
 
-Overview
-========
+**Bank reconciliation** is the process of matching your :doc:`bank transactions <transactions>` with
+your business records, such as :doc:`customer invoices <../customer_invoices>`, :doc:`vendor bills
+<../vendor_bills>`, and :doc:`payments <../payments>`. Not only is this compulsory for most
+businesses, but it also offers several benefits, such as reduced risk of errors in financial
+reports, detection of fraudulent activities, and improved cash flow management.
 
-Matching your bank statements with your accounting records can be a tedious task. You need to find the corresponding invoices, compare the amounts and partners' details with those in the bank statement. These steps can take a lot of time. Luckily, with Odoo you can very easily match your invoices or any other payment document with your bank statements.
-
-Two options of the reconciliation process exist in Odoo.
-
-1. We can directly specify the payment on the invoice
-2. We can reconcile open invoices with bank statements
-
-Configuration
-=============
-
-No special configuration is necessary to record invoices. All we need
-to do is to install the accounting app.
-
-.. image:: reconciliation/use01.png
-
-Use cases
-=========
-
-Case 1: Payments registration
------------------------------
-
-We received the proof of payment of our invoice in the amount of 2100 euros issued to
-Smith & Co.
-
-We start at our issued Invoice of 2100 euros for Smith & Co. Because the
-sold product is a service we demand an immediate payment. Our accountant
-only handles bank statements at the end of week, so we have to mark
-this invoice as paid immediately in order to indicate that we can start rendering services to our
-customer.
-
-Our customer send us a payment confirmation. We can thus register a
-payment and mark the invoice as paid.
-
-.. image:: reconciliation/use02.png
-
-By clicking on **register payment,** we are telling Odoo that our
-customer has paid the Invoice. We thus have to specify the amount and the
-payment method.
-
-.. image:: reconciliation/use03.png
-
-Now we can always find the payment details in the Invoice by clicking on the
-:menuselection:`Info --> Open Payment`.
-
-.. image:: reconciliation/use04.png
-
-The invoice has been paid and **the reconciliation has been done
-automatically.**
-
-Case 2: Bank statements reconciliations
----------------------------------------
-
-We start at our issued Invoice of 3000 euros for Smith & Co. Let's also
-assume that other Invoices are open for different customers.
-
-.. image:: reconciliation/use05.png
-
-We receive our bank statement and find that not only the invoice issued to Smith & Co has
-been paid, but the one to Buzz of 92 euros as well.
-
-**Import** or **Create** the bank statements. Please refer to the
-documents from the Bank Feeds section.
-
-.. image:: reconciliation/use06.png
-
-On the dashboard, click on **Reconcile # Items**
-
-.. image:: reconciliation/use07.png
-
-If everything was right (correct partner name, right amount) odoo will
-do the reconciliations **automatically**.
-
-.. image:: reconciliation/use08.png
-
-If some issues are found, you will need to take **manual actions**.
-
-For example, if the partner is missing from your bank statement, just
-fill it in :
-
-.. image:: reconciliation/use09.png
-
-If the payment is done with a down payment, just check if it is all
-right and validate all related payments :
-
-.. image:: reconciliation/use10.png
+Thanks to the bank :doc:`reconciliation models <reconciliation_models>`, Odoo pre-selects the
+matching entries automatically.
 
 .. seealso::
-   :doc:`bank_synchronization`
+   - `Odoo Tutorials: Bank reconciliation
+     <https://www.odoo.com/slides/slide/bank-reconciliation-2724>`_
+   - :doc:`bank_synchronization`
+   - :doc:`transactions`
+
+Bank reconciliation view
+========================
+
+To access a bank journal's **reconciliation view**, go to your :guilabel:`Accounting Dashboard` and
+either:
+
+- click the journal name (e.g., :guilabel:`Bank`) to display all transactions, including those
+  previously reconciled or
+- click the :guilabel:`Reconcile items` button to display all transactions Odoo pre-selected for
+  reconciliation. You can remove the :guilabel:`Not Matched` filter from the search bar to include
+  previously reconciled transactions.
+
+.. image:: reconciliation/bank-card.png
+   :alt: Reaching the bank reconciliation tool from your accounting dashboard
+
+The bank reconciliation view is structured into three distinct sections: transactions, counterpart
+entries, and resulting entry.
+
+.. image:: reconciliation/user-interface.png
+   :alt: The user interface of the reconciliation view of a bank journal.
+
+Transactions
+   The transactions section on the left shows all bank transactions, with the newest displayed
+   first. Click a transaction to select it.
+
+Counterpart entries
+   The counterpart entries section on the bottom right displays the options to match the selected
+   bank transaction. Multiple tabs are available, including
+   :ref:`reconciliation/existing-entries`, :ref:`reconciliation/batch-payments`,
+   :ref:`reconciliation/manual-operations`, and :guilabel:`Discuss`, which contains the chatter for
+   the selected bank transaction.
+
+Resulting entry
+   The resulting entry section on the top right displays the selected bank transaction matched with
+   the counterpart entries and includes any remaining debits or credits. In this section, you can
+   validate the reconciliation or mark it as :guilabel:`To Check`. Any :ref:`reconciliation model
+   buttons <reconciliation_models_button>` are also available in the resulting entry section.
+
+Reconcile transactions
+======================
+
+Transactions can be matched automatically with the use of :doc:`reconciliation models
+<reconciliation_models>`, or they can be matched with :ref:`existing entries
+<reconciliation/existing-entries>`, :ref:`batch payments <reconciliation/batch-payments>`,
+:ref:`manual operations <reconciliation/manual-operations>`, and :ref:`reconciliation model buttons
+<reconciliation_models_button>`.
+
+#. Select a transaction among unmatched bank transactions.
+#. Define the counterpart. There are several options for defining a counterpart, including
+   :ref:`matching existing entries <reconciliation/existing-entries>`, :ref:`manual operations
+   <reconciliation/manual-operations>`, :ref:`batch payments <reconciliation/batch-payments>`, and
+   :ref:`reconciliation model buttons <reconciliation_models_button>`.
+#. If the resulting entry isn't fully balanced, balance it by adding another existing counterpart
+   entry or writing it off with a :ref:`manual operation <reconciliation/manual-operations>`.
+#. Click the :guilabel:`Validate` button to confirm the reconciliation and move to the next
+   transaction.
+
+.. tip::
+   If you aren't sure how to reconcile a particular transaction and would like to deal with it
+   later, use the :guilabel:`To Check` button instead. All transactions marked as :guilabel:`To
+   Check` can be displayed using the :guilabel:`To Check` filter.
+
+.. note::
+   Bank transactions are posted on the **journal's suspense account** until reconciliation. At this
+   point, reconciliation modifies the transaction journal entry by replacing the bank suspense
+   account with the corresponding receivable, payable, or outstanding account.
+
+.. _reconciliation/existing-entries:
+
+Match existing entries
+----------------------
+
+This tab contains matching entries Odoo automatically pre-selects according to the reconciliation
+models. The entry order is based on :ref:`reconciliation models <reconciliation_models_suggestion>`,
+with suggested entries appearing first.
+
+.. tip::
+   The search bar within the :guilabel:`Match Existing Entries` tab allows you to search for
+   specific journal items.
+
+.. _reconciliation/batch-payments:
+
+Batch payments
+--------------
+
+`Batch payments <payments/batch-payments>`_ allow you to group different payments to ease
+reconciliation. Use the :guilabel:`Batch Payments` tab to find batch payments for customers and
+vendors. Similarly to the :guilabel:`Match Existing Entries` tab, the :guilabel:`Batch Payments` tab
+has a search bar that allows you to search for specific batch payments.
+
+.. _reconciliation/manual-operations:
+
+Manual operations
+-----------------
+
+If there isn't an existing entry to match the selected transaction, you may instead wish to
+reconcile the transaction manually by choosing the correct account and amount. Then, complete any
+of the relevant optional fields.
+
+.. tip::
+   You can use the :guilabel:`fully paid` option to reconcile a payment, even in cases where only a
+   partial payment is received. A new line appears in the resulting entry section to reflect the
+   open balance registered on the Account Receivable by default. You can choose another
+   account by clicking on the new line in the resulting entry section and selecting the
+   :guilabel:`Account` to record the open balance.
+
+   .. image:: reconciliation/fully-paid.png
+      :alt: Click on fully paid to manually set an invoice as entirely paid.
+
+
+Reconciliation model buttons
+----------------------------
+
+Use a :ref:`reconciliation model button <reconciliation_models_button>` for manual operations that
+are frequently used. These custom buttons allow you to quickly reconcile bank transactions manually
+and can also be used in combination with existing entries.
