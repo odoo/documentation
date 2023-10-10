@@ -3159,11 +3159,14 @@ calendar view are:
     If the option 'event_open_popup' is set to true, then the calendar view will
     open events (or records) in a FormViewDialog. Otherwise, it will open events
     in a new form view (with a do_action)
-``quick_add``
+``quick_create``
     enables quick-event creation on click: only asks the user for a ``name``
     (the field to which this values is saved can be controlled through
     ``rec_name``) and tries to create a new event with just that and the clicked
     event time. Falls back to a full form dialog if the quick creation fails
+``quick_create_view_id``
+    View to open when the attribute ``quick_create`` is set and the user creates
+    an event instead of the default dialog.
 ``create_name_field``
     name of the record's field holding the textual representation of the record,
     this is used when creating records through the 'quick create' mechanism
