@@ -13,7 +13,7 @@ engagement rate with the customer.
    Email templates in Odoo use QWeb or XML, which allows for editing emails in their final
    rendering, making customizations more robust, without having to edit any code whatsoever. This
    means that Odoo can use a Graphical User Interface (GUI) to edit emails, which edits the backend
-   code. When the received email is read by the end user's program, different formatting an
+   code. When the received email is read by the end user's program, different formatting and
    graphics will appear in the final form of it.
 
 Access email templates in :ref:`developer mode <developer-mode>` by navigating to
