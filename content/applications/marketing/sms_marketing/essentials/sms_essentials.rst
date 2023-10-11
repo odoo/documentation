@@ -69,7 +69,7 @@ will be sent. By default, Odoo has :guilabel:`Mailing List` selected. If this is
    :alt: View of the mailing list page in the SMS marketing application.
 
 To reveal all the possible options in the :guilabel:`Recipients` field, click the field to see all
-the choices Odoo makes avaialble.
+the choices Odoo makes available.
 
 When another field (other than :guilabel:`Mailing List`) is selected, the option to specify that
 chosen field even further becomes available — either with a default recipient filter equation that
