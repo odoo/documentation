@@ -6,7 +6,7 @@ Configuration
 =============
 
 :ref:`Install <general/install>` the :guilabel:`🇹🇭 Thailand` localization package to get all the
-features of the Thai localization: Demo
+features of the Thai localization: Demo Test
 
 .. list-table::
    :header-rows: 1
