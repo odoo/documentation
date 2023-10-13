@@ -392,33 +392,34 @@ POS.
   Likewise, they must click :guilabel:`Work Out` to clock out at the end of the session.
 
 .. warning::
-   If you configure a POS to work with a black box, you cannot use it again without it.
+   If you configure a POS to work with a :abbr:`FDM (Fiscal Data Module)`, you cannot use it again
+   without it.
 
 .. _belgium/fdm:
 
-The Fiscal Data Module
-----------------------
+Fiscal Data Module (FDM)
+------------------------
 
-The :abbr:`FDM (Fiscal Data Module)`, or `black box <https://www.boîtenoire.be/fonctionnement>`_, is
-a government-certified device that works together with the Point of Sale application and saves your
-POS orders information. Concretely, a **hash** (:dfn:`unique code`) is generated for each POS order
-and added to its receipt. This allows the government to verify that all revenue is declared.
+An FDM, or **black box**, is a government-certified device that works together with the Point of
+Sale application and saves your POS orders information. Concretely, a **hash** (:dfn:`unique code`)
+is generated for each POS order and added to its receipt. This allows the government to verify that
+all revenue is declared.
 
-.. note::
-   Ensure your black box is approved by the Belgian government. You can check the compliance of your
-   black box by visiting the `Federal Public Service Finance
-   <https://www.systemedecaisseenregistreuse.be/systemes-certifies#FDM%20certifiés>`_ website.
+.. warning::
+   Only the FDM from **Boîtenoire.be** with the `FDM certificate number BMC01
+   <https://www.systemedecaisseenregistreuse.be/fr/systemes-certifies#FDM%20certifiés>`_ is
+   supported by Odoo. `Contact the manufacturer (GCV BMC) <https://www.boîtenoire.be/contact>`_ to
+   order one.
 
 Configuration
 ~~~~~~~~~~~~~
 
 Before setting up your database to work with an FDM, ensure you have the following hardware:
 
-- a registered :ref:`black box <belgium/blackbox>` (go to `www.boîtenoire.be
-  <https://www.boîtenoire.be/ma-caisse/>`_ to order yours);
+- a **Boîtenoire.be** (certificate number BMC01) FDM;
 - an RS-232 serial null modem cable per FDM;
 - an RS-232 serial-to-USB adapter per FDM;
-- an :ref:`IoT Box <belgium/iotbox>` (one IoT box per black box); and
+- an :ref:`IoT Box <belgium/iotbox>` (one IoT box per FDM); and
 - a receipt printer.
 
 .. _belgium/blackbox:
@@ -446,17 +447,17 @@ settings tab --> Attendance/Point of Sale`, and fill in the :guilabel:`INSZ or B
    tab`, and enter your INSZ or BIS number in the designated field.
 
 .. warning::
-   You must configure the black box directly in the production database. Utilizing it in a testing
-   environment may result in incorrect data being stored within the black box.
+   You must configure the :abbr:`FDM (Fiscal Data Module)` directly in the production database.
+   Utilizing it in a testing environment may result in incorrect data being stored within the FDM.
 
 .. _belgium/iotbox:
 
 IoT Box
 *******
 
-In order to use a Fiscal Data Module, you need a registered IoT Box. To register your IoT box, you
-must contact us through our `support contact form <https://www.odoo.com/help>`_ and provide the
-following information:
+In order to use an :abbr:`FDM (Fiscal Data Module)`, you need a registered IoT Box. To register your
+IoT box, you must contact us through our `support contact form <https://www.odoo.com/help>`_ and
+provide the following information:
 
 - your VAT number;
 - your company's name, address, and legal structure; and
