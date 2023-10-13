@@ -25,13 +25,13 @@ To get started, go to `Microsoft's Azure Portal <https://portal.azure.com/>`_. L
 :guilabel:`Microsoft Outlook Office 365` account if there is one, otherwise log in with the
 personal :guilabel:`Microsoft account`. A user with administrative access to the Azure Settings
 will need to connect and perform the following configuration. Next, navigate to the section
-labeled :guilabel:`Manage Azure Active Directory`.
+labeled :guilabel:`Manage Microsoft Entra ID` (formally *Azure Active Directory*).
 
 Now, click on :guilabel:`Add (+)`, located in the top menu, and then select :guilabel:`App
 registration`. On the :guilabel:`Register an application` screen, rename the :guilabel:`Name` to
 `Odoo` or something recognizable. Under the :guilabel:`Supported account types` section select
-:guilabel:`Accounts in any organizational directory (Any Azure AD directory - Multitenant) and
-personal Microsoft accounts (e.g. Skype, Xbox)`.
+:guilabel:`Accounts in any organizational directory (Any Microsoft Entra ID directory - Multitenant)
+and personal Microsoft accounts (e.g. Skype, Xbox)`.
 
 Under the :guilabel:`Redirect URL` section, select :guilabel:`Web` as the platform, and then input
 `https://<odoo base url>/microsoft_outlook/confirm` in the :guilabel:`URL` field. The Odoo base

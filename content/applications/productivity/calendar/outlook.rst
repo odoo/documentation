@@ -17,14 +17,15 @@ account is free for users who have never tried or paid for Azure. For more infor
 <https://azure.microsoft.com/en-us/free/?WT.mc_id=A261C142F>`_.
 
 Refer to `Microsoft's documentation <https://docs.microsoft.com/en-us/azure/active-directory/
-develop/quickstart-create-new-tenant>`_ on how to set up an Azure AD Tenant (also called an
-*environment*), which is a representation of an organization to manage and register apps.
+develop/quickstart-create-new-tenant>`_ on how to set up an Microsoft Entra ID (formally called
+*Microsoft Azure Active Directory (Azure AD)*), which is a representation of an organization to
+manage and register apps.
 
 Then, `Register an Application <https://docs.microsoft.com/en-us/azure/active-directory/develop/
 quickstart-register-app>`_, choosing the appropriate :guilabel:`Supported account type`. Users who
 wish to connect their Outlook calendar to Odoo should select the :guilabel:`Accounts in any
-organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts
-(e.g. Skype, Xbox)` option for :guilabel:`Supported account types`.
+organizational directory (Any Microsoft Entra ID directory - Multitenant) and personal Microsoft
+accounts (e.g. Skype, Xbox)` option for :guilabel:`Supported account types`.
 
 When configuring the :guilabel:`Redirect URI`, choose :guilabel:`Web` and copy the Odoo database
 URI (URL) followed by `/microsoft_account/authentication`.
@@ -35,7 +36,7 @@ URI (URL) followed by `/microsoft_account/authentication`.
 
 .. image:: outlook/azure-register-application.png
    :align: center
-   :alt: The "Supported account type" and "Redirect URI" settings in the Microsoft Azure AD portal.
+   :alt: The "Supported account type" and "Redirect URI" settings in the Microsoft Entra ID portal.
 
 For more information on the restrictions and limitations of URIs, `check this page <https://docs.
 microsoft.com/en-us/azure/active-directory/develop/reply-url>`_.
@@ -135,9 +136,9 @@ The synchronization is a two-way process, meaning that events are reconciled in 
 .. note::
    All users that want to use the synchronization simply need to :ref:`sync their calendar with
    Outlook <outlook/sync>`. The configuration of Microsoft's Azure account
-   is only done once, as Azure AD tenants' Client IDs and Client Secrets are unique, and represent
-   an organization that helps the user to manage a specific instance of Microsoft cloud services
-   for their internal and external users.
+   is only done once, as Microsoft Entra ID tenants' Client IDs and Client Secrets are unique, and
+   represent an organization that helps the user to manage a specific instance of Microsoft cloud
+   services for their internal and external users.
 
 .. seealso::
    - :doc:`../../sales/crm/optimize/outlook_extension`
