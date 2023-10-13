@@ -50,8 +50,8 @@ account`.
    A user with administrative access to the *Azure Settings* must connect and perform the following
    configuration steps below.
 
-Next, navigate to the section labeled :guilabel:`Manage Azure Active Directory`. The location of
-this link is usually in the center of the page.
+Next, navigate to the section labeled :guilabel:`Manage Microsoft Entra ID` (formally *Azure Active
+Directory*). The location of this link is usually in the center of the page.
 
 Now, click on the :guilabel:`Add (+)` icon, located in the top menu, and then select :guilabel:`App
 registration` from the drop-down menu. On the :guilabel:`Register an application` screen, rename the
