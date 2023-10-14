@@ -2,6 +2,8 @@
 How to invoice the shipping cost to the customer?
 =================================================
 
+.. _inventory/shipping/invoice:
+
 Overview
 ========
 
