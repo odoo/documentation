@@ -14,19 +14,19 @@
 # Pedro M. Baeza <pedro.baeza@tecnativa.com>, 2023
 # Braulio D. López Vázquez <bdl@odoo.com>, 2023
 # Martin Trigaux, 2023
-# Iran Villalobos López, 2023
+# Lucia Pacheco, 2023
 # Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2023
 # Fernanda Alvarez, 2023
-# Lucia Pacheco, 2023
+# Iran Villalobos López, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-12 13:54+0000\n"
+"POT-Creation-Date: 2023-10-09 13:19+0000\n"
 "PO-Revision-Date: 2022-10-04 12:54+0000\n"
-"Last-Translator: Lucia Pacheco, 2023\n"
+"Last-Translator: Iran Villalobos López, 2023\n"
 "Language-Team: Spanish (https://app.transifex.com/odoo/teams/41243/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2837,7 +2837,7 @@ msgstr ""
 ":doc:`/applications/sales/point_of_sale/restaurant/kitchen_printing`."
 
 #: ../../content/applications/productivity/iot/config/pos.rst:43
-#: ../../content/applications/productivity/iot/config/troubleshooting.rst:149
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:391
 msgid "Cash drawer"
 msgstr "Caja registradora"
 
@@ -2847,7 +2847,7 @@ msgstr ""
 "La caja registradora debe estar conectada a la impresora con un cable RJ25."
 
 #: ../../content/applications/productivity/iot/config/pos.rst:45
-#: ../../content/applications/productivity/iot/config/troubleshooting.rst:117
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:359
 msgid "Barcode scanner"
 msgstr "Lector de código de barras"
 
@@ -3162,10 +3162,605 @@ msgstr ""
 "seleccionó ningún controlador para esas impresoras."
 
 #: ../../content/applications/productivity/iot/config/troubleshooting.rst:103
+msgid "Epson configuration special case"
+msgstr "Caso especial de uso de Epson"
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:105
+msgid ""
+"Most Epson printers support printing receipts in Odoo :abbr:`POS (Point of "
+"Sale)` using the `GS v 0` command. However, the following Epson printer "
+"models do not support this command:"
+msgstr ""
+"La mayoría de las impresoras Epson pueden imprimir recibos desde el "
+":guilabel:`Punto de venta de Odoo` con el comando `GS v 0`. Sin embargo, los"
+" siguientes modelos de impresoras Epson no son compatibles con el comando;"
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:108
+msgid "TM-U220"
+msgstr "TM-U220"
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:109
+msgid "TM-U230"
+msgstr "TM-U230"
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:110
+msgid "TM-P60"
+msgstr "TM-P60"
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:111
+msgid "TMP-P60II"
+msgstr "TMP-P60II"
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:113
+msgid ""
+"Bypass this issue by configuring the printer to use the `ESC *` command "
+"instead."
+msgstr ""
+"Para solucionar este problema, configure la impresora para que use el "
+"comando  `ESC *` para esto mejor."
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:116
+msgid "Process to force ESC * command"
+msgstr "Proceso para forzar el comando ESC*"
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:119
+msgid "Epson printer compatibility"
+msgstr "Compatibilidad de la impresora Epson"
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:121
+msgid ""
+"The first step is to check whether the printer is incompatible with `GS v 0`"
+" command."
+msgstr ""
+"El primer paso es revisar si una impresora no es compatible con el comando "
+"`GS v 0`"
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:125
+msgid ""
+"`Epson GS v 0 documentation <https://reference.epson-"
+"biz.com/modules/ref_escpos/index.php? content_id=94>`_ for `GS v 0` "
+"compatible printers."
+msgstr ""
+"`Documentación de Epson GS v 0  <https://reference.epson-"
+"biz.com/modules/ref_escpos/index.php? content_id=94>`_ para impresoras "
+"compatibles con `GS v 0`."
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:127
+msgid ""
+"`Epson ESC * documentation <https://reference.epson-"
+"biz.com/modules/ref_escpos/index.php ?content_id=88>`_ for `ESC *` "
+"compatible printers."
+msgstr ""
+"`Documentación Epson ESC* <https://reference.epson-"
+"biz.com/modules/ref_escpos/index.php ?content_id=88>`_ para impresoras "
+"compatibles con `ESC *`."
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:130
+msgid ""
+"If the printer is not compatible with the `ESC *` command then the following"
+" process is not possible. Should the printer be compatible to use the `ESC "
+"*` command to print, follow this process to configure the printer with the "
+":abbr:`IoT (Internet of Things)` box."
+msgstr ""
+"Si la impresora no es compatible con el comando `ESC *` entonces no será "
+"posible realizar el siguiente proceso. Si la impresora es compatible con el "
+"uso del comando `ESC *` para imprimir, siga este proceso para configurar la "
+"impresora con la caja :abbr:`IoT (Internet de las cosas, por sus siglas en "
+"inglés)`."
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:135
+msgid "IoT box configuration for ESC *"
+msgstr "configuración de la caja IoT para ESC*"
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:137
+msgid ""
+"To configure the :abbr:`IoT (Internet of Things)` box to use the `ESC *` "
+"command to print, go to the :abbr:`IoT (Internet of Things)` box homepage by"
+" navigating to :menuselection:`IoT app --> IoT Boxes`. Then click on the "
+":guilabel:`IP address` and this will direct to the :abbr:`IoT (Internet of "
+"Things)` box homepage."
+msgstr ""
+"Para configurar el uso del comando `ESC *` para imprimir en la caja "
+":abbr:`IoT (Internet de las cosas por sus siglsa en inglés)` vaya a la "
+"página de inicio de la caja :abbr:`IoT (Internet de las cosas por sus siglsa"
+" en inglés)` desde :menuselection:`la aplicación IoT --> cajas IoT`. Después"
+" haga clic en la :guilabel:`dirección IP`, así se le redirigirá a la página "
+"de inicio de la caja :abbr:`IoT (Internet de las cosas por sus siglsa en "
+"inglés)`. "
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:142
+msgid "**Choosing the printer**"
+msgstr "**Al elegir la impresora**"
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:144
+msgid ""
+"Now click on the :guilabel:`Printers server` button. This will redirect the "
+"browser to the *CUPS* page. Next, go to :menuselection:`Administration --> "
+"Printers --> Add Printer`, choose the printer that should be modified, and "
+"then click :guilabel:`Continue`."
+msgstr ""
+"Ahora haga clic en el botón :guilabel:`Printers server` (servidores de "
+"impresoras). Esto lo redirigirá a la página de *CUPS*. Después, vaya a "
+":menuselection:`Administración --> Impresoras --> Agregar una impresora`, "
+"elija la impresora que se tiene que modificar y haga clic en "
+":guilabel:`Continuar`."
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:149
+msgid ""
+"If the name of the printer is still uncertain, take the following steps:"
+msgstr ""
+"Si todavía no está seguro de cuál es el nombre de la impresora, siga los "
+"siguientes pasos:"
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:151
+msgid "Take note of the listed printers on the *CUPS* page."
+msgstr "Fíjese qué impresoras están enlistadas en la página *CUPS*. "
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:152
+msgid "Turn the printer off and refresh the page."
+msgstr "Apague la impresora y vuelva a cargar la página. "
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:153
+msgid ""
+"Now compare the difference with the first list to see which printer "
+"disappeared."
+msgstr "Ahora compare las listas para encontrar qué impresora desapareció."
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:154
+msgid "Turn the printer back on and refresh the page again."
+msgstr "Vuelva a prender la impresora y recargue la página."
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:155
+msgid "Double-check the list again to see if the printer re-appears."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:156
+msgid ""
+"The printer that disappeared and reappears again on the listed printers is "
+"the name of the printer in question."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:160
+msgid "This can be :guilabel:`Unknown` under :guilabel:`Local printers`."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:162
+msgid "**CUPS naming convention**"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:164
+msgid ""
+"`CUPS` will prompt the admin for three pieces of information: the "
+":guilabel:`Name`, :guilabel:`Description` and the :guilabel:`Location`. The "
+"last two pieces of information do not need to be specific, however, the "
+":guilabel:`Name` should follow a particular convention to work with the `ESC"
+" *` command."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:169
+msgid ""
+"The :guilabel:`Name` should match this convention: "
+"`<printer_name>__IMC_<param_1>_<param_2>_..._<param_n>__`"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:172
+msgid "A breakdown of the naming convention:"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:174
+msgid ""
+"`printer_name`: This is the printer name. It can be any character as long as"
+" it does not contain `_`, `/`, `#`, or ` ` (space character)."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:176
+msgid ""
+"`IMC`: This stands for *Image Mode Column* (the simplified name for `ESC "
+"*`)."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:177
+msgid "`param_1`: This stands for the specific parameter:"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:179
+msgid ""
+"`SCALE<X>`: Scale of the picture (with the same aspect ratio). `X` should be"
+" an integer describing the scale percentage that should be used."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:183
+msgid ""
+"`100` is the original size, `50` is half the size, `200` is twice the size."
+msgstr ""
+"`100` es el tamaño original, `50` es la mitad del tamaño y `200` es el doble"
+" del tamaño."
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:185
+msgid ""
+"`LDV`: *Low Density Vertical* (will be set to *High Density Vertical* if not"
+" specified)."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:186
+msgid ""
+"`LDH`: *Low Density Horizontal* (will be set to *High Density Horizontal* if"
+" not specified)."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:189
+msgid ""
+"*Density* parameters might need to be configured in a particular way "
+"depending on the printer model."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:193
+msgid ""
+"Visit `Epson's ESC * documentation <https://reference.epson-"
+"biz.com/modules/ref_escpos/index.php?content_id=88>`_ and click on the "
+"printer model printer in the table above to see if the printer should set "
+"these parameters."
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:198
+msgid "The following are examples of proper and improper name formatting:"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:200
+msgid "Proper name formatting:"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:202
+msgid "`EPSONTMm30II__IMC__`"
+msgstr "`EPSONTMm30II__IMC__`"
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:203
+msgid "`EPSON_TM_U220__IMC_LDV_LDH_SCALE80__`"
+msgstr "`EPSON_TM_U220__IMC_LDV_LDH_SCALE80__`"
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:205
+msgid ""
+"Improper name formatting (this will not prevent printing, but the result "
+"might not have the expected printed output):"
+msgstr ""
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:208
+msgid "`EPSON TMm 30II` -> The name can't have spaces."
+msgstr "`EPSON TMm 30II` -> El nombre no debe incluir espacios."
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:209
+msgid ""
+"`EPSONTMm30II` -> The name itself is correct, but it won't use `ESC *`."
+msgstr "`EPSONTMm30II` -> El nombre es correcto, pero no hace uso de `ESC *`."
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:210
+msgid "`EPSONTMm30II__IMC` -> This name is missing the end `__`."
+msgstr "`EPSONTMm30II__IMC` -> El nombre no incluye `__` al final."
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:211
+msgid ""
+"`EPSONTMm30II__IMC_XDV__` -> The parameter `XDV` does not match any existing"
+" parameters."
+msgstr ""
+"`EPSONTMm30II__IMC_XDV__` -> El parámetro `XDV` no coincide con ningún "
+"parámetro existente."
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:212
+msgid ""
+"`EPSONTMm30II__IMC_SCALE__` -> The parameter `SCALE` is missing the scale "
+"value."
+msgstr ""
+"`EPSONTMm30II_IMC_SCALE_` -> El parámetro `SCALE` no incluye el valor con la"
+" escala."
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:214
+msgid "**Finish adding a printer**"
+msgstr "**Terminar de agregar una impresora**"
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:216
+msgid ""
+"After setting the name of the printer with the appropriate naming "
+"convention, click :guilabel:`Continue`. Next, set the :guilabel:`Make` value"
+" to :guilabel:`Raw` and for the :guilabel:`Model` value, set this to "
+":guilabel:`Raw Queue (en)`."
+msgstr ""
+"Después de asignar un nombre a la impresora con la convención de "
+"nomenclatura adecuada, haga clic en :guilabel:`Continuar`. A continuación, "
+"en el valor :guilabel:`Crear` seleccione :guilabel:`Sin procesar` y para el "
+"valor :guilabel:`Modelo` seleccione :guilabel:`Cola sin procesar (en)`."
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:220
+msgid ""
+"After completing these steps, click :guilabel:`Add Printer`. If everything "
+"was done correctly, the page should redirect to the *Banners* page."
+msgstr ""
+"Tras completar estos pasos, haga clic en :guilabel:`Agregar impresora`. Si "
+"no ocurrió ningún error, se le redirigirá a la página de *banners*."
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:223
+msgid ""
+"At this point the printer should have been created, now the :abbr:`IoT "
+"(Internet of Things)` box just needs to detect it and then sync to Odoo's "
+"server (this could take a few minutes)."
+msgstr ""
+"En este punto la impresora debería haber sido creada, ahora la caja "
+":abbr:`IoT (Internet de las cosas)` solo necesita detectarla y luego "
+"sincronizarla con el servidor de Odoo (esto podría tardar unos minutos)."
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:226
+msgid "**Adding the printer to Odoo PoS**"
+msgstr "**Agregar la impresora al PdV de Odoo**"
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:228
+msgid ""
+"Once the printer is visible on the Odoo database, don't forget to choose it "
+"in the :abbr:`PoS (Point of Sale)`configuration as the :abbr:`IoT (Internet "
+"of Things)` printer. Navigate to :menuselection:`Pos App --> Settings --> "
+"Connected Devices --> IoT Box --> Receipt Printer --> Save`."
+msgstr ""
+"Una vez que la impresora aparece en la base de datos de Odoo, debe elegirla "
+"en la configuración del :abbr:`PdV (Punto de venta)` como la impresora "
+":abbr:`IoT (Internet de las cosas)`. Vaya a la aplicación "
+":menuselection:`Punto de venta --> Ajustes --> Dispositivos conectados --> "
+"Caja IoT --> Impresora de recibos --> Guardar`."
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:234
+msgid ""
+"If the printer was set up incorrectly (it is still printing random text or "
+"the printed receipt is too big or small), then it cannot be modified via the"
+" printer name with *CUPS*. Instead, the above process can be repeated to set"
+" up another printer from scratch to create one with modified parameters."
+msgstr ""
+"Si la impresora se configuró de forma incorrecta (todavía imprime texto "
+"aleatorio o el recibo impreso es demasiado grande o pequeño), no se puede "
+"modificar mediante el nombre de la impresora con *CUPS*. Puede repetir el "
+"proceso anterior para configurar otra impresora desde cero y crear una con "
+"los parámetros modificados."
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:239
+msgid "**Example setup of the Epson TM-U220B printer using ESC**"
+msgstr "**Ejemplo de configuración de la impresora Epson TM-U220B con ESC**"
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:244
+msgid ""
+"The following is an example of the troubleshooting process for a TM-U220B "
+"printer model using the `ESC *` command. The receipt pictured below is an "
+"example of a receipt that is printing correctly due to proper formatting (in"
+" theory):"
+msgstr ""
+"El siguiente es un ejemplo del proceso de solución de problemas para el "
+"modelo TM-U220B con el comando `ESC *`. El recibo que aparece a continuación"
+" ejemplifica un recibo que se imprime correctamente debido al formato "
+"adecuado (en teoría):"
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:0
+msgid "Properly formatted receipt picture from a demo database."
+msgstr ""
+"Imagen de un recibo con un formato correcto impreso desde una base de datos "
+"de demostración."
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:252
+msgid ""
+"Trying to print this receipt right-away prior to the proper formatting will "
+"not work as the TM-U220B printer model does not support `GS v 0`. Instead "
+"random characters will print:"
+msgstr ""
+"Si intenta imprimir este recibo antes de configurar el formato adecuado, "
+"imprimirá caracteres aleatorios, ya que el modelo TM-U220B no es compatible "
+"con `GS v 0`."
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:0
+msgid "Printer paper with seemingly random characters."
+msgstr "Papel de impresora con caracteres aparentemente aleatorios."
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:259
+msgid ""
+"To properly configure formatting for the Epson TM-U220B printer model take "
+"the following steps."
+msgstr ""
+"Para configurar correctamente el formato para el modelo TM-U220B  de la "
+"impresora Epson, debe seguir los siguientes pasos."
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:261
+msgid ""
+"After consulting Epson's website for compatibility for both of the commands:"
+" `GS v 0 <https://reference.epson-"
+"biz.com/modules/ref_escpos/index.php?content_id=94>`_ and `ESC * "
+"<https://reference.epson-"
+"biz.com/modules/ref_escpos/index.php?content_id=88>`_, it can be seen that "
+"indeed the TM-U220B is not compatible with `GS v 0`, but is compatible with "
+"`ESC *`."
+msgstr ""
+"Luego de consultar el sitio web de Epson para verificar la compatibilidad de"
+" los comandos `GS v 0 <https://reference.epson-"
+"biz.com/modules/ref_escpos/index.php?content_id=94>`_ y `ESC * "
+"<https://reference.epson-"
+"biz.com/modules/ref_escpos/index.php?content_id=88>`_, puede observar que el"
+" modelo TM-U220B no es compatible con `GS v 0`, pero sí con `ESC *`."
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:0
+msgid "Epson compatibility evaluation from Epson website."
+msgstr "Evaluación de compatibilidad de Epson en su sitio web."
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:270
+msgid ""
+"When adding the printer, *CUPS* will ask which printer should be added:"
+msgstr ""
+"Al agregar la impresora, *CUPS* preguntará qué impresora se debe agregar:"
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:0
+msgid "Administration menu, add printer selection."
+msgstr "Selección para agregar impresora en el menú de administración."
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:276
+msgid ""
+"In this case, the printer is connected via :abbr:`USB (Universal Serial "
+"Bus)` so it won' be part of the :guilabel:`Discovered Network Printers`. "
+"Instead it is likely part of the :guilabel:`Unknown` selection under "
+":guilabel:`Local Printers`. By unplugging the printer's :abbr:`USB "
+"(Universal Serial Bus)` cable from the :abbr:`IoT (Internet of Things)` box "
+"and refreshing the page, the :guilabel:`Unknown` printer disappears. By "
+"plugging it back in, the printer reappears, so it can be said that this is "
+"the printer in question."
+msgstr ""
+"En este caso, la impresora está conectada por :abbr:`USB (Bus serie "
+"universal)` así que no aparecerá en las :guilabel:`impresoras descubiertas "
+"en la red`. En su lugar, es probable que aparezca en la selección "
+":guilabel:`desconocida` en :guilabel:`impresoras locales`. Al desconectar el"
+" cable :abbr:`USB (Bus serie universal)` de la impresora de la caja "
+":abbr:`IoT (Internet de las cosas)` y actualizar la página, la impresora "
+":guilabel:`desconocida` desaparece. Al conectarla de nuevo, vuelve a "
+"aparecer, por lo que se puede decir que esta es la impresora en cuestión."
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:283
+msgid ""
+"For the naming convention, since it will need to print using the `ESC *` "
+"command, it is imperative to add `__IMC`. Reference the printer model on "
+"`Epson's ESC * site <https://reference.epson-"
+"biz.com/modules/ref_escpos/index.php?content_id=88>`_ to find out more about"
+" the *density* parameters."
+msgstr ""
+"Es importante agregar `__IMC` a la nomenclatura del nombre, pues necesitará "
+"imprimir usando el comando `ESC *`. Consulte el sitio web del modelo de la "
+"impresora en `el sitio web de Epson ESC * <https://reference.epson-"
+"biz.com/modules/ref_escpos/index.php?content_id=88>`_ para obtener mas "
+"información acerca de los parámetros de *densidad*.   "
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:0
+msgid "Epson TM-U220 specifications on manufacturer's website."
+msgstr ""
+"Especificaciones de la impresora Epson TM-U220 en el sitio web del "
+"fabricante. "
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:292
+msgid ""
+"For this particular model, TM-U220, `m` should be equal to 0 or 1. While "
+"referencing the :guilabel:`Description` below the pink box in the above "
+"picture, the `m` values could be 0, 1, 32 or 33. So in this printers case, "
+"the `m` value can NOT be 32 or 33 (otherwise there will be random characters"
+" printed)."
+msgstr ""
+"Para el modelo particular TM-U220, el valor de `m` debe ser igual a 0 o 1. "
+"Al referenciar la caja rosa de  :guilabel:`Descripción` en la imagen "
+"anterior, los valores de `m` pueden ser 0, 1, 32 o 33. En el caso de esta "
+"impresora, el valor de `m` NO pueden ser 32 o 33 (de lo contrario se "
+"imprimirán caracteres al azar).      "
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:297
+msgid ""
+"The table includes the numeric values: 32 and 33, they both occur if the "
+":guilabel:`Number of bits for vertical data` is set to 24. This means that "
+"is a *High Vertical Density*. In the case of configuring the Epson TM-U220, "
+"the *Low Vertical Density* will need to be forced, as this printer model "
+"does not support *High Vertical Density* for this command `ESC *`."
+msgstr ""
+"La tabla incluye los siguientes valores numéricos: 32 y 33, los cuáles "
+"ocurren si el :guilabel:`Número de bits para datos verticales` está "
+"establecido en 24. Esto significa que es una *Alta densidad vertical*. En "
+"caso de configurar la Epson TM-U220, deberá forzar la *Baja densidad "
+"vertical*, pues el modelo de la impresora no es compatible con una *Alta "
+"densidad vertical* para el comando `ESC *`.   "
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:302
+msgid ""
+"To add a *Low Vertical Density*, add the `LDV` parameter to the naming "
+"convention."
+msgstr ""
+"Para agregar una *Baja densidad vertical*, agregue el parámetro `LDV` a la "
+"nomenclatura del nombre.  "
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:0
+msgid ""
+"Add a *Low Vertical Density* (the `LDV` parameter) to the naming convention."
+msgstr ""
+"Agregue una *Baja densidad vertical*  (el parámetro `LDV`) a la nomenclatura"
+" del nombre. "
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:308
+msgid ""
+"Click :guilabel:`Continue` to proceed. Next, set the :guilabel:`Make` value "
+"to :guilabel:`Raw` and for the :guilabel:`Model` value, set this to "
+":guilabel:`Raw Queue (en)`."
+msgstr ""
+"Haga clic en  :guilabel:`Continuar` para proceder. Luego, establezca el "
+"valor :guilabel:`Hacer` a :guilabel:`Raw` y para el modelo "
+":guilabel:`Modelo` establézcalo en :guilabel:`Raw Queue (en)`.      "
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:0
+msgid "Epson TM-U220 specifications on manufacturers website."
+msgstr ""
+"Especificaciones para Epson TM-U220 en el sitio web de los fabricantes."
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:315
+msgid ""
+"However when trying to print with the naming convention: "
+"`EpsonTMU220B__IMC_LDV__`, it will print the receipt, but it will be too big"
+" and outside the margin. To resolve this, add a new printer (and naming "
+"convention) with the `SCALE<X>` parameter to adapt to our receipt size."
+msgstr ""
+"Sin embargo, al intentar imprimir con la nomenclatura del nombre: "
+"`EpsonTMU220B__IMC_LDV__`, se imprimirá el recibo, pero será muy grande y se"
+" saldrá del margen. Para solucionar esto, agregue una nueva impresora (y la "
+"nomenclatura del nombre) con el parámetro  `SCALE<X>` para adaptar el tamaño"
+" del recibo."
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:319
+msgid "Here are some examples:"
+msgstr "Estos son algunos de los ejemplos:"
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:324
+msgid "Printer Naming Convention"
+msgstr "Convención sobre el nombre de impresoras "
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:325
+msgid "`EpsonTMU220B__IMC_LDV__`"
+msgstr "`EpsonTMU220B__IMC_LDV__`"
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:326
+msgid "`EpsonTMU220B__IMC_LDV_SCALE75__`"
+msgstr "`EpsonTMU220B__IMC_LDV_SCALE75__`"
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:327
+msgid "`EpsonTMU220B__IMC_LDV_LDH__`"
+msgstr "`EpsonTMU220B__IMC_LDV_LDH__`"
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:328
+msgid "`EpsonTMU220B__IMC_LDV_LDH_SCALE35__`"
+msgstr "`EpsonTMU220B__IMC_LDV_LDH_SCALE35__`"
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:0
+msgid "Receipt example format."
+msgstr "Formato de un recibo de ejemplo."
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:0
+msgid "Receipt format using naming convention: EpsonTMU220B__IMC_LDV__."
+msgstr "Formato del recibo usando la convención: EpsonTMU220B__IMC_LDV__. "
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:0
+msgid ""
+"Receipt format using naming convention: EpsonTMU220B__IMC_LDV_SCALE75__."
+msgstr ""
+"Formato de un recibo usando la convención de nombre: "
+"EpsonTMU220B__IMC_LDV_SCALE75__. "
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:0
+msgid "Receipt format using naming convention: EpsonTMU220B__IMC_LDV_LDH__."
+msgstr ""
+"Formato del recibo usando la convención de nombre: "
+"EpsonTMU220B__IMC_LDV_LDH__."
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:0
+msgid ""
+"Receipt format using naming convention: EpsonTMU220B__IMC_LDV_LDH_SCALE35__."
+msgstr ""
+"Formato del recibo usando la convención de nombre: "
+"EpsonTMU220B__IMC_LDV_LDH_SCALE35__."
+
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:346
 msgid "The Zebra printer doesn't print anything"
 msgstr "La impresora Zebra no imprime nada"
 
-#: ../../content/applications/productivity/iot/config/troubleshooting.rst:105
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:348
 msgid ""
 "Zebra printers are quite sensitive to the format of the Zebra Programming "
 "Language (ZPL) code that is printed. If nothing comes out of the printer or "
@@ -3181,7 +3776,7 @@ msgstr ""
 "Interfaz de usuario --> Vistas` en el :ref:`modo de desarrollador "
 "<developer-mode>`  y busque la plantilla correspondiente."
 
-#: ../../content/applications/productivity/iot/config/troubleshooting.rst:112
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:355
 msgid ""
 "Check out Zebra's instructions on printing :abbr:`ZPL (Zebra Programming "
 "Language)` files `here <https://supportcommunity.zebra.com/s/article/Print-"
@@ -3192,13 +3787,13 @@ msgstr ""
 "<https://supportcommunity.zebra.com/s/article/Print-a-zpl-file-using-the-"
 "Generic-Text-Printer>`_."
 
-#: ../../content/applications/productivity/iot/config/troubleshooting.rst:120
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:362
 msgid "The characters read by the barcode scanner don't match the barcode"
 msgstr ""
 "Los caracteres leídos por el lector de códigos de barras no corresponden con"
 " el código de barras"
 
-#: ../../content/applications/productivity/iot/config/troubleshooting.rst:122
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:364
 msgid ""
 "By default, most barcode scanners are configured in the US QWERTY format. If"
 " the barcode scanner uses a different layout, go to the form view of the "
@@ -3211,11 +3806,11 @@ msgstr ""
 "formulario del dispositivo (aplicación :menuselection:`IoT --> Dispositivos "
 "--> Dispositivo de código de barras`) y seleccione el formato correcto."
 
-#: ../../content/applications/productivity/iot/config/troubleshooting.rst:127
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:369
 msgid "Nothing happens when a barcode is scanned"
 msgstr "No ocurre nada al escanear un código de barras"
 
-#: ../../content/applications/productivity/iot/config/troubleshooting.rst:129
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:371
 msgid ""
 "Make sure that the correct device is selected in the :menuselection:`Point "
 "of Sale` configuration and that the barcode is configured to send an `ENTER`"
@@ -3229,11 +3824,11 @@ msgstr ""
 "barras. Para ello, vaya a la aplicación :menuselection:`Punto de venta --> "
 "Menú de tres puntos en el PdV --> Sección caja IoT --> Editar`."
 
-#: ../../content/applications/productivity/iot/config/troubleshooting.rst:135
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:377
 msgid "The barcode scanner is detected as a keyboard"
 msgstr "El lector de códigos de barras se detecta como un teclado"
 
-#: ../../content/applications/productivity/iot/config/troubleshooting.rst:138
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:380
 msgid ""
 "Some barcode scanners do not advertise themselves as barcode scanners but as"
 " a USB keyboard instead, and will not be recognized by the :abbr:`IoT "
@@ -3242,7 +3837,7 @@ msgstr ""
 "Algunos lectores de código de barras no se anuncian como lectores de código "
 "de barras, sino como teclados USB. La caja IoT no los reconocerá."
 
-#: ../../content/applications/productivity/iot/config/troubleshooting.rst:141
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:383
 msgid ""
 "The device type can be manually changed by going to its form view "
 "(:menuselection:`IoT App --> Devices --> Barcode Device`) and activating the"
@@ -3257,11 +3852,11 @@ msgstr ""
 msgid "Modifying the form view of the barcode scanner."
 msgstr "Modificar la vista de formulario del lector de códigos de barras."
 
-#: ../../content/applications/productivity/iot/config/troubleshooting.rst:152
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:394
 msgid "The cash drawer does not open"
 msgstr "La caja registradora no abre"
 
-#: ../../content/applications/productivity/iot/config/troubleshooting.rst:154
+#: ../../content/applications/productivity/iot/config/troubleshooting.rst:396
 msgid ""
 "The cash drawer should be connected to the printer and the :guilabel:`Cash "
 "drawer` checkbox should be ticked in the :abbr:`PoS (Point of Sale)` "
@@ -3877,20 +4472,18 @@ msgstr ""
 "de :guilabel:`Revisiones de calidad`.    "
 
 #: ../../content/applications/productivity/iot/devices/camera.rst:58
-#: ../../content/applications/productivity/iot/devices/measurement_tool.rst:66
 #: ../../content/applications/productivity/iot/devices/printer.rst:70
 msgid ""
-":doc:`../../../inventory_and_mrp/manufacturing/quality_control/quality_control_points`"
+":doc:`/applications/inventory_and_mrp/quality/quality_management/quality_control_points`"
 msgstr ""
-":doc:`../../../inventory_and_mrp/manufacturing/quality_control/quality_control_points`"
+":doc:`/applications/inventory_and_mrp/quality/quality_management/quality_control_points`"
 
 #: ../../content/applications/productivity/iot/devices/camera.rst:59
-#: ../../content/applications/productivity/iot/devices/measurement_tool.rst:67
 #: ../../content/applications/productivity/iot/devices/printer.rst:71
 msgid ""
-":doc:`../../../inventory_and_mrp/manufacturing/quality_control/quality_alerts`"
+":doc:`/applications/inventory_and_mrp/quality/quality_management/quality_alerts`"
 msgstr ""
-":doc:`../../../inventory_and_mrp/manufacturing/quality_control/quality_alerts`"
+":doc:`/applications/inventory_and_mrp/quality/quality_management/quality_alerts`"
 
 #: ../../content/applications/productivity/iot/devices/camera.rst:62
 msgid "Link camera to a work center in the Manufacturing app"
@@ -4190,6 +4783,18 @@ msgstr ""
 "nueva página de detalles del control de calidad en la aplicación "
 ":menuselection:`Calidad --> Control de calidad --> Revisiones de calidad -->"
 " Nuevo`.   "
+
+#: ../../content/applications/productivity/iot/devices/measurement_tool.rst:66
+msgid ""
+":doc:`../../../inventory_and_mrp/quality/quality_management/quality_control_points`"
+msgstr ""
+":doc:`../../../inventory_and_mrp/quality/quality_management/quality_control_points`"
+
+#: ../../content/applications/productivity/iot/devices/measurement_tool.rst:67
+msgid ""
+":doc:`../../../inventory_and_mrp/quality/quality_management/quality_alerts`"
+msgstr ""
+":doc:`../../../inventory_and_mrp/quality/quality_management/quality_alerts`"
 
 #: ../../content/applications/productivity/iot/devices/measurement_tool.rst:70
 msgid "Link a measurement tool to a work center in the Manufacturing app"
