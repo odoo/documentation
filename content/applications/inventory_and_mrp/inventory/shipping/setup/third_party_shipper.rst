@@ -2,6 +2,8 @@
 How to integrate a third party shipper?
 =======================================
 
+.. _inventory/shipping/third_party:
+
 Overview
 ========
 
