@@ -12,6 +12,7 @@
 # Yannick Stahl, 2023
 # MIRIAM SOPHIE KELLER, 2023
 # Martin Trigaux, 2023
+# Wil Odoo, 2023
 # Larissa Manderfeld, 2023
 # 
 #, fuzzy
@@ -19,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 16:10+0000\n"
+"POT-Creation-Date: 2023-10-09 08:39+0000\n"
 "PO-Revision-Date: 2022-03-18 14:59+0000\n"
 "Last-Translator: Larissa Manderfeld, 2023\n"
 "Language-Team: German (https://app.transifex.com/odoo/teams/41243/de/)\n"
@@ -495,7 +496,7 @@ msgstr "Nur Datenbanken anzeigen, deren Name mit 'mycompany' beginnt"
 #: ../../content/administration/install/deploy.rst:46
 #: ../../content/administration/install/deploy.rst:58
 #: ../../content/administration/install/deploy.rst:153
-#: ../../content/administration/install/deploy.rst:276
+#: ../../content/administration/install/deploy.rst:280
 msgid "in :ref:`the configuration file <reference/cmdline/config_file>` set:"
 msgstr ""
 "in der eingestellten :ref:`Konfigurationsdatei "
@@ -584,8 +585,8 @@ msgstr ""
 
 #: ../../content/administration/install/deploy.rst:95
 #: ../../content/administration/install/deploy.rst:145
-#: ../../content/administration/install/deploy.rst:231
-#: ../../content/administration/install/deploy.rst:271
+#: ../../content/administration/install/deploy.rst:235
+#: ../../content/administration/install/deploy.rst:275
 msgid "Configuration sample"
 msgstr "Konfigurationsbeispiel"
 
@@ -722,69 +723,92 @@ msgstr "Builtin-Server"
 
 #: ../../content/administration/install/deploy.rst:182
 msgid ""
-"Odoo includes built-in HTTP servers, using either multithreading or "
-"multiprocessing."
+"Odoo includes built-in HTTP, cron, and live-chat servers, using either "
+"multi-threading or multi-processing."
 msgstr ""
 "Odoo enthält integrierte HTTP-Server, die entweder Multithreading oder "
 "Multiprocessing verwenden."
 
 #: ../../content/administration/install/deploy.rst:185
 msgid ""
-"For production use, it is recommended to use the multiprocessing server as "
-"it increases stability, makes somewhat better use of computing resources and"
-" can be better monitored and resource-restricted."
+"The **multi-threaded** server is a simpler server primarily used for "
+"development, demonstrations, and its compatibility with various operating "
+"systems (including Windows). A new thread is spawned for every new HTTP "
+"request, even for long-running requests such as long polling. Extra daemonic"
+" cron threads are spawned too. Due to a Python limitation (GIL), it doesn't "
+"make the best use of the hardware."
 msgstr ""
-"Für den Einsatz in der Produktion wird die Verwendung eines Multiprocessing-"
-"Servers empfohlen, da er die Stabilität erhöht, die Computerressourcen etwas"
-" besser nutzt und sich besser überwachen und die Ressourcen einschränken "
-"lassen."
 
-#: ../../content/administration/install/deploy.rst:189
+#: ../../content/administration/install/deploy.rst:191
 msgid ""
-"Multiprocessing is enabled by configuring :option:`a non-zero number of "
-"worker processes <odoo-bin --workers>`, the number of workers should be "
-"based on the number of cores in the machine (possibly with some room for "
-"cron workers depending on how much cron work is predicted)"
+"The multi-threaded server is the default server, also for docker containers."
+" It is selected by leaving the :option:`--workers <odoo-bin --workers>` "
+"option out or setting it to ``0``."
 msgstr ""
-"Multiprocessing wird durch die Konfiguration von :option:`eine von Null "
-"abweichende Anzahl von Worker-Prozessen <odoo-bin --workers>` aktiviert. Die"
-" Anzahl der Worker sollte auf der Anzahl der Kerne des Rechners basieren "
-"(möglicherweise mit etwas Spielraum für Cron-Worker, je nachdem wie viel "
-"Cron-Arbeit vorhergesagt wird)."
+"Der Multithreading-Server ist der Standardserver, auch für Docker-Container."
+" Er wird ausgewählt, indem Sie die Option :option:`--workers <odoo-bin "
+"--workers>` weglassen oder auf ``0`` setzen."
 
-#: ../../content/administration/install/deploy.rst:193
+#: ../../content/administration/install/deploy.rst:194
 msgid ""
-"Worker limits can be configured based on the hardware configuration to avoid"
-" resources exhaustion"
+"The **multi-processing** server is a full-blown server primarily used for "
+"production. It is not liable to the same Python limitation (GIL) on resource"
+" usage and hence makes the best use of the hardware. A pool of workers is "
+"created upon server startup. New HTTP requests are queued by the OS until "
+"there are workers ready to process them. An extra event-driven HTTP worker "
+"for the live chat is spawned on an alternative port. Extra cron workers are "
+"spawned too. A configurable process reaper monitors resource usage and can "
+"kill/restart failed workers."
 msgstr ""
-"Worker-Limits können basierend auf der Hardware-Konfiguration konfiguriert "
-"werden, um eine Erschöpfung der Ressourcen zu vermeiden"
+"Der **Multiprocessing**-Server ist ein vollwertiger Server, der "
+"hauptsächlich für die Produktion verwendet wird. Er unterliegt nicht der "
+"gleichen Python-Beschränkung (GIL) für die Ressourcennutzung und nutzt daher"
+" die Hardware optimal aus. Beim Starten des Servers wird ein Pool von "
+"Workern erstellt. Neue HTTP-Anfragen werden vom Betriebssystem in eine "
+"Warteschlange gestellt, bis die Worker bereit sind, sie zu verarbeiten. Ein "
+"zusätzlicher ereignisgesteuerter HTTP-Worker für den Livechat wird auf einem"
+" anderen Port gestartet. Es werden auch zusätzliche Cron-Worker erzeugt. Ein"
+" konfigurierbarer Process Reaper überwacht die Ressourcennutzung und kann "
+"fehlgeschlagene Worker beenden/neustarten."
 
-#: ../../content/administration/install/deploy.rst:196
-msgid "multiprocessing mode currently isn't available on Windows"
-msgstr "Der Multiprocessing-Modus ist derzeit unter Windows nicht verfügbar."
+#: ../../content/administration/install/deploy.rst:201
+msgid ""
+"The multi-processing server is opt-in. It is selected by setting the "
+":option:`--workers <odoo-bin --workers>` option to a non-null integer."
+msgstr ""
+"Der Multiprocessing-Server ist opt-in. Er wird ausgewählt, indem Sie die "
+"Option :option:`--workers <odoo-bin --workers>` auf eine Ganzzahl, die nicht"
+" Null ist, einstellen."
 
-#: ../../content/administration/install/deploy.rst:199
+#: ../../content/administration/install/deploy.rst:205
+msgid ""
+"Because it is highly customized for Linux servers, the multi-processing "
+"server is not available on Windows."
+msgstr ""
+"Da er stark an Linux-Server angepasst ist, ist der Multiprocessing-Server "
+"nicht unter Windows verfügbar."
+
+#: ../../content/administration/install/deploy.rst:209
 msgid "Worker number calculation"
 msgstr "Berechnung der Worker-Anzahl"
 
-#: ../../content/administration/install/deploy.rst:201
+#: ../../content/administration/install/deploy.rst:211
 msgid "Rule of thumb : (#CPU * 2) + 1"
 msgstr "Faustregel: (#CPU * 2) + 1"
 
-#: ../../content/administration/install/deploy.rst:202
+#: ../../content/administration/install/deploy.rst:212
 msgid "Cron workers need CPU"
 msgstr "Cron-Worker benötigen CPU"
 
-#: ../../content/administration/install/deploy.rst:203
+#: ../../content/administration/install/deploy.rst:213
 msgid "1 worker ~= 6 concurrent users"
 msgstr "1 worker ~= 6 gleichzeitige Benutzer"
 
-#: ../../content/administration/install/deploy.rst:206
+#: ../../content/administration/install/deploy.rst:216
 msgid "memory size calculation"
 msgstr "Berechnung der Speicherplatzgröße"
 
-#: ../../content/administration/install/deploy.rst:208
+#: ../../content/administration/install/deploy.rst:218
 msgid ""
 "We consider 20% of the requests are heavy requests, while 80% are simpler "
 "ones"
@@ -792,7 +816,7 @@ msgstr ""
 "Wir gehen davon aus, dass 20 % der Anfragen umfangreiche Anfragen sind, "
 "während 80 % einfachere Anfragen sind."
 
-#: ../../content/administration/install/deploy.rst:209
+#: ../../content/administration/install/deploy.rst:219
 msgid ""
 "A heavy worker, when all computed field are well designed, SQL requests are "
 "well designed, ... is estimated to consume around 1GB of RAM"
@@ -800,7 +824,7 @@ msgstr ""
 "Ein Heavy Worker, bei dem alle berechneten Felder gut gestaltet sind, SQL-"
 "Anfragen gut gestaltet sind, ... verbraucht schätzungsweise etwa 1 GB RAM"
 
-#: ../../content/administration/install/deploy.rst:210
+#: ../../content/administration/install/deploy.rst:220
 msgid ""
 "A lighter worker, in the same scenario, is estimated to consume around 150MB"
 " of RAM"
@@ -808,7 +832,7 @@ msgstr ""
 "Ein leichterer Worker verbraucht in demselben Szenario schätzungsweise 150 "
 "MB RAM."
 
-#: ../../content/administration/install/deploy.rst:212
+#: ../../content/administration/install/deploy.rst:222
 msgid ""
 "Needed RAM = #worker * ( (light_worker_ratio * light_worker_ram_estimation) "
 "+ (heavy_worker_ratio * heavy_worker_ram_estimation) )"
@@ -817,54 +841,40 @@ msgstr ""
 "light_worker_ram_estimation) + (heavy_worker_ratio * "
 "heavy_worker_ram_estimation) )"
 
-#: ../../content/administration/install/deploy.rst:215
-#: ../../content/administration/install/deploy.rst:369
+#: ../../content/administration/install/deploy.rst:225
+#: ../../content/administration/install/deploy.rst:373
 msgid "LiveChat"
 msgstr "Livechat"
 
-#: ../../content/administration/install/deploy.rst:217
+#: ../../content/administration/install/deploy.rst:227
 msgid ""
-"In multiprocessing, a dedicated LiveChat worker is automatically started and"
-" listening on :option:`the longpolling port <odoo-bin --longpolling-port>` "
-"but the client will not connect to it."
+"In multi-processing, a dedicated LiveChat worker is automatically started "
+"and listens on the :option:`--longpolling-port <odoo-bin --longpolling-"
+"port>`. By default, the HTTP requests will keep accessing the normal HTTP "
+"workers instead of the LiveChat one. You must deploy a proxy in front of "
+"Odoo and redirect incoming requests whose path starts with ``/longpolling`` "
+"to the LiveChat worker. You must also start Odoo in :option:`--proxy-mode "
+"<odoo-bin --proxy-mode>` so it uses the real client headers (such as "
+"hostname, scheme, and IP) instead of the proxy ones."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:221
-msgid ""
-"Instead you must have a proxy redirecting requests whose URL starts with "
-"``/longpolling/`` to the longpolling port. Other request should be proxied "
-"to the :option:`normal HTTP port <odoo-bin --http-port>`"
-msgstr ""
-
-#: ../../content/administration/install/deploy.rst:225
-msgid ""
-"To achieve such a thing, you'll need to deploy a reverse proxy in front of "
-"Odoo, like nginx or apache. When doing so, you'll need to forward some more "
-"http Headers to Odoo, and activate the proxy_mode in Odoo configuration to "
-"have Odoo read those headers."
-msgstr ""
-"Um dies zu erreichen, müssen Sie einen Reverse-Proxy vor Odoo einsetzen, z. "
-"B. nginx oder apache. Dabei müssen Sie einige weitere http-Header an Odoo "
-"weiterleiten und den proxy_mode in der Odoo-Konfiguration aktivieren, damit "
-"Odoo diese Header lesen kann."
-
-#: ../../content/administration/install/deploy.rst:233
+#: ../../content/administration/install/deploy.rst:237
 msgid "Server with 4 CPU, 8 Thread"
 msgstr "Server mit 4 CPU, 8 Thread"
 
-#: ../../content/administration/install/deploy.rst:234
+#: ../../content/administration/install/deploy.rst:238
 msgid "60 concurrent users"
 msgstr "60 gleichzeitige Benutzer"
 
-#: ../../content/administration/install/deploy.rst:236
+#: ../../content/administration/install/deploy.rst:240
 msgid "60 users / 6 = 10 <- theoretical number of worker needed"
 msgstr "60 Benutzer / 6 = 10 <- Theoretisch benötigte Anzahl von Workern"
 
-#: ../../content/administration/install/deploy.rst:237
+#: ../../content/administration/install/deploy.rst:241
 msgid "(4 * 2) + 1 = 9 <- theoretical maximal number of worker"
 msgstr "(4 * 2) + 1 = 9 <- Theoretisch maximale Anzahl von Workern"
 
-#: ../../content/administration/install/deploy.rst:238
+#: ../../content/administration/install/deploy.rst:242
 msgid ""
 "We'll use 8 workers + 1 for cron. We'll also use a monitoring system to "
 "measure cpu load, and check if it's between 7 and 7.5 ."
@@ -873,19 +883,19 @@ msgstr ""
 "Überwachungssystem verwenden, um die CPU-Auslastung zu messen und zu prüfen,"
 " ob sie zwischen 7 und 7,5 liegt."
 
-#: ../../content/administration/install/deploy.rst:239
+#: ../../content/administration/install/deploy.rst:243
 msgid "RAM = 9 * ((0.8*150) + (0.2*1024)) ~= 3Go RAM for Odoo"
 msgstr "RAM = 9 * ((0.8*150) + (0.2*1024)) ~= 3Go RAM für Odoo"
 
-#: ../../content/administration/install/deploy.rst:241
+#: ../../content/administration/install/deploy.rst:245
 msgid "in :ref:`the configuration file <reference/cmdline/config_file>`:"
 msgstr "in der :ref:`Konfigurationsdatei <reference/cmdline/config_file>`:"
 
-#: ../../content/administration/install/deploy.rst:257
+#: ../../content/administration/install/deploy.rst:261
 msgid "HTTPS"
 msgstr "HTTPS"
 
-#: ../../content/administration/install/deploy.rst:259
+#: ../../content/administration/install/deploy.rst:263
 msgid ""
 "Whether it's accessed via website/web client or web service, Odoo transmits "
 "authentication information in cleartext. This means a secure deployment of "
@@ -899,7 +909,7 @@ msgstr ""
 "Terminierungs-Proxy implementiert werden, erfordert jedoch die folgende "
 "Einrichtung:"
 
-#: ../../content/administration/install/deploy.rst:264
+#: ../../content/administration/install/deploy.rst:268
 msgid ""
 "Enable Odoo's :option:`proxy mode <odoo-bin --proxy-mode>`. This should only"
 " be enabled when Odoo is behind a reverse proxy"
@@ -908,15 +918,15 @@ msgstr ""
 " sollte nur aktiviert werden, wenn sich Odoo hinter einem Reverse-Proxy "
 "befindet."
 
-#: ../../content/administration/install/deploy.rst:265
+#: ../../content/administration/install/deploy.rst:269
 msgid "Set up the SSL termination proxy (`Nginx termination example`_)"
 msgstr "Den SSL-Terminierungs-Proxy (`Nginx-Terminierungsbeispiel`_)"
 
-#: ../../content/administration/install/deploy.rst:266
+#: ../../content/administration/install/deploy.rst:270
 msgid "Set up the proxying itself (`Nginx proxying example`_)"
 msgstr "Das Proxying selbst einrichten (`Nginx-Proxying-Beispiel`_)"
 
-#: ../../content/administration/install/deploy.rst:267
+#: ../../content/administration/install/deploy.rst:271
 msgid ""
 "Your SSL termination proxy should also automatically redirect non-secure "
 "connections to the secure port"
@@ -924,23 +934,23 @@ msgstr ""
 "Ihr SSL-Terminierungsproxy sollte außerdem nicht sichere Verbindungen "
 "automatisch auf den sicheren Port umleiten"
 
-#: ../../content/administration/install/deploy.rst:273
+#: ../../content/administration/install/deploy.rst:277
 msgid "Redirect http requests to https"
 msgstr "http-Anfragen auf https umleiten"
 
-#: ../../content/administration/install/deploy.rst:274
+#: ../../content/administration/install/deploy.rst:278
 msgid "Proxy requests to odoo"
 msgstr "Proxy-Anfragen an Odoo"
 
-#: ../../content/administration/install/deploy.rst:282
+#: ../../content/administration/install/deploy.rst:286
 msgid "in ``/etc/nginx/sites-enabled/odoo.conf`` set:"
 msgstr "in ``/etc/nginx/sites-enabled/odoo.conf`` eingestellt:"
 
-#: ../../content/administration/install/deploy.rst:343
+#: ../../content/administration/install/deploy.rst:347
 msgid "Odoo as a WSGI Application"
 msgstr "Odoo als WSGI-Anwendung"
 
-#: ../../content/administration/install/deploy.rst:345
+#: ../../content/administration/install/deploy.rst:349
 msgid ""
 "It is also possible to mount Odoo as a standard WSGI_ application. Odoo "
 "provides the base for a WSGI launcher script as ``odoo-wsgi.example.py``. "
@@ -956,7 +966,7 @@ msgstr ""
 ":mod:`odoo.tools.config` korrekt einzustellen und nicht über die "
 "Kommandozeile oder eine Konfigurationsdatei."
 
-#: ../../content/administration/install/deploy.rst:351
+#: ../../content/administration/install/deploy.rst:355
 msgid ""
 "However the WSGI server will only expose the main HTTP endpoint for the web "
 "client, website and webservice API. Because Odoo does not control the "
@@ -967,100 +977,70 @@ msgstr ""
 "Erstellung von Workern nicht mehr kontrolliert, kann es keine Cron- oder "
 "Livechat-Worker einrichten."
 
-#: ../../content/administration/install/deploy.rst:356
+#: ../../content/administration/install/deploy.rst:360
 msgid "Cron Workers"
 msgstr "Cron-Worker"
 
-#: ../../content/administration/install/deploy.rst:358
-msgid "To run cron jobs for an Odoo deployment as a WSGI application requires"
-msgstr ""
-"Um Cron-Jobs für eine Odoo-Implementierung als WSGI-Anwendung auszuführen, "
-"benötigen Sie"
-
-#: ../../content/administration/install/deploy.rst:360
-msgid "A classical Odoo (run via ``odoo-bin``)"
-msgstr "Klassisches Odoo (via ``odoo-bin`` durchführen)"
-
-#: ../../content/administration/install/deploy.rst:361
+#: ../../content/administration/install/deploy.rst:362
 msgid ""
-"Connected to the database in which cron jobs have to be run (via "
-":option:`odoo-bin -d`)"
+"Starting one of the built-in Odoo servers next to the WSGI server is "
+"required to process cron jobs. That server must be configured to only "
+"process crons and not HTTP requests using the :option:`--no-http <odoo-bin "
+"--no-http>` cli option or the ``http_enable = False`` configuration file "
+"setting."
 msgstr ""
-"Verbunden mit der Datenbank, in der die Cron-Jobs ausgeführt werden sollen "
-"(über :option:`odoo-bin -d`)"
+"Um Cron-Jobs zu verarbeiten, müssen Sie einen der integrierten Odoo-Server "
+"neben dem WSGI-Server starten. Dieser Server muss so konfiguriert sein, dass"
+" er nur Cron-Jobs und keine HTTP-Anfragen verarbeitet. Verwenden Sie dazu "
+"die Cli-Option :option:`--no-http <odoo-bin --no-http>` oder die Einstellung"
+" ``http_enable = False`` in der Konfigurationsdatei."
 
-#: ../../content/administration/install/deploy.rst:363
+#: ../../content/administration/install/deploy.rst:367
 msgid ""
-"Which should not be exposed to the network. To ensure cron runners are not "
-"network-accessible, it is possible to disable the built-in HTTP server "
-"entirely with :option:`odoo-bin --no-http` or setting ``http_enable = "
-"False`` in the configuration file"
+"On Linux-like systems, using the multi-processing server over the multi-"
+"threading one is recommended to benefit from better hardware usage and "
+"increased stability, i.e., using the :option:`--workers=-1 <odoo-bin "
+"--workers>` and :option:`--max-cron-threads=n <odoo-bin --max-cron-threads>`"
+" cli options."
 msgstr ""
-"Was nicht über das Netzwerk zugänglich sein sollten. Um sicherzustellen, "
-"dass Cron-Ausführer nicht über das Netzwerk zugänglich sind, können Sie den "
-"eingebauten HTTP-Server mit :option:`odoo-bin --no-http` oder der "
-"Einstellung ``http_enable = False`` in der Konfigurationsdatei komplett "
-"deaktivieren."
+"Auf Linux-ähnlichen Systemen wird empfohlen, den Multipocessing-Server dem "
+"Multithreading-Server vorzuziehen, um von einer besseren Hardware-Auslastung"
+" und höherer Stabilität zu profitieren, d. h. die Optionen "
+":option:`--workers=-1 <odoo-bin --workers>` und :option:`--max-cron-"
+"threads=n <odoo-bin --max-cron-threads>` zu verwenden."
 
-#: ../../content/administration/install/deploy.rst:371
+#: ../../content/administration/install/deploy.rst:375
 msgid ""
-"The second problematic subsystem for WSGI deployments is the LiveChat: where"
-" most HTTP connections are relatively short and quickly free up their worker"
-" process for the next request, LiveChat require a long-lived connection for "
-"each client in order to implement near-real-time notifications."
+"Using a gevent-compatible WSGI server is required for the correct operation "
+"of the live chat feature. That server should be able to handle many "
+"simultaneous long-lived HTTP requests but doesn't need a lot of processing "
+"power. All requests whose path starts with ``/longpolling`` should be "
+"directed to that server. A regular (thread/process-based) WSGI server should"
+" be used for all other requests."
 msgstr ""
-"Das zweite problematische Subsystem für WSGI-Implementierungen ist Livechat:"
-" Während die meisten HTTP-Verbindungen relativ kurz sind und ihren Worker-"
-"Prozess schnell für die nächste Anfrage freigeben, benötigt Livechat eine "
-"langlebige Verbindung für jeden Client, um Benachrichtigungen nahezu in "
-"Echtzeit zu implementieren."
-
-#: ../../content/administration/install/deploy.rst:376
-msgid ""
-"This is in conflict with the process-based worker model, as it will tie up "
-"worker processes and prevent new users from accessing the system. However, "
-"those long-lived connections do very little and mostly stay parked waiting "
-"for notifications."
-msgstr ""
-"Dies steht im Konflikt mit dem prozessbasierten Worker-Modell, da es die "
-"Worker-Prozesse blockiert und neue Benutzer am Zugriff auf das System "
-"hindert. Diese langlebigen Verbindungen tun jedoch nur sehr wenig und "
-"bleiben meist geparkt, um auf Benachrichtigungen zu warten."
 
 #: ../../content/administration/install/deploy.rst:381
 msgid ""
-"The solutions to support livechat/motifications in a WSGI application are:"
-msgstr ""
-"Die Lösungen zur Unterstützung von Livechat/Benachrichtigungen in einer "
-"WSGI-Anwendung sind:"
-
-#: ../../content/administration/install/deploy.rst:383
-msgid ""
-"Deploy a threaded version of Odoo (instead of a process-based preforking "
-"one) and redirect only requests to URLs starting with ``/longpolling/`` to "
-"that Odoo, this is the simplest and the longpolling URL can double up as the"
-" cron instance."
+"The Odoo cron server can also be used to serve the live chat requests. Just "
+"drop the :option:`--no-http <odoo-bin --no-http>` cli option from the cron "
+"server and make sure requests whose path starts with ``/longpolling`` are "
+"directed to this server, either on the :option:`--http-port <odoo-bin "
+"--http-port>` (multi-threading server) or on the :option:`--longpolling-port"
+" <odoo-bin --longpolling-port>` (multi-processing server)."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:387
-msgid ""
-"Deploy an evented Odoo via ``odoo-gevent`` and proxy requests starting with "
-"``/longpolling/`` to :option:`the longpolling port <odoo-bin --longpolling-"
-"port>`."
-msgstr ""
-
-#: ../../content/administration/install/deploy.rst:392
+#: ../../content/administration/install/deploy.rst:388
 msgid "Serving Static Files"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:394
+#: ../../content/administration/install/deploy.rst:390
 msgid ""
 "For development convenience, Odoo directly serves all static files in its "
 "modules. This may not be ideal when it comes to performances, and static "
 "files should generally be served by a static HTTP server."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:398
+#: ../../content/administration/install/deploy.rst:394
 msgid ""
 "Odoo static files live in each module's ``static/`` folder, so static files "
 "can be served by intercepting all requests to "
@@ -1068,23 +1048,23 @@ msgid ""
 "in the various addons paths."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:402
+#: ../../content/administration/install/deploy.rst:398
 #: ../../content/administration/upgrade.rst:122
 msgid "Todo"
 msgstr "Zu erledigen"
 
-#: ../../content/administration/install/deploy.rst:402
+#: ../../content/administration/install/deploy.rst:398
 msgid ""
 "test whether it would be interesting to serve filestored attachments via "
 "this, and how (e.g. possibility of mapping ir.attachment id to filestore "
 "hash in the database?)"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:409
+#: ../../content/administration/install/deploy.rst:405
 msgid "Security"
 msgstr "Sicherheit"
 
-#: ../../content/administration/install/deploy.rst:411
+#: ../../content/administration/install/deploy.rst:407
 msgid ""
 "For starters, keep in mind that securing an information system is a "
 "continuous process, not a one-shot operation. At any moment, you will only "
@@ -1094,7 +1074,7 @@ msgstr ""
 "kontinuierlicher Prozess ist und keine einmalige Aktion. Sie sind immer nur "
 "so sicher wie das schwächste Glied in Ihrer Umgebung."
 
-#: ../../content/administration/install/deploy.rst:415
+#: ../../content/administration/install/deploy.rst:411
 msgid ""
 "So please do not take this section as the ultimate list of measures that "
 "will prevent all security problems. It's only intended as a summary of the "
@@ -1111,7 +1091,7 @@ msgstr ""
 "Distribution, den besten Praktiken in Bezug auf Benutzer, Passwörter und die"
 " Verwaltung der Zugriffskontrolle usw."
 
-#: ../../content/administration/install/deploy.rst:421
+#: ../../content/administration/install/deploy.rst:417
 msgid ""
 "When deploying an internet-facing server, please be sure to consider the "
 "following security-related topics:"
@@ -1119,7 +1099,7 @@ msgstr ""
 "Wenn Sie einen Server mit Internetanschluss einrichten, sollten Sie die "
 "folgenden sicherheitsrelevanten Themen berücksichtigen:"
 
-#: ../../content/administration/install/deploy.rst:424
+#: ../../content/administration/install/deploy.rst:420
 msgid ""
 "Always set a strong super-admin admin password, and restrict access to the "
 "database management pages as soon as the system is set up. See "
@@ -1129,7 +1109,7 @@ msgstr ""
 "den Zugriff auf die Seiten der Datenbankverwaltung, sobald das System "
 "eingerichtet ist. Siehe :ref:`db_manager_security`."
 
-#: ../../content/administration/install/deploy.rst:427
+#: ../../content/administration/install/deploy.rst:423
 msgid ""
 "Choose unique logins and strong passwords for all administrator accounts on "
 "all databases. Do not use 'admin' as the login. Do not use those logins for "
@@ -1144,7 +1124,7 @@ msgstr ""
 "*nie* irgendwelche Standardpasswörter wie admin/admin, auch nicht für "
 "Test-/Staging-Datenbanken."
 
-#: ../../content/administration/install/deploy.rst:432
+#: ../../content/administration/install/deploy.rst:428
 msgid ""
 "Do **not** install demo data on internet-facing servers. Databases with demo"
 " data contain default logins and passwords that can be used to get into your"
@@ -1156,7 +1136,7 @@ msgstr ""
 "und erhebliche Probleme zu verursachen, selbst auf "
 "Staging-/Entwicklungssystemen."
 
-#: ../../content/administration/install/deploy.rst:436
+#: ../../content/administration/install/deploy.rst:432
 msgid ""
 "Use appropriate database filters ( :option:`--db-filter <odoo-bin --db-"
 "filter>`) to restrict the visibility of your databases according to the "
@@ -1173,7 +1153,7 @@ msgstr ""
 " anstatt das System alle Datenbanken aus dem Datenbank-Backend abrufen zu "
 "lassen."
 
-#: ../../content/administration/install/deploy.rst:443
+#: ../../content/administration/install/deploy.rst:439
 msgid ""
 "Once your ``db_name`` and ``db_filter`` are configured and only match a "
 "single database per hostname, you should set ``list_db`` configuration "
@@ -1190,7 +1170,7 @@ msgstr ""
 "Befehlszeilenoption :option:`--no-database-list <odoo-bin --no-database-"
 "list>` sichtbar)"
 
-#: ../../content/administration/install/deploy.rst:449
+#: ../../content/administration/install/deploy.rst:445
 msgid ""
 "Make sure the PostgreSQL user (:option:`--db_user <odoo-bin --db_user>`) is "
 "*not* a super-user, and that your databases are owned by a different user. "
@@ -1204,7 +1184,7 @@ msgstr ""
 "``postgres`` gehören, wenn Sie einen dedizierten, nicht privilegierten "
 "``db_user`` verwenden. Siehe auch :ref:`setup/deploy/odoo`."
 
-#: ../../content/administration/install/deploy.rst:454
+#: ../../content/administration/install/deploy.rst:450
 msgid ""
 "Keep installations updated by regularly installing the latest builds, either"
 " via GitHub or by downloading the latest version from "
@@ -1215,7 +1195,7 @@ msgstr ""
 "neueste Version von https://www.odoo.com/page/download oder "
 "http://nightly.odoo.com herunterladen."
 
-#: ../../content/administration/install/deploy.rst:458
+#: ../../content/administration/install/deploy.rst:454
 msgid ""
 "Configure your server in multi-process mode with proper limits matching your"
 " typical usage (memory/CPU/timeouts). See also :ref:`builtin_server`."
@@ -1224,7 +1204,7 @@ msgstr ""
 "Grenzen für Ihre typische Nutzung (Speicher/CPU/Zeitüberschreitungen). Siehe"
 " auch :ref:`Builtin_server`."
 
-#: ../../content/administration/install/deploy.rst:461
+#: ../../content/administration/install/deploy.rst:457
 msgid ""
 "Run Odoo behind a web server providing HTTPS termination with a valid SSL "
 "certificate, in order to prevent eavesdropping on cleartext communications. "
@@ -1241,7 +1221,7 @@ msgstr ""
 " die Option :option:`proxy mode <odoo-bin --proxy-mode>`. Siehe auch "
 ":ref:`https_proxy`."
 
-#: ../../content/administration/install/deploy.rst:468
+#: ../../content/administration/install/deploy.rst:464
 msgid ""
 "If you need to allow remote SSH access to your servers, make sure to set a "
 "strong password for **all** accounts, not just `root`. It is strongly "
@@ -1259,7 +1239,7 @@ msgstr ""
 "Firewall zuzulassen und/oder ein Brute-Force-Erkennungssystem wie `fail2ban`"
 " oder ein vergleichbares System einzusetzen."
 
-#: ../../content/administration/install/deploy.rst:474
+#: ../../content/administration/install/deploy.rst:470
 msgid ""
 "Consider installing appropriate rate-limiting on your proxy or firewall, to "
 "prevent brute-force attacks and denial of service attacks. See also "
@@ -1270,7 +1250,7 @@ msgstr ""
 "Angriffe zu verhindern. Siehe auch :ref:`login_brute_force` für spezifische "
 "Maßnahmen."
 
-#: ../../content/administration/install/deploy.rst:478
+#: ../../content/administration/install/deploy.rst:474
 msgid ""
 "Many network providers provide automatic mitigation for Distributed Denial "
 "of Service attacks (DDOS), but this is often an optional service, so you "
@@ -1280,7 +1260,7 @@ msgstr ""
 "Angriffen (Distributed Denial of Service) an, aber dies ist oft ein "
 "optionaler Service, so dass Sie sich mit ihnen in Verbindung setzen sollten."
 
-#: ../../content/administration/install/deploy.rst:482
+#: ../../content/administration/install/deploy.rst:478
 msgid ""
 "Whenever possible, host your public-facing demo/test/staging instances on "
 "different machines than the production ones. And apply the same security "
@@ -1291,7 +1271,7 @@ msgstr ""
 "Produktionsinstanzen hosten. Und wenden Sie die gleichen "
 "Sicherheitsvorkehrungen an wie bei der Produktion."
 
-#: ../../content/administration/install/deploy.rst:486
+#: ../../content/administration/install/deploy.rst:482
 msgid ""
 "If your public-facing Odoo server has access to sensitive internal network "
 "resources or services (e.g. via a private VLAN), implement appropriate "
@@ -1319,7 +1299,7 @@ msgstr ""
 " kann auch nützlich sein, um eine prozessspezifische "
 "Netzwerkzugangskontrolle zu implementieren."
 
-#: ../../content/administration/install/deploy.rst:497
+#: ../../content/administration/install/deploy.rst:493
 msgid ""
 "If your public-facing Odoo server is behind a Web Application Firewall, a "
 "load-balancer, a transparent DDoS protection service (like CloudFlare) or a "
@@ -1347,7 +1327,7 @@ msgstr ""
 "CloudFlare führen zu diesem Zweck normalerweise eine öffentliche Liste ihrer"
 " IP-Adressbereiche."
 
-#: ../../content/administration/install/deploy.rst:508
+#: ../../content/administration/install/deploy.rst:504
 msgid ""
 "If you are hosting multiple customers, isolate customer data and files from "
 "each other using containers or appropriate \"jail\" techniques."
@@ -1356,7 +1336,7 @@ msgstr ""
 " einander, indem Sie Container oder angemessene „Gefängnis“-Techniken "
 "verwenden."
 
-#: ../../content/administration/install/deploy.rst:511
+#: ../../content/administration/install/deploy.rst:507
 msgid ""
 "Setup daily backups of your databases and filestore data, and copy them to a"
 " remote archiving server that is not accessible from the server itself."
@@ -1364,6 +1344,19 @@ msgstr ""
 "Erstellen Sie tägliche Back-ups Ihrer Datenbanken und Dateispeicherdaten und"
 " kopieren Sie diese auf einen entfernten Archivierungsserver, der vom Server"
 " selbst nicht zugänglich ist."
+
+#: ../../content/administration/install/deploy.rst:510
+msgid ""
+"Deploying Odoo on Linux is strongly recommended over Windows. Should you "
+"choose nevertheless to deploy on a Windows platform, a thorough security "
+"hardening review of the server should be conducted and is outside of the "
+"scope of this guide."
+msgstr ""
+"Es wird dringend empfohlen, Odoo auf Linux statt auf Windows zu "
+"installieren. Sollten Sie sich dennoch für eine Bereitstellung auf einer "
+"Windows-Plattform entscheiden, sollte eine gründliche Sicherheitsüberprüfung"
+" des Servers durchgeführt werden, die nicht in den Rahmen dieses Leitfadens "
+"fällt."
 
 #: ../../content/administration/install/deploy.rst:518
 msgid "Blocking Brute Force Attacks"
@@ -1964,7 +1957,20 @@ msgstr ""
 msgid "Windows"
 msgstr "Windows"
 
-#: ../../content/administration/install/packages.rst:150
+#: ../../content/administration/install/packages.rst:151
+msgid ""
+"Windows packaging is offered for the convenience of testing or running "
+"single-user local instances but production deployment is discouraged due to "
+"a number of limitations and risks associated with deploying Odoo on a "
+"Windows platform."
+msgstr ""
+"Die Windows-Pakete wird für die Bequemlichkeit des Testens oder der "
+"Ausführung lokaler Einzelbenutzer-Instanzen angeboten, aber von einer "
+"produktiven Bereitstellung wird aufgrund einer Reihe von Einschränkungen und"
+" Risiken im Zusammenhang mit der Bereitstellung von Odoo auf einer Windows-"
+"Plattform abgeraten."
+
+#: ../../content/administration/install/packages.rst:155
 msgid ""
 "Download the installer from the `nightly server <https://nightly.odoo.com>`_"
 " (Community only) or the Windows installer from the `Odoo download page "
@@ -1975,11 +1981,11 @@ msgstr ""
 "Installationsprogramm von der `Odoo-Downloadseite "
 "<https://www.odoo.com/page/download>`_ (jede Edition)."
 
-#: ../../content/administration/install/packages.rst:153
+#: ../../content/administration/install/packages.rst:158
 msgid "Execute the downloaded file."
 msgstr "Führen Sie die heruntergeladene Datei aus."
 
-#: ../../content/administration/install/packages.rst:156
+#: ../../content/administration/install/packages.rst:161
 msgid ""
 "On Windows 8 and later, a warning titled *Windows protected your PC* may be "
 "displayed. Click **More Info** and then **Run anyway** to proceed."
@@ -1988,7 +1994,7 @@ msgstr ""
 "*Windows schützt Ihren PC* angezeigt. Klicken Sie auf **Mehr Info** und dann"
 " auf **Trotzdem ausführen**, um fortzufahren."
 
-#: ../../content/administration/install/packages.rst:159
+#: ../../content/administration/install/packages.rst:164
 msgid ""
 "Accept the `UAC <https://en.wikipedia.org/wiki/User_Account_Control>`_ "
 "prompt."
@@ -1996,11 +2002,11 @@ msgstr ""
 "Akzeptieren Sie die `UAC "
 "<https://en.wikipedia.org/wiki/User_Account_Control>`_-Aufforderung."
 
-#: ../../content/administration/install/packages.rst:160
+#: ../../content/administration/install/packages.rst:165
 msgid "Go through the installation steps."
 msgstr "Durchlaufen Sie die Installationsschritte."
 
-#: ../../content/administration/install/packages.rst:162
+#: ../../content/administration/install/packages.rst:167
 msgid "Odoo launches automatically at the end of the installation."
 msgstr "Odoo wird am Ende der Installation automatisch gestartet."
 
@@ -3087,60 +3093,243 @@ msgstr ""
 "Bestätigungsmeldung erscheinen. Die Odoo-Datenbank kann nun mit Hilfe der "
 "OAuth-Authentifizierung sichere E-Mails über Microsoft Outlook versenden."
 
-#: ../../content/administration/maintain/azure_oauth.rst:192
-msgid "Multiple user configuration"
-msgstr "Konfiguration mehrerer Benutzer"
-
 #: ../../content/administration/maintain/azure_oauth.rst:194
-msgid ""
-"Each user should have a separate server set up. The :guilabel:`from-filter` "
-"should be set so that only the user's email is sent from that server. In "
-"other words, only a user with an email address that matches the set "
-":guilabel:`from-filter` is able to use this server."
-msgstr ""
-"Für jeden Benutzer sollte ein eigener Server eingerichtet werden. Der "
-":guilabel:`from-filter` sollte so eingestellt werden, dass nur die E-Mails "
-"des Benutzers von diesem Server gesendet werden. Mit anderen Worten, nur ein"
-" Benutzer mit einer E-Mail-Adresse, die mit dem eingestellten "
-":guilabel:`from-filter` übereinstimmt, kann diesen Server benutzen."
+msgid "Configuration with a single outgoing mail server"
+msgstr "Konfiguration mit einem einzigen Postausgangsserver"
 
-#: ../../content/administration/maintain/azure_oauth.rst:198
+#: ../../content/administration/maintain/azure_oauth.rst:196
 msgid ""
-"After setting the :guilabel:`from-filter`, set up a fallback email account "
-"to allow for the sending of :guilabel:`notifications`. The fallback email "
-"must be configured as a :guilabel:`general transactional server`. The "
-":guilabel:`mail.default.from` system parameter must be set to the "
-":guilabel:`username` of the general transactional server account. For more "
-"information see :ref:`Use a default email address "
-"<email_communication/default>`."
+"Configuring a single outgoing server is the simplest configuration available"
+" for Microsoft Azure and it doesn't require extensive access rights for the "
+"users in the database."
 msgstr ""
-"Nachdem Sie den :guilabel:`from-filter` eingestellt haben, richten Sie ein "
-"Ersatz-E-Mail-Konto ein, um den Versand von :guilabel:`Benachrichtigungen` "
-"zu ermöglichen. Die Ausweich-E-Mail muss als :guilabel:`Allgemeiner "
-"Transaktionsserver` konfiguriert sein. Der Systemparameter "
-":guilabel:`mail.default.from` muss auf den :guilabel:`Benutzernamen` des "
-"allgemeinen Transaktionsserverkontos gesetzt werden. Weitere Informationen "
-"finden Sie unter :ref:`Verwendung einer Standard-E-Mail-Adresse "
-"<email_communication/default>`."
+"Die Konfiguration eines einzelnen Postausgangsservers ist die einfachste "
+"Konfiguration, die für Microsoft Azure verfügbar ist, und sie erfordert "
+"keine umfangreichen Zugriffsrechte für die Benutzer in der Datenbank."
 
-#: ../../content/administration/maintain/azure_oauth.rst:205
-#: ../../content/administration/maintain/mailjet_api.rst:213
+#: ../../content/administration/maintain/azure_oauth.rst:199
+msgid ""
+"A generic email address would be used to send emails for all users within "
+"the database. For example it could be structured with a `notifications` "
+"alias (`notifications@example.com`) or `contact` alias "
+"(`contact@example.com`). This address must be set as the :guilabel:`FROM "
+"Filtering` on the server. This address must also match the "
+"`{mail.default.from}@{mail.catchall.domain}` key combination in the system "
+"parameters."
+msgstr ""
+"Eine generische E-Mail-Adresse wird verwendet, um E-Mails für alle Benutzer "
+"in der Datenbank zu versenden. Sie könnte z. B. mit dem Alias "
+"`Benachrichtigungen` (`notifications@example.com`) oder dem Alias `Kontakt` "
+"(`contact@example.com`) strukturiert sein. Diese Adresse muss auf dem Server"
+" als :guilabel:`VON-Filterung` eingestellt sein. Diese Adresse muss auch mit"
+" der Schlüsselkombination `{mail.default.from}@{mail.catchall.domain}` in "
+"den Systemparametern übereinstimmen."
+
+#: ../../content/administration/maintain/azure_oauth.rst:206
+#: ../../content/administration/maintain/azure_oauth.rst:247
+msgid ""
+"For more information on the from filter visit: "
+":ref:`email_communication/default`."
+msgstr ""
+"Weitere Informationen über den Von-Filter finden Sie unter: "
+":ref:`email_communication/default`."
+
+#: ../../content/administration/maintain/azure_oauth.rst:209
+#: ../../content/administration/maintain/azure_oauth.rst:254
 msgid ""
 "The :guilabel:`System Parameters` can be accessed by activating "
-":doc:`../../applications/general/developer_mode` in the "
-":menuselection:`Settings --> Technical --> Parameters --> System Parameters`"
-" menu."
+":ref:`developer-mode` in the :menuselection:`Settings --> Technical --> "
+"Parameters --> System Parameters` menu."
 msgstr ""
-"Auf die :guilabel:`Systemparameter` können Sie zugreifen, indem Sie "
-":doc:`../../applications/general/developer_mode` im Menü "
-":menuselection:`Einstellungen --> Technisch --> Parameter --> "
-"Systemparameter` aktivieren."
+"Auf die :guilabel:`Systemparameter` können Sie zugreifen, indem Sie  "
+":ref:`developer-mode` im Menü :menuselection:`Einstellungen --> Technisch "
+"--> Parameter --> Systemparameter` aktivieren."
 
-#: ../../content/administration/maintain/azure_oauth.rst:210
+#: ../../content/administration/maintain/azure_oauth.rst:212
+msgid ""
+"When using this configuration, every email that is sent from the database "
+"will use the address of the configured `notification` mailbox. However it "
+"should be noted that the name of the sender will appear but their email "
+"address will change:"
+msgstr ""
+"Wenn Sie diese Konfiguration verwenden, wird für jede E-Mail, die von der "
+"Datenbank aus versendet wird, die Adresse des konfigurierten "
+"`Benachrichtigung`-Postfachs verwendet. Beachten Sie jedoch, dass der Name "
+"des Absenders angezeigt wird, seine E-Mail-Adresse jedoch geändert wird:"
+
+#: ../../content/administration/maintain/azure_oauth.rst-1
+msgid "Name from real sender with static email."
+msgstr "Name des echten Absenders mit statischer E-Mail."
+
+#: ../../content/administration/maintain/azure_oauth.rst:221
+msgid "Single outgoing mail server configuration:"
+msgstr "Konfiguration des einzelnen Postausgangsservers:"
+
+#: ../../content/administration/maintain/azure_oauth.rst:223
+msgid ""
+"Outgoing mail server **username** (login) = `notifications@example.com`"
+msgstr ""
+"**Benutzername** (Anmeldung) des Postausgangsservers = "
+"`notifications@example.com`"
+
+#: ../../content/administration/maintain/azure_oauth.rst:224
+msgid ""
+"Outgoing mail server :guilabel:`FROM Filtering` = "
+"`notifications@example.com`"
+msgstr ""
+":guilabel:`VON-Filterung` des Postausgangsservers = "
+"`notifications@example.com`"
+
+#: ../../content/administration/maintain/azure_oauth.rst:225
+#: ../../content/administration/maintain/azure_oauth.rst:279
+msgid "`mail.catchall.domain` in system parameters = `example.com`"
+msgstr "`mail.catchall.domain` in Systemparametern = `example.com`"
+
+#: ../../content/administration/maintain/azure_oauth.rst:226
+#: ../../content/administration/maintain/azure_oauth.rst:280
+msgid "`mail.default.from` in system parameters = `notifications`"
+msgstr "`mail.default.from` in Systemparametern = `notifications`"
+
+#: ../../content/administration/maintain/azure_oauth.rst:229
+msgid "User-specific (multiple user) configuration"
+msgstr "Benutzerspezifische Konfiguration (mehrere Benutzer)"
+
+#: ../../content/administration/maintain/azure_oauth.rst:231
+msgid ""
+"In addition to a generic email server, individual email servers can be set "
+"up for users in a database. These email addresses must be set as the "
+":guilabel:`FROM Filtering` on each individual server for this configuration "
+"to work."
+msgstr ""
+"Zusätzlich zu einem allgemeinen E-Mail-Server können Sie für die Benutzer "
+"einer Datenbank individuelle E-Mail-Server einrichten. Diese E-Mail-Adressen"
+" müssen als :guilabel:`VON-Filterung` auf jedem einzelnen Server eingestellt"
+" werden, damit diese Konfiguration funktioniert."
+
+#: ../../content/administration/maintain/azure_oauth.rst:235
+msgid ""
+"This configuration is the more difficult of the two Microsoft Azure "
+"configurations, in that it requires all users configured with email servers "
+"to have access rights to settings in order to establish a connection to the "
+"email server."
+msgstr ""
+"Diese Konfiguration ist die schwierigere der beiden Microsoft-Azure-"
+"Konfigurationen, da alle Benutzer, die mit E-Mail-Servern konfiguriert sind,"
+" über Zugriffsrechte auf die Einstellungen verfügen müssen, um eine "
+"Verbindung zum E-Mail-Server herstellen zu können."
+
+#: ../../content/administration/maintain/azure_oauth.rst:240
+#: ../../content/administration/odoo_sh/getting_started/branches.rst:480
+msgid "Setup"
+msgstr "Einrichtung"
+
+#: ../../content/administration/maintain/azure_oauth.rst:242
+msgid ""
+"Each user should have a separate email server set up. The :guilabel:`FROM "
+"Filtering` should be set so that only the user's email is sent from that "
+"server. In other words, only a user with an email address that matches the "
+"set :guilabel:`FROM Filtering` is able to use this server."
+msgstr ""
+"Für jeden Benutzer sollte ein eigener E-Mail-Server eingerichtet werden. Die"
+" :guilabel:`VON-Filterung` sollte so eingestellt werden, dass nur die "
+"E-Mails des Benutzers von diesem Server gesendet werden. Mit anderen Worten,"
+" nur ein Benutzer mit einer E-Mail-Adresse, die mit der eingestellten "
+":guilabel:`VON-Filterung` übereinstimmt, kann diesen Server benutzen."
+
+#: ../../content/administration/maintain/azure_oauth.rst:249
+msgid ""
+"A :ref:`fallback server <azure_oauth/notifications>` must be setup to allow "
+"for the sending of :guilabel:`notifications`. The :guilabel:`FROM Filtering`"
+" for this server should have the value of the "
+"`{mail.default.from}@{mail.catchall.domain}`."
+msgstr ""
+"Ein :ref:`Sicherungsserver <azure_oauth/notifications>` muss eingerichtet "
+"werden, um das Senden von :guilabel:`Benachrichtigungen` zu ermöglichen. Die"
+" :guilabel:`VON-Filterung` für diesen Server sollte den Wert von "
+"`{mail.default.from}@{mail.catchall.domain}` haben."
+
+#: ../../content/administration/maintain/azure_oauth.rst:258
+msgid ""
+"The configuration for this transactional email server can work alongside an "
+"outgoing mass-mailing email server. The :guilabel:`FROM Filtering` for the "
+"mass-mailing email server can remain empty, but it's require to be added in "
+"the settings of the *Email Marketing* application."
+msgstr ""
+"Die Konfiguration für diesen Server für Transaktionsmails kann neben einem "
+"Server für ausgehende Massenmailings funktionieren. Der :guilabel:`VON-"
+"Filterung` für den E-Mail-Server für Massenmailings kann leer bleiben, muss "
+"aber in den Einstellungen der *E-Mail-Marketing*-App hinzugefügt werden."
+
+#: ../../content/administration/maintain/azure_oauth.rst:263
+msgid ""
+"For more information on setting the mass-mailing email server visit "
+":ref:`email_communication/mass_mails`."
+msgstr ""
+"Weitere Informationen zum Einrichten des E-Mail-Servers für Massmailings "
+"finden Sie unter :ref:`email_communication/mass_mails`."
+
+#: ../../content/administration/maintain/azure_oauth.rst:267
+msgid "Multiple user outgoing mail server configuration:"
+msgstr "Konfiguration des Postausgangsservers für mehrere Benutzer :"
+
+#: ../../content/administration/maintain/azure_oauth.rst:270
+msgid "User #1 mailbox"
+msgstr "Postfach Benutzer #1"
+
+#: ../../content/administration/maintain/azure_oauth.rst:270
+msgid "Outgoing mail server #1 **username** (login) = `john@example.com`"
+msgstr ""
+"**Benutzername** (Anmeldung) des Postausgangsservers #1 = `john@example.com`"
+
+#: ../../content/administration/maintain/azure_oauth.rst:271
+msgid ""
+"Outgoing mail server #1 :guilabel:`FROM Filtering` = `john@example.com`"
+msgstr ""
+":guilabel:`VON-Filterung` des Postausgangsservers #1 = `john@example.com`"
+
+#: ../../content/administration/maintain/azure_oauth.rst:273
+msgid "User #2 mailbox"
+msgstr "Postfach Benutzer #2"
+
+#: ../../content/administration/maintain/azure_oauth.rst:273
+msgid "Outgoing mail server #2 **username** (login) = `jane@example.com`"
+msgstr ""
+"**Benutzername** (Anmeldung) des Postausgangsservers #1 = `jane@example.com`"
+
+#: ../../content/administration/maintain/azure_oauth.rst:274
+msgid ""
+"Outgoing mail server #2 :guilabel:`FROM Filtering` = `jane@example.com`"
+msgstr ""
+":guilabel:`VON-Filterung` des Postausgangsservers #2 = `jane@example.com`"
+
+#: ../../content/administration/maintain/azure_oauth.rst:276
+msgid "Notifications mailbox"
+msgstr "Benachrichtigungspostfach"
+
+#: ../../content/administration/maintain/azure_oauth.rst:276
+msgid ""
+"Outgoing mail server #3 **username** (login) = `notifications@example.com`"
+msgstr ""
+"**Benutzername** (Anmeldung) des Postausgangsservers #3 = "
+"`notifications@example.com`"
+
+#: ../../content/administration/maintain/azure_oauth.rst:277
+msgid ""
+"Outgoing mail server #3 :guilabel:`FROM Filtering` = "
+"`notifications@example.com`"
+msgstr ""
+":guilabel:`VON-Filterung` des Postausgangsservers #3 = "
+"`notifications@example.com`"
+
+#: ../../content/administration/maintain/azure_oauth.rst:279
+msgid "System Parameters"
+msgstr "Systemparameter"
+
+#: ../../content/administration/maintain/azure_oauth.rst:283
 msgid "Configure incoming email server"
 msgstr "Posteingangsserver konfigurieren"
 
-#: ../../content/administration/maintain/azure_oauth.rst:212
+#: ../../content/administration/maintain/azure_oauth.rst:285
 msgid ""
 "The incoming account should be configured in a similar way to the outgoing "
 "email account. Navigate to the :guilabel:`Incoming Mail Servers` in the "
@@ -3161,7 +3350,7 @@ msgstr ""
 "bestätigen` Sie nun das Konto. Das Konto sollte nun bereit sein, E-Mails an "
 "die Odoo-Datenbank zu senden."
 
-#: ../../content/administration/maintain/azure_oauth.rst:220
+#: ../../content/administration/maintain/azure_oauth.rst:293
 msgid ":doc:`../../applications/general/email_communication/email_servers`"
 msgstr ":doc:`../../applications/general/email_communication/email_servers`"
 
@@ -5530,6 +5719,18 @@ msgid ""
 msgstr ""
 "Weitere Informationen finden Sie unter :ref:`Verwendung einer Standard-E-"
 "Mail-Adresse <email_communication/default>`."
+
+#: ../../content/administration/maintain/mailjet_api.rst:213
+msgid ""
+"The :guilabel:`System Parameters` can be accessed by activating "
+":doc:`../../applications/general/developer_mode` in the "
+":menuselection:`Settings --> Technical --> Parameters --> System Parameters`"
+" menu."
+msgstr ""
+"Auf die :guilabel:`Systemparameter` können Sie zugreifen, indem Sie "
+":doc:`../../applications/general/developer_mode` im Menü "
+":menuselection:`Einstellungen --> Technisch --> Parameter --> "
+"Systemparameter` aktivieren."
 
 #: ../../content/administration/maintain/mailjet_api.rst:217
 msgid ""
@@ -8578,10 +8779,6 @@ msgstr ""
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:477
 msgid "SSH"
 msgstr "SSH"
-
-#: ../../content/administration/odoo_sh/getting_started/branches.rst:480
-msgid "Setup"
-msgstr "Einrichtung"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:482
 msgid ""

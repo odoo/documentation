@@ -9,18 +9,18 @@
 # Claudia Baisan, 2023
 # Hongu Cosmin <cosmin513@gmail.com>, 2023
 # Lyall Kindmurr, 2023
-# Cozmin Candea <office@terrabit.ro>, 2023
 # Martin Trigaux, 2023
 # Dorin Hongu <dhongu@gmail.com>, 2023
+# Cozmin Candea <office@terrabit.ro>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 16:10+0000\n"
+"POT-Creation-Date: 2023-10-09 08:39+0000\n"
 "PO-Revision-Date: 2022-03-18 14:59+0000\n"
-"Last-Translator: Dorin Hongu <dhongu@gmail.com>, 2023\n"
+"Last-Translator: Cozmin Candea <office@terrabit.ro>, 2023\n"
 "Language-Team: Romanian (https://app.transifex.com/odoo/teams/41243/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -389,7 +389,7 @@ msgstr "Afișează doar bazele de date cu nume care încep cu 'mycompany'"
 #: ../../content/administration/install/deploy.rst:46
 #: ../../content/administration/install/deploy.rst:58
 #: ../../content/administration/install/deploy.rst:153
-#: ../../content/administration/install/deploy.rst:276
+#: ../../content/administration/install/deploy.rst:280
 msgid "in :ref:`the configuration file <reference/cmdline/config_file>` set:"
 msgstr ""
 
@@ -472,8 +472,8 @@ msgstr ""
 
 #: ../../content/administration/install/deploy.rst:95
 #: ../../content/administration/install/deploy.rst:145
-#: ../../content/administration/install/deploy.rst:231
-#: ../../content/administration/install/deploy.rst:271
+#: ../../content/administration/install/deploy.rst:235
+#: ../../content/administration/install/deploy.rst:275
 msgid "Configuration sample"
 msgstr "Exemplu de configurare"
 
@@ -608,68 +608,72 @@ msgstr "Server integrat"
 
 #: ../../content/administration/install/deploy.rst:182
 msgid ""
-"Odoo includes built-in HTTP servers, using either multithreading or "
-"multiprocessing."
+"Odoo includes built-in HTTP, cron, and live-chat servers, using either "
+"multi-threading or multi-processing."
 msgstr ""
-"Odoo include servere HTTP integrate, folosind fie multithreading, fie "
-"multiprocessing."
 
 #: ../../content/administration/install/deploy.rst:185
 msgid ""
-"For production use, it is recommended to use the multiprocessing server as "
-"it increases stability, makes somewhat better use of computing resources and"
-" can be better monitored and resource-restricted."
+"The **multi-threaded** server is a simpler server primarily used for "
+"development, demonstrations, and its compatibility with various operating "
+"systems (including Windows). A new thread is spawned for every new HTTP "
+"request, even for long-running requests such as long polling. Extra daemonic"
+" cron threads are spawned too. Due to a Python limitation (GIL), it doesn't "
+"make the best use of the hardware."
 msgstr ""
-"Pentru utilizare în producție, este recomandat să se folosească serverul "
-"multiprocessing deoarece crește stabilitatea, folosește mai bine resursele "
-"de calcul și poate fi mai bine monitorizat și restricționat la resurse."
 
-#: ../../content/administration/install/deploy.rst:189
+#: ../../content/administration/install/deploy.rst:191
 msgid ""
-"Multiprocessing is enabled by configuring :option:`a non-zero number of "
-"worker processes <odoo-bin --workers>`, the number of workers should be "
-"based on the number of cores in the machine (possibly with some room for "
-"cron workers depending on how much cron work is predicted)"
+"The multi-threaded server is the default server, also for docker containers."
+" It is selected by leaving the :option:`--workers <odoo-bin --workers>` "
+"option out or setting it to ``0``."
 msgstr ""
-"Multiprocessing este activat prin configurarea :option:`a unui număr non-"
-"zero de procese worker <odoo-bin --workers>`, numărul de procese worker "
-"trebuie să fie bazat pe numărul de nuclee din mașină (posibil cu puțin "
-"spațiu pentru cron workers în funcție de cât de multă munca cron este "
-"prevăzută)"
 
-#: ../../content/administration/install/deploy.rst:193
+#: ../../content/administration/install/deploy.rst:194
 msgid ""
-"Worker limits can be configured based on the hardware configuration to avoid"
-" resources exhaustion"
+"The **multi-processing** server is a full-blown server primarily used for "
+"production. It is not liable to the same Python limitation (GIL) on resource"
+" usage and hence makes the best use of the hardware. A pool of workers is "
+"created upon server startup. New HTTP requests are queued by the OS until "
+"there are workers ready to process them. An extra event-driven HTTP worker "
+"for the live chat is spawned on an alternative port. Extra cron workers are "
+"spawned too. A configurable process reaper monitors resource usage and can "
+"kill/restart failed workers."
 msgstr ""
-"Limitele proceselor worker pot fi configurate în funcție de configurația "
-"hardware-ului pentru a evita epuizarea resurselor"
 
-#: ../../content/administration/install/deploy.rst:196
-msgid "multiprocessing mode currently isn't available on Windows"
-msgstr "modulul multiprocessing nu este disponibil în prezent pe Windows"
+#: ../../content/administration/install/deploy.rst:201
+msgid ""
+"The multi-processing server is opt-in. It is selected by setting the "
+":option:`--workers <odoo-bin --workers>` option to a non-null integer."
+msgstr ""
 
-#: ../../content/administration/install/deploy.rst:199
+#: ../../content/administration/install/deploy.rst:205
+msgid ""
+"Because it is highly customized for Linux servers, the multi-processing "
+"server is not available on Windows."
+msgstr ""
+
+#: ../../content/administration/install/deploy.rst:209
 msgid "Worker number calculation"
 msgstr "Calculul numărului de procese worker"
 
-#: ../../content/administration/install/deploy.rst:201
+#: ../../content/administration/install/deploy.rst:211
 msgid "Rule of thumb : (#CPU * 2) + 1"
 msgstr "Regulă de bază: (#CPU * 2) + 1"
 
-#: ../../content/administration/install/deploy.rst:202
+#: ../../content/administration/install/deploy.rst:212
 msgid "Cron workers need CPU"
 msgstr "Procesele cron au nevoie de CPU"
 
-#: ../../content/administration/install/deploy.rst:203
+#: ../../content/administration/install/deploy.rst:213
 msgid "1 worker ~= 6 concurrent users"
 msgstr "1 proces worker ~= 6 utilizatori concurenți"
 
-#: ../../content/administration/install/deploy.rst:206
+#: ../../content/administration/install/deploy.rst:216
 msgid "memory size calculation"
 msgstr "calculul dimensiunii memoriei"
 
-#: ../../content/administration/install/deploy.rst:208
+#: ../../content/administration/install/deploy.rst:218
 msgid ""
 "We consider 20% of the requests are heavy requests, while 80% are simpler "
 "ones"
@@ -677,7 +681,7 @@ msgstr ""
 "Considerăm că 20% din cererile sunt cereri grele, în timp ce 80% sunt mai "
 "simplu"
 
-#: ../../content/administration/install/deploy.rst:209
+#: ../../content/administration/install/deploy.rst:219
 msgid ""
 "A heavy worker, when all computed field are well designed, SQL requests are "
 "well designed, ... is estimated to consume around 1GB of RAM"
@@ -686,7 +690,7 @@ msgstr ""
 "cererile SQL sunt bine proiectate, ... este estimat să consume aproximativ "
 "1GB de RAM"
 
-#: ../../content/administration/install/deploy.rst:210
+#: ../../content/administration/install/deploy.rst:220
 msgid ""
 "A lighter worker, in the same scenario, is estimated to consume around 150MB"
 " of RAM"
@@ -694,7 +698,7 @@ msgstr ""
 "Un proces worker mai ușor, în același scenariu, este estimat să consume "
 "aproximativ 150MB de RAM"
 
-#: ../../content/administration/install/deploy.rst:212
+#: ../../content/administration/install/deploy.rst:222
 msgid ""
 "Needed RAM = #worker * ( (light_worker_ratio * light_worker_ram_estimation) "
 "+ (heavy_worker_ratio * heavy_worker_ram_estimation) )"
@@ -702,55 +706,41 @@ msgstr ""
 "RAM necesară = #worker * ( (rata_worker_ușor * estimarea_ram_worker_ușor) + "
 "(rata_worker_greu * estimarea_ram_worker_greu) )"
 
-#: ../../content/administration/install/deploy.rst:215
-#: ../../content/administration/install/deploy.rst:369
+#: ../../content/administration/install/deploy.rst:225
+#: ../../content/administration/install/deploy.rst:373
 msgid "LiveChat"
 msgstr "LiveChat"
 
-#: ../../content/administration/install/deploy.rst:217
+#: ../../content/administration/install/deploy.rst:227
 msgid ""
-"In multiprocessing, a dedicated LiveChat worker is automatically started and"
-" listening on :option:`the longpolling port <odoo-bin --longpolling-port>` "
-"but the client will not connect to it."
+"In multi-processing, a dedicated LiveChat worker is automatically started "
+"and listens on the :option:`--longpolling-port <odoo-bin --longpolling-"
+"port>`. By default, the HTTP requests will keep accessing the normal HTTP "
+"workers instead of the LiveChat one. You must deploy a proxy in front of "
+"Odoo and redirect incoming requests whose path starts with ``/longpolling`` "
+"to the LiveChat worker. You must also start Odoo in :option:`--proxy-mode "
+"<odoo-bin --proxy-mode>` so it uses the real client headers (such as "
+"hostname, scheme, and IP) instead of the proxy ones."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:221
-msgid ""
-"Instead you must have a proxy redirecting requests whose URL starts with "
-"``/longpolling/`` to the longpolling port. Other request should be proxied "
-"to the :option:`normal HTTP port <odoo-bin --http-port>`"
-msgstr ""
-
-#: ../../content/administration/install/deploy.rst:225
-msgid ""
-"To achieve such a thing, you'll need to deploy a reverse proxy in front of "
-"Odoo, like nginx or apache. When doing so, you'll need to forward some more "
-"http Headers to Odoo, and activate the proxy_mode in Odoo configuration to "
-"have Odoo read those headers."
-msgstr ""
-"Pentru a obține așa ceva, va trebui să implementați un proxy invers în fața "
-"Odoo, ca nginx sau apache. În acest caz, va trebui să redirecționați câteva "
-"mai multe antete http către Odoo, și să activați modulul proxy în "
-"configurația Odoo pentru a avea Odoo să citească aceste antete."
-
-#: ../../content/administration/install/deploy.rst:233
+#: ../../content/administration/install/deploy.rst:237
 msgid "Server with 4 CPU, 8 Thread"
 msgstr "Server cu 4 CPU, 8 Thread"
 
-#: ../../content/administration/install/deploy.rst:234
+#: ../../content/administration/install/deploy.rst:238
 msgid "60 concurrent users"
 msgstr "60 de utilizatori concurenți"
 
-#: ../../content/administration/install/deploy.rst:236
+#: ../../content/administration/install/deploy.rst:240
 msgid "60 users / 6 = 10 <- theoretical number of worker needed"
 msgstr ""
 "60 de utilizatori / 6 = 10 <- numărul teoretic de procese worker necesare"
 
-#: ../../content/administration/install/deploy.rst:237
+#: ../../content/administration/install/deploy.rst:241
 msgid "(4 * 2) + 1 = 9 <- theoretical maximal number of worker"
 msgstr "(4 * 2) + 1 = 9 <- numărul maxim teoretic de procese worker"
 
-#: ../../content/administration/install/deploy.rst:238
+#: ../../content/administration/install/deploy.rst:242
 msgid ""
 "We'll use 8 workers + 1 for cron. We'll also use a monitoring system to "
 "measure cpu load, and check if it's between 7 and 7.5 ."
@@ -759,19 +749,19 @@ msgstr ""
 "sistem de monitorizare pentru a măsura încărcarea CPU, și pentru a verifica "
 "dacă este între 7 și 7.5 ."
 
-#: ../../content/administration/install/deploy.rst:239
+#: ../../content/administration/install/deploy.rst:243
 msgid "RAM = 9 * ((0.8*150) + (0.2*1024)) ~= 3Go RAM for Odoo"
 msgstr "RAM = 9 * ((0.8*150) + (0.2*1024)) ~= 3Go RAM pentru Odoo"
 
-#: ../../content/administration/install/deploy.rst:241
+#: ../../content/administration/install/deploy.rst:245
 msgid "in :ref:`the configuration file <reference/cmdline/config_file>`:"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:257
+#: ../../content/administration/install/deploy.rst:261
 msgid "HTTPS"
 msgstr "HTTPS"
 
-#: ../../content/administration/install/deploy.rst:259
+#: ../../content/administration/install/deploy.rst:263
 msgid ""
 "Whether it's accessed via website/web client or web service, Odoo transmits "
 "authentication information in cleartext. This means a secure deployment of "
@@ -785,7 +775,7 @@ msgstr ""
 "aproape oricărui proxy de terminare SSL, dar necesită următoarea "
 "configurare:"
 
-#: ../../content/administration/install/deploy.rst:264
+#: ../../content/administration/install/deploy.rst:268
 msgid ""
 "Enable Odoo's :option:`proxy mode <odoo-bin --proxy-mode>`. This should only"
 " be enabled when Odoo is behind a reverse proxy"
@@ -794,15 +784,15 @@ msgstr ""
 "lucru ar trebui să fie activat numai atunci când Odoo este în spatele unui "
 "proxy invers"
 
-#: ../../content/administration/install/deploy.rst:265
+#: ../../content/administration/install/deploy.rst:269
 msgid "Set up the SSL termination proxy (`Nginx termination example`_)"
 msgstr "Configurați proxy-ul de terminare SSL (`Exemplu de terminare Nginx`_)"
 
-#: ../../content/administration/install/deploy.rst:266
+#: ../../content/administration/install/deploy.rst:270
 msgid "Set up the proxying itself (`Nginx proxying example`_)"
 msgstr "Configurați proxy-ul în sine (`Exemplu de proxy Nginx`_)"
 
-#: ../../content/administration/install/deploy.rst:267
+#: ../../content/administration/install/deploy.rst:271
 msgid ""
 "Your SSL termination proxy should also automatically redirect non-secure "
 "connections to the secure port"
@@ -810,23 +800,23 @@ msgstr ""
 "Proxy-ul dvs. de terminare SSL ar trebui de asemenea să redirecționeze  la "
 "conexiunile ne securizate către port"
 
-#: ../../content/administration/install/deploy.rst:273
+#: ../../content/administration/install/deploy.rst:277
 msgid "Redirect http requests to https"
 msgstr "Redirecționați cererile http către https"
 
-#: ../../content/administration/install/deploy.rst:274
+#: ../../content/administration/install/deploy.rst:278
 msgid "Proxy requests to odoo"
 msgstr "Proxy requests to odoo"
 
-#: ../../content/administration/install/deploy.rst:282
+#: ../../content/administration/install/deploy.rst:286
 msgid "in ``/etc/nginx/sites-enabled/odoo.conf`` set:"
 msgstr "în ``/etc/nginx/sites-enabled/odoo.conf`` setați:"
 
-#: ../../content/administration/install/deploy.rst:343
+#: ../../content/administration/install/deploy.rst:347
 msgid "Odoo as a WSGI Application"
 msgstr "Odoo ca o aplicație WSGI"
 
-#: ../../content/administration/install/deploy.rst:345
+#: ../../content/administration/install/deploy.rst:349
 msgid ""
 "It is also possible to mount Odoo as a standard WSGI_ application. Odoo "
 "provides the base for a WSGI launcher script as ``odoo-wsgi.example.py``. "
@@ -842,7 +832,7 @@ msgstr ""
 "direct în :mod:`odoo.tools.config` în loc de prin linia de comandă sau un "
 "fișier de configurare."
 
-#: ../../content/administration/install/deploy.rst:351
+#: ../../content/administration/install/deploy.rst:355
 msgid ""
 "However the WSGI server will only expose the main HTTP endpoint for the web "
 "client, website and webservice API. Because Odoo does not control the "
@@ -853,99 +843,60 @@ msgstr ""
 "crearea mai multor procese worker, nu poate configura cron sau procese "
 "worker livechat"
 
-#: ../../content/administration/install/deploy.rst:356
+#: ../../content/administration/install/deploy.rst:360
 msgid "Cron Workers"
 msgstr "Procese worker Cron"
 
-#: ../../content/administration/install/deploy.rst:358
-msgid "To run cron jobs for an Odoo deployment as a WSGI application requires"
-msgstr ""
-"Pentru a rula cron jobs pentru o implementare Odoo ca o aplicație WSGI este "
-"necesar"
-
-#: ../../content/administration/install/deploy.rst:360
-msgid "A classical Odoo (run via ``odoo-bin``)"
-msgstr "Un Odoo clasic (rulat prin intermediul ``odoo-bin``)"
-
-#: ../../content/administration/install/deploy.rst:361
+#: ../../content/administration/install/deploy.rst:362
 msgid ""
-"Connected to the database in which cron jobs have to be run (via "
-":option:`odoo-bin -d`)"
+"Starting one of the built-in Odoo servers next to the WSGI server is "
+"required to process cron jobs. That server must be configured to only "
+"process crons and not HTTP requests using the :option:`--no-http <odoo-bin "
+"--no-http>` cli option or the ``http_enable = False`` configuration file "
+"setting."
 msgstr ""
-"Conectat la baza de date în care cron jobs trebuie să fie rulate (prin "
-":option:`odoo-bin -d`)"
 
-#: ../../content/administration/install/deploy.rst:363
+#: ../../content/administration/install/deploy.rst:367
 msgid ""
-"Which should not be exposed to the network. To ensure cron runners are not "
-"network-accessible, it is possible to disable the built-in HTTP server "
-"entirely with :option:`odoo-bin --no-http` or setting ``http_enable = "
-"False`` in the configuration file"
+"On Linux-like systems, using the multi-processing server over the multi-"
+"threading one is recommended to benefit from better hardware usage and "
+"increased stability, i.e., using the :option:`--workers=-1 <odoo-bin "
+"--workers>` and :option:`--max-cron-threads=n <odoo-bin --max-cron-threads>`"
+" cli options."
 msgstr ""
-"Care nu ar trebui să fie expus rețelei. Pentru a asigura că cron runners nu "
-"sunt accesibile prin rețea, este posibil să dezactivați complet serverul "
-"HTTP încorporat cu :option:`odoo-bin --no-http` sau setarea ``http_enable = "
-"False`` în fișierul de configurare"
 
-#: ../../content/administration/install/deploy.rst:371
+#: ../../content/administration/install/deploy.rst:375
 msgid ""
-"The second problematic subsystem for WSGI deployments is the LiveChat: where"
-" most HTTP connections are relatively short and quickly free up their worker"
-" process for the next request, LiveChat require a long-lived connection for "
-"each client in order to implement near-real-time notifications."
+"Using a gevent-compatible WSGI server is required for the correct operation "
+"of the live chat feature. That server should be able to handle many "
+"simultaneous long-lived HTTP requests but doesn't need a lot of processing "
+"power. All requests whose path starts with ``/longpolling`` should be "
+"directed to that server. A regular (thread/process-based) WSGI server should"
+" be used for all other requests."
 msgstr ""
-"Al doilea sub-sistem problematic pentru implementări WSGI este LiveChat: "
-"unde majoritatea conexiunilor HTTP sunt relativ scurte și eliberează rapid "
-"procesul worker pentru următoarea cerere, LiveChat necesită o conexiune "
-"lungă pentru fiecare client pentru a implementa notificări aproape în timp "
-"real."
-
-#: ../../content/administration/install/deploy.rst:376
-msgid ""
-"This is in conflict with the process-based worker model, as it will tie up "
-"worker processes and prevent new users from accessing the system. However, "
-"those long-lived connections do very little and mostly stay parked waiting "
-"for notifications."
-msgstr ""
-"Acest lucru este în conflict cu modelul de bază a proceselor worker, "
-"deoarece va atașa procesele worker și va împiedica utilizatorii noi să "
-"acceseze sistemul. Cu toate acestea, aceste conexiuni lungi nu fac prea mult"
-" și majoritatea rămân parcate așteptând notificări."
 
 #: ../../content/administration/install/deploy.rst:381
 msgid ""
-"The solutions to support livechat/motifications in a WSGI application are:"
-msgstr ""
-"Soluțiile pentru a sprijini livechat/motifications într-o aplicație WSGI "
-"sunt:"
-
-#: ../../content/administration/install/deploy.rst:383
-msgid ""
-"Deploy a threaded version of Odoo (instead of a process-based preforking "
-"one) and redirect only requests to URLs starting with ``/longpolling/`` to "
-"that Odoo, this is the simplest and the longpolling URL can double up as the"
-" cron instance."
+"The Odoo cron server can also be used to serve the live chat requests. Just "
+"drop the :option:`--no-http <odoo-bin --no-http>` cli option from the cron "
+"server and make sure requests whose path starts with ``/longpolling`` are "
+"directed to this server, either on the :option:`--http-port <odoo-bin "
+"--http-port>` (multi-threading server) or on the :option:`--longpolling-port"
+" <odoo-bin --longpolling-port>` (multi-processing server)."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:387
-msgid ""
-"Deploy an evented Odoo via ``odoo-gevent`` and proxy requests starting with "
-"``/longpolling/`` to :option:`the longpolling port <odoo-bin --longpolling-"
-"port>`."
-msgstr ""
-
-#: ../../content/administration/install/deploy.rst:392
+#: ../../content/administration/install/deploy.rst:388
 msgid "Serving Static Files"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:394
+#: ../../content/administration/install/deploy.rst:390
 msgid ""
 "For development convenience, Odoo directly serves all static files in its "
 "modules. This may not be ideal when it comes to performances, and static "
 "files should generally be served by a static HTTP server."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:398
+#: ../../content/administration/install/deploy.rst:394
 msgid ""
 "Odoo static files live in each module's ``static/`` folder, so static files "
 "can be served by intercepting all requests to "
@@ -953,23 +904,23 @@ msgid ""
 "in the various addons paths."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:402
+#: ../../content/administration/install/deploy.rst:398
 #: ../../content/administration/upgrade.rst:122
 msgid "Todo"
 msgstr "Todo"
 
-#: ../../content/administration/install/deploy.rst:402
+#: ../../content/administration/install/deploy.rst:398
 msgid ""
 "test whether it would be interesting to serve filestored attachments via "
 "this, and how (e.g. possibility of mapping ir.attachment id to filestore "
 "hash in the database?)"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:409
+#: ../../content/administration/install/deploy.rst:405
 msgid "Security"
 msgstr "Securitate"
 
-#: ../../content/administration/install/deploy.rst:411
+#: ../../content/administration/install/deploy.rst:407
 msgid ""
 "For starters, keep in mind that securing an information system is a "
 "continuous process, not a one-shot operation. At any moment, you will only "
@@ -979,7 +930,7 @@ msgstr ""
 "proces continuu, nu o operațiune unică. În orice moment, veți fi doar atât "
 "de sigur cât cel mai slab link din mediul dvs."
 
-#: ../../content/administration/install/deploy.rst:415
+#: ../../content/administration/install/deploy.rst:411
 msgid ""
 "So please do not take this section as the ultimate list of measures that "
 "will prevent all security problems. It's only intended as a summary of the "
@@ -996,7 +947,7 @@ msgstr ""
 "distribuția, cele mai bune practici din punct de vedere al utilizatorilor, "
 "parolelor și managementului controlului accesului, etc."
 
-#: ../../content/administration/install/deploy.rst:421
+#: ../../content/administration/install/deploy.rst:417
 msgid ""
 "When deploying an internet-facing server, please be sure to consider the "
 "following security-related topics:"
@@ -1004,7 +955,7 @@ msgstr ""
 "Când implementați un server orientat către internet, vă rugăm să luați în  "
 "considerare următoarele subiecte legate de securitate:"
 
-#: ../../content/administration/install/deploy.rst:424
+#: ../../content/administration/install/deploy.rst:420
 msgid ""
 "Always set a strong super-admin admin password, and restrict access to the "
 "database management pages as soon as the system is set up. See "
@@ -1014,7 +965,7 @@ msgstr ""
 "accesul la paginile de administrare a bazei de date imediat ce sistemul este"
 " configurat. Vedeți :ref:`db_manager_security`."
 
-#: ../../content/administration/install/deploy.rst:427
+#: ../../content/administration/install/deploy.rst:423
 msgid ""
 "Choose unique logins and strong passwords for all administrator accounts on "
 "all databases. Do not use 'admin' as the login. Do not use those logins for "
@@ -1028,7 +979,7 @@ msgstr ""
 "controlul/administrarea instalării. *Niciodată* nu utilizați parolele "
 "implicit ca admin/admin, chiar și pentru bazele de date de test/staging."
 
-#: ../../content/administration/install/deploy.rst:432
+#: ../../content/administration/install/deploy.rst:428
 msgid ""
 "Do **not** install demo data on internet-facing servers. Databases with demo"
 " data contain default logins and passwords that can be used to get into your"
@@ -1039,7 +990,7 @@ msgstr ""
 "care pot fi utilizate pentru a intra în sistemele dvs. și pot cauza probleme"
 " semnificative, chiar și pe sistemele de testare/dezvoltare."
 
-#: ../../content/administration/install/deploy.rst:436
+#: ../../content/administration/install/deploy.rst:432
 msgid ""
 "Use appropriate database filters ( :option:`--db-filter <odoo-bin --db-"
 "filter>`) to restrict the visibility of your databases according to the "
@@ -1055,7 +1006,7 @@ msgstr ""
 "virgulă) lista de baze de date disponibile pentru a filtra, în loc să lăsați"
 " sistemul să le aducă toate din backend-ul bazei de date."
 
-#: ../../content/administration/install/deploy.rst:443
+#: ../../content/administration/install/deploy.rst:439
 msgid ""
 "Once your ``db_name`` and ``db_filter`` are configured and only match a "
 "single database per hostname, you should set ``list_db`` configuration "
@@ -1071,7 +1022,7 @@ msgstr ""
 "bazelor de date (aceasta este expusă și ca opțiunea de linie de comandă "
 ":option:`--no-database-list <odoo-bin --no-database-list>`)"
 
-#: ../../content/administration/install/deploy.rst:449
+#: ../../content/administration/install/deploy.rst:445
 msgid ""
 "Make sure the PostgreSQL user (:option:`--db_user <odoo-bin --db_user>`) is "
 "*not* a super-user, and that your databases are owned by a different user. "
@@ -1085,7 +1036,7 @@ msgstr ""
 " folosiți un ``db_user`` non-privilegiat dedicat. Vedeți și "
 ":ref:`setup/deploy/odoo`."
 
-#: ../../content/administration/install/deploy.rst:454
+#: ../../content/administration/install/deploy.rst:450
 msgid ""
 "Keep installations updated by regularly installing the latest builds, either"
 " via GitHub or by downloading the latest version from "
@@ -1096,7 +1047,7 @@ msgstr ""
 " recente versiuni de la https://www.odoo.com/page/download sau "
 "http://nightly.odoo.com"
 
-#: ../../content/administration/install/deploy.rst:458
+#: ../../content/administration/install/deploy.rst:454
 msgid ""
 "Configure your server in multi-process mode with proper limits matching your"
 " typical usage (memory/CPU/timeouts). See also :ref:`builtin_server`."
@@ -1104,7 +1055,7 @@ msgstr ""
 "Configurați serverul dvs. în modul multi-proces cu limite adecvate care se "
 "potrivesc cu utilizarea tipică (memorie/CPU/timeout-uri). Vedeți și :ref:"
 
-#: ../../content/administration/install/deploy.rst:461
+#: ../../content/administration/install/deploy.rst:457
 msgid ""
 "Run Odoo behind a web server providing HTTPS termination with a valid SSL "
 "certificate, in order to prevent eavesdropping on cleartext communications. "
@@ -1120,7 +1071,7 @@ msgstr ""
 "timeout-uri adecvate, apoi activați opțiunea :option:`proxy mode <odoo-bin "
 "--proxy-mode>`. Vedeți și :ref:`https_proxy`."
 
-#: ../../content/administration/install/deploy.rst:468
+#: ../../content/administration/install/deploy.rst:464
 msgid ""
 "If you need to allow remote SSH access to your servers, make sure to set a "
 "strong password for **all** accounts, not just `root`. It is strongly "
@@ -1137,7 +1088,7 @@ msgstr ""
 " doar IP-uri de încredere în firewall și / sau rulați un sistem de detectare"
 " a forței brute precum `fail2ban` sau echivalentul său."
 
-#: ../../content/administration/install/deploy.rst:474
+#: ../../content/administration/install/deploy.rst:470
 msgid ""
 "Consider installing appropriate rate-limiting on your proxy or firewall, to "
 "prevent brute-force attacks and denial of service attacks. See also "
@@ -1148,7 +1099,7 @@ msgstr ""
 "tip denial of service. Vedeți și :ref:`login_brute_force` pentru măsuri "
 "specifice."
 
-#: ../../content/administration/install/deploy.rst:478
+#: ../../content/administration/install/deploy.rst:474
 msgid ""
 "Many network providers provide automatic mitigation for Distributed Denial "
 "of Service attacks (DDOS), but this is often an optional service, so you "
@@ -1158,7 +1109,7 @@ msgstr ""
 " Distributed Denial of Service (DDOS), dar aceasta este adesea un serviciu "
 "opțional, așa că ar trebui să vă consultați cu ei."
 
-#: ../../content/administration/install/deploy.rst:482
+#: ../../content/administration/install/deploy.rst:478
 msgid ""
 "Whenever possible, host your public-facing demo/test/staging instances on "
 "different machines than the production ones. And apply the same security "
@@ -1168,7 +1119,7 @@ msgstr ""
 "publicul pe mașini diferite de cele de producție. Și aplicați aceleași "
 "precauții de securitate ca și pentru producție."
 
-#: ../../content/administration/install/deploy.rst:486
+#: ../../content/administration/install/deploy.rst:482
 msgid ""
 "If your public-facing Odoo server has access to sensitive internal network "
 "resources or services (e.g. via a private VLAN), implement appropriate "
@@ -1195,7 +1146,7 @@ msgstr ""
 "systemd.html>`_ poate fi de asemenea util pentru a implementa controlul de "
 "acces la rețea per-proces."
 
-#: ../../content/administration/install/deploy.rst:497
+#: ../../content/administration/install/deploy.rst:493
 msgid ""
 "If your public-facing Odoo server is behind a Web Application Firewall, a "
 "load-balancer, a transparent DDoS protection service (like CloudFlare) or a "
@@ -1222,7 +1173,7 @@ msgstr ""
 "servicii precum CloudFlare de obicei mențin o listă publică a gamelor lor de"
 " adrese IP pentru acest scop."
 
-#: ../../content/administration/install/deploy.rst:508
+#: ../../content/administration/install/deploy.rst:504
 msgid ""
 "If you are hosting multiple customers, isolate customer data and files from "
 "each other using containers or appropriate \"jail\" techniques."
@@ -1230,7 +1181,7 @@ msgstr ""
 "Dacă găzduiți mai mulți clienți, izolați datele și fișierele clienților unul"
 " de celălalt utilizând containere sau tehnici adecvate de \"jail\"."
 
-#: ../../content/administration/install/deploy.rst:511
+#: ../../content/administration/install/deploy.rst:507
 msgid ""
 "Setup daily backups of your databases and filestore data, and copy them to a"
 " remote archiving server that is not accessible from the server itself."
@@ -1238,6 +1189,14 @@ msgstr ""
 "Configurați copii de rezervă zilnice ale bazelor de date și a datelor de "
 "magazin de fișiere, și copiați-le pe un server de arhivare la distanță care "
 "nu este accesibil de la serverul în sine."
+
+#: ../../content/administration/install/deploy.rst:510
+msgid ""
+"Deploying Odoo on Linux is strongly recommended over Windows. Should you "
+"choose nevertheless to deploy on a Windows platform, a thorough security "
+"hardening review of the server should be conducted and is outside of the "
+"scope of this guide."
+msgstr ""
 
 #: ../../content/administration/install/deploy.rst:518
 msgid "Blocking Brute Force Attacks"
@@ -1786,34 +1745,42 @@ msgstr ""
 msgid "Windows"
 msgstr "Windows"
 
-#: ../../content/administration/install/packages.rst:150
+#: ../../content/administration/install/packages.rst:151
+msgid ""
+"Windows packaging is offered for the convenience of testing or running "
+"single-user local instances but production deployment is discouraged due to "
+"a number of limitations and risks associated with deploying Odoo on a "
+"Windows platform."
+msgstr ""
+
+#: ../../content/administration/install/packages.rst:155
 msgid ""
 "Download the installer from the `nightly server <https://nightly.odoo.com>`_"
 " (Community only) or the Windows installer from the `Odoo download page "
 "<https://www.odoo.com/page/download>`_ (any edition."
 msgstr ""
 
-#: ../../content/administration/install/packages.rst:153
+#: ../../content/administration/install/packages.rst:158
 msgid "Execute the downloaded file."
 msgstr "Executați fișierul descărcat."
 
-#: ../../content/administration/install/packages.rst:156
+#: ../../content/administration/install/packages.rst:161
 msgid ""
 "On Windows 8 and later, a warning titled *Windows protected your PC* may be "
 "displayed. Click **More Info** and then **Run anyway** to proceed."
 msgstr ""
 
-#: ../../content/administration/install/packages.rst:159
+#: ../../content/administration/install/packages.rst:164
 msgid ""
 "Accept the `UAC <https://en.wikipedia.org/wiki/User_Account_Control>`_ "
 "prompt."
 msgstr ""
 
-#: ../../content/administration/install/packages.rst:160
+#: ../../content/administration/install/packages.rst:165
 msgid "Go through the installation steps."
 msgstr ""
 
-#: ../../content/administration/install/packages.rst:162
+#: ../../content/administration/install/packages.rst:167
 msgid "Odoo launches automatically at the end of the installation."
 msgstr ""
 
@@ -2746,58 +2713,189 @@ msgstr ""
 "e-mailuri sigure și securizate prin Microsoft Outlook folosind "
 "autentificarea OAuth."
 
-#: ../../content/administration/maintain/azure_oauth.rst:192
-msgid "Multiple user configuration"
-msgstr "Configurarea utilizatorilor multipli"
-
 #: ../../content/administration/maintain/azure_oauth.rst:194
-msgid ""
-"Each user should have a separate server set up. The :guilabel:`from-filter` "
-"should be set so that only the user's email is sent from that server. In "
-"other words, only a user with an email address that matches the set "
-":guilabel:`from-filter` is able to use this server."
+msgid "Configuration with a single outgoing mail server"
 msgstr ""
-"Trebuie să fie configurat un server separat pentru fiecare utilizator. "
-":guilabel:`from-filter` trebuie să fie setat astfel încât să fie trimis doar"
-" e-mailul utilizatorului de la acel server. În alte cuvinte, numai un "
-"utilizator cu o adresă de e-mail care se potrivește cu setarea "
-":guilabel:`from-filter` este capabil să utilizeze acest server."
 
-#: ../../content/administration/maintain/azure_oauth.rst:198
+#: ../../content/administration/maintain/azure_oauth.rst:196
 msgid ""
-"After setting the :guilabel:`from-filter`, set up a fallback email account "
-"to allow for the sending of :guilabel:`notifications`. The fallback email "
-"must be configured as a :guilabel:`general transactional server`. The "
-":guilabel:`mail.default.from` system parameter must be set to the "
-":guilabel:`username` of the general transactional server account. For more "
-"information see :ref:`Use a default email address "
-"<email_communication/default>`."
+"Configuring a single outgoing server is the simplest configuration available"
+" for Microsoft Azure and it doesn't require extensive access rights for the "
+"users in the database."
 msgstr ""
-"După setarea :guilabel:`from-filter`, configurați un cont de e-mail de "
-"rezervă pentru a permite trimiterea de :guilabel:`notificări`. Contul de "
-"e-mail de rezervă trebuie să fie configurat ca un :guilabel:`general "
-"transactional server`. :guilabel:`mail.default.from` parametrul de sistem "
-"trebuie să fie setat la :guilabel:`username` al contului de server "
-"tranzacțional general. Pentru mai multe informații, consultați "
-":ref:`Utilizați o adresă de e-mail implicită <email_communication/default>`."
 
-#: ../../content/administration/maintain/azure_oauth.rst:205
-#: ../../content/administration/maintain/mailjet_api.rst:213
+#: ../../content/administration/maintain/azure_oauth.rst:199
+msgid ""
+"A generic email address would be used to send emails for all users within "
+"the database. For example it could be structured with a `notifications` "
+"alias (`notifications@example.com`) or `contact` alias "
+"(`contact@example.com`). This address must be set as the :guilabel:`FROM "
+"Filtering` on the server. This address must also match the "
+"`{mail.default.from}@{mail.catchall.domain}` key combination in the system "
+"parameters."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:206
+#: ../../content/administration/maintain/azure_oauth.rst:247
+msgid ""
+"For more information on the from filter visit: "
+":ref:`email_communication/default`."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:209
+#: ../../content/administration/maintain/azure_oauth.rst:254
 msgid ""
 "The :guilabel:`System Parameters` can be accessed by activating "
-":doc:`../../applications/general/developer_mode` in the "
-":menuselection:`Settings --> Technical --> Parameters --> System Parameters`"
-" menu."
+":ref:`developer-mode` in the :menuselection:`Settings --> Technical --> "
+"Parameters --> System Parameters` menu."
 msgstr ""
-":guilabel:`Parametrii de sistem` pot fi accesate prin activarea "
-":doc:`../../applications/general/developer_mode` în meniul "
-":menuselection:`Setări --> Tehnic --> Parametri --> Parametri de sistem`."
 
-#: ../../content/administration/maintain/azure_oauth.rst:210
+#: ../../content/administration/maintain/azure_oauth.rst:212
+msgid ""
+"When using this configuration, every email that is sent from the database "
+"will use the address of the configured `notification` mailbox. However it "
+"should be noted that the name of the sender will appear but their email "
+"address will change:"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst-1
+msgid "Name from real sender with static email."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:221
+msgid "Single outgoing mail server configuration:"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:223
+msgid ""
+"Outgoing mail server **username** (login) = `notifications@example.com`"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:224
+msgid ""
+"Outgoing mail server :guilabel:`FROM Filtering` = "
+"`notifications@example.com`"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:225
+#: ../../content/administration/maintain/azure_oauth.rst:279
+msgid "`mail.catchall.domain` in system parameters = `example.com`"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:226
+#: ../../content/administration/maintain/azure_oauth.rst:280
+msgid "`mail.default.from` in system parameters = `notifications`"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:229
+msgid "User-specific (multiple user) configuration"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:231
+msgid ""
+"In addition to a generic email server, individual email servers can be set "
+"up for users in a database. These email addresses must be set as the "
+":guilabel:`FROM Filtering` on each individual server for this configuration "
+"to work."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:235
+msgid ""
+"This configuration is the more difficult of the two Microsoft Azure "
+"configurations, in that it requires all users configured with email servers "
+"to have access rights to settings in order to establish a connection to the "
+"email server."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:240
+#: ../../content/administration/odoo_sh/getting_started/branches.rst:480
+msgid "Setup"
+msgstr "Configurare"
+
+#: ../../content/administration/maintain/azure_oauth.rst:242
+msgid ""
+"Each user should have a separate email server set up. The :guilabel:`FROM "
+"Filtering` should be set so that only the user's email is sent from that "
+"server. In other words, only a user with an email address that matches the "
+"set :guilabel:`FROM Filtering` is able to use this server."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:249
+msgid ""
+"A :ref:`fallback server <azure_oauth/notifications>` must be setup to allow "
+"for the sending of :guilabel:`notifications`. The :guilabel:`FROM Filtering`"
+" for this server should have the value of the "
+"`{mail.default.from}@{mail.catchall.domain}`."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:258
+msgid ""
+"The configuration for this transactional email server can work alongside an "
+"outgoing mass-mailing email server. The :guilabel:`FROM Filtering` for the "
+"mass-mailing email server can remain empty, but it's require to be added in "
+"the settings of the *Email Marketing* application."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:263
+msgid ""
+"For more information on setting the mass-mailing email server visit "
+":ref:`email_communication/mass_mails`."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:267
+msgid "Multiple user outgoing mail server configuration:"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:270
+msgid "User #1 mailbox"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:270
+msgid "Outgoing mail server #1 **username** (login) = `john@example.com`"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:271
+msgid ""
+"Outgoing mail server #1 :guilabel:`FROM Filtering` = `john@example.com`"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:273
+msgid "User #2 mailbox"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:273
+msgid "Outgoing mail server #2 **username** (login) = `jane@example.com`"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:274
+msgid ""
+"Outgoing mail server #2 :guilabel:`FROM Filtering` = `jane@example.com`"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:276
+msgid "Notifications mailbox"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:276
+msgid ""
+"Outgoing mail server #3 **username** (login) = `notifications@example.com`"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:277
+msgid ""
+"Outgoing mail server #3 :guilabel:`FROM Filtering` = "
+"`notifications@example.com`"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:279
+msgid "System Parameters"
+msgstr "Parametri sistem"
+
+#: ../../content/administration/maintain/azure_oauth.rst:283
 msgid "Configure incoming email server"
 msgstr "Configurați serverul de e-mail de intrare"
 
-#: ../../content/administration/maintain/azure_oauth.rst:212
+#: ../../content/administration/maintain/azure_oauth.rst:285
 msgid ""
 "The incoming account should be configured in a similar way to the outgoing "
 "email account. Navigate to the :guilabel:`Incoming Mail Servers` in the "
@@ -2817,7 +2915,7 @@ msgstr ""
 ":guilabel:`Outlook Token Valid` Acum :guilabel:`Test and Confirm` contul. "
 "Contul ar trebui să fie gata să primească e-mailuri în baza de date Odoo."
 
-#: ../../content/administration/maintain/azure_oauth.rst:220
+#: ../../content/administration/maintain/azure_oauth.rst:293
 msgid ":doc:`../../applications/general/email_communication/email_servers`"
 msgstr ":doc:`../../applications/general/email_communication/email_servers`"
 
@@ -4949,6 +5047,17 @@ msgid ""
 msgstr ""
 "Pentru mai multe informații, consultați :ref:`Utilizarea unei adrese de "
 "email implicită <email_communication/default>`."
+
+#: ../../content/administration/maintain/mailjet_api.rst:213
+msgid ""
+"The :guilabel:`System Parameters` can be accessed by activating "
+":doc:`../../applications/general/developer_mode` in the "
+":menuselection:`Settings --> Technical --> Parameters --> System Parameters`"
+" menu."
+msgstr ""
+":guilabel:`Parametrii de sistem` pot fi accesate prin activarea "
+":doc:`../../applications/general/developer_mode` în meniul "
+":menuselection:`Setări --> Tehnic --> Parametri --> Parametri de sistem`."
 
 #: ../../content/administration/maintain/mailjet_api.rst:217
 msgid ""
@@ -7884,10 +7993,6 @@ msgstr ""
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:477
 msgid "SSH"
 msgstr "SSH"
-
-#: ../../content/administration/odoo_sh/getting_started/branches.rst:480
-msgid "Setup"
-msgstr "Configurare"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:482
 msgid ""

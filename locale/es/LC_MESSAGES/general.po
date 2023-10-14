@@ -18,13 +18,14 @@
 # Josep Anton Belchi, 2022
 # Borja García Rouco <bgrouco@gmail.com>, 2022
 # marcescu, 2022
-# Lucia Pacheco, 2022
 # Pedro M. Baeza <pedro.baeza@tecnativa.com>, 2023
 # Nelson Ramírez <info@konos.cl>, 2023
 # Pablo Rojas <rojaspablo88@gmail.com>, 2023
 # Martin Trigaux, 2023
 # Braulio D. López Vázquez <bdl@odoo.com>, 2023
 # Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2023
+# Wil Odoo, 2023
+# Lucia Pacheco, 2023
 # Fernanda Alvarez, 2023
 # Iran Villalobos López, 2023
 # 
@@ -33,7 +34,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 16:10+0000\n"
+"POT-Creation-Date: 2023-10-09 08:39+0000\n"
 "PO-Revision-Date: 2021-11-02 08:47+0000\n"
 "Last-Translator: Iran Villalobos López, 2023\n"
 "Language-Team: Spanish (https://app.transifex.com/odoo/teams/41243/es/)\n"
@@ -3106,679 +3107,1244 @@ msgstr ""
 "Acciones programadas` y busque :guilabel:`Correo: Servicio de Fetchmail`."
 
 #: ../../content/applications/general/email_communication/email_template.rst:3
-msgid "Email Templates"
+msgid "Email templates"
 msgstr "Plantillas de correo electrónico"
 
 #: ../../content/applications/general/email_communication/email_template.rst:5
 msgid ""
-"We all know writing good emails is vital to get a high response rate, but "
-"you do not want to rewrite the same structure every time, do you? That is "
-"where email templates come in. Without the need to rewrite the entire email "
-"structure every time, you save time to focus on the content. Multiple "
-"templates also let you deliver the right message to the right audience, "
-"improving their overall experience with the company."
+"Email templates are saved emails that are used repeatedly to send emails "
+"from the database. They allow users to send quality communications, without "
+"having to compose the same text repeatedly."
 msgstr ""
-"Todos sabemos que escribir buenos correos electrónicos es vital para obtener"
-" una alta tasa de respuesta, pero no queremos volver a escribir la misma "
-"estructura cada vez, ¿verdad? Ahí es donde entran en juego las plantillas de"
-" correo electrónico. Sin necesidad de reescribir toda la estructura del "
-"correo electrónico cada vez, puede ahorrar tiempo y concentrarse en el "
-"contenido. Además, varias plantillas le permiten entregar el mensaje "
-"correcto al público adecuado, lo que mejora su experiencia general con la "
-"empresa."
+"Las plantillas de correo electrónico son mensajes guardados que se utilizan "
+"varias veces para enviar correos electrónicos desde la base de datos. "
+"Permiten que los usuarios envíen mensajes de calidad sin tener que redactar "
+"el mismo texto una y otra vez."
 
-#: ../../content/applications/general/email_communication/email_template.rst:12
+#: ../../content/applications/general/email_communication/email_template.rst:8
 msgid ""
-"The email templates use QWeb. The composer allows you to edit emails in "
-"their final rendering, making customizations more robust as you don’t have "
-"to edit code."
+"Creating different templates that are tailored to specific situations lets "
+"users choose the right message for the right audience. This increases the "
+"quality of the message and the overall engagement rate with the customer."
 msgstr ""
-"Las plantillas de correo electrónico utilizan QWeb. El redactor le permite "
-"editar correos electrónicos en su visualización final, lo que hace que las "
-"personalizaciones sean más sólidas porque no tiene que editar el código."
+"Si crea diferentes plantillas que se adapten a situaciones específicas, los "
+"usuarios podrán elegir el mensaje adecuado para el público adecuado. Esto "
+"aumenta la calidad del mensaje y la tasa general de interacción con el "
+"cliente."
 
-#: ../../content/applications/general/email_communication/email_template.rst:16
-msgid "Defining a default reply to on your mail template"
-msgstr ""
-"Definir una respuesta predeterminada en su plantilla de correo electrónico"
-
-#: ../../content/applications/general/email_communication/email_template.rst:18
+#: ../../content/applications/general/email_communication/email_template.rst:13
 msgid ""
-"Although the field *reply to* is available within the mail templates, **this"
-" field is only used for mass mailing** mode (this means when sending "
-"templates on what we call bulk emailing). You can send emails in bulk in "
-"almost every app that has a list view. Select the records you want and click"
-" on the action button. If you have an option to send an email, you will see "
-"a mail composer with possible values to define:"
+"Email templates in Odoo use QWeb or XML, which allows for editing emails in "
+"their final rendering, making customizations more robust, without having to "
+"edit any code whatsoever. This means that Odoo can use a Graphical User "
+"Interface (GUI) to edit emails, which edits the backend code. When the "
+"received email is read by the end user's program different formatting and "
+"graphics will appear in the final form of it."
 msgstr ""
-"Aunque el campo *Responder a* está disponible en las plantillas de correo, "
-"**este campo solo se utiliza en el modo de envío masivo de correos** (al "
-"enviar plantillas en lo que llamamos envío de correos electrónicos en masa)."
-" Puede enviar correos electrónicos en masa en casi cualquier aplicación que "
-"tenga una lista de vista. Seleccione los registros que desea y haga clic en "
-"el botón de acción. Si tiene una opción para enviar un correo electrónico, "
-"verá un redactor de correo con posibles valores para definir:"
+
+#: ../../content/applications/general/email_communication/email_template.rst:19
+msgid ""
+"Access email templates in :ref:`developer mode <developer-mode>` by "
+"navigating to :menuselection:`Settings app --> Technical menu --> Email --> "
+"Email Templates`."
+msgstr ""
+"Si desea acceder a las plantillas de correo electrónico desde el :ref:`modo "
+"de desarrollador <developer-mode>`, vaya a la aplicación "
+":menuselection:`Ajustes --> Menú técnico --> Correo electrónico --> "
+"Plantillas de correo electrónico`."
+
+#: ../../content/applications/general/email_communication/email_template.rst:23
+msgid "Editing email templates"
+msgstr "Editar las plantillas de correo electrónico"
+
+#: ../../content/applications/general/email_communication/email_template.rst:25
+msgid ""
+"The *powerbox* feature can be used when working with email templates. This "
+"feature provides the ability to directly edit the formatting and text in an "
+"email template, as well as the ability to add links, buttons, appointment "
+"options, or images."
+msgstr ""
+"La función *paleta de comandos* también se puede usar al escribir plantillas"
+" de correo electrónico. Gracias a ella podrá editar directamente el formato "
+"y texto de las plantillas, así como añadir enlaces, botones, opciones para "
+"agendar o imágenes."
+
+#: ../../content/applications/general/email_communication/email_template.rst:29
+msgid ""
+"Additionally, the XML/HTML code of the email template can be edited "
+"directly, via the :guilabel:`</>` icon."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_template.rst:32
+msgid ""
+"*Dynamic placeholders* (text that references fields within Odoo to auto-fill"
+" information on the template) are available for the :guilabel:`Email "
+"Configuration` fields, the :guilabel:`Subject`, and the "
+":guilabel:`Language`."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_template.rst:37
+msgid "Powerbox"
+msgstr "Paleta de comandos"
+
+#: ../../content/applications/general/email_communication/email_template.rst:39
+msgid ""
+"The *powerbox* feature is an enriched text editor with various formatting, "
+"layout, and text options. It can also be used to add XML/HTML features in an"
+" email template. The powerbox feature is activated by typing a forward slash"
+" `/` in the body of the email template."
+msgstr ""
+"La función *paleta de comandos* es un editor de texto enriquecido con varios"
+" tipos de formato, diseño y opciones de texto. También se puede usar para "
+"añadir funciones XML/HTML en una plantilla de correo electrónico. Esta "
+"función se activa al escribir '/' en el cuerpo de la plantilla."
+
+#: ../../content/applications/general/email_communication/email_template.rst:43
+msgid ""
+"When a forward slash `/` is typed in the body of an email template, a drop-"
+"down menu appears with the following options:"
+msgstr ""
+"Una vez que escriba `/` en el cuerpo de la plantilla de correo electrónico, "
+"aparecerá un menú desplegable con las siguientes opciones:"
+
+#: ../../content/applications/general/email_communication/email_template.rst:46
+msgid ":guilabel:`Basic Blocks`"
+msgstr ":guilabel:`Bloques generales`"
+
+#: ../../content/applications/general/email_communication/email_template.rst:48
+msgid ":guilabel:`Heading 1`: Big section heading."
+msgstr ":guilabel:`Título 1`: título para una sección en tamaño grande."
+
+#: ../../content/applications/general/email_communication/email_template.rst:49
+msgid ":guilabel:`Heading 2`: Medium section heading."
+msgstr ":guilabel:`Título 2`: título para una sección en tamaño medio."
+
+#: ../../content/applications/general/email_communication/email_template.rst:50
+msgid ":guilabel:`Heading 3`: Small section heading."
+msgstr ":guilabel:`Título 3`: título para una sección en tamaño pequeño."
+
+#: ../../content/applications/general/email_communication/email_template.rst:51
+msgid ":guilabel:`Text`: Paragraph block."
+msgstr ":guilabel:`Texto`: bloque para un párrafo."
+
+#: ../../content/applications/general/email_communication/email_template.rst:52
+msgid ":guilabel:`Bulleted list`: Create a simple bulleted list."
+msgstr ":guilabel:`Lista con viñetas`: crea una lista con viñetas."
+
+#: ../../content/applications/general/email_communication/email_template.rst:53
+msgid ":guilabel:`Numbered list`: Create a list with numbering."
+msgstr ":guilabel:`Lista numerada`: crea una lista numerada."
+
+#: ../../content/applications/general/email_communication/email_template.rst:54
+msgid ":guilabel:`Checklist`: Track tasks with a checklist."
+msgstr ""
+":guilabel:`Lista de pendientes`: lleva seguimiento de las tareas con una "
+"lista de pendientes."
+
+#: ../../content/applications/general/email_communication/email_template.rst:55
+msgid ":guilabel:`Table`: Insert a table."
+msgstr ":guilabel:`Tabla`: inserta una tabla."
+
+#: ../../content/applications/general/email_communication/email_template.rst:56
+msgid ":guilabel:`Switch direction`: Switch the text's direction."
+msgstr ":guilabel:`Cambiar dirección`: cambia la dirección del texto."
+
+#: ../../content/applications/general/email_communication/email_template.rst:57
+msgid ":guilabel:`Separator`: Insert a horizontal rule separator."
+msgstr ":guilabel:`Separador`: inserta una línea horizontal de separación."
+
+#: ../../content/applications/general/email_communication/email_template.rst:58
+msgid ":guilabel:`Quote`: Add a blockquote section."
+msgstr ":guilabel:`Cita`: añade un bloque de cita."
+
+#: ../../content/applications/general/email_communication/email_template.rst:59
+msgid ":guilabel:`Code`: Add a code section."
+msgstr ":guilabel:`Código`: añade una sección de código."
+
+#: ../../content/applications/general/email_communication/email_template.rst:60
+msgid ":guilabel:`Appointment`: Add a specific appointment."
+msgstr ":guilabel:`Cita`: agregar una cita en específico."
+
+#: ../../content/applications/general/email_communication/email_template.rst:61
+msgid ":guilabel:`Calendar`: Schedule an appointment."
+msgstr ":guilabel:`Calendario`: agendar una cita."
+
+#: ../../content/applications/general/email_communication/email_template.rst:63
+msgid ":guilabel:`Navigation`"
+msgstr ":guilabel:`Navegación`"
+
+#: ../../content/applications/general/email_communication/email_template.rst:65
+msgid ":guilabel:`Link`: Add a link."
+msgstr ":guilabel:`Enlace`: agregar un enlace."
+
+#: ../../content/applications/general/email_communication/email_template.rst:66
+msgid ":guilabel:`Button`: Add a button."
+msgstr ":guilabel:`Botón`: agregar un botón."
+
+#: ../../content/applications/general/email_communication/email_template.rst:68
+msgid ":guilabel:`Medias`"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_template.rst:70
+msgid ":guilabel:`Image`: Insert an image."
+msgstr ":guilabel:`Imagen`: insertar una imagen."
+
+#: ../../content/applications/general/email_communication/email_template.rst:73
+msgid ""
+"To use any of these options, click on the desired feature from the powerbox "
+"drop-down menu. To format existing text with a text-related option (e.g. "
+":guilabel:`Heading 1`, :guilabel:`Switch direction`, etc.), highlight the "
+"text, then type in the activator key (forward slash) `/`, and select the "
+"desired option from the drop-down menu."
+msgstr ""
+"Si desea usar cualquiera de estas opciones, haga clic en la función deseada "
+"desde el menú desplegable de la paleta de comandos. Para dar formato a un "
+"texto existente con una opción de texto (por ejemplo, :guilabel:`Encabezado "
+"1`, :guilabel:`Cambiar dirección`, etc.), resalte el texto, teclee la tecla "
+"de activación (barra inclinada) `/` y seleccione la opción deseada en el "
+"menú desplegable."
+
+#: ../../content/applications/general/email_communication/email_template.rst:0
+msgid "Powerbox feature in the email template."
+msgstr ""
+"Función de la paleta de comandos en una plantilla de correo electrónico."
+
+#: ../../content/applications/general/email_communication/email_template.rst:83
+msgid "XML/HTML code editor"
+msgstr "Editor de código XML/HTML"
+
+#: ../../content/applications/general/email_communication/email_template.rst:85
+msgid ""
+"To access the XML/HTML editor for an email template, first enter "
+":ref:`developer mode <developer-mode>`. Then, click the :guilabel:`</>` icon"
+" in the upper-right corner of the template, and proceed to edit the "
+"XML/HTML. To return to the standard text editor, click the :guilabel:`</>` "
+"icon again."
+msgstr ""
+"Para acceder al editor XML/HTML desde una plantilla de correo primero debe "
+"activar el :ref:`modo de desarrollador <developer-mode>`. Después deberá "
+"hacer clic en el icono :guilabel:`</>` ubicado en la esquina superior "
+"derecha de la plantilla y empiece a editar el XML/HTML. Para regresar al "
+"editor de texto estándar haga clic en el icono :guilabel:`</>` de nuevo."
 
 #: ../../content/applications/general/email_communication/email_template.rst-1
-msgid "Composer in mass mailing mode after selecting multiple quotations."
-msgstr ""
-"Redactor en el modo de correos masivos después de seleccionar varias "
-"cotizaciones."
+msgid "HTML editor in the email template."
+msgstr "Editor HTML en una plantilla de correo."
 
-#: ../../content/applications/general/email_communication/email_template.rst:28
-msgid "You can also define them by default on the template:"
-msgstr "También puede definirlos de forma predeterminada en la plantilla:"
+#: ../../content/applications/general/email_communication/email_template.rst:95
+msgid ""
+"The XML/HTML editor should be accessed with caution as this is the backend "
+"code of the template. Editing the code can cause the email template to break"
+" immediately or when upgrading the database."
+msgstr ""
+"Debe ser cuidadoso con el editor XML/HTML ya que es el código backend de la "
+"plantilla. Si edita mal el código puede resultar en un error inmediato en la"
+" plantilla o en un error al actualizar la base de datos."
+
+#: ../../content/applications/general/email_communication/email_template.rst:100
+msgid "Dynamic placeholders"
+msgstr "Marcadores de posición dinámicos"
+
+#: ../../content/applications/general/email_communication/email_template.rst:102
+msgid ""
+"*Dynamic placeholders* reference certain fields within the Odoo database to "
+"produce unique data in the email template."
+msgstr ""
+"Los *marcadores de posición dinámicos* hacen referencia a ciertos campos "
+"dentro de la base de datos de Odoo para producir datos únicos en la "
+"plantilla de correo electrónico."
+
+#: ../../content/applications/general/email_communication/email_template.rst:106
+msgid ""
+"Many companies like to customize their emails with a personalized piece of "
+"customer information to grab attention. This can be accomplished in Odoo by "
+"referencing a field within a model by inserting a dynamic placeholder. For "
+"example, a customer's name can be referenced in the email from the "
+":guilabel:`Customer` field on the :guilabel:`Sales Order` model. The dynamic"
+" placeholder for this field is: `{{ object.partner_id }}`."
+msgstr ""
+"A muchas empresas les gusta personalizar sus correos electrónicos con "
+"información personalizada del cliente para que destaquen. Esto es posible en"
+" Odoo si se hace referencia a un campo dentro de un modelo, solo es "
+"necesario insertar un marcador de posición dinámico. Por ejemplo, puede "
+"agregar el nombre de un cliente al correo electrónico con el campo "
+":guilabel:`Cliente` en el modelo de la :guilabel:`orden de venta`. El "
+"marcador de posición dinámico para este campo es `{{ object.partner_id }}`."
+
+#: ../../content/applications/general/email_communication/email_template.rst:112
+msgid ""
+"Dynamic placeholders are encoded to display fields from within the database."
+" Dynamic placeholders can **only** be used in the fields present in the "
+":guilabel:`Email Configuration` tab, the :guilabel:`Subject` of the email, "
+"and the :guilabel:`Language`."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_template.rst:116
+msgid ""
+"Dynamic placeholders can be used with the following fields on an email "
+"template:"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_template.rst:118
+msgid ":guilabel:`Subject` (:guilabel:`Content` tab)"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_template.rst:119
+msgid ":guilabel:`From` (:guilabel:`Email Configuration` tab)"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_template.rst:120
+msgid ":guilabel:`To (Emails)` (:guilabel:`Email Configuration` tab)"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_template.rst:121
+msgid ":guilabel:`To (Partners)` (:guilabel:`Email Configuration` tab)"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_template.rst:122
+msgid ":guilabel:`CC` (:guilabel:`Email Configuration` tab)"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_template.rst:123
+msgid ":guilabel:`Reply-To` (:guilabel:`Email Configuration` tab)"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_template.rst:124
+msgid ":guilabel:`Language` (:guilabel:`Advanced Settings` tab)"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_template.rst:126
+msgid ""
+"The :guilabel:`Dynamic Placeholder Generator`, which is the last tab on the "
+"email template, creates placeholders for the aforementioned fields. Dynamic "
+"placeholders may also be inserted in the HTML code, but this task is out of "
+"the scope of Odoo Support."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_template.rst:130
+msgid ""
+"To use the *Dynamic Placeholder Generator*, navigate to the "
+":guilabel:`Dynamic Placeholder Generator` tab. Select the field that the "
+"dynamic placeholder should reference using the :guilabel:`Field` drop-down "
+"menu. Should a :guilabel:`Sub-Model` or :guilabel:`Sub-Field` need to be "
+"specified, set those by selecting the corresponding drop-down menu. These "
+"fields should be set automatically after setting the :guilabel:`Field`, "
+"although in some instances these fields will remain empty. The dynamic "
+"placeholder will appear in the :guilabel:`Placeholder Expression` field. "
+"Copy and paste the placeholder expression into the appropriate field in the "
+"tabs of the email template, as listed in the bulleted list above."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_template.rst:140
+msgid ""
+"Each unique combination of :guilabel:`Fields`, :guilabel:`Sub-models` and "
+":guilabel:`Sub-fields` creates a different dynamic placeholder. Imagine it "
+"as a combination to the field that is being created."
+msgstr ""
+"Cada combinación única de :guilabel:`Campos`, :guilabel:`Submodelos` y "
+":guilabel:`Subcampos` crea un marcador de posición dinámico diferente. "
+"Imagínelo como una combinación con el campo que se está creando. "
+
+#: ../../content/applications/general/email_communication/email_template.rst:144
+msgid ""
+"To search the available fields, simply click the drop-down menu next to "
+":guilabel:`Field` and select one, or click :guilabel:`Search More` to select"
+" from all of the available fields for the model that the email template is "
+"created for."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_template.rst:149
+msgid ":doc:`../../productivity/studio/models_modules_apps`."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_template.rst:152
+msgid ""
+"These fields can also be accessed in :ref:`developer mode <developer-mode>`."
+" On a contact form (or other relevant form in Odoo), navigate to the "
+"information that should be referenced in the dynamic placeholder, and hover "
+"over the field name. A box of backend information will reveal itself with "
+"the specific Odoo :guilabel:`Field` name in the backend. Search for this "
+"field in the :guilabel:`Field` drop-down menu in the email template."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_template.rst:0
+msgid "Backend information box of fields on a model."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_template.rst:163
+msgid ""
+":ref:`Views and fields in the developer documentation <developer/fields>`."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_template.rst:166
+msgid "Customizing email templates are out of the scope of Odoo Support."
+msgstr ""
+"Personalizar las plantillas de correo electrónico está fuera del alcance del"
+" Soporte de Odoo. "
+
+#: ../../content/applications/general/email_communication/email_template.rst:169
+msgid "Default reply on email templates"
+msgstr "Respuesta predeterminada en las plantillas de correo electrónico"
+
+#: ../../content/applications/general/email_communication/email_template.rst:171
+msgid ""
+"Under the :guilabel:`Email Configuration` tab on an email template, there is"
+" a :guilabel:`Reply To` field. In this field, add email addresses to which "
+"replies are redirected when sending emails en masse using this template."
+msgstr ""
+"En la pestaña de :guilabel:`Configuración de correo electrónico` en una "
+"plantilla de correo está el campo :guilabel:`Responder a`. En este campo, "
+"agregue las direcciones de correo electrónico a las que se redirigen las "
+"respuestas cuando se envían correos electrónicos en masa utilizando esta "
+"plantilla.     "
+
+#: ../../content/applications/general/email_communication/email_template.rst:176
+msgid ""
+"A Add multiple email addresses by adding a comma `,` between the addresses "
+"or dynamic placeholders."
+msgstr ""
 
 #: ../../content/applications/general/email_communication/email_template.rst-1
 msgid "Reply-to field on template."
 msgstr "Campo de \"Contestar a\" en la plantilla."
 
-#: ../../content/applications/general/email_communication/email_template.rst:34
+#: ../../content/applications/general/email_communication/email_template.rst:183
 msgid ""
-"Because of this, setting a value in this field is useless as the value "
-"defined will be totally ignored. The default *reply-to* value is the default"
-" catchall email address to ensure a communication between your customer and "
-"your Odoo database. For more information about the way the catchall works, "
-"please check :ref:`how to manage inbound messages "
-"<email_communication/inbound_messages>`."
+"The :guilabel:`Reply To` field is **only** used for mass mailing (sending "
+"emails in bulk). Bulk emails can be sent in almost every Odoo application "
+"that has a list view option."
 msgstr ""
-"Debido a esto, establecer un valor en este campo no es de utilidad, ya que "
-"el valor definido se ignorará por completo. El valor *Responder a* "
-"predeterminado es la dirección de correo electrónico catchall predeterminada"
-" para garantizar la comunicación entre su cliente y su base de datos de "
-"Odoo. Para obtener más información sobre cómo funciona el catchall, consulte"
-" :ref:`cómo gestionar los mensajes entrantes "
-"<email_communication/inbound_messages>`."
+"El campo :guilabel:`Responder a` **solo** se usa para los correos en masa "
+"(enviar correos electrónicos en grandes cantidades). Estos correos en masa "
+"se pueden enviar en casi cada aplicación en Odoo que tiene una opción de "
+"lista de vista.    "
 
-#: ../../content/applications/general/email_communication/email_template.rst:40
-msgid "Transactional emails and corresponding URL for each company"
-msgstr ""
-"Correos electrónicos transaccionales y los URL correspondientes a cada "
-"empresa"
-
-#: ../../content/applications/general/email_communication/email_template.rst:42
+#: ../../content/applications/general/email_communication/email_template.rst:186
 msgid ""
-"When using Odoo, multiple events trigger the sending of automated emails. "
-"These emails are known as transactional emails and sometimes contain links "
-"pointing to your Odoo database."
+"To send mass mails, while in :guilabel:`list` view, check the boxes next to "
+"the desired records where the emails are to be sent, click the "
+":guilabel:`Action` button (represented by a :guilabel:`⚙️ (gear)` icon), and"
+" select the desired email option from the :guilabel:`Action` drop-down menu."
+" Email options can vary by the particular list view and application."
 msgstr ""
-"Al usar Odoo, varios eventos pueden activar el envío de correos electrónicos"
-" automatizados. Estos correos electrónicos se conocen como correos "
-"electrónicos transaccionales y a veces contienen enlaces que llevan a su "
-"base de datos de Odoo."
+"Para enviar correos en masa, al estar en una vista de :guilabel:`lista`, "
+"seleccione las casillas que están junto a los registros deseados a los que "
+"se enviarán los correos electrónicos, haga clic en el botón de "
+":guilabel:`Acción` (representado por el icono de :guilabel:`⚙️ (engranaje)`)"
+" y seleccione la opción que desee para el correo electrónico del menú "
+"desplegable de :guilabel:`Acción`. Las opciones de correo pueden variar "
+"dependiendo de la vista de lista particular y la aplicación.    "
 
-#: ../../content/applications/general/email_communication/email_template.rst:45
+#: ../../content/applications/general/email_communication/email_template.rst:191
 msgid ""
-"By default, links generated by the database use the dynamic web.base.url key"
-" defined in the system parameters. More information about this "
-":ref:`parameter <domain-name/web-base-url>`."
+"If it is possible to send an email, a mail composer pop-up window appears, "
+"with values that can be defined and customized. This option will be "
+"available on the :guilabel:`Action` button on pages where emails can be sent"
+" in bulk---for example, on the :guilabel:`Customers` page of the CRM app. "
+"This action occurs throughout the Odoo database."
 msgstr ""
-"De forma predeterminada, los enlaces generados por la base de datos usan la "
-"clave dinámica web.base.url que se definió en los parámetros del sistema. "
-"Consulte más información sobre este :ref:`parámetro <domain-name/web-base-"
-"url>`."
+"Si es posible enviar un correo electrónico, aparecerá una ventana emergente "
+"para redactarlo con valores que puede definir y personalizar. Esta opción "
+"estará disponible en el botón de :guilabel:`Acción` en las páginas donde se "
+"pueden enviar correos en masa; por ejemplo, la página de "
+":guilabel:`Clientes` de la aplicación CRM. Esta acción ocurre en toda la "
+"base de datos de Odoo.  "
 
-#: ../../content/applications/general/email_communication/email_template.rst:48
-msgid ""
-"If the website application isn't installed, the web.base.url key will always"
-" be the default parameter used to generate all the links."
+#: ../../content/applications/general/email_communication/email_template.rst-1
+msgid "Email composer in mass mailing mode with reply-to highlighted."
 msgstr ""
-"Si la aplicación Sitio web no está instalada, la clave web.base.url siempre "
-"será el parámetro predeterminado que se utilizó para generar todos los "
-"enlaces."
+"Ventana para redactar en modo correo masivo con la opción responder a "
+"resaltada. "
 
-#: ../../content/applications/general/email_communication/email_template.rst:51
+#: ../../content/applications/general/email_communication/email_template.rst:201
+msgid "Transactional emails and corresponding URLs"
+msgstr "Correos electrónicos transaccionales y URLs correspondientes"
+
+#: ../../content/applications/general/email_communication/email_template.rst:203
 msgid ""
-"It’s important to know that this key can only have a single value, meaning "
-"that in a multi-website/company database environment, even if you have a "
+"In Odoo, multiple events can trigger the sending of automated emails. These "
+"emails are known as *transactional emails*, and sometimes contain links "
+"redirecting to the Odoo database."
+msgstr ""
+"En Odoo, varias acciones pueden activar el envío de correos automatizados. A"
+" estos correos se les conoce como *correos transaccionales* y a veces "
+"contienen enlaces que lo redirigen a la base de datos de Odoo."
+
+#: ../../content/applications/general/email_communication/email_template.rst:206
+msgid ""
+"By default, links generated by the database use the dynamic `web.base.url` "
+"key defined in the system parameters. For more information about this, see "
+":ref:`system parameters <domain-name/web-base-url>`."
+msgstr ""
+"De manera predeterminada, los enlaces generados por la base de datos usan la"
+" clave dinámica `web.base.url` en los parámetros del sistema. Para más "
+"información acerca de esto, consulte el documento de :ref:`parámetros del "
+"sistema <domain-name/web-base-url>`.  "
+
+#: ../../content/applications/general/email_communication/email_template.rst:210
+msgid ""
+"If the *Website* application is not installed, the `web.base.url` key will "
+"always be the default parameter used to generate all the links."
+msgstr ""
+"Si no tiene instalada la aplicación *Sitio web*, la clave  `web.base.url` "
+"siempre será el parámetro predeterminado que se usa para generar todos los "
+"enlaces. "
+
+#: ../../content/applications/general/email_communication/email_template.rst:214
+msgid ""
+"The `web.base.url` key can only have a single value, meaning that, in a "
+"multi-website or multi-company database environment, even if there is a "
 "specific domain name for each website, the links generated to share a "
-"document or within a transactional email might remain the same, whatever the"
-" website/company related to the sending of the email/document."
+"document (or the links within a transactional email) may remain the same, "
+"regardless of which website/company is related to the sending of the "
+"email/document."
 msgstr ""
-"Es importante saber que esta clave solo puede tener un único valor, lo que "
-"significa que en un entorno de múltiples empresas o sitios web, incluso si "
-"tiene un nombre de dominio específico para cada sitio web, los enlaces "
-"generados para compartir un documento o dentro de un correo electrónico "
-"transaccional podrían mantenerse igual, sin importar el sitio web o empresa "
-"relacionados con el envío del correo electrónico o el documento."
+"La clave `web.base.url` puede tener un solo valor, lo que significa, que en "
+"un ambiente de multi sitios web o multiempresas, incluso si hay un nombre de"
+" dominio específico para cada sitio web, los enlaces generados para "
+"compartir un documento (o los enlaces dentro de un correo transaccional) "
+"pueden quedarse igual sin importar si el sitio web o la empresa está "
+"relacionada con el envío del correo o documento."
 
-#: ../../content/applications/general/email_communication/email_template.rst:56
+#: ../../content/applications/general/email_communication/email_template.rst:220
 msgid ""
-"This is not always the case as some Odoo applications have a link "
-"established in the database with the website application, meaning that in "
-"this case, if a specific domain is defined for the websites, the URL "
-"generated in the email template will use the domain defined on the "
+"If the :guilabel:`Value` of the :guilabel:`web.base.url` system parameter is"
+" equal to `https://www.mycompany.com` and there are two separate companies "
+"in Odoo with different website URLs: `https://www.mycompany2.com` and "
+"`https://www.mycompany1.com`, the links created by Odoo to share a document,"
+" or send a transactional email, come from the domain: "
+"`https://www.mycompany.com`, regardless of which company sends the document "
+"or email."
+msgstr ""
+"Si el :guilabel:`valor` del parámetro del sistema :guilabel:`web.base.url` "
+"es igual a `https://www.miempresa.com` y hay dos empresas separadas en Odoo "
+"con distintas URL para los sitios web `https://www.miempresa.com` y "
+"`https://www.miempresa1.com`, los enlaces que Odoo crea para compartir un "
+"documento o enviar un correo transaccional provienen del dominio "
+"`https://www.miempresa.com`, sin importar qué empresa envía el documento o "
+"correo electrónico."
+
+#: ../../content/applications/general/email_communication/email_template.rst:226
+msgid ""
+"This is not always the case, as some Odoo applications (*eCommerce*, for "
+"example) have a link established in the database with the *Website* "
+"application. In that case, if a specific domain is defined for the website, "
+"the URL generated in the email template uses the domain defined on the "
 "corresponding website of the company."
 msgstr ""
-"Este no es siempre el caso porque algunas aplicaciones de Odoo tienen un "
-"enlace establecido en la base de datos con la aplicación Sitio web, lo que "
-"significa que, en este caso, si se define un dominio específico para los "
-"sitios web, el URL generado en la plantilla de correo electrónico utilizará "
-"el dominio definido en el sitio web correspondiente de la empresa."
+"Esto no siempre es así, algunas aplicaciones Odoo (por ejemplo, *Comercio "
+"electrónico*) tienen un enlace establecido en la base de datos con la "
+"aplicación *Sitio web*. En ese caso, si define un dominio específico para el"
+" sitio web, la URL generada en la plantilla de correo electrónico utiliza el"
+" dominio definido en el sitio web correspondiente de la empresa."
 
-#: ../../content/applications/general/email_communication/email_template.rst:62
+#: ../../content/applications/general/email_communication/email_template.rst:232
 msgid ""
-"A document shared using the documents application will always use the "
-"web.base.url key, as the document shared isn't associated with any "
-"particular website. Meaning that the URL will always be the same (the "
-"web.base.url key value), whatever the company it's shared from, this is a "
-"known limitation!"
+"When a customer makes a purchase on an Odoo *eCommerce* website, the order "
+"has an established link with that website. As a result, the links in the "
+"confirmation email sent to the customer use the domain name for that "
+"specific website."
 msgstr ""
-"Un documento que se compartió mediante la aplicación Documentos siempre "
-"usará la clave web.base.url, ya que el documento compartido no está asociado"
-" a ningún sitio web particular. Lo que significa que el URL siempre será el "
-"mismo (el valor de la clave web.base.url), sin importar la empresa desde la "
-"que se comparte. ¡Esta es una limitación conocida!"
+"Cuando un cliente realiza una compra en un sitio web de Odoo con *Comercio "
+"electrónico*, la orden tiene un vínculo establecido a ese sitio web. Como "
+"resultado, los enlaces en el correo electrónico de confirmación que se envía"
+" al cliente utilizan el nombre de dominio de ese sitio web en específico."
 
-#: ../../content/applications/general/email_communication/email_template.rst:67
+#: ../../content/applications/general/email_communication/email_template.rst:237
 msgid ""
-"On the other hand, sales orders made by a customer on one of your Odoo "
-"e-commerce websites have a link established with the website from which the "
-"order was made. As a result, the e-mail sent for the sales orders uses the "
-"domain name defined for the corresponding website to generate the links."
+"A document shared using the *Documents* application will **always** use the "
+"`web.base.url` key, as the document shared is not associated with any "
+"particular website. This means that the URL will always be the same (the "
+"`web.base.url` key value), no matter what company it's shared from. This is "
+"a known limitation."
 msgstr ""
-"Por otro lado, las órdenes de venta hechas por clientes en uno de sus sitios"
-" web de comercio electrónico de Odoo tienen un enlace establecido con el "
-"sitio web que originó la orden. Como resultado, el correo electrónico "
-"enviado para las órdenes de ventas usa el nombre de dominio que se definió "
-"para el sitio web correspondiente para generar los enlaces."
+"Un documento que se compartió mediante la aplicación *Documentos* "
+"**siempre** usará la clave `web.base.url`, ya que el documento compartido no"
+" está asociado a ningún sitio web particular. La URL siempre será la misma "
+"(el valor de la clave `web.base.url`), sin importar la empresa desde la que "
+"se comparte. Esta es una limitación conocida."
 
-#: ../../content/applications/general/email_communication/email_template.rst:71
+#: ../../content/applications/general/email_communication/email_template.rst:242
 msgid ""
-"For more information about how to configure your domains, we invite you to "
-"check :doc:`our domain name documentation "
-"</administration/maintain/domain_names>`."
+"For more information about how to configure domains, check out the "
+":doc:`domain name documentation </administration/maintain/domain_names>`."
 msgstr ""
-"Para obtener más información sobre cómo configurar sus dominios, consulte "
-":doc:`nuestra documentación sobre nombres de dominio "
+"Para obtener más información sobre cómo configurar sus dominios, consulte la"
+" :doc:`documentación sobre nombres de dominio "
 "</administration/maintain/domain_names>`."
 
-#: ../../content/applications/general/email_communication/email_template.rst:75
+#: ../../content/applications/general/email_communication/email_template.rst:246
 msgid "Updating translations within email templates"
 msgstr "Actualizar traducciones en plantillas de correos electrónicos"
 
-#: ../../content/applications/general/email_communication/email_template.rst:77
+#: ../../content/applications/general/email_communication/email_template.rst:248
 msgid ""
-"Email templates are automatically translated. Changing the translations "
-"shouldn’t be necessary. However, if for a specific reason you’d like to "
-"change some of the translations, this can be done."
+"In Odoo, email templates are automatically translated for all users in the "
+"database for all of the languages installed. Changing the translations "
+"shouldn't be necessary. However, if for a specific reason, some of the "
+"translations need to be changed, it can be done."
 msgstr ""
-"Las plantillas de correo electrónico se traducen de forma automática. No es "
-"necesario cambiar las traducciones. Sin embargo, es posible cambiarlas si "
-"por alguna razón en específico desea hacerlo."
+"En Odoo, las plantillas de correo electrónico se traducen de forma "
+"automática para todos los usuarios de la base de datos, en todos los idiomas"
+" instalados. Cambiar las traducciones no debería ser necesario, pero si por "
+"alguna razón específica necesita cambiar algunas de las traducciones, puede "
+"hacerlo."
 
-#: ../../content/applications/general/email_communication/email_template.rst:80
+#: ../../content/applications/general/email_communication/email_template.rst:253
 msgid ""
-"Like any modification in the code, keep in mind that modifications that "
-"aren’t done correctly (for example modifications leading to bad syntax) can "
-"break the template, as a result, the template will appear blank."
+"Like any modification in the code, if translation changes are not done "
+"correctly (for example, modifications leading to bad syntax), it can break "
+"the template, and as a result, the template will appear blank."
 msgstr ""
-"Al igual que con las modificaciones de código, tenga en cuenta que las "
-"modificaciones que no se hagan correctamente (por ejemplo, modificaciones "
-"que lleven a una mala sintaxis) pueden romper la plantilla y, cómo "
-"resultado, aparecerá en blanco."
+"Al igual que las modificaciones al código, si los cambios a la traducción no"
+" se realizan correctamente (por ejemplo, modificaciones que causen errores "
+"en la sintaxis), puede dañar la plantilla y, como resultado, la plantilla "
+"aparecerá en blanco."
 
-#: ../../content/applications/general/email_communication/email_template.rst:84
+#: ../../content/applications/general/email_communication/email_template.rst:257
 msgid ""
-"In order to edit your translations, follow these steps from the template."
-msgstr "Para editar sus traducciones, siga estos pasos en la plantilla."
-
-#: ../../content/applications/general/email_communication/email_template.rst:86
-msgid "Click on the edit button, then on the language button"
+"In order to edit translations, first enter :ref:`developer mode <developer-"
+"mode>`. Then, on the email template, click on the :guilabel:`Edit` button, "
+"and then click on the language button, represented by the initials of the "
+"language currently being used (e.g. :guilabel:`EN` for English)."
 msgstr ""
-"Haga clic en el botón de editar, luego haga clic en el botón de idioma."
+"Para editar traducciones, primero habilite el :ref:`modo de desarrollador "
+"<developer-mode>`. En la plantilla de correo electrónico, haga clic en el "
+"botón :guilabel:`editar` y luego haga clic en el botón de idioma, "
+"representado por las iniciales del idioma que se utiliza en ese momento (por"
+" ejemplo, guilabel:`EN` para inglés)."
 
-#: ../../content/applications/general/email_communication/email_template.rst:0
-msgid "Edit the language of a template"
-msgstr "Editar el idioma de una plantilla"
+#: ../../content/applications/general/email_communication/email_template.rst-1
+msgid "Edit the language of a template."
+msgstr "Editar el idioma de una plantilla."
 
-#: ../../content/applications/general/email_communication/email_template.rst:92
+#: ../../content/applications/general/email_communication/email_template.rst:266
 msgid ""
-"A pop-up window with the different languages installed on the database will "
-"be displayed. From here, editing the translations will be possible. Don't "
-"forget to hit the save button to preserve your changes."
+"If there aren't multiple languages installed and activated in the database, "
+"or if the user does not have administration access rights, the language "
+"button will not appear."
 msgstr ""
-"Aparecerá una ventana emergente con los distintos idiomas instalados en la "
-"base de datos. Aquí es posible editar las traducciones. No olvide guardar "
-"sus cambios al hacer clic en el botón de Guardar."
+"El botón de idioma no aparecerá si no hay varios idiomas instalados y "
+"activados en la base de datos, tampoco si el usuario no tiene permisos de "
+"administrador."
 
-#: ../../content/applications/general/email_communication/email_template.rst:0
+#: ../../content/applications/general/email_communication/email_template.rst:269
 msgid ""
-"Translation of the body of the Application template in the different "
-"languages installed."
+"A pop-up window with the different languages installed on the database "
+"appears. From this pop-up, editing of translations is possible. When the "
+"desired changes have been made, click the :guilabel:`Save` button to save "
+"the changes."
 msgstr ""
-"Traducción del cuerpo de la plantilla de aplicación en los distintos idiomas"
-" instalados."
+"Aparecerá una ventana emergente con los diferentes idiomas instalados en la "
+"base de datos, desde allí podrá editar las traducciones. Cuando haya "
+"realizado los cambios deseados, haga clic en el botón correspondiente para "
+":guilabel:`guardar` los cambios."
+
+#: ../../content/applications/general/email_communication/email_template.rst-1
+msgid "Translation of the body of the Appointment Booked template."
+msgstr ""
+"Traducción del contenido de la plantilla de confirmación de una cita "
+"reservada."
+
+#: ../../content/applications/general/email_communication/email_template.rst:278
+msgid ""
+"When editing the translations, the default language set in the database "
+"appears in **bold**."
+msgstr ""
+"Al editar las traducciones, el idioma predeterminado en la base de datos "
+"aparece **en negritas**."
 
 #: ../../content/applications/general/email_communication/faq.rst:3
-msgid "FAQ"
-msgstr "Preguntas frecuentes"
+msgid "Email issues"
+msgstr "Problemas con el correo electrónico"
 
 #: ../../content/applications/general/email_communication/faq.rst:5
 msgid ""
-"This document contains an explanation of the most recurring mailing "
-"concerns."
+"This document contains an explanation of the most recurring emailing issues "
+"in Odoo."
 msgstr ""
-"Este documento contiene una explicación de las preguntas más comunes sobre "
-"correos."
+"Este documento contiene una explicación de los problemas con el correo "
+"electrónico más recurrentes en Odoo."
 
-#: ../../content/applications/general/email_communication/faq.rst:7
-msgid ""
-"We will start by addressing issues of outgoing emails (ex: my client has not"
-" received my email), and then, of incoming emails (ex: I do not receive "
-"responses from my customers in the database)."
-msgstr ""
-"Empezaremos abordando los problemas de los correos electrónicos salientes "
-"(por ejemplo: mi cliente no ha recibido mi correo electrónico) y, "
-"posteriormente, de los correos electrónicos entrantes (por ejemplo: no "
-"recibo respuestas de mis clientes en la base de datos)."
-
-#: ../../content/applications/general/email_communication/faq.rst:11
+#: ../../content/applications/general/email_communication/faq.rst:8
 msgid "Outgoing emails"
 msgstr "Correos electrónicos salientes"
 
-#: ../../content/applications/general/email_communication/faq.rst:16
-msgid "What do you have to check if your email is not sent?"
-msgstr "¿Qué debe revisar si no se envía su correo electrónico?"
+#: ../../content/applications/general/email_communication/faq.rst:13
+msgid "Email is not sent"
+msgstr "El correo electrónico no se envía"
 
-#: ../../content/applications/general/email_communication/faq.rst:18
+#: ../../content/applications/general/email_communication/faq.rst:15
 msgid ""
-"The first indicator showing you that the email has not been sent is the red "
-"envelope next to the date and time of the message."
+"The first indicator showing that an email has not been sent is the presence "
+"of a red :guilabel:`✉️ (envelope)` icon, next to the date and time of the "
+"message, located in the chatter."
 msgstr ""
-"El primer indicador que muestra que no se envió un correo electrónico es el "
-"sobre rojo a lado de la fecha y hora del mensaje."
+"El primer indicador que muestra que un correo electrónico no sale es la "
+"presencia de un icono :guilabel:`✉️ (sobre)` rojo, junto a la fecha y hora "
+"del mensaje, ubicado en el chatter."
 
 #: ../../content/applications/general/email_communication/faq.rst-1
-msgid "Red envelope displayed in chatter"
-msgstr "Sobre rojo en el chatter"
+msgid "Red envelope icon displayed in chatter."
+msgstr "Icono de sobre rojo en el chatter."
 
-#: ../../content/applications/general/email_communication/faq.rst:26
+#: ../../content/applications/general/email_communication/faq.rst:22
+msgid ""
+"Unsent emails also appear in the Odoo email queue. In :ref:`developer mode "
+"<developer-mode>`, the email queue can be accessed by going to "
+":menuselection:`Settings app --> Technical menu --> Email --> Emails`. "
+"Unsent emails appear in turquoise, while sent emails appear in grey."
+msgstr ""
+"Los correos electrónicos que no se han enviado también aparecen en la cola "
+"de correo electrónico de Odoo. Habilite el :ref:`modo de desarrollador "
+"<developer-mode>`, desde allí podrá acceder a la cola de correo electrónico "
+"en la aplicación :menuselection:`Ajustes --> Menú técnico --> Correo "
+"electrónico --> Correos electrónicos`. Los correos electrónicos no enviados "
+"aparecen en color turquesa, mientras que los correos electrónicos enviados "
+"aparecen en gris."
+
+#: ../../content/applications/general/email_communication/faq.rst:27
 msgid "Common error messages"
 msgstr "Mensajes de error comunes"
 
-#: ../../content/applications/general/email_communication/faq.rst:31
-msgid "You reached your daily limit:"
-msgstr "Se alcanzó el límite diario:"
+#: ../../content/applications/general/email_communication/faq.rst:32
+msgid "Daily limit reached"
+msgstr "Límite diario alcanzado"
 
 #: ../../content/applications/general/email_communication/faq.rst-1
-msgid "Warning in Odoo upon email limit reached"
-msgstr "Advertencia en Odoo cuando se alcanza el límite"
+msgid "Warning in Odoo upon email limit reached."
+msgstr "Advertencia en Odoo sobre el límite de correo electrónico alcanzado."
 
-#: ../../content/applications/general/email_communication/faq.rst:37
+#: ../../content/applications/general/email_communication/faq.rst:38
 msgid ""
 "Each email service provider has its own email sending limits. The limits may"
-" be daily, hourly, and sometimes even per minute. This is the same for Odoo,"
-" we have to limit our customers to prevent our e-mail servers from being "
-"blacklisted."
+" be daily, hourly, or sometimes, per minute. This is the same for Odoo, "
+"which limits a customer's sending to prevent Odoo's email servers from being"
+" blacklisted."
 msgstr ""
 "Cada proveedor de servicios de correo electrónico tiene sus propios límites "
-"de correo electrónico. Los límites pueden ser por día, hora e incluso por "
-"minuto. Lo mismo sucede con Odoo, le ponemos un límite a los clientes para "
-"prevenir que nuestros servidores de correo electrónico se agreguen a listas "
-"negras."
+"de envío, estos pueden ser por día, por hora o incluso por minuto. Lo mismo "
+"sucede con Odoo, que limita el envío de un cliente para evitar que los "
+"servidores de correo electrónico de Odoo se incluyan en listas de exclusión."
 
-#: ../../content/applications/general/email_communication/faq.rst:41
+#: ../../content/applications/general/email_communication/faq.rst:42
 msgid "Here are the default limits for new databases:"
 msgstr ""
 "A continuación se describen los límites predeterminados para bases de datos "
 "nuevas:"
 
-#: ../../content/applications/general/email_communication/faq.rst:43
-msgid ""
-"200 emails/day for Odoo Online and Odoo.sh databases with an active "
-"subscription,"
-msgstr ""
-"200 correos electrónicos por día para bases de datos de Odoo en línea y "
-"Odoo.sh con una suscripción activa."
-
 #: ../../content/applications/general/email_communication/faq.rst:44
-msgid "20 emails/day for one-app free databases,"
+msgid ""
+"**200 emails per day** for Odoo Online and Odoo.sh databases with an active "
+"subscription."
 msgstr ""
-"20 correos electrónicos al día para bases de datos de una aplicación "
-"gratuita. "
+"**200 correos electrónicos por día** para las bases de datos de Odoo en "
+"línea y Odoo.sh con una suscripción activa."
 
 #: ../../content/applications/general/email_communication/faq.rst:45
-msgid "50 emails/day for trial databases,"
-msgstr "50 correos electrónicos al día para bases de datos de prueba,"
+msgid "**20 emails per day** for one-app free databases."
+msgstr ""
+"**20 correos electrónicos por día** para bases de datos con una sola "
+"aplicación gratuita."
 
 #: ../../content/applications/general/email_communication/faq.rst:46
+msgid "**50 emails per day** for trial databases."
+msgstr "**50 correos electrónicos por día** para bases de datos de prueba."
+
+#: ../../content/applications/general/email_communication/faq.rst:47
 msgid ""
-"in case of migration, your daily limit might be reset to 50 emails a day."
+"In the case of migration, the daily limit might be reset to 50 emails per "
+"day."
 msgstr ""
-"En el caso de migración, su límite diario se puede restablecer a 50 correos "
+"En caso de migración, el límite diario podría restablecerse a 50 correos "
 "electrónicos por día."
 
-#: ../../content/applications/general/email_communication/faq.rst:48
-msgid "In case you hit the limit, you can:"
-msgstr "En caso de alcanzar el límite, puede:"
+#: ../../content/applications/general/email_communication/faq.rst:49
+msgid "If the daily limit is reached:"
+msgstr "Si alcanza el límite diario:"
 
-#: ../../content/applications/general/email_communication/faq.rst:50
+#: ../../content/applications/general/email_communication/faq.rst:51
 msgid ""
-"Ask our support team to increase your daily limit. We will analyze the "
-"situation of your database depending on (non-exhaustive list):"
+"Contact the Odoo support team, who may increase the daily limit depending on"
+" the following factors:"
 msgstr ""
-"Solicitar al equipo de soporte que incremente su límite diario. Analizaremos"
-" la situación de su base de datos en función de (lista no exhaustiva):"
-
-#: ../../content/applications/general/email_communication/faq.rst:53
-msgid "How many users in your database,"
-msgstr "Cuántos usuarios hay en su base de datos."
+"Póngase en contacto con el equipo de soporte de Odoo, que puede aumentar el "
+"límite diario según los siguientes factores:"
 
 #: ../../content/applications/general/email_communication/faq.rst:54
-msgid "Which apps are installed,"
-msgstr "Qué aplicaciones se instalaron."
+msgid "How many users are in the database?"
+msgstr "El número de usuarios en la base de datos."
 
 #: ../../content/applications/general/email_communication/faq.rst:55
+msgid "Which apps are installed?"
+msgstr "Las aplicaciones instaladas."
+
+#: ../../content/applications/general/email_communication/faq.rst:56
 msgid ""
-"Your bounce rate: the percentage of email addresses that did not receive "
-"your emails because it was returned by a mail server on its way to the final"
-" recipient. You can contact the `support <https://www.odoo.com/help>`_."
+"The bounce rate: the percentage of email addresses that did not receive "
+"emails because they were returned by a mail server on its way to the final "
+"recipient."
 msgstr ""
-"Su tasa de mensajes devueltos: el porcentaje de direcciones de correos "
-"electrónicos que no recibieron sus mensajes porque fueron devueltos por un "
-"servidor de correo durante su camino al destinatario final. Puede contactar "
-"al `soporte <https://www.odoo.com/help>`_."
+"La tasa de devoluciones, es decir, el porcentaje de direcciones de correo "
+"electrónico que no recibieron sus correos. Un servidor de correo no permitió"
+" que llegaran a su destinatario final."
 
 #: ../../content/applications/general/email_communication/faq.rst:59
 msgid ""
-"Use your own outgoing email server to be independent of Odoo’s mail limit "
-"(please refer to :doc:`the corresponding documentation "
-"</applications/general/email_communication/email_servers>`),"
+"Use an external outgoing email server to be independent of Odoo's mail limit"
+" (refer to the corresponding :doc:`email documentation "
+"</applications/general/email_communication/email_servers>`)."
 msgstr ""
-"Usar su propio servidor de correos electrónicos salientes que sea "
+"Utilice un servidor de correo electrónico saliente externo que sea "
 "independiente del límite de correos de Odoo (consulte la :doc:`documentación"
-" correspondiente "
-"</applications/general/email_communication/email_servers>`),"
+" sobre correo electrónico "
+"</applications/general/email_communication/email_servers>` correspondiente)."
 
-#: ../../content/applications/general/email_communication/faq.rst:61
+#: ../../content/applications/general/email_communication/faq.rst:62
 msgid ""
-"Wait until 11pm UTC for the reset and click on the retry button: The "
-":ref:`Developer mode <developer-mode>` must be activated. Then, go to "
-":menuselection:`Settings --> Technical --> Emails`"
+"Wait until 11 PM (UTC) for the daily limit to reset, and retry sending the "
+"email. In :ref:`developer mode <developer-mode>`, go to "
+":menuselection:`Settings app --> Technical menu --> Email --> Emails`, then "
+"click the :guilabel:`Retry` button next to an unsent email."
 msgstr ""
-"Esperar hasta las 11 pm UTC para que suceda el restablecimiento y hacer clic"
-" en el botón de volver a intentar:: Se debe activar el :ref:`modo de "
-"desarrollador <developer-mode>`. Luego, vaya a :menuselection:`Ajustes --> "
-"Técnico --> Correos electrónicos`"
+"Espere hasta las 11 p. m. (UTC) para que el límite diario se restablezca y "
+"vuelva a intentar enviar el correo electrónico. En el :ref:`modo de "
+"desarrollador <developer-mode>`, vaya a la aplicación "
+":menuselection:`Ajustes --> menú técnico --> Correo electrónico --> Correos "
+"electrónicos`, luego haga clic en el botón :guilabel:`Volver a intentar` "
+"junto a un correo electrónico no enviado."
 
-#: ../../content/applications/general/email_communication/faq.rst-1
-msgid "Retry button of an emails"
-msgstr "Botón de volver a intentar en correos electrónicos"
-
-#: ../../content/applications/general/email_communication/faq.rst:69
+#: ../../content/applications/general/email_communication/faq.rst:67
 msgid ""
-"The daily limit is global to your database and can rise quickly! By default "
-"an internal message, a notification, a note, etc. counts as an email in your"
-" daily limit if it notifies someone."
+"The daily email limit is comprehensive to the database. By default, any "
+"internal message, notification, logged note, etc. counts as an email in the "
+"daily limit if it notifies someone via email. This can be mitigated by "
+"receiving :ref:`notifications in Odoo "
+"<discuss_app/notification_preferences>`, instead of emails."
 msgstr ""
-"¡El límite diario es general para su base de datos y puede aumentar con "
-"rapidez! De forma predeterminada, un mensaje interno, una notificación, una "
-"nota, entre otros, cuentan en su límite diario como un correo electrónico si"
-" notifican a alguien."
+"El límite de correos electrónicos toma en cuenta todo lo que ocurre en la "
+"base de datos. De forma predeterminada, cualquier mensaje interno, "
+"notificación, nota registrada, etc. cuenta como un correo para el límite "
+"diario si notifica a alguien por correo electrónico. Puede mitigar esta "
+"opción mediante la recepción de :ref:`notificaciones en Odoo "
+"<discuss_app/notification_preferences>`, en lugar de correos electrónicos."
 
-#: ../../content/applications/general/email_communication/faq.rst:72
+#: ../../content/applications/general/email_communication/faq.rst:73
+msgid "SMTP error"
+msgstr "Errores del SMTP"
+
+#: ../../content/applications/general/email_communication/faq.rst:75
 msgid ""
-"You can mitigate this by receiving your :ref:`notifications in Odoo "
-"<discuss_app/notification_preferences>` instead of by emails."
+"Simple Mail Transport Protocol (SMTP) error messages explain why an email "
+"wasn't transmitted successfully. :abbr:`SMTP (Simple Mail Transport "
+"Protocol)` is a protocol to describe the email structure, and transmits data"
+" from messages over the Internet. The error messages generated by email "
+"services are helpful tools to diagnose and troubleshoot email problems."
 msgstr ""
-"Puede mitigar esto al recibir sus :ref:`notificaciones en Odoo "
-"<discuss_app/notification_preferences>` en lugar de por correos "
-"electrónicos."
+"Los mensajes de error de protocolo simple de transferencia de correo (SMTP, "
+"por sus siglas en inglés) explican por qué un correo electrónico no se envió"
+" de forma adecuada. El :abbr:`SMTP (Protocolo simple de transferencia de "
+"correo)` es un protocolo para describir la estructura del correo electrónico"
+" y transmitir el mensaje a través de internet. Los mensajes de error que los"
+" servicios de correo electrónico generan son herramientas útiles para "
+"diagnosticar y solucionar problemas de correo electrónico."
 
-#: ../../content/applications/general/email_communication/faq.rst:76
-msgid "SMTP Error"
-msgstr "Error SMTP"
-
-#: ../../content/applications/general/email_communication/faq.rst:78
+#: ../../content/applications/general/email_communication/faq.rst:81
 msgid ""
-"You can find out why an email wasn't transmitted successfully by reviewing "
-"the Simple Mail Transport Protocol (SMTP) error messages. SMTP is a protocol"
-" to describe the email structure and transmit it over the Internet, and the "
-"error messages generated by email services are helpful tools to diagnose and"
-" troubleshoot email problems."
+"This is an example of a 554 SMTP permanent delivery error: `554: delivery "
+"error: Sorry, your message to ------@yahoo.com cannot be delivered. This "
+"mailbox is disabled (554.30). - mta4471.mail.bf1.yahoo.com --- Below this "
+"line is a copy of the message.`"
 msgstr ""
-"Puede descubrir por qué no se envió su correo electrónico al revisar los "
-"mensajes de error del Protocolo para transferencia simple de correo (SMTP, "
-"por sus siglas en inglés). El SMTP es un protocolo para describir la "
-"estructura del correo electrónico y transmitirlo por el internet, y los "
-"mensajes de error que generan los servicios de correo electrónico son "
-"herramientas útiles para diagnosticar y solucionar sus problemas de correo "
-"electrónico."
+"Este es un ejemplo de un error de entrega permanente SMTP 554: `554: error "
+"de entrega: Lo sentimos, su mensaje a ----@yahoo.com no se puede entregar. "
+"Este buzón está desactivado (554.30). - mta4471.mail.bf1.yahoo.com --- "
+"Debajo de esta línea hay una copia del mensaje.`"
 
-#: ../../content/applications/general/email_communication/faq.rst:84
-msgid "No Error"
-msgstr "Sin error"
-
-#: ../../content/applications/general/email_communication/faq.rst:86
+#: ../../content/applications/general/email_communication/faq.rst:85
 msgid ""
-"Odoo is not always capable of providing information for the reason it "
-"failed. The different providers implement a personalized policy of the "
-"bounce emails and it is not always possible for Odoo to interpret it "
-"correctly."
+"The debug menu can be used to investigate SMTP sending issues from a "
+"database. To access the menu, :ref:`developer mode <developer-mode>` must be"
+" activated. Once activated, navigate to the :menuselection:`Debug Menu` in "
+"the top right of the menu bar (the :guilabel:`🐞 (bug)` icon), "
+":menuselection:`Debug Menu --> Manage Messages`"
 msgstr ""
-"Odoo no siempre puede proporcionar información sobre el motivo del fallo. "
-"Los diversos proveedores implementan una política personalizada de correos "
-"electrónicos devueltos y no siempre es posible para Odoo interpretarla de "
-"forma adecuada."
+"El menú de depuración es útil para investigar los problemas de envío de SMTP"
+" desde una base de datos. Para acceder al menú, debe habilitar el :ref:`modo"
+" de desarrollador <developer-mode>`. Una vez activado, vaya al "
+":menuselection:`menú de depuración` en la parte superior derecha de la barra"
+" de menús (el icono :guilabel:`🐞 (representado con un insecto)` ), "
+":menuselection:`Menú de depuración --> Administrar mensajes`."
 
 #: ../../content/applications/general/email_communication/faq.rst:90
 msgid ""
-"If you have this problem on a recurring basis with the same client or the "
-"same domain, please do not hesitate to contact `Odoo Support "
-"<https://www.odoo.com/help>`_ for help in finding a reason."
+"The :guilabel:`Manage Messages` menu opens a list of all the messages sent "
+"in a particular record. Within each message there is information on sending,"
+" including the type, and subtype, of the message."
 msgstr ""
-"Si tiene este problema de forma recurrente con el mismo cliente o el mismo "
-"dominio, no dude en contactar al `soporte de Odoo "
-"<https://www.odoo.com/help>`_ para que le ayuden a encontrar el motivo."
+"El menú  :guilabel:`Administrar mensajes` abre una lista de todos los "
+"mensajes enviados en un registro específico. Dentro de cada mensaje, hay "
+"información acerca del envío incluyendo el tipo y el subtipo del mensaje.  "
 
-#: ../../content/applications/general/email_communication/faq.rst:93
+#: ../../content/applications/general/email_communication/faq.rst:94
 msgid ""
-"Note: in such case, one of the most common reasons is related to :ref:`SPF "
-"<email_communication/spf_compliant>` and/or :ref:`DKIM "
-"<email_communication/DKIM_compliant>` configuration."
+"Other information includes to whom the message was sent, and whether Odoo "
+"received a bounce-back message from an email server."
 msgstr ""
-"Tome en cuenta que, en este caso, uno de los motivos más comunes se "
-"relaciona con la configuración :ref:`SPF "
+"También incluye el destinatario del mensaje, y si Odoo recibió un mensaje de"
+" rebote de un servidor de correo."
+
+#: ../../content/applications/general/email_communication/faq.rst-1
+msgid "Manage messages menu option on the debug menu."
+msgstr "Opción de administrar mensajes en el menú debug. "
+
+#: ../../content/applications/general/email_communication/faq.rst:102
+msgid ""
+"A user must be on a view in Odoo that has a chatter in order for the "
+":guilabel:`Manage Messages` menu option to appear."
+msgstr ""
+"El usuario debe poder ver el chatter en Odoo para que aparezca la opción de "
+"menú :guilabel:`Administrar mensajes`.  "
+
+#: ../../content/applications/general/email_communication/faq.rst:106
+msgid "No error populated"
+msgstr "Sin error"
+
+#: ../../content/applications/general/email_communication/faq.rst:108
+msgid ""
+"Odoo is not always capable of providing information for the reason it "
+"failed. The different email providers implement a personalized policy of "
+"bounced emails, and it is not always possible for Odoo to interpret it "
+"correctly."
+msgstr ""
+"Odoo no siempre podrá proporcionar información sobre el motivo del error. "
+"Los diferentes proveedores implementan políticas personalizadas con respecto"
+" a los correros devueltos y no siempre es posible que Odoo lo interprete "
+"correctamente."
+
+#: ../../content/applications/general/email_communication/faq.rst:112
+msgid ""
+"If this is a recurring problem with the same client, or the same domain, do "
+"not hesitate to contact `Odoo Support <https://www.odoo.com/help>`_ for help"
+" in finding a reason."
+msgstr ""
+"Si es problema frecuente con el mismo cliente o el mismo dominio no dude en "
+"contactar al `soporte de Odoo <https://www.odoo.com/help>`_  para que le "
+"ayuden a encontrar el motivo. "
+
+#: ../../content/applications/general/email_communication/faq.rst:116
+msgid ""
+"One of the most common reasons for an email failing to send with no error "
+"message is related to :ref:`SPF <email_communication/spf_compliant>` and/or "
+":ref:`DKIM <email_communication/DKIM_compliant>` configuration. Also, check "
+"to make sure the `mail.bounce.alias` is defined in the *system parameters*. "
+"Access system parameters in :ref:`developer mode <developer-mode>` by "
+"navigating to :menuselection:`Settings app --> Technical menu --> Parameters"
+" --> System Parameters`."
+msgstr ""
+"Una de las razones más comunes para que un correo no se envíe con un mensaje"
+" de sin error, está relacionado con la configuración  :ref:`SPF "
 "<email_communication/spf_compliant>` y/o :ref:`DKIM "
-"<email_communication/DKIM_compliant>`."
+"<email_communication/DKIM_compliant>`También, asegúrese de que el alias "
+"`mail.bounce.alias` esté definido en los *parámetros del sistemas*. Puede "
+"acceder a los parámetros del sistema en el :ref:`modo desarrollador "
+"<developer-mode>` en :menuselection:`Ajustes --> Menú técnico --> Parámetros"
+" --> Parámetros del sistema`."
 
-#: ../../content/applications/general/email_communication/faq.rst:97
-msgid "Why is my email sent late?"
-msgstr "¿Por qué mi correo electrónico se envía tarde?"
+#: ../../content/applications/general/email_communication/faq.rst:124
+msgid "Email is sent late"
+msgstr "El correo se envío a destiempo "
 
-#: ../../content/applications/general/email_communication/faq.rst:99
+#: ../../content/applications/general/email_communication/faq.rst:126
 msgid ""
-"It may happen that you schedule an email campaign but it is not sent on "
-"time. We know that we use a delayed job to send emails that we consider as "
-"not urgent (Newsletters concept such as mass mailing, marketing automation, "
-"events). The system utility **cron** can be used to schedule programs to run"
-" automatically at predetermined intervals. We use that policy in order to "
-"avoid cluttering the mail servers and prioritize the communication."
+"Email campaigns send at a scheduled time, using a delay pre-programed in the"
+" database. Odoo uses a delayed task to send emails that are considered \"not"
+" urgent\" (newsletter formats, such as: mass mailing, marketing automation, "
+"and events). The system utility **cron** can be used to schedule programs to"
+" run automatically at predetermined intervals. Odoo uses that policy in "
+"order to avoid cluttering the mail servers and, instead, prioritizes "
+"individual communication. This **cron** is called :guilabel:`Mail: Email "
+"Queue Manager`, and can be accessed in :ref:`developer mode <developer-"
+"mode>` by going to :menuselection:`Settings app --> Technical menu --> "
+"Automation --> Scheduled Actions`."
 msgstr ""
-"Puede suceder que programó una campaña de correo electrónico, pero no se "
-"envía a tiempo. Sabemos que usamos un retraso para enviar correos "
-"electrónicos que consideramos no urgentes (boletines como correos masivos, "
-"automatización de marketing, eventos). Puede utilizar el **cron** para "
-"planificar que los programas se ejecuten de forma automática en intervalos "
-"predeterminados. Usamos esa política para evitar la saturación de los "
-"servidores de correo y priorizar la comunicación."
-
-#: ../../content/applications/general/email_communication/faq.rst:105
-msgid ""
-"The emails considered urgent (communication from one person to another one "
-"such as Sales Orders, Invoices, Purchase Orders, etc.) are sent directly."
-msgstr ""
-"Los correos electrónicos que se consideran urgentes (comunicación entre dos "
-"personas como órdenes de venta, facturas, órdenes de compra, etc.) se envían"
-" directamente."
+"Las campañas de correo se envían en a una hora programada usando un retardo "
+"pre programado en la base de datos. Odoo usa una tarea retardada para enviar"
+" correos que se consideran \"no urgentes\" (formatos de boletín, como: "
+"correos en masa, automatización de marketing y eventos). La función del "
+"sistema **cron** se puede usar para programar que ciertas actividades se "
+"ejecuten de manera automática en intervalos determinados. Odoo usa está "
+"política para evitar que los servidores de correo se saturen, y en su lugar,"
+" prioriza la comunicación individual. Este **cron** se llama  "
+"guilabel:`Correo: administrador de la fila de correos `, y puede acceder a "
+"él desde el :ref:`modo desarrollador <developer-mode>` en "
+":menuselection:`Ajustes --> Menpu técnico --> Automatización --> Acciones "
+"programadas`. "
 
 #: ../../content/applications/general/email_communication/faq.rst-1
 msgid "Email scheduled to be sent later."
 msgstr "Correo electrónico programado para enviarse más tarde."
 
-#: ../../content/applications/general/email_communication/faq.rst:112
+#: ../../content/applications/general/email_communication/faq.rst:140
 msgid ""
-"By default, the Mass Mailing cron runs every 60 minutes. So, you should wait"
-" maximum an hour before the campaign is actually sent."
+"What is a **cron**? A cron is an action that Odoo runs in the background to "
+"execute particular code to complete a task."
 msgstr ""
-"De forma predeterminada, el cron de correos masivos se ejecuta cada 60 "
-"minutos. Debe esperar máximo una hora antes de que la campaña se envíe."
-
-#: ../../content/applications/general/email_communication/faq.rst:116
-msgid "Incoming emails"
-msgstr "Correos electrónicos entrantes"
-
-#: ../../content/applications/general/email_communication/faq.rst:118
-msgid ""
-"When you have an issue with incoming emails, there might not be an "
-"indication per se in Odoo. This is the client who tries to contact a "
-"database who will get a bounce (most of the time 550: mailbox unavailable)."
-msgstr ""
-"Cuando se tiene un problema con los correos electrónicos entrantes, puede "
-"que no haya una indicación como tal en Odoo. Es el cliente que intenta "
-"contactar con una base de datos quien recibirá un correo devuelto (la "
-"mayoría de las veces 550: bandeja de entrada no disponible)."
-
-#: ../../content/applications/general/email_communication/faq.rst:123
-msgid "Emails are not received"
-msgstr "No se reciben correos electrónicos"
-
-#: ../../content/applications/general/email_communication/faq.rst:125
-msgid "Depending on the platform you are using:"
-msgstr "Según la plataforma que utiliza:"
-
-#: ../../content/applications/general/email_communication/faq.rst:127
-msgid ""
-"The **Odoo.sh** users can find their live logs on the folder "
-":file:`~/logs/`."
-msgstr ""
-"Los usuarios de **Odoo.sh** pueden encontrar sus registros en la carpeta "
-":file:`~/logs/`."
-
-#: ../../content/applications/general/email_communication/faq.rst:129
-msgid ""
-"The folder :file:`~/logs/` (preferably accessed by the command line) of an "
-"Odoo.sh contains a list of files containing the logs of the database. The "
-"log files are created everyday at 5:00 AM UTC. The two last days are not "
-"compressed, while the older ones are, in order to gain space. The naming of "
-"the files for Today and Yesterday are :file:`odoo.log` and "
-":file:`odoo.log.1`. For the following, they are named with their dates and "
-"compressed. See the Odoo.sh documentation about :ref:`logs <odoosh/logs>`. "
-"Use the command ``grep`` and ``zgrep`` (for the compressed ones) to search "
-"through the files."
-msgstr ""
-"La carpeta :file:`~/logs/` (a la que se accede de preferencia mediante la "
-"línea de comando) de una base de datos de Odoo.sh contiene una lista de los "
-"archivos que contienen los registros de la base de datos. Los archivos de "
-"registros se crean todos los días a las 5:00 am UTC. Los últimos dos días no"
-" se comprimen, mientras que las más antiguas sí, para optimizar el espacio. "
-"Los nombres de los archivos para hoy y ayer son :file:`odoo.log` y "
-":file:`odoo.log.1` respectivamente. Los siguientes se nombran con sus fechas"
-" y se comprimen. Consulte la documentación de Odoo.sh sobre :ref:`registros "
-"<odoosh/logs>`. Utilice los comandos ``grep`` y ``zgrep`` (para los "
-"comprimidos) para buscar en los archivos."
-
-#: ../../content/applications/general/email_communication/faq.rst:137
-msgid ""
-"**Odoo Online** users won’t have access to their logs. However you can still"
-" contact `Odoo Support <https://www.odoo.com/help>`_ , if you have a "
-"recurring issue with the same client or domain."
-msgstr ""
-"Los usuarios de **Odoo en línea** no tendrán acceso a sus registros. Sin "
-"embargo, puede contactar al `soporte de Odoo <https://www.odoo.com/help>`_  "
-"si tiene un problema recurrente con el mismo cliente o dominio."
-
-#: ../../content/applications/general/email_communication/faq.rst:142
-msgid "Get help from support"
-msgstr "Recibir ayuda del equipo de soporte "
+"¿Qué es un **cron?** Un cron es una acción que Odoo ejecuta en segundo plano"
+" para efectuar un código particular para completar una tarea. "
 
 #: ../../content/applications/general/email_communication/faq.rst:144
 msgid ""
-"In order to get helped efficiently, please provide as much information as "
-"possible. Here is a list of what can be helpful:"
+"By default, the *Mass Mailing cron* runs every 60 minutes. This can be "
+"changed to no less than 5 minutes. However, running the action every 5 "
+"minutes would bog down the Odoo database (stress the system), so this is not"
+" recommended. To edit the mass mailing cron, select the scheduled action "
+":guilabel:`Mail: Email Queue Manager`, and proceed to make any necessary "
+"adjustments."
 msgstr ""
-"Proporcione tanta información como sea posible para recibir ayuda de forma "
-"eficiente. A continuación se encuentra una lista de lo que puede ser útil:"
+"De manera predeterminada, el *cron de Correos Masivos* se ejecuta cada 60 "
+"minutos. Lo puede cambiar a mínimo 5 minutos. Sin embargo, ejecutar una "
+"acción cada 5 minutos saturaría la base de datos de Odoo (el sistema se "
+"estresa), por lo que no es recomendado. Para editar el cron de correos "
+"masivos, seleccione la acción programada :guilabel:`Correo: administrador de"
+" la fila de correos`, y proceda a realizar los ajustes necesarios.  "
 
-#: ../../content/applications/general/email_communication/faq.rst:147
+#: ../../content/applications/general/email_communication/faq.rst:149
 msgid ""
-"The **EML** of the email, stating for *Electronic Mail*, is the file format "
-"containing all the technical information required for an investigation. The "
-"documentation of your own email provider might help you on how to get your "
-"EML files. Once you get the EML of the email, adding it in the attachment of"
-" your ticket is the most efficient way for us to investigate. The support "
-"will mainly focus on redundant issues."
+"Emails that are considered urgent (communication from one person to another,"
+" such as sales orders, invoices, purchase orders, etc.) are sent "
+"immediately."
 msgstr ""
-"El archivo **EML** del correo electrónico, es el formato de archivo que "
-"contiene toda la información técnica necesaria para una investigación. La "
-"documentación de su proveedor de correo electrónico puede explicarle cómo "
-"obtener sus archivos EML. Una vez que tenga el EML de su correo electrónico,"
-" lo más eficiente para nuestra investigación es agregarlo como archivo "
-"adjunto en su ticket. El equipo de soporte se enfocará principalmente en "
-"problemas redundantes."
+"Los correos que se consideran urgentes (comunicación de una persona a otra, "
+"como órdenes de ventas, facturas, órdenes de compra, etc.) se envían de "
+"manera inmediata. "
 
-#: ../../content/applications/general/email_communication/faq.rst:154
-msgid "`Gmail documentation <https://support.google.com/mail/answer/29436>`_"
-msgstr ""
-"`Documentación de Gmail <https://support.google.com/mail/answer/29436>`_"
+#: ../../content/applications/general/email_communication/faq.rst:153
+msgid "Incoming emails"
+msgstr "Correos electrónicos entrantes"
 
-#: ../../content/applications/general/email_communication/faq.rst:156
+#: ../../content/applications/general/email_communication/faq.rst:155
 msgid ""
-"`Outlook documentation <https://support.microsoft.com/en-us/office/view-"
-"internet-message-headers-in-outlook-"
-"cd039382-dc6e-4264-ac74-c048563d212c#tab=Web>`_"
+"When there is an issue with incoming emails, there might not be an "
+"indication, per se, in Odoo. It is the sending email client, who tries to "
+"contact a database, that will get a bounce-back message (most of the time a "
+":guilabel:`550: mailbox unavailable` error message)."
 msgstr ""
-"`Documentación de Outlook <https://support.microsoft.com/en-us/office/view-"
-"internet-message-headers-in-outlook-"
-"cd039382-dc6e-4264-ac74-c048563d212c#tab=Web>`_"
+"Cuando hay un problema con los correos entrantes, puede que no haya una "
+"instrucción como tal en Odoo. El cliente que envía el correo es quien debe "
+"contactar a la base de datos, que recibirá un mensaje de devuelto (casi "
+"siempre es el mensaje de error :guilabel:`550: bandeja de entrada no "
+"disponible`).   "
 
-#: ../../content/applications/general/email_communication/faq.rst:159
-msgid ""
-"The exact flow you are following in order to normally receive those emails "
-"in Odoo. Here are examples of questions whose answers can be useful:"
-msgstr ""
-"El flujo exacto que sigue para recibir normalmente esos correos electrónicos"
-" en Odoo. A continuación hay ejemplos de preguntas cuyas respuestas pueden "
-"ser útiles:"
+#: ../../content/applications/general/email_communication/faq.rst:160
+msgid "Email is not received"
+msgstr "El correo electrónico no se recibió"
 
 #: ../../content/applications/general/email_communication/faq.rst:162
-msgid "Is this simply a reply from an email going out from Odoo ?"
+msgid ""
+"The steps that should be taken depend on the Odoo platform where the "
+"database is hosted."
 msgstr ""
-"¿Esto es solamente una respuesta de un correo electrónico que sale de Odoo?"
+"El proceso a seguir depende de la plataforma de Odoo en donde esté alojada "
+"la base de datos. "
 
 #: ../../content/applications/general/email_communication/faq.rst:164
-msgid "Are you using an incoming email server or somehow redirecting?"
+msgid ""
+"**Odoo.sh** users can find their live logs on the folder :file:`~/logs/`."
 msgstr ""
-"¿Usa un servidor de correo electrónico entrante o redirige de alguna forma?"
+"Los usuarios de **Odoo.sh** pueden encontrar sus registros en tiempo real en"
+" la carpeta :file:`~/logs/`."
 
 #: ../../content/applications/general/email_communication/faq.rst:166
 msgid ""
-"Can you provide us with an example of an email that has been correctly "
-"forwarded ?"
+"Logs are a stored collection of all the tasks completed in a database. They "
+"are a text-only representation, complete with timestamps of every action "
+"taken on the Odoo database. This can be helpful to track emails leaving the "
+"database. Failure to send can also be seen by logs that indicate that the "
+"message tried to send repeatedly. Logs will show every action to the email "
+"servers from the database."
 msgstr ""
-"¿Puede proporcionarnos un ejemplo de un correo electrónico que se haya "
-"reenviado correctamente?"
-
-#: ../../content/applications/general/email_communication/faq.rst:168
-msgid "Providing answers to the following questions:"
-msgstr "Responda estas preguntas:"
-
-#: ../../content/applications/general/email_communication/faq.rst:170
-msgid ""
-"Is it a generic issue or is it specific to a use case? If yes, which one "
-"exactly?"
-msgstr "¿Es un problema genérico o es específico de un caso de uso? "
+"Los registros son una colección almacenada de todas las tareas completadas "
+"en la base de datos. Solo son una representación escrita, pero completa con "
+"marcadores de tiempo de cada acción que se llevó a cabo en la base de datos "
+"de Odoo. Esto puede ser útil para rastrear los correos salientes de la base "
+"de datos. Si falla en enviarse, también podrá verlo en los registros que "
+"indican que un mensaje se intentó enviar varias veces. Los registros "
+"mostrarán cada acción en los servidores de correo desde la base de datos. "
 
 #: ../../content/applications/general/email_communication/faq.rst:172
 msgid ""
+"The folder :file:`~/logs/` (accessed by the command line or on the Odoo.sh "
+"dashboard) of an Odoo.sh database contains a list of files containing the "
+"logs of the database. The log files are created everyday at 5:00 AM (UTC)."
+msgstr ""
+"La carpeta :file:`~/logs/` (a la cual puede acceder desde la línea de "
+"comando o en el tablero de Odoo.sh) de una base de datos de Odoo.sh contiene"
+" una lista de archivos que contienen los registros de la base de datos. "
+"Estos registros se crean todos los días a las 5:00 AM (UTC)."
+
+#: ../../content/applications/general/email_communication/faq.rst:177
+msgid ""
+"The two most recent days (today and yesterday) are not compressed, while the"
+" older ones are, in order to save space. The naming of the files for today "
+"and yesterday are respectively: :file:`odoo.log` and :file:`odoo.log.1`."
+msgstr ""
+"Los dos días más recientes (hoy y mañana) no están comprimidos, mientras que"
+" los más antiguos si lo están para ahorrar espacio. Los nombres de los "
+"archivos para hoy y mañana son (respectivamente): :file:`odoo.log` and "
+":file:`odoo.log.1`. "
+
+#: ../../content/applications/general/email_communication/faq.rst:181
+msgid ""
+"For the following days, they are named with their dates, and then "
+"compressed. Use the command :command:`grep` and :command:`zgrep` (for the "
+"compressed ones) to search through the files."
+msgstr ""
+"Para los días siguientes, las fechas son el nombre de los registros y luego "
+"se comprimen. Use los comandos :command:`grep` y :command:`zgrep` (para los "
+"comprimidos) para buscar por los registros.   "
+
+#: ../../content/applications/general/email_communication/faq.rst:185
+msgid ""
+"For more information on logs and how to access them via the Odoo.sh "
+"dashboard, see :ref:`this administration documentation <odoosh/logs>`."
+msgstr ""
+"Para más información acerca de los registros  y de como acceder a ellos a "
+"través del tablero de Odoo.sh, consulte la :ref:`documentación de "
+"administración <odoosh/logs>`."
+
+#: ../../content/applications/general/email_communication/faq.rst:188
+msgid ""
+"For more information on accessing logs via the command line visit :ref:`this"
+" developer documentation <reference/cmdline/server/logging>`."
+msgstr ""
+"Para obtener más información acerca del acceso a los registros a través de "
+"la línea de comando, consulte la :ref:`documentación de desarrollador "
+"<reference/cmdline/server/logging>`. "
+
+#: ../../content/applications/general/email_communication/faq.rst:191
+msgid ""
+"**Odoo Online** users won't have access to the logs. However `Odoo Support "
+"<https://www.odoo.com/help>`_ can be contacted if there is a recurring issue"
+" with the same client or domain."
+msgstr ""
+"Los usuarios de **Odoo en línea** no tendrán acceso a los registros. Sin "
+"embargo, puede contactar al  `soporte de Odoo<https://www.odoo.com/help>`_  "
+"si hay algún problemas frecuentes con el mismo cliente o dominio.  "
+
+#: ../../content/applications/general/email_communication/faq.rst:196
+msgid "Get help from Odoo support"
+msgstr "Obtenga ayuda de soporte de Odoo"
+
+#: ../../content/applications/general/email_communication/faq.rst:198
+msgid ""
+"In order to get helped efficiently, please provide as much information as "
+"possible. Here is a list of what can be helpful when reaching out to the "
+"Odoo Support team about an issue:"
+msgstr ""
+"Proporcione toda la información que pueda acerca de su problema para que "
+"reciba ayuda de forma eficiente. Esta es una lista de lo que puede ser útil "
+"al contactar al soporte de Odoo: "
+
+#: ../../content/applications/general/email_communication/faq.rst:201
+msgid ""
+"Send a copy of the email headers. The `.EML` file (or **headers**) of the "
+"email is the file format containing all the technical information required "
+"for an investigation. The documentation from the email provider might "
+"explain how to access the EML file/header files. Once the headers of the "
+"email are obtained, adding it into the Odoo Support ticket is the most "
+"efficient way for the Odoo Support team to investigate."
+msgstr ""
+"Envíe una copia de los encabezados de los correos. El archivo `.EML` (o "
+"**encabezados**) del correo es el formato de archivo que contiene toda la "
+"información técnica que requiere una investigación. La documentación del "
+"proveedor del correo podría explicar como acceder a los archivos/encabezados"
+" EML. Una vez obtenidos los encabezados de los correos, agregarlo al ticket "
+"de soporte de Odoo es la forma mas eficiente para que el equipo de soporte "
+"lo trabaje. "
+
+#: ../../content/applications/general/email_communication/faq.rst:208
+msgid ""
+"`Gmail documentation on headers "
+"<https://support.google.com/mail/answer/29436>`_"
+msgstr ""
+"`Documentación de Gmail sobre los encabezados "
+"<https://support.google.com/mail/answer/29436>`_"
+
+#: ../../content/applications/general/email_communication/faq.rst:209
+msgid ""
+"`Outlook documentation on headers <https://support.microsoft.com/en-"
+"us/office/view-internet-message-headers-in-outlook-"
+"cd039382-dc6e-4264-ac74-c048563d212c#tab=Web>`_"
+msgstr ""
+"`Documentación de Outlook sobre los encabezados "
+"<https://support.microsoft.com/en-us/office/view-internet-message-headers-"
+"in-outlook-cd039382-dc6e-4264-ac74-c048563d212c#tab=Web>`_"
+
+#: ../../content/applications/general/email_communication/faq.rst:212
+msgid ""
+"Explain the exact flow that is being followed to normally receive those "
+"emails in Odoo. Here are examples of questions whose answers can be useful:"
+msgstr ""
+"Explique en detalle el flujo que sigue normalmente para recibir esos correos"
+" en Odoo. Estos son algunos ejemplos de preguntas cuyas respuestas pueden "
+"ser útiles: "
+
+#: ../../content/applications/general/email_communication/faq.rst:215
+msgid "Is this a notification message from a reply being received in Odoo?"
+msgstr "¿Es un mensaje de notificación de una respuesta que recibe en Odoo?"
+
+#: ../../content/applications/general/email_communication/faq.rst:216
+msgid "Is this a message being sent from the Odoo database?"
+msgstr "¿Es un mensaje recibido desde la base de datos de Odoo?"
+
+#: ../../content/applications/general/email_communication/faq.rst:217
+msgid ""
+"Is there an incoming email server being used, or is the email somehow being "
+"redirected?"
+msgstr ""
+"¿Está usando un servidor de correos entrantes o el correo se redirige?  "
+
+#: ../../content/applications/general/email_communication/faq.rst:218
+msgid "Is there an example of an email that has been correctly forwarded?"
+msgstr ""
+"¿Tiene algún ejemplo de un correo que se haya reenviado correctamente?"
+
+#: ../../content/applications/general/email_communication/faq.rst:220
+msgid "Provide answers to the following questions:"
+msgstr "Responda las siguientes preguntas:"
+
+#: ../../content/applications/general/email_communication/faq.rst:222
+msgid ""
+"Is it a generic issue, or is it specific to a use case? If specific to a use"
+" case, which one exactly?"
+msgstr ""
+"¿Es un problema genérico o es específico de un caso de uso? Si es específico"
+" de un caso, ¿de cuál se trata?"
+
+#: ../../content/applications/general/email_communication/faq.rst:224
+msgid ""
 "Is it working as expected? In case the email is sent using Odoo, the bounce "
-"email should reach the Odoo database and display the :ref:`red envelope "
+"email should reach the Odoo database, and display the :ref:`red envelope "
 "<red_envelop>`."
 msgstr ""
-"¿Funciona como debería? En caso de que el correo electrónico se envie "
-"mediante Odoo, el correo electrónico devuelto debe llegar a la base de datos"
-" de Odoo y mostrar el :ref:`sobre rojo <red_envelop>`."
+"¿Funciona como debería? Is it working as expected? In case the email is sent"
+" using Odoo, the bounce email should reach the Odoo database, and display "
+"the :ref:`red envelope <red_envelop>`."
+
+#: ../../content/applications/general/email_communication/faq.rst:228
+msgid ""
+"The bounce system parameter needs to be set in the technical settings in "
+"order for the database to correctly receive bounce messages. To access this "
+"setting, go to :menuselection:`Settings app --> Technical menu --> "
+"Parameters --> System Parameters`. Then select the parameter name "
+":guilabel:`mail.bounce.alias` and set the value to `bounce` if it isn't "
+"already set."
+msgstr ""
+"Debe configurar el parámetro del sistema de devolución en los ajustes "
+"técnicos para que la base de datos reciba correctamente los mensajes que se "
+"devuelven. Para acceder a estos ajustes, vaya a :menuselection:`Ajustes --> "
+"Menpu técnico --> Parámetros --> Parámetros del sistema`.  "
 
 #: ../../content/applications/general/export_import_data.rst:3
 msgid "Export and import data"
