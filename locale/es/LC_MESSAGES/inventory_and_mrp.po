@@ -10,29 +10,30 @@
 # Julián Andrés Osorio López <mcjulian1107@gmail.com>, 2021
 # Miguel Orueta <mo@landoo.es>, 2021
 # renodoo <ren@odoo.com>, 2021
-# Lina Maria Avendaño Carvajal <lina8823@gmail.com>, 2021
 # Jesús Alan Ramos Rodríguez <alan.ramos@jarsa.com.mx>, 2021
-# Pablo Rojas <rojaspablo88@gmail.com>, 2021
-# José Cabrera Lozano <jose.cabrera@edukative.es>, 2021
-# Josep Anton Belchi, 2021
-# Martin Trigaux, 2023
-# Braulio D. López Vázquez <bdl@odoo.com>, 2023
 # Aimée Mendoza Sánchez, 2023
-# Jon Perez <jop@odoo.com>, 2023
-# Wil Odoo, 2023
-# Iran Villalobos López, 2023
-# Fernanda Alvarez, 2023
-# Lucia Pacheco, 2023
 # Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2023
+# Wil Odoo, 2023
+# José Cabrera Lozano <jose.cabrera@edukative.es>, 2023
+# Jon Perez <jop@odoo.com>, 2023
+# Martin Trigaux, 2023
+# Lina Maria Avendaño Carvajal <lina8823@gmail.com>, 2023
+# Pablo Rojas <rojaspablo88@gmail.com>, 2023
+# Jonathan Castillo <jcs@odoo.com>, 2023
+# Josep Anton Belchi, 2023
+# Lucia Pacheco, 2023
+# Braulio D. López Vázquez <bdl@odoo.com>, 2023
+# Fernanda Alvarez, 2023
+# Iran Villalobos López, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-14 08:28+0000\n"
+"POT-Creation-Date: 2023-10-09 07:26+0000\n"
 "PO-Revision-Date: 2021-05-18 05:18+0000\n"
-"Last-Translator: Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2023\n"
+"Last-Translator: Iran Villalobos López, 2023\n"
 "Language-Team: Spanish (https://app.transifex.com/odoo/teams/41243/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -10487,8 +10488,8 @@ msgid ""
 " When the need appears in the destination location, Odoo generates a picking"
 " to fulfill this need."
 msgstr ""
-"**Tomar de**: esta regla se activa por la necesidad de un producto en una "
-"ubicación específica. La necesidad puede venir de una orden de venta "
+"**Tomar de (Pull)**: esta regla se activa por la necesidad de un producto en"
+" una ubicación específica. La necesidad puede venir de una orden de venta "
 "validada o de una orden de fabricación que requiere un componente "
 "específico. Cuando la necesidad aparece en la ubicación de destino, Odoo "
 "genera una recolección para satisfacer esta necesidad."
@@ -10500,10 +10501,10 @@ msgid ""
 "location, Odoo generates a picking to move those products to the destination"
 " location."
 msgstr ""
-"**Enviar a**: esta regla se activa por la llegada de algunos productos en la"
-" ubicación de origen definida. En caso de que mueva productos de la "
-"ubicación de origen, Odoo genera una recolección para mover esos productos a"
-" la ubicación de destino."
+"**Enviar a (Push)**: esta regla se activa por la llegada de algunos "
+"productos en la ubicación de origen definida. En caso de que mueva productos"
+" de la ubicación de origen, Odoo genera una recolección para mover esos "
+"productos a la ubicación de destino."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:272
 msgid ""
@@ -10633,7 +10634,7 @@ msgid ""
 "(internal transfers from WH/Stock to WH/Packing Zone) are created from "
 "WH/Stock to fulfill the need."
 msgstr ""
-"**Tomar de las existencias**: Cuando se necesitan productos en WH/Zona de "
+"**Tomar de las existencias**: cuando se necesitan productos en WH/Zona de "
 "empaquetado, se crean *recolecciones* de WH/Existencias (traslados internos "
 "de WH/Existencias a WH/Zona de empaquetado) para satisfacer la necesidad."
 
@@ -10643,7 +10644,7 @@ msgid ""
 "(internal transfers from WH/Packing Zone to WH/Output) are created from "
 "WH/Packing Zone to fulfill the need."
 msgstr ""
-"**Activar otra regla**: Cuando se necesitan productos en WH/Salida, se crean"
+"**Activar otra regla**: cuando se necesitan productos en WH/Salida, se crean"
 " *paquetes* de WH/Zona de empaquetado (traslados internos de WH/Zona de "
 "empaquetado a WH/Salida) para satisfacer la necesidad."
 
@@ -10653,7 +10654,7 @@ msgid ""
 "Locations/Customers, Delivery Orders are created from WH/Output to fulfill "
 "the need."
 msgstr ""
-"**Activar otra regla**: Cuando se necesitan productos en ubicaciones de "
+"**Activar otra regla**: cuando se necesitan productos en ubicaciones de "
 "partners o clientes, se crean órdenes de entrega de WH/Salida para "
 "satisfacer la necesidad."
 
@@ -11413,7 +11414,7 @@ msgid ""
 "To work with the *FEFO* strategy, activate the *Expiration Dates* feature."
 msgstr ""
 "Para trabajar con la estrategia *FEFO* active la función de *Fechas de "
-"caducidad*."
+"expiración*."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:115
 msgid ""
@@ -13874,6 +13875,485 @@ msgstr ""
 "este producto*. Se describirá el proceso de montaje del kit mediante una "
 "*orden de fabricación* en lugar de una operación de empaquetado."
 
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:3
+msgid "Manufacturing backorders"
+msgstr "Fabricar órdenes parciales"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:5
+msgid ""
+"In some cases, the full quantity of a manufacturing order cannot be produced"
+" immediately. When this happens, Odoo *Manufacturing* allows for the "
+"manufacturing of partial quantities of the order and creates a *backorder* "
+"for the remaining amount."
+msgstr ""
+"En algunos casos, no es posible producir la cantidad total de una orden de "
+"fabricación de forma inmediata. Cuando esto ocurre, la aplicación "
+"*Fabricación* de Odoo permite fabricar una parte del pedido y crea una "
+"*orden parcial* para la cantidad restante."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:9
+msgid ""
+"In the *Manufacturing* app, creating a backorder splits the original "
+"manufacturing order into two orders. The reference tag for each order is the"
+" tag used for the original order, followed by a hyphen and then an "
+"additional number to indicate that it's a backorder."
+msgstr ""
+"Cuando crea una orden parcial en la aplicación *Fabricación*, la orden de "
+"fabricación original se divide en dos. La etiqueta de referencia para cada "
+"orden es la que se utiliza en la orden original, seguida de un guion y un "
+"número adicional para indicar que se trata de una orden parcial."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:14
+msgid ""
+"A company creates a manufacturing order with the reference tag "
+"*WH/MO/00175*, for 10 units of *Product X*. After starting work on the "
+"manufacturing order, the employee working the production line realizes there"
+" are only enough components in stock to produce five units of the product."
+msgstr ""
+"Una empresa crea una orden de fabricación con la etiqueta de referencia "
+"*WH/MO/00175* para 10 unidades del *producto X*. Después de comenzar a "
+"trabajar en la orden de fabricación, el empleado que trabaja en la línea de "
+"producción se da cuenta de que solo hay suficientes componentes en sus "
+"existencias para producir cinco unidades del producto."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:18
+msgid ""
+"Instead of waiting for additional stock of the components, they manufacture "
+"five units and create a backorder for the remaining five. This splits the "
+"manufacturing order into two separate orders: *WH/MO/00175-001* and "
+"*WH/MO/00175-002*."
+msgstr ""
+"En lugar de esperar las existencias adicionales de los componentes, fabrica "
+"cinco unidades y crea una orden parcial para los cinco productos restantes. "
+"Esto divide la orden de fabricación en dos órdenes separadas, "
+"*WH/MO/00175-001* y *WH/MO/00175-002*."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:22
+msgid ""
+"Order *001* contains the five units that have been manufactured, and is "
+"immediately marked as :guilabel:`Done`. Order *002* contains the five units "
+"that still need to be manufactured and is marked as :guilabel:`In Progress`."
+" Once the remaining components are available, the employee returns to order "
+"*002* and manufactures the remaining units before closing the order."
+msgstr ""
+"La orden *001* incluye las cinco unidades fabricadas y se marca "
+"inmediatamente como :guilabel:`Hecha`. La orden *002* incluye las cinco "
+"unidades que todavía deben fabricarse y está marcada como :guilabel:`En "
+"progreso`. Una vez que los componentes restantes están disponibles, el "
+"empleado vuelve a la orden *002* y fabrica las unidades restantes antes de "
+"cerrar la orden."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:28
+msgid "Create a manufacturing backorder"
+msgstr "Crear una orden parcial de fabricación"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:30
+msgid ""
+"To create a backorder for part of a manufacturing order, begin by navigating"
+" to :menuselection:`Manufacturing --> Operations --> Manufacturing Orders`. "
+"Select a manufacturing order with a quantity of two or more or create one by"
+" clicking :guilabel:`Create`."
+msgstr ""
+"Para crear una orden parcial para una parte de una orden de fabricación, "
+"vaya a :menuselection:`Fabricación --> Operaciones --> Ordenes de "
+"fabricación`. Seleccione una orden de fabricación con una cantidad de dos o "
+"más o haga clic en :guilabel:`Nuevo` para crear una."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:34
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:86
+msgid ""
+"If a new manufacturing order is created, select a product from the "
+":guilabel:`Product` drop-down menu and enter a quantity of two or more in "
+"the :guilabel:`Quantity` field, then click :guilabel:`Confirm` to confirm "
+"the order."
+msgstr ""
+"Si está creando una nueva orden de fabricación, seleccione un "
+":guilabel:`producto` en el menú desplegable e ingrese una "
+":guilabel:`cantidad` de dos o más en el campo correspondiente. Por último, "
+":guilabel:`confirme` la orden."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:38
+msgid ""
+"After manufacturing the quantity that is being produced immediately, enter "
+"that number in the :guilabel:`Quantity` field at the top of the "
+"manufacturing order."
+msgstr ""
+"Después de fabricar la cantidad que se está produciendo de forma inmediata, "
+"ingrese ese número en el campo :guilabel:`cantidad` en la parte superior de "
+"la orden de fabricación."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst-1
+msgid "The quantity field on a manufacturing order."
+msgstr "El campo de cantidad en una orden de fabricación."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:45
+msgid ""
+"Next, click :guilabel:`Validate`, and a :guilabel:`You produced less than "
+"initial demand` pop-up window appears, from which a backorder can be "
+"created. Click :guilabel:`Create Backorder` to split the manufacturing order"
+" into two separate orders, with the reference tags *WH/MO/XXXXX-001* and "
+"*WH/MO/XXXXX-002*."
+msgstr ""
+"Después, haga clic en :guilabel:`Validar` y aparecerá una ventana emergente "
+"con el mensaje :guilabel:`Produjo menos que la demanda inicial`, desde allí "
+"puede crear una orden parcial. Haga clic en :guilabel:`Crear orden parcial` "
+"para dividir la orden de fabricación en dos órdenes separadas con las "
+"etiquetas de referencia *WH/MO/XXXXX-001* y *WH/MO/XXXXX-002*."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst-1
+msgid ""
+"The Create Backorder button on the \"You produced less than initial demand\""
+" pop-up window."
+msgstr ""
+"El botón Crear orden parcial en la ventana emergente \"Produjo menos que la "
+"demanda inicial\"."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:54
+msgid ""
+"Order *001* contains the items that have been manufactured, and is closed "
+"immediately. Order *002* is the backorder that contains the items that have "
+"yet to be manufactured, and remains open, to be completed at a later date."
+msgstr ""
+"La orden *001* incluye los artículos que se fabricaron y se cierra de "
+"inmediato, mientras que la orden *002* es la orden parcial que incluye los "
+"artículos que aún no se han fabricado, además permanece abierta que pueda "
+"completarse después."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:58
+msgid ""
+"Once the remaining units can be manufactured, navigate to "
+":menuselection:`Manufacturing --> Operations --> Manufacturing Orders`, and "
+"then select the backorder manufacturing order. If all of the remaining units"
+" are manufactured immediately, simply click :guilabel:`Validate` to close "
+"the order."
+msgstr ""
+"Una vez que pueda fabricar las unidades restantes, aya a "
+":menuselection:`Fabricación --> Operaciones --> Órdenes de fabricación` y "
+"seleccione la orden parcial de fabricación. Si todas las unidades restantes "
+"se fabrican de inmediato, solo haga clic en :guilabel:`Validar` para cerrar "
+"la orden."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:63
+msgid ""
+"If only some of the remaining units are manufactured immediately, create "
+"another backorder for the remainder by following the steps detailed in this "
+"section."
+msgstr ""
+"Si solo algunas de las unidades restantes se fabrican en ese momento, cree "
+"otra orden parcial para las otras. Debe seguir los pasos detallados en esta "
+"sección."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:67
+msgid "Create a backorder from tablet view"
+msgstr "Crear una orden parcial desde la vista de tableta"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:69
+msgid ""
+"Backorders for manufacturing orders can also be created from the work order "
+"tablet view."
+msgstr ""
+"También puede crear ordenes parciales de fabricación desde la vista de "
+"tableta de la orden de trabajo."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:72
+msgid ""
+"In order to use tablet view, the *Work Orders* setting must be enabled. To "
+"enable it, navigate to :menuselection:`Manufacturing --> Configuration --> "
+"Settings`. On the :guilabel:`Settings` page, enable the checkbox next to "
+":guilabel:`Work Orders`, then click :guilabel:`Save` to save the change. "
+"This makes the :guilabel:`Work Orders` tab appear on manufacturing orders, "
+"from which the tablet view can be opened."
+msgstr ""
+"Para utilizar la vista de tableta, el ajuste *Órdenes de trabajo* debe estar"
+" habilitado. Vaya a :menuselection:`Fabricación --> Configuración --> "
+"Ajustes` y allí seleccione la casilla junto a :guilabel:`Órdenes de "
+"trabajo`, luego :guilabel:`guarde` los cambios. Esto hace que la pestaña "
+":guilabel:`Órdenes de trabajo` aparezca en las órdenes de fabricación, desde"
+" la cual se puede abrir la vista de tableta."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:0
+msgid "The Work Orders setting on the Manufacturing settings page."
+msgstr ""
+"El ajuste \"Órdenes de trabajo\" en la página de configuración de "
+"Fabricación."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:82
+msgid ""
+"To create a backorder from the tablet view, begin by navigating to "
+":menuselection:`Manufacturing --> Operations --> Manufacturing Orders`. "
+"Select a manufacturing order with a quantity of two or more or create one by"
+" clicking :guilabel:`Create`."
+msgstr ""
+"Para crear una orden parcial desde la vista de tableta, vaya a "
+":menuselection:`Fabricación --> Operaciones --> Órdenes de fabricación`. "
+"Seleccione una orden de fabricación con una cantidad de dos o más o haga "
+"clic en :guilabel:`Nuevo` para crear una."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:90
+msgid ""
+"After confirming the manufacturing order, select the :guilabel:`Work Orders`"
+" tab and click the :guilabel:`📱 (tablet view)` button located on the line of"
+" the first work order to enter the tablet view."
+msgstr ""
+"Después de confirmar la orden de fabricación, seleccione la pestaña "
+":guilabel:`Órdenes de trabajo` y haga clic en el botón :guilabel:`📱 (vista "
+"de tableta)` ubicado en la línea de la primera orden de trabajo para acceder"
+" a la vista de tableta."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst-1
+msgid "The tablet view button for a work order on a manufacturing order."
+msgstr ""
+"El botón de vista de tableta para una orden de trabajo en una orden de "
+"fabricación."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:97
+msgid ""
+"Once in tablet view, enter the quantity being manufactured immediately in "
+"the :guilabel:`Units` field at the top left of the tablet view."
+msgstr ""
+"Una vez que se encuentre en la vista de la tableta, ingrese la cantidad a "
+"fabricar de forma inmediata en el campo :guilabel:`Unidades` en la parte "
+"superior izquierda."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst-1
+msgid "The Units field in the tablet view."
+msgstr "El campo Unidades en la vista de tableta."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:104
+msgid ""
+"The steps for the rest of the workflow depend on whether the manufacturing "
+"order being processed requires the completion of a single work order or "
+"multiple work orders."
+msgstr ""
+"Los pasos para el resto del flujo de trabajo dependen de si la orden de "
+"fabricación que se procesa requiere que termine una sola orden de trabajo o "
+"varias."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:108
+msgid "Single work order"
+msgstr "Una sola orden de trabajo"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:110
+msgid ""
+"If the manufacturing order only requires the completion of a single work "
+"order, complete the work order, then click :guilabel:`Mark As Done And Close"
+" MO`. The manufacturing order is closed and a backorder for the units that "
+"still need to be manufactured is created automatically."
+msgstr ""
+"Si la orden de fabricación requiere que termine una sola orden de trabajo, "
+"complétela y luego haga clic en :guilabel:`Marcar como hecho y cerrar orden "
+"de fabricación`. La orden de fabricación se cierra y de forma automática se "
+"crea una orden parcial para las unidades que restan por fabricar."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst-1
+msgid ""
+"The Mark As Done And Close MO button in the tablet view of a work order."
+msgstr ""
+"El botón \"Marcar como hecho y cerrar orden de fabricación\" en la vista de "
+"tableta de una orden de trabajo."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:118
+msgid ""
+"Once the remaining units are ready to be manufactured, navigate to "
+":menuselection:`Manufacturing --> Operations --> Manufacturing Orders`, then"
+" select the backorder manufacturing order, which is titled using the "
+"reference tag of the original backorder with *002* added to the end."
+msgstr ""
+"Una vez que pueda fabricar las unidades restantes, vaya a "
+":menuselection:`Fabricación --> Operaciones --> Órdenes de fabricación` y "
+"seleccione la orden de fabricación parcial. Su nombre incluye la etiqueta de"
+" referencia de la orden parcial original con *002* al final."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:122
+msgid ""
+"On the backorder manufacturing order, select the :guilabel:`Work Orders` tab"
+" and click the :guilabel:`📱 (tablet view)` button located on the line of the"
+" work order to open the tablet view. If all of the units in the backorder "
+"will be completed immediately, simply click :guilabel:`Mark As Done And "
+"Close MO` after completing the work order."
+msgstr ""
+"En la orden de fabricación parcial, seleccione la pestaña  "
+":guilabel:`Órdenes de trabajo` y haga clic en el botón :guilabel:`📱 (vista "
+"de tableta)` que está ubicado en la línea de la orden de trabajo. Si todas "
+"la unidades de la orden parcial se van a completar inmediatamente, solo haga"
+" clic en :guilabel:`Marcar como completado y cerrar orden de fabricación` "
+"después de completar la orden de fabricación.      "
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:127
+msgid ""
+"If only some of the remaining units will be manufactured immediately, enter "
+"the number in the :guilabel:`Units` field at the top left of the tablet "
+"view, then click :guilabel:`Mark As Done And Close MO` to create another "
+"backorder for the remaining units. The new backorder can be processed using "
+"the steps detailed in this section."
+msgstr ""
+"Si solo alguna de las unidades se fabricarán de manera inmediata, escriba el"
+" número en el campo :guilabel:`Unidades` del lado superior izquierdo en la "
+"vista de tableta y luego haga clic en :guilabel:`Marcar como completado y "
+"cerrar la orden de fabricación` para crear otra orden parcial para las "
+"unidades restantes. La nueva orden parcial se puede procesar con las "
+"instrucciones dadas en esta sección.    "
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:133
+msgid "Multiple work orders"
+msgstr "Varias órdenes de trabajo"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:135
+msgid ""
+"If the manufacturing order requires the completion of multiple work orders, "
+"complete the first work order, and then click :guilabel:`Record Production`."
+" This splits the manufacturing order into two separate orders, titled "
+"*WH/MO/XXXXX-001* and *WH/MO/XXXXX-002*, with *XXXXX* being the number of "
+"the original order."
+msgstr ""
+"Si la orden de fabricación requiere que se completen varias órdenes de "
+"trabajo, finalice la primera orden de trabajo y luego haga clic en "
+":guilabel:`Registrar producción`. Esto dividirá la orden de fabricación en "
+"dos órdenes llamadas *WH/MO/XXXXX-001* y *WH/MO/XXXXX-002*, *XXXXX* "
+"refiriéndose al número original de la orden.  "
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst-1
+msgid "The Record Production button on a work order."
+msgstr "Botón de registrar producción en una orden de trabajo. "
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:144
+msgid ""
+"The tablet view defaults to showing the first work order for the *002* "
+"manufacturing order. Since this manufacturing order will not be completed "
+"immediately, back out of tablet view by clicking the :guilabel:`⬅️ (back)` "
+"button twice. Doing so will take you to the *001* order."
+msgstr ""
+"De manera predeterminada, la vista de tableta muestra la primera orden de "
+"trabajo para la orden de fabricación *002*. Puesto que esta orden de "
+"fabricación no se completará de manera inmediata, salga de la vista de "
+"tableta haciendo clic dos veces en el botón  :guilabel:`⬅️ (regresar)`. De "
+"esta manera, ira a la orden *001*.   "
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:148
+msgid ""
+"To finish the *001* order, select the :guilabel:`Work Orders` tab and click "
+"the :guilabel:`tablet view` button located on the line of the next work "
+"order. Finally, complete the remaining work orders, then click "
+":guilabel:`Mark As Done And Close MO` to close the manufacturing order."
+msgstr ""
+"Para finalizar la orden *001*, seleccione la pestaña :guilabel:`Órdenes de "
+"trabajo` y haga clic en el botón de :guilabel:`vista de tableta` ubicado en "
+"la línea junto a la orden de trabajo. Finalmente, complete las órdenes de "
+"trabajo restantes y haga clic en :guilabel:`Marcar como completado y cerrar "
+"la orden de fabricación` para cerrar la orden de fabricación     "
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:152
+msgid ""
+"Once the remaining units are ready to be manufactured, navigate to "
+":menuselection:`Manufacturing --> Operations --> Manufacturing Orders`, then"
+" select the *002* order. Select the :guilabel:`Work Orders` tab and click "
+"the :guilabel:`tablet view` button located on the line of the first work "
+"order."
+msgstr ""
+"Un vez que las unidades estén listas para fabricarse, vaya a "
+":menuselection:`Fabricación --> Operaciones --> Órdenes de fabricación`, "
+"luego seleccione la orden *002*. Seleccione la pestaña :guilabel:`Órdenes de"
+" trabajo` y haga clic en el botón de :guilabel:`vista de tableta` ubicado en"
+" la línea de la primera orden de trabajo.     "
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:157
+msgid ""
+"If all of the units in the backorder will be completed immediately, simply "
+"click :guilabel:`Mark As Done And Close MO` after completing all of the work"
+" orders."
+msgstr ""
+"Si todas las unidades de la orden parcial se completarán inmediatamente, "
+"solo haga clic en :guilabel:`Marcar como completado y cerrar la orden de "
+"fabricación` después de que finalicen todas las órdenes de trabajo.  "
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:160
+msgid ""
+"If only some of the remaining units will be manufactured immediately, enter "
+"the number in the :guilabel:`Units` field at the top left of the tablet "
+"view, then click :guilabel:`Record Production` to create an additional "
+"backorder for the remaining units, with *003* at the end of its reference "
+"tag."
+msgstr ""
+"Si solo algunas de las unidades restantes se fabricaran inmediatamente, "
+"escriba el número del campo :guilabel:`Unidades` ubicado en la parte "
+"superior izquierda en la vista de tableta y luego haga clic en "
+":guilabel:`Registrar producción` para crear una orden parcial adicional para"
+" las unidades restantes. Aparecerá con un *003* al final de su etiqueta de "
+"referencia.   "
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:165
+msgid ""
+"The *002* backorder and *003* backorder can be completed by following the "
+"steps detailed in this section."
+msgstr ""
+"Las órdenes parciales *002* y *003* se pueden completar siguiendo los pasos "
+"descritos en esta sección. "
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:169
+msgid ""
+"It is also possible to create a backorder in the middle of a manufacturing "
+"order, when some but not all of the work orders have already been completed."
+" Doing so marks the completed work order(s) as :guilabel:`Finished` on the "
+"backorder."
+msgstr ""
+"También puede crear una orden parcial en medio de una orden de fabricación "
+"cuando algunas de las órdenes de trabajo ya se han completado. Al hacerlo, "
+"las órdenes de trabajo se marcarán como :guilabel:`Completadas` en la orden "
+"parcial.   "
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:174
+msgid ""
+"A manufacturing order for four chairs requires the completion of two work "
+"orders: *Paint* and *Assemble*. While the paint step can be completed "
+"immediately for all four chairs, there are only enough screws to assemble "
+"two of them."
+msgstr ""
+"Una orden de fabricación para cuatro sillas requiere que se completen dos "
+"órdenes de trabajo: *Pintura* y *Ensamblaje*. Mientras que la orden para "
+"pintar se puede completar inmediatamente para las cuatro sillas, no hay "
+"suficientes tornillos para ensamblar dos. "
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:178
+msgid ""
+"As a result, the employee responsible for producing the chairs begins by "
+"painting all four, and marking the *Paint* work order as "
+":guilabel:`Finished` for all of them. Then, they move on to the *Assemble* "
+"work order. They assemble two of the four chairs, enter that number in the "
+":guilabel:`Units` field of the tablet view, and click :guilabel:`Record "
+"Production`."
+msgstr ""
+"Por ello, el empleado responsable de producir las sillas comienza pintando "
+"todas y marcando la orden de trabajo de *Pintura* como "
+":guilabel:`Completada` para todas. Después, pasan a la orden de trabajo de "
+"*Ensamblaje*. Se pueden ensamblar solo dos de las cuatro sillas, por lo que "
+"deberá escribir dos en el campo :guilabel:`Unidades` en la vista de tableta "
+"y hacer clic en :guilabel:`Registrar producción`.   "
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:183
+msgid ""
+"A backorder manufacturing order is created for the remaining two chairs. On "
+"the backorder, the *Paint* work order is already marked as "
+":guilabel:`Finished`, and only the *Assemble* work order is left to be "
+"completed."
+msgstr ""
+"Se creará una orden parcial de fabricación para las dos sillas restantes. En"
+" dicha orden parcial, la orden de trabajo de *Pintura* ya estará marcada "
+"como :guilabel:`Completada` y solo faltará completar la orden de trabajo de "
+"*Ensamblaje*.  "
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:187
+msgid ""
+"Once more screws are available, the manufacturing employee assembles the "
+"remaining chairs and clicks :guilabel:`Mark As Done And Close MO` to "
+"complete the *Assemble* work order and close the backorder manufacturing "
+"order."
+msgstr ""
+"Una vez que tenga mas tornillos disponibles, los empelados de fabricación "
+"terminarán de ensamblar las sillas restantes y tendrán que hacer clic en "
+":guilabel:`Marcar como completado y cerrar orden de fabricación` para "
+"completar la orden de trabajo de *Ensamblaje* y así cerrar la orden parcial "
+"de fabricación.  "
+
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/product_variants.rst:3
 msgid "How to manage BoMs for product variants"
 msgstr "Cómo gestionar las LdM de las variantes de productos"
@@ -15429,8 +15909,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:3
 msgid "Make work centers unavailable using Time Off"
-msgstr ""
-"Desactive los centros de trabajo utilizando la aplicación Tiempo personal. "
+msgstr "Desactivar centros de trabajo mediante la aplicación Tiempo personal"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:5
 msgid ""
