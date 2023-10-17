@@ -74,7 +74,7 @@ interface of the server.
 .. code-block:: console
 
     $ cd $HOME/src/odoo/
-    $ ./odoo-bin --addons-path="addons/,../enterprise/,../technical-training-sandbox" -d rd-demo
+    $ ./odoo-bin --addons-path="addons/,../enterprise/" -d rd-demo
 
 There are multiple :ref:`command-line arguments <reference/cmdline/server>` that you can use to run
 the server. In this training you will only need some of them.
@@ -117,6 +117,10 @@ the server. In this training you will only need some of them.
        (comma-separated list).
      - :option:`-u <odoo-bin --update>`: Update some modules before running the server
        (comma-separated list).
+
+.. note::
+   For now you cannot add `../technical-training-sandbox` to your `addons-path` as it is empty
+   and will result into an invalid addons-path folder error, but you will have to add it back later on !
 
 Log in to Odoo
 --------------
