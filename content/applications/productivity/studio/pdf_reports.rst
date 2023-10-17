@@ -152,9 +152,10 @@ Header and footer
 
 When creating a new report in Studio, you must choose between one of three styles of reports first.
 This is solely used to determine what is displayed on the header and footer. To do so, go to the app
-on which you want to add a new report, then :menuselection:`Studio button --> Reports --> Create`
-and select :ref:`studio/pdf-reports/header-footer/external`,
-:ref:`studio/pdf-reports/header-footer/internal`, or :ref:`studio/pdf-reports/header-footer/blank`.
+on which you want to add a new report, click the **Toggle Studio** button, then click
+:guilabel:`Reports`. Click :guilabel:`New` and select
+:ref:`studio/pdf-reports/header-footer/external`, :ref:`studio/pdf-reports/header-footer/internal`,
+or :ref:`studio/pdf-reports/header-footer/blank`.
 
 .. _studio/pdf-reports/header-footer/external:
 
