@@ -70,9 +70,9 @@ In the first file :file:`models/template_xx.py`, we set the name for the chart o
    :doc:`Chart Template References </developer/reference/standard_modules/account>`
 
 .. example::
-  `addons/l10n_be/models/template_be.py <{GITHUB_PATH}/addons/l10n_be/models/template_be.py>`_
+  `addons/l10n_be_account/models/template_be.py <{GITHUB_PATH}/addons/l10n_be_account/models/template_be.py>`_
 
-  .. literalinclude:: {ODOO_RELPATH}/addons/l10n_be/models/template_be.py
+  .. literalinclude:: {ODOO_RELPATH}/addons/l10n_be_account/models/template_be.py
     :condition: odoo_dir_in_path
     :language: python
     :start-at: _get_be_template_data
@@ -95,9 +95,9 @@ The solution is the usage of tags, one for each report line, to filter accounts 
 Put the tags in the :file:`data/account_account_tag_data.xml` file.
 
 .. example::
-  `addons/l10n_lt/data/template/account.account-lt.csv <{GITHUB_PATH}/addons/l10n_lt/data/template/account.account-lt.csv>`_
+  `addons/l10n_lt_account/data/template/account.account-lt.csv <{GITHUB_PATH}/addons/l10n_lt_account/data/template/account.account-lt.csv>`_
 
-  .. literalinclude:: {ODOO_RELPATH}/addons/l10n_lt/data/template/account.account-lt.csv
+  .. literalinclude:: {ODOO_RELPATH}/addons/l10n_lt_account/data/template/account.account-lt.csv
     :condition: odoo_dir_in_path
     :language: csv
     :end-at: account_account_template_1201
@@ -112,9 +112,9 @@ Accounts
 Obviously, :guilabel:`Chart of Accounts` cannot exist without :guilabel:`Accounts`. You need to specify them in :file:`data/account.account.template.csv`.
 
 .. example::
-  `addons/l10n_ch/data/template/account.account-ch.csv <{GITHUB_PATH}/addons/l10n_ch/data/template/account.account-ch.csv>`_
+  `addons/l10n_ch_account/data/template/account.account-ch.csv <{GITHUB_PATH}/addons/l10n_ch_account/data/template/account.account-ch.csv>`_
 
-  .. literalinclude:: {ODOO_RELPATH}/addons/l10n_ch/data/template/account.account-ch.csv
+  .. literalinclude:: {ODOO_RELPATH}/addons/l10n_ch_account/data/template/account.account-ch.csv
     :condition: odoo_dir_in_path
     :language: csv
     :end-at: ch_coa_1171
@@ -215,9 +215,9 @@ So, once you have properly configured taxes, you just need to add the :file:`dat
 ... followed by the declaration of its lines, as `account.report.line` records.
 
 .. example::
-  `addons/l10n_au/data/account_tax_report_data.xml <{GITHUB_PATH}/addons/l10n_au/data/account_tax_report_data.xml>`_
+  `addons/l10n_au_account/data/account_tax_report_data.xml <{GITHUB_PATH}/addons/l10n_au_account/data/account_tax_report_data.xml>`_
 
-  .. literalinclude:: {ODOO_RELPATH}/addons/l10n_au/data/account_tax_report_data.xml
+  .. literalinclude:: {ODOO_RELPATH}/addons/l10n_au_account/data/account_tax_report_data.xml
     :condition: odoo_dir_in_path
     :language: xml
     :start-at: tax_report
@@ -311,5 +311,5 @@ the :guilabel:`Reporting` menu, you need to create a new `ir.ui.menu` record (us
 action model.
 
 .. example::
-   * `ir.ui.menu creation <{GITHUB_PATH}/addons/l10n_be/data/menuitem_data.xml>`_
+   * `ir.ui.menu creation <{GITHUB_PATH}/addons/l10n_be_account/data/menuitem_data.xml>`_
    * `ir.actions.client and menu item creation <{GITHUB_ENT_PATH}/l10n_be_reports/data/partner_vat_listing.xml>`_
