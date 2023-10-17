@@ -232,7 +232,7 @@ Any field can be given a default value. In the field definition, add the option
 float, string) or a function taking a model and returning a value::
 
     name = fields.Char(default="Unknown")
-    last_seen = fields.Datetime("Last Seen", default=lambda self: fields.Datetime.now())
+    last_seen = fields.Datetime("Last Seen", default=fields.Datetime.now)
 
 The ``name`` field will have the value 'Unknown' by default while the ``last_seen`` field will be
 set as the current time.
