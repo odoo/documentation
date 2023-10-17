@@ -69,13 +69,13 @@ Transactions can be matched automatically with the use of :doc:`reconciliation m
    :ref:`matching existing entries <reconciliation/existing-entries>`, :ref:`manual operations
    <reconciliation/manual-operations>`, :ref:`batch payments <reconciliation/batch-payments>`, and
    :ref:`reconciliation model buttons <reconciliation_models_button>`.
-#. If the resulting entry isn't fully balanced, balance it by adding another existing counterpart
+#. If the resulting entry is not fully balanced, balance it by adding another existing counterpart
    entry or writing it off with a :ref:`manual operation <reconciliation/manual-operations>`.
 #. Click the :guilabel:`Validate` button to confirm the reconciliation and move to the next
    transaction.
 
 .. tip::
-   If you aren't sure how to reconcile a particular transaction and would like to deal with it
+   If you are not sure how to reconcile a particular transaction and would like to deal with it
    later, use the :guilabel:`To Check` button instead. All transactions marked as :guilabel:`To
    Check` can be displayed using the :guilabel:`To Check` filter.
 
@@ -112,7 +112,7 @@ has a search bar that allows you to search for specific batch payments.
 Manual operations
 -----------------
 
-If there isn't an existing entry to match the selected transaction, you may instead wish to
+If there is not an existing entry to match the selected transaction, you may instead wish to
 reconcile the transaction manually by choosing the correct account and amount. Then, complete any
 of the relevant optional fields.
 
@@ -122,6 +122,10 @@ of the relevant optional fields.
    open balance registered on the Account Receivable by default. You can choose another
    account by clicking on the new line in the resulting entry section and selecting the
    :guilabel:`Account` to record the open balance.
+
+.. note::
+   Lines are silently reconciled unless a write-off entry is required, which launches a
+   reconciliation wizard.
 
    .. image:: reconciliation/fully-paid.png
       :alt: Click on fully paid to manually set an invoice as entirely paid.
