@@ -2,7 +2,7 @@
 Enrich your contacts base with Partner Autocomplete
 ===================================================
 
-Parter Autocomplete helps you to enrich your contacts database with corporate data. Select one of
+Partner Autocomplete helps you to enrich your contacts database with corporate data. Select one of
 the companies suggested in the dropdown, and quickly get all the information you need.
 
 Configuration
