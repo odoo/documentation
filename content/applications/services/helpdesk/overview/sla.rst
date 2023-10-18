@@ -63,7 +63,7 @@ Fill out the following fields to adjust the selection criteria:
 Establish a target for an SLA policy
 ------------------------------------
 
-The :guilabel:`Target` is the stage a ticket needs to reach, and the time alloted to reach that
+The :guilabel:`Target` is the stage a ticket needs to reach, and the time allocated to reach that
 stage, in order to satisfy the :abbr:`SLA (Service Level Agreement)` policy. Any stage assigned to a
 team may be selected for the :guilabel:`Reach Stage` field. Time spent in stages selected in
 :guilabel:`Excluding Stages` will not be included in the calculation of the :abbr:`SLA (Service
