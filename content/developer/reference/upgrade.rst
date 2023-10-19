@@ -52,6 +52,7 @@ A migration script is a Python file containing a function called `migrate` which
             _logger.info("Updated %s partners", len(partners))
 
 .. spoiler:: A migration script that fixes a studio view
+
     .. code-block:: python
 
         import logging
@@ -152,7 +153,7 @@ Upgrading custom fields and their data
 Any custom field that has a reference to a modified standard field must be adapted to the new version of Odoo. To find the corresponding field in the new version, we recommend looking at its properties, and find a field with matching properties. You can also make use of the :ref:`upgrade report <upgrade/upgrade_report>` and the `release notes <https:/odoo.com/page/release-notes>`_ to support your search.
 
 .. example::
-    In Odoo 12 and before, the model `account.invoice` had a field named `refund_invoice_id` (`source code <https://github.com/odoo/odoo/blob/f7431b180834a73fe8d3aed290c275cc6f8dfa31/addons/account/models/account_invoice.py#L273>`_) which is absent on the model `account.move` after Odoo 13. This field was renamed to `reversed_entry_id` during the upgrade process. It is possible to find this information by searching for another Many2one field in `account.move` that is related to `account.move`, for example in `Odoo 16 <https://github.com/odoo/odoo/blob/a0c1e2aa602ae46598a350ea6ae8d8b4a0c1c823/addons/account/models/account_move.py#L453>_`.
+    In Odoo 12 and before, the model `account.invoice` had a field named `refund_invoice_id` (`source code <https://github.com/odoo/odoo/blob/f7431b180834a73fe8d3aed290c275cc6f8dfa31/addons/account/models/account_invoice.py#L273>`_) which is absent on the model `account.move` after Odoo 13. This field was renamed to `reversed_entry_id` during the upgrade process. It is possible to find this information by searching for another Many2one field in `account.move` that is related to `account.move`, for example in `Odoo 16 <https://github.com/odoo/odoo/blob/a0c1e2aa602ae46598a350ea6ae8d8b4a0c1c823/addons/account/models/account_move.py#L453>`_.
 
 .. note::
     Renaming field can be done with the `rename_field` method from `the upgrade-util package <https://github.com/odoo/upgrade-util/blob/220114f217f8643f5c28b681fe1a7e2c21449a03/src/util/fields.py#L336>`_. However, this will only rename the field and the column name, hence custom views, reports, fields relations, automated actions, etc might still refer to the old field name and will need to be updated in the migration script as well.
