@@ -35,7 +35,8 @@ When you are done editing the page and have *Saved* it, an invitation email is a
 the user. The user must click on it to accept the invitation and create a login.
 
 .. important::
-   It is discouraged to modify the main user with id=2 (*administrator*). Instead, we recommend to leave all the access rights on the administrator user, and create another one instead.
+   Modifying the main user with `id=2` (*administrator*) is discouraged. Instead, leave all the
+   access rights on the administrator user and create another one.
 
 .. image:: manage_users/invitation-email.png
    :align: center

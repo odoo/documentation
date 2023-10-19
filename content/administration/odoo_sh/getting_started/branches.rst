@@ -295,7 +295,7 @@ Upgrade
 Available for production and staging branches for valid projects.
 
 .. seealso::
-    :doc:`Upgrade </administration/upgrade>`
+    :doc:`Upgrade documentation <../../upgrade>`
 
 .. _odoosh-gettingstarted-branches-tabs-settings:
 
