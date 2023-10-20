@@ -418,9 +418,9 @@ the content (text).
     Markup('&lt;R&amp;D&gt; <br/> <p>Hello</p>')
     >>> escape("<R&D>")
     Markup('&lt;R&amp;D&gt;')
-    >>> escape(_("List of Tasks on project %s: %s")) % (
+    >>> _("List of Tasks on project %s: %s",
     ...     project.name,
-    ...     Markup("<ul>%s</ul>") % Markup().join([Markup("<li>%s</li>") % t.name for t in project.task_ids])
+    ...     Markup("<ul>%s</ul>") % Markup().join(Markup("<li>%s</li>") % t.name for t in project.task_ids)
     ... )
     Markup('Liste de tâches pour le projet &lt;R&amp;D&gt;: <ul><li>First &lt;R&amp;D&gt; task</li></ul>')
 
@@ -433,6 +433,22 @@ the content (text).
 
     >>> Markup(f"<p>Foo {self.bar}</p>")  # bad, bar is inserted before escaping
     >>> Markup("<p>Foo {bar}</p>").format(bar=self.bar)  # good, sorry no fstring
+
+When working with translations, it is especially important to separate the HTML
+from the text. The translation methods accepts a :class:`~markupsafe.Markup`
+parameters and will escape the translation if it gets receives at least one.
+
+.. code-block:: pycon
+
+    >>> Markup("<p>%s</p>") % _("Hello <R&D>")
+    Markup('<p>Bonjour &lt;R&amp;D&gt;</p>')
+    >>> _("Order %s has been confirmed", Markup("<a>%s</a>") % order.name)
+    Markup('Order <a>SO42</a> has been confirmed')
+    >>> _("Message received from %(name)s <%(email)s>",
+    ...   name=self.name,
+    ...   email=Markup("<a href='mailto:%s'>%s</a>") % (self.email, self.email)
+    Markup('Message received from Georges &lt;<a href=mailto:george@abitbol.example>george@abitbol.example</a>&gt;')
+
 
 Escaping vs Sanitizing
 ----------------------
