@@ -19,6 +19,8 @@ to move to the next line.
    later, you must do it manually. To do so, click the name on the top bar and proceed to the
    modification.
 
+.. _knowledge/text-editor:
+
 Text editor
 -----------
 
@@ -89,6 +91,8 @@ proceed equally and click the red-circled :guilabel:`x`.
 .. note::
    - The emoji is also displayed before the corresponding article in the side panel hierarchic tree.
    - Click the emoji on the side panel to change it without opening the related article.
+
+.. _knowledge/powerbox:
 
 Commands
 ========
