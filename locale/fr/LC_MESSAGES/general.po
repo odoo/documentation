@@ -3117,6 +3117,13 @@ msgid ""
 "received email is read by the end user's program different formatting and "
 "graphics will appear in the final form of it."
 msgstr ""
+"Les modèles d'email dans Odoo utilisent QWeb ou XML, ce qui permet de "
+"modifier les emails dans leur rendu final et de rendre les personnalisations"
+" plus robustes, sans avoir à modifier le code. Ceci signifie qu'Odoo peut "
+"utiliser une interface graphique utilisateur (GUI) pour modifier les emails,"
+" ainsi que le code en backend. Lorsque l'email reçu est lu par le programme "
+"de l'utilisateur final, différents formats et graphiques apparaîtront dans "
+"le rendu final de l'email."
 
 #: ../../content/applications/general/email_communication/email_template.rst:19
 msgid ""
@@ -3149,6 +3156,8 @@ msgid ""
 "Additionally, the XML/HTML code of the email template can be edited "
 "directly, via the :guilabel:`</>` icon."
 msgstr ""
+"Le code XML/HTML du modèle d'email peut également être modifié directement à"
+" l'aide de l'icône :guilabel:`</>`."
 
 #: ../../content/applications/general/email_communication/email_template.rst:32
 msgid ""
@@ -3157,6 +3166,10 @@ msgid ""
 "Configuration` fields, the :guilabel:`Subject`, and the "
 ":guilabel:`Language`."
 msgstr ""
+"Les *Placeholders dynamiques* (texte qui fait référence à des champs dans "
+"Odoo pour remplir automatiquement les informations dans le modèle) peuvent "
+"être utilisés pour les champs de :guilabel:`Configuration de l'email`, le "
+":guilabel:`Sujet` et la :guilabel:`Langue`."
 
 #: ../../content/applications/general/email_communication/email_template.rst:37
 msgid "Powerbox"
@@ -3257,7 +3270,7 @@ msgstr ":guilabel:`Bouton` : Ajouter un bouton."
 
 #: ../../content/applications/general/email_communication/email_template.rst:68
 msgid ":guilabel:`Medias`"
-msgstr ""
+msgstr ":guilabel:`Médias`"
 
 #: ../../content/applications/general/email_communication/email_template.rst:70
 msgid ":guilabel:`Image`: Insert an image."
@@ -3351,40 +3364,47 @@ msgid ""
 ":guilabel:`Email Configuration` tab, the :guilabel:`Subject` of the email, "
 "and the :guilabel:`Language`."
 msgstr ""
+"Les placeholders dynamiques sont codés pour afficher des champs de la base "
+"de données. Les placeholders dynamiques peuvent **uniquement** être utilisés"
+" dans les champs qui figurent dans l'onglet :guilabel:`Configuration de "
+"l'email`, le :guilabel:`Sujet` de l'email et la :guilabel:`Langue`."
 
 #: ../../content/applications/general/email_communication/email_template.rst:116
 msgid ""
 "Dynamic placeholders can be used with the following fields on an email "
 "template:"
 msgstr ""
+"Les placeholders dynamiques peuvent être utilisés dans les champs suivants "
+"d'un modèle d'email :"
 
 #: ../../content/applications/general/email_communication/email_template.rst:118
 msgid ":guilabel:`Subject` (:guilabel:`Content` tab)"
-msgstr ""
+msgstr ":guilabel:`Sujet` (onglet :guilabel:`Contenu`)"
 
 #: ../../content/applications/general/email_communication/email_template.rst:119
 msgid ":guilabel:`From` (:guilabel:`Email Configuration` tab)"
-msgstr ""
+msgstr ":guilabel:`De` (onglet :guilabel:`Configuration de l'email`)"
 
 #: ../../content/applications/general/email_communication/email_template.rst:120
 msgid ":guilabel:`To (Emails)` (:guilabel:`Email Configuration` tab)"
-msgstr ""
+msgstr ":guilabel:`À (Emails)` (onglet :guilabel:`Configuration de l'email`)"
 
 #: ../../content/applications/general/email_communication/email_template.rst:121
 msgid ":guilabel:`To (Partners)` (:guilabel:`Email Configuration` tab)"
 msgstr ""
+":guilabel:`À (Partenaires)` (onglet :guilabel:`Configuration de l'email`)"
 
 #: ../../content/applications/general/email_communication/email_template.rst:122
 msgid ":guilabel:`CC` (:guilabel:`Email Configuration` tab)"
-msgstr ""
+msgstr ":guilabel:`CC` (onglet :guilabel:`Configuration de l'email`)"
 
 #: ../../content/applications/general/email_communication/email_template.rst:123
 msgid ":guilabel:`Reply-To` (:guilabel:`Email Configuration` tab)"
-msgstr ""
+msgstr ":guilabel:`Répondre à` (onglet :guilabel:`Configuration de l'email`)"
 
 #: ../../content/applications/general/email_communication/email_template.rst:124
 msgid ":guilabel:`Language` (:guilabel:`Advanced Settings` tab)"
-msgstr ""
+msgstr ":guilabel:`Langue` (onglet :guilabel:`Paramètres avancés`)"
 
 #: ../../content/applications/general/email_communication/email_template.rst:126
 msgid ""
@@ -3393,6 +3413,11 @@ msgid ""
 "placeholders may also be inserted in the HTML code, but this task is out of "
 "the scope of Odoo Support."
 msgstr ""
+"Le :guilabel:`Générateur de placeholder dynamique`, qui est le dernier "
+"onglet du modèle d'email, crée des placeholders pour les champs "
+"susmentionnés. Les placeholders dynamiques peuvent également être insérés "
+"dans le code HTML, mais cette tâche n'est pas du ressort de l'Assistance "
+"d'Odoo."
 
 #: ../../content/applications/general/email_communication/email_template.rst:130
 msgid ""
@@ -3407,6 +3432,17 @@ msgid ""
 "Copy and paste the placeholder expression into the appropriate field in the "
 "tabs of the email template, as listed in the bulleted list above."
 msgstr ""
+"Pour utiliser le *Générateur de placeholder dynamique*, allez à l'onglet "
+":guilabel:`Générateur de placeholder dynamique`. Sélectionnez le champ "
+"auquel le placeholder dynamique doit faire référence dans le menu déroulant "
+":guilabel:`Champ`. Si un :guilabel:`Sous-modèle` ou un :guilabel:`Sous-"
+"champ` doit être précisé, définissez-les en sélectionnant le menu déroulant "
+"correspondant. Ces champs devraient être définis automatiquement après avoir"
+" configuré le :guilabel:`Champ`, même si ces chambres resteront vides dans "
+"certains cas. Le placeholder dynamique apparaît dans le champ "
+":guilabel:`Expression du placeholder`. Copiez et collez l'expression du "
+"placeholder dans le champ approprié dans les onglets du modèle d'email, "
+"comme indiqué dans la liste à puces ci-dessus."
 
 #: ../../content/applications/general/email_communication/email_template.rst:140
 msgid ""
@@ -3425,10 +3461,14 @@ msgid ""
 " from all of the available fields for the model that the email template is "
 "created for."
 msgstr ""
+"Pour rechercher les champs disponibles, il suffit de cliquer sur le menu "
+"déroulant à côté de :guilabel:`Champ` et d'en sélectionner un ou de cliquer "
+"sur :guilabel:`Recherche avancée` pour sélectionner tous les champs "
+"disponibles du modèle pour lequel le modèle d'email a été créé."
 
 #: ../../content/applications/general/email_communication/email_template.rst:149
 msgid ":doc:`../../productivity/studio/models_modules_apps`."
-msgstr ""
+msgstr ":doc:`../../productivity/studio/models_modules_apps`."
 
 #: ../../content/applications/general/email_communication/email_template.rst:152
 msgid ""
@@ -3439,15 +3479,24 @@ msgid ""
 "the specific Odoo :guilabel:`Field` name in the backend. Search for this "
 "field in the :guilabel:`Field` drop-down menu in the email template."
 msgstr ""
+"Ces champs sont également accessibles en :ref:`mode développeur <developer-"
+"mode>`. Sur un formulaire de contact (ou tout autre formulaire permanent "
+"dans Odoo), allez à l'information qui doit être référencée dans le "
+"placeholder dynamique et survolez le nom du champ. Une boîte d'informations "
+"sur le backend s'affichera avec le nom du :guilabel:`Champ` spécifique "
+"d'Odoo dans le backend. Recherchez ce champ dans le menu déroulant "
+":guilabel:`Champ` du modèle d'email."
 
 #: ../../content/applications/general/email_communication/email_template.rst:0
 msgid "Backend information box of fields on a model."
-msgstr ""
+msgstr "Boîte d'information sur les champs d'un modèle dans le backend."
 
 #: ../../content/applications/general/email_communication/email_template.rst:163
 msgid ""
 ":ref:`Views and fields in the developer documentation <developer/fields>`."
 msgstr ""
+":ref:`Vues et champs dans la documentation du développeur "
+"<developer/fields>`."
 
 #: ../../content/applications/general/email_communication/email_template.rst:166
 msgid "Customizing email templates are out of the scope of Odoo Support."
@@ -3475,6 +3524,8 @@ msgid ""
 "A Add multiple email addresses by adding a comma `,` between the addresses "
 "or dynamic placeholders."
 msgstr ""
+"Ajoutez plusieurs adresses email en ajoutant une virgule `,` entre les "
+"adresses ou les placeholders dynamiques. "
 
 #: ../../content/applications/general/email_communication/email_template.rst-1
 msgid "Reply-to field on template."

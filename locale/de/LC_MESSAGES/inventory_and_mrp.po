@@ -16567,7 +16567,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:3
 msgid "Manufacturing backorders"
-msgstr ""
+msgstr "Lieferückstände in der Fertigung"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:5
 msgid ""
@@ -16576,6 +16576,10 @@ msgid ""
 "manufacturing of partial quantities of the order and creates a *backorder* "
 "for the remaining amount."
 msgstr ""
+"In manchen Fällen kann nicht die gesamte Menge eines Fertigungsauftrags "
+"sofort produziert werden. Wenn dies der Fall ist, ermöglicht Odoo "
+"*Fertigung* die Herstellung von Teilmengen des Auftrags und erstellt einen "
+"*Lieferrückstand* für die verbleibende Menge."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:9
 msgid ""
@@ -16584,6 +16588,11 @@ msgid ""
 " tag used for the original order, followed by a hyphen and then an "
 "additional number to indicate that it's a backorder."
 msgstr ""
+"In der *Fertigungsapp* wird beim Erstellen eines Lieferrückstands der "
+"ursprüngliche Fertigungsauftrag in zwei Aufträge aufgeteilt. Das "
+"Referenzstichwortz für jeden Auftrag ist das für den ursprünglichen Auftrag "
+"verwendete Stichwort, gefolgt von einem Bindestrich und einer zusätzlichen "
+"Zahl, die angibt, dass es sich um einen Lieferrückstand handelt."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:14
 msgid ""
@@ -16592,6 +16601,11 @@ msgid ""
 "manufacturing order, the employee working the production line realizes there"
 " are only enough components in stock to produce five units of the product."
 msgstr ""
+"Ein Unternehmen erstellt einen Fertigungsauftrag mit der Referenznummer "
+"*WH/MO/00175* für 10 Einheiten von *Produkt X*. Nachdem er mit der "
+"Bearbeitung des Fertigungsauftrags begonnen hat, stellt der Mitarbeiter an "
+"der Produktionslinie fest, dass nur noch genügend Komponenten auf Lager "
+"sind, um fünf Einheiten des Produkts herzustellen."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:18
 msgid ""
@@ -16600,6 +16614,10 @@ msgid ""
 "manufacturing order into two separate orders: *WH/MO/00175-001* and "
 "*WH/MO/00175-002*."
 msgstr ""
+"Anstatt auf zusätzliche Bestände der Komponenten zu warten, werden fünf "
+"Einheiten gefertigt und für die restlichen fünf ein Lieferrückstand "
+"erstellt. Dadurch wird der Fertigungsauftrag in zwei separate Aufträge "
+"aufgeteilt: *WH/MO/00175-001* und *WH/MO/00175-002*."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:22
 msgid ""
@@ -16609,10 +16627,16 @@ msgid ""
 " Once the remaining components are available, the employee returns to order "
 "*002* and manufactures the remaining units before closing the order."
 msgstr ""
+"Auftrag *001* enthält die fünf Einheiten, die bereits hergestellt wurden, "
+"und wird sofort als :guilabel:`Erledigt` gekennzeichnet. Auftrag *002* "
+"enthält die fünf Einheiten, die noch hergestellt werden müssen, und wird als"
+" :guilabel:`In Bearbeitung` gekennzeichnet. Sobald die restlichen "
+"Komponenten verfügbar sind, kehrt der Mitarbeiter zum Auftrag *002* zurück "
+"und fertigt die restlichen Einheiten, bevor er den Auftrag schließt."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:28
 msgid "Create a manufacturing backorder"
-msgstr ""
+msgstr "Einen Lieferrückstand in der Fertigung erstellen"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:30
 msgid ""
@@ -16621,6 +16645,11 @@ msgid ""
 "Select a manufacturing order with a quantity of two or more or create one by"
 " clicking :guilabel:`Create`."
 msgstr ""
+"Um einen Lieferrückstand für einen Teil eines Fertigungsauftrags zu "
+"erstellen, navigieren Sie zunächst zu :menuselection:`Fertigung --> Vorgänge"
+" --> Fertigungsaufträge`. Wählen Sie einen Fertigungsauftrag mit einer Menge"
+" von zwei oder mehr oder erstellen Sie einen, indem Sie auf :guilabel:`Neu` "
+"klicken."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:34
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:86
@@ -16630,6 +16659,10 @@ msgid ""
 "the :guilabel:`Quantity` field, then click :guilabel:`Confirm` to confirm "
 "the order."
 msgstr ""
+"Wenn ein neuer Fertigungsauftrag erstellt wird, wählen Sie ein Produkt aus "
+"dem Drop-down-Menü :guilabel:`Produkt` und geben Sie eine Menge von zwei "
+"oder mehr in das Feld :guilabel:`Menge` ein. Klicken Sie dann auf "
+":guilabel:`Bestätigen`, um den Auftrag zu bestätigen."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:38
 msgid ""
@@ -16637,10 +16670,12 @@ msgid ""
 "that number in the :guilabel:`Quantity` field at the top of the "
 "manufacturing order."
 msgstr ""
+"Nach der Herstellung der Menge, die sofort produziert wird, geben Sie diese "
+"Zahl in das Feld :guilabel:`Menge` am Anfang des Fertigungsauftrags ein."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst-1
 msgid "The quantity field on a manufacturing order."
-msgstr ""
+msgstr "Mengenschaltfläche auf einem Fertigungsauftrag."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:45
 msgid ""
@@ -16650,12 +16685,20 @@ msgid ""
 " into two separate orders, with the reference tags *WH/MO/XXXXX-001* and "
 "*WH/MO/XXXXX-002*."
 msgstr ""
+"Klicken Sie anschließend auf :guilabel:`Validieren`, woraufhin ein Pop-up-"
+"Fenster :guilabel:`Sie haben weniger als die Anfangsnachfrage produziert` "
+"erscheint, aus dem ein Lieferrückstand erstellt werden kann. Klicken Sie auf"
+" :guilabel:`Lieferrückstand erstellen`, um den Fertigungsauftrag in zwei "
+"separate Aufträge mit den Referenzstichwörtern *WH/MO/XXXXX-001* und "
+"*WH/MO/XXXXX-002* aufzuteilen."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst-1
 msgid ""
 "The Create Backorder button on the \"You produced less than initial demand\""
 " pop-up window."
 msgstr ""
+"Die Schaltfläche „Lieferrückstand erstellen“ im Pop-up-Fenster \"Sie haben "
+"weniger als den ursprünglichen Bedarf produziert\"."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:54
 msgid ""
@@ -16663,6 +16706,10 @@ msgid ""
 "immediately. Order *002* is the backorder that contains the items that have "
 "yet to be manufactured, and remains open, to be completed at a later date."
 msgstr ""
+"Auftrag *001* enthält die Artikel, die bereits gefertigt wurden, und wird "
+"sofort abgeschlossen. Auftrag *002* ist der Lieferrückstand, der die Artikel"
+" enthält, die noch gefertigt werden müssen, und bleibt offen, um zu einem "
+"späteren Zeitpunkt abgeschlossen zu werden."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:58
 msgid ""
@@ -16672,6 +16719,11 @@ msgid ""
 " are manufactured immediately, simply click :guilabel:`Validate` to close "
 "the order."
 msgstr ""
+"Sobald die verbleibenden Einheiten gefertigt werden können, navigieren Sie "
+"zu :menuselection:`Fertigung --> Vorgänge --> Fertigungsaufträge`, und "
+"wählen Sie dann den rückständigen Fertigungsauftrag aus. Wenn alle "
+"verbleibenden Einheiten sofort gefertigt werden, klicken Sie einfach auf "
+":guilabel:`Validieren`, um den Auftrag zu schließen."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:63
 msgid ""
@@ -16679,16 +16731,21 @@ msgid ""
 "another backorder for the remainder by following the steps detailed in this "
 "section."
 msgstr ""
+"Wenn nur ein Teil der verbleibenden Einheiten sofort gefertigt wird, legen "
+"Sie einen weiteren Lieferrückstand für die verbleibenden Einheiten an, indem"
+" Sie die in diesem Abschnitt beschriebenen Schritte ausführen."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:67
 msgid "Create a backorder from tablet view"
-msgstr ""
+msgstr "Einen Lieferrückstand aus der Tablet-Ansicht erstellen"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:69
 msgid ""
 "Backorders for manufacturing orders can also be created from the work order "
 "tablet view."
 msgstr ""
+"Lieferrückstände bei Fertigungsaufträgen können auch über die Tablet-Ansicht"
+" des Arbeitsauftrags erstellt werden."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:72
 msgid ""
@@ -16699,10 +16756,20 @@ msgid ""
 "This makes the :guilabel:`Work Orders` tab appear on manufacturing orders, "
 "from which the tablet view can be opened."
 msgstr ""
+"Um die Tablet-Ansicht verwenden zu können, muss die Einstellung "
+"*Arbeitsaufträge* aktiviert sein. Navigieren Sie dazu zu "
+":menuselection:`Fertigung --> Konfiguration --> Einstellungen`. Aktivieren "
+"Sie auf der Seite :guilabel:`Einstellungen` das Kontrollkästchen neben "
+":guilabel:`Arbeitsaufträge` und klicken Sie dann auf :guilabel:`Speichern`, "
+"um die Änderung zu speichern. Dadurch wird der Reiter "
+":guilabel:`Arbeitsaufträge` auf den Fertigungsaufträgen angezeigt, über die "
+"die Tablet-Ansicht geöffnet werden kann."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:0
 msgid "The Work Orders setting on the Manufacturing settings page."
 msgstr ""
+"Die Einstellung „Arbeitsaufträge“ in der Einstellungsseite der "
+"Fertigungsapp."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:82
 msgid ""
@@ -16711,6 +16778,10 @@ msgid ""
 "Select a manufacturing order with a quantity of two or more or create one by"
 " clicking :guilabel:`Create`."
 msgstr ""
+"Um einen Lieferrückstand aus der Tablet-Ansicht zu erstellen, navigieren Sie"
+" zunächst zu :menuselection:`Fertigung --> Vorgänge --> Fertigungsaufträge`."
+" Wählen Sie einen Fertigungsauftrag mit einer Menge von zwei oder mehr oder "
+"erstellen Sie einen, indem Sie auf :guilabel:`Neu` klicken."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:90
 msgid ""
@@ -16718,20 +16789,28 @@ msgid ""
 " tab and click the :guilabel:`📱 (tablet view)` button located on the line of"
 " the first work order to enter the tablet view."
 msgstr ""
+"Wählen Sie nach der Bestätgung des Fertigungsauftrag den Reiter "
+":guilabel:`Arbeitsaufträge` und klicken Sie auf die Schaltfläche "
+":guilabel:`📱 (Tablet-Ansicht)` in der Zeile des ersten Arbeitsauftrags, um "
+"die Tablet-Ansicht zu öffnen."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst-1
 msgid "The tablet view button for a work order on a manufacturing order."
 msgstr ""
+"Die Schaltfläche für die Tablet-Ansicht für einen Arbeitsauftrag auf einem "
+"Fertigungsauftrag."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:97
 msgid ""
 "Once in tablet view, enter the quantity being manufactured immediately in "
 "the :guilabel:`Units` field at the top left of the tablet view."
 msgstr ""
+"In der Tablet-Ansicht geben Sie die zu produzierende Menge sofort in das "
+"Feld :guilabel:`Einheiten` oben links in der Tablet-Ansicht ein."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst-1
 msgid "The Units field in the tablet view."
-msgstr ""
+msgstr "Das „Einheiten“-Feld in der Tablet-Ansicht."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:104
 msgid ""
@@ -16739,10 +16818,13 @@ msgid ""
 "order being processed requires the completion of a single work order or "
 "multiple work orders."
 msgstr ""
+"Die weiteren Schritte des Arbeitsablaufs hängen davon ab, ob der zu "
+"bearbeitende Fertigungsauftrag die Erledigung eines einzelnen "
+"Arbeitsauftrags oder mehrerer Arbeitsaufträge erfordert."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:108
 msgid "Single work order"
-msgstr ""
+msgstr "Einzelner Arbeitsauftrag"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:110
 msgid ""
@@ -16751,11 +16833,18 @@ msgid ""
 " MO`. The manufacturing order is closed and a backorder for the units that "
 "still need to be manufactured is created automatically."
 msgstr ""
+"Wenn der Fertigungsauftrag nur die Fertigstellung eines einzigen "
+"Arbeitsauftrags erfordert, schließen Sie den Arbeitsauftrag ab und klicken "
+"Sie dann auf :guilabel:`Als Erledigt markieren und Fertigungsauftrag "
+"schließen`. Der Fertigungsauftrag wird geschlossen und ein Lieferrückstand "
+"für die noch zu produzierenden Einheiten wird automatisch angelegt."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst-1
 msgid ""
 "The Mark As Done And Close MO button in the tablet view of a work order."
 msgstr ""
+"Die Schaltfläche „Als Erledigt markieren und Fertigungsauftrag schließen“ in"
+" der Tablet-Ansicht eines Arbeitsauftrags."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:118
 msgid ""
@@ -16764,6 +16853,11 @@ msgid ""
 " select the backorder manufacturing order, which is titled using the "
 "reference tag of the original backorder with *002* added to the end."
 msgstr ""
+"Sobald die verbleibenden Einheiten zur Fertigung bereit sind, navigieren Sie"
+" zu :menuselection:`Fertigung --> Vorgänge --> Fertigungsaufträge`, und "
+"wählen Sie dann den rückständigen Fertigungsauftrag aus, der mit dem "
+"Referenzstichwort des ursprünglichen Liferrückstands betitelt und am Ende "
+"mit *002* versehen ist."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:122
 msgid ""
@@ -16773,6 +16867,13 @@ msgid ""
 "will be completed immediately, simply click :guilabel:`Mark As Done And "
 "Close MO` after completing the work order."
 msgstr ""
+"Wählen Sie im rückständigen Fertigungsauftrag den Reiter "
+":guilabel:`Arbeitsaufträge` und klicken Sie auf die Schaltfläche "
+":guilabel:`📱 (Tablet-Ansicht)` in der Zeile des Arbeitsauftrags, um die "
+"Tablet-Ansicht zu öffnen. Wenn alle Einheiten im Lieferrückstand sofort "
+"fertiggestellt werden, klicken Sie einfach auf :guilabel:`Als Erledigt "
+"markieren und Fertigungsauftrag schließen`, nachdem Sie den Arbeitsauftrag "
+"abgeschlossen haben."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:127
 msgid ""
@@ -16782,10 +16883,16 @@ msgid ""
 "backorder for the remaining units. The new backorder can be processed using "
 "the steps detailed in this section."
 msgstr ""
+"Wenn nur einige der verbleibenden Einheiten sofort gefertigt werden, geben "
+"Sie die Anzahl in das Feld :guilabel:`Einheiten` oben links in der Tablet-"
+"Ansicht ein und klicken Sie dann auf :guilabel:`Als Erledigt markieren und "
+"Fertigungsauftrag schließen`, um einen weiteren Lieferrückstand für die "
+"verbleibenden Einheiten anzulegen. Der neue Lieferrückstand kann mit den in "
+"diesem Abschnitt beschriebenen Schritten bearbeitet werden."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:133
 msgid "Multiple work orders"
-msgstr ""
+msgstr "Mehrere Arbeitsaufträge"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:135
 msgid ""
@@ -16795,10 +16902,16 @@ msgid ""
 "*WH/MO/XXXXX-001* and *WH/MO/XXXXX-002*, with *XXXXX* being the number of "
 "the original order."
 msgstr ""
+"Wenn für den Fertigungsauftrag mehrere Arbeitsaufträge erforderlich sind, "
+"schließen Sie den ersten Arbeitsauftrag ab und klicken Sie dann auf "
+":guilabel:`Produktion aufzeichnen`. Dadurch wird der Fertigungsauftrag in "
+"zwei separate Aufträge mit den Titeln *WH/MO/XXXXX-001* und "
+"*WH/MO/XXXXX-002* aufgeteilt, wobei *XXXXX* die Nummer des ursprünglichen "
+"Auftrags ist."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst-1
 msgid "The Record Production button on a work order."
-msgstr ""
+msgstr "Die Schaltfläche „Produktion aufzeichnen“ auf einem Arbeitsauftrag."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:144
 msgid ""
@@ -16807,6 +16920,11 @@ msgid ""
 "immediately, back out of tablet view by clicking the :guilabel:`⬅️ (back)` "
 "button twice. Doing so will take you to the *001* order."
 msgstr ""
+"In der Tablet-Ansicht wird standardmäßig der erste Arbeitsauftrag für den "
+"Fertigungsauftrag *002* angezeigt. Da dieser Fertigungsauftrag nicht sofort "
+"abgeschlossen wird, verlassen Sie die Tablet-Ansicht, indem Sie zweimal auf "
+"die Schaltfläche :guilabel:`⬅️ (zurück)` klicken. Auf diese Weise gelangen "
+"Sie zum Auftrag *001*."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:148
 msgid ""
@@ -16815,6 +16933,12 @@ msgid ""
 "order. Finally, complete the remaining work orders, then click "
 ":guilabel:`Mark As Done And Close MO` to close the manufacturing order."
 msgstr ""
+"Um den Auftrag *001* abzuschließen, wählen Sie den Reiter "
+":guilabel:`Arbeitsaufträge` und klicken Sie auf die Schaltfläche "
+":guilabel:`Tablet-Ansicht` in der Zeile des nächsten Arbeitsauftrags. "
+"Schließen Sie die restlichen Arbeitsaufträge ab, und klicken Sie dann auf "
+":guilabel:`Als Erledigt markieren und Fertigungsauftrag schließen`, um den "
+"Produktionsauftrag zu schließen."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:152
 msgid ""
@@ -16824,6 +16948,11 @@ msgid ""
 "the :guilabel:`tablet view` button located on the line of the first work "
 "order."
 msgstr ""
+"Sobald die verbleibenden Einheiten zur Fertigung bereit sind, navigieren Sie"
+" zu :guilabel:`Fertigung --> Vorgänge --> Fertigungsaufträge`, und wählen "
+"Sie den Auftrag *002*. Wählen Sie den Reiter :guilabel:`Arbeitsaufträge` und"
+" klicken Sie auf die Schaltfläche :guilabel:`Tablet-Ansicht` in der Zeile "
+"des ersten Arbeitsauftrags."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:157
 msgid ""
@@ -16831,6 +16960,9 @@ msgid ""
 "click :guilabel:`Mark As Done And Close MO` after completing all of the work"
 " orders."
 msgstr ""
+"Wenn alle Einheiten im Lieferrückstand sofort fertiggestellt werden, klicken"
+" Sie einfach auf :guilabel:`Als Erledigt markieren und Fertigungsauftrag "
+"schließen`, nachdem Sie alle Arbeitsaufträge abgeschlossen haben."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:160
 msgid ""
@@ -16840,12 +16972,19 @@ msgid ""
 "backorder for the remaining units, with *003* at the end of its reference "
 "tag."
 msgstr ""
+"Wenn nur ein Teil der verbleibenden Einheiten sofort gefertigt werden, geben"
+" Sie die Anzahl in das Feld :guilabel:`Einheiten` oben links in der Tablet-"
+"Ansicht ein und klicken Sie dann auf :guilabel:`Produktion aufzeichnen`, um "
+"einen zusätzlichen Lieferrückstand für die verbleibenden Einheiten zu "
+"erstellen, mit *003* am Ende des Referenztags."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:165
 msgid ""
 "The *002* backorder and *003* backorder can be completed by following the "
 "steps detailed in this section."
 msgstr ""
+"Der Lieferrückstand *002* und Lieferrückstand *003* können durch Befolgung "
+"der in diesem Abschnitt beschriebenen Schritte abgeschlossen werden."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:169
 msgid ""
@@ -16854,6 +16993,11 @@ msgid ""
 " Doing so marks the completed work order(s) as :guilabel:`Finished` on the "
 "backorder."
 msgstr ""
+"Es ist auch möglich, einen Lieferrückstand in der Mitte eines "
+"Fertigungsauftrags zu erstellen, wenn einige, aber nicht alle "
+"Arbeitsaufträge bereits abgeschlossen sind. In diesem Fall werden die "
+"abgeschlossenen Arbeitsaufträge im Lieferrückstand als :guilabel:`Fertig` "
+"gekennzeichnet."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:174
 msgid ""
@@ -16862,6 +17006,10 @@ msgid ""
 "immediately for all four chairs, there are only enough screws to assemble "
 "two of them."
 msgstr ""
+"Ein Fertigungsauftrag für vier Stühle erfordert die Ausführung von zwei "
+"Arbeitsaufträgen: *Lackieren* und *Montieren*. Während der Arbeitsschritt "
+"„Lackieren“ für alle vier Stühle sofort abgeschlossen werden kann, sind nur "
+"genügend Schrauben für die Montage von zwei Stühlen vorhanden."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:178
 msgid ""
@@ -16872,6 +17020,12 @@ msgid ""
 ":guilabel:`Units` field of the tablet view, and click :guilabel:`Record "
 "Production`."
 msgstr ""
+"Der Mitarbeiter, der für die Herstellung der Stühle verantwortlich ist, "
+"beginnt mit der Lackierung aller vier Stühle und kennzeichnet den "
+"Arbeitsauftrag *Lackieren* für alle Stühle als :guilabel:`Fertig`. Dann geht"
+" er zum Arbeitsauftrag *Montage* über. Sie montieren zwei der vier Stühle, "
+"geben diese Anzahl in das Feld :guilabel:`Einheiten` der Tablet-Ansicht ein "
+"und klicken auf :guilabel:`Produktion aufzeichnen`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:183
 msgid ""
@@ -16880,6 +17034,10 @@ msgid ""
 ":guilabel:`Finished`, and only the *Assemble* work order is left to be "
 "completed."
 msgstr ""
+"Für die verbleibenden zwei Stühle wird ein rückständiger Fertigungsauftrag "
+"erstellt. Im Lieferrückstand ist der Arbeitsauftrag *Lackieren* bereits als "
+":guilabel:`Fertig` gekennzeichnet, und nur der Arbeitsauftrag *Montieren* "
+"muss noch fertiggestellt werden."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:187
 msgid ""
@@ -16888,6 +17046,10 @@ msgid ""
 "complete the *Assemble* work order and close the backorder manufacturing "
 "order."
 msgstr ""
+"Sobald mehr Schrauben verfügbar sind, montiert der Fertigungsmitarbeiter die"
+" restlichen Stühle und klickt auf :guilabel:`Als Erledigt markieren und "
+"Fertigungsauftrag schließen`, um den Arbeitsauftrag *Montieren* "
+"abzuschließen und den rückständigen Fertigungsauftrag zu schließen."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/product_variants.rst:3
 msgid "Managing BoMs for product variants"
