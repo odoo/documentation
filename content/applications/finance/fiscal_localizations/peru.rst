@@ -401,7 +401,7 @@ Asynchronous means that the document is not sent automatically after the invoice
 Electronic Invoice Status
 *************************
 
-**To be Sent**: To be sent: Indicates the document is ready to be sent to the OSE, this can be
+**To be Sent**: Indicates the document is ready to be sent to the OSE, this can be
 done either automatically by Odoo with a *cron* that runs every hour, or the user can send it
 immediately by clicking on the button “Sent now”.
 
