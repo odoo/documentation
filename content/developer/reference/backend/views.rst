@@ -2384,58 +2384,58 @@ Possible children elements of the search view are:
     * ``multi`` several values can be selected (checkboxes). Supported field
       types are many2one, many2many and selection.
 
-    ``groups``
-      restricts to specific users
+  ``groups``
+    restricts to specific users
 
-    ``string``
-      determines the label to display
+  ``string``
+    determines the label to display
 
-    ``icon``
-      specifies which icon is used
+  ``icon``
+    specifies which icon is used
 
-    ``color``
-      determines the icon color
+  ``color``
+    determines the icon color
 
-    Additional optional attributes are available in the ``multi`` case:
+  Additional optional attributes are available in the ``multi`` case:
+
+  .. rst-class:: o-definition-list
+
+  ``enable_counters``
+    default is false. If set to true the record counters will be computed and
+    displayed if non-zero.
+
+    This feature has been implemented in case performances would be too bad.
+
+    Another way to solve performance issues is to properly override the
+    ``search_panel_select_range`` and ``search_panel_select_multi_range`` methods.
+
+  ``expand``
+    default is false. If set to false categories or filters with 0 records will be hidden.
+
+  ``limit``
+    default is 200. Integer determining the maximal number of values to fetch for the field.
+    If the limit is reached, no values will be displayed in the search panel and an error message will
+    appear instead because we consider that is useless / bad performance-wise. All values will be
+    fetched if set to 0.
+
+  Additional optional attributes are available according to the chosen case:
+
+  - For the ``one`` case:
 
     .. rst-class:: o-definition-list
 
-    ``enable_counters``
-      default is false. If set to true the record counters will be computed and
-      displayed if non-zero.
+    ``hierarchize``
+      (only available for many2one fields) default is true. Handles the display style of categories :
 
-      This feature has been implemented in case performances would be too bad.
+      If set to true child categories will appear under their related parent.
+      If not, all categories will be displayed on the same level.
 
-      Another way to solve performance issues is to properly override the
-      ``search_panel_select_range`` and ``search_panel_select_multi_range`` methods.
+  - For the ``multi`` case:
 
-    ``expand``
-      default is false. If set to false categories or filters with 0 records will be hidden.
+    .. rst-class:: o-definition-list
 
-    ``limit``
-      default is 200. Integer determining the maximal number of values to fetch for the field.
-      If the limit is reached, no values will be displayed in the search panel and an error message will
-      appear instead because we consider that is useless / bad performance-wise. All values will be
-      fetched if set to 0.
-
-    Additional optional attributes are available according to the chosen case:
-
-    - For the ``one`` case:
-
-      .. rst-class:: o-definition-list
-
-      ``hierarchize``
-        (only available for many2one fields) default is true. Handles the display style of categories :
-
-        If set to true child categories will appear under their related parent.
-        If not, all categories will be displayed on the same level.
-
-    - For the ``multi`` case:
-
-      .. rst-class:: o-definition-list
-
-      ``domain``:
-        determines conditions that the comodel records have to satisfy.
+    ``domain``:
+      determines conditions that the comodel records have to satisfy.
 
   A domain might be used to express a dependency on another field (with select="one")
   of the search panel. Consider
