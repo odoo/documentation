@@ -11,3 +11,4 @@ Human resources
    hr/fleet
    hr/payroll
    hr/recruitment
+   hr/referrals
