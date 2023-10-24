@@ -115,10 +115,14 @@ This matrix shows the support status of every version.
 I run an older version of Odoo/OpenERP/TinyERP
 ==============================================
 
-Odoo 12.0, 11.0, 10.0, 9.0, and 8.0 are not supported anymore, on any platform.
+- Odoo 12.0, 11.0, 10.0, 9.0, and 8.0 are not supported anymore, on any platform.
 
-OpenERP 7.0, 6.1, 6.0 and 5.0 are not supported anymore, on any platform.
+  .. warning::
+     Odoo 12 databases hosted on Odoo.sh are planned for deletion starting from October 31, 2023.
 
-TinyERP 4.0, 3.0, 2.0 and 1.0 are not supported anymore, on any platform.
+- OpenERP 7.0, 6.1, 6.0 and 5.0 are not supported anymore, on any platform.
 
-Even though we don't support older versions, you can always `upgrade from any version <https://upgrade.odoo.com/>`_.
+- TinyERP 4.0, 3.0, 2.0 and 1.0 are not supported anymore, on any platform.
+
+.. note::
+   Even though we don't support older versions, you can always `upgrade from any version <https://upgrade.odoo.com/>`_.
