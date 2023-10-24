@@ -1257,4 +1257,4 @@ Error management
 ================
 
 .. automodule:: odoo.exceptions
-    :members: AccessDenied, AccessError, CacheMiss, MissingError, RedirectWarning, UserError, ValidationError
+    :members: AccessDenied, AccessError, MissingError, RedirectWarning, UserError, ValidationError
