@@ -23,12 +23,12 @@ Odoo API key
 ------------
 
 You can create Odoo external API keys either :ref:`for a single database <silverfin/api-singledb>`
-(hosting: Odoo Online, On-premise, and Odoo.sh) or :ref:`for multiple databases managed by a user
+(hosting: Odoo Online, On-premise, and Odoo.sh) or :ref:`for all databases managed by a single user
 <silverfin/api-multipledb>` (hosting: Odoo Online).
 
 .. important::
    - These API keys are personal and provide full access to your user account. Store it securely.
-   - You can copy the API key only at its creation, and you cannot retrieve it later.
+   - You can copy the API key only at its creation. It is not possible to retrieve it later.
    - If you need it again, create a new API key (and delete the old one).
 
 .. seealso::
@@ -36,15 +36,15 @@ You can create Odoo external API keys either :ref:`for a single database <silver
 
 .. _silverfin/api-singledb:
 
-One key per database
-~~~~~~~~~~~~~~~~~~~~
+Per database
+~~~~~~~~~~~~
 
-To create a new API key valid for a single database, click on the user menu, then on
-:guilabel:`My Profile`. Under the :guilabel:`Account Security` tab, click on :guilabel:`New API
-key`, confirm your password, give a descriptive name to your new key, and copy the new API key.
+To add an API key to a **single** database, connect to the database, enable the :ref:`developer
+mode <developer-mode>`, click on the user menu, and then :guilabel:`My Profile` /
+:guilabel:`Preferences`. Under the :guilabel:`Account Security` tab, click on :guilabel:`New API
+Key`, confirm your password, give a descriptive name to your new key, and copy the API key.
 
 .. image:: silverfin/api-key-db.png
-   :align: center
    :alt: creation of an Odoo external API key for a database
 
 .. seealso::
@@ -52,15 +52,18 @@ key`, confirm your password, give a descriptive name to your new key, and copy t
 
 .. _silverfin/api-multipledb:
 
-One key for multiple databases (fiduciaries)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+For all databases (fiduciaries)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To create a new API key valid for all the databases of a single user **(the easiest for
-fiduciaries)**, navigate to `Odoo's website <https://www.odoo.com>`_  and sign in with your
-administrator account. Next, open `your account security settings in developer mode
+To add an API key to **all** databases managed by a single user at the same time **(the easiest
+method for fiduciaries)**, navigate to `Odoo's website <https://www.odoo.com>`_  and sign in with
+your administrator account. Next, open `your account security settings in developer mode
 <https://www.odoo.com/my/security?debug=1>`_, click on :guilabel:`New API Key`, confirm your
 password, give a descriptive name to your new key, and copy the new API key.
 
+.. tip::
+   Open the `database manager <https://www.odoo.com/my/databases>`_ to view all databases that will
+   be linked to the single API key.
+
 .. image:: silverfin/api-key-user.png
-   :align: center
    :alt: creation of an Odoo external API key for an Odoo user
