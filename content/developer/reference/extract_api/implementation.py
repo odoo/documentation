@@ -6,96 +6,148 @@ import time
 import requests
 
 account_token = "integration_token"  # Use your token
-domain_name = "https://iap-extract.odoo.com"
-path_to_pdf = "/path/to/invoice_file"
+domain_name = "https://extract.api.odoo.com/"
+path_to_pdf = "/path/to/your/pdf"
+doc_type = "invoice"  # invoice, expense or applicant
 
-API_VERSION = 120  # Do not change
-SUCCESS = 0
-NOT_READY = 1
+# Do not change
+API_VERSION = {
+    'invoice': 122,
+    'expense': 132,
+    'applicant': 102,
+}
 
-def jsonrpc(path, params):
+def extract_jsonrpc_call(path: str, params: dict):
     payload = {
         'jsonrpc': '2.0',
         'method': 'call',
         'params': params,
-        'id': 0,
+        'id': 0,  # This should be unique for each call
     }
-    req = requests.post(domain_name+path, json=payload, timeout=10)
-    req.raise_for_status()
-    resp = req.json()
-    return resp
+    response = requests.post(domain_name + path, json=payload, timeout=10)
+    response.raise_for_status()
+    json_response = response.json()
+    return json_response
 
 
-with open(path_to_pdf, "rb") as file:
+def send_document_to_extract(doc_path: str):
+    with open(doc_path, 'rb') as f:
+        encoded_doc = base64.b64encode(f.read()).decode()
     params = {
         'account_token': account_token,
-        'version': API_VERSION,
-        'documents': [base64.b64encode(file.read()).decode('ascii')],
+        'version': API_VERSION[doc_type],
+        'documents': [encoded_doc],
     }
+    response = extract_jsonrpc_call(f"/api/extract/{doc_type}/1/parse", params)
+    return response
 
-response = jsonrpc("/iap/invoice_extract/parse", params)
-print("/parse call status: ", response['result']['status_msg'])
 
-if response['result']['status_code'] != SUCCESS:
-    sys.exit(1)
+def get_result_from_extract(document_uuid: str):
+    params = {
+        'version': API_VERSION[doc_type],
+        'document_uuid': document_uuid,
+    }
+    endpoint = f"/api/extract/{doc_type}/1/get_result"
+    response = extract_jsonrpc_call(endpoint, params)
+    while response['result']['status'] == 'processing':
+        print("Still processing... Retrying in 5 seconds")
+        time.sleep(5)
+        response = extract_jsonrpc_call(endpoint, params)
+    return response
 
-# You received an id that you can use to poll the server to get the result of the ocr when it will be ready
-document_id = response['result']['document_id']
-params = {
-    'version': API_VERSION,
-    'document_ids': [document_id],  # you can request the results of multiple documents at once if wanted
-}
 
-response = jsonrpc("/iap/invoice_extract/get_results", params)
-document_id = str(document_id) # /get_results expects a string despite the fact that the returned document_id is a int
+def get_result_batch_from_extract(document_uuids: list):
+    """Get the results of multiple documents at once."""
+    params = {
+        'version': API_VERSION[doc_type],
+        'document_uuids': document_uuids,
+    }
+    endpoint = f"/api/extract/{doc_type}/1/get_result_batch"
+    response = extract_jsonrpc_call(endpoint, params)
+    for uuid in document_uuids:
+        while response['result'][uuid]['status'] == 'processing':
+            print("Still processing... Retrying in 5 seconds")
+            time.sleep(5)
+            response = extract_jsonrpc_call(endpoint, params)
+        yield response
 
-while response['result'][document_id]['status_code'] == NOT_READY:  # 1 is the status code indicating that the server is still processing the document
-    print("Still processing... Retrying in 5 seconds")
-    time.sleep(5)
-    response = jsonrpc("/iap/invoice_extract/get_results", params)
 
-with open('results.txt', 'w') as outfile:
-    json.dump(response, outfile, indent=2)
-print("\nResult saved in results.txt")
-
-if response['result'][document_id]['status_code'] != SUCCESS:
-    print(response['result'][document_id]['status_msg'])  # if it isn't a success, print the error message
-    sys.exit(1)
-
-document_results = response['result'][document_id]['results'][0]
-print("\nTotal:", document_results['total']['selected_value']['content'])
-print("Subtotal:", document_results['subtotal']['selected_value']['content'])
-print("Invoice id:", document_results['invoice_id']['selected_value']['content'])
-print("Date:", document_results['date']['selected_value']['content'])
-print("...\n")
-
-params = {
-    'document_id': document_id,
-    'values': {
-        'total': {'content': 100.0},
-        'subtotal': {'content': 100.0},
-        'global_taxes': {'content': []},
-        'global_taxes_amount': {'content': 0.0},
-        'date': {'content': '2020-09-25'},
-        'due_date': {'content': '2020-09-25'},
-        'invoice_id': {'content': document_results['invoice_id']['selected_value']['content']},
-        'partner': {'content': 'twinnta'},
-        'VAT_Number': {'content': 'BE23252248420'},
-        'currency': {'content': 'USD'},
-        'merged_lines': False,
-        'invoice_lines': {'lines': [{'description': 'Total TVA ',
-                                     'quantity': 1.0,
-                                     'unit_price': 100.0,
-                                     'product': False,
-                                     'taxes_amount': 0.0,
-                                     'taxes': [],
-                                     'subtotal': 100.0,
-                                     'total': 100.0}]
+def validate_results(document_uuid: str):
+    # This is an example of how to validate the results of the parsing
+    # These values should be the correct values for the document reviewed by the user
+    params = {
+        'document_id': document_uuid,
+        'values': {
+            'total': {'content': float},
+            'subtotal': {'content': float},
+            'total_tax_amount': {'content': float},
+            'date': {'content': str},  # YYYY-MM-DD
+            'due_date': {'content': str},  # YYYY-MM-DD
+            'invoice_id': {'content': str},
+            'partner': {'content': str},
+            'VAT_Number': {'content': str},
+            'currency': {'content': str},
+            'merged_lines': bool,
+            'invoice_lines': {
+                'lines': [
+                    {
+                        'description': str,
+                        'quantity': float,
+                        'unit_price': float,
+                        'product': str,
+                        'taxes_amount': float,
+                        'taxes': [
+                            {
+                                "amount": float,
+                                "type": "fixed"|"percent",
+                                "price_include": bool
+                            },
+                            ...
+                        ],
+                        'subtotal': float,
+                        'total': float,
+                    },
+                    ...
+                ],
+            }
         }
     }
-}
-response = jsonrpc("/iap/invoice_extract/validate", params)
-if response['result']['status_code'] == SUCCESS:
-    print("/validate call status: Success")
-else:
-    print("/validate call status: wrong format")
+    response = extract_jsonrpc_call(f"/api/extract/{doc_type}/1/validate", params)
+    return response
+
+
+if __name__ == '__main__':
+
+    # Parse the document
+    response = send_document_to_extract(path_to_pdf)
+    print("/parse call status: ", response['result']['status_msg'])
+
+    if response['result']['status'] != 'success':
+        sys.exit(1)
+
+    document_uuid = response['result']['document_uuid']
+
+    # Get the results of the parsing
+    response = get_result_from_extract(document_uuid)
+
+    # Write the response to a file
+    output_file = 'response.json'
+    with open(output_file, 'w') as f:
+        json.dump(response, f, indent=2)
+        print("\nResult saved in", output_file)
+
+    print("/get_results call status: ", response['result']['status_msg'])
+    if response['result']['status'] != 'success':
+        sys.exit(1)
+
+    document_results = response['result']['results'][0]
+
+    print("\nTotal:", document_results['total']['selected_value']['content'])
+    print("Subtotal:", document_results['subtotal']['selected_value']['content'])
+    print("Invoice id:", document_results['invoice_id']['selected_value']['content'])
+    print("Date:", document_results['date']['selected_value']['content'])
+    print("...\n")
+
+    # Validate the results
+    response = validate_results(document_uuid)
+    print("/validate call status: %s" % response['result']['status_msg'])
