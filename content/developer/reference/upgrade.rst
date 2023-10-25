@@ -139,7 +139,7 @@ references of deprecated elements. However, it can also be done by installing th
 the errors that occur during the installation.
 
 Information on the changes between versions can be found in the `release notes
-<https:/odoo.com/page/release-notes>`_ and the `upgrade report <upgrade/upgrade_report>`.
+<https:/odoo.com/page/release-notes>`_ and the :ref:`upgrade report <upgrade/upgrade_report>`.
 
 .. seealso::
    - :ref:`reference/views`
@@ -153,7 +153,7 @@ Removing customizations
 
 Customizations can become redundant with the release of a new version of Odoo. They can be removed
 from your database with a :ref:`migration script <reference/upgrade/migration-scripts>` using the
-`uninstall_module` method from the `upgrade-util package <https://github.com/odoo/upgrade-util/>`_.
+`uninstall_module` method from the `upgrade-util package <https://github.com/odoo/upgrade-util/blob/master/src/util/modules.py#L71>`_.
 This method renames the field and the column in the database but does not impact views, reports,
 filters, mail templates, automated and server actions, etc., that refer to those fields. Those
 references must be found and removed from the database, as well as in the same migration script.
