@@ -286,7 +286,7 @@ Database
 
 .. option:: --unaccent
 
-   Use the unaccent function provided by the database when available.
+   Try to enable the unaccent extension when creating new databases
 
 .. _reference/cmdline/server/emails:
 
