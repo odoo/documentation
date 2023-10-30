@@ -104,8 +104,8 @@ project <https://odoo.sh/project>`_.
       Once the upgrade platform is done upgrading the backup and uploading it on the branch, it is
       put in a **special mode**: each time a **commit is pushed** on the branch, a **restore
       operation** of the upgraded backup and an **update of all the custom modules** occur. This
-      allows you to iterate on your custom modules' upgrade scripts quickly. The log file of the
-      upgrade process can be found in your newly upgraded staging build by going to
+      allows you to test your custom modules on an pristine copy of the upgraded database. The log
+      file of the upgrade process can be found in your newly upgraded staging build by going to
       :file:`~/logs/upgrade.log`.
 
       .. note::
