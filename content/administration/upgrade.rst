@@ -109,12 +109,12 @@ project <https://odoo.sh/project>`_.
       :file:`~/logs/upgrade.log`.
 
       .. note::
-         Most Odoo.sh users have custom modules installed on their database. In that case, the
-         modules' source code must be up-to-date with the target version of Odoo before the
-         upgrade can be performed. Check out the :doc:`upgrade for developers' documentation
-         </developer/reference/upgrade>` for more information. In addition, if a module is not
-         needed after an upgrade, :ref:`you can remove customizations
-         <upgrade/remove_customizations>`.
+         In databases where custom modules are installed, their source code
+         must be up-to-date with the target version of Odoo before the upgrade
+         can be performed. Check out the :doc:`upgrade for developers'
+         documentation </developer/reference/upgrade>` for more information. In
+         addition, if a module is not needed after an upgrade, :ref:`you can
+         remove customizations <upgrade/remove_customizations>`.
 
    .. group-tab:: On-premise
 
