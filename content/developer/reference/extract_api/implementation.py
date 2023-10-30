@@ -6,7 +6,7 @@ import time
 import requests
 
 account_token = "integration_token"  # Use your token
-domain_name = "https://extract.api.odoo.com/"
+domain_name = "https://extract.api.odoo.com"
 path_to_pdf = "/path/to/your/pdf"
 doc_type = "invoice"  # invoice, expense or applicant
 
@@ -38,81 +38,22 @@ def send_document_to_extract(doc_path: str):
         'version': API_VERSION[doc_type],
         'documents': [encoded_doc],
     }
-    response = extract_jsonrpc_call(f"/api/extract/{doc_type}/1/parse", params)
+    response = extract_jsonrpc_call(f"/api/extract/{doc_type}/2/parse", params)
     return response
 
 
-def get_result_from_extract(document_uuid: str):
+def get_result_from_extract(document_token: str):
     params = {
         'version': API_VERSION[doc_type],
-        'document_uuid': document_uuid,
+        'document_token': document_token,
+        'account_token': account_token,
     }
-    endpoint = f"/api/extract/{doc_type}/1/get_result"
+    endpoint = f"/api/extract/{doc_type}/2/get_result"
     response = extract_jsonrpc_call(endpoint, params)
     while response['result']['status'] == 'processing':
         print("Still processing... Retrying in 5 seconds")
         time.sleep(5)
         response = extract_jsonrpc_call(endpoint, params)
-    return response
-
-
-def get_result_batch_from_extract(document_uuids: list):
-    """Get the results of multiple documents at once."""
-    params = {
-        'version': API_VERSION[doc_type],
-        'document_uuids': document_uuids,
-    }
-    endpoint = f"/api/extract/{doc_type}/1/get_result_batch"
-    response = extract_jsonrpc_call(endpoint, params)
-    for uuid in document_uuids:
-        while response['result'][uuid]['status'] == 'processing':
-            print("Still processing... Retrying in 5 seconds")
-            time.sleep(5)
-            response = extract_jsonrpc_call(endpoint, params)
-        yield response
-
-
-def validate_results(document_uuid: str):
-    # This is an example of how to validate the results of the parsing
-    # These values should be the correct values for the document reviewed by the user
-    params = {
-        'document_id': document_uuid,
-        'values': {
-            'total': {'content': float},
-            'subtotal': {'content': float},
-            'total_tax_amount': {'content': float},
-            'date': {'content': str},  # YYYY-MM-DD
-            'due_date': {'content': str},  # YYYY-MM-DD
-            'invoice_id': {'content': str},
-            'partner': {'content': str},
-            'VAT_Number': {'content': str},
-            'currency': {'content': str},
-            'merged_lines': bool,
-            'invoice_lines': {
-                'lines': [
-                    {
-                        'description': str,
-                        'quantity': float,
-                        'unit_price': float,
-                        'product': str,
-                        'taxes_amount': float,
-                        'taxes': [
-                            {
-                                "amount": float,
-                                "type": "fixed"|"percent",
-                                "price_include": bool
-                            },
-                            ...
-                        ],
-                        'subtotal': float,
-                        'total': float,
-                    },
-                    ...
-                ],
-            }
-        }
-    }
-    response = extract_jsonrpc_call(f"/api/extract/{doc_type}/1/validate", params)
     return response
 
 
@@ -125,10 +66,10 @@ if __name__ == '__main__':
     if response['result']['status'] != 'success':
         sys.exit(1)
 
-    document_uuid = response['result']['document_uuid']
+    document_token = response['result']['document_token']
 
     # Get the results of the parsing
-    response = get_result_from_extract(document_uuid)
+    response = get_result_from_extract(document_token)
 
     # Write the response to a file
     output_file = 'response.json'
@@ -147,7 +88,3 @@ if __name__ == '__main__':
     print("Invoice id:", document_results['invoice_id']['selected_value']['content'])
     print("Date:", document_results['date']['selected_value']['content'])
     print("...\n")
-
-    # Validate the results
-    response = validate_results(document_uuid)
-    print("/validate call status: %s" % response['result']['status_msg'])
