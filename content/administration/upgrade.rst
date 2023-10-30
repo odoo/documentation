@@ -291,7 +291,7 @@ exceptions.
       .. image:: upgrade/odoo-sh-prod.png
          :alt: View from the upgrade tab
 
-      The actual process is **triggered as soon as a new commit is added** to the branch. This
+      The process is **triggered as soon as a new commit is made** on the branch. This
       allows the upgrade process to be synchronized with the deployment of the custom modules'
       upgraded source code.
 
