@@ -111,7 +111,11 @@ project <https://odoo.sh/project>`_.
       .. note::
          In databases where custom modules are installed, their source code
          must be up-to-date with the target version of Odoo before the upgrade
-         can be performed. Check out the :doc:`upgrade for developers'
+         can be performed. If there are none, the "update on commit" mode is
+         skipped, the upgraded database is build as soon as it is transfered from the upgrade
+         platform and the upgrade mode is exited.
+         
+         Check out the :doc:`upgrade for developers'
          documentation </developer/reference/upgrade>` for more information. In
          addition, if a module is not needed after an upgrade, :ref:`you can
          remove customizations <upgrade/remove_customizations>`.
@@ -148,8 +152,9 @@ project <https://odoo.sh/project>`_.
            - A `dump.sql` file containing the upgraded database
            - A `filestore` folder containing files extracted from in-database records into
              attachments (if there are any) and new standard Odoo files from the targeted Odoo
-             version (e.g., new images, icons, payment provider's logos, etc.). This folder be
-             merged with the production filestore to get the full upgraded filestore.
+             version (e.g., new images, icons, payment provider's logos, etc.). 
+             This is the folder that should be merged with the production filestore
+             in order to get the full upgraded filestore.
 
 .. note::
    You can request multiple test databases if you wish to test an upgrade more than once.
@@ -162,23 +167,25 @@ In all cases, the process is the same:
    upgrade standard modules
 #. Downloading the upgraded database
 #. Importing the file into a database
-#. (*Optional*) Running a series of :ref:`custom migration scripts
-   <reference/upgrade/migration-scripts>` developed by third parties to upgrade custom modules
+#. (*If applicable*) :ref:`Custom migration scripts <reference/upgrade/migration-scripts>`
+   developed by the maintainer of your custom modules are ran to upgrade them.
 
 .. _upgrade/upgrade_report:
 
 .. note::
-   When an upgrade request is completed, an upgrade report is emailed and made available in the
-   Discuss app. It contains important information about the changes introduced by the new version.
+   When an upgrade request is completed, an upgrade report is attached to the successful upgrade
+   email and it becomes available in the Discuss app for users who are part of the "Administration
+   / Settings" group. This report provides important information about the changes introduced by
+   the new version.
 
 .. _upgrade/test_your_db:
 
 Testing the new version of the database
 ---------------------------------------
 
-It is essential to spend some testing the upgraded test database to ensure that you are not stuck in
-your day-to-day activities by a change in views, behavior, or an error message once the upgrade goes
-live.
+It is essential to spend some time testing the upgraded test database to ensure that you are not
+stuck in your day-to-day activities by a change in views, behavior, or an error message once the
+upgrade goes live.
 
 .. note::
    Test databases are neutralized, and some features are disabled to prevent them from impacting the
@@ -201,6 +208,7 @@ working correctly and to get more familiar with the new version.
    - Are you able to create and modify records? (sales orders, invoices, purchases, users, contacts,
      companies, etc.)
    - Are there any issues with your mail templates?
+   - Are there any issues with saved translations?
    - Are your search filters still present?
    - Can you export your data?
 
@@ -230,7 +238,7 @@ working correctly and to get more familiar with the new version.
    This list is **not** exhaustive. Extend the example to your other apps based on your use of Odoo.
 
 If you face an issue while testing your upgraded test database, you can request the assistance of
-Odoo via the `support page <https://odoo.com/help>`_. In any case, it is essential to report any
+Odoo via the `support page <https://odoo.com/help?stage=migration>`_. In any case, it is essential to report any
 problem encountered during the testing to fix it before upgrading your production database.
 
 You might encounter significant differences with standard views, features, fields, and models during
@@ -256,6 +264,11 @@ Once the :ref:`tests <upgrade/test_your_db>` are completed and you are confident
 database can be used as your main database without any issue, it is time to plan the go-live day. It
 can be planned in coordination with Odoo's upgrade support analysts, reachable via the `support page
 <https://odoo.com/help>`_.
+
+As the standard upgrade scripts and your database are constantly evolving, it is recommended
+to frequently request a new upgraded test database to ensure that the upgrade process is
+still successful, especially if it takes a long time to finish. Fully rehearsing the upgrade
+process the day before upgrading the production database is also recommended.
 
 .. important::
    - Any modification to your production database will **not** be saved during the upgrade of your
@@ -285,15 +298,15 @@ exceptions.
    .. group-tab:: Odoo.sh
 
       The process is equivalent to :ref:`obtaining an upgraded test database
-      <upgrade/request-test-database>`, except that the :guilabel:`Production` branch must be
-      selected before clicking the :guilabel:`Upgrade` tab.
+      <upgrade/request-test-database>` on the :guilabel:`Upgrade` branch.
 
       .. image:: upgrade/odoo-sh-prod.png
          :alt: View from the upgrade tab
 
       The process is **triggered as soon as a new commit is made** on the branch. This
       allows the upgrade process to be synchronized with the deployment of the custom modules'
-      upgraded source code.
+      upgraded source code. 
+      If there are no custom modules, the upgrade process is triggered immediately.
 
       .. important::
          The database is unavailable throughout the process. If anything goes wrong, the platform
@@ -323,18 +336,7 @@ exceptions.
          filestore before deploying the new version.
 
 In case of an issue with your production database, you can request the assistance of Odoo via the
-`support page <https://odoo.com/help>`_.
+`support page <https://odoo.com/help?stage=post_upgrade>`_.
 
 .. seealso::
    :doc:`Service Level Agreements documentation <../applications/services/helpdesk/overview/sla>`
-
-.. _upgrade/comparing_customizations:
-
-Comparing customizations to the new version
--------------------------------------------
-
-As many new features are added with each new version, some customizations may become obsolete when
-equivalent features become part of the standard version of Odoo.
-
-Therefore, exploring the new features and comparing them with your customizations is recommended.
-Removing unnecessary customizations reduces the work needed to maintain and upgrade your database.

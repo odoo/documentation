@@ -146,12 +146,23 @@ Information on the changes between versions can be found in the `release notes
    - :ref:`reference/fields`
    - :ref:`reference/orm/models`
 
+.. _upgrade/comparing_customizations:
+
+Comparing customizations to the new version
+-------------------------------------------
+
+As many new features are added with each new version, some customizations may become obsolete when
+equivalent features become part of the standard version of Odoo.
+
+Therefore, exploring the new features and comparing them with your customizations is recommended.
+Removing unnecessary customizations reduces the work needed to maintain and upgrade your database.
+
 .. _upgrade/remove_customizations:
 
 Removing customizations
 -----------------------
 
-Customizations can become redundant with the release of a new version of Odoo. They can be removed
+Customizations that have become redundant with the release of a new version of Odoo can be removed
 from your database with a :ref:`migration script <reference/upgrade/migration-scripts>` using the
 `uninstall_module` method from the `upgrade-util package <https://github.com/odoo/upgrade-util/blob/master/src/util/modules.py#L71>`_.
 This method renames the field and the column in the database but does not impact views, reports,
