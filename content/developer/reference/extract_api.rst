@@ -7,7 +7,7 @@ or **resumes**.
 
 The service scans documents using an :abbr:`OCR (Optical Character Recognition)` engine and then
 uses :abbr:`AI(Artificial Intelligence)`-based algorithms to extract fields of interest such as the
-total, due date, or invoice lines for *invoices*, the total, date, payment reference for *expenses*,
+total, due date, or invoice lines for *invoices*, the total, date for *expenses*,
 or the name, email, phone number for *resumes*.
 
 This service is a paid service. Each document processing will cost you one credit.
@@ -24,6 +24,8 @@ Overview
 The extract API uses the JSON-RPC2_ protocol; its endpoint routes are located at
 `https://extract.api.odoo.com`.
 
+.. _extract_api/version:
+
 Version
 -------
 
@@ -37,18 +39,15 @@ The latest versions are:
 Flow
 ----
 
-The flow is the same for the three services.
+The flow is the same for each document type.
 
-#. | Call :ref:`/parse <extract_api/parse>` to submit your invoices (one call for each
-     invoice). On success, you receive a `document_uuid` in the response.
+#. | Call :ref:`/parse <extract_api/parse>` to submit your documents (one call for each
+     document). On success, you receive a `document_token` in the response.
 #. | You then have to regularly poll :ref:`/get_result <extract_api/get_result>` to get the
      document's parsing status.
    | Alternatively, you can provide a `webhook_url` at the time of the call to
      :ref:`/parse <extract_api/parse>` and you will be notified (via a POST request) when the
      result is ready.
-#. | Once the result is received, you can validate it by calling
-     :ref:`/validate <extract_api/validate>` and sending the expected values.
-   | This step is optional but greatly helps the system to improve.
 
 The HTTP POST method should be used for all of them. A python implementation of the full flow for
 invoices can be found :download:`here <extract_api/implementation.py>` and a token for integration
@@ -59,20 +58,17 @@ testing is provided in the
 Parse
 =====
 
-Request the processing of a document from the OCR. The route will return a `document_uuid`
-(it replaces `document_id`, which is deprecated); you can use it to obtain the result of your
-request.
+Request the processing of a document from the OCR. The route will return a `document_token`,
+you can use it to obtain the result of your request.
 
 .. _extract_api/parse:
 
 Routes
 ------
 
-    - /api/extract/invoice/1/parse
-    - /api/extract/expense/1/parse
-    - /api/extract/applicant/1/parse
-    - |ss| /iap/invoice_extract/parse |se| (deprecated)
-    - |ss| /iap/expense_extract/parse |se| (deprecated)
+    - /api/extract/invoice/2/parse
+    - /api/extract/expense/2/parse
+    - /api/extract/applicant/2/parse
 
 Request
 -------
@@ -91,10 +87,9 @@ Request
     ``account_token`` (required)
         The token of the account from which credits will be taken. Each successful call costs one
         token.
-    ``version`` (optional)
-        The version will determine the format of your requests and the format of the server
-        response. Some results can be unavailable in older versions. If not specified, the latest
-        version will be used.
+    ``version`` (required)
+        The version will determine the format of your requests and the format of the server response.
+        You should use the :ref:`latest version available <extract_api/version>`.
     ``documents`` (required)
         The document must be provided as a string in the ASCII encoding. The list should contain
         only one string. If multiple strings are provided only the first string corresponding to a
@@ -105,7 +100,7 @@ Request
         Unique identifier of the Odoo database.
     ``webhook_url`` (optional)
         A webhook URL can be provided. An empty POST request will be sent to
-        ``webhook_url/document_uuid`` when the result is ready.
+        ``webhook_url/document_token`` when the result is ready.
     ``user_infos`` (optional)
         Information concerning the person sending the document to the extract service. It can be
         the client or the supplier (depending on the ``perspective``). This information is not
@@ -141,9 +136,11 @@ Request
         "jsonrpc": "2.0",
         "method": "call",
         "params": {
-            "account_token": string (hex),
+            "account_token": string,
             "version": int,
             "documents": [string],
+            "dbuuid": string,
+            "webhook_url": string,
             "user_infos": {
                 "user_company_vat": string,
                 "user_company_name": string,
@@ -171,33 +168,25 @@ Response
 ``id``
     see JSON-RPC2_
 ``result``
-    Dictionary containing the following content.
-
     .. rst-class:: o-definition-list
 
-    ``status`` (replaces ``status_code``)
-        The code indicating the status of the request. "success" in case of success. Other values
-        are detailed in the table below.
+    ``status``
+        The code indicating the status of the request. See the table below.
     ``status_msg``
         A string giving verbose details about the request status.
-    ``document_uuid`` (replaces ``document_id``)
-        Only present if the request is successful.
-    ``status_code`` (deprecated)
-        The code indicating the status of the request. 0 in case of success. Other values are
-        detailed in the table below.
-    ``document_id`` (deprecated)
+    ``document_token``
         Only present if the request is successful.
 
-==========================  ============================================  ==========================
-status                      status_msg                                    status_code (deprecated)
-==========================  ============================================  ==========================
-`success`                   Success                                       0
-`error_internal`            An error occurred                             2
-`error_no_credit`           You don't have enough credit                  3
-`error_unsupported_format`  Unsupported file format                       6
-`error_maintenance`         Server is currently under maintenance.
-                            Please try again later.                       9
-==========================  ============================================  ==========================
+===========================  ==============================================================
+status                       status_msg
+===========================  ==============================================================
+`success`                    Success
+`error_unsupported_version`  Unsupported version
+`error_internal`             An error occurred
+`error_no_credit`            You don't have enough credit
+`error_unsupported_format`   Unsupported file format
+`error_maintenance`          Server is currently under maintenance, please try again later
+===========================  ==============================================================
 
 .. code-block:: js
 
@@ -206,21 +195,10 @@ status                      status_msg                                    status
         "id": string,
         "result": {
             "status": string,
-            "status_code": int,  // deprecated
             "status_msg": string,
-            "document_uuid": string,
-            // "document_id": int,  // deprecated
+            "document_token": string,
         }
     }
-
-.. warning::
-    The ``document_id`` field is deprecated and will be removed in the future. Please use
-    ``document_uuid`` instead.
-
-    Version introducing ``document_uuid``:
-     - invoices: 122
-     - expenses: 132
-     - applicant: 102
 
 .. note::
     The API does not actually use the JSON-RPC error scheme. Instead the API has its own error
@@ -234,11 +212,9 @@ Get results
 Routes
 ------
 
-    - /api/extract/invoice/1/get_result
-    - /api/extract/expense/1/get_result
-    - /api/extract/applicant/1/get_result
-    - |ss| /iap/invoice_extract/get_result |se| (deprecated)
-    - |ss| /iap/expense_extract/get_result |se| (deprecated)
+    - /api/extract/invoice/2/get_result
+    - /api/extract/expense/2/get_result
+    - /api/extract/applicant/2/get_result
 
 Request
 -------
@@ -252,16 +228,14 @@ Request
 ``id`` (required)
     see JSON-RPC2_
 ``params``
-    Dictionary containing the following content.
-
     .. rst-class:: o-definition-list
 
     ``version`` (required)
-        |SAME_AS_PARSE|
-    ``documents_uuid`` (required, replaces ``documents_id``)
-        The ``document_uuid`` for which you want to get the current parsing status.
-    ``documents_id`` (deprecated)
-        The ``document_id`` for which you want to get the current parsing status.
+        The version should match the version passed to the :ref:`/parse <extract_api/parse>` request.
+    ``document_token`` (required)
+        The ``document_token`` for which you want to get the current parsing status.
+    ``account_token`` (required)
+        The token of the account that was used to submit the document.
 
 .. code-block:: js
 
@@ -270,8 +244,8 @@ Request
         "method": "call",
         "params": {
             "version": int,
-            // "documents_id": int,  // deprecated
-            "documents_uuid": int,
+            "document_token": int,
+            "account_token": string,
         },
         "id": string,
     }
@@ -290,16 +264,12 @@ are the name of the field and the value is the value of the field.
 ``id``
     see JSON-RPC2_
 ``result``
-    Dictionary where each key is a document_id. For each ``document_id``
-
     .. rst-class:: o-definition-list
 
     ``status``
-        |SAME_AS_PARSE|
-    ``status_code``
-        |SAME_AS_PARSE|
+        The code indicating the status of the request. See the table below.
     ``status_msg``
-        |SAME_AS_PARSE|
+        A string giving verbose details about the request status.
     ``results``
         Only present if the request is successful.
 
@@ -308,6 +278,21 @@ are the name of the field and the value is the value of the field.
         ``full_text_annotation``
             Contains the unprocessed full result from the OCR for the document
 
+================================  =============================================================
+status                            status_msg
+================================  =============================================================
+`success`                         Success
+`error_unsupported_version`       Unsupported version
+`error_internal`                  An error occurred
+`error_maintenance`               Server is currently under maintenance, please try again later
+`error_document_not_found`        The document could not be found
+`error_unsupported_size`          The document has been rejected because it is too small
+`error_no_page_count`             Unable to get page count of the PDF file
+`error_pdf_conversion_to_images`  Couldn't convert the PDF to images
+`error_password_protected`        The PDF file is protected by a password
+`error_too_many_pages`            The document contains too many pages
+================================  =============================================================
+
 .. code-block:: js
 
     {
@@ -315,7 +300,6 @@ are the name of the field and the value is the value of the field.
         "id": string,
         "result": {
             "status": string,
-            "status_code": int,  // deprecated
             "status_msg": string,
             "results": [
                 {
@@ -452,8 +436,6 @@ list of all the fields we can extract from an invoice.
 | ``due_date``            | Same as for ``date``                                                   |
 +-------------------------+------------------------------------------------------------------------+
 | ``total_tax_amount``    | ``content`` is a float                                                 |
-| (previously             |                                                                        |
-| ``global_taxes_amount``)|                                                                        |
 +-------------------------+------------------------------------------------------------------------+
 | ``invoice_id``          | ``content`` is a string                                                |
 +-------------------------+------------------------------------------------------------------------+
@@ -535,196 +517,6 @@ list of all the fields we can extract from a resume.
 | ``mobile``              | ``content`` is a string                                                |
 +-------------------------+------------------------------------------------------------------------+
 
-
-Validate
-========
-
-The validation step is an optional step but is strongly recommended. By telling the system if it
-were right or wrong for each feature you give an important feedback. It has no direct impact but it
-helps the system to greatly improve its prediction accuracy for the documents you will send in the
-future.
-
-
-.. _extract_api/validate:
-
-Routes
-------
-
-    - /api/extract/invoice/1/validate
-    - /api/extract/invoice/1/validate_batch
-    - /api/extract/expense/1/validate
-    - /api/extract/expense/1/validate_batch
-    - /api/extract/applicant/1/validate
-    - /api/extract/applicant/1/validate_batch
-    - |ss| /iap/invoice_extract/validate |se| (deprecated)
-    - |ss| /iap/expense_extract/validate |se| (deprecated)
-
-Request
--------
-
-.. rst-class:: o-definition-list
-
-``jsonrpc`` (required)
-    see JSON-RPC2_
-``method`` (required)
-    see JSON-RPC2_
-``id`` (required)
-    see JSON-RPC2_
-``params`` (``/validate`` route only)
-    dictionary containing the following fields
-
-    .. rst-class:: o-definition-list
-
-    ``document_uuid`` (required, replaces ``document_id``)
-        |SAME_AS_PARSE|
-    ``values``
-        Contains the validation for each feature. For invoices, the field ``merged_line`` indicates
-        if the lines were merged or not.
-    ``document_id`` (deprecated)
-        |SAME_AS_PARSE|
-
-        .. rst-class:: o-definition-list
-
-        ``invoice_lines`` have been merged or not.
-``params`` (``/validate_batch`` route only)
-    dictionary containing the following fields
-
-    .. rst-class:: o-definition-list
-
-    ``documents``
-        Contains the validation for each feature for each document, the ``document_uuid`` are the
-        keys and their values is the content of the ``value`` field of the ``/validate`` route.
-
-.. code-block:: js
-
-    // for the /validate route
-    {
-        "jsonrpc": "2.0",
-        "method": "call",
-        "params": {
-            // "document_id": int,  // deprecated
-            "document_uuid": string,
-            "values": {
-                "merged_lines": bool,  // for invoices
-                "feature_name_1": validation_1,
-                "feature_name_2": validation_2,
-                ...
-            }
-        },
-        "id": string,
-    }
-
-    // for the /validate_batch route
-    {
-        "jsonrpc": "2.0",
-        "method": "call",
-        "params": {
-            "documents": {
-                document_uuid_1: {
-                    "merged_lines": bool,  // for invoices
-                    "feature_name_1": validation_1,
-                    "feature_name_2": validation_2,
-                    ...
-                },
-                document_uuid_2: {
-                    "merged_lines": bool,  // for invoices
-                    "feature_name_1": validation_1,
-                    "feature_name_2": validation_2,
-                    ...
-                },
-                ...
-            }
-        },
-        "id": string,
-    }
-
-.. note::
-    You don't have to validate all the features in order for the validation to succeed. However
-    :ref:`/validate <extract_api/validate>` can't be called multiple times for a same
-    document. Therefore you should validate all the features you want to validate at once.
-
-validation
-~~~~~~~~~~
-
-A **validation** for a given feature is a dictionary containing the textual representation of the
-expected value for this given feature. This format apply for all the features except for
-``invoice_lines`` which has a more complex validation format.
-
-.. code-block:: js
-
-    "feature_name": {
-        "content": string|float
-    }
-
-invoice_lines
-*************
-
-**lines** is a list of dictionaries. Each dictionary represents an invoice line. The dictionary keys
-speak for themselves. Note that there is no ``content`` for this feature.
-
-.. code-block:: js
-
-    "invoice_lines": {
-        "lines": [
-            {
-                "description": string,
-                "quantity": float,
-                "unit_price": float,
-                "product": string,
-                "taxes_amount": float,
-                "taxes": [
-                    {
-                        "amount": float,
-                        "type": "fixed"|"percent",
-                        "price_include": bool
-                    },
-                    ...
-                ],
-                "subtotal": float,
-                "total": float
-            },
-            ...
-        ]
-    }
-
-Response
---------
-
-.. rst-class:: o-definition-list
-
-``jsonrpc``
-    see JSON-RPC2_
-``id``
-    see JSON-RPC2_
-``result``
-    .. rst-class:: o-definition-list
-
-    ``status``
-        |SAME_AS_PARSE|
-    ``status_msg``
-        |SAME_AS_PARSE|
-    ``status_code`` (deprecated)
-        |SAME_AS_PARSE|
-
-==========================  ===========================================  ===========================
-`status`                    status_msg                                   status_code (deprecated)
-==========================  ===========================================  ===========================
-`success`                   Success                                      0
-`error_validation_format`   Validation format is incorrect               12
-==========================  ===========================================  ===========================
-
-.. code-block:: js
-
-    {
-        "jsonrpc": "2.0",
-        "id": string,
-        "result": {
-            "status": string,
-            // "status_code": int,  // deprecated
-            "status_msg": string,
-        }
-    }
-
 .. _latestextract_api/integration_testing:
 
 Integration Testing
@@ -744,8 +536,6 @@ A python implementation of the full flow for invoices can be found
 :download:`here <extract_api/implementation.py>`.
 
 .. _JSON-RPC2: https://www.jsonrpc.org/specification
-
-.. |SAME_AS_PARSE| replace:: Same as for :ref:`/parse <extract_api/parse>`.
 
 .. |ss| raw:: html
 
