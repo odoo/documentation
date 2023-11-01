@@ -20,3 +20,4 @@ allow workers to trigger maintenance operations, feedback loops, quality issues,
    :titlesonly:
 
    manufacturing/management
+   manufacturing/shop_floor
