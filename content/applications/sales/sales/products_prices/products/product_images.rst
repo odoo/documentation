@@ -1,21 +1,24 @@
-===================================================
-Automatically get product images with Google Images
-===================================================
+=================================
+Product images with Google Images
+=================================
 
-The product images are very useful in Odoo, for example, to quickly find a product or check if you
-scanned the right one, but it can be a bit painful to set up especially if you have a lot of
-products. **Google Custom Search** allows finding images automatically for your product, based on
-their barcode, keeping your focus on what matters in your business.
+Having appropriate product images in Odoo is useful for a number of reasons. However, if a lot of
+products need images, assigning them can become incredibly time-consuming.
+
+Fortunately, by configuring the *Google Custom Search* API within an Odoo database, finding product
+images for products (based on their barcode) is extremely efficient.
 
 .. _product_images/configuration:
 
 Configuration
 =============
 
-This functionnality requires configuration both on Google and on Odoo.
+In order to utilize *Google Custom Search* within an Odoo database, both the database and the Google
+API must be properly configured.
 
-With a free Google account, you can get up to 100 free images per day. If you need a higher rate,
-you'll have to upgrade to a billing account.
+.. note::
+   Free Google accounts allow users to select up to 100 free images per day. If a higher amount is
+   needed, a billing upgrade is required.
 
 .. _product_images/google-api-dashboard:
 
@@ -23,109 +26,140 @@ Google API dashboard
 --------------------
 
 #. Go to the `Google Cloud Platform API & Services <https://console.developers.google.com/>`_ page
-   to generate Google Custom Search API credentials. Log in with your Google account.
+   to generate Google Custom Search API credentials. Then, log in with a Google account. Next, agree
+   to their :guilabel:`Terms of Service` by checking the box, and clicking :guilabel:`Agree and
+   Continue`.
+#. From here, select (or create) an API project to store the credentials. Start by giving it a
+   memorable :guilabel:`Project Name`, select a :guilabel:`Location` (if any), then click
+   :guilabel:`Create`.
+#. With the :guilabel:`Credentials` option selected in the left sidebar, click :guilabel:`Create
+   Credentials`, and select :guilabel:`API key` from the drop-down menu.
 
-#. Select or create an API project to store the credentials. Give it an explicit name
-   (e.g. Odoo Images).
-
-#. In the credentials section, click on **Create Credentials** and select **API Keys**.
-
-   .. image:: product_images/gcp-api-services.png
+   .. image:: product_images/credentials-api-key.png
       :align: center
-      :alt: API & Services page on Google Cloud Platform
+      :alt: API & Services page on Google Cloud Platform.
 
-#. Save your **API Key**. You'll need it for the next step in Odoo!
+#. Doing so reveals an :guilabel:`API key created` pop-up window, containing a custom :guilabel:`API
+   key`. Copy and save :guilabel:`Your API key` in the pop-up window -- it will be used later. Once
+   the key is copied (and saved for later use), click :guilabel:`Close` to remove the pop-up window.
 
-#. Use the search bar to look for **Google Custom Search API** and select it.
-
-   .. image:: product_images/gcp-search.png
+   .. image:: product_images/api-key-pop-up.png
       :align: center
-      :alt: Search bar containing "Custom Search API" on Google Cloud Platform
+      :alt: The API key created pop-up window that appears.
 
-#. Enable the API.
+#. On this page, search for `Custom Search API`, and select it.
 
-   .. image:: product_images/gcp-custom-search-api.png
+   .. image:: product_images/custom-search-api-search-bar.png
       :align: center
-      :alt: "Custom Search API" tile with Enable button highlighted on Google Cloud Platform
+      :alt: Search bar containing "Custom Search API" on Google Cloud Platform.
+
+#. From the :guilabel:`Custom Search API` page, enable the API by clicking :guilabel:`Enable`.
+
+   .. image:: product_images/gcp-custom-search-api-page.png
+      :align: center
+      :alt: "Custom Search API" page with Enable button highlighted on Google Cloud Platform.
 
 .. _product_images/google-pse-dashboard:
 
 Google Programmable Search dashboard
 ------------------------------------
 
-#. Go to `Google Programmable Search Engine <https://programmablesearchengine.google.com/>`_ and
-   click on **Get Started**. Log in with your Google account.
+#. Next, go to `Google Programmable Search Engine <https://programmablesearchengine.google.com/>`_,
+   and click either of the :guilabel:`Get started` buttons. Log in with a Google account, if not
+   already logged in.
 
-   .. image:: product_images/google-pse.png
+   .. image:: product_images/google-pse-get-started.png
       :align: center
-      :alt: Google Programmable Search Engine page with the **Get Started** button on the up-right
-            of the page
+      :alt: Google Programmable Search Engine page with the Get Started buttons.
 
-#. Fill the language and the name of the search engine. Give it an explicit name
-   (e.g. Odoo Images).
+#. On the :guilabel:`Create a new search engine` form, fill out the name of the search engine, along
+   with what the engine should search, and be sure to enable :guilabel:`Image Search` and
+   :guilabel:`SafeSearch`.
 
-   .. note::
-      Google doesn't allow to create a search engine without having entered at least one specific
-      site to search on. You can put any website (e.g. www.google.com) for this step, we will
-      remove it later.
+   .. image:: product_images/create-new-search.png
+      :align: center
+      :alt: Create new search engine form that appears with search engine configurations.
 
-#. Validate the form by clicking on **Create**. Then, go to the edition mode of the search engine
-   that you created (either by clicking on **Control Panel** on the confirmation page or by
-   clicking on the name of your Search Engine on the Home page).
+#. Validate the form by clicking :guilabel:`Create`.
+#. Doing so reveals a new page with the heading: :guilabel:`Your new search engine has been
+   created`.
 
-#. In the **basics** tab, make sure to enable **Image search**, **SafeSearch** and
-   **Search the entire web**.
+   .. image:: product_images/new-search-engine-has-been-created.png
+      :align: center
+      :alt: The Your New Search Engine Has Been Created page that appears with copy code.
 
-   .. note::
-      Once **Search the entire web** is enabled, you can safely delete the site that you put at the
-      previous step.
+#. From this page, click :guilabel:`Customize` to open the :menuselection:`Overview --> Basic` page.
+   Then, copy the ID in the :guilabel:`Search engine ID` field. This ID is needed for the Odoo
+   configuration.
 
-#. Save your **Search Engine Id**. You’ll need it for the next step in Odoo!
+   .. image:: product_images/basic-overview-search-engine-id.png
+      :align: center
+      :alt: Basic overview page with search engine ID field.
 
 .. _product_images/setup-in-odoo:
 
 Odoo
 ----
 
-#. Go to :menuselection:`Settings --> General Settings --> Integrations`,
-   activate **Google Images** and save.
+#. In the Odoo database, go to the :menuselection:`Settings app` and scroll to the
+   :guilabel:`Integrations` section. From here, check the box beside :guilabel:`Google Images`.
+   Then, click :guilabel:`Save`.
 
-#. Go back to :menuselection:`Settings --> General Settings--> Integrations`, enter your **API Key**
-   and **Search Engine ID** in **Google Images** settings and save again.
+   .. image:: product_images/google-images-setting.png
+      :align: center
+      :alt: The Google Images setting in the Odoo Settings app page.
+
+#. Next, return to the :menuselection:`Settings app`, and scroll to the :guilabel:`Integrations`
+   section. Then, enter the :guilabel:`API Key` and :guilabel:`Search Engine ID` in the fields
+   beneath the :guilabel:`Google Images` feature.
+#. Click :guilabel:`Save`.
 
 .. _product_images/get-product-images:
 
-Automatically get your product images in Odoo
-=============================================
+Product images in Odoo with Google Custom Search API
+====================================================
 
-The action to automatically get your product images in Odoo appears in any Products or Product
-Variants list view. Here is a step-by-step guide from the Inventory app.
+Adding images to products in Odoo can be done on any product or product variant. This process can be
+completed in any Odoo application that provides access to product pages (e.g. *Sales* app,
+*Inventory* app, etc.).
 
-#. Go to the Products menu (:menuselection:`Products --> Products` or :menuselection:`Products -->
-   Product Variants`) from any application that uses products like Inventory or Sales.
+Below is a step-by-step guide detailing how to utilize the *Google Custom Search API* to assign
+images to products in Odoo using the Odoo *Sales* application:
 
-#. On the list view, select the products that needs an image.
-
-   .. important::
-      Only the 10,000 first selected products or product variants will be processed.
-
-   .. note::
-      - Only the products or product variants with a barcode and without an image will be processed.
-      - If you select a product that has one or more variants from the Products view, each variant
-        matching the previous criteria will be processed.
-
-#. In the action menu, select **Get Pictures from Google Images** and validate by clicking on
-   **Get picture**.
-
-#. You should see your images appearing incrementally.
+#. Navigate to the :guilabel:`Products` page in the *Sales* app (:menuselection:`Sales app -->
+   Products --> Products`). Or, navigate to the :guilabel:`Product Variants` page in the *Sales* app
+   (:menuselection:`Sales app --> Products --> Product Variants`).
+#. Select the desired product that needs an image.
 
    .. note::
-      - Only the 10 first images are fetched immediatly. If you selected more than 10, the rest will
-        be fetched as a background job.
-      - The background job process about 100 images in a minute. If you reach the quota authorized
-        by Google (either with a free or a paid plan), the background job will put itself on hold
-        for 24 hours and continue where it stopped the day before.
+      Only products (or product variants) that have a barcode, but **not** an image, are processed.
+
+      If a product with one or more variants is selected, each variant that matches the
+      aforementioned criteria is processed.
+
+#. Click the :guilabel:`Action ⚙️ (gear)` icon on the product page, and select :guilabel:`Get
+   Pictures from Google Images` from the menu that pops up.
+
+   .. image:: product_images/get-pictures-from-google-action.png
+      :align: center
+      :alt: The Get Pictures from Google Images option from the Action drop-down menu in Odoo.
+
+#. On the pop-up window that appears, click :guilabel:`Get Pictures`.
+
+   .. image:: product_images/click-get-picture-from-pop-up.png
+      :align: center
+      :alt: The pop-up that appears in which the user should click Get Picture in Odoo Sales.
+
+#. Once clicked, the image(s) will appear incrementally.
+
+   .. note::
+      Only the first 10 images are fetched immediately. If you selected more than 10, the rest are
+      fetched as a background job.
+
+      The background job processes about 100 images in a minute. If the quota authorized by Google
+      (either with a free or a paid plan) is reached, the background job puts itself on hold for 24
+      hours. Then, it will continue where it stopped the day before.
 
 .. seealso::
-   - `Create, modify, or close your Google Cloud Billing account
-     <https://cloud.google.com/billing/docs/how-to/manage-billing-account>`_
+   `Create, modify, or close your Google Cloud Billing account
+   <https://cloud.google.com/billing/docs/how-to/manage-billing-account>`_
