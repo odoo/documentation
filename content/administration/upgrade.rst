@@ -92,8 +92,7 @@ project <https://odoo.sh/project>`_.
       Odoo.sh is integrated with the upgrade platform to simplify the upgrade process.
 
       .. note::
-         The :guilabel:`Upgrade` tab is available for valid projects with a valid production build
-         in the branches view.
+         The :guilabel:`Upgrade` tab is available for projects with a valid subscription.
 
       .. image:: upgrade/odoo-sh-staging.png
          :alt: Odoo.sh project and tabs
@@ -238,7 +237,8 @@ working correctly and to get more familiar with the new version.
    This list is **not** exhaustive. Extend the example to your other apps based on your use of Odoo.
 
 If you face an issue while testing your upgraded test database, you can request the assistance of
-Odoo via the `support page <https://odoo.com/help?stage=migration>`_. In any case, it is essential to report any
+Odoo via the `support page <https://odoo.com/help?stage=migration>`_ by selecting the option
+related to testing the upgrade. In any case, it is essential to report any
 problem encountered during the testing to fix it before upgrading your production database.
 
 You might encounter significant differences with standard views, features, fields, and models during
@@ -271,8 +271,6 @@ still successful, especially if it takes a long time to finish. Fully rehearsing
 process the day before upgrading the production database is also recommended.
 
 .. important::
-   - Any modification to your production database will **not** be saved during the upgrade of your
-     production database. This is why we recommend not using it during that time.
    - Going into production without first testing may lead to:
 
      - Users failing to adjust to the changes and new features
@@ -297,8 +295,8 @@ exceptions.
 
    .. group-tab:: Odoo.sh
 
-      The process is equivalent to :ref:`obtaining an upgraded test database
-      <upgrade/request-test-database>` on the :guilabel:`Upgrade` branch.
+      The process is similar to :ref:`obtaining an upgraded test database
+      <upgrade/request-test-database>` on the :guilabel:`Production` branch.
 
       .. image:: upgrade/odoo-sh-prod.png
          :alt: View from the upgrade tab
@@ -329,6 +327,11 @@ exceptions.
 
       An upgraded production database can also be requested via the `Upgrade page
       <https://upgrade.odoo.com/>`_.
+      
+
+      Once the database is uploaded, any modification to your production database will **not** be
+      present on your upgraded database. This is why we recommend not using it during the upgrade
+      process.
 
       .. important::
          When requesting an upgraded database for production purposes, the copy is submitted without
@@ -336,7 +339,8 @@ exceptions.
          filestore before deploying the new version.
 
 In case of an issue with your production database, you can request the assistance of Odoo via the
-`support page <https://odoo.com/help?stage=post_upgrade>`_.
+`support page <https://odoo.com/help?stage=post_upgrade>`_ by selecting the option related to
+the upgrade in production.
 
 .. seealso::
    :doc:`Service Level Agreements documentation <../applications/services/helpdesk/overview/sla>`
