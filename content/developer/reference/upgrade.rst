@@ -2,6 +2,20 @@
 Upgrade for developers
 ======================
 
+The upgrade process
+===================
+
+TODOUPG re-analyze to see if necessary
+
+#. Exporting the database to a file
+#. Uploading the file to the upgrade server
+#. Running a series of :ref:`standard migration scripts <reference/upgrade/migration-scripts>` to
+   upgrade standard modules
+#. Downloading the upgraded database
+#. Importing the file into a database
+#. (*If applicable*) :ref:`Custom migration scripts <reference/upgrade/migration-scripts>`
+   developed by the maintainer of your custom modules are ran to upgrade them.
+
 .. _reference/upgrade/migration-scripts:
 
 Migration scripts
@@ -10,7 +24,7 @@ Migration scripts
 A migration script is a Python file containing a function called `migrate`, which the upgrade
 process invokes at the appropriate time. Typically, this function executes one or multiple SQL
 queries and can also access Odoo's ORM, as well as the `upgrade-util package
-<https://github.com/odoo/upgrade-util/>`_.
+<https://github.com/odoo/upgrade-util/>`__.
 
 .. example::
    Between Odoo 15 and Odoo 16, the `sale.subscription` model was merged into the `sale.order` model
@@ -164,7 +178,7 @@ Removing customizations
 
 Customizations that have become redundant with the release of a new version of Odoo can be removed
 from your database with a :ref:`migration script <reference/upgrade/migration-scripts>` using the
-`uninstall_module` method from the `upgrade-util package <https://github.com/odoo/upgrade-util/blob/master/src/util/modules.py#L71>`_.
+`uninstall_module` method from the `upgrade-util package <https://github.com/odoo/upgrade-util/blob/master/src/util/modules.py#L71>`__.
 This method renames the field and the column in the database but does not impact views, reports,
 filters, mail templates, automated and server actions, etc., that refer to those fields. Those
 references must be found and removed from the database, as well as in the same migration script.
