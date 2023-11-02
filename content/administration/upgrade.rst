@@ -55,17 +55,18 @@ Upgrading in a nutshell
 
 #. (If applicable) : upgrade the source code of your custom module to be compatible with the new
    version of Odoo.
-   .. Once the page for developers is published, uncomment
-   .. (see :ref:`upgrading customizations <upgrade/upgrading_customizations>`).
 
 #. Once all issues are resolved and you are confident that the upgraded database can be used as
    your main database without any issue, plan the upgrade of your production database.
 
-#. You or Odoo upgrade the production database, rendering it unavailable for a few hours 
+#. You or Odoo upgrade the production database, rendering it unavailable for a few hours
    (see :ref:`upgrading the production database <upgrade/upgrade-prod>`).
 
 #. Report any issue encountered during the upgrade to Odoo via the `support page
    <https://odoo.com/help?stage=post_upgrade>`__.
+
+.. Once the page for developers is published, put this at 4)
+.. (see :ref:`upgrading customizations <upgrade/upgrading_customizations>`).
 
 .. _upgrade/request-test-database:
 
@@ -140,7 +141,7 @@ project <https://odoo.sh/project>`_.
          can be performed. If there are none, the "update on commit" mode is
          skipped, the upgraded database is build as soon as it is transfered from the upgrade
          platform and the upgrade mode is exited.
-         
+
          Check out the :doc:`upgrade for developers'
          documentation </developer/reference/upgrade>` for more information. In
          addition, if a module is not needed after an upgrade, :ref:`you can
@@ -176,7 +177,7 @@ project <https://odoo.sh/project>`_.
            - A `dump.sql` file containing the upgraded database
            - A `filestore` folder containing files extracted from in-database records into
              attachments (if there are any) and new standard Odoo files from the targeted Odoo
-             version (e.g., new images, icons, payment provider's logos, etc.). 
+             version (e.g., new images, icons, payment provider's logos, etc.).
              This is the folder that should be merged with the production filestore
              in order to get the full upgraded filestore.
 
@@ -322,7 +323,7 @@ exceptions.
 
       The process is **triggered as soon as a new commit is made** on the branch. This
       allows the upgrade process to be synchronized with the deployment of the custom modules'
-      upgraded source code. 
+      upgraded source code.
       If there are no custom modules, the upgrade process is triggered immediately.
 
       .. important::
@@ -333,8 +334,8 @@ exceptions.
       The update of your custom modules must be successful to complete the entire upgrade process.
       Make sure the status of your staging upgrade is :guilabel:`successful` before trying it in
       production.
-      .. TODOUPG : once the page for developers is published, uncomment
-.. More information on how to upgrade your custom modules can be found in the :ref:`upgrading customizations documentation <upgrade/upgrading_customizations>`.
+   .. TODOUPG : once the page for developers is published, uncomment
+   .. More information on how to upgrade your custom modules can be found in the :ref:`upgrading customizations documentation <upgrade/upgrading_customizations>`.
 
    .. group-tab:: On-premise
 
@@ -347,7 +348,7 @@ exceptions.
 
       An upgraded production database can also be requested via the `Upgrade page
       <https://upgrade.odoo.com/>`_.
-      
+
 
       Once the database is uploaded, any modification to your production database will **not** be
       present on your upgraded database. This is why we recommend not using it during the upgrade
