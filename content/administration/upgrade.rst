@@ -64,8 +64,8 @@ Upgrading in a nutshell
 #. Once all issues are resolved and you are confident that the upgraded database can be used as
    your main database without any issue, plan the upgrade of your production database.
 
-#. You or Odoo upgrade the production database, rendering it unavailable for a few hours
-   (see :ref:`upgrading the production database <upgrade/upgrade-prod>`).
+#. Request the upgraded for the production database, rendering it unavailable for the time it takes
+   to complete the process (see :ref:`upgrading the production database <upgrade/upgrade-prod>`).
 
 #. Report any issue encountered during the upgrade to Odoo via the `support page
    <https://odoo.com/help?stage=post_upgrade>`__.
