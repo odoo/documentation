@@ -309,7 +309,7 @@ exceptions.
 
    .. group-tab:: Odoo Online
 
-      The process is equivalent to :ref:`obtaining an upgraded test database
+      The process is similar to :ref:`obtaining an upgraded test database
       <upgrade/request-test-database>`, except for the purpose option, which must be set to
       :guilabel:`Production` instead of :guilabel:`Test`.
 
@@ -372,7 +372,7 @@ the upgrade in production.
 .. _upgrade/sla:
 
 Service-level agreement (SLA)
-=============================
+-----------------------------
 
 With Odoo Enterprise, upgrading a database to the most recent version of Odoo is **free**, including
 any support required to rectify potential discrepancies in the upgraded database.
@@ -382,7 +382,7 @@ Information about the upgrade services included in the Enterprise Licence is ava
 upgrade services you can expect.
 
 Upgrade services covered by the SLA
------------------------------------
+===================================
 
 Databases hosted on Odoo's cloud platforms (Odoo Online and Odoo.sh) or self-hosted (On-Premise) can
 benefit from upgrade services at all times for:
@@ -397,7 +397,7 @@ Upgrade services are limited to the technical conversion and adaptation of a dat
 modules and data) to make it compatible with the version targeted by the upgrade.
 
 Upgrade services not covered by the SLA
----------------------------------------
+=======================================
 
 The following upgrade-related services are **not** included:
 
