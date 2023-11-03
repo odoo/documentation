@@ -18,7 +18,6 @@ How-to guides
     howtos/accounting_localization
     howtos/translations
     howtos/website_themes
-    howtos/provide_iap_services
     howtos/connect_device
 
 .. cards::
@@ -73,11 +72,6 @@ How-to guides
       :target: howtos/website_themes
 
       Learn how to customize your website by creating a custom theme.
-
-   .. card:: Provide IAP services
-      :target: howtos/provide_iap_services
-
-       Learn how to provide ongoing services with Odoo's In-App Purchase (IAP).
 
    .. card:: Connect with a device
       :target: howtos/connect_device
