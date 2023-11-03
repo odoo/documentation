@@ -12,7 +12,6 @@ How-to guides
     howtos/company
     howtos/localization
     howtos/translations
-    howtos/provide_iap_services
     howtos/connect_device
 
 .. cards::
@@ -37,11 +36,6 @@ How-to guides
       :target: howtos/translations
 
       Learn how to provide translation abilities to your module.
-
-   .. card:: Provide IAP services
-      :target: howtos/provide_iap_services
-
-       Learn how to provide ongoing services with Odoo's In-App Purchase (IAP).
 
    .. card:: Connect with a device
       :target: howtos/connect_device
