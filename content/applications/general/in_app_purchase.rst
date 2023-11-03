@@ -65,10 +65,3 @@ Different services are available depending on the hosting type of your Database:
   Reveal and Partner Autocomplete features);
 - *Odoo.sh and Odoo Enterprise (on-premise)*: both the services provided by Odoo and by third-party
   apps can be used.
-
-Offering my own services
-========================
-
-I am more than welcome to offer my own IAP services through Odoo Apps! It is the perfect opportunity
-to get recurring revenue for an ongoing service use rather than — and possibly instead of — a sole
-initial purchase. Please, find more information at: :doc:`/developer/howtos/provide_iap_services`.
