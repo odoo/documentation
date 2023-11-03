@@ -3411,6 +3411,8 @@ attributes:
     units, e.g. € and $).
     If the value is a domain, the domain is evaluated in the context of the current row's
     record, if ``True`` the corresponding attribute is set on the cell.
+  ``widget`` (optional)
+    alternate representations for a field's display.
 
 .. ....................................................................
 
