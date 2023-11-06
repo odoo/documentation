@@ -9,6 +9,10 @@ ease the work of your cashiers.
    Please note MercuryPay only operates with US and Canadian banks, making
    this procedure only suitable for North American businesses.
 
+.. warning::
+   Vantiv card readers should be purchased exclusively from Vantiv, as certain Vantiv terminals
+   bought on Amazon do not include the correct encryption needed to be used with an Odoo database.
+
 Configuration
 =============
 
