@@ -61,13 +61,18 @@ Dynamic text values
 Below are common dynamic text values used in custom PDFs, and what they represent:
 
 - :guilabel:`name`: Sales Order Reference
-- :guilabel:`partner_id_name`: Customer Name
-- :guilabel:`user_id_name`: Salesperson Name
+- :guilabel:`partner_id__name`: Customer Name
+- :guilabel:`user_id__name`: Salesperson Name
 - :guilabel:`amount_untaxed`: Untaxed Amount
 - :guilabel:`amount_total`: Total Amount
 - :guilabel:`delivery_date`: Delivery Date
 - :guilabel:`validity_date`: Expiration Date
 - :guilabel:`client_order_ref`: Customer Reference
+
+.. note::
+   Double underscore notation for :guilabel:`partner_id__name` and :guilabel:`user_id__name` values
+   are used in place of the typically used `.` symbol because the library currently does not support
+   the `.` symbol.
 
 Product-specific dynamic text values are as follows:
 
