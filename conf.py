@@ -213,6 +213,7 @@ sphinx.transforms.i18n.docname_to_domain = (
 # is populated. If a version is passed to `versions` but is not listed here, it will not be shown.
 versions_names = {
     'master': "Master",
+    '17.0': "Odoo 17",
     'saas-16.4': "Odoo Online",
     'saas-16.3': "Odoo Online",
     'saas-16.2': "Odoo Online",
@@ -221,7 +222,6 @@ versions_names = {
     'saas-15.2': "Odoo Online",
     '15.0': "Odoo 15",
     '14.0': "Odoo 14",
-    '13.0': "Odoo 13",
 }
 
 # The language names that should be shown in the language switcher, if the config option `languages`
