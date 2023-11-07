@@ -1,3 +1,4 @@
+:hide-page-toc:
 
 .. _supported_versions:
 
@@ -16,9 +17,6 @@ Odoo provides support and bug fixing **for the 3 last major versions** of Odoo.
    - Online versions are *not* released for Odoo.sh and On-Premise installations.
    - Online versions are listed below as *SaaS*.
 
-What's the support status of my Odoo?
-=====================================
-
 This matrix shows the support status of every version.
 
 **Major releases are in bold type.**
@@ -33,6 +31,12 @@ This matrix shows the support status of every version.
      - On-Premise
      - Release date
      - End of support
+   * - **Odoo 17.0**
+     - |green|
+     - |green|
+     - |green|
+     - November 2023
+     - November 2026 (planned)
    * - Odoo saas~16.4
      - |green|
      - N/A
@@ -62,7 +66,7 @@ This matrix shows the support status of every version.
      - |green|
      - |green|
      - October 2022
-     - October 2025 (planned)
+     - November 2025 (planned)
    * - Odoo saas~15.2
      - |red|
      - N/A
@@ -80,21 +84,27 @@ This matrix shows the support status of every version.
      - |green|
      - |green|
      - October 2021
-     - October 2024 (planned)
+     - November 2024 (planned)
    * - **Odoo 14.0**
-     - |green|
-     - |green|
-     - |green|
+     - |red|
+     - |red|
+     - |red|
      - October 2020
-     - November 2023 (planned)
+     - November 2023
    * - **Odoo 13.0**
      - |red|
      - |red|
      - |red|
      - October 2019
      - October 2022
+   * - Older versions
+     - |red|
+     - |red|
+     - |red|
+     - Before 2019
+     - Before 2022
 
-.. note::
+.. admonition:: Legend
 
     |green| Supported version
 
@@ -102,7 +112,9 @@ This matrix shows the support status of every version.
 
     N/A Never released for this platform
 
-    🏁 Future version, not released yet
+.. important::
+   Even though we don't support older versions, you can always `upgrade from any version
+   <https://upgrade.odoo.com/>`_.
 
 .. |green| raw:: html
 
@@ -111,14 +123,3 @@ This matrix shows the support status of every version.
 .. |red| raw:: html
 
    <span class="text-danger" style="font-size: 32px; line-height: 0.5">●</span>
-
-I run an older version of Odoo/OpenERP/TinyERP
-==============================================
-
-Odoo 12.0, 11.0, 10.0, 9.0, and 8.0 are not supported anymore, on any platform.
-
-OpenERP 7.0, 6.1, 6.0 and 5.0 are not supported anymore, on any platform.
-
-TinyERP 4.0, 3.0, 2.0 and 1.0 are not supported anymore, on any platform.
-
-Even though we don't support older versions, you can always `upgrade from any version <https://upgrade.odoo.com/>`_.

@@ -222,7 +222,6 @@ versions_names = {
     'saas-15.2': "Odoo Online",
     '15.0': "Odoo 15",
     '14.0': "Odoo 14",
-    '13.0': "Odoo 13",
 }
 
 # The language names that should be shown in the language switcher, if the config option `languages`
