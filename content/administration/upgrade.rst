@@ -8,9 +8,6 @@ An upgrade is the process of moving your database from an older version to a new
 version <maintain/supported_versions>` (e.g., Odoo 14.0 to Odoo 16.0). Frequently upgrading is
 essential as each version comes with new and improved features, bug fixes, and security patches.
 
-.. toctree::
-   :titlesonly:
-
 .. _upgrade_faq/rolling_release:
 
 .. spoiler:: Automatic upgrades: Odoo Online's Rolling Release process
