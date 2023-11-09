@@ -8,4 +8,3 @@ Analyze performance
    :titlesonly:
 
    performance/win_loss
-   performance/google_spreadsheets
