@@ -39,23 +39,30 @@ Modules: (Daju)
 
  
 COA: (Dymo)
-----------
+========================
+
+The Australian chart of accounts is included in the Australian - Accounting module. Go to Accounting ‣ Configuration ‣ Accounting: Chart of Accounts to access it.
+
 
 Taxes (DAJU)
-------------
+========================
 
-Default Australian taxes are automatically generated upon installation of the **Australia - Accounting (l10n_au)**. This is installed by default if the database is created for an Australian Company.
+The default Australian taxes are automatically generated upon installation of the **Australia - Accounting (l10n_au)** which is installed automatically for Australian databases.
 
-These taxes impact the BAS Report, which can be accessed through 
+These taxes impact the BAS Report, which can be accessed through
 ``Accounting ‣ Reporting ‣ BAS Report``.
 
 .. _Link to BAS - TAX report:
 
-In Australia, the standard Goods and Services Tax (GST) rate is 10%, but there are different rates and exemptions for specific categories of goods and services.
+In Australia, the standard Goods and Services Tax (GST) rate is 10%, but there are different rates and exemptions for specific categories of goods and services. 
+
+.. image:: australia/image22.png
+   :align: center
+
 
 Tax Name
-~~~~~~~~
-The tax name will be utilized across multiple Odoo databases. Within the Australian localization package, tax names encompass the tax rate as an integral part of their naming convention.
+-----------------------
+The tax name will be utilised across multiple Odoo databases. Within the Australian localisation package, tax names encompass the tax rate as an integral part of their naming convention.
 
 Despite the high amount of taxes in Odoo, these taxes are pretty similar (mostly 0% and 10%), with different tax grid variations for:
 
@@ -64,9 +71,9 @@ Despite the high amount of taxes in Odoo, these taxes are pretty similar (mostly
 - TPAR
 - TPAR without ABN
 
-There are two primary tax categories: Purchase and Sales. These taxes are further categorized based on whether their tax scope is Services.
+There are two primary tax categories: Purchase and Sales. These taxes are further categorised based on whether their tax scope is Services.
 
-The “TPAR” and “TPAR without ABN” tax variations will determine whether a transaction should be shown on the TPAR report. For products that can be bought, the vendor taxes should also include the “TPAR” and “TPAR without ABN” variations of these taxes so that the fiscal positions can be mapped correctly based on the chosen contact.
+Businesses need to report payments made to subcontractors from relevant services during the financial year. Odoo uses TPAR as a fiscal position to report these payments on the TPAR Report. Moreover, “TPAR without ABN” is used to record amounts withheld from subcontractors without an ABN for the ATO. 
 
 .. _Link to T-PAR Report:
 
@@ -157,16 +164,73 @@ Here is the taxes for Australia in v17.
 
 
 BAS - TAX report (DAJU)
------------------------
+========================
+
+The Business Activity Statement (BAS) report is a critical tax reporting requirement for businesses registered for Goods and Services Tax (GST) in Australia. The BAS is used to report and remit various taxes to the Australian Taxation Office (ATO). With Odoo BAS feature, businesses can report on the following:
+- Goods and Services Tax (GST) 
+- PAYG tax withheld
+
+The taxes for GST are collected from the Tax Grid, which is pre-configured in the system. The Tax Grid can also be manually set up for any additional special GST. Once the tax for each account is set up, the system automatically slots journal items into the correct tax category. This ensures that the BAS report generated is accurate and reflective of the business's financial activities. 
+
+.. image:: australia/image49.png
+   :align: center
+
+In addition, the BAS report will encompass the PAYG tax withheld components. This integration spans from W1 to W5 and is seamlessly tied with the Payroll system. This ensures that all payroll-related withholding taxes are accurately captured and reflected within the report.
+
+In the Payroll (Jump to Payroll), we have some features to configure specifically for W1 to W5. 
+Payroll has in-built rules that facilitate the automatic calculation of taxes for types W1 to W5. For a detailed walkthrough and more information on how these taxes are calculated, please refer to the Payroll app documentation.
+
+
+When it's time to file the tax return with the ATO, whether it be quarterly or annually, we should select "close entry." Following this set up the Tax group and consolidate all tax receivable and payable amounts into the tax clearing account. Subsequently, Odoo will create a Journal Entry reflecting the amount of GST we are required to pay to or receive from the ATO.
+
 
 TPAR Report (PERO)
-------------------
+========================
+
+Odoo allows businesses to report payments made to contractors or subcontractors during the financial year. This is done by generating a TPAR (Taxable Payments Annual Report). If you are not sure that your business needs this report, refer to the documentation provided by the ATO. 
+You can find this report in Accounting ‣ Reporting: 
+
+.. image:: australia/image7.png
+   :align: center
 
 Configuration
-~~~~~~~~~~~~~
-
-Customer statement (Dymo)
 -------------------------
+
+Select Fiscal Position on the Contact form.
+
+.. image:: australia/image11.png
+   :align: center
+
+Upon billing a contact with a fiscal position set to “TPAR”  or “TPAR without ABN”, the report will automatically be generated in Accounting ‣ Reporting.
+
+The report includes the ABN, Total GST, Gross Paid and Tax Withheld from their TPAR  subcontractors. 
+- Total GST: total tax paid 
+- Gross Paid amounts will show after registering a payment for those bills. 
+- Tax Withheld will be shown if the subcontractor is registered with Fiscal Position “TPAR without ABN” 
+
+The following image shows an example of an IT company contracting services from other IT-related companies and subcontractors: 
+
+.. image:: australia/image35.png
+   :align: center
+
+.. image:: australia/image14.png
+   :align: center
+
+
+
+File types that can be exported from Odoo: 
+- PDF
+- XLSX 
+
+
+Customer Statements (Dymo)
+========================
+
+Customer statements can be downloaded by going to Apps ‣ Accounting Customer Statements.
+This module allows customers to see their financial transactions as well as overdue statement details. These statements can be sent out to customers by email.
+
+The customer statements can be found on Customers ‣ Print Customer Statements.
+
 
 Remittance Advice (Dymo)
 ------------------------
@@ -175,7 +239,7 @@ E-Invoicing via Peppol (Dymo)
 ----------------------------
 
 Set up Starshipit shipping services in Odoo (PERO)
---------------------------------------------------
+========================
 
 Setup in Starshipit
 ~~~~~~~~~~~~~~~~~~~
