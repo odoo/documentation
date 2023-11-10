@@ -89,4 +89,5 @@ if __name__ == '__main__':
             setattr(sphinxlint.check_line_too_long, 'enabled', True)
             setattr(checkers.rst_style.check_early_line_breaks, 'enabled', True)
             ADDITIONAL_CHECKERS.extend([checkers.resource_files.check_image_color_depth])
+            run_additional_checks()
         sys.exit(sphinxlint.main())
