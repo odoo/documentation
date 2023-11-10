@@ -224,6 +224,8 @@ to :menuselection:`Accounting --> Configuration --> Settings --> Currencies: Aut
 Rates` to set an :guilabel:`Interval` for when the rate is automatically updated, or to select
 another :guilabel:`Service`.
 
+.. _chile/partner-information:
+
 Partner information
 ===================
 
@@ -946,6 +948,214 @@ valid and a new section needed for customs.
 .. image:: chile/pdf-report-section.png
    :alt: PDF report section for the Electronic Exports of Goods PDF Report.
    :align: center
+
+eCommerce electronic invoicing
+------------------------------
+
+To install the :guilabel:`Chilean eCommerce` module, go to :menuselection:`Apps, search for the
+module by its technical name `l10n_cl_edi_website_sale`, and click the :guilabel:`Activate` button.
+
+.. image:: chile/ecommerce-module-chile.png
+   :align: center
+   :alt: l10n_cl eCommerce module.
+
+This module enables the features and configurations to:
+
+- Generate electronic documents from the *eCommerce* application
+- Support for required fiscal fields in the *eCommerce* application
+- Effectively let the final client decide the electronic document to be generated for their
+  purchase
+
+Once all of the configurations are made for the Chilean :ref:`electronic invoice
+<chile/electronic-invoice>` flow, the following configurations are required for the eCommerce flow
+to be integrated.
+
+To configure your website to generate electronic documents during the sale process, go to
+:menuselection:`Website --> Configuration --> Settings --> Invoicing` and activate the
+:guilabel:`Automatic Invoice` feature. Activating this feature allows electronic documents to be
+automatically generated when an online payment is confirmed.
+
+.. image:: chile/website-configurations-ecommerce-chile.png
+   :align: center
+   :alt: Invoice Policy and Automatic Invoice configurations.
+
+Since an online payment needs to be confirmed for the *automatic invoice* feature to generate the
+document, a payment provider must be configured for the related website.
+
+.. note::
+   Review the :doc:`../payment_providers` documentation for information on which payment providers
+   are supported in Odoo, and how to configure them.
+
+It is also recommended to configure your products so they are able to be invoiced when an online
+payment is confirmed. To do so, go to :menuselection:`Website --> eCommerce --> Products` and select
+the product template of the desired product. Then, set the :guilabel:`Invoicing Policy` to
+:guilabel:`Ordered quantities`.
+
+.. image:: chile/ordered-quantities-product.png
+   :align: center
+   :alt: Invoice Policy configuration in Products.
+
+Invoicing flows
+~~~~~~~~~~~~~~~
+
+Clients from Chile will be able to select if they need an **invoice** or a **ballot** for their
+purchase with an extra step added during the checkout process.
+
+.. image:: chile/select-edi-docs-ecommerce.png
+   :align: center
+   :alt: Option for EDI Documents for clients.
+
+If the customer selects the :guilabel:`Electronic Invoice` option, fiscal fields are required to be
+filled out, including the :guilabel:`Activity Description`, the :guilabel:`Identification Number`
+and their :guilabel:`DTE Email`.
+
+.. image:: chile/fiscal-fields-invoice-ecommerce.png
+   :align: center
+   :alt: Fiscal fields required for an Invoice to be requested.
+
+If the client selects the :guilabel:`Electronic Receipts` option, they will be directed to the next
+step, and the electronic document will be generated for the *Consumidor Final Anónimo* contact.
+
+Clients from countries other than Chile, will have their electronic receipts automatically generated
+for them by Odoo.
+
+.. note::
+   If a purchase through eCommerce requires an export, the customer will need to contact your
+   company to generate an electronic export invoice (*document type 110*), which can be done from
+   the *Accounting* app.
+
+Point of Sale electronic invoicing
+----------------------------------
+
+To install the :guilabel:`Chilean Module for Point of Sale`, go to the :menuselection:`Apps`
+application on the main Odoo dashboard, search for the module by its technical name
+`l10n_cl_edi_pos`, and click the :guilabel:`Activate` button.
+
+.. image:: chile/pos-edi-module-chile.png
+   :align: center
+   :alt: l10n_cl POS EDI module.
+
+This module enables the following features and configurations to:
+
+- Generate electronic documents from the *Point of Sale* application
+- Support the required fiscal fields for contacts created in the *Point of Sale* application
+- Effectively lets the final client decide the type of electronic document to be generated for their
+  purchase
+- Print QR or 5-digit codes in tickets to access to electronic invoices
+
+To configure contacts with the required fiscal information, review the :ref:`partner information
+<chile/partner-information>` section, or directly modify a contact. Navigate to
+:menuselection:`Point of Sale --> Session --> Customers --> Details`, and edit any of the following
+fields:
+
+- :guilabel:`Name`
+- :guilabel:`Email`
+- :guilabel:`Identification Type`
+- :guilabel:`Tax Payer Type`
+- :guilabel:`Type Giro`
+- :guilabel:`DTE Email`
+- :guilabel:`RUT`
+
+.. image:: chile/fiscal-required-pos-session.png
+   :align: center
+   :alt: Contact with fiscal information created from POS.
+
+To configure the products, navigate to :menuselection:`Point of Sale --> Products --> Products` and
+select a product record. In the :guilabel:`Sales` tab of the product form, it is necessary to mark
+the product as :guilabel:`Available for POS`, this makes the product available for sale in the
+*Point of Sale* app.
+
+.. image:: chile/available-in-pos-product.png
+   :align: center
+   :alt: Product with fiscal information created from POS.
+
+Optionally, the following features are available for configuration in the :menuselection:`Point of
+Sale --> Configuration --> Settings --> Bills & Receipts section`:
+
+- :guilabel:`Use QR code on ticket`: this feature enables a QR code to be printed on the user's
+  receipt so they can easily request an invoice after their purchase
+- :guilabel:`Generate a code on ticket`: this feature enables a 5-digit code to be generated on the
+  receipt, allowing the user to request an invoice through the customer portal
+
+.. image:: chile/qr-code-ticket.png
+   :align: center
+   :alt: Configuration to generate QR or 5 digit codes on tickets.
+
+Invoicing flows
+~~~~~~~~~~~~~~~
+
+The following sections cover the invoicing flows for the *Point of Sale* application.
+
+Electronic receipts: anonymous end user
+***************************************
+
+When making a purchase as an anonymous user that does not request an electronic invoice, Odoo
+automatically selects :guilabel:`Consumidor Final Anónimo` as the contact for the order and
+generates the electronic receipt.
+
+.. image:: chile/invoice-receipt-selection.png
+   :align: center
+   :alt: Automatic contact selection of an anonymous end consumer.
+
+.. note::
+   If the client requests a credit note due to a return of their purchase, the credit note should be
+   made using the *Accounting* app. See the :doc:`credit notes and refunds
+   <../accounting/customer_invoices/credit_notes>` documentation for detailed instructions.
+
+Electronic receipts: specific customer
+**************************************
+
+When specific user makes a purchase that does not request an electronic invoice, Odoo automatically
+selects the contact for the order as the :guilabel:`Consumidor Final Anónimo`, and allows you to
+select or create the required customer contact with their fiscal information for the receipt.
+
+.. image:: chile/contact-for-electronic-invoice.png
+   :align: center
+   :alt: Selection of contact for the receipt.
+
+.. note::
+   If the client requests a credit note because of a return of this type of purchase, the credit
+   note and return process can be managed directly from the :abbr:`POS (Point of Sale)` session.
+
+Electronic invoices
+*******************
+
+When clients request an electronic invoice, it is possible to select or create the required contact
+with their fiscal information. When the payment is being made, select the option :guilabel:`Invoice`
+to generate the document.
+
+.. image:: chile/invoice-option-at-payment.png
+   :align: center
+   :alt: Selection of invoice option at payment.
+
+.. note::
+   For both the electronic receipts and invoices, if the product is not affected by taxes, Odoo
+   detects this and generates the correct type of document for tax-exempt sales.
+
+Returns
+*******
+
+For electronic receipts (not generated for the *Consumidor Final Anónimo*) and electronic invoices,
+it is possible to manage the process to return products sold in a :abbr:`POS (Point of Sale)` order
+by selecting the :guilabel:`Refund` button.
+
+.. image:: chile/refund-order.png
+   :align: center
+   :alt: Refund option in the POS application.
+
+Orders can be searched by the order status or by contact, and be selected for the refund to be based
+on the client's original order.
+
+.. image:: chile/select-order-refund.png
+   :align: center
+   :alt: Selection of order for the refund process.
+
+When the return payment is validated, Odoo generates the necessary credit note, referencing the
+original receipt or invoice, partially or fully canceling the document.
+
+.. seealso::
+   `Smart tutorial - Electronic invoicing for point of sale
+   <https://www.youtube.com/watch?v=B2XuWmtlmno&t=360s>`_.
 
 Financial reports
 =================
