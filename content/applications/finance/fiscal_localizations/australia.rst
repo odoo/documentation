@@ -172,16 +172,38 @@ The Business Activity Statement (BAS) report is a critical tax reporting require
 
 The taxes for GST are collected from the Tax Grid, which is pre-configured in the system. The Tax Grid can also be manually set up for any additional special GST. Once the tax for each account is set up, the system automatically slots journal items into the correct tax category. This ensures that the BAS report generated is accurate and reflective of the business's financial activities. 
 
+.. image:: australia/tax_grid.png
+   :align: center
+
+In addition, the BAS report includes the PAYG tax withheld components covering from W1 to W5 This integration ensures that all payroll-related withholding taxes are accurately captured and reflected within the report.
+
+Within the Australian  Payroll, there are specific configurations for W1 to W5. 
+Moreover, the module  incorporates in-built rules that facilitate the automatic calculation of taxes for types W1 to W5. For a detailed walkthrough and more information on the calculation process for these taxes, please refer to the Payroll app documentation.
+
+.. _Link to Payroll:
+
 .. image:: australia/image49.png
    :align: center
 
-In addition, the BAS report will encompass the PAYG tax withheld components. This integration spans from W1 to W5 and is seamlessly tied with the Payroll system. This ensures that all payroll-related withholding taxes are accurately captured and reflected within the report.
 
-In the Payroll (Jump to Payroll), we have some features to configure specifically for W1 to W5. 
-Payroll has in-built rules that facilitate the automatic calculation of taxes for types W1 to W5. For a detailed walkthrough and more information on how these taxes are calculated, please refer to the Payroll app documentation.
+When it's time to file the tax return with the ATO, select "Close entry”. The tax return period can be configured in configuration -> Tax Return Periodicity. Also, the start date of the tax return can be defined in Fiscal Periods.
 
+Odoo uses calendar quarter rather than the Australian FY quarter which means July to September is Q3 in Odoo.
 
-When it's time to file the tax return with the ATO, whether it be quarterly or annually, we should select "close entry." Following this set up the Tax group and consolidate all tax receivable and payable amounts into the tax clearing account. Subsequently, Odoo will create a Journal Entry reflecting the amount of GST we are required to pay to or receive from the ATO.
+When closing the entry for the first time, the GST payable account and GST receivable account need to be set. A notification from odoo pops up and asks for configuration.
+
+.. image:: australia/tax_closing.png
+   :align: center
+
+Once the GST payable account and GST receivable account are set up, the BAS report generates updated Journal entries that consolidate all the  tax to the GST clearing account (same as BAS payments in the image)
+
+.. image:: australia/tax_group.png
+   :align: center
+
+Following this set up the Tax group and consolidate all tax receivable and payable amounts into the tax clearing account. Subsequently, Odoo will create a Journal Entry reflecting the amount of GST we are required to pay to or receive from the ATO.
+
+.. image:: australia/tax_return.png
+   :align: center
 
 
 TPAR Report (PERO)
@@ -231,90 +253,194 @@ This module allows customers to see their financial transactions as well as over
 
 The customer statements can be found on Customers ‣ Print Customer Statements.
 
+.. image:: australia/customer_statement_print_1.png
+   :align: center
+
+This will automatically print out the customer statements for the month.
+
+.. image:: australia/customer_statement_print_2.png
+   :align: center
+
+Changing the dates of the customer statements can be done by going to  Accounting ‣ Reporting ‣ Partner Ledger. The Partner ledger creates the ability to select a specific date range for the customer statements. 
+
+.. image:: australia/customer_statement_date.png
+   :align: center
 
 Remittance Advice (Dymo)
-------------------------
+========================
+
+Remittance Advice can be accessed by going to Accounting ‣ Vendors ‣ Payments and printing out the “Payment Receipt”
+
+.. image:: australia/remittance_advice.png
+   :align: center
 
 E-Invoicing via Peppol (Dymo)
-----------------------------
+========================
+Odoo is compliant for Australia and New Zealand, refer to here to learn more about AU-NZ Peppol format. 
+.. _Link to Payroll:
+
 
 Set up Starshipit shipping services in Odoo (PERO)
 ========================
+Starshipit is a shipping service operator that connects companies with many Australasian shipping carriers. Now that Odoo has a native integration with Starshipit, users can create shipping methods that will automatically get rates from specific couriers (such as Australia Post, NZ Post, DHL,...) based on predefined conditions.
+
+Side note: Odoo is also integrated with `EasyPost <https://www.easypost.com/>`_, which provides a connection with different Australasian couriers as well.
 
 Setup in Starshipit
-~~~~~~~~~~~~~~~~~~~
-
-Find Starshipit credentials
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Setup in Odoo
-~~~~~~~~~~~~~
-
-Rate computation
-~~~~~~~~~~~~~~~~
-
-Manage Packages
-~~~~~~~~~~~~~~~
-
-Process an order from Odoo to Starshipit
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Returns management
-~~~~~~~~~~~~~~~~~~
-
-Cancellations/ Refunds
-~~~~~~~~~~~~~~~~~~~~~
-
-ABA Files (DAJU)
 ----------------
 
+To get started, go to `Starshipit’s platform <https://starshipit.com/>`_: 
+
+- Create Account
+- Go to Settings
+- Enter your pickup address
+- Connect your desired couriers
+
+.. image:: australia/starshipit_1.png
+   :align: center
+
+
+Find Starshipit credentials
+----------------
+
+In the Starshipit account, navigate to Settings ‣ API in the menu on the left. 
+
+.. image:: australia/starshipit_2.png
+   :align: center
+
+Any issues or questions pertaining to Starshipit only need to be discussed with Starshipit customer support.
+
+
+
+Setup in Odoo
+----------------
+
+#. To get started, go to Odoo’s Apps module, search for the Starshipit Shipping integration, and install it.
+
+.. image:: australia/starshipit_setup_1.png
+   :align: center
+
+#. Once installed, activate the Starshipit Shipping module in Inventory ‣  Configuration ‣  Settings. The Starshipit Connector setting is found under the Shipping Connectors section.
+
+.. image:: australia/starshipit_setup_2.png
+   :align: center
+
+#. Configure the Warehouse address in Inventory ‣ Warehouses ‣ Address
+
+Example: 
+If your company ships from a warehouse called “WH1”, the Pickup Address used in Starshipit should also be the WH1 address. 
+
+
+#. After activating the Starshipit Connector, go to Inventory ‣ Configuration ‣ Delivery ‣ Shipping Methods or click on the “Starshipit Shipping Methods” link below the listed connector. Once on the Shipping Methods page, click “Create”.
+
+.. image:: australia/starshipit_setup_3.png
+   :align: center
+
+Important fields:
+
+- Provider: select Starshipit from the drop-down menu.
+- Enter the Starshipit API Key and the Subscription Key under the Starshipit Configuration tab. 
+- Choose a Delivery Product (this will be the product shown in the Sales Order, e.g. “Freight”). Note: this is a mandatory field, without a product, you will not be able to select a Service Code from Starshipit.
+- Add the Service Code of the Product configured in Starshipit. When you select the service for that shipping method, the name of the Shipping method name will automatically change. Available service codes depend on the carriers integrated in your account Starshipit account.  This can be done on the Starshipit account ‣ Settings ‣ Checkout Rates ‣ Courier Configuration. 
+
+.. image:: australia/starshipit_setup_4.png
+   :align: center
+
+- Manually Save your changes by clicking the cloud icon next to the Shipping Methods / New. 
+- Default Package Type: this option is recommended when dealing with packages with weights. You can activate the configuration “Packages” in order to create a new Package Type for Starshipit:
+
+.. image:: australia/starshipit_setup_5.png
+   :align: center
+
+.. image:: australia/starshipit_setup_6.png
+   :align: center
+
+Tip:
+Odoo has a built-in layer of protection against unwanted charges when using test environments. In the test environment, if a shipping method is used to create labels, then those labels are immediately cancelled after the creation and archived in Starshipit — this occurs automatically. However, Starshipit does not allow test courier accounts and depending on each courier, and depending on the courier, the account might be charged for printing label, unless the order is cancellled manually on the couriers’s portal. 
+The test and production environment settings can be toggled back and forth from the Smart Buttons.
+
+
+
+Rate computation
+----------------
+
+When creating a quotation in Odoo, click on “Add shipping”, select a Starshipit shipping product and click on “Get rate”. Contact must have a real and accurate address for the estimation to work.
+
+.. image:: australia/starshipit_rate_computation_1.png
+   :align: center
+
+.. image:: australia/starshipit_rate_computation_2.png
+   :align: center
+
+Important! 
+Verify that the selected weight is supported by the selected shipping method and if this is set, make sure that the destination address is supported by the courier.
+Also, on the Starshipit Portal, navigate to Settings ‣ Rules and configure them according to your business logic. If a courier is not supported by a rule, Odoo won’t be able to create the order and get the rate.
+
+
+Manage Packages
+----------------
+Before validating the transfer, select Put In Pack to add the products to be shipped into a Package Type. You can manage your Package Types on Inventory ‣ Configuration ‣ Delivery ‣ Package Types when you set up Packages.
+.. image:: australia/starshipit_manage_packages.png
+   :align: center
+
+Process an order from Odoo to Starshipit
+----------------
+
+Returns management
+----------------
+
+Cancellations/ Refunds
+----------------
+
+ABA Files (DAJU)
+========================
+
 Context
-~~~~~~~
+----------------
 
 Definition
-~~~~~~~~~~
+----------------
 
 Why do we need them?
-~~~~~~~~~~~~~~~~~~~~
+----------------
 
 Limitations to know of
-~~~~~~~~~~~~~~~~~~~~~~
+----------------
 
 Setup
-~~~~~
+----------------
 
 Flow
-~~~~
+----------------
 
 Online payment solution Asia Pay (DYMO)
----------------------------------------
+========================
 
 Open Banking standards for bank sync (LWI)
-------------------------------------------
-
+========================
 Export QIF, OFX Import (DAJU)
------------------------------
+========================
 
 Import OFX statement files
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------
 
 Import QIF statement files
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------
 
 Configuration
-~~~~~~~~~~~~~
+----------------
 
 POS terminal → in store payment solution (DAJU) (Stripe)
---------------------------------------------------------
+========================
 
 Configuration
-~~~~~~~~~~~~~
+----------------
 
 Flow
-~~~~
+----------------
 
 Payroll (LWI)
--------------
+========================
 
 Employees
 ~~~~~~~~~
@@ -359,4 +485,4 @@ SuperStream
 ~~~~~~~~~~~
 
 Employment Hero (DAJU)
-----------------------
+========================
