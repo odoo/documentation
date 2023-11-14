@@ -2,6 +2,10 @@
 Outlook Plugin
 ==============
 
+Outlook allows for third-party applications to connect in order to execute database actions from
+emails. Odoo has a plugin for Outlook that allows for the creation of an opportunity from the email
+panel.
+
 Configuration
 =============
 
@@ -12,126 +16,135 @@ The Outlook :doc:`Mail Plugin <../mail_plugins>` needs to be configured both on 
 Enable Mail Plugin
 ------------------
 
-First, you need to enable the *Mail Plugin* feature in your database. Go to :menuselection:`Settings
---> General Settings --> Integrations`, enable *Mail Plugin*, and *Save* the configuration.
+First, enable the *Mail Plugin* feature in the database. Go to :menuselection:`Settings --> General
+Settings --> Integrations`, enable :guilabel:`Mail Plugin`, and :guilabel:`Save` the configuration.
 
 .. _mail-plugin/outlook/install-plugin:
 
 Install the Outlook Plugin
 --------------------------
 
-#. Open your Outlook mailbox and select any email.
+Download (:menuselection:`Save Page As --> Web Page XML only`) the following XML file to upload
+later: `https://download.odoocdn.com/plugins/outlook/manifest.xml
+<https://download.odoocdn.com/plugins/outlook/manifest.xml>`_.
 
-#. Click on the *More actions* button and select *Get Add-ins*.
+Next, open the Outlook mailbox, and select any email. After completing this, click on the
+:guilabel:`More actions` button in the upper right-side and select :guilabel:`Get Add-ins`.
 
-   .. image:: outlook/more-actions.png
-      :align: center
-      :alt: More actions button in Outlook
+.. image:: outlook/more-actions.png
+   :align: center
+   :alt: More actions button in Outlook
 
-#. Select the *My add-ins* tab.
+Following this step, select the :guilabel:`My add-ins` tab on the left-side.
 
-   .. image:: outlook/my-add-ins.png
-      :align: center
-      :alt: My add-ins in Outlook
+.. image:: outlook/my-add-ins.png
+   :align: center
+   :alt: My add-ins in Outlook
 
-#. Under *Custom add-ins*, click on *+ Add a custom add-in*, and then on *Add from URL...*
+Under :guilabel:`Custom add-ins` towards the bottom, click on :guilabel:`+ Add a custom add-in`, and
+then on :guilabel:`Add from file...`
 
-   .. image:: outlook/custom-add-ins.png
-      :align: center
-      :alt: Custom add-ins in Outlook
+.. image:: outlook/custom-add-ins.png
+   :align: center
+   :alt: Custom add-ins in Outlook
 
-#. Enter the following URL `https://download.odoocdn.com/plugins/v15/outlook/manifest.xml` and press
-   *OK*.
+For the next step, attach the `manifest.xml` file downloaded above, and press :guilabel:`OK`. Next,
+read the warning and click on :guilabel:`Install`.
 
-   .. image:: outlook/enter-add-in-url.png
-      :align: center
-      :alt: Entering the add-in URL in Outlook
-
-#. Read the warning and click on *Install*.
-
-   .. image:: outlook/add-in-warning.png
-      :align: center
-      :alt: Custom add-in installation warning in Outlook
+.. image:: outlook/add-in-warning.png
+   :align: center
+   :alt: Custom add-in installation warning in Outlook
 
 .. _mail-plugin/outlook/connect-database:
 
-Connect your database
----------------------
+Connect the database
+--------------------
 
-#. Open any email in your Outlook mailbox, click on the *More actions* button, and select *Odoo for
-   Outlook*.
+Now, Outlook will be connected to the Odoo database. First, open any email in the Outlook mailbox,
+click on the :guilabel:`More actions` button in the upper right-side, and select :guilabel:`Odoo for
+Outlook`.
 
-   .. image:: outlook/odoo-for-outlook.png
-      :align: center
-      :alt: Odoo for Outlook add-in button
+.. image:: outlook/odoo-for-outlook.png
+   :align: center
+   :alt: Odoo for Outlook add-in button
 
-#. The right-side panel can now display **Company Insights**. At the bottom, click on *Login*.
+The right-side panel can now display **Company Insights**. At the bottom, click on
+:guilabel:`Login`.
 
-   .. image:: outlook/panel-login.png
-      :align: center
-      :alt: Logging in your Odoo database
+.. image:: outlook/panel-login.png
+   :align: center
+   :alt: Logging in the Odoo database
 
-   .. note::
-      Only a limited amount of *Company Insights* (*Lead Enrichment*) requests are available as a
-      trial. This feature requires :ref:`prepaid credits <mail_plugins/pricing>`.
+.. note::
+   Only a limited amount of **Company Insights** (*Lead Enrichment*) requests are available as a
+   trial database. This feature requires :ref:`prepaid credits <mail_plugins/pricing>`.
 
-   .. tip::
-      If, after a short while, the panel is still empty, it is possible that your browser cookie
-      settings prevented it from loading.
-      Note that these settings also change if you are in "Incognito" mode on your
-      browser.
+.. tip::
+   If, after a short while, the panel is still empty, it is possible that the browser cookie
+   settings prevented it from loading. Note that these settings also change if the browser is in
+   "Incognito" mode.
 
-      To fix this issue, configure your browser to always allow cookies on Odoo's plugin page.
+   To fix this issue, configure the browser to always allow cookies on Odoo's plugin page.
 
-      For Google Chrome, you can do so by following the guide at:
-      `https://support.google.com/chrome/answer/95647 <https://support.google.com/chrome/answer/95647#:~:text=Allow%20or%20block%20cookies%20for%20a%20specific%20site>`_
-      and adding `download.odoo.com` to the list of `Sites that can always use cookies`.
+   For Google Chrome, change the browser cookie settings by following the guide at:
+   `https://support.google.com/chrome/answer/95647
+   <https://support.google.com/chrome/answer/95647>`_
+   and adding `download.odoo.com` to the list of :guilabel:`Sites that can always use cookies`.
 
-      Once done, the Outlook panel needs to be opened again.
+   Once this is complete, the Outlook panel needs to be opened again.
 
+Now, enter the Odoo database URL and click on :guilabel:`Login`.
 
-#. Enter your Odoo database URL and click on *Login*.
+.. image:: outlook/enter-database-url.png
+   :align: center
+   :alt: Entering the Odoo database URL
 
-   .. image:: outlook/enter-database-url.png
-      :align: center
-      :alt: Entering your Odoo database URL
+Next, click on :guilabel:`Allow` to open the pop-up window.
 
-#. Click on *Allow* to open the pop-up window.
+.. image:: outlook/new-window-warning.png
+   :align: center
+   :alt: New window pop-up warning
 
-   .. image:: outlook/new-window-warning.png
-      :align: center
-      :alt: New window pop-up warning
+If the user isn't logged into the database, enter the credentials. Click on :guilabel:`Allow` to let
+the Outlook Plugin connect to the database.
 
-#. If you aren't logged into your database, enter your credentials.
-
-#. Click on *Allow* to let the Outlook Plugin connect to your database.
-
-   .. image:: outlook/odoo-permission.png
-      :align: center
-      :alt: Allowing the Outlook Plugin to connect to a database
+.. image:: outlook/odoo-permission.png
+   :align: center
+   :alt: Allowing the Outlook Plugin to connect to a database
 
 .. _mail-plugin/outlook/add-shortcut:
 
 Add a shortcut to the plugin
 ----------------------------
 
-By default, the Outlook Plugin can be opened from the *More actions* menu. However, to save
-time, it's possible to add it next to the other default actions.
+By default, the Outlook Plugin can be opened from the *More actions* menu. However, to save time,
+it's possible to add it next to the other default actions.
 
-#. In your Outlook mailbox, click on *Settings*, then on *View all Outlook settings*.
+In the Outlook mailbox, click on :guilabel:`Settings`, then on :guilabel:`View all Outlook
+settings`.
 
-   .. image:: outlook/all-outlook-settings.png
-      :align: center
-      :alt: Viewing all Outlook settings
+.. image:: outlook/all-outlook-settings.png
+   :align: center
+   :alt: Viewing all Outlook settings
 
-#. Select *Customize actions* under *Mail*, click on *Odoo for Outlook*, and then *Save*.
+Now, select :guilabel:`Customize actions` under :guilabel:`Mail`, click on :guilabel:`Odoo for
+Outlook`, and then :guilabel:`Save`.
 
-   .. image:: outlook/customize-actions.png
-      :align: center
-      :alt: Odoo for Outlook customized action
+.. image:: outlook/customize-actions.png
+   :align: center
+   :alt: Odoo for Outlook customized action
 
-#. Open any email; the shortcut should be displayed.
+Following this step, open any email; the shortcut should be displayed.
 
-   .. image:: outlook/odoo-outlook-shortcut.png
-      :align: center
-      :alt: Odoo for Outlook customized action
+.. image:: outlook/odoo-outlook-shortcut.png
+   :align: center
+   :alt: Odoo for Outlook customized action
+
+Using the plugin
+----------------
+
+Now that the plug-in is installed and operational, all that needs to be done to create a lead is to
+click on the `O` [Odoo icon] or navigate to :guilabel:`More actions` and click on :guilabel:`Odoo
+for Outlook`. The side panel will appear on the right-side, and under :guilabel:`Opportunities`
+click on :guilabel:`New`. A new window with the created opportunity in the Odoo database will
+populate.
