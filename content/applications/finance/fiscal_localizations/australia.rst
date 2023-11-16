@@ -5,8 +5,6 @@ Australia
 .. image:: australia/Title_image.png
    :align: center
 
-Documentation Guidelines
-========================
 
 Modules: (Daju)
 ========================
@@ -378,14 +376,15 @@ When creating a quotation in Odoo, click on “Add shipping”, select a Starshi
 .. image:: australia/STARSHIPIT_10.png
    :align: center
 
-Important! 
-Verify that the selected weight is supported by the selected shipping method and if this is set, make sure that the destination address is supported by the courier.
-Also, on the Starshipit Portal, navigate to Settings ‣ Rules and configure them according to your business logic. If a courier is not supported by a rule, Odoo won’t be able to create the order and get the rate.
+.. important::
+   Verify that the selected weight is supported by the selected shipping method and if this is set, make sure that the destination address is supported by the courier.
+   Also, on the Starshipit Portal, navigate to Settings ‣ Rules and configure them according to your business logic. If a courier is not supported by a rule, Odoo won’t be able to create the order and get the rate.
 
 
 Manage Packages
 ----------------
 Before validating the transfer, select Put In Pack to add the products to be shipped into a Package Type. You can manage your Package Types on Inventory ‣ Configuration ‣ Delivery ‣ Package Types when you set up Packages.
+
 .. image:: australia/STARSHIPIT_11.png
    :align: center
 
@@ -643,29 +642,35 @@ Link to Stripe Account and the business. When it back to Odoo, Stripe account is
 4. Login to `Stripe <https://dashboard.stripe.com/dashboard>`_
 
 Copy the Publishable Kay and Secret Key to Odoo.
+
 .. image:: australia/POS_6.png
    :align: center
 
 In the configuration, select the payment journal.
+
 .. image:: australia/POS_7.png
    :align: center
 
 Click the generate your webhook
+
 .. image:: australia/POS_8.png
    :align: center
 
-5. configuration of Point of Sales. 
+1. configuration of Point of Sales. 
 
 Add Stripe to payment methods and click Save
+
 .. image:: australia/POS_9.png
    :align: center
 
-6. Link Stripe Terminal to Stripe Account
+1. Link Stripe Terminal to Stripe Account
 `Stripe Dashboard: <https://dashboard.stripe.com/dashboard>`_ Click More -> Terminal readers
+
 .. image:: australia/POS_10.png
    :align: center
 
 Click New -> Create a new address to manage the PoS Payment Terminal
+
 .. image:: australia/POS_11.png
    :align: center
 
@@ -751,7 +756,8 @@ Contractual information related to Australia can be found in the following 3 pla
 .. image:: australia/pay_2.png
    :align: center
 
-Important note: the structures “Horticulture / Shearing (Schedule 2)” and “Artists and Performers (Schedule 3)” are only partially complete in version 17 of Odoo and proper tests should be performed before using them to pay employees in your production database. Send your feedback to au-feedback@mail.odoo.com.
+.. important::
+   the structures “Horticulture / Shearing (Schedule 2)” and “Artists and Performers (Schedule 3)” are only partially complete in version 17 of Odoo and proper tests should be performed before using them to pay employees in your production database. Send your feedback to au-feedback@mail.odoo.com.
 
 The field Work Entry Source is also very important and defines the way working hours and days will be accounted for in the employee’s payslip.
 - Working Schedule: work entries are automatically generated based on the employee’s working schedule, starting from the start date of the contract. For example, let’s assume that an employee works 38 hours a week and their contract’s start date is January 1. Today is January 16 and the user generates a pay run from January 14 to 20. The working hours on the payslip will be automatically calculated to be 38 hours (5 * 7.36 hours) if no leave is taken.
@@ -759,10 +765,12 @@ The field Work Entry Source is also very important and defines the way working h
 - Planning. The default working schedule is ignored, and work entries are generated from planning shifts only.
 
 
-Important note: To ensure that Odoo's payslips automatically compute various penalty rates as defined by an award (overtime rate, public holiday rate, etc) additional configurations are necessary. These configurations involve the following steps: firstly,  new work entry types for each penalty rate need to be created, before assigning a penalty rate in % to each of them. Once this one-time configuration is done, work entries can be manually imported for each period and Odoo will separate the pay items and rates on the employee’s payslip.
-Important note: timesheets do not impact work entries in Odoo.
+.. important::
+   To ensure that Odoo's payslips automatically compute various penalty rates as defined by an award (overtime rate, public holiday rate, etc) additional configurations are necessary. These configurations involve the following steps: firstly,  new work entry types for each penalty rate need to be created, before assigning a penalty rate in % to each of them. Once this one-time configuration is done, work entries can be manually imported for each period and Odoo will separate the pay items and rates on the employee’s payslip.
+.. important::
+   Timesheets do not impact work entries in Odoo.
 
-2. The “Salary Information” tab. A few important fields will impact the frequency pay runs and the management of payslip rules in Odoo.
+1. The “Salary Information” tab. A few important fields will impact the frequency pay runs and the management of payslip rules in Odoo.
 
 - Wage Type. For full-time and part-time employees, select the “Fixed Wage” pay type. For casual workers and other hourly contracts, choose the “Hourly Wage” type. For employees being paid hourly, make sure to define the correct casual loading.
 - Schedule Pay. In Australia, only the following pay run frequencies are accepted: daily, weekly, bi-weekly (or fortnightly), monthly, and quarterly.
@@ -787,6 +795,7 @@ Once all important information has been entered, ensure the transition of the co
 Assign superannuation accounts
 ------------------------------
 Upon receipt of superannuation details from a new employee, ensure the creation of a new account in Payroll ‣ Configuration ‣ Australia ‣ Super Accounts, linking it to the individual. Input the account's fund, "member since" date, and member number for accurate records.
+
 .. image:: australia/pay_23.png
    :align: center
 
@@ -795,7 +804,8 @@ If the employee uses a superannuation fund that does not exist in  the database 
 .. image:: australia/pay_5.png
    :align: center
 
-Important note: Odoo is not SuperStream-compliant in Odoo 17.0. Our teams are actively working on it and announcements will be made once companies can use Odoo to report their superannuation data and payments to the ATO via clearinghouses.
+.. important::
+   Odoo is not SuperStream-compliant in Odoo 17.0. Our teams are actively working on it and announcements will be made once companies can use Odoo to report their superannuation data and payments to the ATO via clearinghouses.
 
 
 Create pay runs with payslips
@@ -806,6 +816,7 @@ There are two ways Odoo can help create pay runs: via batch or via individual pa
 Create a batch of payslips
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 When preparing to generate employees’ draft payslips (e.g. at the end of every week, fortnight or month), navigate to Payroll ‣ Payslips ‣ Batches and create a new one. This method allows the creation of multiple payslips corresponding to each employee in a single batch.
+
 .. image:: australia/pay_6.png
    :align: center
 
@@ -820,6 +831,7 @@ Create an individual payslip
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In cases where the pay run doesn't fall into the category of regular payslips, the option exists to create a pay run dedicated to a single employee. Go to Payroll ‣ Payslips ‣ All Payslips ‣ New. Employ this method when processing one-time payments for employees, including return-to-work payments (ATO Schedule 4), employment termination payments (ATO Schedule 7 and 11), as well as commissions and bonuses (ATO Schedule 5). When generating an individual payslip, make sure to proceed with the following steps: 
+
 .. image:: australia/pay_7.png
    :align: center
 
@@ -850,9 +862,11 @@ a. Allowances. To incorporate various types of allowances into an employee's pay
    :align: center
 
 
-Important note: withholding for allowances is not computed automatically as of Odoo 17. The payroll user has to use the field “Withholding for allowance” under the other inputs table to manually add the total amount to be withheld across all allowances on that payslip.
+.. important::
+   withholding for allowances is not computed automatically as of Odoo 17. The payroll user has to use the field “Withholding for allowance” under the other inputs table to manually add the total amount to be withheld across all allowances on that payslip.
 
 b. Extra pay items. Unlike allowances, extra pay items are other inputs that add to the payslip’s gross and as such, to the withholding amount. A good example lies in regular sales commissions which are taxed at the same rate as the normal salary (unlike discretionary bonuses which fall under the ATO’s Schedule 5 and its corresponding salary structure). To configure such a custom pay item, go to Payroll ‣ Configuration ‣ Other Input Types and create a new entry with the code “EXTRA” as shown in the screenshot below.
+
 .. image:: australia/pay_11.png
    :align: center
 On the tab “Salary Computation”, the payroll user can verify whether all the pay rules have been computed correctly as per employee, contract and salary structure. Here are a few guidelines to better understand the data.
@@ -873,6 +887,150 @@ When the payroll is satisfied with the payslip, they can click on “Create Draf
 Pay employees
 ------------------------------
 
+After a batch or a payslip’s journal entry has been posted, the company can proceed to pay their employees. The user can choose between two different payment methods.
 
-Employment Hero (DAJU)
-========================
+1. Pay the employee in batch via ABA file. This is only possible from the payslip batch level. Please note however that it is always possible to include an individual payslip into an existing batch and as such, include it in an ABA file. To generate the ABA file, make sure that the batch’s journal entry has been posted. From the batch form view, click on “Create ABA File” and choose the desired bank journal. The newly generated ABA file will be available for download in the field “ABA File”. It is possible to re-generate the ABA file after applying corrections to existing payslips.
+
+.. image:: australia/pay_13.png
+   :align: center
+
+.. image:: australia/pay_14.png
+   :align: center
+
+.. important::
+   an ABA file can only be generated if both the company’s bank account and each employee’s bank account have been properly configured. See section “ABA Files” for more details.
+
+
+2. Pay the employee using the “Register Payment” feature. On the individual payslip level, once the payslip's journal entry has been posted, click on the button “Register Payment”. The same process as paying for vendor bills, select the desired bank journal and payment method, then reconcile  the payment later with the corresponding bank statements.
+
+
+.. image:: australia/pay_15.png
+   :align: center
+
+One-time payments
+~~~~~~~~~~~~~~~~~
+
+Certain payments such as “return to work” payments and “employment termination payments” (ETP) are processed only once and require a slightly different approach.
+
+Return to work payments
+~~~~~~~~~~~~~~~~~
+
+A return to work payment is a payment made to an employee to resume working. To process one in Odoo, create an individual payslip, select the employee and modify its regular structure to “Australia: return to work”. Then, simply add the gross amount of that payment in the “Other Inputs” table and compute the payslip.
+
+.. image:: australia/pay_16.png
+   :align: center
+
+
+Odoo automatically computes the PAYG withholding, the net amount and the super guarantee corresponding to that payment.
+
+.. image:: australia/salary_computing.png
+   :align: center
+
+
+
+Termination payments
+~~~~~~~~~~~~~~~~~
+
+Before proceeding with the employee’s ETP, make sure that a “Contract End Date” has been set on that employee’s contract, so that Odoo can automatically compute the final prorated salary of that employee for the current month.
+
+First, create the final salary for that employee this month. To do so, create an individual payslip. If the contract end date is set correctly, Odoo will automatically compute the prorated salary up to the final payslip date.
+
+.. image:: australia/pay_17.png
+   :align: center
+
+
+We recommend creating a batch on the fly for that payslip, in which we will add the ETP as a second payslip of that same batch.
+
+.. image:: australia/pay_18.png
+   :align: center
+
+Create a second individual payslip and include it in the same batch. Change the salary structure on that payslip to “Australia: Termination Payments”. Before computing the sheet, it is important to provide the payslip with details of the termination.
+
+.. image:: australia/pay_19.png
+   :align: center
+
+- Genuine or non-genuine redundancy. This choice will have an impact on the amounts and caps defined per ETP type.
+- ETP types. First, see the full list of termination payment types in “Other Input Types” by filtering by “ETP Type is Set”.
+
+.. image:: australia/pay_20.png
+   :align: center
+
+Add the relevant ETP type in the “Other Inputs” table of the payslip, then compute the payslip. For example:
+
+.. image:: australia/pay_21.png
+   :align: center
+
+Odoo will automatically compute the gross ETP, the withholding, the unused leaves and the net salary according to the rules defined on the ETP, the employee and their contract.
+
+.. image:: australia/pay_22.png
+   :align: center
+
+Once payment for both payslips is ready to be processed, an ABA file can be created directly from the batch.
+
+STP Phase 2
+------------
+
+.. important::
+   Odoo is not compliant with STP Phase 2 as of Odoo 17.0. Our teams are actively working on it and announcements will be made once companies can use Odoo to report their payroll data directly to the ATO.
+
+.. _australia/employment-hero:
+
+Employment Hero Australian Payroll(DAJU)
+==================================
+
+The Employment Hero module synchronizes payslip accounting entries (e.g., expenses, social charges,
+liabilities, taxes) from Employment Hero to Odoo automatically. Payroll administration is still done
+in Employment Hero. We only record the journal entries in Odoo.
+
+.. important::
+   KeyPay was rebranded as **Employment Hero** in March 2023.
+
+Configuration
+-------------
+
+#. :ref:`Activate <general/install>` the :guilabel:`Employment Hero Australian Payroll` module
+   (technical name: `l10n_au_keypay`).
+#. Configure the **Employment Hero API** by going to :menuselection:`Accounting --> Configuration -->
+   Settings`. More fields become visible after clicking on :guilabel:`Enable Employment Hero
+   Integration`.
+
+   .. image:: australia/employment-hero-integration.png
+      :alt: Enabling Employment Hero Integration in Odoo Accounting displays new fields in the
+            settings
+
+   - You can find the API Key in the :guilabel:`My Account` section of the Employment Hero platform.
+
+     .. image:: australia/employment-hero-myaccount.png
+        :alt: "Account Details" section on the Employment Hero dashboard
+
+   - The **Payroll URL** is pre-filled with `https://keypay.yourpayroll.com.au`. *Please do not
+     change it.*
+   - You can find the **Business ID** in the Employment Hero URL. (i.e., `189241`)
+
+     .. image:: australia/employment-hero-business-id.png
+        :alt: The Employment Hero "Business ID" number is in the URL
+
+   - You can choose any Odoo journal to post the payslip entries.
+
+How does the API work?
+----------------------
+
+The API syncs the journal entries from Employment Hero to Odoo and leaves them in draft mode. The
+reference includes the Employment Hero payslip entry ID in brackets for the user to easily retrieve
+the same record in Employment Hero and Odoo.
+
+.. image:: australia/employment-hero-journal-entry.png
+   :alt: Example of a Employment Hero Journal Entry in Odoo Accounting (Australia)
+
+By default, the synchronization happens once per week. You can fetch the records manually by going
+to :menuselection:`Accounting --> Configuration --> Settings` and, in the :guilabel:`Enable
+Employment Hero Integration` option, click on :guilabel:`Fetch Payruns Manually`.
+
+Employment Hero payslip entries also work based on double-entry bookkeeping.
+
+The accounts used by Employment Hero are defined in the section :guilabel:`Payroll settings`.
+
+.. image:: australia/employment-hero-chart-of-accounts.png
+   :alt: Chart of Accounts menu in Employment Hero
+
+For the API to work, you need to create the same accounts a
