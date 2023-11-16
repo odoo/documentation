@@ -1033,4 +1033,6 @@ The accounts used by Employment Hero are defined in the section :guilabel:`Payro
 .. image:: australia/employment-hero-chart-of-accounts.png
    :alt: Chart of Accounts menu in Employment Hero
 
-For the API to work, you need to create the same accounts a
+For the API to work, you need to create the same accounts as the default accounts of your Employment
+Hero business (**same name and same code**) in Odoo. You also need to choose the correct account
+types in Odoo to generate accurate financial reports.
