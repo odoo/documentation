@@ -12,6 +12,7 @@ How-to guides
     howtos/javascript_field
     howtos/javascript_view
     howtos/javascript_client_action
+    howtos/standalone_owl_application
     howtos/web_services
     howtos/company
     howtos/create_reports
@@ -41,6 +42,12 @@ How-to guides
       :target: howtos/javascript_client_action
 
       Learn how to create client actions in the Odoo JavaScript web framework.
+
+   .. card:: Create a standalone Owl application
+      :target: howtos/standalone_owl_application
+
+      Learn how to create a public-facing Owl application outside of the web client using a
+      controller and the Odoo JavaScript framework.
 
    .. card:: Web services
       :target: howtos/web_services
