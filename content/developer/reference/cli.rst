@@ -136,13 +136,9 @@ Running the server
 
     stops the server after its initialization.
 
-.. option:: --geoip-city-db <path>
+.. option:: --geoip-db <path>
 
-   Absolute path to the GeoIP City database file.
-
-.. option:: --geoip-country-db <path>
-
-   Absolute path to the GeoIP Country database file.
+   Absolute path to the GeoIP database file.
 
 
 .. _reference/cmdline/testing:
@@ -290,7 +286,7 @@ Database
 
 .. option:: --unaccent
 
-   Try to enable the unaccent extension when creating new databases
+   Use the unaccent function provided by the database when available.
 
 .. _reference/cmdline/server/emails:
 
@@ -559,18 +555,18 @@ Multiprocessing
 
     .. option:: --limit-memory-soft <limit>
 
-        Maximum allowed virtual memory per worker in bytes. If the limit is exceeded,
+        Maximum allowed virtual memory per worker. If the limit is exceeded,
         the worker is killed and recycled at the end of the current request.
 
-        Defaults to *2048MiB (2048\*1024\*1024B)*.
+        Defaults to *2048MiB*.
 
     .. option:: --limit-memory-hard <limit>
 
-        Hard limit on virtual memory in bytes, any worker exceeding the limit will be
+        Hard limit on virtual memory, any worker exceeding the limit will be
         immediately killed without waiting for the end of the current request
         processing.
 
-        Defaults to *2560MiB (2560\*1024\*1024B)*.
+        Defaults to *2560MiB*.
 
     .. option:: --limit-time-cpu <limit>
 
@@ -655,9 +651,8 @@ Here is a sample file:
 Shell
 =====
 
-Odoo command-line also allows to launch odoo as a python console environment.
-This enables direct interaction with the :ref:`orm <reference/orm>` and its functionalities.
-
+The Odoo command line also allows launching Odoo as a Python console environment, enabling direct
+interaction with the :ref:`orm <reference/orm>` and its functionalities.
 
 .. code-block:: console
 
@@ -665,8 +660,32 @@ This enables direct interaction with the :ref:`orm <reference/orm>` and its func
 
 .. option:: --shell-interface (ipython|ptpython|bpython|python)
 
-    Specify a preferred REPL to use in shell mode.
+   Specify a preferred REPL to use in shell mode. This shell is started with the `env` variable
+   already initialized to be able to access the ORM and other Odoo modules.
 
+.. example:: Example of shell usage
+
+   Adding an exclamation mark to all contacts' names:
+
+   .. code-block:: python
+
+      In [1]: records = env["res.partner"].search([])
+
+      In [2]: records
+      Out[2]: res.partner(14, 26, 33, 21, 10)
+
+      In [3]: for partner in records:
+         ...:     partner.name = "%s !" % partner.name
+         ...:
+
+      In [4]: env.cr.commit()
+
+   .. important::
+      By default, the shell is running in transaction mode. This means that any change made to the
+      database is rolled back when exiting the shell. To commit changes, use `env.cr.commit()`.
+
+.. seealso::
+   :ref:`Environment documentation <reference/orm/environment>`
 
 .. _reference/cmdline/scaffold:
 
