@@ -664,18 +664,41 @@ Here is a sample file:
 Shell
 =====
 
-Odoo command-line also allows to launch odoo as a python console environment.
-This enables direct interaction with the :ref:`orm <reference/orm>` and its functionalities.
-
+The Odoo command line also allows launching Odoo as a Python console environment, enabling direct
+interaction with the :ref:`orm <reference/orm>` and its functionalities.
 
 .. code-block:: console
 
    $ odoo-bin shell
 
+.. example::
+
+   Adding an exclamation mark to all contacts' names:
+
+   .. code-block:: python
+
+      In [1]: records = env["res.partner"].search([])
+
+      In [2]: records
+      Out[2]: res.partner(14, 26, 33, 21, 10)
+
+      In [3]: for partner in records:
+         ...:     partner.name = "%s !" % partner.name
+         ...:
+
+      In [4]: env.cr.commit()
+
+   .. important::
+      By default, the shell is running in transaction mode. This means that any change made to the
+      database is rolled back when exiting the shell. To commit changes, use `env.cr.commit()`.
+
 .. option:: --shell-interface (ipython|ptpython|bpython|python)
 
-    Specify a preferred REPL to use in shell mode.
+   Specify a preferred REPL to use in shell mode. This shell is started with the `env` variable
+   already initialized to be able to access the ORM and other Odoo modules.
 
+.. seealso::
+   :ref:`reference/orm/environment`
 
 .. _reference/cmdline/scaffold:
 
