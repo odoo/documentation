@@ -220,6 +220,42 @@ To match the letter `C` or `D` in a prefix and not use it as a suffix, use an em
    | `21D\\()`
    | This formula matches accounts whose code starts with `21D`, regardless of their balance sign.
 
+In addition to using code prefixes to include accounts, you can also match them with **account
+tags**. This is especially useful, for example, if your country lacks a standardized chart of
+accounts, where the same prefix might be used for different purposes across companies.
+
+.. example::
+   | `tag(25)`
+   | This formula matches accounts whose associated tags contain the one with id *25*.
+
+If the tag you reference is defined in a data file, an xmlid can be used instead of the id.
+
+.. example::
+   | `tag(my_module.my_tag)`
+   | This formula matches accounts whose associated tags include the tag denoted by
+     *my_module.my_tag*.
+
+You can also use arithmetic expressions with tags, possibly combining them with prefix selections.
+
+.. example::
+   | `tag(my_module.my_tag) + tag(42) + 10`
+   | The balances of accounts tagged as *my_module.my_tag* will be summed with those of accounts
+     linked to the tag with ID *42* and accounts with the code prefix `10`
+
+`C` and `D` suffixes can be used in the same way with tags.
+
+.. example::
+   | `tag(my_module.my_tag)C`
+   | This formula matches accounts with the tag *my_module.my_tag* and a credit balance.
+
+Prefix exclusion also works with tags.
+
+.. example::
+   | `tag(my_module.my_tag)\\(10)`
+   | This formula matches accounts with the tag *my_module.my_tag* and a code not starting with
+     `10`.
+
+
 'External Value' engine
 -----------------------
 
