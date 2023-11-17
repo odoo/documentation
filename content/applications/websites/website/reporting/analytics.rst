@@ -7,7 +7,9 @@ visitor demographics, behavior, and interactions, helping improve websites and m
 
 You can track your Odoo website's traffic using :ref:`website/analytics/plausible` or
 :ref:`website/analytics/GA`. We recommend using Plausible.io as it is privacy-friendly, lightweight,
-and easy to use. The Plausible analytics dashboard is also integrated into Odoo and can be accessed
+and easy to use.
+
+The Plausible analytics dashboard is also integrated into Odoo and can be accessed
 via :menuselection:`Website --> Reporting --> Analytics`.
 
 .. _website/analytics/plausible:
@@ -15,14 +17,32 @@ via :menuselection:`Website --> Reporting --> Analytics`.
 Plausible.io
 ============
 
-If your database is hosted on Odoo Online, the Plausible.io integration is available in Odoo for
-free. To enable the feature, go to :menuselection:`Website --> Configuration --> Settings`, then, in
-the :guilabel:`SEO` section, enable :guilabel:`Plausible Analytics` and click :guilabel:`Save`. You
-can then access your Plausible analytics dashboard by going to :menuselection:`Website --> Reporting
---> Analytics`.
+Odoo hosts its own Plausible.io server and provides a free and ready-to-work Plausible.io
+solution for **Odoo Online** databases. Go to :menuselection:`Website --> Configuration --> Settings`,
+and enable the feature in the :guilabel:`SEO` section. Odoo automatically creates and sets up your
+account. You can start using it by going to :menuselection:`Website --> Reporting --> Analytics`.
 
-If your database is hosted on Odoo.sh or on-premise, or if you wish to use your own Plausible.io
-account, proceed as follows:
+.. note::
+   **If you already have a Plausible.io account** and you want to connect it to your Odoo Online
+   database, you must create two `ir.config.parameters` to use Plausible.io's servers. To do so,
+   enable the :ref:`developer mode <developer-mode>` and go to :menuselection:`General Settings -->
+   Technical -- System Parameters`. Click :guilabel:`New` and fill in the following :guilabel:`Key`
+   and :guilabel:`Value` fields:
+
+   .. list-table::
+      :header-rows: 1
+
+      * - Key
+        - Value
+      * - `website.plausible_script`
+        - `https://plausible.io/js/plausible.js`
+      * - `website.plausible_server`
+        - `https://plausible.io`
+
+   Then, follow the steps below to connect your existing account with Plausible.io servers.
+
+If your database is hosted on **Odoo.sh** or **On-premise**, or if you wish to use your own
+Plausible.io account, proceed as follows:
 
 #. Create or sign in to a Plausible account using the following link: `<https://plausible.io/register>`_.
 #. If you are creating a new account, go through the registration and activation steps. When asked
