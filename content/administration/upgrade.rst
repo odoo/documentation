@@ -39,10 +39,11 @@ An upgrade does not cover:
   - Migrating from another ERP to Odoo
 
 .. warning::
-   If your database contains a **custom module**, you must first upgrade its source code to be
-   compatible with the new version of Odoo **before upgrading**.
-.. TODOUPG : once the page for developers is published, uncomment and link
-.. :doc:`first upgrade its source code </developer/reference/upgrade>`
+   If your database contains custom modules, it cannot be upgraded until a version of your custom
+   modules is available for the target version of Odoo. For customers maintaining their own custom
+   modules, we recommend to parallelize the process by :ref:`requesting an upgraded database
+   <upgrade/request-test-database>` while also :doc:`upgrading the source code of your custom
+   modules </developer/howtos/upgrade_custom_db>`.
 
 
 Upgrading in a nutshell
@@ -51,14 +52,14 @@ Upgrading in a nutshell
 #. Request an upgraded test database (see :ref:`obtaining an upgraded test database
    <upgrade/request-test-database>`).
 
+#. If applicable, upgrade the source code of your custom module to be compatible with the new
+   version of Odoo (see :doc:`/developer/howtos/upgrade_custom_db`).
+
 #. Thoroughly test the upgraded database (see :ref:`testing the new version of the database
    <upgrade/test_your_db>`).
 
 #. Report any issue encountered during the testing to Odoo via the `support page
    <https://odoo.com/help?stage=migration>`__.
-
-#. (If applicable) : upgrade the source code of your custom module to be compatible with the new
-   version of Odoo.
 
 #. Once all issues are resolved and you are confident that the upgraded database can be used as
    your main database without any issues, plan the upgrade of your production database.
@@ -68,9 +69,6 @@ Upgrading in a nutshell
 
 #. Report any issue encountered during the upgrade to Odoo via the `support page
    <https://odoo.com/help?stage=post_upgrade>`__.
-
-.. TODOUPG: Once the page for developers is published, put this at 4)
-.. (see :ref:`upgrading customizations <upgrade/upgrading_customizations>`).
 
 .. _upgrade/request-test-database:
 
@@ -136,18 +134,13 @@ project <https://odoo.sh/project>`_.
       file of the upgrade process can be found in your newly upgraded staging build by going to
       :file:`~/logs/upgrade.log`.
 
-      .. note::
-         In databases where custom modules are installed, their source code
-         must be up-to-date with the target version of Odoo before the upgrade
-         can be performed. If there are none, the "update on commit" mode is
-         skipped, the upgraded database is built as soon as it is transferred from the upgrade
-         platform, and the upgrade mode is exited.
+      .. important::
+         In databases where custom modules are installed, their source code must be up-to-date with
+         the target version of Odoo before the upgrade can be performed. If there are none, the
+         "update on commit" mode is skipped, the upgraded database is built as soon as it is
+         transferred from the upgrade platform, and the upgrade mode is exited.
 
-         .. TODOUPG : once the page for developers is published, uncomment
-         .. Check out the :doc:`upgrade for developers'
-         .. documentation </developer/reference/upgrade>` for more information. In
-         .. addition, if a module is not needed after an upgrade, :ref:`you can
-         .. remove customizations <upgrade/remove_customizations>`.
+         Check out the :doc:`/developer/howtos/upgrade_custom_db` page for more information.
 
    .. group-tab:: On-premise
 
@@ -166,6 +159,11 @@ project <https://odoo.sh/project>`_.
 
       An upgraded test database can also be requested via the `Upgrade page
       <https://upgrade.odoo.com/>`_.
+
+      .. important::
+         In databases where custom modules are installed, their source code must be up-to-date with
+         the target version of Odoo before the upgrade can be performed. Check out the
+         :doc:`/developer/howtos/upgrade_custom_db` page for more information.
 
       .. note::
          - For security reasons, only the person who submitted the upgrade request can download it.
@@ -291,8 +289,8 @@ the upgrade at a time when the use of the database is minimal.
 
 As the standard upgrade scripts and your database are constantly evolving, it is also recommended
 to frequently request another upgraded test database to ensure that the upgrade process is
-still successful, especially if it takes a long time to finish. Fully rehearsing the upgrade
-process the day before upgrading the production database is also recommended.
+still successful, especially if it takes a long time to finish. **Fully rehearsing the upgrade
+process the day before upgrading the production database is also recommended.**
 
 .. important::
    - Going into production without first testing may lead to:
@@ -337,9 +335,8 @@ exceptions.
 
       The update of your custom modules must be successful to complete the entire upgrade process.
       Make sure the status of your staging upgrade is :guilabel:`successful` before trying it in
-      production.
-   .. TODOUPG : once the page for developers is published, uncomment
-   .. More information on how to upgrade your custom modules can be found in the :ref:`upgrading customizations documentation <upgrade/upgrading_customizations>`.
+      production. More information on how to upgrade your custom modules can be found on
+      :doc:`/developer/howtos/upgrade_custom_db`.
 
    .. group-tab:: On-premise
 
