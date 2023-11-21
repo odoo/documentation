@@ -7,9 +7,8 @@ Reporting
 Main reports available
 ======================
 
-Besides the reports created specifically in each localisation module, a
-few very useful **generic** and **dynamic reports** are available for all
-countries :
+Odoo includes **generic** and **dynamic** reports available for all countries, regardless of the
+:doc:`localization package <../../finance/fiscal_localizations>` installed:
 
 -  **Balance Sheet**
 -  **Profit and Loss**
@@ -19,136 +18,136 @@ countries :
 -  **Aged Receivable**
 -  **Cash Flow Statement**
 -  **Tax Report**
--  **Bank Reconciliation**
 
-You can annotate every reports to print them and report to your adviser.
-Export to xls to manage extra analysis. Drill down in the reports to see
-more details (payments, invoices, journal items, etc.).
+Reports can be **annotated, printed, and drilled down** to see details (payments, invoices,
+journal items, etc.) by clicking the **down** arrow. Reports can also be exported to **PDF** or
+**XLSX** format by clicking :guilabel:`PDF` or :guilabel:`XLSX` at the top of the page.
 
-You can also compare values with another period. Choose how many periods
-you want to compare the chosen time period with. You can choose up to 12
-periods back from the date of the report if you don't want to use the
-default **Previous 1 Period** option.
+.. image:: reporting/reporting-annotate.png
+   :alt: Annotate reports.
+
+You can compare values across periods by using the :guilabel:`Comparison` menu and selecting the
+periods you want to compare.
+
+.. image:: reporting/reporting-comparison.png
+   :alt: Comparison menu to compare time periods.
 
 .. _reporting/balance-sheet:
 
 Balance Sheet
 -------------
 
-The **Balance Sheet** shows a snapshot of the assets, liabilities and equity
-of your organisation as at a particular date.
+The **Balance Sheet** shows a snapshot of your organization's assets, liabilities, and equity at a
+particular date.
 
-.. image:: reporting/main_reports09.png
+.. image:: reporting/reporting-balance-sheet.png
+   :alt: Balance sheet report of Odoo.
+
+.. _reporting/profit-and-loss:
 
 Profit and Loss
 ---------------
 
-The **Profit and Loss** report (or **Income Statement**) shows your
-organisation's net income, by deducting expenses from revenue for the
-report period.
+The **Profit and Loss** report (or **Income Statement**) shows your company's net income by
+deducting expenses from revenue for the reporting period.
 
-.. image:: reporting/main_reports10.png
+.. image:: reporting/reporting-profit-and-loss.png
+   :alt: Profit and Loss report of Odoo
+
+.. _reporting/executive-summary:
 
 Executive Summary
 -----------------
 
-The **Executive Summary** allows for a quick look at all the important
-figures you need to run your company.
+The **Executive Summary** allows a quick look at all the important figures to run your company.
 
-In very basic terms, this is what each of the items in this section is
-reporting :
+In basic terms, this is what each item in the following section reports:
 
 - **Performance:**
     - **Gross profit margin:**
-        The contribution each individual sale made
-        by your business less any direct costs needed to make those sales
-        (things like labour, materials, etc).
+        The contribution of all sales made by your business **minus** any direct costs needed to
+        make those sales (labor, materials, etc.).
     - **Net profit margin:**
-        The contribution each individual sale made by
-        your business less any direct costs needed to make those sales,
-        as well as any fixed overheads your company has (things like
-        rent, electricity, taxes you need to pay as a result of those
-        sales).
-    - **Return on investment (p.a.):**
-        The ratio of net profit made, to the
-        amount of assets the company used to make those profits.
+        The contribution of all sales made by your business **minus** any direct costs needed to
+        make those sales *and* fixed overheads your company has (electricity, rent, taxes
+        to be paid as a result of those sales, etc.).
+    - **Return on investment (per annum):**
+        The ratio of net profit made to the amount of assets the company used to make those profits.
 - **Position:**
-    - **Average debtor days:**
-        The average number of days it takes your
-        customers to pay you (fully), across all your customer invoices.
-    - **Average creditor days:**
-        The average number of days it takes you to
-        pay your suppliers (fully) across all your bills.
-    - **Short term cash forecast:**
-        How much cash is expected in or out of
-        your organisation in the next month i.e. balance of your **Sales
-        account** for the month less the balance of your **Purchases account**
-        for the month.
+    - **Average debtors days:**
+        The average number of days it takes your customers to (fully) pay you across all your
+        customer invoices.
+    - **Average creditors days:**
+        The average number of days it takes you to (fully) pay your suppliers across all your bills.
+    - **Short-term cash forecast:**
+        How much cash is expected in or out of your business in the next month, i.e., the balance of
+        your **Sales account** for the month **minus** the balance of your **Purchases account** for
+        the month.
     - **Current assets to liabilities:**
-        Also referred to as **current ratio**, this is the ratio
-        of current assets (assets that could be
-        turned into cash within a year) to the current liabilities
-        (liabilities which will be due in the next year). This is
-        typically used as as a measure of a company's ability to service
-        its debt.
+        Also referred to as **current ratio**, this is the ratio of current assets (:dfn:`assets
+        that could be turned into cash within a year`) to the current liabilities (:dfn:`liabilities
+        that will be due in the next year`). It is typically used to measure a company's ability to
+        service its debt.
 
-.. image:: reporting/main_reports01.png
+.. image:: reporting/reporting-executive-summary.png
+   :alt: Executive summary report in Odoo.
+
+.. _reporting/general-ledger:
 
 General Ledger
 --------------
 
-The **General Ledger Report** shows all transactions from all accounts for a
-chosen date range. The initial summary report shows the totals for each
-account and from there you can view a detailed transaction report or any
-exceptions. This report is useful for checking every transaction that
-occurred during a certain period of time.
+The **General Ledger Report** shows all transactions from all accounts for a chosen date range. The
+initial summary report shows each account's totals; from here, you can view a detailed transaction
+report or any exceptions. This report helps check every transaction that occurred during a specific
+period.
 
-.. image:: reporting/main_reports05.png
+.. image:: reporting/reporting-general-ledger.png
+   :alt: General Ledger report in Odoo.
 
 .. _reporting/aged-payable:
 
 Aged Payable
 ------------
 
-Run the **Aged Payable Details** report to display information on individual
-bills, credit notes and overpayments owed by you, and how long these
-have gone unpaid.
+Run the **Aged Payable Details** report to display information on individual bills, credit notes,
+and overpayments you owe and how long these have gone unpaid.
 
-.. image:: reporting/main_reports02.png
+.. image:: reporting/reporting-aged-payable.png
+   :alt: Aged Payable report in Odoo.
 
 .. _reporting/aged-receivable:
 
 Aged Receivable
 ---------------
 
-The **Aged Receivables** report shows the sales invoices that were awaiting
-payment during a selected month and several months prior.
+The **Aged Receivables** report shows the sales invoices awaiting payment during a selected month
+and several months prior.
 
-.. image:: reporting/main_reports07.png
+.. image:: reporting/reporting-aged-receivable.png
+   :alt: Aged Receivable report in Odoo.
+
+.. _reporting/cash-flow-statement:
 
 Cash Flow Statement
 -------------------
 
-The **Cash Flow Statement** shows how changes in balance sheet accounts and
-income affect cash and cash equivalents, and breaks the analysis down to
-operating, investing and financing activities.
+The **Cash Flow Statement** shows how changes in balance sheet accounts and income affect cash and
+cash equivalents and breaks the analysis down to operating, investing, and financing activities.
 
-.. image:: reporting/main_reports03.png
+.. image:: reporting/reporting-cash-flow-statement.png
+   :alt: Cash Flow Statement report in Odoo.
 
 .. _reporting/tax-report:
 
 Tax Report
 ----------
 
-This report allows you to see the **net** and **tax amounts** for all the taxes
-grouped by type (sale/purchase).
+This report allows you to see the **net** and **tax amounts** for all the taxes grouped by type
+(sale/purchase).
 
-.. image:: reporting/main_reports04.png
-
-Bank Reconciliation
--------------------
-
-.. image:: reporting/main_reports06.png
+.. image:: reporting/reporting-tax-report.png
+   :alt: Tax report in Odoo.
 
 .. toctree::
    :titlesonly:
