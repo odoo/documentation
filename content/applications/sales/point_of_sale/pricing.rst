@@ -13,3 +13,4 @@ Pricing features
    pricing/pricelists
    pricing/fiscal_position
    pricing/cash_rounding
+   pricing/digital_labels
