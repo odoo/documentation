@@ -13,6 +13,9 @@ the customer.
 Having a customized PDF in quotes provides a heightened conclusion to the shopping experience for
 customers, and adds an elegant level of professionalism to a company.
 
+.. seealso::
+   `Odoo Quick Tips - Create a PDF quote [video] <https://www.youtube.com/watch?v=tQNydBZt-VI>`_
+
 Configuration
 =============
 
