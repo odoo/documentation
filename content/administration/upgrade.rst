@@ -208,6 +208,8 @@ upgrade goes live.
    #. Scheduled actions are disabled.
    #. Outgoing mail servers are disabled by archiving the existing ones and adding a fake one.
    #. Payment providers and delivery carriers are reset to the test environment.
+   #. Bank synchronization is disabled. Should you want to test the synchronization, contact your
+      bank synchronization provider to get sandbox credentials.
 
 Testing as many of your business flows as possible is strongly recommended to ensure they are
 working correctly and to get more familiar with the new version.
