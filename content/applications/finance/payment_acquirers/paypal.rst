@@ -5,6 +5,11 @@ PayPal
 `Paypal <https://www.paypal.com/>`_ is an American online payment acquirer available worldwide, and
 one of the few that does not charge a subscription fee.
 
+.. note::
+   While PayPal is available in `over 200 countries/regions
+   <https://www.paypal.com/webapps/mpp/country-worldwide>`_, only `a selection of currencies are
+   supported <https://developer.paypal.com/docs/reports/reference/paypal-supported-currencies>`_.
+
 Settings in PayPal
 ==================
 
