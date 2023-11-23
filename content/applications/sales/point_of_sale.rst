@@ -51,14 +51,19 @@ Once an order is completed, proceed to checkout by clicking :guilabel:`Payment`.
 Set customers
 =============
 
-You can create and set customers from an :ref:`open POS session <pos/session-start>`. Registering
-your customer is necessary to :doc:`collect their loyalty points and grant them rewards
+Registering your customer is necessary to :doc:`collect their loyalty points and grant them rewards
 <point_of_sale/pricing/loyalty>`, automatically apply the :doc:`attributed pricelist
 <point_of_sale/pricing/pricelists>`, or :ref:`generate and print an invoice
 <receipts-invoices/invoices>`.
 
-To access the list of customers, click :guilabel:`Customer` on the POS interface. Then, select a
-customer or create a new one by clicking :guilabel:`Create`, completing the form, and saving.
+You can create customers from an :ref:`open POS session <pos/session-start>` by clicking
+:menuselection:`Customer --> Create`, and filling in the contact information. You can also create
+customers from the backend by going to :menuselection:`Point of Sale --> Orders --> Customers` and
+clicking :guilabel:`New`. Then, fill in the information and save.
+
+To set a customer during an order, access the list of customers by clicking :guilabel:`Customer` on
+the POS interface. You can also set a customer at the payment screen by clicking
+:guilabel:`Customer`.
 
 .. _pos/customer-notes:
 
