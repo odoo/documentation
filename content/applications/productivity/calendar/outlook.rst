@@ -103,13 +103,6 @@ Sync with Outlook
    unarchived, or event date/time changed), with no exceptions. This is a limitation that cannot be
    fixed from Odoo's side.
 
-   After one user syncs their Outlook calendar to the Odoo database, unwanted email notifications
-   are unavoidable because the first synchronized user's events will be in the Odoo Calendar. If
-   the Odoo database is shared amongst multiple users, and another user wants to sync their Outlook
-   calendar with Odoo Calendar, Outlook will again pull the existing Odoo Calendar events during
-   the sync and treat them as new events, causing Outlook to send email invitations to all event
-   attendees.
-
    In summary, once a user synchronizes their Outlook calendar with the Odoo calendar:
 
    - Creating an event in Odoo causes Outlook to send an invitation to all event attendees.
