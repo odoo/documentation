@@ -129,6 +129,8 @@ Example
 
       .. placeholder
 
+.. _cheat_sheet/journals:
+
 Journal entries
 ===============
 
