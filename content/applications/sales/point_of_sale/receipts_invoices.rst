@@ -39,40 +39,37 @@ select the corresponding order and click :guilabel:`Print Receipt`.
 Invoices
 ========
 
-In Point of Sale, you can issue and print invoices upon payment at the cash register or retrieve all
-the past invoiced orders.
-
-Set a customer
---------------
-
-First, you need to open a session and set your customer. Open the **POS interface** by going to
-:menuselection:`Point of Sale --> New session --> Open session`. Then, click :guilabel:`Customer` to
-access the list of **customers**.
-
-.. image:: receipts_invoices/select-customer-ui.png
-   :alt: customer selection and creation button
-
-From there, you can either set an existing customer by clicking their name or create a new one by
-clicking :guilabel:`Create`. Doing so opens a customer creation form to fill in with their
-information. Click :guilabel:`Save` to validate and set this new customer.
+Point of Sale allows you to issue and print invoices for :ref:`registered customers <pos/customers>`
+upon payment and retrieve all past invoiced orders.
 
 .. note::
-   - You can also **edit** a customer's information by clicking :guilabel:`Details`.
-   - If you did not set your customer during the order, you can do so at the payment screen by
-     clicking :guilabel:`Customer`.
+   An invoice created in a POS creates an entry into the corresponding :ref:`accounting journal
+   <cheat_sheet/journals>`, previously :ref:`set up <receipts_invoices/invoice_configuration>`.
+
+.. _receipts_invoices/invoice_configuration:
+
+Configuration
+-------------
+
+To define what journals will be used for a specific POS, go to the :ref:`POS' settings
+<configuration/settings>` and scroll down to the accounting section. Then, you can determine the
+accounting journals used by default for orders and invoices in the :guilabel:`Default Journals`
+section.
+
+.. image:: receipts_invoices/invoice-config.png
+   :alt: accounting section in the POS settings
 
 Invoice a customer
 ------------------
 
-Once an order is done, click :guilabel:`Payment` to move to the **payment screen**. Click
-:guilabel:`Invoice` underneath the customer's name to enable issuing and printing invoices upon
-payment.
-
-.. image:: receipts_invoices/invoice-button.png
-   :alt: button to generate an invoice in POS
+Upon processing a payment, click :guilabel:`Invoice` underneath the customer's name to issue an
+invoice for that order.
 
 Select the payment method and click :guilabel:`Validate`. The **invoice** is automatically issued
 and ready to be downloaded and/or printed.
+
+.. note::
+   To be able to issue an invoice, a :ref:`customer <pos/customers>` must be selected.
 
 Retrieve invoices
 -----------------
