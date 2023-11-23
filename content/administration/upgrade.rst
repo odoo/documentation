@@ -39,8 +39,11 @@ An upgrade does not cover:
   - Migrating from another ERP to Odoo
 
 .. warning::
-   If your database contains a **custom module**, you must first upgrade its source code to be
-   compatible with the new version of Odoo **before upgrading**.
+   If your database contains custom modules, it cannot be upgraded until a version of your custom
+   modules is available for the target version of Odoo. For customers maintaining their own custom
+   modules, we recommend to parallelize the process by :ref:`requesting an upgraded database
+   <upgrade/request-test-database>` while also :ref:`upgrading the source code of your custom
+   modules </developer/howtos/upgrade_modules>`.
 .. TODOUPG : once the page for developers is published, uncomment and link
 .. :doc:`first upgrade its source code </developer/reference/upgrade>`
 
@@ -51,14 +54,14 @@ Upgrading in a nutshell
 #. Request an upgraded test database (see :ref:`obtaining an upgraded test database
    <upgrade/request-test-database>`).
 
+#. (If applicable) : upgrade the source code of your custom module to be compatible with the new
+   version of Odoo (see :ref:`upgrading custom modules <upgrade/upgrade_modules>`).
+
 #. Thoroughly test the upgraded database (see :ref:`testing the new version of the database
    <upgrade/test_your_db>`).
 
 #. Report any issue encountered during the testing to Odoo via the `support page
    <https://odoo.com/help?stage=migration>`__.
-
-#. (If applicable) : upgrade the source code of your custom module to be compatible with the new
-   version of Odoo.
 
 #. Once all issues are resolved and you are confident that the upgraded database can be used as
    your main database without any issues, plan the upgrade of your production database.
@@ -68,9 +71,6 @@ Upgrading in a nutshell
 
 #. Report any issue encountered during the upgrade to Odoo via the `support page
    <https://odoo.com/help?stage=post_upgrade>`__.
-
-.. TODOUPG: Once the page for developers is published, put this at 4)
-.. (see :ref:`upgrading customizations <upgrade/upgrading_customizations>`).
 
 .. _upgrade/request-test-database:
 
