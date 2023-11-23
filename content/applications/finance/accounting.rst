@@ -96,6 +96,12 @@ gains and losses after reconciling the journal items.
 .. seealso::
    :doc:`Manage a bank in a foreign currency <accounting/bank/foreign_currency>`
 
+Branch management
+=================
+
+Multiple branches can be managed thanks to multi-company hierarchies. This allows to post journal
+entries on each branch as well as setting up a common lock date managed by the main company.
+
 International standards
 =======================
 
