@@ -466,8 +466,8 @@ Alert blocks (admonitions)
 
 .. _contributing/seealso:
 
-Seealso
--------
+See also
+--------
 
 .. list-table::
    :class: o-showcase-table
