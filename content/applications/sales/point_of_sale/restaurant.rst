@@ -16,6 +16,8 @@ Once the POS is set to be used in a restaurant or a bar, you can:
 - :doc:`collect tips <restaurant/tips>`; and
 - :doc:`set different taxes for takeaway food <pricing/fiscal_position>`.
 
+.. _restaurant/configuration:
+
 Configuration
 =============
 
@@ -31,7 +33,7 @@ These features are displayed in the :guilabel:`Restaurant & Bar` section.
 .. toctree::
    :titlesonly:
 
-   restaurant/bill_printing
    restaurant/floors_tables
    restaurant/kitchen_printing
+   restaurant/bill_printing
    restaurant/tips
