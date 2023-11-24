@@ -72,11 +72,19 @@ From there, several conditions can be activated:
    :alt: Example of a fiscal position automatic application settings
 
 .. note::
+<<<<<<< HEAD
    - If the :doc:`Verify VAT Numbers <vat_verification>` feature is enabled, any fiscal positions
      with :guilabel:`VAT required` enabled will require Intra-Community valid VAT numbers to apply
      automatically.
    - Taxes on **eCommerce orders** are automatically updated once the customer has logged in or
      filled out their billing details.
+||||||| parent of ca41e3b06 (temp)
+   Taxes on **eCommerce orders** are automatically updated once the visitor has logged in or filled
+   out their billing details.
+=======
+   Taxes on **eCommerce orders** are automatically updated once the customer has logged in or filled
+   out their billing details.
+>>>>>>> ca41e3b06 (temp)
 
 .. important::
    The fiscal positions' **sequence** defines which fiscal position is applied if all conditions
@@ -115,5 +123,5 @@ To define which fiscal position must be used by default for a specific partner, 
 .. seealso::
 
   * :doc:`../taxes`
-  * :doc:`taxcloud` (decommissioning TaxCloud integration in Odoo 17+)
+  * :doc:`taxcloud`
   * :doc:`B2B_B2C`
