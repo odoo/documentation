@@ -80,7 +80,7 @@ withholding tax.
 
 The same process above can also be done for a *single* vendor :doc:`payment
 <../accounting/payments>` if they were linked to one or more :doc:`vendor bills
-<../accounting/payments/multiple>` with applied withholding taxes.
+<../accounting/payments>` with applied withholding taxes.
 
 .. note::
    - If there is no withholding tax applied, then the XLS file will not generate records for those
