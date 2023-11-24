@@ -2,8 +2,8 @@
 Reporting
 =========
 
-You can find under the :guilabel:`Reporting` menu of most apps several reports that let you analyze
-and visualize your records' data.
+You can find several reports under the :guilabel:`Reporting` menu of most apps that let you analyze
+and visualize the data of your records.
 
 .. _reporting/views:
 
@@ -25,7 +25,6 @@ but can be found elsewhere. Click the **graph view button** located at the top r
 it.
 
 .. image:: reporting/graph-button.png
-   :align: center
    :alt: Selecting the graph view
 
 .. _reporting/views/pivot:
@@ -38,7 +37,6 @@ down for analysis. The view is often found under the :guilabel:`Reporting` menu 
 found elsewhere. Click the **pivot view button** located at the top right to access it.
 
 .. image:: reporting/pivot-button.png
-   :align: center
    :alt: Selecting the pivot view
 
 .. _reporting/choosing-measures:
@@ -65,7 +63,6 @@ grouped by *Date > Month*, which is used to analyze the evolution of a measure o
    When you filter a single time period, the option to compare it against another one appears.
 
    .. image:: reporting/comparison.png
-      :align: center
       :alt: Using the comparison option
 
 .. example::
@@ -79,7 +76,6 @@ grouped by *Date > Month*, which is used to analyze the evolution of a measure o
          selected.
 
          .. image:: reporting/measures.png
-            :align: center
             :alt: Selecting different measures on the Sales Analysis report
 
       .. tab:: Group measures
@@ -88,7 +84,6 @@ grouped by *Date > Month*, which is used to analyze the evolution of a measure o
          previous Sales Analysis report example.
 
          .. image:: reporting/single-group.png
-            :align: center
             :alt: Adding a group on the Sales Analysis report
 
 .. _reporting/using-pivot:
@@ -111,7 +106,6 @@ subgroups.
    group on the :guilabel:`All / Saleable / Office Furniture` product category.
 
    .. image:: reporting/multiple-groups.png
-      :align: center
       :alt: Adding multiple groups on the Sales Analysis report
 
 .. tip::
@@ -124,7 +118,7 @@ subgroups.
 Using the graph view
 ====================
 
-Three graphs are available, the bar, line, and pie charts.
+Three graphs are available: the bar, line, and pie charts.
 
 **Bar charts** are used to show the distribution or a comparison of several categories. They are
 especially useful as they can deal with larger data sets.
@@ -139,19 +133,16 @@ when they form a meaningful whole.
    .. tab:: Bar chart
 
       .. image:: reporting/bar.png
-         :align: center
          :alt: Viewing the Sales Analysis report as a bar chart
 
    .. tab:: Line chart
 
       .. image:: reporting/line.png
-         :align: center
          :alt: Viewing the Sales Analysis report as a line chart
 
    .. tab:: Pie chart
 
       .. image:: reporting/pie.png
-         :align: center
          :alt: Viewing the Sales Analysis report as a pie chart
 
 .. tip::
@@ -163,25 +154,21 @@ when they form a meaningful whole.
       .. tab:: Stacked bar chart
 
          .. image:: reporting/stacked-bar.png
-            :align: center
             :alt: Stacked bar chart example
 
       .. tab:: Regular bar chart
 
          .. image:: reporting/non-stacked-bar.png
-            :align: center
             :alt: Non-stacked bar chart example
 
       .. tab:: Stacked line chart
 
          .. image:: reporting/stacked-line.png
-            :align: center
             :alt: Stacked line chart example
 
       .. tab:: Regular line chart
 
          .. image:: reporting/non-stacked-line.png
-            :align: center
             :alt: Non-stacked line chart example
 
    For **line** charts, you can use the cumulative option to sum values, which is especially useful
@@ -192,11 +179,9 @@ when they form a meaningful whole.
       .. tab:: Cumulative line chart
 
          .. image:: reporting/cumulative.png
-            :align: center
             :alt: Cumulative line chart example
 
       .. tab:: Regular line chart
 
          .. image:: reporting/non-cumulative.png
-            :align: center
             :alt: Regular line chart example
