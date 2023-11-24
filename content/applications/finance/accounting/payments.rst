@@ -148,5 +148,4 @@ have the transaction finalized and the invoice or bill marked as :guilabel:`Paid
    payments/internal_transfers
    payments/pay_sepa
    payments/pay_checks
-   payments/multiple
    payments/forecast
