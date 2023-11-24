@@ -3,109 +3,114 @@ Fiscal positions (tax and account mapping)
 ==========================================
 
 Default taxes and accounts are set on products and customers to create new transactions on the fly.
-However, you might have to use different taxes and record the transactions on different accounts,
-according to your customers' and providers' localizations and business types.
+However, depending on the customers' and providers' localization and business type, using different
+taxes and accounts for a transaction might be necessary.
 
-**Fiscal Positions** allow you to create *sets of rules* to automatically adapt the taxes and the
-accounts used for a transaction.
+**Fiscal positions** allow the creation of rules to adapt the taxes and accounts used for a
+transaction automatically.
 
-.. image:: fiscal_positions/fiscal-positions-intra-community.png
-   :align: center
-   :alt: Example: Belgian to Intra-Community tax mapping with Fiscal Positions in Odoo Accounting
-
-They can be applied in various ways:
-
-- :ref:`automatically applied, based on some rules <fiscal_positions/automatic>`
-- :ref:`manually applied on a transaction <fiscal_positions/partner>`
-- :ref:`assigned to a partner, on its contact form <fiscal_positions/transaction>`
+They can be applied :ref:`automatically <fiscal_positions/automatic>`, :ref:`manually
+<fiscal_positions/manual>`, or :ref:`assigned to a partner <fiscal_positions/partner>`.
 
 .. note::
-   A few Fiscal Positions are already preconfigured on your database, as part of your :ref:`fiscal
-   localization package <fiscal_localizations/packages>`.
+   Several default fiscal positions are available as part of your :ref:`fiscal localization
+   package <fiscal_localizations/packages>`.
 
 Configuration
 =============
 
-Tax and Account Mapping
+ .. _fiscal_positions/mapping:
+
+Tax and account mapping
 -----------------------
 
-To edit or create a Fiscal Position, go to :menuselection:`Accounting --> Configuration --> Fiscal
-Positions`, and open the entry you want to modify or click on *Create*.
+To edit or create a fiscal position, go to :menuselection:`Accounting --> Configuration --> Fiscal
+Positions`, and open the entry to modify or click on :guilabel:`New`.
 
 The mapping of taxes and accounts is based on the default taxes and accounts defined in the
-products' forms.
+product form.
 
-- To map to another tax or account, fill out the right column (**Tax to Apply**/**Account to Use
-  Instead**).
-- To remove a tax, rather than replacing it with another, leave the field **Tax to Apply** empty.
-- To replace a tax with multiple other taxes, add multiple lines with the same **Tax on Product**.
+- To map to another tax or account, fill out the right column (:guilabel:`Tax to Apply`/
+  :guilabel:`Account to Use Instead`).
+
+.. image:: fiscal_positions/fiscal-positions-tax-mapping.png
+   :align: center
+   :alt: Example of a fiscal position's tax mapping
+
+.. image:: fiscal_positions/fiscal-positions-account-mapping.png
+   :align: center
+   :alt: Example of a fiscal position's account mapping
+
+- To remove a tax, leave the field :guilabel:`Tax to Apply` empty.
+- To replace a tax with several other taxes, add multiple lines using the same :guilabel:`Tax on
+  Product`.
 
 .. note::
    The mapping only works with *active* taxes. Therefore, make sure they are active by going to
    :menuselection:`Accounting --> Configuration --> Taxes`.
+
+Application
+===========
 
 .. _fiscal_positions/automatic:
 
 Automatic application
 ---------------------
 
-You can configure your Fiscal Positions to be applied automatically, following a set of conditions.
+To automatically apply a fiscal position following a set of conditions, go to
+:menuselection:`Accounting --> Configuration --> Fiscal Positions`, open the fiscal position to
+modify, and tick :guilabel:`Detect Automatically`.
 
-To do so, open the Fiscal Position you want to modify and click on **Detect Automatically**. You can
-configure a few conditions:
+From there, several conditions can be activated:
 
-- **VAT Required**: The VAT number *must* be indicated in the customer's contact form.
-- **Country Group** / **Country**: The Fiscal Position is applied to these countries.
+- :guilabel:`VAT Required`: the customer's VAT number must be present on their contact form.
+- :guilabel:`Country Group` and :guilabel:`Country`: the fiscal position is only applied to the
+  selected country or country group.
 
 .. image:: fiscal_positions/fiscal-positions-automatic.png
    :align: center
-   :alt: Example of settings to apply a Fiscal Position automatically
+   :alt: Example of a fiscal position automatic application settings
 
 .. note::
-   Taxes on **eCommerce orders** are automatically updated once the visitor has logged in or filled
+   Taxes on **eCommerce orders** are automatically updated once the customer has logged in or filled
    out their billing details.
 
 .. important::
-   The Fiscal Positions' **sequence** - the order in which they are arranged - defines which
-   Fiscal Position to apply if the conditions are met in multiple Fiscal Positions.
+   The fiscal positions' **sequence** defines which fiscal position is applied if all conditions
+   set on multiple fiscal positions are met simultaneously.
 
-   For example, if the first Fiscal Position targets *country A*, and the second Fiscal Position
-   targets a *Country Group* that also comprises *country A*, only the first Fiscal Position will be
-   applied to customers from *country A*.
+   For example, suppose the first fiscal position in a sequence targets *country A* while the second
+   fiscal position targets a *country group* that comprises *country A*. In that case, only the
+   first fiscal position will be applied to customers from *country A*.
 
-.. _fiscal_positions/application:
+.. _fiscal_positions/manual:
 
-Application
-===========
+Manual application
+------------------
+
+To manually select a fiscal position, open a sales order, invoice, or bill, go to the
+:guilabel:`Other Info` tab and select the desired :guilabel:`Fiscal Position` before adding product
+lines.
+
+.. image:: fiscal_positions/fiscal-positions-manual.png
+   :align: center
+   :alt: Selection of a fiscal position on a sales order, invoice, or bill
 
 .. _fiscal_positions/partner:
 
-Assign a Fiscal Position to a partner
--------------------------------------
+Assign to a partner
+-------------------
 
-You can manually define which Fiscal Position must be used by default for a specific partner.
+To define which fiscal position must be used by default for a specific partner, go to
+:menuselection:`Accounting --> Customers --> Customers`, select the partner, open the
+:guilabel:`Sales & Purchase` tab, and select the :guilabel:`Fiscal Position`.
 
-To do so, open the partner's contact form, go to the **Sales & Purchase** tab, edit the **Fiscal
-Position** field, and click on *Save*.
-
-.. image:: fiscal_positions/fiscal-positions-partner.png
+.. image:: fiscal_positions/fiscal-positions-customer.png
    :align: center
-   :alt: Selection of a Fiscal Position on a Sales Order / Invoice / Bill in Odoo Accounting
-
-.. _fiscal_positions/transaction:
-
-Choose Fiscal Positions manually on Sales Orders, Invoices, and Bills
----------------------------------------------------------------------
-
-To manually select which Fiscal Position to use for a new Sales Order, Invoice, or Bill, go to the
-**Other Info** tab and select the right **Fiscal Position** *before* adding product lines.
-
-.. image:: fiscal_positions/fiscal-positions-transaction.png
-   :align: center
-   :alt: Selection of a Fiscal Position on a Sales Order / Invoice / Bill in Odoo Accounting
+   :alt: Selection of a fiscal position on a customer
 
 .. seealso::
 
   * :doc:`../taxes`
-  * :doc:`taxcloud` (decommissioning TaxCloud integration in Odoo 17+)
+  * :doc:`taxcloud`
   * :doc:`B2B_B2C`
