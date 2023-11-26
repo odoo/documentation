@@ -22,9 +22,9 @@
 # Jonathan Castillo <jcs@odoo.com>, 2023
 # Josep Anton Belchi, 2023
 # Iran Villalobos López, 2023
-# Lucia Pacheco, 2023
 # Braulio D. López Vázquez <bdl@odoo.com>, 2023
 # Fernanda Alvarez, 2023
+# Lucia Pacheco, 2023
 # 
 #, fuzzy
 msgid ""
@@ -33,7 +33,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-26 05:26+0000\n"
 "PO-Revision-Date: 2021-05-18 05:18+0000\n"
-"Last-Translator: Fernanda Alvarez, 2023\n"
+"Last-Translator: Lucia Pacheco, 2023\n"
 "Language-Team: Spanish (https://app.transifex.com/odoo/teams/41243/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -11546,7 +11546,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:3
 msgid "Removal strategies (FIFO, LIFO, FEFO)"
-msgstr ""
+msgstr "Estrategias de remoción (PEPS, UEPS, LIFO)"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:5
 msgid ""
@@ -11557,6 +11557,13 @@ msgid ""
 "picking items for orders, and account for quality control, such as moving "
 "products with expiration dates."
 msgstr ""
+"Para las empresas con almacenes, las **estrategias de remoción** determinan "
+"qué productos se toman del almacén y en qué momento. Por lo general, se "
+"deben definir estas estrategias para operaciones específicas de recolección,"
+" son útiles para las empresas ya que les ayudan a seleccionar los mejores "
+"productos, optimizar la distancia que los trabajadores deben recorrer al "
+"recolectar artículos para las ordenes y con fines de control de calidad, "
+"como mover productos que tienen fechas de vencimiento."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:11
 msgid ""
@@ -11565,6 +11572,10 @@ msgid ""
 " :guilabel:`Removal Strategy` defined in either the :guilabel:`Product "
 "Category` or the :guilabel:`Location` dashboards."
 msgstr ""
+"Cuando es necesario mover algún producto, Odoo encuentra los productos "
+"disponibles que se pueden asignar al traslado. La forma en la que Odoo hace "
+"esto depende de la :guilabel:`estrategia de remoción` que se definió en la "
+":guilabel:`categoría de producto` o en el tablero de :guilabel:`ubicación`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:15
 msgid ""
@@ -11576,12 +11587,22 @@ msgid ""
 "drop-down menu and selecting the desired removal strategy. After selecting "
 "the new removal strategy, click :guilabel:`Save`."
 msgstr ""
+"Para cambiar la :guilabel:`estrategia de remoción`, vaya a la aplicación "
+":menuselection:`Inventario --> Configuración --> Ubicaciones` o "
+":menuselection:`Categorías de productos`. Haga clic en una "
+":guilabel:`ubicación` o :guilabel:`categoría de producto` y luego haga clic "
+"en :guilabel:`editar`. Cambie la categoría de producto a :guilabel:`Forzar "
+"estrategia de remoción` o la ubicación de :guilabel:`estrategia de "
+"remoción`, para esto debe hacer clic en el menú desplegable y seleccionar la"
+" estrategia necesaria. Por último, haga clic en :guilabel:`Guardar`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst-1
 msgid ""
 "Change the Force Removal Strategy for either the Product Categories or "
 "Locations."
 msgstr ""
+"Cambiar a Forzar estrategia de remoción en las categorías de los productos o"
+" en las ubicaciones."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:27
 msgid "What happens inside the warehouse?"
@@ -11595,6 +11616,12 @@ msgid ""
 " each of these locations at some point, removal strategies can have an "
 "effect on which products are taken, from where, and when."
 msgstr ""
+"La mayoría de los almacenes comparten las mismas áreas importantes, cuentan "
+"con muelles de recepción y áreas de clasificación, ubicaciones de "
+"almacenamiento, áreas de recolección y embalaje así como muelles de envío o "
+"de carga. Si bien todos los productos que entran o salen del almacén pueden "
+"pasar por todos estos lugares en algún momento, las estrategias de remoción "
+"pueden modificar qué productos se toman, de dónde y cuándo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:34
 msgid ""
@@ -11603,12 +11630,19 @@ msgid ""
 "with the reception date and expiration date. After that, products are stored"
 " in their respective storage locations."
 msgstr ""
+"En el siguiente ejemplo, los camiones de los proveedores descargan palés de "
+"mercancías en los muelles de recepción. Luego, los operadores escanean los "
+"productos en el área correspondiente, con su fecha de recepción y de "
+"vencimiento. Después de esto, se encargan de almacenar los productos en sus "
+"respectivas ubicaciones."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:39
 msgid ""
 "Not all products have expiration dates, but in this example, expiration "
 "dates apply."
 msgstr ""
+"No todos los productos cuentan con fechas de vencimiento, pero en el caso "
+"particular para este ejemplo sí las hay."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst-1
 msgid "Products entering stock via the receiving area."
@@ -11626,6 +11660,14 @@ msgid ""
 ":guilabel:`Validate` to receive the products and register them in the Odoo "
 "database."
 msgstr ""
+"Con Odoo tiene la posibilidad de recibir productos. Vaya a la aplicación "
+":menuselection:`Inventario` y, en la vista kanban, haga clic en el botón "
+":guilabel:`Recibos` o :guilabel:`# POR PROCESAR` . En el tablero de "
+":guilabel:`recibos` debe buscar y hacer clic en una recepción individual, "
+"esto abrirá el formulario de admisión al almacén. Haga clic en "
+":guilabel:`Editar` y luego introduzca la cantidad recibida en la columna "
+":guilabel:`Hecho`. Para finalizar, debe :guilabel:`validar` esto para "
+"recibir los productos y registrarlos en su base de datos de Odoo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:53
 msgid ""
@@ -11634,6 +11676,11 @@ msgid ""
 "finally, click :guilabel:`Validate`. After products are received in Odoo, "
 "the products can then be moved to their respective storage locations."
 msgstr ""
+"Con la aplicación *Código de barras* de Odoo también puede recibir "
+"productos. Vaya a la aplicación, escanee los productos, actualice la "
+"cantidad y, por último, haga clic en :guilabel:`Validar`. Después de recibir"
+" los productos con Odoo, puede trasladarlos a sus respectivos lugares de "
+"almacenamiento."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:58
 msgid ""
@@ -11648,12 +11695,25 @@ msgid ""
 "area, then the packing area, and finally, to the shipping docks for delivery"
 " to the customer."
 msgstr ""
+"Con el mismo ejemplo como referencia, ahora imagine que se hacen varias "
+"órdenes de ventas para los productos que acaban de recibir y que tienen "
+"fechas de vencimiento. En este ejemplo, los productos no se recibieron el "
+"mismo día y no tienen la misma fecha de caducidad. En esta situación, por "
+"sentido común, lo mejor sería enviar productos con la fecha de vencimiento "
+"más cercana, en lugar de enviar aquellos que recibió primero o al último. "
+"Mediante la estrategia de remoción que se configuró para esos productos (en "
+"este ejemplo, ref:`PEPS <routes/FEFO>`), Odoo genera un traslado para los "
+"productos con la fecha de vencimiento más cercana al área de recolección, "
+"luego el área de empaquetado, y, para terminar, a los muelles de envío para "
+"que se pueda entregar al cliente."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst-1
 msgid ""
 "Products being packed at the packing area for delivery, taking the expiration dates into\n"
 "account."
 msgstr ""
+"Productos que se empaquetan en el área correspondiente para prepararlos para su envío, se consideran las fechas de\n"
+"vencimiento."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:73
 msgid ""
@@ -11662,16 +11722,23 @@ msgid ""
 ":doc:`../../management/shipments_deliveries/receipts_delivery_two_steps` or "
 ":doc:`../../management/shipments_deliveries/delivery_three_steps`."
 msgstr ""
+"Para recolectar estos productos y entregarlos, puede encontrar el número de "
+"lote o serie del producto en el formulario de traslado. Para obtener más "
+"información sobre recolecciones y envíos, consulte la documentación sobre "
+":doc:`../../management/shipments_deliveries/receipts_delivery_two_steps` o "
+":doc:`../../management/shipments_deliveries/delivery_three_steps`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:79
 msgid "How each removal strategy works"
-msgstr ""
+msgstr "Funcionamiento de cada estrategia de remoción"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:81
 msgid ""
 "Removal strategies determine which products are taken from the warehouse "
 "when orders are confirmed."
 msgstr ""
+"Las estrategias de remoción determinan qué productos se toman del almacén "
+"cuando se confirman las órdenes."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:84
 msgid "First In, First Out (FIFO)"
@@ -11684,6 +11751,11 @@ msgid ""
 "lot/serial number that entered the stock first (and therefore, has been in "
 "stock for the longest time)."
 msgstr ""
+"Al utilizar la estrategia :guilabel:`primeras entradas, primeras salidas "
+"(PEPS o FIFO, por sus siglas en inglés)`, la demanda de algunos productos "
+"activa una regla de remoción, esta solicita un traslado del número de lote o"
+" de serie que ingresó primero a sus existencias (es decir, que ha estado "
+"allí durante más tiempo)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:90
 msgid ""
@@ -11691,12 +11763,18 @@ msgid ""
 "have the corresponding lot numbers: `00001`, `00002`, `00003`. Each lot has "
 "five boxes of nails in it."
 msgstr ""
+"Por ejemplo, imagine que hay tres lotes de clavos en el almacén con los "
+"números de lote `00001`, `00002` y `00003`. Cada uno tiene cinco cajas de "
+"clavos."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:93
 msgid ""
 "Lot `00001` entered the stock on May 23, lot `00002` on May 25, and lot "
 "`00003` on June 1. A customer orders six boxes on June 11."
 msgstr ""
+"El lote `00001` entró a las existencias el 23 de mayo, el lote `00002` entró"
+" el 25 de mayo y el lote `00003` entró el 1 de junio. Un cliente ordena seis"
+" cajas el 11 de junio."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:96
 msgid ""
@@ -11706,11 +11784,18 @@ msgid ""
 "from lot `00002` is taken next because it has the oldest receipt date after "
 "lot `00001`."
 msgstr ""
+"Con la estrategia de remoción :abbr:`PEPS (Primeras entradas, primeras "
+"salidas)` la solicitud de traslado tomará las cinco cajas del lote `00001` "
+"primero y luego las del lote `00002`, ya que el lote `00001` ingresó primero"
+" a las existencias. La caja del lote `00002` se toma después porque tiene la"
+" fecha de recepción más antigua después del lote `00001`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst-1
 msgid ""
 "The detailed operations for the transfer shows the nail lots to be removed."
 msgstr ""
+"Las operaciones detalladas para el traslado muestran los lotes de clavos que"
+" deben tomarse."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:106
 msgid "Last In, First Out (LIFO)"
@@ -11724,6 +11809,11 @@ msgid ""
 " stock on-hand, however, it targets the **newest** stock on-hand for "
 "removal."
 msgstr ""
+"De forma similar al método :abbr:`PEPS (Primeras entradas, primeras "
+"salidas)`, la estrategia de remoción :guilabel:`Últimas entradas, primeras "
+"salidas (UEPS)` mueve productos según la fecha en que ingresaron a las "
+"existencias de un almacén. Sin embargo, en lugar de tomar las existencias "
+"disponibles que tienen mayor antigüedad, se toman las más **recientes**."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:112
 msgid ""
@@ -11732,6 +11822,10 @@ msgid ""
 "most recently entered the stock (the **last** lot/serial number that entered"
 " the warehouse's inventory)."
 msgstr ""
+"Cada que se realiza una orden de productos con el método :abbr:`UEPS "
+"(Últimas entradas, primeras salidas)`, se crea un traslado para el número de"
+" lote o serie que entró más recientemente a las existencias (el **último** "
+"número de lote o serie que ingresó al inventario del almacén)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:117
 msgid ""
@@ -11739,6 +11833,9 @@ msgid ""
 " banned, since it can potentially result in old, expired, or obsolete "
 "products being delivered to customers."
 msgstr ""
+"En muchos países, la estrategia de remoción :abbr:`UEPS (Últimas entradas, "
+"primeras salidas)` está prohibida, ya que ésta podría causar que los "
+"clientes reciban productos antiguos, caducados u obsoletos."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:120
 msgid ""
@@ -11746,12 +11843,18 @@ msgid ""
 "warehouse, and have the corresponding lot numbers: `10001`, `10002`, and "
 "`10003`, each with 10 boxes of screws per lot."
 msgstr ""
+"Por ejemplo, imagine que hay tres lotes de cajas de tornillos en el almacén "
+"con los números de lote `10001`, `10002` y `10003`. Cada uno tiene diez "
+"cajas."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:123
 msgid ""
 "Lot `10001` entered the stock on June 1, lot `10002` on June 3, and lot "
 "`10003` on June 6. A customer orders seven boxes on June 8."
 msgstr ""
+"El lote `10001` entró a las existencias el 1 de junio, el lote `10002` entró"
+" el 3 de junio y el lote `10003` entró el 6 de junio. Un cliente ordena "
+"siete cajas el 8 de junio."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:126
 msgid ""
@@ -11759,15 +11862,20 @@ msgid ""
 "requested for seven boxes of screws from lot `10003` because that lot is the"
 " last one to have entered the stock."
 msgstr ""
+"Con la estrategia de remoción :abbr:`UEPS (Últimas entradas, primeras "
+"salidas)` se solicitó un traslado de siete cajas de tornillos del lote "
+"`10003`. Ese lote es el último que ingresó a las existencias."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst-1
 msgid ""
 "The detailed operations shows which lots are being selected for the picking."
 msgstr ""
+"Las operaciones detalladas muestran qué lotes se están seleccionando para la"
+" recolección."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:134
 msgid "First Expired, First Out (FEFO)"
-msgstr ""
+msgstr "Primero en expirar, primero en salir (FEFO)"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:136
 msgid ""
@@ -11776,6 +11884,11 @@ msgid ""
 "warehouse, the :guilabel:`First Expired, First Out (FEFO)` method targets "
 "products for removal based on their assigned expiration dates."
 msgstr ""
+"Mientras que los métodos :abbr:`PEPS (Primeras entradas, primeras salidas)` "
+"y :abbr:`UEPS (Últimas entradas, primeras salidas)` toman productos para su "
+"remoción según la fecha de entrada al almacén, el método :guilabel:`Primero "
+"en expirar, primero en salir (FEFO)` toma productos para su remoción según "
+"sus fechas de vencimiento asignadas."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:140
 msgid ""
@@ -11784,6 +11897,10 @@ msgid ""
 "ensures that transfers are requested for products with the expiration date "
 "soonest to the order date."
 msgstr ""
+"Al utilizar la estrategia de remoción :abbr:`FEFO (Primero en expirar, "
+"primero en salir)`, cada orden de venta que incluye productos con esta "
+"estrategia asignada garantiza que se soliciten traslados para productos con "
+"la fecha de vencimiento más cercana a la fecha de la orden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:144
 msgid ""
@@ -11791,6 +11908,9 @@ msgid ""
 "lots have the following lot numbers: `20001`, `20002`, and `20003`, each "
 "with five boxes in it."
 msgstr ""
+"Por ejemplo, imagine que hay tres lotes de cajas de seis huevos, además "
+"tienen los números de lote `20001`, `20002` y `20003`. Cada uno tiene cinco "
+"cajas."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:147
 msgid ""
@@ -11798,6 +11918,10 @@ msgid ""
 "entered on July 2 and expires on July 14, and lot `20003` entered on July 3 "
 "and expires on July 21. A customer orders six boxes on July 5."
 msgstr ""
+"El lote `20001` ingresó a las existencias el 1 de julio y caduca el 15 de "
+"julio, el lote `20002` ingresó el 2 de julio y caduca el 14 de julio, y el "
+"lote `20003` ingresó el 3 de julio y caduca el 21 de julio. Un cliente "
+"realiza una orden de seis cajas el 5 de julio."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:151
 msgid ""
@@ -11807,14 +11931,22 @@ msgid ""
 "expiration date. The transfer also requests one box from lot `20001` because"
 " it has the next closest expiration date after lot `20002`."
 msgstr ""
+"Se solicita un traslado para las cinco cajas del lote `20002` y una del lote"
+" `20001` con el método :abbr:`FEFO (Primero en expirar, primero en salir)`. "
+"Todas las cajas del lote `20002` se trasladan porque tienen la fecha de "
+"caducidad más próxima. Este traslado también solicita una caja del lote "
+"`20001` porque tiene la fecha de caducidad más cercana después del lote "
+"`20002`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst-1
 msgid "The detailed operations for the transfer shows the lots to be removed."
 msgstr ""
+"Las operaciones detalladas para el traslado muestran los lotes que deben "
+"tomarse."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:161
 msgid "Using removal strategies"
-msgstr ""
+msgstr "Uso de las estrategias de remoción"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:163
 msgid ""
@@ -11825,14 +11957,20 @@ msgid ""
 "and :guilabel:`Lots & Serial Numbers` settings. Click :guilabel:`Save` to "
 "save changes."
 msgstr ""
+"Para diferenciar las unidades de algunos productos de otras, debe "
+"rastrearlas. Puede hacerlo por :guilabel:`número de lote` o :guilabel:`de "
+"serie`. Vaya a :menuselection:`Inventario --> Configuración --> Ajustes` y "
+"active las funciones :guilabel:`ubicación de almacenamiento`, "
+":guilabel:`rutas multietapa` y :guilabel:`números de lote y de serie`. Haga "
+"clic en el botón correspondiente para :guilabel:`guardar` los cambios."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst-1
 msgid ":alt: Traceability settings."
-msgstr ""
+msgstr ":alt: Ajustes de trazabilidad."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst-1
 msgid ":alt: Warehouse settings."
-msgstr ""
+msgstr ":alt: Ajustes del almacén."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:177
 msgid ""
@@ -11843,6 +11981,13 @@ msgid ""
 "the checkbox next to :guilabel:`Expiration Dates`. Remember to click "
 ":guilabel:`Save` to save all changes."
 msgstr ""
+"Para usar la estrategia de remoción :abbr:`FEFO (Primero en expirar, primero"
+" en salir)` también debe habilitar los ajustes correspondientes a las "
+":guilabel:`fechas de vencimiento`. Para hacerlo, vaya a la aplicación "
+":menuselection:`Inventario --> Configuración --> Ajustes`, diríjase a la "
+"sección :guilabel:`Trazabilidad` y haga clic en la casilla junto a "
+":guilabel:`Fechas de vencimiento`. Recuerde hacer clic en el botón "
+":guilabel:`Guardar`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:183
 msgid ""
@@ -11852,10 +11997,15 @@ msgid ""
 "on. In the :guilabel:`Force Removal Strategy` field, choose a removal "
 "strategy."
 msgstr ""
+"También puede definir estrategias de remoción específicas en categorías de "
+"productos. Para hacer esto, vaya a la aplicación :menuselection:`Inventario "
+"--> Configuración --> Categorías de producto` y elija una para definir la "
+"estrategia correspondiente. Elija una estrategia de remoción en el campo "
+":guilabel:`Forzar estrategia de remoción`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst-1
 msgid ":alt: Removal strategy on a product category."
-msgstr ""
+msgstr ":alt: Estrategia de retirada de una categoría de productos."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:192
 msgid ""
@@ -11867,12 +12017,22 @@ msgid ""
 "the top right of the page) to remove the default filter, and select a new "
 "filter if desired."
 msgstr ""
+"Si desea ver todos los productos con lotes o números de serie asignados, "
+"vaya a la aplicación :menuselection:`Inventario --> Productos -->Números de "
+"lote o serie`. Esto muestra una página con menús desplegables de todos los "
+"productos con números de lote o serie asignados, filtrados por *producto* de"
+" forma predeterminada. Para cambiar la categoría por la que se filtran estos"
+" productos, haga clic en :guilabel:`Producto` (en la barra de búsqueda, en "
+"la parte superior derecha de la página) para eliminar el filtro "
+"predeterminado y seleccione un nuevo filtro si lo desea."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst-1
 msgid ""
 "Click on Products, then Lots/Serial Numbers to display all the products with lots or serial\n"
 "numbers."
 msgstr ""
+"Haga clic en los productos y luego en los números de lote o serie para ver "
+"todos los productos con dichos números de lote o serie."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:203
 msgid ""
@@ -11884,6 +12044,15 @@ msgid ""
 "Operations` window appears, and displays the lot or serial numbers selected "
 "for that specific product for the delivery order."
 msgstr ""
+"Si desea ver los números de serie seleccionados para una orden de venta, "
+"vaya a la aplicación :guilabel:`Ventas` y seleccione la orden de venta "
+"correspondiente. Dentro de la orden de venta, haga clic en el botón "
+"inteligente :guilabel:`Entrega` ubicado en la esquina superior derecha. Vaya"
+" a la pestaña :guilabel:`Operaciones` y haga clic en el icono :guilabel:`⦙≣ "
+"(Operaciones detalladas)` que aparece en el extremo derecho del producto. Se"
+" abrirá la ventana :guilabel:`Operaciones detalladas`, que muestra los "
+"números de lote o serie seleccionados para ese producto específico en la "
+"orden de entrega."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:211
 msgid "FIFO (First In, First Out)"
@@ -11897,6 +12066,11 @@ msgid ""
 "cycles, such as clothes, to ensure they are not stuck with outdated styles "
 "in stock."
 msgstr ""
+"La estrategia de remoción :abbr:`PEPS (primeras entradas, primeras salidas)`"
+" implica que los productos que entran primero en el almacén se retiran "
+"primero. Las empresas deberían utilizar este método si venden productos con "
+"ciclos de demanda cortos, como ropa, para asegurarse de que no se quedan con"
+" estilos obsoletos en existencias."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:218
 msgid ""
@@ -11905,16 +12079,24 @@ msgid ""
 "the :guilabel:`Inventory Valuation Report`, the three different receipts are"
 " listed with the amounts."
 msgstr ""
+"Por ejemplo, imagine que tenemos tres lotes de camisas blancas. Las camisas "
+"pertenecen a la categoría *Todo/Ropa* y se ha establecido *PEPS* como "
+"estrategia de remoción. En el :guilabel:`Reporte de valoración de "
+"inventario`, se enumeran los tres recibos diferentes con sus importes."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst-1
 msgid "View of the lots of white shirts in the inventory valuation report."
 msgstr ""
+"Vista de los lotes de camisas blancas en el reporte de valoración del "
+"inventario."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:226
 msgid ""
 "Lot `000001` contains five shirts, lot `000002` contains three shirts, and "
 "lot `000003` contains two shirts."
 msgstr ""
+"El lote `000001` contiene cinco camisas, `000002` contiene tres y `000003` "
+"contiene dos."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:229
 msgid ""
