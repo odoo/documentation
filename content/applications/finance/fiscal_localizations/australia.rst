@@ -247,7 +247,7 @@ File types that can be exported from Odoo:
 
 
 Customer Statements (Dymo)
-========================
+================================================
 
 Customer statements can be downloaded by going to Apps ‣ Accounting Customer Statements.
 This module allows customers to see their financial transactions as well as overdue statement details. These statements can be sent out to customers by email.
@@ -271,7 +271,7 @@ Changing the dates of the customer statements can be done by going to  Accountin
    :align: center
 
 Remittance Advice (Dymo)
-========================
+================================================
 
 Remittance Advice can be accessed by going to Accounting ‣ Vendors ‣ Payments and printing out the “Payment Receipt”
 
@@ -279,19 +279,19 @@ Remittance Advice can be accessed by going to Accounting ‣ Vendors ‣ Payment
    :align: center
 
 E-Invoicing via Peppol (Dymo)
-========================
+================================================
 Odoo is compliant for Australia and New Zealand, refer to here to learn more about AU-NZ Peppol format. 
 .. _Link to Payroll:
 
 
 Set up Starshipit shipping services in Odoo (PERO)
-========================
+========================================================================
 Starshipit is a shipping service operator that connects companies with many Australasian shipping carriers. Now that Odoo has a native integration with Starshipit, users can create shipping methods that will automatically get rates from specific couriers (such as Australia Post, NZ Post, DHL,...) based on predefined conditions.
 
 Side note: Odoo is also integrated with `EasyPost <https://www.easypost.com/>`_, which provides a connection with different Australasian couriers as well.
 
 Setup in Starshipit
-----------------
+--------------------------------
 
 To get started, go to `Starshipit’s platform <https://starshipit.com/>`_: 
 
@@ -305,7 +305,7 @@ To get started, go to `Starshipit’s platform <https://starshipit.com/>`_:
 
 
 Find Starshipit credentials
-----------------
+--------------------------------
 
 In the Starshipit account, navigate to Settings ‣ API in the menu on the left. 
 
@@ -317,7 +317,8 @@ Any issues or questions pertaining to Starshipit only need to be discussed with 
 
 
 Setup in Odoo
-----------------
+--------------------------------
+
 
 #. To get started, go to Odoo’s Apps module, search for the Starshipit Shipping integration, and install it.
 
@@ -366,7 +367,7 @@ The test and production environment settings can be toggled back and forth from 
 
 
 Rate computation
-----------------
+------------------------------------
 
 When creating a quotation in Odoo, click on “Add shipping”, select a Starshipit shipping product and click on “Get rate”. Contact must have a real and accurate address for the estimation to work.
 
@@ -382,14 +383,16 @@ When creating a quotation in Odoo, click on “Add shipping”, select a Starshi
 
 
 Manage Packages
-----------------
+------------------------------------
+
 Before validating the transfer, select Put In Pack to add the products to be shipped into a Package Type. You can manage your Package Types on Inventory ‣ Configuration ‣ Delivery ‣ Package Types when you set up Packages.
 
 .. image:: australia/STARSHIPIT_11.png
    :align: center
 
 Process an order from Odoo to Starshipit
-----------------
+--------------------------------------------------------
+
 After confirming a sale order and its related delivery transfer in Odoo, the order is automatically processed in Starshipit.
 
 Note: 
@@ -414,7 +417,8 @@ Contact information, including a mobile number and email address, should be incl
 
 
 Returns management
-----------------
+------------------------------------
+
 Starshipit allows returns with the following carriers: 
 - Australia Post eParcel
 - TNT
@@ -438,7 +442,7 @@ Then, in the “Additional Info” tab, check the Carrier field. If it allows fo
 If the carrier does not support returns through Starshipit, Odoo will return the following Error message: "Starshipit does not support return for this carrier. In order to handle the return, please go to the carrier website directly”.
 
 Cancellations/ Refunds
-----------------
+------------------------------------
 
 Cancellations can be done in the “Additional Info” tab, by clicking on the “Cancel” button next to the Tracking Reference.
 
@@ -472,7 +476,7 @@ Accounting app -> Configuration -> Setting -> Batch Payment -> Allow Batch Payme
 
 
 Configurations in Bank Journal
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Configuration -> Journals -> Select the Bank type Journal
 
@@ -556,7 +560,7 @@ User Case
 
 
 Online payment solution Asia Pay (DYMO)
-========================
+================================================
 Asia Pay is compatible with Odoo helping businesses to better cater to their customers’ payment preferences. Find out more information about Asia Pay here.
 
 
@@ -564,17 +568,17 @@ Asia Pay is compatible with Odoo helping businesses to better cater to their cus
 .. ========================
 
 Export QIF, OFX Import (DAJU)
-========================
+================================================
 
 Import OFX statement files
-----------------
+--------------------------------
 Open Financial Exchange (OFX) is a unified specification for the electronic exchange of financial data between financial institutions, businesses and consumers via the Internet.
 
 With Odoo, you can download an OFX file from your bank or accounting software and import it directly into your Odoo instance. This will create all bank statements.
 
 
 Import QIF statement files
-----------------
+--------------------------------
 Quicken Interchange Format (QIF) is an open specification for reading and writing financial data to media (i.e. files). Although still widely used, QIF is an older format than Open Financial Exchange (OFX) and you should use the OFX version if you can export to both file formats.
 
 With Odoo, you can download a QIF file from your bank or accounting software and import it directly into your Odoo instance. This will create all bank statements.
@@ -601,7 +605,7 @@ Configuration
 
 
 POS terminal → in store payment solution (DAJU) (Stripe)
-========================
+========================================================================
 Redirect to the other page both Asia Pay and Stripe are payment solutions for both modules
 
 Configuration
@@ -727,7 +731,7 @@ Payroll (LWI)
 ========================
 
 Create your employees
-----------------
+--------------------------------
 A multitude of important fields have been added to comply with Australian regulations. First, go to Employees > Create. These fields can be found on the section “HR Settings” of the employee form: TFN, Medicare exemption and deduction, child support deduction and garnishee… Some of these fields will impact the employee’s withholding tax rate.
 #. TFN Status: if a TFN is provided by the employee, make sure to add it to the “TFN” field.
 #. Non-resident: if the employee is a foreign resident.
@@ -743,7 +747,7 @@ In Odoo’s Australian localisation, some standard fields are crucial. Important
    :align: center
 
 Manage Australian contracts
-----------------
+--------------------------------
 Once the employee form has been created, ensure the contract is enabled  by clicking on the “Contracts” smart button, or going to Employees > Contracts. Please note that only one contract can be active at the same time per employee, but it is possible for an employee to be assigned consecutive contracts during their employment.
 
 Contractual information related to Australia can be found in the following 3 places:
@@ -793,7 +797,7 @@ Once all important information has been entered, ensure the transition of the co
 
 
 Assign superannuation accounts
-------------------------------
+----------------------------------------------
 Upon receipt of superannuation details from a new employee, ensure the creation of a new account in Payroll ‣ Configuration ‣ Australia ‣ Super Accounts, linking it to the individual. Input the account's fund, "member since" date, and member number for accurate records.
 
 .. image:: australia/pay_23.png
@@ -809,12 +813,12 @@ If the employee uses a superannuation fund that does not exist in  the database 
 
 
 Create pay runs with payslips
-------------------------------
+----------------------------------------------
 
 There are two ways Odoo can help create pay runs: via batch or via individual payslips.
 
 Create a batch of payslips
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 When preparing to generate employees’ draft payslips (e.g. at the end of every week, fortnight or month), navigate to Payroll ‣ Payslips ‣ Batches and create a new one. This method allows the creation of multiple payslips corresponding to each employee in a single batch.
 
 .. image:: australia/pay_6.png
@@ -828,7 +832,7 @@ When preparing to generate employees’ draft payslips (e.g. at the end of every
 #. Verify important information on each payslip. After payslips from a batch have been generated, there is no need to manually compute payslip lines, Odoo does it for you.
 
 Create an individual payslip
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In cases where the pay run doesn't fall into the category of regular payslips, the option exists to create a pay run dedicated to a single employee. Go to Payroll ‣ Payslips ‣ All Payslips ‣ New. Employ this method when processing one-time payments for employees, including return-to-work payments (ATO Schedule 4), employment termination payments (ATO Schedule 7 and 11), as well as commissions and bonuses (ATO Schedule 5). When generating an individual payslip, make sure to proceed with the following steps: 
 
@@ -842,7 +846,7 @@ In cases where the pay run doesn't fall into the category of regular payslips, t
 
 
 Understand payslip features
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 No matter the way payslips are created (individually or via a batch), the same features apply. Let us dive into the different sections of the payslip form.
 
 Depending on the way work entries are created for this employee (see the contract section above for more information), the “Worked Days” table will automatically show the number of days and hours the employee has worked during the payslip period, next to the corresponding total gross amount. Note that there will be one line per work entry type, which means that paid and unpaid time off, in addition to custom hourly penalty rates (overtime, public holidays…) will be added to the table automatically.
@@ -869,6 +873,7 @@ b. Extra pay items. Unlike allowances, extra pay items are other inputs that add
 
 .. image:: australia/pay_11.png
    :align: center
+
 On the tab “Salary Computation”, the payroll user can verify whether all the pay rules have been computed correctly as per employee, contract and salary structure. Here are a few guidelines to better understand the data.
 
 .. image:: australia/pay_24.png
@@ -908,12 +913,12 @@ After a batch or a payslip’s journal entry has been posted, the company can pr
    :align: center
 
 One-time payments
-~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Certain payments such as “return to work” payments and “employment termination payments” (ETP) are processed only once and require a slightly different approach.
 
 Return to work payments
-~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A return to work payment is a payment made to an employee to resume working. To process one in Odoo, create an individual payslip, select the employee and modify its regular structure to “Australia: return to work”. Then, simply add the gross amount of that payment in the “Other Inputs” table and compute the payslip.
 
@@ -929,7 +934,7 @@ Odoo automatically computes the PAYG withholding, the net amount and the super g
 
 
 Termination payments
-~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Before proceeding with the employee’s ETP, make sure that a “Contract End Date” has been set on that employee’s contract, so that Odoo can automatically compute the final prorated salary of that employee for the current month.
 
@@ -968,7 +973,7 @@ Odoo will automatically compute the gross ETP, the withholding, the unused leave
 Once payment for both payslips is ready to be processed, an ABA file can be created directly from the batch.
 
 STP Phase 2
-------------
+------------------------
 
 .. important::
    Odoo is not compliant with STP Phase 2 as of Odoo 17.0. Our teams are actively working on it and announcements will be made once companies can use Odoo to report their payroll data directly to the ATO.
@@ -976,7 +981,7 @@ STP Phase 2
 .. _australia/employment-hero:
 
 Employment Hero Australian Payroll(DAJU)
-==================================
+==================================================
 
 The Employment Hero module synchronizes payslip accounting entries (e.g., expenses, social charges,
 liabilities, taxes) from Employment Hero to Odoo automatically. Payroll administration is still done
@@ -986,7 +991,7 @@ in Employment Hero. We only record the journal entries in Odoo.
    KeyPay was rebranded as **Employment Hero** in March 2023.
 
 Configuration
--------------
+--------------------------
 
 #. :ref:`Activate <general/install>` the :guilabel:`Employment Hero Australian Payroll` module
    (technical name: `l10n_au_keypay`).
