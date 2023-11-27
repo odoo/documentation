@@ -726,6 +726,13 @@ joins) or for performance reasons::
     Please make sure your queries are sanitized when using user input and prefer using
     ORM utilities if you don't really need to use SQL queries.
 
+The recommended way to build SQL queries is to use the wrapper object
+
+.. autoclass:: odoo.tools.SQL
+
+    .. automethod:: SQL.join
+    .. automethod:: SQL.identifier
+
 One important thing to know about models is that they don't necessarily perform
 database updates right away. Indeed, for performance reasons, the framework
 delays the recomputation of fields after modifying records. And some database
@@ -740,7 +747,7 @@ called *flushing* and performs the expected database updates.
         # make sure that 'partner_id' is up-to-date in database
         self.env['model'].flush_model(['partner_id'])
 
-        self.env.cr.execute("SELECT id FROM model WHERE partner_id IN %s", [ids])
+        self.env.cr.execute(SQL("SELECT id FROM model WHERE partner_id IN %s", ids))
         ids = [row[0] for row in self.env.cr.fetchall()]
 
 Before every SQL query, one has to flush the data needed for that query. There
