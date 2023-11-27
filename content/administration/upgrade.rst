@@ -345,7 +345,7 @@ exceptions.
       The update of your custom modules must be successful to complete the entire upgrade process.
       Make sure the status of your staging upgrade is :guilabel:`successful` before trying it in
       production.
-      More information on how to upgrade your custom modules can be found on page :ref:`<upgrade/upgrade_custom_db>`.
+      More information on how to upgrade your custom modules can be found on page :ref:`upgrading a customized database <upgrade/upgrade_custom_db>`.
 
    .. group-tab:: On-premise
 
