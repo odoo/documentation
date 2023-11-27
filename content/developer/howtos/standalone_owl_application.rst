@@ -12,7 +12,6 @@ Overview
 To have a standalone Owl app, a few things are required:
 
 - a root component for the application
-- some setup code to start the services and mount the component
 - an assets bundle that contains the setup code
 - a QWeb view that calls the assets bundle
 - a controller that renders the view
@@ -46,18 +45,8 @@ Then create the JavaScript file for that component in :file:`/your_module/static
         static props = {};
     }
 
-.. seealso::
-   :ref:`Owl components reference<frontend/components>`.
-
-2. Setting up the environment and mounting the application
-==========================================================
-
-An Owl application needs an environment, and the Odoo JavaScript framework needs that environment to
-contain the :ref:`services<frontend/services>`.
-Starting the services is also required to load the translations, which we need to do before mounting
-our Owl application, so that we can give Owl a working translation function.
-
-Create the JavaScript file that will mount the app in :file:`/your_module/static/src/standalone_app/app.js`.
+It's generally a good idea to have the application setup code that mounts the component in a separate
+file. Create the JavaScript file that will mount the app in :file:`/your_module/static/src/standalone_app/app.js`.
 
 .. code-block:: js
 
@@ -68,8 +57,16 @@ Create the JavaScript file that will mount the app in :file:`/your_module/static
 
     whenReady(() => mountComponent(Root, document.body));
 
+The `mountComponent` utility function will take care of creating the Owl application and configuring
+it correctly: it will create an environment, start the :ref:`services<frontend/services>`, make sure
+the app is translated and give the app access to the templates from your assets bundle, among other
+things.
 
-3. Creating an assets bundle containing our code
+.. seealso::
+   :ref:`Owl components reference<frontend/components>`.
+
+
+2. Creating an assets bundle containing our code
 ================================================
 
 In the manifest of your module, create a new :ref:`assets bundle<reference/assets_bundle>`.
@@ -107,7 +104,7 @@ layout.
 .. seealso::
     :ref:`Module manifest reference<reference/module/manifest>`.
 
-4. XML view that calls the assets bundle
+3. XML view that calls the assets bundle
 ========================================
 
 Now that we have created our assets bundle, we need to create a
@@ -143,7 +140,7 @@ should be an object that contains the following:
 - `__session_info__`, that contains information from the server that is always needed and for which
   we don't want to perform an additional request. More on this in the next section.
 
-5. Controller that renders the view
+4. Controller that renders the view
 ===================================
 
 Now that we have the view, we need to make it accessible to the user. For that purpose, we will create
