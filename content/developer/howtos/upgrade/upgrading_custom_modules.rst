@@ -2,6 +2,13 @@
 Upgrading custom modules
 ========================
 
+TODOUPG this page should be about upgrading custom modules:
+#. Why they are not compatible out of the box
+#. The process of developing a new version of a custom module : make it installable on empty db,
+upgrade a database using it to test the migration of data
+#. How to find the derprecated elements
+#. Don't forget to write migration scripts
+
 Custom modules are usually not compatible out of the box with a new version of Odoo due to changes
 in the standard modules, such as models being merged, fields being renamed, or methods being
 refactored. Therefore, a new version of the modules must be created for each new version

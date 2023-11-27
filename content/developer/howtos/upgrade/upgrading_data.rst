@@ -2,6 +2,11 @@
 Upgrading data
 ==============
 
+TODOUPG this page should be about upgrading data :
+but should we publish this ? Since Odoo always takes care of it. Even though it can be fixed
+in custom mig script after restoring
+
+
 Errors during upgrade
 ---------------------
 

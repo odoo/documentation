@@ -8,7 +8,7 @@ Upgrading a customized database
 
 .. note::
    This page is intended to explain the technical aspects of Upgrading. For a more
-   general overview, please refer to the :ref:`upgrade documentation <upgrade>`.
+   general overview, please refer to the :doc:`upgrade documentation <administration/upgrade>`.
 
 Upgrading a database that contains custom modules requires additional steps compared to 
 databases running the standard modules of Odoo since the source code of the custom modules
