@@ -1,31 +1,29 @@
-
 ========================
-Upgrading customizations
+Upgrading custom modules
 ========================
 
-The source code of custom modules maintained by third parties must be upgraded to be compatible with
-each new version of Odoo. This usually requires a static analysis of the code to find all the
-references of deprecated elements. However, it can also be done by installing the module and fixing
-the errors that occur during the installation.
+Custom modules are usually not compatible out of the box with a new version of Odoo due to changes
+in the standard modules, such as models being merged, fields being renamed, or methods being
+refactored. Therefore, a new version of the modules must be created for each new version
+of Odoo, in which its source code is adapted to the new version.
+
+To make the process of releasing a new version easier, we recommend exploring the new features 
+brought by the latest versions of Odoo to find out if any of your customizations have become
+derprecated or can be replaced by a standard feature.
+
+.. example::
+   In Odoo 15, the `sale.subscription` model has been merged into the `sale.order` module. Therefore,
+   any field added to the `sale.subscription` model must be ported over to the `sale.order` model.
+   Other references such as related fields, views, reports, etc., must also be updated to match the
+   new model name.
 
 Information on the changes between versions can be found in the `release notes
 <https:/odoo.com/page/release-notes>`_ and the :ref:`upgrade report <upgrade/upgrade_report>`.
 
 .. seealso::
-   - :ref:`reference/views`
+   - :doc:`/developer/reference/user_interface/view_records`
    - :ref:`reference/fields`
    - :ref:`reference/orm/models`
-
-.. _upgrade/comparing_customizations:
-
-Comparing customizations to the new version
--------------------------------------------
-
-As many new features are added with each new version, some customizations may become obsolete when
-equivalent features become part of the standard version of Odoo.
-
-Therefore, exploring the new features and comparing them with your customizations is recommended.
-Removing unnecessary customizations reduces the work needed to maintain and upgrade your database.
 
 .. _upgrade/remove_customizations:
 
@@ -33,20 +31,19 @@ Removing customizations
 -----------------------
 
 Customizations that have become redundant with the release of a new version of Odoo can be removed
-from your database with a :ref:`migration script <reference/upgrade/migration-scripts>` using the
+from your database with a :ref:`migration script <upgrade/migration-scripts>` using the
 `uninstall_module` method from the `upgrade-util package <https://github.com/odoo/upgrade-util/blob/master/src/util/modules.py#L71>`__.
-This method renames the field and the column in the database but does not impact views, reports,
-filters, mail templates, automated and server actions, etc., that refer to those fields. Those
-references must be found and removed from the database, as well as in the same migration script.
+
+.. warning::
+   `uninstall_module` renames the field and the column in the database but does not impact views, reports,
+   filters, mail templates, automated and server actions, etc., that refer to those fields. Those
+   references must be found and removed from the database, preferably in the same migration script.
 
 .. important::
    :ref:`Testing your database <upgrade/test_your_db>` is crucial, especially when uninstalling a
    custom module. Any customized view, report, filter, mail template, automated and server actions,
-   etc., referring to an uninstall field will prevent them from working correctly and might block
+   etc., referring to an uninstalled field will prevent them from working correctly and might block
    your processes in certain situations.
-
-.. seealso::
-   :ref:`upgrade/comparing_customizations`
 
 Upgrading custom fields and their data
 --------------------------------------

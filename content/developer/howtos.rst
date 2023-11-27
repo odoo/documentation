@@ -20,7 +20,7 @@ How-to guides
     howtos/translations
     howtos/website_themes
     howtos/connect_device
-    howtos/upgrade_modules
+    howtos/upgrading_customized_database
 
 .. cards::
 
@@ -86,7 +86,7 @@ How-to guides
 
       Learn how to enable a module to detect and communicate with an IoT device.
 
-   .. card:: Upgrading custom modules
-      :target: howtos/upgrade_modules
+   .. card:: Upgrading a customized database
+      :target: howtos/upgrading_customized_database
 
-      Learn how to upgrade a custom module to a new version of Odoo.
+      Learn how to upgrade a customized database, as well as the code and data of its custom modules.

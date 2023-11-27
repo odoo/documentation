@@ -42,8 +42,8 @@ An upgrade does not cover:
    If your database contains custom modules, it cannot be upgraded until a version of your custom
    modules is available for the target version of Odoo. For customers maintaining their own custom
    modules, we recommend to parallelize the process by :ref:`requesting an upgraded database
-   <upgrade/request-test-database>` while also :ref:`upgrading the source code of your custom
-   modules </developer/howtos/upgrade_modules>`.
+   <upgrade/request-test-database>` while also :doc:`upgrading the source code of your custom
+   modules </developer/howtos/upgrading_customized_database>`.
 .. TODOUPG : once the page for developers is published, uncomment and link
 .. :doc:`first upgrade its source code </developer/reference/upgrade>`
 
@@ -54,8 +54,8 @@ Upgrading in a nutshell
 #. Request an upgraded test database (see :ref:`obtaining an upgraded test database
    <upgrade/request-test-database>`).
 
-#. (If applicable) : upgrade the source code of your custom module to be compatible with the new
-   version of Odoo (see :ref:`upgrading custom modules <upgrade/upgrade_modules>`).
+#. If applicable : upgrade the source code of your custom module to be compatible with the new
+   version of Odoo (see :doc:`/developer/howtos/upgrading_customized_database`).
 
 #. Thoroughly test the upgraded database (see :ref:`testing the new version of the database
    <upgrade/test_your_db>`).

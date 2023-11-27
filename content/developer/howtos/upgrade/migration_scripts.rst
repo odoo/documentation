@@ -1,3 +1,4 @@
+.. _upgrade/migration-scripts:
 
 =================
 Migration scripts
