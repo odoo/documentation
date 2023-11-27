@@ -58,19 +58,6 @@ related to testing Odoo content (modules, mainly):
 
 .. autofunction:: odoo.tests.tagged
 
-By default, tests are run once right after the corresponding module has been
-installed. Test cases can also be configured to run after all modules have
-been installed, and not run right after the module installation::
-
-  # coding: utf-8
-  from odoo.tests import HttpCase, tagged
-
-  # This test should only be executed after all modules have been installed.
-  @tagged('-at_install', 'post_install')
-  class WebsiteVisitorTests(HttpCase):
-    def test_create_visitor_on_tracked_page(self):
-        Page = self.env['website.page']
-
 The most common situation is to use
 :class:`~odoo.tests.TransactionCase` and test a property of a model
 in each method::
@@ -190,7 +177,7 @@ they're not going to get run:
     import unittest
     from odoo.tests import tagged
 
-    @tagged('standard', 'at_install')
+    @tagged('standard', 'post_install')
     class SmallTest(unittest.TestCase):
         ...
 
@@ -234,15 +221,19 @@ Special tags
   :option:`--test-tags <odoo-bin --test-tags>` also defaults to ``standard``.
 
   That means untagged test will be executed by default when tests are enabled.
-- ``at_install``: Means that the test will be executed right after the module
-  installation and before other modules are installed. This is a default
-  implicit tag.
-- ``post_install``: Means that the test will be executed after all the modules
-  are installed. This is what you want for HttpCase tests most of the time.
 
-  Note that this is *not exclusive* with ``at_install``, however since you
-  will generally not want both ``post_install`` is usually paired with
-  ``-at_install`` when tagging a test class.
+- ``post_install``: Means that the test will be executed after all the modules
+  are installed. This is a default implicit tag.
+
+- ``at_install``: Means that the test will be executed right after the module
+  installation and before other modules are installed.
+
+  This should be used seldomly as it prevents test runs from being parallelized
+  on runbot. A valuable addition is a comment above to test to explain why it
+  needs to be run before other modules are installed.
+
+  Note that this is *exclusive* with ``post_install`` so ``at_install`` is
+  usually paired with ``-post_install`` when tagging a test class.
 
 Examples
 ~~~~~~~~
