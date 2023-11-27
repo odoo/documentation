@@ -10,32 +10,30 @@ Modules: (Daju)
 ========================
 
 .. list-table::
+   :widths: 20 25 55
    :header-rows: 1
-   :widths: 25 20 55
 
    * - Module Name
-     - Technical Name
+     - Module Key
      - Description
    * - Australia - Accounting
      - l10n_au
-     - Australian accounting basic charts and localizations. Also:
-       - activates a number of regional currencies.
-       - sets up Australian taxes.
-   * - ABA Credit Transfer
-     - l10n_au_aba
-     - This module allows the generation of payment batches as ABA (Australian Bankers Association) text files. The generated 'aba' file can be uploaded to many Australian banks.
-   * - Employment Hero Australian Payroll
-     - l10n_au_keypay
-     - Employment Hero Payroll Integration This Module will synchronise all payrun journals from Employment Hero to Odoo.
+     - Australian accounting basic charts of accounts and localisations. Automatically installed when selecting the Australian fiscal position from Accounting -> Configuration -> Fiscal position.
    * - Australian Reports - Accounting
      - l10n_au_reports
-     - Taxable Payments Annual Reports (TPAR) for Australia. The Taxable payments annual report (TPAR) allows:  Payments made to contractors (or subcontractors) for services, or Grants paid by government entities to ABN holders to be reported where required under the Taxable Payments Reporting System (TPRS) and the Taxable Government Grants and Payments reporting measure.
+     - Provides Taxable Payments Annual Reports (TPAR) for Australia. It's automatically installed with the Australian fiscal position. Covers payments to contractors and grants paid by government entities under TPRS and the Taxable Government Grants and Payments reporting measure.
    * - Australia - Payroll
-     - 
-     - 
+     - l10n_au_hr_payroll
+     - Installing this module installs all other AU modules: accounting, ABA, AU reports - accounting, AU - payroll.
    * - Australia - Payroll with Accounting
-     - 
-     - 
+     - l10n_au_hr_payroll_account
+     - Includes all AU modules: accounting, ABA, AU reports - accounting, AU - payroll.
+   * - Accounting Customer Statements
+     - l10n_account_customer_statements
+     - Auto-installed for users in Australia and New Zealand as it is customary there.
+   * - Employment Hero Australian Payroll
+     - l10n_au_keypay
+     - Integrates Employment Hero Payroll. Synchronizes pay run journals from Employment Hero to Odoo.
 
 
  
@@ -81,84 +79,149 @@ Businesses need to report payments made to subcontractors from relevant services
 Here is the taxes for Australia in v17.
 
 .. list-table::
-   :widths: 20 20 20 20
+   :widths: 10 30 10 10
    :header-rows: 1
 
-   * - Name
+   * - GST Name
      - Description
-     - Tax Scope
-     - Type Tax Use
+     - GST Scope
+     - GST Type
+   * - 10%
+     - GST Purchases
+     - -
+     - Purchases
+   * - 10% INC
+     - GST Inclusive Purchases
+     - -
+     - Purchases
+   * - 10% C
+     - Capital Purchases
+     - -
+     - Purchases
+   * - 0% C
+     - Zero Rated Purch
+     - -
+     - Purchases
+   * - 100% T EX
+     - Purchase (Taxable Imports) - Tax Paid Separately
+     - -
+     - Purchases
+   * - 10% I
+     - Purchases for Input Taxed Sales
+     - -
+     - Purchases
+   * - 10% P
+     - Purchases for Private use or not deductible
+     - -
+     - Purchases
+   * - 100% EX
+     - GST Only on Imports
+     - -
+     - Purchases
+   * - 10% Adj
+     - Tax Adjustments (Purchases)
+     - -
+     - Purchases
    * - 10%
      - GST Sales
-     - 
-   * - Sales
-     - 10% INC
+     - -
+     - Sales
+   * - 10% INC
      - GST Inclusive Sales
-     - 
-   * - Sales
-     - 0% EX
+     - -
+     - Sales
+   * - 0% EX
      - Zero Rated (Export) Sales
-     - 
-   * - Sales
-     - 0% EXEMPT
+     - -
+     - Sales
+   * - 0% EXEMPT
      - Exempt Sales
-     - 
-   * - Sales
-     - 0% I
+     - -
+     - Sales
+   * - 0% I
      - Input Taxed Sales
-     - 
-   * - Sales
-     - 10% Adj
+     - -
+     - Sales
+   * - 10% Adj
      - Tax Adjustments (Sales)
-     - 
-   * - Purchases
-     - 10%
+     - -
+     - Sales
+   * - 10% TPAR
      - GST Purchases
-     - 
-   * - Purchases
-     - 10% INC
+     - Services
+     - Purchases
+   * - 10% TPAR NO ABN
+     - GST Purchases
+     - Services
+     - Purchases
+   * - 10% INC TPAR
      - GST Inclusive Purchases
-     - 
-   * - Purchases
-     - 10% C
+     - Services
+     - Purchases
+   * - 10% INC TPAR N ABN
+     - GST Inclusive Purchases
+     - Services
+     - Purchases
+   * - 10% C TPAR
      - Capital Purchases
-     - 
-   * - Purchases
-     - 0% C
-     - Zero Rated Purch
-     - 
-   * - Purchases
-     - 100% T EX
+     - Services
+     - Purchases
+   * - 10% C TPAR N ABN
+     - Capital Purchases
+     - Services
+     - Purchases
+   * - 0% C TPAR
+     - Zero Rated Purch TPAR
+     - Services
+     - Purchases
+   * - 0% C TPAR N ABN
+     - Zero Rated Purch TPAR without ABN
+     - Services
+     - Purchases
+   * - 100% T EX TPAR
      - Purchase (Taxable Imports) - Tax Paid Separately
-     - 
-   * - Purchases
-     - 10% I
+     - Services
+     - Purchases
+   * - 100% T EX TPAR N ABN
+     - Purchase (Taxable Imports) - Tax Paid Separately
+     - Services
+     - Purchases
+   * - 10% I TPAR
      - Purchases for Input Taxed Sales
-     - 
-   * - Purchases
-     - 10% P
+     - Services
+     - Purchases
+   * - 100% I TPAR N ABN
+     - Purchases for Input Taxed Sales
+     - Services
+     - Purchases
+   * - 10% P TPAR
      - Purchases for Private use or not deductible
-     - 
-   * - Purchases
-     - 100% EX
+     - Services
+     - Purchases
+   * - 10% P TPAR N ABN
+     - Purchases for Private use or not deductible
+     - Services
+     - Purchases
+   * - 100% EX TPAR
      - GST Only on Imports
-     - 
-   * - Purchases
-     - 10% Adj
+     - Services
+     - Purchases
+   * - 100% EX TPAR N ABN
+     - GST Only on Imports
+     - Services
+     - Purchases
+   * - 10% Adj TPAR
      - Tax Adjustments (Purchases)
-     - 
-   * - Purchases
-     - Services (Purchase)
-     - 10% TPAR
-     - GST Purchases
-   * - Purchases
      - Services
-     - 10% TPAR NO ABN
-     - GST Purchases
-   * - Purchases
+     - Purchases
+   * - 10% Adj TPAR N ABN
+     - Tax Adjustments (Purchases)
      - Services
-     - 10% INC TPAR
-     - GST Inclusive Purchases
+     - Purchases
+   * - 47% WH
+     - Tax Withheld for Partners without ABN
+     - Services
+     - Purchases
 
 
 
@@ -713,7 +776,7 @@ Select the products and click Payment
 .. image:: australia/POS_17.png
    :align: center
 
-.. image:: australia/POS_19.jpg
+.. image:: australia/POS_19.JPG
    :align: center
 
 Select Stripe and click send.
@@ -723,7 +786,7 @@ Select Stripe and click send.
 
 The PoS terminal shows the value that customers need to pay
 
-.. image:: australia/POS_20.jpg
+.. image:: australia/POS_20.JPG
    :align: center
 
 
@@ -743,7 +806,7 @@ A multitude of important fields have been added to comply with Australian regula
 
 In Odoo’s Australian localisation, some standard fields are crucial. Important examples are date of birth (which affects certain variables of employment termination payments or ETP), marital status and number of dependents (which affects Medicare surcharge).
 
-.. image:: australia/pay_1.png
+.. image:: australia/PAY_1.png
    :align: center
 
 Manage Australian contracts
@@ -757,7 +820,7 @@ Contractual information related to Australia can be found in the following 3 pla
 - Working holiday makers (Schedule 15). When emploting working holidaymakers, other taxes apply. For detailed information on these specific tax implications, refer to the documentation provided by the ATO.
 - No TFN. Choose this structure if the employee hasn’t provided a TFN for more than 28 days.
 
-.. image:: australia/pay_2.png
+.. image:: australia/PAY_2.png
    :align: center
 
 .. important::
@@ -780,7 +843,7 @@ The field Work Entry Source is also very important and defines the way working h
 - Schedule Pay. In Australia, only the following pay run frequencies are accepted: daily, weekly, bi-weekly (or fortnightly), monthly, and quarterly.
 - Wage ( / period). Assign a wage to the contract according to their pay frequency. On payslips, the corresponding annual and hourly rates will be automatically computed. For hourly workers, please note that the hourly wage should exclude casual loading.
 
-.. image:: australia/pay_3.png
+.. image:: australia/PAY_3.png
    :align: center
 
 3. The “Australia” tab. Most of the fields in this tab are used for Single Touch Payroll (or STP) reporting, which requires a thorough understanding of several details from an employee’s contract. Make sure to review the information on this tab before moving forward with pay runs. This includes the following four fields which will also impact payslip computations:
@@ -790,7 +853,7 @@ The field Work Entry Source is also very important and defines the way working h
 - Salary Sacrifice Superannuation: any amount added to this field will be deducted, per pay frequency, from the employee’s basic salary before the computation of the gross salary. Then, this amount will be added to the super guarantee line of their payslip. E.g. If Patrick earns 5,000 AUD per month and sacrifices 300 AUD to superannuation, his gross salary will be 4,700 AUD and 300 AUD will be added on top of his normal super contributions.
 - Salary Sacrifice Other: any amount added to this field will be deducted, per pay frequency, from the employee’s basic salary before the computation of the gross salary.
 
-.. image:: australia/pay_4.png
+.. image:: australia/PAY_4.png
    :align: center
 
 Once all important information has been entered, ensure the transition of the contract's status from "New" to "Running" to facilitate its use in pay runs.
@@ -800,12 +863,12 @@ Assign superannuation accounts
 ----------------------------------------------
 Upon receipt of superannuation details from a new employee, ensure the creation of a new account in Payroll ‣ Configuration ‣ Australia ‣ Super Accounts, linking it to the individual. Input the account's fund, "member since" date, and member number for accurate records.
 
-.. image:: australia/pay_23.png
+.. image:: australia/PAY_23.png
    :align: center
 
 If the employee uses a superannuation fund that does not exist in  the database yet, Odoo will allow to create a new one and to centralise basic information about this fund, such as its ABN, address, type (APRA or SMSF), USI and ESA. Super funds can be created or imported in Payroll ‣ Configuration ‣ Australia ‣ Super Funds. 
 
-.. image:: australia/pay_5.png
+.. image:: australia/PAY_5.png
    :align: center
 
 .. important::
@@ -821,7 +884,7 @@ Create a batch of payslips
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 When preparing to generate employees’ draft payslips (e.g. at the end of every week, fortnight or month), navigate to Payroll ‣ Payslips ‣ Batches and create a new one. This method allows the creation of multiple payslips corresponding to each employee in a single batch.
 
-.. image:: australia/pay_6.png
+.. image:: australia/PAY_6.png
    :align: center
 
 
@@ -836,7 +899,7 @@ Create an individual payslip
 
 In cases where the pay run doesn't fall into the category of regular payslips, the option exists to create a pay run dedicated to a single employee. Go to Payroll ‣ Payslips ‣ All Payslips ‣ New. Employ this method when processing one-time payments for employees, including return-to-work payments (ATO Schedule 4), employment termination payments (ATO Schedule 7 and 11), as well as commissions and bonuses (ATO Schedule 5). When generating an individual payslip, make sure to proceed with the following steps: 
 
-.. image:: australia/pay_7.png
+.. image:: australia/PAY_7.png
    :align: center
 
 #. Select an employee. Their contract will be filled out automatically.
@@ -851,18 +914,18 @@ No matter the way payslips are created (individually or via a batch), the same f
 
 Depending on the way work entries are created for this employee (see the contract section above for more information), the “Worked Days” table will automatically show the number of days and hours the employee has worked during the payslip period, next to the corresponding total gross amount. Note that there will be one line per work entry type, which means that paid and unpaid time off, in addition to custom hourly penalty rates (overtime, public holidays…) will be added to the table automatically.
 
-.. image:: australia/pay_8.png
+.. image:: australia/PAY_8.png
    :align: center
 
 Under the worked days table, the payroll user can make sure of the “Other Inputs” table for both allowances and extra pay items.
 
 
-.. image:: australia/pay_9.png
+.. image:: australia/PAY_9.png
    :align: center
 
 a. Allowances. To incorporate various types of allowances into an employee's payslip, begin by creating them in Payroll ‣ Configuration ‣ Other Input Types. Once the other input type is created (e.g. Laundry), make sure to tick the “Is an Allowance” checkbox.
 
-.. image:: australia/pay_10.png
+.. image:: australia/PAY_10.png
    :align: center
 
 
@@ -871,12 +934,12 @@ a. Allowances. To incorporate various types of allowances into an employee's pay
 
 b. Extra pay items. Unlike allowances, extra pay items are other inputs that add to the payslip’s gross and as such, to the withholding amount. A good example lies in regular sales commissions which are taxed at the same rate as the normal salary (unlike discretionary bonuses which fall under the ATO’s Schedule 5 and its corresponding salary structure). To configure such a custom pay item, go to Payroll ‣ Configuration ‣ Other Input Types and create a new entry with the code “EXTRA” as shown in the screenshot below.
 
-.. image:: australia/pay_11.png
+.. image:: australia/PAY_11.png
    :align: center
 
 On the tab “Salary Computation”, the payroll user can verify whether all the pay rules have been computed correctly as per employee, contract and salary structure. Here are a few guidelines to better understand the data.
 
-.. image:: australia/pay_24.png
+.. image:: australia/PAY_24.png
    :align: center
 
 #. Basic salary: amount from which tax-deductible lines can be subtracted
@@ -896,10 +959,10 @@ After a batch or a payslip’s journal entry has been posted, the company can pr
 
 1. Pay the employee in batch via ABA file. This is only possible from the payslip batch level. Please note however that it is always possible to include an individual payslip into an existing batch and as such, include it in an ABA file. To generate the ABA file, make sure that the batch’s journal entry has been posted. From the batch form view, click on “Create ABA File” and choose the desired bank journal. The newly generated ABA file will be available for download in the field “ABA File”. It is possible to re-generate the ABA file after applying corrections to existing payslips.
 
-.. image:: australia/pay_13.png
+.. image:: australia/PAY_13.png
    :align: center
 
-.. image:: australia/pay_14.png
+.. image:: australia/PAY_14.png
    :align: center
 
 .. important::
@@ -909,7 +972,7 @@ After a batch or a payslip’s journal entry has been posted, the company can pr
 2. Pay the employee using the “Register Payment” feature. On the individual payslip level, once the payslip's journal entry has been posted, click on the button “Register Payment”. The same process as paying for vendor bills, select the desired bank journal and payment method, then reconcile  the payment later with the corresponding bank statements.
 
 
-.. image:: australia/pay_15.png
+.. image:: australia/PAY_15.png
    :align: center
 
 One-time payments
@@ -922,7 +985,7 @@ Return to work payments
 
 A return to work payment is a payment made to an employee to resume working. To process one in Odoo, create an individual payslip, select the employee and modify its regular structure to “Australia: return to work”. Then, simply add the gross amount of that payment in the “Other Inputs” table and compute the payslip.
 
-.. image:: australia/pay_16.png
+.. image:: australia/PAY_16.png
    :align: center
 
 
@@ -940,34 +1003,34 @@ Before proceeding with the employee’s ETP, make sure that a “Contract End Da
 
 First, create the final salary for that employee this month. To do so, create an individual payslip. If the contract end date is set correctly, Odoo will automatically compute the prorated salary up to the final payslip date.
 
-.. image:: australia/pay_17.png
+.. image:: australia/PAY_17.png
    :align: center
 
 
 We recommend creating a batch on the fly for that payslip, in which we will add the ETP as a second payslip of that same batch.
 
-.. image:: australia/pay_18.png
+.. image:: australia/PAY_18.png
    :align: center
 
 Create a second individual payslip and include it in the same batch. Change the salary structure on that payslip to “Australia: Termination Payments”. Before computing the sheet, it is important to provide the payslip with details of the termination.
 
-.. image:: australia/pay_19.png
+.. image:: australia/PAY_19.png
    :align: center
 
 - Genuine or non-genuine redundancy. This choice will have an impact on the amounts and caps defined per ETP type.
 - ETP types. First, see the full list of termination payment types in “Other Input Types” by filtering by “ETP Type is Set”.
 
-.. image:: australia/pay_20.png
+.. image:: australia/PAY_20.png
    :align: center
 
 Add the relevant ETP type in the “Other Inputs” table of the payslip, then compute the payslip. For example:
 
-.. image:: australia/pay_21.png
+.. image:: australia/PAY_21.png
    :align: center
 
 Odoo will automatically compute the gross ETP, the withholding, the unused leaves and the net salary according to the rules defined on the ETP, the employee and their contract.
 
-.. image:: australia/pay_22.png
+.. image:: australia/PAY_22.png
    :align: center
 
 Once payment for both payslips is ready to be processed, an ABA file can be created directly from the batch.
