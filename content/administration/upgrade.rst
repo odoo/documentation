@@ -43,7 +43,7 @@ An upgrade does not cover:
    modules is available for the target version of Odoo. For customers maintaining their own custom
    modules, we recommend to parallelize the process by :ref:`requesting an upgraded database
    <upgrade/request-test-database>` while also :doc:`upgrading the source code of your custom
-   modules </developer/howtos/upgrading_customized_database>`.
+   modules </developer/howtos/upgrade_custom_db>`.
 .. TODOUPG : once the page for developers is published, uncomment and link
 .. :doc:`first upgrade its source code </developer/reference/upgrade>`
 
@@ -55,7 +55,7 @@ Upgrading in a nutshell
    <upgrade/request-test-database>`).
 
 #. If applicable : upgrade the source code of your custom module to be compatible with the new
-   version of Odoo (see :doc:`/developer/howtos/upgrading_customized_database`).
+   version of Odoo (see :doc:`/developer/howtos/upgrade_custom_db`).
 
 #. Thoroughly test the upgraded database (see :ref:`testing the new version of the database
    <upgrade/test_your_db>`).
@@ -136,18 +136,17 @@ project <https://odoo.sh/project>`_.
       file of the upgrade process can be found in your newly upgraded staging build by going to
       :file:`~/logs/upgrade.log`.
 
-      .. note::
+      .. important::
          In databases where custom modules are installed, their source code
          must be up-to-date with the target version of Odoo before the upgrade
          can be performed. If there are none, the "update on commit" mode is
          skipped, the upgraded database is built as soon as it is transferred from the upgrade
          platform, and the upgrade mode is exited.
 
-         .. TODOUPG : once the page for developers is published, uncomment
-         .. Check out the :doc:`upgrade for developers'
-         .. documentation </developer/reference/upgrade>` for more information. In
-         .. addition, if a module is not needed after an upgrade, :ref:`you can
-         .. remove customizations <upgrade/remove_customizations>`.
+         Check out the :ref:`upgrade for developers'
+         documentation <upgrade/upgrade_custom_db>` for more information. In
+         addition, if a module is not needed after an upgrade, :ref:`you can
+         remove customizations <upgrade/remove_customizations>`.
 
    .. group-tab:: On-premise
 
@@ -166,6 +165,18 @@ project <https://odoo.sh/project>`_.
 
       An upgraded test database can also be requested via the `Upgrade page
       <https://upgrade.odoo.com/>`_.
+
+      .. important::
+         In databases where custom modules are installed, their source code
+         must be up-to-date with the target version of Odoo before the upgrade
+         can be performed. If there are none, the "update on commit" mode is
+         skipped, the upgraded database is built as soon as it is transferred from the upgrade
+         platform, and the upgrade mode is exited.
+
+         Check out the :ref:`upgrade for developers'
+         documentation <upgrade/upgrade_custom_db>` for more information. In
+         addition, if a module is not needed after an upgrade, :ref:`you can
+         remove customizations <upgrade/remove_customizations>`.
 
       .. note::
          - For security reasons, only the person who submitted the upgrade request can download it.
@@ -338,8 +349,7 @@ exceptions.
       The update of your custom modules must be successful to complete the entire upgrade process.
       Make sure the status of your staging upgrade is :guilabel:`successful` before trying it in
       production.
-   .. TODOUPG : once the page for developers is published, uncomment
-   .. More information on how to upgrade your custom modules can be found in the :ref:`upgrading customizations documentation <upgrade/upgrading_customizations>`.
+      More information on how to upgrade your custom modules can be found in the :doc:`<upgrade/upgrade_custom_db>`.
 
    .. group-tab:: On-premise
 
