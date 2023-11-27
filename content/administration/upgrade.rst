@@ -44,8 +44,6 @@ An upgrade does not cover:
    modules, we recommend to parallelize the process by :ref:`requesting an upgraded database
    <upgrade/request-test-database>` while also :doc:`upgrading the source code of your custom
    modules </developer/howtos/upgrade_custom_db>`.
-.. TODOUPG : once the page for developers is published, uncomment and link
-.. :doc:`first upgrade its source code </developer/reference/upgrade>`
 
 
 Upgrading in a nutshell
@@ -143,9 +141,8 @@ project <https://odoo.sh/project>`_.
          skipped, the upgraded database is built as soon as it is transferred from the upgrade
          platform, and the upgrade mode is exited.
 
-         Check out the :ref:`upgrade for developers'
-         documentation <upgrade/upgrade_custom_db>` for more information. In
-         addition, if a module is not needed after an upgrade, :ref:`you can
+         Check out the :ref:`upgrading a customized database <upgrade/upgrade_custom_db>` page for
+         more information. In addition, if a module is not needed after an upgrade, :ref:`you can
          remove customizations <upgrade/remove_customizations>`.
 
    .. group-tab:: On-premise
@@ -173,9 +170,8 @@ project <https://odoo.sh/project>`_.
          skipped, the upgraded database is built as soon as it is transferred from the upgrade
          platform, and the upgrade mode is exited.
 
-         Check out the :ref:`upgrade for developers'
-         documentation <upgrade/upgrade_custom_db>` for more information. In
-         addition, if a module is not needed after an upgrade, :ref:`you can
+         Check out the :ref:`upgrading a customized database <upgrade/upgrade_custom_db>` page for
+         more information. In addition, if a module is not needed after an upgrade, :ref:`you can
          remove customizations <upgrade/remove_customizations>`.
 
       .. note::
@@ -302,8 +298,8 @@ the upgrade at a time when the use of the database is minimal.
 
 As the standard upgrade scripts and your database are constantly evolving, it is also recommended
 to frequently request another upgraded test database to ensure that the upgrade process is
-still successful, especially if it takes a long time to finish. Fully rehearsing the upgrade
-process the day before upgrading the production database is also recommended.
+still successful, especially if it takes a long time to finish. **Fully rehearsing the upgrade
+process the day before upgrading the production database is also recommended.**
 
 .. important::
    - Going into production without first testing may lead to:
@@ -349,7 +345,7 @@ exceptions.
       The update of your custom modules must be successful to complete the entire upgrade process.
       Make sure the status of your staging upgrade is :guilabel:`successful` before trying it in
       production.
-      More information on how to upgrade your custom modules can be found in the :doc:`<upgrade/upgrade_custom_db>`.
+      More information on how to upgrade your custom modules can be found on page :ref:`<upgrade/upgrade_custom_db>`.
 
    .. group-tab:: On-premise
 

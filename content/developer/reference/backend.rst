@@ -17,3 +17,4 @@ Python framework
     backend/testing
     backend/http
     backend/mixins
+    backend/migration_scripts
