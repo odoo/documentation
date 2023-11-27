@@ -84,7 +84,7 @@ using `remove_field`, `remove_model`, `remove_view`, etc., from the
 .. warning::
    Don't forget that fields, models, and views can still be referenced in other records such as
    automated and server actions, mail templates, filters, etc. . Those references must be found
-   and removed from the database, preferably in the same migration script.
+   and removed from the database, preferably in the same :ref:`migration script <upgrade/migration-scripts>`.
 
 .. important::
    :ref:`Testing your database <upgrade/test_your_db>` is crucial, especially when removing
@@ -176,7 +176,7 @@ from the old field must be migrated to the new one. This can be done via a :ref:
 `upgrade-util package <https://github.com/odoo/upgrade-util/blob/220114f217f8643f5c28b681fe1a7e2c21449a03/src/util/fields.py#L336>`__.
 However, this only renames the field and column names. Therefore, custom views, reports, field
 relations, automated actions, etc., might still refer to the old field name and need to be
-updated in the migration script as well.
+updated in the :ref:`migration script <upgrade/migration-scripts>` as well.
 
 This is why it is crucial to do another :ref:`round of testing <upgrade/test_your_db>` to ensure
 that no data has been lost due to the upgrade of your custom modules.
