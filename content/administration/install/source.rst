@@ -144,7 +144,7 @@ Odoo requires **Python 3.10** or later to run.
       to download and install Python 3 if needed.
 
 .. note::
-   If Python 3 is already installed, make sure that the version is 3.7 or above, as previous
+   If Python 3 is already installed, make sure that the version is 3.7 Up to 15.0, as previous
    versions are not compatible with Odoo.
 
    .. tabs::
@@ -198,7 +198,7 @@ Odoo uses PostgreSQL as its database management system.
 
    .. group-tab:: Linux
 
-      Use a package manager to download and install PostgreSQL (supported versions: 12.0 or above).
+      Use a package manager to download and install PostgreSQL (supported versions: 12.0 Up to 15.0).
       It can be achieved by executing the following:
 
       .. code-block:: console
@@ -208,12 +208,12 @@ Odoo uses PostgreSQL as its database management system.
    .. group-tab:: Windows
 
       `Download PostgreSQL <https://www.postgresql.org/download/windows>`_ (supported versions: 12.0
-      or above) and install it.
+      Up to 15.0) and install it.
 
    .. group-tab:: Mac OS
 
       Use `Postgres.app <https://postgresapp.com>`_ to download and install PostgreSQL (supported
-      version: 12.0 or above).
+      version: 12.0 Up to 15.0).
 
       .. tip::
          To make the command line tools bundled with Postgres.app available, make sure to set up the
