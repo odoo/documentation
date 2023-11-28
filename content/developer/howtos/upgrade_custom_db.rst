@@ -180,3 +180,14 @@ updated in the :ref:`migration script <upgrade/migration-scripts>` as well.
 
 This is why it is crucial to do another :ref:`round of testing <upgrade/test_your_db>` to ensure
 that no data has been lost due to the upgrade of your custom modules.
+
+Rehearsal, testing, and production upgrade
+==========================================
+
+At this stage, we recommend to do a rehearsal upgrade on a copy of your production database to
+ensure that the upgrade process is still working as expected, especially if you haven't done an
+upgrade request in a while.
+
+Once you are confident that upgrading your database will not cause any issue, you can proceed with
+the upgrade of your production database by following the process described on the
+:doc:`/administration/upgrade` page.
