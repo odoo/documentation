@@ -236,3 +236,4 @@ the material has been shipped to the customer.
    customer_invoices/electronic_invoicing
    customer_invoices/snailmail
    customer_invoices/epc_qr_code
+   customer_invoices/incoterms
