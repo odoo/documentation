@@ -17,6 +17,9 @@ collects data on:
    legislation <http://data.europa.eu/eli/reg/2019/2152/2022-01-01>`_, preferring instead
    *intra-Union trade in goods statistics*.
 
+.. seealso::
+   :doc:`../customer_invoices/incoterms`
+
 .. _intrastat/general-configuration:
 
 General configuration
