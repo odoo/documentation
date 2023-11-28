@@ -108,13 +108,8 @@ invoices and bills by email or post.
 Configuration
 -------------
 
-First, :ref:`install <general/install>` the :guilabel:`Peppol` module (`account_peppol`).
-
-.. image:: electronic_invoicing/peppol-module.png
-   :alt: Peppol module install
-
-Then, go to :menuselection:`Accounting --> Configuration --> Settings`, tick the
-:guilabel:`Use PEPPOL Invoicing`, and fill in the following information:
+First go to :menuselection:`Accounting --> Configuration --> Settings`, tick the
+:guilabel:`Enable PEPPOL`, and fill in the following information:
 
 - `PEPPOL EAS <https://ec.europa.eu/digital-building-blocks/wikis/display/DIGITAL/Code+lists/>`_
 - :guilabel:`Peppol Endpoint`
@@ -124,7 +119,7 @@ Then, go to :menuselection:`Accounting --> Configuration --> Settings`, tick the
 If you are migrating from another access point, insert the :guilabel:`Migration key` from
 the previous provider.
 
-.. image:: electronic_invoicing/peppol-settings.png
+.. image:: electronic_invoicing/peppol-info.png
    :alt: Configuration for peppol
 
 Finally, click on :guilabel:`Validate registration`.
