@@ -79,7 +79,7 @@ To know whether a customer usually pays late or not, you can set a trust level b
 :guilabel:`Good Debtor`, :guilabel:`Normal Debtor`, or :guilabel:`Bad Debtor` on their follow-up
 report. To do so, click on the bullet next to the customer's name and select a trust level.
 
-.. image:: follow_up/debtors-trust-level.png
+.. image:: follow_up/debtor-level.png
     :alt: Set debtor's trust level
 
 Send reminders in batches
