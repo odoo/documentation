@@ -25,7 +25,6 @@ window, select the :guilabel:`Journal` linked to your bank account and :guilabel
 the :guilabel:`Payment Method`, and click :guilabel:`Create Payment`.
 
 .. image:: batch/batch-payments.png
-   :align: center
    :alt: Registering a customer payment as part of a batch deposit
 
 Add payments to a batch deposit
@@ -36,14 +35,12 @@ Payments`, and click :guilabel:`New`. Next, select the :guilabel:`Bank` and choo
 Deposit` as the :guilabel:`Payment Method`.
 
 .. image:: batch/batch-customer-payment.png
-   :align: center
    :alt: Filling out a new inbound batch payment form
 
 Click :guilabel:`Add a line`. In the pop-up window, tick all payments to include in the batch
 deposit, then click :guilabel:`Select`.
 
 .. image:: batch/batch-lines-selection.png
-   :align: center
    :alt: Selecting all payments to include in the batch deposit
 
 Once done, click :guilabel:`Validate` to finalize the batch deposit.
@@ -60,7 +57,6 @@ Items` on the related bank account. Go to the :guilabel:`Batch Payments` tab to 
 batch and click :guilabel:`Validate` to finalize the process.
 
 .. image:: batch/batch-reconciliation.png
-   :align: center
    :alt: Reconciling the batch payment with all its transactions
 
 .. note::
