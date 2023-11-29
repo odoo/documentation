@@ -1,4 +1,4 @@
-git:show-content:
+:show-content:
 
 =====
 Pages
