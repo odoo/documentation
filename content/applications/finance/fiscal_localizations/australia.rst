@@ -2,11 +2,9 @@
 Australia
 =========
 
-.. image:: australia/Title_image.png
-   :align: center
+.. _australia/configuration:
 
-
-Modules: (Daju)
+Configuration:
 ========================
 
 .. list-table::
@@ -16,42 +14,47 @@ Modules: (Daju)
    * - Module Name
      - Module Key
      - Description
-   * - Australia - Accounting
-     - l10n_au
-     - Australian accounting basic charts of accounts and localisations. Automatically installed when selecting the Australian fiscal position from Accounting -> Configuration -> Fiscal position.
-   * - Australian Reports - Accounting
-     - l10n_au_reports
-     - Provides Taxable Payments Annual Reports (TPAR) for Australia. It's automatically installed with the Australian fiscal position. Covers payments to contractors and grants paid by government entities under TPRS and the Taxable Government Grants and Payments reporting measure.
-   * - Australia - Payroll
-     - l10n_au_hr_payroll
-     - Installing this module installs all other AU modules: accounting, ABA, AU reports - accounting, AU - payroll.
-   * - Australia - Payroll with Accounting
-     - l10n_au_hr_payroll_account
-     - Includes all AU modules: accounting, ABA, AU reports - accounting, AU - payroll.
-   * - Accounting Customer Statements
-     - l10n_account_customer_statements
-     - Auto-installed for users in Australia and New Zealand as it is customary there.
-   * - Employment Hero Australian Payroll
-     - l10n_au_keypay
-     - Integrates Employment Hero Payroll. Synchronizes pay run journals from Employment Hero to Odoo.
+   * - :guilabel:`Australia - Accounting``
+     - `l10n_au`
+     - Australian accounting basic charts of accounts and localizations. If Australia is selected as a fiscal package in :menuselection:`Accounting -> Configuration -> Fiscal Localization`, this module will be installed automatically. This module will also install the :guilabel:`ABA credit transfer` module and the :guilabel:`Remittance Advice report`.
+   * - :guilabel:`Australian Reports - Accounting`
+     - `l10n_au_reports`
+     - Once :guilabel:`Australia` is selected as a localization package for a company, this module will be installed automatically as well. This includes the :guilabel:`Taxable Payments Annual Reports (TPAR)` and the :guilabel:`BAS report`.
+   * - :guilabel:`Australia - Payroll`
+     - `l10n_au_hr_payroll`
+     - Payroll localization for Australia.
+   * - :guilabel:`Australia - Payroll with Accounting`
+     - `l10n_au_hr_payroll_account`
+     - Instals the link between Australian payroll and accounting. Installing this module will also install all other Australian modules: :guilabel:`Australian - Accounting`; :guilabel:`Australian Reports - Accounting`; :guilabel:`Australia - Payroll`.
+   * - :guilabel:`Accounting Customer Statements`
+     - `l10n_account_customer_statements`
+     - Allows the management and sending of monthly customer statements in the partner ledger and from the contact form. Commonly used in Australia and New Zealand.
+   * - :guilabel:`Employment Hero Australian Payroll`
+     - `l10n_au_keypay`
+     - Employment Hero Payroll Integration. This module will synchronise all pay runs from Employment Hero with Odoo’s journal entries.
 
 
- 
-COA: (Dymo)
+.. _australia/coa:
+
+COA:
 ========================
 
-The Australian chart of accounts is included in the Australian - Accounting module. Go to Accounting ‣ Configuration ‣ Accounting: Chart of Accounts to access it.
+The Australian chart of accounts is included in the Australian - Accounting module. Go to :menuselection:`Accounting --> Configuration --> Accounting: Chart of Accounts`. to access it.
+
+.. seealso::
+   :doc:`../accounting/get_started/chart_of_accounts`
 
 
-Taxes (DAJU)
+.. _australia/taxes:
+
+Taxes & GST
 ========================
 
-The default Australian taxes are automatically generated upon installation of the **Australia - Accounting (l10n_au)** which is installed automatically for Australian databases.
+The default Australian taxes are automatically installed upon installation of the **Australia - Accounting (l10n_au)** which is installed automatically in Australian databases.
 
-These taxes impact the BAS Report, which can be accessed through
-``Accounting ‣ Reporting ‣ BAS Report``.
+These taxes impact the :guilabel:`BAS Report`, which can be accessed through :menuselection:`Accounting --> Reporting --> BAS Report`.
 
-.. _Link to BAS - TAX report:
+:ref:`BAS Report <australia/bas>`
 
 In Australia, the standard Goods and Services Tax (GST) rate is 10%, but there are different rates and exemptions for specific categories of goods and services. 
 
@@ -59,9 +62,9 @@ In Australia, the standard Goods and Services Tax (GST) rate is 10%, but there a
    :align: center
 
 
-Tax Name
+Tax Mapping
 -----------------------
-The tax name will be utilised across multiple Odoo databases. Within the Australian localisation package, tax names encompass the tax rate as an integral part of their naming convention.
+Each tax in Odoo has a short name and a description. Within the Australian localisation package, tax names encompass the tax rate as an integral part of their naming convention.
 
 Despite the high amount of taxes in Odoo, these taxes are pretty similar (mostly 0% and 10%), with different tax grid variations for:
 
@@ -69,14 +72,19 @@ Despite the high amount of taxes in Odoo, these taxes are pretty similar (mostly
 - Services
 - TPAR
 - TPAR without ABN
+  
+.. seealso::
+  - :doc:`Taxes <../accounting/taxes>`
 
-There are two primary tax categories: Purchase and Sales. These taxes are further categorised based on whether their tax scope is Services.
 
-Businesses need to report payments made to subcontractors from relevant services during the financial year. Odoo uses TPAR as a fiscal position to report these payments on the TPAR Report. Moreover, “TPAR without ABN” is used to record amounts withheld from subcontractors without an ABN for the ATO. 
+The taxes that include a TPAR mention will not only impact the BAS report, but also the TPAR report. Businesses from certain industries need to report payments made to subcontractors from relevant services during the financial year. Odoo combines the use of taxes and fiscal positions to report these payments on the TPAR Report. Taxes with the mention “TPAR without ABN” are used to record amounts withheld from subcontractors without an ABN for the ATO. 
 
-.. _Link to T-PAR Report:
 
-Here is the taxes for Australia in v17.
+.. seealso::
+   :ref:`TPAR <australia/tpar>`
+
+Here are the taxes for Australia in Odoo 17.
+
 
 .. list-table::
    :widths: 10 30 10 10
@@ -225,56 +233,74 @@ Here is the taxes for Australia in v17.
 
 
 
+.. _australia/bas:
 
-
-BAS - TAX report (DAJU)
+BAS Report
 ========================
 
-The Business Activity Statement (BAS) report is a critical tax reporting requirement for businesses registered for Goods and Services Tax (GST) in Australia. The BAS is used to report and remit various taxes to the Australian Taxation Office (ATO). With Odoo BAS feature, businesses can report on the following:
+The Business Activity Statement (BAS) report is a critical tax reporting requirement for businesses registered for Goods and Services Tax (GST) in Australia. The BAS is used to report and remit various taxes to the Australian Taxation Office (ATO). With the Odoo BAS feature, businesses can report on the following:
+
 - Goods and Services Tax (GST) 
 - PAYG tax withheld
 
-The taxes for GST are collected from the Tax Grid, which is pre-configured in the system. The Tax Grid can also be manually set up for any additional special GST. Once the tax for each account is set up, the system automatically slots journal items into the correct tax category. This ensures that the BAS report generated is accurate and reflective of the business's financial activities. 
+.. image:: australia/bas_e1.png
+   :align: center
+
+The taxes for GST are collected from the Tax Grid, which is pre-configured in the system. The Tax Grid can also be manually set up for any additional special GST. Once the tax for each account is set up, the system automatically slots journal items into the correct tax category. This ensures that the BAS report is accurate and reflective of the business's financial activities. 
 
 .. image:: australia/BAS_2.png
    :align: center
 
-In addition, the BAS report includes the PAYG tax withheld components covering from W1 to W5 This integration ensures that all payroll-related withholding taxes are accurately captured and reflected within the report.
 
-Within the Australian  Payroll, there are specific configurations for W1 to W5. 
-Moreover, the module  incorporates in-built rules that facilitate the automatic calculation of taxes for types W1 to W5. For a detailed walkthrough and more information on the calculation process for these taxes, please refer to the Payroll app documentation.
+In addition, the BAS report includes the PAYG tax withheld components (W1 to W5, then summary section 4). This integration ensures that all payroll-related withholding taxes are accurately captured and reflected within the report.
 
-.. _Link to Payroll:
-
-.. image:: australia/BAS_3.png
+.. image:: australia/bas_e2.png
    :align: center
 
+The module incorporates in-built rules that facilitate the automatic calculation of taxes for types W1 to W5. For a detailed walkthrough and more information on the calculation process for these taxes, please refer to the Payroll app documentation.
 
-When it's time to file the tax return with the ATO, select "Close entry”. The tax return period can be configured in configuration -> Tax Return Periodicity. Also, the start date of the tax return can be defined in Fiscal Periods.
 
-Odoo uses calendar quarter rather than the Australian FY quarter which means July to September is Q3 in Odoo.
+.. seealso::
+   :ref:`Payroll <australia/payroll>`
 
-When closing the entry for the first time, the GST payable account and GST receivable account need to be set. A notification from odoo pops up and asks for configuration.
+
+Closing the BAS report
+-------------------------
+
+When it's time to file the tax return with the ATO, select "Close entry”. The tax return period can be configured in :menuselection:`configuration --> Settings --> Tax Return Periodicity`. Also, the start date of the tax return can be defined in Fiscal Periods.
+
+# Add a see also: closing fiscal year
+
+.. note::
+   Odoo uses the calendar quarter rather than the Australian FY quarter which means July to September is Q3 in Odoo.
+
+Before closing the entry for the first time, the default GST payable account and GST receivable account need to be set. A notification pops up and redirects the user to tax group configurations.
 
 .. image:: australia/BAS_4.png
    :align: center
 
-Once the GST payable account and GST receivable account are set up, the BAS report generates updated Journal entries that consolidate all the  tax to the GST clearing account (same as BAS payments in the image)
+Once the GST payable account and GST receivable account are set up, the BAS report generates an accurate journal closing entry automatically which balances out the GST balance with the GST clearing account (e.g. see “BAS payments” in the image below).
 
 .. image:: australia/BAS_5.png
    :align: center
 
-Following this set up the Tax group and consolidate all tax receivable and payable amounts into the tax clearing account. Subsequently, Odoo will create a Journal Entry reflecting the amount of GST we are required to pay to or receive from the ATO.
+The balance between GST receivable and payable is now set against the tax clearing account defined on the tax group. The amount to be paid to or received from the ATO can now be reconciled against a bank statement.
 
 .. image:: australia/BAS_6.png
    :align: center
 
 
+.. important::
+   In Odoo 17, the BAS report won’t be directly lodged to the ATO at the click of a button. Odoo helps you automatically compute the necessary values in each section, with the possibility to audit them to better understand the history behind these numbers. Businesses can copy these values and enter them on the `ATO’s portal <https://www.ato.gov.au/newsrooms/small-business-newsroom/lodging-your-next-bas>`_. We are currently working hard to give businesses the possibility to lodge their BAS report directly from Odoo to the ATO.
+
+
+.. _australia/tpar:
+
 TPAR Report (PERO)
 ========================
 
-Odoo allows businesses to report payments made to contractors or subcontractors during the financial year. This is done by generating a TPAR (Taxable Payments Annual Report). If you are not sure that your business needs this report, refer to the documentation provided by the ATO. 
-You can find this report in Accounting ‣ Reporting: 
+Odoo allows businesses to report payments made to contractors or subcontractors during the financial year. This is done by generating a TPAR (Taxable Payments Annual Report). If you are not sure that your business needs this report, refer to the documentation provided by the `ATO <https://www.ato.gov.au/businesses-and-organisations/preparing-lodging-and-paying/reports-and-returns/taxable-payments-annual-report>`_. 
+You can find this report in :menuselection:`Accounting ‣ Reporting`: 
 
 .. image:: australia/TPAR_1.png
    :align: center
@@ -309,6 +335,8 @@ File types that can be exported from Odoo:
 - XLSX 
 
 
+.. _australia/custstate:
+
 Customer Statements (Dymo)
 ================================================
 
@@ -333,6 +361,9 @@ Changing the dates of the customer statements can be done by going to  Accountin
 .. image:: australia/CUSTSTATE_4.png
    :align: center
 
+
+.. _australia/remittance:
+
 Remittance Advice (Dymo)
 ================================================
 
@@ -341,11 +372,15 @@ Remittance Advice can be accessed by going to Accounting ‣ Vendors ‣ Payment
 .. image:: australia/REMITENCE_1.png
    :align: center
 
+.. _australia/peppol:
+
 E-Invoicing via Peppol (Dymo)
 ================================================
 Odoo is compliant for Australia and New Zealand, refer to here to learn more about AU-NZ Peppol format. 
+
 .. _Link to Payroll:
 
+.. _australia/starshipit:
 
 Set up Starshipit shipping services in Odoo (PERO)
 ========================================================================
@@ -515,6 +550,8 @@ Cancellations can be done in the “Additional Info” tab, by clicking on the �
 This will archive the shipment in Starshipit. However, the cancellation and refund has to be processed with the carrier as well if the order was already printed. 
 
 
+.. _australia/aba:
+
 ABA Files (DAJU)
 ========================
 
@@ -622,6 +659,8 @@ User Case
 #. An ABA transaction line will appear in your bank feed at the next bank feed iteration. You will then need to reconcile it against the batch payment made in Odoo.
 
 
+.. _australia/asiapay:
+
 Online payment solution Asia Pay (DYMO)
 ================================================
 Asia Pay is compatible with Odoo helping businesses to better cater to their customers’ payment preferences. Find out more information about Asia Pay here.
@@ -629,6 +668,8 @@ Asia Pay is compatible with Odoo helping businesses to better cater to their cus
 
 .. Open Banking standards for bank sync (LWI)
 .. ========================
+
+.. _australia/bankstatement:
 
 Export QIF, OFX Import (DAJU)
 ================================================
@@ -666,6 +707,8 @@ Configuration
 .. image:: australia/QRF_3.png
    :align: center
 
+
+.. _australia/pos:
 
 POS terminal → in store payment solution (DAJU) (Stripe)
 ========================================================================
@@ -789,6 +832,8 @@ The PoS terminal shows the value that customers need to pay
 .. image:: australia/POS_20.JPG
    :align: center
 
+
+.. _australia/payroll:
 
 Payroll (LWI)
 ========================
