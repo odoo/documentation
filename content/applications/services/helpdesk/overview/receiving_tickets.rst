@@ -91,7 +91,7 @@ builder's editor window, located under the :guilabel:`Field` section. As well, o
 information can be edited here, such as:
 
 - :guilabel:`Type`: which matches an Odoo model value to the field (e.g. `Customer Name`).
-- :guilabel:`Input Type`: to determine what time of input the field should be, like `Text`, `Email`,
+- :guilabel:`Input Type`: to determine what type of input the field should be, like `Text`, `Email`,
   `Telephone` or `URL`.
 - :guilabel:`Label`: to give the form field a label (e.g. `Full Name`, `Email Address`, etc.). Also
   control the label position on the form by using the nested :guilabel:`Position` options.
