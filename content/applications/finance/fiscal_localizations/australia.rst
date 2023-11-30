@@ -296,7 +296,7 @@ The balance between GST receivable and payable is now set against the tax cleari
 
 .. _australia/tpar:
 
-TPAR Report (PERO)
+TPAR Report
 ========================
 
 Odoo allows businesses to report payments made to contractors or subcontractors during the financial year. This is done by generating a TPAR (Taxable Payments Annual Report). If you are not sure that your business needs this report, refer to the documentation provided by the `ATO <https://www.ato.gov.au/businesses-and-organisations/preparing-lodging-and-paying/reports-and-returns/taxable-payments-annual-report>`_. 
@@ -308,252 +308,95 @@ You can find this report in :menuselection:`Accounting ‣ Reporting`:
 Configuration
 -------------------------
 
-Select Fiscal Position on the Contact form.
+Select a **Fiscal Position** on the Contact form of your contractor.
 
 .. image:: australia/TPAR_2.png
    :align: center
 
-Upon billing a contact with a fiscal position set to “TPAR”  or “TPAR without ABN”, the report will automatically be generated in Accounting ‣ Reporting.
+Upon billing a contact with a fiscal position set to “TPAR”  or “TPAR without ABN”, the report will automatically be generated in :menuselection:`Accounting ‣ Reporting`.
 
 The report includes the ABN, Total GST, Gross Paid and Tax Withheld from their TPAR  subcontractors. 
-- Total GST: total tax paid 
-- Gross Paid amounts will show after registering a payment for those bills. 
-- Tax Withheld will be shown if the subcontractor is registered with Fiscal Position “TPAR without ABN” 
+
+- **Total GST**: total tax paid 
+- **Gross Paid amounts**: will show after registering a payment for those bills. 
+- **Tax Withheld**: will be shown if the subcontractor is registered with Fiscal Position “TPAR without ABN” 
+
+The following image shows an example of an IT company contracting services from other IT-related companies and subcontractors: 
+
+.. image:: australia/TPAR_4.png
+   :align: center
 
 The following image shows an example of an IT company contracting services from other IT-related companies and subcontractors: 
 
 .. image:: australia/TPAR_3.png
    :align: center
 
-.. image:: australia/TPAR_4.png
-   :align: center
-
 
 
 File types that can be exported from Odoo: 
+
 - PDF
 - XLSX 
 
 
 .. _australia/custstate:
 
-Customer Statements (Dymo)
+Customer Statements
 ================================================
 
-Customer statements can be downloaded by going to Apps ‣ Accounting Customer Statements.
-This module allows customers to see their financial transactions as well as overdue statement details. These statements can be sent out to customers by email.
+Customer statements can be downloaded by going to :menuselection:`Apps --> Remove the “Apps” filter --> Accounting Customer Statements`.
+This module allows customers to see their financial transactions with the company over a certain period of time as well as overdue statement details. These statements can be sent out to customers by email.
 
-The customer statements can be found on Customers ‣ Print Customer Statements.
-
-.. image:: australia/CUSTSTATE_1.png
-   :align: center
-
-This will automatically print out the customer statements for the month.
 
 .. image:: australia/CUSTSTATE_2.png
    :align: center
 
-Changing the dates of the customer statements can be done by going to  Accounting ‣ Reporting ‣ Partner Ledger. The Partner ledger creates the ability to select a specific date range for the customer statements. 
+There are two ways to download these statements for customers.
 
-.. image:: australia/CUSTSTATE_3.png
+1. **From the contact form.** The customer statements can be found on :menuselection:`Customers ‣ Print Customer Statements`. This will print out the statement from the beginning of the month to today’s date.
+
+.. image:: australia/CUSTSTATE_1.png
    :align: center
 
-.. image:: australia/CUSTSTATE_4.png
+2. **From the partner ledger.** This option allows for more flexibility in selecting the start and end date for the statement. You can access it by going to :menuselection:`Accounting ‣ Reporting ‣ Partner Ledger`. The Partner ledger creates the ability to select a specific date range for the customer statements.
+
+
+.. image:: australia/CST.png
    :align: center
+
 
 
 .. _australia/remittance:
 
-Remittance Advice (Dymo)
+Remittance Advice
 ================================================
 
-Remittance Advice can be accessed by going to Accounting ‣ Vendors ‣ Payments and printing out the “Payment Receipt”
+A remittance advice is a document used as a proof of payment to a business. In Odoo, it can be accessed by going to :menuselection:`Accounting ‣ Vendors ‣ Payments` and printing out the *Payment Receipt*.
 
 .. image:: australia/REMITENCE_1.png
    :align: center
 
 .. _australia/peppol:
 
-E-Invoicing via Peppol (Dymo)
+E-Invoicing via Peppol
 ================================================
-Odoo is compliant for Australia and New Zealand, refer to here to learn more about AU-NZ Peppol format. 
 
-.. _Link to Payroll:
+Odoo is compliant with the Australia and New Zealand PEPPOL requirements. Refer to the official `PEPPOL <https://peppol.org/learn-more/country-profiles/australia/>_` webpage for more information.
 
-.. _australia/starshipit:
-
-Set up Starshipit shipping services in Odoo (PERO)
-========================================================================
-Starshipit is a shipping service operator that connects companies with many Australasian shipping carriers. Now that Odoo has a native integration with Starshipit, users can create shipping methods that will automatically get rates from specific couriers (such as Australia Post, NZ Post, DHL,...) based on predefined conditions.
-
-Side note: Odoo is also integrated with `EasyPost <https://www.easypost.com/>`_, which provides a connection with different Australasian couriers as well.
-
-Setup in Starshipit
---------------------------------
-
-To get started, go to `Starshipit’s platform <https://starshipit.com/>`_: 
-
-- Create Account
-- Go to Settings
-- Enter your pickup address
-- Connect your desired couriers
-
-.. image:: australia/STARSHIPIT_1.png
+.. image:: australia/Peppol.png
    :align: center
 
 
-Find Starshipit credentials
---------------------------------
-
-In the Starshipit account, navigate to Settings ‣ API in the menu on the left. 
-
-.. image:: australia/STARSHIPIT_2.png
-   :align: center
-
-Any issues or questions pertaining to Starshipit only need to be discussed with Starshipit customer support.
-
-
-
-Setup in Odoo
---------------------------------
-
-
-#. To get started, go to Odoo’s Apps module, search for the Starshipit Shipping integration, and install it.
-
-.. image:: australia/STARSHIPIT_3.png
-   :align: center
-
-#. Once installed, activate the Starshipit Shipping module in Inventory ‣  Configuration ‣  Settings. The Starshipit Connector setting is found under the Shipping Connectors section.
-
-.. image:: australia/STARSHIPIT_4.png
-   :align: center
-
-#. Configure the Warehouse address in Inventory ‣ Warehouses ‣ Address
-
-Example: 
-If your company ships from a warehouse called “WH1”, the Pickup Address used in Starshipit should also be the WH1 address. 
-
-
-#. After activating the Starshipit Connector, go to Inventory ‣ Configuration ‣ Delivery ‣ Shipping Methods or click on the “Starshipit Shipping Methods” link below the listed connector. Once on the Shipping Methods page, click “Create”.
-
-.. image:: australia/STARSHIPIT_5.png
-   :align: center
-
-Important fields:
-
-- Provider: select Starshipit from the drop-down menu.
-- Enter the Starshipit API Key and the Subscription Key under the Starshipit Configuration tab. 
-- Choose a Delivery Product (this will be the product shown in the Sales Order, e.g. “Freight”). Note: this is a mandatory field, without a product, you will not be able to select a Service Code from Starshipit.
-- Add the Service Code of the Product configured in Starshipit. When you select the service for that shipping method, the name of the Shipping method name will automatically change. Available service codes depend on the carriers integrated in your account Starshipit account.  This can be done on the Starshipit account ‣ Settings ‣ Checkout Rates ‣ Courier Configuration. 
-
-.. image:: australia/STARSHIPIT_6.png
-   :align: center
-
-- Manually Save your changes by clicking the cloud icon next to the Shipping Methods / New. 
-- Default Package Type: this option is recommended when dealing with packages with weights. You can activate the configuration “Packages” in order to create a new Package Type for Starshipit:
-
-.. image:: australia/STARSHIPIT_7.png
-   :align: center
-
-.. image:: australia/STARSHIPIT_8.png
-   :align: center
-
-Tip:
-Odoo has a built-in layer of protection against unwanted charges when using test environments. In the test environment, if a shipping method is used to create labels, then those labels are immediately cancelled after the creation and archived in Starshipit — this occurs automatically. However, Starshipit does not allow test courier accounts and depending on each courier, and depending on the courier, the account might be charged for printing label, unless the order is cancellled manually on the couriers’s portal. 
-The test and production environment settings can be toggled back and forth from the Smart Buttons.
-
-
-
-Rate computation
-------------------------------------
-
-When creating a quotation in Odoo, click on “Add shipping”, select a Starshipit shipping product and click on “Get rate”. Contact must have a real and accurate address for the estimation to work.
-
-.. image:: australia/STARSHIPIT_9.png
-   :align: center
-
-.. image:: australia/STARSHIPIT_10.png
-   :align: center
 
 .. important::
-   Verify that the selected weight is supported by the selected shipping method and if this is set, make sure that the destination address is supported by the courier.
-   Also, on the Starshipit Portal, navigate to Settings ‣ Rules and configure them according to your business logic. If a courier is not supported by a rule, Odoo won’t be able to create the order and get the rate.
+   Validating an invoice or credit note for a partner on the PEPPOL network will download a compliant XML file that can be manually uploaded to your PEPPOL network. Odoo is currently an endpoint for multiple countries, and it will be the case for Australia and New Zealand soon.
 
-
-Manage Packages
-------------------------------------
-
-Before validating the transfer, select Put In Pack to add the products to be shipped into a Package Type. You can manage your Package Types on Inventory ‣ Configuration ‣ Delivery ‣ Package Types when you set up Packages.
-
-.. image:: australia/STARSHIPIT_11.png
-   :align: center
-
-Process an order from Odoo to Starshipit
---------------------------------------------------------
-
-After confirming a sale order and its related delivery transfer in Odoo, the order is automatically processed in Starshipit.
-
-Note: 
-In the Shipping Method configurations, if the option “Use Starshipit Sender’s Address” is selected, make sure that the Pickup Address is properly added in Starshipit. Otherwise, the sender's address will be the Company Address in Odoo.
-
-For some couriers, contact details (email & mobile number) also need to be entered and valid, otherwise, Starshipit will not process the order. 
-
-Shipping label documents are automatically generated in the chatter, which includes the following:
-#. Shipping label(s) depending on the number of packages.
-#. Tracking number (will open another tab with the tracking URL) 
-
-.. image:: australia/STARSHIPIT_12.png
-   :align: center
-
-The tracking URL will be available as a Smart Button. If the carrier allows for it, it will redirect the user to the carrier’s website where the tracking status can be found.
-
-In the Starshipit portal, the Order will be shown as Shipped on your Starshipit account if a carrier was selected. If “Plain Label” is selected instead, orders will be shown as Printed. 
-
-Note:
-Contact information, including a mobile number and email address, should be included in the customer's contact form depending on the courier.  
-
-
-
-Returns management
-------------------------------------
-
-Starshipit allows returns with the following carriers: 
-- Australia Post eParcel
-- TNT
-- Couriers Please
-- Aramex
-- StarTrack
-- DHL Express
-- NZ Post Domestic
-
-In the Delivery transfer, click on the Return button.
-
-.. image:: australia/STARSHIPIT_13.png
-   :align: center
-
-Then, in the “Additional Info” tab, check the Carrier field. If it allows for returns, the “Print Return Label” button will be available.
-
-.. image:: australia/STARSHIPIT_14.png
-   :align: center
-
-
-If the carrier does not support returns through Starshipit, Odoo will return the following Error message: "Starshipit does not support return for this carrier. In order to handle the return, please go to the carrier website directly”.
-
-Cancellations/ Refunds
-------------------------------------
-
-Cancellations can be done in the “Additional Info” tab, by clicking on the “Cancel” button next to the Tracking Reference.
-
-.. image:: australia/STARSHIPIT_15.png
-   :align: center
-
-This will archive the shipment in Starshipit. However, the cancellation and refund has to be processed with the carrier as well if the order was already printed. 
 
 
 .. _australia/aba:
 
-ABA Files (DAJU)
-========================
+ABA Files for Batch Payments
+===============================
 
 
 Introduction
@@ -561,84 +404,83 @@ Introduction
 
 An ABA file is a digital file format developed by the Australian Bankers' Association. It is designed for business customers to facilitate bulk payment processing by uploading a single file from their business management software.
 
-The main advantage of using ABA files is to improve efficiency. This is achieved by consolidating numerous payments into one file for batch processing, which can be submitted to banks like CBA and is compatible with various banking portals across Australia, including Airwallex.
+The main advantage of using ABA files is to improve payment and matching efficiency. This is achieved by consolidating numerous payments into one file for batch processing, which can be submitted to all Australian banks. 
 
 Configurations
 ----------------
 
-Configurations in Settings
+Settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Accounting app -> Configuration -> Setting -> Batch Payment -> Allow Batch Payments
+:menuselection:`Accounting app -> Configuration -> Setting -> Batch Payment -> Allow Batch Payments`
 
 .. image:: australia/ABA_1.png
    :align: center
 
 
-Configurations in Bank Journal
+Bank Journal
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Configuration -> Journals -> Select the Bank type Journal
+1. Configuration -> Journals -> Select the Bank type Journal
 
 .. image:: australia/ABA_2.png
    :align: center
 
-#. The account number (ACC) field has to be set. (Type the Account Number and Click Create and Edit)
+2. The account number field has to be set.
 
 .. image:: australia/ABA_3.png
    :align: center
 
-#. Then, put the Account information in this page. Ensure that the Send Money is allowed. (See link to know what is Send Money safety check) Finally, click Save & Close
+3. Then, fill in all account-related information: BSB, account holder name, etc. Ensure that the Send Money is allowed.
 
 .. image:: australia/ABA_4.png
    :align: center
 
 
-#. Configure the bank account related ABA info and the Bank Account Number info
+4. Configure the bank account related ABA information:
 
-- BSB: auto-formatted from Bank account (Can only configure in bank account number info)
-- Financial Institution Code:  the official 3-letter abbreviation of the financial institution (e.g. WBC for Westpac)
-- Supplying User Name: the name of the user or business that is creating the ABA file. The most common value is the business name.
-- APCA Identification Number: 6-digit number provided by your bank. If you’re not sure what this number is, you’ll need to contact your bank. It’s often listed on their website and for some banks such as the ANZ you can provide any 6-digit number (such as 000000)
-- Include Self-Balancing Transactions: selecting this option adds an additional “Self-balancing” transaction to the end of the ABA file which is required by some financial institutions when generating the ABA files (this info should be on the bank’s website).
+- **BSB**: Auto-formatted from the bank account
+- **Financial Institution Code**:  The official 3-letter abbreviation of the financial institution (e.g. WBC for Westpac)
+- **Supplying User Name**: The name of the user or business that is creating the ABA file. The most common value is the business name.
+- **APCA Identification Number**: 6-digit number provided by your bank. If you’re not sure what this number is, you’ll need to contact your bank. It’s often listed on their website and for some banks such as the ANZ you can provide any 6-digit number (such as 000000)
+- **Include Self-Balancing Transactions**: Selecting this option adds an additional “Self-balancing” transaction to the end of the ABA file which is required by some financial institutions when generating the ABA files (this info should be on the bank’s website).
 
 .. image:: australia/ABA_5.png
    :align: center
 
-#. Click outgoing payments -> keep a payment option with the value “ABA Credit Transfer”
+5. Navigate to the :menuselection:`Outgoing Payments ‣ add a payment method` with the value *ABA Credit Transfer*
 
 .. image:: australia/ABA_6.png
    :align: center
 
-Config partners’ bank accounts
+Partners’ bank accounts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Go to Contact -> Accounting -> Configure the Bank Accounts
+1. Go to :menuselection:`Contact ‣ Accounting tab ‣ Configure the Bank Accounts`
 
 .. image:: australia/ABA_7.png
    :align: center
 
 
-#. Account numbers (ACC), BSB, Account holder name, and Send Money are mandatory. Send Money: will set the bank account from “untrusted” to “trusted”. It is important for ABA files.
+2. Set up a bank account, BSB, account holder name, and make sure that the Send Money option is set. This last option will define the bank account as “trusted”, which is important for ABA files.
 
 .. image:: australia/ABA_8.png
    :align: center
 
 
-User Case
-----------------
+Generate an ABA file
+----------------------
 
-#. Create a vendor bill (manually or from a purchase order). Confirm it.
+First, create a vendor bill (manually or from a purchase order). Confirm it. Make sure that the vendor’s banking information has been set up properly before registering a payment.
 
-#. Check vendor information before registering a payment: is the partner’s bank account properly set up?
+On the *Register Payment* window, select the right journal, then the *ABA Credit Transfer* payment method. Finally, choose the right partner bank account.
 
-#. On the “Register Payment” window, select the right journal, then the “ABA Credit Transfer” payment method. Finally, choose the right partner bank account.
 
 .. image:: australia/ABA_9.png
    :align: center
 
 
-#.  After payment(s) are confirmed, they will show up in the payments list (Accounting > Vendors > Payments). Filter the ones to be included in a batch > Select > Create batch.
+#.  After payment(s) are confirmed, they show up in the payments list (:menuselection:`Accounting --> Vendors --> Payments`). Filter the ones to be included in a :menuselection:`batch > Select > Create batch`.
 
 .. image:: australia/ABA_10.png
    :align: center
@@ -649,193 +491,49 @@ User Case
 .. image:: australia/ABA_12.png
    :align: center
 
-#. Download the ABA file from the chatter.
+
+Once the batch is validated, the ABA file becomes available in the chatter.
+
 
 .. image:: australia/ABA_13.png
    :align: center
 
-#. Upload it to your bank’s portal
+After uploading it to your bank’s portal, an ABA transaction line will appear in your bank feed at the next bank feed iteration. You will then need to reconcile it against the batch payment made in Odoo.
 
-#. An ABA transaction line will appear in your bank feed at the next bank feed iteration. You will then need to reconcile it against the batch payment made in Odoo.
-
-
-.. _australia/asiapay:
-
-Online payment solution Asia Pay (DYMO)
-================================================
-Asia Pay is compatible with Odoo helping businesses to better cater to their customers’ payment preferences. Find out more information about Asia Pay here.
+.. seealso:: 
+   `Batch Payment <https://www.odoo.com/documentation/17.0/applications/finance/accounting/payments/batch.html>`_
 
 
-.. Open Banking standards for bank sync (LWI)
-.. ========================
+.. _australia/buynow_paylater:
 
-.. _australia/bankstatement:
-
-Export QIF, OFX Import (DAJU)
-================================================
-
-Import OFX statement files
---------------------------------
-Open Financial Exchange (OFX) is a unified specification for the electronic exchange of financial data between financial institutions, businesses and consumers via the Internet.
-
-With Odoo, you can download an OFX file from your bank or accounting software and import it directly into your Odoo instance. This will create all bank statements.
-
-
-Import QIF statement files
---------------------------------
-Quicken Interchange Format (QIF) is an open specification for reading and writing financial data to media (i.e. files). Although still widely used, QIF is an older format than Open Financial Exchange (OFX) and you should use the OFX version if you can export to both file formats.
-
-With Odoo, you can download a QIF file from your bank or accounting software and import it directly into your Odoo instance. This will create all bank statements.
-
-
-Configuration
-----------------
-
-#. Accounting -> Configuration -> Select the method you want to import the bank statements.
-
-.. image:: australia/QRF_1.png
-   :align: center
-
-#. Then, export the OFX file from the bank.
-
-.. image:: australia/QRF_2.png
-   :align: center
-
-
-#. Lastly, click import file to upload the bank statement.
-
-.. image:: australia/QRF_3.png
-   :align: center
-
-
-.. _australia/pos:
-
-POS terminal → in store payment solution (DAJU) (Stripe)
+Buy Now, Pay Later Solutions 
 ========================================================================
-Redirect to the other page both Asia Pay and Stripe are payment solutions for both modules
 
-Configuration
-----------------
-1. Select Stripe in Payment Terminal
+Buy Now, Pay Later solutions are popular payment methods for eShops in Australia. Currently, some of these solutions are available via the `Stripe <https://stripe.com/en-au/payments/payment-methods>`_ and `AsiaPay <https://www.asiapay.com.au/payment.html#option>`_ payment acquirers. See their website for more information.
 
-.. image:: australia/POS_1.png
-   :align: center
-
-2. Create payment methods
-
-- Select Bank as the Journal -> “Use a Payment Terminal” 
-- Select Stripe as the payment terminal -> “Stripe Serial Number”
-- Fill in the Stripe Serial Number
-- Click the link to config Stripe.
-
-.. image:: australia/POS_2.png
-   :align: center
+.. seealso:: 
+   - `AsiaPay payment acquirer <https://www.odoo.com/documentation/17.0/applications/finance/payment_providers/asiapay.html>`_
+   - `Stripe payment acquirer <https://www.odoo.com/documentation/17.0/applications/finance/payment_providers/stripe.html>`_
 
 
-3. Stripe link configuration
+POS Terminals for Australia
+========================================================================
 
-Connect Strip via the link Connect Strip
+Currently, if you wish to have a direct connection between Odoo and your PoS terminal in Australia, you must have a Stripe terminal. In Odoo 17, Odoo supports the eftpos payment solution in Australia.
 
-.. image:: australia/POS_3.png
-   :align: center
+.. note:: 
+   You do not need a Stripe payment terminal to use Odoo as your main PoS system. The only drawback of not using Stripe will be that cashiers will need to enter the final payment amount manually on the terminal.
 
-Jump to Stripe page
-
-.. image:: australia/POS_4.png
-   :align: center
-
-Link to Stripe Account and the business. When it back to Odoo, Stripe account is set.
-
-.. image:: australia/POS_5.png
-   :align: center
-
-4. Login to `Stripe <https://dashboard.stripe.com/dashboard>`_
-
-Copy the Publishable Kay and Secret Key to Odoo.
-
-.. image:: australia/POS_6.png
-   :align: center
-
-In the configuration, select the payment journal.
-
-.. image:: australia/POS_7.png
-   :align: center
-
-Click the generate your webhook
-
-.. image:: australia/POS_8.png
-   :align: center
-
-1. configuration of Point of Sales. 
-
-Add Stripe to payment methods and click Save
-
-.. image:: australia/POS_9.png
-   :align: center
-
-1. Link Stripe Terminal to Stripe Account
-`Stripe Dashboard: <https://dashboard.stripe.com/dashboard>`_ Click More -> Terminal readers
-
-.. image:: australia/POS_10.png
-   :align: center
-
-Click New -> Create a new address to manage the PoS Payment Terminal
-
-.. image:: australia/POS_11.png
-   :align: center
-
-7. Register the reader by the pair code. Access the Registration Code from the `Stripe Terminal <https://stripe.com/docs/terminal>`_
-
-.. image:: australia/POS_12.png
-   :align: center
-
-For the WisePOS E:
-To open the settings menu, swipe right from the left edge of the reader screen to reveal a Settings button. 
-
-.. image:: australia/POS_13.png
-   :align: center
-
-Tap the Settings button and enter the admin PIN 07139. From here, you can update your WiFi settings or generate a pairing code for device registration. 
-Battery status is displayed at the top right of this screen. 
-
-.. image:: australia/POS_14.png
-   :align: center
-
-.. image:: australia/POS_15.png
-   :align: center
-
-To close the settings menu, click the back arrow in the top left corner.
-
-8. Configuration is completed.
-
-.. image:: australia/POS_16.png
-   :align: center
-
-Flow
-----------------
-
-Select the products and click Payment
-
-.. image:: australia/POS_17.png
-   :align: center
-
-.. image:: australia/POS_19.JPG
-   :align: center
-
-Select Stripe and click send.
-
-.. image:: australia/POS_18.png
-   :align: center
-
-The PoS terminal shows the value that customers need to pay
-
-.. image:: australia/POS_20.JPG
-   :align: center
+.. seealso:: 
+   - `Stripe Odoo Payment Provider <https://www.odoo.com/documentation/17.0/applications/finance/payment_providers/stripe.html>`_
+   - `Stripe Odoo Payment Terminal <https://www.odoo.com/documentation/17.0/applications/sales/point_of_sale/payment_methods/terminals/stripe.html>`
+   - `Stripe Dashboard <https://dashboard.stripe.com/dashboard>`_
+   - `Stripe Terminal <https://stripe.com/docs/terminal>`_
 
 
 .. _australia/payroll:
 
-Payroll (LWI)
+Payroll
 ========================
 
 Create your employees
@@ -1088,8 +786,10 @@ STP Phase 2
 
 .. _australia/employment-hero:
 
-Employment Hero Australian Payroll(DAJU)
+Employment Hero Australian Payroll
 ==================================================
+
+If your business is already up and running with Employment Hero, you can use our connector as an alternative payroll solution.
 
 The Employment Hero module synchronizes payslip accounting entries (e.g., expenses, social charges,
 liabilities, taxes) from Employment Hero to Odoo automatically. Payroll administration is still done
