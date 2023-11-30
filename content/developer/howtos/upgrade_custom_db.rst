@@ -33,14 +33,15 @@ database, making your modules easier to maintain
 Then, make your custom modules installable on a new, empty database to ensure dependencies are
 still correct, fields definitions are still valid, etc. This also require some :ref:`testing
 <upgrade/test_your_db>` to ensure that all the features of your modules are still working properly.
+This step is important to determine if your modules are working by themselves, and not 
+relying on any data or installed apps already present in the database.
 
 During that process, you can also :ref:`Request a test upgraded database
 <upgrade/request-test-database>` to ensure the request can be successfully processed.
 
 Once your modules are installable and working properly (see
 :ref:`Testing your database <upgrade/test_your_db>`), it is time to make them work on an upgraded
-database to ensure that they do not depend on a previous installation (e.g., modules already
-installed, data already present, etc.). During this process, you might have to develop
+database. During this process, you might have to develop
 :ref:`migration scripts <upgrade/migration-scripts>` to reflect changes in the source code of
 your custom modules to their corresponding data.
 

@@ -4,18 +4,18 @@
 Migration scripts
 =================
 
-TODOUPG this page should be about migration scripts :
+TODOUPG See comments in the code for NAMA notes (what this page should be about)
 
-#. What they are (python scripts that receives the psql cursor and the version)
-#. What they are for : applying a modification on the data of your database when upgrading a module
-#. In what circumstances you should use them : when changing the source code of your module between
-2 versions of Odoo
-#. How to write them : examples, upgrade-util package
-#. The different phases and what is their impact: pre no ORM, before module is loaded so before
-your new field gets created
-#. Where to put them : in <module_name>/migration**s**
-#. How to test them Odoo SH : branch in upgrade mode, push a commit, On-premise: receive your
-dump, run it and upgrade all modules via starting odoo-bin
+.. #. What they are (python scripts that receives the psql cursor and the version)
+.. #. What they are for : applying a modification on the data of your database when upgrading a module
+.. #. In what circumstances you should use them : when changing the source code of your module between
+.. 2 versions of Odoo
+.. #. How to write them : examples, upgrade-util package
+.. #. The different phases and what is their impact: pre no ORM, before module is loaded so before
+.. your new field gets created
+.. #. Where to put them : in <module_name>/migration**s**
+.. #. How to test them Odoo SH : branch in upgrade mode, push a commit, On-premise: receive your
+.. dump, run it and upgrade all modules via starting odoo-bin
 
 A migration script is a Python file containing a function called `migrate`, which the upgrade
 process invokes at the appropriate time. Typically, this function executes one or multiple SQL
