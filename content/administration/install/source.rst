@@ -229,7 +229,7 @@ PostgreSQL user.
 
       .. code-block:: console
 
-         $ sudo -u postgres createuser -s $USER
+         $ sudo -u postgres createuser -d -R -S $USER
          $ createdb $USER
 
       .. note::
@@ -254,7 +254,7 @@ PostgreSQL user.
 
       .. code-block:: console
 
-         $ sudo -u postgres createuser -s $USER
+         $ sudo -u postgres createuser -d -R -S $USER
          $ createdb $USER
 
       .. note::
