@@ -93,7 +93,8 @@ the name of the :abbr:`SLA (Service Level Agreement)` applied.
    next deadline will be displayed.
 
 Once a ticket satisfies an :abbr:`SLA (Service Level Agreement)` policy, the :abbr:`SLA (Service
-Level Agreement)` tag turns green, and the :guilabel:`Deadline` field disappears from view on the.
+Level Agreement)` tag turns green, and the :guilabel:`Deadline` field disappears from view on the
+ticket.
 
 .. image:: sla/sla-deadline.png
    :align: center
