@@ -434,7 +434,21 @@ HTTP
 .. option:: --proxy-mode
 
     enables the use of ``X-Forwarded-*`` headers through `Werkzeug's proxy
-    support`_. Only enable this when running behind a trusted web proxy!
+    support`_.
+
+    It ignores all ``X-Forwarded-*`` headers in case ``X-Forwarded-Host`` is
+    missing from the request.
+
+    It always gets the real IP from the last entry of the ``X-Forwarded-For``
+    chain. Configure your web server accordingly using directives such as
+    nginx's `set_real_ip_from <https://nginx.org/en/docs/http/ngx_http_realip_module.html>`_
+    in case there are other trusted proxies along the chain that must be ignored.
+
+    ``X-Forwarded-Proto`` and ``X-Forwarded-Host`` are used to update the
+    request root URL, which in turn is used to update the ``web.base.url``
+    system parameter upon a successful admin authentication. This system
+    parameter is used to generate all links for the current database; see
+    :ref:`domain-name/web-base-url`.
 
 
     .. warning:: proxy mode *must not* be enabled outside of a reverse proxy
