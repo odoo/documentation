@@ -29,18 +29,28 @@ transportation, insurance, customs clearance, and other relevant aspects of the 
 
 .. _incoterms/invoices:
 
-Define an Incoterm
-==================
+Define an Incoterms
+===================
 
-To define an Incoterm manually, create an invoice or bill, click the :guilabel:`Other Info` tab, and
-select the :guilabel:`Incoterm`.
+To define an Incoterms manually, create an invoice or bill, click the :guilabel:`Other Info` tab,
+and select the :guilabel:`Incoterm`.
+
+Incoterms location
+------------------
+
+A location relevant to the chosen Incoterms can be added to the invoice or bill under
+:guilabel:`Other Info` in the :guilabel:`Incoterm Location` field.
+
+.. example::
+   If the chosen Incoterms code is `CIF` (Cost, Insurance, Freight), the associated location might
+   be the destination port where the goods will be delivered.
 
 .. _incoterms/default:
 
-Default Incoterm configuration
-==============================
+Default Incoterms configuration
+===============================
 
-You can set a default Incoterm rule to **automatically** populate the Incoterm field on all newly
+You can set a default Incoterms rule to **automatically** populate the Incoterms field on all newly
 created invoices and bills. Under :menuselection:`Accounting/Invoicing --> Configuration -->
-Settings`, scroll down to the :guilabel:`Customer Invoices` section, and select an Incoterm in the
+Settings`, scroll down to the :guilabel:`Customer Invoices` section, and select an Incoterms in the
 :guilabel:`Default Incoterm` field.
