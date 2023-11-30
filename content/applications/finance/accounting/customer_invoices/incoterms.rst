@@ -25,7 +25,9 @@ transportation, insurance, customs clearance, and other relevant aspects of the 
    - **DDP**: Delivered duty paid
 
 .. seealso::
-   :doc:`../reporting/intrastat`
+   - :doc:`../reporting/intrastat`
+   - :doc:`../customer_invoices`
+   - :doc:`../vendor_bills`
 
 .. _incoterms/invoices:
 
@@ -34,6 +36,16 @@ Define an Incoterm
 
 To define an Incoterm manually, create an invoice or bill, click the :guilabel:`Other Info` tab, and
 select the :guilabel:`Incoterm`.
+
+Incoterm location
+-----------------
+
+A location relevant to the chosen Incoterm can be added to the invoice or bill under
+:guilabel:`Other Info` in the :guilabel:`Incoterm Location` field.
+
+.. example::
+   If the chosen Incoterm code is `CIF` (Cost, Insurance, Freight), the associated location might be
+   the destination port where the goods will be delivered.
 
 .. _incoterms/default:
 
