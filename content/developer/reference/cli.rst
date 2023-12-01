@@ -448,11 +448,11 @@ HTTP
     nginx's `set_real_ip_from <https://nginx.org/en/docs/http/ngx_http_realip_module.html>`_
     in case there are other trusted proxies along the chain that must be ignored.
 
-    ``X-Forwarded-Proto`` and ``X-Forwarded-Host`` are used to update the
-    request root URL, which in turn is used to update the ``web.base.url``
-    system parameter upon a successful admin authentication. This system
-    parameter is used to generate all links for the current database; see
-    :ref:`domain-name/web-base-url`.
+    ``X-Forwarded-Proto``, ``X-Forwarded-Host`` and ``X-Forwarded-Port`` are
+    used to update the request root URL, which in turn is used to update the
+    ``web.base.url`` system parameter upon a successful admin authentication.
+    This system parameter is used to generate all links for the current
+    database; see :ref:`domain-name/web-base-url`.
 
 
     .. warning:: proxy mode *must not* be enabled outside of a reverse proxy
