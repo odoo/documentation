@@ -381,7 +381,7 @@ A remittance advice is a document used as a proof of payment to a business. In O
 E-Invoicing via Peppol
 ================================================
 
-Odoo is compliant with the Australia and New Zealand PEPPOL requirements. Refer to the official `PEPPOL <https://peppol.org/learn-more/country-profiles/australia/>_` webpage for more information.
+Odoo is compliant with the Australia and New Zealand PEPPOL requirements. Refer to the official `PEPPOL <https://peppol.org/learn-more/country-profiles/australia/>`_ webpage for more information.
 
 .. image:: australia/Peppol.png
    :align: center
@@ -421,7 +421,7 @@ Settings
 Bank Journal
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. Configuration -> Journals -> Select the Bank type Journal
+1. :menuselection:`Configuration -> Journals -> Select the Bank type Journal`
 
 .. image:: australia/ABA_2.png
    :align: center
@@ -534,18 +534,20 @@ Currently, if you wish to have a direct connection between Odoo and your PoS ter
 .. _australia/payroll:
 
 Payroll
-========================
+==========
 
 Create your employees
 --------------------------------
-A multitude of important fields have been added to comply with Australian regulations. First, go to Employees > Create. These fields can be found on the section “HR Settings” of the employee form: TFN, Medicare exemption and deduction, child support deduction and garnishee… Some of these fields will impact the employee’s withholding tax rate.
-#. TFN Status: if a TFN is provided by the employee, make sure to add it to the “TFN” field.
-#. Non-resident: if the employee is a foreign resident.
-#. Tax-free Threshold
-#. HELP / STSL: for all types of study and training support loans (e.g. HELP, VSL, SSL…)
-#. Medicare Levy Deduction
-#. Medicare Levy Exemption
-#. Withholding for Extra Pay
+
+A multitude of important fields have been added to comply with Australian regulations. First, go to :menuselection:`Employees --> Create`. These fields can be found on the section “HR Settings” of the employee form: TFN, Medicare exemption and deduction, child support deduction and garnishee… Some of these fields will impact the employee’s withholding tax rate.
+
+1. **TFN Status**: if a TFN is provided by the employee, make sure to add it to the “TFN” field.
+2. **Non-resident**: if the employee is a foreign resident.
+3. **Tax-free Threshold**
+4. **HELP / STSL**: for all types of study and training support loans (e.g. HELP, VSL, SSL…)
+5. **Medicare Levy Deduction**
+6. **Medicare Levy Exemption**
+7. **Withholding for Extra Pay**
 
 In Odoo’s Australian localisation, some standard fields are crucial. Important examples are date of birth (which affects certain variables of employment termination payments or ETP), marital status and number of dependents (which affects Medicare surcharge).
 
@@ -554,62 +556,65 @@ In Odoo’s Australian localisation, some standard fields are crucial. Important
 
 Manage Australian contracts
 --------------------------------
-Once the employee form has been created, ensure the contract is enabled  by clicking on the “Contracts” smart button, or going to Employees > Contracts. Please note that only one contract can be active at the same time per employee, but it is possible for an employee to be assigned consecutive contracts during their employment.
+Once the employee form has been created, ensure the contract is enabled  by clicking on the **“Contracts”** smart button, or going to :menuselection:`Employees --> Contracts`. Please note that only one contract can be active at the same time per employee, but it is possible for an employee to be assigned consecutive contracts during their employment.
 
 Contractual information related to Australia can be found in the following 3 places:
 
-1. The top panel:  Before assigning a salary amount, a pay frequency and other important details to a contract, it is important to define the salary structure, start date and work entry source. In Australia, the notion of a "Salary Structure" is employed to specify the tax schedule applicable to that contract, as defined by the Australian Taxation Office (ATO). Most contracts will fall under the following 3 structures:
-- Regular (Schedule 1): the great majority of Australian employees will fall in this category and hence, this structure is assigned by default to all contracts.
-- Working holiday makers (Schedule 15). When emploting working holidaymakers, other taxes apply. For detailed information on these specific tax implications, refer to the documentation provided by the ATO.
-- No TFN. Choose this structure if the employee hasn’t provided a TFN for more than 28 days.
+1. **The top panel**:  Before assigning a salary amount, a pay frequency and other important details to a contract, it is important to define the salary structure, start date and work entry source. In Australia, the notion of a "Salary Structure" is employed to specify the tax schedule applicable to that contract, as defined by the Australian Taxation Office (ATO). Most contracts will fall under the following 3 structures:
+
+- **Regular (Schedule 1)**: the great majority of Australian employees will fall in this category and hence, this structure is assigned by default to all contracts.
+- **Working holiday makers (Schedule 15)**: When emploting working holidaymakers, other taxes apply. For detailed information on these specific tax implications, refer to the documentation provided by the ATO.
+- **No TFN**: Choose this structure if the employee hasn’t provided a TFN for more than 28 days.
 
 .. image:: australia/PAY_2.png
    :align: center
 
 .. important::
-   the structures “Horticulture / Shearing (Schedule 2)” and “Artists and Performers (Schedule 3)” are only partially complete in version 17 of Odoo and proper tests should be performed before using them to pay employees in your production database. Send your feedback to au-feedback@mail.odoo.com.
+   The structures “Horticulture / Shearing (Schedule 2)” and “Artists and Performers (Schedule 3)” are only partially complete in version 17 of Odoo and proper tests should be performed before using them to pay employees in your production database. Send your feedback to au-feedback@mail.odoo.com.
 
-The field Work Entry Source is also very important and defines the way working hours and days will be accounted for in the employee’s payslip.
-- Working Schedule: work entries are automatically generated based on the employee’s working schedule, starting from the start date of the contract. For example, let’s assume that an employee works 38 hours a week and their contract’s start date is January 1. Today is January 16 and the user generates a pay run from January 14 to 20. The working hours on the payslip will be automatically calculated to be 38 hours (5 * 7.36 hours) if no leave is taken.
-- Attendances. The default working schedule is ignored, and work entries are only generated after clocking in and out of the attendance app.
-- Planning. The default working schedule is ignored, and work entries are generated from planning shifts only.
+The field **Work Entry Source** is also very important and defines the way working hours and days will be accounted for in the employee’s payslip.
+
+- **Working Schedule**: work entries are automatically generated based on the employee’s working schedule, starting from the start date of the contract. For example, let’s assume that an employee works 38 hours a week and their contract’s start date is January 1. Today is January 16 and the user generates a pay run from January 14 to 20. The working hours on the payslip will be automatically calculated to be 38 hours (5 * 7.36 hours) if no leave is taken.
+- **Attendances**: The default working schedule is ignored, and work entries are only generated after clocking in and out of the attendance app.
+- **Planning**: The default working schedule is ignored, and work entries are generated from planning shifts only.
 
 
 .. important::
    To ensure that Odoo's payslips automatically compute various penalty rates as defined by an award (overtime rate, public holiday rate, etc) additional configurations are necessary. These configurations involve the following steps: firstly,  new work entry types for each penalty rate need to be created, before assigning a penalty rate in % to each of them. Once this one-time configuration is done, work entries can be manually imported for each period and Odoo will separate the pay items and rates on the employee’s payslip.
+
 .. important::
    Timesheets do not impact work entries in Odoo.
 
-1. The “Salary Information” tab. A few important fields will impact the frequency pay runs and the management of payslip rules in Odoo.
+2. **The “Salary Information” tab**. A few important fields will impact the frequency pay runs and the management of payslip rules in Odoo.
 
-- Wage Type. For full-time and part-time employees, select the “Fixed Wage” pay type. For casual workers and other hourly contracts, choose the “Hourly Wage” type. For employees being paid hourly, make sure to define the correct casual loading.
-- Schedule Pay. In Australia, only the following pay run frequencies are accepted: daily, weekly, bi-weekly (or fortnightly), monthly, and quarterly.
-- Wage ( / period). Assign a wage to the contract according to their pay frequency. On payslips, the corresponding annual and hourly rates will be automatically computed. For hourly workers, please note that the hourly wage should exclude casual loading.
+- **Wage Type**. For full-time and part-time employees, select the “Fixed Wage” pay type. For casual workers and other hourly contracts, choose the “Hourly Wage” type. For employees being paid hourly, make sure to define the correct casual loading.
+- **Schedule Pay**. In Australia, only the following pay run frequencies are accepted: daily, weekly, bi-weekly (or fortnightly), monthly, and quarterly.
+- **Wage ( / period)**. Assign a wage to the contract according to their pay frequency. On payslips, the corresponding annual and hourly rates will be automatically computed. For hourly workers, please note that the hourly wage should exclude casual loading.
 
 .. image:: australia/PAY_3.png
    :align: center
 
-3. The “Australia” tab. Most of the fields in this tab are used for Single Touch Payroll (or STP) reporting, which requires a thorough understanding of several details from an employee’s contract. Make sure to review the information on this tab before moving forward with pay runs. This includes the following four fields which will also impact payslip computations:
+3. **The “Australia” tab**. Most of the fields in this tab are used for Single Touch Payroll (or STP) reporting, which requires a thorough understanding of several details from an employee’s contract. Make sure to review the information on this tab before moving forward with pay runs. This includes the following four fields which will also impact payslip computations:
 
-- Withholding Variation: use this field in case the employee’s withholding must be varied upward or downward according to their circumstances. E.g. if Vanessa benefits from a 25% withholding variation, her percentage of tax withheld will vary from whatever amount she was supposed to pay according to her salary structure and situation, to a fixed 25%.
-- Leave Loading: if the employee benefits from a regular leave loading, the value set in the field “Leave Loading Rate” (e.g. 17.5%) will be added on top of any amount earned by the employee when taking annual or long service leaves.
-- Salary Sacrifice Superannuation: any amount added to this field will be deducted, per pay frequency, from the employee’s basic salary before the computation of the gross salary. Then, this amount will be added to the super guarantee line of their payslip. E.g. If Patrick earns 5,000 AUD per month and sacrifices 300 AUD to superannuation, his gross salary will be 4,700 AUD and 300 AUD will be added on top of his normal super contributions.
-- Salary Sacrifice Other: any amount added to this field will be deducted, per pay frequency, from the employee’s basic salary before the computation of the gross salary.
+- **Withholding Variation**: use this field in case the employee’s withholding must be varied upward or downward according to their circumstances. E.g. if Vanessa benefits from a 25% withholding variation, her percentage of tax withheld will vary from whatever amount she was supposed to pay according to her salary structure and situation, to a fixed 25%.
+- **Leave Loading**: if the employee benefits from a regular leave loading, the value set in the field “Leave Loading Rate” (e.g. 17.5%) will be added on top of any amount earned by the employee when taking annual or long service leaves.
+- **Salary Sacrifice Superannuation**: any amount added to this field will be deducted, per pay frequency, from the employee’s basic salary before the computation of the gross salary. Then, this amount will be added to the super guarantee line of their payslip. E.g. If Patrick earns 5,000 AUD per month and sacrifices 300 AUD to superannuation, his gross salary will be 4,700 AUD and 300 AUD will be added on top of his normal super contributions.
+- **Salary Sacrifice Other**: any amount added to this field will be deducted, per pay frequency, from the employee’s basic salary before the computation of the gross salary.
 
 .. image:: australia/PAY_4.png
    :align: center
 
-Once all important information has been entered, ensure the transition of the contract's status from "New" to "Running" to facilitate its use in pay runs.
+Once all important information has been entered, ensure the transition of the contract's status from *New* to *Running* to facilitate its use in pay runs.
 
 
 Assign superannuation accounts
 ----------------------------------------------
-Upon receipt of superannuation details from a new employee, ensure the creation of a new account in Payroll ‣ Configuration ‣ Australia ‣ Super Accounts, linking it to the individual. Input the account's fund, "member since" date, and member number for accurate records.
+Upon receipt of superannuation details from a new employee, ensure the creation of a new account in :menuselection:`Payroll ‣ Configuration ‣ Australia ‣ Super Accounts`, linking it to the individual. Input the account's fund, "member since" date, and member number for accurate records.
 
 .. image:: australia/PAY_23.png
    :align: center
 
-If the employee uses a superannuation fund that does not exist in  the database yet, Odoo will allow to create a new one and to centralise basic information about this fund, such as its ABN, address, type (APRA or SMSF), USI and ESA. Super funds can be created or imported in Payroll ‣ Configuration ‣ Australia ‣ Super Funds. 
+If the employee uses a superannuation fund that does not exist in  the database yet, Odoo will allow to create a new one and to centralise basic information about this fund, such as its ABN, address, type (APRA or SMSF), USI and ESA. Super funds can be created or imported in :menuselection:`Payroll ‣ Configuration ‣ Australia ‣ Super Funds`.
 
 .. image:: australia/PAY_5.png
    :align: center
@@ -625,37 +630,39 @@ There are two ways Odoo can help create pay runs: via batch or via individual pa
 
 Create a batch of payslips
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-When preparing to generate employees’ draft payslips (e.g. at the end of every week, fortnight or month), navigate to Payroll ‣ Payslips ‣ Batches and create a new one. This method allows the creation of multiple payslips corresponding to each employee in a single batch.
+
+When preparing to generate employees’ draft payslips (e.g. at the end of every week, fortnight or month), navigate to :menuselection:`Payroll ‣ Payslips ‣ Batches` and create a new one. This method allows the creation of multiple payslips corresponding to each employee in a single batch.
 
 .. image:: australia/PAY_6.png
    :align: center
 
 
-#. Give the batch a name. E.g. 2024 – Weekly W1
-#. Choose the pay run’s start and end date. E.g. 01/01/2024 to 07/01/2024.
-#. Click on “Generate”. A pop-up window will ask to confirm which employees should be included in the batch. By default, all active employees will be there. Feel free to leave the field “salary structure” blank as Odoo will automatically select the structure currently linked to each employee’s contract.
-#. The batch will create as many payslips as there are employees. There is no limit to the number of payslips that can be created in a batch.
-#. Verify important information on each payslip. After payslips from a batch have been generated, there is no need to manually compute payslip lines, Odoo does it for you.
+1. Give the batch a name. *E.g. 2024 – Weekly W1*
+2. Choose the pay run’s start and end date. *E.g. 01/01/2024 to 07/01/2024* .
+3. Click on “Generate”. A pop-up window will ask to confirm which employees should be included in the batch. By default, all active employees will be there. Feel free to leave the field “salary structure” blank as Odoo will automatically select the structure currently linked to each employee’s contract.
+4. The batch will create as many payslips as there are employees. There is no limit to the number of payslips that can be created in a batch.
+5. Verify important information on each payslip. After payslips from a batch have been generated, there is no need to manually compute payslip lines, Odoo does it for you.
 
 Create an individual payslip
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In cases where the pay run doesn't fall into the category of regular payslips, the option exists to create a pay run dedicated to a single employee. Go to Payroll ‣ Payslips ‣ All Payslips ‣ New. Employ this method when processing one-time payments for employees, including return-to-work payments (ATO Schedule 4), employment termination payments (ATO Schedule 7 and 11), as well as commissions and bonuses (ATO Schedule 5). When generating an individual payslip, make sure to proceed with the following steps: 
+In cases where the pay run doesn't fall into the category of regular payslips, the option exists to create a pay run dedicated to a single employee. Go to :menuselection:`Payroll ‣ Payslips ‣ All Payslips ‣ New`. Employ this method when processing one-time payments for employees, including return-to-work payments (ATO Schedule 4), employment termination payments (ATO Schedule 7 and 11), as well as commissions and bonuses (ATO Schedule 5). When generating an individual payslip, make sure to proceed with the following steps: 
 
 .. image:: australia/PAY_7.png
    :align: center
 
-#. Select an employee. Their contract will be filled out automatically.
-#. Add a pay period
-#. Select a salary structure (e.g. Return to work payment)
-#. Unlike payslips generated from a batch, the payroll user needs to click on the “Compute Sheet” button to generate payslip lines.
+1. Select an employee. Their contract will be filled out automatically.
+2. Add a pay period
+3. Select a salary structure (e.g. Return to work payment)
+4. Unlike payslips generated from a batch, the payroll user needs to click on the “Compute Sheet” button to generate payslip lines.
 
 
 Understand payslip features
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 No matter the way payslips are created (individually or via a batch), the same features apply. Let us dive into the different sections of the payslip form.
 
-Depending on the way work entries are created for this employee (see the contract section above for more information), the “Worked Days” table will automatically show the number of days and hours the employee has worked during the payslip period, next to the corresponding total gross amount. Note that there will be one line per work entry type, which means that paid and unpaid time off, in addition to custom hourly penalty rates (overtime, public holidays…) will be added to the table automatically.
+Depending on the way work entries are created for this employee (see the contract section above for more information), the **“Worked Days” table** will automatically show the number of days and hours the employee has worked during the payslip period, next to the corresponding total gross amount. Note that there will be one line per work entry type, which means that paid and unpaid time off, in addition to custom hourly penalty rates (overtime, public holidays…) will be added to the table automatically.
 
 .. image:: australia/PAY_8.png
    :align: center
@@ -666,41 +673,41 @@ Under the worked days table, the payroll user can make sure of the “Other Inpu
 .. image:: australia/PAY_9.png
    :align: center
 
-a. Allowances. To incorporate various types of allowances into an employee's payslip, begin by creating them in Payroll ‣ Configuration ‣ Other Input Types. Once the other input type is created (e.g. Laundry), make sure to tick the “Is an Allowance” checkbox.
+1. **Allowances**. To incorporate various types of allowances into an employee's payslip, begin by creating them in :menuselection:`Payroll ‣ Configuration ‣ Other Input Types`. Once the other input type is created (e.g. Laundry), make sure to tick the “Is an Allowance” checkbox.
 
 .. image:: australia/PAY_10.png
    :align: center
 
 
 .. important::
-   withholding for allowances is not computed automatically as of Odoo 17. The payroll user has to use the field “Withholding for allowance” under the other inputs table to manually add the total amount to be withheld across all allowances on that payslip.
+   Withholding for allowances is not computed automatically as of Odoo 17. The payroll user has to use the field “Withholding for allowance” under the other inputs table to manually add the total amount to be withheld across all allowances on that payslip.
 
-b. Extra pay items. Unlike allowances, extra pay items are other inputs that add to the payslip’s gross and as such, to the withholding amount. A good example lies in regular sales commissions which are taxed at the same rate as the normal salary (unlike discretionary bonuses which fall under the ATO’s Schedule 5 and its corresponding salary structure). To configure such a custom pay item, go to Payroll ‣ Configuration ‣ Other Input Types and create a new entry with the code “EXTRA” as shown in the screenshot below.
+2. **Extra pay items**. Unlike allowances, extra pay items are other inputs that add to the payslip’s gross and as such, to the withholding amount. A good example lies in regular sales commissions which are taxed at the same rate as the normal salary (unlike discretionary bonuses which fall under the ATO’s Schedule 5 and its corresponding salary structure). To configure such a custom pay item, go to :menuselection:`Payroll ‣ Configuration ‣ Other Input Types`` and create a new entry with the code “EXTRA” as shown in the screenshot below.
 
 .. image:: australia/PAY_11.png
    :align: center
 
-On the tab “Salary Computation”, the payroll user can verify whether all the pay rules have been computed correctly as per employee, contract and salary structure. Here are a few guidelines to better understand the data.
+On the **tab “Salary Computation”**, the payroll user can verify whether all the pay rules have been computed correctly as per employee, contract and salary structure. Here are a few guidelines to better understand the data.
 
 .. image:: australia/PAY_24.png
    :align: center
 
-#. Basic salary: amount from which tax-deductible lines can be subtracted
-#. Gross salary: amount subject to the taxes defined by the salary structure
-#. Withholding: tax amount to be paid to the ATO
-#. Net salary: amount to be paid to the employee’s bank account
-#. Superannuation Guarantee: amount to be provisioned for quarterly payments to the employee’s super account
-#. Allowances & Extra pay items: these lines will show if other inputs are added to the payslip.
-#. Other lines: depending on the employee and contract specifics (Medicare, child support, salary sacrifice…)
+1. **Basic salary**: amount from which tax-deductible lines can be subtracted
+2. **Gross salary**: amount subject to the taxes defined by the salary structure
+3. **Withholding**: tax amount to be paid to the ATO
+4. **Net salary**: amount to be paid to the employee’s bank account
+5. **Superannuation Guarantee**: amount to be provisioned for quarterly payments to the employee’s super account
+6. **Allowances & Extra pay items**: these lines will show if other inputs are added to the payslip.
+7. **Other lines**: depending on the employee and contract specifics (Medicare, child support, salary sacrifice…)
 
-When the payroll is satisfied with the payslip, they can click on “Create Draft entry” to generate a draft accounting journal entry that the accountant can review. Note that in the case of a payslip batch, this accounting entry will sum up balances from all payslips.
+When the payroll is satisfied with the payslip, they can click on **Create Draft entry** to generate a draft **accounting journal entry** that the accountant can review. Note that in the case of a payslip batch, this accounting entry will sum up balances from all payslips.
 
 Pay employees
 ------------------------------
 
 After a batch or a payslip’s journal entry has been posted, the company can proceed to pay their employees. The user can choose between two different payment methods.
 
-1. Pay the employee in batch via ABA file. This is only possible from the payslip batch level. Please note however that it is always possible to include an individual payslip into an existing batch and as such, include it in an ABA file. To generate the ABA file, make sure that the batch’s journal entry has been posted. From the batch form view, click on “Create ABA File” and choose the desired bank journal. The newly generated ABA file will be available for download in the field “ABA File”. It is possible to re-generate the ABA file after applying corrections to existing payslips.
+1. **Pay the employee in batch via ABA file**. This is only possible from the payslip batch level. Please note however that it is always possible to include an individual payslip into an existing batch and as such, include it in an ABA file. To generate the ABA file, make sure that the batch’s journal entry has been posted. From the batch form view, click on **Create ABA File** and choose the desired bank journal. The newly generated ABA file will be available for download in the field **ABA File**. It is possible to re-generate the ABA file after applying corrections to existing payslips.
 
 .. image:: australia/PAY_13.png
    :align: center
@@ -709,10 +716,10 @@ After a batch or a payslip’s journal entry has been posted, the company can pr
    :align: center
 
 .. important::
-   an ABA file can only be generated if both the company’s bank account and each employee’s bank account have been properly configured. See section “ABA Files” for more details.
+   An ABA file can only be generated if both the company’s bank account and each employee’s bank account have been properly configured. See section “ABA Files” for more details.
 
 
-2. Pay the employee using the “Register Payment” feature. On the individual payslip level, once the payslip's journal entry has been posted, click on the button “Register Payment”. The same process as paying for vendor bills, select the desired bank journal and payment method, then reconcile  the payment later with the corresponding bank statements.
+2. **Pay the employee using the “Register Payment” feature**. On the individual payslip level, once the payslip's journal entry has been posted, click on the button **Register Payment**. The same process as paying for vendor bills, select the desired bank journal and payment method, then reconcile  the payment later with the corresponding bank statements.
 
 
 .. image:: australia/PAY_15.png
@@ -726,7 +733,7 @@ Certain payments such as “return to work” payments and “employment termina
 Return to work payments
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A return to work payment is a payment made to an employee to resume working. To process one in Odoo, create an individual payslip, select the employee and modify its regular structure to “Australia: return to work”. Then, simply add the gross amount of that payment in the “Other Inputs” table and compute the payslip.
+A return to work payment is a payment made to an employee to resume working. To process one in Odoo, create an individual payslip, select the employee and modify its regular structure to **Australia: return to work**. Then, simply add the gross amount of that payment in the **Other Inputs** table and compute the payslip.
 
 .. image:: australia/PAY_16.png
    :align: center
@@ -742,7 +749,7 @@ Odoo automatically computes the PAYG withholding, the net amount and the super g
 Termination payments
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Before proceeding with the employee’s ETP, make sure that a “Contract End Date” has been set on that employee’s contract, so that Odoo can automatically compute the final prorated salary of that employee for the current month.
+Before proceeding with the employee’s ETP, make sure that a **Contract End Date** has been set on that employee’s contract, so that Odoo can automatically compute the final prorated salary of that employee for the current month.
 
 First, create the final salary for that employee this month. To do so, create an individual payslip. If the contract end date is set correctly, Odoo will automatically compute the prorated salary up to the final payslip date.
 
@@ -755,18 +762,18 @@ We recommend creating a batch on the fly for that payslip, in which we will add 
 .. image:: australia/PAY_18.png
    :align: center
 
-Create a second individual payslip and include it in the same batch. Change the salary structure on that payslip to “Australia: Termination Payments”. Before computing the sheet, it is important to provide the payslip with details of the termination.
+Create a second individual payslip and include it in the same batch. Change the salary structure on that payslip to **Australia: Termination Payments**. Before computing the sheet, it is important to provide the payslip with details of the termination.
 
 .. image:: australia/PAY_19.png
    :align: center
 
-- Genuine or non-genuine redundancy. This choice will have an impact on the amounts and caps defined per ETP type.
-- ETP types. First, see the full list of termination payment types in “Other Input Types” by filtering by “ETP Type is Set”.
+- **Genuine or non-genuine redundancy.** This choice will have an impact on the amounts and caps defined per ETP type.
+- **ETP types.** First, see the full list of termination payment types in “Other Input Types” by filtering by “ETP Type is Set”.
 
 .. image:: australia/PAY_20.png
    :align: center
 
-Add the relevant ETP type in the “Other Inputs” table of the payslip, then compute the payslip. For example:
+Add the relevant ETP type in the **Other Inputs** table of the payslip, then compute the payslip. For example:
 
 .. image:: australia/PAY_21.png
    :align: center
