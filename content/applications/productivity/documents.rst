@@ -8,9 +8,8 @@ You can upload any file (max 64MB per file on Odoo Online) and organize them in 
 
 .. seealso::
    - `Odoo Documents: product page <https://www.odoo.com/app/documents>`_
-   - `Odoo Tutorials: Documents basics [video]
-     <https://www.odoo.com/slides/slide/documents-basics-674>`_
-   - `Odoo Tutorials: Using Documents with your Accounting App [video] <https://www.odoo.com/slides/slide/using-documents-with-your-accounting-app-675?fullscreen=1#>`_
+   - `Odoo Tutorials: Documents basics [video] <https://www.odoo.com/slides/slide/documents-basics-6841?fullscreen=1>`_
+   - `Odoo Tutorials: Using Documents with your Accounting App [video] <https://www.odoo.com/slides/slide/accounting-integration-and-workflow-actions-6853?fullscreen=1>`_
 
 Configuration
 =============
@@ -18,9 +17,9 @@ Configuration
 By going to :menuselection:`Documents --> Configuration --> Settings`, you can enable the
 centralization of files attached to a specific area of your activity. For example, by ticking
 :guilabel:`Human Resources`, your HR documents are automatically available in the HR workspace,
-while documents related to Payroll are automatically available in the Payroll sub-workspace . You
+while documents related to Payroll are automatically available in the Payroll sub-workspace. You
 can change the default workspace using the dropdown menu and edit its properties by clicking the
-:guilabel:`➔` (:guilabel:`Internal link`) icon.
+:icon:`fa-arrow-right` (:guilabel:`Internal link`) icon.
 
 .. image:: documents/files-centralization.png
    :alt: Enable the centralization of files attached to a specific area of your activity.
@@ -48,7 +47,7 @@ own by going to :menuselection:`Documents --> Configuration --> Workspaces` and 
 
 - :guilabel:`Name`
 - :guilabel:`Parent Workspace`: if you want to create a sub-workspace, select its :guilabel:`Parent
-  Workspace`
+  Workspace`.
 
 Three tabs are available: :ref:`Tags <documents/tags>`,
 :ref:`Access Rights <documents/access-rights>`, and :ref:`Description <documents/description>`.
@@ -68,8 +67,8 @@ and :guilabel:`Name` your tags.
    - The tags of a parent workspace apply to the child workspaces automatically;
    - Tags can be created and modified by going to :menuselection:`Documents --> Configuration -->
      Tags`;
-   - Tags can also be created or edited by clicking the :icon:`fa-cog` (:guilabel:`cog`) icon on
-     the left menu;
+   - Tags can also be created or edited by clicking the :icon:`fa-gear` (:guilabel:`gear`) icon on
+     the left panel;
    - An :ref:`email alias <documents/upload>` can be used to automatically send received documents
      to a specific workspace based on the tag assigned.
 
@@ -78,10 +77,9 @@ and :guilabel:`Name` your tags.
 Access rights
 -------------
 
-To manage your workspace access rights, go to :menuselection:`Documents --> Configuration -->
-Workspaces`, open the workspace you want to edit, and go to the :guilabel:`Access Rights` tab.
-You can add :guilabel:`Write Groups` that can view, create, and edit the workspace's documents.
-You can also add :guilabel:`Read Groups` that can only view the workspace's documents.
+To manage your workspace access rights, go to the :guilabel:`Access Rights` tab. You can add
+:guilabel:`Write Groups` that can view, create, and edit the workspace's documents. You can also add
+:guilabel:`Read Groups` that only view the workspace's documents.
 
 .. tip::
    Enable :guilabel:`Own Documents Only` to limit :guilabel:`Read Groups` and
@@ -92,16 +90,11 @@ You can also add :guilabel:`Read Groups` that can only view the workspace's docu
 Description
 -----------
 
-You can add descriptive information to your workspace by going to :menuselection:`Documents -->
-Configuration --> Workspaces`, opening the workspace you want to describe and going to the
-:guilabel:`Description` tab.
+You can add descriptive information to your workspace by going to the :guilabel:`Description` tab.
 
 .. note::
-   Workspaces can also be created and edited by clicking the :icon:`fa-cog` (:guilabel:`cog`) icon
-   on the left menu.
-
-   .. image:: documents/sub-workspaces-creation.png
-      :alt: Create sub-workspaces from the left menu
+   Workspaces can also be created and edited by clicking the :icon:`fa-gear` (:guilabel:`gear`) icon
+   on the left panel.
 
 .. _documents/management:
 
@@ -109,14 +102,21 @@ Documents management
 ====================
 
 When selecting or opening a document, the right panel displays different options, including, for
-example: :icon:`fa-download` (:guilabel:`Download`), :icon:`fa-share-alt` (:guilabel:`Share this
-selection`), :icon:`fa-retweet` (:guilabel:`Replace`), :icon:`fa-unlock` (:guilabel:`Lock`),
-:icon:`fa-scissors` (:ref:`Split <documents/split>`), :icon:`fa-comments` (:guilabel:`Open chatter`),
-and :icon:`fa-trash` (:guilabel:`Move to trash`).
+example:
 
-.. image:: documents/right-panel-options.png
-   :align: center
-   :alt: right panel options
+- :icon:`fa-download` (:guilabel:`Download`);
+- :icon:`fa-share-alt` (:guilabel:`Share this selection`): a share URL is copied to your clipboard;
+- :icon:`fa-retweet` (:guilabel:`Replace`): select a new file to replace the existing one. Scroll
+  down to the bottom of the right panel to see the :guilabel:`History` and :guilabel:`restore`,
+  :guilabel:`download`, or :guilabel:`delete` the document;
+- :icon:`fa-unlock` (:guilabel:`Lock`);
+- :icon:`fa-scissors` (:ref:`Split <documents/split>`).
+
+You can also :icon:`fa-comments` :guilabel:`Open chatter` or delete the document by clicking the
+:icon:`fa-trash` (:guilabel:`Move to trash`) icon.
+
+.. note::
+   Items moved to the trash are permanently deleted after 30 days.
 
 To modify the name of your file, click on :guilabel:`Name`. A :guilabel:`Contact` or an
 :guilabel:`Owner` can be assigned. The related :guilabel:`Workspace` can be modified and it is
@@ -158,38 +158,33 @@ pages, click the :icon:`fa-scissors` (:guilabel:`scissors`) icon.
 Additional features
 -------------------
 
-Select a workspace and click the arrow next to the :guilabel:`Upload` button to access additional
-features:
+Select a workspace and click the :icon:`fa-caret-down` (:guilabel:`down arrow`) next to the
+:guilabel:`Upload` button to access additional features:
 
 Request
 ~~~~~~~
 
-You can create "missing documents" and organize them as documents, to remind users to download them.
+You can request files and organize them as documents to remind users to download them.
 
-Select the workspace where the file should be stored, click the arrow next to the :guilabel:`Upload`
-button, and select the :guilabel:`Request` option. Add the :guilabel:`Document Name`, choose the
-person you need it from in the :guilabel:`Request To` field, fill in the :guilabel:`Due Date In`,
-confirm the :guilabel:`Workspace` the document should belong to, and add :guilabel:`Tags` and a
-:guilabel:`Note` if needed. Then, click :guilabel:`Request`. A placeholder for the missing document
-is created in the workspace.
+Select the workspace where the file should be stored, click the :icon:`fa-caret-down`
+(:guilabel:`down arrow`) next to the :guilabel:`Upload` button, then :guilabel:`Request`. Add the
+:guilabel:`Document Name` and select the person you need it from in the :guilabel:`Request To`
+field. You can also fill in the :guilabel:`Due Date In`, confirm the :guilabel:`Workspace` the
+document should belong to, and add :guilabel:`Tags` and a :guilabel:`Message`. Then, click
+:guilabel:`Request`. A placeholder for the missing document is created in the workspace.
 
-.. image:: documents/missing-doc.png
-   :alt: Placeholder for missing document
-
-To upload the document, click the :icon:`fa-upload` (:guilabel:`Upload file`) icon in the document
-preview. By default, the requestor is set as the document's :guilabel:`Owner`.
+When your document is available, click the placeholder to upload it.
 
 You can see all missing documents by going to the **Activity** view and the :guilabel:`Requested
 Document` column.
 
 .. tip::
-   - From the :guilabel:`Activity` view, you can send a **reminder email** to users from whom you
-     are expecting a document. Go to the :guilabel:`Requested Document` column, click on the
-     :icon:`fa-ellipsis-v` (:guilabel:`vertical ellipsis`) icon and :guilabel:`Document Request: Reminder`.
-
-   - Click on a date to see the details of a specific request. You can update it by clicking on the
-     :icon:`fa-pencil` (:guilabel:`pen`) icon, :guilabel:`Preview` the content of the reminder
-     email, or :guilabel:`Send Now` to send a reminder email.
+   From the :guilabel:`Activity` view, you can send a **reminder email** to users from whom you are
+   expecting a document. Go to the :guilabel:`Requested Document` column and click the
+   :icon:`fa-ellipsis-v` (:guilabel:`ellipsis`) icon, and :guilabel:`Document Request: Reminder`.
+   Click on a date to see the details of a specific request. You can update it by clicking on the
+   :icon:`fa-pencil` (:guilabel:`pen`) icon, :guilabel:`Preview` the content of the reminder email,
+   or :guilabel:`Send Now` to send a reminder email.
 
       .. image:: documents/reminder-email.png
          :alt: send a reminder email from the Activity view
@@ -199,8 +194,8 @@ Document` column.
 Add a link
 ~~~~~~~~~~
 
-To add a link to your documents dashboard, click on :guilabel:`Add a Link`, enter the
-:guilabel:`URL`, and :guilabel:`Name` it.
+To add a link to your documents dashboard, click :guilabel:`Add a Link`, enter the :guilabel:`URL`,
+and :guilabel:`Name` it.
 
 Share
 ~~~~~
@@ -210,8 +205,8 @@ You can make a document or a workspace accessible to anyone by sharing a URL.
 Share a document
 ****************
 
-To generate a **share link** to a document, select the document, click the arrow next to the
-:guilabel:`Upload` button, and click :guilabel:`Share`.
+To generate a **share link** to a document, select the document, click the :icon:`fa-caret-down`
+(:guilabel:`down arrow`) next to the :guilabel:`Upload` button, and click :guilabel:`Share`.
 
 In the pop-up, you can :guilabel:`Name` the share link, set a validity date by filling in the
 :guilabel:`Valid Until` field, and if you own more than one site, select the :guilabel:`Website` you
@@ -231,8 +226,8 @@ You can share a link to a workspace and allow users to :guilabel:`Download` its 
 
 To do so, go to the left column of your dashboard. In the :guilabel:`Workspace` section, select the
 workspace to share, and possibly one or several tags that will be automatically added to the
-uploaded documents. Then, click the arrow next to the :guilabel:`Upload` button and
-:guilabel:`Share`.
+uploaded documents. Then, click the :icon:`fa-caret-down` (:guilabel:`down arrow`) next to the
+:guilabel:`Upload` button and :guilabel:`Share`.
 
 In the pop-up, a share :guilabel:`URL` you can :guilabel:`Copy` is displayed. You can
 :guilabel:`Name` your share link, set a validity date by filling in the :guilabel:`Valid Until`
@@ -245,7 +240,7 @@ Upload <documents/upload>` files to it.
 
 .. Note::
    - The links added to your workspace using the :ref:`Add a Link <documents/add-a-link>` option
-     cannot be shared and are, therefore, excluded.
+     cannot be shared and are, therefore, excluded;
    - When tags are applied to a shared workspace, users can exclusively access the documents
      associated with those tags.
 
@@ -273,6 +268,8 @@ The documents sent to this email alias are uploaded to the workspace using the c
 
 .. tip::
    Go to :menuselection:`Configuration --> Share & Emails` to see and manage your share links.
+   Select a line and click :guilabel:`Delete` to disable the URL. People who have received this
+   link will no longer be able to access the document(s) or workspace.
 
 New spreadsheet
 ~~~~~~~~~~~~~~~
@@ -287,15 +284,15 @@ Workflow actions
 
 Workflow actions help manage documents and overall business operations. These are automated actions
 that can be created and customized for each workspace. With a single click you can, for example,
-create, move, sign, and add tags to a document, and process bills.
+create, move, sign, add tags to a document, and process bills.
 
-These workflow actions appear on the right panel when a document meets the set criteria.
+When a document meets the set criteria, these workflow actions appear on the right panel.
 
 Create workflow actions
 -----------------------
 
-To create workflow actions, go to :menuselection:`Documents --> Configuration --> Actions` and click
-:guilabel:`New`.
+To update an existing workflow action or create a new one, go to :menuselection:`Documents -->
+Configuration --> Actions` and click :guilabel:`New`.
 
 .. note::
    An action applies to all **sub-workspaces** under the :guilabel:`Related Workspace` you selected.
@@ -303,16 +300,15 @@ To create workflow actions, go to :menuselection:`Documents --> Configuration --
 Set the conditions
 ------------------
 
-You can :guilabel:`Create` a new :guilabel:`Action` or edit an existing one. You can define the
-:guilabel:`Action Name` and then set the conditions that trigger the appearance of the action button
-(:guilabel:`▶`) on the right-side panel when selecting a file.
+Define the :guilabel:`Action Name` and then set the conditions that trigger the appearance of the
+:icon:`fa-play` (:guilabel:`play`) icon on the right-side panel when selecting a file.
 
 There are three basic types of conditions you can set:
 
 #. :guilabel:`Tags`: you can use the :guilabel:`Contains` and :guilabel:`Does not contain`
-   conditions, meaning the files *must have* or *must not have* the tags set here.
+   conditions, meaning the files *must have* or *must not have* the tags set here;
 
-#. :guilabel:`Contact`: the files must be associated with the contact set here.
+#. :guilabel:`Contact`: the files must be associated with the contact set here;
 
 #. :guilabel:`Owner`: the files must be associated with the owner set here.
 
@@ -332,7 +328,7 @@ Advanced condition type: domain
 
 The :ref:`developer mode <developer-mode>` needs to be activated to access the :guilabel:`Domain`
 condition from the :guilabel:`Actions` tab. Once done, select the :guilabel:`Domain` condition type
-and click :guilabel:`Add condition`.
+and click :guilabel:`New Rule`.
 
 To create a rule, you typically select a :guilabel:`field`, an :guilabel:`operator`, and a
 :guilabel:`value`. For example, if you want to add a workflow action to all the PDF files inside a
@@ -352,30 +348,29 @@ Configure the actions
 
 Select the :guilabel:`Actions` tab to set up your action. You can simultaneously:
 
-- **Set Contact**: add a contact to the file, or replace an existing contact with a new one.
-- **Set Owner**: add an owner to the file, or replace an existing owner with a new one.
-- **Move to Workspace**: move the file to any workspace.
+- **Move to Workspace**: move the file to any workspace;
 - **Create**: create one of the following items attached to the file in your database:
 
-   - **Link to record**: link the document to a record (i.e. link to a vehicle in Fleet);
-   - **Product template**: create a product you can edit directly;
-   - **Task**: create a Project task you can edit directly;
-   - **Signature PDF template**: create a new Sign template to send out;
-   - **PDF to sign**: create a PDF to sign;
-   - **Applicant**: create a new HR application you can edit directly;
-   - **Vendor bill**: create a vendor bill using OCR and AI to scrape information from the file
-     content;
-   - **Customer invoice**: create a customer invoice using OCR and AI to scrape information from
-     the file;
-   - **Vendor credit note**: create a vendor credit note using OCR and AI to scrape information
-     from the file;
-   - **Credit note**: create a customer credit note using OCR and AI to scrape information from
-     the file;
-   - **Miscellaneous Operations**: create a record in :guilabel:`Miscellaneous Operations`
-     in Accounting;
-   - **Bank Statement**: create a Bank Statement in Finance;
-   - **Expense**: create an expense automatically based on a file's content.
+  - **Link to record**: create a link between a document and a record from a specific model;
+  - **Product template**: create a product you can edit directly;
+  - **Task**: create a Project task you can edit directly;
+  - **Signature PDF template**: create a new Sign template to send out;
+  - **PDF to sign**: create a Sign template to sign directly;
+  - **Applicant**: create a new HR application you can edit directly;
+  - **Vendor bill**: create a vendor bill using OCR and AI to scrape information from the file
+    content;
+  - **Customer invoice**: create an invoice using OCR and AI to scrape information from the file;
+  - **Vendor credit note**: create a vendor credit note using OCR and AI to scrape information
+    from the file;
+  - **Credit note**: create a customer credit note using OCR and AI to scrape information from the
+    file;
+  - **Miscellaneous Operations**: create an entry in the Miscellaneous Operations journal;
+  - **Bank Statement**: import a bank statement;
+  - **Purchase Receipt**: create a vendor receipt;
+  - **Expense**: create an HR expense.
 
+- **Set Contact**: add a contact to the file, or replace an existing contact with a new one;
+- **Set Owner**: add an owner to the file, or replace an existing owner with a new one;
 - **Set Tags**: add, remove, and replace any number of tags;
 - **Activities - Mark all as Done**: mark all activities linked to the file as done;
 - **Activities - Schedule Activity**: create a new activity linked to the file as configured in
