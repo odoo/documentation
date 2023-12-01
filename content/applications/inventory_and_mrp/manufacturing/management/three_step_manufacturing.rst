@@ -106,35 +106,78 @@ same process for each work order listed on the :guilabel:`Work Orders` tab.
 After completing all of the work orders, click :guilabel:`Produce All` at the top of the screen to
 mark the |MO| as :guilabel:`Done`, and register the manufactured product(s) into inventory.
 
-Tablet view workflow
---------------------
+Shop Floor workflow
+-------------------
 
-To complete the work orders for an |MO| using the tablet view, begin by navigating to
-:menuselection:`Manufacturing --> Operations --> Manufacturing Orders`, and then select a
-manufacturing order.
+To complete the work orders for an |MO| using the *Shop Floor* module, begin by navigating to
+:menuselection:`Manufacturing --> Operations --> Manufacturing Orders`, and then select an |MO|.
 
-Next, click on the :guilabel:`Work Orders` tab, and then select the :guilabel:`📱 (tablet)` button
-on the line of the first work order to be processed. This opens the tablet view.
+On the |MO|, click on the :guilabel:`Work Orders` tab, and then select the :guilabel:`↗️ (square
+with arrow coming out of it)` button on the line of the first work order to be processed. Doing so
+opens a :guilabel:`Work Orders` pop-up window, with details and processing options for the work
+order.
 
-.. image:: three_step_manufacturing/tablet-view-button.png
+On the pop-up window, select the :guilabel:`Open Shop Floor` button at the top-left of the window to
+open the *Shop Floor* module.
+
+.. image:: three_step_manufacturing/shop-floor-button.png
    :align: center
-   :alt: The tablet view button for a work order on a manufacturing order.
+   :alt: The Open Shop Floor button for a work order on a manufacturing order.
 
-After opening the tablet view, Odoo *Manufacturing* automatically starts a timer that keeps track of
-how long the work order takes to complete. After completing the work order, click the
-:guilabel:`Mark as Done` button in the top-right corner of the tablet view.
+When accessed directly from a specific work order within an |MO|, *Shop Floor* defaults to the page
+for the work center where the work order is configured to be carried out. The page shows a card for
+the work order that displays the |MO| number, the product and number of units to be produced, and
+the steps required to complete the work order.
 
-Clicking :guilabel:`Mark as Done` while there is at least one more work order left to complete opens
-a page that lists the next work order. Click on that work order to open it in the tablet view.
+.. image:: three_step_manufacturing/work-order-card.png
+   :align: center
+   :alt: A work order card on a work center page in the Shop Floor module.
 
-Once the final work order for the |MO| has been reached, a :guilabel:`Mark as Done and Close MO`
-button appears on the tablet view in addition to the :guilabel:`Mark as Done` button. Click
-:guilabel:`Mark as Done and Close MO` to mark the |MO| as :guilabel:`Done`, and register the
-manufactured product(s) into inventory.
+A work order is processed by completing each step listed on its card. This can be done by clicking
+on a step, and following the instructions listed on the pop-up window that appears. Once the step is
+completed, click :guilabel:`Next` to move on to the next step, if any are required.
 
-It is also possible to complete the final work order while keeping the |MO| open, by clicking
-:guilabel:`Mark as Done`. In this case, the |MO| can be closed at a later time by clicking the
-:guilabel:`Produce All` button on the |MO|.
+Alternatively, work order steps can be completed by clicking the checkbox that appears on the right
+side of the step's line on the work order card. When using this method, the step is automatically
+marked as completed, without a pop-up window appearing.
+
+The final step on a work order card is titled *Register Production*. This step is used to register
+the number of product units that were produced. If the number produced is equal to the number that
+the |MO| was created for, click the :guilabel:`# Units` button on the right side of the line to
+automatically register that number as the quantity produced.
+
+If a different number must be entered, click the :guilabel:`Register Production` step to open a
+pop-up window. Enter the number of units produced in the :guilabel:`Units` field, and then click
+:guilabel:`Validate` to register that number.
+
+.. note::
+   The *Register Production* step appears on every work order card. It must be completed for the
+   first work order that is processed. After doing so, the step appears as already completed for
+   each remaining work order in the |MO|.
+
+After completing all of the steps for a work order, a button appears on the footer of the work order
+card. If any other work orders must be completed before the |MO| can be closed, the button is titled
+:guilabel:`Mark as Done`. If there are no additional work orders to complete, the button is titled
+:guilabel:`Close Production`.
+
+Clicking :guilabel:`Mark as Done` causes the work order card to fade away. Once it disappears
+completely, the work order's status is marked as *Finished* on the |MO|, and the next work order
+appears in the *Shop Floor* module, on the page of the work center where it is configured to be
+carried out. Any additional work orders can be processed using the instructions detailed in this
+section.
+
+Clicking :guilabel:`Close Production` causes the work order card to fade away. Once it disappears,
+the |MO| is marked as *Done*, and the units of the product that were produced are entered into
+inventory.
+
+After clicking :guilabel:`Mark as Done` or :guilabel:`Close Production`, each button is replaced by
+an :guilabel:`Undo` button. Click the :guilabel:`Undo` button before the work order card fades away
+to keep the work order open.
+
+.. tip::
+   This section details the basic workflow for processing an |MO| in the *Shop Floor* module. For a
+   more in-depth explanation of the module and all of its features, please see the :ref:`Shop Floor
+   overview <manufacturing/shop_floor/shop_floor_overview>` documentation.
 
 Process finished product transfer
 =================================
