@@ -221,6 +221,8 @@ and loss balance is automatically reported on the balance sheet report.
 .. seealso::
    :doc:`Accounting Cheat Sheet <accounting/get_started/cheat_sheet>`
 
+.. _fiduciaries:
+
 Fiduciaries
 ===========
 
