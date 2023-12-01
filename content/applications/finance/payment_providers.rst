@@ -124,8 +124,8 @@ Online payment providers
      -
      -
    * - :doc:`Razorpay <payment_providers/razorpay>`
-     - The provider website
-     -
+     - Odoo
+     - |V|
      - Full only
      - Full and partial
      -

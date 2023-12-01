@@ -23,6 +23,14 @@ Configuration on Razorpay Dashboard
    checkboxes are ticked.
 #. Click on :guilabel:`Create Webhook` to finalize the configuration.
 
+.. _payment_providers/razorpay/recurring_payments:
+
+.. important::
+   The :guilabel:`Recurring payments` feature must
+   be activated if you want to make recurring payments.
+   Send a request to the `Razorpay Support team <https://razorpay.com/support/#request>`_ to
+   enable recurring payments.
+
 .. _payment_providers/razorpay/configure_odoo:
 
 Configuration on Odoo
