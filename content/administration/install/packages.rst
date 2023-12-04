@@ -54,10 +54,10 @@ Odoo needs a `PostgreSQL <https://www.postgresql.org/>`_ server to run properly.
          $ sudo systemctl start postgresql
 
 .. warning::
-   `wkhtmltopdf` is not installed through **pip** and must be installed manually in `version 0.12.5
-   <https://github.com/wkhtmltopdf/wkhtmltopdf/releases/tag/0.12.5>`_ for it to support headers and
-   footers. Check out the `wkhtmltopdf wiki <https://github.com/odoo/odoo/wiki/Wkhtmltopdf>`_ for
-   more details on the various versions.
+   `wkhtmltopdf` is not installed through **pip** and must be installed manually in `version 0.12.6
+   <https://github.com/wkhtmltopdf/packaging/releases/tag/0.12.6.1-3>`_ for it to support headers
+   and footers. Check out the `wkhtmltopdf wiki <https://github.com/odoo/odoo/wiki/Wkhtmltopdf>`_
+   for more details on the various versions.
 
 Repository
 ----------
