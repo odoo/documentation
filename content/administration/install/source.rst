@@ -409,8 +409,9 @@ Dependencies
                $ sudo npm install -g rtlcss
 
 .. warning::
-   `wkhtmltopdf` is not installed through **pip** and must be installed manually in `version 0.12.5
-   <https://github.com/wkhtmltopdf/wkhtmltopdf/releases/tag/0.12.5>`_ for it to support headers and
+   `wkhtmltopdf` is not installed through **pip** and must be installed manually in version `0.12.5
+   <https://github.com/wkhtmltopdf/wkhtmltopdf/releases/tag/0.12.5>`_ (systems older than 2016) or
+   `0.12.6 <https://wkhtmltopdf.org/downloads.html>`_ (newer systems) for it to support headers and
    footers. Check out the `wkhtmltopdf wiki <https://github.com/odoo/odoo/wiki/Wkhtmltopdf>`_ for
    more details on the various versions.
 
