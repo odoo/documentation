@@ -33,7 +33,7 @@ finetune them. Make sure they fit the content of the page, otherwise you will
 be downgraded by search engines.
 
 .. image:: seo/seo01.png
-   :align: center
+   :alt: Optimize SEO
 
 Keywords
 --------
@@ -45,7 +45,7 @@ towards your website. For each keyword, you see how it is used in the content
 searches in Google. The more keywords are used the better.
 
 .. image:: seo/seo02.png
-   :align: center
+   :alt: Keywords
 
 .. note::
   If your website is in multiple languages, you can use the Promote
@@ -58,13 +58,13 @@ Content is King
 When it comes to SEO, content is usually king. Odoo provides several
 modules to help you build your website content:
 
-- **Odoo Blogs**: write great contents.
+- **Odoo Blogs**: write great content.
 
 - **Odoo Slides**: publish all your Powerpoint or PDF presentations.
   Their content is automatically indexed on the web page. Example:
   `odoo.com/slides/public-channel-1 <https://www.odoo.com/slides/public-channel-1>`_
 
-- **Odoo Forum**: let your community create contents for you. Example:
+- **Odoo Forum**: let your community create content for you. Example:
   `odoo.com/forum/1 <https://odoo.com/forum/1>`_
   (accounts for 30% of Odoo.com landing pages)
 
@@ -74,7 +74,7 @@ modules to help you build your website content:
   (1000 pages created per month)
 
 .. note::
-  The 404 page is a regular page, that you can edit like any other
+  The 404 page is a regular page that you can edit like any other
   page in Odoo. That way, you can build a great 404 page to redirect to
   the top content of your website when visitors get lost in invalid URLs.
 
@@ -94,7 +94,7 @@ Odoo allows to link all your social network accounts in your website footer.
 All you have to do is to refer all your accounts in your company settings.
 
 .. image:: seo/seo03.png
-   :align: center
+   :alt: Contact us box
 
 Social Share
 ------------
@@ -104,14 +104,14 @@ By clicking the icon, they are prompted to share the page in their social media
 wall.
 
 .. image:: seo/seo04.png
-   :align: center
+   :alt: Social media sharing block
 
 Most social media use a picture of the picture to decorate the share post.
 Odoo uses the website logo by default but you can choose any other image
 of your page in the Promote tool.
 
 .. image:: seo/seo05.png
-   :align: center
+   :alt: Image for social share
 
 Facebook Page
 -------------
@@ -123,7 +123,7 @@ You can display the timeline, the next events and the messages.
 Twitter Scroller
 ----------------
 
-Display the Twitter feeds with customer satifaction on your website.
+Display the Twitter feeds with customer satisfaction on your website.
 This will increase the number of tweets and shares.
 
 Test Your Website
@@ -152,7 +152,7 @@ With the following components:
 -  **www.mysite.com** = your domain name
 
 -  **/fr\_FR** = page language. This part of the URL is
-   removed if the visitor browses the main language of the website
+   removed if the visitor browses the main language of the website.
    Thus, the main version of this page is:
    https://www.mysite.com/shop/product/my-great-product-31
 
@@ -321,7 +321,7 @@ extra second to load a page could `cost $1.6b to Amazon in
 sales <http://www.fastcompany.com/1825005/how-one-second-could-cost-amazon-16-billion-sales>`__.
 
 .. image:: seo/seo06.png
-  :align: center
+   :alt: Page abandonment
 
 Fortunately, Odoo does all the magic for you. Below, you will find the
 tricks Odoo uses to speed up your page loading time. You can compare how
@@ -343,7 +343,7 @@ unmodified if you prefer to optimize the quality of the image rather
 than performance.
 
 .. image:: seo/seo07.png
-  :align: center
+   :alt: adding an image
 
 .. note::
   Odoo compresses images when they are uploaded to your website, not
@@ -357,12 +357,12 @@ of the ``<img>`` tag. You can click on it to set your own title and Alt
 attributes for the image.
 
 .. image:: seo/seo08.png
-  :align: center
+   :alt: Title and alt attributes for the image
 
 When you click on this link, the following window will appear:
 
 .. image:: seo/seo09.png
-  :align: center
+   :alt: Change media description
 
 Odoo's pictograms are implemented using a font (`Font
 Awesome <https://fortawesome.github.io/Font-Awesome/icons/>`__ in most
@@ -370,7 +370,7 @@ Odoo themes). Thus, you can use as many pictograms as you want in your
 page, they will not result in extra requests to load the page.
 
 .. image:: seo/seo10.png
-  :align: center
+   :alt: Select pictogram
 
 Static Resources: CSS
 ---------------------
@@ -378,13 +378,13 @@ Static Resources: CSS
 All CSS files are pre-processed, concatenated, minified, compressed and
 cached (server-side and browser-side). The result:
 
-- only one CSS file request is needed to load a page
+- only one CSS file request is needed to load a page.
 
 - this CSS file is shared and cached amongst pages, so that when the
   visitor clicks on another page, the browser doesn't have to even
   load a single CSS resource.
 
-- this CSS file is optimized to be small
+- this CSS file is optimized to be small.
 
 **Pre-processed:** The CSS framework used by Odoo is Bootstrap.
 Although a theme might use another framework, most of `Odoo
@@ -506,7 +506,7 @@ You can configure your CDN options from the **Website Admin** app, using
 the Configuration menu. Here is an example of configuration you can use:
 
 .. image:: seo/seo11.png
-  :align: center
+   :alt: Configuration contact delivery network
 
 HTML Pages
 ----------
@@ -537,7 +537,7 @@ impacted in search engine rankings. All Odoo themes rely on Bootstrap to
 render efficiently according to the device: desktop, tablet or mobile.
 
 .. image:: seo/seo12.png
-  :align: center
+   :alt: Responsive design
 
 As all Odoo modules share the same technology, absolutely all pages in
 your website are mobile friendly.
@@ -565,7 +565,7 @@ CMS and eCommerce (Drupal, Wordpress, Magento, Prestashop).
 Here is the slide that summarizes the scalability of Odoo Website & eCommerce.
 
 .. image:: seo/seo13.png
-   :align: center
+   :alt: Scalability
 
 Search Engines Files
 ====================
@@ -616,7 +616,7 @@ pages to be displayed in Google using extra information like the price
 and rating of a product:
 
 .. image:: seo/seo14.png
-   :align: center
+   :alt: Data markups
 
 robots.txt
 ----------
