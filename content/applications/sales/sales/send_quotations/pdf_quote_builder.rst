@@ -16,6 +16,10 @@ customers, and adds an elegant level of professionalism to a company.
 .. seealso::
    `Odoo Quick Tips - Create a PDF quote [video] <https://www.youtube.com/watch?v=tQNydBZt-VI>`_
 
+.. note::
+   It is recommended to edit PDF forms with Adobe software. The form fields on the header and footer
+   PDF templates are necessary to get dynamic values with Odoo.
+
 Configuration
 =============
 
