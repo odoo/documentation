@@ -1,70 +1,110 @@
-===============
-Getting started
-===============
+==============================
+Marketing automation campaigns
+==============================
 
-The Odoo *Marketing Automation* app automates a variety of marketing tasks, by combining specific
+The Odoo *Marketing Automation* app automates a variety of marketing tasks by combining specific
 rules and filters to generate timed actions. Instead of manually having to build each stage of a
-campaign (such as a series of timed massmails), the *Marketing Automation* app allows marketers to
-build the entire campaign, and all of its stages, in one place on a single dashboard.
+campaign (like a series of timed massmails), the *Marketing Automation* app allows marketers to
+build the entire campaign, and all of its stages, in one place---on one dashboard.
 
-Create a campaign
-=================
+Campaign configuration
+======================
 
-To create a new automated marketing campaign, open the :menuselection:`Marketing Automation` app,
-and click the :guilabel:`Create` button in the upper-left corner. Doing so reveals a blank marketing
-automation campaign detail form on a separate page.
+To create a new automated marketing campaign, navigate to :menuselection:`Marketing Automation app
+--> New` to reveal a blank campaign form.
 
-On the blank marketing automation campaign page, the following smart buttons and fields are
-available:
-
-.. image:: first_campaign/marketing-template-sample.png
+.. image:: first_campaign/blank-marketing-campaign-form.png
    :align: center
-   :alt: A dashboard showing the creation of a new marketing automation campaign in Odoo.
+   :alt: A blank marketing automation campaign form in Odoo Marketing Automation application.
 
-**Smart buttons**
+After entering a name for the marketing campaign, configure the target audience in the remaining
+fields.
 
-- :guilabel:`Templates`: represents the number of pre-configured mail templates being used in this
-  particular campaign. (Templates can always be created on-the-fly, as well).
-- :guilabel:`SMS`: represents the number of personalized SMS messages connected to this campaign.
-- :guilabel:`Clicks`: represents the number of times attached links have been clicked by recipients
-  of this campaign.
-- :guilabel:`Participants`: represents the number of contacts that have directly participated in
-  this campaign.
+A target audience can be configured by entering specific criteria for Odoo to use when determining
+to whom this marketing automation campaign should be sent.
 
-**Fields**
+In the :guilabel:`Target` field, use the drop-down menu to choose which model the target audience
+filters should be based on (e.g. :guilabel:`Contact`, :guilabel:`Lead/Opportunity`,
+:guilabel:`Sales Order`, etc.).
 
-- :guilabel:`Name`: represents the name of the marketing automation campaign being created.
-- :guilabel:`Target`: this field is a drop-down menu to choose which model is targeted by this
-  campaign (i.e., by Contacts, Sales Order, Lead/Opportunity, etc.).
-- :guilabel:`Filter`: this field provides numerous configurable criteria that can be used to further
-  narrow down the target recipients/audience for the marketing automation campaign.
+Select :guilabel:`Search More...` from the drop-down menu to reveal a :guilabel:`Search: Target`
+pop-up window containing all of the available targeting options.
 
-Campaign filters
-================
+Once a :guilabel:`Target` is selected, there's a :guilabel:`Unicity based on` field. This field is
+used to avoid duplicates based on the model chosen in the :guilabel:`Target` field.
 
-To add a :guilabel:`Filter` to the target audience, click :guilabel:`Add Filter`, and a node field
-appears. In the node field, a custom equation can be configured for Odoo to use when filtering who
-to include (and exclude) in this specific marketing campaign.
+.. example::
+   If :guilabel:`Customers` is chosen as the :guilabel:`Target`, select :guilabel:`Email` in the
+   :guilabel:`Unicity based on` field so Odoo only processes one record for each customer email
+   address.
 
-.. image:: first_campaign/filter-node.png
+Select :guilabel:`Search More...` from the :guilabel:`Unicity based on` drop-down menu to reveal all
+available options in a pop-up window.
+
+Last on the campaign form is the :guilabel:`Filter` field. This is where more specific targeting
+options can be layered into the campaign to further narrow the number and type of recipients that
+receive the marketing automation material.
+
+If left alone, the :guilabel:`Filter` field reads: :guilabel:`Match all records`. That means Odoo
+uses the :guilabel:`Target` and :guilabel:`Unicity based on` fields to determine who the recipients
+will be. The number of recipients is represented beneath as :guilabel:`record(s)`.
+
+Campaign filter rules
+---------------------
+
+To add a more specific filter to a marketing automation campaign, click the :guilabel:`Add
+condition` button in the :guilabel:`Filter` field. Doing so reveals a series of other configurable
+filter rule fields.
+
+In the rule fields, customizable equations can be configured for Odoo to use when filtering who to
+include or exclude in this specific marketing campaign.
+
+.. image:: first_campaign/filter-node-equation-fields.png
    :align: center
-   :alt: A filter node in Odoo Marketing Automation.
-
-When the first field of the node is clicked, a nested drop-down menu of options appears on the
-screen, wherein specific criteria is chosen based on needs of the campaign. The remaining fields on
-the node further define the criteria determining which records to include (or exclude) in the
-execution of the campaign.
-
-To add another node, click the :guilabel:`➕ (plus sign)` icon to the right of the filtering rule. To
-add a branch of multiple nodes at the same time, click the :guilabel:`⋯ (ellipses)` icon.
-
-For further information on filters, refer to :doc:`this documentation page
-</applications/marketing/marketing_automation/getting_started/target_audience>`.
+   :alt: How the filter rule equation fields look in Odoo Marketing Automation campaigns.
 
 .. note::
-   :guilabel:`Records` represent the number of contacts in the system that fit the specified
-   criteria for a campaign.
+   :guilabel:`Records` refer to contacts in the system that fit the specified criteria for a
+   campaign.
+
+Also, once :guilabel:`Add condition` is clicked, the ability to :guilabel:`Save as Favorite Filter`
+becomes available on the campaign form.
+
+There is also the option to match records with :guilabel:`all` or :guilabel:`any` of the rules
+configured in the :guilabel:`Filter` field.
+
+To choose either of those options, click :guilabel:`all` from the middle of the sentence
+":guilabel:`Match records with all of the following rules`" to reveal a drop-down menu with those
+options.
+
+.. image:: first_campaign/match-all-any-rules-drop-down.png
+   :align: center
+   :alt: Match records with all or any of the rules in Filter field for marketing campaigns.
+
+When the first field of the rule equation is clicked, a nested drop-down menu of options appears on
+the screen where specific criteria is chosen based on needs of the campaign.
+
+The remaining fields on the rule equation further define the criteria, which is used to determine
+which records in the database to include or exclude in the execution of the campaign.
+
+To add another rule, either click the :guilabel:`➕ (plus sign)` icon to the right of the filtering
+rule, or click :guilabel:`New Rule` beneath the rule equation fields. When either are clicked, a new
+series of rule fields appears.
+
+To add a branch of multiple rules at the same time, click the :guilabel:`branch` icon, located to
+the right of the :guilabel:`➕ (plus sign)` icon. When clicked, two additional sub-rule equation
+fields appear beneath the initial rule.
+
+.. image:: first_campaign/rule-branch-filter-sample.png
+   :align: center
+   :alt: Sample of how the rule branches look in the filter section of a marketing campaign.
+
+There is also the option to have the filter apply to :guilabel:`any` or :guilabel:`all` of the
+configured branch rules.
+
+For further information on marketing automation campaign filter configuration, refer to :doc:`this
+documentation page <target_audience>`.
 
 .. seealso::
-   - :doc:`/applications/marketing/marketing_automation/getting_started/testing_running`
-   - :doc:`/applications/marketing/marketing_automation/getting_started/workflow_activities`
+   - :doc:`workflow_activities`
+   - :doc:`testing_running`
