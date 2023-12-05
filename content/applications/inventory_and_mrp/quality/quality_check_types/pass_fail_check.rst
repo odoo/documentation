@@ -2,6 +2,7 @@
 Pass - Fail quality check
 =========================
 
+.. |MO| replace:: :abbr:`MO (Manufacturing Order)`
 .. |QCP| replace:: :abbr:`QCP (Quality Control Point)`
 .. |QCPs| replace:: :abbr:`QCP (Quality Control Points)`
 
@@ -98,9 +99,11 @@ bottom of the window. If the criteria is not met, click the :guilabel:`Fail` but
 
 If a quality alert must be created, click the :guilabel:`Quality Alert` button that appears at the
 top of the manufacturing or inventory order after the check fails. Clicking :guilabel:`Quality
-Alert` opens a quality alert form on a new page. For a complete guide on how to fill out quality
-alert forms, view the documentation on :ref:`quality alerts
-<quality/quality_management/quality-alerts>`.
+Alert` opens a quality alert form on a new page.
+
+.. seealso::
+   For a complete guide on how to fill out quality alert forms, view the documentation on
+   :ref:`quality alerts <quality/quality_management/quality-alerts>`.
 
 On a work order
 ---------------
@@ -110,23 +113,35 @@ specified in the :guilabel:`Work Order Operation` field on the |QCP| form. If a 
 specified, a *Pass - Fail* quality check is created for that specific work order, rather than the
 manufacturing order as a whole.
 
-*Pass - Fail* quality checks configured for work orders must be processed from the tablet view. To
-do so, begin by navigating to :menuselection:`Manufacturing --> Operations --> Manufacturing
-Orders`. Select a manufacturing order that includes a work order for which a quality check is
-required. Open the tablet view for that work order by selecting the :guilabel:`Work Orders` tab, and
-then clicking the :guilabel:`📱 (tablet)` button on the order's line.
+*Pass - Fail* quality checks configured for work orders **must** be completed from the *Shop Floor*
+module. To do so, begin by navigating to :menuselection:`Manufacturing --> Operations -->
+Manufacturing Orders`. Select an |MO| that includes a work order for which a *Pass - Fail* quality
+check is required.
 
-With tablet view open, complete the steps listed on the left side of the screen until the *Pass -
-Fail* quality check step is reached. Upon reaching the check, follow the instructions that appear at
-the top of the screen. If the criteria for the check is met, click the :guilabel:`Pass` button at
-the top-right of the screen. If the criteria is not met, click the :guilabel:`Fail` button.
+On the |MO|, select the :guilabel:`Work Orders` tab, and then click the :guilabel:`Open Work Order
+(external link icon)` button on the line of the work order to be processed. On the resulting
+:guilabel:`Work Orders` pop-up window, click the :guilabel:`Open Shop Floor` button to open the
+*Shop Floor* module.
 
-.. image:: pass_fail_check/work-order-pass-fail-check.png
+When accessed from a specific work order, the *Shop Floor* module opens to the page for the work
+center where the order is configured to be processed, and isolates the work order's card so that no
+other cards are shown.
+
+Begin processing the work order's steps until the *Pass - Fail* quality check step is reached. Click
+on the step to open a pop-up window that details the criteria for whether the check passes or fails.
+Click the :guilabel:`Pass` button at the bottom of the pop-up window if the check passes, or the
+:guilabel:`Fail` button if it fails.
+
+If the :guilabel:`Pass` button is clicked, the pop-up window moves to the next step for the work
+order. If the :guilabel:`Fail` button is clicked, a :guilabel:`Quality Check Failed` pop-up window
+appears, detailing what should be done next.
+
+.. image:: pass_fail_check/pass-fail-check-shop-floor.png
    :align: center
-   :alt: A Pass - Fail check for a manufacturing work order.
+   :alt: A Pass - Fail check as it appears in the Shop Floor module.
 
-If a quality alert must be created, do so by clicking the :guilabel:`☰ (menu)` button in the tablet
-view, and selecting :guilabel:`Quality Alert` from the :guilabel:`Menu` pop-up window. A
-:guilabel:`Quality Alerts` pop-up window appears, from which a quality alert can be created. For a
-complete guide on how to fill out quality alert forms, view the documentation on :ref:`quality
-alerts <quality/quality_management/quality-alerts>`.
+.. tip::
+   Alternatively, instead of clicking on the step to open the pop-up window, a *Pass - Fail* quality
+   check can be completed by clicking the checkbox that appears on the right side of the step's line
+   on the work order card. When using this method, the quality check passes automatically, without a
+   pop-up window appearing.
