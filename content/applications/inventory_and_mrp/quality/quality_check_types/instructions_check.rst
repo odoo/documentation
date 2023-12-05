@@ -2,6 +2,7 @@
 Instructions quality check
 ==========================
 
+.. |MO| replace:: :abbr:`MO (Manufacturing Order)`
 .. |QCP| replace:: :abbr:`QCP (Quality Control Point)`
 
 In Odoo *Quality*, an *Instructions* check is one of the quality check types that can be selected
@@ -9,8 +10,8 @@ when creating a new quality check or quality control point (QCP). *Instructions*
 text entry field that allows the creator to provide instructions for how to complete the check.
 
 For a full overview of how to configure a quality check or a |QCP|, see the documentation on
-:ref:`quality checks <quality/quality_management/quality-checks>` and :ref:`quality control
-points <quality/quality_management/quality-control-points>`.
+:ref:`quality checks <quality/quality_management/quality-checks>` and :ref:`quality control points
+<quality/quality_management/quality-control-points>`.
 
 Process an Instructions quality check
 =====================================
@@ -65,26 +66,33 @@ Process work order quality check
 When configuring a |QCP| that is triggered by a manufacturing order, a specific work order can also
 be specified in the :guilabel:`Work Order Operation` field on the |QCP| form. If a work order is
 specified, an *Instructions* quality check is created for that specific work order, rather than the
-manufacturing order as a whole.
+|MO| as a whole.
 
-Quality checks configured for work orders must be completed from the tablet view. To do so, begin by
-navigating to :menuselection:`Manufacturing --> Operations --> Manufacturing Orders`. Select a
-manufacturing order that includes a work order for which a quality check is required. Open the
-tablet view for that work order by clicking the :guilabel:`📱 (tablet)` button on the order's line.
+Quality checks configured for work orders **must** be completed from the *Shop Floor* module. To do
+so, begin by navigating to :menuselection:`Manufacturing --> Operations --> Manufacturing Orders`.
+Select an |MO| that includes a work order for which an *Instructions* quality check is required.
 
-With tablet view open, complete the steps listed on the left side of the screen until the
-*Instructions* quality check step is reached. Upon reaching the check, the instructions for how to
-complete it will appear at the top of the screen. Follow the instructions, then click
-:guilabel:`Next` to move on to the next step.
+On the |MO|, select the :guilabel:`Work Orders` tab, and click the :guilabel:`Open Work Order
+(square with arrow coming out of it)` button on the line of the work order to be processed. On the
+resulting :guilabel:`Work Orders` pop-up window, click the :guilabel:`Open Shop Floor` button to
+open the *Shop Floor* module.
 
-.. image:: instructions_check/work-order-instructions-check.png
+When accessed from a specific work order, the *Shop Floor* module opens to the page for the work
+center where the order is configured to be processed, and isolates the work order's card so that no
+other cards are shown.
+
+Begin processing the work order's steps until the *Instructions* quality check step is reached.
+Click on the step to open a pop-up window that details how to complete the quality check. Once
+completed, click the :guilabel:`Next` button to complete the check, and move on to the next step.
+
+.. image:: instructions_check/instructions-check-shop-floor.png
    :align: center
-   :alt: An Instructions check for a work order.
+   :alt: An Instruction check as it appears in the Shop Floor module.
 
-If an issue or defect is found during the quality check, a quality alert may need to be created to
-notify a quality team. To do so, click the :guilabel:`☰ (menu)` button in the tablet view, and then
-select :guilabel:`Quality Alert` from the :guilabel:`Menu` pop-up window.
+Alternatively, an *Instructions* quality check can be completed by clicking the checkbox that
+appears on the right side of the step's line on the work order card. When using this method, the
+quality check automatically passes, without a pop-up window appearing.
 
-Clicking :guilabel:`Quality Alert` opens a :guilabel:`Quality Alerts` pop-up window, from which a
-quality alert can be created. For a complete guide to quality alert creation, view the documentation
-on :ref:`quality alerts <quality/quality_management/quality-alerts>`.
+.. note::
+   For a full guide to the *Shop Floor* module, see the :ref:`Shop Floor overview
+   <manufacturing/shop_floor/shop_floor_overview>` documentation.
