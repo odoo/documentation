@@ -7,13 +7,13 @@ Export and import data
 Export data from Odoo
 =====================
 
-When working with a database, it sometimes is necessary to export your data in a distinct file.
+When working with a database, it is sometimes necessary to export your data in a distinct file.
 Doing so can help to do reporting over your activities (even if Odoo offers a precise and easy
 reporting tool with each available application).
 
 With Odoo, you can export the values from any field in any record. To do so,
-activate the list view on the items that need to be exported, click on *Action*, and, then,
-on *Export*.
+activate the list view on the items that need to be exported, select the records to export, click on
+*Action*, and, then, on *Export*.
 
 .. image:: export_import_data/list-view-export.png
    :align: center
@@ -142,16 +142,16 @@ Odoo can automatically detect if a column is a date, and it will try to guess th
 set of most commonly used date formats. While this process can work for many date formats, some date
 formats will not be recognized. This can cause confusion due to day-month inversions; it is
 difficult to guess which part of a date format is the day and which part is the month in a date such
-as '01-03-2016'.
+as `01-03-2016`.
 
-To view which date format Odoo has found from your file you can check the **Date Format** that is
-shown when clicking on **Options** under the file selector. If this format is incorrect you can
-change it to your liking using the *ISO 8601* to define the format.
+When inputting dates in a spreadsheet, Odoo recommends using the *ISO 8601* format (`YYYY-MM-DD`) to
+avoid any difficulties during import.
 
-.. note::
-   If you are importing an excel (.xls, .xlsx) file, you can use date cells to store dates as the
-   display of dates in excel is different from the way it is stored. That way you will be sure that
-   the date format is correct in Odoo whatever your locale date format is.
+.. tip::
+   When importing Excel files (.xls, .xlsx), consider using *date cells* to store dates. This
+   maintains locale date formats for display, regardless of how the date is formatted in Odoo. When
+   importing a CSV file, use Odoo’s :guilabel:`Formatting` section to select the date format columns
+   to import.
 
 Can I import numbers with currency sign (e.g.: $32.00)?
 -------------------------------------------------------
