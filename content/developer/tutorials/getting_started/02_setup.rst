@@ -25,8 +25,8 @@ Like the first two repositories, it will be part of the `addons-path` that refer
 directories containing Odoo modules.
 
 #. Following the same process as with the `odoo/odoo` and `odoo/enterprise` repositories, visit
-   `github.com/odoo/technical-training-sandbox
-   <https://github.com/odoo/technical-training-sandbox>`_ and click the :guilabel:`Fork` button to
+   `github.com/odoo/technical-training
+   <https://github.com/odoo/technical-training>`_ and click the :guilabel:`Fork` button to
    create a fork of the repository under your account.
 #. Clone the repository on your machine with:
 
