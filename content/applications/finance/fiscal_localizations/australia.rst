@@ -4,7 +4,7 @@ Australia
 
 .. _australia/configuration:
 
-Configuration:
+Configuration
 ========================
 
 .. list-table::
@@ -36,13 +36,13 @@ Configuration:
 
 .. _australia/coa:
 
-COA:
-========================
+COA
+====
 
-The Australian chart of accounts is included in the Australian - Accounting module. Go to :menuselection:`Accounting --> Configuration --> Accounting: Chart of Accounts`. to access it.
+The Australian chart of accounts is included in the Australian - Accounting module. Go to :menuselection:`Accounting --> Configuration --> Accounting: Chart of Accounts` to access it.
 
 .. seealso::
-   :doc:`../accounting/get_started/chart_of_accounts`
+   - :doc:`../accounting/get_started/chart_of_accounts`
 
 
 .. _australia/taxes:
@@ -81,7 +81,7 @@ The taxes that include a TPAR mention will not only impact the BAS report, but a
 
 
 .. seealso::
-   :ref:`TPAR <australia/tpar>`
+   - :ref:`Taxable Payments Annual Report (TPAR) <australia/tpar>`
 
 Here are the taxes for Australia in Odoo 17.
 
@@ -238,7 +238,7 @@ Here are the taxes for Australia in Odoo 17.
 BAS Report
 ========================
 
-The Business Activity Statement (BAS) report is a critical tax reporting requirement for businesses registered for Goods and Services Tax (GST) in Australia. The BAS is used to report and remit various taxes to the Australian Taxation Office (ATO). With the Odoo BAS feature, businesses can report on the following:
+The *Business Activity Statement (BAS)* report is a critical tax reporting requirement for businesses registered for Goods and Services Tax (GST) in Australia. The BAS is used to report and remit various taxes to the Australian Taxation Office (ATO). With the Odoo BAS feature, businesses can report on the following:
 
 - Goods and Services Tax (GST) 
 - PAYG tax withheld
@@ -257,11 +257,11 @@ In addition, the BAS report includes the PAYG tax withheld components (W1 to W5,
 .. image:: australia/bas_e2.png
    :align: center
 
-The module incorporates in-built rules that facilitate the automatic calculation of taxes for types W1 to W5. For a detailed walkthrough and more information on the calculation process for these taxes, please refer to the Payroll app documentation.
+The module incorporates built-in rules that facilitate the automatic calculation of taxes for types W1 to W5. For a detailed walkthrough and more information on the calculation process for these taxes, please refer to the Payroll app documentation.
 
 
 .. seealso::
-   :ref:`Payroll <australia/payroll>`
+   - :ref:`Australian Payroll <australia/payroll>`
 
 
 Closing the BAS report
@@ -269,7 +269,9 @@ Closing the BAS report
 
 When it's time to file the tax return with the ATO, select "Close entry”. The tax return period can be configured in :menuselection:`configuration --> Settings --> Tax Return Periodicity`. Also, the start date of the tax return can be defined in Fiscal Periods.
 
-# Add a see also: closing fiscal year
+.. seealso:: 
+   - `Closing fiscal year <https://www.odoo.com/documentation/17.0/applications/finance/accounting/reporting/year_end.html>`_
+
 
 .. note::
    Odoo uses the calendar quarter rather than the Australian FY quarter which means July to September is Q3 in Odoo.
@@ -299,7 +301,7 @@ The balance between GST receivable and payable is now set against the tax cleari
 TPAR Report
 ========================
 
-Odoo allows businesses to report payments made to contractors or subcontractors during the financial year. This is done by generating a TPAR (Taxable Payments Annual Report). If you are not sure that your business needs this report, refer to the documentation provided by the `ATO <https://www.ato.gov.au/businesses-and-organisations/preparing-lodging-and-paying/reports-and-returns/taxable-payments-annual-report>`_. 
+Odoo allows businesses to report payments made to contractors or subcontractors during the financial year. This is done by generating a *TPAR (Taxable Payments Annual Report)*. If you are not sure that your business needs this report, refer to the documentation provided by the `ATO <https://www.ato.gov.au/businesses-and-organisations/preparing-lodging-and-paying/reports-and-returns/taxable-payments-annual-report>`_. 
 You can find this report in :menuselection:`Accounting ‣ Reporting`: 
 
 .. image:: australia/TPAR_1.png
@@ -326,7 +328,6 @@ The following image shows an example of an IT company contracting services from 
 .. image:: australia/TPAR_4.png
    :align: center
 
-The following image shows an example of an IT company contracting services from other IT-related companies and subcontractors: 
 
 .. image:: australia/TPAR_3.png
    :align: center
@@ -412,7 +413,7 @@ Configurations
 Settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:menuselection:`Accounting app -> Configuration -> Setting -> Batch Payment -> Allow Batch Payments`
+First, you need to enable batch payments by going to :menuselection:`Accounting app -> Configuration -> Setting -> Batch Payment -> Allow Batch Payments`
 
 .. image:: australia/ABA_1.png
    :align: center
@@ -421,7 +422,7 @@ Settings
 Bank Journal
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. :menuselection:`Configuration -> Journals -> Select the Bank type Journal`
+1. Now, we need to configure our bank journal properly. Go to :menuselection:`Configuration -> Journals -> Select the Bank type Journal`
 
 .. image:: australia/ABA_2.png
    :align: center
@@ -431,7 +432,7 @@ Bank Journal
 .. image:: australia/ABA_3.png
    :align: center
 
-3. Then, fill in all account-related information: BSB, account holder name, etc. Ensure that the Send Money is allowed.
+3. Then, fill in all account-related information: BSB, account holder name, etc. Ensure that the *Send Money* is allowed.
 
 .. image:: australia/ABA_4.png
    :align: center
@@ -501,7 +502,7 @@ Once the batch is validated, the ABA file becomes available in the chatter.
 After uploading it to your bank’s portal, an ABA transaction line will appear in your bank feed at the next bank feed iteration. You will then need to reconcile it against the batch payment made in Odoo.
 
 .. seealso:: 
-   `Batch Payment <https://www.odoo.com/documentation/17.0/applications/finance/accounting/payments/batch.html>`_
+   - `Batch Payment <https://www.odoo.com/documentation/17.0/applications/finance/accounting/payments/batch.html>`_
 
 
 .. _australia/buynow_paylater:
@@ -526,7 +527,7 @@ Currently, if you wish to have a direct connection between Odoo and your PoS ter
 
 .. seealso:: 
    - `Stripe Odoo Payment Provider <https://www.odoo.com/documentation/17.0/applications/finance/payment_providers/stripe.html>`_
-   - `Stripe Odoo Payment Terminal <https://www.odoo.com/documentation/17.0/applications/sales/point_of_sale/payment_methods/terminals/stripe.html>`
+   - `Stripe Odoo Payment Terminal <https://www.odoo.com/documentation/17.0/applications/sales/point_of_sale/payment_methods/terminals/stripe.html>`_
    - `Stripe Dashboard <https://dashboard.stripe.com/dashboard>`_
    - `Stripe Terminal <https://stripe.com/docs/terminal>`_
 
@@ -534,7 +535,7 @@ Currently, if you wish to have a direct connection between Odoo and your PoS ter
 .. _australia/payroll:
 
 Payroll
-==========
+========
 
 Create your employees
 --------------------------------
@@ -572,14 +573,14 @@ Contractual information related to Australia can be found in the following 3 pla
 .. important::
    The structures “Horticulture / Shearing (Schedule 2)” and “Artists and Performers (Schedule 3)” are only partially complete in version 17 of Odoo and proper tests should be performed before using them to pay employees in your production database. Send your feedback to au-feedback@mail.odoo.com.
 
-The field **Work Entry Source** is also very important and defines the way working hours and days will be accounted for in the employee’s payslip.
+The field *Work Entry Source* is also very important and defines the way working hours and days will be accounted for in the employee’s payslip.
 
 - **Working Schedule**: work entries are automatically generated based on the employee’s working schedule, starting from the start date of the contract. For example, let’s assume that an employee works 38 hours a week and their contract’s start date is January 1. Today is January 16 and the user generates a pay run from January 14 to 20. The working hours on the payslip will be automatically calculated to be 38 hours (5 * 7.36 hours) if no leave is taken.
 - **Attendances**: The default working schedule is ignored, and work entries are only generated after clocking in and out of the attendance app.
 - **Planning**: The default working schedule is ignored, and work entries are generated from planning shifts only.
 
 
-.. important::
+.. note::
    To ensure that Odoo's payslips automatically compute various penalty rates as defined by an award (overtime rate, public holiday rate, etc) additional configurations are necessary. These configurations involve the following steps: firstly,  new work entry types for each penalty rate need to be created, before assigning a penalty rate in % to each of them. Once this one-time configuration is done, work entries can be manually imported for each period and Odoo will separate the pay items and rates on the employee’s payslip.
 
 .. important::
@@ -662,12 +663,12 @@ Understand payslip features
 
 No matter the way payslips are created (individually or via a batch), the same features apply. Let us dive into the different sections of the payslip form.
 
-Depending on the way work entries are created for this employee (see the contract section above for more information), the **“Worked Days” table** will automatically show the number of days and hours the employee has worked during the payslip period, next to the corresponding total gross amount. Note that there will be one line per work entry type, which means that paid and unpaid time off, in addition to custom hourly penalty rates (overtime, public holidays…) will be added to the table automatically.
+Depending on the way work entries are created for this employee (see the contract section above for more information), the *“Worked Days” table* will automatically show the number of days and hours the employee has worked during the payslip period, next to the corresponding total gross amount. Note that there will be one line per work entry type, which means that paid and unpaid time off, in addition to custom hourly penalty rates (overtime, public holidays…) will be added to the table automatically.
 
 .. image:: australia/PAY_8.png
    :align: center
 
-Under the worked days table, the payroll user can make sure of the “Other Inputs” table for both allowances and extra pay items.
+Under the worked days table, the payroll user can make sure of the *“Other Inputs” table* for both allowances and extra pay items.
 
 
 .. image:: australia/PAY_9.png
@@ -687,7 +688,7 @@ Under the worked days table, the payroll user can make sure of the “Other Inpu
 .. image:: australia/PAY_11.png
    :align: center
 
-On the **tab “Salary Computation”**, the payroll user can verify whether all the pay rules have been computed correctly as per employee, contract and salary structure. Here are a few guidelines to better understand the data.
+On the *tab “Salary Computation”*, the payroll user can verify whether all the pay rules have been computed correctly as per employee, contract and salary structure. Here are a few guidelines to better understand the data.
 
 .. image:: australia/PAY_24.png
    :align: center
@@ -700,14 +701,14 @@ On the **tab “Salary Computation”**, the payroll user can verify whether all
 6. **Allowances & Extra pay items**: these lines will show if other inputs are added to the payslip.
 7. **Other lines**: depending on the employee and contract specifics (Medicare, child support, salary sacrifice…)
 
-When the payroll is satisfied with the payslip, they can click on **Create Draft entry** to generate a draft **accounting journal entry** that the accountant can review. Note that in the case of a payslip batch, this accounting entry will sum up balances from all payslips.
+When the payroll is satisfied with the payslip, they can click on *Create Draft entry* to generate a draft **accounting journal entry** that the accountant can review. Note that in the case of a payslip batch, this accounting entry will sum up balances from all payslips.
 
 Pay employees
 ------------------------------
 
 After a batch or a payslip’s journal entry has been posted, the company can proceed to pay their employees. The user can choose between two different payment methods.
 
-1. **Pay the employee in batch via ABA file**. This is only possible from the payslip batch level. Please note however that it is always possible to include an individual payslip into an existing batch and as such, include it in an ABA file. To generate the ABA file, make sure that the batch’s journal entry has been posted. From the batch form view, click on **Create ABA File** and choose the desired bank journal. The newly generated ABA file will be available for download in the field **ABA File**. It is possible to re-generate the ABA file after applying corrections to existing payslips.
+1. **Pay the employee in batch via ABA file**. This is only possible from the payslip batch level. Please note however that it is always possible to include an individual payslip into an existing batch and as such, include it in an ABA file. To generate the ABA file, make sure that the batch’s journal entry has been posted. From the batch form view, click on *Create ABA File* and choose the desired bank journal. The newly generated ABA file will be available for download in the field *ABA File*. It is possible to re-generate the ABA file after applying corrections to existing payslips.
 
 .. image:: australia/PAY_13.png
    :align: center
@@ -716,11 +717,13 @@ After a batch or a payslip’s journal entry has been posted, the company can pr
    :align: center
 
 .. important::
-   An ABA file can only be generated if both the company’s bank account and each employee’s bank account have been properly configured. See section “ABA Files” for more details.
+   An ABA file can only be generated if both the company’s bank account and each employee’s bank account have been properly configured.
+
+.. seealso:: 
+   - :ref:`ABA Files <australia/aba>`
 
 
-2. **Pay the employee using the “Register Payment” feature**. On the individual payslip level, once the payslip's journal entry has been posted, click on the button **Register Payment**. The same process as paying for vendor bills, select the desired bank journal and payment method, then reconcile  the payment later with the corresponding bank statements.
-
+2. **Pay the employee using the “Register Payment” feature**. On the individual payslip level, once the payslip's journal entry has been posted, click on the button *Register Payment*. The same process as paying for vendor bills, select the desired bank journal and payment method, then reconcile  the payment later with the corresponding bank statements.
 
 .. image:: australia/PAY_15.png
    :align: center
@@ -733,7 +736,7 @@ Certain payments such as “return to work” payments and “employment termina
 Return to work payments
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A return to work payment is a payment made to an employee to resume working. To process one in Odoo, create an individual payslip, select the employee and modify its regular structure to **Australia: return to work**. Then, simply add the gross amount of that payment in the **Other Inputs** table and compute the payslip.
+A return to work payment is a payment made to an employee to resume working. To process one in Odoo, create an individual payslip, select the employee and modify its regular structure to **Australia: return to work**. Then, simply add the gross amount of that payment in the *Other Inputs table* and compute the payslip.
 
 .. image:: australia/PAY_16.png
    :align: center
@@ -745,9 +748,8 @@ Odoo automatically computes the PAYG withholding, the net amount and the super g
    :align: center
 
 
-
 Termination payments
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
 Before proceeding with the employee’s ETP, make sure that a **Contract End Date** has been set on that employee’s contract, so that Odoo can automatically compute the final prorated salary of that employee for the current month.
 
