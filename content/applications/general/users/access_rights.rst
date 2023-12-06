@@ -2,66 +2,90 @@
 Access Rights
 =============
 
-Activate the :ref:`developer mode <developer-mode>`, then go to :menuselection:`Settings --> Users &
-Companies --> Groups`.
-
-Groups
-======
-
-| When choosing the groups the user can have access under
-  :ref:`Access Rights <users/add-individual>`, details of the rules and inheritances of that group
-  are not shown, so this is when the menu *Groups* comes along. *Groups* are created to define rules
-  to models within an application.
-| Under *Users*, have a list of the current ones. The ones with administrative rights are shown
-  in black.
-
-.. image:: access_rights/groups-users.png
-   :align: center
-   :alt: View of a group’s form emphasizing the tab users in Odoo
-
-*Inherited* means that users added to this application group are automatically added to the
-following ones. In the example below, users who have access to the group *Administrator* of *Sales*
-also have access to *Website/Restricted Editor* and *Sales/User: All Documents*.
-
-.. image:: access_rights/groups-inherited.png
-   :align: center
-   :height: 330
-   :alt: View of a group’s form emphasizing the tab inherited in Odoo
+Access rights are permissions that determine what content/applications users can access and edit. In
+Odoo, these permissions can be set for individual users or for groups of users. Limiting permissions
+to only those who need them ensures that users do not modify or delete anything they should not have
+access to. Additionally, only an *administrator* can change access rights.
 
 .. important::
-   Remember to always test the settings being changed in order to ensure that they are being applied
-   to the needed and right users.
+   Making changes to access rights can have a big impact on the database. For this reason, Odoo
+   recommends contacting an Odoo Business Analyst or our Support Team before making changes.
 
-The *Menus* tab is where you define which menus (models) the user can have access to.
+Users
+=====
 
-.. image:: access_rights/groups-menus.png
+The :ref:`Access Rights <users/add-individual>` for individual users are set when the user is added
+to the database, but they can be adjusted at any point in the user's profile.
+
+To make changes to a user's rights, first activate Odoo's :ref:`developer mode <developer-mode>`,
+then go to :menuselection:`Settings --> Users & Companies --> Users`. Click on the user to edit.
+
+.. image:: access_rights/navigate-to-users-menu.png
    :align: center
-   :height: 330
-   :alt: View of a group’s form emphasizing the tab menus in Odoo
+   :alt: In developer mode, go to the settings page and click Users and Companies, then Users.
 
-*Access Rights* rules are the first level of rights. The field is composed of the object name, which
-is the technical name given to a model. For each model, enable the following options as appropriate:
+At the user's profile page, click on the :guilabel:`Access Rights` tab and scroll down to view the
+current permissions. For each app, use the dropdown to select what level of permission this user
+should have (*Blank/None*, *User: Own Documents*, *User: All Documents*, or *Administrator*).
 
-- *Read*: the values of that object can be only seen by the user.
-- *Write*: the values of that object can be edited by the user.
-- *Create*: values for that object can be created by the user.
-- *Delete*: the values of that object can be deleted by the user.
-
-.. image:: access_rights/groups-access-rights.png
+.. image:: access_rights/user-permissions-dropdown-menu.png
    :align: center
-   :alt: View of a group’s form emphasizing the tab access rights in Odoo
+   :alt: Open the drop-down menu next to each app to set the user's level of permissions.
 
-| As a second layer of editing and visibility rules, *Record Rules* can be formed. They overwrite,
-  or refine, the *Access Rights*.
-| A record rule is written using a *Domain*. Domains are conditions used to filter or searching
-  data. Therefore, a domain expression is a list of conditions. For each rule, choose among the
-  following options: *Read*, *Write*, *Create* and *Delete* values.
+Creating and modifying groups
+=============================
 
-.. image:: access_rights/groups-record-rules.png
+Groups are app-specific sets of permissions that are used to manage common access rights for a large
+amount of users. Administrators can modify the existing groups in Odoo or create new ones to define
+rules to models within an application.
+
+To access groups, first activate Odoo's :ref:`developer mode <developer-mode>`, then go to
+:menuselection:`Settings --> Users & Companies --> Groups`.
+
+.. image:: access_rights/click-users-and-companies.png
    :align: center
-   :alt: View of a group’s form emphasizing the tab record rules in Odoo
+   :alt: In developer mode, go to the settings page and click Users and Companies, then Groups.
+
+To create a new group, click :guilabel:`NEW`, select an application, and complete the New Group form
+(detailed below). To modify existing groups, click on a group and edit the contents of the form.
 
 .. important::
-   Making changes in access rights can have a big impact on the database. For this reason, we
-   recommend you to contact your Odoo Business Analyst or our Support Team, unless you have
-   knowledge about Domains in Odoo.
+   Always test the settings being changed to ensure they are being applied to the correct users.
+
+The group form contains multiple tabs for managing all elements of the group. In each tab, click
+:guilabel:`Add a line` to add a new row for users or rules, and click the :guilabel:`X` icon to
+remove a row.
+
+.. image:: access_rights/groups-form.png
+   :align: center
+   :alt: Click each tab in the groups form to modify the settings of the group.
+
+- **Users Tab**: Lists the current users in the group, users listed in black have administrative
+  rights.
+- **Inherited Tab**: Inherited means that users added to this group are automatically added to the
+  ones listed on this tab. For example: If the group *Sales/Administrator* lists the group
+  *Website/Restricted Editor* in its Inherited tab, then any users added to the
+  *Sales/Administrator* group automatically receive access to the *Website/Restricted Editor* group
+  as well.
+- **Menus Tab**: Defines which menus/models the group can have access to.
+- **Access Rights Tab**: Lists the first level of rights (models) that this group has access rights
+  to. In this tab, the *Model* column represents the common name of the menu/model, and the *Name*
+  column represents the technical name given to the model. For each model, enable the following
+  options as appropriate:
+
+  - :guilabel:`Read`: Users can see the object's existing values.
+  - :guilabel:`Write`: Users can edit the object's existing values.
+  - :guilabel:`Create`: Users can create new values for the object.
+  - :guilabel:`Delete`: Users can delete values for the object.
+- **Record Rules**: Lists the second layer of editing and visibility rights. Record Rules overwrite,
+  or refine, the group's *Access Rights*. For each rule, choose values for the following options:
+
+  - :guilabel:`Apply for Read`.
+  - :guilabel:`Apply for Write`.
+  - :guilabel:`Apply for Create`.
+  - :guilabel:`Apply for Delete`.
+
+.. important::
+   Record rules are written using a *Domain*, or conditions that filter data. A domain expression is
+   a list of such conditions. Users without knowledge of domains and domain expressions should
+   consult an Odoo Business Analyst or our Support Team before making changes.
