@@ -47,7 +47,7 @@ widgets) to your form view will get you up and running in no time.
 
     .. code-block:: xml
 
-        <record id="businness_trip_form" model="ir.ui.view">
+        <record id="business_trip_form" model="ir.ui.view">
             <field name="name">business.trip.form</field>
             <field name="model">business.trip</field>
             <field name="arch" type="xml">
@@ -757,7 +757,7 @@ widgets, respectively).
 
     .. code-block:: xml
 
-        <record id="businness_trip_form" model="ir.ui.view">
+        <record id="business_trip_form" model="ir.ui.view">
             <field name="name">business.trip.form</field>
             <field name="model">business.trip</field>
             <field name="arch" type="xml">
