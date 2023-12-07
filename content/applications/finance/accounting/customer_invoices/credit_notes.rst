@@ -21,6 +21,8 @@ vendors because of modifications to confirmed customer invoices or vendor bills.
    :doc:`return </applications/sales/sales/products_prices/returns>` if a storable product is
    returned.
 
+.. _accounting/issue-credit-note:
+
 Issue a credit note
 ===================
 
@@ -71,6 +73,8 @@ automatically validates it, reconciles it with the related invoice, and opens a 
 prefilled with the same details from the original invoice.
 
 This is the option to **modify** the content of a *validated* invoice.
+
+.. _accounting/issue-debit-note:
 
 Issue a debit note
 ==================
