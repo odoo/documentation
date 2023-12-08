@@ -330,7 +330,7 @@ in ``/etc/nginx/sites-enabled/odoo.conf`` set:
       proxy_pass http://odoochat;
       proxy_set_header Upgrade $http_upgrade;
       proxy_set_header Connection $connection_upgrade;
-      proxy_set_header X-Forwarded-Host $host;
+      proxy_set_header X-Forwarded-Host $http_host;
       proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
       proxy_set_header X-Forwarded-Proto $scheme;
       proxy_set_header X-Real-IP $remote_addr;
@@ -339,7 +339,7 @@ in ``/etc/nginx/sites-enabled/odoo.conf`` set:
     # Redirect requests to odoo backend server
     location / {
       # Add Headers for odoo proxy mode
-      proxy_set_header X-Forwarded-Host $host;
+      proxy_set_header X-Forwarded-Host $http_host;
       proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
       proxy_set_header X-Forwarded-Proto $scheme;
       proxy_set_header X-Real-IP $remote_addr;
