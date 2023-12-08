@@ -106,9 +106,9 @@ If your connection with the proxy is disconnected, you can reconnect with the pr
 :guilabel:`Fetch Account` button.
 
 .. note::
-   This disconnection can be caused by the Odoo support. In this case, please contact the `support
-   <https://www.odoo.com/help>`_ directly with your client id or the reference of the error listed
-   in the chatter.
+   If you are unable to reconnect using the :guilabel:`Fetch Account` button, please contact the
+   `support <https://www.odoo.com/help>`_ directly with your client id or the reference of the error
+   listed in the chatter.
 
 .. _MigrationOnlineSync:
 
