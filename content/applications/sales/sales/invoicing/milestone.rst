@@ -16,7 +16,7 @@ In Odoo, each milestone of your project is considered as a product. To
 configure products to work this way, go to any product form.
 
 You have to set the product type as *Service* under general
-information and select *Milestones* in the sales tab.
+information and set invoicing policy to *Based on Milestones* under the same tab
 
 .. image:: milestone/milestone01.png
     :align: center
