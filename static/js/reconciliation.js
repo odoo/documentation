@@ -26,7 +26,7 @@
             state = operations[state]();
         }).appendTo($rec);
 
-        var $1 = $rec.find('td:contains("Invoice 1"), td:contains("Payment 1")')
+        var $1 = $rec.find('td:contains("Invoice 1"), td:contains("Partial payment 1/2"), td:contains("Partial payment 2/2")')
             .parent()
             .addClass('invoice1');
         var $2 = $rec.find('td:contains("Invoice 2"), td:contains("Payment 2")')
