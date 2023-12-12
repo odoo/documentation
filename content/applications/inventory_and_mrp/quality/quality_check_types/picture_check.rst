@@ -2,6 +2,7 @@
 Take a Picture quality check
 ============================
 
+.. |MO| replace:: :abbr:`MO (Manufacturing Order)`
 .. |QCP| replace:: :abbr:`QCP (Quality Control Point)`
 .. |QCPs| replace:: :abbr:`QCP (Quality Control Points)`
 
@@ -20,7 +21,7 @@ This documentation only details the configuration options that are unique to *Ta
 quality checks and |QCPs|. For a full overview of all the configuration options available when
 creating a single check or a |QCP|, see the documentation on :ref:`quality checks
 <quality/quality_management/quality-checks>` and :ref:`quality control points
-<quality/quality_management/quality-checks>`.
+<quality/quality_management/quality-control-points>`.
 
 Quality check
 -------------
@@ -39,10 +40,10 @@ follows:
    :align: center
    :alt: A quality check form configured for a Take a Picture quality check.
 
-Quality Control Point (QCP)
----------------------------
+Quality control point
+---------------------
 
-To create a |QCP| that will generate *Take a Picture* quality checks automatically, navigate to
+To create a |QCP| that generates *Take a Picture* quality checks automatically, navigate to
 :menuselection:`Quality --> Quality Control --> Control Points`, and click :guilabel:`New`. Fill out
 the new |QCP| form as follows:
 
@@ -124,33 +125,52 @@ specified in the :guilabel:`Work Order Operation` field on the |QCP| form. If a 
 specified, a *Take a Picture* quality check is created for that specific work order, rather than the
 manufacturing order as a whole.
 
-*Take a Picture* quality checks created for work orders must be completed from the tablet view. To
-do so, begin by navigating to :menuselection:`Manufacturing --> Operations --> Manufacturing
-Orders`. Select a manufacturing order that includes a work order for which a quality check is
-required. Open the tablet view for that work order by selecting the :guilabel:`Work Orders` tab, and
-then clicking the :guilabel:`📱 (tablet)` button on the order's line.
+*Take a Picture* quality checks configured for work orders **must** be completed from the *Shop
+Floor* module. To do so, begin by navigating to :menuselection:`Manufacturing --> Operations -->
+Manufacturing Orders`. Then, select an |MO| that includes a work order for which a *Take a Picture*
+quality check is required.
 
-With tablet view open, complete the steps listed on the left side of the screen until the *Take a
-Picture* quality check step is reached. Upon reaching the check, follow the instructions for how to
-take the picture, which appear at the top of the screen.
+On the |MO|, select the :guilabel:`Work Orders` tab, and then click the :guilabel:`Open Work Order
+(external link icon)` button on the line of the work order to be processed. On the resulting
+:guilabel:`Work Orders` pop-up window, click the :guilabel:`Open Shop Floor` button to open the
+*Shop Floor* module.
 
-After taking the picture, make sure it is stored on the device being used to process the work order
-(computer, tablet, etc.). Then, click the :guilabel:`Take a Picture` button to open the device's
-file manager. In the file manager, navigate to the picture, select it, and click :guilabel:`Open` to
-attach it. Finally, click :guilabel:`Validate` to complete the quality check.
+When accessed from a specific work order, the *Shop Floor* module opens to the page for the work
+center where the order is configured to be processed, and isolates the work order's card, so no
+other cards are shown.
 
-.. image:: picture_check/work-order-picture-check.png
+Process the work order's steps until the *Take a Picture* quality check step is reached. Click on
+the step to open a pop-up window that includes instructions for how the picture should be taken.
+After taking the picture, make sure it is stored on the device being used to process the quality
+check (computer, tablet, etc.).
+
+Then, click the :guilabel:`Take a Picture` button on the pop-up window to open the device's file
+manager. In the file manager, navigate to the picture, select it, and click :guilabel:`Open` to
+attach it.
+
+Finally, click :guilabel:`Validate` at the bottom of the pop-up window to complete the quality
+check. The pop-up window then moves on to the next step of the work order.
+
+.. image:: picture_check/picture-check-shop-floor.png
    :align: center
-   :alt: A Take a Picture check for a manufacturing work order.
+   :alt: A Take a Picture check in the Shop Floor module.
 
-If a quality alert must be created, do so by clicking the :guilabel:`☰ (three horizontal lines)`
-button in the tablet view, and selecting :guilabel:`Quality Alert` from the :guilabel:`Menu` pop-up
-window. A :guilabel:`Quality Alerts` pop-up window appears, from which a quality alert can be
-created. For a complete guide on how to fill out quality alert forms, view the documentation on
-:ref:`quality alerts <quality/quality_management/quality-alerts>`.
+If a quality alert must be created, exit the pop-up window by clicking the :guilabel:`X (close)`
+button in the top-right corner.
 
-Review a picture attached to a check
-====================================
+Then, click the :guilabel:`⋮ (three vertical dots)` button on the bottom-right corner of the work
+order card to open the :guilabel:`What do you want to do?` pop-up window.
+
+On the :guilabel:`What do you want to do?` pop-up window, select the :guilabel:`Create a Quality
+Alert` button. Doing so opens a blank quality alert form in a new :guilabel:`Quality Alerts` pop-up
+window.
+
+.. seealso::
+   For a complete guide on how to fill out quality alert forms, view the documentation on
+   :doc:`quality alerts <../quality_management/quality_alerts>`.
+
+Review picture attached to quality check
+========================================
 
 After a picture has been attached to a check, it can then be reviewed by quality team members or
 other users. To do so, navigate to :menuselection:`Quality --> Quality Control --> Quality Checks`,
