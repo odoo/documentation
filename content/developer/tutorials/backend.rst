@@ -729,6 +729,8 @@ float, string), or a function taking a recordset and returning a value::
     user_id = fields.Many2one('res.users', default=lambda self: self.env.user)
 
 .. note::
+   For existing records, a boolean field defaulting to False signifies a null boolean state.
+   So sql constraints needs to use `is not True` instead of `is False`.
    The object ``self.env`` gives access to request parameters and other useful things:
 
     - ``self.env.cr`` or ``self._cr`` is the database *cursor* object; it is
