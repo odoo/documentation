@@ -2,6 +2,7 @@
 Measure quality check
 =====================
 
+.. |MO| replace:: :abbr:`MO (Manufacturing Order)`
 .. |QCP| replace:: :abbr:`QCP (Quality Control Point)`
 .. |QCPs| replace:: :abbr:`QCPs (Quality Control Points)`
 
@@ -137,8 +138,9 @@ If a quality alert must be created, click the :guilabel:`Quality Alert` button t
 top of the manufacturing or inventory order after the check fails. Clicking :guilabel:`Quality
 Alert` opens a quality alert form on a new page.
 
-For a complete guide on how to fill out the quality alert form, view the documentation on
-:ref:`quality alerts <quality/quality_management/quality-alerts>`.
+.. seealso::
+   For a complete guide on how to fill out the quality alert form, view the documentation on
+   :doc:`quality alerts <../quality_management/quality_alerts>`.
 
 On a work order
 ---------------
@@ -148,47 +150,62 @@ specified in the :guilabel:`Work Order Operation` field on the |QCP| form. If a 
 specified, a *Measure* quality check is created for that specific work order, rather than the
 manufacturing order as a whole.
 
-*Measure* quality checks created for work orders must be processed from the tablet view. To do so,
-begin by navigating to :menuselection:`Manufacturing --> Operations --> Manufacturing Orders`.
-Select a manufacturing order that includes a work order for which a quality check is required. Open
-the tablet view for that work order by selecting the :guilabel:`Work Orders` tab, and then clicking
-the :guilabel:`📱 (tablet)` button on the order's line.
+*Measure* quality checks configured for work orders **must** be completed from the *Shop Floor*
+module. To do so, begin by navigating to :menuselection:`Manufacturing --> Operations -->
+Manufacturing Orders`. Select an |MO| that includes a work order for which a *Measure* quality check
+is required.
 
-With tablet view open, complete the steps listed on the left side of the screen until the *Measure*
-quality check step is reached. Upon reaching the check, the instructions for how to take the
-measurement appear at the top of the screen. Enter the measured value in the :guilabel:`Measure`
-field above the instructions, and then click :guilabel:`Validate`.
+On the |MO|, select the :guilabel:`Work Orders` tab, and click the :guilabel:`Open Work Order
+(external link icon)` button on the line of the work order to be processed. On the resulting
+:guilabel:`Work Orders` pop-up window, click the :guilabel:`Open Shop Floor` button to open the
+*Shop Floor* module.
 
-.. image:: measure_check/measure-tablet-view.png
+When accessed from a specific work order, the *Shop Floor* module opens to the page for the work
+center where the order is configured to be processed, and isolates the work order's card, so no
+other cards are shown.
+
+Process the work order's steps until the *Measure* quality check step is reached. Click on the step
+to open a pop-up window that includes instructions for how the measurement should be taken. After
+taking the measurement, enter it in the :guilabel:`Measure` field of the pop-up window, and then
+click :guilabel:`Validate`.
+
+.. image:: measure_check/measure-check-shop-floor.png
    :align: center
-   :alt: A Measure quality check in the Manufacturing tablet view.
+   :alt: A Measure check in the Shop Floor module.
 
 If the measurement entered is within the range specified in the :guilabel:`Tolerance` section of the
-|QCP|, the quality check passes and the tablet view moves on to the next step of the work order.
-However, if the measurement entered is outside of the specified range, a pop-up window appears,
+|QCP|, the quality check passes, and the pop-up window moves on to the next step of the work order.
+However, if the measurement entered is outside of the specified range, a new pop-up window appears,
 titled :guilabel:`Quality Check Failed`.
 
-The body of the :guilabel:`Quality Check Failed` pop-up window shows a warning message that states,
-:guilabel:`You measured # units and it should be between # units and # units.`, as well as the
+The body of the :guilabel:`Quality Check Failed` pop-up window shows a message that states,
+:guilabel:`You measured # units and it should be between # units and # units`, as well as the
 instructions entered in the :guilabel:`Message If Failure` tab of the |QCP|. At the bottom of the
-pop-up, two buttons appear: :guilabel:`Correct Measure` and :guilabel:`Confirm Measure`.
+pop-up window, two buttons appear: :guilabel:`Correct Measure` and :guilabel:`Confirm Measure`.
 
-.. image:: measure_check/measure-check-failed.png
+.. image:: measure_check/shop-floor-measure-check-failed.png
    :align: center
-   :alt: The "Quality Check Failed" pop-up window.
+   :alt: The Quality Check Failed pop-up window for a Measure check in the Shop Floor module.
 
 If the measurement was not entered correctly, and should be changed, select :guilabel:`Correct
 Measure`. Doing so opens a new pop-up window, titled :guilabel:`Quality Check`. Enter the corrected
-measurement in the :guilabel:`Measure` field, then click :guilabel:`Validate` to complete the check,
-and move on to the next step of the work order.
+measure in the :guilabel:`Measure` field, and then click :guilabel:`Validate` to complete the check
+and close the pop-up window.
 
 If the measurement was entered correctly, click :guilabel:`Confirm Measure` instead, and the quality
 check fails. Follow any instructions that were listed on the :guilabel:`Quality Check Failed` pop-up
 window.
 
-If a quality alert must be created, do so by clicking the :guilabel:`☰ (three horizontal lines)`
-button, and selecting :guilabel:`Quality Alert` from the :guilabel:`Menu` pop-up window. A
-:guilabel:`Quality Alerts` pop-up window appears, from which a quality alert can be created.
+If a quality alert must be created, exit the pop-up window by clicking the :guilabel:`X (close)`
+button in the top-right corner.
 
-For a complete guide on how to fill out the quality alert form, view the documentation on
-:ref:`quality alerts <quality/quality_management/quality-alerts>`.
+Then, click the :guilabel:`⋮ (three vertical dots)` button on the bottom-right corner of the work
+order card to open the :guilabel:`What do you want to do?` pop-up window.
+
+On the :guilabel:`What do you want to do?` pop-up window, select the :guilabel:`Create a Quality
+Alert` button. Doing so opens a blank quality alert form in a new :guilabel:`Quality Alerts` pop-up
+window.
+
+.. seealso::
+   For a complete guide on how to fill out quality alert forms, view the documentation on
+   :doc:`quality alerts <../quality_management/quality_alerts>`.
