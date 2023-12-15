@@ -59,7 +59,7 @@ desired language in the scanner's user manual.
 Automatic carriage return
 -------------------------
 
-Odoo has a default 50-millisecond delay between scans to prevent accidental double scanning. To
+Odoo has a default 100-millisecond delay between scans to prevent accidental double scanning. To
 synchronize with the barcode scanner, set it to include a *carriage return* (:dfn:`character like
 the "Enter" key on a keyboard`) after each scan. Odoo interprets the carriage return as the end of
 the barcode input; so Odoo accepts the scan, and waits for the next one.
