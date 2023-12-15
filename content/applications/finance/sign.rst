@@ -100,6 +100,14 @@ and the status of the signatures.
 .. image:: sign/signature-status.png
    :alt: Signature status
 
+Validity dates and reminders
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can set **validity dates** on limited-duration agreement documents or send **automatic email
+reminders** to obtain signatures on time. From your dashboard, click :guilabel:`Send` on your
+document. On the new page, go to the :guilabel:`Options` section and fill in the :guilabel:`Valid
+Until` and :guilabel:`Reminder` fields.
+
 Templates
 ---------
 
@@ -120,9 +128,10 @@ immediately.
 
 .. tip::
    You can **create a template from a document that was previously sent**. To do so, go to
-   :menuselection:`Documents --> All Documents`. On the document you want to retrieve, click on
-   ⋮, then :guilabel:`Template`. Click on ⋮ again, then :guilabel:`Restore`. Your document now
-   appears on your dashboard next to your other templates.
+   :menuselection:`Documents --> All Documents`. On the document you want to retrieve, click on the
+   the vertical ellipsis (:guilabel:`⋮`), then :guilabel:`Template`. Click on the vertical ellipsis
+   (:guilabel:`⋮`) again, then :guilabel:`Restore`. Your document now appears on your dashboard next
+   to your other templates.
 
 .. _sign/role:
 
@@ -226,8 +235,8 @@ document.
 Tags
 ====
 
-Tags can be used to categorize and organize documents, allowing users to search for and filter
-documents based on specific criteria quickly.
+Tags can be used to categorize and organize documents, allowing users to quickly search for and
+filter documents based on specific criteria.
 
 You can manage tags by going to :menuselection:`Configuration --> Tags`. To create a tag, click
 :guilabel:`New`. On the new line, add the :guilabel:`Tag Name` and select a :guilabel:`Color Index`
@@ -235,22 +244,24 @@ for your tag.
 
 To apply a tag to a document, use the dropdown list available in your document.
 
+.. note::
+   You can modify the tags of a signed document by going to :menuselection:`Documents --> All
+   Documents`, clicking the vertical ellipsis (:guilabel:`⋮`) on your document, then
+   :guilabel:`Details`, and modifying your :guilabel:`Tags`.
+
 Sign order
 ==========
 
 When a document needs to be signed by different parties, the signing order lets you control the
 order in which your recipients receive it for signature.
 
-By going to :menuselection:`Configuration --> Settings`, you can :guilabel:`Enable Signing Order`.
+After uploading a PDF with at least two signature fields with two different roles and clicking
+:guilabel:`Send`, toggle the :guilabel:`Specify Signing Order` button and search for the signer's
+name or email information to add them. You can decide on the signing order by typing **1** or **2**
+in the first column.
+
 Each recipient receives the signature request notification only once the previous recipient has
 completed their action.
-
-Add at least two :guilabel:`Signature` fields with different roles to your document. Click
-:guilabel:`Send`, go to the :guilabel:`Options` tab, and tick the :guilabel:`Specify signing order`
-box.
-
-Add the signer's :guilabel:`Name or email` information. You can decide on the :guilabel:`Sign Order`
-by typing :guilabel:`1` or :guilabel:`2` in the :guilabel:`Sign Order` column.
 
 .. seealso::
    `Odoo Quick Tips: Sign order [video] <https://www.youtube.com/watch?v=2KUq7RPt1cU/>`_
