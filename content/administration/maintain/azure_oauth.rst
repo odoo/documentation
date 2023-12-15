@@ -52,7 +52,7 @@ able to read (IMAP) and send (SMTP) emails in the Microsoft 365 setup. First, cl
 Add a Permission` button and select :guilabel:`Microsoft Graph` under :guilabel:`Commonly Used
 Microsoft APIs`. After, select the :guilabel:`Delegated Permissions` option.
 
-In the search bar, search for the following :guilabel:`Deregulated permissions` and click
+In the search bar, search for the following :guilabel:`Delegated Permissions` and click
 :guilabel:`Add permissions` for each one:
 
 - :guilabel:`SMTP.Send`
