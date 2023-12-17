@@ -73,6 +73,9 @@ msgid ""
 "accounting transactions (e.g., customer invoices, vendor bills, point-of-"
 "sales orders, expenses, inventory valuations, etc.)."
 msgstr ""
+"يقوم أودو تلقائياً بإنشاء كافة بنود دفتر اليومية الأساسية لكافة المعاملات "
+"المحاسبية (مثال: فواتير العملاء، وفواتير الموردين، وطلبات نقطة البيع، "
+"والنفقات، وتقييمات المخزون، وما إلى ذلك). "
 
 #: ../../content/applications/finance/accounting.rst:61
 msgid ""
@@ -4147,7 +4150,7 @@ msgstr "For Italian companies"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:34
 msgid "CFDI (4.0)"
-msgstr ""
+msgstr "CFDI (4.0)"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:35
 msgid "For Mexican companies"
@@ -19633,7 +19636,7 @@ msgstr "an RS-232 serial-to-USB adapter per FDM;"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:422
 msgid "an :ref:`IoT Box <belgium/iotbox>` (one IoT box per FDM); and"
-msgstr ""
+msgstr "an :ref:`IoT Box <belgium/iotbox>` (one IoT box per FDM); and"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:423
 msgid "a receipt printer."
@@ -31308,22 +31311,28 @@ msgid ""
 "This cancellation motive has to be used when an invoice was sent with an "
 "error in any field and does not need to be replaced by another one."
 msgstr ""
+"This cancellation motive has to be used when an invoice was sent with an "
+"error in any field and does not need to be replaced by another one."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:482
 msgid ""
 "For this case, all that is required is to click on :guilabel:`Request EDI "
 "Cancellation`, and then press click the :guilabel:`Process Now` button."
 msgstr ""
+"For this case, all that is required is to click on :guilabel:`Request EDI "
+"Cancellation`, and then press click the :guilabel:`Process Now` button."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
 msgid "Invoice 02 properly canceled."
-msgstr ""
+msgstr "Invoice 02 properly canceled."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:488
 msgid ""
 "As the field :guilabel:`Substituted By` does not exist, the SAT should "
 "detect automatically that the cancellation reason is 02."
 msgstr ""
+"As the field :guilabel:`Substituted By` does not exist, the SAT should "
+"detect automatically that the cancellation reason is 02."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:492
 msgid ""
@@ -31333,10 +31342,15 @@ msgid ""
 " you need to cancel the invoice directly in the SAT and use a *Server "
 "Action*."
 msgstr ""
+"Odoo has certain limitations to canceling invoices in the SAT: The reasons "
+"03 and 04 (*Operation did not take place* and *Nominative transactions "
+"related to a global invoice*) are not currently supported by Odoo. For this,"
+" you need to cancel the invoice directly in the SAT and use a *Server "
+"Action*."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:498
 msgid "Payment cancellations"
-msgstr ""
+msgstr "Payment cancellations"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:500
 msgid ""
@@ -31346,10 +31360,15 @@ msgid ""
 "will be sent to the SAT. After a few seconds, you can press "
 ":guilabel:`Retry` to confirm the current SAT status."
 msgstr ""
+"It is also possible to cancel *Payment Complements*. For this, go to the "
+"payment and select :guilabel:`Request EDI Cancellation`. As with invoices, a"
+" blue button will appear. Select :guilabel:`Process now`, and the document "
+"will be sent to the SAT. After a few seconds, you can press "
+":guilabel:`Retry` to confirm the current SAT status."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:505
 msgid "The payment moves their status to :guilabel:`Cancelled`."
-msgstr ""
+msgstr "The payment moves their status to :guilabel:`Cancelled`."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:508
 msgid ""
@@ -31357,20 +31376,25 @@ msgid ""
 "the relation of the original document by adding a `04|` plus the fiscal "
 "folio."
 msgstr ""
+"Just like invoices, when you create a new *Payment Complement*, you can add "
+"the relation of the original document by adding a `04|` plus the fiscal "
+"folio."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:512
 msgid "Invoicing special use cases"
-msgstr ""
+msgstr "Invoicing special use cases"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:515
 msgid "CFDI to public"
-msgstr ""
+msgstr "CFDI to public"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:517
 msgid ""
 "If the customer you are selling goods or services to does not require an "
 "invoice, a *CFDI to Public* has to be created."
 msgstr ""
+"If the customer you are selling goods or services to does not require an "
+"invoice, a *CFDI to Public* has to be created."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:520
 msgid ""
@@ -31378,6 +31402,9 @@ msgid ""
 "triggered. This is a main change in the CFDI 4.0 that states that invoices "
 "with that specific name needs additional fields."
 msgstr ""
+"However, if you use the name `PUBLICO EN GENERAL`, an error will be "
+"triggered. This is a main change in the CFDI 4.0 that states that invoices "
+"with that specific name needs additional fields."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:523
 msgid ""
@@ -31385,6 +31412,9 @@ msgid ""
 "created, you need to add any name to your customer that is not `PUBLICO EN "
 "GENERAL`. (For example `CLIENTE FINAL`)"
 msgstr ""
+"Odoo currently does not support this. So for a *CFDI to Public* to be "
+"created, you need to add any name to your customer that is not `PUBLICO EN "
+"GENERAL`. (For example `CLIENTE FINAL`)"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:526
 msgid ""
@@ -31392,10 +31422,13 @@ msgid ""
 ":guilabel:`RFC` ``XAXX010101000`` are needed. The :guilabel:`Fiscal Regime` "
 "of your customer must be `Sin obligaciones fiscales`."
 msgstr ""
+"In addition to this, the zip code of your company, and the generic "
+":guilabel:`RFC` ``XAXX010101000`` are needed. The :guilabel:`Fiscal Regime` "
+"of your customer must be `Sin obligaciones fiscales`."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
 msgid "CFDI to Public Error."
-msgstr ""
+msgstr "CFDI to Public Error."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:535
 msgid ""
@@ -31407,32 +31440,45 @@ msgid ""
 ":guilabel:`Mexican Bank` as the service in :menuselection:`Accounting --> "
 "Settings --> Currency`."
 msgstr ""
+"The main currency in Mexico is MXN. While this is mandatory for all Mexican "
+"companies, it is possible to send and receive invoices and payments in "
+"different currencies. To do this, you can enable the use of "
+":doc:`multicurrency "
+"</applications/finance/accounting/get_started/multi_currency>`. And select "
+":guilabel:`Mexican Bank` as the service in :menuselection:`Accounting --> "
+"Settings --> Currency`."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:541
 msgid ""
 "This way, in the XML file of the document you get the correct exchange rate "
 "and the total amount both in the foreign currency and in MXN."
 msgstr ""
+"This way, in the XML file of the document you get the correct exchange rate "
+"and the total amount both in the foreign currency and in MXN."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:544
 msgid ""
 "It is highly recommended to use :doc:`a bank account for each currency "
 "</applications/finance/accounting/bank/foreign_currency>`."
 msgstr ""
+"It is highly recommended to use :doc:`a bank account for each currency "
+"</applications/finance/accounting/bank/foreign_currency>`."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
 msgid "Multi-currency configuration."
-msgstr ""
+msgstr "Multi-currency configuration."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:551
 msgid ""
 "The only currencies that automatically update their exchange rate daily are "
 "USD, EUR, GBP, and JPY."
 msgstr ""
+"The only currencies that automatically update their exchange rate daily are "
+"USD, EUR, GBP, and JPY."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:555
 msgid "Down payments"
-msgstr ""
+msgstr "Down payments"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:557
 msgid ""
@@ -31441,12 +31487,18 @@ msgid ""
 "it is required to properly link invoices to each other with the "
 ":guilabel:`CFDI Origin` field."
 msgstr ""
+"There can be cases where you receive a payment in advance from a customer, "
+"that needs to be applied to an invoice later. In order to do this in Odoo, "
+"it is required to properly link invoices to each other with the "
+":guilabel:`CFDI Origin` field."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:561
 msgid ""
 "It is necessary to have the :doc:`Sales </applications/sales/sales>` app "
 "installed."
 msgstr ""
+"It is necessary to have the :doc:`Sales </applications/sales/sales>` app "
+"installed."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:564
 msgid ""
@@ -31463,12 +31515,18 @@ msgid ""
 ":guilabel:`Service`, and use the :guilabel:`UNSPSC Category` `84111506 "
 "Servicios de facturación`."
 msgstr ""
+"First, navigate to the :menuselection:`Sales` app to create a product "
+"`Anticipo` and configure it: the :guilabel:`Product Type` must be "
+":guilabel:`Service`, and use the :guilabel:`UNSPSC Category` `84111506 "
+"Servicios de facturación`."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:571
 msgid ""
 "Then, go to :menuselection:`Sales --> Settings --> Invoicing --> Down "
 "Payments` and add the product as the default."
 msgstr ""
+"Then, go to :menuselection:`Sales --> Settings --> Invoicing --> Down "
+"Payments` and add the product as the default."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:574
 msgid ""
@@ -31476,6 +31534,9 @@ msgid ""
 "(either using a percentage or fixed amount). Then, sign the document, and "
 ":guilabel:`Register the Payment`."
 msgstr ""
+"Create a sales order with the total amount, and create a down payment "
+"(either using a percentage or fixed amount). Then, sign the document, and "
+":guilabel:`Register the Payment`."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:577
 msgid ""
@@ -31484,6 +31545,10 @@ msgid ""
 "select :guilabel:`Regular Invoice` and uncheck :guilabel:`Deduct down "
 "payments`."
 msgstr ""
+"When the time comes for the customer to get the final invoice, create it "
+"again from the same sales order. In the :guilabel:`Create Invoices` wizard "
+"select :guilabel:`Regular Invoice` and uncheck :guilabel:`Deduct down "
+"payments`."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:581
 msgid ""
@@ -31491,6 +31556,9 @@ msgid ""
 "into the :guilabel:`CDFI Origin` of the second invoice, adding the prefix "
 "`07|`. Sign the document."
 msgstr ""
+"Then, copy the :guilabel:`Fiscal Folio` from the first invoice and paste it "
+"into the :guilabel:`CDFI Origin` of the second invoice, adding the prefix "
+"`07|`. Sign the document."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:584
 msgid ""
@@ -31499,6 +31567,10 @@ msgid ""
 ":guilabel:`CFDI Origin` of the credit note, adding the prefix `07|`. Sign "
 "the document."
 msgstr ""
+"After this, create a credit note for the first invoice. Copy the "
+":guilabel:`Fiscal Folio` from the second invoice and paste it in the "
+":guilabel:`CFDI Origin` of the credit note, adding the prefix `07|`. Sign "
+"the document."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:588
 msgid ""
@@ -31508,10 +31580,15 @@ msgid ""
 "Finally, register the remaining amount with the :guilabel:`Register Payment`"
 " wizard."
 msgstr ""
+"With this, all electronic documents are linked to each other. The final step"
+" is to fully pay the new invoice. At the bottom of the new invoice, you can "
+"find :guilabel:`Outstanding credits` in the credit note, add it as payment. "
+"Finally, register the remaining amount with the :guilabel:`Register Payment`"
+" wizard."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:594
 msgid "External trade"
-msgstr ""
+msgstr "External trade"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:596
 msgid ""
@@ -31519,34 +31596,45 @@ msgid ""
 "values in both the XML and PDF, according to `SAT regulations "
 "<http://omawww.sat.gob.mx/tramitesyservicios/Paginas/complemento_comercio_exterior.htm>`_."
 msgstr ""
+"The external trade is a complement to a regular invoice that adds certain "
+"values in both the XML and PDF, according to `SAT regulations "
+"<http://omawww.sat.gob.mx/tramitesyservicios/Paginas/complemento_comercio_exterior.htm>`_."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:600
 msgid ""
 "This adds certain mandatory fields to invoices with a foreign customer, such"
 " as:"
 msgstr ""
+"This adds certain mandatory fields to invoices with a foreign customer, such"
+" as:"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:602
 msgid "The specific address of the receiver and the sender"
-msgstr ""
+msgstr "The specific address of the receiver and the sender"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:603
 msgid ""
 "The addition of a :guilabel:`Tariff Fraction` that identifies the type of "
 "product"
 msgstr ""
+"The addition of a :guilabel:`Tariff Fraction` that identifies the type of "
+"product"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:604
 msgid ""
 "The correct :guilabel:`Incoterm` (International Commercial Terms), among "
 "others."
 msgstr ""
+"The correct :guilabel:`Incoterm` (International Commercial Terms), among "
+"others."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:606
 msgid ""
 "This allows the correct identification of exporters and importers, in "
 "addition to expanding the description of the merchandise sold."
 msgstr ""
+"This allows the correct identification of exporters and importers, in "
+"addition to expanding the description of the merchandise sold."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:609
 msgid ""
@@ -31554,12 +31642,17 @@ msgid ""
 "operations of A1 type. While the current CFDI is 4.0, the external trade is "
 "currently on version 1.1"
 msgstr ""
+"Since January 1st, 2018, it is a requirement for taxpayers who carry export "
+"operations of A1 type. While the current CFDI is 4.0, the external trade is "
+"currently on version 1.1"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:612
 msgid ""
 "In order to use this feature, the modules :guilabel:`l10n_mx_edi_extended` "
 "and :guilabel:`l10n_mx_edi_extended_40` have to be installed."
 msgstr ""
+"In order to use this feature, the modules :guilabel:`l10n_mx_edi_extended` "
+"and :guilabel:`l10n_mx_edi_extended_40` have to be installed."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:616
 msgid ""
@@ -31567,6 +31660,9 @@ msgid ""
 "feature. Consult your accountant first if needed before doing any "
 "modification."
 msgstr ""
+"Before installing, make sure first that your business needs to use this "
+"feature. Consult your accountant first if needed before doing any "
+"modification."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:625
 msgid ""
@@ -31576,6 +31672,11 @@ msgid ""
 "with the `Official SAT Catalog <sat-catalog_>`_ or you will receive an "
 "error."
 msgstr ""
+"While the CFDI 4.0 requirements ask you to add a valid zip code in your "
+"contact, the external trade complement adds as a mandatory field the "
+":guilabel:`City` and the :guilabel:`State`. All three fields must coincide "
+"with the `Official SAT Catalog <sat-catalog_>`_ or you will receive an "
+"error."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:630
 msgid ""
@@ -31583,6 +31684,9 @@ msgid ""
 "not in the company itself. You can find your company's contact in "
 ":menuselection:`Accounting --> Customers --> Customers`"
 msgstr ""
+"Add the :guilabel:`City` and :guilabel:`State` in the company's contract, "
+"not in the company itself. You can find your company's contact in "
+":menuselection:`Accounting --> Customers --> Customers`"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:634
 msgid ""
@@ -31591,28 +31695,38 @@ msgid ""
 "General Settings --> Companies`. These two have to coincide with the data in"
 " the SAT."
 msgstr ""
+"The fields :guilabel:`Locality` and :guilabel:`Colony Code` are optional and"
+" can be added in the company directly in :menuselection:`Settings --> "
+"General Settings --> Companies`. These two have to coincide with the data in"
+" the SAT."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
 msgid "Optional External Trade Company fields."
-msgstr ""
+msgstr "Optional External Trade Company fields."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:641
 msgid ""
 "The contact data for the foreign receiving client must have the following "
 "fields completed to avoid errors:"
 msgstr ""
+"The contact data for the foreign receiving client must have the following "
+"fields completed to avoid errors:"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:644
 msgid ""
 "The entire company :guilabel:`Address`, including a valid :guilabel:`ZIP` "
 "code and the foreign :guilabel:`Country`."
 msgstr ""
+"The entire company :guilabel:`Address`, including a valid :guilabel:`ZIP` "
+"code and the foreign :guilabel:`Country`."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:646
 msgid ""
 "The format of the foreign :guilabel:`VAT` (tax identification number, for "
 "example: Colombia `123456789-1`)"
 msgstr ""
+"The format of the foreign :guilabel:`VAT` (tax identification number, for "
+"example: Colombia `123456789-1`)"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:648
 msgid ""
@@ -31620,6 +31734,9 @@ msgid ""
 "goods for a period of time temporarily (:guilabel:`Temporary`) or "
 "permanently (:guilabel:`Definitive`)."
 msgstr ""
+"In the :guilabel:`MX EDI` tab, you need to address if the customer receives "
+"goods for a period of time temporarily (:guilabel:`Temporary`) or "
+"permanently (:guilabel:`Definitive`)."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:650
 msgid ""
@@ -31627,32 +31744,41 @@ msgid ""
 "delete any information in the field :guilabel:`Fiscal Regime`. Do not use "
 ":guilabel:`No Tax Breakdown` either."
 msgstr ""
+"If you create this contact based in another from Mexico, make sure that you "
+"delete any information in the field :guilabel:`Fiscal Regime`. Do not use "
+":guilabel:`No Tax Breakdown` either."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
 msgid "Required External Trade Customer fields."
-msgstr ""
+msgstr "Required External Trade Customer fields."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:658
 msgid ""
 "In the resulting XML and PDF, the :guilabel:`VAT` is automatically replaced "
 "by the generic VAT for abroad transactions: `XEXX010101000`."
 msgstr ""
+"In the resulting XML and PDF, the :guilabel:`VAT` is automatically replaced "
+"by the generic VAT for abroad transactions: `XEXX010101000`."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:664
 msgid ""
 "All products involved with external trade must fill four fields, two of them"
 " exclusive to this feature."
 msgstr ""
+"All products involved with external trade must fill four fields, two of them"
+" exclusive to this feature."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:667
 msgid ""
 "The :guilabel:`Internal Reference` of the product is in the "
 ":guilabel:`General Information` tab."
 msgstr ""
+"The :guilabel:`Internal Reference` of the product is in the "
+":guilabel:`General Information` tab."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:668
 msgid "The :guilabel:`Weight` of the product must be more than `0`."
-msgstr ""
+msgstr "The :guilabel:`Weight` of the product must be more than `0`."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:669
 msgid ""
@@ -31660,31 +31786,39 @@ msgid ""
 " :guilabel:`Tariff Fraction` of the product in the :guilabel:`Accounting` "
 "tab."
 msgstr ""
+"The `correct  <https://www.ventanillaunica.gob.mx/vucem/Clasificador.html>`_"
+" :guilabel:`Tariff Fraction` of the product in the :guilabel:`Accounting` "
+"tab."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:671
 msgid ""
 "The :guilabel:`UMT Aduana` corresponds to the :guilabel:`Tariff Fraction`."
 msgstr ""
+"The :guilabel:`UMT Aduana` corresponds to the :guilabel:`Tariff Fraction`."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
 msgid "Required External Trade Product fields."
-msgstr ""
+msgstr "Required External Trade Product fields."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:677
 msgid ""
 "If the UoM code of the :guilabel:`Tariff Fraction` is `01`, the correct "
 ":guilabel:`UMT Aduana` is `kg`."
 msgstr ""
+"If the UoM code of the :guilabel:`Tariff Fraction` is `01`, the correct "
+":guilabel:`UMT Aduana` is `kg`."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:679
 msgid ""
 "If the UoM code of the :guilabel:`Tariff Fraction` is `06`, the correct "
 ":guilabel:`UMT Aduana` is `Units`."
 msgstr ""
+"If the UoM code of the :guilabel:`Tariff Fraction` is `06`, the correct "
+":guilabel:`UMT Aduana` is `Units`."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:683
 msgid "Invoicing flow"
-msgstr ""
+msgstr "Invoicing flow"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:685
 msgid ""
@@ -31695,6 +31829,12 @@ msgid ""
 "USD in the :guilabel:`Currencies` section. The correct :guilabel:`Service` "
 "to run is :guilabel:`Mexican Bank`."
 msgstr ""
+"Before creating an invoice, it is important to take into account that "
+"external trade invoices require to convert the amounts of your product into "
+"USD. Therefore, we need to have :doc:`multicurrency enabled "
+"</applications/finance/accounting/get_started/multi_currency>` and activate "
+"USD in the :guilabel:`Currencies` section. The correct :guilabel:`Service` "
+"to run is :guilabel:`Mexican Bank`."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:691
 msgid ""
@@ -31703,20 +31843,26 @@ msgid ""
 ":guilabel:`Certificate Source` in the :guilabel:`Other Info` tab. The latter"
 " is optional."
 msgstr ""
+"With the correct exchange rate set up in :menuselection:`Accounting --> "
+"Settings --> Currency`, the only fields left are :guilabel:`Incoterm` and "
+":guilabel:`Certificate Source` in the :guilabel:`Other Info` tab. The latter"
+" is optional."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
 msgid "External Trade Other Info."
-msgstr ""
+msgstr "External Trade Other Info."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:698
 msgid ""
 "Sign the invoice with the same process as a regular one: Press the "
 ":guilabel:`Process Now` button."
 msgstr ""
+"Sign the invoice with the same process as a regular one: Press the "
+":guilabel:`Process Now` button."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:701
 msgid "Delivery guide"
-msgstr ""
+msgstr "Delivery guide"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:703
 msgid ""
@@ -31724,6 +31870,9 @@ msgid ""
 "porte->`_ is a bill of lading: a document that states the type, quantity, "
 "and destination of goods being carried."
 msgstr ""
+"A `Carta Porte <https://www.sat.gob.mx/consultas/68823/complemento-carta-"
+"porte->`_ is a bill of lading: a document that states the type, quantity, "
+"and destination of goods being carried."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:706
 msgid ""
@@ -31732,12 +31881,18 @@ msgid ""
 "to generate a document type \"T\" (Traslado) which, unlike other documents, "
 "is created in a delivery order instead of an invoice or payment."
 msgstr ""
+"On December 1st, 2021, version 2.0 of this CFDI was implemented for all "
+"transportation providers, intermediaries, and owners of goods. Odoo is able "
+"to generate a document type \"T\" (Traslado) which, unlike other documents, "
+"is created in a delivery order instead of an invoice or payment."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:710
 msgid ""
 "Odoo can create XML and PDF files with or without ground transport and can "
 "process materials that are treated as *Dangerous Hazards*."
 msgstr ""
+"Odoo can create XML and PDF files with or without ground transport and can "
+"process materials that are treated as *Dangerous Hazards*."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:713
 msgid ""
@@ -31745,6 +31900,9 @@ msgid ""
 ":guilabel:`l10n_mx_edi_extended_40`, :guilabel:`l10n_mx_edi_stock` and "
 ":guilabel:`l10n_mx_edi_stock_40` have to be installed."
 msgstr ""
+"In order to use this feature, the modules :guilabel:`l10n_mx_edi_extended`, "
+":guilabel:`l10n_mx_edi_extended_40`, :guilabel:`l10n_mx_edi_stock` and "
+":guilabel:`l10n_mx_edi_stock_40` have to be installed."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:717
 msgid ""
@@ -31752,6 +31910,9 @@ msgid ""
 "</applications/inventory_and_mrp/inventory>` and :doc:`Sales "
 "</applications/sales/sales>` apps configured."
 msgstr ""
+"In addition to this, it is necessary to have the :doc:`Inventory "
+"</applications/inventory_and_mrp/inventory>` and :doc:`Sales "
+"</applications/sales/sales>` apps configured."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:722
 msgid ""
@@ -31759,10 +31920,13 @@ msgid ""
 "transport. Consult your accountant first if this feature is needed before "
 "doing any modifications."
 msgstr ""
+"Odoo does not support Carta Porte type \"I\" (Ingreso), air, or marine "
+"transport. Consult your accountant first if this feature is needed before "
+"doing any modifications."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:728
 msgid "Odoo manages two different types of CFDI:"
-msgstr ""
+msgstr "Odoo manages two different types of CFDI:"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:730
 msgid ""
@@ -31770,12 +31934,17 @@ msgid ""
 "`less than 30 KM "
 "<http://omawww.sat.gob.mx/cartaporte/Paginas/documentos/PreguntasFrecuentes_Autotransporte.pdf>`_."
 msgstr ""
+"**No Federal Highways**: It is used when the *Distance to Destination* is "
+"`less than 30 KM "
+"<http://omawww.sat.gob.mx/cartaporte/Paginas/documentos/PreguntasFrecuentes_Autotransporte.pdf>`_."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:732
 msgid ""
 "**Federal Transport**: It is used when the *Distance to Destination* exceeds"
 " 30 KM."
 msgstr ""
+"**Federal Transport**: It is used when the *Distance to Destination* exceeds"
+" 30 KM."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:734
 msgid ""
@@ -31783,6 +31952,9 @@ msgid ""
 "customer, the UNSPSC code...), if you are using *No Federal Highways*, no "
 "external configuration is needed."
 msgstr ""
+"Other than the standard requirements of regular invoicing (The RFC of the "
+"customer, the UNSPSC code...), if you are using *No Federal Highways*, no "
+"external configuration is needed."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:737
 msgid ""
@@ -31790,10 +31962,13 @@ msgid ""
 "contacts, vehicle setups, and products. Those configurations are added to "
 "the XML and PDF files."
 msgstr ""
+"For *Federal Transport*, several configurations have to be added to "
+"contacts, vehicle setups, and products. Those configurations are added to "
+"the XML and PDF files."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:741
 msgid "Contacts and vehicles"
-msgstr ""
+msgstr "Contacts and vehicles"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:743
 msgid ""
@@ -31801,14 +31976,17 @@ msgid ""
 "your final customer has to be complete. The zip code, city, and state must "
 "coincide with the `Official SAT Catalog <sat-catalog_>`_"
 msgstr ""
+"Like with the external trade feature, the address in both your company and "
+"your final customer has to be complete. The zip code, city, and state must "
+"coincide with the `Official SAT Catalog <sat-catalog_>`_"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:748
 msgid "The field :guilabel:`Locality` is optional for both addresses."
-msgstr ""
+msgstr "The field :guilabel:`Locality` is optional for both addresses."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
 msgid "Delivery Guide Contacts."
-msgstr ""
+msgstr "Delivery Guide Contacts."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:754
 msgid ""
@@ -31817,6 +31995,10 @@ msgid ""
 "Warehouses`. While this is set as the company address by default, you can "
 "change it according to your correct warehouse address."
 msgstr ""
+"The origin address used for the delivery guide is set in "
+":menuselection:`Inventory --> Configuration --> Warehouses Management --> "
+"Warehouses`. While this is set as the company address by default, you can "
+"change it according to your correct warehouse address."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:758
 msgid ""
@@ -31825,14 +32007,18 @@ msgid ""
 "you add all the information related to the vehicle used for the delivery "
 "order."
 msgstr ""
+"Another addition to this feature is the :guilabel:`Vehicle Setups` menu "
+"found in :menuselection:`Inventory --> Settings --> Mexico`. This menu lets "
+"you add all the information related to the vehicle used for the delivery "
+"order."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:762
 msgid "All fields are mandatory to create a correct delivery guide."
-msgstr ""
+msgstr "All fields are mandatory to create a correct delivery guide."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
 msgid "Delivery Guide Vehicle Configurations required fields."
-msgstr ""
+msgstr "Delivery Guide Vehicle Configurations required fields."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:767
 msgid ""
@@ -31962,6 +32148,11 @@ msgid ""
 "operation, the field :guilabel:`Customs Number` needs to be added to all "
 "lines of products involved with the operation."
 msgstr ""
+"According to the `Annex 20 "
+"<http://omawww.sat.gob.mx/tramitesyservicios/Paginas/anexo_20.htm>`_ of CFDI"
+" 4.0, in documents where the invoiced goods come from a first-hand import "
+"operation, the field :guilabel:`Customs Number` needs to be added to all "
+"lines of products involved with the operation."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:836
 msgid ""
@@ -32102,6 +32293,11 @@ msgid ""
 "entries through electronic means and to enter accounting information on a "
 "monthly basis through the SAT's website."
 msgstr ""
+"For Mexico, `Electronic Accounting "
+"<https://www.sat.gob.mx/aplicacion/42150/envia-tu-contabilidad-"
+"electronica>`_ refers to the obligation to keep accounting records and "
+"entries through electronic means and to enter accounting information on a "
+"monthly basis through the SAT's website."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:909
 msgid "It consists of three main XML files:"
@@ -32153,6 +32349,8 @@ msgid ""
 "You can find all of those reports in :menuselection:`Accounting --> "
 "Reporting --> Mexico`."
 msgstr ""
+"You can find all of those reports in :menuselection:`Accounting --> "
+"Reporting --> Mexico`."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:932
 msgid ""
@@ -32209,6 +32407,8 @@ msgid ""
 "Once all is set up, you can go to :menuselection:`Accounting --> Reporting "
 "--> Mexico --> COA` and press the button :guilabel:`SAT (XML)`."
 msgstr ""
+"Once all is set up, you can go to :menuselection:`Accounting --> Reporting "
+"--> Mexico --> COA` and press the button :guilabel:`SAT (XML)`."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:963
 msgid "Balanza de comprobación (trial balance)"
@@ -32227,6 +32427,10 @@ msgid ""
 "Balance` and press the button :guilabel:`SAT (XML)`. Select the month you "
 "want to download beforehand."
 msgstr ""
+"This report can be generated monthly, and an XML file version is created if "
+"you go to :menuselection:`Accounting --> Reporting --> Mexico --> Trial "
+"Balance` and press the button :guilabel:`SAT (XML)`. Select the month you "
+"want to download beforehand."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
 msgid "Trial Balance Report."
@@ -32257,6 +32461,10 @@ msgid ""
 "Balance Month 13` contains the total amount of the year, plus all the "
 "additions of the journal entry."
 msgstr ""
+"After this is done, press :guilabel:`Mark as Closing Entry`, and the report "
+"found in :menuselection:`Accounting --> Reporting --> Mexico --> Trial "
+"Balance Month 13` contains the total amount of the year, plus all the "
+"additions of the journal entry."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:989
 msgid ""
@@ -32278,6 +32486,10 @@ msgid ""
 "and payments, you can export your journal entries to comply with SAT's "
 "audits or tax refunds."
 msgstr ""
+"By law, all transactions in Mexico must be recorded digitally. Because Odoo "
+"automatically creates all the underlying journal entries of your invoicing "
+"and payments, you can export your journal entries to comply with SAT's "
+"audits or tax refunds."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:1001
 msgid ""
@@ -32348,6 +32560,9 @@ msgid ""
 "--> Transactions with third parties [DIOT]`. Select the month that suits "
 "you, and press :guilabel:`DIOT (TXT)` to download the :file:`.txt` file."
 msgstr ""
+"To get the report, go to :menuselection:`Accounting --> Reports --> Mexico "
+"--> Transactions with third parties [DIOT]`. Select the month that suits "
+"you, and press :guilabel:`DIOT (TXT)` to download the :file:`.txt` file."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
 msgid "DIOT Example."
@@ -32452,6 +32667,8 @@ msgid ""
 "`Smart Tutorial - Localización de Peru <https://www.odoo.com/slides/smart-"
 "tutorial-localizacion-de-peru-133>`_"
 msgstr ""
+"`Smart Tutorial - Localización de Peru <https://www.odoo.com/slides/smart-"
+"tutorial-localizacion-de-peru-133>`_"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:32
 msgid "Install the Peruvian localization modules"
