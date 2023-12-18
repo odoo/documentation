@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo saas-15.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-26 13:30+0000\n"
+"POT-Creation-Date: 2023-12-19 07:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -531,11 +531,6 @@ msgid "This is achieved with security rules based on `company_ids`, which contai
 msgstr ""
 
 #: ../../content/developer/howtos/company.rst:229
-#: ../../content/developer/howtos/provide_iap_services.rst:118
-#: ../../content/developer/howtos/provide_iap_services.rst:222
-#: ../../content/developer/howtos/provide_iap_services.rst:406
-#: ../../content/developer/howtos/provide_iap_services.rst:408
-#: ../../content/developer/howtos/provide_iap_services.rst:511
 #: ../../content/developer/howtos/translations.rst:19
 #: ../../content/developer/howtos/website_themes/building_blocks.rst:77
 #: ../../content/developer/howtos/website_themes/building_blocks.rst:332
@@ -717,696 +712,6 @@ msgstr ""
 
 #: ../../content/developer/howtos/connect_device.rst:177
 msgid "In the Driver, an event is released by calling the `device_changed` function from the `event_manager`. All callbacks set on the listener will then be called with `self.data` as argument."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:3
-msgid "Provide IAP services"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:5
-msgid "In-App Purchase (IAP) allows providers of ongoing services through Odoo apps to be compensated for ongoing service use rather than — and possibly instead of — a sole initial purchase."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:9
-msgid "In that context, Odoo acts mostly as a *broker* between a client and an Odoo App Developer:"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:12
-msgid "Users purchase service tokens from Odoo."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:13
-msgid "Service providers draw tokens from the user's Odoo account when service is requested."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:18
-msgid "This document is intended for *service providers* and presents the latter, which can be done either via direct JSON-RPC2_ or if you are using Odoo using the convenience helpers it provides."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:23
-#: ../../content/developer/reference/frontend/javascript_reference.rst:17
-#: ../../content/developer/reference/frontend/services.rst:144
-#: ../../content/developer/reference/frontend/services.rst:182
-#: ../../content/developer/reference/frontend/services.rst:362
-#: ../../content/developer/reference/frontend/services.rst:408
-#: ../../content/developer/reference/frontend/services.rst:522
-#: ../../content/developer/reference/frontend/services.rst:612
-#: ../../content/developer/reference/frontend/services.rst:708
-#: ../../content/developer/reference/frontend/services.rst:759
-#: ../../content/developer/reference/frontend/services.rst:834
-msgid "Overview"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:28
-msgid "The Players"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:30
-msgid "The Service Provider is (probably) you the reader, you will be providing value to the client in the form of a service paid per-use."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:32
-msgid "The Client installed your Odoo App, and from there will request services."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:33
-msgid "Odoo brokers crediting, the Client adds credit to their account, and you can draw credits from there to provide services."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:35
-msgid "The External Service is an optional player: *you* can either provide a service directly, or you can delegate the actual service acting as a bridge/translator between an Odoo system and the actual service."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:43
-msgid "The Credits"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:45
-msgid "The credits went from integer to float value starting **October 2018**. Integer values are still supported."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:48
-msgid "Every service provided through the IAP platform can be used by the clients with tokens or *credits*. The credits are an float unit and their monetary value depends on the service and is decided by the provider. This could be:"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:53
-msgid "for an sms service: 1 credit = 1 sms;"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:54
-msgid "for an ad service: 1 credit = 1 ad; or"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:55
-msgid "for a postage service: 1 credit = 1 post stamp."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:57
-msgid "A credit can also simply be associated with a fixed amount of money to palliate the variations of price (e.g. the prices of sms and stamps may vary following the countries)."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:61
-msgid "The value of the credits is fixed with the help of prepaid credit packs that the clients can buy on https://iap.odoo.com (see :ref:`Packs <iap-packages>`)."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:64
-msgid "In the following explanations we will ignore the External Service, they are just a detail of the service you provide."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:70
-msgid "'Normal' service flow"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:72
-msgid "If everything goes well, the normal flow is the following:"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:74
-msgid "The Client requests a service of some sort."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:75
-msgid "The Service Provider asks Odoo if there are enough credits for the service in the Client's account, and creates a transaction over that amount."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:78
-msgid "The Service Provider provides the service (either on their own or calling to External Services)."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:80
-msgid "The Service Provider goes back to Odoo to capture (if the service could be provided) or cancel (if the service could not be provided) the transaction created at step 2."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:83
-msgid "Finally, the Service Provider notifies the Client that the service has been rendered, possibly (depending on the service) displaying or storing its results in the client's system."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:90
-msgid "Insufficient credits"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:92
-msgid "However, if the Client's account lacks credits for the service, the flow will be as follows:"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:94
-msgid "The Client requests a service as previously."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:95
-msgid "The Service Provider asks Odoo if there are enough credits on the Client's account and gets a negative reply."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:97
-msgid "This is signaled back to the Client."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:98
-msgid "Who is redirected to their Odoo account to credit it and re-try."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:102
-msgid "Building your service"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:104
-msgid "For this example, the service we will provide is ~~mining dogecoins~~ burning 10 seconds of CPU for a credit. For your own services, you could, for example:"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:107
-msgid "provide an online service yourself (e.g. convert quotations to faxes for business in Japan);"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:109
-msgid "provide an *offline* service yourself (e.g. provide accountancy service); or"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:110
-msgid "act as intermediary to an other service provider (e.g. bridge to an MMS gateway)."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:116
-msgid "Register the service on Odoo"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:118
-msgid "complete this part with screenshots"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:120
-msgid "The first step is to register your service on the IAP endpoint (production and/or test) before you can actually query user accounts. To create a service, go to your *Portal Account* on the IAP endpoint (https://iap.odoo.com for production, https://iap-sandbox.odoo.com for testing, the endpoints are *independent* and *not synchronized*). Alternatively, you can go to your portal on Odoo (https://iap.odoo.com/my/home) and select *In-App Services*."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:129
-msgid "On production, there is a manual validation step before the service can be used to manage real transactions. This step is automatically passed when on sandbox to ease the tests."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:133
-msgid "Log in then go to :menuselection:`My Account --> Your In-App Services`, click Create and provide the information of your service."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:137
-msgid "The service has *seven* important fields:"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:139
-msgid ":samp:`name` - :class:`ServiceName`: This is the string you will need to provide inside the client's :ref:`app <iap-odoo-app>` when requesting a transaction from Odoo. (e.g. :class:`self.env['iap.account].get(name)`). As good practice, this should match the technical name of your app."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:144
-msgid ":samp:`label` - :class:`Label`: The name displayed on the shopping portal for the client."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:149
-msgid "Both the :class:`ServiceName` and :class:`Label` are unique. As good practice, the :class:`ServiceName` should usually match the name of your Odoo Client App."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:152
-msgid ":samp:`icon` - :class:`Icon`: A generic icon that will serve as default for your :ref:`packs <iap-packages>`."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:155
-msgid ":samp:`key` - :class:`ServiceKey`: The developer key that identifies you in IAP (see :ref:`your service <iap-service>`) and allows to draw credits from the client's account. It will be shown only once upon creation of the service and can be regenerated at will."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:161
-msgid "Your :class:`ServiceKey` *is a secret*, leaking your service key allows other application developers to draw credits bought for your service(s)."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:165
-msgid ":samp:`trial credits` - :class:`Float`: This corresponds to the credits you are ready to offer upon first use to your app users. Note that such service will only be available to clients that have an active enterprise contract."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:169
-msgid ":samp:`privacy policy` - :class:`PrivacyPolicy`: This is an url to the privacy policy of your service. This should explicitly mention the **information you collect**, how you **use it, its relevance** to make your service work and inform the client on how they can **access, update or delete their personal information**."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:186
-msgid "You can then create *credit packs* which clients can purchase in order to use your service."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:192
-msgid "Packs"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:194
-msgid "A credit pack is essentially a product with five characteristics:"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:196
-msgid "Name: name of the pack,"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:197
-msgid "Icon: specific icon for the pack (if not provided, it will fallback on the service icon),"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:198
-msgid "Description: details on the pack that will appear on the shop page as well as the invoice,"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:200
-msgid "Amount: amount of credits the client is entitled to when buying the pack,"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:201
-msgid "Price: price in EUR (for the time being, USD support is planned)."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:205
-msgid "Odoo takes a 25% commission on all pack sales. Adjust your selling price accordingly."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:210
-msgid "Depending on the strategy, the price per credit may vary from one pack to another."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:220
-msgid "Odoo App"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:222
-msgid "does this actually require apps?"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:224
-msgid "The second step is to develop an `Odoo App`_ which clients can install in their Odoo instance and through which they can *request* the services you provide. Our app will just add a button to the Partners form which lets a user request burning some CPU time on the server."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:229
-msgid "First, we will create an *odoo module* depending on ``iap``. IAP is a standard V11 module and the dependency ensures a local account is properly set up and we will have access to some necessary views and useful helpers."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:233
-#: ../../content/developer/howtos/provide_iap_services.rst:248
-msgid "`coalroller/__manifest__.py`"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:243
-msgid "Second, the \"local\" side of the integration. Here we will only be adding an action button to the partners view, but you can of course provide significant local value via your application and additional parts via a remote service."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:261
-msgid "`coalroller/views/res_partner_views.xml`"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:286
-msgid "We can now implement the action method/callback. This will *call our own server*."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:289
-msgid "There are no requirements when it comes to the server or the communication protocol between the app and our server, but ``iap`` provides a :func:`~odoo.addons.iap.tools.iap_tools.iap_jsonrpc` helper to call a JSON-RPC2_ endpoint on an other Odoo instance and transparently re-raise relevant Odoo exceptions (:class:`~odoo.addons.iap.tools.iap_tools.InsufficientCreditError`, :class:`odoo.exceptions.AccessError` and :class:`odoo.exceptions.UserError`)."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:296
-msgid "In that call, we will need to provide:"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:298
-msgid "any relevant client parameter (none here),"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:299
-msgid "the :class:`token <UserToken>` of the current client that is provided by the ``iap.account`` model's ``account_token`` field. You can retrieve the account for your service by calling :samp:`env['iap.account'].get({service_name})` where :class:`service_name <ServiceName>` is the name of the service registered on IAP endpoint."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:305
-msgid "`coalroller/models/res_partner.py`"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:333
-msgid "``iap`` automatically handles :class:`~odoo.addons.iap.tools.iap_tools.InsufficientCreditError` coming from the action and prompts the user to add credits to their account."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:337
-msgid ":func:`~odoo.addons.iap.tools.iap_tools.iap_jsonrpc` takes care of re-raising :class:`~odoo.addons.iap.models.iap.InsufficientCreditError` for you."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:342
-msgid "If you are not using :func:`~odoo.addons.iap.tools.iap_tools.iap_jsonrpc` you *must* be careful to re-raise :class:`~odoo.addons.iap.tools.iap_tools.InsufficientCreditError` in your handler otherwise the user will not be prompted to credit their account, and the next call will fail the same way."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:351
-#: ../../content/developer/reference/frontend/javascript_reference.rst:876
-msgid "Service"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:353
-msgid "Though that is not *required*, since ``iap`` provides both a client helper for JSON-RPC2_ calls (:func:`~odoo.addons.iap.tools.iap_tools.iap_jsonrpc`) and a service helper for transactions (:class:`~odoo.addons.iap.tools.iap_tools.iap_charge`) we will also be implementing the service side as an Odoo module:"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:358
-#: ../../content/developer/howtos/provide_iap_services.rst:448
-msgid "`coalroller_service/__manifest__.py`"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:368
-msgid "Since the query from the client comes as JSON-RPC2_ we will need the corresponding controller which can call :class:`~odoo.addons.iap.tools.iap_tools.iap_charge` and perform the service within:"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:372
-#: ../../content/developer/howtos/provide_iap_services.rst:461
-msgid "`coalroller_service/controllers/main.py`"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:406
-msgid "for the actual IAP will the \"portal\" page be on odoo.com or iap.odoo.com?"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:408
-msgid "\"My Account\" > \"Your InApp Services\"?"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:411
-msgid "The :class:`~odoo.addons.iap.tools.iap_tools.iap_charge` helper will:"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:413
-msgid "authorize (create) a transaction with the specified number of credits, if the account does not have enough credits it will raise the relevant error"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:416
-msgid "execute the body of the ``with`` statement"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:417
-msgid "if the body of the ``with`` executes successfully, update the price of the transaction if needed"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:419
-msgid "capture (confirm) the transaction"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:420
-msgid "otherwise, if an error is raised from the body of the ``with``, cancel the transaction (and release the hold on the credits)"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:425
-msgid "By default, :class:`~odoo.addons.iap.tools.iap_tools.iap_charge` contacts the *production* IAP endpoint, https://iap.odoo.com. While developing and testing your service you may want to point it towards the *development* IAP endpoint https://iap-sandbox.odoo.com."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:430
-msgid "To do so, set the ``iap.endpoint`` config parameter in your service Odoo: in debug/developer mode, :menuselection:`Setting --> Technical --> Parameters --> System Parameters`, just define an entry for the key ``iap.endpoint`` if none already exists)."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:435
-msgid "The :class:`~odoo.addons.iap.tools.iap_tools.iap_charge` helper has two additional optional parameters we can use to make things clearer to the end-user."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:440
-#: ../../content/developer/reference/backend/reports.rst:198
-msgid "``description``"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:439
-msgid "is a message which will be associated with the transaction and will be displayed in the user's dashboard, it is useful to remind the user why the charge exists."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:446
-msgid "``credit_template``"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:443
-msgid "is the name of a :ref:`reference/qweb` template which will be rendered and shown to the user if their account has less credit available than the service provider is requesting, its purpose is to tell your users why they should be interested in your IAP offers."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:488
-msgid "`coalroller_service/views/no-credit.xml`"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:511
-msgid "how do you test your service?"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:514
-msgid "JSON-RPC2_ Transaction API"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:519
-msgid "The IAP transaction API does not require using Odoo when implementing your server gateway, calls are standard JSON-RPC2_."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:521
-msgid "Calls use different *endpoints* but the same *method* on all endpoints (``call``)."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:523
-msgid "Exceptions are returned as JSON-RPC2_ errors, the formal exception name is available on ``data.name`` for programmatic manipulation."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:526
-msgid "`iap.odoo.com documentation`_ for additional information."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:529
-#: ../../content/developer/howtos/provide_iap_services.rst:775
-msgid "Authorize"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:533
-msgid "Verifies that the user's account has at least as ``credit`` available *and creates a hold (pending transaction) on that amount*."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:536
-msgid "Any amount currently on hold by a pending transaction is considered unavailable to further authorize calls."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:539
-msgid "Returns a :class:`TransactionToken` identifying the pending transaction which can be used to capture (confirm) or cancel said transaction (`iap.odoo.com documentation`_)."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:0
-#: ../../content/developer/reference/backend/mixins.rst:0
-#: ../../content/developer/reference/frontend/framework_overview.rst:0
-#: ../../content/developer/reference/frontend/qweb.rst:0
-msgid "Parameters"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:545
-msgid "optional, helps users identify the reason for charges on their account"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:547
-msgid "optional, allows the user to benefit from trial credits if his database is eligible (see :ref:`Service registration <register-service>`)"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:549
-msgid "optional, transaction time to live in hours. If the credit are not captured when the transaction expires, the transaction is cancelled. The default value is set to 4320 hours (= 180 days)."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:0
-#: ../../content/developer/reference/backend/mixins.rst:0
-#: ../../content/developer/reference/frontend/assets.rst:0
-#: ../../content/developer/reference/frontend/framework_overview.rst:0
-#: ../../content/developer/reference/frontend/javascript_reference.rst:0
-#: ../../content/developer/reference/frontend/mobile.rst:0
-#: ../../content/developer/reference/frontend/qweb.rst:0
-#: ../../content/developer/reference/frontend/registries.rst:0
-#: ../../content/developer/reference/frontend/services.rst:0
-msgid "Returns"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:551
-msgid ":class:`TransactionToken` if the authorization succeeded"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:0
-msgid "raises"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:552
-msgid ":class:`~odoo.exceptions.AccessError` if the service token is invalid"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:553
-msgid ":class:`~odoo.addons.iap.models.iap.InsufficientCreditError` if the account does not have enough credits"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:554
-msgid "``TypeError`` if the ``credit`` value is not an integer or a float"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:577
-#: ../../content/developer/howtos/provide_iap_services.rst:855
-msgid "Capture"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:581
-msgid "Confirms the specified transaction, transferring the reserved credits from the user's account to the service provider's."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:584
-msgid "Capture calls are idempotent: performing capture calls on an already captured transaction has no further effect."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:589
-msgid "optional parameter to capture a smaller amount of credits than authorized"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:590
-#: ../../content/developer/howtos/provide_iap_services.rst:622
-msgid ":class:`~odoo.exceptions.AccessError`"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:610
-#: ../../content/developer/howtos/provide_iap_services.rst:817
-msgid "Cancel"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:614
-msgid "Cancels the specified transaction, releasing the hold on the user's credits."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:617
-msgid "Cancel calls are idempotent: performing capture calls on an already cancelled transaction has no further effect."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:640
-#: ../../content/developer/tutorials/getting_started/04_basicmodel.rst:134
-msgid "Types"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:642
-msgid "Exceptions aside, these are *abstract types* used for clarity, you should not care how they are implemented."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:647
-msgid "String identifying your service on https://iap.odoo.com (production) as well as the account related to your service in the client's database."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:652
-msgid "Identifier generated for the provider's service. Each key (and service) matches a token of a fixed value, as generated by the service provide."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:655
-msgid "Multiple types of tokens correspond to multiple services. As an exampe, SMS and MMS could either be the same service (with an MMS being 'worth' multiple SMS) or could be separate services at separate price points."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:659
-msgid "Your service key *is a secret*, leaking your service key allows other application developers to draw credits bought for your service(s)."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:665
-msgid "Identifier for a user account."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:669
-msgid "Transaction identifier, returned by the authorization process and consumed by either capturing or cancelling the transaction."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:674
-msgid "Raised during transaction authorization if the credits requested are not currently available on the account (either not enough credits or too many pending transactions/existing holds)."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:681
-msgid "Raised by:"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:683
-msgid "any operation to which a service token is required, if the service token is invalid; or"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:684
-msgid "any failure in an inter-server call. (typically, in :func:`~odoo.addons.iap.tools.iap_tools.iap_jsonrpc`)."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:689
-msgid "Raised by any unexpected behaviour at the discretion of the App developer (*you*)."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:693
-msgid "Test the API"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:695
-msgid "In order to test the developed app, we propose a sandbox platform that allows you to:"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:697
-msgid "Test the whole flow from the client's point of view - Actual services and transactions that can be consulted. (again this requires to change the endpoint, see the danger note in :ref:`Service <iap-service>`)."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:700
-msgid "Test the API."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:702
-msgid "The latter consists in specific tokens that will work on **IAP-Sandbox only**."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:704
-msgid "Token ``000000``: Represents a non-existing account. Returns an :class:`~odoo.addons.iap.tools.iap_tools.InsufficientCreditError` on authorize attempt."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:706
-msgid "Token ``000111``: Represents an account without sufficient credits to perform any service. Returns an :class:`~odoo.addons.iap.tools.iap_tools.InsufficientCreditError` on authorize attempt."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:708
-msgid "Token ``111111``: Represents an account with enough credits to perform any service. An authorize attempt will return a dummy transaction token that is processed by the capture and cancel routes."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:714
-msgid "Those tokens are only active on the IAP-Sanbox server."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:715
-msgid "The service key is completely ignored with this flow, If you want to run a robust test of your service, you should ignore these tokens."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:719
-msgid "Odoo Helpers"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:721
-msgid "For convenience, if you are implementing your service using Odoo the ``iap`` module provides a few helpers to make IAP flow even simpler."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:727
-msgid "Charging"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:731
-msgid "A *context manager* for authorizing and automatically capturing or cancelling transactions for use in the backend/proxy."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:734
-msgid "Works much like e.g. a cursor context manager:"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:736
-msgid "immediately authorizes a transaction with the specified parameters;"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:737
-msgid "executes the ``with`` body;"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:738
-msgid "if the body executes in full without error, captures the transaction;"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:739
-msgid "otherwise cancels it."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:741
-#: ../../content/developer/howtos/provide_iap_services.rst:781
-#: ../../content/developer/howtos/provide_iap_services.rst:823
-#: ../../content/developer/howtos/provide_iap_services.rst:861
-msgid "used to retrieve the ``iap.endpoint`` configuration key"
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:779
-msgid "Will authorize everything."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:821
-msgid "Will cancel an authorized transaction."
-msgstr ""
-
-#: ../../content/developer/howtos/provide_iap_services.rst:859
-msgid "Will capture the amount ``credit`` on the given transaction."
 msgstr ""
 
 #: ../../content/developer/howtos/translations.rst:5
@@ -1890,9 +1195,6 @@ msgstr ""
 #: ../../content/developer/howtos/website_themes/theming.rst:70
 #: ../../content/developer/howtos/website_themes/theming.rst:120
 #: ../../content/developer/howtos/website_themes/theming.rst:331
-#: ../../content/developer/reference/extract_api.rst:43
-#: ../../content/developer/reference/extract_api.rst:147
-#: ../../content/developer/reference/extract_api.rst:362
 #: ../../content/developer/reference/frontend/assets.rst:301
 #: ../../content/developer/reference/frontend/framework_overview.rst:263
 #: ../../content/developer/reference/frontend/hooks.rst:43
@@ -2397,9 +1699,8 @@ msgid "Create a task."
 msgstr ""
 
 #: ../../content/developer/howtos/website_themes/forms.rst:75
-#: ../../content/developer/reference/extract_api.rst:121
-#: ../../content/developer/reference/extract_api.rst:201
-#: ../../content/developer/reference/extract_api.rst:484
+#: ../../content/developer/reference/extract_api.rst:183
+#: ../../content/developer/reference/extract_api.rst:284
 msgid "Success"
 msgstr ""
 
@@ -3778,7 +3079,7 @@ msgid ":option:`--addons-path <odoo-bin --addons-path>`"
 msgstr ""
 
 #: ../../content/developer/howtos/website_themes/setup.rst:213
-#: ../../content/developer/reference/cli.rst:785
+#: ../../content/developer/reference/cli.rst:799
 msgid "Comma-separated list of directories in which modules are stored. These directories are scanned for modules."
 msgstr ""
 
@@ -4741,6 +4042,7 @@ msgstr ""
 #: ../../content/developer/reference/backend/views.rst:2324
 #: ../../content/developer/reference/external_api.rst:866
 #: ../../content/developer/reference/external_api.rst:1002
+#: ../../content/developer/reference/extract_api.rst:511
 #: ../../content/developer/reference/frontend/services.rst:871
 #: ../../content/developer/tutorials/web.rst:1320
 msgid "``name``"
@@ -5049,9 +4351,8 @@ msgstr ""
 #: ../../content/developer/reference/backend/data.rst:232
 #: ../../content/developer/reference/backend/data.rst:242
 #: ../../content/developer/reference/backend/views.rst:861
-#: ../../content/developer/reference/extract_api.rst:106
-#: ../../content/developer/reference/extract_api.rst:184
-#: ../../content/developer/reference/extract_api.rst:473
+#: ../../content/developer/reference/extract_api.rst:168
+#: ../../content/developer/reference/extract_api.rst:264
 msgid "``id``"
 msgstr ""
 
@@ -5770,7 +5071,7 @@ msgid "comma-separated list of group :term:`external identifiers`"
 msgstr ""
 
 #: ../../content/developer/reference/backend/data.rst:253
-#: ../../content/developer/reference/extract_api.rst:268
+#: ../../content/developer/reference/extract_api.rst:364
 msgid "``page``"
 msgstr ""
 
@@ -6084,6 +5385,8 @@ msgid "Routing"
 msgstr ""
 
 #: ../../content/developer/reference/backend/http.rst:64
+#: ../../content/developer/reference/extract_api.rst:74
+#: ../../content/developer/reference/extract_api.rst:220
 msgid "Request"
 msgstr ""
 
@@ -6092,9 +5395,8 @@ msgid "The request object is automatically set on :data:`odoo.http.request` at t
 msgstr ""
 
 #: ../../content/developer/reference/backend/http.rst:78
-#: ../../content/developer/reference/extract_api.rst:102
-#: ../../content/developer/reference/extract_api.rst:180
-#: ../../content/developer/reference/extract_api.rst:469
+#: ../../content/developer/reference/extract_api.rst:162
+#: ../../content/developer/reference/extract_api.rst:254
 msgid "Response"
 msgstr ""
 
@@ -6146,6 +5448,12 @@ msgstr ""
 msgid "Post a new message in an existing thread, returning the new mail.message ID."
 msgstr ""
 
+#: ../../content/developer/reference/backend/mixins.rst:0
+#: ../../content/developer/reference/frontend/framework_overview.rst:0
+#: ../../content/developer/reference/frontend/qweb.rst:0
+msgid "Parameters"
+msgstr ""
+
 #: ../../content/developer/reference/backend/mixins.rst:84
 msgid "body of the message, usually raw HTML that will be sanitized"
 msgstr ""
@@ -6164,6 +5472,17 @@ msgstr ""
 
 #: ../../content/developer/reference/backend/mixins.rst:91
 msgid "extra keyword arguments will be used as default column values for the new mail.message record"
+msgstr ""
+
+#: ../../content/developer/reference/backend/mixins.rst:0
+#: ../../content/developer/reference/frontend/assets.rst:0
+#: ../../content/developer/reference/frontend/framework_overview.rst:0
+#: ../../content/developer/reference/frontend/javascript_reference.rst:0
+#: ../../content/developer/reference/frontend/mobile.rst:0
+#: ../../content/developer/reference/frontend/qweb.rst:0
+#: ../../content/developer/reference/frontend/registries.rst:0
+#: ../../content/developer/reference/frontend/services.rst:0
+msgid "Returns"
 msgstr ""
 
 #: ../../content/developer/reference/backend/mixins.rst:93
@@ -8702,6 +8021,7 @@ msgid "record for the current ``user``'s company"
 msgstr ""
 
 #: ../../content/developer/reference/backend/reports.rst:35
+#: ../../content/developer/reference/extract_api.rst:452
 msgid "``website``"
 msgstr ""
 
@@ -8849,6 +8169,11 @@ msgstr ""
 
 #: ../../content/developer/reference/backend/reports.rst:196
 msgid "only useful as a mnemonic/description of the report when looking for one in a list of some sort"
+msgstr ""
+
+#: ../../content/developer/reference/backend/reports.rst:198
+#: ../../content/developer/reference/extract_api.rst:491
+msgid "``description``"
 msgstr ""
 
 #: ../../content/developer/reference/backend/reports.rst:199
@@ -9766,7 +9091,7 @@ msgid "when working on a failing test, it is common to add the debug flag, then 
 msgstr ""
 
 #: ../../content/developer/reference/backend/testing.rst:534
-#: ../../content/developer/reference/extract_api.rst:504
+#: ../../content/developer/reference/extract_api.rst:523
 msgid "Integration Testing"
 msgstr ""
 
@@ -10717,7 +10042,7 @@ msgstr ""
 
 #: ../../content/developer/reference/backend/views.rst:612
 #: ../../content/developer/reference/backend/views.rst:729
-#: ../../content/developer/reference/extract_api.rst:291
+#: ../../content/developer/reference/extract_api.rst:398
 msgid "``name`` (optional)"
 msgstr ""
 
@@ -12073,7 +11398,6 @@ msgstr ""
 
 #: ../../content/developer/reference/backend/views.rst:1468
 #: ../../content/developer/reference/backend/views.rst:1478
-#: ../../content/developer/reference/extract_api.rst:378
 msgid "``values``"
 msgstr ""
 
@@ -13531,7 +12855,7 @@ msgid "Control the SSL security of the connection between Odoo and PostgreSQL. V
 msgstr ""
 
 #: ../../content/developer/reference/cli.rst:281
-msgid "Use the unaccent function provided by the database when available."
+msgid "Try to enable the unaccent extension when creating new databases"
 msgstr ""
 
 #: ../../content/developer/reference/cli.rst:286
@@ -13663,455 +12987,467 @@ msgid "TCP port for long-polling connections in multiprocessing or gevent mode, 
 msgstr ""
 
 #: ../../content/developer/reference/cli.rst:428
-msgid "enables the use of ``X-Forwarded-*`` headers through `Werkzeug's proxy support`_. Only enable this when running behind a trusted web proxy!"
+msgid "enables the use of ``X-Forwarded-*`` headers through `Werkzeug's proxy support`_."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:432
+#: ../../content/developer/reference/cli.rst:431
+msgid "It ignores all ``X-Forwarded-*`` headers in case ``X-Forwarded-Host`` is missing from the request."
+msgstr ""
+
+#: ../../content/developer/reference/cli.rst:434
+msgid "It always gets the real IP from the last entry of the ``X-Forwarded-For`` chain. Configure your web server accordingly using directives such as nginx's `set_real_ip_from <https://nginx.org/en/docs/http/ngx_http_realip_module.html>`_ in case there are other trusted proxies along the chain that must be ignored."
+msgstr ""
+
+#: ../../content/developer/reference/cli.rst:439
+msgid "``X-Forwarded-Proto`` and ``X-Forwarded-Host`` are used to update the request root URL, which in turn is used to update the ``web.base.url`` system parameter upon a successful admin authentication. This system parameter is used to generate all links for the current database; see :ref:`domain-name/web-base-url`."
+msgstr ""
+
+#: ../../content/developer/reference/cli.rst:446
 msgid "proxy mode *must not* be enabled outside of a reverse proxy scenario"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:438
+#: ../../content/developer/reference/cli.rst:452
 msgid "Logging"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:440
+#: ../../content/developer/reference/cli.rst:454
 msgid "By default, Odoo displays all logging of level_ ``info`` except for workflow logging (``warning`` only), and log output is sent to ``stdout``. Various options are available to redirect logging to other destinations and to customize the amount of logging output."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:447
+#: ../../content/developer/reference/cli.rst:461
 msgid "sends logging output to the specified file instead of stdout. On Unix, the file `can be managed by external log rotation programs <https://docs.python.org/3/library/logging.handlers.html#watchedfilehandler>`_ and will automatically be reopened when replaced"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:454
+#: ../../content/developer/reference/cli.rst:468
 msgid "logs to the system's event logger: `syslog on unices <https://docs.python.org/3/library/logging.handlers.html#sysloghandler>`_ and `the Event Log on Windows <https://docs.python.org/3/library/logging.handlers.html#nteventloghandler>`_."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:457
+#: ../../content/developer/reference/cli.rst:471
 msgid "Neither is configurable"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:461
+#: ../../content/developer/reference/cli.rst:475
 msgid "logs to the ``ir.logging`` model (``ir_logging`` table) of the specified database. The database can be the name of a database in the \"current\" PostgreSQL, or `a PostgreSQL URI`_ for e.g. log aggregation."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:467
+#: ../../content/developer/reference/cli.rst:481
 msgid ":samp:`{LOGGER}:{LEVEL}`, enables ``LOGGER`` at the provided ``LEVEL`` e.g. ``odoo.models:DEBUG`` will enable all logging messages at or above ``DEBUG`` level in the models."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:471
+#: ../../content/developer/reference/cli.rst:485
 msgid "The colon ``:`` is mandatory"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:472
+#: ../../content/developer/reference/cli.rst:486
 msgid "The logger can be omitted to configure the root (default) handler"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:473
+#: ../../content/developer/reference/cli.rst:487
 msgid "If the level is omitted, the logger is set to ``INFO``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:475
+#: ../../content/developer/reference/cli.rst:489
 msgid "The option can be repeated to configure multiple loggers e.g."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:483
+#: ../../content/developer/reference/cli.rst:497
 msgid "enable DEBUG logging for RPC requests, equivalent to ``--log-handler=odoo.http.rpc.request:DEBUG``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:488
+#: ../../content/developer/reference/cli.rst:502
 msgid "enable DEBUG logging for RPC responses, equivalent to ``--log-handler=odoo.http.rpc.response:DEBUG``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:493
+#: ../../content/developer/reference/cli.rst:507
 msgid "enables DEBUG logging of HTTP requests and responses, equivalent to ``--log-handler=odoo.http:DEBUG``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:498
+#: ../../content/developer/reference/cli.rst:512
 msgid "enables DEBUG logging of SQL querying, equivalent to ``--log-handler=odoo.sql_db:DEBUG``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:503
+#: ../../content/developer/reference/cli.rst:517
 msgid "Shortcut to more easily set predefined levels on specific loggers. \"real\" levels (``critical``, ``error``, ``warn``, ``debug``) are set on the ``odoo`` and ``werkzeug`` loggers (except for ``debug`` which is only set on ``odoo``)."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:508
+#: ../../content/developer/reference/cli.rst:522
 msgid "Odoo also provides debugging pseudo-levels which apply to different sets of loggers:"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:513
+#: ../../content/developer/reference/cli.rst:527
 msgid "``debug_sql``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:512
+#: ../../content/developer/reference/cli.rst:526
 msgid "sets the SQL logger to ``debug``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:514
+#: ../../content/developer/reference/cli.rst:528
 msgid "equivalent to ``--log-sql``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:517
+#: ../../content/developer/reference/cli.rst:531
 msgid "``debug_rpc``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:516
+#: ../../content/developer/reference/cli.rst:530
 msgid "sets the ``odoo`` and HTTP request loggers to ``debug``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:518
+#: ../../content/developer/reference/cli.rst:532
 msgid "equivalent to ``--log-level debug --log-request``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:523
+#: ../../content/developer/reference/cli.rst:537
 msgid "``debug_rpc_answer``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:520
+#: ../../content/developer/reference/cli.rst:534
 msgid "sets the ``odoo`` and HTTP request and response loggers to ``debug``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:523
+#: ../../content/developer/reference/cli.rst:537
 msgid "equivalent to ``--log-level debug --log-request --log-response``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:527
+#: ../../content/developer/reference/cli.rst:541
 msgid "In case of conflict between :option:`--log-level` and :option:`--log-handler`, the latter is used"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:533
+#: ../../content/developer/reference/cli.rst:547
 msgid "Multiprocessing"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:537
+#: ../../content/developer/reference/cli.rst:551
 msgid "if ``count`` is not 0 (the default), enables multiprocessing and sets up the specified number of HTTP workers (sub-processes processing HTTP and RPC requests)."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:541
+#: ../../content/developer/reference/cli.rst:555
 msgid "multiprocessing mode is only available on Unix-based systems"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:543
+#: ../../content/developer/reference/cli.rst:557
 msgid "A number of options allow limiting and recycling workers:"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:547
+#: ../../content/developer/reference/cli.rst:561
 msgid "Number of requests a worker will process before being recycled and restarted."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:550
+#: ../../content/developer/reference/cli.rst:564
 msgid "Defaults to *8196*."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:554
+#: ../../content/developer/reference/cli.rst:568
 msgid "Maximum allowed virtual memory per worker in bytes. If the limit is exceeded, the worker is killed and recycled at the end of the current request."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:557
+#: ../../content/developer/reference/cli.rst:571
 msgid "Defaults to *2048MiB (2048\\*1024\\*1024B)*."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:561
+#: ../../content/developer/reference/cli.rst:575
 msgid "Hard limit on virtual memory in bytes, any worker exceeding the limit will be immediately killed without waiting for the end of the current request processing."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:565
+#: ../../content/developer/reference/cli.rst:579
 msgid "Defaults to *2560MiB (2560\\*1024\\*1024B)*."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:569
+#: ../../content/developer/reference/cli.rst:583
 msgid "Prevents the worker from using more than <limit> CPU seconds for each request. If the limit is exceeded, the worker is killed."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:572
+#: ../../content/developer/reference/cli.rst:586
 msgid "Defaults to *60*."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:576
+#: ../../content/developer/reference/cli.rst:590
 msgid "Prevents the worker from taking longer than <limit> seconds to process a request. If the limit is exceeded, the worker is killed."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:579
+#: ../../content/developer/reference/cli.rst:593
 msgid "Differs from :option:`--limit-time-cpu` in that this is a \"wall time\" limit including e.g. SQL queries."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:582
+#: ../../content/developer/reference/cli.rst:596
 msgid "Defaults to *120*."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:586
+#: ../../content/developer/reference/cli.rst:600
 msgid "number of workers dedicated to :ref:`cron <reference/actions/cron>` jobs. Defaults to *2*. The workers are threads in multi-threading mode and processes in multi-processing mode."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:589
+#: ../../content/developer/reference/cli.rst:603
 msgid "For multi-processing mode, this is in addition to the HTTP worker processes."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:594
+#: ../../content/developer/reference/cli.rst:608
 msgid "Configuration file"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:598
+#: ../../content/developer/reference/cli.rst:612
 msgid "Most of the command-line options can also be specified via a configuration file. Most of the time, they use similar names with the prefix ``-`` removed and other ``-`` are replaced by ``_`` e.g. :option:`--db-template` becomes ``db_template``."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:603
+#: ../../content/developer/reference/cli.rst:617
 msgid "Some conversions don't match the pattern:"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:605
+#: ../../content/developer/reference/cli.rst:619
 msgid ":option:`--db-filter` becomes ``dbfilter``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:606
+#: ../../content/developer/reference/cli.rst:620
 msgid ":option:`--no-http` corresponds to the ``http_enable`` boolean"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:607
+#: ../../content/developer/reference/cli.rst:621
 msgid "logging presets (all options starting with ``--log-`` except for :option:`--log-handler` and :option:`--log-db`) just add content to ``log_handler``, use that directly in the configuration file"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:610
+#: ../../content/developer/reference/cli.rst:624
 msgid ":option:`--smtp` is stored as ``smtp_server``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:611
+#: ../../content/developer/reference/cli.rst:625
 msgid ":option:`--database` is stored as ``db_name``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:612
+#: ../../content/developer/reference/cli.rst:626
 msgid ":option:`--i18n-import` and :option:`--i18n-export` aren't available at all from configuration files"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:617
+#: ../../content/developer/reference/cli.rst:631
 msgid "The default configuration file is :file:`{$HOME}/.odoorc` which can be overridden using :option:`--config <odoo-bin -c>`. Specifying :option:`--save <odoo-bin -s>` will save the current configuration state back to that file. The configuration items relative to the command-line are to be specified in the section ``[options]``."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:623
+#: ../../content/developer/reference/cli.rst:637
 msgid "Here is a sample file:"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:648
+#: ../../content/developer/reference/cli.rst:662
 msgid "Shell"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:650
+#: ../../content/developer/reference/cli.rst:664
 msgid "Odoo command-line also allows to launch odoo as a python console environment. This enables direct interaction with the :ref:`orm <reference/orm>` and its functionalities."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:660
+#: ../../content/developer/reference/cli.rst:674
 msgid "Specify a preferred REPL to use in shell mode."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:666
+#: ../../content/developer/reference/cli.rst:680
 msgid "Scaffolding"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:670
+#: ../../content/developer/reference/cli.rst:684
 msgid "Scaffolding is the automated creation of a skeleton structure to simplify bootstrapping (of new modules, in the case of Odoo). While not necessary it avoids the tedium of setting up basic structures and looking up what all starting requirements are."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:675
+#: ../../content/developer/reference/cli.rst:689
 msgid "Scaffolding is available via the :command:`odoo-bin scaffold` subcommand."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:683
+#: ../../content/developer/reference/cli.rst:697
 msgid "the name of the module to create, may munged in various manners to generate programmatic names (e.g. module directory name, model names, …)"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:688
+#: ../../content/developer/reference/cli.rst:702
 msgid "directory in which to create the new module, defaults to the current directory"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:693
+#: ../../content/developer/reference/cli.rst:707
 msgid "a template directory, files are passed through jinja2_ then copied to the ``destination`` directory"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:697
+#: ../../content/developer/reference/cli.rst:711
 msgid "This will create module *my_module* in directory */addons/*."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:702
+#: ../../content/developer/reference/cli.rst:716
 msgid "Database Population"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:706
+#: ../../content/developer/reference/cli.rst:720
 msgid "Odoo CLI supports database population features. If the feature is :ref:`implemented on a given model <reference/performance/populate/methods>`, it allows automatic data generation of the model's records to test your modules in databases containing non-trivial amounts of records."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:717
+#: ../../content/developer/reference/cli.rst:731
 msgid "list of models for which the database should be filled"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:721
+#: ../../content/developer/reference/cli.rst:735
 msgid "population size, the actual records number depends on the model's `_populate_sizes` attribute. The generated records content is specified by the :meth:`~odoo.models._populate_factories` method of a given model (cf. the :file:`populate` folder of modules for further details)."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:726
+#: ../../content/developer/reference/cli.rst:740
 msgid ":ref:`reference/performance/populate`"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:731
+#: ../../content/developer/reference/cli.rst:745
 msgid "Cloc"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:735
+#: ../../content/developer/reference/cli.rst:749
 msgid "Odoo Cloc is a tool to count the number of relevant lines written in Python, Javascript, CSS, SCSS, or XML. This can be used as a rough metric for pricing maintenance of extra modules."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:740
+#: ../../content/developer/reference/cli.rst:754
 msgid "Command-line options"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:745
+#: ../../content/developer/reference/cli.rst:759
 msgid "Process the code of all extra modules installed on the provided database, and of all server actions and computed fields manually created in the provided database."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:747
+#: ../../content/developer/reference/cli.rst:761
 msgid "The :option:`--addons-path` option is required to specify the path(s) to the module folder(s)."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:750
+#: ../../content/developer/reference/cli.rst:764
 msgid "If combined with :option:`--path`, the count will be that of the sum of both options' results (with possible overlaps). At least one of these two options is required to specify which code to process."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:757
+#: ../../content/developer/reference/cli.rst:771
 msgid ":ref:`reference/cmdline/cloc/database-option`"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:762
+#: ../../content/developer/reference/cli.rst:776
 msgid "Process the files in the provided path."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:765
+#: ../../content/developer/reference/cli.rst:779
 msgid "If combined with :option:`--database`, the count will be that of the sum of both options' results (with possible overlaps). At least one of these two options is required to specify which code to process."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:772
+#: ../../content/developer/reference/cli.rst:786
 msgid "Multiple paths can be provided by repeating the option."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:779
+#: ../../content/developer/reference/cli.rst:793
 msgid ":ref:`reference/cmdline/cloc/path-option`"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:786
+#: ../../content/developer/reference/cli.rst:800
 msgid "Required if the :option:`--database` option is used."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:791
+#: ../../content/developer/reference/cli.rst:805
 msgid "Specify a configuration file to use in place of the :option:`--addons-path` option."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:800
+#: ../../content/developer/reference/cli.rst:814
 msgid "Show the details of lines counted for each file."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:804
+#: ../../content/developer/reference/cli.rst:818
 msgid "Processed files"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:809
+#: ../../content/developer/reference/cli.rst:823
 msgid "With the :option:`--database` option"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:811
+#: ../../content/developer/reference/cli.rst:825
 msgid "Odoo Cloc counts the lines in each file of extra installed modules in a given database. In addition, it counts the Python lines of server actions and custom computed fields that have been directly created in the database or imported. Finally, it counts the lines of code of Javascript, CSS, and SCSS files, and of QWeb views from imported modules."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:817
+#: ../../content/developer/reference/cli.rst:831
 msgid "Some files are excluded from the count by default:"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:819
+#: ../../content/developer/reference/cli.rst:833
 msgid "The manifest (:file:`__manifest__.py` or :file:`__openerp__.py`)"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:820
+#: ../../content/developer/reference/cli.rst:834
 msgid "The contents of the folder :file:`static/lib`"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:821
+#: ../../content/developer/reference/cli.rst:835
 msgid "The tests defined in the folder :file:`tests` and :file:`static/tests`"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:822
+#: ../../content/developer/reference/cli.rst:836
 msgid "The migrations scripts defined in the folder :file:`migrations` and `upgrades`"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:823
+#: ../../content/developer/reference/cli.rst:837
 msgid "The XML files declared in the ``demo`` or ``demo_xml`` sections of the manifest"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:825
+#: ../../content/developer/reference/cli.rst:839
 msgid "For special cases, a list of files that should be ignored by Odoo Cloc can be defined per module. This is specified by the ``cloc_exclude`` entry of the manifest:"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:838
+#: ../../content/developer/reference/cli.rst:852
 msgid "The pattern ``**/*`` can be used to ignore an entire module. This can be useful to exclude a module from maintenance service costs."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:840
+#: ../../content/developer/reference/cli.rst:854
 msgid "For more information about the pattern syntax, see `glob <https://docs.python.org/3/library/pathlib.html#pathlib.Path.glob>`_."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:845
+#: ../../content/developer/reference/cli.rst:859
 msgid "With the :option:`--path` option"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:847
+#: ../../content/developer/reference/cli.rst:861
 msgid "This method works the same as with the :ref:`--database option <reference/cmdline/cloc/database-option>` if a manifest file is present in the given folder. Otherwise, it counts all files."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:853
+#: ../../content/developer/reference/cli.rst:867
 msgid "Identifying Extra Modules"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:855
+#: ../../content/developer/reference/cli.rst:869
 msgid "To distinguish between standard and extra modules, Odoo Cloc uses the following heuristic: modules that are located (real file system path, after following symbolic links) in the same parent directory as the ``base``, ``web`` or ``web_enterprise`` standard modules are considered standard. Other modules are treated as extra modules."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:862
+#: ../../content/developer/reference/cli.rst:876
 #: ../../content/developer/reference/frontend/services.rst:662
 msgid "Error Handling"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:864
+#: ../../content/developer/reference/cli.rst:878
 msgid "Some file cannot be counted by Odoo Cloc. Those file are reported at the end of the output."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:868
+#: ../../content/developer/reference/cli.rst:882
 msgid "Max file size exceeded"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:870
+#: ../../content/developer/reference/cli.rst:884
 msgid "Odoo Cloc rejects any file larger than 25MB. Usually, source files are smaller than 1 MB. If a file is rejected, it may be:"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:873
+#: ../../content/developer/reference/cli.rst:887
 msgid "A generated XML file that contains lots of data. It should be excluded in the manifest."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:874
+#: ../../content/developer/reference/cli.rst:888
 msgid "A JavaScript library that should be placed in the :file:`static/lib` folder."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:877
+#: ../../content/developer/reference/cli.rst:891
 msgid "Syntax Error"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:879
+#: ../../content/developer/reference/cli.rst:893
 msgid "Odoo Cloc cannot count the lines of code of a Python file with a syntax problem. If an extra module contains such files, they should be fixed to allow the module to load. If the module works despite the presence of those files, they are probably not loaded and should therefore be removed from the module, or at least excluded in the manifest via ``cloc_exclude``."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:886
+#: ../../content/developer/reference/cli.rst:900
 msgid "TSConfig Generator"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:890
+#: ../../content/developer/reference/cli.rst:904
 msgid "When working on javascript, there are ways to help your editor providing you with powerful auto-completion. One of those ways is the use of a tsconfig.json file. Originally meant for typescript, editors can use its information with plain javascript also. With this config file, you will now have full auto-completion across modules."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:895
+#: ../../content/developer/reference/cli.rst:909
 msgid "The command to generate this files takes as many unnamed arguments as you need. Those are relative paths to your addon directories. In the example below, we move up one folder to save the tsconfig file in the folder containing community and enterprise."
 msgstr ""
 
@@ -14577,650 +13913,772 @@ msgstr ""
 msgid "Computed fields can not be added via ``ir.model.fields``, some field meta-information (defaults, onchange) can not be set either."
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:5
+#: ../../content/developer/reference/extract_api.rst:3
 msgid "Extract API"
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:7
-msgid "Odoo provides a service allowing you to automate the processing of your invoices. The service scans your document using an Optical Character Recognition (OCR) engine and then uses AI-based algorithms to extract the fields of interest such as the total, the due date, or the invoice lines. More functional information can be found on the `demo page <https://www.odoo.com/page/invoice-automation>`_."
+#: ../../content/developer/reference/extract_api.rst:5
+msgid "Odoo provides a service to automate the processing of documents of type **invoices**, **expenses** or **resumes**."
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:11
-msgid "This service is a paid service. Each invoice processing will cost you one credit. Three different sized packs can be bought on `iap.odoo.com <https://iap.odoo.com/iap/in-app-services/259?sortby=date>`_."
+#: ../../content/developer/reference/extract_api.rst:8
+msgid "The service scans documents using an :abbr:`OCR (Optical Character Recognition)` engine and then uses :abbr:`AI(Artificial Intelligence)`-based algorithms to extract fields of interest such as the total, due date, or invoice lines for *invoices*, the total, date for *expenses*, or the name, email, phone number for *resumes*."
 msgstr ""
 
 #: ../../content/developer/reference/extract_api.rst:13
-msgid "You can either use this service directly in the Odoo Accounting App or through the API. The Extract API which is detailed in the next section allows you to integrate our service directly into your own projects."
+msgid "This service is a paid service. Each document processing will cost you one credit. Credits can be bought on `iap.odoo.com <https://iap.odoo.com/iap/in-app-services/259?sortby=date>`_."
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:17
-msgid "Invoices"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:19
-msgid "The extract API use the JSON-RPC2_ protocol. The diffent routes are located at the following address: **https://iap-extract.odoo.com**."
+#: ../../content/developer/reference/extract_api.rst:16
+msgid "You can either use this service directly in the Accounting, Expense, or Recruitment App or through the API. The Extract API, which is detailed in the next section, allows you to integrate our service directly into your own projects."
 msgstr ""
 
 #: ../../content/developer/reference/extract_api.rst:22
-msgid "Expected successful flow"
+#: ../../content/developer/reference/frontend/javascript_reference.rst:17
+#: ../../content/developer/reference/frontend/services.rst:144
+#: ../../content/developer/reference/frontend/services.rst:182
+#: ../../content/developer/reference/frontend/services.rst:362
+#: ../../content/developer/reference/frontend/services.rst:408
+#: ../../content/developer/reference/frontend/services.rst:522
+#: ../../content/developer/reference/frontend/services.rst:612
+#: ../../content/developer/reference/frontend/services.rst:708
+#: ../../content/developer/reference/frontend/services.rst:759
+#: ../../content/developer/reference/frontend/services.rst:834
+msgid "Overview"
 msgstr ""
 
 #: ../../content/developer/reference/extract_api.rst:24
-msgid "Call :ref:`webservices/extract_api/invoice_parse` to submit your invoices (one call for each invoice). On success, you receive a `document_id` in the response."
+msgid "The extract API uses the JSON-RPC2_ protocol; its endpoint routes are located at `https://extract.api.odoo.com`."
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:25
-msgid "You then have to regularly poll :ref:`webservices/extract_api/invoice_get_results` to get the document's parsing status."
+#: ../../content/developer/reference/extract_api.rst:30
+msgid "Version"
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:26
-msgid "Once the result received, you can validate it by calling :ref:`webservices/extract_api/invoice_validate` and sending the expected values. This step is optional but greatly helps the system to improve."
+#: ../../content/developer/reference/extract_api.rst:32
+msgid "The version of the Extract API is specified in the route."
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:29
-msgid "These 3 routes are detailed in this :ref:`section <webservices/extract_api/routes>`. The HTTP POST method should be used for all of them. A python implementation of the full flow can be found :download:`here <extract_api/implementation.py>` and a token for integration testing is provided in the :ref:`integration testing section <webservices/extract_api/integration_testing>`."
+#: ../../content/developer/reference/extract_api.rst:37
+msgid "The latest versions are:"
 msgstr ""
 
 #: ../../content/developer/reference/extract_api.rst:35
-msgid "Routes"
+msgid "invoices: 122"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:36
+msgid "expenses: 132"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:37
+msgid "applicant: 102"
 msgstr ""
 
 #: ../../content/developer/reference/extract_api.rst:40
-msgid "``/iap/invoice_extract/parse``"
+msgid "Flow"
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:45
-msgid "Request a processing of the document from the OCR. The route will return a `document_id` you can use to obtain the result of your request."
+#: ../../content/developer/reference/extract_api.rst:42
+msgid "The flow is the same for each document type."
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:48
-#: ../../content/developer/reference/extract_api.rst:152
-#: ../../content/developer/reference/extract_api.rst:368
-msgid "Request Body"
+#: ../../content/developer/reference/extract_api.rst:0
+msgid "Call :ref:`/parse <extract_api/parse>` to submit your documents (one call for each document). On success, you receive a `document_token` in the response."
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:50
-#: ../../content/developer/reference/extract_api.rst:154
-#: ../../content/developer/reference/extract_api.rst:370
-msgid "``jsonrpc`` (required)"
+#: ../../content/developer/reference/extract_api.rst:0
+msgid "You then have to regularly poll :ref:`/get_result <extract_api/get_result>` to get the document's parsing status."
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:51
-msgid "Must be exactly “2.0”."
+#: ../../content/developer/reference/extract_api.rst:0
+msgid "Alternatively, you can provide a `webhook_url` at the time of the call to :ref:`/parse <extract_api/parse>` and you will be notified (via a POST request) when the result is ready."
 msgstr ""
 
 #: ../../content/developer/reference/extract_api.rst:52
-#: ../../content/developer/reference/extract_api.rst:156
-#: ../../content/developer/reference/extract_api.rst:372
-msgid "``method`` (required)"
+msgid "The HTTP POST method should be used for all of them. A python implementation of the full flow for invoices can be found :download:`here <extract_api/implementation.py>` and a token for integration testing is provided in the :ref:`integration testing section <latestextract_api/integration_testing>`."
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:53
-msgid "Must be “call”."
+#: ../../content/developer/reference/extract_api.rst:59
+msgid "Parse"
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:54
-#: ../../content/developer/reference/extract_api.rst:158
-msgid "``id`` (required)"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:55
-msgid "An identifier established by the client. It allows the client to keep track of which response goes with which request. This makes asynchronous calls easier."
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:78
-#: ../../content/developer/reference/extract_api.rst:378
-msgid "``params``"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:57
-msgid "``account_token`` (required)"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:58
-msgid "The token of the account from which credits will be taken. Each successful call costs one token."
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:60
-msgid "``version`` (optional)"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:60
-msgid "The version will determine the format of your requests and the format of the server response. Some results can be unavailable in older versions. For the current version 1.2.0, send ‘120’. If not specified, the latest version will be used."
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:64
-msgid "``documents`` (required)"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:63
-msgid "The invoice must be provided as a string in the ASCII encoding. The list should contain only one string. If multiple strings are provided only the first string corresponding to a pdf will be processed. If no pdf is found, the first string will be processed. This field is a list only for legacy reasons. The supported extensions are *pdf*, *png*, *jpg* and *bmp*."
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:78
-msgid "``user_infos`` (required)"
+#: ../../content/developer/reference/extract_api.rst:61
+msgid "Request the processing of a document from the OCR. The route will return a `document_token`, you can use it to obtain the result of your request."
 msgstr ""
 
 #: ../../content/developer/reference/extract_api.rst:67
-msgid "Information concerning the person to whom the invoice is intended. This information is not required in order for the service to work but it greatly improves the quality of the result."
+#: ../../content/developer/reference/extract_api.rst:213
+msgid "Routes"
 msgstr ""
 
 #: ../../content/developer/reference/extract_api.rst:69
-msgid "``user_company_vat`` (optional)"
+msgid "/api/extract/invoice/2/parse"
 msgstr ""
 
 #: ../../content/developer/reference/extract_api.rst:70
-msgid "VAT number of the client."
+msgid "/api/extract/expense/2/parse"
 msgstr ""
 
 #: ../../content/developer/reference/extract_api.rst:71
-msgid "``user_company_name`` (optional)"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:72
-msgid "Name of the client’s company."
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:73
-msgid "``user_company_country_code`` (optional)"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:74
-msgid "Country code of the client. Format: `ISO3166 alpha-2 <https://www.iban.com/country-codes>`_."
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:75
-msgid "``user_lang`` (optional)"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:76
-msgid "The client language. Format: *language_code + _ + locale* (ex: fr_FR, en_US)."
+msgid "/api/extract/applicant/2/parse"
 msgstr ""
 
 #: ../../content/developer/reference/extract_api.rst:78
-msgid "``user_email`` (optional)"
+#: ../../content/developer/reference/extract_api.rst:224
+msgid "``jsonrpc`` (required)"
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:78
-msgid "The client email."
+#: ../../content/developer/reference/extract_api.rst:79
+#: ../../content/developer/reference/extract_api.rst:81
+#: ../../content/developer/reference/extract_api.rst:83
+#: ../../content/developer/reference/extract_api.rst:167
+#: ../../content/developer/reference/extract_api.rst:169
+#: ../../content/developer/reference/extract_api.rst:225
+#: ../../content/developer/reference/extract_api.rst:227
+#: ../../content/developer/reference/extract_api.rst:229
+#: ../../content/developer/reference/extract_api.rst:263
+#: ../../content/developer/reference/extract_api.rst:265
+msgid "see JSON-RPC2_"
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:104
-#: ../../content/developer/reference/extract_api.rst:182
-#: ../../content/developer/reference/extract_api.rst:471
-msgid "``jsonrpc``"
+#: ../../content/developer/reference/extract_api.rst:80
+#: ../../content/developer/reference/extract_api.rst:226
+msgid "``method`` (required)"
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:105
-msgid "A string specifying the version of the JSON-RPC protocol. It will be “2.0”."
+#: ../../content/developer/reference/extract_api.rst:82
+#: ../../content/developer/reference/extract_api.rst:228
+msgid "``id`` (required)"
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:107
-msgid "The identifier you set in the request body."
+#: ../../content/developer/reference/extract_api.rst:131
+#: ../../content/developer/reference/extract_api.rst:238
+msgid "``params``"
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:114
-#: ../../content/developer/reference/extract_api.rst:194
-#: ../../content/developer/reference/extract_api.rst:479
-msgid "``result``"
+#: ../../content/developer/reference/extract_api.rst:88
+#: ../../content/developer/reference/extract_api.rst:238
+msgid "``account_token`` (required)"
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:109
-#: ../../content/developer/reference/extract_api.rst:189
-#: ../../content/developer/reference/extract_api.rst:476
-msgid "``status_code``"
+#: ../../content/developer/reference/extract_api.rst:88
+msgid "The token of the account from which credits will be taken. Each successful call costs one token."
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:110
-#: ../../content/developer/reference/extract_api.rst:190
-#: ../../content/developer/reference/extract_api.rst:477
-msgid "|STATUS_CODE|"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:111
-#: ../../content/developer/reference/extract_api.rst:191
-#: ../../content/developer/reference/extract_api.rst:479
-msgid "``status_msg``"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:112
-#: ../../content/developer/reference/extract_api.rst:192
-#: ../../content/developer/reference/extract_api.rst:479
-msgid "|STATUS_MSG|"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:114
-msgid "``document_id``"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:114
-#: ../../content/developer/reference/extract_api.rst:194
-msgid "Only present if the request is successful."
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:116
-msgid "The API does not actually use the JSON-RPC error scheme. Instead the API has its own error scheme bundled inside a successful JSON-RPC result."
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:119
-#: ../../content/developer/reference/extract_api.rst:199
-#: ../../content/developer/reference/extract_api.rst:482
-msgid "status_code"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:119
-#: ../../content/developer/reference/extract_api.rst:199
-#: ../../content/developer/reference/extract_api.rst:482
-msgid "status_msg"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:121
-#: ../../content/developer/reference/extract_api.rst:201
-#: ../../content/developer/reference/extract_api.rst:484
-msgid "0"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:122
-#: ../../content/developer/reference/extract_api.rst:203
-msgid "2"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:122
-#: ../../content/developer/reference/extract_api.rst:203
-msgid "An error occurred"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:123
-msgid "3"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:123
-msgid "You don't have enough credit"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:124
-#: ../../content/developer/tutorials/define_module_data.rst:183
-msgid "6"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:124
-msgid "Unsupported file format"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:125
-#: ../../content/developer/reference/extract_api.rst:204
-msgid "9"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:125
-#: ../../content/developer/reference/extract_api.rst:204
-msgid "Server is currently under maintenance. Please try again later."
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:144
-msgid "``/iap/invoice_extract/get_results``"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:149
-msgid "Request the results of the documents ids obtained with the :ref:`/parse <webservices/extract_api/invoice_parse>` route. Can either return the results or a \"request pending\" message."
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:155
-#: ../../content/developer/reference/extract_api.rst:157
-#: ../../content/developer/reference/extract_api.rst:159
-#: ../../content/developer/reference/extract_api.rst:162
-#: ../../content/developer/reference/extract_api.rst:183
-#: ../../content/developer/reference/extract_api.rst:185
-#: ../../content/developer/reference/extract_api.rst:371
-#: ../../content/developer/reference/extract_api.rst:373
-#: ../../content/developer/reference/extract_api.rst:472
-#: ../../content/developer/reference/extract_api.rst:474
-msgid "|SAME_AS_PARSE|"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:164
-msgid "``params``:"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:161
+#: ../../content/developer/reference/extract_api.rst:91
+#: ../../content/developer/reference/extract_api.rst:233
 msgid "``version`` (required)"
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:164
-msgid "``documents_ids`` (required)"
+#: ../../content/developer/reference/extract_api.rst:91
+msgid "The version will determine the format of your requests and the format of the server response. You should use the :ref:`latest version available <extract_api/version>`."
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:164
-msgid "The list of ``document_id`` for which you want to get the current parsing status."
+#: ../../content/developer/reference/extract_api.rst:97
+msgid "``documents`` (required)"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:94
+msgid "The document must be provided as a string in the ASCII encoding. The list should contain only one string. If multiple strings are provided only the first string corresponding to a pdf will be processed. If no pdf is found, the first string will be processed. This field is a list only for legacy reasons. The supported extensions are *pdf*, *png*, *jpg* and *bmp*."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:99
+msgid "``dbuuid`` (optional)"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:100
+msgid "Unique identifier of the Odoo database."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:102
+msgid "``webhook_url`` (optional)"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:102
+msgid "A webhook URL can be provided. An empty POST request will be sent to ``webhook_url/document_token`` when the result is ready."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:131
+msgid "``user_infos`` (optional)"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:105
+msgid "Information concerning the person sending the document to the extract service. It can be the client or the supplier (depending on the ``perspective``). This information is not required in order for the service to work but it greatly improves the quality of the result."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:111
+msgid "``user_company_vat`` (optional)"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:112
+msgid "VAT number of the user."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:113
+msgid "``user_company_name`` (optional)"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:114
+msgid "Name of the user’s company."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:116
+msgid "``user_company_country_code`` (optional)"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:116
+msgid "Country code of the user. Format: `ISO3166 alpha-2 <https://www.iban.com/country-codes>`_."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:118
+msgid "``user_lang`` (optional)"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:119
+msgid "The user language. Format: *language_code + _ + locale* (e.g. fr_FR, en_US)."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:120
+msgid "``user_email`` (optional)"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:121
+msgid "The user email."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:122
+msgid "``purchase_order_regex`` (optional)"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:123
+msgid "Regex for purchase order identification. Will default to Odoo PO format if not provided."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:131
+msgid "``perspective`` (optional)"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:127
+msgid "Can be ``client`` or ``supplier``. This field is useful for invoices only. ``client`` means that the user information provided are related to the client of the invoice. ``supplier`` means that it's related to the supplier. If not provided, client will be used."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:158
+msgid "The ``user_infos`` parameter is optional but it greatly improves the quality of the result, especially for invoices. The more information you can provide, the better."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:166
+#: ../../content/developer/reference/extract_api.rst:262
+msgid "``jsonrpc``"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:178
+#: ../../content/developer/reference/extract_api.rst:279
+msgid "``result``"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:173
+#: ../../content/developer/reference/extract_api.rst:269
+msgid "``status``"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:174
+#: ../../content/developer/reference/extract_api.rst:270
+msgid "The code indicating the status of the request. See the table below."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:175
+#: ../../content/developer/reference/extract_api.rst:271
+msgid "``status_msg``"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:176
+#: ../../content/developer/reference/extract_api.rst:272
+msgid "A string giving verbose details about the request status."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:178
+msgid "``document_token``"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:178
+#: ../../content/developer/reference/extract_api.rst:274
+msgid "Only present if the request is successful."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:181
+#: ../../content/developer/reference/extract_api.rst:282
+#: ../../content/developer/tutorials/getting_started/08_relations.rst:244
+msgid "status"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:181
+#: ../../content/developer/reference/extract_api.rst:282
+msgid "status_msg"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:183
+#: ../../content/developer/reference/extract_api.rst:284
+msgid "`success`"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:184
+#: ../../content/developer/reference/extract_api.rst:285
+msgid "`error_unsupported_version`"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:184
+#: ../../content/developer/reference/extract_api.rst:285
+msgid "Unsupported version"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:185
+#: ../../content/developer/reference/extract_api.rst:286
+msgid "`error_internal`"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:185
+#: ../../content/developer/reference/extract_api.rst:286
+msgid "An error occurred"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:186
+msgid "`error_no_credit`"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:186
+msgid "You don't have enough credit"
 msgstr ""
 
 #: ../../content/developer/reference/extract_api.rst:187
-msgid "Dictionary where each key is a document_id. For each ``document_id``:"
+msgid "`error_unsupported_format`"
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:194
+#: ../../content/developer/reference/extract_api.rst:187
+msgid "Unsupported file format"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:188
+#: ../../content/developer/reference/extract_api.rst:287
+msgid "`error_maintenance`"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:188
+#: ../../content/developer/reference/extract_api.rst:287
+msgid "Server is currently under maintenance, please try again later"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:204
+msgid "The API does not actually use the JSON-RPC error scheme. Instead the API has its own error scheme bundled inside a successful JSON-RPC result."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:208
+msgid "Get results"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:215
+msgid "/api/extract/invoice/2/get_result"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:216
+msgid "/api/extract/expense/2/get_result"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:217
+msgid "/api/extract/applicant/2/get_result"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:234
+msgid "The version should match the version passed to the :ref:`/parse <extract_api/parse>` request."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:235
+msgid "``document_token`` (required)"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:236
+msgid "The ``document_token`` for which you want to get the current parsing status."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:238
+msgid "The token of the account that was used to submit the document."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:256
+msgid "When getting the results from the parse, the detected field vary a lot depending on the type of document. Each response is a list of dictionaries, one for each document. The keys of the dictionary are the name of the field and the value is the value of the field."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:279
 msgid "``results``"
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:196
-msgid "result keys are strings despite the fact that the document_ids given in the request body are integers."
+#: ../../content/developer/reference/extract_api.rst:279
+msgid "``full_text_annotation``"
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:202
-#: ../../content/developer/tutorials/define_module_data.rst:183
-msgid "1"
+#: ../../content/developer/reference/extract_api.rst:279
+msgid "Contains the unprocessed full result from the OCR for the document"
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:202
-msgid "Not ready"
+#: ../../content/developer/reference/extract_api.rst:288
+msgid "`error_document_not_found`"
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:237
-msgid "``feature_result``"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:239
-msgid "Each field of interest we want to extract from the invoice such as the total or the due date are also called features. An exhaustive list of all the extracted features can be found in the table below."
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:241
-msgid "For each feature, we return a list of candidates and we spotlight the candidate our model predicts to be the best fit for the feature."
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:243
-msgid "``selected_value``"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:244
-msgid "The best candidate for this feature."
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:246
-msgid "``words``"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:246
-msgid "List of all the candidates for this feature ordered by decreasing score."
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:258
-msgid "``candidate``"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:260
-msgid "For each candidate we give its representation and position in the document. Candidates are sorted by decreasing order of suitability."
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:262
-msgid "``content``"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:263
-msgid "Representation of the candidate."
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:265
-msgid "``coords``"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:265
-msgid "``[center_x, center_y, width, height, rotation_angle]``. The position and dimensions are relative to the size of the page and are therefore between 0 and 1. The angle is a clockwise rotation measured in degrees."
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:268
-msgid "Page of the original document on which the candidate is located (starts at 0)."
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:280
-msgid "Feature name"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:280
-msgid "Specifities"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:282
-msgid "``SWIFT_code``"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:282
-msgid "**content** is a dictionary encoded as a string."
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:284
-msgid "It contains information about the detected SWIFT code (or `BIC <https://www.iso9362.org/isobic/overview.html>`_)."
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:287
-msgid "Keys:"
+#: ../../content/developer/reference/extract_api.rst:288
+msgid "The document could not be found"
 msgstr ""
 
 #: ../../content/developer/reference/extract_api.rst:289
-msgid "``bic``"
+msgid "`error_unsupported_size`"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:289
+msgid "The document has been rejected because it is too small"
 msgstr ""
 
 #: ../../content/developer/reference/extract_api.rst:290
-msgid "detected BIC (string)."
+msgid "`error_no_page_count`"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:290
+msgid "Unable to get page count of the PDF file"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:291
+msgid "`error_pdf_conversion_to_images`"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:291
+msgid "Couldn't convert the PDF to images"
 msgstr ""
 
 #: ../../content/developer/reference/extract_api.rst:292
-msgid "bank name (string)."
+msgid "`error_password_protected`"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:292
+msgid "The PDF file is protected by a password"
 msgstr ""
 
 #: ../../content/developer/reference/extract_api.rst:293
-msgid "``country_code``"
+msgid "`error_too_many_pages`"
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:294
-msgid "ISO3166 alpha-2 country code of the bank (string)."
+#: ../../content/developer/reference/extract_api.rst:293
+msgid "The document contains too many pages"
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:295
-msgid "``city`` (optional)"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:296
-msgid "city of the bank (string)."
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:298
-msgid "``verified_bic``"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:298
-msgid "True if the BIC has been found in our DB (bool)."
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:300
-msgid "Name and city are present only if verified_bic is true."
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:302
-msgid "``VAT_Number``"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:302
-#: ../../content/developer/reference/extract_api.rst:304
-#: ../../content/developer/reference/extract_api.rst:306
-#: ../../content/developer/reference/extract_api.rst:308
-#: ../../content/developer/reference/extract_api.rst:322
-#: ../../content/developer/reference/extract_api.rst:328
-msgid "**content** is a string"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:304
-msgid "``country``"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:306
-msgid "``currency``"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:308
-msgid "``date``"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:310
-msgid "Format : *YYYY-MM-DD HH:MM:SS*"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:312
-msgid "``due_date``"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:312
-msgid "Same as for ``date``"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:314
-msgid "``global_taxes``"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:314
-#: ../../content/developer/reference/extract_api.rst:320
-#: ../../content/developer/reference/extract_api.rst:324
-#: ../../content/developer/reference/extract_api.rst:326
-msgid "**content** is a float"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:316
-msgid "**candidate** has an additional field ``amount_type``. Its value is always percent."
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:318
-msgid "**selected_values** is a list of candidates."
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:320
-msgid "``global_taxes_amount``"
+#: ../../content/developer/reference/extract_api.rst:317
+msgid "Common fields"
 msgstr ""
 
 #: ../../content/developer/reference/extract_api.rst:322
-msgid "``invoice_id``"
+msgid "``feature_result``"
 msgstr ""
 
 #: ../../content/developer/reference/extract_api.rst:324
-msgid "``subtotal``"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:326
-msgid "``total``"
+msgid "Each field of interest we want to extract from the document such as the total or the due date are also called **features**. An exhaustive list of all the extracted features associated to a type of document can be found in the sections below."
 msgstr ""
 
 #: ../../content/developer/reference/extract_api.rst:328
-msgid "``supplier``"
+msgid "For each feature, we return a list of candidates and we spotlight the candidate our model predicts to be the best fit for the feature."
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:332
-msgid "``feature_result`` for the ``invoice_lines`` feature"
+#: ../../content/developer/reference/extract_api.rst:333
+msgid "``selected_value`` (optional)"
 msgstr ""
 
 #: ../../content/developer/reference/extract_api.rst:334
-msgid "It follows a more specific structure. It is basically a list of dictionaries where each dictionary represents an invoice line. Each value follows a :ref:`webservices/extract_api/invoice_get_results/feature_result` structure."
+msgid "The best candidate for this feature."
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:359
-msgid "``/iap/invoice_extract/validate``"
+#: ../../content/developer/reference/extract_api.rst:335
+msgid "``selected_values`` (optional)"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:336
+msgid "The best candidates for this feature."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:338
+msgid "``candidates`` (optional)"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:338
+msgid "List of all the candidates for this feature ordered by decreasing confidence score."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:348
+msgid "candidate"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:350
+msgid "For each candidate we give its representation and position in the document. Candidates are sorted by decreasing order of suitability."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:355
+msgid "``content``"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:356
+msgid "Representation of the candidate."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:361
+msgid "``coords``"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:360
+msgid "``[center_x, center_y, width, height, rotation_angle]``. The position and dimensions are relative to the size of the page and are therefore between 0 and 1. The angle is a clockwise rotation measured in degrees."
 msgstr ""
 
 #: ../../content/developer/reference/extract_api.rst:364
-msgid "Route that validates the different features of an invoice. The validation step is an optional step but is strongly recommended. By telling the system if it were right or wrong for each feature you give an important feedback. It has no direct impact but it helps the system to greatly improve its prediction accuracy for the invoices you will send in the future."
+msgid "Page of the original document on which the candidate is located (starts at 0)."
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:375
-msgid "``documents_id`` (required)"
+#: ../../content/developer/reference/extract_api.rst:379
+msgid "Invoices"
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:376
-msgid "Id of the document for which you want to validate the result."
+#: ../../content/developer/reference/extract_api.rst:381
+msgid "Invoices are complex and can have a lot of different fields. The following table gives an exhaustive list of all the fields we can extract from an invoice."
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:378
-msgid "Contains the validation for each feature. The field ``merged_line`` indicates if the ``invoice_lines`` have been merged or not."
+#: ../../content/developer/reference/extract_api.rst:385
+#: ../../content/developer/reference/extract_api.rst:489
+#: ../../content/developer/reference/extract_api.rst:509
+msgid "Feature name"
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:380
-msgid "You don't have to validate all the features in order for the validation to succeed. However :ref:`/validate <webservices/extract_api/invoice_validate>` can't be called multiple times for a same invoice. Therefore you should validate all the features you want to validate at once."
+#: ../../content/developer/reference/extract_api.rst:385
+#: ../../content/developer/reference/extract_api.rst:489
+#: ../../content/developer/reference/extract_api.rst:509
+msgid "Specifities"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:387
+msgid "``SWIFT_code``"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:387
+msgid "``content`` is a dictionary encoded as a string."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:389
+msgid "It contains information about the detected SWIFT code (or `BIC <https://www.iso9362.org/isobic/overview.html>`_)."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:392
+msgid "Keys:"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:396
+msgid "``bic``"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:397
+msgid "detected BIC (string)."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:399
+msgid "bank name (string)."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:400
+msgid "``country_code``"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:401
+msgid "ISO3166 alpha-2 country code of the bank (string)."
 msgstr ""
 
 #: ../../content/developer/reference/extract_api.rst:402
-msgid "``validation``"
+msgid "``city`` (optional)"
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:404
-msgid "A **validation** for a given feature is a dictionary containing the textual representation of the expected value for this given feature. This format apply for all the features except for ``global_taxes`` and ``invoice_lines`` which have more complex validation format."
+#: ../../content/developer/reference/extract_api.rst:403
+msgid "city of the bank (string)."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:405
+msgid "``verified_bic``"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:405
+msgid "True if the BIC has been found in our DB (bool)."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:407
+msgid "Name and city are present only if verified_bic is true."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:409
+msgid "``iban``"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:409
+#: ../../content/developer/reference/extract_api.rst:411
+#: ../../content/developer/reference/extract_api.rst:413
+#: ../../content/developer/reference/extract_api.rst:420
+#: ../../content/developer/reference/extract_api.rst:422
+#: ../../content/developer/reference/extract_api.rst:424
+#: ../../content/developer/reference/extract_api.rst:428
+#: ../../content/developer/reference/extract_api.rst:430
+#: ../../content/developer/reference/extract_api.rst:432
+#: ../../content/developer/reference/extract_api.rst:440
+#: ../../content/developer/reference/extract_api.rst:446
+#: ../../content/developer/reference/extract_api.rst:448
+#: ../../content/developer/reference/extract_api.rst:450
+#: ../../content/developer/reference/extract_api.rst:452
+#: ../../content/developer/reference/extract_api.rst:491
+#: ../../content/developer/reference/extract_api.rst:493
+#: ../../content/developer/reference/extract_api.rst:495
+#: ../../content/developer/reference/extract_api.rst:499
+#: ../../content/developer/reference/extract_api.rst:511
+#: ../../content/developer/reference/extract_api.rst:513
+#: ../../content/developer/reference/extract_api.rst:515
+#: ../../content/developer/reference/extract_api.rst:517
+msgid "``content`` is a string"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:411
+msgid "``aba``"
 msgstr ""
 
 #: ../../content/developer/reference/extract_api.rst:413
-msgid "validation for ``global_taxes``"
+msgid "``VAT_Number``"
 msgstr ""
 
 #: ../../content/developer/reference/extract_api.rst:415
-msgid "**content** is a list of dictionaries. Each dictionary represents a tax:"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:417
-msgid "``amount``"
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:418
-msgid "Amount on which the tax is applied."
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:419
-msgid "``tax_amount``"
+msgid "Depending on the value of perspective in the user_infos, this will be the VAT number of the supplier or the client. If perspective is client, it'll be the supplier's VAT number. If it's supplier, it's the client's VAT number."
 msgstr ""
 
 #: ../../content/developer/reference/extract_api.rst:420
-msgid "Amount of the tax."
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:421
-msgid "``tax_amount_type``"
+msgid "``qr-bill``"
 msgstr ""
 
 #: ../../content/developer/reference/extract_api.rst:422
-msgid "Indicates if the ``tax_amount`` is a percentage or a fixed value. The type must be specified using the literal string \"fixed\" or \"percent\"."
+msgid "``payment_ref``"
 msgstr ""
 
 #: ../../content/developer/reference/extract_api.rst:424
-msgid "``tax_price_include``"
+msgid "``purchase_order``"
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:424
-msgid "Indicates if ``amount`` already contains the tax or not."
+#: ../../content/developer/reference/extract_api.rst:426
+msgid "Uses ``selected_values`` instead of ``selected_value``"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:428
+#: ../../content/developer/reference/extract_api.rst:493
+msgid "``country``"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:430
+#: ../../content/developer/reference/extract_api.rst:499
+msgid "``currency``"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:432
+#: ../../content/developer/reference/extract_api.rst:495
+msgid "``date``"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:434
+msgid "Format : *YYYY-MM-DD*"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:436
+msgid "``due_date``"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:436
+msgid "Same as for ``date``"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:438
+msgid "``total_tax_amount``"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:438
+#: ../../content/developer/reference/extract_api.rst:442
+#: ../../content/developer/reference/extract_api.rst:444
+#: ../../content/developer/reference/extract_api.rst:497
+msgid "``content`` is a float"
 msgstr ""
 
 #: ../../content/developer/reference/extract_api.rst:440
-msgid "validation for ``invoice_lines``"
+msgid "``invoice_id``"
 msgstr ""
 
 #: ../../content/developer/reference/extract_api.rst:442
-msgid "**lines** is a list of dictionaries. Each dictionary represents an invoice line. The dictionary keys speak for themselves."
+msgid "``subtotal``"
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:485
-msgid "12"
+#: ../../content/developer/reference/extract_api.rst:444
+#: ../../content/developer/reference/extract_api.rst:497
+msgid "``total``"
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:485
-msgid "Validation format is incorrect"
+#: ../../content/developer/reference/extract_api.rst:446
+msgid "``supplier``"
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:506
-msgid "You can test your integration by using *integration_token* as ``account_token`` in the :ref:`/parse <webservices/extract_api/invoice_parse>` request."
+#: ../../content/developer/reference/extract_api.rst:448
+msgid "``client``"
 msgstr ""
 
-#: ../../content/developer/reference/extract_api.rst:508
-msgid "Using this token put you in test mode and allows you to simulate the entire flow without really parsing a document and without being billed one credit for each successful invoice parsing."
-msgstr ""
-
-#: ../../content/developer/reference/extract_api.rst:510
-msgid "The only technical differences in test mode is that the document you send is not parsed by the system and that the response you get from :ref:`/get_results <webservices/extract_api/invoice_get_results>` is a hard-coded one."
-msgstr ""
-
+#: ../../content/developer/reference/extract_api.rst:450
 #: ../../content/developer/reference/extract_api.rst:513
-msgid "A python implementation of the full flow can be found :download:`here <extract_api/implementation.py>`."
+msgid "``email``"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:457
+msgid "``feature_result`` for the ``invoice_lines`` feature"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:459
+msgid "It follows a more specific structure. It is basically a list of dictionaries where each dictionary represents an invoice line. Each value follows a :ref:`latestextract_api/get_result/feature_result` structure."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:483
+msgid "Expense"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:485
+msgid "The expenses are less complex than invoices. The following table gives an exhaustive list of all the fields we can extract from an expense report."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:503
+msgid "Applicant"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:505
+msgid "This third type of document is meant for processing resumes. The following table gives an exhaustive list of all the fields we can extract from a resume."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:515
+msgid "``phone``"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:517
+msgid "``mobile``"
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:525
+msgid "You can test your integration by using *integration_token* as ``account_token`` in the :ref:`/parse <extract_api/parse>` request."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:528
+msgid "Using this token put you in test mode and allows you to simulate the entire flow without really parsing a document and without being billed one credit for each successful **document** parsing."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:531
+msgid "The only technical differences in test mode is that the document you send is not parsed by the system and that the response you get from :ref:`/get_result <extract_api/get_result>` is a hard-coded one."
+msgstr ""
+
+#: ../../content/developer/reference/extract_api.rst:535
+msgid "A python implementation of the full flow for invoices can be found :download:`here <extract_api/implementation.py>`."
 msgstr ""
 
 #: ../../content/developer/reference/frontend.rst:5
@@ -17737,6 +17195,10 @@ msgstr ""
 
 #: ../../content/developer/reference/frontend/javascript_reference.rst:870
 msgid "The service system is organized around three ideas: services, service providers and widgets.  The way it works is that widgets trigger (with *trigger_up*) events, these events bubble up to a service provider, which will ask a service to perform a task, then maybe return an answer."
+msgstr ""
+
+#: ../../content/developer/reference/frontend/javascript_reference.rst:876
+msgid "Service"
 msgstr ""
 
 #: ../../content/developer/reference/frontend/javascript_reference.rst:878
@@ -24159,6 +23621,14 @@ msgstr ""
 msgid "bedrooms"
 msgstr ""
 
+#: ../../content/developer/tutorials/define_module_data.rst:183
+msgid "6"
+msgstr ""
+
+#: ../../content/developer/tutorials/define_module_data.rst:183
+msgid "1"
+msgstr ""
+
 #: ../../content/developer/tutorials/define_module_data.rst:184
 #: ../../content/developer/tutorials/getting_started/04_basicmodel.rst:196
 msgid "living_area"
@@ -25123,6 +24593,10 @@ msgstr ""
 
 #: ../../content/developer/tutorials/getting_started/04_basicmodel.rst:130
 msgid "The ``name`` field is a :class:`~odoo.fields.Char` which will be represented as a Python unicode ``str`` and a SQL ``VARCHAR``."
+msgstr ""
+
+#: ../../content/developer/tutorials/getting_started/04_basicmodel.rst:134
+msgid "Types"
 msgstr ""
 
 #: ../../content/developer/tutorials/getting_started/04_basicmodel.rst:138
@@ -26210,10 +25684,6 @@ msgstr ""
 
 #: ../../content/developer/tutorials/getting_started/08_relations.rst:243
 msgid "price"
-msgstr ""
-
-#: ../../content/developer/tutorials/getting_started/08_relations.rst:244
-msgid "status"
 msgstr ""
 
 #: ../../content/developer/tutorials/getting_started/08_relations.rst:244
