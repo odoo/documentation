@@ -144,7 +144,7 @@ numbers.
       * - GS1 Barcode (lot #)
         - LOT0002
       * - Full GS1 barcode
-        - 01206116289360043 000000050 10LOT0002
+        - 0120611628936004 3000000050 10LOT0002
 
    :ref:`If the configuration is correct <barcode/operations/troubleshooting>`, `50/50`
    :guilabel:`Units` processed will be displayed and the :guilabel:`Validate` button turns green.
