@@ -166,6 +166,14 @@ Cancel`.
 
 .. _india/verify-e-invoice:
 
+Managining Discount Lines in e-Invoice
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When incorporating global discounts on products to generate an e-invoice, it's important to note
+that the government portal prohibits the submission of data with negative line values. To facilitate
+the inclusion of discount lines, users are required to activate the option for managing negative lines.
+This ensures seamless handling of discounts within the e-invoicing process.
+
 GST e-Invoice verification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
