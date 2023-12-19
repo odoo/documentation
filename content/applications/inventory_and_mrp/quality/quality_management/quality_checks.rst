@@ -3,6 +3,7 @@ Quality checks
 ==============
 
 .. _quality/quality_management/quality-checks:
+.. |MO| replace:: :abbr:`MO (Manufacturing Order)`
 .. |QCP| replace:: :abbr:`QCP (Quality Control Point)`
 
 Quality checks are manual inspections conducted by employees, and are used to ensure the quality of
@@ -76,7 +77,7 @@ Process quality check
 
 Quality checks can be processed directly on the quality check's page, or from a manufacturing or
 inventory order for which a check is required. Alternatively, if a quality check is created for a
-specific work order operation, the check is processed in the tablet view for the work order.
+specific work order operation, the check is processed in the *Shop Floor* module.
 
 .. note::
    It is not possible to manually create a single quality check that is assigned to a specific work
@@ -122,16 +123,35 @@ Quality check on work order
 ---------------------------
 
 To process a quality check for a work order, begin by navigating to :menuselection:`Manufacturing
---> Operations --> Manufacturing Orders`, then select a manufacturing order. Select the
-:guilabel:`Work Orders` tab, then click the :guilabel:`📱 (tablet)` tablet view button for the work
-order that requires the quality check.
+--> Operations --> Manufacturing Orders`. Select an |MO| that includes a work order for which a
+quality check is required.
 
-With tablet view open, complete the steps listed on the left side of the screen until the quality
-check step is reached, then follow the instructions at the top of the screen. If a Pass - Fail check
-is being processed, complete the check by clicking :guilabel:`Pass` or :guilabel:`Fail` at the top
-of the screen. For all other quality check types, a :guilabel:`Next` button appears instead. Click
-it to complete the check and move on to the next step of the work order.
+On the |MO|, select the :guilabel:`Work Orders` tab, and then click the :guilabel:`Open Work Order
+(external link icon)` button on the line of the work order to be processed. On the resulting
+:guilabel:`Work Orders` pop-up window, click the :guilabel:`Open Shop Floor` button to open the
+*Shop Floor* module.
 
-.. image:: quality_checks/work-order-check.png
-   :align: center
-   :alt: A quality check for a work order.
+.. seealso::
+   For a full guide to the Shop Floor module, see the :doc:`Shop Floor overview
+   <../../manufacturing/shop_floor/shop_floor_overview>` documentation.
+
+When accessed from a specific work order, the *Shop Floor* module opens to the page for the work
+center where the order is configured to be processed, and isolates the work order's card so that no
+other cards are shown.
+
+Process the work order's steps until the quality check step is reached. Click on the step to open a
+pop-up window that details how the check should be completed. After following the instructions,
+click :guilabel:`Validate` to complete the check. Alternatively, if a *Pass - Fail* check is being
+processed, click either the :guilabel:`Pass` or :guilabel:`Fail` button.
+
+It is also possible to complete a quality check by clicking the checkbox on the right side of the
+step. Doing so automatically marks the check as *Passed*.
+
+.. note::
+   The specific steps for processing a quality check depend upon the type of check being conducted.
+   For information about processing each type of quality check, see the associated documentation:
+
+   - :doc:`../quality_check_types/instructions_check`
+   - :doc:`../quality_check_types/pass_fail_check`
+   - :doc:`../quality_check_types/measure_check`
+   - :doc:`../quality_check_types/picture_check`
