@@ -35,12 +35,14 @@ Starting from the :menuselection:`Inventory` app, select :menuselection:`Configu
 - :guilabel:`Is a Return Location?`: check this box to allow products to be returned to this
   location
 - :guilabel:`Barcode`: the barcode number assigned to the location
-- :guilabel:`Removal Strategy`: the :ref:`strategy <inventory/routes/strategies/removal>` for how
-  items should be taken from inventory
+- :guilabel:`Removal Strategy`: the :doc:`strategy <../advanced_operations_warehouse/removal>` for
+  how items should be taken from inventory
 
 .. image:: use_locations/new-location-form.png
    :align: center
    :alt: The form for creating a new location.
+
+.. _inventory/location-hierarchy:
 
 Create location hierarchies
 ===========================
