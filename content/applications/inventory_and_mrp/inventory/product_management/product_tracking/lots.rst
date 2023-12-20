@@ -16,7 +16,7 @@ or food), and can be used to trace a product back to a group. This is especially
 managing product recalls or expiration dates.
 
 .. seealso::
-   :doc:`/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers`
+   :doc:`serial_numbers`
 
 Enable lots & serial numbers
 ============================
@@ -97,6 +97,8 @@ Manage lots for shipping and receiving
 Lot numbers can be assigned for both **incoming** and **outgoing** goods. For incoming goods, lot
 numbers are assigned directly on the purchase order form. For outgoing goods, lot numbers are
 assigned directly on the sales order form.
+
+.. _inventory/product_management/receipt-lots:
 
 Manage lots on receipts
 -----------------------
@@ -281,4 +283,4 @@ of products with that assigned number.
    :alt: Lots and serial numbers traceability report.
 
 .. seealso::
-   :doc:`/applications/inventory_and_mrp/inventory/product_management/product_tracking/differences`
+   :doc:`differences`
