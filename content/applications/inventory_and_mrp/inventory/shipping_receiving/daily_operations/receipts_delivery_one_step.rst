@@ -82,6 +82,8 @@ Once the receipt is validated, the product leaves the :guilabel:`Supplier Locati
 etc. Then, the status of the document will change to :guilabel:`Done`, thus completing the reception
 process in one step.
 
+.. _inventory/delivery/one-step:
+
 Deliver goods directly (1 step)
 ===============================
 
