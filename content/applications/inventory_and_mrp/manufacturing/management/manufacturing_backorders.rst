@@ -2,6 +2,8 @@
 Manufacturing backorders
 ========================
 
+.. |MO| replace:: :abbr:`MO (Manufacturing Order)`
+
 In some cases, the full quantity of a manufacturing order cannot be produced immediately. When this
 happens, Odoo *Manufacturing* allows for the manufacturing of partial quantities of the order and
 creates a *backorder* for the remaining amount.
@@ -63,127 +65,67 @@ order.
 If only some of the remaining units are manufactured immediately, create another backorder for the
 remainder by following the steps detailed in this section.
 
-Create a backorder from tablet view
-===================================
+Create a backorder in Shop Floor
+================================
 
-Backorders for manufacturing orders can also be created from the work order tablet view.
+Backorders for manufacturing orders can also be created from the *Shop Floor* module.
 
 .. note::
-   In order to use tablet view, the *Work Orders* setting must be enabled. To enable it, navigate to
-   :menuselection:`Manufacturing --> Configuration --> Settings`. On the :guilabel:`Settings` page,
-   enable the checkbox next to :guilabel:`Work Orders`, then click :guilabel:`Save` to save the
-   change. This makes the :guilabel:`Work Orders` tab appear on manufacturing orders, from which the
-   tablet view can be opened.
+   In order to use the *Shop Floor* module, the *Work Orders* setting must be enabled. To do so,
+   navigate to :menuselection:`Manufacturing --> Configuration --> Settings`, enable the
+   :guilabel:`Work Orders` checkbox, and then click :guilabel:`Save`.
 
-   .. image:: manufacturing_backorders/work-orders-setting.png
-      :align: center
-      :alt: The Work Orders setting on the Manufacturing settings page.
+To create a backorder from the *Shop Floor* module, begin by navigating to
+:menuselection:`Manufacturing --> Operations --> Manufacturing Orders`. Select an |MO| for multiple
+units of a product, for which a backorder needs to be created.
 
-To create a backorder from the tablet view, begin by navigating to :menuselection:`Manufacturing -->
-Operations --> Manufacturing Orders`. Select a manufacturing order with a quantity of two or more or
-create one by clicking :guilabel:`Create`.
+On the |MO|, select the :guilabel:`Work Orders` tab, and then click the :guilabel:`Open Work Order
+(external link icon)` button on the line of the work order to be processed. On the resulting
+:guilabel:`Work Orders` pop-up window, click the :guilabel:`Open Shop Floor` button to open the
+*Shop Floor* module.
 
-If a new manufacturing order is created, select a product from the :guilabel:`Product` drop-down
-menu and enter a quantity of two or more in the :guilabel:`Quantity` field, then click
-:guilabel:`Confirm` to confirm the order.
+When accessed from a specific work order, the *Shop Floor* module opens to the page for the work
+center where the order is configured to be processed, and isolates the work order's card so that no
+other cards are shown.
 
-After confirming the manufacturing order, select the :guilabel:`Work Orders` tab and click the
-:guilabel:`📱 (tablet view)` button located on the line of the first work order to enter the tablet view.
+Complete the steps on the work order's card until the :guilabel:`Register Production` step is
+reached, and then click on it to open the :guilabel:`Register Production` pop-up window.
 
-.. image:: manufacturing_backorders/tablet-view-button.png
+.. important::
+   Do **not** click the :guilabel:`# Units` button on the right side of the step. Doing so
+   automatically registers the full amount of units as having been produced.
+
+On the :guilabel:`Register Production` pop-up window, enter the number of units produced in the
+:guilabel:`Quantity` field. Make sure the number entered is *less* than the number of units listed
+to the right of the field. Then, click :guilabel:`Validate`.
+
+.. image:: manufacturing_backorders/register-production.png
    :align: center
-   :alt: The tablet view button for a work order on a manufacturing order.
+   :alt: The Register Production pop-up window in the Shop Floor module.
 
-Once in tablet view, enter the quantity being manufactured immediately in the :guilabel:`Units`
-field at the top left of the tablet view.
+The pop-up window disappears and the :guilabel:`# Units` button on the work order's card updates to
+reflect the number of units produced, as a fraction of the number of units for which the |MO| was
+originally created.
 
-.. image:: manufacturing_backorders/units-field.png
-   :align: center
-   :alt: The Units field in the tablet view.
+Next, click the :guilabel:`Mark as Done` button at the bottom-right of the work order's card. The
+work order card begins to fade away. Once it disappears completely, a new work order card appears,
+titled with the original |MO|'s reference number with a `-002` tag added to the end of it.
 
-The steps for the rest of the workflow depend on whether the manufacturing order being processed
-requires the completion of a single work order or multiple work orders.
+This new reference number represents the backorder |MO|. The original |MO|'s reference number now
+appears with a `-001` tag added to the end of it to distinguish it from the backorder |MO|.
 
-Single work order
------------------
+If the original |MO| has no remaining work orders, it can be closed by selecting the :guilabel:`All`
+filter in the top navigation of the *Shop Floor* module, and then clicking :guilabel:`Close
+Production` at the bottom of the |MO|'s card.
 
-If the manufacturing order only requires the completion of a single work order, complete the work
-order, then click :guilabel:`Mark As Done And Close MO`. The manufacturing order is closed and a
-backorder for the units that still need to be manufactured is created automatically.
+If the original |MO| has remaining work orders that must be completed before it can be closed, cards
+for these work orders appear on the *Shop Floor* pages for the work centers where they are
+configured to be carried out. They can be processed as normal, and additional backorders can be
+created from their work order cards using the instructions detailed in this section.
 
-.. image:: manufacturing_backorders/madacmo-button.png
-   :align: center
-   :alt: The Mark As Done And Close MO button in the tablet view of a work order.
+Once the current work order for the backorder |MO| is ready to be processed, this can also be
+completed as normal, and an additional backorder can be created from its work order card by
+following the instructions detailed in this section.
 
-Once the remaining units are ready to be manufactured, navigate to :menuselection:`Manufacturing -->
-Operations --> Manufacturing Orders`, then select the backorder manufacturing order, which is titled
-using the reference tag of the original backorder with *002* added to the end.
-
-On the backorder manufacturing order, select the :guilabel:`Work Orders` tab and click the
-:guilabel:`📱 (tablet view)` button located on the line of the work order to open the tablet view.
-If all of the units in the backorder will be completed immediately, simply click :guilabel:`Mark As
-Done And Close MO` after completing the work order.
-
-If only some of the remaining units will be manufactured immediately, enter the number in the
-:guilabel:`Units` field at the top left of the tablet view, then click :guilabel:`Mark As Done And
-Close MO` to create another backorder for the remaining units. The new backorder can be processed
-using the steps detailed in this section.
-
-Multiple work orders
---------------------
-
-If the manufacturing order requires the completion of multiple work orders, complete the first work
-order, and then click :guilabel:`Record Production`. This splits the manufacturing order into two
-separate orders, titled *WH/MO/XXXXX-001* and *WH/MO/XXXXX-002*, with *XXXXX* being the number of
-the original order.
-
-.. image:: manufacturing_backorders/record-production-button.png
-   :align: center
-   :alt: The Record Production button on a work order.
-
-The tablet view defaults to showing the first work order for the *002* manufacturing order. Since
-this manufacturing order will not be completed immediately, back out of tablet view by clicking the
-:guilabel:`⬅️ (back)` button twice. Doing so will take you to the *001* order.
-
-To finish the *001* order, select the :guilabel:`Work Orders` tab and click the :guilabel:`tablet
-view` button located on the line of the next work order. Finally, complete the remaining work
-orders, then click :guilabel:`Mark As Done And Close MO` to close the manufacturing order.
-
-Once the remaining units are ready to be manufactured, navigate to :menuselection:`Manufacturing -->
-Operations --> Manufacturing Orders`, then select the *002* order. Select the :guilabel:`Work
-Orders` tab and click the :guilabel:`tablet view` button located on the line of the first work
-order.
-
-If all of the units in the backorder will be completed immediately, simply click :guilabel:`Mark As
-Done And Close MO` after completing all of the work orders.
-
-If only some of the remaining units will be manufactured immediately, enter the number in the
-:guilabel:`Units` field at the top left of the tablet view, then click :guilabel:`Record Production`
-to create an additional backorder for the remaining units, with *003* at the end of its reference
-tag.
-
-The *002* backorder and *003* backorder can be completed by following the steps detailed in this
-section.
-
-.. tip::
-   It is also possible to create a backorder in the middle of a manufacturing order, when some but
-   not all of the work orders have already been completed. Doing so marks the completed work
-   order(s) as :guilabel:`Finished` on the backorder.
-
-   .. example::
-      A manufacturing order for four chairs requires the completion of two work orders: *Paint* and
-      *Assemble*. While the paint step can be completed immediately for all four chairs, there are
-      only enough screws to assemble two of them.
-
-      As a result, the employee responsible for producing the chairs begins by painting all four,
-      and marking the *Paint* work order as :guilabel:`Finished` for all of them. Then, they move on
-      to the *Assemble* work order. They assemble two of the four chairs, enter that number in the
-      :guilabel:`Units` field of the tablet view, and click :guilabel:`Record Production`.
-
-      A backorder manufacturing order is created for the remaining two chairs. On the backorder, the
-      *Paint* work order is already marked as :guilabel:`Finished`, and only the *Assemble* work
-      order is left to be completed.
-
-      Once more screws are available, the manufacturing employee assembles the remaining chairs and
-      clicks :guilabel:`Mark As Done And Close MO` to complete the *Assemble* work order and close
-      the backorder manufacturing order.
+After the final work order for the backorder |MO| has been completed, the |MO| can be closed by
+clicking the :guilabel:`Close Production` button at the bottom of the work order's card.
