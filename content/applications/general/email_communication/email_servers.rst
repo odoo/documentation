@@ -1,3 +1,5 @@
+.. _communication/emails_servers:
+
 ====================================================
 Send and receive emails in Odoo with an email server
 ====================================================
