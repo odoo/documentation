@@ -72,7 +72,7 @@ Domain names
 Use a custom :doc:`domain name <domain_names>` to access the database via another URL.
 
 .. tip::
-   You can :ref:`register a domain name for free <domain-name/odoo-register>`.
+   You can :ref:`register a domain name for free <domain-name/register>`.
 
 .. _odoo_online/tags:
 
