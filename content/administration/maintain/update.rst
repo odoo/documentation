@@ -126,9 +126,9 @@ Source Install (Github)
 -----------------------
 
 If you have originally installed Odoo with a full Github clone of the official repositories, the
-update procedure requires you to pull the latest source code via git.
-Change into the directory for each repository (the main Odoo repository, and the Enterprise
-repository), and run the following commands::
+update procedure requires you to pull the latest source code via git. First stop the Odoo instance
+dependent on the source code you are updating. Next, change into the directory for each repository
+(the main Odoo repository, and the Enterprise repository), and run the following commands::
 
      git fetch
      git rebase --autostash
@@ -141,6 +141,10 @@ Alternatively, if you prefer to simply discard the conflicting changes and resto
 version, you can use the following command::
 
      git reset --hard
+
+Now update your database with the newly downloaded source code::
+
+     odoo-bin -c <your-configuration-file> -u all -d <your-database-name> --stop-after-init
 
 Finally, restart the Odoo service or reboot the machine, and you should be done.
 
