@@ -12,7 +12,7 @@ Doing so can help to do reporting over your activities (even if Odoo offers a pr
 reporting tool with each available application).
 
 With Odoo, you can export the values from any field in any record. To do so,
-activate the list view on the items that need to be exported, click on *Action*, and, then,
+activate the list view on the items that need to be exported, select the records you wish to export, click on *Action*, and, then,
 on *Export*.
 
 .. image:: export_import_data/list-view-export.png
