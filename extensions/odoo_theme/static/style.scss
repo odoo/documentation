@@ -15,7 +15,7 @@ div[aria-label="related navigation"] {
 }
 
 body {
-    position: relative;
+    font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
 
     a {
         text-underline-position: from-font;
@@ -40,31 +40,29 @@ body {
 
 }
 
-.hidden {
-    display: none !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-}
-
 //------------------------------------------------------------------------------
 // Header with logo, searchbar and switchers
 //------------------------------------------------------------------------------
 
 header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
+
+    background-color: $o-gray-bg;
+
+    @include media-breakpoint-up(lg) {
+        background-color: white;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+    }
 
     .o_main_header {
-        height: $o-header-mobile-height;
+        height: $o-header-height;
         padding: 0 $o-padding-s;
-        background-color: $o-header-bg;
 
         @include media-breakpoint-up(lg) {
-            height: $o-header-height;
             padding: 0 $o-padding-m;
         }
 
@@ -102,12 +100,6 @@ header {
         .o_logo img {
             @include media-breakpoint-up(lg) {
                 height: 30px
-            }
-        }
-
-        > div:not(.o_logo_wrapper) {
-            @include media-breakpoint-up(lg) {
-                width: calc(100% - (#{$o-side-nav-width}));
             }
         }
 
@@ -157,35 +149,6 @@ header {
             }
         }
     }
-
-    .o_subheader {
-        height: $o-subheader-height;
-        padding-right: $o-padding-s;
-        background: $o-gray-bg;
-
-        @include media-breakpoint-up(lg) {
-            padding: 0 $o-padding-m;
-        }
-
-        @include media-breakpoint-up(xl) {
-            padding: 0 $o-padding-l 0 0;
-        }
-
-        .o_side_nav_toggler_wrapper {
-            height: 100%;
-
-            button {
-                &:focus, &:focus-visible{
-                    box-shadow: none;
-                    outline:none;
-                }
-
-                &[aria-expanded="true"]{
-                    background-color: rgba(0,0,0, .2);
-                }
-            }
-        }
-    }
 }
 
 //------------------------------------------------------------------------------
@@ -206,11 +169,12 @@ header {
         left: -100%;
         z-index: 10;
         width: 90%;
-        height: calc(100% - #{$o-headers-mobile-height});
+        height: calc(100% - #{$o-headers-height});
         transition: all, .3s;
         overflow-y: auto;
         padding-left: $o-padding-s;
-        background-color: lighten($secondary, 70%) ;
+        background-color: $o-gray-bg;
+
         color: $secondary;
         font-weight: $font-weight-normal;
 
@@ -224,10 +188,6 @@ header {
 
         &::-webkit-scrollbar {
             width: 5px;
-        }
-
-        &::-webkit-scrollbar-track {
-            background: $white;
         }
 
         &::-webkit-scrollbar-thumb {
@@ -256,6 +216,11 @@ header {
         }
     }
 
+    i:before {
+        display: inline-block;
+        width: 1em;
+    }
+
     .toctree-l1 {
         padding-bottom: $o-padding-xs;
 
@@ -264,36 +229,6 @@ header {
                 color: $secondary;
                 font-weight: $o-font-weight-medium;
             }
-        }
-
-        &[class*="o_menu_"] {
-            &.o_deepest_active_toc_entry > .o_toc_entry_wrapper i {
-                color: $white;
-            }
-
-            > .o_toc_entry_wrapper > i:before {
-                @include o-inline-icon(0 $o-icon-margin 0 0);
-            }
-        }
-
-        &.o_menu_applications > .o_toc_entry_wrapper > i:before {
-            content:'#{$i-doc-apps}';
-        }
-
-        &.o_menu_administration > .o_toc_entry_wrapper > i:before {
-            content:'#{$i-doc-admin}';
-        }
-
-        &.o_menu_developer > .o_toc_entry_wrapper > i:before {
-            content:'#{$i-doc-dev}';
-        }
-
-        &.o_menu_services > .o_toc_entry_wrapper > i:before {
-            content:'#{$i-doc-services}';
-        }
-
-        &.o_menu_contributing > .o_toc_entry_wrapper > i:before {
-            content:'#{$i-doc-contribute}';
         }
     }
 }
@@ -312,6 +247,13 @@ header {
         color: $o-gray-color;
         font-weight: $font-weight-normal;
         @include font-size($font-size-sm);
+        color: $gray-700;
+        font-weight: 500;
+
+        &:hover {
+            color: black;
+            text-decoration: none;
+        }
     }
 
     ul {
@@ -329,14 +271,6 @@ header {
                 > .o_toc_entry_wrapper a, > a {
                     color: inherit;
                     font-weight: inherit;
-                }
-
-                &.o_deepest_active_toc_entry {
-                    > a,  > .o_toc_entry_wrapper, > .o_toc_entry_wrapper a {
-                        background-color: $secondary;
-                        color: $white;
-                        font-weight: inherit;
-                    }
                 }
             }
 
@@ -382,6 +316,7 @@ header {
 
 aside.o_page_toc {
     color: $body-color;
+    background-color: $o-gray-bg;
 
     &:not(.o_in_nav_toc) {
         position: -webkit-sticky;
@@ -431,7 +366,6 @@ aside.o_page_toc {
     display: grid;
     grid-template-areas: "main";
     grid-template-columns: minmax(0,100%);
-    margin-top: $o-headers-mobile-height;
 
     @include media-breakpoint-up(lg) {
         grid-template-areas: "sidebar main toc";
@@ -458,6 +392,10 @@ main.container-fluid {
     &.o_index, &.o_fullwidth_page, &.o_has_code_column {
         grid-column-end: toc;
     }
+    &:not(.o_fullwidth_page):not(.o_index):not(.o_has_code_column) {
+        margin: auto;
+        max-width: 900px;
+    }
 }
 
 //------------------------------------------------------------------------------
@@ -467,23 +405,24 @@ main.container-fluid {
 // Homepage
 // https://www.odoo.com/documentation/master/index.html
 
-.o_index {
-    .o_content_fw_banner {
-        align-items: center;
-        margin: 0 -0.75rem $o-margin-m;
-        padding: $o-padding-m $o-padding-s;
-        @include o-gradient();
+.o_content_fw_banner {
+    align-items: center;
+    margin: 0 -0.75rem $o-margin-m;
+    padding: $o-padding-m $o-padding-s;
+    @include o-gradient();
 
-        @include media-breakpoint-up(lg) {
-            margin: -#{$o-margin-m} -#{$o-margin-l} $o-margin-m;
-            padding: $o-padding-m $o-padding-m;
-        }
-
-        @include media-breakpoint-up(xl) {
-            margin: -#{$o-margin-m} -#{$o-margin-l} $o-margin-l;
-            padding: $o-padding-l $o-padding-l;
-        }
+    @include media-breakpoint-up(lg) {
+        margin: -#{$o-margin-m} -#{$o-margin-l} $o-margin-m;
+        padding: $o-padding-m $o-padding-m;
     }
+
+    @include media-breakpoint-up(xl) {
+        margin: -#{$o-margin-m} -#{$o-margin-l} $o-margin-l;
+        padding: $o-padding-l $o-padding-l;
+    }
+}
+
+.o_index {
     .row:first-of-type h2.border-top {
         @include media-breakpoint-up(lg) {
             border-top: 0 solid transparent !important;
@@ -636,9 +575,15 @@ main.container-fluid {
     }
 }
 
+.o_with_banner .o_git_link {
+    color: $gray-100;
+}
+
 article.doc-body {
     position: relative;
-    padding-top: $o-padding-s;
+    @include media-breakpoint-up(lg) {
+        padding-top: $o-padding-s;
+    }
 
     .o_git_link {
         @include o-position-absolute($top: 0px, $right: $o-margin-s);
@@ -663,8 +608,8 @@ article.doc-body {
 
         > h1 {
             margin-bottom: $o-margin-s;
-            color: $secondary;
-            font-weight: $font-weight-bolder;
+            color: $gray-900;
+            font-weight: 600;
 
             @include media-breakpoint-up(lg) {
                 max-width: calc(100% - 120px);
@@ -675,7 +620,6 @@ article.doc-body {
             margin-bottom: $o-margin-s;
             padding-bottom: .3rem;
             border-bottom: 1px solid $o-gray-border;
-            font-family: $o-font-family-serif;
             color: $o-gray-color;
         }
 
@@ -1228,28 +1172,5 @@ span.viewcode-link {
         > *:last-child {
             margin-bottom: 0 !important;
         }
-    }
-}
-
-//------------------------------------------------------------------------------
-// Footer
-//------------------------------------------------------------------------------
-
-footer {
-    .o_get_help {
-        padding-top: $o-padding-l;
-        padding-bottom: $o-padding-l;
-        background: $o-gray-bg;
-
-        @include media-breakpoint-up(lg) {
-            padding-left: calc(#{$o-side-nav-width} + #{$o-padding-l})
-        }
-
-        h4 {
-            margin-bottom: $o-margin-s;
-            color: $secondary;
-            font-weight: $font-weight-bolder;
-        }
-
     }
 }

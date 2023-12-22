@@ -1,5 +1,7 @@
 :show-content:
 :hide-page-toc:
+:classes: pt-0
+:showbanner:
 
 =============
 How-to guides

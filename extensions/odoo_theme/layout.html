@@ -104,15 +104,22 @@
             {%- set main_classes = main_classes + ['o_fullwidth_page'] %}
         {%- endif %}
 
+        {%- if 'showbanner' in meta %}
+            {%- set main_classes = main_classes + ['o_with_banner'] %}
+        {%- endif %}
+
         <main class="container-fluid {{ ' '.join(main_classes) }}">
             {%- if pagename == master_doc %}
                 {# Custom landing page on the root of the documentation #}
                 {%- include "layout_templates/homepage.html" %}
-            {%- elif pagename == 'legal' %}
+                {%- elif pagename == 'legal' %}
                 {%- include "layout_templates/legal.html" %}
             {%- else %}
                 <article id="o_content" class="doc-body">
                     <div role="main"> {# Beacon used by the Sphinx search to know where to look for a string #}
+                        {%- if 'showbanner' in meta %}
+                            <section class="o_content_fw_banner"></section>
+                        {%- endif %}
                         {%- block body %} {%- endblock %}
                     </div>
                     {%- if github_link and pagename != 'search' and not pagename.startswith('legal') %}
@@ -123,6 +130,9 @@
                     {%- endif %}
                 </article>
             {%- endif %}
+            <footer>
+                {%- include "layout_templates/footer.html" %}
+            </footer>
         </main>
         {%- if 'hide-page-toc' not in meta %}
             {# Shown when the JS has properly set all the classes on the TOC elements #}
@@ -131,7 +141,4 @@
             </aside>
         {%- endif %}
     </div>
-    <footer>
-        {%- include "layout_templates/footer.html" %}
-    </footer>
 {%- endblock %}

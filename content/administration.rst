@@ -2,10 +2,12 @@
 :show-content:
 :hide-page-toc:
 :show-toc:
+:classes: pt-0
+:showbanner:
 
-====================
-Install and Maintain
-====================
+==========
+Deployment
+==========
 
 These guides provide instructions on how to install, maintain and upgrade Odoo databases.
 

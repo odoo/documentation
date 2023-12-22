@@ -2,11 +2,12 @@
 :show-content:
 :hide-page-toc:
 :show-toc:
+:classes: pt-0
+:showbanner:
 
-
-=========
-User Docs
-=========
+====
+User
+====
 
 Discover our user guides and configuration tutorials per application.
 
