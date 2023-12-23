@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-30 14:44+0000\n"
+"POT-Creation-Date: 2023-12-21 13:43+0000\n"
 "PO-Revision-Date: 2023-11-08 08:55+0000\n"
 "Last-Translator: Malaz Abuidris <msea@odoo.com>, 2023\n"
 "Language-Team: Arabic (https://app.transifex.com/odoo/teams/41243/ar/)\n"
@@ -821,41 +821,62 @@ msgid ""
 "in the various addons paths."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:443
+#: ../../content/administration/install/deploy.rst:442
+msgid ""
+"It is recommended to set the ``Content-Security-Policy: default-src 'none'``"
+" header on all images delivered by the web server. It is not strictly "
+"necessary as users cannot modify/inject content inside of modules' "
+":file:`static/` folder and existing images are final (they do not fetch new "
+"resources by themselves). However, it is good practice."
+msgstr ""
+
+#: ../../content/administration/install/deploy.rst:447
+msgid ""
+"Using the above NGINX (https) configuration, the following ``map`` and "
+"``location`` blocks should be added to serve static files via NGINX."
+msgstr ""
+
+#: ../../content/administration/install/deploy.rst:474
+msgid ""
+"The actual ``root`` and ``try_files`` directives are dependant on your "
+"installation, specifically on your :option:`--addons-path <odoo-bin "
+"--addons-path>`."
+msgstr ""
+
+#: ../../content/administration/install/deploy.rst:481
+msgid "Debian package"
+msgstr ""
+
+#: ../../content/administration/install/deploy.rst:483
 msgid ""
 "Say Odoo has been installed via the **debian packages** for Community and "
-"Enterprise and the :option:`--addons-path <odoo-bin --addons-path>` is "
-"``'/usr/lib/python3/dist-packages/odoo/addons'``."
+"Enterprise, and that the :option:`--addons-path <odoo-bin --addons-path>` is"
+" ``'/usr/lib/python3/dist-packages/odoo/addons'``."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:446
-#: ../../content/administration/install/deploy.rst:468
-msgid ""
-"Using the above NGINX (https) configuration, the following location block "
-"should be added to serve static files via NGINX."
+#: ../../content/administration/install/deploy.rst:487
+#: ../../content/administration/install/deploy.rst:501
+msgid "The ``root`` and ``try_files`` should be:"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:463
+#: ../../content/administration/install/deploy.rst:494
+msgid "Git sources"
+msgstr ""
+
+#: ../../content/administration/install/deploy.rst:496
 msgid ""
-"Say Odoo has been installed via the **source**. The two git repositories for"
-" Community and Enterprise have been cloned in :file:`/opt/odoo/community` "
-"and :file:`/opt/odoo/enterprise` respectively and the :option:`--addons-path"
-" <odoo-bin --addons-path>` is "
+"Say Odoo has been installed via the **sources**, that both the Community and"
+" Enterprise git repositories were cloned in :file:`/opt/odoo/community` and "
+":file:`/opt/odoo/enterprise` respectively, and that the :option:`--addons-"
+"path <odoo-bin --addons-path>` is "
 "``'/opt/odoo/community/odoo/addons,/opt/odoo/community/addons,/opt/odoo/enterprise'``."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:485
-msgid ""
-"The actual NGINX configuration you need is highly dependent on your own "
-"installation. The two above snippets only highlight two possible "
-"configurations and may not be used as-is."
-msgstr ""
-
-#: ../../content/administration/install/deploy.rst:489
+#: ../../content/administration/install/deploy.rst:509
 msgid "Serving attachments"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:491
+#: ../../content/administration/install/deploy.rst:511
 msgid ""
 "Attachments are files stored in the filestore which access is regulated by "
 "Odoo. They cannot be directly accessed via a static web server as accessing "
@@ -863,7 +884,7 @@ msgid ""
 "are stored and whether the current user can access them or not."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:496
+#: ../../content/administration/install/deploy.rst:516
 msgid ""
 "Nevertheless, once the file has been located and the access rights verified "
 "by Odoo, it is a good idea to serve the file using the static web server "
@@ -877,19 +898,19 @@ msgid ""
 "X-Accel)."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:506
+#: ../../content/administration/install/deploy.rst:526
 msgid ""
 "The X-Sendfile extension for apache (and compatible web servers) does not "
 "require any supplementary configuration."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:508
+#: ../../content/administration/install/deploy.rst:528
 msgid ""
 "The X-Accel extension for NGINX **does** require the following additionnal "
 "configuration:"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:517
+#: ../../content/administration/install/deploy.rst:537
 msgid ""
 "In case you don't know what is the path to your filestore, start Odoo with "
 "the :option:`--x-sendfile <odoo-bin --x-sendfile>` option and navigate to "
@@ -898,18 +919,18 @@ msgid ""
 "need."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:526
+#: ../../content/administration/install/deploy.rst:546
 msgid "Security"
 msgstr "الأمن"
 
-#: ../../content/administration/install/deploy.rst:528
+#: ../../content/administration/install/deploy.rst:548
 msgid ""
 "For starters, keep in mind that securing an information system is a "
 "continuous process, not a one-shot operation. At any moment, you will only "
 "be as secure as the weakest link in your environment."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:532
+#: ../../content/administration/install/deploy.rst:552
 msgid ""
 "So please do not take this section as the ultimate list of measures that "
 "will prevent all security problems. It's only intended as a summary of the "
@@ -919,20 +940,20 @@ msgid ""
 "access control management, etc."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:538
+#: ../../content/administration/install/deploy.rst:558
 msgid ""
 "When deploying an internet-facing server, please be sure to consider the "
 "following security-related topics:"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:541
+#: ../../content/administration/install/deploy.rst:561
 msgid ""
 "Always set a strong super-admin admin password, and restrict access to the "
 "database management pages as soon as the system is set up. See "
 ":ref:`db_manager_security`."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:544
+#: ../../content/administration/install/deploy.rst:564
 msgid ""
 "Choose unique logins and strong passwords for all administrator accounts on "
 "all databases. Do not use 'admin' as the login. Do not use those logins for "
@@ -941,14 +962,14 @@ msgid ""
 "databases."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:549
+#: ../../content/administration/install/deploy.rst:569
 msgid ""
 "Do **not** install demo data on internet-facing servers. Databases with demo"
 " data contain default logins and passwords that can be used to get into your"
 " systems and cause significant trouble, even on staging/dev systems."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:553
+#: ../../content/administration/install/deploy.rst:573
 msgid ""
 "Use appropriate database filters ( :option:`--db-filter <odoo-bin --db-"
 "filter>`) to restrict the visibility of your databases according to the "
@@ -958,7 +979,7 @@ msgid ""
 "backend."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:560
+#: ../../content/administration/install/deploy.rst:580
 msgid ""
 "Once your ``db_name`` and ``db_filter`` are configured and only match a "
 "single database per hostname, you should set ``list_db`` configuration "
@@ -968,7 +989,7 @@ msgid ""
 "option)"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:566
+#: ../../content/administration/install/deploy.rst:586
 msgid ""
 "Make sure the PostgreSQL user (:option:`--db_user <odoo-bin --db_user>`) is "
 "*not* a super-user, and that your databases are owned by a different user. "
@@ -977,20 +998,20 @@ msgid ""
 ":ref:`setup/deploy/odoo`."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:571
+#: ../../content/administration/install/deploy.rst:591
 msgid ""
 "Keep installations updated by regularly installing the latest builds, either"
 " via GitHub or by downloading the latest version from "
 "https://www.odoo.com/page/download or http://nightly.odoo.com"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:575
+#: ../../content/administration/install/deploy.rst:595
 msgid ""
 "Configure your server in multi-process mode with proper limits matching your"
 " typical usage (memory/CPU/timeouts). See also :ref:`builtin_server`."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:578
+#: ../../content/administration/install/deploy.rst:598
 msgid ""
 "Run Odoo behind a web server providing HTTPS termination with a valid SSL "
 "certificate, in order to prevent eavesdropping on cleartext communications. "
@@ -1000,7 +1021,7 @@ msgid ""
 ":ref:`https_proxy`."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:585
+#: ../../content/administration/install/deploy.rst:605
 msgid ""
 "If you need to allow remote SSH access to your servers, make sure to set a "
 "strong password for **all** accounts, not just `root`. It is strongly "
@@ -1010,28 +1031,28 @@ msgid ""
 "detection system such as `fail2ban` or equivalent."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:591
+#: ../../content/administration/install/deploy.rst:611
 msgid ""
 "Consider installing appropriate rate-limiting on your proxy or firewall, to "
 "prevent brute-force attacks and denial of service attacks. See also "
 ":ref:`login_brute_force` for specific measures."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:595
+#: ../../content/administration/install/deploy.rst:615
 msgid ""
 "Many network providers provide automatic mitigation for Distributed Denial "
 "of Service attacks (DDOS), but this is often an optional service, so you "
 "should consult with them."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:599
+#: ../../content/administration/install/deploy.rst:619
 msgid ""
 "Whenever possible, host your public-facing demo/test/staging instances on "
 "different machines than the production ones. And apply the same security "
 "precautions as for production."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:603
+#: ../../content/administration/install/deploy.rst:623
 msgid ""
 "If your public-facing Odoo server has access to sensitive internal network "
 "resources or services (e.g. via a private VLAN), implement appropriate "
@@ -1046,7 +1067,7 @@ msgid ""
 "control."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:614
+#: ../../content/administration/install/deploy.rst:634
 msgid ""
 "If your public-facing Odoo server is behind a Web Application Firewall, a "
 "load-balancer, a transparent DDoS protection service (like CloudFlare) or a "
@@ -1061,19 +1082,19 @@ msgid ""
 "this purpose."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:625
+#: ../../content/administration/install/deploy.rst:645
 msgid ""
 "If you are hosting multiple customers, isolate customer data and files from "
 "each other using containers or appropriate \"jail\" techniques."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:628
+#: ../../content/administration/install/deploy.rst:648
 msgid ""
 "Setup daily backups of your databases and filestore data, and copy them to a"
 " remote archiving server that is not accessible from the server itself."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:631
+#: ../../content/administration/install/deploy.rst:651
 msgid ""
 "Deploying Odoo on Linux is strongly recommended over Windows. Should you "
 "choose nevertheless to deploy on a Windows platform, a thorough security "
@@ -1081,11 +1102,11 @@ msgid ""
 "scope of this guide."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:639
+#: ../../content/administration/install/deploy.rst:659
 msgid "Blocking Brute Force Attacks"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:641
+#: ../../content/administration/install/deploy.rst:661
 msgid ""
 "For internet-facing deployments, brute force attacks on user passwords are "
 "very common, and this threat should not be neglected for Odoo servers. Odoo "
@@ -1093,64 +1114,64 @@ msgid ""
 "result: success or failure, along with the target login and source IP."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:645
+#: ../../content/administration/install/deploy.rst:665
 msgid "The log entries will have the following form."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:647
+#: ../../content/administration/install/deploy.rst:667
 msgid "Failed login::"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:651
+#: ../../content/administration/install/deploy.rst:671
 msgid "Successful login::"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:656
+#: ../../content/administration/install/deploy.rst:676
 msgid ""
 "These logs can be easily analyzed by an intrusion prevention system such as "
 "`fail2ban`."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:658
+#: ../../content/administration/install/deploy.rst:678
 msgid ""
 "For example, the following fail2ban filter definition should match a failed "
 "login::"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:665
+#: ../../content/administration/install/deploy.rst:685
 msgid ""
 "This could be used with a jail definition to block the attacking IP on "
 "HTTP(S)."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:667
+#: ../../content/administration/install/deploy.rst:687
 msgid ""
 "Here is what it could look like for blocking the IP for 15 minutes when 10 "
 "failed login attempts are detected from the same IP within 1 minute::"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:681
+#: ../../content/administration/install/deploy.rst:701
 msgid "Database Manager Security"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:683
+#: ../../content/administration/install/deploy.rst:703
 msgid ":ref:`setup/deploy/odoo` mentioned ``admin_passwd`` in passing."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:685
+#: ../../content/administration/install/deploy.rst:705
 msgid ""
 "This setting is used on all database management screens (to create, delete, "
 "dump or restore databases)."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:688
+#: ../../content/administration/install/deploy.rst:708
 msgid ""
 "If the management screens must not be accessible at all, you should set "
 "``list_db`` configuration option to ``False``, to block access to all the "
 "database selection and management screens."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:694
+#: ../../content/administration/install/deploy.rst:714
 msgid ""
 "It is strongly recommended to disable the Database Manager for any internet-"
 "facing system! It is meant as a development/demo tool, to make it easy to "
@@ -1159,14 +1180,14 @@ msgid ""
 "not designed to handle large databases, and may trigger memory limits."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:700
+#: ../../content/administration/install/deploy.rst:720
 msgid ""
 "On production systems, database management operations should always be "
 "performed by the system administrator, including provisioning of new "
 "databases and automated backups."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:703
+#: ../../content/administration/install/deploy.rst:723
 msgid ""
 "Be sure to setup an appropriate ``db_name`` parameter (and optionally, "
 "``db_filter`` too) so that the system can determine the target database for "
@@ -1174,7 +1195,7 @@ msgid ""
 "choose the database themselves."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:708
+#: ../../content/administration/install/deploy.rst:728
 msgid ""
 "If the management screens must only be accessible from a selected set of "
 "machines, use the proxy server's features to block access to all routes "
@@ -1182,75 +1203,75 @@ msgid ""
 "which displays the database-selection screen."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:712
+#: ../../content/administration/install/deploy.rst:732
 msgid ""
 "If the database-management screen should be left accessible, the "
 "``admin_passwd`` setting must be changed from its ``admin`` default: this "
 "password is checked before allowing database-alteration operations."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:716
+#: ../../content/administration/install/deploy.rst:736
 msgid "It should be stored securely, and should be generated randomly e.g."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:722
+#: ../../content/administration/install/deploy.rst:742
 msgid "which will generate a 32 characters pseudorandom printable string."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:725
+#: ../../content/administration/install/deploy.rst:745
 msgid "Supported Browsers"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:727
+#: ../../content/administration/install/deploy.rst:747
 msgid ""
 "Odoo supports all the major desktop and mobile browsers available on the "
 "market, as long as they are supported by their publishers."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:730
+#: ../../content/administration/install/deploy.rst:750
 msgid "Here are the supported browsers:"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:732
+#: ../../content/administration/install/deploy.rst:752
 msgid "Google Chrome"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:733
+#: ../../content/administration/install/deploy.rst:753
 msgid "Mozilla Firefox"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:734
+#: ../../content/administration/install/deploy.rst:754
 msgid "Microsoft Edge"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:735
+#: ../../content/administration/install/deploy.rst:755
 msgid "Apple Safari"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:737
+#: ../../content/administration/install/deploy.rst:757
 msgid ""
 "Please make sure your browser is up-to-date and still supported by its "
 "publisher before filing a bug report."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:742
+#: ../../content/administration/install/deploy.rst:762
 msgid "Since Odoo 13.0, ES6 is supported.  Therefore, IE support is dropped."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:745
+#: ../../content/administration/install/deploy.rst:765
 msgid ""
 "to have multiple Odoo installations use the same PostgreSQL database, or to "
 "provide more computing resources to both software."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:748
+#: ../../content/administration/install/deploy.rst:768
 msgid ""
 "technically a tool like socat_ can be used to proxy UNIX sockets across "
 "networks, but that is mostly for software which can only be used over UNIX "
 "sockets"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:752
+#: ../../content/administration/install/deploy.rst:772
 msgid ""
 "or be accessible only over an internal packet-switched network, but that "
 "requires secured switches, protections against `ARP spoofing`_ and precludes"
@@ -1467,9 +1488,9 @@ msgstr ""
 #: ../../content/administration/install/source.rst:416
 msgid ""
 "`wkhtmltopdf` is not installed through **pip** and must be installed "
-"manually in `version 0.12.5 "
-"<https://github.com/wkhtmltopdf/wkhtmltopdf/releases/tag/0.12.5>`_ for it to"
-" support headers and footers. Check out the `wkhtmltopdf wiki "
+"manually in `version 0.12.6 "
+"<https://github.com/wkhtmltopdf/packaging/releases/tag/0.12.6.1-3>`_ for it "
+"to support headers and footers. Check out the `wkhtmltopdf wiki "
 "<https://github.com/odoo/odoo/wiki/Wkhtmltopdf>`_ for more details on the "
 "various versions."
 msgstr ""
@@ -3501,7 +3522,7 @@ msgstr ""
 
 #: ../../content/administration/maintain/google_oauth.rst:16
 msgid ":doc:`/applications/productivity/calendar/google`"
-msgstr ""
+msgstr ":doc:`/applications/productivity/calendar/google`"
 
 #: ../../content/administration/maintain/google_oauth.rst:19
 msgid "Setup in Google"
@@ -4775,11 +4796,11 @@ msgid "To remove users, select them and click :guilabel:`Remove`."
 msgstr ""
 
 #: ../../content/administration/maintain/odoo_online.rst:132
-msgid ":doc:`../../applications/general/users/manage_users`"
+msgid ":doc:`/applications/general/users/manage_users`"
 msgstr ""
 
 #: ../../content/administration/maintain/odoo_online.rst:133
-msgid ":doc:`../../applications/general/users/delete_account`"
+msgid ":doc:`/applications/general/users/odoo_account`"
 msgstr ""
 
 #: ../../content/administration/maintain/on_premise.rst:3
