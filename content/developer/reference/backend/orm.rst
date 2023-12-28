@@ -693,6 +693,7 @@ Useful environment methods
 .. automethod:: Environment.is_superuser
 .. automethod:: Environment.is_admin
 .. automethod:: Environment.is_system
+.. automethod:: Environment.execute_query
 
 Altering the environment
 ------------------------
