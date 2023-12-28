@@ -4,6 +4,17 @@
 Changelog
 =========
 
+Odoo Online version 17.1
+========================
+
+- Method :meth:`~odoo.models.Model._flush_search` has been deprecated with
+  `#144747 <https://github.com/odoo/odoo/pull/144747>`_.
+  The flushing of fields is now done by :meth:`~odoo.api.Environment.execute_query`,
+  and is based on metadata put in the :class:`~odoo.tools.SQL` object by
+  :meth:`~odoo.models.BaseModel._search` and other low-level ORM methods that
+  build such objects.  Those methods are also responsible for checking the access
+  rights on the fields that are used in the SQL object.
+
 Odoo version 17.0
 =================
 
