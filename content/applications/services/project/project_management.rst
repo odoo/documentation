@@ -55,8 +55,8 @@ Additionally, you can mark the project as :guilabel:`Favorite`, allowing you to 
    :alt: Project settings
 
 .. seealso::
-   `Odoo Tutorials: Customize your project
-   <https://www.odoo.com/slides/slide/customize-your-project-1662?fullscreen=1>`_
+   `Odoo Tutorials: Customize projects
+   <https://www.odoo.com/slides/slide/customize-projects-3615?fullscreen=1>`_
 
 Further settings are available under the :guilabel:`Settings` tab. Most of them are *only* available
 depending on the activated apps.
