@@ -13,14 +13,15 @@ Activate checks payment methods
 -------------------------------
 
 To activate the checks payment method, go to :menuselection:`Accounting --> Configuration -->
-Checks`, there you can activate the payment method as well as set up the :guilabel:`Check Layout`.
-Once activated the :guilabel:`Checks` setting, the feature is automatically setup for your
-:guilabel:`Outgoing Payments`.
+Settings`, and scroll down to the :guilabel:`Vendor Payments` section. There, you can activate the
+payment method as well as set up the :guilabel:`Check Layout`.
 
 .. note::
-   Some countries require specific modules to print checks; such modules may be installed by
-   default. For instance, the :guilabel:`U.S. Checks Layout` module is required to print U.S.
-   checks.
+   - Once the :guilabel:`Checks` setting is activated, the **Checks** payment method is
+     automatically set up in the :guilabel:`Outgoing Payments` tabs of **bank** journals.
+   - Some countries require specific modules to print checks; such modules may be installed by
+     default. For instance, the :guilabel:`U.S. Checks Layout` module is required to print U.S.
+     checks.
 
 Compatible check stationery for printing checks
 ===============================================
