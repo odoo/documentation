@@ -20,8 +20,9 @@ If you choose to :guilabel:`Edit` a to-do, you have the option to add :guilabel:
      and widgets.
 
 .. tip::
-   You can create a new to-do on the fly from anywhere in Odoo by clicking the clock button and then
-   :guilabel:`Add a To-Do`.
+   You can create a new to-do on the fly from anywhere in Odoo by opening the **command palette
+   tool** with the keyboard shortcut ´ctrl+k´ and clicking :guilabel:`Add a To-Do`, or by clicking
+   the clock button and then :guilabel:`Add a To-Do`.
 
    .. image:: to_do/add-on-the-fly.png
       :alt: Adding a to-do on the fly
