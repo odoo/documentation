@@ -1,6 +1,9 @@
-==========================================
-Geo IP Installation (On-Premises Database)
-==========================================
+======
+Geo IP
+======
+
+.. note::
+   This documentation only applies to On-premise databases.
 
 Installation
 ============
@@ -32,8 +35,8 @@ Installation
    .. seealso::
       - :doc:`CLI documentation </developer/reference/cli>`.
 
-Test GeoIP Geolocation In Odoo Website
-======================================
+Test GeoIP geolocation in your Odoo website
+===========================================
 
 Edit a web page to include some geo-ip information such as the country name of the current
 request IP address. To do so:
