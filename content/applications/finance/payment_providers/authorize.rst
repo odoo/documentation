@@ -41,7 +41,7 @@ Place a hold on a card
 ~~~~~~~~~~~~~~~~~~~~~~
 
 With Authorize.Net, you can enable the :ref:`manual capture
-<payment_providers/features/manual_capture>`. If enabled, the funds are reserved for 30 days on the
+<payment_providers/manual_capture>`. If enabled, the funds are reserved for 30 days on the
 customer's card, but not charged yet.
 
 .. warning::
@@ -65,9 +65,6 @@ previously configured Authorize.Net payment provider on Odoo by going to :menuse
 --> Configuration --> Payment Providers --> Authorize.net`. Then, click the cog icon
 (:guilabel:`⛭`) and select :guilabel:`Duplicate`. Change the provider's name to differentiate both
 versions (e.g., `Authorize.net - Banks`).
-
-Open the :guilabel:`Configuration` tab, set the :guilabel:`Allow Payments From` field to
-:guilabel:`Bank Account (USA only)`.
 
 When ready, change the provider's :guilabel:`State` to :guilabel:`Enabled` for a regular account or
 :guilabel:`Test Mode` for a sandbox account.
