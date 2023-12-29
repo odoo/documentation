@@ -98,13 +98,14 @@ Then, enter your PayPal account credentials in the :guilabel:`Credentials` tab:
 Extra fees
 ----------
 
-You can charge :ref:`extra fees <payment_providers/features/extra_fees>` to customers choosing to
-pay with PayPal in order to cover the transaction fees PayPal charges you.
+You can charge :ref:`extra fees <payment_providers/extra_fees>` to customers choosing to pay with
+PayPal in order to cover the transaction fees PayPal charges you.
 
 .. note::
    -  You can refer to `Paypal Fees <https://www.paypal.com/webapps/mpp/paypal-fees>`_ to set up
       fees.
-   - `Traders in the EU <https://europa.eu/youreurope/citizens/consumers/shopping/pricing-payments/index_en.htm>`_ are not allowed to charge extra fees for paying with credit cards.
+   - `Traders in the EU <https://europa.eu/youreurope/citizens/consumers/shopping/pricing-payments/index_en.htm>`_
+     are not allowed to charge extra fees for paying with credit cards.
 
 .. _paypal/testing:
 
