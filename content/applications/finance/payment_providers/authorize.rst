@@ -41,7 +41,7 @@ Place a hold on a card
 ~~~~~~~~~~~~~~~~~~~~~~
 
 With Authorize.Net, you can enable the :ref:`manual capture
-<payment_providers/features/manual_capture>`. If enabled, the funds are reserved for 30 days on the
+<payment_providers/manual_capture>`. If enabled, the funds are reserved for 30 days on the
 customer's card, but not charged yet.
 
 .. warning::
