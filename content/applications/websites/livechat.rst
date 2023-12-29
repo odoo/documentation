@@ -184,8 +184,7 @@ Fill out the fields on the :guilabel:`Open: Rules` pop-up as instructed below, t
 .. note::
    In order to track the geographical location of visitors, :guilabel:`GeoIP` must be installed on
    the database. While this feature is installed by default on *Odoo Online*, *On-Premise* databases
-   will require additional :doc:`setup steps
-   </applications/websites/website/configuration/on-premise_geo-ip-installation>`.
+   will require additional :doc:`setup steps </administration/install/geo_ip>`.
 
 Widget
 ------
