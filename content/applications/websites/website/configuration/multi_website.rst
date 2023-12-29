@@ -121,7 +121,7 @@ be redirected to the right website using GeoIP.
 .. note::
   Geo IP is installed by default in Odoo Online. If you run Odoo
   on-premise, don’t forget to install *GeoIP* library.
-  See :doc:`on-premise_geo-ip-installation`
+  See :doc:`/administration/install/geo_ip`
 
 .. seealso::
    - :doc:`/administration/maintain/domain_names`

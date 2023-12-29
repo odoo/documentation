@@ -1,6 +1,9 @@
-==========================================
-Geo IP Installation (On-Premises Database)
-==========================================
+======
+Geo IP
+======
+
+.. note::
+   This documentation only applies to On-premise databases.
 
 Installation
 ============
@@ -40,7 +43,7 @@ Installation
    1.    See `GeoLite Legacy databases are now discontinued
    <https://support.maxmind.com/geolite-legacy-discontinuation-notice/>`_
 
-How To Test GeoIP Geolocation In Your Odoo Website
+How to test GeoIP geolocation in your Odoo website
 ==================================================
 
 1. Go to your website. Open the web page that you want to test ``GeoIP``.
@@ -53,7 +56,7 @@ How To Test GeoIP Geolocation In Your Odoo Website
 
 You should end up with a dictionary indicating the location of the IP address.
 
-.. image:: on-premise_geo-ip-installation/on-premise_geo-ip-installation01.png
+.. image:: geo_ip/on-premise_geo-ip-installation01.png
     :align: center
 
 .. note::
