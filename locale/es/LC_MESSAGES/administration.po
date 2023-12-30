@@ -18,11 +18,11 @@
 # Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2023
 # Marian Cuadra, 2023
 # Wil Odoo, 2023
-# Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2023
 # Lucia Pacheco, 2023
 # Braulio D. López Vázquez <bdl@odoo.com>, 2023
-# Fernanda Alvarez, 2023
 # Iran Villalobos López, 2023
+# Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2023
+# Fernanda Alvarez, 2023
 # 
 #, fuzzy
 msgid ""
@@ -31,7 +31,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-21 13:43+0000\n"
 "PO-Revision-Date: 2023-11-08 08:55+0000\n"
-"Last-Translator: Iran Villalobos López, 2023\n"
+"Last-Translator: Fernanda Alvarez, 2023\n"
 "Language-Team: Spanish (https://app.transifex.com/odoo/teams/41243/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -95,10 +95,10 @@ msgid ""
 "is adequate to develop modules and can be used as a base for production "
 "deployment."
 msgstr ""
-"Con la :doc:`Instalación de origen <install/source>` tendrá mayor "
-"flexibilidad ya que podrá hacer cosas como ejecutar varias versiones de Odoo"
-" en el mismo sistema, por ejemplo. Es también adecuada para desarrollar "
-"módulos y se puede usar como base para desplegar una producción."
+"Con la :doc:`instalación de origen <install/source>` tendrá mayor "
+"flexibilidad, ya que le permite hacer cosas como ejecutar varias versiones "
+"de Odoo en el mismo sistema, por ejemplo. También es adecuada para "
+"desarrollar módulos y se puede usar como base para desplegar una producción."
 
 #: ../../content/administration/install.rst:20
 msgid ""
@@ -145,13 +145,11 @@ msgid ""
 " (except for the source install)."
 msgstr ""
 ":doc:`Puede cambiar de Community a Enterprise <maintain/enterprise>` en "
-"cualquier momento excepto en la instalación de origen)."
+"cualquier momento, excepto en la instalación de origen."
 
 #: ../../content/administration/install/cdn.rst:3
 msgid "Set up a content delivery network (CDN)"
-msgstr ""
-"Cómo configurar una red de distribución de contenidos (CDN, por su sigla en "
-"inglés)"
+msgstr "Configurar una red de distribución de contenidos (CDN)"
 
 #: ../../content/administration/install/cdn.rst:8
 msgid "Deploying with KeyCDN"
@@ -165,10 +163,10 @@ msgid ""
 " high-quality content delivery for content-heavy websites."
 msgstr ""
 "Una :abbr:`CDN (red de distribución de contenidos)` o *red de distribución "
-"de contenidos* es una red de servidores distribuidos alrededor del mundo que"
-" proporciona contenido de internet a una gran velocidad. La :abbr:`CDN (red "
-"de distribución de contenido)` entrega contenido a los sitios web de manera "
-"rápida y con buena calidad."
+"de contenidos*, por sus siglas en inglés, es una red de servidores "
+"distribuidos alrededor del mundo que proporciona contenido de internet a una"
+" gran velocidad. La :abbr:`CDN (red de distribución de contenido)` otorga "
+"contenido a los sitios web de manera rápida y con buena calidad."
 
 #: ../../content/administration/install/cdn.rst:14
 msgid ""
@@ -176,7 +174,7 @@ msgid ""
 "Odoo powered website."
 msgstr ""
 "En este documento le indicaremos cómo configurar una cuenta KeyCDN_ en un "
-"sitio web con tecnología de Odoo."
+"sitio web con la tecnología de Odoo."
 
 #: ../../content/administration/install/cdn.rst:17
 msgid "Create a pull zone in the KeyCDN dashboard"
@@ -212,10 +210,10 @@ msgid ""
 "(Uniform Resource Locator)` can be used, as well, in place of the Odoo "
 "subdomain that was provided to the database."
 msgstr ""
-"Use ``https://yourdatabase.odoo.com`` y reemplace el dominio *yourdatabase* "
-"con el nombre de su base de datos. También puede usar un :abbr:`URL "
-"(localizador de recursos uniforme)` en lugar del subdomini de Odoo que se le"
-" brindó a la base de datos."
+"Use ``https://subasededatos.odoo.com`` y reemplace el dominio "
+"*subasededatos* con el nombre real de su base de datos. También puede usar "
+"una :abbr:`URL (Localizador de recursos uniforme, por sus siglas en inglés)`"
+" en lugar del subdominio de Odoo que se le proporcionó a la base de datos."
 
 #: ../../content/administration/install/cdn.rst-1
 msgid "KeyCDN's Zone configuration page."
@@ -978,11 +976,11 @@ msgid ""
 "this domain at all times, otherwise your users will see security alerts or "
 "be entirely unable to access it."
 msgstr ""
-"Agregue el encabezado `Seguridad-estricta-transporte` para evitar que los "
-"buscadores envíen una solicitud HTTP simple a este dominio. Necesitará "
+"Agregue el encabezado `Strict-Transport-Security` para evitar que los "
+"navegadores envíen una solicitud HTTP simple a este dominio. Necesitará "
 "mantener en operación un servicio HTTPS con un certificado válido en este "
-"dominio todo el tiempo. de lo contrario sus usuarios verán alertas de "
-"seguridad o no podrán tener acceso. "
+"dominio todo el tiempo. En caso contrario, sus usuarios visualizarán las "
+"alertas de seguridad o no podrán acceder."
 
 #: ../../content/administration/install/deploy.rst:369
 msgid ""
@@ -1138,12 +1136,20 @@ msgid ""
 ":file:`static/` folder and existing images are final (they do not fetch new "
 "resources by themselves). However, it is good practice."
 msgstr ""
+"Es recomendable establecer el encabezado ``Content-Security-Policy: default-"
+"src 'none'`` en todas las imágenes que el servidor web produce. No es "
+"estrictamente necesario ya que los usuarios no pueden modificar o ingresar "
+"contenido dentro de la carpeta :file:`static/` de los módulos y las imágenes"
+" existentes son finales (no obtienen nuevos recursos por sí mismas). Sin "
+"embargo, es una buena práctica."
 
 #: ../../content/administration/install/deploy.rst:447
 msgid ""
 "Using the above NGINX (https) configuration, the following ``map`` and "
 "``location`` blocks should be added to serve static files via NGINX."
 msgstr ""
+"Si usa la configuración NGINX (https), los siguientes bloques de ``mapa`` y "
+"``ubicación`` se agregarán para alojar archivo estáticos a través de NGINX."
 
 #: ../../content/administration/install/deploy.rst:474
 msgid ""
@@ -1151,10 +1157,12 @@ msgid ""
 "installation, specifically on your :option:`--addons-path <odoo-bin "
 "--addons-path>`."
 msgstr ""
+"Las directivas actuales ``root`` y ``try_files`` dependen de su instalación,"
+" específicamente de :option:`--addons-path <odoo-bin --addons-path>`."
 
 #: ../../content/administration/install/deploy.rst:481
 msgid "Debian package"
-msgstr ""
+msgstr "Paquete Debian"
 
 #: ../../content/administration/install/deploy.rst:483
 msgid ""
@@ -1162,15 +1170,18 @@ msgid ""
 "Enterprise, and that the :option:`--addons-path <odoo-bin --addons-path>` is"
 " ``'/usr/lib/python3/dist-packages/odoo/addons'``."
 msgstr ""
+"Digamos que Odoo se instaló mediante los **paquetes debian** para Community "
+"y Enterprise, además :option:`--addons-path <odoo-bin --addons-path>` es "
+"``'/usr/lib/python3/dist-packages/odoo/addons'``."
 
 #: ../../content/administration/install/deploy.rst:487
 #: ../../content/administration/install/deploy.rst:501
 msgid "The ``root`` and ``try_files`` should be:"
-msgstr ""
+msgstr "``root`` y ``try_files`` deberían ser:"
 
 #: ../../content/administration/install/deploy.rst:494
 msgid "Git sources"
-msgstr ""
+msgstr "Fuentes git"
 
 #: ../../content/administration/install/deploy.rst:496
 msgid ""
@@ -1180,6 +1191,11 @@ msgid ""
 "path <odoo-bin --addons-path>` is "
 "``'/opt/odoo/community/odoo/addons,/opt/odoo/community/addons,/opt/odoo/enterprise'``."
 msgstr ""
+"Digamos que Odoo se instaló mediante **fuentes** y que tanto el repositorio "
+"git de Community como el de Enterprise se clonaron en "
+":file:`/opt/odoo/community` y :file:`/opt/odoo/enterprise` respectivamente y"
+" que el :option:`--addons-path <odoo-bin --addons-path>` es "
+"``'/opt/odoo/community/odoo/addons,/opt/odoo/community/addons,/opt/odoo/enterprise'``."
 
 #: ../../content/administration/install/deploy.rst:509
 msgid "Serving attachments"
@@ -2029,6 +2045,12 @@ msgid ""
 "<https://github.com/odoo/odoo/wiki/Wkhtmltopdf>`_ for more details on the "
 "various versions."
 msgstr ""
+"`wkhtmltopdf` no está instalado mediante **pip** y debe instalarse de forma "
+"manual en la `versión 0.12.6 "
+"<https://github.com/wkhtmltopdf/packaging/releases/tag/0.12.6.1-3>`_ para "
+"que sea compatible con los encabezados y pies de páginas. Consulte esta "
+"`wiki <https://github.com/odoo/odoo/wiki/Wkhtmltopdf>`_ para obtener más "
+"detalles sobre las diferentes versiones."
 
 #: ../../content/administration/install/packages.rst:63
 msgid "Repository"
