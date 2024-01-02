@@ -154,7 +154,7 @@ Search
 
 Search views are slightly different from the list and form views since they don't display
 *content*. Although they apply to a specific model, they are used to filter
-other views' content (generally aggregated views such as
+other views content (generally aggregated views such as
 :ref:`reference/view_architecture/list`). Beyond the difference in use case, they are
 defined the same way.
 
