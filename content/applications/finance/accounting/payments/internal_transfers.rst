@@ -2,146 +2,72 @@
 Internal transfers
 ==================
 
-In Odoo, internal money transfers can be made in a few clicks. You need at least either two bank
-accounts, two cash journals, or one bank account and one cash journal.
+Internal money transfers can be handled in Odoo. At least two bank accounts are needed to make
+internal transfers.
+
+.. seealso::
+   :doc:`How to add an additional bank account <../bank>`
 
 Configuration
 =============
 
 An internal transfer account is automatically created on your database based on your company's
-localization and depending on your country’s legislation. If needed, the default :guilabel:`Internal
-transfer account` can be modified by going to :menuselection:`Accounting app --> Configuration -->
-Settings` and then under the :guilabel:`Default Accounts` section.
-
-.. note::
-   At least two bank accounts are needed to make internal transfers. Refer to
-   :doc:`Bank and cash accounts section <../bank>` to see how to add an additional bank
-   account to your database.
+localization and depending on your country’s legislation. To modify the default :guilabel:`Internal
+transfer account`, go to :menuselection:`Accounting --> Configuration --> Settings` and scroll down
+to the :guilabel:`Default Accounts` section.
 
 Register an internal transfer from one bank to another
 ======================================================
 
-Let's say you have two bank accounts registered on your database and you want to transfer 1,000 USD
-from Bank A to Bank B.
+If you want to transfer money from one bank to another, access the Accounting Dashboard, click the
+drop-down selection button (:guilabel:`⋮`) on the bank from which you want to make the transfer,
+then click :guilabel:`Payments`. Select or create a payment, tick the :guilabel:`Internal Transfer`
+checkbox, and select a :guilabel:`Destination Journal` before you :guilabel:`Confirm` the internal
+transfer.
 
-Log an internal transfer
-------------------------
+The money is now booked in the transfer account and another payment is automatically created in the
+destination journal.
 
-From the Accounting Dashboard, click on the drop-down selection button (:guilabel:`⋮`) on one of
-your banks. In the :guilabel:`New` column click on :guilabel:`Internal Transfer` and enter the
-information related to the transfer.
+.. example::
 
-.. image:: internal_transfers/internal_transfer.png
-   :align: center
-   :alt: Fill in the information related to your internal transfer
+   - Bank journal (Bank A)
 
-.. note::
-   Fill in the :guilabel:`Memo` field for automatic reconciliation.
+     .. list-table::
+        :header-rows: 1
+        :stub-columns: 1
 
-:guilabel:`Save` and :guilabel:`Confirm` to register your internal transfer. The money is now booked
-in the transfer account and another payment is **automatically** created in the destination journal
-(Bank B).
+        * - **Account**
+          - **Debit**
+          - **Credit**
+        * - Outstanding Payments account
+          -
+          - $1,000
+        * - **Internal transfer account**
+          - **$1,000**
+          -
 
-Bank journal (Bank A)
-~~~~~~~~~~~~~~~~~~~~~
+   - Bank journal (Bank B)
 
-.. list-table::
-   :header-rows: 1
-   :stub-columns: 1
 
-   * - **Account**
-     - **Debit**
-     - **Credit**
-   * - Outstanding Payments account
-     -
-     - $1,000
-   * - **Internal transfer account**
-     - **$1,000**
-     -
+     .. list-table::
+        :header-rows: 1
+        :stub-columns: 1
 
-Automated booking - Bank journal (BANK B)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        * - **Account**
+          - **Debit**
+          - **Credit**
+        * - Outstanding Receipts account
+          - $1,000
+          -
+        * - **Internal transfer account**
+          -
+          - **$1,000**
 
-.. list-table::
-   :header-rows: 1
-   :stub-columns: 1
+   There is **one outstanding payment** and **one outstanding receipt** pending in your two bank
+   account journals because the bank statement confirming the sending and receiving of the money
+   has not been booked yet.
 
-   * - **Account**
-     - **Debit**
-     - **Credit**
-   * - Outstanding Receipts account
-     - $1,000
-     -
-   * - **Internal transfer account**
-     -
-     - **$1,000**
-
-.. note::
-   There are one outstanding payment and one outstanding receipt pending in your two bank account
-   journals, because the bank statement confirming the sending and receiving of the money has not
-   been booked yet.
-
-.. image:: internal_transfers/outstanding-payments-receipts.png
-   :align: center
-   :alt: Outstanding Payments/Receipts pending bank statement booking
-
-.. _interbank/import-and-reconcile:
-
-Manage and reconcile bank statements
-------------------------------------
-
-The next step is to book the bank statements to finalize the transaction by creating,
-:doc:`importing <../bank/transactions>`, or :doc:`synchronizing <../bank/bank_synchronization>` your
-:guilabel:`Transactions lines`. Fill in the :guilabel:`Ending balance` and click on the
-:guilabel:`Reconcile` button.
-
-.. image:: internal_transfers/transactions-line.png
-   :align: center
-   :alt: Transaction lines to be filled in prior to reconciliation
+Once this is done, you can book and reconcile your bank statement lines as usual.
 
 .. seealso::
    :doc:`../bank/reconciliation`
-
-In the next window, choose counterparts for the payment - in this example, the outstanding payment
-account - then click :guilabel:`Validate`.
-
-.. image:: internal_transfers/bank-reconciliation.png
-   :align: center
-   :alt: Reconcile your payment
-
-Bank journal entry
-~~~~~~~~~~~~~~~~~~
-
-.. list-table::
-   :header-rows: 1
-   :stub-columns: 1
-
-   * - **Account**
-     - **Debit**
-     - **Credit**
-   * - Outstanding Payment
-     - $1,000
-     -
-   * - Bank Account (BANK A)
-     -
-     - **$1,000**
-
-The same steps must be repeated once you receive the bank statement related to Bank B. Book and
-reconcile your bank statement lines.
-
-Bank journal entry
-~~~~~~~~~~~~~~~~~~
-
-.. list-table::
-   :header-rows: 1
-   :stub-columns: 1
-
-   * - **Account**
-     - **Debit**
-     - **Credit**
-   * - Outstanding Receipt
-     -
-     - $1,000
-   * - Bank Account (BANK B)
-     - **$1,000**
-     -
