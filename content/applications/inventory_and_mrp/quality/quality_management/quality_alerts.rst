@@ -1,81 +1,110 @@
-=====================
+==============
+Quality alerts
+==============
+
+.. _quality/quality_management/quality-alerts:
+.. |MO| replace:: :abbr:`MO (Manufacturing Order)`
+
+In the Odoo *Quality* app, *quality alerts* are used to notify quality teams of product defects or
+other issues. Quality alerts can be created from a manufacturing or inventory order, from a work
+order in the *Shop Floor* module, or directly within the *Quality* app.
+
 Create quality alerts
 =====================
 
-.. _quality/quality_management/quality-alerts:
+There are multiple ways to create a new quality alert:
 
-Configuring quality control points is a great way to ensure that quality checks are performed at
-routine stages during specific operations. However, quality issues can often appear outside of these
-scheduled checks. Using Odoo *Quality*, users can create quality alerts for issues that are not
-detected by automated processes.
+- **From the Quality app itself**, by to :menuselection:`Quality -->  Quality Control --> Quality
+  Alerts`, and then click :guilabel:`New` to open a quality alert form.
+- Navigate to :menuselection:`Manufacturing --> Operations --> Manufacturing Orders`, and then
+  select an |MO|. Click the :guilabel:`Quality Alert` button at the top of the |MO| to open a
+  quality alert form in a new page.
 
-.. seealso::
-   :doc:`Add quality control points <quality_control_points>`
+  .. important::
+     This method can only be used if a quality check has been requested for the |MO|. The
+     :guilabel:`Quality Alert` button will not appear otherwise.
 
-Find and fill out the quality alerts form
-=========================================
+- Open the :menuselection:`Inventory` app, click the :guilabel:`# To Process` button on an inventory
+  order type card (Receipts, Delivery Orders, etc.), and then select an order. Click the
+  :guilabel:`Quality Alert` button at the top of the order to open a quality alert form in a new
+  page.
 
-In some situations, it is necessary to manually create quality alerts within the *Quality* module.
+  .. important::
+     This method can only be used if a quality check has been requested for the inventory order. The
+     :guilabel:`Quality Alert` button will not appear otherwise. If the button does not appear, a
+     quality alert can also be created by clicking the :guilabel:`⚙️ (gear)` icon at the top of the
+     page and selecting the :guilabel:`Quality Alert` option from the resulting menu.
 
-.. example::
-   A helpdesk user who is notified of a product defect by a customer ticket can create an alert that
-   brings the issue to the attention of the relevant quality team.
+- Open the :menuselection:`Shop Floor` module, and then select a work center from the navigation bar
+  at the top of the page. Then, click the :guilabel:`⋮ (three vertical dots)` button at the
+  bottom-right of a work order card to open the :guilabel:`What do you want to do?` menu. Select the
+  :guilabel:`Create a Quality Alert` option from this menu to open a quality alert in a pop-up
+  window.
 
-To create a new quality alert, start from the :menuselection:`Quality` module and select
-:menuselection:`Quality Control --> Quality Alerts --> Create`. The quality alert form can then be
-filled out as follows:
+.. note::
+   Depending on how a new quality alert form is opened, certain fields on the form may already be
+   filled in. For example, if a quality alert is created from a work order card in the *Shop Floor*
+   module, the :guilabel:`Product` and :guilabel:`Work Center` are pre-filled.
 
-- :guilabel:`Title`: choose a concise, yet descriptive title for the quality alert
-- :guilabel:`Product`: the product about which the quality alert is being created
-- :guilabel:`Product Variant`: the specific variant of the product that has the quality issue, if
-  applicable
-- :guilabel:`Lot`: the lot number assigned to the product
-- :guilabel:`Work Center`: the work center where the quality issue originated
-- :guilabel:`Picking`: the picking operation during which the quality issue originated
-- :guilabel:`Team`: the quality team that will be notified by the quality alert
-- :guilabel:`Responsible`: the individual responsible for managing the quality alert
-- :guilabel:`Tags`: classify the quality alert based on user-created tags
-- :guilabel:`Root Cause`: the cause of the quality issue, if known
-- :guilabel:`Priority`: assign a priority between one and three stars to ensure more
-  urgent issues are prioritized
+Quality alerts form
+-------------------
 
-The tabs at the bottom of the form can be used to provide additional information to quality teams:
+After opening a new quality alert form, begin by giving it a short :guilabel:`Title` that summarizes
+the issue with the product.
 
-- :guilabel:`Description`: provide additional details about the quality issue
-- :guilabel:`Corrective Actions`: the method for fixing affected products
-- :guilabel:`Preventive Actions`: procedures for preventing the issue from occurring in
-  the future
-- :guilabel:`Miscellaneous`: the product vendor (if applicable), the company that produces
-  the product, and the date assigned
+Then, if the quality alert is referencing:
 
-.. image:: quality_alerts/quality-alert-form.png
+- **A specific product or product variant**, select it from the :guilabel:`Product` or
+  :guilabel:`Product Variant` drop-down menus.
+- **A specific work center**, select it from the :guilabel:`Work Center` drop-down menu.
+- **A specific picking order**, select it from the :guilabel:`Picking` drop-down menu.
+
+Next in the :guilabel:`Team` field, select the quality team that is responsible for managing the
+quality alert. If a specific employee should be responsible for the quality alert, select them from
+the :guilabel:`Responsible` drop-down menu.
+
+In the :guilabel:`Tags` field, select any tags relevant to the quality alert from the drop-down
+menu.
+
+Use the :guilabel:`Root Cause` field to select the cause of the quality issue, if known.
+
+Lastly, choose a :guilabel:`Priority` level by selecting a :guilabel:`⭐ (star)` number between one
+and three. Quality alerts with higher priorities appear at the top of the :guilabel:`Quality Alerts`
+Kanban board in the *Quality* app.
+
+At the bottom of the quality alert form are four tabs which aid in adding supplemental information
+or actions to be taken for the quality alert. They can be filled out as follows:
+
+- In the :guilabel:`Description` tab, enter a description of the quality issue.
+- Use the :guilabel:`Corrective Actions` tab to detail the steps that should be taken to fix the
+  issue.
+- Use the :guilabel:`Preventive Actions` tab to detail what should be done to prevent the issue from
+  occurring in the future.
+- In the :guilabel:`Miscellaneous` tab, select the :guilabel:`Vendor` of the product. If using an
+  Odoo database which manages multiple companies, select the relevant company in the
+  :guilabel:`Company` field. Finally, specify when the alert was assigned to a quality team in the
+  :guilabel:`Date Assigned` field.
+
+.. image:: quality_alerts/alert-form.png
    :align: center
-   :alt: An example of a completed quality alert form.
+   :alt: A quality alert form that has been filled out.
 
-Add quality alerts during the manufacturing process
-===================================================
+Manage quality alerts
+=====================
 
-Odoo enables manufacturing employees to create quality alerts within a work order without accessing
-the *Quality* module. From the work order tablet view, click the :guilabel:` ☰ ` hamburger menu
-icon in the top left corner and select :guilabel:`Quality Alert`.
+To view all existing quality alerts, navigate to :menuselection:`Quality --> Quality Control -->
+Quality Alerts`. By default, alerts are displayed in a Kanban board view, which organizes them into
+different stages based on where they are in the review process.
 
-.. image:: quality_alerts/work-order-tablet-view-menu-button.png
+To move an alert to a different stage, simply drag and drop it on the desired stage. Alternatively,
+select a quality alert to open it, and then click the desired stage above the top-right corner of
+the quality alert form.
+
+To create a new alert within a specific stage, click the :guilabel:`+ (plus)` button to the right of
+the stage name. In the new alert card that appears below the stage title, enter the
+:guilabel:`Title` of the alert, and then click :guilabel:`Add`. To configure the rest of the alert,
+select the alert card to open its form.
+
+.. image:: quality_alerts/alert-kanban.png
    :align: center
-   :alt: Access the work order menu.
-
-The quality alert form can then be filled out as detailed in the previous section. After saving the
-form, a new alert will appear on the :guilabel:`Quality Alerts` dashboard that can be found through
-the :menuselection:`Quality --> Quality Control` menu.
-
-Manage existing quality alerts
-==============================
-
-By default, quality alerts are organized in a kanban board view. The stages of the kanban board are
-fully configurable and alerts can be moved from one stage to the next by dragging and dropping or
-from within each alert. Additional options are available for viewing alerts, including graph,
-calendar, and pivot table views.
-
-.. tip::
-   Filter alerts based on diverse criteria like date assigned or date closed. Alerts can also be
-   grouped by quality team, root cause, or other parameters found under the :guilabel:`Filters`
-   button menu.
+   :alt: The Quality Alerts page, displaying alerts in a Kanban view.
