@@ -2,6 +2,8 @@
 Scrap during manufacturing
 ==========================
 
+.. |MO| replace:: :abbr:`MO (Manufacturing Order)`
+
 During the manufacturing process, the need to scrap manufacturing components or finished products
 may arise. This can be necessary if a component or product is damaged, or unusable for any other
 reason.
@@ -11,9 +13,13 @@ it in a virtual location titled *Virtual Locations/Scrap*. A virtual location is
 space, but rather a designation in Odoo that is used to track items that are no longer in physical
 inventory.
 
-Odoo *Manufacturing* allows for both components and finished products to be scrapped within a
-manufacturing order. The specific type of item that can be scrapped during a manufacturing order
-depends on the stage of the manufacturing process.
+.. seealso::
+   For more information, see the documentation about the different types of :ref:`locations
+   <inventory/warehouses_storage/difference-warehouse-location>`.
+
+Components can be scrapped from both the *Manufacturing* app and the *Shop Floor* module, before the
+associated manufacturing order (MO) is closed. Finished products can only be scrapped from the
+*Manufacturing* app, and only after closing the associated |MO|.
 
 .. tip::
    Scrap orders can be viewed by navigating to :menuselection:`Inventory --> Operations --> Scrap`.
@@ -25,81 +31,74 @@ depends on the stage of the manufacturing process.
    :guilabel:`Search...` bar to display all virtual locations. From the list, select the
    :guilabel:`Virtual Locations/Scrap` location.
 
-Scrap manufacturing components
-==============================
+.. _manufacturing/management/scrap-window:
 
-To scrap components during the manufacturing process, begin by navigating to
-:menuselection:`Manufacturing --> Manufacturing Orders`, then select a manufacturing order or click
-:guilabel:`Create` to configure a new one. If a new manufacturing order is created, select a product
-from the :guilabel:`Product` drop-down menu, then click :guilabel:`Confirm`.
+Scrap pop-up window
+===================
 
-Once the manufacturing order has been confirmed, a :guilabel:`Scrap` button appears at the top of
-the page. Click the button and a :guilabel:`Scrap` pop-up window appears.
+Scrapping components and finished products is done through the :guilabel:`Scrap` pop-up window. The
+pop-up window can be accessed from an |MO| in the backend, or the *Shop Floor* module.
 
-.. image:: scrap_manufacturing/scrap-button.png
-   :align: center
-   :alt: The scrap button on a manufacturing order.
+Scrap component from Manufacturing
+----------------------------------
 
-From the :guilabel:`Product` drop-down menu on the :guilabel:`Scrap` pop-up window, select the
-component that is being scrapped, then enter the quantity in the :guilabel:`Quantity` field.
-Finally, click :guilabel:`Done` to scrap the component.
+To scrap a component from an |MO|, begin by navigating to :menuselection:`Manufacturing -->
+Operations --> Manufacturing Orders`, and then select an |MO|. At the top of the |MO|, click the
+:guilabel:`Scrap` button to open the :guilabel:`Scrap` pop-up window.
 
-.. image:: scrap_manufacturing/scrap-pop-up.png
+Scrap finished product from Manufacturing
+-----------------------------------------
+
+To scrap a finished product from an |MO|, begin by navigating to :menuselection:`Manufacturing -->
+Operations --> Manufacturing Orders`. Select an open |MO|, and then click the :guilabel:`Produce
+All` button to close it.
+
+To select an |MO| that has already been closed, navigate to :menuselection:`Manufacturing -->
+Operations --> Manufacturing Orders`, remove the :guilabel:`To Do` filter from the
+:guilabel:`Search...` bar, and then select the desired |MO|.
+
+Once closed, click the :guilabel:`Scrap` button at the top of the |MO| to open the :guilabel:`Scrap`
+pop-up window.
+
+Scrap component from Shop Floor
+-------------------------------
+
+To scrap a component from the *Shop Floor* module, begin by navigating to :menuselection:`Shop
+Floor`. Then, either click the :guilabel:`⋮ (three vertical dots)` button on an |MO| card, or select
+a work center from the top navigation, and click the :guilabel:`⋮ (three vertical dots)` button on a
+work order card.
+
+Either method opens the :guilabel:`What do you want to do?` pop-up window. Click the
+:guilabel:`Scrap` button on the window to open the :guilabel:`Scrap` pop-up window.
+
+Scrap pop-up window
+===================
+
+After opening the scrap pop-up window using one of the methods :ref:`detailed above
+<manufacturing/management/scrap-window>`, select the component or finished product being scrapped,
+from the :guilabel:`Product` drop-down menu.
+
+In the :guilabel:`Quantity` field, enter the quantity being scrapped.
+
+By default, the :guilabel:`Source Location` field is set to the warehouse's pre-production location,
+while the :guilabel:`Scrap Location` field is set to the :guilabel:`Virtual Locations/Scrap`
+location. If either the source or scrap location should be changed, select a different location from
+their respective drop-down menus.
+
+Enable the :guilabel:`Replenish Scrapped Quantities` checkbox if a picking order should be created
+to replace the scrapped component(s) upon confirmation of the scrap order. This option should only
+be enabled for warehouses with :doc:`two-step <two_step_manufacturing>` or :doc:`three-step
+<three_step_manufacturing>` manufacturing enabled, since components are not picked as part of the
+:doc:`one-step <one_step_manufacturing>` manufacturing process.
+
+.. image:: scrap_manufacturing/scrap-window.png
    :align: center
    :alt: The Scrap pop-up window.
 
-.. important::
-   Before clicking :guilabel:`Mark As Done` on a manufacturing order, only the components of the
-   finished product can be scrapped, **not** the finished product itself. This is because Odoo
-   recognizes that the finished product cannot be scrapped before it has been manufactured.
+Click the :guilabel:`Scrap` button to scrap the selected component. After one or more scrap orders
+have been created, a :guilabel:`Scraps` smart button appears at the top of the screen. Click it to
+view a list of all scrap orders for the |MO|.
 
-After scrapping a component, continue the manufacturing process using the required quantity of the
-component that was scrapped. The on-hand stock count for the component that was scrapped updates to
-reflect both the scrapped quantity and the quantity consumed during manufacturing.
-
-.. example::
-   If the manufacturing of a table requires four units of a table leg, and two units of the table
-   leg were scrapped during the manufacturing process, the total quantity of table legs consumed
-   will be six: four units used to manufacture the table plus two units scrapped.
-
-Scrap components from tablet view
-=================================
-
-Components can also be scrapped from the manufacturing tablet view. To do so, select the
-:guilabel:`Work Orders` tab on a manufacturing order, then click the :guilabel:`📱 (tablet view)`
-icon for a work order.
-
-.. image:: scrap_manufacturing/tablet-view-icon.png
-   :align: center
-   :alt: The tablet view icon for a work order.
-
-With tablet view open, click the :guilabel:`☰ (menu)` button at the top left of the screen, then
-select the :guilabel:`Scrap` button on the :guilabel:`Menu` pop-up window. The :guilabel:`Scrap`
-pop-up window then appears.
-
-.. image:: scrap_manufacturing/tablet-scrap-button.png
-   :align: center
-   :alt: The Scrap button on the Menu pop-up window of the manufacturing tablet view.
-
-Finally, select a component from the :guilabel:`Product` drop-down menu and enter the quantity being
-scrapped in the :guilabel:`Quantity` field. Click :guilabel:`Done` to scrap the component.
-
-Scrap finished products
-=======================
-
-Odoo also allows for finished products to be scrapped from a manufacturing order once the order is
-completed. After clicking :guilabel:`Mark as Done`, click the :guilabel:`Scrap` button to make the
-:guilabel:`Scrap` pop-up window appear.
-
-Since the components have been consumed to create the finished product, they will no longer appear
-in the :guilabel:`Product` drop-down menu. Instead, the finished product will be available as an
-option. Select the finished product and enter the quantity to be scrapped in the
-:guilabel:`Quantity` field. Click :guilabel:`Done` to scrap the finished product.
-
-The on-hand stock count for the product that was scrapped will update to reflect both the scrapped
-quantity and the quantity produced during manufacturing.
-
-.. example::
-   If five units of a chair were manufactured, but two units were scrapped after manufacturing was
-   completed, then the on-hand inventory of the chair will increase by three: five units
-   manufactured minus two units scrapped.
+If a picking order was automatically created to replenish the scrapped components, it can be
+accessed by opening the :menuselection:`Inventory` app, clicking the :guilabel:`# To Process` button
+on the :guilabel:`Pick Components` card, and selecting the order.
