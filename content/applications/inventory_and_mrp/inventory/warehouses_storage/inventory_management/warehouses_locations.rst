@@ -8,10 +8,10 @@ Terminology
 Warehouse
 ---------
 
-In Odoo, a **Warehouse** is the actual building/place in which a company's items are stocked.
-Multiple warehouses can be set up in Odoo and the user can create moves between warehouses.
+In Odoo, a *warehouse* is the actual building/place in which a company's items are stocked. Multiple
+warehouses can be set up in Odoo and the user can create moves between warehouses.
 
-.. _inventory/management/difference-warehouse-location:
+.. _inventory/warehouses_storage/difference-warehouse-location:
 
 Location
 --------
