@@ -296,7 +296,7 @@ how the matched node should be altered. By default the value is ``inside``.
     the content of the inheritance spec should be ``attribute`` elements
     with a ``name`` attribute and an optional body:
 
-    * if the ``attribute`` element has a body, a new attributed named
+    * if the ``attribute`` element has a body, a new attribute named
       after its ``name`` is created on the matched node with the
       ``attribute`` element's text as value
     * if the ``attribute`` element has no body, the attribute named after
