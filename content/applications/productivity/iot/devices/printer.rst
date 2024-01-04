@@ -109,7 +109,11 @@ should be linked to this printer.
    :alt: The printer devices listed in the IoT Devices menu.
 
 Now, each time :guilabel:`Print` is selected in the control panel, instead of downloading a PDF,
-Odoo sends the report to the selected printer, and automatically prints it.
+for the first print, a pop-up will display every printers linked to the report,
+Odoo sends the report to the selected printers, and automatically prints it.
+
+To redo the selection, go to :guilabel:`Clear Selected Devices` and click on the :guilabel:`Unlink` button
+near the reports name. The pop-up will reappear at he next print of this repport
 
 .. seealso::
    :doc:`POS Order Printing <../../../sales/point_of_sale/restaurant/kitchen_printing>`
