@@ -450,14 +450,13 @@ HTTP
 Logging
 ~~~~~~~
 
-By default, Odoo displays all logging of level_ ``info`` except for workflow
-logging (``warning`` only), and log output is sent to ``stdout``. Various
-options are available to redirect logging to other destinations and to
-customize the amount of logging output.
+By default, Odoo displays all logging of level_ ``INFO``, ``WARNING`` and ``ERROR``. All logs
+independently of the level are output on ``stderr``. Various options are available to redirect
+logging to other destinations and to customize the verbosity.
 
 .. option:: --logfile <file>
 
-    sends logging output to the specified file instead of stdout. On Unix, the
+    sends logging output to the specified file instead of ``stderr``. On Unix, the
     file `can be managed by external log rotation programs
     <https://docs.python.org/3/library/logging.handlers.html#watchedfilehandler>`_
     and will automatically be reopened when replaced
