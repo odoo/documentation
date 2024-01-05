@@ -33,7 +33,6 @@ These are the steps to follow to upgrade customized databases:
 #. :ref:`Test extensively and do a rehearsal <upgrade_custom/testing_rehearsal>`.
 #. :ref:`Upgrade the production database <upgrade_custom/production>`.
 
-
 .. _upgrade_custom/stop_developments:
 
 Step 1: Stop the developments
@@ -47,13 +46,12 @@ Needless to say, bug fixing is exempt from this recommendation.
 Once you have stopped development, it is a good practice to assess the developments made and compare
 them with the features introduced between your current version and the version you are targeting.
 Challenge the developments as much as possible and find functional workarounds. Removing redundancy
-between your developments and the standard version of Odoo will lead to an eased
-upgrade process and reduce technical debt.
+between your developments and the standard version of Odoo will lead to an eased upgrade process
+and reduce technical debt.
 
 .. note::
    You can find information on the changes between versions in the `Release Notes
    <https:/odoo.com/page/release-notes>`_.
-
 
 .. _upgrade_custom/request_upgrade:
 
@@ -71,7 +69,6 @@ properly. If that's not the case, and the upgrade request fails, request the ass
 the `support page <https://odoo.com/help?stage=migration>`_ by selecting the option related to
 testing the upgrade.
 
-
 .. _upgrade_custom/empty_database:
 
 Step 3: Empty database
@@ -85,7 +82,7 @@ features, and guarantees that they will not cause any issues when upgrading the 
 Making the custom modules work in an empty database also helps avoid changes and wrong
 configurations that might be present in the production database (like studio customization,
 customized website pages, email templates or translations). They are not intrinsically related to
-the custom modules and that can raise unwanted issues in this stage of the upgraded process.
+the custom modules and that can raise unwanted issues in this stage of the upgrade process.
 
 To make custom modules work on an empty database we advise to follow these steps:
 
@@ -190,23 +187,83 @@ To make sure the custom code is working flawlessly in the new version, follow th
 Migrate the data
 ----------------
 
-During the upgrade of the custom modules, you might have to use migration scripts to reflect changes
-from the source code to their corresponding data.
+During the upgrade of the custom modules, you might have to use
+:doc:`upgrade scripts <../reference/upgrade_scripts>` to reflect changes from the source code
+to their corresponding data. Together with the upgrade scripts, you can also make use of the
+:doc:`../reference/upgrade_utils` and its helper functions.
 
 - Any technical data that was renamed during the upgrade of the custom code (models, fields,
-  external identifiers) should be renamed using migration scripts to avoid data loss during the
-  module upgrade.
+  external identifiers) should be renamed using upgrade scripts to avoid data loss during the
+  module upgrade. See also: :meth:`rename_field`, :meth:`rename_model`, :meth:`rename_xmlid`.
 - Data from standard models removed from the source code of the newer Odoo version and from the
   database during the standard upgrade process might need to be recovered from the old model table
   if it is still present.
 
-Migration scripts can also be used to:
+   .. example::
+      Custom fields for model ``sale.subscription`` are not automatically migrated from Odoo 15 to
+      Odoo 16 (when the model was merged into ``sale.order``). In this case, a SQL query can be
+      executed on an upgrade script to move the data from one table to the other. Take into account
+      that all columns/fields must already exist, so consider doing this in a ``post-`` script (See
+      :ref:`upgrade-scripts/phases`).
+
+      .. spoiler::
+
+         .. code-block:: python
+
+            def migrate(cr, version):
+               cr.execute(
+                  """
+                  UPDATE sale_order so
+                     SET custom_field = ss.custom_field
+                    FROM sale_subscription ss
+                   WHERE ss.new_sale_order_id = so.id
+                  """
+               )
+
+         Check the documentation for more information on :doc:`../reference/upgrade_scripts`.
+
+Upgrade scripts can also be used to:
 
 - Ease the processing time of an upgrade. For example, to store the value of computed stored fields
   on models with an excessive number of records by using SQL queries.
-- Recompute fields in case the computation of their value has changed.
-- Uninstall unwanted custom modules.
+- Recompute fields in case the computation of their value has changed. See also
+  :meth:`recompute_fields`.
+- Uninstall unwanted custom modules. See also :meth:`remove_module`.
 - Correct faulty data or wrong configurations.
+
+Running and testing upgrade scripts
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. tabs::
+
+   .. group-tab:: Odoo Online
+
+      As the instalation of custom modules containing Python files is not allowed on Odoo Online
+      databases, it is not possible to run upgrade scripts on this platform.
+
+   .. group-tab:: Odoo.sh
+
+      As explained on the `Odoo.sh` tab of :ref:`upgrade/request-test-database`, Odoo.sh is
+      integrated with the upgrade platform.
+
+      Once the upgrade of a staging branch is on "Update on commit" mode, each time a commit is
+      pushed on the branch, the upgraded backup is restored and all the custom modules are updated.
+      This update includes the execution of the upgrade scripts.
+
+      When upgrading the production database, the execution of the upgrade scripts is also part of
+      the update of the custom modules done by the platform when the upgraded database is restored.
+
+   .. group-tab:: On-premise
+
+      Once you receive the upgraded dump of the database from the `Upgrade platform
+      <https://upgrade.odoo.com>`_, deploy the database and update all the custom modules by
+      invoking the command :doc:`odoo-bin </developer/reference/cli>` in the shell.
+      To update the custom modules, use the option: `-u <modules>,
+      --update <modules>`.
+
+      .. important::
+         As mentioned in the :doc:`CLI documentation </developer/reference/cli>`, the command used
+         to call the CLI depends on how you installed Odoo.
 
 .. _upgrade_custom/upgraded_database/test_custom:
 
@@ -221,13 +278,12 @@ Things to pay attention to:
 
 - Views not working: During the upgrade, if a view causes issues because of its content, it gets
   disabled. You can find the information on disabled views on the :ref:`Upgrade report
-  <upgrade/upgrade_report>`. This view needs to be activated again. To achieve this, we recommend
-  the use of migration scripts.
+  <upgrade/upgrade_report>`. This view needs to be activated again (or removed if not useful anymore).
+  To achieve this, we recommend the use of upgrade scripts.
 - :doc:`Module data <../tutorials/define_module_data>` not updated: Custom records that have the
   ``noupdate`` flag are not updated when upgrading the module in the new database. For the custom
-  data that needs to be updated due to changes in the new version, we recommend to use migration
-  scripts to do so.
-
+  data that needs to be updated due to changes in the new version, we recommend to use upgrade
+  scripts to do so. See also: :meth:`update_record_from_xml`.
 
 .. _upgrade_custom/testing_rehearsal:
 
@@ -246,7 +302,6 @@ databases and ensure that the upgrade process is still successful.
 In addition to that, make a full rehearsal of the upgrade process the day before upgrading the
 production database to avoid undesired behavior during the upgrade and to detect any issue that
 might have occurred with the migrated data.
-
 
 .. _upgrade_custom/production:
 
