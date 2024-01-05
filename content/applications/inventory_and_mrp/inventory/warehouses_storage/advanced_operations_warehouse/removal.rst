@@ -18,19 +18,19 @@ Odoo automatically select how products are selected for orders:
      - :doc:`FIFO <fifo>`
      - LIFO
      - :doc:`FEFO <fefo>`
-     - Closest Location
+     - :doc:`Closest Location <closest_location>`
      - Least Packages
    * - Based on
      - :ref:`Incoming date <inventory/warehouses_storage/arrival_date>`
      - :ref:`Incoming date <inventory/warehouses_storage/arrival_date>`
      - :ref:`Removal date <inventory/warehouses_storage/removal-date>`
-     - Location sequence
+     - :ref:`Location sequence <inventory/warehouses_storage/sequence>`
      - Package quantity
    * - Selection order
      - First in
      - Last in
      - :ref:`First to expire <inventory/warehouses_storage/exp-date>`
-     - Alphanumeric name of location
+     - :ref:`Alphanumeric name of location <inventory/warehouses_storage/location-name>`
      - Quantity closest to fulfilling demand
 
 For comprehensive examples for how to use each removal strategy, refer to each individual
