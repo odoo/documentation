@@ -18,3 +18,4 @@ Advanced operations
    advanced_operations_warehouse/cluster_picking
    advanced_operations_warehouse/removal
    advanced_operations_warehouse/fifo
+   advanced_operations_warehouse/fefo
