@@ -19,13 +19,13 @@ Odoo automatically select how products are selected for orders:
      - :doc:`LIFO <lifo>`
      - :doc:`FEFO <fefo>`
      - :doc:`Closest Location <closest_location>`
-     - Least Packages
+     - :doc:`Least Packages <least_packages>`
    * - Based on
      - :ref:`Incoming date <inventory/warehouses_storage/arrival_date>`
      - :ref:`Incoming date <inventory/warehouses_storage/arrival_date>`
      - :ref:`Removal date <inventory/warehouses_storage/removal-date>`
      - :ref:`Location sequence <inventory/warehouses_storage/sequence>`
-     - Package quantity
+     - :ref:`Package quantity <inventory/warehouses_storage/pkg-qty>`
    * - Selection order
      - First in
      - Last in
