@@ -118,3 +118,15 @@ each submission:
 .. note::
    During this process, the :guilabel:`Connect to HMRC` button no longer appears for other UK-based
    companies.
+
+.. _united-kingdom/employment-hero:
+
+Employment Hero payroll
+=======================
+
+If your business is already up and running with :doc:`Employment Hero <employment_hero>`, you can
+use our connector as an alternative payroll solution.
+
+.. important::
+   To :ref:`configure the Employment Hero API <employment_hero/configuration>` for **United
+   Kingdom**, use the following value as :guilabel:`Payroll URL`: `https://api.yourpayroll.co.uk/`.

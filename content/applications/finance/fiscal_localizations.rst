@@ -93,11 +93,12 @@ available on Odoo.
 - :doc:`Kenya - Accounting <fiscal_localizations/kenya>`
 - Lithuania - Accounting
 - :doc:`Luxembourg - Accounting <fiscal_localizations/luxembourg>`
+- :doc:`Malaysia - Accounting <fiscal_localizations/malaysia>`
 - Maroc - Accounting
 - :doc:`Mexico - Accounting <fiscal_localizations/mexico>`
 - Mongolia - Accounting
 - :doc:`Netherlands - Accounting <fiscal_localizations/netherlands>`
-- New Zealand - Accounting
+- :doc:`New Zealand - Accounting <fiscal_localizations/new_zealand>`
 - Norway - Accounting
 - OHADA - Accounting
 - Pakistan - Accounting
@@ -146,8 +147,10 @@ available on Odoo.
    fiscal_localizations/italy
    fiscal_localizations/kenya
    fiscal_localizations/luxembourg
+   fiscal_localizations/malaysia
    fiscal_localizations/mexico
    fiscal_localizations/netherlands
+   fiscal_localizations/new_zealand
    fiscal_localizations/romania
    fiscal_localizations/peru
    fiscal_localizations/philippines
@@ -159,3 +162,4 @@ available on Odoo.
    fiscal_localizations/vietnam
    fiscal_localizations/united_arab_emirates
    fiscal_localizations/united_kingdom
+   fiscal_localizations/employment_hero
