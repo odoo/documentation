@@ -15,14 +15,14 @@ Odoo automatically select how products are selected for orders:
    :stub-columns: 1
 
    * -
-     - FIFO
+     - :doc:`FIFO <fifo>`
      - LIFO
      - FEFO
      - Closest Location
      - Least Packages
    * - Based on
-     - Incoming date
-     - Incoming date
+     - :ref:`Incoming date <inventory/warehouses_storage/arrival_date>`
+     - :ref:`Incoming date <inventory/warehouses_storage/arrival_date>`
      - Removal date
      - Location sequence
      - Package quantity
