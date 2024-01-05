@@ -9,7 +9,7 @@ The goal of this strategy is to save the warehouse worker from taking a long jou
 shelf when the product is also available at a closer location.
 
 .. seealso::
-   :doc:`Other removal strategies <removal>`
+   :doc:`About removal strategies <removal>`
 
 .. _inventory/warehouses_storage/sequence:
 

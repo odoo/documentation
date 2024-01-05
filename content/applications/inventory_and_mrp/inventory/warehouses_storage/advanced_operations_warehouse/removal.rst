@@ -16,7 +16,7 @@ Odoo automatically select how products are selected for orders:
 
    * -
      - :doc:`FIFO <fifo>`
-     - LIFO
+     - :doc:`LIFO <lifo>`
      - :doc:`FEFO <fefo>`
      - :doc:`Closest Location <closest_location>`
      - Least Packages
@@ -144,7 +144,7 @@ and alert dates on a lot or serial number by navigating to :menuselection:`Inven
 Configuration --> Settings`.
 
 Under the :guilabel:`Traceability` heading, ensure the :guilabel:`Lots & Serial Numbers` feature is
-selected, and then select the checkbox for :guilabel:`Expiration Dates` to enable the feature.
+selected, and then select the check box for :guilabel:`Expiration Dates` to enable the feature.
 
 .. image:: removal/enable-expiration.png
    :align: center
