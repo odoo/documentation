@@ -8,7 +8,7 @@
 # Martin Trigaux, 2023
 # Wil Odoo, 2023
 # Daye Jeong, 2023
-# Sarah Park, 2023
+# Sarah Park, 2024
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-21 13:43+0000\n"
 "PO-Revision-Date: 2023-11-08 08:55+0000\n"
-"Last-Translator: Sarah Park, 2023\n"
+"Last-Translator: Sarah Park, 2024\n"
 "Language-Team: Korean (https://app.transifex.com/odoo/teams/41243/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -163,6 +163,9 @@ msgid ""
 "(Uniform Resource Locator)` can be used, as well, in place of the Odoo "
 "subdomain that was provided to the database."
 msgstr ""
+"``https://yourdatabase.odoo.com`` 을 사용하고 *yourdatabase* 하위 도메인 접두사를 데이터베이스의 "
+"실제 이름으로 바꾸세요. 데이터베이스에 있는 Odoo 하위 도메인 대신에 사용자가 지정한 :abbr:`URL (Uniform "
+"Resource Locator)`을 사용할 수도 있습니다. "
 
 #: ../../content/administration/install/cdn.rst-1
 msgid "KeyCDN's Zone configuration page."
@@ -176,6 +179,9 @@ msgid ""
 ":guilabel:`General Settings` ensure that the :guilabel:`CORS` option is "
 ":guilabel:`enabled`."
 msgstr ""
+"영역 양식 아래의 :guilabel:`일반 설정` 제목 아래에 있는 :guilabel:`전체 설정 표시` 버튼을 클릭하여 영역 옵션을 "
+"펼치세요. 페이지에 있는 마지막 옵션이어야 합니다. :guilabel:`일반 설정`을 펼친 후에는 :guilabel:`CORS` 옵션이 "
+":guilabel:`활성화`로 되어 있는지 확인하세요."
 
 #: ../../content/administration/install/cdn.rst:41
 msgid ""
@@ -183,6 +189,8 @@ msgid ""
 ":guilabel:`Save` the changes. KeyCDN will indicate that the new zone will be"
 " deployed. This can take about 10 minutes."
 msgstr ""
+"다음으로는, 영역 구성 페이지 하단으로 스크롤을 내려서 변경 사항을 :guilabel:`저장`합니다. KeyCDN이 새로운 영역으로 "
+"배포될 것임을 표시합니다. 이 작업은 약 10분 정도 소요됩니다."
 
 #: ../../content/administration/install/cdn.rst-1
 msgid "KeyCDN deploying the new Zone."
@@ -328,6 +336,8 @@ msgid ""
 "customizations (starting from the modules being loaded) depending on the "
 "\"current database\"."
 msgstr ""
+"Odoo에서는 멀티 테넌트 시스템을 사용하여, 하나의 Odoo 시스템이 여러 개의 데이터베이스 인스턴스를 실행하고 서비스할 수 있습니다."
+" 또한 '현재의 데이터베이스'에 따라 (로드 중인 모듈부터) 사용자 지정을 할 수 있으므로 고도의 커스터마이징을 할 수 있습니다."
 
 #: ../../content/administration/install/deploy.rst:21
 msgid ""
@@ -335,6 +345,8 @@ msgid ""
 "in company user: the database can be selected when logging in, and "
 "customizations loaded afterwards."
 msgstr ""
+"로그인한 회사 사용자가 백엔드 (웹 클라이언트)로 작업할 때는 문제가 되지 않습니다. 로그인할 때 데이터베이스를 선택하고 나중에 "
+"커스터마이징 항목을 로드할 수 있기 때문입니다."
 
 #: ../../content/administration/install/deploy.rst:25
 msgid ""
@@ -345,6 +357,10 @@ msgid ""
 "multiple databases accessible Odoo needs a rule to know which one it should "
 "use."
 msgstr ""
+"그러나 문제가 되는 것은 로그인을 하지 않는 사용자 (포털, 웹사이트)로, 데이터베이스에 바인딩되지 않는 경우입니다: Odoo는 웹사이트"
+" 페이지를 로드하거나 작업을 수행하기 위해 어떤 데이터베이스를 사용해야 하는지 확인해야만 합니다. 멀티 테넌트를 사용하지 않는 경우에는 "
+"사용할 데이터베이스가 하나뿐이므로 문제가 되지 않지만, 액세스할 수 있는 데이터베이스가 여러 개 있는 경우에는 어떤 데이터베이스를 "
+"사용해야 하는지 알 수 있는 규칙이 필요합니다."
 
 #: ../../content/administration/install/deploy.rst:31
 msgid ""
@@ -361,6 +377,8 @@ msgid ""
 "``website`` is used, dbfilter **must** be set, otherwise a number of "
 "features will not work correctly."
 msgstr ""
+"프로덕션 중에 서버에서 여러 데이터베이스를 호스팅하는 경우, 특히 '웹사이트'를 사용하는 경우에는 반드시 dbfilter를 **설정해야 "
+"하며, 그렇지 않으면 여러 기능이 제대로 작동하지 않습니다."
 
 #: ../../content/administration/install/deploy.rst:42
 msgid "Configuration samples"
@@ -394,6 +412,10 @@ msgid ""
 "database-list`` startup parameter to prevent listing your databases, and to "
 "block access to the database management screens. See also security_."
 msgstr ""
+"알맞은 :option:`--db-filter <odoo-bin --db-filter>`를 설정하는 것이 배포 보안에 있어 중요한 "
+"부분입니다. 정확히 작동하고 호스트 이름당 데이터베이스가 하나만 일치하도록 하고 난 후, 데이터베이스 관리자 화면에 대한 액세스를 "
+"차단하고 ``--no-database-list`` 시작 매개변수를 사용하여 데이터베이스 목록이 표시되지 않도록 하고 데이터베이스 관리 "
+"화면에 대한 액세스를 차단하는 것이 좋습니다. 보안_ 항목도 참조하세요."
 
 #: ../../content/administration/install/deploy.rst:76
 #: ../../content/administration/install/source.rst:193
@@ -560,6 +582,9 @@ msgid ""
 "cron threads are spawned too. Due to a Python limitation (GIL), it doesn't "
 "make the best use of the hardware."
 msgstr ""
+"**멀티스레드** 서버는 개발, 데모 및 다양한 운영 체제 (Windows 포함)와의 호환하기 위해 주로 사용되는 좀 더 단순한 "
+"서버입니다. 웹소켓과 같이 장기적인 연결을 포함하여 모든 새로운 HTTP 요청에 대해 새로운 스레드가 생성됩니다. 추가 데몬 크론 "
+"스레드도 생성됩니다. 파이썬의 한계 (GIL)로 인해 하드웨어를 최대한 활용할 수 없습니다."
 
 #: ../../content/administration/install/deploy.rst:191
 msgid ""
@@ -579,6 +604,10 @@ msgid ""
 "spawned too. A configurable process reaper monitors resource usage and can "
 "kill/restart failed workers."
 msgstr ""
+"**멀티프로세싱** 서버는 주로 프로덕션에 사용되는 전면적인 서버입니다. 이 서버는 리소스 사용에 대한 동일한 파이썬 제한 (GIL)의 "
+"적용을 받지 않으므로 하드웨어를 최대한 활용할 수 있습니다. 서버가 시작되면 작업자 풀이 생성됩니다. 새로운 HTTP 요청은 작업자가 "
+"처리할 준비가 될 때까지 OS에서 대기열에 대기합니다. 라이브 채팅용으로 추가 이벤트 기반 HTTP 작업자가 대체 포트에 스폰됩니다. "
+"추가로 크론 워커도 스폰됩니다. 구성할 수 있는 프로세스 리퍼는 리소스 사용량을 모니터링하고 실패한 워커를 종료/재시작할 수 있습니다."
 
 #: ../../content/administration/install/deploy.rst:201
 msgid ""
@@ -652,6 +681,11 @@ msgid ""
 " --proxy-mode>` so it uses the real client headers (such as hostname, "
 "scheme, and IP) instead of the proxy ones."
 msgstr ""
+"멀티 프로세싱에서는, 전용 실시간 채팅 작업자가 자동으로 시작되어 :option:`--gevent-port <odoo-bin "
+"--gevent-port>`에서 수신 대기합니다. 기본적으로 HTTP 요청은 실시간 채팅이 아닌 일반 HTTP 워커에 계속 액세스합니다."
+" Odoo 앞에 프록시를 배포하고 경로가 ``/웹소켓/``으로 시작하는 수신 요청을 실시간 채팅 작업자로 이동시켜야 합니다. 또한 "
+"Odoo가 프록시 헤더 대신 실제 클라이언트 헤더 (예: 호스트 이름, 스키마 및 IP)를 사용하도록 :option:`--proxy-"
+"mode <odoo-bin --proxy-mode>`에서 시작해야 합니다."
 
 #: ../../content/administration/install/deploy.rst:237
 msgid "Server with 4 CPU, 8 Thread"
@@ -805,6 +839,9 @@ msgid ""
 "directed to that server. A regular (thread/process-based) WSGI server should"
 " be used for all other requests."
 msgstr ""
+"실시간 채팅 기능이 올바르게 작동하게 하려면 gevent와 호환되는 WSGI 서버를 사용해야 합니다. 해당 서버는 지속 시간이 긴 다수 "
+"연결을 동시에 처리할 수 있어야 하지만 처리 능력이 많을 필요는 없습니다. 경로가 ``/websocket/``으로 시작하는 요청은 모두 "
+"해당 서버로 보내야 합니다. 다른 모든 요청에는 일반 (스레드/프로세스 기반) WSGI 서버를 사용해야 합니다."
 
 #: ../../content/administration/install/deploy.rst:420
 msgid ""
@@ -827,6 +864,8 @@ msgid ""
 "performances, and static files should generally be served by a static HTTP "
 "server."
 msgstr ""
+"개발 편의를 위해, Odoo에서는 모듈과 관련된 전체 정적 파일 및 첨부 파일을 직접 제공합니다. 이는 성능 측면에서는 이상적이지 않을 "
+"수 있으며, 정적 파일은 보통 정적 HTTP 서버를 통해 제공되어야 합니다."
 
 #: ../../content/administration/install/deploy.rst:436
 msgid "Serving static files"
@@ -902,6 +941,9 @@ msgid ""
 "them requires multiple lookups in the database to determine where the files "
 "are stored and whether the current user can access them or not."
 msgstr ""
+"첨부 파일이란 파일 저장소에 저장되어 있는 파일로, Odoo에서 액세스를 관리합니다. 첨부 파일에 액세스하려면 데이터베이스에서 파일이 "
+"저장된 위치와 현재 사용자가 해당 파일에 액세스할 수 있는지 여부를 확인하기 위해 여러 번 확인해야 하므로 정적 웹 서버를 통해 직접 "
+"액세스할 수 없습니다."
 
 #: ../../content/administration/install/deploy.rst:516
 msgid ""
@@ -955,6 +997,8 @@ msgid ""
 "continuous process, not a one-shot operation. At any moment, you will only "
 "be as secure as the weakest link in your environment."
 msgstr ""
+"먼저, 정보 시스템 보안은 단발성 작업이 아니라 지속적인 과정이라는 점을 명심하시기 바랍니다. 어느 순간에, 보안 확보 수준이 환경에서의"
+" 가장 약한 고리의 수준으로 떨어질 수 있습니다."
 
 #: ../../content/administration/install/deploy.rst:552
 msgid ""
@@ -973,7 +1017,7 @@ msgstr ""
 msgid ""
 "When deploying an internet-facing server, please be sure to consider the "
 "following security-related topics:"
-msgstr ""
+msgstr "인터넷 연결 서버를 배포할 경우, 다음의 보안 관련 주제를 반드시 고려하시기 바랍니다:"
 
 #: ../../content/administration/install/deploy.rst:561
 msgid ""
@@ -1049,6 +1093,10 @@ msgid ""
 "enable the :option:`proxy mode <odoo-bin --proxy-mode>` option. See also "
 ":ref:`https_proxy`."
 msgstr ""
+"일반 텍스트 통신을 도청하지 못하도록 유효한 SSL 인증서로 HTTPS를 종료하도록 하는 웹 서버 배경에서 Odoo를 실행해 보세요. "
+"저렴하고 다양한 SSL 인증서 무료 옵션이 있습니다. 웹 프록시를 설정하여 요청 사이즈를 제한하고 시간 제한을 적절하게 설정한 다음 "
+":option:`proxy mode <odoo-bin --proxy-mode>` 옵션을 활성화합니다. :ref:`https_proxy`도"
+" 참고해 보세요."
 
 #: ../../content/administration/install/deploy.rst:605
 msgid ""
@@ -1095,6 +1143,12 @@ msgid ""
 "systemd.html>`_ may also be useful to implement per-process network access "
 "control."
 msgstr ""
+"공개용 Odoo 서버가 민감한 내부 네트워크 리소스나 서비스에 액세스할 수 있는 경우 (예: 사설 VLAN을 통하는 경우), 해당 내부 "
+"리소스를 보호하기 위해 적절한 방화벽 규칙을 설정하세요. 이렇게 하면 실수로 (또는 악의적인 사용자 행동의 결과로) Odoo 서버가 해당"
+" 내부 리소스에 액세스하거나 중단시키는 데 사용되지 않도록 합니다. 일반적으로 방화벽에 아웃바운드 기본 거부 규칙을 적용한 다음 Odoo"
+" 서버가 액세스해야 하는 내부 리소스에 대한 액세스만 명시적으로 승인하면 됩니다. 시스템 IP 트래픽 액세스 제어 "
+"<http://0pointer.net/blog/ip-accounting-and-access-lists-with-"
+"systemd.html>`_는 프로세스별 네트워크 액세스 제어 설정에 유용하게 사용할 수 있습니다."
 
 #: ../../content/administration/install/deploy.rst:634
 msgid ""
@@ -1110,6 +1164,12 @@ msgid ""
 "CloudFlare usually maintain a public list of their IP address ranges for "
 "this purpose."
 msgstr ""
+"공개용 Odoo 서버가 웹 애플리케이션 방화벽, 로드 밸런서, 투명한 DDoS 보호 서비스 (예: CloudFlare) 또는 이와 유사한"
+" 네트워크 수준 장치 뒤에 있는 경우, Odoo 시스템에 직접 액세스하지 않는 것이 좋습니다. 보통 Odoo 서버의 엔드포인트 IP "
+"주소를 기밀로 유지되기는 쉽지 않습니다. 예를 들어 공용 시스템을 쿼리할 때 웹 서버 로그에 표시되거나 Odoo에서 게시된 이메일의 "
+"헤더에 표시될 수 있습니다. 이러한 상황에서는 WAF, 로드 밸런서 또는 프록시 서비스의 특정 IP 주소를 제외하고는 엔드포인트에 "
+"공개적으로 액세스할 수 없도록 방화벽을 구성하는 것을 추천합니다. CloudFlare와 같은 서비스 제공업체는 일반적으로 이러한 목적을 "
+"위해 공개 목록을 IP 주소 범위로 유지합니다."
 
 #: ../../content/administration/install/deploy.rst:645
 msgid ""
@@ -1130,6 +1190,8 @@ msgid ""
 "hardening review of the server should be conducted and is outside of the "
 "scope of this guide."
 msgstr ""
+"Windows보다는, Linux에서 Odoo를 배포하는 것을 강력히 권장합니다. 그럼에도 불구하고 Windows 플랫폼에서 배포하기로 "
+"선택한 경우에는 서버에 대한 철저한 보안 강화에 대해 검토해야 하며, 이는 본 가이드의 범위를 벗어나는 내용입니다."
 
 #: ../../content/administration/install/deploy.rst:659
 msgid "Blocking Brute Force Attacks"
@@ -1208,6 +1270,9 @@ msgid ""
 "production, and may even expose dangerous features to attackers. It is also "
 "not designed to handle large databases, and may trigger memory limits."
 msgstr ""
+"인터넷을 사용하는 전체 시스템에서 데이터베이스 관리자 비활성화를 실행할 것을 강력히 권장합니다! 데이터베이스 관리자는 데이터베이스를 쉽게"
+" 생성하고 관리할 수 있는 개발/데모 도구입니다. 프로덕션 환경에서 사용하도록 설계되지 않았으며, 공격자에게 위험한 기능을 노출시킬 수도"
+" 있습니다. 또한 대용량 데이터베이스를 처리하도록 설계되지 않았으며 메모리 제한을 유발할 수 있습니다."
 
 #: ../../content/administration/install/deploy.rst:720
 msgid ""
@@ -1765,6 +1830,10 @@ msgid ""
 "Community and Enterprise repositories to have a working Odoo Enterprise "
 "installation."
 msgstr ""
+"**엔터프라이즈 git 저장소에는 전체 Odoo 소스 코드가 포함되어 있지 않습니다**. 이는 추가 애드온을 모아놓은 것에 불과합니다. "
+"메인 서버 코드는 커뮤니티 버전에 있습니다. 엔터프라이즈 버전을 실행한다는 것은, 커뮤니티 버전에서 서버를 실행하고 `addons-"
+"path` 옵션을 엔터프라이즈 버전이 있는 폴더로 설정하는 것을 의미합니다. Odoo 엔터프라이즈 설치를 제대로 동작하도록 실행하기 "
+"위해서는 커뮤니티 및 엔터프라이즈 저장소를 모두 복제해야 합니다."
 
 #: ../../content/administration/install/source.rst:119
 msgid "Python"
@@ -2132,6 +2201,9 @@ msgid ""
 " the Odoo database. This configuration works with either a personal email "
 "address or an address created by a custom domain."
 msgstr ""
+"Odoo는 Microsoft의 Microsoft 365용 Azure OAuth와 호환됩니다. 사용자 지정 도메인에서 보안 이메일을 "
+"송수신하려면 Azure 플랫폼과 Odoo 데이터베이스의 백엔드에서 몇 가지 설정만 구성하면 됩니다. 해당 설정 내용은 개인 이메일 주소 "
+"또는 사용자 지정 도메인에서 만든 주소 모두에서 작동합니다."
 
 #: ../../content/administration/maintain/azure_oauth.rst:11
 msgid ""
@@ -2166,6 +2238,11 @@ msgid ""
 " Next, navigate to the section labeled :guilabel:`Manage Microsoft Entra ID`"
 " (formally *Azure Active Directory*)."
 msgstr ""
+"시작하려면 `Microsoft's Azure Portal <https://portal.azure.com/>`_로 이동하세요. "
+":guilabel:`Microsoft Outlook Office 365` 계정이 있는 경우에는 해당 계정으로 로그인하고, 그렇지 않은 "
+"경우 개인 :guilabel:`Microsoft 계정`으로 로그인합니다. Azure 설정에 대한 관리 액세스 권한이 있는 사용자는 접속 "
+"후 다음과 같이 설정해야 합니다. 그런 다음 :guilabel:`Microsoft Entra ID 관리` (공식적으로는 *Azure "
+"액티브 디렉토리*) 섹션으로 이동합니다."
 
 #: ../../content/administration/maintain/azure_oauth.rst:30
 msgid ""
@@ -2177,6 +2254,10 @@ msgid ""
 "directory - Multitenant) and personal Microsoft accounts (e.g. Skype, "
 "Xbox)`."
 msgstr ""
+"이제 상단 메뉴에 있는 :guilabel:`추가 (+)`를 클릭한 다음 :guilabel:`앱 등록`을 선택하세요. '애플리케이션 등록'"
+" 화면에서 '이름'을 'Odoo' 또는 확인할 수 있는 이름으로 변경합니다. :guilabel:`지원되는 계정 유형` 섹션에서 "
+":guilabel:`전체 조직 디렉토리 계정 (전체 Microsoft Entra ID 디렉토리 - 멀티 테넌트) 및 Microsoft "
+"개인 계정 (e.g. Skype, Xbox)`을 선택합니다."
 
 #: ../../content/administration/maintain/azure_oauth.rst:36
 msgid ""
@@ -2212,6 +2293,11 @@ msgid ""
 ":guilabel:`Commonly Used Microsoft APIs`. After, select the "
 ":guilabel:`Delegated Permissions` option."
 msgstr ""
+"다음으로 :guilabel:`API 권한`을 설정해야 합니다. Odoo에서 Microsoft 365 설정 하의 이메일을 읽고 (IMAP)"
+" 보낼 (SMTP) 수 있으려면 특정 API 권한이 필요합니다. 먼저 왼쪽 메뉴 표시줄에 있는 :guilabel:`API 권한` 링크를 "
+"클릭합니다. 다음으로, :guilabel:` (+) 권한 추가` 버튼을 클릭하고 :guilabel:`일반적으로 사용되는 Microsoft"
+" API` 아래에서 :guilabel:`Microsoft 그래프`를 선택합니다. 그 후, :guilabel:`위임된 권한` 옵션을 "
+"선택합니다."
 
 #: ../../content/administration/maintain/azure_oauth.rst:55
 msgid ""
@@ -2292,6 +2378,11 @@ msgid ""
 " :guilabel:`Application ID` is located under the :guilabel:`Display Name` in"
 " the :guilabel:`Essentials` overview of the app."
 msgstr ""
+"이제 Microsoft Azure 앱이 설정되었으므로 Odoo 설정을 위한 자격 증명을 생성해야 합니다. 여기에는 "
+":guilabel:`클라이언트 ID` 및 :guilabel:`클라이언트 비밀번호`가 포함됩니다. 시작하려면 앱에 있는 "
+":guilabel:`클라이언트 ID`를 :guilabel:`전체 보기` 페이지에서 복사할 수 있습니다. :guilabel:`클라이언트 "
+"ID` 또는 :guilabel:`애플리케이션 ID`는 앱의 :guilabel:`주요 내용` 전체 보기에 있는 :guilabel:`표시 "
+"이름` 아래에 있습니다."
 
 #: ../../content/administration/maintain/azure_oauth.rst-1
 msgid "Application/Client ID located in the Overview of the app."
@@ -2760,6 +2851,9 @@ msgid ""
 "after a while, as long as their URLs are mentioned elsewhere on the "
 "Internet."
 msgstr ""
+"Google나 Bing과 같은 검색 엔진은 웹 크롤러 (:dfn:`웹을 탐색하고 분석하는 로봇`)를 사용하여 모든 웹사이트와 관련 도메인"
+" 이름을 인덱스로 만듭니다. 크롤러는 이미 알려진 웹 페이지의 링크를 통해 새로운 URL을 찾아냅니다. 따라서 검색 엔진은 도메인 이름이"
+" 인터넷의 다른 곳에서 참조 후 한 시간이 지나면 자동으로 인덱스를 생성해야 합니다."
 
 #: ../../content/administration/maintain/domain_names.rst:58
 msgid ""
@@ -2784,6 +2878,12 @@ msgid ""
 "registered with Odoo <domain-name/odoo-manage>` and for domain names managed"
 " by other providers."
 msgstr ""
+"일부 검색 엔진에서는 페이지 순위를 분석하고 개선할 수 있도록 웹 관리자를 위한 도구, 예를 들면 `Google Search "
+"Console <https://search.google.com/search-console>`_ 및 `Bing 웹마스터 도구 "
+"<https://www.bing.com/webmasters>`_를 서비스하고 있습니다. 이러한 서비스를 이용하려면 해당 도메인 주소의 "
+"소유자임을 증명해야 합니다. 도메인 주소 소유권을 확인하는 방법 중 하나는 DNS 레코드를 추가하는 것입니다. :ref:`Odoo에 "
+"등록된 도메인 주소 <domain-name/odoo-manage>`에서 등록한 도메인 주소 및 다른 공급업체에서 관리하는 도메인 주소에 "
+"대해 작업을 수행할 수 있습니다."
 
 #: ../../content/administration/maintain/domain_names.rst:74
 msgid ":doc:`/applications/websites/website/pages/seo`"
@@ -3472,6 +3572,9 @@ msgid ""
 " Odoo database. This configuration works by using either a personal email "
 "address or an address created by a custom domain."
 msgstr ""
+"Odoo는 Google Gmail용 OAuth와 호환됩니다. 사용자 지정 도메인에서 보안 이메일을 보내려면 Google의 *작업 공간* "
+"플랫폼과 Odoo 데이터베이스의 백엔드에서 몇 가지 설정만 구성하면 됩니다. 해당 설정 내용은 개인 이메일 주소 또는 사용자 지정 "
+"도메인에서 만든 주소를 활용하여 작동합니다."
 
 #: ../../content/administration/maintain/google_oauth.rst:11
 msgid ""
@@ -3489,7 +3592,7 @@ msgstr ":doc:`/applications/productivity/calendar/google`"
 
 #: ../../content/administration/maintain/google_oauth.rst:19
 msgid "Setup in Google"
-msgstr ""
+msgstr "Google 설정하기"
 
 #: ../../content/administration/maintain/google_oauth.rst:22
 msgid "Create a new project"
@@ -4425,39 +4528,39 @@ msgstr ""
 
 #: ../../content/administration/maintain/odoo_online.rst:15
 msgid ":ref:`odoo_online/upgrade`"
-msgstr ""
+msgstr ":ref:`odoo_online/upgrade`"
 
 #: ../../content/administration/maintain/odoo_online.rst:16
 msgid ":ref:`odoo_online/duplicate`"
-msgstr ""
+msgstr ":ref:`odoo_online/duplicate`"
 
 #: ../../content/administration/maintain/odoo_online.rst:17
 msgid ":ref:`odoo_online/rename`"
-msgstr ""
+msgstr ":ref:`odoo_online/rename`"
 
 #: ../../content/administration/maintain/odoo_online.rst:18
 msgid ":ref:`odoo_online/download`"
-msgstr ""
+msgstr ":ref:`odoo_online/download`"
 
 #: ../../content/administration/maintain/odoo_online.rst:19
 msgid ":ref:`odoo_online/domains`"
-msgstr ""
+msgstr ":ref:`odoo_online/domains`"
 
 #: ../../content/administration/maintain/odoo_online.rst:20
 msgid ":ref:`odoo_online/tags`"
-msgstr ""
+msgstr ":ref:`odoo_online/tags`"
 
 #: ../../content/administration/maintain/odoo_online.rst:21
 msgid ":ref:`odoo_online/delete`"
-msgstr ""
+msgstr ":ref:`odoo_online/delete`"
 
 #: ../../content/administration/maintain/odoo_online.rst:22
 msgid ":ref:`odoo_online/contact-support`"
-msgstr ""
+msgstr ":ref:`odoo_online/contact-support`"
 
 #: ../../content/administration/maintain/odoo_online.rst:23
 msgid ":ref:`odoo_online/users`"
-msgstr ""
+msgstr ":ref:`odoo_online/users`"
 
 #: ../../content/administration/maintain/odoo_online.rst:28
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:293
@@ -4614,11 +4717,11 @@ msgstr ""
 
 #: ../../content/administration/maintain/odoo_online.rst:132
 msgid ":doc:`/applications/general/users/manage_users`"
-msgstr ""
+msgstr ":doc:`/applications/general/users/manage_users`"
 
 #: ../../content/administration/maintain/odoo_online.rst:133
 msgid ":doc:`/applications/general/users/odoo_account`"
-msgstr ""
+msgstr ":doc:`/applications/general/users/odoo_account`"
 
 #: ../../content/administration/maintain/on_premise.rst:3
 msgid "On-premise database management"
@@ -5179,6 +5282,9 @@ msgid ""
 "contents of your Odoo database, and can be undone by reinstalling the "
 "previous revision of the source code."
 msgstr ""
+"현재 사용 중인 Odoo 에디션에 대한 소스 코드의 최신 버전을 얻는 프로세스를 의미합니다. 예를 들어, Odoo 엔터프라이즈 13.0을"
+" 최신 버전으로 업데이트하는 것을 뜻합니다. 이 작업때문에 Odoo 데이터베이스 내용이 직접 변경되지는 않으며, 이전 버전의 소스 코드를"
+" 재설치하여 실행 취소할 수 있습니다."
 
 #: ../../content/administration/maintain/update.rst:35
 msgid "Upgrading (an Odoo database)"
@@ -5195,6 +5301,10 @@ msgid ""
 "because it involves moving data around inside the database, even though the "
 "database may end up at the same physical location after the upgrade."
 msgstr ""
+"데이터베이스의 구조 및 내용이 Odoo 새 버전과 호환되도록 영구적으로 변경하는 복잡한 데이터 처리 작업을 의미합니다. 작업은 되돌릴 수"
+" 없으며, 일반적으로 Odoo 최신 버전으로 전환하기로 결정한 경우 Odoo의 '데이터베이스 업그레이드 서비스 "
+"<https://upgrade.odoo.com>`_'를 통해 진행됩니다. 역사적으로 이 프로세스는 업그레이드 후 데이터베이스가 동일한 "
+"물리적 위치에 있더라도 데이터베이스 내부에서 데이터를 이동하기 때문에 \"마이그레이션\"이라고도 합니다."
 
 #: ../../content/administration/maintain/update.rst:37
 msgid ""
@@ -5203,6 +5313,8 @@ msgid ""
 "upgrading a database, please visit the `Odoo Upgrade page "
 "<https://upgrade.odoo.com>`_ instead."
 msgstr ""
+"이 페이지에서는 Odoo 설치를 최신 버전으로 *업데이트*하는 데 필요한 일반적인 단계에 대해 설명되어 있습니다. 데이터베이스 "
+"업그레이드에 대한 자세한 내용은 'Odoo 업그레이드 페이지 <https://upgrade.odoo.com>`_를 참조하세요."
 
 #: ../../content/administration/maintain/update.rst:43
 msgid "In a nutshell"
@@ -5215,6 +5327,8 @@ msgid ""
 "your data without any alteration, as long as you do not uninstall PostgreSQL"
 " (the database engine that comes with Odoo)."
 msgstr ""
+"Odoo를 업데이트하려면, 현재 설치 내용에 최신 버전 Odoo 에디션을 재설치하기만 하면 됩니다. 이렇게 할 경우 PostgreSQL "
+"(Odoo와 함께 제공되는 데이터베이스 엔진)을 제거하지 않는 한 데이터를 변경하지 않고 보존할 수 있습니다."
 
 #: ../../content/administration/maintain/update.rst:49
 msgid ""
@@ -8982,6 +9096,10 @@ msgid ""
 "encountered during the testing to fix it before upgrading your production "
 "database."
 msgstr ""
+"업그레이드된 테스트용 데이터베이스를 테스트하는 동안 문제가 발생하면 '고객 지원 페이지 "
+"<https://odoo.com/help?stage=migration>`__에서 업그레이드 테스트와 관련된 옵션을 선택하여 Odoo에 "
+"지원 요청을 할 수 있습니다. 어떤 경우든 프로덕션 데이터베이스를 업그레이드하기 전에 테스트 중에 발생한 문제를 보고하여 문제를 해결하는"
+" 것이 중요합니다."
 
 #: ../../content/administration/upgrade.rst:263
 msgid ""
@@ -8991,6 +9109,9 @@ msgid ""
 "a customization, it is the responsibility of the maintainer of your custom "
 "module to make it compatible with the new version of Odoo."
 msgstr ""
+"테스트 중에 일반 화면, 기능, 필드 및 모델에 상당한 차이가 발생할 수 있습니다. 해당 변경 사항은 사례별로 되돌릴 수 없습니다. "
+"다만, 새 버전에서 도입된 변경 사항으로 인해 사용자 지정이 중단되는 경우, 사용자 지정 모듈의 유지 관리자의 책임 하에 사용자 지정 "
+"모듈을 새 버전의 Odoo와 호환되도록 합니다."
 
 #: ../../content/administration/upgrade.rst:269
 msgid "Do not forget to test:"
@@ -9048,6 +9169,9 @@ msgid ""
 "takes a long time to finish. Fully rehearsing the upgrade process the day "
 "before upgrading the production database is also recommended."
 msgstr ""
+"표준 업그레이드 스크립트 및 데이터베이스가 계속하여 발전하고 있으므로 업그레이드 프로세스가 성공적으로 완료될 수 있도록, 특히 완료하는 "
+"데 시간이 오래 걸리는 경우에는 업그레이드된 테스트 데이터베이스를 자주 요청하는 것이 좋습니다. 프로덕션 데이터베이스를 업그레이드하기 "
+"전날 업그레이드 프로세스를 충분히 테스트해보는 것도 좋습니다."
 
 #: ../../content/administration/upgrade.rst:298
 msgid "Going into production without first testing may lead to:"
@@ -9088,6 +9212,7 @@ msgid ""
 "upgrade is finished. Once the process is completed, it is impossible to "
 "revert to the previous version."
 msgstr ""
+"업그레이드 요청 시 업그레이드가 완료될 때까지 데이터베이스를 사용할 수 없습니다. 프로세스가 완료되면 이전 버전으로 되돌릴 수 없습니다."
 
 #: ../../content/administration/upgrade.rst:322
 msgid ""
@@ -9106,6 +9231,8 @@ msgid ""
 "the custom modules' upgraded source code. If there are no custom modules, "
 "the upgrade process is triggered immediately."
 msgstr ""
+"이 프로세스는 브랜치에 새로운 커밋이 생성되는 즉시 **작동**됩니다. 이렇게 하면 업그레이드 프로세스가 사용자 지정 모듈로 업그레이드된"
+" 소스 코드 배포와 동기화될 수 있습니다. 사용자 지정 모듈이 없는 경우에는 업그레이드 프로세스가 즉시 연계되어 작동됩니다."
 
 #: ../../content/administration/upgrade.rst:334
 msgid ""
@@ -9114,6 +9241,8 @@ msgid ""
 " update. In case of success, a backup of the database before the upgrade is "
 "created."
 msgstr ""
+"작업 전반에서 데이터베이스를 사용할 수 없습니다. 문제가 발생할 경우, 일반 업데이트와 마찬가지로 플랫폼에서 업그레이드를 자동으로 "
+"되돌립니다. 업그레이드가 성공하면 업그레이드 전 데이터베이스의 백업이 생성됩니다."
 
 #: ../../content/administration/upgrade.rst:338
 msgid ""
@@ -9121,6 +9250,8 @@ msgid ""
 "upgrade process. Make sure the status of your staging upgrade is "
 ":guilabel:`successful` before trying it in production."
 msgstr ""
+"전체 업그레이드 프로세스를 완료하려면 커스텀 모듈의 업데이트가 성공해야 합니다. 프로덕션 환경에서 시도하기 전에 스테이지  업그레이드의 "
+"상태가 :guilabel:`성공`인지 확인하세요."
 
 #: ../../content/administration/upgrade.rst:346
 msgid ""

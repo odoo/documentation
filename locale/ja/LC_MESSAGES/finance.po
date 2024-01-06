@@ -10,8 +10,8 @@
 # Tim Siu Lai <tl@roomsfor.hk>, 2023
 # Noma Yuki, 2023
 # Martin Trigaux, 2023
-# Junko Augias, 2023
 # Wil Odoo, 2023
+# Junko Augias, 2024
 # 
 #, fuzzy
 msgid ""
@@ -20,7 +20,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-21 13:43+0000\n"
 "PO-Revision-Date: 2023-11-08 08:57+0000\n"
-"Last-Translator: Wil Odoo, 2023\n"
+"Last-Translator: Junko Augias, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/odoo/teams/41243/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -10295,10 +10295,13 @@ msgid ""
 "matched by the formula. If the formula is `A`, it will require (and create, "
 "if needed) tags `+A` and `-A`."
 msgstr ""
+"式が `tag_name`の場合、エンジンは税タグ `+tag_name` と "
+"`-tag_name`を一致させ、必要な場合、作成します。更に例を挙げるならば、2つのタグは式によって一致されます。 "
+"もし式が`A`であれば、タグ`+A` および `-A`を要求(し、必要な場合、作成)します。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:141
 msgid "'Aggregate Other Formulas' engine"
-msgstr ""
+msgstr "'その他の計算式の集計'エンジン"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:143
 msgid ""
@@ -10309,45 +10312,48 @@ msgid ""
 "`*`). To refer to an expression, type in its parent line's **code** followed"
 " by a period `.` and the expression's **label** (ex. **code.label**)."
 msgstr ""
+"このエンジンは、他の式で得られた金額に対して算術演算を行う必要がある場合に使用します。式は基本的な四則演算子（加算 `+`、減算 `-`、除算 `/` "
+"、乗算 `*`）で区切られた式への参照で構成されます。式を参照するには、親行の**code**の後にピリオド `.` "
+"と式の**label**を入力します（例：**code.label**）。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:149
 msgid "**Subformulas** can be one of the following:"
-msgstr ""
+msgstr "**サブ計算式** は以下の1つであることが可能です:"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:153
 msgid "`if_above(CUR(amount))`"
-msgstr ""
+msgstr "`if_above(CUR(amount))`"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:152
 msgid ""
 "The value of the arithmetic expression will be returned only if it is "
 "greater than the provided bound. Otherwise, the result will be `0`."
-msgstr ""
+msgstr "算術式の値は、指定された境界よりも大きい場合にのみ返されます。そうでなければ、結果は `0` となります。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:157
 msgid "`if_below(CUR(amount))`"
-msgstr ""
+msgstr "`if_below(CUR(amount))`"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:156
 msgid ""
 "The value of the arithmetic expression will be returned only if it is lower "
 "than the provided bound. Otherwise, the result will be `0`."
-msgstr ""
+msgstr "算術式の値は、指定された境界よりも小さい場合にのみ返されます。そうでなければ、結果は `0` となります。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:161
 msgid "`if_between(CUR1(amount1), CUR2(amount2))`"
-msgstr ""
+msgstr "`if_between(CUR1(amount1), CUR2(amount2))`"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:160
 msgid ""
 "The value of the arithmetic expression will be returned only if it is "
 "strictly between the provided bounds. Otherwise, it will be brought back to "
 "the closest bound."
-msgstr ""
+msgstr "算術式の値は、指定された境界の間に厳密に入っている場合のみ返される。そうでない場合は、最も近い境界に戻されます。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:166
 msgid "`if_other_expr_above(LINE_CODE.EXPRESSION_LABEL, CUR(amount))`"
-msgstr ""
+msgstr "`if_other_expr_above(LINE_CODE.EXPRESSION_LABEL, CUR(amount))`"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:164
 msgid ""
