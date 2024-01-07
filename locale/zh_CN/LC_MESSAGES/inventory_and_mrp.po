@@ -23,6 +23,7 @@
 # Miao Zhou <zhoumiao_nuaa@outlook.com>, 2023
 # Datasource International <Hennessy@datasourcegroup.com>, 2023
 # Mandy Choy <mnc@odoo.com>, 2023
+# Chloe Wang, 2024
 # 
 #, fuzzy
 msgid ""
@@ -31,7 +32,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-26 05:26+0000\n"
 "PO-Revision-Date: 2021-05-18 05:18+0000\n"
-"Last-Translator: Mandy Choy <mnc@odoo.com>, 2023\n"
+"Last-Translator: Chloe Wang, 2024\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/odoo/teams/41243/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2418,6 +2419,7 @@ msgid ""
 "warehouse, without having to buy those items up-front. This is called "
 "*consignment*."
 msgstr ""
+"大多数情况下，存放在公司仓库中的产品要么购买自供应商，要么由公司内部生产。不过，供应商有时会让公司在其仓库中储存和销售产品，而无需预先购买这些物品。这就是*寄售*。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:10
 msgid ""
@@ -2440,14 +2442,16 @@ msgid ""
 " check the box next to :guilabel:`Consignment`, and then click "
 ":guilabel:`Save` to finish."
 msgstr ""
+"要接收、存储和销售寄售库存，需要在设置中启用该功能。执行此操作，请进入 :menuselection:`库存-->配置-->设置`，在 "
+":guilabel:`可追踪性` 部分，选中 :guilabel:`寄售` 旁边的复选框，然后单击 :guilabel:`保存` 完成。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst-1
 msgid "Enabled Consignment setting in Inventory configuration."
-msgstr ""
+msgstr "启用库存配置中的寄售设置。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:28
 msgid "Receive (and store) consignment stock"
-msgstr ""
+msgstr "接收（并存储）寄售库存"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:30
 msgid ""
@@ -2455,6 +2459,8 @@ msgid ""
 " a warehouse. From the main :menuselection:`Inventory` dashboard, click into"
 " the :guilabel:`Receipts` section. Then, click :guilabel:`Create`."
 msgstr ""
+"在 Odoo 中启用该功能后，现在可以将寄售库存接收到仓库中。从主 :menuselection:`库存` 仪表板中，单击进入 "
+":guilabel:`收据` 部分。然后，单击:guilabel:`创建`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:35
 msgid ""
@@ -2463,6 +2469,7 @@ msgid ""
 "orders involved in receiving consignment stock. So, *every* receipt of "
 "consignment stock will start by creating manual receipts."
 msgstr ""
+"寄售存货实际上不是从供应商处购买的，只是接收和储存而已。因此，接收寄售存货时不涉及报价单或采购订单。因此，*每次*接收寄售存货时都要先创建手工收据。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/misc/owned_stock.rst:39
 msgid ""
@@ -6221,7 +6228,7 @@ msgstr "仓库"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/create_a_second_warehouse.rst:3
 msgid "Create a second warehouse"
-msgstr ""
+msgstr "创建第二个仓库"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/create_a_second_warehouse.rst:5
 msgid ""
@@ -6324,7 +6331,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/create_a_second_warehouse.rst:49
 msgid "Add inventory to a new warehouse"
-msgstr ""
+msgstr "添加库存到新仓库"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/create_a_second_warehouse.rst:51
 msgid ""
@@ -8233,6 +8240,7 @@ msgid ""
 "picking items for orders, and account for quality control, such as moving "
 "products with expiration dates."
 msgstr ""
+"对于有仓库的公司来说，**移除策略**决定了从仓库搬运哪些产品以及何时搬运。移除策略通常是为特定的分拣操作而定义的。这有助于公司选择最佳产品，优化工人为订单分拣物品时需要走的距离，并考虑质量控制，例如移动过期产品。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:11
 msgid ""
@@ -8301,6 +8309,10 @@ msgid ""
 ":guilabel:`Validate` to receive the products and register them in the Odoo "
 "database."
 msgstr ""
+"在 Odoo 中，通过导航至 :menuselection:`库存` 应用程序接收产品，并在看板视图中点击 :guilabel:`收据` 标题或 "
+":guilabel:`# 待处理` 按钮。在 :guilabel:`收据` 面板上，找到并点击单个收据，这将打开仓库接收表单。单击 "
+":guilabel:`编辑`，然后在 :guilabel:`已完成`栏中输入收到的数量。最后，:guilabel:`验证`接收产品并在 Odoo "
+"数据库中注册。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:53
 msgid ""
@@ -8442,7 +8454,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:134
 msgid "First Expired, First Out (FEFO)"
-msgstr ""
+msgstr "先到期先出（FEFO）"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:136
 msgid ""
@@ -8559,6 +8571,9 @@ msgid ""
 "Operations` window appears, and displays the lot or serial numbers selected "
 "for that specific product for the delivery order."
 msgstr ""
+"要查看为销售订单选择的序列号，请转到 :guilabel:`销售应用程序` 并选择有关销售订单。在销售订单中，单击右上角的 :guilabel:`送货`"
+" 智能按钮。在:guilabel:`操作'选项卡中，点击产品最右侧的:guilabel:`⦙≣（详细操作）'图标。出现 :guilabel:`详细操作`"
+" 窗口，显示为该特定产品选择的交货单批号或序列号。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:211
 msgid "FIFO (First In, First Out)"
@@ -8572,6 +8587,7 @@ msgid ""
 "cycles, such as clothes, to ensure they are not stuck with outdated styles "
 "in stock."
 msgstr ""
+":abbr:`FIFO（先进先出）`清除策略是指先进入仓库库存的产品先出库。如果公司销售需求周期短的产品（如服装），则应使用这种方法，以确保库存中不会有过时的款式。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:218
 msgid ""
@@ -8580,16 +8596,18 @@ msgid ""
 "the :guilabel:`Inventory Valuation Report`, the three different receipts are"
 " listed with the amounts."
 msgstr ""
+"在本例中，有三批白色衬衫。这些衬衫来自 *全部/服装* 类别，其中 *FIFO* 被设为移除策略。在 :guilabel:`库存估价报告` "
+"中，列出了三个不同收据的金额。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst-1
 msgid "View of the lots of white shirts in the inventory valuation report."
-msgstr ""
+msgstr "查看库存评估报告中的白衬衫批次。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:226
 msgid ""
 "Lot `000001` contains five shirts, lot `000002` contains three shirts, and "
 "lot `000003` contains two shirts."
-msgstr ""
+msgstr "批次 `000001` 包含五件衬衫，批次 `000002` 包含三件衬衫，批次 `000003` 包含两件衬衫。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:229
 msgid ""
@@ -8602,6 +8620,10 @@ msgid ""
 "`6.00`) in the :guilabel:`Quantity` field, then click :guilabel:`Save`, then"
 " click :guilabel:`Confirm`."
 msgstr ""
+"要查看移除策略的实际效果，请转到 :menuselection:`销售应用程序` 并单击 :guilabel:`创建` "
+"以创建销售订单。然后，从下拉菜单中选择 :guilabel:`客户`。然后单击 :guilabel:`订单行` 选项卡中的 "
+":guilabel:`添加产品`。从下拉菜单中选择产品（本例中为 :guilabel:`白衬衫`），或在字段中输入产品名称。在 "
+":guilabel:`数量` 字段中输入数量（本例中为`6.00`），然后单击 :guilabel:`保存`，再单击 :guilabel:`确认`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:236
 msgid ""
@@ -8611,10 +8633,12 @@ msgid ""
 "`000001` and one shirt from lot `000002` will be selected to be sent to the "
 "customer."
 msgstr ""
+"销售订单确认后，将创建交货订单并将其与分拣联系起来，并通过 :abbr:`FIFO（先进先出）`策略保留批号。将从批次 `000001` "
+"中选出五件衬衫和批次 `000002` 中选出一件衬衫发送给客户。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst-1
 msgid "Two lots being reserved for a sales order with the FIFO strategy."
-msgstr ""
+msgstr "采用先进先出策略为销售订单预留两个批次。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:246
 msgid "LIFO (Last In, First Out)"
@@ -8628,6 +8652,7 @@ msgid ""
 "first. This method is mostly used for products without a shelf life, and no "
 "time-sensitive factors, such as expiration dates."
 msgstr ""
+":abbr:`LIFO（后进先出）`策略的工作方式与:abbr:`FIFO（先进先出）`策略相反。采用这种方法时，**后**收到的产品会先出库。这种方法主要用于没有保质期和没有时间敏感因素（如过期日期）的产品。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:253
 msgid ""
@@ -8636,6 +8661,8 @@ msgid ""
 "strategy. In the :guilabel:`Inventory Valuation Report`, the three different"
 " receipts are listed with the amounts."
 msgstr ""
+"本例中有三批煤渣砖。这些煤渣块来自 *全部/建筑材料* 类别，其中 *FIFO* 被设为移除策略。在 :guilabel:`库存估价报告` "
+"中，列出了三个不同的收据和金额。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst-1
 msgid "View of the lots of cinder blocks in the inventory valuation report."
@@ -8678,6 +8705,10 @@ msgid ""
 "`5.00`) in the :guilabel:`Quantity` field, then click :guilabel:`Save`, then"
 " click :guilabel:`Confirm`."
 msgstr ""
+"要查看移除策略的实际效果，请转到 :menuselection:`销售应用程序` 并单击 :guilabel:`创建` "
+"以创建销售订单。然后，从下拉菜单中选择 :guilabel:`客户`。然后单击 :guilabel:`订单行` 选项卡中的 "
+":guilabel:`添加产品`。从下拉菜单中选择产品（本例中为 :guilabel:`煤渣块`），或在字段中输入产品名称。在 "
+":guilabel:`数量` 字段中输入数量（本例中为`5.00`），然后单击 :guilabel:`保存`，再单击 :guilabel:`确认`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:283
 msgid ""
@@ -8687,14 +8718,16 @@ msgid ""
 " lot `0000400` and one cinder block from lot `000030` will be selected to be"
 " sent to the customer."
 msgstr ""
+"销售订单确认后，将创建交货订单并与分拣链接，最新的批号将通过 :abbr:`LIFO（后进先出）` 策略保留。将从批次  `0000400` "
+"中选择所有四块煤渣砖和批次`000030` 中选择一块煤渣砖发送给客户。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst-1
 msgid "Two lots being reserved for sale with the LIFO strategy."
-msgstr ""
+msgstr "保留两块土地，采用后进先出策略销售。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:295
 msgid "FEFO (First Expired, First Out)"
-msgstr ""
+msgstr "FEFO（先到期先出）"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:297
 msgid ""
@@ -8705,6 +8738,7 @@ msgid ""
 "products that are going to expire first are moved out first. This method is "
 "used for perishable products, such as medicine, food, and beauty products."
 msgstr ""
+":abbr:`FEFO（先到期先出）`移仓策略不同于:abbr:`FIFO（先进先出）`和:abbr:`LIFO（后进先出）`策略，因为它是根据**过期日期**而不是仓库收货日期来移除产品。使用这种方法，最先过期的产品会被先移出。这种方法适用于易腐烂产品，如药品、食品和美容产品。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:303
 msgid ""
@@ -8714,12 +8748,13 @@ msgid ""
 "product form. Lots without a removal date defined are picked after lots with"
 " removal dates."
 msgstr ""
+"批次是根据其**移除日期**从最早到最晚挑选。移除日期表示产品需要在有效期前多少天从库存中移除。移除日期在产品表单中设置。未定义移除日期的批次会在有移除日期的批次之后被拣选。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:309
 msgid ""
 "If products are not removed from stock when they should be, lots that are "
 "past the expiration date may still be picked for delivery orders!"
-msgstr ""
+msgstr "如果产品没有按时从库存中移除，过了保质期的批次仍有可能被拣选用于送货订单！"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:313
 msgid ""
@@ -8737,6 +8772,8 @@ msgid ""
 "different expiration dates for individual serialized products, as well as "
 "for lot numbers containing many products."
 msgstr ""
+"首先，进入 :menuselection:`库存应用程序 --> 配置 --> 设置` 并确保启用 :guilabel:`有效期`。启用 "
+":guilabel:`有效期` 设置后，就可以为单个序列化产品以及包含多个产品的批号定义不同的到期日期。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:322
 msgid ""
@@ -8745,6 +8782,8 @@ msgid ""
 "strategy. In the :guilabel:`Inventory Valuation Report`, the three different"
 " receipts are listed with the amounts."
 msgstr ""
+"本例中有三批护手霜。这些护手霜来自 *全部/健康与美容* 类别，其中 *FEFO* 被设为移除策略。在 :guilabel:`库存估价报告` "
+"中，列出了三个不同收据的金额。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:326
 msgid ""
