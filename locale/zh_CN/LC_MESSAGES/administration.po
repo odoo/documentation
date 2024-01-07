@@ -23,7 +23,7 @@
 # Raven Allmind, 2023
 # diaojiaolou <124412206@qq.com>, 2023
 # Wil Odoo, 2023
-# Chloe Wang, 2023
+# Chloe Wang, 2024
 # 
 #, fuzzy
 msgid ""
@@ -32,7 +32,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-19 09:43+0000\n"
 "PO-Revision-Date: 2023-01-13 14:30+0000\n"
-"Last-Translator: Chloe Wang, 2023\n"
+"Last-Translator: Chloe Wang, 2024\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/odoo/teams/41243/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -498,6 +498,7 @@ msgstr "允许来自 192.168.1.x 网络的 tcp 连接"
 #: ../../content/administration/install/deploy.rst:100
 msgid "in ``/etc/postgresql/<YOUR POSTGRESQL VERSION>/main/pg_hba.conf`` set:"
 msgstr ""
+"在 ``/etc/postgresql/<YOUR POSTGRESQL VERSION>/main/pg_hba.conf`` set中："
 
 #: ../../content/administration/install/deploy.rst:108
 msgid ""
@@ -835,6 +836,8 @@ msgid ""
 "`Secure` flag can be added to ensure it is never transmitted over HTTP and "
 "`SameSite=Lax` to prevent authenticated `CSRF`_."
 msgstr ""
+"可以为 `session_id` cookie 定义其他配置。可添加`安全`标志以确保不会通过 HTTP "
+"传输，并添加`SameSite=Lax`以防止验证`CSRF`_。"
 
 #: ../../content/administration/install/deploy.rst:386
 msgid "Odoo as a WSGI Application"
@@ -873,6 +876,9 @@ msgid ""
 "--no-http>` cli option or the ``http_enable = False`` configuration file "
 "setting."
 msgstr ""
+"要处理 cron 作业，必须在 WSGI 服务器旁边启动一个内置 Odoo 服务器。必须使用 :option:`--no-http <odoo-bin "
+"--no-http>` cli 选项或 \"http_enable = False\" 配置文件设置，将该服务器配置为只处理 cron 而不处理 "
+"HTTP 请求。"
 
 #: ../../content/administration/install/deploy.rst:406
 msgid ""
@@ -882,6 +888,9 @@ msgid ""
 "--workers>` and :option:`--max-cron-threads=n <odoo-bin --max-cron-threads>`"
 " cli options."
 msgstr ""
+"在类 Linux 系统上，建议使用多进程服务器而不是多线程服务器，这样可以更好地利用硬件并提高稳定性，即使用 :option:`--workers=-1"
+" <odoo-bin --workers>` 和 :option:`--max-cron-threads=n <odoo-bin --max-cron-"
+"threads>` cli 选项。"
 
 #: ../../content/administration/install/deploy.rst:414
 msgid ""
@@ -892,6 +901,8 @@ msgid ""
 "directed to that server. A regular (thread/process-based) WSGI server should"
 " be used for all other requests."
 msgstr ""
+"要正确运行即时聊天功能，必须使用与 gevent 兼容的 WSGI 服务器。该服务器应能同时处理多个长连接，但不需要很强的处理能力。所有路径以 "
+"``/websocket/`` 开头的请求都应指向该服务器。所有其他请求都应使用普通的（基于线程/进程的）WSGI 服务器。"
 
 #: ../../content/administration/install/deploy.rst:420
 msgid ""
@@ -902,10 +913,14 @@ msgid ""
 "--http-port>` (multi-threading server) or on the :option:`--gevent-port "
 "<odoo-bin --gevent-port>` (multi-processing server)."
 msgstr ""
+"Odoo cron 服务器也可用于处理即时聊天请求。只需从 cron 服务器中删除 :option:`--no-http <odoo-bin --no-"
+"http>` cli 选项，并确保路径以 ``/websocket/`` 开头的请求会被定向到该服务器，或者在 :option:`--http-port"
+" <odoo-bin --http-port>` 上（多线程服务器），或者在 :option:`--gevent-port <odoo-bin "
+"--gevent-port>` 上（多处理服务器）。"
 
 #: ../../content/administration/install/deploy.rst:429
 msgid "Serving static files and attachments"
-msgstr ""
+msgstr "提供静态文件和附件"
 
 #: ../../content/administration/install/deploy.rst:431
 msgid ""
@@ -937,12 +952,16 @@ msgid ""
 ":file:`static/` folder and existing images are final (they do not fetch new "
 "resources by themselves). However, it is good practice."
 msgstr ""
+"建议在网络服务器发送的所有图像上设置``Content-Security-Policy: default-src "
+"'none'``标头。严格来说，这并非必要，因为用户无法在模块的 :file:`static/` "
+"文件夹中修改/注入内容，而且现有图像是最终的（它们不会自行获取新资源）。不过，这是一个很好的做法。"
 
 #: ../../content/administration/install/deploy.rst:447
 msgid ""
 "Using the above NGINX (https) configuration, the following ``map`` and "
 "``location`` blocks should be added to serve static files via NGINX."
 msgstr ""
+"使用上述 NGINX (https) 配置，应添加以下 ``map`` 和 ``location`` 块，以便通过 NGINX 提供静态文件。"
 
 #: ../../content/administration/install/deploy.rst:474
 msgid ""
@@ -950,10 +969,12 @@ msgid ""
 "installation, specifically on your :option:`--addons-path <odoo-bin "
 "--addons-path>`."
 msgstr ""
+"实际的 ``root`` 和 ``try_files`` 指令取决于安装，特别是 :option:`--addons-path <odoo-bin "
+"--addons-path>` 。"
 
 #: ../../content/administration/install/deploy.rst:481
 msgid "Debian package"
-msgstr ""
+msgstr "Debian 包"
 
 #: ../../content/administration/install/deploy.rst:483
 msgid ""
@@ -961,15 +982,17 @@ msgid ""
 "Enterprise, and that the :option:`--addons-path <odoo-bin --addons-path>` is"
 " ``'/usr/lib/python3/dist-packages/odoo/addons'``."
 msgstr ""
+"假设 Odoo 已通过**debian 软件包**安装为社区版和企业版，且 :option:`--addons-path <odoo-bin "
+"--addons-path>`` 为``'/usr/lib/python3/dist-packages/odoo/addons'``。"
 
 #: ../../content/administration/install/deploy.rst:487
 #: ../../content/administration/install/deploy.rst:501
 msgid "The ``root`` and ``try_files`` should be:"
-msgstr ""
+msgstr "``root`` 和 ``try_files`` 应该为："
 
 #: ../../content/administration/install/deploy.rst:494
 msgid "Git sources"
-msgstr ""
+msgstr "Git 源代码"
 
 #: ../../content/administration/install/deploy.rst:496
 msgid ""
@@ -979,10 +1002,14 @@ msgid ""
 "path <odoo-bin --addons-path>` is "
 "``'/opt/odoo/community/odoo/addons,/opt/odoo/community/addons,/opt/odoo/enterprise'``."
 msgstr ""
+"假设 Odoo 已通过 **sources** 安装，社区版和企业版的 git 仓库分别克隆在 :file:`/opt/odoo/community` "
+"和 :file:`/opt/odoo/enterprise` 中，并且 :option:`--addons-path <odoo-bin "
+"--addons-path>` 是 "
+"``'/opt/odoo/community/odoo/addons,/opt/odoo/community/addons,/opt/odoo/enterprise'``。"
 
 #: ../../content/administration/install/deploy.rst:509
 msgid "Serving attachments"
-msgstr ""
+msgstr "提供附件"
 
 #: ../../content/administration/install/deploy.rst:511
 msgid ""
@@ -991,6 +1018,8 @@ msgid ""
 "them requires multiple lookups in the database to determine where the files "
 "are stored and whether the current user can access them or not."
 msgstr ""
+"附件是存储在文件库中的文件，其访问受 Odoo "
+"监管。它们不能通过静态网络服务器直接访问，因为访问它们需要在数据库中进行多次查找，以确定文件存储在哪里，以及当前用户是否可以访问它们。"
 
 #: ../../content/administration/install/deploy.rst:516
 msgid ""
@@ -1005,18 +1034,24 @@ msgid ""
 "--x-sendfile>` CLI flag (this unique flag is used for both X-Sendfile and "
 "X-Accel)."
 msgstr ""
+"不过，一旦找到文件并由 Odoo 验证了访问权限，最好使用静态网络服务器而不是 Odoo 来提供文件。要让 Odoo "
+"委托静态网络服务器发送文件，必须在静态网络服务器上启用并配置 `X-Sendfile "
+"<https://tn123.org/mod_xsendfile/>`_ (apache) 或 `X-Accel "
+"<https://www.nginx.com/resources/wiki/start/topics/examples/x-accel/>`_ "
+"(nginx)扩展。设置完成后，使用 :option:`--x-sendfile <odoo-bin --x-sendfile>` CLI 标志启动 "
+"Odoo（X-Sendfile 和 X-Accel 均使用此唯一标志）。"
 
 #: ../../content/administration/install/deploy.rst:526
 msgid ""
 "The X-Sendfile extension for apache (and compatible web servers) does not "
 "require any supplementary configuration."
-msgstr ""
+msgstr "apache（以及兼容的网络服务器）的 X-Sendfile 扩展不需要任何辅助配置。"
 
 #: ../../content/administration/install/deploy.rst:528
 msgid ""
 "The X-Accel extension for NGINX **does** require the following additionnal "
 "configuration:"
-msgstr ""
+msgstr "NGINX 的 X-Accel 扩展**的确**需要以下额外配置："
 
 #: ../../content/administration/install/deploy.rst:537
 msgid ""
@@ -1026,6 +1061,9 @@ msgid ""
 "NGINX). This logs a warnings, the message contains the configuration you "
 "need."
 msgstr ""
+"如果您不知道文件库的路径，请使用 :option:`--x-sendfile <odoo-bin --x-sendfile>` 选项启动 "
+"Odoo，并通过 Odoo 直接导航到 ``/web/filestore`` URL（不要通过 NGINX 导航到 "
+"URL）。这将记录警告，信息中包含您需要的配置。"
 
 #: ../../content/administration/install/deploy.rst:546
 msgid "Security"
@@ -1238,6 +1276,8 @@ msgid ""
 "hardening review of the server should be conducted and is outside of the "
 "scope of this guide."
 msgstr ""
+"强烈建议在 Linux 平台上部署 Odoo，而不是 Windows 平台。如果您还是选择在 Windows "
+"平台上部署，则应对服务器进行彻底的安全加固审查，这不在本指南的讨论范围之内。"
 
 #: ../../content/administration/install/deploy.rst:659
 msgid "Blocking Brute Force Attacks"
@@ -1512,7 +1552,7 @@ msgstr "线上"
 msgid ""
 "Online instances are accessed using any web browser and do not require a "
 "local installation."
-msgstr ""
+msgstr "在线实例可使用任何网络浏览器访问，无需本地安装。"
 
 #: ../../content/administration/install/online.rst:8
 msgid "Demo"
@@ -1524,6 +1564,7 @@ msgid ""
 "are available. No registration is required, but each instance only lives for"
 " a few hours."
 msgstr ""
+"要快速试用 Odoo，可使用共享的 `demo <https://demo.odoo.com>`_ 实例。无需注册，但每个实例只能使用几个小时。"
 
 #: ../../content/administration/install/online.rst:14
 #: ../../content/administration/maintain/domain_names.rst:166
@@ -1541,10 +1582,12 @@ msgid ""
 "production or to test Odoo thoroughly, including customizations that don't "
 "require code."
 msgstr ""
+"`Odoo 在线版<https://www.odoo.com/trial>`_ 提供完全由 Odoo 管理和托管的私有实例。它可用于长期生产或全面测试 "
+"Odoo，包括不需要代码的定制。"
 
 #: ../../content/administration/install/online.rst:21
 msgid "Odoo Online is incompatible with custom modules or the Odoo App Store."
-msgstr ""
+msgstr "Odoo 在线版与自定义模块或 Odoo 应用程序商店不兼容。"
 
 #: ../../content/administration/install/packages.rst:3
 msgid "Packaged installers"
@@ -1556,29 +1599,33 @@ msgid ""
 "(Debian, Ubuntu, etc.), RPM-based Linux distributions (Fedora, CentOS, RHEL,"
 " etc.), and Windows for the Community and Enterprise editions."
 msgstr ""
+"Odoo 为基于 Debian 的 Linux 发行版（Debian、Ubuntu 等）、基于 RPM 的 Linux "
+"发行版（Fedora、CentOS、RHEL 等）以及 Windows 社区版和企业版提供打包安装程序。"
 
 #: ../../content/administration/install/packages.rst:9
 msgid ""
 "Official **Community** nightly packages with all relevant dependency "
 "requirements are available on the `nightly server "
 "<https://nightly.odoo.com>`_."
-msgstr ""
+msgstr "包含所有相关依赖要求的官方**社区**夜间软件包可在`夜间服务器<https://nightly.odoo.com>`_上获取。"
 
 #: ../../content/administration/install/packages.rst:13
 msgid "Nightly packages may be difficult to keep up to date."
-msgstr ""
+msgstr "每日构建软件包可能难以保持最新。"
 
 #: ../../content/administration/install/packages.rst:15
 msgid ""
 "Official **Community** and **Enterprise** packages can be downloaded from "
 "the `Odoo download page <https://www.odoo.com/page/download>`_."
 msgstr ""
+"官方 **社区版** 和 **企业版** 软件包可从 `Odoo 下载页面 <https://www.odoo.com/page/download>`_"
+" 下载。"
 
 #: ../../content/administration/install/packages.rst:19
 msgid ""
 "It is required to be logged in as a paying customer or partner to download "
 "the Enterprise packages."
-msgstr ""
+msgstr "必须以付费客户或合作伙伴身份登录，才能下载企业版软件包。"
 
 #: ../../content/administration/install/packages.rst:25
 #: ../../content/administration/install/source.rst:52
@@ -1602,7 +1649,7 @@ msgstr "准备"
 msgid ""
 "Odoo needs a `PostgreSQL <https://www.postgresql.org/>`_ server to run "
 "properly."
-msgstr ""
+msgstr "Odoo 需要一个 `PostgreSQL <https://www.postgresql.org/>`_ 服务器才能正常运行。"
 
 #: ../../content/administration/install/packages.rst:34
 #: ../../content/administration/install/packages.rst:70
@@ -1617,6 +1664,8 @@ msgid ""
 "PostgreSQL server on the same host as the Odoo instance. Execute the "
 "following command to install the PostgreSQL server:"
 msgstr ""
+"Odoo 'deb'软件包的默认配置是在与 Odoo 实例相同的主机上使用 PostgreSQL 服务器。执行以下命令安装 PostgreSQL "
+"服务器："
 
 #: ../../content/administration/install/packages.rst:44
 #: ../../content/administration/install/packages.rst:80
@@ -1628,7 +1677,7 @@ msgstr "Fedora"
 msgid ""
 "Make sure that the `sudo` command is available and well configured and, only"
 " then, execute the following command to install the PostgreSQL server:"
-msgstr ""
+msgstr "确保 \"sudo \"命令可用且配置良好，然后执行以下命令安装 PostgreSQL 服务器："
 
 #: ../../content/administration/install/packages.rst:57
 #: ../../content/administration/install/source.rst:412
@@ -1640,6 +1689,10 @@ msgid ""
 "<https://github.com/odoo/odoo/wiki/Wkhtmltopdf>`_ for more details on the "
 "various versions."
 msgstr ""
+"wkhtmltopdf` 无法通过 **pip** 安装，必须手动安装到 `version 0.12.6 "
+"<https://github.com/wkhtmltopdf/packaging/releases/tag/0.12.6.1-3>`_ "
+"才能支持页眉和页脚。请查看 `wkhtmltopdf wiki "
+"<https://github.com/odoo/odoo/wiki/Wkhtmltopdf>`_ 了解有关不同版本的更多详情。"
 
 #: ../../content/administration/install/packages.rst:63
 msgid "Repository"
@@ -1649,20 +1702,20 @@ msgstr "存储库"
 msgid ""
 "Odoo S.A. provides a repository that can be used to install the "
 "**Community** edition by executing the following commands:"
-msgstr ""
+msgstr "Odoo S.A. 提供了一个资源库，执行以下命令即可安装**社区**版："
 
 #: ../../content/administration/install/packages.rst:78
 msgid ""
 "Use the usual `apt-get upgrade` command to keep the installation up-to-date."
-msgstr ""
+msgstr "使用常用的 `apt-get upgrade` 命令来更新安装。"
 
 #: ../../content/administration/install/packages.rst:90
 msgid "Currently, there is no nightly repository for the Enterprise edition."
-msgstr ""
+msgstr "目前，企业版没有夜间储存库。"
 
 #: ../../content/administration/install/packages.rst:93
 msgid "Distribution package"
-msgstr ""
+msgstr "发行包"
 
 #: ../../content/administration/install/packages.rst:95
 msgid ""
@@ -1670,6 +1723,8 @@ msgid ""
 "**Enterprise** editions can be downloaded from the `Odoo download page "
 "<https://www.odoo.com/page/download>`_."
 msgstr ""
+"您可以从 `Odoo 下载页面 "
+"<https://www.odoo.com/page/download>`_下载**社区版**和**企业版**软件包，无需使用存储库。"
 
 #: ../../content/administration/install/packages.rst:103
 msgid ""
@@ -1683,7 +1738,7 @@ msgid ""
 "Once downloaded, execute the following commands **as root** to install Odoo "
 "as a service, create the necessary PostgreSQL user, and automatically start "
 "the server:"
-msgstr ""
+msgstr "下载完成后，以**root**身份执行以下命令，将 Odoo 安装为服务，创建必要的 PostgreSQL 用户，并自动启动服务器："
 
 #: ../../content/administration/install/packages.rst:117
 msgid ""
@@ -1691,6 +1746,8 @@ msgid ""
 "does not exist in Debian Buster nor Ubuntu 18.04. If needed, install it "
 "manually with the following:"
 msgstr ""
+"在 Debian Buster 或 Ubuntu 18.04 中不存在导出为 XLS 格式所需的 `python3-xlwt` Debian "
+"软件包。如有需要，请按以下步骤手动安装："
 
 #: ../../content/administration/install/packages.rst:124
 msgid ""
@@ -1698,6 +1755,8 @@ msgid ""
 " exist in Debian Buster nor Ubuntu 18.04, which could cause problems with "
 "the `l10n_mx_edi` module. If needed, install it manually with the following:"
 msgstr ""
+"在 Debian Buster 或 Ubuntu 18.04 中不存在渲染文本数量所需的 `num2words` Python 软件包，这可能会导致 "
+"`l10n_mx_edi` 模块出现问题。如有需要，请使用以下方法手动安装："
 
 #: ../../content/administration/install/packages.rst:135
 msgid "Odoo 16 'rpm' package supports Fedora 36."
@@ -1729,6 +1788,8 @@ msgid ""
 "a number of limitations and risks associated with deploying Odoo on a "
 "Windows platform."
 msgstr ""
+"提供 Windows 打包是为了方便测试或运行单用户本地实例，但由于在 Windows 平台上部署 Odoo "
+"存在诸多限制和风险，因此不建议进行生产部署。"
 
 #: ../../content/administration/install/packages.rst:155
 msgid ""
@@ -1760,11 +1821,11 @@ msgstr ""
 
 #: ../../content/administration/install/packages.rst:165
 msgid "Go through the installation steps."
-msgstr ""
+msgstr "完成安装步骤。"
 
 #: ../../content/administration/install/packages.rst:167
 msgid "Odoo launches automatically at the end of the installation."
-msgstr ""
+msgstr "安装结束后，Odoo 会自动启动。"
 
 #: ../../content/administration/install/source.rst:3
 msgid "Source"
@@ -1774,13 +1835,13 @@ msgstr "来源"
 msgid ""
 "The source 'installation' is not about installing Odoo but running it "
 "directly from the source instead."
-msgstr ""
+msgstr "源代码 'installation' 并不是安装 Odoo，而是直接从源代码运行。"
 
 #: ../../content/administration/install/source.rst:8
 msgid ""
 "Using the Odoo source can be more convenient for module developers as it is "
 "more easily accessible than using packaged installers."
-msgstr ""
+msgstr "对于模块开发人员来说，使用 Odoo 源程序可能更方便，因为它比使用打包安装程序更容易访问。"
 
 #: ../../content/administration/install/source.rst:11
 msgid ""
@@ -1789,12 +1850,14 @@ msgid ""
 "settings using :ref:`command-line parameters <reference/cmdline>` without "
 "needing to edit a configuration file."
 msgstr ""
+"与打包安装程序设置的服务相比，它使 Odoo 的启动和停止更加灵活和明确。此外，它还允许使用 :ref:` 命令行参数 "
+"<reference/cmdline>`覆盖设置，而无需编辑配置文件。"
 
 #: ../../content/administration/install/source.rst:15
 msgid ""
 "Finally, it provides greater control over the system's setup and allows to "
 "more easily keep (and run) multiple versions of Odoo side-by-side."
-msgstr ""
+msgstr "最后，它提供对系统设置的更大控制，并且可以更轻松地同时保留（和运行）多个版本的 Odoo。"
 
 #: ../../content/administration/install/source.rst:19
 msgid "Fetch the sources"
@@ -1804,7 +1867,7 @@ msgstr "获取源"
 msgid ""
 "There are two ways to obtain the source code of Odoo: as a ZIP **archive** "
 "or through **Git**."
-msgstr ""
+msgstr "获取 Odoo 源代码有两种方式：ZIP **压缩包** 或通过**Git**。"
 
 #: ../../content/administration/install/source.rst:24
 msgid "Archive"
@@ -1812,7 +1875,7 @@ msgstr "存档"
 
 #: ../../content/administration/install/source.rst:26
 msgid "Community edition:"
-msgstr ""
+msgstr "社区版："
 
 #: ../../content/administration/install/source.rst:28
 #: ../../content/administration/install/source.rst:34
@@ -1821,19 +1884,19 @@ msgstr "`Odoo下载页面<https://www.odoo.com/page/download>`_"
 
 #: ../../content/administration/install/source.rst:29
 msgid "`GitHub Community repository <https://github.com/odoo/odoo>`_"
-msgstr ""
+msgstr "`GitHub 社区存储库 <https://github.com/odoo/odoo>`_"
 
 #: ../../content/administration/install/source.rst:30
 msgid "`Nightly server <https://nightly.odoo.com>`_"
-msgstr ""
+msgstr "`Nightly 服务器 <https://nightly.odoo.com>`_"
 
 #: ../../content/administration/install/source.rst:32
 msgid "Enterprise edition:"
-msgstr ""
+msgstr "企业版"
 
 #: ../../content/administration/install/source.rst:35
 msgid "`GitHub Enterprise repository <https://github.com/odoo/enterprise>`_"
-msgstr ""
+msgstr "`GitHub 企业版存储库 <https://github.com/odoo/enterprise>`_"
 
 #: ../../content/administration/install/source.rst:40
 msgid "Git"
@@ -1843,7 +1906,7 @@ msgstr "Git"
 msgid ""
 "It is required to have `Git <https://git-scm.com/>`_ installed, and it is "
 "recommended to have a basic knowledge of Git commands to proceed."
-msgstr ""
+msgstr "需要安装 `Git <https://git-scm.com/>`_，建议具备 Git 命令的基本知识才能继续。"
 
 #: ../../content/administration/install/source.rst:46
 msgid ""
@@ -2033,7 +2096,7 @@ msgstr "依赖"
 msgid ""
 "Using **distribution packages** is the preferred way of installing "
 "dependencies. Alternatively, install the Python dependencies with **pip**."
-msgstr ""
+msgstr "使用 **发行版软件包** 是安装依赖包的首选方式。或者，使用 **pip** 安装 Python 依赖项。"
 
 #: ../../content/administration/install/source.rst:276
 msgid ""
@@ -2046,29 +2109,29 @@ msgstr ""
 msgid ""
 "On Debian/Ubuntu, the following commands should install the required "
 "packages:"
-msgstr ""
+msgstr "在 Debian/Ubuntu 上，使用以下命令即可安装所需的软件包："
 
 #: ../../content/administration/install/source.rst:286
 msgid "Install with pip"
-msgstr ""
+msgstr "使用 pip 安装"
 
 #: ../../content/administration/install/source.rst:288
 msgid ""
 "As some of the Python packages need a compilation step, they require system "
 "libraries to be installed."
-msgstr ""
+msgstr "由于某些 Python 软件包需要编译步骤，因此需要安装系统库。"
 
 #: ../../content/administration/install/source.rst:291
 msgid ""
 "On Debian/Ubuntu, the following command should install these required "
 "libraries:"
-msgstr ""
+msgstr "在 Debian/Ubuntu 上，使用以下命令即可安装这些所需的库："
 
 #: ../../content/administration/install/source.rst:297
 msgid ""
 "Odoo dependencies are listed in the :file:`requirements.txt` file located at"
 " the root of the Odoo Community directory."
-msgstr ""
+msgstr "Odoo 依赖项列在位于 Odoo 社区版目录根目录下的 :file:`requirements.txt` 文件中。"
 
 #: ../../content/administration/install/source.rst:301
 msgid ""
@@ -2078,6 +2141,9 @@ msgid ""
 "2.8.0 in Debian Bullseye and 2.6.0 in Ubuntu Focal. The lowest version is "
 "then chosen in the :file:`requirements.txt`."
 msgstr ""
+"文件:`requirements.txt`中的 Python 软件包基于 Odoo 发布时的稳定/LTS Debian/Ubuntu "
+"对应版本。例如，对于 Odoo 15.0，`python3-babel` 软件包版本在 Debian Bullseye 中为 2.8.0，在 "
+"Ubuntu Focal 中为 2.6.0。然后在 :file:`requirements.txt` 中选择最低版本。"
 
 #: ../../content/administration/install/source.rst:308
 #: ../../content/administration/install/source.rst:330
@@ -2088,13 +2154,15 @@ msgid ""
 "`virtualenv <https://pypi.org/project/virtualenv/>`_ to create isolated "
 "Python environments."
 msgstr ""
+"最好不要在 Odoo 的不同实例之间或与系统混合使用 Python 模块包。不过，可以使用 `virtualenv "
+"<https://pypi.org/project/virtualenv/>`_ 来创建隔离的 Python 环境。"
 
 #: ../../content/administration/install/source.rst:312
 msgid ""
 "Navigate to the path of the Odoo Community installation "
 "(:file:`CommunityPath`) and run **pip** on the requirements file to install "
 "the requirements for the current user."
-msgstr ""
+msgstr "导航至 Odoo 社区版安装路径（:file:`CommunityPath`），并在需求文件上运行 **pip** 为当前用户安装需求。"
 
 #: ../../content/administration/install/source.rst:322
 msgid ""
@@ -2102,32 +2170,37 @@ msgid ""
 "for Visual Studio <https://visualstudio.microsoft.com/downloads/>`_. Select "
 "**C++ build tools** in the **Workloads** tab and install them when prompted."
 msgstr ""
+"在安装依赖项之前，请下载并安装 \"Build Tools for Visual Studio "
+"<https://visualstudio.microsoft.com/downloads/>`_\"。在 **Workloads** 选项卡中选择 "
+"**C++ 编译工具**，并按提示安装。"
 
 #: ../../content/administration/install/source.rst:326
 #: ../../content/administration/install/source.rst:345
 msgid ""
 "Odoo dependencies are listed in the `requirements.txt` file located at the "
 "root of the Odoo Community directory."
-msgstr ""
+msgstr "Odoo 依赖项列在位于 Odoo 社区版目录根目录下的`requirements.txt`文件中。"
 
 #: ../../content/administration/install/source.rst:334
 msgid ""
 "Navigate to the path of the Odoo Community installation (`CommunityPath`) "
 "and run **pip** on the requirements file in a terminal **with Administrator "
 "privileges**:"
-msgstr ""
+msgstr "导航至 Odoo 社区版安装路径（\"CommunityPath\"），并在**具有管理员权限**的终端上对需求文件运行 **pip**："
 
 #: ../../content/administration/install/source.rst:353
 msgid ""
 "Navigate to the path of the Odoo Community installation (`CommunityPath`) "
 "and run **pip** on the requirements file:"
-msgstr ""
+msgstr "导航至 Odoo 社区版安装路径（\"CommunityPath\"），并在需求文件上运行 **pip**："
 
 #: ../../content/administration/install/source.rst:363
 msgid ""
 "Non-Python dependencies must be installed with a package manager (`Homebrew "
 "<https://brew.sh/>`_, `MacPorts <https://www.macports.org>`_)."
 msgstr ""
+"非 Python 依赖项必须使用软件包管理器安装（`Homebrew <https://brew.sh/>`_, `MacPorts "
+"<https://www.macports.org>`_）。"
 
 #: ../../content/administration/install/source.rst:366
 msgid "Download and install the **Command Line Tools**:"
@@ -2135,17 +2208,17 @@ msgstr "下载并安装命令行工** ："
 
 #: ../../content/administration/install/source.rst:372
 msgid "Use the package manager to install non-Python dependencies."
-msgstr ""
+msgstr "使用软件包管理器安装非 Python 依赖项。"
 
 #: ../../content/administration/install/source.rst:375
 msgid ""
 "For languages using a **right-to-left interface** (such as Arabic or "
 "Hebrew), the `rtlcss` package is required."
-msgstr ""
+msgstr "对于使用**从右到左界面**的语言（如阿拉伯语或希伯来语），需要使用 `rtlcss` 软件包。"
 
 #: ../../content/administration/install/source.rst:382
 msgid "Download and install **nodejs** and **npm** with a package manager."
-msgstr ""
+msgstr "使用软件包管理器下载并安装 **nodejs** 和 **npm**。"
 
 #: ../../content/administration/install/source.rst:383
 #: ../../content/administration/install/source.rst:392
@@ -2155,7 +2228,7 @@ msgstr "安装 `rtlcss`："
 
 #: ../../content/administration/install/source.rst:391
 msgid "Download and install `nodejs <https://nodejs.org/en/download>`_."
-msgstr ""
+msgstr "下载并安装 `nodejs <https://nodejs.org/en/download>`_。"
 
 #: ../../content/administration/install/source.rst:398
 msgid ""
@@ -2163,12 +2236,16 @@ msgid ""
 "`rtlcss.cmd` is located (typically: "
 ":file:`C:\\\\Users\\\\<user>\\\\AppData\\\\Roaming\\\\npm\\\\`)."
 msgstr ""
+"编辑系统环境变量 `PATH` 以添加 `rtlcss.cmd` "
+"所在文件夹（通常为：:file:`C:\\Users\\\\1\\AppData\\\\Roaming\\npm\\`）。"
 
 #: ../../content/administration/install/source.rst:403
 msgid ""
 "Download and install **nodejs** with a package manager (`Homebrew "
 "<https://brew.sh/>`_, `MacPorts <https://www.macports.org>`_)."
 msgstr ""
+"使用软件包管理器（`Homebrew <https://brew.sh/>`_, `MacPorts "
+"<https://www.macports.org>`_）下载并安装 **nodejs**。"
 
 #: ../../content/administration/install/source.rst:420
 msgid "Running Odoo"
@@ -2187,6 +2264,8 @@ msgid ""
 "<reference/cmdline/server>` or a :ref:`configuration file "
 "<reference/cmdline/config>`."
 msgstr ""
+"要配置服务器，可指定 :ref:` 命令行参数 <reference/cmdline/server>` 或 :ref:` 配置文件 "
+"<reference/cmdline/config>`。"
 
 #: ../../content/administration/install/source.rst:429
 msgid ""
@@ -2194,6 +2273,8 @@ msgid ""
 "`addons-path` argument. Note that it must come before the other paths in "
 "`addons-path` for add-ons to be loaded correctly."
 msgstr ""
+"对于企业版，请在 `addons-path` 参数中添加 `enterprise` 附加组件的路径。请注意，该路径必须位于 `addons-path` "
+"中其他路径之前，这样才能正确加载附加组件。"
 
 #: ../../content/administration/install/source.rst:433
 msgid "Common necessary configurations are:"
@@ -2205,7 +2286,7 @@ msgstr "PostgreSQL 用户和密码。"
 
 #: ../../content/administration/install/source.rst:436
 msgid "Custom addon paths beyond the defaults to load custom modules."
-msgstr ""
+msgstr "可以在默认路径之外设置自定义插件路径以加载自定义模块。"
 
 #: ../../content/administration/install/source.rst:438
 msgid "A typical way to run the server would be:"
@@ -2216,7 +2297,7 @@ msgstr "运行服务器的典型方法是："
 msgid ""
 "Where `CommunityPath` is the path of the Odoo Community installation, and "
 "`mydb` is the name of the PostgreSQL database."
-msgstr ""
+msgstr "其中，\"CommunityPath \"是 Odoo 社区版的安装路径，\"mydb \"是 PostgreSQL 数据库的名称。"
 
 #: ../../content/administration/install/source.rst:459
 msgid ""
@@ -2224,6 +2305,8 @@ msgid ""
 "`dbuser` is the PostgreSQL login, `dbpassword` is the PostgreSQL password, "
 "and `mydb` is the name of the PostgreSQL database."
 msgstr ""
+"其中，\"CommunityPath \"是 Odoo 社区版的安装路径，\"dbuser \"是 PostgreSQL "
+"登录名，\"dbpassword \"是 PostgreSQL 密码，\"mydb \"是 PostgreSQL 数据库名称。"
 
 #: ../../content/administration/install/source.rst:473
 msgid ""
@@ -2232,18 +2315,22 @@ msgid ""
 "into the Odoo database with the base administrator account: use `admin` as "
 "the email and, again, `admin` as the password."
 msgstr ""
+"服务器启动后（打印 INFO 日志 `odoo.modules.loading: Modules loaded.`），在网络浏览器中打开 "
+"http://localhost:8069，使用基本管理员账户登录 Odoo 数据库：使用 `admin` 作为电子邮件，同样使用 `admin` "
+"作为密码。"
 
 #: ../../content/administration/install/source.rst:478
 msgid ""
 "From there, create and manage new :doc:`users "
 "<../../applications/general/users/manage_users>`."
 msgstr ""
+"从那里，创建并管理新的 :doc:`users <.../../applications/general/users/manage_users>`。"
 
 #: ../../content/administration/install/source.rst:479
 msgid ""
 "The user account used to log into Odoo's web interface differs from the "
 ":option:`--db_user <odoo-bin -r>` CLI argument."
-msgstr ""
+msgstr "用于登录 Odoo 网页界面的用户账户与 :option:`--db_user <odoo-bin -r>` CLI 参数不同。"
 
 #: ../../content/administration/install/source.rst:483
 msgid ""
@@ -2256,7 +2343,7 @@ msgstr "维持"
 
 #: ../../content/administration/maintain/azure_oauth.rst:3
 msgid "Connect Microsoft Outlook 365 to Odoo using Azure OAuth"
-msgstr ""
+msgstr "使用 Azure OAuth 将 Microsoft Outlook 365 连接到 Odoo"
 
 #: ../../content/administration/maintain/azure_oauth.rst:5
 msgid ""
@@ -2266,6 +2353,8 @@ msgid ""
 " the Odoo database. This configuration works with either a personal email "
 "address or an address created by a custom domain."
 msgstr ""
+"Odoo 兼容 Microsoft 365 的 Azure OAuth。要从自定义域发送和接收安全电子邮件，只需在 Azure 平台和 Odoo "
+"数据库后端配置一些设置即可。该配置既可用于个人电子邮件地址，也可用于自定义域创建的地址。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:11
 msgid ""
@@ -2273,6 +2362,9 @@ msgid ""
 "platform <https://learn.microsoft.com/azure/active-"
 "directory/develop/quickstart-register-app>`_"
 msgstr ""
+"`Microsoft Learn：在Microsoft身份平台注册应用程序 "
+"<https://learn.microsoft.com/azure/active-directory/develop/quickstart-"
+"register-app>`_"
 
 #: ../../content/administration/maintain/azure_oauth.rst:15
 msgid ":doc:`/applications/general/auth/azure`"
@@ -2300,6 +2392,10 @@ msgid ""
 " Next, navigate to the section labeled :guilabel:`Manage Microsoft Entra ID`"
 " (formally *Azure Active Directory*)."
 msgstr ""
+"要开始使用，请访问 `Microsoft 的 Azure 门户 <https://portal.azure.com/>`_。如果有 "
+":guilabel:`Microsoft Outlook Office 365` 帐户，请使用该帐户登录，否则请使用个人 "
+":guilabel:`Microsoft 帐户`登录。具有 Azure 设置管理访问权限的用户需要连接并执行以下配置。接下来，导航到标有 "
+":guilabel:`Manage Microsoft Entra ID` 的部分（正式名称为 *Azure Active Directory*）。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:30
 msgid ""
@@ -2311,6 +2407,10 @@ msgid ""
 "directory - Multitenant) and personal Microsoft accounts (e.g. Skype, "
 "Xbox)`."
 msgstr ""
+"现在，点击顶部菜单中的 :guilabel:`添加 (+)`，然后选择 "
+":guilabel:`应用程序注册`。在:guilabel:`注册应用程序`屏幕上，将:guilabel:`名称`重命名为`Odoo`或其他可识别的名称。在"
+" :guilabel:`支持账户类型` 部分中选择 :guilabel:`任何组织目录中的帐户 （任何Microsoft企业ID目录 - 多租户）和个人"
+" Microsoft 帐户（例如Skype、Xbox）`。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:36
 msgid ""
@@ -2319,18 +2419,21 @@ msgid ""
 " in the :guilabel:`URL` field. The Odoo base URL is the canonical domain at "
 "which your Odoo instance can be reached in the URL field."
 msgstr ""
+"在 :guilabel:`Redirect URL` 部分，选择 :guilabel:`Web` 作为平台，然后在 :guilabel:`URL` "
+"字段中输入 `https://1/microsoft_outlook/confirm`。在 URL 字段中，Odoo 基本 URL 是可以到达 Odoo"
+" 实例的规范域。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:41
 msgid ""
 "*mydatabase.odoo.com*, where *mydatabase* is the actual prefix of the "
 "database's subdomain, assuming it's hosted on Odoo.com"
-msgstr ""
+msgstr "*mydatabase.odoo.com*，其中*mydatabase*是数据库子域的实际前缀，假定其托管在Odoo.com上"
 
 #: ../../content/administration/maintain/azure_oauth.rst:44
 msgid ""
 "After the URL has been added to the field, :guilabel:`Register` the "
 "application so it is created."
-msgstr ""
+msgstr "将 URL 添加到字段后，:guilabel:`Register` 应用程序将被创建。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:47
 msgid "API permissions"
@@ -2346,12 +2449,16 @@ msgid ""
 ":guilabel:`Commonly Used Microsoft APIs`. After, select the "
 ":guilabel:`Delegated Permissions` option."
 msgstr ""
+"接下来应设置 :guilabel:`API 权限`。Odoo 需要特定的 API 权限才能在 Microsoft 365 "
+"设置中读取（IMAP）和发送（SMTP）电子邮件。首先，点击左侧菜单栏中的 :guilabel:`API 权限` 链接。然后，点击 "
+":guilabel:`(+) 添加权限`按钮，在 :guilabel:`常用的微软API` 下选择 :guilabel:`微软图表`。然后，选择 "
+":guilabel:`委托权限` 选项。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:55
 msgid ""
 "In the search bar, search for the following :guilabel:`Deregulated "
 "permissions` and click :guilabel:`Add permissions` for each one:"
-msgstr ""
+msgstr "在搜索栏中搜索以下 :guilabel:`Deregulated permissions` 并逐一点击 :guilabel:`添加权限`："
 
 #: ../../content/administration/maintain/azure_oauth.rst:58
 msgid ":guilabel:`SMTP.Send`"
@@ -2915,18 +3022,21 @@ msgid ""
 "after a while, as long as their URLs are mentioned elsewhere on the "
 "Internet."
 msgstr ""
+"搜索引擎（例如 Google 和 "
+"Bing）依靠网络爬虫（:dfn:`探索和分析网络的机器人`）为所有网站及其相关域名编制索引。这些爬虫通过已知网页上的链接发现新 URL。因此，只要域名"
+" URL 在互联网的其他地方被提及，搜索引擎就会在一段时间后自动将其编入索引。"
 
 #: ../../content/administration/maintain/domain_names.rst:58
 msgid ""
 "Improving the appearance and positioning of web pages on search engines is a"
 " practice named \"Search Engine Optimization\" (SEO)."
-msgstr ""
+msgstr "改善网页在搜索引擎上的外观和定位是​​一种称为 “搜索引擎优化”（SEO） 的做法。"
 
 #: ../../content/administration/maintain/domain_names.rst:62
 msgid ""
 "Adding relevant content, optimizing metadata, and building high-quality "
 "backlinks can all help improve a website's search engine visibility."
-msgstr ""
+msgstr "添加相关内容、优化元数据和建立高质量反向链接都有助于提高网站在搜索引擎中的可见度。"
 
 #: ../../content/administration/maintain/domain_names.rst:65
 msgid ""
@@ -3909,14 +4019,14 @@ msgid ""
 "A new window labeled :guilabel:`Google` opens to complete the authorization "
 "process. Select the appropriate email address that is being configured in "
 "Odoo."
-msgstr ""
+msgstr "一个标有 :guilabel:`Google` 的新窗口将打开，以完成授权过程。选择正在 Odoo 中配置的相应电子邮件地址。"
 
 #: ../../content/administration/maintain/google_oauth.rst:146
 msgid ""
 "If the email address is a personal account, then an extra step pops up, so "
 "click :guilabel:`Continue` to allow the verification and connect the Gmail "
 "account to Odoo."
-msgstr ""
+msgstr "如果电子邮件地址是个人账户，则会弹出一个额外步骤，请单击 :guilabel:`继续` 以允许验证并将 Gmail 账户连接到 Odoo。"
 
 #: ../../content/administration/maintain/google_oauth.rst:149
 msgid ""
@@ -3959,6 +4069,9 @@ msgid ""
 ":guilabel:`Publishing status` is :guilabel:`In Production`, click "
 ":guilabel:`Back to Testing` to correct the issue."
 msgstr ""
+"要更正此警告，请导航至 `Google API "
+"平台<https://console.cloud.google.com/apis/credentials/consent>`_。如果 "
+":guilabel:`发布状态` 为 :guilabel:`生产中`，请单击 :guilabel:`返回到测试` 以更正问题。"
 
 #: ../../content/administration/maintain/google_oauth.rst:179
 msgid "No Test Users Added"
@@ -3972,7 +4085,7 @@ msgstr "如果没有将测试用户添加到OAuth同意屏幕，则会出现403�
 
 #: ../../content/administration/maintain/google_oauth.rst-1
 msgid "403 Access Denied Error."
-msgstr ""
+msgstr "403 拒绝访问错误"
 
 #: ../../content/administration/maintain/google_oauth.rst:188
 msgid ""
@@ -3980,6 +4093,8 @@ msgid ""
 ":guilabel:`APIs & Services` and add test user(s) to the app. Add the email "
 "that you are configuring in Odoo."
 msgstr ""
+"要纠正此错误，请返回 :guilabel:`APIs & Services` 下的 :guilabel:`OAuth consent screen` "
+"并在应用程序中添加测试用户。添加您在 Odoo 中配置的电子邮件。"
 
 #: ../../content/administration/maintain/google_oauth.rst:192
 msgid "Gmail Module not updated"
@@ -3989,7 +4104,7 @@ msgstr "Gmail模块未更新"
 msgid ""
 "If the *Google Gmail* module in Odoo has not been updated to the latest "
 "version, then a :guilabel:`Forbidden` error message populates."
-msgstr ""
+msgstr "如果 Odoo 中的 *Google Gmail* 模块尚未更新至最新版本，则会弹出 :guilabel:`已禁止` 错误信息。"
 
 #: ../../content/administration/maintain/google_oauth.rst-1
 msgid ""
@@ -4003,10 +4118,12 @@ msgid ""
 ":guilabel:`Google Gmail` module. Finally, click on the three dots on the "
 "upper right of the module and select :guilabel:`Upgrade`."
 msgstr ""
+"要纠正这一错误，请转到 :menuselection:`应用程序` 模块并清除搜索条件。然后，搜索 `Gmail` 或 `Google` 并升级 "
+":guilabel:`Google Gmail` 模块。最后，点击模块右上方的三个点，选择 :guilabel:`升级`。"
 
 #: ../../content/administration/maintain/google_oauth.rst:206
 msgid "Application Type"
-msgstr ""
+msgstr "应用类型"
 
 #: ../../content/administration/maintain/google_oauth.rst:208
 msgid ""
@@ -4014,6 +4131,8 @@ msgid ""
 ":guilabel:`Desktop App` is selected for the :guilabel:`Application Type`, an"
 " :guilabel:`Authorization Error` appears."
 msgstr ""
+"创建凭证（OAuth *Client ID* 和 *Client Secret*）时，如果为 :guilabel:`应用程序类型` 选择了 "
+":guilabel:`桌面应用程序`，则会出现 :guilabel:`授权错误`。"
 
 #: ../../content/administration/maintain/google_oauth.rst-1
 msgid "Error 400 Redirect URI Mismatch."
@@ -4045,7 +4164,7 @@ msgstr "更改数据库托管类型的说明，取决于当前使用的解决方
 
 #: ../../content/administration/maintain/hosting_changes.rst:9
 msgid "Transferring an on-premise database"
-msgstr ""
+msgstr "传输本地数据库"
 
 #: ../../content/administration/maintain/hosting_changes.rst:12
 #: ../../content/administration/maintain/hosting_changes.rst:80
@@ -4095,21 +4214,21 @@ msgstr ""
 msgid ""
 "the **dump** as an attachment or as a link to the file (required for 60 MB+ "
 "files)."
-msgstr ""
+msgstr "将**dump**作为附件或文件链接（60 MB 以上的文件需要）。"
 
 #: ../../content/administration/maintain/hosting_changes.rst:27
 #: ../../content/administration/maintain/hosting_changes.rst:95
 msgid ""
 "Odoo then makes sure the database is compatible before putting it online. In"
 " case of technical issues during the process, Odoo might contact you."
-msgstr ""
+msgstr "然后，Odoo 会确保数据库兼容，然后才将其上线。如果在此过程中出现技术问题，Odoo 可能会与您联系。"
 
 #: ../../content/administration/maintain/hosting_changes.rst:31
 #: ../../content/administration/maintain/hosting_changes.rst:99
 msgid ""
 "If you have time constraints, `submit a support ticket "
 "<https://www.odoo.com/help>`_ as soon as possible to schedule the transfer."
-msgstr ""
+msgstr "如果您有时间限制，请尽快提交支持工单 <https://www.odoo.com/help>`_ 以安排传输。"
 
 #: ../../content/administration/maintain/hosting_changes.rst:35
 #: ../../content/administration/maintain/hosting_changes.rst:67
@@ -4123,6 +4242,8 @@ msgid ""
 "<odoo_sh_import_your_database>` of the Odoo.sh *Create your project* "
 "documentation."
 msgstr ""
+"请按照 Odoo.sh *创建项目* 文档的 :ref:` 导入数据库部分<odoo_sh_import_your_database>` "
+"中的说明进行操作。"
 
 #: ../../content/administration/maintain/hosting_changes.rst:41
 msgid "Transferring an Odoo Online database"
@@ -4264,6 +4385,8 @@ msgid ""
 ":guilabel:`Senders & Domains` section and click on :guilabel:`SMTP and SEND "
 "API Settings`."
 msgstr ""
+"要开始操作，请登录 `Mailjet 帐户信息 <https://app.mailjet.com/account>`_页面。然后，导航到 "
+":guilabel:`发件人及域名` 部分，点击 :guilabel:`SMTP 和 SEND API 设置`。"
 
 #: ../../content/administration/maintain/mailjet_api.rst-1
 msgid ""
@@ -4281,28 +4404,36 @@ msgid ""
 "to configure Mailjet in Odoo, which is covered in the :ref:`last section "
 "<maintain/mailjet-api/odoo-setup>`."
 msgstr ""
+"然后，将 :abbr:`SMTP （简单邮件传输协议）` 配置设置复制到记事本中。这些设置可在 :guilabel:`配置（仅限 SMTP）` "
+"部分找到。:abbr:`SMTP（简单邮件传输协议）` 配置设置包括服务器地址、所需的安全选项（使用 "
+":abbr:`SSL（安全套接字层）`/:abbr:`TLS（传输层安全）`）和端口号。在 Odoo中配置 Mailjet "
+"需要这些设置，在:ref:`最后一节<maintain/mailjet-api/odoo-setup>`中有介绍。"
 
 #: ../../content/administration/maintain/mailjet_api.rst:32
 msgid ""
 "`Mailjet: How can I configure my SMTP parameters? "
 "<https://documentation.mailjet.com/hc/articles/360043229473>`_"
 msgstr ""
+"`Mailjet：如何配置 SMTP "
+"参数？<https://documentation.mailjet.com/hc/articles/360043229473>`_"
 
 #: ../../content/administration/maintain/mailjet_api.rst:36
 msgid ""
 "Odoo blocks `port 25` on Odoo Online and Odoo.sh databases. :ref:`See "
 "reference here <email_servers/restriction>`."
 msgstr ""
+"Odoo 屏蔽了 Odoo 在线版和 Odoo.sh 数据库上的 `port 25`. :ref:`参见此处的参考资料 "
+"<email_servers/restriction>`。"
 
 #: ../../content/administration/maintain/mailjet_api.rst-1
 msgid "SMTP configuration from Mailjet."
-msgstr ""
+msgstr "Mailjet 的 SMTP 配置。"
 
 #: ../../content/administration/maintain/mailjet_api.rst:43
 msgid ""
 "Next, click on the button labeled :guilabel:`Retrieve your API credentials` "
 "to retrieve the Mailjet API credentials."
-msgstr ""
+msgstr "接下来，单击标有 :guilabel:`检索您的应用程序接口证书` 的按钮，以检索 Mailjet API 凭据。"
 
 #: ../../content/administration/maintain/mailjet_api.rst:46
 msgid ""
@@ -4312,10 +4443,13 @@ msgid ""
 "generate the :guilabel:`Secret Key`. Copy this key to a notepad, as this "
 "serves as the :guilabel:`Password` in the Odoo configuration."
 msgstr ""
+"然后，点击眼睛图标，显示 :guilabel:`API key`。将此密钥复制到记事本中，作为 Odoo 配置中的 "
+":guilabel:`用户名`。接下来，点击 :guilabel:`Generate Secret Key` 按钮生成 :guilabel:`密钥` "
+"。将此密钥复制到记事本中，作为 Odoo 配置中的 :guilabel:`密钥`。"
 
 #: ../../content/administration/maintain/mailjet_api.rst:52
 msgid "Add verified sender address(es)"
-msgstr ""
+msgstr "添加已核实的发件人地址"
 
 #: ../../content/administration/maintain/mailjet_api.rst:54
 msgid ""
@@ -4326,10 +4460,13 @@ msgid ""
 " a Sender Domain or Address` link under the :guilabel:`Senders & Domains` "
 "section."
 msgstr ""
+"下一步是在 Mailjet 帐户设置中添加发件人地址或域，以便电子邮件地址或域获准使用 Mailjet 服务器发送电子邮件。首先，导航到 "
+"`Mailjet 帐户信息 <https://app.mailjet.com/account>`_页面。然后，单击 :guilabel:`发件人和域名`"
+" 部分下的 :guilabel:`添加发件人域名或地址` 链接。"
 
 #: ../../content/administration/maintain/mailjet_api.rst-1
 msgid "Add a sender domain or address in the Mailjet interface."
-msgstr ""
+msgstr "在 Mailjet 界面添加发件人域名或地址。"
 
 #: ../../content/administration/maintain/mailjet_api.rst:63
 msgid ""
@@ -4339,13 +4476,16 @@ msgid ""
 ":ref:`Add a domain <maintain/mailjet-api/add-domain>` section for steps on "
 "adding the domain."
 msgstr ""
+"确定是否需要将发件人的电子邮件地址或整个域添加到 Mailjet 设置中。如果 :abbr:`DNS (Domain Name System)` "
+"访问权限可用，则配置整个域可能更容易。跳转到 :ref:`Add a domain <maintain/mailjet-api/add-domain>`"
+" 部分了解添加域的步骤。"
 
 #: ../../content/administration/maintain/mailjet_api.rst:69
 msgid ""
 "Either all email addresses of the Odoo database users who are sending emails"
 " using Mailjet's servers need to be configured or the domain(s) of the "
 "users' email addresses can be configured."
-msgstr ""
+msgstr "要么配置使用 Mailjet 服务器发送电子邮件的所有 Odoo 数据库用户的电子邮件地址，要么可以配置用户电子邮件地址的域名。"
 
 #: ../../content/administration/maintain/mailjet_api.rst:72
 msgid ""
@@ -4354,12 +4494,14 @@ msgid ""
 " labeled :guilabel:`Add a sender address`. Then, add the email address that "
 "is configured to send from the custom domain."
 msgstr ""
+"默认情况下，最初在 Mailjet 账户中设置的电子邮件地址会被添加为受信任发件人。要添加另一个电子邮件地址，请单击标有 "
+":guilabel:`添加发件人地址` 的按钮。然后，添加配置为从自定义域发送的电子邮件地址。"
 
 #: ../../content/administration/maintain/mailjet_api.rst:76
 msgid ""
 "At minimum the following email addresses should be set up in the provider "
 "and verified in Mailjet:"
-msgstr ""
+msgstr "至少应在提供商中设置以下电子邮件地址，并在 Mailjet 中进行验证："
 
 #: ../../content/administration/maintain/mailjet_api.rst:78
 msgid "notifications\\@yourdomain.com"
@@ -4596,11 +4738,11 @@ msgstr ""
 msgid ""
 "Once the setup is complete, the Odoo database is ready to use the Mailjet "
 "email server for mass mailing or transactional emails!"
-msgstr ""
+msgstr "设置完成后，Odoo 数据库就可以使用 Mailjet 电子邮件服务器发送群发邮件或事务性电子邮件了！"
 
 #: ../../content/administration/maintain/odoo_online.rst:3
 msgid "Odoo Online database management"
-msgstr ""
+msgstr "Odoo 在线数据库管理"
 
 #: ../../content/administration/maintain/odoo_online.rst:5
 msgid ""
@@ -4608,6 +4750,7 @@ msgid ""
 "<https://www.odoo.com/my/databases>`_ and sign in as the database "
 "administrator."
 msgstr ""
+"要管理数据库，请访问 `数据库管理员 <https://www.odoo.com/my/databases>`_，并以数据库管理员身份登录。"
 
 #: ../../content/administration/maintain/odoo_online.rst:8
 msgid ""
@@ -4616,10 +4759,11 @@ msgid ""
 "the **arrow in a circle** icon next to the database name. It is only "
 "displayed if an upgrade is available."
 msgstr ""
+"除升级选项外，所有主要的数据库管理选项都可通过点击数据库名称获得，而升级选项则可通过点击数据库名称旁边的**圆圈中的箭头**图标获得。只有在升级可用时才会显示。"
 
 #: ../../content/administration/maintain/odoo_online.rst-1
 msgid "Accessing the database management options"
-msgstr ""
+msgstr "访问数据库管理选项"
 
 #: ../../content/administration/maintain/odoo_online.rst:15
 msgid ":ref:`odoo_online/upgrade`"
@@ -4651,11 +4795,11 @@ msgstr ""
 
 #: ../../content/administration/maintain/odoo_online.rst:22
 msgid ":ref:`odoo_online/contact-support`"
-msgstr ""
+msgstr ":ref:`odoo_online/contact-support`"
 
 #: ../../content/administration/maintain/odoo_online.rst:23
 msgid ":ref:`odoo_online/users`"
-msgstr ""
+msgstr ":ref:`odoo_online/users`"
 
 #: ../../content/administration/maintain/odoo_online.rst:28
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:293
@@ -4667,13 +4811,13 @@ msgstr "升级"
 
 #: ../../content/administration/maintain/odoo_online.rst:30
 msgid "Trigger a database upgrade."
-msgstr ""
+msgstr "触发数据库升级。"
 
 #: ../../content/administration/maintain/odoo_online.rst:33
 msgid ""
 "For more information about the upgrade process, check out the :ref:`Odoo "
 "Online upgrade documentation <upgrade/request-test-database>`."
-msgstr ""
+msgstr "有关升级过程的更多信息，请查看 :ref:`Odoo 在线升级文档 <upgrade/request-test-database>`。"
 
 #: ../../content/administration/maintain/odoo_online.rst:39
 msgid "Duplicate"
@@ -4683,18 +4827,18 @@ msgstr "复制"
 msgid ""
 "Create an exact copy of the database, which can be used to perform testing "
 "without compromising daily operations."
-msgstr ""
+msgstr "创建数据库的精确副本，用于执行测试而不影响日常操作。"
 
 #: ../../content/administration/maintain/odoo_online.rst:45
 msgid ""
 "By checking :guilabel:`For testing purposes`, all external actions (emails, "
 "payments, delivery orders, etc.) are disabled by default on the duplicated "
 "database."
-msgstr ""
+msgstr "选中 :guilabel:`用于测试`后，复制数据库中的所有外部操作（电子邮件、付款、配送订单等）默认为禁用。"
 
 #: ../../content/administration/maintain/odoo_online.rst:47
 msgid "Duplicated databases expire automatically after 15 days."
-msgstr ""
+msgstr "数据库副本会在 15 天后自动过期。"
 
 #: ../../content/administration/maintain/odoo_online.rst:52
 msgid "Rename"
@@ -4710,24 +4854,24 @@ msgstr "下载"
 
 #: ../../content/administration/maintain/odoo_online.rst:61
 msgid "Download a ZIP file containing a backup of the database."
-msgstr ""
+msgstr "下载包含数据库备份的 ZIP 文件。"
 
 #: ../../content/administration/maintain/odoo_online.rst:64
 msgid ""
 "Databases are backed up daily as per the `Odoo Cloud Hosting SLA "
 "<https://www.odoo.com/cloud-sla>`_."
-msgstr ""
+msgstr "根据`Odoo 云主机服务水平协议 <https://www.odoo.com/cloud-sla>`_，每天对数据库进行备份。"
 
 #: ../../content/administration/maintain/odoo_online.rst:72
 msgid ""
 "Use a custom :doc:`domain name <domain_names>` to access the database via "
 "another URL."
-msgstr ""
+msgstr "使用自定义 :doc:` 域名<domain_names>` 通过另一个 URL 访问数据库。"
 
 #: ../../content/administration/maintain/odoo_online.rst:75
 msgid ""
 "You can :ref:`register a domain name for free <domain-name/odoo-register>`."
-msgstr ""
+msgstr "您可以 :ref:` 免费注册域名 <domain-name/odoo-register>`。"
 
 #: ../../content/administration/maintain/odoo_online.rst:80
 msgid "Tags"
@@ -4735,11 +4879,11 @@ msgstr "标记"
 
 #: ../../content/administration/maintain/odoo_online.rst:82
 msgid "Add tags to easily identify and sort your databases."
-msgstr ""
+msgstr "添加标签，轻松识别和分类数据库。"
 
 #: ../../content/administration/maintain/odoo_online.rst:85
 msgid "You can search for tags in the search bar."
-msgstr ""
+msgstr "您可以在搜索栏中搜索标签。"
 
 #: ../../content/administration/maintain/odoo_online.rst:90
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:550
@@ -4755,17 +4899,17 @@ msgid ""
 "Deleting a database means that all data is permanently lost. The deletion is"
 " instant and applies to all users. It is recommended to create a backup of "
 "the database before deleting it."
-msgstr ""
+msgstr "删除数据库意味着永久丢失所有数据。删除立即生效，适用于所有用户。建议在删除前创建数据库备份。"
 
 #: ../../content/administration/maintain/odoo_online.rst:98
 msgid ""
 "Carefully read the warning message and only proceed if the implications of "
 "deleting a database are fully understood."
-msgstr ""
+msgstr "请仔细阅读提醒信息，完全明白删除数据库的影响后，才可继续。"
 
 #: ../../content/administration/maintain/odoo_online.rst-1
 msgid "The warning message displayed before deleting a database"
-msgstr ""
+msgstr "删除数据库前显示的警告信息"
 
 #: ../../content/administration/maintain/odoo_online.rst:105
 msgid "Only an administrator can delete a database."
@@ -4773,7 +4917,7 @@ msgstr "只有管理员才能删除数据库。"
 
 #: ../../content/administration/maintain/odoo_online.rst:106
 msgid "The database name is immediately made available to anyone."
-msgstr ""
+msgstr "数据库名称立即可供任何人使用。"
 
 #: ../../content/administration/maintain/odoo_online.rst:107
 msgid ""
@@ -4781,6 +4925,7 @@ msgid ""
 "impossible. In that case, contact `Odoo Support "
 "<https://www.odoo.com/help>`_."
 msgstr ""
+"如果数据库已过期或与订阅关联，则无法删除该数据库。在这种情况下，请联系 `Odoo 支持 <https://www.odoo.com/help>`_。"
 
 #: ../../content/administration/maintain/odoo_online.rst:113
 msgid "Contact us"
@@ -4790,25 +4935,26 @@ msgstr "联系我们"
 msgid ""
 "Access the `Odoo.com support page <https://www.odoo.com/help>`_ with the "
 "database's details already pre-filled."
-msgstr ""
+msgstr "访问`Odoo.com 支持`页面 <https://www.odoo.com/help>`_，其中已预先填写了数据库的详细信息。"
 
 #: ../../content/administration/maintain/odoo_online.rst:121
 msgid "Invite / remove users"
-msgstr ""
+msgstr "邀请/移除用户"
 
 #: ../../content/administration/maintain/odoo_online.rst:123
 msgid ""
 "To invite users, fill out the new user's email address and click "
 ":guilabel:`Invite`. To add multiple users, click :guilabel:`Add more users`."
 msgstr ""
+"要邀请用户，请填写新用户的电子邮件地址，然后单击 :guilabel:`邀请`。要添加多个用户，请单击 :guilabel:`添加更多用户`。"
 
 #: ../../content/administration/maintain/odoo_online.rst-1
 msgid "Inviting a user on a database"
-msgstr ""
+msgstr "在数据库中邀请用户"
 
 #: ../../content/administration/maintain/odoo_online.rst:129
 msgid "To remove users, select them and click :guilabel:`Remove`."
-msgstr ""
+msgstr "要删除用户，请选择他们并单击 :guilabel:`删除`。"
 
 #: ../../content/administration/maintain/odoo_online.rst:132
 msgid ":doc:`../../applications/general/users/manage_users`"
@@ -4973,7 +5119,7 @@ msgstr "如你本地数据库的用户数高于Odoo企业订阅的购买量，�
 msgid ""
 "This database will expire in X days, you have more users than your "
 "subscription allows"
-msgstr ""
+msgstr "该数据库将在 X 天后过期，您的用户数量超过了订购允许的数量"
 
 #: ../../content/administration/maintain/on_premise.rst:96
 msgid ""
@@ -5102,6 +5248,8 @@ msgid ""
 ":doc:`Odoo Online <odoo_online>` hosting every two months. Odoo Online users"
 " can then benefit from the latest features of Odoo."
 msgstr ""
+"Odoo 每两个月在:doc:`Odoo 在线版<odoo_online>`主机上发布称为**在线版本**的中间版本。这样，Odoo "
+"在线版用户就可以享受 Odoo 的最新功能。"
 
 #: ../../content/administration/maintain/supported_versions.rst:16
 msgid ""
@@ -5140,7 +5288,7 @@ msgstr "终止支持"
 
 #: ../../content/administration/maintain/supported_versions.rst:34
 msgid "**Odoo 17.0**"
-msgstr ""
+msgstr "**Odoo 17.0**"
 
 #: ../../content/administration/maintain/supported_versions.rst:35
 #: ../../content/administration/maintain/supported_versions.rst:36
@@ -5185,15 +5333,15 @@ msgstr "|green|"
 #: ../../content/administration/maintain/supported_versions.rst:38
 #: ../../content/administration/maintain/supported_versions.rst:93
 msgid "November 2023"
-msgstr ""
+msgstr "2023 年 11 月"
 
 #: ../../content/administration/maintain/supported_versions.rst:39
 msgid "November 2026 (planned)"
-msgstr ""
+msgstr "2026 年 11 月（计划）"
 
 #: ../../content/administration/maintain/supported_versions.rst:40
 msgid "Odoo saas~16.4"
-msgstr ""
+msgstr "Odoo saas~16.4"
 
 #: ../../content/administration/maintain/supported_versions.rst:42
 #: ../../content/administration/maintain/supported_versions.rst:43
@@ -5212,11 +5360,11 @@ msgstr "无"
 
 #: ../../content/administration/maintain/supported_versions.rst:44
 msgid "August 2023"
-msgstr ""
+msgstr "2023 年 8 月"
 
 #: ../../content/administration/maintain/supported_versions.rst:46
 msgid "Odoo saas~16.3"
-msgstr ""
+msgstr "Odoo saas~16.3"
 
 #: ../../content/administration/maintain/supported_versions.rst:47
 #: ../../content/administration/maintain/supported_versions.rst:53
@@ -5237,36 +5385,36 @@ msgstr "|red|"
 
 #: ../../content/administration/maintain/supported_versions.rst:50
 msgid "June 2023"
-msgstr ""
+msgstr "2023 年 6 月"
 
 #: ../../content/administration/maintain/supported_versions.rst:52
 msgid "Odoo saas~16.2"
-msgstr ""
+msgstr "Odoo saas~16.2"
 
 #: ../../content/administration/maintain/supported_versions.rst:56
 msgid "March 2023"
-msgstr ""
+msgstr "2023 年 3 月"
 
 #: ../../content/administration/maintain/supported_versions.rst:58
 msgid "Odoo saas~16.1"
-msgstr ""
+msgstr "Odoo saas~16.1"
 
 #: ../../content/administration/maintain/supported_versions.rst:62
 msgid "February 2023"
-msgstr ""
+msgstr "2023 年 2 月"
 
 #: ../../content/administration/maintain/supported_versions.rst:64
 msgid "**Odoo 16.0**"
-msgstr ""
+msgstr "**Odoo 16.0**"
 
 #: ../../content/administration/maintain/supported_versions.rst:68
 #: ../../content/administration/maintain/supported_versions.rst:99
 msgid "October 2022"
-msgstr ""
+msgstr "2022 年 10 月"
 
 #: ../../content/administration/maintain/supported_versions.rst:69
 msgid "November 2025 (planned)"
-msgstr ""
+msgstr "2025 年 11 月（计划）"
 
 #: ../../content/administration/maintain/supported_versions.rst:70
 msgid "Odoo saas~15.2"
@@ -5278,7 +5426,7 @@ msgstr "三月 2022"
 
 #: ../../content/administration/maintain/supported_versions.rst:75
 msgid "January 2023"
-msgstr ""
+msgstr "2023 年 1 月"
 
 #: ../../content/administration/maintain/supported_versions.rst:76
 msgid "Odoo saas~15.1"
@@ -5290,7 +5438,7 @@ msgstr "二月 2022"
 
 #: ../../content/administration/maintain/supported_versions.rst:81
 msgid "July 2022"
-msgstr ""
+msgstr "2022 年 7 月"
 
 #: ../../content/administration/maintain/supported_versions.rst:82
 msgid "**Odoo 15.0**"
@@ -5302,7 +5450,7 @@ msgstr "十月 2021"
 
 #: ../../content/administration/maintain/supported_versions.rst:87
 msgid "November 2024 (planned)"
-msgstr ""
+msgstr "2024 年 11 月（计划）"
 
 #: ../../content/administration/maintain/supported_versions.rst:88
 msgid "**Odoo 14.0**"
@@ -5322,15 +5470,15 @@ msgstr "2019年10月"
 
 #: ../../content/administration/maintain/supported_versions.rst:100
 msgid "Older versions"
-msgstr ""
+msgstr "更早版本"
 
 #: ../../content/administration/maintain/supported_versions.rst:104
 msgid "Before 2019"
-msgstr ""
+msgstr "2019 年之前"
 
 #: ../../content/administration/maintain/supported_versions.rst:105
 msgid "Before 2022"
-msgstr ""
+msgstr "2022 年之前"
 
 #: ../../content/administration/maintain/supported_versions.rst:107
 msgid "Legend"
@@ -5441,7 +5589,7 @@ msgstr ""
 msgid ""
 "The main reference for updating is logically our :doc:`installation guide "
 "<../install>`, which explains the common installation methods."
-msgstr ""
+msgstr "从逻辑上讲，更新的主要参考资料是我们的 :doc:`安装指南 <.../安装>`，其中解释了常见的安装方法。"
 
 #: ../../content/administration/maintain/update.rst:52
 msgid ""
@@ -5558,6 +5706,10 @@ msgid ""
 "it with the newer \"odoo\" or \"openerp\" folder that was in the archive you"
 " just extracted."
 msgstr ""
+"您将得到一个标有源代码版本的文件夹，例如 \"odoo-13.0+e.20190719\"，其中包含一个文件夹 \"odoo.egg-info "
+"\"和名为 \"odoo\"（适用于 Odoo 10 及更高版本）或 \"openerp\"（适用于旧版本）的实际源代码文件夹。您可以忽略 "
+"odoo.egg-info 文件夹。找到部署当前安装的文件夹，并将其替换为您刚刚解压的压缩包中较新的 \"odoo\" 或 \"openerp\" "
+"文件夹。"
 
 #: ../../content/administration/maintain/update.rst:119
 msgid ""
