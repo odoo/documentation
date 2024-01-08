@@ -153,6 +153,8 @@ skill types needed.
         :align: center
         :alt: Add new math skills and levels with the skill types form.
 
+.. _employees/work-info-tab:
+
 Work information tab
 --------------------
 
