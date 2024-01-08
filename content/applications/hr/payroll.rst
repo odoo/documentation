@@ -99,6 +99,8 @@ form:
    :align: center
    :alt: New work entry type form.
 
+.. _payroll/working-times:
+
 Working times
 -------------
 
