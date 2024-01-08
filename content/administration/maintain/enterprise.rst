@@ -1,4 +1,5 @@
-
+ git clone https://github.com/odoo/odoo.git
+ git clone https://github.com/odoo/enterprise.git
 .. _setup/enterprise:
 
 ===================================
