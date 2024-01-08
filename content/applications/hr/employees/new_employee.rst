@@ -193,6 +193,8 @@ types needed.
           :align: center
           :alt: A skill form for a Math skill type, with all the information entered.
 
+.. _employees/work-info-tab:
+
 Work Information tab
 --------------------
 
