@@ -295,7 +295,7 @@ Accounting --> MX Electronic invoicing`. Under the :guilabel:` Certificates` sec
 (:file:`.cer` file), your :guilabel:`Certificate Key`(:file:`.key` file), and your 
 :guilabel:`Certificate Password`. To finish, click on :guilabel:`Save & Close`.
 
-.. image:: mexico/mx-certificates.png
+.. image:: mexico/17-mx-certificates.png
    :align: center
    :alt: Certificate and key upload inputs.
 
