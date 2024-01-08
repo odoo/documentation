@@ -200,8 +200,8 @@ To make sure the custom code is working flawlessly in the new version, follow th
 Migrate the data
 ----------------
 
-During the upgrade of the custom modules, you might have to use migration scripts to reflect changes
-from the source code to their corresponding data.
+During the upgrade of the custom modules, you might have to use :doc:`upgrade/migration_scripts` to
+reflect changes from the source code to their corresponding data.
 
 - Any technical data that was renamed during the upgrade of the custom code (models, fields,
   external identifiers) should be renamed using migration scripts to avoid data loss during the
