@@ -159,6 +159,8 @@ Reporting section
    :align: center
    :alt: New work entry type form with all fields to be filled in.
 
+.. _payroll/working-times:
+
 Working schedules
 -----------------
 
