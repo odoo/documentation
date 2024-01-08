@@ -124,8 +124,14 @@ If not done yet, :ref:`install <general/install>` the :guilabel:`Peppol` module 
 Registration
 ------------
 
-Go to :menuselection:`Accounting --> Configuration --> Settings`, tick the :guilabel:`Use PEPPOL
-Invoicing` checkbox, and fill in the following information:
+Go to :menuselection:`Accounting --> Configuration --> Settings`. If you do not have the
+Peppol module installed, first tick the :guilabel:`Enable PEPPOL` checkbox and then **manually
+save**.
+
+.. image:: electronic_invoicing/peppol-install.png
+   :alt: Peppol module installation
+
+Fill in the following information:
 
 - :guilabel:`Peppol EAS`. This is the Peppol Electronic Address Scheme and usually depends on your
   company's country. Odoo often prefills this with the most commonly used EAS code in your country.
@@ -145,14 +151,21 @@ previous provider.
 .. image:: electronic_invoicing/peppol-settings.png
    :alt: Configuration for peppol
 
-Finally, click on :guilabel:`Validate registration`.
+Finally, click :guilabel:`Validate registration`. If you want to explore or demo Peppol, you can
+choose to register in :guilabel:`Demo` mode. Otherwise, select :guilabel:`Live`.
+
+   .. image:: electronic_invoicing/peppol-demo-mode.png
+      :alt: Peppol demo mode selection
 
 .. note::
    When testing Peppol, the system parameter `account_peppol.edi.mode` can be changed to `test`.
-   Then, the registration occurs on the test server.
+   Then, a radio button appears with the option to register on the test server.
 
    .. image:: electronic_invoicing/peppol-system-parameter.png
-      :alt: Peppol test mode
+      :alt: Peppol test mode parameter
+
+   .. image:: electronic_invoicing/peppol-test-mode-settings.png
+      :alt: Peppol test mode selection
 
 Now, you can request a verification code to be sent to you by clicking :guilabel:`Verify phone
 number`.
@@ -205,6 +218,10 @@ is set to Valid.
    While Odoo prefills both the EAS code and the Endpoint number based on the information available
    for a contact, it is better to confirm these details directly with the contact.
 
+It is possible to verify the Peppol participant status of several customers at once.
+To do so, go to :menuselection:`Accounting --> Customers --> Customers` and switch to the list view.
+Select the customers you want to verify and then click :menuselection:`Actions --> Verify Peppol`.
+
 Send invoices
 -------------
 
@@ -215,6 +232,13 @@ invoice form. To queue multiple invoices, select them in the list view and click
 
 .. image:: electronic_invoicing/peppol-send-print.png
    :alt: Send peppol invoice
+
+Posted invoices that can be sent via Peppol are marked as :guilabel:`Peppol Ready`.
+To display them, use the :guilabel:`Peppol Ready` filter or access the Accounting dashboard and
+click :guilabel:`Peppol ready invoices` on the corresponding sales journal.
+
+.. image:: electronic_invoicing/peppol-ready-invoices.png
+   :alt: Filter Peppol ready invoices
 
 Once the invoices are sent via Peppol, the status is changed to :guilabel:`Processing`. The
 status is changed to `Done` after they have been successfully delivered to the contact's Access
@@ -228,6 +252,13 @@ Point.
    it displayed by selecting it from the optional columns, accessible from the top right corner of
    the Invoices list view.
 
+A cron runs regularly to check the status of these invoices. It is possible to check the status
+before the cron runs by clicking :guilabel:`Fetch Peppol invoice status` in the corresponding
+sales journal on the Accounting dashboard.
+
+.. image:: electronic_invoicing/peppol-fetch-message-status.png
+   :alt: Fetch invoice Peppol status
+
 Receive vendor bills
 --------------------
 
@@ -237,3 +268,10 @@ drafts.
 
 .. image:: electronic_invoicing/peppol-receive-bills.png
    :alt: peppol receive bills
+
+If you want to retrieve incoming Peppol documents before the cron runs, you can do so from the
+Accounting dashboard on the main Peppol purchase journal that you set up in the settings. Just click
+:guilabel:`Fetch from Peppol`.
+
+.. image:: electronic_invoicing/peppol-fetch-bills.png
+   :alt: Fetch bills from Peppol
