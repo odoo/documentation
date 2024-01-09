@@ -86,7 +86,7 @@ How-to guides
 
       Learn how to enable a module to detect and communicate with an IoT device.
 
-   .. card:: Upgrading a customized database
+   .. card:: Upgrade a customized database
       :target: howtos/upgrade_custom_db
 
       Learn how to upgrade a customized database, as well as the code and data of its custom modules.

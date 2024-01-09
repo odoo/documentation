@@ -676,12 +676,7 @@ interaction with the :ref:`orm <reference/orm>` and its functionalities.
 
    $ odoo-bin shell
 
-.. option:: --shell-interface (ipython|ptpython|bpython|python)
-
-   Specify a preferred REPL to use in shell mode. This shell is started with the `env` variable
-   already initialized to be able to access the ORM and other Odoo modules.
-
-.. example:: Example of shell usage
+.. example::
 
    Adding an exclamation mark to all contacts' names:
 
@@ -702,8 +697,13 @@ interaction with the :ref:`orm <reference/orm>` and its functionalities.
       By default, the shell is running in transaction mode. This means that any change made to the
       database is rolled back when exiting the shell. To commit changes, use `env.cr.commit()`.
 
+.. option:: --shell-interface (ipython|ptpython|bpython|python)
+
+   Specify a preferred REPL to use in shell mode. This shell is started with the `env` variable
+   already initialized to be able to access the ORM and other Odoo modules.
+
 .. seealso::
-   :ref:`Environment documentation <reference/orm/environment>`
+   :ref:`reference/orm/environment`
 
 .. _reference/cmdline/scaffold:
 
@@ -944,4 +944,3 @@ containing community and enterprise.
 .. code-block:: console
 
    $ community/odoo-bin tsconfig --addons-path community/addons,community/odoo/addons,enterprise > tsconfig.json
-   
