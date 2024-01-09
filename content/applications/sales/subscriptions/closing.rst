@@ -1,105 +1,105 @@
-====================
-Close a subscription
-====================
+===================
+Close subscriptions
+===================
 
-Losing a customer is always difficult, especially if you put a lot of effort into getting them to
-sign up for your products/services. However, many companies come up with dubious methods to reduce
-the probability of this happening.
-
-.. raw:: html
-
-   <div align="center" style="color:#AD5E99; font-size: 2rem ;margin: 20px 0"> <b>What is the right
-   way to go?</b> </div>
-
-1. If you adopt such methods, you are among companies that actively and indirectly spread the
-   phobia of subscriptions, who do not think about how negatively dissatisfied customers could impact
-   their business and, who frustrate the customers in a way or another. However, at some point, it is
-   understandable that you do not want your customers to be involved in your subscription status.
-
-2. If you do not adopt such methods, you are among companies that continue to evolve in a
-   long-term subscription business model, especially in an era of ultra-fast communications between
-   dissatisfied customers, and who retain their customers by making it easier for them to leave if
-   they want to. By giving them the opportunity to close their own subscriptions, your customers do
-   not feel trapped because they subscribed to your products/services.
-
-In summary, the **Odoo Subscriptions** application gives you the
-**possibility to choose what you want to apply**. Indeed, you can decide whether to give your customers the
-option to close their subscriptions whenever they want to or to restrict this possibility. It depends
-on you and we will show you how to do that in our amazing application.
+Odoo *Subscriptions* provides flexibility for businesses to decide whether customers can self-manage
+their subscriptions, or restrict that ability entirely.
 
 Configuration
 =============
 
-Go to :menuselection:`Subscriptions --> Configuration --> Subscription templates`. From there, you can
-create a new *Subscription template* or modify an existing one. When editing your template, underneath
-the Invoicing tab, you have the possibility to activate the option *Closable by customer*.
-Once enabled, this option gives your customers the right to close their own subscriptions.
+Start by navigating to :menuselection:`Subscriptions app --> Configuration --> Recurring Plans`.
+From there, either create a new plan by clicking :guilabel:`New` or select an existing one to modify
+it.
 
-.. image:: closing/configuration-to-close-your-subscriptions.png
-  :align: center
-  :alt: Configuration to close your subscription with Odoo Subscriptions
+Once on the :guilabel:`Recurring Plans` form, enable the :guilabel:`Closable` option, in the
+:guilabel:`Self-Service` section, to allow customers to close their own subscriptions using the
+customer portal.
 
-.. note::
-   Be sure to check out our documentation on
-   how to :doc:`Use subscription templates <plans>`
-   to fully understand the importance of this feature in a basic flow using the
-   **Odoo Subscriptions** application.
+.. image:: closing/recurring-plans-closable-option.png
+   :align: center
+   :alt: The Closable option on a recurring plan form in Odoo Subscriptions.
 
-Close your first subscription
-=============================
+.. seealso::
+   :doc:`Configure recurring plans <plans>`
+
+Close a subscription
+====================
 
 Administrator view
 ------------------
 
-Once confirmed, a quotation becomes a sales order and a new subscription is automatically created.
-Therefore, this subscription has the status *In progress*. From there, you have the possibility to
-close the subscription.
+After a quotation for a subscription product has been confirmed, it becomes a sales order, and the
+subscription status changes to :guilabel:`In Progress`.
 
-.. image:: closing/close-your-subscriptions-as-an-administrator.png
-  :align: center
-  :alt: Close your subscription from an administration point of view with Odoo Subscriptions
+At that point, the ability to close the subscription becomes available, via the :guilabel:`Close`
+button at the top of the subscription order, near the row that contains :guilabel:`In Progress` and
+other stages. This option is also available after the order has been invoiced and the payment has
+been registered.
 
-By using the smart button *Close*, you have to enter a close reason. For example, "Subscription too
-expensive", "Subscription does not meet my requirements", "Subscription reached its end date", etc.
-Immediately after confirming your close reason, you can observe that the status of the subscription
-is now *Closed* and that the close reason is mentioned on the subscription.
+.. image:: closing/close-subscriptions-administrator.png
+   :align: center
+   :alt: Close subscription from an administration point of view with Odoo Subscriptions.
 
-.. image:: closing/use-of-close-reasons.png
-  :align: center
-  :alt: What happens when you close your subscription with Odoo Subscriptions?
+Clicking the :guilabel:`Close` button prompts a :guilabel:`Close Reason` pop-up window to appear,
+allowing administrators to input the reason for closing the subscription, or choose from the
+drop-down menu of options in the :guilabel:`Reason` field.
+
+.. image:: closing/close-reason-popup.png
+   :align: center
+   :alt: The Close Reason pop-up when the Close button is clicked in Odoo Subscriptions.
+
+When the desired :guilabel:`Reason` is entered, click the :guilabel:`Submit` button.
+
+Clicking :guilabel:`Submit` on the :guilabel:`Close Reason` pop-up window updates the subscription
+sales order to show :guilabel:`Churned` status tag, along with the specified :guilabel:`Close
+Reason`.
+
+.. image:: closing/churned-sales-order.png
+   :align: center
+   :alt: A churned sales order for a closed subscription in Odoo Subscriptions.
+
+That same close reason can be found in the *Chatter* of the sales order, as well.
+
+.. image:: closing/churned-sales-order-chatter.png
+   :align: center
+   :alt: The chatter of a churned sales order for a closed subscription in Odoo Subscriptions.
 
 Customer view
 -------------
 
-As previously explained in the *Administrator view* part, from the subscription form, you also have
-the possibility to visualize what your customers see when managing their subscriptions thanks to the
-*Customer preview* button. In this example, the customer has the choice to close his/her subscription
-whenever he/she wants to, due to the *Close Subscription* button.
+.. note::
+   As an administrator, the ability to visualize what customers see when managing their
+   subscriptions is accessible via the :guilabel:`Preview` button, located at the top of the
+   subscription sales order.
 
-.. image:: closing/close-your-subscriptions-as-a-customer.png
-  :align: center
-  :alt: Close your subscription from a customer point of view with Odoo Subscriptions
+From the customer's point of view, in the customer portal, the :guilabel:`Close Subscription` button
+is located on the left side of the sales order.
 
-By using this button, the customer can specify the reason for cancelling his/her subscription and
-he/she can even leave a message.
+.. image:: closing/close-subscription-button-customer-view.png
+   :align: center
+   :alt: Close subscription button on a customer's view of a sales order in Odoo Subscriptions.
 
-.. image:: closing/use-of-close-reasons-as-a-customer.png
-  :align: center
-  :alt: What happens when customers close their subscription with Odoo Subscriptions?
+When the customer clicks the :guilabel:`Close Subscription` button, a :guilabel:`Close Subscription`
+pop-up window appears, in which the customer has to choose from a select list of reasons why they
+are choosing to close the subscription.
 
-By confirming the cancellation, the customer is redirected to his/her portal. The administrator is
-informed of this modification. Indeed, the status of the subscription becomes *Closed* and a note
-appears in the chatter with the new stage, the end date, the close reason, and the closing text
-added by the customer.
-
-.. image:: closing/chatter-history-when-a-customer-closes-a-subscription.png
-  :align: center
-  :alt: What happens when customers close their subscription in Odoo Subscriptions?
+.. image:: closing/close-subscription-customer-pov.png
+   :align: center
+   :alt: The close subscription pop-up window customers see when closing a subscription.
 
 .. note::
-   Before closing a subscription, check out our documentation on how to
-   :doc:`Create a quotation using subscription products <../subscriptions>`
-   to understand how subscriptions are managed in the **Odoo Subscriptions** application.
+   Customers can *only* chose a pre-configured reason why the subscription is being closed. They can
+   *not* enter a custom reason from the customer portal. These selections can be adjusted by
+   navigating to :menuselection:`Subscriptions --> Configuration --> Close Reasons`.
+
+Once the customer has chosen a close reason, they would click the :guilabel:`Submit` button on the
+pop-up window.
+
+Upon closure, the subscription order in the customer portal is tagged as :guilabel:`Closed`.
+
+In addition, the specified :guilabel:`Close Reason` appears on the subscription order in the
+*Subscriptions* app in the backend (Administrator's view).
 
 .. seealso::
    - :doc:`../subscriptions`
