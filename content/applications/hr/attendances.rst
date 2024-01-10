@@ -146,6 +146,8 @@ Extra Hours
        total of 10 minutes less than their full working hours, they will not be penalized for this
        discrepancy.
 
+.. _attendances/check-in:
+
 Check in and out via the database
 =================================
 
