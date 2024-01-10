@@ -1,11 +1,9 @@
-.. _upgrade/migration-scripts:
-
 =================
 Migration scripts
 =================
 
 A migration script is a Python file containing a function called `migrate`, which the upgrade
-process invokes at the appropriate time. 
+process invokes at the appropriate time.
 
 The `migrate` function receives two parameters:
 
@@ -39,14 +37,14 @@ Follow this steps to create the directory's structure and the Python file:
       - :file:`<major_version>` corresponds to the major version of Odoo (e.g., :file:`16.0` for
         Odoo 16).
       - :file:`<minor_version>` corresponds to the upgraded version declared on the module's
-        manifest. 
+        manifest.
 
       Migration scripts are only executed when the module is being upgraded. Therefore, the
       :file:`minor_version` set in the directory needs to be higher than the module's installed
       version on the database and equal or lower to the upgraded version of the module.
       For example, in an Odoo 16 database, with a custom module installed in version 1.0.0, and an
       upgraded module version equal to 1.1.0; the version directory should be `16.0.1.1.0`.
-   #. Create a :file:`Python file` inside the :file:`version` directory named according to the 
+   #. Create a :file:`Python file` inside the :file:`version` directory named according to the
       :ref:`phase <upgrade/migration-scripts/phases>` on which it needs to be executed. It should
       follow the template `{pre|post|end}-*.py`. The file name will determine the order in which it
       is executed for that module, version and phase.
@@ -65,7 +63,7 @@ Follow this steps to create the directory's structure and the Python file:
       |-- migrations/
       |   |-- 17.0.2.0.0/
       |   |   |-- pre-exclamation.py
-   
+
    Two migration scripts examples with the content of the :file:`pre-exclamation.py`, file adding
    "!" at the end of partners' names:
 
@@ -96,9 +94,9 @@ Follow this steps to create the directory's structure and the Python file:
               partner.name += "!"
 
           _logger.info("Updated %s partners", len(partners))
-   
+
    Note that in the second example, the script takes advantage of the :doc:`../upgrade/upgrade_util`
-   to access the ORM. Check the documentation to find out more about this library. 
+   to access the ORM. Check the documentation to find out more about this library.
 
 .. _upgrade/migration-scripts/phases:
 
