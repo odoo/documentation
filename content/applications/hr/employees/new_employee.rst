@@ -123,6 +123,8 @@ another resumé line.
    After the new employee form is saved, the current position and company is automatically added to
    the :guilabel:`Resumé` tab, with the end date listed as *current*.
 
+.. _employees/skills:
+
 Skills
 ~~~~~~
 
