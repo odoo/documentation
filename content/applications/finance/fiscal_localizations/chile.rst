@@ -37,7 +37,7 @@ localization.
    * - :guilabel:`Chile - Accounting Reports`
      - `l10n_cl_reports`
      - Adds the *Propuesta F29* and *Balance Tributario (8 columnas)* reports.
-   * - :guilabel:`Chile - E-invoiving`
+   * - :guilabel:`Chile - E-invoicing`
      - `l10n_cl_edi`
      - Includes all technical and functional requirements to generate and receive electronic
        invoices online based on the :abbr:`SII (Servicio de Impuestos Internos)` regulations.
@@ -45,7 +45,7 @@ localization.
      - `l10n_cl_boletas`
      - Includes all technical and functional requirements to generate and receive electronic
        invoices digitally based on the :abbr:`SII (Servicio de Impuestos Internos)` regulations.
-   * - :guilabel:`Electronic Esports of Goods for Chile`
+   * - :guilabel:`Electronic Exports of Goods for Chile`
      - `l10n_cl_edi_exports`
      - Includes technical and functional requirements to generate electronic invoices for exporting
        goods based on the :abbr:`SII (Servicio de Impuestos Internos)` and customs regulations.
@@ -53,10 +53,6 @@ localization.
      - `l10n_cl_edi_stock`
      - Includes all technical and functional requirements to generate delivery guides via web
        service based on the :abbr:`SII (Servicio de Impuestos Internos)` regulations.
-   * - :guilabel:`Chile - E-Invoicing Delivery Guide`
-     - `l10n_cl_edi_stock`
-     - Includes all technical and functional requirements to generate delivery guides online based
-       on the :abbr:`SII (Servicio de Impuestos Internos)` regulations.
 
 .. note::
    - Odoo automatically installs the appropriate package for the company according to the country
