@@ -149,7 +149,7 @@ by clients, mostly to use in composing the ``views`` list:
     ``view_mode`` list and not already filled by one of the views in
     ``view_ids``
 ``id``
-    Specific action ID that is sent to the client and used in the URL 
+    Specific action ID that is sent to the client and used in the URL
     so that a link can be shared that calls up this action ID.
     .. note:: For existing actions, use ``action = self.env["ir.actions.actions"]._for_xml_id("your_module.xml_id_of_the_action")``.
 
