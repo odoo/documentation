@@ -42,7 +42,7 @@ The receiving and shipping rules for a one-step configuration are as follows:
 - Items are received or shipped directly into/from stock.
 
 .. seealso::
-   :ref:`Process receipts and deliveries in one step <inventory/receipts_delivery_one_step>`
+   :doc:`shipments_deliveries/receipts_delivery_one_step`
 
 Two-step flow
 -------------
