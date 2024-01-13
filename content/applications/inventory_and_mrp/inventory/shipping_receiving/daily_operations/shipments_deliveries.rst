@@ -30,7 +30,7 @@ The receiving and shipping rules for a one-step configuration are as follows:
 
 - **Receipt**: Receive products directly into stock. No intermediate steps between receipt and stock
   occur, such as a transfer to a quality control location.
-- **Shipping**: Ship products directly from stock.  No intermediate steps between stock and shipping
+- **Shipping**: Ship products directly from stock. No intermediate steps between stock and shipping
   occur, such as a transfer to a packing location.
 - Can only be used if not using :abbr:`FIFO (First In, First Out)`, :abbr:`LIFO (Last In, First
   Out)`, or :abbr:`FEFO (First Expired, First Out)` removal strategies.
@@ -39,7 +39,7 @@ The receiving and shipping rules for a one-step configuration are as follows:
 - Items are received or shipped directly into/from stock.
 
 .. seealso::
-   :ref:`Process receipts and deliveries in one step <inventory/receipts_delivery_one_step>`
+   :doc:`receipts_delivery_one_step`
 
 Two-step flow
 -------------
