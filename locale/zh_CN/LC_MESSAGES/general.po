@@ -19,7 +19,7 @@
 # Mandy Choy <mnc@odoo.com>, 2023
 # diaojiaolou <124412206@qq.com>, 2023
 # 稀饭~~ <wangwhai@qq.com>, 2023
-# Chloe Wang, 2023
+# Chloe Wang, 2024
 # 
 #, fuzzy
 msgid ""
@@ -28,7 +28,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-21 13:43+0000\n"
 "PO-Revision-Date: 2023-11-08 08:57+0000\n"
-"Last-Translator: Chloe Wang, 2023\n"
+"Last-Translator: Chloe Wang, 2024\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/odoo/teams/41243/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -161,6 +161,8 @@ msgid ""
 "Therefore, uninstalling one app may uninstall multiple apps and modules. "
 "Odoo warns you which dependent apps and modules are affected by it."
 msgstr ""
+"某些应用程序具有依赖项，即一个应用程序需要另一个应用程序。因此，卸载一个应用程序可能会卸载多个应用程序和模块。Odoo "
+"会警告您哪些依赖的应用程序和模块会受其影响。"
 
 #: ../../content/applications/general/apps_modules.rst:72
 msgid "To complete the uninstallation, click on *Confirm*."
@@ -345,7 +347,7 @@ msgstr "不要丢失您的身份验证器，如果您这样做，您将需要一
 
 #: ../../content/applications/general/auth/azure.rst:3
 msgid "Microsoft Azure sign-in authentication"
-msgstr ""
+msgstr "Microsoft Azure 登录身份验证"
 
 #: ../../content/applications/general/auth/azure.rst:5
 msgid ""
@@ -353,13 +355,15 @@ msgid ""
 "allows Odoo users to sign in to their database with their Microsoft Azure "
 "account."
 msgstr ""
+"Microsoft Azure OAuth 登录身份验证是一项非常有用的功能，可让 Odoo 用户使用其 Microsoft Azure "
+"账户登录数据库。"
 
 #: ../../content/applications/general/auth/azure.rst:8
 msgid ""
 "This is particularly helpful if the organization uses Azure Workspace, and "
 "wants employees within the organization to connect to Odoo using their "
 "Microsoft Accounts."
-msgstr ""
+msgstr "如果组织使用 Azure Workspace，并希望组织内的员工使用他们的 Microsoft 账户连接到 Odoo，这将尤其有用。"
 
 #: ../../content/applications/general/auth/azure.rst:12
 msgid ""
@@ -369,15 +373,17 @@ msgid ""
 "longer be able to be duplicated, renamed, or otherwise managed from the "
 "Odoo.com portal."
 msgstr ""
+"Odoo.com 托管的数据库不应使用 OAuth 登录数据库的所有者或管理员，因为这将解除数据库与其 Odoo.com 账户的链接。如果为该用户设置了"
+" OAuth，数据库将无法再从 Odoo.com 门户进行复制、重命名或其他管理。"
 
 #: ../../content/applications/general/auth/azure.rst:19
 msgid ":doc:`../../productivity/calendar/outlook`"
-msgstr ""
+msgstr ":doc:`../../productivity/calendar/outlook`"
 
 #: ../../content/applications/general/auth/azure.rst:20
 #: ../../content/applications/general/email_communication/email_servers.rst:67
 msgid ":doc:`/administration/maintain/azure_oauth`"
-msgstr ""
+msgstr ":doc:`/administration/maintain/azure_oauth`"
 
 #: ../../content/applications/general/auth/azure.rst:23
 #: ../../content/applications/general/auth/google.rst:24
@@ -390,17 +396,18 @@ msgstr "配置"
 msgid ""
 "Integrating the Microsoft sign-in function requires configuration on "
 "Microsoft and Odoo."
-msgstr ""
+msgstr "整合 Microsoft 登录功能需要在 Microsoft 和 Odoo 上进行配置。"
 
 #: ../../content/applications/general/auth/azure.rst:28
 msgid "Odoo System Parameter"
-msgstr ""
+msgstr "Odoo 系统参数"
 
 #: ../../content/applications/general/auth/azure.rst:30
 msgid ""
 "First activate the :ref:`developer mode <developer-mode>`, and then go to "
 ":menuselection:`Settings --> Technical --> System Parameters`."
 msgstr ""
+"首先激活 :ref:`开发者模式<developer-mode>`，然后进入 :menuselection:`设置 --> 技术--> 系统参数`。"
 
 #: ../../content/applications/general/auth/azure.rst:33
 msgid ""
@@ -409,10 +416,13 @@ msgid ""
 ":guilabel:`Key` field, and set the :guilabel:`Value` to `1`. Then click "
 ":guilabel:`Save` to finish."
 msgstr ""
+"点击 :guilabel:`创建`，在出现的新/空白表单中，在 :guilabel:`Key` 字段中添加以下系统参数 "
+"`auth_oauth.authorization_header`，并将 :guilabel:`Value` 设为 `1`。然后单击 "
+":guilabel:`保存`即可完成。"
 
 #: ../../content/applications/general/auth/azure.rst:38
 msgid "Microsoft Azure dashboard"
-msgstr ""
+msgstr "Microsoft Azure 仪表板"
 
 #: ../../content/applications/general/auth/azure.rst:41
 msgid "Create a new application"
@@ -427,12 +437,16 @@ msgid ""
 "Office 365` account if there is one, otherwise, log in with a personal "
 ":guilabel:`Microsoft account`."
 msgstr ""
+"现在，Odoo 中的系统参数已经设置完毕，是时候在 Microsoft Azure 中创建相应的应用程序了。要开始创建新应用程序，请访问 "
+"`Microsoft's Azure Portal <https://portal.azure.com/>`_。如果有 "
+":guilabel:`Microsoft Outlook Office 365` 帐户，请使用该帐户登录；否则，请使用个人 "
+":guilabel:`Microsoft 帐户`登录。"
 
 #: ../../content/applications/general/auth/azure.rst:50
 msgid ""
 "A user with administrative access to the *Azure Settings* must connect and "
 "perform the following configuration steps below."
-msgstr ""
+msgstr "具有 *Azure 设置* 管理权限的用户必须连接并执行以下配置步骤。"
 
 #: ../../content/applications/general/auth/azure.rst:53
 msgid ""
@@ -440,6 +454,8 @@ msgid ""
 "(formally *Azure Active Directory*). The location of this link is usually in"
 " the center of the page."
 msgstr ""
+"接下来，导航到标有 :guilabel:`Manage Microsoft Entra ID` （正式名称为 *Azure Active "
+"Directory*）的部分。该链接的位置通常在页面中央。"
 
 #: ../../content/applications/general/auth/azure.rst:56
 msgid ""
@@ -451,6 +467,11 @@ msgid ""
 ":guilabel:`Accounts in this organizational directory only (Default Directory"
 " only - Single tenant)`."
 msgstr ""
+"现在，点击顶部菜单中的 :guilabel:`Add (+)` 图标，然后从下拉菜单中选择 :guilabel:`App registration`。在"
+" :guilabel:`Register an application` 屏幕上，将 :guilabel:`Name` 字段重命名为 `Odoo "
+"Login OAuth` 或类似的可识别标题。在 :guilabel:`Supported account types` 部分中选择 "
+":guilabel:`Accounts in this organizational directory only (Default Directory"
+" only - Single tenant)`选项。"
 
 #: ../../content/applications/general/auth/azure.rst:63
 msgid ""
@@ -628,10 +649,12 @@ msgid ""
 "Follow the process to sign in to the account. Should :abbr:`2FA (Two Factor "
 "Authentication)` be turned on, then an extra step may be required."
 msgstr ""
+"输入 :guilabel:`Microsoft 电子邮件地址`，然后单击 :guilabel:`下一步`。按照流程登录账户。如果已打开 "
+":guilabel:`2FA（双因素验证）`，则可能需要额外步骤。"
 
 #: ../../content/applications/general/auth/azure.rst-1
 msgid "Enter Microsoft login credentials."
-msgstr ""
+msgstr "输入 Microsoft 登录凭证。"
 
 #: ../../content/applications/general/auth/azure.rst:177
 msgid ""
@@ -640,12 +663,14 @@ msgid ""
 "conditions that the Odoo application will access their Microsoft "
 "information."
 msgstr ""
+"最后，登录账户后，页面将重定向到权限页面，在该页面中，用户将被提示 :guilabel:`接受`Odoo 应用程序访问其 Microsoft "
+"信息的条件。"
 
 #: ../../content/applications/general/auth/azure.rst-1
 msgid ""
 "Accept Microsoft conditions for permission access to your account "
 "information."
-msgstr ""
+msgstr "接受 Microsoft 允许访问您的帐户信息的条件。"
 
 #: ../../content/applications/general/auth/google.rst:3
 msgid "Google Sign-In Authentication"
@@ -655,14 +680,14 @@ msgstr "谷歌登录身份验证"
 msgid ""
 "The *Google Sign-In Authentication* is a useful function that allows Odoo "
 "users to sign in to their database with their Google account."
-msgstr ""
+msgstr "*Google 登录验证*是一项非常有用的功能，允许 Odoo 用户使用 Google 账户登录数据库。"
 
 #: ../../content/applications/general/auth/google.rst:8
 msgid ""
 "This is particularly helpful if the organization uses Google Workspace, and "
 "wants employees within the organization to connect to Odoo using their "
 "Google Accounts."
-msgstr ""
+msgstr "如果组织使用 Google Workspace，并希望组织内的员工使用他们的 Google 账户连接到 Odoo，这将尤其有用。"
 
 #: ../../content/applications/general/auth/google.rst:12
 msgid ""
@@ -672,6 +697,8 @@ msgid ""
 "longer be able to be duplicated, renamed or otherwise managed from the "
 "Odoo.com portal."
 msgstr ""
+"Odoo.com 托管的数据库不应使用 Oauth 登录数据库的所有者或管理员，因为这将解除数据库与其 Odoo.com 账户的链接。如果为该用户设置了"
+" Oauth，数据库将无法再从 Odoo.com 门户进行复制、重命名或其他管理。"
 
 #: ../../content/applications/general/auth/google.rst:18
 msgid ":doc:`/applications/productivity/calendar/google`"
@@ -680,13 +707,13 @@ msgstr ":doc:`/applications/productivity/calendar/google`"
 #: ../../content/applications/general/auth/google.rst:19
 #: ../../content/applications/general/email_communication/email_servers.rst:66
 msgid ":doc:`/administration/maintain/google_oauth`"
-msgstr ""
+msgstr ":doc:`/administration/maintain/google_oauth`"
 
 #: ../../content/applications/general/auth/google.rst:26
 msgid ""
 "The integration of the Google sign-in function requires configuration both "
 "on Google *and* Odoo."
-msgstr ""
+msgstr "整合 Google 登录功能需要在 Google *和* Odoo 上进行配置。"
 
 #: ../../content/applications/general/auth/google.rst:31
 msgid "Google API Dashboard"
@@ -703,14 +730,16 @@ msgid ""
 "on :guilabel:`Create Project`, fill out the project name and other details "
 "of the company, and click on :guilabel:`Create`."
 msgstr ""
+"确保已打开正确的项目。如果还没有项目，请点击 :guilabel:`创建项目`，填写项目名称和公司的其他详细信息，然后点击 "
+":guilabel:`创建`。"
 
 #: ../../content/applications/general/auth/google.rst:0
 msgid "Filling out the details of a new project."
-msgstr ""
+msgstr "填写新项目的详细信息。"
 
 #: ../../content/applications/general/auth/google.rst:43
 msgid "Choose the name of the company from the drop-down menu."
-msgstr ""
+msgstr "从下拉菜单中选择公司名称。"
 
 #: ../../content/applications/general/auth/google.rst:48
 msgid "OAuth consent screen"
@@ -722,17 +751,18 @@ msgstr "在左侧菜单中，单击：menuselection：`OAuth同意屏幕`。"
 
 #: ../../content/applications/general/auth/google.rst:0
 msgid "Google OAuth consent selection menu."
-msgstr ""
+msgstr "Google OAuth 同意选择菜单。"
 
 #: ../../content/applications/general/auth/google.rst:56
 msgid ""
 "Choose one of the options (:guilabel:`Internal` / :guilabel:`External`), and"
 " click on :guilabel:`Create`."
 msgstr ""
+"选择其中一个选项（:guilabel:`Internal` / :guilabel:`External`），然后点击 :guilabel:`创建`。"
 
 #: ../../content/applications/general/auth/google.rst:0
 msgid "Choice of a user type in OAuth consent."
-msgstr ""
+msgstr "选择 OAuth 同意中的用户类型。"
 
 #: ../../content/applications/general/auth/google.rst:64
 msgid ""
@@ -741,25 +771,27 @@ msgid ""
 "However, using a *Google WorkSpace* account allows for **Internal** User "
 "Type to be used."
 msgstr ""
+"*个人* Gmail 帐户只允许使用**外部**用户类型，这意味着 Google 可能需要批准或添加*范围*。不过，使用*Google "
+"工作空间*账户可以使用**内部**用户类型。"
 
 #: ../../content/applications/general/auth/google.rst:68
 msgid ""
 "Note, as well, that while the API connection is in the *External* testing "
 "mode, then no approval is necessary from Google. User limits in this testing"
 " mode is set to 100 users."
-msgstr ""
+msgstr "请注意，当 API 连接处于*外部*测试模式时，无需获得 Google 批准。该测试模式下的用户限制为 100 个。"
 
 #: ../../content/applications/general/auth/google.rst:71
 msgid ""
 "Fill out the required details and domain info, then click on :guilabel:`Save"
 " and Continue`."
-msgstr ""
+msgstr "填写所需的详细信息和域名信息，然后点击 :guilabel:`保存并继续`。"
 
 #: ../../content/applications/general/auth/google.rst:72
 msgid ""
 "On the :menuselection:`Scopes` page, leave all fields as is, and click on "
 ":guilabel:`Save and Continue`."
-msgstr ""
+msgstr "在:menuselection:`范围` 页面，保持所有字段不变，然后单击 :guilabel:`保存并继续`。"
 
 #: ../../content/applications/general/auth/google.rst:74
 msgid ""
@@ -768,11 +800,13 @@ msgid ""
 ":guilabel:`Add Users`, and then the :guilabel:`Save and Continue` button. A "
 "summary of the app registration appears."
 msgstr ""
+"接下来，如果继续测试模式（*外部*），请点击 :guilabel:`添加用户`，然后点击 :guilabel:`保存并继续`按钮，添加在 "
+":guilabel:`测试用户`步骤下配置的电子邮件地址。应用程序注册摘要将出现。"
 
 #: ../../content/applications/general/auth/google.rst:77
 msgid ""
 "Finally, scroll to the bottom, and click on :guilabel:`Back to Dashboard`."
-msgstr ""
+msgstr "最后，滚动到底部，点击 :guilabel:`返回仪表板`。"
 
 #: ../../content/applications/general/auth/google.rst:82
 msgid "Credentials"
@@ -784,17 +818,17 @@ msgstr "在左侧菜单中，单击：menuselection：`凭据`。"
 
 #: ../../content/applications/general/auth/google.rst:0
 msgid "Credentials button menu."
-msgstr ""
+msgstr "凭证按钮菜单。"
 
 #: ../../content/applications/general/auth/google.rst:90
 msgid ""
 "Click on :guilabel:`Create Credentials`, and select :guilabel:`OAuth client "
 "ID`."
-msgstr ""
+msgstr "点击 :guilabel:`创建凭证`，然后选择 :guilabel:`OAuth客户 ID`。"
 
 #: ../../content/applications/general/auth/google.rst:0
 msgid "OAuth client id selection."
-msgstr ""
+msgstr "OAuth 客户端 ID 选择。"
 
 #: ../../content/applications/general/auth/google.rst:96
 msgid ""
@@ -1667,31 +1701,31 @@ msgstr "示例"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:157
 msgid "v"
-msgstr ""
+msgstr "v"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:158
 msgid "Protocol version"
-msgstr ""
+msgstr "协议版本"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:159
 msgid "`v=DMARC1`"
-msgstr ""
+msgstr "`v=DMARC1`"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:160
 msgid "pct"
-msgstr ""
+msgstr "pct"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:161
 msgid "Percentage of messages subjected to filtering"
-msgstr ""
+msgstr "被过滤信息的百分比"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:162
 msgid "`pct=20`"
-msgstr ""
+msgstr "`pct=20`"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:163
 msgid "ruf"
-msgstr ""
+msgstr "ruf"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:164
 msgid "Reporting URI for forensic reports"
@@ -1699,11 +1733,11 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_domain.rst:165
 msgid "`ruf=mailto:authfail@example.com`"
-msgstr ""
+msgstr "`ruf=mailto:authfail@example.com`"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:166
 msgid "rua"
-msgstr ""
+msgstr "rua"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:167
 msgid "Reporting URI of aggregate reports"
@@ -1711,11 +1745,11 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_domain.rst:168
 msgid "`rua=mailto:aggrep@example.com`"
-msgstr ""
+msgstr "`rua=mailto:aggrep@example.com`"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:169
 msgid "p"
-msgstr ""
+msgstr "p"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:170
 msgid "Policy for organizational domain"
@@ -1768,7 +1802,7 @@ msgstr ""
 msgid ""
 "`DMARC.org is another great resource to learn about DMARC records. "
 "<https://dmarc.org/overview/>`_"
-msgstr ""
+msgstr "`DMARC.org 是了解 DMARC 记录的另一个重要资源。<https://dmarc.org/overview/>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:192
 msgid "SPF, DKIM & DMARC documentation of common providers"
@@ -1810,6 +1844,9 @@ msgid ""
 "<https://www.namecheap.com/support/knowledgebase/article.aspx/317/2237/how-"
 "do-i-add- txtspfdkimdmarc-records-for-my-domain/>`_"
 msgstr ""
+"`NameCheap "
+"<https://www.namecheap.com/support/knowledgebase/article.aspx/317/2237/how-"
+"do-i-add- txtspfdkimdmarc-records-for-my-domain/>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:201
 msgid ""
@@ -1839,12 +1876,14 @@ msgid ""
 "configuration in one sent email. Mail-Tester can also be used to configure "
 "records for other, lesser-known providers."
 msgstr ""
+"要全面测试配置，请使用 `Mail-Tester <https://www.mail-"
+"tester.com/>`_工具，该工具可在一封电子邮件中提供内容和配置的完整概览。Mail-Tester 还可用于为其他不太知名的提供商配置记录。"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:210
 msgid ""
 "`Using Mail-Tester to set SPF Records for specific carriers "
 "<https://www.mail-tester.com/spf/>`_"
-msgstr ""
+msgstr "`使用 Mail-Tester 为特定运营商设置 SPF 记录 <https://www.mail-tester.com/spf/>`_"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:3
 msgid "Send and receive emails in Odoo with an email server"
@@ -1860,13 +1899,15 @@ msgid ""
 "incoming emails already work out-of-the-box. So for **Odoo Online** and "
 "**Odoo.sh** customers, nothing needs to be configured!"
 msgstr ""
+"由于**Odoo为数据库**设置了自己的邮件服务器，因此发送和接收邮件均可立即生效。因此，对于**Odoo "
+"Online**和**Odoo.sh**客户而言，无需进行任何配置！"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:12
 msgid ""
 "Unless an external mail server is required to send large batches of mass "
 "emails, simply use the standard online Odoo database normally since it has "
 "already been pre-configured to send email."
-msgstr ""
+msgstr "除非需要使用外部邮件服务器发送大批量群发邮件，否则只需正常使用标准的在线 Odoo 数据库即可，因为已预先配置了发送电子邮件的功能。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:16
 msgid ""
@@ -1876,6 +1917,8 @@ msgid ""
 "conditions. See the :doc:`FAQ <faq>` or contact support for more "
 "information."
 msgstr ""
+"Odoo 服务器有每日电子邮件限制，以防止滥用。对于**企业版**订阅的数据库，默认限制为每天发送 200 "
+"封电子邮件。在某些情况下，此限制可以提高。更多信息，请参阅 :doc:`FAQ <faq>` 或联系技术支持。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:22
 msgid "Scope of this documentation"
@@ -1889,6 +1932,9 @@ msgid ""
 "<https://www.odoo.sh>`_. Incoming and outgoing servers must be configured "
 "for on-premise databases."
 msgstr ""
+"本文档**主要针对 Odoo 内部数据库**，与`Odoo Online <https://www.odoo. com/trial>`_ 和 "
+"`Odoo.sh <https://www.odoo.sh>`_不同，Odoo 内部数据库无法从 Odoo "
+"发送和接收电子邮件的开箱即用解决方案中获益。必须为内部数据库配置接收和发送服务器。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:29
 msgid ""
@@ -1905,16 +1951,19 @@ msgid ""
 "manage the email server's reputation themselves. For more information see "
 ":doc:`Configure DNS records to send emails in Odoo <email_domain>`"
 msgstr ""
+"如果公司没有人受雇管理电子邮件服务器，则强烈推荐使用 Odoo 在线版和 Odoo.sh。在这些 Odoo "
+"托管类型中，电子邮件的发送和接收都是即时进行的，并由专业人员进行监控。不过，如果公司希望维护电子邮件服务器的声誉，也可以使用自己的电子邮件服务器。欲了解更多信息，请参阅"
+" :doc:` 在 Odoo 中配置 DNS 记录以发送电子邮件<email_domain>`"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:42
 msgid "Default notifications system"
-msgstr ""
+msgstr "默认通知系统"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:44
 msgid ""
 "Documents in Odoo (such as a CRM opportunity, a sales order, an invoice, "
 "etc.) have a discussion thread, called *chatter*."
-msgstr ""
+msgstr "Odoo 中的文档（如 CRM 商机、销售订单、发票等）都有一个讨论线程，称为 *chatter*。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:47
 msgid ""
@@ -1926,6 +1975,8 @@ msgid ""
 "in the chatter from their respective email, or as the name listed in their "
 "*Contacts* record."
 msgstr ""
+"当数据库用户在聊天工具中发布消息时，该消息将作为通知通过电子邮件发送给该文档的关注者（发送者除外）。如果关注者回复了消息，会更新沟通栏，Odoo "
+"会将另一个回复作为通知转发给关注者。从用户或外部用户发送回聊天的消息将通过其各自的电子邮件或其*联系人*记录中列出的姓名显示在沟通栏中。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:53
 msgid ""
@@ -1933,6 +1984,7 @@ msgid ""
 "information see :ref:`Use a default email address "
 "<email_communication/default>`."
 msgstr ""
+"这些通知使用默认发件人地址发送。有关更多信息，请参阅 :ref:`使用默认电子邮件地址 <email_communication/default>`。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:57
 msgid "Manage outbound messages"
@@ -1947,6 +1999,9 @@ msgid ""
 " Odoo. Reference the SMTP data of the external email server. Once all the "
 "information has been filled out, click :guilabel:`Test Connection`."
 msgstr ""
+"作为系统管理员，进入 Odoo 的 :menuselection:`设置-->常规设置-->讨论`，并启用 :guilabel:`自定义电子邮件服务器`"
+" 选项。然后，点击 :guilabel:`保存`。接下来，点击:guilabel:`外发邮件服务器`并点击:guilabel:`创建`，在 Odoo "
+"中创建一个新的外发邮件服务器记录。参考外部电子邮件服务器的 SMTP 数据。填写所有信息后，点击 :guilabel:`测试连接`。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:70
 msgid ""
@@ -1956,16 +2011,19 @@ msgid ""
 "(Domain Name System)` will improve deliverability. For more information see "
 ":doc:`email_domain`."
 msgstr ""
+"确保发出的域在 :abbr:`DNS （域名系统）` 上设置了 : abbr:`SPF （发件人策略框架）`、: abbr:`DKIM "
+"（域名密钥识别邮件）` 和 :abbr:`DMARC （基于域的报文验证、报告和一致性）`，这将提高可送达性。更多信息请参阅 "
+":doc:`email_domain`。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:78
 msgid "Port restriction"
-msgstr ""
+msgstr "端口限制"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:80
 msgid ""
 "Note that port 25 is blocked for security reasons on the Odoo Online and "
 "Odoo.sh platforms. Try using ports 465, 587, or 2525 instead."
-msgstr ""
+msgstr "请注意，在 Odoo 在线版和 Odoo.sh 平台上，出于安全原因，端口 25 已被阻止。请尝试使用端口 465、587 或 2525。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:86
 msgid "Use a default \"From\" email address"
@@ -1986,12 +2044,15 @@ msgid ""
 " security, the email that Odoo is trying to redistribute would get rejected "
 "by some recipients' email servers."
 msgstr ""
+"例如，如果电子邮件地址为 `mary/@customer.example.com` 的客户回复了一条消息，Odoo "
+"会尝试将同一封电子邮件重新分配给线程中的其他订阅者。但是，如果域名`customer.example.com`出于安全考虑禁止这种使用方式，Odoo "
+"试图重新分发的电子邮件就会被某些收件人的电子邮件服务器拒绝。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:96
 msgid ""
 "To avoid that problem, Odoo sends all emails using a \"From\" address from "
 "the same authorized domain."
-msgstr ""
+msgstr "为避免这一问题，Odoo 使用来自同一授权域的 \"发件人\" 地址发送所有电子邮件。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:99
 msgid ""
@@ -2092,6 +2153,10 @@ msgid ""
 "address) is `test\\@example.com`, only the email servers that have the "
 ":guilabel:`FROM Filtering` value equal to `test\\@example.com` are returned."
 msgstr ""
+"首先，Odoo 会搜索与外发邮件中定义的 :guilabel:`From Filtering` 值（电子邮件地址）具有相同 "
+":guilabel:`FROM Filtering` 值的电子邮件服务器。例如，如果 :guilabel:`From` 值（电子邮件地址）是 "
+"`test/@example.com`，则只返回 :guilabel:`FROM Filtering` 值等于 `test\\@example.com`"
+" 的电子邮件服务器。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:153
 msgid ""
@@ -2102,6 +2167,10 @@ msgid ""
 " the email servers that have the :guilabel:`FROM Filtering` value equal to "
 "`example.com` are returned."
 msgstr ""
+"但是，如果未找到使用 :guilabel:`From` 值的电子邮件服务器，则 Odoo 会搜索与外发邮件中定义的 :guilabel:`From` "
+"值（电子邮件地址）具有相同 * 域 * 的电子邮件服务器。例如，如果 :guilabel:`From` 电子邮件地址为 "
+"`test/@example.com`，则只返回 :guilabel:`FROM Filtering` 值等于 `example.com` "
+"的电子邮件服务器。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:159
 msgid ""
@@ -2109,6 +2178,7 @@ msgid ""
 "returns all email servers that do not have any :guilabel:`FROM Filtering` "
 "value(s) set."
 msgstr ""
+"如果在检查域名后未找到电子邮件服务器，则 Odoo 会返回未设置任何 :guilabel:`FROM Filtering` 值的所有电子邮件服务器。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:162
 msgid ""
@@ -2118,6 +2188,9 @@ msgid ""
 "attempts to find a match. If no email server is found, Odoo returns the "
 "first outgoing email server (sorted by priority)."
 msgstr ""
+"如果查询没有结果，Odoo 将使用系统参数: "
+"`mail.default.from`搜索电子邮件服务器。首先，列出的电子邮件地址会尝试匹配电子邮件服务器，然后域会尝试查找匹配。如果没有找到电子邮件服务器，Odoo"
+" 会返回第一个发出的电子邮件服务器（按优先级排序）。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:168
 msgid ""
@@ -2126,10 +2199,12 @@ msgid ""
 "priority of `10` and the other with a priority of `20`, then the email "
 "server with a priority of `10` is used first."
 msgstr ""
+"如果找到多个电子邮件服务器，Odoo 会根据优先级使用第一个服务器。例如，如果有两个电子邮件服务器，其中一个的优先级为 `10`，另一个的优先级为 "
+"`20`，则优先使用优先级为 `10` 的电子邮件服务器。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:175
 msgid "Set up different dedicated servers for transactional and mass emails"
-msgstr ""
+msgstr "为事务性邮件和群发邮件设置不同的专用服务器"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:177
 msgid ""
@@ -2138,6 +2213,9 @@ msgid ""
 " and Amazon SES, Mailgun, Sendgrid or :doc:`Mailjet "
 "</administration/maintain/mailjet_api>` for mass mailings."
 msgstr ""
+"在 Odoo 中，交易邮件和群发邮件可使用单独的电子邮件服务器。例如，交易邮件使用 Postmark 或 SendinBlue，群发邮件使用 "
+"Amazon SES、Mailgun、Sendgrid 或 "
+":doc:`Mailjet</administration/maintain/mailjet_api>`。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:182
 msgid ""
@@ -2155,6 +2233,9 @@ msgid ""
 "priority to the transactional server over the mass mailing server by "
 "providing a lower priority number for the transactional email server."
 msgstr ""
+"要执行此操作，应首先激活 :ref:`开发者模式<developer-mode>`，然后转到 :menuselection:`设置 --> 技术 -->"
+" 外发` "
+"电子邮件服务器。在那里，创建两个外发电子邮件服务器设置；一个用于事务性电子邮件，另一个用于邮件群发服务器。确保交易服务器优先于邮件群发服务器，为事务性邮件服务器提供较低的优先级编号。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:191
 msgid ""
@@ -2165,10 +2246,13 @@ msgid ""
 " in this case, the domain's Sender Policy Framework (SPF) records must be "
 "set to include both transactional and mass mail servers."
 msgstr ""
+"现在，进入 :menuselection:`电邮营销 --> 设置` 并启用 "
+":guilabel:`特定服务器`。选择适当的电子邮件服务器。通过这些设置，Odoo "
+"会使用优先级较低的服务器发送事务性电子邮件，并使用此处选定的服务器发送群发邮件。请注意，在这种情况下，域的发件人策略框架（SPF）记录必须设置为同时包含事务和群发邮件服务器。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:198
 msgid ":doc:`email_domain`"
-msgstr ""
+msgstr ":doc:`email_domain`"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:203
 msgid "Manage inbound messages"
@@ -2188,6 +2272,10 @@ msgid ""
 "not have another action attached to it like other aliases might, it is only "
 "used to collect replies."
 msgstr ""
+"从 Odoo "
+"发送的**回复消息**会根据模型的别名（如果有）或全部别名（**catchall@**）转发到原始讨论主题（以及所有关注者的收件箱）。对没有自定义别名的模型信息的回复将使用"
+" catchall 别名 (`catchall@mycompany.odoo.com`)。不过，catchall "
+"地址不像其他别名那样可以附加其他操作，它只用于收集回复。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:212
 msgid ""
@@ -2201,6 +2289,10 @@ msgid ""
 "is added on the contact under :guilabel:`Blacklisted Email Addresses` on the"
 " :guilabel:`Email Marketing Configuration Menu`."
 msgstr ""
+"**被退邮件** 用作返回路径。其中一个特别有用的例子是在 `Odoo 电子邮件营销 <https://www.odoo.com/page/email-"
+"marketing>`__中。在这种情况下，如果邮件在上个月被退回的次数过多（5 "
+"次），并且退回的时间间隔为一周，就会被选择退出。这样做是为了避免因邮件服务器错误而将某人列入黑名单。如果满足这些条件，则认为邮件无效并将其列入黑名单。在:guilabel:"
+" `电子邮件营销配置菜单` 的:guilabel: `黑名单电子邮件地址`下，联系人将被添加日志备注。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:220
 msgid ""
@@ -2208,37 +2300,39 @@ msgid ""
 "populate a red envelope indicating the failed delivery. This can be helpful "
 "to know that a Sales Order or an Invoice did not reach its final "
 "destination."
-msgstr ""
+msgstr "在沟通栏（电子邮件营销之外）中跳转的邮件会弹出一个红色信封，表示发送失败。这有助于了解销售订单或发票是否未送达。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:223
 msgid ""
 "**Original messages**: several business objects have their own alias to "
 "create new records in Odoo from incoming emails:"
-msgstr ""
+msgstr "**原始邮件**：多个业务对象都有自己的别名，用于在 Odoo 中根据收到的邮件创建新记录："
 
 #: ../../content/applications/general/email_communication/email_servers.rst:226
 msgid ""
 "Sales channel (to create *Leads* or *Opportunities* in `Odoo CRM "
 "<https://www.odoo.com/page/ crm>`_)"
 msgstr ""
+"销售渠道（在 `Odoo CRM <https://www.odoo.com/page/ crm>`_ 中创建 *潜在客户* 或 *商机*)"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:228
 msgid ""
 "Support channel (to create *Tickets* in `Odoo Helpdesk "
 "<https://www.odoo.com/page/helpdesk>`_)"
-msgstr ""
+msgstr "支持渠道（在 `Odoo Helpdesk <https://www.odoo.com/page/helpdesk>`_中创建*工单*）"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:229
 msgid ""
 "Projects (to create new *Tasks* in `Odoo Project <https://www.odoo.com/page "
 "/project-management>`_)"
 msgstr ""
+"项目（在 `Odoo 项目 <https://www.odoo.com/page /project-management>`_ 中创建新的*任务*）。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:231
 msgid ""
 "Job positions (to create *Applicants* in `Odoo Recruitment "
 "<https://www.odoo.com/page /recruitment>`_)"
-msgstr ""
+msgstr "工作职位（在 `Odoo 招聘 <https://www.odoo.com/page /recruitment>`_中创建 *申请人*)"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:234
 msgid ""
@@ -2251,7 +2345,7 @@ msgstr "根据您的邮件服务器，可能有几种方法来收取电子邮件
 msgid ""
 "Create the corresponding email addresses in the mail server (**catchall@**, "
 "**bounce@**, **sales@**, etc.)."
-msgstr ""
+msgstr "在邮件服务器中创建相应电子邮件地址（**catchall@**、**bounce@**、**sales@** 等）。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:239
 msgid ""
@@ -2259,6 +2353,8 @@ msgid ""
 "General Settings --> Discuss`. Changing the :guilabel:`Alias Domain` will "
 "change the catchall's domain for the database."
 msgstr ""
+"在 :menuselection:`设置 --> 常规设置 --> 讨论`中设置 :guilabel:` 别名域`名称。更改 "
+":guilabel:`别名域` 将更改数据库的 catchall 域。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:242
 msgid ""
@@ -2270,6 +2366,9 @@ msgid ""
 "Incoming Mails` field blank. Once all the information has been filled out, "
 "click on :guilabel:`TEST & CONFIRM`."
 msgstr ""
+"如果数据库的托管类型是本地部署的 Odoo，请在 Odoo 中为每个别名创建一个 :guilabel:`入站邮件服务器`。要创建新的收件服务器，请访问 "
+":menuselection:`设置-->讨论-->自定义邮件服务器-->内收邮件服务器-->新建` 根据电子邮件提供商的设置填写表格。将 "
+":guilabel:`对入站邮件执行的操作` 字段留空。填写完所有信息后，点击 :guilabel:`测试并确认`。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:0
 msgid "Incoming mail server configuration on Odoo."
@@ -2284,6 +2383,9 @@ msgid ""
 "domain name in the email server (e.g. `catchall\\@mydomain.ext` to "
 "`catchall\\@mycompany.odoo.com`)."
 msgstr ""
+"如果数据库的托管类型是 Odoo 在线版或 Odoo.sh，建议将收到的邮件重定向或转发到 Odoo "
+"的域名，而不是外部电子邮件服务器。这样，接收到的邮件就不会延迟。所有电子邮件地址的重定向都应设置为电子邮件服务器中的 Odoo 域名（例如，将 "
+"`catchall\\@mydomain.ext` 重定向为 `catchall\\@mycompany.odoo.com`）。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:258
 msgid ""
@@ -2291,6 +2393,8 @@ msgid ""
 "their respective configuration view by navigating to "
 ":menuselection:`Settings --> Technical Menu --> Email --> Aliases`."
 msgstr ""
+"所有别名均可在 Odoo 中自定义。对象别名可通过导航至 :menuselection:`设置 --> 技术菜单 --> 电邮 --> 别名` "
+"在各自的配置视图中进行编辑。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:262
 msgid ""
@@ -2302,12 +2406,15 @@ msgid ""
 "a change is made then the system will not recognize the old alias and the "
 "reply won't be received."
 msgstr ""
+"要编辑 catchall 和 bounce 别名，首先激活 :ref:`开发者模式<developer-mode>`。然后，进入 "
+":menuselection:` 设置 --> 技术 --> 参数 --> 系统参数`，自定义别名（`mail.catchall.alias` & "
+"`mail.bounce.alias`）。这类更改应在数据库启用前完成。如果客户在更改后回复，系统将无法识别旧的别名，也就无法收到回复。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:268
 msgid ""
 "By default, inbound messages are fetched every 5 minutes for on-premise "
 "databases."
-msgstr ""
+msgstr "默认情况下，内部部署数据库每 5 分钟获取一次入站邮件。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:271
 msgid ""
@@ -2320,7 +2427,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers.rst:276
 msgid "System parameters that prevent feedback loops"
-msgstr ""
+msgstr "防止反馈循环的系统参数"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:278
 msgid ""
@@ -2330,18 +2437,20 @@ msgid ""
 " reply-to email address. They are present in database but not in the *System"
 " Parameters*. To override the following defaults they need to be added in."
 msgstr ""
+"在 Odoo 中，有两个系统参数有助于防止出现电子邮件循环。这些参数是在 Odoo 16 "
+"中引入的，目的是防止别名创建过多记录，并防止回覆邮件地址的反馈循环。它们存在于数据库中，但不在*系统参数*中。要覆盖以下默认值，需要将它们添加进来。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:283
 msgid "The two system parameters are as follows:"
-msgstr ""
+msgstr "两个系统参数如下："
 
 #: ../../content/applications/general/email_communication/email_servers.rst:285
 msgid "`mail.incoming.limit.period` (60 minutes by default)"
-msgstr ""
+msgstr "`mail.incoming.limit.period`（默认为60分钟）"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:286
 msgid "`mail.incoming.limit.alias` (5 by default)"
-msgstr ""
+msgstr "`mail.incoming.limit.alias` （默认值为 5）"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:288
 msgid ""
@@ -2350,6 +2459,8 @@ msgid ""
 "--> Parameters --> System Parameters`. Change the value of these parameters,"
 " as needed."
 msgstr ""
+"首先启用 :ref:`开发者模式<developer-mode>`，然后导航至 :menuselection:`设置 --> 技术菜单 --> 参数 "
+"--> 系统参数`，在 Odoo 中添加这些字段。根据需要更改这些参数的值。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:292
 msgid ""
@@ -2361,6 +2472,9 @@ msgid ""
 "number of records this alias is allowed to create in the given period of "
 "time (value of `mail.incoming.limit.period`)."
 msgstr ""
+"当 Odoo 数据库中的通用电子邮件地址或任何别名收到电子邮件时，Odoo 会查看系统参数 `mail.incoming.limit.period` "
+"中定义的给定时间段内收到的邮件。如果收到的邮件是发送到别名，Odoo 将参考系统参数 `mail.incoming.limit.alias` "
+"并确定该别名在给定时间内允许创建的记录数（`mail.incoming.limit.period` 的值）。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:298
 msgid ""
@@ -2372,6 +2486,9 @@ msgid ""
 "specified time-frame, and will prevent a feedback loop from occurring if a "
 "duplicate email is detected."
 msgstr ""
+"此外，当收到发送至总括电子邮件地址的电子邮件时，Odoo "
+"将参考在设定时间段内（由系统参数中的值说明：`mail.incoming.limit.period`）数据库收到的电子邮件。然后，Odoo "
+"将确定收到的任何电子邮件是否与指定时间段内收到的电子邮件相匹配，并在检测到重复电子邮件时防止出现反馈循环。"
 
 #: ../../content/applications/general/email_communication/email_template.rst:3
 msgid "Email templates"
@@ -2382,14 +2499,14 @@ msgid ""
 "Email templates are saved emails that are used repeatedly to send emails "
 "from the database. They allow users to send quality communications, without "
 "having to compose the same text repeatedly."
-msgstr ""
+msgstr "电子邮件模板是已保存的电子邮件，可重复用于从数据库发送电子邮件。用户无需重复编写相同的文本，即可发送高质量的邮件。"
 
 #: ../../content/applications/general/email_communication/email_template.rst:8
 msgid ""
 "Creating different templates that are tailored to specific situations lets "
 "users choose the right message for the right audience. This increases the "
 "quality of the message and the overall engagement rate with the customer."
-msgstr ""
+msgstr "根据具体情况创建不同的模板，可让用户为正确的受众选择正确的信息。这样可以提高信息的质量和客户的整体参与率。"
 
 #: ../../content/applications/general/email_communication/email_template.rst:13
 msgid ""
@@ -2400,6 +2517,8 @@ msgid ""
 "received email is read by the end user's program, different formatting and "
 "graphics will appear in the final form of it."
 msgstr ""
+"Odoo 中的电子邮件模板使用 QWeb 或 XML，可在最终呈现时编辑电子邮件，使定制功能更加强大，而无需编辑任何代码。这意味着，Odoo "
+"可以使用图形用户界面（GUI）来编辑电子邮件，从而编辑后台代码。当最终用户的程序读取收到的电子邮件时，不同的格式和图形将出现在其最终形式中。"
 
 #: ../../content/applications/general/email_communication/email_template.rst:19
 msgid ""
@@ -2407,10 +2526,12 @@ msgid ""
 "navigating to :menuselection:`Settings app --> Technical menu --> Email --> "
 "Email Templates`."
 msgstr ""
+"在 :ref:`开发者模式<developer-mode>` 中访问电子邮件模板，方法是导航至 :menuselection:`设置应用程序 --> "
+"技术菜单 --> 电邮 --> 电邮模版`。"
 
 #: ../../content/applications/general/email_communication/email_template.rst:23
 msgid "Editing email templates"
-msgstr ""
+msgstr "编辑电子邮件模板"
 
 #: ../../content/applications/general/email_communication/email_template.rst:25
 msgid ""
@@ -2419,6 +2540,7 @@ msgid ""
 "email template, as well as the ability to add links, buttons, appointment "
 "options, or images."
 msgstr ""
+"在使用电子邮件模板时，可以使用*powerbox*功能。该功能可以直接编辑电子邮件模板中的格式和文本，还可以添加链接、按钮、预约选项或图片。"
 
 #: ../../content/applications/general/email_communication/email_template.rst:29
 msgid ""
@@ -2426,10 +2548,12 @@ msgid ""
 "directly, via the :guilabel:`</>` icon. Dynamic placeholders (referencing "
 "fields within Odoo) are also available for use in the email template."
 msgstr ""
+"此外，还可通过 :guilabel:`</>` 图标直接编辑电子邮件模板的 XML/HTML 代码。动态占位符（引用 Odoo "
+"中的字段）也可在电子邮件模板中使用。"
 
 #: ../../content/applications/general/email_communication/email_template.rst:34
 msgid "Powerbox"
-msgstr ""
+msgstr "Powerbox"
 
 #: ../../content/applications/general/email_communication/email_template.rst:36
 msgid ""
@@ -2438,16 +2562,18 @@ msgid ""
 " email template. The powerbox feature is activated by typing a forward slash"
 " `/` in the body of the email template."
 msgstr ""
+"*powerbox*功能是一个丰富的文本编辑器，具有各种格式、布局和文本选项。它还可用于在电子邮件模板中添加 XML/HTML "
+"功能。在电子邮件模板正文中键入正斜线 `/`，即可激活此功能。"
 
 #: ../../content/applications/general/email_communication/email_template.rst:40
 msgid ""
 "When a forward slash `/` is typed in the body of an email template, a drop-"
 "down menu appears with the following options:"
-msgstr ""
+msgstr "在电子邮件模板正文中键入正斜线 `/`时，会出现一个下拉菜单，其中包含以下选项："
 
 #: ../../content/applications/general/email_communication/email_template.rst:43
 msgid ":guilabel:`Structure`"
-msgstr ""
+msgstr ":guilabel:`结构`"
 
 #: ../../content/applications/general/email_communication/email_template.rst:45
 msgid ":guilabel:`Bulleted list`: Create a simple bulleted list."
@@ -2559,19 +2685,19 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_template.rst:81
 msgid ":guilabel:`Basic Blocks`"
-msgstr ""
+msgstr ":guilabel:`基础模块`"
 
 #: ../../content/applications/general/email_communication/email_template.rst:83
 msgid ":guilabel:`Signature`: Insert your signature."
-msgstr ""
+msgstr ":guilabel:`签名`：插入您的签名。"
 
 #: ../../content/applications/general/email_communication/email_template.rst:85
 msgid ":guilabel:`Marketing Tools`"
-msgstr ""
+msgstr ":guilabel:`营销工具`"
 
 #: ../../content/applications/general/email_communication/email_template.rst:87
 msgid ":guilabel:`Dynamic Placeholders`: Insert personalized content."
-msgstr ""
+msgstr ":guilabel:`动态占位符`：插入个性化内容。"
 
 #: ../../content/applications/general/email_communication/email_template.rst:90
 msgid ""
@@ -2581,19 +2707,21 @@ msgid ""
 "text, then type in the activator key (forward slash) `/`, and select the "
 "desired option from the drop-down menu."
 msgstr ""
+"要使用这些选项中的任何一个，请从 powerbox 下拉菜单中点击所需的功能。要使用文本相关选项（如 :guilabel:`标题 "
+"1`、:guilabel:`转换方向` 等）格式化现有文本，请选中文本，然后键入激活键（正斜杠）`/`，并从下拉菜单中选择所需的选项。"
 
 #: ../../content/applications/general/email_communication/email_template.rst:0
 msgid "Powerbox feature in the email template."
-msgstr ""
+msgstr "电子邮件模板中的 Powerbox 功能。"
 
 #: ../../content/applications/general/email_communication/email_template.rst:100
 msgid ""
 ":ref:`Using dynamic placeholders <email_template/dynamic-placeholders>`"
-msgstr ""
+msgstr ":ref:`使用动态占位符 <email_template/dynamic-placeholders>`"
 
 #: ../../content/applications/general/email_communication/email_template.rst:103
 msgid "XML/HTML code editor"
-msgstr ""
+msgstr "XML/HTML 代码编辑器"
 
 #: ../../content/applications/general/email_communication/email_template.rst:105
 msgid ""
@@ -2634,6 +2762,9 @@ msgid ""
 ":guilabel:`Customer` field on the :guilabel:`Sales Order` model. The dynamic"
 " placeholder for this field is: `{{ object.partner_id }}`."
 msgstr ""
+"许多公司喜欢用个性化的客户信息来定制电子邮件，以吸引眼球。在 Odoo "
+"中，可以通过插入动态占位符引用模型中的字段来实现这一目的。例如，可以在来自:guilabel:`销售订单`模型上的:guilabel:`客户`字段的电子邮件中引用客户姓名。该字段的动态占位符为:"
+" `{{ object.partner_id }}`。"
 
 #: ../../content/applications/general/email_communication/email_template.rst:134
 msgid ""
@@ -2643,6 +2774,9 @@ msgid ""
 "the fields present in the :guilabel:`Email Configuration` tab, the "
 ":guilabel:`Subject` of the email, and the :guilabel:`Language`."
 msgstr ""
+"动态占位符已编码，可显示数据库中的字段。动态占位符可用于电子邮件模板的 :guilabel:`正文` （:guilabel:`内容` "
+"选项卡）。动态占位符还可用于 :guilabel:`邮件配置` 选项卡、电子邮件的 :guilabel:`主题` 和 :guilabel:`语言` "
+"中的字段。"
 
 #: ../../content/applications/general/email_communication/email_template.rst:139
 msgid ""
@@ -2655,10 +2789,13 @@ msgid ""
 "corresponding Odoo field. Each dynamic placeholder will vary in "
 "configuration."
 msgstr ""
+"要在电子邮件的 :guilabel:`主体` 中使用动态占位符，请在 :guilabel:`内容` 标签下的电子邮件模板正文中输入 "
+"`/`，打开**powerbox**功能。滚动到选项列表底部的 :guilabel:`营销工具'。接下来，选择 "
+":guilabel:`动态占位符`。然后从可用选项列表中选择动态占位符，并按照提示将其配置为所需的相应 Odoo 字段。每个动态占位符的配置各不相同。"
 
 #: ../../content/applications/general/email_communication/email_template.rst-1
 msgid "Using dynamic placeholders in an email template."
-msgstr ""
+msgstr "在电子邮件模板中使用动态占位符。"
 
 #: ../../content/applications/general/email_communication/email_template.rst:151
 msgid ""
@@ -2666,36 +2803,37 @@ msgid ""
 ":guilabel:`Sub-fields` creates a different dynamic placeholder. Imagine it "
 "as a combination to the field that is being created."
 msgstr ""
+":guilabel:`字段'、:guilabel:`子模型'和:guilabel:`子字段'的每个独特组合都会创建不同的动态占位符。将其想象为正在创建的字段的组合。"
 
 #: ../../content/applications/general/email_communication/email_template.rst:155
 msgid ""
 "To search the available fields, simply type in the front-end name (on user-"
 "interface) of the field in the search. This will find a result from all of "
 "the available fields for the model that the email template is created for."
-msgstr ""
+msgstr "要搜索可用字段，只需在搜索中输入字段的前端名称（在用户界面上）即可。这将从创建电子邮件模板的模型的所有可用字段中找到结果。"
 
 #: ../../content/applications/general/email_communication/email_template.rst:160
 msgid "Customizing email templates are out of the scope of Odoo Support."
-msgstr ""
+msgstr "定制电子邮件模板不属于 Odoo 支持的范围。"
 
 #: ../../content/applications/general/email_communication/email_template.rst:163
 msgid "Rich text editor"
-msgstr ""
+msgstr "富文本编辑器"
 
 #: ../../content/applications/general/email_communication/email_template.rst:165
 msgid ""
 "A rich text editor toolbar can be accessed by highlighting text in the email"
 " template. This can be used to change the heading, font size/style, color, "
 "add a list type, or a link."
-msgstr ""
+msgstr "通过高亮显示电子邮件模板中的文本，可以访问富文本编辑器工具栏。它可用于更改标题、字体大小/样式、颜色、添加列表类型或链接。"
 
 #: ../../content/applications/general/email_communication/email_template.rst-1
 msgid "Rich text editor in the email template."
-msgstr ""
+msgstr "电子邮件模板中的富文本编辑器。"
 
 #: ../../content/applications/general/email_communication/email_template.rst:173
 msgid "Resetting email templates"
-msgstr ""
+msgstr "重置电子邮件模板"
 
 #: ../../content/applications/general/email_communication/email_template.rst:175
 msgid ""
@@ -2704,14 +2842,16 @@ msgid ""
 " on the :guilabel:`Reset Template` button in the upper left-hand of the "
 "screen and the template will be reset."
 msgstr ""
+"如果电子邮件模板因代码被篡改而无法正常工作，可通过重置将其恢复为开箱即用的默认模板。只需点击屏幕左上角的 :guilabel:`重置模版` "
+"按钮，模板就会重置。"
 
 #: ../../content/applications/general/email_communication/email_template.rst-1
 msgid "Resetting the email template."
-msgstr ""
+msgstr "重置电子邮件模板。"
 
 #: ../../content/applications/general/email_communication/email_template.rst:184
 msgid "Default reply on email templates"
-msgstr ""
+msgstr "默认回复电子邮件模板"
 
 #: ../../content/applications/general/email_communication/email_template.rst:186
 msgid ""
@@ -4345,7 +4485,7 @@ msgstr ""
 
 #: ../../content/applications/general/reporting.rst:133
 msgid "Bar chart"
-msgstr ""
+msgstr "条形图"
 
 #: ../../content/applications/general/reporting.rst:0
 msgid "Viewing the Sales Analysis report as a bar chart"
@@ -4353,7 +4493,7 @@ msgstr ""
 
 #: ../../content/applications/general/reporting.rst:138
 msgid "Line chart"
-msgstr ""
+msgstr "线形图"
 
 #: ../../content/applications/general/reporting.rst:0
 msgid "Viewing the Sales Analysis report as a line chart"
@@ -4361,7 +4501,7 @@ msgstr ""
 
 #: ../../content/applications/general/reporting.rst:143
 msgid "Pie chart"
-msgstr ""
+msgstr "饼图"
 
 #: ../../content/applications/general/reporting.rst:0
 msgid "Viewing the Sales Analysis report as a pie chart"
