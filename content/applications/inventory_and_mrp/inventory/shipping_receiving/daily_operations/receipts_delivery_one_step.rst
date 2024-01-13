@@ -14,6 +14,8 @@ for warehouses in Odoo is one step receipts and deliveries.
 
 In the following example, one step will be used for both receipts and deliveries.
 
+.. _inventory/receipts_delivery_one_step/wh:
+
 Configure the warehouse
 =======================
 
