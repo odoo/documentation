@@ -8,15 +8,12 @@ Acuerdo de suscripción de Odoo Enterprise
 .. only:: html
 
     `Download PDF <https://www.odoo.com/documentation/{CURRENT_BRANCH}/odoo_enterprise_agreement_es.pdf>`_
-.. warning::
-    Esta es una traducción al español del "Odoo Enterprise Subscription Agreement".
-    Esta traducción se proporciona con la esperanza de que facilite la comprensión, pero no tiene
-    valor legal.
-    La única referencia oficial de los términos y condiciones del
-    "Odoo Enterprise Subscription Agreement" es :ref:`la versión original en
-    inglés <enterprise_agreement>`
 
-.. note:: Version 9c - 2020-06-15
+.. /!\ This translation is not marked as informative-only anymore, due to legal constraints
+.. in some countries where Odoo has subsidiaries. Care must be taken to make the translation
+.. as accurate as possible in its intent and effects.
+
+.. note:: Version 10a - 2022-10-27
 
 Al suscribirse a los servicios de Odoo Enterprise (en adelante “los Servicios”) proporcionados por
 Odoo SA y sus filiales (en adelante denominadas conjuntamente “Odoo SA”), relacionados con las
@@ -48,9 +45,8 @@ Usuario
     limitado al Software a través del portal del usuario.
 
 Aplicación
-    Una ‘aplicación’ es un grupo especializado de funciones disponibles para ser instaladas en el
-    Software, las cuales están enunciadas en la sección de Precios del
-    `sitio web de Odoo SA <https://www.odoo.com/es_ES/>`__
+    Una ‘Aplicación’ es un grupo especializado de funciones disponibles para ser instaladas en el
+    Software.
 
 Partner de Odoo
     Un ‘Partner’ de Odoo es una empresa o individuo externo a Odoo SA que ofrece servicios
@@ -58,21 +54,21 @@ Partner de Odoo
     directamente con él. En cualquier momento, el cliente puede decidir trabajar con un Partner
     diferente o con Odoo SA directamente (sujeto a previo aviso).
 
-Módulo adicional
-    Un módulo adicional es un directorio de archivos de código fuente, o un conjunto de
+Módulo Adicional
+    Un Módulo Adicional es un directorio de archivos de código fuente, o un conjunto de
     personalizaciones basadas en lenguaje de programación Python, creadas en una base de datos
     (por ejemplo, con Odoo Studio), que agrega características o cambia el comportamiento estándar
     de Software. Pueden haber sido desarrolladas por el Cliente, por Odoo SA, por un Partner de Odoo
     en nombre del Cliente o por terceros.
 
-Módulo adicional de mantenimiento
-    Un módulo adicional de mantenimiento es un módulo adicional por el cual el Cliente ha elegido
+Módulo Adicional Cubierto
+    Un Módulo Adicional Cubierto es un Módulo Adicional por el cual el Cliente ha elegido
     pagar un costo de mantenimiento con el fin de obtener servicios de soporte, actualizaciones y
-    corrección de errores.
+    corrección de Bugs.
 
-Error/Bug
-    Se considera como ‘bug’ a cualquier falla del Software o de un módulo adicional de mantenimiento
-    que resulte en una disrupción completa, una cadena de errores o un fallo de seguridad, y que no
+Bug
+    Se considera un Bug cualquier falla del Software o de un Módulo Adicional Cubierto
+    que resulte en una parada completa, mensaje de error de fallo, o un fallo de seguridad, y que no
     es causado directamente por una instalación o configuración defectuosa. El incumplimiento de
     algunas especificaciones o requisitos será considerado como un Bug a la discreción de Odoo SA
     (por ejemplo, cuando el Software no cumple con el comportamiento ni los resultados para el cual
@@ -83,6 +79,10 @@ Versiones Cubiertas
     A menos que se especifique lo contrario, los Servicios proporcionados por en virtud de este
     Acuerdo son únicamente aplicables a las versiones cubiertas del Software, las cuales incluyen
     las últimas tres (3) versiones publicadas.
+
+Plan de Suscripción
+    Un Plan de Suscripción define un conjunto de Aplicaciones, funciones y soluciones de alojamiento
+    cubiertas por este Acuerdo, y se define por escrito al concluir este Acuerdo.
 
 .. _enterprise_access_es:
 
@@ -102,7 +102,7 @@ bajo los términos establecidos en el Anexo A: Licencia de la versión Enterpris
 El Cliente acepta tomar todas las medidas necesarias para garantizar que no se modificará la parte
 del Software que ejecuta y verifica el uso y la recolección de estadísticas válidas, incluyendo pero
 sin limitarse a la ejecución de una instancia, el número de usuarios, las aplicaciones instaladas y
-el número de líneas de códigos incluidas en los módulos adicionales de mantenimiento.
+el número de líneas de códigos incluidas en los Módulos Adicionales Cubiertos.
 
 Odoo SA se compromete a no divulgar cifras individuales o mencionadas a terceros sin el
 consentimiento del Cliente, y a tratar todos los datos recopilados de conformidad con la Política de
@@ -114,7 +114,7 @@ Enterprise, y la plataforma en la nube.
 
 En caso de que exista algún incumplimiento por parte del Cliente a los términos de esta sección, el
 Cliente acuerda indemnizar a Odoo SA una cuota adicional equivalente al 300% del precio aplicable
-por el número actual de usuarios y aplicaciones instaladas.
+por el número actual de usuarios.
 
 .. _services_es:
 
@@ -127,7 +127,7 @@ por el número actual de usuarios y aplicaciones instaladas.
 ----------------------------------
 
 Durante la vigencia de este Acuerdo, Odoo SA se compromete a hacer todos los esfuerzos razonables
-para remediar cualquier Bug presente en el Software y los Módulos adicionales de mantenimiento, que
+para remediar cualquier Bug presente en el Software y los Módulos Adicionales Cubiertos, que
 haya reportado el Cliente a través del medio apropiado (como el formulario del sitio web o vía
 llamada telefónica a los numeros enlistados en `Odoo Help <https://www.odoo.com/help/>`__, o cuando
 se trabaja con un Partner a través del medio establecido por el Partner), y a manejar las
@@ -142,7 +142,7 @@ Cuando se corrige un Bug de cualquiera de las versiones cubiertas, Odoo SA se co
 el error en todas las versiones cubiertas más recientes del software.
 
 Las partes de este Acuerdo reconocen que Odoo SA no es responsable de los Bugs en el Software o en
-los módulos adicionales de mantenimiento de conformidad con lo establecido en la sección 7.3 de este
+los Módulos Adicionales Cubiertos de conformidad con lo establecido en la sección 7.3 de este
 Acuerdo y en la licencia del Software.
 
 4.2 Servicio de actualizaciones de seguridad
@@ -203,7 +203,7 @@ Cliente para hacerla compatible con la Versión Deseada, y la corrección de cua
 directamente por la operación de actualización que no ocurre usualmente en la Versión Deseada.
 
 El Cliente tiene la responsabilidad de verificar y validar la base de datos actualizada para
-detectar bugs, analizar e impacto de los cambios y las nuevas funcionalidades implementadas en la
+detectar Bugs, analizar e impacto de los cambios y las nuevas funcionalidades implementadas en la
 Versión Deseada, y de convertir y adaptar cualquier extensión del Software desarrollada por terceros
 que haya sido instalada antes de la actualización a la Versión Deseada (por ejemplo, módulos
 adicionales sin mantenimiento de Odoo). El Cliente puede enviar múltiples solicitudes de
@@ -239,7 +239,7 @@ Alcance
 Durante la vigencia del presente Acuerdo, el Cliente puede crear un número ilimitado de tickets de
 soporte sin costos adicionales, exclusivamente para preguntas relacionadas a Bugs (consultar sección
 :ref:`bugfix_es`) u orientación en cuanto al uso de las funcionalidades estándares del Software y de
-los módulos adicionales de mantenimiento.
+los Módulos Adicionales Cubiertos.
 
 Otras solicitudes de asistencias como preguntas relacionadas con desarrollos o personalizaciones
 pueden ser cubiertas mediante otros servicios a contratar por parte de Odoo SA. En caso que no sea
@@ -261,14 +261,14 @@ trabaje con un Partner, en el canal señalado por el Partner, sujeto a los horar
 Para la corrección de Bugs, soporte y servicios de actualización, el Cliente puede trabajar un
 Partner de Odoo como su principal punto de contacto, o directamente con Odoo SA.
 
-Odoo SA subcontratará los servicios relacionados a los Módulos adicionales de mantenimiento al
+Odoo SA subcontratará los servicios relacionados a los Módulos Adicionales Cubiertos al
 Partner de Odoo, quien se convierte en el principal punto de contacto del Cliente en caso que el
 Cliente decida trabajar con un Partner de Odoo. El Partner de Odoo puede contactar a Odoo SA en
 nombre del Cliente para obtener asistencia de segundo nivel con respecto a las características
 estándar del Software.
 
-Si el cliente decide trabajar con Odoo SA directamente, los servicios relacionados con los módulos
-adicionales de mantenimiento serán cubiertos por Odoo SA siempre que el Cliente esté alojado en la
+Si el cliente decide trabajar con Odoo SA directamente, los servicios relacionados con los Módulos
+Adicionales Cubioertos serán cubiertos por Odoo SA siempre que el Cliente esté alojado en la
 plataforma de la nube de Odoo.
 
 .. _charges_es:
@@ -282,26 +282,28 @@ plataforma de la nube de Odoo.
 ---------------------
 
 Los cargos estándares de la suscripción de Odoo Enterprise y los Servicios están basados en la
-cantidad de Usuarios y las Aplicaciones instaladas que utiliza el Cliente y se especifican por
+cantidad de Usuarios y el Plan de Suscripción utilizado por el Cliente, y se especifican por
 escrito al concluir el Acuerdo.
 
-Si el Cliente tiene más usuarios o aplicaciones instaladas durante el Plazo que las especificadas en
-el momento de la celebración de este Acuerdo, el Cliente acepta pagar (al inicio del nuevo Plazo)
-una tarifa adicional equivalente al precio aplicable de conformidad con la lista de precios por
-aquellos usuarios o aplicaciones adicionales, por el resto del Plazo.
+Si durante el Plazo del Acuerdo, el Cliente tiene más Usuarios o utiliza funciones que requieren
+otro Plan de Suscripción diferente al especificado en el momento de la conclusión de este Acuerdo,
+el Cliente acepta pagar una tarifa adicional equivalente al precio aplicable de conformidad con
+la lista de precios (en el momento de la desviación del número especificado de Usuarios o del
+Plan de Suscripción) por los Usuarios adicionales o el Plan de Suscripción requerido,
+por el resto del Plazo.
 
-Además, los servicios de los módulos adicionales de mantenimiento se cobran en función al número de
-líneas de código de estos módulos. Cuando el cliente opta por el mantenimiento de estos módulos
-adicionales de mantenimiento, el costo es una tarifa mensual de 16 € por 100 líneas de código
+Además, los servicios de los Módulos Adicionales Cubiertos se cobran en función al número de
+líneas de código de estos módulos. Cuando el cliente opta por el mantenimiento de Módulos
+Adicionales Cubiertos, el costo es una tarifa mensual de 16 € por 100 líneas de código
 (redondeadas a las siguientes 100), al menos que se especifique lo contrario por escrito al celebrar
 este Acuerdo. Las líneas de código serán contadas con el comando ‘cloc’ del Software, e incluyen
 todas las líneas de texto en el código fuente de esos módulos, independientemente del lenguaje de
 programación (Python, Javascript, XML, etc), excluyendo líneas en blanco, comentarios y archivos que
 no se cargan al instalar o ejecutar el software.
 
-Cuando el Cliente solicita una actualización, por cada módulo adicional de mantenimiento que no haya
+Cuando el Cliente solicita una actualización, por cada Módulo Adicional Cubierto que no haya
 sido cubierto por los costos de mantenimiento durante los últimos 12 meses, Odoo SA puede cobrar una
-tarifa adicional única de 16 € por cada 100 líneas de código, por cada mes faltante de cobertura.
+tarifa adicional única, por cada mes faltante de cobertura.
 
 .. _charges_renewal_es:
 
@@ -309,7 +311,7 @@ tarifa adicional única de 16 € por cada 100 líneas de código, por cada mes 
 ------------------------
 
 Siguiendo la renovación descrita en la sección :ref:`term_es` del presente Acuerdo, si los cargos
-aplicados durante el Plazo anterior (excluyendo cualquier “Descuento para usuarios iniciales”) son
+aplicados durante el Plazo anterior son
 más bajos que el precio aplicable en la lista de precios actual, dichos cargos podrán aumentar 7%
 como máximo.
 
@@ -338,9 +340,9 @@ El Cliente se compromete a:
   presente Acuerdo, según las condiciones de pago especificadas en la
   factura correspondiente;
 
-- Notificar inmediatamente a Odoo SA cuando su número real de usarios
-  o aplicaciones instaladas exceda el número especificado al final
-  del Acuerdo y, en este caso, el pago de la tarifa adicional
+- Notificar inmediatamente a Odoo SA cuando su número real de Usarios
+  exceda la cantidad especificada al momento de la conclusión del Acuerdo,
+  y en este caso, pagar la tarifa adicional
   aplicable como se describe en la sección :ref:`charges_standard_es`;
 
 - Tomar todas las medidas necesarias para garantizar la ejecución no
@@ -374,10 +376,11 @@ además:
   protegidos, reconociendo que Odoo SA no se hace responsable de ninguna pérdida de datos
 
 - Otorgar a Odoo SA el acceso necesario para verificar la validez de la Edición Enterprise de Odoo
-  uso a solicitud (por ejemplo, si la validación automática no es válida para el Cliente);
+  uso a solicitud (por ejemplo, si la validación automática no es válida para el Cliente).
 
 6.2 No solicitar o contratar
 ----------------------------
+
 Excepto cuando la otra Parte de su consentimiento por escrito, cada una de las Partes, sus filiales
 y representantes acuerdan no solicitar u ofrecer empleo a ningún empleado de la otra Parte que esté
 involucrado en la prestación o el uso de los Servicios en virtud de este Acuerdo, durante la
@@ -567,9 +570,9 @@ En ningún caso, ninguna de las Parte o sus afiliados serán responsables por da
 especiales, ejemplares, incidentales o consecuentes de cualquier tipo, incluidos, entre otros, la
 pérdida de ingresos, ganancias, ahorros, pérdida de negocios u otras pérdidas financieras, costos de
 inactividad o demora, datos perdidos o dañados, que surjan de o en conexión con este Acuerdo,
-independientemente de la forma de acción, ya sea en contrato, responsabilidad civil (incluida
-negligencia estricta) o cualquier otra teoría legal o equitativa, incluso si una de las Partes o sus
-afiliados han sido informados de la posibilidad de tales daños, o si las medidas de una de las
+independientemente de la forma de acción, ya sea en contrato, agravio u otra forma,
+incluso si una de las Partes o sus
+afiliados han sido informados de la posibilidad de tales daños, o si el remedio de una de las
 Partes o sus afiliados no cumplen con su propósito esencial.
 
 .. _force_majeure_es:
