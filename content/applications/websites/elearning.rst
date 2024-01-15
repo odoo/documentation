@@ -103,6 +103,8 @@ Communication
 Access rights
 *************
 
+- :guilabel:`Prerequisites`: set one or more courses that users are advised to complete before
+   accessing your course;
 - :guilabel:`Show course to`: define who can access your course and their content between
   :guilabel:`Everyone`, :guilabel:`Signed In` or :guilabel:`Course Attendees`;
 - :guilabel:`Enroll Policy`: define how people enroll in your course. Select:
