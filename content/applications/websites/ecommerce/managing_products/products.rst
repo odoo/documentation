@@ -198,7 +198,6 @@ The **eCommerce-related** fields to translate are:
 
 .. seealso::
    - :doc:`../../../websites/website/pages/seo`
-   - :ref:`Multi-language support <seo-multilanguage>`
 
 Website availability
 --------------------
