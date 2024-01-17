@@ -6,8 +6,7 @@ Introduction
 ============
 
 Odoo VoIP can be set up to work together with `Axivox <https://www.axivox.com/>`_. In that case, an
-:doc:`Asterisk server <asterisk>` is not necessary as the infrastructure is hosted and managed by
-Axivox.
+Asterisk server is not necessary as the infrastructure, as it is hosted and managed by Axivox.
 
 To use this service, `contact Axivox <https://www.axivox.com/contact/>`_ to open an account. Before
 doing so, verify that Axivox covers your area and the areas you wish to call.
