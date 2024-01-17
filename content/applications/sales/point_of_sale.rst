@@ -46,6 +46,10 @@ Once an order is completed, proceed to checkout by clicking :guilabel:`Payment`.
    - You can use both `,` and `.` on your keyboard as decimal separators.
    - **Cash** is selected by default if you enter the amount without choosing a payment method.
 
+.. note::
+   The system can only load a limited number of products for effective opening. Click
+   :guilabel:`Search more` if the desired product is not loaded automatically.
+
 .. _pos/customers:
 
 Set customers
