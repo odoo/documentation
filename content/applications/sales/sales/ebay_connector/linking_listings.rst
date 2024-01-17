@@ -52,8 +52,7 @@ should be synced to Odoo next.
 
 Navigate to :menuselection:`Settings --> Technical --> Automation --> Scheduled Actions`. Click into
 the scheduled action labeled: :guilabel:`Ebay: update categories` and then click :guilabel:`Run
-Manually`. This action will populate the :menuselection:`Sales --> Configuration --> eBay
-Categories` menu item with all standard eBay product categories.
+Manually`.
 
 .. important::
    Odoo only recognizes eBay category paths up to four layers deep. If a product has a listing of
