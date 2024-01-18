@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo saas-16.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-19 13:26+0000\n"
+"POT-Creation-Date: 2024-01-19 10:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -504,6 +504,7 @@ msgid "When the field `company_id` is made required on a model, a good practice 
 msgstr ""
 
 #: ../../content/developer/howtos/company.rst:168
+#: ../../content/developer/howtos/upgrade_custom_db.rst:132
 #: ../../content/developer/howtos/website_themes/setup.rst:75
 #: ../../content/developer/howtos/website_themes/theming.rst:496
 #: ../../content/developer/reference/backend/views.rst:6
@@ -1157,6 +1158,7 @@ msgstr ""
 
 #: ../../content/developer/howtos/scss_tips.rst:85
 #: ../../content/developer/howtos/scss_tips.rst:86
+#: ../../content/developer/howtos/upgrade_custom_db.rst:114
 #: ../../content/developer/howtos/website_themes/shapes.rst:139
 msgid "..."
 msgstr ""
@@ -1423,6 +1425,351 @@ msgstr ""
 
 #: ../../content/developer/howtos/translations.rst:220
 msgid "**Do** in the case where the translation lookup is done when the JS file is *read*, use `_lt` instead of `_t` to translate the term when it is *used*::"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:3
+msgid "Upgrade a customized database"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:5
+msgid "Upgrading to a new version of Odoo can be challenging, especially if the database you work on contains custom modules. This page intent is to explain the technical process of upgrading a database with customized modules. Refer to :doc:`Upgrade documentation </administration/upgrade>` for guidance on how to upgrade a database without customized modules."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:10
+msgid "We consider a custom module, any module that extends the standard code of Odoo and that was not built with the Studio app. Before upgrading such a module, or before requesting its upgrade, have a look at the :ref:`upgrade/sla` to make sure who's responsible for it."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:14
+msgid "While working on what we refer to as the **custom upgrade** of your database, keep in mind the goals of an upgrade:"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:17
+msgid "Stay supported"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:18
+msgid "Get the latest features"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:19
+msgid "Enjoy the performance improvement"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:20
+msgid "Reduce the technical debt"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:21
+msgid "Benefit from security improvements"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:23
+msgid "With every new version of Odoo, changes are introduced. These changes can impact modules on which customization have been developed. This is the reason why upgrading a database that contains custom modules requires additional steps in order to upgrade the source code."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:27
+msgid "These are the steps to follow to upgrade customized databases:"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:29
+msgid ":ref:`Stop the devolopments and challenge them <upgrade_custom/stop_developments>`."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:30
+msgid ":ref:`Request an upgraded database <upgrade_custom/request_upgrade>`."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:31
+msgid ":ref:`Make your module installable on an empty database <upgrade_custom/empty_database>`."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:32
+msgid ":ref:`Make your module installable on the upgraded database <upgrade_custom/upgraded_database>`."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:33
+msgid ":ref:`Test extensively and do a rehearsal <upgrade_custom/testing_rehearsal>`."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:34
+msgid ":ref:`Upgrade the production database <upgrade_custom/production>`."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:40
+msgid "Step 1: Stop the developments"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:42
+msgid "Starting an upgrade requires commitment and development resources. If developments keep being made at the same time, those features will need to be re-upgraded and tested every time you change them. This is why we recommend a complete freeze of the codebase when starting the upgrade process. Needless to say, bug fixing is exempt from this recommendation."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:47
+msgid "Once you have stopped development, it is a good practice to assess the developments made and compare them with the features introduced between your current version and the version you are targeting. Challenge the developments as much as possible and find functional workarounds. Removing redundancy between your developments and the standard version of Odoo will lead to an eased upgrade process and reduce technical debt."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:54
+msgid "You can find information on the changes between versions in the `Release Notes <https:/odoo.com/page/release-notes>`_."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:61
+msgid "Step 2: Request an upgraded database"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:63
+msgid "Once the developments have stopped for the custom modules and the implemented features have been challenged to remove redundancy and unnecessary code, the next step is to request an upgraded test database. To do so, follow the steps mentioned in :ref:`upgrade/request-test-database`, depending on the hosting type of your database."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:68
+msgid "The purpose of this stage is not to start working with the custom modules in the upgraded database, but to make sure the standard upgrade process works seamlessly, and the test database is delivered properly. If that's not the case, and the upgrade request fails, request the assistance of Odoo via the `support page <https://odoo.com/help?stage=migration>`_ by selecting the option related to testing the upgrade."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:78
+msgid "Step 3: Empty database"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:80
+msgid "Before working on an upgraded test database, we recommend to make the custom developments work on an empty database in the targeted version of your upgrade. This ensures that the customization is compatible with the new version of Odoo, allows to analyze how it behaves and interacts with the new features, and guarantees that they will not cause any issues when upgrading the database."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:85
+msgid "Making the custom modules work in an empty database also helps avoid changes and wrong configurations that might be present in the production database (like studio customization, customized website pages, email templates or translations). They are not intrinsically related to the custom modules and that can raise unwanted issues in this stage of the upgraded process."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:90
+msgid "To make custom modules work on an empty database we advise to follow these steps:"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:92
+msgid ":ref:`upgrade_custom/empty_database/modules_installable`"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:93
+msgid ":ref:`upgrade_custom/empty_database/test_fixes`"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:94
+msgid ":ref:`upgrade_custom/empty_database/clean_code`"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:95
+msgid ":ref:`Make standard tests run successfully <upgrade_custom/empty_database/standard_test>`"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:100
+msgid "Make custom modules installable"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:102
+msgid "The first step is to make the custom modules installable in the new Odoo version. This means, starting by ensuring there are no tracebacks or warnings during their installation. For this, install the custom modules, one by one, in an empty database of the new Odoo version and fix the tracebacks and warnings that arise from that."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:107
+msgid "This process will help detect issues during the installation of the modules. For example:"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:109
+msgid "Invalid module dependencies."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:110
+msgid "Syntax change: assets declaration, OWL updates, attrs."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:111
+msgid "References to standard fields, models, views not existing anymore or renamed."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:112
+msgid "Xpath that moved or were removed from views."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:113
+msgid "Methods renamed or removed."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:119
+msgid "Test and fixes"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:121
+msgid "Once there are no more tracebacks when installing the modules, the next step is to test them. Even if the custom modules are installable on an empty database, this does not guarantee there are no errors during their execution. Because of this, we encourage to test thoroughly all the customization to make sure everything is working as expected."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:126
+msgid "This process will help detect further issues that are not identified during the module installation and can only be detected in runtime. For example, deprecated calls to standard python or OWL functions, non-existing references to standard fields, etc."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:130
+msgid "We recommend to test all the customization, especially the following elements:"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:133
+msgid "Email templates"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:134
+msgid "Reports"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:135
+msgid "Server actions and automated actions"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:136
+msgid "Changes in the standard workflows"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:137
+#: ../../content/developer/tutorials/backend.rst:715
+msgid "Computed fields"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:139
+msgid "We also encourage to write automated tests to save time during the testing iterations, increase the test coverage, and ensure that the changes and fixes introduced do not break the existing flows. If there are tests already implemented in the customization, make sure they are upgraded to the new Odoo version and run successfully, fixing issues that might be present."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:147
+msgid "Clean the code"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:149
+msgid "At this stage of the upgrade process, we also suggest to clean the code as much as possible. This includes:"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:152
+msgid "Remove redundant and unnecessary code."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:153
+msgid "Remove features that are now part of Odoo standard, as described in :ref:`upgrade_custom/stop_developments`."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:155
+msgid "Clean commented code if it is not needed anymore."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:156
+msgid "Refactor the code (functions, fields, views, reports, etc.) if needed."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:161
+msgid "Standard tests"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:163
+msgid "Once the previous steps are completed, we advise to make sure all standard tests associated to the dependencies of the custom module pass. Standard tests ensure the validation of the code logic and prevent data corruption. They will help you identify bugs or unwanted behavior before you work on your database."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:168
+msgid "In case there are standard test failing, we suggest to analyze the reason for their failure:"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:170
+msgid "The customization changes the standard workflow: Adapt the standard test to your workflow."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:171
+msgid "The customization did not take into account a special flow: Adapt your customization to ensure it works for all the standard workflows."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:178
+msgid "Step 4: Upgraded database"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:180
+msgid "Once the custom modules are installable and working properly in an empty database, it is time to make them work on an :ref:`upgraded database <upgrade/request-test-database>`."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:183
+msgid "To make sure the custom code is working flawlessly in the new version, follow these steps:"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:185
+msgid ":ref:`upgrade_custom/upgraded_database/migrate_data`"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:186
+msgid ":ref:`upgrade_custom/upgraded_database/test_custom`"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:191
+msgid "Migrate the data"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:193
+msgid "During the upgrade of the custom modules, you might have to use migration scripts to reflect changes from the source code to their corresponding data."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:196
+msgid "Any technical data that was renamed during the upgrade of the custom code (models, fields, external identifiers) should be renamed using migration scripts to avoid data loss during the module upgrade."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:199
+msgid "Data from standard models removed from the source code of the newer Odoo version and from the database during the standard upgrade process might need to be recovered from the old model table if it is still present."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:203
+msgid "Migration scripts can also be used to:"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:205
+msgid "Ease the processing time of an upgrade. For example, to store the value of computed stored fields on models with an excessive number of records by using SQL queries."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:207
+msgid "Recompute fields in case the computation of their value has changed."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:208
+msgid "Uninstall unwanted custom modules."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:209
+msgid "Correct faulty data or wrong configurations."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:214
+msgid "Test the custom modules"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:216
+msgid "To make sure the custom modules work properly with your data in the upgraded database, they need to be tested as well. This helps ensure both the standard and the custom data stored in the database are consistent and that nothing was lost during the upgrade process."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:220
+msgid "Things to pay attention to:"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:222
+msgid "Views not working: During the upgrade, if a view causes issues because of its content, it gets disabled. You can find the information on disabled views on the :ref:`Upgrade report <upgrade/upgrade_report>`. This view needs to be activated again. To achieve this, we recommend the use of migration scripts."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:226
+msgid ":doc:`Module data <../tutorials/define_module_data>` not updated: Custom records that have the ``noupdate`` flag are not updated when upgrading the module in the new database. For the custom data that needs to be updated due to changes in the new version, we recommend to use migration scripts to do so."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:235
+msgid "Step 5: Testing and rehearsal"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:237
+msgid "When the custom modules are working properly in the upgraded database, it is crucial to do another round of testing to assess the database usability and detect any issues that might have gone unnoticed in previous tests. For further information about testing the upgraded database, check :ref:`upgrade/test_your_db`."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:242
+msgid "As mentioned in :ref:`upgrade/upgrade-prod`, both standard upgrade scripts and your database are constantly evolving. Therefore it is highly recommended to frequently request new upgraded test databases and ensure that the upgrade process is still successful."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:246
+msgid "In addition to that, make a full rehearsal of the upgrade process the day before upgrading the production database to avoid undesired behavior during the upgrade and to detect any issue that might have occurred with the migrated data."
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:254
+msgid "Step 6: Production upgrade"
+msgstr ""
+
+#: ../../content/developer/howtos/upgrade_custom_db.rst:256
+msgid "Once you are confident about upgrading your production database, follow the process described on :ref:`upgrade/upgrade-prod`, depending on the hosting type of your database."
 msgstr ""
 
 #: ../../content/developer/howtos/web_services.rst:3
@@ -3622,7 +3969,7 @@ msgid ":option:`--addons-path <odoo-bin --addons-path>`"
 msgstr ""
 
 #: ../../content/developer/howtos/website_themes/setup.rst:213
-#: ../../content/developer/reference/cli.rst:807
+#: ../../content/developer/reference/cli.rst:829
 msgid "Comma-separated list of directories in which modules are stored. These directories are scanned for modules."
 msgstr ""
 
@@ -13838,435 +14185,447 @@ msgid "Logging"
 msgstr ""
 
 #: ../../content/developer/reference/cli.rst:472
-msgid "By default, Odoo displays all logging of level_ ``info`` except for workflow logging (``warning`` only), and log output is sent to ``stdout``. Various options are available to redirect logging to other destinations and to customize the amount of logging output."
+msgid "By default, Odoo displays all logging of level_ ``INFO``, ``WARNING`` and ``ERROR``. All logs independently of the level are output on ``stderr``. Various options are available to redirect logging to other destinations and to customize the verbosity."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:479
-msgid "sends logging output to the specified file instead of stdout. On Unix, the file `can be managed by external log rotation programs <https://docs.python.org/3/library/logging.handlers.html#watchedfilehandler>`_ and will automatically be reopened when replaced"
+#: ../../content/developer/reference/cli.rst:478
+msgid "sends logging output to the specified file instead of ``stderr``. On Unix, the file `can be managed by external log rotation programs <https://docs.python.org/3/library/logging.handlers.html#watchedfilehandler>`_ and will automatically be reopened when replaced"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:486
+#: ../../content/developer/reference/cli.rst:485
 msgid "logs to the system's event logger: `syslog on unices <https://docs.python.org/3/library/logging.handlers.html#sysloghandler>`_ and `the Event Log on Windows <https://docs.python.org/3/library/logging.handlers.html#nteventloghandler>`_."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:489
+#: ../../content/developer/reference/cli.rst:488
 msgid "Neither is configurable"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:493
+#: ../../content/developer/reference/cli.rst:492
 msgid "logs to the ``ir.logging`` model (``ir_logging`` table) of the specified database. The database can be the name of a database in the \"current\" PostgreSQL, or `a PostgreSQL URI`_ for e.g. log aggregation."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:499
+#: ../../content/developer/reference/cli.rst:498
 msgid ":samp:`{LOGGER}:{LEVEL}`, enables ``LOGGER`` at the provided ``LEVEL`` e.g. ``odoo.models:DEBUG`` will enable all logging messages at or above ``DEBUG`` level in the models."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:503
+#: ../../content/developer/reference/cli.rst:502
 msgid "The colon ``:`` is mandatory"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:504
+#: ../../content/developer/reference/cli.rst:503
 msgid "The logger can be omitted to configure the root (default) handler"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:505
+#: ../../content/developer/reference/cli.rst:504
 msgid "If the level is omitted, the logger is set to ``INFO``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:507
+#: ../../content/developer/reference/cli.rst:506
 msgid "The option can be repeated to configure multiple loggers e.g."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:515
+#: ../../content/developer/reference/cli.rst:514
 msgid "enables DEBUG logging of HTTP requests and responses, equivalent to ``--log-handler=odoo.http:DEBUG``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:520
+#: ../../content/developer/reference/cli.rst:519
 msgid "enables DEBUG logging of SQL querying, equivalent to ``--log-handler=odoo.sql_db:DEBUG``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:525
+#: ../../content/developer/reference/cli.rst:524
 msgid "Shortcut to more easily set predefined levels on specific loggers. \"real\" levels (``critical``, ``error``, ``warn``, ``debug``) are set on the ``odoo`` and ``werkzeug`` loggers (except for ``debug`` which is only set on ``odoo``)."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:530
+#: ../../content/developer/reference/cli.rst:529
 msgid "Odoo also provides debugging pseudo-levels which apply to different sets of loggers:"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:535
+#: ../../content/developer/reference/cli.rst:534
 msgid "``debug_sql``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:534
+#: ../../content/developer/reference/cli.rst:533
 msgid "sets the SQL logger to ``debug``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:536
+#: ../../content/developer/reference/cli.rst:535
 msgid "equivalent to ``--log-sql``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:539
+#: ../../content/developer/reference/cli.rst:538
 msgid "``debug_rpc``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:538
+#: ../../content/developer/reference/cli.rst:537
 msgid "sets the ``odoo`` and HTTP request loggers to ``debug``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:540
+#: ../../content/developer/reference/cli.rst:539
 msgid "equivalent to ``--log-level debug --log-request``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:545
+#: ../../content/developer/reference/cli.rst:544
 msgid "``debug_rpc_answer``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:542
+#: ../../content/developer/reference/cli.rst:541
 msgid "sets the ``odoo`` and HTTP request and response loggers to ``debug``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:545
+#: ../../content/developer/reference/cli.rst:544
 msgid "equivalent to ``--log-level debug --log-request --log-response``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:549
+#: ../../content/developer/reference/cli.rst:548
 msgid "In case of conflict between :option:`--log-level` and :option:`--log-handler`, the latter is used"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:555
+#: ../../content/developer/reference/cli.rst:554
 msgid "Multiprocessing"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:559
+#: ../../content/developer/reference/cli.rst:558
 msgid "if ``count`` is not 0 (the default), enables multiprocessing and sets up the specified number of HTTP workers (sub-processes processing HTTP and RPC requests)."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:563
+#: ../../content/developer/reference/cli.rst:562
 msgid "multiprocessing mode is only available on Unix-based systems"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:565
+#: ../../content/developer/reference/cli.rst:564
 msgid "A number of options allow limiting and recycling workers:"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:569
+#: ../../content/developer/reference/cli.rst:568
 msgid "Number of requests a worker will process before being recycled and restarted."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:572
+#: ../../content/developer/reference/cli.rst:571
 msgid "Defaults to *8196*."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:576
+#: ../../content/developer/reference/cli.rst:575
 msgid "Maximum allowed virtual memory per worker in bytes. If the limit is exceeded, the worker is killed and recycled at the end of the current request."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:579
+#: ../../content/developer/reference/cli.rst:578
 msgid "Defaults to *2048MiB (2048\\*1024\\*1024B)*."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:583
+#: ../../content/developer/reference/cli.rst:582
 msgid "Hard limit on virtual memory in bytes, any worker exceeding the limit will be immediately killed without waiting for the end of the current request processing."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:587
+#: ../../content/developer/reference/cli.rst:586
 msgid "Defaults to *2560MiB (2560\\*1024\\*1024B)*."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:591
+#: ../../content/developer/reference/cli.rst:590
 msgid "Prevents the worker from using more than <limit> CPU seconds for each request. If the limit is exceeded, the worker is killed."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:594
+#: ../../content/developer/reference/cli.rst:593
 msgid "Defaults to *60*."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:598
+#: ../../content/developer/reference/cli.rst:597
 msgid "Prevents the worker from taking longer than <limit> seconds to process a request. If the limit is exceeded, the worker is killed."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:601
+#: ../../content/developer/reference/cli.rst:600
 msgid "Differs from :option:`--limit-time-cpu` in that this is a \"wall time\" limit including e.g. SQL queries."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:604
+#: ../../content/developer/reference/cli.rst:603
 msgid "Defaults to *120*."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:608
+#: ../../content/developer/reference/cli.rst:607
 msgid "number of workers dedicated to :ref:`cron <reference/actions/cron>` jobs. Defaults to *2*. The workers are threads in multi-threading mode and processes in multi-processing mode."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:611
+#: ../../content/developer/reference/cli.rst:610
 msgid "For multi-processing mode, this is in addition to the HTTP worker processes."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:616
+#: ../../content/developer/reference/cli.rst:615
 msgid "Configuration file"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:620
+#: ../../content/developer/reference/cli.rst:619
 msgid "Most of the command-line options can also be specified via a configuration file. Most of the time, they use similar names with the prefix ``-`` removed and other ``-`` are replaced by ``_`` e.g. :option:`--db-template` becomes ``db_template``."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:625
+#: ../../content/developer/reference/cli.rst:624
 msgid "Some conversions don't match the pattern:"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:627
+#: ../../content/developer/reference/cli.rst:626
 msgid ":option:`--db-filter` becomes ``dbfilter``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:628
+#: ../../content/developer/reference/cli.rst:627
 msgid ":option:`--no-http` corresponds to the ``http_enable`` boolean"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:629
+#: ../../content/developer/reference/cli.rst:628
 msgid "logging presets (all options starting with ``--log-`` except for :option:`--log-handler` and :option:`--log-db`) just add content to ``log_handler``, use that directly in the configuration file"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:632
+#: ../../content/developer/reference/cli.rst:631
 msgid ":option:`--smtp` is stored as ``smtp_server``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:633
+#: ../../content/developer/reference/cli.rst:632
 msgid ":option:`--database` is stored as ``db_name``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:634
+#: ../../content/developer/reference/cli.rst:633
 msgid ":option:`--i18n-import` and :option:`--i18n-export` aren't available at all from configuration files"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:639
+#: ../../content/developer/reference/cli.rst:638
 msgid "The default configuration file is :file:`{$HOME}/.odoorc` which can be overridden using :option:`--config <odoo-bin -c>`. Specifying :option:`--save <odoo-bin -s>` will save the current configuration state back to that file. The configuration items relative to the command-line are to be specified in the section ``[options]``."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:645
+#: ../../content/developer/reference/cli.rst:644
 msgid "Here is a sample file:"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:670
+#: ../../content/developer/reference/cli.rst:669
 msgid "Shell"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:672
-msgid "Odoo command-line also allows to launch odoo as a python console environment. This enables direct interaction with the :ref:`orm <reference/orm>` and its functionalities."
+#: ../../content/developer/reference/cli.rst:671
+msgid "The Odoo command line also allows launching Odoo as a Python console environment, enabling direct interaction with the :ref:`orm <reference/orm>` and its functionalities."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:682
-msgid "Specify a preferred REPL to use in shell mode."
+#: ../../content/developer/reference/cli.rst:680
+msgid "Adding an exclamation mark to all contacts' names:"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:688
-msgid "Scaffolding"
+#: ../../content/developer/reference/cli.rst:696
+msgid "By default, the shell is running in transaction mode. This means that any change made to the database is rolled back when exiting the shell. To commit changes, use `env.cr.commit()`."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:692
-msgid "Scaffolding is the automated creation of a skeleton structure to simplify bootstrapping (of new modules, in the case of Odoo). While not necessary it avoids the tedium of setting up basic structures and looking up what all starting requirements are."
-msgstr ""
-
-#: ../../content/developer/reference/cli.rst:697
-msgid "Scaffolding is available via the :command:`odoo-bin scaffold` subcommand."
+#: ../../content/developer/reference/cli.rst:701
+msgid "Specify a preferred REPL to use in shell mode. This shell is started with the `env` variable already initialized to be able to access the ORM and other Odoo modules."
 msgstr ""
 
 #: ../../content/developer/reference/cli.rst:705
-msgid "the name of the module to create, may munged in various manners to generate programmatic names (e.g. module directory name, model names, …)"
+msgid ":ref:`reference/orm/environment`"
 msgstr ""
 
 #: ../../content/developer/reference/cli.rst:710
-msgid "directory in which to create the new module, defaults to the current directory"
+msgid "Scaffolding"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:715
-msgid "a template directory, files are passed through jinja2_ then copied to the ``destination`` directory"
+#: ../../content/developer/reference/cli.rst:714
+msgid "Scaffolding is the automated creation of a skeleton structure to simplify bootstrapping (of new modules, in the case of Odoo). While not necessary it avoids the tedium of setting up basic structures and looking up what all starting requirements are."
 msgstr ""
 
 #: ../../content/developer/reference/cli.rst:719
+msgid "Scaffolding is available via the :command:`odoo-bin scaffold` subcommand."
+msgstr ""
+
+#: ../../content/developer/reference/cli.rst:727
+msgid "the name of the module to create, may munged in various manners to generate programmatic names (e.g. module directory name, model names, …)"
+msgstr ""
+
+#: ../../content/developer/reference/cli.rst:732
+msgid "directory in which to create the new module, defaults to the current directory"
+msgstr ""
+
+#: ../../content/developer/reference/cli.rst:737
+msgid "a template directory, files are passed through jinja2_ then copied to the ``destination`` directory"
+msgstr ""
+
+#: ../../content/developer/reference/cli.rst:741
 msgid "This will create module *my_module* in directory */addons/*."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:724
+#: ../../content/developer/reference/cli.rst:746
 msgid "Database Population"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:728
+#: ../../content/developer/reference/cli.rst:750
 msgid "Odoo CLI supports database population features. If the feature is :ref:`implemented on a given model <reference/performance/populate/methods>`, it allows automatic data generation of the model's records to test your modules in databases containing non-trivial amounts of records."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:739
+#: ../../content/developer/reference/cli.rst:761
 msgid "list of models for which the database should be filled"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:743
+#: ../../content/developer/reference/cli.rst:765
 msgid "population size, the actual records number depends on the model's `_populate_sizes` attribute. The generated records content is specified by the :meth:`~odoo.models._populate_factories` method of a given model (cf. the :file:`populate` folder of modules for further details)."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:748
+#: ../../content/developer/reference/cli.rst:770
 msgid ":ref:`reference/performance/populate`"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:753
+#: ../../content/developer/reference/cli.rst:775
 msgid "Cloc"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:757
+#: ../../content/developer/reference/cli.rst:779
 msgid "Odoo Cloc is a tool to count the number of relevant lines written in Python, Javascript, CSS, SCSS, or XML. This can be used as a rough metric for pricing maintenance of extra modules."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:762
+#: ../../content/developer/reference/cli.rst:784
 msgid "Command-line options"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:767
+#: ../../content/developer/reference/cli.rst:789
 msgid "Process the code of all extra modules installed on the provided database, and of all server actions and computed fields manually created in the provided database."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:769
+#: ../../content/developer/reference/cli.rst:791
 msgid "The :option:`--addons-path` option is required to specify the path(s) to the module folder(s)."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:772
+#: ../../content/developer/reference/cli.rst:794
 msgid "If combined with :option:`--path`, the count will be that of the sum of both options' results (with possible overlaps). At least one of these two options is required to specify which code to process."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:779
+#: ../../content/developer/reference/cli.rst:801
 msgid ":ref:`reference/cmdline/cloc/database-option`"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:784
+#: ../../content/developer/reference/cli.rst:806
 msgid "Process the files in the provided path."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:787
+#: ../../content/developer/reference/cli.rst:809
 msgid "If combined with :option:`--database`, the count will be that of the sum of both options' results (with possible overlaps). At least one of these two options is required to specify which code to process."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:794
+#: ../../content/developer/reference/cli.rst:816
 msgid "Multiple paths can be provided by repeating the option."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:801
+#: ../../content/developer/reference/cli.rst:823
 msgid ":ref:`reference/cmdline/cloc/path-option`"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:808
+#: ../../content/developer/reference/cli.rst:830
 msgid "Required if the :option:`--database` option is used."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:813
+#: ../../content/developer/reference/cli.rst:835
 msgid "Specify a configuration file to use in place of the :option:`--addons-path` option."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:822
+#: ../../content/developer/reference/cli.rst:844
 msgid "Show the details of lines counted for each file."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:826
+#: ../../content/developer/reference/cli.rst:848
 msgid "Processed files"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:831
+#: ../../content/developer/reference/cli.rst:853
 msgid "With the :option:`--database` option"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:833
+#: ../../content/developer/reference/cli.rst:855
 msgid "Odoo Cloc counts the lines in each file of extra installed modules in a given database. In addition, it counts the Python lines of server actions and custom computed fields that have been directly created in the database or imported. Finally, it counts the lines of code of Javascript, CSS, and SCSS files, and of QWeb views from imported modules."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:839
+#: ../../content/developer/reference/cli.rst:861
 msgid "Some files are excluded from the count by default:"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:841
+#: ../../content/developer/reference/cli.rst:863
 msgid "The manifest (:file:`__manifest__.py` or :file:`__openerp__.py`)"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:842
+#: ../../content/developer/reference/cli.rst:864
 msgid "The contents of the folder :file:`static/lib`"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:843
+#: ../../content/developer/reference/cli.rst:865
 msgid "The tests defined in the folder :file:`tests` and :file:`static/tests`"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:844
+#: ../../content/developer/reference/cli.rst:866
 msgid "The migrations scripts defined in the folder :file:`migrations` and `upgrades`"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:845
+#: ../../content/developer/reference/cli.rst:867
 msgid "The XML files declared in the ``demo`` or ``demo_xml`` sections of the manifest"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:847
+#: ../../content/developer/reference/cli.rst:869
 msgid "For special cases, a list of files that should be ignored by Odoo Cloc can be defined per module. This is specified by the ``cloc_exclude`` entry of the manifest:"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:860
+#: ../../content/developer/reference/cli.rst:882
 msgid "The pattern ``**/*`` can be used to ignore an entire module. This can be useful to exclude a module from maintenance service costs."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:862
+#: ../../content/developer/reference/cli.rst:884
 msgid "For more information about the pattern syntax, see `glob <https://docs.python.org/3/library/pathlib.html#pathlib.Path.glob>`_."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:867
+#: ../../content/developer/reference/cli.rst:889
 msgid "With the :option:`--path` option"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:869
+#: ../../content/developer/reference/cli.rst:891
 msgid "This method works the same as with the :ref:`--database option <reference/cmdline/cloc/database-option>` if a manifest file is present in the given folder. Otherwise, it counts all files."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:875
+#: ../../content/developer/reference/cli.rst:897
 msgid "Identifying Extra Modules"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:877
+#: ../../content/developer/reference/cli.rst:899
 msgid "To distinguish between standard and extra modules, Odoo Cloc uses the following heuristic: modules that are located (real file system path, after following symbolic links) in the same parent directory as the ``base``, ``web`` or ``web_enterprise`` standard modules are considered standard. Other modules are treated as extra modules."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:884
+#: ../../content/developer/reference/cli.rst:906
 #: ../../content/developer/reference/frontend/services.rst:662
 msgid "Error Handling"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:886
+#: ../../content/developer/reference/cli.rst:908
 msgid "Some file cannot be counted by Odoo Cloc. Those file are reported at the end of the output."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:890
+#: ../../content/developer/reference/cli.rst:912
 msgid "Max file size exceeded"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:892
+#: ../../content/developer/reference/cli.rst:914
 msgid "Odoo Cloc rejects any file larger than 25MB. Usually, source files are smaller than 1 MB. If a file is rejected, it may be:"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:895
+#: ../../content/developer/reference/cli.rst:917
 msgid "A generated XML file that contains lots of data. It should be excluded in the manifest."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:896
+#: ../../content/developer/reference/cli.rst:918
 msgid "A JavaScript library that should be placed in the :file:`static/lib` folder."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:899
+#: ../../content/developer/reference/cli.rst:921
 msgid "Syntax Error"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:901
+#: ../../content/developer/reference/cli.rst:923
 msgid "Odoo Cloc cannot count the lines of code of a Python file with a syntax problem. If an extra module contains such files, they should be fixed to allow the module to load. If the module works despite the presence of those files, they are probably not loaded and should therefore be removed from the module, or at least excluded in the manifest via ``cloc_exclude``."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:908
+#: ../../content/developer/reference/cli.rst:930
 msgid "TSConfig Generator"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:912
+#: ../../content/developer/reference/cli.rst:934
 msgid "When working on javascript, there are ways to help your editor providing you with powerful auto-completion. One of those ways is the use of a tsconfig.json file. Originally meant for typescript, editors can use its information with plain javascript also. With this config file, you will now have full auto-completion across modules."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:917
+#: ../../content/developer/reference/cli.rst:939
 msgid "The command to generate this files takes as many unnamed arguments as you need. Those are relative paths to your addon directories. In the example below, we move up one folder to save the tsconfig file in the folder containing community and enterprise."
 msgstr ""
 
@@ -23928,10 +24287,6 @@ msgstr ""
 
 #: ../../content/developer/tutorials/backend.rst:696
 msgid "The value of a computed field usually depends on the values of other fields on the computed record. The ORM expects the developer to specify those dependencies on the compute method with the decorator :func:`~odoo.api.depends`. The given dependencies are used by the ORM to trigger the recomputation of the field whenever some of its dependencies have been modified::"
-msgstr ""
-
-#: ../../content/developer/tutorials/backend.rst:715
-msgid "Computed fields"
 msgstr ""
 
 #: ../../content/developer/tutorials/backend.rst:717
