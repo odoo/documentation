@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo saas-15.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-19 07:46+0000\n"
+"POT-Creation-Date: 2024-01-19 06:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3079,7 +3079,7 @@ msgid ":option:`--addons-path <odoo-bin --addons-path>`"
 msgstr ""
 
 #: ../../content/developer/howtos/website_themes/setup.rst:213
-#: ../../content/developer/reference/cli.rst:799
+#: ../../content/developer/reference/cli.rst:798
 msgid "Comma-separated list of directories in which modules are stored. These directories are scanned for modules."
 msgstr ""
 
@@ -13011,443 +13011,443 @@ msgid "Logging"
 msgstr ""
 
 #: ../../content/developer/reference/cli.rst:454
-msgid "By default, Odoo displays all logging of level_ ``info`` except for workflow logging (``warning`` only), and log output is sent to ``stdout``. Various options are available to redirect logging to other destinations and to customize the amount of logging output."
+msgid "By default, Odoo displays all logging of level_ ``INFO``, ``WARNING`` and ``ERROR``. All logs independently of the level are output on ``stderr``. Various options are available to redirect logging to other destinations and to customize the verbosity."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:461
-msgid "sends logging output to the specified file instead of stdout. On Unix, the file `can be managed by external log rotation programs <https://docs.python.org/3/library/logging.handlers.html#watchedfilehandler>`_ and will automatically be reopened when replaced"
+#: ../../content/developer/reference/cli.rst:460
+msgid "sends logging output to the specified file instead of ``stderr``. On Unix, the file `can be managed by external log rotation programs <https://docs.python.org/3/library/logging.handlers.html#watchedfilehandler>`_ and will automatically be reopened when replaced"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:468
+#: ../../content/developer/reference/cli.rst:467
 msgid "logs to the system's event logger: `syslog on unices <https://docs.python.org/3/library/logging.handlers.html#sysloghandler>`_ and `the Event Log on Windows <https://docs.python.org/3/library/logging.handlers.html#nteventloghandler>`_."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:471
+#: ../../content/developer/reference/cli.rst:470
 msgid "Neither is configurable"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:475
+#: ../../content/developer/reference/cli.rst:474
 msgid "logs to the ``ir.logging`` model (``ir_logging`` table) of the specified database. The database can be the name of a database in the \"current\" PostgreSQL, or `a PostgreSQL URI`_ for e.g. log aggregation."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:481
+#: ../../content/developer/reference/cli.rst:480
 msgid ":samp:`{LOGGER}:{LEVEL}`, enables ``LOGGER`` at the provided ``LEVEL`` e.g. ``odoo.models:DEBUG`` will enable all logging messages at or above ``DEBUG`` level in the models."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:485
+#: ../../content/developer/reference/cli.rst:484
 msgid "The colon ``:`` is mandatory"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:486
+#: ../../content/developer/reference/cli.rst:485
 msgid "The logger can be omitted to configure the root (default) handler"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:487
+#: ../../content/developer/reference/cli.rst:486
 msgid "If the level is omitted, the logger is set to ``INFO``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:489
+#: ../../content/developer/reference/cli.rst:488
 msgid "The option can be repeated to configure multiple loggers e.g."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:497
+#: ../../content/developer/reference/cli.rst:496
 msgid "enable DEBUG logging for RPC requests, equivalent to ``--log-handler=odoo.http.rpc.request:DEBUG``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:502
+#: ../../content/developer/reference/cli.rst:501
 msgid "enable DEBUG logging for RPC responses, equivalent to ``--log-handler=odoo.http.rpc.response:DEBUG``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:507
+#: ../../content/developer/reference/cli.rst:506
 msgid "enables DEBUG logging of HTTP requests and responses, equivalent to ``--log-handler=odoo.http:DEBUG``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:512
+#: ../../content/developer/reference/cli.rst:511
 msgid "enables DEBUG logging of SQL querying, equivalent to ``--log-handler=odoo.sql_db:DEBUG``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:517
+#: ../../content/developer/reference/cli.rst:516
 msgid "Shortcut to more easily set predefined levels on specific loggers. \"real\" levels (``critical``, ``error``, ``warn``, ``debug``) are set on the ``odoo`` and ``werkzeug`` loggers (except for ``debug`` which is only set on ``odoo``)."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:522
+#: ../../content/developer/reference/cli.rst:521
 msgid "Odoo also provides debugging pseudo-levels which apply to different sets of loggers:"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:527
+#: ../../content/developer/reference/cli.rst:526
 msgid "``debug_sql``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:526
+#: ../../content/developer/reference/cli.rst:525
 msgid "sets the SQL logger to ``debug``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:528
+#: ../../content/developer/reference/cli.rst:527
 msgid "equivalent to ``--log-sql``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:531
+#: ../../content/developer/reference/cli.rst:530
 msgid "``debug_rpc``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:530
+#: ../../content/developer/reference/cli.rst:529
 msgid "sets the ``odoo`` and HTTP request loggers to ``debug``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:532
+#: ../../content/developer/reference/cli.rst:531
 msgid "equivalent to ``--log-level debug --log-request``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:537
+#: ../../content/developer/reference/cli.rst:536
 msgid "``debug_rpc_answer``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:534
+#: ../../content/developer/reference/cli.rst:533
 msgid "sets the ``odoo`` and HTTP request and response loggers to ``debug``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:537
+#: ../../content/developer/reference/cli.rst:536
 msgid "equivalent to ``--log-level debug --log-request --log-response``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:541
+#: ../../content/developer/reference/cli.rst:540
 msgid "In case of conflict between :option:`--log-level` and :option:`--log-handler`, the latter is used"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:547
+#: ../../content/developer/reference/cli.rst:546
 msgid "Multiprocessing"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:551
+#: ../../content/developer/reference/cli.rst:550
 msgid "if ``count`` is not 0 (the default), enables multiprocessing and sets up the specified number of HTTP workers (sub-processes processing HTTP and RPC requests)."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:555
+#: ../../content/developer/reference/cli.rst:554
 msgid "multiprocessing mode is only available on Unix-based systems"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:557
+#: ../../content/developer/reference/cli.rst:556
 msgid "A number of options allow limiting and recycling workers:"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:561
+#: ../../content/developer/reference/cli.rst:560
 msgid "Number of requests a worker will process before being recycled and restarted."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:564
+#: ../../content/developer/reference/cli.rst:563
 msgid "Defaults to *8196*."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:568
+#: ../../content/developer/reference/cli.rst:567
 msgid "Maximum allowed virtual memory per worker in bytes. If the limit is exceeded, the worker is killed and recycled at the end of the current request."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:571
+#: ../../content/developer/reference/cli.rst:570
 msgid "Defaults to *2048MiB (2048\\*1024\\*1024B)*."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:575
+#: ../../content/developer/reference/cli.rst:574
 msgid "Hard limit on virtual memory in bytes, any worker exceeding the limit will be immediately killed without waiting for the end of the current request processing."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:579
+#: ../../content/developer/reference/cli.rst:578
 msgid "Defaults to *2560MiB (2560\\*1024\\*1024B)*."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:583
+#: ../../content/developer/reference/cli.rst:582
 msgid "Prevents the worker from using more than <limit> CPU seconds for each request. If the limit is exceeded, the worker is killed."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:586
+#: ../../content/developer/reference/cli.rst:585
 msgid "Defaults to *60*."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:590
+#: ../../content/developer/reference/cli.rst:589
 msgid "Prevents the worker from taking longer than <limit> seconds to process a request. If the limit is exceeded, the worker is killed."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:593
+#: ../../content/developer/reference/cli.rst:592
 msgid "Differs from :option:`--limit-time-cpu` in that this is a \"wall time\" limit including e.g. SQL queries."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:596
+#: ../../content/developer/reference/cli.rst:595
 msgid "Defaults to *120*."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:600
+#: ../../content/developer/reference/cli.rst:599
 msgid "number of workers dedicated to :ref:`cron <reference/actions/cron>` jobs. Defaults to *2*. The workers are threads in multi-threading mode and processes in multi-processing mode."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:603
+#: ../../content/developer/reference/cli.rst:602
 msgid "For multi-processing mode, this is in addition to the HTTP worker processes."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:608
+#: ../../content/developer/reference/cli.rst:607
 msgid "Configuration file"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:612
+#: ../../content/developer/reference/cli.rst:611
 msgid "Most of the command-line options can also be specified via a configuration file. Most of the time, they use similar names with the prefix ``-`` removed and other ``-`` are replaced by ``_`` e.g. :option:`--db-template` becomes ``db_template``."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:617
+#: ../../content/developer/reference/cli.rst:616
 msgid "Some conversions don't match the pattern:"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:619
+#: ../../content/developer/reference/cli.rst:618
 msgid ":option:`--db-filter` becomes ``dbfilter``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:620
+#: ../../content/developer/reference/cli.rst:619
 msgid ":option:`--no-http` corresponds to the ``http_enable`` boolean"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:621
+#: ../../content/developer/reference/cli.rst:620
 msgid "logging presets (all options starting with ``--log-`` except for :option:`--log-handler` and :option:`--log-db`) just add content to ``log_handler``, use that directly in the configuration file"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:624
+#: ../../content/developer/reference/cli.rst:623
 msgid ":option:`--smtp` is stored as ``smtp_server``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:625
+#: ../../content/developer/reference/cli.rst:624
 msgid ":option:`--database` is stored as ``db_name``"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:626
+#: ../../content/developer/reference/cli.rst:625
 msgid ":option:`--i18n-import` and :option:`--i18n-export` aren't available at all from configuration files"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:631
+#: ../../content/developer/reference/cli.rst:630
 msgid "The default configuration file is :file:`{$HOME}/.odoorc` which can be overridden using :option:`--config <odoo-bin -c>`. Specifying :option:`--save <odoo-bin -s>` will save the current configuration state back to that file. The configuration items relative to the command-line are to be specified in the section ``[options]``."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:637
+#: ../../content/developer/reference/cli.rst:636
 msgid "Here is a sample file:"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:662
+#: ../../content/developer/reference/cli.rst:661
 msgid "Shell"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:664
+#: ../../content/developer/reference/cli.rst:663
 msgid "Odoo command-line also allows to launch odoo as a python console environment. This enables direct interaction with the :ref:`orm <reference/orm>` and its functionalities."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:674
+#: ../../content/developer/reference/cli.rst:673
 msgid "Specify a preferred REPL to use in shell mode."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:680
+#: ../../content/developer/reference/cli.rst:679
 msgid "Scaffolding"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:684
+#: ../../content/developer/reference/cli.rst:683
 msgid "Scaffolding is the automated creation of a skeleton structure to simplify bootstrapping (of new modules, in the case of Odoo). While not necessary it avoids the tedium of setting up basic structures and looking up what all starting requirements are."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:689
+#: ../../content/developer/reference/cli.rst:688
 msgid "Scaffolding is available via the :command:`odoo-bin scaffold` subcommand."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:697
+#: ../../content/developer/reference/cli.rst:696
 msgid "the name of the module to create, may munged in various manners to generate programmatic names (e.g. module directory name, model names, …)"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:702
+#: ../../content/developer/reference/cli.rst:701
 msgid "directory in which to create the new module, defaults to the current directory"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:707
+#: ../../content/developer/reference/cli.rst:706
 msgid "a template directory, files are passed through jinja2_ then copied to the ``destination`` directory"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:711
+#: ../../content/developer/reference/cli.rst:710
 msgid "This will create module *my_module* in directory */addons/*."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:716
+#: ../../content/developer/reference/cli.rst:715
 msgid "Database Population"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:720
+#: ../../content/developer/reference/cli.rst:719
 msgid "Odoo CLI supports database population features. If the feature is :ref:`implemented on a given model <reference/performance/populate/methods>`, it allows automatic data generation of the model's records to test your modules in databases containing non-trivial amounts of records."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:731
+#: ../../content/developer/reference/cli.rst:730
 msgid "list of models for which the database should be filled"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:735
+#: ../../content/developer/reference/cli.rst:734
 msgid "population size, the actual records number depends on the model's `_populate_sizes` attribute. The generated records content is specified by the :meth:`~odoo.models._populate_factories` method of a given model (cf. the :file:`populate` folder of modules for further details)."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:740
+#: ../../content/developer/reference/cli.rst:739
 msgid ":ref:`reference/performance/populate`"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:745
+#: ../../content/developer/reference/cli.rst:744
 msgid "Cloc"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:749
+#: ../../content/developer/reference/cli.rst:748
 msgid "Odoo Cloc is a tool to count the number of relevant lines written in Python, Javascript, CSS, SCSS, or XML. This can be used as a rough metric for pricing maintenance of extra modules."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:754
+#: ../../content/developer/reference/cli.rst:753
 msgid "Command-line options"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:759
+#: ../../content/developer/reference/cli.rst:758
 msgid "Process the code of all extra modules installed on the provided database, and of all server actions and computed fields manually created in the provided database."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:761
+#: ../../content/developer/reference/cli.rst:760
 msgid "The :option:`--addons-path` option is required to specify the path(s) to the module folder(s)."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:764
+#: ../../content/developer/reference/cli.rst:763
 msgid "If combined with :option:`--path`, the count will be that of the sum of both options' results (with possible overlaps). At least one of these two options is required to specify which code to process."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:771
+#: ../../content/developer/reference/cli.rst:770
 msgid ":ref:`reference/cmdline/cloc/database-option`"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:776
+#: ../../content/developer/reference/cli.rst:775
 msgid "Process the files in the provided path."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:779
+#: ../../content/developer/reference/cli.rst:778
 msgid "If combined with :option:`--database`, the count will be that of the sum of both options' results (with possible overlaps). At least one of these two options is required to specify which code to process."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:786
+#: ../../content/developer/reference/cli.rst:785
 msgid "Multiple paths can be provided by repeating the option."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:793
+#: ../../content/developer/reference/cli.rst:792
 msgid ":ref:`reference/cmdline/cloc/path-option`"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:800
+#: ../../content/developer/reference/cli.rst:799
 msgid "Required if the :option:`--database` option is used."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:805
+#: ../../content/developer/reference/cli.rst:804
 msgid "Specify a configuration file to use in place of the :option:`--addons-path` option."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:814
+#: ../../content/developer/reference/cli.rst:813
 msgid "Show the details of lines counted for each file."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:818
+#: ../../content/developer/reference/cli.rst:817
 msgid "Processed files"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:823
+#: ../../content/developer/reference/cli.rst:822
 msgid "With the :option:`--database` option"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:825
+#: ../../content/developer/reference/cli.rst:824
 msgid "Odoo Cloc counts the lines in each file of extra installed modules in a given database. In addition, it counts the Python lines of server actions and custom computed fields that have been directly created in the database or imported. Finally, it counts the lines of code of Javascript, CSS, and SCSS files, and of QWeb views from imported modules."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:831
+#: ../../content/developer/reference/cli.rst:830
 msgid "Some files are excluded from the count by default:"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:833
+#: ../../content/developer/reference/cli.rst:832
 msgid "The manifest (:file:`__manifest__.py` or :file:`__openerp__.py`)"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:834
+#: ../../content/developer/reference/cli.rst:833
 msgid "The contents of the folder :file:`static/lib`"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:835
+#: ../../content/developer/reference/cli.rst:834
 msgid "The tests defined in the folder :file:`tests` and :file:`static/tests`"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:836
+#: ../../content/developer/reference/cli.rst:835
 msgid "The migrations scripts defined in the folder :file:`migrations` and `upgrades`"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:837
+#: ../../content/developer/reference/cli.rst:836
 msgid "The XML files declared in the ``demo`` or ``demo_xml`` sections of the manifest"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:839
+#: ../../content/developer/reference/cli.rst:838
 msgid "For special cases, a list of files that should be ignored by Odoo Cloc can be defined per module. This is specified by the ``cloc_exclude`` entry of the manifest:"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:852
+#: ../../content/developer/reference/cli.rst:851
 msgid "The pattern ``**/*`` can be used to ignore an entire module. This can be useful to exclude a module from maintenance service costs."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:854
+#: ../../content/developer/reference/cli.rst:853
 msgid "For more information about the pattern syntax, see `glob <https://docs.python.org/3/library/pathlib.html#pathlib.Path.glob>`_."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:859
+#: ../../content/developer/reference/cli.rst:858
 msgid "With the :option:`--path` option"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:861
+#: ../../content/developer/reference/cli.rst:860
 msgid "This method works the same as with the :ref:`--database option <reference/cmdline/cloc/database-option>` if a manifest file is present in the given folder. Otherwise, it counts all files."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:867
+#: ../../content/developer/reference/cli.rst:866
 msgid "Identifying Extra Modules"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:869
+#: ../../content/developer/reference/cli.rst:868
 msgid "To distinguish between standard and extra modules, Odoo Cloc uses the following heuristic: modules that are located (real file system path, after following symbolic links) in the same parent directory as the ``base``, ``web`` or ``web_enterprise`` standard modules are considered standard. Other modules are treated as extra modules."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:876
+#: ../../content/developer/reference/cli.rst:875
 #: ../../content/developer/reference/frontend/services.rst:662
 msgid "Error Handling"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:878
+#: ../../content/developer/reference/cli.rst:877
 msgid "Some file cannot be counted by Odoo Cloc. Those file are reported at the end of the output."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:882
+#: ../../content/developer/reference/cli.rst:881
 msgid "Max file size exceeded"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:884
+#: ../../content/developer/reference/cli.rst:883
 msgid "Odoo Cloc rejects any file larger than 25MB. Usually, source files are smaller than 1 MB. If a file is rejected, it may be:"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:887
+#: ../../content/developer/reference/cli.rst:886
 msgid "A generated XML file that contains lots of data. It should be excluded in the manifest."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:888
+#: ../../content/developer/reference/cli.rst:887
 msgid "A JavaScript library that should be placed in the :file:`static/lib` folder."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:891
+#: ../../content/developer/reference/cli.rst:890
 msgid "Syntax Error"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:893
+#: ../../content/developer/reference/cli.rst:892
 msgid "Odoo Cloc cannot count the lines of code of a Python file with a syntax problem. If an extra module contains such files, they should be fixed to allow the module to load. If the module works despite the presence of those files, they are probably not loaded and should therefore be removed from the module, or at least excluded in the manifest via ``cloc_exclude``."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:900
+#: ../../content/developer/reference/cli.rst:899
 msgid "TSConfig Generator"
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:904
+#: ../../content/developer/reference/cli.rst:903
 msgid "When working on javascript, there are ways to help your editor providing you with powerful auto-completion. One of those ways is the use of a tsconfig.json file. Originally meant for typescript, editors can use its information with plain javascript also. With this config file, you will now have full auto-completion across modules."
 msgstr ""
 
-#: ../../content/developer/reference/cli.rst:909
+#: ../../content/developer/reference/cli.rst:908
 msgid "The command to generate this files takes as many unnamed arguments as you need. Those are relative paths to your addon directories. In the example below, we move up one folder to save the tsconfig file in the folder containing community and enterprise."
 msgstr ""
 
