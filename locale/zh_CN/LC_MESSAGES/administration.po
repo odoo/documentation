@@ -17,22 +17,22 @@
 # Jeffery CHEN <jeffery9@gmail.com>, 2023
 # Emily Jia <eji@odoo.com>, 2023
 # mrshelly <mrshelly@hotmail.com>, 2023
-# Datasource International <Hennessy@datasourcegroup.com>, 2023
 # Mandy Choy <mnc@odoo.com>, 2023
 # Wil Odoo, 2023
 # lyper lai, 2023
 # 山西清水欧度(QQ:54773801) <54773801@qq.com>, 2023
-# diaojiaolou <124412206@qq.com>, 2023
 # Chloe Wang, 2024
+# diaojiaolou <124412206@qq.com>, 2024
+# Datasource International <Hennessy@datasourcegroup.com>, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-21 13:43+0000\n"
+"POT-Creation-Date: 2024-01-19 15:28+0000\n"
 "PO-Revision-Date: 2023-11-08 08:55+0000\n"
-"Last-Translator: Chloe Wang, 2024\n"
+"Last-Translator: Datasource International <Hennessy@datasourcegroup.com>, 2024\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/odoo/teams/41243/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -498,6 +498,7 @@ msgstr "允许来自 192.168.1.x 网络的 tcp 连接"
 #: ../../content/administration/install/deploy.rst:100
 msgid "in ``/etc/postgresql/<YOUR POSTGRESQL VERSION>/main/pg_hba.conf`` set:"
 msgstr ""
+"在 ``/etc/postgresql/<YOUR POSTGRESQL VERSION>/main/pg_hba.conf`` set中："
 
 #: ../../content/administration/install/deploy.rst:108
 msgid ""
@@ -1543,6 +1544,105 @@ msgid ""
 msgstr ""
 "如果您无权访问/管理电子邮件服务器，请使用 ：ref：'入站邮件<email_communication/inbound_messages>'。"
 
+#: ../../content/administration/install/geo_ip.rst:3
+msgid "Geo IP"
+msgstr ""
+
+#: ../../content/administration/install/geo_ip.rst:6
+msgid "This documentation only applies to On-premise databases."
+msgstr ""
+
+#: ../../content/administration/install/geo_ip.rst:9
+msgid "Installation"
+msgstr "安装"
+
+#: ../../content/administration/install/geo_ip.rst:11
+msgid ""
+"Download both the GeoLite2 City and Country `databases "
+"<https://dev.maxmind.com/geoip/geoip2/geolite2/>`_. You should end up with "
+"two files called :file:`GeoLite2-City.mmdb` and "
+":file:`GeoLite2-Country.mmdb`."
+msgstr ""
+
+#: ../../content/administration/install/geo_ip.rst:15
+msgid "Move the files to the folder :file:`/usr/share/GeoIP/`."
+msgstr ""
+
+#: ../../content/administration/install/geo_ip.rst:22
+msgid "Restart the server"
+msgstr "重启服务器"
+
+#: ../../content/administration/install/geo_ip.rst:25
+msgid ""
+"If you don't want to locate the geoip database in :file:`/usr/share/GeoIP/`,"
+" use the :option:`--geoip-city-db <odoo-bin --geoip-city-db>` and "
+":option:`--geoip-country-db <odoo-bin --geoip-country-db>` options of the "
+"Odoo command line interface. These options take the absolute path to the "
+"GeoIP database file and use it as the GeoIP database. For example:"
+msgstr ""
+
+#: ../../content/administration/install/geo_ip.rst:36
+msgid ":doc:`CLI documentation </developer/reference/cli>`."
+msgstr ""
+
+#: ../../content/administration/install/geo_ip.rst:39
+msgid "Test GeoIP geolocation in your Odoo website"
+msgstr ""
+
+#: ../../content/administration/install/geo_ip.rst:41
+msgid ""
+"Edit a web page to include some geo-ip information such as the country name "
+"of the current request IP address. To do so:"
+msgstr ""
+
+#: ../../content/administration/install/geo_ip.rst:44
+msgid "Go to your website. Open the web page that you want to test ``GeoIP``."
+msgstr "转到你的网站。打开要测试“GeoIP”的网页。"
+
+#: ../../content/administration/install/geo_ip.rst:45
+msgid "Choose :menuselection:`Customize --> HTML/CSS/JS Editor`."
+msgstr "选择 :menuselection:`自定义 --> HTML/CSS/JS编辑器`。"
+
+#: ../../content/administration/install/geo_ip.rst:46
+msgid "Add the following piece of XML in the page :"
+msgstr "在页面添加以下XML："
+
+#: ../../content/administration/install/geo_ip.rst:52
+msgid "Save and refresh the page."
+msgstr ""
+
+#: ../../content/administration/install/geo_ip.rst:54
+msgid ""
+"Geo-ip is working if you read your country name displayed in bold in the "
+"middle of the page."
+msgstr ""
+
+#: ../../content/administration/install/geo_ip.rst:56
+msgid ""
+"In case you read \"**geoip failure**\" instead then the geolocalization "
+"failed. The common causes are:"
+msgstr ""
+
+#: ../../content/administration/install/geo_ip.rst:58
+msgid ""
+"The browsing IP address is the localhost (``127.0.0.1``) or a local area "
+"network one. If you don't know, you can access your website using mobile "
+"data."
+msgstr ""
+
+#: ../../content/administration/install/geo_ip.rst:60
+msgid ""
+"You are using a reverse-proxy (apache, nginx) in front of Odoo but didn't "
+"start Odoo with the proxy-mode enabled. See :option:`proxy mode <odoo-bin "
+"--proxy-mode>`."
+msgstr ""
+
+#: ../../content/administration/install/geo_ip.rst:62
+msgid ""
+"The GeoIP database is corrupt, missing or unaccessible. In such case a "
+"warning was logged in the server logs."
+msgstr ""
+
 #: ../../content/administration/install/online.rst:3
 msgid "Online"
 msgstr "线上"
@@ -1569,8 +1669,8 @@ msgstr ""
 #: ../../content/administration/maintain/domain_names.rst:166
 #: ../../content/administration/maintain/domain_names.rst:236
 #: ../../content/administration/maintain/supported_versions.rst:29
-#: ../../content/administration/upgrade.rst:92
-#: ../../content/administration/upgrade.rst:309
+#: ../../content/administration/upgrade.rst:90
+#: ../../content/administration/upgrade.rst:307
 msgid "Odoo Online"
 msgstr "Odoo云端版本"
 
@@ -2519,6 +2619,9 @@ msgid ""
 ":guilabel:`Users`. Personal accounts will only allow for :guilabel:`Users` "
 "to be added."
 msgstr ""
+"在左侧边栏菜单中选择 :guilabel:`用户和组`。然后，点击 :guilabel:`(+) 添加用户/组`。根据账户，可以添加 "
+":guilabel:` 组` 和 :guilabel:` 用户`，也可以只添加 :guilabel:`用户`。个人账户只允许添加 "
+":guilabel:`用户`。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:88
 msgid ""
@@ -2528,6 +2631,9 @@ msgid ""
 "users/groups, click :guilabel:`Select`, and then :guilabel:`Assign` them to "
 "the application."
 msgstr ""
+"在 :guilabel:`用户` 或 :guilabel:`组` 下，单击 :guilabel:`未选择` 并添加将从 Odoo "
+"中的:guilabel:`Microsoft 帐户`发送电子邮件的用户或用户组。 :guilabel:`Add` 用户/组，单击 "
+":guilabel:`选择`，然后 :guilabel:`分配` 他们到应用程序。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:94
 msgid "Create credentials"
@@ -2542,10 +2648,14 @@ msgid ""
 " :guilabel:`Application ID` is located under the :guilabel:`Display Name` in"
 " the :guilabel:`Essentials` overview of the app."
 msgstr ""
+"现在 Microsoft Azure 应用程序已设置完毕，需要为 Odoo 设置创建凭证。其中包括 :guilabel:`客户 ID` 和 "
+":guilabel:`客户密钥`。首先，可从应用程序的 :guilabel:`概览` 页面复制 :guilabel:`客户 "
+"ID`。guilabel:`客户 ID` 或 :guilabel:`应用程序 ID` 位于应用程序 :guilabel:`要点` 概览中 "
+":guilabel:`显示名称` 下方。"
 
 #: ../../content/administration/maintain/azure_oauth.rst-1
 msgid "Application/Client ID located in the Overview of the app."
-msgstr ""
+msgstr "应用程序/客户端 ID 位于应用程序概览中。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:106
 msgid ""
@@ -2554,6 +2664,8 @@ msgid ""
 "menu. Then, a :guilabel:`Client Secret` needs to be produced. In order to do"
 " this, click on the :guilabel:`(+) New Client Secret` button."
 msgstr ""
+"接下来，需要检索 :guilabel:`客户密钥值`。要获取该值，请单击左侧边栏菜单中的 :guilabel:`认证 & 密钥`。然后，需要生成 "
+":guilabel:`客户密钥`。为此，请单击 :guilabel:`(+) 新客户密文` 按钮。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:110
 msgid ""
@@ -2561,6 +2673,8 @@ msgid ""
 "client secret`. Under :guilabel:`Description`, type in `Odoo Fetchmail` or "
 "something recognizable, and then set the :guilabel:`expiration date`."
 msgstr ""
+"右侧窗口会弹出一个标有 :guilabel:`添加客户密钥` 的按钮。在:guilabel:`描述`下，输入`Odoo Fetchmail` "
+"或其他可识别的内容，然后设置:guilabel:`失效日期`。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:115
 msgid ""
@@ -2569,6 +2683,7 @@ msgid ""
 "service, so the expiration date should be noted and set to the furthest "
 "possible date."
 msgstr ""
+"如果第一个:guilabel:`客户密钥`过期，则需要制作和配置新的:guilabel:`客户密钥`。在此情况下，服务可能会中断，因此应注意过期日期，并将其设置为尽可能远的日期。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:119
 msgid ""
@@ -2578,28 +2693,31 @@ msgid ""
 "Value` into a notepad as it will become encrypted after leaving this page. "
 "The :guilabel:`Secret ID` is not needed."
 msgstr ""
+"输入这两个值后，点击 :guilabel:`添加`。将创建 :guilabel:`客户密钥值` 和 :guilabel:`密钥 ID`。请务必将 "
+":guilabel:`值` 或 :guilabel:`客户密钥值` 复制到记事本中，因为离开此页面后它将被加密。不需要 :guilabel:`密钥 "
+"ID`。"
 
 #: ../../content/administration/maintain/azure_oauth.rst-1
 msgid "Client Secret Value or Value in the app's credentials."
-msgstr ""
+msgstr "客户端密文值或应用程序凭证中的值。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:128
 msgid ""
 "After these steps, the following items should be ready to be set up in Odoo:"
-msgstr ""
+msgstr "完成这些步骤后，就可以在 Odoo 中设置以下项目了："
 
 #: ../../content/administration/maintain/azure_oauth.rst:130
 msgid "A client ID (:guilabel:`Client ID` or :guilabel:`Application ID`)"
-msgstr ""
+msgstr "客户端 ID（:guilabel:`客户端 ID` 或 :guilabel:` 应用程序 ID）"
 
 #: ../../content/administration/maintain/azure_oauth.rst:131
 msgid "A client secret (:guilabel:`Value` or :guilabel:`Client Secret Value`)"
-msgstr ""
+msgstr "客户密钥（:guilabel:`值` 或 :guilabel:`客户密钥值`)"
 
 #: ../../content/administration/maintain/azure_oauth.rst:133
 msgid ""
 "This completes the setup on the :guilabel:`Microsoft Azure Portal` side."
-msgstr ""
+msgstr "这样就完成了 :guilabel:`Microsoft Azure Portal` 侧的设置。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:136
 #: ../../content/administration/maintain/google_oauth.rst:111
@@ -2720,14 +2838,14 @@ msgstr ""
 
 #: ../../content/administration/maintain/azure_oauth.rst:194
 msgid "Configuration with a single outgoing mail server"
-msgstr ""
+msgstr "使用单一外发邮件服务器配置"
 
 #: ../../content/administration/maintain/azure_oauth.rst:196
 msgid ""
 "Configuring a single outgoing server is the simplest configuration available"
 " for Microsoft Azure and it doesn't require extensive access rights for the "
 "users in the database."
-msgstr ""
+msgstr "在 Microsoft Azure 中，配置单个外发服务器是最简单的配置，而且不需要为数据库中的用户设置广泛的访问权限。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:199
 msgid ""
@@ -2739,13 +2857,16 @@ msgid ""
 "`{mail.default.from}@{mail.catchall.domain}` key combination in the system "
 "parameters."
 msgstr ""
+"通用电子邮件地址将用于为数据库中的所有用户发送电子邮件。例如，它的结构可以是`通知`别名 (`notifications@example.com`) "
+"或`联系人`别名 (`contact@example.com`)。该地址必须设置为服务器上的 :guilabel:`FROM "
+"筛选器`。该地址还必须与系统参数中的`{mail.default.from}@{mail.catchall.domain}`关键组合相匹配。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:206
 #: ../../content/administration/maintain/azure_oauth.rst:247
 msgid ""
 "For more information on the from filter visit: "
 ":ref:`email_communication/default`."
-msgstr ""
+msgstr "有关 from 筛选器的更多信息，请访问 :ref:`email_communication/default`。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:209
 #: ../../content/administration/maintain/azure_oauth.rst:254
@@ -2754,6 +2875,8 @@ msgid ""
 ":ref:`developer-mode` in the :menuselection:`Settings --> Technical --> "
 "Parameters --> System Parameters` menu."
 msgstr ""
+"在 :menuselection:`设置 --> 技术 --> 参数 --> 系统参数` 菜单中激活 :ref:`开发者模式` 即可访问 "
+":guilabel:`系统参数`。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:212
 msgid ""
@@ -2762,39 +2885,40 @@ msgid ""
 "should be noted that the name of the sender will appear but their email "
 "address will change:"
 msgstr ""
+"使用此配置时，从数据库发送的每封电子邮件都将使用配置的 `通知`邮箱地址。不过需要注意的是，发件人的姓名会显示出来，但其电子邮件地址会改变："
 
 #: ../../content/administration/maintain/azure_oauth.rst-1
 msgid "Name from real sender with static email."
-msgstr ""
+msgstr "真实发件人的姓名和静态电子邮件。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:221
 msgid "Single outgoing mail server configuration:"
-msgstr ""
+msgstr "单一外发邮件服务器配置："
 
 #: ../../content/administration/maintain/azure_oauth.rst:223
 msgid ""
 "Outgoing mail server **username** (login) = `notifications@example.com`"
-msgstr ""
+msgstr "外发邮件服务器 **用户名**（登录） = `notifications@example.com`"
 
 #: ../../content/administration/maintain/azure_oauth.rst:224
 msgid ""
 "Outgoing mail server :guilabel:`FROM Filtering` = "
 "`notifications@example.com`"
-msgstr ""
+msgstr "外发邮件服务器 :guilabel:`FROM 筛选器` = `notifications@example.com`"
 
 #: ../../content/administration/maintain/azure_oauth.rst:225
 #: ../../content/administration/maintain/azure_oauth.rst:279
 msgid "`mail.catchall.domain` in system parameters = `example.com`"
-msgstr ""
+msgstr "系统参数中的 \"mail.catchall.domain\"=\"example.com"
 
 #: ../../content/administration/maintain/azure_oauth.rst:226
 #: ../../content/administration/maintain/azure_oauth.rst:280
 msgid "`mail.default.from` in system parameters = `notifications`"
-msgstr ""
+msgstr "系统参数中的 `mail.default.from` = `notifications`"
 
 #: ../../content/administration/maintain/azure_oauth.rst:229
 msgid "User-specific (multiple user) configuration"
-msgstr ""
+msgstr "用户特定（多用户）配置"
 
 #: ../../content/administration/maintain/azure_oauth.rst:231
 msgid ""
@@ -2803,6 +2927,8 @@ msgid ""
 ":guilabel:`FROM Filtering` on each individual server for this configuration "
 "to work."
 msgstr ""
+"除通用电子邮件服务器外，还可为数据库中的用户设置单独的电子邮件服务器。这些电子邮件地址必须在每个单独服务器上设置为 :guilabel:`FROM "
+"筛选器` 才能生效。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:235
 msgid ""
@@ -2811,6 +2937,8 @@ msgid ""
 "to have access rights to settings in order to establish a connection to the "
 "email server."
 msgstr ""
+"这种配置是 Microsoft Azure "
+"两种配置中难度较大的一种，因为它要求所有配置了电子邮件服务器的用户都有访问设置的权限，才能建立与电子邮件服务器的连接。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:240
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:480
@@ -2824,6 +2952,8 @@ msgid ""
 "server. In other words, only a user with an email address that matches the "
 "set :guilabel:`FROM Filtering` is able to use this server."
 msgstr ""
+"每位用户都应设置独立的电子邮件服务器。应设置 :guilabel:`FROM 筛选器` "
+"以便只从该服务器发送用户的电子邮件。换句话说，只有电子邮件地址符合 :guilabel:`FROM 筛选器` 设置的用户才能使用该服务器。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:249
 msgid ""
@@ -2832,6 +2962,9 @@ msgid ""
 " for this server should have the value of the "
 "`{mail.default.from}@{mail.catchall.domain}`."
 msgstr ""
+"必须设置 :ref:`后备服务器 <azure_oauth/notifications>`，以便发送 "
+":guilabel:`notifications`。该服务器的 :guilabel:`FROM Filtering` "
+"值应为`{mail.default.from}@{mail.catchall.domain}`。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:258
 msgid ""
@@ -2840,29 +2973,31 @@ msgid ""
 "mass-mailing email server can remain empty, but it's require to be added in "
 "the settings of the *Email Marketing* application."
 msgstr ""
+"该事务性电子邮件服务器的配置可与外发邮件群发服务器同时使用。邮件群发服务器的 :guilabel:`FROM Filtering` "
+"可以保持为空，但需要在 *电子邮件市场营销* 应用程序的设置中添加。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:263
 msgid ""
 "For more information on setting the mass-mailing email server visit "
 ":ref:`email_communication/mass_mails`."
-msgstr ""
+msgstr "有关设置邮件群发服务器的更多信息，请访问 :ref:`email_communication/mass_mails`。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:267
 msgid "Multiple user outgoing mail server configuration:"
-msgstr ""
+msgstr "多用户外发邮件服务器配置："
 
 #: ../../content/administration/maintain/azure_oauth.rst:270
 msgid "User #1 mailbox"
-msgstr ""
+msgstr "用户 #1 邮箱"
 
 #: ../../content/administration/maintain/azure_oauth.rst:270
 msgid "Outgoing mail server #1 **username** (login) = `john@example.com`"
-msgstr ""
+msgstr "外发邮件服务器 #1 **用户名**（登录） = `john@example.com`"
 
 #: ../../content/administration/maintain/azure_oauth.rst:271
 msgid ""
 "Outgoing mail server #1 :guilabel:`FROM Filtering` = `john@example.com`"
-msgstr ""
+msgstr "外发邮件服务器 #1 :guilabel:`FROM Filtering` = `john@example.com`"
 
 #: ../../content/administration/maintain/azure_oauth.rst:273
 msgid "User #2 mailbox"
@@ -2976,12 +3111,14 @@ msgid ""
 "`Odoo Tutorials: Register a Free Domain Name "
 "<https://www.odoo.com/slides/slide/register-a-free-domain-name-1663>`_"
 msgstr ""
+"`Odoo 教程：注册免费域名 <https://www.odoo.com/slides/slide/register-a-free-domain-"
+"name-1663>`_"
 
 #: ../../content/administration/maintain/domain_names.rst:27
 msgid ""
 "`Odoo Quick Tips: Get a free domain name! "
 "<https://www.youtube.com/watch?v=eAfgeNOHLP4>`_"
-msgstr ""
+msgstr "`Odoo 提示： 获取免费域名！<https://www.youtube.com/watch?v=eAfgeNOHLP4>`_"
 
 #: ../../content/administration/maintain/domain_names.rst:32
 msgid "About domain names"
@@ -3020,7 +3157,7 @@ msgstr ""
 
 #: ../../content/administration/maintain/domain_names.rst:51
 msgid "Indexing of domain names by search engines"
-msgstr ""
+msgstr "搜索引擎对域名的索引"
 
 #: ../../content/administration/maintain/domain_names.rst:53
 msgid ""
@@ -3058,22 +3195,30 @@ msgid ""
 "registered with Odoo <domain-name/odoo-manage>` and for domain names managed"
 " by other providers."
 msgstr ""
+"一些搜索引擎为网站管理员提供工具，如`Google Search Console <https://search.google.com/search-"
+"console>`_和 `Bing Webmaster Tools "
+"<https://www.bing.com/webmasters>`_，帮助您分析和提高页面排名。要使用这些服务，您必须证明您是域名的所有者。验证域名所有权的一种方法是添加"
+" DNS 记录。您可以为 :ref:` 在 Odoo <域名/odoo-manage>`注册的域名和由其他提供商管理的域名添加 DNS 记录。"
 
 #: ../../content/administration/maintain/domain_names.rst:74
 msgid ":doc:`/applications/websites/website/pages/seo`"
-msgstr ""
+msgstr ":doc:`/applications/websites/website/pages/seo`"
 
 #: ../../content/administration/maintain/domain_names.rst:75
 msgid ""
 "`Google Search Console Help - Verify your site ownership "
 "<https://support.google.com/webmasters/answer/9008080>`_"
 msgstr ""
+"`Google 搜索控制台帮助 - "
+"验证您的网站所有权<https://support.google.com/webmasters/answer/9008080>`_"
 
 #: ../../content/administration/maintain/domain_names.rst:76
 msgid ""
 "`Bing Webmaster Tools - Add and Verify site "
 "<https://www.bing.com/webmasters/help/add-and-verify-site-12184f8b>`_"
 msgstr ""
+"`Bing 网站管理员工具 - 添加和验证网站 <https://www.bing.com/webmasters/help/add-and-"
+"verify-site-12184f8b>`_"
 
 #: ../../content/administration/maintain/domain_names.rst:81
 msgid "Register a free domain name with Odoo"
@@ -3111,6 +3256,8 @@ msgid ""
 "your MX records <domain-name/odoo-manage>` to use your own email server or "
 "solution such as Google Workspace."
 msgstr ""
+"此优惠不包括任何邮箱。不过，您可以 :ref:`配置您的 MX 记录 <domain-name/odoo-manage>` 以使用自己的电子邮件服务器或"
+" Google Workspace 等解决方案。"
 
 #: ../../content/administration/maintain/domain_names.rst:95
 msgid ""
@@ -3119,10 +3266,13 @@ msgid ""
 "the :guilabel:`settings` button next to your database, then on "
 ":guilabel:`Domain names`."
 msgstr ""
+"为此，请访问 :menuselection:`网站 --> 域名`。或者，打开数据库管理器 "
+"<https://www.odoo.com/my/databases>`_，点击数据库旁边的 :guilabel:`设置` 按钮，然后点击 "
+":guilabel:`域名`。"
 
 #: ../../content/administration/maintain/domain_names.rst-1
 msgid "Clicking on Domain Names from an Odoo website"
-msgstr ""
+msgstr "从 Odoo 网站点击域名"
 
 #: ../../content/administration/maintain/domain_names.rst:103
 msgid ""
@@ -3134,7 +3284,7 @@ msgstr "搜索您选择的域名以检查其可用性，然后选择要为您的
 msgid ""
 "The search of the domain name example.com shows which associated domains are"
 " available."
-msgstr ""
+msgstr "搜索域名 example.com 会显示哪些相关域名可用。"
 
 #: ../../content/administration/maintain/domain_names.rst:110
 msgid ""
@@ -3155,6 +3305,8 @@ msgid ""
 "request and your website to avoid abuse. This process can take several days "
 "due to the success of the offer."
 msgstr ""
+"免费域名也适用于免费的 Odoo 在线数据库（例如，如果您只安装了一个应用程序）。在这种情况下，Odoo "
+"会审查您的申请和网站，以避免滥用。这个过程可能需要几天时间，这取决于报价是否成功。"
 
 #: ../../content/administration/maintain/domain_names.rst:119
 msgid "This is not available for Odoo.sh databases yet."
@@ -3177,7 +3329,7 @@ msgstr ""
 
 #: ../../content/administration/maintain/domain_names.rst-1
 msgid "Management of the domain names linked to an Odoo database"
-msgstr ""
+msgstr "管理与 Odoo 数据库链接的域名"
 
 #: ../../content/administration/maintain/domain_names.rst:136
 msgid ""
@@ -3226,7 +3378,7 @@ msgstr "添加 CNAME 记录"
 msgid ""
 "A **CNAME record** is a type of DNS record that points to the domain of "
 "another website rather than directly to an IP address."
-msgstr ""
+msgstr "**CNAME 记录**是一种 DNS 记录，它指向另一个网站的域名，而不是直接指向一个 IP 地址。"
 
 #: ../../content/administration/maintain/domain_names.rst:161
 msgid ""
@@ -3244,8 +3396,8 @@ msgstr "目标地址是数据库的当前地址，在创建时定义（例如，
 #: ../../content/administration/maintain/domain_names.rst:250
 #: ../../content/administration/maintain/supported_versions.rst:30
 #: ../../content/administration/odoo_sh.rst:5
-#: ../../content/administration/upgrade.rst:122
-#: ../../content/administration/upgrade.rst:320
+#: ../../content/administration/upgrade.rst:120
+#: ../../content/administration/upgrade.rst:318
 msgid "Odoo.sh"
 msgstr "Odoo.sh"
 
@@ -3286,6 +3438,8 @@ msgid ""
 "(``www.example.com``), you can of course use any domain name of your choice,"
 " with any subdomain (e.g., ``anything.example.com``)."
 msgstr ""
+"虽然 Odoo 建议为您的 ``www.`` 子域 (``www.example.com``) 创建一个 CNAME "
+"记录，但您当然可以使用您选择的任何域名和任何子域（例如，``anything.example.com``）。"
 
 #: ../../content/administration/maintain/domain_names.rst:189
 msgid ""
@@ -3410,7 +3564,7 @@ msgstr ""
 msgid ""
 "Verification of the CNAME records of a domain name before mapping it with a "
 "database"
-msgstr ""
+msgstr "在将域名映射到数据库之前，验证域名的 CNAME 记录"
 
 #: ../../content/administration/maintain/domain_names.rst:252
 msgid ""
@@ -3423,7 +3577,7 @@ msgstr ""
 
 #: ../../content/administration/maintain/domain_names.rst:0
 msgid "Mapping a domain name with an Odoo.sh branch"
-msgstr ""
+msgstr "将域名与 Odoo.sh 分支进行映射"
 
 #: ../../content/administration/maintain/domain_names.rst:260
 msgid ""
@@ -3821,6 +3975,9 @@ msgid ""
 "Gmail account (this should match the email address you want to configure in "
 "Odoo)."
 msgstr ""
+"要开始使用，请访问 `Google API "
+"控制台<https://console.developers.google.com>`_。如果您有*Google Workspace* "
+"账户，请使用该账户登录，否则请使用个人 Gmail 账户登录（该账户应与您要在 Odoo 中配置的电子邮件地址一致）。"
 
 #: ../../content/administration/maintain/google_oauth.rst:28
 msgid ""
@@ -3829,6 +3986,9 @@ msgid ""
 " in this account, then the :guilabel:`New Project` option will be located on"
 " the top right under the :guilabel:`Select a project` drop-down menu."
 msgstr ""
+"然后，点击位于:guilabel:`OAuth 同意屏幕` "
+"最右侧的:guilabel:`创建项目\"。如果该账户已创建项目，则:guilabel:`选择项目'下拉菜单右上方会出现 "
+":guilabel:`新建项目` 选项。"
 
 #: ../../content/administration/maintain/google_oauth.rst:33
 msgid ""
@@ -3838,14 +3998,17 @@ msgid ""
 "using a personal Gmail account, then leave the :guilabel:`Location` as "
 ":guilabel:`No Organization`."
 msgstr ""
+"在:menuselection:`新建项目` 屏幕上，将:guilabel:`项目名称` 重命名为 `Odoo`，并浏览 :guilabel:`位置` "
+"。将 :guilabel:`位置` 设置为 *Google 工作区组织*。如果使用的是个人 Gmail 帐户，则将:guilabel:`位置` 设为 "
+":guilabel:`无组织`。"
 
 #: ../../content/administration/maintain/google_oauth.rst-1
 msgid "Project Name and Location for Google OAuth."
-msgstr ""
+msgstr "Google OAuth 的项目名称和位置。"
 
 #: ../../content/administration/maintain/google_oauth.rst:42
 msgid "Click on :guilabel:`Create` to finish this step."
-msgstr ""
+msgstr "点击:guilabel:`创建` 完成此步骤。"
 
 #: ../../content/administration/maintain/google_oauth.rst:45
 msgid "OAuth consent screen"
@@ -3855,7 +4018,7 @@ msgstr "OAuth 同意屏幕"
 msgid ""
 "If the page doesn't redirect to the :menuselection:`User Type` options, "
 "click on :guilabel:`OAuth consent screen` in the left menu."
-msgstr ""
+msgstr "如果页面没有重定向到 :menuselection:`用户类型` 选项，请单击左侧菜单中的:guilabel:`OAuth 同意屏幕`。"
 
 #: ../../content/administration/maintain/google_oauth.rst:50
 msgid ""
@@ -3863,6 +4026,8 @@ msgid ""
 "Type`, and then click on :guilabel:`Create` again, which will finally "
 "navigate to the :menuselection:`Edit app registration` page."
 msgstr ""
+"在 :guilabel:`用户类型` 选项下，选择适当的 :guilabel:`用户类型`，然后再次点击 :guilabel:`创建`，最后将导航到 "
+":menuselection:`编辑应用程序注册` 页面。"
 
 #: ../../content/administration/maintain/google_oauth.rst:55
 msgid ""
@@ -3887,7 +4052,7 @@ msgstr "编辑应用程序注册"
 
 #: ../../content/administration/maintain/google_oauth.rst:65
 msgid "Next we will configure the app registration of the project."
-msgstr ""
+msgstr " 接下来，我们将配置项目的应用程序注册。"
 
 #: ../../content/administration/maintain/google_oauth.rst:67
 msgid ""
@@ -3896,12 +4061,15 @@ msgid ""
 " the organization's email address under the :guilabel:`User support` email "
 "field."
 msgstr ""
+"在 :guilabel:`OAuth 同意屏幕` 步骤中的 :guilabel:`应用程序信息` 部分，在 :guilabel:`应用程序名称` "
+"字段中输入`Odoo`。在:guilabel:`用户支持` 电子邮件字段下选择组织的电子邮件地址。"
 
 #: ../../content/administration/maintain/google_oauth.rst:71
 msgid ""
 "Next, under :menuselection:`App Domain --> Authorized domains`, click on "
 ":guilabel:`Add Domain` and enter `odoo.com`."
 msgstr ""
+"接下来，在 :menuselection:`应用程序域名 --> 授权域名` 下，单击 :guilabel:`添加域名` 并输入 `odoo.com`。"
 
 #: ../../content/administration/maintain/google_oauth.rst:74
 msgid ""
@@ -3909,6 +4077,7 @@ msgid ""
 "enter the organization's email address. Google uses this email address to "
 "notify the organization about any changes to your project."
 msgstr ""
+"然后，在 :guilabel:`开发者联系信息` 部分中输入组织的电子邮件地址。如果项目有任何变更，Google 会使用此电子邮件地址通知该组织。"
 
 #: ../../content/administration/maintain/google_oauth.rst:78
 msgid ""
@@ -3916,6 +4085,8 @@ msgid ""
 ":menuselection:`Scopes` page by scrolling to the bottom and clicking on "
 ":guilabel:`Save and Continue`."
 msgstr ""
+"然后，单击:guilabel:`保存并继续` 按钮。然后，滚动到底部并单击 :guilabel:`保存并继续` "
+"跳过:menuselection:`范围` 页面。"
 
 #: ../../content/administration/maintain/google_oauth.rst:81
 msgid ""
@@ -3924,12 +4095,14 @@ msgid ""
 ":guilabel:`Add Users`, and then the :guilabel:`Save and Continue` button. A "
 "summary of the app registration appears."
 msgstr ""
+"如果继续测试模式（外部），请通过点击 :guilabel:`添加用户`，然后点击 :guilabel:`保存并继续` 按钮，添加在 "
+":guilabel:`测试用户` 步骤下配置的电子邮件地址。应用程序注册摘要将出现。"
 
 #: ../../content/administration/maintain/google_oauth.rst:85
 msgid ""
 "Finally, scroll to the bottom and click on :guilabel:`Back to Dashboard` to "
 "finish setting up the project."
-msgstr ""
+msgstr "最后，滚动到底部并单击:guilabel:`返回仪表板` 以完成项目设置。"
 
 #: ../../content/administration/maintain/google_oauth.rst:89
 msgid "Create Credentials"
@@ -3940,13 +4113,13 @@ msgid ""
 "Now that the project is set up, credentials should be created, which "
 "includes the *Client ID* and *Client Secret*. First, click on "
 ":guilabel:`Credentials` in the left sidebar menu."
-msgstr ""
+msgstr "现在项目已建立，应创建凭证，其中包括 *客户 ID* 和 *客户密钥*。首先，点击左侧边栏菜单中的:guilabel:`凭证`。"
 
 #: ../../content/administration/maintain/google_oauth.rst:94
 msgid ""
 "Then, click on :guilabel:`Create Credentials` in the top menu and select "
 ":guilabel:`OAuth client ID` from the dropdown menu."
-msgstr ""
+msgstr "然后，点击顶部菜单中的 :guilabel:`创建凭证` 并从下拉菜单中选择 :guilabel:`OAuth 客户 ID`。"
 
 #: ../../content/administration/maintain/google_oauth.rst:97
 msgid ""
@@ -3999,6 +4172,9 @@ msgid ""
 "into the :guilabel:`Client ID` and :guilabel:`Client Secret` fields and "
 ":guilabel:`Save` the settings."
 msgstr ""
+"接下来，导航至:menuselection:`设置-->常规设置`，在:guilabel:`讨论`部分，确保选中:guilabel:`自定义电子邮件服务器`或:guilabel:`外部电子邮件服务器`复选框。这将弹出一个新选项:guilabel:`Gmail"
+" 认证`或:guilabel:`使用 Gmail 服务器`。然后，将相应值复制并粘贴到 :guilabel:`客户 ID` 和 "
+":guilabel:`客户密钥` 字段，然后 :guilabel:`保存` 设置。"
 
 #: ../../content/administration/maintain/google_oauth.rst:129
 msgid ""
@@ -4006,10 +4182,11 @@ msgid ""
 ":guilabel:`Custom Email Servers` setting and then click the "
 ":guilabel:`Outgoing Email Servers` link."
 msgstr ""
+"要配置外部 Gmail 帐户，请返回到:guilabel:`客户邮件服务器` 设置的顶部，然后单击:guilabel:`外发电子邮件服务器` 链接。"
 
 #: ../../content/administration/maintain/google_oauth.rst-1
 msgid "Configure Outgoing Email Servers in Odoo."
-msgstr ""
+msgstr "在 Odoo 中配置外发电子邮件服务器。"
 
 #: ../../content/administration/maintain/google_oauth.rst:136
 msgid ""
@@ -4017,6 +4194,8 @@ msgid ""
 "server, and fill in the :guilabel:`Name`, :guilabel:`Description`, and the "
 "email :guilabel:`Username` (if required)."
 msgstr ""
+"然后，点击 :guilabel:`新建` 或 :guilabel:`创建` 新电子邮件服务器，并填写 :guilabel:`名称`, "
+":guilabel:`描述` 和电子邮件 :guilabel:`用户名` （如果需要）。"
 
 #: ../../content/administration/maintain/google_oauth.rst:139
 msgid ""
@@ -4047,6 +4226,8 @@ msgid ""
 "configuration automatically loads the token in Odoo, and a tag stating "
 ":guilabel:`Gmail Token Valid` appears in green."
 msgstr ""
+"然后，点击:guilabel:`继续` 或 :guilabel:`允许` Odoo 访问 Google 账户。之后，页面会返回到 Odoo "
+"中新配置的外发邮件服务器。配置会自动在 Odoo 中加载令牌，并显示绿色标签:guilabel:`Gmail 令牌有效`。"
 
 #: ../../content/administration/maintain/google_oauth.rst:158
 msgid ""
@@ -4054,6 +4235,8 @@ msgid ""
 "appear. The Odoo database can now send safe, secure emails through Google "
 "using OAuth authentication."
 msgstr ""
+"最后，输入:guilabel:`测试连接`。此时会出现一条确认信息。现在，Odoo 数据库可以使用 OAuth 身份验证通过 Google "
+"发送安全可靠的电子邮件。"
 
 #: ../../content/administration/maintain/google_oauth.rst:162
 msgid "Google OAuth FAQ"
@@ -4185,7 +4368,7 @@ msgstr ""
 #: ../../content/administration/maintain/hosting_changes.rst:15
 #: ../../content/administration/maintain/hosting_changes.rst:83
 msgid "Odoo Online is *not* compatible with **non-standard apps**."
-msgstr ""
+msgstr "Odoo 在线版与**非标准应用程序**不兼容。"
 
 #: ../../content/administration/maintain/hosting_changes.rst:16
 msgid ""
@@ -9160,64 +9343,68 @@ msgstr ""
 
 #: ../../content/administration/upgrade.rst:42
 msgid ""
-"If your database contains a **custom module**, you must first upgrade its "
-"source code to be compatible with the new version of Odoo **before "
-"upgrading**."
+"If your database contains custom modules, it cannot be upgraded until a "
+"version of your custom modules is available for the target version of Odoo. "
+"For customers maintaining their own custom modules, we recommend to "
+"parallelize the process by :ref:`requesting an upgraded database "
+"<upgrade/request-test-database>` while also :doc:`upgrading the source code "
+"of your custom modules </developer/howtos/upgrade_custom_db>`."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:49
+#: ../../content/administration/upgrade.rst:50
 msgid "Upgrading in a nutshell"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:51
+#: ../../content/administration/upgrade.rst:52
 msgid ""
 "Request an upgraded test database (see :ref:`obtaining an upgraded test "
 "database <upgrade/request-test-database>`)."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:54
+#: ../../content/administration/upgrade.rst:55
+msgid ""
+"If applicable, upgrade the source code of your custom module to be "
+"compatible with the new version of Odoo (see "
+":doc:`/developer/howtos/upgrade_custom_db`)."
+msgstr ""
+
+#: ../../content/administration/upgrade.rst:58
 msgid ""
 "Thoroughly test the upgraded database (see :ref:`testing the new version of "
 "the database <upgrade/test_your_db>`)."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:57
+#: ../../content/administration/upgrade.rst:61
 msgid ""
 "Report any issue encountered during the testing to Odoo via the `support "
 "page <https://odoo.com/help?stage=migration>`__."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:60
-msgid ""
-"(If applicable) : upgrade the source code of your custom module to be "
-"compatible with the new version of Odoo."
-msgstr ""
-
-#: ../../content/administration/upgrade.rst:63
+#: ../../content/administration/upgrade.rst:64
 msgid ""
 "Once all issues are resolved and you are confident that the upgraded "
 "database can be used as your main database without any issues, plan the "
 "upgrade of your production database."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:66
+#: ../../content/administration/upgrade.rst:67
 msgid ""
 "Request the upgrade for the production database, rendering it unavailable "
 "for the time it takes to complete the process (see :ref:`upgrading the "
 "production database <upgrade/upgrade-prod>`)."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:69
+#: ../../content/administration/upgrade.rst:70
 msgid ""
 "Report any issue encountered during the upgrade to Odoo via the `support "
 "page <https://odoo.com/help?stage=post_upgrade>`__."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:78
+#: ../../content/administration/upgrade.rst:76
 msgid "Obtaining an upgraded test database"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:80
+#: ../../content/administration/upgrade.rst:78
 msgid ""
 "The `Upgrade page <https://upgrade.odoo.com/>`_ is the main platform for "
 "requesting an upgraded database. However, depending on the hosting type, you"
@@ -9226,7 +9413,7 @@ msgid ""
 "<https://odoo.sh/project>`_."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:86
+#: ../../content/administration/upgrade.rst:84
 msgid ""
 "The Upgrade platform follows the same `Privacy Policy "
 "<https://www.odoo.com/privacy>`_ as the other Odoo.com services. Visit the "
@@ -9234,13 +9421,13 @@ msgid ""
 "learn more about how Odoo handles your data and privacy."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:94
+#: ../../content/administration/upgrade.rst:92
 msgid ""
 "Odoo Online databases can be manually upgraded via the `database manager "
 "<https://odoo.com/my/databases>`_."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:97
+#: ../../content/administration/upgrade.rst:95
 msgid ""
 "The database manager displays all databases associated with the user's "
 "account. Databases not on the most recent version of Odoo display an arrow "
@@ -9252,23 +9439,23 @@ msgid ""
 "The database manager with an upgrade button next to the name of a database."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:104
+#: ../../content/administration/upgrade.rst:102
 msgid ""
 "Click the **arrow in a circle** icon to start the upgrade process. In the "
 "popup, fill in:"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:106
+#: ../../content/administration/upgrade.rst:104
 msgid ""
 "The **version** of Odoo you want to upgrade to, usually the latest version"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:107
+#: ../../content/administration/upgrade.rst:105
 msgid ""
 "The **email** address that should receive the link to the upgraded database"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:108
+#: ../../content/administration/upgrade.rst:106
 msgid ""
 "The :guilabel:`Purpose` of the upgrade, which is automatically set to "
 ":guilabel:`Test` for your first upgrade request"
@@ -9278,7 +9465,7 @@ msgstr ""
 msgid "The \"Upgrade your database\" popup."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:114
+#: ../../content/administration/upgrade.rst:112
 msgid ""
 "The :guilabel:`Upgrade in progress` tag is displayed next to the database "
 "name until completion. Once the process succeeds, an email containing a link"
@@ -9291,7 +9478,7 @@ msgstr ""
 msgid "Clicking the menu arrow displays the upgraded test database."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:124
+#: ../../content/administration/upgrade.rst:122
 msgid ""
 "Odoo.sh is integrated with the upgrade platform to simplify the upgrade "
 "process."
@@ -9301,13 +9488,13 @@ msgstr ""
 msgid "Odoo.sh project and tabs"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:129
+#: ../../content/administration/upgrade.rst:127
 msgid ""
 "The **latest production daily automatic backup** is then sent to the "
 "`upgrade platform <https://upgrade.odoo.com>`_."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:132
+#: ../../content/administration/upgrade.rst:130
 msgid ""
 "Once the upgrade platform is done upgrading the backup and uploading it on "
 "the branch, it is put in a **special mode**: each time a **commit is "
@@ -9318,7 +9505,7 @@ msgid ""
 "going to :file:`~/logs/upgrade.log`."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:140
+#: ../../content/administration/upgrade.rst:138
 msgid ""
 "In databases where custom modules are installed, their source code must be "
 "up-to-date with the target version of Odoo before the upgrade can be "
@@ -9327,58 +9514,72 @@ msgid ""
 "platform, and the upgrade mode is exited."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:152
-#: ../../content/administration/upgrade.rst:344
+#: ../../content/administration/upgrade.rst:143
+msgid ""
+"Check out the :doc:`/developer/howtos/upgrade_custom_db` page for more "
+"information."
+msgstr ""
+
+#: ../../content/administration/upgrade.rst:145
+#: ../../content/administration/upgrade.rst:341
 msgid "On-premise"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:154
+#: ../../content/administration/upgrade.rst:147
 msgid ""
 "The standard upgrade process can be initiated by entering the following "
 "command line on the machine where the database is hosted:"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:161
+#: ../../content/administration/upgrade.rst:154
 msgid ""
 "The following command can be used to display the general help and the main "
 "commands:"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:167
+#: ../../content/administration/upgrade.rst:160
 msgid ""
 "An upgraded test database can also be requested via the `Upgrade page "
 "<https://upgrade.odoo.com/>`_."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:171
+#: ../../content/administration/upgrade.rst:164
+msgid ""
+"In databases where custom modules are installed, their source code must be "
+"up-to-date with the target version of Odoo before the upgrade can be "
+"performed. Check out the :doc:`/developer/howtos/upgrade_custom_db` page for"
+" more information."
+msgstr ""
+
+#: ../../content/administration/upgrade.rst:169
 msgid ""
 "For security reasons, only the person who submitted the upgrade request can "
 "download it."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:172
+#: ../../content/administration/upgrade.rst:170
 msgid ""
 "For storage reasons, the database's copy is submitted without a filestore to"
 " the upgrade server. Therefore, the upgraded database does not contain the "
 "production filestore."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:174
+#: ../../content/administration/upgrade.rst:172
 msgid ""
 "Before restoring the upgraded database, its filestore must be merged with "
 "the production filestore to be able to perform tests in the same conditions "
 "as it would be in the new version."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:177
+#: ../../content/administration/upgrade.rst:175
 msgid "The upgraded database contains:"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:179
+#: ../../content/administration/upgrade.rst:177
 msgid "A `dump.sql` file containing the upgraded database"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:180
+#: ../../content/administration/upgrade.rst:178
 msgid ""
 "A `filestore` folder containing files extracted from in-database records "
 "into attachments (if there are any) and new standard Odoo files from the "
@@ -9387,13 +9588,13 @@ msgid ""
 "filestore in order to get the full upgraded filestore."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:187
+#: ../../content/administration/upgrade.rst:185
 msgid ""
 "You can request multiple test databases if you wish to test an upgrade more "
 "than once."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:192
+#: ../../content/administration/upgrade.rst:190
 msgid ""
 "When an upgrade request is completed, an upgrade report is attached to the "
 "successful upgrade email, and it becomes available in the Discuss app for "
@@ -9402,171 +9603,171 @@ msgid ""
 "version."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:200
+#: ../../content/administration/upgrade.rst:198
 msgid "Testing the new version of the database"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:202
+#: ../../content/administration/upgrade.rst:200
 msgid ""
 "It is essential to spend some time testing the upgraded test database to "
 "ensure that you are not stuck in your day-to-day activities by a change in "
 "views, behavior, or an error message once the upgrade goes live."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:207
+#: ../../content/administration/upgrade.rst:205
 msgid ""
 "Test databases are neutralized, and some features are disabled to prevent "
 "them from impacting the production database:"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:210
+#: ../../content/administration/upgrade.rst:208
 msgid "Scheduled actions are disabled."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:211
+#: ../../content/administration/upgrade.rst:209
 msgid ""
 "Outgoing mail servers are disabled by archiving the existing ones and adding"
 " a fake one."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:212
+#: ../../content/administration/upgrade.rst:210
 msgid ""
 "Payment providers and delivery carriers are reset to the test environment."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:213
+#: ../../content/administration/upgrade.rst:211
 msgid ""
 "Bank synchronization is disabled. Should you want to test the "
 "synchronization, contact your bank synchronization provider to get sandbox "
 "credentials."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:216
+#: ../../content/administration/upgrade.rst:214
 msgid ""
 "Testing as many of your business flows as possible is strongly recommended "
 "to ensure they are working correctly and to get more familiar with the new "
 "version."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:219
+#: ../../content/administration/upgrade.rst:217
 msgid "Basic test checklist"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:221
+#: ../../content/administration/upgrade.rst:219
 msgid ""
 "Are there views that are deactivated in your test database but active in "
 "your production database?"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:223
+#: ../../content/administration/upgrade.rst:221
 msgid "Are your usual views still displayed correctly?"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:224
+#: ../../content/administration/upgrade.rst:222
 msgid "Are your reports (invoice, sales order, etc.) correctly generated?"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:225
+#: ../../content/administration/upgrade.rst:223
 msgid "Are your website pages working correctly?"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:226
+#: ../../content/administration/upgrade.rst:224
 msgid ""
 "Are you able to create and modify records? (sales orders, invoices, "
 "purchases, users, contacts, companies, etc.)"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:228
+#: ../../content/administration/upgrade.rst:226
 msgid "Are there any issues with your mail templates?"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:229
+#: ../../content/administration/upgrade.rst:227
 msgid "Are there any issues with saved translations?"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:230
+#: ../../content/administration/upgrade.rst:228
 msgid "Are your search filters still present?"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:231
+#: ../../content/administration/upgrade.rst:229
 msgid "Can you export your data?"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:235
+#: ../../content/administration/upgrade.rst:233
 msgid ""
 "Checking a random product in your product catalog and comparing its test and"
 " production data to verify everything is the same (product category, selling"
 " price, cost price, vendor, accounts, routes, etc.)."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:238
+#: ../../content/administration/upgrade.rst:236
 msgid "Buying this product (Purchase app)."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:239
+#: ../../content/administration/upgrade.rst:237
 msgid "Confirming the reception of this product (Inventory app)."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:240
+#: ../../content/administration/upgrade.rst:238
 msgid ""
 "Checking if the route to receive this product is the same in your production"
 " database (Inventory app)."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:242
+#: ../../content/administration/upgrade.rst:240
 msgid "Selling this product (Sales app) to a random customer."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:243
+#: ../../content/administration/upgrade.rst:241
 msgid ""
 "Opening your customer database (Contacts app), selecting a customer (or "
 "company), and checking its data."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:245
+#: ../../content/administration/upgrade.rst:243
 msgid "Shipping this product (Inventory app)."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:246
+#: ../../content/administration/upgrade.rst:244
 msgid ""
 "Checking if the route to ship this product is the same as in your production"
 " database (Inventory app)."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:248
+#: ../../content/administration/upgrade.rst:246
 msgid "Validating a customer invoice (Invoicing or Accounting app)."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:249
+#: ../../content/administration/upgrade.rst:247
 msgid ""
 "Crediting the invoice (issuing a credit note) and checking if it behaves as "
 "in your production database."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:251
+#: ../../content/administration/upgrade.rst:249
 msgid "Checking your reports' results (Accounting app)."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:252
+#: ../../content/administration/upgrade.rst:250
 msgid ""
 "Randomly checking your taxes, currencies, bank accounts, and fiscal year "
 "(Accounting app)."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:253
+#: ../../content/administration/upgrade.rst:251
 msgid ""
 "Making an online order (Website apps) from the product selection in your "
 "shop until the checkout process and checking if everything behaves as in "
 "your production database."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:256
+#: ../../content/administration/upgrade.rst:254
 msgid ""
 "This list is **not** exhaustive. Extend the example to your other apps based"
 " on your use of Odoo."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:258
+#: ../../content/administration/upgrade.rst:256
 msgid ""
 "If you face an issue while testing your upgraded test database, you can "
 "request the assistance of Odoo via the `support page "
@@ -9576,7 +9777,7 @@ msgid ""
 "database."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:263
+#: ../../content/administration/upgrade.rst:261
 msgid ""
 "You might encounter significant differences with standard views, features, "
 "fields, and models during testing. Those changes cannot be reverted on a "
@@ -9585,39 +9786,39 @@ msgid ""
 "module to make it compatible with the new version of Odoo."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:269
+#: ../../content/administration/upgrade.rst:267
 msgid "Do not forget to test:"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:271
+#: ../../content/administration/upgrade.rst:269
 msgid "Integrations with external software (EDI, APIs, etc.)"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:272
+#: ../../content/administration/upgrade.rst:270
 msgid ""
 "Workflows between different apps (online sales with eCommerce, converting a "
 "lead all the way to a sales order, delivery of products, etc.)"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:274
+#: ../../content/administration/upgrade.rst:272
 msgid "Data exports"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:275
+#: ../../content/administration/upgrade.rst:273
 msgid "Automated actions"
 msgstr "自动动作"
 
-#: ../../content/administration/upgrade.rst:276
+#: ../../content/administration/upgrade.rst:274
 msgid ""
 "Server actions in the action menu on form views, as well as by selecting "
 "multiple records on list views"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:282
+#: ../../content/administration/upgrade.rst:280
 msgid "Upgrading the production database"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:284
+#: ../../content/administration/upgrade.rst:282
 msgid ""
 "Once the :ref:`tests <upgrade/test_your_db>` are completed and you are "
 "confident that the upgraded database can be used as your main database "
@@ -9626,63 +9827,63 @@ msgid ""
 "`support page <https://odoo.com/help>`__."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:289
+#: ../../content/administration/upgrade.rst:287
 msgid ""
 "Your production database will be unavailable during its upgrade. Therefore, "
 "we recommend planning the upgrade at a time when the use of the database is "
 "minimal."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:292
+#: ../../content/administration/upgrade.rst:290
 msgid ""
 "As the standard upgrade scripts and your database are constantly evolving, "
 "it is also recommended to frequently request another upgraded test database "
 "to ensure that the upgrade process is still successful, especially if it "
-"takes a long time to finish. Fully rehearsing the upgrade process the day "
-"before upgrading the production database is also recommended."
+"takes a long time to finish. **Fully rehearsing the upgrade process the day "
+"before upgrading the production database is also recommended.**"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:298
+#: ../../content/administration/upgrade.rst:296
 msgid "Going into production without first testing may lead to:"
 msgstr "在没有进行首次测试的情况下投入生产可能会导致："
 
-#: ../../content/administration/upgrade.rst:300
+#: ../../content/administration/upgrade.rst:298
 msgid "Users failing to adjust to the changes and new features"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:301
+#: ../../content/administration/upgrade.rst:299
 msgid ""
 "Business interruptions (e.g., no longer having the possibility to validate "
 "an action)"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:302
+#: ../../content/administration/upgrade.rst:300
 msgid ""
 "Poor customer experience (e.g., an eCommerce website that does not work "
 "correctly)"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:304
+#: ../../content/administration/upgrade.rst:302
 msgid ""
 "The process of upgrading a production database is similar to upgrading a "
 "test database with a few exceptions."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:311
+#: ../../content/administration/upgrade.rst:309
 msgid ""
 "The process is similar to :ref:`obtaining an upgraded test database "
 "<upgrade/request-test-database>`, except for the purpose option, which must "
 "be set to :guilabel:`Production` instead of :guilabel:`Test`."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:316
+#: ../../content/administration/upgrade.rst:314
 msgid ""
 "Once the upgrade is requested, the database will be unavailable until the "
 "upgrade is finished. Once the process is completed, it is impossible to "
 "revert to the previous version."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:322
+#: ../../content/administration/upgrade.rst:320
 msgid ""
 "The process is similar to :ref:`obtaining an upgraded test database "
 "<upgrade/request-test-database>` on the :guilabel:`Production` branch."
@@ -9692,7 +9893,7 @@ msgstr ""
 msgid "View from the upgrade tab"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:328
+#: ../../content/administration/upgrade.rst:326
 msgid ""
 "The process is **triggered as soon as a new commit is made** on the branch. "
 "This allows the upgrade process to be synchronized with the deployment of "
@@ -9700,7 +9901,7 @@ msgid ""
 "the upgrade process is triggered immediately."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:334
+#: ../../content/administration/upgrade.rst:332
 msgid ""
 "The database is unavailable throughout the process. If anything goes wrong, "
 "the platform automatically reverts the upgrade, as it would be for a regular"
@@ -9708,21 +9909,23 @@ msgid ""
 "created."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:338
+#: ../../content/administration/upgrade.rst:336
 msgid ""
 "The update of your custom modules must be successful to complete the entire "
 "upgrade process. Make sure the status of your staging upgrade is "
-":guilabel:`successful` before trying it in production."
+":guilabel:`successful` before trying it in production. More information on "
+"how to upgrade your custom modules can be found on "
+":doc:`/developer/howtos/upgrade_custom_db`."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:346
+#: ../../content/administration/upgrade.rst:343
 msgid ""
 "The command to upgrade a database to production is similar to the one of "
 "upgrading a test database except for the argument `test`, which must be "
 "replaced by `production`:"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:353
+#: ../../content/administration/upgrade.rst:350
 msgid ""
 "An upgraded production database can also be requested via the `Upgrade page "
 "<https://upgrade.odoo.com/>`_. Once the database is uploaded, any "
@@ -9731,7 +9934,7 @@ msgid ""
 "process."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:360
+#: ../../content/administration/upgrade.rst:357
 msgid ""
 "When requesting an upgraded database for production purposes, the copy is "
 "submitted without a filestore. Therefore, the upgraded database filestore "
@@ -9739,7 +9942,7 @@ msgid ""
 "version."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:364
+#: ../../content/administration/upgrade.rst:361
 msgid ""
 "In case of an issue with your production database, you can request the "
 "assistance of Odoo via the `support page "
@@ -9747,92 +9950,92 @@ msgid ""
 "related to the upgrade in production."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:372
+#: ../../content/administration/upgrade.rst:369
 msgid "Service-level agreement (SLA)"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:374
+#: ../../content/administration/upgrade.rst:371
 msgid ""
 "With Odoo Enterprise, upgrading a database to the most recent version of "
 "Odoo is **free**, including any support required to rectify potential "
 "discrepancies in the upgraded database."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:377
+#: ../../content/administration/upgrade.rst:374
 msgid ""
 "Information about the upgrade services included in the Enterprise Licence is"
 " available in the :ref:`Odoo Enterprise Subscription Agreement <upgrade>`. "
 "However, this section clarifies what upgrade services you can expect."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:382
+#: ../../content/administration/upgrade.rst:379
 msgid "Upgrade services covered by the SLA"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:384
+#: ../../content/administration/upgrade.rst:381
 msgid ""
 "Databases hosted on Odoo's cloud platforms (Odoo Online and Odoo.sh) or "
 "self-hosted (On-Premise) can benefit from upgrade services at all times for:"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:387
+#: ../../content/administration/upgrade.rst:384
 msgid "the upgrade of all **standard applications**;"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:388
+#: ../../content/administration/upgrade.rst:385
 msgid ""
 "the upgrade of all **customizations created with the Studio app**, as long "
 "as Studio is still installed and the respective subscription is still "
 "active; and"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:390
+#: ../../content/administration/upgrade.rst:387
 msgid ""
 "the upgrade of all **developments and customizations covered by a "
 "maintenance of customizations subscription**."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:393
+#: ../../content/administration/upgrade.rst:390
 msgid ""
 "Upgrade services are limited to the technical conversion and adaptation of a"
 " database (standard modules and data) to make it compatible with the version"
 " targeted by the upgrade."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:397
+#: ../../content/administration/upgrade.rst:394
 msgid "Upgrade services not covered by the SLA"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:399
+#: ../../content/administration/upgrade.rst:396
 msgid "The following upgrade-related services are **not** included:"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:401
+#: ../../content/administration/upgrade.rst:398
 msgid ""
 "the **cleaning** of pre-existing data and configurations while upgrading;"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:402
+#: ../../content/administration/upgrade.rst:399
 msgid ""
 "the upgrade of **custom modules created in-house or by third parties**, "
 "including Odoo partners;"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:403
+#: ../../content/administration/upgrade.rst:400
 msgid ""
 "lines of **code added to standard modules**, i.e., customizations created "
 "outside the Studio app, code entered manually, and :ref:`automated actions "
 "using Python code <studio/automated-actions/action>`; and"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:406
+#: ../../content/administration/upgrade.rst:403
 msgid "**training** on using the upgraded version's features and workflows."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:409
+#: ../../content/administration/upgrade.rst:406
 msgid ":doc:`Odoo.sh documentation <odoo_sh>`"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:410
+#: ../../content/administration/upgrade.rst:407
 msgid ":doc:`Supported Odoo versions <maintain/supported_versions>`"
 msgstr ""
