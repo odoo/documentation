@@ -28,7 +28,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-18 20:35+0000\n"
+"POT-Creation-Date: 2024-01-18 09:34+0000\n"
 "PO-Revision-Date: 2022-03-18 15:03+0000\n"
 "Last-Translator: 山西清水欧度(QQ:54773801) <54773801@qq.com>, 2023\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/odoo/teams/41243/zh_CN/)\n"
@@ -1411,11 +1411,9 @@ msgstr ""
 #: ../../content/applications/websites/website/configuration/multi_website.rst:122
 msgid ""
 "Geo IP is installed by default in Odoo Online. If you run Odoo on-premise, "
-"don’t forget to install *GeoIP* library. See :doc:`on-premise_geo-ip-"
-"installation`"
+"don’t forget to install *GeoIP* library. See "
+":doc:`/administration/install/geo_ip`"
 msgstr ""
-"Odoo Online默认安装GeoIP。如果你在本地部署情况下运行Odoo，请勿忘记安装 *GeoIP* 库。参见 :doc:`on-"
-"premise_geo-ip-installation`"
 
 #: ../../content/applications/websites/website/configuration/multi_website.rst:127
 msgid ":doc:`/administration/maintain/domain_names`"
@@ -1712,114 +1710,6 @@ msgstr "搜索：当显示记录列表时，"
 #: ../../content/applications/websites/website/configuration/multi_website.rst:315
 msgid "the domain to only display records available for the current website."
 msgstr "不要忘记指定域只显示当前网站可用的记录。"
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:3
-msgid "Geo IP Installation (On-Premises Database)"
-msgstr "地理IP安装（内部数据库）"
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:6
-msgid "Installation"
-msgstr "安装"
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:9
-msgid ""
-"Please note that the installation depends on your computer's operating "
-"system and distribution. We will assume that a Linux operating system is "
-"being used."
-msgstr "请注意，安装取决于计算机的操作系统和发行版。我们假设正在使用Linux操作系统。"
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:15
-msgid "Install `geoip2 <https://pypi.org/project/geoip2/>`__ Python library"
-msgstr "安装`geoip2 <https://pypi.org/project/geoip2/>`__ Python库"
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:17
-msgid ""
-"Download the `GeoLite2 City database "
-"<https://dev.maxmind.com/geoip/geoip2/geolite2/>`_. You should end up with a"
-" file called ``GeoLite2-City.mmdb``"
-msgstr ""
-"下载`GeoLite2 City数据库 "
-"<https://dev.maxmind.com/geoip/geoip2/geolite2/>`_。你将下载到名为``GeoLite2-City.mmdb``的文件"
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:22
-msgid "Move the file to the folder ``/usr/share/GeoIP/``"
-msgstr "将文件移动到文件夹``/usr/share/GeoIP/``"
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:24
-msgid "Restart the server"
-msgstr "重启服务器"
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:27
-msgid ""
-"If you can't/don't want to locate the geoip database in "
-"``/usr/share/GeoIP/``, you can use the ``--geoip-db`` option of the Odoo "
-"command line interface. This option takes the absolute path to the GeoIP "
-"database file and uses it as the GeoIP database. For example:"
-msgstr ""
-"如果您不能/不想在``/usr/share/GeoIP/``中定位geoip数据库，可以使用Odoo命令行界面的“-geoip "
-"db”选项。该选项采用GeoIP数据库文件的绝对路径，并将其用作GeoIP数据。例如："
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:36
-msgid ":doc:`CLI documentation </developer/reference/cli>`."
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:39
-msgid ""
-"``GeoIP`` Python library can also be used. However this version is "
-"discontinued since January 1.    See `GeoLite Legacy databases are now "
-"discontinued <https://support.maxmind.com/geolite-legacy-discontinuation-"
-"notice/>`_"
-msgstr ""
-"``GeoIP`` 也可以使用Python库。但是，该版本自1月份起停止使用 1.    参见 `GeoLite遗留数据库现已停止使用 "
-"<https://support.maxmind.com/geolite-legacy-discontinuation-notice/>`_"
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:44
-msgid "How To Test GeoIP Geolocation In Your Odoo Website"
-msgstr "如何在您的Odoo网站中测试GeoIP地理位置"
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:46
-msgid "Go to your website. Open the web page that you want to test ``GeoIP``."
-msgstr "转到你的网站。打开要测试“GeoIP”的网页。"
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:47
-msgid "Choose :menuselection:`Customize --> HTML/CSS/JS Editor`."
-msgstr "选择 :menuselection:`自定义 --> HTML/CSS/JS编辑器`。"
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:48
-msgid "Add the following piece of XML in the page :"
-msgstr "在页面添加以下XML："
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:54
-msgid ""
-"You should end up with a dictionary indicating the location of the IP "
-"address."
-msgstr "最后应该有一个字典，指示IP地址的位置。"
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:60
-msgid ""
-"If the curly braces are empty ``{}``, it can be for any of the following "
-"reasons :"
-msgstr "如果大括号为空``{}``，则可能是由于以下任何原因："
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:62
-msgid ""
-"The browsing IP address is the localhost (``127.0.0.1``) or a local area "
-"network one (``192.168.*.*``)"
-msgstr "浏览IP地址为本地主机(``127.0.0.1``)或一个局域网(``192.168.*.*``)"
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:64
-msgid ""
-"If a reversed proxy is used, make sure to configure it correctly. See "
-":option:`proxy mode <odoo-bin --proxy-mode>`"
-msgstr "如果使用反向代理，请确保正确配置。请参阅：选项:`代理模式 <odoo-bin --proxy-mode>`"
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:66
-msgid "``geoip2`` is not installed or the GeoIP database file wasn't found"
-msgstr "未安装``geoip2``或未找到GeoIP数据库文件"
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:67
-msgid "The GeoIP database was unable to resolve the given IP address"
-msgstr "GeoIP数据库无法解析给定的IP地址"
 
 #: ../../content/applications/websites/website/configuration/recaptcha.rst:3
 msgid "reCAPTCHA v3 on forms"

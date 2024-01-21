@@ -23,18 +23,18 @@
 # Camille Dantinne <cmd@odoo.com>, 2022
 # Rémi CAZENAVE, 2023
 # Martin Trigaux, 2023
-# Cécile Collart <cco@odoo.com>, 2023
 # Wil Odoo, 2023
-# Jolien De Paepe, 2023
+# Jolien De Paepe, 2024
+# Cécile Collart <cco@odoo.com>, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-18 20:35+0000\n"
+"POT-Creation-Date: 2024-01-18 09:34+0000\n"
 "PO-Revision-Date: 2022-03-18 14:59+0000\n"
-"Last-Translator: Jolien De Paepe, 2023\n"
+"Last-Translator: Cécile Collart <cco@odoo.com>, 2024\n"
 "Language-Team: French (https://app.transifex.com/odoo/teams/41243/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1739,6 +1739,141 @@ msgid ""
 msgstr ""
 "Si vous n'avez pas accès/ne gérez pas votre serveur de messagerie, utilisez "
 ":ref:`messages entrants <email_communication/inbound_messages>`."
+
+#: ../../content/administration/install/geo_ip.rst:3
+msgid "Geo IP"
+msgstr ""
+
+#: ../../content/administration/install/geo_ip.rst:6
+msgid "This documentation only applies to On-premise databases."
+msgstr ""
+
+#: ../../content/administration/install/geo_ip.rst:9
+msgid "Installation"
+msgstr "Installation"
+
+#: ../../content/administration/install/geo_ip.rst:12
+msgid ""
+"Please note that the installation depends on your computer's operating "
+"system and distribution. We will assume that a Linux operating system is "
+"being used."
+msgstr ""
+"Veuillez noter que l'installation dépend du système d'exploitation et de la "
+"distribution de votre ordinateur. Nous supposerons que vous utilisez un "
+"système d'exploitation Linux."
+
+#: ../../content/administration/install/geo_ip.rst:18
+msgid "Install `geoip2 <https://pypi.org/project/geoip2/>`__ Python library"
+msgstr ""
+"Installer la bibliothèque Python de `geoip2 "
+"<https://pypi.org/project/geoip2/>`__ "
+
+#: ../../content/administration/install/geo_ip.rst:20
+msgid ""
+"Download the `GeoLite2 City database "
+"<https://dev.maxmind.com/geoip/geoip2/geolite2/>`_. You should end up with a"
+" file called ``GeoLite2-City.mmdb``"
+msgstr ""
+"Télécharger la `base de données GeoLite2 City  "
+"<https://dev.maxmind.com/geoip/geoip2/geolite2/>`_. Vous devriez obtenir un "
+"fichier appelé \"GeoLite2-City.mmdb\"."
+
+#: ../../content/administration/install/geo_ip.rst:25
+msgid "Move the file to the folder ``/usr/share/GeoIP/``"
+msgstr "Déplacer le fichier vers le dossier ``/usr/share/GeoIP/``"
+
+#: ../../content/administration/install/geo_ip.rst:27
+msgid "Restart the server"
+msgstr "Redémarrer le serveur"
+
+#: ../../content/administration/install/geo_ip.rst:30
+msgid ""
+"If you can't/don't want to locate the geoip database in "
+"``/usr/share/GeoIP/``, you can use the ``--geoip-db`` option of the Odoo "
+"command line interface. This option takes the absolute path to the GeoIP "
+"database file and uses it as the GeoIP database. For example:"
+msgstr ""
+"Si vous ne pouvez/voulez pas localiser la base de données GeoIP dans "
+"``/usr/share/GeoIP/``, vous pouvez utiliser l'option ``--geoip-db`` de "
+"l'interface de ligne de commande de Odoo. Cette option prend le chemin "
+"absolu vers le fichier de la base de données GeoIP et l'utilise comme base "
+"de données GeoIP. Par exemple :"
+
+#: ../../content/administration/install/geo_ip.rst:39
+msgid ":doc:`CLI documentation </developer/reference/cli>`."
+msgstr ":doc:`documentation CLI </developer/reference/cli>`."
+
+#: ../../content/administration/install/geo_ip.rst:42
+msgid ""
+"``GeoIP`` Python library can also be used. However this version is "
+"discontinued since January 1.    See `GeoLite Legacy databases are now "
+"discontinued <https://support.maxmind.com/geolite-legacy-discontinuation-"
+"notice/>`_"
+msgstr ""
+"La bibliothèque Python ``GeoIP`` peut également être utilisée. Cependant "
+"cette version est abandonnée depuis le 1er janvier. Voir `Les bases de "
+"données GeoLite Legacy sont désormais abandonnées. "
+"<https://support.maxmind.com/geolite-legacy-discontinuation-notice/>`_"
+
+#: ../../content/administration/install/geo_ip.rst:47
+msgid "How to test GeoIP geolocation in your Odoo website"
+msgstr ""
+
+#: ../../content/administration/install/geo_ip.rst:49
+msgid "Go to your website. Open the web page that you want to test ``GeoIP``."
+msgstr ""
+"Allez à votre site web. Ouvrez la page web sur laquelle vous voulez tester "
+"``GeoIP``."
+
+#: ../../content/administration/install/geo_ip.rst:50
+msgid "Choose :menuselection:`Customize --> HTML/CSS/JS Editor`."
+msgstr "Choisissez :menuselection:`Personnaliser --> HTML/CSS/JS Editor`."
+
+#: ../../content/administration/install/geo_ip.rst:51
+msgid "Add the following piece of XML in the page :"
+msgstr "Ajoutez le morceau de XML suivant dans la page :"
+
+#: ../../content/administration/install/geo_ip.rst:57
+msgid ""
+"You should end up with a dictionary indicating the location of the IP "
+"address."
+msgstr ""
+"Vous devriez vous retrouver avec un dictionnaire indiquant l'emplacement de "
+"l'adresse IP."
+
+#: ../../content/administration/install/geo_ip.rst:63
+msgid ""
+"If the curly braces are empty ``{}``, it can be for any of the following "
+"reasons :"
+msgstr ""
+"Si les accolades sont vides ``{}``, cela peut être pour l'une des raisons "
+"suivantes :"
+
+#: ../../content/administration/install/geo_ip.rst:65
+msgid ""
+"The browsing IP address is the localhost (``127.0.0.1``) or a local area "
+"network one (``192.168.*.*``)"
+msgstr ""
+"L'adresse IP de navigation est le localhost (127.0.0.1) ou un réseau local "
+"(192.168.*.*)."
+
+#: ../../content/administration/install/geo_ip.rst:67
+msgid ""
+"If a reversed proxy is used, make sure to configure it correctly. See "
+":option:`proxy mode <odoo-bin --proxy-mode>`"
+msgstr ""
+"Si un proxy inversé est utilisé, assurez-vous de le configurer correctement."
+" Voir :option:`mode proxy <odoo-bin --proxy-mode>`."
+
+#: ../../content/administration/install/geo_ip.rst:69
+msgid "``geoip2`` is not installed or the GeoIP database file wasn't found"
+msgstr ""
+"``geoip2`` n'est pas installé ou le fichier de la base de données GeoIP n'a "
+"pas été trouvé"
+
+#: ../../content/administration/install/geo_ip.rst:70
+msgid "The GeoIP database was unable to resolve the given IP address"
+msgstr "La base de données GeoIP n'a pas pu résoudre l'adresse IP donnée."
 
 #: ../../content/administration/install/online.rst:3
 msgid "Online"
@@ -6083,12 +6218,12 @@ msgstr ""
 ":guilabel:`Supprimer`."
 
 #: ../../content/administration/maintain/odoo_online.rst:132
-msgid ":doc:`../../applications/general/users/manage_users`"
-msgstr ":doc:`../../applications/general/users/manage_users`"
+msgid ":doc:`/applications/general/users/manage_users`"
+msgstr ":doc:`/applications/general/users/manage_users`"
 
 #: ../../content/administration/maintain/odoo_online.rst:133
-msgid ":doc:`../../applications/general/users/delete_account`"
-msgstr ":doc:`../../applications/general/users/delete_account`"
+msgid ":doc:`/applications/general/users/odoo_account`"
+msgstr ""
 
 #: ../../content/administration/maintain/on_premise.rst:3
 msgid "On-premise database management"

@@ -10,7 +10,6 @@
 # mrshelly <mrshelly@hotmail.com>, 2022
 # 洋 汪 <wonrence@163.com>, 2022
 # Gary Wei <Gary.wei@elico-corp.com>, 2022
-# Datasource International <Hennessy@datasourcegroup.com>, 2022
 # Mandy Choy <mnc@odoo.com>, 2022
 # Jeffery CHEN <jeffery9@gmail.com>, 2022
 # Jeana Jiang, 2022
@@ -19,18 +18,19 @@
 # Martin Trigaux, 2023
 # 山西清水欧度(QQ:54773801) <54773801@qq.com>, 2023
 # Raven Allmind, 2023
-# diaojiaolou <124412206@qq.com>, 2023
 # Wil Odoo, 2023
 # Chloe Wang, 2024
+# diaojiaolou <124412206@qq.com>, 2024
+# Datasource International <Hennessy@datasourcegroup.com>, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-18 20:35+0000\n"
+"POT-Creation-Date: 2024-01-18 09:34+0000\n"
 "PO-Revision-Date: 2022-03-18 14:59+0000\n"
-"Last-Translator: Chloe Wang, 2024\n"
+"Last-Translator: Datasource International <Hennessy@datasourcegroup.com>, 2024\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/odoo/teams/41243/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1382,6 +1382,118 @@ msgid ""
 msgstr ""
 "如果您无权访问/管理电子邮件服务器，请使用 ：ref：'入站邮件<email_communication/inbound_messages>'。"
 
+#: ../../content/administration/install/geo_ip.rst:3
+msgid "Geo IP"
+msgstr ""
+
+#: ../../content/administration/install/geo_ip.rst:6
+msgid "This documentation only applies to On-premise databases."
+msgstr ""
+
+#: ../../content/administration/install/geo_ip.rst:9
+msgid "Installation"
+msgstr "安装"
+
+#: ../../content/administration/install/geo_ip.rst:12
+msgid ""
+"Please note that the installation depends on your computer's operating "
+"system and distribution. We will assume that a Linux operating system is "
+"being used."
+msgstr "请注意，安装取决于计算机的操作系统和发行版。我们假设正在使用Linux操作系统。"
+
+#: ../../content/administration/install/geo_ip.rst:18
+msgid "Install `geoip2 <https://pypi.org/project/geoip2/>`__ Python library"
+msgstr "安装`geoip2 <https://pypi.org/project/geoip2/>`__ Python库"
+
+#: ../../content/administration/install/geo_ip.rst:20
+msgid ""
+"Download the `GeoLite2 City database "
+"<https://dev.maxmind.com/geoip/geoip2/geolite2/>`_. You should end up with a"
+" file called ``GeoLite2-City.mmdb``"
+msgstr ""
+"下载`GeoLite2 City数据库 "
+"<https://dev.maxmind.com/geoip/geoip2/geolite2/>`_。你将下载到名为``GeoLite2-City.mmdb``的文件"
+
+#: ../../content/administration/install/geo_ip.rst:25
+msgid "Move the file to the folder ``/usr/share/GeoIP/``"
+msgstr "将文件移动到文件夹``/usr/share/GeoIP/``"
+
+#: ../../content/administration/install/geo_ip.rst:27
+msgid "Restart the server"
+msgstr "重启服务器"
+
+#: ../../content/administration/install/geo_ip.rst:30
+msgid ""
+"If you can't/don't want to locate the geoip database in "
+"``/usr/share/GeoIP/``, you can use the ``--geoip-db`` option of the Odoo "
+"command line interface. This option takes the absolute path to the GeoIP "
+"database file and uses it as the GeoIP database. For example:"
+msgstr ""
+"如果您不能/不想在``/usr/share/GeoIP/``中定位geoip数据库，可以使用Odoo命令行界面的“-geoip "
+"db”选项。该选项采用GeoIP数据库文件的绝对路径，并将其用作GeoIP数据。例如："
+
+#: ../../content/administration/install/geo_ip.rst:39
+msgid ":doc:`CLI documentation </developer/reference/cli>`."
+msgstr ""
+
+#: ../../content/administration/install/geo_ip.rst:42
+msgid ""
+"``GeoIP`` Python library can also be used. However this version is "
+"discontinued since January 1.    See `GeoLite Legacy databases are now "
+"discontinued <https://support.maxmind.com/geolite-legacy-discontinuation-"
+"notice/>`_"
+msgstr ""
+"``GeoIP`` 也可以使用Python库。但是，该版本自1月份起停止使用 1.    参见 `GeoLite遗留数据库现已停止使用 "
+"<https://support.maxmind.com/geolite-legacy-discontinuation-notice/>`_"
+
+#: ../../content/administration/install/geo_ip.rst:47
+msgid "How to test GeoIP geolocation in your Odoo website"
+msgstr ""
+
+#: ../../content/administration/install/geo_ip.rst:49
+msgid "Go to your website. Open the web page that you want to test ``GeoIP``."
+msgstr "转到你的网站。打开要测试“GeoIP”的网页。"
+
+#: ../../content/administration/install/geo_ip.rst:50
+msgid "Choose :menuselection:`Customize --> HTML/CSS/JS Editor`."
+msgstr "选择 :menuselection:`自定义 --> HTML/CSS/JS编辑器`。"
+
+#: ../../content/administration/install/geo_ip.rst:51
+msgid "Add the following piece of XML in the page :"
+msgstr "在页面添加以下XML："
+
+#: ../../content/administration/install/geo_ip.rst:57
+msgid ""
+"You should end up with a dictionary indicating the location of the IP "
+"address."
+msgstr "最后应该有一个字典，指示IP地址的位置。"
+
+#: ../../content/administration/install/geo_ip.rst:63
+msgid ""
+"If the curly braces are empty ``{}``, it can be for any of the following "
+"reasons :"
+msgstr "如果大括号为空``{}``，则可能是由于以下任何原因："
+
+#: ../../content/administration/install/geo_ip.rst:65
+msgid ""
+"The browsing IP address is the localhost (``127.0.0.1``) or a local area "
+"network one (``192.168.*.*``)"
+msgstr "浏览IP地址为本地主机(``127.0.0.1``)或一个局域网(``192.168.*.*``)"
+
+#: ../../content/administration/install/geo_ip.rst:67
+msgid ""
+"If a reversed proxy is used, make sure to configure it correctly. See "
+":option:`proxy mode <odoo-bin --proxy-mode>`"
+msgstr "如果使用反向代理，请确保正确配置。请参阅：选项:`代理模式 <odoo-bin --proxy-mode>`"
+
+#: ../../content/administration/install/geo_ip.rst:69
+msgid "``geoip2`` is not installed or the GeoIP database file wasn't found"
+msgstr "未安装``geoip2``或未找到GeoIP数据库文件"
+
+#: ../../content/administration/install/geo_ip.rst:70
+msgid "The GeoIP database was unable to resolve the given IP address"
+msgstr "GeoIP数据库无法解析给定的IP地址"
+
 #: ../../content/administration/install/online.rst:3
 msgid "Online"
 msgstr "在线"
@@ -2344,6 +2456,9 @@ msgid ""
 ":guilabel:`Users`. Personal accounts will only allow for :guilabel:`Users` "
 "to be added."
 msgstr ""
+"在左侧边栏菜单中选择 :guilabel:`用户和组`。然后，点击 :guilabel:`(+) 添加用户/组`。根据账户，可以添加 "
+":guilabel:` 组` 和 :guilabel:` 用户`，也可以只添加 :guilabel:`用户`。个人账户只允许添加 "
+":guilabel:`用户`。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:88
 msgid ""
@@ -2353,6 +2468,9 @@ msgid ""
 "users/groups, click :guilabel:`Select`, and then :guilabel:`Assign` them to "
 "the application."
 msgstr ""
+"在 :guilabel:`用户` 或 :guilabel:`组` 下，单击 :guilabel:`未选择` 并添加将从 Odoo "
+"中的:guilabel:`Microsoft 帐户`发送电子邮件的用户或用户组。 :guilabel:`Add` 用户/组，单击 "
+":guilabel:`选择`，然后 :guilabel:`分配` 他们到应用程序。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:94
 msgid "Create credentials"
@@ -2367,10 +2485,14 @@ msgid ""
 " :guilabel:`Application ID` is located under the :guilabel:`Display Name` in"
 " the :guilabel:`Essentials` overview of the app."
 msgstr ""
+"现在 Microsoft Azure 应用程序已设置完毕，需要为 Odoo 设置创建凭证。其中包括 :guilabel:`客户 ID` 和 "
+":guilabel:`客户密钥`。首先，可从应用程序的 :guilabel:`概览` 页面复制 :guilabel:`客户 "
+"ID`。guilabel:`客户 ID` 或 :guilabel:`应用程序 ID` 位于应用程序 :guilabel:`要点` 概览中 "
+":guilabel:`显示名称` 下方。"
 
 #: ../../content/administration/maintain/azure_oauth.rst-1
 msgid "Application/Client ID located in the Overview of the app."
-msgstr ""
+msgstr "应用程序/客户端 ID 位于应用程序概览中。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:106
 msgid ""
@@ -2379,6 +2501,8 @@ msgid ""
 "menu. Then, a :guilabel:`Client Secret` needs to be produced. In order to do"
 " this, click on the :guilabel:`(+) New Client Secret` button."
 msgstr ""
+"接下来，需要检索 :guilabel:`客户密钥值`。要获取该值，请单击左侧边栏菜单中的 :guilabel:`认证 & 密钥`。然后，需要生成 "
+":guilabel:`客户密钥`。为此，请单击 :guilabel:`(+) 新客户密文` 按钮。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:110
 msgid ""
@@ -2386,6 +2510,8 @@ msgid ""
 "client secret`. Under :guilabel:`Description`, type in `Odoo Fetchmail` or "
 "something recognizable, and then set the :guilabel:`expiration date`."
 msgstr ""
+"右侧窗口会弹出一个标有 :guilabel:`添加客户密钥` 的按钮。在:guilabel:`描述`下，输入`Odoo Fetchmail` "
+"或其他可识别的内容，然后设置:guilabel:`失效日期`。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:115
 msgid ""
@@ -2394,6 +2520,7 @@ msgid ""
 "service, so the expiration date should be noted and set to the furthest "
 "possible date."
 msgstr ""
+"如果第一个:guilabel:`客户密钥`过期，则需要制作和配置新的:guilabel:`客户密钥`。在此情况下，服务可能会中断，因此应注意过期日期，并将其设置为尽可能远的日期。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:119
 msgid ""
@@ -2403,28 +2530,31 @@ msgid ""
 "Value` into a notepad as it will become encrypted after leaving this page. "
 "The :guilabel:`Secret ID` is not needed."
 msgstr ""
+"输入这两个值后，点击 :guilabel:`添加`。将创建 :guilabel:`客户密钥值` 和 :guilabel:`密钥 ID`。请务必将 "
+":guilabel:`值` 或 :guilabel:`客户密钥值` 复制到记事本中，因为离开此页面后它将被加密。不需要 :guilabel:`密钥 "
+"ID`。"
 
 #: ../../content/administration/maintain/azure_oauth.rst-1
 msgid "Client Secret Value or Value in the app's credentials."
-msgstr ""
+msgstr "客户端密文值或应用程序凭证中的值。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:128
 msgid ""
 "After these steps, the following items should be ready to be set up in Odoo:"
-msgstr ""
+msgstr "完成这些步骤后，就可以在 Odoo 中设置以下项目了："
 
 #: ../../content/administration/maintain/azure_oauth.rst:130
 msgid "A client ID (:guilabel:`Client ID` or :guilabel:`Application ID`)"
-msgstr ""
+msgstr "客户端 ID（:guilabel:`客户端 ID` 或 :guilabel:` 应用程序 ID）"
 
 #: ../../content/administration/maintain/azure_oauth.rst:131
 msgid "A client secret (:guilabel:`Value` or :guilabel:`Client Secret Value`)"
-msgstr ""
+msgstr "客户密钥（:guilabel:`值` 或 :guilabel:`客户密钥值`)"
 
 #: ../../content/administration/maintain/azure_oauth.rst:133
 msgid ""
 "This completes the setup on the :guilabel:`Microsoft Azure Portal` side."
-msgstr ""
+msgstr "这样就完成了 :guilabel:`Microsoft Azure Portal` 侧的设置。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:136
 #: ../../content/administration/maintain/google_oauth.rst:111
@@ -2545,14 +2675,14 @@ msgstr ""
 
 #: ../../content/administration/maintain/azure_oauth.rst:194
 msgid "Configuration with a single outgoing mail server"
-msgstr ""
+msgstr "使用单一外发邮件服务器配置"
 
 #: ../../content/administration/maintain/azure_oauth.rst:196
 msgid ""
 "Configuring a single outgoing server is the simplest configuration available"
 " for Microsoft Azure and it doesn't require extensive access rights for the "
 "users in the database."
-msgstr ""
+msgstr "在 Microsoft Azure 中，配置单个外发服务器是最简单的配置，而且不需要为数据库中的用户设置广泛的访问权限。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:199
 msgid ""
@@ -2564,13 +2694,16 @@ msgid ""
 "`{mail.default.from}@{mail.catchall.domain}` key combination in the system "
 "parameters."
 msgstr ""
+"通用电子邮件地址将用于为数据库中的所有用户发送电子邮件。例如，它的结构可以是`通知`别名 (`notifications@example.com`) "
+"或`联系人`别名 (`contact@example.com`)。该地址必须设置为服务器上的 :guilabel:`FROM "
+"Filtering`。该地址还必须与系统参数中的`{mail.default.from}@{mail.catchall.domain}`关键组合相匹配。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:206
 #: ../../content/administration/maintain/azure_oauth.rst:247
 msgid ""
 "For more information on the from filter visit: "
 ":ref:`email_communication/default`."
-msgstr ""
+msgstr "有关 from 筛选器的更多信息，请访问 :ref:`email_communication/default`。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:209
 #: ../../content/administration/maintain/azure_oauth.rst:254
@@ -2579,6 +2712,8 @@ msgid ""
 ":ref:`developer-mode` in the :menuselection:`Settings --> Technical --> "
 "Parameters --> System Parameters` menu."
 msgstr ""
+"在 :menuselection:`设置 --> 技术 --> 参数 --> 系统参数` 菜单中激活 :ref:`开发者模式` 即可访问 "
+":guilabel:`系统参数`。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:212
 msgid ""
@@ -2587,39 +2722,40 @@ msgid ""
 "should be noted that the name of the sender will appear but their email "
 "address will change:"
 msgstr ""
+"使用此配置时，从数据库发送的每封电子邮件都将使用配置的 `通知`邮箱地址。不过需要注意的是，发件人的姓名会显示出来，但其电子邮件地址会改变："
 
 #: ../../content/administration/maintain/azure_oauth.rst-1
 msgid "Name from real sender with static email."
-msgstr ""
+msgstr "真实发件人的姓名和静态电子邮件。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:221
 msgid "Single outgoing mail server configuration:"
-msgstr ""
+msgstr "单一外发邮件服务器配置："
 
 #: ../../content/administration/maintain/azure_oauth.rst:223
 msgid ""
 "Outgoing mail server **username** (login) = `notifications@example.com`"
-msgstr ""
+msgstr "外发邮件服务器 **用户名**（登录） = `notifications@example.com`"
 
 #: ../../content/administration/maintain/azure_oauth.rst:224
 msgid ""
 "Outgoing mail server :guilabel:`FROM Filtering` = "
 "`notifications@example.com`"
-msgstr ""
+msgstr "外发邮件服务器 :guilabel:`FROM 筛选器` = `notifications@example.com`"
 
 #: ../../content/administration/maintain/azure_oauth.rst:225
 #: ../../content/administration/maintain/azure_oauth.rst:279
 msgid "`mail.catchall.domain` in system parameters = `example.com`"
-msgstr ""
+msgstr "系统参数中的 \"mail.catchall.domain\"=\"example.com"
 
 #: ../../content/administration/maintain/azure_oauth.rst:226
 #: ../../content/administration/maintain/azure_oauth.rst:280
 msgid "`mail.default.from` in system parameters = `notifications`"
-msgstr ""
+msgstr "系统参数中的 `mail.default.from` = `notifications`"
 
 #: ../../content/administration/maintain/azure_oauth.rst:229
 msgid "User-specific (multiple user) configuration"
-msgstr ""
+msgstr "用户特定（多用户）配置"
 
 #: ../../content/administration/maintain/azure_oauth.rst:231
 msgid ""
@@ -2628,6 +2764,8 @@ msgid ""
 ":guilabel:`FROM Filtering` on each individual server for this configuration "
 "to work."
 msgstr ""
+"除通用电子邮件服务器外，还可为数据库中的用户设置单独的电子邮件服务器。这些电子邮件地址必须在每个单独服务器上设置为 :guilabel:`FROM "
+"筛选器` 才能生效。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:235
 msgid ""
@@ -2636,6 +2774,8 @@ msgid ""
 "to have access rights to settings in order to establish a connection to the "
 "email server."
 msgstr ""
+"这种配置是 Microsoft Azure "
+"两种配置中难度较大的一种，因为它要求所有配置了电子邮件服务器的用户都有访问设置的权限，才能建立与电子邮件服务器的连接。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:240
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:480
@@ -2649,6 +2789,8 @@ msgid ""
 "server. In other words, only a user with an email address that matches the "
 "set :guilabel:`FROM Filtering` is able to use this server."
 msgstr ""
+"每位用户都应设置独立的电子邮件服务器。应设置 :guilabel:`FROM 筛选器` "
+"以便只从该服务器发送用户的电子邮件。换句话说，只有电子邮件地址符合 :guilabel:`FROM 筛选器` 设置的用户才能使用该服务器。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:249
 msgid ""
@@ -2657,6 +2799,9 @@ msgid ""
 " for this server should have the value of the "
 "`{mail.default.from}@{mail.catchall.domain}`."
 msgstr ""
+"必须设置 :ref:`后备服务器 <azure_oauth/notifications>`，以便发送 "
+":guilabel:`notifications`。该服务器的 :guilabel:`FROM Filtering` "
+"值应为`{mail.default.from}@{mail.catchall.domain}`。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:258
 msgid ""
@@ -2665,29 +2810,31 @@ msgid ""
 "mass-mailing email server can remain empty, but it's require to be added in "
 "the settings of the *Email Marketing* application."
 msgstr ""
+"该事务性电子邮件服务器的配置可与外发邮件群发服务器同时使用。邮件群发服务器的 :guilabel:`FROM Filtering` "
+"可以保持为空，但需要在 *电子邮件市场营销* 应用程序的设置中添加。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:263
 msgid ""
 "For more information on setting the mass-mailing email server visit "
 ":ref:`email_communication/mass_mails`."
-msgstr ""
+msgstr "有关设置邮件群发服务器的更多信息，请访问 :ref:`email_communication/mass_mails`。"
 
 #: ../../content/administration/maintain/azure_oauth.rst:267
 msgid "Multiple user outgoing mail server configuration:"
-msgstr ""
+msgstr "多用户外发邮件服务器配置："
 
 #: ../../content/administration/maintain/azure_oauth.rst:270
 msgid "User #1 mailbox"
-msgstr ""
+msgstr "用户 #1 邮箱"
 
 #: ../../content/administration/maintain/azure_oauth.rst:270
 msgid "Outgoing mail server #1 **username** (login) = `john@example.com`"
-msgstr ""
+msgstr "外发邮件服务器 #1 **用户名**（登录） = `john@example.com`"
 
 #: ../../content/administration/maintain/azure_oauth.rst:271
 msgid ""
 "Outgoing mail server #1 :guilabel:`FROM Filtering` = `john@example.com`"
-msgstr ""
+msgstr "外发邮件服务器 #1 :guilabel:`FROM Filtering` = `john@example.com`"
 
 #: ../../content/administration/maintain/azure_oauth.rst:273
 msgid "User #2 mailbox"
@@ -2801,12 +2948,14 @@ msgid ""
 "`Odoo Tutorials: Register a Free Domain Name "
 "<https://www.odoo.com/slides/slide/register-a-free-domain-name-1663>`_"
 msgstr ""
+"`Odoo 教程：注册免费域名 <https://www.odoo.com/slides/slide/register-a-free-domain-"
+"name-1663>`_"
 
 #: ../../content/administration/maintain/domain_names.rst:27
 msgid ""
 "`Odoo Quick Tips: Get a free domain name! "
 "<https://www.youtube.com/watch?v=eAfgeNOHLP4>`_"
-msgstr ""
+msgstr "`Odoo 提示： 获取免费域名！<https://www.youtube.com/watch?v=eAfgeNOHLP4>`_"
 
 #: ../../content/administration/maintain/domain_names.rst:32
 msgid "About domain names"
@@ -2845,7 +2994,7 @@ msgstr ""
 
 #: ../../content/administration/maintain/domain_names.rst:51
 msgid "Indexing of domain names by search engines"
-msgstr ""
+msgstr "搜索引擎对域名的索引"
 
 #: ../../content/administration/maintain/domain_names.rst:53
 msgid ""
@@ -2883,22 +3032,30 @@ msgid ""
 "registered with Odoo <domain-name/odoo-manage>` and for domain names managed"
 " by other providers."
 msgstr ""
+"一些搜索引擎为网站管理员提供工具，如`Google Search Console <https://search.google.com/search-"
+"console>`_和 `Bing Webmaster Tools "
+"<https://www.bing.com/webmasters>`_，帮助您分析和提高页面排名。要使用这些服务，您必须证明您是域名的所有者。验证域名所有权的一种方法是添加"
+" DNS 记录。您可以为 :ref:` 在 Odoo <域名/odoo-manage>`注册的域名和由其他提供商管理的域名添加 DNS 记录。"
 
 #: ../../content/administration/maintain/domain_names.rst:74
 msgid ":doc:`/applications/websites/website/pages/seo`"
-msgstr ""
+msgstr ":doc:`/applications/websites/website/pages/seo`"
 
 #: ../../content/administration/maintain/domain_names.rst:75
 msgid ""
 "`Google Search Console Help - Verify your site ownership "
 "<https://support.google.com/webmasters/answer/9008080>`_"
 msgstr ""
+"`Google 搜索控制台帮助 - "
+"验证您的网站所有权<https://support.google.com/webmasters/answer/9008080>`_"
 
 #: ../../content/administration/maintain/domain_names.rst:76
 msgid ""
 "`Bing Webmaster Tools - Add and Verify site "
 "<https://www.bing.com/webmasters/help/add-and-verify-site-12184f8b>`_"
 msgstr ""
+"`Bing 网站管理员工具 - 添加和验证网站 <https://www.bing.com/webmasters/help/add-and-"
+"verify-site-12184f8b>`_"
 
 #: ../../content/administration/maintain/domain_names.rst:81
 msgid "Register a free domain name with Odoo"
@@ -2936,6 +3093,8 @@ msgid ""
 "your MX records <domain-name/odoo-manage>` to use your own email server or "
 "solution such as Google Workspace."
 msgstr ""
+"此优惠不包括任何邮箱。不过，您可以 :ref:`配置您的 MX 记录 <domain-name/odoo-manage>` 以使用自己的电子邮件服务器或"
+" Google Workspace 等解决方案。"
 
 #: ../../content/administration/maintain/domain_names.rst:95
 msgid ""
@@ -2950,7 +3109,7 @@ msgstr ""
 
 #: ../../content/administration/maintain/domain_names.rst-1
 msgid "Clicking on Domain Names from an Odoo website"
-msgstr ""
+msgstr "从 Odoo 网站点击域名"
 
 #: ../../content/administration/maintain/domain_names.rst:103
 msgid ""
@@ -2962,7 +3121,7 @@ msgstr "搜索您选择的域名以检查其可用性，然后选择要为您的
 msgid ""
 "The search of the domain name example.com shows which associated domains are"
 " available."
-msgstr ""
+msgstr "搜索域名 example.com 会显示哪些相关域名可用。"
 
 #: ../../content/administration/maintain/domain_names.rst:110
 msgid ""
@@ -2983,6 +3142,8 @@ msgid ""
 "request and your website to avoid abuse. This process can take several days "
 "due to the success of the offer."
 msgstr ""
+"免费域名也适用于免费的 Odoo 在线数据库（例如，如果您只安装了一个应用程序）。在这种情况下，Odoo "
+"会审查您的申请和网站，以避免滥用。这个过程可能需要几天时间，这取决于报价是否成功。"
 
 #: ../../content/administration/maintain/domain_names.rst:119
 msgid "This is not available for Odoo.sh databases yet."
@@ -3005,7 +3166,7 @@ msgstr ""
 
 #: ../../content/administration/maintain/domain_names.rst-1
 msgid "Management of the domain names linked to an Odoo database"
-msgstr ""
+msgstr "管理与 Odoo 数据库链接的域名"
 
 #: ../../content/administration/maintain/domain_names.rst:136
 msgid ""
@@ -3054,7 +3215,7 @@ msgstr "添加 CNAME 记录"
 msgid ""
 "A **CNAME record** is a type of DNS record that points to the domain of "
 "another website rather than directly to an IP address."
-msgstr ""
+msgstr "**CNAME 记录**是一种 DNS 记录，它指向另一个网站的域名，而不是直接指向一个 IP 地址。"
 
 #: ../../content/administration/maintain/domain_names.rst:161
 msgid ""
@@ -3114,6 +3275,8 @@ msgid ""
 "(``www.example.com``), you can of course use any domain name of your choice,"
 " with any subdomain (e.g., ``anything.example.com``)."
 msgstr ""
+"虽然 Odoo 建议为您的 ``www.`` 子域 (``www.example.com``) 创建一个 CNAME "
+"记录，但您当然可以使用您选择的任何域名和任何子域（例如，``anything.example.com``）。"
 
 #: ../../content/administration/maintain/domain_names.rst:189
 msgid ""
@@ -3238,7 +3401,7 @@ msgstr ""
 msgid ""
 "Verification of the CNAME records of a domain name before mapping it with a "
 "database"
-msgstr ""
+msgstr "在将域名映射到数据库之前，验证域名的 CNAME 记录"
 
 #: ../../content/administration/maintain/domain_names.rst:252
 msgid ""
@@ -3251,7 +3414,7 @@ msgstr ""
 
 #: ../../content/administration/maintain/domain_names.rst:0
 msgid "Mapping a domain name with an Odoo.sh branch"
-msgstr ""
+msgstr "将域名与 Odoo.sh 分支进行映射"
 
 #: ../../content/administration/maintain/domain_names.rst:260
 msgid ""
@@ -3649,6 +3812,9 @@ msgid ""
 "Gmail account (this should match the email address you want to configure in "
 "Odoo)."
 msgstr ""
+"要开始使用，请访问 `Google API "
+"控制台<https://console.developers.google.com>`_。如果您有*Google Workspace* "
+"账户，请使用该账户登录，否则请使用个人 Gmail 账户登录（该账户应与您要在 Odoo 中配置的电子邮件地址一致）。"
 
 #: ../../content/administration/maintain/google_oauth.rst:28
 msgid ""
@@ -3657,6 +3823,9 @@ msgid ""
 " in this account, then the :guilabel:`New Project` option will be located on"
 " the top right under the :guilabel:`Select a project` drop-down menu."
 msgstr ""
+"然后，点击位于:guilabel:`OAuth 同意屏幕` "
+"最右侧的:guilabel:`创建项目\"。如果该账户已创建项目，则:guilabel:`选择项目'下拉菜单右上方会出现 "
+":guilabel:`新建项目` 选项。"
 
 #: ../../content/administration/maintain/google_oauth.rst:33
 msgid ""
@@ -3666,14 +3835,17 @@ msgid ""
 "using a personal Gmail account, then leave the :guilabel:`Location` as "
 ":guilabel:`No Organization`."
 msgstr ""
+"在:menuselection:`新建项目` 屏幕上，将:guilabel:`项目名称` 重命名为 `Odoo`，并浏览 :guilabel:`位置` "
+"。将 :guilabel:`位置` 设置为 *Google 工作区组织*。如果使用的是个人 Gmail 帐户，则将:guilabel:`位置` 设为 "
+":guilabel:`无组织`。"
 
 #: ../../content/administration/maintain/google_oauth.rst-1
 msgid "Project Name and Location for Google OAuth."
-msgstr ""
+msgstr "Google OAuth 的项目名称和位置。"
 
 #: ../../content/administration/maintain/google_oauth.rst:42
 msgid "Click on :guilabel:`Create` to finish this step."
-msgstr ""
+msgstr "点击:guilabel:`创建` 完成此步骤。"
 
 #: ../../content/administration/maintain/google_oauth.rst:45
 msgid "OAuth consent screen"
@@ -3683,7 +3855,7 @@ msgstr "OAuth 同意屏幕"
 msgid ""
 "If the page doesn't redirect to the :menuselection:`User Type` options, "
 "click on :guilabel:`OAuth consent screen` in the left menu."
-msgstr ""
+msgstr "如果页面没有重定向到 :menuselection:`用户类型` 选项，请单击左侧菜单中的:guilabel:`OAuth 同意屏幕`。"
 
 #: ../../content/administration/maintain/google_oauth.rst:50
 msgid ""
@@ -3691,6 +3863,8 @@ msgid ""
 "Type`, and then click on :guilabel:`Create` again, which will finally "
 "navigate to the :menuselection:`Edit app registration` page."
 msgstr ""
+"在 :guilabel:`用户类型` 选项下，选择适当的 :guilabel:`用户类型`，然后再次点击 :guilabel:`创建`，最后将导航到 "
+":menuselection:`编辑应用程序注册` 页面。"
 
 #: ../../content/administration/maintain/google_oauth.rst:55
 msgid ""
@@ -3715,7 +3889,7 @@ msgstr "编辑应用程序注册"
 
 #: ../../content/administration/maintain/google_oauth.rst:65
 msgid "Next we will configure the app registration of the project."
-msgstr ""
+msgstr " 接下来，我们将配置项目的应用程序注册。"
 
 #: ../../content/administration/maintain/google_oauth.rst:67
 msgid ""
@@ -3724,12 +3898,15 @@ msgid ""
 " the organization's email address under the :guilabel:`User support` email "
 "field."
 msgstr ""
+"在 :guilabel:`OAuth 同意屏幕` 步骤中的 :guilabel:`应用程序信息` 部分，在 :guilabel:`应用程序名称` "
+"字段中输入`Odoo`。在:guilabel:`用户支持` 电子邮件字段下选择组织的电子邮件地址。"
 
 #: ../../content/administration/maintain/google_oauth.rst:71
 msgid ""
 "Next, under :menuselection:`App Domain --> Authorized domains`, click on "
 ":guilabel:`Add Domain` and enter `odoo.com`."
 msgstr ""
+"接下来，在 :menuselection:`应用程序域名 --> 授权域名` 下，单击 :guilabel:`添加域名` 并输入 `odoo.com`。"
 
 #: ../../content/administration/maintain/google_oauth.rst:74
 msgid ""
@@ -3737,6 +3914,7 @@ msgid ""
 "enter the organization's email address. Google uses this email address to "
 "notify the organization about any changes to your project."
 msgstr ""
+"然后，在 :guilabel:`开发者联系信息` 部分中输入组织的电子邮件地址。如果项目有任何变更，Google 会使用此电子邮件地址通知该组织。"
 
 #: ../../content/administration/maintain/google_oauth.rst:78
 msgid ""
@@ -3744,6 +3922,8 @@ msgid ""
 ":menuselection:`Scopes` page by scrolling to the bottom and clicking on "
 ":guilabel:`Save and Continue`."
 msgstr ""
+"然后，单击:guilabel:`保存并继续` 按钮。然后，滚动到底部并单击 :guilabel:`保存并继续` "
+"跳过:menuselection:`范围` 页面。"
 
 #: ../../content/administration/maintain/google_oauth.rst:81
 msgid ""
@@ -3752,12 +3932,14 @@ msgid ""
 ":guilabel:`Add Users`, and then the :guilabel:`Save and Continue` button. A "
 "summary of the app registration appears."
 msgstr ""
+"如果继续测试模式（外部），请通过点击 :guilabel:`添加用户`，然后点击 :guilabel:`保存并继续` 按钮，添加在 "
+":guilabel:`测试用户` 步骤下配置的电子邮件地址。应用程序注册摘要将出现。"
 
 #: ../../content/administration/maintain/google_oauth.rst:85
 msgid ""
 "Finally, scroll to the bottom and click on :guilabel:`Back to Dashboard` to "
 "finish setting up the project."
-msgstr ""
+msgstr "最后，滚动到底部并单击:guilabel:`返回仪表板` 以完成项目设置。"
 
 #: ../../content/administration/maintain/google_oauth.rst:89
 msgid "Create Credentials"
@@ -3768,13 +3950,13 @@ msgid ""
 "Now that the project is set up, credentials should be created, which "
 "includes the *Client ID* and *Client Secret*. First, click on "
 ":guilabel:`Credentials` in the left sidebar menu."
-msgstr ""
+msgstr "现在项目已建立，应创建凭证，其中包括 *客户 ID* 和 *客户密钥*。首先，点击左侧边栏菜单中的:guilabel:`凭证`。"
 
 #: ../../content/administration/maintain/google_oauth.rst:94
 msgid ""
 "Then, click on :guilabel:`Create Credentials` in the top menu and select "
 ":guilabel:`OAuth client ID` from the dropdown menu."
-msgstr ""
+msgstr "然后，点击顶部菜单中的 :guilabel:`创建凭证` 并从下拉菜单中选择 :guilabel:`OAuth 客户 ID`。"
 
 #: ../../content/administration/maintain/google_oauth.rst:97
 msgid ""
@@ -3827,6 +4009,9 @@ msgid ""
 "into the :guilabel:`Client ID` and :guilabel:`Client Secret` fields and "
 ":guilabel:`Save` the settings."
 msgstr ""
+"接下来，导航至:menuselection:`设置-->常规设置`，在:guilabel:`讨论`部分，确保选中:guilabel:`自定义电子邮件服务器`或:guilabel:`外部电子邮件服务器`复选框。这将弹出一个新选项:guilabel:`Gmail"
+" 认证`或:guilabel:`使用 Gmail 服务器`。然后，将相应值复制并粘贴到 :guilabel:`客户 ID` 和 "
+":guilabel:`客户密钥` 字段，然后 :guilabel:`保存` 设置。"
 
 #: ../../content/administration/maintain/google_oauth.rst:129
 msgid ""
@@ -3834,10 +4019,11 @@ msgid ""
 ":guilabel:`Custom Email Servers` setting and then click the "
 ":guilabel:`Outgoing Email Servers` link."
 msgstr ""
+"要配置外部 Gmail 帐户，请返回到:guilabel:`客户邮件服务器` 设置的顶部，然后单击:guilabel:`外发电子邮件服务器` 链接。"
 
 #: ../../content/administration/maintain/google_oauth.rst-1
 msgid "Configure Outgoing Email Servers in Odoo."
-msgstr ""
+msgstr "在 Odoo 中配置外发电子邮件服务器。"
 
 #: ../../content/administration/maintain/google_oauth.rst:136
 msgid ""
@@ -3845,6 +4031,8 @@ msgid ""
 "server, and fill in the :guilabel:`Name`, :guilabel:`Description`, and the "
 "email :guilabel:`Username` (if required)."
 msgstr ""
+"然后，点击 :guilabel:`新建` 或 :guilabel:`创建` 新电子邮件服务器，并填写 :guilabel:`名称`, "
+":guilabel:`描述` 和电子邮件 :guilabel:`用户名` （如果需要）。"
 
 #: ../../content/administration/maintain/google_oauth.rst:139
 msgid ""
@@ -3875,6 +4063,8 @@ msgid ""
 "configuration automatically loads the token in Odoo, and a tag stating "
 ":guilabel:`Gmail Token Valid` appears in green."
 msgstr ""
+"然后，点击:guilabel:`继续` 或 :guilabel:`允许` Odoo 访问 Google 账户。之后，页面会返回到 Odoo "
+"中新配置的外发邮件服务器。配置会自动在 Odoo 中加载令牌，并显示绿色标签:guilabel:`Gmail 令牌有效`。"
 
 #: ../../content/administration/maintain/google_oauth.rst:158
 msgid ""
@@ -3882,6 +4072,8 @@ msgid ""
 "appear. The Odoo database can now send safe, secure emails through Google "
 "using OAuth authentication."
 msgstr ""
+"最后，输入:guilabel:`测试连接`。此时会出现一条确认信息。现在，Odoo 数据库可以使用 OAuth 身份验证通过 Google "
+"发送安全可靠的电子邮件。"
 
 #: ../../content/administration/maintain/google_oauth.rst:162
 msgid "Google OAuth FAQ"
@@ -4013,7 +4205,7 @@ msgstr ""
 #: ../../content/administration/maintain/hosting_changes.rst:15
 #: ../../content/administration/maintain/hosting_changes.rst:83
 msgid "Odoo Online is *not* compatible with **non-standard apps**."
-msgstr ""
+msgstr "Odoo 在线版与**非标准应用程序**不兼容。"
 
 #: ../../content/administration/maintain/hosting_changes.rst:16
 msgid ""
@@ -4796,12 +4988,12 @@ msgid "To remove users, select them and click :guilabel:`Remove`."
 msgstr "要删除用户，请选择他们并单击 :guilabel:`删除`。"
 
 #: ../../content/administration/maintain/odoo_online.rst:132
-msgid ":doc:`../../applications/general/users/manage_users`"
-msgstr ""
+msgid ":doc:`/applications/general/users/manage_users`"
+msgstr ":doc:`/applications/general/users/manage_users`"
 
 #: ../../content/administration/maintain/odoo_online.rst:133
-msgid ":doc:`../../applications/general/users/delete_account`"
-msgstr ""
+msgid ":doc:`/applications/general/users/odoo_account`"
+msgstr ":doc:`/applications/general/users/odoo_account`"
 
 #: ../../content/administration/maintain/on_premise.rst:3
 msgid "On-premise database management"
