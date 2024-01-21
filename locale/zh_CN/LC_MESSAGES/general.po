@@ -480,6 +480,8 @@ msgid ""
 " within one organization or is it meant for customer portal access? The "
 "above configuration is used for internal users in an organization."
 msgstr ""
+":guilabel:`支持的账户类型` 可能因微软账户类型和 OAuth 的最终用途而异。例如： "
+"登录是用于一个组织的内部用户，还是用于客户门户访问？上述配置用于一个组织的内部用户。"
 
 #: ../../content/applications/general/auth/azure.rst:68
 msgid ""
@@ -488,6 +490,8 @@ msgid ""
 " directory only (Default Directory only - Single tenant)` if the target "
 "audience is company users."
 msgstr ""
+"如果目标受众是门户用户，请选择 :guilabel:`仅限个人 Microsoft 帐户`。如果目标受众是公司用户，请选择 "
+":guilabel:`仅本组织目录中的账户（仅默认目录 - 单租户）`。"
 
 #: ../../content/applications/general/auth/azure.rst:72
 msgid ""
@@ -498,13 +502,18 @@ msgid ""
 "*mydatabase.odoo.com* if you are hosted on Odoo.com) in the :guilabel:`URL` "
 "field. Then, click :guilabel:`Register`, and the application is created."
 msgstr ""
+"在 :guilabel:`重定向 URL` 部分，选择 :guilabel:`网页` 作为平台，然后在 :guilabel:`URL` 字段中输入 "
+"`https://1/auth_oauth/signin`。在 :guilabel:`URL` "
+"字段中，Odoo的基本:abbr:`URL（统一资源定位器）`是您的 Odoo "
+"实例可以到达的规范域（例如，*mydatabase.odoo.com*，如果您的主机在 Odoo.com）。然后，点击 "
+":guilabel:`注册`，应用程序即可创建。"
 
 #: ../../content/applications/general/auth/azure.rst:81
 msgid ""
 "Edit the new app's authentication by clicking on the "
 ":guilabel:`Authentication` menu item in the left menu after being redirected"
 " to the application's settings from the previous step."
-msgstr ""
+msgstr "在重定向到上一步的应用程序设置后，点击左侧菜单中的 :guilabel:`认证` 菜单项，编辑新应用程序的身份验证。"
 
 #: ../../content/applications/general/auth/azure.rst:84
 msgid ""
@@ -517,18 +526,22 @@ msgid ""
 "and check the boxes labeled: :guilabel:`Access tokens (used for implicit "
 "flows)` and :guilabel:`ID tokens (used for implicit and hybrid flows)`."
 msgstr ""
+"接下来，将选择 OAuth 身份验证所需的*令牌*类型。这些不是货币令牌，而是在微软和 Odoo "
+"之间传递的身份验证令牌。因此，这些令牌无需任何费用；它们仅用于两个 "
+":abbr:`API（应用程序编程接口）`之间的身份验证目的。向下滚动屏幕并选中标有:guilabel:`访问令牌（用于隐式流程）`和 "
+":guilabel:`ID tokens（用于隐式和混合流程）`的复选框，以选择授权端点应签发的令牌。"
 
 #: ../../content/applications/general/auth/azure.rst-1
 msgid "Authentication settings and endpoint tokens."
-msgstr ""
+msgstr "身份验证设置和端点令牌。"
 
 #: ../../content/applications/general/auth/azure.rst:96
 msgid "Click :guilabel:`Save` to ensure these settings are saved."
-msgstr ""
+msgstr "单击 :guilabel:`保存` 以确保保存这些设置。"
 
 #: ../../content/applications/general/auth/azure.rst:99
 msgid "Gather credentials"
-msgstr ""
+msgstr "收集凭证"
 
 #: ../../content/applications/general/auth/azure.rst:101
 msgid ""
@@ -539,6 +552,8 @@ msgid ""
 "credential to a clipboard / notepad, as this credential will be used in the "
 "Odoo configuration later."
 msgstr ""
+"在 Microsoft Azure 控制台中创建并验证应用程序后，接下来将收集凭证。为此，请单击左侧栏中的 :guilabel:`概览` "
+"菜单项。在出现的窗口中选择并复制 :guilabel:`应用（客户） ID`。将此凭证粘贴到剪贴板/记事本中，因为稍后在 Odoo 配置中将使用此凭证。"
 
 #: ../../content/applications/general/auth/azure.rst:106
 msgid ""
@@ -546,14 +561,16 @@ msgid ""
 "and click the *copy icon* next to :guilabel:`OAuth 2.0 authorization "
 "endpoint (v2)` field. Paste this value in the clipboard / notepad."
 msgstr ""
+"完成此步骤后，单击顶部菜单中的 :guilabel:`终端` 并单击 :guilabel:`OAuth 2.0 授权端点 (v2)` 字段旁边的 "
+"*复制图标*。将此值粘贴到剪贴板/记事本中。"
 
 #: ../../content/applications/general/auth/azure.rst-1
 msgid "Application ID and OAuth 2.0 authorization endpoint (v2) credentials."
-msgstr ""
+msgstr "应用程序 ID 和 OAuth 2.0 授权端点 (v2) 凭据。"
 
 #: ../../content/applications/general/auth/azure.rst:115
 msgid "Odoo setup"
-msgstr ""
+msgstr "Odoo 设置"
 
 #: ../../content/applications/general/auth/azure.rst:117
 msgid ""
@@ -563,6 +580,9 @@ msgid ""
 "OAuth login feature. Click :guilabel:`Save` to ensure the progress is saved."
 " Then, sign in to the database once the login screen loads."
 msgstr ""
+"最后，Microsoft Azure OAuth 配置的最后一步是在 Odoo 中进行设置。导航至 :menuselection:`设置 --> 整合 "
+"--> OAuth 认证` 并选中复选框以激活 OAuth 登录功能。点击 :guilabel:`保存` "
+"以确保保存进度。然后，在登录屏幕加载后登录数据库。"
 
 #: ../../content/applications/general/auth/azure.rst:122
 msgid ""
@@ -570,6 +590,8 @@ msgid ""
 "Authentication` and click on :guilabel:`OAuth Providers`. Now, select "
 ":guilabel:`New` in the upper-left corner and name the provider `Azure`."
 msgstr ""
+"再次，导航至 :menuselection:`设置 --> 整合 --> OAuth 认证` 并点击 :guilabel:`OAuth "
+"提供商`。现在，选择左上角的 :guilabel:`新建`，并将提供程序命名为 `Azure`。"
 
 #: ../../content/applications/general/auth/azure.rst:126
 msgid ""
@@ -578,12 +600,16 @@ msgid ""
 ":guilabel:`OAuth 2.0 authorization endpoint (v2)` value into the "
 ":guilabel:`Authorization URL` field."
 msgstr ""
+"将上一节中的 :guilabel:`应用程序（客户）ID` 粘贴到 :guilabel:`客户 ID` 字段。完成此操作后，将新的 "
+":guilabel:`OAuth 2.0 授权端点 (v2)` 值粘贴到 :guilabel:`认证 URL` 字段。"
 
 #: ../../content/applications/general/auth/azure.rst:130
 msgid ""
 "For the :guilabel:`UserInfo URL` field, paste the following :abbr:`URL "
 "(Uniform Resource Locator)`: `https://graph.microsoft.com/oidc/userinfo`"
 msgstr ""
+"在 :guilabel:`UserInfo URL` 字段中，粘贴以下 :abbr:`URL （统一资源定位符）`： "
+"`https://graph.microsoft.com/oidc/userinfo`"
 
 #: ../../content/applications/general/auth/azure.rst:133
 msgid ""
@@ -592,6 +618,8 @@ msgid ""
 "screen by entering the following value: `fa fa-fw fa-windows`, in the "
 ":guilabel:`CSS class` field."
 msgstr ""
+"在:guilabel:`范围` 字段中粘贴以下值：`openid profile email`。然后，在 :guilabel:`CSS class` "
+"字段中输入以下值：`fa fa-fw fa-windows`，即可将 Windows 徽标用作登录屏幕的 CSS 类。"
 
 #: ../../content/applications/general/auth/azure.rst:137
 msgid ""
@@ -600,20 +628,22 @@ msgid ""
 "label` field. This text will appear next to the Windows logo on the login "
 "page."
 msgstr ""
+"选中 :guilabel:`Allowed` 字段旁边的复选框以启用 OAuth 提供商。最后，在 :guilabel:`登录按钮标签` 字段中添加 "
+"`Microsoft Azure`。此文本将显示在登录页面的 Windows 徽标旁边。"
 
 #: ../../content/applications/general/auth/azure.rst-1
 msgid "Odoo provider setup in the Settings application."
-msgstr ""
+msgstr "设置应用程序中的 Odoo 提供商设置。"
 
 #: ../../content/applications/general/auth/azure.rst:145
 msgid ""
 ":guilabel:`Save` the changes to complete the OAuth authentication setup in "
 "Odoo."
-msgstr ""
+msgstr ":guilabel:`保存`更改，以完成 Odoo 中的 OAuth 身份验证设置。"
 
 #: ../../content/applications/general/auth/azure.rst:148
 msgid "User experience flows"
-msgstr ""
+msgstr "用户体验流"
 
 #: ../../content/applications/general/auth/azure.rst:150
 msgid ""
@@ -621,6 +651,8 @@ msgid ""
 ":menuselection:`Odoo password reset page`. This is the only way that Odoo is"
 " able to link the Microsoft Azure account and allow the user to log in."
 msgstr ""
+"要使用 Microsoft Azure 登录 Odoo，用户必须访问 :menuselection:`Odoo密码重置页面`。这是 Odoo 链接 "
+"Microsoft Azure 账户并允许用户登录的唯一方式。"
 
 #: ../../content/applications/general/auth/azure.rst:155
 msgid ""
@@ -629,6 +661,8 @@ msgid ""
 "click the new user invitation link that was sent via email, then click on "
 ":guilabel:`Microsoft Azure`. Users should not set a new password."
 msgstr ""
+"现有用户必须:ref:`重置密码 <users/reset-password>` 访问 :menuselection:`Odoo 密码重置页面`。新 "
+"Odoo 用户必须点击通过电子邮件发送的新用户邀请链接，然后点击 :guilabel:`Microsoft Azure`。用户不应设置新密码。"
 
 #: ../../content/applications/general/auth/azure.rst:160
 msgid ""
@@ -638,10 +672,13 @@ msgid ""
 "click on the option labeled :guilabel:`Microsoft Azure`. The page will "
 "redirect to the Microsoft login page."
 msgstr ""
+"要使用 Microsoft Azure OAuth 提供商首次登录 Odoo，请导航至 "
+":menuselection:`Odoo密码重置页面`（使用新用户邀请链接）。此时会出现密码重置页面。然后，点击标有 "
+":guilabel:`Microsoft Azure` 的选项。页面将重定向到 Microsoft 登录页面。"
 
 #: ../../content/applications/general/auth/azure.rst-1
 msgid "Microsoft Outlook login page."
-msgstr ""
+msgstr "Microsoft Outlook 登录页面。"
 
 #: ../../content/applications/general/auth/azure.rst:169
 msgid ""
@@ -833,7 +870,7 @@ msgstr "OAuth 客户端 ID 选择。"
 msgid ""
 "Select :guilabel:`Web Application` as the :guilabel:`Application Type`. Now,"
 " configure the allowed pages on which Odoo will be redirected."
-msgstr ""
+msgstr "选择 :guilabel:`Web 应用程序` 作为 :guilabel:`应用类型`。现在，配置允许 Odoo 重定向的页面。"
 
 #: ../../content/applications/general/auth/google.rst:99
 msgid ""
@@ -842,6 +879,9 @@ msgid ""
 "For example: `https://mydomain.odoo.com/auth_oauth/signin`, then click on "
 ":guilabel:`Create`."
 msgstr ""
+"为此，请在:guilabel:`授权重定向 URIs` "
+"字段中输入数据库的域，紧接着输入`/auth_oauth/signin`。例如：`https://mydomain.odoo.com/auth_oauth/signin`，然后点击"
+" :guilabel:`创建`。"
 
 #: ../../content/applications/general/auth/google.rst:103
 msgid ""
@@ -850,6 +890,8 @@ msgid ""
 ":guilabel:`Client ID` for later, as it will be necessary for the "
 "configuration in Odoo, which will be covered in the following steps."
 msgstr ""
+"创建 *OAuth 客户端* 后，屏幕将显示 :guilabel:`客户 ID` 和 :guilabel:`客户密钥`。复制:guilabel:`客户 "
+"ID` 以备不时之需，因为它是在 Odoo 中进行配置所必需的，这将在下面的步骤中介绍。"
 
 #: ../../content/applications/general/auth/google.rst:110
 msgid "Google Authentication on Odoo"
@@ -865,10 +907,12 @@ msgid ""
 "API Dashboard: :guilabel:`Client ID` and :guilabel:`Client Secret`. Copy the"
 " :guilabel:`Client ID`."
 msgstr ""
+"完成前面的步骤后，Google API 控制面板上会生成两个密钥：:guilabel:`客户 ID` 和 :guilabel:` 客户密钥`。复制 "
+":guilabel:`客户端 ID`。"
 
 #: ../../content/applications/general/auth/google.rst-1
 msgid "Google OAuth Client ID generated."
-msgstr ""
+msgstr "已生成 Google OAuth 客户端 ID。"
 
 #: ../../content/applications/general/auth/google.rst:127
 msgid "Odoo activation"
@@ -878,11 +922,11 @@ msgstr "Odoo 激活"
 msgid ""
 "Go to :menuselection:`Odoo General Settings --> Integrations` and activate "
 ":guilabel:`OAuth Authentication`."
-msgstr ""
+msgstr "进入 :menuselection:`Odoo 常规设置 --> 整合` 并激活 :guilabel:`OAuth 认证`。"
 
 #: ../../content/applications/general/auth/google.rst:133
 msgid "Odoo may prompt the user to log-in again after this step."
-msgstr ""
+msgstr "完成此步骤后，Odoo 可能会提示用户重新登录。"
 
 #: ../../content/applications/general/auth/google.rst:135
 msgid ""
@@ -893,10 +937,13 @@ msgid ""
 ":guilabel:`Client ID` with the key from the Google API Dashboard, and "
 ":guilabel:`Save`."
 msgstr ""
+"返回 :menuselection:`常规设置 --> 整合 --> OAuth 认证`，激活选择并 :guilabel:`保存`。接下来，返回 "
+":menuselection:`常规设置 --> 整合 --> Google 认证` 并激活选择。然后用 Google API 控制面板中的密钥填写 "
+":guilabel:`客户 ID`，然后 :guilabel:`保存`。"
 
 #: ../../content/applications/general/auth/google.rst:0
 msgid "Filling out the client id in Odoo settings."
-msgstr ""
+msgstr "在 Odoo 设置中填写客户端 ID。"
 
 #: ../../content/applications/general/auth/google.rst:145
 msgid ""
@@ -904,6 +951,8 @@ msgid ""
 ":guilabel:`OAuth Providers` under the :guilabel:`OAuth Authentication` "
 "heading in :menuselection:`Integrations`."
 msgstr ""
+"还可通过点击 :menuselection:`整合`中:guilabel:`OAuth 认证` 标题下的 :guilabel:`OAuth 提供商` "
+"访问 Google OAuth2 配置。"
 
 #: ../../content/applications/general/auth/google.rst:151
 msgid "Log in to Odoo with Google"
@@ -913,11 +962,11 @@ msgstr "使用谷歌登录Odoo"
 msgid ""
 "To link the Google account to the Odoo profile, click on :guilabel:`Log in "
 "with Google` when first logging into Odoo."
-msgstr ""
+msgstr "要将 Google 帐户链接到 Odoo 配置文件，请在首次登录 Odoo 时点击 :guilabel:`用 Google 登录`。"
 
 #: ../../content/applications/general/auth/google.rst:0
 msgid "Reset password screen with \"Log in with Google\" button."
-msgstr ""
+msgstr "重置密码界面，带有“使用 Google 登录”按钮。"
 
 #: ../../content/applications/general/auth/google.rst:161
 msgid ""
@@ -926,6 +975,8 @@ msgid ""
 "directly click on :guilabel:`Log in with Google`, instead of choosing a new "
 "password."
 msgstr ""
+"现有用户必须 :ref:`重置密码 <users/reset-password>` 才能访问 :menuselection:`重设密码` "
+"页面，而新用户可以直接点击 :guilabel:`使用 Google 登录`，而无需选择新密码。"
 
 #: ../../content/applications/general/auth/google.rst:166
 msgid ""
@@ -1002,6 +1053,11 @@ msgid ""
 " the :ref:`command palette <general/developer_mode/command-palette>`  or the"
 " :ref:`URL <general/developer_mode/url>`."
 msgstr ""
+"开发人员模式（或调试模式）可解锁访问 Odoo 中的额外和高级工具。激活开发者模式有几种方法：通过 :ref:`设置 "
+"<general/developer_mode/settings>`, :ref:`浏览器扩展 "
+"<general/developer_mode/browser-extension>`, 通过 :ref:`命令面板 "
+"<general/developer_mode/command-palette>` 或 :ref:`URL "
+"<general/developer_mode/url>`。"
 
 #: ../../content/applications/general/developer_mode.rst:17
 msgid "Activate through the Settings"
@@ -1015,10 +1071,13 @@ msgid ""
 "to be installed for the :guilabel:`Developer Tools` section to appear in the"
 " :guilabel:`Settings` module."
 msgstr ""
+"调试模式可在 Odoo 数据库设置中激活。进入 :menuselection:`设置-->常规设置-->开发工具`，点击 "
+":guilabel:`激活开发模式`。至少需要安装一个应用程序才能在 :guilabel:`设置` 模块中显示 :guilabel:`开发者工具` "
+"部分。"
 
 #: ../../content/applications/general/developer_mode.rst-1
 msgid "Overview of the debug options under settings in Odoo."
-msgstr ""
+msgstr "Odoo 设置下的调试选项概览。"
 
 #: ../../content/applications/general/developer_mode.rst:29
 msgid ""
@@ -1026,23 +1085,24 @@ msgid ""
 " :guilabel:`Activate the developer mode (with tests assets)` is used by "
 "developers and testers."
 msgstr ""
+":guilabel:`激活开发者模式（带资产）`供开发者使用； :guilabel:`激活开发者模式（带测试资产）`由开发者和测试人员使用。"
 
 #: ../../content/applications/general/developer_mode.rst:32
 msgid ""
 "Once activated, the :guilabel:`Deactivate the developer mode` option becomes"
 " available."
-msgstr ""
+msgstr "一旦激活，:guilabel:`停用开发者模式`选项就会可用。"
 
 #: ../../content/applications/general/developer_mode.rst:37
 msgid "Activate through the browser extension"
-msgstr ""
+msgstr "通过浏览器扩展程序激活"
 
 #: ../../content/applications/general/developer_mode.rst:39
 msgid ""
 "Within a web browser, navigate to the browser settings and extensions and "
 "search for the `Odoo Debug` extension. Once the extension is installed, a "
 "new icon will be shown on the browser's toolbar."
-msgstr ""
+msgstr "在网络浏览器中，进入浏览器设置和扩展，搜索 `Odoo Debug` 扩展。安装扩展后，浏览器工具栏上将显示一个新图标。"
 
 #: ../../content/applications/general/developer_mode.rst:43
 msgid ""
@@ -1053,7 +1113,7 @@ msgstr "对于*Odoo Debug*扩展，单击可启用模式的正常版本，而双
 
 #: ../../content/applications/general/developer_mode.rst-1
 msgid "View of Odoo's debug icon in a Google Chrome toolbar."
-msgstr ""
+msgstr "Google Chrome 工具栏中 Odoo 调试图标的视图。"
 
 #: ../../content/applications/general/developer_mode.rst:53
 msgid "Activate through the command palette"
@@ -1065,10 +1125,12 @@ msgid ""
 "First, open the command palette tool with the keyboard shortcut `ctrl+k` and"
 " then type `debug`. A command will show up to activate the debug mode."
 msgstr ""
+"在 Odoo 中，命令调板工具有一个激活调试模式的命令。首先，使用键盘快捷键 `ctrl+k` 打开命令调色板工具，然后输入 "
+"`debug`。这时会出现一条激活调试模式的命令。"
 
 #: ../../content/applications/general/developer_mode.rst-1
 msgid "Command palette with debug command."
-msgstr ""
+msgstr "带有调试指令的指令调色板。"
 
 #: ../../content/applications/general/developer_mode.rst:66
 msgid "Activate through the URL"
@@ -1080,10 +1142,12 @@ msgid ""
 "database's URL. In the URL, add `?debug=1` or `?debug=true` after `/web`. To"
 " deactivate the debug mode, change the value to `?debug=0` instead."
 msgstr ""
+"调试模式也可以通过在数据库的 URL 中添加额外的查询字符串来激活。在 URL "
+"中，在`/web`后添加`?debug=1`或`?debug=true`。要停用调试模式，可将其值改为 `?debug=0`。"
 
 #: ../../content/applications/general/developer_mode.rst-1
 msgid "Overview of a URL with the debug mode command added."
-msgstr ""
+msgstr "添加了调试模式命令的 URL 概述。"
 
 #: ../../content/applications/general/developer_mode.rst:77
 msgid ""
@@ -1093,18 +1157,18 @@ msgstr ""
 
 #: ../../content/applications/general/developer_mode.rst:83
 msgid "Locate the developer mode tools"
-msgstr ""
+msgstr "找到开发者模式工具"
 
 #: ../../content/applications/general/developer_mode.rst:85
 msgid ""
 "Once developer mode is activated, the developer mode tools can be accessed "
 "from the :guilabel:`Open Developer Tools` button, the bug icon located in "
 "the header of the Odoo database."
-msgstr ""
+msgstr "激活开发者模式后，可通过 :guilabel:`打开开发者工具` 按钮访问开发者模式工具，该按钮是位于 Odoo 数据库标题中的错误图标。"
 
 #: ../../content/applications/general/developer_mode.rst-1
 msgid "Overview of a console page and the debug icon being shown in Odoo."
-msgstr ""
+msgstr "Odoo 中显示的控制台页面和调试图标概览。"
 
 #: ../../content/applications/general/developer_mode.rst:92
 msgid ""
@@ -1113,22 +1177,23 @@ msgid ""
 "filters, actions, and view options, the developer mode tools contain some "
 "useful menu items such as:"
 msgstr ""
+"该菜单包含对理解或编辑技术数据（如页面的视图或操作）非常有用的附加工具。在具有过滤器、操作和视图选项的页面上，开发人员模式工具包含一些有用的菜单项，如："
 
 #: ../../content/applications/general/developer_mode.rst:96
 msgid ":guilabel:`Edit Action`"
-msgstr ""
+msgstr ":guilabel:`编辑操作`"
 
 #: ../../content/applications/general/developer_mode.rst:97
 msgid ":guilabel:`Manage Filters`"
-msgstr ""
+msgstr ":guilabel:`管理筛选器`"
 
 #: ../../content/applications/general/developer_mode.rst:98
 msgid "Edit the current view (e.g. Kanban, List, Graph, etc.)"
-msgstr ""
+msgstr "编辑当前视图（例如看板、列表、图表等）"
 
 #: ../../content/applications/general/developer_mode.rst:99
 msgid "See the :guilabel:`Fields View Get`"
-msgstr ""
+msgstr "请参阅:guilabel:`字段视图获取`"
 
 #: ../../content/applications/general/email_communication.rst:5
 msgid "Email Communication"
@@ -3596,12 +3661,14 @@ msgid ""
 "<developer-mode>`, then go to :menuselection:`Technical Settings --> IAP "
 "Account`."
 msgstr ""
+"使用 IAP 服务的点数存储在 IAP 账户中，每个服务都有特定的 IAP 账户。默认情况下，IAP 账户对所有公司通用，但也可限制对特定公司使用。激活"
+" :ref:`开发者模式<developer-mode>`，然后转到 :menuselection:`技术设置 --> IAP 账户`。"
 
 #: ../../content/applications/general/in_app_purchase.rst:34
 msgid ""
 "An IAP account can be disabled by appending `+disabled` to its token. "
 "Reverting this change will re-enable the account."
-msgstr ""
+msgstr "在 IAP 帐户的令牌中添加`+disabled`可禁用该帐户。撤销这一更改将重新启用账户。"
 
 #: ../../content/applications/general/in_app_purchase.rst:38
 msgid "IAP Portal"
@@ -3668,7 +3735,7 @@ msgstr ""
 
 #: ../../content/applications/general/users.rst:5
 msgid "Users and companies"
-msgstr ""
+msgstr "用户和公司"
 
 #: ../../content/applications/general/users.rst:7
 msgid ""
@@ -3983,7 +4050,7 @@ msgstr ":doc:`Journals <../../财务/会计/银行/设置/bank_accounts>`"
 
 #: ../../content/applications/general/users/companies.rst:92
 msgid ":doc:`Fiscal Localizations <../../finance/fiscal_localizations>`"
-msgstr ""
+msgstr ":doc:`财务本地化 <../../finance/fiscal_localizations>`"
 
 #: ../../content/applications/general/users/companies.rst:93
 msgid ":doc:`Pricelists <../../sales/sales/products_prices/prices/pricing>`"
@@ -4095,7 +4162,7 @@ msgstr ""
 msgid ""
 "Clicking on the Delete Account button will populate a window verifying the "
 "change."
-msgstr ""
+msgstr "单击“删除账户”按钮后，会弹出一个窗口验证更改。"
 
 #: ../../content/applications/general/users/delete_account.rst:20
 msgid ""
@@ -4182,7 +4249,7 @@ msgstr ""
 
 #: ../../content/applications/general/users/language.rst:61
 msgid ":doc:`../../websites/website/configuration/translate`"
-msgstr ""
+msgstr ":doc:`../../websites/website/configuration/translate`"
 
 #: ../../content/applications/general/users/manage_users.rst:3
 msgid "Manage users"
@@ -4412,39 +4479,39 @@ msgstr ":d：“公司”"
 
 #: ../../content/applications/general/users/portal.rst:3
 msgid "Portal access"
-msgstr ""
+msgstr "门户访问"
 
 #: ../../content/applications/general/users/portal.rst:5
 msgid ""
 "Portal access is given to users who need the ability to view certain "
 "documents or information within an Odoo database."
-msgstr ""
+msgstr "门户访问权限提供给需要查看 Odoo 数据库中某些文档或信息的用户。"
 
 #: ../../content/applications/general/users/portal.rst:8
 msgid ""
 "Some common use cases for providing portal access include allowing customers"
 " to read/view any or all of the following in Odoo:"
-msgstr ""
+msgstr "提供门户访问的一些常见用例包括允许客户在 Odoo 中读取/查看以下任何或所有内容："
 
 #: ../../content/applications/general/users/portal.rst:11
 msgid "leads/opportunities"
-msgstr ""
+msgstr "潜在客户/商机"
 
 #: ../../content/applications/general/users/portal.rst:12
 msgid "quotations/sales orders"
-msgstr ""
+msgstr "报价/销售订单"
 
 #: ../../content/applications/general/users/portal.rst:13
 msgid "purchase orders"
-msgstr ""
+msgstr "采购订单"
 
 #: ../../content/applications/general/users/portal.rst:14
 msgid "invoices & bills"
-msgstr ""
+msgstr "发票和账单"
 
 #: ../../content/applications/general/users/portal.rst:15
 msgid "projects"
-msgstr ""
+msgstr "项目"
 
 #: ../../content/applications/general/users/portal.rst:16
 msgid "tasks"
@@ -4452,7 +4519,7 @@ msgstr "任务"
 
 #: ../../content/applications/general/users/portal.rst:17
 msgid "timesheets"
-msgstr ""
+msgstr "工时单"
 
 #: ../../content/applications/general/users/portal.rst:18
 msgid "tickets"
@@ -4460,7 +4527,7 @@ msgstr "支持请求"
 
 #: ../../content/applications/general/users/portal.rst:19
 msgid "signatures"
-msgstr ""
+msgstr "签名"
 
 #: ../../content/applications/general/users/portal.rst:20
 msgid "subscriptions"
@@ -4470,11 +4537,11 @@ msgstr "网站订阅"
 msgid ""
 "Portal users only have read/view access, and will not be able to edit any "
 "documents in the database."
-msgstr ""
+msgstr "门户用户只有读取/查看权限，不能编辑数据库中的任何文件。"
 
 #: ../../content/applications/general/users/portal.rst:27
 msgid "Provide portal access to customers"
-msgstr ""
+msgstr "为客户提供门户访问"
 
 #: ../../content/applications/general/users/portal.rst:29
 msgid ""
@@ -4485,6 +4552,8 @@ msgid ""
 "the :guilabel:`Action` drop-down menu located at the top-center of the "
 "interface."
 msgstr ""
+"从主 Odoo 面板，选择:guilabel:`联系人`应用程序。如果联系人尚未在数据库中创建，请单击:guilabel:`创建` "
+"按钮，输入联系人的详细信息，然后单击:guilabel:`保存`。否则，请选择一个现有联系人，然后点击界面顶部中央的:guilabel:`操作`下拉菜单。"
 
 #: ../../content/applications/general/users/portal.rst-1
 msgid "Use the Contacts application to give portal access to users"
@@ -4494,22 +4563,22 @@ msgstr ""
 msgid ""
 "Then select :guilabel:`Grant portal access`. A pop-up window appears, "
 "listing three fields:"
-msgstr ""
+msgstr "然后选择:guilabel:`授予门户访问权限`。弹出一个窗口，列出三个字段："
 
 #: ../../content/applications/general/users/portal.rst:40
 msgid ""
 ":guilabel:`Contact`: the recorded name of the contact in the Odoo database"
-msgstr ""
+msgstr "guilabel:`联系人`：Odoo 数据库中记录的联系人名称"
 
 #: ../../content/applications/general/users/portal.rst:41
 msgid ""
 ":guilabel:`Email`: the contact's email address that they will use to log "
 "into the portal"
-msgstr ""
+msgstr "guilabel:`电子邮件`：联系人用于登录门户网站的电子邮件地址"
 
 #: ../../content/applications/general/users/portal.rst:42
 msgid ":guilabel:`In Portal`: whether or not the user has portal access"
-msgstr ""
+msgstr "guilabel:`门户网站中`：用户是否拥有门户网站访问权限"
 
 #: ../../content/applications/general/users/portal.rst:44
 msgid ""
@@ -4518,18 +4587,20 @@ msgid ""
 " Portal` column. Optionally, add text to the invitation message the contact "
 "will receive. Then click :guilabel:`Apply` to finish."
 msgstr ""
+"要授予门户访问权，首先输入联系人用于登录门户的 :guilabel:` 电子邮件地址`。然后，选中 :guilabel:`在门户网站` "
+"栏下的复选框。可选择为联系人将收到的邀请信息添加文本。然后点击 :guilabel:`应用` 完成。"
 
 #: ../../content/applications/general/users/portal.rst-1
 msgid ""
 "An email address and corresponding checkbox for the contact need to be filled in before\n"
 "sending a portal invitation."
-msgstr ""
+msgstr "在发送门户网站邀请函之前，需要填写联系人的电子邮件地址和相应的复选框。"
 
 #: ../../content/applications/general/users/portal.rst:53
 msgid ""
 "An email will be sent to the specified email address, indicating that the "
 "contact is now a portal user for that Odoo database."
-msgstr ""
+msgstr "将向指定的电子邮件地址发送一封电子邮件，说明该联系人现已成为该 Odoo 数据库的门户用户。"
 
 #: ../../content/applications/general/users/portal.rst:57
 msgid ""
@@ -4539,6 +4610,9 @@ msgid ""
 ":guilabel:`In Portal` column for all the contacts that need portal access, "
 "then click :guilabel:`Apply`."
 msgstr ""
+"要同时向多个用户授予门户访问权限，请导航到公司联系人，然后单击 "
+":menuselection:`操作-->授予门户访问权限`，查看该公司所有相关联系人的列表。选中需要门户访问权限的所有联系人的:guilabel:`在门户网站`下的复选框，然后点击"
+" :guilabel:`应用`。"
 
 #: ../../content/applications/general/users/portal.rst:63
 msgid ""
@@ -4547,6 +4621,8 @@ msgid ""
 "unselecting the checkbox under the :guilabel:`In Portal` column and clicking"
 " :guilabel:`Apply`."
 msgstr ""
+"在任何时候，只要导航到联系人，点击:menuselection:`操作--> "
+"授予门户访问权`，然后取消:guilabel:`在门户网站`栏下的复选框并点击:guilabel:`应用`，就可以取消门户访问权限。"
 
 #: ../../content/applications/general/voip.rst:5
 msgid "VoIP (Voice over Internet Protocol)"
@@ -5040,6 +5116,8 @@ msgid ""
 "the international country code. E.g.: `+16506913277` (where `+1` is the "
 "international prefix for the United States)."
 msgstr ""
+"如果您在 Odoo "
+"软电话中看到*号码不正确*的信息，请确保使用国际格式，以加号（+）开头，然后是国际国家代码。例如：`+16506913277`（其中`+1`是美国的国际前缀）。"
 
 #: ../../content/applications/general/voip/onsip.rst:67
 msgid ""
@@ -5068,6 +5146,9 @@ msgid ""
 "When creating an account, select OnSIP in the list of carriers. You will "
 "then have to configure it as follows:"
 msgstr ""
+"在 Android 和 iOS 上，OnSIP 已成功与 `Grandstream Wave "
+"<https://play.google.com/store/apps/details?id=com.grandstream.ucm>`_ "
+"进行了测试。创建账户时，请在运营商列表中选择 OnSIP。然后按如下步骤进行配置："
 
 #: ../../content/applications/general/voip/onsip.rst:84
 msgid "**Account name**: OnSIP"
@@ -5099,10 +5180,14 @@ msgid ""
 "Assistant <https://chrome.google.com/webstore/detail/onsip-call-"
 "assistant/pceelmncccldedfkcgjkpemakjbapnpg>`_."
 msgstr ""
+"除了在手机上通过 Grandstream Wave 发起呼叫外，您还可以在电脑浏览器上点击电话号码发起呼叫。这将使 Grandstream Wave "
+"响铃，并通过您的手机将电话转接给对方。这种方法可以避免浪费拨打电话号码的时间。要执行此操作，您需要使用 Chrome 浏览器扩展 `OnSIP Call"
+" Assistant <https://chrome.google.com/webstore/detail/onsip-call-"
+"assistant/pceelmncccldedfkcgjkpemakjbapnpg>`_。"
 
 #: ../../content/applications/general/voip/onsip.rst:97
 msgid ""
 "The downside of using a softphone on your cell phone is that your calls will"
 " not be logged in Odoo, as the softphone acts as an independent, separate "
 "app."
-msgstr ""
+msgstr "在手机上使用软电话的缺点是，您的通话不会被记录在 Odoo 中，因为软电话是一个独立的单独应用程序。"
