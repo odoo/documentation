@@ -126,3 +126,57 @@ Correct an invoice that has been posted but not downloaded yet: Reset e-Faktur
 
 .. image:: indonesia/indonesia-e-faktur-reset.png
    :align: center
+
+QRIS QR code on invoices
+========================
+
+`QRIS <https://qris.online/homepage/>`_ is a digital payment system that allows customers to make
+payments via scanning the QR Code from their prefered e-wallet.
+
+.. important::
+    According to `QRIS API Documentation <https://qris.online/api-doc/create-invoice.php>`_, QRIS
+    expires after 30 minutes. Due to this restriction, QR will not be included in reports sent to
+    customers and will only be visible through customer portal.
+
+Activate QR codes
+-----------------
+
+Go to :menuselection:`Accounting --> Configuration --> Settings`. Under the :guilabel:`Customer
+Payments` section, activate the :guilabel:`QR Codes` feature.
+
+QRIS bank account configuration
+-------------------------------
+
+Go to :menuselection:`Contacts --> Configuration --> Bank Accounts` and select the bank account for
+which you want to activate QRIS. Set the :guilabel:`QRIS API Key` and :guilabel:`QRIS
+Merchant ID` based on the information provided by QRIS.
+
+.. important::
+   - The account holder's country must be set to Indonesia on its contact form.
+
+.. image:: indonesia/indonesia-qris-setup.png
+   :alt: QRIS bank account configuration
+
+.. seealso::
+   :doc:`../accounting/bank`
+
+Bank Journal Configuration
+--------------------------
+
+Go to :menuselection:`Accounting --> Configuration --> Journals`, open the bank journal, then fill
+out the :guilabel:`Account Number` and :guilabel:`Bank` under the :guilabel:`Journal Entries` tab.
+
+.. image:: indonesia/indonesia-journal-bank-config.png
+    :alt: Bank journal configuration
+
+Issue invoices with QRIS QR codes
+---------------------------------
+
+When creating a new invoice, open the :guilabel:`Other Info` tab and set the :guilabel:`Payment
+QR-code` option to *QRIS*.
+
+.. image:: indonesia/indonesia-invoice-qris.png
+   :alt: Select QRIS QR-code option
+
+Ensure that the :guilabel:`Recipient Bank` is the one you configured, as Odoo uses this field to
+generate the QRIS QR code.
