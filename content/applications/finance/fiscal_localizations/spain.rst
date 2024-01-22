@@ -10,6 +10,8 @@ Several Spanish charts of accounts are available by default in Odoo:
 - PGCE PYMEs 2008
 - PGCE Completo 2008
 - PGCE Entitades
+- PGC
+-IGIC
 
 To choose the one you want, go to :menuselection:`Accounting --> Configuration --> Settings`,
 then select a package in the :guilabel:`Fiscal localization` section.
