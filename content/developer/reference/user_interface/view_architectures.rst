@@ -1871,6 +1871,16 @@ searching/filtering`, or appending new sections to the search filter.
 
 The `filter` element can have the following attributes:
 
+.. attribute:: name
+   :noindex:
+
+   The technical name of the filter. It can be used to :ref:`enable it by default
+   <reference/view_architectures/search/defaults>` or as an :ref:`inheritance hook
+   <reference/view_records/inheritance>`.
+
+   :requirement: Mandatory
+   :type: str
+
 .. attribute:: string
    :noindex:
 
@@ -1883,17 +1893,6 @@ The `filter` element can have the following attributes:
    :noindex:
 
    The tooltip displayed when hovering the filter.
-
-   :requirement: Optional
-   :type: str
-   :default: `''`
-
-.. attribute:: name
-   :noindex:
-
-   The technical name of the filter. It can be used to :ref:`enable it by default
-   <reference/view_architectures/search/defaults>` or as an :ref:`inheritance hook
-   <reference/view_records/inheritance>`.
 
    :requirement: Optional
    :type: str
