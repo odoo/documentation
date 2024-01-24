@@ -10,7 +10,7 @@ transfer is created for the lot/serial number that has most recently entered the
 lot/serial number that entered the warehouse's inventory).
 
 .. seealso::
-   :doc:`About removal strategies <removal>`
+   :doc:`About removal strategies <../removal_strategies>`
 
 .. warning::
    In many countries, the :abbr:`LIFO (Last In, First Out)` removal strategy is banned, since it can

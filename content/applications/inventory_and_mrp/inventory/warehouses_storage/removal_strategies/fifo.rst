@@ -8,7 +8,7 @@ for example. By using :abbr:`FIFO (First In, First Out)`, companies can prevent 
 retention of specific styles.
 
 .. seealso::
-   - :doc:`Other removal methods <removal>`
+   :doc:`About removal strategies <../removal_strategies>`
 
 .. example::
    Various quantities of the product, `T-shirt`, tracked by lot numbers, arrive on August 1st and
