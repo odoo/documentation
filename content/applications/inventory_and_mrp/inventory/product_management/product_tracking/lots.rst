@@ -210,7 +210,7 @@ include that specific part of the total quantity.
    quantity in one lot to fulfill the order.
 
 .. seealso::
-   :doc:`/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal`
+   :doc:`/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies`
 
 Then, click :guilabel:`Add a line`, select an additional (different) :guilabel:`Lot/Serial Number`,
 apply the rest of the :guilabel:`Done` quantities, and click :guilabel:`Confirm` to close the

@@ -16,9 +16,3 @@ Advanced operations
    advanced_operations_warehouse/putaway
    advanced_operations_warehouse/usage
    advanced_operations_warehouse/cluster_picking
-   advanced_operations_warehouse/removal
-   advanced_operations_warehouse/fifo
-   advanced_operations_warehouse/lifo
-   advanced_operations_warehouse/fefo
-   advanced_operations_warehouse/closest_location
-   advanced_operations_warehouse/least_packages
