@@ -6,7 +6,7 @@ The *First Expired, First Out* (FEFO) removal strategy targets products for remo
 assigned removal dates.
 
 .. seealso::
-   :doc:`Other removal strategies <removal>`
+   :doc:`About removal strategies <../removal_strategies>`
 
 .. _inventory/warehouses_storage/removal-date:
 

@@ -1,3 +1,6 @@
+:show-content:
+:hide-page-toc:
+
 ==================
 Removal strategies
 ==================
@@ -15,11 +18,11 @@ Odoo automatically select how products are selected for orders:
    :stub-columns: 1
 
    * -
-     - :doc:`FIFO <fifo>`
-     - :doc:`LIFO <lifo>`
-     - :doc:`FEFO <fefo>`
-     - :doc:`Closest Location <closest_location>`
-     - :doc:`Least Packages <least_packages>`
+     - :doc:`FIFO <removal_strategies/fifo>`
+     - :doc:`LIFO <removal_strategies/lifo>`
+     - :doc:`FEFO <removal_strategies/fefo>`
+     - :doc:`Closest Location <removal_strategies/closest_location>`
+     - :doc:`Least Packages <removal_strategies/least_packages>`
    * - Based on
      - :ref:`Incoming date <inventory/warehouses_storage/arrival_date>`
      - :ref:`Incoming date <inventory/warehouses_storage/arrival_date>`
@@ -43,7 +46,7 @@ Configuration
 
 Removal strategies are set on either the product category or storage location.
 
-.. image:: removal/navigate-location-category.png
+.. image:: removal_strategies/removal/navigate-location-category.png
    :align: center
    :alt: Change the Force Removal Strategy for either the Product Categories or Locations.
 
@@ -105,7 +108,7 @@ expiration dates. To enable this feature, navigate to :menuselection:`Inventory 
 --> Settings`. Under the :guilabel:`Traceability` heading, check the box beside :guilabel:`Lots &
 Serial Numbers` to enable the feature.
 
-.. image:: removal/enable-lots.png
+.. image:: removal_strategies/removal/enable-lots.png
    :align: center
    :alt: Enable lots and serial numbers.
 
@@ -116,7 +119,7 @@ product. On the product form, switch to the :guilabel:`Inventory` tab, and under
 Lots` options.
 
 After enabling the features, assign lot or serial numbers to products using an :doc:`inventory
-adjustment <../inventory_management/count_products>` or during :ref:`product reception
+adjustment <inventory_management/count_products>` or during :ref:`product reception
 <inventory/product_management/receipt-lots>`.
 
 Locations and routes
@@ -130,7 +133,7 @@ To activate these features, navigate to :menuselection:`Inventory --> Configurat
 Under the :guilabel:`Warehouse` heading, enable the :guilabel:`Storage Location` and
 :guilabel:`Multi-Step Routes` features.
 
-.. image:: removal/enable-location.png
+.. image:: removal_strategies/removal/enable-location.png
    :align: center
    :alt: Enable the locations and route features.
 
@@ -146,7 +149,7 @@ Configuration --> Settings`.
 Under the :guilabel:`Traceability` heading, ensure the :guilabel:`Lots & Serial Numbers` feature is
 selected, and then select the check box for :guilabel:`Expiration Dates` to enable the feature.
 
-.. image:: removal/enable-expiration.png
+.. image:: removal_strategies/removal/enable-expiration.png
    :align: center
    :alt: Enable expiration dates feature for FEFO.
 
@@ -161,11 +164,20 @@ removal strategy.
 Navigate to :menuselection:`Inventory --> Configuration --> Settings` and select the check box for
 the :guilabel:`Packages` feature.
 
-.. image:: removal/enable-pack.png
+.. image:: removal_strategies/removal/enable-pack.png
    :align: center
    :alt: Enable the packages feature.
 
 .. seealso::
    - :ref:`Packages <inventory/management/packages>`
-   - :doc:`2-step delivery <../../shipping_receiving/daily_operations/receipts_delivery_two_steps>`
-   - :doc:`3-step delivery <../../shipping_receiving/daily_operations/delivery_three_steps>`
+   - :doc:`2-step delivery <../shipping_receiving/daily_operations/receipts_delivery_two_steps>`
+   - :doc:`3-step delivery <../shipping_receiving/daily_operations/delivery_three_steps>`
+
+.. toctree::
+   :titlesonly:
+
+   removal_strategies/fifo
+   removal_strategies/lifo
+   removal_strategies/fefo
+   removal_strategies/closest_location
+   removal_strategies/least_packages
