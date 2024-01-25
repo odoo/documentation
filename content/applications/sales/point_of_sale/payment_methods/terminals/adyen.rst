@@ -19,66 +19,65 @@ your terminal following the steps described on your terminal's screen.
    - `Adyen Docs - Payment terminal quickstart guides
      <https://docs.adyen.com/point-of-sale/user-manuals>`_.
 
-Configure the payment method
-----------------------------
-
-First, go to :menuselection:`Point of Sale --> Configuration --> Settings --> Payment Terminals`,
-and enable :guilabel:`Adyen`.
-Then, go to :menuselection:`Configuration --> Payment Methods` and create a new payment method.
-Select :guilabel:`Adyen` in the :guilabel:`Use a Payment Terminal` field.
-
-.. note::
-   The selected journal **must** be a bank journal for the :guilabel:`Use a payment terminal` field
-   to appear.
-
-Finally, fill the mandatory fields with an :guilabel:`Adyen API key`, and an :guilabel:`Adyen
-Terminal Identifier`.
+.. _adyen/api:
 
 Generate an Adyen API key
-~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------
 
-The **Adyen API key** is a key used to authenticate your requests. To generate an API key, go to
-your **Adyen account**.
-
-Then, go to :menuselection:`Developers --> API credentials`. Create a new credential or click on an
-existing one.
-
-Click on :guilabel:`Generate an API key` and copy-paste that key onto the Odoo mandatory field.
+The **Adyen API key** is used to authenticate requests from your Adyen terminal. To generate an API
+key, go to your :menuselection:`Adyen account --> Developers --> API credentials`, and **create**
+new credentials or select **existing** ones. Click :guilabel:`Generate an API key` and save the key
+to paste it into the Odoo :guilabel:`Adyen API key` field at :ref:`the payment method creation
+<adyen/method-creation>`.
 
 .. seealso::
    - `Adyen Docs - API credentials
      <https://docs.adyen.com/development-resources/api-credentials#generate-api-key>`_.
 
-Locate the Adyen terminal identifier
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. _adyen/identifier:
 
-The **Adyen Terminal Identifier** is your terminal's serial number, which is used to identify the
+Locate the Adyen terminal identifier
+------------------------------------
+
+The **Adyen Terminal Identifier** is the terminal's serial number, which is used to identify the
 hardware.
 
-To find this number, go to your **Adyen account**. Then, go to :menuselection:`Point of Sale
---> Terminals`, select the terminal to link, and copy-paste its serial number onto the Odoo
-mandatory field.
+To find this number, go to your :menuselection:`Adyen account --> Point of Sale --> Terminals`,
+select the terminal to link with, and save its serial number to paste it into the Odoo
+:guilabel:`Adyen Terminal Identifier` field at :ref:`the payment method creation
+<adyen/method-creation>`.
 
 Set the Event URLs
-~~~~~~~~~~~~~~~~~~
+------------------
 
-For Odoo to know when a payment is made, you must set the terminal **Event URLs**. To do so,
+For Odoo to know when a payment is made, you must configure the terminal **Event URLs**. To do so,
 
-#. log in to `Adyen's website <https://www.adyen.com/>`_;
-#. go to :menuselection:`Adyen's dashboard --> Point of Sale --> Terminals` and select the connected
+#. Log in to `Adyen's website <https://www.adyen.com/>`_;
+#. Go to :menuselection:`Adyen's dashboard --> Point of Sale --> Terminals` and select the connected
    terminal;
-#. from the terminal settings, click :guilabel:`Integrations`;
-#. set the :guilabel:`Switch to decrypted mode to edit this setting` field as :guilabel:`Decrypted`;
-#. click the **pencil icon** button and enter your server address, followed by
-   `/pos_adyen/notification` in the :guilabel:`Event URLs` field; and
-#. click :guilabel:`Save` at the bottom of the screen to save the changes.
+#. From the terminal settings, click :guilabel:`Integrations`;
+#. Set the :guilabel:`Switch to decrypted mode to edit this setting` field as :guilabel:`Decrypted`;
+#. Click the **pencil icon** button and enter your server address, followed by
+   `/pos_adyen/notification` in the :guilabel:`Event URLs` field;
+#. Click :guilabel:`Save` at the bottom of the screen to save changes.
 
-Add a new payment method
-========================
+.. _adyen/method-creation:
 
-To add a new **payment method** to a point of sale, go to :menuselection:`Point of Sale -->
-Configuration --> Point of Sale`. Then, select the POS and go to :menuselection:`Payments -->
-Payment Methods`, and add your new method for Adyen.
+Configure the payment method
+----------------------------
+
+Enable the payment terminal :ref:`in the application settings <configuration/settings>` and
+:doc:`create the related payment method <../../payment_methods>`. Set the journal type as
+:guilabel:`Bank` and select :guilabel:`Adyen` in the :guilabel:`Use a Payment Terminal` field.
+
+Finally, fill in the mandatory fields with your :ref:`Adyen API key <adyen/api>`, :ref:`Adyen
+Terminal Identifier <adyen/identifier>`, and :guilabel:`Adyen Merchant Account`.
+
+.. image:: adyen/payment-method.png
+
+Once the payment method is created, you can select it in your POS settings. To do so, go to the
+:ref:`POS' settings <configuration/settings>`, click :guilabel:`Edit`, and add the payment method
+under the :guilabel:`Payments` section.
 
 Pay with a payment terminal
 ===========================
