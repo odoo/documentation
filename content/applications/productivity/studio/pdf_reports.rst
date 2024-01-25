@@ -232,6 +232,35 @@ fields if needed. Then, specify the default value and press `Enter`.
 .. image:: pdf_reports/powerbox-field.png
    :alt: Select a related field.
 
+Add a data table
+****************
+
+Data tables are used to display :ref:`relational fields <studio/fields/relational-fields>`. To add
+a data table, type `/`, select the :guilabel:`Dynamic Table` command, and select the relation to be
+displayed in the table.
+
+.. note::
+   Only relations of type `one2many` or `many2many` can be displayed as data tables.
+
+Once the table has been added, you can add columns using the table tools. Position the cursor on top
+of the column, then click the purple rectangle and select an option.
+
+.. image:: pdf_reports/table-add-column.png
+   :alt: Add a column in a dynamic table.
+
+You can then insert the :ref:`field of your choice
+<studio/pdf-reports/add-field>` in the columns. The dialog box that opens shows the source object
+for the field (e.g., the *Tag* model) and the list of available fields.
+
+.. image:: pdf_reports/dynamic-table.png
+   :alt: List of available fields for the Tag model.
+
+.. note::
+   - The default row automatically iterates over the field's content, generating a row on the report
+     for each field value (e.g., one row per tag). You can add static content rows above or below
+     the generated rows using the table tools.
+   - You can also add data tables by :ref:`modifying the report's XML <studio/pdf-reports/XML-editing>`.
+
 Formatting
 **********
 
