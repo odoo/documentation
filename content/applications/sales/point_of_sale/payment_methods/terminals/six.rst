@@ -52,14 +52,17 @@ homepage under the :guilabel:`Payments` section to confirm the connection.
 Configure the payment method
 ----------------------------
 
-From your database, go to :menuselection:`Point of Sale --> Configuration --> Payment Methods` to
-create a new payment method specifically for Six. Click :guilabel:`New`, enter a :guilabel:`Name`,
-set the :guilabel:`Journal` field as :guilabel:`Bank`, the :guilabel:`Use a Payment Terminal` field
-as :guilabel:`SIX IOT`, and select the corresponding device in the :guilabel:`Payment Terminal
-Device` field.
+Enable the payment terminal :ref:`in the application settings <configuration/settings>` and
+:doc:`create the related payment method <../../payment_methods>`. Set the journal type as
+:guilabel:`Bank` and select :guilabel:`SIX IOT` in the :guilabel:`Use a Payment Terminal` field.
+Then, select your terminal device in the :guilabel:`Payment Terminal Device` field.
 
 .. image:: six/new-payment-method.png
    :alt: Creating a new payment method for the SIX payment terminal
+
+Once the payment method is created, you can select it in your POS settings. To do so, go to the
+:ref:`POS' settings <configuration/settings>`, click :guilabel:`Edit`, and add the payment method
+under the :guilabel:`Payments` section.
 
 Pay with a payment terminal
 ===========================
