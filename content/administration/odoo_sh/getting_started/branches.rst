@@ -208,6 +208,8 @@ You can also open terminals, Python consoles and even Odoo Shell consoles.
 You can open multiple tabs and drag-and-drop them to arrange the layout as you wish,
 for instance side by side.
 
+.. _odoosh-gettingstarted-branches-tabs-monitoring:
+
 Monitoring
 ----------
 
