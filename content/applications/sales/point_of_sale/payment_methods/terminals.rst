@@ -7,11 +7,13 @@ Payment terminals
 Connecting and integrating a payment terminal with your POS system allows you to accept multiple
 payment options, including credit and debit cards, making the payment process more efficient.
 
+.. _terminals/configuration:
+
 Configuration
 =============
 
-Go to the :doc:`application settings <../configuration>`, scroll down to the :guilabel:`Payment
-Terminals` section, and tick your terminal's checkbox.
+Go to the :ref:`application settings <configuration/settings>`, scroll down to the
+:guilabel:`Payment Terminals` section, and tick your terminal's checkbox.
 
 .. image:: terminals/settings-pt.png
    :alt: checkbox in the settings to enable a payment terminal
