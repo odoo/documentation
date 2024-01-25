@@ -35,19 +35,16 @@ Box* (you can find it on the form view of your IoT Box). Then, enter
 Configure the payment method
 ----------------------------
 
-First, go in the general settings of the POS app, and activate the
-Ingenico setting.
+Enable the payment terminal :ref:`in the application settings <configuration/settings>` and
+:doc:`create the related payment method <../../payment_methods>`. Set the journal type as
+:guilabel:`Bank` and select :guilabel:`Ingenico` in the :guilabel:`Use a Payment Terminal` field.
+Then, select your terminal device in the :guilabel:`Payment Terminal Device` field.
 
-.. image:: ingenico/payment_terminal_03.png
-   :align: center
+.. image:: ingenico/payment-method.png
 
-Go back in :menuselection:`Point of Sale --> Configuration --> Point of Sale`,
-go in the payments section and access your payment methods. Create a new
-payment method for Ingenico, select the payment terminal option Ingenico, and
-select your payment terminal device.
-
-.. image:: ingenico/payment_terminal_04.png
-   :align: center
+Once the payment method is created, you can select it in your POS settings. To do so, go to the
+:ref:`POS' settings <configuration/settings>`, click :guilabel:`Edit`, and add the payment method
+under the :guilabel:`Payments` section.
 
 Pay with a payment terminal
 ===========================
