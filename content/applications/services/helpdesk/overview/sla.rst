@@ -1,184 +1,228 @@
 ==============================
-Service Level Agreements (SLA)
+Service level agreements (SLA)
 ==============================
 
-A Service Level Agreement (SLA) defines the level of service a customer can expect from a supplier.
-SLAs provide a timeline that tells customers when they can expect results, and keeps the support
-team on target.
+A *service level agreement* (SLA) defines the level of service a customer can expect from a
+supplier. :abbr:`SLAs (Service Level Agreements)` provide a timeline that tells customers when they
+can expect results, and keeps the support team on target.
+
+.. note::
+   The *SLA Policies* feature is enabled by default on newly created *Helpdesk* teams.
+
+   To turn off the feature, or edit the working hours, navigate to :menuselection:`Helpdesk app -->
+   Configuration --> Helpdesk Teams`. Click on a team to open that team's configuration page.
+
+   From here, scroll to the :guilabel:`Performance` section. To turn off the :abbr:`SLAs (Service
+   Level Agreements)` feature for the team, clear the :guilabel:`SLA Policies` checkbox.
+
+   .. image:: sla/sla-enable.png
+      :align: center
+      :alt: View of a team page in Helpdesk focusing on the SLA Policies setting.
 
 Create a new SLA policy
 =======================
 
-To create a new :abbr:`SLA (Service Level Agreement)` Policy, navigate to the team's page under
-:menuselection:`Helpdesk --> Configuration --> Teams`. Select a team, scroll to the
-:guilabel:`Performance` section, and then check the selection box next to :guilabel:`SLA Policies`
-to enable it for that specific team.
+To create a new policy, go to :menuselection:`Helpdesk app --> Configuration --> SLA Policies`, and
+click :guilabel:`New`.
 
-.. image:: sla/sla-enable.png
-   :align: center
-   :alt: View of a team page in Helpdesk focusing on the SLA Policies setting
+Alternatively, go to :menuselection:`Helpdesk app --> Configuration --> Helpdesk Teams`, and click
+on a team. Then, click the :guilabel:`SLA Policies` smart button at the top of the team's settings
+page, and click :guilabel:`New`.
 
-.. note::
-   The value indicated next to the :guilabel:`Working Hours` field is used to determine the
-   deadline for :abbr:`SLA (Service Level Agreement)` policies. By default, this is determined by
-   the value set in the :guilabel:`Company Working Hours` field under :menuselection:`Settings app
-   --> Employees --> Work Organization`.
-
-To create a new policy, click the smart button on the team`s settings page or go to
-:menuselection:`Helpdesk -->  Configuration --> SLA Policies`, and click :guilabel:`New`. Start by
-entering a :guilabel:`Title` and a :guilabel:`Description` for the new policy, and proceed to fill
-out the form using the steps below.
+On the blank :abbr:`SLA (Service Level Agreement)` policy form, enter a :guilabel:`Title` and a
+:guilabel:`Description` for the new policy, and proceed to fill out the form using the steps below.
 
 Define the criteria for an SLA policy
 -------------------------------------
 
-The :guilabel:`Criteria` section is used to identify what tickets this policy will be applied to.
+The :guilabel:`Criteria` section is used to identify which tickets this policy is applied to.
+
 Fill out the following fields to adjust the selection criteria:
 
-- :guilabel:`Team`: a policy can only be applied to one team. *This field is required.*
-- :guilabel:`Priority`: the priority level for a ticket is identified by selecting the number of
-  stars representing the priority level on the kanban card or the ticket itself. The :abbr:`SLA
-  (Service Level Agreement)` will only be applied once the priority level has been updated on the
-  ticket to match the :abbr:`SLA (Service Level Agreement)` criteria. If no selection is made in
-  this field, this policy will only apply to tickets marked as `Low Priority` (zero stars).
-- :guilabel:`Types`: ticket types can be helpful when indicating when a ticket is a
-  customer question, that can be solved with a quick response, or an issue, that may require
-  additional investigation. Multiple ticket types can be selected for this field. If no
-  selection is made, this policy will apply to all ticket types.
-- :guilabel:`Tags`: tags are applied to briefly indicate what the ticket is about. Multiple tags
-  can be applied to a single ticket.
+.. note::
+   Unless otherwise indicated, multiple selections can be made for each field.
+
+- :guilabel:`Helpdesk Team`: a policy can only be applied to one team. *This field is required.*
+- :guilabel:`Priority`: the priority level for a ticket is identified by selecting one, two, or
+  three of the :guilabel:`⭐ (star)` icons, representing the priority level on the Kanban card or on
+  the ticket itself. The :abbr:`SLA (Service Level Agreement)` is **only** applied after the
+  priority level has been updated on the ticket to match the :abbr:`SLA (Service Level Agreement)`
+  criteria. If no selection is made in this field, this policy only applies to tickets marked as
+  `Low Priority`, meaning those with zero :guilabel:`⭐ (star)` icons.
+- :guilabel:`Tags`: tags are used to indicate what the ticket is about. Multiple tags can be applied
+  to a single ticket.
 - :guilabel:`Customers`: individual contacts or companies may be selected in this field.
 - :guilabel:`Sales Order Items`: this field is available only if a team has the *Timesheets* app
-  enabled. This allows the ticket to tie directly to a specific line on a sales order, which must
-  be indicated on the ticket in the :guilabel:`Sales Order Item` field.
+  enabled. This allows the ticket to link directly to a specific line on a sales order, which must
+  be indicated on the ticket in the :guilabel:`Sales Order Items` field.
 
-.. note::
-   Unless otherwise indicated, multiple selections can be made for each field. (i.e. multiple
-   :guilabel:`Tags` can be included in a policy, but only one :guilabel:`Priority` level)
+.. example::
+   A support team needs to address urgent issues for VIP customers within one business day.
 
-.. image:: sla/sla-create-new.png
-   :align: center
-   :alt: View of a blank SLA policy record
+   The new policy, titled `8 Hours to close`, is assigned to the `VIP Support` team. It **only**
+   applies to tickets that are assigned three :guilabel:`⭐ (star)` icons, which equates to an
+   `Urgent` priority level.
+
+   At the same time, the tickets can be related to multiple issues, so the policy applies to tickets
+   with `Repair`, `Service`, or `Emergency` tags.
+
+   .. image:: sla/sla-create-new.png
+      :align: center
+      :alt: View of a new SLA policy record with all the relevant information entered.
 
 Establish a target for an SLA policy
 ------------------------------------
 
-The :guilabel:`Target` is the stage a ticket needs to reach, and the time alloted to reach that
-stage, in order to satisfy the :abbr:`SLA (Service Level Agreement)` policy. Any stage assigned to a
-team may be selected for the :guilabel:`Reach Stage` field. Time spent in stages selected in
-:guilabel:`Excluding Stages` will not be included in the calculation of the :abbr:`SLA (Service
-Level Agreement)` deadline.
+A *target* is the stage a ticket needs to reach, and the time allotted to reach that stage, in order
+to satisfy the :abbr:`SLA (Service Level Agreement)` policy. Any stage assigned to a team may be
+selected for the :guilabel:`Reach Stage` field.
+
+Time spent in stages selected in the :guilabel:`Excluding Stages` field are **not** included in the
+calculation of the :abbr:`SLA (Service Level Agreement)` deadline.
 
 .. example::
    An :abbr:`SLA (Service Level Agreement)` titled `8 Hours to Close` tracks the working time before
-   a ticket is completed, and would have `Solved` as the :guilabel:`Reach Stage`. However, if the
-   :abbr:`SLA (Service Level Agreement)` was titled `2 Days to Start`, it tracks the working time
-   before work on a ticket has begun, and would have `In Progress` as the :guilabel:`Reach Stage`.
+   a ticket is completed, and would have `Solved` as the :guilabel:`Reach Stage`. Simultaneously, an
+   :abbr:`SLA (Service Level Agreement)` titled `2 Days to Start` tracks the working time before
+   work on a ticket has begun, and would have `In Progress` as the :guilabel:`Reach Stage`.
 
-Meeting SLA deadlines
-=====================
+Meet SLA deadlines
+==================
 
-Once it is determined that a ticket fits the criteria of an :abbr:`SLA (Service Level Agreement)`
-policy, a deadline is calculated. The deadline is based on the creation date of the ticket, and the
-targeted working hours. The deadline is then added to the ticket, as well as a white tag indicating
-the name of the :abbr:`SLA (Service Level Agreement)` applied.
+As soon as it is determined that a ticket fits the criteria of an :abbr:`SLA (Service Level
+Agreement)` policy, a deadline is calculated. The deadline is based on the creation date of the
+ticket, and the targeted working hours.
+
+.. note::
+   The value indicated next to the :guilabel:`Working Hours` field of an :abbr:`SLA (Service Level
+   Agreement)` policy is used to determine the deadline. By default, this is determined by the value
+   set in the :guilabel:`Company Working Hours` field under :menuselection:`Settings app -->
+   Employees --> Work Organization`.
+
+The deadline is then added to the ticket, as well as a tag indicating the name of the :abbr:`SLA
+(Service Level Agreement)` applied.
 
 .. image:: sla/sla-open-deadline.png
    :align: center
-   :alt: View of a ticket's form emphasizing an open SLA deadline on a ticket in Odoo Helpdesk
+   :alt: View of a ticket's form emphasizing an open SLA deadline on a ticket in Odoo Helpdesk.
 
-.. important::
-   If a ticket fits the criteria for more than one :abbr:`SLA (Service Level Agreement)`, the
-   earliest occurring deadline will be displayed on the ticket. Once that deadline has passed, the
-   next deadline will be displayed.
-
-Once a ticket satisfies an :abbr:`SLA (Service Level Agreement)` policy, the :abbr:`SLA (Service
-Level Agreement)` tag turns green, and the :guilabel:`Deadline` field disappears from view on the
-ticket.
+When a ticket satisfies an :abbr:`SLA (Service Level Agreement)` policy, the :abbr:`SLA (Service
+Level Agreement)` tag turns green, and the deadline disappears from view on the ticket.
 
 .. image:: sla/sla-deadline.png
    :align: center
-   :alt: View of a ticket's form emphasizing a satisfied SLA in Odoo Helpdesk
+   :alt: View of a ticket's form emphasizing a satisfied SLA in Odoo Helpdesk.
+
+.. important::
+   If a ticket fits the criteria for more than one :abbr:`SLA (Service Level Agreement)`, the
+   earliest occurring deadline is displayed on the ticket. After that deadline has passed, the next
+   deadline is displayed.
 
 If the :abbr:`SLA (Service Level Agreement)` deadline passes and the ticket has not moved to the
-:guilabel:`Reach Stage`, the :abbr:`SLA (Service Level Agreement)` tag will turn red. Once the
-:abbr:`SLA (Service Level Agreement)` has failed, the red tag will stay on the ticket, even after
-the ticket is moved to the :guilabel:`Reach Stage`.
+:guilabel:`Reach Stage`, the :abbr:`SLA (Service Level Agreement)` tag turns red. After the
+:abbr:`SLA (Service Level Agreement)` has failed, the red tag stays on the ticket, even after the
+ticket is moved to the :guilabel:`Reach Stage`.
 
 .. image:: sla/sla-passing-failing.png
    :align: center
-   :alt: View of a ticket's form with a failing and passing SLA in Odoo Helpdesk
+   :alt: View of a ticket's form with a failing and passing SLA in Odoo Helpdesk.
 
-Analyzing SLA performance
-=========================
+Analyze SLA performance
+=======================
 
 The :guilabel:`SLA Status Analysis` report tracks how quickly an :abbr:`SLA (Service Level
-Agreement)` is fulfilled, as well as the success rate of individual policies. Navigate to the report
-and corresponding pivot table by going to :menuselection:`Helpdesk --> Reporting --> SLA Status
-Analysis`.
+Agreement)` is fulfilled, as well as the performance of individual team members. Navigate to the
+report, and corresponding pivot table, by going to :menuselection:`Helpdesk app --> Reporting -->
+SLA Status Analysis`.
 
-Using the Pivot view
---------------------
+Pivot view
+----------
 
-By default, the report is displayed in a :guilabel:`Pivot` view, and is filtered to show the number
-of SLAs failed and the failure rate over the last 30 days, grouped by team.
+By default, the report displays in a :guilabel:`Pivot` view. Any :abbr:`SLA (Service Level
+Agreement)` policies in the database with tickets that failed to fulfill a policy, are in progress,
+or have satisfied a policy are listed. By default, they are grouped by team and ticket count.
 
-.. image:: sla/sla-status-analysis.png
+.. figure:: sla/sla-status-analysis.png
    :align: center
-   :alt: View of the SLA status analysis report in Odoo Helpdesk
+   :alt: View of the SLA status analysis report in Odoo Helpdesk.
 
-To add the number of SLAs passed or in progress, click the :guilabel:`Measures` button to reveal a
-drop-down menu of reporting criteria, and choose from the options available based on the
-measurements preferred. Whenever a measurement is picked, a check mark will appear in the drop-down
-menu to indicate that that measurement is included, and a corresponding new column will emerge in
-the pivot table to show the relevant calculations.
+   The pivot view aggregates data, which can be manipulated by adding measures and filters.
 
-To add a group to a row or column, click the plus :guilabel:` + ` button next to
-:guilabel:`Total`, and then select one of the groups. To remove one, click the minus :guilabel:` - `
-button and deselect.
+To change the display, or add additional measurements, click the :guilabel:`Measures` button to
+reveal a drop-down menu of reporting criteria, and choose from the options available.
 
-Using the Graph view
---------------------
+Whenever a measurement is picked, a :guilabel:`✔️ (checkmark)` icon appears in the drop-down menu to
+indicate that the measurement is included, and a corresponding new column emerges in the pivot table
+to show the relevant calculations.
 
-The :guilabel:`Status Analysis` report can also be viewed as a :guilabel:`Bar`, :guilabel:`Line`, or
-:guilabel:`Pie` Chart. Toggle between these views by selecting the appropriate icon at the top of
-the chart.
+.. image:: sla/sla-pivot-measures.png
+   :align: center
+   :alt: View of the available measures in the SLA status analysis report.
+
+To add a group to a row or column, click the :guilabel:`➕ (plus)` icon next to the policy name and
+then select one of the groups. To remove one, click the :guilabel:`➖ (minus)` icon next to the
+policy name.
+
+.. image:: sla/sla-pivot-groups.png
+   :align: center
+   :alt: View of the available group by options in the SLA status analysis report.
+
+Graph view
+----------
+
+The :guilabel:`SLA Status Analysis` report can also be viewed as a :guilabel:`Bar Chart`,
+:guilabel:`Line Chart`, or :guilabel:`Pie Chart`. Toggle between these views by first selecting the
+:guilabel:`Graph` button at the top-right of the dashboard. Then, select the appropriate chart icon
+at the top-left of the graph.
 
 .. tabs::
 
    .. tab:: Bar Chart
 
-       .. image:: sla/sla-report-bar.png
+       .. figure:: sla/sla-report-bar.png
           :align: center
-          :alt: View of the SLA status analysis report in bar view
+          :alt: View of the SLA status analysis report in bar view.
+
+          A bar chart can deal with larger data sets and compare data across several categories.
 
    .. tab:: Line Chart
 
-       .. image:: sla/sla-report-line.png
+       .. figure:: sla/sla-report-line.png
           :align: center
-          :alt: View of the SLA status analysis report in line view
+          :alt: View of the SLA status analysis report in line view.
+
+          A line chart can visualize data trends or changes over time.
 
    .. tab:: Pie Chart
 
-       .. image:: sla/sla-report-pie.png
+       .. figure:: sla/sla-report-pie.png
           :align: center
-          :alt: View of the SLA status analysis report in pie chart view
+          :alt: View of the SLA status analysis report in pie chart view.
+
+          A pie chart compares data among a small number of categories.
 
 .. tip::
-   Both the :guilabel:`Bar Chart` and :guilabel:`Line Chart` can be viewed :guilabel:`Stacked`.
-   This presents two or more groups to appear on top of each other instead of next to each other,
-   making it easier to compare data.
+   Both the :guilabel:`Bar Chart` and :guilabel:`Line Chart` views can be :guilabel:`Stacked` by
+   selecting the :guilabel:`Stacked` icon. This displays two or more groups on top of each other
+   instead of next to each other, making it easier to compare data.
 
-Using the Cohort view
----------------------
+   .. image:: sla/sla-report-stacked.png
+      :align: center
+      :alt: View of the SLA status analysis report in bar view, stacked.
+
+Cohort view
+-----------
 
 The :guilabel:`Cohort` view is used to track the changes in data over a period of time. To display
-the :guilabel:`Status Analysis` report in a :guilabel:`Cohort` view, click the icon in the top right
-corner above the chart.
+the :guilabel:`SLA Status Analysis` report in a :guilabel:`Cohort` view, click the
+:guilabel:`Cohort` button, represented by :guilabel:`(four cascading horizontal lines)`, in the
+top-right corner, next to the other view options.
 
-.. image:: sla/sla-report-cohort.png
+.. figure:: sla/sla-report-cohort.png
    :align: center
-   :alt: View of the SLA status analysis report in cohort view
+   :alt: View of the SLA status analysis report in cohort view.
+
+   The cohort view examines the life cycle of data over time.
 
 .. seealso::
    - :ref:`Reporting views <reporting/views>`
