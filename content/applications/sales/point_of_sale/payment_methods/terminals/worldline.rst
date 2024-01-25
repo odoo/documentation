@@ -62,15 +62,16 @@ the terminal automatically restarts.
 Configure the payment method
 ----------------------------
 
-From the Point of Sale application, go to :menuselection:`Configuration --> Settings --> Payment
-terminals` and activate the *Worldline* payment terminal.
+Enable the payment terminal :ref:`in the application settings <configuration/settings>` and
+:doc:`create the related payment method <../../payment_methods>`. Set the journal type as
+:guilabel:`Bank` and select :guilabel:`Worldline` in the :guilabel:`Use a Payment Terminal` field.
+Then, select your terminal device in the :guilabel:`Payment Terminal Device` field.
 
 .. image:: worldline/worldline-payment-terminals.png
-   :align: center
 
-Then, go to :menuselection:`Configuration --> Payment methods` and create a new payment method for
-*Worldline*. Select the payment terminal *Worldline* and your payment terminal device on your
-*Payment Method form*.
+Once the payment method is created, you can select it in your POS settings. To do so, go to the
+:ref:`POS' settings <configuration/settings>`, click :guilabel:`Edit`, and add the payment method
+under the :guilabel:`Payments` section.
 
 .. _worldline/yomani-info:
 
