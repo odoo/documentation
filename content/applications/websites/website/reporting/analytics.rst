@@ -2,7 +2,7 @@
 Website analytics
 =================
 
-Website analytics helps website owners understand how people use their site. It provides data on
+Website analytics helps website owners monitor how people use their site. It provides data on
 visitor demographics, behavior, and interactions, helping improve websites and marketing strategies.
 
 You can track your Odoo website's traffic using :ref:`website/analytics/plausible` or
@@ -18,9 +18,8 @@ Plausible.io
 ============
 
 Odoo hosts its own Plausible.io server and provides a free and ready-to-work Plausible.io
-solution for **Odoo Online** databases. Go to :menuselection:`Website --> Configuration --> Settings`,
-and enable the feature in the :guilabel:`SEO` section. Odoo automatically creates and sets up your
-account. You can start using it by going to :menuselection:`Website --> Reporting --> Analytics`.
+solution for **Odoo Online** databases. Odoo automatically creates and sets up your account. You can
+start using it by going to :menuselection:`Website --> Reporting --> Analytics`.
 
 .. note::
    **If you already have a Plausible.io account** and you want to connect it to your Odoo Online
@@ -127,3 +126,33 @@ To follow your Odoo website's traffic with Google Analytics:
 
 .. seealso::
    `Google documentation on setting up Analytics for a website <https://support.google.com/analytics/answer/1008015?hl=en/>`_
+
+Google Tag Manager
+==================
+
+:abbr:`GTM (Google Tag Manager)` is a tag management system that allows you to easily update
+measurement codes and related code fragments, collectively known as tags on your website or mobile
+app, directly through the code injector. To use GTM, proceed as follows:
+
+#. Create or sign in to a Google account by going to https://tagmanager.google.com/.
+
+#. In the :guilabel:`Accounts` tab, click :guilabel:`Create account`.
+
+#. Enter an :guilabel:`Account Name` and select the account's :guilabel:`Country`.
+
+#. Enter your website's URL in the :guilabel:`Container name` field and select the :guilabel:`Target
+   platform`.
+
+#. Click :guilabel:`Create` and agree to the Terms of Service.
+
+#. Copy the `<head>` and `<body>` codes from the popup window. Then, go to your website, click
+   :guilabel:`Edit`, go to the :guilabel:`Themes` tab, scroll down to the
+   :guilabel:`Website Settings` section, then click :guilabel:`<head>` and :guilabel:`</body>` to
+   paste the codes.
+
+   .. image:: analytics/gtm-codes.png
+      :alt: Install Google Tag Manager
+
+.. note::
+   The data is collected in the marketing tools used to monitor the website (e.g., Google Analytics,
+   Plausible, Facebook Pixel), not in Odoo.
