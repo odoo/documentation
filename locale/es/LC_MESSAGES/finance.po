@@ -45,9 +45,9 @@
 # Braulio D. López Vázquez <bdl@odoo.com>, 2023
 # Lucia Pacheco, 2023
 # Iran Villalobos López, 2024
+# Wil Odoo, 2024
 # Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2024
 # Fernanda Alvarez, 2024
-# Wil Odoo, 2024
 # 
 #, fuzzy
 msgid ""
@@ -56,7 +56,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-18 09:34+0000\n"
 "PO-Revision-Date: 2021-11-02 08:47+0000\n"
-"Last-Translator: Wil Odoo, 2024\n"
+"Last-Translator: Fernanda Alvarez, 2024\n"
 "Language-Team: Spanish (https://app.transifex.com/odoo/teams/41243/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -443,10 +443,10 @@ msgid ""
 "supported in Odoo. The available methods are standard price, average price, "
 ":abbr:`LIFO (Last-In, First-Out)` and :abbr:`FIFO (First-In, First-Out).`"
 msgstr ""
-"En Odoo se pueden realizar tanto valoraciones del inventario periódicas "
-"(manuales) o perpetuas (automáticas). Los métodos disponibles son precio "
-"estándar, precio promedio, :abbr:`LIFO (último en entrar, primero en salir)`"
-" and :abbr:`FIFO (primero en entrar, primero en salir).`"
+"En Odoo se pueden realizar tanto valuaciones de inventario de forma "
+"periódica (manuales) o permanente (automáticas). Los métodos disponibles son"
+" precio estándar, precio promedio, :abbr:`UEPS (Últimas entradas, primeras "
+"salidas)` y :abbr:`FIFO (Primeras entradas, primeras salidas)`."
 
 #: ../../content/applications/finance/accounting.rst:206
 msgid ""
@@ -5985,7 +5985,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started.rst:5
 msgid "Get started"
-msgstr "Primeros pasos"
+msgstr "Información básica"
 
 #: ../../content/applications/finance/accounting/get_started.rst:7
 msgid ""
@@ -9099,6 +9099,8 @@ msgid ""
 "In Odoo, payments can either be automatically linked to an invoice or bill "
 "or be stand-alone records for use at a later date:"
 msgstr ""
+"En Odoo, los pagos se pueden vincular de manera automática con una factura o"
+"  se pueden dejar como registros separados que se usarán en otra fecha."
 
 #: ../../content/applications/finance/accounting/payments.rst:10
 msgid ""
@@ -9106,6 +9108,9 @@ msgid ""
 "amount due of the invoice. You can have multiple payments related to the "
 "same invoice."
 msgstr ""
+"Si un pago está **vinculado a una factura** entonces la cantidad por pagar "
+"de la factura se reducirá o liquidará. Puede tener muchos pagos relacionados"
+" a la misma factura."
 
 #: ../../content/applications/finance/accounting/payments.rst:13
 msgid ""
@@ -9114,6 +9119,10 @@ msgid ""
 "debit with a vendor. You can use those outstanding amounts to reduce/settle "
 "unpaid invoices/bills."
 msgstr ""
+"Si un pago **no está ligado a una factura**. el cliente tendrá un crédito "
+"pendiente con su empresa, o su empresa tendrá un crédito pendiente con un "
+"proveedor. Puede usar esas cantidades pendientes para reducir o liquidar "
+"facturas sin pagar."
 
 #: ../../content/applications/finance/accounting/payments.rst:18
 msgid ":doc:`Internal transfers <payments/internal_transfers>`"
@@ -9146,6 +9155,13 @@ msgid ""
 "statement line, the invoice or vendor bill changes to the :guilabel:`Paid` "
 "status."
 msgstr ""
+"Cuando haga clic en el botón :guilabel:`Registrar pago` que aparece en una "
+"factura, se genera un asiento contable y se cambia la cantidad que se debe "
+"según la cantidad que se pagó. La contrapartida se refleja en la cuenta de "
+"**recibos** o **pagos**  :ref:`pendientes <bank/outstanding-accounts>`. En "
+"este momento es cuando se marca la factura como :guilabel:`En proceso de "
+"pago`. Después, cuando la cuenta pendiente se concilie con la línea del "
+"estado de cuenta bancario, la factura cambiará al estado :guilabel:`Pagado`."
 
 #: ../../content/applications/finance/accounting/payments.rst:33
 msgid ""
@@ -9153,22 +9169,29 @@ msgid ""
 "the payment. You can access additional information, such as the related "
 "journal, by clicking :guilabel:`View`."
 msgstr ""
+"El icono de información en la línea de pago muestra más información sobre el"
+" pago. Para ver información adicional. como el diario relacionado, haga clic"
+" en :guilabel:`Vista`."
 
 #: ../../content/applications/finance/accounting/payments.rst-1
 msgid "See detailed information of a payment."
-msgstr ""
+msgstr "Ver información de pago detallada."
 
 #: ../../content/applications/finance/accounting/payments.rst:40
 msgid ""
 "The customer invoice or vendor bill must be in the :guilabel:`Posted` status"
 " to register the payment."
 msgstr ""
+"Para poder registrar el pago la factura debe estar en el estado "
+":guilabel:`Publicado`."
 
 #: ../../content/applications/finance/accounting/payments.rst:42
 msgid ""
 "If you unreconcile a payment, it still appears in your books but is no "
 "longer linked to the invoice."
 msgstr ""
+"Si quita la conciliación de un pago seguirá apareciendo en sus libros pero "
+"ya no estará ligado a ninguna factura."
 
 #: ../../content/applications/finance/accounting/payments.rst:44
 msgid ""
@@ -9197,6 +9220,10 @@ msgid ""
 "through a related bank statement), invoices and bills are directly "
 "registered as :guilabel:`Paid`."
 msgstr ""
+"Si su cuenta bancaria principal está configurada como :ref:`Cuenta pendiente"
+" <bank/outstanding-accounts>` y el pago se registra en Odoo (no a través de "
+"una cuenta bancaria relacionada), entonces las facturas se registran de "
+"manera automática con el estado :guilabel:`Pagado`."
 
 #: ../../content/applications/finance/accounting/payments.rst:55
 msgid "Registering payments not tied to an invoice or bill"
@@ -9210,6 +9237,11 @@ msgid ""
 "**outstanding account** until it is manually matched with its related "
 "invoice or bill."
 msgstr ""
+"Cuando se registra un nuevo pago a través del menú :menuselection:`Clientes "
+"/ Proveedores --> Pagos`, este pago no se vinculará de inmediato a una "
+"factura. En su lugar, las cuentas por pagar o las cuentas por cobrar se "
+"concilian con las **cuentas pendientes** hasta que se concilien de manera "
+"manual con la factura relacionada."
 
 #: ../../content/applications/finance/accounting/payments.rst:63
 msgid "Matching invoices and bills with payments"
@@ -9222,16 +9254,22 @@ msgid ""
 "easily be matched from the invoice or bill by clicking :guilabel:`ADD` under"
 " :guilabel:`Outstanding Credits` or :guilabel:`Outstanding Debits`."
 msgstr ""
+"Cuando valida una nueva factura y hay un **pago pendiente** (ya sea que el "
+"cliente no haya pagado o usted no haya pagado al proveedor) aparecerá una "
+"cinta azul. Para vincular la factura solo haga clic en :guilabel:`Añadir` en"
+" :guilabel:`Créditos pendientes` o :guilabel:`Débitos pendientes`."
 
 #: ../../content/applications/finance/accounting/payments.rst-1
 msgid "Shows the ADD option to reconcile an invoice or a bill with a payment."
-msgstr ""
+msgstr "Muestra la opción AÑADIR para conciliar una factura con un pago."
 
 #: ../../content/applications/finance/accounting/payments.rst:72
 msgid ""
 "The invoice or bill is now marked as :guilabel:`In payment` until it is "
 "reconciled with its corresponding bank statement."
 msgstr ""
+"La factura ahora se marca como :guilabel:`En proceso de pago` hasta que se "
+"haya conciliado con el extracto bancario correspondiente."
 
 #: ../../content/applications/finance/accounting/payments.rst:76
 msgid "Batch payment"
@@ -9248,6 +9286,14 @@ msgid ""
 "several payments in a batch by clicking :menuselection:`Action --> Create "
 "Batch Payment`."
 msgstr ""
+"Los pagos en lote le permiten agrupar varios pagos para facilitar la "
+":doc:`conciliación <bank/reconciliation>`. También ayudan mucho cuando hay "
+"que depositar :doc:`cheques <payments/checks>` en el banco o para "
+":doc:`pagos SEPA <payments/pay_sepa>`. Para crear pagos en lote vaya a "
+":menuselection:`Contabilidad --> Clientes --> Pagos por lote` o "
+":menuselection:`Contabilidad --> Proveedores --> Pagos por lote`. En la "
+"vista de lista de los pagos puede seleccionarlos y agruparlos en lote, haga "
+"clie en :menuselection:`Acción --> Crear pago por lotes`."
 
 #: ../../content/applications/finance/accounting/payments.rst:86
 msgid ":doc:`payments/batch`"
@@ -9271,10 +9317,17 @@ msgid ""
 ":guilabel:`Payments Matching`, or go to :menuselection:`Accounting --> "
 "Accounting --> Reconciliation`."
 msgstr ""
+"La herramienta :guilabel:`Emparejamiento de pagos` abre todas las facturas "
+"sin conciliar y podrá procesar todas individualmente, ya que podrá vincular "
+"los pagos con las facturas a la vez en un mismo lugar. Para usar esta "
+"herramienta vaya al :menuselection:`Tablero de contabilidad --> Facturas de "
+"cliente y de proveedor`, haga clic en el menú desplegable :guilabel:`⋮` y "
+"seleccione :guilabel:`Emparejamiento de pagos`, o en "
+":menuselection:`Contabilidad --> Conciliación`."
 
 #: ../../content/applications/finance/accounting/payments.rst-1
 msgid "Payments matching menu in the drop-down menu."
-msgstr ""
+msgstr "Menú de conciliación de pagos en el menú desplegable."
 
 #: ../../content/applications/finance/accounting/payments.rst:104
 msgid ""
@@ -9306,7 +9359,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/payments.rst:121
 msgid "Registering a partial payment"
-msgstr ""
+msgstr "Registrar un pago parcial"
 
 #: ../../content/applications/finance/accounting/payments.rst:123
 msgid ""
@@ -9319,10 +9372,18 @@ msgid ""
 "paid` if you wish to settle the invoice or bill with a difference in the "
 "amount."
 msgstr ""
+"Para registrar un **pago parcial**, haga clic en :guilabel:`Registrar pago` "
+"en la factura relacionada e ingrese el importe recibido o pagado. Al "
+"ingresar el importe aparecerá un mensaje que le pedirá que decida si "
+":guilabel:`Mantener abierta` la factura o :guilabel:`Marcar como pagado en "
+"su totalidad`. Seleccione :guilabel:`Mantener abierta` y haga clic en "
+":guilabel:`Crear pago` y la factura se marcará como :guilabel:`Parcial`. "
+"Seleccione :guilabel:`Marcar como pagado en su totalidad` si desea saldar la"
+" factura con una diferencia en el importe."
 
 #: ../../content/applications/finance/accounting/payments.rst-1
 msgid "Partial payment of an invoice or bill."
-msgstr ""
+msgstr "Pago parcial de una factura."
 
 #: ../../content/applications/finance/accounting/payments.rst:134
 msgid "Reconciling payments with bank statements"
@@ -9541,8 +9602,7 @@ msgstr ":doc:`batch_sdd`"
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:3
 msgid "Batch payments: SEPA Direct Debit (SDD)"
-msgstr ""
-"Pagos por lotes: domiciliación bancaria SEPA (SDD, por sus siglas en inglés)"
+msgstr "Pagos por lotes: domiciliación bancaria SEPA (SDD)"
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:5
 msgid ""
@@ -10934,7 +10994,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/pay_sepa.rst:3
 msgid "Pay with SEPA"
-msgstr "Pagar con SEPA"
+msgstr "Pagos con SEPA"
 
 #: ../../content/applications/finance/accounting/payments/pay_sepa.rst:5
 msgid ""
@@ -11243,7 +11303,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting.rst-1
 msgid "Profit and Loss report of Odoo"
-msgstr ""
+msgstr "Reporte de estado de resultados de Odoo"
 
 #: ../../content/applications/finance/accounting/reporting.rst:60
 msgid "Executive Summary"
@@ -13170,7 +13230,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting/intrastat.rst:21
 msgid ":doc:`../customer_invoices/incoterms`"
-msgstr ""
+msgstr ":doc:`../customer_invoices/incoterms`"
 
 #: ../../content/applications/finance/accounting/reporting/intrastat.rst:26
 msgid "General configuration"
@@ -38869,7 +38929,7 @@ msgstr ":ref:`payment_acquirers/journal`"
 
 #: ../../content/applications/finance/sign.rst:3
 msgid "Sign"
-msgstr "Firmar"
+msgstr "Firma electrónica"
 
 #: ../../content/applications/finance/sign.rst:5
 msgid "**Odoo Sign** allows you to send, sign and approve documents online."
@@ -38893,7 +38953,9 @@ msgstr "`Firma de Odoo: página de producto <https://www.odoo.com/app/sign>`_"
 
 #: ../../content/applications/finance/sign.rst:12
 msgid "`Odoo Tutorials: Sign <https://www.odoo.com/slides/sign-61>`_"
-msgstr "`Tutoriales de Odoo: Firma <https://www.odoo.com/slides/sign-61>`_"
+msgstr ""
+"`Tutoriales de Odoo: Firma electrónica "
+"<https://www.odoo.com/slides/sign-61>`_"
 
 #: ../../content/applications/finance/sign.rst:17
 msgid "Validity of electronic signatures"
