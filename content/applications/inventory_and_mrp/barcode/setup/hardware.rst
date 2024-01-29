@@ -1,6 +1,6 @@
-===========================
-Set up your barcode scanner
-===========================
+=====================
+Barcode scanner setup
+=====================
 
 .. _barcode/setup/hardware:
 
@@ -11,29 +11,31 @@ Follow this guide to choose and set up a barcode scanner compatible with Odoo's 
    :align: center
    :alt: An image of an example barcode scanner.
 
-   An image of an example barcode scanner.
-
 Scanner types
 =============
 
-Before setting up a barcode scanner, it is important to determine which scanner type best meets the
-needs of the business. There are three main types, each with their own benefits and use cases:
+Before setting up a barcode scanner, it is important to determine which type of scanner best meets
+the needs of the business. There are three main types of scanners that can be used with Odoo, each
+with their own benefits and use cases:
 
-- **USB scanners** are connected to a computer, and are suitable for businesses that scan products
-  at a fixed location, like at the checkout in a grocery store. Ensure the chosen USB scanner is
-  compatible with the keyboard layout of the computer.
-
-- **Bluetooth scanners** pair with a smartphone or tablet, making them an ideal cost-effective and
+- **USB scanners** are connected to a computer, and are suitable for businesses that scan products at
+  a fixed location, like at the checkout line in a grocery store.
+- **Bluetooth scanners** pair with a smartphone or tablet, making them both a cost-effective and
   portable barcode scanner option. In this scenario, Odoo is installed on the smartphone, allowing
-  warehouse operators to handle operations, and check stock directly through their mobile devices.
+  warehouse operators to handle operations, and check stock, directly through their mobile devices.
+- **Mobile computer scanners** are mobile devices with a built-in barcode scanner.
 
-- **Mobile computer scanners** are mobile devices with a built-in barcode scanner. First, ensure the
-  device can run the Odoo mobile app properly. Recent models that use Android OS with the Google
-  Chrome browser, or Windows OS with Microsoft Edge, should work. However, testing is crucial due to
-  the variety of available models and configurations.
+  .. important::
+     If using a USB scanner, ensure the scanner is compatible with the keyboard layout of the
+     computer.
+
+     If using a mobile computer scanner, ensure the device can run the Odoo mobile app properly.
+     Recent models that use Android OS with the Google Chrome browser, or Windows OS with Microsoft
+     Edge, should work. However, testing is crucial due to the variety of available models and
+     configurations.
 
 .. seealso::
-   `Compatible hardware with Odoo Inventory <https://www.odoo.com/app/inventory-hardware>`_
+   `Odoo Inventory & Barcode • Compatible Hardware <https://www.odoo.com/app/inventory-hardware>`_
 
 Configuration
 =============
@@ -52,6 +54,7 @@ To configure the keyboard layout for a **Zebra** scanner, scan the keyboard wedg
 desired language in the scanner's user manual.
 
 .. figure:: hardware/keyboard-barcode.png
+   :align: center
    :alt: Example of a user manual for keyboard layout.
 
    Examples of keyboard language settings in the Zebra scanner user manual.
@@ -68,20 +71,38 @@ Typically, on the scanner, a carriage return is included by default. Ensure it i
 specific barcode in the user manual, like `CR suffix ON` or `Apply Enter for suffix`.
 
 Zebra scanner
--------------
+=============
 
 When using Zebra scanners, ensure the following keystroke configurations are set to prevent errors.
 
-Begin on the Zebra scanner's home screen, and select the :guilabel:`DataWedge` app (the icon for the
-app is a light blue barcode). On the :guilabel:`DataWedge Profiles` page, select the profile option
-to access the Zebra scanner's settings.
+Begin on the Zebra scanner's home screen, and select the :guilabel:`DataWedge` app (the app is
+represented by a :guilabel:`(light blue barcode)` icon).
 
-Scroll down to the :guilabel:`Keyboard Output` option, and ensure the :guilabel:`Enable/disable
-keystroke output` option is :guilabel:`Enabled`.
+On the :guilabel:`DataWedge Profiles` page, select the profile option to access the Zebra scanner's
+settings.
+
+.. warning::
+   It is **not** suggested to use the "DWDemo" profile, as it does not work properly in every
+   circumstance.
+
+   Instead, it is recommended to create a new, personal profile. Once a new profile is created, add
+   the *Odoo Mobile* app and *Google Chrome* app in the :guilabel:`Associated Apps` on the scanner's
+   home screen.
+
+Once the profile is selected, scroll down to the :guilabel:`Keyboard Output` option, and ensure the
+:guilabel:`Enable/disable keystroke output` option is :guilabel:`Enabled`.
 
 .. image:: hardware/enable-keystroke.png
    :align: center
    :alt: Show keystroke option in the Zebra scanner's DataWedge app.
 
-Now, go back to the :guilabel:`Profile` options page, and select :guilabel:`Key event options`.
-Here, ensure the :guilabel:`Send Characters as Events` option is checked.
+Once that option is enabled, go back to the :guilabel:`Profile` options page, and go to the
+:guilabel:`Keystroke output` section. Then, open the :guilabel:`Key event options` submenu. Under
+:guilabel:`Characters`, ensure the :guilabel:`Send Characters as Events` option is checked.
+
+.. important::
+   The :guilabel:`Send Characters as Events` option **must** be checked on the Zebra scanner, or
+   Odoo **cannot** recognize the barcodes that are scanned.
+
+Once all those steps have been taken, perform a test scan to ensure the Zebra scanner is working
+properly, as intended.
