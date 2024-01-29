@@ -8,4 +8,5 @@ Products
    :titlesonly:
 
    products/reordering
+   products/temporary_reordering
    products/uom
