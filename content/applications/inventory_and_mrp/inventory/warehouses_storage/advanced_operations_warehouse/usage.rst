@@ -1,64 +1,10 @@
-==========================================
-Units of measure, packages, and packagings
-==========================================
+=======================
+Packages and packagings
+=======================
 
 In Odoo, there are a variety of ways to specify the amount of products being bought, stocked, and
-sold. *Units of measure*, *packages*, and *packagings* are all available to streamline inventory
-flows, allowing for a variety of configurations for products as they enter and leave the warehouse.
-
-.. _inventory/management/uom-example:
-
-Units of measure
-================
-
-A *unit of measure (UoM)* refers to any of the different standards used to measure and handle a
-quantifiable amount of products, such a units, weight, time, or size. Different :abbr:`UoMs (Units
-of Measure)` for weight, for example, can be kilos, pounds, ounces, grams, and so on.
-
-In Odoo, stock management and purchasing from suppliers are streamlined by specifying different
-:abbr:`UoMs (Units of Measure)` for both buying and selling products.
-
-.. image:: usage/uom-on-product-form.png
-   :align: center
-   :alt: Specify unit of measure for selling a product vs purchasing.
-
-Once a product has a default :guilabel:`Unit of Measure` and :guilabel:`Purchase Unit of Measure`
-set on the product form, Odoo automatically converts the different units in the product's
-purchase/sales orders and the corresponding delivery orders/receipts.
-
-The only condition is that all of the units have to be in the *same category* (unit, weight, volume,
-length, etc.).
-
-.. example::
-   On the product form for `Rope`, the following fields are set as:
-
-   - :guilabel:`Unit of Measure` in `ft` (feet), and
-   - :guilabel:`Purchase Unit of Measure` in `cm` (centimeters).
-
-   Because the vendor sells rope in `cm`, the purchase :guilabel:`UoM` is used to represent the
-   quantity on the :abbr:`PO (Purchase Order)`, which is also in centimeters.
-
-   .. image:: usage/purchase-rope-in-cm.png
-      :align: center
-      :alt: Display purchase order for the product, rope, in centimeters.
-
-After confirming the :abbr:`PO (Purchase Order)`, the quantity of product (found under the now
-visible :guilabel:`Demand` column) is converted from the purchase :abbr:`UoM (Unit of Measure)` to
-the :guilabel:`Unit of Measure`. Then, when the product is received by clicking the
-:guilabel:`Validate` button, the quantity in :guilabel:`Done` is automatically adjusted to match the
-:guilabel:`Demand` column.
-
-.. example::
-   On the *receipt* for `Rope`, the quantities are automatically converted from `500 cm` that was
-   requested on the purchase order, to `16.40 ft` to match the internal/stock :guilabel:`Unit of
-   Measure` value.
-
-   .. image:: usage/receive-rope-in-ft.png
-      :align: center
-      :alt: Rope quantity is converted from cm to ft during warehouse reception.
-
-.. seealso::
-   :ref:`Use Different Units of Measure <inventory/management/products/units_of_measure>`
+sold. *Packages* and *packagings* are all available to streamline inventory flows, allowing for a
+variety of configurations for products as they enter and leave the warehouse.
 
 .. _inventory/management/packages:
 
