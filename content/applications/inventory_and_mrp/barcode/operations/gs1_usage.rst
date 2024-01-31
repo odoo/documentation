@@ -180,7 +180,8 @@ using the appropriate unit of measure (:guilabel:`UoM`) for the quantity of prod
 purchased.
 
 .. seealso::
-   :ref:`Simplify vendor unit conversions with UoMs <inventory/management/uom-example>`
+   :ref:`Simplify vendor unit conversions with UoMs
+   <inventory/product_replenishment/unit-conversion>`
 
 After the order is placed, navigate to the :menuselection:`Barcode` app to :ref:`receive the vendor
 shipment <barcode/operations/scan-received-products>`.
