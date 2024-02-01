@@ -134,11 +134,6 @@ sales orders, will be deducted from the number listed on the :guilabel:`Quotatio
 Instead, the value of the sales order will appear in the :guilabel:`Orders` smart button located in
 the same control panel.
 
-.. seealso::
-   - `Quotation templates </applications/sales/sales/send_quotations/quote_template/>`_
-   - `Optional products </applications/sales/sales/send_quotations/optional_products/>`_
-   - `Quotation deadlines </applications/sales/sales/send_quotations/deadline/>`_
-
 Mark an opportunity won or lost
 ===============================
 
@@ -191,6 +186,3 @@ drop-down menu that appears.
    While opportunities that have been marked as *lost* are considered *Archived*, be advised that,
    in order for an opportunity to be included as *lost* in reporting, it **must** be specifically
    marked as *lost*, not *Archived*.
-
-.. seealso::
-   - `Manage lost opportunities </applications/sales/crm/pipeline/lost_opportunities>`_
