@@ -33,17 +33,17 @@ Manage the Github users who can access your project.
 .. image:: settings/interface-settings-collaborators.png
    :align: center
 
-There are two levels of users:
+There are three levels of users:
 
-* Admin: has access to all features of Odoo.sh.
-* User: does not have access to the project settings nor to the production and staging databases.
+- :guilabel:`Admin`: has access to all features of an Odoo.sh project.
 
-The user group is meant for developers who can make modifications in your code but are not allowed
-to access the production data. Users of this group cannot connect to the production and staging
-databases using the *1-click connect* feature, but they can of course use their regular account on
-these databases if they have one, using their regular credentials.
+- :guilabel:`Tester`: has access to the *Staging* and *Development* databases and their tooling.
+  This role is for users conducting User Acceptance Tests. Testers can work with copies of
+  production data but cannot access the production database through the Odoo.sh tooling.
 
-In addition, they cannot use the webshell nor have access to the server logs.
+- :guilabel:`Developer`: has access only to the *Development* databases and their tooling. This
+  role is for developers who propose code modifications but are not allowed to access production
+  and staging databases through the Odoo.sh tooling.
 
 .. list-table::
    :header-rows: 1
@@ -51,83 +51,145 @@ In addition, they cannot use the webshell nor have access to the server logs.
 
    * -
      -
-     - User
+     - Developer
+     - Tester
      - Admin
    * - Development
      - History
      - |green|
      - |green|
+     - |green|
    * -
      - 1-click connect
+     - |green|
      - |green|
      - |green|
    * -
      - Logs
      - |green|
      - |green|
+     - |green|
    * -
      - Shell/SSH
+     - |green|
      - |green|
      - |green|
    * -
      - Mails
      - |green|
-     - |green|
-   * -
-     - Upgrade
      - |green|
      - |green|
    * -
      - Settings
      - |green|
      - |green|
-   * - Production & Staging
+     - |green|
+   * - Staging
      - History
+     - |green|
      - |green|
      - |green|
    * -
      - 1-click connect
      -
      - |green|
+     - |green|
    * -
      - Logs
      -
+     - |green|
      - |green|
    * -
      - Shell/SSH
      -
      - |green|
+     - |green|
    * -
      - Mails
      -
+     - |green|
      - |green|
    * -
      - Monitoring
      -
      - |green|
+     - |green|
    * -
      - Backups
+     -
      -
      - |green|
    * -
      - Upgrade
      -
      - |green|
+     - |green|
    * -
      - Settings
-     - |green|\*
+     -
+     - |green|
+     - |green|
+   * - Production
+     - History
+     - |green|
+     - |green|
+     - |green|
+   * -
+     - 1-click connect
+     -
+     -
+     - |green|
+   * -
+     - Logs
+     -
+     -
+     - |green|
+   * -
+     - Shell/SSH
+     -
+     -
+     - |green|
+   * -
+     - Mails
+     -
+     -
+     - |green|
+   * -
+     - Monitoring
+     -
+     -
+     - |green|
+   * -
+     - Backups
+     -
+     -
+     - |green|
+   * -
+     - Upgrade
+     -
+     -
+     - |green|
+   * -
+     - Settings
+     -
+     -
      - |green|
    * - Status
      -
      - |green|
      - |green|
+     - |green|
    * - Settings
+     -
      -
      -
      - |green|
 
-.. note::
-    \* Only in staging branches
+.. warning::
+   Those roles only apply to the usage of Odoo.sh. It is important to reflect the user roles
+   attribution within the repository on GitHub.  Please refer to the GitHub documentation section on
+   `Managing a branch protection rule <https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule>`_
+   for detailed guidance.
 
 .. |green| raw:: html
 
@@ -149,10 +211,7 @@ Allow public access to your development builds.
 .. image:: settings/interface-settings-public.png
    :align: center
 
-If activated, this option exposes the Builds page publicly, allowing visitors to connect to your
-development builds.
-
-In addition, visitors have access to the logs, shell and mails of your development builds.
+If activated, this option exposes the Builds page publicly, allowing visitors to view logs of development builds.
 
 Production and staging builds are excluded, visitors can only see their status.
 
