@@ -12,7 +12,7 @@ Views are defined in XML files with actions and menus. They are instances of the
 
 In our real estate module, we need to organize the fields in a logical way:
 
-- in the list (tree) view, we want to display more than just the name.
+- in the list view, we want to display more than just the name.
 - in the form view, the fields should be grouped.
 - in the search view, we must be able to search on more than just the name. Specifically, we want a
   filter for the 'Available' properties and a shortcut to group by postcode.
@@ -31,17 +31,17 @@ List
       :align: center
       :alt: List view
 
-List views, also called tree views, display records in a tabular form.
+List views, also called list views, display records in a tabular form.
 
-Their root element is ``<tree>``. The most basic version of this view simply
+Their root element is ``<list>``. The most basic version of this view simply
 lists all the fields to display in the table (where each field is a column):
 
 .. code-block:: xml
 
-    <tree string="Tests">
+    <list string="Tests">
         <field name="name"/>
         <field name="last_seen"/>
-    </tree>
+    </list>
 
 A simple example can be found
 `here <https://github.com/odoo/odoo/blob/6da14a3aadeb3efc40f145f6c11fc33314b2f15e/addons/crm/views/crm_lost_reason_views.xml#L46-L54>`__.

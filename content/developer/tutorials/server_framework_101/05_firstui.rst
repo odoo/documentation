@@ -75,7 +75,7 @@ A basic action for our `test_model` is:
     <record id="test_model_action" model="ir.actions.act_window">
         <field name="name">Test action</field>
         <field name="res_model">test_model</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
 
 - ``id`` is an :term:`external identifier`. It can be used to refer to the record
@@ -83,7 +83,7 @@ A basic action for our `test_model` is:
 - ``model`` has a fixed value of ``ir.actions.act_window`` (:ref:`reference/actions/window`).
 - ``name`` is the name of the action.
 - ``res_model`` is the model which the action applies to.
-- ``view_mode`` are the views that will be available; in this case they are the list (tree) and form views.
+- ``view_mode`` are the views that will be available; in this case they are the list and form views.
   We'll see :doc:`later <14_qwebintro>` that there can be other view modes.
 
 Examples can be found everywhere in Odoo, but

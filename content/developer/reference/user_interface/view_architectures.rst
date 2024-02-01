@@ -265,11 +265,11 @@ The `field` element can have the following attributes:
    :noindex:
 
    The comma-separated list of display modes (view types) to use for the field's linked records.
-   Allowed modes are: `tree`, `form`, `kanban`, and `graph`.
+   Allowed modes are: `list`, `form`, `kanban`, and `graph`.
 
    :requirement: Optional
    :type: str
-   :default: `tree`
+   :default: `list`
    :scope: :class:`~odoo.fields.One2many` and :class:`~odoo.fields.Many2many` fields
 
 .. include:: view_architectures/generic_attribute_class.rst
@@ -321,9 +321,9 @@ The `field` element can have the following attributes:
       .. code-block:: xml
 
          <field name="children_ids">
-            <tree>
+            <list>
                <field name="name"/>
-            </tree>
+            </list>
             <form>
                <field name="id"/>
                <field name="name"/>
@@ -1154,7 +1154,7 @@ The `<setting>` element can have the following attributes:
 List
 ====
 
-The root element of list views is `tree`\ [#treehistory]_.
+The root element of list views is `list` (the previous name was `tree`).
 
 .. admonition:: Possible structure and representation of its rendering
 
@@ -1166,16 +1166,16 @@ The root element of list views is `tree`\ [#treehistory]_.
 
       * - .. code-block:: xml
 
-             <tree>
+             <list>
                  ...
-             </tree>
+             </list>
 
 .. _reference/view_architectures/list/root:
 
 Root attributes
 ---------------
 
-Optional attributes can be added to the root element `tree` to customize the view.
+Optional attributes can be added to the root element `list` to customize the view.
 
 .. include:: view_architectures/root_attribute_string.rst
 
@@ -1269,9 +1269,9 @@ Optional attributes can be added to the root element `tree` to customize the vie
    .. example::
       .. code-block:: xml
 
-         <tree decoration-danger="field_qty &gt; field_limit">
+         <list decoration-danger="field_qty &gt; field_limit">
              ...
-         </tree>
+         </list>
 
    :requirement: Optional
    :type: :ref:`Python expression <reference/view_architectures/python_expression>`
@@ -1336,9 +1336,9 @@ Using the same field multiple times in a list view is not supported
 
 .. code-block:: xml
 
-   <tree>
+   <list>
        <field name="FIELD_NAME"/>
-   </tree>
+   </list>
 
 The `field` element can have the following attributes:
 
@@ -1466,12 +1466,12 @@ The `field` element can have the following attributes:
 
       * - .. code-block:: xml
 
-             <tree>
+             <list>
                  <field name="name" string="My Custom Name"/>
                  <field name="amount" sum="Total"/>
                  <field name="currency_id"/>
                  <field name="tax_id"/>
-             </tree>
+             </list>
 
 .. _reference/view_architectures/list/button:
 
@@ -1480,10 +1480,10 @@ The `field` element can have the following attributes:
 
 .. code-block:: xml
 
-   <tree>
+   <list>
        <button type="object" name="ACTION" string="LABEL"/>
        <button type="object" name="ACTION" icon="FONT_AWESOME"/>
-   </tree>
+   </list>
 
 The `button` element can have the following attributes:
 
@@ -1517,14 +1517,14 @@ The `button` element can have the following attributes:
 
       * - .. code-block:: xml
 
-             <tree>
+             <list>
                  <field name="name"/>
                  <button type="edit" name="edit" icon="fa-edit" title="Edit"/>
                  <button type="object" name="my_method" string="Button1" column_invisible="context.get('hide_button')" invisible="amount &gt; 3"/>
                  <field name="amount"/>
                  <field name="currency_id"/>
                  <field name="tax_id"/>
-             </tree>
+             </list>
 
 .. _reference/view_architectures/list/groupby:
 
@@ -1539,13 +1539,13 @@ thus belong on the Many2one co-model. These extra fields are fetched in batch.
 
 .. code-block:: xml
 
-   <tree>
+   <list>
        ...
        <groupby name="FIELD_NAME">
            <BUTTONS/>
            <FIELDS/>
        </groupby>
-   </tree>
+   </list>
 
 The `groupby` element can have the following attributes:
 
@@ -1570,7 +1570,7 @@ The `groupby` element can have the following attributes:
 
       * - .. code-block:: xml
 
-             <tree>
+             <list>
                  <field name="name"/>
                  <field name="amount"/>
                  <field name="currency"/>
@@ -1581,7 +1581,7 @@ The `groupby` element can have the following attributes:
                      <field name="email"/>
                      <button type="object" name="my_method" string="Button1" invisible="email == 'jhon@conor.com'"/>
                  </groupby>
-             </tree>
+             </list>
 
 .. note::
    Fields inside the `groupby` element are used only to fetch and store the value, but they are
@@ -1594,12 +1594,12 @@ The `groupby` element can have the following attributes:
 
 .. code-block:: xml
 
-   <tree>
+   <list>
        <header>
            <BUTTONS/>
        </header>
        ...
-   </tree>
+   </list>
 
 The `header` element accepts the following children elements:
 
@@ -1640,7 +1640,7 @@ The `header` element accepts the following children elements:
 
       * - .. code-block:: xml
 
-             <tree>
+             <list>
                  <header>
                      <button type="object" name="to_draft" string="Button1" invisible="context.get('hide_button')"/>
                  </header>
@@ -1648,7 +1648,7 @@ The `header` element accepts the following children elements:
                  <field name="amount"/>
                  <field name="currency"/>
                  <field name="tax_id"/>
-             </tree>
+             </list>
 
 .. _reference/view_architectures/list/control:
 
@@ -1660,13 +1660,13 @@ defined through a `create` element.
 
 .. code-block:: xml
 
-   <tree>
+   <list>
       <control>
           <create string="LABEL"/>
           <BUTTONS/>
        </control>
        ...
-   </tree>
+   </list>
 
 The `control` element takes no attributes.
 
@@ -1700,7 +1700,7 @@ The `create` element can have the following attributes:
 
       * - .. code-block:: xml
 
-             <tree>
+             <list>
                  <field name="name"/>
                  <field name="amount"/>
                  <field name="currency"/>
@@ -1710,15 +1710,12 @@ The `create` element can have the following attributes:
                      <create string="Add a section" context="{'default_type': 'section'}"/>
                      <create string="Add a note" context="{'default_type': 'note'}"/>
                  </control>
-             </tree>
+             </list>
 
 .. note::
    Using the `control` element makes sense only if the list view is inside a
    :class:`~odoo.fields.One2many` or :class:`~odoo.fields.Many2many` field. If any `create` element
    is defined, it overwrites the default :guilabel:`add a line` button.
-
-.. [#treehistory] For historical reasons, it has its origin in tree-type views later repurposed to a
-   more table/list-type display
 
 .. _reference/view_architectures/search:
 

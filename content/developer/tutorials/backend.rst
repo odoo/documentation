@@ -273,7 +273,7 @@ action more easily.
    <record model="ir.actions.act_window" id="action_list_ideas">
        <field name="name">Ideas</field>
        <field name="res_model">idea.idea</field>
-       <field name="view_mode">tree,form</field>
+       <field name="view_mode">list,form</field>
    </record>
    <menuitem id="menu_ideas" parent="menu_root" name="Ideas" sequence="10"
              action="action_list_ideas"/>
@@ -321,7 +321,7 @@ is implied by the root element of the ``arch`` field:
        <field name="model">object_name</field>
        <field name="priority" eval="16"/>
        <field name="arch" type="xml">
-           <!-- view content: <form>, <tree>, <graph>, ... -->
+           <!-- view content: <form>, <list>, <graph>, ... -->
        </field>
    </record>
 
@@ -330,20 +330,20 @@ is implied by the root element of the ``arch`` field:
 
    The ``arch`` field must thus be declared as ``type="xml"`` to be parsed correctly.
 
-Tree views
+list views
 ----------
 
-Tree views, also called list views, display records in a tabular form.
+list views, also called list views, display records in a tabular form.
 
-Their root element is ``<tree>``. The simplest form of the tree view simply
+Their root element is ``<list>``. The simplest form of the list view simply
 lists all the fields to display in the table (each field as a column):
 
 .. code-block:: xml
 
-    <tree string="Idea list">
+    <list string="Idea list">
         <field name="name"/>
         <field name="inventor_id"/>
-    </tree>
+    </list>
 
 .. _howtos/module/views/form:
 
@@ -716,7 +716,7 @@ field whenever some of its dependencies have been modified::
 .. exercise:: Computed fields
 
    * Add the percentage of taken seats to the *Session* model
-   * Display that field in the tree and form views
+   * Display that field in the list and form views
    * Display the field as a progress bar
 
 Default values
@@ -845,10 +845,10 @@ and ``message`` is the error message.
 Advanced Views
 ==============
 
-Tree views
+list views
 ----------
 
-Tree views can take supplementary attributes to further customize their
+list views can take supplementary attributes to further customize their
 behavior:
 
 ``decoration-{$name}``
@@ -872,20 +872,20 @@ behavior:
 
     .. code-block:: xml
 
-        <tree string="Idea Categories" decoration-info="state=='draft'"
+        <list string="Idea Categories" decoration-info="state=='draft'"
             decoration-danger="state=='trashed'">
             <field name="name"/>
             <field name="state"/>
-        </tree>
+        </list>
 
 ``editable``
-    Either ``"top"`` or ``"bottom"``. Makes the tree view editable in-place
+    Either ``"top"`` or ``"bottom"``. Makes the list view editable in-place
     (rather than having to go through the form view), the value is the
     position where new rows appear.
 
 .. exercise:: List coloring
 
-    Modify the Session tree view in such a way that sessions lasting less than
+    Modify the Session list view in such a way that sessions lasting less than
     5 days are colored blue, and the ones lasting more than 15 days are
     colored red.
 
@@ -1173,7 +1173,7 @@ action may be triggered via a menu item, but is more generally triggered by a
 button.
 
 An other way to launch wizards is through the :menuselection:`Action` menu of
-a tree or form view. This is done through the ``binding_model_id`` field of the
+a list or form view. This is done through the ``binding_model_id`` field of the
 action. Setting this field will make the action appear on the views of the model
 the action is "bound" to.
 
@@ -1282,7 +1282,7 @@ A report is a combination two elements:
 
      Because it largerly a standard action, as with :ref:`howto/module/wizard`
      it is generally useful to add the report as a *contextual item* on the
-     tree and / or form views of the model being reported on via the
+     list and / or form views of the model being reported on via the
      ``binding_model_id`` field.
 
      Here we are also using ``binding_type`` in order for the report to be in

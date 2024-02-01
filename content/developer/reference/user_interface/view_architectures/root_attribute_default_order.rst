@@ -9,9 +9,9 @@
    .. example::
       .. code-block:: xml
 
-         <tree default_order="sequence,name desc">
+         <list default_order="sequence,name desc">
              ...
-         </tree>
+         </list>
 
    :requirement: Optional
    :type: str

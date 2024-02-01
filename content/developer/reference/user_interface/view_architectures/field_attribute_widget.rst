@@ -11,10 +11,10 @@
          <form>
              <field name="tag_ids" widget="many2many_tags"/>
          </form>
-         <tree>
+         <list>
              <field name="sequence" widget="handle"/>
              <field name="level_progress" widget="progressbar"/>
-         </tree>
+         </list>
 
    :requirement: Optional
    :type: str

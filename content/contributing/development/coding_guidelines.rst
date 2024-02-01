@@ -263,10 +263,10 @@ To declare a record in XML, the **record** notation (using *<record>*) is recomm
         <field name="model">object_name</field>
         <field name="priority" eval="16"/>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="my_field_1"/>
                 <field name="my_field_2" string="My Label" widget="statusbar" statusbar_visible="draft,sent,progress,done" />
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -288,7 +288,7 @@ Use the following pattern :
 
 * For a menu: :samp:`{<model_name>}_menu`, or :samp:`{<model_name>}_menu_{do_stuff}` for submenus.
 * For a view: :samp:`{<model_name>}_view_{<view_type>}`, where *view_type* is
-  ``kanban``, ``form``, ``tree``, ``search``, ...
+  ``kanban``, ``form``, ``list``, ``search``, ...
 * For an action: the main action respects :samp:`{<model_name>}_action`.
   Others are suffixed with :samp:`_{<detail>}`, where *detail* is a
   lowercase string briefly explaining the action. This is used only if
