@@ -33,12 +33,13 @@ Manage the Github users who can access your project.
 .. image:: settings/interface-settings-collaborators.png
    :align: center
 
-There are two levels of users:
+There are three levels of users:
 
-* Admin: has access to all features of Odoo.sh.
-* User: does not have access to the project settings nor to the production and staging databases.
+* Admin: has access to all features of Odoo.sh and can change the project settings.
+* Developer: does not have access to the project settings nor to the production and staging databases.
+* Tester: it has the same access as the developer, plus access to the stagings branches. He can therefore read production data, but cannot modify it.
 
-The user group is meant for developers who can make modifications in your code but are not allowed
+The developer group if for developers who can make modifications in your code but are not allowed
 to access the production data. Users of this group cannot connect to the production and staging
 databases using the *1-click connect* feature, but they can of course use their regular account on
 these databases if they have one, using their regular credentials.
@@ -51,83 +52,142 @@ In addition, they cannot use the webshell nor have access to the server logs.
 
    * -
      -
-     - User
+     - Developer
+     - Tester
      - Admin
    * - Development
      - History
      - |green|
      - |green|
+     - |green|
    * -
      - 1-click connect
+     - |green|
      - |green|
      - |green|
    * -
      - Logs
      - |green|
      - |green|
+     - |green|
    * -
      - Shell/SSH
+     - |green|
      - |green|
      - |green|
    * -
      - Mails
      - |green|
-     - |green|
-   * -
-     - Upgrade
      - |green|
      - |green|
    * -
      - Settings
      - |green|
      - |green|
-   * - Production & Staging
+     - |green|
+   * - Staging
      - History
+     - |green|
      - |green|
      - |green|
    * -
      - 1-click connect
      -
      - |green|
+     - |green|
    * -
      - Logs
      -
+     - |green|
      - |green|
    * -
      - Shell/SSH
      -
      - |green|
+     - |green|
    * -
      - Mails
      -
+     - |green|
      - |green|
    * -
      - Monitoring
      -
      - |green|
+     - |green|
    * -
      - Backups
      -
+     - |green|
      - |green|
    * -
      - Upgrade
      -
      - |green|
+     - |green|
    * -
      - Settings
-     - |green|\*
+     -
+     - |green|
+     - |green|
+   * - Production
+     - History
+     - |green|
+     - |green|
+     - |green|
+   * -
+     - 1-click connect
+     -
+     -
+     - |green|
+   * -
+     - Logs
+     -
+     -
+     - |green|
+   * -
+     - Shell/SSH
+     -
+     -
+     - |green|
+   * -
+     - Mails
+     -
+     -
+     - |green|
+   * -
+     - Monitoring
+     -
+     -
+     - |green|
+   * -
+     - Backups
+     -
+     -
+     - |green|
+   * -
+     - Upgrade
+     -
+     -
+     - |green|
+   * -
+     - Settings
+     -
+     -
      - |green|
    * - Status
      -
      - |green|
      - |green|
+     - |green|
    * - Settings
+     -
      -
      -
      - |green|
 
-.. note::
-    \* Only in staging branches
+.. warning::
+   It is important to reflect these levels of restrictions within the repository on GitHub.
 
 .. |green| raw:: html
 
