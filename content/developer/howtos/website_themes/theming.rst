@@ -50,11 +50,11 @@ package its theme like a module.
     website_airproof
     ├── data
     ├── i18n
-    ├── lib
     ├── static
     │   ├── description
     │   ├── fonts
     │   ├── image_shapes // Shapes for images
+    │   ├── lib
     │   ├── shapes // Shapes for background
     │   └── src
     │       ├── img
