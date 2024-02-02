@@ -14,8 +14,9 @@ designed to simplify the otherwise complex process required to create engaging e
 successful campaigns, and track their overall effectiveness in a single application.
 
 .. seealso::
-   - :doc:`/applications/marketing/email_marketing/mailing_lists`
-   - :doc:`/applications/marketing/email_marketing/unsubscriptions`
+   - :doc:`email_marketing/mailing_lists`
+   - :doc:`email_marketing/unsubscriptions`
+   - :doc:`email_marketing/lost_leads_email`
 
 Email marketing dashboard
 =========================
@@ -166,6 +167,8 @@ On this :guilabel:`Settings` page, there are three features available. The featu
 - :guilabel:`Dedicated Server`: provides the option to utilize a separate, dedicated server for
   mailings. When enabled, Odoo reveals a new field (and link), in which the specific server
   configurations must be entered, in order for it to connect properly to Odoo.
+
+.. _email_marketing/create_email:
 
 Create an email
 ===============
@@ -441,3 +444,4 @@ the mailing, as well.
 
    email_marketing/mailing_lists
    email_marketing/unsubscriptions
+   email_marketing/lost_leads_email
