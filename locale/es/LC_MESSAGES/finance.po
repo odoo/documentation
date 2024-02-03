@@ -28,11 +28,11 @@
 # renodoo <ren@odoo.com>, 2023
 # Braulio D. López Vázquez <bdl@odoo.com>, 2023
 # Raquel Iciarte <ric@odoo.com>, 2023
-# Larissa Manderfeld, 2023
 # Lucia Pacheco, 2023
 # Iran Villalobos López, 2024
 # Martin Trigaux, 2024
 # Wil Odoo, 2024
+# Larissa Manderfeld, 2024
 # Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2024
 # Fernanda Alvarez, 2024
 # 
@@ -8837,7 +8837,7 @@ msgstr "Tipos de cuentas"
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:23
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:29
 msgid "Balance Sheet"
-msgstr "Balance de situación"
+msgstr "Balance general"
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:58
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:96
@@ -10481,6 +10481,10 @@ msgid ""
 "<bank/reconciliation>` it with the related bank statement line to have the "
 "transaction finalized and the invoice or bill marked as :guilabel:`Paid`."
 msgstr ""
+"Después de registrar el pago, el estado de la factura será :guilabel:`En "
+"proceso de pago`. Después, :doc:`concilie <bank/reconciliation>` el pago con"
+" la línea del estado de cuenta bancario relacionado para finalizar la "
+"transacción y hacer que la factura se marque como :guilabel:`Pagado`."
 
 #: ../../content/applications/finance/accounting/payments/batch.rst:3
 msgid "Batch payments by bank deposit"
@@ -11579,10 +11583,12 @@ msgid ""
 "Internal money transfers can be handled in Odoo. At least two bank accounts "
 "are needed to make internal transfers."
 msgstr ""
+"Puede gestionar trasferencias de dinero internas desde Odoo. Necesita al "
+"menos dos cuentas bancarias para realizar transferencias internas."
 
 #: ../../content/applications/finance/accounting/payments/internal_transfers.rst:9
 msgid ":doc:`How to add an additional bank account <../bank>`"
-msgstr ""
+msgstr ":doc:`Cómo agregar una cuenta bancaria adicional <../bank>`"
 
 #: ../../content/applications/finance/accounting/payments/internal_transfers.rst:14
 msgid ""
@@ -11592,6 +11598,11 @@ msgid ""
 ":menuselection:`Accounting --> Configuration --> Settings` and scroll down "
 "to the :guilabel:`Default Accounts` section."
 msgstr ""
+"Una cuenta de transferencia interna se crea de manera automática en su base "
+"de datos en función de la localización de su empresa y de la legislación de "
+"su país. Para modificar la cuenta predeterminada de :guilabel:`Transferencia"
+" interna` vaya a la:menuselection:`Aplicación Contabilidad --> Configuración"
+" --> Configuración` en la sección de :guilabel:`Cuentas predeterminadas`."
 
 #: ../../content/applications/finance/accounting/payments/internal_transfers.rst:20
 msgid "Register an internal transfer from one bank to another"
@@ -11606,12 +11617,20 @@ msgid ""
 ":guilabel:`Internal Transfer` checkbox, and select a :guilabel:`Destination "
 "Journal` before you :guilabel:`Confirm` the internal transfer."
 msgstr ""
+"Si quiere transferir dinero de un banco a otro, vaya al tablero de "
+"Contabilidad, haga clic en el botón de selección expandible (:guilabel:`⋮`) "
+"en el formulario del banco al que quiere hacer la transferencia. Después, "
+"haga clic en :guilabel:`Pagos`  y seleccione o cree un pago, marque la "
+"casilla :guilabel:`Transferencia interna` y seleccione :guilabel:`Diario de "
+"destino` antes de que vaya a :guilabel:`Confirmar` la transferencia interna."
 
 #: ../../content/applications/finance/accounting/payments/internal_transfers.rst:28
 msgid ""
 "The money is now booked in the transfer account and another payment is "
 "automatically created in the destination journal."
 msgstr ""
+"El dinero ahora estará registrado en la cuenta de transferencia y se creará "
+"otro pago de forma automática en el diario de destino."
 
 #: ../../content/applications/finance/accounting/payments/internal_transfers.rst:33
 msgid "Bank journal (Bank A)"
@@ -11638,7 +11657,7 @@ msgstr "**$1,000**"
 
 #: ../../content/applications/finance/accounting/payments/internal_transfers.rst:49
 msgid "Bank journal (Bank B)"
-msgstr ""
+msgstr "Diario bancario (Banco B)"
 
 #: ../../content/applications/finance/accounting/payments/internal_transfers.rst:59
 msgid "Outstanding Receipts account"
@@ -11650,12 +11669,17 @@ msgid ""
 " in your two bank account journals because the bank statement confirming the"
 " sending and receiving of the money has not been booked yet."
 msgstr ""
+"Hay **un pago pendiente** y **un cobro pendiente** en los dos diarios de "
+"cuentas bancarias, porque aún no se ha registrado el extracto bancario que "
+"confirma el envío y la recepción del dinero."
 
 #: ../../content/applications/finance/accounting/payments/internal_transfers.rst:70
 msgid ""
 "Once this is done, you can book and reconcile your bank statement lines as "
 "usual."
 msgstr ""
+"Una vez que haya hecho esto, puede registrar y conciliar las líneas de "
+"diario bancario como siempre."
 
 #: ../../content/applications/finance/accounting/payments/internal_transfers.rst:73
 msgid ":doc:`../bank/reconciliation`"
@@ -11922,6 +11946,10 @@ msgid ""
 "Payments` section. There, you can activate the payment method as well as set"
 " up the :guilabel:`Check Layout`."
 msgstr ""
+"Para activar el método de pago con cheques, vaya a "
+":menuselection:`Contabilidad --> Configuración --> Ajustes` y baje a la "
+"sección :guilabel:`Pagos de proveedor`. Ahí debe activar el método de pago, "
+"además de que debe configurar el :guilabel:`Diseño del cheque`."
 
 #: ../../content/applications/finance/accounting/payments/pay_checks.rst:20
 msgid ""
@@ -11929,6 +11957,9 @@ msgid ""
 "method is automatically set up in the :guilabel:`Outgoing Payments` tabs of "
 "**bank** journals."
 msgstr ""
+"Ya que haya activado la opción :guilabel:`Cheques`, el método de pago **por "
+"cheques** se configura de manera automática en las pestañas :guilabel:`Pagos"
+" salientes` del diario **bancario**."
 
 #: ../../content/applications/finance/accounting/payments/pay_checks.rst:22
 msgid ""
@@ -12504,8 +12535,8 @@ msgid ""
 "The **Balance Sheet** shows a snapshot of the assets, liabilities and equity"
 " of your organisation as at a particular date."
 msgstr ""
-"El **balance general** muestra un panorama de los activos, pasivos y el "
-"capital de su organización en una fecha determinada."
+"El **balance general** muestra un resumen de los activos, pasivos y el "
+"capital de su empresa en una fecha determinada."
 
 #: ../../content/applications/finance/accounting/reporting.rst:44
 msgid "Profit and Loss"
@@ -15521,6 +15552,10 @@ msgid ""
 "field when adding a new line on an invoice in :ref:`Accounting Firms "
 "<fiduciaries>` mode."
 msgstr ""
+"Los **impuestos predeterminados** definen qué impuestos se seleccionan de "
+"forma automática al crear un nuevo producto. También se utilizan para "
+"completar el campo :guilabel:`Impuestos` al agregar una nueva línea en una "
+"factura en el modo de :ref:`empresas de contabilidad <fiduciaries>`."
 
 #: ../../content/applications/finance/accounting/taxes.rst-1
 msgid ""
@@ -15536,6 +15571,10 @@ msgid ""
 "appropriate taxes for your default sales tax and purchase tax, and click on "
 ":guilabel:`Save`."
 msgstr ""
+"Para cambiar los **impuestos predeterminados**, vaya a "
+"menuselection:`Contabilidad --> Configuración --> Ajustes --> Impuestos --> "
+"Impuestos predeterminados`, seleccione los impuestos adecuados para sus "
+"impuestos de venta y compra y haga clic en :guilabel:`Guardar`."
 
 #: ../../content/applications/finance/accounting/taxes.rst-1
 msgid "Define which taxes to use by default on Odoo"
@@ -15547,10 +15586,14 @@ msgid ""
 " at the creation of your database, or when you set up a :ref:`fiscal "
 "localization package <fiscal_localizations/packages>` for your company."
 msgstr ""
+"Los **impuestos predeterminados** se configurar de manera automática según "
+"el país que se haya seleccionado al momento de crear la base de datos, o "
+"cuando configure el :ref:`paquete de localización fiscal "
+"<fiscal_localizations/packages>` de su empresa."
 
 #: ../../content/applications/finance/accounting/taxes.rst:38
 msgid "Activate sales taxes from the list view"
-msgstr ""
+msgstr "Activar los impuestos de venta desde la vista de lista"
 
 #: ../../content/applications/finance/accounting/taxes.rst:40
 msgid ""
@@ -15561,6 +15604,12 @@ msgid ""
 ":menuselection:`Accounting --> Configuration --> Taxes` and enable the "
 "toggle button under the :guilabel:`Active` column."
 msgstr ""
+"La mayoría de sus impuestos de venta ya están preconfigurados en su base de "
+"datos gracias a su :ref:`paquete de localización fiscal "
+"<fiscal_localizations/packages>`; sin embargo, solo algunos de los impuestos"
+" se activan de forma automática. Para activar los impuestos relevantes para "
+"su empresa, vaya a :menuselection:`Contabilidad --> Configuración --> "
+"Impuestos` y active el botón de opción en la columna :guilabel:`Activo`."
 
 #: ../../content/applications/finance/accounting/taxes.rst-1
 msgid "Activate pre-configured taxes in Odoo Accounting"
@@ -15572,6 +15621,9 @@ msgid ""
 "To edit or create a **tax**, go to :menuselection:`Accounting --> "
 "Configuration --> Taxes` and open a tax or click on :guilabel:`New`."
 msgstr ""
+"Para editar o crear un **impuesto** vaya a :menuselection:`Contabilidad --> "
+"Configuración --> Impuestos` y abra un impuesto o haga clic en "
+":guilabel:`Nuevo`."
 
 #: ../../content/applications/finance/accounting/taxes.rst-1
 msgid "Edition of a tax in Odoo Accounting"
@@ -15579,11 +15631,11 @@ msgstr "Modo de edición de un impuesto en la aplicación Contabilidad de Odoo"
 
 #: ../../content/applications/finance/accounting/taxes.rst:60
 msgid "Basic options"
-msgstr ""
+msgstr "Opciones principales"
 
 #: ../../content/applications/finance/accounting/taxes.rst:65
 msgid "Tax name"
-msgstr ""
+msgstr "Nombre del impuesto"
 
 #: ../../content/applications/finance/accounting/taxes.rst:67
 msgid ""
@@ -15591,6 +15643,10 @@ msgid ""
 "field in :doc:`sales orders <../../sales/sales>`, :doc:`invoices "
 "<customer_invoices>`, product forms, etc."
 msgstr ""
+"El **nombre del impuesto** es para que los usuarios del backend lo puedan "
+"leer en el campo :guilabel:`impuestos` de las :doc:`órdenes de venta "
+"<../../sales/sales>`, :doc:`facturas <customer_invoices>`, formularios de "
+"los productos, etc."
 
 #: ../../content/applications/finance/accounting/taxes.rst:73
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:306
@@ -15606,6 +15662,8 @@ msgid ""
 "The tax is a combination of multiple sub-taxes. You can add as many taxes as"
 " you want, in the order you want them to be applied."
 msgstr ""
+"El impuesto es una combinación de varios subimpuestos. Puede agregar tantos "
+"impuestos como quiera y en el orden en el que quiera."
 
 #: ../../content/applications/finance/accounting/taxes.rst:81
 msgid ""
@@ -15627,19 +15685,23 @@ msgid ""
 "The tax has a fixed amount in the default currency. The amount remains the "
 "same, regardless of the sales price."
 msgstr ""
+"El impuesto será de una cantidad fija en la divisa. La cantidad será la "
+"misma sin importar el precio de venta."
 
 #: ../../content/applications/finance/accounting/taxes.rst:91
 msgid ""
 "A product has a sales price of $1000, and we apply a $10 *fixed* tax. We "
 "then have:"
 msgstr ""
+"Un producto tiene un precio de venta de $1000, y aplicamos un impuesto fijo "
+"de $10. El resultado es:"
 
 #: ../../content/applications/finance/accounting/taxes.rst:94
 #: ../../content/applications/finance/accounting/taxes.rst:109
 #: ../../content/applications/finance/accounting/taxes.rst:124
 #: ../../content/applications/finance/accounting/taxes.rst:268
 msgid "Product sales price"
-msgstr ""
+msgstr "Precio de venta del producto"
 
 #: ../../content/applications/finance/accounting/taxes.rst:94
 #: ../../content/applications/finance/accounting/taxes.rst:109
@@ -15681,19 +15743,23 @@ msgstr "1,010.00"
 
 #: ../../content/applications/finance/accounting/taxes.rst:100
 msgid "**Percentage of price**"
-msgstr ""
+msgstr "**Porcentaje del precio**"
 
 #: ../../content/applications/finance/accounting/taxes.rst:102
 msgid ""
 "The *sales price* is the taxable basis: the tax amount is computed by "
 "multiplying the sales price by the tax percentage."
 msgstr ""
+"El *precio de venta* es la base del impuesto: el importe del impuesto se "
+"calcula multiplicando el precio de venta por el porcentaje del impuesto."
 
 #: ../../content/applications/finance/accounting/taxes.rst:106
 msgid ""
 "A product has a sales price of $1000, and we apply a *10% of Price* tax. We "
 "then have:"
 msgstr ""
+"Un producto tiene un precio de venta de $1000, y aplicamos un impuesto del "
+"*10% del precio*. El resultado es:"
 
 #: ../../content/applications/finance/accounting/taxes.rst:112
 msgid "1,100.00"
@@ -15708,12 +15774,16 @@ msgid ""
 "The **total** is the taxable basis: the tax amount is a percentage of the "
 "total."
 msgstr ""
+"El *total* es el saldo con el impuesto: el importe del impuesto es un "
+"porcentaje del total."
 
 #: ../../content/applications/finance/accounting/taxes.rst:120
 msgid ""
 "A product has a Sales Price of $1000, and we apply a *10% of Price Tax "
 "Included* tax. We then have:"
 msgstr ""
+"Un producto tiene un precio de venta de $1000 y aplicamos un impuesto de "
+"*10% de impuesto incluido en el precio*. Entonces, tenemos:"
 
 #: ../../content/applications/finance/accounting/taxes.rst:127
 msgid "111.11"
@@ -15725,7 +15795,7 @@ msgstr "1,111.11"
 
 #: ../../content/applications/finance/accounting/taxes.rst:130
 msgid "**Python code**"
-msgstr ""
+msgstr "**Código Python**"
 
 #: ../../content/applications/finance/accounting/taxes.rst:132
 msgid ""
@@ -15735,12 +15805,20 @@ msgid ""
 " tax, and :guilabel:`Applicable Code` defines if the tax is to be applied. "
 "The formula is found at the bottom of the :guilabel:`Definition` tab."
 msgstr ""
+"Un impuesto definido como **código Python** consta de dos fragmentos de "
+"código Python que están excluidos en un entorno local y contienen datos como"
+" el precio unitario, el producto o el contacto. El :guilabel:`código python`"
+" define la cantidad del impuesto y el :guilabel:`Código aplicable` define si"
+" el impuesto se debe de aplicar. La fórmula se encuentra al final de la "
+"pestaña :guilabel:`Definición`."
 
 #: ../../content/applications/finance/accounting/taxes.rst:138
 msgid ""
 ":guilabel:`Python Code`: `result = price_unit * 0.10` :guilabel:`Applicable "
 "Code`: `result = true`"
 msgstr ""
+":guilabel:`Código Python`: `resultado = price_unit * 0.10` :guilabel:`Código"
+" aplicable`: `resultado = true`"
 
 #: ../../content/applications/finance/accounting/taxes.rst:144
 msgid "Active"
@@ -15748,7 +15826,7 @@ msgstr "Activo"
 
 #: ../../content/applications/finance/accounting/taxes.rst:146
 msgid "Only **active** taxes can be added to new documents."
-msgstr ""
+msgstr "Solo los impuestos **activos** se pueden agregar a nuevos documentos."
 
 #: ../../content/applications/finance/accounting/taxes.rst:149
 msgid ""
@@ -15763,24 +15841,31 @@ msgid ""
 "This field can be modified from the :ref:`list view "
 "<taxes/list_activation>`."
 msgstr ""
+"Este campo se puede modificar desde la :ref:`vista de lista "
+"<taxes/list_activation>`."
 
 #: ../../content/applications/finance/accounting/taxes.rst:158
 msgid "Tax type"
-msgstr ""
+msgstr "Tipo de impuesto"
 
 #: ../../content/applications/finance/accounting/taxes.rst:160
 msgid ""
 "The :guilabel:`Tax Type` determines the tax application, which also "
 "restricts where it is displayed."
 msgstr ""
+"El :guilabel:`tipo de impuesto` determina cómo se aplica el impuesto, lo "
+"cual también limita su visualización."
 
 #: ../../content/applications/finance/accounting/taxes.rst:162
 msgid "**Sales**: Customer invoices, product customer taxes, etc."
 msgstr ""
+"**Ventas**: facturas de clientes, impuestos de productos para clientes, etc."
 
 #: ../../content/applications/finance/accounting/taxes.rst:163
 msgid "**Purchase**: Vendor bills, product vendor taxes, etc."
 msgstr ""
+"**Compra**: facturas de proveedor, impuestos de productos de los "
+"proveedores, etc."
 
 #: ../../content/applications/finance/accounting/taxes.rst:164
 msgid "**None**"
@@ -15792,16 +15877,21 @@ msgid ""
 ":ref:`Group of Taxes <taxes/computation>` but that you do not want to list "
 "along with other sales or purchase taxes."
 msgstr ""
+"Puede utilizar la opción :guilabel:`ninguno` para los impuestos que desee "
+"incluir en un :ref:`grupo de impuestos <taxes/computation>` pero que no "
+"desee incluir en la lista junto con los otros impuestos de venta o compra."
 
 #: ../../content/applications/finance/accounting/taxes.rst:171
 msgid "Tax scope"
-msgstr ""
+msgstr "Ámbito del impuesto"
 
 #: ../../content/applications/finance/accounting/taxes.rst:173
 msgid ""
 "The :guilabel:`Tax Scope` restricts the use of taxes to a type of product, "
 "either **goods** or **services**."
 msgstr ""
+"El :guilabel:`ámbito del impuesto` restringe el uso de impuestos a un tipo "
+"de producto, ya sea un **bien** o un **servicio**."
 
 #: ../../content/applications/finance/accounting/taxes.rst:179
 msgid "Definition tab"
@@ -15812,6 +15902,8 @@ msgid ""
 "Allocate with precision the amount of the taxable basis or percentages of "
 "the computed tax to multiple accounts and tax grids."
 msgstr ""
+"Asigne el importe de la base del impuesto o los porcentajes del impuesto "
+"calculado a varias cuentas y tablas de impuestos."
 
 #: ../../content/applications/finance/accounting/taxes.rst-1
 msgid "Allocate tax amounts to the right accounts and tax grids"
@@ -15825,29 +15917,32 @@ msgstr "**Basado en**:"
 
 #: ../../content/applications/finance/accounting/taxes.rst:189
 msgid ":guilabel:`Base`: the price on the invoice line"
-msgstr ""
+msgstr ":guilabel:`Base`: el precio en la línea de impuestos"
 
 #: ../../content/applications/finance/accounting/taxes.rst:190
 msgid ":guilabel:`% of tax`: a percentage of the computed tax."
-msgstr ""
+msgstr ":guilabel:`% de impuesto`: un porcentaje del impuesto calculado."
 
 #: ../../content/applications/finance/accounting/taxes.rst:192
 msgid "**Account**: if defined, an additional journal item is recorded."
-msgstr ""
+msgstr "**Cuenta**: si se define, se registrará un apunte contable adicional."
 
 #: ../../content/applications/finance/accounting/taxes.rst:193
 msgid ""
 "**Tax Grids**:  used to generate :doc:`tax reports <reporting/tax_returns>` "
 "automatically, according to your country's regulations."
 msgstr ""
+"**Tablas de impuestos**:  se usan para generar :doc:`reportes de impuestos "
+"<reporting/tax_returns>` de forma automática, de acuerdo a las normativas de"
+" su país."
 
 #: ../../content/applications/finance/accounting/taxes.rst:199
 msgid "Advanced options tab"
-msgstr ""
+msgstr "Pestaña de opciones avanzadas"
 
 #: ../../content/applications/finance/accounting/taxes.rst:204
 msgid "Label on invoices"
-msgstr ""
+msgstr "Etiqueta en las facturas"
 
 #: ../../content/applications/finance/accounting/taxes.rst:206
 msgid ""
@@ -15855,14 +15950,17 @@ msgid ""
 "column. This is visible to *front-end* users on exported invoices, in "
 "customer portals, etc."
 msgstr ""
+"La etiqueta de impuesto se muestra en cada línea de impuesto en la columna "
+":guilabel:`Impuestos`. Los usuarios del frontend pueden ver esto en el "
+"portal del cliente, etc."
 
 #: ../../content/applications/finance/accounting/taxes.rst-1
 msgid "The label on invoices is displayed on each invoice line"
-msgstr ""
+msgstr "La etiqueta en las facturas se muestra en cada línea de la factura."
 
 #: ../../content/applications/finance/accounting/taxes.rst:215
 msgid "Tax group"
-msgstr ""
+msgstr "Grupo de impuestos"
 
 #: ../../content/applications/finance/accounting/taxes.rst:217
 msgid ""
@@ -15870,6 +15968,9 @@ msgid ""
 "displayed above the **total** line on exported invoices and in customer "
 "portals."
 msgstr ""
+"Seleccione a qué **grupo de impuestos** pertenece el impuesto. El nombre del"
+" grupo de impuestos se muestra arriba de la línea **total** en los impuestos"
+" exportados y en los portales del cliente."
 
 #: ../../content/applications/finance/accounting/taxes.rst:220
 msgid ""
@@ -15877,6 +15978,9 @@ msgid ""
 "when you must record the same tax differently according to :doc:`fiscal "
 "positions <taxes/fiscal_positions>`."
 msgstr ""
+"Los grupos de impuesto incluyen diferentes iteraciones del mismo impuesto. "
+"Esto puede ser útil cuando tenga que registrar el mismo impuesto de otra "
+"manera según las :doc:`posiciones fiscales <taxes/fiscal_positions>`. "
 
 #: ../../content/applications/finance/accounting/taxes.rst-1
 msgid "The Tax Group name is different from the Label on Invoices"
@@ -15892,6 +15996,12 @@ msgid ""
 "indicates :guilabel:`0% EU S`, and the tax group name above the "
 ":guilabel:`Total` line indicates :guilabel:`VAT 0%`."
 msgstr ""
+"En el ejemplo anterior, el impuesto :guilabel:`0% EU S` para clientes de la "
+"comunidad en Europa registra la cantidad en cuentas específicas y tablas de "
+"impuestos; sin embargo, se mantendrá a 0% como impuesto para el cliente. Es "
+"por esto que la etiqueta indica :guilabel:`0% EU S` y el nombre del grupo de"
+" impuestos arriba de la línea de :guilabel:`Total` indica :guilabel:`VAT "
+"0%`."
 
 #: ../../content/applications/finance/accounting/taxes.rst:234
 msgid ""
@@ -15919,41 +16029,49 @@ msgstr "Salir (sin cerrar sesión)"
 
 #: ../../content/applications/finance/accounting/taxes.rst:241
 msgid ":guilabel:`Taxes` column on exported invoices"
-msgstr ""
+msgstr "La columna :guilabel:`impuestos` en los impuestos exportados"
 
 #: ../../content/applications/finance/accounting/taxes.rst:241
 msgid "Above the :guilabel:`Total` line on exported invoices"
-msgstr ""
+msgstr "Arriba de la línea de :guilabel:`Total` en los impuestos exportados"
 
 #: ../../content/applications/finance/accounting/taxes.rst:249
 msgid "Include in analytic cost"
-msgstr ""
+msgstr "Incluido en costo analítico"
 
 #: ../../content/applications/finance/accounting/taxes.rst:251
 msgid ""
 "With this option activated, the tax amount is assigned to the same "
 "**analytic account** as the invoice line."
 msgstr ""
+"Si activa esta opción, el importe del impuesto se asigna a la misma **cuenta"
+" analítica** que la línea de factura."
 
 #: ../../content/applications/finance/accounting/taxes.rst:257
 msgid "Included in price"
-msgstr ""
+msgstr "Incluido en el precio"
 
 #: ../../content/applications/finance/accounting/taxes.rst:259
 msgid ""
 "With this option activated, the total (including the tax) equals the **sales"
 " price**."
 msgstr ""
+"Si activa esta opción, el total (con impuestos incluidos) es igual al "
+"**precio de venta**."
 
 #: ../../content/applications/finance/accounting/taxes.rst:261
 msgid "`Total = Sales Price = Computed Tax-Excluded price + Tax`"
 msgstr ""
+"`Total = Precio de venta = Precio calculado sin impuestos incluidos + "
+"Impuesto`"
 
 #: ../../content/applications/finance/accounting/taxes.rst:264
 msgid ""
 "A product has a sales price of $1000, and we apply a *10% of Price* tax, "
 "which is *included in the price*. We then have:"
 msgstr ""
+"Un producto tiene un precio de venta de $1,000 y aplicamos el impuesto de "
+"*10% del precio*, que se *incluye en el precio*. Entonces tenemos:"
 
 #: ../../content/applications/finance/accounting/taxes.rst:271
 msgid "900.10"
@@ -15981,10 +16099,14 @@ msgid ""
 "invoices. To display the :guilabel:`Tax included` column, click the "
 "**dropdown toggle** button and check :guilabel:`Tax incl.`."
 msgstr ""
+"Por defecto, la columna :guilabel:`Impuestos excluidos` solo se muestra en "
+"facturas. Para mostrar la columna :guilabel:`Impuestos incluidos`, haga clic"
+" en el botón **de opción para desplegarla** y marque :guilabel:`Impuestos "
+"incluidos`."
 
 #: ../../content/applications/finance/accounting/taxes.rst:288
 msgid "Affect base of subsequent taxes"
-msgstr ""
+msgstr "Afecta la base de los impuestos subsecuentes"
 
 #: ../../content/applications/finance/accounting/taxes.rst:290
 msgid ""
@@ -15999,6 +16121,8 @@ msgid ""
 "You can configure a new :ref:`group of taxes <taxes/computation>` to include"
 " this tax or add it directly to a product line."
 msgstr ""
+"Puede configurar un nuevo :ref:`grupo de impuestos <taxes/computation>` para"
+" incluir este impuesto o agregarlo directamente a la línea del producto."
 
 #: ../../content/applications/finance/accounting/taxes.rst-1
 msgid "The eco-tax is taken into the basis of the 21% VAT tax"
@@ -17171,6 +17295,11 @@ msgid ""
 "total amount paid, while withholding taxes are directly subtracted from the "
 "payment."
 msgstr ""
+"Una **retención de impuestos** fuerza a la persona que pague una factura de "
+"cliente a deducir el impuesto del pago y remitirlo al gobierno. Normalmente,"
+" un impuesto se incluye en el subtotal para calcular la cantidad total "
+"pagada, mientras que los impuestos retenidos se quitan directamente del "
+"pago."
 
 #: ../../content/applications/finance/accounting/taxes/retention.rst:13
 msgid ""
@@ -17178,20 +17307,25 @@ msgid ""
 "one, go to :menuselection:`Accounting --> Configuration --> Taxes` and, in "
 "the :guilabel:`Amount` field, enter a negative amount."
 msgstr ""
+"En Odoo, para definir un impuesto retenido debe crear un impuesto negativo "
+"en :menuselection:`Contabilidad --> Configuración --> Impuestos` y, en el "
+"campo :guilabel:`Cantidad`, ingrese una cantidad negativa."
 
 #: ../../content/applications/finance/accounting/taxes/retention.rst-1
 msgid "negative tax amount in field"
-msgstr ""
+msgstr "cantidad negativa de impuestos en el campo"
 
 #: ../../content/applications/finance/accounting/taxes/retention.rst:20
 msgid ""
 "Then, go to the :menuselection:`Advanced Options` tab and create a retention"
 " :guilabel:`Tax Group`."
 msgstr ""
+"Después, vaya a la pestaña :menuselection:`Opciones avanzadas` y cree un "
+":guilabel:`Gupo de impuestos` de retención."
 
 #: ../../content/applications/finance/accounting/taxes/retention.rst-1
 msgid "tax group for retention tax."
-msgstr ""
+msgstr "grupo de impuestos para impuesto de retención."
 
 #: ../../content/applications/finance/accounting/taxes/retention.rst:26
 msgid ""
@@ -17200,10 +17334,14 @@ msgid ""
 "set both the regular tax and the retention one in the :guilabel:`Definition`"
 " tab."
 msgstr ""
+"Si la retención es un porcentaje de un impuesto regular, cree un "
+":guilabel:`Impuesto` cuyo :guilabel:`Cálculo de impuestos` sea "
+":guilabel:`Grupo de impuestos`. Después, configure tanto el impuesto normal "
+"como el de retención en la pestaña :guilabel:`Definición`."
 
 #: ../../content/applications/finance/accounting/taxes/retention.rst:31
 msgid "Retention taxes on invoices"
-msgstr ""
+msgstr "Retención de impuestos en facturas"
 
 #: ../../content/applications/finance/accounting/taxes/retention.rst:33
 msgid ""
@@ -17211,10 +17349,13 @@ msgid ""
 "sales orders, and customer invoices. Several taxes can be applied on a "
 "single customer invoice line."
 msgstr ""
+"Una vez que haya creado el impuesto de retención podrá usarlo en formularios"
+" de clientes, órdenes de ventas y facturas. Puede aplicar varios impuestos "
+"en una sola línea de factura."
 
 #: ../../content/applications/finance/accounting/taxes/retention.rst-1
 msgid "invoice lines with taxes"
-msgstr ""
+msgstr "líneas de facturas con impuestos"
 
 #: ../../content/applications/finance/accounting/taxes/taxcloud.rst:3
 msgid "TaxCloud integration"
@@ -17227,6 +17368,10 @@ msgid ""
 "TaxCloud module(s) won't exist at all. Odoo recommends the use of the Avatax"
 " platform."
 msgstr ""
+"Desde Odoo 17 comenzamos a descontinuar nuestra integración con TaxCloud. "
+"Las nuevas instalaciones están prohibidas en Odoo 17, y en Odoo 18, los "
+"módulos de TaxCloud ya no existirán. Le recomendamos que utilice la "
+"plataforma de AvaTax."
 
 #: ../../content/applications/finance/accounting/taxes/taxcloud.rst:10
 msgid ""
@@ -17234,6 +17379,9 @@ msgid ""
 " can contact them directly `here <https://taxcloud.com/blog/odoo-"
 "integration/>`_."
 msgstr ""
+"Si su alojamiento es local o en Odoo.Sh y quiere usar Taxcloud, puede "
+"ponerse en contacto con ellos  `aquí <https://taxcloud.com/blog/odoo-"
+"integration/>`_."
 
 #: ../../content/applications/finance/accounting/taxes/taxcloud.rst:14
 msgid ":doc:`avatax`"
@@ -18179,6 +18327,8 @@ msgid ""
 "expenses**) are both costs that have already occurred for products or "
 "services yet to be received."
 msgstr ""
+"Los **gastos diferidos** y **prepagos** son costos que ya se han pagado por "
+"productos no entregados o servicios por recibir."
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:8
 msgid ""
@@ -18188,6 +18338,10 @@ msgid ""
 "loss statement**, or *income statement*, since the payments will be "
 "effectively expensed in the future."
 msgstr ""
+"Estos costos son **activos** para la empresa que los paga, puesto que ya "
+"pagó por productos y servicios que aún no ha recibido o utilizado. La "
+"empresa no puede registrarlos en la **cuenta de pérdidas y ganancias**, o en"
+" la *cuenta de resultados*, ya que los pagos se contabilizarán en el futuro."
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:13
 msgid ""
@@ -18195,6 +18349,9 @@ msgid ""
 "the moment in time they can be **recognized**, at once or over a defined "
 "period, on the profit and loss statement."
 msgstr ""
+"Estos gastos futuros deben diferirse en el balance de la empresa hasta el "
+"momento en que puedan ser **reconocidos**, al mismo tiempo o a lo largo de "
+"un periodo definido, en la cuenta de pérdidas y ganancias."
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:16
 msgid ""
@@ -18204,12 +18361,19 @@ msgid ""
 "on a monthly basis. Each month, for the next 12 months, $100 will be "
 "recognized as an expense."
 msgstr ""
+"Por ejemplo, supongamos que pagamos $1,200 al contado por un año de seguro. "
+"Ya pagamos el costo ahora pero aún no hemos utilizado el servicio. Por lo "
+"tanto, contabilizamos este nuevo gasto en una *cuenta de prepago* y "
+"decidimos registrarlo mensualmente. Cada mes, durante los próximos 12 meses,"
+" se reconocerán $100 como gasto."
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:21
 msgid ""
 "Odoo Accounting handles deferred expenses by spreading them across multiple "
 "entries that are posted periodically."
 msgstr ""
+"La aplicación Contabilidad de Odoo distribuye los gastos diferidos en varios"
+" asientos que se contabilizan de forma periódica."
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:41
 msgid ""
@@ -18219,6 +18383,12 @@ msgid ""
 "manually <vendor_bills/deferred/generate_manually>` by selecting the "
 ":guilabel:`Manually & Grouped` option instead."
 msgstr ""
+"Odoo :ref:`genera en automático "
+"<vendor_bills/deferred/generate_on_validation>` y de forma predeterminada "
+"los asientos diferidos cuando registra la factura de un proveedor. Sin "
+"embargo, si desea :ref:`generarlos de forma manual "
+"<vendor_bills/deferred/generate_manually>` debe seleccionar la opción "
+":guilabel:`Manual y agrupados`."
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:46
 msgid ""
@@ -18227,6 +18397,10 @@ msgid ""
 "the :guilabel:`Based on days` computation recognizes different amounts "
 "depending on the number of days in each month."
 msgstr ""
+"Supongamos que una factura de $1,200 debe deferirse en 12 meses. El cálculo "
+"de :guilabel:`Igual por mes` reconoce $100 al mes, mientras que el cálculo "
+":guilabel:`Según los días` reconoce cuenta las diferentes cantidades según "
+"el número de días de cada mes."
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:56
 msgid ""
@@ -18235,12 +18409,19 @@ msgid ""
 ":guilabel:`Start Date` should be in the same month as the :guilabel:`Bill "
 "Date`."
 msgstr ""
+"Asegúrese de que los campos de :guilabel:`Fecha de inicio` y la "
+":guilabel:`Fecha de finalización` sean visibles en la pestaña "
+":guilabel:`Líneas de la factura`. En la mayoría de los casos, la "
+":guilabel:`Fecha de inicio` debe ser el mismo mes que la :guilabel:`Fecha de"
+" la factura`."
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:60
 msgid ""
 "For each line of the bill that should be deferred, specify the start and end"
 " dates of the deferral period."
 msgstr ""
+"Para cada línea de la factura que se debe diferir, especifique las fechas de"
+" inicio y finalización del periodo para diferir."
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:63
 msgid ""
@@ -18249,6 +18430,10 @@ msgid ""
 "when the bill is validated. Click on the :guilabel:`Deferred Entries` smart "
 "button to see them."
 msgstr ""
+"Si el campo :guilabel:`Generar asientos` está configurado como "
+":guilabel:`Validación en la factura`, Odoo genera de forma automática los "
+"asientos diferidos al validar la factura. Haga clic en el botón inteligente "
+":guilabel:`Asiento diferido` para verlos."
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:67
 msgid ""
@@ -18257,6 +18442,11 @@ msgid ""
 "entries which will, month after month, move the bill amounts from the "
 "deferred account to the expense account to recognize the expense."
 msgstr ""
+"Un asiento que tenga como fecha el mismo día que la factura, mueve las "
+"cantidades facturadas de la cuenta de gastos a la cuenta de diferidos. Los "
+"otros asientos son asientos diferidos que, mes tras mes, mueven las "
+"cantidades facturadas de la cuenta de diferidos a la cuenta de gastos para "
+"reconocer el gasto."
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:72
 msgid ""
@@ -18264,6 +18454,11 @@ msgid ""
 "date of 01/01/2023 and an end date of 12/31/2023. At the end of August, $800"
 " is recognized as an expense, whereas $400 remains on the deferred account."
 msgstr ""
+"Puede diferir una factura de enero por $1,200 a lo largo de 12 meses, solo "
+"debe especificar la fecha de inicio en 01/01/2023  y la fecha de "
+"finalización en 31/12/2023. Al final de agosto, se habrán reconocido $800 "
+"como gasto, mientras que los otros $400 se quedarán en la cuenta de "
+"diferidos."
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:79
 msgid ""
@@ -18271,22 +18466,29 @@ msgid ""
 "entries for each account. To access it, go to :menuselection:`Accounting -->"
 " Reporting --> Deferred Expense`."
 msgstr ""
+"El reporte de gastis diferidos calcula un resumen de los asientos diferidos "
+"para cada cuenta. Para acceder a este reporte, vaya a "
+":menuselection:`Contabilidad --> Reportes --> Gastos diferidos`."
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst-1
 msgid "Deferred expense report"
-msgstr ""
+msgstr "Reporte de gastos diferidos"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:89
 msgid ""
 "Only bills whose accounting date is before the end of the period of the "
 "report are taken into account."
 msgstr ""
+"Solo se tomarán en cuenta las facturas cuya fecha de entrega sea antes del "
+"final del periodo del reporte."
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:102
 msgid ""
 "At the end of each month, go to the Deferred Expenses report and click the "
 ":guilabel:`Generate Entries` button. This generates two deferral entries:"
 msgstr ""
+"Al final de cada mes, vaya al reporte de gastos diferidos y haga clic en el "
+"botón :guilabel:`Generar asientos` para generar dos asientos diferidos:"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:105
 msgid ""
@@ -18294,18 +18496,21 @@ msgid ""
 "the deferred amounts of that month. This means that at the end of that "
 "period, a part of the deferred expense is recognized."
 msgstr ""
+"El primer asiento tiene la fecha del final de cada mes, que agrega todas las"
+" cantidades diferidas de ese mes para cada cuenta. Esto significa que una "
+"parte de los gastos diferidos se reconoce al final de ese periodo."
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:113
 msgid "There are two bills:"
-msgstr ""
+msgstr "Hay dos facturas:"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:115
 msgid "Bill A: $1200 to be deferred from 01/01/2023 to 12/31/2023"
-msgstr ""
+msgstr "Factura A: $1,200 a diferir de 01/01/2023 a 31/12/2023"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:116
 msgid "Bill B: $600 to be deferred from 01/01/2023 to 12/31/2023"
-msgstr ""
+msgstr "Factura B: $600 a diferir de 01/01/2023 a 31/12/2023"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:124
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:141
@@ -18314,34 +18519,44 @@ msgid ""
 "Line 1: Expense account -1200 -600 = **-1800** (cancelling the total of both"
 " bills)"
 msgstr ""
+"Línea 1: cuenta de gastos -1,200 -600 = **-1,800** (lo cual cancela el total"
+" de ambas facturas)"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:125
 msgid ""
 "Line 2: Expense account 100 + 50 = **150** (recognizing 1/12 of bill A and "
 "bill B)"
 msgstr ""
+"Línea 2: cuenta de gastos 100 + 50 = **150** (el cual reconoce 1/12 de "
+"factura A y factura B)"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:142
 msgid ""
 "Line 2: Expense account 200 + 100 = **300** (recognizing 2/12 of bill A and "
 "bill B)"
 msgstr ""
+"Línea 2: cuenta de gastos 200 + 100 = **300** (el cual reconoce 1/12 de "
+"factura A y factura B)"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:158
 msgid ""
 "Line 2: Expense account 1100 + 550 = **1650** (recognizing 11/12 of bill A "
 "and bill B)"
 msgstr ""
+"Línea 2: cuenta de gastos 1100 + 550 = **1650** (el cual reconoce 11/12 de "
+"factura A y factura B)"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:165
 msgid ""
 "There is no need to generate entries in December. Indeed, if we do the "
 "computation for December, we will have an amount of 0 to be deferred."
 msgstr ""
+"No hay necesidad de generar asientos en diciembre. Si hacemos el cálculo en "
+"diciembre, la cantidad que se debe diferir es 0."
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:171
 msgid "bill A and bill B"
-msgstr ""
+msgstr "factura A y factura B"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:175
 msgid ""
@@ -18349,6 +18564,9 @@ msgid ""
 "expense only once in spite of all the created entries thanks to the reversal"
 " mechanism."
 msgstr ""
+"Por lo tanto, al final de diciembre, las facturas A y B se reconocen como "
+"gastos solo una vez a pesar de todos los asientos creados gracias al "
+"mecanismo de cancelación."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:3
 msgid "AI-powered document digitization"
@@ -19403,8 +19621,7 @@ msgstr ""
 #: ../../content/applications/finance/documents.rst:299
 msgid "Digitize documents with AI and optical character recognition (OCR)"
 msgstr ""
-"Digitalizar documentos con IA y reconocimiento óptico de caracteres (OCR, "
-"por sus siglas en inglés)"
+"Digitalizar documentos con IA y reconocimiento óptico de caracteres (OCR)"
 
 #: ../../content/applications/finance/documents.rst:301
 msgid ""
@@ -23623,15 +23840,15 @@ msgstr "Nombre de módulo"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:15
 msgid "Module Key"
-msgstr ""
+msgstr "Clave del módulo"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:17
 msgid ":guilabel:`Australia - Accounting`"
-msgstr ""
+msgstr ":guilabel:`Australia - Contabilidad`"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:18
 msgid "`l10n_au`"
-msgstr ""
+msgstr "`l10n_au`"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:19
 msgid ""
@@ -23640,10 +23857,14 @@ msgid ""
 ":guilabel:`ABA credit transfer` and the :guilabel:`Remittance Advice report`"
 " module."
 msgstr ""
+"Se instala de manera automática cuando el paquete de :guilabel:`Localización"
+" fiscal` para Contabilidad se configura en :guilabel:`Australia`. Este "
+"módulo también instala :guilabel:`Transferencia de crédito ABA` y el módulo "
+":guilabel:`Remittance Advice report`."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:22
 msgid ":guilabel:`Australian Reports - Accounting`"
-msgstr ""
+msgstr ":guilabel:`Reportes australianos - Contabilidad`"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:23
 msgid "`l10n_au_reports`"
@@ -23654,10 +23875,12 @@ msgid ""
 "Includes the :guilabel:`Taxable Payments Annual Reports (TPAR)` and the "
 ":guilabel:`BAS report`."
 msgstr ""
+"Incluye los reportes :guilabel:`Taxable Payments Annual Reports (TPAR)` y "
+":guilabel:`BAS report`."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:26
 msgid ":guilabel:`Australia - Payroll`"
-msgstr ""
+msgstr ":guilabel:`Australia - Nómina`"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:27
 msgid "`l10n_au_hr_payroll`"
@@ -23665,11 +23888,11 @@ msgstr "`l10n_au_hr_payroll`"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:28
 msgid "Payroll localisation for Australia."
-msgstr ""
+msgstr "Localización de nómina para Australia."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:29
 msgid ":guilabel:`Australia - Payroll with Accounting`"
-msgstr ""
+msgstr ":guilabel:`Australia - Nómina con Contabilidad`"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:30
 msgid "`l10n_au_hr_payroll_account`"
@@ -23682,10 +23905,14 @@ msgid ""
 ":guilabel:`Australian Reports - Accounting`; and :guilabel:`Australia - "
 "Payroll`."
 msgstr ""
+"Instala en enlace entre la nómina australiana y la contabilidad. Este módulo"
+" también instala los módulos:  :guilabel:`Australia - Contabilidad`; "
+":guilabel:`Reportes australianos - Contabilidad`; y :guilabel:`Australia - "
+"Nómina`."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:34
 msgid ":guilabel:`Accounting Customer Statements`"
-msgstr ""
+msgstr ":guilabel:`Estados contables de clientes`"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:35
 msgid "`l10n_account_customer_statements`"
@@ -23696,10 +23923,12 @@ msgid ""
 "Allows the management and sending of monthly customer statements from the "
 "partner ledger and the contact form. Also used in New Zealand."
 msgstr ""
+"Permite la gestión y el envío de estados contables de los clientes del libro"
+" de contactos y el formulario de contactos. También se usa en Nueva Zelanda."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:38
 msgid ":guilabel:`Employment Hero Australian Payroll`"
-msgstr ""
+msgstr ":guilabel:`Nómina australiana con Employment Hero`"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:39
 msgid "`l10n_au_keypay`"
@@ -23709,6 +23938,8 @@ msgstr "`l10n_au_keypay`"
 msgid ""
 "Synchronises all pay runs from Employment Hero with Odoo’s journal entries."
 msgstr ""
+"Sincroniza todos los trámites de nómina de Employment Hero con los asientos "
+"contables de Odoo."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:47
 msgid ""
@@ -23716,6 +23947,9 @@ msgid ""
 "Accounting** module. Go to :menuselection:`Accounting --> Configuration --> "
 "Chart of Accounts` to access it."
 msgstr ""
+"El plan de cuentas de Australia está incluido en el módulo "
+":guilabel:`Australia - Contabilidad`. Vaya a :menuselection:`Contabilidad "
+"--> Configuración --> Plan de cuentas` para acceder. "
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:51
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:27
@@ -23726,7 +23960,7 @@ msgstr ":doc:`../accounting/get_started/chart_of_accounts`"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:56
 msgid "Taxes and GST"
-msgstr ""
+msgstr "Impuestos e Impuesto sobre bienes y servicios"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:58
 msgid ""
@@ -23734,6 +23968,9 @@ msgid ""
 "which can be accessed through :menuselection:`Accounting --> Reporting --> "
 "BAS Report`."
 msgstr ""
+"Los impuestos australianos predeterminados afectan el :ref:`ReporteBAS "
+"<australia/bas>`, al cual puede acceder desde :menuselection:`Contabilidad "
+"--> Reportes --> Reporte BAS`."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:61
 msgid ""
@@ -23741,10 +23978,13 @@ msgid ""
 " different rates and exemptions exist for specific categories of goods and "
 "services."
 msgstr ""
+"En Australia, el **Impuesto sobre Bienes y Servicios** (GST, por sus siglas "
+"en inlgés) es del 10%, pero existen diferentes tasas y excepciones para "
+"categorías específicas de bienes y servicios."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst-1
 msgid "Default GST of Australia"
-msgstr ""
+msgstr "GST predeterminado de Australia"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:68
 msgid "Tax Mapping"
@@ -23755,12 +23995,16 @@ msgid ""
 "Within the Australian localisation package, tax names encompass the tax rate"
 " as an integral part of their naming convention."
 msgstr ""
+"En el paquete de localización australiano, los nombres de los impuestos "
+"incluyen el tipo impositivo como parte integrante de su nomenclatura."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:73
 msgid ""
 "Despite the high amount of taxes in Odoo, these taxes are pretty similar "
 "(mostly 0% and 10%), with different tax grid variations for:"
 msgstr ""
+"A pesar de la gran cantidad de impuestos en Odoo, estos impuestos son "
+"similares (principalmente de 0% a 10%), con diferentes variaciones para:"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:76
 msgid "Goods"
@@ -23791,16 +24035,16 @@ msgstr "Servicios"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:78
 msgid "TPAR"
-msgstr ""
+msgstr "TPAR"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:79
 msgid "TPAR without ABN"
-msgstr ""
+msgstr "TPAR sin ABN"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:82
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:79
 msgid ":doc:`Taxes <../accounting/taxes>`"
-msgstr ":doc:`Taxes <../accounting/taxes>`"
+msgstr ":doc:`Impuestos <../accounting/taxes>`"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:84
 msgid ""
@@ -23812,26 +24056,33 @@ msgid ""
 " are used to record amounts withheld from subcontractors without an **ABN** "
 "for the **ATO**."
 msgstr ""
+"Los impuestos que incluyan **TPAR** en el nombre afectarán tanto al reporte "
+"**BAS** como al reporte **TPAR**. Los negocios de algunos sectores necesitan"
+" reportar los pagos que se realicen a subcontratistas para realizar los "
+"servicios relevantes durante el año fiscal. Odoo combina el uso de impuestos"
+" y posiciones fiscales para reportar estos pagos en el reporte **TPAR**. Los"
+" impuestos que mencionen **TPAR sin ABN** se usan para registrar las "
+"cantidades que los subcontratistas retengan sin un **ABN** para **ATO**."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:91
 msgid ":ref:`TPAR <australia/tpar>`"
-msgstr ""
+msgstr ":ref:`TPAR <australia/tpar>`"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:93
 msgid "Here are the taxes for Australia in Odoo 17."
-msgstr ""
+msgstr "Estos son los impuestos para Australia en Odoo 17."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:99
 msgid "GST Name"
-msgstr ""
+msgstr "Nombre del GST"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:101
 msgid "GST Scope"
-msgstr ""
+msgstr "Alcance del GST"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:102
 msgid "GST Type"
-msgstr ""
+msgstr "Tipo de GST"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:103
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:139
@@ -23842,7 +24093,7 @@ msgstr "10%"
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:164
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:168
 msgid "GST Purchases"
-msgstr ""
+msgstr "GST Purchases"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:106
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:110
@@ -23886,210 +24137,210 @@ msgstr "Compras"
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:107
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:143
 msgid "10% INC"
-msgstr ""
+msgstr "10% INC"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:108
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:172
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:176
 msgid "GST Inclusive Purchases"
-msgstr ""
+msgstr "GST Inclusive Purchases"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:111
 msgid "10% C"
-msgstr ""
+msgstr "10% C"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:112
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:180
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:184
 msgid "Capital Purchases"
-msgstr ""
+msgstr "Capital Purchases"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:115
 msgid "0% C"
-msgstr ""
+msgstr "0% C"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:116
 msgid "Zero Rated Purch"
-msgstr ""
+msgstr "Zero Rated Purch"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:119
 msgid "100% T EX"
-msgstr ""
+msgstr "100% T EX"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:120
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:196
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:200
 msgid "Purchase (Taxable Imports) - Tax Paid Separately"
-msgstr ""
+msgstr "Purchase (Taxable Imports) - Tax Paid Separately"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:123
 msgid "10% I"
-msgstr ""
+msgstr "10% I"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:124
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:204
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:208
 msgid "Purchases for Input Taxed Sales"
-msgstr ""
+msgstr "Purchases for Input Taxed Sales"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:127
 msgid "10% P"
-msgstr ""
+msgstr "10% P"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:128
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:212
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:216
 msgid "Purchases for Private use or not deductible"
-msgstr ""
+msgstr "Purchases for Private use or not deductible"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:131
 msgid "100% EX"
-msgstr ""
+msgstr "100% EX"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:132
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:220
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:224
 msgid "GST Only on Imports"
-msgstr ""
+msgstr "GST Only on Imports"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:135
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:159
 msgid "10% Adj"
-msgstr ""
+msgstr "10% Adj"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:136
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:228
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:232
 msgid "Tax Adjustments (Purchases)"
-msgstr ""
+msgstr "Tax Adjustments (Purchases)"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:140
 msgid "GST Sales"
-msgstr ""
+msgstr "GST Sales"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:144
 msgid "GST Inclusive Sales"
-msgstr ""
+msgstr "GST Inclusive Sales"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:147
 msgid "0% EX"
-msgstr ""
+msgstr "0% EX"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:148
 msgid "Zero Rated (Export) Sales"
-msgstr ""
+msgstr "Zero Rated (Export) Sales"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:151
 msgid "0% EXEMPT"
-msgstr ""
+msgstr "0% EXEMPT"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:152
 msgid "Exempt Sales"
-msgstr ""
+msgstr "Exempt Sales"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:155
 msgid "0% I"
-msgstr ""
+msgstr "0% I"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:156
 msgid "Input Taxed Sales"
-msgstr ""
+msgstr "Input Taxed Sales"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:160
 msgid "Tax Adjustments (Sales)"
-msgstr ""
+msgstr "Tax Adjustments (Sales)"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:163
 msgid "10% TPAR"
-msgstr ""
+msgstr "10% TPAR"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:167
 msgid "10% TPAR NO ABN"
-msgstr ""
+msgstr "10% TPAR NO ABN"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:171
 msgid "10% INC TPAR"
-msgstr ""
+msgstr "10% INC TPAR"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:175
 msgid "10% INC TPAR N ABN"
-msgstr ""
+msgstr "10% INC TPAR N ABN"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:179
 msgid "10% C TPAR"
-msgstr ""
+msgstr "10% C TPAR"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:183
 msgid "10% C TPAR N ABN"
-msgstr ""
+msgstr "10% C TPAR N ABN"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:187
 msgid "0% C TPAR"
-msgstr ""
+msgstr "0% C TPAR"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:188
 msgid "Zero Rated Purch TPAR"
-msgstr ""
+msgstr "Zero Rated Purch TPAR"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:191
 msgid "0% C TPAR N ABN"
-msgstr ""
+msgstr "0% C TPAR N ABN"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:192
 msgid "Zero Rated Purch TPAR without ABN"
-msgstr ""
+msgstr "Zero Rated Purch TPAR without ABN"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:195
 msgid "100% T EX TPAR"
-msgstr ""
+msgstr "100% T EX TPAR"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:199
 msgid "100% T EX TPAR N ABN"
-msgstr ""
+msgstr "100% T EX TPAR N ABN"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:203
 msgid "10% I TPAR"
-msgstr ""
+msgstr "10% I TPAR"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:207
 msgid "100% I TPAR N ABN"
-msgstr ""
+msgstr "100% I TPAR N ABN"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:211
 msgid "10% P TPAR"
-msgstr ""
+msgstr "10% P TPAR"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:215
 msgid "10% P TPAR N ABN"
-msgstr ""
+msgstr "10% P TPAR N ABN"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:219
 msgid "100% EX TPAR"
-msgstr ""
+msgstr "100% EX TPAR"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:223
 msgid "100% EX TPAR N ABN"
-msgstr ""
+msgstr "100% EX TPAR N ABN"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:227
 msgid "10% Adj TPAR"
-msgstr ""
+msgstr "10% Adj TPAR"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:231
 msgid "10% Adj TPAR N ABN"
-msgstr ""
+msgstr "10% Adj TPAR N ABN"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:235
 msgid "47% WH"
-msgstr ""
+msgstr "47% WH"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:236
 msgid "Tax Withheld for Partners without ABN"
-msgstr ""
+msgstr "Tax Withheld for Partners without ABN"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:243
 msgid "BAS report"
-msgstr ""
+msgstr "Reporte BAS"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:245
 msgid ""
@@ -24099,18 +24350,24 @@ msgid ""
 "**Australian Taxation Office (ATO)**. With the Odoo **BAS** feature, "
 "businesses can report on the following:"
 msgstr ""
+"El reporte de la **declaración fiscal de actividad comercial (BAS)** es un "
+"requisito muy importante para declarar los impuestos de las empresas "
+"registradas para el **Impuesto sobre bienes y servicios (GST)** en "
+"Australia. El **BAS** se usa para reportar y remitir varios impuestos a la "
+"**Oficina de Impuestos de Australia (ATO)**. Con la función **BAS** de Odoo,"
+" las empresas pueden reportar lo siguiente:"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:250
 msgid "Goods and Services Tax (GST)"
-msgstr ""
+msgstr "Impuesto sobre bienes y servicios (GST)"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:251
 msgid "PAYG tax withheld"
-msgstr ""
+msgstr "PAYG tax withheld"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst-1
 msgid "BAS report in Odoo"
-msgstr ""
+msgstr "Reporte BAS en Odoo."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:256
 msgid ""
@@ -24121,10 +24378,17 @@ msgid ""
 " ensures the **BAS** report is accurate and reflective of the business's "
 "financial activities."
 msgstr ""
+"Los impuestos para GST se toman de la **tabla de impuestos** preconfigurada "
+"en el sistema. La **tabla de impuestos** también se puede configurar de "
+"forma manual para cualquier GST especial adicional. Una vez que haya "
+"configurado el impuesto de cada cuenta, el sistema acomoda los apuntes "
+"contables en la categoría de impuestos correcta de forma automática. De esta"
+" forma se asegura que el reporte **BAS** es correcto y refleja las "
+"actividades financieras de la empresa."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst-1
 msgid "GST grids in Odoo"
-msgstr ""
+msgstr "Tablas GST en Odoo"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:264
 msgid ""
@@ -24133,10 +24397,14 @@ msgid ""
 " ensures that all payroll-related withholding taxes are accurately captured "
 "and reflected within the report."
 msgstr ""
+"Además, el reporte **BAS** incluye los componentes retenidos del impuesto "
+"**PAYG** (**W1** a **W5** y **summary, section 4**). Esta integración "
+"asegura que todos los impuestos retenidos en relación con la nómina se "
+"capturan y están reflejados en el reporte."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst-1
 msgid "PAYG Tax Withheld and Summary of BAS report in Odoo"
-msgstr ""
+msgstr "Importes retenidos PAYG y resumen del reporte BAS en Odoo"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:271
 msgid ""
@@ -24145,6 +24413,10 @@ msgid ""
 "and more information on the calculation process for these taxes, please "
 "refer to the Payroll app documentation."
 msgstr ""
+"El módulo incorpora reglas que facilitan el cálculo automático de impuestos "
+"por tipos de **W1** a **W5**. Para un tutorial detallado y más información "
+"sobre el proceso para calcular estos impuestos, consulte la documentación de"
+" la aplicación Nómina."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:276
 msgid ":ref:`Payroll <australia/payroll>`"
@@ -24152,7 +24424,7 @@ msgstr ":ref:`Nómina <australia/payroll>`"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:279
 msgid "Closing the BAS report"
-msgstr ""
+msgstr "Concluir el reporte BAS"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:281
 msgid ""
@@ -24162,16 +24434,25 @@ msgid ""
 "Also, the start date of the tax return period can be defined through the "
 "**period button** (marked by a calendar icon 📅)."
 msgstr ""
+"Cuando llegue el momento de presentar la declaración de impuestos con la "
+"**ATO**, haga clic en :guilabel:`Cerrar asiento`. El periodo de la "
+"declaración se puede configurar en :menuselection:`configuración --> Ajustes"
+" -->Periodicidad de la declaración fiscal`. También, el inicio de cada "
+"periodo de declaración se puede definir en el **botón del periodo** (un "
+"icono de calendario 📅)."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:287
 msgid ":doc:`Year-end closing <../accounting/reporting/year_end>`"
-msgstr ""
+msgstr ":doc:`Cierre del ejercicio <../accounting/reporting/year_end>`"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:290
 msgid ""
 "Odoo uses the *calendar quarter* rather than the Australian FY quarter, "
 "which means **July to September is Q3 in Odoo**."
 msgstr ""
+"Odoo utiliza el *trimestre calendario* en lugar del trimestre fiscal "
+"australiano, lo que significa que **de julio a septiembre es el tercer "
+"trimestre en Odoo**."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:293
 msgid ""
@@ -24179,6 +24460,10 @@ msgid ""
 "account** and **GST receivable account** need to be set. A notification pops"
 " up and redirects the user to tax group configurations."
 msgstr ""
+"Antes de cerrar un asiento por primera vez, debe configurar las cuentas "
+"predeterminadas **GST payable account** y **GST receivable account**. "
+"Aparecerá una notificación que redirigirá al usuario a las configuraciones "
+"del grupo de impuestos."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:297
 msgid ""
@@ -24186,10 +24471,13 @@ msgid ""
 "**BAS** report generates an accurate journal closing entry automatically, "
 "which balances out the GST balance with the GST clearing account."
 msgstr ""
+"Ya que haya configurado las cuentas **GST payable** y **GST receivable**, el"
+" reporte **BAS** genera un asiento de cierre de diario de manera automática,"
+" que equilibra el saldo GST con la cuenta de compensación GST."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst-1
 msgid "GST accounts for the BAS report in Odoo."
-msgstr ""
+msgstr "Cuentas GST para el reporte BAS en Odoo."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:304
 msgid ""
@@ -24197,10 +24485,14 @@ msgid ""
 "tax clearing account defined on the tax group. The amount to be paid to or "
 "received from the **ATO** can be reconciled against a bank statement."
 msgstr ""
+"El equilibrio entre **GST receivable** y **payable** se realiza contra la "
+"cuenta de compensación de impuestos definida en el grupo de impuestos. La "
+"cantidad a pagar o por recibir de la **ATO** se puede conciliar con un "
+"estado de cuenta bancario."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst-1
 msgid "BAS tax payment."
-msgstr ""
+msgstr "Pago de impuestos BAS."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:312
 msgid ""
@@ -24211,10 +24503,16 @@ msgid ""
 "portal <https://www.ato.gov.au/newsrooms/small-business-newsroom/lodging-"
 "your-next-bas>`_."
 msgstr ""
+"El reporte **BAS** no se envía directamente a la **ATO**. Odoo ayudará a "
+"calcular de forma automática los valores necesarios para cada sección, con "
+"la posibilidad de auditarlos para entender mejor los números. Las empresas "
+"pueden copiar estos valores e ingresarlos en `el portal de la ATO "
+"<https://www.ato.gov.au/newsrooms/small-business-newsroom/lodging-your-next-"
+"bas>`_."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:320
 msgid "TPAR report"
-msgstr ""
+msgstr "Reporte TPAR"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:322
 msgid ""
@@ -24227,6 +24525,15 @@ msgid ""
 "this report in :menuselection:`Accounting --> Reporting --> Taxable Payments"
 " Annual Reports (TPAR)`."
 msgstr ""
+"Odoo permite que las empresas reporten los pagos realizados a contratistas y"
+" subcontratistas durante el ejercicio fiscal. Para hacer esto, es necesario "
+"generar un :abbr:`TPAR (Informe anual sobre los pagos de impuestos, por sus "
+"siglas en inglés)`. Si no está seguro si su empresa necesita este reporte, "
+"consulte la documentación de la `ATO <https://www.ato.gov.au/businesses-and-"
+"organisations/preparing-lodging-and-paying/reports-and-returns/taxable-"
+"payments-annual-report>`_. Para encontrar este reporte, vaya a "
+":menuselection:`Contabilidad --> Reportes --> Taxable Payments Annual "
+"Reports (TPAR)`."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:331
 msgid ""
@@ -24234,10 +24541,13 @@ msgid ""
 ":menuselection:`Accounting --> Vendors`, select a your contractor and set a "
 ":guilabel:`Fiscal Position` under the :guilabel:`Sales & Purchase` tab."
 msgstr ""
+"En :menuselection:`Contabilidad --> Clientes` o :menuselection:`Contabilidad"
+" --> Proveedores` seleccione un proveedor y una :guilabel:`Posición fiscal` "
+"en la pestaña :guilabel:`Compras y venta`."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst-1
 msgid "TPAR fiscal position"
-msgstr ""
+msgstr "Posición fiscal TPAR"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:337
 msgid ""
@@ -24246,35 +24556,44 @@ msgid ""
 ":menuselection:`Accounting --> Reporting --> Taxable Payments Annual Reports"
 " (TPAR)`."
 msgstr ""
+"Al facturar a un contacto que tenga la posición fiscal :guilabel:`TPAR` o "
+":guilabel:`TPAR without ABN`, el reporte se genera de forma automática en "
+":menuselection:`Contabilidad --> Reportes --> Taxable Payments Annual "
+"Reports (TPAR)`."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:341
 msgid ""
 "The report includes the **ABN**, **Total GST**, **Gross Paid**, and **Tax "
 "Withheld** from their **TPAR** subcontractors."
 msgstr ""
+"El reporte incluye el **ABN**, **GST total**, **total bruto pagado** y el "
+"**impuesto retenido** del total del **TPAR** de los subcontratistas."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:344
 msgid "**Total GST**: the total tax paid"
-msgstr ""
+msgstr "**GST total**: el total del impuesto pagado."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:345
 msgid ""
 "**Gross Paid amounts**: shows after registering a payment for those bills"
 msgstr ""
+"**Total bruto pagado**: se muestra tras registrar el pago de esas facturas."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:346
 msgid ""
 "**Tax Withheld**: shown if the subcontractor is registered with a fiscal "
 "position set to :guilabel:`TPAR without ABN`"
 msgstr ""
+"**Impuesto retenido**: se muestra si el subcontratista está registrado con "
+"una posición fiscal configurada como :guilabel:`TPAR without ABN`. "
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:349
 msgid "The **TPAR** report can be exported to PDF, XLSX, and TPAR formats."
-msgstr ""
+msgstr "Puede exportar el reporte **TPAR** a formatos PDF, XLSX y TPAR."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:354
 msgid "Customer statements"
-msgstr ""
+msgstr "Estados de los clientes"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:356
 msgid ""
@@ -24282,14 +24601,19 @@ msgid ""
 " the company over a certain period, and overdue statement details. These "
 "statements can be sent out to customers by email."
 msgstr ""
+"Los estados de los clientes permiten que los clientes vean sus propias "
+"transacciones financieras dentro de la empresa durante un periodo definido y"
+" los detalles de los estados vencidos. Es posible enviar estos estados a los"
+" clientes por correo."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst-1
 msgid "Customer statement in Odoo."
-msgstr ""
+msgstr "Estados de los clientes en Odoo."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:363
 msgid "There are **two** ways for customers to download these statements."
 msgstr ""
+"Hay **dos** maneras en las que los clientes pueden descargar estos estados"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:365
 msgid ""
@@ -24298,6 +24622,11 @@ msgid ""
 "**gear icon (⚙)**, and then :guilabel:`Print Customer Statements`. This "
 "prints out the statement from the beginning of the month to today's date."
 msgstr ""
+"**Desde el formulario de contacto:**: los estados de los clientes están en "
+":menuselection:`Clientes --> Clientes`. Seleccione a un cliente, haga clic "
+"en el **icono de engranaje (⚙)** y después :guilabel:`Imprimir estados de "
+"los clientes`. Esto hará que se imprima el estado desde el inicio del mes "
+"hasta la fecha de hoy."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:370
 msgid ""
@@ -24307,14 +24636,21 @@ msgid ""
 "specify a date range in the **calendar menu (📅)** for the statement, hover "
 "over a partner, and click the :guilabel:`Customer Statements` tab."
 msgstr ""
+"**Desde el libro mayor de contactos**: esta opción permite más flexibilidad "
+"al momento de seleccionar la fecha inicial y final de un estado. Para "
+"acceder a él vaya a :menuselection:`Contabilidad --> Reportes --> Libro "
+"mayor del contacto`. Especifique un rango de fecha en el **menú de "
+"calendario (📅)**, pase el cursor por encima del contacto y haga clic en la "
+"pestaña :guilabel:`Estados de los clientes`."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst-1
 msgid "Customer statement from partner ledger report in Odoo."
 msgstr ""
+"Estado del cliente desde el reporte del libro mayor del contacto en Odoo."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:381
 msgid "Remittance advice"
-msgstr ""
+msgstr "Aviso de pago"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:383
 msgid ""
@@ -24323,14 +24659,18 @@ msgid ""
 " Payments`, selecting the payment(s), and clicking :menuselection:`Print -->"
 " Payment Receipt`."
 msgstr ""
+"Un aviso de pago es un documento que se usa como prueba de pago a una "
+"empresa. En Odoo están disponibles en :menuselection:`Contabilidad ‣ "
+"Proveedores ‣ Pagos`. Seleccione los pagos y haga clic en "
+":menuselection:`Imprimir --> Recibo de pago`."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst-1
 msgid "Remittance advice in Odoo."
-msgstr ""
+msgstr "Aviso de pago en Odoo."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:393
 msgid "E-Invoicing via Peppol"
-msgstr ""
+msgstr "Facturación electrónica mediante Peppol"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:395
 msgid ""
@@ -24340,10 +24680,16 @@ msgid ""
 ":menuselection:`Accounting --> Customers` or :menuselection:`Accounting --> "
 "Vendors`, select a partner, and click the :guilabel:`Accounting` tab."
 msgstr ""
+"Odoo cumple con los `requisitos PEPPOL <https://peppol.org/learn-"
+"more/country-profiles/australia/>`_ de Australia y Nueva Zelanda. Puede "
+"encontrar y configurar los ajustes de **faturas electrónicas** por contacto "
+"en :menuselection:`Contabilidad --> Clientes` o :menuselection:`Contabilidad"
+" --> Proveedores`, seleccione un contacto y haga clic en la pestaña "
+":guilabel:`Contabilidad`."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst-1
 msgid "Peppol settings from a partner in Odoo."
-msgstr ""
+msgstr "Ajustes Peppol para un contacto en Odoo"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:404
 msgid ""
@@ -24351,10 +24697,12 @@ msgid ""
 "will download a compliant XML file that can be manually uploaded to your "
 "PEPPOL network."
 msgstr ""
+"Al validar una factura o nota de crédito para un contacto en la red PEPPOL "
+"se descargará un archivo XML que puede subirse manualmente a su red PEPPOL."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:410
 msgid "ABA files for batch payments"
-msgstr ""
+msgstr "Archivos ABA para pagos en lote"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:415
 msgid ""
@@ -24363,6 +24711,10 @@ msgid ""
 "customers to facilitate bulk payment processing by uploading a single file "
 "from their business management software."
 msgstr ""
+"Un archivo ABA es un formato digital desarrollado por la `Asociación "
+"Bancaria Australiana <https://www.ausbanking.org.au/>`_. Está diseñado para "
+"facilitar el pago por lotes de los clientes de las empresas, pues solo deben"
+" subir un archivo desde su software de gestión empresarial."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:419
 msgid ""
@@ -24370,6 +24722,10 @@ msgid ""
 "efficiency. This is achieved by consolidating numerous payments into one "
 "file for batch processing, which can be submitted to all Australian banks."
 msgstr ""
+"La ventaja principal de usar archivos ABA es mejorar la eficacia de los "
+"procesos de pago y conciliación. Para lograr esto es necesario consolidar "
+"varios pagos en un solo archivo para procesarlos por lotes, luego podrá "
+"enviarlos a todos los bancos australianos."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:427
 msgid "Settings"
@@ -24381,10 +24737,13 @@ msgid ""
 "Configuration --> Setting --> Batch Payment` and enable :guilabel:`Allow "
 "Batch Payments`."
 msgstr ""
+"Para activar los **pagos por lote** vaya a :menuselection:`Contabilidad --> "
+"Configuración --> Ajustes --> Pagos por lotes` y active la opción "
+":guilabel:`permitir pagos por lotes`."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:433
 msgid "Bank journal"
-msgstr ""
+msgstr "Diario bancario"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:435
 msgid ""
@@ -24393,65 +24752,79 @@ msgid ""
 " tab, enter the :guilabel:`Account Number` and click :guilabel:`Create and "
 "edit`. In the pop-up window, fill in the following fields:"
 msgstr ""
+"Después, vaya a :menuselection:`Contabilidad --> Configuración --> Diarios` "
+"y seleccione el tipo de diario :guilabel:`Banco`. En la pestaña "
+":guilabel:`Asientos contables` ingrese el :guilabel:`número de cuenta` y "
+"haga clic en :guilabel:`Crear y editar`. En la ventana emergente, complete "
+"los siguientes campos:"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:440
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:477
 msgid ":guilabel:`Bank`"
-msgstr ""
+msgstr ":guilabel:`Banco`"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:441
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:478
 msgid ":guilabel:`Account Holder Name`"
-msgstr ""
+msgstr ":guilabel:`Nombre del titular de la cuenta`"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:442
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:479
 msgid ":guilabel:`BSB`"
-msgstr ""
+msgstr ":guilabel:`BSB`"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:443
 msgid ":guilabel:`Account Holder`"
-msgstr ""
+msgstr ":guilabel:`Titular de la cuenta`"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst-1
 msgid "Account Number settings for ABA in Odoo."
-msgstr ""
+msgstr "Ajustes del número de cuenta para ABA en Odoo."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:449
 msgid "The :guilabel:`Send Money` field must be **enabled**."
-msgstr ""
+msgstr "El campo :guilabel:`Enviar dinero` debe estar **activado**."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:452
 msgid "The :guilabel:`Currency` field is optional."
-msgstr ""
+msgstr "El campo :guilabel:`Divisa` es opcional."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:454
 msgid ""
 "Go back to the :guilabel:`Journal Entries` tab and fill in the following "
 "fields related to the ABA:"
 msgstr ""
+"Regrese a la pestaña :guilabel:`Asientos bancarios` y llene los siguientes "
+"campos relacionados a ABA:"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:456
 msgid ":guilabel:`BSB`: This field is auto-formatted from the bank account"
 msgstr ""
+":guilabel:`BSB`: este campo se llena en automático con la cuenta bancaria"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:457
 msgid ""
 ":guilabel:`Financial Institution Code`: The official 3-letter abbreviation "
 "of the financial institution (e.g., WBC for Westpac)"
 msgstr ""
+":guilabel:`Código de institución financiara`: la abreviatura de 3 letras "
+"oficial de la institución financiera (por ejemplo, WBC para Westpac)"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:459
 msgid ""
 ":guilabel:`Supplying User Name`: 6-digit number provided by your bank. "
 "Contact or check your bank website if you need to know."
 msgstr ""
+":guilabel:`Supplying User Name`: un número de 6 digitos que le da su banco. "
+"Contacte a el sitio web de su banco si necesita saber más."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:463
 msgid ""
 ":guilabel:`Include Self-Balancing Transactions`: Selecting this option adds "
 "an additional"
 msgstr ""
+":guilabel:`Incluir transacciones autoequilibradas`: Al seleccionar esta "
+"opción se añade una transacción adicional "
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:462
 msgid ""
@@ -24459,6 +24832,9 @@ msgid ""
 "financial institutions require when generating ABA files. Check with your "
 "bank to see if you need this option."
 msgstr ""
+"de \"autoequilibrio\" al final del archivo ABA que algunas instituciones "
+"financieras exigen al generar estos archivos. Consulte con su banco si "
+"necesita esta opción."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:465
 msgid ""
@@ -24466,10 +24842,14 @@ msgid ""
 ":guilabel:`Bank` type journal. Click :guilabel:`Add a line` and select "
 ":guilabel:`ABA Credit Transfer` as the **payment method**."
 msgstr ""
+"Después, vaya a la pestaña :guilabel:`Pagos salientes` en el mismo tipo de "
+"diario :guilabel:`Banco` y haga clic en :guilabel:`Agregar una línea`. "
+"Seleccione :guilabel:`Transferencia de crédito ABA` como el **método de "
+"pago**."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:469
 msgid "Partners’ bank accounts"
-msgstr ""
+msgstr "Cuentas bancarias de los contactos"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:471
 msgid ""
@@ -24479,24 +24859,32 @@ msgid ""
 ":guilabel:`Accounting` tab, and under the :guilabel:`Bank Accounts` section,"
 " click :guilabel:`Add a line` to fill in:"
 msgstr ""
+"Vaya a :menuselection:`Contabilidad --> Clientes --> Clientes` o a "
+":menuselection:`Contabilidad --> Proveedores --> Proveedores` y seleccione "
+"el contacto al que debe agregar la información bancaria. Una vez "
+"seleccionado, haga clic en la pestaña :guilabel:`Contabilidad` y, en la "
+"sección :guilabel:`Cuentas bancarias`, haga clic en :guilabel:`Agregar una "
+"línea` para completar la siguiente información:"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:476
 msgid ":guilabel:`Account Number` of that partner"
-msgstr ""
+msgstr ":guilabel:`Número de cuenta` de ese contacto"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:480
 msgid ":guilabel:`Accounter Holder`"
-msgstr ""
+msgstr ":guilabel:`Titular de la cuenta`"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:481
 msgid ""
 ":guilabel:`Send Money` defines the bank account as *trusted*, which is "
 "essential for ABA files and must be enabled if to be used."
 msgstr ""
+":guilabel:`Enviar dinero` define la cuenta bancaria como *confiable*, lo "
+"cual es esencial para archivos ABA y debe activarse si se va a usar."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:485
 msgid "Generate an ABA file"
-msgstr ""
+msgstr "Generar archivos ABA"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:487
 msgid ""
@@ -24504,6 +24892,10 @@ msgid ""
 "from a purchase order). :guilabel:`Confirm` the bill and ensure the vendor’s"
 " banking information is set up correctly before registering a payment.."
 msgstr ""
+"Para generar un archivo *ABA*, :guilabel:`cree` una factura de proveedor (de"
+" manera manual o desde la orden de compra). :guilabel:`Confirme` la factura "
+"y asegúrese de configurar la información bancaria del proveedor antes de "
+"registrar el pago"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:491
 msgid ""
@@ -24512,6 +24904,10 @@ msgid ""
 ":guilabel:`Payment Method`, and select the right :guilabel:`Recipient Bank "
 "Account`."
 msgstr ""
+"Después, haga clic en :guilabel:`Registrar pago` en la ventana emergente: "
+"seleccione el diario :guilabel:`Banco`, seleccione :guilabel:`Transferencia "
+"de crédito ABA` como :guilabel:`Método de pago` y seleccione la "
+":guilabel:`Cuenta de banco de destino` correcta."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:495
 msgid ""
@@ -24521,6 +24917,12 @@ msgid ""
 "correct and finally :guilabel:`Validate`. Once validated, the ABA file "
 "becomes available in the **chatter** on the right."
 msgstr ""
+"Una vez que haya confirmado los pagos, aparecerán en "
+":menuselection:`Contabilidad --> Proveedores --> Pagos`. Marque las casillas"
+" de los pagos que se deben incluir en el lote y después haga clic en "
+":guilabel:`Crear lote`. Verifique que toda la información sea correcta y "
+"haga clic en :guilabel:`Validar`. Después de esto, el archivo ABA estará "
+"disponible en el **chatter**, a la derecha de la pantalla."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:500
 msgid ""
@@ -24528,14 +24930,18 @@ msgid ""
 "appear in your bank feed at the following bank feed iteration. You will need"
 " to reconcile it against the **batch payment** made in Odoo."
 msgstr ""
+"Después de subir el archivo al portal de su banco, una línea de transacción "
+"ABA aparecerá en sus actualizaciones bancarias en la siguiente iteración de "
+"notificaciones. Usted necesitará conciliarlo contra el **pago por lote** "
+"hecho en Odoo."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:505
 msgid ":doc:`Batch Payment <../accounting/payments/batch>`"
-msgstr ""
+msgstr ":doc:`Pago por lote <../accounting/payments/batch>`"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:510
 msgid "Buy Now, Pay Later solutions"
-msgstr ""
+msgstr "Soluciones para comprar ahora y pagar después."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:512
 msgid ""
@@ -24544,18 +24950,23 @@ msgid ""
 "<https://stripe.com/en-au/payments/payment-methods>`_ and `AsiaPay "
 "<https://www.asiapay.com.au/payment.html#option>`_ payment providers."
 msgstr ""
+"Las soluciones de compre ahora y pague después son métodos de pago muy "
+"usados en Australia para tiendas en línea. Algunas de estas soluciones están"
+" disponibles con los proveedores de pago  `Stripe <https://stripe.com/en-"
+"au/payments/payment-methods>`_ y `AsiaPay "
+"<https://www.asiapay.com.au/payment.html#option>`_ payment providers."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:517
 msgid ":doc:`AsiaPay Payment Provider <../payment_providers/asiapay>`"
-msgstr ""
+msgstr ":doc:`Proveedor de pago AsiaPay <../payment_providers/asiapay>`"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:518
 msgid ":doc:`Stripe Payment Provider <../payment_providers/stripe>`"
-msgstr ""
+msgstr ":doc:`Proveedor de pago Stripe <../payment_providers/stripe>`"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:521
 msgid "POS terminals for Australia"
-msgstr ""
+msgstr "Terminales de PdV para Australia"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:523
 msgid ""
@@ -24563,6 +24974,9 @@ msgid ""
 "in Australia, you *must* have a **Stripe** terminal. Odoo supports the "
 "**EFTPOS** payment solution in Australia."
 msgstr ""
+"Si quiere tener una conexión directa entre Odoo y su terminal de punto de "
+"venta en Australia *necesitará* una terminal de pago **Stripe**. Odoo es "
+"compatible con la solución de pago **EFTPOS** en Australia."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:527
 msgid ""
@@ -24570,24 +24984,30 @@ msgid ""
 "system. The only drawback of not using Stripe is that cashiers must manually"
 " enter the final payment amount on the terminal."
 msgstr ""
+"No necesita una terminal de pago Stripe para usar Odoo como su sistema de "
+"punto de venta principal. Lo único malo de no usar Stripe es que las "
+"personas que trabajen en la caja tendrán que ingresar la cantidad final de "
+"pago en la terminal de forma manual."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:532
 msgid ":doc:`Stripe Odoo Payment Provider <../payment_providers/stripe>`"
-msgstr ""
+msgstr ":doc:`Proveedor de pago Stripe y Odoo <../payment_providers/stripe>`"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:533
 msgid ""
 ":doc:`Stripe Odoo Payment Terminal "
 "</applications/sales/point_of_sale/payment_methods/terminals/stripe>`"
 msgstr ""
+":doc:`Odoo y la terminal de pago Stripe "
+"</applications/sales/point_of_sale/payment_methods/terminals/stripe>`"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:534
 msgid "`Stripe Dashboard <https://dashboard.stripe.com/dashboard>`_"
-msgstr ""
+msgstr "`Tablero de Stripe <https://dashboard.stripe.com/dashboard>`_"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:535
 msgid "`Stripe Terminal <https://stripe.com/docs/terminal>`_"
-msgstr ""
+msgstr "`Terminal de Stripe <https://stripe.com/docs/terminal>`_"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:540
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:150
@@ -24596,11 +25016,11 @@ msgstr "Nómina"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:543
 msgid "Odoo is currently not compliant with STP Phase 2."
-msgstr ""
+msgstr "Por el momento Odoo no cumple con STP Phase 2."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:546
 msgid "Create your employees"
-msgstr ""
+msgstr "Creación de empleados"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:548
 msgid ""
@@ -24608,40 +25028,49 @@ msgid ""
 "**Employees** app and click :guilabel:`Create`. In the :guilabel:`HR "
 "Settings` tab, you can input the mandatory information:"
 msgstr ""
+"Para crear un **formulario de empleado** y llenar la información "
+"obligatoria, vaya a la aplicación **Empleados** y haga clic en "
+":guilabel:`Crear`. En la pestaña :guilabel:`Ajustes de RR. HH.` puede "
+"ingresar la información obligatoria:"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:552
 msgid ""
 ":guilabel:`TFN Status`: if the employee provides a TFN, make sure to add it "
 "to the “TFN” field"
 msgstr ""
+":guilabel:`Estado TFN`: si el empleado le da un TFN, asegúrese de agregarlo."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:553
 msgid ":guilabel:`Non-resident`: if the employee is a foreign resident"
-msgstr ""
+msgstr ":guilabel:`No es residente`: si el empleado es extranjero"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:554
 msgid ""
 ":guilabel:`Tax-free Threshold`: if the employee is below or above the "
 "threshold"
 msgstr ""
+":guilabel:`Tax-free Threshold`: si el empleado está arriba o por debajo del "
+"umbral"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:555
 msgid ""
 ":guilabel:`HELP / STSL`: for all types of study and training support loans "
 "(e.g. HELP, VSL, SSL…)"
 msgstr ""
+":guilabel:`HELP / STSL`: para todo tipo de préstamos de apoyo para estudios "
+"y capacitación (por ejemplo, HELP, VSL, SSL...)"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:556
 msgid ":guilabel:`Medicare levy Deduction`"
-msgstr ""
+msgstr ":guilabel:`Medicare levy Deduction`"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:557
 msgid ":guilabel:`Medicare levy Exemption`"
-msgstr ""
+msgstr ":guilabel:`Medicare levy Exemption`"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:558
 msgid ":guilabel:`Withholding for Extra Pay`"
-msgstr ""
+msgstr ":guilabel:`Withholding for Extra Pay`"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:559
 msgid "..."
@@ -24649,7 +25078,7 @@ msgstr "..."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:562
 msgid "Manage Australian contracts"
-msgstr ""
+msgstr "Gestión de los contratos de Australia"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:564
 msgid ""
@@ -24657,18 +25086,26 @@ msgid ""
 "clicking the :guilabel:`Contracts` smart button or by going to "
 ":menuselection:`Employees --> Employees --> Contracts`."
 msgstr ""
+"Una vez que se haya creado el formulario del empleado, asegúrese de activar "
+"el contrato. Para esto solo tiene que hacer clic en el botón inteligente "
+":guilabel:`Contratos` o en :menuselection:`Empleados --> Empleados --> "
+"Contratos`."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:569
 msgid ""
 "Only one contract can be active simultaneously per employee, but an employee"
 " can be assigned consecutive contracts during their employment."
 msgstr ""
+"Un empleado solo puede tener un contrato activo a la vez, pero se le puede "
+"asignar varios contratos a un empleado a lo largo del tiempo."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:572
 msgid ""
 "Contractual information related to Australia can be found in the following "
 "**three** places:"
 msgstr ""
+"Puede consultar la información contractual relacionada a Australia en "
+"**tres** lugares:"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:574
 msgid ""
@@ -24679,6 +25116,13 @@ msgid ""
 " by the Australian Taxation Office (ATO). Most contracts will fall under the"
 " following **three structures**:"
 msgstr ""
+"Antes de asignar un importe salarial, una frecuencia de pago y otros "
+"detalles importantes a un contrato, es importante definir la **estructura "
+"salarial**, la **fecha de inicio** y la **fuente de entrada al trabajo**. En"
+" Australia, se emplea una \"estructura salarial\" para especificar el "
+"régimen fiscal aplicable a ese contrato, tal y como lo define la Oficina "
+"Australiana de Impuestos (ATO). La mayoría de los contratos se encuadrarán "
+"en las siguientes **tres estructuras**:"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:580
 msgid ""
@@ -24686,6 +25130,9 @@ msgid ""
 "fall in this category; hence, this structure is assigned by default to all "
 "contracts."
 msgstr ""
+"**Regular (Schedule 1)**: la gran mayoría de los empleados australianos "
+"caerán en esta categoría, por lo que es la estructura que se asigna en "
+"automático a todos los contratos."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:582
 msgid ""
@@ -24693,16 +25140,22 @@ msgid ""
 "makers (WHMs), other taxes apply. For detailed information on these specific"
 " tax implications, refer to the documentation provided by the **ATO**."
 msgstr ""
+"**Working holiday makers (Schedule 15)**. Al emplear trabajadores en "
+"vacaciones de trabajo (WHMs), se aplican otros impuestos. Para obtener "
+"información detallada sobre estas implicaciones fiscales específicas, "
+"consulte la documentación proporcionada por la ATO."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:585
 msgid ""
 "**No TFN**. Choose this structure if the employee hasn’t provided a **TFN** "
 "for over **28** days."
 msgstr ""
+"**No TFN**. Seleccione esta opción si el empleado no ha proporcionado un "
+"**TFN** en más de **28** días."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst-1
 msgid "Employees form in Odoo Payroll."
-msgstr ""
+msgstr "Formulario de empleados en la aplicación Nómina de Odoo."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:592
 msgid ""
@@ -24711,12 +25164,20 @@ msgid ""
 "should be performed before using them to pay employees in your production "
 "database. Send your feedback to au-feedback@mail.odoo.com."
 msgstr ""
+"Las estructuras **Horticulture/Shearing (Schedule 2)** y **Artists and "
+"Performers (Schedule 3)** solo están parcialmente completas, por lo que "
+"deberán realizarse las pruebas oportunas antes de utilizarlas para pagar a "
+"los empleados de su base de datos de producción. Envíe sus comentarios a au-"
+"feedback@mail.odoo.com."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:596
 msgid ""
 "The field :guilabel:`Work Entry Source` is also significant and defines how "
 "**working hours** and **days** are accounted for in the employee’s payslip."
 msgstr ""
+"El campo :guilabel:`Work Entry Source` también es muy importante y define "
+"cómo se contarán las **horas** y los **días de trabajo** en la nómina del "
+"empleado."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:599
 msgid ""
@@ -24728,18 +25189,30 @@ msgid ""
 "payslip will be automatically calculated to be 38 hours (5 * 7.36 hours) if "
 "no leave is taken."
 msgstr ""
+":guilabel:`Working Schedule`: las entradas de trabajo se generan "
+"automáticamente en función del horario de trabajo del empleado, a partir de "
+"la fecha de inicio del contrato. Por ejemplo, supongamos que un empleado "
+"trabaja 38 horas semanales y su contrato comienza el 1 de enero. Hoy es 16 "
+"de enero, y el usuario genera una nómina del 14 al 20 de enero. Las horas "
+"trabajadas en la nómina se calcularán automáticamente a 38 horas (5 * 7.36 "
+"horas) si no se toman vacaciones."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:604
 msgid ""
 ":guilabel:`Attendances`: The default working schedule is ignored, and work "
 "entries are only generated after clocking in and out of the attendance app."
 msgstr ""
+":guilabel:`Attendances`: se ignora el horario laboral automático y las horas"
+" laborales solo se generan después de que el empleado fiche su entrada o "
+"salida en la aplicación Asistencias."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:606
 msgid ""
 ":guilabel:`Planning`: The default working schedule is ignored, and work "
 "entries are generated from planning shifts only."
 msgstr ""
+":guilabel:`Planning`: se ignora el horario laborar automático y las horas "
+"laborales solo se generan de los turnos planeados."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:610
 msgid ""
@@ -24751,10 +25224,18 @@ msgid ""
 "can be manually imported for each period, and Odoo will separate the pay "
 "items and rates on the employee’s payslip."
 msgstr ""
+"Se necesitan realizar más configuraciones para asegurar que las nóminas de "
+"Odoo computen automáticamente varias **tasas de penalización** definidas por"
+" un **premio (tasa de horas extras, tasa de días festivos, etc)**. Para "
+"crear estas configuraciones, cree nuevos tipos de entradas de trabajo para "
+"cada tasa de penalización y luego asigne una tasa de penalización en % a "
+"cada una. Una vez hecha esta configuración única, puede importar las "
+"entradas de trabajo manualmente para cada periodo, y Odoo separará los ítems"
+" de pago y las tasas en el recibo de pago del empleado."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:618
 msgid "Timesheets do not impact work entries in Odoo."
-msgstr ""
+msgstr "Las hojas de hora no afectan el horario laboral en Odoo."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:620
 msgid ""
@@ -24762,6 +25243,9 @@ msgid ""
 "impacting the frequency of pay runs and the management of payslip rules in "
 "Odoo."
 msgstr ""
+"La pestaña :guilabel:`Información salarial` contiene algunos campos "
+"esenciales que afectarán la frecuencia de los pagos y la gestión de las "
+"reglas de nómina en Odoo."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:623
 msgid ""
@@ -24770,6 +25254,11 @@ msgid ""
 " Wage` type. For employees being paid hourly, make sure to define the "
 "correct **casual loading**."
 msgstr ""
+":guilabel:`Tipo de salario`: seleccione el tipo de pago :guilabel:`Salario "
+"fijo` para empleados a tiempo completo y a tiempo parcial. Para trabajadores"
+" eventuales y otros, seleccione el tipo :guilabel:`Salario por hora`. Para "
+"los empleados a los que se paga por horas, asegúrese de definir la **carga "
+"ocasional** correcta."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:626
 msgid ""
@@ -24777,6 +25266,8 @@ msgid ""
 "frequencies are accepted: **daily, weekly, bi-weekly (or fortnightly), "
 "monthly, and quarterly**."
 msgstr ""
+":guilabel:`Schedule Pay`: en Australia solo se aceptan las frecuencias de "
+"pago **diaria, semanal, bisemanal (o por quincena), mensual y trimestral**."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:628
 msgid ""
@@ -24784,12 +25275,17 @@ msgid ""
 " pay frequency. On payslips, the corresponding annual and hourly rates will "
 "be automatically computed."
 msgstr ""
+":guilabel:`Salario` (/periodo): Asigna un salario al contrato de acuerdo con"
+" su frecuencia de pago. En los recibos de sueldo, las tasas anuales y por "
+"hora correspondientes se calcularán automáticamente."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:632
 msgid ""
 "For hourly workers, please note that the hourly wage should exclude casual "
 "loading."
 msgstr ""
+"Para personas que trabajan por hora, note que el salario por hora debe "
+"excluir la carga usual."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:634
 msgid ""
@@ -24799,6 +25295,12 @@ msgid ""
 "information on this tab before moving forward with pay runs. This includes "
 "the following **four** fields which impact payslip computations:"
 msgstr ""
+"La pestaña :guilabel:`Australia`. La mayoría de los campos de esta pestaña "
+"se utilizan para los informes **Single Touch Payroll** (o **STP**), que "
+"requieren un buen conocimiento de varios detalles del contrato de un "
+"empleado. Revise la información en esta pestaña antes de continuar con las "
+"ejecuciones de pago. Esto incluye los siguientes **cuatro** campos que "
+"afectan los cálculos de la nómina:"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:639
 msgid ""
@@ -24809,6 +25311,12 @@ msgid ""
 "they were supposed to pay according to their salary structure and situation "
 "to a fixed 25%."
 msgstr ""
+":guilabel:`Variación de retención`: utilice este campo en caso de que la "
+"retención del empleado deba variar al alza o a la baja según sus "
+"circunstancias. Por ejemplo, si el empleado X se beneficia de una variación "
+"de retención del 25%, su porcentaje de impuestos retenidos variará de la "
+"cantidad que le corresponda pagar según su estructura y situación salarial a"
+" un 25% fijo."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:643
 msgid ""
@@ -24817,6 +25325,10 @@ msgid ""
 "17.5%) is added to any amount earned when taking annual or long service "
 "leaves."
 msgstr ""
+":guilabel:`Carga de permiso`: si el empleado se beneficia de una carga de "
+"permiso regular, el valor establecido en el campo :guilabel:`Leave Loading "
+"Rate` (por ejemplo, 17.5%) se suma a cualquier cantidad ganada al tomar "
+"licencias anuales o por antigüedad."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:646
 msgid ""
@@ -24828,6 +25340,13 @@ msgid ""
 "4,700 AUD, and 300 AUD will be added on top of their normal super "
 "contributions."
 msgstr ""
+":guilabel:`Salary Sacrifice Superannuation`: cualquier cantidad agregada a "
+"este campo se deduce, por frecuencia de pago, del salario básico del "
+"empleado antes del cálculo del salario bruto. Luego, esta cantidad se agrega"
+" a la línea de garantía Super en su recibo de pago. Por ejemplo, si el "
+"empleado Y gana 5,000 AUD al mes y sacrifica 300 AUD para el superannuation,"
+" su salario bruto será de 4,700 AUD y se agregarán 300 AUD además de sus "
+"contribuciones normales al super."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:651
 msgid ""
@@ -24835,6 +25354,9 @@ msgid ""
 "deducted, per pay frequency, from the employee’s basic salary before the "
 "computation of the gross salary."
 msgstr ""
+":guilabel:`Salary Sacrifice Other`: cualquier cantidad agregada a este campo"
+" se deduce, por frecuencia de pago, del salario básico del empleado antes "
+"del cálculo del salario bruto."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:654
 msgid ""
@@ -24842,14 +25364,17 @@ msgid ""
 "the contract's status from \"New\" to \"Running\" to facilitate its use in "
 "pay runs."
 msgstr ""
+"Una vez que haya ingresado toda la información, asegúrese de hacer la "
+"transición del estado del contrato de \"Nuevo\" a \"En curso\" para "
+"facilitar los pagos de nómina."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst-1
 msgid "\"Australia\" payroll tab in Odoo."
-msgstr ""
+msgstr "Pestaña de nómina \"Australia\" en Odoo."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:661
 msgid "Assign superannuation accounts"
-msgstr ""
+msgstr "Asignar cuentas de superannuation"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:663
 msgid ""
@@ -24859,6 +25384,11 @@ msgid ""
 "Fund`, :guilabel:`Member Since` date, and :guilabel:`TFN` number of the "
 "employee."
 msgstr ""
+"Al recibir los detalles de jubilación superannuation de un nuevo empleado, "
+"asegúrese de crear una nueva cuenta en :menuselection:`Nómina --> "
+"Configuración --> Super Accounts` para vincularla al empleado. Ingrese el "
+":guilabel:`Fondo de jubilación Super`, la fecha de :guilabel:`Miembro Desde`"
+" y el número de :guilabel:`TFN` del empleado."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:667
 msgid ""
@@ -24868,24 +25398,32 @@ msgid ""
 "(**APRA** or **SMSF**), **USI**, and **ESA**. Super funds can be created or "
 "imported in :menuselection:`Payroll --> Configuration --> Super Funds`."
 msgstr ""
+"Suponga que el empleado utiliza un fondo de jubilación superannuation que "
+"aún no existe en la base de datos. En ese caso, Odoo crea uno nuevo y "
+"centraliza información básica sobre este fondo, como su **ABN**, "
+"**dirección**, tipo (**APRA** o **SMSF**), **USI** y **ESA**. Los fondos de "
+"jubilación se pueden crear o importar en :menuselection:`Nómina --> "
+"Configuración --> Fondos de Jubilación`."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:673
 msgid "Odoo is currently not **SuperStream-compliant**."
-msgstr ""
+msgstr "Por el momento Odoo no es compatible con **SuperStream**."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:676
 msgid "Create pay runs with payslips"
-msgstr ""
+msgstr "Crear flujos de pagos de nómina"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:678
 msgid ""
 "Odoo can create pay runs in **two** ways: via **batch** or via "
 "**individual** payslips."
 msgstr ""
+"Odoo puede pagar nóminas de dos formas: en **lote** o por recibo de nómina "
+"**individual**."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:681
 msgid "Create a batch of payslips"
-msgstr ""
+msgstr "Crear un lote de recibos de nómina"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:683
 msgid ""
@@ -24897,15 +25435,25 @@ msgid ""
 ":guilabel:`Generate`. This method allows the creation of multiple payslips "
 "corresponding to each employee in a single batch."
 msgstr ""
+"Cuando vaya a generar los borradores de las nóminas de los empleados (por "
+"ejemplo, al final de cada semana, quincena o mes), vaya a "
+":menuselection:`Nómina --> Nóminas --> Lotes` y haga clic en "
+":guilabel:`Nuevo`. Ingrese la información necesaria, haga clic en "
+":guilabel:`Generar nóminas`, seleccione la :guilabel:`Estructura salarial`, "
+":guilabel:`Departamento`, :guilabel:`Empleados`, y :guilabel:`Generar`. Este"
+" método permite la creación de múltiples nóminas correspondientes a cada "
+"empleado en un único lote."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:690
 msgid "Give the batch a name. (E.g., `2024 – Weekly W1`)"
-msgstr ""
+msgstr "Nombrar el lote (por ejemplo, `2024 – Weekly W1`)"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:691
 msgid ""
 "Choose the pay run's start and end date. (E.g., 01/01/2024 to 07/01/2024)"
 msgstr ""
+"Elija la fecha de inicio y fin del flujo de pago (por ejemplo, de 01/01/2024"
+" a 01/07/2024)"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:692
 msgid ""
@@ -24914,12 +25462,19 @@ msgid ""
 "are included. You can leave :guilabel:`Salary Structure` field blank as Odoo"
 " automatically selects the structure linked to each employee’s contract."
 msgstr ""
+"Haga clic en :guilabel:`Generar`. Una ventana emergente le pedirá que "
+"confirme qué empleados deben incluirse en el lote. Por defecto, se incluyen "
+"todos los empleados activos. Puede dejar el campo :guilabel:`Estructura "
+"Salarial` en blanco ya que Odoo selecciona automáticamente la estructura "
+"vinculada al contrato de cada empleado."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:696
 msgid ""
 "The batch creates as many payslips as there are employees. There is no limit"
 " to the number of payslips created in a batch."
 msgstr ""
+"Se crearán el mismo número de recibos de nómina que de empleados. No hay "
+"límite para el número de nóminas que se crearán en un lote."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:698
 msgid ""
@@ -24927,10 +25482,13 @@ msgid ""
 "have been generated, there is no need to manually compute payslip lines; "
 "Odoo does it for you."
 msgstr ""
+"Verifique la información importante en cada recibo de nómina. Después de que"
+" se hayan generado recibos de nómina de un lote, no hay necesitad de "
+"calcular las líneas del recibo de nómina, Odoo lo hace en automático."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:702
 msgid "Create an individual payslip"
-msgstr ""
+msgstr "Crear un recibo de nómina individual"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:704
 msgid ""
@@ -24943,40 +25501,57 @@ msgid ""
 "11**), and **commissions and bonuses** (**ATO Schedule 5**). When generating"
 " an individual payslip, make sure to proceed with the following steps:"
 msgstr ""
+"En los casos en los que la nómina no pertenezca a la categoría de nóminas "
+"normales, existe la opción de crear una nómina dedicada a un único empleado."
+" Vaya a :menuselection:`Nómina --> Nóminas --> Todas las nóminas` y haga "
+"clic en :guilabel:`Nuevo`. Emplee este método cuando procese **pagos "
+"únicos** para empleados, incluyendo **pagos por reincorporación al trabajo**"
+" (**ATO Anexo 4**), **pagos por despido** (**ATO Anexo 7 y 11**), y "
+"**comisiones y bonificaciones** (**ATO Anexo 5**). Cuando genere una nómina "
+"individual, asegúrese de seguir los siguientes pasos:"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:711
 msgid ""
 "Select an :guilabel:`Employee`; their :guilabel:`Contract` will be filled "
 "out automatically"
 msgstr ""
+"Seleccione un :guilabel:`Empleado`. Su :guilabel:`contrato` se seleccionará "
+"en automático."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:712
 msgid "Add a pay :guilabel:`Period`"
-msgstr ""
+msgstr "Agregue un :guilabel:`periodo` de pago."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:713
 msgid "Select a salary :guilabel:`Structure` (e.g., return-to-work payment)"
 msgstr ""
+"Seleccione una :guilabel:`estructura` salarial (por ejemplo, pagos por "
+"reincorporación al trabajo)."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:714
 msgid ""
 "Unlike payslips generated from a batch, the payroll user must click the "
 ":guilabel:`Compute Sheet` button to generate payslip lines"
 msgstr ""
+"A diferencia de los recibos de nómina que se generen de un lote, el usuario "
+"de Nómina debe hacer clic en el botón :guilabel:`Calcular hoja` para generar"
+" las líneas del recibo de nómina."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst-1
 msgid "One-time payments in Odoo Payroll."
-msgstr ""
+msgstr "Pagos de una sola vez en la nómina de Odoo"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:721
 msgid "Understand payslip features"
-msgstr ""
+msgstr "Sobre las funciones del recibo de nómina"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:723
 msgid ""
 "The same features apply no matter how payslips are created (individually or "
 "via batch)."
 msgstr ""
+"Las mismas funciones aplican sin importar cuántos recibos de nómina se creen"
+" (por separado o en lote)."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:725
 msgid ""
@@ -24985,6 +25560,10 @@ msgid ""
 "worked during the payslip period next to the corresponding total gross "
 "amount."
 msgstr ""
+"Dependiendo de cómo se creen las entradas de trabajo, la tabla "
+":guilabel:`Días trabajados y entradas` muestra automáticamente el número de "
+"días y horas que ha trabajado el empleado durante el periodo de nómina junto"
+" al importe bruto total correspondiente."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:730
 msgid ""
@@ -24992,10 +25571,14 @@ msgid ""
 "off**, in addition to custom **hourly penalty rates** (overtime, public "
 "holidays, etc.) which are automatically added to the table."
 msgstr ""
+"Dependiendo de cómo se creen las entradas de trabajo, la tabla "
+":guilabel:`Días trabajados y entradas` muestra automáticamente el número de "
+"días y horas que ha trabajado el empleado durante el periodo de nómina junto"
+" al importe bruto total correspondiente."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst-1
 msgid "Worked days and hours in Payroll"
-msgstr ""
+msgstr "Días y horas trabajadas en la aplicación Nómina"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:737
 msgid ""
@@ -25003,6 +25586,8 @@ msgid ""
 "**allowances** and **extra pay** items in the :guilabel:`Other Inputs` "
 "section."
 msgstr ""
+"En la sección :guilabel:`Otras entradas` puede añadir entradas como "
+"**préstamos** y **pagos extra**."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:740
 msgid ""
@@ -25011,6 +25596,10 @@ msgid ""
 "Types`. Once created, tick the :guilabel:`Is an Allowance` checkbox for the "
 "involved allowances."
 msgstr ""
+"Para incorporar varios **préstamos** en la nómina de un empleado, cree "
+"**préstamos** en :menuselection:`Nómina --> Configuración --> Otros tipos de"
+" entradas`. Una vez creados, marque la casilla :guilabel:`Is an Allowance` "
+"para los complementos implicados."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:745
 msgid ""
@@ -25019,6 +25608,10 @@ msgid ""
 "inputs table to manually add the total amount to be withheld across all "
 "allowances on that payslip."
 msgstr ""
+"La retención por préstamos no se computa automáticamente. El usuario de la "
+"nómina debe utilizar el campo :guilabel:`Withholding for allowance` de la "
+"tabla de otros datos para sumar manualmente el importe total a retener por "
+"todos los préstamos de esa nómina."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:749
 msgid ""
@@ -25030,10 +25623,18 @@ msgid ""
 ":menuselection:`Payroll --> Configuration --> Other Input Types` and create "
 "a new entry with the code **EXTRA**."
 msgstr ""
+"Los **pagos extra** son otros conceptos que se añaden al **pago bruto de la "
+"nómina** y, por lo tanto, al **importe de la retención**. Un ejemplo son las"
+" comisiones por ventas habituales, que tributan al mismo tipo que el salario"
+" habitual (a diferencia de las gratificaciones discrecionales, que entran "
+"dentro del Anexo 5 de la ATO y su correspondiente estructura salarial). Para"
+" configurar un concepto retributivo personalizado de este tipo, vaya a "
+":menuselection:`Nómina --> Configuración --> Otros tipos de entradas` y cree"
+" una nueva entrada con el código **EXTRA**."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst-1
 msgid "Extra pay item input type"
-msgstr ""
+msgstr "Tipo de entrada de un artículo de pago extra"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:759
 msgid ""
@@ -25042,47 +25643,63 @@ msgid ""
 "contract and salary structure. Here are a few guidelines to better "
 "understand the data."
 msgstr ""
+"En la pestaña :guilabel:`Cálculo del salario`, el usuario de nóminas puede "
+"verificar si todas las reglas salariales se han calculado correctamente "
+"según el empleado, el contrato y la estructura salarial. A continuación se "
+"indican algunas pautas para comprender mejor los datos."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst-1
 msgid "Salary computation in Odoo Payroll."
-msgstr ""
+msgstr "Cálculo salarial en la aplicación Nómina de Odoo."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:766
 msgid ""
 "**Basic salary:** amount from which tax-deductible lines can be subtracted"
 msgstr ""
+"**Salario básico**: cantidad de la que las líneas deducibles de impuestos se"
+" pueden restar"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:767
 msgid ""
 "**Gross salary:** amount subject to the taxes defined by the salary "
 "structure"
 msgstr ""
+"**Salario bruto:** cantidad sujeta a impuestos que se definen según la "
+"estructura salarial"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:768
 msgid "**Withholding:** tax amount to be paid to the **ATO**"
-msgstr ""
+msgstr "**Retenciones:** cantidad de impuestos que se debe pagar a la **ATO**"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:769
 msgid "**Net salary:** amount to be paid to the employee’s bank account"
 msgstr ""
+"**Salario neto:** cantidad que se debe pagar a la cuenta bancaria del "
+"empleado"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:770
 msgid ""
 "**Superannuation Guarantee:** amount to be provisioned for quarterly "
 "payments to the employee’s super account"
 msgstr ""
+"**Garantía de jubilación Superannuation:** cantidad que debe provisionarse "
+"para los pagos trimestrales a la cuenta de jubilación super del empleado."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:772
 msgid ""
 "**Allowances & Extra pay items:** these lines will show if other inputs are "
 "added to the payslip."
 msgstr ""
+"**Prestaciones y pagos extra:** estas líneas mostrarán si se añaden otras "
+"entradas a la nómina"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:773
 msgid ""
 "**Other lines:** depending on the employee and contract specifics (Medicare,"
 " child support, salary, sacrifice, etc.)"
 msgstr ""
+"**Otras líneas:** dependiendo del empleado y del contrato (seguro médico, "
+"pensión alimenticia, sueldo, etc.)"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:776
 msgid ""
@@ -25091,10 +25708,14 @@ msgid ""
 "Note that in the case of a payslip batch, this accounting entry will sum up "
 "balances from all payslips."
 msgstr ""
+"Cuando esté satisfecho con la nómina, haga clic en :guilabel:`Crear asiento "
+"borrador` para generar un asiento contable en borrador que el contador podrá"
+" revisar. Tenga en cuenta que en el caso de un lote de nóminas, este asiento"
+" contable sumará los saldos de todas las nóminas."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:781
 msgid "Pay employees"
-msgstr ""
+msgstr "Pagar a los empleados"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:783
 msgid ""
@@ -25102,6 +25723,9 @@ msgid ""
 "pay their employees. The user can choose between **two** different **payment"
 " methods**."
 msgstr ""
+"La empresa puede pagar a sus empleados después de que se haya registrado una"
+" entrada de diario de un lote o una nómina. El usuario puede elegir entre "
+"**dos** métodos de pago diferentes."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:786
 msgid ""
@@ -25113,12 +25737,22 @@ msgid ""
 ":guilabel:`ABA File`. It is possible to re-generate the ABA file after "
 "applying corrections to existing payslips."
 msgstr ""
+"Pagar al empleado por lotes mediante archivos **ABA**. Esto **solo** es "
+"posible desde **lote de nóminas**. Asegúrese de que se ha contabilizado el "
+"asiento del lote para generar el archivo **ABA**. Desde la vista del "
+"formulario del lote, haga clic en :guilabel:`Create ABA File` y seleccione "
+"el diario bancario deseado. El archivo **ABA** recién generado estará "
+"disponible para su descarga en el campo :guilabel:`Archivo ABA`. Es posible "
+"volver a generar el archivo ABA después de aplicar correcciones a las "
+"nóminas existentes."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:793
 msgid ""
 "It is always possible to include an individual payslip into an existing "
 "batch in an **ABA** file."
 msgstr ""
+"Siempre se puede incluir un recibo de nómina individual a un lote existente "
+"específico en un archivo **ABA**."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:797
 msgid ""
@@ -25126,6 +25760,9 @@ msgid ""
 "each employee’s bank account have been properly :ref:`configured "
 "<australia/aba>`."
 msgstr ""
+"Un archivo ABA solo se puede generar si tanto la cuenta bancaria del "
+"empleado como la de la empresa se :ref:`configuraron <australia/aba>` "
+"correctamente."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:800
 msgid ""
@@ -25136,10 +25773,16 @@ msgid ""
 "method, then later reconcile the payment with the corresponding bank "
 "statement."
 msgstr ""
+"Desde la nómina del empleado (:menuselection:`Nómina --> Nóminas`), una vez "
+"contabilizado el asiento de la nómina, pulse :guilabel:`Registrar Pago`. El "
+"proceso es el mismo que en :doc:`pagar facturas de proveedores "
+"<../contabilidad/pagos>`: seleccione el diario bancario y la forma de pago "
+"deseados, y posteriormente concilie el pago con el extracto bancario "
+"correspondiente."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:806
 msgid "One-time payments"
-msgstr ""
+msgstr "Pagos únicos"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:808
 msgid ""
@@ -25147,10 +25790,13 @@ msgid ""
 "Termination Payments** **(ETP)**, are processed only once and require a "
 "slightly different approach."
 msgstr ""
+"Algunos pagos, como los **pagos por reincorporación al trabajo** y los "
+"**pagos por despido** **(ETP)**, se tramitan una sola vez y requieren un "
+"planteamiento un poco distinto."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:812
 msgid "Return-to-Work payments"
-msgstr ""
+msgstr "Pagos por reincorporación al trabajo"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:814
 msgid ""
@@ -25162,14 +25808,22 @@ msgid ""
 " computes the **PAYG withholding**, the **net amount**, and the **super "
 "guarantee** corresponding to that payment."
 msgstr ""
+"Un **pago por reincorporación al trabajo** es el pago que se realiza a un "
+"empleado para que reanude su actividad laboral. Para procesarlo, cree un "
+"recibo de nómina individual, seleccione el empleado y cambie su **estructura"
+" regular** a :guilabel:`Australia: reincorporación al trabajo`. A "
+"continuación, agregue el **importe bruto** de ese pago en la sección "
+":guilabel:`Otras entradas` y calcule la nómina. Odoo procesa la **retención "
+"PAYG**, el **importe neto** y la **garantía de jubilación** correspondiente "
+"a ese pago de forma automática."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst-1
 msgid "Return-to-work payment"
-msgstr ""
+msgstr "Pago por reincorporación al trabajo"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:824
 msgid "Termination payments"
-msgstr ""
+msgstr "Pagos por despido"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:826
 msgid ""
@@ -25178,6 +25832,10 @@ msgid ""
 "automatically compute the final prorated salary of that employee for the "
 "current month."
 msgstr ""
+"Antes de proceder con el pago por despido (ETP) del empleado, asegúrese de "
+"haber establecido una **fecha de finalización del contrato** en el contrato "
+"de ese empleado. Así Odoo, de forma automática, podrá calcular el salario "
+"prorrateado final para el mes actual."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:830
 msgid ""
@@ -25186,16 +25844,22 @@ msgid ""
 "Odoo will automatically compute the prorated salary up to the final payslip "
 "date."
 msgstr ""
+"Primero cree la nómina final para el empleado este mes, para esto tiene que "
+"crear una nómina individual. Si la fecha de finalización del contrato se "
+"establece correctamente, Odoo calculará automáticamente el salario "
+"prorrateado hasta la fecha de la nómina final."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst-1
 msgid "Termination payment worked days computation in Odoo."
-msgstr ""
+msgstr "Cálculo del pago de finiquito según los días trabajados en Odoo."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:838
 msgid ""
 "We recommend creating a batch on the fly for that payslip, in which the ETP "
 "is added as a second payslip of that same batch."
 msgstr ""
+"Recomendamos crear un lote al instante para esa nómina, en el que la PTE se "
+"añada como una segunda nómina de ese mismo lote."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:841
 msgid ""
@@ -25204,26 +25868,34 @@ msgid ""
 "Payments`. Before computing the sheet, it is important to provide the "
 "payslip with termination details ."
 msgstr ""
+"Cree una segunda nómina individual e inclúyala en el mismo lote. Cambie la "
+"estructura salarial de esa nómina a :guilabel:`Australia: Pagos por "
+"despido`. Antes de calcular la hoja, es importante proporcionar la nómina "
+"con los detalles del despido."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst-1
 msgid "Termination payment"
-msgstr ""
+msgstr "Pago por despido"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:848
 msgid ""
 ":guilabel:`Genuine` or :guilabel:`Non-Genuine Redundancy`. This choice "
 "impacts the amounts and caps defined per **ETP** type."
 msgstr ""
+":guilabel:`Genuine` o :guilabel:`Non-Genuine Redundancy`. Esta elección "
+"afecta a los importes y límites definidos por tipo de **ETP**."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:850
 msgid ""
 "**ETP types**: see the full list of termination payment types in "
 ":guilabel:`Other Input Types` by filtering by `ETP Type is Set`."
 msgstr ""
+"**Tipos de ETP**: puede ver la lista completa de tipos de pago por despido "
+"en :guilabel:`Otros tipos de entrada`, solo filtre por `ETP Type is Set`."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst-1
 msgid "Payslip other inputs"
-msgstr ""
+msgstr "Otros tipos de entrada en los recibos de nómina"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:856
 msgid ""
@@ -25234,6 +25906,12 @@ msgid ""
 "Once payment for both payslips is ready to be processed, an **ABA** file can"
 " be created directly from the batch."
 msgstr ""
+"Agregue el **tipo de ETP** relevante en la tabla :guilabel:`Otras entradas` "
+"de la nómina, luego calcule la nómina. Odoo calcula el **ETP bruto**, la "
+"**retención**, los **permisos no utilizados**, y el **salario neto** de "
+"acuerdo a las reglas definidas en el **ETP**, el **empleado**, y su "
+"**contrato**. Una vez que el pago de ambas nóminas esté listo para "
+"procesarse, se puede crear un archivo **ABA** directamente desde el lote. "
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:865
 msgid "Employment Hero Australian Payroll"
@@ -25245,6 +25923,9 @@ msgid ""
 "<https://employmenthero.com/>`_, you can use our connector as an alternative"
 " payroll solution."
 msgstr ""
+"Si su empresa ya trabaja con `Employment Hero "
+"<https://employmenthero.com/>`_, puede usar nuestro conector como una "
+"solución de nómina alterna."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:870
 msgid ""
@@ -25253,6 +25934,10 @@ msgid ""
 "Hero to Odoo. Payroll administration is still done in Employment Hero. We "
 "only record the **journal entries** in Odoo."
 msgstr ""
+"El módulo de Employment Hero sincroniza los asientos contables de la nómina "
+"(por ejemplo, gastos, contribuciones sociales, pasivos, impuestos) desde el "
+"módulo a Odoo automáticamente. La administración de la nómina se hace dentro"
+" de Employment Hero. Solo registramos los **asientos contables** en Odoo. "
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:875
 msgid "KeyPay was rebranded as **Employment Hero** in March 2023."
@@ -25263,6 +25948,8 @@ msgid ""
 ":ref:`Activate <general/install>` the :guilabel:`Employment Hero Australian "
 "Payroll` module (`l10n_au_keypay`)."
 msgstr ""
+":ref:`Active <general/install>` el módulo :guilabel:`Nómina australiana con "
+"Employment Hero` (`l10n_au_keypay`)."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:882
 msgid ""
@@ -25298,10 +25985,12 @@ msgstr "Sección \"Detalles de la cuenta\" en el tablero de Employment Hero"
 msgid ""
 "The **Payroll URL** is pre-filled with `https://keypay.yourpayroll.com.au`."
 msgstr ""
+"La **URL de nómina** se completa automáticamente con "
+"`https://keypay.yourpayroll.com.au`."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:898
 msgid "Do not change the **pre-filled Payroll URL**"
-msgstr ""
+msgstr "No cambie la **URL completada automáticamente de nómina**"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:900
 msgid ""
@@ -25350,6 +26039,11 @@ msgid ""
 "--> Settings` and, in the :guilabel:`Enable Employment Hero Integration` "
 "option, click on :guilabel:`Fetch Payruns Manually`."
 msgstr ""
+"De forma predeterminada, la sincronización se realiza una vez por semana. "
+"Puede obtener los registros manualmente accediendo a "
+":menuselection:`Contabilidad --> Configuración --> Ajustes` y, en la opción "
+":guilabel:`Habilitar integración de Employment Hero`, haga clic en "
+":guilabel:`Obtener registros manualmente`."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:921
 msgid ""
@@ -26207,7 +26901,7 @@ msgstr "Importar archivos SODA"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:246
 msgid "CodaBox"
-msgstr ""
+msgstr "CodaBox"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:248
 msgid ""
@@ -26215,12 +26909,19 @@ msgid ""
 "their clients' bank information and statements. Odoo provides a way to "
 "import such statements automatically."
 msgstr ""
+"**CodaBox** es un servicio que permite que las empresas de contabilidad de "
+"Bélgica accedan a la información y estados bancarios de sus clientes. Odoo "
+"tiene una manera en la que es posible importar estos estados de forma "
+"automática"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:252
 msgid ""
 "As an accounting firm, you must manage your clients on separate databases "
 "and configure them individually to avoid mixing up their data."
 msgstr ""
+"Como empresa de contabilidad, debe gestionar a sus clientes en bases de "
+"datos a parte y configurarlos de manera individual para evitar mezclar su "
+"información."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:258
 msgid ""
@@ -26228,12 +26929,17 @@ msgid ""
 "instructions, we will refer to your client's company as *Company* and to "
 "your accounting firm as *Accounting Firm*."
 msgstr ""
+"La configuración debe realizarse en cada base de datos de clientes. En la "
+"documentación a continuación nos referiremos a la empresa de su cliente como"
+" *Empresa* y a su empresa de contabilidad como *Empresa de contabilidad*."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:262
 msgid ""
 "You must first :ref:`Install <general/install>` :guilabel:`CodaBox` and "
 ":guilabel:`CodaBox Bridge` to start."
 msgstr ""
+"Para empezar debe :ref:`instalar <general/install>` :guilabel:`CodaBox` y "
+":guilabel:`CodaBox Bridge`."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:266
 msgid ""
@@ -26243,58 +26949,68 @@ msgid ""
 " ID` of the accounting firm (unless it is the same as the company's "
 ":guilabel:`Tax ID`)."
 msgstr ""
+"Asegúrese de que los ajustes de la empresa están configurados correctamente,"
+" es decir, que el país está establecido en :guilabel:`Bélgica`, los campos "
+":guilabel:`Número de identificación fiscal` y :guilabel:`Despacho de "
+"contabilidad` están completos, así como el :guilabel:`Número de "
+"identificación fiscal` de la empresa de contabilidad (a menos que sea el "
+"mismo que el :guilabel:`Número de identificación fiscal` de la empresa)."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:272
 msgid "Configure the Journals"
-msgstr ""
+msgstr "Configuración de diarios"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:276
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:351
 msgid "For CODA files"
-msgstr ""
+msgstr "Para archivos CODA"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:278
 msgid ":doc:`Create a new bank journal <../accounting/bank>`."
-msgstr ""
+msgstr ":doc:`Crear un diario bancario nuevo <../accounting/bank>`."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:279
 msgid "Set the right IBAN in the :guilabel:`Account Number` field."
-msgstr ""
+msgstr "Configure el IBAN correcto en el campo :guilabel:Número de cuenta`."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:280
 msgid ""
 "Select :guilabel:`CodaBox synchronisation` as the :guilabel:`Bank Feed`."
 msgstr ""
+"Seleccione :guilabel:`CodaBox synchronisation` en :guilabel:`Bank Feed`."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:0
 msgid "Configuration of a CODA journal."
-msgstr ""
+msgstr "Configuración de un diario bancario CODA."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:286
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:361
 msgid "For SODA files"
-msgstr ""
+msgstr "Para archivos SODA"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:288
 msgid "Create a new miscellaneous journal."
-msgstr ""
+msgstr "Crear un diario de varios"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:289
 msgid ""
 "Go to :menuselection:`Accounting --> Configuration --> Accounting: CodaBox`."
 msgstr ""
+"Vaya a :menuselection:`Contabilidad --> Configuración --> Contabilidad: "
+"CodaBox`."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:290
 msgid "Select the journal you just created in the SODA journal field."
 msgstr ""
+"Seleccione el diario que acaba de crear en el campo de diario bancario SODA."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:0
 msgid "Configuration of a SODA journal."
-msgstr ""
+msgstr "Configuración de un diario SODA."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:299
 msgid "Configure the Connection"
-msgstr ""
+msgstr "Configuración de la conexión"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:301
 msgid ""
@@ -26304,28 +27020,40 @@ msgid ""
 "CodaBox Connection Settings`. Add the users you want to this group. By "
 "default, only the :guilabel:`Administrator` is part of this group."
 msgstr ""
+"Primero, debe seleccionar qué usuarios pueden acceder a la configuración de "
+"conexión de **CodaBox**. Para hacerlo, vaya a :menuselection:`Configuración "
+"--> Usuarios y empresas --> Grupos`, y busca el grupo :guilabel:`Permitir "
+"mostrar y modificar la configuración de conexión de CodaBox`; agregue los "
+"usuarios que quiera a este grupo. Por defecto, solo el "
+":guilabel:`Administrador` forma parte de este grupo."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:306
 msgid ""
 "Then, to configure the connection itself, go to :menuselection:`Accounting "
 "--> Configuration --> Accounting: CodaBox`."
 msgstr ""
+"Después, para configurar la conexión vaya a :menuselection:`Contabilidad -->"
+" Configuración --> Contabilidad: CodaBox`."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:309
 msgid ""
 "The procedure differs depending on whether **CodaBox** is being setup for a "
 "first client or an additional one."
 msgstr ""
+"El procedimiento cambia dependiendo si **CodaBox** está configurada para un "
+"primer cliente o para uno adicional."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:314
 msgid "First connection"
-msgstr ""
+msgstr "Primera conexión"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:316
 msgid ""
 "Click on :guilabel:`Connect`, where you are redirected to the **CodaBox** "
 "platform, here validate the connection."
 msgstr ""
+"Haga clic en :guilabel:`Conectar` y se le redirigirá a **CodaBox**, donde "
+"tendrá que validar la conexión."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:318
 msgid ""
@@ -26333,28 +27061,33 @@ msgid ""
 ":guilabel:`Connected` and a new field :guilabel:`Access Token` should "
 "appear."
 msgstr ""
+"Una vez que se le redirija de vuelta a Odoo, el :guilabel:`Estado` debe ser "
+":guilabel:`Conectado` y debería aparecer un nuevo campo, :guilabel:`Token de"
+" acceso`."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:0
 msgid "Configured connection."
-msgstr ""
+msgstr "Conexión configurada."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:326
 msgid ""
 "This :guilabel:`Access Token` will be used to create new connections for "
 "other clients without having to validate the connection again."
 msgstr ""
+"Este :guilabel:`Token de acceso` se usará para crear conexiones nuevas para "
+"otros clientes sin tener que validar la conexión de nuevo."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:329
 msgid "Following connection"
-msgstr ""
+msgstr "Segunda conexión"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:331
 msgid "Copy the :guilabel:`Access Token` from a previous connection."
-msgstr ""
+msgstr "Copie el :guilabel:`Token de acceso` de una conexión previa."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:332
 msgid "Click on :guilabel:`Connect`."
-msgstr ""
+msgstr "Haga clic en :guilabel:`Conectar`."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:334
 msgid ""
@@ -26363,6 +27096,10 @@ msgid ""
 "new and different :guilabel:`Access Token` is generated, and the "
 ":guilabel:`Status` should be set to :guilabel:`Connected`."
 msgstr ""
+"La conexión **CodaBox** vinculada al campo :guilabel:`Token de acceso` "
+"debería seguir existiendo, por lo que no es necesario volver a validar la "
+"conexión. Se genera un :guilabel:`Token de acceso` nuevo y diferente, y el "
+":guilabel:`Estado` debe ser :guilabel:`Conectado`."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:340
 msgid ""
@@ -26370,15 +27107,19 @@ msgid ""
 "easily revoke the access of a client to your CodaBox account without "
 "affecting the other clients. One client cannot interfere with another."
 msgstr ""
+"Al tener un :guilabel:`Token de acceso` diferente para cada cliente, puede "
+"revocar fácilmente el acceso de un cliente a su cuenta de CodaBox sin "
+"afectar a los demás clientes. Un cliente no puede interferir con otro."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:345
 msgid "Synchronisation"
-msgstr ""
+msgstr "Sincronización"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:347
 msgid ""
 "Once the connection is established, Odoo can be synchronized with CodaBox."
 msgstr ""
+"Una vez que se establezca la conexión podrá sincronizar Odoo con CodaBox."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:353
 msgid ""
@@ -26386,10 +27127,14 @@ msgid ""
 "not have to do anything. However, if you wish, it can also be done manually,"
 " by clicking on :guilabel:`Fetch CODA's` in the Accounting Dashboard."
 msgstr ""
+"Los archivos CODA se importan de forma automática desde CodaBox cada 12 "
+"horas. No tiene hacer nada, sin embargo, si lo desea, también lo puede hacer"
+" de forma manual, solo tiene que hacer clic en :guilabel:`Fetch CODA's` "
+"desde el tablero de contabilidad."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:0
 msgid "Manually fetch CODA's."
-msgstr ""
+msgstr "Obtener los CODA de forma manual."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:363
 msgid ""
@@ -26398,6 +27143,10 @@ msgid ""
 "manually, by clicking on :guilabel:`Fetch SODA's` in the Accounting "
 "Dashboard."
 msgstr ""
+"Los archivos SODA se importan de forma automática desde CodaBox cada día "
+"como borrador. No tiene hacer nada, sin embargo, si lo desea, también lo "
+"puede hacer de forma manual, solo tiene que hacer clic en :guilabel:`Fetch "
+"SODA's` desde el tablero de contabilidad."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:367
 msgid ""
@@ -26405,10 +27154,13 @@ msgid ""
 "the Suspense Account (499000) is used and a note is left in the created "
 "journal entry."
 msgstr ""
+"Por defecto, si no existe una cuenta de SODA vinculada a una cuenta en Odoo,"
+" se usará la cuenta transitoria (499000) y se dejará una nota en el asiento "
+"de diario que se creó."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:0
 msgid "Manually fetch SODA's."
-msgstr ""
+msgstr "Obtener SODA de forma manual."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:375
 msgid ""
@@ -26416,6 +27168,9 @@ msgid ""
 "by clicking on the :guilabel:`SODA Mapping` button in "
 ":menuselection:`Accounting --> Configuration --> Accounting: CodaBox`."
 msgstr ""
+"Puede acceder al mapeo entre las cuentas SODA y las cuentas Odoo haciendo "
+"clic en el botón :guilabel:`Mapeo SODA` en :menuselection:`Contabilidad --> "
+"Configuración --> Contabilidad: CodaBox`."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:380
 msgid ""
@@ -26423,6 +27178,9 @@ msgid ""
 ":guilabel:`Revoke` button in the CodaBox settings, which will revoke the "
 "link on Odoo's side only."
 msgstr ""
+"Puede eliminar la conexión entre Odoo y CodaBox usando el botón "
+":guilabel:`Revoke` en la configuración de CodaBox, que revocará el enlace "
+"del lado de Odoo."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:384
 msgid ""
@@ -26430,6 +27188,8 @@ msgid ""
 "Token of one of them to easily reconnect Odoo and CodaBox for another "
 "client."
 msgstr ""
+"Si tiene varias conexiones, podrá usar el Token de acceso de varias de ellas"
+" para conectar Odoo y CodaBox sin problemas para otro cliente."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:388
 msgid ""
@@ -26439,56 +27199,76 @@ msgid ""
 "recreate a new one following the steps in the :ref:`first connection "
 "<belgium/codabox-configuration-connection>` section."
 msgstr ""
+"Sin embargo, si solo tiene una conexión (restante), no podrá utilizar su "
+"Access Token para crear nuevas conexiones. En ese caso, tendrá que revocar "
+"también la conexión de la plataforma CodaBox y volver a crear una nueva "
+"siguiendo los pasos de la sección :ref:`primera conexión <belgium/codabox-"
+"configuration-connection>`."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:395
 msgid "Potential issues"
-msgstr ""
+msgstr "Problema potenciales"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:398
 msgid "CodaBox is not configured. Please check your configuration."
-msgstr ""
+msgstr "CodaBox no está configurada, revise su configuración."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:398
 msgid "Either the Company VAT of the Accounting Firm VAT is not set."
 msgstr ""
+"El número de identificación fiscal de la empresa de contabilidad o de la "
+"empresa no están configurados."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:401
 msgid ""
 "It seems that the fiduciary VAT number you provided is not valid. Please "
 "check your configuration."
 msgstr ""
+"Parece que el número de IVA fiduciario que ha ingresado no es válido. "
+"Compruebe su configuración."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:401
 msgid ""
 "Either the Company VAT of the Accounting Firm VAT is in the wrong format."
 msgstr ""
+"El número de IVA de la empresa o el número de IVA de la firma contable está "
+"en un formato incorrecto."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:404
 msgid ""
 "It seems that the fiduciary VAT number you provided does not exist in "
 "CodaBox. Please check your configuration."
 msgstr ""
+"Parece que el número de IVA fiduciario que ha ingresado no existe en "
+"CodaBox. Compruebe su configuración."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:404
 msgid ""
 "The Accounting Firm VAT number you provided is not registered in CodaBox."
 msgstr ""
+"El número de IVA de la firma contable que proporcionó no está registrado en "
+"CodaBox."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:408
 msgid "Error while connecting to the IAP server. Please contact Odoo support."
 msgstr ""
+"Ocurrió un error al conectar con el servidor IAP. Contacte al soporte de "
+"Odoo."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:407
 msgid ""
 "It seems that Odoo's IAP server is down or unreachable. Please contact Odoo "
 "support."
 msgstr ""
+"Parece que el servidor de IAP de Odoo está caído o no se puede acceder a él."
+" Contacte al soporte de Odoo."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:414
 msgid ""
 "It seems that your CodaBox connection is not valid anymore. Please check "
 "your configuration."
 msgstr ""
+"Parece que su conexión a CodaBox ya no es válida. Revise su configuración."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:411
 msgid ""
@@ -26498,6 +27278,11 @@ msgid ""
 "settings, and follow again the steps in the :ref:`first connection "
 "<belgium/codabox-configuration-connection>` section."
 msgstr ""
+"Parece que ha revocado el acceso de Odoo a su cuenta de CodaBox, o que no ha"
+" completado el proceso de configuración. En este caso, debe hacer clic en el"
+" botón :guilabel:`Revoke connection` de la configuración y seguir de nuevo "
+"los pasos de la sección :ref:`primera conexión <belgium/codabox-"
+"configuration-connection>`."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:423
 msgid ""
@@ -26505,6 +27290,8 @@ msgid ""
 "a previous connection here. Odoo will generate a new one, exclusive to this "
 "database."
 msgstr ""
+"Ya existe un registro de CodaBox previo. Pegue el token de acceso de la "
+"conexión previa aquí, Odoo generará uno nuevo solo para esta base de datos."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:417
 msgid ""
@@ -26513,6 +27300,10 @@ msgid ""
 "the :ref:`following connection <belgium/codabox-configuration-connection>` "
 "tab section."
 msgstr ""
+"Parece que su Empresa de Contabilidad ya está con Odoo, pero el token de "
+"acceso no está configurado o es incorrecto. Debe seguir los pasos en la "
+"sección de la pestaña :ref:`segunda conexión <belgium/codabox-configuration-"
+"connection>`."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:421
 msgid ""
@@ -26521,6 +27312,10 @@ msgid ""
 "to follow the steps in the :ref:`first connection <belgium/codabox-"
 "configuration-connection>` section."
 msgstr ""
+"Si perdió su token de acceso, tiene que ir a la plataforma CodaBox, y "
+"revocar el acceso de Odoo a su cuenta CodaBox. A continuación, tendrá que "
+"seguir los pasos de la sección :ref:`primera conexión <belgium/codabox-"
+"configuration-connection>`."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:426
 msgid ""
@@ -26528,16 +27323,21 @@ msgid ""
 " configuration. If you have lost your access token, please contact Odoo "
 "support."
 msgstr ""
+"El token de acceso indicado no es válido para esta fiduciaria. Revise su "
+"configuración, si perdió su token de acceso, póngase en contacto con el "
+"soporte de Odoo"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:426
 msgid "Same as above."
-msgstr ""
+msgstr "Igual que arriba."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:433
 msgid ""
 "It seems that no connection linked to your database/VAT number exists. "
 "Please check your configuration."
 msgstr ""
+"Parece que no hay ninguna conexión a su base de datos/número de IVA. Revise "
+"su configuración."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:429
 msgid ""
@@ -26548,10 +27348,17 @@ msgid ""
 "recreate a connection for this company VAT by following the steps in the "
 ":ref:`first connection <belgium/codabox-configuration-connection>` section."
 msgstr ""
+"Es posible que obtenga este error al revocar o intentar obtener archivos de "
+"CodaBox si el ambos campos (IVA de la empresa contable, IVA de la empresa) "
+"aún no están registrados. Esto puede ocurrir, por ejemplo, si ha cambiado el"
+" CIF de la empresa después de establecer la conexión. Por razones de "
+"seguridad, debe volver a crear una conexión para este IVA de empresa "
+"siguiendo los pasos de la sección :ref:`primera conexión <belgium/codabox-"
+"configuration-connection>`."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:438
 msgid "No files were found. Please check your configuration."
-msgstr ""
+msgstr "No se encontraron archivos, vuelva a revisar la configuración."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:436
 msgid ""
@@ -26559,6 +27366,9 @@ msgid ""
 "established. In that case, you must click on the :guilabel:`Revoke "
 "connection` button in the settings, and recreate the connection."
 msgstr ""
+"Esto puede ocurrir si el IVA de la empresa ha cambiado después de establecer"
+" la conexión. En ese caso, debe hacer clic en el botón :guilabel:`Revoke "
+"connection` de la configuración y volver a crear la conexión."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:443
 msgid ""
@@ -26566,6 +27376,9 @@ msgid ""
 "fiduciary. To create a new connection, you must first revoke the old one on "
 "myCodaBox portal."
 msgstr ""
+"Al parecer ya creó una conexión a CodaBox con esta fiduciaria. Para crear "
+"una nueva conexión, primero tiene que revocar la conexión antigua en el "
+"portal myCodaBox."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:441
 msgid ""
@@ -26573,6 +27386,9 @@ msgid ""
 "CodaBox account. Then, you will have to follow the steps in the :ref:`first "
 "connection <belgium/codabox-configuration-connection>` section."
 msgstr ""
+"Debe ir a la plataforma de CodaBox y revocar el acceso de Odoo a su cuenta "
+"de CodaBox. Después, tendrá que seguir los pasos indicados en la sección "
+":ref:`primera conexión <belgium/codabox-configuration-connection>`."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:446
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:263
@@ -28262,7 +29078,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:40
 msgid ":guilabel:`Chile - E-invoicing`"
-msgstr ""
+msgstr ":guilabel:`Chile - Factura electrónica`"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:41
 msgid "`l10n_cl_edi`"
@@ -28298,7 +29114,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:48
 msgid ":guilabel:`Electronic Exports of Goods for Chile`"
-msgstr ""
+msgstr ":guilabel:`Exportación electrónica para Chile`"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:49
 msgid "`l10n_cl_edi_exports`"
@@ -42684,7 +43500,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:312
 msgid "Electronic Data Interchange"
-msgstr "Intercambio de Datos Electrónico (EDI, por sus siglas en inglés)"
+msgstr "Intercambio electrónico de datos"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:314
 msgid ""
@@ -43428,6 +44244,10 @@ msgid ""
 "<../accounting/payments>` if they were linked to one or more :doc:`vendor "
 "bills <../accounting/payments>` with applied withholding taxes."
 msgstr ""
+"El proceso anterior también se puede hacer para *un solo* :doc:`pago "
+"<../accounting/payments>` de proveedor si se vincularon a una o más "
+":doc:`facturas de proveedor <../accounting/payments>` con las retenciones "
+"aplicadas. "
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:86
 msgid ""
@@ -44227,11 +45047,12 @@ msgstr "España"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:6
 msgid "Spanish chart of accounts"
-msgstr ""
+msgstr "Plan contable español"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:8
 msgid "Several Spanish charts of accounts are available by default in Odoo:"
 msgstr ""
+"Varios planes contables españoles están disponibles por defecto en Odoo:"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:10
 msgid "PGCE PYMEs 2008"
@@ -44251,6 +45072,9 @@ msgid ""
 "Configuration --> Settings`, then select a package in the :guilabel:`Fiscal "
 "localization` section."
 msgstr ""
+"Para elegir el que desee, vaya a :menuselection:`Contabilidad --> "
+"Configuración --> Ajustes`, y luego seleccione un paquete en la sección "
+":guilabel:`Localización fiscal`."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:18
 msgid ""
@@ -44265,16 +45089,20 @@ msgid ""
 "You can only change the accounting package as long as you have not created "
 "any accounting entry."
 msgstr ""
+"Solo puede cambiar el paquete contable siempre y cuando no haya creado "
+"ningún asiento contable."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:24
 msgid "Spanish accounting reports"
-msgstr ""
+msgstr "Informes contables españoles"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:26
 msgid ""
 "If the Spanish accounting localization is installed, you have access to "
 "accounting reports specific to Spain:"
 msgstr ""
+"Si instaló la localización de contabildad española tendrá acceso a informes "
+"contables específicos para España:"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:30
 msgid "Tax Report (Modelo 111)"
@@ -44290,15 +45118,15 @@ msgstr "Informe fiscal (Modelo 303)"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:33
 msgid "Tax Report (Modelo 347)"
-msgstr ""
+msgstr "Informe fiscal (Modelo 347)"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:34
 msgid "Tax Report (Modelo 349)"
-msgstr ""
+msgstr "Informe fiscal (Modelo 349)"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:35
 msgid "Tax Report (Modelo 390)"
-msgstr ""
+msgstr "Informe fiscal (Modelo 390)"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:3
 msgid "Switzerland"
@@ -44306,8 +45134,7 @@ msgstr "Suiza"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:6
 msgid "ISR (In-payment Slip with Reference number)"
-msgstr ""
-"ISR (recibo de pago con número de referencia, por sus siglas en inglés)"
+msgstr "ISR (recibo de pago con número de referencia)"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:8
 msgid ""
@@ -48167,7 +48994,7 @@ msgstr ""
 
 #: ../../content/applications/finance/payment_providers/mercado_pago.rst-1
 msgid "Production and testing credentials in Mercado Pago."
-msgstr ""
+msgstr "Credenciales de producción y pruebas de Mercado Pago."
 
 #: ../../content/applications/finance/payment_providers/mercado_pago.rst:32
 msgid ""
@@ -48183,11 +49010,16 @@ msgid ""
 "with the value you saved at the "
 ":ref:`payment_providers/mercado_pago/configure_dashboard` step."
 msgstr ""
+"En la pestaña :guilabel:`Credenciales`, llene el campo :guilabel:`Token de "
+"acceso` con el valor que guardo en el paso "
+":ref:`payment_providers/mercado_pago/configure_dashboard`."
 
 #: ../../content/applications/finance/payment_providers/mercado_pago.rst:40
 msgid ""
 "`Mercado Pago Odoo webinar <https://www.youtube.com/watch?v=CX8vPHMb1ic>`_"
 msgstr ""
+"`Webinar sobre Mercado Pago en Odoo "
+"<https://www.youtube.com/watch?v=CX8vPHMb1ic>`_"
 
 #: ../../content/applications/finance/payment_providers/mollie.rst:3
 msgid "Mollie"
@@ -48895,6 +49727,10 @@ msgid ""
 "make recurring payments. Send a request to the `Razorpay Support team "
 "<https://razorpay.com/support/#request>`_ to enable recurring payments."
 msgstr ""
+"La función :guilabel:`Pagos recurrentes` debe estar activa si quiere "
+"realizar pagos recurrentes. Envíe una solicitud al `equipo de soporte de "
+"Razorpay <https://razorpay.com/support/#request>`_ para activar los pagos "
+"recurrentes."
 
 #: ../../content/applications/finance/payment_providers/razorpay.rst:39
 msgid ""
@@ -49727,7 +50563,7 @@ msgstr "Estado de la firma"
 
 #: ../../content/applications/finance/sign.rst:104
 msgid "Validity dates and reminders"
-msgstr ""
+msgstr "Fechas de validez y recordatorios"
 
 #: ../../content/applications/finance/sign.rst:106
 msgid ""
@@ -49737,6 +50573,12 @@ msgid ""
 "the :guilabel:`Options` section and fill in the :guilabel:`Valid Until` and "
 ":guilabel:`Reminder` fields."
 msgstr ""
+"Puede establecer **fechas de validez** en los documentos de acuerdo de "
+"duración limitada o enviar **recordatorios automáticos por correo "
+"electrónico** para obtener las firmas a tiempo. Desde su tablero, haga clic "
+"en :guilabel:`Enviar` en el documento. En la nueva página, vaya a la sección"
+" :guilabel:`Opciones` y rellene los campos :guilabel:`Válido hasta` y "
+":guilabel:`Recordatorio`."
 
 #: ../../content/applications/finance/sign.rst:112
 #: ../../content/applications/finance/spreadsheet/templates.rst:3
@@ -49794,6 +50636,12 @@ msgid ""
 "again, then :guilabel:`Restore`. Your document now appears on your dashboard"
 " next to your other templates."
 msgstr ""
+"Puede **crear una plantilla desde un documento enviado previamente** desde "
+":menuselection:`Documentos --> Todos los documentos`. En el documento que "
+"quiera recuperar haga clic en el botón de tres puntos (:guilabel:`⋮`) y "
+"después en :guilabel:`Plantilla`. Haga clic en el botón de tres puntos "
+"(:guilabel:`⋮`) otra vez y luego en :guilabel:`Restaurar`. Ahora, su "
+"documento aparecerá en su tablero a un lado del resto de sus plantillas."
 
 #: ../../content/applications/finance/sign.rst:139
 msgid "Roles"
@@ -50028,6 +50876,9 @@ msgid ""
 "Tags can be used to categorize and organize documents, allowing users to "
 "quickly search for and filter documents based on specific criteria."
 msgstr ""
+"Puede usar las etiquetas para categorizar y organizar los documentos, lo "
+"cual permitirá que los usuarios busquen y filtren documentos según criterios"
+" específicos."
 
 #: ../../content/applications/finance/sign.rst:241
 msgid ""
@@ -50055,6 +50906,10 @@ msgid ""
 " (:guilabel:`⋮`) on your document, then :guilabel:`Details`, and modifying "
 "your :guilabel:`Tags`."
 msgstr ""
+"Para modificar las etiquetas de un documento firmado vaya a "
+":menuselection:`Documentos --> Todos los documentos`- Ya que esté dentro de "
+"su documento haga clic en los tres puntos (:guilabel:`⋮`), después en "
+":guilabel:`Detalles` podrá modificar sus :guilabel:`Etiquetas`."
 
 #: ../../content/applications/finance/sign.rst:253
 msgid "Sign order"
@@ -50078,12 +50933,19 @@ msgid ""
 "them. You can decide on the signing order by typing **1** or **2** in the "
 "first column."
 msgstr ""
+"Después de subir y :guilabel:`enviar` un PDF con al menos dos campos de "
+"firmas y dos diferentes puestos active la opción :guilabel:`Especificar el "
+"orden de firma` y busque el nombre o correo de los signatarios para "
+"agregarlos. Puede seleccionar el orden de firma si escribe **1** o **2** en "
+"la primera columna."
 
 #: ../../content/applications/finance/sign.rst:263
 msgid ""
 "Each recipient receives the signature request notification only once the "
 "previous recipient has completed their action."
 msgstr ""
+"Cada destinatario recibe una notificación de solicitud de firma solo una vez"
+" que el destinatario previo haya completado su acción."
 
 #: ../../content/applications/finance/sign.rst:267
 msgid ""
