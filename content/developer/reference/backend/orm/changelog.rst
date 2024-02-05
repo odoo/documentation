@@ -7,6 +7,8 @@ Changelog
 Odoo Online version 17.2
 ========================
 
+- The :attr:`group_operator` attribute of :class:`~odoo.fields.Field` is renamed into
+  :attr:`aggregator` with `#127353 <https://github.com/odoo/odoo/pull/127353>`_.
 - We can now group/aggregate/order by related no-store field with
   `#127353 <https://github.com/odoo/odoo/pull/127353>`_.
 

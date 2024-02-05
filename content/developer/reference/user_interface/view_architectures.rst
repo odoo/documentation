@@ -1400,7 +1400,7 @@ The `field` element can have the following attributes:
 
    The aggregate to display at the bottom of the column. The aggregation is computed on only
    records that are currently displayed. The aggregation operation must match the corresponding
-   field's `group_operator`.
+   field's `aggregator`.
 
    .. example::
       .. code-block:: xml
