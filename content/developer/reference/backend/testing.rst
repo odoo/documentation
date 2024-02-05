@@ -585,7 +585,6 @@ Javascript
 
    .. code-block:: javascript
 
-      /** @odoo-module **/
       import tour from 'web_tour.tour';
       tour.register('rental_product_configurator_tour', {
           url: '/web',  // Here, you can specify any other starting url

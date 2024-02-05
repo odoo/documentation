@@ -209,8 +209,6 @@ is hardcoded in the controller.
 
    .. code-block:: js
 
-      /** @odoo-module */
-
       import { registry } from '@web/core/registry';
       import { galleryView } from '@awesome_gallery/gallery_view';
       import { GalleryRenderer } from '@awesome_gallery/gallery_renderer';

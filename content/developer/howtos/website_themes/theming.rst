@@ -591,16 +591,6 @@ Odoo supports three different kinds of JavaScript files:
 Most new Odoo JavaScript codes should use the native JavaScript module system. It's simpler and
 brings the benefit of a better developer experience with better integration with the IDE.
 
-.. important::
-   Odoo needs to know which files should be translated into :ref:`Odoo modules
-   <frontend/js_modules>` and which files should not. It's an opt-in system: Odoo looks at the first
-   line of a JavaScript file and checks if it contains the string `@odoo-module`. If so,
-   it will automatically be converted to an Odoo module.
-
-.. code-block:: javascript
-
-   /** @odoo-module **/
-
 **Declaration**
 
 .. code-block:: python

@@ -120,10 +120,6 @@ see how to create a `sub-component <{OWL_PATH}/doc/reference/component.md#sub-co
    as the component. For example, if we have a `TodoList` component, its code should be in
    `todo_list.js`, `todo_list.xml` and if necessary, `todo_list.scss`
 
-.. important::
-   Don't forget :code:`/** @odoo-module **/` in your JavaScript files. More information on this can
-   be found :ref:`here <frontend/modules/native_js>`.
-
 .. _tutorials/discover_js_framework/simple_card:
 
 3. A simple `Card` component

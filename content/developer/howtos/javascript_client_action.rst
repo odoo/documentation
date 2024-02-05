@@ -25,8 +25,6 @@ framework and use services, core components, hooks,...
    .. code-block:: js
       :caption: :file:`my_client_action.js`
 
-      /** @odoo-module **/
-
       import { registry } from "@web/core/registry";
 
       import { Component } from  "@odoo/owl";

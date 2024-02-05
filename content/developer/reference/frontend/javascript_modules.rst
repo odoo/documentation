@@ -51,50 +51,64 @@ execute them precisely in that order).
 Native Javascript Modules
 =========================
 
-Most new Odoo javascript code should use the native javascript module system. This
-is simpler, and brings the benefits of a better developer experience with a better
-integration with the IDE.
+Odoo javascript code uses the native javascript module system. This is simpler, and
+brings the benefits of a better developer experience with a better integration with the IDE.
 
-There is a very important point to know: Odoo needs to know which files
-should be translated into :ref:`Odoo modules <frontend/modules/odoo_module>` and which
-files should not be translated. This is an opt-in system: Odoo will look at the
-first line of a JS file and check if it contains the string *@odoo-module*. If so, it will
-automatically be converted to an Odoo module.
-
-For example, let us consider the following module, located in :file:`web/static/src/file_a.js`:
+Let us consider the following module, located in :file:`web/static/src/file_a.js`:
 
 .. code-block:: javascript
 
-  /** @odoo-module **/
-  import { someFunction } from './file_b';
+  import { someFunction } from "./file_b";
 
   export function otherFunction(val) {
       return someFunction(val + 3);
   }
 
-Note the comment in the first line: it describes that this file should be converted.
-Any file without this comment will be kept as-is (which will most likely be an
-error). This file will then be translated into an Odoo module that look like this:
+There is a very important point to know: by default Odoo transpiles files under
+`/static/src` and `/static/tests` into :ref:`Odoo modules <frontend/modules/odoo_module>`.
+This file will then be transpiled into an Odoo module that looks like this:
 
 .. code-block:: javascript
 
-   odoo.define('@web/file_a', function (require) {
+   odoo.define('@web/file_a', ['@web/file_b'], function (require) {
    'use strict';
    let __exports = {};
 
    const { someFunction } = require("@web/file_b");
 
    __exports.otherFunction = function otherFunction(val) {
-       return someFunction(val + 3);
+      return someFunction(val + 3);
    };
 
    return __exports;
    )};
 
-So, as you can see, the transformation is basically adding `odoo.define` on top,
-and updating the import/export statements.
+So, as you can see, the transformation is basically adding `odoo.define` on top
+and updating the import/export statements. This is an opt-out system, it's possible
+to tell the transpiler to ignore the file.
 
-Another important point is that the translated module has an official name:
+.. code-block:: javascript
+
+  /** @odoo-module ignore **/
+  (function () {
+    const sum = (a, b) => a + b;
+    console.log(sum(1, 2));
+  )();
+
+Note the comment in the first line: it describes that this file should be ignored.
+
+In other folders, files aren't transpiled by default, it is opt-in. Odoo will look at the
+first line of a JS file and check if it contains a comment with *@odoo-module* and without
+the tag *ignore*. If so, it will automatically be converted to an Odoo module.
+
+.. code-block:: javascript
+
+  /** @odoo-module **/
+  export function sum(a, b) {
+    return a + b;
+  }
+
+Another important point is that the transpiled module has an official name:
 *@web/file_a*. This is the actual name of the module. Every relative imports
 will be converted as well. Every file located in an Odoo addon
 :file:`some_addon/static/src/path/to/file.js` will be assigned a name prefixed by the
@@ -120,16 +134,13 @@ The file :file:`file_b` can import :file:`file_a` like this:
 
 .. code-block:: javascript
 
-  /** @odoo-module **/
-  import {something} from `./file_a`
+  import {something} from `./file_a`;
 
 But :file:`file_c` need to use the full name:
 
 .. code-block:: javascript
 
-  /** @odoo-module **/
-  import {something} from `@web/file_a`
-
+  import {something} from `@web/file_a`;
 
 Aliased modules
 ---------------
@@ -155,7 +166,7 @@ Then, the translated module will also create an alias with the requested name:
 
 .. code-block:: javascript
 
-  odoo.define(`web.someName`, function(require) {
+  odoo.define(`web.someName`, ['@web/file_a'], function(require) {
       return require('@web/file_a')[Symbol.for("default")];
   });
 
@@ -180,7 +191,7 @@ original module:
 
 .. code-block:: javascript
 
-  odoo.define(`web.someName`, function(require) {
+  odoo.define(`web.someName`, ["@web/file_a"], function(require) {
       return require('@web/file_a');
   });
 
@@ -279,7 +290,7 @@ As an example, it may look like this:
 .. code-block:: javascript
 
     // in file a.js
-    odoo.define('module.A', function (require) {
+    odoo.define('module.A', [], function (require) {
         "use strict";
 
         var A = ...;
@@ -288,7 +299,7 @@ As an example, it may look like this:
     });
 
     // in file b.js
-    odoo.define('module.B', function (require) {
+    odoo.define('module.B', ['module.A'], function (require) {
         "use strict";
 
         var A = require('module.A');
@@ -296,20 +307,6 @@ As an example, it may look like this:
         var B = ...; // something that involves A
 
         return B;
-    });
-
-An alternative way to define a module is to give explicitly a list of dependencies
-in the second argument.
-
-.. code-block:: javascript
-
-    odoo.define('module.Something', ['module.A', 'module.B'], function (require) {
-        "use strict";
-
-        var A = require('module.A');
-        var B = require('module.B');
-
-        // some code
     });
 
 
@@ -332,12 +329,13 @@ The `odoo.define` method is given three arguments:
   If the name is not unique, an exception will be thrown and displayed in the
   console.
 
-- `dependencies`: the second argument is optional. If given, it should be a list
-  of strings, each corresponding to a javascript module.  This describes the
-  dependencies that are required to be loaded before the module is executed. If
-  the dependencies are not explicitly given here, then the module system will
-  extract them from the function by calling toString on it, then using a regexp
-  to find all the `require` statements.
+- `dependencies`: It should be a list of strings, each corresponding to a
+  javascript module.  This describes the dependencies that are required to
+  be loaded before the module is executed.
+
+- finally, the last argument is a function which defines the module. Its return
+  value is the value of the module, which may be passed to other modules requiring
+  it.
 
   .. code-block:: javascript
 
@@ -349,11 +347,6 @@ The `odoo.define` method is given three arguments:
          // some code here
          return something;
      });
-
-- finally, the last argument is a function which defines the module. Its return
-  value is the value of the module, which may be passed to other modules requiring
-  it.  Note that there is a small exception for asynchronous modules, see the
-  next section.
 
 If an error happens, it will be logged (in debug mode) in the console:
 
@@ -369,24 +362,3 @@ If an error happens, it will be logged (in debug mode) in the console:
   Modules who depend on a rejected module
 * `Non loaded modules`:
   Modules who depend on a missing or a failed module
-
-Asynchronous modules
---------------------
-
-It can happen that a module needs to perform some work before it is ready.  For
-example, it could do an rpc to load some data.  In that case, the module can
-simply return a promise. The module system will simply
-wait for the promise to complete before registering the module.
-
-.. code-block:: javascript
-
-    odoo.define('module.Something', function (require) {
-        "use strict";
-
-        var ajax = require('web.ajax');
-
-        return ajax.rpc(...).then(function (result) {
-            // some code here
-            return something;
-        });
-    });

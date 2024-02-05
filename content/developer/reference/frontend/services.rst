@@ -312,8 +312,6 @@ Let's say we want to add an effect that add a sepia look at the page.
 
 .. code-block:: javascript
 
-  /** @odoo-module **/
-
   import { registry } from "@web/core/registry";
   const { Component, tags } = owl;
 

@@ -37,7 +37,6 @@ Then create the JavaScript file for that component in :file:`/your_module/static
 
 .. code-block:: js
 
-    /** @odoo-module */
     import { Component } from "@odoo/owl";
 
     export class Root extends Component {
@@ -50,7 +49,6 @@ file. Create the JavaScript file that will mount the app in :file:`/your_module/
 
 .. code-block:: js
 
-    /** @odoo-module */
     import { whenReady } from "@odoo/owl";
     import { mountComponent } from "@web/env";
     import { Root } from "./root";
