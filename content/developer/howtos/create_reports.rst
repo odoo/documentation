@@ -110,7 +110,7 @@ Extra tips
 
 .. tip::
    A common mistake in SQL views is not considering the duplication of certain data
-   due to table JOINs. This can lead to miscounting when using a field's `group_operator`
+   due to table JOINs. This can lead to miscounting when using a field's `aggregator`
    and/or the pivot view. It is best to test your SQL view with sufficient data to ensure the
    resulting field values are as you expect.
 
