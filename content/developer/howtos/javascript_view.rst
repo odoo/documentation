@@ -14,8 +14,6 @@ can be done in a few steps:
    .. code-block:: js
       :caption: :file:`custom_kanban_controller.js`
 
-      /** @odoo-module */
-
       import { KanbanController } from "@web/views/kanban/kanban_controller";
       import { kanbanView } from "@web/views/kanban/kanban_view";
       import { registry } from "@web/core/registry";
@@ -81,8 +79,6 @@ Creating a new view is an advanced topic. This guide highlight only the essentia
 
    .. code-block:: js
       :caption: :file:`beautiful_controller.js`
-
-      /** @odoo-module */
 
       import { Layout } from "@web/search/layout";
       import { useService } from "@web/core/utils/hooks";
@@ -161,8 +157,6 @@ Creating a new view is an advanced topic. This guide highlight only the essentia
    .. code-block:: js
       :caption: :file:`beautiful_model.js`
 
-      /** @odoo-module */
-
       import { KeepLast } from "@web/core/utils/concurrency";
 
       export class BeautifulModel {
@@ -199,8 +193,6 @@ Creating a new view is an advanced topic. This guide highlight only the essentia
    .. code-block:: js
       :caption: :file:`beautiful_arch_parser.js`
 
-      /** @odoo-module */
-
       import { XMLParser } from "@web/core/utils/xml";
 
       export class BeautifulArchParser extends XMLParser {
@@ -218,8 +210,6 @@ Creating a new view is an advanced topic. This guide highlight only the essentia
 
    .. code-block:: js
       :caption: :file:`beautiful_view.js`
-
-      /** @odoo-module */
 
       import { registry } from "@web/core/registry";
       import { BeautifulController } from "./beautiful_controller";

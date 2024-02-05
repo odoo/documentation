@@ -14,8 +14,6 @@ displaying "Late!" in red whenever the checkbox is checked.
    .. code-block:: javascript
       :caption: :file:`late_order_boolean_field.js`
 
-      /** @odoo-module */
-
       import { registry } from "@web/core/registry";
       import { BooleanField } from "@web/views/fields/boolean/boolean_field";
       import { Component, xml } from "@odoo/owl";
@@ -62,8 +60,6 @@ Assume that we want to create a field that displays a simple text in red.
 
    .. code-block:: js
       :caption: :file:`my_text_field.js`
-
-      /** @odoo-module */
 
       import { standardFieldProps } from "@web/views/fields/standard_field_props";
       import { Component, xml } from "@odoo/owl";
