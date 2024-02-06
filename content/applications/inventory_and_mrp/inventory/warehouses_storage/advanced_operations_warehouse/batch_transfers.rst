@@ -97,6 +97,8 @@ Once the transfer records are selected, click :guilabel:`Confirm` to confirm the
       :align: center
       :alt: Select multiple transfers from the *Add:Transfers* window.
 
+.. _inventory/warehouses_storage/add-batch-transfers:
+
 Add batch from transfers list
 -----------------------------
 
