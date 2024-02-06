@@ -18,10 +18,9 @@ that have been :guilabel:`Clicked`, and more.
    :align: center
    :alt: An activity block in the workflow section with useful analytical data in Odoo.
 
-To the left of the activity block, the configured :doc:`trigger time
-<../getting_started/workflow_activities>` is displayed as a duration (either :guilabel:`Hours`,
-:guilabel:`Days`, :guilabel:`Weeks`, or :guilabel:`Months`) if it corresponds to period after the
-workflow begins.
+To the left of the activity block, the configured :doc:`trigger time <workflow_activities>` is
+displayed as a duration (either :guilabel:`Hours`, :guilabel:`Days`, :guilabel:`Weeks`, or
+:guilabel:`Months`) if it corresponds to period after the workflow begins.
 
 .. note::
    If the trigger time is dependent on another activity or triggering action (e.g. :guilabel:`Mail:
@@ -48,7 +47,7 @@ activity, in which that activity can be modified. Click the :guilabel:`Delete` b
 delete that specific activity from the workflow.
 
 .. seealso::
-   :doc:`/applications/marketing/marketing_automation/getting_started/workflow_activities`
+   :doc:`workflow_activities`
 
 Activity graph tab
 ------------------

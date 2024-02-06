@@ -13,8 +13,8 @@ To test a marketing campaign, open the :menuselection:`Marketing Automation app`
 desired campaign to test, which reveals the campaign's detail form.
 
 On the campaign detail form, make sure the campaign already has activities configured in the
-workflow (or build a campaign by following the directions on :doc:`this documentation
-</applications/marketing/marketing_automation/getting_started/workflow_activities>`).
+workflow (or build a campaign by following the directions on :doc:`workflow_activities`
+documentation).
 
 .. note::
    Testing marketing automation campaigns is meant to be performed in the production version of the
@@ -148,6 +148,6 @@ the upper-right corner of the campaign detail form.
    :alt: Marketing campaign's stopped status on a campaign detail form in Odoo Marketing Automation.
 
 .. seealso::
-   - :doc:`first_campaign`
+   - :doc:`Campaign configuration <../marketing_automation>`
    - :doc:`target_audience`
    - :doc:`workflow_activities`
