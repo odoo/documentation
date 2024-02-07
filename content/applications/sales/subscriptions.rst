@@ -20,6 +20,7 @@ etc.
    - :doc:`/applications/sales/subscriptions/renewals`
    - :doc:`/applications/sales/subscriptions/closing`
    - :doc:`/applications/sales/subscriptions/automatic_alerts`
+   - :doc:`/applications/sales/subscriptions/scheduled_actions`
    - :doc:`/applications/sales/subscriptions/reports`
 
 .. _subscriptions/quotations:
@@ -84,4 +85,5 @@ invoice manually.
    subscriptions/renewals
    subscriptions/closing
    subscriptions/automatic_alerts
+   subscriptions/scheduled_actions
    subscriptions/reports
