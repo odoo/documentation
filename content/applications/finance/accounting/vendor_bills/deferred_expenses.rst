@@ -64,9 +64,10 @@ If the :guilabel:`Generate Entries` field is set to :guilabel:`On invoice/bill v
 automatically generates the deferral entries when the bill is validated. Click on the
 :guilabel:`Deferred Entries` smart button to see them.
 
-One entry, dated on the same day as the bill, moves the bill amounts from the expense account to
-the deferred account. The other entries are deferral entries which will, month after month, move the
-bill amounts from the deferred account to the expense account to recognize the expense.
+One entry, dated on the same day as the bill's accounting date, moves the bill amounts from the
+expense account to the deferred account. The other entries are deferral entries which will, month
+after month, move the bill amounts from the deferred account to the expense account to recognize
+the expense.
 
 .. example::
    You can defer a January bill of $1200 over 12 months by specifying a start date of 01/01/2023
