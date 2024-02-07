@@ -1,3 +1,5 @@
+TODO: add the thing so that previous URL for this page still work
+
 ====================
 Flashing the SD card
 ====================
