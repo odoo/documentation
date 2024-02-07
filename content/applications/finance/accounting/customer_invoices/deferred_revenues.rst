@@ -64,9 +64,10 @@ If the :guilabel:`Generate Entries` field in the **Settings** is set to :guilabe
 validation`, Odoo automatically generates the deferral entries when the invoice is validated. Click
 the :guilabel:`Deferred Entries` smart button to see them.
 
-One entry, dated on the same day as the invoice, moves the invoice amounts from the income account
-to the deferred account. The other entries are deferral entries which, month after month, move
-the invoice amounts from the deferred account to the income account to recognize the revenue.
+One entry, dated on the same day as the invoice's accounting date, moves the invoice amounts from
+the income account to the deferred account. The other entries are deferral entries which, month
+after month, move the invoice amounts from the deferred account to the income account to recognize
+the revenue.
 
 .. example::
    You can defer a January invoice of $1200 over 12 months by specifying a start date of 01/01/2023
