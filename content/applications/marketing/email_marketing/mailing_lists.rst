@@ -2,135 +2,223 @@
 Mailing lists
 =============
 
-Mailing lists are important for a number of reasons. Mailing lists can provide valuable leads for
-sales teams, communicate with focus groups participants, contact consumers directly for useful
-feedback, and more.
+Mailing lists in Odoo are used for both pre and post sales communications in the *Email Marketing*
+application. They provide sales teams with qualified lead lists, focus group participants, or
+current customers that fulfill specific criteria.
+
+Mailing lists can be generated in Odoo, and exported as a downloadable file, or into the
+*Knowledge*, *Dashboards*, or *Spreadsheets* applications, or imported via copy/paste or file
+upload.
 
 Create mailing lists
 ====================
 
-To create a mailing list in the *Email Marketing* application, navigate to :menuselection:`Mailing
-lists --> Mailing lists --> Create`. Clicking :guilabel:`Create` reveals a pop-up window.
+To create a mailing list in the *Email Marketing* application, navigate to :menuselection:`Email
+Marketing app --> Mailing Lists --> Mailing Lists --> New`.
 
-.. image:: mailing_lists/new-mailing-list-popup.png
+Clicking :guilabel:`New` reveals a blank mailing list form.
+
+.. image:: mailing_lists/new-mailing-list-form.png
    :align: center
-   :alt: View of the mailing list pop-up in the Odoo Email Marketing application.
+   :alt: View of the mailing list form in the Odoo Email Marketing application.
 
-In the pop-up, name the mailing list and designate if the mailing list should be public with the
-:guilabel:`Is Public` checkbox.
+On the form, type a name in the :guilabel:`Mailing List` field at the top.
 
-The :guilabel:`Is Public` option allows the mailing list to be accessible by recipients in the
-unsubscription page, making it possible for them to update their subscription preferences.
+If the mailing list should be accessible by recipients from the subscription management page,
+allowing them to update their preferences, tick the box next to :guilabel:`Show In Preferences`.
 
-After those options have been configured, click :guilabel:`Create` to create the mailing list, which
-Odoo automatically adds to the :guilabel:`Mailing Lists` page.
+In the upper-left corner of the mailing list form, there are two buttons: :guilabel:`Send Mailing`
+and :guilabel:`Send SMS`.
 
-Add contacts to a mailing list
-==============================
+.. important::
+   The :guilabel:`Send SMS` button **only** appears if the *SMS Marketing* application is installed.
 
-After a mailing list has been created (and added to the :guilabel:`Mailing Lists` dashboard), click
-on the desired mailing list to add contacts to the list.
+Clicking :guilabel:`Send Mailing` reveals a separate page with a blank email template form, which
+can be filled out by following steps explained in the :doc:`Email Marketing doc
+<../email_marketing>`.
 
-Clicking the desired mailing list reveals a separate :guilabel:`Mailing List Contacts` page, in
-which contacts can be added to this specific list by clicking :guilabel:`Create`, and adding contact
-information directly on a separate contact detail form.
+Clicking :guilabel:`Send SMS` reveals a separate page with a blank SMS template form, which can be
+filled out by following steps explained in the :doc:`SMS essentials doc
+<../sms_marketing/essentials/sms_essentials>`.
 
-Or, while in the :menuselection:`Email Marketing` application, navigate to :menuselection:`Mailing
-Lists --> Mailing List Contacts`. Doing so reveals a separate page with all the mailing list
-contacts in the database.
+At the top of the mailing list form is a series of smart buttons that display a variety of metrics
+related to the specific mailing list. When any of the smart buttons are clicked, a separate page is
+revealed, showcasing detailed analytics related to that particular statistic.
 
-From here, click :guilabel:`Create`, and add a contact with the same previous steps. Or, click the
-:guilabel:`Import` icon (to the right of the :guilabel:`Create` button) to import contacts into the
-database.
+The smart buttons available on a mailing list form are:
 
-Once contacts are in the database, click into the desired contact's detail form, and add the
-preferred mailing list in the :guilabel:`Mailing List` tab (at the bottom of the contact detail
-form), by clicking :guilabel:`Add a line`, and selecting the desired mailing list. Multiple mailing
-lists can be added to a single contact's detail form.
+- :guilabel:`Recipients`: how many people are subscribed to the mailing list
+- :guilabel:`Mailings`: how many mailings have been sent using this mailing list
+- :guilabel:`% Bounce`: percentage of mailings related to this mailing list that have been bounced
+  back
+- :guilabel:`% Opt-out`: percentage of recipients that have opted-out of mailings from this mailing
+  list
+- :guilabel:`% Blacklist`: percentage of recipients that have blacklisted themselves from the
+  mailing list altogether
 
-.. image:: mailing_lists/contact-form-mailing-list-tab.png
+Once all the configurations on the mailing list form are complete, Odoo automatically adds the new
+mailing list to the :guilabel:`Mailing List` page in the *Email Marketing* app
+(:menuselection:`Email Marketing app --> Mailing Lists --> Mailing Lists`).
+
+Add contacts to mailing list
+============================
+
+In Odoo *Email Marketing*, there are a few different ways to add contacts to a mailing list.
+
+From the :guilabel:`Mailing Lists` page (:menuselection:`Email Marketing --> Mailing Lists -->
+Mailing Lists`), click the :guilabel:`Total Contacts` link on the line of the desired mailing list
+to which contacts should be added.
+
+Doing so reveals a separate :guilabel:`Mailing List Contacts` page for that specific mailing list,
+where contacts can be created or imported, and then added to the specific mailing list.
+
+This same page can also be accessed by clicking the desired mailing list from the :guilabel:`Mailing
+Lists` page, and then clicking the :guilabel:`Recipients` smart button on the mailing list form.
+
+Doing so *also* reveals a separate :guilabel:`Mailing List Contacts` page for that specific mailing
+list, where contacts can be created or imported, and then added to the specific mailing list.
+
+Contacts can also be directly imported to a specific mailing list from the :guilabel:`Mailing Lists`
+page, by clicking :guilabel:`Import Contacts` to the far-right of the desired mailing list.
+
+.. image:: mailing_lists/import-contacts-button.png
    :align: center
-   :alt: View of a contact detail form with mailing list tab in Odoo Email Marketing.
+   :alt: The import contacts button of a mailing list line in Odoo Email Marketing.
 
-Create new mailing list from contact detail form
-------------------------------------------------
+Doing so reveals an :guilabel:`Import Mailing Contacts` pop-up form.
 
-To create a mailing list from a contact detail form, click :guilabel:`Add a line`, and type in the
-name of a new mailing list in the empty field that appears. Then, select either :guilabel:`Create`
-or :guilabel:`Create and Edit...`.
-
-.. image:: mailing_lists/new-list-dropdown-create-options.png
+.. image:: mailing_lists/import-mailing-contacts-popup.png
    :align: center
-   :alt: View of the new mailing list drop-down on contact form in Odoo Email Marketing.
+   :alt: The import mailing contacts pop-up form that appears in Odoo Email Marketing.
 
-The :guilabel:`Create` option quickly creates the mailing list to the contact detail form, and the
-list can be configured at a later date. The :guilabel:`Create and Edit...` option creates the
-mailing list, and reveals a pop-up window, in which the new mailing list can be configured right
-away.
+Here, the desired mailing list is auto-populated in the :guilabel:`Import contacts in` field.
+Beneath that, write or paste email addresses in the :guilabel:`Contact List` field.
 
-.. image:: mailing_lists/create-and-edit-mailing-list-popup.png
+The option to import a country, company name, and more is available, via the :guilabel:`Upload a
+file` link at the bottom of the pop-up form.
+
+When all contacts and configurations are complete, click :guilabel:`Import`.
+
+To add contacts to a specific mailing list from a master list of all mailing list contacts in the
+database, navigate to :menuselection:`Email Marketing app --> Mailing Lists --> Mailing List
+Contacts`. Doing so reveals the :guilabel:`Mailing List Contacts` page, featuring a list of all
+contacts associated with every mailing list.
+
+.. image:: mailing_lists/mailing-list-page.png
    :align: center
-   :alt: View of the create and edit mailing list pop-up in Odoo Email Marketing.
+   :alt: The Mailing List page in the Odoo Email Marketing application.
 
-Link a mailing list to website (Newsletter blocks)
-==================================================
+The default :guilabel:`Exclude Blacklisted Emails` filter appears in the search bar.
 
-When a mailing list is created in the database, Odoo provides the option to directly link the
-mailing list on the Odoo-built website (created via Odoo's :guilabel:`Website` application).
+From the :guilabel:`Mailing List Contacts` page, contacts can be created and/or imported, and then
+added to a mailing list.
 
-To link a mailing list to a website, navigate to the front-end of the website, and enter
-:guilabel:`Edit` mode by clicking :guilabel:`Edit` in the upper-right corner. When clicked, Odoo
-reveals a right-sidebar, filled with drag-and-drop *Building Blocks* that are packed with various
-features, options, and design elements.
+To add an existing contact to a mailing list, select the desired contact from the list on the
+:guilabel:`Mailing List Contacts` page to reveal their contact form.
 
-Then, to add a *subscription field* for a specific mailing list onto a website, drag-and-drop any of
-the :guilabel:`Newsletter` options (:guilabel:`Newsletter Block`, :guilabel:`Newsletter Popup`, or
-:guilabel:`Newsletter`).
+At the bottom of their contact form, click :guilabel:`Add a line` under the :guilabel:`Mailing List`
+column, locate the desired mailing list from the drop-down menu, and select it.
+
+.. image:: mailing_lists/contact-form-mailing-list-add.png
+   :align: center
+   :alt: The Add a line for mailing lists on a standard contact form in Odoo Email Marketing.
 
 .. tip::
-   To quickly locate the :guilabel:`Newsletter` building block options (while in :guilabel:`Edit`
-   mode on the front-end of the website), type `Newsletter` into the search bar, located in the
-   right sidebar, under the :guilabel:`Blocks` tab, and Odoo reveals the three different
-   :guilabel:`Newsletter` block options.
+   A mailing list can be created directly from a contact form, by typing the name of the new mailing
+   list in the :guilabel:`Mailing List` field. Then, after a new mailing list name has been entered,
+   two options appear on the drop-down menu beneath the new mailing list name.
 
-   .. image:: mailing_lists/newsletter-block-search.png
-      :align: center
-      :alt: View of how to quickly search for Newsletter blocks in the Odoo Website application.
+   From this drop-down menu, select :guilabel:`Create` to create the mailing list and edit it later,
+   or select :guilabel:`Create and edit...` to create and edit the new mailing list right away.
 
-When a :guilabel:`Newsletter` block is dragged onto the body of the website, Odoo reveals a pop-up
-window, in which the desired mailing list is selected from a drop-down menu (and linked) to this
-block on the website.
+To remove a contact from a mailing list that the contact has been added to, enable the
+:guilabel:`Opt Out` checkbox. If the :guilabel:`Opt Out` checkbox is ticked, the ability to add a
+:guilabel:`Reason` why the contact opted-out is also available.
 
-.. image:: mailing_lists/add-mailing-list-popup-website.png
+When/if a contact *has* opted-out of a mailing list, the date they activated their opt-out appears
+in the :guilabel:`Unsubscription Date` column on their contact form.
+
+Lastly, the initial :guilabel:`Subscription Date` can be seen, as well. This field is auto-populated
+with the date and time their subscription to the mailing list has been saved.
+
+Multiple mailing lists can be added to a single contact form.
+
+To delete any mailing list from a contact form, simply click the :guilabel:`🗑️ (trash can)` icon.
+
+Link mailing list to website
+============================
+
+When a mailing list is created in the database, Odoo provides the option to directly link the
+mailing list to the Odoo-built website (created via the Odoo *Website* application).
+
+To link a mailing list to a website, navigate to the front-end of the website, which can be
+accomplished in a variety of ways throughout the database. The most direct way to get to the
+front-end of the website is to simply open the :menuselection:`Website` application from the main
+Odoo dashboard.
+
+Doing so reveals the designated homepage of the Odoo-built website for the database.
+
+From the front-end of the website, click the :guilabel:`Edit` button in the upper-right corner. When
+clicked, Odoo reveals a right-sidebar, filled with drag-and-drop *building blocks*, packed with
+various features, options, and design elements.
+
+Next, in the search bar of the right-sidebar, search for `Newsletter`. The :guilabel:`Newsletter`
+selection of building blocks is used to add subscription fields for any mailing list onto the
+website.
+
+.. image:: mailing_lists/newsletter-block-search.png
    :align: center
-   :alt: View of the add mailing list subscription pop-up on an Odoo Website.
+   :alt: View of how to quickly search for Newsletter blocks in the Odoo Website application.
 
-- :guilabel:`Newsletter Block` - Adds a block onto the webpage, providing visitors with the
-  option to add their email address to this mailing list, and subscribe to future communications.
+Doing so reveals the following building block options: :guilabel:`Newsletter Block`,
+:guilabel:`Newsletter Popup`, and :guilabel:`Newsletter`. Any of these options can be used to add
+subscription fields for a mailing list onto the website.
 
-  Here's an example of a :guilabel:`Newsletter Block`.
+The :guilabel:`Newsletter Block` option places a customizable block onto the body of the website
+where a visitor to enter their email and click a button to subscribe to a designated mailing list.
 
-  .. image:: mailing_lists/newsletter-block-sample.png
-     :alt: View of a sample newsletter block in the Odoo Website application.
+.. image:: mailing_lists/newsletter-block-sample.png
+   :align: center
+   :alt: Sample of how a newsletter block appears on an Odoo Website.
 
-- :guilabel:`Newsletter Popup` - Tells Odoo to reveal a subscription pop-up window to occur at
-  a certain part of the webpage. When the visitor scrolls to this predetermined point, a pop-up
-  subscription window appears, asking for their email address to subscribe to the mailing list.
-  The pop-up window can be edited further to fit any business needs.
+The :guilabel:`Newsletter Popup` option reveals a customizable pop-up window that appears when a
+visitor scrolls to the specific section of the webpage on which the building block is placed. When
+the visitor reaches the designated section, a pop-up window appears, in which a visitor can enter
+their email address, click a button, and subscribe to that predetermined mailing list.
 
-  Here's an example of a :guilabel:`Newsletter Popup`.
+.. image:: mailing_lists/newsletter-popup-sample.png
+   :align: center
+   :alt: Sample of how a newsletter popup block appears on an Odoo Website.
 
-  .. image:: mailing_lists/newsletter-popup-sample.png
-     :alt: View of a sample newsletter pop-up sample on an Odoo Website.
+The :guilabel:`Newsletter` option provides the same functionality as the other options. However, it
+only consists of a field for the visitor to enter their email address, and a button to subscribe to
+the mailing list.
 
-- :guilabel:`Newsletter` - Provides visitors with a simple field to add their email address to the
-  mailing list, and subscribe to future mailings in the footer (or anywhere else on the page).
+It is covertly designed in this fashion to be cleanly implemented into the content of the webpage
+and/or footer.
 
-  Here's an example of a :guilabel:`Newsletter` dynamic block.
+.. image:: mailing_lists/newsletter-sample.png
+   :align: center
+   :alt: Sample of how a newsletter block appears on an Odoo Website.
 
-  .. image:: mailing_lists/newsletter-footer-block-sample.png
-     :alt: View of a Newsletter dynamic block on an Odoo Website.
+Once the desired newsletter building block is chosen, drag-and-drop it onto the body of the
+website. Then, select the newly-placed newsletter building block to reveal its configuration options
+on the right-sidebar.
+
+From there, open the :guilabel:`Newsletter` drop-down menu, and select the specific mailing list
+that should be applied to the block.
+
+.. image:: mailing_lists/newsletter-dropdown-customize-sidebar.png
+   :align: center
+   :alt: The newsletter drop-down menu in the customize sidebar that appears in Odoo Website.
+
+Once the desired configurations and customizations are complete, be sure to click the
+:guilabel:`Save` button in the upper-right corner.
+
+Now, when a visitor enters their email address, and clicks the button to subscribe, they are
+instantly subscribed to that pre-configured mailing list. They are also added as a contact for that
+mailing list in Odoo *Email Marketing*.
 
 .. seealso::
-   - :doc:`/applications/marketing/email_marketing`
-   - :doc:`/applications/marketing/email_marketing/unsubscriptions`
+   - :doc:`../email_marketing`
+   - :doc:`unsubscriptions`
