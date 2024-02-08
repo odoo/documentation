@@ -268,6 +268,13 @@ in the list before all the others included in the glob.
     to depend on it. Trying to operate on assets that have yet to be declared will
     result in an error.
 
+.. note::
+
+    Modifying the :ref:`module manifest <reference/module/manifest>` will not
+    automatically remove or rename any `ir.asset` records in the database
+    during a module update or a database upgrade. An upgrade script must be used
+    to remove any unwanted asset records and avoid asset bundle compilation errors.
+
 .. _frontend/assets/lazy_loading:
 
 Lazy loading
