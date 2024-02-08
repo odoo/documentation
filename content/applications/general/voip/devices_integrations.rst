@@ -34,7 +34,7 @@ Odoo VoIP (laptop/desktop computer)
 ===================================
 
 The Odoo *VoIP* (Voice over Internet Protocol) module and widget can be used from any browser on a
-laptop or desktop device. Simply click on the :guilabel:`📞 (phone)` icon in the upper-right corner,
+laptop or desktop device. Simply click on the :guilabel:`☎️ (phone)` icon in the upper-right corner,
 while in the Odoo database, and the widget appears.
 
 .. seealso::
@@ -61,7 +61,7 @@ applications. Additionally, a mobile web browser can be used to access the datab
    For more information, see this documentation: :ref:`voip/zoiper`.
 
 While in the mobile application on a mobile device/tablet, access the Odoo *VoIP* widget, by tapping
-on the :guilabel:`📞 (phone)` icon in the upper-right corner. The widget appears in the lower-left
+on the :guilabel:`☎️ (phone)` icon in the upper-right corner. The widget appears in the lower-left
 corner.
 
 When first making a call from the tablet using the mobile application, the user is prompted to
