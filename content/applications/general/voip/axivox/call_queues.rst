@@ -214,7 +214,7 @@ Dynamic agents can connect manually to the Axivox call queue from the Odoo *VoIP
 .. seealso::
    :doc:`axivox_config`
 
-To access the Odoo *VoIP* widget, click the :guilabel:`📞 (phone)` icon in the upper-right corner of
+To access the Odoo *VoIP* widget, click the :guilabel:`☎️ (phone)` icon in the upper-right corner of
 the screen, from any window within Odoo.
 
 .. seealso::
