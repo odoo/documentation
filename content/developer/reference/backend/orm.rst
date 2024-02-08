@@ -1140,15 +1140,15 @@ to existing models (created in other modules), or to customize or reconfigure
 them (e.g. to change their default sort order)::
 
     class Extension0(models.Model):
-    _name = 'extension.0'
-    _description = 'Extension zero'
+        _name = 'extension.0'
+        _description = 'Extension zero'
 
-    name = fields.Char(default="A")
+        name = fields.Char(default="A")
 
     class Extension1(models.Model):
-    _inherit = 'extension.0'
+        _inherit = 'extension.0'
 
-    description = fields.Char(default="Extended")
+        description = fields.Char(default="Extended")
 
 .. code-block:: python3
 
