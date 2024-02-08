@@ -46,12 +46,12 @@ In Odoo, go to :menuselection:`Settings app --> Users & Companies --> Users`, th
 user's form to configure :abbr:`VoIP (Voice over Internet Protocol)`. Under the
 :guilabel:`Preferences` tab, fill out the :guilabel:`VOIP Configuration` section:
 
-- :guilabel:`SIP Login` / :guilabel:`Browser's Extension`: (Axivox) :guilabel:`SIP username`
-- :guilabel:`Handset Extension`: SIP external phone extension
-- :guilabel:`SIP Password`: (Axivox) :guilabel:`SIP Password`
-- :guilabel:`Mobile call`: method to make calls on a mobile device
-- :guilabel:`OnSIP authorization User`: (Axivox) :guilabel:`SIP username`
-- :guilabel:`Always Redirect to Handset`: option to always transfer phone calls to handset
+- :guilabel:`VoIP username` / :guilabel:`Browser's Extension`: (Axivox) :guilabel:`SIP username`
+- :guilabel:`VoIP Secret`: (Axivox) :guilabel:`SIP Password`
+- :guilabel:`External device number`: SIP external phone extension
+- :guilabel:`How to place calls on mobile`: method to make calls on a mobile device
+- :guilabel:`OnSIP Auth User`: (Axivox) :guilabel:`SIP username`
+- :guilabel:`Call from another device`: option to always transfer phone calls to handset
 - :guilabel:`Reject All Incoming Calls`: option to reject all incoming calls
 
 .. image:: axivox_config/odoo-user.png

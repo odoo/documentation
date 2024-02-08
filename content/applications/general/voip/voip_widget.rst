@@ -9,7 +9,7 @@ managing calls in Odoo.
 Phone calls
 ===========
 
-To make phone calls while in the Odoo database, click the :guilabel:`📞 (phone)` icon, located in
+To make phone calls while in the Odoo database, click the :guilabel:`☎️ (phone)` icon, located in
 the top navigation bar.
 
 When clicked, a :guilabel:`VOIP` pop-up widget appears in the lower-left corner of the Odoo
@@ -87,7 +87,7 @@ Some other icons appear in the *VoIP* widget, categorized by two sections: :guil
 
 Under the :guilabel:`Document` section, from right to left:
 
-- :guilabel:`➣ (paper airplane)` icon: sends an email
+- :guilabel:`✉️ (envelope)` icon: sends an email
 - :guilabel:`👤 (person icon)` icon: redirects to the contact card
 - :guilabel:`📄 (document)` icon: redirects to the attached record in Odoo
 - :guilabel:`🕓 (clock)` icon: schedule an activity
