@@ -12,7 +12,7 @@ Make calls
 ==========
 
 Starting on the Odoo dashboard, a call can be made by opening the phone widget in the the
-upper-right corner, which is represented by a :guilabel:`📞 (phone)` icon.
+upper-right corner, which is represented by a :guilabel:`☎️ (phone)` icon.
 
 Then, a user can click on the :guilabel:`Contacts` tab, and click into any contact in the database
 to make a call.
