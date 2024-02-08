@@ -86,7 +86,7 @@ is then prompted to enter the :guilabel:`Access code` to enter the conference.
 Start call in Odoo
 ==================
 
-Anywhere in the Odoo database, open the *VoIP* widget, by clicking the :guilabel:`📞 (phone)` icon,
+Anywhere in the Odoo database, open the *VoIP* widget, by clicking the :guilabel:`☎️ (phone)` icon,
 located in the upper-right corner. Then, dial the specific extension number for the conference, and
 click the :guilabel:`📞 (phone)` icon.
 
