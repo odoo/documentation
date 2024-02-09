@@ -70,9 +70,9 @@ In the first file :file:`models/template_xx.py`, we set the name for the chart o
    :doc:`Chart Template References </developer/reference/standard_modules/account>`
 
 .. example::
-  `addons/l10n_be/models/template_be.py <{GITHUB_PATH}/addons/l10n_be/models/template_be.py>`_
+  `addons/l10n_be_account/models/template_be.py <{GITHUB_PATH}/addons/l10n_be_account/models/template_be.py>`_
 
-  .. literalinclude:: {ODOO_RELPATH}/addons/l10n_be/models/template_be.py
+  .. literalinclude:: {ODOO_RELPATH}/addons/l10n_be_account/models/template_be.py
     :condition: odoo_dir_in_path
     :language: python
     :start-at: _get_be_template_data
@@ -311,5 +311,5 @@ the :guilabel:`Reporting` menu, you need to create a new `ir.ui.menu` record (us
 action model.
 
 .. example::
-   * `ir.ui.menu creation <{GITHUB_PATH}/addons/l10n_be/data/menuitem_data.xml>`_
+   * `ir.ui.menu creation <{GITHUB_PATH}/addons/l10n_be_account/data/menuitem_data.xml>`_
    * `ir.actions.client and menu item creation <{GITHUB_ENT_PATH}/l10n_be_reports/data/partner_vat_listing.xml>`_
