@@ -64,6 +64,9 @@ users who have been granted specific permission.
 
 .. _management/remove:
 
+.. tip::
+   To share articles **online** you first need to enable Knowledge in *Helpdesk team settings and configuration*.
+
 Removal
 -------
 
