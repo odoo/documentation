@@ -310,7 +310,7 @@ Dependencies
 
             .. tip::
                It can be preferable not to mix Python module packages between different instances of
-               Odoo or with the system. However, it is possible to use `virtualenv
+               Odoo or with the system. Moreover, it is also possible to use `virtualenv
                <https://pypi.org/project/virtualenv/>`_ to create isolated Python environments.
 
             Navigate to the path of the Odoo Community installation (:file:`CommunityPath`) and run
