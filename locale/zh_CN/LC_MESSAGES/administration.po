@@ -504,6 +504,7 @@ msgstr ""
 msgid ""
 "in ``/etc/postgresql/<YOUR POSTGRESQL VERSION>/main/postgresql.conf`` set:"
 msgstr ""
+"在``/etc/postgresql/<YOUR POSTGRESQL VERSION>/main/postgresql.conf`` set中："
 
 #: ../../content/administration/install/deploy.rst:119
 msgid "Configuring Odoo"
@@ -4550,7 +4551,7 @@ msgstr ""
 #: ../../content/administration/maintain/hosting_changes.rst:93
 msgid ""
 "**when** (and in which timezone) you want the database to be up and running."
-msgstr ""
+msgstr "您希望数据库在**时间**（以及在哪个时区）启动并运行。"
 
 #: ../../content/administration/maintain/hosting_changes.rst:101
 msgid "Select the **region** closest to most of your users to reduce latency."
@@ -6638,6 +6639,8 @@ msgid ""
 "Apps menu, or through the :code:`-u` switch of :doc:`the command line "
 "</developer/reference/cli>`."
 msgstr ""
+"此方法等同于通过应用程序菜单或 :doc:`指令行</developer/reference/cli>` 的 :code:`-u` "
+"命令行开关执行模块升级。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:47
 msgid ""
@@ -6701,7 +6704,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:75
 msgid "Setting payment providers and shipping providers in test mode."
-msgstr ""
+msgstr "在测试模式下设置付款提供商和发货提供商。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:76
 msgid "Disabling IAP services"
@@ -7118,11 +7121,11 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:295
 msgid "Available for production and staging branches for valid projects."
-msgstr ""
+msgstr "可用于有效项目的生产和暂存分支。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:298
 msgid ":doc:`Upgrade documentation <../../upgrade>`"
-msgstr ""
+msgstr ":doc:`Upgrade documentation <../../upgrade>`"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:303
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:3
@@ -8203,11 +8206,11 @@ msgstr "|图片1| |图片2|"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:40
 msgid "pic1"
-msgstr ""
+msgstr "pic1"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:43
 msgid "pic2"
-msgstr ""
+msgstr "pic2"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:46
 msgid ""
@@ -9534,17 +9537,18 @@ msgid ""
 "account. Databases not on the most recent version of Odoo display an arrow "
 "in a circle icon next to their name, indicating that they can be upgraded."
 msgstr ""
+"数据库管理器会显示与用户账户相关的所有数据库。不在最新版本 Odoo 上的数据库名称旁边会显示一个圆圈图标中的箭头，表示这些数据库可以升级。"
 
 #: ../../content/administration/upgrade.rst:0
 msgid ""
 "The database manager with an upgrade button next to the name of a database."
-msgstr ""
+msgstr "数据库管理器，在数据库名称旁边有一个升级按钮。"
 
 #: ../../content/administration/upgrade.rst:102
 msgid ""
 "Click the **arrow in a circle** icon to start the upgrade process. In the "
 "popup, fill in:"
-msgstr ""
+msgstr "点击**圆圈中的箭头**图标，启动升级程序。在弹出窗口中填写"
 
 #: ../../content/administration/upgrade.rst:104
 msgid ""
@@ -9554,7 +9558,7 @@ msgstr ""
 #: ../../content/administration/upgrade.rst:105
 msgid ""
 "The **email** address that should receive the link to the upgraded database"
-msgstr ""
+msgstr "应收到升级数据库链接的**电子邮件**地址"
 
 #: ../../content/administration/upgrade.rst:106
 msgid ""
@@ -9607,6 +9611,8 @@ msgid ""
 "the upgrade process can be found in your newly upgraded staging build by "
 "going to :file:`~/logs/upgrade.log`."
 msgstr ""
+"一旦升级平台完成备份升级并将其上传到分支，它就会进入**特殊模式**：每次在分支上**推送提交**时，都会对升级后的备份进行**恢复操作**，并**更新所有自定义模块**。这样，您就可以在升级数据库的原始副本上测试自定义模块。升级过程的日志文件可通过"
+" :file:`~/logs/upgrade.log` 在新升级的暂存构建中找到。"
 
 #: ../../content/administration/upgrade.rst:138
 msgid ""
@@ -9616,17 +9622,19 @@ msgid ""
 "upgraded database is built as soon as it is transferred from the upgrade "
 "platform, and the upgrade mode is exited."
 msgstr ""
+"在安装了自定义模块的数据库中，在执行升级之前，其源代码必须与目标版本的 Odoo "
+"一致。如果没有自定义模块，将跳过“提交时更新”模式，升级后的数据库将在从升级平台传输过来后立即构建，并退出升级模式。"
 
 #: ../../content/administration/upgrade.rst:143
 msgid ""
 "Check out the :doc:`/developer/howtos/upgrade_custom_db` page for more "
 "information."
-msgstr ""
+msgstr "请查看 :doc:`/developer/howtos/upgrade_custom_db` 页面获取更多信息。"
 
 #: ../../content/administration/upgrade.rst:145
 #: ../../content/administration/upgrade.rst:341
 msgid "On-premise"
-msgstr ""
+msgstr "本地安装"
 
 #: ../../content/administration/upgrade.rst:147
 msgid ""
@@ -9692,12 +9700,14 @@ msgid ""
 "etc.). This is the folder that should be merged with the production "
 "filestore in order to get the full upgraded filestore."
 msgstr ""
+"`文件库`文件夹，包含从数据库内记录提取到附件（如有）的文件，以及目标 Odoo 版本的新标准 Odoo "
+"文件（如新图像、图标、支付提供商徽标等）。该文件夹应与生产文件库合并，以获得完整的升级文件库。"
 
 #: ../../content/administration/upgrade.rst:185
 msgid ""
 "You can request multiple test databases if you wish to test an upgrade more "
 "than once."
-msgstr ""
+msgstr "如果您希望多次测试升级，可以申请多个测试数据库。"
 
 #: ../../content/administration/upgrade.rst:190
 msgid ""
@@ -9707,66 +9717,68 @@ msgid ""
 "provides important information about the changes introduced by the new "
 "version."
 msgstr ""
+"升级请求完成后，升级成功邮件会附上一份升级报告，属于 “管理/设置” "
+"组的用户可在内部讨论应用程序中查看该报告。该报告提供了有关新版本所引入更改的重要信息。"
 
 #: ../../content/administration/upgrade.rst:198
 msgid "Testing the new version of the database"
-msgstr ""
+msgstr "测试新版数据库"
 
 #: ../../content/administration/upgrade.rst:200
 msgid ""
 "It is essential to spend some time testing the upgraded test database to "
 "ensure that you are not stuck in your day-to-day activities by a change in "
 "views, behavior, or an error message once the upgrade goes live."
-msgstr ""
+msgstr "有必要花一些时间测试升级后的测试数据库，以确保在升级上线后，不会因为视图、行为或错误信息的变化而导致日常活动无法进行。"
 
 #: ../../content/administration/upgrade.rst:205
 msgid ""
 "Test databases are neutralized, and some features are disabled to prevent "
 "them from impacting the production database:"
-msgstr ""
+msgstr "测试数据库被中性化，一些功能被禁用，以防止它们影响生产数据库："
 
 #: ../../content/administration/upgrade.rst:208
 msgid "Scheduled actions are disabled."
-msgstr ""
+msgstr "计划的操作已禁用。"
 
 #: ../../content/administration/upgrade.rst:209
 msgid ""
 "Outgoing mail servers are disabled by archiving the existing ones and adding"
 " a fake one."
-msgstr ""
+msgstr "通过将现有邮件服务器存档并添加一个假服务器来禁用外发邮件服务器。"
 
 #: ../../content/administration/upgrade.rst:210
 msgid ""
 "Payment providers and delivery carriers are reset to the test environment."
-msgstr ""
+msgstr "支付提供商和快递公司将重置到测试环境中。"
 
 #: ../../content/administration/upgrade.rst:211
 msgid ""
 "Bank synchronization is disabled. Should you want to test the "
 "synchronization, contact your bank synchronization provider to get sandbox "
 "credentials."
-msgstr ""
+msgstr "银行同步已禁用。如果您想测试同步，请联系银行同步提供商获取沙盒凭证。"
 
 #: ../../content/administration/upgrade.rst:214
 msgid ""
 "Testing as many of your business flows as possible is strongly recommended "
 "to ensure they are working correctly and to get more familiar with the new "
 "version."
-msgstr ""
+msgstr "强烈建议尽可能多地测试业务流程，以确保其正常运行，并进一步熟悉新版本。"
 
 #: ../../content/administration/upgrade.rst:217
 msgid "Basic test checklist"
-msgstr ""
+msgstr "基本测试清单"
 
 #: ../../content/administration/upgrade.rst:219
 msgid ""
 "Are there views that are deactivated in your test database but active in "
 "your production database?"
-msgstr ""
+msgstr "是否存在在测试数据库中停用但在生产数据库中激活的视图？"
 
 #: ../../content/administration/upgrade.rst:221
 msgid "Are your usual views still displayed correctly?"
-msgstr ""
+msgstr "您的常规视图是否仍能正确显示？"
 
 #: ../../content/administration/upgrade.rst:222
 msgid "Are your reports (invoice, sales order, etc.) correctly generated?"
@@ -9774,29 +9786,29 @@ msgstr ""
 
 #: ../../content/administration/upgrade.rst:223
 msgid "Are your website pages working correctly?"
-msgstr ""
+msgstr "您的网站页面是否正常运行？"
 
 #: ../../content/administration/upgrade.rst:224
 msgid ""
 "Are you able to create and modify records? (sales orders, invoices, "
 "purchases, users, contacts, companies, etc.)"
-msgstr ""
+msgstr "您是否能够创建和修改记录？(销售订单、发票、采购、用户、联系人、公司等）。"
 
 #: ../../content/administration/upgrade.rst:226
 msgid "Are there any issues with your mail templates?"
-msgstr ""
+msgstr "您的邮件模板有问题吗？"
 
 #: ../../content/administration/upgrade.rst:227
 msgid "Are there any issues with saved translations?"
-msgstr ""
+msgstr "已保存的翻译有问题吗？"
 
 #: ../../content/administration/upgrade.rst:228
 msgid "Are your search filters still present?"
-msgstr ""
+msgstr "您的搜索筛选器是否仍然存在？"
 
 #: ../../content/administration/upgrade.rst:229
 msgid "Can you export your data?"
-msgstr ""
+msgstr "能否导出数据？"
 
 #: ../../content/administration/upgrade.rst:233
 msgid ""
@@ -10015,7 +10027,7 @@ msgid ""
 "This allows the upgrade process to be synchronized with the deployment of "
 "the custom modules' upgraded source code. If there are no custom modules, "
 "the upgrade process is triggered immediately."
-msgstr ""
+msgstr "**一旦分支上有新的提交，就会触发**进程。这样，升级过程就能与定制模块升级源代码的部署同步。如果没有自定义模块，升级过程会立即触发。"
 
 #: ../../content/administration/upgrade.rst:332
 msgid ""
@@ -10023,7 +10035,7 @@ msgid ""
 "the platform automatically reverts the upgrade, as it would be for a regular"
 " update. In case of success, a backup of the database before the upgrade is "
 "created."
-msgstr ""
+msgstr "在整个过程中，数据库都不可用。如果出现任何问题，平台会自动恢复升级，就像常规升级一样。如果升级成功，则会创建升级前的数据库备份。"
 
 #: ../../content/administration/upgrade.rst:336
 msgid ""
@@ -10033,13 +10045,16 @@ msgid ""
 "how to upgrade your custom modules can be found on "
 ":doc:`/developer/howtos/upgrade_custom_db`."
 msgstr ""
+"自定义模块的更新必须成功，才能完成整个升级过程。在生产中尝试升级之前，请确保暂存升级的状态为 "
+":guilabel:`成功`。有关如何升级自定义模块的更多信息，请参阅 "
+":doc:`/developer/howtos/upgrade_custom_db`。"
 
 #: ../../content/administration/upgrade.rst:343
 msgid ""
 "The command to upgrade a database to production is similar to the one of "
 "upgrading a test database except for the argument `test`, which must be "
 "replaced by `production`:"
-msgstr ""
+msgstr "将数据库升级到生产数据库的指令与升级测试数据库的指令类似，只是参数 `test` 必须用 `生产` 代替："
 
 #: ../../content/administration/upgrade.rst:350
 msgid ""
@@ -10049,6 +10064,8 @@ msgid ""
 "upgraded database. This is why we recommend not using it during the upgrade "
 "process."
 msgstr ""
+"也可通过`升级`页面 <https://upgrade.odoo.com/>`_ "
+"申请升级生产数据库。一旦上传了数据库，对生产数据库的任何修改都将**不会**出现在升级后的数据库中。因此，我们建议在升级过程中不要使用它。"
 
 #: ../../content/administration/upgrade.rst:357
 msgid ""
@@ -10056,7 +10073,7 @@ msgid ""
 "submitted without a filestore. Therefore, the upgraded database filestore "
 "must be merged with the production filestore before deploying the new "
 "version."
-msgstr ""
+msgstr "为生产目的申请升级数据库时，提交的副本不带文件库。因此，在部署新版本之前，必须将升级后的数据库文件存储与生产文件存储合并。"
 
 #: ../../content/administration/upgrade.rst:361
 msgid ""
@@ -10065,51 +10082,53 @@ msgid ""
 "<https://odoo.com/help?stage=post_upgrade>`__ by selecting the option "
 "related to the upgrade in production."
 msgstr ""
+"如果您的生产数据库出现问题，您可以通过 `支持` 页面 <https://odoo.com/help?stage=post_upgrade>`__ "
+"选择与生产升级相关的选项，请求 Odoo 的帮助。"
 
 #: ../../content/administration/upgrade.rst:369
 msgid "Service-level agreement (SLA)"
-msgstr ""
+msgstr "服务水平协议（SLA）"
 
 #: ../../content/administration/upgrade.rst:371
 msgid ""
 "With Odoo Enterprise, upgrading a database to the most recent version of "
 "Odoo is **free**, including any support required to rectify potential "
 "discrepancies in the upgraded database."
-msgstr ""
+msgstr "使用 Odoo 企业版，将数据库升级到最新版本 Odoo 完全 **免费**，包括为纠正升级后数据库中潜在差异所需的任何支持。"
 
 #: ../../content/administration/upgrade.rst:374
 msgid ""
 "Information about the upgrade services included in the Enterprise Licence is"
 " available in the :ref:`Odoo Enterprise Subscription Agreement <upgrade>`. "
 "However, this section clarifies what upgrade services you can expect."
-msgstr ""
+msgstr "有关企业许可证中包含的升级服务的信息，请参阅 :ref:`Odoo 企业订阅协议<upgrade>`。本节将说明您可以期待哪些升级服务。"
 
 #: ../../content/administration/upgrade.rst:379
 msgid "Upgrade services covered by the SLA"
-msgstr ""
+msgstr "服务水平协议涵盖的升级服务"
 
 #: ../../content/administration/upgrade.rst:381
 msgid ""
 "Databases hosted on Odoo's cloud platforms (Odoo Online and Odoo.sh) or "
 "self-hosted (On-Premise) can benefit from upgrade services at all times for:"
-msgstr ""
+msgstr "在 Odoo 云平台（Odoo 云端版和 Odoo.sh）上托管的数据库或自行托管的数据库（On-Premise）可随时享受升级服务："
 
 #: ../../content/administration/upgrade.rst:384
 msgid "the upgrade of all **standard applications**;"
-msgstr ""
+msgstr "升级所有**标准应用程序**；"
 
 #: ../../content/administration/upgrade.rst:385
 msgid ""
 "the upgrade of all **customizations created with the Studio app**, as long "
 "as Studio is still installed and the respective subscription is still "
 "active; and"
-msgstr ""
+msgstr "升级所有使用定制应用程序**创建的**定制功能，前提是仍安装定制应用程序，且相关订阅仍处于激活状态；以及"
 
 #: ../../content/administration/upgrade.rst:387
 msgid ""
 "the upgrade of all **developments and customizations covered by a "
 "maintenance of customizations subscription**."
-msgstr ""
+msgstr "升级定制维护订购**所涵盖的所有**开发和定制。"
 
 #: ../../content/administration/upgrade.rst:390
 msgid ""
@@ -10135,7 +10154,7 @@ msgstr "在升级时**清除**已有的数据和配置；"
 msgid ""
 "the upgrade of **custom modules created in-house or by third parties**, "
 "including Odoo partners;"
-msgstr ""
+msgstr "升级内部或第三方**（包括 Odoo 合作伙伴）创建的**定制模块；"
 
 #: ../../content/administration/upgrade.rst:400
 msgid ""
@@ -10143,10 +10162,12 @@ msgid ""
 "outside the Studio app, code entered manually, and :ref:`automated actions "
 "using Python code <studio/automated-actions/action>`; and"
 msgstr ""
+"**添加到标准模块的行代码**，即在定制应用程序之外创建的定制功能、手动输入的代码，以及 :ref:` 使用 Python 代码 "
+"<studio/automated-actions/action>` 的自动操作；以及"
 
 #: ../../content/administration/upgrade.rst:403
 msgid "**training** on using the upgraded version's features and workflows."
-msgstr ""
+msgstr "关于使用升级版功能和工作流程的**培训**。"
 
 #: ../../content/administration/upgrade.rst:406
 msgid ":doc:`Odoo.sh documentation <odoo_sh>`"
