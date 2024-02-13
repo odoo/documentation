@@ -12,6 +12,7 @@ Miscellaneous
     general/reporting
     general/email_communication
     general/voip
+    general/geolocation
     general/digest_emails
     general/in_app_purchase
     general/developer_mode
