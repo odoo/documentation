@@ -193,6 +193,7 @@ proceed as follows:
    Providers`.
 #. Select the provider and configure the :guilabel:`Credentials` tab.
 #. Set the :guilabel:`State` field to :guilabel:`Enabled`.
+#. Select a :ref:`payment journal <payment_providers/journal>`.
 
 .. note::
    - The fields available in the :guilabel:`Credentials` tab depend on the payment provider. Refer
@@ -341,7 +342,6 @@ Availability
 You can adapt the payment provider's availability by specifying the :guilabel:`Maximum Amount`
 allowed and modifying the :guilabel:`Currencies` and :guilabel:`Countries` in the
 :guilabel:`Configuration` tab.
-
 
 .. _payment_providers/currencies_countries:
 
