@@ -193,6 +193,7 @@ proceed as follows:
    Providers`.
 #. Select the provider and configure the :guilabel:`Credentials` tab.
 #. Set the :guilabel:`State` field to :guilabel:`Enabled`.
+#. Select a :ref:`payment journal <payment_providers/journal>`.
 
 .. note::
    - The fields available in the :guilabel:`Credentials` tab depend on the payment provider. Refer
@@ -227,7 +228,7 @@ Payment form
 
 You can change the payment provider’s appearance on your website in the :guilabel:`Configuration`
 tab of the selected payment provider. Modify its name in the :guilabel:`Displayed as` field and
-adapt the :guilabel:`Supported Payment Icons` if necessary.
+adapt the list of :guilabel:`Supported Payment Methods` if necessary.
 
 .. _payment_providers/tokenization:
 
@@ -345,7 +346,6 @@ Availability
 You can adapt the payment provider's availability by specifying the :guilabel:`Maximum Amount`
 allowed and modifying the :guilabel:`Currencies` and :guilabel:`Countries` in the
 :guilabel:`Configuration` tab.
-
 
 .. _payment_providers/currencies_countries:
 
