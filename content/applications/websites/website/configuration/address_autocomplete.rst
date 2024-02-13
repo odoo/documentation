@@ -24,6 +24,8 @@ the :guilabel:`SEO` section.
 Insert your :guilabel:`Google Places API key` in the :guilabel:`API Key` field. If you don't have one, create yours on
 the `Google Cloud Console <https://console.cloud.google.com/getting-started>`_ and follow these steps.
 
+.. _address_autocomplete/generate_api_key:
+
 Step 1: Enable the Google Places API
 ====================================
 
