@@ -19,10 +19,10 @@ The pairing code does not show under the following circumstances:
   It is automatically removed from connected displays when this time has expired.
 - The version of the :abbr:`IoT (Internet of Things)` box image is too old. If the :abbr:`IoT
   (Internet of Things)` box image is from an earlier version, then the SD card of the :abbr:`IoT
-  (Internet of Things)` box will need to be re-flashed to update the image (see :doc:`Flashing the
-  SD Card <flash_sdcard>`).
+  (Internet of Things)` box needs to be re-flashed to update the image (see :ref:`Flashing the SD
+  Card <iot/config/flash>`).
 
-If none of the cases listed above correct the issue, then make sure that the :abbr:`IoT (Internet of
+If none of the cases listed above correct the issue, then make sure the :abbr:`IoT (Internet of
 Things)` box has correctly started, by checking that a fixed green LED is showing next to the power
 port.
 
