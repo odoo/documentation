@@ -37,8 +37,8 @@ via :ref:`WiFi <iot_connect/wifi>`.
 .. important::
    The disk image that the :abbr:`IoT (Internet of Things)` box SD card is formatted with is unique
    to the version of the Odoo database that the :abbr:`IoT (Internet of Things)` box is running on.
-   Ensure that the :abbr:`IoT (Internet of Things)` box is :doc:`flashed <flash_sdcard>` with the
-   most up-to-date disk image.
+   Ensure that the :abbr:`IoT (Internet of Things)` box is :ref:`flashed <iot/config/flash>` with
+   the most up-to-date disk image.
 
 .. _iot_connect/ethernet:
 
