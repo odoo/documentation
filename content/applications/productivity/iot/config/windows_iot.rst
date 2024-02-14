@@ -29,7 +29,7 @@ installation.
 - Windows computer (laptop, desktop, or server).
 - Odoo :abbr:`IoT (Internet of Things)` subscription. Refer to: :ref:`iot/iot-eligibility`.
 
-Connect the Windows virtual Iot box to an Odoo database
+Connect the Windows virtual IoT box to an Odoo database
 =======================================================
 
 The Windows virtual IoT box is simple to setup in just a few easy steps. Follow this process when
@@ -44,7 +44,7 @@ and setup the Odoo :file:`.exe` file. After the instructions screen, click :guil
 the installation and agree to the :abbr:`TOS (Terms of Service)`.
 
 During the next step of the installation, select :guilabel:`Odoo IoT` from the :guilabel:`Select the
-type of install` dropdown.
+type of install` drop-down menu.
 
 .. example::
    For reference, the following should be installed:
@@ -68,13 +68,13 @@ To complete the installation, select the :guilabel:`Destination Folder` and clic
    the hard drive.
 
 .. warning::
-   Odoo's Windows virtual IoT software shouldn't be installed inside any of the Window's User's
-   directories. Doing so won't allow for Nginx to initialize.
+   Odoo's Windows virtual IoT software should not be installed inside any of the Window's User's
+   directories. Doing so will not allow for Nginx to initialize.
 
 The installation may take a few minutes. When complete, click :guilabel:`Next` to continue.
 
 Ensure that the :guilabel:`Start Odoo` box is checked and click :guilabel:`Finish`. After
-installation, the Odoo server will run and automatically open `http://localhost:8069` on your web
+installation, the Odoo server will run and automatically open `http://localhost:8069` on a web
 browser. The webpage should display the :abbr:`IoT (Internet of Things)` box homepage.
 
 .. seealso::
@@ -160,7 +160,7 @@ firewall program. Windows has their own firewall as do other virus protection pr
 Making an exception on Windows Defender
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-It's possible to allow other devices to access the Windows virtual :abbr:`IoT (Internet of Things)`
+It is possible to allow other devices to access the Windows virtual :abbr:`IoT (Internet of Things)`
 box while keeping the firewall on. This is done by creating a rule on *Windows Defender* and
 allowing communication through port `8069`. The following process describes the steps to take in
 order to make this exception.
@@ -195,6 +195,111 @@ Finally, assign a new, unique name to the rule. For example, this name can be `O
 add a brief description in the :guilabel:`Description` field. Click :guilabel:`Finish` to complete
 the :guilabel:`Rule Configuration` wizard. Now, the new rule is active and devices can connect to
 the Windows virtual :abbr:`IoT (Internet of Things)` box.
+
+Worldline exception
+~~~~~~~~~~~~~~~~~~~
+
+*Worldline* is a payment terminal that can be connected to Odoo's *PoS* (point of sale) system. It
+allows for a comprehensive and fluid payment experience for customers. Worldline is available in
+Benelux (coalition of Belgium, the Netherlands, and Luxembourg).
+
+When using the Windows IoT server to connect the Worldline payment terminal, it is necessary to
+create an exception in the Windows firewall so that a connection can be made between the Odoo
+database/:abbr:`IoT (Internet of Things)` box and Worldline.
+
+.. seealso::
+   :doc:`../../../sales/point_of_sale/payment_methods/terminals/worldline`
+
+To create the exception, first, open the *Windows Defender Firewall* app on the Windows machine.
+This can be accomplished by typing `windows defender` in the :guilabel:`Search` bar.
+
+Next, click :guilabel:`Advanced settings` in the left menu.
+
+.. image:: windows_iot/advanced-settings.png
+   :align: center
+   :alt: Advanced settings option highlighted in the left pane of the Windows Defender Firewall app.
+
+In the left menu, choose :guilabel:`Inbound Rules`.
+
+.. image:: windows_iot/inbound-rules.png
+   :align: center
+   :alt: Windows Defender left window pane with inbound rules menu item highlighted.
+
+After selecting :guilabel:`Inbound Rules`, select :guilabel:`New Rule` in the far right menu.
+
+.. image:: windows_iot/new-rule.png
+   :align: center
+   :alt: New rule dropdown shown with new rule option highlighted.
+
+Then, for the :guilabel:`Rule Type`, select the radio button for :guilabel:`Port`. Click
+:guilabel:`Next` to continue to the rest of the configuration.
+
+.. image:: windows_iot/radio-port.png
+   :align: center
+   :alt: Rule Type window open, with the radio button next to port highlighted.
+
+On the :guilabel:`Protocols and Ports` page, choose the radio button for :guilabel:`TCP`, under
+:guilabel:`Does this rule apply to TCP or UDP?`.
+
+Next, under :guilabel:`Does this rule apply to all local ports or specific ports?`, select the radio
+button for :guilabel:`Specific local ports`. Then, enter `9050`, and click :guilabel:`Next` to
+continue.
+
+.. image:: windows_iot/protocol-port.png
+   :align: center
+   :alt: Protocol/port configuration window with TCP, specific port (9050) and Next highlighted.
+
+The next screen is the :guilabel:`Action` page. Under :guilabel:`What action should be taken when a
+connection matches the specified conditions?`, choose the radio button for :guilabel:`Allow the
+connection`. Then, click :guilabel:`Next` to continue.
+
+A :guilabel:`Profile` page appears. Under :guilabel:`When does this rule apply?`, leave the three
+boxes checked for: :guilabel:`Domain`, :guilabel:`Private`, and :guilabel:`Public`. Click
+:guilabel:`Next` to continue to the naming convention page.
+
+On the :guilabel:`Name` page, enter `Odoo Worldline`, under the :guilabel:`Name` field. Enter a
+:guilabel:`Description (optional)`. Finally, once ready, click :guilabel:`Finish`.
+
+The final :guilabel:`Inbound rule` should appear as follows:
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+
+   * -
+     - Odoo Worldline
+   * - Profile
+     - All
+   * - Enabled
+     - Yes
+   * - Action
+     - Allow
+   * - Override
+     - No
+   * - Program
+     - Any
+   * - Local Address
+     - Any
+   * - Remote Address
+     - Any
+   * - Protocol
+     - TCP
+   * - Local Port
+     - 9050
+   * - Remote Port
+     - Any
+   * - Authorized Users
+     - Any
+   * - Authorized Computers
+     - Any
+   * - Authorized Local Principals
+     - Any
+   * - Local User Owner
+     - Any
+   * - PolicyAppld
+     - None
+   * - Application Package
+     - Any
 
 Uninstalling Windows IoT
 ------------------------
