@@ -870,7 +870,12 @@ abbr {
 //(ex: https://www.odoo.com/documentation/master/developer/reference/backend/orm.html#fields)
 
 .sig {
-    font-size: 0.875rem;
+    background: #F2F2F2;
+    padding: 8px;
+    border: 1px solid $o-gray-border;
+    border-bottom: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
     .sig-prename {
         padding-left: .3rem;
 
@@ -896,14 +901,103 @@ abbr {
     }
 }
 
-dl.py, dl.js, dl.o-definition-list {
-    > dd {
-        margin-top: -0.075rem;
-        padding-left: $o-padding-s;
-        padding-top: $o-padding-xs;
-        border-left: 3px solid $o-literals-border;
+.py, .js {
+    p {
+        margin-bottom: 0;
+
+        &:has(+ div.alert) {
+            margin-bottom: 0;
+        }
     }
 
+    & > dd {
+        border: 1px solid $o-gray-border;
+        border-top: none;
+        border-bottom-left-radius: .25rem;
+        border-bottom-right-radius: .25rem;
+    }
+
+    dd {
+        .sig {
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            padding: 8px 0;
+            font-weight: $font-weight-bold;
+        }
+
+        dd {
+            border: none;
+            border-radius: 0;
+        }
+
+        > dl.o-definition-list {
+            border: none;
+            border-radius: 0;
+            padding: 0;
+        }
+
+        > p:not(:last-child) {
+            padding: 1rem;
+            border-top: 1px solid $o-gray-border;
+            border-bottom: 1px solid $o-gray-border;
+
+            &:has(+ p) {
+                border-bottom: none;
+            }
+        }
+        
+        > p {
+            padding: .5rem 0;
+        }
+        
+        &.field-odd, &.field-even {
+            > p {
+                padding: 0;
+            }
+        }
+
+        > dl.attribute {
+            margin: 1rem;
+            font-size: .90rem;
+            dt {
+                border-left: 4px solid $o-gray-border;
+                padding: 0;
+            }
+
+            dd {
+                border: none;
+            }
+        }
+    }
+
+    dl > dt, dl > dd {
+        margin-top: .75rem;
+        
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+
+    .alert {
+        margin: 1rem !important;
+        border-radius: .25rem;
+
+        + dl.field-list {
+            padding-top: 0;
+        }
+    }
+
+    .method {
+        margin: 1rem;
+    }
+}
+
+.py ul {
+    margin: 1rem 0;
+}
+
+dl.js, dl.o-definition-list {
     &.class em.property {
         font-size: $font-size-sm;
 
@@ -918,12 +1012,91 @@ dl.py, dl.js, dl.o-definition-list {
     }
 }
 
+.o-definition-list dd {
+    margin-bottom: 1rem;
+
+    &:has(.o-definition-list) {
+        margin-bottom: 0.5rem;
+    }
+
+    > p:last-child {
+        margin-bottom: 0;
+    }
+
+    .o-definition-list > dt:not(:first-of-type) {
+        border-top: 1px solid $o-gray-border;
+        padding-top: 1.25em;
+    }
+}
+
+dd > dl.o-definition-list {
+    border: 1px solid $o-gray-border;
+    border-radius: .25rem;
+    padding: 1rem;
+}
+
+.o-definition-list dt {
+    font-weight: bold;
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
+    color: #2a2a2a;
+}
+
+.o-definition-list dt em {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.8rem;
+    color: $text-muted;
+    margin-left: .5rem;
+}
+
+.field-details {
+    padding: 1rem;
+    border-left: 5px solid #eee;
+    background: #f9f9f9;
+    border-radius: .25rem;
+}
+
+.field-details summary {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.field-details .o-definition-list.simple > dt {
+    margin-top: 1.5rem;
+
+    &:not(:first-of-type) {
+        padding-top: 0;
+        border-top: none;
+    }
+}
+
+em[data-status]::before {
+    content: "";
+    display: inline-block;
+    width: .5em;
+    height: .5em;
+    border-radius: 50%;
+    margin-right: .5em;
+    vertical-align: middle;
+}
+
+em[data-status="required"]::before {
+    background-color: #e67e22;
+}
+
+em[data-status="optional"]::before {
+    background-color: #95a5a6;
+}
+
+
 // The field-lists are generated Parameters and Arguments
 // within the References (ex: https://www.odoo.com/documentation/master/developer/reference/backend/orm.html#odoo.fields.Field)
 dl.field-list {
-    padding: .5rem;
-    border: 1px solid $o-gray-border;
     @include font-size($font-size-sm);
+    padding: 1rem;
 
     @include media-breakpoint-down(lg) {
         display: block;

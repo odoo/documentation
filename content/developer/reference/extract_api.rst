@@ -1,3 +1,11 @@
+.. |req| raw:: html
+
+    <em data-status="required">required</em>
+
+.. |opt| raw:: html
+
+    <em data-status="optional">optional</em>
+    
 ===========
 Extract API
 ===========
@@ -81,97 +89,92 @@ Request
 
 .. rst-class:: o-definition-list
 
-``jsonrpc`` (required)
+jsonrpc |req|
     see JSON-RPC2_
-``method`` (required)
+
+method |req|
     see JSON-RPC2_
-``id`` (required)
+
+id |req|
     see JSON-RPC2_
-``params``
+
+params
+    The object containing the actual request data.
+
     .. rst-class:: o-definition-list
 
-    ``account_token`` (required)
+    ``account_token`` |req|
         The token of the :doc:`IAP </applications/essentials/in_app_purchase>` account from which
         credits will be charged. Each successful call costs one credit.
-    ``version`` (required)
+
+    ``version`` |req|
         The version will determine the format of your requests and the format of the server response.
         You should use the :ref:`latest version available <extract_api/version>`.
-    ``documents`` (required)
+
+    ``documents`` |req|
         The document must be provided as a Base64 string in the ASCII encoding.
         The list should contain only one document. This field is a list only for legacy reasons.
         The supported formats are *pdf*, *png* and *jpg*.
-    ``dbuuid`` (optional)
+
+    ``dbuuid`` |opt|
         Unique identifier of the Odoo database.
-    ``webhook_url`` (optional)
+
+    ``webhook_url`` |opt|
         A webhook URL can be provided. An empty POST request will be sent to
         ``webhook_url/document_token`` when the result is ready.
-    ``user_infos`` (optional)
+
+    ``user_infos`` |opt|
         Information concerning the person sending the document to the extract service. It can be
         the client or the supplier (depending on the ``perspective``). This information is not
         required in order for the service to work but it greatly improves the quality of the result.
 
-        .. rst-class:: o-definition-list
+        .. raw:: html
 
-        ``user_company_vat`` (optional)
+            <details class="field-details">
+            <summary><strong>Show properties</strong></summary>
+
+        .. rst-class:: o-definition-list simple
+
+        ``user_company_vat`` |opt|
             VAT number of the user.
-        ``user_company_name`` (optional)
+
+        ``user_company_name`` |opt|
             Name of the user’s company.
-        ``user_company_country_code`` (optional)
+
+        ``user_company_country_code`` |opt|
             Country code of the user. Format:
             `ISO3166 alpha-2 <https://www.iban.com/country-codes>`_.
-        ``user_lang`` (optional)
-            The user language. Format: *language_code + _ + locale* (e.g. fr_FR, en_US).
-        ``user_email`` (optional)
-            The user email.
-        ``purchase_order_regex`` (optional)
-            Regex for purchase order identification. Will default to Odoo PO format if not provided.
-        ``perspective`` (optional)
-            .. rst-class:: o-definition-list
 
+        ``user_lang`` |opt|
+            The user language. Format: *language_code + _ + locale* (e.g. fr_FR, en_US).
+
+        ``user_email`` |opt|
+            The user email.
+
+        ``purchase_order_regex`` |opt|
+            Regex for purchase order identification. Will default to Odoo PO format if not provided.
+
+        ``perspective`` |opt|
             Can be ``client`` or ``supplier``. This field is useful for invoices only.
             ``client`` means that the user information provided are related to the client of the
-            invoice.
-            ``supplier`` means that it's related to the supplier.
-            If not provided, client will be used.
+            invoice. ``supplier`` means that it's related to the supplier.
+            If not provided, `client` will be used.
 
-.. code-block:: js
+        .. raw:: html
 
-    {
-        "jsonrpc": "2.0",
-        "method": "call",
-        "params": {
-            "account_token": string,
-            "version": int,
-            "documents": [string],
-            "dbuuid": string,
-            "webhook_url": string,
-            "user_infos": {
-                "user_company_vat": string,
-                "user_company_name": string,
-                "user_company_country_code": string,
-                "user_lang": string,
-                "user_email": string,
-                "purchase_order_regex": string,
-                "perspective": string,
-            },
-        },
-        "id": string,
-    }
+            </details>
 
-.. note::
-    The ``user_infos`` parameter is optional but it greatly improves the quality of the result,
-    especially for invoices. The more information you can provide, the better.
 
 Response
---------
+-------
 
 .. rst-class:: o-definition-list
 
-``jsonrpc``
+jsonrpc
     see JSON-RPC2_
-``id``
+id
     see JSON-RPC2_
-``result``
+result
     .. rst-class:: o-definition-list
 
     ``status``
@@ -226,20 +229,20 @@ Request
 
 .. rst-class:: o-definition-list
 
-``jsonrpc`` (required)
+jsonrpc |req|
     see JSON-RPC2_
-``method`` (required)
+method |req|
     see JSON-RPC2_
-``id`` (required)
+id |req|
     see JSON-RPC2_
-``params``
+params
     .. rst-class:: o-definition-list
 
-    ``version`` (required)
+    ``version`` |req|
         The version should match the version passed to the :ref:`/parse <extract_api/parse>` request.
-    ``document_token`` (required)
+    ``document_token`` |req|
         The ``document_token`` for which you want to get the current parsing status.
-    ``account_token`` (required)
+    ``account_token`` |req|
         The token of the |IAP| account that was used to submit the document.
 
 .. code-block:: js
@@ -264,11 +267,11 @@ are the name of the field and the value is the value of the field.
 
 .. rst-class:: o-definition-list
 
-``jsonrpc``
+jsonrpc
     see JSON-RPC2_
-``id``
+id
     see JSON-RPC2_
-``result``
+result
     .. rst-class:: o-definition-list
 
     ``status``
@@ -278,10 +281,8 @@ are the name of the field and the value is the value of the field.
     ``results``
         Only present if the request is successful.
 
-        .. rst-class:: o-definition-list
-
-        ``full_text_annotation``
-            Contains the unprocessed full result from the |OCR| for the document.
+    ``full_text_annotation``
+        Contains the unprocessed full result from the |OCR| for the document.
 
 ================================  =============================================================
 status                            status_msg
@@ -335,11 +336,11 @@ to be the best fit for the feature.
 
 .. rst-class:: o-definition-list
 
-``selected_value`` (optional)
+``selected_value`` |opt|
     The best candidate for this feature.
-``selected_values`` (optional)
+``selected_values`` |opt|
     The best candidates for this feature.
-``candidates`` (optional)
+``candidates`` |opt|
     List of all the candidates for this feature ordered by decreasing confidence score.
 
 .. code-block:: js
@@ -349,7 +350,7 @@ to be the best fit for the feature.
        "candidates": [candidate_12, candidate_3, candidate_4, ...]
    }
 
-candidate
+Candidate
 *********
 
 For each candidate we give its representation and position in the document. Candidates are sorted
