@@ -1,6 +1,6 @@
-====================
-Create new employees
-====================
+=============
+New employees
+=============
 
 When a new employee is hired, the first step is to create a new employee record. This record is a
 centralized place where all important information about the employee is stored, including
@@ -347,15 +347,43 @@ information for the new employee:
   the :guilabel:`Default Role` fields. If the :guilabel:`Default Role` is selected as a role, it is
   automatically added to the list of :guilabel:`Roles`.
 
-  .. important::
-     The :guilabel:`Planning` section affects the *Planning* application and **only** appears if the
-     *Planning* application is installed.
+.. important::
+   The users that appear in the drop-down menu for the :guilabel:`Approvers` section **must** have
+   *Administrator* rights set for the corresponding human resources role.
 
-     If an employee has assigned :guilabel:`Roles`, they are **only** assigned to shifts for these
-     roles.
+   To check who has these rights, go to :menuselection:`Settings app --> Users --> → Manage Users`.
+   Click on an employee, and check the :guilabel:`Human Resources` section of the :guilabel:`Access
+   Rights` tab.
 
-     If this field is blank, they are assigned shifts, regardless of the role. The
-     :guilabel:`Default Role` has precedence over the other roles when assigning shifts.
+   - In order for the user to appear as an approver for :guilabel:`Expenses`, they **must** have
+     either :guilabel:`Team Approver`, :guilabel:`All Approver`, or :guilabel:`Administrator` set
+     for the :guilabel:`Expenses` role.
+   - In order for the user to appear as an approver for :guilabel:`Time Off`, they **must** have
+     either :guilabel:`Officer` or :guilabel:`Administrator` set for the :guilabel:`Time Off` role.
+   - In order for the user to appear as an approver for :guilabel:`Timesheets`, they **must** have
+     either :guilabel:`Manager`, :guilabel:`Officer`, or :guilabel:`Administrator` set for the
+     :guilabel:`Payroll` role.
+
+.. note::
+   :guilabel:`Working Hours` are related to a company's working times, and an employee **cannot**
+   have working hours that are outside of a company's working times.
+
+   Each individual working time is company-specific. So, for multi-company databases, each company
+   **must** have its own working hours set.
+
+   If an employee's working hours are not configured as a working time for the company, new working
+   times can be added, or existing working times can be modified.
+
+   To add or modify a working time, go to the :menuselection:`Payroll app --> Configuration -->
+   Working Schedules`. Then, either add a new working time by clicking :guilabel:`New`, or edit an
+   existing one by selecting a :guilabel:`Working Time` from the list to modify it.
+
+   Refer to the :ref:`Working schedules <payroll/working-times>` section of the payroll
+   documentation for specific details on creating and editing working schedules.
+
+   After the new working time is created, or an existing one is modified, the :guilabel:`Working
+   Hours` can be set on the employee form. In the :guilabel:`Schedule` section of the
+   :guilabel:`Work Information` tab, select the employee's working hours using the drop-down menu.
 
 .. _employees/private-info:
 
