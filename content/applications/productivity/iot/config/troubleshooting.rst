@@ -11,12 +11,12 @@ Unable to locate the pairing code to connect the IoT box
 The pairing code should be printed on receipt printers connected to the :abbr:`IoT (Internet of
 Things)` box and should also be displayed on connected monitors.
 
-The pairing code doesn't show under the following circumstances:
+The pairing code does not show under the following circumstances:
 
 - The :abbr:`IoT (Internet of Things)` box is already connected to an Odoo database.
 - The :abbr:`IoT (Internet of Things)` box is not connected to the Internet.
 - The code is only valid for 5 minutes after the :abbr:`IoT (Internet of Things)` box has started.
-  It's automatically removed from connected displays when this time has expired.
+  It is automatically removed from connected displays when this time has expired.
 - The version of the :abbr:`IoT (Internet of Things)` box image is too old. If the :abbr:`IoT
   (Internet of Things)` box image is from an earlier version, then the SD card of the :abbr:`IoT
   (Internet of Things)` box will need to be re-flashed to update the image (see :doc:`Flashing the
@@ -26,13 +26,13 @@ If none of the cases listed above correct the issue, then make sure that the :ab
 Things)` box has correctly started, by checking that a fixed green LED is showing next to the power
 port.
 
-IoT box is connected but it's not showing in the database
----------------------------------------------------------
+IoT box is connected but it is not showing in the database
+----------------------------------------------------------
 
 When an :abbr:`IoT (Internet of Things)` box connects to a database, it may restart. If so, it can
 take up to five minutes before appearing in the database. If the :abbr:`IoT (Internet of Things)`
 box is still not showing after five minutes, make sure that the :abbr:`IoT (Internet of Things)` box
-can reach the database and that the server doesn't use a multi-database environment.
+can reach the database and that the server does not use a multi-database environment.
 
 To access the database from the :abbr:`IoT (Internet of Things)` box, open a browser and type in the
 database address.
@@ -44,8 +44,8 @@ Make sure that the :abbr:`IoT (Internet of Things)` box and the computer running
 located on the same network, as the :abbr:`IoT (Internet of Things)` box cannot be reached from
 outside the local network.
 
-The HTTPS certificate doesn't generate
---------------------------------------
+The HTTPS certificate does not generate
+---------------------------------------
 
 In order to generate a :abbr:`HTTPS (Hypertext Transfer Protocol Secure)` certificate, an IoT box
 subscription is required for the :abbr:`IoT (Internet of Things)` box. Connecting the :abbr:`IoT
@@ -68,7 +68,7 @@ Printer
 The printer is not detected
 ---------------------------
 
-If a printer doesn't show up in the devices list, go to the :abbr:`IoT (Internet of Things)` box
+If a printer does not appear in the devices list, go to the :abbr:`IoT (Internet of Things)` box
 homepage and make sure that it is listed under :guilabel:`Printers`.
 
 .. image:: troubleshooting/printer-status.png
@@ -77,7 +77,7 @@ homepage and make sure that it is listed under :guilabel:`Printers`.
 
 If the printer is not present on the :abbr:`IoT (Internet of Things)` box homepage, click
 :guilabel:`Printers Server`, go to the :guilabel:`Administration` tab and click on :guilabel:`Add
-Printer`. If the printer is not present in the list, it's likely not connected properly.
+Printer`. If the printer is not present in the list, it is likely not connected properly.
 
 The printer outputs random text
 -------------------------------
@@ -88,8 +88,9 @@ printer might print random characters.
 
 The solution is to manually select the corresponding driver. On the :abbr:`IoT (Internet of Things)`
 box homepage, click on :guilabel:`Printers Server`, go to the :guilabel:`Printers` tab and select
-the printer in the list. In the :guilabel:`Administration` dropdown, click on :guilabel:`Modify
-Printer`. Follow the steps and select the *make* and *model* corresponding to the printer.
+the printer in the list. In the :guilabel:`Administration` drop-down menu, click on
+:guilabel:`Modify Printer`. Follow the steps and select the *make* and *model* corresponding to the
+printer.
 
 .. image:: troubleshooting/modify-printer.png
    :align: center
@@ -161,7 +162,7 @@ that should be modified, and then click :guilabel:`Continue`.
 
 **CUPS naming convention**
 
-`CUPS` will prompt the admin for three pieces of information: the :guilabel:`Name`,
+`CUPS` will prompt the administrator for three pieces of information: the :guilabel:`Name`,
 :guilabel:`Description` and the :guilabel:`Location`. The last two pieces of information do not need
 to be specific, however, the :guilabel:`Name` should follow a particular convention to work with the
 `ESC *` command.
@@ -205,8 +206,8 @@ A breakdown of the naming convention:
    Improper name formatting (this will not prevent printing, but the result might not have the
    expected printed output):
 
-   - `EPSON TMm 30II` -> The name can't have spaces.
-   - `EPSONTMm30II` -> The name itself is correct, but it won't use `ESC *`.
+   - `EPSON TMm 30II` -> The name cannot have spaces.
+   - `EPSONTMm30II` -> The name itself is correct, but it will not use `ESC *`.
    - `EPSONTMm30II__IMC` -> This name is missing the end `__`.
    - `EPSONTMm30II__IMC_XDV__` -> The parameter `XDV` does not match any existing parameters.
    - `EPSONTMm30II__IMC_SCALE__` -> The parameter `SCALE` is missing the scale value.
@@ -225,8 +226,8 @@ just needs to detect it and then sync to Odoo's server (this could take a few mi
 
 **Adding the printer to Odoo PoS**
 
-Once the printer is visible on the Odoo database, don't forget to choose it in the :abbr:`PoS (Point
-of Sale)`configuration as the :abbr:`IoT (Internet of Things)` printer. Navigate to
+Once the printer is visible on the Odoo database, do not forget to choose it in the :abbr:`PoS
+(Point of Sale)`configuration as the :abbr:`IoT (Internet of Things)` printer. Navigate to
 :menuselection:`Pos App --> Settings --> Connected Devices --> IoT Box --> Receipt Printer -->
 Save`.
 
@@ -280,8 +281,8 @@ Save`.
    refreshing the page, the :guilabel:`Unknown` printer disappears. By plugging it back in, the
    printer reappears, so it can be said that this is the printer in question.
 
-   For the naming convention, since it will need to print using the `ESC *` command, it is
-   imperative to add `__IMC`. Reference the printer model on `Epson's ESC * site
+   For the naming convention, since it needs to print using the `ESC *` command, it is imperative to
+   add `__IMC`. Reference the printer model on `Epson's ESC * site
    <https://reference.epson-biz.com/modules/ref_escpos/index.php?content_id=88>`_ to find out more
    about the *density* parameters.
 
@@ -312,9 +313,9 @@ Save`.
       :align: center
       :alt: Epson TM-U220 specifications on manufacturers website.
 
-   However when trying to print with the naming convention: `EpsonTMU220B__IMC_LDV__`, it will print
-   the receipt, but it will be too big and outside the margin. To resolve this, add a new printer
-   (and naming convention) with the `SCALE<X>` parameter to adapt to our receipt size.
+   However, when trying to print with the naming convention: `EpsonTMU220B__IMC_LDV__`, it prints
+   the receipt, but it is too big and outside the margin. To resolve this, add a new printer (and
+   naming convention) with the `SCALE<X>` parameter to adapt to our receipt size.
 
    Here are some examples:
 
@@ -342,8 +343,8 @@ Save`.
              :align: center
              :alt: Receipt format using naming convention: EpsonTMU220B__IMC_LDV_LDH_SCALE35__.
 
-The Zebra printer doesn't print anything
-----------------------------------------
+The Zebra printer does not print anything
+-----------------------------------------
 
 Zebra printers are quite sensitive to the format of the Zebra Programming Language (ZPL) code that
 is printed. If nothing comes out of the printer or blank labels are printed, try changing the format
@@ -358,8 +359,8 @@ template.
 Barcode scanner
 ===============
 
-The characters read by the barcode scanner don't match the barcode
-------------------------------------------------------------------
+The characters read by the barcode scanner do not match the barcode
+-------------------------------------------------------------------
 
 By default, most barcode scanners are configured in the US QWERTY format. If the barcode scanner
 uses a different layout, go to the form view of the device (:menuselection:`IoT App --> Devices -->
@@ -386,6 +387,26 @@ Devices --> Barcode Device`) and activating the :guilabel:`Is scanner` option.
 .. image:: troubleshooting/barcode-scanner-settings.png
    :align: center
    :alt: Modifying the form view of the barcode scanner.
+
+Barcode scanner processes barcode characters individually
+---------------------------------------------------------
+
+When accessing the mobile version of Odoo from a mobile device, or tablet, paired with a barcode
+scanner, via the :abbr:`IoT (Internet of Things)` box, the scanner may process each barcode
+character as an individual scan. In this case, the *Keyboard Layout* option **must** be filled out
+with the appropriate language of the barcode scanner on the *Barcode Scanner* form page.
+
+.. tip::
+   Access the barcode scanner form page by navigating to :menuselection:`IoT App --> Devices -->
+   Barcode Scanner`.
+
+.. image:: troubleshooting/keyboard-layout.png
+   :align: center
+   :alt: Barcode scanner form page, with keyboard layout option highlighted.
+
+The :guilabel:`Keyboard Layout` is language based, and the options available vary, depending on the
+device and the language of the database. For example: :guilabel:`English (UK)`, :guilabel:`English
+(US)`, etc.
 
 Cash drawer
 ===========
