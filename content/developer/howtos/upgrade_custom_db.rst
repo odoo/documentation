@@ -26,7 +26,7 @@ modules requires additional steps in order to upgrade the source code.
 
 These are the steps to follow to upgrade customized databases:
 
-#. :ref:`Stop the devolopments and challenge them <upgrade_custom/stop_developments>`.
+#. :ref:`Stop the developments and challenge them <upgrade_custom/stop_developments>`.
 #. :ref:`Request an upgraded database <upgrade_custom/request_upgrade>`.
 #. :ref:`Make your module installable on an empty database <upgrade_custom/empty_database>`.
 #. :ref:`Make your module installable on the upgraded database <upgrade_custom/upgraded_database>`.
