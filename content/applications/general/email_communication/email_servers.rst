@@ -23,7 +23,7 @@ standard online Odoo database normally since it has already been pre-configured 
 Scope of this documentation
 ===========================
 
-This document is **mainly dedicated to Odoo on-premise databases** who don't benefit from an
+This document is **mainly dedicated to Odoo on-premise databases** that do not benefit from an
 out-of-the-box solution to send and receive emails in Odoo, unlike `Odoo Online <https://www.odoo.
 com/trial>`_ and `Odoo.sh <https://www.odoo.sh>`_. Incoming and outgoing servers must be configured
 for on-premise databases.
@@ -58,8 +58,8 @@ These notifications are sent using a default from address. For more information 
 Manage outbound messages
 ========================
 
-As a system admin, go to :menuselection:`Settings --> General Settings --> Discuss` in Odoo, and
-enable the :guilabel:`Custom Email Servers` option. Then, click :guilabel:`Save`. Next, click
+As a system administrator, go to :menuselection:`Settings --> General Settings --> Discuss` in Odoo,
+and enable the :guilabel:`Custom Email Servers` option. Then, click :guilabel:`Save`. Next, click
 :guilabel:`Outgoing Email Servers` and click :guilabel:`Create` to create a new outgoing mail server
 record in Odoo. Reference the SMTP data of the external email server. Once all the information has
 been filled out, click :guilabel:`Test Connection`.
@@ -208,7 +208,7 @@ Odoo relies on generic email aliases to fetch incoming messages.
 
 * **Reply messages** of messages sent from Odoo are routed to their original discussion thread (and
   to the inbox of all its followers) by the alias of the model if there is any or by the catchall
-  alias (**catchall@**). Replies to messages of models that don't have a custom alias will use the
+  alias (**catchall@**). Replies to messages of models that do not have a custom alias will use the
   catchall alias (`catchall@mycompany.odoo.com`). The catchall address, however, does not have
   another action attached to it like other aliases might, it is only used to collect replies.
 * **Bounced messages** are used as a Return-Path. One example this is especially
@@ -265,7 +265,7 @@ To edit catchall and bounce aliases, first activate the :ref:`developer mode <de
 Then, go to :menuselection:`Settings --> Technical --> Parameters --> System Parameters` to
 customize the aliases (`mail.catchall.alias` & `mail.bounce.alias`). These types of changes should
 be completed prior to the database going live. If a customer replies after a change is made then the
-system will not recognize the old alias and the reply won't be received.
+system will not recognize the old alias, and the reply will not be received.
 
 By default, inbound messages are fetched every 5 minutes for on-premise databases.
 
@@ -273,3 +273,37 @@ By default, inbound messages are fetched every 5 minutes for on-premise database
    This value can be changed in :ref:`developer mode <developer-mode>`. Go to
    :menuselection:`Settings --> Technical --> Automation --> Scheduled Actions` and look for
    :guilabel:`Mail: Fetchmail Service`.
+
+Allow alias domain system parameter
+-----------------------------------
+
+Incoming aliases are set in the Odoo database to create records by receiving incoming emails. To
+view aliases set in the Odoo database, first activate the :ref:`developer mode <developer-mode>`.
+Then, go to :menuselection:`Settings app --> Technical --> Email section --> Aliases`.
+
+The following system parameter, `mail.catchall.domain.allowed`, set with allowed alias domain
+values, separated by commas, filters out correctly addressed emails to aliases. Setting the
+domain(s) for which the alias can create a ticket, lead, opportunity, etc., eliminates false
+positives where email addresses with only the prefix alias (not the domain) are present.
+
+In some instances, matches have been made in the Odoo database when an email is received with the
+same alias prefix and a different domain on the incoming email address. This is true in the sender,
+recipient, and :abbr:`CC (Carbon Copy)` email addresses of an incoming email.
+
+.. example::
+   When Odoo receives emails that have the name `commercial` prefix alias in the sender, recipient,
+   or :abbr:`CC (Carbon Copy)` email address(es) (e.g. commercial@gmail.com, commercial@odoo.net),
+   the database falsely treats the email as the full `commercial` alias (with a different domain),
+   and therefore, creates a ticket/lead/opportunity/etc.
+
+To add the `mail.catchall.domain.allowed` system parameter, first, activate the :ref:`developer mode
+<developer-mode>`. Then, go to :menuselection:`Settings app --> Technical --> Parameters section -->
+System Parameters`. Click :guilabel:`Create`. Then, type in `mail.catchall.domain.allowed` for the
+:guilabel:`Key` field.
+
+Next, for the :guilabel:`Value` field, add the domain(s) separated by comma(s) (if plural domains).
+Manually :guilabel:`Save`, and the system parameter takes immediate effect.
+
+.. image:: email_servers/allowed-domain.png
+   :align: center
+   :alt: mail.catchall.domain.allowed system parameter set with key and value highlighted.
