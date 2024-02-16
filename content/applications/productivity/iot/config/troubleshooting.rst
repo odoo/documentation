@@ -99,6 +99,18 @@ Printer`. Follow the steps and select the *make* and *model* corresponding to th
    Epson and Star receipt printers and Zebra label printers do not need a driver to work. Make sure
    that no driver is selected for those printers.
 
+The printer is detected but is not recognized correctly
+-------------------------------------------------------
+
+If the printer is not recognized correctly by Odoo and the :abbr:`IoT (Internet of Things)` box, go
+to the form view of the device (:menuselection:`IoT App --> Devices -->Printer Device`) and change
+the subtype. The three options available are: :guilabel:`Receipt Printer`, :guilabel:`Label
+Printer`, and :guilabel:`Office Printer`.
+
+.. image:: troubleshooting/sub-type.png
+   :align: center
+   :alt: Sub-type selection in a printer IoT device.
+
 Epson configuration special case
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
