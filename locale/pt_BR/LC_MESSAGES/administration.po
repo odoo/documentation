@@ -135,7 +135,7 @@ msgid ""
 " (except for the source install)."
 msgstr ""
 "É possível :doc:`Mudar do Community para Enterprise <maintain/enterprise>` a"
-" qualquer momento (exceto para a instalação de origem)."
+" qualquer momento (exceto para a instalação da fonte)."
 
 #: ../../content/administration/install/cdn.rst:3
 msgid "Set up a content delivery network (CDN)"
@@ -265,12 +265,12 @@ msgid ""
 "when :doc:`Developer Mode <../../applications/general/developer_mode>` is "
 "activated."
 msgstr ""
-"No aplicativo Odoo :guilabel:`Website`, vá para :menuselection:`Definições` "
-"e, em seguida, ative a configuração :guilabel:`Content Delivery Network "
-"(CDN)` e copie/cole o valor do :guilabel:`URL de zona` da etapa anterior no "
-"campo :guilabel:`URL da base CDN`. Esse campo só é visível e configurável "
-"quando o :doc:`Modo desenvolvedor "
-"<../../applications/general/developer_mode>` está ativado."
+"No aplicativo Odoo :guilabel:`Site`, vá para :menuselection:`Definições` e, "
+"em seguida, ative a configuração :guilabel:`Content Delivery Network (CDN)` "
+"e copie/cole o valor do :guilabel:`URL de zona` da etapa anterior no campo "
+":guilabel:`URL da base CDN`. Esse campo só é visível e configurável quando o"
+" :doc:`Modo desenvolvedor <../../applications/general/developer_mode>` está "
+"ativado."
 
 #: ../../content/administration/install/cdn.rst:63
 msgid ""
@@ -306,7 +306,7 @@ msgid ""
 "tab inside of devtools."
 msgstr ""
 "No HTML do site da Odoo, a integração :abbr:`CDN (content delivery network)`"
-" é evidenciada como funcionando corretamente ao verificar o :abbr:`URL` das "
+" é ressaltada como funcionando corretamente ao verificar o :abbr:`URL` das "
 "imagens. O valor do *URL da base CDN* pode ser visto usando o recurso "
 ":guilabel:`Inspecionar` de seu navegador da web no site do Odoo. Procure seu"
 " registro pesquisando na aba :guilabel:`Network` dentro do devtools."
@@ -343,7 +343,7 @@ msgid ""
 msgstr ""
 "Se a opção :abbr:`CORS` não estiver ativada na :guilabel:`Zona CDN`, o "
 "problema mais óbvio resultante em um site padrão do Odoo será a falta de "
-"ícones do *Font Awesome* porque o arquivo de fonte declarado no CSS *Font "
+"ícones do *Font Awesome*, porque o arquivo de fonte declarado no CSS *Font "
 "Awesome* não será carregado do servidor remoto."
 
 #: ../../content/administration/install/cdn.rst:95
@@ -393,9 +393,9 @@ msgid ""
 " internet."
 msgstr ""
 "Este documento descreve as etapas básicas para configurar o Odoo em produção"
-" ou em um servidor voltado para a Internet. Ele segue o :doc:`installation "
-"<.../install>`, e geralmente não é necessário para sistemas de "
-"desenvolvimento que não estão expostos na internet."
+" ou em um servidor voltado para a Internet. Isso dá sequência à "
+":doc:`instalação <.../install>`, e geralmente não é necessário para sistemas"
+" de desenvolvimento que não estão expostos na internet."
 
 #: ../../content/administration/install/deploy.rst:10
 msgid ""
@@ -440,10 +440,10 @@ msgid ""
 "multiple databases accessible Odoo needs a rule to know which one it should "
 "use."
 msgstr ""
-"No entanto, isso é um problema para usuários não logados (portal, site) que "
-"não estão vinculados a uma base de dados: o Odoo precisa saber qual base de "
+"No entanto, é um problema para usuários não logados (portal, site) que não "
+"estão vinculados a uma base de dados: o Odoo precisa saber qual base de "
 "dados deve ser usada para carregar a página do site ou executar a operação. "
-"Se a não for usada multilocação, isso não é um problema, pois há apenas uma "
+"Se não for usada multilocação, isso não é um problema, pois há apenas uma "
 "base de dados para usar, mas se houver várias bases de dados acessíveis, o "
 "Odoo precisará de uma regra para saber qual delas deve ser usada."
 
@@ -455,8 +455,8 @@ msgid ""
 "possibly including the dynamically injected hostname (``%h``) or the first "
 "subdomain (``%d``) through which the system is being accessed."
 msgstr ""
-"Essa é uma das finalidades de :option:`--db-filter <odoo-bin --db-filter>`: "
-"ela especifica como a base de dados deve ser selecionada de acordo com o "
+"Essa é uma das finalidades do :option:`--db-filter <odoo-bin --db-filter>`: "
+"ele especifica como a base de dados deve ser selecionada de acordo com o "
 "nome do host (domínio) que está sendo solicitado. O valor é uma `expressão "
 "regular`_, possivelmente incluindo o nome de host injetado dinamicamente "
 "(``%h``) ou o primeiro subdomínio (``%d``) pelo qual o sistema está sendo "
@@ -510,8 +510,8 @@ msgid ""
 "database-list`` startup parameter to prevent listing your databases, and to "
 "block access to the database management screens. See also security_."
 msgstr ""
-"A configuração de uma :option:`--db-filter <odoo-bin --db-filter>` adequada "
-"é uma parte importante da segurança de sua implementação. Quando estiver "
+"A configuração de um :option:`--db-filter <odoo-bin --db-filter>` adequado é"
+" uma parte importante da segurança de sua implementação. Quando estiver "
 "funcionando corretamente e corresponder apenas a uma única base de dados por"
 " nome de host, é altamente recomendável bloquear o acesso às telas do "
 "gerenciador da base de dados e usar o parâmetro de inicialização ``--no-"
@@ -545,7 +545,7 @@ msgstr ""
 "executados na mesma máquina, e é o padrão quando nenhum host é fornecido, "
 "mas se você quiser que o Odoo e o PostgreSQL sejam executados em máquinas "
 "diferentes [#different-machines]_, ele precisará `ler as interfaces de "
-"rede`_ [#remote-socket]_, seja:"
+"rede`_ [#remote-socket]_, seja para:"
 
 #: ../../content/administration/install/deploy.rst:87
 msgid ""
@@ -553,8 +553,8 @@ msgid ""
 "machine on which Odoo runs and the one on which PostgreSQL runs, then "
 "configure Odoo to connect to its end of the tunnel"
 msgstr ""
-"Aceite apenas conexões de loopback e `use um túnel SSH`_ entre a máquina na "
-"qual o Odoo é executado e a máquina na qual o PostgreSQL é executado e, em "
+"Aceitar apenas conexões de loopback e `use um túnel SSH`_ entre a máquina na"
+" qual o Odoo é executado e a máquina na qual o PostgreSQL é executado e, em "
 "seguida, configure o Odoo para se conectar à sua extremidade do túnel"
 
 #: ../../content/administration/install/deploy.rst:90
@@ -563,7 +563,7 @@ msgid ""
 "ssl (see `PostgreSQL connection settings`_ for details), then configure Odoo"
 " to connect over the network"
 msgstr ""
-"Aceite conexões com a máquina na qual o Odoo está instalado, possivelmente "
+"Aceitar conexões com a máquina na qual o Odoo está instalado, possivelmente "
 "por ssl (consulte `Configurações de conexão PostgreSQL`_ para obter "
 "detalhes) e, em seguida, configure o Odoo para se conectar pela rede"
 
@@ -615,8 +615,8 @@ msgid ""
 "The :doc:`packaged installers <packages>` will automatically create a new "
 "user (``odoo``) and set it as the database user."
 msgstr ""
-"O :doc:`instaladores de pacotes <packages>` criará automaticamente um novo "
-"usuário (``odoo``) e o definirá como o usuário da base de dados."
+"Com os :doc:`instaladores de pacotes <packages>`, um novo usuário (``odoo``)"
+" será automaticamente criado e definido como o usuário da base de dados."
 
 #: ../../content/administration/install/deploy.rst:129
 msgid ""
@@ -662,7 +662,7 @@ msgstr "o usuário do PostgreSQL *não* deve ser um superusuário"
 
 #: ../../content/administration/install/deploy.rst:147
 msgid "connect to a PostgreSQL server on 192.168.1.2"
-msgstr "conecte-se a um servidor PostgreSQL em 192.168.1.2"
+msgstr "conectar-se a um servidor PostgreSQL em 192.168.1.2"
 
 #: ../../content/administration/install/deploy.rst:148
 msgid "port 5432"
@@ -670,7 +670,7 @@ msgstr "porta 5432"
 
 #: ../../content/administration/install/deploy.rst:149
 msgid "using an 'odoo' user account,"
-msgstr "usando uma conta de usuário 'odoo',"
+msgstr "usar uma conta de usuário 'odoo',"
 
 #: ../../content/administration/install/deploy.rst:150
 msgid "with 'pwd' as a password"
@@ -691,7 +691,7 @@ msgid ""
 "value chosen out of 'disable', 'allow', 'prefer', 'require', 'verify-ca' or "
 "'verify-full'"
 msgstr ""
-"Desde o Odoo 11.0, você pode impor a conexão ssl entre o Odoo e o "
+"A partir do Odoo 11.0, você pode impor a conexão ssl entre o Odoo e o "
 "PostgreSQL. No Odoo, o db_sslmode controla a segurança ssl da conexão com o "
 "valor escolhido entre 'disable', 'allow', 'prefer', 'require', 'verify-ca' "
 "ou 'verify-full'"
@@ -914,8 +914,8 @@ msgid ""
 "Enable Odoo's :option:`proxy mode <odoo-bin --proxy-mode>`. This should only"
 " be enabled when Odoo is behind a reverse proxy"
 msgstr ""
-"Habilite :option:`proxy mode <odoo-bin --proxy-mode>` do Odoo. Isso só deve "
-"ser ativado quando o Odoo estiver atrás de um proxy reverso"
+"Habilitar o :option:`proxy mode <odoo-bin --proxy-mode>` do Odoo. Isso só "
+"deve ser ativado quando o Odoo estiver atrás de um proxy reverso"
 
 #: ../../content/administration/install/deploy.rst:269
 msgid "Set up the SSL termination proxy (`Nginx termination example`_)"
@@ -1010,7 +1010,7 @@ msgstr ""
 "No entanto, o servidor WSGI exporá apenas o endpoint HTTP principal do "
 "cliente da web, o site e a API do serviço da web. Como o Odoo não controla "
 "mais a criação de workers, não é possível configurar workers cron ou chat ao"
-" vivo"
+" vivo."
 
 #: ../../content/administration/install/deploy.rst:399
 msgid "Cron Workers"
@@ -1089,8 +1089,8 @@ msgid ""
 "performances, and static files should generally be served by a static HTTP "
 "server."
 msgstr ""
-"Para desenvolvimento conveniente, o Odoo fornecem todos os arquivos "
-"estáticos e anexos diretamente em seus módulos. Isso pode não ser ideal "
+"Para maior conveniência no desenvolvimento, o Odoo fornece todos os arquivos"
+" estáticos e anexos diretamente em seus módulos. Isso pode não ser ideal "
 "quando se trata de desempenho, e os arquivos estáticos geralmente devem ser "
 "fornecidos por um servidor HTTP estático."
 
@@ -1333,8 +1333,8 @@ msgid ""
 msgstr ""
 "Use os filtros de base de dados adequados ( :option:`--db-filter <odoo-bin "
 "--db-filter>`) para restringir a visibilidade de suas bases de acordo com o "
-"nome do host. Consulte :ref:`db_filter`. Você também pode usar a :option:`-d"
-" <odoo-bin -d>` para fornecer sua própria lista (separada por vírgulas) de "
+"nome do host. Consulte :ref:`db_filter`. Você também pode usar :option:`-d "
+"<odoo-bin -d>` para fornecer sua própria lista (separada por vírgulas) de "
 "bases de dados disponíveis para filtrar, em vez de permitir que o sistema "
 "busque todos eles no back-end da base."
 
@@ -1586,7 +1586,7 @@ msgid ""
 "This could be used with a jail definition to block the attacking IP on "
 "HTTP(S)."
 msgstr ""
-"Isso pode ser usado com uma definição de jail para bloquear o IP de ataque "
+"Seu uso com uma definição de jail pode servir para bloquear o IP de ataque "
 "em HTTP(S)."
 
 #: ../../content/administration/install/deploy.rst:687
@@ -1603,7 +1603,7 @@ msgstr "Segurança do gerenciador da base de dados"
 
 #: ../../content/administration/install/deploy.rst:703
 msgid ":ref:`setup/deploy/odoo` mentioned ``admin_passwd`` in passing."
-msgstr ":ref:`setup/deploy/odoo` mencionou ``admin_passwd`` na passagem."
+msgstr ":ref:`setup/deploy/odoo` fez menção, de passagem, à ``admin_passwd``."
 
 #: ../../content/administration/install/deploy.rst:705
 msgid ""
@@ -1619,9 +1619,9 @@ msgid ""
 "``list_db`` configuration option to ``False``, to block access to all the "
 "database selection and management screens."
 msgstr ""
-"Se as telas de gerenciamento não puderem ser acessadas de forma alguma, "
-"defina a opção de configuração ``list_db`` como ``False`` para bloquear o "
-"acesso a todas as telas de seleção e gerenciamento de base de dados."
+"Se as telas de gerenciamento não devem ser acessadas de forma alguma, defina"
+" a opção de configuração ``list_db`` como ``False`` para bloquear o acesso a"
+" todas as telas de seleção e gerenciamento de base de dados."
 
 #: ../../content/administration/install/deploy.rst:714
 msgid ""
@@ -1688,7 +1688,7 @@ msgstr ""
 #: ../../content/administration/install/deploy.rst:736
 msgid "It should be stored securely, and should be generated randomly e.g."
 msgstr ""
-"Ela deve ser armazenado de forma segura e deve ser gerado aleatoriamente, "
+"Ela deve ser armazenada de forma segura e deve ser gerada aleatoriamente, "
 "ex.:"
 
 #: ../../content/administration/install/deploy.rst:742
@@ -1704,7 +1704,7 @@ msgid ""
 "Odoo supports all the major desktop and mobile browsers available on the "
 "market, as long as they are supported by their publishers."
 msgstr ""
-"O Odoo é compatível com todos os principais navegadores de desktop e móveis "
+"O Odoo é compatível com todos os principais navegadores móveis e de desktop "
 "disponíveis no mercado, desde que sejam suportados por seus editores."
 
 #: ../../content/administration/install/deploy.rst:750
@@ -1858,7 +1858,7 @@ msgid ""
 "messages <email_communication/inbound_messages>`."
 msgstr ""
 "Se você não tiver acesso/gerenciar seu servidor de e-mail, use "
-":ref:`mensagens receebidas <email_communication/inbound_messages>`."
+":ref:`mensagens recebidas <email_communication/inbound_messages>`."
 
 #: ../../content/administration/install/geo_ip.rst:3
 msgid "Geo IP"
@@ -1909,7 +1909,7 @@ msgstr ""
 
 #: ../../content/administration/install/geo_ip.rst:36
 msgid ":doc:`CLI documentation </developer/reference/cli>`."
-msgstr ":doc:`CLI documentation </developer/reference/cli>`."
+msgstr ":doc:`Documentação de CLI </developer/reference/cli>`."
 
 #: ../../content/administration/install/geo_ip.rst:39
 msgid "Test GeoIP geolocation in your Odoo website"
@@ -1945,16 +1945,16 @@ msgid ""
 "Geo-ip is working if you read your country name displayed in bold in the "
 "middle of the page."
 msgstr ""
-"Se o nome do seu país estiver exibidio em negrito no meio da página, o Geo-"
-"ip está funcionando."
+"Se o nome do seu país estiver exibido em negrito no meio da página, o Geo-ip"
+" está funcionando."
 
 #: ../../content/administration/install/geo_ip.rst:56
 msgid ""
 "In case you read \"**geoip failure**\" instead then the geolocalization "
 "failed. The common causes are:"
 msgstr ""
-"Se em vez disso aparecer \"**falha de geoip**\", a geolocalização falhou. As"
-" causas comuns são:"
+"Se, em vez disso, aparecer \"**falha de geoip**\", a geolocalização falhou. "
+"As causas comuns são:"
 
 #: ../../content/administration/install/geo_ip.rst:58
 msgid ""
@@ -2096,7 +2096,7 @@ msgstr "Linux"
 #: ../../content/administration/install/packages.rst:28
 #: ../../content/administration/install/source.rst:116
 msgid "Prepare"
-msgstr "Preparar"
+msgstr "Preparação"
 
 #: ../../content/administration/install/packages.rst:30
 msgid ""
@@ -2311,7 +2311,7 @@ msgstr "O Odoo é iniciado automaticamente no final da instalação."
 
 #: ../../content/administration/install/source.rst:3
 msgid "Source"
-msgstr "Origem"
+msgstr "Fonte"
 
 #: ../../content/administration/install/source.rst:5
 msgid ""
@@ -2366,7 +2366,7 @@ msgstr ""
 
 #: ../../content/administration/install/source.rst:24
 msgid "Archive"
-msgstr "Arquivar"
+msgstr "Arquivo"
 
 #: ../../content/administration/install/source.rst:26
 msgid "Community edition:"
@@ -2932,7 +2932,7 @@ msgstr "Manter"
 
 #: ../../content/administration/maintain/azure_oauth.rst:3
 msgid "Connect Microsoft Outlook 365 to Odoo using Azure OAuth"
-msgstr "Conecte o Microsoft Outlook 365 ao Odoo usando o Azure OAuth"
+msgstr "Conectar o Microsoft Outlook 365 ao Odoo usando o Azure OAuth"
 
 #: ../../content/administration/maintain/azure_oauth.rst:5
 msgid ""
@@ -2986,7 +2986,7 @@ msgid ""
 msgstr ""
 "Para começar, acesse o `Portal do Microsoft Azure "
 "<https://portal.azure.com/>`_. Faça login com a conta do "
-":guilabel:`Microsoft Outlook Office 365` se houver uma, caso contrário, faça"
+":guilabel:`Microsoft Outlook Office 365`, se tiver uma, caso contrário, faça"
 " login com a conta pessoal :guilabel:`Microsoft`. Um usuário com acesso "
 "administrativo às configurações do Azure precisará se conectar e realizar a "
 "seguinte configuração. Em seguida, navegue até a seção denominada "
@@ -3149,7 +3149,7 @@ msgstr ""
 "selecionado` e adicione os usuários ou grupos de usuários que enviarão "
 "e-mails da :guilabel:`Conta Microsoft` no Odoo. :guilabel:`Adicione` os "
 "usuários/grupos, clique em :guilabel:`Selecionar` e, em seguida, "
-":guilabel:`Atribua` eles ao aplicativo."
+":guilabel:`atribua-os` ao aplicativo."
 
 #: ../../content/administration/maintain/azure_oauth.rst:94
 msgid "Create credentials"
@@ -3164,13 +3164,13 @@ msgid ""
 " :guilabel:`Application ID` is located under the :guilabel:`Display Name` in"
 " the :guilabel:`Essentials` overview of the app."
 msgstr ""
-"Agora que o aplicativo do Microsoft Azure está configurado, precisam ser "
-"criadas credenciais para a configuração do Odoo. Elas incluem o "
-":guilabel:`ID do cliente` e o :guilabel:`Segredo do cliente`. Para começar, "
-"o :guilabel:`ID do cliente` pode ser copiado da página :guilabel:`Visão "
-"geral` do aplicativo. O :guilabel:`ID do cliente` ou :guilabel:`ID do "
-"aplicativo` está localizado sob o :guilabel:`Nome de exibição` na visão "
-"geral :guilabel:`Noções básicas` do aplicativo."
+"Agora que o aplicativo do Microsoft Azure está configurado, é preciso criar "
+"credenciais para a configuração do Odoo. Elas incluem o :guilabel:`ID do "
+"cliente` e o :guilabel:`Segredo do cliente`. Para começar, o :guilabel:`ID "
+"do cliente` pode ser copiado da página :guilabel:`Visão geral` do "
+"aplicativo. O :guilabel:`ID do cliente` ou :guilabel:`ID do aplicativo` está"
+" localizado sob o :guilabel:`Nome de exibição` na visão geral "
+":guilabel:`Noções básicas` do aplicativo."
 
 #: ../../content/administration/maintain/azure_oauth.rst-1
 msgid "Application/Client ID located in the Overview of the app."
@@ -3185,7 +3185,7 @@ msgid ""
 msgstr ""
 "Em seguida, o :guilabel:`Valor do segredo do cliente` precisa ser "
 "recuperado. Para obter esse valor, clique em :guilabel:`Certificados e "
-"Secredos` no menu da barra lateral esquerda. Em seguida, um "
+"segredos` no menu da barra lateral esquerda. Em seguida, um "
 ":guilabel:`Segredo do cliente` precisa ser produzido. Para fazer isso, "
 "clique no botão :guilabel:`(+) Novo segredo do cliente`."
 
@@ -3300,7 +3300,7 @@ msgid ""
 "and :guilabel:`Save` the settings."
 msgstr ""
 "Em seguida, copie e cole o :guilabel:`ID do cliente` (ID do aplicativo) e o "
-":guilabel:`Segredo do cliente (valor do segredo do cliente)` nos respectivos"
+":guilabel:`Segredo do cliente` (valor do segredo do cliente) nos respectivos"
 " campos e :guilabel:`Salve` as configurações."
 
 #: ../../content/administration/maintain/azure_oauth.rst-1
@@ -3338,7 +3338,7 @@ msgid ""
 "If the :guilabel:`From Filter` field is empty, enter either a :ref:`domain "
 "or email address <email_communication/default>`."
 msgstr ""
-"Se o campo :guilabel:`Do filtro` estiver vazio, digite um :ref:`domínio ou "
+"Se o campo :guilabel:`Filtro de` estiver vazio, digite um :ref:`domínio ou "
 "endereço de e-mail <email_communication/default>`."
 
 #: ../../content/administration/maintain/azure_oauth.rst:170
@@ -3417,7 +3417,7 @@ msgstr ""
 " usuários do banco de dados. Por exemplo, ele poderia ser estruturado com um"
 " alias de `notificações` (`notifications@example.com`) ou `contato` "
 "(`contact@example.com`). Esse endereço deve ser definido como o "
-":guilabel:`FIltro DE` no servidor. Esse endereço também deve corresponder à "
+":guilabel:`Filtro DE` no servidor. Esse endereço também deve corresponder à "
 "combinação de chaves `{mail.default.from}@{mail.catchall.domain}` nos "
 "parâmetros do sistema."
 
@@ -3539,7 +3539,7 @@ msgid ""
 " for this server should have the value of the "
 "`{mail.default.from}@{mail.catchall.domain}`."
 msgstr ""
-"Um :ref:` servidor defallback <azure_oauth/notifications>` deve ser "
+"Um :ref:`servidor de fallback <azure_oauth/notifications>` deve ser "
 "configurado para permitir o envio de :guilabel:`notificações`. O "
 ":guilabel:`Filtro DE` desse servidor deve ter o valor de "
 "`{mail.default.from}@{mail.catchall.domain}`."
@@ -3664,10 +3664,10 @@ msgid ""
 "address, such as ``www.odoo.com``, rather than its server's IP address with "
 "a series of numbers."
 msgstr ""
-"Um **nome de domínio** funciona como um endereço para seu site. Ele torna a "
-"internet muito mais acessível, pois permite que os usuários digitem um "
-"endereço da web significativo, como ``www.odoo.com``, em vez do endereço IP "
-"do servidor com uma série de números."
+"Um **nome de domínio** funciona como um endereço para seu site. Isso "
+"facilita muito o acesso pela internet, pois permite que os usuários digitem "
+"um endereço da web com sentido, como ``www.odoo.com``, em vez do endereço IP"
+" do servidor com uma série de números."
 
 #: ../../content/administration/maintain/domain_names.rst:9
 msgid ""
@@ -3699,7 +3699,7 @@ msgid ""
 "``https://example.odoo.com``)."
 msgstr ""
 "As bases de dados Odoo Online e Odoo.sh, incluindo seus sites, usam por "
-"padrão um subdomínio de ``odoo.com`` para a URL e os e-mails (por exemplo, "
+"padrão um subdomínio de ``odoo.com`` para o URL e os e-mails (por exemplo, "
 "``https://example.odoo.com``)."
 
 #: ../../content/administration/maintain/domain_names.rst:20
@@ -3743,8 +3743,8 @@ msgid ""
 msgstr ""
 "Ter um **bom nome de domínio** é tão importante para sua marca quanto o nome"
 " de sua empresa ou organização, pois é a primeira coisa que seus visitantes "
-"notarão. Recomendamos que você os mantenha *simples, curtos, fáceis de "
-"lembrar e digitar*."
+"notarão. Recomendamos que você use algo *simples, curto, fácil de lembrar e "
+"digitar*."
 
 #: ../../content/administration/maintain/domain_names.rst:38
 msgid ""
@@ -3755,13 +3755,13 @@ msgid ""
 "to other websites than your main website or to specific pages (e.g., "
 "``experience.odoo.com`` points to a specific page.)"
 msgstr ""
-"Um **subdomínio** é um domínio que faz parte de outro domínio. Ele "
-"geralmente se refere à parte adicional que vem antes do nome do domínio "
-"principal. Tradicionalmente, a maioria dos sites usa o subdomínio ``www.``, "
-"mas qualquer sequência de letras também pode ser usada. Você pode usar "
-"subdomínios para direcionar seus visitantes a outros sites que não o site "
-"principal ou a páginas específicas (por exemplo, ``experience.odoo.com`` "
-"aponta para uma página específica.)"
+"Um **subdomínio** é um domínio que faz parte de outro domínio. Geralmente, "
+"refere-se à parte adicional que vem antes do nome do domínio principal. A "
+"maioria dos sites usa o subdomínio ``www.``, mas qualquer sequência de "
+"letras também pode ser usada. Você pode usar subdomínios para direcionar "
+"seus visitantes a outros sites que não o site principal ou a páginas "
+"específicas (por exemplo, ``experience.odoo.com`` aponta para uma página "
+"específica.)"
 
 #: ../../content/administration/maintain/domain_names.rst:44
 msgid ""
@@ -3793,8 +3793,8 @@ msgstr ""
 "web (:dfn:`robôs que exploram e analisam a web`) para indexar todos os sites"
 " e seus nomes de domínio relacionados. Esses rastreadores descobrem novos "
 "URLs graças a links em páginas da web conhecidas. Como resultado, os "
-"mecanismos de pesquisa devem indexar os nomes de domínio automaticamente "
-"após algum tempo, desde que seus URLs sejam mencionados em outro lugar na "
+"mecanismos de busca devem indexar os nomes de domínio automaticamente após "
+"algum tempo, desde que seus URLs sejam mencionados em outro lugar na "
 "Internet."
 
 #: ../../content/administration/maintain/domain_names.rst:58
@@ -3833,7 +3833,7 @@ msgstr ""
 "serviços, você deve provar que é o proprietário do seu nome de domínio. Uma "
 "maneira de verificar a propriedade do seu nome de domínio é adicionar um "
 "registro DNS. Você pode fazer isso para :ref:`nomes de domínio registrados "
-"na Odoo <domain-name/odoo-manage>` e para nomes de domínio gerenciados por "
+"no Odoo <domain-name/odoo-manage>` e para nomes de domínio gerenciados por "
 "outros provedores."
 
 #: ../../content/administration/maintain/domain_names.rst:74
@@ -3879,7 +3879,7 @@ msgid ""
 "The domain name is registered with `Gandi <https://www.gandi.net/>`_, the "
 "domain name registrar."
 msgstr ""
-"O nome de domínio está registrado com `Gandi <https://www.gandi.net/>`_, o "
+"O nome de domínio é registrado com `Gandi <https://www.gandi.net/>`_, o "
 "registrador de nomes de domínio."
 
 #: ../../content/administration/maintain/domain_names.rst:90
@@ -3962,7 +3962,7 @@ msgstr ""
 "Nomes de domínio gratuitos também estão disponíveis para bases de dados "
 "gratuitas do Odoo Online (se você instalou apenas um aplicativo, por "
 "exemplo). Nesse caso, a Odoo analisa sua solicitação e seu site para evitar "
-"abusos. Esse processo pode levar vários dias devido ao sucesso da oferta."
+"abusos. Esse processo pode levar vários dias devido à demanda da oferta."
 
 #: ../../content/administration/maintain/domain_names.rst:119
 msgid "This is not available for Odoo.sh databases yet."
@@ -4225,8 +4225,8 @@ msgid ""
 "may not type the full domain name to access your website."
 msgstr ""
 "Você pode querer que o domínio simples seja redirecionado para o seu site, "
-"pois alguns visitantes podem não digitar o nome de domínio completo para "
-"acessar o seu site."
+"pois é possível que alguns visitantes não digitem o nome de domínio completo"
+" para acessar o seu site."
 
 #: ../../content/administration/maintain/domain_names.rst:223
 msgid ""
@@ -4474,15 +4474,15 @@ msgstr "valor: ``True``"
 
 #: ../../content/administration/maintain/domain_names.rst:331
 msgid "Map your domain name with your website"
-msgstr "Mapear seu nome de domínio para seu site"
+msgstr "Mapear o nome de domínio para seu site"
 
 #: ../../content/administration/maintain/domain_names.rst:333
 msgid ""
 "Mapping your domain name to your website isn't the same as mapping it with "
 "your database:"
 msgstr ""
-"Mapear seu nome de domínio para o site não é o mesmo que mapeá-lo para base "
-"de dados:"
+"Mapear o nome de domínio para o site não é o mesmo que mapeá-lo para base de"
+" dados:"
 
 #: ../../content/administration/maintain/domain_names.rst:335
 msgid ""
@@ -4490,7 +4490,7 @@ msgid ""
 " engines to index your website properly."
 msgstr ""
 "Isso define seu nome de domínio como o principal do site, ajudando os "
-"mecanismos de pesquisa a indexar seu site adequadamente."
+"mecanismos de busca a indexar seu site adequadamente."
 
 #: ../../content/administration/maintain/domain_names.rst:337
 msgid ""
@@ -4647,7 +4647,7 @@ msgid ""
 "usual workflow."
 msgstr ""
 "Há muitas maneiras de iniciar seu servidor ao usar códigos-fonte, e você "
-"provavelmente tem o seu favorito. Talvez seja necessário adaptar as seções "
+"provavelmente tem a sua favorita. Talvez seja necessário adaptar as seções "
 "ao seu fluxo de trabalho habitual."
 
 #: ../../content/administration/maintain/enterprise.rst:64
@@ -5020,7 +5020,7 @@ msgstr ""
 "Em seguida, navegue até :menuselection:`Definições --> Configurações gerais`"
 " e, na seção :guilabel:`Mensagens`, verifique se a caixa de seleção de "
 ":guilabel:`Servidores de e-mail personalizados` ou :guilabel:`Servidores de "
-"e-mail externos` está marcada. Isso reve uma nova opção de "
+"e-mail externos` está marcada. Isso revela uma nova opção de "
 ":guilabel:`Credenciais do Gmail` ou :guilabel:`Usar um servidor Gmail`. "
 "Então, copie e cole os respectivos valores nos campos :guilabel:`ID do "
 "cliente` e :guilabel:`Segredo do cliente` e :guilabel:`Salve` as "
@@ -5264,7 +5264,7 @@ msgstr ""
 
 #: ../../content/administration/maintain/hosting_changes.rst:18
 msgid "Create a :ref:`duplicate <duplicate_premise>` of the database."
-msgstr "Crie um :ref:`duplicata <duplicate_premise>` da base de dados."
+msgstr "Crie uma :ref:`duplicata <duplicate_premise>` da base de dados."
 
 #: ../../content/administration/maintain/hosting_changes.rst:19
 msgid "In this duplicate, uninstall all **non-standard apps**."
@@ -5311,8 +5311,8 @@ msgid ""
 " case of technical issues during the process, Odoo might contact you."
 msgstr ""
 "Então, o Odoo se certifica de que a base de dados é compatível antes de "
-"colocá-lo on-line. Em caso de problemas técnicos no processo, a Odoo poderá "
-"entrar em contato com você."
+"publicá-la on-line. Em caso de problemas técnicos no processo, a Odoo poderá"
+" entrar em contato com você."
 
 #: ../../content/administration/maintain/hosting_changes.rst:31
 #: ../../content/administration/maintain/hosting_changes.rst:99
@@ -5355,7 +5355,7 @@ msgstr ""
 "podem ser hospedada no local, pois esse tipo de hospedagem não é compatível "
 "com essas versões. Portanto, se a base de dados a transferir estiver "
 "executando uma versão intermediária, ela primeiro deverá ser atualizada para"
-" a próxima :ref:versão principal <supported_versions>`, aguardando seu "
+" a próxima :ref:`versão principal<supported_versions>`, aguardando seu "
 "lançamento, se necessário."
 
 #: ../../content/administration/maintain/hosting_changes.rst:50
@@ -5379,7 +5379,7 @@ msgstr ""
 #: ../../content/administration/maintain/hosting_changes.rst:58
 #: ../../content/administration/maintain/hosting_changes.rst:108
 msgid "To on-premise"
-msgstr "Para No local"
+msgstr "Para On-premise"
 
 #: ../../content/administration/maintain/hosting_changes.rst:60
 #: ../../content/administration/maintain/hosting_changes.rst:69
@@ -5441,7 +5441,7 @@ msgid ""
 "in which **region** you want the database to be hosted (Americas, Europe, or"
 " Asia),"
 msgstr ""
-"Em qual **região** você quer que a base de dados seja hospedada (Américas, "
+"em qual **região** você quer que a base de dados seja hospedada (Américas, "
 "Europa ou Ásia),"
 
 #: ../../content/administration/maintain/hosting_changes.rst:92
@@ -5629,7 +5629,7 @@ msgid ""
 msgstr ""
 "Defina se o endereço de e-mail ou o domínio inteiro do rementente deve ser "
 "adicionado às definições do Mailjet. Pode ser mais fácil configurar o "
-"domínico como um todo se o acesso ao :abbr:`DNS` estiver disponível. Passe "
+"domínio como um todo se o acesso ao :abbr:`DNS` estiver disponível. Passe "
 "para a seção :ref:`Adicionar um domínio <maintain/mailjet-api/add-domain>` "
 "para etapas de adição de domínio."
 
@@ -5943,7 +5943,7 @@ msgid ""
 " match the domain in the two proceeding steps. More information can be "
 "referenced :ref:`here <email_communication/from_filter>`."
 msgstr ""
-"O :guilabel:`FIltro DE` deve ser definido na configuração do servidor. É "
+"O :guilabel:`Filtro DE` deve ser definido na configuração do servidor. É "
 "recomendável defini-lo como um domínio e não como um endereço de e-mail "
 "completo. Isso deve corresponder ao domínio nas duas etapas seguintes. Mais "
 "informações podem ser consultadas :ref:`aqui "
@@ -6095,7 +6095,7 @@ msgid ""
 "Create an exact copy of the database, which can be used to perform testing "
 "without compromising daily operations."
 msgstr ""
-"Crie uma cópia exata da base de dados, que pode ser usada para realizar "
+"Criar uma cópia exata da base de dados, que pode ser usada para realizar "
 "testes sem comprometer as operações diárias."
 
 #: ../../content/administration/maintain/odoo_online.rst:45
@@ -6118,7 +6118,7 @@ msgstr "Renomear"
 
 #: ../../content/administration/maintain/odoo_online.rst:54
 msgid "Rename the database and its URL."
-msgstr "Renomeie a base de dados e seu URL"
+msgstr "Renomear a base de dados e seu URL"
 
 #: ../../content/administration/maintain/odoo_online.rst:59
 msgid "Download"
@@ -6126,7 +6126,7 @@ msgstr "Baixar"
 
 #: ../../content/administration/maintain/odoo_online.rst:61
 msgid "Download a ZIP file containing a backup of the database."
-msgstr "Baixe o arquivo ZIP que contém o backup da base de dados."
+msgstr "Baixar o arquivo ZIP que contém o backup da base de dados."
 
 #: ../../content/administration/maintain/odoo_online.rst:64
 msgid ""
@@ -6141,7 +6141,7 @@ msgid ""
 "Use a custom :doc:`domain name <domain_names>` to access the database via "
 "another URL."
 msgstr ""
-"Use um :doc.:`nome do domínio <domain_names>` personalizado para acessar a "
+"Usar um :doc.:`nome do domínio<domain_names>` personalizado para acessar a "
 "base de dados por outra URL."
 
 #: ../../content/administration/maintain/odoo_online.rst:75
@@ -6158,8 +6158,8 @@ msgstr "Marcadores"
 #: ../../content/administration/maintain/odoo_online.rst:82
 msgid "Add tags to easily identify and sort your databases."
 msgstr ""
-"Adicione marcadores para identificar e classificar facilmente suas bases de "
-"dados."
+"Adicionar marcadores para identificar e classificar facilmente suas bases de"
+" dados."
 
 #: ../../content/administration/maintain/odoo_online.rst:85
 msgid "You can search for tags in the search bar."
@@ -6259,11 +6259,11 @@ msgstr ":doc:`/applications/general/users/odoo_account`"
 
 #: ../../content/administration/maintain/on_premise.rst:3
 msgid "On-premise database management"
-msgstr "Gerenciamento de bases de dados no local"
+msgstr "Gerenciamento de bases de dados O-premise"
 
 #: ../../content/administration/maintain/on_premise.rst:6
 msgid "Register a database"
-msgstr "Registre um base de dados"
+msgstr "Registrar uma base de dados"
 
 #: ../../content/administration/maintain/on_premise.rst:8
 msgid ""
@@ -6385,7 +6385,7 @@ msgid ""
 msgstr ""
 "Nesse caso, você precisa alterar o UUID em suas bases de dados de teste para"
 " resolver esse problema. Você encontrará mais informações sobre isso :ref: "
-"`nesta seção <duplicate_premise>`."
+"`nesta seção<duplicate_premise>`."
 
 #: ../../content/administration/maintain/on_premise.rst:69
 msgid ""
@@ -6461,7 +6461,7 @@ msgid ""
 "**Add more users** on your subscription: follow the link and Validate the "
 "upsell quotation and pay for the extra users."
 msgstr ""
-"**Adicionar mais usuários** à sua assinatura: clique no link e valide a "
+"**Adicione mais usuários** à sua assinatura: clique no link e valide a "
 "cotação de upsell e pague pelos usuários extras."
 
 #: ../../content/administration/maintain/on_premise.rst:104
@@ -6483,8 +6483,8 @@ msgid ""
 msgstr ""
 "Quando sua base de dados estiver com o número correto de usuários, a "
 "mensagem de expiração desaparecerá automaticamente após alguns dias, durante"
-" a próxima verificação. Entendemos que pode ser um pouco assustador ver a "
-"contagem regressiva, então você pode: ref: `forçar uma Notificação de "
+" a próxima verificação. Sabemos que pode ser um pouco assustador ver a "
+"contagem regressiva, então você pode :ref:`forçar uma Notificação de "
 "Atualização <force_ping>` para fazer a mensagem desaparecer imediatamente."
 
 #: ../../content/administration/maintain/on_premise.rst:114
@@ -6518,7 +6518,7 @@ msgid ""
 "Renew your subscription: follow the link and renew your subscription - note "
 "that"
 msgstr ""
-"Renovar sua assinatura: clique no link e renove sua assinatura - observe que"
+"Renove sua assinatura: clique no link e renove sua assinatura. Observe que,"
 
 #: ../../content/administration/maintain/on_premise.rst:130
 msgid ""
@@ -6603,9 +6603,10 @@ msgid ""
 ":doc:`Odoo Online <odoo_online>` hosting every two months. Odoo Online users"
 " can then benefit from the latest features of Odoo."
 msgstr ""
-"A Odoo lança versões intermediárias chamadas **Versões Online** no "
-":doc:`Odoo Online <odoo_online>` hospedagem a cada dois meses. Os usuários "
-"do Odoo Online podem então se beneficiar dos recursos mais recentes do Odoo."
+"A Odoo lança versões intermediárias chamadas **Versões Online** na "
+"hospedagem do :doc:`Odoo Online <odoo_online>` a cada dois meses. Os "
+"usuários do Odoo Online podem então se beneficiar dos recursos mais recentes"
+" do Odoo."
 
 #: ../../content/administration/maintain/supported_versions.rst:16
 msgid ""
@@ -6619,7 +6620,7 @@ msgstr ""
 msgid ""
 "Online versions are *not* released for Odoo.sh and On-Premise installations."
 msgstr ""
-"Versões online *não* são lançadas para instalações Odoo.sh e No local."
+"Versões online *não* são lançadas para instalações Odoo.sh e On-premise."
 
 #: ../../content/administration/maintain/supported_versions.rst:18
 msgid "Online versions are listed below as *SaaS*."
@@ -6635,7 +6636,7 @@ msgstr "**Os principais lançamentos estão em negrito.**"
 
 #: ../../content/administration/maintain/supported_versions.rst:31
 msgid "On-Premise"
-msgstr "No local"
+msgstr "On-Premise"
 
 #: ../../content/administration/maintain/supported_versions.rst:32
 msgid "Release date"
@@ -6934,7 +6935,7 @@ msgid ""
 msgstr ""
 "Refere-se a uma operação complexa de processamento de dados em que a "
 "estrutura e o conteúdo da sua base de dados são permanentemente alterados "
-"para torná-lo compatível com uma nova versão do Odoo. Essa operação é "
+"para torná-los compatível com uma nova versão do Odoo. Essa operação é "
 "irreversível e normalmente é realizada pelo do `serviço de upgrade da base "
 "de dados do Odoo <https://upgrade.odoo.com>`_, quando você decide mudar para"
 " uma versão mais recente do sistema. Historicamente, esse processo também é "
@@ -7438,7 +7439,7 @@ msgid ""
 "More options are available and detailed in the :doc:`CLI documentation "
 "</developer/reference/cli>`."
 msgstr ""
-"Há mais opções disponíveis e detalhadas em :doc:`Documentação da CLI "
+"Há mais opções disponíveis e detalhadas em :doc:`Documentação de CLI "
 "</developer/reference/cli>`."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:172
@@ -7714,7 +7715,7 @@ msgstr ""
 "ramificações, precisará configurar uma chave de implementação nas "
 "configurações do projeto Odoo.sh e nas configurações do repositório. Caso "
 "contrário, o Odoo.sh não terá permissão para baixá-los. O procedimento é "
-"detalhado no capítulo :ref:`Settings > Submódulos <odoosh-gettingstarted-"
+"detalhado no capítulo :ref:`Definições > Submódulos <odoosh-gettingstarted-"
 "settings-submodules>`"
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:34
@@ -7759,7 +7760,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:52
 msgid "Repository URL: The SSH URL of the repository."
-msgstr "URL do repositório: A URL SSH do repositório."
+msgstr "URL do repositório: o URL SSH do repositório."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:53
 msgid "Branch: The branch you want to use."
@@ -7777,7 +7778,7 @@ msgid ""
 "On Github, you can get the repository URL with the *Clone or download* "
 "button of the repository. Make sure to *use SSH*."
 msgstr ""
-"No Github, você pode obter a URL do repositório com o botão *Clone ou "
+"No Github, você pode obter o URL do repositório com o botão *Clone ou "
 "download* do repositório. Certifique-se de *usar SSH*."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:67
@@ -8639,7 +8640,7 @@ msgid ""
 "are excluded."
 msgstr ""
 "A opção *Instalar somente meus módulos* instalará somente os módulos da "
-"ramificação. Essa é a opção padrão. Os :ref: `submódulos<odoosh-advanced-"
+"ramificação. Essa é a opção padrão. Os :ref:`submódulos<odoosh-advanced-"
 "submodules>` são excluídos."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:329
@@ -8687,7 +8688,7 @@ msgstr ""
 "Nas ramificações de desenvolvimento, você pode optar por ativar ou desativar"
 " a suíte de testes. Está ativada por padrão. Quando a suíte de testes está "
 "ativada, você pode restringi-los especificando marcadores de teste "
-":ref:`marcadores de teste <developer/reference/testing/selection>`."
+":ref:`Marcadores de teste <developer/reference/testing/selection>`."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:345
 msgid "**Odoo Version**"
@@ -9644,7 +9645,7 @@ msgstr "Baixar um backup"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:118
 msgid "On-premise databases"
-msgstr "Bases de dados no local"
+msgstr "Bases de dados On-premises"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:120
 msgid ""
@@ -11106,7 +11107,7 @@ msgid ""
 "in the input, paste the SSH URL of your private sub-repository and click on "
 "*Add*,"
 msgstr ""
-"na entrada, cole a URL SSH de seu sub-repositório privado e clique em "
+"na entrada, cole o URL SSH de seu sub-repositório privado e clique em "
 "*Adicionar*,"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:192
@@ -11400,7 +11401,7 @@ msgid ""
 "Request an upgraded test database (see :ref:`obtaining an upgraded test "
 "database <upgrade/request-test-database>`)."
 msgstr ""
-"Solicite uma base de dados de teste atualizada (consulte :ref:`obter uma "
+"Solicite uma base de dados de teste atualizada (consulte :ref:`Obter uma "
 "base de dados de teste atualizada <upgrade/request-test-database>`)."
 
 #: ../../content/administration/upgrade.rst:55
@@ -11418,7 +11419,7 @@ msgid ""
 "Thoroughly test the upgraded database (see :ref:`testing the new version of "
 "the database <upgrade/test_your_db>`)."
 msgstr ""
-"Teste exaustivamente o upgrade da base de dados (consulte :ref:`testar a "
+"Teste exaustivamente o upgrade da base de dados (consulte :ref:`Testar a "
 "nova versão da base de dados <upgrade/test_your_db>`)."
 
 #: ../../content/administration/upgrade.rst:61
@@ -11446,15 +11447,15 @@ msgid ""
 "production database <upgrade/upgrade-prod>`)."
 msgstr ""
 "Solicite o upgrade para a base de dados de produção, tornando-a indisponível"
-" pelo tempo necessário para concluir o processo (consulte :ref:`fazer "
-"upgrade da base de dados de procução <upgrade/upgrade-prod>`)."
+" pelo tempo necessário para concluir o processo (consulte :ref:`Fazer "
+"upgrade da base de dados de produção <upgrade/upgrade-prod>`)."
 
 #: ../../content/administration/upgrade.rst:70
 msgid ""
 "Report any issue encountered during the upgrade to Odoo via the `support "
 "page <https://odoo.com/help?stage=post_upgrade>`__."
 msgstr ""
-"Relate qualquer problema encontrado durante o upgrade para o Odoo peça "
+"Relate qualquer problema encontrado durante o upgrade para o Odoo pela "
 "`página de suporte <https://odoo.com/help?stage=post_upgrade>`__."
 
 #: ../../content/administration/upgrade.rst:76
@@ -11557,9 +11558,9 @@ msgid ""
 " can also be accessed from the database manager by clicking the dropdown "
 "arrow before the database name."
 msgstr ""
-"A tag :guilabel:`Upgradeem andamento` é exibida ao lado do nome da base de "
-"dados até a conclusão. Quando o processo for bem-sucedido, um e-mail "
-"contendo um link para a base de dados de teste com upgrade será enviado ao "
+"O marcador :guilabel:`Upgrade em andamento` é exibido ao lado do nome da "
+"base de dados até a conclusão. Quando o processo for bem-sucedido, um e-mail"
+" contendo um link para a base de dados de teste com upgrade será enviado ao "
 "endereço fornecido. A base de dados também pode ser acessada no gerenciador "
 "de bases de dados, clicando na seta suspensa antes do nome da base de dados."
 
@@ -12199,7 +12200,7 @@ msgid ""
 "related to the upgrade in production."
 msgstr ""
 "No caso de um problema com sua base de dados de produção, você pode "
-"solicitar a assistência da Odoo pela da `página de suporte "
+"solicitar a assistência da Odoo pela `página de suporte "
 "<https://odoo.com/help?stage=post_upgrade>`__, selecionando a opção "
 "relacionada ao upgrade em produção."
 
