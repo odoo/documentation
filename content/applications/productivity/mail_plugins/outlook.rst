@@ -28,7 +28,7 @@ Download (:menuselection:`Save Page As --> Web Page XML only`) the following XML
 later: `https://download.odoocdn.com/plugins/outlook/manifest.xml
 <https://download.odoocdn.com/plugins/outlook/manifest.xml>`_.
 
-Next, open the Outlook mailbox, and select any email. After completing this, click on the
+Next, open the Outlook mailbox (https://outlook.office.com/mail/inclientstore), and select any email. After completing this, click on the
 :guilabel:`More actions` button in the upper right-side and select :guilabel:`Get Add-ins`.
 
 .. image:: outlook/more-actions.png
