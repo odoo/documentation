@@ -13,7 +13,7 @@ or a user on any existing business model.
 In our real estate module, we want the following information for a property:
 
 - the customer who bought the property
-- the real restate agent who sold the property
+- the real estate agent who sold the property
 - the property type: house, apartment, penthouse, castle...
 - a list of tags characterizing the property: cozy, renovated...
 - a list of the offers received
