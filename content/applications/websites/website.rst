@@ -23,6 +23,7 @@ convert visitors into leads or revenues.
 .. toctree::
    :titlesonly:
 
+   website/web_design
    website/pages
    website/configuration
    website/reporting
