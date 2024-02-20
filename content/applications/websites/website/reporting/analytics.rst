@@ -127,6 +127,8 @@ To follow your Odoo website's traffic with Google Analytics:
 .. seealso::
    `Google documentation on setting up Analytics for a website <https://support.google.com/analytics/answer/1008015?hl=en/>`_
 
+.. _website/analytics/gtm:
+
 Google Tag Manager
 ==================
 
