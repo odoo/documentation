@@ -2,106 +2,124 @@
 Putaway rules
 =============
 
-What is a Putaway Rule?
-=======================
+Putaway is the process of routing products to appropriate storage locations upon shipment arrival.
 
-A good warehouse implementation makes sure that products automatically move to their appropriate
-destination location. To make that process easier, Odoo uses *Putaway Rules*. Putaway is the
-process of taking products from the received shipments and putting them into the appropriate
-location.
+Odoo can accomplish this seamlessly using *putaway rules*, which dictate how products move through
+specified warehouse locations.
 
-If, for example, a warehouse contains volatile substances, it is important to make sure that certain
-products are not stored close to each other because of a potential chemical reaction. That's where
-putaway rules intervene, to avoid storing products wrongly.
+Upon shipment arrival, operations are generated based on putaway rules to efficiently move products
+to specified locations, and ensure easy retrieval for future delivery orders.
+
+In warehouses that process specific kinds of products, putaway rules can also prevent volatile
+substances from being stored in close proximity, by directing them to different locations determined
+by the warehouse manager.
+
+.. seealso::
+   `Odoo Tutorials: Putaway Rules <https://www.youtube.com/watch?v=nCQMf6sj_w8>`_
 
 Configuration
--------------
+=============
 
-In the :guilabel:`Inventory` app, go to :menuselection:`Configuration --> Settings` and activate
-the :guilabel:`Multi-Step Routes` feature. By doing so, the :guilabel:`Storage Locations` feature
-is also automatically activated.
+To use putaway rules, navigate to :menuselection:`Inventory app --> Configuration --> Settings`, and
+activate the :guilabel:`Multi-Step Routes` feature under the :guilabel:`Warehouse` section. By doing
+so, the :guilabel:`Storage Locations` feature is also automatically activated.
+
+Finally, click :guilabel:`Save`.
 
 .. image:: putaway/activate-multi-step-routes.png
    :align: center
    :alt: Activate Multi-Step Routes in Inventory configuration settings.
 
-Setting up a putaway rule
--------------------------
+.. _inventory/routes/putaway-rule:
 
-In some cases, like for a retail shop storing fruits and vegetables, products should be stored in
-different locations depending on several factors like frequency, size, product category, specific
-environment needs, and so on.
+Define putaway rule
+-------------------
 
-In this example, suppose there is one warehouse location, **WH/Stock**, with the following
-sub-locations:
-
-- WH/Stock/Pallets
-
-  - WH/Stock/Pallets/PAL1
-  - WH/Stock/Pallets/PAL2
-  - WH/Stock/Pallets/PAL3
-
-- WH/Stock/Shelf 1
-
-- WH/Stock/Shelf 2
-
-  - WH/Stock/Shelf 2/Small Refrigerator
-
-- WH/Stock/Shelf 3
-
-Manage those locations with putaway rules. To create a putaway rule, open the :guilabel:`Inventory`
-app and go to :menuselection:`Configuration --> Putaway Rules`. Then, click on :guilabel:`Create`
-and configure a putaway rule that indicated the main location the product will enter before being
-redirected to the right storage location.
+To manage where specific products are routed for storage, navigate to :menuselection:`Inventory app
+--> Configuration --> Putaway Rules`. Use the :guilabel:`Create` button to configure a new putaway
+rule on a :guilabel:`Product` or :guilabel:`Product Category` that the rule affects.
 
 .. important::
-   The putaway rules can be defined either per product/product category and/or package type (the
-   :guilabel:`Packages` setting must be enabled for that). Putaway rules are read sequentially
-   until a match is found.
+   Putaway rules can be defined either per product/product category, and/or package type (the
+   *Packages* setting must be enabled in :menuselection:`Inventory app --> Configuration -->
+   Settings` for that).
 
-Take the following example:
+In the same line, the :guilabel:`When product arrives in` location is where the putaway rule is
+triggered to create an operation to move the product to the :guilabel:`Store to` location.
 
-- If water (category All/drinks) is received, whatever the package, it will be redirected to
-  WH/Stock/Shelf 2/Small Refrigerator.
-- If orange juice cans, packaged in boxes, are received, they will be redirected to
-  WH/Stock/Shelf 2.
-- If water or apple juice bottles, packaged in boxes, are received, they will be redirected to
-  WH/Stock/Shelf 3.
-- If a pallet of lemonade cans are receieved, it will be redirected to WH/Stock/Pallets/PAL1.
+For this to work, the :guilabel:`Store to` location must be a *sub-location* of the first (e.g.,
+`WH/Stock/Fruits` is a specific, named location inside `WH/Stock` to make the products stored here
+easier to find).
 
-.. image:: putaway/putaway-example.png
-   :align: center
-   :alt: Some examples of putaway rules.
+.. example::
+   In a warehouse location, **WH/Stock**, there are the following sub-locations:
 
-Using Storage Categories
-========================
+   - WH/Stock/Fruits
+   - WH/Stock/Vegetables
 
-A *Storage Category* is an extra location attribute. Storage categories allow the user to define
-the quantity of products that can be stored in the location and how the location will be selected
+   Ensure all apples are stored in the fruits section by filling the field :guilabel:`Store to` with
+   the location `WH/Stock/Fruits` when the :guilabel:`Product`, `Apple` arrives in `WH/Stock`.
+
+   Repeat this for all products and hit :guilabel:`Save`.
+
+   .. image:: putaway/create-putaway-rules.png
+      :align: center
+      :alt: Create putaway rules for apples and carrots.
+
+Putaway rule priority
+---------------------
+
+Odoo selects a putaway rule based on the following priority list (from highest to lowest) until a
+match is found:
+
+#. Package type and product
+#. Package type and product category
+#. Package type
+#. Product
+#. Product category
+
+.. example::
+   The product `Lemonade can` has the following putaway rules configured:
+
+   #. When receiving a `Pallet` (:guilabel:`Package Type`) of `Lemonade cans`, it is redirected to
+      `WH/Stock/Pallets/PAL1`.
+   #. `Lemonade can`'s :guilabel:`Product Category` is `All/drinks`, and when receiving a `Box` of
+      any item in this product category, items are redirected to `WH/Stock/Shelf 1`.
+   #. Any product on a `Pallet` is redirected to `WH/Stock/Pallets`
+   #. The product `Lemonade can` is redirected to `WH/Stock/Shelf 2`
+   #. Items in the `All/drinks` product category are redirected to `WH/Stock/Small Refrigerator`.
+
+  .. image:: putaway/putaway-example.png
+     :align: center
+     :alt: Some examples of putaway rules.
+
+Storage categories
+==================
+
+A *storage category* is an extra location attribute. Storage categories allow the user to define
+the quantity of products that can be stored in the location, and how the location will be selected
 with putaway rules.
 
 Configuration
 -------------
 
-In the :guilabel:`Inventory` app, go to :menuselection:`Configuration --> Settings` and activate
-the :guilabel:`Storage Categories` feature. By doing so, the :guilabel:`Storage Locations` feature
-is also automatically activated.
+To enable storage categories, go to :menuselection:`Inventory app --> Configuration --> Settings`,
+and activate the :guilabel:`Storage Categories` feature in the :guilabel:`Warehouse` section. Then,
+click :guilabel:`Save`.
 
-Create a Storage Category
--------------------------
+.. important::
+   The :guilabel:`Storage Locations` feature **must** be enabled to enable :guilabel:`Storage
+   Categories`.
 
-To create a storage category, go to :menuselection:`Inventory --> Configuration --> Storage
-Categories` and click :guilabel:`Create`. Then, click :guilabel:`Save` and click :guilabel:`Storage
-Categories` or go to :menuselection:`Configuration --> Storage Categories` to create a new storage
-category.
+Define storage category
+-----------------------
 
-.. image:: putaway/storage-category.png
-   :align: center
-   :alt: Create Storage Categories inside Odoo Inventory configuration settings.
+To create a storage category, go to :menuselection:`Inventory app --> Configuration --> Storage
+Categories` and click :guilabel:`Create`.
 
-First, click :guilabel:`Create` and type a name for the storage category.
+On the storage category form, type a name for the :guilabel:`Storage Category` field.
 
-Then, there are options to limit the capacity by weight, by product, or by package type. The
+Options are available to limit the capacity by weight, by product, or by package type. The
 :guilabel:`Allow New Product` field defines when the location is considered available to store a
 product:
 
@@ -111,17 +129,40 @@ product:
 - :guilabel:`Allow mixed products`: several different products can be stored in this location at
   the same time.
 
+.. example::
+   Create putaway rules for pallet-stored items and ensure real-time storage capacity checks by
+   creating the `High Frequency pallets` storage category.
+
+   Name the :guilabel:`Storage Category`, and select :guilabel:`If all products are same` in the
+   :guilabel:`Allow New Product` field.
+
+   Then, define package capacity in the :guilabel:`Capacity by Package` tab, specifying the number
+   of packages for the designated :guilabel:`Package Type` and setting a maximum of `2.00` `Pallets`
+   for a specific location.
+
+   .. image:: putaway/storage-category.png
+      :align: center
+      :alt: Create a storage category on the page.
+
 Once the storage category settings are saved, the storage category can be linked to a location.
 
-.. image:: putaway/location-storage-category.png
-   :align: center
-   :alt: When a Storage Category is created, it can be linked to a warehouse location.
+To do that, navigate to the location by going to :menuselection:`Inventory app --> Configuration -->
+Locations`, and select the location. Click :guilabel:`Edit` and select the created category in the
+:guilabel:`Storage Category` field.
+
+.. example::
+   Assign the `High Frequency pallets` storage category to the `WH/Stock/pallets/PAL 1`
+   sub-location.
+
+   .. image:: putaway/location-storage-category.png
+      :align: center
+      :alt: When a Storage Category is created, it can be linked to a warehouse location.
 
 Storage categories in putaway rules
 -----------------------------------
 
-To continue the example from above, apply the "High Frequency Pallets" on the PAL1 and PAL2
-locations and rework the putaway rules as follows:
+To continue the example from above, apply the `High Frequency Pallets` on the `PAL1` and `PAL2`
+locations and :ref:`rework the putaway rules <inventory/routes/putaway-rule>` as follows:
 
 Assume one pallet of lemonade cans is received:
 
