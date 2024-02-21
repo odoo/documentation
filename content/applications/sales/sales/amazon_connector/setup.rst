@@ -134,9 +134,9 @@ follows:
 #. Click :guilabel:`New` to create a new marketplace record.
 #. Enter the Marketplace ID in the :guilabel:`API Idenifier` field, and select the :guilabel:`Amazon
    Region` for your marketplace as described in the `Amazon Documentation for marketplace IDs and
-   regions <https://developer-docs.amazon.com/amazon-shipping/docs/marketplace-ids>`_, and the
+   regions <https://developer-docs.amazon.com/sp-api/docs/marketplace-ids>`_, and the
    :guilabel:`Seller Central URL` as described in the `Amazon Documentation for seller central URLs
-   <https://developer-docs.amazon.com/amazon-shipping/docs/seller-central-urls>`_.
+   <https://developer-docs.amazon.com/sp-api/docs/seller-central-urls>`_.
 #. Set the :guilabel:`Name` of the record to `Amazon.<country code>` to easily retrieve it (e.g.
    `Amazon.se`). The :guilabel:`API Identifier`, the :guilabel:`Region` and the :guilabel:`Seller
    Central URL` fields should respectively hold the *Marketplace ID*, the selected Amazon region,
