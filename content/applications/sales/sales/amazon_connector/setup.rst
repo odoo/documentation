@@ -92,9 +92,9 @@ Amazon Sync --> Amazon Marketplaces`.
 
 From there, create a new marketplace record. Enter the Marketplace ID and select the Amazon Region
 for your marketplace as described in the `Amazon Documentation for marketplace IDs
-<https://developer-docs.amazon.com/amazon-shipping/docs/marketplace-ids>`_, and the Seller Central
+<https://developer-docs.amazon.com/sp-api/docs/marketplace-ids>`_, and the Seller Central
 URL as described in the `Amazon Documentation for seller central URLs
-<https://developer-docs.amazon.com/amazon-shipping/docs/seller-central-urls>`_.
+<https://developer-docs.amazon.com/sp-api/docs/seller-central-urls>`_.
 
 Set the name of the record to ``Amazon.<country code>`` to easily retrieve it (e.g.: ``Amazon.se``).
 The :guilabel:`API Identifier`, the :guilabel:`Region` and the :guilabel:`Seller Central URL` fields
