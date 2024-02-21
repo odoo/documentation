@@ -80,10 +80,7 @@ On the new package form, the :guilabel:`Package Reference` is pre-filled with th
 `PACK` number in the system. :guilabel:`Pack Date` is automatically set to the creation date of the
 form.
 
-For the :guilabel:`Package Use` field, the :guilabel:`Disposable Box` option should be selected if
-the package is used for a shipping. Alternatively, the :guilabel:`Reusable Box` option should be
-selected if the package is simply used as a method of grouping products from the same |SO| together
-before they are moved to the intended shipping box at the output location.
+Set the :guilabel:`Package Use` field to :guilabel:`Reusable Box`.
 
 .. seealso::
    :ref:`Packages <inventory/management/packages>`
