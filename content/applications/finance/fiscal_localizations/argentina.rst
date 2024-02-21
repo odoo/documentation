@@ -41,10 +41,12 @@ localization:
      - `l10n_ar_edi`
      - Includes all technical and functional requirements to generate electronic invoices via web
        service, based on the AFIP regulations.
-   * - :guilabel:`Argentinean eCommerce`
+   * - :ref:`Argentinean eCommerce <argentina/ecommerce-electronic-invoicing>`
      - `l10n_ar_website_sale`
      - (optional) Allows the user to see Identification Type and AFIP Responsibility in the
        eCommerce checkout form in order to create electronic invoices.
+
+.. _argentina/configure-your-company:
 
 Configure your company
 ----------------------
@@ -549,6 +551,8 @@ When creating a :guilabel:`Credit Note` we can have two scenarios:
    :align: center
    :alt: FCE: Es Cancelación?
 
+.. _argentina/invoice-printed-report:
+
 Invoice printed report
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -871,6 +875,78 @@ The menu also displays critical information related to these operations, such as
   payment *received* from a customer
 - The :guilabel:`Journal` in which the check is currently registered
 - The **partner** associated with the operation (either customer or vendor).
+
+.. _argentina/ecommerce-electronic-invoicing:
+
+Ecommerce electronic invoicing
+------------------------------
+
+
+:ref:`Install <general/install>` the *Argentinian eCommerce* (`l10n_ar_website_sale`) module to
+enable the following features and configurations:
+
+- Clients being able to create online accounts for eCommerce purposes.
+- Support for required fiscal fields in the eCommerce application.
+- Receive payments for sale orders online.
+- Generate electronic documents from the eCommerce application.
+
+Configuration
+~~~~~~~~~~~~~
+
+Once all of the configurations are made for the Argentinian :ref:`electronic invoice
+<argentina/configure-your-company>` flow, it is also necessary to complete certain configurations to
+integrate the eCommerce flow.
+
+Client account registration
+***************************
+
+To configure your website for client accounts, follow the instructions in the :doc:`checkout
+<../../websites/ecommerce/checkout_payment_shipping/checkout>` documentation.
+
+Automatic invoice
+*****************
+
+Configure your website to generate electronic documents in the sales process by navigating to
+:menuselection:`Website --> Configuration --> Settings` and activating the :guilabel:`Automatic
+Invoice` feature in the :guilabel:`Invoicing` section to automatically generate the required
+electronic documents when the online payment is confirmed.
+
+.. image:: argentina/l10nar-automatic-invoicing-ecommerce.png
+   :align: center
+   :alt: Feature activated to invoice automatically.
+
+Since an online payment needs to be confirmed for the :guilabel:`Automatic Invoice` feature to
+generate the document, a :doc:`payment provider <../payment_providers>` **must** be configured for
+the related website.
+
+Products
+********
+
+To allow your products to be invoiced when an online payment is confirmed, navigate to the desired
+product from :menuselection:`Website --> eCommerce --> Products`. In the :guilabel:`General
+Information` tab, set the :guilabel:`Invoicing Policy` to :guilabel:`Ordered quantities` and define
+the desired :guilabel:`Customer Taxes`.
+
+Invoicing flow for eCommerce
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Once the configurations mentioned above are all set, clients can complete the following required
+steps in the *Argentinian eCommerce* flow to input fiscal fields in the checkout process.
+
+Fiscal fields are available for input in the checkout process once the :guilabel:`Country` field is
+set as `Argentina`. Inputting the fiscal data enables the purchase to conclude in the corresponding
+electronic document.
+
+.. image:: argentina/l10nar-fiscal-fields-ar-ecommerce.png
+   :align: center
+   :alt: Fiscal required fields for electronic invoicing.
+
+When the client makes a successful purchase and payment, the necessary invoice is generated with
+the corresponding layout and fiscal stamps stated in the :ref:`Invoice printed report
+<argentina/invoice-printed-report>`.
+
+.. seealso::
+   :doc:`Client account creation <../../websites/ecommerce/checkout_payment_shipping/checkout>`
 
 Reports
 =======
