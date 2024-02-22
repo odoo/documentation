@@ -327,24 +327,16 @@ Once the connection is established, Odoo can be synchronized with CodaBox.
 
       CODA files are automatically imported from CodaBox every 12 hours. You do
       not have to do anything. However, if you wish, it can also be done manually,
-      by clicking on :guilabel:`Fetch CODA's` in the Accounting Dashboard.
-
-      .. image:: belgium/codabox_dashboard_coda.png
-         :align: center
-         :alt: Manually fetch CODA's.
+      by clicking on :guilabel:`Fetch from CodaBox` in the Accounting Dashboard.
 
    .. tab:: For SODA files
 
       SODA files are automatically imported from CodaBox once a day as a draft. You do not have to
       do anything. However, if you wish, it can also be done manually by clicking on
-      :guilabel:`Fetch SODA's` in the Accounting Dashboard.
+      :guilabel:`Fetch from CodaBox` in the Accounting Dashboard.
 
       By default, if an account in the SODA file is not mapped to an account in Odoo, the Suspense
       Account (499000) is used, and a note is added to the created journal entry.
-
-      .. image:: belgium/codabox_dashboard_soda.png
-         :align: center
-         :alt: Manually fetch SODA's.
 
       .. note::
          You can access the mapping between the SODA and Odoo accounts by going to
