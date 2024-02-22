@@ -20,7 +20,7 @@ To Odoo Online
    - Odoo Online is *not* compatible with **non-standard apps**.
    - The database's current version must be :doc:`supported <supported_versions>`.
 
-#. Create a :ref:`duplicate <duplicate_premise>` of the database.
+#. Create a :ref:`duplicate of the database <on-premise/duplicate>`.
 #. In this duplicate, uninstall all **non-standard apps**.
 #. Use the database manager to grab a *dump with filestore*.
 #. `Submit a support ticket <https://www.odoo.com/help>`_ including the following:
