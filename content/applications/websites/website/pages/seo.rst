@@ -11,9 +11,9 @@ speed.
    - Odoo provides several modules to help you build your website content, such as
      :doc:`eCommerce <../../ecommerce>`, :doc:`Blog <../../blog>`, :doc:`eLearning
      <../../elearning>`, and :doc:`Forum <../../forum>`.
-   - All Odoo themes rely on the CSS Framework `Bootstrap <https://getbootstrap.com/>`_ to render
-     efficiently according to the device: desktop, tablet, or mobile, which positively impacts
-     ranking in search engines.
+   - All Odoo :doc:`themes <../web_design/themes>` rely on the CSS Framework `Bootstrap
+     <https://getbootstrap.com/>`_ to render efficiently according to the device: desktop, tablet,
+     or mobile, which positively impacts ranking in search engines.
 
 Content optimization
 ====================
@@ -86,8 +86,9 @@ search engines to optimize SEO ranking.
 
 Odoo automatically compresses uploaded images and converts them to `Webp`. With this file format,
 photos are smaller, which increases the page loading speed and, therefore, gives a better ranking in
-SEO. All images used in Odoo official themes are also compressed by default. If you are using a
-third-party theme, it may provide images that are not compressed efficiently.
+SEO. All images used in Odoo official :doc:`themes <../web_design/themes>` are also compressed by
+default. If you are using a third-party theme, it may provide images that are not compressed
+efficiently.
 
 **To modify an image** from your website, select the image, click :guilabel:`Edit`, then go to the
 :guilabel:`Customize` tab, and adapt the :guilabel:`Format` in the :guilabel:`Image` section.
