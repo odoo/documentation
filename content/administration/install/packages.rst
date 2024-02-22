@@ -16,8 +16,8 @@ Official **Community** and **Enterprise** packages can be downloaded from the `O
 <https://www.odoo.com/page/download>`_.
 
 .. note::
-   It is required to be logged in as a paying customer or partner to download the Enterprise
-   packages.
+   It is required to be logged in as a paying on-premise customer or partner to download the
+   Enterprise packages.
 
 .. _install/packages/linux:
 
