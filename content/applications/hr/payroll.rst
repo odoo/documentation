@@ -946,15 +946,15 @@ Refer to the :doc:`../hr/recruitment/new_job` documentation for more details on 
 form.
 
 .. seealso::
-   - :doc:`payroll/reporting`
    - :doc:`payroll/contracts`
    - :doc:`payroll/payslips`
    - :doc:`payroll/work_entries`
+   - :doc:`payroll/reporting`
 
 .. toctree::
    :titlesonly:
 
-   payroll/reporting
    payroll/contracts
    payroll/payslips
    payroll/work_entries
+   payroll/reporting
