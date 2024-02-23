@@ -6,13 +6,13 @@ How to list a product?
 
 In order to list a product on eBay and Odoo there are two methods in Odoo to do so:
 
-#. Make a product in Odoo and list the item eBay.
+#. (*Preferred method*) Make a product in Odoo and list the item eBay.
 
    - Click :guilabel:`List Item on eBay` in the top menu of the product template. The product
      template can be accessed by navigating to :menuselection:`Sales app --> Products --> Product`
      and selecting the individual product.
-#. List the item on eBay, then create the product in Odoo, and finally link product to the item on
-   eBay.
+#. (*Less preferred method*) List the item on eBay, then create the product in Odoo, and finally
+   link product to the item on eBay.
 
    - Click :guilabel:`Link With Existing eBay Listing` in the top menu on the product template.The
      product template can be accessed by navigating to :menuselection:`Sales app --> Product -->
