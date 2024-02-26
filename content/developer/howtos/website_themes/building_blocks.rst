@@ -42,7 +42,7 @@ The styles' file structure is the following.
 
 .. seealso::
    `XML templates of the different snippets
-   <{GITHUB_PATH}/addons/website/views/snippets/snippets.xml>`_
+   <{GITHUB_PATH}/addons/website/views/snippets/>`_
 
 .. admonition:: Demo page
 
@@ -370,7 +370,7 @@ option can be enabled at a time.
    </template>
 
 .. seealso::
-   `XML templates of the different snippets
+   `XML template of the different snippets options
    <{GITHUB_PATH}/addons/website/views/snippets/snippets.xml>`_
 
 JavaScript options
