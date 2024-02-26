@@ -99,9 +99,11 @@ Operations Types`, and then clicking on a specific operations type.
    :alt: Operations Types highlighted from the Configurations submenu in the Inventory app.
 
 .. seealso::
-   :doc:`reservation_methods/at_confirmation`
+   - :doc:`reservation_methods/at_confirmation`
+   - :doc:`reservation_methods/manually`
 
 .. toctree::
    :titlesonly:
 
    reservation_methods/at_confirmation
+   reservation_methods/manually
