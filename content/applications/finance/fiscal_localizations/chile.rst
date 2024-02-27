@@ -745,6 +745,55 @@ If you claim a vendor bill, the status changes from :guilabel:`Draft` to :guilab
 automatically. Considering this as best practice, all the claimed documents should be canceled as
 they won't be valid for your accounting records.
 
+Electronic purchase invoice
+---------------------------
+
+The *electronic purchase invoice* is a feature included in the `l10n_cl_edi` module.
+
+Once all configurations have been made for :ref:`electronic invoices <chile/electronic-invoice>`
+(e.g., uploading a valid company certificate, setting up master data, etc.), the electronic
+purchase invoices need their own :abbr:`CAFs (Folio Authorization Code)`. Please refer to the
+:ref:`CAF documentation <chile/caf-documentation>` to check the details on how to acquire the
+:abbr:`CAFs (Folio Authorization Code)` for electronic purchase invoices.
+
+Electronic purchase invoices are useful when vendors are not obligated to expedite an electronic
+vendor bill for your purchase. Still, your obligations require a document to be sent to the
+:abbr:`SII (Servicio de Impuestos Internos)` as proof of purchase.
+
+Configuration
+~~~~~~~~~~~~~
+
+To generate an electronic purchase invoice from a vendor bill, the bill must be created in a
+purchase journal with the *Use Documents* feature enabled. It is possible to modify an existing
+purchase journal or create a new one in the following process.
+
+To modify the existing purchase journal, or create a new purchase journal, navigate to
+:menuselection:`Accounting --> Configuration --> Journals`. Then, click the :guilabel:`New` button,
+and fill in the following required information:
+
+- :guilabel:`Type`: select :guilabel:`Purchase` from the drop-down menu for vendor bill journals.
+- :guilabel:`Use Documents`: check this field so the journal can generate electronic documents (in
+  this case the electronic purchase invoice).
+
+Generate an electronic purchase invoice
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To generate this type of document, it is necessary to create a vendor bill in Odoo. To do so,
+navigate to :menuselection:`Accounting --> Vendors --> Bills`, and click the :guilabel:`New` button.
+
+When all of the electronic purchase invoice information is filled, select the option :guilabel:`(46)
+Electronic Purchase Invoice` in the :guilabel:`Document Type` field:
+
+After the vendor bill is posted:
+
+- The :abbr:`DTE (Documentos Tributarios Electrónicos)` file (Electronic Tax Document) is
+  automatically created and added to the chatter.
+- The :guilabel:`DTE SII Status` is set as :guilabel:`Pending to be sent`.
+
+Odoo automatically updates the *DTE Status* every night using a scheduled action. To get a response
+from the :abbr:`SII (Servicio de Impuestos Internos)` immediately, click the :guilabel:`Send now to
+SII` button.
+
 Delivery guide
 --------------
 
