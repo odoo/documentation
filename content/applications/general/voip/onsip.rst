@@ -19,9 +19,9 @@ Configuration
 
 To configure the Odoo database to connect to OnSIP services, first navigate to the
 :menuselection:`Apps application` from the main Odoo dashboard. Then, remove the default `Apps`
-filter from the :guilabel:`Search...` bar, and search for `VoIP OnSIP`.
+filter from the :guilabel:`Search...` bar, and search for `OnSIP`.
 
-Next, install the :guilabel:`VOIP OnSIP` module.
+Next, activate the :guilabel:`VOIP OnSIP` module.
 
 .. image:: onsip/install-onsip.png
    :align: center
@@ -73,10 +73,10 @@ In this section, fill in the fields with OnSIP credentials.
 
 Fill in the following fields with the associated credentials listed below:
 
-- :guilabel:`SIP Login` / :guilabel:`Browser's Extension` = OnSIP :guilabel:`Username`
-- :guilabel:`OnSIP authorization User` = OnSIP :guilabel:`Auth Username`
-- :guilabel:`Handset Extension` = OnSIP :guilabel:`Ext.` (extension without the `x`)
-- :guilabel:`SIP Password` = OnSIP :guilabel:`SIP Password`
+- :guilabel:`Voip Username` = OnSIP :guilabel:`Username`
+- :guilabel:`OnSIP Auth Username` = OnSIP :guilabel:`Auth Username`
+- :guilabel:`VoIP Secret` = OnSIP :guilabel:`SIP Password`
+- :guilabel:`External Device Number` = OnSIP :guilabel:`Ext.` (extension without the `x`)
 
 .. image:: onsip/onsip-creds.png
    :align: center
@@ -86,10 +86,9 @@ Fill in the following fields with the associated credentials listed below:
 .. tip::
    The OnSIP extension can be found in the *User* banner line above the tabs.
 
-When these steps are complete, click :guilabel:`Save` on the user form in Odoo to save the
-configurations.
+When these steps are complete, navigate away from the user form in Odoo to save the configurations.
 
-Once saved, Odoo users can make phone calls by clicking the :guilabel:`📞 (phone)` icon in the
+Once saved, Odoo users can make phone calls by clicking the :guilabel:`☎️ (phone)` icon in the
 top-right corner of Odoo.
 
 .. seealso::
