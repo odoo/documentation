@@ -193,11 +193,32 @@ to simulate multiple packages. Products will need to be put in different :guilab
 too heavy. However, note that these rules will not apply to the shipping price calculation on the
 calculation on the sales order.
 
-When using a personal carrier contract
---------------------------------------
+Personal carrier contract
+-------------------------
 
-When using a personal carrier contract in Sendcloud, if the the price is not accurately reflected
-when creating a quotation in Odoo, then the pricing information needs to be updated in Sendcloud.
+Use custom prices from a direct carrier contract, via CSV upload, by first logging into Sendcloud,
+navigating to :menuselection:`Settings --> Carriers --> My contracts`, and then selecting the
+intended contract.
+
+.. image:: sendcloud_shipping/contracts.png
+   :align: center
+   :alt: Navigate to the contracts section in Sendcloud.
+
+Under the :guilabel:`Contract prices` section, click :guilabel:`Download CSV` and fill out the
+contract prices in the :guilabel:`price` column of the CSV file template.
+
+.. warning::
+   Ensure the CSV file includes the correct prices to avoid any inaccuracies.
+
+.. image:: sendcloud_shipping/price-csv.png
+   :align: center
+   :alt: Show sample contract CSV from Sendcloud, highlighting the price column.
+
+:guilabel:`Upload` the completed CSV file to Sendcloud, then click :guilabel:`Save these prices`.
+
+.. seealso::
+   `Sendcloud: How to upload contract prices with carriers
+   <https://support.sendcloud.com/hc/en-us/articles/5163547066004>`_
 
 Measuring volumetric weight
 ---------------------------
