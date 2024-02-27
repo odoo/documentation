@@ -67,16 +67,16 @@ configured in the Odoo user's settings/preferences.
 To do that, navigate to :menuselection:`Settings app --> Manage Users --> Select the User`.
 
 On the user form, click :guilabel:`Edit` to configure the user's OnSIP account. Then, click the
-:guilabel:`Preferences` tab, and scroll to the :guilabel:`VoIP Configuration` section.
+:guilabel:`Preferences` tab, and scroll to the :guilabel:`VoIP` section.
 
 In this section, fill in the fields with OnSIP credentials.
 
 Fill in the following fields with the associated credentials listed below:
 
-- :guilabel:`SIP Login` / :guilabel:`Browser's Extension` = OnSIP :guilabel:`Username`
-- :guilabel:`OnSIP authorization User` = OnSIP :guilabel:`Auth Username`
-- :guilabel:`Handset Extension` = OnSIP :guilabel:`Ext.` (extension without the `x`)
-- :guilabel:`SIP Password` = OnSIP :guilabel:`SIP Password`
+- :guilabel:`VoIP Username` / :guilabel:`Extension Number` = OnSIP :guilabel:`Username`
+- :guilabel:`OnSIP Auth Username` = OnSIP :guilabel:`Auth Username`
+- :guilabel:`VoIP secret` = OnSIP :guilabel:`SIP Password`
+- :guilabel:`External device number` = OnSIP :guilabel:`Ext.` (extension without the `x`)
 
 .. image:: onsip/onsip-creds.png
    :align: center
@@ -86,10 +86,9 @@ Fill in the following fields with the associated credentials listed below:
 .. tip::
    The OnSIP extension can be found in the *User* banner line above the tabs.
 
-When these steps are complete, click :guilabel:`Save` on the user form in Odoo to save the
-configurations.
+When these steps are complete, navigate away from the user form in Odoo to save the configurations.
 
-Once saved, Odoo users can make phone calls by clicking the :guilabel:`📞 (phone)` icon in the
+Once saved, Odoo users can make phone calls by clicking the :guilabel:`☎️ (phone)` icon in the
 top-right corner of Odoo.
 
 .. seealso::
