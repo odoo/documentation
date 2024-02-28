@@ -9,6 +9,9 @@ At confirmation reservation
 The *at confirmation* reservation method reserves products **only** when a sales order (SO) is
 confirmed, **and** if enough stock of the products included in the |SO| is already available.
 
+.. seealso::
+   :doc:`About reservation methods <../reservation_methods>`
+
 Configuration
 =============
 
@@ -83,4 +86,5 @@ Availability` field reads `Available` (in green text), and the numbers in the :g
 Once ready, click :guilabel:`Validate`.
 
 .. seealso::
-   :doc:`About reservation methods <../reservation_methods>`
+   - :doc:`Manual reservation <manually>`
+   - :doc:`Before scheduled date reservation <before_scheduled_date>`

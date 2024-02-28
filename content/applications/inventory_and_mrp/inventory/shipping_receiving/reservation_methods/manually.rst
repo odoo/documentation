@@ -135,4 +135,5 @@ Once ready, click :guilabel:`Validate`.
       :alt: List of orders in waiting status and check availability button.
 
 .. seealso::
-   :doc:`At confirmation reservation <../reservation_methods/at_confirmation>`
+   - :doc:`At confirmation reservation <at_confirmation>`
+   - :doc:`Before scheduled date reservation <before_scheduled_date>`
