@@ -101,9 +101,11 @@ Operations Types`, and then clicking on a specific operations type.
 .. seealso::
    - :doc:`reservation_methods/at_confirmation`
    - :doc:`reservation_methods/manually`
+   - :doc:`reservation_methods/before_scheduled_date`
 
 .. toctree::
    :titlesonly:
 
    reservation_methods/at_confirmation
    reservation_methods/manually
+   reservation_methods/before_scheduled_date
