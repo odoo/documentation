@@ -90,9 +90,6 @@ Go to :menuselection:`Accounting --> Reporting --> Tax report` and click on
 :guilabel:`Connect to HMRC`. Enter your company information on the HMRC platform. You only need to
 do it once.
 
-.. Note::
-   When entering your VAT number, do not add the GB country code. Only the 9 digits are required.
-
 Periodic submission to HMRC
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
