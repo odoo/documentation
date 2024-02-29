@@ -18,8 +18,8 @@ Before setting up a barcode scanner, it is important to determine which type of 
 the needs of the business. There are three main types of scanners that can be used with Odoo, each
 with their own benefits and use cases:
 
-- **USB scanners** are connected to a computer, and are suitable for businesses that scan products at
-  a fixed location, like at the checkout line in a grocery store.
+- **USB scanners** are connected to a computer, and are suitable for businesses that scan products
+  at a fixed location, like at the checkout line in a grocery store.
 - **Bluetooth scanners** pair with a smartphone or tablet, making them both a cost-effective and
   portable barcode scanner option. In this scenario, Odoo is installed on the smartphone, allowing
   warehouse operators to handle operations, and check stock, directly through their mobile devices.
@@ -106,3 +106,60 @@ Once that option is enabled, go back to the :guilabel:`Profile` options page, an
 
 Once all those steps have been taken, perform a test scan to ensure the Zebra scanner is working
 properly, as intended.
+
+Honeywell mobile computer scanner
+=================================
+
+When using Honeywell scanners, follow the instructions below to ensure barcodes can be scanned in
+Odoo.
+
+Begin on the Honeywell scanner's home screen, and select :guilabel:`Settings`, represented by a
+:guilabel:`⚙️ (gear)` icon. Then, click :guilabel:`Honeywell Settings`, followed by
+:guilabel:`Scanning`.
+
+From here, click :guilabel:`Internal Scanner`, followed by :guilabel:`Default Profile`. From the
+resulting list of options, select :guilabel:`Data Processing Settings`.
+
+The :guilabel:`Data Processing Settings` specify how barcode data is processed by the computer.
+Locate the :guilabel:`Wedge Method` setting. By default, this is set to :guilabel:`Standard`.
+
+.. image:: hardware/hardware-honeywell-settings.png
+   :align: center
+   :alt: Data processing settings options for Honeywell scanner.
+
+Change the :guilabel:`Wedge Method` setting to :guilabel:`Keyboard`.
+
+After completing the steps, conduct a test scan to verify the Honeywell scanner is working as
+intended.
+
+Cipherlab mobile computer scanner
+=================================
+
+When using Cipherlab scanners, follow the instructions below to ensure barcodes can be scanned in
+Odoo.
+
+Begin on the Cipherlab scanner's home screen, and navigate to the :menuselection:`App Drawer (All
+Applications)`. Then, click the :guilabel:`ReaderConfig` app, represented by an orange
+:guilabel:`⚙️ (gear)` icon over a blue :guilabel:`(barcode)` icon.
+
+Next, select the :guilabel:`Default Profile`, or create a new profile, if needed.
+
+Under the :guilabel:`General Settings`, click :guilabel:`Data Output`, followed by
+:guilabel:`Keyboard Emulation`.
+
+.. image:: hardware/hardware-cipherlab-settings.png
+   :align: center
+   :alt: Cipherlab scanner data output setting page.
+
+By default, the :guilabel:`Input Method`, under :guilabel:`Keyboard Emulation`, is set to
+:guilabel:`Default Mode`. Change this setting to :guilabel:`KeyEvent`.
+
+.. image:: hardware/hardware-cipherlab-emulation.png
+   :align: center
+   :alt: Cipherlab scanner keyboard emulation settings.
+
+After completing the steps, conduct a test scan to verify the Cipherlab scanner is working as
+intended.
+
+.. seealso::
+   :doc:`../setup/software`
