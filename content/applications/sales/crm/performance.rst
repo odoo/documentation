@@ -8,3 +8,4 @@ Analyze performance
    :titlesonly:
 
    performance/win_loss
+   performance/expected_revenue_report
