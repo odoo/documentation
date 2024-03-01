@@ -56,7 +56,7 @@ Prepare the addon directory
       :align: center
       :alt: The new module appears in the list
 
-The first step of module creation is to create its directory. In the `technical-training-sandbox`
+The first step of module creation is to create its directory. In the `tutorials`
 directory, add a new directory :file:`estate`.
 
 A module must contain at least 2 files: the ``__manifest__.py`` file and a ``__init__.py`` file.
@@ -77,8 +77,8 @@ be uninstalled**. Think about your favorite Linux distribution package manager
 
     Create the following folders and files:
 
-    - ``/home/$USER/src/technical-training-sandbox/estate/__init__.py``
-    - ``/home/$USER/src/technical-training-sandbox/estate/__manifest__.py``
+    - ``/home/$USER/src/tutorials/estate/__init__.py``
+    - ``/home/$USER/src/tutorials/estate/__manifest__.py``
 
     The ``__manifest__.py`` file should only define the name and the dependencies of our modules.
     The only necessary framework module for now is ``base``.
