@@ -12,55 +12,82 @@ Prepare the environment
 First, follow the :ref:`contributing/development/setup` section of the contributing guide to prepare
 your environment.
 
-.. important::
-   The following steps are intended only for Odoo employees. The mentioned repositories are not
-   accessible to third parties.
-
 By now, you should have downloaded the source code into two local repositories, one for `odoo/odoo`
-and one for `odoo/enterprise`. These repositories are set up to push changes to pre-defined shared
+and one for `odoo/enterprise`. These repositories are set up to push changes to pre-defined
 forks on GitHub. This will prove to be convenient when you start contributing to the codebase, but
-for the scope of this tutorial, we want to avoid polluting the shared repositories with training
-material. Let's then develop your own module in a third repository `technical-training-sandbox`.
-Like the first two repositories, it will be part of the `addons-path` that references all
-directories containing Odoo modules.
-
-#. Following the same process as with the `odoo/odoo` and `odoo/enterprise` repositories, visit
-   `github.com/odoo/technical-training-sandbox
-   <https://github.com/odoo/technical-training-sandbox>`_ and click the :guilabel:`Fork` button to
-   create a fork of the repository under your account.
-#. Clone the repository on your machine with:
-
-   .. code-block:: console
-
-      $ git clone git@github.com:odoo/technical-training-sandbox.git
-
-#. Configure the repository to push changes to your fork:
-
-   .. code-block:: console
-
-      $ cd technical-training-sandbox/
-      $ git remote add dev git@github.com:<your_github_account>/technical-training-sandbox.git
-      $ git remote set-url --push origin you_should_not_push_on_this_repository
-
-That's it! Your environment is now prepared to run Odoo from the sources, and you have successfully
-created a repository to serve as an addons directory. This will allow you to push your work to
-GitHub.
-
-Now, make a small change in the `technical-training-sandbox` repository, such as updating the
-:file:`README.md` file. Then, follow the :ref:`contributing/development/first-contribution` section
-of the contributing guide to push your changes to GitHub and create a :abbr:`PR (Pull Request)`.
-This will enable you to share your upcoming work and receive feedback. Adjust the instructions to
-use the branch `master` and the repository `technical-training-sandbox`.
-
-To ensure a continuous feedback loop, we recommend pushing a new commit as soon as you reach a new
-milestone, such as completing a chapter of the tutorial.
+for the scope of this tutorial, we want to avoid polluting them with training material. Let's then
+develop your own module in a third repository `odoo/tutorials`. Like the first two repositories,
+it will be part of the `addons-path` that references all directories containing Odoo modules.
+In this repository, we will create our first module!
 
 .. note::
+
+   This repository also already contains some bare modules that will be used in other tutorials.
+
+#. Following the same process as with the `odoo/odoo` and `odoo/enterprise` repositories, clone
+   the `odoo/tutorials` repository on your machine with:
+
+   .. code-block:: console
+
+      $ git clone git@github.com:odoo/tutorials.git
+
+#. Configure your fork and Git to push changes to your fork rather than to the main codebase. If you
+   work at Odoo, configure Git to push changes to the shared fork created on the account **odoo-dev**.
+
+   .. tabs::
+
+      .. tab:: Link Git with your fork
+
+         #. Visit `github.com/odoo/tutorials <https://github.com/odoo/tutorials>`_ and click the
+            :guilabel:`Fork` button to create a fork of the repository on your account.
+
+         #. In the command below, replace `<your_github_account>` with the name of the GitHub account
+            on which you created the fork.
+
+            .. code-block:: console
+
+               $ cd /TutorialsPath
+               $ git remote add dev git@github.com:<your_github_account>/tutorials.git
+
+      .. tab:: Link Git with odoo-dev
+
+         .. code-block:: console
+
+            $ cd /tutorials
+            $ git remote add dev git@github.com:odoo-dev/tutorials.git
+            $ git remote set-url --push origin you_should_not_push_on_this_repository
+
+That's it! Your environment is now prepared to run Odoo from the sources, and you have successfully
+created a repository to serve as an addons directory. This will allow you to push your work to GitHub.
+
+.. important::
+
+   **For Odoo employees only:**
+
+   #. Make sure to read very carefully :ref:`contributing/development/first-contribution`. In particular,
+      your branch name must follow our conventions.
+
+   #. Once you have pushed your first change to the shared fork on **odoo-dev**, create a
+      :abbr:`PR (Pull Request)`. Please put your quadrigram in the PR title (e.g., "abcd - Technical
+      Training").
+
+      This will enable you to share your upcoming work and receive feedback from your coaches. To ensure
+      a continuous feedback loop, we recommend pushing a new commit as soon as you complete a chapter
+      of the tutorial. Note that the PR is automatically updated with commits you push to **odoo-dev**,
+      you don't need to open multiple PRs.
+
+   #. At Odoo we use `Runbot <https://runbot.odoo.com>`_ extensively for our :abbr:`CI (Continuous
+      Integration)` tests. When you push your changes to **odoo-dev**, Runbot creates a new build
+      and test your code. Once logged in, you will be able to see your branches `Tutorials project
+      <https://runbot.odoo.com/runbot/tutorials-12>`_.
+
+.. note::
+
    The specific location of the repositories on your file system is not crucial. However, for the
    sake of simplicity, we will assume that you have cloned all the repositories under the same
    directory. If this is not the case, make sure to adjust the following commands accordingly,
    providing the appropriate relative path from the `odoo/odoo` repository to the
-   `odoo/technical-training-sandbox` repository.
+   `odoo/tutorials` repository.
 
 Run the server
 ==============
@@ -74,7 +101,7 @@ interface of the server.
 .. code-block:: console
 
     $ cd $HOME/src/odoo/
-    $ ./odoo-bin --addons-path="addons/,../enterprise/" -d rd-demo
+    $ ./odoo-bin --addons-path="addons/,../enterprise/,../tutorials" -d rd-demo
 
 There are multiple :ref:`command-line arguments <reference/cmdline/server>` that you can use to run
 the server. In this training you will only need some of them.
@@ -114,9 +141,11 @@ the server. In this training you will only need some of them.
    - Other commonly used arguments are:
 
      - :option:`-i <odoo-bin --init>`: Install some modules before running the server
-       (comma-separated list).
+       (comma-separated list). This is equivalent to going to :guilabel:`Apps` in the user interface,
+       and installing the module from there.
      - :option:`-u <odoo-bin --update>`: Update some modules before running the server
-       (comma-separated list).
+       (comma-separated list). This is equivalent to going to :guilabel:`Apps` in the user interface,
+       selecting a module, and upgrading it from there.
 
 .. note::
    For now you cannot add `../technical-training-sandbox` to your `addons-path` as it is empty
