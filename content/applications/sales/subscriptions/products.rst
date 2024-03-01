@@ -101,9 +101,6 @@ that recurrence period.
    An existing product can be made into a subscription product, simply by marking it as
    :guilabel:`Recurring`, and configuring :guilabel:`Time-based pricing` on the product form.
 
-   A subscription product can still be sold as a regular product, by adding it to a quotation and
-   *not* selecting a :guilabel:`Recurrence` on the quotation.
-
 Pricelists
 ~~~~~~~~~~
 
