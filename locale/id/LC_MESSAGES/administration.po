@@ -6,8 +6,8 @@
 # Translators:
 # Martin Trigaux, 2023
 # Wil Odoo, 2023
-# Abe Manyo, 2024
 # Muftiara Syuhada <muftiara.syuhada@gmail.com>, 2024
+# Abe Manyo, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-19 08:39+0000\n"
 "PO-Revision-Date: 2023-01-13 14:30+0000\n"
-"Last-Translator: Muftiara Syuhada <muftiara.syuhada@gmail.com>, 2024\n"
+"Last-Translator: Abe Manyo, 2024\n"
 "Language-Team: Indonesian (https://app.transifex.com/odoo/teams/41243/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -388,16 +388,22 @@ msgid ""
 "not generally necessary for a development systems that is not exposed on the"
 " internet."
 msgstr ""
+"Dokumen ini mendeskripsikan langkah-langkah dasar untuk setup Odoo di "
+"produksi atau internet-facing server. Ini mengikuti :doc:`instal "
+"<../install>`, dan secara umum tidak diperlukan untuk sistem development "
+"yang tidak terpapar di internet."
 
 #: ../../content/administration/install/deploy.rst:10
 msgid ""
 "If you are setting up a public server, be sure to check our :ref:`security` "
 "recommendations!"
 msgstr ""
+"Bila Anda ingin setup server publik, pastikan Anda memeriksa rekomendasi "
+":ref:`Keamanan` kami!"
 
 #: ../../content/administration/install/deploy.rst:15
 msgid "dbfilter"
-msgstr ""
+msgstr "dbfilter"
 
 #: ../../content/administration/install/deploy.rst:17
 msgid ""
@@ -406,6 +412,10 @@ msgid ""
 "customizations (starting from the modules being loaded) depending on the "
 "\"current database\"."
 msgstr ""
+"Odoo adalah sistem multi-tenant: satu sistem Odoo dapat berjalan dan "
+"melayani sejumlah instance database. Odoo juga sangat mudah dikustomisasi, "
+"dengan kustomisasi (dimulai dari modul yang dimuat) tergantung pada "
+"\"database saat ini\"."
 
 #: ../../content/administration/install/deploy.rst:21
 msgid ""
@@ -413,6 +423,9 @@ msgid ""
 "in company user: the database can be selected when logging in, and "
 "customizations loaded afterwards."
 msgstr ""
+"Ini tidak merupakan masalah saat bekerja dengan backend (web client) sebagai"
+" user perusahaan yang terlogin: database dapat dipilih saat login, dan "
+"kustomisasi dimuat setelahnya."
 
 #: ../../content/administration/install/deploy.rst:25
 msgid ""
@@ -423,6 +436,13 @@ msgid ""
 "multiple databases accessible Odoo needs a rule to know which one it should "
 "use."
 msgstr ""
+"Namun ini menjadi masalah untuk user yang tidak-login (portal, website) yang"
+" tidak terikat ke database: Odoo harus tahu database mana yang akan "
+"digunakan untuk membuat halaman website atau melakukan operasi. Bila multi-"
+"pengguna tidak digunakan ini tidak merupakan masalah, hanya ada satu "
+"database untuk digunakan, tapi bila terdapat lebih dari satu database yang "
+"dapat diakses Odoo membutuhkan peraturan untuk mengetahui mana yang harus "
+"digunakan."
 
 #: ../../content/administration/install/deploy.rst:31
 msgid ""
@@ -432,6 +452,11 @@ msgid ""
 "possibly including the dynamically injected hostname (``%h``) or the first "
 "subdomain (``%d``) through which the system is being accessed."
 msgstr ""
+"Inilah salah satu kegunaan dari :option:`--db-filter <odoo-bin --db-"
+"filter>`: dbfilter menentukan bagiamana database harus dipilih berdasarkan "
+"nama host (domain) yang diminta. Value adalah `regular expression`_, "
+"biasanya termasuk nama host yang di-inject secara dinamis (``%h``) atau "
+"subdomain pertama (``%d``) melalui mana sistem akan diakses."
 
 #: ../../content/administration/install/deploy.rst:37
 msgid ""
@@ -439,10 +464,13 @@ msgid ""
 "``website`` is used, dbfilter **must** be set, otherwise a number of "
 "features will not work correctly."
 msgstr ""
+"Untuk server yang hosting lebih dari satu database di production, terutama "
+"bila ``website`` digunakan, dbfilter **harus** ditetapkan, bila tidak "
+"sejumlah fitur tidak akan bekerja dengan tepat."
 
 #: ../../content/administration/install/deploy.rst:42
 msgid "Configuration samples"
-msgstr ""
+msgstr "Sampel konfigurasi"
 
 #: ../../content/administration/install/deploy.rst:44
 msgid "Show only databases with names beginning with 'mycompany'"
@@ -454,7 +482,7 @@ msgstr ""
 #: ../../content/administration/install/deploy.rst:153
 #: ../../content/administration/install/deploy.rst:280
 msgid "in :ref:`the configuration file <reference/cmdline/config_file>` set:"
-msgstr ""
+msgstr "in :ref:`file konfigurasi <reference/cmdline/config_file>` tetapkan:"
 
 #: ../../content/administration/install/deploy.rst:53
 msgid ""
@@ -463,6 +491,10 @@ msgid ""
 " ``www.mycompany.com`` or ``mycompany.co.uk``, but not for "
 "``www2.mycompany.com`` or ``helpdesk.mycompany.com``."
 msgstr ""
+"Tunjukkan hanya database yang subdomain pertama-nya cocok setelah ``www``: "
+"contohnya database \"mycompany\" akan ditunjukkan bila permintaan yang masuk"
+" dikirim ke ``www.mycompany.com`` atau ``mycompany.co.uk``, tapi tidak untuk"
+" ``www2.mycompany.com`` atau ``helpdesk.mycompany.com``."
 
 #: ../../content/administration/install/deploy.rst:67
 msgid ""
@@ -473,11 +505,18 @@ msgid ""
 "database-list`` startup parameter to prevent listing your databases, and to "
 "block access to the database management screens. See also security_."
 msgstr ""
+"Menetapkan :option:`--db-filter <odoo-bin --db-filter>` yang benar adalah "
+"bagian penting dalam mengamankan deployment Anda. Setelah bekerja dengan "
+"tepat dan hanya mencocokkan satu database untuk setiap nama host, sangat "
+"direkomendasikan untuk memblokir akses ke layar manajer database, dan untuk "
+"menggunakan parameter startup ``--no-database-list`` untuk mencegah listing "
+"database Anda, dan untuk memblokir akses ke layar manajemen database. Lihat "
+"juga keamanan_."
 
 #: ../../content/administration/install/deploy.rst:76
 #: ../../content/administration/install/source.rst:189
 msgid "PostgreSQL"
-msgstr ""
+msgstr "PostgreSQL"
 
 #: ../../content/administration/install/deploy.rst:78
 msgid ""
@@ -485,6 +524,9 @@ msgid ""
 " connections (from \"localhost\", the same machine the PostgreSQL server is "
 "installed on)."
 msgstr ""
+"Secara default, PostgreSQL hanya mengizinkan hubungan melalui koneksi UNIX "
+"socket dan loopback (dari \"localhost\", mesin yang sama yang mana server "
+"PostgreSQL diinstal)."
 
 #: ../../content/administration/install/deploy.rst:82
 msgid ""
@@ -493,6 +535,11 @@ msgid ""
 "and PostgreSQL to execute on different machines [#different-machines]_ it "
 "will need to `listen to network interfaces`_ [#remote-socket]_, either:"
 msgstr ""
+"UNIX socket dapat digunakan bila Anda ingin Odoo dan dan PostgreSQL untuk "
+"berjalan di mesin yang sama, dan merupakan default saat tidak ada host yang "
+"disediakan, tapi bila Anda ingin Odoo dan PostgreSQL untuk berjalan pada "
+"mesin yang berbeda [#different-machines]_ maka akan harus `mendengarkan "
+"antarmuka jaringan`_ [#remote-socket]_, baik dengan: "
 
 #: ../../content/administration/install/deploy.rst:87
 msgid ""
@@ -500,6 +547,9 @@ msgid ""
 "machine on which Odoo runs and the one on which PostgreSQL runs, then "
 "configure Odoo to connect to its end of the tunnel"
 msgstr ""
+"Hanya menerima hubungan loopback dan gunakan `SSH tunnel`_ di antara mesin "
+"yang terdapat Odoo dan mesin yang terdapat PostgreSQL, kemudian atur Odoo "
+"untuk terhubung dengan tunnel"
 
 #: ../../content/administration/install/deploy.rst:90
 msgid ""
@@ -507,34 +557,40 @@ msgid ""
 "ssl (see `PostgreSQL connection settings`_ for details), then configure Odoo"
 " to connect over the network"
 msgstr ""
+"Terima hubungan ke mesin tempat Odoo diinstal, biasanya melalui ssl (lihat "
+"`PostgreSQL connection settings`_ untuk detail), lalu konfigurasi Odoo untuk"
+" terhubung melalui jaringan"
 
 #: ../../content/administration/install/deploy.rst:95
 #: ../../content/administration/install/deploy.rst:145
 #: ../../content/administration/install/deploy.rst:235
 #: ../../content/administration/install/deploy.rst:275
 msgid "Configuration sample"
-msgstr ""
+msgstr "Sampel konfigurasi"
 
 #: ../../content/administration/install/deploy.rst:97
 msgid "Allow tcp connection on localhost"
-msgstr ""
+msgstr "Izinkan tcp connection pada localhost"
 
 #: ../../content/administration/install/deploy.rst:98
 msgid "Allow tcp connection from 192.168.1.x network"
-msgstr ""
+msgstr "Izinkan tcp connection dari 192.168.1.x network"
 
 #: ../../content/administration/install/deploy.rst:100
 msgid "in ``/etc/postgresql/<YOUR POSTGRESQL VERSION>/main/pg_hba.conf`` set:"
 msgstr ""
+"di ``/etc/postgresql/<YOUR POSTGRESQL VERSION>/main/pg_hba.conf`` tetapkan:"
 
 #: ../../content/administration/install/deploy.rst:108
 msgid ""
 "in ``/etc/postgresql/<YOUR POSTGRESQL VERSION>/main/postgresql.conf`` set:"
 msgstr ""
+"di ``/etc/postgresql/<YOUR POSTGRESQL VERSION>/main/postgresql.conf`` "
+"tetapkan:"
 
 #: ../../content/administration/install/deploy.rst:119
 msgid "Configuring Odoo"
-msgstr ""
+msgstr "Mengonfigurasi Odoo"
 
 #: ../../content/administration/install/deploy.rst:121
 msgid ""
@@ -543,12 +599,18 @@ msgid ""
 "<reference/cmdline/server/database>` when your Postgres deployment is not "
 "local and/or does not use the installation defaults."
 msgstr ""
+"Langsung siap pakai, Odoo akan terhubung ke postgres lokal melalui UNIX "
+"socket via port 5432. Ini dapat dikesampingkan menggunakan :ref:`opsi "
+"database <reference/cmdline/server/database>` saat deployment Postgres Anda "
+"tidak lokal dan/atau tidak menggunakan penginstalan default."
 
 #: ../../content/administration/install/deploy.rst:126
 msgid ""
 "The :doc:`packaged installers <packages>` will automatically create a new "
 "user (``odoo``) and set it as the database user."
 msgstr ""
+":doc:`Paket installer <packages>` akan secara otomatis membuat user baru "
+"(``odoo``) dan menetapkannya sebagai user database."
 
 #: ../../content/administration/install/deploy.rst:129
 msgid ""
@@ -558,6 +620,11 @@ msgid ""
 " randomly generated value to ensure third parties can not use this "
 "interface."
 msgstr ""
+"Layar manajemen database dilindungi oleh pengaturan ``admin_passwd``. "
+"Pengaturan ini hanya dapat ditetapkan menggunakan file konfigurasi, dan "
+"diperiksa sebelum melakukan perubahan database. Ini sebaiknya ditetapkan ke "
+"value yang secara acak dibuat untuk memastikan pihak ketiga tidak dapat "
+"menggunakan antarmuka ini."
 
 #: ../../content/administration/install/deploy.rst:134
 msgid ""
@@ -566,6 +633,10 @@ msgid ""
 "screen. For the database management screen to work requires that the "
 "PostgreSQL user have ``createdb`` right."
 msgstr ""
+"Semua operasi database menggunakan :ref:`opsi database "
+"<reference/cmdline/server/database>`, termasuk layar manajemen database. "
+"Agar layar manajemen database dapat bekerja, user PostgreSQL harus memilki "
+"hak ``createdb``."
 
 #: ../../content/administration/install/deploy.rst:138
 msgid ""
@@ -574,18 +645,22 @@ msgid ""
 "with ``no-createdb`` and the database must be owned by a different "
 "PostgreSQL user."
 msgstr ""
+"User dapat selalu men-drop database yang mereka miliki. Agar layar manajemen"
+" database sepenuhnya non-fungsional, user PostgreSQL harus dibuat dengan "
+"``no-createdb`` dan database harus dimiliki oleh user PostgreSQL yang "
+"berbeda."
 
 #: ../../content/administration/install/deploy.rst:142
 msgid "the PostgreSQL user *must not* be a superuser"
-msgstr ""
+msgstr "User PostgreSQL *tidak boleh* merupakan superuser"
 
 #: ../../content/administration/install/deploy.rst:147
 msgid "connect to a PostgreSQL server on 192.168.1.2"
-msgstr ""
+msgstr "terhubung ke server PostgreSQL pada 192.168.1.2"
 
 #: ../../content/administration/install/deploy.rst:148
 msgid "port 5432"
-msgstr ""
+msgstr "port 5432"
 
 #: ../../content/administration/install/deploy.rst:149
 msgid "using an 'odoo' user account,"
@@ -597,11 +672,11 @@ msgstr "dengan kata kunci 'pwd'"
 
 #: ../../content/administration/install/deploy.rst:151
 msgid "filtering only db with a name beginning with 'mycompany'"
-msgstr ""
+msgstr "memfilter hanya db dengan nama yang dimulai dengan 'mycompany'"
 
 #: ../../content/administration/install/deploy.rst:168
 msgid "SSL Between Odoo and PostgreSQL"
-msgstr ""
+msgstr "SSL Di Antara Odoo dan PostgreSQL"
 
 #: ../../content/administration/install/deploy.rst:170
 msgid ""
@@ -610,21 +685,28 @@ msgid ""
 "value chosen out of 'disable', 'allow', 'prefer', 'require', 'verify-ca' or "
 "'verify-full'"
 msgstr ""
+"Semenjak Odoo 11.0, Anda dapat memaksakan hubungan ssl antara Odoo dan "
+"PostgreSQL. Di Odoo db_sslmode mengendalikan ssl security hubungan dengan "
+"value yang dipilih antara 'disable', 'allow', 'prefer', 'require', 'verify-"
+"ca' atau 'verify-full'"
 
 #: ../../content/administration/install/deploy.rst:175
 msgid ""
 "`PostgreSQL Doc <https://www.postgresql.org/docs/12/static/libpq-ssl.html>`_"
 msgstr ""
+"`PostgreSQL Doc <https://www.postgresql.org/docs/12/static/libpq-ssl.html>`_"
 
 #: ../../content/administration/install/deploy.rst:180
 msgid "Builtin server"
-msgstr ""
+msgstr "Builtin server"
 
 #: ../../content/administration/install/deploy.rst:182
 msgid ""
 "Odoo includes built-in HTTP, cron, and live-chat servers, using either "
 "multi-threading or multi-processing."
 msgstr ""
+"Odoo mengikutsertakan HTTP, cron, dan server live-chat bawaan, baik yang "
+"menggunakan multi-threading atau multi-processing."
 
 #: ../../content/administration/install/deploy.rst:185
 msgid ""
@@ -635,6 +717,12 @@ msgid ""
 "cron threads are spawned too. Due to a Python limitation (GIL), it doesn't "
 "make the best use of the hardware."
 msgstr ""
+"Server **multi-thread** adalah server lebih sederhana yang secara utama "
+"digunakan untuk development, demonstrasi, dan karena kompatibilitanya dengan"
+" beragam sistem operasi (termasuk Windows). Thread baru dibuat untuk setiap "
+"permintaan HTTP baru, bahkan untuk hubungan yang bertahan lama seperti "
+"websocket. Daemonic cron threads ekstra juga dibuat. Oleh karena batasan "
+"Python (GIL), mereka tidak menggunakan hardware sebaik mungkin."
 
 #: ../../content/administration/install/deploy.rst:191
 msgid ""
@@ -642,6 +730,9 @@ msgid ""
 " It is selected by leaving the :option:`--workers <odoo-bin --workers>` "
 "option out or setting it to ``0``."
 msgstr ""
+"Server multi-thread adalah server default, juga untuk docker container. Ini "
+"dipilih dengan tidak mengikutsertakan opsi :option:`--workers <odoo-bin "
+"--workers>` atau dengan menyetelnya ke ``0``."
 
 #: ../../content/administration/install/deploy.rst:194
 msgid ""
@@ -654,67 +745,90 @@ msgid ""
 "spawned too. A configurable process reaper monitors resource usage and can "
 "kill/restart failed workers."
 msgstr ""
+"Server **multi-processing** adalah server lengkap yang secara utama "
+"digunakan untuk production. Server ini tidak memiliki kekurangan limitasi "
+"Python limitation (GIL) yang sama pada penggunaan sumber daya dan oleh "
+"karena itu menggunakan hardware sebaik mungkin. Sekelompok worker dibuat "
+"pada startup server. Permintaan HTTP baru diurutkan berdasarkan OS sampai "
+"terdapat worker yang siap untuk memproses mereka.  Event-driven HTTP worker "
+"ekstra dibuat untuk live chat pada port alternatif. Cron worker ekstra juga "
+"dibuat. Process reaper yang dapat dikonfigurasi memonitor penggunaan sumber "
+"daya dan dapat mematikan/me-restart worker yang gagal."
 
 #: ../../content/administration/install/deploy.rst:201
 msgid ""
 "The multi-processing server is opt-in. It is selected by setting the "
 ":option:`--workers <odoo-bin --workers>` option to a non-null integer."
 msgstr ""
+"Server multi-processing bersifat opsional. Server ini dipilih dengan "
+"menyetel opsi  :option:`--workers <odoo-bin --workers>` menjadi non-null "
+"integer."
 
 #: ../../content/administration/install/deploy.rst:205
 msgid ""
 "Because it is highly customized for Linux servers, the multi-processing "
 "server is not available on Windows."
 msgstr ""
+"Karena sangat dapat dikustomisasi untuk server Linux, server multi-"
+"processing tidak tersedia di Windows."
 
 #: ../../content/administration/install/deploy.rst:209
 msgid "Worker number calculation"
-msgstr ""
+msgstr "Perhitungan jumlah worker"
 
 #: ../../content/administration/install/deploy.rst:211
 msgid "Rule of thumb : (#CPU * 2) + 1"
-msgstr ""
+msgstr "Peraturan praktis : (#CPU * 2) + 1"
 
 #: ../../content/administration/install/deploy.rst:212
 msgid "Cron workers need CPU"
-msgstr ""
+msgstr "Cron worker membutuhkan CPU"
 
 #: ../../content/administration/install/deploy.rst:213
 msgid "1 worker ~= 6 concurrent users"
-msgstr ""
+msgstr "1 worker ~= 6 user bersamaan"
 
 #: ../../content/administration/install/deploy.rst:216
 msgid "memory size calculation"
-msgstr ""
+msgstr "Perhitungan ukuran memori"
 
 #: ../../content/administration/install/deploy.rst:218
 msgid ""
 "We consider 20% of the requests are heavy requests, while 80% are simpler "
 "ones"
 msgstr ""
+"Kami menghitung 20% permintaan adalah permintaan berat, sementara 80% adalah"
+" permintaan sederhana"
 
 #: ../../content/administration/install/deploy.rst:219
 msgid ""
 "A heavy worker, when all computed field are well designed, SQL requests are "
 "well designed, ... is estimated to consume around 1GB of RAM"
 msgstr ""
+"Worker berat, saat semua computed field dirancang baik, permintaan SQL "
+"dirancang baik, ... diperkirakan mengonsumsi sekitar 1 GB RAM"
 
 #: ../../content/administration/install/deploy.rst:220
 msgid ""
 "A lighter worker, in the same scenario, is estimated to consume around 150MB"
 " of RAM"
 msgstr ""
+"Worker lebih ringan, di skenario yang sama, dihitung mengonsumsi sekitar "
+"150MB RAM"
 
 #: ../../content/administration/install/deploy.rst:222
 msgid ""
 "Needed RAM = #worker * ( (light_worker_ratio * light_worker_ram_estimation) "
 "+ (heavy_worker_ratio * heavy_worker_ram_estimation) )"
 msgstr ""
+"RAM yang Dibutuhkan = #worker * ( (ratio_worker_ringan * "
+"estimasi_ram_worker_ringan) + (ratio_worker_berat * "
+"estimasi_ram_worker_berat) )"
 
 #: ../../content/administration/install/deploy.rst:225
 #: ../../content/administration/install/deploy.rst:412
 msgid "LiveChat"
-msgstr ""
+msgstr "LiveChat"
 
 #: ../../content/administration/install/deploy.rst:227
 msgid ""
@@ -727,40 +841,50 @@ msgid ""
 " --proxy-mode>` so it uses the real client headers (such as hostname, "
 "scheme, and IP) instead of the proxy ones."
 msgstr ""
+"Di multi-processing, worker LiveChat khusus secara otomatis dinyalakan dan "
+"mendengarkan pada :option:`--gevent-port <odoo-bin --gevent-port>`. Secara "
+"default, permintaan HTTP akan terus mengakses worker HTTP normal alih-alih "
+"worker LiveChat. Anda harus deploy sebuah proxy di depan Odoo dan "
+"mengalihkan ulang permintaan masuk yang mana path-nya dimulai dengan "
+"``/websocket/`` ke worker LiveChat. Anda juga harus memulai Odoo di "
+":option:`--proxy-mode <odoo-bin --proxy-mode>` supaya Odoo menggunakan "
+"header asli klien (seperti hostname, scheme, dan IP) alih-alih milik proxy."
 
 #: ../../content/administration/install/deploy.rst:237
 msgid "Server with 4 CPU, 8 Thread"
-msgstr ""
+msgstr "Server dengan 4 CPU, 8 Thread"
 
 #: ../../content/administration/install/deploy.rst:238
 msgid "60 concurrent users"
-msgstr ""
+msgstr "60 user bersamaan"
 
 #: ../../content/administration/install/deploy.rst:240
 msgid "60 users / 6 = 10 <- theoretical number of worker needed"
-msgstr ""
+msgstr "60 user / 6 = 10 <- jumlah teoretis worker yang dibutuhkan"
 
 #: ../../content/administration/install/deploy.rst:241
 msgid "(4 * 2) + 1 = 9 <- theoretical maximal number of worker"
-msgstr ""
+msgstr "(4 * 2) + 1 = 9 <- jumlah teoretis maksimal worker"
 
 #: ../../content/administration/install/deploy.rst:242
 msgid ""
 "We'll use 8 workers + 1 for cron. We'll also use a monitoring system to "
 "measure cpu load, and check if it's between 7 and 7.5 ."
 msgstr ""
+"Kita gunakan 8 worker + 1 untuk cron. Kita juga akan menggunakan sistem "
+"monitoring untuk mengukur beban cpu, dan memerika apakah di antara 7 dan 7.5"
 
 #: ../../content/administration/install/deploy.rst:243
 msgid "RAM = 9 * ((0.8*150) + (0.2*1024)) ~= 3Go RAM for Odoo"
-msgstr ""
+msgstr "RAM = 9 * ((0.8*150) + (0.2*1024)) ~= 3Go RAM untuk Odoo"
 
 #: ../../content/administration/install/deploy.rst:245
 msgid "in :ref:`the configuration file <reference/cmdline/config_file>`:"
-msgstr ""
+msgstr "di :ref:`file konfigurasi <reference/cmdline/config_file>`:"
 
 #: ../../content/administration/install/deploy.rst:261
 msgid "HTTPS"
-msgstr ""
+msgstr "HTTPS"
 
 #: ../../content/administration/install/deploy.rst:263
 msgid ""
@@ -769,42 +893,51 @@ msgid ""
 "Odoo must use HTTPS\\ [#switching]_. SSL termination can be implemented via "
 "just about any SSL termination proxy, but requires the following setup:"
 msgstr ""
+"Baik diakses melalui website/web client atau web service, Odoo mengirimkan "
+"informasi autentikasi dalam cleartext. Ini berarti deployment aman dari Odoo"
+" harus menggunakan HTTPS\\ [#switching]_. SSL termination dapat "
+"diimplementasikan melalui hampir semua SSL termination proxy, tapi "
+"membutuhkan setup berikut:"
 
 #: ../../content/administration/install/deploy.rst:268
 msgid ""
 "Enable Odoo's :option:`proxy mode <odoo-bin --proxy-mode>`. This should only"
 " be enabled when Odoo is behind a reverse proxy"
 msgstr ""
+"Aktifkan :option:`proxy mode <odoo-bin --proxy-mode>` Odoo. Ini seharusnya "
+"hanya diaktifkan saat Odoo di belakang reverse proxy"
 
 #: ../../content/administration/install/deploy.rst:269
 msgid "Set up the SSL termination proxy (`Nginx termination example`_)"
-msgstr ""
+msgstr "Setup SSL termination proxy (contoh `Nginx termination`_)"
 
 #: ../../content/administration/install/deploy.rst:270
 msgid "Set up the proxying itself (`Nginx proxying example`_)"
-msgstr ""
+msgstr "Setup proxying tersebut sendiri (contoh `Nginx proxying`_)"
 
 #: ../../content/administration/install/deploy.rst:271
 msgid ""
 "Your SSL termination proxy should also automatically redirect non-secure "
 "connections to the secure port"
 msgstr ""
+"SSL termination proxy Anda harus secara otomatis mengalihkan ulang hubungan "
+"yang tidak aman ke port yang aman"
 
 #: ../../content/administration/install/deploy.rst:277
 msgid "Redirect http requests to https"
-msgstr ""
+msgstr "Alihkan ulang permintaan http menjadi https"
 
 #: ../../content/administration/install/deploy.rst:278
 msgid "Proxy requests to odoo"
-msgstr ""
+msgstr "Permintaan proxy ke odoo"
 
 #: ../../content/administration/install/deploy.rst:286
 msgid "in ``/etc/nginx/sites-enabled/odoo.conf`` set:"
-msgstr ""
+msgstr "di ``/etc/nginx/sites-enabled/odoo.conf`` tetapkan:"
 
 #: ../../content/administration/install/deploy.rst:361
 msgid "HTTPS Hardening"
-msgstr ""
+msgstr "HTTPS Hardening"
 
 #: ../../content/administration/install/deploy.rst:363
 msgid ""
@@ -814,12 +947,19 @@ msgid ""
 "this domain at all times, otherwise your users will see security alerts or "
 "be entirely unable to access it."
 msgstr ""
+"Menambahkan header `Strict-Transport-Security` ke semua permintaan, untuk "
+"mencegah browser mengirimkan permintaan HTTP plain ke domain ini. Anda harus"
+" selalu menjaga layanan HTTPS yang bekerja dengan sertifikat valid pada "
+"domain ini, bila tidak, user-user Anda akan melihat peringatan keamanan atau"
+" tidak dapat mengaksesnya sama sekali."
 
 #: ../../content/administration/install/deploy.rst:369
 msgid ""
 "Force HTTPS connections during a year for every visitor in NGINX with the "
 "line:"
 msgstr ""
+"Semua pengunjung yang masuk melalui NGINX diarahkan secara paksa untuk "
+"menggunakan koneksi HTTPS selama satu tahun:"
 
 #: ../../content/administration/install/deploy.rst:375
 msgid ""
@@ -827,10 +967,13 @@ msgid ""
 "`Secure` flag can be added to ensure it is never transmitted over HTTP and "
 "`SameSite=Lax` to prevent authenticated `CSRF`_."
 msgstr ""
+"Konfigurasi tambahan dapat didefinisikan untuk cookie `session_id`. Flag "
+"`Secure` juga dapat ditambahkan untuk memastikan mereka tidak pernah dikirim"
+" melalui HTTP dan `SameSite=Lax` untuk mencegah `CSRF`_ yang diautentikasi."
 
 #: ../../content/administration/install/deploy.rst:386
 msgid "Odoo as a WSGI Application"
-msgstr ""
+msgstr "Odoo sebagai Aplikasi WSGI"
 
 #: ../../content/administration/install/deploy.rst:388
 msgid ""
@@ -841,6 +984,12 @@ msgid ""
 ":mod:`odoo.tools.config` rather than through the command-line or a "
 "configuration file."
 msgstr ""
+"Odoo juga dapat di-mount sebagai aplikasi standar WSGI_. Odoo menyediakan "
+"dasar untuk script launcher WSGI sebagai ``odoo-wsgi.example.py``. Script "
+"tersebut harus dikustomisasi (sebaiknya setelah menyalinnya langsung dari "
+"direktori setup) untuk dengan tepat mengonfigurasinya langsung di "
+":mod:`odoo.tools.config` alih-alih melalui command-line atau file "
+"konfigurasi."
 
 #: ../../content/administration/install/deploy.rst:394
 msgid ""
@@ -848,10 +997,13 @@ msgid ""
 "client, website and webservice API. Because Odoo does not control the "
 "creation of workers anymore it can not setup cron or livechat workers"
 msgstr ""
+"Namun server WSGI hanya akan mengekspos endpoint HTTP utama untuk web "
+"client, website dan webservice API. Karena Odoo tidak mengontrol pembuatan "
+"worker lagi Odoo tidak dapat setup cron atau livechat worker"
 
 #: ../../content/administration/install/deploy.rst:399
 msgid "Cron Workers"
-msgstr ""
+msgstr "Cron Worker"
 
 #: ../../content/administration/install/deploy.rst:401
 msgid ""
@@ -861,6 +1013,11 @@ msgid ""
 "--no-http>` cli option or the ``http_enable = False`` configuration file "
 "setting."
 msgstr ""
+"Anda harus memulai salah satu server bawaan Odoo disamping server WSGI untuk"
+" dapat memproses cron job. Server tersebut harus dikonfigurasi untuk hanya "
+"memproses cron dan bukan permintaan HTTP menggunakan cli option "
+":option:`--no-http <odoo-bin --no-http>` atau pengaturan file konfigurasi "
+"``http_enable = False``."
 
 #: ../../content/administration/install/deploy.rst:406
 msgid ""
@@ -870,6 +1027,11 @@ msgid ""
 "--workers>` and :option:`--max-cron-threads=n <odoo-bin --max-cron-threads>`"
 " cli options."
 msgstr ""
+"Pada sistem seperti Linux, disarankan untuk menggunakan server multi-"
+"processing alih-alih multi-threading agar dapat memanfaatkan penggunaan "
+"hardware yang lebih baik dan peningkatan stabilitas, misalnya, menggunakan "
+"cli option :option:`--workers=-1 <odoo-bin --workers>` dan :option:`--max-"
+"cron-threads=n <odoo-bin --max-cron-threads>`."
 
 #: ../../content/administration/install/deploy.rst:414
 msgid ""
@@ -880,6 +1042,13 @@ msgid ""
 "directed to that server. A regular (thread/process-based) WSGI server should"
 " be used for all other requests."
 msgstr ""
+"Menggunakan server WSGI yang gevent-compatible dibutuhkan untuk "
+"pengoperasian fitur live chat yang tepat. Server tersebut harus dapat "
+"menangani banyak hubungan serentak yang berumur panjang tapi tidak "
+"membutuhkan banyak tenaga proses. Semua permintaan yang mana path-nya "
+"dimulai dengan ``/websocket/`` harus dialihkan ke server tersebut. Server "
+"WSGI reguler (berdasarkan thread/process) sebaiknya digunakan untuk "
+"permintaan-permintaan lainnya."
 
 #: ../../content/administration/install/deploy.rst:420
 msgid ""
@@ -890,10 +1059,16 @@ msgid ""
 "--http-port>` (multi-threading server) or on the :option:`--gevent-port "
 "<odoo-bin --gevent-port>` (multi-processing server)."
 msgstr ""
+"Cron server Odoo juga dapat digunakan untuk melayani permintaan live chat. "
+"Cukup drop cli option :option:`--no-http <odoo-bin --no-http>` dari cron "
+"server dan pastikan permintaan yang path-nya dimulai dengan ``/websocket/`` "
+"dialihkan ke server ini, baik pada :option:`--http-port <odoo-bin --http-"
+"port>` (server multi-threading) atau pada :option:`--gevent-port <odoo-bin "
+"--gevent-port>` (server multi-processing)."
 
 #: ../../content/administration/install/deploy.rst:429
 msgid "Serving static files and attachments"
-msgstr ""
+msgstr "Melayani file statik dan lampiran"
 
 #: ../../content/administration/install/deploy.rst:431
 msgid ""
@@ -902,10 +1077,14 @@ msgid ""
 "performances, and static files should generally be served by a static HTTP "
 "server."
 msgstr ""
+"Untuk kemudahan development, Odoo secara langsung melayani semua file statik"
+" dan lampiran dalam modulnya. Ini mungkin tidak ideal bila mengenai "
+"performa, dan file statik harus secara umum dilayani oleh server HTTP "
+"static."
 
 #: ../../content/administration/install/deploy.rst:436
 msgid "Serving static files"
-msgstr ""
+msgstr "Melayani file statik"
 
 #: ../../content/administration/install/deploy.rst:438
 msgid ""
@@ -914,6 +1093,10 @@ msgid ""
 ":samp:`/{MODULE}/static/{FILE}`, and looking up the right module (and file) "
 "in the various addons paths."
 msgstr ""
+"File statik Odoo berlokasi di setiap folder :file:`static/` module, maka "
+"file statik dapat disajikan dengan mencegat semua permintaan ke "
+":samp:`/{MODULE}/static/{FILE}`, dan mencari modul (dan file) yang tepat di "
+"beragam addon path."
 
 #: ../../content/administration/install/deploy.rst:442
 msgid ""
@@ -923,12 +1106,20 @@ msgid ""
 ":file:`static/` folder and existing images are final (they do not fetch new "
 "resources by themselves). However, it is good practice."
 msgstr ""
+"Disarankan untuk menetapkan header ``Content-Security-Policy: default-src "
+"'none'`` pada semua gambar yang dikirim oleh web server. Ini tidak harus "
+"dilakukan karena user tidak dapat memodifikasi/inject konten di dalam folder"
+" :file:`static/` modul dan gambar yang ada bersifat final (mereka tidak "
+"mengambil sumber daya baru secara sendiri). Namun, ini tetap merupakan "
+"praktik yang baik. "
 
 #: ../../content/administration/install/deploy.rst:447
 msgid ""
 "Using the above NGINX (https) configuration, the following ``map`` and "
 "``location`` blocks should be added to serve static files via NGINX."
 msgstr ""
+"Menggunakan konfigurasi NGINX (https) di atas, blok ``map`` dan ``location``"
+" di atas harusnya ditambahkan untuk menyajikan file statik melalui NGINX."
 
 #: ../../content/administration/install/deploy.rst:474
 msgid ""
@@ -936,10 +1127,12 @@ msgid ""
 "installation, specifically on your :option:`--addons-path <odoo-bin "
 "--addons-path>`."
 msgstr ""
+"Directive ``root`` dan ``try_files`` yang asli tergantung pada penginstalan "
+"Anda, terutama pada :option:`--addons-path <odoo-bin --addons-path>` Anda."
 
 #: ../../content/administration/install/deploy.rst:481
 msgid "Debian package"
-msgstr ""
+msgstr "Debian package"
 
 #: ../../content/administration/install/deploy.rst:483
 msgid ""
@@ -947,15 +1140,18 @@ msgid ""
 "Enterprise, and that the :option:`--addons-path <odoo-bin --addons-path>` is"
 " ``'/usr/lib/python3/dist-packages/odoo/addons'``."
 msgstr ""
+"Katakan Odoo telah diinstal melalui **debian packages** untuk Community dan "
+"Enterprise, dan :option:`--addons-path <odoo-bin --addons-path>` adalah "
+"``'/usr/lib/python3/dist-packages/odoo/addons'``."
 
 #: ../../content/administration/install/deploy.rst:487
 #: ../../content/administration/install/deploy.rst:501
 msgid "The ``root`` and ``try_files`` should be:"
-msgstr ""
+msgstr "``root`` dan ``try_files`` harusnya adalah:"
 
 #: ../../content/administration/install/deploy.rst:494
 msgid "Git sources"
-msgstr ""
+msgstr "Git source"
 
 #: ../../content/administration/install/deploy.rst:496
 msgid ""
@@ -965,10 +1161,15 @@ msgid ""
 "path <odoo-bin --addons-path>` is "
 "``'/opt/odoo/community/odoo/addons,/opt/odoo/community/addons,/opt/odoo/enterprise'``."
 msgstr ""
+"Katakan Odoo telah diinstal melalui **sources**, yang mana repositori git "
+"Community dan Enterprise-nya diklon di :file:`/opt/odoo/community` dan "
+":file:`/opt/odoo/enterprise` sesuai urutan, dan :option:`--addons-path "
+"<odoo-bin --addons-path>` adalah "
+"``'/opt/odoo/community/odoo/addons,/opt/odoo/community/addons,/opt/odoo/enterprise'``."
 
 #: ../../content/administration/install/deploy.rst:509
 msgid "Serving attachments"
-msgstr ""
+msgstr "Menyajikan lampiran"
 
 #: ../../content/administration/install/deploy.rst:511
 msgid ""
@@ -977,6 +1178,11 @@ msgid ""
 "them requires multiple lookups in the database to determine where the files "
 "are stored and whether the current user can access them or not."
 msgstr ""
+"Lampiran adalah file yang disimpan di filestore yang mana aksesnya "
+"diregulasi oleh Odoo. Mereka tidak dapat diakses langsung melalui web server"
+" statik karena mengakses mereka membutuhkan lebih dari satu lookup di "
+"database untuk menentukan di mana file disimpan dan apakah user saat ini "
+"dapat mengakses mereka atau tidak."
 
 #: ../../content/administration/install/deploy.rst:516
 msgid ""
@@ -991,18 +1197,30 @@ msgid ""
 "--x-sendfile>` CLI flag (this unique flag is used for both X-Sendfile and "
 "X-Accel)."
 msgstr ""
+"Kendati demikian, setelah file telah ditemukan dan hak akses diverifikasi "
+"oleh Odoo, merupakan ide baik untuk menyajikan file menggunakan web server "
+"statik alih-alih Odoo. Agar Odoo untuk mendelegasikan penyajian file ke web "
+"server statik, extension `X-Sendfile <https://tn123.org/mod_xsendfile/>`_ "
+"(apache) atau `X-Accel "
+"<https://www.nginx.com/resources/wiki/start/topics/examples/x-accel/>`_ "
+"(nginx) harus diaktifkan dan dikonfigurasikan pada web server statik. "
+"Setelah di setup, jalankan Odoo dengan CLI flag :option:`--x-sendfile <odoo-"
+"bin --x-sendfile>` (flag unik ini digunakan untuk X-Sendfile dan X-Accel)."
 
 #: ../../content/administration/install/deploy.rst:526
 msgid ""
 "The X-Sendfile extension for apache (and compatible web servers) does not "
 "require any supplementary configuration."
 msgstr ""
+"Extension X-Sendfile untuk apache (dan web server yang kompatibel) tidak "
+"membutuhkan konfigurasi tambahan apapun."
 
 #: ../../content/administration/install/deploy.rst:528
 msgid ""
 "The X-Accel extension for NGINX **does** require the following additionnal "
 "configuration:"
 msgstr ""
+"Extension X-Accel untuk NGINX **membutuhkan** konfigurasi tambahan berikut:"
 
 #: ../../content/administration/install/deploy.rst:537
 msgid ""
@@ -1012,6 +1230,11 @@ msgid ""
 "NGINX). This logs a warnings, the message contains the configuration you "
 "need."
 msgstr ""
+"Apabila Anda tidak tahu path ke filestore Anda, nyalakan Odoo dengan opsi "
+":option:`--x-sendfile <odoo-bin --x-sendfile>` dan navigasi ke URL "
+"``/web/filestore`` langsung melalui Odoo (jangan menavigasi ke URL melalui "
+"NGINX). Ini akan mencatat peringatan, pesannya akan memiliki konfigurasi "
+"yang Anda butuhkan. "
 
 #: ../../content/administration/install/deploy.rst:546
 msgid "Security"
@@ -1023,6 +1246,9 @@ msgid ""
 "continuous process, not a one-shot operation. At any moment, you will only "
 "be as secure as the weakest link in your environment."
 msgstr ""
+"Untuk awal-awal, ingat bahwa mengamankan sistem informasi adalah proses yang"
+" berkelanjutan, bukan operasi yang sekali-selesai. Kapan pun juga, Anda "
+"hanya akan seaman rantai terlemah di environment Anda."
 
 #: ../../content/administration/install/deploy.rst:552
 msgid ""
@@ -1033,12 +1259,20 @@ msgid ""
 "system and distribution, best practices in terms of users, passwords, and "
 "access control management, etc."
 msgstr ""
+"Jadi tolong jangan ambil bagian pedoman ini sebagai daftar termutakhir "
+"pengukuran keamanan yang akan mencegah semua masalah keamanan. Pedoman ini "
+"hanya ditujukan sebagai ringkasan dari hal-hal pertama yang harus Anda "
+"masukkan pada rencana keamanan Anda. Sisanya akan datang dengan praktek "
+"keamanan yang baik untuk OS dan distribusi Anda, praktek terbaik dalam hal "
+"user, password, dan manajemen kontrol akses, dsb.  "
 
 #: ../../content/administration/install/deploy.rst:558
 msgid ""
 "When deploying an internet-facing server, please be sure to consider the "
 "following security-related topics:"
 msgstr ""
+"Saat men-deploy server yang menggunakan internet, mohon pertimbangkan topik-"
+"topik terkait keamanan berikut:"
 
 #: ../../content/administration/install/deploy.rst:561
 msgid ""
@@ -1046,6 +1280,9 @@ msgid ""
 "database management pages as soon as the system is set up. See "
 ":ref:`db_manager_security`."
 msgstr ""
+"Selalu tetapkan password admin super-admin yang kuat, dan batasi akses ke "
+"halaman-halaman manajemen database setelah sistem di-setup. Lihat "
+":ref:`db_manager_security`."
 
 #: ../../content/administration/install/deploy.rst:564
 msgid ""
@@ -1055,6 +1292,11 @@ msgid ""
 "*Never* use any default passwords like admin/admin, even for test/staging "
 "databases."
 msgstr ""
+"Pilih login yang unik dan password yang kuat untuk semua akun administrator "
+"pada semua database. Jangan gunakan 'admin' sebagai login. Jangan gunakan "
+"login tersebut untuk operasi keseharian, hanya untuk mengontrol/menangani "
+"penginstalan. *Jangan pernah* menggunakan password default apapun seperti "
+"admin/admin, bahkan untuk database test/staging."
 
 #: ../../content/administration/install/deploy.rst:569
 msgid ""
@@ -1062,6 +1304,10 @@ msgid ""
 " data contain default logins and passwords that can be used to get into your"
 " systems and cause significant trouble, even on staging/dev systems."
 msgstr ""
+"**Jangan** menginstal data demo pada server yang menggunakan internet. "
+"Database dengan data demo memiliki secara default login dan password yang "
+"dapat digunakan untuk memasuki sistem Anda dan menghasilkan masalah yang "
+"signifikan, bahkan pada sistem staging/dev."
 
 #: ../../content/administration/install/deploy.rst:573
 msgid ""
@@ -1072,6 +1318,12 @@ msgid ""
 "from, instead of letting the system fetch them all from the database "
 "backend."
 msgstr ""
+"Gunakan filter database yang sesuai  ( :option:`--db-filter <odoo-bin --db-"
+"filter>`) untuk membatasi visibilitas database Anda sesuai dengan nama host."
+" Lihat :ref:`db_filter`. Anda juga mungkin ingin menggunakan :option:`-d "
+"<odoo-bin -d>` untuk menyediakan daftar Anda sendiri untuk database yang "
+"tersedia (yang dipisahkan koma) untuk difilter, alih-alih membiarkan sistem "
+"mengambil mereka semua dari backend database."
 
 #: ../../content/administration/install/deploy.rst:580
 msgid ""
@@ -1214,11 +1466,11 @@ msgstr ""
 
 #: ../../content/administration/install/deploy.rst:667
 msgid "Failed login::"
-msgstr ""
+msgstr "Login gagal:"
 
 #: ../../content/administration/install/deploy.rst:671
 msgid "Successful login::"
-msgstr ""
+msgstr "Login berhasil::"
 
 #: ../../content/administration/install/deploy.rst:676
 msgid ""
