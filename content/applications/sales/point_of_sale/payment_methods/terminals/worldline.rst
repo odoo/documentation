@@ -16,7 +16,7 @@ Connect an IoT Box
 
 Connecting a Worldline Payment Terminal to Odoo is a feature that requires an IoT Box. For more
 information on how to connect one to your database, please refer to the
-:doc:`IoT documentation </applications/productivity/iot/config/connect>`.
+:doc:`IoT documentation </applications/general/iot/config/connect>`.
 
 Configure the protocol
 ----------------------

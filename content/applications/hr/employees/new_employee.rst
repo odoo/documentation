@@ -373,7 +373,7 @@ regardless.
    updated with the newly created user populating the :guilabel:`Related User` field.
 
    Users can also be created manually. For more information on how to manually add a user, refer to
-   the :doc:`../../general/users/manage_users` document.
+   the :doc:`../../general/users` document.
 
 - :guilabel:`Payroll`: If applicable, enter the :guilabel:`Registration Number of the Employee` in
   this section. The :guilabel:`Attestation (N-1)` and :guilabel:`Attestation (N)` sections appear
@@ -409,7 +409,7 @@ Documents
 All documents associated with an employee are stored in the :guilabel:`Documents` app. The number of
 documents associated with the employee appear in the :guilabel:`Documents` smart button above the
 employee record. Click on the smart button, and all the documents appear. For more information on
-the :guilabel:`Documents` app, refer to the :doc:`../../finance/documents` documentation.
+the :guilabel:`Documents` app, refer to the :doc:`../../productivity/documents` documentation.
 
 .. image:: new_employee/documents.png
    :align: center
