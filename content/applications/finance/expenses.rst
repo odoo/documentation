@@ -209,9 +209,9 @@ Configuration --> Settings`. Ensure :guilabel:`Incoming Emails` is enabled.
 .. note::
    If the domain alias needs to be set up, :guilabel:`Setup your domain alias` will appear beneath
    the incoming emails check box instead of the email address field. Refer to this documentation for
-   setup instructions and more information: :doc:`/administration/maintain/domain_names`. Once the
-   domain alias is configured, the email address field will be visible beneath the incoming emails
-   section.
+   setup instructions and more information:
+   :doc:`/applications/websites/website/configuration/domain_names`. Once the domain alias is
+   configured, the email address field will be visible beneath the incoming emails section.
 
 Next, enter the email address to be used in the email field, then click :guilabel:`Save`. Now that
 the email address has been entered, emails can be sent to that alias to create new expenses without
@@ -364,8 +364,8 @@ To see who has rights to approve, go to the main :menuselection:`Settings` app a
      the *Settings* app.
    - :guilabel:`Settings`: The user has access to the entire *Settings* app with no restrictions.
 
-   Please refer to :doc:`this document </applications/general/users/manage_users>` to learn more
-   about managing users and their access rights.
+   Please refer to :doc:`this document </applications/general/users>` to learn more about managing
+   users and their access rights.
 
 Click on an individual to view their card, which displays the :guilabel:`Access Rights` tab in the
 default view. Scroll down to the :guilabel:`Human Resources` section. Under :guilabel:`Expenses`,

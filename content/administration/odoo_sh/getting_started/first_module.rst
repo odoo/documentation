@@ -85,7 +85,7 @@ From the Odoo.sh editor, in a terminal:
 
   $ odoo-bin scaffold my_module ~/src/user/
 
-Or, from your computer, if you have an :doc:`installation of Odoo <../../install/source>`:
+Or, from your computer, if you have an :doc:`installation of Odoo <../../on_premise/source>`:
 
 .. code-block:: bash
 

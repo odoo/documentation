@@ -89,4 +89,4 @@ In the :guilabel:`In-App Purchases` section, under the :guilabel:`Odoo IAP` feat
    test any IAP features.
 
 .. seealso::
-   * :doc:`../../../general/in_app_purchase`
+   :doc:`/applications/essentials/in_app_purchase`

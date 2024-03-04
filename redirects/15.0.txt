@@ -1,3 +1,24 @@
+# administration
+
+administration/install.rst administration/on_premise.rst                                                      # install -> on_premise
+administration/install/deploy.rst administration/on_premise/deploy.rst                                        # install/* -> on_premise/*
+administration/install/email_gateway.rst administration/on_premise/email_gateway.rst                          # install/* -> on_premise/*
+administration/install/online.rst administration/odoo_online.rst                                              # install/online -> odoo_online (merged with odoo_online)
+administration/install/geo_ip.rst administration/on_premise/geo_ip.rst                                        # install/* -> on_premise/*
+administration/install/packages.rst administration/on_premise/packages.rst                                    # install/* -> on_premise/*
+administration/install/source.rst administration/on_premise/source.rst                                        # install/* -> on_premise/*
+administration/install/cdn.rst applications/websites/website/configuration/cdn.rst                            # administration/install/* -> applicastions/websites/website/configuration/*
+administration/maintain/azure_oauth.rst applications/general/email_communication/azure_oauth.rst              # administration/maintain/* -> applications/general/email_communication/*
+administration/maintain/domain_names.rst applications/websites/website/configuration/domain_names.rst         # administration/maintain/* -> applicastions/websites/website/configuration/*
+administration/maintain/enterprise.rst administration/on_premise/community_to_enterprise.rst                  # maintain/enterprise -> on_premise/community_to_enterprise
+administration/maintain/google_oauth.rst applications/general/email_communication/google_oauth.rst            # administration/maintain/* -> applications/general/email_communication/*
+administration/maintain/hosting_changes.rst administration/hosting.rst                                        # maintain/hosting_changes -> maintain/hosting
+administration/maintain/mailjet_api.rst applications/general/email_communication/mailjet_api.rst              # administration/maintain/* -> applications/general/email_communication/*
+administration/maintain/odoo_online.rst administration/odoo_online.rst                                        # maintain/* -> *
+administration/maintain/on_premise.rst administration/install.rst                                             # maintain/on_premise -> install
+administration/maintain/supported_versions.rst administration/maintain/supported_versions.rst                 # maintain/* -> *
+administration/maintain/update.rst administration/on_premise/update.rst                                       # maintain/* -> on_premise/*
+
 # applications/finance
 
 applications/finance/accounting/bank/interbank.rst applications/finance/accounting/payments/internal_transfers.rst                                 # bank/interbank -> payments/internal_transfers
@@ -65,15 +86,29 @@ applications/finance/accounting/taxation/taxes/taxcloud.rst applications/finance
 applications/finance/accounting/taxation/taxes/taxes.rst applications/finance/accounting/taxes.rst                                                 # taxation/taxes/* -> taxes/*
 applications/finance/accounting/taxation/taxes/vat_validation.rst applications/finance/accounting/taxes/vat_verification.rst                       # taxation/taxes/vat_validation -> taxes/vat_verification
 applications/finance/accounting/taxes/vat_validation.rst applications/finance/accounting/taxes/vat_verification.rst                                # vat_validation -> vat_verification
+applications/finance/documents.rst applications/productivity/documents.rst                                                                         # finance/* -> productivity/*
+applications/finance/sign.rst applications/productivity/sign.rst                                                                                   # finance/* -> productivity/*
 
 # applications/general
 
+applications/general/auth/2fa.rst applications/general/users/2fa.rst                                           # auth/* -> users/*
+applications/general/auth/azure.rst applications/general/users/azure.rst                                       # auth/* -> users/*
+applications/general/auth/google.rst applications/general/users/google.rst                                     # auth/* -> users/*
+applications/general/auth/ldap.rst applications/general/users/ldap.rst                                         # auth/* -> users/*
+applications/general/digest_emails.rst applications/general/companies/digest_emails.rst                        # * -> companies/*
+applications/general/email_communication/email_template.rst applications/general/companies/email_template.rst  # email_communication/* -> companies/*
+applications/general/export_import_data.rst applications/essentials/export_import_data.rst                     # general/* -> essentials/*
+applications/general/geolocation.rst applications/general/integrations/geolocation.rst                         # * -> integrations/*
+applications/general/in_app_purchase.rst applications/essentials/in_app_purchase.rst                           # general/* -> essentials/*
 applications/general/payment_acquirers/adyen.rst applications/finance/payment_acquirers/adyen.rst
 applications/general/payment_acquirers/alipay.rst applications/finance/payment_acquirers/alipay.rst
 applications/general/payment_acquirers/buckaroo.rst applications/finance/payment_acquirers/buckaroo.rst
 applications/general/payment_acquirers/mollie.rst applications/finance/payment_acquirers/mollie.rst
 applications/general/payment_acquirers/ogone.rst applications/finance/payment_acquirers/ogone.rst
 applications/general/payment_acquirers/sips.rst applications/finance/payment_acquirers/sips.rst
+applications/general/users/companies.rst applications/general/companies.rst                                    # users/* -> *
+applications/general/users/manage_users.rst applications/general/users.rst                                     # users/manage_users -> users
+applications/general/users/odoo_account.rst administration/odoo_accounts.rst
 
 applications/general/product_images.rst applications/sales/sales/products_prices/products/product_images.rst  # fix a wrong target hard-coded in Odoo
 
@@ -90,16 +125,49 @@ applications/sales/point_of_sale/shop/reprint.rst applications/sales/point_of_sa
 
 # applications/productivity
 
-applications/productivity/studio/concepts/understanding_automated_actions.rst applications/productivity/studio/automated_actions.rst
-applications/productivity/studio/concepts/understanding_general.rst applications/productivity/studio.rst
-applications/productivity/studio/how_to/export_import.rst applications/productivity/studio/models_modules_apps.rst
-applications/productivity/studio/use_cases/automated_actions.rst applications/productivity/studio/automated_actions.rst
-applications/productivity/studio/use_cases/models_fields.rst applications/productivity/studio/fields.rst
-applications/productivity/studio/use_cases/views.rst applications/productivity/studio/views.rst
+applications/productivity/discuss/advanced/ice_servers.rst applications/productivity/discuss/ice_servers.rst                           # discuss/advanced/* -> discuss/*
+applications/productivity/discuss/overview/get_started.rst applications/productivity/discuss.rst                                       # discuss/overview/get_started -> discuss
+applications/productivity/discuss/overview/plan_activities.rst applications/essentials/activities.rst                                  # productivity/discuss/overview/plan_activities -> essentials/activities
+applications/productivity/discuss/overview/team_communication.rst applications/productivity/discuss/team_communication.rst             # discuss/overview/* -> discuss/*
+applications/productivity/iot.rst applications/general/iot.rst                                                                         # productivity/* -> general/*
+applications/productivity/iot/config.rst applications/general/iot/config.rst                                                           # productivity/* -> general/*
+applications/productivity/iot/config/connect.rst applications/general/iot/config/connect.rst                                           # productivity/* -> general/*
+applications/productivity/iot/config/flash_sdcard.rst applications/general/iot/config/flash_sdcard.rst                                 # productivity/* -> general/*
+applications/productivity/iot/config/https_certificate_iot.rst applications/general/iot/config/https_certificate_iot.rst               # productivity/* -> general/*
+applications/productivity/iot/config/pos.rst applications/general/iot/config/pos.rst                                                   # productivity/* -> general/*
+applications/productivity/iot/config/troubleshooting.rst applications/general/iot/config/troubleshooting.rst                           # productivity/* -> general/*
+applications/productivity/iot/devices.rst applications/general/iot/devices.rst                                                         # productivity/* -> general/*
+applications/productivity/iot/devices/camera.rst applications/general/iot/devices/camera.rst                                           # productivity/* -> general/*
+applications/productivity/iot/devices/footswitch.rst applications/general/iot/devices/footswitch.rst                                   # productivity/* -> general/*
+applications/productivity/iot/devices/measurement_tool.rst applications/general/iot/devices/measurement_tool.rst                       # productivity/* -> general/*
+applications/productivity/iot/devices/printer.rst applications/general/iot/devices/printer.rst                                         # productivity/* -> general/*
+applications/productivity/iot/devices/scale.rst applications/general/iot/devices/scale.rst                                             # productivity/* -> general/*
+applications/productivity/iot/devices/screen.rst applications/general/iot/devices/screen.rst                                           # productivity/* -> general/*
+applications/productivity/mail_plugins.rst applications/general/integrations/mail_plugins.rst                                          # productivity/* -> general/integrations/*
+applications/productivity/mail_plugins/gmail.rst applications/general/integrations/mail_plugins/gmail.rst                              # productivity/* -> general/integrations/*
+applications/productivity/mail_plugins/outlook.rst applications/general/integrations/mail_plugins/outlook.rst                          # productivity/* -> general/integrations/*
+applications/productivity/studio/concepts/understanding_automated_actions.rst applications/studio/automated_actions.rst                # productivity/* -> *
+applications/productivity/studio/concepts/understanding_general.rst applications/studio.rst                                            # productivity/* -> *
+applications/productivity/studio/how_to/export_import.rst applications/studio/models_modules_apps.rst                                  # productivity/* -> *
+applications/productivity/studio/use_cases/automated_actions.rst applications/studio/automated_actions.rst                             # productivity/* -> *
+applications/productivity/studio/use_cases/models_fields.rst applications/studio/fields.rst                                            # productivity/* -> *
+applications/productivity/studio/use_cases/views.rst applications/studio/views.rst                                                     # productivity/* -> *
+applications/productivity/studio.rst applications/studio.rst                                                                           # productivity/* -> *
+applications/productivity/studio/automated_actions.rst applications/studio/automated_actions.rst                                       # productivity/* -> *
+applications/productivity/studio/fields.rst applications/studio/fields.rst                                                             # productivity/* -> *
+applications/productivity/studio/models_modules_apps.rst applications/studio/models_modules_apps.rst                                   # productivity/* -> *
+applications/productivity/studio/pdf_reports.rst applications/studio/pdf_reports.rst                                                   # productivity/* -> *
+applications/productivity/studio/views.rst applications/studio/views.rst                                                               # productivity/* -> *
+applications/general/voip.rst applications/productivity/voip.rst                                                                       # general/* -> productivity/*
+applications/general/voip/axivox.rst applications/productivity/voip/axivox.rst                                                         # general/* -> productivity/*
+applications/general/voip/devices_integrations.rst applications/productivity/voip/devices_integrations.rst                             # general/* -> productivity/*
+applications/general/voip/onsip.rst applications/productivity/voip/onsip.rst                                                           # general/* -> productivity/*
+applications/general/voip/transfer_forward.rst applications/productivity/voip/transfer_forward.rst                                     # general/* -> productivity/*
+applications/general/voip/voip_widget.rst applications/productivity/voip/voip_widget.rst                                               # general/* -> productivity/*
 
 # applications/sales
 
-applications/sales/crm/optimize/outlook_extension.rst applications/productivity/mail_plugins/outlook.rst
+applications/sales/crm/optimize/outlook_extension.rst applications/general/integrations/mail_plugins/outlook.rst
 applications/sales/point_of_sale/overview/customer_note.rst applications/sales/point_of_sale.rst                                # point_of_sale/overview/customer_note -> point_of_sale
 applications/sales/point_of_sale/payment/worldline.rst applications/sales/point_of_sale/payment_methods/terminals/worldline.rst # point_of_sale/payment/* -> point_of_sale/payment_methods/terminals/*
 
@@ -110,7 +178,8 @@ applications/services/fsm/default_warehouse.rst applications/services/field_serv
 # applications/websites
 
 applications/websites/website/reporting/google_analytics_dashboard.rst applications/websites/website/reporting/google_analytics.rst
-applications/websites/website/configuration/on-premise_geo-ip-installation.rst administration/install/geo_ip.rst
+applications/websites/website/configuration/on-premise_geo-ip-installation.rst administration/on_premise/geo_ip.rst
+applications/websites/website/configuration/unsplash.rst applications/general/integrations/unsplash.rst                                # websites/website/configuration/ -> general/integrations/*
 
 # developer/howtos
 

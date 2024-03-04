@@ -336,7 +336,7 @@ Documents
 All documents associated with an employee are stored in the *Documents* app. The number of documents
 associated with the employee appear in the :guilabel:`Documents` smart button on the employee form.
 Click on the smart button, and all the documents appear. For more information on the *Documents*
-app, refer to the :doc:`Documents documentation </applications/finance/documents>`.
+app, refer to the :doc:`Documents documentation </applications/productivity/documents>`.
 
 .. image:: new_employee/documents.png
    :align: center
