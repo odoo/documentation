@@ -44,7 +44,7 @@ your customer’s address is set correctly, including the country, before sendin
 Pricing
 =======
 
-Snailmail is an :doc:`/applications/general/in_app_purchase` service that requires prepaid stamps
+Snailmail is an :doc:`/applications/essentials/in_app_purchase` service that requires prepaid stamps
 (=credits) to work. Sending one document consumes one stamp.
 
 To buy stamps, go to :menuselection:`Accounting --> Configuration --> Settings --> Customer

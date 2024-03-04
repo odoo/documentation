@@ -12,9 +12,9 @@ In this chapter, you will learn:
 Install
 =======
 
-There are multiple ways to :doc:`install Odoo <../../../administration/install>`, depending on the
+There are multiple ways to :doc:`install Odoo </administration/on_premise>`, depending on the
 intended use case. This documentation assumes you use the :doc:`source install
-<../../../administration/install/source>` (running Odoo from the source code), which is best suited
+</administration/on_premise/source>` (running Odoo from the source code), which is best suited
 for Odoo designers and developers.
 
 Databases
@@ -44,7 +44,7 @@ Fields
 In a model, we will centralize fields (field names we need to target in our code).
 
 .. seealso::
-   :doc:`/applications/productivity/studio/fields`
+   :doc:`/applications/studio/fields`
 
 Classic fields
 **************
