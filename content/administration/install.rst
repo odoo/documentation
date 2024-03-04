@@ -45,6 +45,5 @@ functionalities, including functional support, upgrades, and hosting. `Pricing
    install/packages
    install/source
    install/deploy
-   install/cdn
    install/email_gateway
    install/geo_ip

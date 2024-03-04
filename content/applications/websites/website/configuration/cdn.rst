@@ -57,7 +57,7 @@ Configure the Odoo instance with the new zone
 In the Odoo :guilabel:`Website` app, go to the :menuselection:`Settings` and then activate the
 :guilabel:`Content Delivery Network (CDN)` setting and copy/paste the :guilabel:`Zone URL` value
 from the earlier step into the :guilabel:`CDN Base URL` field. This field is only visible and
-configurable when :doc:`Developer Mode <../../applications/general/developer_mode>` is activated.
+configurable when the :ref:`developer mode <developer-mode>` is activated.
 
 .. note::
    Ensure that there are two *forward slashes* (`//`) before the :guilabel:`CDN Base URL` and one

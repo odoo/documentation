@@ -3,9 +3,9 @@
 :hide-page-toc:
 :show-toc:
 
-====================
-Install and Maintain
-====================
+===================
+Database management
+===================
 
 These guides provide instructions on how to install, maintain and upgrade Odoo databases.
 
