@@ -134,7 +134,7 @@ Follow the same steps to select, edit, or create an :guilabel:`SMS Template`.
    :alt: View of an SMS template setup page in Odoo Helpdesk
 
 .. seealso::
-   :doc:`/applications/general/email_communication/email_template`
+   :doc:`/applications/general/companies/email_template`
 
 Assign stages to a team
 -----------------------

@@ -175,8 +175,7 @@ The pre-configured email templates and when to use them are as follows:
 
 .. note::
    Email templates can be created, modified, and deleted to suit the needs of a business. For more
-   information on email templates, refer to the :doc:`../general/email_communication/email_template`
-   document.
+   information on email templates, refer to the :doc:`../general/companies/email_template` document.
 
 To manually send an email click :guilabel:`Send message` in the chatter. A text box appears, as well
 as the applicant's email address. Click the :guilabel:`⤢ (double arrow)` full composer icon in the
@@ -335,7 +334,7 @@ in the :guilabel:`Email Template` field, and click :guilabel:`Create and Edit...
    pieces of data that populate dynamic content. For example, if the applicant's name is a piece of
    dynamic content, the applicant's name will appear anytime that dynamic placeholder appears on the
    email template. For more detailed information on email templates, refer to the
-   :doc:`../general/email_communication/email_template` documentation.
+   :doc:`../general/companies/email_template` documentation.
 
 An email template populates the :guilabel:`Email Template` field after a refusal reason is selected.
 If an email should not be sent to the applicant, uncheck the :guilabel:`Send Email` checkbox. To
@@ -669,7 +668,7 @@ click :guilabel:`Send Now` to send the message immediately.
 .. note::
    Sending text messages is not a default capability with Odoo. To send text messages, credits are
    required, which need to be purchased. For more information on IAP credits and plans, refer to
-   the :doc:`../general/in_app_purchase` documentation.
+   the :doc:`../essentials/in_app_purchase` documentation.
 
 .. _recruitment/second-interview:
 
