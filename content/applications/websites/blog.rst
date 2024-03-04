@@ -28,7 +28,7 @@ the page using the website builder.
 
 .. tip::
    - Illustrate your articles with copyright-free images from :doc:`Unsplash
-     <website/configuration/unsplash>`.
+     </applications/general/integrations/unsplash>`.
    - Type `/` in the text editor to format and add elements to your text.
 
 .. important::

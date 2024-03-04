@@ -57,7 +57,7 @@ ticket.
    this report, go to :menuselection:`Helpdesk --> Reporting --> Customer Ratings`.
 
 .. seealso::
-   :doc:`/applications/general/email_communication/email_template`
+   :doc:`/applications/general/companies/email_template`
 
 Publish ratings on the customer portal
 ======================================

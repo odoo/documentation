@@ -9,7 +9,7 @@ help avoid confusion and make it easier to tailor your digital outreach strategi
 target audience.
 
 Each website can be designed and configured independently with its own :doc:`domain name
-</administration/maintain/domain_names>`, theme, pages,
+<domain_names>`, theme, pages,
 menus, :doc:`languages <translate>`, :doc:`products <../../ecommerce/managing_products/products>`,
 assigned sales team, etc. They can also :ref:`share content and pages
 <multi-website/website_content>`.
@@ -30,7 +30,7 @@ To create a new website, proceed as follows:
       :alt: New website button
 
 #. Specify the :guilabel:`Website Name` and :guilabel:`Website domain`. Each website must be
-   published under its own :doc:`domain </administration/maintain/domain_names>`.
+   published under its own :doc:`domain <domain_names>`.
 #. Adapt the :guilabel:`Company name`, :guilabel:`Languages` and :guilabel:`Default language`
    if needed.
 #. Click the :guilabel:`Create` button.
@@ -72,7 +72,7 @@ website.
 .. note::
    - Websites are created with the default settings; the settings are not copied from one website to
      the other.
-   - In a :doc:`multi-company environment <../../../general/users/companies>`, each website can be
+   - In a :doc:`multi-company environment </applications/general/companies>`, each website can be
      linked to a specific company in your database so that only company-related data (e.g.,
      products, jobs, events, etc.) is displayed on the website. To display company-specific data,
      set the desired company in the :guilabel:`Company` field.

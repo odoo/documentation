@@ -30,7 +30,7 @@ The subscription plan form contains the following options:
   paying for the quotation. Enable both to leave the choice to the customer. Enable neither to only
   confirm the quotation in the backend.
 - :guilabel:`Confirmation Mail`: Select an :doc:`email template
-  </applications/general/email_communication/email_template>` for the confirmation email that is
+  </applications/general/companies/email_template>` for the confirmation email that is
   automatically sent to the customer after the quotation is confirmed. Leave this field blank to
   send nothing.
 

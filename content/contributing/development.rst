@@ -37,8 +37,8 @@ and then push them to GitHub. Skip this section and go to
    affecting the main codebase. Skip this step if you work at Odoo.
 #. .. include:: install_git.rst
 #. .. include:: configure_git_authorship.rst
-#. :doc:`Install Odoo from the sources <../administration/install/source>`. Make sure to fetch the
-   sources through Git with SSH.
+#. :doc:`Install Odoo from the sources <../administration/on_premise/source>`. Make sure to fetch
+   the sources through Git with SSH.
 #. Configure Git to push changes to your fork(s) rather than to the main codebase. If you work at
    Odoo, configure Git to push changes to the shared forks created on the account **odoo-dev**.
 
@@ -93,9 +93,9 @@ Now that your environment is set up, you can start contributing to the codebase.
 navigate to the directory where you installed Odoo from sources and follow the guide below.
 
 #. Choose the version of Odoo to which you want to make changes. Keep in mind that contributions
-   targeting an :doc:`unsupported version of Odoo </administration/maintain/supported_versions>` are
-   not accepted. This guide assumes that the changes target Odoo {CURRENT_VERSION}, which
-   corresponds to branch `{CURRENT_BRANCH}`.
+   targeting an :doc:`unsupported version of Odoo </administration/supported_versions>` are not
+   accepted. This guide assumes that the changes target Odoo {CURRENT_VERSION}, which corresponds to
+   branch `{CURRENT_BRANCH}`.
 #. Create a new branch starting from branch {CURRENT_BRANCH}. Prefix the branch name with the base
    branch: `{CURRENT_BRANCH}-...`. If you work at Odoo, suffix the branch name with your Odoo
    handle: `{CURRENT_BRANCH}-...-xyz`.
