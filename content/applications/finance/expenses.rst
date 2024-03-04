@@ -391,8 +391,8 @@ To see who has rights to approve, go to the main :menuselection:`Settings` app a
      the *Settings* app.
    - :guilabel:`Settings`: The user has access to the entire *Settings* app with no restrictions.
 
-   Please refer to :doc:`this document </applications/general/users/manage_users>` to learn more
-   about managing users and their access rights.
+   Please refer to :doc:`this document </applications/general/users>` to learn more about managing
+   users and their access rights.
 
 Click on an individual to view their card, which displays the :guilabel:`Access Rights` tab in the
 default view. Scroll down to the :guilabel:`Human Resources` section. Under :guilabel:`Expenses`,

@@ -145,5 +145,5 @@ users, click :guilabel:`Add more users`.
 To remove users, select them and click :guilabel:`Remove`.
 
 .. seealso::
-   - :doc:`/applications/general/users/manage_users`
+   - :doc:`/applications/general/users`
    - :doc:`odoo_accounts`

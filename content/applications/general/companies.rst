@@ -1,3 +1,5 @@
+:show-content:
+
 =========
 Companies
 =========
@@ -52,7 +54,7 @@ company only. To do so, on their forms, choose between:
 Employees' access
 =================
 
-Once companies are created, manage your employees' :doc:`Access Rights <access_rights>`
+Once companies are created, manage your employees' :doc:`Access Rights <users/access_rights>`
 for *Multi Companies*.
 
 .. image:: companies/access_rights_multi_companies.png
@@ -86,12 +88,12 @@ Inter-Company Transactions
 
 First, make sure each one of your companies is properly set in relation to:
 
-- :doc:`Chart of Accounts <../../finance/accounting/get_started/chart_of_accounts>`
-- :doc:`Taxes <../../finance/accounting/taxes>`
-- :doc:`Fiscal Positions <../../finance/accounting/taxes/fiscal_positions>`
-- :doc:`Journals <../../finance/accounting/bank>`
-- :doc:`Fiscal Localizations <../../finance/fiscal_localizations>`
-- :doc:`Pricelists <../../sales/sales/products_prices/prices/pricing>`
+- :doc:`Chart of Accounts <../finance/accounting/get_started/chart_of_accounts>`
+- :doc:`Taxes <../finance/accounting/taxes>`
+- :doc:`Fiscal Positions <../finance/accounting/taxes/fiscal_positions>`
+- :doc:`Journals <../finance/accounting/bank>`
+- :doc:`Fiscal Localizations <../finance/fiscal_localizations>`
+- :doc:`Pricelists <../sales/sales/products_prices/prices/pricing>`
 
 Now, activate the *Inter-Company Transactions* option under *Settings*. With the respective company
 *activated* and *selected*, choose if you would like operations between companies to be synchronized
@@ -131,4 +133,10 @@ at an invoice/bills level or at a sales/purchase orders level.
 
 .. seealso::
    - :doc:`Multi-company Guidelines </developer/howtos/company>`
-   - :doc:`../../finance/accounting/get_started/multi_currency`
+   - :doc:`../finance/accounting/get_started/multi_currency`
+
+.. toctree::
+   :titlesonly:
+
+   companies/digest_emails
+   companies/email_template

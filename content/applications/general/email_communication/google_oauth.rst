@@ -12,7 +12,7 @@ email address or an address created by a custom domain.
    <https://support.google.com/cloud/answer/6158849>`_ on setting up OAuth.
 
 .. seealso::
-   - :doc:`/applications/general/auth/google`
+   - :doc:`/applications/general/users/google`
    - :doc:`/applications/productivity/calendar/google`
 
 Setup in Google
