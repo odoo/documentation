@@ -140,7 +140,7 @@ URL redirects
 Redirecting URLs consists in sending visitors and search engines to a URL that is different from the
 one they originally requested. This technique is used, for example, to prevent broken links when you
 :ref:`delete a page <website/delete-page>`, :ref:`modify its URL <website/page_properties>`, or move
-your site to a new :doc:`domain </administration/maintain/domain_names>`. It can also be used to
+your site to a new :doc:`domain <configuration/domain_names>`. It can also be used to
 improve :doc:`pages/seo`.
 
 To access existing URL redirections and create new ones, :doc:`activate the developer mode

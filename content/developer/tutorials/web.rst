@@ -24,7 +24,7 @@ or extend existing business systems of Odoo, see :doc:`backend`.
     * jQuery_
     * `Underscore.js`_
 
-    It also requires :doc:`an installed Odoo <../../administration/install>`, and Git_.
+    It also requires :doc:`an installed Odoo </administration/on_premise>`, and Git_.
 
 A Simple Module
 ===============

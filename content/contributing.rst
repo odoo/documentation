@@ -31,10 +31,10 @@ lists the most important of them.
      - Anyone interested in Odoo
    * - Submit bug reports
      - Help improve the stability of Odoo by reporting the bugs that you discover in :doc:`supported
-       versions </administration/maintain/supported_versions>` directly to Odoo support. Make sure
-       to include as many details (version, environment, test scenario...) as possible. If you don't
-       have the Odoo Enterprise license required for contacting the support, open a new issue on the
-       GitHub repository of Odoo.
+       versions </administration/supported_versions>` directly to Odoo support. Make sure to include
+       as many details (version, environment, test scenario...) as possible. If you don't have the
+       Odoo Enterprise license required for contacting the support, open a new issue on the GitHub
+       repository of Odoo.
      - * `Odoo support <https://www.odoo.com/help>`_
        * `Issue tracker on GitHub <https://github.com/odoo/odoo/issues>`_
      - Users of Odoo
