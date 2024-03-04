@@ -124,7 +124,7 @@ be redirected to the right website using GeoIP.
   See :doc:`/administration/install/geo_ip`
 
 .. seealso::
-   - :doc:`/administration/maintain/domain_names`
+   - :doc:`domain_names`
 
 If you setup an extra website and specify the domain name you will have to
 do three things to get this feature to work:
