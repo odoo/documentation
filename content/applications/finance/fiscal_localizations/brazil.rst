@@ -87,7 +87,7 @@ to automatically compute taxes by taking into account the company, contact (cust
 transaction information to retrieve the correct tax to be used and process the e-invoice afterward
 with the government.
 
-Using this integration requires :doc:`In-App-Purchases (IAPs) <../../general/in_app_purchase>` to
+Using this integration requires :doc:`In-App-Purchases (IAPs) <../../essentials/in_app_purchase>` to
 compute the taxes and to send the electronic invoices. Whenever you compute taxes, an |API| call is
 made using credits from your |IAP| credits balance.
 

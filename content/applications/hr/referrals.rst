@@ -17,8 +17,7 @@ Any user with either :guilabel:`Referral User`, :guilabel:`Officer`, or :guilabe
 rights for the Recruitment application has access to the Referrals application. Only user's with
 :guilabel:`Administrator` rights for the Recruitment application have access to the :ref:`reporting
 <referrals/reporting>` and configurations menus. For more information on users and access rights,
-refer to these documents: :doc:`../general/users/manage_users` and
-:doc:`../general/users/access_rights`.
+refer to these documents: :doc:`../general/users` and :doc:`../general/users/access_rights`.
 
 Onboarding
 ==========

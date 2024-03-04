@@ -13,7 +13,7 @@ send documents and provide support.
 
 .. seealso::
    For more information on migrating from Odoo Community version to Odoo Enterprise version see this
-   documentation: :doc:`../../../administration/maintain/enterprise`.
+   documentation: :doc:`/administration/on_premise/community_to_enterprise`.
 
 With the **Odoo WhatsApp** app, a company can connect a WhatsApp Business Account (WABA) to an Odoo
 database, which allows for the following:

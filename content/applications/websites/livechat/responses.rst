@@ -45,8 +45,8 @@ entry types an operator can make is displayed.
    :alt: View of the message generated from using the /help command in Odoo Live Chat.
 
 .. seealso::
-  - :doc:`/applications/productivity/discuss/overview/get_started`
-  - :doc:`/applications/productivity/discuss/overview/team_communication`
+  - :doc:`/applications/productivity/discuss`
+  - :doc:`/applications/productivity/discuss/team_communication`
 
 Helpdesk & Helpdesk search
 --------------------------

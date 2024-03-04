@@ -184,7 +184,7 @@ Fill out the fields on the :guilabel:`Open: Rules` pop-up as instructed below, t
 .. note::
    In order to track the geographical location of visitors, :guilabel:`GeoIP` must be installed on
    the database. While this feature is installed by default on *Odoo Online*, *On-Premise* databases
-   will require additional :doc:`setup steps </administration/install/geo_ip>`.
+   will require additional :doc:`setup steps </administration/on_premise/geo_ip>`.
 
 Widget
 ------
@@ -285,7 +285,7 @@ Click on a conversation in the left panel to select it. This will open the conve
 view, an operator can participate in the chat the same as they would in the normal chat window.
 
 .. seealso::
-   - :doc:`Get Started with Discuss </applications/productivity/discuss/overview/get_started>`
+   - :doc:`Get Started with Discuss </applications/productivity/discuss>`
    - :doc:`/applications/websites/livechat/responses`
 
 .. toctree::

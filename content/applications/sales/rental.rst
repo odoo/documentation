@@ -201,7 +201,7 @@ Such documents can ensure everything is returned on-time and in its original con
    Documents`, and click :guilabel:`Save`.
 
 .. note::
-   This feature also requires the :doc:`Sign <../finance/sign>` app. If necessary, Odoo
+   This feature also requires the :doc:`Sign <../productivity/sign>` app. If necessary, Odoo
    automatically installs it after activating the :guilabel:`Digital Documents` setting.
 
 To request a customer signature on a rental agreement, select a confirmed rental order, and click
