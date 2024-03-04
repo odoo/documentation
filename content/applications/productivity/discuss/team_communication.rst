@@ -95,5 +95,5 @@ drop-down menu.
    :alt: View of a channel being searched through filters in Odoo Discuss
 
 .. seealso::
-   - :doc:`get_started`
+   - :doc:`../discuss`
    - :doc:`/applications/essentials/activities`

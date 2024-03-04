@@ -235,5 +235,5 @@ When all configurations are complete, click :guilabel:`Save`.
    :guilabel:`Trigger` field.
 
 .. seealso::
-   - :doc:`/applications/productivity/discuss/overview/get_started`
-   - :doc:`/applications/productivity/discuss/overview/team_communication`
+   - :doc:`/applications/productivity/discuss`
+   - :doc:`/applications/productivity/discuss/team_communication`
