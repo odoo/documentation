@@ -463,7 +463,7 @@ regardless.
      field`.
 
      Users can also be created manually. For more information on how to manually add a user, refer
-     to the :doc:`../../general/users/manage_users` document.
+     to the :doc:`../../general/users/` document.
 
 - :guilabel:`Attendance/Point of Sale/Manufacturing`: the employee's :guilabel:`PIN Code` and
   :guilabel:`Badge ID` can be entered here, if the employee needs/has one. Click
@@ -503,7 +503,8 @@ All employee-related documents are stored in the *Documents* app. The number of 
 is displayed in the :guilabel:`Documents` smart button above the employee record. Click on the smart
 button to access all documents.
 
-Refer to :doc:`documentation <../../finance/documents>` on the *Documents* app for more information.
+Refer to :doc:`documentation <../../productivity/documents>` on the *Documents* app for more
+information.
 
 .. image:: new_employee/documents.png
    :align: center

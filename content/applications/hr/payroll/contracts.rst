@@ -9,8 +9,8 @@ about their position.
 .. important::
    Contract documents (PDFs) are uploaded and organized using the *Documents* application, and are
    signed using the *Sign* application. Ensure these applications are installed in order to send and
-   sign contracts. Please refer to the :doc:`/applications/finance/documents` and
-   :doc:`/applications/finance/sign` documentation.
+   sign contracts. Please refer to the :doc:`/applications/productivity/documents` and
+   :doc:`/applications/productivity/sign` documentation.
 
 To view the employee contracts, go to the :menuselection:`Payroll app --> Employees --> Contracts`
 from the top menu. All employee contracts, and their current contract status, are displayed in a

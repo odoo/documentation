@@ -418,8 +418,7 @@ the fields that appear on the :guilabel:`Schedule Activity` pop-up form change, 
    The color of the icon indicates the status; a green icon means an activity is scheduled in the
    future, and a red icon means the activity is past due.
 
-   For more details on activities, refer to the
-   :doc:`../productivity/discuss/overview/plan_activities` document.
+   For more details on activities, refer to the :doc:`../essentials/activities` document.
 
    .. image:: appraisals/activity-icons.png
       :align: center
