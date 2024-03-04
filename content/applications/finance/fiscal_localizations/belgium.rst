@@ -474,7 +474,7 @@ The Odoo POS system is certified for the major versions of databases hosted on *
      - Not certified
 
 .. seealso::
-   :doc:`/administration/maintain/supported_versions`
+   :doc:`/administration/supported_versions`
 
 A `certified POS system <https://www.systemedecaisseenregistreuse.be/systemes-certifies>`_ must
 adhere to rigorous government regulations, which means it operates differently from a non-certified
@@ -575,7 +575,7 @@ provide the following information:
 - your company's name, address, and legal structure; and
 - the Mac address of your IoT Box.
 
-Once your IoT box is certified, :doc:`connect <../../productivity/iot/config/connect>` it to your
+Once your IoT box is certified, :doc:`connect <../../general/iot/config/connect>` it to your
 database. To verify that the IoT Box recognizes the FDM, go to the IoT homepage and scroll down the
 :guilabel:`IOT Device` section, which should display the FDM.
 
