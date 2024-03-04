@@ -109,8 +109,8 @@ Odoo is a certified partner of Avalara Brazil, which means that Avalara experts 
 covered within the scope of the integration.
 
 Using this integration requires :doc:`In-App-Purchases (IAPs)
-</applications/general/in_app_purchase>` to compute taxes. Every time you compute taxes, an API call
-is made, using credits from your |IAP| credits balance.
+</applications/essentials/in_app_purchase>` to compute taxes. Every time you compute taxes, an API
+call is made, using credits from your |IAP| credits balance.
 
 Credential configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~

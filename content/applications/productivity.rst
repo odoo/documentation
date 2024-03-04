@@ -7,9 +7,10 @@ Productivity
 
 .. toctree::
 
-    productivity/discuss
-    productivity/calendar
+    productivity/documents
+    productivity/sign
+    productivity/spreadsheet
     productivity/knowledge
-    productivity/iot
-    productivity/mail_plugins
-    productivity/studio
+    productivity/calendar
+    productivity/discuss
+    productivity/voip
