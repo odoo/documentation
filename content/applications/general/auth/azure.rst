@@ -14,10 +14,9 @@ the organization to connect to Odoo using their Microsoft Accounts.
    user, the database will no longer be able to be duplicated, renamed, or otherwise managed from
    the Odoo.com portal.
 
-
 .. seealso::
    - :doc:`../../productivity/calendar/outlook`
-   - :doc:`/administration/maintain/azure_oauth`
+   - :doc:`../email_communication/azure_oauth`
 
 Configuration
 =============

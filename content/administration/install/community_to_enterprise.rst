@@ -11,8 +11,8 @@ In any case the basic guidelines are:
 
 * Backup your community database
 
-  .. image:: enterprise/db_manager.png
-    :class: img-fluid
+  .. image:: community_to_enterprise/db_manager.png
+     :class: img-fluid
 
 * Shutdown your server
 
@@ -22,8 +22,8 @@ In any case the basic guidelines are:
 
 * Enter your Odoo Enterprise Subscription code
 
-.. image:: enterprise/enterprise_code.png
-  :class: img-fluid
+.. image:: community_to_enterprise/enterprise_code.png
+   :class: img-fluid
 
 On Linux, using an installer
 ============================
@@ -82,7 +82,7 @@ On Windows
 * Uninstall Odoo Community (using the Uninstall executable in the installation folder) -
   PostgreSQL will remain installed
 
-  .. image:: enterprise/windows_uninstall.png
+  .. image:: community_to_enterprise/windows_uninstall.png
     :class: img-fluid
 
 * Launch the Odoo Enterprise Installer and follow the steps normally. When choosing
@@ -90,8 +90,8 @@ On Windows
   (this folder still contains the PostgreSQL installation).
   Uncheck ``Start Odoo`` at the end of the installation
 
-  .. image:: enterprise/windows_setup.png
-   :class: img-fluid
+  .. image:: community_to_enterprise/windows_setup.png
+     :class: img-fluid
 
 * Using a command window, update your Odoo Database using this command (from the Odoo
   installation path, in the server subfolder)
