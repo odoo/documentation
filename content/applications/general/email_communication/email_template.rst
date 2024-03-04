@@ -255,7 +255,7 @@ parameter used to generate all the links.
    This is a known limitation.
 
 For more information about how to configure domains, check out the :doc:`domain name documentation
-</administration/maintain/domain_names>`.
+</applications/websites/website/configuration/domain_names>`.
 
 Updating translations within email templates
 --------------------------------------------
