@@ -11,7 +11,7 @@ Building a Website
 
     * This guide assumes `basic knowledge of Python
       <http://docs.python.org/2/tutorial/>`_
-    * This guide assumes :doc:`an installed Odoo <../../administration/install>`
+    * This guide assumes :doc:`an installed Odoo </administration/on_premise>`
 
 Creating a basic module
 =======================
