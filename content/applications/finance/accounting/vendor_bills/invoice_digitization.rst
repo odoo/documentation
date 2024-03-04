@@ -11,7 +11,7 @@ created and populated based on the scanned invoices.
 
 .. seealso::
    - `Test Odoo's invoice digitization <https://www.odoo.com/app/invoice-automation>`_
-   - :doc:`/applications/general/in_app_purchase`.
+   - :doc:`/applications/essentials/in_app_purchase`.
    - `Odoo Tutorials: Invoice Digitization with OCR
      <https://www.odoo.com/slides/slide/digitize-bills-with-ocr-1712>`_.
 
@@ -49,8 +49,8 @@ You can modify the email alias of a journal by going to :menuselection:`Accounti
 --> Journals`, opening the appropriate journal, opening the :guilabel:`Advanced Settings` tab, and
 modifying the :guilabel:`Email Alias` field.
 
-If you use the :doc:`Documents <../../documents>` app, you can send your scanned invoices to the
-:guilabel:`Finance` workspace (e.g., `inbox-financial@example.odoo.com`).
+If you use the :doc:`Documents </applications/productivity/documents>` app, you can send your
+scanned invoices to the :guilabel:`Finance` workspace (e.g., `inbox-financial@example.odoo.com`).
 
 Invoice digitization
 ====================

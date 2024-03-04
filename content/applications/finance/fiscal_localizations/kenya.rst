@@ -73,7 +73,7 @@ agreement. On the next page, select the :guilabel:`type of install: Odoo IoT`. T
 :guilabel:`Next` and :guilabel:`Install`. Once completed, click :guilabel:`Next`. Check the
 :guilabel:`Start Odoo` box to be redirected to Odoo automatically, and then click :guilabel:`Finish`.
 
-A new page opens, confirming your :doc:`IoT Box <../../productivity/iot/config/connect>` is up and
+A new page opens, confirming your :doc:`IoT Box <../../general/iot/config/connect>` is up and
 running. Connect your physical device **Tremol G03 Control Unit (type C)** to your laptop via USB.
 In the :guilabel:`IoT Device` section, check that your Tremol G03 Control Unit (type C) appears,
 confirming the connection between the device and your computer.
@@ -87,7 +87,7 @@ confirming the connection between the device and your computer.
    in the top right corner.
 
 .. seealso::
-   :doc:`Connect an IoT box to your database <../../productivity/iot/config/connect>`
+   :doc:`Connect an IoT box to your database <../../general/iot/config/connect>`
 
 Sending the data to KRA using the Tremol G03 Control Unit
 ---------------------------------------------------------

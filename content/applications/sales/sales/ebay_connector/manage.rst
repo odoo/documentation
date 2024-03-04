@@ -60,7 +60,7 @@ template.
 
 .. seealso::
    For more information on template configuration in Odoo visit:
-   :doc:`../../../general/email_communication/email_template`.
+   :doc:`../../../general/companies/email_template`.
 
 Listing with variations
 =======================
