@@ -12,7 +12,7 @@ personal email address or an address created by a custom domain.
    <https://learn.microsoft.com/azure/active-directory/develop/quickstart-register-app>`_
 
 .. seealso::
-   - :doc:`/applications/general/auth/azure`
+   - :doc:`/applications/general/users/azure`
    - :doc:`/applications/productivity/calendar/outlook`
 
 Setup in Microsoft Azure Portal

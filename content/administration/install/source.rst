@@ -475,7 +475,7 @@ http://localhost:8069 in a web browser and log into the Odoo database with the b
 account: use `admin` as the email and, again, `admin` as the password.
 
 .. tip::
-   - From there, create and manage new :doc:`users <../../applications/general/users/manage_users>`.
+   - From there, create and manage new :doc:`users <../../applications/general/users>`.
    - The user account used to log into Odoo's web interface differs from the :option:`--db_user
      <odoo-bin -r>` CLI argument.
 
