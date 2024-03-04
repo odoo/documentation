@@ -11,7 +11,7 @@ your stock, you get real-time statistics, and your data is consolidated across a
 
 .. seealso::
    - `Odoo Tutorials: Point of Sale Tutorials <https://www.odoo.com/slides/point-of-sale-28>`_
-   - :doc:`IoT Boxes Documentations </applications/productivity/iot>`
+   - :doc:`IoT Boxes Documentations </applications/general/iot>`
 
 .. _pos/session-start:
 

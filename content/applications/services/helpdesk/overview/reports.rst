@@ -224,4 +224,4 @@ To create and save new *Favorites* on a report, follow the steps below:
 
 .. seealso::
    - :doc:`Start receiving tickets </applications/services/helpdesk/overview/receiving_tickets>`
-   - :doc:`Odoo reporting </applications/general/reporting>`
+   - :doc:`Odoo reporting </applications/essentials/reporting>`

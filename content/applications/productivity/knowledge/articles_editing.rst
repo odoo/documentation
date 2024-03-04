@@ -76,7 +76,7 @@ To remove the cover, hover over it to make the buttons appear and click :guilabe
 
 .. note::
    - To associate Unsplash with your database, please refer to
-     :doc:`../../websites/website/configuration/unsplash`.
+     :doc:`/applications/general/integrations/unsplash`.
    - The articles are responsive, and so are the cover pictures. As a result, the images cannot
      be repositioned manually to fit a particular screen, as they automatically resize
      depending on the device.

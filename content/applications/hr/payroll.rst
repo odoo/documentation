@@ -56,7 +56,7 @@ database.
    company, since company locations can vary and be located anywhere in the world, where rules and
    laws differ.
 
-   For more information on companies, refer to the :doc:`Companies <../general/users/companies>`
+   For more information on companies, refer to the :doc:`Companies <../general/companies>`
    documentation, which covers how to set up companies.
 
 Time off
