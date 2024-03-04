@@ -91,7 +91,7 @@ Import your database
 ====================
 
 You can import your database in your Odoo.sh project as long as it is in a :doc:`supported version
-</administration/maintain/supported_versions>` of Odoo.
+</administration/supported_versions>` of Odoo.
 
 Push your modules in production
 -------------------------------
@@ -202,4 +202,4 @@ therefore removed, as you can only have one database linked per subscription.
 
 If you plan to make it your production, unlink your former database from the subscription, and
 register the newly imported database. Read the :doc:`database registration documentation
-<../../maintain/on_premise>` for instructions.
+<../../install>` for instructions.

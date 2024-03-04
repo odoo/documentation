@@ -13,7 +13,7 @@ Odoo provides support and bug fixing **for the 3 last major versions** of Odoo.
    <odoo_online>` hosting every two months. Odoo Online users can then benefit from the latest
    features of Odoo.
 
-   - Admins of Odoo Online databases are invited to :doc:`upgrade <../upgrade>` them regularly.
+   - Admins of Odoo Online databases are invited to :doc:`upgrade <upgrade>` them regularly.
    - Online versions are *not* released for Odoo.sh and On-Premise installations.
    - Online versions are listed below as *SaaS*.
 

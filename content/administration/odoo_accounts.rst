@@ -1,6 +1,6 @@
-========================
-Odoo.com account changes
-========================
+=================
+Odoo.com accounts
+=================
 
 This documentation is dedicated to edits made to an Odoo.com account. The following processes
 describe how to delete an Odoo.com account, and how to change the password on an Odoo.com account.
