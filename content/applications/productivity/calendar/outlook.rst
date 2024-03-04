@@ -6,8 +6,8 @@ Synchronizing a user's Outlook Calendar with Odoo is useful for keeping track of
 appointments across all related applications.
 
 .. seealso::
-   - :doc:`/applications/general/auth/azure`
-   - :doc:`/administration/maintain/azure_oauth`
+   - :doc:`/applications/general/users/azure`
+   - :doc:`/applications/general/email_communication/azure_oauth`
 
 Register the application with Microsoft Azure
 =============================================
@@ -134,5 +134,5 @@ The synchronization is a two-way process, meaning that events are reconciled in 
    services for their internal and external users.
 
 .. seealso::
-   - :doc:`../mail_plugins/outlook`
+   - :doc:`/applications/general/integrations/mail_plugins/outlook`
    - :doc:`google`

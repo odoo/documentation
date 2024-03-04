@@ -18,24 +18,22 @@ configure.
    :alt: Dropdown menu to select the POS in the app settings
 
 .. note::
-   These settings are available to users with the :doc:`access rights
-   </applications/general/users/manage_users>` :guilabel:`Administration` set as
-   :guilabel:`Settings`.
+   These settings are available to users with the :doc:`access rights </applications/general/users>`
+   :guilabel:`Administration` set as :guilabel:`Settings`.
 
 You can also configure some settings from the dashboard by clicking the vertical ellipsis button
 (:guilabel:`⋮`) on a POS card. Doing so opens a popup window, from which you can:
 
 - :doc:`Enable multiple employees to log in. <employee_login>`
-- :doc:`Connect and set up an IoT box. <../../productivity/iot/config/pos>`
+- :doc:`Connect and set up an IoT box. <../../general/iot/config/pos>`
 - :doc:`Connect and set up an ePOS printer. <configuration/epos_ssc>`
 
 .. image:: configuration/toggle-settings.png
    :alt: popup window to access quick settings in POS
 
 .. note::
-   These settings are available to users with the :doc:`access rights
-   </applications/general/users/manage_users>` :guilabel:`Point of Sale` set as
-   :guilabel:`Administrator`.
+   These settings are available to users with the :doc:`access rights </applications/general/users>`
+   :guilabel:`Point of Sale` set as :guilabel:`Administrator`.
 
 Make products available
 =======================

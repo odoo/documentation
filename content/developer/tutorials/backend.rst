@@ -11,7 +11,7 @@ Building a Module
    This tutorial is outdated. We recommend reading :doc:`getting_started` instead.
 
 .. warning::
-   This tutorial requires :doc:`having installed Odoo <../../administration/install>`
+   This tutorial requires :doc:`having installed Odoo </administration/on_premise>`
 
 Start/Stop the Odoo server
 ==========================

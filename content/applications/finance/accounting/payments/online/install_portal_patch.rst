@@ -26,8 +26,8 @@ If you use Odoo on Odoo.com or Odoo.sh platform, your code is already up-to-date
 to the next step.
 
 If you use Odoo with an on-premise setup or through a partner, you must update your installation as
-detailed in :doc:`this documentation page </administration/maintain/update>`, or by contacting your
-integrating partner.
+detailed in :doc:`this documentation page </administration/on_premise/update>`, or by contacting
+your integrating partner.
 
 Update the list of available modules
 ====================================

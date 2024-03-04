@@ -220,7 +220,7 @@ Proxy. Copy the token and save it in a safe place for later use.
 
 .. seealso::
    - `Odoo: Download Odoo <https://www.odoo.com/page/download>`_
-   - :doc:`../../../administration/install`
+   - :doc:`../../../administration/on_premise`
 
 .. _egypt/e-invoicing-usb-configuration:
 

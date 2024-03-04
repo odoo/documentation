@@ -39,7 +39,7 @@ After setting the necessary formatting options and mapping the file columns with
 fields, you can run a :guilabel:`Test` and :guilabel:`Import` your bank transactions.
 
 .. seealso::
-   :doc:`/applications/general/export_import_data`
+   :doc:`/applications/essentials/export_import_data`
 
 .. _transactions/register:
 
