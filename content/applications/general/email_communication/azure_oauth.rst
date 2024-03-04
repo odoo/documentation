@@ -290,4 +290,4 @@ account`. Odoo will state: :guilabel:`Outlook Token Valid` Now :guilabel:`Test a
 account. The account should be ready to receive email to the Odoo database.
 
 .. seealso::
-   :doc:`../../applications/general/email_communication/email_servers`
+   :doc:`email_servers`

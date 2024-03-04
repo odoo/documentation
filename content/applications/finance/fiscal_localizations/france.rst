@@ -368,7 +368,7 @@ of conformity testifying that your software complies with the anti-fraud
 legislation. This certificate is granted by Odoo SA to Odoo Enterprise users
 `here <https://www.odoo.com/my/contract/french-certification/>`_.
 If you use Odoo Community, you should :doc:`upgrade to Odoo Enterprise
-</administration/maintain/enterprise>` or contact your Odoo service provider.
+</administration/install/community_to_enterprise>` or contact your Odoo service provider.
 
 In case of non-conformity, your company risks a fine of €7,500.
 

@@ -210,8 +210,8 @@ Make your first contribution
 
       #. Choose the version of the documentation to which you want to make changes. Keep in mind
          that contributions targeting an :doc:`unsupported version of Odoo
-         </administration/maintain/supported_versions>` are not accepted. This guide assumes that
-         the changes target the documentation of Odoo {CURRENT_VERSION}, which corresponds to branch
+         </administration/supported_versions>` are not accepted. This guide assumes that the changes
+         target the documentation of Odoo {CURRENT_VERSION}, which corresponds to branch
          `{CURRENT_BRANCH}`.
       #. Create a new branch starting from branch {CURRENT_BRANCH}. Prefix the branch name with the
          base branch: `{CURRENT_BRANCH}-...`. If you work at Odoo, suffix the branch name with your

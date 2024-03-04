@@ -24,7 +24,7 @@ you can proceed to the next step.
 
 If you use Odoo with an on-premise setup or through a partner, then you must update
 your installation as detailed in
-:doc:`this documentation page </administration/maintain/update>`
+:doc:`this documentation page </administration/install/update>`
 or by contacting your integrating partner.
 
 Update the list of available modules

@@ -210,9 +210,8 @@ Connection`.
 
    For more information see :ref:`Using a default email address <email_communication/default>`.
 
-   The :guilabel:`System Parameters` can be accessed by activating
-   :doc:`../../applications/general/developer_mode` in the :menuselection:`Settings --> Technical
-   --> Parameters --> System Parameters` menu.
+   The :guilabel:`System Parameters` can be accessed by activating the :ref:`developer mode
+   <developer-mode>`.
 
 Once the setup is complete, the Odoo database is ready to use the Mailjet email server for mass
 mailing or transactional emails!

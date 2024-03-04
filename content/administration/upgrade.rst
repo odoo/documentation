@@ -3,8 +3,8 @@ Upgrade
 =======
 
 An upgrade is the process of moving your database from an older version to a newer :doc:`supported
-version <maintain/supported_versions>` (e.g., Odoo 14.0 to Odoo 16.0). Frequently upgrading is
-essential as each version comes with new and improved features, bug fixes, and security patches.
+version <supported_versions>` (e.g., Odoo 14.0 to Odoo 16.0). Frequently upgrading is essential as
+each version comes with new and improved features, bug fixes, and security patches.
 
 .. _upgrade_faq/rolling_release:
 
@@ -31,9 +31,8 @@ essential as each version comes with new and improved features, bug fixes, and s
 An upgrade does not cover:
 
   - Downgrading to a previous version of Odoo
-  - :doc:`Switching editions <maintain/enterprise>` (e.g., from Community to Enterprise)
-  - :doc:`Changing hosting type </administration/maintain/hosting_changes>` (e.g., from on-premise
-    to Odoo Online)
+  - :doc:`Switching editions <install/community_to_enterprise>` (e.g., from Community to Enterprise)
+  - :ref:`Changing hosting type <hosting/change-solution>` (e.g., from on-premise to Odoo Online)
   - Migrating from another ERP to Odoo
 
 .. warning::
@@ -405,4 +404,4 @@ The following upgrade-related services are **not** included:
 
 .. seealso::
    - :doc:`Odoo.sh documentation <odoo_sh>`
-   - :doc:`Supported Odoo versions <maintain/supported_versions>`
+   - :doc:`Supported Odoo versions <supported_versions>`

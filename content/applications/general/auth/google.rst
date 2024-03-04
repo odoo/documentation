@@ -16,7 +16,7 @@ the organization to connect to Odoo using their Google Accounts.
 
 .. seealso::
    - :doc:`/applications/productivity/calendar/google`
-   - :doc:`/administration/maintain/google_oauth`
+   - :doc:`../email_communication/google_oauth`
 
 .. _google-sign-in/configuration:
 
