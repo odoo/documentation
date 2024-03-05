@@ -13,5 +13,6 @@ Productivity
     productivity/knowledge
     productivity/calendar
     productivity/discuss
+    productivity/voip
     productivity/mail_plugins
     productivity/studio
