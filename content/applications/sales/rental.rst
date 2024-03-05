@@ -73,8 +73,8 @@ original condition. To do so, go to :menuselection:`Rental --> Configuration -->
    :alt: Digital Documents settings in Odoo Rental
 
 .. note::
-   This feature requires the :doc:`Sign <../finance/sign>` app. If necessary, Odoo installs it after
-   activating *Digital Documents*.
+   This feature requires the :doc:`Sign <../productivity/sign>` app. If necessary, Odoo installs it
+   after activating *Digital Documents*.
 
 Once the app settings are saved, you have the option to change the default *Rental Agreement* from
 the dropdown menu. You can pick any document already uploaded to the *Sign* app, or upload a new one
