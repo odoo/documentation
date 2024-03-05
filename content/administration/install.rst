@@ -1,8 +1,8 @@
 :show-content:
 
-==========
-On-premise
-==========
+=======================
+On-premise installation
+=======================
 
 Register a database
 ===================
