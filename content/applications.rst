@@ -14,6 +14,7 @@ Discover our user guides and configuration tutorials per application.
 .. toctree::
     :maxdepth: 2
 
+    applications/essentials
     applications/finance
     applications/sales
     applications/websites

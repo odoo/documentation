@@ -253,7 +253,7 @@ Products
 To configure products, go to :menuselection:`Accounting --> Customers --> Products`, then select a
 product to configure, or :guilabel:`Create` a new one. In the :guilabel:`Accounting` tab, and in the
 :guilabel:`UNSPSC Product Category` field, select the category that represents the product. The
-process can be done manually, or through :doc:`a bulk import <../../general/export_import_data>`.
+process can be done manually, or through :doc:`a bulk import <../../essentials/export_import_data>`.
 
 .. note::
    All products need to have an |SAT| code associated with them in order to prevent validation

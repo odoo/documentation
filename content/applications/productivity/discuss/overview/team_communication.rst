@@ -111,4 +111,4 @@ messages in window and pressing *enter*.
 
 .. seealso::
    - :doc:`get_started`
-   - :doc:`plan_activities`
+   - :doc:`/applications/essentials/activities`
