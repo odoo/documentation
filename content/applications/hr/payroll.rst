@@ -106,8 +106,8 @@ The contract template forms the basis of an offer, and can be modified for speci
 employees, when necessary. If a contract template is created or modified in the *Payroll*
 application, the changes are also reflected in the *Recruitment* application.
 
-To view all the current contract templates in the database, navigate to :menuselection:`Payroll
-app --> Configuration --> Contracts: Templates`.
+To view all the current contract templates in the database, navigate to :menuselection:`Payroll app
+--> Configuration --> Contracts: Templates`.
 
 On the :guilabel:`Contract Templates` page, all current contract templates appear in a list view. To
 view the details of a contract template, click anywhere on the line to open the contract form. The
@@ -218,6 +218,8 @@ list.
 .. image:: payroll/employment-types.png
    :align: center
    :alt: The employment types in the database by default, in a list view.
+
+.. _payroll/work-entries:
 
 Work entries
 ============
