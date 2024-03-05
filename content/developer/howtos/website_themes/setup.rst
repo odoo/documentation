@@ -44,7 +44,7 @@ Fields
 In a model, we will centralize fields (field names we need to target in our code).
 
 .. seealso::
-   :doc:`/applications/productivity/studio/fields`
+   :doc:`/applications/studio/fields`
 
 Classic fields
 **************
