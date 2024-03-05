@@ -91,7 +91,7 @@ Solution:
     Ensure that the server is configured.
 
 .. seealso::
-   :doc:`/applications/productivity/iot/config/connect`
+   :doc:`/applications/general/iot/config/connect`
 
 `ERR_IOT_HTTPS_CHECK_CERT_READ_EXCEPTION`
 -----------------------------------------

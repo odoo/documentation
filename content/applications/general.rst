@@ -7,6 +7,7 @@ General settings
     general/apps_modules
     general/users
     general/companies
+    general/iot
     general/email_communication
     general/voip
     general/geolocation

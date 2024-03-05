@@ -47,10 +47,10 @@ Then, connect the peripheral devices to the :abbr:`IoT (Internet of Things)` box
        character (keycode 28). This is most likely the default configuration of the barcode scanner.
    * - Scale
      - Connect the scale and power it on. Refer to
-       :doc:`/applications/productivity/iot/devices/scale`.
+       :doc:`../devices/scale`.
    * - Customer display
      - Connect a screen to the :abbr:`IoT (Internet of Things)` box to display the :abbr:`PoS (Point
-       of Sale)` order. Refer to :doc:`/applications/productivity/iot/devices/screen`.
+       of Sale)` order. Refer to :doc:`../devices/screen`.
    * - Payment terminal
      - The connection process depends on the terminal. Refer to the :doc:`payment terminals
        documentation </applications/sales/point_of_sale/payment_methods>`.
