@@ -127,7 +127,7 @@ the call to that phone number.
    :menuselection:`Settings App --> Manage Users --> Select the user --> Preferences --> VOIP -->
    VoIP username / Extension number`.
 
-   For more information on access rights, visit: :doc:`../users/access_rights`.
+   For more information on access rights, visit: :doc:`/applications/general/users/access_rights`.
 
 .. image:: transfer_forward/transfer.png
    :align: center
