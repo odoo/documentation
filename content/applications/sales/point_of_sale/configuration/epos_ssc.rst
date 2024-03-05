@@ -30,7 +30,7 @@ to the ePOS printer.
    - TM-P80 (Wi-Fi® model)
 
 To work with Odoo, some models that can be used without an
-:doc:`IoT box <../../../productivity/iot/config/connect>` may require :doc:`the HTTPS protocol
+:doc:`IoT box </applications/general/iot/config/connect>` may require :doc:`the HTTPS protocol
 <https>` to establish a secure connection between the browser and the printer. However, trying to
 reach the printer's IP address using HTTPS leads to a warning page on most web browsers. In that
 case, you can temporarily :ref:`force the connection <epos_ssc/instructions>`, which allows you to

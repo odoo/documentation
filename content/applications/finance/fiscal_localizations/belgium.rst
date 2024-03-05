@@ -421,7 +421,7 @@ provide the following information:
 - your company's name, address, and legal structure; and
 - the Mac address of your IoT Box.
 
-Once your IoT box is certified, :doc:`connect <../../productivity/iot/config/connect>` it to your
+Once your IoT box is certified, :doc:`connect <../../general/iot/config/connect>` it to your
 database. To verify that the IoT Box recognizes the FDM, go to the IoT homepage and scroll down the
 :guilabel:`IOT Device` section, which should display the FDM.
 
