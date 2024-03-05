@@ -9,5 +9,5 @@ General settings
     general/companies
     general/iot
     general/email_communication
-    general/geolocation
+    general/integrations
     general/developer_mode

@@ -32,7 +32,7 @@ However, they can provide **Lead Enrichment**, which is part of a paid service k
 Generation**.
 
 Mail plugins allow you to test Lead Enrichment for free, whether you connect the plugins to a
-database or not. After a while, the plugins ask you to buy :doc:`../essentials/in_app_purchase`
+database or not. After a while, the plugins ask you to buy :doc:`../../essentials/in_app_purchase`
 credits if you would like to keep using this service.
 
 .. _mail_plugins/lead-generation:
@@ -53,5 +53,5 @@ select a package.
      <https://iap.odoo.com/privacy#header_3>`_.
 
 .. seealso::
-   - :doc:`../essentials/in_app_purchase`
+   - :doc:`../../essentials/in_app_purchase`
    - `Odoo Tutorials: Lead Enrichment <https://www.odoo.com/r/p73>`_
