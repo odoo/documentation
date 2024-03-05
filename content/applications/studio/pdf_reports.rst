@@ -301,7 +301,7 @@ Several configuration options are available under the :guilabel:`Report` tab.
   record.
 
 - :guilabel:`Limit visibility to groups`: limit the availability of the PDF report to specific
-  :doc:`user groups <../../general/users/access_rights>`.
+  :doc:`user groups </applications/general/users/access_rights>`.
 
 Options tab
 ===========
@@ -324,8 +324,8 @@ Below are presented some of the most common options:
 
 - :guilabel:`Visible if`: set under which condition(s) the element should be displayed.
 
-- :guilabel:`Visible for`: set for which :doc:`users groups <../../general/users/access_rights>`
-  the element should be displayed.
+- :guilabel:`Visible for`: set for which :doc:`users groups
+  </applications/general/users/access_rights>` the element should be displayed.
 
 - :guilabel:`Remove from View`: remove the element from the report's view.
 

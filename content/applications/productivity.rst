@@ -15,4 +15,3 @@ Productivity
     productivity/discuss
     productivity/voip
     productivity/mail_plugins
-    productivity/studio
