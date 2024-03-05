@@ -49,8 +49,8 @@ You can modify the email alias of a journal by going to :menuselection:`Accounti
 --> Journals`, opening the appropriate journal, opening the :guilabel:`Advanced Settings` tab, and
 modifying the :guilabel:`Email Alias` field.
 
-If you use the :doc:`Documents <../../documents>` app, you can send your scanned invoices to the
-:guilabel:`Finance` workspace (e.g., `inbox-financial@example.odoo.com`).
+If you use the :doc:`Documents </applications/productivity/documents>` app, you can send your
+scanned invoices to the :guilabel:`Finance` workspace (e.g., `inbox-financial@example.odoo.com`).
 
 Invoice digitization
 ====================
