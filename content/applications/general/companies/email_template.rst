@@ -146,7 +146,7 @@ template, as listed in the bulleted list above.
    model that the email template is created for.
 
    .. seealso::
-      :doc:`../../productivity/studio/models_modules_apps`.
+      :doc:`/applications/studio/models_modules_apps`.
 
 .. tip::
    These fields can also be accessed in :ref:`developer mode <developer-mode>`. On a contact form
