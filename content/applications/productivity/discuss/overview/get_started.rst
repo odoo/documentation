@@ -104,4 +104,4 @@ checking their *status*. The status is shown on the left side of a contact's nam
 
 .. seealso::
    - :doc:`/applications/productivity/discuss/overview/team_communication`
-   - :doc:`/applications/productivity/discuss/overview/plan_activities`
+   - :doc:`/applications/essentials/activities`

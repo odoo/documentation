@@ -40,8 +40,7 @@ Lastly, click one of the following buttons:
   opens a new activity window.
 - :guilabel:`Discard`: discards any changes made on the pop-up window.
 
-.. image:: plan_activities/schedule-pop-up.png
-   :align: center
+.. image:: activities/schedule-pop-up.png
    :alt: View of CRM leads and the option to schedule an activity.
 
 .. note::
@@ -50,8 +49,7 @@ Lastly, click one of the following buttons:
 
 Scheduled activities are added to the chatter for the record under :guilabel:`Planned activities`.
 
-.. image:: plan_activities/chatter-activities.png
-   :align: center
+.. image:: activities/chatter-activities.png
    :alt: View of CRM leads and the option to schedule an activity.
 
 Activities can also be scheduled from the kanban, list, or activities view of an application.
@@ -63,9 +61,8 @@ Activities can also be scheduled from the kanban, list, or activities view of an
       Select a record on which to schedule an activity. Click on the :guilabel:`🕘 (clock)` icon,
       then :guilabel:`Schedule An Activity`, and proceed to fill out the pop-up form.
 
-      .. image:: plan_activities/schedule-kanban-activity.png
-         :align: center
-         :alt: Kanban view of the CRM pipeline and the option to schedule an activity.
+      .. image:: activities/schedule-kanban-activity.png
+               :alt: Kanban view of the CRM pipeline and the option to schedule an activity.
 
    .. tab:: List view
 
@@ -73,9 +70,8 @@ Activities can also be scheduled from the kanban, list, or activities view of an
       then :guilabel:`Schedule An Activity`. If the record already has an activity scheduled, the
       clock icon may be replaced by a :guilabel:`📞 (phone)` or an :guilabel:`✉️ (envelope)` icon.
 
-      .. image:: plan_activities/schedule-list-activity.png
-         :align: center
-         :alt: List view of the CRM pipeline and the option to schedule an activity.
+      .. image:: activities/schedule-list-activity.png
+               :alt: List view of the CRM pipeline and the option to schedule an activity.
 
    .. tab:: Activity view
 
@@ -83,16 +79,14 @@ Activities can also be scheduled from the kanban, list, or activities view of an
       menu bar anywhere in the database. Select any application from the drop-down menu, and click
       the :guilabel:`🕘 (clock)` icon for the desired app.
 
-      .. image:: plan_activities/schedule-activity-view-menu.png
-         :align: center
-         :alt: Activity menu drop down with focus on where to open activity view for CRM.
+      .. image:: activities/schedule-activity-view-menu.png
+               :alt: Activity menu drop down with focus on where to open activity view for CRM.
 
       Select a record on which to schedule an activity. Move across the row to find the desired
       activity type, then click the :guilabel:`＋ (plus sign)`.
 
-      .. image:: plan_activities/schedule-activity-view.png
-         :align: center
-         :alt: Activity view of the CRM pipeline and the option to schedule an activity.
+      .. image:: activities/schedule-activity-view.png
+               :alt: Activity view of the CRM pipeline and the option to schedule an activity.
 
 .. note::
    Activity colors, and their relation to an activity's due date, is consistent throughout Odoo,
@@ -122,8 +116,7 @@ specific application in a drop-down menu.
 The possibility to :guilabel:`Add new note` and :guilabel:`Request a Document` appear at the bottom
 of this drop-down menu, when the :guilabel:`🕘 (clock)` icon on the header menu is clicked.
 
-.. image:: plan_activities/activities-menu.png
-   :align: center
+.. image:: activities/activities-menu.png
    :alt: View of CRM leads page emphasizing the activities menu.
 
 Configure activity types
@@ -132,8 +125,7 @@ Configure activity types
 To configure the types of activities in the database, go to :menuselection:`Settings app --> Discuss
 --> Activities --> Activity Types`.
 
-.. image:: plan_activities/settings-activities-types.png
-   :align: center
+.. image:: activities/settings-activities-types.png
    :alt: View of the settings page emphasizing the menu activity types.
 
 Doing so reveals the :guilabel:`Activity Types` page, where the existing activity types are found.
@@ -144,8 +136,7 @@ new activity type, click :guilabel:`Create`.
 At the top of a blank activity type form, start by choosing a :guilabel:`Name` for the new activity
 type.
 
-.. image:: plan_activities/new-activity-type.png
-   :align: center
+.. image:: activities/new-activity-type.png
    :alt: New activity type form.
 
 Activity settings
@@ -208,8 +199,7 @@ This :guilabel:`Schedule` field information can be altered before the activity i
 
 When all configurations are complete, click :guilabel:`Save`.
 
-.. image:: plan_activities/schedule-recommended-activity.png
-   :align: center
+.. image:: activities/schedule-recommended-activity.png
    :alt: Schedule activity popup with emphasis on recommended activities.
 
 .. note::
@@ -236,8 +226,7 @@ This :guilabel:`Schedule` field information can be altered before the activity i
 
 When all configurations are complete, click :guilabel:`Save`.
 
-.. image:: plan_activities/triggered-activities.png
-   :align: center
+.. image:: activities/triggered-activities.png
    :alt: Schedule new activity popup with emphasis on Done and launch next button.
 
 .. note::
@@ -246,5 +235,5 @@ When all configurations are complete, click :guilabel:`Save`.
    :guilabel:`Trigger` field.
 
 .. seealso::
-   - :doc:`get_started`
-   - :doc:`team_communication`
+   - :doc:`/applications/productivity/discuss/overview/get_started`
+   - :doc:`/applications/productivity/discuss/overview/team_communication`
