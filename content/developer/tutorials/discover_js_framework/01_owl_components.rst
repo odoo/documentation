@@ -22,8 +22,7 @@ into the exercises, make sure you have followed all the steps described in this
 
 In this chapter, we use the `awesome_owl` addon, which provides a simplified environment that
 only contains Owl and a few other files. The goal is to learn Owl itself, without relying on Odoo
-web client code. To get started, open the `/awesome_owl` route with your browser: it
-should display an Owl component with the text *hello world*.
+web client code.
 
 .. spoiler:: Solutions
 
@@ -41,9 +40,11 @@ button.
 
 .. code-block:: js
 
+   /** @odoo-module **/
+
    import { Component, useState } from "@odoo/owl";
 
-   class Counter extends Component {
+   export class Counter extends Component {
        static template = "my_module.Counter";
 
        setup() {
@@ -79,8 +80,8 @@ As a first exercise, let us modify the `Playground` component located in
 `/awesome_owl` route with your browser.
 
 
-#. Modify :file:`playground.js` so that it acts as a counter like in the example above. You will
-   need to use the `useState hook
+#. Modify :file:`playground.js` so that it acts as a counter like in the example above.
+   Keep `Playground` for the class name. You will need to use the `useState hook
    <{OWL_PATH}/doc/reference/hooks.md#usestate>`_ so that the component is re-rendered
    whenever any part of the state object that has been read by this component is modified.
 #. In the same component, create an `increment` method.
@@ -89,6 +90,10 @@ As a first exercise, let us modify the `Playground` component located in
 #. Add a button in the template and specify a `t-on-click
    <{OWL_PATH}/doc/reference/event_handling.md#event-handling>`_ attribute in the button to
    trigger the `increment` method whenever the button is clicked.
+
+.. important::
+   Don't forget :code:`/** @odoo-module **/` in your JavaScript files. More information on this can
+   be found :ref:`here <frontend/modules/native_js>`.
 
 .. tip::
    The Odoo JavaScript files downloaded by the browser are minified. For debugging purpose, it's
@@ -110,7 +115,8 @@ see how to create a `sub-component <{OWL_PATH}/doc/reference/component.md#sub-co
 #. You can do it in the same file first, but once it's done, update your code to move the
    `Counter` in its own folder and file. Import it relatively from `./counter/counter`. Make sure
    the template is in its own file, with the same name.
-#. Add two counters in your playground.
+#. Use `<Counter/>` in the template of the `Playground` component to add two counters in your
+   playground.
 
 .. image:: 01_owl_components/double_counter.png
    :align: center
@@ -119,10 +125,6 @@ see how to create a `sub-component <{OWL_PATH}/doc/reference/component.md#sub-co
    By convention, most components code, template and css should have the same snake-cased name
    as the component. For example, if we have a `TodoList` component, its code should be in
    `todo_list.js`, `todo_list.xml` and if necessary, `todo_list.scss`
-
-.. important::
-   Don't forget :code:`/** @odoo-module **/` in your JavaScript files. More information on this can
-   be found :ref:`here <frontend/modules/native_js>`.
 
 .. _tutorials/discover_js_framework/simple_card:
 
@@ -163,7 +165,7 @@ The above example should produce some html using bootstrap that look like this:
 4. Using `markup` to display html
 =================================
 
-If you used `t-esc` in the previous exercise, then you may have noticed that Owl will automatically escape
+If you used `t-esc` in the previous exercise, then you may have noticed that Owl automatically escapes
 its content. For example, if you try to display some html like this: `<Card title="'my title'" content="this.html"/>`
 with `this.html = "<div>some content</div>""`,
 the resulting output will simply display the html as a string.
@@ -233,7 +235,7 @@ be called whenever the `Counter` component is incremented.
 .. important::
 
    There is a subtlety with callback props: they usually should be defined with the `.bind`
-   suffix. See the `documentation <{OWL_PATH}/doc/reference/props.md#binding-function-props>`_
+   suffix. See the `documentation <{OWL_PATH}/doc/reference/props.md#binding-function-props>`_.
 
 7. A todo list
 ==============
@@ -249,7 +251,7 @@ For this tutorial, a `todo` is an object that contains three values: an `id` (nu
 
    { id: 3, description: "buy milk", isCompleted: false }
 
-#. Create a `TodoList` and a `TodoItem` components
+#. Create a `TodoList` and a `TodoItem` components.
 #. The `TodoItem` component should receive a `todo` as a prop, and display its `id` and `description` in a `div`.
 #. For now, hardcode the list of todos:
 
@@ -258,20 +260,20 @@ For this tutorial, a `todo` is an object that contains three values: an `id` (nu
       // in TodoList
       this.todos = useState([{ id: 3, description: "buy milk", isCompleted: false }]);
 
-#. Use `t-foreach <{OWL_PATH}/doc/reference/templates.md#loops>`_ to display each todo in a `TodoItem`
-#. Display a `TodoList` in the playground
-#. Add props validation to `TodoItem`
+#. Use `t-foreach <{OWL_PATH}/doc/reference/templates.md#loops>`_ to display each todo in a `TodoItem`.
+#. Display a `TodoList` in the playground.
+#. Add props validation to `TodoItem`.
 
 .. image:: 01_owl_components/todo_list.png
    :align: center
 
-Note that the `t-foreach` directive is not exactly the same in Owl as the QWeb python implementation: it
-requires a `t-key` unique value, so Owl can properly reconciliate each element.
-
 .. tip::
-
    Since the `TodoList` and `TodoItem` components are so tightly coupled, it makes
-   sense to put them in the same folder
+   sense to put them in the same folder.
+
+.. note::
+   The `t-foreach` directive is not exactly the same in Owl as the QWeb python implementation: it
+   requires a `t-key` unique value, so that Owl can properly reconcile each element.
 
 8. Use dynamic attributes
 =========================
@@ -281,7 +283,7 @@ using a `dynamic attributes <{OWL_PATH}/doc/reference/templates.md#dynamic-attri
 
 #. Add the Bootstrap classes `text-muted` and `text-decoration-line-through` on the `TodoItem` root element
    if it is completed.
-#. Change the hardcoded `todo` value to check that it is properly displayed.
+#. Change the hardcoded `this.todos` value to check that it is properly displayed.
 
 Even though the directive is named `t-att` (for attribute), it can be used to set a `class` value (and
 html properties such as the `value` of an input).
@@ -305,7 +307,7 @@ html properties such as the `value` of an input).
 So far, the todos in our list are hard-coded. Let us make it more useful by allowing the user to add
 a todo to the list.
 
-#. Remove the hardcoded values in the `TodoList` component
+#. Remove the hardcoded values in the `TodoList` component:
 
    .. code-block:: javascript
 
@@ -381,7 +383,7 @@ hook functions have to be called in the `setup` method, and no later!
 
 
 An Owl component goes through a lot of phases: it can be instantiated, rendered,
-mounted, updated, detached, destroyed, ... This is the `component lifecycle <{OWL_PATH}/doc/reference/component.md#lifecycle>`_.
+mounted, updated, detached, destroyed... This is the `component lifecycle <{OWL_PATH}/doc/reference/component.md#lifecycle>`_.
 The figure above show the most important events in the life of a component (hooks are shown in purple).
 Roughly speaking, a component is created, then updated (potentially many times), then is destroyed.
 
@@ -444,7 +446,7 @@ component is mounted.
 
    .. code-block:: js
 
-      this.inputRef = useRef('refname');
+      this.inputRef = useRef('input');
 
 11. Toggling todos
 ==================
@@ -452,7 +454,7 @@ component is mounted.
 Now, let's add a new feature: mark a todo as completed. This is actually trickier than one might
 think. The owner of the state is not the same as the component that displays it. So, the `TodoItem`
 component needs to communicate to its parent that the todo state needs to be toggled. One classic
-way to do this is by using a `callback prop
+way to do this is by adding a `callback prop
 <{OWL_PATH}/doc/reference/props.md#binding-function-props>`_ `toggleState`.
 
 #. Add an input with the attribute :code:`type="checkbox"` before the id of the task, which must
@@ -463,7 +465,7 @@ way to do this is by using a `callback prop
       falsy value.
 
 #. Add a callback props `toggleState` to `TodoItem`.
-#. Add a `click` event handler on the input in the `TodoItem` component and make sure it calls the
+#. Add a `change` event handler on the input in the `TodoItem` component and make sure it calls the
    `toggleState` function with the todo id.
 #. Make it work!
 
@@ -503,19 +505,19 @@ The final touch is to let the user delete a todo.
 
 In a :ref:`previous exercise <tutorials/discover_js_framework/simple_card>`, we built
 a simple `Card` component. But it is honestly quite limited. What if we want
-to display some arbitrary content inside a card, such as a sub component? Well,
+to display some arbitrary content inside a card, such as a sub-component? Well,
 it does not work, since the content of the card is described by a string. It would
 however be very convenient if we could describe the content as a piece of template.
 
-This is exactly what Owl `slot <{OWL_PATH}/doc/reference/slots.md>`_ system is designed
+This is exactly what Owl's `slot <{OWL_PATH}/doc/reference/slots.md>`_ system is designed
 for: allowing to write generic components.
 
 Let us modify the `Card` component to use slots:
 
-#. Remove the `content` prop
-#. Use the default slot to define the body
-#. Insert a few cards with arbitrary content, such as a `Counter` component
-#. (bonus) Add prop validation
+#. Remove the `content` prop.
+#. Use the default slot to define the body.
+#. Insert a few cards with arbitrary content, such as a `Counter` component.
+#. (bonus) Add prop validation.
 
 .. image:: 01_owl_components/generic_card.png
    :align: center
@@ -525,6 +527,8 @@ Let us modify the `Card` component to use slots:
 
 14. Minimizing card content
 ===========================
+
+.. TODO: This exercise shows no new concept; it should probably be removed.
 
 Finally, let's add a feature to the `Card` component, to make it more interesting: we
 want a button to toggle its content (show it or hide it)
