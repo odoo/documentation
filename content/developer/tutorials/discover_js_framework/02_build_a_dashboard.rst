@@ -74,10 +74,10 @@ Theory: Services
 In practice, every component (except the root component) may be destroyed at any time and replaced
 (or not) with another component. This means that each component internal state is not persistent.
 This is fine in many cases, but there certainly are situations where we want to keep some data around.
-For example, all discuss messages should not be reloaded every time we display a channel.
+For example, all Discuss messages should not be reloaded every time we display a channel.
 
 Also, it may happen that we need to write some code that is not a component. Maybe something that
-process all barcodes, or that manages the user configuration (context, ...).
+process all barcodes, or that manages the user configuration (context, etc.).
 
 The Odoo framework defines the idea of a :ref:`service <frontend/services>`, which is a persistent
 piece of code that exports state and/or functions. Each service can depend on other services, and
@@ -90,13 +90,13 @@ The following example registers a simple service that displays a notification ev
    import { registry } from "@web/core/registry";
 
    const myService = {
-   dependencies: ["notification"],
-   start(env, { notification }) {
-      let counter = 1;
-      setInterval(() => {
-         notification.add(`Tick Tock ${counter++}`);
-      }, 5000);
-   },
+       dependencies: ["notification"],
+       start(env, { notification }) {
+           let counter = 1;
+           setInterval(() => {
+               notification.add(`Tick Tock ${counter++}`);
+           }, 5000);
+       },
    };
 
    registry.category("services").add("myService", myService);
@@ -110,18 +110,17 @@ state:
    import { registry } from "@web/core/registry";
 
    const sharedStateService = {
-   start(env) {
-      let state = {};
-
-      return {
-         getValue(key) {
-         return state[key];
-         },
-         setValue(key, value) {
-         state[key] = value;
-         },
-      };
-   },
+       start(env) {
+           let state = {};
+           return {
+               getValue(key) {
+                   return state[key];
+               },
+               setValue(key, value) {
+                   state[key] = value;
+               },
+           };
+       },
    };
 
    registry.category("services").add("shared_state", sharedStateService);
@@ -140,6 +139,8 @@ Then, any component can do this:
 
 2. Add some buttons for quick navigation
 ========================================
+
+.. TODO: Add ref to the action service when it's documented.
 
 One important service provided by Odoo is the `action` service: it can execute
 all kind of standard actions defined by Odoo. For example, here is how one
@@ -163,39 +164,39 @@ Let us now add two buttons to our control panel:
    exists, so you should use `its xml id
    <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/odoo/addons/base/views/res_partner_views.xml#L510>`_).
 
-#. A button `Leads`, which opens a dynamic action on the `crm.lead` model with a list and a form view.
+#. A button `Leads`, which opens a dynamic action on the `crm.lead` model with a list and a form
+   view. Follow the example of `this use of the action service
+   <https://github.com/odoo/odoo/blob/ef424a9dc22a5abbe7b0a6eff61cf113826f04c0/addons/account
+   /static/src/components/journal_dashboard_activity/journal_dashboard_activity.js#L28-L35>`_.
 
 .. image:: 02_web_framework/navigation_buttons.png
    :align: center
 
 .. seealso::
-   - `Example: doAction use
-     <{GITHUB_PATH}/addons/account/static/src/components/journal_dashboard_activity
-     /journal_dashboard_activity.js#L35>`_
-   - `Code: action service
-     <{GITHUB_PATH}/addons/web/static/src/webclient/actions/action_service.js>`_
+   `Code: action service
+   <{GITHUB_PATH}/addons/web/static/src/webclient/actions/action_service.js>`_
 
-3. Add a DashboardItem
-======================
+3. Add a dashboard item
+=======================
 
 Let us now improve our content.
 
-#. Create a generic `DashboardItem` component that display its default slot in a nice card layout
-   It should take an optional `size` number props, that default to `1`
-   The width should be hardcoded to `(18*size)rem`.
-#. Add a few cards in the dashboard, with no size and a size of 2.
+#. Create a generic `DashboardItem` component that display its default slot in a nice card layout.
+   It should take an optional `size` number props, that default to `1`. The width should be
+   hardcoded to `(18*size)rem`.
+#. Add two cards to the dashboard. One with no size, and the other with a size of 2.
 
 .. image:: 02_web_framework/dashboard_item.png
    :align: center
 
 .. seealso::
-   - `Owl slot system <{OWL_PATH}/doc/reference/slots.md>`_
+   `Owl's slot system <{OWL_PATH}/doc/reference/slots.md>`_
 
 4. Call the server, add some statistics
 =======================================
 
 Let's improve the dashboard by adding a few dashboard items to display *real* business data.
-The *awesome_dashboard* addon provides a `/awesome_dashboard/statistics` route that is meant
+The `awesome_dashboard` addon provides a `/awesome_dashboard/statistics` route that is meant
 to return some interesting information.
 
 To call a specific controller, we need to use the :ref:`rpc service <frontend/services/rpc>`.
@@ -226,11 +227,7 @@ A basic request could look like this:
    :align: center
 
 .. seealso::
-
-   - `Code: rpc service <{GITHUB_PATH}/addons/web/static/src/core/network/rpc_service.js>`_
-   - `Example: calling a route in onWillStart
-     <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
-     addons/lunch/static/src/views/search_model.js#L21>`_
+   `Code: rpc service <{GITHUB_PATH}/addons/web/static/src/core/network/rpc_service.js>`_
 
 5. Cache network calls, create a service
 ========================================
@@ -246,9 +243,9 @@ would prefer to do it only the first time, so we actually need to maintain some 
    always return the same information.
 #. Use the `memoize <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
    addons/web/static/src/core/utils/functions.js#L11>`_ utility function from
-   `@web/core/utils/functions` that will allow caching the statistics.
+   `@web/core/utils/functions` that allows caching the statistics.
 #. Use this service in the `Dashboard` component.
-#. Check that it works as expected
+#. Check that it works as expected.
 
 .. seealso::
    - `Example: simple service <{GITHUB_PATH}/addons/web/static/src/core/network/http_service.js>`_
@@ -266,15 +263,15 @@ by the graph view. However, it is not loaded by default, so we will need to eith
 assets bundle, or lazy load it. Lazy loading is usually better since our users will not have to load
 the chartjs code every time if they don't need it.
 
-#. Create a `PieChart` component
+#. Create a `PieChart` component.
 #. In its `onWillStart` method, load chartjs, you can use the `loadJs
    <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
    addons/web/static/src/core/assets.js#L23>`_ function to load
    :file:`/web/static/lib/Chart/Chart.js`.
 #. Use the `PieChart` component in a `DashboardItem` to display a `pie chart
    <https://www.chartjs.org/docs/2.8.0/charts/doughnut.html>`_ that shows the
-   correct quantity for each sold t-shirts in each size (that information is available in the
-   statistics route). Note that you can use the `size` property to make it look larger
+   quantity for each sold t-shirts in each size (that information is available in the
+   `/statistics` route). Note that you can use the `size` property to make it look larger.
 #. The `PieChart` component will need to render a canvas, and draw on it using `chart.js`.
 #. Make it work!
 
@@ -293,11 +290,11 @@ the chartjs code every time if they don't need it.
 7. Real life update
 ===================
 
-Since we moved the data loading in a cache, it does not ever updates. But let us say that we
+Since we moved the data loading in a cache, it never updates. But let us say that we
 are looking at fast moving data, so we want to periodically (for example, every 10min) reload
 fresh data.
 
-This is quite simple to implement, with a `setTimeout` or `setInterval` in the dashboard service.
+This is quite simple to implement, with a `setTimeout` or `setInterval` in the statistics service.
 However, here is the tricky part: if the dashboard is currently being displayed, it should be
 updated immediately.
 
@@ -306,7 +303,7 @@ but not linked to any component. A component can then do a `useState` on it to s
 changes.
 
 
-#. Update the dashboard service to reload data every 10 minutes (to test it, use 10s instead!)
+#. Update the statistics service to reload data every 10 minutes (to test it, use 10s instead!)
 #. Modify it to return a `reactive <{OWL_PATH}/doc/reference/reactivity.md#reactive>`_ object.
    Reloading data should update the reactive object in place.
 #. The `Dashboard` component can now use it with a `useState`
@@ -328,13 +325,13 @@ look at it.
 To do that, we will need to create a new bundle containing all our dashboard assets,
 then use the `LazyComponent` (located in `@web/core/assets`).
 
-#. Move all dashboard assets into a sub folder `/dashboard` to make it easier to
+#. Move all dashboard assets into a sub folder :file:`/dashboard` to make it easier to
    add to a bundle.
 #. Create a `awesome_dashboard.dashboard` assets bundle containing all content of
-   the `/dashboard` folder
-#. Modify `dashboard.js` to register itself in the `lazy_components` registry, and not
+   the `/dashboard` folder.
+#. Modify :file:`dashboard.js` to register itself in the `lazy_components` registry, and not
    in the `action` registry.
-#. Add in `src/` a file `dashboard_action` that import `LazyComponent` and register
+#. Add in :file:`src/` a file :file:`dashboard_action` that imports `LazyComponent` and registers
    it to the `action` registry
 
 9. Making our dashboard generic
@@ -342,15 +339,15 @@ then use the `LazyComponent` (located in `@web/core/assets`).
 
 So far, we have a nice working dashboard. But it is currently hardcoded in the dashboard
 template. What if we want to customize our dashboard? Maybe some users have different
-needs, and want to see some other data.
+needs and want to see other data.
 
-So, the next step is then to make our dashboard generic: instead of hardcoding its content
+So, the next step is to make our dashboard generic: instead of hard-coding its content
 in the template, it can just iterate over a list of dashboard items. But then, many
-questions comes up: how to represent a dashboard item, how to register it, what data
+questions come up: how to represent a dashboard item, how to register it, what data
 should it receive, and so on. There are many different ways to design such a system,
-with different trade offs.
+with different trade-offs.
 
-For this tutorial, we will say that a dashboard item is an object with the folowing structure:
+For this tutorial, we will say that a dashboard item is an object with the following structure:
 
 .. code-block:: js
 
@@ -367,7 +364,7 @@ For this tutorial, we will say that a dashboard item is an object with the folow
    };
 
 The `description` value will be useful in a later exercise to show the name of items that the
-user can choose to add to his dashboard. The `size` number is optional, and simply describes
+user can add to their dashboard. The `size` number is optional, and simply describes
 the size of the dashboard item that will be displayed. Finally, the `props` function is optional.
 If not given, we will simply give the `statistics` object as data. But if it is defined, it will
 be used to compute specific props for the component.
@@ -383,16 +380,16 @@ The goal is to replace the content of the dashboard with the following snippet:
       </DashboardItem>
    </t>
 
-Note that the above example features two advanced features of Owl: dynamic components, and dynamic props.
+Note that the above example features two advanced features of Owl: dynamic components and dynamic props.
 
-We currently have two kinds of item components: number cards, with a title and a number, and pie cards, with
+We currently have two kinds of item components: number cards with a title and a number, and pie cards with
 some label and a pie chart.
 
-#. create and implement two components: `NumberCard` and `PieChartCard`, with the corresponding props
-#. create a file `dashboard_items.js` in which you define and export a list of items, using `NumberCard`
-   and `PieChartCard` to recreate our current dashboard
-#. import that list of items in our `Dashboard` component, add it to the component, and update the template
-   to use a `t-foreach` like shown above
+#. Create and implement two components: `NumberCard` and `PieChartCard`, with the corresponding props.
+#. Create a file :file:`dashboard_items.js` in which you define and export a list of items, using `NumberCard`
+   and `PieChartCard` to recreate our current dashboard.
+#. Import that list of items in our `Dashboard` component, add it to the component, and update the template
+   to use a `t-foreach` like shown above.
 
    .. code-block:: js
 
@@ -410,27 +407,26 @@ However, the content of our item list is still hardcoded. Let us fix that by usi
 #. Instead of exporting a list, register all dashboard items in a `awesome_dashboard` registry
 #. Import all the items of the `awesome_dashboard` registry in the `Dashboard` component
 
-The dashboard is now easily extensible. Any other odoo addon that want to register a new item to the
+The dashboard is now easily extensible. Any other Odoo addon that wants to register a new item to the
 dashboard can just add it to the registry.
 
 11. Add and remove dashboard items
 ==================================
 
 Let us see how we can make our dashboard customizable. To make it simple, we will save the user
-dashboard configuration in the local storage, so it is persistent, but we don't have to deal
+dashboard configuration in the local storage so that it is persistent, but we don't have to deal
 with the server for now.
 
 The dashboard configuration will be saved as a list of removed item ids.
 
-#. Add a button in the control panel with a gear icon, to indicate that it is a settings button
-#. Clicking on that button should open a dialog
-#. In that dialog, we want to see a list of all existing dashboard items, each with a checkbox
+#. Add a button in the control panel with a gear icon to indicate that it is a settings button.
+#. Clicking on that button should open a dialog.
+#. In that dialog, we want to see a list of all existing dashboard items, each with a checkbox.
 #. There should be a `Apply` button in the footer. Clicking on it will build a list of all item ids
-   that are unchecked
-#. We want to store that value in the local storage
+   that are unchecked.
+#. We want to store that value in the local storage.
 #. And modify the `Dashboard` component to filter the current items by removing the ids of items
-   from the configuration
-
+   from the configuration.
 
 .. image:: 02_web_framework/items_configuration.png
    :width: 80%
@@ -443,10 +439,10 @@ Here is a list of some small improvements you could try to do if you have the ti
 
 #. Make sure your application can be :ref:`translated <reference/translations>` (with
    `env._t`).
-#. Clicking on a section of the pie chart should open a list view of all orders which have the
+#. Clicking on a section of the pie chart should open a list view of all orders that have the
    corresponding size.
-#. Save the content of the dashboard in a user settings on the server!
-#. Make it responsive: in mobile mode, each card should take 100% of the width
+#. Save the content of the dashboard in a user setting on the server!
+#. Make it responsive: in mobile mode, each card should take 100% of the width.
 
 .. seealso::
    - `Example: use of env._t function
