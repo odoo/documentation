@@ -473,3 +473,66 @@ These Brazilian specific fields are:
 - :guilabel:`Document Number` (the invoice number from your supplier).
 - :guilabel:`Freight Model` (how goods are planned to be transported - domestic).
 - :guilabel:`Transporter Brazil` (who is doing the transportation).
+
+Pix QR codes
+============
+
+Pix is an easy, fast and affordable way for domestic customers to pay your invoices via online and
+mobile banking.
+
+Activate QR codes
+-----------------
+
+Go to :menuselection:`Accounting --> Configuration --> Settings`. Under the :guilabel:`Customer
+Payments` section, activate the :guilabel:`QR Codes` feature.
+
+Pix bank account configuration
+------------------------------
+
+Go to :menuselection:`Contacts --> Configuration --> Bank Accounts` and select the receiving bank
+account for which you want to activate Pix. Set your Pix alias type under :guilabel:`Proxy Type` and
+fill in the :guilabel:`Proxy Value` field depending on the type you chose. A Pix alias can be an
+email address, mobile number, random key or CPF/CNPJ.
+
+.. important::
+   - The account holder's country must be set to Brazil on its contact form.
+   - You could also include the invoice number in the QR code by checking the :guilabel:`Include
+     Reference` checkbox.
+
+.. image:: brazil/pix-bank-setting.png
+   :alt: Pix bank account configuration
+
+.. seealso::
+   :doc:`../accounting/bank`
+
+Bank journal configuration
+--------------------------
+
+Go to :menuselection:`Accounting --> Configuration --> Journals`, open the bank journal, then fill
+out the :guilabel:`Account Number` and :guilabel:`Bank` under the :guilabel:`Journal Entries` tab.
+
+.. image:: brazil/bank-account-journal-setting.png
+   :alt: Bank account's journal configuration
+
+Issue invoices with Pix QR codes
+--------------------------------
+
+When creating a new invoice, open the :guilabel:`Other Info` tab and set the :guilabel:`Payment
+QR-code` option to *EMV Merchant-Presented QR-code*.
+
+.. image:: brazil/qr-code-invoice-setting.png
+   :alt: Select EMV Merchant-Presented QR-code option
+
+Ensure that the :guilabel:`Recipient Bank` is the one you configured, as Odoo uses this field to
+generate the Pix QR code.
+
+Online payments with Pix QR codes
+---------------------------------
+
+Customers are able to pay online quotations, invoices and payment links with Pix as well. To set this up go
+to :menuselection:`Accounting --> Configuration --> Payment Providers`, open :guilabel:`Wire
+Transfer` and enable :guilabel:`Enable QR Codes` under the :guilabel:`Configuration` tab. When customers
+select this payment method they will be shown a Pix QR code to pay.
+
+.. image:: brazil/online-pix-payment.png
+   :alt: Pay an online quote with a Pix QR code
