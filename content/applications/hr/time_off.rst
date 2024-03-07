@@ -79,6 +79,8 @@ Time off requests section
   - :guilabel:`Half Day`: if time off can only be requested in half day increments (4 hours).
   - :guilabel:`Hours`: if the time off can be taken in hourly increments.
 
+  .. _`time_off/deduct-extra-hours`:
+
 - :guilabel:`Deduct Extra Hours`: tick this box if the time off request should factor in any extra
   time accrued by the employee
 
