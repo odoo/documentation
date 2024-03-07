@@ -151,7 +151,7 @@ Netherlands). Both authentication options require :ref:`credits <iap/buying_cred
 have any credits left, the authentication steps will be skipped.
 
 .. seealso::
-   - :doc:`In-App Purchase (IAP) <../general/in_app_purchase>`
+   - :doc:`In-App Purchase (IAP) <../essentials/in_app_purchase>`
    - :doc:`SMS pricing and FAQ <../marketing/sms_marketing/pricing/pricing_and_faq>`
 
 .. _sign/sms:

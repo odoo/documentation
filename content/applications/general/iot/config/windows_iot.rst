@@ -118,7 +118,7 @@ Finally, connect Windows :abbr:`IoT (Internet of Things)` to a database using ex
 (manually using the Token).
 
 .. seealso::
-   :doc:`/applications/productivity/iot/config/connect`
+   :doc:`/applications/general/iot/config/connect`
 
 Now the installation is complete, the devices connected to :abbr:`IoT (Internet of Things)` can be
 used to complete processes/actions.

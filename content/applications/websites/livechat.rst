@@ -285,7 +285,7 @@ Click on a conversation in the left panel to select it. This will open the conve
 view, an operator can participate in the chat the same as they would in the normal chat window.
 
 .. seealso::
-   - :doc:`Get Started with Discuss </applications/productivity/discuss/overview/get_started>`
+   - :doc:`Get Started with Discuss </applications/productivity/discuss>`
    - :doc:`/applications/websites/livechat/responses`
 
 .. toctree::
