@@ -27,7 +27,7 @@ Connect an IoT box
 ------------------
 
 Connecting a Six payment terminal to Odoo is requires :doc:`using a Raspberry Pi or virtual (for
-Windows OS only) IoT box </applications/productivity/iot/config/connect>`.
+Windows OS only) IoT box </applications/general/iot/config/connect>`.
 
 Configure the terminal ID
 -------------------------

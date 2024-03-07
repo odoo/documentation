@@ -36,4 +36,4 @@ To use it, select :guilabel:`Google Place Map` and enter your :ref:`API Key
    :alt: Google Places API key
 
 .. seealso::
-   :doc:`../../applications/websites/website/configuration/address_autocomplete`
+   :doc:`/applications/websites/website/configuration/address_autocomplete`

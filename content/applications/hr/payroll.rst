@@ -44,7 +44,7 @@ specifically required.
    Each individual company can have a different localization setting configured for that specific
    company, since company locations can vary and be located anywhere in the world, where rules and
    laws differ. For more information on companies refer to :doc:`this documentation
-   <../general/users/companies>` on setting up companies.
+   <../general/companies>` on setting up companies.
 
 .. _payroll/work-entries-config:
 

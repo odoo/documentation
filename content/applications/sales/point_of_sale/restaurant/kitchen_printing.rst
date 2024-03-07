@@ -40,8 +40,8 @@ to your installation:
   and enter the printer's IP address in the :guilabel:`Epson Printer IP Address` field.
 
 .. seealso::
-   - :doc:`../../../productivity/iot/config/connect`
-   - :doc:`../../../productivity/iot/devices/printer`
+   - :doc:`/applications/general/iot/config/connect`
+   - :doc:`/applications/general/iot/devices/printer`
    - :doc:`../configuration/epos_ssc`
 
 Set your printer to print specific products based on their POS category. To do so, click
