@@ -16,6 +16,7 @@ Web framework
    frontend/services
    frontend/hooks
    frontend/patching_code
+   frontend/error_handling
    frontend/javascript_reference
    frontend/mobile
    frontend/qweb
