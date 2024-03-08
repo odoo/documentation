@@ -33,7 +33,7 @@ internal link button (:guilabel:`➔`).
      .. image:: documents/accounting-files-centralization.png
         :alt: Enable the centralization of files attached to your accounting.
 
-   - If you select a new workspace, existing documents aren't moved. Only newly created documents
+   - If you select a new workspace, existing documents are not moved. Only newly created documents
      will be found under the new workspace.
 
 Workspaces
@@ -62,6 +62,17 @@ Tags can be created from the :guilabel:`Tags` tab. Click :guilabel:`Add a line`,
    - Tags can be created and modified by going to :menuselection:`Configuration --> Tags`;
    - Tags can also be created or edited by clicking the gear icon :guilabel:`⚙` on the left menu.
 
+An **email alias** can be used to automatically send received documents to a specific workspace
+based on the tag assigned. To create an email alias:
+
+#. Select the tag and the corresponding workspace where the document should be directed in the left
+   column of your dashboard.
+
+#. Next to the :guilabel:`Upload` button, click the down arrow, and then click :guilabel:`Share`.
+
+#. In the new window, click :guilabel:`Download and Upload` and enter the email alias where
+   documents should be sent.
+
 Access rights
 -------------
 
@@ -89,17 +100,16 @@ Documents management
 
 When selecting or opening a document, the right panel displays different options. On the top,
 additional options might be available: :guilabel:`Download`, :guilabel:`Share`, :guilabel:`Replace`,
-:guilabel:`Lock` or :guilabel:`Split`. It is also possible to :guilabel:`Open chatter` or
-:guilabel:`Archive` the document.
+:guilabel:`Lock` or :guilabel:`Split`. It is also possible to :guilabel:`Open chatter` or use the
+:guilabel:`Move to trash` option.
 
 .. image:: documents/right-panel-options.png
    :align: center
    :alt: right panel options
 
-Then, you can modify the name of your file by clicking on :guilabel:`Document`. A
-:guilabel:`Contact` or an :guilabel:`Owner` can be assigned. The related :guilabel:`Workspace` can
-be modified and it is possible to access the related :guilabel:`Journal Entry` or add
-:guilabel:`Tags`.
+Then, you can modify the name of your file by clicking on :guilabel:`Name`. A :guilabel:`Contact` or
+an :guilabel:`Owner` can be assigned. The related :guilabel:`Workspace` can be modified and it is
+possible to access the related :guilabel:`Journal Entry` or add :guilabel:`Tags`.
 
 .. note::
    - The :guilabel:`Contact` is the person related to the document and assigned to it. He can only
@@ -222,7 +232,7 @@ You can :guilabel:`Create` a new :guilabel:`Action` or edit an existing one. You
 There are three basic types of conditions you can set:
 
 #. :guilabel:`Tags`: you can use the :guilabel:`Contains` and :guilabel:`Does not contain`
-   conditions, meaning the files *must have* or *mustn't have* the tags set here.
+   conditions, meaning the files *must have* or *must not have* the tags set here.
 
 #. :guilabel:`Contact`: the files must be associated with the contact set here.
 
@@ -232,7 +242,7 @@ There are three basic types of conditions you can set:
    :alt: Example of a workflow action's basic condition in Odoo Documents
 
 .. tip::
-   If you don't set any conditions, the action button appears for all files inside the selected
+   If you do not set any conditions, the action button appears for all files inside the selected
    workspace.
 
 Advanced condition type: domain
@@ -287,8 +297,8 @@ Select the :guilabel:`Actions` tab to set up your action. You can simultaneously
    - **Bank Statement**: create a Bank Statement in Finance;
    - **Expense**: create an expense automatically based on a file's content.
 
-- **Set Tags**: add, remove, and replace any number of tags.
-- **Activities - Mark all as Done**: mark all activities linked to the file as done.
+- **Set Tags**: add, remove, and replace any number of tags;
+- **Activities - Mark all as Done**: mark all activities linked to the file as done;
 - **Activities - Schedule Activity**: create a new activity linked to the file as configured in
   the action. You can choose to set the activity on the document owner.
 
