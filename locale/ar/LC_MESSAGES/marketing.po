@@ -5,17 +5,17 @@
 # 
 # Translators:
 # Martin Trigaux, 2023
-# Wil Odoo, 2023
 # Malaz Abuidris <msea@odoo.com>, 2024
+# Wil Odoo, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 15:28+0000\n"
+"POT-Creation-Date: 2024-03-08 12:48+0000\n"
 "PO-Revision-Date: 2023-11-08 08:57+0000\n"
-"Last-Translator: Malaz Abuidris <msea@odoo.com>, 2024\n"
+"Last-Translator: Wil Odoo, 2024\n"
 "Language-Team: Arabic (https://app.transifex.com/odoo/teams/41243/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1726,6 +1726,7 @@ msgstr ""
 
 #: ../../content/applications/marketing/events/sell_tickets.rst:10
 #: ../../content/applications/marketing/events/track_manage_talks.rst:9
+#: ../../content/applications/marketing/marketing_automation.rst:44
 msgid "Configuration"
 msgstr "التهيئة "
 
@@ -2101,536 +2102,373 @@ msgid ""
 "(and/or :guilabel:`Salesperson`), and attach tags to the rule, if necessary."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation.rst:8
+#: ../../content/applications/marketing/marketing_automation.rst:5
 msgid "Marketing Automation"
 msgstr "أتمتة التسويق"
 
+#: ../../content/applications/marketing/marketing_automation.rst:7
+msgid ""
+"The Odoo *Marketing Automation* application enables users to create dynamic "
+"campaigns with actions that automatically occur within a defined duration, "
+"such as sending a series of timed mass emails or engaging with leads based "
+"on their interactions with marketing campaigns."
+msgstr ""
+
 #: ../../content/applications/marketing/marketing_automation.rst:11
+msgid ""
+"While the application is designed to be user-friendly for quickly creating, "
+"launching, and reviewing marketing campaigns, it also provides advanced "
+"features to automate repetitive tasks throughout the database."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation.rst:15
+msgid ""
+"Get started by creating a :ref:`new campaign from scratch "
+"<marketing_automation/campaigns>` or start with a :ref:`campaign template "
+"<marketing-automation/campaign-templates>`."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation.rst:19
 #: ../../content/applications/marketing/sms_marketing.rst:11
 #: ../../content/applications/marketing/social_marketing.rst:11
 msgid ""
 "`Odoo Tutorials: Marketing <https://www.odoo.com/slides/marketing-27>`_"
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/advanced.rst:5
-msgid "Advanced"
-msgstr "متقدم"
-
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:3
-msgid "Campaign metrics"
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:5
+#: ../../content/applications/marketing/marketing_automation.rst:46
 msgid ""
-"*Campaign metrics* are detailed statistics and analytics within a marketing "
-"campaign, measuring its success and effectiveness. Triggered marketing "
-"activities populate relevant activity blocks with real-time metrics, in the "
-"campaign detail form."
+"To install the *Marketing Automation* application, navigate to the "
+":menuselection:`Apps application` and search for `Marketing Automation`."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:10
-msgid "Activity analytics"
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:12
+#: ../../content/applications/marketing/marketing_automation.rst:49
 msgid ""
-"In the :guilabel:`Workflow` section of a campaign detail form in the "
-"*Marketing Automation* app, where the various campaign activities are "
-"located, a collection of useful data can be found on every individual "
-"activity block, like number of communications :guilabel:`Sent`, percentage "
-"of messages that have been :guilabel:`Clicked`, and more."
+"In the list of results, click the :guilabel:`Activate` button on the "
+":guilabel:`Marketing Automation` application to install it."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst-1
+#: ../../content/applications/marketing/marketing_automation.rst:53
 msgid ""
-"An activity block in the workflow section with useful analytical data in "
-"Odoo."
+"Installing the *Marketing Automation* application also installs the "
+":doc:`Email Marketing <email_marketing>` app, as most features of Odoo "
+"*Marketing Automation* are dependent on that specific application."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:21
+#: ../../content/applications/marketing/marketing_automation.rst:57
 msgid ""
-"To the left of the activity block, the configured :doc:`trigger time "
-"<../getting_started/workflow_activities>` is displayed as a duration (either"
-" :guilabel:`Hours`, :guilabel:`Days`, :guilabel:`Weeks`, or "
-":guilabel:`Months`) if it corresponds to period after the workflow begins."
+"Additionally, install the :doc:`CRM <../sales/crm>` and :doc:`SMS Marketing "
+"<sms_marketing>` applications to access *all* of the features available in "
+"*Marketing Automation*."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:27
+#: ../../content/applications/marketing/marketing_automation.rst:60
 msgid ""
-"If the trigger time is dependent on another activity or triggering action "
-"(e.g. :guilabel:`Mail: Replied`, etc.) the time is displayed, along with the"
-" necessary action for that activity to be activated (e.g. `Replied after 2 "
-"Hours`)."
+"The following documentation assumes that all three of these dependent "
+"applications are installed on the database."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:0
+#: ../../content/applications/marketing/marketing_automation.rst:66
+msgid "Campaigns"
+msgstr "الحملات"
+
+#: ../../content/applications/marketing/marketing_automation.rst:68
 msgid ""
-"Time trigger display when dependent on another activity in Odoo Marketing "
-"Automation."
+"A *campaign* refers to a workflow of activities that are automatically "
+"executed to a target audience, based on predefined filters, triggers, and "
+"durations of activities."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:35
+#: ../../content/applications/marketing/marketing_automation.rst:71
 msgid ""
-"In the activity block, an icon represents each activity type. An "
-":guilabel:`✉️ (envelope)` icon means the activity is an email. Three tiny, "
-"interlocking :guilabel:`⚙️ (gear)` icons means the activity is an internal "
-"action. And, a small, basic :guilabel:`📱 (mobile)` icon means the activity "
-"is an SMS."
+"A new campaign can be created from scratch or from a :ref:`template "
+"<marketing-automation/campaign-templates>`."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:41
+#: ../../content/applications/marketing/marketing_automation.rst:74
 msgid ""
-"The activity type name is also displayed in smaller font below the activity "
-"title."
+"To create a campaign, navigate to the :menuselection:`Marketing Automation` "
+"application, from the main Odoo dashboard, to open the :guilabel:`Campaigns`"
+" dashboard. From here, click the :guilabel:`New` button to reveal a new "
+"campaign form."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:43
+#: ../../content/applications/marketing/marketing_automation.rst:81
+#: ../../content/applications/marketing/sms_marketing/essentials/sms_campaign_settings.rst:82
+msgid "Campaign templates"
+msgstr "قوالب الحملات "
+
+#: ../../content/applications/marketing/marketing_automation.rst:83
 msgid ""
-"Beside the activity icon, at the top of the activity block, is the title of "
-"the activity. To the right of the activity title, there are :guilabel:`Edit`"
-" and :guilabel:`Delete` buttons."
+"Odoo provides six campaign templates to help users get started. The campaign"
+" template cards **only** display when there are no existing campaigns in the"
+" database. Once a campaign has been created, the template cards on the "
+"*Campaigns* dashboard are replaced with a Kanban view of the existing "
+"campaigns."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:46
+#: ../../content/applications/marketing/marketing_automation.rst:88
 msgid ""
-"Click :guilabel:`Edit` to open the :guilabel:`Open: Activities` pop-up form "
-"for that specific activity, in which that activity can be modified. Click "
-"the :guilabel:`Delete` button to completely delete that specific activity "
-"from the workflow."
+"To get started with a template, navigate to the :menuselection:`Marketing "
+"Automation` application, from the main Odoo dashboard, to open the "
+":guilabel:`Campaigns` dashboard, which displays six campaign template cards:"
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:51
+#: ../../content/applications/marketing/marketing_automation.rst:0
+msgid ":guilabel:`🏷️ Tag Hot Contacts`"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation.rst:0
 msgid ""
-":doc:`/applications/marketing/marketing_automation/getting_started/workflow_activities`"
-msgstr ""
-":doc:`/applications/marketing/marketing_automation/getting_started/workflow_activities`"
-
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:54
-msgid "Activity graph tab"
+":guilabel:`Send a welcome email to contacts and tag them if they click it.`"
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:56
+#: ../../content/applications/marketing/marketing_automation.rst:0
+msgid ":guilabel:`✌️ Welcome Flow`"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation.rst:0
 msgid ""
-"In every activity block, the :guilabel:`Graph (pie chart icon)` tab is open "
-"by default, displaying related metrics as a simple line graph. The success "
-"metrics are represented in `green` and the rejected metrics are represented "
-"in `red`."
+":guilabel:`Send a welcome email to new subscribers, remove the address that "
+"bounced.`"
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:60
+#: ../../content/applications/marketing/marketing_automation.rst:0
+msgid ":guilabel:`☑️ Double Opt-in`"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation.rst:0
+msgid ":guilabel:`Send an email to new recipients to confirm their consent.`"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation.rst:0
+msgid ":guilabel:`🔍 Commercial prospection`"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation.rst:0
+msgid ":guilabel:`Send a free catalog and follow-up according to reactions.`"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation.rst:0
+msgid ":guilabel:`📞 Schedule Calls`"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation.rst:0
 msgid ""
-"Numerical representations of both :guilabel:`Success` and "
-":guilabel:`Rejected` activities are shown to the right of the line graph."
+":guilabel:`If a lead is created for existing contact, schedule a call with "
+"their salesperson.`"
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:64
+#: ../../content/applications/marketing/marketing_automation.rst:0
+msgid ":guilabel:`⭐️ Prioritize Hot leads`"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation.rst:0
 msgid ""
-"Hovering over any point in the line graph of the activity block reveals a "
-"notated breakdown of data for that specific date."
+":guilabel:`Send an email to new leads and assign them a high priority if "
+"they open it.`"
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:0
+#: ../../content/applications/marketing/marketing_automation.rst-1
 msgid ""
-"Hovering over any point in line graph reveals notated breakdown of data in "
-"Odoo."
+"Six campaign template cards on the Campaigns dashboard of the Marketing "
+"Automation app."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:71
+#: ../../content/applications/marketing/marketing_automation.rst:109
 msgid ""
-"Beneath the graph in the activity block, for *Email* or *SMS* activity "
-"types, a line of accessible data figures provide a bird's eye view of the "
-"campaign activity, including: :guilabel:`Sent` (numerical), "
-":guilabel:`Clicked` (percentage), :guilabel:`Replied` (percentage), and "
-":guilabel:`Bounced` (percentage)."
+"These templates are designed to be used as starting points for creating new "
+"campaigns. Click one of the template cards to open the campaign form."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:77
+#: ../../content/applications/marketing/marketing_automation.rst:113
 msgid ""
-"Clicking any of those stats on the :guilabel:`DETAILS` line, beneath the "
-"line graph, reveals a separate page containing every specific record for "
-"that particular data point."
+"To display the campaign template cards again after a campaign has been "
+"created, type the name of a campaign that does **not** exist in the database"
+" into the :guilabel:`Search...` bar, then press :kbd:`Enter`."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:81
-msgid "Activity filter tab"
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:83
+#: ../../content/applications/marketing/marketing_automation.rst:117
 msgid ""
-"Next to the :guilabel:`Graph` tab on the activity block, there's the option "
-"to open a :guilabel:`Filter` tab (represented by a :guilabel:`filter/funnel`"
-" icon)."
+"For example, searching for `empty` displays the campaign template cards "
+"again, as long as there is not a campaign with the name \"empty\" in the "
+"database."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst-1
+#: ../../content/applications/marketing/marketing_automation.rst:121
+msgid "Targets and filters"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation.rst:123
 msgid ""
-"What a campaign activity filter tab looks like in Odoo Marketing Automation."
+"On the campaign form, the :guilabel:`Target` and :guilabel:`Filter` section,"
+" also referred to as the domain, contains the fields used to define the "
+"target audience for the campaign's reach (i.e., the unique contact records "
+"in the database)."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:90
+#: ../../content/applications/marketing/marketing_automation.rst:127
 msgid ""
-"Clicking the :guilabel:`Filter` tab on an activity block, reveals what the "
-"specific filters are for that particular campaign activity, and how many "
-"records in the database match that specific criteria."
+"The target audience specifies the type of records available for use in the "
+"campaign, such as *Lead/Opportunity*, *Event Registration*, *Contact*, and "
+"more."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:95
+#: ../../content/applications/marketing/marketing_automation.rst:131
+msgid "Records"
+msgstr "السجلات "
+
+#: ../../content/applications/marketing/marketing_automation.rst:133
 msgid ""
-"Clicking the :guilabel:`records` link beneath the displayed filter reveals a"
-" separate pop-up window containing a list of all the records that match that"
-" specific campaign activity rule(s)."
+"The contacts in the system that fit the specified criteria for a campaign "
+"are referred to as *records*."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:99
-msgid "Link tracker"
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:101
+#: ../../content/applications/marketing/marketing_automation.rst:136
 msgid ""
-"Odoo tracks all URLs used in marketing campaigns. To access and analyze "
-"those URLs, navigate to :menuselection:`Marketing Automation app --> "
-"Reporting --> Link Tracker`. Doing so reveals a :guilabel:`Link Statistics` "
-"page, wherein all campaign-related URLs can be analyzed."
+"The number of records that are displayed next to the campaign "
+":guilabel:`Filter` represent the total number of records the campaign is "
+"targeting."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:109
-msgid ""
-"The default view on the :guilabel:`Link Statistics` page is the "
-":guilabel:`Bar Chart` view, but there are different view options available "
-"in the upper-left corner. There is the option to view the statistics as a "
-":guilabel:`Line Chart` or :guilabel:`Pie Chart`."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:113
-msgid ""
-"Beside that, there is also the option to view the statistics as "
-":guilabel:`Stacked`, and the data can be put into :guilabel:`Descending` or "
-":guilabel:`Ascending` order."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:116
-msgid ""
-"To the far-left of the view options, there is the :guilabel:`Measures` drop-"
-"down menu. When clicked, the options to view the :guilabel:`Number of "
-"Clicks` or total :guilabel:`Count` are available. And, to the right of the "
-":guilabel:`Measures` drop-down menu, there's the ability to add any data to "
-"a spreadsheet by clicking the :guilabel:`Insert in Spreadsheet` button."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:121
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:153
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:180
-msgid ""
-"Also, in the upper-right corner of the :guilabel:`Link Statistics` page, to "
-"the far-right of the search bar, there are additional view options to choose"
-" from: the default :guilabel:`Graph` view, the :guilabel:`Pivot` table view,"
-" and the :guilabel:`List` view."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:126
-msgid "Traces"
-msgstr "آثار"
-
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:128
-msgid ""
-"Odoo tracks all activities used in every marketing campaign. The data "
-"related to these activities can be accessed and analyzed in the "
-":guilabel:`Traces` page, which can be found by navigating to "
-":menuselection:`Marketing Automation app --> Reporting --> Traces`."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst-1
-msgid "The Traces page in the Odoo Marketing Automation application."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:136
-msgid ""
-"The default view on the :guilabel:`Traces` page is the :guilabel:`Bar Chart`"
-" view, but there are different view options available in the upper-left "
-"corner. There is the option to view the statistics as a :guilabel:`Line "
-"Chart` or :guilabel:`Pie Chart`."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:140
-msgid ""
-"At the top of the graph, there's a color key, informing the user which "
-"activities have been :guilabel:`Processed`, :guilabel:`Scheduled`, and "
-":guilabel:`Rejected`. There's also an outline indicator to inform users of "
-"the :guilabel:`Sum` of certain activities, as well."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:144
-msgid ""
-"Beside the various view option in the upper-left corner of the "
-":guilabel:`Traces` page, there is also the option to view the statistics as "
-":guilabel:`Stacked`, and the data can be put into :guilabel:`Descending` or "
-":guilabel:`Ascending` order."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:148
-msgid ""
-"To the far-left of the view options, there is the :guilabel:`Measures` drop-"
-"down menu. When clicked, the options to view the :guilabel:`Document ID` or "
-"total :guilabel:`Count` are available. And, to the right of the "
-":guilabel:`Measures` drop-down menu, there's the ability to add any data to "
-"a spreadsheet by clicking the :guilabel:`Insert in Spreadsheet` button."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:158
+#: ../../content/applications/marketing/marketing_automation.rst:140
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:157
 msgid "Participants"
 msgstr "المشاركين"
 
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:160
+#: ../../content/applications/marketing/marketing_automation.rst:142
 msgid ""
-"Odoo tracks all participants related to every marketing campaign. The data "
-"related to these participants can be accessed and analyzed in the "
-":guilabel:`Participants` page, which can be found by navigating to "
-":menuselection:`Marketing Automation app --> Reporting --> Participants`."
+"The records that are engaged by the campaign are referred to as "
+"*participants*."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst-1
-msgid "The Participants page in the Odoo Marketing Automation application."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:168
+#: ../../content/applications/marketing/marketing_automation.rst:144
 msgid ""
-"The default view on the :guilabel:`Participants` page is the :guilabel:`Pie "
-"Chart` view, but there are different view options available in the upper-"
-"left corner. There is the option to view the statistics as a :guilabel:`Line"
-" Chart` or :guilabel:`Bar Chart`."
+"The number of participants engaged in a test run are shown in the *Tests* "
+"smart button, which displays on the top of the campaign form after a test "
+"has been run."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:172
+#: ../../content/applications/marketing/marketing_automation.rst:147
 msgid ""
-"At the top of the graph, there's a color key that describes the type of "
-"participants found in the graph."
+"The number of participants engaged in a running, or stopped, campaign are "
+"shown in the *Participants* smart button at the top of the campaign form."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:175
+#: ../../content/applications/marketing/marketing_automation.rst:151
+msgid ":doc:`Target an audience <marketing_automation/target_audience>`"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation.rst:154
+msgid "Workflow"
+msgstr "سير العمل"
+
+#: ../../content/applications/marketing/marketing_automation.rst:156
 msgid ""
-"To the far-left of the view options, there is the :guilabel:`Measures` drop-"
-"down menu. When clicked, the options to view the :guilabel:`Record ID` or "
-"total :guilabel:`Count` are available. And, to the right of the "
-":guilabel:`Measures` drop-down menu, there's the ability to add any data to "
-"a spreadsheet by clicking the :guilabel:`Insert in Spreadsheet` button."
+"A *workflow* consists of an activity, many activities, or a sequence of "
+"activities organized in a campaign. A campaign's workflow is defined in the "
+":guilabel:`Workflow` section of the campaign form."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started.rst:5
-msgid "Getting Started"
-msgstr ""
+#: ../../content/applications/marketing/marketing_automation.rst:160
+msgid "Activities"
+msgstr "الأنشطة"
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:3
-msgid "Marketing automation campaigns"
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:5
+#: ../../content/applications/marketing/marketing_automation.rst:162
 msgid ""
-"The Odoo *Marketing Automation* app automates a variety of marketing tasks "
-"by combining specific rules and filters to generate timed actions. Instead "
-"of manually having to build each stage of a campaign (like a series of timed"
-" massmails), the *Marketing Automation* app allows marketers to build the "
-"entire campaign, and all of its stages, in one place---on one dashboard."
+"*Activities* are the methods of communication or server actions, organized "
+"in a workflow, that are executed within a campaign. Once running, each "
+"activity displays the number of participants that are engaged by the "
+"activity as *Success* and *Rejected* counts."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:11
-msgid "Campaign configuration"
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:13
+#: ../../content/applications/marketing/marketing_automation.rst:166
 msgid ""
-"To create a new automated marketing campaign, navigate to "
-":menuselection:`Marketing Automation app --> New` to reveal a blank campaign"
-" form."
+"To create one of the following activities, click :guilabel:`Add new "
+"activity` in the :guilabel:`Workflow` section of the campaign form:"
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst-1
+#: ../../content/applications/marketing/marketing_automation.rst:169
+msgid ":guilabel:`Email`: send an email to the target audience."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation.rst:170
+msgid ":guilabel:`SMS`: send an SMS to the target audience."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation.rst:171
+msgid ":guilabel:`Server Action`: executes an automated action."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation.rst:174
+msgid ":doc:`marketing_automation/workflow_activities`"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation.rst:177
+msgid "Testing and running"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation.rst:179
 msgid ""
-"A blank marketing automation campaign form in Odoo Marketing Automation "
-"application."
+"Once a campaign has been created, it can be tested to ensure the workflow is"
+" functioning as expected, to check for errors, and correct any mistakes "
+"before it reaches its target audience."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:20
+#: ../../content/applications/marketing/marketing_automation.rst:182
 msgid ""
-"After entering a name for the marketing campaign, configure the target "
-"audience in the remaining fields."
+"After testing, the campaign can be launched to start engaging the target "
+"audience. The campaign can also be launched *without* testing, if the user "
+"is confident in the workflow."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:23
+#: ../../content/applications/marketing/marketing_automation.rst:186
+msgid ":doc:`marketing_automation/testing_running`"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation.rst:189
+msgid "Reporting"
+msgstr "إعداد التقارير "
+
+#: ../../content/applications/marketing/marketing_automation.rst:191
 msgid ""
-"A target audience can be configured by entering specific criteria for Odoo "
-"to use when determining to whom this marketing automation campaign should be"
-" sent."
+"A range of reporting metrics are available to measure the success of each "
+"campaign. Navigate to :menuselection:`Marketing Automation app --> "
+"Reporting` to access the following menu options:"
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:26
+#: ../../content/applications/marketing/marketing_automation.rst:194
 msgid ""
-"In the :guilabel:`Target` field, use the drop-down menu to choose which "
-"model the target audience filters should be based on (e.g. "
-":guilabel:`Contact`, :guilabel:`Lead/Opportunity`, :guilabel:`Sales Order`, "
-"etc.)."
+":guilabel:`Link Tracker`: displays the metrics of links to track the number "
+"of clicks."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:30
+#: ../../content/applications/marketing/marketing_automation.rst:195
 msgid ""
-"Select :guilabel:`Search More...` from the drop-down menu to reveal a "
-":guilabel:`Search: Target` pop-up window containing all of the available "
-"targeting options."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:33
-msgid ""
-"Once a :guilabel:`Target` is selected, there's a :guilabel:`Unicity based "
-"on` field. This field is used to avoid duplicates based on the model chosen "
-"in the :guilabel:`Target` field."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:37
-msgid ""
-"If :guilabel:`Customers` is chosen as the :guilabel:`Target`, select "
-":guilabel:`Email` in the :guilabel:`Unicity based on` field so Odoo only "
-"processes one record for each customer email address."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:41
-msgid ""
-"Select :guilabel:`Search More...` from the :guilabel:`Unicity based on` "
-"drop-down menu to reveal all available options in a pop-up window."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:44
-msgid ""
-"Last on the campaign form is the :guilabel:`Filter` field. This is where "
-"more specific targeting options can be layered into the campaign to further "
-"narrow the number and type of recipients that receive the marketing "
-"automation material."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:48
-msgid ""
-"If left alone, the :guilabel:`Filter` field reads: :guilabel:`Match all "
-"records`. That means Odoo uses the :guilabel:`Target` and :guilabel:`Unicity"
-" based on` fields to determine who the recipients will be. The number of "
-"recipients is represented beneath as :guilabel:`record(s)`."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:53
-msgid "Campaign filter rules"
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:55
-msgid ""
-"To add a more specific filter to a marketing automation campaign, click the "
-":guilabel:`Add condition` button in the :guilabel:`Filter` field. Doing so "
-"reveals a series of other configurable filter rule fields."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:59
-msgid ""
-"In the rule fields, customizable equations can be configured for Odoo to use"
-" when filtering who to include or exclude in this specific marketing "
-"campaign."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst-1
-msgid ""
-"How the filter rule equation fields look in Odoo Marketing Automation "
+":guilabel:`Traces`: displays the results of all activities from all "
 "campaigns."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:67
+#: ../../content/applications/marketing/marketing_automation.rst:196
 msgid ""
-":guilabel:`Records` refer to contacts in the system that fit the specified "
-"criteria for a campaign."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:70
-msgid ""
-"Also, once :guilabel:`Add condition` is clicked, the ability to "
-":guilabel:`Save as Favorite Filter` becomes available on the campaign form."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:73
-msgid ""
-"There is also the option to match records with :guilabel:`all` or "
-":guilabel:`any` of the rules configured in the :guilabel:`Filter` field."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:76
-msgid ""
-"To choose either of those options, click :guilabel:`all` from the middle of "
-"the sentence \":guilabel:`Match records with all of the following rules`\" "
-"to reveal a drop-down menu with those options."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst-1
-msgid ""
-"Match records with all or any of the rules in Filter field for marketing "
+":guilabel:`Participants`: displays an overview of the participants of all "
 "campaigns."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:84
+#: ../../content/applications/marketing/marketing_automation.rst:198
 msgid ""
-"When the first field of the rule equation is clicked, a nested drop-down "
-"menu of options appears on the screen where specific criteria is chosen "
-"based on needs of the campaign."
+"Additionally, each activity within the workflow of a campaign displays its "
+"engagement metrics."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:87
-msgid ""
-"The remaining fields on the rule equation further define the criteria, which"
-" is used to determine which records in the database to include or exclude in"
-" the execution of the campaign."
+#: ../../content/applications/marketing/marketing_automation.rst:201
+msgid ":doc:`marketing_automation/understanding_metrics`"
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:90
-msgid ""
-"To add another rule, either click the :guilabel:`➕ (plus sign)` icon to the "
-"right of the filtering rule, or click :guilabel:`New Rule` beneath the rule "
-"equation fields. When either are clicked, a new series of rule fields "
-"appears."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:94
-msgid ""
-"To add a branch of multiple rules at the same time, click the "
-":guilabel:`branch` icon, located to the right of the :guilabel:`➕ (plus "
-"sign)` icon. When clicked, two additional sub-rule equation fields appear "
-"beneath the initial rule."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst-1
-msgid ""
-"Sample of how the rule branches look in the filter section of a marketing "
-"campaign."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:102
-msgid ""
-"There is also the option to have the filter apply to :guilabel:`any` or "
-":guilabel:`all` of the configured branch rules."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:105
-msgid ""
-"For further information on marketing automation campaign filter "
-"configuration, refer to :doc:`this documentation page <target_audience>`."
-msgstr ""
-
-#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:109
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:153
-msgid ":doc:`workflow_activities`"
-msgstr ":doc:`workflow_activities`"
-
-#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:110
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:266
-msgid ":doc:`testing_running`"
-msgstr ":doc:`testing_running`"
-
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:3
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst:3
 msgid "Target an audience"
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:5
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst:5
 msgid ""
 "Delivering marketing campaigns to the right audience is paramount when "
 "trying to grow a business. The Odoo *Marketing Automation* application helps"
@@ -2639,11 +2477,11 @@ msgid ""
 "the right time."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:11
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst:11
 msgid "Configure target filters"
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:13
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst:13
 msgid ""
 "When configuring the target filters on a marketing campaign, there are some "
 "options that have an :guilabel:`> (arrow)` icon beside them. The "
@@ -2651,11 +2489,11 @@ msgid ""
 "refined parameters within it that can be customized."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst-1
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst-1
 msgid "The drop-down filter menu in the Marketing Automation application."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:21
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst:21
 msgid ""
 "Filters can be extended by adding *branches* and *nodes*. A *node* adds "
 "another filtering parameter to a group of targeting conditions (e.g. a new "
@@ -2664,50 +2502,50 @@ msgid ""
 "statements."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:26
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst:26
 msgid "Every time a new branch is created, there are two options:"
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:28
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst:28
 msgid ""
 "Either the records can match :guilabel:`ALL` criteria for the upcoming rules"
 " (creating an AND statement where *all* criteria must match)."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:30
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst:30
 msgid ""
 "Or, the records can match :guilabel:`ANY` criteria for the upcoming rules "
 "(creating an OR statement where *only one* of the criteria must match)."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:33
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst:33
 msgid ""
 "To change between these two options, simply click the drop-down arrow icon "
 "in the green box and select :guilabel:`ANY` or :guilabel:`ALL`."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:36
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst:36
 msgid ""
 "To add a node, click on the :guilabel:`➕ (plus sign)` icon, and to add "
 "another branch click on the :guilabel:`⋯ (ellipses)` icon. To exclude a node"
 " or a branch, click on :guilabel:`✖ (delete)` icon to delete it."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:45
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst:45
 msgid "Use cases"
 msgstr "حالات الاستخدام "
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:47
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst:47
 msgid ""
 "The following scenarios outline different combinations of filters a "
 "marketing campaign might commonly use."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:51
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst:51
 msgid "Scenario #1: Narrow target down to new opportunities in the pipeline"
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:53
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst:53
 msgid ""
 "While in *Edit mode* on a campaign template form (by clicking the "
 ":guilabel:`Edit` button), select the :guilabel:`Target` field, and click "
@@ -2715,7 +2553,7 @@ msgid ""
 ":guilabel:`Lead/Opportunity`, and select it."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:57
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst:57
 msgid ""
 "Next, click :guilabel:`Add Filter` in the :guilabel:`Filter` field. Then, "
 "click on the default :guilabel:`ID` filter option in the first portion of "
@@ -2723,13 +2561,13 @@ msgid ""
 "options. From this drop-down, scroll down (or search for) :guilabel:`Type`."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:62
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst:62
 msgid ""
 "Keep the second portion of the filter equation on the default :guilabel:`🟰 "
 "(equal sign)` icon."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:64
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst:64
 msgid ""
 "Next, change the third (and final) portion of the filter equation from "
 ":guilabel:`Lead` to :guilabel:`Opportunity`. The number of "
@@ -2737,13 +2575,13 @@ msgid ""
 "equation is customized."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:68
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst:68
 msgid ""
 "Add another node to this filter by clicking the :guilabel:`➕ (plus sign)` "
 "icon to the right of the equation."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:71
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst:71
 msgid ""
 "With \"new\" opportunities being the target of this filter, the second node "
 "will focus on *only* locating opportunities that are in the :guilabel:`New` "
@@ -2752,31 +2590,31 @@ msgid ""
 "for) :guilabel:`Stage` from the field drop-down menu."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:76
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst:76
 msgid ""
 "Once again, leave the second portion of the filter equation on :guilabel:`🟰 "
 "(equal sign)` icon."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:78
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst:78
 msgid ""
 "Lastly, highlight the default value in the third (and final) portion of the "
 "second filter equation, and type in `New`. With that in place, Odoo only "
 "targets opportunities that are in the \"New\" stage of the pipeline."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst-1
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst-1
 msgid ""
 "A standard scenario using filters in the Odoo Marketing Automation app."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:87
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst:87
 msgid ""
 "Scenario #2: Narrow down target to event attendees who purchased a specific "
 "ticket"
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:89
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst:89
 msgid ""
 "While in *Edit mode* on a campaign template form (by clicking the "
 ":guilabel:`Edit` button), select the :guilabel:`Target` field, and click "
@@ -2784,7 +2622,7 @@ msgid ""
 "search for) :guilabel:`Event`, and select it."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:93
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst:93
 msgid ""
 "Next, click :guilabel:`Add Filter` in the :guilabel:`Filter` field. Click on"
 " the default :guilabel:`ID` filter option in the first portion of the filter"
@@ -2792,33 +2630,33 @@ msgid ""
 "this drop-down, scroll down (or search for) :guilabel:`Event`."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:98
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst:98
 msgid ""
 "Click the default :guilabel:`🟰 (equal sign)` icon in the second portion of "
 "the filter equation. This reveals a drop-down menu. From this drop-down "
 "menu, select :guilabel:`contains`."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:101
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst:101
 msgid ""
 "In the third (and final) empty portion of the filter equation, type in the "
 "name of the event(s) that Odoo should consider for this campaign filter."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:104
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst:104
 msgid ""
 "Then, add another node to this filter by clicking the :guilabel:`➕ (plus "
 "sign)` icon to the right of the equation."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:107
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst:107
 msgid ""
 "The second node will focus on targeting this campaign to attendees who "
 "purchase a specific type of ticket to the aforementioned event(s) mentioned "
 "in the first filter equation."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:110
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst:110
 msgid ""
 "To do that, select the default :guilabel:`ID` from the first portion of the "
 "second filter equation, and scroll down (or search for) :guilabel:`Event "
@@ -2826,13 +2664,13 @@ msgid ""
 "select :guilabel:`Name`."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:114
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst:114
 msgid ""
 "Once again, click the default :guilabel:`🟰 (equal sign)` icon in the second "
 "portion of the filter equation, and select :guilabel:`contains`."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:117
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst:117
 msgid ""
 "Lastly, in the third (and final) portion of the second filter equation, "
 "which is blank, type in the name of the ticket type that should be used for "
@@ -2840,67 +2678,66 @@ msgid ""
 "ticket type for this sample filter."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst-1
+#: ../../content/applications/marketing/marketing_automation/target_audience.rst-1
 msgid "An event ticket filter in the Odoo Marketing Automation application."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:3
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst:3
 msgid "Testing/running campaigns"
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:5
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst:5
 msgid ""
 "The Odoo *Marketing Automation* app allows users to test marketing campaigns"
 " (and mailings) before officially running them to check for errors and "
 "correct any mistakes before it reaches its target audience."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:10
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst:10
 msgid "Test campaigns"
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:12
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst:12
 msgid ""
 "To test a marketing campaign, open the :menuselection:`Marketing Automation "
 "app`, and select the desired campaign to test, which reveals the campaign's "
 "detail form."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:15
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst:15
 msgid ""
 "On the campaign detail form, make sure the campaign already has activities "
 "configured in the workflow (or build a campaign by following the directions "
-"on :doc:`this documentation "
-"</applications/marketing/marketing_automation/getting_started/workflow_activities>`)."
+"on :doc:`workflow_activities` documentation)."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:20
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst:20
 msgid ""
 "Testing marketing automation campaigns is meant to be performed in the "
 "production version of the database. Duplicate (or trial) databases have "
 "limited email sending capabilities."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:23
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst:23
 msgid ""
 "To start a test, click the :guilabel:`Launch a Test` button at the top of "
 "the campaign form, to the right of the :guilabel:`Start` button."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst-1
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst-1
 msgid ""
 "Launch a test button on a campaign detail form in Odoo Marketing Automation."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:30
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst:30
 msgid "When clicked, a :guilabel:`Launch a test` pop-up window appears."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst-1
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst-1
 msgid "Launch a test pop-up window that appears in Odoo Markting Automation."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:36
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst:36
 msgid ""
 "In the :guilabel:`Launch a test` pop-up window, click the :guilabel:`Pick or"
 " create a/an Contact to generate a Test Participant` field to reveal a drop-"
@@ -2908,26 +2745,26 @@ msgid ""
 "(or create a new one) to run the test on."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:41
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst:41
 msgid ""
 "Only one contact can be selected from the :guilabel:`Launch a test` pop-up "
 "window."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:43
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst:43
 msgid ""
 "To create a new contact directly from the :guilabel:`Launch a test` pop-up "
 "window, start typing the name of the new contact in the blank field, and "
 "click :guilabel:`Create and edit...`."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst-1
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst-1
 msgid ""
 "Typing in a new contact directly from the launch a test pop-up window in "
 "Odoo."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:50
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst:50
 msgid ""
 "Doing so reveals a blank :guilabel:`Create Record` pop-up form, in which the"
 " necessary contact information (:guilabel:`Email`, :guilabel:`Mobile`, etc.)"
@@ -2935,29 +2772,29 @@ msgid ""
 "information is entered, click :guilabel:`Save & Close`."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst-1
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst-1
 msgid ""
 "A blank contact form from a launch test pop-up window in Odoo Marketing "
 "Automation."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:58
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst:58
 msgid ""
 "When all the necessary fields have been entered, click :guilabel:`Save & "
 "Close` to return to the :guilabel:`Launch a test` pop-up window."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:61
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst:61
 msgid ""
 "Once a contact is selected, click :guilabel:`Launch` to reveal the campaign "
 "test page."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst-1
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst-1
 msgid "Test screen in Odoo Marketing Automation."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:67
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst:67
 msgid ""
 "On the campaign test page, the name of the :guilabel:`Record` being tested "
 "is visible, along with the precise time this test workflow was started in "
@@ -2966,7 +2803,7 @@ msgid ""
 "workflow that's being tested."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:72
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst:72
 msgid ""
 "To start a test, click the :guilabel:`Run` button, represented by a "
 ":guilabel:`▶️ (play button)` icon beside the first activity in the workflow."
@@ -2974,41 +2811,41 @@ msgid ""
 "analytics) connected to that specific activity as they occur, in real-time."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:77
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst:77
 msgid ""
 "If a child activity is scheduled beneath a parent activity, that child "
 "activity will be revealed slightly indented in the workflow, once that "
 "parent activity has been run, via the :guilabel:`▶️ (play button)` icon."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst-1
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst-1
 msgid "Workflow test progress in Odoo Marketing Automation."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:85
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst:85
 msgid ""
 "Once all the workflow activities are completed, the test ends, and the "
 "status bar (in the upper-right corner) moves to the :guilabel:`Completed` "
 "stage."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:88
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst:88
 msgid ""
 "To stop a test before all the workflow activities are completed, click the "
 ":guilabel:`Stop` button in the upper-left corner of the campaign test page."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:92
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst:92
 msgid "Run campaigns"
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:94
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst:94
 msgid ""
 "To run a campaign, navigate to :menuselection:`Marketing Automation app`, "
 "and select the desired campaign to run."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:97
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst:97
 msgid ""
 "On the campaign detail form, with all the desired activities ready in the "
 ":guilabel:`Workflow` section, click :guilabel:`Start` in the upper-left "
@@ -3016,20 +2853,20 @@ msgid ""
 "specified on the campaign detail form."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:101
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst:101
 msgid ""
 "Clicking :guilabel:`Start` launches the campaign, and the status bar of the "
 "campaign switches to :guilabel:`Running`, which is located in the upper-"
 "right corner of the campaign detail form."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst-1
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst-1
 msgid ""
 "The status of a marketing campaign changing to running in the upper-right "
 "corner."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:109
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst:109
 msgid ""
 "If some participants are already running on a campaign, and was stopped for "
 "any reason, clicking the :guilabel:`Start` button again prompts a pop-up "
@@ -3037,20 +2874,20 @@ msgid ""
 " to apply any modifications made to the campaign."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst-1
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst-1
 msgid ""
 "The workflow has been modified warning pop-up window of a marketing campaign"
 " form."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:117
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst:117
 msgid ""
 "Be aware that participants that had already gone through an entire campaign "
 "in its original state **can** be reintroduced into the newly-modified "
 "campaign, and new traces could be created for them."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:121
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst:121
 msgid ""
 "Then, as the mailings and actions are triggered in the :guilabel:`Workflow`,"
 " the various stats and data related to each activity appear in each activity"
@@ -3058,24 +2895,24 @@ msgid ""
 "the top of the campaign detail form, as well."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:125
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst:125
 msgid ""
 "These analytical smart buttons will *also* populate with real-time data as "
 "the campaign progresses: :guilabel:`Templates`, :guilabel:`Clicks`, "
 ":guilabel:`Tests`, :guilabel:`Participants`."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst-1
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst-1
 msgid ""
 "The row of smart buttons that appear in a currently running marketing "
 "campaign in Odoo."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:133
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst:133
 msgid "Stop campaigns"
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:135
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst:135
 msgid ""
 "To stop a campaign that's currently running, navigate to the "
 ":menuselection:`Marketing Automation app`, and select the desired campaign "
@@ -3083,38 +2920,332 @@ msgid ""
 "the upper-left corner."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst-1
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst-1
 msgid ""
 "The stop button on a typical campaign detail form in Odoo Marketing "
 "Automation application."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:143
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst:143
 msgid ""
 "When clicked, the campaign is officially stopped, and the status changes to "
 ":guilabel:`Stopped` in the upper-right corner of the campaign detail form."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst-1
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst-1
 msgid ""
 "Marketing campaign's stopped status on a campaign detail form in Odoo "
 "Marketing Automation."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:151
-msgid ":doc:`first_campaign`"
-msgstr ":doc:`first_campaign`"
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst:151
+msgid ":doc:`Campaign configuration <../marketing_automation>`"
+msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:152
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:188
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst:152
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:188
 msgid ":doc:`target_audience`"
 msgstr ":doc:`target_audience`"
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:3
+#: ../../content/applications/marketing/marketing_automation/testing_running.rst:153
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:50
+msgid ":doc:`workflow_activities`"
+msgstr ":doc:`workflow_activities`"
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:3
+msgid "Campaign metrics"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:5
+msgid ""
+"*Campaign metrics* are detailed statistics and analytics within a marketing "
+"campaign, measuring its success and effectiveness. Triggered marketing "
+"activities populate relevant activity blocks with real-time metrics, in the "
+"campaign detail form."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:10
+msgid "Activity analytics"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:12
+msgid ""
+"In the :guilabel:`Workflow` section of a campaign detail form in the "
+"*Marketing Automation* app, where the various campaign activities are "
+"located, a collection of useful data can be found on every individual "
+"activity block, like number of communications :guilabel:`Sent`, percentage "
+"of messages that have been :guilabel:`Clicked`, and more."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst-1
+msgid ""
+"An activity block in the workflow section with useful analytical data in "
+"Odoo."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:21
+msgid ""
+"To the left of the activity block, the configured :doc:`trigger time "
+"<workflow_activities>` is displayed as a duration (either :guilabel:`Hours`,"
+" :guilabel:`Days`, :guilabel:`Weeks`, or :guilabel:`Months`) if it "
+"corresponds to period after the workflow begins."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:26
+msgid ""
+"If the trigger time is dependent on another activity or triggering action "
+"(e.g. :guilabel:`Mail: Replied`, etc.) the time is displayed, along with the"
+" necessary action for that activity to be activated (e.g. `Replied after 2 "
+"Hours`)."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:0
+msgid ""
+"Time trigger display when dependent on another activity in Odoo Marketing "
+"Automation."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:34
+msgid ""
+"In the activity block, an icon represents each activity type. An "
+":guilabel:`✉️ (envelope)` icon means the activity is an email. Three tiny, "
+"interlocking :guilabel:`⚙️ (gear)` icons means the activity is an internal "
+"action. And, a small, basic :guilabel:`📱 (mobile)` icon means the activity "
+"is an SMS."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:40
+msgid ""
+"The activity type name is also displayed in smaller font below the activity "
+"title."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:42
+msgid ""
+"Beside the activity icon, at the top of the activity block, is the title of "
+"the activity. To the right of the activity title, there are :guilabel:`Edit`"
+" and :guilabel:`Delete` buttons."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:45
+msgid ""
+"Click :guilabel:`Edit` to open the :guilabel:`Open: Activities` pop-up form "
+"for that specific activity, in which that activity can be modified. Click "
+"the :guilabel:`Delete` button to completely delete that specific activity "
+"from the workflow."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:53
+msgid "Activity graph tab"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:55
+msgid ""
+"In every activity block, the :guilabel:`Graph (pie chart icon)` tab is open "
+"by default, displaying related metrics as a simple line graph. The success "
+"metrics are represented in `green` and the rejected metrics are represented "
+"in `red`."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:59
+msgid ""
+"Numerical representations of both :guilabel:`Success` and "
+":guilabel:`Rejected` activities are shown to the right of the line graph."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:63
+msgid ""
+"Hovering over any point in the line graph of the activity block reveals a "
+"notated breakdown of data for that specific date."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:0
+msgid ""
+"Hovering over any point in line graph reveals notated breakdown of data in "
+"Odoo."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:70
+msgid ""
+"Beneath the graph in the activity block, for *Email* or *SMS* activity "
+"types, a line of accessible data figures provide a bird's eye view of the "
+"campaign activity, including: :guilabel:`Sent` (numerical), "
+":guilabel:`Clicked` (percentage), :guilabel:`Replied` (percentage), and "
+":guilabel:`Bounced` (percentage)."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:76
+msgid ""
+"Clicking any of those stats on the :guilabel:`DETAILS` line, beneath the "
+"line graph, reveals a separate page containing every specific record for "
+"that particular data point."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:80
+msgid "Activity filter tab"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:82
+msgid ""
+"Next to the :guilabel:`Graph` tab on the activity block, there's the option "
+"to open a :guilabel:`Filter` tab (represented by a :guilabel:`filter/funnel`"
+" icon)."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst-1
+msgid ""
+"What a campaign activity filter tab looks like in Odoo Marketing Automation."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:89
+msgid ""
+"Clicking the :guilabel:`Filter` tab on an activity block, reveals what the "
+"specific filters are for that particular campaign activity, and how many "
+"records in the database match that specific criteria."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:94
+msgid ""
+"Clicking the :guilabel:`records` link beneath the displayed filter reveals a"
+" separate pop-up window containing a list of all the records that match that"
+" specific campaign activity rule(s)."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:98
+msgid "Link tracker"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:100
+msgid ""
+"Odoo tracks all URLs used in marketing campaigns. To access and analyze "
+"those URLs, navigate to :menuselection:`Marketing Automation app --> "
+"Reporting --> Link Tracker`. Doing so reveals a :guilabel:`Link Statistics` "
+"page, wherein all campaign-related URLs can be analyzed."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:108
+msgid ""
+"The default view on the :guilabel:`Link Statistics` page is the "
+":guilabel:`Bar Chart` view, but there are different view options available "
+"in the upper-left corner. There is the option to view the statistics as a "
+":guilabel:`Line Chart` or :guilabel:`Pie Chart`."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:112
+msgid ""
+"Beside that, there is also the option to view the statistics as "
+":guilabel:`Stacked`, and the data can be put into :guilabel:`Descending` or "
+":guilabel:`Ascending` order."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:115
+msgid ""
+"To the far-left of the view options, there is the :guilabel:`Measures` drop-"
+"down menu. When clicked, the options to view the :guilabel:`Number of "
+"Clicks` or total :guilabel:`Count` are available. And, to the right of the "
+":guilabel:`Measures` drop-down menu, there's the ability to add any data to "
+"a spreadsheet by clicking the :guilabel:`Insert in Spreadsheet` button."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:120
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:152
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:179
+msgid ""
+"Also, in the upper-right corner of the :guilabel:`Link Statistics` page, to "
+"the far-right of the search bar, there are additional view options to choose"
+" from: the default :guilabel:`Graph` view, the :guilabel:`Pivot` table view,"
+" and the :guilabel:`List` view."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:125
+msgid "Traces"
+msgstr "آثار"
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:127
+msgid ""
+"Odoo tracks all activities used in every marketing campaign. The data "
+"related to these activities can be accessed and analyzed in the "
+":guilabel:`Traces` page, which can be found by navigating to "
+":menuselection:`Marketing Automation app --> Reporting --> Traces`."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst-1
+msgid "The Traces page in the Odoo Marketing Automation application."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:135
+msgid ""
+"The default view on the :guilabel:`Traces` page is the :guilabel:`Bar Chart`"
+" view, but there are different view options available in the upper-left "
+"corner. There is the option to view the statistics as a :guilabel:`Line "
+"Chart` or :guilabel:`Pie Chart`."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:139
+msgid ""
+"At the top of the graph, there's a color key, informing the user which "
+"activities have been :guilabel:`Processed`, :guilabel:`Scheduled`, and "
+":guilabel:`Rejected`. There's also an outline indicator to inform users of "
+"the :guilabel:`Sum` of certain activities, as well."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:143
+msgid ""
+"Beside the various view option in the upper-left corner of the "
+":guilabel:`Traces` page, there is also the option to view the statistics as "
+":guilabel:`Stacked`, and the data can be put into :guilabel:`Descending` or "
+":guilabel:`Ascending` order."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:147
+msgid ""
+"To the far-left of the view options, there is the :guilabel:`Measures` drop-"
+"down menu. When clicked, the options to view the :guilabel:`Document ID` or "
+"total :guilabel:`Count` are available. And, to the right of the "
+":guilabel:`Measures` drop-down menu, there's the ability to add any data to "
+"a spreadsheet by clicking the :guilabel:`Insert in Spreadsheet` button."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:159
+msgid ""
+"Odoo tracks all participants related to every marketing campaign. The data "
+"related to these participants can be accessed and analyzed in the "
+":guilabel:`Participants` page, which can be found by navigating to "
+":menuselection:`Marketing Automation app --> Reporting --> Participants`."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst-1
+msgid "The Participants page in the Odoo Marketing Automation application."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:167
+msgid ""
+"The default view on the :guilabel:`Participants` page is the :guilabel:`Pie "
+"Chart` view, but there are different view options available in the upper-"
+"left corner. There is the option to view the statistics as a :guilabel:`Line"
+" Chart` or :guilabel:`Bar Chart`."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:171
+msgid ""
+"At the top of the graph, there's a color key that describes the type of "
+"participants found in the graph."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/understanding_metrics.rst:174
+msgid ""
+"To the far-left of the view options, there is the :guilabel:`Measures` drop-"
+"down menu. When clicked, the options to view the :guilabel:`Record ID` or "
+"total :guilabel:`Count` are available. And, to the right of the "
+":guilabel:`Measures` drop-down menu, there's the ability to add any data to "
+"a spreadsheet by clicking the :guilabel:`Insert in Spreadsheet` button."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:3
 msgid "Campaign workflow activities"
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:5
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:5
 msgid ""
 "When creating a marketing campaign in the *Marketing Automation* app, users "
 "can plan marketing activities that can be triggered when certain actions or "
@@ -3122,36 +3253,36 @@ msgid ""
 "internal server actions."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:10
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:10
 msgid "Add workflow activities"
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:12
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:12
 msgid ""
 "To add workflow activities to a marketing campaign, navigate to the bottom "
 "of a pre-existing or new campaign detail form, beneath the target audience "
 "configuration fields, and click :guilabel:`Add new activity`."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:16
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:16
 msgid ""
 "Doing so reveals a :guilabel:`Create Activities` pop-up window. This pop-up "
 "window is a blank activity template, where specific parameters can be set "
 "for that particular activity."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst-1
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst-1
 msgid ""
 "A workflow activity template pop-up window in Odoo Marketing Automation."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:23
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:23
 msgid ""
 "First, enter a name for the activity in the :guilabel:`Activity Name` field."
 " Then, proceed to configure the following options."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:26
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:26
 msgid ""
 "Once ready, either click: :guilabel:`Save & Close` to save the activity and "
 "close the pop-up form, :guilabel:`Save & New` to save the activity and "
@@ -3159,35 +3290,35 @@ msgid ""
 "Activities` pop-up form, or :guilabel:`Discard` to delete the activity."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:31
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:31
 msgid "Activity types"
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:33
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:33
 msgid ""
 "Then, select the :guilabel:`Activity Type`. Choose between "
 ":guilabel:`Email`, :guilabel:`Server Action` (an internal action within the "
 "database), or :guilabel:`SMS`."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:36
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:36
 msgid ""
 "The field below the :guilabel:`Activity Type` changes, depending on the "
 "chosen :guilabel:`Activity Type`."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:40
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:40
 msgid "Email activity"
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:42
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:42
 msgid ""
 "If :guilabel:`Email` is the :guilabel:`Activity Type`, the option to choose "
 "a premade/pre-configured :guilabel:`Mail Template` becomes available. A mail"
 " template can also be created on-the-fly, as well."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:46
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:46
 msgid ""
 "To create a new template directly from the :guilabel:`Mail Template` field, "
 "start typing the title of the new template into the blank field beside "
@@ -3195,49 +3326,49 @@ msgid ""
 "reveal a :guilabel:`Create Marketing Template` pop-up window."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst-1
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst-1
 msgid ""
 "The create and edit email drop-down option on create activities pop-up "
 "window."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:54
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:54
 msgid ""
 "In that pop-up window, proceed to create and configure the new email "
 "template."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst-1
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst-1
 msgid ""
 "The create marketing template email pop-up window in Odoo Marketing "
 "Automation."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:61
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:61
 msgid "Server action activity"
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:63
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:63
 msgid ""
 "If :guilabel:`Server Action` is the :guilabel:`Activity Type`, the option to"
 " choose a specific :guilabel:`Server Action` (e.g. Message for sales person,"
 " Create Leads on Website clicks, etc.) becomes available."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:67
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:67
 msgid ""
 "The option to create a new server action directly from the :guilabel:`Server"
 " Action` is also available. To do that, type in the name of the new action, "
 "then click :guilabel:`Create and Edit...` from the drop-down menu."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst-1
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst-1
 msgid ""
 "The create and edit option in the server action field on campaign detail "
 "form."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:75
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:75
 msgid ""
 "Or, as an alternative, click the empty :guilabel:`Server Action` field to "
 "reveal a drop-down menu, and select :guilabel:`Search More...` to reveal a "
@@ -3245,36 +3376,36 @@ msgid ""
 "configured server action options to choose from."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:79
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:79
 msgid ""
 "To create a new server action from this pop-up window, and click "
 ":guilabel:`New`."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst-1
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst-1
 msgid ""
 "The new button found on a server action pop-up in Odoo marketing automation "
 "application."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:85
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:85
 msgid ""
 "Either option reveals a blank :guilabel:`Create Server Action` pop-up, "
 "wherein a custom server action can be created and configured."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:89
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:89
 msgid "SMS activity"
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:91
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:91
 msgid ""
 "If :guilabel:`SMS` is the :guilabel:`Activity Type`, the option to choose a "
 "premade/pre-configured :guilabel:`SMS Template` becomes available. A SMS "
 "template can also be created on-the-fly directly from this field."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:95
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:95
 msgid ""
 "To create a new template directly from the :guilabel:`SMS Template` field, "
 "start typing the title of the new template into the blank field beside "
@@ -3282,30 +3413,30 @@ msgid ""
 " drop-down menu."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:103
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:103
 msgid ""
 "Doing so reveals a :guilabel:`Create Marketing Template` pop-up window. In "
 "that pop-up window, proceed to create and configure the new SMS template."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst-1
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst-1
 msgid ""
 "The create marketing template pop-up window to create a SMS template on-the-"
 "fly."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:111
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:111
 msgid "Trigger"
 msgstr "المشغّل "
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:113
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:113
 msgid ""
 "The :guilabel:`Trigger` field on the :guilabel:`Create Activities` pop-up "
 "form allows users to choose when the designated workflow activity should be "
 "triggered."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:116
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:116
 msgid ""
 "Start by selecting a number in the top field. In the next "
 ":guilabel:`Trigger` field, designate if it should be :guilabel:`Hours`, "
@@ -3314,133 +3445,133 @@ msgid ""
 " to reveal a a drop-down menu of other trigger options."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst-1
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst-1
 msgid ""
 "A list of the trigger options available on the workflow activities pop-up "
 "form."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:125
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:125
 msgid "The trigger options are as follows:"
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:127
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:127
 msgid ""
 ":guilabel:`beginning of the workflow`: the activity will be triggered at the"
 " previously-configured time after the beginning of the entire workflow."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:129
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:129
 msgid ""
 ":guilabel:`another activity`: the activity will be triggered at the "
 "previously-configured time after another specific activity in the workflow."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:131
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:131
 msgid ""
 ":guilabel:`Mail:opened`: the activity will be triggered at the previously-"
 "configured time if the sent mail in the workflow has been opened by the "
 "recipient."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:133
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:133
 msgid ""
 ":guilabel:`Mail:not opened`: the activity will be triggered at the "
 "previously-configured time if the sent mail in the workflow has not been "
 "opened by the recipient."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:135
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:135
 msgid ""
 ":guilabel:`Mail: replied`: the activity will be triggered at the previously-"
 "configured time if the sent mail in the workflow has been replied to by the "
 "recipient."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:137
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:137
 msgid ""
 ":guilabel:`Mail: not replied`: the activity will be triggered at the "
 "previously-configured time if the sent mail in the workflow has not been "
 "replied to by the recipient."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:139
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:139
 msgid ""
 ":guilabel:`Mail: clicked`: the activity will be triggered at the previously-"
 "configured time if the sent mail in the workflow has been clicked by the "
 "recipient, after it's been opened."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:141
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:141
 msgid ""
 ":guilabel:`Mail: not clicked`: the activity will be triggered at the "
 "previously-configured time if the sent mail in the workflow has not been "
 "clicked by the recipient, after it's been opened."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:143
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:143
 msgid ""
 ":guilabel:`Mail: bounced`: the activity will be triggered at the previously-"
 "configured time if the sent mail in the workflow has been bounced back for "
 "any reason."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:145
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:145
 msgid ""
 ":guilabel:`SMS: clicked`: the activity will be triggered at the previously-"
 "configured time if the sent SMS in the workflow has been clicked by the "
 "recipient, after it's been opened."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:147
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:147
 msgid ""
 ":guilabel:`SMS: not clicked`: the activity will be triggered at the "
 "previously-configured time if the sent SMS in the workflow has not been "
 "clicked by the recipient, after it's been opened."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:149
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:149
 msgid ""
 ":guilabel:`SMS: bounced`: the activity will be triggered at the previously-"
 "configured time if the sent SMS in the workflow has been bounced back for "
 "any reason."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:153
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:153
 msgid "Expiry duration"
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:155
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:155
 msgid ""
 "Next, on the :guilabel:`Create Activities` pop-up form is the "
 ":guilabel:`Expiry Duration` option."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:157
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:157
 msgid ""
 "The :guilabel:`Expiry Duration` checkbox provides the option to configure "
 "the activity to stop the actions after a specific amount of time (after the "
 "scheduled date)."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:160
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:160
 msgid ""
 "When selected, a :guilabel:`Cancel after` field appears, in which the number"
 " of :guilabel:`Hours, Days, Weeks, or Months` can be configured for the "
 "actions to cease after the initial date."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst-1
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst-1
 msgid ""
 "A list of the expiry duration options available on the workflow activities "
 "pop-up form."
 msgstr ""
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:168
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:168
 msgid "Activity and applied filters"
 msgstr "الأنشطة والفلاتر المستخدَمة "
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:170
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:170
 msgid ""
 "Moving down into the :guilabel:`Domain` section of the :guilabel:`Create "
 "Activities` pop-up form, there is the :guilabel:`Activity Filter` and "
@@ -3450,7 +3581,7 @@ msgstr ""
 ":guilabel:`إنشاء أنشطة`، هناك حقلان :guilabel:`فلتر النشاط` و "
 ":guilabel:`الفلتر المستخدَم`. "
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:173
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:173
 msgid ""
 "The :guilabel:`Activity Filter` field provides the option to configure a "
 "recipient filter domain that applies to this activity *and* its child "
@@ -3461,7 +3592,7 @@ msgstr ""
 " على هذا النشاط *بالإضافة إلى* أنشطته الفرعية. إنه يعمل بنفس الضريقة التي "
 "يعمل بها فلتر الفئة المستهدَفة. "
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:177
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:177
 msgid ""
 "To add an activity filter, click :guilabel:`Add condition` in the "
 ":guilabel:`Activity Filter` field and proceed to configure a custom activity"
@@ -3470,14 +3601,14 @@ msgstr ""
 "لإضافة فلتر نشاط، اضغط على :guilabel:`إضافة شرط` في حقل :guilabel:`فلتر "
 "النشاط` وقم بتهيئة قاعدة (قواعد) معادلة فلتر مخصصة للأنشطة. "
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst-1
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst-1
 msgid ""
 "How to add an activity filter to a workflow activity in Odoo Marketing "
 "Automation."
 msgstr ""
 "كيفية إضافة فلتر نشاط إلى نشاط سير عمل في تطبيق أتمتة التسويق لدى أودو. "
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:184
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:184
 msgid ""
 "This option is not a required field. If left alone, the activity applies to "
 "all records related to the target audience of the overall campaign."
@@ -3485,7 +3616,7 @@ msgstr ""
 "هذا الخيار ليس حقلاً مطلوباً. إذا تركته وشأنه، سينطبق النشاط على كافة "
 "السحلات المتعلقة بالفئة المستهدَفة في الحملة بأكملها. "
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:190
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:190
 msgid ""
 "The :guilabel:`Applied Filter` field is non-configurable. It's simply a "
 "summary of when the activity will be performed, *only* if it satisfies the "
@@ -3496,7 +3627,7 @@ msgstr ""
 "*فقط* إذا كان يتوافق مع النطاق المحدد (مثال: القواعد التي قد تمت تهيئتها في "
 "حقل :guilabel:`فلتر النشاط`). "
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:195
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:195
 msgid ""
 "After the activity's settings are fully configured, click :guilabel:`Save & "
 "Close` to save the activity and return to the marketing automation campaign "
@@ -3511,11 +3642,11 @@ msgstr ""
 " جديدة لـ :guilabel:`إنشاء أنشطة`، أو :guilabel:`إهمال` لحذف النشاط والعودة "
 "إلى استمارة حملة أتمتة التسويق. "
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:202
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:202
 msgid "Workflow activity"
 msgstr "نشاط سير العمل "
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:204
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:204
 msgid ""
 "Once an activity is created and saved, it appears as an activity card in the"
 " :guilabel:`Workflow` section, located at the bottom of the marketing "
@@ -3526,11 +3657,11 @@ msgstr ""
 "العمل` الموجود أسفل استمارة حملة أتمتة التسويق. يتم عرض التحليلات المتعلقة "
 "بكل نشاط كرسم بياني خطي. "
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst-1
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst-1
 msgid "Typical workflow activity in Odoo Marketing Automation."
 msgstr "نشاط سير عمل تقليدي في تطبيق أتمتة التسويق لدى أودو. "
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:212
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:212
 msgid ""
 "The configured :guilabel:`Trigger` time for that activity can be found to "
 "the left of the :guilabel:`Workflow Activity` card in the "
@@ -3539,7 +3670,7 @@ msgstr ""
 "ستجد وقت  :guilabel:`التشغيل` لذلك النشاط إلى يمين بطاقة :guilabel:`نشاط سير"
 " العمل` في قسم :guilabel:`سير العمل`. "
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:215
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:215
 msgid ""
 "Once the activity has been triggered, a figure representing the number of "
 ":guilabel:`Success` or :guilabel:`Rejected` activities will be displayed to "
@@ -3548,7 +3679,7 @@ msgstr ""
 "عندما يتم تشغيل النشاط، سيتم عرض رقم يمثل عدد الأنشطة :guilabel:`الناجحة` أو"
 " :guilabel:`المرفوضة` إلى يسار الرسم البياني. "
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:219
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:219
 msgid ""
 "If the :guilabel:`Activity Type` of the activity is set to :guilabel:`Email`"
 " or :guilabel:`SMS`, there are more in-depth analytics beneath the activity "
@@ -3562,11 +3693,11 @@ msgstr ""
 "إرسالها`، ونسبة الرسائل التي :guilabel:`تم الضغط عليها` من بين الرسائل "
 "المرسلة، أو :guilabel:`تم الرد عليها` أو، :guilabel:`المرتدة`. "
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:225
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:225
 msgid "Child activities"
 msgstr "الأنشطة التابعة "
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:227
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:227
 msgid ""
 "There is also the option to add a *child activity* by clicking "
 ":guilabel:`Add child activity`, located at the bottom of each activity block"
@@ -3576,7 +3707,7 @@ msgstr ""
 " تابع`، الموجود أسفل كل مربع نشاط في قسم :guilabel:`سير العمل` في استمارة "
 "الحملة التسويقية. "
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:231
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:231
 msgid ""
 "Child activities are sub-activities that are connected to and triggered by "
 "the activity above it, which is known as its *parent activity*. A child "
@@ -3587,11 +3718,11 @@ msgstr ""
 "انتهائه، والذي يُعرَف بـ *النشاط الأساسي*. من السهل تمييز النشاط الفرعي، حيث"
 " إنه يدنو النشاط الأساسي بقليل. "
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst-1
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst-1
 msgid "A typical child activity indented beneath its parent activity."
 msgstr "نشاط تابع عادي يدنو النشاط الأساسي. "
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:239
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:239
 msgid ""
 "Odoo provides a number of triggering options to launch a child activity - "
 "all of which depend on the trigger configurations related to its parent "
@@ -3603,21 +3734,21 @@ msgstr ""
 "فوق :guilabel:`إضافة نشاط تابع`، لإظهار قائمة من خيارات مشغلات الأنشطة "
 "التابعة. "
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst-1
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst-1
 msgid ""
 "The various child activity trigger options in the workflow section of a "
 "campaign."
 msgstr "خيارات مشغلات الأنشطة التابعة في قسم سير عمل الحملة. "
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:247
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:247
 msgid "Select any of the following child activity triggers:"
 msgstr "قم بتحديد أي من مشغلات الأنشطة التابعة التالية: "
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:249
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:249
 msgid ":guilabel:`Add Another Activity`: instantly adds another activity."
 msgstr "يؤدي :guilabel:`إضافة نشاط آخر`: إلى إضافة نشاط آخر فوراً. "
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:250
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:250
 msgid ""
 ":guilabel:`Opened`: the next activity will be triggered if the recipient "
 "opens the mailing."
@@ -3625,7 +3756,7 @@ msgstr ""
 ":guilabel:`تم الفتح`: تعني أنه سيتم تشغيل النشاط التالي إذا قام المستلم بفتح"
 " الرسالة. "
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:251
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:251
 msgid ""
 ":guilabel:`Not Opened`: the next activity will be triggered if the recipient"
 " does not open the mailing."
@@ -3633,7 +3764,7 @@ msgstr ""
 ":guilabel:`لم يتم الفتح`: تعني أنه سيتم تشغيل النشاط التالي إذا لم يقم "
 "المستلم بفتح الرسالة. "
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:253
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:253
 msgid ""
 ":guilabel:`Replied`: the next activity will be triggered if the recipient "
 "replies to the mailing."
@@ -3641,7 +3772,7 @@ msgstr ""
 ":guilabel:`تم الرد`: تعني أنه سيتم تشغيل النشاط التالي إذا قام المستلم بالرد"
 " على الرسالة. "
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:254
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:254
 msgid ""
 ":guilabel:`Not Replied`: the next activity will be triggered if the "
 "recipient does not reply to the mailing."
@@ -3649,7 +3780,7 @@ msgstr ""
 ":guilabel:`لم يتم الرد`: تعني أنه سيتم تشغيل النشاط التالي إذا لم يقم "
 "المستلم بالرد على الرسالة. "
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:256
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:256
 msgid ""
 ":guilabel:`Clicked`: the next activity will be triggered if the recipient "
 "clicks on a link included in the mailing."
@@ -3657,7 +3788,7 @@ msgstr ""
 ":guilabel:`تم الضغط`: تعني أنه سيتم تشغيل النشاط التالي إذا قام المستلم "
 "بالضغط على رابط موجود في الرسالة. "
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:258
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:258
 msgid ""
 ":guilabel:`Not Clicked`: the next activity will be triggered if the "
 "recipient does not click on a link included in the mailing."
@@ -3665,7 +3796,7 @@ msgstr ""
 ":guilabel:`لم يتم الضغط`: تعني أنه سيتم تشغيل النشاط التالي إذا لم يقم "
 "المستلم بالضغط على رابط موجود في الرسالة. "
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:260
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:260
 msgid ""
 ":guilabel:`Bounced`: the next activity will be triggered if the mailing is "
 "bounced (not sent)."
@@ -3673,13 +3804,17 @@ msgstr ""
 ":guilabel:`المرتدة`: تعني أنه سيتم تشغيل النشاط التالي إذا ارتدّت الرسالة "
 "(لم يتم إرسالها). "
 
-#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:262
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:262
 msgid ""
 "Once a trigger is selected, the user can configure the child activity the "
 "same way they would for a regular workflow activity."
 msgstr ""
 "بمجرد أن يتم تحديد المشغل، بإمكان المستخدم تهيئة النشاط التابع بنفس الطريقة "
 "التي يقوم بتهيئة نشاط سير العمل العادي. "
+
+#: ../../content/applications/marketing/marketing_automation/workflow_activities.rst:266
+msgid ":doc:`testing_running`"
+msgstr ":doc:`testing_running`"
 
 #: ../../content/applications/marketing/sms_marketing.rst:8
 msgid "SMS Marketing"
@@ -4202,10 +4337,6 @@ msgid ""
 msgstr ""
 "عرض لوحة البيانات لحملات مختلفة في تطبيق التسويق عبر الرسائل النصية القصيرة "
 "لدى أودو، مفصولة حسب المراحل. "
-
-#: ../../content/applications/marketing/sms_marketing/essentials/sms_campaign_settings.rst:82
-msgid "Campaign templates"
-msgstr "قوالب الحملات "
 
 #: ../../content/applications/marketing/sms_marketing/essentials/sms_campaign_settings.rst:84
 msgid ""
@@ -6231,6 +6362,8 @@ msgid ""
 " push notification. This is an icon that appears beside the push "
 "notification."
 msgstr ""
+"تحت الحقل يوجد خيار لإضافة :guilabel:`صورة أيقونة` مخصصة إلى الاشعار "
+"المنبثق. إنها أيقونة تظهر بجانب الإشعار المنبثق. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:334
 msgid ""
@@ -6239,12 +6372,17 @@ msgid ""
 "window, in which the desired icon image can be located on the hard drive, "
 "and subsequently uploaded."
 msgstr ""
+"لرفع صورة جديدة، اضغط على :guilabel:`✏️ أيقونة (القلم)` عند التمرير فوق "
+":guilabel:`صورة أيقونة` الكاميرا. يؤدي القيام بذلك إلى إظهار نافذة منبثقة "
+"ستجد فيها صورة الأيقونة المطلوبة في  القرص الصلب وسيتم رفعها. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:338
 msgid ""
 "Once that's complete, Odoo automatically updates the visual preview of how "
 "the icon appears on the push notification."
 msgstr ""
+"بمجرد الانتهاء، يقوم أودو تلقائياً بتحديث المعاينة المرئية لما ستبدو عليه "
+"الأيقونة في الإشعارات المنبثقة. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:342
 msgid ""
@@ -6254,11 +6392,15 @@ msgid ""
 "appropriate, pre-determined time, taking the visitor's location into "
 "consideration."
 msgstr ""
+"تالياً، إذا تمت جدولة المنشور ليتم نشره لاحقاً، يوجد خيار لضمان أن المنشور "
+"قد تم إرساله في المنطقة الزمنية للزائر، عن طريق تمكين خيار "
+":guilabel:`التوقيت المحلي`. إذا تم تمكينه، سيقوم أودو بإرساله في الوقت "
+"المناسب والمحدد، مع أخذ موقع الزائر بعين الاعتبار. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:0
 msgid ""
 "The Local Time option in the Push Notification Options section of features."
-msgstr ""
+msgstr "خيار التوقيت المحلي في قسم خيارات الإشعارات المنبثقة للخصائص. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:351
 msgid ""
@@ -6267,30 +6409,41 @@ msgid ""
 "on certain criteria, and can be applied to match :guilabel:`all` or "
 ":guilabel:`any` of the rules."
 msgstr ""
+"بعد ذلك، يوجد حقل :guilabel:`مطابقة كافة التقارير`. يمنحك هذا الحقل إمكانية "
+"استهداف مجموعة محددة من المستلمين في قاعدة البيانات، بناءً على فئات محددة، "
+"ويمكن تطبيقها لمطابقة :guilabel:`كافة` القواعد أو :guilabel:`أي` منها. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:355
 msgid ""
 "To utilize this field, click the :guilabel:`+ Add condition` button, which "
 "reveals an equation-like rule field."
 msgstr ""
+"للاستفادة من هذا الحقل، اضغط على زر :guilabel:`+ إضافة شرط`، والذي يُظهِر "
+"حقل قاعدة أشبه بالمعادلة. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:358
 msgid ""
 "In this equation-like rule field, specifiy the specific criteria Odoo should"
 " take into account when sending this post to a particular target audience."
 msgstr ""
+"في حقل القاعدة الأشبه بالمعادلة هذا، قم بتحديد الفئة المحددة التي يجب أن "
+"يأخذها أودو بعين الاعتبار عند إرسال هذا المنشور إلى فئة مستهدفة محددة. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst-1
 msgid ""
 "Push notification conditions set up to match a specific amount of records in"
 " the database."
 msgstr ""
+"شروط الإشعارات المنبثقة تم إعدادها لمطابقة كمية محددة من السجلات في قاعدة "
+"البيانات. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:365
 msgid ""
 "To add an additional rule, click the :guilabel:`➕ (plus sign) icon` to the "
 "far-right of the rule."
 msgstr ""
+"لإضافة قاعدة إضافية، اضغط على أيقونة :guilabel:`➕ (علامة زائد)` أقصى يمين "
+"القاعدة. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:367
 msgid ""
@@ -6298,20 +6451,26 @@ msgid ""
 "further specify a target audience), click the unique :guilabel:`branch "
 "icon`, located to the right of the :guilabel:`➕ (plus sign) icon`."
 msgstr ""
+"لإضافة فرع (سلسلة من القواعد الإضافية بناءً على القاعدة السابقة لتحديد الفئة"
+" المستهدفة بشكل أكبر)، اضغط على :guilabel:`أيقونة الفرع` الفريدة، الموجودة "
+"يمين أيقونة :guilabel:`➕ (علامة زائد)`. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:371
 msgid "Lastly, click the :guilabel:`🗑️ (trash can) icon` to delete any rule."
 msgstr ""
+"وأخيراً، اضغط على أيقونة :guilabel:`🗑️ (سلة المهملات)` لحذف أي قاعدة. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:373
 msgid ""
 "The size of the specified target audience of recipients is represented by "
 "the number of :guilabel:`Records` displayed beneath the rules."
 msgstr ""
+"يتم تمثيل حجم الفئة المستهدفة من المستلمين بعدد :guilabel:`السجلات` المعروضة"
+" أسفل القواعد. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:377
 msgid "Posts page"
-msgstr ""
+msgstr "صفحة المنشورات "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:379
 msgid ""
@@ -6319,22 +6478,30 @@ msgid ""
 "Marketing app --> Posts`. Here, on the :guilabel:`Social Posts` page, every "
 "post that has been created and posted with Odoo can be seen and accessed."
 msgstr ""
+"حتى تحصل على نظرة عامة شاملة لمنشوراتك، اذهب إلى :menuselection:`تطبيق "
+"التسويق الاجتماعي --> المنشورات`. هنا، في صفحة  :guilabel:`المنشورات "
+"الاجتماعية`، سيكون من الممكن رؤية والوصول إلى كافة المنشورات التي قد تم "
+"إنشاؤها ونشرها مع أودو. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:383
 msgid ""
 "There are four different view options for the :guilabel:`Social Posts` page "
 "data: *kanban*, *calendar*, *list*, and *pivot*."
 msgstr ""
+"توجد أربع خيارات عرض مختلفة لبيانات صفحة :guilabel:`المنشورات الاجتماعية`: "
+"*كانبان*، *التقويم*، *القائمة*، و*المحور*. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:386
 msgid ""
 "The view options are located in the upper right corner of the "
 ":guilabel:`Posts` page, beneath the search bar."
 msgstr ""
+"خيارات العرض موجودة في الزاوية العلوية إلى اليمين في صفحة "
+":guilabel:`المنشورات`، أسفل شريط البحث. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:391
 msgid "Kanban view"
-msgstr ""
+msgstr "نافذة عرض كانبان "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:393
 msgid ""
@@ -6343,21 +6510,28 @@ msgid ""
 "connected social accounts and posts can be quickly seen, accessed, and "
 "analyzed."
 msgstr ""
+"افتراضياً، يقوم أودو بعرض المنشورات بطريقة عرض كانبان. يمكن فرز المعلومات "
+"الموجودة في هذه الصفحة بشكل أكبر، عن طريق الشريط الجانبي الأيسر، حيث يمكن "
+"رؤية كافة الحسابات والمنشورات الاجتماعية المتصلة والوصول إليها وتحليلها "
+"بسرعة. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:397
 msgid ""
 "The kanban view is represented by an :guilabel:`inverted bar graph icon` in "
 "the upper-right corner."
 msgstr ""
+"يتم تمثيل نافذة عرض كانبان باستخدام أيقونة :guilabel:`المخطط البياني الشريطي"
+" المعكوس` في الزاوية العلوية إلى اليمين. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:0
 msgid ""
 "Kanban view of the posts page in the Odoo Social Marketing application."
 msgstr ""
+"نافذة عرض كانبان في صفحة المنشورات في تطبيق التسويق الاجتماعي لدى أودو. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:404
 msgid "Calendar view"
-msgstr ""
+msgstr "نافذة عرض التقويم "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:406
 msgid ""
@@ -6366,6 +6540,10 @@ msgid ""
 "published. This option provides a clear overview of any planned day, week, "
 "or month, and Odoo displays all drafted, scheduled, and published posts."
 msgstr ""
+"يعرض خيار نافذة عرض التقويم تمثيلاً مرئياً للمنشورات بتنسيق تقويم يوضح وقت "
+"نشر المنشورات أو الوقت المجدول لنشرها. يمنحك هذا الخيار نظرة عامة واضحة على "
+"أي يوم أو أسبوع أو شهر مخطط له، ويقوم أودو بعرض كافة المنشورات التي تمت "
+"صياغتها وجدولتها ونشرها. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:411
 msgid ""
@@ -6373,16 +6551,21 @@ msgid ""
 " social media post can be created, and Odoo will post it on that specific "
 "date/time."
 msgstr ""
+"يؤدي الضغط على أحد التواريخ إلى ظهور استمارة تفاصيل منشور على وسائل التواصل "
+"الاجتماعي فارغ، حيث يمكن إنشاء منشور على وسائل التواصل الاجتماعي، وسيقوم "
+"أودو بنشره في ذلك التاريخ والوقت المحددين. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:414
 msgid ""
 "The calendar view is represented by a :guilabel:`calendar icon` in the "
 "upper-right corner."
 msgstr ""
+"يتم تمثيل نافذة عرض التقويم باستخدام أيقونة :guilabel:`التقويم` في الزاوية "
+"العلوية إلى اليمين. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:0
 msgid "Example of the calendar view in Odoo Social Marketing."
-msgstr ""
+msgstr "مثال على نافذة عرض القائمة في تطبيق التسويق الاجتماعي لدى أودو. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:422
 msgid ""
@@ -6391,6 +6574,10 @@ msgid ""
 "layout. Each line of the list displays the :guilabel:`Social Accounts`, "
 ":guilabel:`Message`, and :guilabel:`Status` of every post."
 msgstr ""
+"يشبه خيار عرض القائمة خيار كانبان، ولكن عوضاً عن الكتل الفردية، يتم عرض كافة"
+" معلومات المنشور في مخطط قائمة واضح. يعرض كل بند من القائمة "
+":guilabel:`حسابات التواصل الاجتماعي`، و:guilabel:`الرسالة`، "
+"و:guilabel:`حالة` كل منشور. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:426
 msgid ""
@@ -6398,42 +6585,52 @@ msgid ""
 ":guilabel:`Status` and lists all connected :guilabel:`Social Accounts`, as "
 "well."
 msgstr ""
+"يوجد أيضاً شريط جانبي أيسر مفيد ينظم كافة المنشورات حسب :guilabel:`الحالة` "
+"ويحتوي على كافة :guilabel:`حسابات التواصل الاجتماعي` المرتبطة أيضاً. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:429
 msgid ""
 "The list view is represented by four vertical lines in the upper-right "
 "corner."
-msgstr ""
+msgstr "يتم تمثيل عرض القائمة بأربعة خطوط رأسية في الزاوية العلوية اليمنى."
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:0
 msgid "View of the list option on the posts page in Odoo Social Marketing."
 msgstr ""
+"عرض خيار القائمة في صفحة المنشورات في تطبيق التسويق الاجتماعي لدى أودو. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:435
 msgid "Pivot view"
-msgstr ""
+msgstr "نافذة عرض Pivot "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:437
 msgid ""
 "The pivot view option provides a fully customizable grid table, where "
 "different measures of data can be added and analyzed."
 msgstr ""
+"يوفر خيار عرض pivot جدول شبكة قابل للتخصيص بالكامل، حيث يمكن إضافة قياسات "
+"مختلفة للبيانات وتحليلها. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:0
 msgid "View of the pivot option on the posts page in Odoo Social Marketing."
 msgstr ""
+"عرض خيار pivot على صفحة المنشورات في تطبيق التسويق الاجتماعي لدى أودو. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:444
 msgid ""
 "The pivot view option provides numerous analytical options, allowing for in-"
 "depth, detailed analysis of various posts and metrics."
 msgstr ""
+"يوفر خيار عرض pivot العديد من الخيارات التحليلية، مما يسمح بإجراء تحليل "
+"متعمق ومفصل لمختلف المنشورات والمقاييس. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:447
 msgid ""
 "Click on any :guilabel:`➕ (plus sign) icon` next to a line in the pivot "
 "table to reveal more metric options to add to the grid."
 msgstr ""
+"اضغط على أي أيقونة :guilabel:`➕ (علامة زائد)` بجانب بند في جدول pivot للكشف "
+"عن المزيد من خيارات المقاييس لإضافتها إلى الشبكة. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:450
 msgid ""
@@ -6441,12 +6638,17 @@ msgid ""
 "available, located to the right of the :guilabel:`Measures` drop-down menu, "
 "in the upper-left corner of the :guilabel:`Social Posts` page."
 msgstr ""
+"عندما تكون في نافذة عرض pivot، سيكون هناك خيار :guilabel:`إدراج في جدول "
+"البيانات`، الموجود على يمين القائمة المنسدلة :guilabel:`المقاييس`، في "
+"الزاوية العلوية من صفحة :guilabel:`المنشورات الاجتماعية`. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:454
 msgid ""
 "Next to the :guilabel:`Insert in Spreadsheet` are three options, specific to"
 " the pivot view."
 msgstr ""
+"بجانب خيار :guilabel:`إدراج في جدول البيانات` توجد ثلاثة خيارات خاصة بعرض "
+"pivot. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:456
 msgid "From left to right, those options are:"
@@ -6463,12 +6665,16 @@ msgid ""
 ":guilabel:`Expand All`, which expands each line in the grid, revealing more "
 "detailed information related to it."
 msgstr ""
+"خاصية :guilabel:`توسيع الكل`، والتي تؤدي إلى توسيع كل بند في الشبكة، وكشف "
+"المزيد من المعلومات التفصيلية المتعلقة به. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:461
 msgid ""
 ":guilabel:`Download`, which, when clicked, instantly downloads the pivot "
 "table as a spreadsheet."
 msgstr ""
+"خيار :guilabel:`تنزيل`، والذي، عند الضغط عليه، يقوم فوراً بتنزيل جدول pivot "
+"كجدول بيانات. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:465
 msgid "Visitors"
@@ -6480,10 +6686,13 @@ msgid ""
 " connected to the database, navigate to :menuselection:`Social Marketing app"
 " --> Visitors`."
 msgstr ""
+"لرؤية نظرة عامة كاملة على كافة الأشخاص الذين زاروا الموقع (المواقع) "
+"الإلكترونية المتصلة بقاعدة البيانات، اذهب إلى :menuselection:`تطبيق التسويق "
+"الاجتماعي --> الزوار`. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst-1
 msgid "View of the Visitors page in the Odoo Social Marketing application."
-msgstr ""
+msgstr "عرض صفحة الزوار في تطبيق التسويق الاجتماعي لدى أودو. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:474
 msgid ""
@@ -6492,6 +6701,10 @@ msgid ""
 "information in the database, the option to send them an :guilabel:`Email` "
 "and/or an :guilabel:`SMS` is available."
 msgstr ""
+"هنا، يمنحك أودو مخططاً تفصيلياً لكافة المعلومات المتعلقة بالزائرين في عرض "
+"كانبان الافتراضي. إذا كان لدى الزائرين معلومات اتصال موجودة بالفعل في قاعدة "
+"البيانات، فإن خيار إرسال :guilabel:`بريد إلكتروني` و/أو :guilabel:`رسالة "
+"نصية قصيرة` متاح لهم. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:478
 msgid ""
@@ -6499,6 +6712,8 @@ msgid ""
 "options are located in the upper-right corner of the :guilabel:`Visitors` "
 "page."
 msgstr ""
+"يمكن أيضاً عرض بيانات الزائر نفسها كقائمة أو رسم بياني. توجد خيارات العرض "
+"هذه في الزاوية العلوية إلى اليمين في صفحة :guilabel:`الزوار`. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:482
 msgid "Social media page"
@@ -6511,6 +6726,11 @@ msgid ""
 ":guilabel:`Social Media` page, navigate to :menuselection:`Social Marketing "
 "app --> Configuration --> Social Media`."
 msgstr ""
+"توجد طريقة أخرى لربط حسابات التواصل الاجتماعي بتطبيق *التسويق الاجتماعي* لدى"
+" أودو بسرعة ويمكن القيام بها على صفحة :guilabel:`وسائل التواصل الاجتماعي`. "
+"للوصول إلى صفحة :guilabel:`وسائل التواصل الاجتماعي`، اذهب إلى "
+":menuselection:`تطبيق التسويق الاجتماعي --> التهيئة --> وسائل التواصل "
+"الاجتماعي`. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:488
 msgid ""
@@ -6520,11 +6740,17 @@ msgid ""
 ":guilabel:`Twitter`, :guilabel:`YouTube`, and :guilabel:`Push "
 "Notifications`."
 msgstr ""
+"في صفحة :guilabel:`وسائل التواصل الاجتماعي`، توجد مجموعة من كافة خيارات "
+"وسائل التواصل الاجتماعي، كل منها مكتمل بزر :guilabel:`ربط الحساب`: "
+":guilabel:`Facebook`، :guilabel:`Instagram`، :guilabel: `LinkedIn`، "
+"و:guilabel:`Twitter`، و :guilabel:`YouTube`، و :guilabel:`الاشعارات "
+"المنبثقة`. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst-1
 msgid ""
 "View of the social media page in the Odoo Social Marketing application."
 msgstr ""
+"عرض صفحة وسائل التواصل الاجتماعي في تطبيق التسويق الاجتماعي لدى أودو. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:497
 msgid "Social accounts page"
@@ -6539,11 +6765,17 @@ msgid ""
 "who it was :guilabel:`Created by`, and the :guilabel:`Company` to which it "
 "is associated."
 msgstr ""
+"لرؤية قائمة بكافة حسابات مواقع التواصل الاجتماعي والمواقع الإلكترونية "
+"المرتبطة بقاعدة البيانات، اذهب إلى :menuselection:`تطبيق التسويق الاجتماعي "
+"--> التهيئة--> الحسابات الاجتماعية`. تعرض هذه :guilabel:`الحسابات "
+"الاجتماعية`:guilabel:`الاسم`، و :guilabel:`الاسم/الاسم المختصر`، ومنصة "
+":guilabel:`وسائل التواصل الاجتماعي`، ومن الذي :guilabel:`تم إنشاؤها "
+"بواسطته`، و :guilabel:`الشركة` التي ترتبط بها. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst-1
 msgid ""
 "View of the social accounts page in the Odoo Social Marketing application."
-msgstr ""
+msgstr "عرض صفحة الحسابات الاجتماعية في تطبيق التسويق الاجتماعي لدى أودو. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:509
 msgid ""
@@ -6551,6 +6783,9 @@ msgid ""
 "desired account from the list on this page, and proceed to make any "
 "adjustments necessary."
 msgstr ""
+"لتحرير/تعديل أي من حسابات التواصل الاجتماعي في هذه الصفحة، ما عليك سوى تحديد"
+" الحساب المطلوب من القائمة الموجودة في هذه الصفحة، ثم المتابعة لإجراء أي "
+"تعديلات ضرورية. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:513
 msgid "Social streams page"
@@ -6562,6 +6797,9 @@ msgid ""
 "added to the main *Social Marketing* dashboard, navigate to "
 ":menuselection:`Social Marketing app --> Configuration --> Social Streams`."
 msgstr ""
+"لعرض صفحة منفصلة تحتوي على كافة تدفقات الوسائط الاجتماعية التي تمت إضافتها "
+"إلى لوحة بيانات *التسويق الاجتماعي* الرئيسية، اذهب إلى :menuselection:`تطبيق"
+" التسويق الاجتماعي --> التهيئة--> الوسائط الاجتماعية`. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:523
 msgid ""
@@ -6571,12 +6809,19 @@ msgid ""
 " etc.), who it was :guilabel:`Created by`, and  the :guilabel:`Company` to "
 "which it is associated."
 msgstr ""
+"هنا، يتم تنظيم معلومات مساحة المشاركات الاجتماعية في قائمة تحتوي على "
+":guilabel:`وسائل التواصل الاجتماعي`، و :guilabel:`عنوان` الوسائط، و "
+":guilabel:`نوع` الوسائط (على سبيل المثال: :guilabel:`المنشورات` ، "
+":guilabel:`كلمة مفتاحية`، وما إلى ذلك)، والشخص الذي :guilabel:`تم إنشاؤها "
+"بواسطته`، و :guilabel:`الشركة` التي ترتبط بها. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:528
 msgid ""
 "To modify any stream's information, simply click the desired stream from the"
 " list, and proceed to make any necessary adjustments."
 msgstr ""
+"لتعديل معلومات أي وسائط، ما عليك سوى الضغط على الوسط المطلوب من القائمة، ثم "
+"المتابعة لإجراء أي تعديلات ضرورية. "
 
 #: ../../content/applications/marketing/social_marketing/essentials/social_essentials.rst:532
 msgid ""
@@ -6602,6 +6847,8 @@ msgid ""
 "customers and employees, which in turn, allows them to make more informed "
 "business decisions."
 msgstr ""
+"غالباً ما تستخدم الشركات الاستطلاعات لجمع المعلومات القيّمة من عملائها "
+"وموظفيها، وهذا بدوره يسمح لهم باتخاذ قرارات عمل أكثر استنارة. "
 
 #: ../../content/applications/marketing/surveys/create.rst:8
 msgid ""
@@ -6609,6 +6856,9 @@ msgid ""
 " of a recent event, measure the satisfaction of customers (or employees), "
 "and gain more insight into shifting market sentiments."
 msgstr ""
+"في أودو، تُستخدم الاستطلاعات لجمع ملاحظات العملاء، وتقييم نجاح فعالية حديثة،"
+" وتقييم رضا العملاء (أو الموظفين)، واكتساب المزيد من المعرفة حول تغير "
+"اتجاهات السوق. "
 
 #: ../../content/applications/marketing/surveys/create.rst:13
 msgid "Getting started"
@@ -6620,6 +6870,9 @@ msgid ""
 ":guilabel:`Create`. Odoo then redirects the page to a blank survey template "
 "form."
 msgstr ""
+"للبدء، قم بفتح تطبيق :guilabel:`الاستطلاعات` ثم اضغط على زر "
+":guilabel:`إنشاء`. يقوم أودو بعد ذلك بإعادة توجيه الصفحة إلى نموذج قالب "
+"استطلاع فارغ. "
 
 #: ../../content/applications/marketing/surveys/create.rst:18
 msgid ""
@@ -6628,6 +6881,10 @@ msgid ""
 ":guilabel:`Edit (pencil)` icon. When the file explorer window opens, choose "
 "an image from the local files."
 msgstr ""
+"في نموذج الاستطلاع، أضف :guilabel:`عنوان الاستطلاع` ثم أضف صورة غلاف "
+"للاستبيان عن طريق التمرير فوق أيقونة الصورة والضغط على أيقونة "
+":guilabel:`تحرير (قلم رصاص)`. عندما تُفتح نافذة مستكشف الملفات، اختر صورة من"
+" الملفات المحلية. "
 
 #: ../../content/applications/marketing/surveys/create.rst:22
 msgid ""
@@ -6635,6 +6892,9 @@ msgid ""
 "questions and format can be created and customized. These tabs are labeled "
 "as follows:"
 msgstr ""
+"أسفل :guilabel:`عنوان الاستطلاع` توجد علامات تبويب مختلفة يمكن من خلالها "
+"إنشاء أسئلة الاستطلاع وتنسيقها وتخصيصها. يتم تسمية علامات التبويب هذه على "
+"النحو التالي: "
 
 #: ../../content/applications/marketing/surveys/create.rst:25
 msgid ":guilabel:`Questions`: the list of questions to be asked in the survey"
@@ -6667,12 +6927,18 @@ msgid ""
 "type in a section name. Then, add questions or drag and drop questions into "
 "the divided sections."
 msgstr ""
+"أضف أسئلة وأقسامًا إلى الاستطلاع في علامة التبويب :guilabel:`الأسئلة`. يقسم "
+"القسم الاستطلاع إلى أجزاء لتجميع الأسئلة المتشابهة معًا بشكل مرئي. لإنشاء "
+"قسم، انقر فوق :guilabel: `إضافة قسم` واكتب اسم القسم. ثم أضف أسئلة أو اسحب "
+"الأسئلة وأفلتها في الأقسام المقسمة. "
 
 #: ../../content/applications/marketing/surveys/create.rst:41
 msgid ""
 "Clicking :guilabel:`Add a question` opens the :guilabel:`Create Sections and"
 " Questions` pop-up to create and customize the survey question."
 msgstr ""
+"يؤدي النقر على :guilabel: `إضافة سؤال` إلى فتح النافذة المنبثقة :guilabel: "
+"`إنشاء أقسام وأسئلة` لإنشاء سؤال الاستطلاع وتخصيصه. "
 
 #: ../../content/applications/marketing/surveys/create.rst-1
 msgid "The survey question pop-up window."
@@ -6689,6 +6955,9 @@ msgid ""
 "Type`. A preview of how the question type looks is shown in the preview "
 "window."
 msgstr ""
+"في النافذة المنبثقة :guilabel:`إنشاء أقسام وأسئلة`، اكتب السؤال في الحقل "
+":guilabel:`السؤال`. ثم اختر :guilabel:`نوع السؤال`. تظهر معاينة لكيفية ظهور "
+"نوع السؤال في نافذة المعاينة. "
 
 #: ../../content/applications/marketing/surveys/create.rst:55
 msgid "Choose from the following :guilabel:`Question Types`:"
@@ -6733,6 +7002,10 @@ msgid ""
 ":guilabel:`Description` tab always remains the same, regardless of what "
 "question is chosen."
 msgstr ""
+"تظهر ميزات مختلفة في علامتي التبويب :guilabel:`Answers` "
+"و:guilabel:`Options`، اعتمادًا على :guilabel:`Question Type` الذي تم "
+"اختياره. ومع ذلك، تظل علامة التبويب :guilabel:`Description` كما هي دائمًا، "
+"بغض النظر عن السؤال الذي تم اختياره. "
 
 #: ../../content/applications/marketing/surveys/create.rst:72
 msgid "Create sections and questions"
@@ -6745,18 +7018,25 @@ msgid ""
 "the :guilabel:`Answers` (if applicable), :guilabel:`Description`, and "
 ":guilabel:`Options` tabs."
 msgstr ""
+"بمجرد تحديد :guilabel:`Question Type`، هناك ثلاث علامات تبويب محتملة حيث "
+"يمكن تخصيص المعلومات للسؤال. تتضمن علامات التبويب :guilabel:`الإجابات` (إن "
+"أمكن)، و:guilabel:`Description`، و:guilabel:`Options`. "
 
 #: ../../content/applications/marketing/surveys/create.rst:78
 msgid ""
 "Each tab offers a variety of different features depending on what "
 ":guilabel:`Question Type` was chosen."
 msgstr ""
+"توفر كل علامة تبويب مجموعة متنوعة من الميزات المختلفة اعتمادًا على ما تم "
+"اختياره :guilabel:`Question Type`. "
 
 #: ../../content/applications/marketing/surveys/create.rst:81
 msgid ""
 "For example, in the :guilabel:`Options` tab, the following options may "
 "appear:"
 msgstr ""
+"على سبيل المثال، في علامة التبويب :guilabel:`Options`، قد تظهر الخيارات "
+"التالية: "
 
 #: ../../content/applications/marketing/surveys/create.rst:83
 msgid ":guilabel:`Mandatory Answer`: the question must be answered."
@@ -6767,32 +7047,39 @@ msgid ""
 ":guilabel:`Matrix Type`: for matrix-type questions, select if one choice or "
 "multiple choices can be selected per row."
 msgstr ""
+":guilabel:`Matrix Type`: بالنسبة للأسئلة من نوع المصفوفة، حدد ما إذا كان "
+"يمكن تحديد خيار واحد أو خيارات متعددة في كل صف. "
 
 #: ../../content/applications/marketing/surveys/create.rst:86
 msgid ":guilabel:`Number of columns`: select how many columns are displayed."
-msgstr ""
+msgstr ":guilabel:`عدد الأعمدة`: حدد عدد الأعمدة التي سيتم عرضها. "
 
 #: ../../content/applications/marketing/surveys/create.rst:87
 msgid ":guilabel:`Images on answers`: allow images on the answer options."
-msgstr ""
+msgstr ":guilabel:`الصور في الإجابات`: السماح بالصور في خيارات الإجابة. "
 
 #: ../../content/applications/marketing/surveys/create.rst:88
 msgid ""
 ":guilabel:`Conditional Display`: determine if the question is displayed "
 "based on the participant's answer to a previous question."
 msgstr ""
+":guilabel:`العرض المشروط`: تحديد ما إذا كان سيتم عرض السؤال بناءً على إجابة "
+"المشارك على سؤال سابق. "
 
 #: ../../content/applications/marketing/surveys/create.rst:90
 msgid ""
 ":guilabel:`Show Comments Field`: allow the participant to type a comment in "
 "a text box."
 msgstr ""
+":guilabel:`إظهار حقل التعليقات`: اسمح للمشارك بكتابة تعليق في مربع النص. "
 
 #: ../../content/applications/marketing/surveys/create.rst:91
 msgid ""
 ":guilabel:`Question Time Limit`: for live session surveys, set a time limit "
 "for the question."
 msgstr ""
+":guilabel:`الحد الزمني للسؤال`: بالنسبة لاستطلاعات الجلسة المباشرة، قم "
+"بتعيين حد زمني للسؤال. "
 
 #: ../../content/applications/marketing/surveys/create.rst:94
 msgid "Conditional Display"
@@ -6803,6 +7090,8 @@ msgid ""
 ":guilabel:`Conditional Display` means the question is only displayed if the "
 "specified conditional answer has been selected in a previous question."
 msgstr ""
+":guilabel:`العرض الشرطي` يعني أن السؤال يتم عرضه فقط إذا تم تحديد الإجابة "
+"الشرطية المحددة في سؤال سابق. "
 
 #: ../../content/applications/marketing/surveys/create.rst:99
 msgid ""
@@ -6810,12 +7099,16 @@ msgid ""
 ":guilabel:`Triggering Question` field appears. Select a question from the "
 "survey."
 msgstr ""
+"عندما يتم تحديد المربع المجاور لـ :guilabel:`العرض الشرطي`، يظهر الحقل "
+":guilabel:`Triggering Question`. اختر سؤالاً من الاستطلاع. "
 
 #: ../../content/applications/marketing/surveys/create.rst:102
 msgid ""
 "Then, a :guilabel:`Triggering Answer` field appears. Here, select which "
 "answer will trigger this :guilabel:`Conditional Display` question."
 msgstr ""
+"بعد ذلك، يظهر الحقل :guilabel:`Triggering Answer`. هنا، حدد الإجابة التي "
+"ستؤدي إلى ظهور هذا السؤال :guilabel:`العرض المشروط`. "
 
 #: ../../content/applications/marketing/surveys/create.rst:106
 msgid "Options tab"
@@ -6826,6 +7119,8 @@ msgid ""
 "Back on the main survey template form, under the :guilabel:`Options` tab, "
 "there are different sections of settings that can be modified."
 msgstr ""
+"بالعودة إلى نموذج قالب الاستطلاع الرئيسي، ضمن علامة التبويب "
+":guilabel:`Options`، توجد أقسام مختلفة من الإعدادات التي يمكن تعديلها. "
 
 #: ../../content/applications/marketing/surveys/create.rst:111
 msgid "The sections include:"
@@ -6834,7 +7129,7 @@ msgstr ""
 #: ../../content/applications/marketing/surveys/create.rst:113
 msgid ""
 ":guilabel:`Questions`: focuses on the overall presentation of the survey"
-msgstr ""
+msgstr ":guilabel:`الأسئلة`: تركز على العرض العام للاستطلاع "
 
 #: ../../content/applications/marketing/surveys/create.rst:114
 msgid ":guilabel:`Scoring`: decides how the survey is scored"
@@ -6879,6 +7174,9 @@ msgid ""
 "appears. If selected, the :guilabel:`Back Button` option allows the "
 "participant to go back to a question during the survey."
 msgstr ""
+"إذا تم تحديد الخيارين :guilabel:`صفحة واحدة لكل قسم` أو :guilabel:`صفحة "
+"واحدة لكل سؤال`، فسيظهر الخيار :guilabel:`زر الرجوع`. إذا تم تحديده، فإن "
+"خيار :guilabel:`زر العودة` يسمح للمشارك بالعودة إلى السؤال أثناء الاستطلاع. "
 
 #: ../../content/applications/marketing/surveys/create.rst:131
 msgid ""
@@ -6887,6 +7185,9 @@ msgid ""
 " displayed. It is shown as either a :guilabel:`Percentage` or a "
 ":guilabel:`Number`."
 msgstr ""
+"ضمن خيارات :guilabel:`Layout`، يوجد الإعداد :guilabel:`Progression Mode`، "
+"والذي يشير إلى كيفية عرض تقدم المشارك أثناء الاستطلاع. ويتم عرضه إما على "
+"هيئة :guilabel:`Percentage` أو :guilabel:`Number`. "
 
 #: ../../content/applications/marketing/surveys/create.rst:135
 msgid ""
@@ -6894,6 +7195,9 @@ msgid ""
 "To implement this option, simply check the box, and enter the amount of time"
 " (in minutes) participants have to complete the survey."
 msgstr ""
+"بعد ذلك، هناك خيار متاح لإضافة :guilabel:`Survey Time Limit`. لتنفيذ هذا "
+"الخيار، ما عليك سوى تحديد المربع وإدخال مقدار الوقت (بالدقائق) المتاح "
+"للمشاركين لإكمال الاستبيان. "
 
 #: ../../content/applications/marketing/surveys/create.rst:139
 msgid ""
@@ -6902,6 +7206,9 @@ msgid ""
 "section`, in other words, the number of random questions can be configured "
 "by section. This mode is ignored in a live session."
 msgstr ""
+"بعد خيار :guilabel:`Survey Time Limit`، يوجد قسم يسمى:guilabel:`Selection`. "
+"هنا، يمكن أن تكون الأسئلة:guilabel:`عشوائية لكل قسم`، بمعنى آخر، يمكن تكوين "
+"عدد الأسئلة العشوائية حسب القسم. يتم تجاهل هذا الوضع في الجلسة المباشرة. "
 
 #: ../../content/applications/marketing/surveys/create.rst:144
 #: ../../content/applications/marketing/surveys/scoring.rst:56
@@ -6917,6 +7224,7 @@ msgid ""
 "The following options are available when deciding how a :guilabel:`Scoring` "
 "method:"
 msgstr ""
+"تتوفر الخيارات التالية عند تحديد كيفية استخدام طريقة :guilabel:`Scoring`: "
 
 #: ../../content/applications/marketing/surveys/create.rst:151
 msgid ":guilabel:`No scoring`"
@@ -6937,6 +7245,10 @@ msgid ""
 ":guilabel:`Success %` field appears. Set the percentage of correct answers "
 "needed to pass the survey."
 msgstr ""
+"إذا تم تحديد الخيارين :guilabel:`تسجيل النقاط بالإجابات في النهاية` أو "
+":guilabel:`تسجيل النقاط بدون إجابات في النهاية`، فسيظهر الحقل "
+":guilabel:`النجاح %`. قم بتعيين النسبة المئوية للإجابات الصحيحة المطلوبة "
+"لاجتياز الاستطلاع. "
 
 #: ../../content/applications/marketing/surveys/create.rst:159
 msgid ""
@@ -6955,6 +7267,8 @@ msgid ""
 ":guilabel:`Certification Badge` is set, the survey participant also receives"
 " a badge upon passing the certification."
 msgstr ""
+"إذا تم تمكين ميزة :guilabel:`Give Badge` وتم تعيين :guilabel:`Certification "
+"Badge`، فسيحصل المشارك في الاستطلاع أيضًا على شارة عند اجتياز الشهادة. "
 
 #: ../../content/applications/marketing/surveys/create.rst:169
 #: ../../content/applications/marketing/surveys/time_random.rst:48
