@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 08:39+0000\n"
+"POT-Creation-Date: 2024-03-07 13:06+0000\n"
 "PO-Revision-Date: 2022-10-04 12:54+0000\n"
 "Last-Translator: Maitê Dietze, 2024\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/odoo/teams/41243/pt_BR/)\n"
@@ -81,7 +81,7 @@ msgstr ""
 #: ../../content/applications/sales/crm/track_leads/prospect_visits.rst:12
 #: ../../content/applications/sales/point_of_sale/configuration.rst:6
 #: ../../content/applications/sales/point_of_sale/employee_login.rst:13
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:11
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:13
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:13
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:12
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:14
@@ -98,6 +98,7 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/restaurant/kitchen_printing.rst:10
 #: ../../content/applications/sales/point_of_sale/restaurant/tips.rst:11
 #: ../../content/applications/sales/point_of_sale/shop/barcode.rst:10
+#: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:10
 #: ../../content/applications/sales/rental.rst:20
 #: ../../content/applications/sales/sales/invoicing/proforma.rst:14
 #: ../../content/applications/sales/sales/products_prices/products/product_images.rst:14
@@ -2307,11 +2308,18 @@ msgstr ""
 "**Dinheiro** é selecionado por padrão se você digitar o valor sem escolher "
 "uma forma de pagamento."
 
-#: ../../content/applications/sales/point_of_sale.rst:52
+#: ../../content/applications/sales/point_of_sale.rst:50
+msgid ""
+"The system can only load a limited number of products for effective opening."
+" Click :guilabel:`Search more` if the desired product is not loaded "
+"automatically."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale.rst:56
 msgid "Set customers"
 msgstr "Definir clientes"
 
-#: ../../content/applications/sales/point_of_sale.rst:54
+#: ../../content/applications/sales/point_of_sale.rst:58
 msgid ""
 "Registering your customer is necessary to :doc:`collect their loyalty points"
 " and grant them rewards <point_of_sale/pricing/loyalty>`, automatically "
@@ -2324,7 +2332,7 @@ msgstr ""
 "<point_of_sale/pricing/pricelists>` ou :ref:`gerar e imprimir uma fatura "
 "<receipts-invoices/invoices>`."
 
-#: ../../content/applications/sales/point_of_sale.rst:59
+#: ../../content/applications/sales/point_of_sale.rst:63
 msgid ""
 "You can create customers from an :ref:`open POS session <pos/session-start>`"
 " by clicking :menuselection:`Customer --> Create`, and filling in the "
@@ -2338,7 +2346,7 @@ msgstr ""
 "backend acessando :menuselection:`Ponto de Venda --> Pedidos --> Clientes` e"
 " clicando em :guilabel:`Novo`. Em seguida, preencha as informações e salve."
 
-#: ../../content/applications/sales/point_of_sale.rst:64
+#: ../../content/applications/sales/point_of_sale.rst:68
 msgid ""
 "To set a customer during an order, access the list of customers by clicking "
 ":guilabel:`Customer` on the POS interface. You can also set a customer at "
@@ -2348,11 +2356,11 @@ msgstr ""
 "clicando em :guilabel:`Cliente` na interface do PDV. Você também pode "
 "definir um cliente na tela de pagamento clicando em :guilabel:`Cliente`."
 
-#: ../../content/applications/sales/point_of_sale.rst:71
+#: ../../content/applications/sales/point_of_sale.rst:75
 msgid "Customer notes"
 msgstr "Notas do cliente"
 
-#: ../../content/applications/sales/point_of_sale.rst:73
+#: ../../content/applications/sales/point_of_sale.rst:77
 msgid ""
 "You can add **customer notes** about specific products directly from an open"
 " :ref:`POS session <pos/session-start>`. For instance, to provide cleaning "
@@ -2365,7 +2373,7 @@ msgstr ""
 "para acompanhar uma solicitação específica do cliente, como querer que o "
 "produto não seja montado."
 
-#: ../../content/applications/sales/point_of_sale.rst:77
+#: ../../content/applications/sales/point_of_sale.rst:81
 msgid ""
 "To do so, select a product and click :guilabel:`Customer Note` on the pad. "
 "Doing so opens a pop-up window in which you can add or modify content for "
@@ -2375,7 +2383,7 @@ msgstr ""
 "cliente`. Ao fazer isso, será aberta uma janela pop-up, na qual você pode "
 "adicionar ou modificar o conteúdo da nota."
 
-#: ../../content/applications/sales/point_of_sale.rst:81
+#: ../../content/applications/sales/point_of_sale.rst:85
 msgid ""
 "Product notes from an :doc:`imported SO <point_of_sale/shop/sales_order>` "
 "are displayed identically in the cart."
@@ -2391,7 +2399,7 @@ msgstr ""
 "Botão de nota do cliente e notas (sessão SO e POS) sobre produtos no "
 "carrinho"
 
-#: ../../content/applications/sales/point_of_sale.rst:87
+#: ../../content/applications/sales/point_of_sale.rst:91
 msgid ""
 "Customer notes appear on customers' receipts and invoices similarly to how "
 "they appear in the cart, under the related product."
@@ -2404,31 +2412,31 @@ msgid ""
 "Customer receipt with notes from an SO and from the customer note feature"
 msgstr "Recibo do cliente com notas de um SO e do recurso de nota do cliente"
 
-#: ../../content/applications/sales/point_of_sale.rst:96
+#: ../../content/applications/sales/point_of_sale.rst:100
 msgid "Return and refund products"
 msgstr "Devolução e reembolso de produtos"
 
-#: ../../content/applications/sales/point_of_sale.rst:98
+#: ../../content/applications/sales/point_of_sale.rst:102
 msgid "To return and refund a product,"
 msgstr "Para devolver e reembolsar um produto,"
 
-#: ../../content/applications/sales/point_of_sale.rst:100
+#: ../../content/applications/sales/point_of_sale.rst:104
 msgid ":ref:`start a session <pos/session-start>` from the **POS dashboard**;"
 msgstr ":ref:`inicie uma sessão <pos/session-start>` do **painel do PDV**;"
 
-#: ../../content/applications/sales/point_of_sale.rst:101
+#: ../../content/applications/sales/point_of_sale.rst:105
 msgid "click :guilabel:`Refund` and select the corresponding order;"
 msgstr "clique em guilabel:`Reembolsar` e selecione o pedido em questão;"
 
-#: ../../content/applications/sales/point_of_sale.rst:102
+#: ../../content/applications/sales/point_of_sale.rst:106
 msgid "select the product and the quantity to refund using the keypad;"
 msgstr "selecione o produto e a quantidade a reembolsar;"
 
-#: ../../content/applications/sales/point_of_sale.rst:103
+#: ../../content/applications/sales/point_of_sale.rst:107
 msgid "click :guilabel:`Refund` to go back to the previous screen;"
 msgstr "clique em :guilabel:`Reembolsar` para voltar à tela anterior;"
 
-#: ../../content/applications/sales/point_of_sale.rst:104
+#: ../../content/applications/sales/point_of_sale.rst:108
 msgid ""
 "once the order is completed, click :guilabel:`Payment` to proceed to the "
 "refund;"
@@ -2436,7 +2444,7 @@ msgstr ""
 "uma vez que o pedido for concluído, clique em :guilabel:`Pagamento` para "
 "prosseguir com o reembolso;"
 
-#: ../../content/applications/sales/point_of_sale.rst:105
+#: ../../content/applications/sales/point_of_sale.rst:109
 msgid ""
 "click :guilabel:`Validate` and :guilabel:`New Order` to move on to the next "
 "customer."
@@ -2448,7 +2456,7 @@ msgstr ""
 msgid "refund view from a POS"
 msgstr "visão de reembolso de um PDV"
 
-#: ../../content/applications/sales/point_of_sale.rst:111
+#: ../../content/applications/sales/point_of_sale.rst:115
 msgid ""
 "You can filter the **orders list** by :guilabel:`Receipt Number`, "
 ":guilabel:`Date` or :guilabel:`Customer` using the search bar."
@@ -2456,7 +2464,7 @@ msgstr ""
 "Você pode filtrar a lista de pedidos por :guilabel:`Número do recibo`, por "
 ":guilabel:`Data` ou por :guilabel:`Cliente` usando a barra de pesquisa."
 
-#: ../../content/applications/sales/point_of_sale.rst:113
+#: ../../content/applications/sales/point_of_sale.rst:117
 msgid ""
 "You can also refund a product by selecting the returned product from an open"
 " session, and setting a negative quantity that equals the number of returned"
@@ -2468,11 +2476,11 @@ msgstr ""
 "número de produtos devolvidos. Para fazer isso, clique em \"Qtd\" e \"+/-\","
 " seguido pela quantidade de produtos devolvidos."
 
-#: ../../content/applications/sales/point_of_sale.rst:120
+#: ../../content/applications/sales/point_of_sale.rst:124
 msgid "Close the POS session"
 msgstr "Fechar a sessão POS"
 
-#: ../../content/applications/sales/point_of_sale.rst:122
+#: ../../content/applications/sales/point_of_sale.rst:126
 msgid ""
 "To close your session, click :guilabel:`Close` in the upper right corner of "
 "your screen; doing so opens the :guilabel:`Closing Control` pop-up screen. "
@@ -2482,16 +2490,16 @@ msgstr ""
 "direito da tela; isso abre a tela :guilabel:`Fechando controle`. Neste tela,"
 " você pode obter várias informações:"
 
-#: ../../content/applications/sales/point_of_sale.rst:126
+#: ../../content/applications/sales/point_of_sale.rst:130
 msgid ""
 "the number of orders made and the total amount made during the session;"
 msgstr "o número de pedidos feitos e o valor total recebido durante a sessão;"
 
-#: ../../content/applications/sales/point_of_sale.rst:127
+#: ../../content/applications/sales/point_of_sale.rst:131
 msgid "the expected amounts grouped by payment method."
 msgstr "os valores esperados agrupados por forma todo de pagamento."
 
-#: ../../content/applications/sales/point_of_sale.rst:129
+#: ../../content/applications/sales/point_of_sale.rst:133
 msgid ""
 "Before closing this window, count your cash using the calculator icon. Doing"
 " so opens a pop-up window that computes the total amount in the cash drawer "
@@ -2511,7 +2519,7 @@ msgstr ""
 msgid "How to close a POS session."
 msgstr "Como fechar uma sessão do PDV."
 
-#: ../../content/applications/sales/point_of_sale.rst:138
+#: ../../content/applications/sales/point_of_sale.rst:142
 msgid ""
 "Once you are done controlling the amounts, click :guilabel:`Close Session` "
 "to close and go back to the **POS dashboard**."
@@ -2519,7 +2527,7 @@ msgstr ""
 "Quando você terminar de confeirr os valores, clique em :guilabel:`Fechar "
 "sessão` para fechar e voltar ao **painel do PDV**."
 
-#: ../../content/applications/sales/point_of_sale.rst:142
+#: ../../content/applications/sales/point_of_sale.rst:146
 msgid ""
 "You can let the session open by clicking :guilabel:`Backend` or abort and "
 "keep selling by clicking :guilabel:`Discard`."
@@ -2527,7 +2535,7 @@ msgstr ""
 "Você pode deixar a sessão aberta clicando em :guilabel:`Backend` ou anular e"
 " continuar vendendo clicando em :guilabel:`Descartar`."
 
-#: ../../content/applications/sales/point_of_sale.rst:144
+#: ../../content/applications/sales/point_of_sale.rst:148
 msgid ""
 "Depending on your setup, you might only be allowed to close a session if the"
 " expected cash revenue equals the counted cash. To close it anyway, click "
@@ -2538,12 +2546,12 @@ msgstr ""
 "Para fechá-la de qualquer maneira, clique em :guilabel:`Ok` na tela "
 ":guilabel:`Diferença de pagamentos`."
 
-#: ../../content/applications/sales/point_of_sale.rst:149
+#: ../../content/applications/sales/point_of_sale.rst:153
 msgid ""
 "It is strongly advised to close your POS session at the end of each day."
 msgstr "É altamente recomendado fechar a sessão de PDV no final do dia."
 
-#: ../../content/applications/sales/point_of_sale.rst:150
+#: ../../content/applications/sales/point_of_sale.rst:154
 msgid ""
 "To look at all your previous sessions, go to :menuselection:`Point of Sale "
 "--> Orders --> Sessions`."
@@ -3405,6 +3413,7 @@ msgid "setting to enable multiple cashiers in POS"
 msgstr "configuração para habilitar vários caixas no POS"
 
 #: ../../content/applications/sales/point_of_sale/employee_login.rst:26
+#: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:32
 msgid "Practical application"
 msgstr "Aplicação prática"
 
@@ -3569,6 +3578,10 @@ msgid ":doc:`payment_methods/terminals`."
 msgstr ":doc:`payment_methods/terminals`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods.rst:25
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:78
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:45
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:63
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:72
 msgid ""
 "Once the payment method is created, you can select it in your POS settings. "
 "To do so, go to the :ref:`POS' settings <configuration/settings>`, click "
@@ -3593,50 +3606,49 @@ msgstr ""
 "que você aceite várias opções de pagamento, incluindo cartões de crédito e "
 "débito, tornando o processo de pagamento mais eficiente."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:13
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:15
 msgid ""
-"Go to the :doc:`application settings <../configuration>`, scroll down to the"
-" :guilabel:`Payment Terminals` section, and tick your terminal's checkbox."
+"Go to the :ref:`application settings <configuration/settings>`, scroll down "
+"to the :guilabel:`Payment Terminals` section, and tick your terminal's "
+"checkbox."
 msgstr ""
-"Vá para as configurações do aplicativo, role até a seção Terminais de "
-"pagamento e marque a caixa de seleção do seu terminal."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst-1
 msgid "checkbox in the settings to enable a payment terminal"
 msgstr ""
 "caixa de seleção nas definições para habilitar um terminal de pagamento"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:19
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:21
 msgid "Then, follow the corresponding documentation to configure your device:"
 msgstr ""
 "Em seguida, siga a documentação correspondente para configurar seu "
 "dispositivo:"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:21
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:23
 msgid ":doc:`Adyen configuration <terminals/adyen>`"
 msgstr ":doc:`Configuração do Adyen <terminals/adyen>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:22
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:24
 msgid ":doc:`Ingenico configuration <terminals/ingenico>`"
 msgstr ":doc:`Configuração do Ingenico <terminals/adyen>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:23
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:25
 msgid ":doc:`SIX configuration <terminals/six>`"
 msgstr ":doc:`Configuração do SIX <terminals/adyen>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:24
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:26
 msgid ":doc:`Stripe configuration <terminals/stripe>`"
 msgstr ":doc:`Configuração do Stripe <terminals/adyen>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:25
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:27
 msgid ":doc:`Vantiv configuration <terminals/vantiv>`"
 msgstr ":doc:`Configuração do Vantiv <terminals/vantiv>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:26
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:28
 msgid ":doc:`Worldline configuration <terminals/worldline>`"
 msgstr ":doc:`Configuração Worldline <terminals/worldline>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:28
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:30
 msgid ""
 "Once the terminal is configured, you can :doc:`create the corresponding "
 "payment method and add it to the POS <../payment_methods>`."
@@ -3684,73 +3696,21 @@ msgstr ""
 "Documentação da Adyen – Guias de início rápido do terminal de pagamento "
 "<https://docs.adyen.com/point-of-sale/user-manuals>."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:23
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:36
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:53
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:15
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:63
-msgid "Configure the payment method"
-msgstr "Configurar a forma de pagamento"
-
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:25
-msgid ""
-"First, go to :menuselection:`Point of Sale --> Configuration --> Settings "
-"--> Payment Terminals`, and enable :guilabel:`Adyen`. Then, go to "
-":menuselection:`Configuration --> Payment Methods` and create a new payment "
-"method. Select :guilabel:`Adyen` in the :guilabel:`Use a Payment Terminal` "
-"field."
-msgstr ""
-"Primeiro, vá para :menuselection:`Ponto de Venda --> Configuração --> "
-"Definições --> Terminais de pagamento`, e habilite :guilabel:`Adyen`. Em "
-"seguida, vá para :menuselection:`Configuração --> Métodos de pagamento` e "
-"crie um novo método de pagamento. Selecione :guilabel:`Adyen` no campo "
-":guilabel:`Usar um terminal de pagamento`."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:31
-msgid ""
-"The selected journal **must** be a bank journal for the :guilabel:`Use a "
-"payment terminal` field to appear."
-msgstr ""
-"O diário selecionado **deve** ser um diário bancário para que o campo "
-":guilabel:`Use um terminal de pagamento` apareça."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:34
-msgid ""
-"Finally, fill the mandatory fields with an :guilabel:`Adyen API key`, and an"
-" :guilabel:`Adyen Terminal Identifier`."
-msgstr ""
-"Finalmente, preencha os campos obrigatórios com uma :guilabel:`chave de API "
-"da Adyen` e um :guilabel:`identificador do terminal da Adyen`."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:38
 msgid "Generate an Adyen API key"
 msgstr "Gerar uma chave de API do Adyen"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:40
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:27
 msgid ""
-"The **Adyen API key** is a key used to authenticate your requests. To "
-"generate an API key, go to your **Adyen account**."
+"The **Adyen API key** is used to authenticate requests from your Adyen "
+"terminal. To generate an API key, go to your :menuselection:`Adyen account "
+"--> Developers --> API credentials`, and **create** new credentials or "
+"select **existing** ones. Click :guilabel:`Generate an API key` and save the"
+" key to paste it into the Odoo :guilabel:`Adyen API key` field at :ref:`the "
+"payment method creation <adyen/method-creation>`."
 msgstr ""
-"A **chave da API Adyen** é uma chave usada para autenticar suas "
-"solicitações. Para gerar uma chave da API, vá para sua **conta Adyen**."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:43
-msgid ""
-"Then, go to :menuselection:`Developers --> API credentials`. Create a new "
-"credential or click on an existing one."
-msgstr ""
-"Em seguida, vá para :menuselection:`Desenvolvedores --> Credenciais de API`."
-" Crie uma nova credencial ou clique em uma existente."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:46
-msgid ""
-"Click on :guilabel:`Generate an API key` and copy-paste that key onto the "
-"Odoo mandatory field."
-msgstr ""
-"Clique em :guilabel:`Gerar uma chave de API` e copie e cole essa chave no "
-"campo obrigatório do Odoo."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:49
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:34
 msgid ""
 "`Adyen Docs - API credentials <https://docs.adyen.com/development-"
 "resources/api-credentials#generate-api-key>`_."
@@ -3759,106 +3719,96 @@ msgstr ""
 "<https://docs.adyen.com/development-resources/api-credentials#generate-api-"
 "key>."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:53
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:40
 msgid "Locate the Adyen terminal identifier"
 msgstr "Localize o identificador do terminal Adyen"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:55
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:42
 msgid ""
-"The **Adyen Terminal Identifier** is your terminal's serial number, which is"
-" used to identify the hardware."
+"The **Adyen Terminal Identifier** is the terminal's serial number, which is "
+"used to identify the hardware."
 msgstr ""
-"O **Identificador do terminal Adyen** é o número de série do seu terminal, "
-"que é usado para identificar o hardware."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:58
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:45
 msgid ""
-"To find this number, go to your **Adyen account**. Then, go to "
-":menuselection:`Point of Sale --> Terminals`, select the terminal to link, "
-"and copy-paste its serial number onto the Odoo mandatory field."
+"To find this number, go to your :menuselection:`Adyen account --> Point of "
+"Sale --> Terminals`, select the terminal to link with, and save its serial "
+"number to paste it into the Odoo :guilabel:`Adyen Terminal Identifier` field"
+" at :ref:`the payment method creation <adyen/method-creation>`."
 msgstr ""
-"Para encontrar esse número, vá para sua conta do **Adyen**. Em seguida, vá "
-"para :menuselection:`Ponto de Venda --> Terminais`, selecione o terminal a "
-"ser vinculado e copie e cole seu número de série no campo obrigatório do "
-"Odoo."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:63
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:51
 msgid "Set the Event URLs"
 msgstr "Definir as URLs do evento"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:65
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:53
 msgid ""
-"For Odoo to know when a payment is made, you must set the terminal **Event "
-"URLs**. To do so,"
+"For Odoo to know when a payment is made, you must configure the terminal "
+"**Event URLs**. To do so,"
 msgstr ""
-"Para que o Odoo saiba quando um pagamento é realizado, você deve configurar "
-"as **URLs de Eventos** do terminal. Para fazer isso,"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:67
-msgid "log in to `Adyen's website <https://www.adyen.com/>`_;"
-msgstr "faça login no site da `Adyen <https://www.adyen.com/>`_;"
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:55
+msgid "Log in to `Adyen's website <https://www.adyen.com/>`_;"
+msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:68
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:56
 msgid ""
-"go to :menuselection:`Adyen's dashboard --> Point of Sale --> Terminals` and"
+"Go to :menuselection:`Adyen's dashboard --> Point of Sale --> Terminals` and"
 " select the connected terminal;"
 msgstr ""
-"vá para: menuselection: `painel de controle da Adyen -> Ponto de Venda -> "
-"Terminais` e selecione o terminal conectado;"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:70
-msgid "from the terminal settings, click :guilabel:`Integrations`;"
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:58
+msgid "From the terminal settings, click :guilabel:`Integrations`;"
 msgstr ""
-"a partir das definições do terminal, clique em :guilabel:`Integrações`;"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:71
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:59
 msgid ""
-"set the :guilabel:`Switch to decrypted mode to edit this setting` field as "
+"Set the :guilabel:`Switch to decrypted mode to edit this setting` field as "
 ":guilabel:`Decrypted`;"
 msgstr ""
-"defina o campo :guilabel:`Alternar para modelo decodificado para editar essa"
-" configuração` como :guilabel:`Decodificado`;"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:72
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:60
 msgid ""
-"click the **pencil icon** button and enter your server address, followed by "
-"`/pos_adyen/notification` in the :guilabel:`Event URLs` field; and"
+"Click the **pencil icon** button and enter your server address, followed by "
+"`/pos_adyen/notification` in the :guilabel:`Event URLs` field;"
 msgstr ""
-"clique no botão do **ícone de lápis** e insira o endereço do seu servidor, "
-"seguido de `/pos_adyen/notificação` no campo :guilabel:`URLs de Evento`; e"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:74
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:62
+msgid "Click :guilabel:`Save` at the bottom of the screen to save changes."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:67
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:36
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:53
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:15
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:63
+msgid "Configure the payment method"
+msgstr "Configurar a forma de pagamento"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:69
 msgid ""
-"click :guilabel:`Save` at the bottom of the screen to save the changes."
+"Enable the payment terminal :ref:`in the application settings "
+"<configuration/settings>` and :doc:`create the related payment method "
+"<../../payment_methods>`. Set the journal type as :guilabel:`Bank` and "
+"select :guilabel:`Adyen` in the :guilabel:`Use a Payment Terminal` field."
 msgstr ""
-"clique em :guilabel:`Salvar` na parte inferior da tela para salvar as "
-"alterações."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:77
-msgid "Add a new payment method"
-msgstr "Incluir novo método de pagamento"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:79
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:73
 msgid ""
-"To add a new **payment method** to a point of sale, go to "
-":menuselection:`Point of Sale --> Configuration --> Point of Sale`. Then, "
-"select the POS and go to :menuselection:`Payments --> Payment Methods`, and "
-"add your new method for Adyen."
+"Finally, fill in the mandatory fields with your :ref:`Adyen API key "
+"<adyen/api>`, :ref:`Adyen Terminal Identifier <adyen/identifier>`, and "
+":guilabel:`Adyen Merchant Account`."
 msgstr ""
-"Para adicionar uma nova **forma de pagamento** a um ponto de venda, vá para "
-":menuselection:`Ponto de Venda --> Configuração --> Ponto de Venda`. Em "
-"seguida, selecione o PDV e vá para :menuselection:`Pagamentos --> Formas de "
-"Pagamento` e adicione seu novo método para Adyen."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:84
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:53
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:65
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:83
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:50
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:68
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:86
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:86
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:87
 msgid "Pay with a payment terminal"
 msgstr "Pagar com um terminal de pagamento"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:86
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:85
 msgid ""
 "When processing a payment, select :guilabel:`Adyen` as the payment method. "
 "Check the amount and click on :guilabel:`Send`. Once the payment is "
@@ -3889,7 +3839,7 @@ msgstr ""
 "Esta opção só fica disponível após receber uma mensagem de erro informando "
 "que a conexão falhou."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:95
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:94
 msgid "To cancel the payment request, click on :guilabel:`cancel`."
 msgstr ""
 "Para cancelar a solicitação de pagamento, clique em :guilabel:`cancelar`."
@@ -3960,25 +3910,15 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:38
 msgid ""
-"First, go in the general settings of the POS app, and activate the Ingenico "
-"setting."
+"Enable the payment terminal :ref:`in the application settings "
+"<configuration/settings>` and :doc:`create the related payment method "
+"<../../payment_methods>`. Set the journal type as :guilabel:`Bank` and "
+"select :guilabel:`Ingenico` in the :guilabel:`Use a Payment Terminal` field."
+" Then, select your terminal device in the :guilabel:`Payment Terminal "
+"Device` field."
 msgstr ""
-"Primeiro, vá nas configurações gerais do aplicativo POS, e ative a "
-"configuração Ingenico."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:44
-msgid ""
-"Go back in :menuselection:`Point of Sale --> Configuration --> Point of "
-"Sale`, go in the payments section and access your payment methods. Create a "
-"new payment method for Ingenico, select the payment terminal option "
-"Ingenico, and select your payment terminal device."
-msgstr ""
-"Voltar em :menuselection:`Point of Sale --> Configuration --> Point of "
-"Sale`, vá na seção de pagamentos e acesse seus métodos de pagamento. Crie "
-"uma nova forma de pagamento para Ingenico, selecione a opção de terminal de "
-"pagamento Ingenico, e selecione seu dispositivo de terminal de pagamento."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:55
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:52
 msgid ""
 "In your *PoS interface*, when processing a payment, select a *Payment "
 "Method* using a payment terminal. Check that the amount in the tendered "
@@ -3992,7 +3932,7 @@ msgstr ""
 "*Enviar*. Quando o pagamento for bem sucedido, o status mudará para "
 "*Pagamento bem sucedido*."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:64
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:61
 msgid ""
 "If you want to cancel the payment request, click on cancel. You can still "
 "retry to send the payment request."
@@ -4000,7 +3940,7 @@ msgstr ""
 "Se você quiser cancelar o pedido de pagamento, clique em cancelar. Você "
 "ainda pode tentar novamente enviar a solicitação de pagamento."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:67
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:64
 msgid ""
 "If there is any issue with the payment terminal, you can still force the "
 "payment using the *Force Done*. This will allow you to validate the order in"
@@ -4011,7 +3951,7 @@ msgstr ""
 " pedido no Odoo, mesmo que existam problemas de conexão entre o terminal de "
 "pagamento e o Odoo."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:73
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:70
 msgid ""
 "This option will only be available if you received an error message telling "
 "you the connection failed."
@@ -4019,7 +3959,7 @@ msgstr ""
 "Esta opção só estará disponível se você receber uma mensagem de erro "
 "informando que a conexão falhou."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:76
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:73
 msgid ""
 "Once your payment is processed, on the payment record, you’ll find the type "
 "of card that has been used and the transaction ID."
@@ -4125,26 +4065,19 @@ msgstr "Confirmar a conexão ao terminal de pagamento Six"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:55
 msgid ""
-"From your database, go to :menuselection:`Point of Sale --> Configuration "
-"--> Payment Methods` to create a new payment method specifically for Six. "
-"Click :guilabel:`New`, enter a :guilabel:`Name`, set the :guilabel:`Journal`"
-" field as :guilabel:`Bank`, the :guilabel:`Use a Payment Terminal` field as "
-":guilabel:`SIX IOT`, and select the corresponding device in the "
-":guilabel:`Payment Terminal Device` field."
+"Enable the payment terminal :ref:`in the application settings "
+"<configuration/settings>` and :doc:`create the related payment method "
+"<../../payment_methods>`. Set the journal type as :guilabel:`Bank` and "
+"select :guilabel:`SIX IOT` in the :guilabel:`Use a Payment Terminal` field. "
+"Then, select your terminal device in the :guilabel:`Payment Terminal Device`"
+" field."
 msgstr ""
-"Na sua base de dados, acesse :menuselection:`Ponto de Venda -> Configuração "
-"-> Formas de Pagamento` para criar um novo método de pagamento "
-"especificamente para o Six. Clique em: guilabel: Novo`, insira um "
-":guilabel:`Nome`, defina o campo: guilabel:`Diário` como :guilabel:`Banco`, "
-"o campo :guilabel:`Usar um Terminal de Pagamento` como :guilabel:`SIX IOT` e"
-" selecione o dispositivo correspondente no campo :guilabel:`Dispositivo do "
-"Terminal de Pagamento`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst-1
 msgid "Creating a new payment method for the SIX payment terminal"
 msgstr "Criar uma nova forma de pagamento para o terminal de pagamento SIX"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:67
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:70
 msgid ""
 "When processing a payment, select :ref:`your Six payment method "
 "<six/configure>` in the :guilabel:`Payment Method` section and click "
@@ -4162,8 +4095,8 @@ msgstr ""
 msgid "Paying with Six"
 msgstr "Pagar com Six"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:76
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:91
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:79
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:92
 msgid ""
 "Once your payment is processed, the type of card used and the transaction ID"
 " appear on the payment record."
@@ -4171,7 +4104,7 @@ msgstr ""
 "Depois que seu pagamento for processado, o tipo de cartão utilizado e o ID "
 "da transação aparecerão no registro de pagamento."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:78
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:81
 msgid ""
 "The language used for error messages is the same as the Six terminal. "
 "Configure the terminal to change the language or contact Six."
@@ -4179,11 +4112,11 @@ msgstr ""
 "A linguagem usada para mensagens de erro é a mesma do terminal Six. "
 "Configure o terminal para alterar o idioma ou entre em contato com a Six."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:80
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:83
 msgid "By default, the port used by the Six terminal is `7784`."
 msgstr "Por padrão, a porta usada pelo terminal Six é `7784`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:83
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:86
 msgid ""
 "If there are connection issues between the payment terminal and Odoo, you "
 "can still force the payment validation in Odoo using the :guilabel:`Force "
@@ -4655,30 +4588,19 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:65
 msgid ""
-"From the Point of Sale application, go to :menuselection:`Configuration --> "
-"Settings --> Payment terminals` and activate the *Worldline* payment "
-"terminal."
+"Enable the payment terminal :ref:`in the application settings "
+"<configuration/settings>` and :doc:`create the related payment method "
+"<../../payment_methods>`. Set the journal type as :guilabel:`Bank` and "
+"select :guilabel:`Worldline` in the :guilabel:`Use a Payment Terminal` "
+"field. Then, select your terminal device in the :guilabel:`Payment Terminal "
+"Device` field."
 msgstr ""
-"Do aplicativo de Ponto de Venda, vá para :menuselection:`Configuração --> "
-"Definições --> Terminais de pagamento` e ative o terminal de pagamento "
-"*Worldline*."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:71
-msgid ""
-"Then, go to :menuselection:`Configuration --> Payment methods` and create a "
-"new payment method for *Worldline*. Select the payment terminal *Worldline* "
-"and your payment terminal device on your *Payment Method form*."
-msgstr ""
-"Então, vá para :menuselection:`Configuração --> Formas de pagamento` e crie "
-"uma nova forma de pagamento para *Worldline*. Selecione o terminal de "
-"pagamento *Worldline* e o dispositivo do terminal de pagamento em seu "
-"*Formulário de forma de pagamento*."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:78
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:79
 msgid "Technician password: `1235789`"
 msgstr "Senha do técnico: `1235789`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:79
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:80
 msgid ""
 "To reach Wordline's technical assistance, call `02 727 61 11` and choose "
 "\"merchant\". Your call is automatically transferred to the desired service."
@@ -4687,7 +4609,7 @@ msgstr ""
 " 727 61 11` e escolha \"comerciante\". Sua ligação será transferida "
 "automaticamente para o serviço desejado."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:81
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:82
 msgid ""
 "Configure the cashier terminal if you have both a customer and a cashier "
 "terminal."
@@ -4695,21 +4617,21 @@ msgstr ""
 "Configure o terminal do caixa, se você tiver um terminal do cliente e um "
 "terminal do caixa."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:82
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:83
 msgid ""
 "To avoid blocking the terminal, check the initial configuration beforehand."
 msgstr ""
 "Para evitar o bloqueio do terminal, verifique previamente a configuração "
 "inicial."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:83
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:84
 msgid ""
 "Set a fixed IP to your IoT Box’s router to prevent losing the connexion."
 msgstr ""
 "Defina um IP fixo para o roteador da sua IoT Box para evitar perda de "
 "conexão."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:88
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:89
 msgid ""
 "When processing a payment, select *Worldline* as payment method. Check the "
 "amount and click on *Send*. Once the payment is successful, the status "
@@ -4719,7 +4641,7 @@ msgstr ""
 "Verifique o valor e clique em *Enviar*. Uma vez que o pagamento for bem-"
 "sucedido, o status será alterado para *Pagamento bem-sucedido*."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:98
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:99
 msgid ""
 "In case of connexion issues between Odoo and the payment terminal, force the"
 " payment by clicking on *Force Done*, which allows you to validate the "
@@ -4731,7 +4653,7 @@ msgstr ""
 "pedido. Essa opção está disponível apenas após receber uma mensagem de erro "
 "informando que a conexão falhou."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:101
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:102
 msgid "To cancel the payment request, click on **cancel**."
 msgstr "Para cancelar a solicitação de pagamento, clique em **cancelar**."
 
@@ -6844,6 +6766,92 @@ msgid ""
 msgstr ""
 ":doc:`/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots`"
 
+#: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:3
+msgid "Ship later"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:5
+msgid ""
+"The **Ship Later** feature allows you to sell products and schedule delivery"
+" at a later date. It is useful, for example, when a product is out of stock "
+"or so voluminous that it requires to be shipped, or if, for any reason, the "
+"customer needs their order to be shipped later, etc."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:12
+msgid ""
+":ref:`Go to the POS settings <configuration/settings>`, scroll down to the "
+":guilabel:`Inventory` section, and enable :guilabel:`Allow Ship Later`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/shop/ship_later.rst-1
+msgid "settings to enable and configure the ship later feature"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:19
+msgid "Once activated, you can:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:21
+msgid ""
+"Choose the location from where the products are shipped by selecting a "
+":guilabel:`Warehouse`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:22
+msgid ""
+"Define a :guilabel:`Specific route`, or leave this field empty to use the "
+"default route."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:23
+msgid ""
+"Define the :guilabel:`Shipping Policy`; select :guilabel:`As soon as "
+"possible` if the products can be delivered separately or :guilabel:`When all"
+" products are ready` to ship all the products at once."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:28
+msgid ""
+":doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/delivery_method`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:29
+msgid ""
+":doc:`../../../inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:34
+msgid ":ref:`Open a session <pos/session-start>` and make a sale."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:35
+msgid ""
+"On the payment screen, set a customer and select :guilabel:`Ship Later`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:36
+msgid ""
+"On the popup window, set a shipping date and click :guilabel:`Confirm` to "
+"proceed to payment."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/shop/ship_later.rst-1
+msgid "selecting ship later at checkout."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:42
+msgid ""
+"The system instantly creates a delivery order from the warehouse to the "
+"shipping address."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:45
+msgid ""
+"The selected customer must have referenced an address in the system for "
+"products to be shipped."
+msgstr ""
+
 #: ../../content/applications/sales/rental.rst:3
 msgid "Rental"
 msgstr "Locação"
@@ -8077,18 +8085,10 @@ msgid ""
 "Enter the Marketplace ID in the :guilabel:`API Idenifier` field, and select "
 "the :guilabel:`Amazon Region` for your marketplace as described in the "
 "`Amazon Documentation for marketplace IDs and regions <https://developer-"
-"docs.amazon.com/amazon-shipping/docs/marketplace-ids>`_, and the "
-":guilabel:`Seller Central URL` as described in the `Amazon Documentation for"
-" seller central URLs <https://developer-docs.amazon.com/amazon-"
-"shipping/docs/seller-central-urls>`_."
+"docs.amazon.com/sp-api/docs/marketplace-ids>`_, and the :guilabel:`Seller "
+"Central URL` as described in the `Amazon Documentation for seller central "
+"URLs <https://developer-docs.amazon.com/sp-api/docs/seller-central-urls>`_."
 msgstr ""
-"Digite o ID do Marketplace no campo :guilabel:`Identificador da API` e "
-"selecione a :guilabel:`Região da Amazon` para o seu marketplace, conforme "
-"descrito na `Documentação da Amazon para IDs e regiões do marketplace "
-"<https://developer-docs.amazon.com/amazon-shipping/docs/marketplace-ids>`_, "
-"e o :guilabel:`URL da Seller Central`, conforme descrito na `Documentação da"
-" Amazon para URLs de centrais de vendedores <https://developer-"
-"docs.amazon.com/amazon-shipping/docs/seller-central-urls>`_."
 
 #: ../../content/applications/sales/sales/amazon_connector/setup.rst:140
 msgid ""
@@ -8270,17 +8270,9 @@ msgid ""
 "Navigate to :menuselection:`Settings --> Technical --> Automation --> "
 "Scheduled Actions`. Click into the scheduled action labeled: "
 ":guilabel:`Ebay: update categories` and then click :guilabel:`Run Manually`."
-" This action will populate the :menuselection:`Sales --> Configuration --> "
-"eBay Categories` menu item with all standard eBay product categories."
 msgstr ""
-"Navegue até :menuselection:`Definições --> Técnico --> Automação --> "
-"Scheduled Actions`. Clique na ação agendada denominada: :guilabel:`Ebay: "
-"atualizar categorias` e, em seguida, clique em :guilabel:`Executar "
-"manualmente`. Essa ação preencherá o item de menu :menuselection:`Vendas -->"
-" Configuração --> categorias do eBay` com todas as categorias de produtos "
-"padrão do eBay."
 
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:59
+#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:58
 msgid ""
 "Odoo only recognizes eBay category paths up to four layers deep. If a "
 "product has a listing of more than four, the category field will only "
@@ -8290,7 +8282,7 @@ msgstr ""
 "profundidade. Se um produto tiver uma listagem de mais de quatro, o campo de"
 " categoria só será preenchido até a quarta camada."
 
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:62
+#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:61
 msgid ""
 "If product categories beyond four paths are required, users need to manually"
 " add those paths. This has historically been done by getting a list of all "
@@ -8303,7 +8295,7 @@ msgstr ""
 "de quatro caminhos, importando-as manualmente para o modelo de categoria de "
 "produto no Odoo e, em seguida, vinculando-as individualmente ao produto."
 
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:67
+#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:66
 msgid ""
 "Users can import the remaining product categories into the eBay product "
 "categories manually using using the :guilabel:`Action` menu and "
@@ -8313,11 +8305,11 @@ msgstr ""
 "categorias de produtos do eBay manualmente usando o menu de :guilabel:`Ação`"
 " e o recurso :guilabel:`Importar`."
 
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:71
+#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:70
 msgid "Link eBay listings"
 msgstr "Vincular listagens do eBay"
 
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:73
+#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:72
 msgid ""
 "To add eBay listings in Odoo, either manually add products, using a listing "
 "ID, or establish an automatic listing link between Odoo and eBay."
@@ -8326,7 +8318,7 @@ msgstr ""
 "usando um ID de listagem, ou estabeleça um link automático de listagem entre"
 " o Odoo e o eBay."
 
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:77
+#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:76
 msgid ""
 "For more information on listing a product from scratch visit: :ref:`How to "
 "list a product? <ebay-connector/listing>`"
@@ -8334,11 +8326,11 @@ msgstr ""
 "Para obter mais informações sobre como listar um produto do zero, visite: "
 ":ref:`Como listar um produto? <ebay-connector/listing>`"
 
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:81
+#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:80
 msgid "Manual listing link"
 msgstr "Vínculo manual de listagem"
 
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:83
+#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:82
 msgid ""
 "To add an eBay listing to products in Odoo, begin by going to "
 ":menuselection:`Sales app --> Products --> Products` and selecting the "
@@ -8352,7 +8344,7 @@ msgstr ""
 ":guilabel:`eBay` ou sob o :guilabel:`Nome do produto`). Selecione "
 ":guilabel:`Salvar` se necessário."
 
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:87
+#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:86
 msgid ""
 "Still the product form, click :guilabel:`link to listing` in the top menu "
 "and enter in listing ID from eBay in the pop up (the listing ID is in the "
@@ -8362,7 +8354,7 @@ msgstr ""
 "no menu superior e insira o ID da listagem do eBay na janela pop-up (o ID da"
 " listagem está no URL do produto do eBay)."
 
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:91
+#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:90
 msgid ""
 "An example URL would be as such: "
 "`www.ebay.com/itm/272222656444?hash=item3f61bc17bb:g:vJ0AAOSwslJizv8u`. The "
@@ -8374,11 +8366,11 @@ msgstr ""
 " da listagem é `272222656444` nesse caso. Depois que o ID da listagem for "
 "inserido, as informações da listagem do eBay serão sincronizadas no Odoo."
 
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:97
+#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:96
 msgid "Turn on eBay scheduled Actions"
 msgstr "Ativar ações agendadas do eBay"
 
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:99
+#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:98
 msgid ""
 "The next step is to turn on the eBay notifications in the scheduled actions "
 "in Odoo so that orders and data are exchanged. The :guilabel:`Scheduled "
@@ -8392,7 +8384,7 @@ msgstr ""
 " <developer-mode>` e vá para :menuselection:`Definições --> Técnico --> "
 "Automação --> Ações agendadas`."
 
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:104
+#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:103
 msgid ""
 "Turning on the following scheduled actions allows users to sync and validate"
 " eBay data automatically."
@@ -8400,7 +8392,7 @@ msgstr ""
 "Ativar as seguintes ações agendadas permite que os usuários sincronizem e "
 "validem dados do eBay automaticamente."
 
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:107
+#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:106
 msgid ""
 ":guilabel:`eBay: get new orders`: eBay will push all new orders not already "
 "in Odoo (based on client_order_reference, or sales order reference field), "
@@ -8415,7 +8407,7 @@ msgstr ""
 "colocados em modo de rascunho. Se os clientes ainda não estiverem no Odoo, "
 "eles serão criados."
 
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:111
+#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:110
 msgid ""
 ":guilabel:`eBay: synchronize stock`: eBay will display the stock on hand in "
 "Odoo."
@@ -8423,7 +8415,7 @@ msgstr ""
 ":guilabel:`eBay: sincronizar estoque`: O eBay exibirá o estoque disponível "
 "no Odoo."
 
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:112
+#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:111
 msgid ""
 ":guilabel:`eBay: update categories`: eBay will push updated monthly "
 "categories (only up to fourth layer, will need to manually update the rest)."
@@ -8432,7 +8424,7 @@ msgstr ""
 "atualizadas (somente até a quarta camada, será necessário atualizar "
 "manualmente o restante)."
 
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:116
+#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:115
 msgid ""
 "If an order comes in and the listing from the order is not linked to a "
 "product, eBay will create a consumable product.product in its place. These "
@@ -8446,17 +8438,17 @@ msgstr ""
 "para representar um produto armazenável e, em seguida, o usuário poderá "
 "vincular a listagem à medida que chegar."
 
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:122
+#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:121
 #: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:127
 msgid ":doc:`/applications/sales/sales/ebay_connector/manage`"
 msgstr ":doc:`/applications/sales/sales/ebay_connector/manage`"
 
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:123
+#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:122
 #: ../../content/applications/sales/sales/ebay_connector/manage.rst:153
 msgid ":doc:`/applications/sales/sales/ebay_connector/troubleshooting`"
 msgstr ":doc:`/applications/sales/sales/ebay_connector/troubleshooting`"
 
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:124
+#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:123
 #: ../../content/applications/sales/sales/ebay_connector/manage.rst:155
 #: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:129
 msgid ":doc:`/applications/sales/sales/ebay_connector/setup`"
@@ -8473,8 +8465,8 @@ msgid ""
 msgstr "Há dois métodos para listar um produto no eBay e no Odoo:"
 
 #: ../../content/applications/sales/sales/ebay_connector/manage.rst:9
-msgid "Make a product in Odoo and list the item eBay."
-msgstr "Crie um produto no Odoo e liste o item no eBay."
+msgid "(*Preferred method*) Make a product in Odoo and list the item eBay."
+msgstr ""
 
 #: ../../content/applications/sales/sales/ebay_connector/manage.rst:11
 msgid ""
@@ -8489,11 +8481,9 @@ msgstr ""
 
 #: ../../content/applications/sales/sales/ebay_connector/manage.rst:14
 msgid ""
-"List the item on eBay, then create the product in Odoo, and finally link "
-"product to the item on eBay."
+"(*Less preferred method*) List the item on eBay, then create the product in "
+"Odoo, and finally link product to the item on eBay."
 msgstr ""
-"Liste o item no eBay, então crie o produto no Odoo e, por fim, vincule o "
-"produto ao item no eBay."
 
 #: ../../content/applications/sales/sales/ebay_connector/manage.rst:17
 msgid ""
@@ -19846,15 +19836,9 @@ msgstr ""
 msgid ""
 "If the online confirmation requires a pre-payment, your customer can select "
 "only the :ref:`payment providers <payment_providers/supported_providers>` "
-"that have the :ref:`tokenization feature "
-"<payment_providers/features/tokenization>`. This ensures that the customer "
-"is automatically charged at each new period."
+"that have the :ref:`tokenization feature <payment_providers/tokenization>`. "
+"This ensures that the customer is automatically charged at each new period."
 msgstr ""
-"Se a confirmação online exigir um pré-pagamento, o seu cliente pode "
-"selecionar apenas os :ref:`provedores de pagamento "
-"<payment_providers/supported_providers>` que têm o :ref:`recurso de "
-"tokenização <payment_providers/features/tokenization>`. Isso garante que o "
-"cliente seja cobrado automaticamente em cada novo período."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:3
 msgid "Automatic alerts"

@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 08:39+0000\n"
+"POT-Creation-Date: 2024-03-07 13:06+0000\n"
 "PO-Revision-Date: 2023-01-13 14:30+0000\n"
 "Last-Translator: Dorin Hongu <dhongu@gmail.com>, 2024\n"
 "Language-Team: Romanian (https://app.transifex.com/odoo/teams/41243/ro/)\n"
@@ -731,7 +731,7 @@ msgstr ""
 "+ (rata_worker_greu * estimarea_ram_worker_greu) )"
 
 #: ../../content/administration/install/deploy.rst:225
-#: ../../content/administration/install/deploy.rst:412
+#: ../../content/administration/install/deploy.rst:413
 msgid "LiveChat"
 msgstr "LiveChat"
 
@@ -836,11 +836,11 @@ msgstr "Proxy request catre Odoo"
 msgid "in ``/etc/nginx/sites-enabled/odoo.conf`` set:"
 msgstr "în ``/etc/nginx/sites-enabled/odoo.conf`` setați:"
 
-#: ../../content/administration/install/deploy.rst:361
+#: ../../content/administration/install/deploy.rst:362
 msgid "HTTPS Hardening"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:363
+#: ../../content/administration/install/deploy.rst:364
 msgid ""
 "Add the `Strict-Transport-Security` header to all requests, in order to "
 "prevent browsers from ever sending a plain HTTP request to this domain. You "
@@ -849,24 +849,24 @@ msgid ""
 "be entirely unable to access it."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:369
+#: ../../content/administration/install/deploy.rst:370
 msgid ""
 "Force HTTPS connections during a year for every visitor in NGINX with the "
 "line:"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:375
+#: ../../content/administration/install/deploy.rst:376
 msgid ""
 "Additional configuration can be defined for the `session_id` cookie. The "
 "`Secure` flag can be added to ensure it is never transmitted over HTTP and "
 "`SameSite=Lax` to prevent authenticated `CSRF`_."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:386
+#: ../../content/administration/install/deploy.rst:387
 msgid "Odoo as a WSGI Application"
 msgstr "Odoo drept aplicație WSGI"
 
-#: ../../content/administration/install/deploy.rst:388
+#: ../../content/administration/install/deploy.rst:389
 msgid ""
 "It is also possible to mount Odoo as a standard WSGI_ application. Odoo "
 "provides the base for a WSGI launcher script as ``odoo-wsgi.example.py``. "
@@ -882,7 +882,7 @@ msgstr ""
 "direct în :mod:`odoo.tools.config` în loc de prin linia de comandă sau un "
 "fișier de configurare."
 
-#: ../../content/administration/install/deploy.rst:394
+#: ../../content/administration/install/deploy.rst:395
 msgid ""
 "However the WSGI server will only expose the main HTTP endpoint for the web "
 "client, website and webservice API. Because Odoo does not control the "
@@ -893,11 +893,11 @@ msgstr ""
 "mai controlează crearea mai multor procese worker, nu poate configura cron "
 "sau procese worker livechat"
 
-#: ../../content/administration/install/deploy.rst:399
+#: ../../content/administration/install/deploy.rst:400
 msgid "Cron Workers"
 msgstr "Procese worker Cron"
 
-#: ../../content/administration/install/deploy.rst:401
+#: ../../content/administration/install/deploy.rst:402
 msgid ""
 "Starting one of the built-in Odoo servers next to the WSGI server is "
 "required to process cron jobs. That server must be configured to only "
@@ -906,7 +906,7 @@ msgid ""
 "setting."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:406
+#: ../../content/administration/install/deploy.rst:407
 msgid ""
 "On Linux-like systems, using the multi-processing server over the multi-"
 "threading one is recommended to benefit from better hardware usage and "
@@ -915,7 +915,7 @@ msgid ""
 " cli options."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:414
+#: ../../content/administration/install/deploy.rst:415
 msgid ""
 "Using a gevent-compatible WSGI server is required for the correct operation "
 "of the live chat feature. That server should be able to handle many "
@@ -925,7 +925,7 @@ msgid ""
 " be used for all other requests."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:420
+#: ../../content/administration/install/deploy.rst:421
 msgid ""
 "The Odoo cron server can also be used to serve the live chat requests. Just "
 "drop the :option:`--no-http <odoo-bin --no-http>` cli option from the cron "
@@ -935,11 +935,11 @@ msgid ""
 "<odoo-bin --gevent-port>` (multi-processing server)."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:429
+#: ../../content/administration/install/deploy.rst:430
 msgid "Serving static files and attachments"
 msgstr "Transmitera fișierelor statice și atașamente"
 
-#: ../../content/administration/install/deploy.rst:431
+#: ../../content/administration/install/deploy.rst:432
 msgid ""
 "For development convenience, Odoo directly serves all static files and "
 "attachments in its modules. This may not be ideal when it comes to "
@@ -951,11 +951,11 @@ msgstr ""
 "punct de vedere al performanței, iar fișierele statice ar trebui să fie "
 "servite de un server HTTP static."
 
-#: ../../content/administration/install/deploy.rst:436
+#: ../../content/administration/install/deploy.rst:437
 msgid "Serving static files"
 msgstr "Transmiterea fișierelor statice"
 
-#: ../../content/administration/install/deploy.rst:438
+#: ../../content/administration/install/deploy.rst:439
 msgid ""
 "Odoo static files are located in each module's :file:`static/` folder, so "
 "static files can be served by intercepting all requests to "
@@ -967,7 +967,7 @@ msgstr ""
 "tuturor cererilor către :samp:`/{MODULE}/static/{FILE}`, și căutarea "
 "modulului (și fișierului) potrivit în calea variabilă a addon-urilor."
 
-#: ../../content/administration/install/deploy.rst:442
+#: ../../content/administration/install/deploy.rst:443
 msgid ""
 "It is recommended to set the ``Content-Security-Policy: default-src 'none'``"
 " header on all images delivered by the web server. It is not strictly "
@@ -976,40 +976,40 @@ msgid ""
 "resources by themselves). However, it is good practice."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:447
+#: ../../content/administration/install/deploy.rst:448
 msgid ""
 "Using the above NGINX (https) configuration, the following ``map`` and "
 "``location`` blocks should be added to serve static files via NGINX."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:474
+#: ../../content/administration/install/deploy.rst:475
 msgid ""
 "The actual ``root`` and ``try_files`` directives are dependant on your "
 "installation, specifically on your :option:`--addons-path <odoo-bin "
 "--addons-path>`."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:481
+#: ../../content/administration/install/deploy.rst:482
 msgid "Debian package"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:483
+#: ../../content/administration/install/deploy.rst:484
 msgid ""
 "Say Odoo has been installed via the **debian packages** for Community and "
 "Enterprise, and that the :option:`--addons-path <odoo-bin --addons-path>` is"
 " ``'/usr/lib/python3/dist-packages/odoo/addons'``."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:487
-#: ../../content/administration/install/deploy.rst:501
+#: ../../content/administration/install/deploy.rst:488
+#: ../../content/administration/install/deploy.rst:502
 msgid "The ``root`` and ``try_files`` should be:"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:494
+#: ../../content/administration/install/deploy.rst:495
 msgid "Git sources"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:496
+#: ../../content/administration/install/deploy.rst:497
 msgid ""
 "Say Odoo has been installed via the **sources**, that both the Community and"
 " Enterprise git repositories were cloned in :file:`/opt/odoo/community` and "
@@ -1018,11 +1018,11 @@ msgid ""
 "``'/opt/odoo/community/odoo/addons,/opt/odoo/community/addons,/opt/odoo/enterprise'``."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:509
+#: ../../content/administration/install/deploy.rst:510
 msgid "Serving attachments"
 msgstr "Transmiterea atașamentelor"
 
-#: ../../content/administration/install/deploy.rst:511
+#: ../../content/administration/install/deploy.rst:512
 msgid ""
 "Attachments are files stored in the filestore which access is regulated by "
 "Odoo. They cannot be directly accessed via a static web server as accessing "
@@ -1035,7 +1035,7 @@ msgstr ""
 " baza de date pentru a determina unde sunt stocate fișierele și dacă "
 "utilizatorul curent poate accesa acestea sau nu."
 
-#: ../../content/administration/install/deploy.rst:516
+#: ../../content/administration/install/deploy.rst:517
 msgid ""
 "Nevertheless, once the file has been located and the access rights verified "
 "by Odoo, it is a good idea to serve the file using the static web server "
@@ -1059,7 +1059,7 @@ msgstr ""
 "--x-sendfile>` flag-ul CLI (acest flag unic este utilizat atât pentru "
 "X-Sendfile cât și pentru X-Accel)."
 
-#: ../../content/administration/install/deploy.rst:526
+#: ../../content/administration/install/deploy.rst:527
 msgid ""
 "The X-Sendfile extension for apache (and compatible web servers) does not "
 "require any supplementary configuration."
@@ -1067,7 +1067,7 @@ msgstr ""
 "Extensia X-Sendfile pentru apache (și serverele web compatibile) nu necesită"
 " nicio configurație suplimentară."
 
-#: ../../content/administration/install/deploy.rst:528
+#: ../../content/administration/install/deploy.rst:529
 msgid ""
 "The X-Accel extension for NGINX **does** require the following additionnal "
 "configuration:"
@@ -1075,7 +1075,7 @@ msgstr ""
 "Extensia X-Accel pentru NGINX **are nevoie** de următoarea configurație "
 "suplimentară:"
 
-#: ../../content/administration/install/deploy.rst:537
+#: ../../content/administration/install/deploy.rst:538
 msgid ""
 "In case you don't know what is the path to your filestore, start Odoo with "
 "the :option:`--x-sendfile <odoo-bin --x-sendfile>` option and navigate to "
@@ -1089,11 +1089,11 @@ msgstr ""
 "NGINX). Acest lucru înregistrează o avertizare, mesajul conține configurația"
 " de care aveți nevoie."
 
-#: ../../content/administration/install/deploy.rst:546
+#: ../../content/administration/install/deploy.rst:547
 msgid "Security"
 msgstr "Securitate"
 
-#: ../../content/administration/install/deploy.rst:548
+#: ../../content/administration/install/deploy.rst:549
 msgid ""
 "For starters, keep in mind that securing an information system is a "
 "continuous process, not a one-shot operation. At any moment, you will only "
@@ -1103,7 +1103,7 @@ msgstr ""
 "proces continuu, nu o operațiune unică. În orice moment, veți fi doar atât "
 "de sigur cât cel mai slab link din mediul dvs."
 
-#: ../../content/administration/install/deploy.rst:552
+#: ../../content/administration/install/deploy.rst:553
 msgid ""
 "So please do not take this section as the ultimate list of measures that "
 "will prevent all security problems. It's only intended as a summary of the "
@@ -1120,7 +1120,7 @@ msgstr ""
 "operare și distribuția, cele mai bune practici din punct de vedere al "
 "utilizatorilor, parolelor și managementului controlului accesului, etc."
 
-#: ../../content/administration/install/deploy.rst:558
+#: ../../content/administration/install/deploy.rst:559
 msgid ""
 "When deploying an internet-facing server, please be sure to consider the "
 "following security-related topics:"
@@ -1128,7 +1128,7 @@ msgstr ""
 "Când implementați un server orientat către internet, vă rugăm să luați în  "
 "considerare următoarele subiecte legate de securitate:"
 
-#: ../../content/administration/install/deploy.rst:561
+#: ../../content/administration/install/deploy.rst:562
 msgid ""
 "Always set a strong super-admin admin password, and restrict access to the "
 "database management pages as soon as the system is set up. See "
@@ -1138,7 +1138,7 @@ msgstr ""
 "accesul la paginile de administrare a bazei de date imediat ce sistemul este"
 " configurat. Vedeți :ref:`db_manager_security`."
 
-#: ../../content/administration/install/deploy.rst:564
+#: ../../content/administration/install/deploy.rst:565
 msgid ""
 "Choose unique logins and strong passwords for all administrator accounts on "
 "all databases. Do not use 'admin' as the login. Do not use those logins for "
@@ -1152,7 +1152,7 @@ msgstr ""
 "controlul/administrarea instalării. *Niciodată* nu utilizați parolele "
 "implicit ca admin/admin, chiar și pentru bazele de date de test/staging."
 
-#: ../../content/administration/install/deploy.rst:569
+#: ../../content/administration/install/deploy.rst:570
 msgid ""
 "Do **not** install demo data on internet-facing servers. Databases with demo"
 " data contain default logins and passwords that can be used to get into your"
@@ -1163,7 +1163,7 @@ msgstr ""
 "pot fi utilizate pentru a intra în sistemele dvs. și pot cauza probleme "
 "semnificative, chiar și pe sistemele de testare/dezvoltare."
 
-#: ../../content/administration/install/deploy.rst:573
+#: ../../content/administration/install/deploy.rst:574
 msgid ""
 "Use appropriate database filters ( :option:`--db-filter <odoo-bin --db-"
 "filter>`) to restrict the visibility of your databases according to the "
@@ -1179,7 +1179,7 @@ msgstr ""
 "lista de baze de date disponibile pentru a filtra, în loc să lăsați sistemul"
 " să le aducă toate din backend-ul bazei de date."
 
-#: ../../content/administration/install/deploy.rst:580
+#: ../../content/administration/install/deploy.rst:581
 msgid ""
 "Once your ``db_name`` and ``db_filter`` are configured and only match a "
 "single database per hostname, you should set ``list_db`` configuration "
@@ -1195,7 +1195,7 @@ msgstr ""
 "bazelor de date (aceasta este expusă și ca opțiunea de linie de comandă "
 ":option:`--no-database-list <odoo-bin --no-database-list>`)"
 
-#: ../../content/administration/install/deploy.rst:586
+#: ../../content/administration/install/deploy.rst:587
 msgid ""
 "Make sure the PostgreSQL user (:option:`--db_user <odoo-bin --db_user>`) is "
 "*not* a super-user, and that your databases are owned by a different user. "
@@ -1209,7 +1209,7 @@ msgstr ""
 " ``postgres`` dacă folosiți un ``db_user`` non-privilegiat dedicat. Vedeți "
 "și :ref:`setup/deploy/odoo`."
 
-#: ../../content/administration/install/deploy.rst:591
+#: ../../content/administration/install/deploy.rst:592
 msgid ""
 "Keep installations updated by regularly installing the latest builds, either"
 " via GitHub or by downloading the latest version from "
@@ -1220,7 +1220,7 @@ msgstr ""
 " recente versiuni de la https://www.odoo.com/page/download sau "
 "http://nightly.odoo.com"
 
-#: ../../content/administration/install/deploy.rst:595
+#: ../../content/administration/install/deploy.rst:596
 msgid ""
 "Configure your server in multi-process mode with proper limits matching your"
 " typical usage (memory/CPU/timeouts). See also :ref:`builtin_server`."
@@ -1229,7 +1229,7 @@ msgstr ""
 "potrivesc cu utilizarea tipică (memorie/CPU/timeout-uri). Vedeți și "
 ":ref:`builtin_server`."
 
-#: ../../content/administration/install/deploy.rst:598
+#: ../../content/administration/install/deploy.rst:599
 msgid ""
 "Run Odoo behind a web server providing HTTPS termination with a valid SSL "
 "certificate, in order to prevent eavesdropping on cleartext communications. "
@@ -1245,7 +1245,7 @@ msgstr ""
 "timeout-uri adecvate, apoi activați opțiunea :option:`proxy mode <odoo-bin "
 "--proxy-mode>`. Vedeți și :ref:`https_proxy`."
 
-#: ../../content/administration/install/deploy.rst:605
+#: ../../content/administration/install/deploy.rst:606
 msgid ""
 "If you need to allow remote SSH access to your servers, make sure to set a "
 "strong password for **all** accounts, not just `root`. It is strongly "
@@ -1262,7 +1262,7 @@ msgstr ""
 " doar IP-uri de încredere în firewall și / sau rulați un sistem de detectare"
 " a forței brute precum `fail2ban` sau un echivalent."
 
-#: ../../content/administration/install/deploy.rst:611
+#: ../../content/administration/install/deploy.rst:612
 msgid ""
 "Consider installing appropriate rate-limiting on your proxy or firewall, to "
 "prevent brute-force attacks and denial of service attacks. See also "
@@ -1273,7 +1273,7 @@ msgstr ""
 "tip denial of service. Vedeți și :ref:`login_brute_force` pentru măsuri "
 "specifice."
 
-#: ../../content/administration/install/deploy.rst:615
+#: ../../content/administration/install/deploy.rst:616
 msgid ""
 "Many network providers provide automatic mitigation for Distributed Denial "
 "of Service attacks (DDOS), but this is often an optional service, so you "
@@ -1283,7 +1283,7 @@ msgstr ""
 " Distributed Denial of Service (DDOS), dar aceasta este adesea un serviciu "
 "opțional, așa că ar trebui să vă consultați cu ei."
 
-#: ../../content/administration/install/deploy.rst:619
+#: ../../content/administration/install/deploy.rst:620
 msgid ""
 "Whenever possible, host your public-facing demo/test/staging instances on "
 "different machines than the production ones. And apply the same security "
@@ -1293,7 +1293,7 @@ msgstr ""
 "publicului pe mașini diferite de cele de producție. Și aplicați aceleași "
 "precauții de securitate ca și pentru producție."
 
-#: ../../content/administration/install/deploy.rst:623
+#: ../../content/administration/install/deploy.rst:624
 msgid ""
 "If your public-facing Odoo server has access to sensitive internal network "
 "resources or services (e.g. via a private VLAN), implement appropriate "
@@ -1320,7 +1320,7 @@ msgstr ""
 "systemd.html>`_ poate fi de asemenea util pentru a implementa controlul de "
 "acces la rețea per-proces."
 
-#: ../../content/administration/install/deploy.rst:634
+#: ../../content/administration/install/deploy.rst:635
 msgid ""
 "If your public-facing Odoo server is behind a Web Application Firewall, a "
 "load-balancer, a transparent DDoS protection service (like CloudFlare) or a "
@@ -1347,7 +1347,7 @@ msgstr ""
 "servicii precum CloudFlare de obicei mențin o listă publică a gamelor lor de"
 " adrese IP pentru acest scop."
 
-#: ../../content/administration/install/deploy.rst:645
+#: ../../content/administration/install/deploy.rst:646
 msgid ""
 "If you are hosting multiple customers, isolate customer data and files from "
 "each other using containers or appropriate \"jail\" techniques."
@@ -1355,7 +1355,7 @@ msgstr ""
 "Dacă găzduiți mai mulți clienți, izolați datele și fișierele clienților unul"
 " de celălalt utilizând containere sau tehnici adecvate de \"jail\"."
 
-#: ../../content/administration/install/deploy.rst:648
+#: ../../content/administration/install/deploy.rst:649
 msgid ""
 "Setup daily backups of your databases and filestore data, and copy them to a"
 " remote archiving server that is not accessible from the server itself."
@@ -1364,7 +1364,7 @@ msgstr ""
 "fișiere, și copiați-le pe un server de arhivare la distanță care nu este "
 "accesibil de la serverul în sine."
 
-#: ../../content/administration/install/deploy.rst:651
+#: ../../content/administration/install/deploy.rst:652
 msgid ""
 "Deploying Odoo on Linux is strongly recommended over Windows. Should you "
 "choose nevertheless to deploy on a Windows platform, a thorough security "
@@ -1372,11 +1372,11 @@ msgid ""
 "scope of this guide."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:659
+#: ../../content/administration/install/deploy.rst:660
 msgid "Blocking Brute Force Attacks"
 msgstr "Blocarea atacurilor brute force"
 
-#: ../../content/administration/install/deploy.rst:661
+#: ../../content/administration/install/deploy.rst:662
 msgid ""
 "For internet-facing deployments, brute force attacks on user passwords are "
 "very common, and this threat should not be neglected for Odoo servers. Odoo "
@@ -1389,19 +1389,19 @@ msgstr ""
 " este efectuată o încercare de conectare, și raportează rezultatul: reușit "
 "sau eșuat, împreună cu numele de utilizator țintă și adresa IP sursă."
 
-#: ../../content/administration/install/deploy.rst:665
+#: ../../content/administration/install/deploy.rst:666
 msgid "The log entries will have the following form."
 msgstr "Intrările în jurnal vor avea următorul format."
 
-#: ../../content/administration/install/deploy.rst:667
+#: ../../content/administration/install/deploy.rst:668
 msgid "Failed login::"
 msgstr "Conectare eșuată::"
 
-#: ../../content/administration/install/deploy.rst:671
+#: ../../content/administration/install/deploy.rst:672
 msgid "Successful login::"
 msgstr "Conectare reușită::"
 
-#: ../../content/administration/install/deploy.rst:676
+#: ../../content/administration/install/deploy.rst:677
 msgid ""
 "These logs can be easily analyzed by an intrusion prevention system such as "
 "`fail2ban`."
@@ -1409,7 +1409,7 @@ msgstr ""
 "Aceste jurnale pot fi analizate ușor de către un sistem de prevenire a "
 "intruziunilor precum `fail2ban`."
 
-#: ../../content/administration/install/deploy.rst:678
+#: ../../content/administration/install/deploy.rst:679
 msgid ""
 "For example, the following fail2ban filter definition should match a failed "
 "login::"
@@ -1417,7 +1417,7 @@ msgstr ""
 "De exemplu, următoarea definiție de filtru fail2ban ar trebui să se "
 "potrivească cu o conectare eșuată::"
 
-#: ../../content/administration/install/deploy.rst:685
+#: ../../content/administration/install/deploy.rst:686
 msgid ""
 "This could be used with a jail definition to block the attacking IP on "
 "HTTP(S)."
@@ -1425,7 +1425,7 @@ msgstr ""
 "Acest lucru ar putea fi utilizat cu un jail definition pentru a bloca IP-ul "
 "atacatorului pe HTTP(S)."
 
-#: ../../content/administration/install/deploy.rst:687
+#: ../../content/administration/install/deploy.rst:688
 msgid ""
 "Here is what it could look like for blocking the IP for 15 minutes when 10 "
 "failed login attempts are detected from the same IP within 1 minute::"
@@ -1434,15 +1434,15 @@ msgstr ""
 "10 încercări de conectare eșuate sunt detectate de la același IP într-un "
 "minut::"
 
-#: ../../content/administration/install/deploy.rst:701
+#: ../../content/administration/install/deploy.rst:702
 msgid "Database Manager Security"
 msgstr "Securitatea managerului de bază de date"
 
-#: ../../content/administration/install/deploy.rst:703
+#: ../../content/administration/install/deploy.rst:704
 msgid ":ref:`setup/deploy/odoo` mentioned ``admin_passwd`` in passing."
 msgstr ":ref:`setup/deploy/odoo` a menționat ``admin_passwd`` în trecere."
 
-#: ../../content/administration/install/deploy.rst:705
+#: ../../content/administration/install/deploy.rst:706
 msgid ""
 "This setting is used on all database management screens (to create, delete, "
 "dump or restore databases)."
@@ -1451,7 +1451,7 @@ msgstr ""
 "date (pentru a crea, șterge, crea o copie de rezervă sau restaura baze de "
 "date)."
 
-#: ../../content/administration/install/deploy.rst:708
+#: ../../content/administration/install/deploy.rst:709
 msgid ""
 "If the management screens must not be accessible at all, you should set "
 "``list_db`` configuration option to ``False``, to block access to all the "
@@ -1461,7 +1461,7 @@ msgstr ""
 "să setați opțiunea de configurare ``list_db`` la ``False``, pentru a bloca "
 "accesul la toate ecranele de selecție și administrare a bazei de date."
 
-#: ../../content/administration/install/deploy.rst:714
+#: ../../content/administration/install/deploy.rst:715
 msgid ""
 "It is strongly recommended to disable the Database Manager for any internet-"
 "facing system! It is meant as a development/demo tool, to make it easy to "
@@ -1477,7 +1477,7 @@ msgstr ""
 "conceput pentru a gestiona baze de date mari, și poate declanșa limitele de "
 "memorie."
 
-#: ../../content/administration/install/deploy.rst:720
+#: ../../content/administration/install/deploy.rst:721
 msgid ""
 "On production systems, database management operations should always be "
 "performed by the system administrator, including provisioning of new "
@@ -1487,7 +1487,7 @@ msgstr ""
 "trebuie efectuate întotdeauna de către administratorul de sistem, inclusiv "
 "provisionarea de noi baze de date și copii de rezervă automate."
 
-#: ../../content/administration/install/deploy.rst:723
+#: ../../content/administration/install/deploy.rst:724
 msgid ""
 "Be sure to setup an appropriate ``db_name`` parameter (and optionally, "
 "``db_filter`` too) so that the system can determine the target database for "
@@ -1499,7 +1499,7 @@ msgstr ""
 " date țintă pentru fiecare solicitare, altfel utilizatorii vor fi blocați "
 "deoarece nu vor fi autorizați să aleagă baza de date singuri."
 
-#: ../../content/administration/install/deploy.rst:728
+#: ../../content/administration/install/deploy.rst:729
 msgid ""
 "If the management screens must only be accessible from a selected set of "
 "machines, use the proxy server's features to block access to all routes "
@@ -1512,7 +1512,7 @@ msgstr ""
 "(posibil) ``/web/database/selector`` care afișează ecranul de selecție a "
 "bazei de date."
 
-#: ../../content/administration/install/deploy.rst:732
+#: ../../content/administration/install/deploy.rst:733
 msgid ""
 "If the database-management screen should be left accessible, the "
 "``admin_passwd`` setting must be changed from its ``admin`` default: this "
@@ -1523,21 +1523,21 @@ msgstr ""
 "implicit: această parolă este verificată înainte de a permite operațiunile "
 "de modificare a bazei de date."
 
-#: ../../content/administration/install/deploy.rst:736
+#: ../../content/administration/install/deploy.rst:737
 msgid "It should be stored securely, and should be generated randomly e.g."
 msgstr ""
 "Trebuie stocată în siguranță, și ar trebui să fie generată aleatoriu, de "
 "exemplu"
 
-#: ../../content/administration/install/deploy.rst:742
+#: ../../content/administration/install/deploy.rst:743
 msgid "which will generate a 32 characters pseudorandom printable string."
 msgstr "ce va genera un sir de 32 de caractere pseudo-aleatorii imprimabile."
 
-#: ../../content/administration/install/deploy.rst:745
+#: ../../content/administration/install/deploy.rst:746
 msgid "Supported Browsers"
 msgstr "Browsere suportate"
 
-#: ../../content/administration/install/deploy.rst:747
+#: ../../content/administration/install/deploy.rst:748
 msgid ""
 "Odoo supports all the major desktop and mobile browsers available on the "
 "market, as long as they are supported by their publishers."
@@ -1545,27 +1545,27 @@ msgstr ""
 "Odoo suportă toate browserele majore de desktop și mobile disponibile pe "
 "piață, atâta timp cât sunt suportate de către editori."
 
-#: ../../content/administration/install/deploy.rst:750
+#: ../../content/administration/install/deploy.rst:751
 msgid "Here are the supported browsers:"
 msgstr "Iată browserele suportate:"
 
-#: ../../content/administration/install/deploy.rst:752
+#: ../../content/administration/install/deploy.rst:753
 msgid "Google Chrome"
 msgstr "Google Chrome"
 
-#: ../../content/administration/install/deploy.rst:753
+#: ../../content/administration/install/deploy.rst:754
 msgid "Mozilla Firefox"
 msgstr "Mozilla Firefox"
 
-#: ../../content/administration/install/deploy.rst:754
+#: ../../content/administration/install/deploy.rst:755
 msgid "Microsoft Edge"
 msgstr "Microsoft Edge"
 
-#: ../../content/administration/install/deploy.rst:755
+#: ../../content/administration/install/deploy.rst:756
 msgid "Apple Safari"
 msgstr "Apple Safari"
 
-#: ../../content/administration/install/deploy.rst:757
+#: ../../content/administration/install/deploy.rst:758
 msgid ""
 "Please make sure your browser is up-to-date and still supported by its "
 "publisher before filing a bug report."
@@ -1573,13 +1573,13 @@ msgstr ""
 "Vă rugăm să vă asigurați că browserul este actualizat și încă suportat de "
 "editorul înainte de a depune un raport de eroare."
 
-#: ../../content/administration/install/deploy.rst:762
+#: ../../content/administration/install/deploy.rst:763
 msgid "Since Odoo 13.0, ES6 is supported.  Therefore, IE support is dropped."
 msgstr ""
 "De la Odoo 13.0, ES6 este suportat.  Prin urmare, suportul pentru IE este "
 "abandonat."
 
-#: ../../content/administration/install/deploy.rst:765
+#: ../../content/administration/install/deploy.rst:766
 msgid ""
 "to have multiple Odoo installations use the same PostgreSQL database, or to "
 "provide more computing resources to both software."
@@ -1588,7 +1588,7 @@ msgstr ""
 "PostgreSQL, sau pentru a oferi mai multe resurse de calculare atât software-"
 "ului."
 
-#: ../../content/administration/install/deploy.rst:768
+#: ../../content/administration/install/deploy.rst:769
 msgid ""
 "technically a tool like socat_ can be used to proxy UNIX sockets across "
 "networks, but that is mostly for software which can only be used over UNIX "
@@ -1597,7 +1597,7 @@ msgstr ""
 "tehnologic, un instrument precum socat_ poate fi folosit pentru a proxy "
 "socket-uri UNIX prin rețele, dar acest lucru este mai mult pentru software "
 
-#: ../../content/administration/install/deploy.rst:772
+#: ../../content/administration/install/deploy.rst:773
 msgid ""
 "or be accessible only over an internal packet-switched network, but that "
 "requires secured switches, protections against `ARP spoofing`_ and precludes"
@@ -1850,8 +1850,8 @@ msgid ""
 msgstr ""
 
 #: ../../content/administration/install/online.rst:14
-#: ../../content/administration/maintain/domain_names.rst:166
-#: ../../content/administration/maintain/domain_names.rst:236
+#: ../../content/administration/maintain/domain_names.rst:157
+#: ../../content/administration/maintain/domain_names.rst:211
 #: ../../content/administration/maintain/supported_versions.rst:29
 #: ../../content/administration/upgrade.rst:90
 #: ../../content/administration/upgrade.rst:307
@@ -1900,8 +1900,8 @@ msgstr ""
 
 #: ../../content/administration/install/packages.rst:19
 msgid ""
-"It is required to be logged in as a paying customer or partner to download "
-"the Enterprise packages."
+"It is required to be logged in as a paying on-premise customer or partner to"
+" download the Enterprise packages."
 msgstr ""
 
 #: ../../content/administration/install/packages.rst:25
@@ -2692,11 +2692,9 @@ msgstr ""
 
 #: ../../content/administration/maintain/azure_oauth.rst:55
 msgid ""
-"In the search bar, search for the following :guilabel:`Deregulated "
+"In the search bar, search for the following :guilabel:`Delegated "
 "permissions` and click :guilabel:`Add permissions` for each one:"
 msgstr ""
-"În bara de căutare, căutați următoarele :guilabel:`Deregulated permissions` "
-"și faceți clic pe :guilabel:`Add permissions` pentru fiecare dintre ele:"
 
 #: ../../content/administration/maintain/azure_oauth.rst:58
 msgid ":guilabel:`SMTP.Send`"
@@ -3220,388 +3218,285 @@ msgstr "Nume de domeniu"
 
 #: ../../content/administration/maintain/domain_names.rst:5
 msgid ""
-"A **domain name** works as an address for your website. It makes the "
-"Internet much more accessible as it allows users to type a meaningful web "
-"address, such as ``www.odoo.com``, rather than its server's IP address with "
-"a series of numbers."
+"Domain names are text-based addresses identifying online locations, such as "
+"websites. They provide a more memorable and recognizable way for people to "
+"navigate the internet than numerical IP addresses."
 msgstr ""
-"Un **nume de domeniu** funcționează ca o adresă pentru site-ul dvs. face "
-"Internetul mult mai accesibil, deoarece permite utilizatorilor să introducă "
-"o adresă web semnificativă, cum ar fi ``www.odoo.com``, în locul adresei IP "
-"a serverului cu o serie de numere."
 
-#: ../../content/administration/maintain/domain_names.rst:9
+#: ../../content/administration/maintain/domain_names.rst:8
 msgid ""
-"You can use a custom domain name to access your Odoo database and websites:"
+"**Odoo Online** and **Odoo.sh** databases use a **subdomain** of the "
+"`odoo.com` **domain** by default (e.g., `mycompany.odoo.com`)."
 msgstr ""
-"Puteți utiliza un nume de domeniu personalizat pentru a accesa baza de date "
-"Odoo și site-urile dvs. web:"
 
 #: ../../content/administration/maintain/domain_names.rst:11
 msgid ""
-"By :ref:`registering a free domain name with Odoo <domain-name/odoo-"
-"register>` (for Odoo Online databases)"
-msgstr ""
-"Prin :ref:`înregistrarea unui nume de domeniu gratuit cu Odoo <domain-"
-"name/odoo-register>` (pentru bazele de date Odoo Online)"
-
-#: ../../content/administration/maintain/domain_names.rst:13
-msgid ""
-"By :ref:`configuring a custom domain that you already own <domain-"
+"However, you can use a custom domain name instead by :ref:`registering a "
+"free domain name <domain-name/register>` (only available for Odoo Online "
+"databases) or by :ref:`configuring a domain name you already own <domain-"
 "name/existing>`."
 msgstr ""
-"Prin :ref:`configurarea unui domeniu personalizat pe care îl dețineți deja "
-"<domain-name/existing>`."
 
 #: ../../content/administration/maintain/domain_names.rst:16
 msgid ""
-"Odoo Online and Odoo.sh databases, including their websites, use by default "
-"a subdomain of ``odoo.com`` for both the URL and the emails (e.g., "
-"``https://example.odoo.com``)."
-msgstr ""
-"Bazele de date Odoo Online și Odoo.sh, inclusiv site-urile lor, utilizează "
-"în mod implicit un subdomeniu al ``odoo.com`` atât pentru URL cât și pentru "
-"e-mailuri (de exemplu, ``https://example.odoo.com``)."
-
-#: ../../content/administration/maintain/domain_names.rst:20
-msgid ""
-"Odoo offers a :ref:`free custom domain name <domain-name/odoo-register>` to "
-"all Odoo Online databases for one year. Visitors can then access your "
-"website with an address such as ``www.example.com`` rather than the default "
-"``example.odoo.com``."
-msgstr ""
-"Odoo oferă un :ref:`nume de domeniu personalizat gratuit <domain-name/odoo-"
-"register>` tuturor bazelor de date Odoo Online pentru un an. Vizitatorii pot"
-" apoi accesa site-ul dvs. cu o adresă de genul ``www.example.com`` în locul "
-"implicitului ``example.odoo.com``."
-
-#: ../../content/administration/maintain/domain_names.rst:25
-msgid ""
-"`Odoo Tutorials: Register a Free Domain Name "
+"`Odoo Tutorials: Register a free domain name [video] "
 "<https://www.odoo.com/slides/slide/register-a-free-domain-name-1663>`_"
 msgstr ""
-"`Tutoriale Odoo: Înregistrați un nume de domeniu gratuit "
-"<https://www.odoo.com/slides/slide/register-a-free-domain-name-1663>`_"
 
-#: ../../content/administration/maintain/domain_names.rst:27
+#: ../../content/administration/maintain/domain_names.rst:22
+msgid "Register a free domain name with Odoo"
+msgstr "Înregistrați un nume de domeniu gratuit cu Odoo"
+
+#: ../../content/administration/maintain/domain_names.rst:24
 msgid ""
-"`Odoo Quick Tips: Get a free domain name! "
-"<https://www.youtube.com/watch?v=eAfgeNOHLP4>`_"
+"To register a one-year free domain name for your Odoo Online database, sign "
+"in to your account and go to the `database manager "
+"<https://www.odoo.com/my/databases>`_. Click the gear icon (:guilabel:`⚙️`) "
+"next to the database name and select :guilabel:`Domain Names`."
 msgstr ""
-"`Sfaturi rapide Odoo: Obțineți un nume de domeniu gratuit! "
-"<https://www.youtube.com/watch?v=eAfgeNOHLP4>`_"
 
-#: ../../content/administration/maintain/domain_names.rst:32
-msgid "About domain names"
-msgstr "Despre numele de domeniu"
+#: ../../content/administration/maintain/domain_names.rst-1
+msgid "Accessing a database's domain names configuration"
+msgstr ""
 
-#: ../../content/administration/maintain/domain_names.rst:34
+#: ../../content/administration/maintain/domain_names.rst:31
+msgid "Search for the desired domain name and check its availability."
+msgstr ""
+
+#: ../../content/administration/maintain/domain_names.rst-1
+msgid "Searching for an available domain name"
+msgstr ""
+
+#: ../../content/administration/maintain/domain_names.rst:37
 msgid ""
-"Having a **good domain name** is as important to your branding as the name "
-"of your business or organization as it is the first thing your visitors will"
-" notice. We recommend you keep them *simple, short, easy to remember and "
-"spell*."
+"Ensure the Website app is installed if the domain name registration option "
+"does not appear."
 msgstr ""
-"Aveți un **bun nume de domeniu** este la fel de important pentru branding-ul"
-" văru ca numele afacerii sau organizației dvs. deoarece este primul lucru pe"
-" care vizitatorii dvs. îl vor observa. Vă recomandăm să le păstrați *simple,"
-" scurte, ușor de reținut și de scris*."
 
-#: ../../content/administration/maintain/domain_names.rst:38
+#: ../../content/administration/maintain/domain_names.rst:39
 msgid ""
-"A **subdomain** is a domain that is a part of another domain. It often "
-"refers to the additional part that comes before the main domain name. "
-"Traditionally, most websites use the ``www.`` subdomain, but any string of "
-"letters can be used as well. You can use subdomains to direct your visitors "
-"to other websites than your main website or to specific pages (e.g., "
-"``experience.odoo.com`` points to a specific page.)"
+"Select the desired domain name, fill in the :guilabel:`Domain Owner` form, "
+"and click :guilabel:`Register`. The chosen domain name is directly linked to"
+" the database, but you still need to :ref:`map your domain name to your Odoo"
+" website <domain-name/db-map>`."
 msgstr ""
-"Un **subdomeniu** este un domeniu care face parte dintr-un alt domeniu. "
-"Adesea se referă la partea suplimentară care vine înaintea numelui de "
-"domeniu principal. Tradițional, majoritatea site-urilor web folosesc "
-"subdomeniul ``www.`` , dar orice șir de litere poate fi folosit de asemenea."
-" Puteți folosi subdomeniile pentru a dirija vizitatorii dvs. către alte "
-"site-uri decât site-ul principal sau către pagini specifice (de exemplu, "
-"``experience.odoo.com`` indică o pagină specifică.)"
 
-#: ../../content/administration/maintain/domain_names.rst:44
-msgid ""
-"All domain names are referenced in the **Domain Name System**, or **DNS**, "
-"which works as a giant directory for the Internet. There are many DNS "
-"servers, so any modification to the DNS can take up to 72 hours to propagate"
-" worldwide on all servers."
+#: ../../content/administration/maintain/domain_names.rst-1
+msgid "Filling in the domain owner information"
 msgstr ""
-"Toate numele de domeniu sunt referite în **Sistemul de nume de domeniu**, "
-"sau **DNS**, care funcționează ca un director gigant pentru Internet. Există"
-" multe servere DNS, astfel încât orice modificare la DNS poate dura până la "
-"72 ore pentru a se propaga în întreaga lume pe toate serverele."
+
+#: ../../content/administration/maintain/domain_names.rst:47
+msgid ""
+"A verification email from `noreply@domainnameverification.net` will be sent "
+"to the email address provided in the :guilabel:`Domain Owner` form. It is "
+"essential to verify your email address to keep the domain active and receive"
+" the renewal quote before expiration."
+msgstr ""
 
 #: ../../content/administration/maintain/domain_names.rst:51
-msgid "Indexing of domain names by search engines"
+msgid ""
+"The domain name registration is free for the first year. After this period, "
+"Odoo will continue to manage the domain in partnership with **Gandi.net**, "
+"the domain name registrar, and you will be charged `Gandi.net's renewal rate"
+" <https://www.gandi.net/en/domain>`_. Odoo sends a renewal quotation every "
+"year to the email address mentioned in the :guilabel:`Domain Owner` form "
+"several weeks before the expiration date of the domain. The domain is "
+"renewed automatically when the quotation is confirmed."
 msgstr ""
 
-#: ../../content/administration/maintain/domain_names.rst:53
-msgid ""
-"Search engines, such as Google and Bing, rely on web crawlers (:dfn:`robots "
-"that explore and analyze the web`) to index all websites and their related "
-"domain names. These crawlers discover new URLs thanks to links on known web "
-"pages. As a result, search engines should index domain names automatically "
-"after a while, as long as their URLs are mentioned elsewhere on the "
-"Internet."
+#: ../../content/administration/maintain/domain_names.rst:59
+msgid "The offer is only available for **Odoo Online** databases."
 msgstr ""
 
-#: ../../content/administration/maintain/domain_names.rst:58
-msgid ""
-"Improving the appearance and positioning of web pages on search engines is a"
-" practice named \"Search Engine Optimization\" (SEO)."
+#: ../../content/administration/maintain/domain_names.rst:60
+msgid "The offer is limited to **one** domain name per client."
+msgstr ""
+
+#: ../../content/administration/maintain/domain_names.rst:61
+msgid "The offer is limited to the registration of a **new** domain name."
 msgstr ""
 
 #: ../../content/administration/maintain/domain_names.rst:62
 msgid ""
-"Adding relevant content, optimizing metadata, and building high-quality "
-"backlinks can all help improve a website's search engine visibility."
+"The offer is available to *One App Free* plans. Ensure that your website "
+"contains enough original content for Odoo to verify that your request is "
+"legitimate and respects `Odoo's Acceptable Use Policy "
+"<https://www.odoo.com/acceptable-use>`_. Given the high number of requests, "
+"it can take Odoo several days to review them."
 msgstr ""
 
-#: ../../content/administration/maintain/domain_names.rst:65
+#: ../../content/administration/maintain/domain_names.rst:70
+msgid "DNS records"
+msgstr ""
+
+#: ../../content/administration/maintain/domain_names.rst:72
 msgid ""
-"Some search engines provide tools for web admins, such as `Google Search "
-"Console <https://search.google.com/search-console>`_ and `Bing Webmaster "
-"Tools <https://www.bing.com/webmasters>`_, to help you analyze and improve "
-"your page ranking. To use these services, you must prove that you are the "
-"owner of your domain name. One way to verify the ownership of your domain "
-"name is by adding a DNS record. You can do this for :ref:`domain names "
-"registered with Odoo <domain-name/odoo-manage>` and for domain names managed"
-" by other providers."
-msgstr ""
-
-#: ../../content/administration/maintain/domain_names.rst:74
-msgid ":doc:`/applications/websites/website/pages/seo`"
-msgstr ""
-
-#: ../../content/administration/maintain/domain_names.rst:75
-msgid ""
-"`Google Search Console Help - Verify your site ownership "
-"<https://support.google.com/webmasters/answer/9008080>`_"
+"To manage your free domain name :abbr:`DNS (domain name system)` records, "
+"open the `database manager <https://www.odoo.com/my/databases>`_, click the "
+"gear icon (:guilabel:`⚙️`) next to the database name, select "
+":guilabel:`Domain Names`, and click :guilabel:`DNS`."
 msgstr ""
 
 #: ../../content/administration/maintain/domain_names.rst:76
 msgid ""
-"`Bing Webmaster Tools - Add and Verify site "
-"<https://www.bing.com/webmasters/help/add-and-verify-site-12184f8b>`_"
+":guilabel:`A`: the A record holds the IP address of the domain. It is "
+"automatically created and **cannot** be edited or deleted."
+msgstr ""
+
+#: ../../content/administration/maintain/domain_names.rst:78
+msgid ""
+":guilabel:`CNAME`: CNAME records forward one domain or subdomain to another "
+"domain. One is automatically created to map the `www.` subdomain to the "
+"database. If the database is renamed, the CNAME record **must** also be "
+"renamed."
 msgstr ""
 
 #: ../../content/administration/maintain/domain_names.rst:81
-msgid "Register a free domain name with Odoo"
-msgstr "Înregistrați un nume de domeniu gratuit cu Odoo"
-
-#: ../../content/administration/maintain/domain_names.rst:83
 msgid ""
-"You can register a domain name for your Odoo Online database directly from "
-"Odoo Website or your database manager."
+":guilabel:`MX`: MX records instruct servers on where to deliver emails."
 msgstr ""
-"Puteți înregistra un nume de domeniu pentru baza de date Odoo Online direct "
-"de pe site-ul Odoo sau de la managerul bazei de date."
 
-#: ../../content/administration/maintain/domain_names.rst:87
+#: ../../content/administration/maintain/domain_names.rst:82
 msgid ""
-"Your domain name is **free for one year** if you register it with Odoo!"
+":guilabel:`TXT`: TXT records can be used for different purposes (e.g., to "
+"verify domain name ownership)."
 msgstr ""
-"Numele de domeniu dvs. este **gratuit pentru un an** dacă îl înregistrați cu"
-" Odoo!"
 
-#: ../../content/administration/maintain/domain_names.rst:88
+#: ../../content/administration/maintain/domain_names.rst:85
 msgid ""
-"The domain name is registered with `Gandi <https://www.gandi.net/>`_, the "
-"domain name registrar."
+"Any modification to the DNS records can take up to **72 hours** to propagate"
+" worldwide on all servers."
 msgstr ""
-"Numele de domeniu este înregistrat cu `Gandi <https://www.gandi.net/>`_,  în"
-" registrul de nume de domeniu."
 
-#: ../../content/administration/maintain/domain_names.rst:90
+#: ../../content/administration/maintain/domain_names.rst:89
 msgid ""
-"You are the owner of the domain name and can use it for other purposes."
+"`Submit a support ticket <https://www.odoo.com/help>`_ if you need "
+"assistance to manage your domain name."
 msgstr ""
-"Sunteți proprietarul numelui de domeniu și puteți să-l folosiți pentru alte "
-"scopuri."
 
-#: ../../content/administration/maintain/domain_names.rst:91
-msgid "Odoo manages payment and technical support for you."
-msgstr "Odoo gestionează plata și suportul tehnic pentru dvs."
-
-#: ../../content/administration/maintain/domain_names.rst:92
-msgid ""
-"This offer doesn't include any mailbox. However, you can :ref:`configure "
-"your MX records <domain-name/odoo-manage>` to use your own email server or "
-"solution such as Google Workspace."
+#: ../../content/administration/maintain/domain_names.rst:93
+msgid "Mailbox"
 msgstr ""
-"Acesta ofertă nu include nici o cutie poștală. Cu toate acestea, puteți "
-":ref:`configura înregistrările MX <domain-name/odoo-manage>` pentru a "
-"utiliza serverul dvs. de e-mail sau o soluție precum Google Workspace."
 
 #: ../../content/administration/maintain/domain_names.rst:95
 msgid ""
-"To do so, go to :menuselection:`Website --> Domain Name`. Alternatively, "
-"open your `database manager <https://www.odoo.com/my/databases>`_, click on "
-"the :guilabel:`settings` button next to your database, then on "
-":guilabel:`Domain names`."
+"The one-year free domain name offer does **not** include a mailbox. There "
+"are two options to link your domain name with a mailbox."
 msgstr ""
-"Pentru a face acest lucru, mergeți la :menuselection:`Website --> Nume de "
-"domeniu`. Alternativ, deschideți `managerul bazei de date "
-"<https://www.odoo.com/my/databases>`_, faceți clic pe butonul "
-":guilabel:`settings` lângă baza de date, apoi pe :guilabel:`Nume de "
-"domenii`."
 
-#: ../../content/administration/maintain/domain_names.rst-1
-msgid "Clicking on Domain Names from an Odoo website"
-msgstr "Faceți clic pe Nume de domenii dintr-un site Odoo"
+#: ../../content/administration/maintain/domain_names.rst:99
+msgid "Use a subdomain"
+msgstr ""
 
-#: ../../content/administration/maintain/domain_names.rst:103
+#: ../../content/administration/maintain/domain_names.rst:101
 msgid ""
-"Search for the domain name of your choice to check its availability, then "
-"select the one you want to register for your website."
+"You can create a subdomain (e.g., `subdomain.yourdomain.com`) to use as an "
+"alias domain for the database. It allows users to create records in the "
+"database from emails received on their `email@subdomain.yourdomain.com` "
+"alias."
 msgstr ""
-"Căutați numele de domeniu dorit pentru a verifica disponibilitatea, apoi "
-"selectați cel pe care doriți să-l înregistrați pentru site-ul dvs."
 
-#: ../../content/administration/maintain/domain_names.rst-1
+#: ../../content/administration/maintain/domain_names.rst:105
 msgid ""
-"The search of the domain name example.com shows which associated domains are"
-" available."
+"To do so, open the `database manager <https://www.odoo.com/my/databases>`_, "
+"click the gear icon (:guilabel:`⚙️`) next to the database name, and go to "
+":menuselection:`Domain Names --> DNS --> Add DNS record --> CNAME`. Next, "
+"enter the desired subdomain in the :guilabel:`Name` field (e.g., "
+"`subdomain`), the original database domain with a period at the end (e.g., "
+"`mycompany.odoo.com.`) in the :guilabel:`Content` field, and click "
+":guilabel:`Add record`."
 msgstr ""
-"Căutarea numelui de domeniu example.com arată care domenii asociate sunt "
-"disponibile."
 
-#: ../../content/administration/maintain/domain_names.rst:110
+#: ../../content/administration/maintain/domain_names.rst:111
 msgid ""
-"Next, fill in the form with your information to become the domain name "
-"owner."
+"Then, add the alias domain as your *own domain* by clicking :guilabel:`Use "
+"my own domain`, entering the alias domain (e.g., "
+"`subdomain.yourdomain.com`), clicking :guilabel:`Verify`, and then "
+":guilabel:`I confirm, it's done`."
 msgstr ""
-"În continuare, completați formularul cu informațiile dvs. pentru a deveni "
-"proprietarul numelui de domeniu."
 
-#: ../../content/administration/maintain/domain_names.rst:112
+#: ../../content/administration/maintain/domain_names.rst:115
 msgid ""
-"Your domain name is directly linked to your database, but you still have to "
-":ref:`map your domain name with your website <domain-name/website-map>`."
+"Finally, go to your database and open the :guilabel:`Settings`. Enable "
+":guilabel:`Custom Email Servers` field, enter the :guilabel:`Alias Domain` "
+"(e.g., `subdomain.yourdomain.com`) and click :guilabel:`Save`."
 msgstr ""
-"Numele de domeniu dvs. este legat direct de baza de date, dar totuși trebuie"
-" să :ref:`asociați numele de domeniu cu site-ul dvs. <domain-name/website-"
-"map>`."
 
-#: ../../content/administration/maintain/domain_names.rst:116
+#: ../../content/administration/maintain/domain_names.rst:120
+msgid "Use an external email provider"
+msgstr ""
+
+#: ../../content/administration/maintain/domain_names.rst:122
 msgid ""
-"Free domain names are also available for free Odoo Online databases (if you "
-"installed one app only, for example). In this case, Odoo reviews your "
-"request and your website to avoid abuse. This process can take several days "
-"due to the success of the offer."
+"To use an external email provider, you should configure an MX record. To do "
+"so, open the `database manager <https://www.odoo.com/my/databases>`_, click "
+"the gear icon (:guilabel:`⚙️`) next to the database name, click "
+":menuselection:`Domain Names --> DNS --> Add DNS record --> MX`. The values "
+"you should enter for the :guilabel:`Name`, :guilabel:`Content`, and "
+":guilabel:`Priority` fields depend on the external email provider."
 msgstr ""
 
-#: ../../content/administration/maintain/domain_names.rst:119
-msgid "This is not available for Odoo.sh databases yet."
-msgstr "Aceasta nu este disponibilă încă pentru bazele de date Odoo.sh."
-
-#: ../../content/administration/maintain/domain_names.rst:124
-msgid "Manage your domain name registered with Odoo"
-msgstr "Gestionați numele de domeniu înregistrat cu Odoo"
-
-#: ../../content/administration/maintain/domain_names.rst:126
+#: ../../content/administration/maintain/domain_names.rst:129
 msgid ""
-"To manage the DNS records of your domain name registered with Odoo or to "
-"visualize the contacts associated with it, open your `database manager "
-"<https://www.odoo.com/my/databases>`_, click on the :guilabel:`settings` "
-"button next to your database, on :guilabel:`Domain names`, and then on "
-":guilabel:`Contacts` or :guilabel:`DNS`."
+"`Google Workspace: MX record values "
+"<https://support.google.com/a/answer/174125?hl=en>`_"
 msgstr ""
-"Pentru a gestiona înregistrările DNS ale numelui de domeniu înregistrat cu "
-"Odoo sau pentru a vizualiza contactele asociate cu acesta, deschideți "
-"`managerul bazei de date <https://www.odoo.com/my/databases>`_, faceți clic "
-"pe butonul :guilabel:`settings` lângă baza de date, pe :guilabel:`Nume de "
-"domenii`, apoi pe :guilabel:`Contacte` sau :guilabel:`DNS`."
 
-#: ../../content/administration/maintain/domain_names.rst-1
-msgid "Management of the domain names linked to an Odoo database"
-msgstr "Gestionarea numelui de domenii legate de o bază de date Odoo"
-
-#: ../../content/administration/maintain/domain_names.rst:136
+#: ../../content/administration/maintain/domain_names.rst:130
 msgid ""
-"Please `submit a support ticket <https://www.odoo.com/help>`_ if you need "
-"further assistance to manage your domain name."
+"`Outlook and Exchange Online: Add an MX record for email "
+"<https://learn.microsoft.com/en-us/microsoft-365/admin/get-help-with-"
+"domains/create-dns-records-at-any-dns-hosting-"
+"provider?view=o365-worldwide#add-an-mx-record-for-email-outlook-exchange-"
+"online>`_"
 msgstr ""
-"Vă rugăm să `trimiteți un tichet de asistență <https://www.odoo.com/help>`_ "
-"dacă aveți nevoie de asistență suplimentară pentru a gestiona numele de "
-"domeniu."
 
-#: ../../content/administration/maintain/domain_names.rst:142
-msgid "Configure your existing domain name"
-msgstr "Configurați numele de domeniu existent"
+#: ../../content/administration/maintain/domain_names.rst:135
+msgid "Configure an existing domain name"
+msgstr ""
+
+#: ../../content/administration/maintain/domain_names.rst:137
+msgid ""
+"If you already have a domain name, you can use it for your Odoo website."
+msgstr ""
+
+#: ../../content/administration/maintain/domain_names.rst:140
+msgid ""
+"It is strongly recommended to follow **in order** these three steps to avoid"
+" any :ref:`SSL certificate validation <domain-name/ssl>` issues:"
+msgstr ""
+
+#: ../../content/administration/maintain/domain_names.rst:143
+msgid ":ref:`Add a CNAME record <domain-name/cname>`"
+msgstr ""
 
 #: ../../content/administration/maintain/domain_names.rst:144
-msgid ""
-"If you already own a domain name, you can use it to point to your website."
+msgid ":ref:`Map your domain name to your Odoo database <domain-name/db-map>`"
 msgstr ""
-"Dacă dețineți deja un nume de domeniu, puteți să-l utilizați pentru a indica"
-" site-ul dvs."
 
-#: ../../content/administration/maintain/domain_names.rst:146
+#: ../../content/administration/maintain/domain_names.rst:145
 msgid ""
-"To avoid any issue with the :ref:`SSL certificate validation <domain-"
-"name/ssl>`, we highly recommend that you proceed with the following actions "
-"in this order:"
+":ref:`Map your domain name to your Odoo website <domain-name/website-map>`"
 msgstr ""
-"Pentru a evita orice problemă cu validarea :ref:`certificatului SSL <domain-"
-"name/ssl>`, vă recomandăm să urmați următoarele acțiuni în această ordine:"
-
-#: ../../content/administration/maintain/domain_names.rst:149
-msgid ""
-":ref:`Add a CNAME record <domain-name/cname>` on your domain name's DNS "
-"zone."
-msgstr ""
-":ref:`Adăugați o înregistrare CNAME <domain-name/cname>` în zona DNS a "
-"numelui de domeniu."
 
 #: ../../content/administration/maintain/domain_names.rst:150
-msgid ""
-":ref:`Map your domain name with your Odoo database <domain-name/db-map>`."
-msgstr ""
-":ref:`Asociați numele de domeniu cu baza de date Odoo <domain-name/db-map>`."
-
-#: ../../content/administration/maintain/domain_names.rst:151
-msgid ""
-":ref:`Map your domain name with your Odoo website <domain-name/website-"
-"map>`."
-msgstr ""
-":ref:`Asociați numele de domeniu cu site-ul dvs. <domain-name/website-map>`."
-
-#: ../../content/administration/maintain/domain_names.rst:156
 msgid "Add a CNAME record"
 msgstr "Adăugați o înregistrare CNAME"
 
-#: ../../content/administration/maintain/domain_names.rst:158
+#: ../../content/administration/maintain/domain_names.rst:152
 msgid ""
-"A **CNAME record** is a type of DNS record that points to the domain of "
-"another website rather than directly to an IP address."
+"Creating a CNAME record to forward your domain name to the address of your "
+"Odoo database is required."
 msgstr ""
-"O **înregistrare CNAME** este un tip de înregistrare DNS care indică "
-"domeniul unui alt site web în loc să indică direct o adresă IP."
 
-#: ../../content/administration/maintain/domain_names.rst:161
+#: ../../content/administration/maintain/domain_names.rst:159
 msgid ""
-"You need a CNAME record that points to your Odoo database. The requirements "
-"are detailed in your database manager."
+"The CNAME record's target address should be your database's address as "
+"defined at its creation (e.g., `mycompany.odoo.com`)."
 msgstr ""
-"Aveți nevoie de o înregistrare CNAME care să indice baza de date Odoo. "
-"Cerințele sunt detaliate în managerul bazei de date."
 
-#: ../../content/administration/maintain/domain_names.rst:168
-msgid ""
-"The target address is the current address of your database, as defined at "
-"its creation (e.g., ``example.odoo.com``)"
-msgstr ""
-"Adresa țintă este adresa curentă a bazei de date, așa cum este definită la "
-"crearea ei (de exemplu, ``example.odoo.com``)"
-
-#: ../../content/administration/maintain/domain_names.rst:171
-#: ../../content/administration/maintain/domain_names.rst:250
+#: ../../content/administration/maintain/domain_names.rst:162
+#: ../../content/administration/maintain/domain_names.rst:221
 #: ../../content/administration/maintain/supported_versions.rst:30
 #: ../../content/administration/odoo_sh.rst:5
 #: ../../content/administration/upgrade.rst:120
@@ -3609,219 +3504,120 @@ msgstr ""
 msgid "Odoo.sh"
 msgstr "Odoo.sh"
 
+#: ../../content/administration/maintain/domain_names.rst:164
+msgid ""
+"The CNAME record's target address can be the project's main address, which "
+"can be found on Odoo.sh by going to :menuselection:`Settings --> Project "
+"Name`, or a specific branch (production, staging or development) by going to"
+" :menuselection:`Branches --> select the branch --> Settings --> Custom "
+"domains`, and clicking :guilabel:`How to set up my domain?`. A message "
+"indicates which address your CNAME record should target."
+msgstr ""
+
+#: ../../content/administration/maintain/domain_names.rst:170
+msgid "The specific instructions depend on your DNS hosting service."
+msgstr ""
+
 #: ../../content/administration/maintain/domain_names.rst:173
 msgid ""
-"Your project's main address is defined in :menuselection:`Settings --> "
-"Project Name`."
+"`GoDaddy: Add a CNAME record <https://www.godaddy.com/help/add-a-cname-"
+"record-19236>`_"
 msgstr ""
-"Adresa principală a proiectului dvs. este definită în :menuselection:`Setări"
-" --> Nume proiect`."
+
+#: ../../content/administration/maintain/domain_names.rst:174
+msgid ""
+"`Namecheap: How to create a CNAME record for your domain "
+"<https://www.namecheap.com/support/knowledgebase/article.aspx/9646/2237/how-"
+"to-create-a-cname-record-for-your-domain>`_"
+msgstr ""
 
 #: ../../content/administration/maintain/domain_names.rst:175
 msgid ""
-"If you want to target a specific branch (production, staging or "
-"development), go to :menuselection:`Branches --> select your branch --> "
-"Settings --> Custom domains`, and click on :guilabel:`How to set up my "
-"domain?`. A message indicates which address your CNAME record should target."
+"`OVHcloud: Add a new DNS record "
+"<https://docs.ovh.com/us/en/domains/web_hosting_how_to_edit_my_dns_zone/#add-"
+"a-new-dns-record>`_"
 msgstr ""
-"Dacă doriți să indicați o ramură specifică (producție, stagiu sau "
-"dezvoltare), mergeți la :menuselection:`Ramuri --> selectați ramura dvs. -->"
-" Setări --> Domenii personalizate`, și faceți clic pe :guilabel:`Cum să "
-"configurați domeniul meu?`. Un mesaj indică că adresa înregistrării CNAME "
-"trebuie să indice."
 
-#: ../../content/administration/maintain/domain_names.rst:180
-#: ../../content/administration/maintain/domain_names.rst:222
-msgid "Open your domain name's manager dashboard."
-msgstr "Deschideți panoul de control al managerului de nume de domeniu."
-
-#: ../../content/administration/maintain/domain_names.rst:181
+#: ../../content/administration/maintain/domain_names.rst:176
 msgid ""
-"Open the **DNS zone** management page for the domain name you want to "
-"configure."
+"`Cloudflare: Manage DNS records <https://support.cloudflare.com/hc/en-"
+"us/articles/360019093151>`_"
 msgstr ""
-"Deschideți pagina de administrare a **zonei DNS** pentru numele de domeniu "
-"pe care doriți să-l configurați."
 
-#: ../../content/administration/maintain/domain_names.rst:182
-msgid "Create a **CNAME record** pointing to the address of your database."
-msgstr "Creați o **înregistrare CNAME** care să indice adresa bazei de date."
-
-#: ../../content/administration/maintain/domain_names.rst:184
+#: ../../content/administration/maintain/domain_names.rst:179
 msgid ""
-"While Odoo suggests creating a CNAME record for your ``www.`` subdomain "
-"(``www.example.com``), you can of course use any domain name of your choice,"
-" with any subdomain (e.g., ``anything.example.com``)."
+"Creating a CNAME record to map the `www` subdomain (`www.yourdomain.com`) as"
+" some visitors are used to typing `www.` before entering a domain name."
 msgstr ""
-"În timp ce Odoo sugerează crearea unei înregistrări CNAME pentru subdomeniul"
-" ``www.`` (``www.example.com``), puteți, desigur, utiliza orice nume de "
-"domeniu, cu orice subdomeniu (de exemplu, ``anything.example.com``)."
 
-#: ../../content/administration/maintain/domain_names.rst:189
+#: ../../content/administration/maintain/domain_names.rst:183
 msgid ""
-"You own the domain name ``example.com``, and you have an Odoo Online "
-"database at the address ``example.odoo.com``. You want to access your Odoo "
-"database primarily with the domain ``www.example.com`` but also with the "
-":ref:`naked domain <domain-name/naked-domain>` ``example.com``."
+"You own the domain name `yourdomain.com`, and your Odoo Online database's "
+"address is `mycompany.odoo.com`. You want to access your Odoo database "
+"primarily with the domain `www.yourdomain.com` but also with the naked "
+"domain :dfn:`(a domain name without any subdomains or prefixes)` "
+"`yourdomain.com`."
 msgstr ""
-"Dețineți numele de domeniu ``example.com``, și aveți o bază de date Odoo "
-"Online la adresa ``example.odoo.com``. Doriți să accesați baza de date Odoo "
-"principal cu domeniul ``www.example.com``, dar și cu :ref:`domeniul gol "
-"<domain-name/naked-domain>` ``example.com``."
 
-#: ../../content/administration/maintain/domain_names.rst:194
+#: ../../content/administration/maintain/domain_names.rst:188
 msgid ""
-"To do so, you create a CNAME record for the ``www`` subdomain, with "
-"``example.odoo.com`` as the target. The DNS zone manager generates the "
-"following rule and adds it to your DNS zone: ``www IN CNAME "
-"example.odoo.com.``"
+"To do so, create a CNAME record for the `www` subdomain, with "
+"`mycompany.odoo.com` as the target. Next, create a redirect (301 permanent "
+"or visible redirect) to redirect visitors from `yourdomain.com` to "
+"`wwww.yourdomain.com`."
 msgstr ""
-"Pentru a face acest lucru, creați o înregistrare CNAME pentru subdomeniul "
-"``www``, cu ``example.odoo.com`` ca țintă. Managerul de zone DNS generează "
-"următoarea regulă și o adaugă în zona DNS: ``www IN CNAME "
-"example.odoo.com.``"
+
+#: ../../content/administration/maintain/domain_names.rst:195
+msgid "Map a domain name to an Odoo database"
+msgstr ""
 
 #: ../../content/administration/maintain/domain_names.rst:198
 msgid ""
-"You also create a redirection from ``example.com`` to ``wwww.example.com``."
+"Ensure you have :ref:`added a CNAME record <domain-name/cname>` to your "
+"domain name's DNS **before** mapping your domain name to your Odoo database."
 msgstr ""
-"De asemenea, creați o redirecționare de la ``example.com`` la "
-"``wwww.example.com``."
 
-#: ../../content/administration/maintain/domain_names.rst:200
-msgid "Your new DNS records are propagated to all DNS servers."
-msgstr "Noul dvs. înregistrare DNS este propagată către toate serverele DNS."
-
-#: ../../content/administration/maintain/domain_names.rst:203
-msgid "Here are some specific guidelines to create a CNAME record:"
+#: ../../content/administration/maintain/domain_names.rst:201
+msgid ""
+"Failing to do so may prevent the validation of the :ref:`SSL certificate "
+"<domain-name/ssl>` and could result in a *certificate name mismatch* error. "
+"Web browsers often display this as a warning, such as *\"Your connection is "
+"not private\"*."
 msgstr ""
-"Iată câteva indicații specifice pentru crearea unei înregistrări CNAME:"
 
 #: ../../content/administration/maintain/domain_names.rst:205
-msgid "`GoDaddy <https://www.godaddy.com/help/add-a-cname-record-19236>`_"
-msgstr "`GoDaddy <https://www.godaddy.com/help/add-a-cname-record-19236>`_"
-
-#: ../../content/administration/maintain/domain_names.rst:206
 msgid ""
-"`Namecheap "
-"<https://www.namecheap.com/support/knowledgebase/article.aspx/9646/2237/how-"
-"to-create-a-cname-record-for-your-domain>`_"
+"If you encounter this error after mapping the domain name to your database, "
+"wait up to five days, as the validation may still happen. If not, you can "
+"`submit a support ticket <https://www.odoo.com/help>`_, including "
+"screenshots of your CNAME records."
 msgstr ""
-"`Namecheap "
-"<https://www.namecheap.com/support/knowledgebase/article.aspx/9646/2237/how-"
-"to-create-a-cname-record-for-your-domain>`_"
 
-#: ../../content/administration/maintain/domain_names.rst:207
+#: ../../content/administration/maintain/domain_names.rst:213
 msgid ""
-"`OVH "
-"<https://docs.ovh.com/us/en/domains/web_hosting_how_to_edit_my_dns_zone/#add-"
-"a-new-dns-record>`_"
+"Open the `database manager <https://www.odoo.com/my/databases>`_, click the "
+"gear icon (:guilabel:`⚙️`) next to the database name, and go to "
+":menuselection:`Domain Names --> Use my own domain`. Then, enter the domain "
+"name (e.g., `yourdomain.com`), click :guilabel:`Verify` and :guilabel:`I "
+"confirm, it's done`."
 msgstr ""
-"`OVH "
-"<https://docs.ovh.com/us/en/domains/web_hosting_how_to_edit_my_dns_zone/#add-"
-"a-new-dns-record>`_"
 
-#: ../../content/administration/maintain/domain_names.rst:208
-msgid ""
-"`CloudFlare <https://support.cloudflare.com/hc/en-"
-"us/articles/360019093151>`_"
+#: ../../content/administration/maintain/domain_names.rst:0
+msgid "Mapping a domain name to an Odoo Online database"
 msgstr ""
-"`CloudFlare <https://support.cloudflare.com/hc/en-"
-"us/articles/360019093151>`_"
-
-#: ../../content/administration/maintain/domain_names.rst:209
-msgid ""
-"`Google Domains <https://support.google.com/domains/answer/3290350?hl=en>`_"
-msgstr ""
-"`Google Domains <https://support.google.com/domains/answer/3290350?hl=en>`_"
-
-#: ../../content/administration/maintain/domain_names.rst:214
-msgid "Naked domain"
-msgstr "Domeniu gol"
-
-#: ../../content/administration/maintain/domain_names.rst:216
-msgid ""
-"A **naked domain** is a domain name that doesn't have any subdomain at the "
-"beginning of the address (e.g., ``odoo.com`` instead of ``www.odoo.com``)."
-msgstr ""
-"Un **domeniu gol** este un nume de domeniu care nu are niciun subdomeniu la "
-"începutul adresei (de exemplu, ``odoo.com`` în loc de ``www.odoo.com``)."
-
-#: ../../content/administration/maintain/domain_names.rst:219
-msgid ""
-"You may want your naked domain to redirect to your website as some visitors "
-"may not type the full domain name to access your website."
-msgstr ""
-"Poate doriți ca domeniul gol să redirecționeze către site-ul dvs., deoarece "
-"anumiți vizitatori nu vor tasta numele complet al domeniului pentru a accesa"
-" site-ul dvs."
 
 #: ../../content/administration/maintain/domain_names.rst:223
 msgid ""
-"Create a **redirection** from the naked domain (``example.com``) to your "
-"main domain name (``www.example.com``)."
+"On Odoo.sh, go to :menuselection:`Branches --> select your branch --> "
+"Settings --> Custom domains`, type the domain name to add, then click "
+":guilabel:`Add domain`."
 msgstr ""
-"Creați o **redirecționare** de la domeniul gol (``example.com``) la numele "
-"principal al domeniului (``www.example.com``)."
-
-#: ../../content/administration/maintain/domain_names.rst:227
-msgid ""
-"Depending on your domain name registrar, this redirection may be already "
-"pre-configured."
-msgstr ""
-"În funcție de numele de domeniu înregistrat, această redirecționare poate fi"
-" deja pre-configurată."
-
-#: ../../content/administration/maintain/domain_names.rst:232
-msgid "Map your domain name with your Odoo database"
-msgstr "Asociați numele de domeniu cu baza de date Odoo"
-
-#: ../../content/administration/maintain/domain_names.rst:238
-msgid ""
-"Open your `database manager <https://www.odoo.com/my/databases>`_, click on "
-"the :guilabel:`settings` button next to your database, on :guilabel:`Domain "
-"names`, and then on :guilabel:`Use my own domain` at the bottom of the right"
-" column."
-msgstr ""
-"Deschideți `managerul de baze de date <https://www.odoo.com/my/databases>`_,"
-" faceți clic pe butonul :guilabel:`settings` lângă baza de date, pe "
-":guilabel:`Nume de domeniu`, apoi pe :guilabel:`Utilizați propriul meu "
-"domeniu` în partea de jos a coloanei din dreapta."
-
-#: ../../content/administration/maintain/domain_names.rst:242
-msgid ""
-"Type the domain name you want to add to this database, then click on "
-":guilabel:`Verify` to check if the CNAME record is correctly configured. "
-"Once done, click on :guilabel:`I confirm, it's done`."
-msgstr ""
-"Tastați numele de domeniu pe care doriți să-l adăugați acestei baze de date,"
-" apoi faceți clic pe :guilabel:`Verifică` pentru a verifica dacă "
-"înregistrarea CNAME este configurată corect. După ce ați terminat, faceți "
-"clic pe :guilabel:`Confirm, am terminat`."
 
 #: ../../content/administration/maintain/domain_names.rst:0
-msgid ""
-"Verification of the CNAME records of a domain name before mapping it with a "
-"database"
+msgid "Mapping a domain name to an Odoo.sh branch"
 msgstr ""
-"Verificarea înregistrărilor CNAME ale unui nume de domeniu înainte de a-l "
-"asocia cu o bază de date"
 
-#: ../../content/administration/maintain/domain_names.rst:252
-msgid ""
-"Go to :menuselection:`Branches --> select your branch --> Settings --> "
-"Custom domains`, type the domain name you want to add to this database, then"
-" click on :guilabel:`Add domain`."
-msgstr ""
-"Accesați :menuselection:`Branches --> select your branch --> Settings --> "
-"Custom domains`, tastați numele de domeniu pe care doriți să-l adăugați "
-"acestei baze de date, apoi faceți clic pe :guilabel:`Add domain`."
-
-#: ../../content/administration/maintain/domain_names.rst:0
-msgid "Mapping a domain name with an Odoo.sh branch"
-msgstr "Asociați un nume de domeniu cu o ramură Odoo.sh"
-
-#: ../../content/administration/maintain/domain_names.rst:260
+#: ../../content/administration/maintain/domain_names.rst:230
 msgid ""
 ":ref:`Odoo.sh branches: settings tab <odoosh-gettingstarted-branches-tabs-"
 "settings>`"
@@ -3829,268 +3625,148 @@ msgstr ""
 ":ref:`Ramuri Odoo.sh: fila setări <odoosh-gettingstarted-branches-tabs-"
 "settings>`"
 
-#: ../../content/administration/maintain/domain_names.rst:263
-msgid ""
-"Make sure to :ref:`add a CNAME record <domain-name/cname>` to your domain "
-"name's DNS **before** mapping your domain name with your Odoo database."
-msgstr ""
-"Verificați dacă ați :ref:`adăugat o înregistrare CNAME <domain-name/cname>` "
-"la DNS-ul numelui de domeniu **înainte** de a asocia numele de domeniu cu "
-"baza de date Odoo."
-
-#: ../../content/administration/maintain/domain_names.rst:266
-msgid ""
-"Failing to do so may impede the validation of the :ref:`SSL certificate "
-"<domain-name/ssl>` and would result in a *certificate name mismatch* error. "
-"This is often displayed by web browsers as a warning such as *\"Your "
-"connection is not private\"*."
-msgstr ""
-"Dacă nu faceți acest lucru, poate împiedica validarea :ref:`certificatului "
-"SSL <domain-name/ssl>` și ar rezulta într-un mesaj de eroare *certificate "
-"name mismatch*. Acest lucru este adesea afișat de browser-uri web ca un "
-"avertisment ca *\"Conexiunea dvs. nu este privată\"*."
-
-#: ../../content/administration/maintain/domain_names.rst:270
-msgid ""
-"If this is the case and you have added the domain name to your database's "
-"settings less than five days ago, wait 24 hours as the validation may still "
-"happen. Otherwise, please `submit a support ticket "
-"<https://www.odoo.com/help>`_ including screenshots of your CNAME records."
-msgstr ""
-"Dacă este cazul și ați adăugat numele de domeniu la setările bazei de date "
-"mai puțin de cinci zile în urmă, așteptați 24 de ore, deoarece validarea "
-"poate încă să se întâmple. În caz contrar, vă rugăm să `trimiteți un tichet "
-"de asistență <https://www.odoo.com/help>`_ incluzând capturi de ecran ale "
-"înregistrărilor CNAME."
-
-#: ../../content/administration/maintain/domain_names.rst:277
+#: ../../content/administration/maintain/domain_names.rst:235
 msgid "SSL encryption (HTTPS protocol)"
 msgstr "Criptare SSL (protocol HTTPS)"
 
-#: ../../content/administration/maintain/domain_names.rst:279
+#: ../../content/administration/maintain/domain_names.rst:237
 msgid ""
-"**SSL encryption** is an encryption-based Internet security protocol. It "
-"allows your visitors to navigate your website through a secure connection, "
-"which appears as an ``https://`` protocol at the beginning of your web "
-"address, rather than a non-secure ``http://`` protocol."
+"**SSL encryption** allows visitors to navigate a website through a secure "
+"connection, which appears as the *https://* protocol at the beginning of a "
+"web address rather than the non-secure *http://* protocol."
 msgstr ""
-"**Criptarea SSL** este un protocol de securitate Internet bazat pe criptare."
-" Permite vizitatorilor dvs. să navigheze pe site-ul dvs. prin o conexiune "
-"securizată, care apare ca un protocol ``https://`` la începutul adresei dvs."
-" web, în loc de un protocol ne-securizat ``http://``."
 
-#: ../../content/administration/maintain/domain_names.rst:283
+#: ../../content/administration/maintain/domain_names.rst:241
 msgid ""
-"Odoo generates a separate SSL certificate for each domain :ref:`mapped in "
-"the database manager <domain-name/db-map>`, using integration with `Let's "
-"Encrypt Certificate Authority and ACME protocol "
-"<https://letsencrypt.org/how-it-works/>`_."
+"Odoo generates a separate SSL certificate for each domain :ref:`mapped to a "
+"database <domain-name/db-map>` using `Let's Encrypt's certificate authority "
+"and ACME protocol <https://letsencrypt.org/how-it-works/>`_."
 msgstr ""
-"Odoo generează un certificat SSL separat pentru fiecare domeniu "
-":ref:`asociat în managerul de baze de date <domain-name/db-map>`, utilizând "
-"integrarea cu `Let's Encrypt Certificate Authority and ACME protocol "
-"<https://letsencrypt.org/how-it-works/>`_."
 
-#: ../../content/administration/maintain/domain_names.rst:288
-msgid "The certificate generation may take up to 24h."
-msgstr "Generarea certificatului poate dura până la 24 de ore."
+#: ../../content/administration/maintain/domain_names.rst:246
+msgid "Certificate generation may take up to 24 hours."
+msgstr ""
 
-#: ../../content/administration/maintain/domain_names.rst:289
+#: ../../content/administration/maintain/domain_names.rst:247
 msgid ""
-"Several attempts to validate your certificate are made during the five days "
-"following the moment you add your domain name in your database's settings."
+"Several attempts to validate your certificate are made for five days after "
+"you map your domain name to your database."
 msgstr ""
-"Mai multe încercări de validare a certificatului dvs. sunt făcute în "
-"următoarele cinci zile de la momentul în care adăugați numele de domeniu în "
-"setările "
 
-#: ../../content/administration/maintain/domain_names.rst:291
+#: ../../content/administration/maintain/domain_names.rst:249
+msgid "If you use another service, you can keep using it or change to Odoo's."
+msgstr ""
+
+#: ../../content/administration/maintain/domain_names.rst:252
 msgid ""
-"If you already use another service, you can keep using it or simply change "
-"for Odoo."
+"No SSL certificate is generated for naked domains :dfn:`(domain names "
+"without any subdomains or prefixes)`."
 msgstr ""
-"Dacă utilizați deja un alt serviciu, puteți continua să-l utilizați sau să-l"
-" schimbați pur și simplu pentru Odoo."
 
-#: ../../content/administration/maintain/domain_names.rst:296
+#: ../../content/administration/maintain/domain_names.rst:258
 msgid "Web base URL of a database"
 msgstr "URL-ul de bază al bazei de date web"
 
-#: ../../content/administration/maintain/domain_names.rst:299
+#: ../../content/administration/maintain/domain_names.rst:261
 msgid ""
-"If you have Odoo Website, you can disregard this part and directly :ref:`map"
-" your domain name with your website <domain-name/website-map>`."
+"If the Website app is installed on your database, skip this section and "
+"continue from the :ref:`Map a domain name to a website <domain-name/website-"
+"map>` section."
 msgstr ""
-"Dacă aveți Odoo Website, puteți ignora această parte și puteți :ref:`asocia "
-"numele de domeniu cu site-ul dvs. <domain-name/website-map>` direct."
 
-#: ../../content/administration/maintain/domain_names.rst:302
+#: ../../content/administration/maintain/domain_names.rst:264
 msgid ""
-"The **web base URL** of a database, or **root URL** affects your main "
-"website address and all the links sent to your customers (e.g., quotations, "
-"portal links, etc.)."
+"The *web base URL* or root URL of a database affects your main website "
+"address and all the links sent to your customers (e.g., quotations, portal "
+"links, etc.)."
 msgstr ""
-"**URL-ul de bază web** al unei baze de date, sau **URL-ul rădăcină** "
-"afectează adresa principală a site-ului dvs. și toate legăturile trimise "
-"clienților dvs. (de exemplu, ofertele, legăturile portalului, etc.)."
 
-#: ../../content/administration/maintain/domain_names.rst:305
+#: ../../content/administration/maintain/domain_names.rst:267
 msgid ""
-"To configure it, access your Odoo database with your custom address, then "
-"log in as an administrator of your database (any user in the *Settings* "
-"group) from the login screen."
+"To make your custom domain name the *web base URL* of your database, access "
+"your database using your custom domain name and log in as an administrator "
+":dfn:`(a user part of the Settings access right group under "
+"Administration)`."
 msgstr ""
-"Pentru a-l configura, accesați baza de date Odoo cu adresa dvs. "
-"personalizată, apoi conectați-vă ca administrator al bazei de date (orice "
-"utilizator din grupul *Settings*) de pe ecranul de conectare."
 
-#: ../../content/administration/maintain/domain_names.rst:309
+#: ../../content/administration/maintain/domain_names.rst:272
 msgid ""
-"Connecting to your database with the original Odoo subdomain address (e.g., "
-"``example.odoo.com`` also updates the web base URL of your database. See "
-"below to prevent these automatic updates."
+"If you access your database with the original Odoo address (e.g., "
+"`mycompany.odoo.com`), the *web base URL* of your database will be updated "
+"accordingly. To prevent the automatic update of the *web base URL* when an "
+"administrator logs in to the database, activate the :ref:`developer mode "
+"<developer-mode>`, go to :menuselection:`Settings --> Technical --> System "
+"Parameters --> New`, and enter `web.base.url.freeze` as the :guilabel:`Key` "
+"and `True` as the :guilabel:`Value`."
 msgstr ""
-"Conectarea la baza de date cu adresa subdomeniului Odoo original (de "
-"exemplu, ``example.odoo.com`` actualizează de asemenea URL-ul de bază web al"
-" bazei de date. Vedeți mai jos pentru a preveni aceste actualizări automate."
 
-#: ../../content/administration/maintain/domain_names.rst:312
+#: ../../content/administration/maintain/domain_names.rst:279
 msgid ""
-"Alternatively, you can do it manually. To do so, activate the "
-":ref:`developer mode <developer-mode>`, then go to :menuselection:`Settings "
-"--> Technical --> System Parameters`."
+"You can also set the web base URL manually. To do so, activate the "
+":ref:`developer mode <developer-mode>`, go to :menuselection:`Settings --> "
+"Technical --> System Parameters`, and search for the `web.base.url` key "
+"(create it if necessary) and enter the full address of your website as the "
+"value (e.g., `https://www.yourdomain.com`). The URL must include the "
+"protocol `https://` (or `http://`) and *not* end with a slash (`/`)."
 msgstr ""
-"Alternativ, puteți face acest lucru manual. Pentru a face acest lucru, "
-"activați :ref:`modul dezvoltator <developer-mode>`, apoi mergeți la "
-":menuselection:`Settings --> Technical --> System Parameters`."
 
-#: ../../content/administration/maintain/domain_names.rst:315
-msgid ""
-"Find the key called ``web.base.url`` (or create it if it does not exist) and"
-" enter the full address of your website as value, such as "
-"``https://www.example.com``."
+#: ../../content/administration/maintain/domain_names.rst:288
+msgid "Map a domain name to an Odoo website"
 msgstr ""
-"Găsiți cheia numită ``web.base.url`` (sau creați-o dacă nu există) și "
-"introduceți adresa completă a site-ului dvs. ca valoare, de exemplu "
-"``https://www.example.com``."
 
-#: ../../content/administration/maintain/domain_names.rst:319
+#: ../../content/administration/maintain/domain_names.rst:290
 msgid ""
-"The URL must include the protocol ``https://`` (or ``http://``) and must not"
-" end with a slash (``/``)."
-msgstr ""
-"URL-ul trebuie să includă protocolul ``https://`` (sau ``http://``) și nu "
-"trebuie să se termine cu o bară (``/``)."
-
-#: ../../content/administration/maintain/domain_names.rst:322
-msgid ""
-"To prevent the automatic update of the web base URL when an administrator "
-"logs in the database, you can create the following System Parameter:"
-msgstr ""
-"Pentru a preveni actualizarea automată a URL-ului de bază web atunci când un"
-" administrator se conectează la baza de date, puteți crea următorul "
-"parametru sistem:"
-
-#: ../../content/administration/maintain/domain_names.rst:325
-msgid "key: ``web.base.url.freeze``"
-msgstr "cheie: ``web.base.url.freeze``"
-
-#: ../../content/administration/maintain/domain_names.rst:326
-msgid "value: ``True``"
-msgstr "valoare: ``True``"
-
-#: ../../content/administration/maintain/domain_names.rst:331
-msgid "Map your domain name with your website"
-msgstr "Asociați numele de domeniu cu site-ul dvs."
-
-#: ../../content/administration/maintain/domain_names.rst:333
-msgid ""
-"Mapping your domain name to your website isn't the same as mapping it with "
+"Mapping your domain name to your website is different than mapping it to "
 "your database:"
 msgstr ""
-"Asocierea numelui de domeniu la site-ul dvs. nu este aceeași ca și asocierea"
-" cu baza de date dvs.:"
 
-#: ../../content/administration/maintain/domain_names.rst:335
+#: ../../content/administration/maintain/domain_names.rst:292
 msgid ""
 "It defines your domain name as the main one for your website, helping search"
-" engines to index your website properly."
+" engines to index your website correctly."
 msgstr ""
-"Definește numele de domeniu ca fiind cel principal pentru site-ul dvs., "
-"ajutând motoarele de căutare să indexeze corect site-ul dvs."
 
-#: ../../content/administration/maintain/domain_names.rst:337
+#: ../../content/administration/maintain/domain_names.rst:294
 msgid ""
-"It defines your domain name as the base URL for your database, including the"
-" portal links sent by email to your customers."
+"It defines your domain name as the base URL for your database, including "
+"portal links sent by email to your customers."
 msgstr ""
-"Definește numele de domeniu ca fiind URL-ul de bază pentru baza de date, "
-"include legăturile portalului trimise prin e-mail clienților dvs."
 
-#: ../../content/administration/maintain/domain_names.rst:339
+#: ../../content/administration/maintain/domain_names.rst:296
 msgid ""
-"If you have multiple websites, it maps your domain name with the appropriate"
-" website."
+"If you have multiple websites, it maps your domain name to the appropriate "
+"website."
 msgstr ""
-"Dacă aveți mai multe site-uri, asociază numele de domeniu cu site-ul "
-"corespunzător."
 
-#: ../../content/administration/maintain/domain_names.rst:341
+#: ../../content/administration/maintain/domain_names.rst:298
 msgid ""
-"Go to :menuselection:`Website --> Configuration --> Settings --> Website "
-"Info`. If you have multiple websites, select the one you want to configure."
+"Go to :menuselection:`Website --> Configuration --> Settings`. If you have "
+"multiple websites, select the one you want to configure. In the "
+":guilabel:`Domain` field, enter the address of your website (e.g., "
+"`https://www.yourdomain.com`) and :guilabel:`Save`."
 msgstr ""
-"Mergeți la :menuselection:`Website --> Configuration --> Settings --> "
-"Website Info`. Dacă aveți mai multe site-uri, selectați cel pe care doriți "
-"să-l configurați."
 
-#: ../../content/administration/maintain/domain_names.rst:344
+#: ../../content/administration/maintain/domain_names.rst:303
 msgid ""
-"In the :guilabel:`Domain` field, fill in the web address of your website "
-"(e.g., ``https://www.example.com``) and click on :guilabel:`Save`."
+"Mapping your domain name to your Odoo website prevents Google Search from "
+"indexing your original database address (e.g., `mycompany.odoo.com`)."
 msgstr ""
-"În câmpul :guilabel:`Domain`, completați adresa web a site-ului dvs. (de "
-"exemplu, ``https://www.example.com``) și faceți clic pe :guilabel:`Save`."
 
-#: ../../content/administration/maintain/domain_names.rst-1
-msgid "Configuring https://www.example.com as the Domain of the website"
-msgstr "Configurarea https://www.example.com ca Domeniu al site-ului"
-
-#: ../../content/administration/maintain/domain_names.rst:352
+#: ../../content/administration/maintain/domain_names.rst:306
 msgid ""
-"Mapping your domain name with your Odoo website prevents Google from "
-"indexing both your custom domain name ``www.example.com`` and your original "
-"odoo database address ``example.odoo.com``."
+"If both addresses are already indexed, it may take some time before the "
+"indexation of the second address is removed from Google Search. You can use "
+"the `Google Search Console <https://search.google.com/search-"
+"console/welcome>`_ to fix the issue."
 msgstr ""
-"Asocierea numelui de domeniu cu site-ul dvs. Odoo previne Google de la "
-"indexarea atât a numelui de domeniu personalizat ``www.example.com`` cât și "
-"adresei originale a bazei de date odoo ``example.odoo.com``."
 
-#: ../../content/administration/maintain/domain_names.rst:355
+#: ../../content/administration/maintain/domain_names.rst:311
 msgid ""
-"If both addresses are already indexed, it may take some time before Google "
-"removes the indexation of the second address. You may also try using the "
-"`Google Search Console <https://search.google.com/search-console>`_ to fix "
-"this."
+"If you have multiple websites and companies on your database, make sure to "
+"select the right :guilabel:`Company` under :menuselection:`Website --> "
+"Configuration --> Settings`. Doing so indicates Odoo which URL to use as the"
+" :ref:`base URL <domain-name/web-base-url>` according to the company in use."
 msgstr ""
-
-#: ../../content/administration/maintain/domain_names.rst:360
-msgid ""
-"If you have multiple websites and companies on your database, make sure that"
-" you select the right :guilabel:`Company` in the website settings, next to "
-"the :guilabel:`Domain` settings. Doing so indicates Odoo which URL to use as"
-" the :ref:`base URL <domain-name/web-base-url>` according to the company in "
-"use."
-msgstr ""
-"Dacă aveți mai multe site-uri și companii în baza de date, asigurați-vă că "
-"selectați compania corectă în setările site-ului, lângă setările "
-":guilabel:`Domain`. Făcând acest lucru indica Odoo care URL să utilizeze ca "
-":ref:`URL de bază <domain-name/web-base-url>` în funcție de compania în "
-"folosire."
-
-#: ../../content/administration/maintain/domain_names.rst:366
-msgid ":doc:`/applications/general/email_communication/email_servers`"
-msgstr ":doc:`/applications/general/email_communication/email_servers`"
 
 #: ../../content/administration/maintain/enterprise.rst:6
 msgid "Switch from Community to Enterprise"
@@ -5367,6 +5043,81 @@ msgstr ""
 "Odată ce setarea este completă, baza de date Odoo este gata să utilizeze "
 "serverul de email Mailjet pentru email-uri în masă sau transacționale!"
 
+#: ../../content/administration/maintain/neutralized_database.rst:3
+msgid "Neutralized database"
+msgstr ""
+
+#: ../../content/administration/maintain/neutralized_database.rst:5
+msgid ""
+"A neutralized database is a non-production database on which several "
+"parameters are deactivated. This enables one to carry out tests without the "
+"risk of launching specific automated processes that could impact production "
+"data (e.g., sending emails to customers). Live access is removed and turned "
+"into a testing environment."
+msgstr ""
+
+#: ../../content/administration/maintain/neutralized_database.rst:11
+msgid "**Any testing database created is a neutralized database:**"
+msgstr ""
+
+#: ../../content/administration/maintain/neutralized_database.rst:13
+msgid "testing backup databases"
+msgstr ""
+
+#: ../../content/administration/maintain/neutralized_database.rst:14
+msgid "duplicate databases"
+msgstr ""
+
+#: ../../content/administration/maintain/neutralized_database.rst:15
+msgid "for Odoo.sh: staging and development databases"
+msgstr ""
+
+#: ../../content/administration/maintain/neutralized_database.rst:18
+msgid ""
+"A database can also be neutralized when upgrading, as it is vital to do some"
+" tests before switching to a new version."
+msgstr ""
+
+#: ../../content/administration/maintain/neutralized_database.rst:22
+msgid "Deactivated features"
+msgstr ""
+
+#: ../../content/administration/maintain/neutralized_database.rst:24
+msgid "Here is a non-exhaustive list of the deactivated parameters:"
+msgstr ""
+
+#: ../../content/administration/maintain/neutralized_database.rst:26
+msgid ""
+"all planned actions (e.g., automatic invoicing of subscriptions, mass "
+"mailing, etc.)"
+msgstr ""
+
+#: ../../content/administration/maintain/neutralized_database.rst:27
+msgid "outgoing emails"
+msgstr ""
+
+#: ../../content/administration/maintain/neutralized_database.rst:28
+msgid "bank synchronization"
+msgstr ""
+
+#: ../../content/administration/maintain/neutralized_database.rst:29
+msgid "payment providers"
+msgstr ""
+
+#: ../../content/administration/maintain/neutralized_database.rst:30
+msgid "delivery methods"
+msgstr ""
+
+#: ../../content/administration/maintain/neutralized_database.rst:31
+msgid ":abbr:`IAP (In-App Purchase)` tokens"
+msgstr ""
+
+#: ../../content/administration/maintain/neutralized_database.rst:34
+msgid ""
+"**A red banner at the top of the screen is displayed on the neutralized "
+"database so that it can be seen immediately.**"
+msgstr ""
+
 #: ../../content/administration/maintain/odoo_online.rst:3
 msgid "Odoo Online database management"
 msgstr "Gestionarea bazei de date Odoo Online"
@@ -5494,8 +5245,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/administration/maintain/odoo_online.rst:75
-msgid ""
-"You can :ref:`register a domain name for free <domain-name/odoo-register>`."
+msgid "You can :ref:`register a domain name for free <domain-name/register>`."
 msgstr ""
 
 #: ../../content/administration/maintain/odoo_online.rst:80
@@ -5974,19 +5724,20 @@ msgid "End of support"
 msgstr "Sfârșitul suportului"
 
 #: ../../content/administration/maintain/supported_versions.rst:34
-msgid "**Odoo 17.0**"
+msgid "Odoo saas~17.1"
 msgstr ""
 
 #: ../../content/administration/maintain/supported_versions.rst:35
-#: ../../content/administration/maintain/supported_versions.rst:36
-#: ../../content/administration/maintain/supported_versions.rst:37
 #: ../../content/administration/maintain/supported_versions.rst:41
-#: ../../content/administration/maintain/supported_versions.rst:65
-#: ../../content/administration/maintain/supported_versions.rst:66
-#: ../../content/administration/maintain/supported_versions.rst:67
-#: ../../content/administration/maintain/supported_versions.rst:83
-#: ../../content/administration/maintain/supported_versions.rst:84
-#: ../../content/administration/maintain/supported_versions.rst:85
+#: ../../content/administration/maintain/supported_versions.rst:42
+#: ../../content/administration/maintain/supported_versions.rst:43
+#: ../../content/administration/maintain/supported_versions.rst:47
+#: ../../content/administration/maintain/supported_versions.rst:71
+#: ../../content/administration/maintain/supported_versions.rst:72
+#: ../../content/administration/maintain/supported_versions.rst:73
+#: ../../content/administration/maintain/supported_versions.rst:89
+#: ../../content/administration/maintain/supported_versions.rst:90
+#: ../../content/administration/maintain/supported_versions.rst:91
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:58
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:59
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:62
@@ -6017,173 +5768,183 @@ msgstr ""
 msgid "|green|"
 msgstr "|green|"
 
-#: ../../content/administration/maintain/supported_versions.rst:38
-#: ../../content/administration/maintain/supported_versions.rst:93
-msgid "November 2023"
-msgstr ""
-
-#: ../../content/administration/maintain/supported_versions.rst:39
-msgid "November 2026 (planned)"
-msgstr ""
-
-#: ../../content/administration/maintain/supported_versions.rst:40
-msgid "Odoo saas~16.4"
-msgstr ""
-
-#: ../../content/administration/maintain/supported_versions.rst:42
-#: ../../content/administration/maintain/supported_versions.rst:43
+#: ../../content/administration/maintain/supported_versions.rst:36
+#: ../../content/administration/maintain/supported_versions.rst:37
 #: ../../content/administration/maintain/supported_versions.rst:48
 #: ../../content/administration/maintain/supported_versions.rst:49
 #: ../../content/administration/maintain/supported_versions.rst:54
 #: ../../content/administration/maintain/supported_versions.rst:55
 #: ../../content/administration/maintain/supported_versions.rst:60
 #: ../../content/administration/maintain/supported_versions.rst:61
-#: ../../content/administration/maintain/supported_versions.rst:72
-#: ../../content/administration/maintain/supported_versions.rst:73
+#: ../../content/administration/maintain/supported_versions.rst:66
+#: ../../content/administration/maintain/supported_versions.rst:67
 #: ../../content/administration/maintain/supported_versions.rst:78
 #: ../../content/administration/maintain/supported_versions.rst:79
+#: ../../content/administration/maintain/supported_versions.rst:84
+#: ../../content/administration/maintain/supported_versions.rst:85
 msgid "N/A"
 msgstr "N/A"
 
+#: ../../content/administration/maintain/supported_versions.rst:38
+msgid "January 2024"
+msgstr ""
+
+#: ../../content/administration/maintain/supported_versions.rst:40
+msgid "**Odoo 17.0**"
+msgstr ""
+
 #: ../../content/administration/maintain/supported_versions.rst:44
-msgid "August 2023"
+#: ../../content/administration/maintain/supported_versions.rst:99
+msgid "November 2023"
+msgstr ""
+
+#: ../../content/administration/maintain/supported_versions.rst:45
+msgid "October 2026 (planned)"
 msgstr ""
 
 #: ../../content/administration/maintain/supported_versions.rst:46
+msgid "Odoo saas~16.4"
+msgstr ""
+
+#: ../../content/administration/maintain/supported_versions.rst:50
+msgid "August 2023"
+msgstr ""
+
+#: ../../content/administration/maintain/supported_versions.rst:52
 msgid "Odoo saas~16.3"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:47
 #: ../../content/administration/maintain/supported_versions.rst:53
 #: ../../content/administration/maintain/supported_versions.rst:59
-#: ../../content/administration/maintain/supported_versions.rst:71
+#: ../../content/administration/maintain/supported_versions.rst:65
 #: ../../content/administration/maintain/supported_versions.rst:77
-#: ../../content/administration/maintain/supported_versions.rst:89
-#: ../../content/administration/maintain/supported_versions.rst:90
-#: ../../content/administration/maintain/supported_versions.rst:91
+#: ../../content/administration/maintain/supported_versions.rst:83
 #: ../../content/administration/maintain/supported_versions.rst:95
 #: ../../content/administration/maintain/supported_versions.rst:96
 #: ../../content/administration/maintain/supported_versions.rst:97
 #: ../../content/administration/maintain/supported_versions.rst:101
 #: ../../content/administration/maintain/supported_versions.rst:102
 #: ../../content/administration/maintain/supported_versions.rst:103
+#: ../../content/administration/maintain/supported_versions.rst:107
+#: ../../content/administration/maintain/supported_versions.rst:108
+#: ../../content/administration/maintain/supported_versions.rst:109
 msgid "|red|"
 msgstr "|red|"
 
-#: ../../content/administration/maintain/supported_versions.rst:50
+#: ../../content/administration/maintain/supported_versions.rst:56
 msgid "June 2023"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:52
+#: ../../content/administration/maintain/supported_versions.rst:58
 msgid "Odoo saas~16.2"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:56
+#: ../../content/administration/maintain/supported_versions.rst:62
 msgid "March 2023"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:58
+#: ../../content/administration/maintain/supported_versions.rst:64
 msgid "Odoo saas~16.1"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:62
+#: ../../content/administration/maintain/supported_versions.rst:68
 msgid "February 2023"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:64
+#: ../../content/administration/maintain/supported_versions.rst:70
 msgid "**Odoo 16.0**"
 msgstr "**Odoo 16.0**"
 
-#: ../../content/administration/maintain/supported_versions.rst:68
-#: ../../content/administration/maintain/supported_versions.rst:99
+#: ../../content/administration/maintain/supported_versions.rst:74
+#: ../../content/administration/maintain/supported_versions.rst:105
 msgid "October 2022"
 msgstr "Octombrie 2022"
 
-#: ../../content/administration/maintain/supported_versions.rst:69
+#: ../../content/administration/maintain/supported_versions.rst:75
 msgid "November 2025 (planned)"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:70
+#: ../../content/administration/maintain/supported_versions.rst:76
 msgid "Odoo saas~15.2"
 msgstr "Odoo saas~15.2"
 
-#: ../../content/administration/maintain/supported_versions.rst:74
+#: ../../content/administration/maintain/supported_versions.rst:80
 msgid "March 2022"
 msgstr "Martie 2022"
 
-#: ../../content/administration/maintain/supported_versions.rst:75
+#: ../../content/administration/maintain/supported_versions.rst:81
 msgid "January 2023"
 msgstr "Ianuarie 2023"
 
-#: ../../content/administration/maintain/supported_versions.rst:76
+#: ../../content/administration/maintain/supported_versions.rst:82
 msgid "Odoo saas~15.1"
 msgstr "Odoo saas~15.1"
 
-#: ../../content/administration/maintain/supported_versions.rst:80
+#: ../../content/administration/maintain/supported_versions.rst:86
 msgid "February 2022"
 msgstr "Februarie 2022"
 
-#: ../../content/administration/maintain/supported_versions.rst:81
+#: ../../content/administration/maintain/supported_versions.rst:87
 msgid "July 2022"
 msgstr "Iulie 2022"
 
-#: ../../content/administration/maintain/supported_versions.rst:82
+#: ../../content/administration/maintain/supported_versions.rst:88
 msgid "**Odoo 15.0**"
 msgstr "**Odoo 15.0**"
 
-#: ../../content/administration/maintain/supported_versions.rst:86
+#: ../../content/administration/maintain/supported_versions.rst:92
 msgid "October 2021"
 msgstr "Octombrie 2021"
 
-#: ../../content/administration/maintain/supported_versions.rst:87
+#: ../../content/administration/maintain/supported_versions.rst:93
 msgid "November 2024 (planned)"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:88
+#: ../../content/administration/maintain/supported_versions.rst:94
 msgid "**Odoo 14.0**"
 msgstr "**Odoo 14.0**"
 
-#: ../../content/administration/maintain/supported_versions.rst:92
+#: ../../content/administration/maintain/supported_versions.rst:98
 msgid "October 2020"
 msgstr "Octombrie 2020"
 
-#: ../../content/administration/maintain/supported_versions.rst:94
+#: ../../content/administration/maintain/supported_versions.rst:100
 msgid "**Odoo 13.0**"
 msgstr "**Odoo 13.0**"
 
-#: ../../content/administration/maintain/supported_versions.rst:98
+#: ../../content/administration/maintain/supported_versions.rst:104
 msgid "October 2019"
 msgstr "Octombrie 2019"
 
-#: ../../content/administration/maintain/supported_versions.rst:100
+#: ../../content/administration/maintain/supported_versions.rst:106
 msgid "Older versions"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:104
+#: ../../content/administration/maintain/supported_versions.rst:110
 msgid "Before 2019"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:105
+#: ../../content/administration/maintain/supported_versions.rst:111
 msgid "Before 2022"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:107
+#: ../../content/administration/maintain/supported_versions.rst:113
 msgid "Legend"
 msgstr "Legendă"
 
-#: ../../content/administration/maintain/supported_versions.rst:109
+#: ../../content/administration/maintain/supported_versions.rst:115
 msgid "|green| Supported version"
 msgstr "|green| Versiune suportată"
 
-#: ../../content/administration/maintain/supported_versions.rst:111
+#: ../../content/administration/maintain/supported_versions.rst:117
 msgid "|red| End-of-support"
 msgstr "|red| Sfârșitul suportului"
 
-#: ../../content/administration/maintain/supported_versions.rst:113
+#: ../../content/administration/maintain/supported_versions.rst:119
 msgid "N/A Never released for this platform"
 msgstr "N/A Nu a fost niciodată lansat pentru această platformă"
 
-#: ../../content/administration/maintain/supported_versions.rst:116
+#: ../../content/administration/maintain/supported_versions.rst:122
 msgid ""
 "Even though we don't support older versions, you can always `upgrade from "
 "any version <https://upgrade.odoo.com/>`_."
