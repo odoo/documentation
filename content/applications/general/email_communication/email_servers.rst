@@ -325,6 +325,11 @@ recipient, and :abbr:`CC (Carbon Copy)` email addresses of an incoming email.
    the database falsely treats the email as the full `commercial` alias (with a different domain),
    and therefore, creates a ticket/lead/opportunity/etc.
 
+.. important::
+   This alias mismatch issue has been resolved in Odoo 17, however, the
+   `mail.catchall.domain.allowed` system parameter is still used in Odoo 17 for backward
+   compatibility.
+
 To add the `mail.catchall.domain.allowed` system parameter, first, activate the :ref:`developer mode
 <developer-mode>`. Then, go to :menuselection:`Settings app --> Technical --> Parameters section -->
 System Parameters`. Click :guilabel:`Create`. Then, type in `mail.catchall.domain.allowed` for the
