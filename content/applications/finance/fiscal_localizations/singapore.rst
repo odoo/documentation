@@ -2,6 +2,13 @@
 Singapore
 =========
 
+Introduction
+============
+
+Odoo will automatically configure the accounting module to reflect your chosen package
+when you install a localisation package. In this case, you will get the following benefits
+when installing the Singaporean localisation.
+
 Add PayNow QR codes to invoices
 ===============================
 
