@@ -9,6 +9,62 @@ Odoo will automatically configure the accounting module to reflect your chosen p
 when you install a localisation package. In this case, you will get the following benefits
 when installing the Singaporean localisation.
 
+Configuration
+=============
+
+The Singapore localisation package can be installed in two ways.
+
+A. via Company Set-up
+---------------------
+
+B. via App installation
+------------------------
+
+Search for the 'Apps' icon in the Odoo Dashboard.
+
+Removed the filter in the search bar and search 'Singapore'
+
+Company Information & Contacts Set-up
+=====================================
+
+The following fields will replace the tax ID field when you install the SG localisation:
+- GST No.
+- UEN
+
+Company Information
+~~~~~~~~~~~~~~~~~~~
+
+.. image:: 
+   :align: center 
+   :alt: Company information
+
+Contact form
+~~~~~~~~~~~~
+
+.. image:: 
+   :align: center
+   :alt: Contact form
+
+
+These fields need to be filled in order 
+
+Chart of Accounts
+=================
+
+The Singaporean chart of accounts is included in Singapore - Accounting module. 
+
+Taxes & GST
+===========
+Source:
+
+The taxes are from the IRAS website. Here are the taxes for Singapore in Odoo 17.
+
+.. note:: 
+   Each tax in Odoo is configured in such a way that it will be reflected in the Tax Report.
+   The taxes are updated in accordance with the Singaporean government. New accounts in the CoA
+   will be created in anticipation of these changes. Older accounts for previous taxes are
+   eventually archived.
+
 Add PayNow QR codes to invoices
 ===============================
 
@@ -33,7 +89,7 @@ Value` field depending on the type you chose.
    - You could also include the invoice number in the QR code by checking the :guilabel:`Include
      Reference` checkbox.
 
-.. image:: singapore/sg-paynow-bank-setting.png
+.. image:: singapore/sg-paynow-bank-setting.png 
    :alt: PayNow bank account configuration
 
 .. seealso::
@@ -45,7 +101,7 @@ Bank journal configuration
 Go to :menuselection:`Accounting --> Configuration --> Journals`, open the bank journal, then fill
 out the :guilabel:`Account Number` and :guilabel:`Bank` under the :guilabel:`Journal Entries` tab.
 
-.. image:: singapore/sg-bank-account-journal-setting.png
+.. image:: singapore/sg-bank-account-journal-setting.png 
    :alt: Bank Account's journal configuration
 
 Issue invoices with PayNow QR codes
