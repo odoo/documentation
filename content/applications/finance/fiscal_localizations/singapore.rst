@@ -17,6 +17,8 @@ The Singapore localisation package can be installed in two ways.
 A. via Company Set-up
 ---------------------
 
+
+
 B. via App installation
 ------------------------
 
@@ -34,16 +36,8 @@ The following fields will replace the tax ID field when you install the SG local
 Company Information
 ~~~~~~~~~~~~~~~~~~~
 
-.. image:: 
-   :align: center 
-   :alt: Company information
-
 Contact form
 ~~~~~~~~~~~~
-
-.. image:: 
-   :align: center
-   :alt: Contact form
 
 
 These fields need to be filled in order 
@@ -55,7 +49,7 @@ The Singaporean chart of accounts is included in Singapore - Accounting module.
 
 Taxes & GST
 ===========
-Source:
+.. _IRAS Audit File Document: https://www.iras.gov.sg/docs/default-source/asr/etax_guide_recommended_digital_products_features-v1.pdf?sfvrsn=e2f75b3b_28
 
 The taxes are from the IRAS website. Here are the taxes for Singapore in Odoo 17.
 
@@ -65,8 +59,77 @@ The taxes are from the IRAS website. Here are the taxes for Singapore in Odoo 17
    will be created in anticipation of these changes. Older accounts for previous taxes are
    eventually archived.
 
-Add PayNow QR codes to invoices
-===============================
+You can configure the taxes according to your needs by going to
+
+You can also update the **Tax Return Periodicity** by going to :menuselection:`Accounting --> Configuration --> Settings`
+
+Type of Sales
+~~~~~~~~~~~~~
++----------------+----------------+----------------------------------------------------------------------------------------------------------+
+| Type of Supply | Tax Percentage |                                                Description                                               |
++----------------+----------------+----------------------------------------------------------------------------------------------------------+
+| Standard-Rated |                |                                                                                                          |
++----------------+----------------+----------------------------------------------------------------------------------------------------------+
+| SR             | 9%             | Standard-Rated supply of goods or services                                                               |
++----------------+----------------+----------------------------------------------------------------------------------------------------------+
+| SRCA-S         | N/A            | Customer Accounting supply made by supplier                                                              |
++----------------+----------------+----------------------------------------------------------------------------------------------------------+
+| SRCA-C         | 9%             | Customer Accounting supply accountable by the customer on supplier’s behalf                              |
++----------------+----------------+----------------------------------------------------------------------------------------------------------+
+| SRRC           | 9%             | Imported services and LVG accountable by the customer under the reverse charge mechanism                 |
++----------------+----------------+----------------------------------------------------------------------------------------------------------+
+| SROVR-RS       | 9%             | Supply of remote services accountable by the electronic marketplace on behalf of thirdparty suppliers    |
++----------------+----------------+----------------------------------------------------------------------------------------------------------+
+| SROVR-LVG      | 9%             | Supply of LVG accountable by the redeliverer or electronic marketplace on behalf of thirdparty suppliers |
++----------------+----------------+----------------------------------------------------------------------------------------------------------+
+| SRLVG          | 9%             | Own supply of LVG                                                                                        |
++----------------+----------------+----------------------------------------------------------------------------------------------------------+
+|   Zero-Rated   |                |                                                                                                          |
++----------------+----------------+----------------------------------------------------------------------------------------------------------+
+| ZR             | 0%             | Zero-Rated                                                                                               |
++----------------+----------------+----------------------------------------------------------------------------------------------------------+
+| Exempt         |                |                                                                                                          |
++----------------+----------------+----------------------------------------------------------------------------------------------------------+
+| ES33           | N/A            | Regulation 33 Exempt Supplies                                                                            |
++----------------+----------------+----------------------------------------------------------------------------------------------------------+
+| ESN33          | N/A            | Non-Regulation 33 Exempt Supplies                                                                        |
++----------------+----------------+----------------------------------------------------------------------------------------------------------+
+|     Deemed     |                |                                                                                                          |
++----------------+----------------+----------------------------------------------------------------------------------------------------------+
+| DS             | 9%             | Deemed                                                                                                   |
++----------------+----------------+----------------------------------------------------------------------------------------------------------+
+|  Out-of-Scope  |                |                                                                                                          |
++----------------+----------------+----------------------------------------------------------------------------------------------------------+
+| OS             | N/A            | Out-of-Scope                                                                                             |
++----------------+----------------+----------------------------------------------------------------------------------------------------------+
+
+
+Type of Purchases
+~~~~~~~~~~~~~~~~~
+
+Accounting Reports
+==================
+
+1 GST Report
+============
+
+2 IRAS Audit File
+=================
+The **UEN** and the **GST No** of the company should be filled in order to generate the IRAS audit file.
+
+Go to the :menuselection:`Accounting --> Reporting --> IRAS Audit File`. Enter the **Start Date** and the **End Date**. Choose the file format and click on **Generate**.
+
+
+
+Other Configurations
+===================
+
+1 Employment Hero
+=================
+
+
+2 Add PayNow QR codes to invoices
+=================================
 
 PayNow is a payment service platform that allows customers to make instant domestic payments to
 individuals and merchants in Singapore dollars via online and mobile banking.
