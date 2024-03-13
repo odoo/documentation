@@ -17,4 +17,5 @@ requirements.
 .. toctree::
    :titlesonly:
 
-   maintenance/equipment_management
+   maintenance/add_new_equipment
+   maintenance/maintenance_requests
