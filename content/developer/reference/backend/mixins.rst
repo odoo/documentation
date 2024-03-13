@@ -451,12 +451,12 @@ The urls in the actions list can be generated automatically by calling the
 
                 new_group = (
                     'group_trip_manager',
-                    lambda partner: bool(partner.user_ids) and
-                    any(user.has_group('business.group_trip_manager')
-                    for user in partner.user_ids),
-                    {
-                        'actions': trip_actions,
-                    })
+                    lambda partner: any(
+                        user.sudo().has_group('business.group_trip_manager')
+                        for user in partner.user_ids
+                    ),
+                    {'actions': trip_actions},
+                )
 
                 return [new_group] + groups
 

@@ -213,7 +213,7 @@ can not be trusted, ACL being only verified during CRUD operations.
 
     # this method is public and its arguments can not be trusted
     def action_done(self):
-        if self.state == "draft" and self.user_has_groups('base.manager'):
+        if self.state == "draft" and self.env.user.has_group('base.manager'):
             self._set_state("done")
 
     # this method is private and can only be called from other python methods
