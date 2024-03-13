@@ -729,7 +729,7 @@ Debugging tips
 Observing tours in a browser
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-There are two ways with different tradeoffs:
+There are three ways with different tradeoffs:
 
 ``watch=True``
 **************
@@ -747,6 +747,27 @@ run inside it.
   - always works if the tour has Python setup / surrounding code, or multiple steps
   - runs entirely automatically (just select the test which launches the tour)
   - transactional (*should* always be runnable multiple times)
+**Drawbacks**
+  - only works locally
+  - only works if the test / tour can run correctly locally
+
+``debug=True``
+**************
+
+When running a tour locally via the test suite, the ``debug=True``
+parameter can be added to the ``browser_js`` or ``start_tour``
+call::
+
+    self.start_tour("/web", code, debug=True)
+
+This will automatically open a fullscreen Chrome window with opened
+devtools and a debugger breakpoint set at the start of the tour. The tour
+is ran with the debug=assets query parameter. When an error is thrown, the
+debugger stops on the exception.
+
+**Advantages**
+  - Same advantages as mode `watch=True`
+  - Easier to debug steps
 **Drawbacks**
   - only works locally
   - only works if the test / tour can run correctly locally
@@ -819,35 +840,39 @@ driven explicitly by the user) it's more complicated when running
 "test" tours, or when running tours through the test suite. In that
 case there are two main tricks:
 
-- Have a step with a ``run() { debugger; }`` action.
+- A step property ``break: true,`` in debug mode (debug=True).
+
+  This adds a debugger breakpoint at the start of the step.
+  You can then add your own wherever you need.
+
+  **Advantages**
+    - very simple
+    - the tour continues as soon as you resume execution
+  **Drawbacks**
+    - page interaction is limited as all javascript is blocked
+    - a step property ``pause: true,`` in debug mode (debug=True).
+
+  The tour will stop at the end of the step. This allows inspecting
+  and interacting with the page until the developer is ready to
+  resume by typing **play();** in the browser console.
+
+  **Advantages**
+    - allows interacting with the page
+    - no useless (for this situation) debugger UI
+
+- A step with a ``run() { debugger; }`` action.
 
   This can be added to an existing step, or can be a new dedicated
   step. Once the step's **trigger** is matched, the execution will
   stop all javascript execution.
 
   **Advantages**
-    - very simple
-    - the tour restarts as soon as you resume execution
+    - simple
+    - the tour continues as soon as you resume execution
   **Drawbacks**
     - page interaction is limited as all javascript is blocked
-    - debugging the inside of the tour manager is not very useful
-- Add a step with a trigger which never succeeds and a very long
-  ``timeout``.
-
-  The browser will wait for the **trigger** until the ``timeout``
-  before it fails the tour, this allows inspecting and interacting
-  with the page until the developer is ready to resume, by manually
-  enabling the **trigger** (a nonsense class is useful there, as it
-  can be triggered by adding the class to any visible element of the
-  page).
-
-  **Advantages**
-    - allows interacting with the page
-    - easy to apply to a step which times out (just add a long
-      ``timeout`` then look around)
-    - no useless (for this situation) debugger UI
-  **Drawbacks**
-    - more manual, especially when resuming
+    - the debugger is triggered after trying to find targeted
+      element defined in the step.
 
 Performance Testing
 ===================
