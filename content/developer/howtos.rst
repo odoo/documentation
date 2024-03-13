@@ -13,6 +13,7 @@ How-to guides
     howtos/javascript_view
     howtos/javascript_client_action
     howtos/standalone_owl_application
+    howtos/frontend_owl_components
     howtos/web_services
     howtos/company
     howtos/create_reports
@@ -49,6 +50,11 @@ How-to guides
 
       Learn how to create a public-facing Owl application outside of the web client using a
       controller and the Odoo JavaScript framework.
+
+   .. card:: Use Owl components on the portal and website
+      :target: howtos/frontend_owl_components
+
+      Learn how to use Owl components on the portal and website.
 
    .. card:: Web services
       :target: howtos/web_services
