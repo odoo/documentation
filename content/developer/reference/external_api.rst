@@ -12,6 +12,12 @@ easily available over XML-RPC_ and accessible from a variety of languages.
    Check out the `manual <https://www.php.net/manual/en/xmlrpc.installation.php>`_
    for the installation steps.
 
+.. note::
+   Access to data via the external API is only available on *Custom* Odoo pricing plans. Access to
+   the external API is not available on *One App Free* or *Standard* plans. For more information
+   visit the `Odoo pricing page <https://www.odoo.com/pricing-plan>`_ or reach out to your Customer
+   Success Manager.
+
 .. seealso::
    - :doc:`Tutorial on web services <../howtos/web_services>`
 
