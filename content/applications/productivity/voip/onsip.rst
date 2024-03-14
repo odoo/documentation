@@ -5,8 +5,9 @@ Use VoIP services in Odoo with OnSIP
 Introduction
 ============
 
-Odoo *VoIP* can be set up to work together with `OnSIP <https://www.onsip.com/>`_. OnSIP is a VoIP
-provider. An account is needed with OnSIP in order to use this service.
+Odoo *VoIP* can be set up to work together with `OnSIP (Odoo Landing Page)
+<https://info.onsip.com/odoo/>`_. OnSIP is a VoIP provider. An account is needed with OnSIP in order
+to use this service.
 
 Before setting up an account with OnSIP, make sure the company's home area, and the areas that will
 be called, are covered by OnSIP services.
@@ -128,14 +129,13 @@ Incorrect number
 ~~~~~~~~~~~~~~~~
 
 If an *Incorrect Number* message appears in the Odoo widget, make sure to use the international
-format for the number. This means leading with the :guilabel:`+ (plus)` sign, followed by the
-international country code.
+format for the number. This means leading with the international country code.
 
 A country code is a locator code that allows access to the desired country's phone system. The
 country code is dialed first, prior to the target number. Each country in the world has its own
 specific country code.
 
-For example, `+16505555555` (where `+1` is the international prefix for the United States).
+For example, `16505555555` (where `1` is the international prefix for the United States).
 
 .. image:: onsip/onsip05.png
    :align: center
