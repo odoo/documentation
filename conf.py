@@ -446,7 +446,7 @@ def _generate_alternate_urls(app, pagename, templatename, context, doctree):
         """
         _current_lang = app.config.language or 'en'
         # Replace the context value by its upper-cased value ("FR" instead of "fr")
-        context['language'] = languages_names.get(_current_lang)
+        context['language'] = languages_names.get(_current_lang, _current_lang.upper())
         context['language_code'] = _current_lang
 
         # If the list of languages is not set, assume that the project has no alternate language
