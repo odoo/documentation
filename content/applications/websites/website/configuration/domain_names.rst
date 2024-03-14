@@ -37,11 +37,12 @@ Search for the desired domain name and check its availability.
    Ensure the Website app is installed if the domain name registration option does not appear.
 
 Select the desired domain name, fill in the :guilabel:`Domain Owner` form, and click
-:guilabel:`Register`. The chosen domain name is directly linked to the database, but you still need
-to :ref:`map your domain name to your Odoo website <domain-name/db-map>`.
+:guilabel:`Register`. The chosen domain name is directly linked to the database.
 
 .. image:: domain_names/domain-owner.png
    :alt: Filling in the domain owner information
+
+Next, you should :ref:`map your domain name to your Odoo website <domain-name/website-map>`.
 
 .. important::
    A verification email from `noreply@domainnameverification.net` will be sent to the email address
@@ -268,7 +269,7 @@ To make your custom domain name the *web base URL* of your database, access your
 custom domain name and log in as an administrator :dfn:`(a user part of the Settings access right
 group under Administration)`.
 
-.. warning::
+.. important::
    If you access your database with the original Odoo address (e.g., `mycompany.odoo.com`), the *web
    base URL* of your database will be updated accordingly. To prevent the automatic update of the
    *web base URL* when an administrator logs in to the database, activate the :ref:`developer mode
