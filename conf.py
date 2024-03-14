@@ -233,6 +233,7 @@ languages_names = {
     'nl': 'NL',
     'pt_BR': 'PT',
     'ro': 'RO',
+    'sv': 'SV',
     'uk': 'UA',
     'zh_CN': 'ZH',
 }
