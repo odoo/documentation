@@ -83,7 +83,7 @@ form.
 Set the :guilabel:`Package Use` field to :guilabel:`Reusable Box`.
 
 .. seealso::
-   :ref:`Packages <inventory/management/packages>`
+   :doc:`Packages <../../product_management/product_tracking/package>`
 
 .. example::
    A package intended for cluster picking is named `CLUSTER-PACK-3` for easy identification. For
