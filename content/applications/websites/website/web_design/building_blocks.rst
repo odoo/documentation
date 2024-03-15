@@ -88,6 +88,8 @@ You can also use the drag-and-drop icon to move a block manually.
 .. image:: building_blocks/reordering-blocks.png
    :alt: Reordering building blocks
 
+.. _blocks/visibility:
+
 Visibility
 ==========
 
@@ -117,7 +119,7 @@ instead. Then, configure the condition(s) to apply by selecting :guilabel:`Visib
 :guilabel:`Hidden for` and which :guilabel:`Records` will be impacted.
 
 .. seealso::
-   :doc:`Link Tracker and UTMs <../reporting/link_tracker>`
+   :doc:`Link Tracker <../reporting/link_tracker>`
 
 Invisible elements
 ------------------
