@@ -7,7 +7,6 @@ Advanced operations
 .. toctree::
    :titlesonly:
 
-   advanced_operations_warehouse/cycle_counts
    advanced_operations_warehouse/owned_stock
    advanced_operations_warehouse/batch_transfers
    advanced_operations_warehouse/wave_transfers
