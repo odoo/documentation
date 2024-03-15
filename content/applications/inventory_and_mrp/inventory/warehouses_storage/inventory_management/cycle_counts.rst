@@ -118,4 +118,4 @@ desired month.
 Once all changes have been made, click :guilabel:`Save` to save all changes.
 
 .. seealso::
-   :doc:`../inventory_management/count_products`
+   :doc:`count_products`
