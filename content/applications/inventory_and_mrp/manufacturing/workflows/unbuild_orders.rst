@@ -87,4 +87,4 @@ Scrap unusable components
 In some cases, components may be unusable after the unbuilding process is completed. To ensure that
 inventory counts accurately reflect the quantity of usable components on-hand, any component that
 can no longer be used should be removed from inventory using a :doc:`scrap order
-<../../inventory/product_management/product_replenishment/scrap_inventory>`.
+<../../inventory/warehouses_storage/inventory_management/scrap_inventory>`.
