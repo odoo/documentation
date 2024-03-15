@@ -169,7 +169,7 @@ the :guilabel:`Packages` feature.
    :alt: Enable the packages feature.
 
 .. seealso::
-   - :ref:`Packages <inventory/management/packages>`
+   - :doc:`Packages <../product_management/product_tracking/package>`
    - :doc:`2-step delivery <../shipping_receiving/daily_operations/receipts_delivery_two_steps>`
    - :doc:`3-step delivery <../shipping_receiving/daily_operations/delivery_three_steps>`
 
