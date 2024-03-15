@@ -50,7 +50,7 @@ country of origin for those clicks.
    #. You can also access the link tracker on *odoo.com/r* via your browser.
    #. Activate the developer mode (:menuselection:`Settings --> Activate the developer mode`) and
       get access to the *Link Tracker* module and its back-end functionalities.
-   #. Integrated with :ref:`website/analytics/GA`, those trackers allow you to
-      see the number of clicks and visitors to keep you on top of your marketing campaigns.
+   #. Integrated with :ref:`analytics/google-analytics`, those trackers allow you to see the number
+      of clicks and visitors to keep you on top of your marketing campaigns.
    #. The integration with the :doc:`CRM </applications/sales/crm/track_leads/prospect_visits>` application allows
       you to understand where your leads and opportunities are coming from.
