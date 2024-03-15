@@ -126,4 +126,4 @@ Customize posts by opening a blog post and clicking :menuselection:`Edit --> Cus
 :guilabel:`Select To Tweet`: visitors are offered to tweet the text they select.
 
 .. tip::
-   Use :ref:`Plausible <website/analytics/plausible>` to keep track of the traffic on your blog.
+   Use :ref:`Plausible <analytics/plausible>` to keep track of the traffic on your blog.
