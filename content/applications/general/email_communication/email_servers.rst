@@ -284,8 +284,8 @@ in the *System Parameters*. To override the following defaults they need to be a
 
 The two system parameters are as follows:
 
-- `mail.incoming.limit.period` (60 minutes by default)
-- `mail.incoming.limit.alias` (5 by default)
+- `mail.gateway.loop.minutes` (120 minutes by default)
+- `mail.gateway.loop.threshold` (20 by default)
 
 Add these fields in Odoo by first enabling :ref:`developer mode <developer-mode>`, and then
 navigating to :menuselection:`Settings --> Technical Menu --> Parameters --> System Parameters`.
@@ -293,13 +293,13 @@ Change the value of these parameters, as needed.
 
 When an email is received in the Odoo database on the catchall email address or on any alias, Odoo
 looks at the mail received for the given period of time defined in the system parameter
-`mail.incoming.limit.period`. If the received email was sent to an alias then Odoo will reference
-the `mail.incoming.limit.alias` system parameter and determine the value as the number of records
-this alias is allowed to create in the given period of time (value of `mail.incoming.limit.period`).
+`mail.gateway.loop.minutes`. If the received email was sent to an alias then Odoo will reference the
+`mail.gateway.loop.threshold` system parameter and determine the value as the number of records this
+alias is allowed to create in the given period of time (value of `mail.gateway.loop.minutes`).
 
 In addition, when email is received to the catchall email address, Odoo will reference the emails
 received to the database during the set period of time (as stated by the value in the system
-parameter: `mail.incoming.limit.period`). Odoo will then determine whether any of the emails
+parameter: `mail.gateway.loop.minutes`). Odoo will then determine whether any of the emails
 received match that of the email(s) being received during the specified time-frame, and will prevent
 a feedback loop from occurring if a duplicate email is detected.
 
