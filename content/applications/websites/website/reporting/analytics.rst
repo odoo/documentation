@@ -5,14 +5,14 @@ Website analytics
 Website analytics helps website owners monitor how people use their site. It provides data on
 visitor demographics, behavior, and interactions, helping improve websites and marketing strategies.
 
-You can track your Odoo website's traffic using :ref:`website/analytics/plausible` or
-:ref:`website/analytics/GA`. We recommend using Plausible.io as it is privacy-friendly, lightweight,
-and easy to use.
+You can track your Odoo website's traffic using :ref:`analytics/plausible` or
+:ref:`analytics/google-analytics`. We recommend using Plausible.io as it is privacy-friendly,
+lightweight, and easy to use.
 
 The Plausible analytics dashboard is also integrated into Odoo and can be accessed
 via :menuselection:`Website --> Reporting --> Analytics`.
 
-.. _website/analytics/plausible:
+.. _analytics/plausible:
 
 Plausible.io
 ============
@@ -83,7 +83,7 @@ Plausible.io account, proceed as follows:
 .. seealso::
    `Plausible Analytics documentation <https://plausible.io/docs>`_
 
-.. _website/analytics/GA:
+.. _analytics/google-analytics:
 
 Google Analytics
 ================
@@ -127,7 +127,7 @@ To follow your Odoo website's traffic with Google Analytics:
 .. seealso::
    `Google documentation on setting up Analytics for a website <https://support.google.com/analytics/answer/1008015?hl=en/>`_
 
-.. _website/analytics/gtm:
+.. _analytics/google-tag-manager:
 
 Google Tag Manager
 ==================
