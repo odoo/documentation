@@ -1,56 +1,75 @@
-=============
-Link trackers
-=============
+============
+Link tracker
+============
 
-Link Trackers allow you to track your marketing campaigns (emails, banner ads, blog posts, social
-media posts, affiliate links, etc.). This way, you are able to identify your best traffic sources
-and make informed decisions about the distribution of your marketing budget.
+The link tracker allow you to create tracked links to measure your marketing campaigns'
+effectiveness. They let you determine which channels bring you the most visitors and make informed
+decisions.
 
 Configuration
 =============
 
-Go to :menuselection:`Website --> Configuration --> Settings` and activate *Link Trackers*.
+The :guilabel:`Link Tracker` module is not installed by default. You need to enable the
+:guilabel:`Email Marketing` option by going to :menuselection:`Website --> Configuration -->
+Settings.` Alternatively, you can :doc:`install <../../../general/apps_modules>` the :guilabel:`Link
+Tracker` module itself or one of the marketing apps.
 
-.. image:: link_tracker/enable_link_tracker.png
-   :align: center
-   :alt: View of Website settings page emphasizing the link trackers field in Odoo Website
+Create a traceable URL
+======================
 
-Set up traceable URLs
----------------------
+To create and manage tracked links, navigate to :menuselection:`Website --> Site --> Link Tracker`.
+Fill in the following information and click :guilabel:`Get tracked link` to generate a tracking URL.
 
-Go to :menuselection:`Website --> Go to website --> Promote --> Track this page`. Here, you are able
-to get a specific tracked URL based on the campaign, medium, and source being used.
+#. :guilabel:`URL`: The URL which is the target of the campaign. It is automatically populated with
+   the URL from where you access the menu.
 
-.. image:: link_tracker/link_tracker_fields.png
-   :align: center
-   :alt: View of the link tracker fields for Odoo Website
+#. :guilabel:`Campaign`: The specific campaign the link should be associated with. This parameter is
+   used to distinguish the different campaigns.
 
-- **URL**: url of the page you want to track (e.g. the home page or a product's page).
-- **Campaign**: context of your link (e.g. a special promotion).
-- **Medium**: channel used to share (deliver) your link (e.g. an email or a Facebook ad).
-- **Source**: platform where the traffic originates (e.g. Google or Twitter).
+#. :guilabel:`Medium`: The medium describes the category or method through which the visitor arrives
+   at your site, such as organic search, paid search, social media ad, email, etc.
 
-Now, click on *Get tracked link* to generate a URL that you can post or send by the source you have
-decided on.
+#. :guilabel:`Source`: The source identifies the precise platform or website that referred the
+   visitor, such as a search engine, a newsletter, or a website.
 
-Follow-up on tracked links
-==========================
+.. image:: link_tracker/create-link-tracker.png
+   :alt: Create a link tracker URL
 
-To look at statistics of your links, go to :menuselection:`Website --> Go to website --> Promote
---> Track this page`. Besides being able to see the *Most Clicked* and *Recently Used* links, you
-can also see complete statistics by clicking on *Stats*, including the number of clicks, and the
-country of origin for those clicks.
+The :guilabel:`Campaign`, :guilabel:`Medium`, and :guilabel:`Source` are called :abbr:`UTM (Urchin
+Tracking Module)` parameters. They are incorporated in the tracked URL.
 
-.. image:: link_tracker/links_statistics.png
-   :align: center
-   :alt: View of the tracked list emphasizing the statistics buttons in Odoo Website
+Website visibility
+------------------
 
-.. tip::
+You can use the :abbr:`UTM (Urchin Tracking Module)` parameters to hide or show building blocks for
+specific audiences. To achieve this, click the :guilabel:`Edit` button on your website, select a
+building block, go to the :guilabel:`Customize` tab, scroll down to :guilabel:`Visibility`, and
+click :guilabel:`Conditionally`.
 
-   #. You can also access the link tracker on *odoo.com/r* via your browser.
-   #. Activate the developer mode (:menuselection:`Settings --> Activate the developer mode`) and
-      get access to the *Link Tracker* module and its back-end functionalities.
-   #. Integrated with :ref:`analytics/google-analytics`, those trackers allow you to see the number
-      of clicks and visitors to keep you on top of your marketing campaigns.
-   #. The integration with the :doc:`CRM </applications/sales/crm/track_leads/prospect_visits>` application allows
-      you to understand where your leads and opportunities are coming from.
+.. image:: link_tracker/conditional-visibility.png
+   :alt: Use the conditional visibility to display site elements to specific audiences.
+
+For each parameter available in the :ref:`Visibility <blocks/visibility>` section, you can choose
+:guilabel:`Visible for` or :guilabel:`Hidden for` and select the record you want from the dropdown
+list.
+
+Tracked links overview
+======================
+
+To get an overview of your tracked links, go to :menuselection:`Website --> Site --> Link Tracker`
+and scroll down to :guilabel:`Your tracked links` section.
+
+.. image:: link_tracker/your-tracked-links.png
+   :alt: Get an overview of all the links you track.
+
+Statistics
+----------
+
+To measure the performance of tracked links, click the :guilabel:`Stats` button.
+
+.. image:: link_tracker/statistics.png
+   :alt: View the statistics related to a specific tracked link.
+
+Scroll down to the :guilabel:`Statistics` section to get an overview of the number of clicks of your
+tracked links. You can display information for a specific period by clicking the
+:guilabel:`All Time`, :guilabel:`Last Month`, or :guilabel:`Last Week` options.
