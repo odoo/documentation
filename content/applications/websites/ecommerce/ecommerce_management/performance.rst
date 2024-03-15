@@ -30,5 +30,5 @@ Other options include **multiple views (Pivot, etc.), comparison** by periods or
 Analytics
 =========
 
-It is possible to link your Odoo website with :ref:`website/analytics/plausible` and
-:ref:`website/analytics/GA`.
+It is possible to link your Odoo website with :ref:`analytics/plausible` and
+:ref:`analytics/google-analytics`.
