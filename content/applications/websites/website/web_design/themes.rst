@@ -60,8 +60,8 @@ The following sections are available:
 - :guilabel:`Input Fields`: Customize fields where you can enter data, e.g., a search bar or a form.
 
 - :guilabel:`Advanced`: You can hide the header bar of your website using the
-  :guilabel:`Show Header` button, inject :ref:`head and body code <website/analytics/gtm>`, enter
-  your :guilabel:`Google Map Custom Key`, change the colors of the :guilabel:`Success`,
+  :guilabel:`Show Header` button, inject :ref:`head and body code <analytics/google-tag-manager>`,
+  enter your :guilabel:`Google Map Custom Key`, change the colors of the :guilabel:`Success`,
   :guilabel:`Info`, :guilabel:`Warning`, and :guilabel:`Error` pop up messages by clicking the
   related :guilabel:`Status Colors` buttons, and customize the :guilabel:`Grays` elements of your
   site.
