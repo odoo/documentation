@@ -1,7 +1,7 @@
 .. _use-routes:
 
 ==========================
-Routes and Pull/Push Rules
+Routes and push/pull rules
 ==========================
 
 In inventory management, the supply chain strategy determines when products should be
@@ -33,11 +33,10 @@ in the manufacturing process), while others are directly stored in their respect
    :align: center
    :alt: View of a generic push to rule when receiving products.
 
-Here is an example of a fulfillment route. In the morning, items are picked for all the orders
-that need to be prepared during the day. These items are picked from storage locations and moved to
-the picking area, close to where the orders are packed. Then, the orders are packed in their
-respective boxes and conveyors bring them close to the shipping docks, ready to be delivered to
-customers.
+Here is an example of a fulfillment route. In the morning, items are picked for all the orders that
+need to be prepared during the day. These items are picked from storage locations and moved to the
+picking area, close to where the orders are packed. Then, the orders are packed in their respective
+boxes, and conveyor belts bring them to the shipping docks, ready to be delivered to customers.
 
 .. image:: use_routes/pull-from-rule-example.png
    :align: center
@@ -50,8 +49,8 @@ With *Pull Rules*, a demand for some products triggers procurements, while *Push
 triggered by products arriving in a specific location.
 
 Pull Rules are used to fulfill a sales order. Odoo generates a need at the *Customer Location* for
-each product in the order. Because pull rules are triggered by a need, Odoo looks for a pull
-rule defined on the *Customer Location*.
+each product in the order. Because pull rules are triggered by a need, Odoo looks for a pull rule
+defined on the *Customer Location*.
 
 In this case, a "delivery order" pull rule that transfers products from the *Shipping Area* to the
 *Customer Location* is found, and a transfer between the two locations is created.
@@ -130,7 +129,7 @@ can view the warehouse's pre-configured routes for :guilabel:`Incoming Shipments
 
 .. image:: use_routes/example-preconfigured-warehouse.png
    :align: center
-   :alt: A preconfigured warehouse in Odoo Inventory.
+   :alt: A pre-configured warehouse in Odoo Inventory.
 
 Some more advanced routes, such as pick-pack-ship, are also available. The user can select the
 route that best fits their business needs. Once the :guilabel:`Incoming Shipments` and
@@ -270,15 +269,8 @@ source location:
   the available stock of the source location. If there is no stock available, the system tries to
   find a rule to bring the products to the source location.
 
-In the *Scheduling* section, you can determine how Odoo behaves when one of the chain's pickings is
-rescheduled. In case you decide to **Propagate Rescheduling**, the next move is also to be
-rescheduled.
-
-If you prefer having the choice to reschedule the next move, you can decide to receive an alert in
-the form of a *next activity*.
-
-Sample full route flow
-======================
+Example flow
+============
 
 In this example, let's use a custom *Pick - Pack - Ship* route to try a full flow with an advanced
 custom route.
