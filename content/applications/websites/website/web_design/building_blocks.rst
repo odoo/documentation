@@ -147,5 +147,6 @@ Click the pen icon to edit their name.
    :titlesonly:
 
    building_blocks/structure
+   building_blocks/features
    building_blocks/dynamic_content
    building_blocks/inner_content
