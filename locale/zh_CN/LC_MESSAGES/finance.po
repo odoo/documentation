@@ -34,8 +34,9 @@
 # 稀饭~~ <wangwhai@qq.com>, 2023
 # 山西清水欧度(QQ:54773801) <54773801@qq.com>, 2023
 # Grit233 <grit233@163.com>, 2023
-# Martin Trigaux, 2024
 # Emily Jia <eji@odoo.com>, 2024
+# liAnGjiA <liangjia@qq.com>, 2024
+# Martin Trigaux, 2024
 # Wil Odoo, 2024
 # Chloe Wang, 2024
 # 
@@ -2050,6 +2051,8 @@ msgid ""
 "mark it as :guilabel:`To Check`. Any :ref:`reconciliation model buttons "
 "<reconciliation/button>` are also available in the resulting entry section."
 msgstr ""
+"右上方的结果分录部分显示与对应分录匹配的所选银行交易，并包括任何剩余的借方或贷方。在此部分，可以验证对账或标记为 :guilabel:`待核对`。任何 "
+":ref:`对账模型按钮 <reconciliation/button>`也可在结果条目部分使用。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:59
 msgid "Reconcile transactions"
@@ -2064,6 +2067,11 @@ msgid ""
 "<reconciliation/manual-operations>`, and :ref:`reconciliation model buttons "
 "<reconciliation/button>`."
 msgstr ""
+"可以使用 :doc:`对账模型<reconciliation_models>` 自动匹配交易，也可以使用 "
+":ref:`现有条目<reconciliation/existing-"
+"entries>`、:ref:`批量付款<reconciliation/batch-payments>`、:ref:`手动操作 "
+"<reconciliation/manual-operations>`、:ref:`对账模型按钮<reconciliation/button>` "
+"匹配交易。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:67
 msgid "Select a transaction among unmatched bank transactions."
@@ -2078,6 +2086,9 @@ msgid ""
 "<reconciliation/batch-payments>`, and :ref:`reconciliation model buttons "
 "<reconciliation/button>`."
 msgstr ""
+"定义对应项。定义对应项有几个选项，包括 :ref:`匹配现有条目 <reconciliation/existing-"
+"entries>`、:ref:`手动操作 <reconciliation/manual-operations>`、:ref:`批量支付 "
+"<reconciliation/batch-payments>`，以及 :ref:`对账模式按钮<reconciliation/button>`。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:72
 msgid ""
@@ -2123,6 +2134,8 @@ msgid ""
 ":doc:`reconciliation models <reconciliation_models>`, with suggested entries"
 " appearing first."
 msgstr ""
+"此选项卡包含 Odoo 根据调节模式自动预选的匹配条目。条目顺序基于 "
+":doc:`调节模式<reconciliation_models>`，建议条目显示在前面。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:97
 msgid ""
@@ -2191,10 +2204,12 @@ msgid ""
 "quickly reconcile bank transactions manually and can also be used in "
 "combination with existing entries."
 msgstr ""
+"使用 :doc:`对账模式按钮<reconciliation_models>` "
+"进行常用手动操作。这些自定义按钮允许您快速手动调节银行交易，也可与现有条目结合使用。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:3
 msgid "Reconciliation models"
-msgstr ""
+msgstr "对账模型"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:5
 msgid ""
@@ -2203,12 +2218,14 @@ msgid ""
 "recurring entries like bank fees. Reconciliation models can also be helpful "
 "in handling :doc:`cash discounts <../customer_invoices/cash_discounts>`."
 msgstr ""
+"对账模型用于自动处理 :doc:`银行对账<reconciliation>` 过程，这在处理银行费用等经常性分录时特别方便。对账模型也有助于处理 "
+":doc:`现金折扣<.../customer_invoices/cash_discounts>`。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:9
 msgid ""
 "Each model is created based on a :ref:`model type <models/type>` and "
 ":guilabel:`bank transaction conditions`."
-msgstr ""
+msgstr "每个模型根据 :ref:`模型类型 <models/type>` 和 :guilabel:`银行交易条款` 创建。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:14
 msgid ""
@@ -2216,10 +2233,12 @@ msgid ""
 "<https://www.odoo.com/slides/slide/reconciliation-"
 "models-1841?fullscreen=1>`_"
 msgstr ""
+"`Odoo 教程：对账模型 <https://www.odoo.com/slides/slide/reconciliation-"
+"models-1841?fullscreen=1>`_"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:19
 msgid "Reconciliation model types"
-msgstr ""
+msgstr "对账模型类型"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:21
 msgid ""
@@ -2228,6 +2247,8 @@ msgid ""
 "Models`. For each reconciliation model, a :guilabel:`Type` must be set. "
 "Three types of models exist:"
 msgstr ""
+"可通过 :menuselection:`会计 --> 配置 --> 银行：对账模式`。必须为每个对账模式设置 "
+":guilabel:`类型`。有三种类型的模式："
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:25
 msgid ""
@@ -2238,13 +2259,14 @@ msgid ""
 "model determine the counterpart entry's account(s), amount(s), label(s), and"
 " analytic distribution;"
 msgstr ""
+":guilabel:`生成对应条目按钮`：在银行对账视图的结果条目部分，创建一个按钮。点击该按钮后，将根据模型中设置的规则生成对应分录，与活动交易对账。模型中指定的规则决定对应分录的账户、金额、标签和分析分配；"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:30
 msgid ""
 ":guilabel:`Rule to suggest counterpart entry`: used for recurring "
 "transactions to match the transaction to a new entry based on conditions "
 "that must match the information on the transaction;"
-msgstr ""
+msgstr "guilabel:`建议对应条目的规则`：用于经常性交易，根据必须与交易信息匹配的条件，将交易与新条目匹配；"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:32
 msgid ""
@@ -2255,7 +2277,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:37
 msgid "Default reconciliation models"
-msgstr ""
+msgstr "默认对账模式"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:39
 msgid ""
@@ -2263,32 +2285,34 @@ msgid ""
 "company's fiscal localization. These can be updated if needed. Users can "
 "also create their own reconciliation models by clicking :guilabel:`New`."
 msgstr ""
+"在 Odoo 中，根据公司财务本地化的不同，默认提供不同的模式。如有需要，可对其进行更新。用户也可以通过点击 "
+":guilabel:`新建`，创建自己的对账模式。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:44
 msgid ""
 "If a record matches with several reconciliation models, the first one in the"
 " *sequence* of models is applied. You can rearrange the order by dragging "
 "and dropping the handle next to the name."
-msgstr ""
+msgstr "如果一条记录与多个对账模型匹配，则应用模型*序列*中的第一个模型。您可以通过拖放名称旁边的句柄来重新排列顺序。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:0
 msgid "Rearrange the sequence of models in the list view."
-msgstr ""
+msgstr "在列表视图中重新排列模型的顺序。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:51
 msgid "Invoices/Bills perfect match"
-msgstr ""
+msgstr "发票/账单完全匹配"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:53
 msgid ""
 "This model should be at the top of the *sequence* of models, as it enables "
 "Odoo to suggest matching existing invoices or bills with a bank transaction "
 "based on set conditions."
-msgstr ""
+msgstr "该模型应该在模型的*顺序*中位于最顶部，因为它使得Odoo能够根据设定的条件，建议将现有的发票或账单与银行交易进行匹配。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst-1
 msgid "Set rules to trigger the reconciliation."
-msgstr ""
+msgstr "设置触发对账的规则。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:59
 msgid ""
@@ -2299,10 +2323,13 @@ msgid ""
 ":guilabel:`Partner is set` is selected) to suggest the correct counterpart "
 "entry and reconcile the payment automatically."
 msgstr ""
+"当选择 :guilabel:`自动验证` 选项，且完全满足模型条件时，Odoo 会自动对账。在这种情况下，Odoo "
+"希望在银行对账单中找到发票/付款的参考（如选择 :guilabel:`标签` 选项）和合作伙伴的名称（如选择 :guilabel:`设置合作伙伴` "
+"选项），以建议正确的对应条目并自动调节付款。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:66
 msgid "Invoices/Bills partial match if underpaid"
-msgstr ""
+msgstr "未足额付款时发票/账单部分匹配"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:68
 msgid ""
@@ -2312,6 +2339,8 @@ msgid ""
 "reconciled with the account indicated in the :guilabel:`counterpart entries`"
 " tab."
 msgstr ""
+"当收到的金额略低于发票金额时，例如在**现金折扣**的情况下，该模型会建议部分匹配的客户发票或供应商账单与付款对账。差额将与 "
+":guilabel:`对应分录` 选项卡中指定的账户对账。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:73
 msgid ""
@@ -2341,6 +2370,8 @@ msgid ""
 " be used for example, to identify the information referring to the "
 ":guilabel:`Bank fees` in the label of the transaction."
 msgstr ""
+"此模型根据模型中设定的规则建议对应条目。在这种情况下，对账模型 :guilabel:`类型` 是 :guilabel:`建议对应分录的规则`，而 "
+":guilabel:`标签` 可用来识别交易标签中的 :guilabel:`银行费用` 信息。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:98
 msgid ""
@@ -2350,6 +2381,8 @@ msgid ""
 "so it's essential to use it judiciously and with a good understanding of the"
 " patterns you're working with."
 msgstr ""
+"`正则表达式 <https://regexone.com/>`_，通常缩写为 **Regex**，可在 Odoo "
+"中以各种方式用于搜索、验证和处理系统中的数据。Regex 功能强大，但也很复杂，因此必须谨慎使用，并充分了解所使用的模式。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:103
 msgid ""
@@ -2358,14 +2391,16 @@ msgid ""
 "expression. Odoo automatically retrieves the transactions that match your "
 "Regex expression and the conditions specified in your model."
 msgstr ""
+"要在对账模型中使用正则表达式，请将 :guilabel:`交易类型` 设置为 :guilabel:`匹配正则表达式` "
+"并添加您的表达式。Odoo会自动检索与您的正则表达式和模型中指定的条件匹配的交易。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:0
 msgid "Using Regex in Odoo"
-msgstr ""
+msgstr "在 Odoo 中使用 Regex"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:111
 msgid "Partner mapping"
-msgstr ""
+msgstr "合作伙伴映射"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:113
 msgid ""
@@ -2377,6 +2412,8 @@ msgid ""
 "incoming payment meets these criteria, Odoo automatically maps it to the "
 "corresponding customer's account."
 msgstr ""
+"通过合作伙伴映射，可以建立规则，将交易自动匹配到正确的合作伙伴账户，从而节省时间并降低人工对账时可能出现错误的风险。例如，您可以为交易描述中包含特定参考编号或关键字的入账付款创建合作伙伴映射规则。当收到的付款符合这些条件时，Odoo"
+" 会自动将其映射到相应的客户账户。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:119
 msgid ""
@@ -2384,10 +2421,12 @@ msgid ""
 "and enter the :guilabel:`Find Text in Label`, :guilabel:`Find Text in "
 "Notes`, and :guilabel:`Partner`."
 msgstr ""
+"要创建合作伙伴映射规则，请转到 :guilabel:`合作伙伴映射` 选项卡并输入 "
+":guilabel:`查找标签中的文本`、:guilabel:`查找备注中的文本` 和 :guilabel:`合作伙伴` 。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst-1
 msgid "defining partner mapping"
-msgstr ""
+msgstr "定义合作伙伴映射"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:5
 msgid ""
@@ -3766,6 +3805,10 @@ msgid ""
 ":ref:`generate them manually <customer_invoices/deferred/generate_manually>`"
 " by selecting the :guilabel:`Manually & Grouped` option instead."
 msgstr ""
+"默认情况下，当您发布客户发票时，Odoo :ref:`自动生成 "
+"<customer_invoices/deferred/generate_on_validation>` 递延账目。但是，您也可以选择 "
+":ref:`手动生成<customer_invoices/deferred/generate_manually>`，方法是选择 "
+":guilabel:`手动操作和分组` 选项。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:48
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:48
@@ -10537,22 +10580,24 @@ msgid ""
 "performance against the plan. Odoo manages budgets using both **general** "
 "and **analytic accounts**."
 msgstr ""
+"管理预算是企业经营的重要组成部分。预算可以帮助人们更有计划地使用资金，指导人们安排工作并确定优先次序，以实现财务目标。预算允许对期望的财务结果进行规划，然后将实际绩效与计划进行对比。Odoo"
+" 使用**总账账户**和**分析账户**管理预算。"
 
 #: ../../content/applications/finance/accounting/reporting/budget.rst:13
 msgid ""
 "Go to :menuselection:`Accounting --> Configuration --> Settings --> "
 "Analytics section`, and enable :guilabel:`Budget Management`."
-msgstr ""
+msgstr "转至 :menuselection:`会计 --> 配置 --> 设置 --> 分析部分` 并启用 :guilabel:`预算管理`。"
 
 #: ../../content/applications/finance/accounting/reporting/budget.rst:17
 msgid "Budgetary positions"
-msgstr ""
+msgstr "预算状况"
 
 #: ../../content/applications/finance/accounting/reporting/budget.rst:19
 msgid ""
 "Budgetary positions are lists of accounts for which you want to keep budgets"
 " (typically expense or income accounts)."
-msgstr ""
+msgstr "预算状况是您希望保持预算的账户列表（通常是费用或收入账户）。"
 
 #: ../../content/applications/finance/accounting/reporting/budget.rst:22
 msgid ""
@@ -10562,6 +10607,9 @@ msgid ""
 ":guilabel:`Company` it applies to. Click :guilabel:`Add a line` to add one "
 "or more accounts."
 msgstr ""
+"要定义预算状况，请转至 :menuselection:`会计 --> 配置 --> 管理：预算状况`，然后选择 "
+":guilabel:`新建`。为预算状况添加 :guilabel:`名称`，并选择适用的 :guilabel:`公司`。点击 "
+":guilabel:`添加行`，添加一个或多个账户。"
 
 #: ../../content/applications/finance/accounting/reporting/budget.rst:28
 msgid ""
@@ -10577,7 +10625,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting/budget.rst:34
 msgid "Let’s illustrate this with an example."
-msgstr ""
+msgstr "举例说明。"
 
 #: ../../content/applications/finance/accounting/reporting/budget.rst:36
 msgid ""
@@ -10585,6 +10633,8 @@ msgid ""
 " income and expenses of that project. We plan on having a revenue of 1000, "
 "and we don’t want to spend more than 700."
 msgstr ""
+"我们刚刚开始与*Smith & Co*合作一个项目，我们想对该项目的收入和支出进行预算。我们计划有 1000 美元的收入，且不希望支出超过 700 "
+"美元。"
 
 #: ../../content/applications/finance/accounting/reporting/budget.rst:39
 msgid ""
@@ -10593,24 +10643,26 @@ msgid ""
 "positions`, and click :guilabel:`New` to add a position. Add the accounts "
 "wherein expenses will be booked."
 msgstr ""
+"首先，我们需要定义与项目支出相关的账户。进入 :menuselection:`会计 --> 配置 --> 管理：预算状况`，点击 "
+":guilabel:`新建`添加一个职位。添加记入支出的账户。"
 
 #: ../../content/applications/finance/accounting/reporting/budget.rst-1
 msgid "display the Smith and Co expenses"
-msgstr ""
+msgstr "显示 Smith and Co 的开支"
 
 #: ../../content/applications/finance/accounting/reporting/budget.rst:47
 msgid ""
 "Let's repeat the steps to create a budgetary position that reflects the "
 "revenue."
-msgstr ""
+msgstr "让我们重复上述步骤，创建一个反映收入的预算状况。"
 
 #: ../../content/applications/finance/accounting/reporting/budget.rst-1
 msgid "display the Smith and Co revenue"
-msgstr ""
+msgstr "显示 Smith and Co 的收入"
 
 #: ../../content/applications/finance/accounting/reporting/budget.rst:54
 msgid "Analytical accounts"
-msgstr ""
+msgstr "分析帐户"
 
 #: ../../content/applications/finance/accounting/reporting/budget.rst:56
 msgid ""
@@ -10620,6 +10672,8 @@ msgid ""
 "Analytic Accounts` and click :guilabel:`New` to add a new **Analytic "
 "Account** called *Smith & Co*."
 msgstr ""
+"Odoo 需要知道哪些成本或费用与指定预算相关，因为上述总账户可能用于不同的项目。进入 :menuselection:`会计 --> 配置 --> "
+"分析会计：分析账户`，点击 :guilabel:`新建`，添加一个新的**分析账户**，名为*Smith & Co*。"
 
 #: ../../content/applications/finance/accounting/reporting/budget.rst:61
 msgid ""
@@ -10629,20 +10683,22 @@ msgid ""
 ":menuselection:`Accounting --> Configuration --> Analytic Accounting: "
 "Analytic Plans`."
 msgstr ""
+"必须填写 :guilabel:`计划` 字段。计划将多个分析账户分组，用于分配成本和收益以分析业务绩效。可通过 :menuselection:`会计 "
+"--> 配置 --> 分析会计：分析计划`来创建或配置**分析计划**。"
 
 #: ../../content/applications/finance/accounting/reporting/budget.rst:66
 msgid ""
 "When creating a new customer invoice and/or vendor bill, you have to refer "
 "to this analytic account."
-msgstr ""
+msgstr "创建新的客户发票和/或供应商账单时，必须参考该分析账户。"
 
 #: ../../content/applications/finance/accounting/reporting/budget.rst-1
 msgid "add analytic accounts in a new invoice or bill."
-msgstr ""
+msgstr "在新发票或账单中添加分析账户。"
 
 #: ../../content/applications/finance/accounting/reporting/budget.rst:73
 msgid "Define the budget"
-msgstr ""
+msgstr "定义预算"
 
 #: ../../content/applications/finance/accounting/reporting/budget.rst:75
 msgid ""
@@ -10651,6 +10707,8 @@ msgid ""
 ":menuselection:`Accounting --> Management: Budgets` and click "
 ":guilabel:`New` to create a new budget for *Smith & Co* project."
 msgstr ""
+"让我们设定目标。我们指定，希望通过这个项目获得 1000 收益，而且我们希望花费不超过 700。进入 :menuselection:`会计 --> "
+"管理：预算`，点击 :guilabel:`新建`，为 *Smith & Co* 项目创建一个新预算。"
 
 #: ../../content/applications/finance/accounting/reporting/budget.rst:79
 msgid ""
@@ -10659,16 +10717,18 @@ msgid ""
 ":guilabel:`Budgetary Position` you want to track, define the related "
 ":guilabel:`Analytic Account`, and add the :guilabel:`Planned Amount`."
 msgstr ""
+"首先，填写 :guilabel:`预算名称`。然后，选择预算适用的 :guilabel:`时期`。然后，添加要追踪的 "
+":guilabel:`预算状况`，定义相关的 :guilabel:`分析账户`，并添加 :guilabel:`计划金额`。"
 
 #: ../../content/applications/finance/accounting/reporting/budget.rst-1
 msgid "budget lines display"
-msgstr ""
+msgstr "预算项目显示"
 
 #: ../../content/applications/finance/accounting/reporting/budget.rst:88
 msgid ""
 "When recording a planned amount related to expenses, the amount must be "
 "negative."
-msgstr ""
+msgstr "记录与支出有关的计划金额时，金额必须为负数。"
 
 #: ../../content/applications/finance/accounting/reporting/budget.rst:91
 msgid "Check your budget"
@@ -10680,13 +10740,14 @@ msgid ""
 "*Smith & Co* Project to see how it evolves according to the expenses or "
 "income for the related analytic account."
 msgstr ""
+"转至 :menuselection:`会计 --> 管理： 预算`，找到 *Smith & Co* 项目，查看它如何根据相关分析账户的支出或收入变化。"
 
 #: ../../content/applications/finance/accounting/reporting/budget.rst:96
 msgid ""
 "The :guilabel:`Practical Amount` evolves when a new journal entry related to"
 " your analytic account and an account from your budgetary position is "
 "created."
-msgstr ""
+msgstr "当创建与分析账户和预算项目中的账户相关的新日记账分录时，:guilabel:`实际金额`会发生变化。"
 
 #: ../../content/applications/finance/accounting/reporting/budget.rst:99
 msgid ""
@@ -10696,10 +10757,12 @@ msgid ""
 "December), and today is 31 of January. In that case, the theoretical amount "
 "will be 100 since this is the actual amount that could have been made."
 msgstr ""
+":guilabel:`理论金额` 表示根据日期，您理论上可以花费或应该收到的金额。例如，假设您的预算是 1200，共 12 个月（1 月至 12 "
+"月），而今天是 1 月 31 日。在这种情况下，理论金额将是 100，因为这是实际金额。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:3
 msgid "Custom reports"
-msgstr ""
+msgstr "自定义报告"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:5
 msgid ""
@@ -10708,12 +10771,14 @@ msgid ""
 "sheets** and **income statements** with **specific groupings** and "
 "**layouts**."
 msgstr ""
+"Odoo "
+"附带一个功能强大且易于使用的报告框架。该引擎允许您创建新的报告，如**税务报告**或**资产负债表**和**收入报表**，并可进行**特定分组**和**布局**。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:10
 msgid ""
 "Activate the :ref:`developer mode <developer-mode>` to access the accounting"
 " report creation interface."
-msgstr ""
+msgstr "激活 :ref:`开发者模式<developer-mode>` 访问会计报告创建界面。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:13
 msgid ""
@@ -10722,27 +10787,29 @@ msgid ""
 ":ref:`root report <customize-reports/root>` or a :ref:`variant <customize-"
 "reports/variants>`."
 msgstr ""
+"要创建新报告，请访问 :menuselection:`会计 --> 配置 --> 管理：会计报告`。在这里，您可以创建 :ref:`根报告 "
+"<customize-reports/root>` 或 :ref:`变体 <customize-reports/variants>`。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst-1
 msgid "Accounting reports engine."
-msgstr ""
+msgstr "会计报告引擎。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:24
 msgid "Root reports"
-msgstr ""
+msgstr "根报告"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:26
 msgid ""
 "Root reports can be regarded as generic, neutral accounting reports. They "
 "serve as models on which local accounting versions are built. If a report "
 "has no root report, it is considered to be a root report itself."
-msgstr ""
+msgstr "根报告可被视为通用的、中立的会计报告。它们是建立本地会计版本的模型。如果一个报告没有根报告，那么它本身就被视为根报告。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:31
 msgid ""
 "A tax report for Belgium and the US would both use the same generic version "
 "as a base and adapt it for their domestic regulations."
-msgstr ""
+msgstr "比利时和美国的税务报告都将以相同的通用版本为基础，并根据其本地法规进行调整。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:34
 msgid ""
@@ -10751,16 +10818,18 @@ msgid ""
 ":menuselection:`Action --> Create Menu Item`. Refresh the page; the report "
 "is now available under :menuselection:`Accounting --> Reporting`."
 msgstr ""
+"创建新的根报告时，需要为其创建**菜单项**。为此，请打开报告，然后在同一报告上单击 :menuselection:`操作 --> "
+"创建菜单项目`。刷新页面；现在该报告在 :menuselection:`会计 --> 报告` 下可用。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:39
 msgid ""
 "Cases that require creating a new root report are rare, such as when a "
 "country's tax authorities require a new and specific type of report."
-msgstr ""
+msgstr "需要创建新的根报告的情况很少见，例如当一个国家/地区的税务机构要求一种新的特定类型的报告时。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst-1
 msgid "Create Menu Item button."
-msgstr ""
+msgstr "创建菜单项按钮。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:49
 msgid "Variants"
@@ -10772,23 +10841,24 @@ msgid ""
 "always refer to a root report. To create a variant, select a generic (root) "
 "report in the :guilabel:`Root Report` field when creating a new report."
 msgstr ""
+"变体是根报告的特定国家/地区版本，因此总是引用根报告。要创建变体，请在创建新报告时在 :guilabel:`根报告` 字段中选择通用（根）报告。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:55
 msgid ""
 "When a root report is opened from one of the accounting app's main menus, "
 "all its variants are displayed in the variant selector in the top right "
 "corner of the view."
-msgstr ""
+msgstr "从会计应用程序的主菜单之一打开根报告时，其所有变体都会显示在视图右上角的变体选择器中。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:59
 msgid ""
 "In the following image, :guilabel:`VAT Report (BE)` is the variant of the "
 "root :guilabel:`Generic Tax report`."
-msgstr ""
+msgstr "在下图中，:guilabel:`增值税报告（BE）`是根:guilabel:`通用税务报告`的变体。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:0
 msgid "Report variant selection."
-msgstr ""
+msgstr "报告变体选择。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:67
 msgid "Lines"
@@ -10802,6 +10872,8 @@ msgid ""
 ":guilabel:`Name`, and can have an optional additional :guilabel:`Code` (of "
 "your choice) if you wish to use their value in formulas."
 msgstr ""
+"创建报告（根报告或变量报告）后，需要在报告中添加行。您可以点击 :guilabel:`添加行` 创建新行，也可以点击现有行进行修改。所有行都*需要*一个"
+" :guilabel:`名称`，如果您希望在公式中使用它们的值，还可以选择附加 :guilabel:`代码`（由您选择）。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst-1
 msgid "Engine lines options."
@@ -10817,6 +10889,7 @@ msgid ""
 "seen as **sub-variables** needed by a report line. To create an expression, "
 "click on :guilabel:`Add a line` *within* a line report."
 msgstr ""
+"每一行可以包含一个或多个**表达式**。表达式可视为报告行所需的**子变量**。要创建表达式，请单击行报告*内*的 :guilabel:`添加行`。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:85
 msgid ""
@@ -10828,49 +10901,53 @@ msgid ""
 "expressions using different computation engines under the same line if you "
 "need to."
 msgstr ""
+"创建表达式时，您必须为该表达式指定一个 :guilabel:`标签` 属性。因此，在每一行的表达式中，它必须是**唯一**的。还必须指定 "
+":guilabel:`计算引擎` 和 :guilabel:`公式` "
+"。**引擎**定义了如何解释您的**公式**和**子公式**。如果需要，可以在同一行中混合使用不同计算引擎的表达式。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:92
 msgid "Depending on the engine, :guilabel:`subformulas` may also be required."
-msgstr ""
+msgstr "根据引擎的不同，可能还需要 :guilabel:`子公式`。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:95
 msgid "'Odoo Domain' engine"
-msgstr ""
+msgstr "'Odoo 域名' 引擎"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:97
 msgid ""
 "With this engine, a formula is interpreted as an :ref:`Odoo domain "
 "<reference/orm/domains>` targeting `account.move.line` objects."
 msgstr ""
+"使用此引擎时，公式被解释为针对`account.move.line`对象的:ref:`Odoo 域名<reference/orm/domains>`。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:100
 msgid ""
 "The subformula allows you to define how the move lines matching the domain "
 "are used to compute the value of the expression:"
-msgstr ""
+msgstr "子公式允许您定义如何使用与域匹配的移动行来计算表达式的值："
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:104
 #: ../../content/applications/finance/accounting/reporting/customize.rst:270
 msgid "`sum`"
-msgstr ""
+msgstr "`总额`"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:104
 msgid "The result is the sum of all the balances of the matched move lines."
-msgstr ""
+msgstr "结果是匹配移动线路的所有余额之和。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:108
 msgid "`sum_if_pos`"
-msgstr ""
+msgstr "`sum_if_pos`"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:107
 msgid ""
 "The result is the sum of all the balances of the matched move lines if this "
 "amount is positive. Otherwise, it is `0`."
-msgstr ""
+msgstr "如果结果为正数，则为匹配移动行的所有余额之和。否则，结果为`0`。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:112
 msgid "`sum_if_neg`"
-msgstr ""
+msgstr "`sum_if_neg`"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:111
 msgid ""
@@ -10880,7 +10957,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:117
 msgid "`count_rows`"
-msgstr ""
+msgstr "`count_rows`"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:115
 msgid ""
@@ -10894,7 +10971,7 @@ msgstr ""
 msgid ""
 "You can also put a `-` sign at the beginning of the subformula to "
 "**reverse** the sign of the result."
-msgstr ""
+msgstr "您也可以在子公式的开头加上 `-` 号，来**取反**结果的符号。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst-1
 msgid "Expression line within a line report"
@@ -10938,75 +11015,78 @@ msgid ""
 "`*`). To refer to an expression, type in its parent line's **code** followed"
 " by a period `.` and the expression's **label** (ex. **code.label**)."
 msgstr ""
+"当您需要对其他表达式得到的金额进行算术运算时，请使用此引擎。这里的公式由引用表达式组成，表达式由四个基本算术运算符（加法运算符 `+`、减法运算符 "
+"`-`、除法运算符 `/` 和乘法运算符 "
+"`*`）之一分隔。要引用一个表达式，请输入其上级行的**代码**，后跟一个句点`.`和表达式的**标签**（例如**code.label**）。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:149
 msgid "**Subformulas** can be one of the following:"
-msgstr ""
+msgstr "**子公式**可以是以下其中之一："
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:153
 msgid "`if_above(CUR(amount))`"
-msgstr ""
+msgstr "`if_above(CUR(amount))`"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:152
 msgid ""
 "The value of the arithmetic expression will be returned only if it is "
 "greater than the provided bound. Otherwise, the result will be `0`."
-msgstr ""
+msgstr "只有当算术表达式的值大于所提供的界限时，才会返回该值。否则，结果将是 `0`。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:157
 msgid "`if_below(CUR(amount))`"
-msgstr ""
+msgstr "`if_below(CUR(amount))`"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:156
 msgid ""
 "The value of the arithmetic expression will be returned only if it is lower "
 "than the provided bound. Otherwise, the result will be `0`."
-msgstr ""
+msgstr "只有当算术表达式的值小于所提供的界限时，才会返回该值。否则，结果将为 `0`。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:161
 msgid "`if_between(CUR1(amount1), CUR2(amount2))`"
-msgstr ""
+msgstr "`if_between(CUR1(amount1), CUR2(amount2))`"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:160
 msgid ""
 "The value of the arithmetic expression will be returned only if it is "
 "strictly between the provided bounds. Otherwise, it will be brought back to "
 "the closest bound."
-msgstr ""
+msgstr "只有当算术表达式的值严格位于所提供的界限之间时，才会返回该值。否则，将返回最接近的界限。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:166
 msgid "`if_other_expr_above(LINE_CODE.EXPRESSION_LABEL, CUR(amount))`"
-msgstr ""
+msgstr "`if_other_expr_above(LINE_CODE.EXPRESSION_LABEL, CUR(amount))`"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:164
 msgid ""
 "The value of the arithmetic expression will be returned only if the value of"
 " the expression denoted by the provided line code and expression label is "
 "greater than the provided bound. Otherwise, the result will be `0`."
-msgstr ""
+msgstr "只有当所提供的行代码和表达式标签所表示的表达式值大于所提供的界限时，才会返回算术表达式的值。否则，结果将为 `0`。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:171
 msgid "`if_other_expr_below(LINE_CODE.EXPRESSION_LABEL, CUR(amount))`"
-msgstr ""
+msgstr "`if_other_expr_below(LINE_CODE.EXPRESSION_LABEL, CUR(amount))`"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:169
 msgid ""
 "The value of the arithmetic expression will be returned only if the value of"
 " the expression denoted by the provided line code and expression label is "
 "lower than the provided bound. Otherwise, the result will be `0`."
-msgstr ""
+msgstr "只有当所提供的行代码和表达式标签所表示的表达式值小于所提供的界限时，才会返回算术表达式的值。否则，结果将为 `0`。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:173
 msgid ""
 "`CUR` is the currency code in capital letters, and `amount` is the amount of"
 " the bound expressed in that currency."
-msgstr ""
+msgstr "`CUR` 是大写的货币代码，`amount` 是以该货币表示的绑定金额。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:176
 msgid ""
 "You can also use the `cross_report` subformula to match an expression found "
 "in another report."
-msgstr ""
+msgstr "您还可以使用 `cross_report` 子公式来匹配另一份报告中的表达式。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:179
 msgid "'Prefix of Account Codes' engine"
@@ -11020,15 +11100,15 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:0
 msgid "`21`"
-msgstr ""
+msgstr "`21`"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:0
 msgid "Arithmetic expressions can also be a single prefix, such as here."
-msgstr ""
+msgstr "算术表达式也可以是一个前缀，如此处。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:0
 msgid "`21 + 10 - 5`"
-msgstr ""
+msgstr "`21 + 10 - 5`"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:0
 msgid ""
@@ -11065,14 +11145,16 @@ msgid ""
 "25. The formula `21D` only matches the account `210002`, and hence returns "
 "25. `210001` is not matched, as its balance is *credit*."
 msgstr ""
+"账户 `210001` 余额为 -42，账户 `210002` 余额为 25。公式 `21D` 只与账户 `210002` 匹配，因此返回 "
+"25。`210001` 不匹配，因为其余额为*贷方*。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:209
 msgid "Prefix exclusions can be mixed with the `C` and `D` suffixes."
-msgstr ""
+msgstr "前缀排除可与`C`和`D`后缀混合使用。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:0
 msgid "`21D + 10\\\\(101, 102)C - 5\\\\(57)`"
-msgstr ""
+msgstr "`21D + 10\\\\(101, 102)C - 5\\\\(57)`"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:0
 msgid ""
@@ -11090,7 +11172,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:0
 msgid "`21D\\\\()`"
-msgstr ""
+msgstr "`21D\\\\()`"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:0
 msgid ""
@@ -11108,7 +11190,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:0
 msgid "`tag(25)`"
-msgstr ""
+msgstr "`tag(25)`"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:0
 msgid ""
@@ -11124,7 +11206,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:0
 msgid "`tag(my_module.my_tag)`"
-msgstr ""
+msgstr "`tag(my_module.my_tag)`"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:0
 msgid ""
@@ -11140,7 +11222,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:0
 msgid "`tag(my_module.my_tag) + tag(42) + 10`"
-msgstr ""
+msgstr "`tag(my_module.my_tag) + tag(42) + 10`"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:0
 msgid ""
@@ -11155,7 +11237,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:0
 msgid "`tag(my_module.my_tag)C`"
-msgstr ""
+msgstr "`tag(my_module.my_tag)C`"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:0
 msgid ""
@@ -11169,7 +11251,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:0
 msgid "`tag(my_module.my_tag)\\\\(10)`"
-msgstr ""
+msgstr "`tag(my_module.my_tag)\\\\(10)`"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:0
 msgid ""
@@ -11223,13 +11305,13 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:282
 msgid "`editable`"
-msgstr ""
+msgstr "`可编辑`"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:281
 msgid ""
 "Indicates this expression can be edited manually, triggering the display of "
 "an icon in the report, allowing the user to perform this action."
-msgstr ""
+msgstr "表示可以手动编辑该表达式，从而在报告中显示一个图标，允许用户执行该操作。"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:285
 msgid ""
@@ -11435,7 +11517,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting/intrastat.rst:26
 msgid "General configuration"
-msgstr ""
+msgstr "常规配置"
 
 #: ../../content/applications/finance/accounting/reporting/intrastat.rst:28
 msgid ""
@@ -11443,10 +11525,12 @@ msgid ""
 "Configuration --> Settings`. Under the :guilabel:`Customer Invoices` "
 "section, tick :guilabel:`Intrastat` and then :guilabel:`Save`."
 msgstr ""
+"进入 :menuselection:`会计 --> 配置 --> 设置` 启用 Intrastat 报告。在 :guilabel:`客户发票` "
+"部分，勾选 :guilabel:`Intrastat`，然后 :guilabel:`保存`。"
 
 #: ../../content/applications/finance/accounting/reporting/intrastat.rst:35
 msgid "Default transaction codes: invoice and refund"
-msgstr ""
+msgstr "默认交易代码：发票和退款"
 
 #: ../../content/applications/finance/accounting/reporting/intrastat.rst:37
 msgid ""
@@ -11457,10 +11541,13 @@ msgid ""
 "refund transaction code` and then :guilabel:`Save`. The code will be set "
 "automatically on all respective invoice lines."
 msgstr ""
+"您可以为所有新创建的发票和退款交易设置默认的 :ref:`交易代码 <intrastat/transaction-code>`。在 "
+":menuselection:`会计 --> 配置 --> 设置` 下，选择 :guilabel:`默认发票交易代码` 和/或 "
+":guilabel:`默认退款交易代码`，然后 :guilabel:`保存`。该代码将自动设置到所有相应的发票行。"
 
 #: ../../content/applications/finance/accounting/reporting/intrastat.rst:45
 msgid "Region code"
-msgstr ""
+msgstr "地区代码"
 
 #: ../../content/applications/finance/accounting/reporting/intrastat.rst:47
 msgid ""
@@ -11469,6 +11556,8 @@ msgid ""
 ":guilabel:`Company Intrastat Region` where the company is located and then "
 ":guilabel:`Save`."
 msgstr ""
+"地区代码**仅用于比利时公司**。在 :menuselection:`会计 --> 配置 --> 设置` 下，选择公司所在的 :guilabel:`公司"
+" Intrastat 地区`，然后 :guilabel:`保存`。"
 
 #: ../../content/applications/finance/accounting/reporting/intrastat.rst:52
 msgid ""
@@ -11477,10 +11566,12 @@ msgid ""
 ":menuselection:`Inventory --> Configuration --> Warehouses`, select a "
 "warehouse, set its :guilabel:`Intrastat region`, and then :guilabel:`Save`."
 msgstr ""
+"如果仓库位于多个地区，可以在每个仓库的级别上定义地区代码。要执行此操作，进入 :menuselection:`库存 --> 配置 --> "
+"仓库`，选择一个仓库，设置其 :guilabel:`Intrastat 区域`，然后 :guilabel:`保存`。"
 
 #: ../../content/applications/finance/accounting/reporting/intrastat.rst:0
 msgid "Adding the Intrastat region to a warehouse"
-msgstr ""
+msgstr "将 Intrastat 地区添加到仓库"
 
 #: ../../content/applications/finance/accounting/reporting/intrastat.rst:63
 msgid "Product configuration"
@@ -11490,7 +11581,7 @@ msgstr "产品配置"
 msgid ""
 "All products must be properly configured to be included in the Intrastat "
 "report."
-msgstr ""
+msgstr "所有产品都必须正确配置，才能列入 Intrastat 报告。"
 
 #: ../../content/applications/finance/accounting/reporting/intrastat.rst:70
 msgid "Commodity code"
@@ -11503,6 +11594,9 @@ msgid ""
 "Nomenclature <https://taxation-customs.ec.europa.eu/customs-4/calculation-"
 "customs-duties/customs-tariff/combined-nomenclature_en>`_."
 msgstr ""
+"商品代码是国际公认的参考编号，用于根据商品的**性质**对商品进行分类。Intrastat 使用 `组合命名法 <https://taxation-"
+"customs.ec.europa.eu/customs-4/calculation-customs-duties/customs-"
+"tariff/combined-nomenclature_en>`_。"
 
 #: ../../content/applications/finance/accounting/reporting/intrastat.rst:75
 msgid ""
@@ -11510,6 +11604,8 @@ msgid ""
 "Products` and select a product. Under the :guilabel:`Accounting` tab, set "
 "the product's :guilabel:`Commodity Code`."
 msgstr ""
+"要添加商品代码，请进入 :menuselection:`会计 --> 客户 --> 产品` 并选择产品。在 :guilabel:`会计` "
+"选项卡下，设置产品的 :guilabel:`商品代码`。"
 
 #: ../../content/applications/finance/accounting/reporting/intrastat.rst:79
 msgid ""
@@ -11590,7 +11686,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting/intrastat.rst:134
 msgid "Partner country"
-msgstr ""
+msgstr "合作伙伴国家/地区"
 
 #: ../../content/applications/finance/accounting/reporting/intrastat.rst:136
 msgid ""
@@ -11634,7 +11730,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting/intrastat.rst:165
 msgid "Partner configuration"
-msgstr ""
+msgstr "合作伙伴配置"
 
 #: ../../content/applications/finance/accounting/reporting/intrastat.rst:167
 msgid ""
@@ -11757,19 +11853,19 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting/silverfin.rst:16
 msgid ":ref:`Odoo API key <silverfin/api-key>`"
-msgstr ""
+msgstr ":ref:`Odoo API 密钥 <silverfin/api-key>`"
 
 #: ../../content/applications/finance/accounting/reporting/silverfin.rst:17
 msgid "URL of the Odoo database"
-msgstr ""
+msgstr "Odoo 数据库 URL"
 
 #: ../../content/applications/finance/accounting/reporting/silverfin.rst:18
 msgid "name of your Odoo database"
-msgstr ""
+msgstr "您的 Odoo 数据库名称"
 
 #: ../../content/applications/finance/accounting/reporting/silverfin.rst:23
 msgid "Odoo API key"
-msgstr ""
+msgstr "Odoo API 密钥"
 
 #: ../../content/applications/finance/accounting/reporting/silverfin.rst:25
 msgid ""
@@ -11819,7 +11915,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting/silverfin.rst:51
 msgid ":ref:`api/external_api/keys`"
-msgstr ""
+msgstr ":ref:`api/external_api/keys`"
 
 #: ../../content/applications/finance/accounting/reporting/silverfin.rst:56
 msgid "For all databases (fiduciaries)"
@@ -11954,6 +12050,7 @@ msgid ""
 "To do so, go to :menuselection:`Accounting --> Configuration --> Settings`. "
 "Under the :guilabel:`Tax Return Periodicity`, you can set:"
 msgstr ""
+"要执行此操作，请转至 :menuselection:`会计 --> 配置 --> 设置`。在 :guilabel:`退税周期` 下，可以设置："
 
 #: ../../content/applications/finance/accounting/reporting/tax_returns.rst:33
 msgid ""
@@ -11965,7 +12062,7 @@ msgstr ""
 msgid ""
 ":guilabel:`Reminder`: define when Odoo should remind you to submit your tax "
 "return;"
-msgstr ""
+msgstr ":guilabel:`提醒`：定义 Odoo 提醒您提交报税表的时间；"
 
 #: ../../content/applications/finance/accounting/reporting/tax_returns.rst:36
 msgid ""
@@ -12460,7 +12557,7 @@ msgstr ""
 #: ../../content/applications/finance/accounting/taxes.rst:124
 #: ../../content/applications/finance/accounting/taxes.rst:268
 msgid "Product sales price"
-msgstr ""
+msgstr "产品销售价"
 
 #: ../../content/applications/finance/accounting/taxes.rst:94
 #: ../../content/applications/finance/accounting/taxes.rst:109
@@ -12502,19 +12599,19 @@ msgstr "1,010.00"
 
 #: ../../content/applications/finance/accounting/taxes.rst:100
 msgid "**Percentage of price**"
-msgstr ""
+msgstr "**价格百分比**"
 
 #: ../../content/applications/finance/accounting/taxes.rst:102
 msgid ""
 "The *sales price* is the taxable basis: the tax amount is computed by "
 "multiplying the sales price by the tax percentage."
-msgstr ""
+msgstr "*销售价格*是计税基础：税额是用销售价格乘以税收百分比计算得出的。"
 
 #: ../../content/applications/finance/accounting/taxes.rst:106
 msgid ""
 "A product has a sales price of $1000, and we apply a *10% of Price* tax. We "
 "then have:"
-msgstr ""
+msgstr "某产品的销售价格为$ 1000，我们按*价格的10%*征税。然后我们有："
 
 #: ../../content/applications/finance/accounting/taxes.rst:112
 msgid "1,100.00"
@@ -12528,13 +12625,13 @@ msgstr "**已含价格税的百分比**"
 msgid ""
 "The **total** is the taxable basis: the tax amount is a percentage of the "
 "total."
-msgstr ""
+msgstr "**总额**是应税基础：税额是总额的百分比。"
 
 #: ../../content/applications/finance/accounting/taxes.rst:120
 msgid ""
 "A product has a Sales Price of $1000, and we apply a *10% of Price Tax "
 "Included* tax. We then have:"
-msgstr ""
+msgstr "某产品的销售价格为 $ 1000，我我们按*价格的10%*征税。然后我们有："
 
 #: ../../content/applications/finance/accounting/taxes.rst:127
 msgid "111.11"
@@ -12546,7 +12643,7 @@ msgstr "1,111.11"
 
 #: ../../content/applications/finance/accounting/taxes.rst:130
 msgid "**Python code**"
-msgstr ""
+msgstr "**Python 代码**"
 
 #: ../../content/applications/finance/accounting/taxes.rst:132
 msgid ""
@@ -12556,6 +12653,9 @@ msgid ""
 " tax, and :guilabel:`Applicable Code` defines if the tax is to be applied. "
 "The formula is found at the bottom of the :guilabel:`Definition` tab."
 msgstr ""
+"定义为**Python 代码**的税金由两个 Python 代码段组成，在包含单价、产品或合作伙伴等数据的本地环境中执行。 "
+":guilabel:`Python 代码`定义税金数额，:guilabel:`适用代码`定义是否适用税金。公式位于 :guilabel:`定义` "
+"标签底部。"
 
 #: ../../content/applications/finance/accounting/taxes.rst:138
 msgid ""
@@ -12585,21 +12685,21 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/taxes.rst:158
 msgid "Tax type"
-msgstr ""
+msgstr "税务类型"
 
 #: ../../content/applications/finance/accounting/taxes.rst:160
 msgid ""
 "The :guilabel:`Tax Type` determines the tax application, which also "
 "restricts where it is displayed."
-msgstr ""
+msgstr ":guilabel:`税务类型`决定了税务应用，也限制了显示的位置。"
 
 #: ../../content/applications/finance/accounting/taxes.rst:162
 msgid "**Sales**: Customer invoices, product customer taxes, etc."
-msgstr ""
+msgstr "**销售**：客户发票、产品客户税等。"
 
 #: ../../content/applications/finance/accounting/taxes.rst:163
 msgid "**Purchase**: Vendor bills, product vendor taxes, etc."
-msgstr ""
+msgstr "**采购**： 供应商账单、产品供应商税等。"
 
 #: ../../content/applications/finance/accounting/taxes.rst:164
 msgid "**None**"
@@ -12614,13 +12714,13 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/taxes.rst:171
 msgid "Tax scope"
-msgstr ""
+msgstr "税务范围"
 
 #: ../../content/applications/finance/accounting/taxes.rst:173
 msgid ""
 "The :guilabel:`Tax Scope` restricts the use of taxes to a type of product, "
 "either **goods** or **services**."
-msgstr ""
+msgstr "使用 :guilabel:`税务范围` 时，税务的使用仅限于某类产品，即**货物**或**服务**。"
 
 #: ../../content/applications/finance/accounting/taxes.rst:179
 msgid "Definition tab"
@@ -12650,7 +12750,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/taxes.rst:192
 msgid "**Account**: if defined, an additional journal item is recorded."
-msgstr ""
+msgstr "**账户**：如果已定义，则记录额外的日记账项目。"
 
 #: ../../content/applications/finance/accounting/taxes.rst:193
 msgid ""
@@ -12679,14 +12779,14 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/taxes.rst:215
 msgid "Tax group"
-msgstr ""
+msgstr "税组"
 
 #: ../../content/applications/finance/accounting/taxes.rst:217
 msgid ""
 "Select which **tax group** the tax belongs to. The tax group name is the "
 "displayed above the **total** line on exported invoices and in customer "
 "portals."
-msgstr ""
+msgstr "选择税款所属的**税组**。税组名称显示在导出发票和客户门户网站的**总计**行上方。"
 
 #: ../../content/applications/finance/accounting/taxes.rst:220
 msgid ""
@@ -12694,6 +12794,8 @@ msgid ""
 "when you must record the same tax differently according to :doc:`fiscal "
 "positions <taxes/fiscal_positions>`."
 msgstr ""
+"税种组包括同一税种的不同迭代。当您必须根据 :doc:`财务状况 <taxes/fiscal_positions>` "
+"以不同方式记录同一税种时，这可能很有用。"
 
 #: ../../content/applications/finance/accounting/taxes.rst-1
 msgid "The Tax Group name is different from the Label on Invoices"
@@ -12787,7 +12889,7 @@ msgstr "1,000.00"
 msgid ""
 "If you need to define prices accurately, both tax-included and tax-excluded,"
 " please refer to the following documentation: :doc:`taxes/B2B_B2C`."
-msgstr ""
+msgstr "如果需要准确定义含税和不含税价格，请参阅以下文档：:doc:`taxes/B2B_B2C`。"
 
 #: ../../content/applications/finance/accounting/taxes.rst:279
 msgid ""
@@ -12795,6 +12897,8 @@ msgid ""
 "invoices. To display the :guilabel:`Tax included` column, click the "
 "**dropdown toggle** button and check :guilabel:`Tax incl.`."
 msgstr ""
+"默认情况下，发票上只显示 :guilabel:`不含税` 列。要显示 :guilabel:`含税` 列，请单击**下拉切换**按钮并选中 "
+":guilabel:`含税`。"
 
 #: ../../content/applications/finance/accounting/taxes.rst:288
 msgid "Affect base of subsequent taxes"
@@ -12844,7 +12948,7 @@ msgstr ":doc:`taxes/B2B_B2C`"
 
 #: ../../content/applications/finance/accounting/taxes.rst:313
 msgid ":doc:`taxes/taxcloud`"
-msgstr ""
+msgstr ":doc:`taxes/taxcloud`"
 
 #: ../../content/applications/finance/accounting/taxes.rst:314
 msgid ":doc:`reporting/tax_returns`"
@@ -12852,7 +12956,7 @@ msgstr ":doc:`reporting/tax_returns`"
 
 #: ../../content/applications/finance/accounting/taxes/B2B_B2C.rst:3
 msgid "B2B (tax excluded) and B2C (tax included) pricing"
-msgstr ""
+msgstr "B2B（不含税）和 B2C（含税）定价"
 
 #: ../../content/applications/finance/accounting/taxes/B2B_B2C.rst:5
 msgid ""
@@ -14060,21 +14164,21 @@ msgstr ""
 msgid ""
 "Click on a vendor's name to open up the details of all outstanding bills, "
 "the amounts due, the due dates, etc."
-msgstr ""
+msgstr "点击供应商名称，可打开所有未付账单、应付金额、到期日期等详细信息。"
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:96
 msgid ""
 "By clicking the :guilabel:`Save` button, you can export the information "
 "available on the screen as a PDF or XLSX file and save it in the folder of "
 "your choice."
-msgstr ""
+msgstr "通过点击 :guilabel:`保存` 按钮，您可以将屏幕上的信息导出为 PDF 或 XLSX 文件，并保存到您选择的文件夹中。"
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:98
 msgid ""
 "You might receive several bills for the same purchase order if your vendor "
 "is in back-order and is sending you invoices as they ship the products, or "
 "if your vendor is sending you a partial bill or asking for a deposit."
-msgstr ""
+msgstr "如果供应商处于延期交货状态，并在发货时向您发送发票，或者供应商向您发送部分账单或要求您支付定金，您可能会收到同一采购订单的多张账单。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:3
 msgid "Non-current assets and fixed assets"
@@ -14515,14 +14619,14 @@ msgstr ":doc:`../get_started/chart_of_accounts`"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:3
 msgid "Deferred expenses"
-msgstr ""
+msgstr "递延费用"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:5
 msgid ""
 "**Deferred expenses** and **prepayments** (also known as **prepaid "
 "expenses**) are both costs that have already occurred for products or "
 "services yet to be received."
-msgstr ""
+msgstr "**递延费用**和**预付款**（又称**预付费用**）是已经发生的成本，用于尚未收到的产品或服务。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:8
 msgid ""
@@ -14532,6 +14636,7 @@ msgid ""
 "loss statement**, or *income statement*, since the payments will be "
 "effectively expensed in the future."
 msgstr ""
+"对于支付这些费用的公司来说，这些费用是**资产**，因为公司已经为产品和服务支付了费用，但尚未收到或尚未使用。公司无法在当前的损益表或收入表上报告这些费用，因为这些支付将在未来实际支出。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:13
 msgid ""
@@ -14563,6 +14668,10 @@ msgid ""
 "manually <vendor_bills/deferred/generate_manually>` by selecting the "
 ":guilabel:`Manually & Grouped` option instead."
 msgstr ""
+"默认情况下，当您发布供应商账单时，Odoo :ref:`自动生成 "
+"<vendor_bills/deferred/generate_on_validation>` 递延账目。但是，您也可以选择 "
+":ref:`手动生成<vendor_bills/deferred/generate_manually>`，方法是选择 "
+":guilabel:`手动操作和分组` 选项。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:46
 msgid ""
@@ -14571,6 +14680,8 @@ msgid ""
 "the :guilabel:`Based on days` computation recognizes different amounts "
 "depending on the number of days in each month."
 msgstr ""
+"假设 $1200 的账单必须分 12 个月递延。:guilabel:`每月相等 `计算方法每月确认 100 "
+"美元，而:guilabel:`按天数`计算方法则根据每月的天数确认不同的金额。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:56
 msgid ""
@@ -14579,12 +14690,14 @@ msgid ""
 ":guilabel:`Start Date` should be in the same month as the :guilabel:`Bill "
 "Date`."
 msgstr ""
+"确保 :guilabel:`开始日期` 和 :guilabel:`结束日期` 字段在 :guilabel:`发票行` "
+"选项卡中可见。在大多数情况下，:guilabel:`开始日期`应与:guilabel:`发票日期`在同一个月份。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:60
 msgid ""
 "For each line of the bill that should be deferred, specify the start and end"
 " dates of the deferral period."
-msgstr ""
+msgstr "为账单中每一行应递延的项目指定递延期的开始和结束日期。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:63
 msgid ""
@@ -14646,11 +14759,11 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:116
 msgid "Bill A: $1200 to be deferred from 01/01/2023 to 12/31/2023"
-msgstr ""
+msgstr "账单 A：$ 1200 ，从 2023 年 1 月 1 日递延至 2023 年 12 月 31 日"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:117
 msgid "Bill B: $600 to be deferred from 01/01/2023 to 12/31/2023"
-msgstr ""
+msgstr "账单 B：$ 600，从 2023 年 1 月 1 日递延至 2023 年 12 月 31 日"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:125
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:142
@@ -14658,35 +14771,35 @@ msgstr ""
 msgid ""
 "Line 1: Expense account -1200 -600 = **-1800** (cancelling the total of both"
 " bills)"
-msgstr ""
+msgstr "第 1 行：费用账户-1200-600 = **-1800**（取消两张账单的总额）"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:126
 msgid ""
 "Line 2: Expense account 100 + 50 = **150** (recognizing 1/12 of bill A and "
 "bill B)"
-msgstr ""
+msgstr "第 2 行：费用账户 100 + 50 = **150**（确认账单 A 和账单 B 的 1/12）"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:143
 msgid ""
 "Line 2: Expense account 200 + 100 = **300** (recognizing 2/12 of bill A and "
 "bill B)"
-msgstr ""
+msgstr "第 2 行：费用账户 200 + 100 = **300**（确认账单 A 和账单 B 的 2/12）"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:159
 msgid ""
 "Line 2: Expense account 1100 + 550 = **1650** (recognizing 11/12 of bill A "
 "and bill B)"
-msgstr ""
+msgstr "第 2 行：费用账户 1100 + 550 = **1650**（确认账单 A 和账单 B 的 11/12）"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:166
 msgid ""
 "There is no need to generate entries in December. Indeed, if we do the "
 "computation for December, we will have an amount of 0 to be deferred."
-msgstr ""
+msgstr "12 月份不需要生成分录。事实上，如果我们对 12 月份进行计算，我们将得到需要递延的金额为 0。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:172
 msgid "bill A and bill B"
-msgstr ""
+msgstr "账单 A 和账单 B"
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:176
 msgid ""
@@ -14918,19 +15031,21 @@ msgid ""
 ". You can change the default workspace using the dropdown menu and edit its "
 "properties by clicking the internal link button (:guilabel:`➔`)."
 msgstr ""
+"通过进入 :menuselection:`文档 --> 配置 --> 设置`，您可以启用集中管理附加到特定活动区域的文件。例如，勾选 "
+":guilabel:`人力资源`，人力资源文件就会自动出现在人力资源工作区，而与薪资相关的文件则会自动出现在薪资子工作区。您可以使用下拉菜单更改默认工作区，并通过单击内部链接按钮（:guilabel:`➔`）编辑其属性。"
 
 #: ../../content/applications/finance/documents.rst-1
 msgid ""
 "Enable the centralization of files attached to a specific area of your "
 "activity."
-msgstr ""
+msgstr "启用集中管理活动特定区域所附文件的功能。"
 
 #: ../../content/applications/finance/documents.rst:29
 msgid ""
 "If you enable the centralization of your accounting files and documents, it "
 "is necessary to click on :guilabel:`Journals` and define each journal "
 "independently to allow automatic synchronization."
-msgstr ""
+msgstr "如果启用会计文件和文档集中管理，则必须点击 :guilabel:`日记账` 并独立定义每个日记账，以便自动同步。"
 
 #: ../../content/applications/finance/documents.rst:0
 msgid "Enable the centralization of files attached to your accounting."
@@ -14940,7 +15055,7 @@ msgstr ""
 msgid ""
 "If you select a new workspace, existing documents aren't moved. Only newly "
 "created documents will be found under the new workspace."
-msgstr ""
+msgstr "如果选择新工作区，现有文档不会移动。只有新创建的文档才会出现在新工作区中。"
 
 #: ../../content/applications/finance/documents.rst:40
 msgid "Workspaces"
@@ -14954,6 +15069,8 @@ msgid ""
 "Configuration --> Workspaces` and clicking :guilabel:`New`. On the new page,"
 " fill in the following information:"
 msgstr ""
+"工作空间是分层文件夹，有自己的标签集和 :ref:`操作<documents/workflow-actions>` 。存在默认工作区，您也可以通过进入 "
+":menuselection:`文档 --> 配置 --> 工作区` 并单击 :guilabel:`新建`，以创建自己的工作区。在新页面上填写以下信息："
 
 #: ../../content/applications/finance/documents.rst:47
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:232
@@ -15011,6 +15128,9 @@ msgid ""
 "that can view, create, and edit the workspace's documents. You can also add "
 ":guilabel:`Read Groups` that can only view the workspace's documents."
 msgstr ""
+"要管理工作区访问权限，请访问 :menuselection:`文档 --> 配置 --> 工作区`，打开要编辑的工作区，并转到 "
+":guilabel:`访问权限` 选项卡。您可以添加 :guilabel:`写入组` 来查看、创建和编辑工作区的文档。也可以添加只能查看工作区文档的 "
+":guilabel:`读取组`。"
 
 #: ../../content/applications/finance/documents.rst:74
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:31
@@ -15043,16 +15163,18 @@ msgid ""
 ":menuselection:`Documents --> Configuration --> Workspaces`, opening the "
 "workspace you want to describe and going to the :guilabel:`Description` tab."
 msgstr ""
+"您可以进入 :menuselection:`文档 --> 配置 --> 工作区`，打开要描述的工作区，并进入 :guilabel:`描述` "
+"选项卡，为工作区添加描述信息。"
 
 #: ../../content/applications/finance/documents.rst:81
 msgid ""
 "Workspaces can also be created and edited by clicking the gear icon "
 ":guilabel:`⚙` on the left menu."
-msgstr ""
+msgstr "点击左侧菜单上的齿轮图标 :guilabel:`⚙` 也可以创建和编辑工作区。"
 
 #: ../../content/applications/finance/documents.rst:0
 msgid "Create sub-workspaces from the left menu"
-msgstr ""
+msgstr "从左侧菜单创建子工作区"
 
 #: ../../content/applications/finance/documents.rst:88
 msgid "Documents management"
@@ -15066,6 +15188,8 @@ msgid ""
 ":guilabel:`Lock` or :guilabel:`Split`. It is also possible to "
 ":guilabel:`Open chatter` or :guilabel:`Archive` the document."
 msgstr ""
+"选择或打开文档时，右侧面板会显示不同的选项。顶部可能还有其他选项：:guilabel:`下载`、:guilabel:`共享`、:guilabel:`替换`、:guilabel:`锁定`或:guilabel:`分割`。也可以"
+" :guilabel:`打开沟通栏` 或 :guilabel:`归档` 文档。"
 
 #: ../../content/applications/finance/documents.rst-1
 msgid "right panel options"
@@ -15079,13 +15203,16 @@ msgid ""
 "possible to access the related :guilabel:`Journal Entry` or add "
 ":guilabel:`Tags`."
 msgstr ""
+"然后，您可以点击 :guilabel:`文件` 来修改文件名。可以指定 :guilabel:`联系人` 或 "
+":guilabel:`所有者`。可以修改相关的 :guilabel:`工作区` 并访问相关的 :guilabel:`日记账分录` 或添加 "
+":guilabel:`标签`。"
 
 #: ../../content/applications/finance/documents.rst:105
 msgid ""
 "The :guilabel:`Contact` is the person related to the document and assigned "
 "to it. He can only view the document and not modify it. I.e.: an existing "
 "supplier in your database is the contact for their bill."
-msgstr ""
+msgstr "guilabel:`联系人`是与文件相关并分配给文件的人。只能查看文件，不能修改文件。例如：您数据库中的现有供应商是其账单的联系人。"
 
 #: ../../content/applications/finance/documents.rst:108
 msgid ""
@@ -15094,6 +15221,8 @@ msgid ""
 "document. I.e., an employee must be owner of a document to be able to see it"
 " in \"My Profile\"."
 msgstr ""
+"默认情况下，创建文件的人是文件的 :guilabel:`所有者`，并拥有文件的全部权利。可以替换文件的所有者。也就是说，员工必须是文件的所有者，才能在 "
+"\"我的资料\" 中看到该文件。"
 
 #: ../../content/applications/finance/documents.rst:112
 msgid ""
@@ -15634,11 +15763,11 @@ msgstr ""
 
 #: ../../content/applications/finance/expenses.rst:90
 msgid "Record expenses"
-msgstr ""
+msgstr "记录费用"
 
 #: ../../content/applications/finance/expenses.rst:93
 msgid "Manually create a new expense"
-msgstr ""
+msgstr "手动创建新费用"
 
 #: ../../content/applications/finance/expenses.rst:95
 msgid ""
@@ -21360,7 +21489,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:320
 msgid "Synchronization"
-msgstr ""
+msgstr "同步"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:322
 msgid ""
@@ -25095,7 +25224,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/colombia.rst:87
 msgid "Carjaval credentials configuration"
-msgstr ""
+msgstr "Carjaval 证书配置"
 
 #: ../../content/applications/finance/fiscal_localizations/colombia.rst:89
 msgid ""
@@ -25105,22 +25234,24 @@ msgid ""
 " :guilabel:`Colombian Electronic Invoicing` section. Then, fill in the "
 "required configuration information provided by Carvajal:"
 msgstr ""
+"安装模块后，**必须**配置用户凭据，以便与 Carvajal Web 服务连接。要执行此操作，请导航至 :menuselection:`会计 --> "
+"配置 --> 设置` 并滚动至 :guilabel:`哥伦比亚电子发票` 部分。然后，填写 Carvajal 提供的所需配置信息："
 
 #: ../../content/applications/finance/fiscal_localizations/colombia.rst:94
 msgid ""
 ":guilabel:`Username` and :guilabel:`Password`: Username and password "
 "(provided by Carvajal) to the company."
-msgstr ""
+msgstr ":guilabel:`用户名` 和 :guilabel:`密码`：公司的用户名和密码（由 Carvajal 提供）。"
 
 #: ../../content/applications/finance/fiscal_localizations/colombia.rst:96
 msgid ""
 ":guilabel:`Company Registry`: Company's NIT number *without* the "
 "verification code."
-msgstr ""
+msgstr ":guilabel:`公司注册号`：公司的 NIT 编号，*不包括*验证码。"
 
 #: ../../content/applications/finance/fiscal_localizations/colombia.rst:97
 msgid ":guilabel:`Account ID`: Company's NIT number followed by `_01`."
-msgstr ""
+msgstr ":guilabel:`账户 ID`：公司的 NIT 编号，后跟 `_01`。"
 
 #: ../../content/applications/finance/fiscal_localizations/colombia.rst:98
 msgid ""
@@ -25128,19 +25259,20 @@ msgid ""
 "templates (`CGEN03` or `CGNE04`) to be used in the PDF format of the "
 "electronic invoice."
 msgstr ""
+":guilabel:`哥伦比亚模板代码`：从两个可用模板（`CGEN03` 或 `CGNE04`）中选择一个，用于 PDF 格式的电子发票。"
 
 #: ../../content/applications/finance/fiscal_localizations/colombia.rst:101
 msgid ""
 "Enable the :guilabel:`Test mode` checkbox to connect with the Carvajal "
 "testing environment."
-msgstr ""
+msgstr "启用 :guilabel:`测试模式` 复选框，以连接 Carvajal 测试环境。"
 
 #: ../../content/applications/finance/fiscal_localizations/colombia.rst:103
 msgid ""
 "Once Odoo and Carvajal are fully configured and ready for production, "
 "deactivate the :guilabel:`Test mode` checkbox to use the production "
 "database."
-msgstr ""
+msgstr "一旦 Odoo 和 Carvajal 完全配置好并准备投入生产，请停用 :guilabel:`测试模式` 复选框以使用正式运行数据库。"
 
 #: ../../content/applications/finance/fiscal_localizations/colombia.rst-1
 msgid "Configure credentials for Carvajal web service in Odoo."
@@ -31456,7 +31588,7 @@ msgstr ""
 msgid ""
 "Installing this module grants you access to improved accounting reports for "
 "Kenya, such as Profit and Loss and Balance Sheets."
-msgstr ""
+msgstr "安装该模块后，您可以使用改进后的肯尼亚会计报告，如损益表和资产负债表。"
 
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:28
 msgid ""
@@ -31469,11 +31601,11 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:37
 msgid ":guilabel:`Kenya Tremol Device EDI Integration`"
-msgstr ""
+msgstr ":guilabel:`肯尼亚 Tremol 设备 EDI 整合`"
 
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:38
 msgid "`l10n_ke_edi_tremol`"
-msgstr ""
+msgstr "`l10n_ke_edi_tremol`"
 
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:39
 msgid ""
@@ -31510,20 +31642,25 @@ msgid ""
 "validated tax invoices directly to KRA. Installing a proxy server that "
 "provides a gateway between users and the internet is required."
 msgstr ""
+"所有注册了增值税的纳税人都应该使用符合要求的税务登记簿。Odoo 决定开发与**Tremol G03 Control Unit (type "
+"C)**的整合，该设备可以通过 USB "
+"本地运行。该设备验证发票，以确保财务文件符合新的法规，并直接将经过验证的税务发票发送给肯尼亚税务局。必须安装代理服务器，为用户和互联网之间提供网关。"
 
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:62
 msgid "Installing the proxy server on a Windows device"
-msgstr ""
+msgstr "在 Windows 设备上安装代理服务器"
 
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:64
 msgid ""
 "Go to `odoo.com/download <https://www.odoo.com/page/download>`_, fill out "
 "the required information and click :guilabel:`Download`."
 msgstr ""
+"访问 `odoo.com/download <https://www.odoo.com/page/download>`_，填写所需信息，然后点击 "
+":guilabel:`下载`。"
 
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst-1
 msgid "Install the Proxy Server on a Windows device"
-msgstr ""
+msgstr "在 Windows 设备上安装代理服务器"
 
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:71
 msgid ""
@@ -31896,11 +32033,11 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:74
 msgid ":guilabel:`Mexico - Accounting`"
-msgstr ""
+msgstr ":guilabel:`墨西哥 - 会计`"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:75
 msgid "`l10n_mx`"
-msgstr ""
+msgstr "`l10n_mx`"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:76
 msgid ""
@@ -31910,14 +32047,17 @@ msgid ""
 "grouping code "
 "<https://www.gob.mx/cms/uploads/attachment/file/151586/codigo_agrupador.pdf>`_."
 msgstr ""
+"默认 :doc:`财政本地化套装 <.../fiscal_localizations>`，为墨西哥本地化添加会计特征，如：最常见的税种和会计科目表 - "
+"基于`SAT 会计科目分组代码 "
+"<https://www.gob.mx/cms/uploads/attachment/file/151586/codigo_agrupador.pdf>`_。"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:80
 msgid ":guilabel:`EDI for Mexico`"
-msgstr ""
+msgstr ":guilabel:`墨西哥电子数据交换`"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:81
 msgid "`l10n_mx_edi`"
-msgstr ""
+msgstr "`l10n_mx_edi`"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:82
 msgid ""
@@ -31928,20 +32068,23 @@ msgid ""
 "invoices (with or without addedums) and payment complements to the "
 "government."
 msgstr ""
+"包括生成和验证 :doc:`Electronics Documents "
+"<../accounting/customer_invoices/electronic_invoicing>` 的所有技术和功能要求 - 基于 "
+"|SAT| 发布的技术文档。这样，您就可以向政府发送发票（带或不带附言）和付款补充。"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:86
 msgid ":guilabel:`EDI v4.0 for Mexico`"
-msgstr ""
+msgstr ":guilabel:`墨西哥电子数据交换 4.0 版`"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:87
 msgid "`l10n_mx_edi_40`"
-msgstr ""
+msgstr "`l10n_mx_edi_40`"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:88
 msgid ""
 "Necessary to create XML documents with the correct specifications of the "
 "CFDI 4.0."
-msgstr ""
+msgstr "必须按照 CFDI 4.0 的正确规范创建 XML 文档。"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:89
 msgid ":guilabel:`Odoo Mexican Localization Reports`"
@@ -31949,13 +32092,13 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:90
 msgid "`l10n_mx_reports`"
-msgstr ""
+msgstr "`l10n_mx_reports`"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:91
 msgid ""
 "Adapts reports for Mexico's Electronic Accounting: Chart of Accounts, Trial "
 "Balance, and |DIOT|."
-msgstr ""
+msgstr "为墨西哥电子会计改编报告： 会计科目表、试算表和 |DIOT|。"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:93
 msgid ":guilabel:`Mexico - Localization Reports for Closing`"
@@ -31963,7 +32106,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:94
 msgid "`l10n_mx_reports_closing`"
-msgstr ""
+msgstr "`l10n_mx_reports_closing`"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:95
 msgid ""
@@ -32002,13 +32145,15 @@ msgid ""
 ":guilabel:`Mexico - Accounting`, :guilabel:`EDI for Mexico`, and "
 ":guilabel:`EDI v4.0 for Mexico`."
 msgstr ""
+"当从头开始安装数据库并选择 :guilabel:`墨西哥` 作为国家时，Odoo 会自动安装以下模块：:guilabel:`墨西哥 - "
+"会计`、:guilabel:`墨西哥电子数据交换`、:guilabel:`墨西哥电子数据交换 4.0 版`。"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:108
 msgid ""
 "The following modules are optional. It's recommended to install them *only* "
 "if meeting a specific requirement. Make sure that they are needed for the "
 "business."
-msgstr ""
+msgstr "以下模块为可选模块。建议*仅*在满足特定需求时安装。请确保这些模块是业务所需的。"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:118
 msgid ":guilabel:`EDI for Mexico (Advanced Features)`"
@@ -32016,7 +32161,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:119
 msgid "`l10n_mx_edi_extended`"
-msgstr ""
+msgstr "`l10n_mx_edi_extended`"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:120
 msgid ""
@@ -32030,7 +32175,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:123
 msgid "`l10n_mx_edi_extended_40`"
-msgstr ""
+msgstr "`l10n_mx_edi_extended_40`"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:124
 msgid "Adapts the module `l10n_mx_edi_extended` for CFDI 4.0."
@@ -32042,7 +32187,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:126
 msgid "`l10n_mx_edi_stock`"
-msgstr ""
+msgstr "`l10n_mx_edi_stock`"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:127
 msgid ""
@@ -32057,7 +32202,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:130
 msgid "`l10n_mx_edi_stock_40`"
-msgstr ""
+msgstr "`l10n_mx_edi_stock_40`"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:131
 msgid "Adapts the module `l10n_mx_edi_stock` for CFDI 4.0"
@@ -32069,7 +32214,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:133
 msgid "`l10n_mx_edi_landing`"
-msgstr ""
+msgstr "`l10n_mx_edi_landing`"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:134
 msgid ""
@@ -34799,7 +34944,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:619
 msgid "Sender"
-msgstr ""
+msgstr "发送者"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:621
 msgid ""
@@ -34822,7 +34967,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:632
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:753
 msgid "Carrier"
-msgstr ""
+msgstr "承运商"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:634
 msgid ""
@@ -34852,7 +34997,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:651
 msgid "Private"
-msgstr ""
+msgstr "私密"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:653
 msgid ""
@@ -34863,7 +35008,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:657
 msgid "Public"
-msgstr ""
+msgstr "公开"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:659
 msgid ""
@@ -34999,7 +35144,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:732
 msgid "Operator"
-msgstr ""
+msgstr "操作员"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:734
 msgid ""
@@ -35071,7 +35216,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:774
 msgid "Vehicles"
-msgstr ""
+msgstr "车辆"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:776
 msgid ""
@@ -37634,7 +37779,7 @@ msgstr ""
 
 #: ../../content/applications/finance/payment_providers.rst-1
 msgid "Online payment form"
-msgstr ""
+msgstr "在线支付表格"
 
 #: ../../content/applications/finance/payment_providers.rst:40
 msgid ""
@@ -37645,6 +37790,8 @@ msgid ""
 "reference number for the data stored safely in the payment providers' "
 "systems."
 msgstr ""
+"Odoo 应用程序将敏感信息的处理委托给经过认证的支付提供商，因此您无需担心 PCI 合规性问题。敏感信息（如信用卡号）不会存储在其他地方托管的 "
+"Odoo 服务器或 Odoo 数据库中。相反，Odoo 应用程序使用一个唯一的参考编号，将数据安全地存储在支付提供商的系统中。"
 
 #: ../../content/applications/finance/payment_providers.rst:48
 msgid "Supported payment providers"
@@ -37657,6 +37804,8 @@ msgid ""
 "Configuration --> Payment Providers`, or :menuselection:`Sales --> "
 "Configuration --> Payment Providers`."
 msgstr ""
+"要访问支持的支付提供商，请访问 :menuselection:`会计 --> 配置 --> 支付提供商`，:menuselection:`网站 --> "
+"配置 --> 支付提供商`，或 :menuselection:`销售 --> 配置 --> 支付提供商`。"
 
 #: ../../content/applications/finance/payment_providers.rst:57
 msgid "Online payment providers"
@@ -37775,13 +37924,13 @@ msgstr ":doc:`Stripe <payment_providers/stripe>`"
 
 #: ../../content/applications/finance/payment_providers.rst:142
 msgid ":doc:`Xendit <payment_providers/xendit>`"
-msgstr ""
+msgstr ":doc:`Xendit <payment_providers/xendit>`"
 
 #: ../../content/applications/finance/payment_providers.rst:152
 msgid ""
 "Each provider has its own specific configuration flow, depending on which "
 "feature is available."
-msgstr ""
+msgstr "每个支付提供商都有自己特定的配置流程，具体取决于可用的功能。"
 
 #: ../../content/applications/finance/payment_providers.rst:154
 msgid ""
@@ -37791,6 +37940,9 @@ msgid ""
 "pay online, and bank accounts are added and configured in the Accounting app"
 " to do a :doc:`bank reconciliation <accounting/bank/reconciliation>`."
 msgstr ""
+"其中在线支付提供商也可以添加为 :doc:`银行账户 <../finance/accounting/bank>` "
+"，但这与将它们添加为支付提供商的过程**不同**。支付提供商允许客户在线支付，银行账户被添加并在会计应用程序中配置为 :doc:`银行对账 "
+"<accounting/bank/reconciliation>` 。"
 
 #: ../../content/applications/finance/payment_providers.rst:161
 msgid ""
@@ -37800,6 +37952,8 @@ msgid ""
 " business flows involving online payments. No credentials are required as "
 "the demo payments are dummy payments."
 msgstr ""
+"除了与 API 整合的常规支付提供商（如 Stripe、PayPal 或 Adyen）外，Odoo 还捆绑了 :doc:`Demo 支付提供商 "
+"<payment_providers/demo>`。该支付提供程序允许您测试涉及在线支付的业务流程。由于演示付款是虚拟付款，因此无需任何凭证。"
 
 #: ../../content/applications/finance/payment_providers.rst:169
 msgid "Bank payments"
@@ -37814,34 +37968,34 @@ msgid ""
 "When selected, Odoo displays your payment information with a payment "
 "reference. You have to approve the payment manually once you have received "
 "it in your bank account."
-msgstr ""
+msgstr "选择后，Odoo 将显示您的付款信息和付款参考。您必须在银行账户收到付款后手动批准付款。"
 
 #: ../../content/applications/finance/payment_providers.rst:0
 msgid ":doc:`SEPA Direct Debit <../finance/accounting/payments/batch_sdd>`"
-msgstr ""
+msgstr ":doc:`SEPA 直接扣款 <../finance/accounting/payments/batch_sdd>`"
 
 #: ../../content/applications/finance/payment_providers.rst:0
 msgid ""
 "Your customers can make a bank transfer to register a SEPA Direct Debit "
 "mandate and get their bank account charged directly."
-msgstr ""
+msgstr "您的客户可以通过银行转账来注册 SEPA 直接扣款授权，并直接从他们的银行账户扣款。"
 
 #: ../../content/applications/finance/payment_providers.rst:181
 msgid "Enable a payment provider"
-msgstr ""
+msgstr "启用支付提供商"
 
 #: ../../content/applications/finance/payment_providers.rst:183
 msgid ""
 "To add a new payment provider and make its related payment methods available"
 " to your customers, proceed as follows:"
-msgstr ""
+msgstr "要添加新的支付提供商并向客户提供相关支付方法，请按以下步骤操作："
 
 #: ../../content/applications/finance/payment_providers.rst:186
 msgid ""
 "Go to the payment provider's website, create an account, and make sure you "
 "have the API credentials requested for third-party use. These are necessary "
 "for Odoo to communicate with the payment provider."
-msgstr ""
+msgstr "访问支付提供商的网站，创建一个账户，并确保您拥有第三方使用所需的 API 凭据。这是 Odoo 与支付提供商进行通信的必要条件。"
 
 #: ../../content/applications/finance/payment_providers.rst:189
 msgid ""
@@ -37850,15 +38004,17 @@ msgid ""
 ":menuselection:`Website --> Configuration --> Payment Providers`, or "
 ":menuselection:`Sales --> Configuration --> Payment Providers`."
 msgstr ""
+"在 Odoo 中，通过 :menuselection:`会计 --> 配置 --> 支付提供商`、:menuselection:`网站 --> 配置 "
+"--> 支付提供商` 或 :menuselection:`销售 --> 配置 --> 支付提供商` 导航至 :guilabel:`支付提供商`。"
 
 #: ../../content/applications/finance/payment_providers.rst:192
 msgid "Select the provider and configure the :guilabel:`Credentials` tab."
-msgstr ""
+msgstr "选择提供程序并配置 :guilabel:`证书` 选项卡。"
 
 #: ../../content/applications/finance/payment_providers.rst:193
 #: ../../content/applications/finance/payment_providers/stripe.rst:33
 msgid "Set the :guilabel:`State` field to :guilabel:`Enabled`."
-msgstr ""
+msgstr "将 :guilabel:`状态` 字段设置为 :guilabel:`已启用`。"
 
 #: ../../content/applications/finance/payment_providers.rst:196
 msgid ""
@@ -37866,6 +38022,8 @@ msgid ""
 "payment provider. Refer to the :ref:`related documentation "
 "<payment_providers/supported_providers>` for more information."
 msgstr ""
+"在 :guilabel:`证书` 选项卡中可用的字段取决于支付提供商。有关详细信息，请参阅 :ref:`相关文档 "
+"<payment_providers/supported_providers>`。"
 
 #: ../../content/applications/finance/payment_providers.rst:199
 msgid ""
@@ -37875,10 +38033,12 @@ msgid ""
 "they can still manage :dfn:`(delete and assign to a subscription)` their "
 "existing tokens linked to such a provider."
 msgstr ""
+"启用支付提供商后，它将自动发布到您的网站上。如果您想取消发布，请单击 :guilabel:`已发布` 按钮。客户无法通过未发布的提供商付款，但仍可管理 "
+":dfn:`（删除并分配给订阅）` 与该提供商链接的现有令牌。"
 
 #: ../../content/applications/finance/payment_providers.rst:207
 msgid "Test mode"
-msgstr ""
+msgstr "测试模式"
 
 #: ../../content/applications/finance/payment_providers.rst:209
 msgid ""
@@ -37886,22 +38046,24 @@ msgid ""
 " field in the payment provider form to :guilabel:`Test mode`, then enter "
 "your provider's test/sandbox credentials in the :guilabel:`Credentials` tab."
 msgstr ""
+"如果您希望将支付提供程序作为测试进行试用，请将支付提供程序表单中的 :guilabel:`状态` 字段设置为 :guilabel:`测试模式`，然后在 "
+":guilabel:`证书` 选项卡中输入您的提供程序的测试/沙盒凭证。"
 
 #: ../../content/applications/finance/payment_providers.rst:214
 msgid ""
 "By default, the payment provider remains **unpublished** in test mode so "
 "that it's not visible to visitors."
-msgstr ""
+msgstr "默认情况下，支付提供商在测试模式下保持**未发布**，这样访客就看不到它。"
 
 #: ../../content/applications/finance/payment_providers.rst:218
 msgid ""
 "We recommend using the test mode on a duplicate or a test database to avoid "
 "potential issues with your invoice numbering."
-msgstr ""
+msgstr "我们建议在副本或测试数据库上使用测试模式，以避免发票编号可能出现的问题。"
 
 #: ../../content/applications/finance/payment_providers.rst:224
 msgid "Payment methods"
-msgstr ""
+msgstr "支付方式"
 
 #: ../../content/applications/finance/payment_providers.rst:226
 msgid ""
@@ -37912,6 +38074,8 @@ msgid ""
 "provider, click :guilabel:`Enable Payment Methods`, then click the toggle "
 "button of the related method."
 msgstr ""
+"每个支付提供方都与支持的支付方法列表相关；支付提供方表单的 :guilabel:`配置` 标签的 :guilabel:`支付方式` "
+"字段中列出的方法是已激活的方法。要激活或停用提供商的支付方法，请单击 :guilabel:`启用支付方法`，然后单击相关方法的切换按钮。"
 
 #: ../../content/applications/finance/payment_providers.rst:232
 msgid ""
@@ -37920,10 +38084,11 @@ msgid ""
 "provider form, then, in the :guilabel:`Payment Methods` list, drag and drop "
 "the payment methods in the desired order."
 msgstr ""
+"支付方式在您的网站上根据它们的顺序显示。若要重新排序，请在支付提供商表单中点击:guilabel:`启用支付方式`，然后在:guilabel:`支付方式`列表中，按照所需的顺序拖放支付方式。"
 
 #: ../../content/applications/finance/payment_providers.rst:237
 msgid "Icons and brands"
-msgstr ""
+msgstr "图标和品牌"
 
 #: ../../content/applications/finance/payment_providers.rst:239
 msgid ""
@@ -37935,13 +38100,16 @@ msgid ""
 ":menuselection:`Sales --> Configuration --> Payment Methods`, then click on "
 "the payment method."
 msgstr ""
+"网站上支付方式旁边显示的图标要么是为支付方式激活的品牌图标，要么是支付方式本身的图标（如果没有）。要修改这些图标，请进入 "
+":menuselection:`会计 --> 配置 --> 支付方式`，:menuselection:`网站 --> 配置 --> 支付方式` 或 "
+":menuselection:`销售 --> 配置 --> 支付方式`，然后点击付款方式。"
 
 #: ../../content/applications/finance/payment_providers.rst:245
 msgid ""
 "To modify a payment method's icon, hover your mouse over the image in the "
 "upper-right corner of the payment method's form and click the pencil icon "
 "(:guilabel:`✎`)."
-msgstr ""
+msgstr "要修改付款方式的图标，请将鼠标悬停在付款方式表格右上角的图片上，然后点击铅笔图标（:guilabel:`✎`）。"
 
 #: ../../content/applications/finance/payment_providers.rst:248
 msgid ""
@@ -37952,10 +38120,12 @@ msgid ""
 "the popup window that opens, hover the mouse over the image in the upper-"
 "right corner and click the pencil icon (:guilabel:`✎`)."
 msgstr ""
+"选择 :guilabel:`品牌` "
+"标签，查看已为付款方式激活的品牌。品牌及其相关图标按顺序显示；要重新排序，请按所需顺序拖放。要修改品牌图标，请选择该品牌，然后在弹出的窗口中，将鼠标悬停在右上角的图片上，点击铅笔图标（:guilabel:`✎`）。"
 
 #: ../../content/applications/finance/payment_providers.rst:255
 msgid "Advanced configuration"
-msgstr ""
+msgstr "高级配置"
 
 #: ../../content/applications/finance/payment_providers.rst:257
 msgid ""
@@ -37966,6 +38136,9 @@ msgid ""
 "activate the :ref:`developer mode <developer-mode>`. Click the "
 ":guilabel:`Configuration` tab to adapt the features."
 msgstr ""
+"要进一步配置付款方式，请访问 :menuselection:`会计 --> 配置 --> 支付方式`、:menuselection:`网站 --> 配置"
+" --> 支付方式` 或 :menuselection:`销售 --> 配置 --> 支付方式`。点击支付方式，然后激活 "
+":ref:`开发者模式<developer-mode>`。点击 :guilabel:`配置` 选项卡以调整功能。"
 
 #: ../../content/applications/finance/payment_providers.rst:264
 msgid ""
@@ -37974,6 +38147,8 @@ msgid ""
 "configuration may result in errors and should be tested on a duplicate or "
 "test database first."
 msgstr ""
+"每种支付方式都经过预先配置，以与支付提供商的行为和其与 Odoo "
+"的整合相匹配。对该配置进行任何更改可能会导致错误，因此建议先在副本或测试数据库上进行测试。"
 
 #: ../../content/applications/finance/payment_providers.rst:267
 msgid ""
@@ -37984,6 +38159,8 @@ msgid ""
 "<payment_providers/tokenization>` for a method linked to a provider that "
 "does not support it will not produce the intended results."
 msgstr ""
+"对支付方式配置的修改，仅限于该方式和提供商的能力范围。例如，为仅在一个国家/地区支持的支付方式添加:ref:`国家/地区<payment_providers/currencies_countries>`，或者为与不支持令牌化的提供商关联的方式启用:ref:`tokenization"
+" <payment_providers/tokenization>`，将无法产生预期的结果。"
 
 #: ../../content/applications/finance/payment_providers.rst:276
 msgid "Tokenization"
@@ -37997,6 +38174,9 @@ msgid ""
 ":guilabel:`Configuration` tab of the selected payment provider and enable "
 ":guilabel:`Allow Saving Payment Methods`."
 msgstr ""
+":ref:`如果支付提供商支持此功能 "
+"<payment_providers/online_providers>`，则客户可以保存其支付方法的详细信息以供日后使用。要启用此功能，请转到所选支付提供商的"
+" :guilabel:`配置` 选项卡并启用 :guilabel:`允许保存支付方式`。"
 
 #: ../../content/applications/finance/payment_providers.rst:283
 msgid ""
@@ -38005,6 +38185,8 @@ msgid ""
 "payment method details again. This is particularly useful for the eCommerce "
 "conversion rate and subscriptions that use recurring payments."
 msgstr ""
+"在这种情况下，会在 Odoo "
+"中创建一个**支付令牌**，作为后续付款的支付方式，客户无需再次输入其支付方式的详细信息。这对电子商务转换率和使用定期付款订阅特别有用。"
 
 #: ../../content/applications/finance/payment_providers.rst:288
 msgid ""
@@ -38013,6 +38195,8 @@ msgid ""
 "token that only references the card details stored on the payment provider's"
 " server."
 msgstr ""
+"启用该功能后，您仍然完全符合 PCI 标准，因为 Odoo "
+"不会直接存储银行卡详细信息。相反，它会创建一个支付令牌，该令牌只引用存储在支付提供商服务器上的银行卡详细信息。"
 
 #: ../../content/applications/finance/payment_providers.rst:295
 msgid "Manual capture"
@@ -38026,6 +38210,9 @@ msgid ""
 ":guilabel:`Configuration` tab of the selected payment provider and enable "
 ":guilabel:`Capture Amount Manually`."
 msgstr ""
+":ref:`如果支付提供商支持此功能 "
+"<payment_providers/online_providers>`，您可以分两步授权和获取付款。要启用此功能，请转到所选支付提供商的 "
+":guilabel:`配置` 选项卡，并启用 :guilabel:`手动获取金额`。"
 
 #: ../../content/applications/finance/payment_providers.rst:302
 msgid ""
@@ -38035,6 +38222,7 @@ msgid ""
 "to cancel it and release the reserved funds. Capturing payments manually is "
 "helpful in many situations:"
 msgstr ""
+"当您授权付款时，资金会保留在客户的付款方式中，但不会立即扣除。当您稍后手动获取付款时，才会扣款。您也可以撤销授权，取消授权并释放保留的资金。手动获取支付在很多情况下都很有用："
 
 #: ../../content/applications/finance/payment_providers.rst:307
 msgid ""
@@ -38052,13 +38240,13 @@ msgstr "在付款完成、付款流程开始前，审核并验证订单是否合
 msgid ""
 "Avoid potentially high refund fees for refunded payments: payment providers "
 "will not charge you for voiding an authorization."
-msgstr ""
+msgstr "避免退还付款时可能产生的高额退款费用：支付提供商不会向你收取撤销授权的费用。"
 
 #: ../../content/applications/finance/payment_providers.rst:312
 msgid ""
 "Hold a security deposit to return later, minus any deductions (e.g., in case"
 " of damages)."
-msgstr ""
+msgstr "保留一笔保证金，以便稍后退还，扣除任何扣款（例如，损坏赔偿）。"
 
 #: ../../content/applications/finance/payment_providers.rst:314
 msgid ""
@@ -38066,6 +38254,8 @@ msgid ""
 "order or invoice and click the :guilabel:`Capture Transaction` button. To "
 "release the funds, click the :guilabel:`Void Transaction` button."
 msgstr ""
+"要在授权后获取付款，请转到相关销售订单或发票，然后点击 :guilabel:`捕获交易` 按钮。要释放资金，请单击 :guilabel:`无效交易` "
+"按钮。"
 
 #: ../../content/applications/finance/payment_providers.rst:319
 msgid ""
@@ -38075,6 +38265,8 @@ msgid ""
 "<payment_providers/online_providers>`. The providers that only support "
 "capturing or voiding the total amount have the value **Full only**."
 msgstr ""
+"某些支付服务提供商仅支持捕获部分授权金额。剩余金额可以捕获或作废。此类支付服务提供商在:ref:`table above "
+"<payment_providers/online_providers>`中设置**全额和部分金额**值。仅支持捕获或作废全额的支付服务提供商设置的值为**仅限全额**。"
 
 #: ../../content/applications/finance/payment_providers.rst:323
 msgid ""
@@ -38087,7 +38279,7 @@ msgstr "资金不会永远保留，一段时间后，可能会自动返回至客
 msgid ""
 "Odoo does not support this feature for all payment providers, but some allow"
 " the manual capture from their website interface."
-msgstr ""
+msgstr "Odoo 并不支持所有支付提供商的这一功能，但有些提供商允许从其网站界面手动捕获。"
 
 #: ../../content/applications/finance/payment_providers.rst:332
 msgid "Refunds"
@@ -38099,6 +38291,8 @@ msgid ""
 "directly from Odoo. It does not need to be enabled first. To refund a "
 "customer payment, navigate to it and click the :guilabel:`Refund` button."
 msgstr ""
+"如果您的支付提供商支持此功能，您可以直接从 Odoo 退款。无需先启用该功能。要退还客户付款，请导航至该付款，然后单击 :guilabel:`退款` "
+"按钮。"
 
 #: ../../content/applications/finance/payment_providers.rst:339
 msgid ""
@@ -38108,12 +38302,14 @@ msgid ""
 "<payment_providers/online_providers>`. The providers that only support "
 "refunding the total amount have the value **Full only**."
 msgstr ""
+"某些支付服务提供商仅支持退还部分金额。剩余金额也可以退还。此类支付服务提供商在:ref:`table "
+"above<payment_providers/online_providers>`中设置**全额和部分金额**值。仅支持全额退款的支付服务提供商设置的值为**仅限全额**。"
 
 #: ../../content/applications/finance/payment_providers.rst:343
 msgid ""
 "Odoo does not support this feature for all payment providers, but some allow"
 " to refund payments from their website interface."
-msgstr ""
+msgstr "Odoo 并不支持所有支付提供商的这一功能，但有些提供商允许从其网站界面退款。"
 
 #: ../../content/applications/finance/payment_providers.rst:349
 msgid "Express checkout"
@@ -38129,21 +38325,25 @@ msgid ""
 "contact form. They just have to validate the payment on Google's or Apple's "
 "payment form."
 msgstr ""
+":ref:`如果支付提供商支持此功能<payment_providers/online_providers>`，您可以允许客户使用 "
+":guilabel:`Google Pay` 和 :guilabel:`Apple Pay` "
+"按钮，一键支付电子商务订单。使用这些按钮时，客户可直接从购物车进入确认页面，无需填写联系表单。他们只需在 Google 或 Apple "
+"的付款表单上验证付款即可。"
 
 #: ../../content/applications/finance/payment_providers.rst:357
 msgid ""
 "To enable this feature, go to the :guilabel:`Configuration` tab of the "
 "selected payment provider and enable :guilabel:`Allow Express Checkout`."
-msgstr ""
+msgstr "要启用此功能，请转至所选支付提供商的 :guilabel:`配置` 选项卡并启用 :guilabel:`允许快速结账`。"
 
 #: ../../content/applications/finance/payment_providers.rst:361
 msgid ""
 "All prices shown on the express checkout payment form always include taxes."
-msgstr ""
+msgstr "快速结账付款单上显示的所有价格均含税。"
 
 #: ../../content/applications/finance/payment_providers.rst:364
 msgid "Availability"
-msgstr ""
+msgstr "可用性"
 
 #: ../../content/applications/finance/payment_providers.rst:366
 msgid ""
@@ -38151,10 +38351,12 @@ msgid ""
 ":guilabel:`Maximum amount` allowed and modifying the :guilabel:`Currencies` "
 "and :guilabel:`Countries` in the :guilabel:`Configuration` tab."
 msgstr ""
+"您可以通过指定允许的 :guilabel:`最大金额` 和修改 :guilabel:`配置` 选项卡中的 :guilabel:`货币` 和 "
+":guilabel:`国家/地区` 来调整支付提供商的可用性。"
 
 #: ../../content/applications/finance/payment_providers.rst:373
 msgid "Currencies and countries"
-msgstr ""
+msgstr "货币和国家/地区"
 
 #: ../../content/applications/finance/payment_providers.rst:375
 msgid ""
@@ -38166,6 +38368,7 @@ msgid ""
 "available currencies and countries, adding or removing a payment provider's "
 "supported currencies or countries is possible."
 msgstr ""
+"所有支付提供商都有不同的可用货币和国家/地区列表。如果客户的货币或国家/地区不在支持列表中，与支付提供商链接的支付方式就无法选择。由于可用货币和国家/地区列表可能存在错误、更新和未知，因此可以添加或删除支付提供商支持的货币或国家/地区。"
 
 #: ../../content/applications/finance/payment_providers.rst:383
 msgid ""
@@ -38173,6 +38376,8 @@ msgid ""
 "own list of available currencies and countries that serves as another filter"
 " during payment operations."
 msgstr ""
+":ref:`支付方式 <payment_providers/payment_methods>` "
+"也有可用货币和国家/地区列表，可作为支付操作过程中的另一个筛选器。"
 
 #: ../../content/applications/finance/payment_providers.rst:385
 msgid ""
@@ -38182,10 +38387,12 @@ msgid ""
 "possible the payment will be refused at a later stage should the country or "
 "currency not be supported."
 msgstr ""
+"如果支持的货币或国家/地区列表为空，则表示列表太长无法显示，或 Odoo "
+"没有该支付提供商的信息。如果不支持该国家/地区或货币，支付提供商仍可使用，但在稍后阶段支付可能会被拒绝。"
 
 #: ../../content/applications/finance/payment_providers.rst:391
 msgid "Maximum amount"
-msgstr ""
+msgstr "最大金额"
 
 #: ../../content/applications/finance/payment_providers.rst:393
 msgid ""
@@ -38193,6 +38400,7 @@ msgid ""
 "selected provider. Leave the field to `0.00` to make the payment provider "
 "available regardless of the payment amount."
 msgstr ""
+"您可以限制所选提供商可支付的 :guilabel:`最大金额`。如果将该字段保留为 `0.00`，则无论支付金额多少，都可以使用支付提供程序。"
 
 #: ../../content/applications/finance/payment_providers.rst:397
 msgid ""
@@ -38227,7 +38435,7 @@ msgstr ""
 msgid ""
 "Payment journals must only be configured if the :doc:`Invoicing or "
 "Accounting app <accounting>` is installed."
-msgstr ""
+msgstr "只有安装了 :doc:`发票或会计应用程序<accounting>` 才能配置付款日记账。"
 
 #: ../../content/applications/finance/payment_providers.rst:418
 msgid "Accounting perspective"
@@ -38244,6 +38452,10 @@ msgid ""
 "to record your payments' journal entries. We recommend you ask your "
 "accountant for advice."
 msgstr ""
+"从会计角度看，有两种在线支付工作流程：一种是直接存入您的银行账户的支付，并遵循通常的 :doc:`对账 "
+"<accounting/bank/reconciliation>` 工作流程；另一种是来自第三方 :ref:`在线支付提供商 "
+"<payment_providers/online_providers>` "
+"的支付，需要您遵循另一个会计工作流程。对于这些付款，您需要考虑如何记录付款的日记账分录。我们建议您向会计师咨询。"
 
 #: ../../content/applications/finance/payment_providers.rst:427
 msgid ""
@@ -38252,10 +38464,13 @@ msgid ""
 ":ref:`outstanding account <bank/outstanding-accounts>` for each payment "
 "provider to separate the provider's payments from other payments."
 msgstr ""
+"默认情况下，使用为 :ref:`付款日记账 <payment_providers/journal>` 定义的 "
+":guilabel:`银行账户`，但也可以为每个支付提供商指定一个 :ref:`未结账户 <bank/outstanding-"
+"accounts>`，以将该提供商的支付与其他支付分开。"
 
 #: ../../content/applications/finance/payment_providers.rst-1
 msgid "Define an outstanding account for a payment provider."
-msgstr ""
+msgstr "为支付提供商定义未结账户。"
 
 #: ../../content/applications/finance/payment_providers.rst:436
 msgid ":doc:`payment_providers/wire_transfer`"
@@ -38283,7 +38498,7 @@ msgstr ":doc:`payment_providers/buckaroo`"
 
 #: ../../content/applications/finance/payment_providers.rst:442
 msgid ":doc:`payment_providers/demo`"
-msgstr ""
+msgstr ":doc:`payment_providers/demo`"
 
 #: ../../content/applications/finance/payment_providers.rst:443
 msgid ":doc:`payment_providers/mercado_pago`"
@@ -38315,15 +38530,15 @@ msgstr ":doc:`payment_providers/stripe`"
 
 #: ../../content/applications/finance/payment_providers.rst:450
 msgid ":doc:`payment_providers/xendit`"
-msgstr ""
+msgstr ":doc:`payment_providers/xendit`"
 
 #: ../../content/applications/finance/payment_providers.rst:451
 msgid ":doc:`../websites/ecommerce/checkout_payment_shipping/payments`"
-msgstr ""
+msgstr ":doc:`../websites/ecommerce/checkout_payment_shipping/payments`"
 
 #: ../../content/applications/finance/payment_providers.rst:452
 msgid ":doc:`accounting/bank`"
-msgstr ""
+msgstr ":doc:`accounting/bank`"
 
 #: ../../content/applications/finance/payment_providers/adyen.rst:3
 msgid "Adyen"
@@ -38455,7 +38670,7 @@ msgstr ""
 
 #: ../../content/applications/finance/payment_providers/adyen.rst:54
 msgid "If you don't have an API user yet, click on **Create new credential**."
-msgstr ""
+msgstr "如果还没有 API 用户，请单击**创建新凭证**。"
 
 #: ../../content/applications/finance/payment_providers/adyen.rst:56
 msgid ""
@@ -38463,6 +38678,8 @@ msgid ""
 "generate your **API Key**. Be careful to copy your API key as you'll not be "
 "allowed to get it later without generating a new one."
 msgstr ""
+"进入 :menuselection:`服务器设置 --> 认证` 并复制或生成您的 **API 密钥**。复制 API "
+"密钥时要小心，因为如果不生成一个新的密钥，以后将无法获取该密钥。"
 
 #: ../../content/applications/finance/payment_providers/adyen.rst:60
 msgid ""
@@ -38519,19 +38736,19 @@ msgstr "须保存反向API，以完成创建。"
 
 #: ../../content/applications/finance/payment_providers/adyen.rst:96
 msgid "API URLs"
-msgstr ""
+msgstr "API URLs"
 
 #: ../../content/applications/finance/payment_providers/adyen.rst:98
 msgid ""
 "All Adyen API URLs include a customer area-specific prefix generated by "
 "Adyen. To configure the URLs, proceed as follows:"
-msgstr ""
+msgstr "所有 Adyen API URL 均包含由 Adyen 生成的特定客户区域前缀。配置 URL 的步骤如下："
 
 #: ../../content/applications/finance/payment_providers/adyen.rst:101
 msgid ""
 "Log into your Adyen account, then go to :menuselection:`Developers --> API "
 "URLs`."
-msgstr ""
+msgstr "登录您的 Adyen 帐户，然后转到 :menuselection:`开发者 --> API URLs`。"
 
 #: ../../content/applications/finance/payment_providers/adyen.rst:102
 msgid ""
@@ -38639,7 +38856,7 @@ msgstr ""
 msgid ""
 "After **7 days**, if the transaction has not been captured yet, the customer"
 " has the right to **revoke** it."
-msgstr ""
+msgstr "** 7 天**后，如果交易尚未被记录，客户有权**撤销**。"
 
 #: ../../content/applications/finance/payment_providers/alipay.rst:3
 msgid "Alipay"
@@ -38830,7 +39047,7 @@ msgstr "在AsiaPay仪表板上进行配置"
 #: ../../content/applications/finance/payment_providers/asiapay.rst:13
 msgid ""
 "Log into AsiaPay Dashboard according to the account provided by AsiaPay."
-msgstr ""
+msgstr "根据 AsiaPay 提供的帐户登录 AsiaPay 仪表板。"
 
 #: ../../content/applications/finance/payment_providers/asiapay.rst:15
 msgid ""
@@ -38862,12 +39079,14 @@ msgid ""
 "the :guilabel:`Currency` and :guilabel:`Secure Hash` fields and save them "
 "for later."
 msgstr ""
+"转到 :menuselection:`个人资料 --> 账户信息`。复制 :guilabel:`货币` 和 :guilabel:`安全哈希` "
+"字段的值并保存备用。"
 
 #: ../../content/applications/finance/payment_providers/asiapay.rst:0
 msgid ""
 "Go to :menuselection:`Profile --> Payment Account Settings` and enable the "
 "option :guilabel:`Return Value Link (Datefeed)`;"
-msgstr ""
+msgstr "进入 :menuselection:`个人资料 --> 支付账户设置` 并启用 :guilabel:`返回值链接（Datefeed）`；"
 
 #: ../../content/applications/finance/payment_providers/asiapay.rst:0
 msgid ""
@@ -38875,6 +39094,8 @@ msgid ""
 ":guilabel:`Return Value Link (Datefeed)` text field. For example: "
 "`https://yourcompany.odoo.com/payment/asiapay/webhook`;"
 msgstr ""
+"在 :guilabel:`返回值链接（Datefeed）` 文本字段中输入 Odoo 数据库 URL，后跟 "
+"`/payment/asiapay/webhook`。例如：`https://yourcompany.odoo.com/payment/asiapay/webhook`；"
 
 #: ../../content/applications/finance/payment_providers/asiapay.rst:0
 msgid ""
@@ -38901,6 +39122,8 @@ msgid ""
 ":guilabel:`Configuration` tab with the values you saved at the step "
 ":ref:`payment_providers/asiapay/configure_dashboard`;"
 msgstr ""
+"在:guilabel:`证书`选项卡中，选择您的 Asiapay "
+"账户的:guilabel:`品牌`。然后在:guilabel:`配置`选项卡中填写:guilabel:`商户ID`和:guilabel:`安全哈希秘钥`，并在:guilabel:`配置`选项卡中使用您在:ref:`payment_providers/asiapay/configure_dashboard`步骤中保存的值填写:guilabel:`货币`；"
 
 #: ../../content/applications/finance/payment_providers/asiapay.rst:0
 msgid ""
@@ -38910,6 +39133,10 @@ msgid ""
 ":ref:`developer mode <developer-mode>` and set the same value to the field "
 ":guilabel:`Secure Hash Function` in the :guilabel:`Credentials` tab."
 msgstr ""
+"默认情况下，支付提供商 AsiaPay 会配置为使用哈希函数 `SHA1` 来验证秘密哈希值。如果在您的账户:ref:` "
+"<payment_providers/asiapay/configure_dashboard>` 中设置了不同的函数，请激活 "
+":ref:`开发者模式<developer-mode>` 并在 :guilabel:`证书` 标签中的 :guilabel:`安全哈希函数` "
+"字段设置相同的值。"
 
 #: ../../content/applications/finance/payment_providers/authorize.rst:3
 msgid "Authorize.Net"
@@ -38963,13 +39190,15 @@ msgid ""
 " to :guilabel:`Test Mode`. We recommend doing this on a test Odoo database, "
 "rather than on your main database."
 msgstr ""
+"要使用*沙盒*账户测试 Authorize.Net，请将:guilabel:`状态`更改为:guilabel:`测试模式`。我们建议在测试 Odoo "
+"数据库而非主数据库上进行此操作。"
 
 #: ../../content/applications/finance/payment_providers/authorize.rst:34
 msgid ""
 "If you use the :guilabel:`Test Mode` with a regular account, it results in "
 "the following error: *The merchant login ID or password is invalid or the "
 "account is inactive*."
-msgstr ""
+msgstr "如果在普通账户中使用 :guilabel:`测试模式` 会导致以下错误：*商户登录名或密码无效，或账户未激活*。"
 
 #: ../../content/applications/finance/payment_providers/authorize.rst:38
 msgid "Configuration tab"
@@ -38981,16 +39210,18 @@ msgid ""
 "<payment_providers/manual_capture>`. If enabled, the funds are reserved for "
 "30 days on the customer's card, but not charged yet."
 msgstr ""
+"使用 Authorize.Net，您可以启用 "
+":ref:`手动捕获<payment_providers/manual_capture>`。如果启用，在扣款前，资金将在客户卡上保留 30 天。"
 
 #: ../../content/applications/finance/payment_providers/authorize.rst:48
 msgid ""
 "After **30 days**, the transaction is **voided automatically** by "
 "Authorize.Net."
-msgstr ""
+msgstr "**30 天**后，Authorize.Net 将**自动取消**交易。"
 
 #: ../../content/applications/finance/payment_providers/authorize.rst:54
 msgid "ACH payments (USA only)"
-msgstr ""
+msgstr "ACH 支付（仅限美国）"
 
 #: ../../content/applications/finance/payment_providers/authorize.rst:56
 msgid ""
@@ -39009,20 +39240,26 @@ msgid ""
 "(:guilabel:`⛭`) and select :guilabel:`Duplicate`. Change the provider's name"
 " to differentiate both versions (e.g., `Authorize.net - Banks`)."
 msgstr ""
+"要让客户可以使用 ACH 付款，`注册 Authorize.Net 电子支票服务 "
+"<https://www.authorize.net/payments/echeck.html>`_。激活电子支票后，进入 "
+":menuselection:`会计 --> 配置 --> 支付提供商 --> Authorize.net` 复制之前在 Odoo 上配置的 "
+"Authorize.Net 支付提供商。然后，点击齿轮图标（:guilabel:`⛭`）并选择 "
+":guilabel:`复制`。更改提供商名称以区分两个版本（例如，`Authorize.net - Banks`）。"
 
 #: ../../content/applications/finance/payment_providers/authorize.rst:69
 msgid ""
 "When ready, change the provider's :guilabel:`State` to :guilabel:`Enabled` "
 "for a regular account or :guilabel:`Test Mode` for a sandbox account."
 msgstr ""
+"准备就绪后，将提供商的 :guilabel:`状态` 更改为常规账户的 :guilabel:`已启用` 或沙箱账户的 :guilabel:`测试模式`。"
 
 #: ../../content/applications/finance/payment_providers/authorize.rst:73
 msgid "Import an Authorize.Net statement"
-msgstr ""
+msgstr "导入 Authorize.Net 账单"
 
 #: ../../content/applications/finance/payment_providers/authorize.rst:76
 msgid "Export from Authorize.Net"
-msgstr ""
+msgstr "从 Authorize.Net 导出"
 
 #: ../../content/applications/finance/payment_providers/authorize.rst:82
 msgid ""
@@ -39030,26 +39267,28 @@ msgid ""
 "<https://docs.google.com/spreadsheets/d/1CMVtBWLLVIrUpYA92paw-"
 "cL7-WdKLbaa/edit?usp=share_link&ouid=105295722917050444558&rtpof=true&sd=true>`_"
 msgstr ""
+"下载 Excel 导入模板 <https://docs.google.com/spreadsheets/d/1CMVtBWLLVIrUpYA92paw-"
+"cL7-WdKLbaa/edit?usp=share_link&ouid=105295722917050444558&rtpof=true&sd=true>`_"
 
 #: ../../content/applications/finance/payment_providers/authorize.rst:84
 msgid "To export a statement:"
-msgstr ""
+msgstr "导出报表："
 
 #: ../../content/applications/finance/payment_providers/authorize.rst:86
 msgid "Log in to Authorize.Net."
-msgstr ""
+msgstr "登录 Authorize.Net。"
 
 #: ../../content/applications/finance/payment_providers/authorize.rst:87
 msgid ""
 "Go to :menuselection:`Account --> Statements --> eCheck.Net Settlement "
 "Statement`."
-msgstr ""
+msgstr "进入 :menuselection:`账户 --> 报表 --> eCheck.Net 结算单`。"
 
 #: ../../content/applications/finance/payment_providers/authorize.rst:88
 msgid ""
 "Define an export range using an *opening* and *closing* batch settlement. "
 "All transactions within the two batch settlements will be exported to Odoo."
-msgstr ""
+msgstr "使用*开始*和*结束*批次结算定义导出范围。两个批次结算范围内的所有交易都将导出到 Odoo。"
 
 #: ../../content/applications/finance/payment_providers/authorize.rst:90
 msgid ""
@@ -39057,14 +39296,16 @@ msgid ""
 "into the :guilabel:`Report 1 Download` sheet of the :ref:`Excel import "
 "template <authorize-import-template>`."
 msgstr ""
+"选择所需范围内的所有交易，复制并粘贴到 :ref:`Excel 导入模板<authorize-import-template>` 的 "
+":guilabel:`报告 1 下载` 页面。"
 
 #: ../../content/applications/finance/payment_providers/authorize.rst-1
 msgid "Selecting Authorize.Net transactions to import"
-msgstr ""
+msgstr "选择要导入的 Authorize.Net 交易"
 
 #: ../../content/applications/finance/payment_providers/authorize.rst-1
 msgid "Settlement batch of an Authorize.Net statement"
-msgstr ""
+msgstr "Authorize.Net 账单的结算批次"
 
 #: ../../content/applications/finance/payment_providers/authorize.rst:103
 msgid ""
@@ -39131,7 +39372,7 @@ msgstr ""
 
 #: ../../content/applications/finance/payment_providers/authorize.rst:130
 msgid "Open the :ref:`Excel import template <authorize-import-template>`."
-msgstr ""
+msgstr "打开 :ref:`Excel 导入模板<authorize-import-template>`。"
 
 #: ../../content/applications/finance/payment_providers/authorize.rst:131
 msgid ""
@@ -39302,15 +39543,15 @@ msgstr "演示"
 msgid ""
 "Odoo's **Demo Payment Provider** allows you to test business flows involving"
 " online transactions without requiring real banking credentials."
-msgstr ""
+msgstr "Odoo 的**演示支付提供商**允许您测试涉及在线交易的业务流程，而无需真实的银行凭证。"
 
 #: ../../content/applications/finance/payment_providers/demo.rst:15
 msgid "Switch the state to :guilabel:`Test Mode`."
-msgstr ""
+msgstr "将状态切换为 :guilabel:`测试模式`。"
 
 #: ../../content/applications/finance/payment_providers/demo.rst:18
 msgid "Payment outcome"
-msgstr ""
+msgstr "支付结果"
 
 #: ../../content/applications/finance/payment_providers/demo.rst:20
 msgid ""
@@ -39318,14 +39559,15 @@ msgid ""
 "outcome when using the demo payment provider. To do so, click on the "
 ":guilabel:`Payment Status` drop-down menu and select the desired outcome."
 msgstr ""
+"在结账或在线支付账单时，您可以选择使用演示付款提供商时的付款结果。要执行此操作，请单击 :guilabel:`支付状态` 下拉菜单并选择所需的结果。"
 
 #: ../../content/applications/finance/payment_providers/demo.rst-1
 msgid "Payment status outcomes."
-msgstr ""
+msgstr "支付状况结果。"
 
 #: ../../content/applications/finance/payment_providers/demo.rst:29
 msgid "Transaction state"
-msgstr ""
+msgstr "交易状态"
 
 #: ../../content/applications/finance/payment_providers/demo.rst:31
 msgid ""
@@ -39872,6 +40114,9 @@ msgid ""
 "Settings --> Website payments --> Update` and select :guilabel:`On` for "
 ":guilabel:`PayPal account optional`."
 msgstr ""
+"我们建议在付款时不要提示客户使用 PayPal "
+"账户登录。客户使用借记卡/信用卡付款会更好、更方便。要禁用该提示，请进入:menuselection:`账户设置-->网站支付-->更新`，并在:guilabel:`PayPal"
+" 账户可选项`中选择:guilabel:`开启`。"
 
 #: ../../content/applications/finance/payment_providers/paypal.rst:65
 msgid "Payment Messages Format"
@@ -39884,6 +40129,8 @@ msgid ""
 " encoding format of the payment request sent by Odoo to PayPal. If you do "
 "not, some transactions fail without notice."
 msgstr ""
+"如果您在客户名称或地址中使用重音字符（或主要拉丁字符以外的其他字符），则**必须**配置由 Odoo 发送至 PayPal "
+"的付款请求的编码格式。否则，部分交易会失败而无通知。"
 
 #: ../../content/applications/finance/payment_providers/paypal.rst:71
 msgid ""
@@ -40180,6 +40427,9 @@ msgid ""
 "<stripe/api_keys>`, :ref:`generate a webhook <stripe/webhook>`, and enable "
 "the payment provider."
 msgstr ""
+"要使用现有的 Stripe 账户，:ref:`激活开发者模式<developer-mode>` 并 :ref:`手动启用 Stripe "
+"<payment_providers/add_new>`。然后，您可以 :ref:`填写凭证 "
+"<stripe/api_keys>`，:ref:`生成网络钩子 <stripe/webhook>`，并启用支付提供商。"
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:40
 msgid ""
@@ -40192,6 +40442,11 @@ msgid ""
 " <stripe/api_keys>` with the test keys, and set the :guilabel:`State` field "
 "to :guilabel:`Test Mode`."
 msgstr ""
+"您还可以使用 :ref:`payment_providers/test-mode` 测试 Stripe。要执行此操作，首先，`登录您的 Stripe "
+"仪表板 <https://dashboard.stripe.com/dashboard>`_ 并切换到**测试模式**。然后，在 Odoo "
+"中，:ref:`激活开发人员模式<developer-mode>`，:ref:`导航至支付提供商 Stripe "
+"<payment_providers/supported_providers>`，:ref:`用测试密钥填写您的 API 凭据 "
+"<stripe/api_keys>`，并将 :guilabel:`状态` 字段设置为 :guilabel:`测试模式`。"
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:50
 msgid "Fill in your credentials"
@@ -40201,7 +40456,7 @@ msgstr "填写您的凭证"
 msgid ""
 "If your **API credentials** are required to connect with your Stripe "
 "account, proceed as follows:"
-msgstr ""
+msgstr "如果连接 Stripe 账户需要您的 **API 凭据**，请按以下步骤操作："
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:54
 msgid ""
@@ -40209,12 +40464,14 @@ msgid ""
 "<https://dashboard.stripe.com/account/apikeys>`_, or log into your Stripe "
 "dashboard and go to :menuselection:`Developers --> API Keys`."
 msgstr ""
+"访问 Stripe <https://dashboard.stripe.com/account/apikeys>``_ 上的 `API 密钥 "
+"`页面，或登录 Stripe 仪表板并访问 :menuselection:`开发者 --> API 密钥`。"
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:56
 msgid ""
 "In the :guilabel:`Standard keys` section, copy the :guilabel:`Publishable "
 "key` and the :guilabel:`Secret key` and save them for later."
-msgstr ""
+msgstr "在 :guilabel:`标准密钥` 部分，复制 :guilabel:`可发布的密钥` 和 :guilabel:`密钥` 并保存备用。"
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:58
 #: ../../content/applications/finance/payment_providers/stripe.rst:97
@@ -40222,6 +40479,7 @@ msgid ""
 "In Odoo, :ref:`navigate to the payment provider Stripe "
 "<payment_providers/supported_providers>`."
 msgstr ""
+"在 Odoo 中，:ref:`导航至支付提供商 Stripe <payment_providers/supported_providers>`。"
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:59
 msgid ""
@@ -40317,7 +40575,7 @@ msgstr ""
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:106
 msgid "Enable Apple Pay"
-msgstr ""
+msgstr "启用 Apple Pay"
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:108
 msgid ""
@@ -40346,18 +40604,18 @@ msgid ""
 "The **Wire transfer** payment method allows you to provide payment "
 "instructions to your customers, such as the bank details and communication. "
 "They are displayed:"
-msgstr ""
+msgstr "通过**电汇**付款方式，您可以向客户提供付款说明，如银行详情和通讯方式。它们会显示："
 
 #: ../../content/applications/finance/payment_providers/wire_transfer.rst:8
 msgid ""
 "at the end of the checkout process, once the customer has selected "
 ":guilabel:`Wire transfer` as a payment method and clicked the :guilabel:`Pay"
 " now` button:"
-msgstr ""
+msgstr "在结账流程结束时，客户选择 :guilabel:`电汇` 作为付款方式并点击 :guilabel:`立即付款` 按钮："
 
 #: ../../content/applications/finance/payment_providers/wire_transfer.rst:0
 msgid "Payment instructions at checkout"
-msgstr ""
+msgstr "结账时的付款说明"
 
 #: ../../content/applications/finance/payment_providers/wire_transfer.rst:14
 msgid "on the customer portal:"
@@ -40373,6 +40631,8 @@ msgid ""
 "inefficient process-wise. We recommend setting up a :doc:`payment provider "
 "<../payment_providers>` instead."
 msgstr ""
+"虽然这种方法非常容易使用，而且只需最少的设置，但其流程效率非常低。我们建议使用 :doc:`支付提供商 <../payment_providers>` "
+"来代替。"
 
 #: ../../content/applications/finance/payment_providers/wire_transfer.rst:22
 msgid ""
@@ -40426,14 +40686,16 @@ msgid ""
 "by Odoo. You can also add it afterwards and update the message by clicking "
 ":guilabel:`Reload pending message`."
 msgstr ""
+"如果您已定义 :doc:`银行帐户 <.../accounting/bank>`，帐号将自动添加到 Odoo "
+"生成的默认信息中。您也可以事后添加，并通过点击 :guilabel:`重新加载待处理信息` 更新信息。"
 
 #: ../../content/applications/finance/payment_providers/wire_transfer.rst:54
 msgid ":ref:`payment_providers/journal`"
-msgstr ""
+msgstr ":ref:`payment_providers/journal`"
 
 #: ../../content/applications/finance/payment_providers/xendit.rst:3
 msgid "Xendit"
-msgstr ""
+msgstr "Xendit"
 
 #: ../../content/applications/finance/payment_providers/xendit.rst:5
 msgid ""
@@ -40441,16 +40703,18 @@ msgid ""
 "provider that covers several Southeast Asian countries. It allows businesses"
 " to accept credit cards as well as several local payment methods."
 msgstr ""
+"`Xendit <https://www.xendit.co>`_ "
+"是一家总部设在印度尼西亚的支付解决方案提供商，业务覆盖多个东南亚国家。它允许企业接受信用卡以及多种本地支付方式。"
 
 #: ../../content/applications/finance/payment_providers/xendit.rst:12
 msgid "Configuration on the Xendit Dashboard"
-msgstr ""
+msgstr "在 Xendit 仪表板上进行配置"
 
 #: ../../content/applications/finance/payment_providers/xendit.rst:14
 msgid ""
 "Create a Xendit account if necessary and log in to the `Xendit Dashboard "
 "<https://dashboard.xendit.co>`_."
-msgstr ""
+msgstr "必要时创建一个 Xendit 帐户，并登录 `Xendit 控制面板 <https://dashboard.xendit.co>`_。"
 
 #: ../../content/applications/finance/payment_providers/xendit.rst:16
 msgid ""
@@ -40459,6 +40723,8 @@ msgid ""
 "customers. Switch to :guilabel:`Live Mode` once you are ready to accept "
 "payments."
 msgstr ""
+"查看页面左上角的账户模式。使用 :guilabel:`测试模式` 在不向客户收费的情况下尝试整合。准备好接受付款后，切换到 "
+":guilabel:`实时模式`。"
 
 #: ../../content/applications/finance/payment_providers/xendit.rst:19
 msgid ""
@@ -40466,6 +40732,8 @@ msgid ""
 " application page. In the :guilabel:`Developers` section, click `API Keys "
 "<https://dashboard.xendit.co/settings/developers#api-keys>`_."
 msgstr ""
+"在应用页面的左侧导航到 :menuselection:`配置: 设置`。在 :guilabel:`开发者` 部分，点击 API 密钥 "
+"<https://dashboard.xendit.co/settings/developers#api-keys>_。"
 
 #: ../../content/applications/finance/payment_providers/xendit.rst:22
 msgid ""
@@ -40474,13 +40742,15 @@ msgid ""
 "in Products` permission and :guilabel:`None` for all other permissions then "
 "click :guilabel:`Generate key`."
 msgstr ""
+"点击 :guilabel:`生成密钥`。在弹出框中输入任意 :guilabel:`API 密钥名称`，为 :guilabel:`收款产品` 权限选择 "
+":guilabel:`写入`，为所有其他权限选择 :guilabel:`无`，然后点击 :guilabel:`生成密钥`。"
 
 #: ../../content/applications/finance/payment_providers/xendit.rst:25
 msgid ""
 "Confirm your password to display your API key. Copy or download the key and "
 "**save this information securely for later**. This is the only time the API "
 "key can be viewed or downloaded."
-msgstr ""
+msgstr "确认密码，显示 API 密钥。复制或下载密钥，并**安全保存此信息以备将来使用**。这是查看或下载 API 密钥的唯一途径。"
 
 #: ../../content/applications/finance/payment_providers/xendit.rst:28
 msgid ""
@@ -40488,6 +40758,9 @@ msgid ""
 "<https://dashboard.xendit.co/settings/developers#webhooks>`_ section to "
 "generate the webhook token."
 msgstr ""
+"完成后，向下滚动页面至 `Webhooks "
+"<https://dashboard.xendit.co/settings/developers#webhooks>`_部分，生成 Webhook "
+"标记。"
 
 #: ../../content/applications/finance/payment_providers/xendit.rst:31
 msgid ""
@@ -40561,6 +40834,8 @@ msgid ""
 "legislation. Companies doing business abroad should also consider other "
 "countries' electronic signature laws."
 msgstr ""
+"在欧盟和美国，通过 Sign 应用程序签署的文件是有效的电子签名。它们也符合大多数国家对电子签名的要求。Odoo "
+"生成的电子签名的法律效力取决于您所在国家/地区的法律。在国外开展业务的公司也应考虑其他国家/地区的电子签名法律。"
 
 #: ../../content/applications/finance/sign.rst:28
 msgid "European Union"
@@ -40573,6 +40848,9 @@ msgid ""
 " of the European Union <https://europa.eu/european-union/about-"
 "eu/countries_en>`_. It distinguishes three types of electronic signatures:"
 msgstr ""
+"`eIDAS条例<http://data.europa.eu/eli/reg/2014/910/oj>`__确立了欧盟 27 个成员国 "
+"<https://europa.eu/european-union/about-"
+"eu/countries_en>`_的电子签名框架。该条例将电子签名分为三类："
 
 #: ../../content/applications/finance/sign.rst:35
 msgid "Simple electronic signatures"
@@ -40732,6 +41010,9 @@ msgid ""
 "the :guilabel:`Options` section and fill in the :guilabel:`Valid Until` and "
 ":guilabel:`Reminder` fields."
 msgstr ""
+"您可以在限期协议文档上设置**有效日期**，或发送**自动电子邮件提醒**，以便按时获得签名。在仪表板上点击文档上的 "
+":guilabel:`发送`。在新页面上，转到 :guilabel:`选项`部分，填写 :guilabel:`有效期至`和 "
+":guilabel:`提醒`字段。"
 
 #: ../../content/applications/finance/sign.rst:112
 #: ../../content/applications/finance/spreadsheet/templates.rst:3
@@ -40746,6 +41027,8 @@ msgid ""
 "can modify the :ref:`role <sign/role>` of a field by clicking on it and "
 "selecting the one you want."
 msgstr ""
+"当您需要多次发送同一文档时，可以创建文档模板。在仪表板上单击 :guilabel:`上传 PDF 模板`。选择文档并添加所需的 :ref:`字段 "
+"<sign/fields>`。您可以修改字段的 :ref:`角色 <sign/role>`，方法是点击字段并选择您想要的字段。"
 
 #: ../../content/applications/finance/sign.rst:119
 msgid ""
@@ -40756,6 +41039,10 @@ msgid ""
 "signature, or define :guilabel:`Authorized Users` if you want to restrict "
 "the use of your template to specific authorized users or groups."
 msgstr ""
+"点击:guilabel:`模板属性` 为模板添加 :guilabel:`标签`，定义 :guilabel:`已签署文件工作区`，添加 "
+":guilabel:`已签署文件标签`，设置一个 "
+":guilabel:`重定向链接`，该链接将在签名后收到的签名确认消息中可用，或者如果您想要限制模板的使用仅适用于特定的授权用户或组，则可以定义 "
+":guilabel:`授权用户`。"
 
 #: ../../content/applications/finance/sign.rst:125
 msgid ""
@@ -40763,6 +41050,8 @@ msgid ""
 ":guilabel:`Send` to quickly send a document template to a signer or "
 ":guilabel:`Sign Now` if you are ready to sign your document immediately."
 msgstr ""
+"您的模板默认在仪表板上可见。您可以点击 :guilabel:`发送` 将文件模板快速发送给签名者，如果您准备立即签署文件，也可以点击 "
+":guilabel:`立即签署`。"
 
 #: ../../content/applications/finance/sign.rst:130
 msgid ""
@@ -40773,6 +41062,9 @@ msgid ""
 "again, then :guilabel:`Restore`. Your document now appears on your dashboard"
 " next to your other templates."
 msgstr ""
+"您可以 **从以前发送的文件中创建模板**。要执行此操作，请转到 :menuselection:`文件 --> "
+"所有文件`。在要检索的文件上，点击垂直省略号（:guilabel:`⋮`），然后点击:guilabel:`模板`。再次点击垂直省略号（:guilabel:`⋮`），然后点击"
+" :guilabel:`恢复`。现在，您的文档将出现在仪表板上，与其他模板相邻。"
 
 #: ../../content/applications/finance/sign.rst:139
 msgid "Roles"
@@ -40783,13 +41075,13 @@ msgid ""
 "Each field in a Sign document is related to a role corresponding to a "
 "specific person. When a document is being signed, the person assigned to the"
 " role must fill in their assigned fields and sign it."
-msgstr ""
+msgstr "签署文件中的每个字段都与特定人员的角色相关。在签署文件时，被指定为该角色的人必须填写指定字段并签署文件。"
 
 #: ../../content/applications/finance/sign.rst:145
 msgid ""
 "Roles are available by going to :menuselection:`Sign --> Configuration --> "
 "Roles`."
-msgstr ""
+msgstr "角色可通过 :menuselection:`签署 --> 配置 --> 角色` 访问。"
 
 #: ../../content/applications/finance/sign.rst:147
 msgid ""
@@ -40801,10 +41093,13 @@ msgid ""
 "role. This color can help understand which roles are responsible for which "
 "field when configuring a template."
 msgstr ""
+"点击 :guilabel:`新建` 可以更新现有角色或创建新角色。选择:guilabel:`角色名称`，添加:guilabel:`额外验证步骤` "
+"以确认签署人的身份，如果文件可以重新分配给其他联系人，请为角色选择:guilabel:`更改授权`。还可为角色选择 "
+":guilabel:`颜色`。这种颜色有助于在配置模板时了解哪个角色负责哪个字段。"
 
 #: ../../content/applications/finance/sign.rst:155
 msgid "Secured identification"
-msgstr ""
+msgstr "安全身份认证"
 
 #: ../../content/applications/finance/sign.rst:157
 msgid ""
@@ -40814,20 +41109,24 @@ msgid ""
 "authentication options require :ref:`credits <iap/buying_credits>`. If you "
 "do not have any credits left, the authentication steps will be skipped."
 msgstr ""
+"作为文件所有者，您可以通过 :ref:`SMS 验证 <sign/sms>` 或 :ref:`Itsme® "
+"<sign/itsme>`（在比利时和荷兰可用）请求 :guilabel:`额外验证步骤。这两种验证方式都需要 :ref:`积点 "
+"<iap/buying_credits>`。如果您没有剩余信用点数，则将跳过验证步骤。"
 
 #: ../../content/applications/finance/sign.rst:163
 msgid ":doc:`In-App Purchase (IAP) <../general/in_app_purchase>`"
-msgstr ""
+msgstr ":doc:`应用内购买（IAP）<../general/in_app_purchase>`"
 
 #: ../../content/applications/finance/sign.rst:164
 msgid ""
 ":doc:`SMS pricing and FAQ "
 "<../marketing/sms_marketing/pricing/pricing_and_faq>`"
 msgstr ""
+":doc:`SMS 定价和常见问题 <../marketing/sms_marketing/pricing/pricing_and_faq>`"
 
 #: ../../content/applications/finance/sign.rst:169
 msgid "SMS verification"
-msgstr ""
+msgstr "短信验证"
 
 #: ../../content/applications/finance/sign.rst:171
 msgid ""
@@ -40835,6 +41134,8 @@ msgid ""
 ":guilabel:`Extra Authentication Step` column for the role, and select "
 ":guilabel:`Unique Code Via SMS`."
 msgstr ""
+"进入 :menuselection:`签署 --> 配置 --> 角色`。点击角色的 :guilabel:`额外验证步骤` 列，然后选择 "
+":guilabel:`通过短信发送唯一代码`。"
 
 #: ../../content/applications/finance/sign.rst:175
 msgid ""
@@ -40843,6 +41144,8 @@ msgid ""
 "Settings` and click :guilabel:`Buy credits` under :guilabel:`Authenticate by"
 " SMS`."
 msgstr ""
+"在发送 SMS 短信之前，您需要注册您的电话号码。要执行此操作，请进入 :menuselection:`签署 --> 配置 --> 设置` 并点击 "
+":guilabel:`购买点数` 下的 :guilabel:`通过短信验证`。"
 
 #: ../../content/applications/finance/sign.rst:179
 msgid ""
@@ -40851,6 +41154,8 @@ msgid ""
 ":guilabel:`Send`. On the new page, select the :guilabel:`customer` and click"
 " :guilabel:`Send`."
 msgstr ""
+"转到要签署的文档，添加需要短信验证的字段，例如 :guilabel:`签署` 字段，然后点击 :guilabel:`发送`。在新页面中，选择 "
+":guilabel:`客户`，然后点击 :guilabel:`发送`。"
 
 #: ../../content/applications/finance/sign.rst:183
 msgid ""
@@ -40859,31 +41164,33 @@ msgid ""
 "Document`. A :guilabel:`Final Validation` page pops up where to add their "
 "phone number. One-time codes are sent by SMS."
 msgstr ""
+"签署人填写 :guilabel:`签署` 字段，然后 :guilabel:`签署` 并点击 :guilabel:`验证并发送完成的文件`。这时会弹出一个"
+" :guilabel:`最终验证` 页面，在此添加电话号码。一次性代码将通过 SMS 发送。"
 
 #: ../../content/applications/finance/sign.rst-1
 msgid "Add a hash to your document"
-msgstr ""
+msgstr "在文件中添加哈希值"
 
 #: ../../content/applications/finance/sign.rst:191
 msgid "This feature is enabled by default."
-msgstr ""
+msgstr "该功能默认为启用。"
 
 #: ../../content/applications/finance/sign.rst:192
 msgid ""
 "As soon as the :guilabel:`Extra Authentication Step` applies to a role, this"
 " validation step is requested for any field assigned to this role."
-msgstr ""
+msgstr "一旦 :guilabel:`额外验证步骤` 应用于角色，就会请求对分配给该角色的任何字段执行此验证步骤。"
 
 #: ../../content/applications/finance/sign.rst:198
 msgid "Itsme®"
-msgstr ""
+msgstr "Itsme®"
 
 #: ../../content/applications/finance/sign.rst:200
 msgid ""
 "Itsme® authentication can be used to allow signatories to provide their "
 "identity using itsme®. This feature is only available in **Belgium** and the"
 " **Netherlands**."
-msgstr ""
+msgstr "Itsme® 身份验证可用于允许签署人使用 itsme® 提供其身份信息。该功能仅适用于**比利时**和**荷兰**。"
 
 #: ../../content/applications/finance/sign.rst:203
 msgid ""
@@ -40893,6 +41200,9 @@ msgid ""
 "Roles`. Click in the :guilabel:`Extra Authentication Step` column for the "
 "role, and select :guilabel:`Via itsme®`."
 msgstr ""
+"该功能可在 :guilabel:`签署设置` 中启用，并自动应用于 :guilabel:`客户（使用 "
+"itsme®进行身份验证）`角色。要为其他角色启用该功能，请转到 :menuselection:`签署 --> 配置 --> 角色`。点击角色的 "
+":guilabel:`额外验证步骤` 列，然后选择 :guilabel:`通过 itsme® 验证`。"
 
 #: ../../content/applications/finance/sign.rst:208
 msgid ""
@@ -40900,10 +41210,12 @@ msgid ""
 " field. Switch to any role configured to use the feature, and click "
 ":guilabel:`Validate` and :guilabel:`Send`."
 msgstr ""
+"转到需要签署的文档，添加 :guilabel:`签署` 字段。切换到配置为使用该功能的任何角色，然后单击 :guilabel:`验证` 和 "
+":guilabel:`发送`。"
 
 #: ../../content/applications/finance/sign.rst-1
 msgid "select customer identified with itsme®"
-msgstr ""
+msgstr "选择使用 itsme® 进行身份验证的客户"
 
 #: ../../content/applications/finance/sign.rst:214
 msgid ""
@@ -40912,10 +41224,12 @@ msgid ""
 "Document`, triggering a :guilabel:`Final verification` page where "
 "authentication via itsme® is required."
 msgstr ""
+"签署人在签署文件后，填写:guilabel:`签名`字段，然后点击:guilabel:`验证和发送完成的文件`，触发:guilabel:`最终验证`页面，该页面要求通过"
+" itsme® 进行身份验证。"
 
 #: ../../content/applications/finance/sign.rst:219
 msgid "Signatory hash"
-msgstr ""
+msgstr "签署人的哈希值"
 
 #: ../../content/applications/finance/sign.rst:221
 msgid ""
@@ -40925,6 +41239,7 @@ msgid ""
 "signature is affixed can be easily detected, maintaining the document's "
 "authenticity and security throughout its lifecycle."
 msgstr ""
+"每次有人签署文件时，都会生成一个**哈希**，即操作的唯一数字签名，以确保可追溯性、完整性和不可篡改性。这一过程可确保在签名后所做的任何更改都能被轻松检测出来，从而在整个生命周期内维护文件的真实性和安全性。"
 
 #: ../../content/applications/finance/sign.rst:226
 msgid ""
@@ -40932,16 +41247,17 @@ msgid ""
 " signatures. Internal users can hide or show it by turning the "
 ":guilabel:`Frame` option on or off when signing the document."
 msgstr ""
+"签名中会添加一个显示哈希值开头的可视化安全框架。内部用户可以在签署文件时通过打开或关闭 :guilabel:`框架` 选项来隐藏或显示该框架。"
 
 #: ../../content/applications/finance/sign.rst-1
 msgid "Adding the visual security frame to a signature."
-msgstr ""
+msgstr "为签名添加可视化安全框。"
 
 #: ../../content/applications/finance/sign.rst:238
 msgid ""
 "Tags can be used to categorize and organize documents, allowing users to "
 "quickly search for and filter documents based on specific criteria."
-msgstr ""
+msgstr "标签可用于对文档进行分类和组织，使用户能够根据特定条件快速搜索和筛选文件。"
 
 #: ../../content/applications/finance/sign.rst:241
 msgid ""
@@ -40949,12 +41265,14 @@ msgid ""
 "create a tag, click :guilabel:`New`. On the new line, add the :guilabel:`Tag"
 " Name` and select a :guilabel:`Color Index` for your tag."
 msgstr ""
+"您可以通过 :menuselection:`配置 --> 标签` 管理标签。要创建标签，请点击 :guilabel:`新建`。在新行中添加 "
+":guilabel:`标签名称`，并为标记选择 :guilabel:` 颜色索引`。"
 
 #: ../../content/applications/finance/sign.rst:245
 msgid ""
 "To apply a tag to a document, use the dropdown list available in your "
 "document."
-msgstr ""
+msgstr "要在文件中应用标签，请使用文件中可用的下拉列表。"
 
 #: ../../content/applications/finance/sign.rst:248
 msgid ""
@@ -40963,17 +41281,19 @@ msgid ""
 " (:guilabel:`⋮`) on your document, then :guilabel:`Details`, and modifying "
 "your :guilabel:`Tags`."
 msgstr ""
+"您可以通过进入 :menuselection:`文件 --> 所有文件`，点击文件上的垂直省略号（:guilabel:`⋮`），然后点击 "
+":guilabel:`详情`，修改 :guilabel:`标签` 来修改已签名文件的标记。"
 
 #: ../../content/applications/finance/sign.rst:253
 msgid "Sign order"
-msgstr ""
+msgstr "签署订单"
 
 #: ../../content/applications/finance/sign.rst:255
 msgid ""
 "When a document needs to be signed by different parties, the signing order "
 "lets you control the order in which your recipients receive it for "
 "signature."
-msgstr ""
+msgstr "当文件需要由不同方签署时，签署顺序可让您控制收件人接收文档的顺序。"
 
 #: ../../content/applications/finance/sign.rst:258
 msgid ""
@@ -40983,29 +41303,32 @@ msgid ""
 "them. You can decide on the signing order by typing **1** or **2** in the "
 "first column."
 msgstr ""
+"上传包含至少两个不同角色签名字段的 PDF 文件并点击 :guilabel:`发送`后，切换 "
+":guilabel:`指定签署顺序`按钮并搜索签署人姓名或电子邮件信息以添加他们。您可在第一列键入**1**或**2**来决定签署顺序。"
 
 #: ../../content/applications/finance/sign.rst:263
 msgid ""
 "Each recipient receives the signature request notification only once the "
 "previous recipient has completed their action."
-msgstr ""
+msgstr "只有在前一个接收者完成操作后，每个接收者才会收到签名请求通知。"
 
 #: ../../content/applications/finance/sign.rst:267
 msgid ""
 "`Odoo Quick Tips: Sign order [video] "
 "<https://www.youtube.com/watch?v=2KUq7RPt1cU/>`_"
 msgstr ""
+"`Odoo 提示：掌握签署顺序的技巧 [视频] <https://www.youtube.com/watch?v=2KUq7RPt1cU/>`_"
 
 #: ../../content/applications/finance/sign.rst:272
 msgid "Field types"
-msgstr ""
+msgstr "字段类型"
 
 #: ../../content/applications/finance/sign.rst:274
 msgid ""
 "Fields are used in a document to indicate what information must be completed"
 " by the signers. You can add fields to your document simply by dragging and "
 "dropping them for the left column into your document."
-msgstr ""
+msgstr "字段用于在文件中指明签字人必须填写的信息。您只需将左栏中的字段拖放到文件中，即可将其添加到文件中。"
 
 #: ../../content/applications/finance/sign.rst:278
 msgid ""
@@ -41014,12 +41337,13 @@ msgid ""
 "signature item types, the signing process can be even faster for your "
 "customers, partners, and employees."
 msgstr ""
+"各种字段类型可用于签署文件（占位符、自动完成等）。通过配置自己的字段类型（也称为签名项类型），可以为客户、合作伙伴和员工提供更快捷的签署流程。"
 
 #: ../../content/applications/finance/sign.rst:282
 msgid ""
 "To create and edit field types, go to :menuselection:`Sign --> Configuration"
 " --> Settings --> Edit field types`."
-msgstr ""
+msgstr "要创建和编辑字段类型，请访问 :menuselection:`签署 --> 配置 --> 设置 --> 编辑字段类型`。"
 
 #: ../../content/applications/finance/sign.rst:285
 msgid ""
@@ -41027,6 +41351,8 @@ msgid ""
 ":guilabel:`Create` a new one. First, edit the :guilabel:`Field Name`. Then, "
 "select a :guilabel:`Field Type`:"
 msgstr ""
+"您可以点击现有字段来选择它，也可以 :guilabel:`创建` 新字段。首先，编辑 :guilabel:`字段名称`。然后，选择 "
+":guilabel:`字段类型`："
 
 #: ../../content/applications/finance/sign.rst:288
 msgid ""
@@ -41035,32 +41361,34 @@ msgid ""
 "local file (usually an image). Each subsequent :guilabel:`Signature` field "
 "type then reuses the data entered in the first field."
 msgstr ""
+":guilabel:`签名`：提示用户手写签名、自动生成签名或上传本地文件（通常是图像）来完成签名。其他每个 :guilabel:`签署` "
+"字段类型都会重复使用在第一个字段中输入的数据。"
 
 #: ../../content/applications/finance/sign.rst:291
 msgid ""
 ":guilabel:`Initial`: users are asked to enter their initials, in a similar "
 "way to the :guilabel:`Signature` field."
-msgstr ""
+msgstr ":guilabel:`首字母`：提示用户输入姓名首字母，方法与 :guilabel:`签署` 字段类似。"
 
 #: ../../content/applications/finance/sign.rst:293
 msgid ":guilabel:`Text`: users enter text on a single line."
-msgstr ""
+msgstr ":guilabel:`文本`：用户在单行上输入文本。"
 
 #: ../../content/applications/finance/sign.rst:294
 msgid ":guilabel:`Multiline Text`: users enter text on multiple lines."
-msgstr ""
+msgstr ":guilabel:`多行文本`：用户在多行上输入文本。"
 
 #: ../../content/applications/finance/sign.rst:295
 msgid ""
 ":guilabel:`Checkbox`: users can tick a box (e.g., to mark their approval or "
 "consent)."
-msgstr ""
+msgstr ":guilabel:`复选框`：用户可以勾选一个方框（例如，标记批准或同意）。"
 
 #: ../../content/applications/finance/sign.rst:296
 msgid ""
 ":guilabel:`Selection`: users choose a single option from a variety of "
 "options."
-msgstr ""
+msgstr ":guilabel:`选择`：用户从多个选项中选择一个。"
 
 #: ../../content/applications/finance/sign.rst:298
 msgid ""
@@ -41069,18 +41397,20 @@ msgid ""
 "the fields on the contact (`res.partner`) model of the person signing the "
 "document. To do so, enter the contact model field's technical name."
 msgstr ""
+":guilabel:`自动填写合作伙伴字段` "
+"设置用于在签名过程中自动填写字段。它使用签署文件者的联系人（`res.partner`）模型字段之一的值。为此，请输入联系人模型字段的技术名称。"
 
 #: ../../content/applications/finance/sign.rst:303
 msgid ""
 "To know the technical name of a field, enable developer mode and hover your "
 "mouse on the question mark next to the field."
-msgstr ""
+msgstr "要了解字段的技术名称，请启用开发者模式，并将鼠标悬停在字段旁边的问号上。"
 
 #: ../../content/applications/finance/sign.rst:307
 msgid ""
 "Auto-completed values are suggestions and can be modified as required by the"
 " person signing the document."
-msgstr ""
+msgstr "自动填写的值是建议值，签署人可根据需要进行修改。"
 
 #: ../../content/applications/finance/sign.rst:310
 msgid ""
@@ -41091,6 +41421,9 @@ msgid ""
 "is set to 15% (0.150) of a full page's width, while their height is set to "
 "1.5% (0.015) of a full page's height."
 msgstr ""
+"字段的大小也可以通过编辑 :guilabel:`默认宽度` 和 :guilabel:`默认高度` "
+"来改变。这两个尺寸都是以整页的百分比定义的，用小数表示，1 等于整页的宽度或高度。默认情况下，创建的新字段宽度设置为整页宽度的 "
+"15%（0.150），高度设置为整页高度的 1.5%（0.015）。"
 
 #: ../../content/applications/finance/sign.rst:316
 msgid ""
@@ -41100,6 +41433,8 @@ msgid ""
 "birthdate”). You can also use a :guilabel:`Placeholder` text to be displayed"
 " inside the field before it is completed."
 msgstr ""
+"接下来，编写 :guilabel:`提示`。提示会在用户签名过程中显示在屏幕左侧的箭头内，以帮助他们了解该步骤的内容（例如，“在此签名” 或 "
+"“填写出生日期”）。您还可以使用 :guilabel:`占位符` 文本，在字段完成之前显示在字段内。"
 
 #: ../../content/applications/finance/sign.rst-1
 msgid "Tip and placeholder example in Odoo Sign"
@@ -41113,98 +41448,98 @@ msgstr "电子表格"
 msgid ""
 "Spreadsheet lets you organize, analyze, and visualize your data in tabular "
 "form. Among others, you can:"
-msgstr ""
+msgstr "电子表格可让您以表格形式组织、分析和直观显示数据。除其他外，您还可以："
 
 #: ../../content/applications/finance/spreadsheet.rst:17
 msgid ""
 ":doc:`Insert and link your Odoo data (pivots, graphs, lists, and menus) "
 "<spreadsheet/insert>`."
-msgstr ""
+msgstr ":doc:`插入并链接您的 Odoo 数据（透视表、图表、列表和菜单）<spreadsheet/insert>`."
 
 #: ../../content/applications/finance/spreadsheet.rst:18
 msgid ""
 ":doc:`Use default templates or create new ones <spreadsheet/templates>`."
-msgstr ""
+msgstr ":doc:`使用默认模板或创建新模板 <spreadsheet/templates>`。"
 
 #: ../../content/applications/finance/spreadsheet.rst:19
 msgid "Format data."
-msgstr ""
+msgstr "格式数据。"
 
 #: ../../content/applications/finance/spreadsheet.rst:20
 msgid "Use formulas and functions."
-msgstr ""
+msgstr "使用公式和函数。"
 
 #: ../../content/applications/finance/spreadsheet.rst:21
 msgid "Sort and filter data."
-msgstr ""
+msgstr "排序和筛选数据。"
 
 #: ../../content/applications/finance/spreadsheet.rst:28
 msgid ""
 "Some of Spreadsheet's main :abbr:`UI (user interface)` elements are "
 "highlighted and defined below."
-msgstr ""
+msgstr "下面突出显示并定义了电子表格的一些主要 :abbr:`UI （用户界面）` 元素。"
 
 #: ../../content/applications/finance/spreadsheet.rst-1
 msgid "Spreadsheet main UI elements"
-msgstr ""
+msgstr "电子表格的主要用户界面元素"
 
 #: ../../content/applications/finance/spreadsheet.rst:34
 msgid "Menu bar"
-msgstr ""
+msgstr "菜单栏"
 
 #: ../../content/applications/finance/spreadsheet.rst:35
 msgid "Top bar"
-msgstr ""
+msgstr "顶部栏"
 
 #: ../../content/applications/finance/spreadsheet.rst:36
 msgid "Formula bar"
-msgstr ""
+msgstr "公式栏"
 
 #: ../../content/applications/finance/spreadsheet.rst:37
 msgid "Filters button"
-msgstr ""
+msgstr "筛选器按钮"
 
 #: ../../content/applications/finance/spreadsheet.rst:38
 msgid "Row header"
-msgstr ""
+msgstr "行标题"
 
 #: ../../content/applications/finance/spreadsheet.rst:39
 msgid "Column header"
-msgstr ""
+msgstr "列标题"
 
 #: ../../content/applications/finance/spreadsheet.rst:40
 msgid "Cell menu"
-msgstr ""
+msgstr "单元菜单"
 
 #: ../../content/applications/finance/spreadsheet.rst:41
 msgid "Bottom bar"
-msgstr ""
+msgstr "底部栏"
 
 #: ../../content/applications/finance/spreadsheet/insert.rst:3
 msgid "Link Odoo data"
-msgstr ""
+msgstr "链接 Odoo 数据"
 
 #: ../../content/applications/finance/spreadsheet/insert.rst:5
 msgid ""
 "You can insert and link several elements from your database in your "
 "spreadsheets, namely:"
-msgstr ""
+msgstr "您可以在电子表格中插入和链接数据库中的多个元素，即："
 
 #: ../../content/applications/finance/spreadsheet/insert.rst:7
 msgid "pivots,"
-msgstr ""
+msgstr "透视表，"
 
 #: ../../content/applications/finance/spreadsheet/insert.rst:8
 msgid "graphs,"
-msgstr ""
+msgstr "图表，"
 
 #: ../../content/applications/finance/spreadsheet/insert.rst:9
 msgid "lists, and"
-msgstr ""
+msgstr "列表，以及"
 
 #: ../../content/applications/finance/spreadsheet/insert.rst:10
 msgid "links to menus (i.e., a clickable link to a view of a specific model)."
-msgstr ""
+msgstr "菜单链接（即指向特定类型视图的有效链接）。"
 
 #: ../../content/applications/finance/spreadsheet/insert.rst:12
 msgid ""
@@ -41247,28 +41582,28 @@ msgstr ""
 msgid ""
 "By default, new spreadsheets are saved under the :guilabel:`Spreadsheet` "
 "workspace of the Documents app."
-msgstr ""
+msgstr "默认情况下，新电子表格保存在文档应用程序的 :guilabel:`电子表格` 工作区中。"
 
 #: ../../content/applications/finance/spreadsheet/insert.rst:36
 msgid "Updating data"
-msgstr ""
+msgstr "更新数据"
 
 #: ../../content/applications/finance/spreadsheet/insert.rst:38
 msgid ""
 "Once inserted in a spreadsheet, your data is kept up-to-date, reflecting any"
 " changes made to your database. Reopening the spreadsheet reloads the linked"
 " data."
-msgstr ""
+msgstr "在电子表格中插入数据后，您的数据将保持更新，并反映数据库中的任何更改。重新打开电子表格可重新加载链接数据。"
 
 #: ../../content/applications/finance/spreadsheet/insert.rst:42
 msgid ""
 "To update pivots and lists data without reopening a spreadsheet, go to the "
 "menu bar and click :menuselection:`Data --> Refresh all data`."
-msgstr ""
+msgstr "要在不重新打开电子表格的情况下更新透视和列表数据，请转到菜单栏并单击 :menuselection:`数据 --> 刷新所有数据`。"
 
 #: ../../content/applications/finance/spreadsheet/insert.rst:46
 msgid "Pivot data"
-msgstr ""
+msgstr "透视数据"
 
 #: ../../content/applications/finance/spreadsheet/insert.rst:48
 msgid ""
@@ -41278,10 +41613,13 @@ msgid ""
 ":guilabel:`Insert pivot`, select the pivot, and tick :guilabel:`Display "
 "missing cells only` to preview first the missing data."
 msgstr ""
+"使用 :guilabel:`刷新所有数据` 只更新现有的数据透视单元格。如果需要添加新单元格，请转到菜单栏，点击 :menusele透视表` "
+"全面更新数据透视表。或者，点击 :guilabel:`插入数据透视表`，选择数据透视表，然后勾选 "
+":guilabel:`仅显示缺失的单元格`，首先预览缺失的数据。"
 
 #: ../../content/applications/finance/spreadsheet/insert.rst:0
 msgid "Displaying missing cells in a pivot"
-msgstr ""
+msgstr "显示透视表中缺失的单元格"
 
 #: ../../content/applications/finance/spreadsheet/insert.rst:57
 msgid ""
@@ -41326,11 +41664,11 @@ msgstr ""
 
 #: ../../content/applications/finance/spreadsheet/templates.rst:21
 msgid "Default templates"
-msgstr ""
+msgstr "默认模板"
 
 #: ../../content/applications/finance/spreadsheet/templates.rst:26
 msgid "Accounting: budget reports"
-msgstr ""
+msgstr "会计：预算报告"
 
 #: ../../content/applications/finance/spreadsheet/templates.rst:28
 msgid ""
@@ -41339,10 +41677,11 @@ msgid ""
 "(:guilabel:`Budget Report (Quarterly)`), while the other uses monthly "
 "intervals (:guilabel:`Budget Report (Monthly)`)."
 msgstr ""
+"预算报告比较公司在规定时间内的实际支出和预算。有两个模板可供选择：一个使用季度间隔（:guilabel:`预算报告[季度]`），另一个使用月间隔（:guilabel:`预算报告[月]`）。"
 
 #: ../../content/applications/finance/spreadsheet/templates.rst-1
 msgid "Extract of a budget report"
-msgstr ""
+msgstr "预算报告摘录"
 
 #: ../../content/applications/finance/spreadsheet/templates.rst:35
 msgid ""
@@ -41351,12 +41690,14 @@ msgid ""
 " or quarter). The data is taken from posted journal items under :ref:`income"
 " and expense accounts <chart-of-account/type>`."
 msgstr ""
+"在 :guilabel:`实际` 列下的单元格会自动填入相应期间（月份或季度）的收入和支出金额。数据来自 :ref:`收入和支出账户 <chart-"
+"of-account/type>` 下的已过账日记账项目。"
 
 #: ../../content/applications/finance/spreadsheet/templates.rst:40
 msgid ""
 "Journal items under the :guilabel:`Other Income` account type are not "
 "considered when collecting data."
-msgstr ""
+msgstr "在收集数据时，不考虑 :guilabel:`其他收入` 账户类型下的日记账项目。"
 
 #: ../../content/applications/finance/spreadsheet/templates.rst:43
 msgid ""
@@ -41367,6 +41708,9 @@ msgid ""
 "column compares :guilabel:`Actuals` data to their corresponding budget, "
 "expressed as a percentage."
 msgstr ""
+"要分析预算的执行情况，请在 :guilabel:`预算` "
+"列下的单元格中填写相关期间和每个账户的预期收入（:guilabel:`收入`行）和支出（:guilabel:`支出`行）。然后，绩效（:guilabel:`Perf.`）列将"
+" :guilabel:`实际` 数据与相应的预算进行比较，以百分比表示。"
 
 #: ../../content/applications/finance/spreadsheet/templates.rst:48
 msgid ""
@@ -41374,10 +41718,12 @@ msgid ""
 ":guilabel:`Income` minus the total :guilabel:`Expenses` for the "
 ":guilabel:`Actuals` and :guilabel:`Budget` columns."
 msgstr ""
+"最后，:guilabel:`净利润` 行表示 :guilabel:`收入`总数减去 :guilabel:`实际`和 :guilabel:`预算` 列的 "
+":guilabel:`支出`总数。"
 
 #: ../../content/applications/finance/spreadsheet/templates.rst:54
 msgid "CRM: pipeline revenue reports"
-msgstr ""
+msgstr "客户关系管理：管道收入报告"
 
 #: ../../content/applications/finance/spreadsheet/templates.rst:56
 msgid ""
@@ -41387,27 +41733,30 @@ msgid ""
 "(Monthly)` covers recurring and non-recurring revenue (:abbr:`MRR (monthly "
 "recurring revenue)`)."
 msgstr ""
+"有两种管道收入报告。:guilabel:`管道收入报告（月度）`专门针对一次性收入（:abbr:`NRR "
+"[非经常性收入]`），而:guilabel:`MRR/NRR 管道收入报告 [月度]`涵盖经常性和非经常性收入（:abbr:`MRR "
+"[月度经常性收入]`）。"
 
 #: ../../content/applications/finance/spreadsheet/templates.rst:62
 msgid ""
 "Enable :guilabel:`Recurring Revenues` by going to :menuselection:`CRM --> "
 "Configuration --> Settings`."
-msgstr ""
+msgstr "进入 :menuselection:`CRM --> 配置 --> 设置` 启用 :guilabel:`经常性收入`。"
 
 #: ../../content/applications/finance/spreadsheet/templates.rst-1
 msgid "Extract of a pipeline revenue report"
-msgstr ""
+msgstr "管道收入报告摘录"
 
 #: ../../content/applications/finance/spreadsheet/templates.rst:68
 msgid ""
 "The cells under the :guilabel:`Actuals` column are automatically filled in "
 "with the amount of monthly revenue from **won** opportunities."
-msgstr ""
+msgstr "在 :guilabel:`实际` 列下的单元格中，会自动填入每月从**已赢得**商机中获得的收入金额。"
 
 #: ../../content/applications/finance/spreadsheet/templates.rst:71
 msgid ""
 "To compute the revenue performance, fill in the monthly revenue targets."
-msgstr ""
+msgstr "要计算收入绩效，请填写每月收入目标。"
 
 #: ../../content/applications/finance/spreadsheet/templates.rst:73
 msgid ""
@@ -41422,6 +41771,8 @@ msgid ""
 "Use the :guilabel:`Monthly Factor` table below to adapt the main targets "
 "depending on the month of the year."
 msgstr ""
+"对于 :guilabel:`按销售人员分类的收入` 页面，打开 :guilabel:`目标` 页面并填写每个销售人员旁边的单元格。使用下面的 "
+":guilabel:`月度系数` 表，根据年度月份调整主要目标。"
 
 #: ../../content/applications/finance/spreadsheet/templates.rst:79
 msgid ""
@@ -41499,11 +41850,11 @@ msgstr ""
 
 #: ../../content/applications/finance/spreadsheet/templates.rst:122
 msgid "Templates are available to all users on the database."
-msgstr ""
+msgstr "数据库中的所有用户都可以使用模板。"
 
 #: ../../content/applications/finance/spreadsheet/templates.rst:127
 msgid "Manage and edit templates"
-msgstr ""
+msgstr "管理和编辑模板"
 
 #: ../../content/applications/finance/spreadsheet/templates.rst:129
 msgid ""
@@ -41511,15 +41862,17 @@ msgid ""
 " Spreadsheet Templates`. Remove the :guilabel:`My Templates` :ref:`filter "
 "<search/preconfigured-filters>` to view all templates in the database."
 msgstr ""
+"进入 :menuselection:`文件 --> 配置 --> 电子表格模板` 管理模板。移除 :guilabel:`我的模板` :ref:`筛选器 "
+"<search/preconfigured-filters>` 以查看数据库中的所有模板。"
 
 #: ../../content/applications/finance/spreadsheet/templates.rst:133
 msgid ""
 "To edit an existing template, click `✎ Edit` next to the desired template. "
 "Modifications are automatically saved."
-msgstr ""
+msgstr "要编辑现有模板，请单击所需模板旁边的`✎ 编辑`。修改内容将自动保存。"
 
 #: ../../content/applications/finance/spreadsheet/templates.rst:137
 msgid ""
 "Use the download button under the :guilabel:`Data` column to export a "
 "template in JSON format. The file can be imported into another database."
-msgstr ""
+msgstr "使用 :guilabel:`数据` 列下的下载按钮可导出 JSON 格式的模板。该文件可导入其他数据库。"

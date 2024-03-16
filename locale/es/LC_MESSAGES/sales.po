@@ -18,10 +18,11 @@
 # Aimée Mendoza Sánchez, 2023
 # Jesús Alan Ramos Rodríguez <alan.ramos@jarsa.com.mx>, 2023
 # Lucia Pacheco, 2023
-# Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2024
 # Iran Villalobos López, 2024
-# Braulio D. López Vázquez <bdl@odoo.com>, 2024
+# Larissa Manderfeld, 2024
 # Wil Odoo, 2024
+# Braulio D. López Vázquez <bdl@odoo.com>, 2024
+# Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2024
 # Fernanda Alvarez, 2024
 # 
 #, fuzzy
@@ -4731,6 +4732,9 @@ msgid ""
 " Click :guilabel:`Search more` if the desired product is not loaded "
 "automatically."
 msgstr ""
+"El sistema solo puede cargar un número limitado de productos para que la "
+"aplicación abra sin dificultades. Haga clic en :guilabel:`Buscar más` si el "
+"producto que necesita no aparece de forma automática."
 
 #: ../../content/applications/sales/point_of_sale.rst:56
 msgid "Set customers"
@@ -6191,9 +6195,9 @@ msgid ""
 "you to accept multiple payment options, including credit and debit cards, "
 "making the payment process more efficient."
 msgstr ""
-"Si conecta e integra su terminal de pago con su sistema de PdV le permitirá "
-"aceptar varios métodos de pago, incluyendo tarjetas de crédito y débito, lo "
-"que hará el proceso de pago más eficiente."
+"Conectar e integrar su terminal de pago a su sistema de PdV le permitirá "
+"aceptar varios métodos de pago, como tarjetas de crédito y débito, además de"
+" que el proceso de pago será más eficiente."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:15
 msgid ""
@@ -6201,6 +6205,9 @@ msgid ""
 "to the :guilabel:`Payment Terminals` section, and tick your terminal's "
 "checkbox."
 msgstr ""
+"Vaya a los :ref:`ajustes de la aplicación <configuration/settings>`, "
+"diríjase a la sección :guilabel:`Terminales de pago` y seleccione la casilla"
+" de su terminal."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst-1
 msgid "checkbox in the settings to enable a payment terminal"
@@ -6296,6 +6303,13 @@ msgid ""
 " key to paste it into the Odoo :guilabel:`Adyen API key` field at :ref:`the "
 "payment method creation <adyen/method-creation>`."
 msgstr ""
+"La **clave API de Adyen** se utiliza para autenticar las solicitudes de su "
+"terminal de Adyen. Para generar una clave API, vaya a su "
+":menuselection:`cuenta de Adyen --> Desarrolladores --> Credenciales de API`"
+" y **cree** nuevas credenciales o seleccione las que ya **existen**. Haga "
+"clic en :guilabel:`Generar una clave API` y guarde la clave para pegarla en "
+"el campo :guilabel:`Clave API de Adyen` de Odoo al :ref:`crear el método de "
+"pago <adyen/method-creation>`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:34
 msgid ""
@@ -6314,6 +6328,8 @@ msgid ""
 "The **Adyen Terminal Identifier** is the terminal's serial number, which is "
 "used to identify the hardware."
 msgstr ""
+"El **identificador de terminal de Adyen** es el número de serie de la "
+"terminal y se utiliza para identificar el hardware."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:45
 msgid ""
@@ -6322,46 +6338,63 @@ msgid ""
 "number to paste it into the Odoo :guilabel:`Adyen Terminal Identifier` field"
 " at :ref:`the payment method creation <adyen/method-creation>`."
 msgstr ""
+"Para encontrar este número, vaya a su :menuselection:`cuenta de Adyen --> "
+"Punto de Venta --> Terminales`, seleccione la terminal que vinculará y "
+"guarde su número de serie, después lo pegará en el campo "
+":guilabel:`Identificador de terminal de Adyen` de Odoo al :ref:`crear el "
+"método de pago <adyen/method-creation>`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:51
 msgid "Set the Event URLs"
-msgstr "Configure las URL del evento"
+msgstr "Configurar las URL del evento"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:53
 msgid ""
 "For Odoo to know when a payment is made, you must configure the terminal "
 "**Event URLs**. To do so,"
 msgstr ""
+"Para que Odoo sepa cuándo se realizó un pago, debe configurar las **URL de "
+"eventos** de la terminal. Para ello:"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:55
 msgid "Log in to `Adyen's website <https://www.adyen.com/>`_;"
-msgstr ""
+msgstr "Inicie sesión en el `sitio web de Adyen  <https://www.adyen.com/>`_."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:56
 msgid ""
 "Go to :menuselection:`Adyen's dashboard --> Point of Sale --> Terminals` and"
 " select the connected terminal;"
 msgstr ""
+"Vaya al :menuselection:`tablero de Adyen --> Punto de venta --> Terminales` "
+"y seleccione la terminal conectada."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:58
 msgid "From the terminal settings, click :guilabel:`Integrations`;"
 msgstr ""
+"Desde los ajustes de la terminal, haga clic en :guilabel:`Integraciones`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:59
 msgid ""
 "Set the :guilabel:`Switch to decrypted mode to edit this setting` field as "
 ":guilabel:`Decrypted`;"
 msgstr ""
+"Establezca el campo :guilabel:`Cambiar a modo descifrado para editar esta "
+"configuración` en :guilabel:`Descifrado`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:60
 msgid ""
 "Click the **pencil icon** button and enter your server address, followed by "
 "`/pos_adyen/notification` in the :guilabel:`Event URLs` field;"
 msgstr ""
+"Haga clic en el **icono de lápiz** y escriba la dirección de su servidor, "
+"seguida por `/pos_adyen/notification` en el campo :guilabel:`URL de "
+"eventos`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:62
 msgid "Click :guilabel:`Save` at the bottom of the screen to save changes."
 msgstr ""
+"Haga clic en :guilabel:`Guardar` en la parte inferior de la pantalla para "
+"guardar los cambios."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:67
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:36
@@ -6378,6 +6411,11 @@ msgid ""
 "<../../payment_methods>`. Set the journal type as :guilabel:`Bank` and "
 "select :guilabel:`Adyen` in the :guilabel:`Use a Payment Terminal` field."
 msgstr ""
+"Habilite la terminal de pago en los :ref:`ajustes de la aplicación "
+"<configuration/settings>` y :doc:`cree el método de pago relacionado "
+"<../../payment_methods>`. Establezca el tipo de diario como "
+":guilabel:`Banco` y seleccione :guilabel:`Adyen` en el campo :guilabel:`Usar"
+" una terminal de pago`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:73
 msgid ""
@@ -6385,6 +6423,9 @@ msgid ""
 "<adyen/api>`, :ref:`Adyen Terminal Identifier <adyen/identifier>`, and "
 ":guilabel:`Adyen Merchant Account`."
 msgstr ""
+"Por último, complete los campos obligatorios con su :ref:`clave API de Adyen"
+" <adyen/api>`, :ref:`identificador de terminal de Adyen <adyen/identifier>` "
+"y :guilabel:`cuenta de comerciante de Adyen`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:83
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:50
@@ -6501,6 +6542,12 @@ msgid ""
 " Then, select your terminal device in the :guilabel:`Payment Terminal "
 "Device` field."
 msgstr ""
+"Habilite la terminal de pago en los :ref:`ajustes de la aplicación "
+"<configuration/settings>` y :doc:`cree el método de pago relacionado "
+"<../../payment_methods>`. Establezca el tipo de diario como "
+":guilabel:`Banco` y seleccione :guilabel:`Ingenico` en el campo "
+":guilabel:`Usar una terminal de pago`. Luego, seleccione el dispositivo "
+"correspondiente en el campo :guilabel:`Dispositivo de terminal de pago`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:52
 msgid ""
@@ -6655,6 +6702,12 @@ msgid ""
 "Then, select your terminal device in the :guilabel:`Payment Terminal Device`"
 " field."
 msgstr ""
+"Habilite la terminal de pago en los :ref:`ajustes de la aplicación "
+"<configuration/settings>` y :doc:`cree el método de pago relacionado "
+"<../../payment_methods>`. Establezca el tipo de diario como "
+":guilabel:`Banco` y seleccione :guilabel:`SIX IOT` en el campo "
+":guilabel:`Usar una terminal de pago`. Luego, seleccione el dispositivo "
+"correspondiente en el campo :guilabel:`Dispositivo de terminal de pago`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst-1
 msgid "Creating a new payment method for the SIX payment terminal"
@@ -7183,6 +7236,12 @@ msgid ""
 "field. Then, select your terminal device in the :guilabel:`Payment Terminal "
 "Device` field."
 msgstr ""
+"Habilite la terminal de pago en los :ref:`ajustes de la aplicación "
+"<configuration/settings>` y :doc:`cree el método de pago relacionado "
+"<../../payment_methods>`. Establezca el tipo de diario como "
+":guilabel:`Banco` y seleccione :guilabel:`Worldline` en el campo "
+":guilabel:`Usar una terminal de pago`. Luego, seleccione el dispositivo "
+"correspondiente en el campo :guilabel:`Dispositivo de terminal de pago`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:79
 msgid "Technician password: `1235789`"
@@ -8519,7 +8578,7 @@ msgstr ":doc:`floors_tables`"
 
 #: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:3
 msgid "Floors and tables"
-msgstr ""
+msgstr "Pisos y mesas"
 
 #: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:5
 msgid ""
@@ -8527,46 +8586,56 @@ msgid ""
 "arrangements and monitor table status in real time, including occupancy, "
 "reservations, and kitchen orders."
 msgstr ""
+"La **vista de plano del piso** le permite gestionar los pisos del "
+"restaurante, cómo están acomodadas las meses y monitorear el estado de las "
+"mesas en tiempo real, incluyendo las que están ocupadas, las que tienen "
+"reservaciones y las órdenes de cocina."
 
 #: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:0
 msgid "example of a floor plan view with visual keys to understand it."
 msgstr ""
+"ejemplo de la vista de plano del piso con claves visuales para poder "
+"entenderlo."
 
 #: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:13
 msgid "Table 1: An order has been placed and sent to the kitchen."
-msgstr ""
+msgstr "Mesa 1: se realizó una orden y se envió a la cocina."
 
 #: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:14
 msgid ""
 "Table 3: An order of four items has been placed and needs to be sent to the "
 "kitchen."
 msgstr ""
+"Mesa 3: se realizó una orden de cuatro artículos que se debe enviar a la "
+"cocina."
 
 #: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:15
 msgid "Tables 2, 4, and 5: These tables are available."
-msgstr ""
+msgstr "Mesas 2, 4 y 5: estas mesas están disponibles."
 
 #: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:16
 msgid ""
 "Tables 2, 4, and 5: These tables' total capacity is, respectively, 2, 4, and"
 " 8 people."
 msgstr ""
+"Mesas 2, 4 y 5: la capacidad total de estas mesas es 2, 4 y 8 "
+"respectivamente."
 
 #: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:17
 msgid "Table 1: The table of two is full."
-msgstr ""
+msgstr "Mesa 1: la mesa de dos está llena."
 
 #: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:18
 msgid "Table 3: The table of four is taken by one person."
-msgstr ""
+msgstr "Mesa 3: la mesa de cuatro la está ocupando una persona."
 
 #: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:19
 msgid "Table 5: \"Famous Joe\" has a reservation for 8 people at 12:00."
-msgstr ""
+msgstr "Mesa 5: \"Juan Pérez\" tiene una reservación de 8 personas a las 12:00."
 
 #: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:25
 msgid "From the POS backend"
-msgstr ""
+msgstr "Desde el backend del Punto de venta"
 
 #: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:27
 msgid ""
@@ -8578,10 +8647,18 @@ msgid ""
 " bookable. Once done, click :guilabel:`Save & Close` or :guilabel:`Save & "
 "New` to confirm."
 msgstr ""
+"Para crear pisos y mesas desde el backend, vaya a :menuselection:`Punto de "
+"venta --> Configuración --> Diseño del piso` y haga clic en "
+":guilabel:`Nuevo` para crear un piso. Póngale un nombre, seleccione los "
+"puntos de venta relacionados y haga clic en :guilabel:`Agregar una línea` "
+"para crear una tabla. Póngale nombre a la tabla, asigne un número de "
+"asientos y, si quiere que se pueda reservar la mesa, debe vincularla a un "
+"recurso de cita. Una vez que esté listo, haga clic en :guilabel:`Guardar y "
+"cerrar` o en :guilabel:`Guardar y crear nuevo`."
 
 #: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst-1
 msgid "window to create a table in the POS backend"
-msgstr ""
+msgstr "ventana para crear una mesa desde el backend del punto de venta"
 
 #: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:38
 msgid ""
@@ -8589,6 +8666,9 @@ msgid ""
 "<floors_tables/frontend>` to create a map of your restaurant or bar "
 "reflecting your actual floor plan."
 msgstr ""
+"El punto de venta debe estar abierto y :ref:`se debe editar desde el "
+"frontend <floors_tables/frontend>` para poder crear un mapa de su "
+"restaurante o bar que refleje su plano del visto actual."
 
 #: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:42
 msgid ""
@@ -8596,14 +8676,18 @@ msgid ""
 "<configuration/settings>`, type your floor name in the :guilabel:`Floor` "
 "field of the :guilabel:`Floors & Tables Map` category, and press *enter*."
 msgstr ""
+"Puede crear pisos a instante: :ref:`ingrese a sus ajustes del punto de venta"
+" <configuration/settings>`, ingrese el nombre de su piso en el campo "
+":guilabel:`Piso` de la categoría :guilabel:`Mapa de pisos y mesas` y "
+"presione *enter*."
 
 #: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:0
 msgid "setting to create floors from the POS settings"
-msgstr ""
+msgstr "ajuste para crear pisos desde los ajustes del Punto de venta"
 
 #: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:53
 msgid "From the POS frontend"
-msgstr ""
+msgstr "Desde el frontend del Punto de venta"
 
 #: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:55
 msgid ""
@@ -8611,12 +8695,18 @@ msgid ""
 "<pos/session-start>`, click the hamburger menu icon :guilabel:`≡` in the "
 "upper right corner, then :guilabel:`Edit Plan` to enter the **edit mode**."
 msgstr ""
+"Para crear pisos y meses desde el frontend :ref:`abra una sesión de punto de"
+" venta <pos/session-start>`, haga clic en el icono de las tres rayas "
+":guilabel:`≡` en la esquina superior derecha y después en :guilabel:`Editar "
+"plan` para ingresar en el **modo de edición**."
 
 #: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:59
 msgid ""
 "Click :guilabel:`+ Add Floor` to add a floor, then enter a name in the pop-"
 "up window."
 msgstr ""
+"Haga clic en :guilabel:`+ Agregar un piso` para agregar un piso y después "
+"ingrese el nombre en una ventana emergente."
 
 #: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:61
 msgid ""
@@ -8628,28 +8718,39 @@ msgid ""
 " duplicate an existing table, select it and click :guilabel:`COPY`. You can "
 "also remove the table by clicking :guilabel:`DELETE`."
 msgstr ""
+"Una vez que se haya creado el piso haga clic en :guilabel:`+ MESA` para "
+"agregar una mesa. Para moverla, selecciónela y arrástrela. También puede "
+"editar los atributos de la mesa seleccionada, como el número de asientos si "
+"hace clic en :guilabel:`ASIENTOS`, la forma de la mesa si hace clic en "
+":guilabel:`FORMA`, el color de la mesa si hace clic en :guilabel:`RELLENO`, "
+"o el nombre de de la mesa si hace clic en :guilabel:`RENOMBRAR`. Si quiere "
+"duplicar una mesa existente, selecciónela y haga clic en :guilabel:`COPIAR` "
+"y haga clic en :guilabel:`BORRAR` si quiere borrarla."
 
 #: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:68
 msgid ""
 "After making all the necessary modifications, click :guilabel:`CLOSE` to "
 "save."
 msgstr ""
+"Después de hacer todas las modificaciones necesarias haga clic en "
+":guilabel:`CERRAR` para guardar."
 
 #: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst-1
 msgid "the floor plan view in edit mode."
-msgstr ""
+msgstr "la vista del plano del piso en modo edición."
 
 #: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:74
 msgid "If no table is selected, the modifications are applied to the floor."
 msgstr ""
+"Si no se selecciona ninguna mesa, las modificaciones se aplicarán al piso."
 
 #: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:77
 msgid "Removing a table or a floor cannot be undone."
-msgstr ""
+msgstr "No se puede deshacer la acción de borrar una besa o un piso."
 
 #: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:82
 msgid "Take orders"
-msgstr ""
+msgstr "Tomar órdenes"
 
 #: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:84
 msgid ""
@@ -8658,12 +8759,18 @@ msgid ""
 "allowing you to add more items later and generate a bill specifically for "
 "that table's orders."
 msgstr ""
+"Haga clic en una mesa para acceder a la interfaz del punto de venta y "
+"comenzar a tomar la orden de su cliente. El sistema asocia las órdenes a la "
+"mesa de forma automática, lo cual le permitirá agregar más artículos después"
+" y generar una factura específica para las órdenes de esa mesa."
 
 #: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:88
 msgid ""
 "Once you have taken an order, click :guilabel:`Change table` to return to "
 "the floor plan view."
 msgstr ""
+"Una vez que haya tomado la orden haga clic en :guilabel:`Cambiar mesa` para "
+"regresar a la vista del plano del piso."
 
 #: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:91
 msgid ""
@@ -8672,10 +8779,14 @@ msgid ""
 "free it or :ref:`transfer the customer <floors_tables/transfer>` to another "
 "table."
 msgstr ""
+"Tan pronto como haga clic a la mesa, el número de invitados automáticamente "
+"será uno. Si selecciona una mesa por error, haga clic en :guilabel:`Liberar "
+"mesa` para liberarla o :ref:`transferir al cliente <floors_tables/transfer>`"
+" a otra mesa."
 
 #: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:98
 msgid "Table transfer"
-msgstr ""
+msgstr "Transferir una mesa"
 
 #: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:100
 msgid ""
@@ -8684,12 +8795,18 @@ msgid ""
 " plan view, where you can choose the new table to which you want to transfer"
 " the customers."
 msgstr ""
+"Para mover clientes de una mesa a otra, seleccione una mesa y haga clic en "
+":guilabel:`→ Transferir` en la interfaz del punto de venta. Esto le redirige"
+" a la vista de plano de planta, donde puede elegir la nueva mesa a la que "
+"desea transferir los clientes."
 
 #: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:104
 msgid ""
 "When you transfer customers, all of the orders they have placed and that are"
 " linked to the original table are also transferred."
 msgstr ""
+"Cuando transfiere clientes, todas las órdenes que se realicen y estén "
+"vinculadas a la mesa original también se transfieren."
 
 #: ../../content/applications/sales/point_of_sale/restaurant/kitchen_printing.rst:3
 msgid "Orders printing"
@@ -9382,7 +9499,7 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:3
 msgid "Ship later"
-msgstr ""
+msgstr "Enviar después"
 
 #: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:5
 msgid ""
@@ -9391,32 +9508,44 @@ msgid ""
 "or so voluminous that it requires to be shipped, or if, for any reason, the "
 "customer needs their order to be shipped later, etc."
 msgstr ""
+"La función **Enviar después** le permite vender productos y programar la "
+"entrega en una fecha posterior. Es útil, por ejemplo, cuando un producto "
+"está agotado o es tan voluminoso que ya necesita enviarlo, también en caso "
+"de que por cualquier motivo, el cliente necesite recibir su orden después, "
+"etc."
 
 #: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:12
 msgid ""
 ":ref:`Go to the POS settings <configuration/settings>`, scroll down to the "
 ":guilabel:`Inventory` section, and enable :guilabel:`Allow Ship Later`."
 msgstr ""
+":ref:`Vaya a los ajustes del PdV <configuration/settings>`, diríjase a la "
+"sección :guilabel:`Inventario` y habilite :guilabel:`Permitir enviar "
+"después`."
 
 #: ../../content/applications/sales/point_of_sale/shop/ship_later.rst-1
 msgid "settings to enable and configure the ship later feature"
-msgstr ""
+msgstr "Ajustes para habilitar y configurar la función Enviar después."
 
 #: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:19
 msgid "Once activated, you can:"
-msgstr ""
+msgstr "Una vez que haya habilitado esta función podrá:"
 
 #: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:21
 msgid ""
 "Choose the location from where the products are shipped by selecting a "
 ":guilabel:`Warehouse`."
 msgstr ""
+"Seleccionar un :guilabel:`almacén` para elegir la ubicación desde donde se "
+"enviarán los productos."
 
 #: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:22
 msgid ""
 "Define a :guilabel:`Specific route`, or leave this field empty to use the "
 "default route."
 msgstr ""
+"Definir una :guilabel:`ruta específica` o dejar ese campo vacío para usar la"
+" ruta predeterminada."
 
 #: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:23
 msgid ""
@@ -9424,47 +9553,61 @@ msgid ""
 "possible` if the products can be delivered separately or :guilabel:`When all"
 " products are ready` to ship all the products at once."
 msgstr ""
+"Defina la :guilabel:`Política de envío`. Si los productos pueden entregarse "
+"por separado seleccione guilabel:`Lo antes posible` o :guilabel:`Cuando "
+"todos los productos estén listos` si desea enviar todos los productos al "
+"mismo tiempo."
 
 #: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:28
 msgid ""
 ":doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/delivery_method`"
 msgstr ""
+":doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/delivery_method`"
 
 #: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:29
 msgid ""
 ":doc:`../../../inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations`"
 msgstr ""
+":doc:`../../../inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations`"
 
 #: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:34
 msgid ":ref:`Open a session <pos/session-start>` and make a sale."
-msgstr ""
+msgstr ":ref:`Abrir una sesión <pos/session-start>` y realizar una venta."
 
 #: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:35
 msgid ""
 "On the payment screen, set a customer and select :guilabel:`Ship Later`."
 msgstr ""
+"Seleccione un cliente en la pantalla de pago y seleccione :guilabel:`Enviar "
+"después`."
 
 #: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:36
 msgid ""
 "On the popup window, set a shipping date and click :guilabel:`Confirm` to "
 "proceed to payment."
 msgstr ""
+"En la ventana emergente, establezca una fecha de envío y haga clic en "
+":guilabel:`Confirmar` para ir a la pantalla de pago."
 
 #: ../../content/applications/sales/point_of_sale/shop/ship_later.rst-1
 msgid "selecting ship later at checkout."
-msgstr ""
+msgstr "Seleccionar enviar después al pagar."
 
 #: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:42
 msgid ""
 "The system instantly creates a delivery order from the warehouse to the "
 "shipping address."
 msgstr ""
+"De forma instantánea, el sistema crea una orden de entrega del almacén a la "
+"dirección de envío."
 
 #: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:45
 msgid ""
 "The selected customer must have referenced an address in the system for "
 "products to be shipped."
 msgstr ""
+"El cliente seleccionado debe tener una dirección establecida para poder "
+"enviar los productos."
 
 #: ../../content/applications/sales/rental.rst:3
 msgid "Rental"
@@ -11284,6 +11427,13 @@ msgid ""
 "Central URL` as described in the `Amazon Documentation for seller central "
 "URLs <https://developer-docs.amazon.com/sp-api/docs/seller-central-urls>`_."
 msgstr ""
+"Ingrese el ID del marketplace en el campo :guilabel:`Identificador API` y "
+"seleccione la :guilabel:`región de Amazon` correspondiente tal y como se "
+"describe en la `documentación de Amazon sobre los ID y regiones del "
+"marketplace <https://developer-docs.amazon.com/sp-api/docs/marketplace-"
+"ids>`_. Escriba la :guilabel:`URL de la Seller Central` como se especifica "
+"en la `documentación de Amazon para las URL de la Seller Central "
+"<https://developer-docs.amazon.com/sp-api/docs/seller-central-urls>`_."
 
 #: ../../content/applications/sales/sales/amazon_connector/setup.rst:140
 msgid ""
@@ -11468,6 +11618,10 @@ msgid ""
 "Scheduled Actions`. Click into the scheduled action labeled: "
 ":guilabel:`Ebay: update categories` and then click :guilabel:`Run Manually`."
 msgstr ""
+"Vaya a :menuselection:`Ajustes --> Técnico --> Automatización --> Acciones "
+"programadas`. Haga clic en la acción programada con el nombre "
+":guilabel:`eBay: actualizar categorías` y luego en :guilabel:`Ejecutar de "
+"forma manual`."
 
 #: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:58
 msgid ""
@@ -11665,7 +11819,7 @@ msgstr ""
 
 #: ../../content/applications/sales/sales/ebay_connector/manage.rst:9
 msgid "(*Preferred method*) Make a product in Odoo and list the item eBay."
-msgstr ""
+msgstr "Cree un producto en Odoo y anúncielo en eBay (*método recomendado*). "
 
 #: ../../content/applications/sales/sales/ebay_connector/manage.rst:11
 msgid ""
@@ -11683,6 +11837,8 @@ msgid ""
 "(*Less preferred method*) List the item on eBay, then create the product in "
 "Odoo, and finally link product to the item on eBay."
 msgstr ""
+"Anuncie el artículo en eBay, luego cree el producto en Odoo y, por último, "
+"vincule el producto al artículo en eBay (*método no tan recomendado*)."
 
 #: ../../content/applications/sales/sales/ebay_connector/manage.rst:17
 msgid ""
@@ -23645,9 +23801,10 @@ msgid ""
 "end date if necessary and adding :doc:`recurrent products "
 "</applications/sales/subscriptions/products>`."
 msgstr ""
-"Llenar la cotización normalemente, asegurándose de seleccionar una "
-"recurrencia y una fecha de finalización, si es necesario, y de agregar "
-":doc:`productos recurrentes </applications/sales/subscriptions/products>`."
+"Completar la cotización como haría de forma habitual, asegurándose de "
+"seleccionar una recurrencia y una fecha de finalización en caso de que fuera"
+" necesaria, además de agregar los :doc:`productos recurrentes "
+"</applications/sales/subscriptions/products>`."
 
 #: ../../content/applications/sales/subscriptions.rst:42
 msgid ""
@@ -23718,10 +23875,15 @@ msgid ""
 "that have the :ref:`tokenization feature <payment_providers/tokenization>`. "
 "This ensures that the customer is automatically charged at each new period."
 msgstr ""
+"Si la confirmación en línea requiere un pago por anticipado, el cliente solo"
+" puede seleccionar los :ref:`proveedores de pago "
+"<payment_providers/supported_providers>` que tienen la :ref:`función de "
+"tokenización <payment_providers/tokenization>` habilitada. Esto asegura que "
+"se le cobre al cliente de forma automática cada nuevo periodo."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:3
 msgid "Automation rules"
-msgstr ""
+msgstr "Reglas de automatización"
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:5
 msgid ""
@@ -23730,6 +23892,11 @@ msgid ""
 "through the list of subscribers to see how things are going. That is where "
 "Odoo's *automation rules* feature comes into play."
 msgstr ""
+"Ya que haya configurado sus suscripciones y estén funcionando, es importante"
+" mantenerse al día de los clientes. Es eficiente usar la automatización para"
+" evitar tener que pasar por la lista de suscriptores y ver cómo van las "
+"cosas. Aquí es donde la función de *reglas de automatización* son muy "
+"útiles."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:9
 msgid ""
@@ -23737,10 +23904,14 @@ msgid ""
 "emails, create tasks for salespeople, and even send satisfaction surveys for"
 " subscribers to evaluate their experience."
 msgstr ""
+"La aplicación *Suscripciones* de Odoo permite que los usuarios configuren "
+"correos electrónicos automáticos, creen tareas para las personas de ventas e"
+" incluso envíen cuestionarios de satisfacción para que los suscriptores "
+"evalúen su experiencia."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:13
 msgid "Create automation rules"
-msgstr ""
+msgstr "Cree reglas de automatización"
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:15
 msgid ""
@@ -23748,6 +23919,9 @@ msgid ""
 ":menuselection:`Subscriptions app --> Configuration --> Automation Rules`. "
 "This is where all the automation rules for subscriptions can be found."
 msgstr ""
+"Para crear una regla automatizada vaya a :menuselection:`la aplicación "
+"Suscripciones --> Configuración --> Reglas de automatización`. Aquí podrá "
+"encontrar todas las reglas de automatización para las suscripciones."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:19
 msgid ""
@@ -23755,12 +23929,18 @@ msgid ""
 ":guilabel:`Action To Do`, what the automated rule will :guilabel:`Trigger "
 "On`, and the :guilabel:`Company` to which the rule applies."
 msgstr ""
+"La página :guilabel:`Reglas de automatización` muestra el page "
+":guilabel:`Nombre` de cada regla, la :guilabel:`Acción a realizar`, "
+":guilabel:`Activar en`, y la :guilabel:`Empresa` a la que se aplicará esta "
+"regla."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:23
 msgid ""
 "To view or modify any existing automation rule, simply click the desired "
 "rule from this page."
 msgstr ""
+"Para ver o modificar cualquier regla de automatización existente, solo haga "
+"clic en la regla deseada que se encuentre en esta página."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:26
 msgid ""
@@ -23769,66 +23949,90 @@ msgid ""
 "*Action data can not be updated to avoid unexpected behaviors. Create a new "
 "action instead.*"
 msgstr ""
+"Al modificar una regla de automatización existente Odoo \"atenuará\" la "
+"sección :guilabel:`Acción` del formulario y le muestra la siguiente "
+"advertencia: *Para evitar comportamientos inesperados, no es posible "
+"actualizar los datos de acción. Mejor cree una nueva acción.*"
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:30
 msgid "To create a new automation rule, click :guilabel:`New`."
 msgstr ""
+"Para crear una nueva regla de automatización, haga clic en "
+":guilabel:`Nuevo`."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst-1
 msgid "The Automation Rules page in the Odoo Subscriptions application."
 msgstr ""
+"La página de Reglas de automatización en la aplicación Suscripciones de "
+"Odoo."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:36
 msgid ""
 "Clicking :guilabel:`New` reveals a blank :guilabel:`Automation Rules` form "
 "with numerous fields to configure."
 msgstr ""
+"Al hacer clic en :guilabel:`Nuevo` se mostrará un formulario de "
+":guilabel:`Reglas de automatización` en blanco con varios campos numéricos "
+"por configurar."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst-1
 msgid "A sample Automation Rules form in the Odoo Subscriptions application."
 msgstr ""
+"Un formulario de reglas de automatización de ejemplo en la aplicación "
+"Suscripciones de Odoo."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:44
 msgid "Automation rule form fields"
-msgstr ""
+msgstr "Campos de las reglas de automatización"
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:46
 msgid ":guilabel:`Action Name`: title of the automated action rule."
 msgstr ""
+":guilabel:`Nombre de la acción`: título de la regla de acción automatizada."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:49
 msgid "Apply On section"
-msgstr ""
+msgstr "Sección Aplicar en"
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:51
 msgid ""
 "The :guilabel:`Apply On` section dictates which subscription "
 "orders/customers this automated action applies to."
 msgstr ""
+"La sección :guilabel:`aplicar en` indica a qué órdenes o clientes se "
+"aplicará esta acción automatizada."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:54
 msgid ""
 ":guilabel:`MRR Between`: designate a range of monthly recurring revenue to "
 "target."
 msgstr ""
+":guilabel:`MRR entre`: designar un rango de ingresos recurrentes mensuales "
+"al que dirigirse."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:55
 msgid ""
 ":guilabel:`MRR Change More`: designate a change of monthly recurring revenue"
 " to target, in either percentage or unit of currency."
 msgstr ""
+":guilabel:`Aumento de MRR`: designar un cambio de ingresos recurrentes "
+"mensuales al objetivo, en porcentaje o unidad de moneda."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:57
 msgid ""
 ":guilabel:`Over`: choose a period of time over which the designated KPIs "
 "(Key Performance Indicators) are calculated."
 msgstr ""
+":guilabel:`Periodo`: seleccione un periodo durante el que se calcularán los "
+"KPI (indicadores de rendimiento clave)."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:59
 msgid ""
 ":guilabel:`Rating Satisfaction`: designate satisfaction as "
 ":guilabel:`greater than` or :guilabel:`less than` a percentage."
 msgstr ""
+":guilabel:`Calificación de satisfacción`: designe un nivel de satisfacción "
+"como :guilabel:`mayor que` o :guilabel:`menor que` un porcentaje."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:61
 msgid ""
@@ -23837,6 +24041,10 @@ msgid ""
 ":guilabel:`Quotation Sent`, :guilabel:`Sales Order`, and "
 ":guilabel:`Cancelled`."
 msgstr ""
+":guilabel:`Estado`: seleccione el estado de las suscripciones que se tienen "
+"que incluir en esta regla de automatización. Las opciones son "
+":guilabel:`Cotización`, :guilabel:`Cotización enviada`, :guilabel:`Orden de "
+"venta`, and :guilabel:`Cancelar`."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:64
 msgid ""
@@ -23844,42 +24052,58 @@ msgid ""
 "activated using two fields that represent two different stages of the "
 "subscription."
 msgstr ""
+":guilabel:`Etapa pasa de`: designa cuándo se debe activar la regla de "
+"automatización mediante dos campos que representan dos diferentes etapas de "
+"la suscripción."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:66
 msgid ""
 ":guilabel:`Subscription Plans`: choose specific subscription plans to target"
 " with the automation rule."
 msgstr ""
+":guilabel:`Planes de suscripción`: seleccione los planes de suscripción que "
+"serán el objetivo de la regla de automatización."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:68
 msgid ""
 ":guilabel:`Products`: select specific product(s) to target with the "
 "automation rule."
 msgstr ""
+":guilabel:`Productos`: seleccione productos específicos que serán el "
+"objetivo de la regla de automatización."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:69
 msgid ""
 ":guilabel:`Customers`: select specific customer(s) to target with the "
 "automation rule."
 msgstr ""
+":guilabel:`Clientes`: seleccione clientes específicos que serán el objetivo "
+"de esta regla de automatización."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:70
 msgid ""
 ":guilabel:`Company`: in a multi-company environment, select a specific "
 "company's subscription data to target with the automation rule."
 msgstr ""
+":guilabel:`Empresa`: en un entorno multiempresa, seleccione información "
+"específica de la empresa que sea el objetivo de esta regla de "
+"automatización."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:72
 msgid ""
 ":guilabel:`Sales Team`: select the data of specific sales team(s) to target "
 "with the automation rule."
 msgstr ""
+":guilabel:`Equipos de venta`: seleccione los datos de equipos de venta "
+"específicos que sean objetivo de la regla de automatización."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:76
 msgid ""
 "If any field is left blank, the rule applies to every subscription without "
 "that specific designation."
 msgstr ""
+"Si cualquier campo se deja en blanco, la regla aplica a todas las "
+"suscripciones que no tengan esa designación específica."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:80
 msgid ""
@@ -23887,22 +24111,30 @@ msgid ""
 "customized automation rule are displayed at the bottom of the "
 ":guilabel:`Apply On` field."
 msgstr ""
+"El número de suscripciones que coinciden con los criterios configurados de "
+"la regla de automatización personalizada se muestran hasta abajo del campo "
+":guilabel:`Aplicar en`."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:83
 msgid ""
 "If that green subscriptions link is clicked, Odoo reveals a separate page "
 "showcasing all the subscriptions that meet that automation rule's criteria."
 msgstr ""
+"Si se hace clic en ese enlace verde de suscripciones, Odoo mostrará una "
+"página separada en la que se pueden ver todas las suscripciones que "
+"coinciden con los criterios de la regla de automatización."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:87
 msgid "Action section"
-msgstr ""
+msgstr "Sección de Acción"
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:89
 msgid ""
 "The :guilabel:`Action` section dictates what action occurs when an automated"
 " rule is triggered."
 msgstr ""
+"La sección :guilabel:`Acción` indica qué acción debe ocurrir cuando se "
+"activa una regla de automatización."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:91
 msgid ""
@@ -23910,6 +24142,9 @@ msgid ""
 "once the automated rule is triggered. When clicked, the following options "
 "become available on a drop-down menu:"
 msgstr ""
+"En el campo :guilabel:`Acciones por hacer` seleccione la acción que se "
+"realizará una vez que se active la regla de automatización. Al hacer clic, "
+"las siguientes opciones estarán disponibles en el menú desplegable:"
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:94
 msgid ""
@@ -23917,30 +24152,42 @@ msgid ""
 "is configured in the :guilabel:`Activity` section that appears at the bottom"
 " of the automation rule form."
 msgstr ""
+":guilabel:`Crear siguiente actividad`: crea la siguiente actividad que debe "
+"ocurrir, la cual se configura en la sección :guilabel:`Actividad` que "
+"aparece al fondo del formulario de reglas de automatización."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:96
 msgid ""
 ":guilabel:`Send an email to the customer`: sends an email to the customer(s)"
 " who fit the specified criteria of the automation rule."
 msgstr ""
+":guilabel:`Enviar un correo electrónico al cliente`: se le envía un correo "
+"electrónico al cliente que coincida con los criterios de la regla de "
+"automatización."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:98
 msgid ""
 ":guilabel:`Send an SMS Text Message to the customer`: sends an SMS message "
 "to the customer(s) who fit the specified criteria of the automation rule."
 msgstr ""
+":guilabel:`Enviar un mensaje de texto SMS al cliente`: envía un mensaje SMS "
+"al cliente que coincida con los criterios de la regla de automatización."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:100
 msgid ""
 ":guilabel:`Set Contract Health value`: set the health value of the "
 "subscription contract."
 msgstr ""
+":guilabel:`Establecer el valor de la salud del contrato`: configurar el "
+"valor de la salud del contrato de suscripción."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:102
 msgid ""
 "If :guilabel:`Send an email to the customer` is selected in the "
 ":guilabel:`Action To Do` field, the following field appears:"
 msgstr ""
+"Si se selecciona :guilabel:`Enviar un correo electrónico al cliente` en el "
+"campo :guilabel:`Acción a realizar`, aparecerá el siguiente campo:"
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:105
 msgid ""
@@ -23948,24 +24195,35 @@ msgid ""
 "select from a list of pre-configured email templates to send to the "
 "customer(s)."
 msgstr ""
+":guilabel:`Plantilla de correo electrónico`: cree (y edite) una nueva "
+"plantilla de correo electrónico *o* seleccione una desde una lista de "
+"plantillas de correo electrónico preconfiguradas para enviársela a los "
+"clientes."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:108
 msgid ""
 "If :guilabel:`Send an SMS Text Message to the customer` is selected in the "
 ":guilabel:`Action To Do` field, the following field appears:"
 msgstr ""
+"Si selecciona :guilabel:`Enviar un mensaje de texto SMS al cliente` en el "
+"campo :guilabel:`Acción a realizar`, aparecerá el siguiente campo:"
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:111
 msgid ""
 ":guilabel:`SMS Template`: create (and edit) a new SMS template *or* select "
 "from a list of pre-configured SMS templates to send to the customer(s)."
 msgstr ""
+":guilabel:`Plantilla de SMS`: cree (y edite) una nueva plantilla de SMS *o* "
+"seleccione una desde una lista de plantillas SMS preconfiguradas para "
+"enviársela a los clientes."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:114
 msgid ""
 "If :guilabel:`Set Contract Health value` is selected in the "
 ":guilabel:`Action To Do` field, the following field appears:"
 msgstr ""
+"Si se selecciona :guilabel:`Establecer el valor de la salud del contrato` en"
+" el campo :guilabel:`Acción a realizar`, aparecerá el siguiente campo:"
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:117
 msgid ""
@@ -23973,6 +24231,8 @@ msgid ""
 " of the following options: :guilabel:`Neutral`, :guilabel:`Good`, or "
 ":guilabel:`Bad`."
 msgstr ""
+":guilabel:`Salud`: para designar la salud de la suscripción tiene que elegir"
+" entre: :guilabel:`Neutral`, :guilabel:`Bueno`, o :guilabel:`Malo`."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:120
 msgid ""
@@ -23980,12 +24240,18 @@ msgid ""
 "should be triggered on a :guilabel:`Modification` or :guilabel:`Timed "
 "Condition`."
 msgstr ""
+"En el campo :guilabel:`Activar en` se debe decidir si la regla de "
+"automatización se debe activar en una :guilabel:`Modificación` o "
+":guilabel:`Condición de tiempo`."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:124
 msgid ""
 "A :guilabel:`Trigger Now` button appears at the top of the automation rule "
 "form *only* when a trigger has been configured for the rule."
 msgstr ""
+"Aparecerá el botón :guilabel:`Activar ahora` en la parte superior de la "
+"regla de automatización *solo* cuando configuró una forma de activar la "
+"regla."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:128
 msgid ""
@@ -23993,12 +24259,17 @@ msgid ""
 "action on *all* linked subscriptions, regardless of possible timed "
 "conditions."
 msgstr ""
+"Cuando se hace clic en :guilabel:`Activar ahora` Odoo activará la acción "
+"vinculada a *todas* las suscripciones, sin importar las condiciones de "
+"tiempo posibles."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:131
 msgid ""
 "If :guilabel:`Timed Condition` is selected in the :guilabel:`Trigger On` "
 "field, the following fields appear:"
 msgstr ""
+"Si se selecciona :guilabel:`Condición de tiempo` en el campo "
+":guilabel:`Activar en`, aparecerá el siguiente campo:"
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:134
 msgid ""
@@ -24006,6 +24277,9 @@ msgid ""
 " If left blank, the action is created upon subscription creation *and* "
 "updates."
 msgstr ""
+":guilabel:`Fecha de activación`: representa cuándo se debe activar la "
+"condición. Si se deja en blanco, la acción se creará cuando se cree *y* "
+"actualice la suscripción."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:136
 msgid ""
@@ -24015,10 +24289,15 @@ msgid ""
 "action. If a negative number is entered, the \"delay\" will occur *before* "
 "the :guilabel:`Trigger Date`."
 msgstr ""
+":guilabel:`Retraso después de la activación`: seleccionar una cantidad de "
+"tiempo de retraso en (:guilabel:`Minutos`, :guilabel:`Horas`, "
+":guilabel:`Días`, o :guilabel:`Meses`) que Odoo debe esperar antes de que se"
+" active una acción configurada. Si se ingresa un número negativo, el "
+"\"retraso\" ocurrirá *antes* de la :guilabel:`Fecha de activación`."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:142
 msgid "Activity section"
-msgstr ""
+msgstr "Sección de Actividad"
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:144
 msgid ""
@@ -24026,28 +24305,38 @@ msgid ""
 "Do` field, an :guilabel:`Activity` section appears at the bottom of the "
 ":guilabel:`Automation Rules` form."
 msgstr ""
+"Si se selecciona :guilabel:`Crear siguiente actividad` en el campo "
+":guilabel:`Acción por hacer` aparecerá una sección de :guilabel:`Actividad` "
+"en la parte inferior del formulario."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:147
 msgid ""
 ":guilabel:`Activity Type`: select an pre-configured activity type from the "
 "drop-down menu."
 msgstr ""
+":guilabel:`Tipo de actividad`: seleccione un tipo de actividad "
+"preconfigurado desde el menú desplegable."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:148
 msgid ":guilabel:`Title`: enter a custom title for the chosen activity."
 msgstr ""
+":guilabel:`Título`: ingrese un título personalizado de la actividad elegida."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:149
 msgid ""
 ":guilabel:`Note`: leave a note for the employee to whom the activity is "
 "assigned."
 msgstr ""
+":guilabel:`Nota`: deje una nota para el empleado al que se le haya asignado "
+"la actividad."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:150
 msgid ""
 ":guilabel:`Due Date In`: enter an amount of days within which the activity "
 "should be completed."
 msgstr ""
+":guilabel:`Fecha de vencimiento en`: ingrese la cantidad en días dentro de "
+"los que se debe de completar la actividad."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:151
 msgid ""
@@ -24055,6 +24344,9 @@ msgid ""
 ":guilabel:`Subscription Salesperson`, :guilabel:`Sales Team Leader`, or "
 ":guilabel:`Specific Users`."
 msgstr ""
+":guilabel:`Asignar a`: puede elegir asignar una actividad específica ya sea "
+"a: :guilabel:`Persona de venta de la suscripción`, :guilabel:`Líder del "
+"equipo de ventas`, o :guilabel:`Usuarios específicos`."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:155
 msgid ""
@@ -24063,6 +24355,10 @@ msgid ""
 "specific employee(s) can be chosen as the assignee(s) for the configured "
 "activity."
 msgstr ""
+"Si se selecciona :guilabel:`Usuarios específicos` en la opción "
+":guilabel:`Asignar a` aparecerá un campo de :guilabel:`Usuarios específicos`"
+" debajo de él, donde puede seleccionar a usuarios específicos a los que "
+"asignarles la actividad configurada."
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:160
 #: ../../content/applications/sales/subscriptions/closing.rst:105
@@ -24090,7 +24386,7 @@ msgstr ":doc:`products`"
 
 #: ../../content/applications/sales/subscriptions/closing.rst:3
 msgid "Close subscriptions"
-msgstr ""
+msgstr "Cerrar suscripciones"
 
 #: ../../content/applications/sales/subscriptions/closing.rst:5
 msgid ""
@@ -24098,6 +24394,9 @@ msgid ""
 "customers can self-manage their subscriptions, or restrict that ability "
 "entirely."
 msgstr ""
+"La aplicación *Suscripciones* de Odoo le proporciona flexibilidad a los "
+"negocios para que decidan si los clientes pueden autogestionar sus "
+"suscripciones o restringir esa capacidad por completo."
 
 #: ../../content/applications/sales/subscriptions/closing.rst:11
 msgid ""
@@ -24105,6 +24404,10 @@ msgid ""
 "--> Recurring Plans`. From there, either create a new plan by clicking "
 ":guilabel:`New` or select an existing one to modify it."
 msgstr ""
+"Primero vaya a :menuselection:`la aplicación de Suscripción --> "
+"Configuración --> Planes recurrentes`. Desde ahí, puede crear un nuevo plan "
+"si hace clic en :guilabel:`Nuevo` o seleccione una existente para "
+"modificarla."
 
 #: ../../content/applications/sales/subscriptions/closing.rst:15
 msgid ""
@@ -24112,14 +24415,19 @@ msgid ""
 ":guilabel:`Closable` option, in the :guilabel:`Self-Service` section, to "
 "allow customers to close their own subscriptions using the customer portal."
 msgstr ""
+"Una vez que esté en el formulario de :guilabel:`Planes recurrentes` active "
+"la opción :guilabel:`Se puede cerrar` en la sección :guilabel:`Autoservicio`"
+" para que los clientes puedan cerrar sus propias suscripciones mediante el "
+"portal del cliente."
 
 #: ../../content/applications/sales/subscriptions/closing.rst-1
 msgid "The Closable option on a recurring plan form in Odoo Subscriptions."
 msgstr ""
+"La opción se puede cerrar en un plan recurrente en Suscripciones de Odoo."
 
 #: ../../content/applications/sales/subscriptions/closing.rst:24
 msgid ":doc:`Configure recurring plans <plans>`"
-msgstr ""
+msgstr ":doc:`Configurar planes recurrentes <plans>`"
 
 #: ../../content/applications/sales/subscriptions/closing.rst:27
 msgid "Close a subscription"
@@ -24135,6 +24443,9 @@ msgid ""
 "a sales order, and the subscription status changes to :guilabel:`In "
 "Progress`."
 msgstr ""
+"Después de que se haya confirmado la cotización para un producto de "
+"suscripción, se convierte en una orden de ventas y el estado de la "
+"suscripción cambia a :guilabel:`En progreso`."
 
 #: ../../content/applications/sales/subscriptions/closing.rst:35
 msgid ""
@@ -24144,12 +24455,19 @@ msgid ""
 "also available after the order has been invoiced and the payment has been "
 "registered."
 msgstr ""
+"En ese momento, es posible cerrar la suscripción con el botón "
+":guilabel:`Cerrar` ubicado en la parte superior de la orden de suscripción, "
+"cerca de la fila que incluye la etapa :guilabel:`En progreso` y algunas "
+"otras. Esta opción también está disponible después de haber facturado y "
+"registrado el pago."
 
 #: ../../content/applications/sales/subscriptions/closing.rst-1
 msgid ""
 "Close subscription from an administration point of view with Odoo "
 "Subscriptions."
 msgstr ""
+"Cerrar la suscripción desde el punto de vista de un administrador con "
+"Suscripciones de Odoo."
 
 #: ../../content/applications/sales/subscriptions/closing.rst:44
 msgid ""
@@ -24158,18 +24476,26 @@ msgid ""
 "closing the subscription, or choose from the drop-down menu of options in "
 "the :guilabel:`Reason` field."
 msgstr ""
+"Al hacer clic en el botón :guilabel:`Cerrar` aparecerá una ventana emergente"
+" llamada :guilabel:`Motivo de la cancelación`. Aquí el administrador podrá "
+"indicar el motivo por el cual se canceló la suscripción, o elegir desde el "
+"menú desplegable de opciones en el campo :guilabel:`Razón`."
 
 #: ../../content/applications/sales/subscriptions/closing.rst-1
 msgid ""
 "The Close Reason pop-up when the Close button is clicked in Odoo "
 "Subscriptions."
 msgstr ""
+"La ventana emergente de motivo de cancelación cuando se hace clic al botón "
+"Cerrar en suscripciones de Odoo."
 
 #: ../../content/applications/sales/subscriptions/closing.rst:52
 msgid ""
 "When the desired :guilabel:`Reason` is entered, click the :guilabel:`Submit`"
 " button."
 msgstr ""
+"Cuando se ingrese el :guilabel:`Motivo` haga clic en el botón "
+":guilabel:`Enviar`."
 
 #: ../../content/applications/sales/subscriptions/closing.rst:54
 msgid ""
@@ -24177,22 +24503,31 @@ msgid ""
 "updates the subscription sales order to show :guilabel:`Churned` status tag,"
 " along with the specified :guilabel:`Close Reason`."
 msgstr ""
+"Al hacer clic en :guilabel:`Enviar` en la ventana emergente de "
+":guilabel:`Motivo de la cancelación` se actualiza el pedido de venta de "
+"suscripción para mostrar la etiqueta de estado :guilabel:`Cancelado`, junto "
+"con el :guilabel:`Motivo de la cancelación` especificado."
 
 #: ../../content/applications/sales/subscriptions/closing.rst-1
 msgid "A churned sales order for a closed subscription in Odoo Subscriptions."
 msgstr ""
+"Una orden de ventas cancelada para una suscripción en Suscripciones de Odoo."
 
 #: ../../content/applications/sales/subscriptions/closing.rst:62
 msgid ""
 "That same close reason can be found in the *Chatter* of the sales order, as "
 "well."
 msgstr ""
+"El mismo motivo de cierre se puede encontrar en el *Chatter* de la orden de "
+"ventas también."
 
 #: ../../content/applications/sales/subscriptions/closing.rst-1
 msgid ""
 "The chatter of a churned sales order for a closed subscription in Odoo "
 "Subscriptions."
 msgstr ""
+"El chatter de una orden de venta cancelada para una suscripción cancelada en"
+" Suscripciones de Odoo."
 
 #: ../../content/applications/sales/subscriptions/closing.rst:69
 msgid "Customer view"
@@ -24204,6 +24539,9 @@ msgid ""
 "managing their subscriptions is accessible via the :guilabel:`Preview` "
 "button, located at the top of the subscription sales order."
 msgstr ""
+"Como administrador, la posibilidad de ver lo que los clientes ven al "
+"gestionar sus suscripciones es posible a través del botón :guilabel:`Vista "
+"previa` ubicado en la parte superior de la orden de venta."
 
 #: ../../content/applications/sales/subscriptions/closing.rst:76
 msgid ""
@@ -24211,12 +24549,17 @@ msgid ""
 ":guilabel:`Close Subscription` button is located on the left side of the "
 "sales order."
 msgstr ""
+"Desde el punto de venta del cliente en el portal del cliente, el botón "
+":guilabel:`Cancelar suscripción` se ubica en el lado izquierdo de la orden "
+"de venta."
 
 #: ../../content/applications/sales/subscriptions/closing.rst-1
 msgid ""
 "Close subscription button on a customer's view of a sales order in Odoo "
 "Subscriptions."
 msgstr ""
+"Botón para cancelar la suscripción desde la vista de un cliente de una orden"
+" de ventas en las Suscripciones de Odoo."
 
 #: ../../content/applications/sales/subscriptions/closing.rst:83
 msgid ""
@@ -24225,12 +24568,18 @@ msgid ""
 "has to choose from a select list of reasons why they are choosing to close "
 "the subscription."
 msgstr ""
+"Cuando el cliente hace clic en el botón :guilabel:`Cerrar suscripción`, "
+"aparece una ventana emergente :guilabel:`Cerrar suscripción` en la que el "
+"cliente debe elegir entre una lista de razones por las que decide cerrar la "
+"suscripción."
 
 #: ../../content/applications/sales/subscriptions/closing.rst-1
 msgid ""
 "The close subscription pop-up window customers see when closing a "
 "subscription."
 msgstr ""
+"La ventana emergente de cerrar suscripción que ve el cliente al cerrar la "
+"suscripción."
 
 #: ../../content/applications/sales/subscriptions/closing.rst:92
 msgid ""
@@ -24239,18 +24588,26 @@ msgid ""
 " These selections can be adjusted by navigating to "
 ":menuselection:`Subscriptions --> Configuration --> Close Reasons`."
 msgstr ""
+"Los clientes *solo* pueden elegir un motivo preconfigurado por el que "
+"cierran su suscripción. *No* pueden escribir un motivo personalizado desde "
+"el portal del cliente. Ajuste estas opciones desde "
+":menuselection:`Suscripciones --> Configuración --> Motivos de cierre`."
 
 #: ../../content/applications/sales/subscriptions/closing.rst:96
 msgid ""
 "Once the customer has chosen a close reason, they would click the "
 ":guilabel:`Submit` button on the pop-up window."
 msgstr ""
+"Una vez que el cliente haya seleccionado un motivo de cierre, podrán hacer "
+"clic en el botón :guilabel:`Enviar` en la ventana emergente."
 
 #: ../../content/applications/sales/subscriptions/closing.rst:99
 msgid ""
 "Upon closure, the subscription order in the customer portal is tagged as "
 ":guilabel:`Closed`."
 msgstr ""
+"Después del cierre, la orden de la suscripción en el portal del cliente se "
+"etiqueta como :guilabel:`Cerrada`."
 
 #: ../../content/applications/sales/subscriptions/closing.rst:101
 msgid ""
@@ -24258,6 +24615,9 @@ msgid ""
 "subscription order in the *Subscriptions* app in the backend "
 "(Administrator's view)."
 msgstr ""
+"Además, la etiqueta :guilabel:`Motivo de la cancelación` especificada "
+"aparece en el pedido de suscripción en la aplicación *Suscripciones* del "
+"backend (vista del administrador)."
 
 #: ../../content/applications/sales/subscriptions/ecommerce.rst:3
 msgid "Use subscriptions in the eCommerce shop"
@@ -25248,13 +25608,16 @@ msgstr ""
 
 #: ../../content/applications/sales/subscriptions/reports.rst:3
 msgid "Subscription reports"
-msgstr ""
+msgstr "Reportes de suscripciones"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:5
 msgid ""
 "The Odoo *Subscriptions* application provides a series of reporting pages to"
 " help companies analyze how subscriptions are performing."
 msgstr ""
+"La aplicación *Suscripciones* de Odoo le brinda una serie de páginas de "
+"reportes para poder ayudar a las empresas a analizar cómo van sus "
+"suscripciones."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:8
 msgid ""
@@ -25262,12 +25625,19 @@ msgid ""
 " related to recurring subscriptions, quantity of subscriptions, how many "
 "subscriptions are in progress or paused, and so much more."
 msgstr ""
+"En la página de reportes *Análisis de suscripciones*, los usuarios pueden "
+"ver datos específicos relacionados con las suscripciones periódicas, la "
+"cantidad de suscripciones, cuántas suscripciones están en curso o en pausa, "
+"y mucho más."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:12
 msgid ""
 "The *Retention Analysis* reporting page provides an organized table of "
 "subscription retention percentages over any period of time."
 msgstr ""
+"La página de reportes de *Análisis de retención* brinda una tabla organizada"
+" de porcentaje de retención de suscripciones durante un periodo de tiempo "
+"específico."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:15
 msgid ""
@@ -25275,6 +25645,9 @@ msgid ""
 "Revenue) and ARR (Annual Recurring Revenue) metrics for subscriptions into "
 "various graphs, lists, and charts."
 msgstr ""
+"La página de reportes *Desglose de MRR* divide las métricas de MRR (ingresos"
+" recurrentes mensuales) y ARR (ingresos recurrentes anuales) para las "
+"suscripciones en varios gráficos, listas y diagramas."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:18
 msgid ""
@@ -25282,24 +25655,33 @@ msgid ""
 "analytics showcasing how subscription MRR and ARR has changed over the "
 "course of any given period of time."
 msgstr ""
+"La página de reportes de *análisis de MRR* ofrece una colección de análisis "
+"basados en el tiempo que muestran cómo ha cambiado el ingreso mensual "
+"recurrente y el ingreso anual recurrente de las suscripciones en el "
+"transcurso de un periodo determinado."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:22
 msgid "Reporting page elements"
-msgstr ""
+msgstr "Elementos de la página de reportes"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:24
 msgid ""
 "All subscription-based reporting pages can be accessed via the "
 ":guilabel:`Reporting` header menu in the *Subscriptions* application."
 msgstr ""
+"Puede acceder a todas las páginas de reportes basadas en suscripciones a "
+"través del menú de encabezado :guilabel:`Reportes` en la aplicación "
+"*Suscripciones*."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:27
 msgid "The following describes elements found on each reporting page."
 msgstr ""
+"A continuación se describen los elementos que se encuentran en cada página "
+"de reportes."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:30
 msgid "Filters and Group By"
-msgstr ""
+msgstr "Filtros y agrupar por"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:32
 msgid ""
@@ -25307,12 +25689,18 @@ msgid ""
 "groupings (via the :guilabel:`Group By` option) are used to gather specific "
 "sections' data into groups for more organized analysis."
 msgstr ""
+"Los filtros se utilizan para restringir las métricas y mostrar análisis "
+"específicos, mientras que las agrupaciones (mediante la opción "
+":guilabel:`Agrupar por`) se utilizan para reunir datos de secciones "
+"específicas en grupos para un análisis más organizado."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:36
 msgid ""
 "This section refers to both filters and groupings, as a combination of the "
 "two can be saved in the :guilabel:`Favorites` section."
 msgstr ""
+"Esta sección se refiere tanto a los filtros como a las agrupaciones, como "
+"una combinación que se puede guardar en la sección :guilabel:`Favoritos`."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:39
 msgid ""
@@ -25320,16 +25708,23 @@ msgid ""
 ":guilabel:`▼ (downward facing arrow)` icon to the right of the search bar. "
 "Doing so reveals a drop-down menu of detailed filter and grouping options."
 msgstr ""
+"Para modificar los resultados que se muestran en una parte de reportes, haga"
+" clic en el icono :guilabel:`▼ (fecha apuntando hacia abajo)` que se "
+"encuentra a la derecha de la barra de búsqueda. Así se mostrará un menú "
+"desplegable de opciones detalladas para filtrar y agrupar."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:44
 msgid "Multiple filter options and grouping options can be selected at once."
 msgstr ""
+"Varias opciones para filtrar y agrupar se pueden guardar al mismo tiempo."
 
 #: ../../content/applications/sales/subscriptions/reports.rst-1
 msgid ""
 "The reporting filter drop-down menu of options in the Odoo Subscriptions "
 "application."
 msgstr ""
+"El filtro de reporte que muestra las opciones del menú desplegable en la "
+"aplicación Suscripciones de Odoo."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:50
 msgid ""
@@ -25339,6 +25734,10 @@ msgid ""
 "beside :guilabel:`Save current search`, located beneath the "
 ":guilabel:`Favorites` section."
 msgstr ""
+"Si lo desea, puede guardar una combinación de filtros o grupos en la sección"
+" :guilabel:`Favoritos` del menú desplegable. Para hacerlo, haga clic en el "
+"icono :guilabel:`▼ (flecha apuntando hacia abajo)` ubicada junto a "
+":guilabel:`Guardar búsqueda actual` en la sección de :guilabel:`Favoritos`."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:55
 msgid ""
@@ -25346,30 +25745,43 @@ msgid ""
 "also two options beneath the title field, as well: :guilabel:`Default "
 "filter` and :guilabel:`Shared`."
 msgstr ""
+"Esto muestra un campo en el que se le puede asignar un título al filtro "
+"favorito. También hay dos opciones debajo del campo de título: "
+":guilabel:`Filtro predeterminado` y :guilabel:`Compartido`."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:58
 msgid ""
 "Ticking the check box beside :guilabel:`Default filter` makes the newly-"
 "favorited filter the default option for that reporting page."
 msgstr ""
+"Al seleccionar la casilla de verificación ubicada junto a :guilabel:`Filtro "
+"predeterminado`, el nuevo filtro favorito se convierte en la opción "
+"predeterminada para esa página de reportes."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:61
 msgid ""
 "Ticking the box beside :guilabel:`Shared` makes the newly-favorited filter "
 "available to other users in the database."
 msgstr ""
+"Al marcar la casilla junto a :guilabel:`Compartido`, el nuevo filtro "
+"favorito estará disponible para otros usuarios de la base de datos."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:65
 msgid ""
 "The :guilabel:`Default filter` and :guilabel:`Shared` options are **not** "
 "required. Only *one* of those options can be selected at a time."
 msgstr ""
+"Las opciones :guilabel:`Filtro predeterminado` y :guilabel:`Compartido` "
+"**no** son obligatorias. Solo se puede seleccionar *una* de estas opciones a"
+" la vez."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:68
 msgid ""
 "To save that filter(s), click :guilabel:`Save` in the :guilabel:`Favorites` "
 "section of the drop-down filter menu."
 msgstr ""
+"Para guardar los filtros, haga clic en :guilabel:`Guardar` en la sección de "
+":guilabel:`Favoritos` del menú desplegable."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:71
 msgid ""
@@ -25377,10 +25789,14 @@ msgid ""
 "column of the drop-down filter menu, and a :guilabel:`⭐ (gold star)` icon "
 "appears beside the favorite filter's name in the search bar."
 msgstr ""
+"Al hacer clic, ese filtro guardado aparece bajo la columna "
+":guilabel:`Favoritos` del menú desplegable de filtros, y aparece un icono "
+":guilabel:`⭐ (estrella dorada)` junto al nombre del filtro favorito en la "
+"barra de búsqueda."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:76
 msgid "Views"
-msgstr ""
+msgstr "Vistas"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:78
 msgid ""
@@ -25388,41 +25804,49 @@ msgid ""
 ":guilabel:`MRR Analysis` reporting pages, three different view options are "
 "located in the upper-right corner."
 msgstr ""
+"En las páginas de reportes :guilabel:`Análisis de suscripciones`, "
+":guilabel:`Desglose de MRR` y :guilabel:`Análisis de MRR`, hay tres opciones"
+" de vista diferentes en la esquina superior derecha."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:82
 msgid ""
 "There are *no* other view options available on the :guilabel:`Retention "
 "Analysis` reporting page."
 msgstr ""
+"*No* hay otras opciones de visualización disponibles en la página de "
+"reportes :guilabel:`Análisis de retención`."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:84
 msgid "The available view options, from left to right, are:"
-msgstr ""
+msgstr "Las opciones de visualización disponibles de izquierda a derecha son:"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:86
 msgid ":guilabel:`Graph`"
-msgstr ""
+msgstr ":guilabel:`Gráfico`"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:87
 msgid ":guilabel:`Pivot`"
-msgstr ""
+msgstr ":guilabel:`Tabla dinámica`"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:88
 msgid ":guilabel:`List`"
-msgstr ""
+msgstr ":guilabel:`Lista`"
 
 #: ../../content/applications/sales/subscriptions/reports.rst-1
 msgid ""
 "The different view options available on the Subscriptions Analysis page."
 msgstr ""
+"Las diferentes opciones de visualización disponibles en la página Análisis "
+"de suscripción."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:94
 msgid "Each view has its own series of related view-specific visual options."
 msgstr ""
+"Cada vista tiene su propia serie de opciones de visualización específicas."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:97
 msgid "Graph view"
-msgstr ""
+msgstr "Vista de gráfico"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:99
 msgid ""
@@ -25431,11 +25855,17 @@ msgid ""
 "options are located to the right of the :guilabel:`Measures` and "
 ":guilabel:`Insert in Spreadsheet` buttons."
 msgstr ""
+"Con la vista de gráfico seleccionada, aparecen las siguientes opciones entre"
+" la barra de búsqueda y la representación visual de los datos. Estas "
+"opciones específicas del gráfico se encuentran a la derecha de los botones "
+":guilabel:`Medidas` e :guilabel:`Insertar en hoja de cálculo`."
 
 #: ../../content/applications/sales/subscriptions/reports.rst-1
 msgid ""
 "The different graph view options in the Odoo Subscriptions application."
 msgstr ""
+"Las diferentes opciones de visualización de gráfica en la aplicación "
+"Suscripciones de Odoo."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:107
 msgid ""
@@ -25443,22 +25873,33 @@ msgid ""
 "related views. The remaining options represent different ways to organize "
 "and visualize that specific graph-related data."
 msgstr ""
+"Las tres primeras opciones, de izquierda a derecha, representan diferentes "
+"vistas de gráficos. Las opciones restantes representan distintas formas de "
+"organizar y visualizar esos datos específicos relacionados con los gráficos."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:110
 msgid "From left to right, the specific graph-related view options are:"
 msgstr ""
+"De izquierda a derecha, las opciones específicas relacionadas a la gráfica "
+"son:"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:112
 msgid ":guilabel:`Bar Chart`: showcases the data in a bar chart format."
 msgstr ""
+":guilabel:`Gráfico de barras`: muestra la información en formato de gráfico "
+"de barras."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:113
 msgid ":guilabel:`Line Chart`: showcases the data in a line chart format."
 msgstr ""
+":guilabel:`Gráfico de línea`: muestra la información en formato de gráfico "
+"de línea."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:114
 msgid ":guilabel:`Pie Chart`: showcases the data in a pie chart format."
 msgstr ""
+":guilabel:`Gráfico de círculo`: muestra la información en formato de gráfico"
+" de círculo."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:116
 msgid ""
@@ -25466,55 +25907,70 @@ msgid ""
 "are represented by the available buttons that appear to the right of the "
 "selected graph-related view option."
 msgstr ""
+"Cada opción de vista de gráfico tiene sus propia serie de opciones de "
+"visualización específicas, las cuales se muestran en los botones disponibles"
+" que aparecen en la derecha de de la opción de visualización de gráfica "
+"seleccionada."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:119
 msgid ""
 "When the :guilabel:`Bar Chart` graph view is selected, the following visual "
 "options are available:"
 msgstr ""
+"Cuando se selecciona la vista de gráfico :guilabel:`Cuadro de barras` las "
+"siguientes opciones de visualización están disponibles:"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:121
 #: ../../content/applications/sales/subscriptions/reports.rst:127
 msgid ":guilabel:`Stacked`: showcases the data in a stacked visual format."
 msgstr ""
+":guilabel:`Apilado`: muestra la información en un formato visual apilado."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:122
 #: ../../content/applications/sales/subscriptions/reports.rst:129
 msgid ":guilabel:`Descending`: showcases the data in descending order."
-msgstr ""
+msgstr ":guilabel:`Descendente`: muestra la información en orden descendente."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:123
 #: ../../content/applications/sales/subscriptions/reports.rst:130
 msgid ":guilabel:`Ascending`: showcases the data in ascending order."
-msgstr ""
+msgstr ":guilabel:`Ascendente`: muestra la información en orden ascendente."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:125
 msgid ""
 "When the :guilabel:`Line Chart` graph view is selected, the following visual"
 " options are available:"
 msgstr ""
+"Cuando se selecciona la vista de :guilabel:`gráfico de línea` las siguientes"
+" opciones de visualización están disponibles:"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:128
 msgid ""
 ":guilabel:`Cumulative`: showcases the data in accumulated, increasing "
 "format."
 msgstr ""
+":guilabel:`Acumulativo`: muestra la información en un formato acumulativo y "
+"ascendente."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:132
 msgid ""
 "When the :guilabel:`Pie Chart` graph view is selected, there are no "
 "additional visual options."
 msgstr ""
+"Cuando se selecciona la vista :guilabel:`gráfico de círculo`, no hay "
+"opciones visuales adicionales."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:135
 msgid "Pivot view"
-msgstr ""
+msgstr "Vista de tabla dinámica"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:137
 msgid ""
 "With the pivot view selected, the subscription metrics are displayed in a "
 "data table, which can be fully customized."
 msgstr ""
+"Cuando selecciona la tabla dinámica, las métricas de suscripción se muestran"
+" en un cuadro de información que se puede personalizar."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:140
 msgid ""
@@ -25523,6 +25979,11 @@ msgid ""
 "the filter drop-down menu (accessible via the :guilabel:`▼ (downward facing "
 "arrow)` icon to the right of the search bar)."
 msgstr ""
+"Puede personalizar la tabla dinámica de datos con las opciones disponibles "
+"en el menú desplegable :guilabel:`Medidas` o con las opciones de filtro "
+"disponibles en el menú desplegable de filtros (al que puede acceder con el "
+"icono :guilabel:`▼ (flecha hacia abajo)` ubicado a la derecha de la barra de"
+" búsqueda)."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:144
 msgid ""
@@ -25530,37 +25991,47 @@ msgid ""
 "the :guilabel:`Measures` drop-down menu and :guilabel:`Insert in "
 "Spreadsheet` button."
 msgstr ""
+"Existen tres opciones específicas para la tabla dinámica, situadas a la "
+"derecha del menú desplegable :guilabel:`Medidas` y del botón "
+":guilabel:`Insertar en hoja de cálculo`."
 
 #: ../../content/applications/sales/subscriptions/reports.rst-1
 msgid ""
 "The pivot-specific view options available in the Odoo Subscriptions "
 "application."
 msgstr ""
+"Las opciones específicas para la tabla dinámica disponibles en la aplicación"
+" Suscripciones de Odoo."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:151
 msgid "From left to right, those pivot-specific view options are:"
 msgstr ""
+"De izquierda a derecha, las opciones específicas de tabla dinámica son:"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:153
 msgid ""
 ":guilabel:`Flip axis`: the `x` and `y` axis of the pivot data table flip."
-msgstr ""
+msgstr ":guilabel:`Girar eje`: gira los ejes `x` e `y` de toda la tabla. "
 
 #: ../../content/applications/sales/subscriptions/reports.rst:154
 msgid ""
 ":guilabel:`Expand all`: all the available rows and columns of the pivot data"
 " table expand fully."
 msgstr ""
+":guilabel:`Expandir todo`: todas las filas y columnas disponibles para la "
+"información de tabla dinámica se muestran por completo."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:155
 msgid ""
 ":guilabel:`Download xlsx`: the pivot data table is downloaded as an .xlsx "
 "file."
 msgstr ""
+":guilabel:`Descargar xlsx`: la información de la tabla dinámica se descarga "
+"como un archivo .xlsx"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:158
 msgid "List view"
-msgstr ""
+msgstr "Vista de lista"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:160
 msgid ""
@@ -25569,16 +26040,23 @@ msgid ""
 "the available filters in the drop-down filter menu (accessible via the "
 ":guilabel:`▼ (downward facing arrow)` icon to the right of the search bar)."
 msgstr ""
+"Con la vista de lista seleccionada, las métricas de suscripción analizadas "
+"se muestran en una lista simple, que puede personalizarse completamente "
+"utilizando cualquiera de los filtros disponibles en el menú desplegable de "
+"filtros (accesible a través del icono :guilabel:`▼ (flecha hacia abajo)` "
+"situado a la derecha de la barra de búsqueda)."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:165
 msgid ""
 "With list view selected, the :guilabel:`Measures` drop-down menu and "
 ":guilabel:`Insert in Spreadsheet` button are *not* available."
 msgstr ""
+"Con la vista de lista seleccionada, el menú desplegable :guilabel:`Medidas` "
+"y el botón :guilabel:`Insertar en hoja de cálculo` *no* están disponibles."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:169
 msgid "Measures"
-msgstr ""
+msgstr "Medidas"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:171
 msgid ""
@@ -25586,11 +26064,17 @@ msgid ""
 "down menu of data-related options to choose from, located in the upper-left "
 "corner, above the visual representation of metrics."
 msgstr ""
+"Cada página de reportes tiene su propio menú desplegable de "
+":guilabel:`Medidas` con opciones relacionadas entre las que puede elegir. "
+"Está ubicado en la esquina superior izquierda, encima de la representación "
+"visual de las métricas."
 
 #: ../../content/applications/sales/subscriptions/reports.rst-1
 msgid ""
 "The standard measures drop-down menu in the Odoo Subscriptions application."
 msgstr ""
+"El menú desplegable de medidas estándar en la aplicación Suscripciones de "
+"Odoo."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:179
 msgid ""
@@ -25599,6 +26083,10 @@ msgid ""
 "drop-down menu, the chosen metrics related to that specific measure appear "
 "on the reporting page."
 msgstr ""
+"Al hacer clic, aparece una serie de medidas que podrá seleccionar a través "
+"de un menú desplegable. Al seleccionar cualquiera de ellas en el menú "
+"desplegable :guilabel:`Medidas`, las métricas elegidas relacionadas con esa "
+"medida específica aparecen en la página de reportes."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:184
 msgid ""
@@ -25606,16 +26094,22 @@ msgid ""
 "reporting page, refer to the :ref:`specific reporting page breakdowns "
 "<subscriptions/reports/reporting>` found below in this documentation."
 msgstr ""
+"Para obtener más información sobre las diferentes medidas que se pueden "
+"utilizar en cada página de reportes, consulte la :ref:`página específica de "
+"desglose de reportes <subscriptions/reports/reporting>` que se encuentra en "
+"esta documentación."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:189
 msgid "Insert in spreadsheet"
-msgstr ""
+msgstr "Insertar en hoja de cálculo"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:191
 msgid ""
 "Beside the :guilabel:`Measures` drop-down menu, there is an "
 ":guilabel:`Insert in Spreadsheet` button."
 msgstr ""
+"A un lado del menú desplegable :guilabel:`Medidas` hay un botón "
+":guilabel:`Insertar en hoja de cálculo`."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:194
 msgid ""
@@ -25623,26 +26117,33 @@ msgid ""
 "showcased on the reporting page into a new or pre-existing spreadsheet or "
 "dashboard becomes available, via a pop-up window."
 msgstr ""
+"Al hacer clic abrirá una ventana emergente que le permitirá agregar los "
+"datos configurados que aparecen en ese momento en la página de reportes a "
+"una hoja de cálculo o un tablero nuevo o ya existentes."
 
 #: ../../content/applications/sales/subscriptions/reports.rst-1
 msgid "The spreadsheet pop-up window of the Subscriptions Analysis page."
-msgstr ""
+msgstr "La ventana emergente de la página de Análisis de suscripciones."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:201
 msgid ""
 "Select the desired option from this pop-up window, then click "
 ":guilabel:`Confirm`."
 msgstr ""
+"Selecciona la opción deseada desde esta ventana emergente, después haga clic"
+" en :guilabel:`Confirmar`."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:206
 msgid "Reporting pages"
-msgstr ""
+msgstr "Páginas de reportes"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:208
 msgid ""
 "In the Odoo *Subscriptions* application, there are four different reporting "
 "pages available."
 msgstr ""
+"En la aplicación de *Suscripciones* de Odoo hay cuatro páginas de reportes "
+"diferentes disponibles."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:210
 msgid ""
@@ -25650,66 +26151,87 @@ msgid ""
 "navigate to :menuselection:`Subscriptions app`, and click the "
 ":guilabel:`Reporting` drop-down menu in the header."
 msgstr ""
+"Para acceder a, analizar y personalizar varios reportes relacionados a las "
+"suscripciones, vaya a :menuselection:`la aplicación de Suscripciones`, y "
+"haga clic en el menú desplegable :guilabel:`Reportes` que se encuentra en el"
+" encabezado."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:214
 msgid ""
 "Clicking :guilabel:`Reporting` in the header menu reveals a drop-down menu "
 "of the following reporting pages:"
 msgstr ""
+"Al hacer clic en :guilabel:`Reportes` se mostrará un menú desplegable con "
+"las siguientes páginas de reportes:"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:217
 msgid ":guilabel:`Subscriptions`"
-msgstr ""
+msgstr ":guilabel:`Suscripciones`"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:218
 msgid ":guilabel:`Retention`"
-msgstr ""
+msgstr ":guilabel:`Retención`"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:219
 msgid ":guilabel:`MRR Breakdown`"
-msgstr ""
+msgstr ":guilabel:`Desglose de MRR`"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:220
 msgid ":guilabel:`MRR Timeline`"
-msgstr ""
+msgstr ":guilabel:`Línea de tiempo de MRR`"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:222
 msgid ""
 "Clicking any of those options reveals a separate, fully-customizable "
 "reporting page focusing on that particular aspect of subscription data."
 msgstr ""
+"Hacer clic en cualquiera de esas opciones muestra una página de reportes "
+"diferente y completamente personalizable en ese aspecto particular de la "
+"información de suscripción."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:225
 msgid "The following is a breakdown of those four specific reporting pages."
 msgstr ""
+"A continuación se muestra un desglose de esas cuatro páginas de reportes "
+"específicas,"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:228
 msgid "Subscriptions analysis"
-msgstr ""
+msgstr "Análisis de suscripciones"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:230
 msgid ""
 "To access the :guilabel:`Subscriptions Analysis` reporting page, navigate to"
 " :menuselection:`Subscriptions app --> Reporting --> Subscriptions`."
 msgstr ""
+"Para acceder a la página de reportes :guilabel:`Análisis de suscripción` "
+"vaya a :menuselection:`la aplicación Suscripción --> Reportes --> "
+"Subscripciones`."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:233
 msgid ""
 "By default, the :guilabel:`Bar Chart` option, in the :guilabel:`Graph` view,"
 " is selected on the :guilabel:`Subscriptions Analysis` reporting page."
 msgstr ""
+"Por defecto, la opción :guilabel:`gráfico de barras` en la vista "
+":guilabel:`Gráfica` se selecciona en la página de reportes "
+":guilabel:`Análisis de suscripción`."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:236
 msgid ""
 "The following filters are also present in the search bar: :guilabel:`In "
 "Progress or Paused` and :guilabel:`Recurring`."
 msgstr ""
+"Los siguientes filtros también están presentes en la barra de búsqueda: "
+":guilabel:`En progreso o en pausa` y :guilabel:`Recurrente`."
 
 #: ../../content/applications/sales/subscriptions/reports.rst-1
 msgid ""
 "The default view of the Subscriptions Analysis reporting page in Odoo "
 "Subscriptions."
 msgstr ""
+"La vista predeterminada de la página de reportes de análisis de "
+"suscripciones en la aplicación Suscripciones de Odoo."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:243
 msgid ""
@@ -25717,64 +26239,75 @@ msgid ""
 " Analysis` page is clicked, a series of metric-related options become "
 "available."
 msgstr ""
+"Al hacer clic en el menú desplegable :guilabel:`Medidas` de la página "
+":guilabel:`Análisis de suscripciones`, aparecen una serie de opciones "
+"relacionadas con las métricas."
 
 #: ../../content/applications/sales/subscriptions/reports.rst-1
 msgid "The measures drop-down menu of the Subscriptions Analysis page."
 msgstr ""
+"El menú desplegable de medidas de la página de Análisis de suscripción."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:250
 msgid ""
 "The metric-related options in the :guilabel:`Measures` drop-down menu on the"
 " :guilabel:`Subscriptions Analysis` page are:"
 msgstr ""
+"Las opciones relacionadas con las métricas en el menú desplegable "
+":guilabel:`Medidas` de la página :guilabel:`Análisis de suscripciones` son:"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:253
 msgid ":guilabel:`Monthly Recurring`"
-msgstr ""
+msgstr ":guilabel:`Recurrente mensual`"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:254
 msgid ":guilabel:`Quantity`"
-msgstr ""
+msgstr ":guilabel:`Cantidad`"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:255
 msgid ":guilabel:`Recurring Revenue`"
-msgstr ""
+msgstr ":guilabel:`Ingresos recurrentes`"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:256
 msgid ":guilabel:`Untaxed Total`"
-msgstr ""
+msgstr ":guilabel:`Total sin impuestos`"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:257
 msgid ":guilabel:`Yearly Recurring`"
-msgstr ""
+msgstr ":guilabel:`Anual recurrentes`"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:258
 #: ../../content/applications/sales/subscriptions/reports.rst:296
 #: ../../content/applications/sales/subscriptions/reports.rst:352
 #: ../../content/applications/sales/subscriptions/reports.rst:400
 msgid ":guilabel:`Count`"
-msgstr ""
+msgstr ":guilabel:`Conteo`"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:261
 msgid ""
 "The :guilabel:`Monthly Recurring` measure option is selected by default."
 msgstr ""
+"La opción :guilabel:`recurrente mensual` estará seleccionada por defecto."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:263
 msgid ""
 "When any of those available measures are clicked, Odoo displays that "
 "selected data on the reporting page for further analysis."
 msgstr ""
+"Al hacer clic en cualquiera de las medidas disponibles, Odoo muestra los "
+"datos seleccionados en la página de reportes para un análisis más detallado."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:267
 msgid "Retention analysis"
-msgstr ""
+msgstr "Análisis de retención"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:269
 msgid ""
 "To access the :guilabel:`Retention Analysis` reporting page, navigate to "
 ":menuselection:`Subscriptions app --> Reporting --> Retention`."
 msgstr ""
+"Para acceder a la página de reportes :guilabel:`Análisis de retención` vaya "
+"a :menuselection:`la aplicación Suscripción --> Reportes --> Retenciones`."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:272
 msgid ""
@@ -25783,12 +26316,18 @@ msgid ""
 "additional view options. The data on this page is only presented in a "
 "customizable data chart."
 msgstr ""
+"La página de reportes :guilabel:`Análisis de retención` es distinta a las "
+"otras páginas de reportes de la aplicación *Suscripciones*, pues esta *no* "
+"proporciona ninguna opción de visualización adicional. Los datos de esta "
+"página solo aparecen en un gráfico de datos personalizable."
 
 #: ../../content/applications/sales/subscriptions/reports.rst-1
 msgid ""
 "The default view of the Retention Analysis reporting page in Odoo "
 "Subscriptions."
 msgstr ""
+"La vista predeterminada de la página de reportes de análisis de retención en"
+" la aplicación Suscripciones de Odoo."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:280
 msgid ""
@@ -25796,44 +26335,49 @@ msgid ""
 "Analysis` reporting page is clicked, a series of metric-related options "
 "become available."
 msgstr ""
+"Al hacer clic en el menú desplegable :guilabel:`Medidas` de la página "
+":guilabel:`Análisis de retenciones`, aparecen una serie de opciones "
+"relacionadas con las métricas."
 
 #: ../../content/applications/sales/subscriptions/reports.rst-1
 msgid "The measures drop-down menu of the Retention Analysis page."
-msgstr ""
+msgstr "El menú desplegable de medidas de la página de Análisis de retención."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:287
 msgid ""
 "The metric-related options in the :guilabel:`Measures` drop-down menu on the"
 " :guilabel:`Retention Analysis` reporting page are:"
 msgstr ""
+"Las opciones relacionadas con las métricas en el menú desplegable "
+":guilabel:`Medidas` de la página :guilabel:`Análisis de retención` son:"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:290
 msgid ":guilabel:`Amount to invoice`"
-msgstr ""
+msgstr ":guilabel:`Cantidad por facturar`"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:291
 msgid ":guilabel:`Margin`"
-msgstr ""
+msgstr ":guilabel:`Margen`"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:292
 msgid ":guilabel:`Margin (%)`"
-msgstr ""
+msgstr ":guilabel:`Margen (%)`"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:293
 msgid ":guilabel:`Prepayment percentage`"
-msgstr ""
+msgstr ":guilabel:`Porcentaje de prepago`"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:294
 msgid ":guilabel:`Shipping Weight`"
-msgstr ""
+msgstr ":guilabel:`Peso de envío`"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:295
 msgid ":guilabel:`Unpaid Amount`"
-msgstr ""
+msgstr ":guilabel:`Cantidad sin pagar`"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:299
 msgid "The :guilabel:`Count` measure option is selected by default."
-msgstr ""
+msgstr "La opción :guilabel:`conteo` estará seleccionada por defecto."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:301
 msgid ""
@@ -25842,36 +26386,43 @@ msgid ""
 "containing different time periods. The default time period is "
 ":guilabel:`Month`."
 msgstr ""
+"A la derecha del menú desplegable :guilabel:`Medidas` de la página "
+":guilabel:`Análisis de retención` hay un menú desplegable adicional que "
+"contiene diferentes periodos de tiempo. El periodo de tiempo por defecto es "
+":guilabel:`Mes`."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:305
 msgid ""
 "When clicked, a drop-down menu of various time period options become "
 "available."
 msgstr ""
+"Al hacer clic, aparece un menú desplegable con varias opciones de periodos "
+"de tiempo."
 
 #: ../../content/applications/sales/subscriptions/reports.rst-1
 msgid "The time period drop-down menu of the Retention Analysis page."
 msgstr ""
+"El menú desplegable de periodos de la página de Análisis de retención."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:311
 msgid "The time period options are:"
-msgstr ""
+msgstr "Las opciones de periodos son:"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:313
 msgid ":guilabel:`Day`"
-msgstr ""
+msgstr ":guilabel:`Día`"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:314
 msgid ":guilabel:`Week`"
-msgstr ""
+msgstr ":guilabel:`Semana`"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:315
 msgid ":guilabel:`Month`"
-msgstr ""
+msgstr ":guilabel:`Mes`"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:316
 msgid ":guilabel:`Year`"
-msgstr ""
+msgstr ":guilabel:`Año`"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:318
 msgid ""
@@ -25879,6 +26430,9 @@ msgid ""
 ":guilabel:`Retention Analysis` reporting page showcases data for the "
 "configured measures and filters within that time period."
 msgstr ""
+"Cuando selecciona una opción de periodo de este menú desplegable, la página "
+"del reporte :guilabel:`Análisis de retención` muestra los datos de las "
+"medidas y filtros configurados dentro del mismo."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:321
 msgid ""
@@ -25886,16 +26440,21 @@ msgid ""
 "which allows the user to download the data presented on the "
 ":guilabel:`Retention Analysis` page as an Excel file."
 msgstr ""
+"A la derecha del menú desplegable del periodo de tiempo, hay un botón de "
+"descarga que permite al usuario descargar los datos presentados en la página"
+" :guilabel:`Análisis de retención` como archivo Excel."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:325
 msgid "MRR breakdown"
-msgstr ""
+msgstr "Desglose MRR"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:327
 msgid ""
 "To access the :guilabel:`MRR Breakdown` reporting page, navigate to "
 ":menuselection:`Subscriptions app --> Reporting --> MRR Breakdown`."
 msgstr ""
+"Para acceder a la página del reporte :guilabel:`Desglose de MRR` vaya a "
+":menuselection:`la aplicación Suscripción --> Reportes --> Desglose de MRR`."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:330
 msgid ""
@@ -25903,18 +26462,25 @@ msgid ""
 "page is in graph view, with the :guilabel:`Bar Chart` option and the "
 ":guilabel:`Stacked` option selected."
 msgstr ""
+"Los datos que aparecen en la página de reportes :guilabel:`desglose de MRR` "
+"están en vista de gráfico de forma predeterminada con las opciones "
+":guilabel:`Gráfico de barras` y :guilabel:`Apilado` seleccionadas."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:333
 msgid ""
 "There is also a default filter in the search bar for :guilabel:`Event Date: "
 "Month > Event Type`."
 msgstr ""
+"También hay un filtro automático en la barra de búsqueda para "
+";guilabel:`Fecha del evento: mes > Tipo de evento`."
 
 #: ../../content/applications/sales/subscriptions/reports.rst-1
 msgid ""
 "The default appearance of the MRR Breakdown reporting page in Odoo "
 "Subscriptions."
 msgstr ""
+"La apariencia por defecto de la página del reporte de Desglose de MRR en "
+"Suscripciones de Odoo."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:339
 msgid ""
@@ -25922,32 +26488,38 @@ msgid ""
 "Breakdown` reporting page is clicked, a series of metric-related options "
 "become available."
 msgstr ""
+"Al hacer clic en el menú desplegable :guilabel:`Medidas` de la página "
+":guilabel:`Desglose de MRR`, aparecen una serie de opciones relacionadas con"
+" las métricas."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:346
 msgid ""
 "The metric-related options in the :guilabel:`Measures` drop-down menu on the"
 " :guilabel:`MRR Breakdown` reporting page are:"
 msgstr ""
+"Las opciones relacionadas con las métricas en el menú desplegable "
+":guilabel:`Medidas` de la página :guilabel:`Desglose de MRR` son:"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:349
 #: ../../content/applications/sales/subscriptions/reports.rst:397
 msgid ":guilabel:`Active Subscriptions Change`"
-msgstr ""
+msgstr ":guilabel:`Cambio de suscripciones activas`"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:350
 #: ../../content/applications/sales/subscriptions/reports.rst:398
 msgid ":guilabel:`ARR Change`"
-msgstr ""
+msgstr ":guilabel:`Cambio ARR`"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:351
 #: ../../content/applications/sales/subscriptions/reports.rst:399
 msgid ":guilabel:`MRR Change`"
-msgstr ""
+msgstr ":guilabel:`Cambio MRR`"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:355
 #: ../../content/applications/sales/subscriptions/reports.rst:403
 msgid "The :guilabel:`MRR Change` measure option is selected by default."
 msgstr ""
+"La opción de medida :guilabel:`Cambio MRR` está seleccionada por defecto."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:358
 msgid ""

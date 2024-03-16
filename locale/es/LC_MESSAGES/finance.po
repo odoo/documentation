@@ -26,13 +26,13 @@
 # Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2023
 # renodoo <ren@odoo.com>, 2023
 # Braulio D. López Vázquez <bdl@odoo.com>, 2023
-# Raquel Iciarte <ric@odoo.com>, 2023
 # Lucia Pacheco, 2023
 # Iran Villalobos López, 2024
 # Martin Trigaux, 2024
+# Raquel Iciarte <ric@odoo.com>, 2024
 # Wil Odoo, 2024
-# Larissa Manderfeld, 2024
 # Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2024
+# Larissa Manderfeld, 2024
 # Fernanda Alvarez, 2024
 # 
 #, fuzzy
@@ -2531,6 +2531,12 @@ msgid ""
 "mark it as :guilabel:`To Check`. Any :ref:`reconciliation model buttons "
 "<reconciliation/button>` are also available in the resulting entry section."
 msgstr ""
+"La sección de asiento resultante en la parte superior derecha muestra la "
+"transacción bancaria seleccionada con los asientos de contrapartida e "
+"incluye cualquier cargo o abono restante. En esta sección, puede validar la "
+"conciliación o marcarla como :guilabel:`por revisar`. Todos los "
+":ref:`botones de los modelos de conciliación <reconciliation/button>` "
+"también están disponibles en la sección del asiento resultante. "
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:59
 msgid "Reconcile transactions"
@@ -2545,6 +2551,12 @@ msgid ""
 "<reconciliation/manual-operations>`, and :ref:`reconciliation model buttons "
 "<reconciliation/button>`."
 msgstr ""
+"Las transacciones se pueden conciliar de forma automática con el uso de "
+":doc:`los modelos de conciliación <reconciliation_models>`, o se pueden "
+"conciliar con :ref:`asientos existentes <reconciliation/existing-entries>`, "
+":ref:`pagos por lote <reconciliation/batch-payments>`, :ref:`operaciones "
+"manuales <reconciliation/manual-operations>` y :ref:`botones de modelo de "
+"conciliación <reconciliation/button>`."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:67
 msgid "Select a transaction among unmatched bank transactions."
@@ -2561,6 +2573,11 @@ msgid ""
 "<reconciliation/batch-payments>`, and :ref:`reconciliation model buttons "
 "<reconciliation/button>`."
 msgstr ""
+"Defina la contrapartida. Hay varias opciones para esto, incluyendo "
+":ref:`conciliar asientos existentes <reconciliation/existing-entries>`, "
+":ref:`operaciones manuales <reconciliation/manual-operations>`, :ref:`pagos "
+"por lote <reconciliation/batch-payments>`, y :ref:`botones del modelo de "
+"conciliación <reconciliation/button>`."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:72
 msgid ""
@@ -2616,6 +2633,10 @@ msgid ""
 ":doc:`reconciliation models <reconciliation_models>`, with suggested entries"
 " appearing first."
 msgstr ""
+"Esta pestaña contiene los asientos conciliados que Odoo selecciona de manera"
+" automática según los modelos de conciliación. El orden del asiento se basa "
+"en los :ref:`modelos de conciliación <reconciliation_models>`, pero los "
+"asientos sugeridos aparecerán primero."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:97
 msgid ""
@@ -2701,10 +2722,14 @@ msgid ""
 "quickly reconcile bank transactions manually and can also be used in "
 "combination with existing entries."
 msgstr ""
+"Use el :doc:`botón del modelo de conciliación <reconciliation_models>` para "
+"operaciones manuales que se usan con frecuencia. Estos botones "
+"personalizados le permitirán conciliar transacciones bancarias de manera "
+"eficaz y manual, además de que se pueden usar con asientos ya existentes."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:3
 msgid "Reconciliation models"
-msgstr ""
+msgstr "Modelos de conciliación"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:5
 msgid ""
@@ -2713,12 +2738,19 @@ msgid ""
 "recurring entries like bank fees. Reconciliation models can also be helpful "
 "in handling :doc:`cash discounts <../customer_invoices/cash_discounts>`."
 msgstr ""
+"Los modelos de conciliación se usan para automatizar el proceso de "
+":doc:`conciliación bancaria <reconciliation>`. Esto es muy útil al trabajar "
+"con asientos recurrentes, como tarifas bancarias. Los modelos de "
+"conciliación también pueden ser muy útiles al trabajar con :doc:`descuentos "
+"de efectivo <../customer_invoices/cash_discounts>`."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:9
 msgid ""
 "Each model is created based on a :ref:`model type <models/type>` and "
 ":guilabel:`bank transaction conditions`."
 msgstr ""
+"Cada modelo se crea según un :ref:`tipo de modelo <models/type>` y las "
+":guilabel:`condiciones de transacciones bancarias`."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:14
 msgid ""
@@ -2726,10 +2758,13 @@ msgid ""
 "<https://www.odoo.com/slides/slide/reconciliation-"
 "models-1841?fullscreen=1>`_"
 msgstr ""
+"`Tutoriales de Odoo: modelos de conciliación "
+"<https://www.odoo.com/slides/slide/reconciliation-"
+"models-1841?fullscreen=1>`_"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:19
 msgid "Reconciliation model types"
-msgstr ""
+msgstr "Tipos de modelos de conciliación"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:21
 msgid ""
@@ -2738,6 +2773,10 @@ msgid ""
 "Models`. For each reconciliation model, a :guilabel:`Type` must be set. "
 "Three types of models exist:"
 msgstr ""
+"Los modelos de conciliación están disponibles en "
+":menuselection:`Contabilidad --> Configuración --> Bancos: modelos de "
+"conciliación`. Para cada modelo de conciliación debe configurar un "
+":guilabel:`Tipo`. Existen tres tipos de modelos:"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:25
 msgid ""
@@ -2748,6 +2787,12 @@ msgid ""
 "model determine the counterpart entry's account(s), amount(s), label(s), and"
 " analytic distribution;"
 msgstr ""
+":guilabel:`Botón para generar el asiento de contrapartida`: se crea un botón"
+" en la sección del asiento de la vista de conciliación bancaria. Si se hace "
+"clic en el botín, se generará un asiento de contrapartida que se conciliará "
+"con la transacción activa según las reglas en el modelo, las cuales "
+"determinan la cuenta, cantidad, etiquetas y distribución analítica del "
+"asiento de contrapartida."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:30
 msgid ""
@@ -2755,6 +2800,9 @@ msgid ""
 "transactions to match the transaction to a new entry based on conditions "
 "that must match the information on the transaction;"
 msgstr ""
+":guilabel:`Regla para sugerir un asiento de contrapartida`: se usa en "
+"transacciones recurrentes para conciliarlas a un nuevo asiento según "
+"condiciones que deben vincular la información con la transacción."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:32
 msgid ""
@@ -2762,10 +2810,13 @@ msgid ""
 " match the transaction to existing invoices, bills, or payments based on "
 "conditions that must match the information on the transaction."
 msgstr ""
+":guilabel:`Regla para conciliar facturas`: se usa para conciliar "
+"transacciones recurrentes con facturas o pagos según condiciones que deben "
+"coincidir con la información en la transacción."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:37
 msgid "Default reconciliation models"
-msgstr ""
+msgstr "Modelos de conciliación predeterminados"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:39
 msgid ""
@@ -2773,6 +2824,10 @@ msgid ""
 "company's fiscal localization. These can be updated if needed. Users can "
 "also create their own reconciliation models by clicking :guilabel:`New`."
 msgstr ""
+"En Odoo hay diferentes modelos de conciliación disponibles de forma "
+"predeterminada según la localización fiscal de la empresa. Estos modelos se "
+"pueden actualizar en caso de que sea necesario, además que los usuarios "
+"pueden crear sus propios modelos si hacen clic en :guilabel:`Nuevo`."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:44
 msgid ""
@@ -2780,14 +2835,18 @@ msgid ""
 " *sequence* of models is applied. You can rearrange the order by dragging "
 "and dropping the handle next to the name."
 msgstr ""
+"Si un registro coincide con varios modelos de conciliación, se aplicará el "
+"que aparezca primero en la *secuencia* de modelos. Para ajustar el orden "
+"solo debe hacer clic en los tres puntos a un lado de su nombre para "
+"arrastrar y soltar el modelo al lugar deseado."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:0
 msgid "Rearrange the sequence of models in the list view."
-msgstr ""
+msgstr "Cambiar la secuencia de los modelos en la vista de lista."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:51
 msgid "Invoices/Bills perfect match"
-msgstr ""
+msgstr "Coincidencia perfecta de facturas"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:53
 msgid ""
@@ -2795,10 +2854,13 @@ msgid ""
 "Odoo to suggest matching existing invoices or bills with a bank transaction "
 "based on set conditions."
 msgstr ""
+"Este modelo debería estar al inicio de la *secuencia* de modelos, ya que "
+"permite que Odoo sugiera la conciliación de facturas existentes según "
+"condiciones específicas."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst-1
 msgid "Set rules to trigger the reconciliation."
-msgstr ""
+msgstr "Reglas específicas para activar la conciliación."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:59
 msgid ""
@@ -2809,10 +2871,17 @@ msgid ""
 ":guilabel:`Partner is set` is selected) to suggest the correct counterpart "
 "entry and reconcile the payment automatically."
 msgstr ""
+"Odoo concilia el pago de manera automática cuando selecciona la opción "
+":guilabel:`Autovalidar` y las condiciones del modelo se cumplen a la "
+"perfección. En este caso, el modelo esperará encontrar en la línea del "
+"estado bancario la referencia de la factura (ya que se seleccionó "
+":guilabel:`Etiqueta`) y el nombre del contacto (ya que se seleccionó "
+":guilabel:`El contacto está establecido`) para sugerir el asiento de "
+"contrapartida correcto y conciliar el pago de forma automática."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:66
 msgid "Invoices/Bills partial match if underpaid"
-msgstr ""
+msgstr "Conciliación parcial de las facturas si no se han pagado"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:68
 msgid ""
@@ -2822,18 +2891,28 @@ msgid ""
 "reconciled with the account indicated in the :guilabel:`counterpart entries`"
 " tab."
 msgstr ""
+"Este modelo sugiere una factura que solo coincide parcialmente con el pago "
+"cuando la cantidad recibida es un poco menor que la cantidad de la factura, "
+"como puede pasar con los **descuentos de efectivo**. La diferencia se "
+"concilia con la cuenta indicada en la pestaña :guilabel:`asientos de "
+"contrapartida`."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:73
 msgid ""
 "The reconciliation model :guilabel:`Type` is :guilabel:`Rule to match "
 "invoices/bills`, and the :guilabel:`Payment tolerance` should be set."
 msgstr ""
+"El :guilabel:`Tipo` de modelo de conciliación es :guilabel:`Regla para "
+"emparejar facturas` y se tiene que configurar :guilabel:`Tolerancia de "
+"pago`."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:80
 msgid ""
 "The :guilabel:`Payment tolerance` is only applicable to lower payments. It "
 "is disregarded when an overpayment is received."
 msgstr ""
+"La :guilabel:`Tolerancia de pago` solo se puede aplicar a pagos menores a la"
+" cantidad acordada. No se toma en cuenta cuando se paga de más."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:84
 msgid ":doc:`../customer_invoices/cash_discounts`"
@@ -2841,7 +2920,7 @@ msgstr ":doc:`../customer_invoices/cash_discounts`"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:87
 msgid "Line with bank fees"
-msgstr ""
+msgstr "Línea con comisiones bancarias"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:89
 msgid ""
@@ -2851,6 +2930,11 @@ msgid ""
 " be used for example, to identify the information referring to the "
 ":guilabel:`Bank fees` in the label of the transaction."
 msgstr ""
+"Este modelo sugiere un asiento de contrapartida según las reglas "
+"configuradas en el modelo. En este caso, el :guilabel:`Tipo` de modelo de "
+"conciliación es :guilabel:`Regla para sugerir un asiento de contrapartida` y"
+" la :guilabel:`Etiqueta` se puede usar para identificar la información de "
+"las :guilabel:`Comisiones bancarias` en la etiqueta de la transacción."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:98
 msgid ""
@@ -2860,6 +2944,12 @@ msgid ""
 "so it's essential to use it judiciously and with a good understanding of the"
 " patterns you're working with."
 msgstr ""
+"Las `Regular expressions <https://regexone.com/>`_ (expresiones regulares), "
+"también conocidas como **Regex**, se pueden usar en Odoo de muchas formas "
+"para buscar, validar y manipular información dentro del sistema. Las Regex "
+"pueden ser muy útiles pero también complejas, por lo que es necesario "
+"usarlas con sensatez y solo si se entienden bien los patrones con los que se"
+" está trabajando."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:103
 msgid ""
@@ -2868,14 +2958,18 @@ msgid ""
 "expression. Odoo automatically retrieves the transactions that match your "
 "Regex expression and the conditions specified in your model."
 msgstr ""
+"Para usar regex en sus modelos de conciliación, configure el :guilabel:`tipo"
+" de transacción` como :guilabel:`Regex de emparejamiento` y agregue su "
+"expresión. Odoo recupera de forma automática las transacciones que coinciden"
+" con su expresión Regex y las condiciones especificadas en el modelo."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:0
 msgid "Using Regex in Odoo"
-msgstr ""
+msgstr "Uso de expresiones regulares en Odoo"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:111
 msgid "Partner mapping"
-msgstr ""
+msgstr "Mapeo de contactos"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:113
 msgid ""
@@ -2887,6 +2981,14 @@ msgid ""
 "incoming payment meets these criteria, Odoo automatically maps it to the "
 "corresponding customer's account."
 msgstr ""
+"El mapeo de contactos le permite establecer reglas para coincidir "
+"transacciones de manera automática a la cuenta del contacto correcta, así se"
+" ahorrará tiempo y se reducirán los riesgos de cometer errores al realizar "
+"una conciliación manual. Por ejemplo, puede crear una regla de mapeo de "
+"contactos para pagos entrantes con números o palabras clave de referencia "
+"específicos en la descripción de la transacción. Cuando un pago entrante "
+"cumple con estos criterios, Odoo lo vincula a la cuenta del cliente "
+"correspondiente."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:119
 msgid ""
@@ -2894,10 +2996,13 @@ msgid ""
 "and enter the :guilabel:`Find Text in Label`, :guilabel:`Find Text in "
 "Notes`, and :guilabel:`Partner`."
 msgstr ""
+"Para crear una regla de mapeo de contacto, vaya a la pestaña "
+":guilabel:`Mapeo de contactos` e ingrese guilabel:`Buscar texto en "
+"etiqueta`, :guilabel:`Buscar texto en notas` y :guilabel:`Contacto`."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst-1
 msgid "defining partner mapping"
-msgstr ""
+msgstr "definir el mapeo del contacto"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:5
 msgid ""
@@ -4653,6 +4758,11 @@ msgid ""
 "amounts from the deferred account to the income account to recognize the "
 "revenue."
 msgstr ""
+"Un asiento, con fecha del mismo día que la fecha contable de la factura, "
+"mueve las cantidades facturadas de la cuenta de ingresos a la cuenta de "
+"diferidos. Los otros asientos son asientos diferidos que cada mes mueven las"
+" cantidades facturadas de la cuenta de diferidos a la cuenta de ingresos "
+"para reconocer el ingreso."
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:73
 msgid ""
@@ -8610,7 +8720,7 @@ msgstr "Devolución del artículo para recibir los 10 dólares correspondientes.
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:38
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:41
 msgid "Chart of accounts"
-msgstr "Plan de cuentas"
+msgstr "Plan contable"
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:5
 msgid ""
@@ -11627,6 +11737,8 @@ msgid ""
 "Make sure your :doc:`payment providers are correctly configured "
 "<../../payment_providers>`."
 msgstr ""
+"Asegúrese de que :doc:`configuró bien los proveedores de pago "
+"<../../payment_providers>`."
 
 #: ../../content/applications/finance/accounting/payments/online.rst:26
 msgid ""
@@ -11635,6 +11747,10 @@ msgid ""
 "payment provider activated, but you still have to fill out the payment "
 "details."
 msgstr ""
+"De forma predeterminada, la \":doc:`transferencia bancaria "
+"</applications/finance/payment_providers/wire_transfer>`\" es el único "
+"proveedor de pago activado, pero de igual manera debe completar los detalles"
+" de pago."
 
 #: ../../content/applications/finance/accounting/payments/online.rst:29
 msgid ""
@@ -16928,7 +17044,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:85
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:42
 msgid "Reports"
-msgstr "Reportes"
+msgstr "Informes"
 
 #: ../../content/applications/finance/accounting/taxes/eu_distance_selling.rst:54
 msgid ""
@@ -18354,6 +18470,11 @@ msgid ""
 "amounts from the deferred account to the expense account to recognize the "
 "expense."
 msgstr ""
+"Un asiento, con fecha del mismo día que la fecha contable de la factura, "
+"mueve las cantidades facturadas de la cuenta de gastos a la cuenta de "
+"diferidos. Los otros asientos son asientos diferidos que cada mes mueven las"
+" cantidades facturadas de la cuenta de diferidos a la cuenta de gastos para "
+"reconocer el gasto."
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:73
 msgid ""
@@ -21511,7 +21632,7 @@ msgstr ":doc:`Singapur - Contabiliad <fiscal_localizations/singapore>`"
 
 #: ../../content/applications/finance/fiscal_localizations.rst:112
 msgid "Slovak - Accounting"
-msgstr "Eslovenia - Contabilidad"
+msgstr "Eslovaquia - Contabilidad"
 
 #: ../../content/applications/finance/fiscal_localizations.rst:113
 msgid "Slovenian - Accounting"
@@ -21585,7 +21706,7 @@ msgstr "Argentina"
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:6
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:18
 msgid "Webinars"
-msgstr "Webinars"
+msgstr "Webinarios"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:8
 msgid ""
@@ -21600,7 +21721,7 @@ msgid ""
 "`Webinar - Localización de Argentina "
 "<https://www.youtube.com/watch?v=_H1HbU-wKVg>`_."
 msgstr ""
-"`Webinar - Localización de Argentina "
+"`Webinario - Localización de Argentina "
 "<https://www.youtube.com/watch?v=_H1HbU-wKVg>`_."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:11
@@ -21730,6 +21851,8 @@ msgstr ""
 msgid ""
 ":ref:`Argentinean eCommerce <argentina/ecommerce-electronic-invoicing>`"
 msgstr ""
+":ref:`Comercio electrónico de Argentina <argentina/ecommerce-electronic-"
+"invoicing>`"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:45
 msgid "`l10n_ar_website_sale`"
@@ -23616,7 +23739,7 @@ msgstr "El **contacto** asociado a la operación (ya sea cliente o proveedor)."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:882
 msgid "Ecommerce electronic invoicing"
-msgstr ""
+msgstr "Facturación electrónica para comercio electrónico"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:885
 msgid ""
@@ -23624,22 +23747,30 @@ msgid ""
 "(`l10n_ar_website_sale`) module to enable the following features and "
 "configurations:"
 msgstr ""
+":ref:`Instale <general/install>` el módulo *Comercio electrónico de "
+"Argentina* (`l10n_ar_website_sale`) para habilitar las siguientes funciones "
+"y configuraciones:"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:888
 msgid "Clients being able to create online accounts for eCommerce purposes."
 msgstr ""
+"Los clientes pueden crear cuentas en línea con propósitos de comercio "
+"electrónico."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:889
 msgid "Support for required fiscal fields in the eCommerce application."
 msgstr ""
+"Compatibilidad con los campos fiscales necesarios en la aplicación Comercio "
+"electrónico."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:890
 msgid "Receive payments for sale orders online."
-msgstr ""
+msgstr "Reciba pagos por órdenes de venta en línea."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:891
 msgid "Generate electronic documents from the eCommerce application."
 msgstr ""
+"Genere documentos electrónicos desde la aplicación Comercio electrónico."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:896
 msgid ""
@@ -23647,10 +23778,14 @@ msgid ""
 " invoice <argentina/configure-your-company>` flow, it is also necessary to "
 "complete certain configurations to integrate the eCommerce flow."
 msgstr ""
+"Una vez que haya terminado de configurar el flujo de :ref:`facturación "
+"electrónica <argentina/configure-your-company>` de Argentina, también "
+"necesita completar la configuración para integrar el flujo de comercio "
+"electrónico."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:901
 msgid "Client account registration"
-msgstr ""
+msgstr "Registro de la cuenta del cliente"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:903
 msgid ""
@@ -23659,10 +23794,14 @@ msgid ""
 "<../../websites/ecommerce/checkout_payment_shipping/checkout>` "
 "documentation."
 msgstr ""
+"Siga las instrucciones de la documentación sobre el :doc:`proceso de pago "
+"<../../websites/ecommerce/checkout_payment_shipping/checkout>` para "
+"configurar su sitio web de forma adecuada y que los clientes puedan crear "
+"cuentas."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:907
 msgid "Automatic invoice"
-msgstr ""
+msgstr "Facturación automática"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:909
 msgid ""
@@ -23672,10 +23811,15 @@ msgid ""
 ":guilabel:`Invoicing` section to automatically generate the required "
 "electronic documents when the online payment is confirmed."
 msgstr ""
+"Configure su sitio web para generar documentos electrónicos en el proceso de"
+" ventas, vaya a :menuselection:`Sitio web --> Configuración --> Ajustes` y "
+"habilite la función :guilabel:`Factura automática` en la sección de "
+":guilabel:`Facturación` para generar los documentos electrónicos necesarios "
+"de forma automática al confirmar un pago en línea."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst-1
 msgid "Feature activated to invoice automatically."
-msgstr ""
+msgstr "Función para facturar de forma automática activada."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:918
 msgid ""
@@ -23683,6 +23827,10 @@ msgid ""
 "Invoice` feature to generate the document, a :doc:`payment provider "
 "<../payment_providers>` **must** be configured for the related website."
 msgstr ""
+"Necesita confirmar un pago en línea para que la función :guilabel:`Factura "
+"automática` genere el documento, así que **debe** configurar un "
+":doc:`proveedor de pago <../payment_providers>` para el sitio web "
+"correspondiente."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:923
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:212
@@ -23704,10 +23852,15 @@ msgid ""
 ":guilabel:`Invoicing Policy` to :guilabel:`Ordered quantities` and define "
 "the desired :guilabel:`Customer Taxes`."
 msgstr ""
+"Para poder facturar sus productos al confirmar un pago en línea, diríjase al"
+" producto deseado desde :menuselection:`Sitio web --> Comercio electrónico "
+"--> Productos`. En la pestaña :guilabel:`Información general`, elija "
+":guilabel:`Cantidades ordenadas` como :guilabel:`Política de facturación` y "
+"defina los :guilabel:`Impuestos del cliente` necesarios."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:931
 msgid "Invoicing flow for eCommerce"
-msgstr ""
+msgstr "Flujo de facturación para Comercio electrónico"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:933
 msgid ""
@@ -23715,6 +23868,10 @@ msgid ""
 "the following required steps in the *Argentinian eCommerce* flow to input "
 "fiscal fields in the checkout process."
 msgstr ""
+"Una vez que haya terminado de configurar todo lo mencionado con "
+"anterioridad, los clientes podrán completar los siguientes pasos necesarios "
+"en el flujo *Comercio electrónico de Argentina* para proporcionar "
+"información en los campos fiscales del proceso de pago."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:936
 msgid ""
@@ -23722,10 +23879,13 @@ msgid ""
 ":guilabel:`Country` field is set as `Argentina`. Inputting the fiscal data "
 "enables the purchase to conclude in the corresponding electronic document."
 msgstr ""
+"Los campos fiscales del proceso de pago se podrán completar al elegir "
+"`Argentina` en el campo :guilabel:`País`. Proporcionar los datos fiscales "
+"permite que la compra concluya con el documento electrónico correspondiente."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst-1
 msgid "Fiscal required fields for electronic invoicing."
-msgstr ""
+msgstr "Campos fiscales necesarios para la facturación electrónica."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:944
 msgid ""
@@ -23733,12 +23893,18 @@ msgid ""
 "invoice is generated with the corresponding layout and fiscal stamps stated "
 "in the :ref:`Invoice printed report <argentina/invoice-printed-report>`."
 msgstr ""
+"Cuando el cliente realiza una compra y su pago se procesa de forma exitosa, "
+"entonces se genera la factura necesaria con el diseño correspondiente y los "
+"timbres fiscales indicados en el :ref:`reporte impreso de la factura "
+"<argentina/invoice-printed-report>`."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:949
 msgid ""
 ":doc:`Client account creation "
 "<../../websites/ecommerce/checkout_payment_shipping/checkout>`"
 msgstr ""
+":doc:`Creación de cuentas para los clientes "
+"<../../websites/ecommerce/checkout_payment_shipping/checkout>`"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:954
 msgid ""
@@ -25329,8 +25495,8 @@ msgid ""
 "the following **four** fields which impact payslip computations:"
 msgstr ""
 "La pestaña :guilabel:`Australia`. La mayoría de los campos de esta pestaña "
-"se utilizan para los informes **Single Touch Payroll** (o **STP**), que "
-"requieren un buen conocimiento de varios detalles del contrato de un "
+"se utilizan para los reportes **Single Touch Payroll** (o **STP**), que "
+"necesitan que conozca a profundidad varios detalles del contrato de un "
 "empleado. Revise la información en esta pestaña antes de continuar con las "
 "ejecuciones de pago. Esto incluye los siguientes **cuatro** campos que "
 "afectan los cálculos de la nómina:"
@@ -26639,7 +26805,7 @@ msgstr "Listado de IVA del contacto,"
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:93
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:48
 msgid "EC Sales List;"
-msgstr "Declaración recapitulativa de operaciones intracomunitarias,"
+msgstr "Lista de ventas de la CE"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:94
 msgid "Intrastat."
@@ -26724,6 +26890,13 @@ msgid ""
 " disallowed expense is calculated based on the rate mentioned in the "
 ":guilabel:`Disallowed Expense category`."
 msgstr ""
+"Vaya a :menuselection:`Contabilidad --> Configuración --> Contabilidad: plan"
+" de cuentas` para vincular una categoría de gastos rechazados a una cuenta "
+"específica. Busque la cuenta deseada y haga clic en :guilabel:`Configurar`. "
+"Agregue la :guilabel:`categoría de gastos rechazados` al campo "
+":guilabel:`gastos rechazados`. A partir de ahora, cuando se crea un gasto "
+"con esta cuenta, el gasto rechazado se calcula en función de la tasa "
+"mencionada en la :guilabel:`categoría de gastos rechazados`."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:132
 msgid "Let's take an example reflecting **restaurant** and **car expenses**."
@@ -26918,6 +27091,8 @@ msgid ""
 "Once your **SODA** files are imported, the entries are created automatically"
 " in your salary journal."
 msgstr ""
+"Una vez que se importan sus archivos **SODA**, los asientos se crean de "
+"forma automática en su diario de sueldos."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst-1
 msgid "Import SODA files"
@@ -26933,6 +27108,9 @@ msgid ""
 "their clients' bank information and statements. Odoo provides a way to "
 "import such statements automatically."
 msgstr ""
+"**CodaBox** es un servicio que permite que las firmas contables de Bélgica "
+"accedan a la información y estados bancarios de sus clientes. Odoo "
+"proporciona una forma de importar estos estados en automático."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:251
 msgid ""
@@ -26958,6 +27136,8 @@ msgid ""
 "You must first :ref:`install <general/install>` :guilabel:`CodaBox` and "
 ":guilabel:`CodaBox Bridge Wizard` (if available) to start."
 msgstr ""
+"Primero debe :ref:`instalar <general/install>` :guilabel:`CodaBox` y el "
+":guilabel:`Asistente de enlace de CodaBox` (si está disponible)."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:265
 msgid ""
@@ -26967,10 +27147,16 @@ msgid ""
 " ID` of the accounting firm (if not filled, the :guilabel:`Tax ID` of the "
 "company is used)."
 msgstr ""
+"Asegúrese de que los ajustes de la empresa están configurados de forma "
+"adecuada, es decir, que el país corresponde a :guilabel:`Bélgica`, los "
+"campos :guilabel:`Número de identificación fiscal` y :guilabel:`Firma "
+"contable` están completos, así como el :guilabel:`Número de identificación "
+"fiscal` de la firma contable (se usa el :guilabel:`Número de identificación "
+"fiscal` de la empresa si lo deja vacío)."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:271
 msgid "Configure the journals"
-msgstr ""
+msgstr "Configuración de los diarios"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:275
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:326
@@ -26979,16 +27165,18 @@ msgstr "Para archivos CODA"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:277
 msgid ":doc:`Create a new bank journal <../accounting/bank>`."
-msgstr ":doc:`Crear un diario bancario nuevo <../accounting/bank>`."
+msgstr ":doc:`Cree un nuevo diario bancario <../accounting/bank>`."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:278
 msgid "Set the right IBAN in the :guilabel:`Account Number` field."
-msgstr "Configure el IBAN correcto en el campo :guilabel:Número de cuenta`."
+msgstr "Configure el IBAN correcto en el campo :guilabel:`Número de cuenta`."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:279
 msgid ""
 "Select :guilabel:`CodaBox synchronization` as the :guilabel:`Bank Feed`."
 msgstr ""
+"Seleccione :guilabel:`Sincronización de CodaBox` como la :guilabel:`conexión"
+" bancaria`."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:0
 msgid "Configuration of a CODA journal."
@@ -27001,7 +27189,7 @@ msgstr "Para archivos SODA"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:287
 msgid "Create a new miscellaneous journal."
-msgstr "Crear un diario de varios"
+msgstr "Cree un diario misceláneo. "
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:288
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:301
@@ -27009,6 +27197,8 @@ msgid ""
 "Go to :menuselection:`Accounting --> Configuration --> Settings`, then go to"
 " the :guilabel:`CodaBox` section."
 msgstr ""
+"Vaya a :menuselection:`Contabilidad --> Configuración --> Ajustes` y luego "
+"diríjase a la sección :guilabel:`CodaBox`."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:290
 msgid "Select the journal you just created in the SODA journal field."
@@ -27021,7 +27211,7 @@ msgstr "Configuración de un diario SODA."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:299
 msgid "Configure the connection"
-msgstr ""
+msgstr "Configuración de la conexión"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:303
 msgid ""
@@ -27029,6 +27219,10 @@ msgid ""
 "shows the :guilabel:`Accounting Firm VAT` number and the :guilabel:`Company "
 "VAT` number that will be used for the connection."
 msgstr ""
+"Haga clic en :guilabel:`Gestionar conexión` para abrir el asistente de "
+"conexión, allí aparecerá el número de identificación :guilabel:`fiscal de la"
+" firma contable` y el número de identificación :guilabel:`fiscal de la "
+"empresa` que se utilizará para la conexión."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:306
 msgid ""
@@ -27037,6 +27231,10 @@ msgid ""
 "**Odoo's side**. Follow the steps to validate the connection on **CodaBox's "
 "side**, too."
 msgstr ""
+"Haga clic en :guilabel:`Crear conexión` en caso de que esta sea su **primera"
+" conexión**. El asistente confirmará que la conexión se creó **del lado de "
+"Odoo**. Siga los pasos para validar la conexión también **del lado de "
+"CodaBox**."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:310
 msgid ""
@@ -27044,21 +27242,26 @@ msgid ""
 "Password` provided by Odoo during the first connection will be requested to "
 "create a new connection."
 msgstr ""
+"Si esta **no es su primera conexión**, para crear una nueva conexión se le "
+"solicitará la :guilabel:`contraseña de la firma contable` que le proporcionó"
+" Odoo durante la primera conexión."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:314
 msgid ""
 "This :guilabel:`Accounting Firm Password` is unique to Odoo and must be "
 "stored securely on your side."
 msgstr ""
+"Esta :guilabel:`contraseña de la firma contable` es única para Odoo y debe "
+"encargarse de almacenarla de forma segura."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:317
 msgid ""
 "The :guilabel:`Status` should have now switched to :guilabel:`Connected`."
-msgstr ""
+msgstr "El :guilabel:`estado` ahora debería ser :guilabel:`Conectado`."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:320
 msgid "Synchronization"
-msgstr ""
+msgstr "Sincronización "
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:322
 msgid ""
@@ -27072,6 +27275,10 @@ msgid ""
 "not have to do anything. However, if you wish, it can also be done manually,"
 " by clicking on :guilabel:`Fetch from CodaBox` in the Accounting Dashboard."
 msgstr ""
+"Los archivos CODA se importan de forma automática desde CodaBox cada 12 "
+"horas, no es necesario que realice alguna acción. Sin embargo, si lo desea, "
+"también puede importarlos de forma manual, solo debe hacer clic en "
+":guilabel:`Obtener de CodaBox` en el tablero de la aplicación Contabilidad."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:334
 msgid ""
@@ -27080,6 +27287,11 @@ msgid ""
 "manually by clicking on :guilabel:`Fetch from CodaBox` in the Accounting "
 "Dashboard."
 msgstr ""
+"Los archivos SODA se importan como borrador de forma automática desde "
+"CodaBox una vez al día, no es necesario que realice alguna acción. Sin "
+"embargo, si lo desea, también puede importarlos de forma manual, solo debe "
+"hacer clic en :guilabel:`Obtener de CodaBox` en el tablero de la aplicación "
+"Contabilidad."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:338
 msgid ""
@@ -27087,6 +27299,9 @@ msgid ""
 "Odoo, the Suspense Account (499000) is used, and a note is added to the "
 "created journal entry."
 msgstr ""
+"De forma predeterminada, si una cuenta en el archivo SODA no está mapeada a "
+"una cuenta en Odoo, se usará la cuenta transitoria (499000) y se agregará "
+"una nota al asiento de diario creado."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:342
 msgid ""
@@ -27094,6 +27309,10 @@ msgid ""
 ":menuselection:`Accounting --> Configuration --> Settings` and clicking on "
 "the :guilabel:`Open SODA Mapping` button in the :guilabel:`CodaBox` section."
 msgstr ""
+"Puede acceder al mapeo entre las cuentas SODA y Odoo desde "
+":menuselection:`Contabilidad --> Configuración --> Ajustes`, después haga "
+"clic en el botón :guilabel:`Abrir mapeo SODA` en la sección "
+":guilabel:`CodaBox`."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:348
 msgid "Potential issues"
@@ -27101,19 +27320,24 @@ msgstr "Posibles problemas"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:350
 msgid "**CodaBox is not configured. Please check your configuration.**"
-msgstr ""
+msgstr "**CodaBox no está configurado, revise su configuración.**"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:352
 msgid ""
 "Either the :guilabel:`Company VAT` or the :guilabel:`Accounting Firm VAT` is"
 " not set."
 msgstr ""
+"El :guilabel:`número de identificación fiscal de la empresa` o el "
+":guilabel:`número de identificación fiscal de la firma contable` no están "
+"configurados."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:354
 msgid ""
 "**No connection exists with these accounting firms and company VAT "
 "numbers.** **Please check your configuration.**"
 msgstr ""
+"**No hay conexión con estos números de identificación fiscal de la firma "
+"contable y la empresa, revise su configuración.**"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:357
 msgid ""
@@ -27124,12 +27348,21 @@ msgid ""
 "reasons, you have to :ref:`recreate a connection <belgium/codabox-"
 "configuration-connection>` for this :guilabel:`Company VAT`."
 msgstr ""
+"Esto puede ocurrir al comprobar el estado de la conexión. Es necesario que "
+"registre la combinación del :guilabel:`número de identificación fiscal de la"
+" firma contable` y el de la :guilabel:`empresa`. Además, es posible que esto"
+" ocurra si cambió el :guilabel:`número de identificación fiscal de la "
+"empresa` después de que se estableció la conexión. Por motivos de seguridad "
+"deberá :ref:`crear una nueva conexión <belgium/codabox-configuration-"
+"connection>` para este :guilabel:`número de identificación fiscal de la "
+"empresa`."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:363
 msgid ""
 "**It seems that your CodaBox connection is not valid anymore. Please connect"
 " again.**"
 msgstr ""
+"**Parece que su conexión a CodaBox ya no es válida. Vuelva a conectarse.**"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:365
 msgid ""
@@ -27137,12 +27370,18 @@ msgid ""
 " need to complete the configuration process. In this case, you must revoke "
 "the connection and create a new one."
 msgstr ""
+"Esto puede ocurrir si revoca el acceso de Odoo a su cuenta de CodaBox o si "
+"todavía necesita completar el proceso de configuración. Si ese es el caso, "
+"deberá revocar la conexión y crear una nueva."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:368
 msgid ""
 "**The provided password is not valid for this accounting firm.** **You must "
 "reuse the password you received from Odoo during your first connection.**"
 msgstr ""
+"**La contraseña proporcionada no es válida para esta firma contable. Vuelva "
+"a utilizar la contraseña que Odoo le proporcionó durante su primera "
+"conexión.**"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:371
 msgid ""
@@ -27154,24 +27393,38 @@ msgid ""
 "you can revoke the connection on Odoo's side and :ref:`create a new one "
 "<belgium/codabox-configuration-connection>`."
 msgstr ""
+"La contraseña que proporcionó es distinta a la que Odoo le otorgó durante su"
+" primera conexión. Debe usar la contraseña que Odoo le proporcionó durante "
+"su primera conexión para crear una nueva conexión para esta firma contable. "
+"En caso de que haya perdido su contraseña, primero debe revocar la conexión "
+"con Odoo desde CodaBox (es decir, en su portal myCodaBox). Luego, puede "
+"revocar la conexión desde Odoo y :ref:`crear una nueva <belgium/codabox-"
+"configuration-connection>`."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:378
 msgid ""
 "**It seems that the company or accounting firm VAT number you provided is "
 "not valid.** **Please check your configuration.**"
 msgstr ""
+"**Parece que el número de identificación fiscal de la empresa o firma "
+"contable que proporcionó no es válido. Verifique su configuración.**"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:381
 msgid ""
 "Either the :guilabel:`Company VAT` or the :guilabel:`Accounting Firm VAT` is"
 " not in a valid Belgian format."
 msgstr ""
+"El :guilabel:`número de identificación fiscal de la empresa` o el "
+":guilabel:`número de identificación fiscal de la firma contable` no están "
+"configurados con el formato válido para Bélgica."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:384
 msgid ""
 "**It seems that the accounting firm VAT number you provided does not exist "
 "in CodaBox.** **Please check your configuration.**"
 msgstr ""
+"**Parece que el número de identificación fiscal que proporcionó no existe en"
+" CodaBox. Verifique su configuración.**"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:387
 msgid ""
@@ -27179,6 +27432,9 @@ msgid ""
 " CodaBox. You may not have a valid CodaBox license linked to this VAT "
 "number."
 msgstr ""
+"El número :guilabel:`de identificación fiscal de la firma contable` que "
+"proporcionó no está registrado en CodaBox. Es posible que no cuente con una "
+"licencia válida de CodaBox vinculada a este número de identificación fiscal."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:390
 msgid ""
@@ -27186,6 +27442,9 @@ msgid ""
 "accounting firm.** **To create a new connection, you must first revoke the "
 "old one on myCodaBox portal.**"
 msgstr ""
+"**Parece que ya creó una conexión a CodaBox con esta firma contable. Para "
+"crear una nueva conexión, primero debe revocar la conexión anterior en el "
+"portal de myCodaBox.**"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:393
 msgid ""
@@ -27193,6 +27452,9 @@ msgid ""
 "CodaBox account. Then, you can :ref:`create a new connection "
 "<belgium/codabox-configuration-connection>` on Odoo's side."
 msgstr ""
+"Debe dirigirse a su portal de myCodaBox y revocar el acceso de Odoo a su "
+"cuenta de CodaBox. Después puede :ref:`crear una nueva conexión "
+"<belgium/codabox-configuration-connection>` desde Odoo."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:398
 msgid ""
@@ -27201,6 +27463,10 @@ msgid ""
 "the :guilabel:`CodaBox` section, click on :guilabel:`Manage Connection`, "
 "then click on :guilabel:`Revoke`."
 msgstr ""
+"Para revocar la conexión entre Odoo y CodaBox, vaya a "
+":menuselection:`Contabilidad --> Configuración --> Ajustes`, diríjase a la "
+"sección :guilabel:`CodaBox`, haga clic en :guilabel:`Gestionar conexión` y "
+"luego en :guilabel:`Revocar`."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:404
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:263
@@ -39945,7 +40211,7 @@ msgid ""
 "`Video webinar of a complete demo "
 "<https://www.youtube.com/watch?v=5cdogjm0GCI>`_."
 msgstr ""
-"`Webinar de una demostración completa "
+"`Webinario de una demostración completa "
 "<https://www.youtube.com/watch?v=5cdogjm0GCI>`_."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:29
@@ -43853,7 +44119,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:604
 msgid "Electronic delivery guide 2.0"
-msgstr ""
+msgstr "Guía de entrega electrónica 2.0"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:606
 msgid ""
@@ -43863,6 +44129,11 @@ msgid ""
 "several configuration steps needed before you can successfully use this "
 "feature."
 msgstr ""
+"La *Guía de Remisión Electrónica* (GRE) es un documento electrónico que el "
+"transportista genera para ayudar al transporte o transferencia de bienes de "
+"un lugar a otro, como un almacén u otro establecimiento. En Odoo es "
+"necesario seguir varios pasos de configuración antes de poder usar esta "
+"función."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:611
 msgid ""
@@ -43871,14 +44142,17 @@ msgid ""
 "products, except those under the *Single Simplified Regime* (régimen único "
 "simplificado or RUS)."
 msgstr ""
+"El uso del documento *guía de remisión electrónica* es obligatorio para los "
+"contribuyentes de |SUNAT| que necesitan transferir sus productos, excepto "
+"aquellos que estén bajo el *Régimen único simplificado (RUS)*."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:616
 msgid "Delivery guide types"
-msgstr ""
+msgstr "Tipos de guía de remisión"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:619
 msgid "Sender"
-msgstr ""
+msgstr "Remitente"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:621
 msgid ""
@@ -43886,6 +44160,10 @@ msgid ""
 " rendered (including processing), goods are assigned for use, or goods are "
 "transferred between premises of the same company and others."
 msgstr ""
+"El tipo de guía de remisión *Remitente* se emite cuando se hace la venta, se"
+" brinda un servicio (incluyendo el procesamiento), los bienes ya se "
+"asignaron para su uso, o los bienes ya se transfirieron entre "
+"establecimientos de la misma empresa u otras empresas."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:625
 msgid ""
@@ -43893,45 +44171,54 @@ msgid ""
 "at the beginning of the shipment. The sender delivery guide is supported in "
 "Odoo."
 msgstr ""
+"El dueño de los bienes (es decir, el remitente) es quien emite la guía de "
+"remisión al inicio del envío. La guía de envío de remitente es compatible "
+"con Odoo."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:629
 msgid "`SUNAT guía de remisión <https://www.gob.pe/7899-guia-de-remision>`_"
-msgstr ""
+msgstr "`SUNAT guía de remisión <https://www.gob.pe/7899-guia-de-remision>`_"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:632
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:753
 msgid "Carrier"
-msgstr ""
+msgstr "Transportista"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:634
 msgid ""
 "The *Carrier* delivery guide type justifies the transportation service the "
 "driver (or carrier) performs."
 msgstr ""
+"El tipo de guía de remisión *Transportista* justifica el servicio de "
+"transporte que el transportista realiza."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:637
 msgid ""
 "This delivery guide is issued by the carrier and must be issued to each "
 "shipper when the shipment goes through public transport."
 msgstr ""
+"Esta guía de remisión la emite el transportista y se debe emitir a cada "
+"remitente cuando el envío pasa por transporte público."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:641
 msgid "The carrier delivery guide is **not** supported in Odoo."
-msgstr ""
+msgstr "La guía de remisión - remitente **no** es compatible con Odoo"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:644
 msgid ""
 "`SUNAT guía de remisión transportista <https://tefacturo.pe/blog/sunat/guia-"
 "de-remision-electronica/guia-de-remision-transportista/>`_"
 msgstr ""
+"`SUNAT guía de remisión transportista <https://tefacturo.pe/blog/sunat/guia-"
+"de-remision-electronica/guia-de-remision-transportista/>`_"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:648
 msgid "Transportation types"
-msgstr ""
+msgstr "Tipos de traslado"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:651
 msgid "Private"
-msgstr ""
+msgstr "Privado"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:653
 msgid ""
@@ -43939,10 +44226,13 @@ msgid ""
 "goods using their own vehicles. In this case, a sender's delivery guide must"
 " be issued."
 msgstr ""
+"La opción de tipo de transporte *privado* se usa cuando el dueño transfiere "
+"bienes usando sus propios vehículos. En este caso, se debe emitir la guía de"
+" remisión remitente."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:657
 msgid "Public"
-msgstr ""
+msgstr "Público"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:659
 msgid ""
@@ -43950,10 +44240,14 @@ msgid ""
 "moves the goods. In this case, two delivery guides must be issued: the "
 "sender's delivery guide and the carrier's delivery guide."
 msgstr ""
+"La opción de tipo de transporte *público* se usa cuando un transportista "
+"externo se encarga de mover los bienes. En este caso, las dos guías de "
+"remisión deben de emitirse: la guía de remisión remitente y la guía de "
+"remisión transportista."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:664
 msgid "Direct submission to SUNAT"
-msgstr ""
+msgstr "Envío directo a la SUNAT"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:666
 msgid ""
@@ -43961,10 +44255,12 @@ msgid ""
 "to the |SUNAT|, regardless of the electronic document provider: IAP, "
 "Digiflow, or |SUNAT|."
 msgstr ""
+"La |GRE| de Odoo se **debe** enviar directamente a la |SUNAT|, sin importar "
+"el proveedor del documento: IAP, Digiflow o |SUNAT|."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:670
 msgid "Required information"
-msgstr ""
+msgstr "Información requerida"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:672
 msgid ""
@@ -43973,32 +44269,42 @@ msgid ""
 "general configuration, it is necessary to add new credentials that you can "
 "retrieve from the |SUNAT| portal."
 msgstr ""
+"La versión 2.0 de la guía de remisión requiere información adicional en la "
+"configuración general, vehículos, contactos y productos. En la configuración"
+" general es necesario agregar las nuevas credenciales que puede obtener "
+"desde el portal de la |SUNAT|."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:677
 msgid "Cancellations"
-msgstr ""
+msgstr "Dar de baja"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:679
 msgid ""
 "**Both** the sender and the carrier can cancel the electronic waybill as "
 "long as the following conditions are met:"
 msgstr ""
+"Tanto el remitente como el transportista **pueden** dar de baja la carta "
+"porte electrónica siempre y cuando se cumplan las siguientes condiciones:"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:682
 msgid "The shipment has not been initiated."
-msgstr ""
+msgstr "No se ha iniciado el envío."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:683
 msgid ""
 "If the shipment has been initiated, the receiver **must** be changed before "
 "reaching the final destination."
 msgstr ""
+"Si ya se inició el envío, se le **tendrá** que cambiar al destinatario antes"
+" de llegar al destino final"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:687
 msgid ""
 "The |SUNAT| no longer uses the term \"Anula\", but now uses the term \"Dar "
 "de baja\" for cancellations."
 msgstr ""
+"Para cancelaciones la |SUNAT| ahora usa el término \"dar de baja\" y no "
+"\"anular\"."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:691
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:107
@@ -44011,29 +44317,37 @@ msgid ""
 "delivery guides that were generated by mistake **will** be sent to the "
 "|SUNAT|."
 msgstr ""
+"La |SUNAT| no es compatible con entornos de prueba. Esto significa que las "
+"guías de remisión que se generen por error **se enviarán** a la |SUNAT|."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:696
 msgid ""
 "If, by mistake, the waybill was created in this environment, it is necessary"
 " to delete it from the |SUNAT| portal."
 msgstr ""
+"Si se creó una carta porte por error en este entorno, es necesario borrarla "
+"del portal de la |SUNAT|."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:703
 msgid ""
 "Electronic sender's |GRE| is currently the only supported type of waybill in"
 " Odoo."
-msgstr ""
+msgstr "Por ahora la única carta porte compatible con Odoo es la GRE."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:704
 msgid ""
 "The delivery guide is dependent on the Odoo *Inventory* app, the "
 ":guilabel:`l10n_pe_edi` and :guilabel:`l10n_pe` modules."
 msgstr ""
+"La guía de remisión depende de la aplicación *Inventario* de Odoo y de los "
+"módulos :guilabel:`l10n_pe_edi` y :guilabel:`l10n_pe`."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:706
 msgid ""
 "A second user **must** be added for the creation of electronic documents."
 msgstr ""
+"Se **debe** agregar un segundo usuario para la creación de documentos "
+"electrónicos."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:708
 msgid ""
@@ -44042,6 +44356,10 @@ msgid ""
 ":ref:`install <general/install>` the :guilabel:`Peruvian - Electronic "
 "Delivery Note 2.0` module (`l10n_pe_edi_stock_20`)."
 msgstr ""
+"Después de seguir los pasos para configurar la :ref:`facturación electrónica"
+" <peru/accounting-settings>` y los :ref:`datos maestros <peru/master_data>`,"
+" :ref:`instale <general/install>` el módulo :guilabel:`Perú - Nota de "
+"entrega electrónica 2.0` (`l10n_pe_edi_stock_20`)."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:712
 msgid ""
@@ -44050,12 +44368,19 @@ msgid ""
 "<https://cpe.sunat.gob.pe/sites/default/files/inline-"
 "files/Manual_Servicios_GRE.pdf>`_."
 msgstr ""
+"Ahora debe obtener la *ID de cliente* y *secreto de cliente* de la |SUNAT|. "
+"Para hacerlo, siga las instrucciones en el `manual de servicios web "
+"plataforma nueva GRE <https://cpe.sunat.gob.pe/sites/default/files/inline-"
+"files/Manual_Servicios_GRE.pdf>`_."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:717
 msgid ""
 "In the |SUNAT| portal, it is important to have the correct access rights "
 "enabled, as they may differ from the user set for electronic invoicing."
 msgstr ""
+"En el portal de la |SUNAT| es importante tener activados los derechos de "
+"acceso correctos, ya que pueden diferir de los permisos configurados para el"
+" usuario de la facturación electrónica."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:720
 msgid ""
@@ -44063,10 +44388,15 @@ msgid ""
 "settings from :menuselection:`Accounting --> Configuration --> Settings --> "
 "Peruvian Electronic Invoicing`."
 msgstr ""
+"Estas credenciales se deben usar para configurar los ajustes generales de la"
+" guía de remisión de :menuselection:`Contabilidad --> Configuración --> "
+"Ajustes --> Facturación electrónica peruana`."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Example for the SUNAT Delivery Guide API section configuration."
 msgstr ""
+"Ejemplo para la sección de configuración de la API de la guía de remisión de"
+" la SUNAT."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:727
 msgid ""
@@ -44075,22 +44405,30 @@ msgid ""
 " the user selected when generating the |GRE| API credentials in the |SUNAT| "
 "portal."
 msgstr ""
+"Se requiere seguir el formato `RUC + UsuarioSol` (por ejemplo, "
+"`20557912879USUARIOSOL`) para el campo :guilabel:`Guía de usuario SOL`, "
+"dependiendo del usuario seleccionado al generar las credenciales API |GRE| "
+"en el portal del |SUNAT|."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:732
 msgid "Operator"
-msgstr ""
+msgstr "Operador"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:734
 msgid ""
 "The *operator* is the vehicle's driver in cases where the delivery guide is "
 "through *private* transport."
 msgstr ""
+"El *operador* es el conductor del vehículo en los casos en los que la guía "
+"de remisión sea a través de transporte *privado*."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:737
 msgid ""
 "To create a new operator, navigate to :menuselection:`Contacts --> Create` "
 "and fill out the contact information."
 msgstr ""
+"Para crear un nuevo operador vaya a :menuselection:`Contactos --> Crear` y "
+"llene la información de contacto."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:740
 msgid ""
@@ -44098,40 +44436,49 @@ msgid ""
 "add the :guilabel:`Operator License` in the :guilabel:`Accounting` tab of "
 "the contact form."
 msgstr ""
+"Primero, seleccione :guilabel:`Individual` como :guilabel:`tipo de empresa`."
+" Después agregue la :guilabel:`Licencia del operador` en la pestaña de "
+":guilabel:`Contabilidad` en el formulario de contacto."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:743
 msgid "For the customer address, make sure the following fields are complete:"
 msgstr ""
+"Para la dirección del cliente, asegúrse de llenar los siguientes campos:"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:745
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:766
 msgid ":guilabel:`District`"
-msgstr ""
+msgstr ":guilabel:`Distrito`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:746
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:767
 msgid ":guilabel:`Tax ID` (:guilabel:`DNI`/:guilabel:`RUC`)"
-msgstr ""
+msgstr ":guilabel:`DNI`/:guilabel:`RUC`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:747
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:768
 msgid ":guilabel:`Tax ID Number`"
-msgstr ""
+msgstr ":guilabel:`DNI/RUC`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Individual type operator configurations in the Contact form."
 msgstr ""
+"Configuraciones de operador de tipo individual en el formulario de contacto."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:755
 msgid ""
 "The *carrier* is used when the delivery guide is through *public* transport."
 msgstr ""
+"El *transportista* se usa cuando la guía de remisión se hará mediante "
+"transporte *público*."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:757
 msgid ""
 "To create a new carrier, navigate to :menuselection:`Contacts --> Create` "
 "and fill out the contact information."
 msgstr ""
+"Para crear un transportista nuevo, vaya a :menuselection:`Contactos --> "
+"Crear` y llene la información de contacto"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:760
 msgid ""
@@ -44139,18 +44486,23 @@ msgid ""
 " the :guilabel:`MTC Registration Number`, :guilabel:`Authorization Issuing "
 "Entity`, and the :guilabel:`Authorization Number`."
 msgstr ""
+"Primero, seleccione :guilabel:`Empresa` como :guilabel:`tipo de empresa`. "
+"Después, agregue guilabel:`Número de registro MTC`, :guilabel:`Entidad que "
+"emite la autorización` y el :guilabel:`Número de autorización`."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:764
 msgid "For the company address, make sure the following fields are complete:"
 msgstr ""
+"Para la dirección de la empresa, asegúrese de llenar los siguientes campos:"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Company type operator configurations in the Contact form."
 msgstr ""
+"Configuraciones de operador de tipo empresa en el formulario de contacto."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:774
 msgid "Vehicles"
-msgstr ""
+msgstr "Vehículos"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:776
 msgid ""
@@ -44158,50 +44510,59 @@ msgid ""
 "--> Configuration --> Vehicles` and fill in the vehicle form with the "
 "information needed for the vehicle:"
 msgstr ""
+"Para configurar los vehículos disponibles, vaya a :menuselection:`Inventario"
+" --> Configuración --> Vehículos` y llene el formulario de vehículos con la "
+"información necesaria para cada vehículo:"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:779
 msgid ":guilabel:`Vehicle Name`"
-msgstr ""
+msgstr ":guilabel:`Nombre del vehículo`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:780
 msgid ":guilabel:`License Plate`"
-msgstr ""
+msgstr ":guilabel:`Matrícula`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:781
 msgid ":guilabel:`Is M1 or L?`"
-msgstr ""
+msgstr ":guilabel:`¿Es M1 o L?`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:782
 msgid ":guilabel:`Special Authorization Issuing Entity`"
-msgstr ""
+msgstr ":guilabel:`Entidad emisora de la autorización especial`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:783
 msgid ":guilabel:`Authorization Number`"
-msgstr ""
+msgstr ":guilabel:`Número de autorización`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:784
 msgid ":guilabel:`Default Operator`"
-msgstr ""
+msgstr ":guilabel:`Operador predeterminado`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:785
 msgid ":guilabel:`Company`"
-msgstr ""
+msgstr ":guilabel:`Empresa`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:788
 msgid ""
 "It is important to check the :guilabel:`Is M1 or L?` checkbox if the vehicle"
 " has fewer than four wheels or fewer than eight seats."
 msgstr ""
+"Es importante marcar la casilla de verificación :guilabel:`¿Es M1 o L?` si "
+"el vehículo tiene menos de cuatro ruedas u ocho asientos."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Vehicle not selected as an M1 or L type with extra fields shown."
 msgstr ""
+"Se muestra un vehículo en el que no se seleccionó que era del tipo M1 y L "
+"con campos adicionales."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:797
 msgid ""
 "To configure the available products, navigate to :menuselection:`Inventory "
 "--> Products` and open the product to be configured."
 msgstr ""
+"Para configurar los productos disponibles, vaya a :menuselection:`Inventario"
+" --> Productos` y abra el producto que configurará."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:800
 msgid ""
@@ -44209,10 +44570,13 @@ msgid ""
 "configured. The :guilabel:`Partida Arancelaria` (Tariff Item) field needs to"
 " be completed."
 msgstr ""
+"Asegúrese de que la información aplicable en el formulario del producto está"
+" completamente configurada. El campo :guilabel:`Partida Arancelaria` debe "
+"llenarse."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:804
 msgid "Generating a GRE"
-msgstr ""
+msgstr "Generar una GRE"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:806
 msgid ""
@@ -44220,34 +44584,44 @@ msgid ""
 "sure you complete the |GRE| fields on the top-right section of the transfer "
 "form for the fields:"
 msgstr ""
+"Una vez que se crea la entrega desde el inventario durante un flujo de "
+"trabajo de ventas, asegúrese de completar los campos |GRE| en la sección "
+"superior derecha del formulario de transferencia para los campos:"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:809
 msgid ":guilabel:`Transport Type`"
-msgstr ""
+msgstr ":guilabel:`Tipo de transporte`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:810
 msgid ":guilabel:`Reason for Transfer`"
-msgstr ""
+msgstr ":guilabel:`Razón de la transferencia`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:811
 msgid ":guilabel:`Departure start date`"
-msgstr ""
+msgstr ":guilabel:`Fecha de inicio del transporte `"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:813
 msgid ""
 "It is also required to complete the :guilabel:`Vehicle` and "
 ":guilabel:`Operator` fields under the :guilabel:`Guia de Remision PE` tab."
 msgstr ""
+"También es necesario llenar los campos :guilabel:`Vehículo` y "
+":guilabel:`Operador` en la pestaña :guilabel:`Guia de Remision PE`."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:816
 msgid ""
 "The delivery transfer has to be marked as *Done* for the :guilabel:`Generar "
 "Guia de Remision` button to appear on the left menu of the transfer form."
 msgstr ""
+"La transferencia de entrega se debe marcar como *Lista* para que aparezca el"
+" botón :guilabel:`Generar Guia de Remision` en el menú izquierdo del "
+"formulario de transferencia."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Generar Guia de Remision button on a transfer form in the Done stage."
 msgstr ""
+"Botón Generar Guia de Remision en un formulario de transferencia en la etapa"
+" Listo."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:822
 msgid ""
@@ -44255,14 +44629,18 @@ msgid ""
 "file becomes available in the chatter. You can now print the delivery slip "
 "that shows the transfer details and the QR code validated by |SUNAT|."
 msgstr ""
+"Ya que la |SUNAT| haya validado el formulario de transferencia, el archivo "
+"XML generado estará disponible en el chatter. Puede imprimir el albarán de "
+"entrega que muestra los detalles de transferencia y el código QR que la "
+"|SUNAT| validó."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Transfer details and QR code on generated delivery slip."
-msgstr ""
+msgstr "Detalles de transferencia y código QR en el albarán generado."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:832
 msgid "`Diferente prefijo para productos (T001 en algunos, T002 en otros)`"
-msgstr ""
+msgstr "`Diferente prefijo para productos (T001 en algunos, T002 en otros)`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:834
 msgid ""
@@ -44271,12 +44649,18 @@ msgid ""
 "be done for non-storable products. However, keep in mind that there will be "
 "no traceability."
 msgstr ""
+"Por el momento, Odoo no es compatible con la automatización de prefijos para"
+" productos. Esto se puede hacer de manera manual para cada producto, además "
+"de que también se puede hacer para productos no almacenables. Sin embargo, "
+"tome en cuenta que no habrá trazabilidad."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:837
 msgid ""
 "`2325 - GrossWeightMeasure - El dato no cumple con el formato establecido "
 "\"Hace falta el campo\" \"Peso\"\" en el producto`"
 msgstr ""
+"`2325 - MedidaPesoBruto - El dato no cumple con el formato establecido "
+"\"Hace falta el campo\" \"Peso\"\" en el producto`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:840
 msgid ""
@@ -44285,12 +44669,18 @@ msgid ""
 " the weight on the product before creating the new waybill, or it will "
 "result in the same error."
 msgstr ""
+"Este error ocurre cuando el peso del producto se configura a `0.00`. Para "
+"arreglar esto necesita cancelar la carta porte y volverla a crear. Asegúrese"
+" de arreglar el peso en el producto antes de crear una nueva carta porte, o "
+"tendrá el mismo error."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:843
 msgid ""
 "`JSONDecodeError: Expecting value: line 1 column 1 (char 0) when creating a "
 "Delivery Guide`"
 msgstr ""
+"`JSONDecodeError: Esperando valor: línea 1 columna 1 (char 0) al crear una "
+"Guía de Entrega`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:845
 msgid ""
@@ -44298,33 +44688,45 @@ msgid ""
 "connection with the |SUNAT|; the SOL user must be established with the "
 "company RUT + user ID. For example `2012188549JOHNSMITH`."
 msgstr ""
+"Este error se genera debido a problemas con el usuario SOL. Verifique la "
+"conexión del usuario con la |SUNAT|; el usuario SOL debe establecerse con la"
+" empresa RUT + ID del usuario. Por ejemplo, `2012188549JUANPEREZ`."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:848
 msgid ""
 "`El número de documento relacionado al traslado de mercancía no cumple con "
 "el formato establecido: error: documento relacionado`"
 msgstr ""
+"`El número de documento relacionado al traslado de mercancía no cumple con "
+"el formato establecido: error: documento relacionado`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:851
 msgid ""
 "The *Related Document Type* and *Related Document Number* fields only apply "
 "to invoices and receipts."
 msgstr ""
+"Los campos *tipo de documento relacionado* y el *número de documento "
+"relacionado* solo se aplican en facturas y recibos."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:853
 msgid "`400 Client error: Bad Request for URL`"
-msgstr ""
+msgstr "`400 Error del cliente: solicitud de URL mala`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:855
 msgid ""
 "This error is not solvable from Odoo; it is advised you reach out to the "
 "|SUNAT| and verify the user. It may be necessary to create a new user."
 msgstr ""
+"Este error no se puede solucionar desde Odoo, le recomendamos que se ponga "
+"en contacto con la |SUNAT| para verificar el usuario. Es posible que "
+"necesite crear un usuario nuevo"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:858
 msgid ""
 "`Invalid content was found starting with element 'cac:BuyerCustomerParty'`"
 msgstr ""
+"`Se ha encontrado un contenido no válido que empieza por el elemento "
+"'cac:BuyerCustomerParty'`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:860
 msgid ""
@@ -44334,10 +44736,15 @@ msgid ""
 " or *12 (others)* does not work in Odoo, since you should not have an empty "
 "or blank customer."
 msgstr ""
+"Este error ocurre cuando el motivo de transferencia se configura como "
+"*otro*. Seleccione otra opción. Siguiendo la documentación oficial de la "
+"guía de albaranes de |SUNAT|, los motivos de transferencia *03 (venta con "
+"envío a terceros)* o *12 (otros)* no funcionan en Odoo, ya que no se debe "
+"tener un cliente vacío o en blanco."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:864
 msgid "`Duda cliente: consumo de créditos IAP al usar GRE 2.0`"
-msgstr ""
+msgstr "`Duda cliente: consumo de créditos IAP al usar GRE 2.0`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:866
 msgid ""
@@ -44345,10 +44752,13 @@ msgid ""
 "does not go through the OSE, i.e., these documents are directly sent to the "
 "|SUNAT|."
 msgstr ""
+"Para clientes que usan compras dentro de la aplicación, en teoría no se "
+"consumen créditos, ya que no pasa por OSE, es decir, estos documentos se "
+"envían directamente a la |SUNAT|."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:868
 msgid "`Errores con formato credenciales GRE 2.0 (traceback error)`"
-msgstr ""
+msgstr "`Errores con formato credenciales GRE 2.0 (traceback error)`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:870
 msgid ""
@@ -44356,6 +44766,9 @@ msgid ""
 "the credentials are not correctly configured in the database. If this occurs"
 " on your database, please verify your credentials."
 msgstr ""
+"Odoo envía un error con rastreo en lugar de un mensaje en el que se indica "
+"que las credenciales no se configuraron correctamente en la base de datos. "
+"Si esto ocurre en su base de datos, verifique sus credenciales."
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:3
 msgid "Philippines"
@@ -45358,24 +45771,29 @@ msgid ""
 "<../fiscal_localizations>` to get all the default accounting features of the"
 " Spanish localization."
 msgstr ""
+"Instale el :doc:`paquete de localización fiscal <../fiscal_localizations>` "
+"para **España** para obtener todas las funciones contables por defecto de la"
+" localización española."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:11
 msgid ""
 "Three **Spanish** localizations exist, each with its own pre-configured "
 "**PGCE** charts of accounts:"
 msgstr ""
+"Hay tres localizaciones en **español**, cada una con sus propios planes "
+"contables **PGCE** preconfigurados:"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:13
 msgid "Spain - SMEs (2008);"
-msgstr ""
+msgstr "España - PYMEs (2008);"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:14
 msgid "Spain - Complete (2008);"
-msgstr ""
+msgstr "España - Completo (2008);"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:15
 msgid "Spain - Non-profit entities (2008)."
-msgstr ""
+msgstr "España - Entidades sin fines lucrativos (2008)."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:17
 msgid ""
@@ -45383,6 +45801,9 @@ msgid ""
 " --> Settings` and select a package in the :guilabel:`Fiscal Localization` "
 "section."
 msgstr ""
+"Para elegir uno, vaya a :menuselection:`Contabilidad --> Configuración --> "
+"Ajustes` y luego seleccione un paquete en la sección :guilabel:`Localización"
+" fiscal`."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:21
 msgid ""
@@ -45398,12 +45819,17 @@ msgid ""
 ":menuselection:`Accounting --> Configuration --> Accounting: Chart of "
 "Accounts`."
 msgstr ""
+"Puede acceder al :guilabel:`Plan contable` mediente "
+":menuselection:`Contabilidad --> Configuración --> Contabilidad: plan "
+"contable`."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:30
 msgid ""
 "When you create a new Odoo Online database, **Spain - SMEs (2008)** is "
 "installed by default."
 msgstr ""
+"Cuando crea una nueva base de datos Odoo Online, **España - PYME (2008)** se"
+" instala por defecto."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:35
 msgid ""
@@ -45415,56 +45841,67 @@ msgid ""
 ":menuselection:`Accounting --> Reporting --> Statements Reports: Tax "
 "Report`."
 msgstr ""
+"Los impuestos específicos de España por defecto se crean automáticamente al "
+"instalar el módulo :guilabel:`España - Contabilidad (PGCE 2008) (l10n_es)` y"
+" los informes de impuestos están disponibles al instalar el módulo "
+":guilabel:`España - Contabilidad (PGCE 2008) (l10n_es_informes)`. Cada "
+"impuesto repercute en los **informes fiscales específicos de España "
+"(Modelo)**, que se encuentran en la aplicación :menuselection:`Contabilidad "
+"--> Informes --> Informes de extractos: Informe de impuestos`."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:44
 msgid "Here is the list of Spanish-specific statement reports available:"
 msgstr ""
+"Esta es la lista de informes de extractos específicos de España disponibles:"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:46
 msgid "Balance Sheet;"
-msgstr ""
+msgstr "Balance general;"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:47
 msgid "Profit & Loss;"
-msgstr ""
+msgstr "Estado de resultados;"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:49
 msgid "Tax Report (Modelo 111);"
-msgstr ""
+msgstr "Informe de impuestos (Modelo 111);"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:50
 msgid "Tax Report (Modelo 115);"
-msgstr ""
+msgstr "Informe de impuestos (Modelo 115);"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:51
 msgid "Tax Report (Modelo 303);"
-msgstr ""
+msgstr "Informe de impuestos (Modelo 303);"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:52
 msgid "Tax Report (Modelo 347);"
-msgstr ""
+msgstr "Informe de impuestos (Modelo 347);"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:53
 msgid "Tax Report (Modelo 349);"
-msgstr ""
+msgstr "Informe de impuestos (Modelo 349);"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:54
 msgid "Tax Report (Modelo 390)."
-msgstr ""
+msgstr "Informe de impuestos (Modelo 390)."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:56
 msgid ""
 "You can access Spain-specific tax reports by clicking on the **book** icon "
 "when on a report and selecting its Spain-specific version: :guilabel:`(ES)`."
 msgstr ""
+"Puede acceder a informes fiscales específicos para España pulsando el icono "
+"**libro** cuando se encuentre en un informe y seleccionando su versión "
+"específica para España: :guilabel:`(ES)`."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst-1
 msgid "Spain-specific tax reports."
-msgstr ""
+msgstr "Informes de impuestos específicos de España."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:63
 msgid "TicketBAI"
-msgstr ""
+msgstr "TicketBAI"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:65
 msgid ""
@@ -45472,6 +45909,9 @@ msgid ""
 "**TBAI** is an e-Invoicing system used by the Basque government and its "
 "three provincial councils (Álava, Biscay, and Gipuzkoa)."
 msgstr ""
+"`Ticket BAI <https://www.gipuzkoa.eus/es/web/ogasuna/ticketbai>`_ o **TBAI**"
+" es un sistema de facturación electrónica utilizado por el Gobierno Vasco y "
+"sus tres diputaciones forales (Álava, Vizcaya y Gipuzkoa)."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:69
 msgid ""
@@ -45481,6 +45921,11 @@ msgid ""
 ":menuselection:`Settings --> General Settings` in the :guilabel:`Companies` "
 "section."
 msgstr ""
+"Odoo es compatible con el formato de facturación electrónica **TicketBAI "
+"(TBAI)** para las tres regiones del **País Vasco**. Para habilitar "
+"**TicketBAI**, configure el :guilabel:`País` y el :guilabel:`NIF` de su "
+"empresa en :menuselection:`Ajustes --> Opciones generales` en la sección "
+":guilabel:`Compañías`."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:74
 msgid ""
@@ -45489,6 +45934,11 @@ msgid ""
 "Configuration --> Settings`, and select a **region** in the :guilabel:`Spain"
 " Localization` section's :guilabel:`Tax Agency for TBAI` field."
 msgstr ""
+"A continuación, :ref:`instale <general/install>` el módulo :guilabel:`España"
+" -TicketBAI (l10n_es_edi_TBAI)`, vaya a :menuselection:`Contabilidad --> "
+"Configuración --> Ajustes`, y seleccione una **región** en el campo "
+":guilabel:`Agencia Tributaria para TBAI` de la sección "
+":guilabel:`Localización española`."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:78
 msgid ""
@@ -45496,6 +45946,10 @@ msgid ""
 "(SII/TicketBAI)`, then click :guilabel:`New`, upload the certificate, and "
 "enter the password provided by the tax agency."
 msgstr ""
+"Una vez seleccionada una región, haga clic en :guilabel:`Gestionar "
+"certificados (SII/TicketBAI)`, a continuación haga clic en "
+":guilabel:`Nuevo`, cargue el certificado e introduzca la contraseña "
+"proporcionada por la agencia tributaria."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:82
 msgid ""
@@ -45503,6 +45957,9 @@ msgid ""
 ":guilabel:`Spain Localization` section, which can be found under "
 ":guilabel:`Accounting` in the **Settings** app."
 msgstr ""
+"Si está probando certificados, habilite :guilabel:`Modo de prueba` en la "
+"sección :guilabel:`Localización de España`, que se encuentra en "
+":guilabel:`Contabilidad` en la aplicación **Ajustes**."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:89
 msgid ""
@@ -45510,10 +45967,13 @@ msgid ""
 "<../../finance/accounting/customer_invoices>` and confirmed, a TicketBAI "
 "**banner** appears at the top."
 msgstr ""
+"Una vez que una factura ha sido :doc:`creada "
+"<../../finance/accounting/customer_invoices>` y confirmada, aparece un "
+"**banner** de TicketBAI en la parte superior."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst-1
 msgid "TicketBAI banner at the top of the invoice once sent."
-msgstr ""
+msgstr "Banner TicketBAI en la parte superior de la factura una vez enviada."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:95
 msgid ""
@@ -45521,6 +45981,9 @@ msgid ""
 "However, you can click :guilabel:`Process now` to send the invoice "
 "immediately."
 msgstr ""
+"Odoo envía facturas a través de TicketBAI automáticamente cada **24 horas**."
+" Sin embargo, puede hacer clic en :guilabel:`Procesar ahora` para enviar la "
+"factura inmediatamente."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:98
 msgid ""
@@ -45530,24 +45993,33 @@ msgid ""
 "traceability of other generated documents related to the invoice (e.g., if "
 "the invoice should also be sent through the **SII**, it will appear here)."
 msgstr ""
+"Cuando la factura se **envía**, el estado del campo :guilabel:`Factura "
+"electrónica` cambia a :guilabel:`Enviada`, y el archivo XML se puede "
+"encontrar en el **chatter**. En la pestaña :guilabel:`Documentos EDI`, puede"
+" ver la trazabilidad de otros documentos generados relacionados con la "
+"factura (por ejemplo, si la factura también debe enviarse a través del "
+"**SII**, aparecerá aquí)."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:104
 msgid "The TBAI **QR code** is displayed on the invoice PDF."
-msgstr ""
+msgstr "El **código QR** de TBAI aparece en el PDF de la factura."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:0
 msgid "QR code of the TicketBAI on the invoice."
-msgstr ""
+msgstr "Código QR de TicketBAI en la factura."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:110
 msgid "FACe"
-msgstr ""
+msgstr "FACe"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:112
 msgid ""
 "`FACe <https://face.gob.es/en>`_ is the e-Invoicing platform used by the "
 "public administrations in Spain to send electronic invoices."
 msgstr ""
+"`FACe <https://face.gob.es/en>`_ es la plataforma de facturación electrónica"
+" utilizada por las administraciones públicas en España para el envío de "
+"facturas electrónicas."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:115
 msgid ""
@@ -45556,6 +46028,10 @@ msgid ""
 "Facturae EDI (l10n_es_edi_facturae)` module and other **Facturae "
 "EDI**-related modules."
 msgstr ""
+"Antes de configurar el sistema :abbr:`FACe (Punto General de Entrada de "
+"Facturas Electrónicas)`, :ref:`instale <general/install>` el módulo "
+":guilabel:`España - Facturae EDI (l10n_es_edi_facturae)` y otros módulos "
+"relacionados con **Facturae EDI**."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:119
 msgid ""
@@ -45566,6 +46042,13 @@ msgid ""
 "certificate` by clicking :guilabel:`Add a line`, uploading the certificate "
 "provided by the tax agency, and entering the provided password."
 msgstr ""
+"Para activar FACe, vaya a :guilabel:`Ajustesn --> Opciones generales`, haga "
+"clic en :guilabel:`Actualizar información` en la sección "
+":guilabel:`Compañías`, a continuación establezca el :guilabel:`País` y el "
+":guilabel:`NIF` de su empresa. A continuación, añada el certificado de firma"
+" :guilabel:`Facturae` haciendo clic en :guilabel:`Agregar una línea`, "
+"cargando el certificado proporcionado por la agencia tributaria e "
+"introduciendo la contraseña proporcionada."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:128
 msgid ""
@@ -45575,12 +46058,20 @@ msgid ""
 " & Print` again. Once the invoice is sent, the generated XML file is "
 "available in the **chatter**."
 msgstr ""
+"Una vez que haya :doc:`creado <../../finance/accounting/customer_invoices>` "
+"una factura y la haya confirmado, haga clic en :guilabel:`Enviar e "
+"Imprimir`. Asegúrese de que :guilabel:`Generar archivo Facturae edi` está "
+"activado y vuelva a hacer clic en :guilabel:`Enviar e imprimir`. Una vez "
+"enviada la factura, el archivo XML generado estará disponible en el "
+"**chatter**."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:134
 msgid ""
 "The file is **NOT** automatically sent. You have to send it yourself "
 "manually."
 msgstr ""
+"El archivo **NO** se envía automáticamente. Tiene que enviarlo usted mismo "
+"manualmente."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:137
 msgid ""
@@ -45588,16 +46079,21 @@ msgid ""
 "<https://www.facturae.gob.es/formato/Paginas/descarga-aplicacion-"
 "escritorio.aspx>`_."
 msgstr ""
+"Puede enviar archivos XML **FACe** por lotes a través del `portal "
+"gubernamental <https://www.facturae.gob.es/formato/Paginas/descarga-"
+"aplicacion-escritorio.aspx>`_."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:140
 msgid "Administrative centers"
-msgstr ""
+msgstr "Centros administrativos"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:142
 msgid ""
 "In order for **FACe** to work with **administrative centers**, the invoice "
 "*must* include specific data about the centers."
 msgstr ""
+"Para que **FACe** pueda trabajar con **centros administrativos**, la factura"
+" *debe* incluir datos específicos sobre los centros."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:146
 msgid ""
@@ -45605,6 +46101,9 @@ msgid ""
 "Centers Patch (l10n_es_edi_facturae_adm_centers)` module :ref:`installed "
 "<general/install>`."
 msgstr ""
+"Asegúrese de tener :ref:`instalado <general/install>` el módulo "
+":guilabel:`España - EDI Facturae - Parche para centros administrativos "
+"(l10n_es_edi_facturae_adm_centers)`."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:149
 msgid ""
@@ -45613,40 +46112,52 @@ msgid ""
 "one or more **role(s)** to that contact, and :guilabel:`Save`. The **three**"
 " roles usually required are:"
 msgstr ""
+"Para agregar **centros administrativos**, cree un nuevo **contacto** para "
+"agregarlo a la **compañía asociada**. Seleccione :guilabel:`Centro FACe` "
+"como **tipo**, asigne uno o varios **roles** a ese contacto y "
+":guilabel:`Guardar`. Los **tres** roles que suelen ser necesarios son:"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:153
 msgid "Órgano gestor: :guilabel:`Receptor` (Receiver);"
-msgstr ""
+msgstr "Órgano gestor: :guilabel:`Receptor`;"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:154
 msgid "Unidad tramitadora: :guilabel:`Pagador` (Payer);"
-msgstr ""
+msgstr "Unidad tramitadora: :guilabel:`Pagador`;"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:155
 msgid "Oficina contable: :guilabel:`Fiscal` (Fiscal)."
-msgstr ""
+msgstr "Oficina contable: :guilabel:`Fiscal`."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst-1
 msgid "Administrative center contact form for public entities."
 msgstr ""
+"Formulario de contacto del centro administrativo para entidades públicas."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:161
 msgid ""
 "If administrative centers need different :guilabel:`Codes` per role, you "
 "*must* create different centers for each role."
 msgstr ""
+"Si los centros administrativos necesitan diferentes :guilabel:`Códigos` por "
+"rol, usted *debe* crear diferentes centros para cada rol."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:163
 msgid ""
 "When an electronic invoice is created using a partner with **administrative "
 "centers**, *all* administrative centers are included in the invoice."
 msgstr ""
+"Cuando se crea una factura electrónica utilizando un contacto (una empresa) "
+"con **centros administrativos**, *todos* los centros administrativos se "
+"incluyen en la factura."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:165
 msgid ""
 "You can add one contact with multiple roles or multiple contacts with a "
 "different role each."
 msgstr ""
+"Puede agregar un contacto con varios roles o varios contactos con un rol "
+"diferente cada uno."
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:3
 msgid "Switzerland"
@@ -47199,6 +47710,11 @@ msgid ""
 "can pay sales orders, invoices, or subscriptions with recurring payments "
 "using their favorite payment methods, such as **credit cards**."
 msgstr ""
+"Odoo integra varios **proveedores de pago** que le permitirán a sus clientes"
+" pagar en línea a través de sus *portales de cliente* o de *el sitio web de "
+"su comercio electrónico*. Pueden pagar órdenes de venta, facturas o "
+"suscripciones con pagos recurrentes con sus métodos de pago preferidos como "
+"las **tarjetas de crédito**."
 
 #: ../../content/applications/finance/payment_providers.rst:33
 msgid ""
@@ -47206,10 +47722,13 @@ msgid ""
 " <payment_providers/payment_methods>` that can be (de)activated based on "
 "your needs."
 msgstr ""
+"Cada proveedor de pago está vinculado a una lista de :ref:`métodos de pago "
+"<payment_providers/payment_methods>` compatibles que se pueden habilitar (o "
+"deshabilitar) según sea necesario. "
 
 #: ../../content/applications/finance/payment_providers.rst-1
 msgid "Online payment form"
-msgstr ""
+msgstr "Formulario de pago en línea"
 
 #: ../../content/applications/finance/payment_providers.rst:40
 msgid ""
@@ -47220,6 +47739,12 @@ msgid ""
 "reference number for the data stored safely in the payment providers' "
 "systems."
 msgstr ""
+"Odoo delega el tratamiento de información sensible al proveedor de pago "
+"certificado para que usted no se preocupe por cumplir con el PCI. Ninguna "
+"información sensible (como números de tarjeta de crédito) se guarda en los "
+"servidores de Odoo o en otras bases de datos de Odoo almacenadas en otras "
+"partes. En su lugar, las aplicaciones de Odoo usan un número de referencia "
+"único para la información guardada en los sistemas del proveedor de pago."
 
 #: ../../content/applications/finance/payment_providers.rst:48
 msgid "Supported payment providers"
@@ -47232,6 +47757,10 @@ msgid ""
 "Configuration --> Payment Providers`, or :menuselection:`Sales --> "
 "Configuration --> Payment Providers`."
 msgstr ""
+"Vaya a :menuselection:`Contabilidad --> Configuración --> Proveedores de "
+"pago`, :menuselection:`Sitio web --> Configuración --> Proveedores de pago` "
+"o :menuselection:`Ventas --> Configuración --> Proveedores de pago` para "
+"acceder a los proveedores de pago compatibles."
 
 #: ../../content/applications/finance/payment_providers.rst:57
 msgid "Online payment providers"
@@ -47243,19 +47772,19 @@ msgstr "Flujo de pago desde "
 
 #: ../../content/applications/finance/payment_providers.rst:66
 msgid ":ref:`Tokenization <payment_providers/tokenization>`"
-msgstr ""
+msgstr ":ref:`Tokenización <payment_providers/tokenization>`"
 
 #: ../../content/applications/finance/payment_providers.rst:67
 msgid ":ref:`Manual capture <payment_providers/manual_capture>`"
-msgstr ""
+msgstr ":ref:`Captura manual <payment_providers/manual_capture>`"
 
 #: ../../content/applications/finance/payment_providers.rst:68
 msgid ":ref:`Refunds <payment_providers/refunds>`"
-msgstr ""
+msgstr ":ref:`Reembolsos <payment_providers/refunds>`"
 
 #: ../../content/applications/finance/payment_providers.rst:69
 msgid ":ref:`Express checkout <payment_providers/express_checkout>`"
-msgstr ""
+msgstr ":ref:`Pago exprés <payment_providers/express_checkout>`"
 
 #: ../../content/applications/finance/payment_providers.rst:70
 msgid ":doc:`Adyen <payment_providers/adyen>`"
@@ -47301,7 +47830,7 @@ msgstr ""
 #: ../../content/applications/finance/payment_providers.rst:131
 #: ../../content/applications/finance/payment_providers.rst:143
 msgid "The provider's website"
-msgstr ""
+msgstr "El sitio web del proveedor"
 
 #: ../../content/applications/finance/payment_providers.rst:82
 msgid ":doc:`AsiaPay <payment_providers/asiapay>`"
@@ -47352,13 +47881,15 @@ msgstr ":doc:`Stripe <payment_providers/stripe>`"
 
 #: ../../content/applications/finance/payment_providers.rst:142
 msgid ":doc:`Xendit <payment_providers/xendit>`"
-msgstr ""
+msgstr ":doc:`Xendit <payment_providers/xendit>`"
 
 #: ../../content/applications/finance/payment_providers.rst:152
 msgid ""
 "Each provider has its own specific configuration flow, depending on which "
 "feature is available."
 msgstr ""
+"Cada proveedor tiene su propio flujo de configuraciones, dependiendo de qué "
+"función esté disponible."
 
 #: ../../content/applications/finance/payment_providers.rst:154
 msgid ""
@@ -47368,6 +47899,12 @@ msgid ""
 "pay online, and bank accounts are added and configured in the Accounting app"
 " to do a :doc:`bank reconciliation <accounting/bank/reconciliation>`."
 msgstr ""
+"Algunos de estos proveedores de pago también se pueden agregar como  "
+":doc:`cuentas bancarias <../finance/accounting/bank>`, pero **no es** el "
+"mismo proceso que el de agregarlos como proveedores de pago. Los proveedores"
+" de pago le permiten a los clientes pagar en línea, mientras que las cuentas"
+" bancarias se agregan y configuran en la aplicación Contabilidad para hacer "
+"una :doc:`conciliación bancaria <accounting/bank/reconciliation>`."
 
 #: ../../content/applications/finance/payment_providers.rst:161
 msgid ""
@@ -47377,6 +47914,11 @@ msgid ""
 " business flows involving online payments. No credentials are required as "
 "the demo payments are dummy payments."
 msgstr ""
+"Además de los proveedores de pago de siempre que están integrados con una "
+"API como Stripe, PayPal o Adyen; Odoo incluye el :doc:`Proveedor de pago de "
+"prueba <payment_providers/demo>`. Este proveedor le permite probar flujos "
+"empresariales que involucran pagos en línea. No se requieren de credenciales"
+" puesto que estos son pagos de prueba. "
 
 #: ../../content/applications/finance/payment_providers.rst:169
 msgid "Bank payments"
@@ -47392,6 +47934,9 @@ msgid ""
 "reference. You have to approve the payment manually once you have received "
 "it in your bank account."
 msgstr ""
+"Al seleccionar esta opción, Odoo muestra su información de pago con una "
+"referencia de pago. Debe aprobar el pago de forma manual una vez que lo haya"
+" recibido en su cuenta bancaria."
 
 #: ../../content/applications/finance/payment_providers.rst:0
 msgid ":doc:`SEPA Direct Debit <../finance/accounting/payments/batch_sdd>`"
@@ -47410,13 +47955,15 @@ msgstr ""
 
 #: ../../content/applications/finance/payment_providers.rst:181
 msgid "Enable a payment provider"
-msgstr ""
+msgstr "Activar un proveedor de pago"
 
 #: ../../content/applications/finance/payment_providers.rst:183
 msgid ""
 "To add a new payment provider and make its related payment methods available"
 " to your customers, proceed as follows:"
 msgstr ""
+"Para agregar un nuevo proveedor de pago y hacer que los métodos de pago "
+"relacionados estén disponibles para sus clientes, siga estos pasos:"
 
 #: ../../content/applications/finance/payment_providers.rst:186
 msgid ""
@@ -47424,6 +47971,9 @@ msgid ""
 "have the API credentials requested for third-party use. These are necessary "
 "for Odoo to communicate with the payment provider."
 msgstr ""
+"Vaya al sitio web del proveedor de pago, cree una cuenta y asegúrese de que "
+"tiene las credenciales API requeridas para uso externo. Odoo necesita estas "
+"credenciales para comunicarse con el proveedor de pago. "
 
 #: ../../content/applications/finance/payment_providers.rst:189
 msgid ""
@@ -47432,15 +47982,20 @@ msgid ""
 ":menuselection:`Website --> Configuration --> Payment Providers`, or "
 ":menuselection:`Sales --> Configuration --> Payment Providers`."
 msgstr ""
+"En Odoo, vaya a la sección :guilabel:`Proveedores de pago` desde "
+":menuselection:`Contabilidad --> Configuración --> Proveedores de pago`, "
+":menuselection:`Sitio web --> Configuración --> Proveedores de pago` o "
+":menuselection:`Ventas --> Configuración --> Proveedores de pago`."
 
 #: ../../content/applications/finance/payment_providers.rst:192
 msgid "Select the provider and configure the :guilabel:`Credentials` tab."
 msgstr ""
+"Seleccione el proveedor y configure la pestaña :guilabel:`Credenciales`."
 
 #: ../../content/applications/finance/payment_providers.rst:193
 #: ../../content/applications/finance/payment_providers/stripe.rst:33
 msgid "Set the :guilabel:`State` field to :guilabel:`Enabled`."
-msgstr ""
+msgstr "Configure el campo :guilabel:`Estado` como :guilabel:`Habilitado`."
 
 #: ../../content/applications/finance/payment_providers.rst:196
 msgid ""
@@ -47448,6 +48003,9 @@ msgid ""
 "payment provider. Refer to the :ref:`related documentation "
 "<payment_providers/supported_providers>` for more information."
 msgstr ""
+"Los campos disponibles en la pestaña :guilabel:`Credenciales` dependen del "
+"proveedor de pago. Para más información consulte :ref:`la documentación "
+"relacionada <payment_providers/supported_providers>`."
 
 #: ../../content/applications/finance/payment_providers.rst:199
 msgid ""
@@ -47457,10 +48015,16 @@ msgid ""
 "they can still manage :dfn:`(delete and assign to a subscription)` their "
 "existing tokens linked to such a provider."
 msgstr ""
+"Una vez que active el proveedor de pago, se publicará de forma automática en"
+" su sitio web. Si desea desactivarlo, haga clic en el botón "
+":guilabel:`Publicado`. Los clientes no pueden hacer pagos a través de un "
+"proveedor que no esté publicado, pero todavía pueden gestionar :dfn:`(borrar"
+" y asignar a una suscripción)` los tokens existentes vinculados a dicho "
+"proveedor."
 
 #: ../../content/applications/finance/payment_providers.rst:207
 msgid "Test mode"
-msgstr ""
+msgstr "Modo de prueba"
 
 #: ../../content/applications/finance/payment_providers.rst:209
 msgid ""
@@ -47468,22 +48032,30 @@ msgid ""
 " field in the payment provider form to :guilabel:`Test mode`, then enter "
 "your provider's test/sandbox credentials in the :guilabel:`Credentials` tab."
 msgstr ""
+"Si desea probar un proveedor de pago, configure el campo :guilabel:`Estado` "
+"en el formulario del proveedor de pago como :guilabel:`Modo de prueba`, "
+"después ingrese las credenciales de prueba de su proveedor en la pestaña "
+":guilabel:`Credenciales`."
 
 #: ../../content/applications/finance/payment_providers.rst:214
 msgid ""
 "By default, the payment provider remains **unpublished** in test mode so "
 "that it's not visible to visitors."
 msgstr ""
+"De forma predeterminada, el proveedor de pago se mantendrá **sin publicar** "
+"en el modo de prueba para que los visitantes no lo puedan ver."
 
 #: ../../content/applications/finance/payment_providers.rst:218
 msgid ""
 "We recommend using the test mode on a duplicate or a test database to avoid "
 "potential issues with your invoice numbering."
 msgstr ""
+"Le recomendamos usar el modo de prueba en una base de datos duplicada o de "
+"prueba para evitar crear problemas con la numeración de sus facturas."
 
 #: ../../content/applications/finance/payment_providers.rst:224
 msgid "Payment methods"
-msgstr ""
+msgstr "Métodos de pago"
 
 #: ../../content/applications/finance/payment_providers.rst:226
 msgid ""
@@ -47494,6 +48066,12 @@ msgid ""
 "provider, click :guilabel:`Enable Payment Methods`, then click the toggle "
 "button of the related method."
 msgstr ""
+"Cada proveedor de pagos está relacionado con una lista de métodos de pago "
+"compatible. Los métodos que aparecen en el campo :guilabel:`Métodos de pago`"
+" en la pestaña :guilabel:`Configuración` del formulario del proveedor de "
+"pagos son los que están habilitados. Para habilitar o deshabilitar un método"
+" de pago para un proveedor haga clic en :guilabel:`Permitir métodos de "
+"pago`, después haga clic en el interruptor del método relacionado."
 
 #: ../../content/applications/finance/payment_providers.rst:232
 msgid ""
@@ -47502,10 +48080,14 @@ msgid ""
 "provider form, then, in the :guilabel:`Payment Methods` list, drag and drop "
 "the payment methods in the desired order."
 msgstr ""
+"Los métodos de pago aparecen en su sitio web según la manera en la que estén"
+" ordenados. Para reorganizarlos, haga clic en :guilabel:`Permitir métodos de"
+" pago` en el formulario de proveedor de pago. Después, en la lista de "
+":guilabel:`métodos de pago` arrástrelos y suéltelos en el orden deseado."
 
 #: ../../content/applications/finance/payment_providers.rst:237
 msgid "Icons and brands"
-msgstr ""
+msgstr "Iconos y marcas"
 
 #: ../../content/applications/finance/payment_providers.rst:239
 msgid ""
@@ -47517,6 +48099,13 @@ msgid ""
 ":menuselection:`Sales --> Configuration --> Payment Methods`, then click on "
 "the payment method."
 msgstr ""
+"Los iconos que aparecen junto al método de pago en su sitio web son los "
+"iconos de las marcas habilitadas para el método de pago o, en caso de que no"
+" haya ninguno, los iconos de los métodos de pago. Para modificarlos, vaya a "
+":menuselection:`Contabilidad --> Configuración --> Métodos de pago`, "
+":menuselection:`Sitio web --> Configuración --> Métodos de pago` o "
+":menuselection:`Ventas --> Configuración --> Métodos de pago`, luego haga "
+"clic en el método de pago."
 
 #: ../../content/applications/finance/payment_providers.rst:245
 msgid ""
@@ -47524,6 +48113,9 @@ msgid ""
 "upper-right corner of the payment method's form and click the pencil icon "
 "(:guilabel:`✎`)."
 msgstr ""
+"Para modificar el icono de un método de pago, pase el cursor sobre la imagen"
+" ubicada en la esquina superior derecha del formulario del método de pago y "
+"haga clic en el icono de lápiz (:guilabel:`✎`)."
 
 #: ../../content/applications/finance/payment_providers.rst:248
 msgid ""
@@ -47534,10 +48126,17 @@ msgid ""
 "the popup window that opens, hover the mouse over the image in the upper-"
 "right corner and click the pencil icon (:guilabel:`✎`)."
 msgstr ""
+"Seleccione la pestaña :guilabel:`Marcas` para visualizar las que están "
+"habilitadas para el método de pago. Las marcas y sus iconos relacionados "
+"aparecen según su orden de secuencia, en caso de que desee reordenarlas, "
+"arrástrelas y suéltelas en el orden necesario. Para modificar el icono de "
+"una marca, selecciónela y luego, en la ventana emergente que se abrirá, pase"
+" el cursor sobre la imagen ubicada en la esquina superior derecha y haga "
+"clic en el icono de lápiz (:guilabel:`✎`)."
 
 #: ../../content/applications/finance/payment_providers.rst:255
 msgid "Advanced configuration"
-msgstr ""
+msgstr "Configuración avanzada"
 
 #: ../../content/applications/finance/payment_providers.rst:257
 msgid ""
@@ -47548,6 +48147,13 @@ msgid ""
 "activate the :ref:`developer mode <developer-mode>`. Click the "
 ":guilabel:`Configuration` tab to adapt the features."
 msgstr ""
+"Si desea agregar mayor configuración a los métodos de pago, vaya a "
+":menuselection:`Contabilidad --> Configuración --> Métodos de Pago`, "
+":menuselection:`Sitio web --> Configuración --> Métodos de Pago` o "
+":menuselection:`Ventas --> Configuración --> Métodos de Pago`. Haga clic en "
+"el método de pago y después active el :ref:`modo de desarrollador "
+"<developer-mode>`. Haga clic en la pestaña :guilabel:`Configuración` para "
+"adaptar las funciones."
 
 #: ../../content/applications/finance/payment_providers.rst:264
 msgid ""
@@ -47556,6 +48162,10 @@ msgid ""
 "configuration may result in errors and should be tested on a duplicate or "
 "test database first."
 msgstr ""
+"Si realiza cambios en esta configuración podría ocasionar errores, pues cada"
+" método de pago está preconfigurado para coincidir con el comportamiento de "
+"los proveedores de pago y su integración con Odoo. Le recomendamos que "
+"primero los pruebe en una base de datos duplicada o de prueba."
 
 #: ../../content/applications/finance/payment_providers.rst:267
 msgid ""
@@ -47566,6 +48176,12 @@ msgid ""
 "<payment_providers/tokenization>` for a method linked to a provider that "
 "does not support it will not produce the intended results."
 msgstr ""
+"Las modificaciones a la configuración del método de pago solo funcionan si "
+"son compatibles con las funciones del método y del proveedor. Por ejemplo, "
+"agregar :ref:`países <payment_providers/currencies_countries>` a un método "
+"de pago que solo es compatible con un país o habilitar la :ref:`tokenización"
+" <payment_providers/tokenization>` para un método vinculado a un proveedor "
+"que no es compatible no producirá los resultados esperados."
 
 #: ../../content/applications/finance/payment_providers.rst:276
 msgid "Tokenization"
@@ -47579,6 +48195,11 @@ msgid ""
 ":guilabel:`Configuration` tab of the selected payment provider and enable "
 ":guilabel:`Allow Saving Payment Methods`."
 msgstr ""
+":ref:`Si el proveedor de pago es compatible con esta función "
+"<payment_providers/online_providers>`, los clientes podrán guardar los "
+"detalles de su método de pago para usarlos después. Para activar esta "
+"función, vaya a la pestaña de :guilabel:`Configuración` del proveedor de "
+"pago seleccionado y active :guilabel:`Permitir guardar métodos de pago`."
 
 #: ../../content/applications/finance/payment_providers.rst:283
 msgid ""
@@ -47587,6 +48208,10 @@ msgid ""
 "payment method details again. This is particularly useful for the eCommerce "
 "conversion rate and subscriptions that use recurring payments."
 msgstr ""
+"Un **token de pago** se crea en Odoo y se puede usar como método de pago "
+"para pagos subsecuentes sin tener que ingresar otra vez los detalles del "
+"método de pago. Esto es muy útil para la tasa de conversión de los comercios"
+" electrónicos y para las suscripciones que usan pagos recurrentes. "
 
 #: ../../content/applications/finance/payment_providers.rst:288
 msgid ""
@@ -47595,6 +48220,10 @@ msgid ""
 "token that only references the card details stored on the payment provider's"
 " server."
 msgstr ""
+"Sigue cumpliendo con el PCI aún con esta función acitvada porque Odoo no "
+"guarda los detalles de la tarjeta directamente. En lugar de eso, crea un "
+"token de pago que solo guarda una referencia de los detalles de la tarjeta "
+"almacenados en el servidor del proveedor de pago.  "
 
 #: ../../content/applications/finance/payment_providers.rst:295
 msgid "Manual capture"
@@ -47608,6 +48237,11 @@ msgid ""
 ":guilabel:`Configuration` tab of the selected payment provider and enable "
 ":guilabel:`Capture Amount Manually`."
 msgstr ""
+":ref:`Si el proveedor de pago es compatible con esta función "
+"<payment_providers/online_providers>`, podrá autorizar y capturar pagos en "
+"dos pasos en lugar de solo uno. Para activar esta función, vaya a la pestaña"
+" de :guilabel:`Configuración` del proveedor de pago seleccionado y active "
+":guilabel:`Capturar el importe manualmente`."
 
 #: ../../content/applications/finance/payment_providers.rst:302
 msgid ""
@@ -47617,6 +48251,11 @@ msgid ""
 "to cancel it and release the reserved funds. Capturing payments manually is "
 "helpful in many situations:"
 msgstr ""
+"Cuando autoriza un pago, los fondos se reservan en el método de pago del "
+"cliente, pero no se cobran inmediatamente. Se cobran cuando usted captura "
+"manualmente el pago más tarde. También puede anular la autorización para "
+"cancelarla y liberar los fondos reservados. Capturar pagos manualmente es "
+"útil en muchas situaciones:"
 
 #: ../../content/applications/finance/payment_providers.rst:307
 msgid ""
@@ -47639,12 +48278,16 @@ msgid ""
 "Avoid potentially high refund fees for refunded payments: payment providers "
 "will not charge you for voiding an authorization."
 msgstr ""
+"Evitar procesar cuotas potencialmente altas para reembolsos de pagos: los "
+"proveedores de pago no le cobrarán por anular una autorización. "
 
 #: ../../content/applications/finance/payment_providers.rst:312
 msgid ""
 "Hold a security deposit to return later, minus any deductions (e.g., in case"
 " of damages)."
 msgstr ""
+"Retener un depósito de seguridad para despúes devolverlo, menos cualquier "
+"deducción (por ejemplo, en caso de daños). "
 
 #: ../../content/applications/finance/payment_providers.rst:314
 msgid ""
@@ -47652,6 +48295,10 @@ msgid ""
 "order or invoice and click the :guilabel:`Capture Transaction` button. To "
 "release the funds, click the :guilabel:`Void Transaction` button."
 msgstr ""
+"Para capturar el pago después de que se autorizo, vaya a la orden de ventas "
+"o factura vinculada y haga clic en el botón de :guilabel:`Capturar "
+"transacción`. Para liberar los fondos, haga clic en el botón de "
+":guilabel:`Anular transacción`."
 
 #: ../../content/applications/finance/payment_providers.rst:319
 msgid ""
@@ -47661,6 +48308,12 @@ msgid ""
 "<payment_providers/online_providers>`. The providers that only support "
 "capturing or voiding the total amount have the value **Full only**."
 msgstr ""
+"Algunos proveedores de pago admiten la captura parcial del importe "
+"autorizado. El importe restante se puede capturar o anular. Estos "
+"proveedores tienen marcado del valor de **Completo y parcial** en la "
+":ref:`tabla anterior <payment_providers/online_providers>`. Los proveedores "
+"que solo admiten la captura o anulación completa del importe tienen marcado "
+"el valor de **Solo completo**."
 
 #: ../../content/applications/finance/payment_providers.rst:323
 msgid ""
@@ -47678,6 +48331,8 @@ msgid ""
 "Odoo does not support this feature for all payment providers, but some allow"
 " the manual capture from their website interface."
 msgstr ""
+"Odoo no admite esta función para todos los proveedores de pago pero algunos "
+"permiten la captura manual desde la interfaz de su sitio web. "
 
 #: ../../content/applications/finance/payment_providers.rst:332
 msgid "Refunds"
@@ -47689,6 +48344,10 @@ msgid ""
 "directly from Odoo. It does not need to be enabled first. To refund a "
 "customer payment, navigate to it and click the :guilabel:`Refund` button."
 msgstr ""
+"Si su proveedor de pago admite esta función, puede reembolsar los pagos "
+"directamente desde Odoo. No se tiene que activar primero. Para reembolsar el"
+" pago de un cliente, vaya al pago y haga clic en el botón de "
+":guilabel:`Reembolsar`."
 
 #: ../../content/applications/finance/payment_providers.rst:339
 msgid ""
@@ -47698,12 +48357,20 @@ msgid ""
 "<payment_providers/online_providers>`. The providers that only support "
 "refunding the total amount have the value **Full only**."
 msgstr ""
+"Algunos proveedores de pago admiten el reembolso solo de una parte del "
+"importe. El restante se puede reembolsar también de manera opcional. Estos "
+"proveedores tienen marcado el valor de  **Completo y parcial** en la "
+":ref:`tabla anterior <payment_providers/online_providers>`. Los proveedores "
+"que solo admiten el reembolso completo del importe tienen marcado el valor "
+"de **Solo completo**."
 
 #: ../../content/applications/finance/payment_providers.rst:343
 msgid ""
 "Odoo does not support this feature for all payment providers, but some allow"
 " to refund payments from their website interface."
 msgstr ""
+"Odoo no admite esta función en todos los proveedores de pago pero algunos "
+"permiten el reembolso de pagos desde la interfaz de su sitio web. "
 
 #: ../../content/applications/finance/payment_providers.rst:349
 msgid "Express checkout"
@@ -47719,21 +48386,32 @@ msgid ""
 "contact form. They just have to validate the payment on Google's or Apple's "
 "payment form."
 msgstr ""
+":ref:`Si el proveedor de pago es compatible con esta función "
+"<payment_providers/online_providers>`, puede dejar que los clientes usen los"
+" botones de :guilabel:`Google Pay` y :guilabel:`Apple Pay` para pagar por "
+"las órdenes de comercio electrónico. Al usar cualquiera de estos botones, "
+"pasarán directamente desde el carrito a la página de confirmación sin tener "
+"que llenar un formulario de contacto, ya que solo tienen que validar el pago"
+" en el formulario de pago de Google o Apple."
 
 #: ../../content/applications/finance/payment_providers.rst:357
 msgid ""
 "To enable this feature, go to the :guilabel:`Configuration` tab of the "
 "selected payment provider and enable :guilabel:`Allow Express Checkout`."
 msgstr ""
+"Para activar esta función vaya a la pestaña :guilabel:`Configuración` del "
+"proveedor de pago seleccionado y active :guilabel:`Permitir el pago rápido`."
 
 #: ../../content/applications/finance/payment_providers.rst:361
 msgid ""
 "All prices shown on the express checkout payment form always include taxes."
 msgstr ""
+"Todos los precios que se muestran en el formulario de pago rápido siempre "
+"incluyen los impuestos."
 
 #: ../../content/applications/finance/payment_providers.rst:364
 msgid "Availability"
-msgstr ""
+msgstr "Disponibilidad"
 
 #: ../../content/applications/finance/payment_providers.rst:366
 msgid ""
@@ -47741,10 +48419,13 @@ msgid ""
 ":guilabel:`Maximum amount` allowed and modifying the :guilabel:`Currencies` "
 "and :guilabel:`Countries` in the :guilabel:`Configuration` tab."
 msgstr ""
+"Es posible configurar la disponibilidad del proveedor de pago si especifica "
+"el :guilabel:`monto máximo` permitido y modifica tanto la :guilabel:`Divisa`"
+" como los :guilabel:`Países` en la pestaña de :guilabel:`Configuración`."
 
 #: ../../content/applications/finance/payment_providers.rst:373
 msgid "Currencies and countries"
-msgstr ""
+msgstr "Divisas y países"
 
 #: ../../content/applications/finance/payment_providers.rst:375
 msgid ""
@@ -47756,6 +48437,14 @@ msgid ""
 "available currencies and countries, adding or removing a payment provider's "
 "supported currencies or countries is possible."
 msgstr ""
+"Todos los proveedores de pago tienen una lista de divisas y países en los "
+"que están disponibles diferente. Son el primer filtro durante las "
+"operaciones de pago, es decir, los métodos de pago vinculados a un proveedor"
+" de pago no estarán disponibles para el cliente si su divisa o su país no "
+"está en la lista de países o divisas compatibles. Como es posible que haya "
+"errores, actualizaciones y otros problemas, es posible agregar o quitar "
+"divisas o países de la lista de opciones compatibles de un proveedor de "
+"pago."
 
 #: ../../content/applications/finance/payment_providers.rst:383
 msgid ""
@@ -47763,6 +48452,9 @@ msgid ""
 "own list of available currencies and countries that serves as another filter"
 " during payment operations."
 msgstr ""
+":ref:`Los métodos de pago <payment_providers/payment_methods>` también "
+"tienen su propia lista de países y divisas compatibles que sirve como otro "
+"filtro durante las operaciones de pago."
 
 #: ../../content/applications/finance/payment_providers.rst:385
 msgid ""
@@ -47772,10 +48464,15 @@ msgid ""
 "possible the payment will be refused at a later stage should the country or "
 "currency not be supported."
 msgstr ""
+"Si la lista de países o divisas compatibles está vacía, significa que la "
+"lista es muy larga para mostrarse, u Odoo no tiene la información de este "
+"proveedor de pago. El proveedor de pago seguirá estando disponible, aunque "
+"es posible que el pago se rechace más adelante si el país o la divisa no son"
+" compatibles."
 
 #: ../../content/applications/finance/payment_providers.rst:391
 msgid "Maximum amount"
-msgstr ""
+msgstr "Cantidad máxima"
 
 #: ../../content/applications/finance/payment_providers.rst:393
 msgid ""
@@ -47783,6 +48480,9 @@ msgid ""
 "selected provider. Leave the field to `0.00` to make the payment provider "
 "available regardless of the payment amount."
 msgstr ""
+"Puede restringir la :guilabel:`Cantidad máxima` que se puede pagar con el "
+"proveedor de pago seleccionado. Deje el campo como `0.00` para que el "
+"proveedor de pago esté disponible sin importar la cantidad del pago."
 
 #: ../../content/applications/finance/payment_providers.rst:397
 msgid ""
@@ -47791,6 +48491,10 @@ msgid ""
 "**Checkout** page when paid :doc:`shipping methods "
 "<../websites/ecommerce/checkout_payment_shipping/shipping>` are enabled."
 msgstr ""
+"Esta función no se creó para que funcionara dentro de páginas en las que el "
+"cliente puede actualizar la cantidad del pago, por ejemplo, el snippet de "
+"**donación* y la página de **pago** cuando los :doc:`métodos de envío "
+"<../websites/ecommerce/checkout_payment_shipping/shipping>` están activados."
 
 #: ../../content/applications/finance/payment_providers.rst:404
 msgid "Payment journal"
@@ -47804,20 +48508,28 @@ msgid ""
 " providers. To modify it, go to the :guilabel:`Configuration` tab of the "
 "selected payment provider and select another :guilabel:`Payment journal`."
 msgstr ""
+"Debe definir un :doc:`diario de pago <accounting/bank>` para que el "
+"proveedor de pagos registre los pagos en una **cuenta pendiente**. De forma "
+"predeterminada, el diario :guilabel:`Banco` se agrega como el diario de "
+"pagos para todos los proveedores de pago. Para modificarlo, vaya a la "
+"pestaña :guilabel:`Configuración` del proveedor de pagos seleccionado y "
+"elija otro :guilabel:`diario de pagos`."
 
 #: ../../content/applications/finance/payment_providers.rst:412
 msgid "The payment journal must be a :guilabel:`Bank` journal."
-msgstr ""
+msgstr "El diario de pago debe ser un diario de :guilabel:`Banco`."
 
 #: ../../content/applications/finance/payment_providers.rst:413
 msgid "The same journal can be used for several payment providers."
-msgstr ""
+msgstr "Puede usar el mismo diario para varios proveedores de pago."
 
 #: ../../content/applications/finance/payment_providers.rst:414
 msgid ""
 "Payment journals must only be configured if the :doc:`Invoicing or "
 "Accounting app <accounting>` is installed."
 msgstr ""
+"Solo debe configurar los diarios de pago si las :doc:`aplicaciones "
+"Facturación o Contabilidad <accounting>` están instaladas."
 
 #: ../../content/applications/finance/payment_providers.rst:418
 msgid "Accounting perspective"
@@ -47834,6 +48546,14 @@ msgid ""
 "to record your payments' journal entries. We recommend you ask your "
 "accountant for advice."
 msgstr ""
+"Desde una perspectiva de contabilidad, hay dos tipos de flujos de pago en "
+"línea: los pagos que se depositan directamente en su cuenta bancaria y "
+"siguen el flujo de :doc:`conciliación <accounting/bank/reconciliation>` "
+"usual y los pagos que vienen de :ref:`proveedores de pago en línea "
+"<payment_providers/online_providers>` externos que requieren que se siga "
+"otro flujo de trabajo. Para estos pagos necesita pensar cómo quiere "
+"registrar sus asientos de pago. Le recomendamos que hable con su contador "
+"para obtener su opinión al respecto."
 
 #: ../../content/applications/finance/payment_providers.rst:427
 msgid ""
@@ -47842,10 +48562,15 @@ msgid ""
 ":ref:`outstanding account <bank/outstanding-accounts>` for each payment "
 "provider to separate the provider's payments from other payments."
 msgstr ""
+"Por defecto, se usa la :guilabel:`cuenta bancaria` que está definida para el"
+" :ref:`diario de pago <payment_providers/journal>`, pero también puede "
+"especificar una :ref:`cuenta pendiente <bank/outstanding-accounts>` para "
+"cada proveedor de pago y así separar los pagos provenientes de este "
+"proveedor del resto de los pagos."
 
 #: ../../content/applications/finance/payment_providers.rst-1
 msgid "Define an outstanding account for a payment provider."
-msgstr ""
+msgstr "Definir una cuenta pendiente para un proveedor de pago."
 
 #: ../../content/applications/finance/payment_providers.rst:436
 msgid ":doc:`payment_providers/wire_transfer`"
@@ -47905,7 +48630,7 @@ msgstr ":doc:`payment_providers/stripe`"
 
 #: ../../content/applications/finance/payment_providers.rst:450
 msgid ":doc:`payment_providers/xendit`"
-msgstr ""
+msgstr ":doc:`payment_providers/xendit`"
 
 #: ../../content/applications/finance/payment_providers.rst:451
 msgid ":doc:`../websites/ecommerce/checkout_payment_shipping/payments`"
@@ -47913,7 +48638,7 @@ msgstr ":doc:`../websites/ecommerce/checkout_payment_shipping/payments`"
 
 #: ../../content/applications/finance/payment_providers.rst:452
 msgid ":doc:`accounting/bank`"
-msgstr ""
+msgstr ":doc:`accounting/bank`"
 
 #: ../../content/applications/finance/payment_providers/adyen.rst:3
 msgid "Adyen"
@@ -48272,6 +48997,9 @@ msgid ""
 "explained in the :ref:`payment providers documentation "
 "<payment_providers/manual_capture>`."
 msgstr ""
+"Para establecer la cuenta pendiente, active la opción **Capturar importe "
+"manualmente** en Odoo, como se explica en :ref:`documentación sobre los "
+"proveedores de pago <payment_providers/manual_capture>`."
 
 #: ../../content/applications/finance/payment_providers/adyen.rst:146
 msgid ""
@@ -48401,7 +49129,7 @@ msgstr ""
 
 #: ../../content/applications/finance/payment_providers/amazon_payment_services.rst:11
 msgid "Configuration on APS Dashboard"
-msgstr "Configuración en el tablero de APS. "
+msgstr "Configuración en el tablero de APS"
 
 #: ../../content/applications/finance/payment_providers/amazon_payment_services.rst:13
 msgid ""
@@ -48616,8 +49344,8 @@ msgid ""
 ":ref:`Navigate to the payment provider AsiaPay <payment_providers/add_new>` "
 "and change its state to :guilabel:`Enabled`."
 msgstr ""
-":ref:`Vaya a el proveedor de pago AsiaPay <payment_providers/add_new>` y "
-"cambie su estado a  :guilabel:`Activado`."
+":ref:`Vaya al proveedor de pago AsiaPay <payment_providers/add_new>` y "
+"cambie su estado a :guilabel:`Habilitado`."
 
 #: ../../content/applications/finance/payment_providers/asiapay.rst:0
 msgid ""
@@ -48735,6 +49463,9 @@ msgid ""
 "<payment_providers/manual_capture>`. If enabled, the funds are reserved for "
 "30 days on the customer's card, but not charged yet."
 msgstr ""
+"Con Authorize.net, puede activar la :ref:`captura manual "
+"<payment_providers/manual_capture>`. Si es así, los fondos se apartan por 30"
+" días en la tarjeta del cliente, pero no se hace el cargo todavía. "
 
 #: ../../content/applications/finance/payment_providers/authorize.rst:48
 msgid ""
@@ -49147,7 +49878,7 @@ msgid ""
 " and change its state to :guilabel:`Enabled`."
 msgstr ""
 ":ref:`Vaya al proveedor de pago Buckaroo <payment_providers/add_new>` y "
-"cambie su estado a :guilabel:`Activado`."
+"cambie su estado a :guilabel:`Habilitado`."
 
 #: ../../content/applications/finance/payment_providers/buckaroo.rst:31
 msgid ""
@@ -49241,7 +49972,7 @@ msgstr ""
 
 #: ../../content/applications/finance/payment_providers/flutterwave.rst:11
 msgid "Configuration on Flutterwave Dashboard"
-msgstr "Configuración en el Tablero de Flutterwave. "
+msgstr "Configuración en el tablero de Flutterwave"
 
 #: ../../content/applications/finance/payment_providers/flutterwave.rst:13
 msgid ""
@@ -49295,7 +50026,7 @@ msgid ""
 "<payment_providers/add_new>` and change its state to :guilabel:`Enabled`."
 msgstr ""
 ":ref:`Vaya al proveedor de pago Flutterwave <payment_providers/add_new>` y "
-"cambie su estado a :guilabel:`Activado`."
+"cambie su estado a :guilabel:`Habilitado`."
 
 #: ../../content/applications/finance/payment_providers/flutterwave.rst:33
 msgid ""
@@ -49383,7 +50114,7 @@ msgid ""
 "<payment_providers/add_new>` and change its state to :guilabel:`Enabled`."
 msgstr ""
 ":ref:`Vaya al proveedor de pago Mercado Pago <payment_providers/add_new>` y "
-"cambie su estado a  :guilabel:`Activado`."
+"cambie su estado a :guilabel:`Habilitado`."
 
 #: ../../content/applications/finance/payment_providers/mercado_pago.rst:34
 msgid ""
@@ -49399,7 +50130,7 @@ msgstr ""
 msgid ""
 "`Mercado Pago Odoo webinar <https://www.youtube.com/watch?v=CX8vPHMb1ic>`_"
 msgstr ""
-"`Webinar sobre Mercado Pago en Odoo "
+"`Webinario sobre Mercado Pago en Odoo "
 "<https://www.youtube.com/watch?v=CX8vPHMb1ic>`_"
 
 #: ../../content/applications/finance/payment_providers/mollie.rst:3
@@ -50119,7 +50850,7 @@ msgid ""
 " and change its state to :guilabel:`Enabled`."
 msgstr ""
 ":ref:`Vaya al proveedor de pago Razorpay <payment_providers/add_new>` y "
-"cambie su estado a  :guilabel:`Activado`."
+"cambie su estado a :guilabel:`Habilitado`."
 
 #: ../../content/applications/finance/payment_providers/razorpay.rst:41
 msgid ""
@@ -50227,16 +50958,18 @@ msgid ""
 "solution provider allowing businesses to accept **credit cards** and other "
 "payment methods."
 msgstr ""
+"`Stripe <https://stripe.com/>`_ es un proveedor de soluciones de pago en "
+"línea con sede en Estados Unidos con el que las empresas pueden aceptar "
+"**tarjetas de crédito** y otros métodos de pago."
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:9
 msgid "Create your Stripe account with Odoo"
-msgstr ""
+msgstr "Cree su cuenta de Stripe con Odoo"
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:11
 msgid "The method to acquire your credentials depends on your hosting type:"
 msgstr ""
-"El método para adquirir sus credenciales depende del tipo de su alojamiento:"
-" "
+"El método para obtener sus credenciales depende de su tipo de alojamiento:"
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:16
 #: ../../content/applications/finance/payment_providers/stripe.rst:25
@@ -50245,6 +50978,9 @@ msgid ""
 "<payment_providers/supported_providers>` and click :guilabel:`Connect "
 "Stripe`."
 msgstr ""
+":ref:`Vaya al proveedor de pago "
+"Stripe<payment_providers/supported_providers>` y haga clic en "
+":guilabel:`Conectar Stripe`."
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:18
 #: ../../content/applications/finance/payment_providers/stripe.rst:27
@@ -50252,6 +50988,8 @@ msgid ""
 "Go through the setup process and confirm your email address when Stripe "
 "sends you a confirmation email."
 msgstr ""
+"Siga el proceso de configuración y confirme su dirección de correo cuando "
+"Stripe le envíe un correo de confirmación."
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:20
 msgid ""
@@ -50259,6 +50997,9 @@ msgid ""
 "requested information has been submitted, you are then redirected to Odoo, "
 "and your payment provider is enabled."
 msgstr ""
+"Al final del proceso, haga clic en :guilabel:`Agree and submit` (estoy de "
+"acuerdo y enviar). Si se envió toda la información solicitada regresará a "
+"Odoo y se activará su proveedor de pago."
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:23
 msgid "Odoo.sh or On-premise"
@@ -50269,6 +51010,9 @@ msgid ""
 "At the end of the process, click :guilabel:`Agree and submit`; you are then "
 "redirected to the payment provider **Stripe** in Odoo."
 msgstr ""
+"Al final del proceso, haga clic en :guilabel:`Agree and submit` (estoy de "
+"acuerdo y enviar). Se le redirigirá al proveedor de pago **Stripe** dentro "
+"de Odoo"
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:31
 msgid ":ref:`Fill in your credentials <stripe/api_keys>`."
@@ -50286,6 +51030,11 @@ msgid ""
 "<stripe/api_keys>`, :ref:`generate a webhook <stripe/webhook>`, and enable "
 "the payment provider."
 msgstr ""
+"Para usar una cuenta de Stripe existente,  :ref:`active el modo "
+"desarrollador <developer-mode>` y :ref:`active Stripe manualmente "
+"<payment_providers/add_new>`. Entonces podrá :ref:`completar sus "
+"credenciales <stripe/api-keys>`, :ref:`generar un webhook <stripe/webhook>` "
+"y establecer su proveedor de pago."
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:40
 msgid ""
@@ -50298,6 +51047,14 @@ msgid ""
 " <stripe/api_keys>` with the test keys, and set the :guilabel:`State` field "
 "to :guilabel:`Test Mode`."
 msgstr ""
+"También puede probar Stripe con el :ref:`payment_providers/test-mode` (modo "
+"de prueba de proveedores de pago). Para hacerlo, primero  `inicie sesión en "
+"su tablero de Stripe <https://dashboard.stripe.com/dashboard>`_ y cambie al "
+"**modo de prueba**. Después en Odoo :ref:`active el modo de Desarrollador "
+"<developer-mode>`, :ref:`vaya al proveedor de pago Stripe "
+"<payment_providers/supported_providers>`, :ref:`llene las credenciales de su"
+" API <stripe/api_keys>` con las claves de prueba y configure "
+"elm:guilabel:`Estado` como :guilabel:`Modo de prueba`."
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:50
 msgid "Fill in your credentials"
@@ -50308,6 +51065,8 @@ msgid ""
 "If your **API credentials** are required to connect with your Stripe "
 "account, proceed as follows:"
 msgstr ""
+"Si necesita sus **credenciales API** para conectar con su cuenta de Stripe, "
+"haga lo siguiente:"
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:54
 msgid ""
@@ -50315,12 +51074,19 @@ msgid ""
 "<https://dashboard.stripe.com/account/apikeys>`_, or log into your Stripe "
 "dashboard and go to :menuselection:`Developers --> API Keys`."
 msgstr ""
+"Vaya a `la página de claves API de Stripe "
+"<https://dashboard.stripe.com/account/apikeys>`_, o inicie sesión en su "
+"tablero de Stripe y vaya a :menuselection:`Desarrolladores --> Claves API`."
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:56
 msgid ""
 "In the :guilabel:`Standard keys` section, copy the :guilabel:`Publishable "
 "key` and the :guilabel:`Secret key` and save them for later."
 msgstr ""
+"En la sección :guilabel:`Standard keys` (claves estándar) copie la "
+":guilabel:`Publishable key` (clave que se puede publicar) y la "
+":guilabel:`Secret key` (clave secreta) y guárdelas para que pueda usarlas "
+"después."
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:58
 #: ../../content/applications/finance/payment_providers/stripe.rst:97
@@ -50328,12 +51094,16 @@ msgid ""
 "In Odoo, :ref:`navigate to the payment provider Stripe "
 "<payment_providers/supported_providers>`."
 msgstr ""
+"En Odoo :ref:`vaya al proveedor de pago de Stripe "
+"<payment_providers/supported_providers>`."
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:59
 msgid ""
 "In the :guilabel:`Credentials` tab, fill in the :guilabel:`Publishable Key` "
 "and :guilabel:`Secret Key` fields with the values you previously saved."
 msgstr ""
+"En la pestaña :guilabel:`Credenciales` llene los campos :guilabel:`Clave "
+"pública` y :guilabel:`Clave secreta` con los valores que guardó antes."
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:65
 msgid "Generate a webhook"
@@ -50344,6 +51114,8 @@ msgid ""
 "If your **Webhook Signing Secret** is required to connect with your Stripe "
 "account, you can create a webhook automatically or manually."
 msgstr ""
+"Si necesita su **secreto de implementación Webhook** para conectarse con su "
+"cuenta de Stripe, puede crear un webhook de manera automática o manual.  "
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:71
 msgid "Create the webhook automatically"
@@ -50354,6 +51126,9 @@ msgid ""
 "Make sure your :ref:`Publishable and Secret keys <stripe/api_keys>` are "
 "filled in, then click :guilabel:`Generate your webhook`."
 msgstr ""
+"Asegúrese de haber completado la información de sus :ref:`Claves publicables"
+" y secretas <stripe/api_keys>`, luego haga clic en el botón "
+":guilabel:`Generar su webhook`."
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:76
 msgid "Create the webhook manually"
@@ -50365,6 +51140,9 @@ msgid ""
 "<https://dashboard.stripe.com/webhooks>`_, or log into your Stripe dashboard"
 " and go to :menuselection:`Developers --> Webhooks`."
 msgstr ""
+"Vaya a `la página de Webhooks de Stripe "
+"<https://dashboard.stripe.com/account/apikeys>`_, o inicie sesión en su "
+"tablero de Stripe y vaya a :menuselection:`Desarrolladores --> Webhooks`."
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:80
 msgid ""
@@ -50373,18 +51151,27 @@ msgid ""
 "URL, followed by `/payment/stripe/webhook`, e.g., "
 "`https://yourcompany.odoo.com/payment/stripe/webhook`."
 msgstr ""
+"En la sección :guilabel:`Hosted endpoints` (puntos finales alojados) haga "
+"clic en :guilabel:`Agregar un punto final`. Después, en el campo "
+":guilabel:`Endpoint URL` (URL del punto final) ingrese la URL de su base de "
+"datos de Odoo seguida por `/payment/stripe/webhook`, por ejemplo, "
+"`https://suempresa.odoo.com/payment/stripe/webhook`."
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:83
 msgid ""
 "Click :guilabel:`Select events` at the bottom of the form, then select the "
 "following events:"
 msgstr ""
+"Haga clic en :guilabel:`Seleccionar eventos` al final del formulario y "
+"después seleccione los siguientes eventos:"
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:86
 msgid ""
 "in the :guilabel:`Charge` section: :guilabel:`charge.refunded` and "
 ":guilabel:`charge.refund.updated`;"
 msgstr ""
+"en la sección :guilabel:`Charge` (cargo): :guilabel:`charge.refunded` y "
+":guilabel:`charge.refund.updated`;"
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:88
 msgid ""
@@ -50394,36 +51181,50 @@ msgid ""
 ":guilabel:`payment_intent.processing`, and "
 ":guilabel:`payment_intent.succeeded`;"
 msgstr ""
+"En la sección :guilabel:`Intención de pago`, seleccione: "
+":guilabel:`payment_intent.amount_capturable_updated`, "
+":guilabel:`payment_intent.payment_failed`, "
+":guilabel:`payment_intent.processing` y "
+":guilabel:`payment_intent.succeeded`."
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:92
 msgid ""
 "in the :guilabel:`Setup intent` section: :guilabel:`setup_intent.succeeded`."
 msgstr ""
+"en la sección :guilabel:`Setup intent` (intención de configuración): "
+":guilabel:`setup_intent.succeeded`."
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:94
 msgid "Click :guilabel:`Add events`."
-msgstr ""
+msgstr "Haga clic en :guilabel:`Agregar eventos`."
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:95
 msgid ""
 "Click :guilabel:`Add endpoint`, then click :guilabel:`Reveal` and save your "
 ":guilabel:`Signing secret` for later."
 msgstr ""
+"Haga clic en :guilabel:`Add endpoint` (agregar punto final), después en "
+":guilabel:`Reveal` (mostrar) y guarde su :guilabel:`Signing secret` (secreto"
+" de inicio de sesión) para después."
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:99
 msgid ""
 "In the :guilabel:`Credentials` tab, fill the :guilabel:`Webhook Signing "
 "Secret` field with the value you previously saved."
 msgstr ""
+"En la pestaña :guilabel:`Credenciales` llene el :guilabel:`Secreto de "
+"webhook` con el valor que guardó antes."
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:103
 msgid ""
 "You can select other events, but they are currently not processed by Odoo."
 msgstr ""
+"Puede seleccionar otros eventos, pero no se pueden procesar con Odoo por el "
+"momento."
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:106
 msgid "Enable Apple Pay"
-msgstr ""
+msgstr "Habilitar Apple Pay"
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:108
 msgid ""
@@ -50431,17 +51232,23 @@ msgid ""
 "orders, go to the :guilabel:`Configuration` tab, enable :guilabel:`Allow "
 "Express Checkout`, and click :guilabel:`Enable Apple Pay`."
 msgstr ""
+"Para permitir que los clientes usen el botón de pago de Apple Pay para pagar"
+" sus órdenes de comercio electrónico, vaya a la pestaña "
+":guilabel:`Configuración`, active :guilabel:`Permitir el pago rápido` y haga"
+" clic en :guilabel:`Habilitar Apple Pay`."
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:113
 msgid ""
 ":ref:`Express checkout and Google Pay <payment_providers/express_checkout>`"
-msgstr ""
+msgstr ":ref:`Pago exprés y Google Pay  <payment_providers/express_checkout>`"
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:115
 msgid ""
 ":doc:`Use Stripe as a payment terminal in Point of Sale "
 "<../../sales/point_of_sale/payment_methods/terminals/stripe>`"
 msgstr ""
+":doc:`Usar Stripe como terminal de pago en el punto de venta "
+"<../../sales/point_of_sale/payment_methods/terminals/stripe>`"
 
 #: ../../content/applications/finance/payment_providers/wire_transfer.rst:3
 msgid "Wire transfers"
@@ -50567,7 +51374,7 @@ msgstr ":ref:`payment_providers/journal`"
 
 #: ../../content/applications/finance/payment_providers/xendit.rst:3
 msgid "Xendit"
-msgstr ""
+msgstr "Xendit"
 
 #: ../../content/applications/finance/payment_providers/xendit.rst:5
 msgid ""
@@ -50575,16 +51382,22 @@ msgid ""
 "provider that covers several Southeast Asian countries. It allows businesses"
 " to accept credit cards as well as several local payment methods."
 msgstr ""
+"`Xendit <https://www.xendit.co>`_ es un proveedor de soluciones de pago con "
+"sede en Indonesia que abarca varios países del sudeste asiático. Este "
+"proveedor permite que las empresas acepten tarjetas de crédito, así como "
+"otros métodos de pago locales."
 
 #: ../../content/applications/finance/payment_providers/xendit.rst:12
 msgid "Configuration on the Xendit Dashboard"
-msgstr ""
+msgstr "Configuración en el tablero de Xendit"
 
 #: ../../content/applications/finance/payment_providers/xendit.rst:14
 msgid ""
 "Create a Xendit account if necessary and log in to the `Xendit Dashboard "
 "<https://dashboard.xendit.co>`_."
 msgstr ""
+"Si es necesario, cree una cuenta de Xendit e inicie sesión en el `tablero de"
+" Xendit <https://dashboard.xendit.co>`_."
 
 #: ../../content/applications/finance/payment_providers/xendit.rst:16
 msgid ""
@@ -50593,6 +51406,10 @@ msgid ""
 "customers. Switch to :guilabel:`Live Mode` once you are ready to accept "
 "payments."
 msgstr ""
+"Verifique el modo de su cuenta, este se ubica en la esquina superior "
+"izquierda de la página. Utilice el :guilabel:`Modo de prueba` para probar la"
+" integración sin realizar cobros a sus clientes. Cambie al :guilabel:`Modo "
+"en directo` una vez que todo esté listo para aceptar pagos."
 
 #: ../../content/applications/finance/payment_providers/xendit.rst:19
 msgid ""
@@ -50600,6 +51417,10 @@ msgid ""
 " application page. In the :guilabel:`Developers` section, click `API Keys "
 "<https://dashboard.xendit.co/settings/developers#api-keys>`_."
 msgstr ""
+"Vaya a :menuselection:`Configuración: Ajustes` en la parte izquierda de la "
+"página de la aplicación. Haga clic en `Claves API "
+"<https://dashboard.xendit.co/settings/developers#api-keys>`_ en la sección "
+":guilabel:`Desarrolladores`."
 
 #: ../../content/applications/finance/payment_providers/xendit.rst:22
 msgid ""
@@ -50608,6 +51429,11 @@ msgid ""
 "in Products` permission and :guilabel:`None` for all other permissions then "
 "click :guilabel:`Generate key`."
 msgstr ""
+"Haga clic en :guilabel:`Generar clave secreta`. En el cuadro emergente "
+"escriba cualquier :guilabel:`nombre de clave API`, seleccione "
+":guilabel:`Escribir` en el permiso :guilabel:`Productos de entrada de "
+"dinero` y :guilabel:`Ninguno` para todos los demás permisos, haga clic en "
+":guilabel:`Generar clave`."
 
 #: ../../content/applications/finance/payment_providers/xendit.rst:25
 msgid ""
@@ -50615,6 +51441,9 @@ msgid ""
 "**save this information securely for later**. This is the only time the API "
 "key can be viewed or downloaded."
 msgstr ""
+"Confirme su contraseña para visualizar su clave API. Copie o descargue la "
+"clave y **almacene esta información de forma segura para después**. Esta es "
+"la única vez que podrá visualizar o descargar la clave API."
 
 #: ../../content/applications/finance/payment_providers/xendit.rst:28
 msgid ""
@@ -50622,6 +51451,10 @@ msgid ""
 "<https://dashboard.xendit.co/settings/developers#webhooks>`_ section to "
 "generate the webhook token."
 msgstr ""
+"Una vez que haya terminado, vaya a la parte inferior de la página y busque "
+"la sección `Webhooks "
+"<https://dashboard.xendit.co/settings/developers#webhooks>`_ para generar el"
+" token del webhook."
 
 #: ../../content/applications/finance/payment_providers/xendit.rst:31
 msgid ""
@@ -50629,6 +51462,9 @@ msgid ""
 "Verification Token`, then confirm your password to display the token. Save "
 "it for later."
 msgstr ""
+"En :guilabel:`Token de verificación del webhook`, haga clic en "
+":guilabel:`Ver token de verificación del webhook` y después confirme su "
+"contraseña para consultar el token. Guárdelo para usarlo después."
 
 #: ../../content/applications/finance/payment_providers/xendit.rst:33
 msgid ""
@@ -50636,12 +51472,18 @@ msgid ""
 "`https://example.odoo.com`) in the field :guilabel:`Invoices paid` and click"
 " the :guilabel:`Test and save` button next to it."
 msgstr ""
+"En la sección :guilabel:`URL del webhook` escriba la URL de su base de datos"
+" de Odoo (por ejemplo, `https://ejemplo.odoo.com`) en el campo "
+":guilabel:`Facturas pagadas` y haga clic en el botón :guilabel:`Probar y "
+"guardar`."
 
 #: ../../content/applications/finance/payment_providers/xendit.rst:40
 msgid ""
 ":ref:`Navigate to the payment provider Xendit <payment_providers/add_new>` "
 "and change its state to :guilabel:`Enabled`."
 msgstr ""
+":ref:`Vaya al proveedor de pago Xendit <payment_providers/add_new>` y cambie"
+" su estado a :guilabel:`Habilitado`."
 
 #: ../../content/applications/finance/payment_providers/xendit.rst:42
 msgid ""
@@ -50649,6 +51491,9 @@ msgid ""
 " the information saved at the step "
 ":ref:`payment_providers/xendit/configure_dashboard`."
 msgstr ""
+"Complete los campos :guilabel:`Clave secreta` y :guilabel:`Token de webhook`"
+" con la información que almacenó en el paso de "
+":ref:`payment_providers/xendit/configure_dashboard`."
 
 #: ../../content/applications/finance/sign.rst:3
 msgid "Sign"

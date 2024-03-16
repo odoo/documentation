@@ -1334,6 +1334,12 @@ msgid ""
 ":option:`--no-database-list <odoo-bin --no-database-list>` command-line "
 "option)"
 msgstr ""
+"Setelah ``db_name`` dan ``db_filter`` Anda sudah dikonfigurasi dan hanya "
+"cocok dengan satu database per nama host, Anda sebaiknya menetapkan opsi "
+"konfigurasi ``list_db`` menjadi ``False``, untuk mencegah listing database, "
+"dan untuk memblokir akses layar manajemen database (ini juga dapat dilakukan"
+" dengan opsi command-line :option:`--no-database-list <odoo-bin --no-"
+"database-list>`)"
 
 #: ../../content/administration/install/deploy.rst:587
 msgid ""
@@ -1343,6 +1349,11 @@ msgid ""
 "using a dedicated non-privileged ``db_user``. See also "
 ":ref:`setup/deploy/odoo`."
 msgstr ""
+"Pastikan user PostgreSQL (:option:`--db_user <odoo-bin --db_user>`) *bukan* "
+"super-user, dan bahwa database Anda dimiliki oleh user yang berbeda. Sebagai"
+" contoh mereka dapat dimiliki oleh super-user ``postgres`` bila mereka "
+"menggunakan ``db_user`` yang dedicated dan non-privileged. Lihat juga "
+":ref:`setup/deploy/odoo`."
 
 #: ../../content/administration/install/deploy.rst:592
 msgid ""
@@ -1350,12 +1361,18 @@ msgid ""
 " via GitHub or by downloading the latest version from "
 "https://www.odoo.com/page/download or http://nightly.odoo.com"
 msgstr ""
+"Pastikan software diupdate dengan secara reguler menginstal build terkini, "
+"baik melalui GitHub atau dengan mengunduh versi terbaru dari "
+"https://www.odoo.com/page/download atau http://nightly.odoo.com"
 
 #: ../../content/administration/install/deploy.rst:596
 msgid ""
 "Configure your server in multi-process mode with proper limits matching your"
 " typical usage (memory/CPU/timeouts). See also :ref:`builtin_server`."
 msgstr ""
+"Konfigurasikan server Anda di mode multi-proses dengan limit yang sesuai "
+"yang cocok dengan penggunaan tipikal Anda (memori/CPU/timeout). Lihat juga "
+":ref:`builtin_server`."
 
 #: ../../content/administration/install/deploy.rst:599
 msgid ""
@@ -1366,6 +1383,12 @@ msgid ""
 "enable the :option:`proxy mode <odoo-bin --proxy-mode>` option. See also "
 ":ref:`https_proxy`."
 msgstr ""
+"Jalankan Odoo di belakang web server yang menyediakan HTTPS termination "
+"dengan sertifikat SSL yang valid, untuk mencegah penyadapan komunikasi "
+"cleartext. Sertifikat SSP murah, dan banyak opsi yang gratis yang tersedia. "
+"Konfigurasikan proxy website untuk membatasi ukuran permintaan, tetapkan "
+"timeout yang sesuai, dan aktifkan opsi :option:`proxy mode <odoo-bin "
+"--proxy-mode>`. Lihat juga :ref:`https_proxy`."
 
 #: ../../content/administration/install/deploy.rst:606
 msgid ""
@@ -1376,6 +1399,13 @@ msgid ""
 " allowing only trusted IPs in the firewall, and/or running a brute-force "
 "detection system such as `fail2ban` or equivalent."
 msgstr ""
+"Bila Anda harus mengizinkan akses SSH remote ke server Anda, pastikan Anda "
+"menyiapkan password yang kuat untuk **semua** akun, bukan hanya untuk "
+"`root`. Sangat disarankan untuk menonaktifkan autentikasi berdasarkan "
+"password, dan hanya mengizinkan autentikasi public key. Juga pertimbangkan "
+"untuk membatasi akses melalui VPN, sehingga hanya IP yang terpercaya yang "
+"dapat melewati firewall, dan/atau menjalankan sistem pendeteksi brute-force "
+"seperti `fail2ban` atau yang sepadan."
 
 #: ../../content/administration/install/deploy.rst:612
 msgid ""
@@ -1383,6 +1413,9 @@ msgid ""
 "prevent brute-force attacks and denial of service attacks. See also "
 ":ref:`login_brute_force` for specific measures."
 msgstr ""
+"Pertimbangkan untuk menginstal pembatasan percobaan pada proxy atau firewall"
+" Anda, untuk mencegah penyerangan brute-force dan denial of service. Lihat "
+"juga :ref:`login_brute_force` untuk pengamanan lebih spesifik."
 
 #: ../../content/administration/install/deploy.rst:616
 msgid ""
@@ -1390,6 +1423,9 @@ msgid ""
 "of Service attacks (DDOS), but this is often an optional service, so you "
 "should consult with them."
 msgstr ""
+"Banyak penyedia jaringan yang menyediakan migrasi otomatis untuk serangan "
+"Distributed Denial of Service (DDOS), tapi ini seringkali merupakan layanan "
+"opsional, jadi Anda sebaiknya menanyakan hal tersebut ke mereka."
 
 #: ../../content/administration/install/deploy.rst:620
 msgid ""
@@ -1397,6 +1433,9 @@ msgid ""
 "different machines than the production ones. And apply the same security "
 "precautions as for production."
 msgstr ""
+"Kapanpun memungkinkan, host instance demo/test/staging Anda yang publik pada"
+" mesin-mesin yang berbeda dari production. Dan terapkan persiapan keamanan "
+"yang sama ke mereka dengan yang untuk production."
 
 #: ../../content/administration/install/deploy.rst:624
 msgid ""
@@ -1412,6 +1451,18 @@ msgid ""
 "systemd.html>`_ may also be useful to implement per-process network access "
 "control."
 msgstr ""
+"Bila server Odoo Anda yang publik memiliki akses ke sumber daya layanan "
+"jaringan internal atau layanan yang sensitif (misal melalui VLAN privat), "
+"implementasikan peraturan firewall yang sesuai untuk melindungi sumber daya "
+"internal tersebut. Ini akan memastikan server Odoo tidak dapat digunakan "
+"secara tidak sengaja (atau sebagai hasil tangan user jahat) untuk mengakses "
+"atau mengacaukan sumber daya internal tersebut. Biasanya ini dapat dilakukan"
+" dengan menerapkan peraturan outbound default DENY pada firewall, lalu hanya"
+" secara eksplisit mengotorisasikan akses ke sumber daya internal yang server"
+" Odoo harus akses. `Systemd IP traffic access control "
+"<http://0pointer.net/blog/ip-accounting-and-access-lists-with-"
+"systemd.html>`_ juga dapat berguna untuk mengimplementasikan per-process "
+"network access control."
 
 #: ../../content/administration/install/deploy.rst:635
 msgid ""
@@ -1427,18 +1478,34 @@ msgid ""
 "CloudFlare usually maintain a public list of their IP address ranges for "
 "this purpose."
 msgstr ""
+"Bila server Odoo Anda yang publik sembunyi di belakang Web Application "
+"Firewall, load-balancer, layanan perlindungan DDoS yang transparan (seperti "
+"CloudFlare) atau perangkat level-jaringan yang serupa, ANda mungkin ingin "
+"menghindari akses langsung ke sistem Odoo. Secara umum susah untuk menjaga "
+"alamat endpoint IP server Odoo Anda agar tetap rahasia. Contohnya mereka "
+"dapat muncul di log server website saat meng-query sistem publik, atau di "
+"header email yang dipost dari Odoo. Dalam situasi seperti itu Anda mungkin "
+"ingin mengonfigurasi firewall Anda supaya endpoint-nya tidak dapat diakses "
+"secara publik kecuali dari alamat IP tertentu WAF, load-balancer, atau "
+"layanan proxy Anda. Penyedia layanan seperti CloudFlare biasanya memiliki "
+"daftar publik rentang alamat IP mereka untuk tujuan ini."
 
 #: ../../content/administration/install/deploy.rst:646
 msgid ""
 "If you are hosting multiple customers, isolate customer data and files from "
 "each other using containers or appropriate \"jail\" techniques."
 msgstr ""
+"Bila Anda menghosting lebih dari satu pelanggan, pisahkan data dan file "
+"pelanggan dari pelanggan lainnya menggunakan container atau teknik \"jail\" "
+"yang sesuai."
 
 #: ../../content/administration/install/deploy.rst:649
 msgid ""
 "Setup daily backups of your databases and filestore data, and copy them to a"
 " remote archiving server that is not accessible from the server itself."
 msgstr ""
+"Setup backup harian untuk database dan data filestore Anda, dan salin mereka"
+" ke server arsip remote yang tidak dapat diakses dari server itu sendiri."
 
 #: ../../content/administration/install/deploy.rst:652
 msgid ""
@@ -1447,10 +1514,14 @@ msgid ""
 "hardening review of the server should be conducted and is outside of the "
 "scope of this guide."
 msgstr ""
+"Memasang Odoo pada Linux sangat teramat disarankan ketimbang Windows. "
+"Apabila Anda tetap memilih untuk memasang Odoo di platform Window, "
+"peninjauan penguatan pengamanan yang sangat menyeluruh untuk server harus "
+"dilakukan dan merupakan sesuatu yang di luar cakupan pedoman ini."
 
 #: ../../content/administration/install/deploy.rst:660
 msgid "Blocking Brute Force Attacks"
-msgstr ""
+msgstr "Memblokir Serangan Brute Force"
 
 #: ../../content/administration/install/deploy.rst:662
 msgid ""
@@ -1459,10 +1530,15 @@ msgid ""
 "emits a log entry whenever a login attempt is performed, and reports the "
 "result: success or failure, along with the target login and source IP."
 msgstr ""
+"Untuk deployment yang menggunakan internet, serangan brute force pada "
+"password user sangat umum, dan ancaman ini tidak boleh diabaikan untuk "
+"server Odoo. Odoo mengeluarkan log entri kapanpun percobaan login dilakukan,"
+" dan melaporkan hasilnya: sukses atau gagal, beserta login target dan sumber"
+" IP."
 
 #: ../../content/administration/install/deploy.rst:666
 msgid "The log entries will have the following form."
-msgstr ""
+msgstr "Log entri akan memiliki bentuk berikut."
 
 #: ../../content/administration/install/deploy.rst:668
 msgid "Failed login::"
@@ -1477,38 +1553,48 @@ msgid ""
 "These logs can be easily analyzed by an intrusion prevention system such as "
 "`fail2ban`."
 msgstr ""
+"Log-log ini dapat dengan mudah dianalisis oleh sistem pencegah intrusi "
+"seperti `fail2ban`."
 
 #: ../../content/administration/install/deploy.rst:679
 msgid ""
 "For example, the following fail2ban filter definition should match a failed "
 "login::"
 msgstr ""
+"Contohnya, definisi filter fail2ban berikut seharusnya cocok dengan login "
+"gagal:"
 
 #: ../../content/administration/install/deploy.rst:686
 msgid ""
 "This could be used with a jail definition to block the attacking IP on "
 "HTTP(S)."
 msgstr ""
+"Ini dapat digunakan dengan definisi jail untuk memblokir penyerangan IP pada"
+" HTTP(S)."
 
 #: ../../content/administration/install/deploy.rst:688
 msgid ""
 "Here is what it could look like for blocking the IP for 15 minutes when 10 "
 "failed login attempts are detected from the same IP within 1 minute::"
 msgstr ""
+"Berikut contoh memblokir IP selama 15 menit saat 10 percobaan login gagal "
+"dideteksi dari IP yang sama dalam waktu 1 menit::"
 
 #: ../../content/administration/install/deploy.rst:702
 msgid "Database Manager Security"
-msgstr ""
+msgstr "Keamanan Manajer Database"
 
 #: ../../content/administration/install/deploy.rst:704
 msgid ":ref:`setup/deploy/odoo` mentioned ``admin_passwd`` in passing."
-msgstr ""
+msgstr ":ref:`setup/deploy/odoo` menyebut ``admin_passwd`` secara singkat."
 
 #: ../../content/administration/install/deploy.rst:706
 msgid ""
 "This setting is used on all database management screens (to create, delete, "
 "dump or restore databases)."
 msgstr ""
+"Pengaturan ini digunakan di semua layar manajemen database (untuk membuat, "
+"menghapus, dump atau memulihkan database)."
 
 #: ../../content/administration/install/deploy.rst:709
 msgid ""

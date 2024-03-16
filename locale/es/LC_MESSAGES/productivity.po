@@ -13,10 +13,10 @@
 # Pablo Rojas <rojaspablo88@gmail.com>, 2023
 # Braulio D. López Vázquez <bdl@odoo.com>, 2023
 # Lucia Pacheco, 2023
-# Wil Odoo, 2023
 # Larissa Manderfeld, 2023
 # Iran Villalobos López, 2023
 # Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2023
+# Wil Odoo, 2024
 # Fernanda Alvarez, 2024
 # 
 #, fuzzy
@@ -3447,7 +3447,7 @@ msgstr ""
 
 #: ../../content/applications/productivity/iot/config/troubleshooting.rst:14
 msgid "The pairing code does not show under the following circumstances:"
-msgstr ""
+msgstr "El código de emparejamiento no aparece en los siguientes casos:"
 
 #: ../../content/applications/productivity/iot/config/troubleshooting.rst:16
 msgid ""
@@ -3466,6 +3466,9 @@ msgid ""
 "Things)` box has started. It is automatically removed from connected "
 "displays when this time has expired."
 msgstr ""
+"El código solo es válido durante los primeros 5 minutos después de encender "
+"la caja IoT. Una vez pasado este tiempo, se elimina en automático de las "
+"pantallas conectadas."
 
 #: ../../content/applications/productivity/iot/config/troubleshooting.rst:20
 msgid ""
@@ -3492,7 +3495,7 @@ msgstr ""
 
 #: ../../content/applications/productivity/iot/config/troubleshooting.rst:30
 msgid "IoT box is connected but it is not showing in the database"
-msgstr ""
+msgstr "La caja IoT está conectada pero no aparece en la base de datos"
 
 #: ../../content/applications/productivity/iot/config/troubleshooting.rst:32
 msgid ""
@@ -3503,6 +3506,11 @@ msgid ""
 "can reach the database and that the server does not use a multi-database "
 "environment."
 msgstr ""
+"Es posible que una caja IoT se reinicie cuando se conecta a una base de "
+"datos. En este caso, puede tardar hasta cinco minutos antes de aparecer en "
+"la base de datos. Si la caja IoT no aparece después de cinco minutos, "
+"asegúrese de que tiene alcance a la base de datos y que el servidor no "
+"utiliza un entorno de varias bases de datos."
 
 #: ../../content/applications/productivity/iot/config/troubleshooting.rst:37
 msgid ""
@@ -3530,7 +3538,7 @@ msgstr ""
 
 #: ../../content/applications/productivity/iot/config/troubleshooting.rst:48
 msgid "The HTTPS certificate does not generate"
-msgstr ""
+msgstr "No se genera el certificado HTTPS"
 
 #: ../../content/applications/productivity/iot/config/troubleshooting.rst:50
 msgid ""
@@ -3576,6 +3584,8 @@ msgid ""
 "(Internet of Things)` box homepage and make sure that it is listed under "
 ":guilabel:`Printers`."
 msgstr ""
+"Si una impresora no aparece en su lista de dispositivos, vaya a la página de"
+" inicio de la caja IoT y asegúrese de que aparece en :guilabel:`Impresoras`."
 
 #: ../../content/applications/productivity/iot/config/troubleshooting.rst-1
 msgid "The IoT box Home Page landing page."
@@ -3588,6 +3598,11 @@ msgid ""
 ":guilabel:`Administration` tab and click on :guilabel:`Add Printer`. If the "
 "printer is not present in the list, it is likely not connected properly."
 msgstr ""
+"Si la impresora no aparece en la página de inicio de la caja IoT, haga clic "
+"en :guilabel:`Servidor de impresoras`, vaya a la pestaña "
+":guilabel:`Administración` y haga clic en :guilabel:`Agregar impresora`. Es "
+"probable que la impresora no esté conectada correctamente si no aparece en "
+"la lista."
 
 #: ../../content/applications/productivity/iot/config/troubleshooting.rst:83
 msgid "The printer outputs random text"
@@ -3615,6 +3630,12 @@ msgid ""
 ":guilabel:`Modify Printer`. Follow the steps and select the *make* and "
 "*model* corresponding to the printer."
 msgstr ""
+"La solución es seleccionar el controlador correspondiente de forma manual. "
+"Haga clic en :guilabel:`Servidor de impresoras` en la página de inicio de la"
+" caja IoT, vaya a la pestaña :guilabel:`Impresoras` y seleccione la "
+"impresora en la lista. En el menú desplegable :guilabel:`Administración` "
+"haga clic en :guilabel:`Modificar impresora`. Siga los pasos y seleccione la"
+" *marca* y el *modelo* que correspondan a la impresora."
 
 #: ../../content/applications/productivity/iot/config/troubleshooting.rst-1
 msgid "Edit the printer connected to the IoT box."
@@ -3809,6 +3830,11 @@ msgid ""
 ":guilabel:`Name` should follow a particular convention to work with the `ESC"
 " *` command."
 msgstr ""
+"El comando `CUPS` le solicitará tres datos al administrador: "
+":guilabel:`Nombre`, :guilabel:`Descripción` y :guilabel:`Ubicación`. No es "
+"necesario que los dos últimos datos sean específicos, sin embargo, el "
+":guilabel:`nombre` debe contar con una nomenclatura específica para que "
+"funcione con el comando `ESC *`."
 
 #: ../../content/applications/productivity/iot/config/troubleshooting.rst:170
 msgid ""
@@ -3921,12 +3947,12 @@ msgstr ""
 
 #: ../../content/applications/productivity/iot/config/troubleshooting.rst:209
 msgid "`EPSON TMm 30II` -> The name cannot have spaces."
-msgstr ""
+msgstr "`EPSON TMm 30II` -> El nombre no debe incluir espacios."
 
 #: ../../content/applications/productivity/iot/config/troubleshooting.rst:210
 msgid ""
 "`EPSONTMm30II` -> The name itself is correct, but it will not use `ESC *`."
-msgstr ""
+msgstr "`EPSONTMm30II` -> El nombre es correcto, pero no hace uso de `ESC *`."
 
 #: ../../content/applications/productivity/iot/config/troubleshooting.rst:211
 msgid "`EPSONTMm30II__IMC` -> This name is missing the end `__`."
@@ -3993,6 +4019,11 @@ msgid ""
 " of Things)` printer. Navigate to :menuselection:`Pos App --> Settings --> "
 "Connected Devices --> IoT Box --> Receipt Printer --> Save`."
 msgstr ""
+"Una vez que la impresora aparezca en la base de datos de Odoo, deberá "
+"elegirla en la configuración del :abbr:`PdV (Punto de venta)` como la "
+"impresora :abbr:`IoT (Internet de las cosas)`. Vaya a :menuselection:`Punto "
+"de venta --> Ajustes --> Dispositivos conectados --> Caja IoT --> Impresora "
+"de recibos --> Guardar`."
 
 #: ../../content/applications/productivity/iot/config/troubleshooting.rst:235
 msgid ""
@@ -4110,6 +4141,11 @@ msgid ""
 "biz.com/modules/ref_escpos/index.php?content_id=88>`_ to find out more about"
 " the *density* parameters."
 msgstr ""
+"Es necesario agregar `__IMC` a la nomenclatura del nombre, pues necesitará "
+"imprimir con el comando `ESC *`. Busque el modelo de la impresora en `el "
+"sitio web de Epson ESC * <https://reference.epson-"
+"biz.com/modules/ref_escpos/index.php?content_id=88>`_ para obtener más "
+"información acerca de los parámetros de *densidad*."
 
 #: ../../content/applications/productivity/iot/config/troubleshooting.rst:0
 msgid "Epson TM-U220 specifications on manufacturer's website."
@@ -4183,6 +4219,11 @@ msgid ""
 "outside the margin. To resolve this, add a new printer (and naming "
 "convention) with the `SCALE<X>` parameter to adapt to our receipt size."
 msgstr ""
+"Sin embargo, al intentar imprimir con la nomenclatura del nombre "
+"`EpsonTMU220B__IMC_LDV__` se imprimirá el recibo, pero será muy grande y se "
+"saldrá del margen. Para solucionar esto, agregue una nueva impresora (y la "
+"nomenclatura del nombre) con el parámetro  `SCALE<X> ` para adaptar el "
+"tamaño del recibo."
 
 #: ../../content/applications/productivity/iot/config/troubleshooting.rst:320
 msgid "Here are some examples:"
@@ -4238,7 +4279,7 @@ msgstr ""
 
 #: ../../content/applications/productivity/iot/config/troubleshooting.rst:347
 msgid "The Zebra printer does not print anything"
-msgstr ""
+msgstr "La impresora Zebra no imprime nada"
 
 #: ../../content/applications/productivity/iot/config/troubleshooting.rst:349
 msgid ""
@@ -4270,6 +4311,8 @@ msgstr ""
 #: ../../content/applications/productivity/iot/config/troubleshooting.rst:363
 msgid "The characters read by the barcode scanner do not match the barcode"
 msgstr ""
+"El lector de códigos de barras lee caracteres que no coinciden con el código"
+" de barras"
 
 #: ../../content/applications/productivity/iot/config/troubleshooting.rst:365
 msgid ""
@@ -4333,6 +4376,8 @@ msgstr "Modificar la vista de formulario del lector de códigos de barras."
 #: ../../content/applications/productivity/iot/config/troubleshooting.rst:392
 msgid "Barcode scanner processes barcode characters individually"
 msgstr ""
+"El lector de código de barras procesa los caracteres del código de barras de"
+" forma individual"
 
 #: ../../content/applications/productivity/iot/config/troubleshooting.rst:394
 msgid ""
@@ -4343,16 +4388,26 @@ msgid ""
 "appropriate language of the barcode scanner on the *Barcode Scanner* form "
 "page."
 msgstr ""
+"Al acceder a Odoo desde un dispositivo móvil o una tableta, enlazado con un "
+"lector de códigos de barras mediante la caja :abbr:`IoT (Internet de las "
+"cosas)` es posible que el lector procese cada carácter del código de barras "
+"de forma individual. En este caso **debe** seleccionar el idioma apropiado "
+"del escáner de códigos de barras en la opción *Distribución del teclado* de "
+"la página del formulario del *escáner de códigos de barras*."
 
 #: ../../content/applications/productivity/iot/config/troubleshooting.rst:400
 msgid ""
 "Access the barcode scanner form page by navigating to :menuselection:`IoT "
 "App --> Devices --> Barcode Scanner`."
 msgstr ""
+"Vaya a :menuselection:`IoT --> Dispositivos --> Lector de códigos de barras`"
+" para acceder a la página del formulario correspondiente."
 
 #: ../../content/applications/productivity/iot/config/troubleshooting.rst-1
 msgid "Barcode scanner form page, with keyboard layout option highlighted."
 msgstr ""
+"La página del formulario de lector de códigos de barras. La opción "
+"\"Distribución del teclado\" aparece dentro de un rectángulo rojo."
 
 #: ../../content/applications/productivity/iot/config/troubleshooting.rst:407
 msgid ""
@@ -4360,6 +4415,10 @@ msgid ""
 " vary, depending on the device and the language of the database. For "
 "example: :guilabel:`English (UK)`, :guilabel:`English (US)`, etc."
 msgstr ""
+"La :guilabel:`distribución del teclado` toma como referencia el idioma y las"
+" opciones disponibles varían según el dispositivo y el idioma de la base de "
+"datos. Por ejemplo: :guilabel:`Inglés (RU)`, :guilabel:`Inglés (EE. UU.)`, "
+"etc."
 
 #: ../../content/applications/productivity/iot/config/troubleshooting.rst:415
 msgid "The cash drawer does not open"
@@ -4468,7 +4527,7 @@ msgstr ""
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:33
 msgid "Connect the Windows virtual IoT box to an Odoo database"
-msgstr ""
+msgstr "Conectar la caja virtual IoT de Windows a una base de datos de Odoo"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:35
 msgid ""
@@ -4504,6 +4563,8 @@ msgid ""
 "During the next step of the installation, select :guilabel:`Odoo IoT` from "
 "the :guilabel:`Select the type of install` drop-down menu."
 msgstr ""
+"Durante el siguiente paso de la instalación, seleccione :guilabel:`Odoo IoT`"
+" en el menú desplegable :guilabel:`Seleccione el tipo de instalación`."
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:50
 msgid "For reference, the following should be installed:"
@@ -4561,6 +4622,9 @@ msgid ""
 "the Window's User's directories. Doing so will not allow for Nginx to "
 "initialize."
 msgstr ""
+"No debe instalar el software virtual IoT de Odoo para Windows en ninguno de "
+"los directorios de usuario de Windows. Si lo hace, Nginx no podrá "
+"ejecutarse."
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:74
 msgid ""
@@ -4577,6 +4641,11 @@ msgid ""
 "automatically open `http://localhost:8069` on a web browser. The webpage "
 "should display the :abbr:`IoT (Internet of Things)` box homepage."
 msgstr ""
+"Asegúrese de que la casilla :guilabel:`Iniciar Odoo` está seleccionada y "
+"haga clic en :guilabel:`Terminar`. Después de la instalación, el servidor de"
+" Odoo se ejecutará y abrirá `http://localhost:8069` de forma automática en "
+"el navegador web. La página web debe mostrar la página de inicio de la caja "
+":abbr:`IoT (Internet de las cosas)`."
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:81
 msgid ""
@@ -4609,22 +4678,27 @@ msgid ""
 "automatically recognize the device after connecting, then the administrator "
 "may need to install the corresponding drivers manually."
 msgstr ""
+"La mayoría de los dispositivos se conectan a la máquina Windows para Windows"
+" IoT en automático mediante Plug-N-Play (PnP) de Windows. Sin embargo, es "
+"posible que el administrador deba instalar los controladores "
+"correspondientes de forma manual si Windows no reconoce automáticamente el "
+"dispositivo después de conectarlo."
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:96
 msgid "Devices automatically recognized:"
-msgstr ""
+msgstr "Estos son los dispositivos que se reconocen en automático:"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:98
 msgid "Regular ink/toner based printers"
-msgstr ""
+msgstr "Impresoras comunes de inyección a tinta y tóner"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:99
 msgid "Receipt printers (Epson/Star)"
-msgstr ""
+msgstr "Impresoras de recibos (Epson y Star)"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:100
 msgid "Barcode scanners"
-msgstr ""
+msgstr "Lectores de código de barras"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:101
 msgid ""
@@ -4632,19 +4706,24 @@ msgid ""
 "settings is required) See this documentation: "
 ":doc:`../devices/measurement_tool`"
 msgstr ""
+"Dispositivos de medición (aunque es necesario configurar los ajustes "
+"correspondientes). Consulte la siguiente documentación: "
+":doc:`../devices/measurement_tool`"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:104
 msgid ""
 "Devices not automatically recognized (requires manual driver download):"
 msgstr ""
+"Estos dispositivos no se reconocen en automático (es necesario que descargue"
+" los controladores de forma manual):"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:106
 msgid "Label printers (Zebra)"
-msgstr ""
+msgstr "Impresoras de etiquetas (Zebra)"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:107
 msgid "Scales"
-msgstr ""
+msgstr "Básculas"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:109
 msgid ""
@@ -4652,6 +4731,9 @@ msgid ""
 "download the drivers and install them on the Windows machine. Reconnect the "
 "device in question and Windows will find the device."
 msgstr ""
+"Consulte el sitio web del fabricante del equipo correspondiente, descargue "
+"los controladores e instálelos en la máquina Windows. Vuelva a conectar el "
+"dispositivo, Windows lo detectará."
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:113
 msgid ""
@@ -4771,6 +4853,11 @@ msgid ""
 "through port `8069`. The following process describes the steps to take in "
 "order to make this exception."
 msgstr ""
+"Es posible permitir que otros dispositivos accedan a la caja :abbr:`IoT "
+"(Internet de las cosas)` virtual de Windows incluso con el firewall "
+"encendido. Cree una regla en *Windows Defender* y permita la comunicación a "
+"través del puerto `8069`. El siguiente proceso describe los pasos a seguir "
+"para realizar esta excepción."
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:169
 msgid "Create a rule in Windows Defender"
@@ -4859,7 +4946,7 @@ msgstr ""
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:200
 msgid "Worldline exception"
-msgstr ""
+msgstr "Excepción para Worldline"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:202
 msgid ""
@@ -4868,6 +4955,10 @@ msgid ""
 "experience for customers. Worldline is available in Benelux (coalition of "
 "Belgium, the Netherlands, and Luxembourg)."
 msgstr ""
+"*Worldline* es una terminal de pago que se puede conectar al sistema de "
+"*PdV* (punto de venta) de Odoo. Gracias a ella, los clientes tienen una "
+"experiencia de pago completa y sencilla. Worldline está disponible en los "
+"países de la Benelux (coalición de Bélgica, los Países Bajos y Luxemburgo)."
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:206
 msgid ""
@@ -4876,11 +4967,16 @@ msgid ""
 "connection can be made between the Odoo database/:abbr:`IoT (Internet of "
 "Things)` box and Worldline."
 msgstr ""
+"Es necesario crear una excepción en el firewall de Windows para poder "
+"establecer conexión entre la base de datos Odoo o la caja IoT y Worldline "
+"cuando utiliza el servidor Windows IoT para conectar la terminal de pago de "
+"Worldline."
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:211
 msgid ""
 ":doc:`../../../sales/point_of_sale/payment_methods/terminals/worldline`"
 msgstr ""
+":doc:`../../../sales/point_of_sale/payment_methods/terminals/worldline`"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:213
 msgid ""
@@ -4888,35 +4984,48 @@ msgid ""
 "the Windows machine. This can be accomplished by typing `windows defender` "
 "in the :guilabel:`Search` bar."
 msgstr ""
+"Para crear la excepción, primero abra el *firewall de Microsoft Defender* en"
+" la máquina Windows. Para ello puede escribir `microsoft defender` o "
+"`windows defender` en la barra de búsqueda."
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:216
 msgid "Next, click :guilabel:`Advanced settings` in the left menu."
 msgstr ""
+"Después, haga clic en la opción :guilabel:`Ajustes avanzados` que se "
+"encuentra en el menú izquierdo. "
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst-1
 msgid ""
 "Advanced settings option highlighted in the left pane of the Windows "
 "Defender Firewall app."
 msgstr ""
+"La opción de ajustes avanzados en el panel izquierdo de la aplicación "
+"firewall de Windows Defender aparece en un rectángulo rojo."
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:222
 msgid "In the left menu, choose :guilabel:`Inbound Rules`."
-msgstr ""
+msgstr "En el menú izquierdo, elija :guilabel:`Reglas de entrada`."
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst-1
 msgid ""
 "Windows Defender left window pane with inbound rules menu item highlighted."
 msgstr ""
+"El panel izquierdo de Windows Defender con el elemento \"Reglas de entrada\""
+" del menú en un recuadro rojo."
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:228
 msgid ""
 "After selecting :guilabel:`Inbound Rules`, select :guilabel:`New Rule` in "
 "the far right menu."
 msgstr ""
+"Después de seleccionar :guilabel:`Reglas de entrada`, seleccione "
+":guilabel:`Nueva regla` en el menú de la derecha."
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst-1
 msgid "New rule dropdown shown with new rule option highlighted."
 msgstr ""
+"Visualización de \"Nueva regla\" en el menú desplegable, aparece dentro de "
+"un recuadro rojo."
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:234
 msgid ""
@@ -4924,16 +5033,24 @@ msgid ""
 ":guilabel:`Port`. Click :guilabel:`Next` to continue to the rest of the "
 "configuration."
 msgstr ""
+"En el :guilabel:`Tipo de regla`, seleccione el botón de opción "
+":guilabel:`Puerto` y haga clic en :guilabel:`Siguiente` para continuar con "
+"el resto de la configuración."
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst-1
 msgid "Rule Type window open, with the radio button next to port highlighted."
 msgstr ""
+"La ventana de tipo de regla abierta. El botón de opción junto a \"Puerto\" "
+"aparece en un recuadro rojo."
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:241
 msgid ""
 "On the :guilabel:`Protocols and Ports` page, choose the radio button for "
 ":guilabel:`TCP`, under :guilabel:`Does this rule apply to TCP or UDP?`."
 msgstr ""
+"En la página :guilabel:`Protocolos y puertos`, elija el botón de opción "
+"correspondiente a :guilabel:`TCP` debajo de :guilabel:`¿Esta regla se aplica"
+" a TCP o UDP?`."
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:244
 msgid ""
@@ -4941,12 +5058,18 @@ msgid ""
 "ports?`, select the radio button for :guilabel:`Specific local ports`. Then,"
 " enter `9050`, and click :guilabel:`Next` to continue."
 msgstr ""
+"Después, en :guilabel:`¿Esta regla se aplica a todos los puertos locales o "
+"puertos específicos?`, seleccione el botón de opción :guilabel:`Puertos "
+"locales específicos`, escriba `9050` y haga clic en :guilabel:`Siguiente` "
+"para continuar."
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst-1
 msgid ""
 "Protocol/port configuration window with TCP, specific port (9050) and Next "
 "highlighted."
 msgstr ""
+"La ventana de configuración de protocolo y puerto. TCP, el puerto específico"
+" (9050) y el botón \"Siguiente\" aparecen en recuadros rojos."
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:252
 msgid ""
@@ -4955,6 +5078,10 @@ msgid ""
 "choose the radio button for :guilabel:`Allow the connection`. Then, click "
 ":guilabel:`Next` to continue."
 msgstr ""
+"La siguiente pantalla es la página :guilabel:`Acción`. En :guilabel:`¿Qué "
+"acción debe tomarse cuando una conexión coincide con las condiciones "
+"especificadas?` elija el botón de opción de :guilabel:`Permitir la conexión`"
+" y haga clic en :guilabel:`Siguiente` para continuar."
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:256
 msgid ""
@@ -4963,6 +5090,10 @@ msgid ""
 ":guilabel:`Private`, and :guilabel:`Public`. Click :guilabel:`Next` to "
 "continue to the naming convention page."
 msgstr ""
+"Aparecerá la página :guilabel:`Perfil`. En :guilabel:`¿Cuándo se aplica esta"
+" regla?`, deje seleccionadas las tres casillas de :guilabel:`Dominio`, "
+":guilabel:`Privado` y :guilabel:`Público`. Haga clic en "
+":guilabel:`Siguiente` para ir a la página de convención de nombres."
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:260
 msgid ""
@@ -4970,46 +5101,51 @@ msgid ""
 ":guilabel:`Name` field. Enter a :guilabel:`Description (optional)`. Finally,"
 " once ready, click :guilabel:`Finish`."
 msgstr ""
+"En la página :guilabel:`Nombre` escriba `Odoo Worldline` en el campo "
+":guilabel:`Nombre`. Proporcione una :guilabel:`Descripción (opcional)` y, "
+"una vez que haya terminado, haga clic en :guilabel:`Finalizar`."
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:263
 msgid "The final :guilabel:`Inbound rule` should appear as follows:"
 msgstr ""
+"La :guilabel:`regla de entrada` final debería estar configurada de la "
+"siguiente manera:"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:270
 msgid "Odoo Worldline"
-msgstr ""
+msgstr "Odoo Worldline"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:271
 msgid "Profile"
-msgstr ""
+msgstr "Perfil"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:272
 msgid "All"
-msgstr ""
+msgstr "Todos"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:273
 msgid "Enabled"
-msgstr ""
+msgstr "Habilitado"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:274
 msgid "Yes"
-msgstr ""
+msgstr "Sí"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:276
 msgid "Allow"
-msgstr ""
+msgstr "Permitir"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:277
 msgid "Override"
-msgstr ""
+msgstr "Anular"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:278
 msgid "No"
-msgstr ""
+msgstr "No"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:279
 msgid "Program"
-msgstr ""
+msgstr "Programa"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:280
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:282
@@ -5021,63 +5157,63 @@ msgstr ""
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:298
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:302
 msgid "Any"
-msgstr ""
+msgstr "Cualquiera"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:281
 msgid "Local Address"
-msgstr ""
+msgstr "Dirección local"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:283
 msgid "Remote Address"
-msgstr ""
+msgstr "Dirección remota"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:285
 msgid "Protocol"
-msgstr ""
+msgstr "Protocolo"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:286
 msgid "TCP"
-msgstr ""
+msgstr "TCP"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:287
 msgid "Local Port"
-msgstr ""
+msgstr "Puerto local"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:288
 msgid "9050"
-msgstr ""
+msgstr "9050"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:289
 msgid "Remote Port"
-msgstr ""
+msgstr "Puerto remoto"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:291
 msgid "Authorized Users"
-msgstr ""
+msgstr "Usuarios autorizados"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:293
 msgid "Authorized Computers"
-msgstr ""
+msgstr "Computadoras autorizadas"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:295
 msgid "Authorized Local Principals"
-msgstr ""
+msgstr "Directorios locales autorizados"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:297
 msgid "Local User Owner"
-msgstr ""
+msgstr "Propietario del usuario local"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:299
 msgid "PolicyAppld"
-msgstr ""
+msgstr "PolicyAppld"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:300
 msgid "None"
-msgstr ""
+msgstr "Ninguno"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:301
 msgid "Application Package"
-msgstr ""
+msgstr "Paquete de la aplicación"
 
 #: ../../content/applications/productivity/iot/config/windows_iot.rst:305
 msgid "Uninstalling Windows IoT"
@@ -5826,6 +5962,10 @@ msgid ""
 "linked to the report. Then Odoo sends the report to the selected printer(s),"
 " and automatically prints it."
 msgstr ""
+"Ahora, cada vez que seleccione :guilabel:`Imprimir` en el panel de control, "
+"en lugar de descargar un PDF, aparecerá una ventana emergente con todas las "
+"impresoras vinculadas al reporte. Luego, Odoo enviará el reporte a las "
+"impresoras seleccionadas y lo imprimirá en automático."
 
 #: ../../content/applications/productivity/iot/devices/printer.rst:116
 msgid ""
@@ -10160,7 +10300,7 @@ msgstr "Duplicación de un reporte PDF"
 
 #: ../../content/applications/productivity/studio/pdf_reports.rst:148
 msgid "Options"
-msgstr ""
+msgstr "Opciones"
 
 #: ../../content/applications/productivity/studio/pdf_reports.rst:150
 msgid ""
@@ -10334,11 +10474,11 @@ msgstr ""
 
 #: ../../content/applications/productivity/studio/pdf_reports.rst-1
 msgid "Select a related field."
-msgstr ""
+msgstr "Seleccione un campo relacionado."
 
 #: ../../content/applications/productivity/studio/pdf_reports.rst:236
 msgid "Add a data table"
-msgstr ""
+msgstr "Agregar tablas de datos"
 
 #: ../../content/applications/productivity/studio/pdf_reports.rst:238
 msgid ""
@@ -10392,7 +10532,7 @@ msgstr ""
 
 #: ../../content/applications/productivity/studio/pdf_reports.rst:265
 msgid "Formatting"
-msgstr ""
+msgstr "Formato"
 
 #: ../../content/applications/productivity/studio/pdf_reports.rst:267
 msgid ""
@@ -10422,7 +10562,7 @@ msgstr ""
 
 #: ../../content/applications/productivity/studio/pdf_reports.rst:286
 msgid "Examples"
-msgstr ""
+msgstr "Ejemplos"
 
 #: ../../content/applications/productivity/studio/pdf_reports.rst:290
 msgid ""
@@ -10466,7 +10606,7 @@ msgstr ""
 
 #: ../../content/applications/productivity/studio/pdf_reports.rst:0
 msgid "Add a data table in XML"
-msgstr ""
+msgstr "Agregar tablas de datos en XML"
 
 #: ../../content/applications/productivity/studio/pdf_reports.rst:407
 msgid ""
@@ -10480,6 +10620,9 @@ msgid ""
 "If you want to show/hide content based on specific conditions, you can "
 "manually add `if/else` control statements in the report XML."
 msgstr ""
+"Si desea mostrar u ocultar contenido según condiciones específicas puede "
+"agregar declaraciones de control `if/else` de forma manual al XML del "
+"reporte."
 
 #: ../../content/applications/productivity/studio/pdf_reports.rst:416
 msgid ""
@@ -10488,6 +10631,10 @@ msgid ""
 "evaluated as `True` or `False`. The table will not be displayed if there are"
 " no tags in the quotation."
 msgstr ""
+"Por ejemplo, si desea ocultar una tabla de datos personalizada en caso de "
+"que no haya etiquetas, puede utilizar el atributo `t-if` para definir la "
+"condición. Esta se evaluará como `True` o `False` y la tabla no aparecerá si"
+" no hay etiquetas en la cotización."
 
 #: ../../content/applications/productivity/studio/pdf_reports.rst:445
 msgid ""
@@ -10498,6 +10645,12 @@ msgid ""
 "attribute. As an example, let's show a quick message explaining that there "
 "are no tags on the quotation:"
 msgstr ""
+"Si desea mostrar otro bloque en caso de que la declaración `t-if` se evalúe "
+"como `False`, puede especificarlo con la declaración `t-else`. El bloque "
+"`t-else` debe estar inmediatamente después del bloque `t-if` en la "
+"estructura del documento. No es necesario que especifique alguna condición "
+"en el atributo `t-else`. Como ejemplo, veamos cómo mostrar un mensaje rápido"
+" que explique que la cotización no tiene etiquetas:"
 
 #: ../../content/applications/productivity/studio/pdf_reports.rst:477
 msgid ""
