@@ -1826,8 +1826,6 @@ The `field` element can have the following attributes:
    The filters to apply to the completion results for fields that allow for auto-completion (e.g.,
    :class:`~odoo.fields.Many2one`).
 
-   It can contain user-provided values, which are available under the `self` variable.
-
    :requirement: Optional
    :type: :ref:`Python expression <reference/view_architectures/python_expression>`
    :default: `[]`
