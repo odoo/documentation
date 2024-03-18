@@ -8,7 +8,6 @@ Payment Transaction
 
    .. automethod:: _compute_reference
    .. automethod:: _compute_reference_prefix
-   .. automethod:: _get_post_processing_values
    .. automethod:: _get_specific_create_values
    .. automethod:: _get_specific_processing_values
    .. automethod:: _get_specific_rendering_values
