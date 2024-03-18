@@ -25,13 +25,13 @@ proactive behaviors in their salespeople.
   Their team member, Mitchell, has two leads in the *Proposition* stage with activities that are
   due.
 
-  The yellow :guilabel:`📞 (phone)` icon indicates that the `5 VP Chairs` lead has a phone call
-  activity scheduled for today. The red :guilabel:`✉️ (envelope)` icon indicates that the `Modern
-  Open Space` lead has an email activity scheduled that is past due.
+  The yellow :guilabel:`📞 (phone)` icon indicates that the `Modern Open Space` lead has a phone
+  call activity scheduled for today. The red :guilabel:`✉️ (envelope)` icon indicates that the `5 VP
+  Chairs` lead has an email activity scheduled that is past due.
 
-  Clicking on the `Modern Open Space` lead, the sales manager opens the record of the lead and
-  reviews the chatter. They see that the email was scheduled to be sent two days ago, but Mitchell
-  never marked this activity as done.
+  Clicking on the `5 VP Chairs` lead, the sales manager opens the record of the lead and reviews the
+  chatter. They see that the email was scheduled to be sent two days ago, but Mitchell never marked
+  this activity as done.
 
   .. image:: unattended_leads_report/overdue-activities-email.png
      :align: center
