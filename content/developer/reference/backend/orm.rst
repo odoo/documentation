@@ -938,6 +938,16 @@ A domain is a list of criteria, each criterion being a triple (either a
         Takes the semantics of the model into account (i.e following the
         relationship field named by
         :attr:`~odoo.models.Model._parent_name`).
+    ``any``
+        matches if any record in the relationship traversal through
+        ``field_name`` (:class:`~odoo.fields.Many2one`,
+        :class:`~odoo.fields.One2many`, or :class:`~odoo.fields.Many2many`)
+        satisfies the provided domain ``value``.
+    ``not any``
+        matches if no record in the relationship traversal through
+        ``field_name`` (:class:`~odoo.fields.Many2one`,
+        :class:`~odoo.fields.One2many`, or :class:`~odoo.fields.Many2many`)
+        satisfies the provided domain ``value``.
 
 * ``value``
     variable type, must be comparable (through ``operator``) to the named
@@ -959,21 +969,16 @@ Domain criteria can be combined using logical operators in *prefix* form:
 
 .. example::
 
-    To search for partners named *ABC*, from belgium or germany, whose language
-    is not english::
+    To search for partners named *ABC*, with a phone or mobile number containing *7620*::
 
-        [('name','=','ABC'),
-         ('language.code','!=','en_US'),
-         '|',('country_id.code','=','be'),
-             ('country_id.code','=','de')]
+        [('name', '=', 'ABC'),
+         '|', ('phone','ilike','7620'), ('mobile', 'ilike', '7620')]
 
-    This domain is interpreted as:
+    To search sales orders to invoice that have at least one line with
+    a product that is out of stock::
 
-    .. code-block:: text
-
-            (name is 'ABC')
-        AND (language is NOT english)
-        AND (country is Belgium OR Germany)
+        [('invoice_status', '=', 'to invoice'),
+         ('order_line', 'any', [('product_id.qty_available', '<=', 0)])]
 
 Unlink
 ------
