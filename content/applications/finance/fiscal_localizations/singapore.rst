@@ -276,7 +276,7 @@ Odoo supports **BIS Billing 3.0 SG** the electronic invoicing format.
 Enabling Electronic Invoicing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Electronic invoicing can be set-up by accessing your partner's **contact form**. 
+Electronic invoicing can be set-up by accessing your partner's **contact form**.
 
 You can access the **partner contact form** via the following:
 
