@@ -37,12 +37,13 @@ The Singapore localisation package can be installed in two ways.
 
 a. via Company Set-up
 ---------------------
+
 .. image:: singapore/Getting_Started.png
    :alt: Company Set-up
 
 
 b. via App
------------------------
+----------
 
 Search for the :guilabel:`App` icon in the Odoo Dashboard.
 
@@ -59,13 +60,13 @@ The following fields will replace the tax ID field when you install the SG local
 - **UEN**
 
 Company Information
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 .. image:: singapore/Company_Set-up.png
    :alt: Company Information
 
 Contact form
-~~~~~~~~~~~~
+------------
 
 .. image:: singapore/Contacts.png
    :alt: Partner Form
@@ -77,9 +78,9 @@ These fields need to be filled in order to generate some accounting reports.
 Chart of Accounts (CoA)
 =======================
 
-The Singaporean chart of accounts is included in Singapore - Accounting module. 
+The Singaporean chart of accounts is included in Singapore - Accounting module.
 
-.. note:: 
+.. note::
    Installing a localisation also installs a default chart of accounts. *The chart of account (i.e. Account Code, Account Name )can be customised
    according to the client's needs.*
 
@@ -91,13 +92,14 @@ The Singaporean chart of accounts is included in Singapore - Accounting module.
 
 Taxes & GST
 ===========
+
 *Source:* `IRAS Audit File Document <https://www.iras.gov.sg/docs/default-source/asr/etax_guide_recommended_digital_products_features-v1.pdf?sfvrsn=e2f75b3b_28>`_
 
 The taxes are taken from the IRAS website. Here are the taxes for Singapore in Odoo 17.
 
-.. note:: 
+.. note::
    The tax rates are updated annually in accordance with the Singaporean government.
-   
+
    New accounts in the CoA will be created in anticipation of these updates. Older accounts for previous taxes are
    eventually archived.
 
@@ -105,7 +107,7 @@ You can configure the taxes according to your needs by going to :menuselection:`
 
 You can also update the **Tax Return Periodicity**  of the company by going to :menuselection:`Accounting --> Configuration --> Settings`.
 
-.. tabs:: 
+.. tabs::
    .. tab:: List of Sales Taxes
 
       +--------------------+--------------------+----------------------------------------------------------------------------------------------------------+
@@ -147,7 +149,7 @@ You can also update the **Tax Return Periodicity**  of the company by going to :
       +--------------------+--------------------+----------------------------------------------------------------------------------------------------------+
 
    .. tab:: List of Purchase Taxes
-   
+
       +--------------------+--------------------+----------------------------------------------------------------------------------------------------------+
       | Type of Supply     | Tax Percentage     | Description                                                                                              |
       +====================+====================+==========================================================================================================+
@@ -167,7 +169,7 @@ You can also update the **Tax Return Periodicity**  of the company by going to :
       +--------------------+--------------------+----------------------------------------------------------------------------------------------------------+
       | ME                 | 0%                 | Imports of goods under a Special Scheme                                                                  |
       +--------------------+--------------------+----------------------------------------------------------------------------------------------------------+
-      | IGDS               | 9%                 | Imports of goods under the Import GST Deferment Scheme                                                   |      
+      | IGDS               | 9%                 | Imports of goods under the Import GST Deferment Scheme                                                   |
       +--------------------+--------------------+----------------------------------------------------------------------------------------------------------+
       |                                                           **Disallowed Expenses**                                                                  |
       +--------------------+--------------------+----------------------------------------------------------------------------------------------------------+
@@ -186,7 +188,7 @@ You can also update the **Tax Return Periodicity**  of the company by going to :
       | OP                 | N/A                | Supplies outside the scope of the GST Act                                                                |
       +--------------------+--------------------+----------------------------------------------------------------------------------------------------------+
       |                                                    **Purchases by Partially Exempt Traders**                                                       |
-      +--------------------+--------------------+----------------------------------------------------------------------------------------------------------+                              
+      +--------------------+--------------------+----------------------------------------------------------------------------------------------------------+
       | TX                 | 9%                 | Standard-rated purchases directly attributable to the making of taxable supplies                         |
       +--------------------+--------------------+----------------------------------------------------------------------------------------------------------+
       | TXRC-TS            | 9%                 | Imported services and LVG directly attributable to the making of taxable supplies                        |
@@ -213,7 +215,7 @@ You can also update the **Tax Return Periodicity**  of the company by going to :
       +--------------------+--------------------+----------------------------------------------------------------------------------------------------------+
       | IM-RE              | 9%                 | Import of goods that are subject to GST at 9% and are either attributable to the making of both taxable  |
       |                    |                    | and exempt supplies or incurred for the overall running of the business                                  |
-      +--------------------+--------------------+----------------------------------------------------------------------------------------------------------+      
+      +--------------------+--------------------+----------------------------------------------------------------------------------------------------------+
 
 
 .. _singapore/accounting_reports:
@@ -224,24 +226,24 @@ Accounting Reports
 a. GST Report
 -------------
 
-When the Singaporean localisation is installed, the tax report is updated to reflect the legal requirements 
-as stipulated by the government of Singapore. The GST report format is based on the 
+When the Singaporean localisation is installed, the tax report is updated to reflect the legal requirements
+as stipulated by the government of Singapore. The GST report format is based on the file submitted to the website.
 
-.. important:: 
+.. important::
    To know more about :guilabel:`Filing GST returns`, please check this page from the Inland Revenue Authority of Singapore
-   `<https://www.iras.gov.sg/taxes/goods-services-tax-(gst)/filing-gst/completing-gst-returns>`_  
+   `<https://www.iras.gov.sg/taxes/goods-services-tax-(gst)/filing-gst/completing-gst-returns>`_
 
-Proper :doc:`tax closing <../accounting/reporting/tax_returns>` needs to be executed  as it closes and posts the tax return 
+Proper :doc:`tax closing <../accounting/reporting/tax_returns>` needs to be executed  as it closes and posts the tax return
 journal entry. The final tax report may be generated after the tax closing procedure has been done.
 
 
 .. admonition:: Configuring Additional Taxes and Tax Closing Procedures
 
    Some taxes may not be included when you download a localisation. You can simply add and configure taxes
-   by going to :menuselection:`Accounting --> Configuration --> Settings --> Taxes`. 
-   
-   In order for the amount to be included in the tax report, the ::guilabel:`tax grids and tax groups` 
-   need to be configured during the process of adding your taxes. 
+   by going to :menuselection:`Accounting --> Configuration --> Settings --> Taxes`.
+
+   In order for the amount to be included in the tax report, the ::guilabel:`tax grids and tax groups`
+   need to be configured during the process of adding your taxes.
 
    For more information, please visit the article regarding :doc:`taxes <../accounting/taxes>`.
 
@@ -249,11 +251,11 @@ journal entry. The final tax report may be generated after the tax closing proce
 b. IRAS Audit File
 ------------------
 
-Odoo allows export of the GST 
+Odoo allows export of the GST
 
 The **UEN** and the **GST No** fields are required to generate the IRAS audit file.
 
-To generate the report, go to the :menuselection:`Accounting --> Reporting --> IRAS Audit File`. 
+To generate the report, go to the :menuselection:`Accounting --> Reporting --> IRAS Audit File`.
 
 Enter the **Start Date** and the **End Date**. Choose the file format and click on **Generate**.
 
@@ -269,7 +271,7 @@ Additional Configurations
 1. Electronic Invoicing
 -----------------------
 
-Odoo supports **BIS Billing 3.0 SG** the electronic invoicing format. 
+Odoo supports **BIS Billing 3.0 SG** the electronic invoicing format.
 
 Enabling Electronic Invoicing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -293,7 +295,7 @@ Once the Sales Order is confirmed, click on :menuselection:`Send & Print` to gen
 generate the XML by printing like how you can with invoices or quotations.
 
 :guilabel:`Tick` on *BIS Billing 3.0 SG* to ensure that it gets generated as one it has been missed,
-Odoo will not be able to generate the XML file anymore. 
+Odoo will not be able to generate the XML file anymore.
 
 **If you do not wish to send an email**, simply :guilabel:`untick` *Email*
 and :guilabel:`click` on *'Send & Print'.*
@@ -313,7 +315,7 @@ individuals and merchants in Singapore dollars via online and mobile banking.
 Activate QR codes
 ~~~~~~~~~~~~~~~~~
 
-Go to :menuselection:`Accounting --> Configuration --> Settings`. Under the :guilabel:`Customer Payments` section, 
+Go to :menuselection:`Accounting --> Configuration --> Settings`. Under the :guilabel:`Customer Payments` section,
 activate the :guilabel:`QR Codes` feature.
 
 PayNow bank account configuration
@@ -328,7 +330,7 @@ Value` field depending on the type you chose.
    - You could also include the invoice number in the QR code by checking the :guilabel:`Include
      Reference` checkbox.
 
-.. image:: singapore/sg-paynow-bank-setting.png 
+.. image:: singapore/sg-paynow-bank-setting.png
    :alt: PayNow bank account configuration
 
 .. seealso::
@@ -340,7 +342,7 @@ Bank journal configuration
 Go to :menuselection:`Accounting --> Configuration --> Journals`, open the bank journal, then fill
 out the :guilabel:`Account Number` and :guilabel:`Bank` under the :guilabel:`Journal Entries` tab.
 
-.. image:: singapore/sg-bank-account-journal-setting.png 
+.. image:: singapore/sg-bank-account-journal-setting.png
    :alt: Bank Account's journal configuration
 
 Issue invoices with PayNow QR codes
@@ -357,10 +359,11 @@ generate the PayNow QR code.
 
 3. Employment Hero
 ------------------
-Odoo has created a a connector with Employment Hero as an alternative payroll solution. This module synchronises the payslip
-accounting entries automatically that were created from Employment Hero to Odoo. 
 
-.. important:: 
+Odoo has created a a connector with Employment Hero as an alternative payroll solution. This module synchronises the payslip
+accounting entries automatically that were created from Employment Hero to Odoo.
+
+.. important::
    Odoo only records the journal entries from Employment Hero. Payroll administration is still done in the
    Employment Hero platform.
 
