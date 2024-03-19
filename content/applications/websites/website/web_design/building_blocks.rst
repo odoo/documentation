@@ -138,3 +138,8 @@ Click the pen icon to edit their name.
 
 .. image:: building_blocks/custom-blocks.png
    :alt: Custom section with saved building blocks
+
+.. toctree::
+   :titlesonly:
+
+   building_blocks/dynamic_content
