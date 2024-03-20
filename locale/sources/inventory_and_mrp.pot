@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-05 13:22+0000\n"
+"POT-Creation-Date: 2024-03-20 10:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -201,7 +201,7 @@ msgstr ""
 msgid "This navigates to a new, blank page where the desired product, quantity, and source location must be chosen."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/adjustments.rst:0
+#: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/adjustments.rst:132
 msgid "Keypad to add products on Barcode Inventory Client Action page."
 msgstr ""
 
@@ -841,6 +841,7 @@ msgid "(91) ([!\"%-/0-9:-?A-Z_a-z]{0,90})"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_nomenclature.rst:225
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:77
 msgid "Package type"
 msgstr ""
 
@@ -897,6 +898,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_usage.rst:40
 #: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/gs1_usage.rst:168
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:78
 msgid "Product"
 msgstr ""
 
@@ -945,8 +947,8 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/resupply_warehouses.rst:11
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouses_locations.rst:44
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/cross_dock.rst:18
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:18
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:84
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:21
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:104
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/operation/invoicing.rst:16
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/operation/label_type.rst:13
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/operation/labels.rst:15
@@ -2611,7 +2613,7 @@ msgstr ""
 msgid "**Manually assign lot numbers**: Click :guilabel:`Add a line` and choose the location the products will be stored in under the :guilabel:`To` column. Then, type a new :guilabel:`Lot Number Name` and set the :guilabel:`Done` quantity."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:0
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:144
 msgid "Assign lot number detailed operations popup."
 msgstr ""
 
@@ -2623,7 +2625,7 @@ msgstr ""
 msgid "**Copy/paste lot numbers from a spreadsheet**: Populate a spreadsheet with all of the lot numbers received from the supplier (or manually chosen to assign upon receipt). Then, copy and paste them in the :guilabel:`Lot/Serial Number Name` column. Odoo will automatically create the necessary number of lines based on the amount of numbers pasted in the column. From here, the :guilabel:`To` locations and :guilabel:`Done` quantities can be manually entered in each of the lot number lines."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:0
+#: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:159
 msgid "List of lot numbers copied on excel spreadsheet."
 msgstr ""
 
@@ -7083,175 +7085,227 @@ msgstr ""
 msgid "Putaway rules"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:6
-msgid "What is a Putaway Rule?"
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:5
+msgid "Putaway is the process of routing products to appropriate storage locations upon shipment arrival."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:8
-msgid "A good warehouse implementation makes sure that products automatically move to their appropriate destination location. To make that process easier, Odoo uses *Putaway Rules*. Putaway is the process of taking products from the received shipments and putting them into the appropriate location."
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:7
+msgid "Odoo can accomplish this seamlessly using *putaway rules*, which dictate how products move through specified warehouse locations."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:10
+msgid "Upon shipment arrival, operations are generated based on putaway rules to efficiently move products to specified locations, and ensure easy retrieval for future delivery orders."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:13
-msgid "If, for example, a warehouse contains volatile substances, it is important to make sure that certain products are not stored close to each other because of a potential chemical reaction. That's where putaway rules intervene, to avoid storing products wrongly."
+msgid "In warehouses that process specific kinds of products, putaway rules can also prevent volatile substances from being stored in close proximity, by directing them to different locations determined by the warehouse manager."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:20
-msgid "In the :guilabel:`Inventory` app, go to :menuselection:`Configuration --> Settings` and activate the :guilabel:`Multi-Step Routes` feature. By doing so, the :guilabel:`Storage Locations` feature is also automatically activated."
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:18
+msgid "`Odoo Tutorials: Putaway Rules <https://www.youtube.com/watch?v=nCQMf6sj_w8>`_"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:23
+msgid "To use putaway rules, navigate to :menuselection:`Inventory app --> Configuration --> Settings`, and activate the :guilabel:`Multi-Step Routes` feature under the :guilabel:`Warehouse` section. By doing so, the :guilabel:`Storage Locations` feature is also automatically activated."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:27
+msgid "Finally, click :guilabel:`Save`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:-1
 msgid "Activate Multi-Step Routes in Inventory configuration settings."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:29
-msgid "Setting up a putaway rule"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:31
-msgid "In some cases, like for a retail shop storing fruits and vegetables, products should be stored in different locations depending on several factors like frequency, size, product category, specific environment needs, and so on."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:35
-msgid "In this example, suppose there is one warehouse location, **WH/Stock**, with the following sub-locations:"
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:36
+msgid "Define putaway rule"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:38
-msgid "WH/Stock/Pallets"
+msgid "To manage where specific products are routed for storage, navigate to :menuselection:`Inventory app --> Configuration --> Putaway Rules`. Use the :guilabel:`Create` button to configure a new putaway rule on a :guilabel:`Product` or :guilabel:`Product Category` that the rule affects."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:40
-msgid "WH/Stock/Pallets/PAL1"
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:43
+msgid "Putaway rules can be defined either per product/product category, and/or package type (the *Packages* setting must be enabled in :menuselection:`Inventory app --> Configuration --> Settings` for that)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:41
-msgid "WH/Stock/Pallets/PAL2"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:42
-msgid "WH/Stock/Pallets/PAL3"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:44
-msgid "WH/Stock/Shelf 1"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:46
-msgid "WH/Stock/Shelf 2"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:48
-msgid "WH/Stock/Shelf 2/Small Refrigerator"
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:47
+msgid "In the same line, the :guilabel:`When product arrives in` location is where the putaway rule is triggered to create an operation to move the product to the :guilabel:`Store to` location."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:50
-msgid "WH/Stock/Shelf 3"
+msgid "For this to work, the :guilabel:`Store to` location must be a *sub-location* of the first (e.g., `WH/Stock/Fruits` is a specific, named location inside `WH/Stock` to make the products stored here easier to find)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:52
-msgid "Manage those locations with putaway rules. To create a putaway rule, open the :guilabel:`Inventory` app and go to :menuselection:`Configuration --> Putaway Rules`. Then, click on :guilabel:`Create` and configure a putaway rule that indicated the main location the product will enter before being redirected to the right storage location."
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:55
+msgid "In a warehouse location, **WH/Stock**, there are the following sub-locations:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:57
+msgid "WH/Stock/Fruits"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:58
-msgid "The putaway rules can be defined either per product/product category and/or package type (the :guilabel:`Packages` setting must be enabled for that). Putaway rules are read sequentially until a match is found."
+msgid "WH/Stock/Vegetables"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:62
-msgid "Take the following example:"
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:60
+msgid "Ensure all apples are stored in the fruits section by filling the field :guilabel:`Store to` with the location `WH/Stock/Fruits` when the :guilabel:`Product`, `Apple` arrives in `WH/Stock`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:64
-msgid "If water (category All/drinks) is received, whatever the package, it will be redirected to WH/Stock/Shelf 2/Small Refrigerator."
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:63
+msgid "Repeat this for all products and hit :guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:66
-msgid "If orange juice cans, packaged in boxes, are received, they will be redirected to WH/Stock/Shelf 2."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:68
-msgid "If water or apple juice bottles, packaged in boxes, are received, they will be redirected to WH/Stock/Shelf 3."
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:0
+msgid "Create putaway rules for apples and carrots."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:70
-msgid "If a pallet of lemonade cans are receieved, it will be redirected to WH/Stock/Pallets/PAL1."
+msgid "Putaway rule priority"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:-1
-msgid "Some examples of putaway rules."
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:72
+msgid "Odoo selects a putaway rule based on the following priority list (from highest to lowest) until a match is found:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:77
-msgid "Using Storage Categories"
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:75
+msgid "Package type and product"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:76
+msgid "Package type and product category"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:79
-msgid "A *Storage Category* is an extra location attribute. Storage categories allow the user to define the quantity of products that can be stored in the location and how the location will be selected with putaway rules."
+msgid "Product category"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:82
+msgid "The product `Lemonade can` has the following putaway rules configured:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:84
+msgid "When receiving a `Pallet` (:guilabel:`Package Type`) of `Lemonade cans`, it is redirected to `WH/Stock/Pallets/PAL1`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:86
-msgid "In the :guilabel:`Inventory` app, go to :menuselection:`Configuration --> Settings` and activate the :guilabel:`Storage Categories` feature. By doing so, the :guilabel:`Storage Locations` feature is also automatically activated."
+msgid "`Lemonade can`'s :guilabel:`Product Category` is `All/drinks`, and when receiving a `Box` of any item in this product category, items are redirected to `WH/Stock/Shelf 1`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:91
-msgid "Create a Storage Category"
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:88
+msgid "Any product on a `Pallet` is redirected to `WH/Stock/Pallets`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:93
-msgid "To create a storage category, go to :menuselection:`Inventory --> Configuration --> Storage Categories` and click :guilabel:`Create`. Then, click :guilabel:`Save` and click :guilabel:`Storage Categories` or go to :menuselection:`Configuration --> Storage Categories` to create a new storage category."
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:89
+msgid "The product `Lemonade can` is redirected to `WH/Stock/Shelf 2`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:-1
-msgid "Create Storage Categories inside Odoo Inventory configuration settings."
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:90
+msgid "Items in the `All/drinks` product category are redirected to `WH/Stock/Small Refrigerator`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:102
-msgid "First, click :guilabel:`Create` and type a name for the storage category."
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:0
+msgid "Some examples of putaway rules."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:104
-msgid "Then, there are options to limit the capacity by weight, by product, or by package type. The :guilabel:`Allow New Product` field defines when the location is considered available to store a product:"
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:97
+msgid "Storage categories"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:108
-msgid ":guilabel:`If location is empty`: a product can be added there only if the location is empty."
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:99
+msgid "A *storage category* is an extra location attribute. Storage categories allow the user to define the quantity of products that can be stored in the location, and how the location will be selected with putaway rules."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:109
-msgid ":guilabel:`If products are the same`: a product can be added there only if the same product is already there."
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:106
+msgid "To enable storage categories, go to :menuselection:`Inventory app --> Configuration --> Settings`, and activate the :guilabel:`Storage Categories` feature in the :guilabel:`Warehouse` section. Then, click :guilabel:`Save`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:111
-msgid ":guilabel:`Allow mixed products`: several different products can be stored in this location at the same time."
+msgid "The :guilabel:`Storage Locations` feature **must** be enabled to enable :guilabel:`Storage Categories`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:114
-msgid "Once the storage category settings are saved, the storage category can be linked to a location."
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:115
+msgid "Define storage category"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:-1
-msgid "When a Storage Category is created, it can be linked to a warehouse location."
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:117
+msgid "To create a storage category, go to :menuselection:`Inventory app --> Configuration --> Storage Categories` and click :guilabel:`Create`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:121
-msgid "Storage categories in putaway rules"
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:120
+msgid "On the storage category form, type a name for the :guilabel:`Storage Category` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:123
-msgid "To continue the example from above, apply the \"High Frequency Pallets\" on the PAL1 and PAL2 locations and rework the putaway rules as follows:"
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:122
+msgid "Options are available to limit the capacity by weight, by product, or by package type. The :guilabel:`Allow New Product` field defines when the location is considered available to store a product:"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:126
-msgid "Assume one pallet of lemonade cans is received:"
+msgid ":guilabel:`If location is empty`: a product can be added there only if the location is empty."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:128
-msgid "If PAL1 and PAL2 are empty, the pallet will be redirected to WH/Stock/Pallets/PAL1."
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:127
+msgid ":guilabel:`If products are the same`: a product can be added there only if the same product is already there."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:129
+msgid ":guilabel:`Allow mixed products`: several different products can be stored in this location at the same time."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:133
+msgid "Create putaway rules for pallet-stored items and ensure real-time storage capacity checks by creating the `High Frequency pallets` storage category."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:136
+msgid "Name the :guilabel:`Storage Category`, and select :guilabel:`If all products are same` in the :guilabel:`Allow New Product` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:139
+msgid "Then, define package capacity in the :guilabel:`Capacity by Package` tab, specifying the number of packages for the designated :guilabel:`Package Type` and setting a maximum of `2.00` `Pallets` for a specific location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:0
+msgid "Create a storage category on the page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:147
+msgid "Once the storage category settings are saved, the storage category can be linked to a location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:149
+msgid "To do that, navigate to the location by going to :menuselection:`Inventory app --> Configuration --> Locations`, and select the location. Click :guilabel:`Edit` and select the created category in the :guilabel:`Storage Category` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:154
+msgid "Assign the `High Frequency pallets` storage category to the `WH/Stock/pallets/PAL 1` sub-location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:0
+msgid "When a Storage Category is created, it can be linked to a warehouse location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:162
+msgid "Storage categories in putaway rules"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:164
+msgid "To continue the example from above, apply the `High Frequency Pallets` on the `PAL1` and `PAL2` locations and :ref:`rework the putaway rules <inventory/routes/putaway-rule>` as follows:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:167
+msgid "Assume one pallet of lemonade cans is received:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:169
+msgid "If PAL1 and PAL2 are empty, the pallet will be redirected to WH/Stock/Pallets/PAL1."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:170
 msgid "If PAL1 is full, the pallet will be redirected to WH/Stock/Pallets/PAL2."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:130
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:171
 msgid "If PAL1 and 2 are full, the pallet will be redirected to WH/Stock/Pallets."
 msgstr ""
 
@@ -8465,7 +8519,7 @@ msgid "`Odoo Tutorials: MRP <https://www.odoo.com/slides/mrp-29>`_"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing.rst:17
-msgid ":doc:`IoT Boxes (MES) </applications/productivity/iot>`"
+msgid ":doc:`IoT Boxes (MES) </applications/general/iot>`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/maintenance.rst:5
