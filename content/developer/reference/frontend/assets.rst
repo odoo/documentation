@@ -287,7 +287,7 @@ provides a few helper functions, located in :file:`@web/core/assets`.
     :param Object assets: a description of various assets that should be loaded
     :returns: Promise<void>
 
-    Load the assets described py the `assets` parameter. It is an object that
+    Load the assets described by the `assets` parameter. It is an object that
     may contain the following keys:
 
     .. list-table::
