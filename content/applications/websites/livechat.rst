@@ -294,3 +294,4 @@ view, an operator can participate in the chat the same as they would in the norm
    livechat/ratings
    livechat/responses
    livechat/chatbots
+   livechat/reports
