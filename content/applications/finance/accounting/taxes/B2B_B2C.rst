@@ -1,185 +1,169 @@
 =================================================
-B2B (tax excluded) and B2C (tax included) pricing
+B2B (tax-excluded) and B2C (tax-included) pricing
 =================================================
 
-When working with consumers, prices are usually expressed with taxes
-included in the price (e.g., in most eCommerce). But, when you work in a
-B2B environment, companies usually negotiate prices with taxes excluded.
+When working with **B2B** and **B2C** customers, depending on the legislation where your business
+operates, you may need to use different prices depending on the customer's nature. For a **B2B**
+customer, a *tax-excluded* price would be used, where as for a **B2C** customer, a *tax-included*
+price would be used.
 
-Odoo manages both use cases easily, as long as you register your prices
-on the product with taxes excluded or included, but not both together.
-If you manage all your prices with tax included (or excluded) only, you
-can still easily do sales order with a price having taxes excluded (or
-included): that's easy.
-
-This documentation is only for the specific use case where you need to
-have two references for the price (tax included or excluded), for the
-same product. The reason of the complexity is that there is not a
-symmetrical relationship with prices included and prices excluded, as
-shown in this use case, in belgium with a tax of 21%:
-
--  Your eCommerce has a product at **10€ (taxes included)**
-
--  This would do **8.26€ (taxes excluded)** and a **tax of 1.74€**
-
-But for the same use case, if you register the price without taxes on
-the product form (8.26€), you get a price with tax included at 9.99€,
-because:
-
--  **8.26€ \* 1.21 = 9.99€**
-
-So, depending on how you register your prices on the product form, you
-will have different results for the price including taxes and the price
-excluding taxes:
-
--  Taxes Excluded: **8.26€ & 10.00€**
-
--  Taxes Included: **8.26€ & 9.99€**
+Odoo handles both tax-excluded and tax-included pricing, however, only one pricing type can be used
+at a time per product. I.e., it is impossible to have both tax-excluded *and* tax-included pricing
+simultaneously on a single product.
 
 .. note::
-  If you buy 100 pieces at 10€ taxes included, it gets even more
-  tricky. You will get: **1000€ (taxes included) = 826.45€ (price) +
-  173.55€ (taxes)** Which is very different from a price per piece at
-  8.26€ tax excluded.
-
-This documentation explains how to handle the very specific use case
-where you need to handle the two prices (tax excluded and included) on
-the product form within the same company.
-
-.. note::
-  In terms of finance, you have no more revenues selling your
-  product at 10€ instead of 9.99€ (for a 21% tax), because your revenue
-  will be exactly the same at 9.99€, only the tax is 0.01€ higher. So, if
-  you run an eCommerce in Belgium, make your customer a favor and set your
-  price at 9.99€ instead of 10€. Please note that this does not apply to
-  20€ or 30€, or other tax rates, or a quantity >1. You will also make you
-  a favor since you can manage everything tax excluded, which is less
-  error prone and easier for your salespeople.
+   If all your prices are **exclusively** either tax-excluded *or* tax-included, you can still
+   create sales order with a tax-excluded or tax-included price. This documentation is only for the
+   specific use case of both tax-included *and* tax-excluded pricing for the same product.
 
 Configuration
 =============
 
-Introduction
-------------
+If you sell both **tax-excluded** and **tax-included** products simultaneously and need to juggle
+with both B2B and B2C customers:
 
-The best way to avoid this complexity is to choose only one way of
-managing your prices and stick to it: price without taxes or price with
-taxes included. Define which one is the default stored on the product
-form (on the default tax related to the product), and let Odoo compute
-the other one automatically, based on the pricelist and fiscal position.
-Negotiate your contracts with customers accordingly. This perfectly
-works out-of-the-box and you have no specific configuration to do.
+#. Before any configuration, make sure to have :guilabel:`Tax-Excluded` selected in
+   :menuselection:`Settings --> Website --> Pricing (section)` and in :menuselection:`Settings -->
+   Accounting --> Customer Invoices (section)`
 
-If you can not do that and if you really negotiate some prices with tax
-excluded and, for other customers, others prices with tax included, you
-must:
+#. Go to :menuselection:`Accounting --> Customers --> Products`, select a product, and in the
+   :guilabel:`General Information` tab, set a :guilabel:`Sales Price` (tax-excl.), and a
+   :guilabel:`Customer Taxes` (tax itself).
 
-#.  always store the default price **tax excluded** on the product form, and
-    apply a tax (price excluded on the product form)
+#. Then, create a :doc:`price list </applications/sales/sales/products_prices/prices/pricing>` under
+   :menuselection:`Website --> Products --> Pricelists --> Create`. The price list is intended for
+   **B2C** customers, so name it accordingly to recognize it easily ('B2C customers', for example).
+   Click :guilabel:`Add a line`, select a **product**, and set a *tax-included* :guilabel:`Price`
+   for that product. Make sure to :guilabel:`Save`.
 
-#.  create a pricelist with prices in **tax included**, for specific
-    customers
+#.  Go to :menuselection:`Accounting --> Configuration --> Fiscal Positions --> Create`. The
+    :doc:`fiscal position <fiscal_positions>` is intended for **B2B** customers, so name it
+    accordingly to recognize it easily ('B2B customers', for example). In the
+    :guilabel:`Tax Mapping` tab, click :guilabel:`Add a line` and select the
+    :guilabel:`Customer Taxes` set on the **product form** at step one of this list. In the
+    :guilabel:`Tax to Apply` column, select the tax to apply for **B2B** customers according to your
+    accounting. Make sure to :guilabel:`Save`.
 
-#.  create a fiscal position that switches the tax excluded to a tax
-    included
+#.  Next, go to :menuselection:`Accounting --> Customers --> Customers`, select a **customer**, and
+    in the :guilabel:`Sales & Purchase` tab, set the **B2C price list** for **B2C customers** in the
+    :guilabel:`Pricelist` field; or set the **B2B fiscal position** for **B2B customers** in the
+    :guilabel:`Fiscal Position` field. Repeat this step for every customer.
 
-#.  assign both the pricelist and the fiscal position to customers who
-    want to benefit to this pricelist and fiscal position
+eCommerce display
+-----------------
 
-For the purpose of this documentation, we will use the above use case:
+To display both **B2B** and **B2C** prices on a single eCommerce, activate the
+:doc:`developer mode </applications/general/developer_mode>`. Then, go to
+:menuselection:`Settings --> General Settings` and at the very top of the page, click
+:guilabel:`Users & Companies`. Access either :guilabel:`Technical / Tax display B2B` or
+:guilabel:`Technical / Tax display B2C` and under the :guilabel:`Users` tab, click :guilabel:`Add a
+line` to add customers to their **respective groups**, i.e., add **B2B** customers to the
+**B2B group** and **B2C** customers to the **B2C group**.
 
--   your product default sale price is 8.26€ tax excluded
+This way, **B2B** customers only see the **B2B** price on your eCommerce, and **B2C** customers only
+see the **B2C** price.
 
--   but we want to sell it at 10€, tax included, in our shops or
-    eCommerce website
-
-.. _b2b_b2c/ecommerce:
-
-eCommerce
----------
-
-If you only use B2C or B2B prices on your website, simply select the appropriate setting in the
-**Website** app settings.
-
-If you have both B2B and B2C prices on a single website, please follow these instructions:
-
-#. Activate the :ref:`developer mode <developer-mode>` and go to :menuselection:`General Settings
-   --> Users & Companies --> Groups`.
-#. Open either `Technical / Tax display B2B` or `Technical / Tax display B2C`.
-#. Under the :guilabel:`Users` tab, add the users requiring access to the price type. Add B2C users
-   in the B2C group and B2B users in the B2B group.
-
-Setting your products
----------------------
-
-Your company must be configured with tax excluded by default. This is
-usually the default configuration, but you can check your **Default Sale
-Tax** from the menu :menuselection:`Configuration --> Settings`
-of the Accounting application.
-
-.. image:: B2B_B2C/price_B2C_B2B01.png
-  :align: center
-
-Once done, you can create a **B2C** pricelist. You can activate the
-pricelist feature per customer from the menu:
-:menuselection:`Configuration --> Settings` of the Sale application.
-Choose the option **different prices per customer segment**.
-
-Once done, create a B2C pricelist from the menu
-:menuselection:`Configuration --> Pricelists`.
-It's also good to rename the default pricelist into B2B to avoid confusion.
-
-Then, create a product at 8.26€, with a tax of 21% (defined as tax not
-included in price) and set a price on this product for B2C customers at
-10€, from the :menuselection:`Sales --> Products`
-menu of the Sales application:
-
-.. image:: B2B_B2C/price_B2C_B2B02.png
-  :align: center
-
-Setting the B2C fiscal position
--------------------------------
-
-From the accounting application, create a B2C fiscal position from this
-menu: :menuselection:`Configuration --> Fiscal Positions`.
-This fiscal position should map the VAT 21% (tax excluded of price)
-with a VAT 21% (tax included in price)
-
-.. image:: B2B_B2C/price_B2C_B2B03.png
-  :align: center
-
-Test by creating a quotation
-============================
-
-Create a quotation from the Sale application, using the
-:menuselection:`Sales --> Quotations` menu. You should have the
-following result: 8.26€ + 1.73€ = 9.99€.
-
-.. image:: B2B_B2C/price_B2C_B2B04.png
-  :align: center
-
-Then, create a quotation but **change the pricelist to B2C and the
-fiscal position to B2C** on the quotation, before adding your product.
-You should have the expected result, which is a total price of 10€ for
-the customer: 8.26€ + 1.74€ = 10.00€.
-
-.. image:: B2B_B2C/price_B2C_B2B05.png
-  :align: center
-
-This is the expected behavior for a customer of your shop.
-
-Avoid changing every sale order
+Hide content from non-B2B users
 ===============================
 
-If you negotiate a contract with a customer, whether you negotiate tax
-included or tax excluded, you can set the pricelist and the fiscal
-position on the customer form so that it will be applied automatically
-at every sale of this customer.
+Usually, a B2B website does not allow to see either the catalog or the prices without being logged
+in. To restrict these accesses to only your B2B customers, you can create a specific form for users
+to request a B2B account, allowing them to access your catalog and prices.
 
-The pricelist is in the **Sales & Purchases** tab of the customer form,
-and the fiscal position is in the accounting tab.
+Configuration
+-------------
 
-Note that this is error prone: if you set a fiscal position with tax
-included in prices but use a pricelist that is not included, you might
-have wrong prices calculated for you. That's why we usually recommend
-companies to only work with one price reference.
+Go to :menuselection:`Website --> Configuration --> Settings`, scroll down to the
+:guilabel:`Features` section, and under :guilabel:`Customer Account`, check
+:guilabel:`On invitation`. Make sure to :guilabel:`Save`. Then, activate the
+:doc:`developer mode </applications/general/developer_mode>`, go to
+:menuselection:`Settings --> Technical --> Models`, and search for `res.partner`. Click on that
+**model**, click the :guilabel:`Website Forms`, and make sure :guilabel:`Allowed to use in forms` is
+enabled and :guilabel:`Label for form action` is set to :guilabel:`Create a Customer`. Do not forget
+to :guilabel:`Save`.
+
+.. image:: B2B_B2C/res-partner.png
+   :alt: res.partner model view in Odoo.
+
+Then, go to :guilabel:`Contacts --> Configuration --> Contact Tags`. :guilabel:`Create` a new tag,
+and **name** it in a recognizable manner; the tag will be used later in this setup. Make sure it is
+:guilabel:`Active` and :guilabel:`Save`.
+
+.. tip::
+   You can access **Models** by hitting `CTRL/COMMAND (⌘) + K` and searching for `/models`.
+.. seealso::
+   :doc:`/applications/general/users/portal`
+
+Page form
+---------
+
+To create a **page form** where customers can land on and request access to your shop, go to
+:menuselection:`Website --> Go to Website --> + New`, and click :guilabel:`Page`. Enter a **page
+title**, enable :guilabel:`Add to menu`, and click :guilabel:`Create`. Then, click the
+:guilabel:`Submit` and from the **website builder menu**, set the :guilabel:`Action` type to
+:guilabel:`Create a Customer`.
+
+.. image:: B2B_B2C/action-button.png
+   :alt: Button action in Odoo
+
+Next, **add** or **delete** the fields according to your needs, **rename** them if necessary, and
+mark them as :guilabel:`Required` (if necessary) in the **website builder**. Add a field by clicking
+:guilabel:`+Field`, set its type to :guilabel:`Tags`, and remove any other unnecessary tags by
+clicking :`-` under the :guilabel:`Checkbox List` in the **website builder**, leave only the tag(s)
+related to B2B account requests. Tick the **toggle** button to automatically have this button
+checked when customers fill in the form. Finally, set the :guilabel:`Visibility` to
+:guilabel:`Hidden`. This way, when customers submit the form, their **contact card** will
+be marked with the tag(s) used in the form, making them easily recognizable. :guilabel:`Save` when
+done. Once the form is ready, click :guilabel:`Publish`.
+
+Submitted requests can be found under the **Contacts** with the related tag(s). Click the **contact
+card** of a customer with the tag(s), then :menuselection:`(⚙) Action --> Grant portal access`, and
+finally :guilabel:`Grant access`. The customer now has access to your B2B catalog and products.
+
+.. image:: B2B_B2C/checkbox-list.png
+   :alt: Checkbox list and B2B tag on the contact card.
+
+.. example::
+   This is what the customer sees with the aforementioned configuration.
+
+   .. image:: B2B_B2C/request-form.png
+      :alt: B2B account request form.
+
+HTML editing
+------------
+
+Hide the shop
+~~~~~~~~~~~~~
+
+To hide the **shop** page from **public users** (non-logged-in users), go on your **shop** page in
+the **Website** app, click :menuselection:`Customize --> HTML/CSS/JS Editor` and in the **HTML**
+editor, change the line `<div id="wrap" class="js_sale">` to
+`<div groups="base.group_user, base.group_portal" id="wrap" class="js_sale">`, and click
+:guilabel:`Save`. Then, to hide the **menu** itself, go to :menuselection:`Website --> Configuration
+--> Menus`, select the desired website, and click your **shop** page. Under :guilabel:`Group Name`,
+click :guilabel:`Add a line`, and add :guilabel:`User types / Internal User` and
+`User types / Portal` to the list. :guilabel:`Save` when done.
+
+.. image:: B2B_B2C/website-menus.png
+   :alt: Groups allowed to see the 'Shop' menu.
+
+.. note::
+   The :doc:`developer mdode </applications/general/developer_mode>` must be activated to access
+   :menuselection:`Website --> Configuration --> Menus`.
+
+.. seealso::
+   :doc:`/applications/general/users/access_rights`
+
+Next, go to your **website** and create a **new page** (:menuselection:`+ New --> Page`). Give the
+page a recognizable name, and **uncheck** :guilabel:`Add to menu`. The goal of this page is to
+inform customers they need to be logged-in to see the **shop** page and **redirect** them to the
+account request **form**. You can design the page however you like.
+
+.. example::
+   In this case, we used a **Heading** block, with a **Text** block, and a **Button** redirecting
+   to the `/b2b-account-request` URL of our website.
+
+   .. image:: B2B_B2C/page-redirect.png
+      :alt: Example of a redirect page build.
+
+
