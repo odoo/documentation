@@ -145,3 +145,4 @@ Click the pen icon to edit their name.
    :titlesonly:
 
    building_blocks/structure
+   building_blocks/features_blocks
