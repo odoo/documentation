@@ -182,7 +182,7 @@ Configure new rule
 On the :menuselection:`Rule Type` screen, select :guilabel:`Port`. Then click :guilabel:`Next`. From
 the :menuselection:`Protocol and Ports` page leave the rule application to :guilabel:`TCP`. Then,
 select :guilabel:`Specific Local Ports` for the :guilabel:`ports` option. In the text box, type in
-`8069`. Finally click :guilabel:`Next` to continue to the next step.
+`8069, 443`. Finally, click :guilabel:`Next` to continue to the next step.
 
 On the :menuselection:`Actions` page, select :guilabel:`Allow the connection` and click
 :guilabel:`Next`. The following page on the :menuselection:`Rule Configuration` wizard is the
