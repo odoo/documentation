@@ -42,7 +42,13 @@ Available manifest fields are:
 ``name`` (``str``, required)
     the human-readable name of the module
 ``version`` (``str``)
-    this module's version, should follow `semantic versioning`_ rules
+    this module's version, preferred format `x.y` or `x.y.z`, it could be prefixed with the target Odoo version in which case it will be stripped to get the actual module version
+
+.. note::
+   Within Odoo the version of a module is only used to decide if it should be upgraded. The precedence between versions is computed as in `semantic versioning`_.
+
+   If the module version happens to start with the Odoo version, it should be prefixed with the Odoo version to avoid ambiguities. Example: `14.0.14.0.1` for a module with version `14.0.1` running in Odoo `14.0`.
+
 ``description`` (``str``)
     extended description for the module, in reStructuredText
 ``author`` (``str``)
