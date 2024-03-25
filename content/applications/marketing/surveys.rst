@@ -10,6 +10,7 @@ Surveys
 .. toctree::
    :titlesonly:
 
+   surveys/dashboard
    surveys/create
    surveys/scoring
    surveys/time_random
