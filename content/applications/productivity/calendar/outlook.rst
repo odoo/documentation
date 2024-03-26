@@ -56,8 +56,8 @@ Finally, click :guilabel:`Add` to generate the client secret (:guilabel:`Secret 
 Configuration in Odoo
 =====================
 
-In the Odoo database, go to :menuselection:`Settings --> General Settings --> Integrations` and
-activate the :guilabel:`Outlook Calendar` setting.
+In the Odoo database, go to :menuselection:`Settings app --> Calendar` in the left menu and activate
+the :guilabel:`Outlook Calendar` setting.
 
 .. image:: outlook/outlook-calendar-setting.png
    :align: center
