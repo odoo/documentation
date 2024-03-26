@@ -294,8 +294,8 @@ Unpaid section
 
 - :guilabel:`Unpaid in Structures Types`: if the work entry is for work that is not paid, specify
   which pay structure the unpaid work entry applies to from the drop-down menu. Some situations
-  where work would be logged on a timesheet but no compensation given would be for unpaid
-  internships, unpaid training, or volunteer work.
+  where work is logged on a timesheet but no compensation given would be for unpaid internships,
+  unpaid training, or volunteer work.
 
 Valid for advantages section
 ****************************
@@ -417,6 +417,8 @@ paid by the hour, so the wage type is :guilabel:`Hourly Wage`.
 .. image:: payroll/structure-type.png
    :align: center
    :alt: List of all currently configured structure types available to use.
+
+.. _payroll/new-structure-type:
 
 New structure type
 ~~~~~~~~~~~~~~~~~~
@@ -955,6 +957,6 @@ form.
    :titlesonly:
 
    payroll/contracts
-   payroll/payslips
    payroll/work_entries
+   payroll/payslips
    payroll/reporting
