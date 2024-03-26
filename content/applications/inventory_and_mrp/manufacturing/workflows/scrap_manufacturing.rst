@@ -87,9 +87,10 @@ their respective drop-down menus.
 
 Enable the :guilabel:`Replenish Scrapped Quantities` checkbox if a picking order should be created
 to replace the scrapped component(s) upon confirmation of the scrap order. This option should only
-be enabled for warehouses with :doc:`two-step <two_step_manufacturing>` or :doc:`three-step
-<three_step_manufacturing>` manufacturing enabled, since components are not picked as part of the
-:doc:`one-step <one_step_manufacturing>` manufacturing process.
+be enabled for warehouses with :doc:`two-step <../basic_setup/two_step_manufacturing>` or
+:doc:`three-step <../basic_setup/three_step_manufacturing>` manufacturing enabled, since components
+are not picked as part of the :doc:`one-step <../basic_setup/one_step_manufacturing>` manufacturing
+process.
 
 .. image:: scrap_manufacturing/scrap-window.png
    :align: center
