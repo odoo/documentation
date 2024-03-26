@@ -96,6 +96,13 @@ Periodic submission to HMRC
 Import your obligations HMRC, filter on the period you want to submit, and send your tax report by
 clicking :guilabel:`Send to HMRC`.
 
+.. tip::
+   You can use dummy credentials to demo the HMRC flow. To do so, activate the
+   :ref:`developer mode <developer-mode>` and go to :menuselection:`General Settings -->
+   Technical --> System Parameters`. From here, search for `l10n_uk_reports.hmrc_mode` and change
+   the value line to `demo`. You can get such credentials from the `HMRC Developer Hub
+   <https://developer.service.hmrc.gov.uk/api-test-user>`_.
+
 Periodic submission to HMRC for multi-company
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
