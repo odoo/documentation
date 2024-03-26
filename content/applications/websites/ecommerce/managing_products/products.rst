@@ -244,7 +244,7 @@ If you are selling non-prepackaged kits (i.e., the kits are made of individual p
 recommend you read the related documentation to keep track of your stock.
 
 .. seealso::
-   :doc:`../../../inventory_and_mrp/manufacturing/management/kit_shipping`
+   :doc:`../../../inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping`
 
 Product comparison
 ==================
