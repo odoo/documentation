@@ -135,7 +135,7 @@ The following items must be configured before eBay is set up:
       :alt: Setting up bill of materials with base product and linked products.
 
    .. seealso::
-      :doc:`../../../inventory_and_mrp/manufacturing/management/bill_configuration/`
+      :doc:`../../../inventory_and_mrp/manufacturing/basic_setup/bill_configuration/`
 
 - eBay does not automatically create invoices for eBay orders that get pushed into Odoo. Set
   invoicing policy on eBay products: invoicing policy will dictate when the product can be invoiced.

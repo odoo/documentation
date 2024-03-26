@@ -16,7 +16,7 @@ products must be configured. Therefore, the first step is to create the semi-fin
 their :abbr:`BoMs (Bills of Materials)`.
 
 .. seealso::
-   :doc:`bill_configuration`
+   :doc:`../basic_setup/bill_configuration`
 
 .. image:: sub_assemblies/semifinished-product-bom.png
    :align: center
