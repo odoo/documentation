@@ -509,7 +509,7 @@ regardless.
 - :guilabel:`Application Settings`: enter the employee's :guilabel:`Billing Time Target` for the
   billing rate leader board in the *Timesheets* application. Next, enter the :guilabel:`Hourly Cost`
   in a XX.XX format. This is factored in when the employee is working at a :doc:`work center
-  <../../inventory_and_mrp/manufacturing/management/using_work_centers>`.
+  <../../inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers>`.
 
   If applicable, enter the :guilabel:`Fleet Mobility Card` number.
 
