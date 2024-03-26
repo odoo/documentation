@@ -234,4 +234,4 @@ Finally, once ready, click :guilabel:`Confirm` to request the count.
    and are scheduled for **today** or **earlier**.
 
 .. seealso::
-   :doc:`/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/cycle_counts`
+   :doc:`cycle_counts`

@@ -16,7 +16,7 @@ mobile app.
    <https://www.odoo.com/app/inventory-hardware>`_.
 
 .. seealso::
-   :doc:`../../inventory/warehouses_storage/inventory_management/count_products`
+   :doc:`../../inventory/warehouses_storage/inventory_adjustment/count_products`
 
 Enable Barcode app
 ==================

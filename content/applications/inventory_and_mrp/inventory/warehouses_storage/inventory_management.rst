@@ -7,7 +7,6 @@ Inventory management
 .. toctree::
    :titlesonly:
 
-   inventory_management/count_products
    inventory_management/resupply_warehouses
    inventory_management/warehouse_replenishment_transfer
    inventory_management/warehouses_locations
