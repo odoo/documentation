@@ -13,3 +13,4 @@ Surveys
    surveys/create
    surveys/scoring
    surveys/time_random
+   surveys/live_session
