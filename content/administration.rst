@@ -60,4 +60,5 @@ functionalities, including functional support, upgrades, and hosting. `Pricing
     administration/on_premise
     administration/upgrade
     administration/supported_versions
+    administration/mobile
     administration/odoo_accounts
