@@ -221,7 +221,10 @@ product PDF that was set to be visible inside the quote, can be viewed and print
 
 .. note::
    Download these :download:`PDF quote builder examples
-   <pdf_quote_builder/pdfquotebuilderexamples.zip>` for added reference.
+   <pdf_quote_builder/pdfquotebuilderexamples.zip>` or download
+   :download:`sample quotation
+   <pdf_quote_builder/sample_quotation.pdf>`
+   for added reference.
 
 .. seealso::
    - :doc:`/applications/sales/sales/send_quotations/quote_template`
