@@ -1,123 +1,123 @@
 ==================
-Target an audience
+Audience targeting
 ==================
 
-Delivering marketing campaigns to the right audience is paramount when trying to grow a business.
-The Odoo *Marketing Automation* application helps marketers to do just that by providing detailed
-filtering tools, which can be as simple (or as complex) as necessary, to reach the right customers
-at the right time.
+The *Target* and *Filter* section of the campaign form, also referred to as the domain, contains the
+fields used to define the target audience for the campaign's reach (i.e., the unique contact records
+in the database).
 
-Configure target filters
-========================
+The target audience specifies the type of records available for use in the campaign, such as
+*Lead/Opportunity*, *Event Registration*, *Contact*, and more.
 
-When configuring the target filters on a marketing campaign, there are some options that have an
-:guilabel:`> (arrow)` icon beside them. The :guilabel:`> (arrow)` icon signifies that the particular
-filter has more refined parameters within it that can be customized.
+This section can be found on a campaign form by selecting an existing campaign, or :ref:`creating a
+new campaign <marketing_automation/campaigns>` from the :menuselection:`Marketing Automation app -->
+Campaigns` dashboard.
 
-.. image:: target_audience/marketing-filters.png
+- :guilabel:`Target`: defines the model of the target audience for the campaign. The assigned model
+  determines the fields that are available throughout the campaign, including the fields available
+  in the :guilabel:`Filter` section, and in dynamic placeholders.
+- :guilabel:`Save as Favorite Filter`: saves the current :guilabel:`Filter` for future use with the
+  current :guilabel:`Target` model, and can be managed from the :menuselection:`Marketing Automation
+  app --> Configuration --> Favorite Filters` menu.
+- :guilabel:`Unicity based on`: specifies the :guilabel:`Target` model field at which duplicates
+  should be avoided. Traditionally, the :guilabel:`Email` field is used, but any available field can
+  be used.
+- :guilabel:`Filter`: contains an interactive form to refine the target audience on a specific
+  subset of the :guilabel:`Target` model, detailed in the
+  :ref:`marketing_automation/defining-filters` section.
+- :guilabel:`Include archived`: allows or disallows the inclusion of archived records in the target
+  audience.
+
+.. tip::
+   A :guilabel:`Responsible` user can be assigned to the campaign by activating
+   :ref:`developer-mode`.
+
+.. note::
+   Each activity in a campaign's workflow can target a subset of the target audience, see the
+   :doc:`workflow_activities` documentation for more information.
+
+.. _marketing_automation/defining-filters:
+
+Defining filters
+================
+
+The default campaign :guilabel:`Filter` configuration is set to :guilabel:`Match all records`,
+indicating that the campaign is targeting **all** records of the :guilabel:`Target` model.
+
+To refine the :guilabel:`Filter` rules of a campaign, click the :guilabel:`➕ Add condition` button
+to reveal a new filter rule row.
+
+.. image:: target_audience/domain-filters.png
    :align: center
-   :alt: The drop-down filter menu in the Marketing Automation application.
+   :alt: A new filter rule row on the campaign form Filters.
 
-Filters can be extended by adding *branches* and *nodes*. A *node* adds another filtering parameter
-to a group of targeting conditions (e.g. a new line), and a *branch* creates a narrowly refined
-cluster of parameters, allowing filters to be grouped with :guilabel:`ANY` or :guilabel:`ALL`
-statements.
+At the top-left of the filter rules is a drop-down menu with two options. The selected option
+determines the criteria of how all of the rules are combined to filter the target audience:
 
-Every time a new branch is created, there are two options:
+- :guilabel:`Match all 🔽 of the following rules`: **all** of the filter rules must be met for a
+  record to be targeted by the campaign. Logically, this is an *AND* (`&`) operation.
+- :guilabel:`Match any 🔽 of the following rules`: **any** of the filter rules can be met for a
+  record to be targeted by the campaign. Logically, this is an *OR* (`|`) operation.
 
-- Either the records can match :guilabel:`ALL` criteria for the upcoming rules (creating an AND
-  statement where *all* criteria must match).
-- Or, the records can match :guilabel:`ANY` criteria for the upcoming rules (creating an OR
-  statement where *only one* of the criteria must match).
+  .. note::
+     The :guilabel:`Match any 🔽 of the following rules` option is only available when there are two
+     or more filter rules.
 
-To change between these two options, simply click the drop-down arrow icon in the green box and
-select :guilabel:`ANY` or :guilabel:`ALL`.
+When a rule is added, three inline inputs become available to define the rule's filter criteria:
 
-To add a node, click on the :guilabel:`➕ (plus sign)` icon, and to add another branch click on the
-:guilabel:`⋯ (ellipses)` icon. To exclude a node or a branch, click on :guilabel:`✖ (delete)` icon
-to delete it.
+#. The first inline input is the *field name* of the :guilabel:`Target` model to filter by. Some
+   fields have refined paramaters that are nested within another field. These fields have an
+   :guilabel:`> (arrow)` icon beside them, which can be selected to reveal the nested fields.
+#. The second inline input is the conditional *operator* used to compare the field name to the
+   value. The :ref:`available conditional operators <reference/orm/domains>` are specific to the
+   field's data type.
+#. The third inline input is the variable *value* of the field name. The value input may appear as a
+   drop-down menu, a text input, a number input, a date/time input, a boolean selector, or it may be
+   blank, depending on the operator used and the field's data type.
 
-.. image:: target_audience/marketing-filter-nodes.png
-   :align: center
-   :alt: The drop-down filter menu in the Marketing Automation application.
+Three inline buttons are also available to the right of the rule's filter criteria inputs:
 
-Use cases
-=========
+#. :guilabel:`➕ (plus sign)`: adds a new rule below the existing rule.
+#. :guilabel:`(Add branch)`: adds a new group of rules below the existing rule, with the
+   :guilabel:`any` and :guilabel:`all` matching options available to define how each rule within
+   this branch is applied to the filter. If the matching option is set to the same as the parent
+   group, the fields are moved to join the parent group.
+#. :guilabel:`🗑️ (garbage can)`: deletes the node. If a branch node is deleted, all children of
+   that node are deleted, as well.
 
-The following scenarios outline different combinations of filters a marketing campaign might
-commonly use.
+At the bottom of the filter rules is a :guilabel:`# record(s)` button, which indicates the total
+number of records targeted by this domain. Select the :guilabel:`# record(s)` button to open a
+:guilabel:`Selected records` pop-up window, in which the targeted records can be viewed.
 
-Scenario #1: Narrow target down to new opportunities in the pipeline
---------------------------------------------------------------------
+.. tip::
+   Activate :ref:`developer-mode` to reveal each field's technical name and data type, as well as
+   the :guilabel:`# Code editor` text area below the filter rules, to view and edit the domain
+   manually.
 
-While in *Edit mode* on a campaign template form (by clicking the :guilabel:`Edit` button), select
-the :guilabel:`Target` field, and click :guilabel:`Search More` from the drop-down menu. Then,
-search for :guilabel:`Lead/Opportunity`, and select it.
+.. example::
+   To target all leads and opportunities from the *CRM* app that are in the *New* stage, and have an
+   expected revenue greater than $1,000, the following should be entered:
 
-Next, click :guilabel:`Add Filter` in the :guilabel:`Filter` field. Then, click on the default
-:guilabel:`ID` filter option in the first portion of the filter equation. Doing so reveals a
-drop-down menu full of filter options. From this drop-down, scroll down (or search for)
-:guilabel:`Type`.
+   - :guilabel:`Target`: `Lead/Opportunity`
+   - :guilabel:`Unicity based on`: `Email (Lead/Opportunity)`
+   - :guilabel:`Filter`: :guilabel:`Match` :guilabel:`all 🔽 (down arrow)` :guilabel:`of the
+     following rules:`
 
-Keep the second portion of the filter equation on the default :guilabel:`🟰 (equal sign)` icon.
+     #. :guilabel:`Stage` :guilabel:`is in` :guilabel:`New`
+     #. :guilabel:`Expected Revenue` :guilabel:`>` `1,000`
+     #. :guilabel:`any 🔽 (down arrow)` :guilabel:`of:`
 
-Next, change the third (and final) portion of the filter equation from :guilabel:`Lead` to
-:guilabel:`Opportunity`. The number of :guilabel:`Records` that fit this specific filter equation
-changes as the equation is customized.
+        - :guilabel:`Type` :guilabel:`=` :guilabel:`Lead`
+        - :guilabel:`Type` :guilabel:`=` :guilabel:`Opportunity`
 
-Add another node to this filter by clicking the :guilabel:`➕ (plus sign)` icon to the right of the
-equation.
+   With the above configuration, the campaign targets :guilabel:`157 record(s)`.
 
-With "new" opportunities being the target of this filter, the second node will focus on *only*
-locating opportunities that are in the :guilabel:`New` stage of the pipeline. To do that, select
-the default :guilabel:`ID` from the first portion of the second filter equation, and scroll down (or
-search for) :guilabel:`Stage` from the field drop-down menu.
+   .. image:: target_audience/filter-scenario-one.png
+      :align: center
+      :alt: A domain configuration in a Marketing Automation campaign.
 
-Once again, leave the second portion of the filter equation on :guilabel:`🟰 (equal sign)` icon.
-
-Lastly, highlight the default value in the third (and final) portion of the second filter equation,
-and type in `New`. With that in place, Odoo only targets opportunities that are in the "New" stage
-of the pipeline.
-
-.. image:: target_audience/filters-opportunities.png
-   :align: center
-   :alt: A standard scenario using filters in the Odoo Marketing Automation app.
-
-Scenario #2: Narrow down target to event attendees who purchased a specific ticket
-----------------------------------------------------------------------------------
-
-While in *Edit mode* on a campaign template form (by clicking the :guilabel:`Edit` button), select
-the :guilabel:`Target` field, and click :guilabel:`Search More` from the drop-down menu. Then,
-scroll down (or search for) :guilabel:`Event`, and select it.
-
-Next, click :guilabel:`Add Filter` in the :guilabel:`Filter` field. Click on the default
-:guilabel:`ID` filter option in the first portion of the filter equation. Doing so reveals a
-drop-down menu full of filter options. From this drop-down, scroll down (or search for)
-:guilabel:`Event`.
-
-Click the default :guilabel:`🟰 (equal sign)` icon in the second portion of the filter equation. This
-reveals a drop-down menu. From this drop-down menu, select :guilabel:`contains`.
-
-In the third (and final) empty portion of the filter equation, type in the name of the event(s) that
-Odoo should consider for this campaign filter.
-
-Then, add another node to this filter by clicking the :guilabel:`➕ (plus sign)` icon to the right of
-the equation.
-
-The second node will focus on targeting this campaign to attendees who purchase a specific type of
-ticket to the aforementioned event(s) mentioned in the first filter equation.
-
-To do that, select the default :guilabel:`ID` from the first portion of the second filter equation,
-and scroll down (or search for) :guilabel:`Event Ticket` from the field drop-down menu. Then, in
-that same drop-down menu, select :guilabel:`Name`.
-
-Once again, click the default :guilabel:`🟰 (equal sign)` icon in the second portion of the filter
-equation, and select :guilabel:`contains`.
-
-Lastly, in the third (and final) portion of the second filter equation, which is blank, type in the
-name of the ticket type that should be used for the filter. In this case, :guilabel:`Standard` is
-the name of the event ticket type for this sample filter.
-
-.. image:: target_audience/filters-event-ticket.png
-   :align: center
-   :alt: An event ticket filter in the Odoo Marketing Automation application.
+.. seealso::
+   - :ref:`Domain developer documentation <reference/orm/domains>`
+   - :doc:`workflow_activities`
+   - :doc:`testing_running`
+   - :doc:`understanding_metrics`

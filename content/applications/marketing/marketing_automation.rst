@@ -20,7 +20,7 @@ with a :ref:`campaign template <marketing-automation/campaign-templates>`.
 
 .. cards::
 
-   .. card:: Target an audience
+   .. card:: Audience targeting
       :target: marketing_automation/target_audience
 
       Configure the target audience for a campaign.
@@ -148,7 +148,7 @@ The number of participants engaged in a running, or stopped, campaign are shown 
 *Participants* smart button at the top of the campaign form.
 
 .. seealso::
-   :doc:`Target an audience <marketing_automation/target_audience>`
+   :doc:`Audience targeting <marketing_automation/target_audience>`
 
 Workflow
 ========
