@@ -293,7 +293,6 @@ gives the condition in which the property applies. For example:
 
     <form>
         <field name="description" invisible="not is_partner"/>
-        <field name="is_partner" invisible="True"/>
     </form>
 
 This means that the ``description`` field is invisible when ``is_partner`` is ``False``. It is
@@ -357,7 +356,6 @@ complete list):
 
     <tree decoration-success="is_partner==True">
         <field name="name"/>
-        <field name="is_partner" invisible="1"/>
     </tree>
 
 The records where ``is_partner`` is ``True`` will be displayed in green.

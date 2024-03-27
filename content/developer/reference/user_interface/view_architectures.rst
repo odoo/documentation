@@ -1456,7 +1456,6 @@ The `field` element can have the following attributes:
              <tree>
                  <field name="name" string="My Custom Name"/>
                  <field name="amount" sum="Total"/>
-                 <field name="company_id" invisible="1"/>
                  <field name="currency_id"/>
                  <field name="tax_id"/>
              </tree>
@@ -1847,7 +1846,6 @@ The `field` element can have the following attributes:
              <search>
                  <field name="name" string="My Custom Name"/>
                  <field name="amount"/>
-                 <field name="company_id" invisible="1"/>
                  <field name="currency_id"/>
                  <field name="ref" filter_domain="[('name', 'like', self)]"/>
              </search>
