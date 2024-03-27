@@ -73,6 +73,95 @@ Lastly, click :guilabel:`Flash`, and wait for the process to finish.
    An alternative software for flashing the micro SD card is `Raspberry Pi Imager
    <https://www.raspberrypi.com/software/>`_.
 
+Windows IoT update
+==================
+
+Windows virtual :abbr:`IoT (Internet of Things)` box may occasionally need an update to work
+properly.
+
+The following processes cover the uninstallation and re-installation of the Windows virtual
+:abbr:`IoT (Internet of Things)` box.
+
+.. important::
+   Before proceeding with the uninstallation of a previous version of the Windows virtual
+   :abbr:`IoT (Internet of Things)` box, check Odoo's latest download page to ensure a newer version
+   of Odoo's virtual :abbr:`IoT (Internet of Things)` box is available.
+
+   To reach the download site for the latest update, use the following URL:
+   `https://nightly.odoo.com/16.0/nightly/windows/`.
+
+   It is imperative that the `16.0` be replaced with the version of Odoo that the database is
+   running on (only full versions or long supported versions). The most recent file has `latest` in
+   its filename.
+
+   .. warning::
+      Note the date of the upload to the right of the filename. If the date is after the last
+      Windows virtual :abbr:`IoT (Internet of Things)` box installation then download the new
+      *latest* version. To install an update a new file download is required.
+
+Uninstalling Windows IoT
+------------------------
+
+Prior to upgrading the Windows virtual :abbr:`IoT (Internet of Things)` box, the previous version
+should be uninstalled first.
+
+Uninstalling the Windows virtual :abbr:`IoT (Internet of Things)` box is done through the Windows
+program manager.
+
+Using any Windows version, search for `program`. Then, from the control panel, select :guilabel:`Add
+or Remove Programs`. Next, search for `Odoo`, and click the :guilabel:`... (three dot)` menu to
+uninstall.
+
+Confirm the uninstallation, and follow the steps to uninstall through the Odoo uninstall wizard.
+
+Download and re-install
+-----------------------
+
+To begin the re-installation, navigate to the latest installation package for Enterprise or
+Community - Windows edition at  `Odoo's nightly download page
+<https://nightly.odoo.com/16.0/nightly/windows/>`_.
+
+.. important::
+   It is imperative that the `16.0` be replaced with the version of Odoo that the database is
+   running on. The latest file has `latest` in its filename.
+
+Next, install and setup the Odoo :file:`.exe` file. After the instructions screen, click
+:guilabel:`Next` to start the installation, and agree to the :abbr:`TOS (Terms of Service)`.
+
+During the next step of the re-installation, select :guilabel:`Odoo IoT` from the :guilabel:`Select
+the type of install` drop-down menu.
+
+.. example::
+   For reference, the following should be installed:
+
+   - :guilabel:`Odoo server`
+   - :guilabel:`Odoo IoT`
+   - :guilabel:`Nginx WebServer`
+   - :guilabel:`Ghostscript interpreter`
+
+Ensure there is enough space on the computer for the installation, then click :guilabel:`Next`.
+
+Set the destination and complete the installation
+-------------------------------------------------
+
+To complete the re-installation, select the :guilabel:`Destination Folder`, and click
+:guilabel:`Install`.
+
+.. warning::
+   Choosing `C:\\odoo` as the install location allows for the *Nginx* server to start. Odoo's Windows
+   virtual :abbr:`IoT (Internet of Things)` box software should **not** be installed inside any of
+   the Windows user's directories. Doing so does **not** allow for *Nginx* to initialize.
+
+The installation may take a few minutes. When complete, click :guilabel:`Next` to continue.
+
+Then, ensure that the :guilabel:`Start Odoo` box is checked, and click :guilabel:`Finish`. After
+installation, the Odoo server runs, and automatically opens `http://localhost:8069` on a web browser.
+The webpage should display the :abbr:`IoT (Internet of Things)` box homepage.
+
+.. tip::
+   A restart of the Windows IoT program may be necessary if the web browser does not display
+   anything. :ref:`iot/restart_windows_iot`
+
 .. _iot/config/homepage-upgrade:
 
 Update from the IoT box home page
