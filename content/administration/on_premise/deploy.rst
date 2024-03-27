@@ -9,7 +9,7 @@ internet.
 
 .. warning:: If you are setting up a public server, be sure to check our :ref:`security` recommendations!
 
-.. _db_filter:
+.. _dbfilter:
 
 dbfilter
 ========
@@ -573,12 +573,12 @@ security-related topics:
 
 - Use appropriate database filters ( :option:`--db-filter <odoo-bin --db-filter>`)
   to restrict the visibility of your databases according to the hostname.
-  See :ref:`db_filter`.
+  See :ref:`dbfilter`.
   You may also use :option:`-d <odoo-bin -d>` to provide your own (comma-separated)
   list of available databases to filter from, instead of letting the system fetch
   them all from the database backend.
 
-- Once your ``db_name`` and ``db_filter`` are configured and only match a single database
+- Once your ``db_name`` and ``dbfilter`` are configured and only match a single database
   per hostname, you should set ``list_db`` configuration option to ``False``, to prevent
   listing databases entirely, and to block access to the database management screens
   (this is also exposed as the :option:`--no-database-list <odoo-bin --no-database-list>`
@@ -722,7 +722,7 @@ management screens.
   the system administrator, including provisioning of new databases and automated backups.
 
 Be sure to setup an appropriate ``db_name`` parameter
-(and optionally, ``db_filter`` too) so that the system can determine the target database
+(and optionally, ``dbfilter`` too) so that the system can determine the target database
 for each request, otherwise users will be blocked as they won't be allowed to choose the
 database themselves.
 
