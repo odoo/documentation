@@ -7,7 +7,6 @@ Payment Provider
 .. autoclass:: odoo.addons.payment.models.payment_provider.PaymentProvider()
 
    .. automethod:: _compute_feature_support_fields
-   .. automethod:: _compute_view_configuration_fields
    .. automethod:: _get_compatible_providers
    .. automethod:: _get_redirect_form_view
    .. automethod:: _get_validation_amount
