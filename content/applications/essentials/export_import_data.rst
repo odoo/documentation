@@ -20,7 +20,7 @@ can aid in reporting on activities, although, Odoo provides a precise and easy r
 each available application.
 
 With Odoo, the values can be exported from any field in any record. To do so, activate the list view
-(:guilabel:`☰ (three horizontal lines)` icon), on the items that need to be exported, and then
+(:guilabel:`≣ (four horizontal lines)` icon), on the items that need to be exported, and then
 select the records that should be exported. To select a record, tick the checkbox next to the
 corresponding record. Finally, click on :guilabel:`⚙️ Action`, and then :guilabel:`Export`.
 
@@ -55,8 +55,9 @@ several options for the data to export:
    can)` icon to remove the field.
 #. For recurring reports, it is helpful to save export presets. Select all the needed fields, and
    click on the template drop-down menu. Once there, click on :guilabel:`New template`, and give a
-   unique name to the export just created. The next time the same list needs to be exported, select
-   the related template that was previously saved from the drop-down menu.
+   unique name to the export just created. Click the :guilabel:`💾 (floppy drive)` icon to save the
+   configuration. The next time the same list needs to be exported, select the related template that
+   was previously saved from the drop-down menu.
 
 .. tip::
    It is helpful to know the field's external identifier. For example, :guilabel:`Related Company`
@@ -98,11 +99,11 @@ Data can be imported on any Odoo business object using either Excel (`.xlsx`) or
 journal entries, and orders.
 
 Open the view of the object to which the data should be imported/populated, and click on
-:menuselection:`⭐ Favorites --> Import records`.
+:menuselection:`⚙️ (Action) --> Import records`.
 
 .. image:: export_import_data/import-button.png
    :align: center
-   :alt:  Favorites menu revealed with the import records option highlighted.
+   :alt:  Action menu revealed with the import records option highlighted.
 
 After clicking :guilabel:`Import records`, Odoo reveals a separate page with templates that can be
 downloaded and populated with the company's own data. Such templates can be imported in one click,
