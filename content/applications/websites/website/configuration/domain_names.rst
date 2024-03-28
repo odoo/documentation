@@ -300,6 +300,16 @@ Go to :menuselection:`Website --> Configuration --> Settings`. If you have multi
 the one you want to configure. In the :guilabel:`Domain` field, enter the address of your website
 (e.g., `https://www.yourdomain.com`) and :guilabel:`Save`.
 
+.. important::
+   Mapping a :guilabel:`Domain` to an Odoo website using the website settings does not *register*
+   the domain with a registrar. The :guilabel:`domain` that is used needs to be registered
+   previously. See this section: :ref:`domain-name/register`.
+
+   .. image:: domain_names/no-reg-domain.png
+      :align: center
+      :alt: Domain setting in the website configuration.
+
+
 .. warning::
    Mapping your domain name to your Odoo website prevents Google Search from indexing your original
    database address (e.g., `mycompany.odoo.com`).
