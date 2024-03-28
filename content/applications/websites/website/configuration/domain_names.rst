@@ -150,8 +150,7 @@ If you already have a domain name, you can use it for your Odoo website.
 Add a CNAME record
 ------------------
 
-Creating a CNAME record to forward your domain name to the address of your Odoo database is
-required.
+Adding a CNAME record to forward your domain name to the address of your Odoo database is required.
 
 .. tabs::
 
@@ -162,7 +161,7 @@ required.
 
    .. group-tab:: Odoo.sh
 
-      The CNAME record's target address can be the project's main address, which can be found on
+      The CNAME record's target address should be the project's main address, which can be found on
       Odoo.sh by going to :menuselection:`Settings --> Project Name`, or a specific branch
       (production, staging or development) by going to :menuselection:`Branches --> select the
       branch --> Settings --> Custom domains`, and clicking :guilabel:`How to set up my domain?`. A
@@ -177,17 +176,18 @@ The specific instructions depend on your DNS hosting service.
    - `Cloudflare: Manage DNS records
      <https://support.cloudflare.com/hc/en-us/articles/360019093151>`_
 
-Creating a CNAME record to map the `www` subdomain (`www.yourdomain.com`) as some visitors are used
-to typing `www.` before entering a domain name.
+.. important::
+   Odoo only supports subdomains. To use your naked domain name :dfn:`(a domain name without any
+   subdomains or prefixes)` (`yourdomain.com`), create a redirection 301 to redirect visitors to
+   `www.yourdomain.com`.
 
 .. example::
    You own the domain name `yourdomain.com`, and your Odoo Online database's address is
    `mycompany.odoo.com`. You want to access your Odoo database primarily with the domain
-   `www.yourdomain.com` but also with the naked domain :dfn:`(a domain name without any subdomains
-   or prefixes)` `yourdomain.com`.
+   `www.yourdomain.com` and also with the naked domain `yourdomain.com`.
 
-   To do so, create a CNAME record for the `www` subdomain, with `mycompany.odoo.com` as the
-   target. Next, create a redirect (301 permanent or visible redirect) to redirect visitors from
+   To do so, create a CNAME record for the `www` subdomain, with `mycompany.odoo.com` as the target.
+   Next, create a redirect (301 permanent or visible redirect) to redirect visitors from
    `yourdomain.com` to `wwww.yourdomain.com`.
 
 .. _domain-name/db-map:
