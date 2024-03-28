@@ -15,3 +15,4 @@ Human resources
    hr/time_off
    hr/recruitment
    hr/referrals
+   hr/lunch
