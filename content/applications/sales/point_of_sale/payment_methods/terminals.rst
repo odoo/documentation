@@ -21,6 +21,7 @@ Go to the :ref:`application settings <configuration/settings>`, scroll down to t
 Then, follow the corresponding documentation to configure your device:
 
 - :doc:`Adyen configuration <terminals/adyen>`
+- :doc:`Razorpay configuration <terminals/razorpay>`
 - :doc:`Ingenico configuration <terminals/ingenico>`
 - :doc:`SIX configuration <terminals/six>`
 - :doc:`Stripe configuration <terminals/stripe>`
@@ -34,6 +35,7 @@ the POS <../payment_methods>`.
    :titlesonly:
 
    terminals/adyen
+   terminals/razorpay
    terminals/ingenico
    terminals/six
    terminals/stripe
