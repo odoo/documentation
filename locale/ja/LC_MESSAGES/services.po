@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-08 12:48+0000\n"
+"POT-Creation-Date: 2024-03-25 16:01+0000\n"
 "PO-Revision-Date: 2023-11-08 08:57+0000\n"
 "Last-Translator: Junko Augias, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/odoo/teams/41243/ja/)\n"
@@ -1059,16 +1059,16 @@ msgstr ""
 msgid ""
 "Odoo *Helpdesk* provides teams with the ability to track the amount of hours"
 " spent working on a ticket, and to bill a customer for that time. Through "
-"integrations with the *Sales*, *Timesheets* and *Accounting* applications, "
-"customers can be charged once the work is completed, or before it has even "
-"begun."
+"integrations with the *Sales*, *Timesheets*, *Project* and *Accounting* "
+"applications, customers can be charged once the work is completed, or before"
+" it has even begun."
 msgstr ""
 
 #: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:11
 msgid ""
 "Since the *Track & Bill Time* features require integration with other "
 "applications, enabling them may result in the installation of additional "
-"modules (or applications)."
+"modules or applications."
 msgstr ""
 
 #: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:14
@@ -1085,8 +1085,7 @@ msgstr ""
 #: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:21
 msgid ""
 "Before a customer can be invoiced for support services, the *Track & Bill "
-"Time* features must first be enabled. These features must be enabled on each"
-" *Helpdesk* team where they will be utilized."
+"Time* features **must** be enabled on each *Helpdesk* team individually."
 msgstr ""
 
 #: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:25
@@ -1095,21 +1094,20 @@ msgstr ""
 
 #: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:27
 msgid ""
-"To view and enable the :guilabel:`Track & Bill Time` features on a "
-"*Helpdesk* team, first navigate to :menuselection:`Helpdesk --> "
-"Configuration --> Teams`. Then select a team from the list or :doc:`create a"
-" new one </applications/services/helpdesk/overview/getting_started>`. This "
-"will reveal a team's settings page."
+"To view and enable the *Track & Bill Time* features on a *Helpdesk* team, "
+"first navigate to :menuselection:`Helpdesk app --> Configuration --> "
+"Helpdesk Teams`. Then, select a team from the list, or create a :doc:`new "
+"one <../overview/getting_started>`. This reveals a team's settings page."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:32
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:31
 msgid ""
 "On the team's settings page, scroll to the :guilabel:`Track & Bill Time` "
 "section. Check the boxes labeled :guilabel:`Timesheets` and :guilabel:`Time "
 "Billing`."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:35
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:34
 msgid ""
 "Once the :guilabel:`Timesheets` box is checked, a new field appears, labeled"
 " :guilabel:`Project`."
@@ -1117,16 +1115,23 @@ msgstr ""
 
 #: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:37
 msgid ""
-"The project selected in this field is where all the timesheets for this "
-"team's tickets will be recorded. Click into the drop-down menu to select a "
-":guilabel:`Project`."
+"If this is the first time this feature has been enabled on this database, "
+"the page may need to be manually saved and refreshed before the "
+":guilabel:`Project` field appears."
 msgstr ""
 
 #: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:40
 msgid ""
-"To create a new project where the timesheets will be recorded, click into "
-"the drop-down menu, type a name for the project, and then click "
-":guilabel:`Create`."
+"The project selected in this field represents where all the timesheets for "
+"this team's tickets are recorded. Click into the :guilabel:`Project` drop-"
+"down menu to select a project."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:43
+msgid ""
+"To create a new project where the timesheets are recorded, click into the "
+":guilabel:`Project` drop-down menu, type a name for the project, and then "
+"click :guilabel:`Create` from the drop-down menu beneath."
 msgstr ""
 
 #: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst-1
@@ -1135,26 +1140,28 @@ msgid ""
 "settings."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:50
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:54
 msgid "Configure service products"
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:52
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:56
 msgid ""
 "When the :guilabel:`Time Billing` feature is enabled, a new product is "
-"created in the *Sales* app called :guilabel:`Service on Timesheets`. This "
-"product can be found under :menuselection:`Sales --> Products --> Products`."
-" Search for `Service on Timesheets` in the :guilabel:`Search...` bar. This "
-"is the product that will be used when invoicing for *post-paid support "
-"services* after they have been completed."
+"created in the *Sales* app called *Service on Timesheets*. This product can "
+"be found under :menuselection:`Sales app--> Products --> Products`. Then, "
+"search for `Service on Timesheets` in the :guilabel:`Search...` bar. This is"
+" the product that is used when invoicing for *post-paid support services* "
+"**after** they have been completed."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:58
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:62
 msgid ""
 "Select :guilabel:`Service on Timesheets` from the product page. This reveals"
 " the product detail form. The product is configured with the "
 ":guilabel:`Product Type` set to :guilabel:`Service` and the "
-":guilabel:`Invoicing Policy` set to :guilabel:`Based on Timesheets`."
+":guilabel:`Invoicing Policy` set to :guilabel:`Based on Timesheets`. Make "
+"any necessary changes to the product record, such as the :guilabel:`Cost` or"
+" :guilabel:`Sales Price`."
 msgstr ""
 
 #: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst-1
@@ -1163,21 +1170,21 @@ msgid ""
 "timesheets'."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:66
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:71
 msgid ""
-"In order to invoice for support services before the work has been completed "
-"(also known as *prepaid support services*), a separate product with a "
-"different invoicing policy must be created."
+"In order to invoice for support services **before** the work has been "
+"completed (also known as *prepaid support services*), a separate product "
+"with a different invoicing policy must be created."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:69
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:74
 msgid ""
-"To create a new service product, go to :menuselection:`Sales --> Products "
-"--> Products` and click :guilabel:`New`. This will reveal a blank product "
-"detail form."
+"To create a new service product, go to :menuselection:`Sales app --> "
+"Products --> Products`, and click :guilabel:`New`. This reveals a blank "
+"product detail form."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:72
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:77
 msgid ""
 "On the new product form, add a :guilabel:`Product Name`, and set the "
 ":guilabel:`Product Type` to :guilabel:`Service`. Then, set the "
@@ -1191,42 +1198,41 @@ msgid ""
 "View of a service product with the invoicing policy set to 'prepaid/fixed'."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:81
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:86
 msgid ""
 "Finally, set the :guilabel:`Sales Price`, and confirm that the "
 ":guilabel:`Unit of Measure` is set to :guilabel:`Hours`."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:85
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:90
 msgid "Invoice prepaid support services"
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:87
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:92
 msgid ""
 "When support services are billed on a fixed price, an invoice can be created"
 " before any work is completed on the issue. In this case, a service product "
-"with the invoicing policy set to :guilabel:`Prepaid/Fixed Price` would be "
-"used, just like :ref:`the section above <helpdesk/advanced/configure-"
-"service-products>`."
+"with the *Invoicing Policy* set to *Prepaid/Fixed Price* would be used, just"
+" like :ref:`the section above <helpdesk/configure-service-products>`."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:93
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:98
 msgid "Create a sales order with prepaid product"
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:95
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:100
 msgid ""
 "To invoice a customer for prepaid support services, first create a sales "
 "order (SO) with the support services product. To do this, go to "
-":menuselection:`Sales --> Orders --> Quotations --> New`, which reveals a "
-"blank quotation form."
+":menuselection:`Sales app --> Orders --> Quotations`. Then, click "
+":guilabel:`New` to reveal a blank quotation form."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:99
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:104
 msgid "Then, fill out the quotation form with the customer information."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:101
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:106
 msgid ""
 "Go to the :guilabel:`Order Lines` tab of the quotation and click "
 ":guilabel:`Add a Product`. Then, select the *prepaid services product* "
@@ -1234,76 +1240,77 @@ msgid ""
 "the number of hours."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:105
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:110
 msgid ""
 "After updating any other necessary information, :guilabel:`Confirm` the "
 "quotation. This converts the quotation into an :abbr:`SO (sales order)`."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:109
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:114
 msgid "Create and send an invoice for prepaid services"
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:111
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:116
 msgid ""
 "Once the :abbr:`SO (sales order)` has been confirmed, click the "
-":guilabel:`Create Invoice` button. This will open a :guilabel:`Create "
-"Invoices` pop-up window."
+":guilabel:`Create Invoice` button. This opens a :guilabel:`Create invoices` "
+"pop-up window."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:114
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:119
 msgid ""
-"If no down payment will be collected, the :guilabel:`Create Invoice` type "
-"can remain as :guilabel:`Regular Invoice`. If a down payment will be "
-"collected, choose between either :guilabel:`Down payment (percentage)` or "
-":guilabel:`Down payment (fixed amount)`."
+"If no down payment is collected, the :guilabel:`Create Invoice` type can "
+"remain as :guilabel:`Regular Invoice`. If a :doc:`down payment "
+"<../../../sales/sales/invoicing/down_payment>` is collected, choose between "
+"either :guilabel:`Down payment (percentage)` or :guilabel:`Down payment "
+"(fixed amount)`."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:118
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:124
 msgid ""
 "When the necessary information has been entered, click :guilabel:`Create "
 "Draft Invoice`."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:120
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:126
 msgid "The invoice can then be sent to the customer for payment."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:123
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:129
 msgid "Create helpdesk ticket for prepaid services"
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:125
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:131
 msgid ""
 "To create a *Helpdesk* ticket for prepaid services, navigate to "
 ":menuselection:`Helpdesk` and click the :guilabel:`Tickets` button to reveal"
 " a specific team's pipeline. Click :guilabel:`New` to create a new ticket."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:129
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:135
 msgid ""
 "On the blank ticket form, create a ticket :guilabel:`Title`, and enter the "
 ":guilabel:`Customer` information."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:132
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:138
 msgid ""
-"When the customer name is added, the :guilabel:`Sales Order Item` field will"
-" automatically populate with the most recent prepaid sales order item that "
+"When the customer name is added, the :guilabel:`Sales Order Item` field "
+"automatically populates with the most recent prepaid sales order item that "
 "has time remaining."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:136
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:142
 msgid "Track hours on helpdesk ticket"
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:138
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:144
 msgid ""
 "Time spent working on a *Helpdesk* ticket is tracked on the *Timesheets* tab"
 " on the specific ticket."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:140
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:146
 msgid ""
 "On the ticket detail form, click on the :guilabel:`Timesheets` tab and click"
 " :guilabel:`Add a line`. Choose an :guilabel:`Employee`, add a "
@@ -1311,10 +1318,11 @@ msgid ""
 ":guilabel:`Hours Spent`."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:144
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:150
 msgid ""
 "As new lines are added to :guilabel:`Timesheets` tab, the "
-":guilabel:`Remaining Hours on SO` field is automatically updated."
+":guilabel:`Remaining Hours on SO` field, at the bottom-right of the tab, is "
+"automatically updated."
 msgstr ""
 
 #: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst-1
@@ -1323,94 +1331,96 @@ msgid ""
 "hours on an SO."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:152
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:158
 msgid ""
 "If the number of hours on the :guilabel:`Timesheets` tab exceeds the number "
-"of hours sold, the :guilabel:`Remaining Hours of SO` will turn red."
+"of hours sold, the :guilabel:`Remaining Hours of SO` turns red."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:155
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:161
 msgid ""
 "As hours are added to the :guilabel:`Timesheets` tab, they are automatically"
 " updated in the :guilabel:`Delivered` field on the :abbr:`SO (sales order)`,"
 " as well."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:159
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:165
 msgid "Invoice post-paid support services"
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:161
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:167
 msgid ""
 "When support services are billed based on the amount of time spent on an "
 "issue, an invoice cannot be created before the total number of hours "
 "required to solve the problem have been entered on a timesheet. In this "
-"case, a service product with the invoicing policy set to :guilabel:`Based on"
-" Timesheets` would be used, like the one created above."
+"case, a service product with the *Invoicing Policy* set to *Based on "
+"Timesheets* would be used, like the one created in :ref:`the section above "
+"<helpdesk/configure-service-products>`."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:167
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:174
 msgid "Create a sales order with a time-tracked product"
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:169
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:176
 msgid ""
 "To invoice a customer for post-paid support services, first create a sales "
 "order (SO) with the *support services product*. To do this, go to "
-":menuselection:`Sales --> Orders --> Quotations --> New`."
+":menuselection:`Sales app --> Orders --> Quotations`. Then, click "
+":guilabel:`New` to reveal a blank quotation form."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:173
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:180
 msgid "Fill out the quotation with the customer information."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:175
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:182
 msgid ""
 "On the :guilabel:`Order Lines` tab, click :guilabel:`Add a Product`. Select "
 "the post-paid services product configured in the steps above. After updating"
 " any other necessary information, :guilabel:`Confirm` the quotation."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:180
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:187
 msgid ""
-"Unlike with the prepaid services quotation, Odoo will not allow an invoice "
-"to be created at this time. That is because no services have been performed;"
-" in other words nothing has been delivered, therefore, there is nothing to "
-"invoice."
+"Unlike with the prepaid services quotation, Odoo does **not** allow an "
+"invoice to be created at this time. That is because no services have been "
+"performed; in other words, nothing has been delivered, therefore, there is "
+"nothing to invoice."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:185
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:192
 msgid "Create a helpdesk ticket for time-tracked services"
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:187
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:194
 msgid ""
-"To record a *Timesheet* entry for time-tracker services, go to "
-":menuselection:`Helpdesk` and select the appropriate team for which these "
-"services apply."
+"To record a *Timesheet* entry for time-tracker services, go to the "
+":menuselection:`Helpdesk` app, and select the appropriate team for which "
+"these services apply."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:190
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:197
 msgid ""
 "If there is already an existing ticket for this issue, select it from the "
-"kanban view. This will open the ticket details form. If there is no existing"
-" ticket for this customer issue, click :guilabel:`New` to create a new "
-"ticket and enter the necessary customer information on the blank ticket "
-"details form."
+"Kanban view. This opens the ticket details form. If there is no existing "
+"ticket for this customer issue, click :guilabel:`New` to create a new ticket"
+" and enter the necessary customer information on the blank ticket details "
+"form."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:195
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:202
 msgid ""
-"After selecting or creating a ticket, go to the :guilabel:`Sales Order Line`"
+"After selecting or creating a ticket, go to the :guilabel:`Sales Order Item`"
 " drop-down menu. Select the :abbr:`SO (sales order)` created in the previous"
 " step."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:199
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:206
 msgid "Track support hours on a ticket"
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:201
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:208
 msgid ""
 "In order to create an invoice for a product based on timesheets, hours need "
 "to be tracked and recorded. At this point, the service is considered "
@@ -1418,14 +1428,14 @@ msgid ""
 ":guilabel:`Timesheets` tab of the ticket."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:205
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:212
 msgid ""
 "Click :guilabel:`Add a Line` to record a new entry. Select an "
 ":guilabel:`Employee` from the drop-down menu, and record the time spent in "
 "the :guilabel:`Hours Spent` column."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:208
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:215
 msgid ""
 "Repeat these steps as needed until all time spent on the issues has been "
 "recorded."
@@ -1435,24 +1445,24 @@ msgstr ""
 msgid "View of the timesheets tab on a helpdesk ticket."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:215
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:222
 msgid "Create an invoice for hours tracked on a ticket"
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:217
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:224
 msgid ""
 "After the customer's issue has been solved, and it is determined no new "
-"timesheet entries will be made, an invoice can be created, and the customer "
-"can be billed."
+"timesheet entries need to be made, an invoice can be created, and the "
+"customer can be billed."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:220
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:227
 msgid ""
 "To do this, return to the :abbr:`SO (sales order)` by clicking on the "
 ":guilabel:`Sales Order` smart button at the top of the ticket."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:223
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:230
 msgid ""
 "Before creating the invoice, confirm that the number in the "
 ":guilabel:`Delivered` column matches the total number of :guilabel:`Hours "
@@ -1463,20 +1473,25 @@ msgstr ""
 msgid "View of a sales order with emphasis on the delivered column."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:230
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:237
 msgid ""
-"Then, click :guilabel:`Create Invoice`. This will open a :guilabel:`Create "
-"Invoices` pop-up window. If no down payment will be collected, the "
-":guilabel:`Create Invoice` type can remain as :guilabel:`Regular Invoice`. "
-"If a down payment will be collected, choose between either :guilabel:`Down "
-"payment (percentage)` or :guilabel:`Down payment (fixed amount)`."
+"Then, click :guilabel:`Create Invoice`. This opens a :guilabel:`Create "
+"invoice(s)` pop-up window."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:236
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:239
 msgid ""
-"Use the :guilabel:`Timesheets Period` field if this invoice should only "
+"If no down payment is collected, the :guilabel:`Create Invoice` type can "
+"remain as :guilabel:`Regular Invoice`. If a down payment is collected, "
+"choose between either :guilabel:`Down payment (percentage)` or "
+":guilabel:`Down payment (fixed amount)`."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:244
+msgid ""
+"Use the :guilabel:`Timesheets Period` field if this invoice should **only** "
 "include timesheets from a certain time period. If this field is left blank, "
-"*all* applicable timesheets that have not yet been invoiced will be "
+"**all** applicable timesheets that have not yet been invoiced will be "
 "included."
 msgstr ""
 
@@ -1484,15 +1499,20 @@ msgstr ""
 msgid "View of create invoices pop up showing timesheets period fields."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:244
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:252
 msgid ""
 "When the necessary information has been entered, click :guilabel:`Create "
-"Invoice`. The invoice can then be sent to the customer for payment."
+"Draft`. The invoice can then be reviewed, edited, and sent to the customer "
+"for payment."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:248
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:256
 msgid ""
-":doc:`/applications/inventory_and_mrp/inventory/product_management/product_replenishment/uom`"
+":doc:`../../../inventory_and_mrp/inventory/product_management/product_replenishment/uom`"
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:257
+msgid ":doc:`../../../sales/sales/invoicing/down_payment`"
 msgstr ""
 
 #: ../../content/applications/services/helpdesk/overview.rst:5
@@ -1798,8 +1818,8 @@ msgstr ""
 #: ../../content/applications/services/helpdesk/overview/getting_started.rst:172
 msgid ""
 "SMS Text Messaging is an :doc:`In-App Purchase (IAP) "
-"<../../../general/in_app_purchase/>` service that requires prepaid credits "
-"to work. Refer to `SMS Pricing FAQ <https://iap-"
+"</applications/essentials/in_app_purchase/>` service that requires prepaid "
+"credits to work. Refer to `SMS Pricing FAQ <https://iap-"
 "services.odoo.com/iap/sms/pricing>`_ for additional information."
 msgstr ""
 
@@ -1828,7 +1848,8 @@ msgid "View of an SMS template setup page in Odoo Helpdesk"
 msgstr ""
 
 #: ../../content/applications/services/helpdesk/overview/getting_started.rst:189
-msgid ":doc:`../../../general/email_communication/email_template`"
+#: ../../content/applications/services/helpdesk/overview/ratings.rst:60
+msgid ":doc:`/applications/general/companies/email_template`"
 msgstr ""
 
 #: ../../content/applications/services/helpdesk/overview/getting_started.rst:192
@@ -2621,10 +2642,6 @@ msgid ""
 "--> Customer Ratings`."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/overview/ratings.rst:60
-msgid ":doc:`/applications/general/email_communication/email_template`"
-msgstr ""
-
 #: ../../content/applications/services/helpdesk/overview/ratings.rst:63
 msgid "Publish ratings on the customer portal"
 msgstr ""
@@ -2662,6 +2679,7 @@ msgid ""
 "team's ratings over the past thirty days."
 msgstr ""
 
+#: ../../content/applications/services/helpdesk/overview/ratings.rst-1
 #: ../../content/applications/services/helpdesk/overview/ratings.rst-1
 msgid "View of the ratings performance overview from the customer portal."
 msgstr ""
@@ -2867,8 +2885,8 @@ msgid ""
 "created called `Customer Care`."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst-1
 #: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:0
+#: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst-1
 msgid "View of the Kanban cards for the available Live Chat channels."
 msgstr ""
 
@@ -3639,7 +3657,7 @@ msgstr ""
 #: ../../content/applications/services/helpdesk/overview/reports.rst:153
 #: ../../content/applications/services/helpdesk/overview/sla.rst:139
 msgid "Pivot view"
-msgstr ""
+msgstr "ピボットビュー"
 
 #: ../../content/applications/services/helpdesk/overview/reports.rst:155
 msgid ""
@@ -3669,7 +3687,7 @@ msgstr ""
 #: ../../content/applications/services/helpdesk/overview/reports.rst:170
 #: ../../content/applications/services/helpdesk/overview/sla.rst:171
 msgid "Graph view"
-msgstr ""
+msgstr "グラフビュー"
 
 #: ../../content/applications/services/helpdesk/overview/reports.rst:172
 msgid ""
@@ -3774,7 +3792,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/services/helpdesk/overview/reports.rst:227
-msgid ":doc:`Odoo reporting </applications/general/reporting>`"
+msgid ":doc:`Odoo reporting </applications/essentials/reporting>`"
 msgstr ""
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:3
@@ -4817,7 +4835,7 @@ msgstr ""
 
 #: ../../content/applications/services/project/project_management.rst:8
 msgid "Did you know?"
-msgstr ""
+msgstr "ご存じでしたか？"
 
 #: ../../content/applications/services/project/project_management.rst:10
 msgid ""

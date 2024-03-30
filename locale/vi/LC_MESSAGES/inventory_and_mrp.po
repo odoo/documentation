@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-08 12:48+0000\n"
+"POT-Creation-Date: 2024-03-25 16:01+0000\n"
 "PO-Revision-Date: 2023-11-08 08:57+0000\n"
 "Last-Translator: Thi Huong Nguyen, 2024\n"
 "Language-Team: Vietnamese (https://app.transifex.com/odoo/teams/41243/vi/)\n"
@@ -319,168 +319,467 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:3
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/cancel.rst:6
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:8
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/label_type.rst:6
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:6
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:8
-msgid "Overview"
-msgstr "Tổng quan"
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:5
-msgid ""
-"There are different situations in which barcode nomenclatures can be useful."
-" A well-known use case is the one of a point of sale which sells products in"
-" bulk, in which the customers will scale their products themselves and get "
-"the printed barcode to stick on the product. This barcode will contain the "
-"weight of the product and help compute the price accordingly."
+msgid "Default barcode nomenclature"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:13
-msgid "Create a Barcode Nomenclature"
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:10
+msgid ""
+"*Barcode nomenclatures* define how barcodes are recognized and categorized. "
+"When a barcode is scanned, it is associated to the **first** rule with a "
+"matching pattern. The pattern syntax is described in Odoo's nomenclature "
+"list using a regular expression, and a barcode is successfully read by Odoo "
+"if its prefix and/or length matches the one defined in the barcode's rule."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:15
 msgid ""
-"Odoo supports Barcode Nomenclatures, which determine the mapping and "
-"interpretation of the encoded information. You can configure your barcode "
-"nomenclature being in :ref:`developer mode <developer-mode>`. To do so, go "
-"to :menuselection:`Inventory --> Configuration --> Barcode Nomenclature`."
+"Odoo *Barcode* supports UPC (Universal Product Code), EAN (European Article "
+"Number), and GS1 encoding. The pre-configured nomenclatures in Odoo are "
+"*Default Nomenclature* and *Default GS1 Nomenclature*. The default "
+"nomenclature uses |UPC| and |EAN| encoding, and supports |UPC|/|EAN| "
+"conversion."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:20
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:21
 msgid ""
-"You can create a barcode nomenclature from there, and then add a line to "
-"create your first rule."
+"|UPC| and |EAN| barcodes **must** be `purchased from GS1 "
+"<https://www.gs1.org/standards/get-barcodes>`_ to use these barcodes. GS1 is"
+" the **only** official provider of |UPC|/|EAN| and GS1 |GTINs| in the world."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:26
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:28
+#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:32
+msgid "Set up barcode nomenclature"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:30
 msgid ""
-"The first step is to specify the **rule name**, for example Weight Barcode "
-"with 3 Decimals. You then have to specify the type for barcode nomenclature,"
-" in our case it will be Weighted Product."
+"To use default nomenclature, navigate to :menuselection:`Inventory app --> "
+"Configuration --> Settings`. Under the :guilabel:`Barcode` section, click "
+"the checkbox next to :guilabel:`Barcode Scanner` to enable barcodes. Doing "
+"so installs the *Barcode* app in the database."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:33
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:34
 msgid ""
-"The Barcode Pattern is a regular expression that defines the structure of "
-"the barcode. In this example 21 defines the products on which the rule will "
-"be applied, those are the numbers by which the product barcode should start."
-" The 5 “dots” are the following numbers of the product barcode and are there"
-" simply to identify the product in question. The “N” define a number and the"
-" “D” define the decimals."
+"Next, ensure that the :guilabel:`Default Nomenclature` setting is selected "
+"in the :guilabel:`Barcode Nomenclature` field. Then, click :guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:40
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst-1
+msgid "Enabled barcode setting with Default Nomenclature selected."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:41
 msgid ""
-"The encoding allows to specify the barcode encoding on which the rule should"
-" be applied."
+"Once the nomenclature is saved and selected, the :menuselection:`Barcode "
+"Nomenclatures` settings can be accessed, via a hidden menu that is **only** "
+"discoverable after enabling :ref:`developer mode <developer-mode>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:44
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:45
 msgid ""
-"You can define different rules and order their priority thanks to the "
-"sequence. The first rule which matches the scanned barcode will be applied."
+"Once developer mode is enabled, navigate to :menuselection:`Inventory app "
+"--> Configuration --> Barcode Nomenclatures` menu, and select "
+":guilabel:`Default Nomenclature`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:49
-msgid "Configure your Product"
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:48
+msgid ""
+"From this page, the :guilabel:`Barcode Nomenclature` is specified at the top"
+" as the `Default Nomenclature`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:51
-msgid "The barcode of the product should start by “21”;"
+msgid ""
+"Under that, the :guilabel:`UPC/EAN Conversion` field is set to "
+":guilabel:`Always`, by default. This setting determines if a |UPC|/|EAN| "
+"barcode should be automatically converted one way or another when trying to "
+"match a rule with the other encoding."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:52
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:55
 msgid ""
-"The 5 “dots” are the other numbers of your product barcode, allowing to "
-"identify the product;"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:53
-msgid ""
-"The barcode should contain 0’s where you did defined D’s or N’s. In our case"
-" we need to set 5 zeros because we configured “21…..{NNDDD}”;"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:54
-msgid ""
-"In EAN-13, the last number is a check number, use an EAN13 generator to know"
-" which digit it should be in your case."
+"The other available options for this field are :guilabel:`Never`, "
+":guilabel:`EAN-13 to UPC-A`, and :guilabel:`UPC-A to EAN-13`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:59
 msgid ""
-"In case you weight 1,5 Kg of pasta, the balance will print you the following"
-" barcode 2112345015002. If you scan this barcode in your POS or when "
-"receiving products in your barcode application, Odoo will automatically "
-"create a new line for the Pasta product for a quantity of 1.5 Kg. For the "
-"point of sale, a price depending on the quantity will also be computed."
+"For |UPC|/|EAN| conversion to work for every barcode scanned, the setting in"
+" the :guilabel:`UPC/EAN Conversion` field **must** be set to "
+":guilabel:`Always`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:62
+msgid ""
+"The last field at the top of the page is the :guilabel:`Is GS1 Nomenclature`"
+" field. For the :guilabel:`Default Nomenclature`, this field should remain "
+"unchecked. This is because the :guilabel:`Default Nomenclature` uses |UPC| "
+"and |EAN| encoding, *not* GS1 encoding."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst-1
+msgid "Default Nomenclature page setting fields."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:70
-msgid "Rule Types"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:72
 msgid ""
-"**Priced Product**: allows you to identify the product and specify its "
-"price, used in POS."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:73
-msgid ""
-"**Discounted Product**: allows you to create one barcode per applied "
-"discount. You can then scan your product in the POS and then scan the "
-"discount barcode, discount will be applied on the normal price of the "
-"product."
+"Further down the page, there is a list showcasing the :guilabel:`Rule Name`,"
+" :guilabel:`Type`, :guilabel:`Encoding`, and :guilabel:`Barcode Pattern` for"
+" the *rules* and *barcode patterns* that Odoo supports for the default "
+"nomenclature."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:74
 msgid ""
-"**Weighted Product**: allows you to identify the product and specify its "
-"weight, used in both POS (in which the price is computed based on the "
-"weight) and in inventory."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:75
-msgid ""
-"**Client**: allows you to identify the customer, for example used with "
-"loyalty program."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:76
-msgid "**Cashier**: allows you to identify the cashier when entering the POS."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:77
-msgid ""
-"**Location**: allows you to identify the location on a transfer when multi-"
-"location is activated."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:78
-msgid ""
-"**Package**: allows you to identify packages on a transfer when packages are"
-" activated."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:79
-msgid ""
-"**Credit Card**: doesn’t need manual modification, exists for data from the "
-"Mercury module."
+"The :ref:`default nomenclature list <barcode/operations/default-"
+"nomenclature-list>` contains all the information that can be condensed with "
+"a |UPC|/|EAN| barcode."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:80
-msgid ""
-"**Unit Product**: allows you to identify a product for both POS and "
-"transfers."
+msgid "Use UPC/EAN barcodes in Odoo"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:83
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:82
 msgid ""
-"When the barcode pattern contains .*, it means that it can contain any "
-"number of characters, those characters being any number."
+"For product identification using |UPC|/|EAN| barcodes in Odoo, businesses "
+"**must** obtain `barcodes <https://www.gs1us.org/upcs-barcodes-prefixes/how-"
+"to-get-a-upc-barcode>`_ purchased directly from GS1."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:86
+msgid ""
+"The |UPC| and |EAN| barcode formats are predominantly used in their own "
+"regions. |UPC| is used only in the United States and Canada, while |EAN| is "
+"used everywhere else globally."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:89
+msgid ""
+"A |UPC| is usually a 12-digit barcode used to identify most products, while "
+"|EAN| barcodes use 13-digit barcodes to identify products."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:92
+msgid ""
+"|UPC| codes can be converted to |EAN| by prefixing them with a zero. In "
+"Odoo, by default, |UPC|/|EAN| barcodes are automatically converted one way "
+"or another when trying to match a rule with the other encoding."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:96
+msgid ""
+"Refer to the :ref:`default nomenclature list <barcode/operations/default-"
+"nomenclature-list>` to see a comprehensive list of all barcode patterns and "
+"rules to follow."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:100
+#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:96
+msgid "Create rules"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:102
+msgid ""
+"|UPC| and |EAN| barcodes contain specific information in the barcode. "
+"Scanning these codes from the :ref:`default nomenclature list "
+"<barcode/operations/default-nomenclature-list>` automatically fills "
+"corresponding data in the Odoo database."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:106
+msgid ""
+"Adding new barcode rules to this list ensures that non-standard (:dfn:`user-"
+"created`) formats are interpreted accurately."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:109
+msgid ""
+"To create new rules, first activate :ref:`developer mode <developer-mode>`. "
+"Then, navigate to :menuselection:`Inventory app --> Configuration --> "
+"Barcode Nomenclatures`. Select the :guilabel:`Default Nomenclature` list "
+"item."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:113
+msgid ""
+"On the :guilabel:`Default Nomenclature` page, select :guilabel:`Add a line` "
+"at the bottom of the table, which opens a :guilabel:`Create Rules` pop-up "
+"window to create a new rule."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst-1
+msgid "Create Rules pop-up window on Default Nomenclature page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:120
+msgid ""
+"The :guilabel:`Rule Name` field is used internally to identify what the "
+"barcode represents."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:122
+msgid ""
+"The :guilabel:`Sequence` field represents the priority of the rule; meaning "
+"the smaller the value, the higher the rule appears on the table."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:125
+msgid ""
+"The barcode :guilabel:`Type` field represents different classifications of "
+"information that can be understood by the system (e.g., :guilabel:`Package`,"
+" :guilabel:`Lot`, :guilabel:`Location`, :guilabel:`Coupon`, etc.)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:129
+msgid ""
+"The :guilabel:`Encoding` field specifies which encoding the barcode uses; "
+"this rule **only** applies if the barcode uses this specific encoding. The "
+"available :guilabel:`Encoding` options are: :guilabel:`EAN-13`, "
+":guilabel:`EAN-8`, :guilabel:`UPC-A`, and :guilabel:`GS1-28`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:133
+msgid ""
+"The :guilabel:`Barcode Pattern` field represents how the sequence of letters"
+" or numbers is recognized by the system to contain information about the "
+"product. Odoo follows the sequential order of this table, and uses the first"
+" rule it matches, based on the sequence."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:138
+msgid ""
+"Barcode patterns can also define how numerical values, such as weight or "
+"price, are encoded in the barcode."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:141
+msgid ""
+"They are indicated by **{NNN}**, where `N` defines where the number's digits"
+" are encoded. *Floats* are also supported with the decimals, indicated by "
+"`D`, such as **{NNNDD}**."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:144
+msgid ""
+"In this case, the barcode field on the associated records **must** show "
+"these digits as zeros."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:146
+msgid ""
+"After filling in the information, click the :guilabel:`Save & New` button to"
+" save the rule, and instantly start creating another rule. Or, click "
+":guilabel:`Save & Close` to save the rule, and return to the table of rules."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:151
+msgid ""
+"When the :guilabel:`Barcode Pattern` field contains `.*`, it means it can "
+"contain **any** number of characters - those characters being **any** number"
+" or type of character."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:157
+msgid "Default nomenclature list"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:159
+msgid ""
+"The table below contains Odoo's list of :guilabel:`Default Nomenclature` "
+"rules. Barcode patterns are written in regular expressions."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:166
+#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:173
+#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:38
+#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:166
+msgid "Rule Name"
+msgstr "Tên quy tắc"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:167
+#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:173
+msgid "Type"
+msgstr "Loại"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:168
+msgid "Encoding"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:169
+#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:173
+#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:38
+#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:166
+msgid "Barcode Pattern"
+msgstr "Mẫu mã vạch"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:170
+msgid "Price Barcodes 2 Decimals"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:171
+msgid "Priced Product"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:172
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:180
+msgid "EAN-13"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:173
+msgid "23.....{NNNDD}"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:174
+msgid "Discount Barcodes"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:175
+msgid "Discounted Product"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:176
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:184
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:188
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:192
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:196
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:200
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:204
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:208
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:212
+msgid "Any"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:177
+msgid "22{NN}"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:178
+msgid "Weight Barcodes 3 Decimals"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:179
+msgid "Weighted Product"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:181
+msgid "21.....{NNDDD}"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:182
+msgid "Customer Barcodes"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:183
+msgid "Client"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:185
+msgid "042"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:186
+msgid "Coupon & Gift Card Barcodes"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:187
+msgid "Coupon"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:189
+msgid "043|044"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:190
+msgid "Cashier Barcodes"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:191
+msgid "Cashier"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:193
+msgid "041"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:194
+msgid "Location barcodes"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:195
+#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:189
+#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:189
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations.rst:17
+msgid "Location"
+msgstr "Vị trí"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:197
+msgid "414"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:198
+msgid "Package barcodes"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:199
+#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:175
+msgid "Package"
+msgstr "Kiện hàng"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:201
+msgid "PACK"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:202
+msgid "Lot barcodes"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:203
+#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:191
+#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:191
+#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:194
+msgid "Lot"
+msgstr "Lô"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:205
+#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:45
+#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:143
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/lifo.rst:39
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/lifo.rst:40
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/lifo.rst:41
+msgid "10"
+msgstr "10"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:206
+msgid "Magnetic Credit Card"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:207
+msgid "Credit Card"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:209
+msgid "%.*"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:210
+msgid "Product Barcodes"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:211
+#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:177
+#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:180
+msgid "Unit Product"
+msgstr "Đơn vị sản phẩm"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:213
+msgid ".*"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:216
+msgid ":doc:`gs1_nomenclature`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:3
@@ -524,10 +823,6 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:27
 msgid ""
 ":ref:`Why's my barcode not working? <barcode/operations/troubleshooting>`"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:32
-msgid "Set up barcode nomenclature"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:34
@@ -626,10 +921,6 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:91
 msgid ":ref:`Non-unit quantities workflow <barcode/operations/quantity-ex>`"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:96
-msgid "Create rules"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:98
@@ -763,22 +1054,6 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:173
-#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:38
-#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:166
-msgid "Rule Name"
-msgstr "Tên quy tắc"
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:173
-msgid "Type"
-msgstr "Loại"
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:173
-#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:38
-#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:166
-msgid "Barcode Pattern"
-msgstr "Mẫu mã vạch"
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:173
 msgid "GS1 Content Type"
 msgstr "Loại nội dung GS1"
 
@@ -789,10 +1064,6 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:175
 msgid "Serial Shipping Container Code"
 msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:175
-msgid "Package"
-msgstr "Kiện hàng"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:175
 msgid "(00)(\\\\d{18})"
@@ -816,11 +1087,6 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:168
 msgid "Global Trade Item Number (GTIN)"
 msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:177
-#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:180
-msgid "Unit Product"
-msgstr "Đơn vị sản phẩm"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:177
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:40
@@ -852,6 +1118,7 @@ msgid "Ship to / Deliver to global location"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:183
+#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:183
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:186
 msgid "Destination location"
 msgstr "Vị trí đích"
@@ -877,11 +1144,6 @@ msgid "I.D. of a physical location"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:189
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations.rst:17
-msgid "Location"
-msgstr "Vị trí"
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:189
 msgid "(414)(\\\\d{13})"
 msgstr ""
 
@@ -889,11 +1151,6 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:45
 msgid "Batch or lot number"
 msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:191
-#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:194
-msgid "Lot"
-msgstr "Lô"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:191
 msgid "(10) ([!\"%-/0-9:-?A-Z_a-z]{0,20})"
@@ -905,6 +1162,7 @@ msgstr ""
 msgid "Alpha-numeric name"
 msgstr ""
 
+#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:194
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:194
 msgid "Serial number"
 msgstr ""
@@ -1218,14 +1476,6 @@ msgid "Lot Number"
 msgstr "Số LOT"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:45
-#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:143
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/lifo.rst:39
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/lifo.rst:40
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/lifo.rst:41
-msgid "10"
-msgstr "10"
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:45
 msgid "(10)([!\"%-/0-9:-?A-Z_a-z]{0,20})"
 msgstr ""
 
@@ -1246,6 +1496,10 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/multipack.rst:11
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/delivery_three_steps.rst:18
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_three_steps.rst:16
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:36
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:16
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:17
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:19
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/delivery_method.rst:17
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:104
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:16
@@ -2227,6 +2481,396 @@ msgstr ""
 msgid "Setup"
 msgstr "Thiết lập"
 
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:3
+msgid "Barcode device troubleshooting"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:5
+msgid ""
+"Odoo *Barcode* supports three main types of barcode scanners: USB scanners, "
+"bluetooth scanners, and mobile computer scanners. While configuring each "
+"type of scanner, common issues may arise, in which the scanners do not work "
+"as intended, and Odoo returns errors to the device."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:9
+msgid ""
+"Read the sections below to identify general and unique device issues, "
+"related to specific, popular types of scanners."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:13
+msgid "General issues"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:15
+msgid ""
+"Refer to the following sections below for common issues involving popular "
+"barcode scanner devices."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:17
+msgid ""
+"For issues related to specific devices, refer to the :ref:`Android scanners "
+"<barcode/setup/android-scanners>` section for mobile computer scanners, or "
+"to the :ref:`Screenless scanners <barcode/setup/screenless-scanners>` "
+"section for USB and bluetooth scanners."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:22
+msgid "Barcode cannot be read"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:24
+msgid ""
+"One common issue encountered when using barcode scanners is an error "
+"resulting from barcodes that cannot be read."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:27
+msgid "This can occur due to any of the following reasons:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:29
+msgid "The barcode is damaged."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:30
+msgid ""
+"The device cannot read the required barcode type (some scanners can only "
+"read 2D barcodes)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:31
+msgid ""
+"The barcode being scanned is on a screen. Some scanners don't support this, "
+"and the barcodes **must** be printed out to be scanned. This is most common "
+"with 1D barcodes."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:33
+msgid ""
+"The device has no battery, or is broken. To rule this out, follow the "
+"troubleshooting instructions in the following sections."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:37
+msgid "Odoo returns barcode error"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:39
+msgid ""
+"All types of barcode scanners have their own device \"language\", which "
+"affects how they output barcode data to Odoo's *Barcode* app. Sometimes, "
+"this can cause Odoo *Barcode* to return a barcode error after scanning. This"
+" could be due to any of the following reasons:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:43
+msgid ""
+"The computer is configured with a different keyboard layout than the barcode"
+" scanner. To rule this out, ensure that the device is configured with the "
+"same keyboard layout."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:46
+msgid ""
+"For example, if the computer is configured to use an FR-BE keyboard, "
+"configure the scanner to send FR-BE keystrokes. The same logic applies if "
+"using a tablet instead of a computer."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:49
+msgid ""
+"For more information on configuring keystrokes, refer to the :doc:`Barcode "
+"scanner setup <hardware>` documentation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:51
+msgid ""
+"For mobile computer scanners (such as Zebra devices, for example), the "
+"scanner might interpret the barcode differently than intended. To rule this "
+"out, scan a test barcode to see how the scanner interprets the barcode."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:58
+msgid "Android scanners"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:60
+msgid ""
+"The most recent barcode scanner models using Android and Google Chrome "
+"should work with Odoo. However, due to the variety of models and "
+"configurations, it is recommended to first test a scanner's compatibility "
+"with Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:64
+msgid ""
+"The Zebra product line is recommended; specifically, the **Zebra TC21 (WiFi-"
+"only)**, and **Zebra TC26 (WiFi/cellular)**."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:68
+msgid ""
+"`Odoo Inventory & Barcode compatible hardware "
+"<https://www.odoo.com/app/inventory-hardware>`_"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:71
+msgid "Barcode app does not give feedback"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:73
+msgid ""
+"By default, Android barcode scanners pre-process the barcode, then send a "
+"full text. Since Odoo *Barcode* does not read this type of output, settings "
+"for each type of scanner **must** be configured correctly."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:77
+msgid ""
+"Odoo *Barcode* expects that the scanner works like an analogue keyboard, and"
+" so, only detects *key events*. Refer to the following sections for "
+"configuration settings for the most popular devices."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:81
+msgid "Zebra TC21/TC26"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:83
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:76
+msgid ""
+"When using Zebra scanners, ensure the following keystroke configurations are"
+" set to prevent errors."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:85
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:78
+msgid ""
+"Begin on the Zebra scanner's home screen, and select the "
+":guilabel:`DataWedge` app (the app is represented by a :guilabel:`(light "
+"blue barcode)` icon)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:88
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:81
+msgid ""
+"On the :guilabel:`DataWedge Profiles` page, select the profile option to "
+"access the Zebra scanner's settings."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:91
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:92
+msgid ""
+"Once the profile is selected, scroll down to the :guilabel:`Keyboard Output`"
+" option, and ensure the :guilabel:`Enable/disable keystroke output` option "
+"is :guilabel:`Enabled`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst-1
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst-1
+msgid "Show keystroke option in the Zebra scanner's DataWedge app."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:98
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:99
+msgid ""
+"Once that option is enabled, go back to the :guilabel:`Profile` options "
+"page, and go to the :guilabel:`Keystroke output` section. Then, open the "
+":guilabel:`Key event options` submenu. Under :guilabel:`Characters`, ensure "
+"the :guilabel:`Send Characters as Events` option is checked."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:103
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:104
+msgid ""
+"The :guilabel:`Send Characters as Events` option **must** be checked on the "
+"Zebra scanner, or Odoo **cannot** recognize the barcodes that are scanned."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:106
+msgid ""
+"Once the above steps have been taken, perform a test scan to ensure the "
+"Zebra scanner is working as intended."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:110
+msgid "MUNBYN Android devices"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:112
+msgid ""
+"When using MUNBYN Android scanners, ensure the following configurations are "
+"set to prevent errors."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:114
+msgid ""
+"From the device's home screen, click :menuselection:`AppSettings`. On the "
+"resulting page, locate the :guilabel:`Process mode` section, and select "
+":guilabel:`Keyboard input`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst-1
+msgid "Process mode section on MUNBYN scanner's AppSettings page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:122
+msgid ""
+"The selected *Process mode* controls how data is processed after barcode "
+"data has been read out."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:124
+msgid ""
+"*Keyboard input* enters read-out data at the position of the cursor, the "
+"same as input data on an analogue keyboard would."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:127
+msgid ""
+"Once the above steps have been taken, perform a test scan to ensure the "
+"MUNBYN Android scanner is working as intended."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:130
+msgid "Why is there no data output in the app after a successful scan?"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:132
+msgid ""
+"When scanning a barcode, the scanner might beep, indicating a successful "
+"scan, but there is no data output in the app."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:135
+msgid ""
+"To fix this issue, adjust the output method to *keyboard analogue* in the "
+"*Scanner* app on the device."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:138
+msgid ""
+"From the device's home screen, click :menuselection:`Scanner App --> "
+"Settings`. From the :guilabel:`Settings` page, click :guilabel:`Output "
+"Mode`. The resulting pop-up window presents the different output options "
+"available to users. Select :guilabel:`Keyboard Mode`, then click "
+":guilabel:`OK`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst-1
+msgid "Output mode pop-up window on MUNBYN scanner."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:147
+msgid ""
+"Go back to the app that needs to be scanned, and click on the input dialog "
+"box first before scanning. Finally, perform a test scan to ensure the MUNBYN"
+" Android scanner is working as intended."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:152
+msgid "Datalogic Android devices"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:154
+msgid ""
+"When using Datalogic Android scanners, ensure the following configurations "
+"are set to prevent errors."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:157
+msgid ""
+"To view and configure all settings for the scanner, use the *Settings* app "
+"on the Datalogic Android device. From the applications menu, select "
+":menuselection:`Settings --> System --> Scanner Settings`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:161
+msgid ""
+"From the resulting list of settings, select :guilabel:`Wedge`. From this "
+"menu, under the :guilabel:`Keyboard wedge` section, ensure that the "
+":guilabel:`Enable keyboard wedge` feature is activated."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:165
+msgid ""
+"Then, also under the :guilabel:`Keyboard wedge` section, locate the "
+":guilabel:`Keyboard wedge input mode` option. By default, the input mode is "
+"set to :guilabel:`Text injection`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst-1
+msgid "Wedge configuration menu on Datalogic scanner."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:172
+msgid ""
+"Click :guilabel:`Keyboard wedge input mode`, and change the setting to "
+":guilabel:`Key pressure`. This ensures that scanned barcodes are translated "
+"into keyboard strokes, instead of being injected into the text area."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst-1
+msgid "Keyboard wedge input mode selection on Datalogic scanner."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:180
+msgid ""
+"Once all those steps have been taken, perform a test scan to ensure the "
+"Datalogic Android scanner is working as intended."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:186
+msgid "Screenless scanners"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:188
+msgid ""
+"Screenless scanners are barcode scanning devices that have no screens. These"
+" include USB scanners and bluetooth scanners."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:192
+msgid ""
+"Odoo supports most USB and Bluetooth barcode scanners, as they all emulate a"
+" keyboard. However, to verify that a scanner is compatible with a specific "
+"keyboard layout (or can be configured to do so), refer to Odoo's `Inventory "
+"& Barcode compatible hardware <https://www.odoo.com/app/inventory-"
+"hardware>`_ documentation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:198
+msgid "NETUM devices"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:200
+msgid ""
+"By default, the NETUM barcode scanner's user manual only shows the French "
+"keyboard configuration. To use the Belgian keyboard, scan the code below:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst-1
+msgid "Belgian FR key barcode."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:207
+msgid ""
+"Once that code has been scanned, ensure the NETUM scanner has the correct "
+"keyboard configuration, and is working as intended."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:211
+msgid ":doc:`../setup/hardware`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:212
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:165
+msgid ":doc:`../setup/software`"
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:3
 msgid "Barcode scanner setup"
 msgstr ""
@@ -2352,25 +2996,6 @@ msgstr ""
 msgid "Zebra scanner"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:76
-msgid ""
-"When using Zebra scanners, ensure the following keystroke configurations are"
-" set to prevent errors."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:78
-msgid ""
-"Begin on the Zebra scanner's home screen, and select the "
-":guilabel:`DataWedge` app (the app is represented by a :guilabel:`(light "
-"blue barcode)` icon)."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:81
-msgid ""
-"On the :guilabel:`DataWedge Profiles` page, select the profile option to "
-"access the Zebra scanner's settings."
-msgstr ""
-
 #: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:85
 msgid ""
 "It is **not** suggested to use the \"DWDemo\" profile, as it does not work "
@@ -2382,31 +3007,6 @@ msgid ""
 "Instead, it is recommended to create a new, personal profile. Once a new "
 "profile is created, add the *Odoo Mobile* app and *Google Chrome* app in the"
 " :guilabel:`Associated Apps` on the scanner's home screen."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:92
-msgid ""
-"Once the profile is selected, scroll down to the :guilabel:`Keyboard Output`"
-" option, and ensure the :guilabel:`Enable/disable keystroke output` option "
-"is :guilabel:`Enabled`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst-1
-msgid "Show keystroke option in the Zebra scanner's DataWedge app."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:99
-msgid ""
-"Once that option is enabled, go back to the :guilabel:`Profile` options "
-"page, and go to the :guilabel:`Keystroke output` section. Then, open the "
-":guilabel:`Key event options` submenu. Under :guilabel:`Characters`, ensure "
-"the :guilabel:`Send Characters as Events` option is checked."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:104
-msgid ""
-"The :guilabel:`Send Characters as Events` option **must** be checked on the "
-"Zebra scanner, or Odoo **cannot** recognize the barcodes that are scanned."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:107
@@ -2509,10 +3109,6 @@ msgstr ""
 msgid ""
 "After completing the steps, conduct a test scan to verify the Cipherlab "
 "scanner is working as intended."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:165
-msgid ":doc:`../setup/software`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:3
@@ -4076,6 +4672,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/uom.rst:133
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:169
 msgid "Replenishment"
 msgstr "Bổ sung hàng"
 
@@ -5272,7 +5869,7 @@ msgid ":doc:`differences`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/package.rst:3
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:12
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:189
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies.rst:99
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies.rst:159
 msgid "Packages"
@@ -5713,7 +6310,6 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:56
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:137
 msgid ""
 ":guilabel:`Company`: indicates the packaging is only available at the "
 "selected company. Leave blank to make the packaging available across all "
@@ -5729,7 +6325,6 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:0
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:0
 msgid "Create 6-pack case for product."
 msgstr ""
 
@@ -5755,12 +6350,10 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:0
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:0
 msgid "List of different packagings for products."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:86
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:179
 msgid "Apply packagings"
 msgstr ""
 
@@ -5773,19 +6366,16 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:93
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:186
 msgid ""
 "18 cans of the product, `Grape Soda`, is packed using three 6-pack "
 "packagings."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:0
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:0
 msgid "Assign packagings on the Sales Order Line."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:100
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:193
 msgid ""
 "Packaging can be used in conjunction with Odoo :ref:`Barcode "
 "<inventory/barcode/software>`. When receiving products from suppliers, "
@@ -6318,6 +6908,410 @@ msgid ""
 ":doc:`/applications/inventory_and_mrp/inventory/product_management/product_tracking/differences`"
 msgstr ""
 
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:3
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:69
+msgid "Product type"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:7
+msgid ""
+"Define *product types* in Odoo to track products in varying levels of "
+"detail."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:9
+msgid ""
+"Classify products as *storable* to track stock counts, allowing users to "
+"trigger :doc:`reordering rules <../product_replenishment/reordering_rules>` "
+"for generating purchase orders. *Consumable* products are assumed to always "
+"be in stock, and *service* products are performed and served by the "
+"business."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:15
+msgid ""
+"`Odoo Tutorials: Product Type "
+"<https://www.youtube.com/watch?v=l6j0ZkP5mLM>`_"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:18
+msgid "Set product type"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:20
+msgid ""
+"To set a product type, go to :menuselection:`Inventory app --> Products --> "
+"Products`, and select the desired product from the list."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:23
+msgid "On the product form, in the :guilabel:`Product Type` field, select:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:25
+msgid ""
+":guilabel:`Storable Product` for products tracked with stock counts. Only "
+"storable products can trigger reordering rules for generating purchase "
+"orders;"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:29
+msgid ""
+"Choose :guilabel:`Storable Product` if it is necessary to track a product's "
+"stock at various locations, inventory valuations, or if the product has lots"
+" and/or serial numbers."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:32
+msgid ""
+":guilabel:`Consumable` for products that are always assumed to be in stock, "
+"whose quantities are not necessary to track or forecast (e.g. nails, toilet "
+"paper, coffee, etc.). Consumables are replaceable and essential, but exact "
+"counts are unnecessary; or"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:35
+msgid ""
+":guilabel:`Service` for sellable service products that are performed, and "
+"not tracked with stock counts (i.e. maintenance, installation, or repair "
+"services)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:0
+msgid "Set a product type on the product form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:43
+msgid ""
+"The product types listed above are part of the standard *Inventory* app. For"
+" access to the fields below, :ref:`install <general/install>` the "
+"corresponding apps **in addition** to *Inventory*."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:46
+msgid ""
+":guilabel:`Booking Fees`: charge a fee for booking appointments through the "
+"*Appointments* app. Requires the installation of the *Calendar* app and *Pay"
+" to Book* (`appointment_account_payment`) module"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:49
+msgid ""
+":guilabel:`Combo`: create discounted products sold in a bundle. Requires the"
+" installation of the *PoS* app."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:51
+msgid ""
+":guilabel:`Event Ticket`: sold to attendees wanting to go to an event. "
+"Requires the installation of the *Events* app"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:53
+msgid ""
+":guilabel:`Event Booth`: sold to partners or sponsors to set up a booth at "
+"an event. Requires the installation of the *Events* app"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:55
+msgid ""
+":guilabel:`Course`: sell access to an educational course. Requires the "
+"installation of the *eLearning* app"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:59
+msgid "Compare types"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:61
+msgid ""
+"Below is a summary of how each product type affects common *Inventory* "
+"operations, like transfers, reordering rules, and the forecasted report. "
+"Click the chart item with an asterisk (*) to navigate to detailed sections."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:70
+msgid "Storable"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:71
+msgid "Consumable"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:72
+msgid "Service"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:73
+msgid "Physical product"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:74
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:75
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:83
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:91
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:95
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:103
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:104
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:107
+msgid "Yes"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:76
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:80
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:84
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:85
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:93
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:97
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:101
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:105
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:109
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:112
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:113
+msgid "No"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:77
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:118
+msgid "On-hand quantity"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:78
+msgid ":ref:`Yes* <inventory/product_management/on-hand-store>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:79
+msgid ":ref:`Yes* <inventory/product_management/on-hand-con>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:81
+msgid ""
+":doc:`Inventory valuation "
+"<../../warehouses_storage/inventory_valuation/using_inventory_valuation>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:86
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:139
+msgid "Create transfer"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:87
+msgid ":ref:`Yes* <inventory/product_management/transfer-store>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:88
+msgid ":ref:`Yes* <inventory/product_management/transfer-con>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:89
+msgid ":ref:`No* <inventory/product_management/transfer-serv>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:90
+msgid ":doc:`Lot/serial number tracking <differences>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:94
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:163
+msgid "Create purchase order"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:96
+msgid ":ref:`Yes* <inventory/product_management/po>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:98
+msgid "Can be manufactured or subcontracted"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:99
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:100
+msgid ":ref:`Yes* <inventory/product_management/manufacture>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:102
+msgid "Can be in a kit"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:106
+msgid "Placed in package"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:108
+msgid ":ref:`Yes* <inventory/product_management/package>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:110
+msgid "Appears on Inventory report"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:111
+msgid ":ref:`Yes <inventory/product_management/report>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:120
+msgid ""
+"A storable product's on-hand and forecasted quantities, based on incoming "
+"and outgoing orders, are reflected on the product form, accessed by going to"
+" :menuselection:`Inventory app --> Products --> Products`, and selecting the"
+" desired product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:128
+msgid "Show \"On Hand\" and \"Forecast\" smart buttons."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:128
+msgid ""
+"Current and forecasted quantities are displayed in the **On Hand** and "
+"**Forecasted** smart buttons on the product form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:133
+msgid ""
+"On the other hand, consumable products are regarded as always available, and"
+" they **cannot** be managed using reordering rules or lot/serial numbers."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:141
+msgid ""
+"*Transfers* are any warehouse operation, such as receipts, internal or batch"
+" transfers, or deliveries."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:144
+msgid ""
+"When creating a transfer for storable products in the *Inventory* app, "
+"transfers modify the on-hand quantity at each location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:147
+msgid ""
+"For example, transferring five units from the internal location `WH/Stock` "
+"to `WH/Packing Zone` decreases the recorded quantity at `WH/Stock` and "
+"increases it at `WH/Packing Zone`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:152
+msgid ""
+"For consumable products, transfers can be created, but exact quantities at "
+"each storage location are not tracked."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:157
+msgid ""
+"Service products cannot be included in transfers, but these products can be "
+"`linked to projects and tasks for deadline tracking "
+"<https://www.youtube.com/watch?v=fix2LGkv13c>`_."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:165
+msgid ""
+"Both storable and consumable products can be included in a request for "
+"quotation in the *Purchase* app."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:168
+msgid ""
+"However, when receiving consumable products, their on-hand quantity does not"
+" change upon validating the receipt (e.g. `WH/IN`)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:174
+msgid "Manufacture or subcontract"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:176
+msgid ""
+"Storable and consumable products can be manufactured, subcontracted, or "
+"included in a bill of materials (BoM)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:183
+msgid "Show \"Bill of Materials\" and \"Used In\" smart buttons."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:183
+msgid ""
+"When the **Bill of Materials** and **Used In** smart buttons are visible on "
+"the product form, this indicates the product can be manufactured or used as "
+"a component of a |BOM|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:191
+msgid ""
+"Both storable and consumable products can be placed in :doc:`packages "
+"<package>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:193
+msgid ""
+"However, for consumable products, the quantity is not tracked, and the "
+"product is not listed in the package's :guilabel:`Contents`, accessed by "
+"going to :menuselection:`Inventory app --> Products --> Packages`, and "
+"selecting the desired package."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:201
+msgid "Show Packages page, containing the package contents list."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:201
+msgid ""
+"A consumable product was placed in the package, but the **Content** section "
+"does not list it."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:203
+msgid ""
+"If the *Move Entire Package* feature is enabled, moving a package updates "
+"the location of the contained storable products. However, the location of "
+"consumable products are not updated."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:209
+msgid "Inventory report"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:211
+msgid "**Only** storable products appear on the following reports."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:213
+msgid ""
+"The *stock report* is a comprehensive list of all on-hand, unreserved, "
+"incoming, and outgoing storable products. The report is only available to "
+"users with :doc:`administrator access "
+"<../../../../general/users/access_rights>`, and is found by navigating to "
+":menuselection:`Inventory app --> Reporting --> Stock`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst-1
+msgid "Show stock reporting list found in Inventory > Reporting > Stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:222
+msgid ""
+"The *location report* is a breakdown of each location (internal, external, "
+"or virtual) and the on-hand and reserved quantity of each storable product. "
+"The report is only available with the *Storage Location* feature activated "
+"(:menuselection:`Inventory app --> Configuration --> Settings`), and to "
+"users with :doc:`administrator access "
+"<../../../../general/users/access_rights>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:227
+msgid ""
+"Navigate to the location report by going to :menuselection:`Inventory app "
+"--> Reporting --> Locations`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst-1
+msgid ""
+"Show location reporting list found in Inventory > Reporting > Locations."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving.rst:5
 msgid "Shipping and receiving"
 msgstr ""
@@ -6330,6 +7324,14 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/cancel.rst:3
 msgid "How to cancel a shipping request to a shipper?"
 msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/cancel.rst:6
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:8
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/label_type.rst:6
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:6
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:8
+msgid "Overview"
+msgstr "Tổng quan"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/cancel.rst:8
 msgid ""
@@ -8744,6 +9746,748 @@ msgid ""
 ":ref:`Process deliveries in three steps <inventory/delivery_three_steps>`"
 msgstr ""
 
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:6
+msgid "Reservation methods"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:8
+msgid ""
+"Companies that sell and deliver goods to customers need to make sure they "
+"always have stock on-hand, so when new sales orders are confirmed, they can "
+"deliver products on time."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:11
+msgid ""
+"In Odoo, this can be handled using *reservation methods*. Reservation "
+"methods control how products included in a delivery order (DO) should be "
+"reserved for delivery, ensuring they are reserved at the correct times, for "
+"the correct orders."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:15
+msgid ""
+"There are three different reservation methods in Odoo: *At Confirmation*, "
+"*Manually*, and *Before scheduled date*."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:20
+msgid "At Confirmation"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:22
+msgid ""
+"Reserves products **only** when a sales order is confirmed, **and** if stock"
+" is already available."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:25
+msgid "Manually"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:27
+msgid ""
+"Once a quote is confirmed, product availability **must** be checked "
+"manually, and the required quantity **must** be reserved manually."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:30
+msgid "Before scheduled date"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:32
+msgid ""
+"A specific number of days can be selected; this is the maximum number of "
+"days **before** a scheduled delivery date that products should be reserved."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:38
+msgid ""
+"Reservation methods are set on individual operations types. To configure "
+"reservation methods, go to :menuselection:`Inventory app --> Configuration "
+"--> Operations Types`. Then, select the desired operation type. Or, create a"
+" new one by clicking :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:42
+msgid ""
+"In the :guilabel:`General` tab of the operation type form, locate the "
+":guilabel:`Reservation Method` option, and choose which method should be "
+"used for this type of operation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst-1
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst-1
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst-1
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst-1
+msgid "Reservation method field on delivery order operation type form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:50
+msgid ""
+"If the :guilabel:`Before scheduled date` reservation method is selected, a "
+"new :guilabel:`Reserve before scheduled date` field appears below. From this"
+" field, the number of :guilabel:`days before` and :guilabel:`days before "
+"when starred` can be changed from the default `0`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:55
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:38
+msgid ""
+"Changing the :guilabel:`days before` value changes the maximum number of "
+"days before a scheduled date that products should be reserved."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:58
+msgid ""
+"Changing the :guilabel:`days before when starred` value changes the maximum "
+"number of days before a scheduled date that starred (favorited) transfers "
+"for products should be reserved."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:0
+msgid ""
+"Reserve before scheduled date fields with before scheduled date method "
+"chosen."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:66
+msgid "Required applications"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:68
+msgid ""
+"The two required applications that **must** be :ref:`installed "
+"<general/install>` to use reservation methods are the *Sales* and "
+"*Inventory* apps."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:72
+msgid ""
+"In addition to delivery orders, reservation methods can also be used for "
+"*manufacturing orders*, *resupply subcontractor* orders, orders for "
+"*repairs*, and *internal transfers*, if desired. To enable this, configure "
+"the additional settings:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:76
+msgid ""
+"**For manufacturing orders:** Install the *Manufacturing* application by "
+"going to the :menuselection:`Apps` application, locating the *Manufacturing*"
+" app, and clicking :guilabel:`Install`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:79
+msgid ""
+"**For resupply subcontractor:** Navigate to :menuselection:`Manufacturing "
+"app --> Configuration --> Settings`, and under the :guilabel:`Operations` "
+"section, enable :guilabel:`Subcontracting`. Then, click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:82
+msgid ""
+"**For repairs:** Install the *Repairs* application by going to the "
+":menuselection:`Apps` application, locating the *Repairs* app, and clicking "
+":guilabel:`Install`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:84
+msgid ""
+"**For internal transfers:** Navigate to :menuselection:`Inventory app --> "
+"Configuration --> Settings`, and under the :guilabel:`Warehouse` section, "
+"enable :guilabel:`Storage Locations`. Then, click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:88
+msgid ""
+"Once these apps are installed, no additional features need to be enabled "
+"from the settings for reservation methods to work. They will be available by"
+" default on certain operations types, and can be viewed and changed by "
+"navigating to :menuselection:`Inventory app --> Configuration --> Operations"
+" Types`, and then clicking on a specific operations type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:94
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:31
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:33
+msgid ""
+"When the :guilabel:`Type of Operation` is changed to :guilabel:`Receipt` on "
+"an :guilabel:`Operations Type` form, reservation methods are **not** "
+"available."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst-1
+msgid ""
+"Operations Types highlighted from the Configurations submenu in the "
+"Inventory app."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:102
+msgid ":doc:`reservation_methods/at_confirmation`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:103
+msgid ":doc:`reservation_methods/manually`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:104
+msgid ":doc:`reservation_methods/before_scheduled_date`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:3
+msgid "At confirmation reservation"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:9
+msgid ""
+"The *at confirmation* reservation method reserves products **only** when a "
+"sales order (SO) is confirmed, **and** if enough stock of the products "
+"included in the |SO| is already available."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:13
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:14
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:16
+msgid ":doc:`About reservation methods <../reservation_methods>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:18
+msgid ""
+"To set the reservation method to *at confirmation*, navigate to "
+":menuselection:`Inventory app --> Configuration --> Operations Types`. Then,"
+" select the desired :guilabel:`Operation Type` to configure, or create a new"
+" one by clicking :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:22
+msgid ""
+"In the :guilabel:`General` tab on the operation type form, locate the "
+":guilabel:`Reservation Method` field, and select :guilabel:`At "
+"Confirmation`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:30
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:79
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:37
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/closest_location.rst:65
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fefo.rst:69
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fifo.rst:47
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/least_packages.rst:30
+msgid "Workflow"
+msgstr "Quy trình các công việc"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:32
+msgid ""
+"To see the *at confirmation* reservation method in action, create a new |SO|"
+" by navigating to :menuselection:`Sales app --> New`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:35
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:42
+msgid ""
+"Add a customer in the :guilabel:`Customer` field. Then, in the "
+":guilabel:`Order Lines` tab, click :guilabel:`Add a product`, and select a "
+"product to add to the quotation from the drop-down menu. Finally, in the "
+":guilabel:`Quantity` column, adjust the desired quantity of the product to "
+"sell."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:39
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:46
+msgid "Once ready, click :guilabel:`Confirm` to confirm the sales order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:41
+msgid ""
+"Click the :guilabel:`📈 (area graph)` icon on the product line to reveal the "
+"product's :guilabel:`Availability` tooltip, which reveals the "
+":guilabel:`Reserved` number of units for this order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:46
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:106
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:57
+msgid ""
+"If there is **not** sufficient quantity of stock for the product included in"
+" the |SO|, the :guilabel:`📈 (area graph)` icon is red, instead of green."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:49
+msgid ""
+"Instead of revealing the reserved number of units for the order, the "
+":guilabel:`Availability` tooltip reads :guilabel:`Available`, and reveals "
+"the available number of units (e.g., `0 Units`)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst-1
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst-1
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst-1
+msgid "Confirmed sales order with product availability tooltip selected."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:56
+msgid "Forecasted Report"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:58
+msgid ""
+"To see all the factors that affect product reservation, click the "
+":guilabel:`View Forecast` internal link arrow to view the "
+":guilabel:`Forecasted Report` dashboard."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:61
+msgid ""
+"The :guilabel:`Forecasted Report` displays forecast information about the "
+"product(s) included in the sales order; namely, any live receipts of the "
+"product, and any active sales orders, which are listed in the "
+":guilabel:`Used By` column. See how each order is fulfilled in the "
+":guilabel:`Replenishment` column."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:66
+msgid ""
+"Additionally, the :guilabel:`Forecasted` quantity is calculated at the top "
+"of the page, by adding the :guilabel:`On Hand` and :guilabel:`Incoming` "
+"quantity, and subtracting the :guilabel:`Outgoing` quantity, as shown below:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst-1
+msgid "Forecasted quantity equation from the Forecasted Report page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:74
+msgid ""
+"If one order should be prioritized over another order, click the "
+":guilabel:`Unreserve` button on the corresponding order line in the "
+":guilabel:`Replenishment` column."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:77
+msgid ""
+"To deliver the products, click the :guilabel:`Delivery` smart button at the "
+"top of the sales order form. To confirm that the reservation worked "
+"properly, ensure that the :guilabel:`Product Availability` field reads "
+"`Available` (in green text), and the numbers in the :guilabel:`Demand` and "
+":guilabel:`Quantity` columns match (in this case, both should read "
+"`100.00`)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst-1
+msgid ""
+"Delivery order for product included in sales order with at confirmation "
+"reservation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:86
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:149
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:108
+msgid "Once ready, click :guilabel:`Validate`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:152
+msgid ":doc:`Manual reservation <manually>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:90
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:139
+msgid ":doc:`Before scheduled date reservation <before_scheduled_date>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:3
+msgid "Before scheduled date reservation"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:9
+msgid ""
+"The *Before scheduled date* reservation method allows users to select a "
+"specific number of days that act as the maximum number of days **before** a "
+"scheduled delivery date, when products included in a sales order (SO) should"
+" be reserved."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:19
+msgid ""
+"To set the reservation method to *Before scheduled date*, navigate to "
+":menuselection:`Inventory app --> Configuration --> Operations Types`. Then,"
+" select the desired :guilabel:`Operation Type` to configure, or create a new"
+" one by clicking :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:23
+msgid ""
+"In the :guilabel:`General` tab, locate the :guilabel:`Reservation Method` "
+"field, and select :guilabel:`Before scheduled date`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:34
+msgid ""
+"Once selected, a new :guilabel:`Reserve before scheduled date` field appears"
+" below. From this field, the number of :guilabel:`days before` and "
+":guilabel:`days before when starred` can be changed from the default `0`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:41
+msgid ""
+"Changing the :guilabel:`days before when starred` value changes the maximum "
+"number of days before a scheduled date that products should be reserved if "
+"the transfers are starred (favorited)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:45
+msgid ""
+"Here, the :guilabel:`days before` value is set to `2` days before, and the "
+":guilabel:`days before when starred` value is set to `3`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:48
+msgid ""
+"This means products are reserved two days before the scheduled delivery date"
+" for normal orders, and three days before the scheduled delivery date for "
+"starred (favorited) transfers."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst-1
+msgid "Reserve before scheduled date field with set numerical values."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:55
+msgid ""
+"This is the configuration applied for the following workflow found below."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:58
+msgid "Edit product form"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:60
+msgid ""
+"Before the *Before scheduled date* reservation method can be used, ensure "
+"that a *customer lead time* is added to products that plan to be sold with "
+"this method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:63
+msgid ""
+"To do that, navigate to :menuselection:`Inventory app --> Products --> "
+"Products`, and select the desired product to configure."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:66
+msgid ""
+"On the product form, click the :guilabel:`Inventory` tab, and under the "
+":guilabel:`Logistics` section, change the value in the :guilabel:`Customer "
+"Lead Time` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:69
+msgid "For this example workflow, change it to `5` days."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:71
+msgid ""
+"This sets the scheduled delivery date for this specific product to five days"
+" after the creation date of the sales order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst-1
+msgid "Product form with customer lead time set in Inventory tab."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:81
+msgid ""
+"To see the *Before scheduled date* reservation method in action, create a "
+"new |SO| by navigating to :menuselection:`Sales app --> New`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:84
+msgid ""
+"Add a customer in the :guilabel:`Customer` field, then, in the "
+":guilabel:`Order Lines` tab, click :guilabel:`Add a product`, and select a "
+"product from the drop-down menu that has a configured *customer lead time*, "
+"to add to the quotation form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:88
+msgid ""
+"Finally, in the :guilabel:`Quantity` column, adjust the desired quantity of "
+"the product to sell."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:90
+msgid "For this sample workflow, set the :guilabel:`Quantity` to `10`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:94
+msgid ""
+"Click the green :guilabel:`📈 (area graph)` icon on the product line to "
+"reveal the product's :guilabel:`Availability` tooltip. This tooltip reveals "
+"the reserved number of units for this order. Because the reservation method "
+"is set to *Before scheduled date*, the :guilabel:`Reserved` quantity reads "
+"`0 Units`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:99
+msgid ""
+"However, below that quantity reads `Available in stock`. This is because the"
+" quantity is available, but the scheduled date, for this example workflow, "
+"is five days from the order date."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:102
+msgid ""
+"Since reservation is not until two days before the scheduled delivery, it "
+"will not reserve the products until then."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:109
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:60
+msgid ""
+"Instead of revealing the reserved number of units for the order, the "
+":guilabel:`Availability` tooltip reads :guilabel:`Reserved`, and reveals the"
+" available number of units (e.g., `0 Units`)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:112
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:63
+msgid ""
+"Additionally, unless there is a set replenishment or a live receipt, it also"
+" reads :guilabel:`No future availability`, in red text."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:119
+msgid ""
+"Click the :guilabel:`Delivery` smart button to see the delivery order form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:121
+msgid ""
+"On the delivery order form, the status in the :guilabel:`Product "
+"Availability` field is listed as `Available`, in yellow text, instead of "
+"green. This is because there is sufficient stock on-hand for this order, but"
+" no quantity has been reserved yet."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:125
+msgid ""
+"Note the :guilabel:`Scheduled Date` field, above the :guilabel:`Product "
+"Availability` field, displays the date five days from the order creation "
+"date. This indicates that the products are not reserved until three days "
+"from today's date (two days before the scheduled delivery date)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst-1
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst-1
+msgid "Delivery order form with product availability and reserved quantity."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:133
+msgid ""
+"In the :guilabel:`Operations` tab on the :guilabel:`Product` line, the "
+"numbers in the :guilabel:`Demand` column and the :guilabel:`Quantity` column"
+" do not match (in this case, the :guilabel:`Demand` column lists `10.00`, "
+"while the :guilabel:`Quantity` column lists `0`)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:137
+msgid ""
+"The :guilabel:`Quantity` column lists `0` because the products aren't "
+"reserved until two days *before* their delivery date. Odoo automatically "
+"reserves the products once the scheduled date arrives, at which point the "
+":guilabel:`Demand` and :guilabel:`Quantity` columns will match."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:142
+msgid ""
+"If the products in the |SO| should be reserved *sooner* than the scheduled "
+"reservation date, the reservation can be manually overridden. To manually "
+"reserve the products sooner than scheduled, click :guilabel:`Check "
+"Availability` at the top of the form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:146
+msgid ""
+"This turns the `Available` status in the :guilabel:`Product Availability` "
+"field green, and changes the number in the :guilabel:`Quantity` column to "
+"match the :guilabel:`Demand` column."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:153
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:138
+msgid ":doc:`At confirmation reservation <at_confirmation>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:3
+msgid "Manual reservation"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:9
+msgid ""
+"Unlike the *At Confirmation* reservation method, the *Manually* reservation "
+"method does **not** reserve products automatically."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:12
+msgid ""
+"Instead, once a sales order (SO) is confirmed, product availability **must**"
+" be checked manually, and the required quantity **must** be reserved "
+"manually."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:21
+msgid ""
+"To set the reservation method to *Manually*, navigate to "
+":menuselection:`Inventory app --> Configuration --> Operations Types`. Then,"
+" select the desired :guilabel:`Operation Type` to be configured, or create a"
+" new one by clicking :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:25
+msgid ""
+"In the :guilabel:`General` tab, locate the :guilabel:`Reservation Method` "
+"field, and select :guilabel:`Manually`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:39
+msgid ""
+"To see the *Manually* reservation method in action, create a new |SO| by "
+"navigating to :menuselection:`Sales app --> New`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:48
+msgid ""
+"Click the green :guilabel:`📈 (area graph)` icon on the product line to "
+"reveal the product's :guilabel:`Availability` tooltip. This tooltip reveals "
+"the reserved number of units for this order. Because the reservation method "
+"is set to *Manually*, the :guilabel:`Reserved` quantity reads `0 Units`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:53
+msgid ""
+"However, below that quantity reads `Available in stock`. This is because the"
+" quantity is available, but must be manually reserved."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:70
+msgid ""
+"Once the |SO| is confirmed, navigate to the :menuselection:`Inventory app`, "
+"and locate the :guilabel:`Delivery Orders` card on the :guilabel:`Inventory "
+"Overview` page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:73
+msgid ""
+"The :guilabel:`Delivery Orders` card displays the current status of live "
+"orders, including those with a :guilabel:`Waiting` status. Orders with this "
+"status indicate that the products in those orders have either not been "
+"reserved yet, or are not in stock at all."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst-1
+msgid "Delivery orders task card with waiting status orders."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:81
+msgid ""
+"To see the |SO| created previously, click the :guilabel:`(#) Waiting` button"
+" on the card (in this case, `8 Waiting`)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:84
+msgid ""
+"Locate the delivery order (DO) tied to the |SO| that was previously created,"
+" and click the line to view it."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:87
+msgid ""
+"On the :guilabel:`Delivery Order` form, the status in the :guilabel:`Product"
+" Availability` field is listed as `Available`, in yellow text, instead of "
+"green. This is because there is sufficient stock on hand for this order, but"
+" no quantity has been reserved yet."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:91
+msgid ""
+"In the :guilabel:`Operations` tab, on the :guilabel:`Product` line, the "
+"numbers in the :guilabel:`Demand` column and the :guilabel:`Quantity` column"
+" do *not* match."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:94
+msgid ""
+"In this case, the :guilabel:`Demand` column lists `10.00`, while the "
+":guilabel:`Quantity` column lists `0`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:101
+msgid ""
+"To manually reserve the specified quantity of the product for this order, "
+"click the :guilabel:`Check Availability` button at the top of the form. "
+"Doing so turns the `Available` status in the :guilabel:`Product "
+"Availability` field green, and changes the number in the "
+":guilabel:`Quantity` column to match the :guilabel:`Demand` column."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:106
+msgid ""
+"This is because there is sufficient quantity in stock to reserve for the "
+"order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:111
+msgid ""
+"Multiple orders with a *Waiting* status can be manually reserved at the same"
+" time, and set to *Ready* status."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:114
+msgid ""
+"To do that, open the :menuselection:`Inventory` app, which reveals the "
+":guilabel:`Inventory Overview` page. The :guilabel:`Inventory Overview` page"
+" is also accessible by navigating to :menuselection:`Inventory app --> "
+"Overview`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:118
+msgid ""
+"From the :guilabel:`Inventory Overview` page, click the :guilabel:`(#) "
+"Waiting` button on the :guilabel:`Delivery Orders` card."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:121
+msgid ""
+"Then, tick the checkboxes to the left of each desired order, or tick the "
+"checkbox in the header row, to the far-left, to select all orders on the "
+"page at once."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:124
+msgid ""
+"Then, click the :guilabel:`Check Availability` button at the top of the "
+"page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:126
+msgid ""
+"If the products included in every selected order have enough stock on-hand, "
+"this reserves the products, and moves the order into :guilabel:`Ready` "
+"status. Upon receiving a :guilabel:`Ready` status, the order disappears from"
+" the :guilabel:`Waiting` list."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:130
+msgid ""
+"If there is *not* enough stock on-hand, the order retains its current "
+"status, and remains on the list."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:0
+msgid "List of orders in waiting status and check availability button."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:5
 msgid "Setup and configuration"
 msgstr ""
@@ -9700,6 +11444,7 @@ msgid ""
 ":guilabel:`Pickup address`. Ensure this field matches the warehouse address."
 msgstr ""
 
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst-1
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst-1
 msgid "Adding addresses in the Starshipit settings."
 msgstr ""
@@ -10887,8 +12632,7 @@ msgid "Set the :guilabel:`Package Use` field to :guilabel:`Reusable Box`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/cluster_picking.rst:86
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies.rst:172
-msgid ":ref:`Packages <inventory/management/packages>`"
+msgid ":doc:`Packages <../../product_management/product_tracking/package>`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/cluster_picking.rst:89
@@ -12362,307 +14106,6 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/stock_warehouses.rst:0
 msgid "Default warehouse location on employee form."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:3
-msgid "Packages and packagings"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:5
-msgid ""
-"In Odoo, there are a variety of ways to specify the amount of products being"
-" bought, stocked, and sold. *Packages* and *packagings* are all available to"
-" streamline inventory flows, allowing for a variety of configurations for "
-"products as they enter and leave the warehouse."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:14
-msgid ""
-"Packages are a physical container that holds one or several products from a "
-"picking, typically used for outgoing deliveries or internal transfers. "
-"Packages can be a reusable or disposable (shipping) box, and are **not** "
-"specific to a product."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:18
-msgid ""
-"Reusable boxes temporarily hold products during a picking to be brought to "
-"either a packing or shipping area. Disposable boxes are the actual shipping "
-"containers (e.g. cardboard boxes, envelopes, shipping bags, etc). These are "
-"used to ship the products out to customers."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:22
-msgid ""
-"Multiple items in a sales order (SO) can be separated into different "
-"packages to accommodate the products. For example, an :abbr:`SO (Sales "
-"Order)` that has 20 boxes of pencils and 4 boxes of erasers can be separated"
-" into two separate packages, each containing 10 boxes of pencils and 2 boxes"
-" of erasers."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:28
-msgid ""
-"Products do *not* have to be divided equally. Products can be divided into "
-"as many packages that are needed to accommodate the :abbr:`SO (Sales "
-"Order)`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:31
-msgid ""
-"In Odoo, the quantity of products in each package needs to be recorded, so "
-"there is a full history for each product, including which package each item "
-"is shipped out in."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:34
-msgid ""
-"To use this method, ensure the :guilabel:`Packages` option is enabled, by "
-"navigating to :menuselection:`Inventory app --> Configuration --> Settings "
-"--> Operations`. Click the :guilabel:`Packages` check box, and then "
-":guilabel:`Save` to activate the feature."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:38
-msgid ""
-"On a delivery order, assign which package to use by clicking on the "
-":guilabel:`≣ (Detailed Operations)` icon to the right of each product in the"
-" :guilabel:`Operations` tab."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst-1
-msgid "Find detailed operations icon to the right on the product line."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:45
-msgid ""
-"Clicking the :guilabel:`≣ (Detailed Operations)` icon of a product reveals a"
-" pop-up window. In this window, the :guilabel:`Product` name, "
-":guilabel:`Demand`, and :guilabel:`Quantity Done` are clearly displayed "
-"above the customizable product line."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:49
-msgid ""
-"Here, the warehouse location the product is coming from can be modified, in "
-"addition to the :guilabel:`Source Package` and :guilabel:`Destination "
-"Package`, which represents what package(s) the product(s) will be packaged "
-"into."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:53
-msgid ""
-"Click :guilabel:`Add a line` to include each additional package used. Enter "
-"the desired amount in the :guilabel:`Done` field to specify the amount of "
-"products that will go into the :guilabel:`Destination Package`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:58
-msgid "Multiple packages in a single delivery"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:60
-msgid ""
-"Although a :abbr:`DO (Delivery Order)` is typically associated with a single"
-" package, orders can be split by clicking the :guilabel:`≣ (Detailed "
-"Operations)` icon next to the products on an :abbr:`SO (Sales Order)` line. "
-"This opens the :guilabel:`Detailed Operations` window with an editable table"
-" to specify which products are intended for which package."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:66
-msgid ""
-"To package 10 boxes of pencils with 2 boxes of erasers from the same "
-":abbr:`SO (Sales Order)`, begin by navigating to the :abbr:`DO (Delivery "
-"Order)`. Then, select the :guilabel:`≣ (four horizontal lines)` icon to the "
-"right of the product, `Box of Pencils`. Clicking the icon opens the "
-":guilabel:`Detailed Operations` window that is used to detail how products, "
-"like the 20 `Box of Pencils`, are packaged."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:72
-msgid ""
-"Type in `10` under the :guilabel:`Done` field to package 10 products into "
-"the :guilabel:`Destination Package`. To specify the destination package, "
-"type the name of an existing package (such as `PACK0000006`) under the "
-"field, :guilabel:`Destination Package`. If the package does not exist, Odoo "
-"displays the :guilabel:`Create` button to create a new package. Click "
-":guilabel:`Add a line` to assign the remaining products in another package, "
-"`PACK0000007`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:0
-msgid ""
-"Detailed operations pop-up where the amount of product going in a pack can "
-"be specified."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:82
-msgid ""
-"Select :guilabel:`Detailed Operations` on the product line for `Box of "
-"Erasers` and similarly set 2 :guilabel:`Done` products to `PACK0000006` and "
-"`PACK0000007` each."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:0
-msgid "Put in pack button to match the done amount matches the demand."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:89
-msgid ""
-"Once all the products for each line have been entered, click "
-":guilabel:`Confirm` to return to the :abbr:`DO (Delivery Order)`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:92
-msgid ""
-"The :guilabel:`Done` quantity on the :abbr:`DO (Delivery Order)` updates as "
-"products are selected for each package. When the :guilabel:`Done` amount "
-"matches the :guilabel:`Demand` amount, click the :guilabel:`Validate` button"
-" to complete the delivery order."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:97
-msgid ""
-"The :guilabel:`Put In Pack` button is intended to quickly package all "
-"products in the :abbr:`DO (Delivery Order)` into one new package. The option"
-" to rename the package, or modify its contents, is available in the "
-":guilabel:`Detailed Operations` pop-up."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:101
-msgid ""
-"Clicking on the :guilabel:`Packages` smart button in the upper-right corner "
-"of the delivery order reveals a separate page, showing all the packages used"
-" in that :abbr:`DO (Delivery Order)`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:105
-msgid "Packagings"
-msgstr "Kiện hàng"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:107
-msgid ""
-"*Packaging* is product specific, and refers to a disposable container that "
-"holds several units of a specific product. Unlike packages, packagings "
-"cannot be reusable, and each specific packaging must be defined on the "
-"individual product form."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:111
-msgid ""
-"For example, different packages for cans of soda can be configured as a "
-"6-pack, a 12-pack, or a case of 36. Each flavor of soda would need a `6`, "
-"`12`, and `36` can packaging configured on the individual product since "
-"packagings are product specific, not generic."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:116
-msgid "Set up packagings"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:118
-msgid ""
-"To use packagings, ensure the :guilabel:`Product Packagings` feature is "
-"enabled. To do that, navigate to :menuselection:`Inventory app --> "
-"Configuration --> Settings`. Then, under the :guilabel:`Products` heading, "
-"check the box next to :guilabel:`Product Packagings`, and click "
-":guilabel:`Save`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:123
-msgid ""
-"In Odoo, product packagings are used on sales/purchase orders and inventory "
-"transfers."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:125
-msgid ""
-"Next, to create packagings, navigate to :menuselection:`Inventory app --> "
-"Products --> Products` and click on the desired product, then click "
-":guilabel:`Edit` on the product page."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:128
-msgid ""
-"Under the :guilabel:`Inventory` tab, scroll down to the "
-":guilabel:`Packaging` section, and click :guilabel:`Add a line`. Then, a "
-"pop-up window appears, in which the following information for each packaging"
-" should be entered:"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:132
-msgid ""
-":guilabel:`Packaging`: name of packaging that appears on sales/purchase "
-"orders as a packaging option for the product"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:134
-msgid ":guilabel:`Contained quantity`: amount of product in the packaging"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:135
-msgid ""
-":guilabel:`Barcode`: identifier used with the :ref:`Barcode app "
-"<barcode/operations/intro>` to trace the packaging of a product during stock"
-" moves or pickings. Leave blank if not in use"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:141
-msgid ""
-"Create a packaging type for 6 cans of the product, `Grape Soda`, by naming "
-"the :guilabel:`Packaging` to `6-pack` and setting the :guilabel:`Contained "
-"quantity` to `6` in the pop-up window that appears after clicking on "
-":guilabel:`Add a line`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:149
-msgid ""
-"When all the necessary information has been entered, either click "
-":guilabel:`Save & Close` to save the packaging and return to the product "
-"detail form, or :guilabel:`Save & New` to save the packaging and create "
-"another one in a fresh pop-up window."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:154
-msgid ""
-"View all product packagings in the :guilabel:`Inventory` tab of the product "
-"form."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:0
-msgid ""
-"Show packaging and contained quantities, specified on the product page form in the\n"
-"Inventory tab."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:162
-msgid "View all packagings"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:164
-msgid ""
-"To view all packagings that have been created, go to "
-":menuselection:`Inventory app --> Configuration --> Product Packagings`. "
-"Doing so reveals the :guilabel:`Product Packagings` page with a complete "
-"list of all packagings that have been created for all products. Create new "
-"packagings by clicking :guilabel:`Create`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:170
-msgid ""
-"Two soda products, `Grape Soda` and `Diet Coke`, have three types of "
-"packaging configured. On the :guilabel:`Product Packagings` page, each "
-"product can sold as a `6-Pack` that contains 6 products, `12-Pack` of 12 "
-"products, or a `Case` of 32 products."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/usage.rst:181
-msgid ""
-"When creating a sales order in the :menuselection:`Sales` app, specify the "
-"packagings that should be used for the product(s). The chosen packaging is "
-"displayed on the :abbr:`SO (Sales Order)` under the :guilabel:`Package` "
-"field."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/wave_transfers.rst:3
@@ -14422,6 +15865,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouse_replenishment_transfer.rst-1
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouse_replenishment_transfer.rst-1
 msgid "The delivery orders card for the outgoing warehouse."
 msgstr ""
 
@@ -15597,6 +17041,10 @@ msgstr ""
 msgid "Enable the packages feature."
 msgstr ""
 
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies.rst:172
+msgid ":doc:`Packages <../product_management/product_tracking/package>`"
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies.rst:173
 msgid ""
 ":doc:`2-step delivery "
@@ -15714,13 +17162,6 @@ msgid ""
 "To use closest location, set the removal strategy on the parent location, "
 "'WH/Stock'."
 msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/closest_location.rst:65
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fefo.rst:69
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fifo.rst:47
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/least_packages.rst:30
-msgid "Workflow"
-msgstr "Quy trình các công việc"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/closest_location.rst:67
 msgid ""
@@ -16399,15 +17840,11 @@ msgid ""
 "<https://www.odoo.com/slides/slide/managing-equipment-maintenance-709>`_"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/maintenance/equipment_management.rst:5
-msgid "Equipment management"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/maintenance/equipment_management/add_new_equipment.rst:3
+#: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:3
 msgid "Add new equipment"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/maintenance/equipment_management/add_new_equipment.rst:7
+#: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:7
 msgid ""
 "In Odoo, *equipment* refers to any item that is used in everyday operations,"
 " including the manufacturing of products. This can mean a piece of machinery"
@@ -16417,7 +17854,7 @@ msgid ""
 "vendor in the case of equipment rentals."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/maintenance/equipment_management/add_new_equipment.rst:13
+#: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:13
 msgid ""
 "Using Odoo *Maintenance*, it is possible to track individual pieces of "
 "equipment, along with information about their maintenance requirements. To "
@@ -16426,11 +17863,11 @@ msgid ""
 "and configure the equipment as follows:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/maintenance/equipment_management/add_new_equipment.rst:18
+#: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:18
 msgid ":guilabel:`Equipment Name`: the product name of the piece of equipment"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/maintenance/equipment_management/add_new_equipment.rst:19
+#: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:19
 msgid ""
 ":guilabel:`Equipment Category`: the category that the equipment belongs to; "
 "for example, computers, machinery, tools, etc.; new categories can be "
@@ -16438,20 +17875,20 @@ msgid ""
 "Categories` and clicking :guilabel:`Create`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/maintenance/equipment_management/add_new_equipment.rst:22
+#: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:22
 msgid ""
 ":guilabel:`Company`: the company that owns the equipment; again, this can be"
 " the company that uses the Odoo database, or a third-party company"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/maintenance/equipment_management/add_new_equipment.rst:24
+#: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:24
 msgid ""
 ":guilabel:`Used By`: specify if the equipment is used by a specific "
 "employee, department, or both; select :guilabel:`Other` to specify both an "
 "employee and a department"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/maintenance/equipment_management/add_new_equipment.rst:26
+#: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:26
 msgid ""
 ":guilabel:`Maintenance Team`: the team responsible for servicing the "
 "equipment; new teams can be created by navigating to "
@@ -16460,7 +17897,7 @@ msgid ""
 "page"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/maintenance/equipment_management/add_new_equipment.rst:29
+#: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:29
 msgid ""
 ":guilabel:`Technician`: the person responsible for servicing the equipment; "
 "this can be used to assign a specific individual in the event that no "
@@ -16469,14 +17906,14 @@ msgid ""
 "a user can be assigned as a technician"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/maintenance/equipment_management/add_new_equipment.rst:33
+#: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:33
 msgid ""
 ":guilabel:`Used in location`: the location where the equipment is used; this"
 " is a simple text field that can be used to specify locations that are not "
 "work centers, like an office, for example"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/maintenance/equipment_management/add_new_equipment.rst:36
+#: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:36
 msgid ""
 ":guilabel:`Work Center`: if the equipment is used at a work center, specify "
 "it here; equipment can also be assigned to a work center by navigating to "
@@ -16485,91 +17922,91 @@ msgid ""
 "clicking the :guilabel:`Equipment` tab on the work center form"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/maintenance/equipment_management/add_new_equipment.rst-1
+#: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst-1
 msgid "An example of a fully configured new equipment form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/maintenance/equipment_management/add_new_equipment.rst:46
+#: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:46
 msgid "Include additional product information"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/maintenance/equipment_management/add_new_equipment.rst:48
+#: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:48
 msgid ""
 "The :guilabel:`Product Information` tab at the bottom of the form can be "
 "used to provide further details about the piece of equipment:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/maintenance/equipment_management/add_new_equipment.rst:51
+#: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:51
 msgid ":guilabel:`Vendor`: the vendor that the equipment was purchased from"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/maintenance/equipment_management/add_new_equipment.rst:52
+#: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:52
 msgid ""
 ":guilabel:`Vendor Reference`: the reference code assigned to the vendor"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/maintenance/equipment_management/add_new_equipment.rst:53
+#: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:53
 msgid ":guilabel:`Model`: the specific model of the piece of equipment"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/maintenance/equipment_management/add_new_equipment.rst:54
+#: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:54
 msgid ":guilabel:`Serial Number`: the unique serial number of the equipment"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/maintenance/equipment_management/add_new_equipment.rst:55
+#: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:55
 msgid ""
 ":guilabel:`Effective Date`: the date that the equipment became available for"
 " use; this is used to calculate the :abbr:`MTBF (Mean Time Between "
 "Failures)`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/maintenance/equipment_management/add_new_equipment.rst:57
+#: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:57
 msgid ":guilabel:`Cost`: the amount the equipment was purchased for"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/maintenance/equipment_management/add_new_equipment.rst:58
+#: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:58
 msgid ""
 ":guilabel:`Warranty Expiration Date`: the date on which the equipment's "
 "warranty will expire"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/maintenance/equipment_management/add_new_equipment.rst-1
+#: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst-1
 msgid "The product information tab for the new piece of equipment."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/maintenance/equipment_management/add_new_equipment.rst:65
+#: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:65
 msgid "Add maintenance details"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/maintenance/equipment_management/add_new_equipment.rst:67
+#: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:67
 msgid ""
 "The :guilabel:`Maintenance` tab includes information that can be useful to "
 "maintenance teams:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/maintenance/equipment_management/add_new_equipment.rst:69
+#: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:69
 msgid ""
 ":guilabel:`Preventive Maintenance Frequency`: specifies how often "
 "maintenance should be performed to prevent equipment failure"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/maintenance/equipment_management/add_new_equipment.rst:71
+#: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:71
 msgid ""
 ":guilabel:`Maintenance Duration`: the amount of time required to fix the "
 "equipment when it fails"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/maintenance/equipment_management/add_new_equipment.rst:72
+#: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:72
 msgid ""
 ":guilabel:`Expected Mean Time Between Failure`: the average amount of time "
 "that the equipment is expected to operate before failing"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/maintenance/equipment_management/add_new_equipment.rst-1
+#: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst-1
 msgid "The maintenance tab for the new piece of equipment."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/maintenance/equipment_management/add_new_equipment.rst:80
+#: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:80
 msgid ""
 "The :guilabel:`Maintenance` tab also includes sections for :guilabel:`Mean "
 "Time Between Failure`, :guilabel:`Estimated Next Failure`, :guilabel:`Latest"
@@ -16577,11 +18014,218 @@ msgid ""
 "automatically based on maintenance requests if any exist."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/maintenance/equipment_management/add_new_equipment.rst:86
+#: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:86
 msgid ""
 "To see the maintenance requests for a piece of equipment, go to the page for"
 " the equipment and select :guilabel:`Maintenance` in the top right corner of"
 " the form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:3
+msgid "Maintenance requests"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:7
+msgid ""
+"In order to keep equipment and work centers functioning properly, it is "
+"often necessary to perform maintenance on them. This can include preventive "
+"maintenance, intended to prevent equipment from breaking down, or corrective"
+" maintenance, which is used to fix equipment that is broken or otherwise "
+"unusable."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:12
+msgid ""
+"In Odoo *Maintenance*, users can create *maintenance requests* to schedule "
+"and track the progress of equipment and work center maintenance."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:16
+msgid "Create maintenance request"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:18
+msgid ""
+"To create a new maintenance request, navigate to :menuselection:`Maintenance"
+" app --> Maintenance --> Maintenance Requests`, and click :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:21
+msgid ""
+"Begin filling out the form by entering a descriptive title in the "
+":guilabel:`Request` field (e.g., `Drill not working`)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:24
+msgid ""
+"The :guilabel:`Created By` field auto-populates with the user creating the "
+"request, but a different user can be selected by clicking on the drop-down "
+"menu."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:27
+msgid ""
+"In the :guilabel:`For` drop-down menu, select :guilabel:`Equipment` if the "
+"maintenance request is being created for a piece of equipment, or "
+":guilabel:`Work Center` if it is being created for a work center."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:31
+msgid ""
+"Depending on the option selected in the :guilabel:`For` field, the next "
+"field is titled either :guilabel:`Equipment` or :guilabel:`Work Center`. "
+"Using the drop-down menu for either field, select a piece of equipment or a "
+"work center."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:35
+msgid ""
+"If the *Custom Maintenance Worksheets* setting is enabled in the "
+"*Maintenance* app's settings, a :guilabel:`Worksheet Template` field appears"
+" below the :guilabel:`Equipment` or :guilabel:`Work Center` field. If "
+"necessary, use this field to select a worksheet to be filled out by the "
+"employee performing the maintenance."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:40
+msgid ""
+"The next field is titled :guilabel:`Request Date`, and is set by default to "
+"the date on which the maintenance request is created. This date cannot be "
+"changed by the user."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:43
+msgid ""
+"In the :guilabel:`Maintenance Type` field, select the :guilabel:`Corrective`"
+" option if the request is intended to fix an existing issue, or the "
+":guilabel:`Preventive` option if the request is intended to prevent issues "
+"from occurring in the future."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:47
+msgid ""
+"If the request is being created to address an issue that arose during a "
+"specific manufacturing order (MO), select it in the :guilabel:`Manufacturing"
+" Order` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:50
+msgid ""
+"If an |MO| was selected in the :guilabel:`Manufacturing Order` field, a "
+":guilabel:`Work Order` field appears below it. If the issue arose during a "
+"specific work order, specify it in this field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:53
+msgid ""
+"In the :guilabel:`Team` field, select the maintenance team that is "
+"responsible for managing the request. If a specific team member is "
+"responsible, select them in the :guilabel:`Responsible` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:56
+msgid ""
+"The :guilabel:`Scheduled Date` field is used to specify the date on which "
+"maintenance should take place, and the time it should begin. Choose a date "
+"by clicking on the field to open a calendar in a pop-up window, and then "
+"select a day on the calendar. Enter an hour and minute in the two fields "
+"below the calendar, and click :guilabel:`Apply` to save the date and time."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:61
+msgid ""
+"The :guilabel:`Duration` field is used to specify the time it takes to "
+"complete the maintenance request. Use the text-entry field to enter the time"
+" in a `00:00` format."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:64
+msgid ""
+"If :guilabel:`Work Center` was selected in the :guilabel:`For` field, a "
+":guilabel:`Block Workcenter` checkbox appears below the :guilabel:`Duration`"
+" field. Enable the checkbox to prevent work orders or other maintenance from"
+" being scheduled at the specified work center while the maintenance request "
+"is being processed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:69
+msgid ""
+"The :guilabel:`Priority` field is used to communicate the importance (or "
+"urgency) of the maintenance request. Assign the request a priority between "
+"zero and three :guilabel:`⭐⭐⭐ (stars)`, by clicking on the desired star "
+"number. Requests assigned a higher priority appear above those with a lower "
+"priority, on the Kanban board used to track the progression of maintenance "
+"requests."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:74
+msgid ""
+"In the :guilabel:`Notes` tab at the bottom of the form, enter any relevant "
+"details about the maintenance request (why the maintenance issue arose, when"
+" it occurred, etc.)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:77
+msgid ""
+"The :guilabel:`Instructions` tab is used to include instructions for how "
+"maintenance should be performed. Select one of the three options, and then "
+"include the instructions as detailed below:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:80
+msgid ""
+":guilabel:`PDF`: click the :guilabel:`Upload your file` button to open the "
+"device's file manager, and then select a file to upload."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:82
+msgid ""
+":guilabel:`Google Slide`: enter a :guilabel:`Google Slide link` in the text-"
+"entry field that appears after the option is selected."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:84
+msgid ""
+":guilabel:`Text`: enter the instructions in the text-entry field that "
+"appears after the option is selected."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst-1
+msgid "A maintenance request form filled out for a piece of equipment."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:92
+msgid "Process maintenance request"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:94
+msgid ""
+"Once a maintenance request has been created, it appears in the *New Request*"
+" stage of the *Maintenance Requests* page, which can be accessed by "
+"navigating to :menuselection:`Maintenance app --> Maintenance --> "
+"Maintenance Requests`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:98
+msgid ""
+"Maintenance requests can be moved to different stages by dragging and "
+"dropping them. They can also be moved by clicking on a request to open it in"
+" a new page, and then selecting the desired stage from the stage indicator "
+"bar, located above the top-right corner of the request's form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:102
+msgid ""
+"Successful maintenance requests should be moved to the :guilabel:`Repaired` "
+"stage, indicating that the specified piece of equipment or work center is "
+"repaired."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:105
+msgid ""
+"Failed maintenance requests should be moved to the :guilabel:`Scrap` stage, "
+"indicating the specified piece of equipment, or work center, could not be "
+"repaired, and must instead be scrapped."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing.rst:8
@@ -16606,7 +18250,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing.rst:17
-msgid ":doc:`IoT Boxes (MES) </applications/productivity/iot>`"
+msgid ":doc:`IoT Boxes (MES) </applications/general/iot>`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management.rst:5
@@ -21732,125 +23376,129 @@ msgid "Manage deals"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:3
-msgid "Use blanket orders to create purchase agreements with vendors"
+msgid "Blanket orders"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:5
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:13
 msgid ""
 "Blanket orders are long-term purchase agreements between a company and a "
-"vendor to deliver products on a recurring basis with predetermined pricing. "
-"Using blanket orders are useful when products are always purchased from the "
-"same vendor, but in different quantities at different times."
+"vendor to deliver products on a recurring basis with predetermined pricing."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:9
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:16
+msgid ""
+"Blanket orders are helpful when products are consistently purchased from the"
+" same vendor, but in different quantities, and at different times."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:19
 msgid ""
 "By simplifying the ordering process, blanket orders not only save time, they"
 " also save money, since they can be advantageous when negotiating bulk "
 "pricing with vendors."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:13
-msgid ":doc:`calls_for_tenders`"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:16
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:23
 msgid "Create a new blanket order"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:18
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:25
 msgid ""
-"To create blanket orders, the *Purchase Agreements* feature first needs to "
-"be enabled in the settings of the *Purchase* app. To do this, go to "
-":menuselection:`Purchase --> Configuration --> Settings`, and under the "
-":guilabel:`Orders` section, click the checkbox next to :guilabel:`Purchase "
-"Agreements`. Doing so will enable the ability to create blanket orders, as "
-"well as alternative requests for quotation (RFQs)."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst-1
-msgid "Purchase Agreements enabled in the Purshase app settings."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:28
-msgid ""
-"To create a blanket order, go to :menuselection:`Purchase --> Orders --> "
-"blanket orders`, and click :guilabel:`New`. This creates (and navigates to) "
-"a new blanket order form."
+"To create blanket orders, enable the *Purchase Agreements* feature from the "
+"*Purchase* app settings. Navigate to :menuselection:`Purchase app --> "
+"Configuration --> Settings`, and under the :guilabel:`Orders` section, click"
+" the checkbox for :guilabel:`Purchase Agreements`. Then click "
+":guilabel:`Save` to implement the changes."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:31
 msgid ""
-"From this new blanket order form, different fields and settings can be "
-"configured, so there are pre-determined rules that the recurring long-term "
-"agreement must follow:"
+"In addition to creating blanket orders, the *Purchase Agreements* setting "
+"also allows users to create alternative requests for quotation (RfQs)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:34
-msgid ""
-":guilabel:`Purchase Representative`: is the user assigned to this specific "
-"blanket order. By default, this is the user who created the agreement; the "
-"user can be changed directly from the drop-down menu next to this field."
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst-1
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst-1
+msgid "Purchase Agreements enabled in the Purchase app settings."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:37
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:38
 msgid ""
-":guilabel:`Agreement Type`: is the type of purchase agreement this blanket "
-"order is classified as. In Odoo, blanket orders are the only official "
-"purchase agreement."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:39
-msgid ""
-":guilabel:`Vendor`: is the supplier to whom this agreement is tied, either "
-"once or on a recurring basis. The vendor can be selected directly from the "
-"drop-down menu next to this field."
+"To create a blanket order, go to :menuselection:`Purchase app --> Orders -->"
+" Blanket Orders`, and click :guilabel:`New`. This opens a new blanket order "
+"form."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:41
 msgid ""
-":guilabel:`Currency`: is the agreed-upon currency that will be used for this"
-" exchange. If multiple currencies have been activated in the database, the "
-"currency can be changed from the drop-down menu next to this field."
+"Configure the following fields in the new blanket order form to establish "
+"predetermined rules for the recurring long-term agreement:"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:44
 msgid ""
-":guilabel:`Agreement Deadline`: is the date that this purchase agreement "
-"will be set to expire on (if desired). If this blanket order should not "
-"expire, leave this field blank."
+":guilabel:`Purchase Representative`: the user assigned to this specific "
+"blanket order. By default, this is the user who created the agreement; the "
+"user can be changed directly from the drop-down menu next to this field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:46
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:47
 msgid ""
-":guilabel:`Ordering Date`: is the date that this blanket order should be "
-"placed on if a new quotation is created directly from the blanket order "
-"form. If a new quotation is created, this value will automatically populate "
-"the *Order Deadline* field on the :abbr:`RFQ (Request for Quotation)`."
+":guilabel:`Agreement Type`: the type of purchase agreement this blanket "
+"order is classified as. In Odoo, blanket orders are the only official "
+"purchase agreement."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:50
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:49
 msgid ""
-":guilabel:`Delivery Date`: is the expected delivery date that the products "
-"included in an :abbr:`RFQ (Request for Quotation)` created directly from the"
-" blanket order form will be expected to arrive. If a new quotation is "
-"created, this value will automatically populate the *Expected Arrival* field"
-" on the :abbr:`RFQ (Request for Quotation)`."
+":guilabel:`Vendor`: the supplier to whom this agreement is tied, either once"
+" or on a recurring basis. The vendor can be selected directly from the drop-"
+"down menu next to this field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:51
+msgid ""
+":guilabel:`Currency`: the agreed-upon currency to be used for this exchange."
+" If multiple currencies have been activated in the database, the currency "
+"can be changed from the drop-down menu next to this field."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:54
 msgid ""
-":guilabel:`Source Document`: is the source purchase order (PO) that this "
-"blanket order will be tied to. If this blanket order should not be tied to "
-"any existing :abbr:`POs (Purchase Orders)`, leave this field blank."
+":guilabel:`Agreement Deadline`: the date that this purchase agreement will "
+"be set to expire on. If this blanket order should not expire, leave this "
+"field blank."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:57
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:56
 msgid ""
-":guilabel:`Company`: is the company assigned to this specific blanket order."
-" By default, this is the company that the user creating the blanket order is"
-" listed under. If the database is not a multi-company database, this field "
-"can not be changed, and will default to the only company listed in the "
+":guilabel:`Ordering Date`: the date that this blanket order should be placed"
+" on if a new quotation is created directly from the blanket order form. If a"
+" new quotation is created, this value automatically populates the *Order "
+"Deadline* field on the |RfQ|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:59
+msgid ""
+":guilabel:`Delivery Date`: the expected delivery date that the products "
+"included in an |RfQ| are expected, if created directly from a blanket order "
+"form. If a new quotation is created, this value automatically populates the "
+"*Expected Arrival* field on the |RfQ|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:62
+msgid ""
+":guilabel:`Source Document`: the source purchase order (PO) that this "
+"blanket order is tied to. If this blanket order should not be tied to any "
+"existing |PO|, leave this field blank."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:64
+msgid ""
+":guilabel:`Company`: the company assigned to this specific blanket order. By"
+" default, this is the company that the user creating the blanket order is "
+"listed under. If the database is not a multi-company database, this field "
+"**cannot** be changed, and defaults to the only company listed in the "
 "database."
 msgstr ""
 
@@ -21858,246 +23506,195 @@ msgstr ""
 msgid "New blanket order purchase agreement with added products."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:66
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:73
 msgid ""
 "Once all relevant fields have been filled out, click :guilabel:`Add a line` "
-"to add products under the :guilabel:`Product` column. Then, change the "
-"quantity of each product in the :guilabel:`Quantity` column (if desired), "
-"and set a price in the :guilabel:`Unit Price` column."
+"to add products under the :guilabel:`Product` column. Then, in the "
+":guilabel:`Quantity` column, change the quantity of each product, and set a "
+"price in the :guilabel:`Unit Price` column."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:71
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:78
 msgid ""
 "When adding products to a new blanket order, the pre-existing prices of "
-"products will not be added automatically to the product lines. The prices "
-"must be manually assigned by changing the value in the :guilabel:`Unit "
-"Price` column to an agreed-upon price with the listed vendor. Otherwise, the"
-" price will remain **0**."
+"products are not automatically added to the product lines. Instead, the "
+"prices **must** be manually assigned, by changing the value in the "
+":guilabel:`Unit Price` column to an agreed-upon price with the listed "
+"vendor. Otherwise, the price will remain `0`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:76
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:83
 msgid ""
 "To view and change the default purchase agreement settings for blanket "
-"orders directly from the blanket order form, click the :guilabel:`internal "
-"link (arrow icon)` next to the :guilabel:`Agreement Type` field where "
-":guilabel:`Blanket Order` is listed. This navigates to the blanket order "
-"settings."
+"orders directly from the blanket order form, click the :guilabel:`➡️ (right "
+"arrow)` icon that becomes visible when hovering over the "
+":guilabel:`Agreement Type` field, where :guilabel:`Blanket Order` is listed."
+" This navigates to the blanket order settings."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:81
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst-1
+msgid ""
+"Internal link arrow next to Agreement Type field on blanket order form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:92
 msgid ""
 "From here, the settings for blanket orders can be edited. Under the "
 ":guilabel:`Agreement Type` section, the name of the :guilabel:`Agreement "
-"Type` can be changed (if desired), and the :guilabel:`Agreement Selection "
-"Type` can be changed, as well. There are two options that can be activated "
-"for the type of selection:"
+"Type` can be changed, and the :guilabel:`Agreement Selection Type` can be "
+"changed, as well. There are two options that can be activated for the type "
+"of selection:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:86
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:97
 msgid ""
-":guilabel:`Select only one RFQ (exclusive)`: when a purchase order is "
-"confirmed, the remaining purchase orders will be canceled."
+":guilabel:`Select only one RfQ (exclusive)`: when a purchase order is "
+"confirmed, the remaining purchase orders are canceled."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:88
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:99
 msgid ""
-":guilabel:`Select multiple RFQ (non-exclusive)`: when a purchase order is "
-"confirmed, remaining purchase orders will ***not** be canceled. Instead, "
-"multiple purchase orders are allowed."
+":guilabel:`Select multiple RfQ (non-exclusive)`: when a purchase order is "
+"confirmed, remaining purchase orders are **not** canceled. Instead, multiple"
+" purchase orders are allowed."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:91
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:102
 msgid ""
-"Under the :guilabel:`Data For New Quotations` section, the settings for how "
-"product lines and quantities will be populated on new quotations using this "
-"purchase agreeement can be changed next to the :guilabel:`Lines` and "
-":guilabel:`Quantities` fields."
+"Under the :guilabel:`Data For New Quotations` section, the :guilabel:`Lines`"
+" and :guilabel:`Quantities` fields can be edited. Doing so sets how new "
+"quotations should be populated when using this purchase agreement."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst-1
 msgid "Purchase Agreement type edit screen for blanket orders."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:99
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:110
 msgid "There are two options that can be activated for :guilabel:`Lines`:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:101
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:112
 msgid ""
 ":guilabel:`Use lines of agreement`: when creating a new quotation, the "
-"product lines will pre-populate with the same products listed on the blanket"
-" order, if said blanket order is chosen on the new quotation."
+"product lines pre-populate with the same products listed on the blanket "
+"order, if said blanket order is chosen for the new quotation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:104
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:115
 msgid ""
 ":guilabel:`Do not create RfQ lines automatically`: when creating a new "
-"quotation and selecting an existing blanket order, the settings will carry "
-"over to the new quotation, but the product lines will not populate."
+"quotation, **and** selecting an existing blanket order, the settings carry "
+"over to the new quotation, but the product lines do **not** populate."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:108
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:119
 msgid ""
 "And, there are two options that can be activated for :guilabel:`Quantities`:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:110
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:121
 msgid ""
 ":guilabel:`Use quantities of agreement`: when creating a new quotation, the "
-"product quantities listed on the blanket order will pre-populate on the "
-"product lines, if said blanket order is chosen on the new quotation."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:113
-msgid ""
-":guilabel:`Set quantities manually`: when creating a new quotation and "
-"selecting an existing blanket order, the product lines will pre-populate, "
-"but all quantities will be set to **0**. The quantities will need to be "
-"manually set by the user."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:117
-msgid ""
-"Once the desired changes have been made (if any), click :guilabel:`New` (via"
-" the breadcrumbs, at the top of the page) to navigate back to the blanket "
-"order form, and click :guilabel:`Confirm` to save this new purchase "
-"agreement. Once confirmed, the blanket order changes from *Draft* to "
-"*Ongoing*, meaning this agreement can be selected and used when creating new"
-" :abbr:`RFQs (Requests for Quotation)`."
+"product quantities listed on the blanket order pre-populate on the product "
+"lines, if said blanket order is chosen for the new quotation."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:124
+msgid ""
+":guilabel:`Set quantities manually`: when creating a new quotation, **and** "
+"selecting an existing blanket order, the product lines pre-populate, but all"
+" quantities are set to `0`. The quantities **must** be manually set by the "
+"user."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:128
+msgid ""
+"Once any desired changes have been made, click :guilabel:`New` (via the "
+"breadcrumbs, at the top of the page) to navigate back to the blanket order "
+"form. Then, click :guilabel:`Confirm` to save this new purchase agreement."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:132
+msgid ""
+"Once confirmed, the blanket order's stage (in the upper-right corner) "
+"changes from :guilabel:`Draft` to :guilabel:`Ongoing`, meaning this "
+"agreement can be selected and used when creating new |RfQs|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:136
 msgid ""
 "After creating and confirming a blanket order, products, quantities, and "
 "prices can still be edited, added, and removed from the purchase agreement."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:128
-msgid ""
-"Create a new :abbr:`RFQ (Request for Quotation)` from the blanket order"
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:140
+msgid "Create a new |RfQ| from the blanket order"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:130
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:142
 msgid ""
 "After confirming a blanket order, new quotations can be created directly "
-"from the blanket order form that will use the rules set on the form and pre-"
-"populate the new quotation with the correct information. Additionally, this "
-"new quotation will be automatically linked to this blanket order form via "
-"the :guilabel:`RFQs/Orders` smart button at the top right of the form."
+"from the blanket order form. |RfQs| using this form are pre-populated with "
+"information based on the rules set in the form. Additionally, new quotations"
+" are automatically linked to this blanket order form, via the "
+":guilabel:`RFQs/Orders` smart button at the top-right of the form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:135
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:147
 msgid ""
-"To create a new quotation from the blanket order form, click :guilabel:`New "
-"Quotation`. This creates (and navigates to) a new :abbr:`RFQ (Request for "
-"Quotation)`, that is pre-populated with the correct information, depending "
-"on the settings configured on the blanket order form."
+"To create a new quotation from the blanket order form, click the "
+":guilabel:`New Quotation` button. This opens a new |RfQ|, that is pre-"
+"populated with the correct information, depending on the settings configured"
+" on the blanket order form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:139
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:151
 msgid ""
-"From the new :abbr:`RFQ (Request for Quotation)` form, click :guilabel:`Send"
-" by Email` to compose and send an email to the listed vendor; click "
-":guilabel:`Print RFQ` to generate a printable PDF of the quotation; or, once"
-" ready, click :guilabel:`Confirm Order` to confirm the purchase order (PO)."
+"From the new |RfQ| form, click :guilabel:`Send by Email` to compose and send"
+" an email to the listed vendor. Click :guilabel:`Print RFQ` to generate a "
+"printable PDF of the quotation; or, once ready, click :guilabel:`Confirm "
+"Order` to confirm the |PO|."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst-1
 msgid "New quotation with copied products and rules from blanket order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:147
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:159
 msgid ""
-"Once the :abbr:`PO (Purchase Order)` has been confirmed, click back to the "
-"blanket order form (via the breadcrumbs, at the top of the page). From the "
-"blanket order form, there is now one :abbr:`RFQ (Request for Quotation)` "
-"listed in the :guilabel:`RFQs/Orders` smart button at the top right of the "
-"form. Click the :guilabel:`RFQs/Orders` smart button to see the purchase "
-"order that was just created."
+"Once the |PO| has been confirmed, click back to the blanket order form (via "
+"the breadcrumbs, at the top of the page). From the blanket order form, there"
+" is now one |RfQ| listed in the :guilabel:`RFQs/Orders` smart button at the "
+"top-right of the form. Click the :guilabel:`RFQs/Orders` smart button to see"
+" the |PO| that was just created."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst-1
 msgid "RFQs and Orders smart button from blanket order form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:157
-msgid "Create a new blanket order from an :abbr:`RFQ (Request for Quotation)`"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:159
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:49
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:148
-msgid ""
-"To create a new :abbr:`RFQ (Request for Quotation)`, navigate to the "
-":menuselection:`Purchase` app, and click :guilabel:`New`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:162
-msgid ""
-"Then, add information to the :abbr:`RFQ (Request for Quotation)` form: add a"
-" vendor from the drop-down menu next to the :guilabel:`Vendor` field, and "
-"click :guilabel:`Add a product` to select a product from the drop-down menu "
-"in the :guilabel:`Product` column. Then, set the desired purchase quantity "
-"in the :guilabel:`Quantity` column, and change the purchase price in the "
-":guilabel:`Unit Price` column, if desired."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:168
-msgid ""
-"Clicking the :guilabel:`additional options (two-dots)` icon provides "
-"additional visibility options to add to the line item. Repeat these steps to"
-" add as many additional options as desired, including the :guilabel:`UoM` "
-"(Units of Measure) to purchase the products in, and the :guilabel:`Expected "
-"Arrival` date."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:173
-msgid ""
-"Before confirming the new quotation and creating a purchase order, click the"
-" drop-down menu next to the :guilabel:`Blanket Order` field, and type a new "
-"name for the new blanket order. This creates a brand new purchase agreement,"
-" and saves the information entered in the fields of the purchase order form,"
-" as well as the product information entered on the product lines."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:178
-msgid ""
-"From the new :abbr:`RFQ (Request for Quotation)` form, click :guilabel:`Send"
-" by Email` to compose and send an email to the listed vendor; click "
-":guilabel:`Print RFQ` to generate a printable PDF of the quotation; or, once"
-" ready, click :guilabel:`Confirm Order` to confirm the :abbr:`PO (purchase "
-"order)`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst-1
-msgid "New blanket order created directly from quotation."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:188
-msgid ""
-"To see the newly-created blanket order purchase agreement, go to "
-":menuselection:`Orders --> Blanket Orders`, and click into the new blanket "
-"order. From here, settings and rules can be changed, if desired."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:193
-msgid "Blanket orders and replenishment"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:195
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:171
 msgid ""
 "Once a blanket order is confirmed, a new vendor line is added under the "
-":guilabel:`Purchase` tab of of the products included in the :abbr:`BO "
-"(Blanket Order)`. This makes blanket orders useful with :doc:`automated "
-"replenishment <../../purchase/products/reordering>`, because information "
-"about the :guilabel:`Vendor`, :guilabel:`Price`, and the "
-":guilabel:`Agreement` are referenced on the vendor line. This information is"
-" used to determine where, when, and for what price this product could be "
-"replenished."
+":guilabel:`Purchase` tab of the products included in the order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:174
+msgid ""
+"This makes blanket orders useful with :doc:`automated replenishment "
+"<../../purchase/products/reordering>`, because information about the "
+":guilabel:`Vendor`, :guilabel:`Price`, and the :guilabel:`Agreement` are "
+"referenced on the vendor line. This information dictates when, where, and at"
+" what price the product should be replenished."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst-1
 msgid "Product form with replenishment agreement linked to blanket order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:184
+msgid ":doc:`calls_for_tenders`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:3
@@ -22149,10 +23746,6 @@ msgid ""
 "*blanket orders*."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst-1
-msgid "Purchase Agreements enabled in the Purchase app settings."
-msgstr ""
-
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:37
 msgid ""
 "To save time on a *call for tender*, custom vendors, prices, and delivery "
@@ -22168,6 +23761,13 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:47
 msgid "Create an :abbr:`RFQ (Request for Quotation)`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:49
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:148
+msgid ""
+"To create a new :abbr:`RFQ (Request for Quotation)`, navigate to the "
+":menuselection:`Purchase` app, and click :guilabel:`New`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:52
