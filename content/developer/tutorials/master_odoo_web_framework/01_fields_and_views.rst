@@ -354,7 +354,7 @@ There is a service dedicated to calling models methods: `orm_service`, located i
       .. note::
          `print_label` is a mock method; it only displays a message in the logs.
 
-   #. The button should not be disabled if the current order is in `create` mode (i.e., it does not
+   #. The button should be disabled if the current order is in `create` mode (i.e., it does not
       exist yet).
 
       .. tip::
