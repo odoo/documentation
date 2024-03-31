@@ -66,7 +66,7 @@ Install wkhtmltopdf
 
    .. group-tab:: Debian/Ubuntu
 
-      Identify the right package according to your Ubuntu version and architecture on this page 
+      Identify the right package according to your Ubuntu version and architecture on this page
       `version 0.12.6 <https://github.com/wkhtmltopdf/packaging/releases/tag/0.12.6.1-3>`_ and then download and install it using the following steps.
 
       .. code-block:: console
