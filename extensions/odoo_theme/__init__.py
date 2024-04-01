@@ -1,4 +1,5 @@
 from docutils import nodes
+from docutils.parsers.rst import roles
 from sphinx import addnodes
 from sphinx.environment.adapters import toctree
 
@@ -15,6 +16,8 @@ def setup(app):
     app.add_js_file('js/menu.js')
     app.add_js_file('js/page_toc.js')
     app.add_js_file('js/switchers.js')
+
+    roles.register_canonical_role('icon', icon_role)
 
     return {
         'parallel_read_safe': True,
@@ -107,3 +110,17 @@ def resolve(old_resolve, tree, docname, *args, **kwargs):
     if resolved_toc:  # `resolve` returns None if the depth of the TOC to resolve is too high
         _update_toctree_nodes(resolved_toc)
     return resolved_toc
+
+
+def icon_role(name, rawtext, text, lineno, inliner, options=None, content=None):
+    """ Implement an `icon` role for Odoo and Font Awesome icons. """
+    for icon_class in text.split():
+        if not icon_class.startswith('fa-'):
+            report_error = inliner.reporter.error(
+                f"'{icon_class}' is not a valid icon formatting class.", lineno=lineno
+            )
+            error_node = inliner.problematic(rawtext, rawtext, report_error)
+            return [error_node], [report_error]
+    icon_html = f'<i class="{text}"></i>'
+    node = nodes.raw('', icon_html, format='html')
+    return [node], []
