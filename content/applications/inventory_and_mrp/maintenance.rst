@@ -18,5 +18,6 @@ requirements.
    :titlesonly:
 
    maintenance/add_new_equipment
+   maintenance/maintenance_calendar
    maintenance/maintenance_requests
    maintenance/maintenance_setup
