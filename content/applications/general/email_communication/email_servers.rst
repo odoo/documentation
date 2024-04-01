@@ -55,6 +55,8 @@ their respective email, or as the name listed in their *Contacts* record.
 These notifications are sent using a default from address. For more information see
 :ref:`Use a default email address <email_communication/default>`.
 
+.. _email_servers/outbound:
+
 Manage outbound messages
 ========================
 
