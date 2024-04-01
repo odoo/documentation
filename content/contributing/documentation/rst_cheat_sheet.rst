@@ -211,6 +211,24 @@ Use the `command` markup to highlight a command.
           Run the command :command:`make clean html` to delete existing built files and build the
           documentation to HTML.
 
+.. _contributing/markups/icons:
+
+Icons
+-----
+
+Use the `icon` markup to add a class name of an icon. The icon set used is *Font Awesome*. It is
+recommended to accompany an icon with a :ref:`contributing/markups/guilabel` as a descriptor,
+however, it is not mandatory.
+
+.. list-table::
+   :class: o-showcase-table
+
+   * - The graph view is represented by the :icon:`fa-bar-chart` :guilabel:`(bar chart)` icon.
+
+   * - .. code-block:: text
+
+          The graph view is represented by the :icon:`fa-bar-chart` :guilabel:`(bar chart)` icon.
+
 .. _contributing/lists:
 
 Lists
