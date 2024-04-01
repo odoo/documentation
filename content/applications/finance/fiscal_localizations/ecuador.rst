@@ -61,6 +61,21 @@ localization:
        <../accounting/customer_invoices/electronic_invoicing>`, based on the Technical
        documentation published by the SRI. The authorized documents are: Invoices, Credit Notes,
        Debit Notes, Withholdings and Purchase liquidations.
+   * - :guilabel:`Ecuadorian Accounting Reports`
+     - `l10n_ec_reports`
+     - Includes all the technical and functional requirements to generate forms 103 and 104.
+   * - :guilabel:`Ecuador - ATS Report`
+     - `l10n_ec_reports_ats`
+     - Includes all the technical and functional requirements to generate the ATS report XML file
+       ready to be uploaded to the *DIMM Formularios*.
+   * - :guilabel:`Ecuadorian Website`
+     - `l10n_ec_website_sale`
+     - Includes all the technical and functional requirements to generate automatic electronic
+       invoices from a Website sale.
+   * - :guilabel:`Ecuadorian Point of Sale`
+     - `l10n_ec_edi_pos`
+     - Includes all the technical and functional requirements to generate automatic electronic
+       invoices from a PoS sale.
 
 .. note::
    When you install a database from scratch selecting `Ecuador` as the country, Odoo automatically
