@@ -49,9 +49,9 @@ click :guilabel:`Conditionally`.
 .. image:: link_tracker/conditional-visibility.png
    :alt: Use the conditional visibility to display site elements to specific audiences.
 
-For each parameter available in the :ref:`Visibility <blocks/visibility>` section, you can choose
-:guilabel:`Visible for` or :guilabel:`Hidden for` and select the record you want from the dropdown
-list.
+For each parameter available in the :ref:`Visibility <building_blocks/visibility>` section, you can
+choose :guilabel:`Visible for` or :guilabel:`Hidden for` and select the record you want from the
+dropdown list.
 
 Tracked links overview
 ======================
