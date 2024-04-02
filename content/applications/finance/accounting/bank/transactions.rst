@@ -27,11 +27,19 @@ Odoo supports multiple file formats to import transactions:
 - Quicken Interchange Format (.QIF);
 - Belgium: Coded Statement of Account (.CODA).
 
-To import a file, go to the :guilabel:`Accounting Dashboard`, and in the :guilabel:`Bank` journal,
-click on :guilabel:`Import Transactions`.
+To import a file, go to the **Accounting Dashboard**, and in the :guilabel:`Bank` journal,
+click on :guilabel:`Import File`.
 
-.. image:: transactions/import-transactions.png
-   :alt: Import bank transactions from the bank journal
+.. tip::
+   Alternatively, you can also:
+
+   - click :guilabel:`⋮` on the :guilabel:`Bank` journal and select :guilabel:`Import file`;
+   - or access the transaction list by clicking :guilabel:`⋮` on the :guilabel:`Bank` journal and
+     selecting :guilabel:`Transactions`, then click the gear icon :guilabel:`(⚙)` and select
+     :guilabel:`Import records`.
+
+     .. image:: transactions/import-transactions.png
+        :alt: Import bank transactions from the bank journal
 
 Next, select the file and upload it.
 
