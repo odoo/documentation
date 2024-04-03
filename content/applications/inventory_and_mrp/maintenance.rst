@@ -19,3 +19,4 @@ requirements.
 
    maintenance/add_new_equipment
    maintenance/maintenance_requests
+   maintenance/maintenance_setup
