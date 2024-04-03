@@ -28,7 +28,7 @@ Vehicle form fields
 
   If the model is not listed, type in the model name, and click either :guilabel:`Create "model"`,
   or :guilabel:`Create and edit...` to :ref:`create a new model and edit the model details
-  <fleet/configuration/add-model>`.
+  <fleet/add-model>`.
 - :guilabel:`License Plate`: enter the vehicle's license plate number in this field.
 - :guilabel:`Tags`: select any tags from the drop-down menu, or type in a new tag. There is no limit
   on the amount of tags that can be selected.
@@ -313,9 +313,9 @@ Model tab
 ---------
 
 If the model for the new vehicle is already configured in the database, the :guilabel:`Model` tab
-populates the corresponding information. If the model is **not** already in the database, and the
-:guilabel:`Model` tab needs to be configured, it is recommended that :ref:`the new vehicle model
-<fleet/configuration/add-model>` be configured so this information auto-populates.
+will be populated with the corresponding information. If the model is not already in the database
+and the :guilabel:`Model` tab needs to be configured, :ref:`configure the new vehicle model
+<fleet/add-model>`.
 
 Check the information in the :guilabel:`Model` tab to ensure it is accurate. For example, the color
 of the vehicle, or if a trailer hitch is installed, are examples of common information that may need
