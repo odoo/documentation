@@ -2,265 +2,336 @@
 Campaign workflow activities
 ============================
 
-When creating a marketing campaign in the *Marketing Automation* app, users can plan marketing
-activities that can be triggered when certain actions or inactions occur. These can be activities
-such as, automated emails, SMS, or internal server actions.
+A *workflow* is the overall *activity* structure of a marketing automation campaign. There can only
+be a single workflow in each campaign. However, a workflow can be made up of any number of
+:ref:`activities <marketing_automation/activities>` to meet the needs of the campaign.
 
-Add workflow activities
-=======================
-
-To add workflow activities to a marketing campaign, navigate to the bottom of a pre-existing or new
-campaign detail form, beneath the target audience configuration fields, and click :guilabel:`Add new
-activity`.
-
-Doing so reveals a :guilabel:`Create Activities` pop-up window. This pop-up window is a blank
-activity template, where specific parameters can be set for that particular activity.
-
-.. image:: workflow_activities/activity-template.png
+.. figure:: workflow_activities/workflow-activities.png
    :align: center
-   :alt: A workflow activity template pop-up window in Odoo Marketing Automation.
+   :alt: A workflow in an Odoo Marketing Automation campaign.
 
-First, enter a name for the activity in the :guilabel:`Activity Name` field. Then, proceed to
-configure the following options.
+   Workflow sequence of three activities; the last child activity has a :ref:`trigger type
+   <marketing_automation/trigger-type>` of **Mail: not opened**.
 
-Once ready, either click: :guilabel:`Save & Close` to save the activity and close the pop-up form,
-:guilabel:`Save & New` to save the activity and instantly create an additional activity on a fresh
-:guilabel:`Create Activities` pop-up form, or :guilabel:`Discard` to delete the activity.
+.. _marketing_automation/activities:
+
+Activities
+==========
+
+Activities are the methods of communication or server actions, organized in a workflow, that are
+executed within a campaign; they are the building blocks of the campaign's workflow.
+
+A new activity can be added to the workflow on a campaign form by selecting an existing campaign or
+:ref:`creating a new campaign <marketing_automation/campaigns>` from the :menuselection:`Marketing
+Automation app --> Campaigns` dashboard, then clicking the :guilabel:`Add new activity` button in
+the :guilabel:`Workflow` section. Doing so opens the :guilabel:`Create Activities` pop-up window.
+
+First, define the name of the activity in the :guilabel:`Activity Name` field, and select the
+:ref:`type of activity <marketing_automation/activity-types>` to be executed from the
+:guilabel:`Activity Type` field.
+
+Then, configure the activity's :ref:`Trigger <marketing_automation/trigger>`, and optionally, the
+:ref:`Expiry Duration <marketing_automation/expiry-duration>` and the :ref:`DOMAIN
+<marketing_automation/activity-domain>` of the activity.
+
+Once the activity is fully configured, click :guilabel:`Save & Close` to add it to the campaign's
+workflow, or click :guilabel:`Save & New` to add the activity to the workflow and open a new
+:guilabel:`Create Activities` pop-up window to add another activity. Clicking :guilabel:`Discard`
+closes the pop-up window without saving the activity.
+
+.. image:: workflow_activities/create-activities.png
+   :align: center
+   :alt: The create activities pop-up window.
+
+.. _marketing_automation/activity-types:
 
 Activity types
 --------------
 
-Then, select the :guilabel:`Activity Type`. Choose between :guilabel:`Email`, :guilabel:`Server
-Action` (an internal action within the database), or :guilabel:`SMS`.
+There are three different types of activities available in the *Marketing Automation* app:
 
-The field below the :guilabel:`Activity Type` changes, depending on the chosen :guilabel:`Activity
-Type`.
+- :ref:`Email <marketing_automation/email-activity-type>`: an email that is sent to the target
+  audience.
+- :ref:`Server action <marketing_automation/sa-activity-type>`: an internal action within the
+  database that is executed.
+- :ref:`SMS <marketing_automation/sms-activity-type>`: a text message that is sent to the target
+  audience.
 
-Email activity
-~~~~~~~~~~~~~~
+.. _marketing_automation/email-activity-type:
 
-If :guilabel:`Email` is the :guilabel:`Activity Type`, the option to choose a premade/pre-configured
-:guilabel:`Mail Template` becomes available. A mail template can also be created on-the-fly, as
-well.
+Email
+~~~~~
+
+If :guilabel:`Email` is selected as the :guilabel:`Activity Type`, the option to :guilabel:`Pick a
+Template` in the :guilabel:`Mail Template` field is available.
 
 To create a new template directly from the :guilabel:`Mail Template` field, start typing the title
-of the new template into the blank field beside :guilabel:`Mail Template`, and select
-:guilabel:`Create and edit...` to reveal a :guilabel:`Create Marketing Template` pop-up window.
+of the new template, then select :guilabel:`Create and edit...` to reveal a :guilabel:`Create
+Marketing Template` pop-up window. Proceed to create and configure the new email template.
 
-.. image:: workflow_activities/email-activity-create-edit.png
+.. image:: workflow_activities/email-activity-type.png
    :align: center
    :alt: The create and edit email drop-down option on create activities pop-up window.
 
-In that pop-up window, proceed to create and configure the new email template.
+Once the email template is configured, click :guilabel:`Save & Close` to save the activity, and
+return to the :guilabel:`Create Activities` pop-up window, in order to continue to configure the
+:ref:`trigger <marketing_automation/trigger>`.
 
-.. image:: workflow_activities/create-marketing-template-popup-window.png
+.. note::
+   The title used for the :guilabel:`Mail Template` **must** be unique from any other mail template
+   titles in the campaign, and it also serves as the subject of the email.
+
+.. seealso::
+   :doc:`Creating and configuring email templates <../email_marketing>`
+
+.. _marketing_automation/sa-activity-type:
+
+Server action
+~~~~~~~~~~~~~
+
+If :guilabel:`Server Action` is selected as the :guilabel:`Activity Type`, the option to
+:guilabel:`Pick a Server Action` in the :guilabel:`Server Action` field is available. This field is
+a drop-down menu containing all the pre-configured server actions for the campaign's
+:guilabel:`Target` model. Optionally, :ref:`create a new server action
+<marketing_automation/create-sa>`.
+
+.. image:: workflow_activities/sa-activity-type.png
    :align: center
-   :alt: The create marketing template email pop-up window in Odoo Marketing Automation.
+   :alt: The Server Action drop-down menu on create activities pop-up window.
 
-Server action activity
-~~~~~~~~~~~~~~~~~~~~~~
+After selecting a pre-configured server action, no other activity type configuration is needed.
+Click :guilabel:`Save & Close` to save the activity, and return to the :guilabel:`Create Activities`
+pop-up window, in order to configure the :ref:`trigger <marketing_automation/trigger>`.
 
-If :guilabel:`Server Action` is the :guilabel:`Activity Type`, the option to choose a specific
-:guilabel:`Server Action` (e.g. Message for sales person, Create Leads on Website clicks, etc.)
-becomes available.
+.. tip::
+   To view all server actions in the database, activate :ref:`developer-mode`, and navigate to
+   :menuselection:`Settings app --> Technical --> Actions --> Server Actions` dashboard.
 
-The option to create a new server action directly from the :guilabel:`Server Action` is also
-available. To do that, type in the name of the new action, then click :guilabel:`Create and Edit...`
-from the drop-down menu.
+.. _marketing_automation/create-sa:
 
-.. image:: workflow_activities/server-action-create-edit-option.png
+Create a new server action
+**************************
+
+The option to create a new server action is also available. To do so, type in the :guilabel:`Server
+Action` field a title for the new action, then click :guilabel:`Create and edit...`. Doing so
+reveals a blank :guilabel:`Create Server Action` pop-up window, wherein a custom server action can
+be created and configured.
+
+.. image:: workflow_activities/create-sa.png
    :align: center
-   :alt: The create and edit option in the server action field on campaign detail form.
+   :alt: The Create Server Action pop-up window.
 
-Or, as an alternative, click the empty :guilabel:`Server Action` field to reveal a drop-down menu,
-and select :guilabel:`Search More...` to reveal a :guilabel:`Search: Server Action` pop-up window,
-containing all the pre-configured server action options to choose from.
+On the :guilabel:`Create Server Action` pop-up window, select the :guilabel:`Type` of server action.
+The configuration fields change, depending on the selected :guilabel:`Type`:
 
-To create a new server action from this pop-up window, and click :guilabel:`New`.
+- :guilabel:`Update Record`: update the values of a record.
+- :guilabel:`Create Activity`: create an activity with the *Discuss* app.
+- :guilabel:`Send Email`: post a message, a note, or send an email with the *Discuss* app.
+- :guilabel:`Send SMS`: send an SMS, and log them on documents, with the *SMS* app.
+- :guilabel:`Add Followers` or :guilabel:`Remove Followers`: add or remove followers on a record
+  with the *Discuss* app.
+- :guilabel:`Create Record`: create a new record with new values.
+- :guilabel:`Execute Code`: execute a block of Python code.
+- :guilabel:`Send Webhook Notification`: send a POST request to an external system.
+- :guilabel:`Execute Existing Actions`: define an action that triggers several other server
+  actions.
 
-.. image:: workflow_activities/search-server-action-new-button.png
-   :align: center
-   :alt: The new button found on a server action pop-up in Odoo marketing automation application.
+Once the server action is configured, click :guilabel:`Save & Close` to save the activity, and
+return to the :guilabel:`Create Activities` pop-up window, in order to configure the :ref:`trigger
+<marketing_automation/trigger>`.
 
-Either option reveals a blank :guilabel:`Create Server Action` pop-up, wherein a custom server
-action can be created and configured.
+.. tip::
+   Some of the server action types have advanced configurations available when :ref:`developer-mode`
+   is activated, such as specifying the :guilabel:`Allowed Groups` that can execute this server
+   action.
 
-SMS activity
-~~~~~~~~~~~~
+.. _marketing_automation/sms-activity-type:
 
-If :guilabel:`SMS` is the :guilabel:`Activity Type`, the option to choose a premade/pre-configured
-:guilabel:`SMS Template` becomes available. A SMS template can also be created on-the-fly directly
-from this field.
+SMS
+~~~
 
-To create a new template directly from the :guilabel:`SMS Template` field, start typing the title
-of the new template into the blank field beside :guilabel:`SMS Template`, and select
-:guilabel:`Create and edit...` from the drop-down menu.
+If :guilabel:`SMS` is selected as the :guilabel:`Activity Type`, the option to :guilabel:`Pick a
+Template` in the :guilabel:`SMS Template` field is available.
 
-.. image:: workflow_activities/create-edit-sms-option.png
+To create a new template directly from the :guilabel:`SMS Template` field, start typing the title of
+the new template, and select :guilabel:`Create and edit...` to reveal a :guilabel:`Create Marketing
+Template` pop-up window. Proceed to create and configure the new SMS template.
+
+.. image:: workflow_activities/sms-activity-type.png
    :align: center
    :alt: The create and edit email drop-down option on create activities pop-up window.
 
-Doing so reveals a :guilabel:`Create Marketing Template` pop-up window. In that pop-up window,
-proceed to create and configure the new SMS template.
+Once the SMS template is configured, click :guilabel:`Save & Close` to save the activity, and return
+to the :guilabel:`Create Activities` pop-up window, in order to configure the :ref:`trigger
+<marketing_automation/trigger>`.
 
-.. image:: workflow_activities/sms-marketing-template-popup.png
-   :align: center
-   :alt: The create marketing template pop-up window to create a SMS template on-the-fly.
+.. seealso::
+   :doc:`Creating and configuring SMS templates <../sms_marketing/essentials/sms_essentials>`
+
+.. _marketing_automation/trigger:
 
 Trigger
 -------
 
-The :guilabel:`Trigger` field on the :guilabel:`Create Activities` pop-up form allows users to
-choose when the designated workflow activity should be triggered.
+Once an :ref:`activity type <marketing_automation/activity-types>` is configured, the next step in
+the :guilabel:`Create Activities` pop-up window is to define when the activity should be executed.
+This is done in the :guilabel:`Trigger` field group.
 
-Start by selecting a number in the top field. In the next :guilabel:`Trigger` field, designate if
-it should be :guilabel:`Hours`, :guilabel:`Days`, :guilabel:`Weeks`, or :guilabel:`Months`. Then,
-click the final field, where it reads :guilabel:`beginning of the workflow` be default to reveal a
-a drop-down menu of other trigger options.
-
-.. image:: workflow_activities/trigger-options-drop-down-menu.png
+.. image:: workflow_activities/trigger.png
    :align: center
-   :alt: A list of the trigger options available on the workflow activities pop-up form.
+   :alt: The trigger field group on Create Activities pop-up window.
 
-The trigger options are as follows:
+To set an execution delay for the activity from when the :ref:`trigger type
+<marketing_automation/trigger-type>` occurs, type a whole number in the *interval number* input
+(e.g. `2` is valid, `0` is also valid, and `1.5` is not).
 
-- :guilabel:`beginning of the workflow`: the activity will be triggered at the previously-configured
-  time after the beginning of the entire workflow.
-- :guilabel:`another activity`: the activity will be triggered at the previously-configured time
-  after another specific activity in the workflow.
-- :guilabel:`Mail:opened`: the activity will be triggered at the previously-configured time if the
-  sent mail in the workflow has been opened by the recipient.
-- :guilabel:`Mail:not opened`: the activity will be triggered at the previously-configured time if
-  the sent mail in the workflow has not been opened by the recipient.
-- :guilabel:`Mail: replied`: the activity will be triggered at the previously-configured time if the
-  sent mail in the workflow has been replied to by the recipient.
-- :guilabel:`Mail: not replied`: the activity will be triggered at the previously-configured time if
-  the sent mail in the workflow has not been replied to by the recipient.
-- :guilabel:`Mail: clicked`: the activity will be triggered at the previously-configured time if the
-  sent mail in the workflow has been clicked by the recipient, after it's been opened.
-- :guilabel:`Mail: not clicked`: the activity will be triggered at the previously-configured time if
-  the sent mail in the workflow has not been clicked by the recipient, after it's been opened.
-- :guilabel:`Mail: bounced`: the activity will be triggered at the previously-configured time if the
-  sent mail in the workflow has been bounced back for any reason.
-- :guilabel:`SMS: clicked`: the activity will be triggered at the previously-configured time if the
-  sent SMS in the workflow has been clicked by the recipient, after it's been opened.
-- :guilabel:`SMS: not clicked`: the activity will be triggered at the previously-configured time if
-  the sent SMS in the workflow has not been clicked by the recipient, after it's been opened.
-- :guilabel:`SMS: bounced`: the activity will be triggered at the previously-configured time if the
-  sent SMS in the workflow has been bounced back for any reason.
+Next, select the unit of time for the interval number in the *interval type* drop-down menu, the
+options are: :guilabel:`Hours`, :guilabel:`Days`, :guilabel:`Weeks`, and :guilabel:`Months`.
+
+.. example::
+   If the interval number is set to `0` and the interval type is set to :guilabel:`Hours`, the
+   activity will be executed immediately after the trigger type occurs (at the next scheduled run of
+   the :ref:`Mail: Email Queue Manager cron <email_communication/email-sent-late>`).
+
+.. _marketing_automation/trigger-type:
+
+Trigger type
+~~~~~~~~~~~~
+
+To define the event occurrence that sets the activity into motion, select a *trigger type* from the
+drop-down menu:
+
+- :guilabel:`beginning of workflow`: the activity is executed when the campaign is started.
+
+All other trigger types reveal a drop-down menu :guilabel:`Activity` field containing all of the
+other activities in the campaign. Selecting one of these types converts this activity into a
+:ref:`child activity <marketing_automation/child-activities>` to be executed directly after the
+selected :guilabel:`Activity`:
+
+- :guilabel:`another activity`: to be executed after another activity in the campaign.
+- :guilabel:`Mail: opened`: the activity's email was opened by the participant.
+- :guilabel:`Mail: not opened`: the activity's email was **not** opened by the participant.
+- :guilabel:`Mail: replied`: the activity's email was replied to by the participant.
+- :guilabel:`Mail: not replied`: the activity's email was **not** replied to by the participant.
+- :guilabel:`Mail: clicked`: a link in the activity's email was clicked by the participant.
+- :guilabel:`Mail: not clicked`: a link in the activity's email was **not** clicked by the
+  participant.
+- :guilabel:`Mail: bounced`: the activity's email has bounced.
+- :guilabel:`SMS: clicked`: a link in the activity's SMS was clicked by the participant.
+- :guilabel:`SMS: not clicked`: a link in the activity's SMS was **not** clicked by the participant.
+- :guilabel:`SMS: bounced`: the activity's SMS has bounced.
+
+.. example::
+   If the trigger type is set to :guilabel:`Mail: clicked`, this activity is converted to a
+   :ref:`child activity <marketing_automation/child-activities>` and will execute **after** a
+   participant clicks on a link from the parent activity defined in the :guilabel:`Activity` field.
+
+.. _marketing_automation/expiry-duration:
 
 Expiry duration
 ---------------
 
-Next, on the :guilabel:`Create Activities` pop-up form is the :guilabel:`Expiry Duration` option.
+Optionally, an :guilabel:`Expiry Duration` can be defined in the :guilabel:`Create Activities`
+pop-up window to cancel the execution of this activity after a specific amount of time. Selecting
+this checkbox reveals the :guilabel:`Cancel after` field with *interval* and *interval type* inputs.
 
-The :guilabel:`Expiry Duration` checkbox provides the option to configure the activity to stop the
-actions after a specific amount of time (after the scheduled date).
+Type a whole number in the interval number input (e.g. `2` is valid, `0` is also valid, and `1.5`
+is not). Then, select the unit of time for the interval number in the interval type drop-down menu,
+the options are: :guilabel:`Hours`, :guilabel:`Days`, :guilabel:`Weeks`, and :guilabel:`Months`.
 
-When selected, a :guilabel:`Cancel after` field appears, in which the number of :guilabel:`Hours,
-Days, Weeks, or Months` can be configured for the actions to cease after the initial date.
+.. example::
+   If the interval number is set to `2` and the interval type is set to :guilabel:`Days`, the
+   activity will be cancelled if it has not been executed within 2 days of the trigger type.
 
-.. image:: workflow_activities/expiry-duration-field-options.png
-   :align: center
-   :alt: A list of the expiry duration options available on the workflow activities pop-up form.
+.. _marketing_automation/activity-domain:
 
-Activity and applied filters
-----------------------------
+Activity domain
+---------------
 
-Moving down into the :guilabel:`Domain` section of the :guilabel:`Create Activities` pop-up form,
-there is the :guilabel:`Activity Filter` and :guilabel:`Applied Filter` fields.
+The :guilabel:`DOMAIN` section of the :guilabel:`Create Activities` pop-up window contains fields to
+further filter the target audience of the activity.
 
-The :guilabel:`Activity Filter` field provides the option to configure a recipient filter domain
-that applies to this activity *and* its child activities. In works in the same fashion as a typical
-target audience filter.
+The :guilabel:`Activity Filter` field focuses this activity, **and** its :ref:`child activities
+<marketing_automation/child-activities>`, even further on a specific group of the campaign's filter.
+The process is the same as :ref:`defining filters <marketing_automation/defining-filters>` for the
+campaign, and the fields that are available to filter are also specific to the :guilabel:`Target`
+of the campaign.
 
-To add an activity filter, click :guilabel:`Add condition` in the :guilabel:`Activity Filter` field
-and proceed to configure a custom activity filter equation rule(s).
+The :guilabel:`# record(s)` beside the :guilabel:`Activity Filter` field indicates how many records
+are currently being targeted by this :guilabel:`Activity Filter`.
 
-.. image:: workflow_activities/activity-filter-option.png
-   :align: center
-   :alt: How to add an activity filter to a workflow activity in Odoo Marketing Automation.
+The :guilabel:`Applied Filter` displays the combined filters from the :guilabel:`Activity Filter`
+and the inherited campaign :doc:`Filter <target_audience>`. This field is read-only.
 
-This option is not a required field. If left alone, the activity applies to all records related to
-the target audience of the overall campaign.
+The :guilabel:`# record(s)` beside the :guilabel:`Applied Filter` field indicates how many records,
+in total, are currently being targeted by the activity.
 
-.. seealso::
-   - :doc:`target_audience`
-
-The :guilabel:`Applied Filter` field is non-configurable. It's simply a summary of when the activity
-will be performed, *only* if it satisfies the specified domain (e.g. the rules configured in the
-:guilabel:`Activity Filter` field).
-
-.. note::
-  After the activity's settings are fully configured, click :guilabel:`Save & Close` to save the
-  activity and return to the marketing automation campaign form, :guilabel:`Save & New` to save the
-  activity and immediately create another one in a fresh :guilabel:`Create Activities` pop-up
-  window, or :guilabel:`Discard` to delete the activity and return to the marketing automation
-  campaign form.
-
-Workflow activity
-=================
-
-Once an activity is created and saved, it appears as an activity card in the :guilabel:`Workflow`
-section, located at the bottom of the marketing automation campaign form. The analytics related to
-each activity is displayed as a line graph.
-
-.. image:: workflow_activities/workflow-activity.png
-   :align: center
-   :alt: Typical workflow activity in Odoo Marketing Automation.
-
-The configured :guilabel:`Trigger` time for that activity can be found to the left of the
-:guilabel:`Workflow Activity` card in the :guilabel:`Workflow` section.
-
-Once the activity has been triggered, a figure representing the number of :guilabel:`Success` or
-:guilabel:`Rejected` activities will be displayed to the right of the graph.
-
-.. tip::
-   If the :guilabel:`Activity Type` of the activity is set to :guilabel:`Email` or :guilabel:`SMS`,
-   there are more in-depth analytics beneath the activity graph data, detailing how many messages
-   have been :guilabel:`Sent`, and what percentage of those have been :guilabel:`Clicked`,
-   :guilabel:`Replied` to, or :guilabel:`Bounced`.
+.. _marketing_automation/child-activities:
 
 Child activities
 ================
 
-There is also the option to add a *child activity* by clicking :guilabel:`Add child activity`,
-located at the bottom of each activity block in the :guilabel:`Workflow` section of a marketing
-campaign form.
+Activities that are connected to, and triggered by, another activity are known as, *child
+activities*.
 
-Child activities are sub-activities that are connected to and triggered by the activity above it,
-which is known as its *parent activity*. A child activity is easy to recognize, as its slightly
-indented beneath its parent activity.
+The activity that triggers a child activity is known as its *parent activity*.
 
-.. image:: workflow_activities/indented-child-activity.png
-   :align: center
-   :alt: A typical child activity indented beneath its parent activity.
+A child activity can be added to a campaign's workflow by hovering over the :guilabel:`➕ Add child
+activity` button, located beneath the desired parent activity.
 
-Odoo provides a number of triggering options to launch a child activity - all of which depend on the
-trigger configurations related to its parent activity. Under the desired parent activity, hover over
-:guilabel:`Add child activity`, to reveal a menu of child activity trigger options.
+The child activity's :ref:`trigger types <marketing_automation/trigger-type>` are specific to the
+parent :ref:`activity type <marketing_automation/activity-types>` (*Email*, *SMS*, or *Server
+Action*), and are as follows:
 
-.. image:: workflow_activities/child-activity-trigger-options.png
-   :align: center
-   :alt: The various child activity trigger options in the workflow section of a campaign.
+.. tabs::
 
-Select any of the following child activity triggers:
+   .. tab:: Email
 
-- :guilabel:`Add Another Activity`: instantly adds another activity.
-- :guilabel:`Opened`: the next activity will be triggered if the recipient opens the mailing.
-- :guilabel:`Not Opened`: the next activity will be triggered if the recipient does not open the
-  mailing.
-- :guilabel:`Replied`: the next activity will be triggered if the recipient replies to the mailing.
-- :guilabel:`Not Replied`: the next activity will be triggered if the recipient does not reply to
-  the mailing.
-- :guilabel:`Clicked`: the next activity will be triggered if the recipient clicks on a link
-  included in the mailing.
-- :guilabel:`Not Clicked`: the next activity will be triggered if the recipient does not click on a
-  link included in the mailing.
-- :guilabel:`Bounced`: the next activity will be triggered if the mailing is bounced (not sent).
+      .. image:: workflow_activities/email-trigger-types.png
+         :align: center
+         :alt: The trigger types for child activities of an email activity.
 
-Once a trigger is selected, the user can configure the child activity the same way they would for a
-regular workflow activity.
+      Each trigger the child activity on the following conditions of the parent activity:
+
+      - :guilabel:`Add Another Activity`: to be executed after the parent activity.
+      - :guilabel:`Opened`: the email was opened by the participant.
+      - :guilabel:`Not Opened`: the email was **not** opened by the participant.
+      - :guilabel:`Replied`: the email was replied to by the participant.
+      - :guilabel:`Not Replied`: the email was **not** replied to by the participant.
+      - :guilabel:`Clicked`: a link in the email was clicked by the participant.
+      - :guilabel:`Not Clicked`: a link in the email was **not** clicked by the participant.
+      - :guilabel:`Bounced`: the email has bounced.
+
+   .. tab:: Server Action
+
+      .. image:: workflow_activities/sa-trigger-types.png
+         :align: center
+         :alt: The trigger types for child activities of a server action activity.
+
+      Triggers the child activity on the following condition of the parent activity:
+
+      - :guilabel:`Add Another Activity`: to be executed after the parent activity.
+
+   .. tab:: SMS
+
+      .. image:: workflow_activities/sms-trigger-types.png
+         :align: center
+         :alt: The trigger types for child activities of an SMS activity.
+
+      Each trigger the child activity on the following conditions of the parent activity:
+
+      - :guilabel:`Add Another Activity`: to be executed after the parent activity.
+      - :guilabel:`Clicked`: a link in the SMS was clicked by the participant.
+      - :guilabel:`Not Clicked`: a link in the SMS was **not** clicked by the participant.
+      - :guilabel:`Bounced`: the SMS has bounced.
+
+Once a trigger type is selected, the :guilabel:`Create Activities` pop-up window opens to configure
+the child activity. The process is the same as :ref:`creating a new activity
+<marketing_automation/activities>`, with the exception that the :guilabel:`Trigger` field is
+pre-filled with the selected trigger type, and the :guilabel:`Activity` field has the parent
+activity selected.
 
 .. seealso::
    - :doc:`testing_running`
+   - :doc:`understanding_metrics`
+   - :doc:`target_audience`
