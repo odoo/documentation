@@ -13,7 +13,7 @@ marketing campaigns, it also provides advanced features to automate repetitive t
 database.
 
 Get started by creating a :ref:`new campaign from scratch <marketing_automation/campaigns>` or start
-with a :ref:`campaign template <marketing-automation/campaign-templates>`.
+with a :ref:`campaign template <marketing_automation/campaign-templates>`.
 
 .. seealso::
    `Odoo Tutorials: Marketing <https://www.odoo.com/slides/marketing-27>`_
@@ -69,13 +69,13 @@ A *campaign* refers to a workflow of activities that are automatically executed 
 audience, based on predefined filters, triggers, and durations of activities.
 
 A new campaign can be created from scratch or from a :ref:`template
-<marketing-automation/campaign-templates>`.
+<marketing_automation/campaign-templates>`.
 
 To create a campaign, navigate to the :menuselection:`Marketing Automation` application, from the
 main Odoo dashboard, to open the :guilabel:`Campaigns` dashboard. From here, click the
 :guilabel:`New` button to reveal a new campaign form.
 
-.. _marketing-automation/campaign-templates:
+.. _marketing_automation/campaign-templates:
 
 Campaign templates
 ------------------
@@ -166,9 +166,12 @@ are engaged by the activity as *Success* and *Rejected* counts.
 To create one of the following activities, click :guilabel:`Add new activity` in the
 :guilabel:`Workflow` section of the campaign form:
 
-- :guilabel:`Email`: send an email to the target audience.
-- :guilabel:`SMS`: send an SMS to the target audience.
-- :guilabel:`Server Action`: executes an automated action.
+- :ref:`Email <marketing_automation/email-activity-type>`: an email that is sent to the target
+  audience.
+- :ref:`Server action <marketing_automation/sa-activity-type>`: an internal action within the
+  database that is executed.
+- :ref:`SMS <marketing_automation/sms-activity-type>`: a text message that is sent to the target
+  audience.
 
 .. seealso::
    :doc:`marketing_automation/workflow_activities`
