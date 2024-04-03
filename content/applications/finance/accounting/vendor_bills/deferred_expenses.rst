@@ -55,7 +55,8 @@ Generate deferral entries on validation
 .. tip::
    Make sure the :guilabel:`Start Date` and :guilabel:`End Date` fields are visible in the
    :guilabel:`Invoice Lines` tab. In most cases, the :guilabel:`Start Date` should be in the same
-   month as the :guilabel:`Bill Date`.
+   month as the :guilabel:`Bill Date`. Deferred expense entries are posted from the bill date and
+   are displayed in the report accordingly.
 
 For each line of the bill that should be deferred, specify the start and end dates of the deferral
 period.
