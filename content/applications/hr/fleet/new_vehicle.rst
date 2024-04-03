@@ -139,7 +139,7 @@ Model tab
 If the model for the new vehicle is already configured in the database, the :guilabel:`Model` tab
 will be populated with the corresponding information. If the model is not already in the database
 and the :guilabel:`Model` tab needs to be configured, :ref:`configure the new vehicle model
-<fleet/configuration/add-model>`.
+<fleet/add-model>`.
 
 Check the information in the :guilabel:`Model` tab to ensure it is accurate. For example, the color
 of the vehicle, or whether there is a trailer hitch installed or not, are examples of information
