@@ -321,8 +321,8 @@ The following options have been automatically configured:
   of 103 form if it is a  income tax withholding code.
 - :guilabel:`Tax Name`:
 
-  - For IVA tax, format the name as: `IVA [percent] (104, [form code] [tax support code] [tax support
-    short name])`
+  - For IVA tax, format the name as: `IVA [percent] (104, [form code] [tax support code] [tax
+    support short name])`
   - For income tax withholding code, format the name as: `Code ATS [Percent of withhold] [withhold
     name]`
 
@@ -569,13 +569,94 @@ withholdings percentages apply.
    withholding of 70% in a new line with the same tax support, the system will allow you as long as
    the total of the bases matches the total from the :guilabel:`Vendor Bill`.
 
+eCommerce
+---------
+
+The :ref:`ATS Report module <ecuador/ats>` enables the following:
+
+- Choose the SRI Payment Method in each payment method's configuration.
+- Customers can manually input their identification type and identification number during the
+  eCommerce checkout process.
+- Automatically generate a valid electronic invoice for Ecuador at the end of the checkout process.
+
+Configuration
+~~~~~~~~~~~~~
+
+Website
+*******
+
+To generate an invoice after the checkout process, navigate to :menuselection:`Website -->
+Configuration --> Settings` and activate the :guilabel:`Automatic Invoice` option found under the
+:guilabel:`Invoicing` section.
+
+.. tip::
+   The invoice's email template can be modified from the :guilabel:`Invoice Email Template` field
+   under the :guilabel:`Automatic Invoice` option.
+
+.. important::
+   The sales journal used for invoicing is the first in the sequence of priority in the
+   :guilabel:`Journal` menu.
+
+Payment providers
+*****************
+
+To activate the payment providers that should be used to capture eCommerce payments, navigate to
+:menuselection:`Website --> Configuration --> Payment Providers` section and then click on the
+:guilabel:`View other providers` button under the :guilabel:`Activate Payments` heading. From here,
+each payment provider can be configured by selecting a provider record. Refer to the :doc:`payment
+provider <../payment_providers>` documentation for more information.
+
+Payment methods
+^^^^^^^^^^^^^^^
+
+To activate one or more payment methods for a payment provider, click :guilabel:`→ Enable Payment
+Methods` within the :guilabel:`Configuration` tab of each provider.
+
+When configuring the payment method, it is **mandatory** to set the :guilabel:`SRI Payment Method`
+for each method. This field appears after you create and save the payment method for the first
+time.
+
+.. note::
+   Adding the :guilabel:`SRI Payment Method` is necessary to generate correctly the electronic
+   invoice from an eCommerce sale. Select a **payment method** to access its configuration menu and
+   the field.
+
+.. seealso::
+   :doc:`Payment provider <../payment_providers>`
+
+.. image:: ecuador/l10n-ec-sri-payment-method.png
+   :align: center
+   :alt: l10n_ec SRI Payment Method.
+
+eCommerce workflow
+~~~~~~~~~~~~~~~~~~
+
+Type and identification number
+******************************
+
+The client who is making a purchase will have the option to indicate their identification type and
+number during the checkout process. This information is required to correctly generate the
+electronic invoice after the checkout is completed.
+
+.. image:: ecuador/website-checkout-form.png
+   :align: center
+   :alt: Website checkout form.
+
+.. note::
+   Verification is done to ensure the *Identification Number* field is completed and has the correct
+   number of digits. For RUC identification, 13 digits are required. For Cédula, 9 digits are
+   required.
+
+After finishing the checkout process, a confirmed invoice is generated, ready to be sent manually or
+asynchronously to the SRI.
+
 Financial Reports
 =================
 
-In Ecuador, there are fiscal reports that the company presents to SRI. In Odoo, we have two of the
-main financial reports used by companies. These are the reports 103 and 104.
+In Ecuador, there are fiscal reports that the company presents to SRI. Odoo supports two of the main
+financial reports used by companies: **reports 103** and **104**.
 
-To get these reports go to the :guilabel:`Accounting` app and select :menuselection:`Reporting -->
+To get these reports, go to the **Accounting** app and select :menuselection:`Reporting -->
 Statements Reports --> Tax Report` and then filter by `Tax Report 103` or `Tax Report 104`.
 
 Report 103
@@ -584,8 +665,8 @@ Report 103
 This report contains information of income tax withholdings in a given period, this can be reported
 monthly or semi-annually.
 
-You can see the information needed to report, which includes base and tax amounts, which also
-includes the tax code within the parenthesis in order to report it to the SRI.
+You can see the information needed to report, which includes base and tax amounts, but also includes
+the tax code within the parenthesis in order to report it to the SRI.
 
 .. image:: ecuador/103-form.png
    :align: center
@@ -597,12 +678,14 @@ Report 104
 This report contains information on VAT tax and VAT withholding for a given period, this can be
 monthly or semi-annually.
 
-You can see the information needed to report, which includes base and tax amounts, which also
-includes the tax code within the parenthesis in order to report it to the SRI.
+You can see the information needed to report, which includes base and tax amounts, but also includes
+the tax code within the parenthesis to report it to the SRI.
 
 .. image:: ecuador/104-form.png
    :align: center
    :alt: Report 104 form for Ecuador.
+
+.. _ecuador/ats:
 
 ATS report
 ----------
@@ -611,8 +694,8 @@ ATS report
 downloading the ATS report in XML format.
 
 .. note::
-   The Ecuadorian *ATS Report* module is dependent on the previous installation of the *Accounting*
-   app and the *Ecuadorian EDI module*.
+   The Ecuadorian *ATS Report* module depends on the previous installation of the *Accounting* app
+   and the *Ecuadorian EDI module*.
 
 Configuration
 ~~~~~~~~~~~~~
