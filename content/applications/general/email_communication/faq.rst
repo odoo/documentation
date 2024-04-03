@@ -120,6 +120,8 @@ If this is a recurring problem with the same client, or the same domain, do not 
    :ref:`developer mode <developer-mode>` by navigating to :menuselection:`Settings app -->
    Technical menu --> Parameters --> System Parameters`.
 
+.. _email_communication/email-sent-late:
+
 Email is sent late
 ------------------
 
