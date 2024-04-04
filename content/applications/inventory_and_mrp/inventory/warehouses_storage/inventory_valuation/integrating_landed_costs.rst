@@ -1,81 +1,174 @@
-=======================================================
-Integrating additional costs to products (landed costs)
-=======================================================
+============
+Landed costs
+============
 
 .. _inventory/reporting/landed_costs:
 
-The landed cost feature in Odoo allows the user to include additional costs (shipment, insurance,
-customs duties, etc.) into the cost of the product.
+.. |RfQ| replace:: :abbr:`RfQ (Request for Quotation)`
+.. |PO| replace:: :abbr:`PO (Purchase Order)`
+.. |FIFO| replace:: :abbr:`FIFO (First In First Out)`
+.. |AVCO| replace:: :abbr:`AVCO (Average Costing)`
+
+When shipping products to customers, the landed cost is the total price of a product or shipment,
+including all expenses associated with shipping the product.
+
+In Odoo, the *Landed Costs* feature is used to take additional costs into account when calculating
+the valuation of a product. This includes the cost of shipment, insurance, customs duties, taxes,
+and other fees.
 
 Configuration
 =============
 
-First, go to :menuselection:`Inventory --> Configuration --> Settings --> Valuation` and activate
-the :guilabel:`Landed Costs` feature. Odoo also gives the option to set a :guilabel:`Default
-Journal` in which the landed costs accounting entries will be recorded.
+To add landed costs to products, the *Landed Costs* feature must first be enabled. To enable this
+feature, navigate to :menuselection:`Inventory app --> Configuration --> Settings`, and scroll to
+the :guilabel:`Valuation` section.
 
-.. image:: integrating_landed_costs/landed-costs-setting.png
+Tick the checkbox next to the :guilabel:`Landed Costs` option, and click :guilabel:`Save` to save
+changes.
+
+Once the page refreshes, a new :guilabel:`Default Journal` field appears below the :guilabel:`Landed
+Costs` feature in the :guilabel:`Valuation` section.
+
+Click the :guilabel:`Default Journal` drop-down menu to reveal a list of accounting journals. Select
+a journal for which all accounting entries related to landed costs should be recorded.
+
+.. image:: integrating_landed_costs/integrating-landed-costs-enabled-setting.png
    :align: center
-   :alt: Activate the landed cost feature in Inventory settings.
+   :alt: Landed Costs feature and resulting Default Journal field in the Inventory settings.
 
-Add costs to products
+Create landed cost product
+==========================
+
+For charges that are consistently added as landed costs, a landed cost product can be created in
+Odoo. This way, a landed cost product can be quickly added to a vendor bill as an invoice line,
+instead of having to be manually entered every time a new vendor bill is created.
+
+To do this, create a new product by going to :menuselection:`Inventory app --> Products -->
+Products`, and clicking :guilabel:`New`.
+
+Assign a name to the landed cost product in the :guilabel:`Product Name` field (i.e. `International
+Shipping`). In the :guilabel:`Product Type` field, click the drop-down menu, and select
+:guilabel:`Service` as the :guilabel:`Product Type`.
+
+.. important::
+   Landed cost products **must** have their :guilabel:`Product Type` set to :guilabel:`Service`.
+
+Click the :guilabel:`Purchase` tab, and tick the checkbox next to :guilabel:`Is a Landed Cost` in
+the :guilabel:`Vendor Bills` section. Once ticked, a new :guilabel:`Default Split Method` field
+appears below it, prompting a selection. Clicking that drop-down menu reveals the following options:
+
+- :guilabel:`Equal`: splits the cost equally across each product included in the receipt, regardless
+  of the quantity of each.
+- :guilabel:`By Quantity`: splits the cost across each unit of all products in the receipt.
+- :guilabel:`By Current Cost`: splits the cost according to the cost of each product unit, so a
+  product with a higher cost receives a greater share of the landed cost.
+- :guilabel:`By Weight`: splits the cost, according to the weight of the products in the receipt.
+- :guilabel:`By Volume`: splits the cost, according to the volume of the products in the receipt.
+
+.. image:: integrating_landed_costs/integrating-landed-costs-landed-cost-product.png
+   :align: center
+   :alt: Is a Landed Cost checkbox and Default Split Method on service type product form.
+
+When creating new vendor bills, this product can be added as an invoice line as a landed cost.
+
+.. important::
+   To apply a landed cost on a vendor bill, the products included in the original |PO| **must**
+   belong to a *Product Category* with its *Force Removal Strategy* set to |FIFO|, and its *Costing
+   Method* set to |AVCO|.
+
+Create purchase order
 =====================
 
-Receive the vendor bill
------------------------
+Navigate to :menuselection:`Purchase app --> New` to create a new request for quotation (RfQ). In
+the :guilabel:`Vendor` field, add a vendor to order products from. Then, click :guilabel:`Add a
+product`, under the :guilabel:`Products` tab, to add products to the |RfQ|.
 
-After a vendor fulfills a purchase order and sends a bill, click :guilabel:`Create Bill` on the
-purchase order to create a vendor bill in Odoo. If the vendor bill includes landed costs, such as
-custom duties, tick the box in the :guilabel:`Landed Costs` column on the vendor bill invoice line.
+Once ready, click :guilabel:`Confirm Order` to confirm the order. Then, click :guilabel:`Receive
+Products` once the products have been received, followed by :guilabel:`Validate`.
 
-.. image:: integrating_landed_costs/landed-costs-field-vendor-bill.png
+Create vendor bill
+------------------
+
+Once the vendor fulfills the |PO| and sends a bill, a vendor bill can be created from the |PO| in
+Odoo.
+
+Navigate to the :menuselection:`Purchase app`, and click into the |PO| for which a vendor bill
+should be created. Then, click :guilabel:`Create Bill`. This opens a new :guilabel:`Vendor Bill` in
+the :guilabel:`Draft` stage.
+
+In the :guilabel:`Bill Date` field, click the line to open a calendar popover menu, and select the
+date on which this draft bill should be billed.
+
+Then, under the :guilabel:`Invoice Lines` tab, click :guilabel:`Add a line`, and click the drop-down
+menu in the :guilabel:`Product` column to select the previously created landed cost product. Click
+the :guilabel:`Save manually (cloud with arrow)` icon to update the draft bill.
+
+.. image:: integrating_landed_costs/integrating-landed-costs-checkboxes.png
    :align: center
-   :alt: Enable Landed Costs option on vendor bill line.
+   :alt: Landed Costs column checkboxes for product and landed cost.
 
-For charges that are always landed costs, create a landed cost product in Odoo. That way, the
-landed cost product can be quickly added to the vendor bill as an invoice line instead of manually
-entering the landed cost information every time a vendor bill comes in.
+In the :guilabel:`Landed Costs` column, the product ordered from the vendor does **not** have its
+checkbox ticked, while the landed cost product's checkbox **is** ticked. This differentiates landed
+costs from all other costs displayed on the bill.
 
-First, create a new product in :menuselection:`Inventory --> Products --> Products --> Create`.
-Next, name the landed cost product. Then, set the :guilabel:`Product Type` to :guilabel:`Service`.
-A landed cost product must always be a service product type. After that, go to the
-:guilabel:`Purchase` tab and check the box next to :guilabel:`Is a Landed Cost`. Finally, click
-:guilabel:`Save` to finish creating the landed cost product.
+Additionally, at the top of the form, a :guilabel:`Create Landed Costs` button appears.
 
-If this product is always a landed cost, you can also define it on the product and avoid having to
-tick the box on each vendor bill.
-
-.. image:: integrating_landed_costs/product-is-landed-cost.png
+.. image:: integrating_landed_costs/integrating-landed-costs-create-button.png
    :align: center
-   :alt: Option to define a product as a landed cost.
+   :alt: Create Landed Costs button on vendor bill.
 
-Once the landed cost is added to the vendor bill (either by checking the :guilabel:`Landed Cost`
-option on the invoice line or adding a landed cost product to the bill), click the
-:guilabel:`Create Landed Costs` button at the top of the bill. Odoo automatically creates a landed
-cost record with the set landed cost pre-filled in the :guilabel:`Additional Costs` product lines.
-From here, decide which picking the additional costs apply to by clicking :guilabel:`Edit` and
-selecting the picking reference number from the :guilabel:`Transfers` drop-down menu. Finally,
-click :guilabel:`Save`.
+Add landed cost
+===============
 
-.. image:: integrating_landed_costs/warehouse-transfer-landed-costs.png
+Once a landed cost is added to the vendor bill, click :guilabel:`Create Landed Costs` at the top of
+the vendor bill.
+
+Doing so automatically creates a landed cost record, with a set landed cost pre-filled in the
+product line in the :guilabel:`Additional Costs` tab.
+
+From the :guilabel:`Landed Cost` form, click the :guilabel:`Transfers` drop-down menu, and select
+which transfer the landed cost belongs to.
+
+.. image:: integrating_landed_costs/integrating-landed-costs-transfers-menu.png
    :align: center
-   :alt: Use a warehouse transfer to cover a landed cost in the accounting journal.
+   :alt: Landed cost form with selected receipt transfer.
 
-After setting the picking, click :guilabel:`Compute` on the landed cost record. Then, go to the
-:guilabel:`Valuation Adjustments` tab to see the impact of the landed costs. Finally, click
-:guilabel:`Validate` to post the landed cost entry to the accounting journal.
+.. tip::
+   In addition to creating landed costs directly from a vendor bill, landed cost records can *also*
+   be created by navigating to :menuselection:`Inventory app --> Operations --> Landed Costs`, and
+   clicking :guilabel:`New`.
 
-The user can access the journal entry that has been created by the landed cost by clicking on the
-:guilabel:`Journal Entry`.
+After setting the picking from the :guilabel:`Transfers` drop-down menu, click :guilabel:`Compute`
+(at the bottom of the form, under the :guilabel:`Total:` cost).
+
+Click the :guilabel:`Valuation Adjustments` tab to see the impact of the landed costs. The
+:guilabel:`Original Value` column lists the original price of the |PO|, the :guilabel:`Additional
+Landed Cost` column displays the landed cost, and the :guilabel:`New Value` displays the sum of the
+two, for the total cost of the |PO|.
+
+Once ready, click :guilabel:`Validate` to post the landed cost entry to the accounting journal.
+
+This causes a :guilabel:`Valuation` smart button to appear at the top of the form. Click the
+:guilabel:`Valuation` smart button to open a :guilabel:`Stock Valuation` page, with the product's
+updated valuation listed.
 
 .. note::
-   The product that the landed cost is applied to must have a product category set to a :abbr:`FIFO
-   (First In, First Out)` or an :abbr:`AVCO (Average Costing)` method.
+   For a :guilabel:`Valuation` smart button to appear upon validation, the product's
+   :guilabel:`Product Type` **must** be set to :guilabel:`Storable`.
 
-.. image:: integrating_landed_costs/landed-cost-journal-entry.png
-   :align: center
-   :alt: Landed cost journal entry
+To view the valuation of *every* product, including landed costs, navigate to
+:menuselection:`Inventory app --> Reporting --> Valuation`.
 
 .. note::
-   Landed cost records can also be directly created in :menuselection:`Inventory --> Operations -->
-   Landed Costs`, it is not necessary to create a landed cost record from the vendor bill.
+   Each journal entry created for a landed cost on a vendor bill can be viewed in the *Accounting*
+   app.
+
+   To locate these journal entries, navigate to :menuselection:`Accounting app --> Accounting -->
+   Journal Entries`, and locate the correct entry, by number (i.e. `PBNK1/2024/XXXXX`).
+
+   Click into the journal entry to view the :guilabel:`Journal Items`, and other information about
+   the entry.
+
+   .. image:: integrating_landed_costs/integrating-landed-costs-journal-entry.png
+      :align: center
+      :alt: Journal Entry form for landed cost created from vendor bill.
