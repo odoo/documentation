@@ -54,6 +54,8 @@ The :guilabel:`Administration` field in the :guilabel:`Access Rights` tab has th
    :align: center
    :alt: The Sales apps drop-down menu to set the user's level of permissions.
 
+.. _access-rights/groups:
+
 Create and modify groups
 ========================
 
@@ -149,6 +151,8 @@ icon to remove a row.
      Odoo has a library of preconfigured record rules for ease of use. Users without knowledge of
      domains (and domain expressions) should consult an Odoo Business Analyst, or the Odoo Support
      Team, before making changes.
+
+.. _access-rights/superuser:
 
 Superuser mode
 ==============
