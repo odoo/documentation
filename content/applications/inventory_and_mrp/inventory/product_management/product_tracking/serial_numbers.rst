@@ -16,6 +16,8 @@ manufacturers that provide after-sales services to products that they sell and d
 .. seealso::
    :doc:`/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots`
 
+.. _inventory/product_management/enable-lots:
+
 Enable lots & serial numbers
 ============================
 
@@ -28,7 +30,7 @@ Numbers`. Remember to click the :guilabel:`Save` button to save changes.
    :align: center
    :alt: Enabled lots and serial numbers setting.
 
-.. _inventory/serial_numbers/configure:
+.. _inventory/product_management/configure-lots:
 
 Configure serial number tracking on products
 ============================================
@@ -98,60 +100,32 @@ Serial numbers can be assigned for both **incoming** and **outgoing** goods. For
 serial numbers are assigned directly on the purchase order form. For outgoing goods, serial numbers
 are assigned directly on the sales order form.
 
-Manage serial numbers on receipts
----------------------------------
+Assign serial numbers to newly received products
+------------------------------------------------
 
-Assigning serial numbers to **incoming** goods can be done directly from the purchase order (PO).
+Assigning serial numbers to **incoming** goods can be done on the receipt, by clicking the
+:ref:`Detailed Operations smart button <inventory/product_management/detailed-operations>` or by
+clicking the :guilabel:`⦙≣ (bulleted list)` icon in the product line.
 
-To create a :abbr:`PO (purchase order)`, go to the :menuselection:`Purchase app --> Create`. Doing
-so reveals a new, blank request for quotation (RFQ) form.
+.. seealso::
+   :doc:`create_sn`
 
-On this :abbr:`RFQ (request for quotation)` form, fill out the necessary information, by adding a
-:guilabel:`Vendor`, and by adding the desired products to the :guilabel:`Product` lines, by clicking
-:guilabel:`Add a product`, under the :guilabel:`Products` tab.
-
-Choose the desired quantity of the product to order, by changing the number in the
-:guilabel:`Quantity` column.
-
-When the necessary configurations are complete, click :guilabel:`Confirm Order`. This will convert
-the :abbr:`RFQ (request for quotation)` to a purchase order.
-
-Then, click the :guilabel:`Receipt` smart button to be taken to the warehouse receipt form page for
-that specific :abbr:`PO (purchase order)`.
+.. image:: serial_numbers/assign-serial-numbers.png
+   :align: center
+   :alt: Display the bulleted list icon and Detailed Operations smart buttons.
 
 .. warning::
-   Clicking :guilabel:`Validate` before assigning a serial number to the ordered product quantities
-   will cause a :guilabel:`User Error` pop-up to appear. The pop-up requires entry of a lot or
-   serial number for the ordered products. The :abbr:`RFQ (request for quotation)` **cannot** be
-   validated without a serial number being assigned.
+   Clicking :guilabel:`Validate` before assigning a serial number to received quantities will cause
+   a :guilabel:`User Error` pop-up to appear. The pop-up requires entry of a lot or serial number
+   for the ordered products. The :abbr:`RFQ (request for quotation)` **cannot** be validated without
+   a serial number being assigned.
 
-.. image:: serial_numbers/serial-numbers-user-error-popup.png
-   :align: center
-   :alt: User error popup prompting serial number entry.
+   .. image:: serial_numbers/serial-numbers-user-error-popup.png
+      :align: center
+      :alt: User error popup prompting serial number entry.
 
-From here, click the :guilabel:`Additional Options` menu, represented by a `hamburger` icon (four
-horizontal lines, located to the right of the :guilabel:`Unit of Measure` column in the
-:guilabel:`Operations` tab). Clicking that icon reveals a :guilabel:`Detailed Operations` pop-up.
-
-In this pop-up, configure a number of different fields, including the assignation of a serial number
-(or serial numbers) under the :guilabel:`Lot/Serial Number Name` column, located at the bottom of
-the pop-up.
-
-There are three ways to do this: manually assigning serial numbers, automatically assigning serial
-numbers, and copy/pasting serial numbers from a spreadsheet.
-
-Assign serial numbers manually
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-To assign serial numbers manually, click :guilabel:`Add a line` from the :guilabel:`Detailed
-Operations` pop-up, and first choose the location where the product will be stored under the
-:guilabel:`To` column.
-
-Then, type a new :guilabel:`Serial Number Name`, and set the :guilabel:`Done` quantity in the
-appropriate columns.
-
-Repeat this process for the quantity of products shown in the :guilabel:`Demand` field, and until
-the :guilabel:`Quantity Done` field displays the correct (matching) number of products processed.
+There are multiple ways to do this: manually assigning serial numbers, automatically assigning
+serial numbers, and copy/pasting serial numbers from a spreadsheet.
 
 Assign serial numbers automatically
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
