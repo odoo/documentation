@@ -106,3 +106,4 @@ checking their *status*. The status is shown on the left side of a contact's nam
 
    discuss/team_communication
    discuss/ice_servers
+   discuss/chatter
