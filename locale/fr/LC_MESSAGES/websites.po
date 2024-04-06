@@ -7,9 +7,12 @@
 # Xavier Symons <xsy@openerp.com>, 2023
 # Martin Trigaux, 2023
 # Shark McGnark <peculiarcheese@gmail.com>, 2023
-# Cécile Collart <cco@odoo.com>, 2023
-# Jolien De Paepe, 2024
+# romrik_, 2024
 # Wil Odoo, 2024
+# Richard Mathot <rim@odoo.com>, 2024
+# Cécile Collart <cco@odoo.com>, 2024
+# Jolien De Paepe, 2024
+# Jonathan Castillo <jcs@odoo.com>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +21,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-25 16:01+0000\n"
 "PO-Revision-Date: 2023-11-08 08:57+0000\n"
-"Last-Translator: Wil Odoo, 2024\n"
+"Last-Translator: Jonathan Castillo <jcs@odoo.com>, 2024\n"
 "Language-Team: French (https://app.transifex.com/odoo/teams/41243/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -7630,11 +7633,11 @@ msgstr ""
 
 #: ../../content/applications/websites/website/configuration/cdn.rst:3
 msgid "Set up a content delivery network (CDN)"
-msgstr ""
+msgstr "Configurer un réseau de diffusion de contenu (CDN)"
 
 #: ../../content/applications/websites/website/configuration/cdn.rst:8
 msgid "Deploying with KeyCDN"
-msgstr ""
+msgstr "Déployer avec KeyCDN"
 
 #: ../../content/applications/websites/website/configuration/cdn.rst:10
 msgid ""
@@ -7643,16 +7646,23 @@ msgid ""
 "internet content. The :abbr:`CDN (Content Delivery Network)` provides quick,"
 " high-quality content delivery for content-heavy websites."
 msgstr ""
+"Un :abbr:`CDN (Content Delivery Network)` ou *réseau de diffusion de "
+"contenu* est un réseau de serveurs distribués géographiquement qui fournit "
+"du contenu interne à haut débit. Le :abbr:`CDN (Content Delivery Network)` "
+"fournit un contenu rapide et de haute qualité pour les sites web à fort "
+"contenu."
 
 #: ../../content/applications/websites/website/configuration/cdn.rst:14
 msgid ""
 "This document will guide you through the setup of a KeyCDN_ account with an "
 "Odoo powered website."
 msgstr ""
+"Ce document vous guidera dans la configuration d'un compte KeyCDN_ avec un "
+"site web généré par Odoo."
 
 #: ../../content/applications/websites/website/configuration/cdn.rst:17
 msgid "Create a pull zone in the KeyCDN dashboard"
-msgstr ""
+msgstr "Créer une pull zone dans le tableau de bord KeyCDN"
 
 #: ../../content/applications/websites/website/configuration/cdn.rst:19
 msgid ""
@@ -7666,6 +7676,15 @@ msgid ""
 "address should be the full Odoo database :abbr:`URL (Uniform Resource "
 "Locator)`."
 msgstr ""
+"Sur le tableau de bord KeyCDN, commencez par naviguer vers l'élément de menu"
+" :menuselection:`Zones` sur la gauche. Sur le formulaire, complétez le champ"
+" :guilabel:`Zone Name`, qui apparaîtra dans l':abbr:`URL (Uniform Resource "
+"Locator)` du :abbr:`CDN (Content Delivery Network)`. Ensuite, définissez le "
+":guilabel:`Zone Status` sur :guilabel:`active` pour activer la zone. En ce "
+"qui concerne le :guilabel:`Zone Type`, définissez la valeur sur "
+":guilabel:`Pull`, et, enfin, sous les :guilabel:`Pull Settings`, saisissez "
+":guilabel:`Origin URL`— cette adresse doit être l':abbr:`URL (Uniform "
+"Resource Locator)` complète de la base de données Odoo."
 
 #: ../../content/applications/websites/website/configuration/cdn.rst:28
 msgid ""
@@ -7674,10 +7693,15 @@ msgid ""
 "(Uniform Resource Locator)` can be used, as well, in place of the Odoo "
 "subdomain that was provided to the database."
 msgstr ""
+"Utilisez ``https://yourdatabase.odoo.com`` et remplacez le préfixe du sous-"
+"domaine *yourdatabase* par le nom de la base de données. Il est également "
+"possible d'utiliser une :abbr:`URL (Uniform Resource Locator)` "
+"personnalisée, au lieu du sous-domaine Odoo qui est donné à la base de "
+"données."
 
 #: ../../content/applications/websites/website/configuration/cdn.rst-1
 msgid "KeyCDN's Zone configuration page."
-msgstr ""
+msgstr "Page de configuration de la Zone de KeyCDN."
 
 #: ../../content/applications/websites/website/configuration/cdn.rst:36
 msgid ""
@@ -7687,6 +7711,11 @@ msgid ""
 ":guilabel:`General Settings` ensure that the :guilabel:`CORS` option is "
 ":guilabel:`enabled`."
 msgstr ""
+"Dans la rubrique :guilabel:`Paramètres généraux` sous le formulaire de zone,"
+" cliquez sur le bouton :guilabel:`Show all settings` pour développer les "
+"options de la zone. Il doit s'agir de la dernière option de la page. Après "
+"avoir développé les :guilabel:`Paramètres généraux`, assurez-vous que "
+"l'option :guilabel:`CORS` est :guilabel:`activée`."
 
 #: ../../content/applications/websites/website/configuration/cdn.rst:41
 msgid ""
@@ -7694,10 +7723,13 @@ msgid ""
 ":guilabel:`Save` the changes. KeyCDN will indicate that the new zone will be"
 " deployed. This can take about 10 minutes."
 msgstr ""
+"Ensuite, descendez au bas de la page de configuration de la zone et "
+":guilabel:`enregistrez` les changements. KeyCDN indiquera que la nouvelle "
+"zone sera déployée. Cela peut prendre environ 10 minutes."
 
 #: ../../content/applications/websites/website/configuration/cdn.rst-1
 msgid "KeyCDN deploying the new Zone."
-msgstr ""
+msgstr "KeyCDN en train de déployer la nouvelle Zone."
 
 #: ../../content/applications/websites/website/configuration/cdn.rst:49
 msgid ""
@@ -7705,16 +7737,21 @@ msgid ""
 " it is ``pulltest-xxxxx.kxcdn.com``. This value will differ for each "
 "database."
 msgstr ""
+"Une nouvelle :guilabel:`Zone URL` a été générée pour votre Zone. Dans cet "
+"exemple, il s'agit de ``pulltest-xxxxx.kxcdn.com``. Cette valeur sera "
+"différente pour chaque base de données."
 
 #: ../../content/applications/websites/website/configuration/cdn.rst:52
 msgid ""
 "Copy this :guilabel:`Zone URL` to a text editor for later, as it will be "
 "used in the next steps."
 msgstr ""
+"Copiez cette :guilabel:`Zone URL` dans un éditeur de texte pour plus tard, "
+"car vous devrez l'utiliser dans les étapes suivantes."
 
 #: ../../content/applications/websites/website/configuration/cdn.rst:55
 msgid "Configure the Odoo instance with the new zone"
-msgstr ""
+msgstr "Configurer l'instance Odoo avec la nouvelle zone"
 
 #: ../../content/applications/websites/website/configuration/cdn.rst:57
 msgid ""
@@ -7730,20 +7767,26 @@ msgid ""
 "Ensure that there are two *forward slashes* (`//`) before the :guilabel:`CDN"
 " Base URL` and one forward slash (`/`) after the :guilabel:`CDN Base URL`."
 msgstr ""
+"Veillez à ce qu'il y ait deux *barres obliques* (`//`) avant la valeur "
+":guilabel:`CDN Base URL` et une barre oblique (`/`) après la valeur "
+":guilabel:`CDN Base URL`."
 
 #: ../../content/applications/websites/website/configuration/cdn.rst:66
 msgid ":guilabel:`Save` the settings when complete."
 msgstr ""
+":guilabel:`Enregistrez` les paramètres une fois qu'ils sont complétés."
 
 #: ../../content/applications/websites/website/configuration/cdn.rst-1
 msgid "Activate the CDN setting in Odoo."
-msgstr ""
+msgstr "Activation du paramètre CDN dans Odoo."
 
 #: ../../content/applications/websites/website/configuration/cdn.rst:72
 msgid ""
 "Now the website is using the CDN for the resources matching the "
 ":guilabel:`CDN filters` regular expressions."
 msgstr ""
+"Le site web utilise désormais le CDN pour les ressources correspondant aux "
+"expressions régulières des :guilabel:`filtres CDN`."
 
 #: ../../content/applications/websites/website/configuration/cdn.rst:75
 msgid ""
@@ -7754,16 +7797,27 @@ msgid ""
 "website. Look for it's record by searching within the :guilabel:`Network` "
 "tab inside of devtools."
 msgstr ""
+"Dans le HTML du site web Odoo, l'intégration du :abbr:`CDN (content delivery"
+" network)` est prouvée comme fonctionnant correctement en vérifiant "
+"l':abbr:`URL (Uniform Resource Locators)` des images. La valeur *CDN Base "
+"URL* peut être consultée en utilisant la fonctionnalité "
+":guilabel:`Inspecter` de votre navigateur web sur le site web d'Odoo. "
+"Recherchez son enregistrement dans l'onglet :guilabel:`Network` à "
+"l'intérieur de devtools."
 
 #: ../../content/applications/websites/website/configuration/cdn.rst-1
 msgid ""
 "The CDN Base URL can be seen using the inspect function on the Odoo website."
 msgstr ""
+"La valeur CDN Base URL peut être consultée à l'aide de la fonction Inspecter"
+" du site web d'Odoo."
 
 #: ../../content/applications/websites/website/configuration/cdn.rst:85
 msgid ""
 "Prevent security issues by activating cross-origin resource sharing (CORS)"
 msgstr ""
+"Prévenir les problèmes de sécurité en activant le partage des ressources "
+"entre origines multiples (CORS)"
 
 #: ../../content/applications/websites/website/configuration/cdn.rst:87
 msgid ""
@@ -7771,6 +7825,9 @@ msgid ""
 "Chrome) prevents a remotely linked CSS file to fetch relative resources on "
 "this same external server."
 msgstr ""
+"Une restriction de sécurité dans certains navigateurs (tels que Mozilla "
+"Firefox et Google Chrome) empêche un fichier CSS lié à distance d'aller "
+"récupérer des ressources relatives sur ce même serveur externe."
 
 #: ../../content/applications/websites/website/configuration/cdn.rst:90
 msgid ""
@@ -7779,6 +7836,12 @@ msgid ""
 "Odoo website will be the lack of *Font Awesome* icons because the font file "
 "declared in the *Font Awesome* CSS won't be loaded from the remote server."
 msgstr ""
+"Si l'option :abbr:`CORS (Cross-Origin Resource Sharing ou Partage des "
+"ressources entre origines multiples)` n'est pas activée dans la "
+":guilabel:`Zone CDN`, le problème le plus évident sur un site web Odoo "
+"standard sera l'absence d'icônes *Font Awesome* parce que le fichier de "
+"police déclaré dans le CSS *Font Awesome* ne sera pas chargé à partir du "
+"serveur distant."
 
 #: ../../content/applications/websites/website/configuration/cdn.rst:95
 msgid ""
@@ -7786,6 +7849,9 @@ msgid ""
 "similar to the output below will appear in the web browser's developer "
 "console:"
 msgstr ""
+"Lorsque ces problèmes de ressources entre origines multiples se produisent, "
+"un message d'erreur de sécurité similaire à l'exemple ci-dessous apparaîtra "
+"dans la console de développement du navigateur web :"
 
 #: ../../content/applications/websites/website/configuration/cdn.rst:98
 msgid ""
@@ -7794,16 +7860,22 @@ msgid ""
 "Allow-Origin' header is present on the requested resource. Origin "
 "'http://yourdatabase.odoo.com' is therefore not allowed access.``"
 msgstr ""
+"``Font from origin 'http://pulltest-xxxxx.kxcdn.com' has been blocked from "
+"loading /shop:1 by Cross-Origin Resource Sharing policy: No 'Access-Control-"
+"Allow-Origin' header is present on the requested resource. Origin "
+"'http://yourdatabase.odoo.com' is therefore not allowed access.``"
 
 #: ../../content/applications/websites/website/configuration/cdn.rst-1
 msgid "Error message populated in the browser console."
-msgstr ""
+msgstr "Message d'erreur affiché dans la console du navigateur."
 
 #: ../../content/applications/websites/website/configuration/cdn.rst:106
 msgid ""
 "Enabling the :abbr:`CORS (Cross-Origin Resource Sharing)` option in the "
 ":abbr:`CDN (Content Delivery Network)` settings fixes this issue."
 msgstr ""
+"L'activation de l'option :abbr:`CORS (Cross-Origin Resource Sharing)` dans "
+"les paramètres de :abbr:`CDN (Content Delivery Network)` règle ce problème."
 
 #: ../../content/applications/websites/website/configuration/cookies_bar.rst:3
 msgid "Cookies bar"
@@ -7992,7 +8064,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:3
 msgid "Domain names"
-msgstr ""
+msgstr "Noms de domaine"
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:5
 msgid ""
@@ -8023,7 +8095,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:22
 msgid "Register a free domain name with Odoo"
-msgstr ""
+msgstr "Enregistrer un nom de domaine gratuit avec Odoo"
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:24
 msgid ""
@@ -8237,7 +8309,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:136
 msgid "Configure an existing domain name"
-msgstr ""
+msgstr "Configurer un nom de domaine existant"
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:138
 msgid ""
@@ -8265,7 +8337,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:151
 msgid "Add a CNAME record"
-msgstr ""
+msgstr "Ajouter un enregistrement CNAME"
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:153
 msgid ""
@@ -8276,7 +8348,7 @@ msgstr ""
 #: ../../content/applications/websites/website/configuration/domain_names.rst:158
 #: ../../content/applications/websites/website/configuration/domain_names.rst:212
 msgid "Odoo Online"
-msgstr ""
+msgstr "Odoo Online"
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:160
 msgid ""
@@ -8287,7 +8359,7 @@ msgstr ""
 #: ../../content/applications/websites/website/configuration/domain_names.rst:163
 #: ../../content/applications/websites/website/configuration/domain_names.rst:222
 msgid "Odoo.sh"
-msgstr ""
+msgstr "Odoo.sh"
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:165
 msgid ""
@@ -8407,10 +8479,12 @@ msgid ""
 ":ref:`Odoo.sh branches: settings tab <odoosh-gettingstarted-branches-tabs-"
 "settings>`"
 msgstr ""
+":ref:`Branches Odoo.sh : onglet des paramètres <odoosh-gettingstarted-"
+"branches-tabs-settings>`"
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:236
 msgid "SSL encryption (HTTPS protocol)"
-msgstr ""
+msgstr "Chiffrement SSL (protocole HTTPS)"
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:238
 msgid ""
@@ -8448,7 +8522,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:259
 msgid "Web base URL of a database"
-msgstr ""
+msgstr "URL de base web d'une base de données"
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:262
 msgid ""
@@ -8553,7 +8627,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/configuration/google_search_console.rst:3
 msgid "Google Search Console"
-msgstr ""
+msgstr "Console Google Search"
 
 #: ../../content/applications/websites/website/configuration/google_search_console.rst:5
 msgid ""
@@ -8599,7 +8673,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/configuration/google_search_console.rst:32
 msgid ":doc:`domain_names`"
-msgstr ""
+msgstr ":doc:`domain_names`"
 
 #: ../../content/applications/websites/website/configuration/multi_website.rst:3
 msgid "Multiple websites"

@@ -354,7 +354,7 @@ msgstr "在庫調整を適用するには、ページ下部の緑色の :guilabe
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:3
 msgid "Default barcode nomenclature"
-msgstr ""
+msgstr "デフォルトバーコード表現規則"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:10
 msgid ""
@@ -364,6 +364,7 @@ msgid ""
 "list using a regular expression, and a barcode is successfully read by Odoo "
 "if its prefix and/or length matches the one defined in the barcode's rule."
 msgstr ""
+"*バーコード表現規則*は、バーコードがどのように認識され、分類されるかを定義します。バーコードがスキャンされると、マッチするパターンを持つ**最初の**ルールに関連付けられます。パターンのシンタックスは正規表現を使ってOdooの表現規則リストに記述され、バーコードの接頭辞や長さがバーコードの規則で定義されたものと一致する場合、Odooによってバーコードが正常に読み取られます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:15
 msgid ""
@@ -373,6 +374,8 @@ msgid ""
 "nomenclature uses |UPC| and |EAN| encoding, and supports |UPC|/|EAN| "
 "conversion."
 msgstr ""
+"Odoo *バーコード*はUPC (Universal Product Code)、EAN (European Article "
+"Number)、GS1エンコーディングをサポートしています。Odooで事前に設定されている命名法は*デフォルト表現規則*と*デフォルトGS1表現規則*です。デフォルト表現規則はUPC|とEAN|エンコーディングを使用し、UPC|/EAN|変換をサポートします。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:21
 msgid ""
@@ -380,11 +383,13 @@ msgid ""
 "<https://www.gs1.org/standards/get-barcodes>`_ to use these barcodes. GS1 is"
 " the **only** official provider of |UPC|/|EAN| and GS1 |GTINs| in the world."
 msgstr ""
+"|UPC|および|EAN|バーコードを使用するには、GS1 <https://www.gs1.org/standards/get-barcodes>`_"
+" から購入する必要があります。GS1は、|UPC|/|EAN|およびGS1 |GTIN|の世界で**唯一の**公式プロバイダーです。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:28
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:32
 msgid "Set up barcode nomenclature"
-msgstr ""
+msgstr "バーコード表現規則を設定する"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:30
 msgid ""
@@ -393,16 +398,21 @@ msgid ""
 "the checkbox next to :guilabel:`Barcode Scanner` to enable barcodes. Doing "
 "so installs the *Barcode* app in the database."
 msgstr ""
+"デフォルトの表現規則を使用するには、 :menuselection:`在庫アプリ --> 設定 --> 管理設定` "
+"に移動します。guilabel:`バーコード` セクションで :guilabel:`バーコードスキャナ` "
+"の横のチェックボックスをクリックしてバーコードを有効にします。これにより、*バーコード*アプリがデータベースにインストールされます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:34
 msgid ""
 "Next, ensure that the :guilabel:`Default Nomenclature` setting is selected "
 "in the :guilabel:`Barcode Nomenclature` field. Then, click :guilabel:`Save`."
 msgstr ""
+"次に、 :guilabel:`バーコード表現規則` フィールドで :guilabel:`デフォルト表現規則` 設定が選択されていることを確認します。次に"
+" :guilabel:`保存` をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst-1
 msgid "Enabled barcode setting with Default Nomenclature selected."
-msgstr ""
+msgstr "デフォルト表現規則が選択された状態でバーコード設定が有効になっています。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:41
 msgid ""
@@ -410,6 +420,8 @@ msgid ""
 "Nomenclatures` settings can be accessed, via a hidden menu that is **only** "
 "discoverable after enabling :ref:`developer mode <developer-mode>`."
 msgstr ""
+"いったん命名法が保存され選択されると、:menuselection:`バーコード表現規則` の設定に、:ref:`開発者モード<developer-"
+"mode>` を有効にした後に**のみ**発見できる隠しメニューからアクセスすることができます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:45
 msgid ""
@@ -417,12 +429,14 @@ msgid ""
 "--> Configuration --> Barcode Nomenclatures` menu, and select "
 ":guilabel:`Default Nomenclature`."
 msgstr ""
+"開発者モードを有効にしたら、 :menuselection:`在庫アプリ --> 設定 --> バーコード表現規則` メニューに移動し、 "
+":guilabel:`デフォルト表現規則` を選択します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:48
 msgid ""
 "From this page, the :guilabel:`Barcode Nomenclature` is specified at the top"
 " as the `Default Nomenclature`."
-msgstr ""
+msgstr "このページから、 :guilabel:`バーコード表現規則` が `デフォルト表現規則` として一番上に指定されます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:51
 msgid ""
@@ -431,12 +445,16 @@ msgid ""
 "barcode should be automatically converted one way or another when trying to "
 "match a rule with the other encoding."
 msgstr ""
+"その下の :guilabel:`UPC/EAN変換` フィールドはデフォルトで :guilabel:`常に作成` "
+"に設定されています。この設定は、|UPC|/|EAN|バーコードが、もう一方のエンコーディングと一致させようとするときに、自動的にどちらかに変換されるべきかどうかを決定します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:55
 msgid ""
 "The other available options for this field are :guilabel:`Never`, "
 ":guilabel:`EAN-13 to UPC-A`, and :guilabel:`UPC-A to EAN-13`."
 msgstr ""
+"このフィールドで使用可能な他のオプションは、 :guilabel:`しない`、 :guilabel:`EAN-13 から UPC-A`、 "
+":guilabel:`UPC-A から EAN-13`です。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:59
 msgid ""
@@ -444,6 +462,8 @@ msgid ""
 " the :guilabel:`UPC/EAN Conversion` field **must** be set to "
 ":guilabel:`Always`."
 msgstr ""
+"UPC|/|EAN|変換が全てのバーコードスキャンに対して機能するためには、:guilabel:`UPC/EAN変換` フィールドの設定を "
+":guilabel:常に作成`に設定する必要があります。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:62
 msgid ""
@@ -452,10 +472,13 @@ msgid ""
 "unchecked. This is because the :guilabel:`Default Nomenclature` uses |UPC| "
 "and |EAN| encoding, *not* GS1 encoding."
 msgstr ""
+"ページ上部の最後のフィールドは :guilabel:`Is GS1表現規則` "
+"フィールドです。guilabel:デフォルト表現規則`の場合、このフィールドはチェックを外したままにして下さい。これは "
+":guilabel:`デフォルト表現規則` が |UPC| と |EAN| エンコーディングを使用し、*GS1 エンコーディングではないからです。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst-1
 msgid "Default Nomenclature page setting fields."
-msgstr ""
+msgstr "デフォルト表現ページ設定フィールド"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:70
 msgid ""
@@ -464,6 +487,8 @@ msgid ""
 " the *rules* and *barcode patterns* that Odoo supports for the default "
 "nomenclature."
 msgstr ""
+"さらにページ下部には、Odooがデフォルトでサポートしている*規則*と*バーコードパターン*の :guilabel:`規則名`、 "
+":guilabel:`タイプ`、 :guilabel:`エンコーディング`、 :guilabel:`バーコードパターン` のリストがあります。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:74
 msgid ""
@@ -471,10 +496,12 @@ msgid ""
 "nomenclature-list>` contains all the information that can be condensed with "
 "a |UPC|/|EAN| barcode."
 msgstr ""
+":ref:`デフォルト表現規則リスト <barcode/operations/default-nomenclature-list>` "
+"は|UPC|/|EAN|バーコードで凝縮できる全ての情報を含んでいます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:80
 msgid "Use UPC/EAN barcodes in Odoo"
-msgstr ""
+msgstr "OdooでUPC/EANバーコードを使用する"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:82
 msgid ""
@@ -482,6 +509,8 @@ msgid ""
 "**must** obtain `barcodes <https://www.gs1us.org/upcs-barcodes-prefixes/how-"
 "to-get-a-upc-barcode>`_ purchased directly from GS1."
 msgstr ""
+"Odooで|UPC|/|EAN|バーコードを使用してプロダクトを識別するには、GS1から直接購入したバーコード<https://www.gs1us.org/upcs-"
+"barcodes-prefixes/how-to-get-a-upc-barcode>`_を入手する必要があります。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:86
 msgid ""
@@ -489,12 +518,14 @@ msgid ""
 "regions. |UPC| is used only in the United States and Canada, while |EAN| is "
 "used everywhere else globally."
 msgstr ""
+"UPC|と｜EAN|のバーコードフォーマットは、それぞれの地域で主に使用されています。|UPC|は米国とカナダでのみ使用され、|EAN|はそれ以外の世界各地で使用されています。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:89
 msgid ""
 "A |UPC| is usually a 12-digit barcode used to identify most products, while "
 "|EAN| barcodes use 13-digit barcodes to identify products."
 msgstr ""
+"UPC|は通常、ほとんどのプロダクトを識別するために使用される12桁のバーコードでですが、|EAN|バーコードはプロダクトを識別するために13桁のバーコードを使用します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:92
 msgid ""
@@ -502,6 +533,7 @@ msgid ""
 "Odoo, by default, |UPC|/|EAN| barcodes are automatically converted one way "
 "or another when trying to match a rule with the other encoding."
 msgstr ""
+"|UPC|コードはプレフィックスにゼロを付けることでEAN|に変換できます。Odooのデフォルトでは、|UPC|/|EAN|バーコードはもう一方のエンコーディングで規則を一致させようとすると、自動的にどちらかに変換されます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:96
 msgid ""
@@ -509,11 +541,13 @@ msgid ""
 "nomenclature-list>` to see a comprehensive list of all barcode patterns and "
 "rules to follow."
 msgstr ""
+"ref:`デフォルト表現規則リスト<barcode/operations/default-nomenclature-"
+"list>`を参照すると、全てのバーコードパターンと従うべき規則の包括的なリストを見ることができます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:100
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:96
 msgid "Create rules"
-msgstr ""
+msgstr "規則を作成する"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:102
 msgid ""
@@ -522,12 +556,14 @@ msgid ""
 "<barcode/operations/default-nomenclature-list>` automatically fills "
 "corresponding data in the Odoo database."
 msgstr ""
+"|UPC|と|EAN|バーコードには特定の情報が含まれています。ref:`デフォルト表現規則リスト<barcode/operations/default-"
+"nomenclature-list>` からこれらのコードをスキャンすると、Odooデータベースに対応するデータが自動的に入力されます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:106
 msgid ""
 "Adding new barcode rules to this list ensures that non-standard (:dfn:`user-"
 "created`) formats are interpreted accurately."
-msgstr ""
+msgstr "このリストに新しいバーコード規則を追加することで、非標準の(:dfn:`ユーザが作成した`)フォーマットが正確に解釈されるようになります。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:109
 msgid ""
@@ -536,6 +572,9 @@ msgid ""
 "Barcode Nomenclatures`. Select the :guilabel:`Default Nomenclature` list "
 "item."
 msgstr ""
+"新しいルールを作成するには、まず :ref:`開発者モード<developer-mode> ` を有効にします。次に "
+":menuselection:`在庫アプリ --> 設定 --> バーコード表現規則` "
+"に移動します。guilabel:`デフォルト表現規則`リスト項目を選択します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:113
 msgid ""
@@ -543,22 +582,24 @@ msgid ""
 "at the bottom of the table, which opens a :guilabel:`Create Rules` pop-up "
 "window to create a new rule."
 msgstr ""
+"guilabel:`デフォルト表現規則`ページで、表の一番下にある :guilabel:`明細を追加` を選択すると、新しい規則を作成するための "
+":guilabel:`Create Rules` ポップアップウィンドウが開きます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst-1
 msgid "Create Rules pop-up window on Default Nomenclature page."
-msgstr ""
+msgstr "デフォルト表現規則ページの規則作成ポップアップウィンドウ。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:120
 msgid ""
 "The :guilabel:`Rule Name` field is used internally to identify what the "
 "barcode represents."
-msgstr ""
+msgstr "guilabel:`規則名`フィールドは、バーコードが何を表しているかを識別するために内部的に使用されます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:122
 msgid ""
 "The :guilabel:`Sequence` field represents the priority of the rule; meaning "
 "the smaller the value, the higher the rule appears on the table."
-msgstr ""
+msgstr "guilabel:`付番`フィールドは規則の優先度を表し、値が小さいほど規則はテーブルの上位に表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:125
 msgid ""
@@ -566,6 +607,8 @@ msgid ""
 "information that can be understood by the system (e.g., :guilabel:`Package`,"
 " :guilabel:`Lot`, :guilabel:`Location`, :guilabel:`Coupon`, etc.)."
 msgstr ""
+"バーコードの :guilabel:`タイプ`フィールドは、システムで理解できる情報の異なる分類を表します(例えば :guilabel:`梱包`、 "
+":guilabel:`ロット`、 :guilabel:`ロケーション`、 :guilabel:`クーポン` など)。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:129
 msgid ""
@@ -574,6 +617,10 @@ msgid ""
 "available :guilabel:`Encoding` options are: :guilabel:`EAN-13`, "
 ":guilabel:`EAN-8`, :guilabel:`UPC-A`, and :guilabel:`GS1-28`."
 msgstr ""
+"guilabel:`エンコーディング` "
+"フィールドは、バーコードが使用するエンコーディングを指定します。このルールは、バーコードがこの特定のエンコーディングを使用する場合に**のみ**適用されます。利用可能な"
+" :guilabel:`エンコーディング` オプションは、 :guilabel:`EAN-13`、 :guilabel:`EAN-8`、 "
+":guilabel:`UPC-A`、 :guilabel:`GS1-28`です。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:133
 msgid ""
@@ -582,12 +629,13 @@ msgid ""
 "product. Odoo follows the sequential order of this table, and uses the first"
 " rule it matches, based on the sequence."
 msgstr ""
+"guilabel:`バーコードパターン`フィールドは、アルファベットまたは数字の並びがプロダクトに関する情報を含むとシステムが認識する方法を表します。Odooはこのテーブルの順序に従い、シーケンスに基づいて最初に一致した規則を使用します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:138
 msgid ""
 "Barcode patterns can also define how numerical values, such as weight or "
 "price, are encoded in the barcode."
-msgstr ""
+msgstr "バーコードパターンは、重量や価格などの数値がバーコードにどのようにエンコードされるかを定義することもできます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:141
 msgid ""
@@ -595,12 +643,14 @@ msgid ""
 " are encoded. *Floats* are also supported with the decimals, indicated by "
 "`D`, such as **{NNNDD}**."
 msgstr ""
+" **{NNN}**で示され、ここで `N` "
+"は数値の桁がどこにエンコードされるかを定義します。また、**{NNDD}**のように、`D`で示される小数を含む**浮動小数点数*もサポートされています。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:144
 msgid ""
 "In this case, the barcode field on the associated records **must** show "
 "these digits as zeros."
-msgstr ""
+msgstr "この場合、関連レコードのバーコードフィールドは、これらの数字をゼロとして表示する必要があります。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:146
 msgid ""
@@ -608,6 +658,8 @@ msgid ""
 " save the rule, and instantly start creating another rule. Or, click "
 ":guilabel:`Save & Close` to save the rule, and return to the table of rules."
 msgstr ""
+"情報を入力した後、 :guilabel:`保存して新規` ボタンをクリックすると規則が保存され、すぐに別の規則の作成が開始されます。または、 "
+":guilabel:`保存して閉じる` をクリックして規則を保存し、規則テーブルに戻ります。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:151
 msgid ""
@@ -615,16 +667,17 @@ msgid ""
 "contain **any** number of characters - those characters being **any** number"
 " or type of character."
 msgstr ""
+"guilabel:`バーコードパターン`フィールドに`.*`が含まれている場合、それは**任意の**数の文字を含むことができることを意味します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:157
 msgid "Default nomenclature list"
-msgstr ""
+msgstr "デフォルト表現規則リスト"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:159
 msgid ""
 "The table below contains Odoo's list of :guilabel:`Default Nomenclature` "
 "rules. Barcode patterns are written in regular expressions."
-msgstr ""
+msgstr "以下のテーブルはOdooの :guilabel:`デフォルト表現規則` 規則のリストです。バーコードパターンは正規表現で記述されます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:166
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:173
@@ -640,7 +693,7 @@ msgstr "タイプ"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:168
 msgid "Encoding"
-msgstr ""
+msgstr "エンコード"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:169
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:173
@@ -651,28 +704,28 @@ msgstr "バーコードパターン"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:170
 msgid "Price Barcodes 2 Decimals"
-msgstr ""
+msgstr "価格バーコード 2桁"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:171
 msgid "Priced Product"
-msgstr ""
+msgstr "価格設定済プロダクト"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:172
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:180
 msgid "EAN-13"
-msgstr ""
+msgstr "JAN/EAN-13"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:173
 msgid "23.....{NNNDD}"
-msgstr ""
+msgstr "23.....{NNNDD}"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:174
 msgid "Discount Barcodes"
-msgstr ""
+msgstr "値引バーコード"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:175
 msgid "Discounted Product"
-msgstr ""
+msgstr "値引対象プロダクト"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:176
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:184
@@ -684,63 +737,63 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:208
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:212
 msgid "Any"
-msgstr ""
+msgstr "どれでも"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:177
 msgid "22{NN}"
-msgstr ""
+msgstr "22{NN}"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:178
 msgid "Weight Barcodes 3 Decimals"
-msgstr ""
+msgstr "重量バーコード 3桁"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:179
 msgid "Weighted Product"
-msgstr ""
+msgstr "計量対象製品"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:181
 msgid "21.....{NNDDD}"
-msgstr ""
+msgstr "21.....{NNDDD}"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:182
 msgid "Customer Barcodes"
-msgstr ""
+msgstr "顧客バーコード"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:183
 msgid "Client"
-msgstr ""
+msgstr "顧客"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:185
 msgid "042"
-msgstr ""
+msgstr "042"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:186
 msgid "Coupon & Gift Card Barcodes"
-msgstr ""
+msgstr "クーポン＆ギフトカードバーコード"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:187
 msgid "Coupon"
-msgstr ""
+msgstr "クーポン"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:189
 msgid "043|044"
-msgstr ""
+msgstr "043|044"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:190
 msgid "Cashier Barcodes"
-msgstr ""
+msgstr "キャッシャーバーコード"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:191
 msgid "Cashier"
-msgstr ""
+msgstr "キャッシャー"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:193
 msgid "041"
-msgstr ""
+msgstr "041"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:194
 msgid "Location barcodes"
-msgstr ""
+msgstr "ロケーションバーコード"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:195
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:189
@@ -751,11 +804,11 @@ msgstr "ロケーション"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:197
 msgid "414"
-msgstr ""
+msgstr "414"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:198
 msgid "Package barcodes"
-msgstr ""
+msgstr "梱包バーコード"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:199
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:175
@@ -764,11 +817,11 @@ msgstr "パッケージ"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:201
 msgid "PACK"
-msgstr ""
+msgstr "梱包"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:202
 msgid "Lot barcodes"
-msgstr ""
+msgstr "ロットバーコード"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:203
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:191
@@ -788,19 +841,19 @@ msgstr "10"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:206
 msgid "Magnetic Credit Card"
-msgstr ""
+msgstr "磁気クレジットカード"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:207
 msgid "Credit Card"
-msgstr ""
+msgstr "クレジットカード"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:209
 msgid "%.*"
-msgstr ""
+msgstr "%.*"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:210
 msgid "Product Barcodes"
-msgstr ""
+msgstr "プロダクトバーコード"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:211
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:177
@@ -810,15 +863,15 @@ msgstr "個数管理品"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:213
 msgid ".*"
-msgstr ""
+msgstr ".*"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:216
 msgid ":doc:`gs1_nomenclature`"
-msgstr ""
+msgstr ":doc:`gs1_nomenclature`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:3
 msgid "GS1 barcode nomenclature"
-msgstr ""
+msgstr "GS1バーコード表現規則"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:12
 msgid ""
@@ -828,6 +881,9 @@ msgid ""
 "purchased by businesses, to enable global shipping, sales, and eCommerce "
 "product listing."
 msgstr ""
+"GS1表現規則<https://www.gs1us.org/>`_は様々なプロダクトとサプライチェーンのデータを1つのバーコードに統合します。Odooはグローバル出荷、販売、Eコマースプロダクトリストを有効にするため、企業が購入した`一意のGlobal"
+" Trade Item Number<https://www.gs1.org/standards/get-barcodes>`_ "
+"(GTIN)を取り込みます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:17
 msgid ""
@@ -835,29 +891,35 @@ msgid ""
 "essential product information, such as |GTIN|, lot number, quantity "
 "information, and more."
 msgstr ""
+"GS1表現規則を設定して、密封されたボックスのバーコードをスキャンし、 |GTIN|、ロット番号、数量情報などの重要なプロダクト情報を識別します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:21
 msgid ""
 "|GTINs| are unique product identification that **must** be `purchased from "
 "GS1 <https://www.gs1.org/standards/get-barcodes>`_ to use GS1 barcodes."
 msgstr ""
+"|GTIN|は、GS1バーコードを使用するためにはGS1 <https://www.gs1.org/standards/get-barcodes>`_ "
+"から購入する**必要のある**一意のプロダクトIDです。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:25
 msgid ""
 "`All GS1 barcodes <https://www.gs1.org/standards/barcodes/application-"
 "identifiers>`_"
 msgstr ""
+"`全てのGS1バーコード <https://www.gs1.org/standards/barcodes/application-"
+"identifiers>`_"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:26
 msgid ""
 ":ref:`Odoo's default GS1 rules <barcode/operations/default-gs1-nomenclature-"
 "list>`"
 msgstr ""
+":ref:`OdooのデフォルトGS1規則 <barcode/operations/default-gs1-nomenclature-list>`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:27
 msgid ""
 ":ref:`Why's my barcode not working? <barcode/operations/troubleshooting>`"
-msgstr ""
+msgstr ":ref:`なぜ自分のバーコードが機能しないのか? <barcode/operations/troubleshooting>`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:34
 msgid ""
@@ -867,12 +929,16 @@ msgid ""
 ":menuselection:`Barcode Nomenclature --> Default GS1 Nomenclature` from the "
 "default barcode nomenclature options."
 msgstr ""
+"GS1表現規則を使用するには、 :menuselection:`在庫アプリ --> 設定 --> 管理設定`に移動します。次に、 "
+":guilabel:`バーコード` セクションで、 :guilabel:`バーコードスキャナ` "
+"ボックスをチェックします。次に、デフォルトのバーコード表現規則のオプションから :menuselection:`バーコード表現規則 --> "
+"デフォルトGS1表現規則` を選択します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst-1
 msgid ""
 "Choose GS1 from dropdown and click the external link to see the list of GS1 "
 "rules."
-msgstr ""
+msgstr "ドロップダウンからGS1を選択し、外部リンクをクリックすると、GS1規則のリストが表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:43
 msgid ""
@@ -880,6 +946,8 @@ msgid ""
 "accessible by clicking the :guilabel:`➡️ (arrow)` icon to the right of the "
 ":guilabel:`Barcode Nomenclature` selection."
 msgstr ""
+"OdooがデフォルトでサポートしているGS1 *規則*と*バーコードパターン*のリストは、 "
+":guilabel:`バーコード表現規則`の選択項目の右側にある :guilabel:`➡️ (矢印)` アイコンをクリックすると表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:46
 msgid ""
@@ -888,6 +956,8 @@ msgid ""
 "information that can be condensed with a GS1 barcode, along with the "
 "corresponding :guilabel:`Barcode Pattern`."
 msgstr ""
+"guilabel:`開く:表現規則` ポップアップテーブルで、Odooで利用可能なGS1の :guilabel:`Rule Names` "
+"を表示、編集します。このテーブルには、GS1バーコードと対応する:guilabel:`バーコードパターン`で凝縮できる全ての情報が含まれています。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:51
 msgid ""
@@ -898,10 +968,14 @@ msgid ""
 " Barcode Nomenclatures` menu and finally, select :guilabel:`Default GS1 "
 "Nomenclature`."
 msgstr ""
+"バーコード表現規則としてGS1を設定した後、:menuselection:`バーコード表現規則` "
+"の設定には、:ref:`開発者モード<developer-mode>`を有効にした後に表示される隠しメニューからもアクセスできます。有効化したら、 "
+":menuselection:`在庫アプリ --> 設定 --> バーコード表現規則` メニューに移動し、最後に "
+":guilabel:`デフォルトGS1表現規則` を選択します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:60
 msgid "Use GS1 barcodes in Odoo"
-msgstr ""
+msgstr "OdooでGS1バーコードを使用する"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:62
 msgid ""
@@ -913,6 +987,9 @@ msgid ""
 "must adhere to GS1 conventions for accurate interpretation by global systems"
 " along the supply chain."
 msgstr ""
+"OdooでGS1バーコードを使用してプロダクトを識別するために、企業はGS1から購入した国際的に識別可能なプロダクト識別子として `一意のGTIN "
+"<https://www.gs1.org/standards/get-"
+"barcodes>`_を取得します。この|GTIN|はGS1指定の*バーコードパターン*に従って特定のプロダクトの詳細と組み合わされます。バーコードパターンの数字と文字の配置は、サプライチェーンに沿ったグローバルシステムで正確に解釈されるために、GS1の規約に従わなければなりません。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:68
 msgid ""
@@ -926,12 +1003,18 @@ msgid ""
 " fixed length requirement, certain ones, such as lots and serial numbers, "
 "have flexible length."
 msgstr ""
+"全てのバーコードは、2-4桁の "
+"`アプリケーション識別子<https://www.gs1.org/standards/barcodes/application-"
+"identifiers>`_（A.I.）で始まります。この必須プレフィックスは、バーコードがどのような情報を含んでいるかを普遍的に示します。Odooは:ref:`デフォルトGS1規則リスト"
+" <barcode/operations/default-gs1-nomenclature-"
+"list>`で詳しく説明されているGS1規則に従って情報を識別します。リストから該当する|AI|を含めることで、OdooはGS1バーコードを正しく解釈できるようになります。ほとんどのバーコードパターンには固定長が必要ですが、ロット番号やシリアル番号など特定のパターンの長さは柔軟です。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:77
 msgid ""
 "For flexible-length barcode patterns not placed at the end of the GS1 "
 "barcode, use the FNC1 separator (`\\\\x1D`) to end the barcode."
 msgstr ""
+"GS1バーコードの末尾に配置されていない柔軟な長さのバーコードパターンでは、FNC1セパレータ(`x1D`)を使用してバーコードを終了します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:80
 msgid ""
@@ -939,6 +1022,8 @@ msgid ""
 "of creating a 20-character lot number barcode, like `LOT00000000000000001`, "
 "use the FNC1 separator to make it shorter: `LOT001\\x1D`."
 msgstr ""
+"例: ロット番号のバーコードパターンは 20 "
+"文字です。`LOT00000000000000001`のような20文字のロット番号バーコードを作成する代わりに、FNC1セパレータを使用して短くします:`OT001\\x1D`。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:84
 msgid ""
@@ -948,14 +1033,18 @@ msgid ""
 "<barcode/operations/gs1_usage>` for specific examples of combining |GTIN| to"
 " product information and configuring the workflow."
 msgstr ""
+"全てのバーコードパターンと従うべき規則の包括的なリストを見るには、 :ref:`GS1 表現規則リスト "
+"<barcode/operations/default-gs1-nomenclature-list>` "
+"を参照して下さい。そうでない場合は、:ref:`このGS1使用ドキュメント <barcode/operations/gs1_usage>` "
+"を参照して、プロダクト情報に |GTIN| を組み合わせたり、ワークフローを設定する具体例を参照して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:90
 msgid ":ref:`Lots workflow <barcode/operations/gs1-lots>`"
-msgstr ""
+msgstr ":ref:`ロットワークフロー <barcode/operations/gs1-lots>`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:91
 msgid ":ref:`Non-unit quantities workflow <barcode/operations/quantity-ex>`"
-msgstr ""
+msgstr ":ref:`単位数量以外のワークフロー <barcode/operations/quantity-ex>`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:98
 msgid ""
@@ -965,12 +1054,14 @@ msgid ""
 "<barcode/operations/default-gs1-nomenclature-list>` auto-fills corresponding"
 " data in the Odoo database."
 msgstr ""
+"GS1規則はバーコードに含まれる情報の特定のフォーマットで、|AI|で始まり、定義された長さの文字を含みます。ref:`デフォルトGS1リスト<barcode/operations/default-"
+"gs1-nomenclature-list>`からGS1バーコードをスキャンすると、対応するデータがOdooデータベースに自動入力されます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:103
 msgid ""
 "Adding GS1 barcode rules in Odoo ensures accurate interpretation of unique, "
 "non-standard GS1 formats."
-msgstr ""
+msgstr "OdooにGS1バーコード規則を追加することで、非標準のユニークなGS1フォーマットを正確に解釈することができます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:106
 msgid ""
@@ -979,6 +1070,9 @@ msgid ""
 ":menuselection:`Inventory app --> Configuration --> Barcode Nomenclatures`. "
 "Then, select the :guilabel:`Default GS1 Nomenclature` list item."
 msgstr ""
+"これを行うには、まず :ref:`開発者モード<developer-mode>` をオンにし、 :menuselection:`在庫アプリ --> 設定"
+" --> バーコード表現規則` の :guilabel:`バーコード表現規則` リストに移動します。次に、 "
+":guilabel:`デフォルトGS1表現規則` リスト項目を選択します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:110
 msgid ""
@@ -995,6 +1089,10 @@ msgid ""
 "of letters or numbers is recognized by the system to contain information "
 "about the product."
 msgstr ""
+"guilabel:`デフォルトGS1表現規則` ページで、テーブルの一番下にある :guilabel:`明細追加` "
+"を選択すると、新しい規則を作成するウィンドウが開きます。guilabel:`規則名` "
+"フィールドは、バーコードが何を表しているかを識別するために内部で使用されます。バーコードの :guilabel:`タイプ` "
+"フィールドは、システムで理解できる情報の異なる分類です(プロダクト、数量、賞味期限、パッケージ、クーポンなど)。guilabel:`付番`は規則の優先度を表し、値が小さいほど上位に表示されます。Odooはこのテーブルの順序に従い、付番に基づいて最初に合致した規則を使用します。guilabel:バーコードパターン`は、アルファベットや数字の並びがプロダクトに関する情報を含んでいることをシステムが認識する方法です。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:120
 msgid ""
@@ -1002,16 +1100,18 @@ msgid ""
 " make another rule or click :guilabel:`Save & Close` to save and return to "
 "the table of rules."
 msgstr ""
+"情報を入力したら、 :guilabel:`保存して新規` ボタンをクリックして別の規則を作成するか、 :guilabel:`保存して閉じる` "
+"をクリックして保存し、規則の表に戻ります。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:126
 msgid "Barcode troubleshooting"
-msgstr ""
+msgstr "バーコードトラブルシューティング"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:128
 msgid ""
 "Since GS1 barcodes are challenging to work with, here are some checks to try"
 " when the barcodes are not working as expected:"
-msgstr ""
+msgstr "GS1バーコードは扱いが難しいため、バーコードが期待通りに機能しない場合に試してみるべき確認事項をいくつかご紹介します:"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:131
 msgid ""
@@ -1020,6 +1120,9 @@ msgid ""
 "setup section <barcode/operations/set-up-barcode-nomenclature>` for more "
 "details."
 msgstr ""
+"guilabel:`バーコード表現規則` 設定が :menuselection:`デフォルトGS1表現規則` に設定されていることを確認します。詳細は "
+":ref:`表現規則設定セクション <barcode/operations/set-up-barcode-nomenclature>` "
+"を参照して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:134
 msgid ""
@@ -1029,6 +1132,10 @@ msgid ""
 "settings <barcode/operations/lot-setup>` and :ref:`on the product "
 "<barcode/operations/lot-setup-on-product>`."
 msgstr ""
+"バーコードでスキャンするフィールドがOdooで有効になっていることを確認して下さい。例えば、ロット番号とシリアル番号を含むバーコードをスキャンするには、"
+" :ref:`Odoo管理設定 <barcode/operations/lot-setup>` と :ref:`プロダクト上 "
+"<barcode/operations/lot-setup-on-product>` で :guilabel:`ロット&シリアル番号` "
+"機能が有効になっていることを確認して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:138
 msgid ""
@@ -1038,6 +1145,9 @@ msgid ""
 "included in the final barcode. For more details on building GS1 barcodes, go"
 " to :ref:`this section <barcode/operations/create-GS1-barcode>`."
 msgstr ""
+"abbr:`A.I.(アプリケーション識別子)`とバーコード付番の間の括弧 `[]` や括弧 `()` "
+"などの句読点は省略して下さい。これらは通常、読みやすくするために例で使用されるものであり、最終的なバーコードに含めるべきではありません。GS1バーコードの作成に関する詳細は"
+" :ref:`このセクション <barcode/operations/create-GS1-barcode>` を参照して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:142
 msgid ""
@@ -1046,12 +1156,15 @@ msgid ""
 " :ref:`This section <barcode/operations/create-new-rules>` details how to "
 "add new rules in the barcode nomenclature."
 msgstr ""
+"1つのバーコードに複数のエンコードフィールドが含まれる場合、Odooがバーコードを読み取るには、バーコード表現規則に全ての規則がリストされている必要があります。"
+" :ref:`このセクション<barcode/operations/create-new-"
+"rules>`では、バーコード表現規則に新しい規則を追加する方法を詳しく説明します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:146
 msgid ""
 "Test barcodes containing multiple encoded fields, piece by piece, to figure "
 "out which field is causing the issue."
-msgstr ""
+msgstr "複数のエンコードされたフィールドを含むバーコードを少しずつテストし、どのフィールドが問題を引き起こしているかを突き止めます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:150
 msgid ""
@@ -1059,6 +1172,8 @@ msgid ""
 "start by scanning the |GTIN| alone. Then, test the |GTIN| with the lot "
 "number, and finally, try scanning the whole barcode."
 msgstr ""
+"GTIN|、ロット番号、数量を含むバーコードをテストする場合、まず "
+"|GTIN|だけをスキャンします。次に、｜GTIN｜とロット番号をテストし、最後にバーコード全体をスキャンしてみて下さい。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:154
 msgid ""
@@ -1066,6 +1181,8 @@ msgid ""
 "<barcode/operations/create-new-rules>` to Odoo's default list to recognize "
 "GS1 barcodes with unique specifications."
 msgstr ""
+"エンコードされたフィールドが不明であることを診断した後、:ref:`新規規則<barcode/operations/create-new-rules>`"
+" をOdooのデフォルトリストに追加して、固有の仕様を持つGS1バーコードを認識できるようにします。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:159
 msgid ""
@@ -1074,10 +1191,11 @@ msgid ""
 " necessary to ensure the rest of the fields in the barcode are interpreted "
 "correctly."
 msgstr ""
+"新しいフィールドは読み込まれますが、開発者がカスタマイズしない限り、その情報はOdooの既存フィールドにリンクされません。しかし、バーコードの残りのフィールドが正しく解釈されるようにするには、新しい規則を追加する必要があります。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:166
 msgid "GS1 nomenclature list"
-msgstr ""
+msgstr "GS1表現規則リスト"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:168
 msgid ""
@@ -1086,6 +1204,8 @@ msgid ""
 "`check digit <https://www.gs1.org/services/check-digit-calculator>`_ as the "
 "final character."
 msgstr ""
+"下の表はOdooのデフォルトのGS1規則リストです。バーコードパターンは正規表現で記述されています。最初の3つの規則だけが最後の文字として数字チェック<https://www.gs1.org/services/check-"
+"digit-calculator>`_を必要とします。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:173
 msgid "GS1 Content Type"
@@ -1093,15 +1213,15 @@ msgstr "GS1内容タイプ"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:173
 msgid "Odoo field"
-msgstr ""
+msgstr "Odooフィールド"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:175
 msgid "Serial Shipping Container Code"
-msgstr ""
+msgstr "シリアル輸送コンテナコード"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:175
 msgid "(00)(\\\\d{18})"
-msgstr ""
+msgstr "(00)(\\\\d{18})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:175
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:177
@@ -1110,37 +1230,37 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:186
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:189
 msgid "Numeric identifier"
-msgstr ""
+msgstr "数値識別子"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:175
 msgid "Package name"
-msgstr ""
+msgstr "梱包名"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:177
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:40
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:168
 msgid "Global Trade Item Number (GTIN)"
-msgstr ""
+msgstr "Global Trade Item Number (GTIN)"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:177
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:40
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:168
 msgid "(01)(\\\\d{14})"
-msgstr ""
+msgstr "(01)(\\\\d{14})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:177
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:40
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:168
 msgid ":guilabel:`Barcode` field on product form"
-msgstr ""
+msgstr "プロダクトフォーム上の:guilabel:`バーコード`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:180
 msgid "GTIN of contained trade items"
-msgstr ""
+msgstr "含まれる貿易品目のGTIN"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:180
 msgid "(02)(\\\\d{14})"
-msgstr ""
+msgstr "(02)(\\\\d{14})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:180
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:3
@@ -1149,7 +1269,7 @@ msgstr "梱包"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:183
 msgid "Ship to / Deliver to global location"
-msgstr ""
+msgstr "世界各地への発送/配達"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:183
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:183
@@ -1159,63 +1279,63 @@ msgstr "目的地"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:183
 msgid "(410)(\\\\d{13})"
-msgstr ""
+msgstr "(410)(\\\\d{13})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:186
 msgid "Ship / Deliver for forward"
-msgstr ""
+msgstr "転送用出荷/配達"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:186
 msgid "(413)(\\\\d{13})"
-msgstr ""
+msgstr "(413)(\\\\d{13})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:186
 msgid "Source location"
-msgstr ""
+msgstr "移動元ロケーション"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:189
 msgid "I.D. of a physical location"
-msgstr ""
+msgstr "物理的なロケーションI.D."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:189
 msgid "(414)(\\\\d{13})"
-msgstr ""
+msgstr "(414)(\\\\d{13})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:191
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:45
 msgid "Batch or lot number"
-msgstr ""
+msgstr "バッチまたはロット番号"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:191
 msgid "(10) ([!\"%-/0-9:-?A-Z_a-z]{0,20})"
-msgstr ""
+msgstr "(10) ([!\"%-/0-9:-?A-Z_a-z]{0,20})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:191
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:194
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:225
 msgid "Alpha-numeric name"
-msgstr ""
+msgstr "アルファベット数字名"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:194
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:194
 msgid "Serial number"
-msgstr ""
+msgstr "シリアル番号"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:194
 msgid "(21) ([!\"%-/0-9:-?A-Z_a-z]{0,20})"
-msgstr ""
+msgstr "(21) ([!\"%-/0-9:-?A-Z_a-z]{0,20})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:197
 msgid "Packaging date (YYMMDD)"
-msgstr ""
+msgstr "梱包日 (YYMMDD)"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:197
 msgid "Packaging Date"
-msgstr ""
+msgstr "梱包日"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:197
 msgid "(13)(\\\\d{6})"
-msgstr ""
+msgstr "(13)(\\\\d{6})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:197
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:200
@@ -1225,11 +1345,11 @@ msgstr "日付"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:197
 msgid "Pack date"
-msgstr ""
+msgstr "梱包日"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:200
 msgid "Best before date (YYMMDD)"
-msgstr ""
+msgstr "賞味期限 (YYMMDD)"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:200
 msgid "Best before Date"
@@ -1237,15 +1357,15 @@ msgstr "賞味・使用期限"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:200
 msgid "(15)(\\\\d{6})"
-msgstr ""
+msgstr "(15)(\\\\d{6})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:200
 msgid "Best before date"
-msgstr ""
+msgstr "賞味期限"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:203
 msgid "Expiration date (YYMMDD)"
-msgstr ""
+msgstr "有効期限日 (YYMMDD)"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:203
 msgid "Expiration Date"
@@ -1253,17 +1373,17 @@ msgstr "有効期限日"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:203
 msgid "(17)(\\\\d{6})"
-msgstr ""
+msgstr "(17)(\\\\d{6})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:203
 msgid "Expiry date"
-msgstr ""
+msgstr "有効期限日"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:206
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:43
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:171
 msgid "Variable count of items"
-msgstr ""
+msgstr "可変アイテム数"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:206
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:208
@@ -1281,7 +1401,7 @@ msgstr "数量"
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:206
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:43
 msgid "(30)(\\\\d{0,8})"
-msgstr ""
+msgstr "(30)(\\\\d{0,8})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:206
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:208
@@ -1297,116 +1417,116 @@ msgstr "測定対象"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:206
 msgid "UoM: Units"
-msgstr ""
+msgstr "UoM: 単位"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:208
 msgid "Count of trade items"
-msgstr ""
+msgstr "貿易品目数"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:208
 msgid "(37)(\\\\d{0,8})"
-msgstr ""
+msgstr "(37)(\\\\d{0,8})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:208
 msgid "Qty in units for containers (AI 02)"
-msgstr ""
+msgstr "コンテナ単位数量 (AI 02)"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:211
 msgid "Net weight: kilograms (kg)"
-msgstr ""
+msgstr "正味重量:キログラム(kg)"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:211
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:171
 msgid "(310[0-5])(\\\\d{6})"
-msgstr ""
+msgstr "(310[0-5])(\\\\d{6})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:211
 msgid "Qty in kg"
-msgstr ""
+msgstr "数量kg"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:213
 msgid "Length in meters (m)"
-msgstr ""
+msgstr "長さ(m)"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:213
 msgid "(311[0-5])(\\\\d{6})"
-msgstr ""
+msgstr "(311[0-5])(\\\\d{6})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:213
 msgid "Qty in m"
-msgstr ""
+msgstr "数量m"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:215
 msgid "Net volume: liters (L)"
-msgstr ""
+msgstr "正味容積: リットル(L)"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:215
 msgid "(315[0-5])(\\\\d{6})"
-msgstr ""
+msgstr "(315[0-5])(\\\\d{6})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:215
 msgid "Qty in L"
-msgstr ""
+msgstr "数量L"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:217
 msgid "Net volume: cubic meters (m\\ :sup:`3`)"
-msgstr ""
+msgstr "正味容積:立方メートル (m\\ :sup:`3`)"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:217
 msgid "(316[0-5])(\\\\d{6})"
-msgstr ""
+msgstr "(316[0-5])(\\\\d{6})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:217
 msgid "Qty in m\\ :sup:`3`"
-msgstr ""
+msgstr "数量 m\\ :sup:`3`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:219
 msgid "Length in inches (in)"
-msgstr ""
+msgstr "長さインチ (in)"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:219
 msgid "(321[0-5])(\\\\d{6})"
-msgstr ""
+msgstr "(321[0-5])(\\\\d{6})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:219
 msgid "Qty in inches"
-msgstr ""
+msgstr "数量インチ"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:221
 msgid "Net weight/volume: ounces (oz)"
-msgstr ""
+msgstr "正味重量/容量: オンす (oz)"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:221
 msgid "(357[0-5])(\\\\d{6})"
-msgstr ""
+msgstr "(357[0-5])(\\\\d{6})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:221
 msgid "Qty in oz"
-msgstr ""
+msgstr "数量オンス"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:223
 msgid "Net volume: cubic feet (ft\\ :sup:`3`)"
-msgstr ""
+msgstr "正味容積:立方フィート(ft\\ :sup:`3`)"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:223
 msgid "(365[0-5])(\\\\d{6})"
-msgstr ""
+msgstr "(365[0-5])(\\\\d{6})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:223
 msgid "Qty in ft\\ :sup:`3`"
-msgstr ""
+msgstr "数量フィート\\ :sup:`3`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:225
 msgid "Packaging type"
-msgstr ""
+msgstr "梱包タイプ"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:225
 msgid "Packaging Type"
-msgstr ""
+msgstr "梱包タイプ"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:225
 msgid "(91) ([!\"%-/0-9:-?A-Z_a-z]{0,90})"
-msgstr ""
+msgstr "(91) ([!\"%-/0-9:-?A-Z_a-z]{0,90})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:225
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/package.rst:115
@@ -1416,7 +1536,7 @@ msgstr "梱包タイプ"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:3
 msgid "GS1 barcode usage"
-msgstr ""
+msgstr "GS1バーコード使用"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:10
 msgid ""
@@ -1425,6 +1545,8 @@ msgid ""
 "globally <barcode/operations/gs1>`, allowing scanners to understand and "
 "process supply chain data consistently."
 msgstr ""
+"GS1 "
+"バーコードは、バーコードスキャナが解釈できる標準化されたフォーマットを提供します。GS1バーコードは、グローバルに<barcode/operations/gs1>`として認識される:ref:`特有の構造で情報をエンコードし、スキャナがサプライチェーンデータを一貫して理解し処理できるようにします。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:14
 msgid ""
@@ -1432,6 +1554,7 @@ msgid ""
 "identification and tracking in warehouse operations such as receiving, "
 "picking, and shipping."
 msgstr ""
+"Odoo *バーコード*はGS1バーコードを解釈して印刷し、入荷、ピッキング、出荷などの倉庫業務におけるプロダクト識別とトラッキングを自動化します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:17
 msgid ""
@@ -1439,6 +1562,7 @@ msgid ""
 "provided by the business to identify common warehouse items and automate "
 "certain warehouse workflows."
 msgstr ""
+"以下のセクションでは、Odooがビジネスから提供されたGS1バーコードを使用して、一般的な倉庫アイテムを識別し、特定の倉庫ワークフローを自動化する例を紹介します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:21
 msgid ""
@@ -1447,18 +1571,20 @@ msgid ""
 "existing GS1 barcodes with product and supply chain information (also "
 "provided by GS1) to create barcodes in Odoo."
 msgstr ""
+"OdooはGS1バーコードを作成しません。企業はGS1から固有のGlobal Trade Item Number "
+"(GTIN)を購入する必要があります。その後、既存のGS1バーコードと(同じくGS1が提供する)プロダクトやサプライチェーン情報を組み合わせて、Odooでバーコードを作成することができます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:26
 msgid "`Purchase GTINs <https://www.gs1.org/standards/get-barcodes>`_"
-msgstr ""
+msgstr "GTINの購入 <https://www.gs1.org/standards/get-barcodes>`_"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:27
 msgid ":ref:`GS1 nomenclature <barcode/operations/gs1>`"
-msgstr ""
+msgstr ":ref:`GS1表現規則<barcode/operations/gs1>`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:32
 msgid "Configure barcodes for product, quantity, and lots"
-msgstr ""
+msgstr "プロダクト、数量、ロットのバーコードを設定します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:34
 msgid ""
@@ -1466,6 +1592,8 @@ msgid ""
 "quantities, and the lot number, the following barcode patterns and "
 "Application Identifiers (A.I.) are used:"
 msgstr ""
+"プロダクト、数量、ロット番号に関する情報を含む GS1 "
+"バーコードを構築するには、以下のバーコードパターンとアプリケーション識別子(A.I.)を使用します:"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:38
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:166
@@ -1475,12 +1603,12 @@ msgstr "名称"
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:38
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:166
 msgid "A.I."
-msgstr ""
+msgstr "A.I."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:38
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:166
 msgid "Field in Odoo"
-msgstr ""
+msgstr "Odooのフィールド"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:40
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:168
@@ -1493,7 +1621,7 @@ msgstr "製品"
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:168
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:204
 msgid "01"
-msgstr ""
+msgstr "01"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:43
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:139
@@ -1503,7 +1631,7 @@ msgstr "30"
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:43
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:171
 msgid ":guilabel:`Units` field on transfer form"
-msgstr ""
+msgstr ":guilabel:転送フォームの`単位` フィールド"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:45
 msgid "Lot Number"
@@ -1511,11 +1639,11 @@ msgstr "ロット番号"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:45
 msgid "(10)([!\"%-/0-9:-?A-Z_a-z]{0,20})"
-msgstr ""
+msgstr "(10)([!\"%-/0-9:-?A-Z_a-z]{0,20})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:45
 msgid ":guilabel:`Lot` on Detailed Operations pop-up"
-msgstr ""
+msgstr ":guilabel:詳細オペレーションポップアップの`ロット`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:52
 #: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:41
@@ -1564,6 +1692,10 @@ msgid ""
 "the box for :guilabel:`Lots & Serial Numbers` under the "
 ":guilabel:`Traceability` heading."
 msgstr ""
+"まず、 :ref:`ロットを使用してプロダクト追跡を可能にする "
+"<inventory/management/track_products_by_lots>` で、 :menuselection:`Inventory "
+"app --> 設定 --> 管理設定` に移動し、 :guilabel:`トレーサビリティ` の見出しの下にある "
+":guilabel:`ロット&シリアル番号` のボックスにチェックを入れます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:58
 msgid ""
@@ -1575,6 +1707,11 @@ msgid ""
 "<https://www.gs1.org/standards/get-barcodes>`_, which is a universally "
 "recognized identifying number that is provided by GS1."
 msgstr ""
+"次に、 :menuselection:`在庫アプリ --> プロダクト --> "
+"プロダクト`で目的のプロダクトフォームに移動し、プロダクトを選択してプロダクトバーコードを設定します。プロダクトフォームで :guilabel:`編集`"
+" をクリックします。次に、 :guilabel:`一般情報` タブの :guilabel:`バーコード` フィールドに、GS1 "
+"が提供する世界共通の識別番号である 14 桁の `Global Trade Item Number (GTIN) "
+"<https://www.gs1.org/standards/get-barcodes>`_ を入力します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:66
 msgid ""
@@ -1582,6 +1719,8 @@ msgid ""
 "as it is only used to encode multiple barcodes into a single barcode that "
 "contains detailed information about the package contents."
 msgstr ""
+"プロダクトフォームでは、 |GTIN| プロダクトバーコードパターン用の|AI| `01` "
+"を省略して下さい。これは、複数のバーコードをパッケージの内容物に関する詳細情報を含む単一のバーコードにエンコードするためにのみ使用されるからです。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:72
 msgid ""
@@ -1589,10 +1728,12 @@ msgid ""
 "|GTIN| `20611628936004` in the :guilabel:`Barcode` field on the product "
 "form."
 msgstr ""
+"プロダクト`ふじりんご`のGS1バーコードを記録するには、プロダクトフォームの :guilabel:`バーコード` フィールドに14桁の |GTIN| "
+"`20611628936004` を入力します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:0
 msgid "Enter 14-digit GTIN into the Barcode field on product form."
-msgstr ""
+msgstr "プロダクトフォームのバーコード欄に14桁のGTINを入力して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:80
 msgid ""
@@ -1603,10 +1744,14 @@ msgid ""
 "Scanner` section. Enter the 14-digit |GTIN| into the :guilabel:`Barcode` "
 "column, then click :guilabel:`Save`."
 msgstr ""
+"Odooデータベース内の全てのプロダクトと対応するバーコードのリストを表示するには、 :menuselection:`在庫アプリ --> 設定 --> "
+"管理設定`に移動します。guilabel:`バーコード` の見出しの下にある :guilabel:`バーコードスキャナ` セクションの下にある "
+":guilabel:`プロダクトバーコードを設定` ボタンをクリックします。14桁の |GTIN| を :guilabel:`バーコード` 列に入力し、"
+" :guilabel:`保存` をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:0
 msgid "View the Product Barcodes page from inventory settings."
-msgstr ""
+msgstr "在庫管理設定からのプロダクトバーコードページビュー。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:92
 msgid ""
@@ -1615,17 +1760,20 @@ msgid ""
 " the :guilabel:`Inventory` tab on the product form. Under "
 ":guilabel:`Tracking`, choose the :guilabel:`By Lots` radio button."
 msgstr ""
+"設定ページでロットとシリアル番号による追跡を有効にした後、プロダクトフォームの :guilabel:`在庫` "
+"タブに移動して、この機能が各プロダクトに適用されるように指定します。guilabel:`追跡` の下にある :guilabel:`ロット毎` "
+"ラジオボタンを選択します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst-1
 msgid ""
 "Enable product tracking by lots in the \"Inventory\" tab of the product "
 "form."
-msgstr ""
+msgstr "プロダクトフォームの \"在庫\"タブでロット別のプロダクト追跡を有効にします。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:101
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:176
 msgid "Scan barcode on receipt"
-msgstr ""
+msgstr "入荷時にバーコードをスキャンする"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:103
 msgid ""
@@ -1634,6 +1782,9 @@ msgid ""
 "manage the :ref:`receipt picking process <barcode/operations/scan-received-"
 "products>`."
 msgstr ""
+"レシート操作中にスキャンされたプロダクトバーコードをOdooで正確にロット解釈するには、 "
+":参照:`入荷ピッキングプロセス<barcode/operations/scan-received-products>`を管理する "
+":menuselection:`バーコード` アプリに移動します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:107
 msgid ""
@@ -1644,6 +1795,11 @@ msgid ""
 "created directly through the :menuselection:`Barcode` app using the "
 ":guilabel:`Create` button."
 msgstr ""
+"guilabel:`バーコードスキャン` ダッシュボードから :guilabel:`オペレーション` ボタンをクリックし、次に "
+":guilabel:`Receipts` "
+"ボタンをクリックすると、未処理の取引先入荷リストが表示されます。PO(購買オーダ)`から生成された入荷が一覧表示されますが、 "
+":guilabel:`作成`ボタンを使用して、 :menuselection:`バーコード` "
+"アプリから直接新しい入荷オペレーションを作成することもできます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:112
 msgid ""
@@ -1652,12 +1808,14 @@ msgid ""
 "product then appears on the list. Use the :guilabel:`✏️ (pencil)` button to "
 "open a window and manually enter quantities for specific lot numbers."
 msgstr ""
+"入荷リストで倉庫オペレーション(`WH/IN`)をクリックし、バーコードスキャナでプロダクトバーコードとロット番号をスキャンします。スキャンしたプロダクトがリストに表示されます。guilabel:`✏️"
+" (鉛筆)` ボタンを使ってウィンドウを開き、特定のロット番号の数量を手入力します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:118
 msgid ""
 "After placing a :abbr:`PO (Purchase Order)` for fifty apples, navigate to "
 "the associated receipt in the *Barcode* app."
-msgstr ""
+msgstr "りんご50個分の :abbr:`PO (購買オーダ)` をオーダしたら、*バーコード*アプリで関連する入荷に移動します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:121
 msgid ""
@@ -1665,68 +1823,70 @@ msgid ""
 "testing with a barcode scanner, below is an example barcode for the fifty "
 "Fuji apples in Lot 2."
 msgstr ""
+" "
+"|GTIN|、数量、ロット番号を含むバーコードをスキャンします。バーコードスキャナでテストするために、以下はロット2の50個のふじりんごのバーコードの例です。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:129
 msgid "50 Fuji apples in Lot0002"
-msgstr ""
+msgstr "ロット0002の50個のふじりんご"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:131
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:200
 msgid "2D Matrix"
-msgstr ""
+msgstr "2Dマトリックス"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:0
 msgid ""
 "2D matrix of GS1 barcode of 50 fuji apples with an assigned lot number."
-msgstr ""
+msgstr "ロット番号割当済の50個のふじりんごのGS1バーコードの2次元マトリックス。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:134
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:203
 msgid "|AI| (product)"
-msgstr ""
+msgstr "|AI| (プロダクト)"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:136
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:205
 msgid "GS1 Barcode (product)"
-msgstr ""
+msgstr "GS1バーコード(プロダクト)"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:137
 msgid "20611628936004"
-msgstr ""
+msgstr "20611628936004"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:138
 msgid "|AI| (quantity)"
-msgstr ""
+msgstr "|AI| (数量)"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:140
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:209
 msgid "GS1 Barcode (quantity)"
-msgstr ""
+msgstr "GS1 バーコード (数量)"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:141
 msgid "00000050"
-msgstr ""
+msgstr "00000050"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:142
 msgid "|AI| (lot)"
-msgstr ""
+msgstr "|AI| (ロット)"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:144
 msgid "GS1 Barcode (lot #)"
-msgstr ""
+msgstr "GS1 バーコード (ロット #)"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:145
 msgid "LOT0002"
-msgstr ""
+msgstr "LOT0002"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:146
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:211
 msgid "Full GS1 barcode"
-msgstr ""
+msgstr "フルGS1バーコード"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:147
 msgid "0120611628936004 3000000050 10LOT0002"
-msgstr ""
+msgstr "0120611628936004 3000000050 10LOT0002"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:149
 msgid ""
@@ -1735,31 +1895,34 @@ msgid ""
 ":guilabel:`Validate` button turns green. Click the :guilabel:`Validate` "
 "button to complete the reception."
 msgstr ""
+"ref:`設定が正しければ<barcode/operations/troubleshooting>`、処理された `50/50` "
+":guilabel:`単位` が表示され、 :guilabel:`検証` ボタンが緑色に変わります。guilabel:`検証` "
+"ボタンをクリックすると入荷が完了します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:0
 msgid ""
 "Scan the barcode for a product on the reception picking page in the "
 "*Barcode* app."
-msgstr ""
+msgstr "*バーコード*アプリの入荷ピッキングページでプロダクトのバーコードをスキャンします。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:160
 msgid "Configure barcode for product and non-unit quantity"
-msgstr ""
+msgstr "プロダクトおよび数量単位以外のバーコードの設定"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:162
 msgid ""
 "To build a GS1 barcode that contains products measured in a non-unit "
 "quantity, like kilograms, for example, the following barcode patterns are "
 "used:"
-msgstr ""
+msgstr "例えば、キログラムのような単位以外の量で測定されたプロダクトを含むGS1バーコードを構築するには、以下のバーコードパターンを使用します:"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:171
 msgid "Quantity in kilograms"
-msgstr ""
+msgstr "キログラムでの数量"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:171
 msgid "310[0-5]"
-msgstr ""
+msgstr "310[0-5]"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:178
 msgid ""
@@ -1767,12 +1930,14 @@ msgid ""
 " in the *Purchase* app using the appropriate unit of measure "
 "(:guilabel:`UoM`) for the quantity of products to be purchased."
 msgstr ""
+"Odooで数量が正しく解釈されていることを確認するには、*購買*アプリで購入するプロダクトの数量に適切な単位(:guilabel:`単位`)を使用してオーダを発注して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:183
 msgid ""
 ":ref:`Simplify vendor unit conversions with UoMs "
 "<inventory/product_replenishment/unit-conversion>`"
 msgstr ""
+":ref:`単位で仕入先の単位変換を簡素化 <inventory/product_replenishment/unit-conversion>`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:186
 msgid ""
@@ -1780,41 +1945,43 @@ msgid ""
 ":ref:`receive the vendor shipment <barcode/operations/scan-received-"
 "products>`."
 msgstr ""
+"オーダが発注されたら、:menuselection:`バーコード` アプリに移動して、:ref:`仕入先の配送を入荷する "
+"<barcode/operations/scan-received-products>` を実行します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:190
 msgid ""
 "On the receipt in the *Barcode* app, receive an order for `52.1 kg` of "
 "peaches by scanning the barcode containing the |GTIN| and quantity of "
 "peaches in kilograms."
-msgstr ""
+msgstr "バーコード*アプリの入荷で、|GTIN| と桃のキログラム数量を含むバーコードをスキャンして、桃`52.1 kg`のオーダを入荷します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:198
 msgid "52.1 kg of Peaches"
-msgstr ""
+msgstr "52.1 kgの桃"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:0
 msgid "2D matrix of GS1 barcode of 52.1 kg of peaches."
-msgstr ""
+msgstr "52.1 kgの桃のGS1bアーコードの2Dマトリックス"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:206
 msgid "00614141000012"
-msgstr ""
+msgstr "00614141000012"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:207
 msgid "|AI| (kg, 1 decimal point)"
-msgstr ""
+msgstr "|AI| (kg、小数点以下1桁)"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:208
 msgid "3101"
-msgstr ""
+msgstr "3101"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:210
 msgid "000521"
-msgstr ""
+msgstr "000521"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:212
 msgid "0100614141000012 3101000521"
-msgstr ""
+msgstr "0100614141000012 3101000521"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:214
 msgid ""
@@ -1823,14 +1990,17 @@ msgid ""
 " button turns green. Finally, press :guilabel:`Validate` to complete the "
 "validation."
 msgstr ""
+"ref:`設定が正しければ <barcode/operations/troubleshooting>`, `52.1 / 52.1` "
+":guilabel:`kg` が表示され、 :guilabel:`検証` ボタンが緑色に変わります。最後に :guilabel:`検証` "
+"を押して検証を完了します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:0
 msgid "Scan barcode screen for a reception operation in the Barcode app."
-msgstr ""
+msgstr "バーコードアプリで入荷オペレーションをするためのバーコードスキャン画面。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:223
 msgid "Verify product moves"
-msgstr ""
+msgstr "プロダクト移動を確認する"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:225
 msgid ""
@@ -1838,6 +2008,8 @@ msgid ""
 "recorded on the :guilabel:`Product Moves` report, accessible by navigating "
 "to :menuselection:`Inventory app --> Reporting --> Product Moves`."
 msgstr ""
+"さらに確認するために、入荷したプロダクトの数量は :guilabel:`プロダクト移動` レポートにも記録され、 "
+":menuselection:`在庫アプリ --> レポーティング --> プロダクト移動` からアクセスできます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:229
 msgid ""
@@ -1849,21 +2021,23 @@ msgid ""
 "scan, demonstrating that the records processed in the *Barcode* app were "
 "properly stored in *Inventory*."
 msgstr ""
+"guilabel:`プロダクト移動` "
+"レポートの項目は、デフォルトでプロダクトごとにグループ化されています。入荷数量を確認するには、プロダクトラインをクリックすると折りたたみ式のドロップダウンメニューが開き、そのプロダクトの*在庫移動明細*のリストが表示されます。最新の在庫移動は、倉庫入荷参照番号(例：`WH/IN/00013`)とバーコードスキャンで処理された数量と一致し、*バーコード*アプリで処理されたレコードが*在庫*に適切に保存されていることを示します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst-1
 msgid "Reception stock move record for 52.1 kg of peaches."
-msgstr ""
+msgstr "桃52.1kgのに入荷在庫移動レコード。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:3
 msgid "Process receipts and deliveries with barcodes"
-msgstr ""
+msgstr "バーコードで入荷や配送を処理する"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:7
 msgid ""
 "The *Barcode* app can be used to process receipts, deliveries, and other "
 "types of operations in real time using a barcode scanner or the Odoo mobile "
 "app."
-msgstr ""
+msgstr "*バーコード*アプリは、バーコードスキャナまたはOdooモバイルアプリを使用して、入荷や配送などの処理をリアルタイムで行うことができます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:10
 msgid ""
@@ -1872,13 +2046,14 @@ msgid ""
 "computer. Processing operations this way can help to properly attribute "
 "barcodes to the appropriate products, pickings, locations, and more."
 msgstr ""
+"これにより、コンピュータからの転送を検証するのを待つ代わりに、倉庫の現場でオペレーションが発生したときに処理することが可能になります。このようにオペレーションを処理することで、バーコードを適切なプロダクト、ピッキング、ロケーションなどに適切に割当てることができます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:17
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:15
 msgid ""
 "To use the *Barcode* app to process transfers, it must be installed by "
 "enabling the feature from the settings of the *Inventory* app."
-msgstr ""
+msgstr "転送処理に*バーコード*アプリを使用するには、*在庫*アプリの設定から機能を有効にしてインストールする必要があります。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:20
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:18
@@ -1887,6 +2062,8 @@ msgid ""
 "Settings`. Then, scroll down to the :guilabel:`Barcode` section, and click "
 "the checkbox next to the :guilabel:`Barcode Scanner` feature."
 msgstr ""
+"これを行うには、 :menuselection:`在庫アプリ --> 設定 --> 管理設定`に進みます。次に、 :guilabel:`バーコード` "
+"セクションまでスクロールダウンし、 :guilabel:`バーコードスキャナ` 機能の横にあるチェックボックスをクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:26
 msgid ""
@@ -1895,6 +2072,9 @@ msgid ""
 "a corresponding drop-down menu), where either :guilabel:`Default "
 "Nomenclature` or :guilabel:`Default GS1 Nomenclature` can be selected."
 msgstr ""
+"ページがリフレッシュされると、新しいオプションが :guilabel:`バーコードスキャナ` 機能の下に表示されます： "
+":guilabel:`バーコード表現規則`(対応するドロップダウンメニュー付き)。ここで :guilabel:`デフォルト表現規則` または "
+":guilabel:`デフォルトGS1表現規則` のどちらかを選択できます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:30
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:29
@@ -1903,6 +2083,7 @@ msgid ""
 "and a set of :guilabel:`Print` buttons for printing barcode commands and a "
 "barcode demo sheet."
 msgstr ""
+"また、:guilabel:`プロダクトバーコードを設定`の内部リンク矢印と、バーコードコマンドとバーコードデモシートを印刷するための一連の:guilabel:`印刷`ボタンがあります。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:37
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:36
@@ -1912,16 +2093,19 @@ msgid ""
 ":doc:`Activate the Barcodes in Odoo <../setup/software>` documentation "
 "pages."
 msgstr ""
+"guilabel:`バーコード`アプリのセットアップと設定については、 :doc:`バーコードスキャナのセットアップ "
+"<../setup/hardware>`と :doc:`Odooでバーコードを有効にする "
+"<../setup/software>`のドキュメントページを参照して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:44
 msgid "Scan barcodes for receipts"
-msgstr ""
+msgstr "入荷用にバーコードをスキャンする"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:46
 msgid ""
 "To process warehouse receipts for incoming products, there first needs to be"
 " a purchase order (PO) created, and a receipt operation to process."
-msgstr ""
+msgstr "入荷するプロダクトの入荷を処理するには、まず購買オーダ(PO)を作成し、入荷オペレーションを処理する必要があります。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:49
 msgid ""
@@ -1929,6 +2113,7 @@ msgid ""
 ":menuselection:`Purchase app --> Create` to create a new request for "
 "quotation (RFQ)."
 msgstr ""
+"abbr:`購買オーダ`を作成するには、 :menuselection:`購買アプリ --> 作成`に移動し、新しい見積依頼(RFQ)を作成します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:52
 msgid ""
@@ -1938,6 +2123,9 @@ msgid ""
 ":guilabel:`Add a product`, and select the desired product(s) to add to the "
 "quotation."
 msgstr ""
+"空白の :abbr:`見積依頼` フォームから、 :guilabel:`仕入先` "
+"フィールドの隣にあるドロップダウンメニューをクリックして仕入先を追加します。次に、 :guilabel:`プロダクト` タブの "
+":guilabel:`プロダクト` 明細で、 :guilabel:`プロダクトを追加` をクリックし、見積に追加したいプロダクトを選択します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:57
 msgid ""
@@ -1945,16 +2133,18 @@ msgid ""
 ":guilabel:`Confirm Order` to confirm the :abbr:`RFQ (request for quotation)`"
 " to a :abbr:`PO (purchase order)`."
 msgstr ""
+"準備ができたら、フォーム上部の :guilabel:`保存` をクリックし、次に :guilabel:`オーダを確認` をクリックして "
+":abbr:`見積依頼` を確認して :abbr:`購買オーダ` にします。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst-1
 msgid "Completed purchase order for barcode product."
-msgstr ""
+msgstr "バーコードプロダクトの購買オーダ完了。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:64
 msgid ""
 "To process and scan barcodes for warehouse receipts, navigate to the "
 ":menuselection:`Barcode app`."
-msgstr ""
+msgstr "倉庫の入荷用にバーコードを処理しスキャンするには、 :menuselection:`バーコードアプリ` に移動します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:66
 msgid ""
@@ -1963,6 +2153,9 @@ msgid ""
 " on the :guilabel:`Operations` button at the bottom of the screen. This "
 "navigates to an :menuselection:`Operations` overview page."
 msgstr ""
+"guilabel:`バーコードアプリ`の中に入ると、さまざまなオプションを表示する :guilabel:`バーコードスキャニング` "
+"画面が表示されます。入荷を処理するには、画面下部の :guilabel:`オペレーション` ボタンをクリックします。これにより "
+":menuselection:`オペレーション` の概要ページに移動します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:74
 msgid ""
@@ -1971,6 +2164,8 @@ msgid ""
 "select the desired receipt operation to process. This navigates to the "
 "barcode transfer screen."
 msgstr ""
+"このページから :guilabel:`入荷` カードを探し、 :guilabel:`# 未処理` "
+"ボタンをクリックすると、未処理の入荷が全て表示されます。次に、処理したい入荷オペレーションを選択します。これでバーコード転送画面に移動します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:79
 msgid ""
@@ -1981,6 +2176,7 @@ msgid ""
 "well. Once all products have been scanned, validate the transfer to proceed "
 "with the stock moves."
 msgstr ""
+"バーコードスキャナまたはOdooモバイルアプリのみを使用する場合、対応するオペレーションタイプの各振込のバーコードをスキャンして簡単に処理することができます。一度スキャンすると、既存の転送に含まれるプロダクトをスキャンしたり、新しいプロダクトを転送に追加することができます。全てのプロダクトがスキャンされたら、在庫移動を進めるために転送を検証します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:85
 msgid ""
@@ -1990,11 +2186,13 @@ msgid ""
 "products need to be added to the operation, or if the whole operation should"
 " be validated at once."
 msgstr ""
+"この画面から、その転送(**WH/IN/000XXX**)内で処理する全ての入荷の概要が表示されます。画面下部には、プロダクトをオペレーションに追加する必要があるか、オペレーション全体を一度に検証する必要があるかによって、"
+" :guilabel:`プロダクトを追加` または :guilabel:`検証` のオプションがあります。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst-1
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst-1
 msgid "Overview of receipts in transfer to scan."
-msgstr ""
+msgstr "スキャン転送中の入荷の概要。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:94
 msgid ""
@@ -2003,6 +2201,7 @@ msgid ""
 "clicked to indicate receipt of that product, or the :guilabel:`pencil` icon "
 "can be clicked to open a new screen to edit that product line."
 msgstr ""
+"各プロダクトを個別に処理してスキャンするには、特定のプロダクト明細を選択します。guilabel:`+#`ボタン(この場合、:guilabel:`+10`)をクリックすると、そのプロダクトの入荷を表示でき、:guilabel:`鉛筆`アイコンをクリックすると、そのプロダクト明細を編集するための新しい画面を開くことができます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:98
 msgid ""
@@ -2012,6 +2211,9 @@ msgid ""
 "button (in this case, :guilabel:`/10 Units`) to automatically fill the "
 "quantity ordered from the :abbr:`PO (purchase order)`."
 msgstr ""
+"この画面から、入荷するプロダクトがリスト表示されます。プロダクト名の下にある :guilabel:`数量` "
+"行を編集することができます。この行の`0`を希望の数量に変更するか、 :guilabel:`/# 単位`ボタン(この場合は "
+":guilabel:`/10単位`)をクリックすると、 :abbr:`購買オーダ` からオーダされた数量が自動的に入力されます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:104
 msgid ""
@@ -2021,11 +2223,15 @@ msgid ""
 "the `Barcode Product` to receive one unit. Afterwards, click the "
 ":guilabel:`pencil` icon to manually enter the received quantities."
 msgstr ""
+"入荷オペレーション `WH/IN/00019` では、`バーコードプロダクト` の `10単位` を入荷する予定です。`[BARCODE_PROD]` "
+"はプロダクトフォームに設定されている :guilabel:`ない部参照` "
+"です。バーコードプロダクト`のバーコードをスキャンして1個を入荷します。その後、 :guilabel:`鉛筆` "
+"アイコンをクリックして、入荷済数量を手入力します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:0
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:0
 msgid "Product line editor for individual transfer in Barcode app."
-msgstr ""
+msgstr "バーコードアプリの個別転送用プロダクトラインエディタ。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:113
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:179
@@ -2034,6 +2240,7 @@ msgid ""
 "to add or subtract quantity of the product, and the :guilabel:`number keys` "
 "can be used to add quantity, as well."
 msgstr ""
+"さらに、:guilabel:`+1`と:guilabel:`-1`のボタンをクリックすると、プロダクトの数量を追加または減算することができ、:guilabel:`数字キー`を使用して数量を追加することもできます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:116
 msgid ""
@@ -2042,6 +2249,9 @@ msgid ""
 "product itself. Click this line to reveal a drop-down menu of additional "
 "locations to choose from."
 msgstr ""
+"guilabel:`数字キー`の下には :guilabel:`ロケーション` "
+"という行があり、プロダクトに別のロケーションが記載されていない限り、デフォルトでは `WH/Stock` "
+"と表示されます。この行をクリックすると、ドロップダウンメニューが表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:120
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:194
@@ -2050,7 +2260,7 @@ msgstr ""
 msgid ""
 "Once ready, click :guilabel:`Confirm` to confirm the changes made to the "
 "product line."
-msgstr ""
+msgstr "準備ができたら、:guilabel:`確認`をクリックしてプロダクト明細の変更を確認します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:122
 msgid ""
@@ -2060,26 +2270,29 @@ msgid ""
 "receipt has now been processed, and the :guilabel:`Barcode app` can be "
 "closed out."
 msgstr ""
+"次に、その転送 (**WH/IN/000XX**) 内で処理する全ての入荷が表示された概要ページから、入荷するプロダクトの :guilabel:`+#`"
+" ボタンをクリックし、 :guilabel:`検証` をクリックします。これで入荷が処理され、 :guilabel:`バーコードアプリ` "
+"を終了することができます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst-1
 msgid "Overview of receipts in transfer to validate."
-msgstr ""
+msgstr "未検証の転送の入荷の概要。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:132
 msgid "Scan barcodes for delivery orders"
-msgstr ""
+msgstr "配送オーダ用にバーコードをスキャンする"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:134
 msgid ""
 "To process warehouse deliveries for outgoing products, there first needs to "
 "be a sales order (SO) created, and a delivery operation to process."
-msgstr ""
+msgstr "出荷プロダクトの倉庫配送を処理するには、まず販売オーダを作成し、配送オペレーションを処理する必要があります。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:137
 msgid ""
 "To create a :abbr:`SO (sales order)`, navigate to the :menuselection:`Sales "
 "app --> Create` to create a new quotation."
-msgstr ""
+msgstr "abbr:`販売オーダ` を作成するには、 :menuselection:`販売アプリ --> 作成` に移動し、新しい見積を作成します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:140
 msgid ""
@@ -2089,6 +2302,9 @@ msgid ""
 ":guilabel:`Add a product`, and select the desired product(s) to add to the "
 "quotation."
 msgstr ""
+"空白の見積フォームから、 :guilabel:`顧客` フィールドの横にあるドロップダウンメニューをクリックして顧客を追加します。次に、 "
+":guilabel:`オーダ明細` タブの :guilabel:`プロダクト` 明細で、 :guilabel:`プロダクトを追加` "
+"をクリックし、見積に追加したいプロダクトを選択します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:144
 msgid ""
@@ -2096,16 +2312,18 @@ msgid ""
 ":guilabel:`Confirm Order` to confirm the quotation to a :abbr:`SO (sales "
 "order)`."
 msgstr ""
+"準備ができたら、フォーム上部の :guilabel:`保存` をクリックし、 :abbr:`販売オーダ` に見積を確認するために "
+":guilabel:`オーダ確認` をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst-1
 msgid "Completed sales order for barcode product."
-msgstr ""
+msgstr "バーコードプロダクトの完了済販売オーダ。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:151
 msgid ""
 "To process and scan barcodes for warehouse deliveries, navigate to the "
 ":menuselection:`Barcode app`."
-msgstr ""
+msgstr "倉庫配送用のバーコードを処理しスキャンするには、 :menuselection:`バーコードアプリ` に移動します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:153
 msgid ""
@@ -2114,6 +2332,9 @@ msgid ""
 "click on the :guilabel:`Operations` button at the bottom of the screen. This"
 " navigates to an :guilabel:`Operations` overview page."
 msgstr ""
+"guilabel:`バーコードアプリ`の中に入ると、様々なオプションを表示する :guilabel:`バーコードスキャニング` "
+"画面が表示されます。配達物を処理するには、画面下部の :guilabel:`オペレーション` ボタンをクリックします。これにより "
+":guilabel:`オペレーション` の概要ページに移動します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:157
 msgid ""
@@ -2122,10 +2343,12 @@ msgid ""
 "select the desired delivery order to process. This navigates to the barcode "
 "transfer screen."
 msgstr ""
+"このページから :guilabel:`配送オーダ` カードを探し、 :guilabel:`# 未処理` "
+"ボタンをクリックすると、未処理の配達が全て表示されます。次に、処理したい配送オーダを選択します。するとバーコード転送画面に移動します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst-1
 msgid "Operations overview page in Barcode app dashboard."
-msgstr ""
+msgstr "バーコードアプリのダッシュボードにあるオペレーション概要ページ。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:165
 msgid ""
@@ -2135,6 +2358,8 @@ msgid ""
 " products need to be added to the operation, or if the whole operation "
 "should be validated at once."
 msgstr ""
+"この画面では、その転送(**WH/OUT/000XXX**)内で処理する全ての配送の概要が表示されます。画面下部には、プロダクトをオペレーションに追加する必要があるか、オペレーション全体を一度に検証する必要があるかによって、"
+" :guilabel:`プロダクトを追加` または :guilabel:`検証` のオプションがあります。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:170
 msgid ""
@@ -2143,6 +2368,7 @@ msgid ""
 "product, or the :guilabel:`pencil icon` can be clicked to open a new screen "
 "to edit that product line."
 msgstr ""
+"各プロダクトを個別に処理しスキャンするには、特定のプロダクト明細を選択します。guilabel:`+1`ボタンをクリックすると、そのプロダクトの配送を示すことができ、:guilabel:`鉛筆アイコン`をクリックすると、そのプロダクト明細を編集するための新しい画面を開くことができます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:174
 msgid ""
@@ -2152,6 +2378,9 @@ msgid ""
 "button (in this case, :guilabel:`/10 Units`) to automatically fill the "
 "quantity ordered from the :abbr:`SO (sales order)`."
 msgstr ""
+"この画面では、配送するプロダクトがリスト表示されます。プロダクト名の下にある :guilabel:`数量` "
+"行を編集することができます。この行の`0`を希望の数量に変更するか、 :guilabel:`/#単位`ボタン(この場合は "
+":guilabel:`/10単位`)をクリックすると、 :abbr:`販売オーダ`からオーダされた数量が自動的に入力されます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:182
 msgid ""
@@ -2159,6 +2388,8 @@ msgid ""
 "reads `WH/Stock` by default, unless another location is listed on the "
 "product itself."
 msgstr ""
+"guilabel:`数字キー`の下には :guilabel:`ロケーション` "
+"明細があり、プロダクト自体に別のロケーションが記載されていない限り、デフォルトでは `WH/Stock` と表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:185
 msgid ""
@@ -2166,6 +2397,7 @@ msgid ""
 "Click this line to reveal a drop-down menu of additional locations to choose"
 " from (if this product is stored in multiple locations in the warehouse)."
 msgstr ""
+"これは、配送のためにプロダクトが引き出される場所です。この明細をクリックすると、追加のロケーションを選択するドロップダウンメニューが表示されます(このプロダクトが倉庫内の複数のロケーションに保管されている場合）。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:190
 msgid ""
@@ -2173,6 +2405,7 @@ msgid ""
 "rules, and removal strategies, additional steps can be added for various "
 "operation types, while using the *Barcode* app."
 msgstr ""
+"複数の異なる保管ロケーション、保管規則、廃棄戦略を持つ倉庫の場合、*バーコード*アプリを使用しながら、様々なオペレーションタイプに追加のステップを追加することができます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:196
 msgid ""
@@ -2181,14 +2414,16 @@ msgid ""
 "line for the products being received, and click :guilabel:`Validate`. The "
 "delivery has now been processed, and the *Barcode* app can be closed out."
 msgstr ""
+"次に、その移動(**WH/OUT/000XXX**)内で処理する全ての入荷が表示された概要ページから、入荷するプロダクトの :guilabel:`+#`"
+" ボタンをクリックし、 :guilabel:`検証` をクリックします。これで配送が処理され、*バーコード*アプリを終了できます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst-1
 msgid "Overview of deliveries in transfer to validate."
-msgstr ""
+msgstr "未検証の移動における配送の概要。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:3
 msgid "Create and process transfers with barcodes"
-msgstr ""
+msgstr "バーコードによる移動の作成と処理"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:5
 msgid ""
@@ -2197,6 +2432,7 @@ msgid ""
 "numbers. Transfers can be created from scratch in real time using an Odoo-"
 "compatible barcode scanner or the Odoo mobile app."
 msgstr ""
+"バーコード*アプリは、ロット番号やシリアル番号で追跡されたプロダクトを含む、あらゆるタイプのプロダクトの内部移動処理に使用できます。Odoo互換のバーコードスキャナーまたはOdooモバイルアプリを使用して、リアルタイムでゼロから移動を作成できます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:9
 msgid ""
@@ -2204,6 +2440,8 @@ msgid ""
 "for the *Inventory* app, refer to the `Odoo Inventory • Hardware page "
 "<https://www.odoo.com/app/inventory-hardware>`_."
 msgstr ""
+"Odooと互換性のあるバーコードモバイルスキャナーや*在庫*アプリ用のその他のハードウェアのリストは、`Odoo在庫 - ハードウエアページ "
+"<https://www.odoo.com/app/inventory-hardware>`_をご参照下さい。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:24
 msgid ""
@@ -2213,10 +2451,12 @@ msgid ""
 "Nomenclature` or :guilabel:`Default GS1 Nomenclature` can be selected. The "
 "nomenclature selected changes how scanners interpret barcodes in Odoo."
 msgstr ""
+"ページがリフレッシュされると、:guilabel:`バーコードスキャナ`機能の下に新しいオプションが表示されます: "
+":guilabel:`バーコード表現規則`(対応するドロップダウンメニューつき)ここでは、:guilabel:`デフォルト表現規則`または:guilabel:`デフォルトGS1表現規則`を選択できます。選択した表現規則によって、スキャナがOdooでバーコードを解釈する方法が変わります。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:41
 msgid "Scan barcodes for internal transfers"
-msgstr ""
+msgstr "内部移動用にバーコードをスキャンする"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:43
 msgid ""
@@ -2224,6 +2464,8 @@ msgid ""
 ":guilabel:`Storage Locations` and :guilabel:`Multi-Step Routes` features "
 "**must** be enabled."
 msgstr ""
+"倉庫内のプロダクトの内部移動を作成し処理するには、 :guilabel:`保管場所` と :guilabel:`複数ステップルート` "
+"機能を有効にする必要があります。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:46
 msgid ""
@@ -2232,20 +2474,23 @@ msgid ""
 " the checkboxes next to :guilabel:`Storage Locations` and :guilabel:`Multi-"
 "Step Routes`."
 msgstr ""
+"これを行うには、 :menuselection:`Inventory app --> 設定 --> 管理設定`に進みます。そして "
+":guilabel:`倉庫` セクションまでスクロールダウンし、 :guilabel:`保管場所` と :guilabel:`複数ステップルート` "
+"の隣にあるチェックボックスをクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:50
 msgid "Then, click :guilabel:`Save` at the top of the page to save changes."
-msgstr ""
+msgstr "その後、ページ上部の :guilabel:`保存` をクリックして変更を保存します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:53
 msgid "Create an internal transfer"
-msgstr ""
+msgstr "内部移動を作成する"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:55
 msgid ""
 "To process existing internal transfers, there first needs to be an internal "
 "transfer created, and an operation to process."
-msgstr ""
+msgstr "既存の内部移動を処理するためには、まず内部移動が作成され、処理するためのオペレーションが必要です。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:58
 msgid ""
@@ -2254,12 +2499,16 @@ msgid ""
 ":guilabel:`Internal Transfers` card, and click on the :guilabel:`0 To "
 "Process` button."
 msgstr ""
+"内部移動を作成するには、 :menuselection:`在庫アプリ` に移動します。guilabel:`在庫概要` ダッシュボードから "
+":guilabel:`内部移動` カードを探し、 :guilabel:`0未処理` ボタンをクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:62
 msgid ""
 "Then, click :guilabel:`Create` in the top left of the resulting page. This "
 "navigates to a new :guilabel:`Internal Transfer` form."
 msgstr ""
+"次に、表示されたページの左上にある :guilabel:`作成` をクリックします。これで新しい :guilabel:`内部移動` "
+"フォームに移動します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:65
 msgid ""
@@ -2269,11 +2518,14 @@ msgid ""
 ":guilabel:`WH/Stock` by default, but can be changed to whichever locations "
 "the products are being moved from, and moved to."
 msgstr ""
+"この空白のフォームでは、 :guilabel:`オペレーションタイプ` は自動的に :guilabel:`内部移動 "
+"としてリストされます。このフィールドの下にある :guilabel:`移動元ロケーション` と :guilabel:`移動先ロケーション` "
+"は、デフォルトでは :guilabel:`WH/Stock` に設定されていますが、プロダクトの移動元と移動先のロケーションに変更することができます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst-1
 msgid ""
 "Blank internal transfer form with source location and destination location."
-msgstr ""
+msgstr "移動元と移動先が記載された空白の内部移動フォーム。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:74
 msgid ""
@@ -2282,6 +2534,8 @@ msgid ""
 "tab, click :guilabel:`Add a product`, and select the desired product(s) to "
 "add to the transfer."
 msgstr ""
+"希望するロケーションを選択したら、プロダクトを移動に追加することができます。guilabel:`プロダクト` タブの :guilabel:`プロダクト`"
+" 明細で :guilabel:`プロダクトを追加` をクリックし、移動に追加したいプロダクトを選択します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:78
 msgid ""
@@ -2290,21 +2544,24 @@ msgid ""
 "icon (four lines, at the far right of the :guilabel:`Product` line) to open "
 "the :guilabel:`Detailed Operations` pop-up window."
 msgstr ""
+"準備ができたら、フォームの一番上にある :guilabel:`保存` をクリックして、新しい内部移動を保存します。保存が完了したら、 "
+":guilabel:`詳細オペレーション` アイコン(4明細、 :guilabel:`プロダクト` 明細の右端）をクリックして "
+":guilabel:`詳細オペレーション` ポップアップウィンドウを開きます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst-1
 msgid "Internal transfer detailed operations pop-up window."
-msgstr ""
+msgstr "内部移動の詳細オペレーションポップアップウィンドウ。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:86
 msgid "From the pop-up, click :guilabel:`Add a line`."
-msgstr ""
+msgstr "ポップアップから :guilabel:`明細を追加`をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:88
 msgid ""
 "Then, in the :guilabel:`To` column, change the location from "
 ":guilabel:`WH/Stock` to a different location, where the products should be "
 "moved."
-msgstr ""
+msgstr "次に、 :guilabel:`移動先`列で、 :guilabel:`WH/Stock`からプロダクトを移動させる場所を変更します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:91
 msgid ""
@@ -2312,22 +2569,25 @@ msgid ""
 "quantity to transfer. Once ready, click :guilabel:`Confirm` to close out the"
 " pop-up window."
 msgstr ""
+"次に、 :guilabel:`完了`列で、数量を希望する移動数量に変更します。準備ができたら :guilabel:`確認` "
+"をクリックしてポップアップウィンドウを閉じます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:95
 msgid "Scan barcodes for internal transfer"
-msgstr ""
+msgstr "内部移動用にバーコードをスキャンする"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:97
 msgid ""
 "To process and scan barcodes for internal transfers, navigate to the "
 ":menuselection:`Barcode app`."
-msgstr ""
+msgstr "内部移動用にバーコードを処理しスキャンするには、 :menuselection:`バーコードアプリ` に移動します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:99
 msgid ""
 "Once inside the :guilabel:`Barcode app`, a :guilabel:`Barcode Scanning` "
 "screen displaying different options is presented."
 msgstr ""
+"guilabel:`バーコードアプリ`の中に入ると、様々なオプションを表示する :guilabel:`バーコードスキャン`画面が表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:102
 msgid ""
@@ -2335,6 +2595,8 @@ msgid ""
 " the bottom of the screen. This navigates to an :menuselection:`Operations` "
 "overview page."
 msgstr ""
+"内部移動を処理するには、画面下部の :guilabel:`オペレーション` ボタンをクリックします。これにより "
+":menuselection:`オペレーション` の概要ページに移動します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:109
 msgid ""
@@ -2343,6 +2605,8 @@ msgid ""
 "transfers. Then, select the desired operation to process. This navigates to "
 "the barcode transfer screen."
 msgstr ""
+"このページから :guilabel:`内部移動` カードを探し、 :guilabel:`# 未処理` "
+"ボタンをクリックすると、未処理の内部送金がすべて表示されます。次に、処理したい処理を選択します。これにより、バーコード移動画面に移動します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:114
 msgid ""
@@ -2350,6 +2614,7 @@ msgid ""
 "a barcode scanner or the Odoo mobile app), the barcodes for each transfer of"
 " a corresponding operation type can be scanned to be processed easily."
 msgstr ""
+"*在庫*アプリを使用せずに*バーコード*アプリを使用する場合（バーコードスキャナまたはOdooモバイルアプリを使用する場合**のみ**）、対応するオペレーションタイプの各移動のバーコードをスキャンして簡単に処理することができます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:118
 msgid ""
@@ -2358,6 +2623,7 @@ msgid ""
 "products have been scanned, validate the transfer to proceed with the stock "
 "moves."
 msgstr ""
+"一度スキャンすると、既存の移動の一部であるプロダクトをスキャンすることができ、同様に新しいプロダクトを移動に追加することができます。全てのプロダクトがスキャンされたら、在庫移動を進めるために移動を検証します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:122
 msgid ""
@@ -2367,11 +2633,13 @@ msgid ""
 ":guilabel:`Validate`, depending on if products need to be added to the "
 "operation, or if the whole operation should be validated at once."
 msgstr ""
+"この画面から、特定の内部移動(**WH/INT/000XXX**)内で処理する全てのプロダクトの概要が表示される。画面の下部には、プロダクトをオペレーションに追加する必要があるか、オペレーション全体を一度に検証する必要があるかによって、"
+" :guilabel:`プロダクトを追加` または :guilabel:`検証` のオプションがあります。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:131
 msgid ""
 "Then, scan the barcode of the product to process the internal transfer."
-msgstr ""
+msgstr "次に、プロダクトのバーコードをスキャンして、内部移動を処理します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:133
 msgid ""
@@ -2380,6 +2648,9 @@ msgid ""
 "of that product to the transfer, or the :guilabel:`pencil icon` can be "
 "clicked to open a new screen to edit that product line."
 msgstr ""
+"または、各プロダクトを個別に処理しスキャンするには、特定のプロダクト明細を選択します。guilabel:`+ 1` "
+"ボタンをクリックすると、そのプロダクトの追加数量を移動に追加することができ、 :guilabel:`鉛筆アイコン` "
+"をクリックすると、そのプロダクト明細を編集するための新しい画面を開くことができます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:137
 msgid ""
@@ -2388,6 +2659,8 @@ msgid ""
 ":guilabel:`Quantity` line can be edited. Change the number in the line to "
 "the quantity listed to be transferred on the internal transfer form."
 msgstr ""
+"プロダクトのポップアップウィンドウには、プロダクトと処理単位が数字パッドで表示されます。プロダクト名の下にある :guilabel:`数量` "
+"行を編集することができます。この行の数字を、内部移動フォームに記載されている移動数量に変更します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:142
 msgid ""
@@ -2398,6 +2671,10 @@ msgid ""
 "Afterwards, click the :guilabel:`pencil icon` to manually enter the "
 "transferred quantities."
 msgstr ""
+"内部移動オペレーション `WH/INT/000XX` では、`50単位` の `振替プロダクト` が `WH/在庫` から `WH/在庫/棚1` "
+"に移動されます。`[TRANSFER_PROD]` はプロダクトフォームに設定されている :guilabel:`内部参照` "
+"です。TRANSFER_PROD` のバーコードをスキャンして、1個を受け取ります。その後、 :guilabel:`鉛筆アイコン` "
+"をクリックして、移動された数量を手入力します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:151
 msgid ""
@@ -2405,6 +2682,7 @@ msgid ""
 "to add or subtract quantity of the product, and the number keys can be used "
 "to add quantity, as well."
 msgstr ""
+"さらに、:guilabel:`+1`と:guilabel:`-1`のボタンをクリックすると、プロダクトの数量を足したり引いたりすることができ、数字キーも同様に数量を足すのに使うことができます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:154
 msgid ""
@@ -2413,6 +2691,8 @@ msgid ""
 " in this case `WH/Stock` and `WH/Stock/Shelf 1`. Click these lines to reveal"
 " a drop-down menu of additional locations to choose from."
 msgstr ""
+"番号キーの下には2つの "
+":guilabel:`ロケーション`行があり、内部移動フォームで以前に指定されたロケーション、この場合は`WH/在庫`と`WH/在庫/棚1`を読み取ります。これらの行をクリックすると、追加のロケーションを選択するドロップダウンメニューが表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:160
 msgid ""
@@ -2420,12 +2700,13 @@ msgid ""
 "transfer (**WH/INT/000XX**), click :guilabel:`Validate`. The receipt has now"
 " been processed, and the *Barcode* app can be closed out."
 msgstr ""
+"次に、その転送(***WH/INT/000XXX**)内で処理する全てのプロダクトの概要ページから、:guilabel:`検証`をクリックします。これでレシートが処理され、*バーコード*アプリを終了することができます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:165
 msgid ""
 "The *Barcode* app can also be used to scan products in internal transfers "
 "containing unique lot numbers and serial numbers."
-msgstr ""
+msgstr "また、*バーコード*アプリは、固有のロット番号とシリアル番号を含む内部転送のプロダクトをスキャンするために使用することができます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:168
 msgid ""
@@ -2435,10 +2716,11 @@ msgid ""
 "shared between different products, scan the product barcode first, then the "
 "barcode of the lot/serial number."
 msgstr ""
+"バーコード転送画面からロット番号またはシリアル番号のバーコードをスキャンすると、Odooは自動的にプロダクトの数量をデータベースに記録されている数量に増やします。同じロットまたはシリアル番号が異なるプロダクト間で共有されている場合は、まずプロダクトのバーコードをスキャンし、次にロット/シリアル番号のバーコードをスキャンして下さい。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:174
 msgid "Create a transfer from scratch"
-msgstr ""
+msgstr "ゼロから移動を作成する"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:176
 msgid ""
@@ -2446,6 +2728,7 @@ msgid ""
 "created internal transfers, the *Barcode* app can also be used to create "
 "transfers from scratch, simply by scanning a printed operation type barcode."
 msgstr ""
+"また、*バーコード*アプリは、印刷されたオペレーションタイプのバーコードをスキャンするだけで、既存の、以前に作成された内部移動のバーコードを処理し、スキャンするだけでなく、ゼロから送金を作成するためにも使用することができます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:182
 msgid ""
@@ -2456,6 +2739,9 @@ msgid ""
 "sheet` (bolded and highlighted in blue) in the information pop-up above the "
 "scanner."
 msgstr ""
+"Odooの*バーコード*アプリケーションは、アプリの機能を試すためのバーコード付きデモデータを提供します。これらはテスト目的で使用することができ、アプリのホーム画面から印刷することができます。このデモデータにアクセスするには、"
+" :menuselection:`バーコードアプリ` に移動し、スキャナーの上の情報ポップアップで :guilabel:`在庫バーコードシート` "
+"(太字で青くハイライトされている)をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:191
 msgid ""
@@ -2463,12 +2749,14 @@ msgid ""
 "the *Barcode* app, a :guilabel:`Barcode Scanning` screen displaying "
 "different options is presented."
 msgstr ""
+"これを行うには、まず :menuselection:`バーコードアプリ` に移動します。*バーコード*アプリに入ると、さまざまなオプションを表示する "
+":guilabel:`バーコードスキャン` 画面が表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:194
 msgid ""
 "From this screen, when using a USB or bluetooth barcode scanner, directly "
 "scan the product barcode."
-msgstr ""
+msgstr "USBまたはBluetoothバーコードスキャナを使用する場合は、この画面からプロダクトバーコードを直接スキャンします。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:196
 msgid ""
@@ -2477,12 +2765,15 @@ msgid ""
 "opens a :guilabel:`Barcode Scanner` pop-up screen that enables the camera of"
 " the device being used."
 msgstr ""
+"バーコードスキャナとしてスマートフォンを使用する場合は、 :guilabel:`タップしてスキャン` "
+"ボタン(画面中央のカメラアイコンの隣)をクリックします。これにより :guilabel:`バーコードスキャナ` "
+"ポップアップ画面が開き、使用するデバイスのカメラが有効になります。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:200
 msgid ""
 "Face the camera toward the printed operation type barcode to scan it. Doing "
 "so processes the barcode, and navigates to a barcode transfer screen."
-msgstr ""
+msgstr "印刷されたオペレーションタイプのバーコードにカメラを向けてスキャンします。バーコードが処理され、バーコード移動画面に移動します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:203
 msgid ""
@@ -2491,6 +2782,7 @@ msgid ""
 "transfer created from scratch, however, there should not be any products "
 "listed on the page."
 msgstr ""
+"この画面では、特定の内部移動(***WH/INT/000XXX**)で処理する全プロダクトの概要が表示されます。しかし、これはゼロから作成された新しい移動であるため、このページにはプロダクトが表示されていないはずです。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:207
 msgid ""
@@ -2499,10 +2791,12 @@ msgid ""
 "Product` button at the bottom of the screen, and add the products and "
 "product quantities that should be transferred."
 msgstr ""
+"プロダクトを追加するには、プロダクトのバーコードをスキャンします。バーコードがない場合は、画面下部の :guilabel:`プロダクトを追加` "
+"ボタンをクリックして手動でプロダクトをシステムに入力し、移動するプロダクトと数量を追加します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst-1
 msgid "Blank product editor in scratch internal transfer."
-msgstr ""
+msgstr "ゼロからの内部移動の空のプロダクトエディタ。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:217
 msgid ""
@@ -2510,6 +2804,8 @@ msgid ""
 "transfer (**WH/INT/000XX**), click :guilabel:`Validate`. The internal "
 "transfer has now been processed, and the *Barcode* app can be closed out."
 msgstr ""
+"次に、その転送内で処理するすべてのプロダクトの概要ページ(***WH/INT/000XXX**)から、 "
+":guilabel:`検証`をクリックします。これで内部移動が処理され、*バーコード*アプリを終了できます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup.rst:5
 msgid "Setup"
@@ -2517,7 +2813,7 @@ msgstr "セットアップ"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:3
 msgid "Barcode device troubleshooting"
-msgstr ""
+msgstr "バーコードデバイストラブルシューティング"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:5
 msgid ""
@@ -2526,22 +2822,24 @@ msgid ""
 "type of scanner, common issues may arise, in which the scanners do not work "
 "as intended, and Odoo returns errors to the device."
 msgstr ""
+"Odoo *バーコード*は主に3種類のバーコードスキャナをサポートしています： "
+"USBスキャナ、Bluetoothスキャナ、モバイルコンピュータースキャナです。各タイプのスキャナを設定する際、スキャナが意図した通りに動作せず、Odooがデバイスにエラーを返すという共通の問題が発生することがあります。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:9
 msgid ""
 "Read the sections below to identify general and unique device issues, "
 "related to specific, popular types of scanners."
-msgstr ""
+msgstr "以下のセクションを読んで、特定の一般的なタイプのスキャナーに関連する、一般的な、そして特有なデバイスの問題を確認して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:13
 msgid "General issues"
-msgstr ""
+msgstr "一般的な問題"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:15
 msgid ""
 "Refer to the following sections below for common issues involving popular "
 "barcode scanner devices."
-msgstr ""
+msgstr "一般的なバーコードスキャナデバイスに関する一般的な問題については、以下のセクションを参照して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:17
 msgid ""
@@ -2550,30 +2848,34 @@ msgid ""
 "to the :ref:`Screenless scanners <barcode/setup/screenless-scanners>` "
 "section for USB and bluetooth scanners."
 msgstr ""
+"特定のデバイスに関する問題については、モバイルコンピュータースキャナについては "
+":ref:`Androidスキャナ<barcode/setup/android-scanners>` "
+"セクションを、USBやBluetoothスキャナについては :ref:`スクリーンレススキャナ <barcode/setup/screenless-"
+"scanners>` セクションを参照して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:22
 msgid "Barcode cannot be read"
-msgstr ""
+msgstr "バーコードが読取れません"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:24
 msgid ""
 "One common issue encountered when using barcode scanners is an error "
 "resulting from barcodes that cannot be read."
-msgstr ""
+msgstr "バーコードスキャナーを使用する際によく遭遇する問題のひとつに、バーコードが読み取れないことによるエラーがあります。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:27
 msgid "This can occur due to any of the following reasons:"
-msgstr ""
+msgstr "これは、以下のいずれかの理由で発生する可能性があります:"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:29
 msgid "The barcode is damaged."
-msgstr ""
+msgstr "バーコードが破損しています。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:30
 msgid ""
 "The device cannot read the required barcode type (some scanners can only "
 "read 2D barcodes)."
-msgstr ""
+msgstr "デバイスが必要なバーコードタイプを読み取れません(一部のスキャナは2次元バーコードしか読み取れません)。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:31
 msgid ""
@@ -2581,16 +2883,17 @@ msgid ""
 "and the barcodes **must** be printed out to be scanned. This is most common "
 "with 1D barcodes."
 msgstr ""
+"スキャンされるバーコードは画面上に表示されます。スキャナによってはこれをサポートしておらず、バーコードをスキャンするには印刷する**必要があります**。これは1次元バーコードで最も一般的です。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:33
 msgid ""
 "The device has no battery, or is broken. To rule this out, follow the "
 "troubleshooting instructions in the following sections."
-msgstr ""
+msgstr "デバイスにバッテリーがない、または壊れている。これに対処するには、以下のセクションのトラブルシューティング手順に従って下さい。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:37
 msgid "Odoo returns barcode error"
-msgstr ""
+msgstr "Odooがバーコードエラー返します"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:39
 msgid ""
@@ -2599,6 +2902,9 @@ msgid ""
 "this can cause Odoo *Barcode* to return a barcode error after scanning. This"
 " could be due to any of the following reasons:"
 msgstr ""
+"バーコードスキャナにはそれぞれデバイスの "
+"\"言語\"があり、Odooの*バーコード*アプリへのバーコードデータの出力方法に影響します。このため、スキャン後にOdoo "
+"*Bバーコード*がバーコードエラーを返すことがあります。これは以下のような原因が考えられます:"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:43
 msgid ""
@@ -2606,6 +2912,7 @@ msgid ""
 " scanner. To rule this out, ensure that the device is configured with the "
 "same keyboard layout."
 msgstr ""
+"コンピュータがバーコードスキャナと異なるキーボードレイアウトで設定されています。これを除外するには、デバイスが同じキーボードレイアウトで設定されていることを確認します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:46
 msgid ""
@@ -2613,12 +2920,14 @@ msgid ""
 "configure the scanner to send FR-BE keystrokes. The same logic applies if "
 "using a tablet instead of a computer."
 msgstr ""
+"例えば、コンピュータがFR-BEキーボードを使用するように設定されている場合、FR-"
+"BEキーストロークを送信するようにスキャナを設定します。コンピュータの代わりにタブレットを使用する場合も同じロジックが適用されます。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:49
 msgid ""
 "For more information on configuring keystrokes, refer to the :doc:`Barcode "
 "scanner setup <hardware>` documentation."
-msgstr ""
+msgstr "キーストロークの設定の詳細については :doc:`バーコードスキャナ設定<hardware> ` ドキュメントを参照して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:51
 msgid ""
@@ -2626,10 +2935,12 @@ msgid ""
 "scanner might interpret the barcode differently than intended. To rule this "
 "out, scan a test barcode to see how the scanner interprets the barcode."
 msgstr ""
+"モバイルコンピュータスキャナ(例えば、Zebra "
+"デバイスなど)の場合、スキャナはバーコードを意図したものと異なって解釈する可能性があります。これを除外するには、テストバーコードをスキャンして、スキャナがバーコードをどのように解釈するかを確認します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:58
 msgid "Android scanners"
-msgstr ""
+msgstr "Androidスキャナ"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:60
 msgid ""
@@ -2638,22 +2949,26 @@ msgid ""
 "configurations, it is recommended to first test a scanner's compatibility "
 "with Odoo."
 msgstr ""
+"AndroidとGoogle "
+"Chromeを使用した最新のバーコードスキャナはOdooで動作するはずです。しかし、機種や構成が様々であるため、まずスキャナとOdooの互換性をテストすることをお勧めします。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:64
 msgid ""
 "The Zebra product line is recommended; specifically, the **Zebra TC21 (WiFi-"
 "only)**, and **Zebra TC26 (WiFi/cellular)**."
 msgstr ""
+"Zebraプロダクトラインがお勧めです。具体的には、**Zebra TC21 (WiFi-only)** および **Zebra TC26 "
+"(WiFi/cellular)** です。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:68
 msgid ""
 "`Odoo Inventory & Barcode compatible hardware "
 "<https://www.odoo.com/app/inventory-hardware>`_"
-msgstr ""
+msgstr "`Odoo在庫&バーコード対応ハードウェア <https://www.odoo.com/app/inventory-hardware>`_"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:71
 msgid "Barcode app does not give feedback"
-msgstr ""
+msgstr "バーコードアプリがフィードバックをくれない"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:73
 msgid ""
@@ -2661,6 +2976,8 @@ msgid ""
 "full text. Since Odoo *Barcode* does not read this type of output, settings "
 "for each type of scanner **must** be configured correctly."
 msgstr ""
+"デフォルトでは、Androidバーコードスキャナはバーコードを前処理し、全テキストを送信します。Odoo "
+"*バーコード*はこのタイプの出力を読取らないため、各スキャナの設定を正しく行う必要があります。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:77
 msgid ""
@@ -2668,17 +2985,19 @@ msgid ""
 " so, only detects *key events*. Refer to the following sections for "
 "configuration settings for the most popular devices."
 msgstr ""
+"Odoo "
+"*バーコード*はスキャナがアナログキーボードのように動作することを想定しているため、*キーイベント*のみを検出します。最も一般的なデバイスの設定は以下のセクションを参照して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:81
 msgid "Zebra TC21/TC26"
-msgstr ""
+msgstr "Zebra TC21/TC26"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:83
 #: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:76
 msgid ""
 "When using Zebra scanners, ensure the following keystroke configurations are"
 " set to prevent errors."
-msgstr ""
+msgstr "Zebraスキャナを使用する場合は、エラーを防ぐために以下のキーストローク設定がされていることを確認して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:85
 #: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:78
@@ -2687,13 +3006,14 @@ msgid ""
 ":guilabel:`DataWedge` app (the app is represented by a :guilabel:`(light "
 "blue barcode)` icon)."
 msgstr ""
+"Zebraスキャナのホーム画面で開始し、:guilabel:`DataWedge`アプリを選択します（アプリは:guilabel:`（水色のバーコード）`アイコンで表されます）。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:88
 #: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:81
 msgid ""
 "On the :guilabel:`DataWedge Profiles` page, select the profile option to "
 "access the Zebra scanner's settings."
-msgstr ""
+msgstr "guilabel:`DataWedgeプロファイル`ページで、プロファイルオプションを選択してZebraスキャナの設定にアクセスします。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:91
 #: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:92
@@ -2702,11 +3022,12 @@ msgid ""
 " option, and ensure the :guilabel:`Enable/disable keystroke output` option "
 "is :guilabel:`Enabled`."
 msgstr ""
+"プロファイルを選択したら、:guilabel:`キーボードアウトプット`オプションまでスクロールダウンし、:guilabel:`キーストロークアウトプットを有効化/無効化`オプションが:guilabel:`有効化済`になっていることを確認します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst-1
 #: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst-1
 msgid "Show keystroke option in the Zebra scanner's DataWedge app."
-msgstr ""
+msgstr "ZebraスキャナのDataWedgeアプリのキーストロークオプションの表示。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:98
 #: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:99
@@ -2716,29 +3037,32 @@ msgid ""
 ":guilabel:`Key event options` submenu. Under :guilabel:`Characters`, ensure "
 "the :guilabel:`Send Characters as Events` option is checked."
 msgstr ""
+"そのオプションを有効にしたら、 :guilabel:`プロファイル` オプションページに戻り、 :guilabel:`キーストローク出力` "
+"セクションに行きます。そして :guilabel:キーイベントオプション` サブメニューを開きます。guilabel:`文字` の下にある "
+":guilabel:`文字をイベントとして送信` オプションがチェックされていることを確認します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:103
 #: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:104
 msgid ""
 "The :guilabel:`Send Characters as Events` option **must** be checked on the "
 "Zebra scanner, or Odoo **cannot** recognize the barcodes that are scanned."
-msgstr ""
+msgstr "guilabel:`イベントとして文字を送信`オプションはZebraスキャナで**必ず**チェックして下さい。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:106
 msgid ""
 "Once the above steps have been taken, perform a test scan to ensure the "
 "Zebra scanner is working as intended."
-msgstr ""
+msgstr "上記の手順が完了したら、テストスキャンを実行し、Zebraスキャナが意図した通りに動作していることを確認します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:110
 msgid "MUNBYN Android devices"
-msgstr ""
+msgstr "MUNBYN Androidデバイス"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:112
 msgid ""
 "When using MUNBYN Android scanners, ensure the following configurations are "
 "set to prevent errors."
-msgstr ""
+msgstr "MUNBYN Androidスキャナを使用する際は、エラーを防ぐために以下の設定を確認して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:114
 msgid ""
@@ -2746,44 +3070,46 @@ msgid ""
 "resulting page, locate the :guilabel:`Process mode` section, and select "
 ":guilabel:`Keyboard input`."
 msgstr ""
+"デバイスのホーム画面で :menuselection:`App管理設定` をクリックします。表示されたページで :guilabel:`処理モード` "
+"セクションを探し、 :guilabel:`キーボード入力` を選択します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst-1
 msgid "Process mode section on MUNBYN scanner's AppSettings page."
-msgstr ""
+msgstr "MUNBYNスキャナの App管理設定 ページにある処理モードセクション。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:122
 msgid ""
 "The selected *Process mode* controls how data is processed after barcode "
 "data has been read out."
-msgstr ""
+msgstr "選択された*処理モード*は、バーコードデータが読み出された後、データがどのように処理されるかをコントロールします。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:124
 msgid ""
 "*Keyboard input* enters read-out data at the position of the cursor, the "
 "same as input data on an analogue keyboard would."
-msgstr ""
+msgstr "*キーボード入力*は、アナログキーボードの入力データと同じように、カーソルの位置に読み出しデータを入力します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:127
 msgid ""
 "Once the above steps have been taken, perform a test scan to ensure the "
 "MUNBYN Android scanner is working as intended."
-msgstr ""
+msgstr "上記の手順が完了したら、テストスキャンを実行し、MUNBYN Androidスキャナが意図したとおりに動作していることを確認します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:130
 msgid "Why is there no data output in the app after a successful scan?"
-msgstr ""
+msgstr "スキャン成功後、アプリにデータが出力されないのはなぜですか？"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:132
 msgid ""
 "When scanning a barcode, the scanner might beep, indicating a successful "
 "scan, but there is no data output in the app."
-msgstr ""
+msgstr "バーコードをスキャンすると、スキャナがビープ音を鳴らし、スキャンに成功したことを示すが、アプリにデータが出力されません。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:135
 msgid ""
 "To fix this issue, adjust the output method to *keyboard analogue* in the "
 "*Scanner* app on the device."
-msgstr ""
+msgstr "この問題を解決するには、デバイスの*スキャナ*アプリで出力方法を*keyboard analogue*に調整します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:138
 msgid ""
@@ -2793,10 +3119,14 @@ msgid ""
 "available to users. Select :guilabel:`Keyboard Mode`, then click "
 ":guilabel:`OK`."
 msgstr ""
+"デバイスのホーム画面から :menuselection:`スキャナアプリ --> 管理設定` をクリックします。guilabel:`管理設定` "
+"ページから :guilabel:`出力モード` "
+"をクリックします。ポップアップウィンドウが表示され、ユーザが利用できるさまざまな出力オプションが表示されます。guilabel:`キーボードモード`を選択し、"
+" :guilabel:`OK`をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst-1
 msgid "Output mode pop-up window on MUNBYN scanner."
-msgstr ""
+msgstr "MUNBYNスキャナの出力モードポップアップウィンドウ。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:147
 msgid ""
@@ -2804,16 +3134,18 @@ msgid ""
 "box first before scanning. Finally, perform a test scan to ensure the MUNBYN"
 " Android scanner is working as intended."
 msgstr ""
+"スキャンが必要なアプリに戻り、スキャンする前にまず入力ダイアログボックスをクリックします。最後にテストスキャンを行い、MUNBYN "
+"Androidスキャナが意図した通りに動作していることを確認します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:152
 msgid "Datalogic Android devices"
-msgstr ""
+msgstr "データロジックAndroidデバイス"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:154
 msgid ""
 "When using Datalogic Android scanners, ensure the following configurations "
 "are set to prevent errors."
-msgstr ""
+msgstr "データロジックAndroidスキャナを使用する際は、エラーを防ぐために以下の設定がされていることを確認して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:157
 msgid ""
@@ -2821,6 +3153,8 @@ msgid ""
 "on the Datalogic Android device. From the applications menu, select "
 ":menuselection:`Settings --> System --> Scanner Settings`."
 msgstr ""
+"スキャナのすべての設定を表示および構成するには、データロジックAndroid デバイスの *管理設定* アプリを使用します。アプリケーションメニューから"
+" :menuselection:`管理設定 --> システム --> スキャナ管理設定` を選択します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:161
 msgid ""
@@ -7071,11 +7405,11 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:71
 msgid "Consumable"
-msgstr ""
+msgstr "消耗品"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:72
 msgid "Service"
-msgstr ""
+msgstr "サービス"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:73
 msgid "Physical product"
@@ -7090,7 +7424,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:104
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:107
 msgid "Yes"
-msgstr ""
+msgstr "はい"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:76
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:80
@@ -7105,7 +7439,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:112
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:113
 msgid "No"
-msgstr ""
+msgstr "いいえ"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:77
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:118
@@ -9808,7 +10142,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:20
 msgid "At Confirmation"
-msgstr ""
+msgstr "確認時"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:22
 msgid ""
@@ -9818,7 +10152,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:25
 msgid "Manually"
-msgstr ""
+msgstr "手動"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:27
 msgid ""
@@ -9828,7 +10162,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:30
 msgid "Before scheduled date"
-msgstr ""
+msgstr "予定された日より前"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:32
 msgid ""
@@ -10063,7 +10397,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:56
 msgid "Forecasted Report"
-msgstr ""
+msgstr "予測レポート"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:58
 msgid ""
