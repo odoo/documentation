@@ -119,7 +119,7 @@ combination of the two system parameters: `mail.default.from` and `mail.catchall
 
 .. example::
    In the following example, the from email address is replaced with the combination of the the two
-   system parameters (`mail.default.from` and `mail.catchall.domain`). This is the default\
+   system parameters (`mail.default.from` and `mail.catchall.domain`). This is the default \
    notifications configuration in Odoo: ``“Admin” <admin@example.com>`` => ``“Admin”
    <notifications@mycompany.com>``.
 
