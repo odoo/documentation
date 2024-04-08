@@ -2,6 +2,20 @@
 Use VoIP services in Odoo with OnSIP
 ====================================
 
+.. important::
+   OnSIP :abbr:`VoIP (voice over internet protocol)` services are only available in the **United
+   States** (US). OnSIP :abbr:`VoIP (voice over internet protocol)` services are widely available in
+   the lower-48, contiguous United States. In Alaska or Hawaii, charges for service can be higher.
+
+   Additionally, a :abbr:`US (United States)` billing address, and :abbr:`US (United States)` credit
+   card are required to use the service.
+
+   Before setting up an account with OnSIP, the business will need to make sure the business
+   telephone numbers are portable to OnSIP.
+
+   OnSIP makes every attempt to work with all telephone service providers. However, certain local or
+   regional guidelines may preclude the company's current provider from releasing the number.
+
 Introduction
 ============
 
