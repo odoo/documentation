@@ -60,6 +60,9 @@ a form to provide details about the shipping provider, including:
   website from the drop-down menu, or leave it blank to apply the method to all web pages.
 - :guilabel:`Company`: if the shipping method should apply to a specific company, select it from the
   drop-down menu. Leave the field blank to apply the method to all companies.
+
+.. _inventory/shipping_receiving/delivery-product:
+
 - :guilabel:`Delivery Product` (*Required field*): the product listed on the :ref:`sales order line
   <inventory/shipping/sales-order>` as the delivery charge.
 - :guilabel:`Free if order amount is above`: checking this box enables free shipping if the customer
