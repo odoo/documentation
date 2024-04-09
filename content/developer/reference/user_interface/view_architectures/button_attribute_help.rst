@@ -1,3 +1,5 @@
+:nosearch:
+
 .. attribute:: help
    :noindex:
 

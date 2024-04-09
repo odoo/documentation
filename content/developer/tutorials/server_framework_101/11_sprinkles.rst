@@ -1,13 +1,11 @@
-.. _tutorials/getting_started/12_sprinkles:
-
 =============================
-Chapter 12: Add The Sprinkles
+Chapter 11: Add The Sprinkles
 =============================
 
 Our real estate module now makes sense from a business perspective. We created
-:ref:`specific views <tutorials/getting_started/07_basicviews>`, added several
-:ref:`action buttons <tutorials/getting_started/10_actions>` and
-:ref:`constraints <tutorials/getting_started/11_constraints>`. However our user interface is still a bit
+:doc:`specific views <06_basicviews>`, added several
+:doc:`action buttons <09_actions>` and
+:doc:`constraints <10_constraints>`. However our user interface is still a bit
 rough. We would like to add some colors to the list views and make some fields and buttons conditionally
 disappear. For example, the 'Sold' and 'Cancel' buttons should disappear when the property
 is sold or canceled since it is no longer allowed to change the state at this point.
@@ -27,7 +25,7 @@ Inline Views
     **Goal**: at the end of this section, a specific list of properties should be added to the property
     type view:
 
-    .. image:: 12_sprinkles/inline_view.png
+    .. image:: 11_sprinkles/inline_view.png
       :align: center
       :alt: Inline list view
 
@@ -102,7 +100,7 @@ Widgets
     **Goal**: at the end of this section, the state of the property should be displayed using a
     specific widget:
 
-    .. image:: 12_sprinkles/widget.png
+    .. image:: 11_sprinkles/widget.png
       :align: center
       :alt: Statusbar widget
 
@@ -241,7 +239,7 @@ Form
     - Conditional display of buttons and fields
     - Tag colors
 
-    .. image:: 12_sprinkles/form.gif
+    .. image:: 11_sprinkles/form.gif
       :align: center
       :alt: Form view with sprinkles
 
@@ -269,7 +267,7 @@ behavior customizations, we can add the ``options`` attribute to several field w
     Have a look at the :ref:`FieldMany2ManyTags widget documentation <reference/js/widgets>`
     for more info.
 
-In :ref:`tutorials/getting_started/06_firstui`, we saw that reserved fields were used for
+In :doc:`05_firstui`, we saw that reserved fields were used for
 specific behaviors. For example, the ``active`` field is used to automatically filter out
 inactive records. We added the ``state`` as a reserved field as well. It's now time to use it!
 A ``state`` field can be used in combination with an ``invisible`` attribute in the view to display
@@ -323,11 +321,11 @@ List
     Additionally, offers and tags will be editable directly in the list, and the availability date will be
     hidden by default.
 
-    .. image:: 12_sprinkles/decoration.png
+    .. image:: 11_sprinkles/decoration.png
       :align: center
       :alt: List view with decorations and optional field
 
-    .. image:: 12_sprinkles/editable_list.gif
+    .. image:: 11_sprinkles/editable_list.gif
       :align: center
       :alt: Editable list
 
@@ -394,7 +392,7 @@ Search
     and searching on the living area returns results where the area is larger than the given
     number.
 
-    .. image:: 12_sprinkles/search.gif
+    .. image:: 11_sprinkles/search.gif
       :align: center
       :alt: Default filters and domains
 
@@ -442,7 +440,7 @@ Stat Buttons
     **Goal**: at the end of this section, there will be a stat button on the property type form view
     which shows the list of all offers related to properties of the given type when it is clicked on.
 
-    .. image:: 12_sprinkles/stat_button.gif
+    .. image:: 11_sprinkles/stat_button.gif
       :align: center
       :alt: Stat button
 
@@ -507,7 +505,7 @@ Every time the partner name is changed, the description is modified.
 
     - Create a stat button on ``estate.property.type`` pointing to the ``estate.property.offer``
       action. This means you should use the ``type="action"`` attribute (go back to the end of
-      :ref:`tutorials/getting_started/10_actions` if you need a refresher).
+      :doc:`09_actions` if you need a refresher).
 
     At this point, clicking on the stat button should display all offers. We still need to filter out the
     offers.
@@ -516,8 +514,8 @@ Every time the partner name is changed, the description is modified.
       as equal to the ``active_id`` (= the current record,
       `here is an example <https://github.com/odoo/odoo/blob/df37ce50e847e3489eb43d1ef6fc1bac6d6af333/addons/event/views/event_views.xml#L162>`__)
 
-Looking good? If not, don't worry, the :ref:`next chapter
-<tutorials/getting_started/13_inheritance>` doesn't require stat buttons ;-)
+Looking good? If not, don't worry, the :doc:`next chapter
+<12_inheritance>` doesn't require stat buttons ;-)
 
 .. _order_by:
     https://www.postgresql.org/docs/12/queries-order.html

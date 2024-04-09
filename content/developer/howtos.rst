@@ -6,22 +6,25 @@ How-to guides
 =============
 
 .. toctree::
-    :titlesonly:
+   howtos/scss_tips
+   howtos/javascript_field
+   howtos/javascript_view
+   howtos/javascript_client_action
+   howtos/standalone_owl_application
+   howtos/frontend_owl_components
+   howtos/website_themes
 
-    howtos/scss_tips
-    howtos/javascript_field
-    howtos/javascript_view
-    howtos/javascript_client_action
-    howtos/standalone_owl_application
-    howtos/frontend_owl_components
-    howtos/web_services
-    howtos/company
-    howtos/create_reports
-    howtos/accounting_localization
-    howtos/translations
-    howtos/website_themes
-    howtos/connect_device
-    howtos/upgrade_custom_db
+   howtos/web_services
+   howtos/company
+   howtos/create_reports
+   howtos/accounting_localization
+   howtos/translations
+   howtos/connect_device
+
+   howtos/upgrade_custom_db
+
+Frontend development
+====================
 
 .. cards::
 
@@ -33,28 +36,38 @@ How-to guides
    .. card:: Customize a field
       :target: howtos/javascript_field
 
-      Learn how to customize field components in the Odoo JavaScript web framework.
+      Learn how to customize field components in the web framework.
 
    .. card:: Customize a view type
       :target: howtos/javascript_view
 
-      Learn how to customize view types in the Odoo JavaScript web framework.
+      Learn how to customize view types in the web framework.
 
    .. card:: Create a client action
       :target: howtos/javascript_client_action
 
-      Learn how to create client actions in the Odoo JavaScript web framework.
+      Learn how to create client actions in the web framework.
 
    .. card:: Create a standalone Owl application
       :target: howtos/standalone_owl_application
 
       Learn how to create a public-facing Owl application outside of the web client using a
-      controller and the Odoo JavaScript framework.
+      controller and the web framework.
 
    .. card:: Use Owl components on the portal and website
       :target: howtos/frontend_owl_components
 
       Learn how to use Owl components on the portal and website.
+
+   .. card:: Website themes
+      :target: howtos/website_themes
+
+      Learn how to customize your website by creating a custom theme.
+
+Server-side development
+=======================
+
+.. cards::
 
    .. card:: Web services
       :target: howtos/web_services
@@ -82,17 +95,18 @@ How-to guides
 
       Learn how to provide translation abilities to your module.
 
-   .. card:: Website themes
-      :target: howtos/website_themes
-
-      Learn how to customize your website by creating a custom theme.
-
    .. card:: Connect with a device
       :target: howtos/connect_device
 
       Learn how to enable a module to detect and communicate with an IoT device.
 
+Custom development
+==================
+
+.. cards::
+
    .. card:: Upgrade a customized database
       :target: howtos/upgrade_custom_db
 
-      Learn how to upgrade a customized database, as well as the code and data of its custom modules.
+      Learn how to upgrade a customized database, as well as the code and data of its custom
+      modules.

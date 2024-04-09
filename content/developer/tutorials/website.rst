@@ -5,7 +5,7 @@ Building a Website
 ==================
 
 .. danger::
-   This tutorial is outdated. We recommend reading :doc:`getting_started` instead.
+   This tutorial is outdated. We recommend reading :doc:`server_framework_101` instead.
 
 .. warning::
 

@@ -1,7 +1,5 @@
-.. _tutorials/getting_started/16_final_word:
-
 ==========================
-Chapter 16: The final word
+Chapter 15: The final word
 ==========================
 
 Coding guidelines
