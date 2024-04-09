@@ -35,6 +35,12 @@ Next, open the Outlook mailbox, and select any email. After completing this, cli
    :align: center
    :alt: More actions button in Outlook
 
+.. tip::
+   For locally installed versions of Microsoft Outlook, access the :guilabel:`Get Add-ins` menu item
+   while in preview mode (**not** with a message open). First, click on the :guilabel:`...
+   (ellipsis)` icon in the upper right of the previewed message, then scroll down, and click on
+   :guilabel:`Get Add-ins`.
+
 Following this step, select the :guilabel:`My add-ins` tab on the left-side.
 
 .. image:: outlook/my-add-ins.png
