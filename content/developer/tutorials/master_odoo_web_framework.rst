@@ -1,8 +1,8 @@
 :show-content:
 
-=============================
-Master the Odoo web framework
-=============================
+========================
+Master the web framework
+========================
 
 .. toctree::
     :titlesonly:
@@ -11,7 +11,7 @@ Master the Odoo web framework
     master_odoo_web_framework/*
 
 This tutorial is designed for those who have completed the :doc:`discover_js_framework` tutorial and
-are looking to deepen their knowledge of the Odoo web framework. It is organized in four independant
+are looking to deepen their knowledge of the web framework. It is organized in four independent
 projects, each focusing on different features of Odoo.
 
 .. note::

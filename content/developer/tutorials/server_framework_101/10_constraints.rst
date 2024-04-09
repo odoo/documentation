@@ -1,10 +1,8 @@
-.. _tutorials/getting_started/11_constraints:
-
 =======================
-Chapter 11: Constraints
+Chapter 10: Constraints
 =======================
 
-The :ref:`previous chapter <tutorials/getting_started/10_actions>` introduced the ability to add
+The :doc:`previous chapter <09_actions>` introduced the ability to add
 some business logic to our model. We can now link buttons to business code, but how can we prevent
 users from entering incorrect data? For example, in our real estate module nothing prevents
 users from setting a negative expected price.
@@ -25,13 +23,13 @@ SQL
 
     - Amounts should be (strictly) positive
 
-    .. image:: 11_constraints/sql_01.gif
+    .. image:: 10_constraints/sql_01.gif
         :align: center
         :alt: Constraints on amounts
 
     - Property types and tags should have a unique name
 
-    .. image:: 11_constraints/sql_02.gif
+    .. image:: 10_constraints/sql_02.gif
         :align: center
         :alt: Constraints on names
 
@@ -76,7 +74,7 @@ Python
     **Goal**: at the end of this section, it will not be possible to accept an offer
     lower than 90% of the expected price.
 
-    .. image:: 11_constraints/python.gif
+    .. image:: 10_constraints/python.gif
         :align: center
         :alt: Python constraint
 
@@ -123,7 +121,7 @@ prefer SQL over Python constraints.
 
 Our real estate module is starting to look good. We added some business logic, and now we make sure
 the data is consistent. However, the user interface is still a bit rough. Let's see how we can
-improve it in the :ref:`next chapter <tutorials/getting_started/12_sprinkles>`.
+improve it in the :doc:`next chapter <11_sprinkles>`.
 
 .. _PostgreSQL's documentation:
 .. _table_constraint:

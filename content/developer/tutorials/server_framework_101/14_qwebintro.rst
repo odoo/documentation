@@ -1,7 +1,5 @@
-.. _tutorials/getting_started/15_qwebintro:
-
 ===================================
-Chapter 15: A Brief History Of QWeb
+Chapter 14: A Brief History Of QWeb
 ===================================
 
 So far the interface design of our real estate module has been rather limited. Building
@@ -31,7 +29,7 @@ Concrete Example: A Kanban View
 
     **Goal**: at the end of this section a Kanban view of the properties should be created:
 
-    .. image:: 15_qwebintro/kanban.png
+    .. image:: 14_qwebintro/kanban.png
         :align: center
         :alt: Kanban view
 
