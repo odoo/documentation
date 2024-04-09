@@ -1,7 +1,5 @@
-.. _tutorials/getting_started/13_inheritance:
-
 =======================
-Chapter 13: Inheritance
+Chapter 12: Inheritance
 =======================
 
 A powerful aspect of Odoo is its modularity. A module is dedicated to a business need, but
@@ -21,14 +19,14 @@ Python Inheritance
 
     - It should not be possible to delete a property which is not new or canceled.
 
-    .. image:: 13_inheritance/unlink.gif
+    .. image:: 12_inheritance/unlink.gif
         :align: center
         :alt: Unlink
 
     - When an offer is created, the property state should change to 'Offer Received'
     - It should not be possible to create an offer with a lower price than an existing offer
 
-    .. image:: 13_inheritance/create.gif
+    .. image:: 12_inheritance/create.gif
         :align: center
         :alt: Create
 
@@ -126,7 +124,7 @@ The second inheritance mechanism (delegation) allows every record of a model to 
 to a parent model's record and provides transparent access to the
 fields of this parent record.
 
-.. image:: 13_inheritance/inheritance_methods.png
+.. image:: 12_inheritance/inheritance_methods.png
     :align: center
     :alt: Inheritance Methods
 
@@ -173,7 +171,7 @@ View Inheritance
     **Goal**: at the end of this section, the list of available properties linked
     to a salesperson should be displayed in their user form view
 
-    .. image:: 13_inheritance/users.png
+    .. image:: 12_inheritance/users.png
         :align: center
         :alt: Users
 
@@ -245,7 +243,7 @@ An example of a view inheritance extension can be found
 Inheritance is extensively used in Odoo due to its modular concept. Do not hesitate to read
 the corresponding documentation for more info!
 
-In the :ref:`next chapter <tutorials/getting_started/14_other_module>`, we will learn how to
+In the :doc:`next chapter <13_other_module>`, we will learn how to
 interact with other modules.
 
 .. _XPath: https://w3.org/TR/xpath

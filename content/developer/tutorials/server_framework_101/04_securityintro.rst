@@ -1,10 +1,8 @@
-.. _tutorials/getting_started/05_securityintro:
-
 ==========================================
-Chapter 5: Security - A Brief Introduction
+Chapter 4: Security - A Brief Introduction
 ==========================================
 
-In the :ref:`previous chapter <tutorials/getting_started/04_basicmodel>`, we created our first table
+In the :doc:`previous chapter <03_basicmodel>`, we created our first table
 intended to store business data. In a business application such as Odoo, one of the first questions
 to consider is who\ [#who]_ can access the data. Odoo provides a security mechanism to allow access
 to the data for specific groups of users.
@@ -119,7 +117,7 @@ Here is an example for our previous `test_model`:
 
 Restart the server and the warning message should have disappeared!
 
-It's now time to finally :ref:`interact with the UI <tutorials/getting_started/06_firstui>`!
+It's now time to finally :doc:`interact with the UI <05_firstui>`!
 
 .. [#who] meaning which Odoo user (or group of users)
 

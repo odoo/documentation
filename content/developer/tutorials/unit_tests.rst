@@ -3,11 +3,9 @@ Safeguard your code with unit tests
 ===================================
 
 .. important::
-   This tutorial is an extension of the :doc:`getting_started` tutorial. Make sure you have
+   This tutorial is an extension of the :doc:`server_framework_101` tutorial. Make sure you have
    completed it and use the `estate` module you have built as a base for the exercises in this
-   tutorial. Fetch the branch `{BRANCH}-core` from the `technical-training-solutions
-   <https://github.com/odoo/technical-training-solutions/tree/{BRANCH}-core>`_ repository if you
-   want to start from a clean base.
+   tutorial.
 
 **Reference**:
 `Odoo's Test Framework: Learn Best Practices <https://www.youtube.com/watch?v=JEIscps0OOQ>`__

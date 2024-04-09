@@ -3,11 +3,9 @@ Restrict access to data
 =======================
 
 .. important::
-   This tutorial is an extension of the :doc:`getting_started` tutorial. Make sure you have
+   This tutorial is an extension of the :doc:`server_framework_101` tutorial. Make sure you have
    completed it and use the `estate` module you have built as a base for the exercises in this
-   tutorial. Fetch the branch `{BRANCH}-core` from the `technical-training-solutions
-   <https://github.com/odoo/technical-training-solutions/tree/{BRANCH}-core>`_ repository if you
-   want to start from a clean base.
+   tutorial.
 
 So far we have mostly concerned ourselves with implementing useful features.
 However in most business scenarios *security* quickly becomes a concern:
@@ -17,7 +15,7 @@ currently,
   update or delete properties, property types, or property tags.
 * If ``estate_account`` is installed then only agents allowed to interact
   with invoicing can confirm sales as that's necessary to :ref:`create an
-  invoice <tutorials/getting_started/14_other_module/create>`.
+  invoice <tutorials/server_framework_101/13_other_module/create>`.
 
 However:
 
@@ -142,7 +140,7 @@ Access Rights
       real-estate application.
     - Real-estate agents will not be able to update the property types or tags.
 
-Access rights were first introduced in :ref:`tutorials/getting_started/05_securityintro`.
+Access rights were first introduced in :doc:`server_framework_101/04_securityintro`.
 
 Access rights are a way to give users access to models *via* groups: associate
 an access right to a group, then all users with that group will have the access.

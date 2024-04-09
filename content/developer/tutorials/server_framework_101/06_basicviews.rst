@@ -1,10 +1,8 @@
-.. _tutorials/getting_started/07_basicviews:
-
 ======================
-Chapter 7: Basic Views
+Chapter 6: Basic Views
 ======================
 
-We have seen in the :ref:`previous chapter <tutorials/getting_started/06_firstui>` that Odoo is able
+We have seen in the :doc:`previous chapter <05_firstui>` that Odoo is able
 to generate default views for a given model. In practice, the default view is **never** acceptable
 for a business application. Instead, we should at least organize the various fields in a logical
 manner.
@@ -29,7 +27,7 @@ List
 
     **Goal**: at the end of this section, the list view should look like this:
 
-    .. image:: 07_basicviews/list.png
+    .. image:: 06_basicviews/list.png
       :align: center
       :alt: List view
 
@@ -78,7 +76,7 @@ Form
 
     **Goal**: at the end of this section, the form view should look like this:
 
-    .. image:: 07_basicviews/form.png
+    .. image:: 06_basicviews/form.png
       :align: center
       :alt: Form view
 
@@ -140,15 +138,15 @@ Search
 
     **Goal**: at the end of this section, the search view should look like this:
 
-    .. image:: 07_basicviews/search_01.png
+    .. image:: 06_basicviews/search_01.png
       :align: center
       :alt: Search fields
 
-    .. image:: 07_basicviews/search_02.png
+    .. image:: 06_basicviews/search_02.png
       :align: center
       :alt: Filter
 
-    .. image:: 07_basicviews/search_03.png
+    .. image:: 06_basicviews/search_03.png
       :align: center
       :alt: Group By
 
@@ -239,4 +237,4 @@ services *OR* have a unit price which is *NOT* between 1000 and 2000'::
 
 Looking good? At this point we are already able to create models and design a user interface which
 makes sense business-wise. However, a key component is still missing: the
-:ref:`link between models <tutorials/getting_started/08_relations>`.
+:doc:`link between models <07_relations>`.
