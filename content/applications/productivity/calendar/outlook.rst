@@ -116,8 +116,8 @@ Sync Odoo Calendar and Outlook
 ------------------------------
 
 In the Odoo database, go to the :guilabel:`Calendar` module and click the :guilabel:`Outlook` sync
-button. The page will redirect to a Microsoft login page, and the user is asked to log in to
-their account, if they are not already, and grant the required permissions.
+button. The page will redirect to a Microsoft login page, and the user is asked to log in to their
+account, if they are not already, and grant the required permissions.
 
 .. image:: outlook/outlook-sync-button.png
    :align: center
@@ -128,11 +128,58 @@ The synchronization is a two-way process, meaning that events are reconciled in 
 
 .. note::
    All users that want to use the synchronization simply need to :ref:`sync their calendar with
-   Outlook <outlook/sync>`. The configuration of Microsoft's Azure account
-   is only done once, as Microsoft Entra ID tenants' Client IDs and Client Secrets are unique, and
-   represent an organization that helps the user to manage a specific instance of Microsoft cloud
-   services for their internal and external users.
+   Outlook <outlook/sync>`. The configuration of Microsoft's Azure account is only done once, as
+   Microsoft Entra ID tenants' Client IDs and Client Secrets are unique, and represent an
+   organization that helps the user to manage a specific instance of Microsoft cloud services for
+   their internal and external users.
 
 .. seealso::
    - :doc:`/applications/general/integrations/mail_plugins/outlook`
    - :doc:`google`
+
+Troubleshoot sync
+=================
+
+There may be times when the *Microsoft Outlook Calendar* account does not sync correctly with Odoo.
+Sync issues can be seen in the database logs.
+
+In these cases, the account needs troubleshooting. A reset can be performed using the
+:guilabel:`Reset Account` button, which can be accessed by navigating to :menuselection:`Settings
+app --> Manage Users`. Then, select the user to modify the calendar, and click on the
+:guilabel:`Calendar` tab.
+
+.. image:: outlook/outlook-reset.png
+   :align: center
+   :alt: Reset buttons highlighted on the calendar tab of the user.
+
+Next, click :guilabel:`Reset Account` under the correct calendar.
+
+Reset options
+-------------
+
+The following reset options are available for troubleshooting *Microsoft Outlook Calendar* sync with
+Odoo:
+
+.. image:: outlook/reset-calendar.png
+   :align: center
+   :alt: Outlook calendar reset options in Odoo.
+
+:guilabel:`User's Existing Events`:
+
+ - :guilabel:`Leave them untouched`: no changes to the events.
+ - :guilabel:`Delete from the current Microsoft Calendar account`: delete the events from *Microsoft
+   Outlook Calendar*.
+ - :guilabel:`Delete from Odoo`: delete the events from the Odoo calendar.
+ - :guilabel:`Delete from both`: delete the events from both *Microsoft Outlook Calendar* and Odoo
+   calendar.
+
+:guilabel:`Next Synchronization`:
+
+ - :guilabel:`Synchronize only new events`: sync new events on *Microsoft Outlook Calendar* and/or
+   Odoo calendar.
+ - :guilabel:`Synchronize all existing events`: sync all events on *Microsoft Outlook Calendar*
+   and/or Odoo calendar.
+
+Click :guilabel:`Confirm` after making the selection to modify the user's events and the calendar
+synchronization.
+
