@@ -61,8 +61,8 @@ Now that the API project has been created, OAuth should be configured. To do tha
    require an approval, or for *Scopes* to be added on. However, using a *Google WorkSpace* account
    allows for **Internal** User Type to be used.
 
-   Note, as well, that while the API connection is in the *External* testing mode, then no approval is
-   necessary from Google. User limits in this testing mode is set to 100 users.
+   Note, as well, that while the API connection is in the *External* testing mode, then no approval
+   is necessary from Google. User limits in this testing mode is set to 100 users.
 
 In the second step, :guilabel:`OAuth Consent Screen`, type `Odoo` in the :guilabel:`App name` field,
 select the email address for the :guilabel:`User support email` field, and type the email address
@@ -90,10 +90,10 @@ a guide to create credentials.
 Under :menuselection:`Create OAuth Client ID`, select :guilabel:`Website application` for the
 :guilabel:`Application Type` field, and type `My Odoo Database` for the :guilabel:`Name`.
 
-- Under the :guilabel:`Authorized JavaScript Origins` section, click :guilabel:`+ Add URI` and
-  type the company's Odoo full :abbr:`URL (Uniform Resource Locator)` address.
-- Under the :guilabel:`Authorized redirect URIs` section, click :guilabel:`+ Add URI` and type
-  the company's Odoo :abbr:`URL (Uniform Resource Locator)` address followed by
+- Under the :guilabel:`Authorized JavaScript Origins` section, click :guilabel:`+ Add URI` and type
+  the company's Odoo full :abbr:`URL (Uniform Resource Locator)` address.
+- Under the :guilabel:`Authorized redirect URIs` section, click :guilabel:`+ Add URI` and type the
+  company's Odoo :abbr:`URL (Uniform Resource Locator)` address followed by
   `/google_account/authentication`. Finally, click :guilabel:`Create`.
 
 .. image:: google/uri.png
@@ -153,3 +153,47 @@ Now, Odoo Calendar is successfully synced with Google Calendar!
 
    Events can be created in Google Calendar without sending a notification by selecting
    :guilabel:`Don't Send` when prompted to send invitation emails.
+
+Troubleshoot sync
+=================
+
+There may be times when the *Google Calendar* account does not sync correctly with Odoo. Sync issues
+can be seen in the database logs.
+
+In these cases, the account needs troubleshooting. A reset can be performed using the
+:guilabel:`Reset Account` button, which can be accessed by navigating to :menuselection:`Settings
+app --> Manage Users`. Then, select the user to modify the calendar, and click the
+:guilabel:`Calendar` tab.
+
+.. image:: google/google-reset.png
+   :align: center
+   :alt: Reset buttons highlighted on the calendar tab of the user.
+
+Next, click :guilabel:`Reset Account` under the correct calendar.
+
+Reset options
+-------------
+
+The following reset options are available for troubleshooting Google calendar sync with Odoo:
+
+.. image:: google/reset-calendar.png
+   :align: center
+   :alt: Google calendar reset options in Odoo.
+
+:guilabel:`User's Existing Events`:
+
+ - :guilabel:`Leave them untouched`: no changes to the events.
+ - :guilabel:`Delete from the current Google Calendar account`: delete the events from *Google
+   Calendar*.
+ - :guilabel:`Delete from Odoo`: delete the events from the Odoo calendar.
+ - :guilabel:`Delete from both`: delete the events from both *Google Calendar* and Odoo calendar.
+
+:guilabel:`Next Synchronization`:
+
+ - :guilabel:`Synchronize only new events`: sync new events on *Google Calendar* and/or Odoo
+   calendar.
+ - :guilabel:`Synchronize all existing events`: sync all events on *Google Calendar* and/or Odoo
+   calendar.
+
+Click :guilabel:`Confirm` after making the selection to modify the user's events and the calendar
+synchronization.
