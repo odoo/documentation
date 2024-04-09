@@ -146,7 +146,7 @@ Manually
 --------
 
 If you want to create your module structure manually,
-you can follow the :doc:`/developer/tutorials/getting_started` tutorial to understand
+you can follow the :doc:`/developer/tutorials/server_framework_101` tutorial to understand
 the structure of a module and the content of each file.
 
 Push the development branch

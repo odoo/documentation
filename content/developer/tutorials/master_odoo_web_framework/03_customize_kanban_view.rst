@@ -2,7 +2,7 @@
 Chapter 3: Customize a kanban view
 ==================================
 
-We have gained an understanding of the numerous capabilities offered by the Odoo web framework. As a
+We have gained an understanding of the numerous capabilities offered by the web framework. As a
 next step, we will customize a kanban view. This is a more complicated project that will showcase
 some non trivial aspects of the framework. The goal is to practice composing views, coordinating
 various aspects of the UI, and doing it in a maintainable way.

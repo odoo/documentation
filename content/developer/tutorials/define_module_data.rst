@@ -3,11 +3,9 @@ Define module data
 ==================
 
 .. important::
-   This tutorial is an extension of the :doc:`getting_started` tutorial. Make sure you have
+   This tutorial is an extension of the :doc:`server_framework_101` tutorial. Make sure you have
    completed it and use the `estate` module you have built as a base for the exercises in this
-   tutorial. Fetch the branch `{BRANCH}-core` from the `technical-training-solutions
-   <https://github.com/odoo/technical-training-solutions/tree/{BRANCH}-core>`_ repository if you
-   want to start from a clean base.
+   tutorial.
 
 Data Types
 ==========
@@ -193,7 +191,7 @@ When the data to create is more complex it can be useful, or even necessary, to 
 Data Extension
 ~~~~~~~~~~~~~~
 
-During the Core Training, we saw in the :ref:`tutorials/getting_started/13_inheritance` chapter we
+During the Core Training, we saw in the :doc:`server_framework_101/12_inheritance` chapter we
 could inherit (extend) an existing view. This was a special case of data extension: any data can be
 extended in a module.
 
@@ -251,7 +249,7 @@ works too if you are in the module declaring it).
 The value to assign to a field is not always a simple string and you might need to compute it.
 It can also be used to optimize the insertion of related values, or because a constraint forces you
 to add the related values in batch. See ::ref:`Add X2many fields
-<tutorials/getting_started/C_data/x2m>`.
+<tutorials/define_module_data/x2m>`.
 
 .. code-block:: xml
 
@@ -298,7 +296,7 @@ You might also need to execute python code when loading data.
   others.
 
 
-.. _tutorials/getting_started/C_data/x2m:
+.. _tutorials/define_module_data/x2m:
 
 Add X2many fields
 -----------------
@@ -362,7 +360,7 @@ In CSV, the title of the column must be suffixed with ``:id`` or ``/id``.
   "child3","module.parent","Name3"
 
 In SQL, it is more complicated, see :ref:`the advanced section
-<tutorials/getting_started/C_data/xml_id>`.
+<tutorials/define_module_data/xml_id>`.
 
 .. warning:: Data can always be deleted by the user. Always code defensively, taking this into
   account.
@@ -373,7 +371,7 @@ In SQL, it is more complicated, see :ref:`the advanced section
 Advanced
 ========
 
-.. _tutorials/getting_started/C_data/xml_id:
+.. _tutorials/define_module_data/xml_id:
 
 What is the XML id?
 -------------------
