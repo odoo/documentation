@@ -1,19 +1,20 @@
 :nosearch:
+:hide-page-toc:
 
 ================
-Python framework
+Server framework
 ================
 
 .. toctree::
-    :titlesonly:
+   :titlesonly:
 
-    backend/orm
-    backend/data
-    backend/actions
-    backend/reports
-    backend/module
-    backend/security
-    backend/performance
-    backend/testing
-    backend/http
-    backend/mixins
+   backend/orm
+   backend/data
+   backend/actions
+   backend/reports
+   backend/module
+   backend/security
+   backend/performance
+   backend/testing
+   backend/http
+   backend/mixins

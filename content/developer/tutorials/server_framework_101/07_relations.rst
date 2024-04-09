@@ -1,10 +1,8 @@
-.. _tutorials/getting_started/08_relations:
-
 ===================================
-Chapter 8: Relations Between Models
+Chapter 7: Relations Between Models
 ===================================
 
-The :ref:`previous chapter <tutorials/getting_started/07_basicviews>` covered the creation of custom
+The :doc:`previous chapter <06_basicviews>` covered the creation of custom
 views for a model containing basic fields. However, in any real business scenario we need more than
 one model. Moreover, links between models are necessary. One can easily imagine one model containing
 the customers and another one containing the list of users. You might need to refer to a customer
@@ -30,13 +28,13 @@ Many2one
 
     - a new ``estate.property.type`` model should be created with the corresponding menu, action and views.
 
-    .. image:: 08_relations/property_type.png
+    .. image:: 07_relations/property_type.png
         :align: center
         :alt: Property type
 
     - three Many2one fields should be added to the ``estate.property`` model: property type, buyer and seller.
 
-    .. image:: 08_relations/property_many2one.png
+    .. image:: 07_relations/property_many2one.png
         :align: center
         :alt: Property
 
@@ -78,10 +76,10 @@ In practice a many2one can be seen as a dropdown list in a form view.
       and search views
 
     This exercise is a good recap of the previous chapters: you need to create a
-    :ref:`model <tutorials/getting_started/04_basicmodel>`, set the
-    :ref:`model <tutorials/getting_started/05_securityintro>`, add an
-    :ref:`action and a menu <tutorials/getting_started/06_firstui>`, and
-    :ref:`create a view <tutorials/getting_started/07_basicviews>`.
+    :doc:`model <03_basicmodel>`, set the
+    :doc:`model <04_securityintro>`, add an
+    :doc:`action and a menu <05_firstui>`, and
+    :doc:`create a view <06_basicviews>`.
 
     Tip: do not forget to import any new Python files in ``__init__.py``, add new data files in
     ``__manifest.py__``  or add the access rights ;-)
@@ -137,13 +135,13 @@ Many2many
 
     - a new ``estate.property.tag`` model should be created with the corresponding menu and action.
 
-    .. image:: 08_relations/property_tag.png
+    .. image:: 07_relations/property_tag.png
         :align: center
         :alt: Property tag
 
     - tags should be added to the ``estate.property`` model:
 
-    .. image:: 08_relations/property_many2many.png
+    .. image:: 07_relations/property_many2many.png
         :align: center
         :alt: Property
 
@@ -185,7 +183,7 @@ operations like ``recs1 | recs2``.
 
     Tip: in the view, use the ``widget="many2many_tags"`` attribute as demonstrated
     `here <https://github.com/odoo/odoo/blob/5bb8b927524d062be32f92eb326ef64091301de1/addons/crm_iap_lead_website/views/crm_reveal_views.xml#L36>`__.
-    The ``widget`` attribute will be explained in detail in :ref:`a later chapter of the training <tutorials/getting_started/12_sprinkles>`.
+    The ``widget`` attribute will be explained in detail in :doc:`a later chapter of the training <11_sprinkles>`.
     For now, you can try to adding and removing it and see the result ;-)
 
 One2many
@@ -201,7 +199,7 @@ One2many
     - a new ``estate.property.offer`` model should be created with the corresponding form and tree view.
     - offers should be added to the ``estate.property`` model:
 
-    .. image:: 08_relations/property_offer.png
+    .. image:: 07_relations/property_offer.png
         :align: center
         :alt: Property offers
 
@@ -263,4 +261,4 @@ for convenience.
 
 Still alive? This chapter is definitely not the easiest one. It introduced a couple of new concepts
 while relying on everything that was introduced before. The
-:ref:`next chapter <tutorials/getting_started/09_compute_onchange>` will be lighter, don't worry ;-)
+:doc:`next chapter <08_compute_onchange>` will be lighter, don't worry ;-)

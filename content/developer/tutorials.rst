@@ -6,42 +6,52 @@ Tutorials
 =========
 
 .. toctree::
-    :titlesonly:
+   tutorials/setup_guide
+   tutorials/server_framework_101
+   tutorials/discover_js_framework
+   tutorials/master_odoo_web_framework
+   tutorials/define_module_data
+   tutorials/restrict_data_access
+   tutorials/unit_tests
+   tutorials/mixins
+   tutorials/pdf_reports
 
-    tutorials/getting_started
-    tutorials/discover_js_framework
-    tutorials/master_odoo_web_framework
-    tutorials/define_module_data
-    tutorials/restrict_data_access
-    tutorials/unit_tests
-    tutorials/mixins
-    tutorials/pdf_reports
+.. tip::
+   If you are new to Odoo development, we recommend starting with the :doc:`setup guide
+   <tutorials/setup_guide>`.
+
+Learn the server and web frameworks
+===================================
 
 .. cards::
 
-   .. card:: Getting started
-      :target: tutorials/getting_started
+   .. card:: Server framework 101
+      :target: tutorials/server_framework_101
       :tag: Beginner
       :large:
 
-      Develop your own module with the Odoo framework. This step-by-step tutorial is crafted for
-      newcomers and any other individual curious about Odoo development.
+      This introductory tutorial is designed for complete beginners seeking to get started in Odoo
+      development. It covers the essential aspects and key concepts of the server framework. Learn
+      to create a simple module from scratch with step-by-step instructions and practical insights.
 
-   .. card:: Discover the JavaScript Framework
+   .. card:: Discover the web framework
       :target: tutorials/discover_js_framework
       :tag: Beginner
-      :large:
 
-      Learn the basics of the JavaScript framework of Odoo. This tutorial will teach you how to work
-      with Owl components and introduce the basic principles underlying the Odoo JavaScript
-      codebase.
+      This tutorial will teach the basics of the web framework and how to work with Owl components
+      by customizing the web client.
 
-   .. card:: Master the Odoo Web Framework
+   .. card:: Master the web framework
       :target: tutorials/master_odoo_web_framework
       :tag: Advanced
 
-      Become an expert in the Odoo Web Framework. A large variety of features are covered such as
-      fields, views, and even the kitten mode.
+      Become an expert in the web framework. A large variety of features are covered such as fields,
+      views, and even the kitten mode.
+
+Expand your knowledge on the server framework
+=============================================
+
+.. cards::
 
    .. card:: Define module data
       :target: tutorials/define_module_data
