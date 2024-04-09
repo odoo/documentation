@@ -30,9 +30,9 @@ Configuration on the Xendit Dashboard
    the webhook token.
 #. Under :guilabel:`Webhook verification token`, click :guilabel:`View Webhook Verification Token`,
    then confirm your password to display the token. Save it for later.
-#. In the :guilabel:`Webhook URL` section, enter your Odoo database URL (e.g.,
-   `https://example.odoo.com`) in the field :guilabel:`Invoices paid` and click the
-   :guilabel:`Test and save` button next to it.
+#. In the :guilabel:`Webhook URL` section, enter your Odoo database's URL, followed by
+   `/payment/xendit/webhook` (e.g., `https://example.odoo.com/payment/xendit/webhook`) in the field
+   :guilabel:`Invoices paid` and click the :guilabel:`Test and save` button next to it.
 
 Configuration on Odoo
 =====================
