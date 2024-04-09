@@ -1,10 +1,8 @@
-.. _tutorials/getting_started/09_compute_onchange:
-
 ========================================
-Chapter 9: Computed Fields And Onchanges
+Chapter 8: Computed Fields And Onchanges
 ========================================
 
-The :ref:`relations between models <tutorials/getting_started/08_relations>` are a key component of
+The :doc:`relations between models <07_relations>` are a key component of
 any Odoo module. They are necessary for the modelization of any business case. However, we may want
 links between the fields within a given model. Sometimes the value of one field is determined from
 the values of other fields and other times we want to help the user with data entry.
@@ -26,13 +24,13 @@ Computed Fields
 
     - In the property model, the total area and the best offer should be computed:
 
-    .. image:: 09_compute_onchange/compute.gif
+    .. image:: 08_compute_onchange/compute.gif
         :align: center
         :alt: Compute fields
 
     - In the property offer model, the validity date should be computed and can be updated:
 
-    .. image:: 09_compute_onchange/compute_inverse.gif
+    .. image:: 08_compute_onchange/compute_inverse.gif
         :align: center
         :alt: Compute field with inverse
 
@@ -52,7 +50,7 @@ method should set the value of the computed field for every record in
 
 By convention, :attr:`~odoo.fields.Field.compute` methods are private, meaning that they cannot
 be called from the presentation tier, only from the business tier (see
-:ref:`tutorials/getting_started/01_architecture`). Private methods have a name starting with an
+:ref:`tutorials/server_framework_101/01_architecture`). Private methods have a name starting with an
 underscore ``_``.
 
 Dependencies
@@ -230,7 +228,7 @@ Onchanges
     **Goal**: at the end of this section, enabling the garden will set a default area of 10 and
     an orientation to North.
 
-    .. image:: 09_compute_onchange/onchange.gif
+    .. image:: 08_compute_onchange/onchange.gif
         :align: center
         :alt: Onchange
 
@@ -301,5 +299,5 @@ When using stored computed fields, pay close attention to the dependencies. When
 depend on other computed fields, changing a value can trigger a large number of recomputations.
 This leads to poor performance.
 
-In the :ref:`next chapter <tutorials/getting_started/10_actions>`, we'll see how we can trigger some
+In the :doc:`next chapter <09_actions>`, we'll see how we can trigger some
 business logic when buttons are clicked.

@@ -8,7 +8,7 @@ Multi-company Guidelines
 .. warning::
 
     This tutorial requires good knowledge of Odoo.
-    Please refer to the :doc:`../tutorials/getting_started` tutorial first if needed.
+    Please refer to the :doc:`../tutorials/server_framework_101` tutorial first if needed.
 
 As of version 13.0, a user can be logged in to multiple companies at once. This allows the user to
 access information from multiple companies, but also to create/edit records in a multi-company
