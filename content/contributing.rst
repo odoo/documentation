@@ -48,7 +48,8 @@ lists the most important of them.
        pull requests from other contributors. By contributing to the codebase, you can make a direct
        and lasting impact on the quality and features of Odoo.
      - * :doc:`Guide: Contributing to the codebase <contributing/development>`
-       * :doc:`Developer tutorials </developer/howtos>`
+       * :doc:`Developer tutorials </developer/tutorials>`
+       * :doc:`How-to guides </developer/howtos>`
      - Developers with experience in Python and web development
    * - Contribute to the documentation
      - Submit corrections and improvements to the Odoo documentation. The product evolves fast, and

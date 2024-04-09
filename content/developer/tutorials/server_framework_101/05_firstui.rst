@@ -1,11 +1,9 @@
-.. _tutorials/getting_started/06_firstui:
-
 ========================================
-Chapter 6: Finally, Some UI To Play With
+Chapter 5: Finally, Some UI To Play With
 ========================================
 
-Now that we've created our new :ref:`model <tutorials/getting_started/04_basicmodel>` and its
-corresponding :ref:`access rights <tutorials/getting_started/05_securityintro>`, it is time to
+Now that we've created our new :doc:`model <03_basicmodel>` and its
+corresponding :doc:`access rights <04_securityintro>`, it is time to
 interact with the user interface.
 
 At the end of this chapter, we will have created a couple of menus in order to access a default list
@@ -17,7 +15,7 @@ Data Files (XML)
 **Reference**: the documentation related to this topic can be found in
 :ref:`reference/data`.
 
-In :ref:`tutorials/getting_started/05_securityintro`, we added data through a CSV file. The CSV
+In :doc:`04_securityintro`, we added data through a CSV file. The CSV
 format is convenient when the data to load has a simple format. When the format is more complex
 (e.g. load the structure of a view or an email template), we use the XML format. For example,
 this
@@ -65,7 +63,7 @@ Actions can be triggered in three ways:
 3. as contextual actions on object
 
 We will only cover the first case in this chapter. The second case will be covered in a
-:ref:`later chapter <tutorials/getting_started/10_actions>` while the last is the focus of an
+:doc:`later chapter <09_actions>` while the last is the focus of an
 advanced topic. In our Real Estate example, we would like to link a menu to the ``estate.property``
 model, so we are able to create a new record. The action can be viewed as the link between the menu
 and the model.
@@ -86,7 +84,7 @@ A basic action for our `test_model` is:
 - ``name`` is the name of the action.
 - ``res_model`` is the model which the action applies to.
 - ``view_mode`` are the views that will be available; in this case they are the list (tree) and form views.
-  We'll see :ref:`later <tutorials/getting_started/15_qwebintro>` that there can be other view modes.
+  We'll see :doc:`later <14_qwebintro>` that there can be other view modes.
 
 Examples can be found everywhere in Odoo, but
 `this <https://github.com/odoo/odoo/blob/09c59012bf80d2ccbafe21c39e604d6cfda72924/addons/crm/views/crm_lost_reason_views.xml#L57-L70>`__
@@ -113,15 +111,15 @@ Menus
     **Goal**: at the end of this section, three menus should be created and the default view is
     displayed:
 
-    .. image:: 06_firstui/estate_menu_root.png
+    .. image:: 05_firstui/estate_menu_root.png
       :align: center
       :alt: Root menus
 
-    .. image:: 06_firstui/estate_menu_action.png
+    .. image:: 05_firstui/estate_menu_action.png
       :align: center
       :alt: First level and action menus
 
-    .. image:: 06_firstui/estate_form_default.png
+    .. image:: 05_firstui/estate_form_default.png
       :align: center
       :alt: Default form view
 
@@ -145,11 +143,11 @@ However, menus always follow an architecture, and in practice there are three le
 2. The first level menu, displayed in the top bar
 3. The action menus
 
-   .. image:: 06_firstui/menu_01.png
+   .. image:: 05_firstui/menu_01.png
       :align: center
       :alt: Root menus
 
-   .. image:: 06_firstui/menu_02.png
+   .. image:: 05_firstui/menu_02.png
       :align: center
       :alt: First level and action menus
 
@@ -186,7 +184,7 @@ Fields, Attributes And View
     of bedrooms and the availability date should have default values. Additionally the selling price
     and availability date values won't be copied when the record is duplicated.
 
-    .. image:: 06_firstui/attribute_and_default.gif
+    .. image:: 05_firstui/attribute_and_default.gif
       :align: center
       :alt: Interaction between model and view
 
@@ -266,7 +264,7 @@ not be listed! ``active`` is an example of a reserved field with a specific beha
 a record has ``active=False``, it is automatically removed from any search. To display the
 created property, you will need to specifically search for inactive records.
 
-.. image:: 06_firstui/inactive.gif
+.. image:: 05_firstui/inactive.gif
   :align: center
   :alt: Inactive records
 
@@ -287,7 +285,7 @@ Note that the default ``active=False`` value was assigned to all existing record
 The ``state`` will be used later on for several UI enhancements.
 
 Now that we are able to interact with the UI thanks to the default views, the next step is
-obvious: we want to define :ref:`our own views <tutorials/getting_started/07_basicviews>`.
+obvious: we want to define :doc:`our own views <06_basicviews>`.
 
 .. [#refresh] A refresh is needed since the web client keeps a cache of the various menus
               and views for performance reasons.

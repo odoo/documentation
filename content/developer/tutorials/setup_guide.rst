@@ -1,28 +1,28 @@
-========================================
-Chapter 2: Development environment setup
-========================================
+===========
+Setup guide
+===========
 
 Depending on the intended use case, there are multiple ways to install Odoo. For developers of the
 Odoo community and Odoo employees alike, the preferred way is to perform a source install
 (:dfn:`running Odoo from the source code`).
 
-Prepare the environment
-=======================
+.. important::
+   Follow the :ref:`contributing/development/setup` section of the contributing guide to prepare
+   your environment for pushing local changes to the Odoo repositories.
 
-First, follow the :ref:`contributing/development/setup` section of the contributing guide to prepare
-your environment.
+Adapt the environment for the tutorials
+=======================================
 
 By now, you should have downloaded the source code into two local repositories, one for `odoo/odoo`
 and one for `odoo/enterprise`. These repositories are set up to push changes to pre-defined
 forks on GitHub. This will prove to be convenient when you start contributing to the codebase, but
-for the scope of this tutorial, we want to avoid polluting them with training material. Let's then
-develop your own module in a third repository `odoo/tutorials`. Like the first two repositories,
-it will be part of the `addons-path` that references all directories containing Odoo modules.
-In this repository, we will create our first module!
+in the scope of following a tutorial, we want to avoid polluting them with training material. Let's
+then push your changes in a third repository: `odoo/tutorials`. Like the first two repositories, it
+will be part of the `addons-path` that references all directories containing Odoo modules.
 
 .. note::
-
-   This repository also already contains some bare modules that will be used in other tutorials.
+   Depending on the tutorial that you are following, you might not need to install all the modules
+   that this repository contains.
 
 #. Following the same process as with the `odoo/odoo` and `odoo/enterprise` repositories, clone
    the `odoo/tutorials` repository on your machine with:
@@ -147,10 +147,6 @@ the server. In this training you will only need some of them.
        (comma-separated list). This is equivalent to going to :guilabel:`Apps` in the user interface,
        selecting a module, and upgrading it from there.
 
-.. note::
-   For now you cannot add `../technical-training-sandbox` to your `addons-path` as it is empty
-   and will result into an invalid addons-path folder error, but you will have to add it back later on !
-
 Log in to Odoo
 --------------
 
@@ -167,14 +163,8 @@ Enable the developer mode
 =========================
 
 The developer or debug mode is useful for training as it gives access to additional (advanced)
-tools. In the next chapters, **we will always assume that you have enabled the developer mode**.
-
-:ref:`Enable the developer mode <developer-mode>` now. Choose the method that you prefer; they are
-all equivalent.
-
-.. note::
-   The main page of the Settings screen is only accessible if at least one application is installed.
-   You will be led into installing your own application in the next chapter.
+tools. :ref:`Enable the developer mode <developer-mode>` now. Choose the method that you prefer;
+they are all equivalent.
 
 Extra tools
 ===========
@@ -318,6 +308,3 @@ Here is a list of commands:
 .. option:: q(uit)
 
    Quit the debugger. The program being executed is aborted.
-
-Now that your server is running, it's time to start :ref:`writing your own application
-<tutorials/getting_started/03_newapp>`!
