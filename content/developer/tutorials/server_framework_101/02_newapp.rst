@@ -1,7 +1,5 @@
-.. _tutorials/getting_started/03_newapp:
-
 ============================
-Chapter 3: A New Application
+Chapter 2: A New Application
 ============================
 
 The purpose of this chapter is to lay the foundation for the creation of a completely new Odoo module.
@@ -18,7 +16,7 @@ to answer the specific business case.
 
 Here is an overview of the main list view containing some advertisements:
 
-.. image:: 03_newapp/overview_list_view_01.png
+.. image:: 02_newapp/overview_list_view_01.png
    :align: center
    :alt: List view 01
 
@@ -26,14 +24,14 @@ The top area of the form view summarizes important information for the property,
 the property type, the postcode and so on. The first tab contains information describing the
 property: bedrooms, living area, garage, garden...
 
-.. image:: 03_newapp/overview_form_view_01.png
+.. image:: 02_newapp/overview_form_view_01.png
    :align: center
    :alt: Form view 01
 
 The second tab lists the offers for the property. We can see here that potential buyers can make
 offers above or below the expected selling price. It is up to the seller to accept an offer.
 
-.. image:: 03_newapp/overview_form_view_02.png
+.. image:: 02_newapp/overview_form_view_02.png
    :align: center
    :alt: Form view 02
 
@@ -52,7 +50,7 @@ Prepare the addon directory
    **Goal**: the goal of this section is to have Odoo recognize our new module, which will
    be an empty shell for now. It will be listed in the Apps:
 
-   .. image:: 03_newapp/app_in_list.png
+   .. image:: 02_newapp/app_in_list.png
       :align: center
       :alt: The new module appears in the list
 
@@ -98,5 +96,4 @@ tadaaa, your module appears! Did it not appear? Maybe try removing the default '
 
 You can even install the module! But obviously it's an empty shell, so no menu will appear.
 
-All good? If yes, then let's :ref:`create our first model
-<tutorials/getting_started/04_basicmodel>`!
+All good? If yes, then let's :doc:`create our first model <03_basicmodel>`!

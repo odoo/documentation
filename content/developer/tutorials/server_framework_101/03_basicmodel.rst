@@ -1,10 +1,8 @@
-.. _tutorials/getting_started/04_basicmodel:
-
 ==================================
-Chapter 4: Models And Basic Fields
+Chapter 3: Models And Basic Fields
 ==================================
 
-At the end of the :ref:`previous chapter <tutorials/getting_started/03_newapp>`, we were able to
+At the end of the :doc:`previous chapter <02_newapp>`, we were able to
 create an Odoo module. However, at this point it is still an empty shell which doesn't allow us to
 store any data. In our real estate module, we want to store the information related to the
 properties (name, description, price, living area...) in a database. The Odoo framework provides
@@ -289,7 +287,7 @@ useful or necessary:
 
 
 Now that we have created our first model, let's
-:ref:`add some security <tutorials/getting_started/05_securityintro>`!
+:doc:`add some security <04_securityintro>`!
 
 
 .. [#autofields] it is possible to :ref:`disable the automatic creation of some

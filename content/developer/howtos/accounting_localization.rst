@@ -6,7 +6,7 @@ Accounting localization
 .. warning::
 
     This tutorial requires knowledge about how to build a module in Odoo (see
-    :doc:`../tutorials/getting_started`).
+    :doc:`../tutorials/server_framework_101`).
 
 
 Installation procedure

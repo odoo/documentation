@@ -1,8 +1,8 @@
 :show-content:
 
-=========================
-Discover the JS framework
-=========================
+==========================
+Discover the web framework
+==========================
 
 .. toctree::
     :titlesonly:
@@ -10,12 +10,12 @@ Discover the JS framework
 
     discover_js_framework/*
 
-This two parts tutorial is designed to introduce you to the basics of the Odoo Javascript framework. Whether
+This two parts tutorial is designed to introduce you to the basics of the web framework. Whether
 you are new to the framework or have some prior experience, this tutorial will provide you with a
-solid foundation for using the Odoo JavaScript framework in your projects.
+solid foundation for using the web framework in your projects.
 
 The first part covers the basics of Owl components, which
-are a key part of the Odoo JS framework. Owl components are reusable UI components that can be used
+are a key part of the web framework. Owl components are reusable UI components that can be used
 to build complex web interfaces quickly and efficiently. We will explore how to create and use Owl
 components in Odoo. Then, in the second part of this tutorial, we focus on creating a dashboard using various
 features of Odoo. Dashboards are an essential part of any web application, and provide a nice starting
@@ -23,8 +23,7 @@ point to use and interact with the Odoo codebase.
 
 This tutorial assumes that you have some basic knowledge of development with Odoo in general
 (models, controllers, QWeb, ...). If you are new to Odoo, we recommend that you start with the
-:doc:`Getting started </developer/tutorials/getting_started>` tutorial before proceeding with this
-one.
+:doc:`/developer/tutorials/server_framework_101` tutorial before proceeding with this one.
 
 .. note::
 
