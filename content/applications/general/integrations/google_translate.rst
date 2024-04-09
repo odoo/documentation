@@ -50,7 +50,7 @@ Click :guilabel:`Enable` to install the library on this project.
 
 .. important::
    Using the *Google Translate* API **requires** a current billing account with `Google
-   <https://https://myaccount.google.com/>`_.
+   <https://myaccount.google.com/>`_.
 
 Once a billing account is setup with *Google* and the library is enabled, click :guilabel:`Manage`
 to finish configuration on the API.
