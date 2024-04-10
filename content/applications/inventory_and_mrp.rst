@@ -14,3 +14,4 @@ Inventory & MRP
    inventory_and_mrp/quality
    inventory_and_mrp/maintenance
    inventory_and_mrp/plm
+   inventory_and_mrp/repairs
