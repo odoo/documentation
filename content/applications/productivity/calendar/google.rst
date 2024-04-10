@@ -151,7 +151,7 @@ Now, Odoo Calendar is successfully synced with Google Calendar!
    - Adding a contact to an event causes Google to send an invitation to all event attendees.
    - Removing a contact from an event causes Google to send a cancellation to all event attendees.
 
-   Events can be created in Google Calendar without sending a notification by selecting
+   Events can be created in *Google Calendar* without sending a notification by selecting
    :guilabel:`Don't Send` when prompted to send invitation emails.
 
 Troubleshoot sync
@@ -197,3 +197,63 @@ The following reset options are available for troubleshooting Google calendar sy
 
 Click :guilabel:`Confirm` after making the selection to modify the user's events and the calendar
 synchronization.
+
+Google OAuth FAQ
+================
+
+At times there can be misconfigurations that take place, and troubleshooting is needed to resolve
+the issue. Below are the most common errors that may occur when configuring the *Google Calendar*
+for use with Odoo.
+
+Production vs. testing publishing status
+----------------------------------------
+
+Choosing :guilabel:`Production` as the :guilabel:`Publishing Status` (instead of
+:guilabel:`Testing`) displays the following warning message:
+
+`OAuth is limited to 100 sensitive scope logins until the OAuth consent screen is verified. This may
+require a verification process that can take several days.`
+
+To correct this warning, navigate to the `Google API Platform
+<https://console.cloud.google.com/apis/credentials/consent>`_. If the :guilabel:`Publishing Status`
+is :guilabel:`In Production`, click :guilabel:`Back to Testing` to correct the issue.
+
+No test users added
+-------------------
+
+If no test users are added to the :guilabel:`OAuth consent screen`, then an :guilabel:`Error 403:
+access_denied` populates.
+
+.. image:: google/403-error.png
+   :align: center
+   :alt: 403 Access Denied Error.
+
+To correct this error, return to the :guilabel:`OAuth consent screen`, under :guilabel:`APIs &
+Services`, and add test users to the app. Add the email to be configured in Odoo.
+
+Application Type
+----------------
+
+When creating the credentials (OAuth *Client ID* and *Client Secret*), if :guilabel:`Desktop App` is
+selected for the :guilabel:`Application Type`, an :guilabel:`Authorization Error` appears
+(:guilabel:`Error 400:redirect_uri_mismatch`).
+
+.. image:: google/error-400.png
+   :align: center
+   :alt: Error 400 Redirect URI Mismatch.
+
+To correct this error, delete the existing credentials, and create new credentials, by selecting
+:guilabel:`Web Application` for the :guilabel:`Application Type`.
+
+Then, under :guilabel:`Authorized redirect URIs`, click :guilabel:`ADD URI`, and type:
+`https://yourdbname.odoo.com/google_account/authentication` in the field, being sure to replace
+*yourdbname* in the URL with the **real** Odoo database name.
+
+.. tip::
+   Ensure that the domain (used in the URI:
+   `https://yourdbname.odoo.com/google_account/authentication`) is the exact same domain as
+   configured in the `web.base.url` system parameter.
+
+   Access the `web.base.url` by activating :ref:`developer mode <developer-mode>`, and navigating to
+   :menuselection:`Settings app --> Technical header menu --> Parameters section --> System
+   Parameters`.
