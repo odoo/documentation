@@ -152,6 +152,7 @@ Here are a few tips to troubleshoot common issues you may encounter.
 
 Debug mode
 ----------
+
 When you are on the Delivery Method form view, you will see a Debug smart
 button when applicable. Clicking the smart button will toggle debug mode
 on or off for that specific method.
@@ -168,18 +169,21 @@ The information itself can be found in the menu
 
 Company information
 -------------------
+
 Sometimes the company info is not set correctly or is different on the shipping provider side of
 things. It is important to make sure that the company information in Odoo matches exactly as it is
 on your shipping provider.
 
 Carrier service type
 --------------------
+
 If you are unable to ship, ensure that the exact type and parameters of your shipment are valid on
 the shipping provider side of things. Ensure that on the carrier side of things, you can create the
 exact same shipment with no issues.
 
 Pricing mismatch
 ----------------
+
 This can occur if you are not in production mode. Create the same type of shipment on the carriers
 backend and on Odoo and check debug logging.
 
