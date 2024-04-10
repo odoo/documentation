@@ -2,7 +2,7 @@
 Utilize activities for sales teams
 ==================================
 
-*Activities* are follow-up tasks tied to a record in an Odoo database. Activities can be scheduled
+*Activities* are follow-up tasks tied to a record in an *Odoo* database. Activities can be scheduled
 on any page of the database that contains a chatter thread, Kanban view, list view, or activities
 view of an application.
 
@@ -42,7 +42,7 @@ The preconfigured activity types for the *CRM* app are as follows:
 Create a new activity type
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To create a new activity type, click :guilabel:`Create` at the top-left of the page to open a blank
+To create a new activity type, click :guilabel:`New` at the top-left of the page to open a blank
 form.
 
 At the top of the form, start by choosing a :guilabel:`Name` for the new activity type.
@@ -101,6 +101,10 @@ Suggest next activity
 In the :guilabel:`Chaining Type` field, select :guilabel:`Suggest Next Activity`. Upon doing so, the
 field underneath changes to: :guilabel:`Suggest`. Click the :guilabel:`Suggest` field drop-down menu
 to select any activities to recommend as follow-up tasks to this activity type.
+
+.. image:: utilize_activities/next-activity.png
+   :align: center
+   :alt: The Next Activity section on a new activity type form.
 
 In the :guilabel:`Schedule` field, choose a default deadline for these activities. To do so,
 configure a desired number of :guilabel:`Days`, :guilabel:`Weeks`, or :guilabel:`Months`. Then,
@@ -170,7 +174,7 @@ events, that can aide in the sales process.
    following day. The email activity type is configured with the following settings:
 
    - :guilabel:`Chaining Type`: `Suggest Next Activity`
-   - :guilabel:`Suggest`: `Call` `Meeting`
+   - :guilabel:`Suggest`: `Call`, `Meeting`
    - :guilabel:`Schedule`: `2 days after previous activity deadline`
 
    After sending an email to the lead, the salesperson clicks :guilabel:`DONE & SCHEDULE NEXT` on
@@ -181,7 +185,7 @@ events, that can aide in the sales process.
       :align: center
       :alt: Schedule an activity pop-up window with recommended activities.
 
-The *suggested* or *triggered* activities will vary, depending on a variety of factors. See below
+The *suggested* or *triggered* activities may vary, depending on a variety of factors. See below
 for some suggested sequences:
 
 .. tabs::
