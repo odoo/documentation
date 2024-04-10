@@ -6,7 +6,7 @@ Odoo Enterprise Subscription Agreement (ID)
 
 .. warning::
     Dokumen ini hanyalah terjemahan dari perjanjian "Odoo Enterprise Subscription Agreement"
-    yang disediakan untuk membantu pengguna mengerti maksud dari perjanjian ini dengan lebih mudah,
+    yang disediakan untuk membantu pengguna memahami maksud dari perjanjian ini dengan lebih mudah,
     tetapi tidak memiliki hak legal. Referensi resmi dari "Odoo Enterprise Subscription Agreement"
     hanya terdapat pada :ref:`perjanjian versi originalnya dalam Bahasa Inggris <enterprise_agreement>`.
 
@@ -56,10 +56,10 @@ User
     melalui fasilitas portal (disebut sebagai “portal User”) tidak dihitung sebagai pengguna.
 
 Aplikasi
-    Sebuah “Aplikasi” adalah grup fitur khusus yang tersedia untuk instalasi di Software.
+    “Aplikasi” adalah grup fitur khusus yang tersedia untuk instalasi di Software.
 
 Odoo Partner
-    Sebuah Odoo Partner adalah perusahaan pihak ketiga atau individu, yang dipilih oleh
+    Odoo Partner adalah perusahaan pihak ketiga atau individu, yang dipilih oleh
     Pelanggan, dan bekerja dengan Pelanggan untuk layanan mereka yang berhubungan dengan Odoo.
     Pelanggan dapat memutuskan kapan saja untuk bekerja dengan Odoo Partner yang berbeda,
     atau bekerja dengan Odoo SA secara langsung (dengan pemberitahuan sebelumnya).
@@ -71,13 +71,13 @@ Modul Ekstra
     Odoo SA, oleh Odoo Partner atas nama Pelanggan, atau pihak ketiga.
 
 Modul Ekstra Tercakup
-    Module Ekstra Tercakup adalah Modul Ekstra yang mana Pelanggan memilih untuk mengeluarkan
+    Module Ekstra Tercakup adalah Modul Ekstra di mana Pelanggan memilih untuk mengeluarkan
     biaya pemeliharaan agar dapat memperoleh dukungan, upgrade, dan layanan perbaikan bug.
 
 Bug
-    Bug dianggap sebagai bug. Segala kegagalan Software atau Modul Ekstra Tercakup yang
+    Bug adalah segala kegagalan dari Software atau Modul Ekstra Tercakup yang
     menyebabkan penghentian keseluruhan, error traceback, atau pembobolan keamanan, dan tidak
-    secara langsung disebabkan oleh instalasi atau konfigurasi yang rusak. Ketidakpatuhan terhadap
+    secara langsung disebabkan oleh instalasi atau konfigurasi yang salah. Ketidakpatuhan terhadap
     spesifikasi atau persyaratan akan dianggap sebagai bug atas kebijakan Odoo SA (biasanya,
     ketika Software tidak memberikan hasil atau kinerja sesuai rancangan produksi, atau ketika
     fitur yang spesifik untuk suatu negara tidak lagi memenuhi persyaratan pertanggungjawaban hukum).
@@ -87,7 +87,7 @@ Versi Tercakup
     berlaku untuk Versi Software Tercakup, termasuk 3 versi utama yang dirilis paling baru.
 
 Paket Langganan
-    Sebuah Paket Langganan menentukan serangkaian Aplikasi, fitur, dan solusi hosting yang
+    Paket Langganan menentukan serangkaian Aplikasi, fitur, dan solusi hosting yang
     tercakup oleh Perjanjian ini dan ditentukan secara tertulis di pada penandatanganan Perjanjian ini.
 
 .. _enterprise_access_id:
@@ -104,21 +104,21 @@ Selama masa Perjanjian ini, Odoo SA memberikan kepada Pelanggan lisensi non-eksk
 yang tidak dapat dialihkan untuk menggunakan (menjalankan, memodifikasi, menjalankan setelah modifikasi)
 software Odoo Enterprise Edition, dengan ketentuan yang diatur dalam :ref:`appendix_a_id`.
 
-Pelanggan setuju untuk melakukan semua langkah yang diperlukan untuk menjamin aplikasi
-dijalankan tanpa modifikasi pada bagian Software yang memverifikasi validitas penggunaan
-Odoo Enterprise Edition dan mengumpulkan statistik untuk tujuan tersebut, termasuk tetapi
-tidak terbatas pada menjalankan sebuah instance, jumlah User, Aplikasi terinstal, dan
-jumlah baris kode Modul Ekstra Tercakup.
+Pelanggan setuju untuk mengambil tindakan yang diperlukan untuk menjamin pelaksanaan
+tanpa modifikasi pada bagian software yang bertujuan untuk memverifikasi validitas penggunaan
+Odoo Enterprise Edition dan pengambilan statistik untuk tujuan tersebut, seperti
+menjalankan contoh, jumlah user, daftar aplikasi yang terinstal, jumlah line of code 
+dari Modul Ekstra Tercakup, dan lain sebagainya.
 
 Odoo SA berkomitmen untuk tidak mengungkapkan nama atau orang kepada pihak ketiga tanpa
 persetujuan Pelanggan, dan menangani semua data yang dikumpulkan sesuai dengan Kebijakan
 Privasi resmi yang dipublikasikan di https://www.odoo.com/privacy.
 
-Setelah pengakhiran atau berakhirnya Perjanjian ini, lisensi ini segera dicabut dan
+Setelah pengakhiran atau berakhirnya Perjanjian ini, lisensi ini akan langsung dicabut dan
 Pelanggan setuju untuk berhenti menggunakan software Odoo Enterprise Edition dan Cloud Platform.
 
 Jika Pelanggan melanggar ketentuan di pasal ini, Pelanggan sepakat untuk membayar
-tagihan SA sebesar 300% dari daftar harga yang berlaku untuk jumlah User aktual.
+tagihan Odoo SA sebesar 300% dari daftar harga yang berlaku untuk jumlah User aktual.
 
 .. _services_id:
 
@@ -130,17 +130,17 @@ tagihan SA sebesar 300% dari daftar harga yang berlaku untuk jumlah User aktual.
 4.1 Layanan Perbaikan Bug
 -------------------------
 
-Selama periode Perjanjian ini, Odoo SA berkomitmen untuk melakukan semua upaya untuk memperbaiki
+Selama periode Perjanjian ini, Odoo SA berkomitmen untuk melakukan semua upaya yang wajar untuk memperbaiki
 Bug Software dan Modul Ekstra Tercakup yang disampaikan oleh Pelanggan melalui saluran yang sesuai
 (biasanya, formulir web atau nomor telepon yang tercantum pada http://www.odoo.com/help, atau
-saat bekerja dengan Odoo Partner, saluran yang disediakan oleh partner),
+saat bekerja dengan Odoo Partner, melalui saluran yang disediakan oleh partner),
 dan untuk mulai menangani penyampaian terkait bug dari Pelanggan tersebut dalam 2 hari kerja.
 
-Segera setelah bug diperbaiki, ganti rugi yang sesuai akan disampaikan kepada Pelanggan.
+Langsung setelah bug diperbaiki, solusi yang sesuai akan disampaikan kepada Pelanggan.
 Jika Pelanggan menggunakan Versi Tercakup, mereka tidak akan diminta untuk meng-upgrade
-Software Versi Tercakup terbaru sebagai upaya perbaikan bug.
+Software Versi Tercakup ke versi terbaru sebagai upaya perbaikan bug.
 
-Saat Bug diperbaiki di semua Versi Tercakup, Odoo SA berkomitmen untuk memperbaiki
+Saat Bug diperbaiki di Versi Tercakup apapun, Odoo SA berkomitmen untuk memperbaiki
 bug di semua Software Versi Tercakup yang terbaru.
 
 Kedua pihak mengakui bahwa sebagaimana ditetapkan dalam pasal lisensi Software
@@ -171,45 +171,45 @@ periode embargo sebelum pengungkapan kepada publik.
 Cloud Platform
 +++++++++++++++
 
-Odoo SA berkomitmen untuk menerapkan perbaikan keamanan untuk setiap bug
-keamanan yang ditemukan dalam versi Software yang di-host pada Cloud Platform,
-pada semua sistem yang berada di bawah kendalinya, segera setelah perbaikan tersedia,
+Odoo SA berkomitmen untuk menerapkan perbaikan keamanan untuk bug keamanan
+apapun yang ditemukan dalam versi Software yang di-host pada Cloud Platform dan
+pada semua sistem di bawah kendalinya, langsung setelah perbaikan tersedia 
 tanpa membutuhkan tindakan manual dari Pelanggan.
 
 .. _upgrade_id:
 
-4.3 Layanan Peningkatan
+4.3 Layanan Upgrade
 -----------------------
 
 .. _upgrade_odoo_id:
 
-Layanan Peningkatan untuk Software
+Layanan Upgrade untuk Software
 ++++++++++++++++++++++++++++++++++
 
-Untuk periode Perjanjian ini, Pelanggan dapat mengirimkan permintaan peningkatan melalui
+Untuk periode Perjanjian ini, Pelanggan dapat mengirimkan permintaan upgrade melalui
 saluran yang sesuai (biasanya situs web layanan upgrade Odoo SA), untuk mengonversi database
-Software dari versi apa pun ke Versi Tercakup yang paling baru (“Versi Target”).
+Software dari versi apa pun ke Versi Tercakup yang lebih baru (“Versi Target”).
 
-Untuk Cloud Platform, permintaan peningkatan dikirim langsung dari panel kontrol
+Untuk Cloud Platform, permintaan upgrade dikirim langsung dari panel kontrol
 Cloud Platform, dan tidak memerlukan data upload apa pun. Untuk Self-Hosting,
 permintaan upgrade harus menyertakan salinan database Pelanggan dan data terkait
-(biasanya diperoleh dari menu Backup pada Software).
+(biasanya diperoleh dari menu Backup di Software).
 
 Layanan ini disediakan melalui platform otomatis agar Pelanggan dapat melakukan operasi
-peningkatan tanpa pengawasan setelah versi sebelumnya dari database Pelanggan telah
-berhasil ditingkatkan untuk Versi Tercakup.
+upgrade tanpa pengawasan setelah versi sebelumnya dari database Pelanggan telah
+berhasil di-upgrade menjadi Versi Tercakup.
 
-Layanan Peningkatan dibatasi untuk konversi teknis dan adaptasi database Pelanggan untuk
-membuatnya kompatibel dengan Versi Target, perbaikan setiap Bug yang langsung disebabkan
-oleh operasi peningkatan dan yang secara normal tidak terjadi dalam Versi Target,
+Layanan Upgrade hanya sebatas konversi teknis dan adaptasi database Pelanggan agar
+kompatibel dengan Versi Target, perbaikan Bug apa pun yang langsung disebabkan
+oleh operasi upgrade dan yang secara normal tidak terjadi dalam Versi Target,
 dan konversi source code dan data Modul Ekstra Tercakup untuk Versi Target.
 
 Pelanggan bertanggung jawab untuk memverifikasi dan memvalidasi database yang telah
-ditingkatkan untuk mendeteksi Bug, untuk menganalisis dampak perubahan dan fitur
-baru yang diterapkan dalam Versi Target, dan untuk mengonversi dan menyesuaikan
-segala ekstensi Software pihak ketiga yang terpasang dalam database sebelum peningkatan
+di-upgrade untuk mendeteksi Bug, untuk menganalisis dampak perubahan dan fitur-fitur
+baru yang diimplementasikan dalam Versi Target, dan untuk mengonversi dan menyesuaikan
+segala ekstensi Software pihak ketiga apa pun yang terpasang dalam database sebelum upgrade
 ke Versi Target (mis. Modul Ekstra yang tidak tercakup). Pelanggan dapat mengirimkan
-beberapa permintaan peningkatan untuk sebuah database, hingga hasil yang dapat diterima telah tercapai.
+lebih dari satu permintaan upgrade untuk database, sampai mendapatkan hasil yang dapat diterima.
 
 .. _cloud_hosting_id:
 
@@ -222,10 +222,10 @@ Odoo SA berkomitmen untuk memberikan setidaknya layanan berikut:
 - Pilihan beberapa wilayah hosting (paling sedikit 3: Eropa, Amerika, Asia/Pasifik)
 - Hosting di pusat data Tier-III atau yang setara, dengan 99.9% network uptime
 - Enkripsi komunikasi Grade A SSL (HTTPS)
-- Pencadangan yang sepenuhnya otomatis dan telah diverifikasi, direplikasi di beberapa wilayah
-- Disaster Recovery Plan, yang diuji secara teratur
+- Pencadangan yang sepenuhnya otomatis dan telah diverifikasi, serta direplikasi di beberapa wilayah
+- Rencana Pemulihan Bencana, yang diuji secara teratur
 
-Detail Layanan Cloud Hosting diuraikan pada halaman Perjanjian Tingkat Layanan di
+Detail Layanan Cloud Hosting diuraikan pada halaman Service Level Agreement di
 https://www.odoo.com/cloud-sla.
 
 
@@ -234,11 +234,11 @@ https://www.odoo.com/cloud-sla.
 4.5 Layanan Dukungan
 --------------------
 
-Lingkup
+Cakupan
 +++++++
 
-Selama periode Perjanjian ini, Pelanggan dapat membuka tiket dukungan dengan jumlah yang tak
-terbatas secara gratis, khususnya untuk pertanyaan tentang Bug (Lihat :ref:`bugfix_id`)
+Selama periode Perjanjian ini, Pelanggan dapat membuka tiket bantuan dengan jumlah yang tak
+terbatas secara gratis, eksklusif untuk pertanyaan mengenai Bug (Lihat :ref:`bugfix_id`)
 atau panduan terkait dengan penggunaan fitur standar Software dan Modul Ekstra Tercakup.
 
 Permintaan bantuan lainnya, seperti pertanyaan yang terkait dengan pengembangan
@@ -258,7 +258,7 @@ oleh partner, tergantung jam kerja lokal.
 4.6 Bekerja dengan Odoo Partner
 -------------------------------
 
-Untuk perbaikan bug, dukungan dan layanan upgrade, Pelanggan mungkin dapat bekerja
+Untuk perbaikan bug, bantuan dan layanan upgrade, Pelanggan mungkin dapat bekerja
 dengan Odoo Partner sebagai titik utama kontak, atau bekerja dengan Odoo SA secara langsung.
 
 Jika Pelanggan memutuskan untuk bekerja dengan Odoo Partner, Odoo SA akan memberikan
@@ -286,29 +286,29 @@ saat penandatanganan Perjanjian.
 
 Jika selama Jangka Waktu, Pelanggan memiliki lebih banyak User atau menggunakan fitur
 yang memerlukan Paket Langganan lain dari yang ditentukan pada saat penandatanganan
-Perjanjian ini, Pelanggan setuju untuk membayar biaya ekstra yang sama dengan harga
+Perjanjian ini, Pelanggan setuju untuk membayar biaya ekstra yang sesuai dengan harga
 terdaftar yang berlaku (pada waktu deviasi jumlah User atau Paket Langganan yang ditentukan)
 untuk User tambahan atau Paket Langganan yang diperlukan, untuk sisa Jangka Waktu tersebut.
 
-Selain itu, layanan untuk Modul Ekstra Tercakup dibebankan berdasarkan jumlah baris kode
-pada modul-modul ini. Ketika Pelanggan memilih untuk melakukan pemeliharaan Modul Ekstra
-Tercakup, akan dibebankan biaya bulanan per 100 baris kode (dibulatkan ke ratusan berikutnya),
-seperti dijelaskan secara tertulis pada penandatanganan Perjanjian. Baris-baris kode akan dihitung dengan
+Selain itu, layanan untuk Modul Ekstra Tercakup dikenakan biaya berdasarkan jumlah lines of code
+pada modul-modul tersebut. Ketika Pelanggan memilih untuk melakukan pemeliharaan Modul Ekstra
+Tercakup, akan dikenakan biaya bulanan untuk setiap 100 lines of code (dibulatkan ke ratusan berikutnya),
+seperti dijelaskan secara tertulis pada penandatanganan Perjanjian. Lines of code akan dihitung dengan
 command ``cloc`` dari Software, dan termasuk semua baris teks dalam source code modul-modul
 tersebut, terlepas dari bahasa pemrograman (Python, JavaScript, XML, dll.), tidak termasuk baris kosong,
 baris komentar, dan file yang tidak dimuat saat menginstal atau menjalankan Software.
 
-Jika Pelanggan meminta peningkatan, untuk setiap Modul Ekstra Tercakup yang tidak tercakup
+Jika Pelanggan meminta upgrade, untuk setiap Modul Ekstra Tercakup yang tidak termasuk
 dalam biaya pemeliharaan selama 12 bulan terakhir, Odoo SA mungkin dapat mengenakan biaya ekstra
-satu kali untuk setiap bulan yang tidak termasuk dalam cakupan.
+satu kali untuk setiap bulan yang tidak termasuk dalam pemeliharaan.
 
 .. _charges_renewal_id:
 
 5.2 Biaya perpanjangan
 ----------------------
 
-Pada saat perpanjangan seperti yang dibahas dalam pasal :ref:`term_id`, jika biaya
-yang dikenakan selama Jangka Waktu sebelumnya lebih rendah dari harga terdaftar
+Pada perpanjangan seperti yang dibahas dalam pasal :ref:`term_id`, jika biaya
+yang dikenakan selama Jangka Waktu sebelumnya lebih rendah dari daftar harga
 yang terbaru, biaya ini akan bertambah hingga 7%.
 
 .. _taxes_id:
@@ -319,7 +319,7 @@ yang terbaru, biaya ini akan bertambah hingga 7%.
 Semua biaya dan ongkos tidak termasuk semua biaya, ongkos, atau pajak provinsi,
 negara bagian, lokal atau pemerintah lainnya, (secara bersama-sama disebut "Pajak").
 Pelanggan bertanggung jawab untuk membayar semua pajak yang berhubungan dengan pembelian
-yang dilakukan oleh Pelanggan berdasarkan Perjanjian ini, kecuali jika ODOO secara hukum
+yang dilakukan oleh Pelanggan berdasarkan Perjanjian ini, kecuali jika Odoo SA secara hukum
 diwajibkan untuk membayar atau memungut Pajak yang menjadi tanggung jawab Pelanggan.
 
 .. _conditions_id:
@@ -332,45 +332,45 @@ diwajibkan untuk membayar atau memungut Pajak yang menjadi tanggung jawab Pelang
 
 Pelanggan setuju untuk:
 
-- membayar kepada Odoo SA setiap biaya yang berlaku untuk Layanan Perjanjian saat ini,
+- membayar Odoo SA setiap biaya yang berlaku untuk Layanan Perjanjian saat ini,
   sesuai dengan ketentuan pembayaran yang ditetapkan pada saat penandatanganan kontrak ini;
-- segera memberi tahu Odoo SA ketika jumlah User aktual melampaui jumlah yang ditentukan
+- langsung memberi tahu Odoo SA ketika jumlah User aktual melampaui jumlah yang ditentukan
   pada saat penandatanganan Perjanjian ini, dan dalam hal ini, membayar biaya tambahan
   yang berlaku sebagaimana dijelaskan dalam pasal :ref:`charges_standard_id`;
 - melakukan semua tindakan yang diperlukan untuk menjamin bahwa bagian Software
   yang memverifikasi validitas penggunaan Odoo Enterprise Edition dijalankan tanpa
   modifikasi, seperti yang dijelaskan pada :ref:`enterprise_access_id`;
-- menunjuk 1 orang kontak Pelanggan khusus untuk seluruh periode Perjanjian;
+- menunjuk 1 orang kontak Pelanggan khusus untuk selama periode Perjanjian;
 - memberikan pemberitahuan tertulis kepada Odoo SA 30 hari sebelum mengubah
   titik kontak utama mereka untuk bekerja dengan Odoo Partner yang lain,
   atau bekerja langsung dengan Odoo SA.
 
-Ketika Pelanggan memilih untuk menggunakan Cloud Platform, Pelanggan lebih jauh setuju untuk:
+Ketika Pelanggan memilih untuk menggunakan Cloud Platform, Pelanggan lebih lagi setuju untuk:
 
 - mengambil semua langkah yang wajar untuk menjaga agar akun user mereka tetap aman,
   termasuk dengan memilih kata sandi yang kuat dan tidak membagikannya dengan orang lain;
-- menggunakan Layanan Hosting secara wajar, dengan pengecualian pada aktivitas ilegal
+- menggunakan Layanan Hosting secara wajar, dengan meniadakan aktivitas ilegal
   atau penyalahgunaan, dan secara ketat mematuhi aturan yang diuraikan dalam Kebijakan
   Penggunaan yang Dapat Diterima yang diterbitkan di https://www.odoo.com/acceptable-use.
 
-Ketika Pelanggan memilih opsi Self-Hosting, Pelanggan lebih lanjut menyetujui untuk:
+Ketika Pelanggan memilih opsi Self-Hosting, Pelanggan lebih lagi setuju untuk:
 
 - melakukan semua langkah-langkah yang wajar untuk melindungi file dan basis data
-  Pelanggan dan untuk memastikan bahwa data Pelanggan aman dan terjaga, mengakui bahwa
+  Pelanggan dan untuk memastikan bahwa data Pelanggan aman dan terjaga, serta mengakui bahwa
   Odoo SA tidak memiliki tanggung jawab atas kehilangan data apa pun;
-- memberikan akses yang diperlukan untuk Odoo SA untuk memverifikasi validitas
+- memberikan akses yang diperlukan ke Odoo SA untuk memverifikasi validitas
   penggunaan Odoo Enterprise Edition saat diminta (mis. Jika validasi otomatis
-  tidak dapat beroperasi bagi Pelanggan).
+  tidak dapat beroperasi untuk Pelanggan).
 
-6.2 Larangan Melakukan Permintaan atau Perekrutan
+6.2 Larangan Melakukan Penawaran atau Perekrutan
 -------------------------------------------------
 
 Kecuali jika pihak lainnya memberikan persetujuan secara tertulis, masing-masing pihak,
-afiliasi dan perwakilannya setuju untuk tidak meminta atau menawarkan pekerjaan kepada
-karyawan dari pihak lainnya yang terlibat dalam pelaksanaan atau penggunaan Layanan dalam
+afiliasi dan perwakilannya setuju untuk tidak menawarkan pekerjaan atau merekrut karyawan
+dari pihak lainnya yang terlibat dalam pelaksanaan atau penggunaan Layanan dalam
 Perjanjian ini, selama periode Perjanjian dan untuk periode 12 bulan dari tanggal
 pengakhiran atau berakhirnya Perjanjian ini. Dalam kasus pelanggaran terhadap ketentuan pasal
-ini yang menyebabkan penghentian karyawan tersebut pada akhirnya, pihak yang melanggar setuju
+ini yang pada akhirnya menyebabkan penghentian karyawan tersebut, pihak yang melanggar setuju
 untuk membayar kepada pihak lainnya sejumlah EUR 30.000,00 (tiga puluh ribu euro).
 
 .. _publicity_id:
@@ -390,7 +390,7 @@ di situs web, siaran pers dan materi pemasaran lainnya.
 ---------------
 
 Definisi “Informasi Rahasia”:
-    Semua informasi yang diungkapkan oleh sebuah pihak (“Pihak yang Mengungkapkan”)
+    Semua informasi yang diungkapkan oleh satu pihak (“Pihak yang Mengungkapkan”)
     kepada pihak lainnya (“Pihak Penerima”), baik secara lisan maupun tertulis,
     yang ditetapkan sebagai rahasia atau yang secara wajar harus dipahami untuk dirahasiakan
     karena sifat informasi dan keadaan pengungkapan tersebut. Secara khusus, informasi apa
@@ -423,7 +423,7 @@ Pemrosesan Data Pribadi
 Para pihak menyatakan bahwa database Pelanggan mungkin berisi Data Pribadi,
 yang mana Pelanggan merupakan Pengontrol. Data ini akan diproses oleh Odoo SA
 sesuai instruksi Pelanggan, dengan menggunakan Layanan yang memerlukan database
-(mis. Layanan Cloud Hosting atau Layanan Peningkatan Database), atau jika Pelanggan
+(mis. Layanan Cloud Hosting atau Layanan Upgrade Database), atau jika Pelanggan
 memindahkan database atau sebagian dari database mereka ke Odoo SA dengan alasan apa
 pun terkait dengan Perjanjian ini.
 
@@ -432,26 +432,26 @@ Secara khusus, Odoo SA berkomitmen untuk:
 
 - (a) hanya memproses Data Pribadi ketika dan sebagaimana diinstruksikan oleh Pelanggan,
   dan untuk tujuan menjalankan salah satu Layanan berdasarkan Perjanjian ini,
-  kecuali diwajibkan oleh hukum, dalam hal ini Odoo SA akan memberikan pemberitahuan
+  kecuali diwajibkan oleh hukum, yang dalam hal ini Odoo SA akan memberikan pemberitahuan
   sebelumnya kepada Pelanggan, kecuali dilarang oleh hukum ;
 - (b) memastikan bahwa semua pihak di dalam Odoo SA yang memiliki wewenang
   untuk memproses Data Pribadi telah berkomitmen untuk menjaga kerahasiaan ;
 - (c) menerapkan dan menyiagakan tindakan teknis dan organisasi yang tepat untuk
   melindungi Data Pribadi terhadap pemrosesan yang tidak sah atau melanggar hukum
   serta mencegah kehilangan, kerusakan, pencurian, perubahan, atau pengungkapan yang tidak disengaja ;
-- (d) segera meneruskan ke Pelanggan permintaan Perlindungan Data
-  yang diserahkan kepada Odoo SA dengan mempertimbangkan database Pelanggan ;
-- (e) memberitahu Pelanggan segera setelah mengetahui dan mengkonfirmasikan
-  setiap pemrosesan, pengungkapan, atau akses atas Data Pribadi yang tidak disengaja,
+- (d) segera meneruskan ke Pelanggan mengenai permintaan Perlindungan Data
+  yang diserahkan kepada Odoo SA mengenai database Pelanggan ;
+- (e) memberitahu Pelanggan secepat mungkin setelah mengetahui dan mengkonfirmasikan
+  pemrosesan, pengungkapan, atau akses Data Pribadi apa pun yang tidak disengaja,
   tidak sah, atau melanggar hukum ;
 - (f) memberi tahu Pelanggan jika instruksi pemrosesan melanggar Undang-undang
-  Perlindungan Data yang berlaku, menurut Odoo SA ;
-- (g) menyediakan informasi yang diperlukan bagi Pelanggan untuk menunjukkan kepatuhan
+  Perlindungan Data yang berlaku, menurut opini Odoo SA ;
+- (g) menyediakan semua informasi yang diperlukan agar Pelanggan dapat menunjukkan kepatuhan
   terhadap Undang-undang Perlindungan Data, untuk memungkinkan dan memberikan kontribusi
   yang memadai terhadap audit, termasuk inspeksi, yang dilakukan, atau yang diamanatkan oleh
   Pelanggan ;
-- (h) menghapus semua salinan database Pelanggan yang memiliki Odoo SA secara permanen,
-  atau mengembalikan data tersebut, atas keputusan Pelanggan, pada saat perjanjian ini
+- (h) menghapus semua salinan database Pelanggan yang Odoo SA miliki secara permanen,
+  atau mengembalikan data tersebut, tergantung keputusan Pelanggan, pada saat perjanjian ini
   berakhir, tergantung pada penundaan yang ditetapkan dalam
   `Kebijakan Privasi <https://www.odoo.com/privacy>`_ Odoo SA ;
 
@@ -462,7 +462,7 @@ tanggung jawab Perlindungan Data Pelanggan.
 Sub-pemroses
 ++++++++++++
 
-Pelanggan mengetahui dan menyetujui bahwa untuk memberikan Layanan, Odoo SA dapat
+Pelanggan mengetahui dan menyetujui bahwa untuk menyediakan Layanan, Odoo SA dapat
 menggunakan penyedia layanan pihak ketiga (Sub-pemroses) untuk memproses Data Pribadi.
 Odoo SA berkomitmen untuk hanya menggunakan Sub-pemroses sesuai dengan Undang-undang Perlindungan Data.
 Penggunaan ini akan dilindungi oleh kontrak antara Odoo SA dengan Sub-pemroses yang
@@ -473,7 +473,7 @@ Layanan.
 
 .. _termination_id:
 
-6.6 Pengakhiran
+6.6 Pemberhentian
 ---------------
 
 Jika salah satu pihak gagal memenuhi kewajibannya yang timbul dalam perjanjian ini,
@@ -483,11 +483,11 @@ diakhiri oleh pihak yang tidak melakukan pelanggaran.
 
 Lebih lanjut, Odoo SA dapat segera mengakhiri Perjanjian jika Pelanggan gagal membayar
 biaya yang berlaku untuk Layanan dalam 21 hari setelah tanggal jatuh tempo yang ditentukan
-di faktur terkait, dan tidak lebih dari 3 pengingat.
+di faktur terkait, dan setelah tidak kurang dari 3 pengingat.
 
-Ketentuan yang Masih Berlaku:
+Survival Clause:
   Pasal ":ref:`confidentiality_id`", “:ref:`disclaimers_id`", “:ref:`liability_id`",
-  dan “:ref:`general_provisions_id`" akan tetap berlaku setelah pengakhiran atau
+  dan “:ref:`general_provisions_id`" akan tetap berlaku setelah pemberhentian atau
   berakhirnya Perjanjian ini.
 
 .. _warranties_disclaimers_id:
@@ -501,7 +501,7 @@ Ketentuan yang Masih Berlaku:
 ------------
 
 Odoo SA memiliki hak cipta atau setara [#cla_id1]_ dengan 100% kode software,
-dan menegaskan bahwa semua library software yang diperlukan untuk menggunakan Software
+dan menegaskan bahwa semua pustaka software yang diperlukan untuk menggunakan Software
 telah tersedia dengan lisensi yang kompatibel dengan lisensi Software.
 
 Selama periode Perjanjian ini, Odoo SA berkomitmen untuk menggunakan upaya yang
@@ -510,9 +510,9 @@ yang umum diterima selama:
 
 - Sistem komputasi Pelanggan berada dalam kondisi operasional yang baik dan,
   untuk Self-Hosting, Software diinstal dalam lingkungan pengoperasian yang sesuai;
-- Pelanggan menyediakan informasi pemecahan masalah yang memadai, dan untuk Self-Hosting,
-  akses apa pun yang mungkin perlu diidentifikasi Odoo SA untuk mengidentifikasi,
-  mereproduksi dan mengatasi masalah;
+- Pelanggan menyediakan informasi pemecahan masalah yang memadai dan, untuk Self-Hosting,
+  akses apa pun yang mungkin Odoo SA perlukan untuk mengidentifikasi, mereproduksi
+  dan mengatasi masalah;
 - Melunasi semua biaya yang perlu dibayarkan kepada Odoo SA.
 
 Satu-satunya perbaikan eksklusif untuk Pelanggan dan satu-satunya kewajiban Odoo SA
@@ -520,7 +520,7 @@ untuk setiap pelanggaran terhadap jaminan ini adalah Odoo SA akan melanjutkan
 pelaksanaan Layanan tanpa biaya tambahan.
 
 .. [#cla_id1] Kontribusi eksternal tercakup dalam `Perjanjian Lisensi Hak Cipta <https://www.odoo.com/cla>`_
-              yang memberikan lisensi, hak cipta, dan paten yang permanen, gratis, dan tidak dapat ditarik
+              yang menyediakan lisensi, hak cipta, dan paten yang permanen, gratis, dan tidak dapat ditarik
               kembali kepada Odoo SA.
 
 
@@ -536,7 +536,7 @@ atau sebaliknya, dan masing-masing pihak secara khusus menyanggah semua jaminan 
 termasuk setiap jaminan kelayakan jual, kesesuaian untuk tujuan khusus, atau larangan
 pelanggaran hak cipta, hingga batas maksimum yang diizinkan oleh hukum yang berlaku.
 
-Odoo SA tidak menjamin Software tersebut sesuai dengan hukum atau peraturan lokal
+Odoo SA tidak menjamin bahwa Software sesuai dengan hukum atau peraturan lokal
 maupun internasional.
 
 
@@ -549,13 +549,13 @@ Hingga batas maksimum yang diizinkan oleh hukum, tanggung jawab agregat yang
 muncul dari atau terkait dengan perjanjian ini untuk masing-masing pihak
 bersama afiliasinya tidak akan melebihi 50% dari jumlah total yang dibayar
 oleh Pelanggan dalam Perjanjian ini selama 12 bulan sebelum tanggal kejadian
-yang menimbulkan klaim tersebut. Klaim yang berjumlah lebih dari satu tidak
+yang menimbulkan klaim tersebut. Lebih dari satu klaim tidak
 akan memperbesar batasan ini.
 
 Dalam keadaan apa pun para pihak maupun afiliasinya tidak bertanggung
 jawab atas kerugian tidak langsung, khusus, yang bersifat denda, tidak
 disengaja, atau konsekuensial dalam bentuk apa pun, termasuk namun tidak
-terbatas pada hilangnya pendapatan, keuntungan, penghematan, kerugian bisnis
+terbatas pada hilangnya pendapatan, keuntungan, tabungan, kerugian bisnis
 atau kerugian finansial lainnya, biaya kemandekan atau penundaan, data yang
 hilang atau rusak, yang timbul dari atau sehubungan dengan Perjanjian ini,
 apa pun bentuk tindakannya, baik dalam kontrak, perbuatan melawan hukum, atau lainnya,
@@ -589,11 +589,11 @@ selama sebab-sebab tersebut benar terjadi.
 
 Perjanjian ini dan semua pesanan Pelanggan akan tunduk pada hukum Belgia.
 Perselisihan apa pun yang timbul karena atau terkait perjanjian ini atau
-pesanan Langganan mana pun akan tunduk pada yurisdiksi eksklusif Nivelles Business Court.
+pesanan Pelanggan mana pun akan tunduk pada yurisdiksi eksklusif Nivelles Business Court.
 
 .. _severability_id:
 
-8.2 Keterpisahan
+8.2 Severability
 ----------------
 
 Dalam hal satu atau lebih ketentuan dari Perjanjian ini atau segala pelaksanaannya
