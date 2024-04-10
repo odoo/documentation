@@ -36,8 +36,8 @@ your customer’s address is set correctly, including the country, before sendin
      <developer-mode>`, go to :menuselection:`General Settings --> Technical --> Reporting
      section: Paper Format`.
    - A square of **15mm by 15mm** on the bottom left corner has to stay clear.
-   - The postage area has to stay clear (click :download:`here <snailmail/snailmail-template.pdf>`
-     to get more info about the area).
+   - The postage area has to stay clear (:download:`download the snailmail PDF template
+     <snailmail/snailmail-template.pdf>` for more details).
    - Pingen (Odoo Snailmail service provider) scans the area to process the address, so if something
      gets written outside the area, it is not counted as part of the address.
 
@@ -51,7 +51,5 @@ To buy stamps, go to :menuselection:`Accounting --> Configuration --> Settings -
 invoices: Snailmail`, click on :guilabel:`Buy credits`, or go to :menuselection:`Settings --> In-App
 Purchases: Odoo IAP`, and click on :guilabel:`View my Services`.
 
-.. tip::
-   - If you are on Odoo Online and have the Enterprise version, you benefit from free trial credits
-     to test the feature.
-   - Click `here <https://iap.odoo.com/privacy#header_4>`_ to know about our *Privacy Policy*.
+.. seealso::
+   `Odoo's IAP Privacy Policy <https://iap.odoo.com/privacy#header_4>`_
