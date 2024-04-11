@@ -8,6 +8,7 @@ Workflows
    :titlesonly:
 
    workflows/subcontracting
+   workflows/subcontracting_basic
    workflows/subcontracting_dropship
    workflows/subcontracting_resupply
    workflows/use_mps
