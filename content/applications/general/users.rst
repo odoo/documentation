@@ -20,7 +20,7 @@ Add individual users
 ====================
 
 To add new users, navigate to :menuselection:`Settings app --> Users section --> Manage Users`, and
-click on :guilabel:`Create`.
+click on :guilabel:`New`.
 
 .. image:: users/manage-users.png
    :align: center
@@ -35,9 +35,9 @@ The list of applications shown is based on the applications installed on the dat
    :align: center
    :alt: View of a user's form emphasizing the access rights tab in Odoo.
 
-After filling out all the necessary fields on the page, click :guilabel:`Save`. An invitation email
-is automatically sent to the user, using the email in the :guilabel:`Email Address` field. The user
-must click on the link included in the email to accept the invitation, and to create a database
+After filling out all the necessary fields on the page, manually :guilabel:`Save`. An invitation
+email is automatically sent to the user, using the email in the :guilabel:`Email Address` field. The
+user must click on the link included in the email to accept the invitation, and to create a database
 login.
 
 .. image:: users/invitation-email.png
@@ -54,9 +54,8 @@ login.
 User type
 ---------
 
-With the :ref:`developer mode <developer-mode>` activated, :guilabel:`User Type` can be selected
-from the :guilabel:`Access Rights` tab of the user form, accessible via :menuselection:`Settings app
---> Users section --> Manage Users`.
+:guilabel:`User Type` can be selected from the :guilabel:`Access Rights` tab of the user form,
+accessible via :menuselection:`Settings app --> Users section --> Manage Users`.
 
 There are three types of users: :guilabel:`Internal User`, :guilabel:`Portal`, and
 :guilabel:`Public`.
@@ -223,9 +222,9 @@ Multi Companies
 ===============
 
 The :guilabel:`Multi Companies` field on a user form allows an administrator to provide access to
-multiple companies for existing users. To configure a multi-company environment for a user, navigate
-to the desired user by going to: :menuselection:`Settings app --> Users section --> Manage users`.
-Then, select the user to open their user form, and configure with multi-company access.
+multiple companies for users. To configure a multi-company environment for a user, navigate to the
+desired user by going to: :menuselection:`Settings app --> Users section --> Manage users`. Then,
+select the user to open their user form, and configure with multi-company access.
 
 Under :guilabel:`Multi Companies` in the :guilabel:`Access Rights` tab, set the fields labeled
 :guilabel:`Allowed Companies` and :guilabel:`Default Company`.
