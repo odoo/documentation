@@ -12,7 +12,7 @@ track inventory movements using those barcodes. By connecting a barcode scanner,
 processes can be triggered by scanning barcodes.
 
 .. seealso::
-   - `Odoo Tutorials: Barcode Basics <https://www.odoo.com/slides/slide/barcode-basics-692>`_
+   `Odoo Tutorials: Barcode <https://www.odoo.com/slides/barcode-30>`_
 
 .. toctree::
    :titlesonly:
