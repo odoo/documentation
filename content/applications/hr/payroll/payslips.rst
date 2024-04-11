@@ -100,6 +100,8 @@ Fill out the following information on the payslip form:
    If modifications to auto-populated fields are made, it is recommended to check with the
    accounting department to ensure every entry that affects the *Accounting* application is correct.
 
+.. _payroll/worked-days-inputs:
+
 Worked days & inputs tab
 ************************
 
