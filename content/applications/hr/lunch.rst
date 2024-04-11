@@ -1,3 +1,5 @@
+:show-content:
+
 =====
 Lunch
 =====
@@ -308,3 +310,11 @@ lunch alert form loads. Enter the following information on the form:
    :align: center
    :alt: An alert form with al the information filled out for a chat alert sent at 10:30 AM, asking
          employees to submit orders by 11:30 AM.
+
+.. seealso::
+   - :doc:`lunch/user-accounts`
+
+.. toctree::
+   :titlesonly:
+
+   lunch/user-accounts
