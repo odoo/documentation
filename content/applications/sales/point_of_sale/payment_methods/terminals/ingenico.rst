@@ -5,8 +5,11 @@ Ingenico
 Connecting a payment terminal allows you to offer a fluid payment flow to your customers and ease
 the work of your cashiers.
 
-Please note that Ingenico is currently only available for customers in the
-Benelux.
+.. important::
+   - Worldline payment terminals require an :doc:`IoT Box </applications/general/iot>`.
+   - Worldline is currently only available in Belgium, the Netherlands and Luxembourg.
+   - Odoo works with the Ingenico Lane/, Desk/, and Move/ payment terminals as they support the TLV
+     communication protocol through TCP/IP.
 
 Configuration
 =============
