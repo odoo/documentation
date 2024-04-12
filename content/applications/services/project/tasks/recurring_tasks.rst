@@ -15,11 +15,6 @@ Configuration
 To enable recurring tasks, go to :menuselection:`Project --> Configuration --> Settings`, then
 activate :guilabel:`Recurring Tasks`, and press :guilabel:`Save`.
 
-Recurring tasks are now activated on all existing projects. The feature can be deactivated
-on an individual project by clicking the drop-down menu button :guilabel:`⋮` next to the project
-name, then going to :menuselection:`Settings --> Settings --> Task Management` and disabling
-:guilabel:`Recurring Tasks`.
-
 Set up task recurrence
 ----------------------
 
