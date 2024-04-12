@@ -5,8 +5,12 @@ Worldline
 Connecting a payment terminal allows you to offer a fluid payment flow to your customers and ease
 the work of your cashiers.
 
-.. note::
-   Please note that Worldline is currently only available in the Benelux.
+.. important::
+   - Worldline payment terminals require an :doc:`IoT Box </applications/general/iot>`.
+   - Worldline is currently only available in Belgium, the Netherlands and Luxembourg.
+   - Odoo is compatible with Worldline terminals that use the CTEP protocol (e.g., the Yomani XR and
+     Yoximo terminals). If you have any doubts, contact your payment provider to ensure your
+     terminal's compatibility.
 
 Configuration
 =============
