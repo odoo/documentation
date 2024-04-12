@@ -5,9 +5,16 @@ Adyen
 Connecting an **Adyen payment terminal** allows you to offer a fluid payment flow to your customers
 and ease the work of your cashiers.
 
-.. note::
-   Adyen works only with businesses processing **more** than **10 million annually** or invoicing a
-   **minimum** of **1,000** transactions **per month**.
+.. important::
+   - Adyen payment terminals do not require an :doc:`IoT Box </applications/general/iot>`.
+   - Adyen terminals can be used in many countries, but not worldwide. Check the `List of countries
+     supported by Adyen <https://docs.adyen.com/point-of-sale/what-we-support/supported-languages/>`_.
+   - Adyen works only with businesses processing more than **$10 million annually** or invoicing a
+     minimum of **1,000 transactions per month**.
+
+.. seealso::
+   - `List of payment methods supported by Adyen <https://docs.adyen.com/point-of-sale/what-we-support/payment-methods/>`_
+   - `List of Adyen terminals <https://docs.adyen.com/point-of-sale/what-we-support/select-your-terminals/>`_
 
 Configuration
 =============
@@ -16,8 +23,7 @@ Start by creating your Adyen account on `Adyen's website <https://www.adyen.com/
 your terminal following the steps described on your terminal's screen.
 
 .. seealso::
-   - `Adyen Docs - Payment terminal quickstart guides
-     <https://docs.adyen.com/point-of-sale/user-manuals>`_.
+   `Adyen Docs - Payment terminal quickstart guides <https://docs.adyen.com/point-of-sale/user-manuals>`_
 
 .. _adyen/api:
 
