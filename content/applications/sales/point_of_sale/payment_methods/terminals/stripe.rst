@@ -5,8 +5,15 @@ Stripe
 Connecting a payment terminal allows you to offer a fluid payment flow to your customers and ease
 the work of your cashiers.
 
+.. important::
+   - Stripe payment terminals do not require an :doc:`IoT Box </applications/general/iot>`
+   - Stripe terminals can be used in many countries, but not worldwide. Check the `global
+     availability for Stripe Terminal <https://support.stripe.com/questions/global-availability-for-stripe-terminal>`_.
+   - Stripe's integration works with `Stripe Terminal smart readers <https://docs.stripe.com/terminal/smart-readers>`_
+
 .. seealso::
-   - :doc:`Use Stripe as payment provider. <../../../../finance/payment_providers/stripe>`
+   - :doc:`Stripe as payment provider <../../../../finance/payment_providers/stripe>`
+   - `List of payment methods supported by Stripe <https://stripe.com/payments/payment-methods>`_
 
 Configuration
 =============
