@@ -36,6 +36,8 @@ internal link button (:guilabel:`➔`).
    - If you select a new workspace, existing documents aren't moved. Only newly created documents
      will be found under the new workspace.
 
+.. _documents/workspaces:
+
 Workspaces
 ==========
 
