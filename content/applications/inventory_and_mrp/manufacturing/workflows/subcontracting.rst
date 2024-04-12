@@ -1,214 +1,105 @@
-==============================
-Subcontract your Manufacturing
-==============================
+=======================
+Subcontracting overview
+=======================
 
-Outsourcing a portion or all of your company’s manufacturing needs
-is not easy. To make it work correctly, you have to:
+.. |BoM| replace:: :abbr:`BoM (Bill of Materials)`
 
-- Manage the inventory of raw materials at your subcontractor
-- Ship raw material to your subcontractors, at the right time
-- Control incoming goods quality
-- Control subcontractors bills
+In manufacturing, *subcontracting* is the process of a company engaging a third-party manufacturer,
+or subcontractor, to manufacture products that are then sold by the contracting company.
 
-Here is an example of subcontracting the manufacturing of “C”, which is
-produced out of raw materials “A” and “B”.
+Subcontracting provides a variety of benefits for both the contracting company and the
+subcontractor.
 
-.. image:: subcontracting/subcontracting_01.png
-    :align: center
-    :alt:
+For the contracting company, subcontracting allows them to sell a wide variety of manufactured
+products, without having to worry about investing in and maintaining the equipment and labor
+required to handle the manufacturing themselves.
 
-With its MRP subcontracting feature, Odoo helps you handle this flow easily.
+This helps contracting companies stay flexible throughout economic cycles, as they can easily
+increase or decrease their engagements with subcontractors, as necessitated by the current moment.
+It also means they are able to focus on tasks they excel at, while delegating more specialized work
+to subcontractors.
+
+On the other side of the relationship, subcontracting allows subcontractors to specialize in more
+niche areas of production, which might not be as profitable outside the bounds of a subcontracting
+engagement. In certain arrangements, it also provides them with the flexibility to choose which
+projects they accept or decline, and how many they work on at any given time.
+
+In Odoo, companies can configure their subcontracting workflows based on a variety of different
+factors, including how components are sourced, and what happens to finished products once they are
+manufactured.
 
 Configuration
 =============
 
-To use the subcontracting feature, go to :menuselection:`Manufacturing
---> Configuration --> Settings` and tick the box *Subcontracting*.
+To enable subcontracting in Odoo, navigate to :menuselection:`Manufacturing app --> Configuration
+--> Settings`, and tick the checkbox next to the :guilabel:`Subcontracting` setting, under the
+:guilabel:`Operations` heading. Then, click :guilabel:`Save`.
 
-.. image:: subcontracting/sbc_1.png
-    :align: center
-    :alt:
+.. image:: subcontracting/subcontracting-setting.png
+   :align: center
+   :alt: The Subcontracting setting in the manufacturing app.
 
-To define if a product must be subcontracted, use a *Bill of Materials
-(BoM)* of type *Subcontracting*.
+With subcontracting enabled, a few different features become available in Odoo:
 
-To create a new *BoM*, go to :menuselection:`Manufacturing --> Products -->
-Bill of Materials` and hit create. Then, list the components
-your subcontractor needs to manufacture the product. For costing
-purposes, you might want to register all the components, even the ones
-that are sourced directly from the subcontractor.
+- On bills of materials (BoMs), the *BoM Type* field now includes a *Subcontracting* option.
+  Enabling the *Subcontracting* |BoM| type designates the |BoM|'s product as a subcontracted
+  product, which means Odoo knows that it is produced by a subcontractor, and not by the company
+  that owns the Odoo database.
+- Two subcontracting routes become available in the *Inventory* app, and can be assigned to specific
+  products, on the *Inventory* tab of their product pages:
 
-Once you have set the *BoM Type* to *Subcontracting*, specify one or
-several subcontractors.
+  - *Resupply Subcontractor on Order*
+  - *Dropship Subcontractor on Order*
 
-.. image:: subcontracting/sbc_2.png
-    :align: center
-    :alt:
+Subcontracting workflows
+========================
 
-Basic Subcontracting Flow
-=========================
+In Odoo, there are three subcontracting workflows, the main difference between them being *how* the
+subcontractor obtains the necessary components:
 
-To let your subcontractor know how many products you need, create and
-send them purchase orders (PO). To do so, go to the *Purchase* app and
-create a new purchase order. Be sure to send the PO to a vendor that is
-defined as a subcontractor on the *BoM* of these products.
+- In the *basic* subcontracting workflow, the subcontractor is fully responsible for obtaining the
+  components. This workflow is outlined in the :doc:`subcontracting_basic` documentation.
+- In the *Resupply Subcontractor on Order* workflow, the contracting company sends the components
+  from their warehouse to the subcontractor. This workflow is outlined in the
+  :doc:`subcontracting_resupply` documentation.
+- In the *Dropship Subcontractor on Order* workflow, the contracting company purchases the
+  components from a vendor, and has them delivered directly to the subcontractor. This workflow is
+  outlined in the :doc:`subcontracting_dropship` documentation.
 
-.. image:: subcontracting/subcontracting_04.png
-    :align: center
-    :alt:
+In addition to how a subcontractor obtains components, it is also necessary to consider why a
+product is being subcontracted, as well as what happens to products once they are manufactured by
+the subcontractor.
 
-Once the *PO* is validated (1), a pending receipt is created. When the
-products are received, validate the receipt (2), with the actual
-quantity received. As a result, Odoo does the following things for you:
+In terms of why a product is being subcontracted, the two main reasons are to fulfill a customer
+order, or to replenish the quantity of stock on-hand.
 
-- Consumes the respective components at the subcontractor’s location, based on the *BoM* and your input (3);
+In terms of what happens to products once they are manufactured, they can either be shipped to the
+contracting company, or dropshipped directly to an end customer.
 
-- Produces the finished goods at the subcontractor’s location (4);
+Each of the three subcontracting workflows described above can be configured to facilitate any of
+these possibilities, and the methods for doing so are outlined in their respective documentation.
 
-- Moves products from that subcontractor’s location to YourCompany
-  via the validated receipt (5).
+Subcontracted product valuation
+===============================
 
+The valuation of a subcontracted product depends upon a few different variables:
 
-.. note::
-      The *PO* is optional. If you create a receipt manually, with the right
-      subcontractor, Odoo still performs all the moves. This can be useful if
-      the subcontractor does not bill a fixed price per item, but rather the time
-      and materials used.
+- The cost of the required components, if provided by the contracting company; from here on referred
+  to as `C`.
+- The price paid to the subcontractor for the service of manufacturing the subcontracted product;
+  from here on referred to as `M`.
+- The cost of shipping components to the subcontractor, and having them shipped back to the
+  contracting company; from here on referred to as `S`.
+- The cost of dropshipping, if the components are shipped by the subcontractor to the end customer;
+  from here on referred to as `D`.
+- Any other associated costs, like import taxes, etc.; from here on referred to as `x`.
 
-Inventory Valuation
-===================
+Therefore, the total valuation of a subcontracted product (`P`) can be represented by the following
+equation:
 
-The cost of the manufactured product “C” is defined as:
+.. math::
+   P = C + M + S + D + x
 
-**C = A + B + s**
-
-With:
-
--  **A**: Cost of raw materials coming from YourCompany;
-
--  **B**: Cost of raw materials sourced directly from the
-       subcontractor;
-
--  **s**: Cost of the subcontracted service.
-
-Sending raw materials to your subcontractors (**A**) does not impact
-the inventory valuation, as the components are still valued as part of
-your stock. This is managed by making the *Subcontracting Location* an
-*Internal Location*.
-
-Then, the vendor price set on the product C form has to be what has to
-be paid to the subcontractor for his parts and service time: **B +
-s**. The product cost has to be: **A + B + s**, how much the
-product is valued in the accounting.
-
-Finally, the subcontractor bill then matches the purchase order, with
-the proposed price coming from the finished products C.
-
-.. note::
-      If managing the replenishment of raw materials **B** at your
-      subcontractor’s location is not needed, simply include the cost of
-      **B** in the subcontractor’s price **s** and remove the products
-      *B* from the *BoM*.
-
-Traceability
-============
-
-In case the received products from the subcontractor contain tracked
-components, their serial or lot numbers need to be specified during the
-receipt.
-
-In that case, on the receipt of the subcontracted product, a *Record Components*
-button appears. Click on it to open a dialog box and record the serial/lot numbers of
-the components. If the finished product is also tracked, its serial/lot number can
-be registered here too.
-
-.. image:: subcontracting/sbc_3.png
-    :align: center
-    :alt:
-
-For audit purposes, it is possible to check the lot numbers recorded on
-a receipt by using the icon on the right of the finished products:
-
-.. image:: subcontracting/sbc_4.png
-    :align: center
-    :alt:
-
-Also note that in case flexible consumption has been selected on the subcontracted
-BOM for a non-tracked product, the record components option will also appear
-optionally on each move line, if you want to register more or less component consumption
-at your subcontracting location, when receiving your final product.
-
-.. image:: subcontracting/sbc_5.png
-    :align: center
-    :alt:
-
-As you can see, the reception of both of these non-tracked products can either be executed
-by selecting the 'Set Quantities' Option or via the move line hamburger menus.
-
-Automate Replenishment of Subcontractors
-========================================
-
-There are two ways to automate the supply of raw materials to your
-subcontractors when purchasing the final product. The chosen method
-depends on whether or not you want the materials to transit through your
-warehouse. Both of these methods are described as pull style mechanisms as
-their trigger is the inital PO to the subcontractor, which creates a need
-at the subcontracting location, for raw material.
-
-If you are supplying your subcontractor with raw material from your own warehouse,
-you must activate the 'Resupply Subcontractor on Order' route as shown
-below. If this is a component that you buy from a vendor, the buy route
-should also be activated.
-
-
-.. image:: subcontracting/sbc_6.png
-    :align: center
-    :alt:
-
-
-Now, if you want your vendor to resupply your subcontractor directly, you
-must choose the 'Dropship Subcontractor on Order' option instead. In order
-for this option to be active on the product form, you must first activate the
-dropship option from :menuselection:`Purchase --> Configuration --> Settings -->
-Dropshipping`.
-Once the PO to the subcontractor is validated, this route will create a dropship
-RFQ from your vendor to that subcontractor. You then just need to review and validate it.
-
-
-.. image:: subcontracting/sbc_7.png
-    :align: center
-    :alt:
-
-Note that the buy route is not selected in this case, as the dropship route is
-a buy route already.
-
-Finally, if you want to track the stock of these raw materials at your subcontracting
-location(s), then you must activate *Multi-locations* in :menuselection:`Inventory -->
-Configuration --> Settings --> Storage locations`.
-
-From the location form, you are then able to access the Current Stock.
-
-.. image:: subcontracting/sbc_8.png
-    :align: center
-    :alt:
-
-
-
-Manual Replenishment
---------------------
-
-You can also choose to replenish your subcontractors manually.
-
-If you want to send components to your subcontractor at your own convenience,
-select the 'Resupply Subcontractor' Operation Type from the *Inventory* Module,
-and create a picking, specifying to which subcontractor you are delivering to.
-
-.. image:: subcontracting/sbc_9.png
-    :align: center
-    :alt:
-
-Alternatively, you can also manually ask your vendor to resupply your subcontractor
-by creating a dropship type PO, with your subcontractor set as the delivery address.
-
-.. image:: subcontracting/sbc_10.png
-    :align: center
+It is important to note that not every subcontracted product valuation will include all of these
+variables. For example, if the product is not dropshipped to the end customer, then there is no need
+to factor in the cost of dropshipping.
