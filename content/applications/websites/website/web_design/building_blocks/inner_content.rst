@@ -17,14 +17,18 @@ pre-existing blocks.
 Social media
 ============
 
-The :guilabel:`Social Media` block inserts clickable buttons leading to any URL. The button
-automatically displays the icon of several major social networking services.
+The :guilabel:`Social Media` block inserts clickable buttons leading to your social network's URL.
+By default, the buttons display the icons of seven major social networks. You can click
+:guilabel:`Add New Social Network` to create a new button and switch the buttons next to a URL to
+turn them on or off.
 
 .. image:: inner_content/social-media-block.png
    :alt: The social media building block and its settings
 
-.. tip::
-   If an icon is not available, it is possible to edit the default icon by selecting it, clicking
-   the :guilabel:`Replace` button found under the :guilabel:`Customize` tab's :guilabel:`Icon`
-   section, and either selecting one of the available :guilabel:`Icons` or clicking the
-   :guilabel:`Images` tab and uploading an image or adding its URL.
+.. Note::
+
+   You cannot edit the default icons but can edit the ones you added by clicking
+   :guilabel:`Add New Social Network`. To do so, select the icon, then click the
+   :guilabel:`Replace` button found under the :guilabel:`Customize` tab's :guilabel:`Icon` section,
+   and either select one of the available icons or click the :guilabel:`Images` tab and upload an
+   image or add its URL.
