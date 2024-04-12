@@ -5,6 +5,10 @@ Stripe
 `Stripe <https://stripe.com/>`_ is a United States-based online payment solution provider, allowing
 businesses to accept **credit cards** and other payment methods.
 
+.. seealso::
+   - `List of countries supported by Stripe <https://stripe.com/global>`_
+   - `List of payment methods supported by Stripe <https://stripe.com/payments/payment-methods>`_
+
 Link your Stripe Account with Odoo
 ==================================
 
