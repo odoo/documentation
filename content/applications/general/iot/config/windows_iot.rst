@@ -196,12 +196,14 @@ add a brief description in the :guilabel:`Description` field. Click :guilabel:`F
 the :guilabel:`Rule Configuration` wizard. Now, the new rule is active and devices can connect to
 the Windows virtual :abbr:`IoT (Internet of Things)` box.
 
+.. _iot/windows/wordline:
+
 Worldline exception
 ~~~~~~~~~~~~~~~~~~~
 
 *Worldline* is a payment terminal that can be connected to Odoo's *PoS* (point of sale) system. It
 allows for a comprehensive and fluid payment experience for customers. Worldline is available in
-Benelux (coalition of Belgium, the Netherlands, and Luxembourg).
+Belgium, the Netherlands, and Luxembourg.
 
 When using the Windows IoT server to connect the Worldline payment terminal, it is necessary to
 create an exception in the Windows firewall so that a connection can be made between the Odoo

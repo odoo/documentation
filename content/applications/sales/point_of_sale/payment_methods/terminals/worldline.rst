@@ -6,7 +6,8 @@ Connecting a payment terminal allows you to offer a fluid payment flow to your c
 the work of your cashiers.
 
 .. note::
-   Please note that Worldline is currently only available in the Benelux.
+   Please note that Worldline is currently only available in the Belgium, the Netherlands, and
+   Luxembourg.
 
 Configuration
 =============
@@ -58,6 +59,11 @@ Port number
 On the *Port number* screen, enter **9001** (or **9050** for Windows) and click on
 :menuselection:`OK` (*ECR protocol SSL no*) :menuselection:`--> OK`. Click on **Stop** three times;
 the terminal automatically restarts.
+
+.. warning::
+   For **Windows** IoT devices, it is necessary to add a firewall exception. Follow the
+   :ref:`additional instructions in the Windows IoT documentation <iot/windows/wordline>` to add the
+   exception to Windows Firewall.
 
 Configure the payment method
 ----------------------------
