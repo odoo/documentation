@@ -2931,6 +2931,8 @@ msgid ""
 "The :guilabel:`Payment tolerance` is only applicable to lower payments. It "
 "is disregarded when an overpayment is received."
 msgstr ""
+"Die :guilabel:`Zahlungstoleranz` gilt nur für niedrigere Zahlungen. Sie wird"
+" nicht berücksichtigt, wenn Sie eine Überzahlung erhalten."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:84
 msgid ":doc:`../customer_invoices/cash_discounts`"
@@ -2938,7 +2940,7 @@ msgstr ":doc:`../customer_invoices/cash_discounts`"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:87
 msgid "Line with bank fees"
-msgstr ""
+msgstr "Zeile mit Bankgebühren"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:89
 msgid ""
@@ -2948,6 +2950,12 @@ msgid ""
 " be used for example, to identify the information referring to the "
 ":guilabel:`Bank fees` in the label of the transaction."
 msgstr ""
+"Dieses Modell schlägt eine Gegenbuchung gemäß den im Modell festgelegten "
+"Regeln vor. In diesem Fall ist der :guilabel:`Typ` des Abstimmungsmodells "
+":guilabel:`Regel zum Vorschlagen einer Gegenbuchung` und der "
+":guilabel:`Buchungstext` kann z. B. verwendet werden, um die Informationen "
+"zu identifizieren, die sich auf die :guilabel:`Bankgebühren` im Buchungstext"
+" der Transaktion beziehen."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:98
 msgid ""
@@ -2957,6 +2965,12 @@ msgid ""
 "so it's essential to use it judiciously and with a good understanding of the"
 " patterns you're working with."
 msgstr ""
+"`Reguläre Ausdrücke <https://regexone.com/>`_, oft abgekürzt als **Regex**, "
+"können in Odoo auf verschiedene Weise verwendet werden, um Daten innerhalb "
+"des Systems zu suchen, zu validieren und zu manipulieren. Regex kann sehr "
+"mächtig, aber auch komplex sein. Daher ist es wichtig, dass Sie sie mit "
+"Bedacht und mit einem guten Verständnis der Muster, mit denen Sie arbeiten, "
+"einsetzen."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:103
 msgid ""
@@ -2965,14 +2979,19 @@ msgid ""
 "expression. Odoo automatically retrieves the transactions that match your "
 "Regex expression and the conditions specified in your model."
 msgstr ""
+"Um reguläre Ausdrücke in Ihren Abstimmungsmodellen zu verwenden, setzen Sie "
+"den :guilabel:`Transaktionstyp` auf :guilabel:`Regex abgleichen` und fügen "
+"Sie Ihren Ausdruck hinzu. Odoo ruft automatisch die Transaktionen ab, die "
+"Ihrem Regex-Ausdruck und den in Ihrem Modell angegebenen Bedingungen "
+"entsprechen."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:0
 msgid "Using Regex in Odoo"
-msgstr ""
+msgstr "Nutzung von Regex in Odoo"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:111
 msgid "Partner mapping"
-msgstr ""
+msgstr "Partnerzuordnung"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:113
 msgid ""
@@ -2984,6 +3003,14 @@ msgid ""
 "incoming payment meets these criteria, Odoo automatically maps it to the "
 "corresponding customer's account."
 msgstr ""
+"Mit der Partnerzuordnung können Sie Regeln für den automatischen Abgleich "
+"von Transaktionen mit dem richtigen Partnerkonto aufstellen. Das spart Zeit "
+"und verringert das Risiko von Fehlern, die beim manuellen Abgleich auftreten"
+" können. Sie können zum Beispiel eine Partnerzuordnungsregel für eingehende "
+"Zahlungen mit bestimmten Referenznummern oder Schlüsselwörtern in der "
+"Transaktionsbeschreibung erstellen. Wenn eine eingehende Zahlung diese "
+"Kriterien erfüllt, ordnet Odoo sie automatisch dem entsprechenden "
+"Kundenkonto zu."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:119
 msgid ""
@@ -2991,10 +3018,14 @@ msgid ""
 "and enter the :guilabel:`Find Text in Label`, :guilabel:`Find Text in "
 "Notes`, and :guilabel:`Partner`."
 msgstr ""
+"Um eine Partnerzuordnungsregel zu erstellen, gehen Sie zum Reiter "
+":guilabel:`Partnerzuordnung` und geben Sie :guilabel:`Text in Etikett "
+"suchen`, :guilabel:`Text in Buchungstext finden` und :guilabel:`Partner` "
+"ein."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst-1
 msgid "defining partner mapping"
-msgstr ""
+msgstr "Festlegen der Partnerzuordnung"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:5
 msgid ""
@@ -3096,7 +3127,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:42
 msgid ":doc:`/applications/essentials/export_import_data`"
-msgstr ""
+msgstr ":doc:`/applications/essentials/export_import_data`"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:47
 msgid "Register bank transactions manually"
@@ -3324,6 +3355,10 @@ msgid ""
 "within the system. There is nothing to stop users from creating their own "
 "draft invoices."
 msgstr ""
+"Das System erstellt Rechnungen, die zunächst auf den Entwurfsstatus gesetzt "
+"werden. Solange diese Rechnungen nicht validiert sind, haben sie keine "
+"Auswirkungen auf die Buchhaltung im System. Nichts hindert Benutzer daran, "
+"ihre eigenen Rechnungsentwürfe zu erstellen."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:53
 msgid "Let's create a customer invoice with following information:"
@@ -4540,6 +4575,8 @@ msgid ""
 "Reports, such as the delivery slip and invoice report, can be "
 ":doc:`customized using Studio </applications/studio/pdf_reports>`."
 msgstr ""
+"Berichte wie der Liegerschein und Rechungsbericht können :doc:`mithilfe von "
+"Studio angepasst werden </applications/studio/pdf_reports>`."
 
 #: ../../content/applications/finance/accounting/customer_invoices/customer_addresses.rst:38
 msgid ""
@@ -4592,12 +4629,21 @@ msgid ""
 "recognize it on a monthly basis. Each month, for the next 12 months, $100 "
 "will be recognized as revenue."
 msgstr ""
+"Nehmen wir an, ein Unternehmen verkauft eine Softwarelizenz für 1.200 € für "
+"1 Jahr. Der Betrag wird dem Kunden sofort in Rechnung gestellt, kann aber "
+"noch nicht als verdient betrachtet werden, da die zukünftigen Monate der "
+"Lizenzierung noch nicht geliefert wurden. Daher buchen Sie diese neuen "
+"Einnahmen auf einem Konto für passive Rechnungsabgrenzung und verbuchen sie "
+"monatlich. In den nächsten 12 Monaten werden jeden Monat 100 € als Einnahmen"
+" verbucht."
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:21
 msgid ""
 "Odoo Accounting handles deferred revenues by spreading them in multiple "
 "entries that are posted periodically."
 msgstr ""
+"Odoo Buchhaltung behandelt passive Rechnungsabgrenzungen, indem es sie auf "
+"mehrere Buchungen verteilt und dann periodisch gebucht werden."
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:25
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:25
@@ -4606,6 +4652,9 @@ msgid ""
 "up to 24 hours before you see a change from :guilabel:`Draft` to "
 ":guilabel:`Posted`."
 msgstr ""
+"Der Server prüft einmal am Tag, ob ein Posten gebucht werden muss. Es kann "
+"dann bis zu 24 Stunden dauern, bis Sie eine Änderung von :guilabel:`Entwurf`"
+" zu :guilabel:`Gebucht` sehen."
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:31
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:31
@@ -4614,6 +4663,9 @@ msgid ""
 "To do so, go to :menuselection:`Accounting --> Configuration --> Settings`. "
 "The following options are available:"
 msgstr ""
+"Stellen Sie sicher, dass die Standardeinstellungen für Ihr Unternehmen "
+"korrekt konfiguriert sind. Gehen Sie dazu auf :menüauswahl:`Buchhaltung --> "
+"Konfiguration --> Einstellungen`. Die folgenden Optionen sind verfügbar:"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:34
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:34
@@ -4623,7 +4675,7 @@ msgstr "Journal"
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:35
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:35
 msgid "The deferral entries are posted in this journal."
-msgstr ""
+msgstr "Die Abgrenzungsposten werden in diesem Journal verbucht."
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:36
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:36
@@ -4636,6 +4688,8 @@ msgid ""
 "Expenses are deferred on this Current Asset account until they are "
 "recognized."
 msgstr ""
+"Ausgaben werden auf diesem Konto für Umlaufvermögen abgegrenzt, bis sie "
+"verbucht werden."
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:38
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:38
@@ -4648,6 +4702,8 @@ msgid ""
 "Revenues are deferred on this Current Liability account until they are "
 "recognized."
 msgstr ""
+"Einnahmen werden auf diesem Konto für kurzfristige Verbindlichkeiten "
+"abgegrenzt, bis sie verbucht werden."
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:43
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:43
@@ -4662,6 +4718,11 @@ msgid ""
 ":ref:`generate them manually <customer_invoices/deferred/generate_manually>`"
 " by selecting the :guilabel:`Manually & Grouped` option instead."
 msgstr ""
+"Standardmäßig erzeugt Odoo :ref:`automatisch "
+"<customer_invoices/deferred/generate_on_validation>` die Abgrenzungsposten, "
+"wenn Sie eine Kundenrechnung buchen. Sie können sie jedoch auch "
+":ref:`manuell generieren <customer_invoices/deferred/generate_manually>`, "
+"indem Sie stattdessen die Option :guilabel:`Manuell & gruppiert` wählen."
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:48
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:48
@@ -4675,11 +4736,16 @@ msgid ""
 "the :guilabel:`Based on days` computation accounts for different amounts "
 "depending on the number of days in each month."
 msgstr ""
+"Angenommen, eine Rechnung über 1.200 € muss über 12 Monate abgegrenzt "
+"werden. Die Berechnung :guilabel:`Gleich pro Monat` berücksichtigt jeden "
+"Monat 100 €, während die Berechnung :guilabel:`Basierend auf Tagen` "
+"unterschiedliche Beträge abhängig von der Anzahl der Tage in jedem Monat "
+"berücksichtigt."
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:53
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:53
 msgid "Generate deferral entries on validation"
-msgstr ""
+msgstr "Rechnungsabgrenzungsposten bei Validierung generieren"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:56
 msgid ""
@@ -4688,12 +4754,18 @@ msgid ""
 ":guilabel:`Start Date` should be in the same month as the :guilabel:`Invoice"
 " Date`."
 msgstr ""
+"Stellen Sie sicher, dass die Felder :guilabel:`Startdatum` und "
+":guilabel:`Enddatum` im Reiter :guilabel:`Rechnungszeilen` sichtbar sind. In"
+" den meisten Fällen sollte das :guilabel:`Startdatum` im selben Monat liegen"
+" wie das :guilabel:`Rechnungsdatum`."
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:60
 msgid ""
 "For each line of the invoice that should be deferred, specify the start and "
 "end dates of the deferral period."
 msgstr ""
+"Geben Sie für jede Zeile der Rechnung, die abgegrenzt werden soll, das "
+"Start- und Enddatum des Abgrenzungszeitraums an."
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:63
 msgid ""
@@ -4702,6 +4774,11 @@ msgid ""
 "deferral entries when the invoice is validated. Click the "
 ":guilabel:`Deferred Entries` smart button to see them."
 msgstr ""
+"Wenn das Feld :guilabel:`Buchungen generieren` in den **Einstellungen** auf "
+":guilabel:`Bei Ein-/Ausgangsrechnungsvalidierung` gesetzt ist, generiert "
+"Odoo automatisch die Abgrenzungsbuchungen, wenn die Rechnung geprüft wird. "
+"Klicken Sie auf die intelligente Schaltfläche "
+":guilabel:`Rechnungsabgrenzungsposten`, um sie zu sehen."
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:67
 msgid ""
@@ -4711,6 +4788,11 @@ msgid ""
 "amounts from the deferred account to the income account to recognize the "
 "revenue."
 msgstr ""
+"Eine Buchung, die auf den gleichen Tag wie das Buchungsdatum der Rechnung "
+"datiert ist, verschiebt die Rechnungsbeträge vom Ertragskonto auf das "
+"Abgrenzungskonto. Die anderen Buchungen sind Abgrenzungsbuchungen, die Monat"
+" für Monat die Rechnungsbeträge vom Abgrenzungskonto auf das Ertragskonto "
+"verschieben, um die Einnahmen zu verbuchen."
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:73
 msgid ""
@@ -4719,6 +4801,10 @@ msgid ""
 "August, $800 is recognized as an income, whereas $400 remains on the "
 "deferred account."
 msgstr ""
+"Sie können eine Januar-Rechnung über 1.200 € über 12 Monate aufschieben, "
+"indem Sie ein Startdatum am 01/01/2023 und ein Enddatum am 31/12/2023 "
+"angeben. Ende August werden 800 € als Ertrag verbucht, während 400 € auf dem"
+" Abgrenzungskonto verbleiben."
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:80
 msgid ""
@@ -4726,6 +4812,10 @@ msgid ""
 "entries for each account. To access it, go to :menuselection:`Accounting -->"
 " Reporting --> Deferred Revenue`."
 msgstr ""
+"Der Bericht über Passive Rechnungsabgrenzung berechnet eine Übersicht über "
+"die notwendigen Abgrenzungsbuchungen für jedes Konto. Um darauf zuzugreifen,"
+" gehen Sie zu :menuselection:`Buchhaltung --> Berichtswesen --> Passive "
+"Rechnungsabgrenzung`."
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:83
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:83
@@ -4733,21 +4823,25 @@ msgid ""
 "To view the journal items of each account, click on the account name and "
 "then :guilabel:`Journal Items`."
 msgstr ""
+"Um die Buchungszeilen der einzelnen Konten anzuzeigen, klicken Sie auf den "
+"Kontonamen und dann auf die :guilabel:`Buchungszeilen`."
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst-1
 msgid "Deferred revenue report"
-msgstr ""
+msgstr "Bericht über Passive Rechnungsabgrenzung"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:90
 msgid ""
 "Only invoices whose accounting date is before the end of the period of the "
 "report are taken into account."
 msgstr ""
+"Es werden nur Rechnungen berücksichtigt, deren Buchungsdatum vor dem Ende "
+"des Berichtszeitraums liegt."
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:96
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:96
 msgid "Generate grouped deferral entries manually"
-msgstr ""
+msgstr "Gruppierte Abgrenzungsposten generieren"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:98
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:98
@@ -4758,6 +4852,11 @@ msgid ""
 ":guilabel:`Manually & Grouped`. Odoo then aggregates the deferred amounts in"
 " a single entry."
 msgstr ""
+"Wenn Sie viele Rechnungsabgrenzungen haben und die Anzahl der erstellten "
+"Journalbuchungen reduzieren möchten, können Sie Abgrenzungsbuchungen manuell"
+" erzeugen. Setzen Sie dazu das Feld :guilabel:`Buchungen generieren` in den "
+"**Einstellungen** auf :guilabel:`Manuell & gruppiert`. Odoo fasst dann die "
+"abgegrenzten Beträge in einer einzigen Buchung zusammen."
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:103
 msgid ""
@@ -4765,6 +4864,10 @@ msgid ""
 " Deferred Revenue` and click the :guilabel:`Generate Entries` button. This "
 "generates two deferral entries:"
 msgstr ""
+"Gehen Sie am Ende eines jeden Monats zu :menuselection:`Buchhaltung --> "
+"Berichtswesen --> Passive Rechnungsabgrenzung` und klicken Sie auf die "
+"Schaltfläche :guilabel:`Buchungen generieren`. Dies erzeugt zwei "
+"Abgrenzungsbuchungen:"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:106
 msgid ""
@@ -4772,6 +4875,9 @@ msgid ""
 "the deferred amounts of that month. This means that a part of the deferred "
 "revenue is recognized at the end of that period."
 msgstr ""
+"Eine am Ende des Monats, die für jedes Konto alle abgegrenzten Beträge "
+"dieses Monats zusammenfasst. Das bedeutet, dass ein Teil der passiven "
+"Rechnungsabgrenzungsposten am Ende dieser Periode verbucht wird."
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:109
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:109
@@ -4779,23 +4885,28 @@ msgid ""
 "The reversal of this created entry, dated on the following day (i.e., the "
 "first day of the next month) to cancel the previous entry."
 msgstr ""
+"Die Stornierung dieses erstellten Eintrags, datiert auf den folgenden Tag "
+"(d. h. den ersten Tag des nächsten Monats), um den vorherigen Eintrag zu "
+"löschen."
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:113
 msgid "There are two invoices:"
-msgstr ""
+msgstr "Es gibt zwei Rechnungen:"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:115
 msgid "Invoice A: $1200 to be deferred from 01/01/2023 to 12/31/2023"
 msgstr ""
+"Rechnung A: 1.200 € muss vom 01/01/2023 bis zum 12/31/2023 abgegrenzt werden"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:116
 msgid "Invoice B: $600 to be deferred from 01/01/2023 to 12/31/2023"
 msgstr ""
+"Rechnung B: 600 € muss vom 01/01/2023 bis zum 12/31/2023 abgegrenzt werden"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:133
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:134
 msgid "In January"
-msgstr ""
+msgstr "Im Januar"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:119
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:120
@@ -4803,11 +4914,13 @@ msgid ""
 "At the end of January, after clicking the :guilabel:`Generate Entries` "
 "button, there are the following entries:"
 msgstr ""
+"Ende Januar, nachdem Sie auf die Schaltfläche :guilabel:`Buchungen "
+"generieren` geklickt haben, gibt es die folgenden Buchungen:"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:122
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:123
 msgid "Entry 1 dated on the 31st January:"
-msgstr ""
+msgstr "Buchung 1 datiert auf den 31. Januar:"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:124
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:141
@@ -4816,12 +4929,16 @@ msgid ""
 "Line 1: Expense account -1200 -600 = **-1800** (cancelling the total of both"
 " invoices)"
 msgstr ""
+"Zeile 1: Aufwandskonto -1200 -600 = **-1800** (Stornierung der Summe der "
+"beiden Rechnungen)"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:125
 msgid ""
 "Line 2: Expense account 100 + 50 = **150** (recognizing 1/12 of invoice A "
 "and invoice B)"
 msgstr ""
+"Zeile 2: Aufwandskonto 100 + 50 = **150** (Realisierung von 1/12 von "
+"Rechnung A und Rechnung B)"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:126
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:127
@@ -4829,31 +4946,35 @@ msgid ""
 "Line 3: Deferred account 1800 - 150 = **1650** (amount that has yet to be "
 "deferred later on)"
 msgstr ""
+"Zeile 3: Konto für passive Rechnungsabgrenzung 1800 - 150 = **1650** "
+"(Betrag, der später noch abgegrenzt werden muss)"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:129
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:130
 msgid "Entry 2 dated on the 1st February, the reversal of the previous entry:"
 msgstr ""
+"Buchung 2 datiert auf den 1. Februar, die Stornierung der vorherigen "
+"Buchung:"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:131
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:132
 msgid "Line 1: Expense account **1800**"
-msgstr ""
+msgstr "Zeile 1: Aufwandskonto **1800**"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:132
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:133
 msgid "Line 2: Deferred account **-150**"
-msgstr ""
+msgstr "Zeile 2: Abgrenzungskonto **-150**"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:133
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:134
 msgid "Line 3: Expense account **-1650**"
-msgstr ""
+msgstr "Zeile 3: Aufwandskonto **-1650**"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:146
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:147
 msgid "In February"
-msgstr ""
+msgstr "Im Februar"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:136
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:137
@@ -4861,17 +4982,21 @@ msgid ""
 "At the end of February, after clicking the :guilabel:`Generate Entries` "
 "button, there are the following entries:"
 msgstr ""
+"Ende Februar, nachdem Sie auf die Schaltfläche :guilabel:`Buchungen "
+"generieren` geklickt haben, gibt es die folgenden Buchungen:"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:139
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:140
 msgid "Entry 1 dated on the 28th February:"
-msgstr ""
+msgstr "Buchung 1 datiert auf den 28. Februar:"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:142
 msgid ""
 "Line 2: Expense account 200 + 100 = **300** (recognizing 2/12 of invoice A "
 "and invoice B)"
 msgstr ""
+"Zeile 2: Aufwandskonto 200 + 100 = **300** (Realisierung von 2/12 von "
+"Rechnung A und Rechnung B)"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:143
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:144
@@ -4879,26 +5004,29 @@ msgid ""
 "Line 3: Deferred account 1800 - 300 = **1500** (amount that has yet to be "
 "deferred later on)"
 msgstr ""
+"Zeile 3: Konto für passive Rechnungsabgrenzung 1800 - 300 = **1500** "
+"(Betrag, der später noch abgegrenzt werden muss)"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:146
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:147
 msgid "Entry 2 dated on the 1st March, the reversal of the previous entry."
 msgstr ""
+"Buchung 2 datiert auf den 1. März, die Stornierung der vorherigen Buchung."
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:149
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:150
 msgid "From March to October"
-msgstr ""
+msgstr "Von März bis Oktober"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:149
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:150
 msgid "The same computation is done for each month until October."
-msgstr ""
+msgstr "Die gleiche Berechnung wird für jeden Monat bis Oktober durchgeführt."
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:163
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:163
 msgid "In November"
-msgstr ""
+msgstr "Im November"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:152
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:153
@@ -4906,17 +5034,21 @@ msgid ""
 "At the end of November, after clicking the :guilabel:`Generate Entries` "
 "button, there are the following entries:"
 msgstr ""
+"Ende November, nachdem Sie auf die Schaltfläche :guilabel:`Buchungen "
+"generieren` geklickt haben, gibt es die folgenden Buchungen:"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:155
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:156
 msgid "Entry 1 dated on the 30th November:"
-msgstr ""
+msgstr "Buchung 1 datiert auf den 30. November:"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:158
 msgid ""
 "Line 2: Expense account 1100 + 550 = **1650** (recognizing 11/12 of invoice "
 "A and invoice B)"
 msgstr ""
+"Zeile 2: Aufwandskonto 1100 + 550 = **1650** (Realisierung von 11/12 von "
+"Rechnung A und Rechnung B)"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:160
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:160
@@ -4924,32 +5056,39 @@ msgid ""
 "Line 3: Deferred account 1800 - 1650 = **150** (amount that has yet to be "
 "deferred later on)"
 msgstr ""
+"Zeile 3: Konto für passive Rechnungsabgrenzung 1800 - 1650 = **150** "
+"(Betrag, der später noch abgegrenzt werden muss)"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:163
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:163
 msgid "Entry 2 dated on the 1st December, the reversal of the previous entry."
 msgstr ""
+"Buchung 2 datiert auf den 1. Dezember, die Stornierung der vorherigen "
+"Buchung."
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:167
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:167
 msgid "In December"
-msgstr ""
+msgstr "Im Dezember"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:166
 msgid ""
 "There is no need to generate entries in December. Indeed, if we do the "
 "computation for December, we have an amount of 0 to be deferred."
 msgstr ""
+"Es besteht keine Notwendigkeit, im Dezember Buchungen zu erstellen. Wenn wir"
+" die Berechnung für Dezember durchführen, haben wir einen Betrag von 0, der "
+"abgegrenzt werden muss."
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:176
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:176
 msgid "In total"
-msgstr ""
+msgstr "Gesamt"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:170
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:170
 msgid "If we aggregate everything, we would have:"
-msgstr ""
+msgstr "Wenn wir alles zusammenfassen würden, hätten wir:"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:172
 msgid "invoice A and invoice B"
@@ -4961,6 +5100,8 @@ msgid ""
 "two entries (one for the deferral and one for the reversal) for each month "
 "from January to November"
 msgstr ""
+"zwei Buchungen (eine für die passive Rechnungsabgrenzung und eine für die "
+"Stornierung) für jeden Monat von Januar bis November"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:176
 msgid ""
@@ -4968,6 +5109,9 @@ msgid ""
 "income only once in spite of all the created entries thanks to the reversal "
 "mechanism."
 msgstr ""
+"Daher werden Ende Dezember die Rechnungen A und B trotz aller erstellten "
+"Buchungen dank des Stornomechanismus nur einmal vollständig als Ertrag "
+"verbucht."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:3
 msgid "Electronic invoicing (:abbr:`EDI (electronic data interchange)`)"
@@ -5237,6 +5381,11 @@ msgid ""
 "(connectors to the Peppol network) allow enterprises to exchange electronic "
 "documents."
 msgstr ""
+"Das Netzwerk `Peppol <https://peppol.org/about/>`_ sorgt für den Austausch "
+"von Dokumenten und Informationen zwischen Unternehmen und "
+"Regierungsbehörden. Es wird in erster Linie für die elektronische "
+"Rechnungsstellung verwendet und seine Zugangspunkte (Konnektoren zum Peppol-"
+"Netzwerk) ermöglichen Unternehmen den Austausch elektronischer Dokumente."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:106
 msgid ""
@@ -5244,34 +5393,47 @@ msgid ""
 " enabling electronic invoicing transactions without the need to send "
 "invoices and bills by email or post."
 msgstr ""
+"Odoo ist ein **Zugangspunkt** und ein :abbr:`SMP (Service Metadata "
+"Publisher)`, der elektronische Rechnungstransaktionen ermöglicht, ohne dass "
+"Sie Rechnungen per E-Mail oder Post versenden müssen."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:109
 msgid ""
 "If not done yet, :ref:`install <general/install>` the :guilabel:`Peppol` "
 "module (`account_peppol`)."
 msgstr ""
+"Falls noch nicht geschehen, :ref:`installieren Sie <general/install>` das "
+"Modul :guilabel:`Peppol` (`account_peppol`)."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:112
 msgid "Peppol registration is **free** and available in Odoo Community"
 msgstr ""
+"Die Registrierung von Peppol ist **kostenlos** und in Odoo Community "
+"verfügbar"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:113
 msgid ""
 "You can send **Customer Invoices** and **Credit Notes** and receive **Vendor"
 " Bills** and **Refunds** via Peppol."
 msgstr ""
+"Sie können **Kundenrechnungen** und **Gutschriften** versenden und "
+"**Lieferantenrechnungen** und **Erstattungen** über Peppol empfangen."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:115
 msgid ""
 "You can send in one of the following supported document formats: **BIS "
 "Billing 3.0, XRechnung CIUS, NLCIUS**."
 msgstr ""
+"Sie können in einem der folgenden unterstützten Dokumentformate senden: "
+"**BIS Billing 3.0, XRechnung CIUS, NLCIUS**."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:0
 msgid ""
 "The following **countries** are eligible for **Peppol registration in "
 "Odoo**:"
 msgstr ""
+"Die folgenden **Länder** sind für die **Peppol-Registrierung in Odoo** "
+"zugelassen:"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:0
 msgid ""
@@ -5283,6 +5445,13 @@ msgid ""
 "Serbia, Sweden, Slovenia, Slovakia, San Marino, Turkey, Holy See (Vatican "
 "City State)"
 msgstr ""
+"Andorra, Albanien, Österreich, Bosnien und Herzegowina, Belgien, Bulgarien, "
+"Schweiz, Zypern, Tschechische Republik, Deutschland, Dänemark, Estland, "
+"Spanien, Finnland, Frankreich, Vereinigtes Königreich, Griechenland, "
+"Kroatien, Ungarn, Irland, Island, Italien, Liechtenstein, Litauen, "
+"Luxemburg, Lettland, Monaco, Montenegro, Nordmazedonien, Malta, Niederlande,"
+" Norwegen, Polen, Portugal, Rumänien, Serbien, Schweden, Slowenien, "
+"Slowakei, San Marino, Türkei, Heiliger Stuhl (Vatikanstadt)"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:125
 msgid "Registration"
@@ -5294,6 +5463,10 @@ msgid ""
 "not have the Peppol module installed, first tick the :guilabel:`Enable "
 "PEPPOL` checkbox and then **manually save**."
 msgstr ""
+"Gehen Sie zu :menuselection:`Buchhaltung --> Konfiguration --> "
+"Einstellungen`. Wenn Sie das Peppol-Modul nicht installiert haben, markieren"
+" Sie zunächst das Kontrollkästchen :guilabel:`PEPPOL aktivieren` und "
+"speichern Sie dann **manuell**."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst-1
 msgid "Peppol module installation"
@@ -5301,7 +5474,7 @@ msgstr "Peppol-Modulinstallation"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:134
 msgid "Fill in the following information:"
-msgstr ""
+msgstr "Füllen Sie folgende Informationen aus:"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:136
 msgid ""
@@ -5310,28 +5483,39 @@ msgid ""
 " most commonly used EAS code in your country. For example, the preferred EAS"
 " code for most companies in Belgium is 0208."
 msgstr ""
+":guilabel:`Peppol EAS`. Dies ist das Peppol Electronic Address Scheme "
+"(elektronisches Peppol-Adressschema) und hängt normalerweise vom Land Ihres "
+"Unternehmens ab. Odoo füllt dies oft mit dem am häufigsten verwendeten EAS-"
+"Code in Ihrem Land aus. Der bevorzugte EAS-Code für die meisten Unternehmen "
+"in Belgien ist zum Beispiel 0208."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:139
 msgid ""
 ":guilabel:`Peppol Endpoint`. This is usually a Company Registry number or a "
 "VAT number."
 msgstr ""
+":guilabel:`Peppol-Endpunkt`. Dies ist in der Regel eine "
+"Unternehmensregisternummer oder eine Mehrwertsteuernummer."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:140
 msgid ""
 ":guilabel:`Phone Number`, including the country code (e.g., `+32` in "
 "Belgium)"
 msgstr ""
+":guilabel:`Telefonnummer`, einschließlich der Ländervorwahl (z. B. `+32` in "
+"Belgien)"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:141
 msgid ":guilabel:`Primary contact email`"
-msgstr ""
+msgstr ":guilabel:`Primäre Kontakt-E-Mail`"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:144
 msgid ""
 "`Peppol EAS - European Commision <https://ec.europa.eu/digital-building-"
 "blocks/wikis/display/DIGITAL/Code+lists/>`_"
 msgstr ""
+"`Peppol EAS - Europäische Kommission <https://ec.europa.eu/digital-building-"
+"blocks/wikis/display/DIGITAL/Code+lists/>`_"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:145
 msgid ""
@@ -5339,16 +5523,21 @@ msgid ""
 "<https://docs.peppol.eu/edelivery/codelists/>`_ (open the \"Participant "
 "Identifier Schemes\" as HTML page)"
 msgstr ""
+"`Peppol-Endpunkt - OpenPeppol-eDEC-Code-Listen "
+"<https://docs.peppol.eu/edelivery/codelists/>`_ (öffnen Sie „Participant "
+"Identifier Schemes“ (Teilnehmer-Identifizierungsschemata) als HTML-Seite)"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:148
 msgid ""
 "If you are migrating from another access point, insert the "
 ":guilabel:`Migration key` from the previous provider."
 msgstr ""
+"Wenn Sie von einem anderen Zugangspunkt migrieren, fügen Sie den "
+":guilabel:`Migrationsschlüssel` des vorherigen Anbieters ein."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst-1
 msgid "Configuration for peppol"
-msgstr ""
+msgstr "Konfiguration für Peppol"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:154
 msgid ""
@@ -5356,10 +5545,13 @@ msgid ""
 "demo Peppol, you can choose to register in :guilabel:`Demo` mode. Otherwise,"
 " select :guilabel:`Live`."
 msgstr ""
+"Klicken Sie abschließend auf :guilabel:`Registrierung validieren`. Wenn Sie "
+"Peppol ausprobieren oder testen möchten, können Sie sich im "
+":guilabel:`Demo`-Modus registrieren. Ansonsten wählen Sie :guilabel:`Live`."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:0
 msgid "Peppol demo mode selection"
-msgstr ""
+msgstr "Auswahl des Peppol-Demomodus"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:161
 msgid ""
@@ -5367,34 +5559,41 @@ msgid ""
 "changed to `test`. Then, a radio button appears with the option to register "
 "on the test server."
 msgstr ""
+"Wenn Sie Peppol testen, können Sie den Systemparameter "
+"`account_peppol.edi.mode` auf `Test` ändern. Dann erscheint ein Optionsfeld "
+"mit der Möglichkeit, sich auf dem Testserver zu registrieren."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:0
 msgid "Peppol test mode parameter"
-msgstr ""
+msgstr "Peppol-Parameter Testmodus"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:0
 msgid "Peppol test mode selection"
-msgstr ""
+msgstr "Auswahl des Peppol-Testmodus"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:170
 msgid ""
 "Now, you can request a verification code to be sent to you by clicking "
 ":guilabel:`Verify phone number`."
 msgstr ""
+"Jetzt können Sie sich einen Verifizierungscode zusenden lassen, indem Sie "
+"auf :guilabel:`Telefonnummer verifizieren` klicken."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst-1
 msgid "phone validation request verification"
-msgstr ""
+msgstr "Verifizierung der Telefonvalidierungsanfrage"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:176
 msgid ""
 "A text message containing a code is sent to the phone number provided to "
 "finalize the verification process."
 msgstr ""
+"Eine Textnachricht mit einem Code wird an die angegebene Telefonnummer "
+"gesendet, um den Verifizierungsprozess abzuschließen."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst-1
 msgid "phone validation"
-msgstr ""
+msgstr "Telefonvalidierung"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:182
 msgid ""
@@ -5402,14 +5601,18 @@ msgid ""
 " registration is pending activation. From this point onwards, the default "
 "journal for receiving Vendor Bills can be set."
 msgstr ""
+"Sobald Sie den Code eingegeben und auf :guilabel:`Bestätigen` geklickt "
+"haben, sehen Sie, dass Ihre Registrierung noch aktiviert werden muss. Von "
+"diesem Zeitpunkt an können Sie das Standardjournal für den Empfang von "
+"Lieferantenrechnungen festlegen."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst-1
 msgid "pending application"
-msgstr ""
+msgstr "Ausstehende Bewerbung"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:188
 msgid "It should be automatically activated within a day."
-msgstr ""
+msgstr "Sie sollte innerhalb eines Tages automatisch aktiviert werden."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:191
 msgid ""
@@ -5417,32 +5620,42 @@ msgid ""
 "registration status by going to :menuselection:`Settings --> Technical --> "
 "Scheduled Actions --> PEPPOL\\: update participant status`."
 msgstr ""
+"Sie können den Cron, der den Registrierungsstatus überprüft, auch manuell "
+"auslösen, indem Sie zu :menuselection:`Einstellungen --> Technisch --> "
+"Geplante Aktionen --> PEPPOL: Teilnehmerstatus aktualisieren` gehen."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:195
 msgid ""
 "Your application status should be updated soon after you are registered on "
 "the Peppol network."
 msgstr ""
+"Ihr Bewerbungsstatus sollte bald nach Ihrer Registrierung im Peppol-Netzwerk"
+" aktualisiert werden."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst-1
 msgid "active application"
-msgstr ""
+msgstr "aktive Bewerbung"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:200
 msgid ""
 "All invoices and vendor bills can now be sent directly using the Peppol "
 "network."
 msgstr ""
+"Alle Ein- und Ausgangsrechnungen können jetzt direkt über das Peppol-"
+"Netzwerk verschickt werden."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:203
 msgid "Contact verification"
-msgstr ""
+msgstr "Kontaktverifizierung"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:205
 msgid ""
 "Before sending an invoice to a contact using the Peppol network, it is "
 "necessary to verify that they are also registered as a Peppol participant."
 msgstr ""
+"Bevor Sie eine Rechnung an einen Kontakt senden, der das Peppol-Netzwerk "
+"nutzt, müssen Sie überprüfen, ob dieser auch als Peppol-Teilnehmer "
+"registriert ist."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:208
 msgid ""
@@ -5453,10 +5666,17 @@ msgid ""
 "Then, click :guilabel:`Verify`. If the contact exists on the network, their "
 "Peppol endpoint validity is set to Valid."
 msgstr ""
+"Gehen Sie dazu zu :menuselection:`Buchhaltung --> Kunden --> Kunden` und "
+"öffnen Sie das Formular des Kunden. Gehen Sie dann zum Reiter "
+":menuselection:`Buchhaltung --> Elektronische Rechnungsstellung`, wählen Sie"
+" das richtige Format und vergewissern Sie sich, dass ihr :guilabel:`Peppol-"
+"EAS-Code` und der :guilabel:`Endpunkt` ausgefüllt sind. Klicken Sie dann auf"
+" :guilabel:`Verifizieren`. Wenn der Kontakt im Netzwerk existiert, wird die "
+"Gültigkeit des Peppol-Endpunkts auf Gültig gesetzt."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst-1
 msgid "verify contact registration"
-msgstr ""
+msgstr "Verifizierung der Kontaktregistrierung"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:218
 msgid ""
@@ -5464,6 +5684,9 @@ msgid ""
 "information available for a contact, it is better to confirm these details "
 "directly with the contact."
 msgstr ""
+"Odoo füllt zwar sowohl den EAS-Code als auch die Endpunktnummer auf der "
+"Grundlage der für einen Kontakt verfügbaren Informationen aus, aber es ist "
+"besser, diese Angaben direkt beim Kontakt zu bestätigen."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:221
 msgid ""
@@ -5472,6 +5695,11 @@ msgid ""
 "Customers` and switch to the list view. Select the customers you want to "
 "verify and then click :menuselection:`Actions --> Verify Peppol`."
 msgstr ""
+"Es ist möglich, den Peppol-Teilnehmerstatus mehrerer Kunden auf einmal zu "
+"überprüfen. Gehen Sie dazu zu :menuselection:`Buchhaltung --> Kunden --> "
+"Kunden` und wechseln Sie zur Listenansicht. Wählen Sie die Kunden aus, die "
+"Sie überprüfen möchten, und klicken Sie dann auf :menuselection:`Aktionen "
+"--> Peppol verifizieren`."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:226
 msgid "Send invoices"
@@ -5485,10 +5713,17 @@ msgid ""
 "Print`; they will be sent in a batch later on. Both :guilabel:`BIS Billing "
 "3.0` and :guilabel:`Send via PEPPOL` checkboxes need to be ticked."
 msgstr ""
+"Sobald Sie bereit sind, eine Rechnung über das Peppol-Netzwerk zu versenden,"
+" klicken Sie im Rechnungsformular einfach auf :guilabel:`Senden & Drucken`. "
+"Um mehrere Rechnungen in die Warteschlange zu stellen, wählen Sie sie in der"
+" Listenansicht aus und klicken Sie auf :menuselection:`Aktionen --> Senden &"
+" drucken`; sie werden dann später in einem Stapel versendet. Die beiden "
+"Kontrollkästchen :guilabel:`BIS Billing 3.0` und :guilabel:`Via PEPPOL "
+"senden` müssen aktiviert sein."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst-1
 msgid "Send peppol invoice"
-msgstr ""
+msgstr "Peppol-Rechnung senden"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:236
 msgid ""
@@ -5497,10 +5732,15 @@ msgid ""
 "the Accounting dashboard and click :guilabel:`Peppol ready invoices` on the "
 "corresponding sales journal."
 msgstr ""
+"Gebuchte Rechnungen, die über Peppol versendet werden können, sind als "
+":guilabel:`Peppol bereit` gekennzeichnet. Um sie anzuzeigen, verwenden Sie "
+"den Filter :guilabel:`Peppol bereit` oder rufen Sie das "
+"Buchhaltungsdashboard auf und klicken Sie auf :guilabel:`Peppol-Rechnungen "
+"bereit` im entsprechenden Verkaufsjournal."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst-1
 msgid "Filter Peppol ready invoices"
-msgstr ""
+msgstr "Filter „Peppol-Rechnungen bereit“"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:243
 msgid ""
@@ -5508,10 +5748,13 @@ msgid ""
 ":guilabel:`Processing`. The status is changed to `Done` after they have been"
 " successfully delivered to the contact's Access Point."
 msgstr ""
+"Sobald die Rechnungen über Peppol versendet wurden, wird der Status auf "
+":guilabel:`Verarbeitung` geändert. Der Status wird auf `Erledigt` geändert, "
+"nachdem sie erfolgreich an den Zugangspunkt des Kontakts zugestellt wurden."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst-1
 msgid "Peppol message status"
-msgstr ""
+msgstr "Peppol-Nachrichtenstatus"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:251
 msgid ""
@@ -5519,6 +5762,10 @@ msgid ""
 "You can choose to have it displayed by selecting it from the optional "
 "columns, accessible from the top right corner of the Invoices list view."
 msgstr ""
+"Standardmäßig ist die Spalte Peppol-Status in der Listenansicht der "
+"Rechnungen ausgeblendet. Sie können sie anzeigen lassen, indem Sie sie aus "
+"den optionalen Spalten auswählen, die Sie in der oberen rechten Ecke der "
+"Listenansicht der Rechnungen finden."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:255
 msgid ""
@@ -5527,10 +5774,14 @@ msgid ""
 " invoice status` in the corresponding sales journal on the Accounting "
 "dashboard."
 msgstr ""
+"Ein Cron läuft regelmäßig, um den Status dieser Rechnungen zu überprüfen. "
+"Sie können den Status überprüfen, bevor der Cron läuft, indem Sie im "
+"entsprechenden Verkaufsjournal auf dem Buchhaltungsdashboard auf "
+":guilabel:`Peppol-Rechnungsstatus abrufen` klicken."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst-1
 msgid "Fetch invoice Peppol status"
-msgstr ""
+msgstr "Peppol-Rechnungsstatus abrufen"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:263
 msgid "Receive vendor bills"
@@ -5542,10 +5793,14 @@ msgid ""
 "via the Peppol network. These documents are imported, and the corresponding "
 "vendor bills are created automatically as drafts."
 msgstr ""
+"Einmal am Tag prüft ein Cron, ob neue Dokumente über das Peppol-Netzwerk an "
+"Sie gesendet wurden. Diese Dokumente werden importiert, und die "
+"entsprechenden Lieferantenrechnungen werden automatisch als Entwürfe "
+"erstellt."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst-1
 msgid "peppol receive bills"
-msgstr ""
+msgstr "Peppol-Rechnungen erhalten"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:272
 msgid ""
@@ -5553,6 +5808,10 @@ msgid ""
 "can do so from the Accounting dashboard on the main Peppol purchase journal "
 "that you set up in the settings. Just click :guilabel:`Fetch from Peppol`."
 msgstr ""
+"Wenn Sie eingehende Peppol-Dokumente abrufen möchten, bevor der Cron läuft, "
+"können Sie dies über das Buchhaltungsdashboard auf dem Haupt-Peppol-"
+"Einkaufjournal tun, das Sie in den Einstellungen eingerichtet haben. Klicken"
+" Sie einfach auf :guilabel:`Aus Peppol abrufen`."
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst-1
 msgid "Fetch bills from Peppol"
@@ -6380,6 +6639,10 @@ msgid ""
 "reductions>` fields to add a :doc:`cash discount <cash_discounts>`, if "
 "desired."
 msgstr ""
+"Aktivieren Sie das Kontrollkästchen :guilabel:`Frühzahlerrabatt` und füllen "
+"Sie die Felder Rabattprozentsatz, Rabatttage und :ref:`Steuerermäßigung "
+"<cash-discounts/tax-reductions>` aus, um ein :doc:`Skonto <cash_discounts>` "
+"hinzuzufügen, falls gewünscht."
 
 #: ../../content/applications/finance/accounting/customer_invoices/payment_terms.rst:57
 msgid ""
@@ -6388,6 +6651,12 @@ msgid ""
 " calculates the payments' due date(s). This is particularly helpful for "
 "managing **installment plans** (:dfn:`payment terms with multiple terms`)."
 msgstr ""
+"Fügen Sie im Abschnitt :guilabel:`Bedingungen` eine Reihe von Regeln "
+"(Bedingungen) hinzu, um zu definieren, was zu welchem Fälligkeitsdatum "
+"gezahlt werden muss. Wenn Sie Bedingungen festlegen, werden die "
+"Fälligkeitsdaten der Zahlungen automatisch berechnet. Dies ist besonders "
+"hilfreich für die Verwaltung von **Ratenzahlungsplänen** "
+"(:dfn:`Zahlungsbedingungen mit mehreren Fristen`)."
 
 #: ../../content/applications/finance/accounting/customer_invoices/payment_terms.rst:62
 msgid ""
@@ -6395,24 +6664,36 @@ msgid ""
 "and type in the :guilabel:`Due` fields, then fill out the :guilabel:`After` "
 "fields to determine the due date."
 msgstr ""
+"Um eine Bedingung hinzuzufügen, klicken Sie auf :guilabel:`Zeile "
+"hinzufügen`, definieren Sie den Wert des Rabatts und geben Sie in die Felder"
+" :guilabel:`Fällig` ein. Füllen Sie dann die Felder :guilabel:`Nach` aus, um"
+" das Fälligkeitsdatum festzulegen."
 
 #: ../../content/applications/finance/accounting/customer_invoices/payment_terms.rst:64
 msgid ""
 "Enter the text to be displayed on the document (sales order, invoice, etc.) "
 "in the gray textbox in the :guilabel:`Preview` column."
 msgstr ""
+"Geben Sie den Text, der auf dem Dokument (Verkaufsauftrag, Rechnung usw.) "
+"angezeigt werden soll, in das graue Textfeld in der Spalte "
+":guilabel:`Vorschau` ein."
 
 #: ../../content/applications/finance/accounting/customer_invoices/payment_terms.rst:66
 msgid ""
 "Tick the :guilabel:`Show installment dates` checkbox to display a breakdown "
 "of each payment and its due date on the invoice report, if desired."
 msgstr ""
+"Kreuzen Sie das Kontrollkästchen :guilabel:`Teilzahlungsdaten anzeigen`, um "
+"auf dem Rechnungsbericht eine Aufschlüsselung der einzelnen Zahlungen und "
+"deren Fälligkeitsdatum anzuzeigen, falls gewünscht."
 
 #: ../../content/applications/finance/accounting/customer_invoices/payment_terms.rst:70
 msgid ""
 "To instead specify a number of days *before the end of the month*, use a "
 "negative value in the :guilabel:`After` field."
 msgstr ""
+"Um stattdessen eine Anzahl von Tagen *vor dem Ende des Monats* anzugeben, "
+"verwenden Sie einen negativen Wert im Feld :guilabel:`Nach`."
 
 #: ../../content/applications/finance/accounting/customer_invoices/payment_terms.rst:73
 msgid ""
@@ -6420,6 +6701,10 @@ msgid ""
 "date on the :guilabel:`Example` line to generate the payments that would be "
 "due and their due dates using these payment terms."
 msgstr ""
+"Um zu testen, ob Ihre Zahlungsbedingungen korrekt konfiguriert sind, geben "
+"Sie in der Zeile :guilabel:`Beispiel` ein Rechnungsdatum ein, um die "
+"fälligen Zahlungen und deren Fälligkeitsdaten unter Verwendung dieser "
+"Zahlungsbedingungen zu generieren."
 
 #: ../../content/applications/finance/accounting/customer_invoices/payment_terms.rst:78
 msgid "Terms are computed in the order of their due dates."
@@ -6431,12 +6716,16 @@ msgid ""
 "In the following example, 30% is due on the day of issuance, and the "
 "remaining 70% is due at the end of the following month."
 msgstr ""
+"Im folgenden Beispiel sind 30 % am Tag der Erstellung fällig und die übrigen"
+" 70 % am Ende des folgenden Monats."
 
 #: ../../content/applications/finance/accounting/customer_invoices/payment_terms.rst:0
 msgid ""
 "Example of Payment Terms. The first line is the 30% due immediately. The second line is\n"
 "the remaining 70% due at the end of the following month."
 msgstr ""
+"Beispiel für Zahlungsbedingungen. In der ersten Zeile stehen die sofort fälligen 30 %. Die zweite Zeile sind\n"
+"die restlichen 70 %, die am Ende des folgenden Monats fällig sind."
 
 #: ../../content/applications/finance/accounting/customer_invoices/payment_terms.rst:89
 msgid "Using payment terms"
@@ -6542,6 +6831,9 @@ msgid ""
 "payment terms: *30% is due on the day of issuance, and the remaining 70% is "
 "due at the end of the following month.*"
 msgstr ""
+"In diesem Beispiel wurde eine Rechnung über 1.000 € mit den folgenden "
+"Zahlungsbedingungen ausgestellt: *30 % sind am Tag der Ausstellung der "
+"Rechnung fällig, die restlichen 70 % am Ende des folgenden Monats."
 
 #: ../../content/applications/finance/accounting/customer_invoices/payment_terms.rst:130
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:224
@@ -6735,6 +7027,9 @@ msgid ""
 " requires prepaid stamps (=credits) to work. Sending one document consumes "
 "one stamp."
 msgstr ""
+"Postversand ist ein :doc:`/applications/essentials/in_app_purchase`-Dienst, "
+"der im Voraus bezahlte Briefmarken (=Guthaben) erfordert, damit er "
+"funktioniert. Der Versand eines Dokuments verbraucht eine Briefmarke."
 
 #: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:50
 msgid ""
@@ -7282,10 +7577,12 @@ msgid ""
 "`Odoo Tutorials: Accounting and Invoicing - Getting started [video] "
 "<https://www.odoo.com/slides/slide/getting-started-1692>`_"
 msgstr ""
+"`Odoo Tutorials: Buchhaltung und Rechnungsstellung - Loslegen [Video] "
+"<https://www.odoo.com/slides/slide/getting-started-1692>`_"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:3
 msgid "Average price on returned goods"
-msgstr ""
+msgstr "Durchschnittspreis für retournierte Waren"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:8
 msgid ""
@@ -7294,22 +7591,29 @@ msgid ""
 "period, divided by the total number of items on-hand. Inventory valuation is"
 " used to:"
 msgstr ""
+"Die *Durchschnittskostenbewertung* (AVCO) ist eine Methode zur "
+"Bestandsbewertung, bei der die Kosten auf der Grundlage der Gesamtkosten der"
+" in einer Periode gekauften oder produzierten Waren, geteilt durch die "
+"Gesamtzahl der vorhandenen Artikel, bewertet werden. Die Bestandsbewertung "
+"wird verwendet, um:"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:12
 msgid "reflect the value of a company's assets;"
-msgstr ""
+msgstr "den Wert der Vermögenswerte eines Unternehmens widerzuspiegeln;"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:13
 msgid "keep track of the amount of unsold goods;"
-msgstr ""
+msgstr "den Überblick über die Menge der unverkauften Waren zu behalten;"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:14
 msgid "account for monetary value in goods that have yet to generate profit;"
 msgstr ""
+"den Geldwert von Gütern, die noch keinen Gewinn erwirtschaften zu "
+"berücksichtigen;"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:15
 msgid "report on flow of goods throughout the quarter."
-msgstr ""
+msgstr "über die Warenströme während des Quartals zu berichten."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:17
 msgid ""
@@ -7318,6 +7622,10 @@ msgid ""
 "quantities. In Odoo, this costing analysis is *automatically updated* each "
 "time products are received."
 msgstr ""
+"Da die Durchschnittskosten den gewichteten Durchschnitt verwendet, um die "
+"Kosten zu bewerten, eignet es sich gut für Unternehmen, die nur wenige "
+"verschiedene Produkte in großen Mengen verkaufen. In Odoo wird diese "
+"Kostenanalyse jedes Mal, wenn Produkte eingehen, *automatisch aktualisiert*."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:21
 msgid ""
@@ -7327,6 +7635,11 @@ msgid ""
 "because :ref:`this can potentially create inconsistencies with inventory "
 "valuation <inventory/avg_price/leaving_inventory>`."
 msgstr ""
+"Wenn also Sendungen an ihren Lieferanten zurückgehen, erzeugt Odoo "
+"automatisch Buchungseinträge, die die Änderung der Bestandsbewertung "
+"widerspiegeln. Odoo aktualisiert jedoch nicht automatisch die Berechnung der"
+" Durchschnittskosten, da dies möglicherweise zu Inkonsistenzen mit der "
+"Bestandsbewertung <inventory/avg_price/leaving_inventory>` führen kann."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:27
 msgid ""
@@ -7334,17 +7647,25 @@ msgid ""
 "Navigate :ref:`here <inventory/management/inventory_valuation_config>` for "
 "instructions on how to set up and use |AVCO| in Odoo."
 msgstr ""
+"Dieses Dokument befasst sich mit einem speziellen Anwendungsfall für "
+"theoretische Zwecke. Navigieren Sie :ref:`hierhin "
+"<inventory/management/inventory_valuation_config>` für Anleitungen zum "
+"Einrichten und Verwenden von Durchschnittskosten in Odoo."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:32
 msgid ""
 ":ref:`Using inventory valuation <inventory/reporting/using_inventory_val>`"
 msgstr ""
+":ref:`Bestandsbewertung einrichten "
+"<inventory/reporting/using_inventory_val>`"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:33
 msgid ""
 ":ref:`Other inventory valuation methods "
 "<inventory/inventory_valuation_config/costing_methods>`"
 msgstr ""
+":ref:`Andere Methoden der Bestandsbewertung "
+"<inventory/inventory_valuation_config/costing_methods>`"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:38
 msgid ""

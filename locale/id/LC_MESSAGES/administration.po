@@ -1012,12 +1012,16 @@ msgid ""
 "Each build is isolated within its own container (Linux namespaced "
 "container)."
 msgstr ""
+"Setiap build di-isolasi di dalam kontainer-nya sendiri (kontainer namespace "
+"Linux)"
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:11
 msgid ""
 "The base is an Ubuntu system, where all of Odoo's required dependencies, as "
 "well as common useful packages, are installed."
 msgstr ""
+"Basisnya adalah sistem Ubuntu, di mana semua ketergantungan Odoo yang "
+"diperlukan, sekaligus semua paket umum yang berguna, diinstal."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:14
 msgid ""
@@ -1030,6 +1034,15 @@ msgid ""
 "file. To have a concrete example, check out the `requirements.txt file of "
 "Odoo <https://github.com/odoo/odoo/blob/17.0/requirements.txt>`_."
 msgstr ""
+"Bila project Anda membutuhkan ketergantungan Python tambahan, atau edisi "
+"rilis yang lebih terkini, Anda dapat mendefinisikan file "
+":file:`requirements.txt` di root dari branch Anda yang list mereka. Platform"
+" akan menginstal ketergantungan ini di kontainer Anda. Dokumentasi pip "
+"requirement specifiers "
+"<https://pip.pypa.io/en/stable/reference/pip_install/#requirement-"
+"specifiers>`_ dapat membantu Anda menulis file :file:`requirements.txt`. "
+"Untuk contoh yang lebih konkrit, periksa file `requirements.txt di Odoo "
+"<https://github.com/odoo/odoo/blob/17.0/requirements.txt>`_."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:22
 msgid ""
@@ -1038,10 +1051,14 @@ msgid ""
 "containing Odoo modules: Not in the module folder itself, but in their "
 "parent folder."
 msgstr ""
+"File-file :file:`requirements.txt` dari submodul juga dipertimbangkan. "
+"Platform mencari file :file:`requirements.txt` di setiap folder yang "
+"memiliki modul Odoo: Tidak di folder modul tersebut sendiri, tapi di folder "
+"induknya."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:27
 msgid "Directory structure"
-msgstr ""
+msgstr "Struktur direktori"
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:29
 msgid ""
@@ -1050,36 +1067,46 @@ msgid ""
 "<https://help.ubuntu.com/community/LinuxFilesystemTreeOverview#Main_directories>`_"
 " explains the main directories."
 msgstr ""
+"Karena kontainer berdasarkan Ubuntu, struktur direktori mereka mengikuti "
+"linux Filesystem Hierarchy Standard. `Ubuntu's filesystem tree overview "
+"<https://help.ubuntu.com/community/LinuxFilesystemTreeOverview#Main_directories>`_"
+" menjelaskan direktori-direktori utama."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:33
 msgid "Here are the Odoo.sh pertinent directories:"
-msgstr ""
+msgstr "Berikut adalah Odoo.sh perttinent directories:"
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:73
 msgid "Both Python 2.7 and 3.5 are installed in the containers. However:"
-msgstr ""
+msgstr "Masing-masing Python 2.7 dan 3.5 diinstal di kontainer. Namun"
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:75
 msgid ""
 "If your project is configured to use Odoo 10.0, the Odoo server runs with "
 "Python 2.7."
 msgstr ""
+"Bila project Anda dikonfigurasi untuk menggunakan Odoo 10.0, Odoo server "
+"berjalan dengan Python 2.7"
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:76
 msgid ""
 "If your project is configured to use Odoo 11.0 or above, the Odoo server "
 "runs with Python 3.5."
 msgstr ""
+"Bila project Anda dikonfigurasi untuk menggunakan Odoo 11.0, server Odoo "
+"berjalan dengan Python 3.5."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:79
 msgid "Database shell"
-msgstr ""
+msgstr "Database shell"
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:81
 msgid ""
 "While accessing a container with the shell, you can access the database "
 "using *psql*."
 msgstr ""
+"Selagi mengakses kontainer dengan shell, Anda dapat mengakses database "
+"menggunakan *psql*."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:92
 msgid ""
@@ -1088,23 +1115,35 @@ msgid ""
 "(*BEGIN...COMMIT/ROLLBACK*) for every *sql* statements leading to changes "
 "(*UPDATE*, *DELETE*, *ALTER*, ...), especially for your production database."
 msgstr ""
+"**Hati-hati !** `Gunakan transaksi "
+"<https://www.postgresql.org/docs/current/static/sql-begin.html>`_ "
+"(*BEGIN...COMMIT/ROLLBACK*) untuk setiap *sql* statement yang berujung ke "
+"perubahan (*UPDATE*, *DELETE*, *ALTER*, ...), terutama untuk production "
+"database Anda."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:97
 msgid ""
 "The transaction mechanism is your safety net in case of mistake. You simply "
 "have to rollback your changes to revert your database to its previous state."
 msgstr ""
+"Mekanisme transaksi adalah jaringan pengaman apabila terjadi kesalahan. Anda"
+" cukup rollback perubahan Anda untuk mengembalikkan database Anda menjadi "
+"status sebelumnya."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:100
 msgid ""
 "For example, it may happen that you forget to set your *WHERE* condition."
 msgstr ""
+"Contohnya, bisa terjadi kasus di mana Anda lupa menetapkan kondisi *WHERE* "
+"Anda."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:111
 msgid ""
 "In such a case, you can rollback to revert the unwanted changes that you "
 "just mistakenly did, and rewrite the statement:"
 msgstr ""
+"Bila terjadi hal serupa, Anda dapat rollback untuk mengembalikan perubahan "
+"yang tidak Anda inginkan tersebut, dan menuliskan ulang statement:"
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:122
 msgid ""
@@ -1113,16 +1152,23 @@ msgid ""
 "running database may wait for them to be released. It can cause a server to "
 "hang indefinitely."
 msgstr ""
+"Namun, jangan lupa untuk commit atau rollback transaksi Anda setelah "
+"melakukannya. Transaksi terbuka mungkin mengunci record di tabel-tabel Anda "
+"database Anda yang berjalan mungkin menunggu sampai mereka dirilis. Ini "
+"dapat mengakibatkan server untuk hang tanpa akhir."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:126
 msgid ""
 "In addition, when possible, use your staging databases to test your "
 "statements first. It gives you an extra safety net."
 msgstr ""
+"Sebagai tambahan, bila mungkin, gunakan database staging Anda untuk menguji "
+"statement Anda terlebih dahulu. Ini akan memberikan Anda jaring pengaman "
+"tambahan."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:129
 msgid "Run an Odoo server"
-msgstr ""
+msgstr "Jalankan server Odoo"
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:131
 msgid ""
@@ -1130,48 +1176,58 @@ msgid ""
 "able to access it from the outside world with a browser, but you can for "
 "instance:"
 msgstr ""
+"Anda dapat memulai instance server Odoo dari kontainer shell. Anda tidak "
+"akan dapat mengaksesnya dari dunia luar dengan browser, tapi Anda dapat "
+"mengakses untuk instance:"
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:134
 msgid "use the Odoo shell,"
-msgstr ""
+msgstr "gunakan Odoo shell,"
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:146
 msgid "install a module,"
-msgstr ""
+msgstr "instal modul,"
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:152
 msgid "update a module,"
-msgstr ""
+msgstr "update modul,"
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:158
 msgid "run the tests for a module,"
-msgstr ""
+msgstr "jalankan tes untuk modul,"
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:164
 msgid "In the above commands, the argument:"
-msgstr ""
+msgstr "Di command-command di atas, argument-nya:"
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:166
 msgid "``--without-demo=all`` prevents demo data to be loaded for all modules"
 msgstr ""
+"``--without-demo=all`` mencegah  data demo untuk dimuat untuk semua modul"
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:167
 msgid ""
 "``--stop-after-init`` will immediately shutdown the server instance after it"
 " completed the operations you asked."
 msgstr ""
+"``--stop-after-init`` akan langsung mematikan instance server setelah "
+"menyelesaikan operasi yang Anda minta."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:169
 msgid ""
 "More options are available and detailed in the :doc:`CLI documentation "
 "</developer/reference/cli>`."
 msgstr ""
+"Lebih banyak opsi tersedia dengan rinci di :doc:`dokumentasi CLI "
+"</developer/reference/cli>`."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:172
 msgid ""
 "You can find in the logs (*~/logs/odoo.log*) the addons path used by Odoo.sh"
 " to run your server. Look for \"*odoo: addons paths*\":"
 msgstr ""
+"Di log (*~/logs/odoo.log*) Anda dapat menemukan addon path yang digunakan "
+"oleh Odoo.sh untuk menjalankan server Anda. Cari \"*odoo: addons paths*\":"
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:181
 msgid ""
@@ -1180,10 +1236,13 @@ msgid ""
 " be effective in the database. Always, make your tests in your staging "
 "databases."
 msgstr ""
+"**Be careful**, terutama dengan production database Anda. Operasi ang Anda "
+"lakukan di instance server Odoo ini tidak diisolasi: Perubahan apapun akan "
+"dilakukan di database. Selalu lakukan testing di database staging Anda."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:186
 msgid "Debugging in Odoo.sh"
-msgstr ""
+msgstr "Debugging di Odoo.sh"
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:188
 msgid ""
@@ -1191,12 +1250,17 @@ msgid ""
 "This article only explains the specificities and limitations of the Odoo.sh "
 "platform, and assumes that you already know how to use a debugger."
 msgstr ""
+"Debugging build Odoo.sh tidak terlalu berbeda dari app Python apapun. "
+"Artikel ini hanya menjelaskan spesifikasi dan limitasi dari platform "
+"Odoo.sh, dan mengasumsikan Anda sudah mengetahui cara menggunakan debugger. "
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:190
 msgid ""
 "If you don't know how to debug a Python application yet, there are multiple "
 "introductory courses that can be easily found on the Internet."
 msgstr ""
+"Bila Anda belum tahu cara untuk debug aplikasi Python, terdapat beberapa "
+"kursus pengantar yang dapat gampang ditemukan di internet."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:192
 msgid ""
@@ -1204,26 +1268,35 @@ msgid ""
 "the server is run outside a shell, you cannot launch the debugger directly "
 "from your Odoo instance backend as the debugger needs a shell to operate."
 msgstr ""
+"Anda dapat menggunakan ``pdb``, ``pudb`` atau ``ipdb`` untuk debug kode Anda"
+" di Odoo.sh. Karena server dijalankan di luar shell, Anda tidak dapat "
+"menjalankan debugger langsung dari instance backend Odoo Anda karena "
+"debugger membutuhkan shell untuk beroperasi."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:195
 msgid ""
 "`pdb <https://docs.python.org/3/library/pdb.html>`_ is installed by default "
 "in every container."
 msgstr ""
+"`pdb <https://docs.python.org/3/library/pdb.html>`_ secara default diinstal "
+"di setiap kontainer."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:197
 msgid ""
 "If you want to use `pudb <https://pypi.org/project/pudb/>`_ or `ipdb "
 "<https://pypi.org/project/ipdb/>`_ you have to install it before."
 msgstr ""
+"Bila Anda ingin menggunakan `pudb <https://pypi.org/project/pudb/>`_ atau "
+"`ipdb <https://pypi.org/project/ipdb/>`_ Anda harus menginstalnya "
+"sebelumnya."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:199
 msgid "To do so, you have two options:"
-msgstr ""
+msgstr "Untuk melakukan itu, Anda memiliki dua opsi:"
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:201
 msgid "temporary (only in the current build):"
-msgstr ""
+msgstr "sementara (hanya di build saat ini):"
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:207
 msgid "or"
@@ -1234,45 +1307,54 @@ msgid ""
 "permanent: add ``pudb`` or ``ipdb`` to your project ``requirements.txt`` "
 "file."
 msgstr ""
+"permanen: tambahkan ``pudb`` atau ``ipdb`` ke file project "
+"``requirements.txt`` Anda."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:216
 msgid ""
 "Then edit the code where you want to trigger the debugger and add this:"
-msgstr ""
+msgstr "Lalu edit code di mana Anda ingin memicu debugger dan tambahkan ini:"
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:224
 msgid ""
 "The condition :code:`sys.__stdin__.isatty()` is a hack that detects if you "
 "run Odoo from a shell."
 msgstr ""
+"Condition :code:`sys.__stdin__.isatty()` adalah hack yang mendeteksi bila "
+"Anda menjalankan Odoo dari shell."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:226
 msgid "Save the file and then run the Odoo Shell:"
-msgstr ""
+msgstr "Simpan file dan lalu jalankan Odoo Shell:"
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:232
 msgid ""
 "Finally, *via* the Odoo Shell, you can trigger the piece of "
 "code/function/method you want to debug."
 msgstr ""
+"Akhirnya, *melalui* Odoo Shell, Anda dapat memicu potongan "
+"code/fungsi/metode yang Anda ingin debug."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst-1
 msgid "Console screenshot showing ``pdb`` running in an Odoo.sh shell."
-msgstr ""
+msgstr "Console screenshot menunjukkan ``pdb`` berjalan di Odoo.sh shell."
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:6
 msgid "Frequent Technical Questions"
-msgstr ""
+msgstr "Pertanyaan Teknis Umum"
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:9
 msgid "\"Scheduled actions do not run at the exact time they were expected\""
 msgstr ""
+"\"Action yang dijadwalkan tidak berjalan tepat pada waktu yang diharapkan\""
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:11
 msgid ""
 "On the Odoo.sh platform, we cannot guarantee an exact running time for "
 "scheduled actions."
 msgstr ""
+"Pada platform Odoo.sh, kami tidak dapat menjamin waktu pelaksanaan yang "
+"tepat untuk action yang dijadwalkan."
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:13
 msgid ""
@@ -1281,15 +1363,22 @@ msgid ""
 " Scheduled actions are therefore implemented slightly differently than on a "
 "regular Odoo server, and are run on a *best effort* policy."
 msgstr ""
+"Ini oleh karena fakta mungkin terdapat lebih dari satu pelanggan pada server"
+" yang sama, dan kami harus menjamin kegunaan server yang adil untuk setiap "
+"pelanggan. Action yang dijadwalkan oleh karena itu diimplementasikan sedikit"
+" lebih berbeda dari server Odoo reguler, dan dijalankan dengan kebijakan "
+"*usaha terbaik*"
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:16
 msgid ""
 "Do not expect any scheduled action to be run more often than every 5 min."
 msgstr ""
+"Jangan mengharapkan action yang dijadwalkan untuk dilaksanakan lebih sering "
+"dari setiap 5 menit."
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:19
 msgid "Are there \"best practices\" regarding scheduled actions?"
-msgstr ""
+msgstr "Apakah ada \"praktek terbaik\" mengenai action yang dijadwalkan?"
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:21
 msgid ""
@@ -1297,14 +1386,18 @@ msgid ""
 "crons).** Therefore, you must keep this fact in mind when developing your "
 "own crons."
 msgstr ""
+"**Odoo.sh selalu membatasi waktu pelaksanaan action yang dijadwalkan (*aka* "
+"crons).** Oleh karena itu, Anda harus mengingat fakta ini saat membuat cron "
+"Anda sendiri."
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:24
 msgid "We advise that:"
-msgstr ""
+msgstr "Kami menyarankan Anda:"
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:26
 msgid "Your scheduled actions should work on small batches of records."
 msgstr ""
+"Action Anda yang dijadwalkan harusnya bekerja pada batch record yang kecil."
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:27
 msgid ""
@@ -1312,6 +1405,9 @@ msgid ""
 " this way, if they get interrupted by the time-limit, there is no need to "
 "start over."
 msgstr ""
+"Action Anda yang dijadwalkan harus commit progress mereka setelah memproses "
+"setiap batch; dengan begini, bila mereka dihentikan oleh batasan waktu, "
+"mereka tidak harus memulai dari nol."
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:29
 msgid ""
@@ -1319,11 +1415,15 @@ msgid ""
 "<https://stackoverflow.com/a/1077421/3332416>`_: they must not cause side-"
 "effects if they are started more often than expected."
 msgstr ""
+"Jadwal Anda yang dijadwalkan harus `idempotent "
+"<https://stackoverflow.com/a/1077421/3332416>`_: mereka tidak boleh "
+"menghasilkan efek sampingan bila mereka dilaksanakan lebih sering dari yang "
+"diharapkan."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:6
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:170
 msgid "Submodules"
-msgstr ""
+msgstr "Submodul"
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:11
 msgid ""
@@ -1331,6 +1431,9 @@ msgid ""
 "allows you to integrate other Git projects into your code, without the need "
 "to copy-paste all their code."
 msgstr ""
+"`Submodul Git <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ "
+"mengizinkan Anda untuk mengintegrasikan project Git lainnya ke code Anda, "
+"tanpa harus menyalin-menempel semua code mereka."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:14
 msgid ""
@@ -1341,6 +1444,13 @@ msgid ""
 "servers easier, as you can clone the repositories added as submodules at the"
 " same time you clone your own repository."
 msgstr ""
+"Betul, modul kustom Anda dapat bergantung pada modul-modul dari repository "
+"lainnya. Mengenai Odoo, fitur ini mengizinkan Anda untuk menambahkan modul "
+"dari repository Git lainnya ke branch repository Anda. Menambahkan "
+"ketergantungan ini ke branch Anda melalui submodul membuat deployment code "
+"dan server Anda lebih mudah, karena Anda dapat meng-clone repository yang "
+"ditambahkan sebagai submodul pada saat yang sama Anda meng-clone repository "
+"Anda sendiri."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:19
 msgid ""
@@ -1349,6 +1459,10 @@ msgid ""
 "whether you want to pin the submodule to a specific revision and when you "
 "want to update to a newer revision."
 msgstr ""
+"Selain itu, Anda dapat memilih branch repository yang ditambahkan sebagai "
+"submodul dan Anda memiliki kontrol dari revisi yang Anda inginkan. Terserah "
+"Anda untuk menentukan apakah Anda ingin pin submodul ke revisi tertentu dan "
+"kapan Anda ingin mengupdate ke revisi lebih baru."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:24
 msgid ""
@@ -1357,6 +1471,11 @@ msgid ""
 "added modules through submodules in your branches and add them to your "
 "addons path automatically so you can install them in your databases."
 msgstr ""
+"Di Odoo.sh, submodul memberikan Anda kemungkinan untuk menggunakan dan "
+"bergantung pada modul yang tersedia di repository lainnya. Platform akan "
+"mendeteksi bahwa Anda menambahkan modul melalui submodul di branch Anda dan "
+"menambahkan mereka ke addon path Anda secara otomatis supaya Anda dapat "
+"menginstal mereka di database Anda."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:28
 msgid ""
@@ -1366,14 +1485,19 @@ msgid ""
 "The procedure is detailed in the chapter :ref:`Settings > Submodules "
 "<odoosh-gettingstarted-settings-submodules>`."
 msgstr ""
+"Bila Anda menambahkan repository pribadi sebagai submodul di branch Anda, "
+"Anda harus mengonfigurasikan deploy key di pengaturan project Odoo.sh Anda "
+"dan di pengaturan repository Anda. Bila tidak Odoo.sh tidak akan diizinkan "
+"untuk mengunduh mereka. Prosedur ini dirincikan di bab :ref:`Pengaturan > "
+"Submodul <odoosh-gettingstarted-settings-submodules>`."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:34
 msgid "Adding a submodule"
-msgstr ""
+msgstr "Menambahkan submodul"
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:37
 msgid "With Odoo.sh (simple)"
-msgstr ""
+msgstr "Dengan Odoo.sh (sederhana)"
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:40
 msgid ""
@@ -1381,55 +1505,66 @@ msgid ""
 " You can nevertheless do so :ref:`with Git <odoosh-advanced-submodules-"
 "withgit>`."
 msgstr ""
+"Untuk sekarang tidak memungkinkan untuk menambahkan repository **pribadi** "
+"dengan metode ini. Namun Anda dapat melakukannya dengan Git <odoosh-"
+"advanced-submodules-withgit>`."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:43
 msgid ""
 "On Odoo.sh, in the branches view of your project, choose the branch in which"
 " you want to add a submodule."
 msgstr ""
+"Di Odoo.sh, di tampilan branch project Anda, pilih branch di mana Anda ingin"
+" menambahkan submodul."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:45
 msgid ""
 "In the upper right corner, click on the *Submodule* button, and then on "
 "*Run*."
 msgstr ""
+"Di pojok atas kanan, klik pada tombol *Submodul*, dan lalu pada *Run*."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:50
 msgid "A dialog with a form is shown. Fill the inputs as follows:"
-msgstr ""
+msgstr "Dialog dengan formulir ditunjukkan. Isi input sebagai berikut:"
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:52
 msgid "Repository URL: The SSH URL of the repository."
-msgstr ""
+msgstr "URL Repository: URL SSH dari repository."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:53
 msgid "Branch: The branch you want to use."
-msgstr ""
+msgstr "Branch: Branch yang Anda ingin gunakan."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:54
 msgid ""
 "Path: The folder in which you want to add this submodule in your branch."
 msgstr ""
+"Path: Folder di mana Anda ingin menambahkan submodul ini ke branch Anda."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:59
 msgid ""
 "On Github, you can get the repository URL with the *Clone or download* "
 "button of the repository. Make sure to *use SSH*."
 msgstr ""
+"Di Github, Anda bisa mendapatkan URL repository dengan tombol *Clone atau "
+"unduh* repository. Pastikan untuk *menggunakan SSH*."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:67
 msgid "With Git (advanced)"
-msgstr ""
+msgstr "Dengan Git (advanced)"
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:69
 msgid ""
 "In a terminal, in the folder where your Git repository is cloned, checkout "
 "the branch in which you want to add a submodule:"
 msgstr ""
+"Di terminal, di folder di mana repository Git Anda di-clone, checkout branch"
+" di mana Anda ingin menambahkan submodul:"
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:76
 msgid "Then, add the submodule using the command below:"
-msgstr ""
+msgstr "Lalu, tambahkan submodul menggunakan command di bawah:"
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:82
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:94
@@ -1443,30 +1578,38 @@ msgid ""
 "*<git@yourprovider.com>:<username/repository.git>* by the SSH URL of the "
 "repository you want to add as submodule,"
 msgstr ""
+"*<git@yourprovider.com>:<username/repository.git>* dengan URL SSH repository"
+" yang Anda ingin tambahkan sebagai submodul,"
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:85
 msgid "*<branch>* by the branch you want to use in the above repository,"
 msgstr ""
+"*<branch>* dengan branch yang Anda ingin gunakan di repository di atas,"
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:86
 msgid "*<path>* by the folder in which you want to add this submodule."
-msgstr ""
+msgstr "*<path>* dengan folder di mana Anda ingin menambahkan submodul ini."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:88
 msgid "Commit and push your changes:"
-msgstr ""
+msgstr "Commit dan dorong perubahan Anda:"
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:96
 msgid ""
 "<remote> by the repository on which you want to push your changes. For a "
 "standard Git setup, this is *origin*."
 msgstr ""
+"<remote> dengan repository pada mana Anda ingin mendorong perubahan Anda. "
+"Untuk setup Git standar, ini adalah *origin*."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:97
 msgid ""
 "<branch> by the branch on which you want to push your changes. Most likely "
 "the branch you used :code:`git checkout` on in the first step."
 msgstr ""
+"<branch> dengan branch pada mana Anda ingin mendorong perubahan Anda. "
+"Kemungkinan besar adalah branch di mana Anda melakukan :code:`git checkout` "
+"di langkah pertama."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:100
 msgid ""
@@ -1477,10 +1620,16 @@ msgid ""
 "changes <https://git-scm.com/book/en/v2/Git-Tools-"
 "Submodules#_pulling_in_upstream_changes_from_the_submodule_remote>`_."
 msgstr ""
+"Anda dapat membaca `git-scm.com documentation <https://git-"
+"scm.com/book/en/v2/Git-Tools-Submodules>`_ untuk lebih banyak detail "
+"mengenai submodul Git. Contohnya, bila Anda ingin mengupdate submodul Anda "
+"ke revisi terkini, Anda dapat mengikuti bab `Pulling in Upstream changes "
+"<https://git-scm.com/book/en/v2/Git-Tools-"
+"Submodules#_pulling_in_upstream_changes_from_the_submodule_remote>`_."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:107
 msgid "Ignore modules"
-msgstr ""
+msgstr "Mengabaikan modul"
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:109
 msgid ""
@@ -1490,6 +1639,12 @@ msgid ""
 ":code:`.`. The platform will ignore this folder and you can hand pick your "
 "modules by creating symlinks to them from another folder."
 msgstr ""
+"Bila Anda menambahkan repository yang memiliki banyak modul, Anda mungkin "
+"ingin mengabaikan beberapa dari mereka bila ada yang diinstal secara "
+"otomatis. Untuk melakukan hal ini, Anda dapat memberikan awalan ke folder "
+"submodul dengan :code:`.`. Platform akan mengabaikan folder ini dan Anda "
+"dapat memilih secara manual modul-modul Anda dengan membuat symlinks ke "
+"mereka dari folder lain."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:5
 msgid "Get started"
@@ -1497,13 +1652,15 @@ msgstr "Mulai"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:3
 msgid "Branches"
-msgstr "Cabang"
+msgstr "Branches"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:8
 msgid ""
 "The branches view gives you an overview of the different branches your "
 "repository has."
 msgstr ""
+"Tampilan branch memberikan Anda gambaran umum branch-branch yang berbeda "
+"yang repository Anda miliki."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:16
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:41
@@ -1515,29 +1672,37 @@ msgid ""
 "Odoo.sh offers three different stages for your branches: production, staging"
 " and development."
 msgstr ""
+"Odoo.sh menawarkan tiga tahap berbeda untuk branch Anda: production, staging"
+" dan development."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:20
 msgid ""
 "You can change the stage of a branch by drag and dropping it into the stage "
 "section title."
 msgstr ""
+"Anda dapat mengubah tahap branch dengan menarik dan melepasnya ke bagian "
+"judul tahap."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:28
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:44
 msgid "Production"
-msgstr "Produksi"
+msgstr "Production"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:30
 msgid ""
 "This is the branch holding the code on which your production database runs. "
 "There can be only one production branch."
 msgstr ""
+"Ini adalah branch yang memiliki code pada mana production database Anda "
+"berjalan. Hanya boleh ada satu production branch."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:33
 msgid ""
 "When you push a new commit in this branch, your production server is updated"
 " with the code of the new revision and is then restarted."
 msgstr ""
+"Saat Anda mendorong commit baru di branch ini, server production Anda "
+"diupdate dengan code revisi baru dan akan di-restart."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:36
 msgid ""
@@ -1547,6 +1712,11 @@ msgid ""
 "then take care to perform the update during which the instance will be held "
 "temporarily unavailable for maintenance reason."
 msgstr ""
+"Bila perubahan Anda memerlukan update modul, seperti perubahan di tampilan "
+"formulir, dan Anda ingin itu dilakukan secara otomatis, tingkatkan nomor "
+"versi modul di manifest-nya (*__manifest__.py*). Platform lalu akan "
+"melakukan update pada mana instance untuk sementara tidak dapat digunakan "
+"untuk alasan maintenance."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:43
 msgid ""
@@ -1554,6 +1724,9 @@ msgid ""
 "Apps menu, or through the :code:`-u` switch of :doc:`the command line "
 "</developer/reference/cli>`."
 msgstr ""
+"Metode ini sama dengan melakukan upgrade modul melalui menu App, atau "
+"melalui :code:`-u` switch dari :doc:`command line "
+"</developer/reference/cli>`."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:47
 msgid ""
@@ -1563,6 +1736,11 @@ msgid ""
 "before the update. You still have access to the log of the failed update, so"
 " you can troubleshoot it."
 msgstr ""
+"Pada kasus di mana perubahan di commit mencegah server untuk restart, atau "
+"bila update modul gagal, server akan secara otomatis diputarbalik ke revisi "
+"kode sebelumnya yang sukses dan database juga akan di-rollback seperti "
+"sebelum update. Anda masih akan memiliki akses ke log update yang gagal, "
+"supaya Anda dapat troubleshoot."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:53
 msgid ""
@@ -1570,6 +1748,9 @@ msgid ""
 "database. The unit tests are not performed, as it would increase the "
 "unavailability time of the production database during the updates."
 msgstr ""
+"Data demo tidak dimuat, karena tidak dimaksudkan untuk digunakan di "
+"production database. Test unit tidak dilakukan, karena akan meningkatkan "
+"waktu di mana database production tidak tersedia selama update."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:57
 msgid ""
@@ -1577,11 +1758,14 @@ msgid ""
 " with all the staging branches, will automatically be set back to the "
 "development stage after 30 days."
 msgstr ""
+"Partner yang menggunakan project trial harus mengingat bahwa branch "
+"production mereka, bersama dengan semua branch staging, akan secara otomatis"
+" ditetapkan kembali ke stage development setelah 30 hari. "
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:61
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:63
 msgid "Staging"
-msgstr ""
+msgstr "Staging"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:63
 msgid ""
@@ -1590,10 +1774,13 @@ msgid ""
 "They will create databases that are neutralized duplicates of the production"
 " database."
 msgstr ""
+"Branch staging dimaksudkan untuk menguji fitur-fitur baru Anda menggunakan "
+"data production tanpa membahayakan database production aktual dengan record "
+"ujian. Mereka akan membuat database duplikat production yang dinetralisir."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:67
 msgid "The neutralization includes:"
-msgstr ""
+msgstr "Netralisir ini termasuk:"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:69
 msgid ""
@@ -1602,6 +1789,10 @@ msgid ""
 "them less often if no one is using the database in order to save up "
 "resources."
 msgstr ""
+"Menonaktifkan action yang dijadwalkan. Bila Anda ingin menguji mereka, Anda "
+"dapat memicu action mereka secara manual atau mengaktifkan ulang mereka. "
+"Mohon ingat bahwa platform akan memicu mereka lebih jarang bila tidak ada "
+"orang yang menggunakan database untuk menghemat sumber daya."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:72
 msgid ""
@@ -1610,14 +1801,18 @@ msgid ""
 "emails sent by your database is provided. That way, you do not have to worry"
 " about sending test emails to your contacts."
 msgstr ""
+"Menonatkfikan email keluar dengan mencegat mereka menggunakan mailcatcher. "
+":ref:`Antarmuka untuk melihat <odoosh-gettingstarted-branches-tabs-mails>` "
+"email yang dikirim oleh database Anda akan disediakan. Dengan begini, Anda "
+"tidak harus khawatir tentang mengirimkan email testing ke kontak Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:75
 msgid "Setting payment providers and shipping providers in test mode."
-msgstr ""
+msgstr "Pengaturan penyedia pembayaran dan penyedia pengiriman di mode test."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:76
 msgid "Disabling IAP services"
-msgstr ""
+msgstr "Menonaktifkan layanan IAP"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:78
 msgid ""
@@ -1628,6 +1823,14 @@ msgid ""
 "document them or write them directly in the modules of the branch, using XML"
 " data files overriding the default configuration or views."
 msgstr ""
+"Database terkini akan dipastikan tetap hidup selama-lamanya, database yang "
+"lama dari branch yang sama mungkin akan mengumpulkan sampah untuk membuat "
+"ruang untuk database yang baru. Ini akan valid selama 3 bulan, setelahnya "
+"Anda akan diharapkan untuk membangun ulang branch tersebut. Bila Anda "
+"membuat konfigurasi atau melihat perubahan di database-database ini, "
+"pastikan untuk mendokumentasikan mereka atau tuliskan langsung di modul "
+"branch, menggunakan file data XML yang menimpa konfigurasi atau tampilan "
+"default. "
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:83
 msgid ""
@@ -1636,6 +1839,10 @@ msgid ""
 " Odoo supports to run the unit tests without the demo data, Odoo.sh will "
 "then consider running the tests on staging databases."
 msgstr ""
+"Unit test tidak dilakukan karena, di Odoo, mereka saat ini bergantung pada "
+"data demo, yang tidak dimuat di production database. Di masa depan, bila "
+"Odoo mendukung untuk menjalankan unit test tanpa data demo, Odoo.sh lalu "
+"akan mempertimbangkan menjalankan test pada database staging."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:88
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:81
@@ -1650,6 +1857,11 @@ msgid ""
 "You can change this list of modules to install in your :ref:`project "
 "Settings <odoosh-gettingstarted-settings-modules-installation>`."
 msgstr ""
+"Development branch membuat database baru menggunakan data demo untuk "
+"menjalan unit test. Modul-modul yang diinstal adalah yang termasuk di branch"
+" Anda. Anda dapat mengubah daftar modul ini untuk diinstal di "
+":ref:`Pengaturan project <odoosh-gettingstarted-settings-modules-"
+"installation>` Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:94
 msgid ""
@@ -1661,6 +1873,13 @@ msgid ""
 "be run with custom tags in the :ref:`branch's settings <odoosh-"
 "gettingstarted-branches-tabs-settings>`."
 msgstr ""
+"Saat Anda mendorong commit baru di salah satu branch ini, server baru akan "
+"dimulai, dengan database yang dibuat dari awal dan revisi baru branch. Data "
+"demo akan dimuat, dan unit test dilakukan secara default. Ini memverifikasi "
+"perubahan Anda supaya mereka tidak merusak fitur apapun yang diuji oleh "
+"mereka. Bila Anda ingin, Anda dapat menonaktifkan tes atau mengizinkan tes-"
+"tes tertentu untuk dijalankan dengan tag kustom di :ref:`pengaturan branch "
+"<odoosh-gettingstarted-branches-tabs-settings>`."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:101
 msgid ""
@@ -1668,6 +1887,9 @@ msgid ""
 "a mailcatcher and scheduled actions are not triggered as long as the "
 "database is not in use."
 msgstr ""
+"Mirip dengan branch staging, email tidak dikirim tapi dicegat oleh "
+"mailcatcher dan action terjadwal tidak dipicu selama database tidak "
+"digunakan."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:104
 msgid ""
@@ -1675,34 +1897,45 @@ msgid ""
 "three days. After that, they can be automatically garbage collected to make "
 "room for new databases without prior notice."
 msgstr ""
+"Database dibuat untuk branch development dimaksudkan untuk hidup selama tiga"
+" hari. Setelah itu, mereka dapat secara otomatis dibuat menjadi sampah untuk"
+" membuat ruang untuk database baru tanpa pemberitahuan sebelumnya."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:110
 msgid "Merging your branches"
-msgstr ""
+msgstr "Merging branch-branch Anda"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:112
 msgid ""
 "You can merge your branches easily by drag and dropping them into each "
 "other."
 msgstr ""
+"Anda dapat merge branch Anda dengan mudah dengan menarik dan melepas mereka "
+"satu sama lain."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:117
 msgid ""
 "When you want to test the changes of your development branches with the "
 "production data, you can either:"
 msgstr ""
+"Saat Anda ingin menguji perubahan branch development Anda dengan data "
+"production, Anda dapat:"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:120
 msgid ""
 "merge the development branch into your staging branch, by drag and dropping "
 "it onto the desired staging branch,"
 msgstr ""
+"merge branch development ke branch staging Anda, dengan menarik dan melepas "
+"mereka ke branch staging yang diinginkan,"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:121
 msgid ""
 "drag and dropping the development branch on the staging section title, to "
 "make it become a staging branch."
 msgstr ""
+"menarik dan melepas branch development pada bagian judul staging, untuk "
+"membuatnya menjadi branch staging."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:123
 msgid ""
@@ -1710,6 +1943,9 @@ msgid ""
 "your staging branch onto your production branch to merge and deploy in "
 "production your newest features."
 msgstr ""
+"Saat perubahan terakhir Anda siap untuk production, Anda dapat menarik dan "
+"melepas branch staging Anda ke branch production Anda untuk merge dan deploy"
+" di production fitur-fitur terbaru Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:127
 msgid ""
@@ -1717,12 +1953,17 @@ msgid ""
 "production branch as well. It just means you skip the validation of your "
 "changes with the production data through a staging branch."
 msgstr ""
+"Bila Anda sangat yakin, Anda dapat merge branch development Anda ke branch "
+"production. Ini berarti Anda melewati validasi perubahan Anda dengan data "
+"production melalui branch staging."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:131
 msgid ""
 "You can merge your development branches into each other, and your staging "
 "branches into each other."
 msgstr ""
+"Anda dapat merge branch development Anda satu sama lain, dan branch staging "
+"Anda satu sama lain."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:133
 msgid ""
@@ -1730,6 +1971,9 @@ msgid ""
 "to merge your branches. Odoo.sh will be notified when new revisions have "
 "been pushed in your branches."
 msgstr ""
+"Tentu saja, Anda juga dapat menggunakan :code:`git merge` langsung pada "
+"workstation Anda untuk merge branch Anda. Odoo.sh akan dinotifikasi saat "
+"revisi-revisi baru telah didorong di branch Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:136
 msgid ""
@@ -1737,12 +1981,17 @@ msgid ""
 "code: Any configuration changes you made in the staging databases are not "
 "passed to the production database."
 msgstr ""
+"Merging branch staging di branch production hanya menggabungkan source code:"
+" Perubahan konfigurasi apapun yang Anda buat di database staging tidak masuk"
+" ke database production."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:139
 msgid ""
 "If you test configuration changes in staging branches, and want them to be "
 "applied in the production, you have to either:"
 msgstr ""
+"Bila Anda mengetes perubahan konfigurasi di branch staging, dan ingin "
+"menerapkan mereka di production, Anda harus antara:"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:141
 msgid ""
@@ -1754,12 +2003,21 @@ msgid ""
 "will use the Git versioning features for all your configuration changes, and"
 " therefore have a traceability for your changes."
 msgstr ""
+"menulis perubahan konfigurasi di file data XML untuk menimpa konfigurasi "
+"atau tampilan default di branch Anda, dan lalu meningkatkan versi modul Anda"
+" di manifest-nya (*__manifest__.py*) untuk memicu update modul saat Anda "
+"merging branch staging Anda di branch production. Ini adalah praktek terbaik"
+" untuk skalabilitas lebih baik bagi development Anda karena Anda akan "
+"menggunakan fitur versioning Git untuk semua perubahan konfigurasi Anda, dan"
+" oleh karena itu memiliki pelacakan untuk perubahan Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:147
 msgid ""
 "pass them manually from your staging to your production database, by "
 "copy/pasting them."
 msgstr ""
+"menerapkan mereka secara manual dari staging Anda ke database production, "
+"dnegna menyalin/menempel."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:152
 msgid "Tabs"
@@ -1773,17 +2031,19 @@ msgstr "Riwayat"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:157
 msgid "An overview of your branch history:"
-msgstr ""
+msgstr "Gambaran umum riwayat branch Anda:"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:159
 msgid "The messages of the commits and their authors,"
-msgstr ""
+msgstr "Pesan-pesan commit dan author mereka,"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:160
 msgid ""
 "The various events linked to the platform, such as stage changes, database "
 "imports, backup restores."
 msgstr ""
+"Beragam acara yang terhubung ke platform, seperti perubahan tahap, impor "
+"database, pemulihan backup."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:165
 msgid ""
@@ -1793,6 +2053,11 @@ msgid ""
 "successful backup import, ...). When an operation is successful, you can "
 "access the database thanks to the *connect* button."
 msgstr ""
+"Untuk setiap acara, status ditampilkan di pojok kanan atas. Ini dapat "
+"menyediakan informasi mengenai operasi yang berlangsung pada database "
+"(penginstalan, update, impor backup, ...), atau hasilnya (tes feedback, "
+"impor backup sukses, ...). Saat operasi sukses, Anda dapat mengakses "
+"database berkat tombol *connect*."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:173
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:73
@@ -1807,10 +2072,14 @@ msgid ""
 "and staging branches as the emails of your production database are really "
 "sent instead of being intercepted."
 msgstr ""
+"Tab ini memiliki mailcatcher. Ini menampilkan gambaran umum email yang "
+"dikirim oleh database Anda. Mailcatcher ini tersedia untuk development Anda "
+"dan branch staging karena email database production Anda betul-betul dikirim"
+" alih-alih dicegat."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:184
 msgid "Shell"
-msgstr ""
+msgstr "Shell"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:186
 msgid ""
@@ -1818,6 +2087,9 @@ msgid ""
 "(:code:`ls`, :code:`top`) and open a shell on your database by typing "
 ":code:`psql`."
 msgstr ""
+"Akses shell ke kontainer Anda. Anda dapat melakukan command linux dasar  "
+"(:code:`ls`, :code:`top`) dan membuka shell pada database Anda dengan "
+"mengetik :code:`psql`."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:192
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:208
@@ -1825,12 +2097,16 @@ msgid ""
 "You can open multiple tabs and drag-and-drop them to arrange the layout as "
 "you wish, for instance side by side."
 msgstr ""
+"Anda dapat membuka lebih dari satutab dan tarik-dan-lepas mereka untuk "
+"mengatur layout sesuai keinginan Anda, contohnya bersebalahan."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:196
 msgid ""
 "Long running shell instances are not guaranteed. Idle shells can be "
 "disconnected at anytime in order to free up resources."
 msgstr ""
+"Instance shell yang berjalan lama tidak dijamin. Shell yang idle dapat "
+"diputuskan hubungannya kapanpun juga untuk membebaskan sumber daya."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:200
 msgid "Editor"
@@ -1841,15 +2117,18 @@ msgid ""
 "An online integrated development environment (IDE) to edit the source code. "
 "You can also open terminals, Python consoles and even Odoo Shell consoles."
 msgstr ""
+"Integrated development environment (IDE) yang online untuk mengedit source "
+"code. Anda juga dapat membuka terminal, console Python dan bahkan console "
+"Odoo Shell."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:212
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:105
 msgid "Monitoring"
-msgstr ""
+msgstr "Monitoring"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:214
 msgid "This link contains various monitoring metrics of the current build."
-msgstr ""
+msgstr "Link ini memiliki beragam metric untuk memonitor build saat ini."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:219
 msgid ""
@@ -1857,6 +2136,9 @@ msgid ""
 "graph. On the graphs, annotations help you relate to changes on the build "
 "(database import, git push, etc...)."
 msgstr ""
+"Anda dapat zoom, mengubah cakupan waktu atau memilih metric tertentu pada "
+"setiap grafik. Pada grafik, anotasi dapat membantu Anda menghubungkan "
+"perubahan ke build (impor database, git push, dsb...)."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:225
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:65
@@ -1866,35 +2148,39 @@ msgstr "Log"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:227
 msgid "A viewer to have a look to your server logs."
-msgstr ""
+msgstr "Antarmuka untuk melihat log server Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:232
 msgid "Different logs are available:"
-msgstr ""
+msgstr "Log-log yang berbeda tersedia:"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:234
 msgid ""
 "install.log: The logs of the database installation. In a development branch,"
 " the logs of the tests are included."
 msgstr ""
+"install.log: Log penginstalan database. Di branch development, termasuk log "
+"dari test."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:235
 msgid "pip.log: The logs of the Python dependencies installation."
-msgstr ""
+msgstr "pip.log: Log penginstalan ketergantungan Python."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:236
 msgid "odoo.log: The logs of the running server."
-msgstr ""
+msgstr "odoo.log: Log dari menjalankan server."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:237
 msgid "update.log: The logs of the database updates."
-msgstr ""
+msgstr "update.log: Log dari update database."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:238
 msgid ""
 "pg_long_queries.log: The logs of psql queries that take an unusual amount of"
 " time."
 msgstr ""
+"pg_long_queries.log: Log dari psql queries yang membutuhkan waktu lebih "
+"banyak yang tidak normal."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:240
 msgid ""
@@ -1902,6 +2188,9 @@ msgid ""
 " you scroll to the bottom, the browser will scroll automatically each time a"
 " new line is added."
 msgstr ""
+"Bila baris-baris baru ditambahkan di log, mereka akan ditampilkan secara "
+"otomatis. Bila Anda scroll ke paling bawah, browser akan scroll otomatis "
+"setiap kali baris baru ditambahkan."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:243
 msgid ""
@@ -1909,17 +2198,22 @@ msgid ""
 "upper right corner of the view. The fetching is automatically stopped after "
 "5 minutes. You can restart it using the play button."
 msgstr ""
+"Anda dapat pause mengambil log dengan mengeklik pada tombol yang sesuai di "
+"pojok kanan atas tampilan. Pengambilan log secara otomatis dihentikan "
+"setelah 5 menit. Anda dapat restart proses ini menggunakan tombol play."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:249
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:109
 msgid "Backups"
-msgstr ""
+msgstr "Backup"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:251
 msgid ""
 "A list of the backups available for download and restore, the ability to "
 "perform a manual backup and to import a database."
 msgstr ""
+"Daftar backup yang tersedia untuk mengunduh dan memulihkan, kemampuan untuk "
+"melakukan backup manual dan mengimpor database."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:257
 msgid ""
@@ -1927,6 +2221,9 @@ msgid ""
 "weekly and 3 monthly backups. Each backup includes the database dump, the "
 "filestore (attachments, binary fields), logs and sessions."
 msgstr ""
+"Odoo.sh melakukan backup harian di database production. 7 backup harian, 4 "
+"mingguan dan 3 bulanan. Setiap backup termasuk dump database, yaitu "
+"filestore (lampiran, binary field), log dan sesi"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:260
 msgid ""
@@ -1935,6 +2232,10 @@ msgid ""
 "staging branches, for testing purposes, or to manually recover data that has"
 " been deleted by accident from the production database."
 msgstr ""
+"Database staging dan development tidak di-backup. Anda tetap memiliki "
+"kemungkinan untuk memulihkan backup database production di branch staging, "
+"untuk tujuan testing, atau untuk secara manual memulihkan data yang tidak "
+"sengaja terhapus dari database production"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:264
 msgid ""
@@ -1942,6 +2243,9 @@ msgid ""
 " hosted on. This server only keeps one month of backups: 7 daily and 4 "
 "weekly backups."
 msgstr ""
+"Daftar memiliki backup yang disimpan di server di mana database production "
+"Anda di-hosting. Server ini hanya menyimpan satu bulan backup: 7 harian dan "
+"4 mingguan "
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:267
 msgid ""
@@ -1949,6 +2253,9 @@ msgid ""
 "monthly backups. To restore or download one of these monthly backups, please"
 " `contact us <https://www.odoo.com/help>`_."
 msgstr ""
+"Server backup khusus menyimpan backup yang sama, termasuk 3 backup bulanan "
+"tambahan. Untuk memulihkan atau mengunduh salah satu backup bulanan ini, "
+"mohon `hubungi kami <https://www.odoo.com/help>`_."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:270
 msgid ""
