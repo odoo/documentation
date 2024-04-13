@@ -2887,6 +2887,8 @@ msgid ""
 "The :guilabel:`Payment tolerance` is only applicable to lower payments. It "
 "is disregarded when an overpayment is received."
 msgstr ""
+"Die :guilabel:`Zahlungstoleranz` gilt nur für niedrigere Zahlungen. Sie wird"
+" nicht berücksichtigt, wenn du eine Überzahlung erhältst."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:84
 msgid ":doc:`../customer_invoices/cash_discounts`"
@@ -2894,7 +2896,7 @@ msgstr ":doc:`../customer_invoices/cash_discounts`"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:87
 msgid "Line with bank fees"
-msgstr ""
+msgstr "Zeile mit Bankgebühren"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:89
 msgid ""
@@ -2904,6 +2906,12 @@ msgid ""
 " be used for example, to identify the information referring to the "
 ":guilabel:`Bank fees` in the label of the transaction."
 msgstr ""
+"Dieses Modell schlägt eine Gegenbuchung gemäß den im Modell festgelegten "
+"Regeln vor. In diesem Fall ist der :guilabel:`Typ` des Abstimmungsmodells "
+":guilabel:`Regel zum Vorschlagen einer Gegenbuchung` und der "
+":guilabel:`Buchungstext` kann z. B. verwendet werden, um die Informationen "
+"zu identifizieren, die sich auf die :guilabel:`Bankgebühren` im Buchungstext"
+" der Transaktion beziehen."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:98
 msgid ""
@@ -2913,6 +2921,12 @@ msgid ""
 "so it's essential to use it judiciously and with a good understanding of the"
 " patterns you're working with."
 msgstr ""
+"`Reguläre Ausdrücke <https://regexone.com/>`_, oft abgekürzt als **Regex**, "
+"können in Odoo auf verschiedene Weise verwendet werden, um Daten innerhalb "
+"des Systems zu suchen, zu validieren und zu manipulieren. Regex kann sehr "
+"mächtig, aber auch komplex sein. Daher ist es wichtig, dass Sie sie mit "
+"Bedacht und mit einem guten Verständnis der Muster, mit denen Sie arbeiten, "
+"einsetzen."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:103
 msgid ""
@@ -2921,14 +2935,19 @@ msgid ""
 "expression. Odoo automatically retrieves the transactions that match your "
 "Regex expression and the conditions specified in your model."
 msgstr ""
+"Um reguläre Ausdrücke in Ihren Abstimmungsmodellen zu verwenden, setzen Sie "
+"den :guilabel:`Transaktionstyp` auf :guilabel:`Regex abgleichen` und fügen "
+"Sie Ihren Ausdruck hinzu. Odoo ruft automatisch die Transaktionen ab, die "
+"Ihrem Regex-Ausdruck und den in Ihrem Modell angegebenen Bedingungen "
+"entsprechen."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:0
 msgid "Using Regex in Odoo"
-msgstr ""
+msgstr "Nutzung von Regex in Odoo"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:111
 msgid "Partner mapping"
-msgstr ""
+msgstr "Partnerzuordnung"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:113
 msgid ""
@@ -2940,6 +2959,14 @@ msgid ""
 "incoming payment meets these criteria, Odoo automatically maps it to the "
 "corresponding customer's account."
 msgstr ""
+"Mit der Partnerzuordnung können Sie Regeln für den automatischen Abgleich "
+"von Transaktionen mit dem richtigen Partnerkonto aufstellen. Das spart Zeit "
+"und verringert das Risiko von Fehlern, die beim manuellen Abgleich auftreten"
+" können. Sie können zum Beispiel eine Partnerzuordnungsregel für eingehende "
+"Zahlungen mit bestimmten Referenznummern oder Schlüsselwörtern in der "
+"Transaktionsbeschreibung erstellen. Wenn eine eingehende Zahlung diese "
+"Kriterien erfüllt, ordnet Odoo sie automatisch dem entsprechenden "
+"Kundenkonto zu."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:119
 msgid ""
@@ -2947,10 +2974,14 @@ msgid ""
 "and enter the :guilabel:`Find Text in Label`, :guilabel:`Find Text in "
 "Notes`, and :guilabel:`Partner`."
 msgstr ""
+"Um eine Partnerzuordnungsregel zu erstellen, gehen Sie zum Reiter "
+":guilabel:`Partnerzuordnung` und geben Sie :guilabel:`Text in Etikett "
+"suchen`, :guilabel:`Text in Buchungstext finden` und :guilabel:`Partner` "
+"ein."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst-1
 msgid "defining partner mapping"
-msgstr ""
+msgstr "Festlegen der Partnerzuordnung"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:5
 msgid ""
@@ -3052,7 +3083,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:42
 msgid ":doc:`/applications/essentials/export_import_data`"
-msgstr ""
+msgstr ":doc:`/applications/essentials/export_import_data`"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:47
 msgid "Register bank transactions manually"
@@ -3279,6 +3310,10 @@ msgid ""
 "within the system. There is nothing to stop users from creating their own "
 "draft invoices."
 msgstr ""
+"Das System erstellt Rechnungen, die zunächst auf den Entwurfsstatus gesetzt "
+"werden. Solange diese Rechnungen nicht validiert sind, haben sie keine "
+"Auswirkungen auf die Buchhaltung im System. Nichts hindert Benutzer daran, "
+"ihre eigenen Rechnungsentwürfe zu erstellen."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:53
 msgid "Let's create a customer invoice with following information:"
@@ -4481,6 +4516,8 @@ msgid ""
 "Reports, such as the delivery slip and invoice report, can be "
 ":doc:`customized using Studio </applications/studio/pdf_reports>`."
 msgstr ""
+"Berichte wie der Liegerschein und Rechungsbericht können :doc:`mithilfe von "
+"Studio angepasst werden </applications/studio/pdf_reports>`."
 
 #: ../../content/applications/finance/accounting/customer_invoices/customer_addresses.rst:38
 msgid ""
@@ -6392,6 +6429,9 @@ msgid ""
 " requires prepaid stamps (=credits) to work. Sending one document consumes "
 "one stamp."
 msgstr ""
+"Postversand ist ein :doc:`/applications/essentials/in_app_purchase`-Dienst, "
+"der im Voraus bezahlte Briefmarken (=Guthaben) erfordert, damit er "
+"funktioniert. Der Versand eines Dokuments verbraucht eine Briefmarke."
 
 #: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:50
 msgid ""
@@ -6938,10 +6978,12 @@ msgid ""
 "`Odoo Tutorials: Accounting and Invoicing - Getting started [video] "
 "<https://www.odoo.com/slides/slide/getting-started-1692>`_"
 msgstr ""
+"`Odoo Tutorials: Buchhaltung und Rechnungsstellung - Loslegen [Video] "
+"<https://www.odoo.com/slides/slide/getting-started-1692>`_"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:3
 msgid "Average price on returned goods"
-msgstr ""
+msgstr "Durchschnittspreis für retournierte Waren"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:8
 msgid ""
@@ -6950,22 +6992,29 @@ msgid ""
 "period, divided by the total number of items on-hand. Inventory valuation is"
 " used to:"
 msgstr ""
+"Die *Durchschnittskostenbewertung* (AVCO) ist eine Methode zur "
+"Bestandsbewertung, bei der die Kosten auf der Grundlage der Gesamtkosten der"
+" in einer Periode gekauften oder produzierten Waren, geteilt durch die "
+"Gesamtzahl der vorhandenen Artikel, bewertet werden. Die Bestandsbewertung "
+"wird verwendet, um:"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:12
 msgid "reflect the value of a company's assets;"
-msgstr ""
+msgstr "den Wert der Vermögenswerte eines Unternehmens widerzuspiegeln;"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:13
 msgid "keep track of the amount of unsold goods;"
-msgstr ""
+msgstr "den Überblick über die Menge der unverkauften Waren zu behalten;"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:14
 msgid "account for monetary value in goods that have yet to generate profit;"
 msgstr ""
+"den Geldwert von Gütern, die noch keinen Gewinn erwirtschaften zu "
+"berücksichtigen;"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:15
 msgid "report on flow of goods throughout the quarter."
-msgstr ""
+msgstr "über die Warenströme während des Quartals zu berichten."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:17
 msgid ""
@@ -6974,6 +7023,10 @@ msgid ""
 "quantities. In Odoo, this costing analysis is *automatically updated* each "
 "time products are received."
 msgstr ""
+"Da die Durchschnittskosten den gewichteten Durchschnitt verwendet, um die "
+"Kosten zu bewerten, eignet es sich gut für Unternehmen, die nur wenige "
+"verschiedene Produkte in großen Mengen verkaufen. In Odoo wird diese "
+"Kostenanalyse jedes Mal, wenn Produkte eingehen, *automatisch aktualisiert*."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:21
 msgid ""
@@ -6983,6 +7036,11 @@ msgid ""
 "because :ref:`this can potentially create inconsistencies with inventory "
 "valuation <inventory/avg_price/leaving_inventory>`."
 msgstr ""
+"Wenn also Sendungen an ihren Lieferanten zurückgehen, erzeugt Odoo "
+"automatisch Buchungseinträge, die die Änderung der Bestandsbewertung "
+"widerspiegeln. Odoo aktualisiert jedoch nicht automatisch die Berechnung der"
+" Durchschnittskosten, da dies möglicherweise zu Inkonsistenzen mit der "
+"Bestandsbewertung <inventory/avg_price/leaving_inventory>` führen kann."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:27
 msgid ""
@@ -6990,17 +7048,25 @@ msgid ""
 "Navigate :ref:`here <inventory/management/inventory_valuation_config>` for "
 "instructions on how to set up and use |AVCO| in Odoo."
 msgstr ""
+"Dieses Dokument befasst sich mit einem speziellen Anwendungsfall für "
+"theoretische Zwecke. Navigieren Sie :ref:`hierhin "
+"<inventory/management/inventory_valuation_config>` für Anleitungen zum "
+"Einrichten und Verwenden von Durchschnittskosten in Odoo."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:32
 msgid ""
 ":ref:`Using inventory valuation <inventory/reporting/using_inventory_val>`"
 msgstr ""
+":ref:`Bestandsbewertung einrichten "
+"<inventory/reporting/using_inventory_val>`"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:33
 msgid ""
 ":ref:`Other inventory valuation methods "
 "<inventory/inventory_valuation_config/costing_methods>`"
 msgstr ""
+":ref:`Andere Methoden der Bestandsbewertung "
+"<inventory/inventory_valuation_config/costing_methods>`"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:38
 msgid ""
