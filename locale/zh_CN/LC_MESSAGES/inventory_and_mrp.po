@@ -9906,10 +9906,12 @@ msgid ""
 "and after the transfer. This document will detail the method for conducting "
 "an inter-warehouse transfer using replenishment."
 msgstr ""
+"对于使用多个仓库的公司来说，经常需要在仓库之间调拨物品。这被称为*仓库间调拨*。Odoo *库存* "
+"处理仓库间调拨的管理流程，以确保调拨期间和之后的库存计数保持准确。本文档将详细介绍使用补货进行仓库间调拨的方法。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:12
 msgid "Configure warehouses for inter-warehouse replenishment"
-msgstr ""
+msgstr "配置仓库，进行仓库间补货"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:14
 msgid ""
@@ -9919,6 +9921,8 @@ msgid ""
 "additional configuration options when creating a second warehouse that are "
 "needed for inter-warehouse replenishment."
 msgstr ""
+"首先，确保启用 :guilabel:`多步骤路线` 设置，方法是导航至 :menuselection:`库存 --> 配置 --> 设置`，然后选中 "
+":guilabel:`仓库` 选项卡下的复选框。这将在创建仓库间补货所需的第二个仓库时提供额外的配置选项。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:19
 msgid ""
@@ -9929,18 +9933,21 @@ msgid ""
 "be transferred to from the :guilabel:`Warehouses` page and then click "
 ":guilabel:`Edit` to change its settings. Configure the warehouse as follows:"
 msgstr ""
+"默认情况下，Odoo 已配置了一个主仓库。如果尚未创建附加仓库，请在 :guilabel:`库存` 模块中通过选择 :menuselection:`配置"
+" --> 仓库 --> 创建` 进行创建。否则，请在 :guilabel:`仓库` 页面选择产品要转移到的仓库，然后点击 :guilabel:`编辑` "
+"更改其设置。对仓库进行如下配置："
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:25
 msgid ""
 ":guilabel:`Warehouse`: choose a name that is not already being used for "
 "another warehouse (e.g. `Alternative Warehouse`)"
-msgstr ""
+msgstr ":guilabel:`仓库`：选择一个尚未用于其他仓库的名称（例如，`备选仓库`）"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:27
 msgid ""
 ":guilabel:`Short Name`: choose a short name by which the warehouse will be "
 "identified (e.g. `ALT_WH`)"
-msgstr ""
+msgstr ":guilabel:`简称`：选择仓库的简称（如 `ALT_WH`）。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:30
 msgid ""
@@ -9949,12 +9956,14 @@ msgid ""
 "Click :guilabel:`Edit` and then check the box next to the warehouse that "
 "will be used to resupply the warehouse that is currently being configured."
 msgstr ""
+"点击 :guilabel:`保存`，将创建新仓库。此外，仓库表单上将出现一个新的 :guilabel:`补货来自` "
+"字段。点击:guilabel:`编辑`，然后选中仓库旁边的复选框，该仓库将用于为当前正在配置的仓库再次补给。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst-1
 msgid ""
 "A warehouse settings form configured to allow resupplying between "
 "warehouses."
-msgstr ""
+msgstr "仓库设置表单的配置允许在仓库之间进行再次补给。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:39
 msgid ""
@@ -9962,11 +9971,11 @@ msgid ""
 "transferred from (outgoing) will be titled \"San Francisco\", and the "
 "warehouse that products are transferred to (incoming) will be titled \"San "
 "Francisco 2\"."
-msgstr ""
+msgstr "在本演示中，产品转出（出库）的仓库名为“旧金山”，产品转入（入库）的仓库名为“旧金山 2 号”。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:44
 msgid "Configure products for inter-warehouse replenishment"
-msgstr ""
+msgstr "为仓库间补货配置产品"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:46
 msgid ""
@@ -9975,6 +9984,8 @@ msgid ""
 "Products --> Products` and select an existing product or :guilabel:`Create` "
 "a new one, if necessary."
 msgstr ""
+"产品也必须配置正确，才能在仓库之间转移。导航至 :menuselection:`库存 --> 产品 --> 产品`，然后选择一个现有产品或 "
+":guilabel:`创建` 一个新产品（如有）。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:50
 msgid ""
@@ -9983,14 +9994,16 @@ msgid ""
 "warehouse receiving the transferred products and *Y* being the warehouse "
 "that products are transferred from."
 msgstr ""
+"然后，在产品表单中，转到 :guilabel:`库存` 选项卡，启用 :guilabel:`X：从 Y 供应产品` 复选框，*X* "
+"是接收转移产品的仓库，*Y* 是产品转移的仓库。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst-1
 msgid "Enable the checkbox to resupply one warehouse from another."
-msgstr ""
+msgstr "启用复选框，可从另一个仓库向仓库补给。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:59
 msgid "Replenish one warehouse from another"
-msgstr ""
+msgstr "从另一个仓库补货"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:61
 msgid ""
@@ -9999,33 +10012,35 @@ msgid ""
 " be replenished. Click the :guilabel:`Replenish` button on the top left of "
 "the product page and fill out the pop-up form as follows:"
 msgstr ""
+"从 :menuselection:`库存` 模块开始，选择 :menuselection:`产品 --> "
+"产品`，然后选择要补充的产品。点击产品页面左上角的 :guilabel:`补货` 按钮，并在弹出的表格中填写以下内容："
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:65
 msgid ""
 ":guilabel:`Quantity`: the number of units that will be sent to the warehouse"
 " being replenished"
-msgstr ""
+msgstr ":guilabel:`数量`：将发送到仓库的补货单位数量。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:66
 msgid ""
 ":guilabel:`Scheduled Date`: the date that the replenishment is scheduled to "
 "take place"
-msgstr ""
+msgstr ":guilabel:`计划日期`：计划进行补货的日期"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:67
 msgid ":guilabel:`Warehouse`: the warehouse that will be replenished"
-msgstr ""
+msgstr ":guilabel:`仓库`：将补货的仓库"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:68
 msgid ""
 ":guilabel:`Preferred Routes`: select `X: Supply Product from Y`, with *X* "
 "being the warehouse to be replenished and *Y* being the warehouse that the "
 "product will be transferred from"
-msgstr ""
+msgstr ":guilabel:`首选路线`：选择 `X：从 Y 供应产品`，*X* 是要补货的仓库，*Y* 是产品将调出的仓库"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst-1
 msgid "The form for replenishing a product."
-msgstr ""
+msgstr "产品补货表单。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:75
 msgid ""
@@ -10036,10 +10051,12 @@ msgid ""
 "between one and three steps. This document will detail how to process one-"
 "step deliveries and receipts."
 msgstr ""
+"点击 "
+":guilabel:`确认`，将为出库仓库创建交货单，并为接收产品的仓库创建收据。根据出库和入库仓库的配置设置，处理交货单和收据需要一到三个步骤。本文件将详细介绍如何处理一步式交货和收货。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:82
 msgid "Process the delivery order"
-msgstr ""
+msgstr "处理送货订单"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:84
 msgid ""
@@ -10053,10 +10070,13 @@ msgid ""
 " been dispatched, click the :guilabel:`Validate` button to register the "
 "quantities shipped."
 msgstr ""
+"在补货订单的第一阶段，需要处理来自正在调拨产品的仓库的交货。在:menuselection:`库存`仪表板上，选择出库仓库下的:guilabel:`交货订单`卡片上的:guilabel:`X"
+" "
+"待处理`按钮，然后选择为补货创建的交货订单。在交货订单页面，点击左上角的:guilabel:`检查可用性`按钮，以预留要调拨的产品数量。一旦交货订单被派送，点击:guilabel:`验证`按钮，以记录已发货的数量。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst-1
 msgid "The delivery orders card for the outgoing warehouse."
-msgstr ""
+msgstr "发货仓库的发货单卡。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:99
 msgid ""
