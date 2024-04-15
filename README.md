@@ -9,6 +9,7 @@
 - Python dependencies listed in the file `requirements.txt`.
 - Make
 - A local copy of the [odoo/odoo repository](https://github.com/odoo/odoo) (optional)
+- A local copy of the [odoo/upgrade-util repository](https://github.com/odoo/upgrade-util) (optional)
 
 ### Instructions
 
@@ -18,8 +19,9 @@
 3. See [this guide](https://www.odoo.com/documentation/latest/contributing/documentation.html)
    for more detailed instructions.
 
-Optional: place your local copy of the `odoo/odoo` repository in the parent directory or in the root
-directory of the documentation to build the latter with the documented Python docstrings.
+Optional: place your local copy of the `odoo/odoo` and `odoo/upgrade-util` repositories in
+the parent directory or in the root directory of the documentation to build the latter
+with the documented Python docstrings.
 
 ## Contribute to the documentation
 
