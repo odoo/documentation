@@ -27,6 +27,11 @@ the file that needs to be executed. The file's name will determine the :ref:`pha
 <upgrade-scripts/phases>` and order in which it is executed for that module and version.
 
 .. note::
+   From Odoo 13 the top-level directory for the upgrade scripts can also be named `upgrades`. This
+   naming is preferred since it has the correct meaning: *migrate* can be confused with *moving out
+   of Odoo*. Thus :file:`$module/upgrades/$version/` is also valid.
+
+.. note::
    Upgrade scripts are only executed when the module is being updated. Therefore, the
    module's minor version set in the `$version` directory needs to be higher than the module's
    installed version and equal or lower to the updated version of the module.

@@ -15,7 +15,6 @@ Reference
    reference/user_interface
    reference/standard_modules
    reference/cli
-   reference/upgrade_scripts
-   reference/upgrade_utils
+   reference/upgrades
    reference/external_api
    reference/extract_api
