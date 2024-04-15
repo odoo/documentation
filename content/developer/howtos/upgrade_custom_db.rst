@@ -187,10 +187,10 @@ To make sure the custom code is working flawlessly in the new version, follow th
 Migrate the data
 ----------------
 
-During the upgrade of the custom modules, you might have to use
-:doc:`upgrade scripts <../reference/upgrade_scripts>` to reflect changes from the source code
-to their corresponding data. Together with the upgrade scripts, you can also make use of the
-:doc:`../reference/upgrade_utils` and its helper functions.
+During the upgrade of the custom modules, you might have to use :doc:`upgrade scripts
+<../reference/upgrades/upgrade_scripts>` to reflect changes from the source code to their
+corresponding data. Together with the upgrade scripts, you can also make use of the
+:doc:`../reference/upgrades/upgrade_utils` and its helper functions.
 
 - Any technical data that was renamed during the upgrade of the custom code (models, fields,
   external identifiers) should be renamed using upgrade scripts to avoid data loss during the
@@ -220,7 +220,7 @@ to their corresponding data. Together with the upgrade scripts, you can also mak
                   """
                )
 
-         Check the documentation for more information on :doc:`../reference/upgrade_scripts`.
+         Check the documentation for more information on :doc:`../reference/upgrades/upgrade_scripts`.
 
 Upgrade scripts can also be used to:
 
