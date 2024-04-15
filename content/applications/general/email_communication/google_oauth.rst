@@ -56,8 +56,8 @@ page.
    require an approval, or for *Scopes* to be added on. However, using a *Google WorkSpace* account
    allows for **Internal** User Type to be used.
 
-   Note, as well, that while the API connection is in the *External* testing mode, then no approval is
-   necessary from Google. User limits in this testing mode is set to 100 users.
+   Note, as well, that while the API connection is in the *External* testing mode, then no approval
+   is necessary from Google. User limits in this testing mode is set to 100 users.
 
 Edit app registration
 ---------------------
@@ -97,8 +97,8 @@ from the dropdown menu.
 - Under :guilabel:`Application Type`, select :guilabel:`Web Application` from the dropdown menu.
 - In the :guilabel:`Name` field, enter `Odoo`.
 - Under the :guilabel:`Authorized redirect URIs` label, click the button :guilabel:`ADD URI`, and
-  then input `https://yourdbname.odoo.com/google_gmail/confirm` in the :guilabel:`URIs 1` field.
-  Be sure to replace the *yourdbname* part of the URL with the actual Odoo database name.
+  then input `https://yourdbname.odoo.com/google_gmail/confirm` in the :guilabel:`URIs 1` field. Be
+  sure to replace the *yourdbname* part of the URL with the actual Odoo database name.
 - Next, click on :guilabel:`Create` to generate an OAuth :guilabel:`Client ID` and :guilabel:`Client
   Secret`. Finally, copy each generated value for later use when configuring in Odoo, and then
   navigate to the Odoo database.
@@ -113,15 +113,15 @@ Setup in Odoo
 Enter Google Credentials
 ------------------------
 
-First, open Odoo and navigate to the :guilabel:`Apps` module. Then, remove the :guilabel:`Apps`
-filter from the search bar and type in `Google`. Install the module called :guilabel:`Google
-Gmail`.
+First, open Odoo, and navigate to the :menuselection:`Apps` module. Then, remove the
+:guilabel:`Apps` filter from the :guilabel:`Search...` bar, and type in `Gmail`. Install the modules
+called :guilabel:`Google Gmail` and :guilabel:`Fetchmail Gmail`.
 
-Next, navigate to :menuselection:`Settings --> General Settings`, and under the :guilabel:`Discuss`
-section, ensure that the checkbox for :guilabel:`Custom Email Servers` or :guilabel:`External Email
-Servers` is checked. This populates a new option for :guilabel:`Gmail Credentials` or :guilabel:`Use
-a Gmail Sever`. Then, copy and paste the respective values into the :guilabel:`Client ID` and
-:guilabel:`Client Secret` fields and :guilabel:`Save` the settings.
+Next, navigate to :menuselection:`Settings app --> General Settings`, and under the
+:guilabel:`Discuss` section, ensure that the checkbox for :guilabel:`Custom Email Servers` or
+:guilabel:`External Email Servers` is checked. This populates a new option for :guilabel:`Gmail
+Credentials` or :guilabel:`Use a Gmail Sever`. Then, copy and paste the respective values into the
+:guilabel:`Client ID` and :guilabel:`Client Secret` fields and :guilabel:`Save` the settings.
 
 Configure outgoing email server
 -------------------------------
