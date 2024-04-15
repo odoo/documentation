@@ -24,6 +24,7 @@ import inspect
 import os.path
 
 import werkzeug
+import contextlib
 
 
 def setup(app):
@@ -36,6 +37,7 @@ def setup(app):
         # TODO: js?
         if domain != 'py':
             return None
+
         if not (app.config.github_user and app.config.github_project):
             return None
 
@@ -53,10 +55,8 @@ def setup(app):
             return None
 
         # get original from decorated methods
-        try:
-            obj = getattr(obj, '_orig')
-        except AttributeError:
-            pass
+        with contextlib.suppress(AttributeError):
+            obj = obj._orig
 
         try:
             obj_source_path = inspect.getsourcefile(obj)
@@ -65,14 +65,21 @@ def setup(app):
             # obj doesn't have a module, or something
             return None
 
-        import odoo
         # FIXME: make finding project root project-independent
-        project_root = os.path.join(os.path.dirname(odoo.__file__), '..')
+        if module.startswith('odoo.upgrade.util'):
+            from odoo.upgrade import util
+            project = 'upgrade-util'
+            project_root = os.path.join(os.path.dirname(util.__file__), '../..')
+        else:
+            import odoo
+            project = 'odoo'
+            project_root = os.path.join(os.path.dirname(odoo.__file__), '..')
         return make_github_link(
             app,
-            os.path.relpath(obj_source_path, project_root),
-            line,
-            odoo_repository=True)
+            project=project,
+            path=os.path.relpath(obj_source_path, project_root),
+            line=line,
+        )
     app.config.linkcode_resolve = linkcode_resolve
 
     return {
@@ -80,22 +87,12 @@ def setup(app):
         'parallel_write_safe': True
     }
 
-def make_github_link(app, path, line=None, mode="blob", odoo_repository=False):
-    config = app.config
+def make_github_link(app, project, path, line=None, mode="blob"):
+    branch = app.config.version or 'master'
+    if project == 'upgrade-util':
+        branch = 'master'
 
-    user = config.github_user
-    project = config.github_project
-    if odoo_repository:
-        user = 'odoo'
-        project = 'odoo'
-
-    urlpath = "/{user}/{project}/{mode}/{branch}/{path}".format(
-        user=user,
-        project=project,
-        branch=config.version or 'master',
-        path=path,
-        mode=mode,
-    )
+    urlpath = f"/{app.config.github_user}/{project}/{mode}/{branch}/{path}"
     return werkzeug.urls.url_unparse((
         'https',
         'github.com',
@@ -116,4 +113,4 @@ def add_doc_link(app, pagename, templatename, context, doctree):
     source_suffix = app.config.source_suffix
     source_suffix = next(iter(source_suffix))
     context['github_link'] = lambda mode='edit': make_github_link(
-        app, f'content/{pagename}{source_suffix}', mode=mode)
+        app, project=app.config.github_project, path=f'content/{pagename}{source_suffix}', mode=mode)
