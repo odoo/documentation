@@ -140,5 +140,4 @@ Then, once the purchase is complete on the front-end of the website, the subsequ
 instantly accessible in the back-end of the database.
 
 .. seealso::
-   - :doc:`event_essentials`
-   - :doc:`create_events`
+   :doc:`create_events`
