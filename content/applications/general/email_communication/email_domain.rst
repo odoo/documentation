@@ -12,7 +12,7 @@ providers classify Odoo's emails according to their own restriction policy and/o
 It is standard in Odoo that emails are received from ``"name of the author"
 <notifications@mycompany.odoo.com>``. In other words this can be translated to: ``"name of the
 author" <{ICP.mail.from.filter}@{mail.catchall.domain}>``. In this case ICP stands for
-`ir.config.parameters`, which are the System Parameters. Deliverability is greatly improved with the
+`ir.config_parameter`, which are the System Parameters. Deliverability is greatly improved with the
 :ref:`notifications configuration <email_servers/notifications>`.
 
 In order for servers to accept emails from Odoo on a more regular basis, one of the solutions is
