@@ -320,9 +320,11 @@ lunch alert form loads. Enter the following information on the form:
 .. seealso::
    - :doc:`lunch/orders`
    - :doc:`lunch/user-accounts`
+   - :doc:`lunch/management`
 
 .. toctree::
    :titlesonly:
 
    lunch/orders
    lunch/user-accounts
+   lunch/management
