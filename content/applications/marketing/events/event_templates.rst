@@ -214,5 +214,4 @@ Any of these pre-configured settings related to the selected event template chos
 :guilabel:`Template` field on an event form can be modified, as desired.
 
 .. seealso::
-   - :doc:`event_essentials`
-   - :doc:`create_events`
+   :doc:`create_events`
