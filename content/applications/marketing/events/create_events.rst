@@ -412,5 +412,4 @@ recipients to quickly register.
    about daily limits, visit the :ref:`email_communication/daily_limit_mail` documentation.
 
 .. seealso::
-   - :doc:`event_essentials`
-   - :doc:`track_manage_talks`
+   :doc:`track_manage_talks`
