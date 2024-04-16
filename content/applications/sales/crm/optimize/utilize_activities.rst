@@ -13,7 +13,7 @@ view of an application.
    Planned Activities for Leads and Opportunities.
 
 Activity types
---------------
+==============
 
 A set of preconfigured activity types is available in the *CRM* app. To view the list of available
 activity types, navigate to the :menuselection:`CRM app --> Configuration --> Activity Types`.
@@ -39,8 +39,10 @@ The preconfigured activity types for the *CRM* app are as follows:
    If other applications are installed, such as *Sales* or *Accounting*, other activity types are
    made available in the *CRM* app.
 
+.. _crm/create-new-activity-type:
+
 Create a new activity type
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------
 
 To create a new activity type, click :guilabel:`New` at the top-left of the page to open a blank
 form.
@@ -48,10 +50,10 @@ form.
 At the top of the form, start by choosing a :guilabel:`Name` for the new activity type.
 
 Activity settings
-*****************
+~~~~~~~~~~~~~~~~~
 
 Action
-^^^^^^
+******
 
 The *Action* field specifies the intent of the activity. Some actions trigger specific behaviors
 after an activity is scheduled.
@@ -72,14 +74,14 @@ after an activity is scheduled.
    installed in the database.
 
 Default user
-^^^^^^^^^^^^
+************
 
 To automatically assign this activity to a specific user when this activity type is scheduled,
 choose a name from the :guilabel:`Default User` drop-down menu. If this field is left blank, the
 activity is assigned to the user who creates the activity.
 
 Default summary
-^^^^^^^^^^^^^^^
+***************
 
 To include notes whenever this activity type is created, enter them into the :guilabel:`Default
 Summary` field.
@@ -90,13 +92,13 @@ Summary` field.
    scheduled or saved.
 
 Next activity
-*************
+~~~~~~~~~~~~~
 
 To automatically suggest, or trigger, a new activity after an activity has been marked complete, the
 :guilabel:`Chaining Type` must be set.
 
 Suggest next activity
-^^^^^^^^^^^^^^^^^^^^^
+*********************
 
 In the :guilabel:`Chaining Type` field, select :guilabel:`Suggest Next Activity`. Upon doing so, the
 field underneath changes to: :guilabel:`Suggest`. Click the :guilabel:`Suggest` field drop-down menu
@@ -125,7 +127,7 @@ When all configurations are complete, click :guilabel:`Save`.
       :alt: A schedule activity pop-up with emphasis on the recommended activities.
 
 Trigger next activity
-^^^^^^^^^^^^^^^^^^^^^
+*********************
 
 Setting the :guilabel:`Chaining Type` to :guilabel:`Trigger Next Activity` immediately launches the
 next activity once the previous one is completed.
@@ -149,7 +151,7 @@ When all configurations are complete, click :guilabel:`Save`.
    :guilabel:`Trigger` field.
 
 Activity tracking
------------------
+=================
 
 To keep the pipeline up to date with the most accurate view of the status of activities, as soon as
 a lead is interacted with, the associated activity should be marked as *Done*. This ensures the next
@@ -159,67 +161,94 @@ past due activities.
 The pipeline is most effective when it is kept up-to-date and accurate to the interactions it is
 tracking.
 
+.. _crm/activity-plans:
+
 Activity plans
---------------
+==============
 
-Activity types with the *Chaining Type* set to *Trigger New Activity* provide the opportunity to
-preplan a sequence of customized activities. Once an activity is marked as *Done*, the next activity
-is automatically scheduled.
+*Activity plans* are preconfigured sequences of activities. When an activity plan is launched, every
+activity in the sequence is scheduled automatically.
 
-The *Chaining Type* setting on an activity type provides the opportunity to preplan a sequence of
-events, that can aide in the sales process.
+To create a new plan, navigate to :menuselection:`CRM app --> Configuration --> Activity Plan`.
+Click :guilabel:`New` at the top-left of the page to open a blank :guilabel:`Lead Plans` form.
+
+Enter a name for the new plan in the :guilabel:`Plan Name` field. On the :guilabel:`Activities to
+Create` tab, click :guilabel:`Add a line` to add a new activity.
+
+Select an :guilabel:`Activity Type` from the drop-down menu. Click :guilabel:`Search More` to see a
+complete list of available activity types, or to create a :ref:`new one
+<crm/create-new-activity-type>`.
+
+Next, in the :guilabel:`Summary` field, enter any details to describe the specifics of the activity,
+including instructions for the salesperson or information due upon the completion of the activity.
+The contents of this field are included with the scheduled activity, and can be edited later.
+
+In the :guilabel:`Assignment` field, select one of the following options:
+
+ - :guilabel:`Ask at launch`: activities are assigned to a user when the plan is scheduled.
+ - :guilabel:`Default user`: activities are always assigned to a specific user.
+
+If :guilabel:`Default user` is selected in the :guilabel:`Assignment` field, choose a user in the
+:guilabel:`Assigned to` field.
+
+.. tip::
+   Activity plans can feature activities that are assigned to default users and users assigned at
+   the plan launch.
+
+  .. image:: utilize_activities/create-activity-plan.png
+     :align: center
+     :alt: A Lead Plan form with scheduled activities.
+
+Next, configure the timeline for the activity. Activities can be scheduled to occur either before
+the plan date or after. Use the :guilabel:`Interval` and :guilabel:`Units` fields to set the
+deadline for this activity. Lastly, in the :guilabel:`Trigger` field, select whether the activity
+should occur before or after the plan date.
 
 .. example::
-   A salesperson adds a new lead to their pipeline, and schedules an *Email* activity for the
-   following day. The email activity type is configured with the following settings:
+   An activity plan is created to handle high priority leads. Specifically, these leads should be
+   contacted quickly, with a meeting scheduled within two days of the initial contact. The plan is
+   configured with the following activities:
 
-   - :guilabel:`Chaining Type`: `Suggest Next Activity`
-   - :guilabel:`Suggest`: `Call`, `Meeting`
-   - :guilabel:`Schedule`: `2 days after previous activity deadline`
+   - Email two days **before** plan date
+   - Meeting zero days **before** plan date
+   - Make quote three days **after** plan date
+   - Upload document three days **after** plan date
+   - Follow-up five days **after** plan date
 
-   After sending an email to the lead, the salesperson clicks :guilabel:`DONE & SCHEDULE NEXT` on
-   the :guilabel:`Schedule Activity` pop-up window. This opens a new pop-up window, where the
-   suggested next activities are listed as recommendations for next steps.
+   This sets the *plan date* as the meeting deadline, which is the objective of the plan. Before
+   that date, there is lead time to contact the customer and prepare for the meeting. After that
+   date, the salesperson has time to create a quote, upload the document, and follow-up.
 
-   .. image:: utilize_activities/recommended-activities.png
-      :align: center
-      :alt: Schedule an activity pop-up window with recommended activities.
+Repeat these steps for each activity included in the plan.
 
-The *suggested* or *triggered* activities may vary, depending on a variety of factors. See below
-for some suggested sequences:
+Launch an activity plan
+-----------------------
 
-.. tabs::
+To launch an activity plan on a *CRM* opportunity, navigate to :menuselection:`CRM app` and click on
+the Kanban card of an opportunity to open it.
 
-   .. tab:: Sample #1
+At the top-right of the chatter, click :guilabel:`Activities` to open the :guilabel:`Schedule
+Activity` pop-up window.
 
-      - A salesperson adds a lead to the pipeline and schedules an *email* activity.
-      - The *email* activity suggests scheduling a *call* or a *meeting* within two days of the
-        previous deadline.
-      - Both the *call* and the *meeting* activities trigger a *create quote* activity.
-      - After the quote is sent, a *follow-up on quote* activity is scheduled within five days.
+In the :guilabel:`Plan` field, select the desired activity plan to launch. This generates a
+:guilabel:`Plan summary`, listing out the activities included in the plan. Select a :guilabel:`Plan
+Date` using the calendar popover. This updates the :guilabel:`Plan summary` with deadlines based on
+the intervals configured on the :ref:`activity plan <crm/activity-plans>`.
 
-   .. tab:: Sample #2
+Select a user in the :guilabel:`Assigned To` field. This user is assigned to any of the activities
+on the plan were configured with :guilabel:`Ask at launch` in the :guilabel:`Assignment` field.
 
-      - A lead is :doc:`added to the pipeline <../acquire_leads/generate_leads>` through the
-        website's contact form. The salesmanager assigns a salesperson and schedules an activity
-        for a *call*.
-      - The *call* activity triggers an *upload document* activity, so the salesperson can send over
-        a proposal after a successful phone call.
-      - The *upload document* activity suggests scheduling a *request signature* activity or a
-        *meeting*. The salesperson chooses to schedule a meeting.
+.. image:: utilize_activities/schedule-activity-plan.png
+   :align: center
+   :alt: The schedule activity pop-up window with an Activity plan selected.
 
-   .. tab:: Sample #3
+Click :guilabel:`Schedule`.
 
-      - A salesmanager notices several of their salespeople are neglecting to follow-up on their
-        leads in a timely manner. As a result, high-value targets are not receiving adequate
-        attention.
-      - The salesmanager creates a new activity type, titled *follow-up*, which is configured with
-        the :guilabel:`Action` set to :guilabel:`Reminder`.
-      - The salesmanager adds *follow-up* as the next activity triggered or suggested to all of
-        their teams activities.
-      - After a salesperson schedules an *email* activity, a *follow-up* activity is scheduled for
-        the next day. After they schedule a *meeting* activity, a *follow-up* activity is scheduled
-        two days later.
+The details of the plan are added to the chatter, in addition to each of the activities.
+
+.. image:: utilize_activities/activity-plan-chatter.png
+   :align: center
+   :alt: The chatter thread of a CRM opportunity with a launched activity plan.
 
 .. seealso::
  - :doc:`Activities </applications/essentials/activities>`
