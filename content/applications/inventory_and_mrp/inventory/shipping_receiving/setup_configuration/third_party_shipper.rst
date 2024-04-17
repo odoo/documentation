@@ -11,8 +11,16 @@ Users can link third-party shipping carriers to Odoo databases, in order to veri
 delivery to specific addresses, :doc:`automatically calculate shipping costs <delivery_method>`, and
 :doc:`generate shipping labels <../advanced_operations_shipping/labels>`.
 
-In Odoo, shipping carriers can be applied to a sales order (SO), invoice, or delivery order (DO).
-The following is a list of available shipping connectors:
+In Odoo, shipping carriers can be applied to a sales order (SO), invoice, or delivery order. For
+tips on resolving common issues when configuring shipping connectors, skip to the
+:ref:`Troubleshooting <inventory/shipping_receiving/third-party-troubles>` section.
+
+.. seealso::
+   - :doc:`dhl_credentials`
+   - :doc:`sendcloud_shipping`
+   - :doc:`ups_credentials`
+
+The following is a list of available shipping connectors in Odoo:
 
 .. list-table::
    :header-rows: 1
@@ -235,7 +243,7 @@ based on:
 After selecting a third-party provider in the :guilabel:`Shipping Method` field, click
 :guilabel:`Get Rate` in the :guilabel:`Add a shipping method` pop-up window to get the estimated
 cost through the shipping connector. Then, click the :guilabel:`Add` button to add the delivery
-charge to the :abbr:`SO (Sales Order)` or invoice.
+charge to the |SO| or invoice.
 
 .. seealso::
    :doc:`Charge customers for shipping after product delivery
@@ -263,3 +271,64 @@ provided.
 .. image:: third_party_shipper/delivery-info.png
    :align: center
    :alt: Show the delivery order's "Additional info" tab.
+
+.. _inventory/shipping_receiving/third-party-troubles:
+
+Troubleshooting
+===============
+
+Since shipping connectors can sometimes be complex to set up, here are some checks to try when
+things are not working as expected:
+
+#. Ensure the :ref:`warehouse information <inventory/shipping_receiving/configure-source-address>`
+   (e.g., address and phone number) in Odoo is correct **and** matches the records saved in the
+   shipping provider's website.
+#. Verify that the :ref:`package type <inventory/warehouses_storage/package-type>` and parameters
+   are valid for the shipping carrier. To check, ensure the shipment can be directly created on the
+   shipping carrier's website.
+#. When encountering a price mismatch between Odoo's estimated cost and the provider's charge, first
+   ensure the delivery method is set to :ref:`production environment
+   <inventory/shipping_receiving/production-env>`.
+
+   Then, create the shipment in both the carrier's website and Odoo, and verify the prices are the
+   same across Odoo, the shipping provider, and in the *debug logs*.
+
+   .. example::
+      When checking for a price mismatch in the debug logs, if the request says the package weighs
+      six kilograms, but the response from FedEx says the package weights seven kilograms, it
+      concludes that the issue is on FedEx's side.
+
+Debug log
+---------
+
+Track shipping data inconsistencies by activating debug logging. To do that, go to the delivery
+method's configuration page (:menuselection:`Inventory app --> Configuration --> Shipping
+Method`), and select the desired shipping method. Click the :guilabel:`No Debugging` smart button to
+activate :guilabel:`Debug Requests`.
+
+.. image:: third_party_shipper/no-debug.png
+   :align: center
+   :alt: Show the "No Debug" smart button.
+
+With :guilabel:`Debug Requests` activated, each time the shipping connector is used to estimate the
+cost of shipping, records are saved in the :guilabel:`Logging` report. To access the report, turn on
+:ref:`developer mode <developer-mode>`, and go to :menuselection:`Settings app --> Technical -->
+Database Structure section --> Logging`.
+
+.. note::
+   Logs are created for a shipping method each time the :ref:`Get Rate
+   <inventory/shipping_receiving/third-party-rate>` button is clicked on :abbr:`SOs (Sales Orders)`
+   and invoices, **and** when a customer adds the shipping carrier to their order through the
+   *Website* app.
+
+.. image:: third_party_shipper/log.png
+   :align: center
+   :alt: Show how to find the "Logging" option from the "Technical" menu.
+
+Click the *HTTP request* line item to open a detailed page, and verify the correct information is
+sent from Odoo to the shipping carrier. In the *HTTP response*, verify that the same information is
+received.
+
+.. image:: third_party_shipper/logging.png
+   :align: center
+   :alt: Show debug request history in Settings > Technical > Logging.
