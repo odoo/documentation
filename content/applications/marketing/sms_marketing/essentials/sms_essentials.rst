@@ -3,8 +3,8 @@ SMS essentials
 ==============
 
 Utilizing :abbr:`SMS (Short Message Service)` outreach in communication strategies can help
-companies expand their market reach, especially in some countries, where emails might not be very
-common, or even used at all.
+companies expand their market reach, especially in countries where emails might not be common, or
+even used at all.
 
 Odoo's *SMS Marketing* application can also help boost conversion rates around valuable actions,
 such as event registrations, free trials, purchases, etc., since text and mobile-based marketing
@@ -58,26 +58,25 @@ will be sent. By default, Odoo has :guilabel:`Mailing List` selected. If this is
 
 .. note::
    To create (or edit) a mailing list, go to :menuselection:`Mailing Lists --> Mailing List`. There,
-   Odoo displays all previously created mailing lists, along with various types of data related to
+   Odoo displays all previously-created mailing lists, along with various types of data related to
    that specific list (e.g. number of contacts, mailings, recipients, etc.).
 
-   To learn more about mailing lists and contacts, check out
-   :doc:`mailing_lists_blacklists`
+   To learn more about mailing lists and contacts, check out :doc:`mailing_lists_blacklists`.
 
 .. image:: sms_essentials/sms-mailing-list.png
    :align: center
    :alt: View of the mailing list page in the SMS marketing application.
 
 To reveal all the possible options in the :guilabel:`Recipients` field, click the field to see all
-the choices Odoo makes avaialble.
+the choices Odoo makes available.
 
 When another field (other than :guilabel:`Mailing List`) is selected, the option to specify that
 chosen field even further becomes available — either with a default recipient filter equation that
 appears automatically (which can be customized to fit any business need), or, if no default
-recipient filter equation is present, an :guilabel:`Add Filter` button will appear.
+recipient filter equation is present, an :guilabel:`Add Filter` button appears.
 
-Clicking the :guilabel:`Add Filter` button, reveals fully customizable domain rule fields, which can
-be configured similar to an equation. You can create multiple recipient rules, if necessary.
+Clicking the :guilabel:`Add Filter` button reveals fully customizable domain rule fields, which can
+be configured similar to an equation. Multiple recipient rules can be created, if necessary.
 
 Then, Odoo will only send the :abbr:`SMS (Short Message Service)` to recipients who fit into
 whatever criteria is configured in those fields. Multiple rules can be added.
@@ -176,6 +175,34 @@ is visualized as different graphs and charts, which can be sorted and grouped in
    :align: center
    :alt: Reporting page in SMS Marketing.
 
+.. tip::
+   SMS messages can be sent using server actions in Odoo. To do so, in :ref:`developer mode
+   <developer-mode>`, navigate to :menuselection:`Settings app --> Technical menu --> Automation
+   section --> Automated Actions`. Then, click :guilabel:`Create` to create a new action.
+
+   Enter an :guilabel:`Action Name` and select a :guilabel:`Model` to implement this action on. Set
+   the :guilabel:`Trigger` to either :guilabel:`On Creation`, :guilabel:`On Update`, :guilabel:`On
+   Creation & Update`, :guilabel:`On Deletion`, :guilabel:`Based on Form Modification`, or
+   :guilabel:`Based on Timed Condition`.
+
+   Based on the selection for the :guilabel:`Trigger`, additional fields may populate.
+
+   Under the :guilabel:`Apply on` field a record filter using a domain can be created. Ensure a
+   model has been selected before setting any domains on the :guilabel:`Apply on` field. Click
+   :guilabel:`Edit Domain` to set record parameters.
+
+   Under :guilabel:`Action To Do` drop-down field, select :guilabel:`Send SMS Text Message`. Next,
+   set the :guilabel:`SMS Template`, and choose whether the SMS message should be logged as a note,
+   by ticking the box next to :guilabel:`Log as Note`.
+
+   .. image:: sms_essentials/automated-action-sms.png
+      :align: center
+      :alt: Automated action template with action to do, SMS template and log as note highlighted.
+
+   Ensure the :guilabel:`Active` toggle is set to *on* for the automated action to run.
+   :guilabel:`Save` the completed automated action to implement the change.
+
 .. seealso::
    - :doc:`sms_campaign_settings`
    - :doc:`mailing_lists_blacklists`
+   - :doc:`../../../essentials/in_app_purchase`
