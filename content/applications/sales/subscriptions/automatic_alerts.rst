@@ -51,9 +51,14 @@ customers, by email, after one month of subscription. To do so, go to :menuselec
       *Trigger date* and *Delay after trigger* need to be specified. And because the *Send an email
       to the customer* action was adopted, an *Email template* can be chosen.
 
-As a result, this alert will send a rating survey after one month, to the customers who have
-purchased that specific product. The survey will appear in the chatter of your respective
-subscription.
+   .. note::
+      Sending a SMS text message in Odoo requires In-App Purchase (IAP) credit or tokens. For more
+      information on :abbr:`IAP (In-App Purchase)`, visit
+      :doc:`../../essentials/in_app_purchase`. For more information on sending SMS messages,
+      visit :doc:`../../marketing/sms_marketing/essentials/sms_essentials`.
+
+As a result, this alert sends a rating survey after one month, to the customers who have purchased
+that specific product. The survey appears in the chatter of your respective subscription.
 
 .. image:: automatic_alerts/rating-satisfaction-survey.png
   :align: center
@@ -80,6 +85,7 @@ retention rates very high.
    adapt them to your own needs.
 
 .. seealso::
-   - :doc:`../subscriptions`
-   - :doc:`plans`
-   - :doc:`products`
+  - :doc:`../subscriptions`
+  - :doc:`plans`
+  - :doc:`products`
+  - :doc:`../../essentials/in_app_purchase`
