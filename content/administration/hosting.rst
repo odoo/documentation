@@ -46,10 +46,10 @@ Transferring an Odoo Online database
 ====================================
 
 .. important::
-   Odoo Online's :ref:`intermediary versions <supported_versions>` cannot be hosted on-premise as
-   that type of hosting does not support those versions. Therefore, if the database to transfer
-   is running an intermediary version, it must be upgraded first to the next :ref:`major version
-   <supported_versions>`, waiting for its release if necessary.
+   Odoo Online's :ref:`intermediary versions <supported_versions>` are not supported by Odoo.sh or
+   on-premise. Therefore, if the database to transfer is running an intermediary version, it must be
+   upgraded first to the next :ref:`major version <supported_versions>`, waiting for its release if
+   necessary.
 
    .. example::
       Transferring an online database running on Odoo 16.3 would require first upgrading it to Odoo
