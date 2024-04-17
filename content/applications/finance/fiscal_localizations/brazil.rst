@@ -10,12 +10,12 @@ Introduction
 ============
 
 With the Brazilian localization, sales taxes can be automatically computed and electronic invoices
-(NF-e) for goods can be sent using AvaTax (Avalara) through |API| calls. Moreover, taxes for
-services can be configured.
+for goods (NF-e) and services (NFS-e) can be sent using AvaTax (Avalara) through |API| calls.
+Moreover, taxes for services can be configured.
 
-For the goods tax computation and electronic invoicing process, you need to configure the
-:ref:`contacts <brazil/contacts>`, :ref:`company <brazil/company>`, :ref:`products
-<brazil/products>`, and :ref:`create an account in Avatax <brazil/avatax-account>` need to be
+For the goods and services tax computation and electronic invoicing process, you need to configure
+the :ref:`contacts <brazil/contacts>`, :ref:`company <brazil/company>`, :ref:`products
+<brazil/products>`, and :ref:`create an account in AvaTax <brazil/avatax-account>` which needs to be
 configured in the general settings.
 
 For the services taxes, you can create and configure them from Odoo directly without computing them
@@ -27,9 +27,36 @@ needed.
 Configuration
 =============
 
-Install the :guilabel:`🇧🇷 Brazil` :ref:`fiscal localization package
-<fiscal_localizations/packages>` to get all the default accounting features of the Brazilian
-localization, following the :abbr:`IFRS (International Financial Reporting Standards)` rules.
+Modules installation
+--------------------
+
+:ref:`Install <general/install>` the following modules to get all the features of the Brazilian
+localization:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 25 50
+
+   * - Name
+     - Technical name
+     - Description
+   * - :guilabel:`Brazilian - Accounting`
+     - `l10n_br`
+     - Default :ref:`fiscal localization package <fiscal_localizations/packages>`, which represents
+       having the Generic Brazilian chart of accounts and Taxes, together with document types and
+       identification types.
+   * - :guilabel:`Brazil - Accounting Reports`
+     - `l10n_br_reports`
+     - Accounting reports for Brazil.
+   * - :guilabel:`AvaTax Brazil` & :guilabel:`AvaTax Brazil for Services`
+     - `l10n_br_avatax` & `l10n_br_avatax_services`
+     - Goods and Services tax computation through Avalara.
+   * - :guilabel:`Brazilian Accounting EDI` & :guilabel:`Brazilian Accounting EDI for services`
+     - `l10n_br_edi` & `l10n_br_edi_services`
+     - Provides electronic invoicing for goods and services for Brazil through AvaTax.
+   * - :guilabel:`Brazil Pix QR codes`
+     - `l10n_br_pix`
+     - Implements Pix QR codes for Brazil.
 
 .. _brazil/company:
 
@@ -42,40 +69,53 @@ given to your company.
 #. Select the :guilabel:`Company` option at the top of the page. Then, configure the following
    fields:
 
-   - :guilabel:`Name`.
-   - :guilabel:`Address` (add :guilabel:`City`, :guilabel:`State`, :guilabel:`Zip Code`,
-     :guilabel:`Country`).
+   - :guilabel:`Name`
+   - :guilabel:`Address`: add :guilabel:`City`, :guilabel:`State`, :guilabel:`Zip Code`,
+     :guilabel:`Country`
 
      - In the :guilabel:`Street` field, enter the street name, number, and any additional address
        information.
      - In the :guilabel:`Street 2` field, enter the neighborhood.
 
-   - :guilabel:`Identification Number` (:guilabel:`CNPJ`, :guilabel:`CPF`).
-   - :guilabel:`Tax ID` (associated with the identification type).
-   - :guilabel:`IE` (State registration).
-   - :guilabel:`IM` (Municipal registration).
-   - :guilabel:`SUFRAMA code` (Superintendence of the Manaus Free Trade Zone - add if applicable).
-   - :guilabel:`Phone`.
-   - :guilabel:`Email`.
+   - :guilabel:`Identification Number`: :guilabel:`CNPJ` or :guilabel:`CPF`
+   - :guilabel:`Tax ID`: associated with the identification type
+   - :guilabel:`IE`: State registration
+   - :guilabel:`IM`: Municipal registration
+   - :guilabel:`SUFRAMA code`: Superintendence of the Manaus Free Trade Zone - add if applicable
+   - :guilabel:`Phone`
+   - :guilabel:`Email`
 
    .. image:: brazil/contact-configuration.png
       :alt: Company configuration.
 
 #. Configure the :guilabel:`Fiscal Information` within the :guilabel:`Sales and Purchase` tab:
 
-   - Add the :guilabel:`Fiscal Position` for :ref:`Avatax Brazil <brazil/fiscal-positions>`.
-   - :guilabel:`Tax Regime` (Federal Tax Regime).
-   - :guilabel:`ICMS Taxpayer Type` (indicates ICMS regime, Exempt status, or Non-Taxpayer).
-   - :guilabel:`Main Activity Sector`.
+   - Add the :guilabel:`Fiscal Position` for :ref:`AvaTax Brazil <brazil/fiscal-positions>`.
+   - :guilabel:`Tax Regime`: Federal Tax Regime
+   - :guilabel:`ICMS Taxpayer Type`: indicates :guilabel:`ICMS regime`, :guilabel:`Exempt status`,
+     or :guilabel:`Non-Taxpayer`
+   - :guilabel:`Main Activity Sector`
 
    .. image:: brazil/contact-fiscal-configuration.png
       :alt: Company fiscal configuration.
 
-#. Finally, upload a company logo and save the contact
+#. Configure the following extra :guilabel:`Fiscal Information` if you are going to issue NFS-e:
+
+   - Add the :guilabel:`Fiscal Position` for :ref:`AvaTax Brazil <brazil/fiscal-positions>`.
+   - :guilabel:`COFINS Details`: :guilabel:`Taxable, Not Taxable, Taxable with rate 0%, Exempt,
+     Suspended`
+   - :guilabel:`PIS Details` :guilabel:`Taxable, Not Taxable, Taxable with rate 0%, Exempt,
+     Suspended`
+   - :guilabel:`CSLL Taxable` If the company is subject to CSLL or not
+
+   .. image:: brazil/contact-fiscal-configuration-nfse.png
+      :alt: Company fiscal configuration for NFSe.
+
+#. Finally, upload a company logo and save the contact.
 
 .. note::
    If you are a simplified regime, you need to configure the ICMS rate under
-   :menuselection:`Accounting --> Configuration --> Settings --> Taxes --> Avatax Brazil`.
+   :menuselection:`Accounting --> Configuration --> Settings --> Taxes --> AvaTax Brazil`.
 
 .. _brazil/avatax-account:
 
@@ -88,11 +128,14 @@ transaction information to retrieve the correct tax to be used and process the e
 with the government.
 
 Using this integration requires :doc:`In-App-Purchases (IAPs) <../../essentials/in_app_purchase>` to
-compute the taxes and to send the electronic invoices. Whenever you compute taxes, an |API| call is
-made using credits from your |IAP| credits balance.
+compute the taxes and to send the electronic invoices. Whenever you compute taxes, send an
+electronic document (NF-e, NFS-e, etc), or perform any electronic flow (NF-e Cancellation,
+Correction letter, Invalidate invoice number range), an API call is made using credits from your
+`IAP credits balance <https://iap.odoo.com/iap/in-app-services/819>`_.
 
 .. note::
-   Odoo is a certified partner of Avalara Brazil.
+   - Odoo is a certified partner of Avalara Brazil.
+   - You can `buy IAP credit on odoo.com <https://iap.odoo.com/iap/in-app-services/819>`_.
 
 Credential configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -100,19 +143,31 @@ Credential configuration
 To activate AvaTax in Odoo, you need to create an account. To do so, go to
 :menuselection:`Accounting --> Configuration --> Settings --> Taxes`, and in the :guilabel:`AvaTax
 Brazil` section, add the administration email address to be used for the AvaTax portal in the
-:guilabel:`Avatax Portal Email`, and then click on :guilabel:`Create account`.
+:guilabel:`AvaTax Portal Email`, and then click on :guilabel:`Create account`.
 
 .. warning::
-   When **testing** an :guilabel:`Avatax Portal Email` integration in a testing or sandbox database,
-   use an alternate email address. It is **not** possible to re-use the same email address on the
-   production database.
+   When **testing** or **creating a production** :guilabel:`AvaTax Portal Email` integration in a
+   sandbox or production database, use a real email address, as it is needed to log in to the
+   Avalara Portal and set up the certificates, whether you want to test or use it on production.
+
+   There are two different Avalara Portals, one for testing and one for production:
+
+   - Sandbox: https://portal.sandbox.avalarabrasil.com.br/
+   - Production: https://portal.avalarabrasil.com.br/
+
+   When you create the account from Odoo, be sure to select the right environment. Moreover, the
+   email used to open the account cannot be used to open another account. Save your :guilabel:`API
+   ID` and :guilabel:`API Key` when you create the account from Odoo.
+
+   .. image:: brazil/transfer-api-credentials.png
+      :alt: Transfer API Credentials.
 
 After you create the account from Odoo, you need to go to the Avalara Portal to set up your
 password:
 
 #. Access the `Avalara portal <https://portal.avalarabrasil.com.br/Login>`_.
 #. Click on :guilabel:`Meu primeiro acesso`.
-#. Add the email address you used in Odoo to create the Avalara/Avatax account, and then click
+#. Add the email address you used in Odoo to create the Avalara/AvaTax account, and then click
    :guilabel:`Solicitar Senha`.
 #. You will receive an email with a token and a link to create your password. Click on this link and
    copy-paste the token to allocate your desired password.
@@ -123,7 +178,7 @@ password:
    invoice service, you **must** access the AvaTax portal and upload your certificate there.
 
 .. image:: brazil/avatax-account-configuration.png
-   :alt: Avatax account configuration.
+   :alt: AvaTax account configuration.
 
 .. note::
    You can transfer |API| credentials. Use this only when you have already created an account in
@@ -138,6 +193,13 @@ In order to issue electronic invoices, a certificate needs to be uploaded to the
 The certificate will be synchronized with Odoo, as long as the external identifier number in the
 AvaTax portal matches - without special characters - with the CNPJ number, and the identification
 number (CNPJ) in Odoo matches with the CNPJ in AvaTax.
+
+.. important::
+   To issue NFS-e, some cities require that you link the certificate within the City Portal system
+   before issuing NFS-e from Odoo.
+
+   If you receive an error message from the city that says :guilabel:`Your certificate is not linked
+   to the user`, that means this process needs to be done in the city portal.
 
 Configure master data
 ---------------------
@@ -187,15 +249,8 @@ be manually added and configured, as the rate may differ depending on the city w
 offering the service.
 
 .. important::
-   Taxes attached to services are not computed by AvaTax. Only goods taxes are computed.
-
-When configuring a tax used for a service that is included in the final price (when the tax is not
-added or subtracted on top of the product price), set the :guilabel:`Tax Computation` to
-:guilabel:`Percentage of Price Tax Included`, and, on the :guilabel:`Advanced Options` tab, check
-the :guilabel:`Included in Price` option.
-
-.. image:: brazil/tax-configuration.png
-   :alt: Tax configuration.
+   If you decide to do service taxes manually, you won't be able to issue an NFS-e. To
+   electronically send an NFS-e, you need to compute taxes using Avalara.
 
 .. warning::
    Do not delete taxes, as they are used for the AvaTax tax computation. If deleted, Odoo creates
@@ -212,14 +267,17 @@ Products
 ~~~~~~~~
 
 To use the AvaTax integration on sale orders and invoices, first specify the following information
-on the product:
+on the product depending on its intended use:
 
-- :guilabel:`CEST Code` (Code for products subject to ICMS tax substitution).
-- :guilabel:`Mercosul NCM Code` (Mercosur Common Nomenclature Product Code).
-- :guilabel:`Source of Origin` (Indicates the origin of the product, which can be foreign or
-  domestic, among other possible options depending on the specific use case).
-- :guilabel:`SPED Fiscal Product Type` (Fiscal product type according to SPED list table).
-- :guilabel:`Purpose of Use` (Specify the intended purpose of use for this product).
+E-Invoice for goods (NF-e)
+**************************
+
+- :guilabel:`CEST Code`: Code for products subject to ICMS tax substitution
+- :guilabel:`Mercosul NCM Code`: Mercosur Common Nomenclature Product Code
+- :guilabel:`Source of Origin`: Indicates the origin of the product, which can be foreign or
+  domestic, among other possible options depending on the specific use case
+- :guilabel:`SPED Fiscal Product Type`: Fiscal product type according to SPED list table
+- :guilabel:`Purpose of Use`: Specify the intended purpose of use for this product
 
 .. image:: brazil/product-configuration.png
    :alt: Product configuration.
@@ -230,6 +288,16 @@ on the product:
    more need to be created, duplicate and use the same configuration (configuration needed:
    :guilabel:`Product Type` `Service`, :guilabel:`Transportation Cost Type` `Insurance`, `Freight`,
    or `Other Costs`).
+
+E-Invoice for services (NFS-e)
+******************************
+
+- :guilabel:`Mercosul NCM Code`: Mercosur Common Nomenclature Product Code
+- :guilabel:`Purpose of Use`: Specify the intended purpose of use for this product
+- :guilabel:`Service Code Origin`: City Service Code where the provider is registered
+- :guilabel:`Service Codes`: City Service Code where the service will be provided, if no
+  code is added, the Origin City Code will be used
+- :guilabel:`Labor Assignment`: Defines if your services includes labor
 
 .. _brazil/contacts:
 
@@ -242,23 +310,23 @@ Before using the integration, specify the following information on the contact:
 
    - Select the :guilabel:`Company` option for a contact with a tax ID (CNPJ), or check
      :guilabel:`Individual` for a contact with a CPF.
-   - :guilabel:`Name`.
-   - :guilabel:`Address` (add :guilabel:`City`, :guilabel:`State`, :guilabel:`Zip Code`,
-     :guilabel:`Country`).
+   - :guilabel:`Name`
+   - :guilabel:`Address`: add :guilabel:`City`, :guilabel:`State`, :guilabel:`Zip Code`,
+     :guilabel:`Country`
 
      - In the :guilabel:`Street` field, enter the street, number, and any extra address information.
      - In the :guilabel:`Street 2` field, enter the neighborhood.
 
-   - :guilabel:`Identification Number` (:guilabel:`CNPJ`, :guilabel:`CPF`).
-   - :guilabel:`Tax ID` (associated with the identification type).
-   - :guilabel:`IE`: state tax identification number.
-   - :guilabel:`IM`: municipal tax identification number.
-   - :guilabel:`SUFRAMA code`: SUFRAMA registration number.
-   - :guilabel:`Phone`.
-   - :guilabel:`Email`.
+   - :guilabel:`Identification Number`: :guilabel:`CNPJ` or :guilabel:`CPF`
+   - :guilabel:`Tax ID`: associated with the identification type
+   - :guilabel:`IE`: state tax identification number
+   - :guilabel:`IM`: municipal tax identification number
+   - :guilabel:`SUFRAMA code`: SUFRAMA registration number
+   - :guilabel:`Phone`
+   - :guilabel:`Email`
 
    .. image:: brazil/contact-configuration.png
-     :alt: Contact configuration.
+      :alt: Contact configuration.
 
    .. note::
       The :guilabel:`CPF`, :guilabel:`IE`, :guilabel:`IM`, and :guilabel:`SUFRAMA code` fields are
@@ -269,12 +337,24 @@ Before using the integration, specify the following information on the contact:
    - :guilabel:`Fiscal Position`: add the AvaTax fiscal position to automatically compute taxes on
      sale orders and invoices automatically
    - :guilabel:`Tax Regime`: federal tax regime
-   - :guilabel:`ICMS Taxpayer Type`: taxpayer type determines if the contact is within the ICMS
-     regime, if it is exempt, or if it is a non-taxpayer
+   - :guilabel:`ICMS Taxpayer Type`: taxpayer type determines if the contact is within the
+     :guilabel:`ICMS regime`, :guilabel:`Exempt status`, or :guilabel:`Non-taxpayer`
    - :guilabel:`Main Activity Sector`: list of main activity sectors of the contact
 
    .. image:: brazil/contact-fiscal-configuration.png
       :alt: Contact fiscal configuration.
+
+#. Configure the following extra :guilabel:`Fiscal Information` if you are going to issue NFS-e:
+
+   - Add the :guilabel:`Fiscal Position` for :ref:`AvaTax Brazil <brazil/fiscal-positions>`
+   - :guilabel:`COFINS Details`: :guilabel:`Taxable, Not Taxable, Taxable with rate 0%, Exempt,
+     Suspended`
+   - :guilabel:`PIS Details`: :guilabel:`Taxable, Not Taxable, Taxable with rate 0%, Exempt,
+     Suspended`
+   - :guilabel:`CSLL Taxable`: If the company is subject to CSLL or not
+
+   .. image:: brazil/contact-fiscal-configuration-nfse.png
+      :alt: Contact fiscal configuration for NFSe.
 
 .. _brazil/fiscal-positions:
 
@@ -285,8 +365,8 @@ To compute taxes and send electronic invoices on sale orders and invoices, both 
 :guilabel:`Detect Automatically` and the :guilabel:`Use AvaTax API` options need to be enabled in
 the :guilabel:`Fiscal Position`.
 
-The :guilabel:`Fiscal Position` can be configured on the contact or selected when creating a sales
-order or an invoice.
+The :guilabel:`Fiscal Position` can be configured on the :ref:`contact <brazil/contacts>` or
+selected when creating a sales order or an invoice.
 
 .. image:: brazil/fiscal-position-configuration.png
    :alt: Fiscal position configuration
@@ -295,8 +375,8 @@ Workflows
 =========
 
 This section provides an overview of the actions that trigger `API calls
-<https://en.wikipedia.org/wiki/API>`_ for tax computation, and how to send an electronic invoice for
-goods (NF-e) for government validation.
+<https://en.wikipedia.org/wiki/API>`_ for tax computation, along with instructions on how to send
+electronic invoices for goods (NF-e) and services (NFS-e) for government validation.
 
 .. warning::
    Please note that each |API| call incurs a cost. Be mindful of the actions that trigger these
@@ -314,7 +394,7 @@ any of the following ways:
 - **Quotation confirmation**
     Confirm a quotation into a sales order.
 - **Manual trigger**
-    Click on :guilabel:`Compute Taxes Using Avatax`.
+    Click on :guilabel:`Compute Taxes Using AvaTax`.
 - **Preview**
     Click on the :guilabel:`Preview` button.
 - **Email a quotation / sales order**
@@ -326,8 +406,8 @@ any of the following ways:
 Tax calculations on invoices
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Trigger an |API| call to calculate taxes on a customer invoice automatically with AvaTax any of the
-following ways:
+Trigger an |API| call to calculate taxes on a customer invoice automatically with AvaTax in any of
+the following ways:
 
 - **Manual trigger**
     Click on :guilabel:`Compute Taxes Using AvaTax`.
@@ -351,21 +431,21 @@ Electronic documents
 Customer invoices
 ~~~~~~~~~~~~~~~~~
 
-To process an electronic invoice for goods (NF-e), the invoice needs to be confirmed and taxes need
-to be computed by Avalara. Once that step is done, click on the :guilabel:`Send \& Print` button in
-the upper left corner, and a pop-up will appear. Then click on :guilabel:`Process e-invoice` and any
-of the other options - :guilabel:`Download` or :guilabel:`Email`. Finally, click on :guilabel:`Send
-\& Print` to process the invoice against the government.
+To process an electronic invoice for goods (NF-e) or services (NFS-e), the invoice needs to be
+confirmed and taxes need to be computed by Avalara. Once that step is done, click on the
+:guilabel:`Send & Print` button in the upper left corner. In the pop-up that appears, click on
+:guilabel:`Process e-invoice` and any of the other options - :guilabel:`Download` or
+:guilabel:`Email`. Finally, click on :guilabel:`Send & Print` to process the invoice with the
+government.
 
-Before sending the electronic invoice for goods (NF-e) some fields need to be filled out on the
-invoice:
+Before sending the electronic invoice for goods (NF-e) or services (NFS-e), some fields need to be
+filled out on the invoice:
 
-- :guilabel:`Customer` with all the customer information
-- :guilabel:`Payment Method: Brazil` (how the invoice is planned to be paid)
+- :guilabel:`Customer`, with all the customer information
+- :guilabel:`Payment Method: Brazil`: how the invoice is planned to be paid
 - :guilabel:`Fiscal Position` set as the :guilabel:`Automatic Tax Mapping (Avalara Brazil)`
-- :guilabel:`Document Type` set as :guilabel:`(55) Electronic Invoice (NF-e)`. This is the only
-   electronic document supported at the moment. Non-electronic invoices can be registered, and other
-   document types can be activated if needed
+- :guilabel:`Document Type` set as :guilabel:`(55) Electronic Invoice (NF-e)` or :guilabel:`(SE)
+  Electronic Service Invoice (NFS-e)`
 
 There are some other optional fields that depend on the nature of the transaction. These fields are
 not required, so no errors will appear from the government if these optional fields are not
@@ -392,6 +472,9 @@ Credit notes
 If a sales return needs to be registered, then a credit note can be created in Odoo to be sent to
 the government for validation.
 
+.. note::
+   Credit notes are only available for electronic invoices for goods (NF-e).
+
 .. seealso::
    :ref:`Issue a credit note <accounting/issue-credit-note>`
 
@@ -401,7 +484,9 @@ Debit Notes
 If additional information needs to be included, or values need to be corrected that were not
 accurately provided in the original invoice, a debit note can be issued.
 
-.. important::
+.. note::
+   Debit notes are only available for electronic invoices for goods (NF-e).
+
    Only the products included in the original invoice can be part of the debit note. While changes
    can be made to the product's unit price or quantity, products **cannot** be added to the debit
    note. The purpose of this document is only to declare the amount that you want to add to the
@@ -415,22 +500,37 @@ Invoice cancellation
 
 It is possible to cancel an electronic invoice that was validated by the government.
 
-.. important::
+.. note::
    Check whether the electronic invoice is still within the cancellation deadline, which may vary
    according to the legislation of each state.
 
-This can be done in Odoo by clicking :guilabel:`Request Cancel` and adding a cancellation
-:guilabel:`Reason` on the pop-up that appears. If you want to send this cancellation reason to the
-customer via email, activate the :guilabel:`E-mail` checkbox.
+E-invoices for goods (NF-e)
+***************************
+
+Cancel an e-invoice for goods (NF-e) in Odoo by clicking :guilabel:`Request Cancel` and adding a
+cancellation :guilabel:`Reason` on the pop-up that appears. If you want to send this cancellation
+reason to the customer via email, activate the :guilabel:`E-mail` checkbox.
 
 .. image:: brazil/invoice-cancellation.png
    :alt: Invoice cancellation reason in Odoo.
 
+.. note::
+   This is an electronic cancellation, which means that Odoo will send a request to the government
+   to cancel the NF-e, and it will then consume one |IAP| credit, as an |API| call occurs.
+
+E-invoices for services (NFS-e)
+*******************************
+
+Cancel an e-invoice for services (NFS-e) in Odoo by clicking :guilabel:`Request Cancel`. In this
+case, there is no electronic cancellation process, as not every city has this service available. The
+user needs to manually cancel this NFS-e on the city portal. Once that step is completed, they can
+request the cancellation in Odoo, which will cancel the invoice.
+
 Correction letter
 ~~~~~~~~~~~~~~~~~
 
-A correction letter can be created and linked to an electronic invoice that was validated by the
-government.
+A correction letter can be created and linked to an electronic invoice for goods (NF-e) that was
+validated by the government.
 
 This can be done in Odoo by clicking :guilabel:`Correction Letter` and adding a correction
 :guilabel:`Reason` on the pop-up that appears. To send this correction reason to a customer via
@@ -438,6 +538,9 @@ email, activate the :guilabel:`E-mail` checkbox.
 
 .. image:: brazil/correction-letter.png
    :alt: Correction letter reason in Odoo.
+
+.. note::
+   Correction letters are only available for electronic invoices for goods (NF-e).
 
 Invalidate invoice number range
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -456,6 +559,10 @@ journal, and click the :menuselection:`⚙️ (gear) icon --> Invalidate Number 
    :alt: Number range invalidation wizard in Odoo.
 
 .. note::
+   Invalidate invoice number range documents are only available for electronic invoices for goods
+   (NF-e).
+
+.. note::
    The log of the canceled numbers along with the XML file are recorded in the chatter of the
    journal.
 
@@ -468,8 +575,8 @@ is recorded on the :ref:`customer invoices <brazil/electronic-documents>`.
 
 These Brazilian specific fields are:
 
-- :guilabel:`Payment Method: Brazil` (how the invoice is planned to be paid).
-- :guilabel:`Document Type` used by your vendor.
-- :guilabel:`Document Number` (the invoice number from your supplier).
-- :guilabel:`Freight Model` (how goods are planned to be transported - domestic).
-- :guilabel:`Transporter Brazil` (who is doing the transportation).
+- :guilabel:`Payment Method: Brazil`: how the invoice is planned to be paid
+- :guilabel:`Document Type`: used by your vendor
+- :guilabel:`Document Number`: the invoice number from your supplier
+- :guilabel:`Freight Model`: **NF-e specific** how goods are planned to be transported - domestic
+- :guilabel:`Transporter Brazil`: **NF-e specific** who is doing the transportation.
