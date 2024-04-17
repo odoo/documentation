@@ -128,6 +128,12 @@ In the :guilabel:`Trigger On` field, decide whether the automated rule should be
    When the :guilabel:`Trigger Now` button is clicked, Odoo will trigger the action on *all* linked
    subscriptions, regardless of possible timed conditions.
 
+.. note::
+   Sending a SMS text message in Odoo requires In-App Purchase (IAP) credit or tokens. For more
+   information on :abbr:`IAP (In-App Purchase)`, visit :doc:`../../essentials/in_app_purchase`.
+   For more information on sending SMS messages, visit
+   :doc:`../../marketing/sms_marketing/essentials/sms_essentials`.
+
 If :guilabel:`Timed Condition` is selected in the :guilabel:`Trigger On` field, the following fields
 appear:
 
@@ -160,3 +166,4 @@ If :guilabel:`Create next activity` is selected in the :guilabel:`Action To Do` 
    - :doc:`../subscriptions`
    - :doc:`plans`
    - :doc:`products`
+   - :doc:`../../essentials/in_app_purchase`
