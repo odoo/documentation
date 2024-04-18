@@ -21,7 +21,7 @@ three-step receipts. First, make sure the *Multi-Step Routes* option is enabled 
 :menuselection:`Inventory --> Configuration --> Settings --> Warehouse`. Note that activating
 :guilabel:`Multi-Step Routes` will also activate *Storage Locations*.
 
-.. image:: receipts_three_steps/multi-step-routes.png
+.. image:: receipts_three_steps/receipts-three-steps-multi-step-routes.png
    :align: center
    :alt: Activate multi-step routes and storage locations in Inventory settings.
 
@@ -32,7 +32,7 @@ be edited. Doing so reveals the detail form for that specific warehouse.
 On that :guilabel:`Warehouse` detail form page, select :guilabel:`Receive goods in input, then
 quality and then stock (3 steps)` for :guilabel:`Incoming Shipments`.
 
-.. image:: receipts_three_steps/three-step-receipt-settings.png
+.. image:: receipts_three_steps/receipts-three-steps-incoming-shipments.png
    :align: center
    :alt: Set incoming shipment option to receive in three steps.
 
@@ -55,77 +55,61 @@ A :guilabel:`Receipt` smart button will appear in the top right, and the receipt
 with the purchase order. Clicking on the :guilabel:`Receipt` smart button will show the receipt
 order.
 
-.. image:: receipts_three_steps/three-step-purchase-receipt.png
+.. image:: receipts_three_steps/receipts-three-steps-smart-button.png
    :align: center
    :alt: After confirming a purchase order, a Receipt smart button will appear.
 
 Process a receipt
 -----------------
 
-One receipt and two internal transfers (one transfer to quality, and a subsequent transfer to stock)
-will be created once the purchase order is confirmed. To view these transfers, go to
-:menuselection:`Inventory --> Operations --> Transfers`.
+Once the purchase order (PO) is confirmed, a receipt (`WH/IN`) operation is generated and ready to
+process.
 
-.. image:: receipts_three_steps/three-step-transfers.png
+The receipt can be confirmed from the original purchase order form, or it can be accessed by
+navigating to the :menuselection:`Inventory app`, and locating the :guilabel:`Receipts` task card.
+
+Click the :guilabel:`# To Process` button to reveal all incoming receipts to process. Click the
+receipt associated with the previous purchase order.
+
+Click :guilabel:`Validate` to validate the receipt, and move the product to the destination
+location, :guilabel:`WH/Input`.
+
+.. image:: receipts_three_steps/receipts-three-steps-receipt-form.png
    :align: center
-   :alt: The status of the three receipt transfers will show which operation is ready and which ones
-         are waiting another operation.
-
-The status of the receipt transferring the product to the input location will be :guilabel:`Ready`,
-since the receipt must be processed before any other operation can occur. The status of the two
-internal transfers will be :guilabel:`Waiting Another Operation`, since the transfers cannot be
-processed until the linked step before each transfer is completed.
-
-The status of the first internal transfer to *quality* will only change to :guilabel:`Ready` when
-the receipt has been marked :guilabel:`Done`. The status for the second internal transfer to *stock*
-will be marked :guilabel:`Ready` only after the transfer to quality has been marked
-:guilabel:`Done`.
-
-The receipt can also be found in the :menuselection:`Inventory` application. In the
-:guilabel:`Overview` dashboard, click the :guilabel:`1 To Process` smart button in the
-:guilabel:`Receipts` kanban card.
-
-.. image:: receipts_three_steps/three-step-receive-kanban.png
-   :align: center
-   :alt: One Receipt ready to process in the Inventory Overview kanban view.
-
-Click on the receipt associated with the purchase order, then click :guilabel:`Validate` to complete
-the receipt and move the product to the :guilabel:`Input Location`.
-
-.. image:: receipts_three_steps/validate-three-step-receipt.png
-   :align: center
-   :alt: Validate the receipt by clicking Validate, and the product will be transferred to the
-         WH/Quality location.
+   :alt: Receipt operation for product being moved to WH/Input location.
 
 Process a transfer to Quality Control
 -------------------------------------
 
-Once the product is in the :guilabel:`Input Location`, the internal transfer is ready to move the
-product to :guilabel:`Quality Control`. In the :menuselection:`Inventory` :guilabel:`Overview`
-dashboard, click the :guilabel:`1 To Process` smart button in the :guilabel:`Internal Transfers`
-kanban card.
+Once the receipt has been validated, an internal transfer operation to move the product to quality
+control is ready to process.
 
-.. image:: receipts_three_steps/three-step-quality-transfer.png
+Click :guilabel:`Inventory Overview` in the breadcrumbs to navigate back to the dashboard, and
+locate the :guilabel:`Internal Transfers` task card.
+
+Select the :guilabel:`# To Process` button to reveal all internal transfers to process. Then, choose
+the internal transfer associated with the validated receipt.
+
+Once ready, click :guilabel:`Validate` to complete the transfer, and move the product from
+:guilabel:`WH/Input` to :guilabel:`WH/Quality Control`.
+
+.. image:: receipts_three_steps/receipts-three-steps-internal-transfer.png
    :align: center
-   :alt: One Internal Transfer ready to process in the Inventory Overview kanban view.
-
-Click on the :guilabel:`Transfer` associated with the purchase order, then click
-:guilabel:`Validate` to complete the transfer and move the product to the :guilabel:`Quality
-Control` location. Once the transfer is validated, the product is ready for the quality inspection,
-but is not available for manufacturing or delivery orders.
-
-.. image:: receipts_three_steps/validate-three-step-quality-move.png
-   :align: center
-   :alt: Validate the internal transfer to move the item to the Quality Control location.
+   :alt: Internal transfer for product being moved to quality control zone.
 
 Process a transfer to stock
 ===========================
 
-Once the product is in the :guilabel:`Quality Control` location, the final internal transfer is
-ready to move the product to :guilabel:`Stock`. In the :guilabel:`Inventory` overview dashboard,
-click the :guilabel:`1 To Process` smart button in the :guilabel:`Internal Transfers` Kanban card.
+Once the internal transfer to move the product to quality control has been validated, another
+internal transfer operation to move the product into warehouse stock is ready to process.
 
-Click on the final :guilabel:`Transfer` associated with the purchase order, then click
-:guilabel:`Validate` to complete the transfer and move the product to stock. Once the transfer is
-validated, the product enters the stock and is available for customer deliveries or manufacturing
-orders.
+Click :guilabel:`YourCompany: Internal Transfers` in the breadcrumbs to reveal the list of all
+internal transfers to process. Then, select the new internal transfer to move the product from
+`WH/Quality Control` to `WH/Stock`.
+
+Once ready, click :guilabel:`Validate` to complete the transfer, and move the product from
+:guilabel:`WH/Quality Control` to :guilabel:`WH/Stock`.
+
+.. image:: receipts_three_steps/receipts-three-steps-second-transfer.png
+   :align: center
+   :alt: Internal transfer for product being moved to warehouse stock.
