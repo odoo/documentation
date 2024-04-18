@@ -83,10 +83,10 @@ In the :guilabel:`In-App Purchases` section, under the :guilabel:`Odoo IAP` feat
    :align: center
    :alt: Buy credits in the Odoo IAP settings.
 
-.. tip::
-
-   Users of Odoo Online (SaaS) Enterprise automatically have free trial credits in their database to
-   test any IAP features.
+.. note::
+   Enterprise Odoo users with a valid subscription get free credits to test :abbr:`IAP (In-App
+   Purchase)` features before deciding to purchase more credits for the database. This includes
+   demo/training databases, educational databases, and one-app-free databases.
 
 .. seealso::
    :doc:`/applications/essentials/in_app_purchase`
