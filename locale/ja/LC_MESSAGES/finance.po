@@ -2077,6 +2077,9 @@ msgid ""
 "mark it as :guilabel:`To Check`. Any :ref:`reconciliation model buttons "
 "<reconciliation/button>` are also available in the resulting entry section."
 msgstr ""
+"右上の結果項目セクションには、選択した銀行取引と対応する項目が表示され、残りの借方または貸方が含まれます。このセクションでは、消込を検証したり、 "
+":guilabel:`未確認` としてマークすることができます。ref:`消込モデルボタン <reconciliation/button>` "
+"は、結果入力セクションでも使用できます。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:59
 msgid "Reconcile transactions"
@@ -2091,6 +2094,10 @@ msgid ""
 "<reconciliation/manual-operations>`, and :ref:`reconciliation model buttons "
 "<reconciliation/button>`."
 msgstr ""
+"取引は :doc:`消込モデル1` を使って自動的に照合することもできますし、 :ref:`既存仕訳 <reconciliation/existing-"
+"entries>`, :ref:`バッチ支払 <reconciliation/batch-payments>`, :ref:`手作業 "
+"<reconciliation/manual-operations>`, :ref:`消込モデルボタン <reconciliation/button>`"
+" を使って消込することもできます。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:67
 msgid "Select a transaction among unmatched bank transactions."
@@ -2105,6 +2112,10 @@ msgid ""
 "<reconciliation/batch-payments>`, and :ref:`reconciliation model buttons "
 "<reconciliation/button>`."
 msgstr ""
+"相手方項目を定義します。相手方項目の定義にはいくつかのオプションがあります。 :ref:`既存仕訳と一致 "
+"<reconciliation/existing-entries>`, :ref:`手作業 <reconciliation/manual-"
+"operations>`, :ref:`バッチ支払 <reconciliation/batch-payments>`, :ref:`消込モデルボタン "
+"<reconciliation/button>` などがあります。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:72
 msgid ""
@@ -2147,6 +2158,7 @@ msgid ""
 ":doc:`reconciliation models <reconciliation_models>`, with suggested entries"
 " appearing first."
 msgstr ""
+"このタブには、消込モデルに従ってOdooが自動的に事前選択した一致する仕訳が表示されます。仕訳のオーダは:doc:`消込モデル<reconciliation_models>`に基づき、推奨される仕訳が最初に表示されます。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:97
 msgid ""
@@ -2209,10 +2221,12 @@ msgid ""
 "quickly reconcile bank transactions manually and can also be used in "
 "combination with existing entries."
 msgstr ""
+"doc:`消込モデル<reconciliation_models>` "
+"ボタンを頻繁に使用する手動操作に使用します。これらのカスタムボタンを使用すると、銀行取引を手動で素早く照合することができ、既存の仕訳と組み合わせて使用することもできます。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:3
 msgid "Reconciliation models"
-msgstr ""
+msgstr "消込モデル"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:5
 msgid ""
@@ -2221,12 +2235,15 @@ msgid ""
 "recurring entries like bank fees. Reconciliation models can also be helpful "
 "in handling :doc:`cash discounts <../customer_invoices/cash_discounts>`."
 msgstr ""
+"消込モデルは :doc:`銀行消込<reconciliation>` "
+"のプロセスを自動化するために使用され、特に銀行手数料のような定期的な入力を扱う場合に便利です。消込モデルは :doc:`現金値引 "
+"<../customer_invoices/cash_discounts>` の処理にも役立ちます。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:9
 msgid ""
 "Each model is created based on a :ref:`model type <models/type>` and "
 ":guilabel:`bank transaction conditions`."
-msgstr ""
+msgstr "各モデルは :ref:`モデルタイプ <models/type>` と :guilabel:`銀行取引条件` に基づいて作成されます。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:14
 msgid ""
@@ -2234,10 +2251,12 @@ msgid ""
 "<https://www.odoo.com/slides/slide/reconciliation-"
 "models-1841?fullscreen=1>`_"
 msgstr ""
+"`Odooチュートリアル: 消込モデル <https://www.odoo.com/slides/slide/reconciliation-"
+"models-1841?fullscreen=1>`_"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:19
 msgid "Reconciliation model types"
-msgstr ""
+msgstr "消込モデルタイプ"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:21
 msgid ""
@@ -2246,6 +2265,8 @@ msgid ""
 "Models`. For each reconciliation model, a :guilabel:`Type` must be set. "
 "Three types of models exist:"
 msgstr ""
+"消込モデルは :menuselection:`会計 --> 設定 --> 銀行： 照合モデル`です。各消込モデルには :guilabel:`タイプ` "
+"を設定する必要があります。3種類のモデルが存在します:"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:25
 msgid ""
@@ -2256,6 +2277,8 @@ msgid ""
 "model determine the counterpart entry's account(s), amount(s), label(s), and"
 " analytic distribution;"
 msgstr ""
+":guilabel:`相手勘定エントリを生成するボタン`: "
+"銀行消込ビューの結果仕訳のセクションにボタンが作成されます。このボタンをクリックすると、モデルで設定された規則に基づいて、有効な取引と消込するための相手仕訳が生成されます。モデルで指定されたルールは、相手エントリーの勘定科目、金額、ラベル、分析分布を決定します；"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:30
 msgid ""
@@ -2263,6 +2286,8 @@ msgid ""
 "transactions to match the transaction to a new entry based on conditions "
 "that must match the information on the transaction;"
 msgstr ""
+":guilabel:`相手勘定エントリを提案する規則`: "
+"取引の情報と一致しなければならない条件に基づいて、取引を新しいエントリに一致させるために定期的な取引に使用されます;"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:32
 msgid ""
@@ -2270,10 +2295,12 @@ msgid ""
 " match the transaction to existing invoices, bills, or payments based on "
 "conditions that must match the information on the transaction."
 msgstr ""
+":guilabel:`顧客請求書/取引先請求書に一致させるための規則`: "
+"定期的な取引に使用され、取引の情報と一致しなければならない条件に基づいて、取引を既存の顧客請求書、取引先請求書、または支払に一致させます。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:37
 msgid "Default reconciliation models"
-msgstr ""
+msgstr "デフォルト消込モデル"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:39
 msgid ""
@@ -2281,6 +2308,8 @@ msgid ""
 "company's fiscal localization. These can be updated if needed. Users can "
 "also create their own reconciliation models by clicking :guilabel:`New`."
 msgstr ""
+"Odooでは、企業の会計ローカライゼーションに応じて異なるモデルがデフォルトで利用可能です。これらは必要に応じて更新することができます。ユーザは "
+":guilabel:`新規` をクリックして独自の消込モデルを作成することもできます。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:44
 msgid ""
@@ -2288,14 +2317,15 @@ msgid ""
 " *sequence* of models is applied. You can rearrange the order by dragging "
 "and dropping the handle next to the name."
 msgstr ""
+"レコードが複数の消込モデルと一致する場合、モデルの*シーケンス*の最初のものが適用されます。名前の横にあるハンドルをドラッグ＆ドロップすることで、オーダを並べ替えることができます。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:0
 msgid "Rearrange the sequence of models in the list view."
-msgstr ""
+msgstr "リストビューでモデルのシーケンスを並べ替えます。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:51
 msgid "Invoices/Bills perfect match"
-msgstr ""
+msgstr "顧客請求書/取引先請求書完全一致"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:53
 msgid ""
@@ -2303,12 +2333,13 @@ msgid ""
 "Odoo to suggest matching existing invoices or bills with a bank transaction "
 "based on set conditions."
 msgstr ""
+"このモデルは、Odooが設定された条件に基づいて、既存の顧客請求書や取引先請求書と銀行取引との一致を提案できるようにするため、モデルの*シリーズ*の最上位に位置する必要があります。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst-1
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst-1
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst-1
 msgid "Set rules to trigger the reconciliation."
-msgstr ""
+msgstr "消込をトリガする規則を設定する"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:59
 msgid ""
@@ -2319,10 +2350,11 @@ msgid ""
 ":guilabel:`Partner is set` is selected) to suggest the correct counterpart "
 "entry and reconcile the payment automatically."
 msgstr ""
+"Odooは:guilabel:`自動検証`オプションが選択され、モデル条件が完全に満たされると、自動的に支払を消込します。この場合、銀行明細の明細で顧客請求書/支払明細の参照(:guilabel:`ラベル`が選択されている場合)と取引先の名前(:guilabel:`取引先設定済`が選択されている場合)を見つけ、正しい取引先の入力を提案し、支払を自動的に消込することになります。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:66
 msgid "Invoices/Bills partial match if underpaid"
-msgstr ""
+msgstr "顧客請求書/取引先請求書 未払の場合は部分一致"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:68
 msgid ""
@@ -2332,18 +2364,22 @@ msgid ""
 "reconciled with the account indicated in the :guilabel:`counterpart entries`"
 " tab."
 msgstr ""
+"このモデルは、例えば**現金割引**の場合など、受取額が顧客請求書よりわずかに低い場合に、支払額と部分的に一致する顧客請求書または取引先請求書を提案します。差額は"
+" :guilabel:`相手勘定エントリ` タブに示された勘定科目と調整されます。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:73
 msgid ""
 "The reconciliation model :guilabel:`Type` is :guilabel:`Rule to match "
 "invoices/bills`, and the :guilabel:`Payment tolerance` should be set."
 msgstr ""
+"消込モデルの :guilabel:`タイプ` は :guilabel:`取引先請求書/請求書と一致させる規則` で、 "
+":guilabel:`支払許容範囲` を設定します。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:80
 msgid ""
 "The :guilabel:`Payment tolerance` is only applicable to lower payments. It "
 "is disregarded when an overpayment is received."
-msgstr ""
+msgstr "guilabel:`支払許容範囲` は低額の支払にのみ適用されます。過払い金を受け取った場合は無視されます。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:84
 msgid ":doc:`../customer_invoices/cash_discounts`"
@@ -2351,7 +2387,7 @@ msgstr ":doc:`../customer_invoices/cash_discounts`"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:87
 msgid "Line with bank fees"
-msgstr ""
+msgstr "銀行手数料の明細"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:89
 msgid ""
@@ -2361,6 +2397,9 @@ msgid ""
 " be used for example, to identify the information referring to the "
 ":guilabel:`Bank fees` in the label of the transaction."
 msgstr ""
+"このモデルはモデルに設定された規則に従って、相手勘定エントリを提案します。この場合、消込モデル :guilabel:`タイプ` は "
+":guilabel:`相手勘定エントリを提案する規則` であり、 :guilabel:`ラベル` は、例えば、取引のラベルの "
+":guilabel:`銀行手数料` を参照する情報を識別するために使用できます。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:98
 msgid ""
@@ -2370,6 +2409,8 @@ msgid ""
 "so it's essential to use it judiciously and with a good understanding of the"
 " patterns you're working with."
 msgstr ""
+"Regular "
+"expressions(正規表現)<https://regexone.com/>`_はしばしば**Regex**と略され、Odooのシステム内でデータを検索、検証、操作するために様々な方法で使用することができます。正規表現は強力ですが複雑なため、使用するパターンをよく理解し、慎重に使用する必要があります。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:103
 msgid ""
@@ -2378,14 +2419,16 @@ msgid ""
 "expression. Odoo automatically retrieves the transactions that match your "
 "Regex expression and the conditions specified in your model."
 msgstr ""
+"正規表現を消込モデルで使用するには、 :guilabel:`取引タイプ` を :guilabel:`正規表現に一致` "
+"に設定し、式を追加します。Odooは正規表現とモデルで指定した条件に一致する取引を自動的に検索します。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:0
 msgid "Using Regex in Odoo"
-msgstr ""
+msgstr "Odooで正規表現を使用"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:111
 msgid "Partner mapping"
-msgstr ""
+msgstr "取引先マッピング"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:113
 msgid ""
@@ -2397,6 +2440,7 @@ msgid ""
 "incoming payment meets these criteria, Odoo automatically maps it to the "
 "corresponding customer's account."
 msgstr ""
+"取引先マッピングでは、取引を正しい取引先口座に自動的に照合する規則を設定できるため、時間を節約し、手作業による消込時に発生する可能性のあるエラーのリスクを軽減できます。例えば、取引明細に特定の参照番号やキーワードを含む入金に対して、取引先マッピング規則を作成することができます。入金がこれらの条件を満たすと、Odooは自動的に対応する顧客口座にマッピングします。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:119
 msgid ""
@@ -2404,10 +2448,12 @@ msgid ""
 "and enter the :guilabel:`Find Text in Label`, :guilabel:`Find Text in "
 "Notes`, and :guilabel:`Partner`."
 msgstr ""
+"取引先マッピング規則を作成するには、 :guilabel:`取引先マッピング`タブに行き、 :guilabel:`ラベルのテキストを検索`、 "
+":guilabel:`ノートのテキストを検索`、 :guilabel:`取引先` を入力します。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst-1
 msgid "defining partner mapping"
-msgstr ""
+msgstr "取引先マッピングを定義する"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:5
 msgid ""
@@ -2495,7 +2541,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:42
 msgid ":doc:`/applications/essentials/export_import_data`"
-msgstr ""
+msgstr ":doc:`/applications/essentials/export_import_data`"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:47
 msgid "Register bank transactions manually"
@@ -2675,6 +2721,7 @@ msgid ""
 "within the system. There is nothing to stop users from creating their own "
 "draft invoices."
 msgstr ""
+"顧客請求書は、初期状態ではドラフト状態に設定されています。これらの顧客請求書は未検証のままですが、システム内で会計上の影響はありません。ユーザが独自の顧客請求書を作成することを妨げるものは何もありません。"
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:53
 msgid "Let's create a customer invoice with following information:"
@@ -3661,6 +3708,8 @@ msgid ""
 "Reports, such as the delivery slip and invoice report, can be "
 ":doc:`customized using Studio </applications/studio/pdf_reports>`."
 msgstr ""
+"納品書や顧客請求書などのレポートは、 :doc:`スタジオを使用してカスタマイズすることができます "
+"</applications/studio/pdf_reports>`。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/customer_addresses.rst:38
 msgid ""
@@ -5228,6 +5277,8 @@ msgid ""
 " requires prepaid stamps (=credits) to work. Sending one document consumes "
 "one stamp."
 msgstr ""
+"郵送は :doc:`/applications/essentials/in_app_purchase` "
+"サービスで、動作にはプリペイド切手(=クレジット)が必要です。ドキュメントを1通送ると切手が1枚消費されます。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:50
 msgid ""
@@ -9023,11 +9074,11 @@ msgstr ""
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:93
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:100
 msgid ":doc:`/applications/essentials/in_app_purchase`"
-msgstr ""
+msgstr ":doc:`/applications/essentials/in_app_purchase`"
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:94
 msgid ":doc:`/applications/marketing/sms_marketing/pricing/pricing_and_faq`"
-msgstr ""
+msgstr ":doc:`/applications/marketing/sms_marketing/pricing/pricing_and_faq`"
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:95
 msgid ":doc:`../customer_invoices/snailmail`"
@@ -9331,7 +9382,7 @@ msgstr "\"今すぐ支払\"をクリックした後の決済プロバイダの�
 msgid ""
 "Make sure your :doc:`payment providers are correctly configured "
 "<../../payment_providers>`."
-msgstr ""
+msgstr " :doc:`決済プロバイダーが正確に設定されている <../../payment_providers>`ことを確認して下さい。"
 
 #: ../../content/applications/finance/accounting/payments/online.rst:26
 msgid ""
@@ -9340,6 +9391,8 @@ msgid ""
 "payment provider activated, but you still have to fill out the payment "
 "details."
 msgstr ""
+"デフォルトでは\":doc:`振込 </applications/finance/payment_providers/wire_transfer>`\""
+" が唯一の支払いプロバイダーですが、支払に関する詳細を記入する必要があります。"
 
 #: ../../content/applications/finance/accounting/payments/online.rst:29
 msgid ""
@@ -9441,6 +9494,7 @@ msgid ""
 "</administration/on_premise/update>`, or by contacting your integrating "
 "partner."
 msgstr ""
+"オンプレミスまたはパートナー経由でOdooを使用している場合は、:doc:`このドキュメントページ</administration/on_premise/update>`の詳細に従って、または統合パートナーに連絡して、インストールを更新する必要があります。"
 
 #: ../../content/applications/finance/accounting/payments/online/install_portal_patch.rst:33
 msgid "Update the list of available modules"
@@ -15219,6 +15273,9 @@ msgid ""
 "you can automatically send your scanned invoices to the :guilabel:`Finance` "
 "workspace (e.g., `inbox-financial@example.odoo.com`)."
 msgstr ""
+"doc:`ドキュメント</applications/productivity/documents>` "
+"アプリを使っている場合、スキャンした顧客請求書を自動的に :guilabel:`会計` ワークスペース(例：`inbox-"
+"financial@example.odoo.com`)に送ることができます。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:59
 msgid ""
@@ -15772,6 +15829,10 @@ msgid ""
 "domain alias is configured, the email address field will be visible beneath "
 "the incoming emails section."
 msgstr ""
+"ドメインエイリアスの設定が必要な場合、:guilabel:`ドメインエイリアスを設定する` "
+"がメールアドレス欄の代わりに受信メールチェックボックスの下に表示されます。設定方法や詳細については、こちらのドキュメントを参照して下さい: "
+":doc:`/applications/websites/website/configuration/domain_names`. "
+"ドメインエイリアスが設定されると、メールアドレスフィールドが受信メールセクションの下に表示されます。"
 
 #: ../../content/applications/finance/expenses.rst:223
 msgid ""
@@ -16113,6 +16174,7 @@ msgid ""
 "Please refer to :doc:`this document </applications/general/users>` to learn "
 "more about managing users and their access rights."
 msgstr ""
+"ユーザとそのアクセス権の管理については、:doc:`このドキュメント</applications/general/users>` を参照して下さい。"
 
 #: ../../content/applications/finance/expenses.rst:397
 msgid ""
@@ -19714,7 +19776,7 @@ msgstr "Odoo 14.0"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:365
 msgid ":doc:`/administration/supported_versions`"
-msgstr ""
+msgstr ":doc:`/administration/supported_versions`"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:367
 msgid ""
@@ -19944,6 +20006,9 @@ msgid ""
 "IoT Box recognizes the FDM, go to the IoT homepage and scroll down the "
 ":guilabel:`IOT Device` section, which should display the FDM."
 msgstr ""
+"IoTボックスが認証されたら、:doc:`connect <../../general/iot/config/connect>` "
+"をデータベースに接続します。IoTボックスがFDMを認識していることを確認するには、IoTホームページに行き、 :guilabel:`IOT "
+"Device` セクションを下にスクロールすると、FDMが表示されるはずです。"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst-1
 msgid "Hardware status page on a registered IoT Box"
@@ -20721,15 +20786,15 @@ msgstr "`l10n_cl_reports`"
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:39
 msgid ""
 "Adds the *Propuesta F29* and *Balance Tributario (8 columnas)* reports."
-msgstr ""
+msgstr "Propuesta F29*と*Balance Tributario (8 columnas)*レポートを追加。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:40
 msgid ":guilabel:`Chile - E-invoicing`"
-msgstr ""
+msgstr ":guilabel:`チリ - 電子請求`"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:41
 msgid "`l10n_cl_edi`"
-msgstr ""
+msgstr "`l10n_cl_edi`"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:42
 msgid ""
@@ -20737,14 +20802,16 @@ msgid ""
 "electronic invoices online based on the :abbr:`SII (Servicio de Impuestos "
 "Internos)` regulations."
 msgstr ""
+"`SII（Servicio de Impuestos "
+"Internos）`規則に基づき、オンラインで電子顧客請求書を作成・受領するための技術的・機能的要件を全て含みます。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:44
 msgid ":guilabel:`Chile - Electronic Receipt`"
-msgstr ""
+msgstr ":guilabel:`チリ - 電子領収書`"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:45
 msgid "`l10n_cl_boletas`"
-msgstr ""
+msgstr "`l10n_cl_boletas`"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:46
 msgid ""
@@ -20752,14 +20819,16 @@ msgid ""
 "electronic invoices digitally based on the :abbr:`SII (Servicio de Impuestos"
 " Internos)` regulations."
 msgstr ""
+"SII（Servicio de Impuestos "
+"Internos）`規則に基づき、電子顧客請求書をデジタルで作成・受領するための技術的・機能的要件を全て含みます。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:48
 msgid ":guilabel:`Electronic Exports of Goods for Chile`"
-msgstr ""
+msgstr ":guilabel:`チリ用商品の電子輸出`"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:49
 msgid "`l10n_cl_edi_exports`"
-msgstr ""
+msgstr "`l10n_cl_edi_exports`"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:50
 msgid ""
@@ -20767,14 +20836,16 @@ msgid ""
 "invoices for exporting goods based on the :abbr:`SII (Servicio de Impuestos "
 "Internos)` and customs regulations."
 msgstr ""
+"SII（Servicio de Impuestos "
+"Internos）`および税関規則に基づいて輸出商品の電子顧客請求書を作成するための技術的および機能的要件を含みます。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:52
 msgid ":guilabel:`Chile - E-Invoicing Delivery Guide`"
-msgstr ""
+msgstr ":guilabel:`チリ - 電子請求配送ガイド`"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:53
 msgid "`l10n_cl_edi_stock`"
-msgstr ""
+msgstr "`l10n_cl_edi_stock`"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:54
 msgid ""
@@ -20782,18 +20853,20 @@ msgid ""
 "guides via web service based on the :abbr:`SII (Servicio de Impuestos "
 "Internos)` regulations."
 msgstr ""
+"SII（Servicio de Impuestos "
+"Internos）`規定に基づき、ウェブサービスを通じて配送ガイドを作成するための技術的・機能的要件を全て含みます。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:58
 msgid ""
 "Odoo automatically installs the appropriate package for the company "
 "according to the country selected at the creation of the database."
-msgstr ""
+msgstr "Odooはデータベースの作成時に選択された国に応じて、会社に適したパッケージを自動的にインストールします。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:60
 msgid ""
 "The *Chile - E-Invoicing Delivery Guide* module depends on the *Inventory* "
 "application."
-msgstr ""
+msgstr "*チリ - 電子請求配送ガイド*モジュールは、*在庫*アプリケーションに依存します。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:63
 msgid ""
@@ -20802,6 +20875,9 @@ msgid ""
 "<https://www.sii.cl/factura_electronica/factura_mercado/proceso_certificacion.htm>`_"
 " certification process."
 msgstr ""
+"全ての機能は、企業がすでに`SII Sistema de Facturación de Mercado "
+"<https://www.sii.cl/factura_electronica/factura_mercado/proceso_certificacion.htm>`_"
+" 認証プロセスを完了している場合にのみ利用可能です。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:68
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:41
@@ -20814,14 +20890,15 @@ msgid ""
 "Navigate to :menuselection:`Settings --> Companies: Update Info` and ensure "
 "the following company information is up-to-date and correctly filled in:"
 msgstr ""
+"menuselection:`管理設定 --> 会社: 情報を更新`を開き、以下の会社情報が最新で正しく入力されていることを確認して下さい:"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:73
 msgid ":guilabel:`Company Name`"
-msgstr ""
+msgstr ":guilabel:`会社名`"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:74
 msgid ":guilabel:`Address`:"
-msgstr ""
+msgstr ":guilabel:`住所`:"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:76
 msgid ":guilabel:`Street`"
@@ -20833,7 +20910,7 @@ msgstr ":guilabel:`都市`"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:78
 msgid ":guilabel:`State`"
-msgstr ""
+msgstr ":guilabel:`都道府県/州`"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:79
 msgid ":guilabel:`ZIP`"

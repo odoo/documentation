@@ -2259,6 +2259,14 @@ msgid ""
 "will be changed with the module update triggered afterwards. In these two "
 "cases, we are doing a backup as it may potentially break things."
 msgstr ""
+"Bila Anda merge commit yang mengupdate versi salah satu dari beberapa modul "
+"(di :file:`__manifest__.py`), atau ketergantungan python mereka yang "
+"terhubung (di :file:`requirements.txt`), maka Odoo.sh akan melakukan backup "
+"secara otomatis (ditandai dengan tipe Update di list), karena baik kontainer"
+" akan diubdah dengan penginstalan paket pip baru, atau database akan diubah "
+"dengan update modul yang terpicu setelahnya. Pada dua kasus tersebut, kami "
+"akan melakukan backup karena perubahan tersebut memiliki potensi untuk "
+"merusak."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:276
 msgid ""
@@ -2270,40 +2278,54 @@ msgid ""
 "wrong (those manual backups are available for about one week). To avoid "
 "abuse, we limit manual backups to 5 per day."
 msgstr ""
+"Bila Anda merge commit yang hanya mengubah beberapa code tanpa modifikasi "
+"yang disebutkan di atas, backup tidak akan dilakukan oleh Odoo.sh, karena "
+"container atau database tidak akan dimodifikasi sehingga platform menganggap"
+" ini cukup aman. Tentu saja, sebagai pencegahan ekstra, Anda dapat membuat "
+"backup manual sebelum melakukan perubahan besar di sumber production Anda "
+"sebagai pengaman bila terjadi kesalahan (backup manual tersebut berlaku "
+"selama 1 minggu). Untuk menghindari penyalahgunaan, kami membatasi backup "
+"manual sebanyak 5 kali sehari."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:282
 msgid ""
 "The *import database* feature accepts database archives in the format "
 "provided by:"
 msgstr ""
+"Fitur *impor database* menerima arsip database di format yang disediakan "
+"oleh:"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:284
 msgid ""
 "the standard Odoo databases manager, (available for on-premise Odoo servers "
 "under :code:`/web/database/manager`)"
 msgstr ""
+"manajer database Odoo standar, (tersedia untuk server Odoo on-premise di "
+":code:`/web/database/manager`)"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:286
 msgid "the Odoo online databases manager,"
-msgstr ""
+msgstr "manajer database Odoo online,"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:287
 msgid "the Odoo.sh backup download button of this *Backups* tab,"
-msgstr ""
+msgstr "tombol unduh backup Odoo.sh backup dari tab *Backups* ini,"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:288
 msgid ""
 "the Odoo.sh dump download button in the :ref:`Builds view <odoosh-"
 "gettingstarted-builds>`."
 msgstr ""
+"tombol unduh dump Odoo.sh di :ref:`Builds view <odoosh-gettingstarted-"
+"builds>`."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:295
 msgid "Available for production and staging branches for valid projects."
-msgstr ""
+msgstr "Tersedia untuk branch staging dan production untuk project valid."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:298
 msgid ":doc:`Upgrade documentation <../../upgrade>`"
-msgstr ""
+msgstr ":doc:`Dokumentasi Upgrade <../../upgrade>`"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:303
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:3
@@ -2318,10 +2340,12 @@ msgid ""
 "Here you can find a couple of settings that only apply to the currently "
 "selected branch."
 msgstr ""
+"Di sini Anda dapat menemukan beberapa pengaturan yang hanya diterapkan ke "
+"branch yang saat ini dipilih."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:310
 msgid "**Behaviour upon new commit**"
-msgstr ""
+msgstr "**Perilaku setelah commit baru**"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:312
 msgid ""
@@ -2335,15 +2359,26 @@ msgid ""
 " the production build every time a commit is pushed. A branch that is put "
 "back from staging to development will automatically be set to 'Do nothing'."
 msgstr ""
+"Untuk branch development dan staging, Anda dapat mengubah perilaku branch "
+"setelah menerima commit baru. Secara default, branch development akan "
+"membuat build baru dan branch staging akan mengupdate build sebelumnya "
+"(lihat :ref:`Production Stage <stage_production>`). Ini berguna terutama "
+"apabila fitur yang Anda kerjakan membutuhkan setup atau konfigurasi khusus, "
+"untuk menghindari harus secara manual menyiapkannya lagi setiap kali Anda "
+"commit. Bila Anda memilih build baru untuk branch staging, ini akan membuat "
+"salinan baru dari build production setiap kali commit di-push. Branch yang "
+"dikembalikkan dari staging ke development akan secara otomatis disetel untuk"
+" 'Tidak Melakukan Apapun'."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:320
 msgid "**Modules installation**"
-msgstr ""
+msgstr "**Penginstalan modul**"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:322
 msgid ""
 "Choose the modules to install automatically for your development builds."
 msgstr ""
+"Pilih modul untuk diinstal secara otomatis untuk build development Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:327
 msgid ""
@@ -2351,6 +2386,9 @@ msgid ""
 "is the default option. The :ref:`submodules <odoosh-advanced-submodules>` "
 "are excluded."
 msgstr ""
+"*Instal hanya modul-modul saya* akan hanya menginstal modul-modul branch. "
+"Ini adalah opsi default. :ref:`Submodul <odoosh-advanced-submodules>` juga "
+"dikecualikan."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:329
 msgid ""
@@ -2358,6 +2396,9 @@ msgid ""
 "the modules included in the submodules and all standard modules of Odoo. "
 "When running the full installation, the test suite is disabled."
 msgstr ""
+"*Penginstalan lengkap (semua modul)* akan menginstal semau modul branch, "
+"termasuk modul di submodul dan semua modul standar Odoo. Saat menjalankan "
+"penginstalan lengkap, test suite dinonaktifkan."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:331
 msgid ""
@@ -2365,6 +2406,9 @@ msgid ""
 "just below this option. The names are the technical name of the modules, and"
 " they must be comma-separated."
 msgstr ""
+"*Instal daftar modul* akan hanya menginstal modul yang ditentukan di kolom "
+"input di bawah opsi ini. Nama yang ditulis adalah nama teknis modul, dan "
+"mereka harus dipisahkan koma."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:334
 msgid ""
@@ -2372,10 +2416,14 @@ msgid ""
 "hour. This setting applies to development builds only. Staging builds "
 "duplicate the production build and the production build only installs base."
 msgstr ""
+"Bila test diaktifkan, module suite standar Odoo dapat membutuhkan waktu "
+"sampai 1 jam. Pengaturan ini diterapkan hanya untuk build development. Build"
+" staging menduplikasikan build production dan build production hanya "
+"menginstal base."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:339
 msgid "**Test suite**"
-msgstr ""
+msgstr "**Test suite**"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:341
 msgid ""
@@ -2384,10 +2432,14 @@ msgid ""
 "restrict them by specifying test tags :ref:`test tags "
 "<developer/reference/testing/selection>`."
 msgstr ""
+"Untuk branch development, Anda dapat memilih untuk mengaktifkan atau "
+"menonaktifkan test suite. Secara default aktif. Saat test suite diaktifkan, "
+"Anda dapat membatasinya dengan menuliskan test tags :ref:`test tags "
+"<developer/reference/testing/selection>`."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:345
 msgid "**Odoo Version**"
-msgstr ""
+msgstr "**Versi Odoo **"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:347
 msgid ""
@@ -2395,12 +2447,17 @@ msgid ""
 "you want to test upgraded code or develop features while your production "
 "database is in the process of being upgraded to a newer version."
 msgstr ""
+"Hanya untuk branch development, Anda dapat mengubah versi Odoo, bila Anda "
+"ingin mengetes code yang diugprade atau mendevelop fitur-fitur selagi "
+"database production Anda dalam proses diupgrade ke versi lebih baru."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:350
 msgid ""
 "In addition, for each version you have two options regarding the code "
 "update."
 msgstr ""
+"Sebagai tambahan, untuk setiap versi Anda memiliki dua opsi mengenai update "
+"code."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:352
 msgid ""
@@ -2408,6 +2465,9 @@ msgid ""
 "fixes automatically. The sources of your Odoo server will be updated weekly."
 " This is the 'Latest' option."
 msgstr ""
+"Anda dapat memilih untuk memanfaatkan perbaikan bug, keamanan dan performa "
+"terbaru secara otomatis. Sumber-sumber server Odoo akan akan diupdate secara"
+" mingguan. Ini adalah opsi 'Terkini'."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:354
 msgid ""
@@ -2416,10 +2476,15 @@ msgid ""
 " notified by mail when the expiration date approaches and if you don't take "
 "action afterwards, you will automatically be set to the latest revision."
 msgstr ""
+"Anda dapat memilih untuk menyemat sumber-sumber Odoo ke revisi tertentu "
+"dengan memilih mereka dari daftar tanggal. Revisi akan habis masa berlaku "
+"setelah 3 bulan. Akan dinotifikasi melalui email saat tanggal habis masa "
+"berlaku mendekat dan bila Anda tidak mengambil tindakan, Anda akan secara "
+"otomatis ditetapkan ke revisi terkini."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:359
 msgid "**Custom domains**"
-msgstr ""
+msgstr "**Domain kustom**"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:361
 msgid ""
@@ -2427,32 +2492,41 @@ msgid ""
 "possible to add other *<name>.odoo.com* domains or your own custom domains. "
 "For the latter you have to:"
 msgstr ""
+"Di sini Anda dapat mengonfigurasi domain-domain tambahan untuk branch "
+"terpilih. Anda dapat menambahkan domain *<name>.odoo.com* lainnya atau "
+"domain kustom Anda sendiri. Untuk pilihan yang kedua Anda harus:"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:364
 msgid "own or purchase the domain name,"
-msgstr ""
+msgstr "memiliki atau membeli nama domain,"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:365
 msgid "add the domain name in this list,"
-msgstr ""
+msgstr "menambahkan nama domain ke daftar ini,"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:366
 msgid ""
 "in your registrar's domain name manager, configure the domain name with a "
 "``CNAME`` record set to your production database domain name."
 msgstr ""
+"di manajer nama domain registrar Anda, konfigurasikan nama domain dengan "
+"record ``CNAME`` yang ditetapkan ke nama domain database production Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:369
 msgid ""
 "For instance, to associate *www.mycompany.com* to your database "
 "*mycompany.odoo.com*:"
 msgstr ""
+"Contohnya, untuk mengaitkan *www.mycompany.com* ke database Anda "
+"*mycompany.odoo.com*:"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:371
 msgid ""
 "in Odoo.sh, add *www.mycompany.com* in the custom domains of your project "
 "settings,"
 msgstr ""
+"di Odoo.sh, tambahkan *www.mycompany.com* di custom domain pengaturan "
+"project Anda,"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:372
 msgid ""
@@ -2460,30 +2534,38 @@ msgid ""
 "configure *www.mycompany.com* with a ``CNAME`` record with as value "
 "*mycompany.odoo.com*."
 msgstr ""
+"di manajer nama domain Anda (contoh, *godaddy.com*, *gandi.net*, *ovh.com*),"
+" konfigurasikan *www.mycompany.com* dengan record ``CNAME`` dengan value "
+"*mycompany.odoo.com*."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:375
 msgid "Bare domains (e.g. *mycompany.com*) are not accepted:"
-msgstr ""
+msgstr "Bare domain (contoh, *mycompany.com*) tidak diterima:"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:377
 msgid "they can only be configured using ``A`` records,"
-msgstr ""
+msgstr "mereka hanya dapat dikonfigurasi menggunakan ``A`` record,"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:378
 msgid "``A`` records only accept IP addresses as value,"
-msgstr ""
+msgstr "``A`` record hanya menerima alamat IP sebagai value,"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:379
 msgid ""
 "the IP address of your database can change, following an upgrade, a hardware"
 " failure or your wish to host your database in another country or continent."
 msgstr ""
+"alamat IP dari database Anda dapat berubah, karena upgrade, karena kegagalan"
+" hardware atau karena keinginan Anda untuk hosting database Anda di negara "
+"atau benua yang berbeda."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:382
 msgid ""
 "Therefore, bare domains could suddenly no longer work because of this change"
 " of IP address."
 msgstr ""
+"Oleh karena itu, bare domain bisa tiba-tiba tidak bekerja karena perubahan "
+"alamat IP ini."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:384
 msgid ""
@@ -2496,10 +2578,19 @@ msgid ""
 "*www.mycompany.com*. Most domain managers have the feature to configure this"
 " redirection. This is commonly called a web redirection."
 msgstr ""
+"Tambah lagi, bila Anda ingin masing-masing *mycompany.com* dan "
+"*www.mycompany.com* untuk bekerja dengan database Anda, memastikan URL "
+"pertama dialihkan ke yang kedua adalah salah satu `praktek terbaik SEO "
+"<https://support.google.com/webmasters/answer/7451184?hl=en>`_ (Lihat "
+"*Provide one version of a URL to reach a document*) agar memiliki satu URL "
+"dominan. Dengan begitu Anda cukup mengonfigurasi *mycompany.com* untuk "
+"dialihkan ke *www.mycompany.com*. Kebanyakan manajer domain memiliki fitur "
+"untuk mengonfigurasi pengalihan ini. Ini paling umum disebut web "
+"redirection."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:391
 msgid "**HTTPS/SSL**"
-msgstr ""
+msgstr "**HTTPS/SSL**"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:393
 msgid ""
@@ -2508,6 +2599,9 @@ msgid ""
 "<https://letsencrypt.org/about/>`_ within the hour and your domain will be "
 "accessible through HTTPS."
 msgstr ""
+"Bila redirection dengan tepat dibuat, platform akan secara otomatis membuat "
+"sertifikat SSL dengan `Let's Encrypt <https://letsencrypt.org/about/>`_ "
+"dalam sejam dan domain Anda akan dapat diakses melalui HTTPS."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:397
 msgid ""
@@ -2515,10 +2609,13 @@ msgid ""
 " the Odoo.sh platform we are considering the feature if there is enough "
 "demand."
 msgstr ""
+"Walau saat ini tidak mungkin untuk mengonfigurasi sertifikat SSL Anda "
+"sendiri pada platform Odoo.sh kami sedang mempertimbangkan fitur ini bila "
+"terdapat cukup banyak permintaan."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:401
 msgid "**SPF and DKIM compliance**"
-msgstr ""
+msgstr "**Kepatuhan terhadap SPF dan DKIM**"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:403
 msgid ""
@@ -2530,22 +2627,32 @@ msgid ""
 "<email_communication/spf_compliant>` and :ref:`DKIM "
 "<email_communication/dkim_compliant>`."
 msgstr ""
+"Pada kasus di mana domain alamat email user-user Anda menggunakan (Sender "
+"Policy Framework) atau DKIM (DomainKeys Identified Mail), jangan lupa untuk "
+"mengotorisasi Odoo sebagai host pengirim di pengaturan nama domain Anda "
+"untuk meningkatkan tingkat pengiriman email keluar Anda. Langkah-langkah "
+"konfigurasi dijelaskan di dokumentasi mengenai :ref:`SPF "
+"<email_communication/spf_compliant>` dan :ref:`DKIM "
+"<email_communication/dkim_compliant>`."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:410
 msgid ""
 "Forgetting to configure your SPF or DKIM to authorize Odoo as a sending host"
 " can lead to the delivery of your emails as spam in your contacts inbox."
 msgstr ""
+"Lupa dalam mengonfigurasi SPF atau DKIM untuk mengotorisasikan Odoo sebagai "
+"host pengirim akan berujung pada email yang Anda kirim ditandai sebagai spam"
+" di inboks kontak."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:414
 msgid "Shell commands"
-msgstr ""
+msgstr "Shell commands"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:416
 msgid ""
 "In the top right-hand corner of the view, different shell commands are "
 "available."
-msgstr ""
+msgstr "Di pojok kanan-atas tampilan, beberapa shell command tersedia."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:421
 msgid ""
@@ -2554,54 +2661,66 @@ msgid ""
 "in such case a popup will prompt the user in order to define eventual "
 "placeholders such as ``<URL>``, ``<PATH>``, ..."
 msgstr ""
+"Setiap command dapat disalin di clipboard untuk digunakan di terminal, dan "
+"beberapa dapat digunakan langsung dari Odoo.sh dengan mengeklik tombol *run*"
+" pada kasus di mana prompt meminta user untuk mendefinisikan placeholder "
+"seperti ``<URL>``, ``<PATH>``, ..."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:427
 msgid "Clone"
-msgstr ""
+msgstr "Clone"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:429
 msgid "Download the Git repository."
-msgstr ""
+msgstr "Unduh repository Git."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:435
 msgid "Clones the repository *odoo/odoo*."
-msgstr ""
+msgstr "Clone repository *odoo/odoo*."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:437
 msgid ""
 ":code:`--recurse-submodules`: Downloads the submodules of your repository. "
 "Submodules included in the submodules are downloaded as well."
 msgstr ""
+":code:`--recurse-submodules`: Mengunduh submodul repositori Anda. Submodul "
+"yang termasuk di dalam submodul juga akan diunduh."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:438
 msgid ""
 ":code:`--branch`: checks out a specific branch of the repository, in this "
 "case *master*."
 msgstr ""
+":code:`--branch`: memeriksa branch tertentu dari repository, dalam kasus ini"
+" memeriksa *master*."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:440
 msgid ""
 "The *run* button is not available for this command, as it is meant to be "
 "used on your machines."
 msgstr ""
+"Tombol *run* tidak tersedia untuk command ini, karena dimaksudkan untuk "
+"digunakan pada mesin-mesin Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:443
 msgid "Fork"
-msgstr ""
+msgstr "Fork"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:445
 msgid "Create a new branch based on the current branch."
-msgstr ""
+msgstr "Buat branch baru berdasarkan branch saat ini."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:451
 msgid ""
 "Creates a new branch called *feature-1* based on the branch *master*, and "
 "then checkouts it."
 msgstr ""
+"Membuat branch baru bernama *feature-1* berdasarkan branch *master*, lalu "
+"checkout."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:457
 msgid "Uploads the new branch *feature-1* on your remote repository."
-msgstr ""
+msgstr "Mengunggah branch baru *feature-1* ada repository remot Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:460
 msgid "Merge"
@@ -2609,11 +2728,11 @@ msgstr "Gabung"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:462
 msgid "Merge the current branch in another branch."
-msgstr ""
+msgstr "Merge branch saat ini di branch lain."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:468
 msgid "Merges the branch *staging-1* in the current branch."
-msgstr ""
+msgstr "Merge branch *staging-1* di branch saat ini."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:474
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:547
@@ -2621,10 +2740,12 @@ msgid ""
 "Uploads the changes you just added in the *master* branch on your remote "
 "repository."
 msgstr ""
+"Mengunggah perubahan yang baru Anda tambahkan di branch *master* pada "
+"repositori remot Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:477
 msgid "SSH"
-msgstr ""
+msgstr "SSH"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:480
 msgid "Setup"
@@ -2635,6 +2756,9 @@ msgid ""
 "In order to use SSH, you have to set up your profile SSH public key (if it "
 "is not already done). To do so, follow these steps:"
 msgstr ""
+"Untuk dapat menggunakan SSH, Anda harus setup profil SSH public key Anda "
+"(bila belum dilakukan). Untuk melakukan hal tersebut, ikuti langkah-langkah "
+"berikut:"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:485
 msgid ""
@@ -2642,6 +2766,9 @@ msgid ""
 "to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-"
 "agent#generating-a-new-ssh-key>`_"
 msgstr ""
+"`Buat SSH key baru <https://help.github.com/en/github/authenticating-to-"
+"github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-"
+"new-ssh-key>`_"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:487
 msgid ""
@@ -2649,14 +2776,18 @@ msgid ""
 "<https://help.github.com/en/github/authenticating-to-github/adding-a-new-"
 "ssh-key-to-your-github-account>`_ (only apply the step 1)"
 msgstr ""
+"`Salin SSH key ke clipboard Anda "
+"<https://help.github.com/en/github/authenticating-to-github/adding-a-new-"
+"ssh-key-to-your-github-account>`_ (only apply the step 1)"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:490
 msgid "Paste the copied content to your profile SSH keys and press \"Add\""
 msgstr ""
+"Tempel konten yang disalin ke profil SSH key Anda dan pencet \"Tambahkan\""
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:495
 msgid "The key should appear below"
-msgstr ""
+msgstr "Key harusnya muncul di bawah"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:501
 msgid "Connection"
@@ -2666,12 +2797,16 @@ msgstr "Connection"
 msgid ""
 "To connect to your builds using ssh use the following command in a terminal:"
 msgstr ""
+"Untuk mengakses build Anda menggunakan ssh gunakan command berikut di "
+"terminal:"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:509
 msgid ""
 "You will find a shortcut for this command into the SSH tab in the upper "
 "right corner."
 msgstr ""
+"Anda akan menemukan shortcut untuk command ini di tab SSH di pojok kanan "
+"atas."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:514
 msgid ""
@@ -2679,60 +2814,73 @@ msgid ""
 "settings-collaborators>` on the project, you'll be granted ssh access to the"
 " build."
 msgstr ""
+"Selama Anda memiliki :ref:`hak akses yang benar <odoosh-gettingstarted-"
+"settings-collaborators>` pada project, Anda akan diberikan akses ssh ke "
+"build."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:518
 msgid ""
 "Long running ssh connections are not guaranteed. Idle connections will be "
 "disconnected in order to free up resources."
 msgstr ""
+"Koneksi ssh tidak didukung dalam jangka waktu ynag lama. Koneksi yang idle "
+"dapat diputuskan hubungannya untuk membebaskan sumber daya."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:522
 msgid "Submodule"
-msgstr ""
+msgstr "Submodul"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:524
 msgid ""
 "Add a branch from another repository in your current branch as a "
 "*submodule*."
 msgstr ""
+"Tambahkan branch dari repository lain di branch Anda saat ini sebagai "
+"*submodul*."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:526
 msgid ""
 "*Submodules* allows you to use modules from other repositories in your "
 "project."
 msgstr ""
+"*Submodul* memungkinkan Anda untuk menggunakan modul dari repositori-"
+"repositori lainnya di project Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:528
 msgid ""
 "The submodules feature is detailed in the chapter :ref:`Submodules <odoosh-"
 "advanced-submodules>` of this documentation."
 msgstr ""
+"Fitur submodul dirincikan di bab :ref:`Submodul <odoosh-advanced-"
+"submodules>` di dokumentasi ini."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:535
 msgid ""
 "Adds the branch *master* of the repository *<URL>* as a submodule under the "
 "path *<PATH>* in your current branch."
 msgstr ""
+"Menambahkan branch *master* dari repository *<URL>* sebagai submodul di "
+"bawah path *<PATH>* di branch Anda saat ini."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:541
 msgid "Commits all your current changes."
-msgstr ""
+msgstr "Commit semua perubahan Anda saat ini."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:552
 msgid "Delete a branch from your repository."
-msgstr ""
+msgstr "Menghapus branch dari repositori Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:558
 msgid "Deletes the branch in your remote repository."
-msgstr ""
+msgstr "Menghapus branch di repositori remot Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:564
 msgid "Deletes the branch in your local copy of the repository."
-msgstr ""
+msgstr "Menghapus branch di salinan lokal repositori."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:6
 msgid "Builds"
-msgstr ""
+msgstr "Build"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:11
 msgid ""
@@ -2743,12 +2891,20 @@ msgid ""
 "test the well-behavior of the server, the database and the features with "
 "this revision."
 msgstr ""
+"Di Odoo.sh, build dianggap sebagai database yang dimuat oleh server Odoo "
+"(`odoo/odoo <https://github.com/odoo/odoo>`_ & `odoo/enterprise "
+"<https://github.com/odoo/enterprise>`_) yang berjalan pada revisi tertentu "
+"dari repositori project Anda di dalam containerized environment. Tujuannya "
+"adalah untuk mengetes perilaku baik server, database dan fitur dengan revisi"
+" ini."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:20
 msgid ""
 "In this view, a row represents a branch, and a cell of a row represents a "
 "build of this branch."
 msgstr ""
+"Di tampilan ini, baris mewakili branch, dan cell dari baris mewakili build "
+"branch ini."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:22
 msgid ""
@@ -2757,18 +2913,26 @@ msgid ""
 "operations, such as importing a database on Odoo.sh or asking a rebuild for "
 "a branch in your project."
 msgstr ""
+"Untuk sebagian besar waktu, build dibuat mengikuti push pada branch "
+"repositori Github Anda. Mereka juga dapat dibuat saat Anda melakukan operasi"
+" lainnya, seperti mengimpor database pada Odoo.sh atau meminta rebuild untuk"
+" branch di project Anda.  "
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:26
 msgid ""
 "A build is considered successful if no errors or warnings come up during its"
 " creation. A successful build is highlighted in green."
 msgstr ""
+"Build dianggap sukses bila tidak ada error atau peringatan yang muncul "
+"selama pembuatannya. Build yang sukses di highlight dengan warna hijau."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:29
 msgid ""
 "A build is considered failed if errors come up during its creation. A failed"
 " build is highlighted in red."
 msgstr ""
+"Build dianggap gagal bila terdapat error pada selama pembuatannya. Build "
+"yang gagal di highlight dengan warna merah."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:32
 msgid ""
@@ -2776,6 +2940,9 @@ msgid ""
 "is considered almost successful. It is highlighted in yellow to notify the "
 "developer warnings were raised."
 msgstr ""
+"Bila peringatan muncul selama proses pembuatan, tapi tidak ada error, build "
+"dianggap nyaris sukses. Build akan di highlight dengan warna kuning untuk "
+"menotifikasi developer bahwa terdapat peringatan."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:35
 msgid ""
@@ -2785,6 +2952,11 @@ msgid ""
 "database on it. If no errors come up, the build is considered successful, "
 "and otherwise failed."
 msgstr ""
+"Build tidak selalu membuat database dari nol. Contohnya, saat melakukan push"
+" perubahan di branch production, build yang dibuat hanya memulai server "
+"dengan revisi baru Anda dan mencoba memuat database production saat ini ke "
+"revisi tersebut. Bila tidak ada error, build dianggap sukses, dan bila tidak"
+" dianggap gagal."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:46
 msgid ""
@@ -2792,12 +2964,16 @@ msgid ""
 "this build is successful, this database is considered as the production "
 "database of your project."
 msgstr ""
+"Build pertama dari branch production membuat database dari nol. Bila build "
+"ini sukses, database ini dianggap sebagai database production project Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:49
 msgid ""
 "From then, pushes on the production branch will create new builds that "
 "attempt to load the database using a server running with the new revision."
 msgstr ""
+"Dari situ, push pada branch production akan membuat build-build baru yang "
+"mencoba memuat database menggunakan server yang berjalan dengan revisi baru."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:52
 msgid ""
@@ -2805,6 +2981,9 @@ msgid ""
 "database will now run with this build, along with the revision associated to"
 " this build."
 msgstr ""
+"Bila build sukses, atau memiliki warning tapi tanpa error, database "
+"production akan berjalan dengan build tersebut, dengan revisi-revisi terkait"
+" build tersebut."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:55
 msgid ""
@@ -2812,6 +2991,10 @@ msgid ""
 "successful build is re-used to load the database, and therefore the database"
 " will run using a server running with the previous successful revision."
 msgstr ""
+"Bila build gagal untuk memuat atau mengupdate database, maka build "
+"sebelumnya yang sukses akan digunakan lagi untuk memuat database, dan oleh "
+"karena itu database akan berjalan menggunakan server yang menjalankan revisi"
+" yang sukses sebelumnya."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:59
 msgid ""
@@ -2819,12 +3002,17 @@ msgid ""
 "builds list. If a build fails, it is put after the build currently running "
 "the production database."
 msgstr ""
+"Build yang digunakan untuk menjalankan database production selalu adalah "
+"build pertama di list. Bila build gagal, akan ditaruh setelah build yang "
+"saat ini menjalankan database production."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:65
 msgid ""
 "Staging builds duplicate the production database, and try to load this "
 "duplicate with the revisions of the staging branches."
 msgstr ""
+"Build staging menduplikasikan database production, dan mencoba memuat "
+"duplikat ini dengan revisi dari branch staging"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:68
 msgid ""
@@ -2832,12 +3020,17 @@ msgid ""
 "uses a new copy of the production database. The databases are not re-used "
 "between builds of the same branch. This ensures:"
 msgstr ""
+"Setiap kali Anda push revisi baru pada branch staging, build yang dibuat "
+"menggunakan salinan baru database production. Database-database tidak "
+"digunakan-ulang di antara build dengan branch yang sama. Ini memastikan:"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:71
 msgid ""
 "staging builds use databases that are close to what the production looks "
 "like, so you do not make your tests with outdated data,"
 msgstr ""
+"build staging menggunakan database yang mirip dengan production, supaya Anda"
+" tidak melakukan tes dengan data yang lampau,"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:74
 msgid ""
@@ -2845,6 +3038,9 @@ msgid ""
 "you can then ask for a rebuild when you want to restart with a new copy of "
 "the production."
 msgstr ""
+"Anda dapat mengutak atik sesuka hati Anda di database staging yang sama, dan"
+" lalu Anda dapat meminta rebuild saat Anda ingin restart dengan salinan baru"
+" production."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:77
 msgid ""
@@ -2852,12 +3048,17 @@ msgid ""
 "databases and do not apply them in the production, they will not be passed "
 "on the next build of the same staging branch."
 msgstr ""
+"Kendati demikian, ini berarti bila Anda melakukan perubahan konfigurasi di "
+"database staging dan tidak menerapkan mereka di production, mereka tidak "
+"akan diturunkan ke build berikutnya untuk branch staging yang sama."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:83
 msgid ""
 "Development builds create new databases, load the demo data and run the unit"
 " tests."
 msgstr ""
+"Build development membuat database baru, memuat data demo dan menjalankan "
+"unit test."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:85
 msgid ""
@@ -2865,12 +3066,15 @@ msgid ""
 "during the installation, as they are meant to raise errors if something "
 "wrong occurs."
 msgstr ""
+"Build akan dianggap gagal dan di highlight dengan warna merah bila test "
+"gagal selama penginstalan, karena mereka dimaksudkan untuk memunculkan error"
+" bila terjadi kesalahan."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:88
 msgid ""
 "If all tests pass, and there is no error, the build will be considered "
 "successful."
-msgstr ""
+msgstr "Bila lulus semua tes, dan tidak terdapat error, build dianggap sukes."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:90
 msgid ""
@@ -2878,6 +3082,9 @@ msgid ""
 "can take up to 1 hour to be ready. This is due to the large number of tests "
 "set in the default Odoo modules suite."
 msgstr ""
+"Menurut daftar modul untuk diinstal dan dites, build development dapat "
+"mengambil waktu sampai 1 jam sebelum siap. Ini oleh karena banyaknya jumlah "
+"test yang secara default ditetapkan di Odoo modules suite."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:94
 msgid "Features"
@@ -2888,6 +3095,9 @@ msgid ""
 "The production branch will always appear first, and then the other branches "
 "are ordered by last build created. You can filter out the branches."
 msgstr ""
+"Branch production akan selalu muncul duluan, lalu branch-branch lainnya akan"
+" diurutkan berdasarkan build terakhir yang dibuat. Anda dapat memfilter "
+"branch-branch Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:102
 msgid ""
@@ -2898,6 +3108,12 @@ msgid ""
 "link is not available when there is already a build in progress for the "
 "branch."
 msgstr ""
+"Untuk setiap branch, Anda dapat mengakses database build terakhir "
+"menggunakan link *Connect* dan memasuki kode branch menggunakan link "
+"*Github*. Untuk branch-branch lain selain production, Anda dapat membuat "
+"build baru yang akan menggunakan revisi terkini dari branch menggunakan link"
+" *rebuild*. Link terakhir ini tidak tersedia saat sudah ada build yang "
+"sedang berlangsung untuk branch."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:110
 msgid ""
@@ -2907,6 +3123,11 @@ msgid ""
 "user using the *Connect as* button, in the dropdown menu of the *Connect* "
 "button."
 msgstr ""
+"Untuk setiap build, Anda dapat mengakses perubahan revisi menggunakan tombol"
+" dengan ikon Github. Anda dapat mengakses database build sebagai "
+"administrator menggunakan tombol *Connect*. Anda juga dapat mengakses "
+"database dengan user lain menggunakan tombol *Connect as*, di menu dropdown "
+"dari tombol *Connect*."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:122
 msgid ""
@@ -2915,62 +3136,74 @@ msgid ""
 " Shell*, *Editor*, *Outgoing e-mails*. You also have the possibility to "
 "*Download a dump* of the build's database."
 msgstr ""
+"Di menu dropdown build, Anda dapat mengakses fitur-fitur yang sama dengan di"
+" :ref:`tampilan branch <odoosh-gettingstarted-branches-tabs>`: *Logs*, *Web "
+"Shell*, *Editor*, *Outgoing e-mails*. Anda juga memiliki pilihan untuk "
+"*Mengunduh dump* database build."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:6
 msgid "Create your project"
-msgstr ""
+msgstr "Buat project Anda"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:9
 msgid "Deploy your platform"
-msgstr ""
+msgstr "Deploy platform Anda"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:11
 msgid ""
 "Go to `Odoo.sh <https://www.odoo.sh/>`_ and hit the *Deploy your platform* "
 "button."
 msgstr ""
+"Pergi ke `Odoo.sh <https://www.odoo.sh/>`_ dan pencet tombol *Deploy "
+"platform Anda*."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:17
 msgid "Sign in with Github"
-msgstr ""
+msgstr "Sign in dengan Github"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:19
 msgid ""
 "Sign in with your Github account. If you do not have an account yet, hit the"
 " *Create an account* link."
 msgstr ""
+"Sign in with your Github account. Bila Anda belum memiliki akun Github, "
+"pencet link *Buat akun*."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:26
 msgid "Authorize Odoo.sh"
-msgstr ""
+msgstr "Otorisasikan Odoo.sh"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:28
 msgid ""
 "Grant Odoo.sh the required accesses to your account by clicking the "
 "*Authorize* button."
 msgstr ""
+"Berikan Odoo.sh akses yang diperlukan ke akun Anda dengan mengeklik tombol "
+"*Authorize*."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:33
 msgid "Odoo.sh basically needs:"
-msgstr ""
+msgstr "Odoo.sh butuh:"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:35
 msgid "to know your Github login and email,"
-msgstr ""
+msgstr "mengetahui username dan email Github Anda,"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:36
 msgid "to create a new repository in case you decide to start from scratch,"
-msgstr ""
+msgstr "membuat repositori baru bila Anda ingin memulai dari nol,"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:37
 msgid ""
 "to read your existing repositories, including the ones of your "
 "organizations, in case you want to start from an existing repository,"
 msgstr ""
+"membaca repositori yang Anda miliki, termasuk yang di organisasi Anda, "
+"apabila Anda ingin memulai dari repositori yang sudah tersedia."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:39
 msgid "to create a webhook to be notified each time you push changes,"
-msgstr ""
+msgstr "membuat webhook agar dinotifikasi setiap kali Anda push perubahan,"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:40
 msgid ""
@@ -2978,20 +3211,25 @@ msgid ""
 " new `submodules <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ for"
 " example."
 msgstr ""
+"commit perubahan untuk membuat deployment Anda lebih mudah, merging branch "
+"atau menambahkan `submodul <https://git-scm.com/book/en/v2/Git-Tools-"
+"Submodules>`_ baru sebagai contoh."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:44
 msgid "Submit your project"
-msgstr ""
+msgstr "Kirimkan project Anda"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:46
 msgid ""
 "Choose if you want to start from scratch by creating a new repository, or if"
 " you want to use an existing repository."
 msgstr ""
+"Pilih apabila Anda ingin memulai dari nol dengan membuat repositori baru, "
+"atau bila Anda ingin menggunakan repository yang sudah tersedia."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:49
 msgid "Then, choose a name or select the repository you want to use."
-msgstr ""
+msgstr "Lalu, pilih nama atau repositori yang Anda ingin gunakan."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:51
 msgid ""
@@ -2999,17 +3237,24 @@ msgid ""
 "database or an existing set of applications, you might need to choose the "
 "according version. If you start from scratch, use the latest version."
 msgstr ""
+"Pilih versi Odoo yang Anda ingin gunakan. Bila Anda berencana untuk "
+"mengimpor database atau rangkaian aplikasi yang sudah tersedia, Anda mungkin"
+" harus memilih versi yang sesuai. Bila Anda memulai dari nol, gunakan versi "
+"terbaru."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:55
 msgid ""
 "Enter your *subscription code*. This is also called *subscription referral*,"
 " *contract number* or *activation code*."
 msgstr ""
+"Masukkan *kode langganan* Anda. Ini juga disebut sebagai *referral "
+"langganan*, *nonor kontrak* atau *kode aktivasi*."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:58
 msgid ""
 "It should be the code of your Enterprise subscription that includes Odoo.sh."
 msgstr ""
+"Ini harusnya merupakan kode langganan Enterprise Anda yang termasuk Odoo.sh."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:60
 msgid ""
@@ -3019,60 +3264,75 @@ msgid ""
 " the amount back as commission. Contact your sales representative or account"
 " manager in order to get it."
 msgstr ""
+"Partner dapat menggunakan kode partnership mereka untuk memulai trial. "
+"Apabila klien mereka memulai project, mereka seharusnya mendapatkan "
+"langganan Enterprise yang termasuk Odoo.sh dan dapat menggunakan kode "
+"langganannya. Partner akan mendapatkan 50% dari jumlah sebagai komisi. "
+"Hubungi wakil sales atau account manager Anda untuk mendapatkannya."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:65
 msgid ""
 "When submitting the form, if you are notified your subscription is not "
 "valid, it either means:"
 msgstr ""
+"Saat menyerahkan formulir, bila Anda menerima notifikasi bahwa langganan "
+"Anda tidak valid, ini dapat berarti:"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:67
 msgid "it is not an existing subscription,"
-msgstr ""
+msgstr "ini bukan merupakan langganan yang tersedia,"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:68
 msgid "it is not a partnership subscription,"
-msgstr ""
+msgstr "ini bukan merupakan langganan partnership"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:69
 msgid "it is an enterprise subscription, but which does not include Odoo.sh,"
-msgstr ""
+msgstr "ini adalah langganan enterprise, tapi tidak termasuk Odoo.sh,"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:70
 msgid ""
 "it is neither a partnership subscription or an enterprise subscription (e.g."
 " an online subscription)."
 msgstr ""
+"ini bukan merupakan langganan partnership atau langganan enterprise (contoh,"
+" langganan online)."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:73
 msgid ""
 "In case of doubt with your subscription, please contact the `Odoo support "
 "<https://www.odoo.com/help>`_."
 msgstr ""
+"Apabila ada keraguan mengenai langganan Anda, silakan hubungi `Bantuan Odoo "
+"<https://www.odoo.com/help>`_."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:80
 msgid "You're done !"
-msgstr ""
+msgstr "Anda selesai !"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:82
 msgid ""
 "You can start using Odoo.sh. Your first build is about to be created. You "
 "will soon be able to connect to your first database."
 msgstr ""
+"Anda dapat memulai menggunakan Odoo.sh. Build pertama sebentar lagi Anda "
+"akan dibuat. Anda sebentar lagi akan dapat konek ke database pertama Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:91
 msgid "Import your database"
-msgstr ""
+msgstr "Impor database Anda"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:93
 msgid ""
 "You can import your database in your Odoo.sh project as long as it is in a "
 ":doc:`supported version </administration/supported_versions>` of Odoo."
 msgstr ""
+"Anda dapat mengimpor database Anda di project Odoo.sh Anda selama database "
+"dalam :doc:`versi Odoo yang didukung </administration/supported_versions>`."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:97
 msgid "Push your modules in production"
-msgstr ""
+msgstr "Push modul-modul Anda ke production"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:99
 msgid ""
@@ -3080,6 +3340,10 @@ msgid ""
 "repository. Databases hosted on the Odoo.com online platform do not have any"
 " custom modules. Users of these databases can therefore skip this step."
 msgstr ""
+"Bila Anda menggunakan modul komunitas atau custom, tambahkan mereka ke "
+"branch di repositori Github Anda. Database yang dihosting pada platform "
+"online Odoo.com tidak memiliki modul custom apa pun. User-user database "
+"tersebut dapat melewati langkah ini."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:103
 msgid ""
@@ -3088,12 +3352,20 @@ msgid ""
 "your modules folder in the root directory of your repository, or group the "
 "modules in folders by categories that you define (accounting, project, ...)."
 msgstr ""
+"Anda dapat menstrukturkan modul Anda sesuai keinginan Anda, Odoo.sh akan "
+"secara otomatis mendeteksi folder yang memiliki addon Odoo. Contohnya, anda "
+"dapat menaruh semua folder modul Anda di direktori root repositori Anda, "
+"atau kelompokkan modul di folder-folder berdasarkan kategori yang Anda "
+"tentukan (akuntansi, project, ...)."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:108
 msgid ""
 "For community modules available in public Git repositories, you can also "
 "consider to add them using :ref:`Submodules <odoosh-advanced-submodules>`."
 msgstr ""
+"Untuk modul-modul komunitas yang tersedia di repositori Git publik, Anda "
+"juga dapat mempertimbangkan untuk menambahkan mereka menggunakan "
+":ref:`Submodule <odoosh-advanced-submodules>`."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:111
 msgid ""
@@ -3101,20 +3373,25 @@ msgid ""
 "gettingstarted-branches-stages>`, or :ref:`merge it into your production "
 "branch <odoosh-gettingstarted-branches-mergingbranches>`."
 msgstr ""
+"Lalu, :ref:`buat branch ini branch production <odoosh-gettingstarted-"
+"branches-stages>`, atau :ref:`merge ke branch production Anda <odoosh-"
+"gettingstarted-branches-mergingbranches>`."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:115
 msgid "Download a backup"
-msgstr ""
+msgstr "Unduh backup"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:118
 msgid "On-premise databases"
-msgstr ""
+msgstr "Database on-premise"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:120
 msgid ""
 "Access the URL :file:`/web/database/manager` of your on-premise database and"
 " download a backup."
 msgstr ""
+"Akses URL :file:`/web/database/manager` pada database on-premise Anda dan "
+"unduh backup."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:124
 msgid ""
@@ -3122,20 +3399,25 @@ msgid ""
 " system administrator. See the :ref:`database manager security documentation"
 " <db_manager_security>`."
 msgstr ""
+"Bila Anda tidak dapat mengakses manajer database, mungkin dinonaktifkan oleh"
+" administrator sistem Anda. Lihat :ref:`dokumentasi keamanan manajer "
+"database <db_manager_security>`."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:127
 msgid ""
 "You will need the master password of your database server. If you do not "
 "have it, contact your system administrator."
 msgstr ""
+"Anda harus memiliki password master server database Anda. Bila Anda tidak "
+"memilikinya, hubungi administrator sistem Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:133
 msgid "Choose a zip including the filestore as the backup format."
-msgstr ""
+msgstr "Pilih zip termasuk filestore sebagai format backup."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:139
 msgid "Odoo Online databases"
-msgstr ""
+msgstr "Database Odoo Online"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:141
 msgid ""
@@ -3143,30 +3425,37 @@ msgid ""
 "<https://accounts.odoo.com/my/databases/manage>`_ and download a backup of "
 "your database."
 msgstr ""
+"`Akses manajer database Anda "
+"<https://accounts.odoo.com/my/databases/manage>`_ dan unduh backup database "
+"Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:149
 msgid "Online versions (e.g. *saas-**) are not supported on Odoo.sh."
-msgstr ""
+msgstr "Versi-versi online (contoh, *saas-**) tidak didukung pada Odoo.sh."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:152
 msgid "Upload the backup"
-msgstr ""
+msgstr "Unggah backup"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:154
 msgid ""
 "Then, in your Odoo.sh project, in the backups tab of your production branch,"
 " import the backup you just downloaded."
 msgstr ""
+"Lalu, di project Odoo.sh Anda, di tab backup dari branch production Anda, "
+"impor backup yang Anda baru saja unduh."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:160
 msgid ""
 "Once the backup imported, you can access the database using the *Connect* "
 "button in the history of the branch."
 msgstr ""
+"Setelah backup diimpor, Anda dapat mengakses database menggunakan tombol "
+"*Connect* di riwayat branch."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:167
 msgid "Check your outgoing email servers"
-msgstr ""
+msgstr "Periksa server email keluar Anda"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:169
 msgid ""
@@ -3175,26 +3464,36 @@ msgid ""
 ":menuselection:`Settings --> Technical --> Outgoing Mail Servers` "
 "(:ref:`Developer mode <developer-mode>` must be activated)."
 msgstr ""
+"Terdapat server email default yang disediakan dengan Odoo.sh. Untuk "
+"menggunakannya, tidak boleh terdapat konfigurasi server email keluar yang "
+"diaktifkan di database Anda di :menuselection:`Pengaturan --> Technical --> "
+"Server Email Keluar` (:ref:`Mode developer <developer-mode>` harus "
+"diaktifkan)."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:174
 msgid ""
 "After the import of your database, all outgoing email servers are disabled "
 "so you use the Odoo.sh email server provided by default."
 msgstr ""
+"Setelah mengimpor database Anda, semua server email keluar akan "
+"dinonaktifkan supaya Anda menggunakan server email Odoo.sh yang secara "
+"default disediakan."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:178
 msgid ""
 "Port 25 is (and will stay) closed. If you want to connect to an external "
 "SMTP server, you should use ports 465 and 587."
 msgstr ""
+"Port 25 bersifat (dan akan terus) tertutup. Bila Anda ingin terhubung ke "
+"server SMTP eksternal, Anda harus menggunakan port 465 dan 587."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:182
 msgid "Check your scheduled actions"
-msgstr ""
+msgstr "Periksa action Anda yang terjadwal"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:184
 msgid "All scheduled actions are disabled after the import."
-msgstr ""
+msgstr "Semua action yang terjadwal dinonaktifkan setelah impor."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:186
 msgid ""
@@ -3203,6 +3502,10 @@ msgid ""
 " the queue, processing mass mailings, or third-party services "
 "synchronization (Calendars, files hosting, ...)."
 msgstr ""
+"Ini untuk mencegah database Anda yang baru diimpor untuk melakukan action "
+"yang dapat berdampak pada production Anda yang aktif, seperti mengirim email"
+" yang tersisa di antrian, memproses email massal, atau sinkronisasi layanan "
+"pihak-ketiga (Kalender, hosting file, ...)."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:190
 msgid ""
@@ -3212,6 +3515,11 @@ msgid ""
 "actions are located under :menuselection:`Settings --> Technical --> "
 "Automation --> Scheduled Actions`."
 msgstr ""
+"Bila Anda berencana untuk mengimpor database production Anda, aktifkan "
+"action terjadwal yang Anda butuhkan. Anda dapat memeriksa apa yang "
+"diaktifkan di database asal dan aktifkan action yang sama di database yang "
+"dimpor. Action terjadwal berlokasi di :menuselection:`Pengaturan --> "
+"Technical --> Otomatisasi --> Action Terjadwal`."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:196
 msgid "Register your subscription"
@@ -3219,7 +3527,7 @@ msgstr "Daftarkan langganan Anda"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:198
 msgid "Your subscription is unlinked after the import."
-msgstr ""
+msgstr "Langganan Anda akan tidak terhubung setelah impor."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:200
 msgid ""
@@ -3227,6 +3535,9 @@ msgid ""
 "enterprise subscription is therefore removed, as you can only have one "
 "database linked per subscription."
 msgstr ""
+"Database yang diimpor dianggap sebagai duplikat secara default dan langganan"
+" enterprise oleh karena itu dihapus, karena hanya Anda dapat memiliki satu "
+"database yang terhubung ke setiap langganan."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:203
 msgid ""
@@ -3235,124 +3546,136 @@ msgid ""
 ":doc:`database registration documentation <../../on_premise>` for "
 "instructions."
 msgstr ""
+"Bila Anda berencana untuk membuatnya sebagai production Anda, hapus hubungan"
+" database sebelumnya dari langganan Anda, dan daftarkan database yang baru "
+"diimpor. Baca instruksi di :doc:`dokumentasi pendaftaran database "
+"<../../on_premise>`."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:3
 msgid "Your first module"
-msgstr ""
+msgstr "Modul pertama Anda"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:8
 msgid ""
 "This chapter helps you to create your first Odoo module and deploy it in "
 "your Odoo.sh project."
 msgstr ""
+"Bab ini membantu Anda untuk membuat modul Odoo pertama Anda dan untuk deploy"
+" modul tersebut di project Odoo.sh Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:10
 msgid ""
 "This tutorial requires :ref:`you created a project on Odoo.sh <odoosh-"
 "gettingstarted-create>`, and you know your Github repository's URL."
 msgstr ""
+"Tutorial ini mengharuskan :ref:`Anda sudah membuat project di Odoo.sh "
+"<odoosh-gettingstarted-create>`, dan Anda mengetahui URL repositori Github "
+"Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:13
 msgid "Basic use of Git and Github is explained."
-msgstr ""
+msgstr "Penggunaan dasar Git dan Github dijelaskan."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:15
 msgid "The below assumptions are made:"
-msgstr ""
+msgstr "Asumsi di bawah akan dibuat:"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:17
 msgid ""
 "*~/src* is the directory where are located the Git repositories related to "
 "your Odoo projects,"
 msgstr ""
+"*~/src* adalah direktori repositori Git yang terkait project Odoo Anda,"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:18
 msgid "*odoo* is the Github user,"
-msgstr ""
+msgstr "*odoo* adalah user Github,"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:19
 msgid "*odoo-addons* is the Github repository,"
-msgstr ""
+msgstr "*odoo-addons* adalah repositori Github,"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:20
 msgid "*feature-1* is the name of a development branch,"
-msgstr ""
+msgstr "*feature-1* adalah nama branch development,"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:21
 msgid "*master* is the name of the production branch,"
-msgstr ""
+msgstr "*master* adalah nama branch production,"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:22
 msgid "*my_module* is the name of the module."
-msgstr ""
+msgstr "*my_module* adalah nama modul."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:24
 msgid "Replace these by the values of your choice."
-msgstr ""
+msgstr "Ganti nama-nama di atas sesuai pilihan Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:27
 msgid "Create the development branch"
-msgstr ""
+msgstr "Buat branch development"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:30
 msgid "From Odoo.sh"
-msgstr ""
+msgstr "Dari Odoo.sh"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:32
 msgid "In the branches view:"
-msgstr ""
+msgstr "Di tampilan branch:"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:34
 msgid "hit the :code:`+` button next to the development stage,"
-msgstr ""
+msgstr "pencet tombol :code:`+` di sebelah stage development,"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:35
 msgid "choose the branch *master* in the *Fork* selection,"
-msgstr ""
+msgstr "pilih branch *master* di pilihan *Fork*,"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:36
 msgid "type *feature-1* in the *To* input."
-msgstr ""
+msgstr "letol *feature-1* di input *To*."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:38
 msgid "|pic1|  |pic2|"
-msgstr ""
+msgstr "|pic1|  |pic2|"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:40
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:40
 msgid "pic1"
-msgstr ""
+msgstr "pic1"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:43
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:43
 msgid "pic2"
-msgstr ""
+msgstr "pic2"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:46
 msgid ""
 "Once the build created, you can access the editor and browse to the folder "
 "*~/src/user* to access to the code of your development branch."
 msgstr ""
+"Setelah build dibuat, Anda dapat mengakses editor dan browse ke folder "
+"*~/src/user* untuk mengakses ke code branch development Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:56
 msgid "From your computer"
-msgstr ""
+msgstr "Dari komputer Anda"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:58
 msgid "Clone your Github repository on your computer:"
-msgstr ""
+msgstr "Klon repositori Github Anda pada komputer Anda:"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:67
 msgid "Create a new branch:"
-msgstr ""
+msgstr "Buat branch baru:"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:74
 msgid "Create the module structure"
-msgstr ""
+msgstr "Buat struktur modul"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:77
 msgid "Scaffolding the module"
-msgstr ""
+msgstr "Scaffolding modul"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:79
 msgid ""
@@ -3360,16 +3683,21 @@ msgid ""
 " module structure. You can scaffold a new module using the executable *odoo-"
 "bin*."
 msgstr ""
+"Walau tidak harus, scaffolding menghindari kejemuan dari menyiapkan struktur"
+" dasar modul Odoo. Anda dapat scaffolding modul baru menggunakan exe *odoo-"
+"bin*."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:82
 msgid "From the Odoo.sh editor, in a terminal:"
-msgstr ""
+msgstr "Dari editor Odoo.sh, di terminal:"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:88
 msgid ""
 "Or, from your computer, if you have an :doc:`installation of Odoo "
 "<../../on_premise/source>`:"
 msgstr ""
+"Atau, dari komputer Anda, bila Anda memiliki :doc:`Odoo installation "
+"<../../on_premise/source>`:"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:94
 msgid ""
@@ -3378,10 +3706,14 @@ msgid ""
 "<first_module/my_module.zip>` in which you replace every occurrences of "
 "*my_module* to the name of your choice."
 msgstr ""
+"Bila Anda tidak ingin menginstal Odoo pada komputer Anda, Anda juga dapat "
+":download:`mengunduh templat struktur modul ini "
+"<first_module/my_module.zip>` di mana Anda mengganti setiap occurrence "
+"*my_module* menjadi nama pilihan Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:98
 msgid "The below structure will be generated:"
-msgstr ""
+msgstr "Struktur di bawah akan dibuat:"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:121
 msgid ""
@@ -3390,35 +3722,44 @@ msgid ""
 "classes of your module, and having classes name with special characters "
 "other than the underscore is not valid in Python."
 msgstr ""
+"Jangan gunakan karakter spesial kecuali garis bawah ( _ ) untuk nama modul "
+"Anda, bahkan jangan gunakan garis biasa ( - ). Nama ini digunakan untuk "
+"Python class modul Anda, dan nama class dengan karakter spesial kecuali "
+"garis bawah tidak valid di Python."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:125
 msgid "Uncomment the content of the files:"
-msgstr ""
+msgstr "Uncomment konten file-file:"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:127
 msgid "*models/models.py*, an example of model with its fields,"
-msgstr ""
+msgstr "*models/models.py*, contoh model dengan fieldnya,"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:129
 msgid ""
 "*views/views.xml*, a tree and a form view, with the menus opening them,"
 msgstr ""
+"*views/views.xml*, tampilan tree dan form, dengan menu yang membuka mereka,"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:131
 msgid "*demo/demo.xml*, demo records for the above example model,"
-msgstr ""
+msgstr "*demo/demo.xml*, record-record demo untuk contoh model di atas,"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:133
 msgid ""
 "*controllers/controllers.py*, an example of controller implementing some "
 "routes,"
 msgstr ""
+"*controllers/controllers.py*, contoh controller yang mengimplementasi "
+"beberapa rute-rute,"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:135
 msgid ""
 "*views/templates.xml*, two example qweb views used by the above controller "
 "routes,"
 msgstr ""
+"*views/templates.xml*, dua contoh tampilan qweb yang digunakan oleh rute-"
+"rute kontroller di atas,"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:137
 msgid ""
@@ -3426,6 +3767,9 @@ msgid ""
 "title, description and data files to load. You just need to uncomment the "
 "access control list data file:"
 msgstr ""
+"*__manifest__.py*, manifest modul Anda, termasuk contohnya judul, keterangan"
+" dan file data untuk dimuat. Anda hanya harus uncomment file data access "
+"control list:"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:146
 msgid "Manually"
@@ -3437,27 +3781,30 @@ msgid ""
 ":doc:`/developer/tutorials/getting_started` tutorial to understand the "
 "structure of a module and the content of each file."
 msgstr ""
+"Bila Anda ingin membuat struktur modul secara manual, Anda dapat mengikuti "
+"tutorial :doc:`/developer/tutorials/getting_started` untuk memahami modul "
+"dan konten setiap file."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:153
 msgid "Push the development branch"
-msgstr ""
+msgstr "Push branch development"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:155
 msgid "Stage the changes to be committed"
-msgstr ""
+msgstr "Stage perubahan yang harus dicommit"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:161
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:395
 msgid "Commit your changes"
-msgstr ""
+msgstr "Commit perubahan Anda"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:167
 msgid "Push your changes to your remote repository"
-msgstr ""
+msgstr "Push perubahan Anda ke repositori remot Anda"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:169
 msgid "From an Odoo.sh editor terminal:"
-msgstr ""
+msgstr "Dari terminal editor Odoo.sh:"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:175
 msgid ""
@@ -3467,33 +3814,45 @@ msgid ""
 "explanation regarding the fact you will be prompted to type your username "
 "and password, and what to do if you use the two-factor authentication."
 msgstr ""
+"Command di atas dijelaskan di bagian :ref:`Commit & Push perubahan Anda "
+"<odoosh-gettingstarted-online-editor-push>` dari bab :ref:`Editor Online "
+"<odoosh-gettingstarted-online-editor>`. Ini termasuk penjelasan mengenai "
+"fakta bahwa Anda akan di-prompt untuk mengetik username dan password Anda, "
+"dan apa yang harus dilakukan bila Anda menggunakan autentikasi dua-faktor."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:183
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:383
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:409
 msgid "Or, from your computer terminal:"
-msgstr ""
+msgstr "Atau, dari terminal komputer Anda:"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:189
 msgid ""
 "You need to specify *-u origin feature-1* for the first push only. From that"
 " point, to push your future changes from your computer, you can simply use"
 msgstr ""
+"Anda harus menuliskan *-u origin feature-1* untuk push pertama saja. Setelah"
+" itu, untuk push perubahan di masa depan dari komputer Anda, Anda cukup "
+"menggunakan"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:197
 msgid "Test your module"
-msgstr ""
+msgstr "Tes modul Anda"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:199
 msgid ""
 "Your branch should appear in your development branches in your project."
 msgstr ""
+"Branch Anda seharusnya sekarang muncul di branch development Anda di project"
+" Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:204
 msgid ""
 "In the branches view of your project, you can click on your branch name in "
 "the left navigation panel to access its history."
 msgstr ""
+"Di tampilan branch project Anda, Anda dapat mengeklik pada nama branch Anda "
+"di panel navigasi kiri untuk mengakses riwayatnya."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:210
 msgid ""
@@ -3501,6 +3860,9 @@ msgid ""
 " Once the database ready, you can access it by clicking the *Connect* "
 "button."
 msgstr ""
+"Anda dapat melihat di sini perubahan yang Anda baru saja push, termasuk "
+"komentar yang Anda tetapkan. Setelah database siap, Anda dapat mengaksesnya "
+"dengan mengeklik tombol *Connect*."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:216
 msgid ""
@@ -3508,22 +3870,29 @@ msgid ""
 "you will directly see it amongst the database apps. Otherwise, it will be "
 "available in the apps to install."
 msgstr ""
+"Bila project Odoo.sh Anda dikonfigurasi untuk menginstal modul Anda secara "
+"otomatis, Anda akan langsung melihatnya di antara app-app database. Bila "
+"tidak, akan tersedia di app untuk diinstal."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:220
 msgid ""
 "You can then play around with your module, create new records and test your "
 "features and buttons."
 msgstr ""
+"Anda lalu dapat mengutak-atik modul Anda, membuat record baru dan mengetes "
+"fitur-fitur serta tombol-tombol Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:223
 msgid "Test with the production data"
-msgstr ""
+msgstr "Uji dengan data production"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:225
 msgid ""
 "You need to have a production database for this step. You can create it if "
 "you do not have it yet."
 msgstr ""
+"Anda harus memiliki database production untuk langkah ini. Anda dapat "
+"membuatnya bila Anda belum memilikinya."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:227
 msgid ""
@@ -3531,27 +3900,36 @@ msgid ""
 "believe it is ready, you can test it with the production data using a "
 "staging branch."
 msgstr ""
+"Setelah Anda menguji modul Anda di build development dengan data demo dan "
+"yakin modul sudah siap, Anda dapat mengetesnya dengan data production "
+"menggunakan branch staging."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:230
 msgid "You can either:"
-msgstr ""
+msgstr "Anda dapat:"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:232
 msgid ""
 "Make your development branch a staging branch, by drag and dropping it onto "
 "the *staging* section title."
 msgstr ""
+"Membuat branch development Anda branch staging, dengan menarik dan "
+"melepasnya pada bagian judul *staging*."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:238
 msgid ""
 "Merge it in an existing staging branch, by drag and dropping it onto the "
 "given staging branch."
 msgstr ""
+"Merge ke branch staging yang tersedia, dengan menarik dan melepasnya ke "
+"branch staging yang diinginkan."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:243
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:289
 msgid "You can also use the :code:`git merge` command to merge your branches."
 msgstr ""
+"Anda juga dapat menggunakan command :code:`git merge` untuk merging branch "
+"Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:245
 msgid ""
@@ -3559,16 +3937,20 @@ msgid ""
 "database and make it run using a server updated with your latest changes of "
 "your branch."
 msgstr ""
+"Ini akan membuat build staging baru, yang akan menduplikasikan database "
+"production dan menjalankannya menggunakan server yang diupdate dengan "
+"perubahan terkini branch Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:251
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:297
 msgid "Once the database ready, you can access it using the *Connect* button."
 msgstr ""
+"Setelah database siap, Anda dapat mengaksesnya menggunakan tombol *Connect*."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:256
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:300
 msgid "Install your module"
-msgstr ""
+msgstr "Instal modul Anda"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:258
 msgid ""
@@ -3578,32 +3960,39 @@ msgid ""
 "production you would not like your module to be installed automatically, but"
 " on demand."
 msgstr ""
+"Modul Anda tidak akan diinstal secara otomatis, Anda harus menginstalnya "
+"dari menu app. Karena, tujuan dari build staging adalah untuk menguji "
+"perilaku perubahan Anda seolah-olah seperti di production Anda, dan pada "
+"production itu sendiri Anda tidak ingin modul Anda untuk diinstal secara "
+"otomatis, tapi sesuai kebutuhan Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:263
 msgid ""
 "Your module may not appear directly in your apps to install either, you need"
 " to update your apps list first:"
 msgstr ""
+"Modul Anda juga mungkin tidak langsung muncul di app Anda untuk diinstal, "
+"Anda harus mengupdate daftar app Anda terlebih dahulu:"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:266
 msgid "Activate the :ref:`developer mode <developer-mode>`"
-msgstr ""
+msgstr "Aktifkan :ref:`mode developer <developer-mode>`"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:267
 msgid "in the apps menu, click the *Update Apps List* button,"
-msgstr ""
+msgstr "di menu app, klik tombol *Update Daftar App*,"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:268
 msgid "in the dialog that appears, click the *Update* button."
-msgstr ""
+msgstr "di dialog yang muncul, klik tombol *Update*."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:273
 msgid "Your module will then appear in the list of available apps."
-msgstr ""
+msgstr "Modul Anda lalu akan muncul di daftar app yang tersedia."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:279
 msgid "Deploy in production"
-msgstr ""
+msgstr "Deploy di production"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:281
 msgid ""
@@ -3611,16 +4000,21 @@ msgid ""
 "and believe it is ready for production, you can merge your branch in the "
 "production branch."
 msgstr ""
+"Setelah Anda mengetes modul Anda di branch staging dengan data production, "
+"dan yakin modul sudah siap untuk production, Anda dapat merge branch Anda "
+"dengan branch production."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:284
 msgid "Drag and drop your staging branch on the production branch."
-msgstr ""
+msgstr "Tarik dan lepas branch staging Anda ke branch production."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:291
 msgid ""
 "This will merge the latest changes of your staging branch in the production "
 "branch, and update your production server with these latest changes."
 msgstr ""
+"Ini akan merge perubahan terakhir dari branch staging Anda dengan branch "
+"production, dan mengupdate server production Anda dengan perubahan terkini."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:302
 msgid ""
@@ -3629,56 +4023,66 @@ msgid ""
 "module in staging databases <odoosh-gettingstarted-firstmodule-"
 "productiondata-install>`."
 msgstr ""
+"Modul Anda tidak akan diinstal secara otomatis, Anda harus menginstalnya "
+"secara manual seperti yang dijelaskan di :ref:`bagian di atas mengenai "
+"menginstal modul di database staging <odoosh-gettingstarted-firstmodule-"
+"productiondata-install>`."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:308
 msgid "Add a change"
-msgstr ""
+msgstr "Tambahkan perubahan"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:310
 msgid ""
 "This section explains how to add a change in your module by adding a new "
 "field in a model and deploy it."
 msgstr ""
+"Bagian ini menjelaskan bagaimana cara menambahkan perubahan ke modul Anda "
+"dengan menambahkan field baru di model dan men-deploy-nya."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:315
 msgid "From the Odoo.sh editor,"
-msgstr ""
+msgstr "Dari editor ODoo.sh,"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:314
 msgid "browse to your module folder *~/src/user/my_module*,"
-msgstr ""
+msgstr "browse ke folder modul Anda *~/src/user/my_module*,"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:315
 msgid "then, open the file *models/models.py*."
-msgstr ""
+msgstr "lalu, buka file *models/models.py*."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:321
 msgid "Or, from your computer,"
-msgstr ""
+msgstr "Atau, dari komputer Anda,"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:318
 msgid ""
 "use the file browser of your choice to browse to your module folder "
 "*~/src/odoo-addons/my_module*,"
 msgstr ""
+"gunakan browser file pilihan Anda untuk browse ke folder modul Anda "
+"*~/src/odoo-addons/my_module*,"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:320
 msgid ""
 "then, open the file *models/models.py* using the editor of your choice, such"
 " as *Atom*, *Sublime Text*, *PyCharm*, *vim*, ..."
 msgstr ""
+"lalu, buka file *models/models.py* menggunakan editor pilihan Anda, seperti "
+"*Atom*, *Sublime Text*, *PyCharm*, *vim*, ..."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:323
 msgid "Then, after the description field"
-msgstr ""
+msgstr "Lalu, setelah field keterangan"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:329
 msgid "Add a datetime field"
-msgstr ""
+msgstr "Tambahkan field tanggalwaktu"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:335
 msgid "Then, open the file *views/views.xml*."
-msgstr ""
+msgstr "Lalu, buka file *views/views.xml*."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:337
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:473
@@ -3697,12 +4101,16 @@ msgid ""
 "These changes alter the database structure by adding a column in a table, "
 "and modify a view stored in database."
 msgstr ""
+"Perubahan-perubahan ini mengubah struktur database dengan menambahkan kolom "
+"di tabel, dan memodifikasi tampilan yang disimpan di database."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:352
 msgid ""
 "In order to be applied in existing databases, such as your production "
 "database, these changes requires the module to be updated."
 msgstr ""
+"Agar dapat diterapkan di database yang tersedia, seperti database production"
+" Anda, perubahan-perubahan ini membutuhkan modul diupdate."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:355
 msgid ""
@@ -3710,10 +4118,12 @@ msgid ""
 "platform when you push your changes, increase your module version in its "
 "manifest."
 msgstr ""
+"Bila Anda ingin update untuk dilakukan secara otomatis oleh platform Odoo.sh"
+" saat Anda push perubahan Anda, tingkatkan versi modul Anda di manifest."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:358
 msgid "Open the module manifest *__manifest__.py*."
-msgstr ""
+msgstr "Buka manifest modul *__manifest__.py*."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:366
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:504
@@ -3725,30 +4135,32 @@ msgid ""
 "The platform will detect the change of version and trigger the update of the"
 " module upon the new revision deployment."
 msgstr ""
+"Platform akan mendeteksi perubahan versi dan memicu update modul pada "
+"deployment revisi baru."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:375
 msgid "Browse to your Git folder."
-msgstr ""
+msgstr "Browse ke folder Git Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:377
 msgid "Then, from an Odoo.sh terminal:"
-msgstr ""
+msgstr "Lalu, dari terminal Odoo.sh:"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:389
 msgid "Then, stage your changes to be committed"
-msgstr ""
+msgstr "Lalu, stage perubahan Anda untuk di-commit"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:401
 msgid "Push your changes:"
-msgstr ""
+msgstr "Push perubahan Anda:"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:403
 msgid "From an Odoo.sh terminal:"
-msgstr ""
+msgstr "Dari terminal Odoo.sh:"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:415
 msgid "The platform will then create a new build for the branch *feature-1*."
-msgstr ""
+msgstr "Platform lalu akan membuat build baru untuk branch *feature-1*."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:420
 msgid ""
@@ -3759,10 +4171,16 @@ msgid ""
 "field will be directly available. Otherwise you can manually update the "
 "module within the apps list."
 msgstr ""
+"Setelah Anda menguji perubahan Anda, Anda dapat merge perubahan Anda di "
+"branch production, contohnya dengan menarik-dan-melepas branch pada branch "
+"production di antarmuka Odoo.sh. Selagi Anda meningkatkan versi modul di "
+"manifest, platform akan mengupdate modul secara otomatis dan field baru Anda"
+" akan langsung tersedia. Bila tidak Anda dapat secara manual mengupdate "
+"modul di daftar app."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:426
 msgid "Use an external Python library"
-msgstr ""
+msgstr "Gunakan pustaka Python eksternal"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:428
 msgid ""
@@ -3770,6 +4188,9 @@ msgid ""
 "by default, you can define a *requirements.txt* file listing the external "
 "libraries your modules depends on."
 msgstr ""
+"Bila Anda ingin menggunakan pustaka Python eksternal yang tidak diinstal "
+"secara default, Anda dapat menggunakan file *requirements.txt* yang "
+"menuliskan pustaka eksternal yang merupakan ketergantungan modul-modul Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:432
 msgid ""
@@ -3779,54 +4200,69 @@ msgid ""
 "requiring system packages for their compilation, and **third-party Odoo "
 "modules**."
 msgstr ""
+"Tidak mungkin menginstal atau mengupgrade paket sistem pada database Odoo.sh"
+" (contoh, apt packages). Namun, pada kondisi khusus, paket dapat "
+"dipertimbangkan untuk diinstal. Ini juga berlaku untuk **modul-modul "
+"Python** yang memerlukan paket-paket sistem untuk kompilasi mereka, dan "
+"**modul-modul pihak-ketiga Odoo**."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:436
 msgid "**PostgreSQL extensions** are not supported on Odoo.sh."
-msgstr ""
+msgstr "**PostgreSQL extension** tidak didukung pada Odoo.sh."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:437
 msgid ""
 "For more information, consult our `FAQ "
 "<https://www.odoo.sh/faq#install_dependencies>`_."
 msgstr ""
+"Untuk informasi lebih lanjut, konsultasikan `FAQ "
+"<https://www.odoo.sh/faq#install_dependencies>`_ kami."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:439
 msgid ""
 "The platform will use this file to automatically install the Python "
 "libraries your project needs."
 msgstr ""
+"Platform akan menggunakan file ini untuk secara otomatis menginstal pustaka-"
+"pustaka Python yang project Anda butuhkan."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:441
 msgid ""
 "The feature is explained in this section by using the `Unidecode library "
 "<https://pypi.python.org/pypi/Unidecode>`_ in your module."
 msgstr ""
+"Fitur ini dijelaskan di bagian ini menggunakan `pustaka Unidecode "
+"<https://pypi.python.org/pypi/Unidecode>`_ di modul Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:444
 msgid "Create a file *requirements.txt* in the root folder of your repository"
-msgstr ""
+msgstr "Buat file *requirements.txt* di root folder repositori Anda"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:446
 msgid ""
 "From the Odoo.sh editor, create and open the file "
 "~/src/user/requirements.txt."
-msgstr ""
+msgstr "Dari editor Odoo.sh, buat dan buka file ~/src/user/requirements.txt."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:448
 msgid ""
 "Or, from your computer, create and open the file ~/src/odoo-"
 "addons/requirements.txt."
 msgstr ""
+"Atau, dari komputer Anda, buat dan buka file ~/src/odoo-"
+"addons/requirements.txt."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:456
 msgid ""
 "Then use the library in your module, for instance to remove accents from "
 "characters in the name field of your model."
 msgstr ""
+"Lalu gunakan pustaka di modul Anda, contohnya untuk menghapus aksen dari "
+"karakter di field nama model Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:459
 msgid "Open the file *models/models.py*."
-msgstr ""
+msgstr "Buka file *models/models.py*."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:461
 msgid "Before"
@@ -3837,30 +4273,32 @@ msgid ""
 "Adding a Python dependency requires a module version increase for the "
 "platform to install it."
 msgstr ""
+"Menambahkan ketergantungan Python membutuhkan peningkatan versi modul "
+"sebelum platform dapat menginstalnya."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:496
 msgid "Edit the module manifest *__manifest__.py*"
-msgstr ""
+msgstr "Edit manifest modul *__manifest__.py*"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:510
 msgid "Stage and commit your changes:"
-msgstr ""
+msgstr "Stage dan commit perubahan Anda:"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:518
 msgid "Then, push your changes:"
-msgstr ""
+msgstr "Lalu, push perubahan Anda:"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:520
 msgid "In an Odoo.sh terminal:"
-msgstr ""
+msgstr "Di terminal Odoo.sh:"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:526
 msgid "In your computer terminal:"
-msgstr ""
+msgstr "Di terminal komputer Anda:"
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:6
 msgid "Online Editor"
-msgstr ""
+msgstr "Editor Online"
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:11
 msgid ""
@@ -3869,6 +4307,10 @@ msgid ""
 "consoles, Odoo Shell consoles and `Notebooks "
 "<https://jupyterlab.readthedocs.io/en/stable/user/notebook.html>`_."
 msgstr ""
+"Editor Online memungkinkan Anda untuk mengedit source code build Anda dari "
+"browser website. Ini juga memberikan Anda pilihan untuk membuka terminal, "
+"console Python, console Odoo Shell dan `Notebooks "
+"<https://jupyterlab.readthedocs.io/en/stable/user/notebook.html>`_."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:18
 msgid ""
@@ -3878,62 +4320,78 @@ msgid ""
 " to your build domain name (e.g. *https://odoo-addons-"
 "master-1.dev.odoo.com/odoo-sh/editor*)."
 msgstr ""
+"Anda dapat mengakses editor build melalui :ref:`tab branch <odoosh-"
+"gettingstarted-branches-tabs>`, :ref:`menu dropdown build <odoosh-"
+"gettingstarted-builds-dropdown-menu>` atau dengan menambahkan */odoo-"
+"sh/editor* ke nama domain build Anda (contoh, *https://odoo-addons-"
+"master-1.dev.odoo.com/odoo-sh/editor*)."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:25
 msgid "Edit the source code"
-msgstr ""
+msgstr "Edit source code"
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:27
 msgid "The working directory is composed of the following folders:"
-msgstr ""
+msgstr "Direktori yang bekerja dibuat dari folder-folder berikut:"
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:49
 msgid ""
 "You can edit the source code (files under */src*) in development and staging"
 " builds."
 msgstr ""
+"Anda dapat mengedit source code (file di bawah */src*) di development dan "
+"and build staging."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:52
 msgid ""
 "Your changes won't be propagated to a new build, you must commit them in "
 "your source code if you want to make them persist."
 msgstr ""
+"Perubahan Anda tidak akan berlaku ke build baru, Anda harus commit mereka di"
+" source code Anda bila Anda ingin memastikan mereka berlaku."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:56
 msgid ""
 "For production builds, the source code is read-only, because applying local "
 "changes on a production server is not a good practice."
 msgstr ""
+"Untuk build production, source code adalah read-only, karena menerapkan "
+"perubahan lokal pada server production bukan merupakan praktek yang bagus."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:59
 msgid ""
 "The source code of your Github repository is located under */src/user*,"
-msgstr ""
+msgstr "Source code repositori Github Anda memiliki lokasi */src/user*, "
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:60
 msgid "The source code of Odoo is located under"
-msgstr ""
+msgstr "Source code Odoo berlokasi di"
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:62
 msgid "*/src/odoo* (`odoo/odoo <https://github.com/odoo/odoo>`_),"
-msgstr ""
+msgstr "*/src/odoo* (`odoo/odoo <https://github.com/odoo/odoo>`_),"
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:63
 msgid ""
 "*/src/enterprise* (`odoo/enterprise <https://github.com/odoo/enterprise>`_),"
 msgstr ""
+"*/src/enterprise* (`odoo/enterprise <https://github.com/odoo/enterprise>`_),"
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:64
 msgid ""
 "*/src/themes* (`odoo/design-themes <https://github.com/odoo/design-"
 "themes>`_)."
 msgstr ""
+"*/src/themes* (`odoo/design-themes <https://github.com/odoo/design-"
+"themes>`_)."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:66
 msgid ""
 "To open a file in the editor, just double-click on it in the file browser "
 "panel on the left."
 msgstr ""
+"Untuk membuka file di editor, cukup klik dua-kali pada panel browser file di"
+" kiri."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:71
 msgid ""
@@ -3941,6 +4399,9 @@ msgid ""
 "menu :menuselection:`File --> Save .. File` or by hitting the :kbd:`Ctrl+S` "
 "shortcut."
 msgstr ""
+"Anda lalu dapat mulai melakukan perubahan Anda. Anda dapat menyimpan "
+"perubahan Anda dengan menu :menuselection:`File --> Save .. File` atau "
+"dengan memencet shortcut :kbd:`Ctrl+S`."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:77
 msgid ""
@@ -3948,6 +4409,9 @@ msgid ""
 "will detect it and reload automatically so your changes are reflected "
 "immediately, without having to restart the server manually."
 msgstr ""
+"Bila Anda save file Python yang berada di bawah path addon server Odoo, Odoo"
+" akan mendeteksinya dan memuatnya secara otomatis supaya perubahan langsung "
+"berlaku, tanpa harus restart server secara manual."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:84
 msgid ""
@@ -3958,54 +4422,66 @@ msgid ""
 "considered as currently opened is the file focused in the text editor, not "
 "the file highlighted in the file browser."
 msgstr ""
+"Namun, bila perubahan adalah data yang disimpan di database, seperti label "
+"field, atau tampilan, Anda harus mengupdate modul yang sesuai untuk "
+"menerapkan perubahannya. Anda dapat mengupdate modul file yang saat ini "
+"dibuka dengan menggunakan menu :menuselection:`Odoo --> Update current "
+"module`. Ingat bahwa file yang dipilih dianggap sebagai saat ini dibuka "
+"adalah file yang terfokus di editor teks, bukan file yang di highlight di "
+"browser file."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:93
 msgid "You can also open a terminal and execute the command:"
-msgstr ""
+msgstr "Anda juga dapat membuka terminal dan menjalankan command:"
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:102
 msgid "Commit & Push your changes"
-msgstr ""
+msgstr "Commit & Push perubahan Anda"
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:104
 msgid ""
 "You have the possibility to commit and push your changes to your Github "
 "repository."
 msgstr ""
+"Anda memiliki pilihan untuk commit dan push perubahan Anda ke repositori "
+"Github Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:106
 msgid "Open a terminal (:menuselection:`File --> New --> Terminal`),"
-msgstr ""
+msgstr "Buka terminal (:menuselection:`File --> New --> Terminal`),"
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:107
 msgid "Change the directory to *~/src/user* using :code:`cd ~/src/user`,"
 msgstr ""
+"Ubah direktori menjadi *~/src/user* menggunakan :code:`cd ~/src/user`,"
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:108
 msgid "Stage your changes using :code:`git add`,"
-msgstr ""
+msgstr "Stage perubahan Anda menggunakan :code:`git add`,"
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:109
 msgid "Commit your changes using :code:`git commit`,"
-msgstr ""
+msgstr "Commit perubahan Anda menggunakan :code:`git commit`,"
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:110
 msgid "Push your changes using :code:`git push https HEAD:<branch>`."
-msgstr ""
+msgstr "Push perubahan Anda menggunakan :code:`git push https HEAD:<branch>`."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:112
 msgid "In this last command,"
-msgstr ""
+msgstr "Di command terakhir ini,"
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:114
 msgid ""
 "*https* is the name of your *HTTPS* Github remote repository (e.g. "
 "https://github.com/username/repository.git),"
 msgstr ""
+"*https* adalah nama *HTTPS* repositori remot Github Anda (e.g. "
+"https://github.com/username/repository.git),"
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:116
 msgid "HEAD is the reference to the latest revision you committed,"
-msgstr ""
+msgstr "HEAD adalah referensi ke revisi terakhir yang Anda commit,"
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:117
 msgid ""
@@ -4013,6 +4489,9 @@ msgid ""
 "push the changes, most-likely the current branch if you work in a "
 "development build."
 msgstr ""
+"<branch> harus diganti dengan nama branch di mana Anda ingin push "
+"perubahannya, kemungkinan besar merupakan branch saat ini bila Anda bekerja "
+"di build development."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:124
 msgid ""
@@ -4028,6 +4507,18 @@ msgid ""
 "command-line/>`_ and use it as password. Granting the ``repo`` permission "
 "suffices."
 msgstr ""
+"SSH remot Github tidak digunakan karena SSH private key Anda tidak dihosting"
+" di container build Anda (untuk alasan keamanan) dan tidak diforward melalui"
+" SSH Agent (selagi Anda mengakses editor ini melalui browser website) dan "
+"oleh karena itu Anda tidak dapat mengautentikasi diri Anda ke Github "
+"menggunakan SSH. Anda harus menggunakan HTTPS remot dari repositori Github "
+"Anda untuk push perubahan Anda, yang ditambahkan secara otomatis dinamakan "
+"sebagai *https* di Git remot Anda. Anda akan di-prompt untuk memasukkan "
+"username dan password Github Anda. Bila Anda mengaktifkan autentikasi dua-"
+"faktor di Github, Anda dapat membuat `token akses pribadi "
+"<https://help.github.com/articles/creating-a-personal-access-token-for-the-"
+"command-line/>`_ dan menggunakannya sebagai password. Cukup dengan "
+"memberikan permission ``repo``."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:137
 msgid ""
@@ -4036,6 +4527,10 @@ msgid ""
 "rather than branches. In other words, this means you can have multiple "
 "builds on the same branch, but on different revisions."
 msgstr ""
+"Source folder Git *~/src/user* tidak di check-out di branch tapi pada revisi"
+" yang terpisah: Ini karena build bekerja pada revisi-revisi tertentu alih-"
+"alih pada branch. Dengan kata lain, ini berarti Anda dapat memiliki lebih "
+"dari satu build pada branch yang sama, tapi pada revisi yang berbeda-beda."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:141
 msgid ""
@@ -4045,10 +4540,16 @@ msgid ""
 " same revision as the new build that was created, but always make sure to be"
 " in an editor of a build using the latest revision of your branch."
 msgstr ""
+"Setelah perubahan Anda di push, menurut :ref:`perilaku push branch <odoosh-"
+"gettingstarted-branches-tabs-settings>` Anda, build baru mungkin dibuat. "
+"Anda dapat melanjutkan bekerja di editor dari mana Anda melakukan push, "
+"karena akan memiliki revisi yang sama dengan build yang baru saja dibuat, "
+"tapi selalu pastikan untuk berada di editor dengan build yang menggunakan "
+"revisi terkini dari branch Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:148
 msgid "Consoles"
-msgstr ""
+msgstr "Console"
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:150
 msgid ""
@@ -4060,12 +4561,20 @@ msgid ""
 "display>`_ capabilities. Thanks to this, you will be able to display objects"
 " in HTML."
 msgstr ""
+"Anda dapat membuka console Python, yaitu `IPython interactive shells "
+"<https://ipython.readthedocs.io/en/stable/interactive/tutorial.html>`_. "
+"Salah satu penambahan paling menarik untuk menggunakan console Python alih-"
+"alih IPython shell di dalam terminal adalah kemampuan `rich display "
+"<https://ipython.readthedocs.io/en/stable/config/integrating.html#rich-"
+"display>`_. Berkat hal ini, Anda dapat menampilkan object di HTML."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:158
 msgid ""
 "You can for instance display cells of a CSV file using `pandas "
 "<https://pandas.pydata.org/pandas-docs/stable/tutorials.html>`_."
 msgstr ""
+"Anda dapat contohnya menampilkan cell dari cell CSV menggunakan `pandas "
+"<https://pandas.pydata.org/pandas-docs/stable/tutorials.html>`_."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:164
 msgid ""
@@ -4073,6 +4582,9 @@ msgid ""
 "registry and model methods of your database. You can also directly read or "
 "write on your records."
 msgstr ""
+"Anda juga dapat membuka console Odoo Shell untuk mengutak atik registry Odoo"
+" dan model method database Anda. Anda juga dapat langsung membaca atau "
+"menulis pada record Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:169
 msgid ""
@@ -4082,12 +4594,19 @@ msgid ""
 "in your database as well. You therefore should use Odoo consoles carefully "
 "on production databases."
 msgstr ""
+"Di Odoo Console, transaksi secara otomatis di-commit. Ini berarti, sebagai "
+"contoh, bahwa perubahan di record diterapkan secara efektif di database. "
+"Bila Anda mengganti nama user, nama user diubah di database Anda juga. Anda "
+"oleh karena itu sebaiknya menggunakan console Odoo secara hati-hati pada "
+"database production"
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:174
 msgid ""
 "You can use *env* to invoke models of your database registry, e.g. "
 ":code:`env['res.users']`."
 msgstr ""
+"Anda dapat menggunakan *env* untuk invoke model registry database Anda, "
+"contoh, :code:`env['res.users']`."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:184
 msgid ""
@@ -4096,30 +4615,39 @@ msgid ""
 "<https://ipython.readthedocs.io/en/stable/config/integrating.html#rich-"
 "display>`_ mentioned above."
 msgstr ""
+"Class :code:`Pretty` memberikan Anda pilihan untuk dengan mudah menampilkan "
+"list dan dicts dengan tampilan yang rapih, menggunakan `rich display "
+"<https://ipython.readthedocs.io/en/stable/config/integrating.html#rich-"
+"display>`_ yang disebut di atas."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:192
 msgid ""
 "You can also use `pandas <https://pandas.pydata.org/pandas-"
 "docs/stable/tutorials.html>`_ to display graphs."
 msgstr ""
+"Anda juga dapat menggunakan `pandas <https://pandas.pydata.org/pandas-"
+"docs/stable/tutorials.html>`_ untuk menampilkan grafik."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:8
 msgid "The settings allow you to manage the configuration of your project."
 msgstr ""
+"Pengaturan memungkinkan Anda untuk mengelola konfigurasi project Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:14
 msgid "Project name"
-msgstr ""
+msgstr "Nama project"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:16
 msgid "The name of your project."
-msgstr ""
+msgstr "Nama project Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:21
 msgid ""
 "This defines the address that will be used to access your production "
 "database."
 msgstr ""
+"Ini mendefinisikan alamat yang akan digunakan untuk mengakses database "
+"production Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:23
 msgid ""
@@ -4127,6 +4655,9 @@ msgid ""
 "and assigned automatically. However, when you change your project name, only"
 " future builds will use the new name."
 msgstr ""
+"Alamat-alamat build staging dan development Anda berasal dari nama ini dan "
+"ditetapkan secara otomatis. Namun, saat Anda mengganti nama project Anda, "
+"hanya build di masa depan yang akan menggunakan nama baru."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:29
 msgid "Collaborators"
@@ -4134,21 +4665,23 @@ msgstr "Kolaborator-kolaborator"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:31
 msgid "Manage the Github users who can access your project."
-msgstr ""
+msgstr "Kelola user Github yang dapat mengakses project Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:36
 msgid "There are two levels of users:"
-msgstr ""
+msgstr "Terdapat dua level user:"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:38
 msgid "Admin: has access to all features of Odoo.sh."
-msgstr ""
+msgstr "Admin: memiliki akses ke semua fitur Odoo.sh."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:39
 msgid ""
 "User: does not have access to the project settings nor to the production and"
 " staging databases."
 msgstr ""
+"User: tidak memiliki akses ke pengaturan project atau database production "
+"dan staging"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:41
 msgid ""
@@ -4158,12 +4691,20 @@ msgid ""
 "connect* feature, but they can of course use their regular account on these "
 "databases if they have one, using their regular credentials."
 msgstr ""
+"Kelompok user dimaksudkan untuk developer yang dapat melakukan modifikasi di"
+" kode Anda tpai tidak diizinkan untuk mengakses data production. User-user "
+"kelompok ini tidak dapat terhubung ke database production dan staging "
+"menggunakan fitur  *1-click connect*, tapi mereka dapat menggunakan akun "
+"reguler mereka pada database ini bila mereka memiliki akun, menggunakan "
+"kredensial reguler mereka."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:46
 msgid ""
 "In addition, they cannot use the webshell nor have access to the server "
 "logs."
 msgstr ""
+"Ditambah lagi, mereka tidak dapat menggunakan webshell dan tidak memiliki "
+"akses ke log server."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:54
 msgid "User"
@@ -4212,25 +4753,25 @@ msgstr "Admin"
 #: ../../content/administration/supported_versions.rst:90
 #: ../../content/administration/supported_versions.rst:91
 msgid "|green|"
-msgstr ""
+msgstr "|green|"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:61
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:89
 msgid "1-click connect"
-msgstr ""
+msgstr "1-click connect"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:69
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:97
 msgid "Shell/SSH"
-msgstr ""
+msgstr "Shell/SSH"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:84
 msgid "Production & Staging"
-msgstr ""
+msgstr "Production & Staging"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:118
 msgid "|green|\\*"
-msgstr ""
+msgstr "|green|\\*"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:120
 #: ../../content/administration/odoo_sh/getting_started/status.rst:3
@@ -4239,49 +4780,59 @@ msgstr "Status"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:130
 msgid "\\* Only in staging branches"
-msgstr ""
+msgstr "\\* Only in staging branches"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:145
 msgid "Public Access"
-msgstr ""
+msgstr "Akses Publik"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:147
 msgid "Allow public access to your development builds."
-msgstr ""
+msgstr "Izinkan akses publik ke build development Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:152
 msgid ""
 "If activated, this option exposes the Builds page publicly, allowing "
 "visitors to connect to your development builds."
 msgstr ""
+"Bila diaktifkan, opsi ini mengekspos halaman Build secara publik, "
+"mengizinkan pengunjung untuk terhubung ke build development Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:155
 msgid ""
 "In addition, visitors have access to the logs, shell and mails of your "
 "development builds."
 msgstr ""
+"Ditambah lagi, pengunjung memiliki akses ke log, shell dan email build "
+"development Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:157
 msgid ""
 "Production and staging builds are excluded, visitors can only see their "
 "status."
 msgstr ""
+"Build production dan staging dikecualikan, pengunjung hanya dapat melihat "
+"status mereka."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:162
 msgid "Custom domains"
-msgstr ""
+msgstr "Domain custom"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:164
 msgid ""
 "To configure additional domains please refer to the corresponding branch's "
 ":ref:`settings tab <odoosh-gettingstarted-branches-tabs-settings>`."
 msgstr ""
+"Untuk mengonfigurasi domain tambahan mohon referensikan :ref:`tab pengaturan"
+" <odoosh-gettingstarted-branches-tabs-settings>`  branch yang sesuai."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:172
 msgid ""
 "Configure the deploy keys for the private repositories you use as submodules"
 " in your branches to allow Odoo.sh to download them."
 msgstr ""
+"Konfigurasikan deploy key untuk repositori pribadi yang Anda gunakan sebagai"
+" submodul di branch Anda untuk mengizinkan Odoo.sh untuk mengunduh mereka."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:176
 msgid ""
@@ -4290,6 +4841,9 @@ msgid ""
 "chapter :ref:`Submodules <odoosh-advanced-submodules>` of this "
 "documentation."
 msgstr ""
+"Pengaturan-pengaturan berikut dibutuhkan hanya untuk **repositori pribadi** "
+"saja. Bila Anda mencari cara untuk setup submodul Anda, instruksi tersedia "
+"di bab :ref:`Submodul <odoosh-advanced-submodules>` untuk dokumentasi ini."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:183
 msgid ""
@@ -4298,98 +4852,123 @@ msgid ""
 "for Odoo.sh, so the remote Git server allows our platform to download the "
 "revisions of this private repository."
 msgstr ""
+"Saat repositori bersifat pribadi, tidak mungkin mengunduh secara publik "
+"branch dan revisi-nya. Oleh karena alasan itu, Anda harus mengonfigurasi "
+"deploy key untuk Odoo.sh, supaya server Git remot mengizinkan platform kami "
+"untuk mengunduh revisi dari repositori pribadi ini."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:188
 msgid ""
 "To configure the deploy key for a private repository, proceed as follows:"
 msgstr ""
+"Untuk mengonfigurasi deploy key untuk repositori pribadi, lanjutkan sebagai "
+"berikut:"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:190
 msgid ""
 "in the input, paste the SSH URL of your private sub-repository and click on "
 "*Add*,"
 msgstr ""
+"di input, tempel URL SSH dari sub-repositori pribadi Anda dan klik pada "
+"*Add*,"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:192
 msgid "e.g. *git@github.com:USERNAME/REPOSITORY.git*"
-msgstr ""
+msgstr "contoh, *git@github.com:USERNAME/REPOSITORY.git*"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:193
 msgid ""
 "it can be another Git server than Github, such as Bitbucket, Gitlab or even "
 "your own self-hosted server"
 msgstr ""
+"dapat merupakan server Git lain selain Github, seperti Bitbucker, Gitlab "
+"atau bahkan server yang Anda hosting sendiri"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:196
 msgid "copy the public key,"
-msgstr ""
+msgstr "salin public key."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:198
 msgid "it should look like *ssh-rsa some...random...characters...here...==*"
 msgstr ""
+"public key memiliki format seperti *ssh-rsa beberapa...karakter...acak...di "
+"sini...==*"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:200
 msgid ""
 "in the settings of the private sub-repository, add the public key amongst "
 "the deploy keys."
 msgstr ""
+"di pengaturan sub-repositori pribadi, tambahkan public key di antara deploy "
+"key."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:202
 msgid ""
 "Github.com: :menuselection:`Settings --> Deploy keys --> Add deploy key`"
 msgstr ""
+"Github.com: :menuselection:`Pengaturan --> Deploy key --> Add deploy key`"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:203
 msgid "Bitbucket.com: :menuselection:`Settings --> Access keys --> Add key`"
 msgstr ""
+"Bitbucket.com: :menuselection:`Pengaturan --> Access keys --> Add key`"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:204
 msgid "Gitlab.com: :menuselection:`Settings --> Repository --> Deploy Keys`"
-msgstr ""
+msgstr "Gitlab.com: :menuselection:`Settings --> Repository --> Deploy Keys`"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:205
 msgid ""
 "Self-hosted: append the key to the git user’s authorized_keys file in its "
 ".ssh directory"
 msgstr ""
+"Hosting sendiri: tambahkan key ke file authorized_keys milik user git di "
+"direktori .ssh"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:208
 msgid "Storage Size"
-msgstr ""
+msgstr "Ukuran Simpanan"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:210
 msgid "This section shows the storage size used by your project."
 msgstr ""
+"Bagian ini menunjukkan ukuran storage yang digunakan oleh project Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:215
 msgid "Storage size is computed as follows:"
-msgstr ""
+msgstr "Ukuran storage dihitung sebagai berikut:"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:217
 msgid "the size of the PostgreSQL database"
-msgstr ""
+msgstr "ukuran database PostgreSQL"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:219
 msgid ""
 "the size of the disk files available in your container: database filestore, "
 "sessions storage directory..."
 msgstr ""
+"ukuran file disk tersedia di container Anda: filestore database, direktori "
+"storage sesi..."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:222
 msgid ""
 "In case you want to analyze disk usage, you can run the tool `ncdu "
 "<https://dev.yorhel.nl/ncdu/man>`_ in your Web Shell."
 msgstr ""
+"Apabila Anda ingin menganalisis penggunaan disk, Anda dapat menjalankan alat"
+" `ncdu <https://dev.yorhel.nl/ncdu/man>`_ di Web Shell Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:225
 msgid ""
 "Should your production database size grow to exceed what's provisioned in "
 "your subscription, it will automatically be synchronized with it."
 msgstr ""
+"Apabila database production Anda berkembang melebihi apa yang ditentukan di "
+"langganan Anda, langganan akan secara otomatis disinkronisasikan. "
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:229
 msgid "Database Workers"
-msgstr ""
+msgstr "Pekerja Database"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:231
 msgid ""
@@ -4397,6 +4976,10 @@ msgid ""
 "increase the load your production database is able to handle. If you add "
 "more, it will automatically be synchronized with your subscription."
 msgstr ""
+"Pekerja database tambahan dapat dikonfigurasi di sini. Lebih banyak pekerja "
+"membantu Anda meningkatkan muatan yang database production Anda dapat "
+"tangani. Bila Anda menambahkan lebih dari itu, akan secara otomatis "
+"disinkronisasikan dengan langganan Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:239
 msgid ""
@@ -4406,10 +4989,16 @@ msgid ""
 "it's not due to your own customizations you can open a ticket `here "
 "<https://www.odoo.com/help>`_."
 msgstr ""
+"Menambahkan lebih banyak pekerja tidak akan secara ajaib menyelesaikan semua"
+" masalah performa Anda. Ini hanya memungkinkan server untuk menangani lebih "
+"banyak koneksi di saat yang sama. Bila beberapa operasi sepertinya lebih "
+"lambat dari biasa, kemungkinan besar adalah masalah dengan code, bila bukan "
+"oleh karena kustomisasi Anda sendiri Anda dapat mengirim tiket `di sini "
+"<https://www.odoo.com/help>`_."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:245
 msgid "Staging Branches"
-msgstr ""
+msgstr "Branch-Branch Staging"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:247
 msgid ""
@@ -4417,6 +5006,9 @@ msgid ""
 "the same time. If you add more, it will automatically be synchronized with "
 "your subscription."
 msgstr ""
+"Branch staging tambahan memungkinkan Anda untuk mendevelop dan mengetes "
+"lebih banyak fitur-fitur pada saat yang sama. Bila Anda menambahkan lebih "
+"banyak, akan secara otomatis disinkronisasi dengan langganan Anda."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:254
 msgid "Activation"
@@ -4427,32 +5019,38 @@ msgid ""
 "Shows the status of the project's activation. You can change the project's "
 "activation code if needed."
 msgstr ""
+"Menunjukkan status aktivasi project. Anda dapat mengubah kode aktivasi "
+"project bila dibutuhkan."
 
 #: ../../content/administration/odoo_sh/getting_started/status.rst:8
 msgid ""
 "The status page shows statistics regarding the servers your project uses. It"
 " includes the servers availability."
 msgstr ""
+"Halaman status menunjukkan statistik mengenai server yang project Anda "
+"gunakan. Ini termasuk ketersediaan server."
 
 #: ../../content/administration/odoo_sh/overview/introduction.rst:3
 msgid "Introduction to Odoo.sh"
-msgstr ""
+msgstr "Pengantar ke Odoo.sh"
 
 #: ../../content/administration/odoo_sh/overview/introduction.rst:10
 msgid ""
 "The documentation will help you go live with your Odoo.sh project in no "
 "time."
 msgstr ""
+"Dokumentasi akan membantu Anda menjalankan project Odoo.sh Anda secepat "
+"mungkin."
 
 #: ../../content/administration/on_premise.rst:5
 #: ../../content/administration/upgrade.rst:145
 #: ../../content/administration/upgrade.rst:341
 msgid "On-premise"
-msgstr ""
+msgstr "On-premise"
 
 #: ../../content/administration/on_premise.rst:8
 msgid "Register a database"
-msgstr ""
+msgstr "Daftarkan database"
 
 #: ../../content/administration/on_premise.rst:10
 msgid ""
@@ -4460,15 +5058,18 @@ msgid ""
 " app dashboard. If the registration is successful, the banner will turn "
 "green and display the database expiration date."
 msgstr ""
+"Untuk mendaftarkan database Anda, masukkan kode langganan Anda di banner di "
+"dashboard app. Bila pendaftaran sukses, banner akan menjadi hijau dan "
+"menampilkan tanggal kadaluwarsa database."
 
 #: ../../content/administration/on_premise.rst:14
 msgid ""
 "The expiration date is also displayed at the bottom of the Settings page."
-msgstr ""
+msgstr "Tanggal kadaluwarsa juga ditampilkan di bawah halaman Pengaturan."
 
 #: ../../content/administration/on_premise.rst:19
 msgid "Duplicate a database"
-msgstr ""
+msgstr "Duplikasikan database"
 
 #: ../../content/administration/on_premise.rst:21
 msgid ""
@@ -4478,27 +5079,34 @@ msgid ""
 " by checking the neutralize box when prompted, which executes all "
 ":file:`neutralize.sql` scripts for every installed module."
 msgstr ""
+"Duplikasikan database dengan mengakses manajer database pada server Anda "
+"(`<odoo-server>/web/database/manager`). Secara tipikal, Anda ingin "
+"menduplikasikan database production Anda menjadi database testing yang "
+"dinetralisir. Ini dapat dilakukan dengan mencentang kotak netralisir saat "
+"diprompt, yang menjalankan semua script :file:`neutralize.sql` untuk setiap "
+"modul yang diinstal."
 
 #: ../../content/administration/on_premise.rst:27
 msgid "Common error messages and solutions"
-msgstr ""
+msgstr "Pesan error umum dan solusi-solusi"
 
 #: ../../content/administration/on_premise.rst:30
 msgid "Registration error"
-msgstr ""
+msgstr "Error pendaftaran"
 
 #: ../../content/administration/on_premise.rst:32
 msgid ""
 "In case of a registration error, the following message should be displayed."
 msgstr ""
+"Apabila terjadi error pendaftaran, pesan berikut seharusnya ditampilkan."
 
 #: ../../content/administration/on_premise.rst-1
 msgid "Database registration error message"
-msgstr ""
+msgstr "Pesan error pendaftaran database"
 
 #: ../../content/administration/on_premise.rst:37
 msgid "To resolve the issue:"
-msgstr ""
+msgstr "Untuk menyelesaikan masalah ini:"
 
 #: ../../content/administration/on_premise.rst:39
 msgid ""
@@ -4507,18 +5115,26 @@ msgid ""
 " Account <https://accounts.odoo.com/my/subscription>`_ or contact your "
 "Account Manager."
 msgstr ""
+"Periksa **validitas langganan Odoo Enterprise Anda** dengan memverifikasi "
+"bila detail langganan Anda memiliki tag :guilabel:`Sedang Berlangsung` pada "
+"`Akun Odoo <https://accounts.odoo.com/my/subscription>`_ Anda atau hubungi "
+"Account Manager Anda."
 
 #: ../../content/administration/on_premise.rst:43
 msgid ""
 "Ensure that **no other database is linked** to the subscription code, as "
 "only one database can be linked per subscription."
 msgstr ""
+"Pastikan tidak ada **database lain yang terhubung** ke kode langganan, "
+"karena hanya satu database yang boleh terhubung untuk setiap langganan."
 
 #: ../../content/administration/on_premise.rst:47
 msgid ""
 "If a test or a development database is needed, you can :ref:`duplicate a "
 "database <on-premise/duplicate>`."
 msgstr ""
+"Bila database testing atau development dibutuhkan, Anda dapat "
+":ref:`menduplikasikan database <on-premise/duplicate>`."
 
 #: ../../content/administration/on_premise.rst:50
 msgid ""
@@ -4527,16 +5143,22 @@ msgid ""
 "<https://accounts.odoo.com/my/subscription>`_. If two or more databases "
 "share the same UUID, their name will be displayed."
 msgstr ""
+"Verifikasi bahwa **tidak ada database yang menggunakan UUID yang sama** "
+"(Universally Unique Identifier) dengan membuka `Kontrak Odoo "
+"<https://accounts.odoo.com/my/subscription>`_ Anda. Bila dua atau lebih "
+"database menggunakan UUID yang sama, nama mereka akan ditampilkan."
 
 #: ../../content/administration/on_premise.rst-1
 msgid "Database UUID error message"
-msgstr ""
+msgstr "Pesan error UUID database"
 
 #: ../../content/administration/on_premise.rst:57
 msgid ""
 "If that is the case, manually change the database(s) UUID or `send a support"
 " ticket <https://www.odoo.com/help>`_."
 msgstr ""
+"Bila ini terjadi, secara manual ubah UUID database atau `kirim tiket bantuan"
+" <https://www.odoo.com/help>`_."
 
 #: ../../content/administration/on_premise.rst:60
 msgid ""
@@ -4544,45 +5166,56 @@ msgid ""
 "validation servers, ensure your **network and firewall settings** allow the "
 "Odoo server to open outgoing connections towards:"
 msgstr ""
+"Karena notifikasi update harus bisa mencapai server validasi langganan Odoo,"
+" pastikan **pengaturan jaringan dan firewall** Anda mengizinkan server Odoo "
+"untuk membuka jaringan ke:"
 
 #: ../../content/administration/on_premise.rst:64
 msgid "`services.odoo.com` on port `443` (or `80`)"
-msgstr ""
+msgstr "`services.odoo.com` pada port `443` (atau `80`)"
 
 #: ../../content/administration/on_premise.rst:65
 msgid "for older deployments, `services.openerp.com` on port `443` (or `80`)"
 msgstr ""
+"untuk deployment lebih tua, `services.openerp.com` pada port `443` (atau "
+"`80`)"
 
 #: ../../content/administration/on_premise.rst:67
 msgid ""
 "These ports must be kept open even after registering a database, as the "
 "update notification runs once a week."
 msgstr ""
+"Port-port ini harus dibiarkan terbuka bahkan setelah mendaftarkan database, "
+"karena notifikasi update berjalan sekali seminggu."
 
 #: ../../content/administration/on_premise.rst:71
 msgid "Too many users error"
-msgstr ""
+msgstr "Terlalu banyak error user"
 
 #: ../../content/administration/on_premise.rst:73
 msgid ""
 "If you have more users in a local database than provisioned in your Odoo "
 "Enterprise subscription, the following message should be displayed."
 msgstr ""
+"Bila Anda memiliki user di lokal database yang melebihi ketentuan di "
+"langganan Odoo Enterprise, pesan berikut seharusnya ditampilkan."
 
 #: ../../content/administration/on_premise.rst-1
 msgid "Too many users on a database error message"
-msgstr ""
+msgstr "Pesan error terlalu banyak user pada database"
 
 #: ../../content/administration/on_premise.rst:79
 msgid ""
 "When the message appears, you have 30 days to act before the database "
 "expires. The countdown is updated every day."
 msgstr ""
+"Saat pesan muncul, Anda memiliki 30 hari untuk bertindak sebelum database "
+"kadaluwarsa. Waktu ini diupdate setiap hari."
 
 #: ../../content/administration/on_premise.rst:82
 #: ../../content/administration/on_premise.rst:108
 msgid "To resolve the issue, either:"
-msgstr ""
+msgstr "Untuk menyelesaikan masalah ini, Anda harus:"
 
 #: ../../content/administration/on_premise.rst:84
 msgid ""
@@ -4590,12 +5223,16 @@ msgid ""
 "your subscription` link displayed in the message to validate the upsell "
 "quotation and pay for the extra users."
 msgstr ""
+"**Tambahkan lebih banyak user** ke langganan Anda dengan mengeklik link "
+":guilabel:`Upgrade langganan Anda` yang ditampilkan di pesan untuk "
+"memvalidasi quotation upsell dan membayar untuk user lebih tersebut."
 
 #: ../../content/administration/on_premise.rst:86
 msgid ""
 ":ref:`Deactivate users <users/deactivate>` and **reject** the upsell "
 "quotation."
 msgstr ""
+":ref:`Nonaktifkan user <users/deactivate>` dan **tolak** quotation upsell."
 
 #: ../../content/administration/on_premise.rst:89
 msgid ""
@@ -4605,6 +5242,12 @@ msgid ""
 "upsell quotation by clicking the banner to update the subscription or `send "
 "a support ticket <https://www.odoo.com/help>`_ to resolve the issue."
 msgstr ""
+"Bila Anda menggunakan paket langganan bulanan, database akan secara otomatis"
+" diupdate untuk mencerminkan jumlah user yang bertambah. Bila Anda "
+"menggunakan paket tahunan atau multi-year, spanduk kadaluwarsa akan muncul "
+"di database. Anda dapat membuat quotation upsell dengan mengeklik spanduk "
+"untuk mengupdate langganan atau `kirim tiket bantuan "
+"<https://www.odoo.com/help>`_ untuk menyelesaikan masalah ini."
 
 #: ../../content/administration/on_premise.rst:94
 msgid ""
@@ -4612,26 +5255,33 @@ msgid ""
 "disappears automatically after a few days, when the next verification "
 "occurs."
 msgstr ""
+"Setelah database Anda memiliki jumlah user yang tepat, pesan kadaluwarsa "
+"akan hilang secara otomatis setelah beberapa hari, saat verifikasi "
+"berikutnya terjadi."
 
 #: ../../content/administration/on_premise.rst:98
 msgid "Database expired error"
-msgstr ""
+msgstr "Error database kadaluwarsa"
 
 #: ../../content/administration/on_premise.rst:100
 msgid ""
 "If your database expires before you renew your subscription, the following "
 "message should be displayed."
 msgstr ""
+"Bila database Anda kadaluwarsa sebelum Anda memperbarui langganan Anda, "
+"pesan berikut harusnya ditampilkan."
 
 #: ../../content/administration/on_premise.rst-1
 msgid "Database expired error message"
-msgstr ""
+msgstr "Pesan error database kadaluwarsa"
 
 #: ../../content/administration/on_premise.rst:106
 msgid ""
 "This message appears if you fail to act before the end of the 30-day "
 "countdown."
 msgstr ""
+"Pesan ini muncul bila Anda gagal untuk bertindak sebelum akhir waktu "
+"countdown."
 
 #: ../../content/administration/on_premise.rst:110
 msgid ""
@@ -4640,61 +5290,67 @@ msgid ""
 "will be renewed when the payment arrives which can take a few days. Credit "
 "card payments are processed immediately."
 msgstr ""
+"Klik link :guilabel:`Perbarui langganan Anda` yang ditampilkan di pesan dan "
+"selesaikan prosesnya. Bila Anda membayar melalui transfer rekening langsung,"
+" langganan Anda akan diperbarui saat pembayaran sampai yang mungkin "
+"mengambil waktu beberapa hari. Pembayaran kartu kredit langsung diproses."
 
 #: ../../content/administration/on_premise.rst:113
 msgid "`Send a support ticket <https://www.odoo.com/help>`_."
-msgstr ""
+msgstr "`Kirim tiket bantuan <https://www.odoo.com/help>`_."
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:6
 msgid "Switch from Community to Enterprise"
-msgstr ""
+msgstr "Berubah dari Community menjadi Enterprise"
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:8
 msgid ""
 "Depending on your current installation, there are multiple ways to upgrade "
 "your community version. In any case the basic guidelines are:"
 msgstr ""
+"Tergantung pada penginstalan Anda saat ini, terdapat beberapa cara untuk "
+"mengupgrade versi community. Bagaimana pun juga pedoman umum adalah:"
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:12
 #: ../../content/administration/on_premise/community_to_enterprise.rst:31
 #: ../../content/administration/on_premise/community_to_enterprise.rst:63
 #: ../../content/administration/on_premise/community_to_enterprise.rst:80
 msgid "Backup your community database"
-msgstr ""
+msgstr "Backup database community Anda"
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:17
 #: ../../content/administration/on_premise/community_to_enterprise.rst:62
 msgid "Shutdown your server"
-msgstr ""
+msgstr "Shutdown server Anda"
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:19
 msgid "Install the web_enterprise module"
-msgstr ""
+msgstr "Instal modul web_enterprise"
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:21
 msgid "Restart your server"
-msgstr ""
+msgstr "Restart server Anda"
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:23
 msgid "Enter your Odoo Enterprise Subscription code"
-msgstr ""
+msgstr "Masukkan kode Langganan Odoo Enterprise Anda"
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:29
 msgid "On Linux, using an installer"
-msgstr ""
+msgstr "Pada Linux, menggunakan installer"
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:33
 msgid "Stop the odoo service"
-msgstr ""
+msgstr "Hentikan layanan odoo"
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:39
 msgid ""
 "Install the enterprise .deb (it should install over the community package)"
-msgstr ""
+msgstr "Install enterprise .deb (harusnya menginstal di atas paket communit)"
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:45
 msgid "Update your database to the enterprise packages using"
-msgstr ""
+msgstr "Update database Anda ke paket enterprise menggunakan"
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:51
 msgid ""
@@ -4703,10 +5359,14 @@ msgid ""
 " Enterprise Subscription by entering the code you received by e-mail in the "
 "form input"
 msgstr ""
+"Anda harusnya bisa terhubung ke instance Odoo Enterprise Anda menggunakan "
+"identifikasi Anda seperti biasanya. Anda lalu dapat menghubungkan database "
+"Anda dengan Langganan Odoo Enterprise dengan memasukkan kode yang Anda "
+"terima melalui email di form input"
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:57
 msgid "On Linux, using the source code"
-msgstr ""
+msgstr "Pada Linux, menggunakan source code"
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:59
 msgid ""
@@ -4714,20 +5374,27 @@ msgid ""
 "probably have your own favourite. You may need to adapt sections to your "
 "usual workflow."
 msgstr ""
+"Terdapat banyak cara untuk meluncurkan server Anda menggunakan source, dan "
+"Anda tentunya memiliki cara favorit Anda. Anda mungkin harus mengadaptasi "
+"bagian ini ke workflow Anda."
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:64
 msgid ""
 "Update the ``--addons-path`` parameter of your launch command (see "
 ":doc:`../on_premise/source`)"
 msgstr ""
+"Update parameter ``--addons-path`` dari command launch Anda (lihat "
+":doc:`../on_premise/source`)"
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:65
 msgid "Install the web_enterprise module by using"
-msgstr ""
+msgstr "Instal modul web_enterprise dengan menggunakan"
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:71
 msgid "Depending on the size of your database, this may take some time."
 msgstr ""
+"Tergantung pada ukuran database Anda, ini mungkin membutuhkan waktu cukup "
+"lama."
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:73
 msgid ""
@@ -4736,16 +5403,22 @@ msgid ""
 "Odoo Enterprise Subscription by entering the code you received by e-mail in "
 "the form input"
 msgstr ""
+"Restart server Anda dengan addon path of point 3 yang diupdate. anda "
+"sekarang harusnya bisa terhubung ke instance Anda. Anda lalu dapat "
+"menghubungkan database Anda dengan Langganan Odoo Enterprise dengan "
+"memasukkan kode yang Anda terima melalui email di form input"
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:78
 msgid "On Windows"
-msgstr ""
+msgstr "Pada Windows"
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:82
 msgid ""
 "Uninstall Odoo Community (using the Uninstall executable in the installation"
 " folder) - PostgreSQL will remain installed"
 msgstr ""
+"Uninstal Odoo Community (menggunakan exe Uninstal di folder instal) - "
+"PostgreSQL akan tetap terinstal"
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:88
 msgid ""
@@ -4754,12 +5427,18 @@ msgid ""
 "installation (this folder still contains the PostgreSQL installation). "
 "Uncheck ``Start Odoo`` at the end of the installation"
 msgstr ""
+"Luncurkan Penginstal Odoo Enterprise dan ikuti langkah penginstalan seperti "
+"biasa. Saat memilih lokasi instal, Anda dapat menetapkan folder Community "
+"(folder ini masih memiliki PostgreSQL). Batalkan centang ``Jalankan Odoo`` "
+"di bagian akhir penginstalan"
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:96
 msgid ""
 "Using a command window, update your Odoo Database using this command (from "
 "the Odoo installation path, in the server subfolder)"
 msgstr ""
+"Menggunakan jendela command, update Database Odoo Anda menggunakan command "
+"ini (dari lokasi instal Odoo, di subfolder server)"
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:103
 msgid ""
@@ -4768,6 +5447,11 @@ msgid ""
 "identification. You can then link your database with your Odoo Enterprise "
 "Subscription by entering the code you received by e-mail in the form input"
 msgstr ""
+"Tidak perlu secara manual meluncurkan server, layanan sudah berjalan. Anda "
+"sekarang seharusnya bisa terhubung ke instance Odoo Enterprise Anda "
+"menggunakan identifikasi Anda seperti biasanya. Anda lalu dapat "
+"menghubungkan database Anda dengan Langganan Odoo Enterprise Anda dengan "
+"memasukkan kode yang Anda terima melalui email di form input"
 
 #: ../../content/administration/on_premise/deploy.rst:3
 msgid "System configuration"
@@ -4780,6 +5464,10 @@ msgid ""
 "is not generally necessary for a development systems that is not exposed on "
 "the internet."
 msgstr ""
+"Dokumen ini mendeskripsikan langkah-langkah dasar untuk setup Odoo di "
+"production atau server yang menggunakan internet. Ini mengikuti "
+":doc:`penginstalan <../on_premise>`, dan secara umum tidak diperlukan untuk "
+"sistem development yang tidak terhubung ke internet."
 
 #: ../../content/administration/on_premise/deploy.rst:10
 msgid ""
@@ -6341,6 +7029,9 @@ msgid ""
 "(Debian, Ubuntu, etc.), RPM-based Linux distributions (Fedora, CentOS, RHEL,"
 " etc.), and Windows for the Community and Enterprise editions."
 msgstr ""
+"Odoo menyediakan paket penginstal untuk distribusi Linux berbasis Debian "
+"(Debian, Ubuntu, dsb.), distribusi Linux berbasis RPM (Fedora, CentOS, RHEL,"
+" dsb.), dan Windows untuk edisi Community dan Enterprise."
 
 #: ../../content/administration/on_premise/packages.rst:9
 msgid ""
@@ -6348,22 +7039,29 @@ msgid ""
 "requirements are available on the `nightly server "
 "<https://nightly.odoo.com>`_."
 msgstr ""
+"Paket nightly **Community** yang Resmi dengan semua persyaratan "
+"ketergantungan yang relevan tersedia pada `nightly server "
+"<https://nightly.odoo.com>`_."
 
 #: ../../content/administration/on_premise/packages.rst:13
 msgid "Nightly packages may be difficult to keep up to date."
-msgstr ""
+msgstr "Paket-paket nightly mungkin susah untuk tetap up to date."
 
 #: ../../content/administration/on_premise/packages.rst:15
 msgid ""
 "Official **Community** and **Enterprise** packages can be downloaded from "
 "the `Odoo download page <https://www.odoo.com/page/download>`_."
 msgstr ""
+"Paket **Community** dan **Enterprise** yang Resmi dapat diunduh dari "
+"`halaman unduh Odoo <https://www.odoo.com/page/download>`_."
 
 #: ../../content/administration/on_premise/packages.rst:19
 msgid ""
 "It is required to be logged in as a paying on-premise customer or partner to"
 " download the Enterprise packages."
 msgstr ""
+"Untuk mengunduh paket Enterprise Anda harus log in sebagai pelanggan "
+"berbayar on-premise atau partner."
 
 #: ../../content/administration/on_premise/packages.rst:25
 #: ../../content/administration/on_premise/source.rst:52
@@ -6376,25 +7074,27 @@ msgstr ""
 #: ../../content/administration/on_premise/source.rst:380
 #: ../../content/administration/on_premise/source.rst:442
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #: ../../content/administration/on_premise/packages.rst:28
 #: ../../content/administration/on_premise/source.rst:116
 msgid "Prepare"
-msgstr ""
+msgstr "Siapkan"
 
 #: ../../content/administration/on_premise/packages.rst:30
 msgid ""
 "Odoo needs a `PostgreSQL <https://www.postgresql.org/>`_ server to run "
 "properly."
 msgstr ""
+"Odoo membutuhkan server `PostgreSQL <https://www.postgresql.org/>`_ untuk "
+"berjalan dengan benar."
 
 #: ../../content/administration/on_premise/packages.rst:34
 #: ../../content/administration/on_premise/packages.rst:70
 #: ../../content/administration/on_premise/packages.rst:100
 #: ../../content/administration/on_premise/source.rst:274
 msgid "Debian/Ubuntu"
-msgstr ""
+msgstr "Debian/Ubuntu"
 
 #: ../../content/administration/on_premise/packages.rst:36
 msgid ""
@@ -6402,18 +7102,24 @@ msgid ""
 "PostgreSQL server on the same host as the Odoo instance. Execute the "
 "following command to install the PostgreSQL server:"
 msgstr ""
+"Konfigurasi default untuk paket 'deb' Odoo adalah untuk menggunakan server "
+"PostgreSQL pada hosting yang sama dengan instance Odoo. Jalankan command "
+"berikut untuk menginstal server PostgreSQL:"
 
 #: ../../content/administration/on_premise/packages.rst:44
 #: ../../content/administration/on_premise/packages.rst:80
 #: ../../content/administration/on_premise/packages.rst:132
 msgid "Fedora"
-msgstr ""
+msgstr "Fedora"
 
 #: ../../content/administration/on_premise/packages.rst:46
 msgid ""
 "Make sure that the `sudo` command is available and well configured and, only"
 " then, execute the following command to install the PostgreSQL server:"
 msgstr ""
+"Pastikan command `sudo` tersedia dan dikonfigurasi dengan benar dan, hanya "
+"setelah Anda yakin, jalankan command berikut untuk menginstal server "
+"PostgreSQL:"
 
 #: ../../content/administration/on_premise/packages.rst:57
 #: ../../content/administration/on_premise/source.rst:412
@@ -6425,29 +7131,39 @@ msgid ""
 "<https://github.com/odoo/odoo/wiki/Wkhtmltopdf>`_ for more details on the "
 "various versions."
 msgstr ""
+"`wkhtmltopdf` tidak diinstal melalui **pip** dan harus diinstal manual di "
+"`versi 0.12.6 "
+"<https://github.com/wkhtmltopdf/packaging/releases/tag/0.12.6.1-3>`_ agar "
+"dapat mendukung header dan footer. Periksa `wiki wkhtmltopdf "
+"<https://github.com/odoo/odoo/wiki/Wkhtmltopdf>`_ untuk lebih banyak detail "
+"mengenai beragam macam versi."
 
 #: ../../content/administration/on_premise/packages.rst:63
 msgid "Repository"
-msgstr ""
+msgstr "Repositori"
 
 #: ../../content/administration/on_premise/packages.rst:65
 msgid ""
 "Odoo S.A. provides a repository that can be used to install the "
 "**Community** edition by executing the following commands:"
 msgstr ""
+"Odoo S.A. menyediakan repositori yang dapat digunakan untuk menginstal edisi"
+" **Community** dengan menjalankan command-command berikut:"
 
 #: ../../content/administration/on_premise/packages.rst:78
 msgid ""
 "Use the usual `apt-get upgrade` command to keep the installation up-to-date."
 msgstr ""
+"Gunakan command `apt-get upgrade` seperti biasa untuk memastikan instalasi "
+"tetap up-to-date."
 
 #: ../../content/administration/on_premise/packages.rst:90
 msgid "Currently, there is no nightly repository for the Enterprise edition."
-msgstr ""
+msgstr "Saat ini, tidak ada repositori nightly untuk edisi Enterprise."
 
 #: ../../content/administration/on_premise/packages.rst:93
 msgid "Distribution package"
-msgstr ""
+msgstr "Paket distribusi"
 
 #: ../../content/administration/on_premise/packages.rst:95
 msgid ""
@@ -6455,6 +7171,9 @@ msgid ""
 "**Enterprise** editions can be downloaded from the `Odoo download page "
 "<https://www.odoo.com/page/download>`_."
 msgstr ""
+"Alih-alih menggunakan repositori, paket untuk masing-masing edisi "
+"**Community** dan **Enterprise** dapat diunduh dari `halaman unduh Odoo "
+"<https://www.odoo.com/page/download>`_."
 
 #: ../../content/administration/on_premise/packages.rst:103
 msgid ""
@@ -6469,6 +7188,9 @@ msgid ""
 "as a service, create the necessary PostgreSQL user, and automatically start "
 "the server:"
 msgstr ""
+"Setelah diunduh, jalankan command berikut **sebagai root** untuk menginstal "
+"Odoo sebagai layanan, membuat user PostgreSQL yang diperlukan, dan secara "
+"otomatis menjalankan server:"
 
 #: ../../content/administration/on_premise/packages.rst:117
 msgid ""
@@ -6476,6 +7198,9 @@ msgid ""
 "does not exist in Debian Buster nor Ubuntu 18.04. If needed, install it "
 "manually with the following:"
 msgstr ""
+"Paket Debian `python3-xlwt`, yang dibutuhkan untuk mengekspor dalam format "
+"XLS, tidak tersedia di Debian Buster atau Ubuntu 18.04. Bila diperlukan, "
+"instal secara manual dengan:"
 
 #: ../../content/administration/on_premise/packages.rst:124
 msgid ""
@@ -6483,6 +7208,10 @@ msgid ""
 " exist in Debian Buster nor Ubuntu 18.04, which could cause problems with "
 "the `l10n_mx_edi` module. If needed, install it manually with the following:"
 msgstr ""
+"Paket Python `num2words` - yang dibutuhkan untuk render textual amounts - "
+"tidak tersedia di Debian Buster atau Ubuntu 18.04, yang dapat mengakibatkan "
+"masalah dengan modul `l10n_mx_edi`. Bila diperlukan, instal secara manual "
+"dengan:"
 
 #: ../../content/administration/on_premise/packages.rst:135
 msgid "Odoo 16 'rpm' package supports Fedora 36."
@@ -6493,6 +7222,7 @@ msgid ""
 "Once downloaded, the package can be installed using the 'dnf' package "
 "manager:"
 msgstr ""
+"Setelah diunduh, paket dapat diinstal menggunakan manajer paket 'dnf':"
 
 #: ../../content/administration/on_premise/packages.rst:148
 #: ../../content/administration/on_premise/source.rst:70
@@ -6505,7 +7235,7 @@ msgstr ""
 #: ../../content/administration/on_premise/source.rst:389
 #: ../../content/administration/on_premise/source.rst:452
 msgid "Windows"
-msgstr ""
+msgstr "Window"
 
 #: ../../content/administration/on_premise/packages.rst:151
 msgid ""
@@ -6514,6 +7244,9 @@ msgid ""
 "a number of limitations and risks associated with deploying Odoo on a "
 "Windows platform."
 msgstr ""
+"Paket Windows ditawarkan untuk kemudahan testing atau menjalankan instance "
+"lokal user-tunggal tapi deployment production tidak disarankan oleh karena "
+"sejumlah batasan dan resiko terkait deployment pada platform Windows."
 
 #: ../../content/administration/on_premise/packages.rst:155
 msgid ""
@@ -6521,46 +7254,57 @@ msgid ""
 " (Community only) or the Windows installer from the `Odoo download page "
 "<https://www.odoo.com/page/download>`_ (any edition."
 msgstr ""
+"Unduh penginstal dari `server nightly <https://nightly.odoo.com>`_ (hanya "
+"Community) atau penginstal Windows dari `halaman unduh Odoo "
+"<https://www.odoo.com/page/download>`_ (edisi apapun."
 
 #: ../../content/administration/on_premise/packages.rst:158
 msgid "Execute the downloaded file."
-msgstr ""
+msgstr "Jalankan file yang diunduh."
 
 #: ../../content/administration/on_premise/packages.rst:161
 msgid ""
 "On Windows 8 and later, a warning titled *Windows protected your PC* may be "
 "displayed. Click **More Info** and then **Run anyway** to proceed."
 msgstr ""
+"Pada Windows 8 dan berikutnya, peringatan berjudul *Windows melindungi PC "
+"Anda* mungkin ditampilkan. Klik **Lebih Banyak Info** lalu **Tetap "
+"jalankan** untuk melanjutkan."
 
 #: ../../content/administration/on_premise/packages.rst:164
 msgid ""
 "Accept the `UAC <https://en.wikipedia.org/wiki/User_Account_Control>`_ "
 "prompt."
 msgstr ""
+"Terima prompt `UAC <https://en.wikipedia.org/wiki/User_Account_Control>`_."
 
 #: ../../content/administration/on_premise/packages.rst:165
 msgid "Go through the installation steps."
-msgstr ""
+msgstr "Ikuti langkah-langkah penginstalan."
 
 #: ../../content/administration/on_premise/packages.rst:167
 msgid "Odoo launches automatically at the end of the installation."
-msgstr ""
+msgstr "Odoo secara otomatis diluncurkan di akhir penginstalan."
 
 #: ../../content/administration/on_premise/source.rst:3
 msgid "Source install"
-msgstr ""
+msgstr "Source install"
 
 #: ../../content/administration/on_premise/source.rst:5
 msgid ""
 "The source 'installation' is not about installing Odoo but running it "
 "directly from the source instead."
 msgstr ""
+"Source 'install' bukan merupakan menginstal Odoo tapi menjalankannya "
+"langsung dari sumber."
 
 #: ../../content/administration/on_premise/source.rst:8
 msgid ""
 "Using the Odoo source can be more convenient for module developers as it is "
 "more easily accessible than using packaged installers."
 msgstr ""
+"Menggunakan Odoo source dapat lebih nyaman untuk developer modul karena "
+"lebih mudah diakses ketimbang menggunakan paket penginstal."
 
 #: ../../content/administration/on_premise/source.rst:11
 msgid ""
@@ -6569,22 +7313,31 @@ msgid ""
 "settings using :ref:`command-line parameters <reference/cmdline>` without "
 "needing to edit a configuration file."
 msgstr ""
+"Memulai dan mengakhiri Odoo lebih fleksibel dan jelas ketimbang layanan yang"
+" disetup dengan paket penginstal. Terlebih lagi, source install memungkinkan"
+" mengesampingkan pengaturan menggunakan :ref:`command-line parameter "
+"<reference/cmdline>` tanpa harus mengedit file konfigurasi."
 
 #: ../../content/administration/on_premise/source.rst:15
 msgid ""
 "Finally, it provides greater control over the system's setup and allows to "
 "more easily keep (and run) multiple versions of Odoo side-by-side."
 msgstr ""
+"Terakhir, source install juga menyediakan kendali lebih besar atas setup "
+"sistem dan memungkinkan menyimpan (dan menjalankan) lebih dari satu versi "
+"Odoo secara berdampingan."
 
 #: ../../content/administration/on_premise/source.rst:19
 msgid "Fetch the sources"
-msgstr ""
+msgstr "Dapatkan source"
 
 #: ../../content/administration/on_premise/source.rst:21
 msgid ""
 "There are two ways to obtain the source code of Odoo: as a ZIP **archive** "
 "or through **Git**."
 msgstr ""
+"Ada dua cara untuk mendapatkan source code Odoo: sebagai **arsip** ZIP atau "
+"melalui **Git**."
 
 #: ../../content/administration/on_premise/source.rst:24
 msgid "Archive"
@@ -6592,38 +7345,41 @@ msgstr "Arsip"
 
 #: ../../content/administration/on_premise/source.rst:26
 msgid "Community edition:"
-msgstr ""
+msgstr "Edisi Community:"
 
 #: ../../content/administration/on_premise/source.rst:28
 #: ../../content/administration/on_premise/source.rst:34
 msgid "`Odoo download page <https://www.odoo.com/page/download>`_"
-msgstr ""
+msgstr "`Halaman unduh Odoo <https://www.odoo.com/page/download>`_"
 
 #: ../../content/administration/on_premise/source.rst:29
 msgid "`GitHub Community repository <https://github.com/odoo/odoo>`_"
-msgstr ""
+msgstr "`Repositori GitHub Community <https://github.com/odoo/odoo>`_"
 
 #: ../../content/administration/on_premise/source.rst:30
 msgid "`Nightly server <https://nightly.odoo.com>`_"
-msgstr ""
+msgstr "`Server Nightly <https://nightly.odoo.com>`_"
 
 #: ../../content/administration/on_premise/source.rst:32
 msgid "Enterprise edition:"
-msgstr ""
+msgstr "Edisi enterprise:"
 
 #: ../../content/administration/on_premise/source.rst:35
 msgid "`GitHub Enterprise repository <https://github.com/odoo/enterprise>`_"
-msgstr ""
+msgstr "`Repositori GitHub Enterprise <https://github.com/odoo/enterprise>`_"
 
 #: ../../content/administration/on_premise/source.rst:40
 msgid "Git"
-msgstr ""
+msgstr "Git"
 
 #: ../../content/administration/on_premise/source.rst:43
 msgid ""
 "It is required to have `Git <https://git-scm.com/>`_ installed, and it is "
 "recommended to have a basic knowledge of Git commands to proceed."
 msgstr ""
+"Merupakan persyaratan untuk menginstal `Git <https://git-scm.com/>`_, dan "
+"disarankan untuk memiliki pengetahuan dasar command-command Git sebelum "
+"melanjutkan."
 
 #: ../../content/administration/on_premise/source.rst:46
 msgid ""
@@ -6632,18 +7388,22 @@ msgid ""
 "source code or when following the :doc:`Getting Started developer tutorial "
 "</developer/tutorials/getting_started>`."
 msgstr ""
+"Untuk kloning repositori Git, pilih antara kloning dengan HTTPS atau SSH. Di"
+" kebanyakan kasus, opsi terbaik adalah HTTPS. Namun, pilih SSH untuk "
+"berkontribusi ke source code Odoo atau saat mengikuti tutorial "
+":doc:`Developer Getting Started </developer/tutorials/getting_started>`."
 
 #: ../../content/administration/on_premise/source.rst:56
 #: ../../content/administration/on_premise/source.rst:74
 #: ../../content/administration/on_premise/source.rst:92
 msgid "Clone with HTTPS"
-msgstr ""
+msgstr "Klon dengan HTTPS"
 
 #: ../../content/administration/on_premise/source.rst:63
 #: ../../content/administration/on_premise/source.rst:81
 #: ../../content/administration/on_premise/source.rst:99
 msgid "Clone with SSH"
-msgstr ""
+msgstr "Klon dengan SSH"
 
 #: ../../content/administration/on_premise/source.rst:88
 #: ../../content/administration/on_premise/source.rst:137
@@ -6655,7 +7415,7 @@ msgstr ""
 #: ../../content/administration/on_premise/source.rst:401
 #: ../../content/administration/on_premise/source.rst:463
 msgid "Mac OS"
-msgstr ""
+msgstr "Mac OS"
 
 #: ../../content/administration/on_premise/source.rst:107
 msgid ""
@@ -6667,6 +7427,12 @@ msgid ""
 "Community and Enterprise repositories to have a working Odoo Enterprise "
 "installation."
 msgstr ""
+"**Repositori Enterprise git tidak memiliki source code lengkap Odoo**. Hanya"
+" koleksi add-on tambahan. Server code utama ada di edisi Community. "
+"Menjalankan versi Enterprise berarti menjalankan server dari versi Community"
+" dengan opsi `addons-path` ditetapkan ke folder dengan edisi Enterprise. "
+"Kloning masing-masing repositori Community dan Enterprise diperlukan untuk "
+"memiliki instalasi Odoo Enterprise yang bekerja."
 
 #: ../../content/administration/on_premise/source.rst:119
 msgid "Python"
@@ -6679,57 +7445,76 @@ msgstr ""
 #: ../../content/administration/on_premise/source.rst:127
 msgid "Use a package manager to download and install Python 3 if needed."
 msgstr ""
+"Gunakan manajer paket untuk mengunduh dan menginstal Python 3 bila "
+"diperlukan."
 
 #: ../../content/administration/on_premise/source.rst:131
 msgid ""
 "`Download the latest version of Python 3 "
 "<https://www.python.org/downloads/windows/>`_ and install it."
 msgstr ""
+"`Unduh versi terkini Python 3 <https://www.python.org/downloads/windows/>`_ "
+"dan instal."
 
 #: ../../content/administration/on_premise/source.rst:134
 msgid ""
 "During installation, check **Add Python 3 to PATH**, then click **Customize "
 "Installation** and make sure that **pip** is checked."
 msgstr ""
+"Selama penginstalan, centang **Add Python 3 to PATH**, lalu klik **Customize"
+" Installation** dan pastikan **pip** dicentang."
 
 #: ../../content/administration/on_premise/source.rst:139
 msgid ""
 "Use a package manager (`Homebrew <https://brew.sh/>`_, `MacPorts "
 "<https://www.macports.org>`_) to download and install Python 3 if needed."
 msgstr ""
+"Gunakan manajer paket (`Homebrew <https://brew.sh/>`_, `MacPorts "
+"<https://www.macports.org>`_) untuk mengunduh dan menginstal Python 3 bila "
+"diperlukan."
 
 #: ../../content/administration/on_premise/source.rst:143
 msgid ""
 "If Python 3 is already installed, make sure that the version is 3.7 or "
 "above, as previous versions are not compatible with Odoo."
 msgstr ""
+"Bila Python 3 sudah diinstal, pastikan versinya 3.10 atau lebih, karena "
+"versi-versi sebelumnya sudah tidak kompatibel dengan Odoo."
 
 #: ../../content/administration/on_premise/source.rst:166
 msgid ""
 "Verify that `pip <https://pip.pypa.io>`_ is also installed for this version."
 msgstr ""
+"Verifikasi bahwa `pip <https://pip.pypa.io>`_ juga diinstal untuk versi ini."
 
 #: ../../content/administration/on_premise/source.rst:191
 msgid "Odoo uses PostgreSQL as its database management system."
-msgstr ""
+msgstr "Odoo menggunakan PostgreSQL sebagai sistem manajemen databasenya."
 
 #: ../../content/administration/on_premise/source.rst:197
 msgid ""
 "Use a package manager to download and install PostgreSQL (supported "
 "versions: 12.0 or above). It can be achieved by executing the following:"
 msgstr ""
+"Gunakan manajer paket untuk mengunduh dan menginstal PostgreSQL (versi yang "
+"didukung: 12.0 atau lebih). Ini dapat diraih dengan menjalankan yang "
+"berikut:"
 
 #: ../../content/administration/on_premise/source.rst:206
 msgid ""
 "`Download PostgreSQL <https://www.postgresql.org/download/windows>`_ "
 "(supported versions: 12.0 or above) and install it."
 msgstr ""
+"`Unduh PostgreSQL <https://www.postgresql.org/download/windows>`_ (versi "
+"yang didukung: 12.0 atau lebih) dan instal."
 
 #: ../../content/administration/on_premise/source.rst:211
 msgid ""
 "Use `Postgres.app <https://postgresapp.com>`_ to download and install "
 "PostgreSQL (supported version: 12.0 or above)."
 msgstr ""
+"Gunakan `Postgres.app <https://postgresapp.com>`_ untuk mengunduh dan "
+"menginstal PostgreSQL (versi yang didukung: 12.0 atau lebih)."
 
 #: ../../content/administration/on_premise/source.rst:215
 msgid ""
@@ -6737,12 +7522,18 @@ msgid ""
 "sure to set up the `$PATH` variable by following the `Postgres.app CLI tools"
 " instructions <https://postgresapp.com/documentation/cli-tools.html>`_."
 msgstr ""
+"Agar command line tools yang dikelompokkan dengan Postgress.app tersedia, "
+"pastikan untuk setup variabel `$PATH` dengan mengikuti `instruksi "
+"Postgres.app CLI tools <https://postgresapp.com/documentation/cli-"
+"tools.html>`_."
 
 #: ../../content/administration/on_premise/source.rst:219
 msgid ""
 "By default, the only user is `postgres`. As Odoo forbids connecting as "
 "`postgres`, create a new PostgreSQL user."
 msgstr ""
+"Secara default, satu-satunya user adalah `postgres`. Karena Odoo melarang "
+"terhubung sebagai `postgres`, buat user PostgreSQL baru."
 
 #: ../../content/administration/on_premise/source.rst:232
 #: ../../content/administration/on_premise/source.rst:257
@@ -6750,44 +7541,52 @@ msgid ""
 "Because the PostgreSQL user has the same name as the Unix login, it is "
 "possible to connect to the database without a password."
 msgstr ""
+"Karena user PostgreSQL memiliki nama yang sama dengan login Unix, Anda dapat"
+" memasuki database tanpa password."
 
 #: ../../content/administration/on_premise/source.rst:237
 msgid ""
 "Add PostgreSQL's `bin` directory (by default: :file:`C:\\\\Program "
 "Files\\\\PostgreSQL\\\\<version>\\\\bin`) to the `PATH`."
 msgstr ""
+"Tambahkan direktori `bin` PostgreSQL (secara default: :file:`C:\\\\Program "
+"Files\\\\PostgreSQL\\\\<version>\\\\bin`) ke `PATH`."
 
 #: ../../content/administration/on_premise/source.rst:239
 msgid "Create a postgres user with a password using the pg admin gui:"
-msgstr ""
+msgstr "Buat user postgres dengan password menggunakan pg admin gui:"
 
 #: ../../content/administration/on_premise/source.rst:241
 msgid "Open **pgAdmin**."
-msgstr ""
+msgstr "Buka **pgAdmin**."
 
 #: ../../content/administration/on_premise/source.rst:242
 msgid "Double-click the server to create a connection."
-msgstr ""
+msgstr "Klik dua kali server untuk membuat hubungan."
 
 #: ../../content/administration/on_premise/source.rst:243
 msgid "Select :menuselection:`Object --> Create --> Login/Group Role`."
-msgstr ""
+msgstr "Pilih :menuselection:`Object --> Create --> Login/Group Role`."
 
 #: ../../content/administration/on_premise/source.rst:244
 msgid "Enter the username in the **Role Name** field (e.g., `odoo`)."
-msgstr ""
+msgstr "Masukkan username di field **Role Name** (contoh, `odoo`)."
 
 #: ../../content/administration/on_premise/source.rst:245
 msgid ""
 "Open the **Definition** tab, enter a password (e.g., `odoo`), and click "
 "**Save**."
 msgstr ""
+"Buka tab **Definition**, masukkan password (contoh, `odoo`), dan klik "
+"**Save**."
 
 #: ../../content/administration/on_premise/source.rst:246
 msgid ""
 "Open the **Privileges** tab and switch **Can login?** to `Yes` and **Create "
 "database?** to `Yes`."
 msgstr ""
+"Buka tab **Privileges** dan ganti **Can login?** menjadi `Yes` dan **Create "
+"database?** buat `Yes`."
 
 #: ../../content/administration/on_premise/source.rst:263
 msgid "Dependencies"
@@ -6798,6 +7597,9 @@ msgid ""
 "Using **distribution packages** is the preferred way of installing "
 "dependencies. Alternatively, install the Python dependencies with **pip**."
 msgstr ""
+"Menggunakan **paket distribusi** adalah cara yang disarankan untuk "
+"menginstal ketergantungan. Secara alternatif, instal ketergantungan Python "
+"dengan **pip**."
 
 #: ../../content/administration/on_premise/source.rst:276
 msgid ""
@@ -6811,28 +7613,36 @@ msgid ""
 "On Debian/Ubuntu, the following commands should install the required "
 "packages:"
 msgstr ""
+"Pada Debian/Ubuntu, command-command berikut seharusnya menginstal paket-"
+"paket yang diperlukan:"
 
 #: ../../content/administration/on_premise/source.rst:286
 msgid "Install with pip"
-msgstr ""
+msgstr "Instal dengan pip"
 
 #: ../../content/administration/on_premise/source.rst:288
 msgid ""
 "As some of the Python packages need a compilation step, they require system "
 "libraries to be installed."
 msgstr ""
+"Karena beberapa paket Python membutuhkan langkah kompilasi, mereka "
+"memerlukan pustaka sistem untuk diinstal."
 
 #: ../../content/administration/on_premise/source.rst:291
 msgid ""
 "On Debian/Ubuntu, the following command should install these required "
 "libraries:"
 msgstr ""
+"Pada Debian/Ubuntu, command berikut seharusnya menginstal pustaka-pustaka "
+"yang dibutuhkan:"
 
 #: ../../content/administration/on_premise/source.rst:297
 msgid ""
 "Odoo dependencies are listed in the :file:`requirements.txt` file located at"
 " the root of the Odoo Community directory."
 msgstr ""
+"Ketergantungan Odoo didaftarkan di file :file:`requirements.txt` yang "
+"berlokasi di root direktori Odoo Community."
 
 #: ../../content/administration/on_premise/source.rst:301
 msgid ""
@@ -6842,6 +7652,10 @@ msgid ""
 "2.8.0 in Debian Bullseye and 2.6.0 in Ubuntu Focal. The lowest version is "
 "then chosen in the :file:`requirements.txt`."
 msgstr ""
+"Paket Python di :file:`requirements.txt` berdasarkan versi stable/LTS "
+"Debian/Ubuntu yang sesuai pada saat perilisan Odoo. Contohnya, untuk Odoo "
+"15.0, versi paket `python3-babel` adalah 2.8.0 di Debian Bullseye dan 2.6.0 "
+"di Ubuntu Focal. Versi terendah lalu dipilih di :file:`requirements.txt`."
 
 #: ../../content/administration/on_premise/source.rst:308
 #: ../../content/administration/on_premise/source.rst:330
@@ -6852,6 +7666,10 @@ msgid ""
 "`virtualenv <https://pypi.org/project/virtualenv/>`_ to create isolated "
 "Python environments."
 msgstr ""
+"Disarankan untuk tidak mencampur paket modul Python di antara instance Odoo "
+"atau dengan sistem yang berbeda-beda. Namun, Anda dapat menggunakan "
+"`virtualenv <https://pypi.org/project/virtualenv/>`_ untuk membuat "
+"environment Python yang terisolasi."
 
 #: ../../content/administration/on_premise/source.rst:312
 msgid ""
@@ -6859,6 +7677,9 @@ msgid ""
 "(:file:`CommunityPath`) and run **pip** on the requirements file to install "
 "the requirements for the current user."
 msgstr ""
+"Navigasi ke lokasi instalasi Odoo Community (:file:`CommunityPath`) dan "
+"jalankan run **pip** pada file requirement untuk menginstal persyaratan "
+"untuk user saat ini."
 
 #: ../../content/administration/on_premise/source.rst:322
 msgid ""
@@ -6866,6 +7687,9 @@ msgid ""
 "for Visual Studio <https://visualstudio.microsoft.com/downloads/>`_. Select "
 "**C++ build tools** in the **Workloads** tab and install them when prompted."
 msgstr ""
+"Sebelum menginstal ketergantungan, unduh dan instal `Build Tools for Visual "
+"Studio <https://visualstudio.microsoft.com/downloads/>`_. Pilih **C++ build "
+"tools** di tab **Workloads** dan instal mereka saat di-prompt."
 
 #: ../../content/administration/on_premise/source.rst:326
 #: ../../content/administration/on_premise/source.rst:345
@@ -6873,6 +7697,8 @@ msgid ""
 "Odoo dependencies are listed in the `requirements.txt` file located at the "
 "root of the Odoo Community directory."
 msgstr ""
+"Ketergantungan Odoo didaftarkan di file `requirements.txt` yang berlokasi di"
+" root direktori Odoo Community."
 
 #: ../../content/administration/on_premise/source.rst:334
 msgid ""
@@ -6880,6 +7706,9 @@ msgid ""
 "and run **pip** on the requirements file in a terminal **with Administrator "
 "privileges**:"
 msgstr ""
+"Navigasi ke lokasi instalasi Odoo Community (`CommunityPath`) dan jalankan "
+"**pip** pada file requirement di terminal **dengan hak akses "
+"Administrator**:"
 
 #: ../../content/administration/on_premise/source.rst:353
 msgid ""
