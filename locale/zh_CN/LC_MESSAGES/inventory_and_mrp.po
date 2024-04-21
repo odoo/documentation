@@ -6819,7 +6819,7 @@ msgstr ""
 msgid ""
 "To access the replenishment report, go to :menuselection:`Inventory app --> "
 "Operations --> Replenishment.`"
-msgstr ""
+msgstr "要访问补货报告，请访问 :menuselection:`库存应用程序 --> 操作 --> 补货。`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:61
 msgid ""
@@ -6828,6 +6828,8 @@ msgid ""
 "Odoo assumes the :guilabel:`Min Quantity` and :guilabel:`Max Quantity` stock"
 " are both `0.00`"
 msgstr ""
+"默认情况下，补货报告仪表板会显示每个需要手动重新订购的产品。如果产品没有特定规则，Odoo 会假定 :guilabel:`最小数量` 和 "
+":guilabel:`最大数量` 库存均为 `0.00`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:66
 msgid ""
@@ -6837,6 +6839,8 @@ msgid ""
 "normally, but also takes into account the purchase/manufacturing lead time "
 "and security lead time."
 msgstr ""
+"对于没有设定重新订购规则的产品，Odoo 会根据已确认的销售订单、送货和收据计算预测。对于有固定重新订购规则的产品，Odoo "
+"会正常计算预测，但也会考虑采购/制造周转时间和安全周转时间。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:72
 msgid ""
@@ -6848,6 +6852,9 @@ msgid ""
 "found in the :guilabel:`Bill of Materials` smart button at the top of the "
 "form."
 msgstr ""
+"在创建新的重新订购规则之前，请确保产品表单上配置了*供应商*或*物料清单*。要检查这一点，请转到 :menuselection:`库存应用程序 --> "
+"产品 --> 产品`，然后选择产品以打开其产品表单。供应商（如已配置）列在 :guilabel:`采购` 选项卡中，物料清单（如已配置）在表单顶部的 "
+":guilabel:`物料清单` 智能按钮中。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:78
 msgid ""
@@ -6857,12 +6864,14 @@ msgid ""
 "tracked, so Odoo cannot account for a consumable product in the "
 "replenishment report."
 msgstr ""
+"位于产品表单的:guilabel:`常规信息`选项卡中的:guilabel:`产品类型`，**必须**设置为:guilabel:`可储存产品`。根据定义，不追踪消耗性产品的库存水平，因此"
+" Odoo 无法在补货报告中说明消耗性产品的情况。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst-1
 msgid ""
 "Replenishment report listing all items needing to be purchased to meet "
 "current needs."
-msgstr ""
+msgstr "补货报告，列出为满足当前需求而需要购买的所有物品。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:87
 msgid ""
@@ -6873,6 +6882,9 @@ msgid ""
 "and a :guilabel:`Max Quantity` can be configured in the corresponding "
 "columns on the :guilabel:`Replenishment` report page, as well."
 msgstr ""
+"要从补货报告中创建新的重新订购规则，请进入 :menuselection:`库存应用程序 --> 操作 --> 补货`，单击 "
+":guilabel:`创建`，并从 :guilabel:`产品`列的下拉菜单中选择所需的产品。如有必要，还可在 :guilabel:`补货` "
+"报告页面的相应列中配置 :guilabel:`最小数量` 和 :guilabel:`最大数量`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:93
 msgid ""
@@ -6881,10 +6893,12 @@ msgid ""
 "product to open its product form. Click the :guilabel:`Reordering Rules` "
 "smart button, click :guilabel:`Create`, and fill out the fields."
 msgstr ""
+"要在产品表单中创建新的重新订购规则，请进入 :menuselection:`库存应用程序--> 产品--> "
+"产品`，然后选择一个产品以打开其产品表单。点击:guilabel:`重新订购规则` 智能按钮，点击:guilabel:`创建`，然后填写字段。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:98
 msgid "Replenishment report fields"
-msgstr ""
+msgstr "补货报告字段"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:100
 msgid ""
@@ -6893,19 +6907,21 @@ msgid ""
 "icon on the far right side of the report, then click the checkbox next to a "
 "field to make it visible."
 msgstr ""
+"以下字段位于 :guilabel:`补货` 报告中。如果这些字段不可见，请点击报告最右侧的 :guilabel:`⋮ "
+"（其他选项）`图标，然后点击字段旁边的复选框使其可见。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:104
 msgid ":guilabel:`Product`: the product that requires a replenishment."
-msgstr ""
+msgstr ":guilabel:`产品`：需要补充的产品。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:105
 msgid ""
 ":guilabel:`Location`: the specific location where the product is stored."
-msgstr ""
+msgstr ":guilabel:`位置`：存放产品的具体位置。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:106
 msgid ":guilabel:`Warehouse`: the warehouse where the product is stored."
-msgstr ""
+msgstr ":guilabel:`仓库`：存放产品的仓库。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:107
 msgid ":guilabel:`On Hand`: the amount of product currently available."
@@ -10425,28 +10441,28 @@ msgstr "交货单现已准备好，你可处理并确认交货单。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:3
 msgid "Sell stock from multiple warehouses using virtual locations"
-msgstr ""
+msgstr "利用虚拟地点从多个仓库销售库存产品"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:5
 msgid ""
 "While keeping stock and selling inventory from one warehouse might work for "
 "smaller companies, bigger companies might need to keep stock in, or sell "
 "from, multiple warehouses in multiple locations."
-msgstr ""
+msgstr "对于规模较小的公司来说，从一个仓库保存存货和销售存货可能是可行的，但规模较大的公司可能需要在多个地点的多个仓库保存存货或销售存货。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:9
 msgid ""
 "Sometimes products included in a single sales order might take stock from "
 "two (or more) warehouses; in Odoo, pulling products from multiple warehouses"
 " to satisfy sales demands can be done using *virtual locations*."
-msgstr ""
+msgstr "在 Odoo 中，可以使用*虚拟位置*从多个仓库提取产品，以满足销售需求。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:14
 msgid ""
 "The solution in this document, describing the use of a virtual warehouse to "
 "fulfill orders for multiple warehouses, has some limitations. Consider the "
 "following before proceeding:"
-msgstr ""
+msgstr "本文档中介绍的解决方案使用虚拟仓库来完成多个仓库的订单，但存在一些局限性。在继续之前，请考虑以下几点："
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:17
 msgid ""
@@ -10454,6 +10470,7 @@ msgid ""
 "sales order, the virtual warehouse's address is indicated on the picking, "
 "packing, and delivery forms, **not** the actual warehouse's address."
 msgstr ""
+"当在销售订单上将 :guilabel:`仓库` 字段设置为虚拟仓库时，虚拟仓库的地址会在拣货、包装和发货单上显示，而**不是**实际仓库的地址。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:20
 msgid ""
@@ -10462,6 +10479,8 @@ msgid ""
 "warehouses, but rather the sum of the stock in the locations whose warehouse"
 " ID is the virtual warehouse."
 msgstr ""
+"每个位置都有一个 `warehouse_id` （隐藏字段）。这意味着虚拟仓库的存货**不是**真实仓库的存货总和，而是仓库 ID "
+"为虚拟仓库的位置库存的总和。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:25
 msgid ""
@@ -11539,46 +11558,48 @@ msgid ""
 ":guilabel:`Store to` with the location `WH/Stock/Fruits` when the "
 ":guilabel:`Product`, `Apple` arrives in `WH/Stock`."
 msgstr ""
+"当 :guilabel:`产品`，`苹果` 到达 `WH/Stock` 时，通过在字段 :guilabel:`存储至` 中填写位置 "
+"`WH/Stock/Fruits` 来确保所有苹果都存储在水果区。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:63
 msgid "Repeat this for all products and hit :guilabel:`Save`."
-msgstr ""
+msgstr "对所有产品重复上述操作，然后点击 :guilabel:`保存`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:0
 msgid "Create putaway rules for apples and carrots."
-msgstr ""
+msgstr "为苹果和胡萝卜创建入库规则。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:70
 msgid "Putaway rule priority"
-msgstr ""
+msgstr "入库规则优先"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:72
 msgid ""
 "Odoo selects a putaway rule based on the following priority list (from "
 "highest to lowest) until a match is found:"
-msgstr ""
+msgstr "Odoo 根据以下优先级列表（从高到低）选择入库规则，直到找到匹配的规则："
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:75
 msgid "Package type and product"
-msgstr ""
+msgstr "包装类型和产品"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:76
 msgid "Package type and product category"
-msgstr ""
+msgstr "包装类型和产品类别"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:79
 msgid "Product category"
-msgstr ""
+msgstr "产品类别"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:82
 msgid "The product `Lemonade can` has the following putaway rules configured:"
-msgstr ""
+msgstr "产品`柠檬汽水罐`配置了以下入库规则："
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:84
 msgid ""
 "When receiving a `Pallet` (:guilabel:`Package Type`) of `Lemonade cans`, it "
 "is redirected to `WH/Stock/Pallets/PAL1`."
-msgstr ""
+msgstr "当收到`一托`（:guilabel:`包装类型`）`柠檬汽水罐`时，它将被重新安排至`WH/Stock/Pallets/PAL1`位置。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:86
 msgid ""
@@ -11586,35 +11607,37 @@ msgid ""
 "receiving a `Box` of any item in this product category, items are redirected"
 " to `WH/Stock/Shelf 1`."
 msgstr ""
+"`柠檬汽水罐`的:guilabel:`产品类别`是`全部/饮品`。当收到产品类别中任何物品的一个`盒子`时，物品将被重新定向到`WH/Stock/Shelf"
+" 1`位置。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:88
 msgid "Any product on a `Pallet` is redirected to `WH/Stock/Pallets`"
-msgstr ""
+msgstr "`托盘`上的任何产品都会重定向到 `WH/Stock/Pallets`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:89
 msgid "The product `Lemonade can` is redirected to `WH/Stock/Shelf 2`"
-msgstr ""
+msgstr "产品 `柠檬汽水罐` 重新定向到 `WH/Stock/Shelf 2`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:90
 msgid ""
 "Items in the `All/drinks` product category are redirected to `WH/Stock/Small"
 " Refrigerator`."
-msgstr ""
+msgstr "`所有/饮料`产品类别中的项目被重定向到`WH/Stock/Small Refrigerator`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:0
 msgid "Some examples of putaway rules."
-msgstr ""
+msgstr "入库规则一些示例。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:97
 msgid "Storage categories"
-msgstr ""
+msgstr "存储类别"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:99
 msgid ""
 "A *storage category* is an extra location attribute. Storage categories "
 "allow the user to define the quantity of products that can be stored in the "
 "location, and how the location will be selected with putaway rules."
-msgstr ""
+msgstr "*存储类别*是一个额外的位置属性。存储类别允许用户定义可存储在位置中的产品数量，以及如何用入库规则选择位置。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:106
 msgid ""
@@ -11622,53 +11645,56 @@ msgid ""
 "Configuration --> Settings`, and activate the :guilabel:`Storage Categories`"
 " feature in the :guilabel:`Warehouse` section. Then, click :guilabel:`Save`."
 msgstr ""
+"要启用存储类别，请进入:menuselection:`库存应用程序 --> 配置 --> "
+"设置`，并在:guilabel:`仓库`部分激活:guilabel:`存储类别`功能。然后，点击 :guilabel:`保存`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:111
 msgid ""
 "The :guilabel:`Storage Locations` feature **must** be enabled to enable "
 ":guilabel:`Storage Categories`."
-msgstr ""
+msgstr "必须启用 :guilabel:`存储位置` 功能，才能启用 :guilabel:`存储类别`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:115
 msgid "Define storage category"
-msgstr ""
+msgstr "定义存储类别"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:117
 msgid ""
 "To create a storage category, go to :menuselection:`Inventory app --> "
 "Configuration --> Storage Categories` and click :guilabel:`Create`."
 msgstr ""
+"要创建存储类别，请转至 :menuselection:`库存应用程序 --> 配置 --> 存储类别`，然后单击 :guilabel:`创建`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:120
 msgid ""
 "On the storage category form, type a name for the :guilabel:`Storage "
 "Category` field."
-msgstr ""
+msgstr "在存储类别表单中，输入:guilabel:`存储类别` 字段的名称。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:122
 msgid ""
 "Options are available to limit the capacity by weight, by product, or by "
 "package type. The :guilabel:`Allow New Product` field defines when the "
 "location is considered available to store a product:"
-msgstr ""
+msgstr "可选择按重量、产品或包装类型限制容量。:guilabel:`允许新产品`字段定义了该位置何时可用于存储产品："
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:126
 msgid ""
 ":guilabel:`If location is empty`: a product can be added there only if the "
 "location is empty."
-msgstr ""
+msgstr ":guilabel:`如果位置为空`：只有当位置为空时，才能在此处添加产品。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:127
 msgid ""
 ":guilabel:`If products are the same`: a product can be added there only if "
 "the same product is already there."
-msgstr ""
+msgstr ":guilabel:`如果产品相同`：只有在相同产品已经存在的情况下，才能在此处添加产品。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:129
 msgid ""
 ":guilabel:`Allow mixed products`: several different products can be stored "
 "in this location at the same time."
-msgstr ""
+msgstr ":guilabel:`允许混合产品`：该位置可以同时存储多个不同的产品。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:133
 msgid ""
@@ -11691,13 +11717,13 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:0
 msgid "Create a storage category on the page."
-msgstr ""
+msgstr "在页面上创建存储类别。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:147
 msgid ""
 "Once the storage category settings are saved, the storage category can be "
 "linked to a location."
-msgstr ""
+msgstr "保存存储类别设置后，就可以将存储类别链接到某个位置。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:149
 msgid ""
@@ -11706,22 +11732,24 @@ msgid ""
 ":guilabel:`Edit` and select the created category in the :guilabel:`Storage "
 "Category` field."
 msgstr ""
+"要执行此操作，通过 :menuselection:`库存应用程序 --> 配置 --> 位置` 导航到位置，并选择位置。点击 "
+":guilabel:`编辑`，在 :guilabel:`存储类别`字段中选择创建的类别。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:154
 msgid ""
 "Assign the `High Frequency pallets` storage category to the "
 "`WH/Stock/pallets/PAL 1` sub-location."
-msgstr ""
+msgstr "将`高频托盘`存储类别分配到 `WH/Stock/pallets/PAL 1` 子位置。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:0
 msgid ""
 "When a Storage Category is created, it can be linked to a warehouse "
 "location."
-msgstr ""
+msgstr "创建存储类别后，可将其链接到仓库位置。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:162
 msgid "Storage categories in putaway rules"
-msgstr ""
+msgstr "入库规则中的存储类别"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:164
 msgid ""
@@ -11729,30 +11757,32 @@ msgid ""
 "the `PAL1` and `PAL2` locations and :ref:`rework the putaway rules "
 "<inventory/routes/putaway-rule>` as follows:"
 msgstr ""
+"继续上面的示例，在 `PAL1` 和 `PAL2` 位置应用`高频托盘`，并 :ref:`重新制定 <inventory/routes/putaway-"
+"rule>` 入库规则如下："
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:167
 msgid "Assume one pallet of lemonade cans is received:"
-msgstr ""
+msgstr "假设收到一托盘柠檬汽水罐："
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:169
 msgid ""
 "If PAL1 and PAL2 are empty, the pallet will be redirected to "
 "WH/Stock/Pallets/PAL1."
-msgstr ""
+msgstr "如果 PAL1 和 PAL2 都为空，则托盘将重定向到 WH/Stock/Pallets/PAL1。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:170
 msgid ""
 "If PAL1 is full, the pallet will be redirected to WH/Stock/Pallets/PAL2."
-msgstr ""
+msgstr "如果 PAL1 已满，托盘将转到 WH/Stock/Pallets/PAL2。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:171
 msgid ""
 "If PAL1 and 2 are full, the pallet will be redirected to WH/Stock/Pallets."
-msgstr ""
+msgstr "如果 PAL1 和 2 已满，托盘将转到 WH/Stock/Pallets。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst-1
 msgid "Storage Categories used in a variety of putaway rules."
-msgstr ""
+msgstr "用于各种入库规则的存储类别。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:3
 msgid "Removal strategies (FIFO, LIFO, FEFO)"
@@ -13611,7 +13641,7 @@ msgstr "`Odoo教程：MRP <https://www.odoo.com/slides/mrp-29>`_"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing.rst:17
 msgid ":doc:`IoT Boxes (MES) </applications/general/iot>`"
-msgstr ""
+msgstr ":doc:`物联网盒子（MES）</applications/general/iot>`"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/maintenance.rst:5
 msgid "Maintenance"
@@ -13619,7 +13649,7 @@ msgstr "维护"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:3
 msgid "Add new equipment"
-msgstr ""
+msgstr "添加新设备"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:5
 msgid ""
@@ -13642,7 +13672,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:16
 msgid ":guilabel:`Equipment Name`: the product name of the piece of equipment"
-msgstr ""
+msgstr ":guilabel:`设备名称`：设备产品名称"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:17
 msgid ""
@@ -13651,19 +13681,21 @@ msgid ""
 "created by navigating to :menuselection:`Configuration --> Equipment "
 "Categories` and clicking :guilabel:`Create`"
 msgstr ""
+":guilabel:`设备类别`：设备所属的类别；例如，计算机、机械、工具等；可通过导航至:menuselection:`配置 --> "
+"设备类别`并点击:guilabel:`创建`来创建新类别"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:20
 msgid ""
 ":guilabel:`Company`: the company that owns the equipment; again, this can be"
 " the company that uses the Odoo database, or a third-party company"
-msgstr ""
+msgstr ":guilabel:`公司`：拥有设备的公司；同样，这可以是使用 Odoo 数据库的公司，也可以是第三方公司"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:22
 msgid ""
 ":guilabel:`Used By`: specify if the equipment is used by a specific "
 "employee, department, or both; select :guilabel:`Other` to specify both an "
 "employee and a department"
-msgstr ""
+msgstr ":guilabel:`使用者`：指定设备是否由特定员工、部门或两者使用；选择 :guilabel:`其他` 可同时指定员工和部门。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:24
 msgid ""
@@ -13673,6 +13705,8 @@ msgid ""
 ":guilabel:`Create`; the members of each team can also be assigned from this "
 "page"
 msgstr ""
+":guilabel:`维护团队'：负责维护设备的团队；可通过导航至 :menuselection:` 配置 --> 维护团队'并选择 "
+":guilabel:`创建'来创建新团队；也可通过此页面分配每个团队的成员"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:27
 msgid ""
@@ -13682,6 +13716,8 @@ msgid ""
 "should always be responsible for the equipment; any person added to Odoo as "
 "a user can be assigned as a technician"
 msgstr ""
+":guilabel:`技术员`：负责维修设备的人；可以用于在未指定维护团队或需要特定团队成员始终负责设备时，指定具体的个人；Odoo "
+"中的任何用户都可以被指定为技术员。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:31
 msgid ""
@@ -13698,20 +13734,22 @@ msgid ""
 "work center or creating a new one using the :guilabel:`Create` button, and "
 "clicking the :guilabel:`Equipment` tab on the work center form"
 msgstr ""
+":guilabel:`工作中心`：如果设备在工作中心使用，请在此处指定；设备也可以通过导航到:menuselection:`维护 --> 设备 --> "
+"工作中心`，选择一个工作中心或使用:guilabel:`创建`按钮创建一个新的工作中心，然后点击工作中心表单上的:guilabel:`设备`选项卡，将设备分配到工作中心。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst-1
 msgid "An example of a fully configured new equipment form."
-msgstr ""
+msgstr "完整配置的新设备表格示例。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:44
 msgid "Include additional product information"
-msgstr ""
+msgstr "包括其他产品信息"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:46
 msgid ""
 "The :guilabel:`Product Information` tab at the bottom of the form can be "
 "used to provide further details about the piece of equipment:"
-msgstr ""
+msgstr "表格底部的 :guilabel:`产品信息` 标签可用于提供有关设备的更多详细信息："
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:49
 msgid ":guilabel:`Vendor`: the vendor that the equipment was purchased from"
@@ -13749,39 +13787,39 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst-1
 msgid "The product information tab for the new piece of equipment."
-msgstr ""
+msgstr "新设备的产品信息选项卡。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:63
 msgid "Add maintenance details"
-msgstr ""
+msgstr "添加维护详情"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:65
 msgid ""
 "The :guilabel:`Maintenance` tab includes information that can be useful to "
 "maintenance teams:"
-msgstr ""
+msgstr ":guilabel:`维护`选项卡包含对维护团队有用的信息："
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:67
 msgid ""
 ":guilabel:`Preventive Maintenance Frequency`: specifies how often "
 "maintenance should be performed to prevent equipment failure"
-msgstr ""
+msgstr ":guilabel:`预防维护频率`：指定维护应该以多频繁的间隔进行，以预防设备故障。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:69
 msgid ""
 ":guilabel:`Maintenance Duration`: the amount of time required to fix the "
 "equipment when it fails"
-msgstr ""
+msgstr ":guilabel:`维护时间`：当设备出现故障时，修复设备所需的时间。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:70
 msgid ""
 ":guilabel:`Expected Mean Time Between Failure`: the average amount of time "
 "that the equipment is expected to operate before failing"
-msgstr ""
+msgstr ":guilabel:`预期平均故障间隔时间`：设备在发生故障前的平均运行时间。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst-1
 msgid "The maintenance tab for the new piece of equipment."
-msgstr ""
+msgstr "新设备的维护选项卡。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:78
 msgid ""
@@ -13790,13 +13828,14 @@ msgid ""
 " Failure`, and :guilabel:`Mean Time To Repair`. These values are calculated "
 "automatically based on maintenance requests if any exist."
 msgstr ""
+":guilabel:`维护`选项卡还包括:guilabel:`平均故障间隔时间`、:guilabel:`预计下次故障`、:guilabel:`最近故障`和:guilabel:`平均修复时间`部分。如果存在维护请求，这些值将根据维护请求自动计算。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/maintenance/add_new_equipment.rst:84
 msgid ""
 "To see the maintenance requests for a piece of equipment, go to the page for"
 " the equipment and select :guilabel:`Maintenance` in the top right corner of"
 " the form."
-msgstr ""
+msgstr "要查看某设备的维护申请，请进入该设备的页面，选择表格右上角的 :guilabel:`维护`。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management.rst:5
 msgid "Manufacturing management"
@@ -13825,18 +13864,18 @@ msgstr ""
 msgid ""
 "Correctly setting up a :abbr:`BoM (Bill of Materials)` helps optimize the "
 "manufacturing process and save time."
-msgstr ""
+msgstr "正确设置:abbr:`物料清单（BoM）`有助于优化生产流程，节省时间。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:16
 msgid "Set up a bill of materials (BoM)"
-msgstr ""
+msgstr "创建物料清单（BoM）"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:18
 msgid ""
 "The simplest :abbr:`BoM (Bill of Materials)` setup is one without operations"
 " or instructions, only components. In this case, the production is solely "
 "managed using *Manufacturing Orders*."
-msgstr ""
+msgstr "最简单的 :abbr:`物料清单（BoM）`设置是没有操作或指令，只有组件。在这种情况下，只需使用*制造订单*来管理生产。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:21
 msgid ""
@@ -13845,12 +13884,14 @@ msgid ""
 "of Materials`. Then, click :guilabel:`Create`. Next, specify the "
 ":guilabel:`Product`."
 msgstr ""
+"要在 :guilabel:`制造` 模块中创建:abbr:`物料清单（BoM）`，请转到 :menuselection:`产品 --> "
+"物料清单`。然后，点击 :guilabel:`创建`。然后，指定 :guilabel:`产品`。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:26
 msgid ""
 "A :abbr:`BoM (Bill of Materials)` can also be created directly from the "
 "product form, in which case the :guilabel:`Product` field is pre-filled."
-msgstr ""
+msgstr "也可以直接从产品表单中创建 :guilabel:`产品`字段。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:29
 msgid ""
@@ -13863,27 +13904,31 @@ msgid ""
 "Create`. Finally, click :guilabel:`Save` to finish creating the :abbr:`BoM "
 "(Bill of Materials)`."
 msgstr ""
+"对于标准的:abbr:`BoM（物料清单）`，请将 :guilabel:`BoM 类型`设置为 :guilabel:`制造该产品`。然后，点击 "
+":guilabel:`添加行`，指定构成最终产品生产的各种组件及其各自的数量。新组件可通过 :abbr:`BoM（物料清单）` 快速创建，也可预先在 "
+":menuselection:`制造 --> 产品 --> 产品 --> 创建` 中创建。最后，点击 :guilabel:`保存` 完成创建 "
+":`BoM（物料清单）`。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst-1
 msgid "Set up a Bill of Materials."
-msgstr ""
+msgstr "制定物料清单。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:41
 msgid "Specify a bill of materials (BoM) for a product variant"
-msgstr ""
+msgstr "为产品变体指定物料清单（BoM）"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:43
 msgid ""
 ":abbr:`BoMs (Bills of Materials)` can also be assigned to specific *Product "
 "Variants*, with two setup options available to choose from."
-msgstr ""
+msgstr "还可将:abbr:`物料清单（BoM）`分配给特定的 *产品型号*，有两种设置选项可供选择。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:47
 msgid ""
 "In order to assign :abbr:`BoMs (Bills of Materials)` to product variants, "
 "the product's variant attributes must already be configured on the product "
 "form."
-msgstr ""
+msgstr "要将 :abbr:`BoM（物料清单）` 分配给产品变体，必须已在产品表单上配置了产品的变体属性。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:50
 msgid ""
@@ -13894,14 +13939,17 @@ msgid ""
 "specify which variant each component applies to using the :guilabel:`Apply "
 "on Variants` column."
 msgstr ""
+"第一种方法是创建一个新的 :abbr:`BoM（物料清单）`，并指定 :guilabel:`产品变体`，从而为每个变体创建一个 "
+":abbr:`BoM（物料清单）`。第二种方法是创建一个包含所有组件的主:abbr:`BoM（物料清单）`，并使用 :guilabel:`应用于变体` "
+"列指定每个组件适用于哪个变体。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst-1
 msgid "Product Variants in the Bill of Materials."
-msgstr ""
+msgstr "物料清单中的产品变体。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:60
 msgid "Set up operations"
-msgstr ""
+msgstr "设置操作"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:62
 msgid ""
@@ -13911,6 +13959,8 @@ msgid ""
 ":menuselection:`Manufacturing --> Configuration --> Settings --> "
 "Operations`."
 msgstr ""
+"在 :abbr:`BoM（物料清单）`中添加 :guilabel:`操作` 以指定生产指令并登记操作所花费的时间。要使用此功能，首先在 "
+":menuselection:`制造 --> 配置 --> 设置 --> 操作` 中启用 :guilabel:`工作订单` 功能。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:67
 msgid ""
@@ -13922,6 +13972,9 @@ msgid ""
 ":guilabel:`Apply on Variants` field so the operation only applies to that "
 "variant. Finally, click :guilabel:`Save & Close`."
 msgstr ""
+"然后，在新建:abbr:`物料清单（BoM）`时，点击:guilabel:`操作` 选项卡并点击:guilabel:`添加行` 添加新操作。在 "
+":guilabel:`创建操作` 框中，给操作命名，指定 :guilabel:`工作中心` 和持续时间设置。与组件一样，Odoo 提供了在 "
+":guilabel:`应用于变体` 字段中指定产品变体的选项，因此操作仅适用于该变体。最后，点击 :guilabel:`保存并关闭`。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:74
 msgid ""
@@ -13930,14 +13983,16 @@ msgid ""
 " new :abbr:`BoM (Bill of Materials)`, with the :guilabel:`Copy Existing "
 "Operations` feature."
 msgstr ""
+"每个操作都是唯一的，因为它总是只与一个:abbr:`BoM（物料清单）` 相关联。在配置新的 :abbr:`BoM（物料清单）` 时，可使用 "
+":guilabel:`复制现有操作` 功能重复使用操作。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst-1
 msgid "Copy Existing Operations feature."
-msgstr ""
+msgstr "复制现有操作功能。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:83
 msgid "Add by-products to a bill of materials (BoM)"
-msgstr ""
+msgstr "在物料清单（BoM）中添加副产品"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:85
 msgid ""
@@ -13946,6 +14001,7 @@ msgid ""
 "the primary product, there can be more than one by-product on a :abbr:`BoM "
 "(Bill of Materials)`."
 msgstr ""
+"*副产品*是指在生产过程中，除了:abbr:`BoM（物料清单）`中的主产品之外产生的剩余产品。与主产品不同，:abbr:`物料清单`上可以有不止一种副产品。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:89
 msgid ""
@@ -13953,6 +14009,8 @@ msgid ""
 ":guilabel:`By-Products` feature in :menuselection:`Manufacturing --> "
 "Configuration --> Settings --> Operations`."
 msgstr ""
+"要将副产品添加到:abbr:`BoM（物料清单）`，首先在 :menuselection:`制造 --> 配置 --> 设置 --> 操作` 中启用 "
+":guilabel:`副产品` 功能。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:92
 msgid ""
@@ -13964,10 +14022,14 @@ msgid ""
 "operation the by-product is produced from in the :guilabel:`Produced in "
 "Operation` field. Finally, click :guilabel:`Save`."
 msgstr ""
+"启用该功能后，您可以通过点击 :guilabel:`操作` 选项卡并点击 "
+":guilabel:`添加行`，将副产品添加到:abbr:`BoM（物料清单）`。然后，为副产品命名，并标明 :guilabel:`数量` 和 "
+":guilabel:`计量单位`。如果 :abbr:`BoM（物料清单）` 已配置操作，请在 :guilabel:`在运行中生产` "
+"字段中准确说明副产品由哪项操作生产。最后，点击 :guilabel:`保存`。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:3
 msgid "Use kits"
-msgstr ""
+msgstr "使用套装"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:5
 msgid ""
@@ -13976,16 +14038,18 @@ msgid ""
 "customers. They may be sold as standalone products, but are also useful "
 "tools for managing more complex bills of materials (BoMs)."
 msgstr ""
+"在 Odoo "
+"中，*套件*是一种可生产和销售的物料清单（BoM）。套件是出售给客户的一套未组装组件。它们可以作为独立产品销售，但也是管理更复杂物料清单（BoMs）的有用工具。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:10
 msgid ""
 "To use, manufacture, and sell kits, both the :guilabel:`Manufacturing` and "
 ":guilabel:`Inventory` apps need to be installed."
-msgstr ""
+msgstr "要使用、制造和销售工具包，需要同时安装 :guilabel:`制造` 和 :guilabel:`库存` 应用程序。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:14
 msgid "Create the kit as a product"
-msgstr ""
+msgstr "将套件创建为产品"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:16
 msgid ""
@@ -14660,14 +14724,14 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/product_variants.rst-1
 msgid "\"Apply on Variants\" option on the additional options menu."
-msgstr ""
+msgstr "附加选项菜单上的“应用于变体”选项。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/product_variants.rst:110
 msgid ""
 "Each component can be assigned to multiple variants. Components with no "
 "variants specified are used in every variant of the product. The same "
 "principle applies when configuring operations and by-products."
-msgstr ""
+msgstr "每个组件可分配给多个变体。未指定变体的组件将在产品的每个变体中使用。同样的原则也适用于配置操作和副产品。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/product_variants.rst:114
 msgid ""
@@ -14677,12 +14741,14 @@ msgid ""
 "used when creating a :abbr:`BoM (bill of materials)` specifically for one "
 "product variant."
 msgstr ""
+"在通过组件分配定义变体 :abbr:`BoM（物料清单）`时，:abbr:`BoM（物料清单）`主要部分的 :guilabel:`产品变体` "
+"字段应留空。该字段*仅*用于创建专门用于一种产品变体的 :abbr:`BoM（物料清单）`。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/product_variants.rst:119
 msgid ""
 "When all desired configurations have been made to the :abbr:`BoM (bill of "
 "materials)`, click :guilabel:`Save` at the top of the form to save changes."
-msgstr ""
+msgstr "当对 :abbr:`BoM（物料清单）`进行了所有需要的配置后，点击表格顶部的 :guilabel:`保存`，保存更改。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/product_variants.rst:123
 msgid ""
@@ -14694,7 +14760,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/product_variants.rst:129
 msgid "Sell and manufacture variants of BoM products"
-msgstr ""
+msgstr "销售和制造 BoM 产品的变体"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/product_variants.rst:131
 msgid ""
@@ -14702,16 +14768,17 @@ msgid ""
 " to order, navigate to :menuselection:`Sales app --> Create` to create a new"
 " quotation."
 msgstr ""
+"要销售和制造 :abbr:`BoM（物料清单）`产品的变体，请导航至 :menuselection:`销售应用程序 --> 创建` 以创建新报价单。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/product_variants.rst:135
 msgid "Sell variant of BoM product"
-msgstr ""
+msgstr "销售 BoM 产品的变体"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/product_variants.rst:137
 msgid ""
 "Once on the blank :guilabel:`Quotation` form, click the drop-down next to "
 "the :guilabel:`Customer` field to add a customer."
-msgstr ""
+msgstr "进入空白的 :guilabel:`报价` 表单后，点击 :guilabel:`客户` 字段旁边的下拉菜单，添加客户。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/product_variants.rst:140
 msgid ""
@@ -14720,6 +14787,9 @@ msgid ""
 "product with variants from the drop-down menu. Doing so reveals a "
 ":guilabel:`Configure a product` pop-up."
 msgstr ""
+"然后，在 :guilabel:`订单行` 选项卡下点击 "
+":guilabel:`添加产品`，并从下拉菜单中选择先前创建的带有变体的:abbr:`BoM（物料清单）`产品。这样会弹出一个 "
+":guilabel:`配置产品` 窗口。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/product_variants.rst:144
 msgid ""
@@ -14728,10 +14798,12 @@ msgid ""
 ":guilabel:`+` or :guilabel:`-` icons next to the `1` to change the quantity "
 "to sell and manufacture, if desired."
 msgstr ""
+"在弹出窗口中，点击所需的属性选项，配置要生产产品的正确变体。然后，点击 `1` 旁边的绿色 :guilabel:`+` 或 :guilabel:`-` "
+"图标，根据需要更改要销售和生产的数量。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/product_variants.rst-1
 msgid "Configure a product pop-up for choosing variant attributes."
-msgstr ""
+msgstr "配置用于选择变体属性的产品弹出窗口。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/product_variants.rst:152
 msgid ""
@@ -14740,10 +14812,12 @@ msgid ""
 "available optional products will appear, if they have been created "
 "previously."
 msgstr ""
+"选择所有规格后，点击 :guilabel:`添加`。这将使弹出窗口变为第二个 :guilabel:`配置` "
+"弹窗，如果之前已创建了可选产品，则将显示这些产品。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/product_variants.rst:156
 msgid "Once ready, click :guilabel:`Confirm` to close the pop-up."
-msgstr ""
+msgstr "准备就绪后，点击 :guilabel:`确认` 关闭弹出窗口。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/product_variants.rst:158
 msgid ""
@@ -14751,10 +14825,12 @@ msgid ""
 ":guilabel:`Confirm` at the top of the :guilabel:`Quotation` form to create "
 "and confirm a new sales order (SO)."
 msgstr ""
+"然后，点击 :guilabel:`保存`，以保存所有更改，并点击 :guilabel:`报价` 表单顶部的 "
+":guilabel:`确认`，创建并确认新的销售订单（SO）。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/product_variants.rst:162
 msgid "Manufacture variant of BoM product"
-msgstr ""
+msgstr "BoM 产品的制造变体"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/product_variants.rst:164
 msgid ""
@@ -14763,6 +14839,8 @@ msgid ""
 "the :guilabel:`Manufacturing` smart button to open the "
 ":guilabel:`Manufacturing Order` form."
 msgstr ""
+"一旦确认了:guilabel:`SO（销售订单）`，:guilabel:`制造`智能按钮将出现在:guilabel:`SO（销售订单）`表单的顶部。点击"
+" :guilabel:`制造` 智能按钮，打开 :guilabel:`制造订单` 表单。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/product_variants.rst:168
 msgid ""
@@ -14771,6 +14849,8 @@ msgid ""
 " different components will be listed. To see any mandatory or optional "
 ":guilabel:`Operation` steps, click the :guilabel:`Work Orders` tab."
 msgstr ""
+"在该表单的 :guilabel:`组件` 标签下，列出了所选变体的相应组件。根据变体的不同，会列出不同的组件。要查看任何必须或可选的 "
+":guilabel:`操作` 步骤，请点击:guilabel:`工作订单` 选项卡。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/product_variants.rst:172
 msgid ""
@@ -14815,6 +14895,8 @@ msgid ""
 ":guilabel:`Create Invoice` followed by :guilabel:`Create Invoice` again to "
 "invoice the customer for the order."
 msgstr ""
+"要完成销售，请再次通过页面顶部的 :guilabel:`面包屑导航` 点击回到 :abbr:`SO（销售订单）` 。然后，点击 "
+":guilabel:`创建发票`，再次点击 :guilabel:`创建发票`，向客户开具订单发票。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/quality_control.rst:3
 msgid "Quality Control"
@@ -14857,14 +14939,14 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/scrap_manufacturing.rst:3
 msgid "Scrap during manufacturing"
-msgstr ""
+msgstr "制造过程中的废料"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/scrap_manufacturing.rst:5
 msgid ""
 "During the manufacturing process, the need to scrap manufacturing components"
 " or finished products may arise. This can be necessary if a component or "
 "product is damaged, or unusable for any other reason."
-msgstr ""
+msgstr "在制造过程中，可能需要报废制造部件或成品。如果部件或产品损坏，或因其他原因无法使用，就有必要报废。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/scrap_manufacturing.rst:9
 msgid ""
@@ -14874,6 +14956,8 @@ msgid ""
 " a designation in Odoo that is used to track items that are no longer in "
 "physical inventory."
 msgstr ""
+"默认情况下，报废组件或成品会将其从物理库存中移除，并将其放置在名为*虚拟位置/报废*的虚拟位置中。虚拟位置**并非**物理空间，而是 Odoo "
+"中的一个名称，用于追踪不再属于实际库存的物品。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/scrap_manufacturing.rst:14
 msgid ""
@@ -14891,6 +14975,8 @@ msgid ""
 "all virtual locations. From the list, select the :guilabel:`Virtual "
 "Locations/Scrap` location."
 msgstr ""
+"要查看每个报废项目的总量，请导航至 :menuselection:`库存 --> 配置 --> 位置`，然后从 :guilabel:`搜索...` "
+"栏移除 :guilabel:`内部` 筛选器，以显示所有虚拟位置。从列表中选择 :guilabel:`虚拟位置/废料` 位置。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/scrap_manufacturing.rst:29
 msgid "Scrap manufacturing components"
@@ -16479,7 +16565,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst-1
 msgid "Reporting dashboard in Odoo Purchase"
-msgstr ""
+msgstr "Odoo 采购中的报告仪表板"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:22
 msgid ""
@@ -16542,7 +16628,7 @@ msgstr "如果您使用*订单日期*或*确认日期*过滤器，*比较*功能
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst-1
 msgid "Reporting filters in Odoo Purchase"
-msgstr ""
+msgstr "Odoo 采购中的报告筛选器"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:59
 msgid "Add custom filters"
@@ -16567,7 +16653,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst-1
 msgid "Custom reporting filter in Odoo Purchase"
-msgstr ""
+msgstr "Odoo 采购中的自定义报告筛选器"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:74
 msgid ""
@@ -16594,7 +16680,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst-1
 msgid "Switch reporting view in Odoo Purchase"
-msgstr ""
+msgstr "在 Odoo 采购中切换报告视图"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:92
 msgid "Visualize your data"
@@ -16611,7 +16697,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst-1
 msgid "Reporting graph view in Odoo Purchase"
-msgstr ""
+msgstr "Odoo 采购中的报告图表视图"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:102
 msgid ""
@@ -16641,7 +16727,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst-1
 msgid "Pivot table view in Odoo Purchase"
-msgstr ""
+msgstr "Odoo 采购中的数据透视表视图"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:121
 msgid ""
@@ -17444,6 +17530,8 @@ msgid ""
 ":menuselection:`Accounting app --> Vendors --> Bills`, and click "
 ":guilabel:`Create`. Doing so reveals a blank vendor bill detail form."
 msgstr ""
+"也可直接从 *会计* 应用程序创建供应商账单，**无需**先创建采购订单。要执行此操作，进入 :menuselection:`会计应用程序 --> "
+"供应商 --> 订单`，然后点击 :guilabel:`创建`。这样就会显示一个空白的供应商账单明细表。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:197
 msgid ""
@@ -17454,6 +17542,9 @@ msgid ""
 "other necessary information. Finally, click :guilabel:`Confirm` to confirm "
 "the bill."
 msgstr ""
+"在空白供应商账单明细表中，在 :guilabel:`供应商` 字段中添加供应商，并通过点击:guilabel:`添加行` 在 "
+":guilabel:`产品` 行（位于:guilabel:`发票行` 选项卡下）添加产品。然后，在 :guilabel:`账单日期` "
+"字段中添加账单日期和其他必要信息。最后，点击 :guilabel:`确认`，以确认账单。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:202
 msgid ""
@@ -17558,20 +17649,21 @@ msgid ""
 " a purchase order is automatically created whenever the amount on hand falls"
 " below a set threshold."
 msgstr ""
+"对于某些产品，有必要确保随时都有最低库存量。通过为产品添加重新订购规则，可以实现重新订购流程的自动化，从而在库存量低于设定阈值时自动创建采购订单。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:11
 msgid "The *Inventory* module must be installed to use reordering rules."
-msgstr ""
+msgstr "必须安装 *库存* 模块才能使用重新排序规则。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:14
 msgid "Configure products for reordering"
-msgstr ""
+msgstr "配置产品以重新订购"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:16
 msgid ""
 "Products must be configured in a specific way before a reordering rule can "
 "be added to them."
-msgstr ""
+msgstr "必须以特定方式配置产品，才能为其添加重新排序规则。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:18
 msgid ""
@@ -17582,6 +17674,9 @@ msgid ""
 "Alternatively, find a product that already exists in the database and click "
 "into it's product form."
 msgstr ""
+"从 :menuselection:`库存`、:menuselection:`制造`、:menuselection:`采购`或 "
+":menuselection:`销售` 模块开始，导航至 :menuselection:`产品 --> 产品` 并点击 "
+":guilabel:`创建`，以创建新产品。或者，查找数据库中已存在的产品，然后点击产品表单。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:23
 msgid ""
@@ -17590,14 +17685,16 @@ msgid ""
 "Finally, set the :guilabel:`Product Type` to `Storable Product` under the "
 ":guilabel:`General Information` tab."
 msgstr ""
+"接下来，在产品表单中，选中 :guilabel:`可以采购` 选项，在 :guilabel:`产品名称` "
+"字段下启用重新订购。最后，在:guilabel:`常规信息`选项卡下将:guilabel:`产品类型`设置为`可储存产品`。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst-1
 msgid "Configure a product for reordering in Odoo."
-msgstr ""
+msgstr "在 Odoo 中配置产品以便重新订购。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:32
 msgid "Add a reordering rule to a product"
-msgstr ""
+msgstr "为产品添加重新排序规则"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:34
 msgid ""
@@ -17606,22 +17703,24 @@ msgid ""
 "that product's form, and then clicking :guilabel:`Create` on the "
 ":guilabel:`Reordering Rules` dashboard."
 msgstr ""
+"正确配置产品后，可通过选择产品表单顶部现在可见的 :guilabel:`重新排序规则` 选项卡，然后点击:guilabel:`重新排序规则` 面板上的 "
+":guilabel:`创建` 来添加重新排序规则。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst-1
 msgid "Access reordering rules for a product from the product page in Odoo."
-msgstr ""
+msgstr "从 Odoo 产品页面访问产品的重新排序规则。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:42
 msgid ""
 "Once created, the reordering rule can be configured to generate purchase "
 "orders automatically by defining the following fields:"
-msgstr ""
+msgstr "创建后，可通过定义以下字段配置重新订购规则，以自动生成订购单："
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:45
 msgid ""
 ":guilabel:`Location` specifies where the ordered quantities should be stored"
 " once they are received and entered into stock."
-msgstr ""
+msgstr ":guilabel:`位置` 指定收到订购数量并将其入库后的存储位置。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:47
 msgid ""
@@ -17630,6 +17729,8 @@ msgid ""
 "hand falls below the minimum quantity, a new purchase order will be created "
 "to replenish it up to the maximum quantity."
 msgstr ""
+":guilabel:`最小数量` 设置重新订购规则的下限，而 :guilabel:`最大数量` "
+"设置上限。如果库存低于最小数量，将创建新的采购订单，以补充到最大数量。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:52
 msgid ""
@@ -17637,6 +17738,8 @@ msgid ""
 "set to `25` and the stock on hand falls to four, a purchase order will be "
 "created for 21 units of the product."
 msgstr ""
+"如果 :guilabel:`最小数量` 设置为 `5`，:guilabel:`最大数量` 设置为 "
+"`25`，并且现有库存数量下降到四个，将创建一个包含该产品 21 个单位的采购订单。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:55
 msgid ""
@@ -17646,6 +17749,8 @@ msgid ""
 "resulting stock on hand above what is specified in the :guilabel:`Max "
 "Quantity` field."
 msgstr ""
+"可以对 :guilabel:`多个数量` 进行配置，使产品只能按一定数量分批订购。根据输入的数量，这可能导致创建的采购订单会使库存超过 "
+":guilabel:`最大数量` 字段中指定的数量。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:61
 msgid ""
@@ -17653,6 +17758,8 @@ msgid ""
 "Quantity` is set to order the product in batches of `200`, a purchase order "
 "will be created for 200 units of the product."
 msgstr ""
+"如果 :guilabel:`最大数量` 设置为`100`，但 :guilabel:`多个数量` 设置为分批订购产品`200`，则将创建一个包含该产品 "
+"200 个单位的采购订单。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:65
 msgid ""
@@ -17661,10 +17768,12 @@ msgid ""
 "it can also be set to units of measurement like `Volume` or `Weight` for "
 "non-discrete products like water or bricks."
 msgstr ""
+":guilabel:`UoM` "
+"指定订购数量的计量单位。对于离散产品，应设置为`单位`。但是，对于水或砖块等非离散产品，也可以设置为`体积`或`重量`等计量单位。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst-1
 msgid "Configure the reordering rule in Odoo."
-msgstr ""
+msgstr "在 Odoo 中配置重新排序规则。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:74
 msgid "Manually trigger reordering rules using the scheduler"
