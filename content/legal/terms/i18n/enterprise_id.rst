@@ -225,7 +225,7 @@ Odoo SA berkomitmen untuk memberikan setidaknya layanan berikut:
 - Pencadangan yang sepenuhnya otomatis dan telah diverifikasi, serta direplikasi di beberapa wilayah
 - Rencana Pemulihan Bencana, yang diuji secara teratur
 
-Detail Layanan Cloud Hosting diuraikan pada halaman Service Level Agreement di
+Detail Layanan Cloud Hosting diuraikan pada halaman Perjanjian Tingkat Layanan di
 https://www.odoo.com/cloud-sla.
 
 
@@ -473,7 +473,7 @@ Layanan.
 
 .. _termination_id:
 
-6.6 Pemberhentian
+6.6 Pengakhiran
 ---------------
 
 Jika salah satu pihak gagal memenuhi kewajibannya yang timbul dalam perjanjian ini,
@@ -485,9 +485,9 @@ Lebih lanjut, Odoo SA dapat segera mengakhiri Perjanjian jika Pelanggan gagal me
 biaya yang berlaku untuk Layanan dalam 21 hari setelah tanggal jatuh tempo yang ditentukan
 di faktur terkait, dan setelah tidak kurang dari 3 pengingat.
 
-Survival Clause:
+Klausul Kelangsungan:
   Pasal ":ref:`confidentiality_id`", “:ref:`disclaimers_id`", “:ref:`liability_id`",
-  dan “:ref:`general_provisions_id`" akan tetap berlaku setelah pemberhentian atau
+  dan “:ref:`general_provisions_id`" akan tetap berlaku setelah pengakhiran atau
   berakhirnya Perjanjian ini.
 
 .. _warranties_disclaimers_id:
@@ -593,7 +593,7 @@ pesanan Pelanggan mana pun akan tunduk pada yurisdiksi eksklusif Nivelles Busine
 
 .. _severability_id:
 
-8.2 Severability
+8.2 Keterpisahan
 ----------------
 
 Dalam hal satu atau lebih ketentuan dari Perjanjian ini atau segala pelaksanaannya
