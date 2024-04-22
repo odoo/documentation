@@ -23,8 +23,8 @@ itself. To install the *Manufacturing* app, navigate to :menuselection:`Apps`, s
    down to the :guilabel:`About` section at the bottom of the page. The version number is displayed
    there.
 
-   To switch to a newer version of Odoo, see the documentation on :ref:`upgrading a database
-   <administration/upgrade>`.
+   To switch to a newer version of Odoo, see the documentation on :doc:`upgrading a database
+   <../../../../administration/upgrade>`.
 
 Navigation
 ==========
