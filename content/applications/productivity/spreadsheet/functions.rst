@@ -517,10 +517,6 @@ Odoo
      - Get the value from a pivot (not compatible with Excel)
    * - ODOO.PIVOT.HEADER(pivot_id, [domain_field_name, ...], [domain_value, ...])
      - Get the header of a pivot (not compatible with Excel)
-   * - ODOO.PIVOT.POSITION(pivot_id, field_name, position)
-     - Get the absolute ID of an element in the pivot (not compatible with Excel)
-   * - _T(value)
-     - Get the translated value of the given string (not compatible with Excel)
 
 .. _functions/operators:
 
