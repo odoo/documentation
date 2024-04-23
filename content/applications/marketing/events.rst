@@ -10,5 +10,6 @@ Events
 .. toctree::
 
    events/event_essentials
+   events/create_events
    events/sell_tickets
    events/track_manage_talks
