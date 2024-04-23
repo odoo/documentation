@@ -120,7 +120,7 @@ Lots` options.
 
 After enabling the features, assign lot or serial numbers to products using an :doc:`inventory
 adjustment <inventory_management/count_products>` or during :ref:`product reception
-<inventory/product_management/receipt-lots>`.
+<inventory/product_management/assign-lots>`.
 
 Locations and routes
 --------------------
