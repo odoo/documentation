@@ -4,32 +4,7 @@
 Self-signed certificate for ePOS printers
 =========================================
 
-ePOS printers are designed to work seamlessly with Point of Sale systems. Once connected, the two
-devices automatically share information, enabling the direct printing of tickets from the POS system
-to the ePOS printer.
-
-.. note::
-   These `Epson ePOS printers
-   <https://c4b.epson-biz.com/modules/community/index.php?content_id=91>`_ are compatible with Odoo:
-
-   - TM-H6000IV-DT (Receipt printer only)
-   - TM-T70II-DT
-   - TM-T88V-DT
-   - TM-L90-i
-   - TM-T20II-i
-   - TM-T70-i
-   - TM-T82II-i
-   - TM-T83II-i
-   - TM-T88V-i
-   - TM-U220-i
-   - TM-m10
-   - TM-m30
-   - TM-P20 (Wi-Fi® model)
-   - TM-P60II (Receipt: Wi-Fi® model)
-   - TM-P60II (Peeler: Wi-Fi® model)
-   - TM-P80 (Wi-Fi® model)
-
-To work with Odoo, some models that can be used without an
+To work with Odoo, some printer models that can be used without an
 :doc:`IoT box </applications/general/iot/config/connect>` may require :doc:`the HTTPS protocol
 <https>` to establish a secure connection between the browser and the printer. However, trying to
 reach the printer's IP address using HTTPS leads to a warning page on most web browsers. In that
