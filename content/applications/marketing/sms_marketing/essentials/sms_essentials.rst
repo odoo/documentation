@@ -61,8 +61,7 @@ will be sent. By default, Odoo has :guilabel:`Mailing List` selected. If this is
    Odoo displays all previously created mailing lists, along with various types of data related to
    that specific list (e.g. number of contacts, mailings, recipients, etc.).
 
-   To learn more about mailing lists and contacts, check out
-   :doc:`mailing_lists_blacklists`
+   To learn more about mailing lists and contacts, check out :doc:`mailing_lists_blacklists`.
 
 .. image:: sms_essentials/sms-mailing-list.png
    :align: center
@@ -176,6 +175,50 @@ is visualized as different graphs and charts, which can be sorted and grouped in
    :align: center
    :alt: Reporting page in SMS Marketing.
 
+.. tip::
+   SMS messages can be sent using automated actions in Odoo. Odoo *Studio* is required to use
+   automated actions.
+
+   To install Odoo *Studio*, go to :menuselection:`Apps application`. Then, using the
+   :guilabel:`Search...` bar, and search for `studio`.
+
+   If it is not already installed, click :guilabel:`Install`.
+
+   Adding the *Studio* application upgrades the subscription status to *Custom*, which increases the
+   cost. Consult `support <https://www.odoo.com/contactus>`_, or reach out to the database's
+   customer success manager, with any questions on upgrading.
+
+   To use automated actions, navigate in :ref:`developer mode <developer-mode>`, to
+   :menuselection:`Settings app --> Technical menu --> Automation section --> Automated Actions`.
+   Then, click :guilabel:`New` to create a new action.
+
+   Enter an :guilabel:`Action Name`, and select a :guilabel:`Model` to implement this action on.
+
+   Ensure the :guilabel:`Active` toggle is set to *on*, represented by a full-green switch, in order
+   for the automated action to run.
+
+   Set the :guilabel:`Trigger` to either :guilabel:`On Creation`, :guilabel:`On Update`,
+   :guilabel:`On Creation & Update`, :guilabel:`On Deletion`, :guilabel:`Based on Form
+   Modification`, or :guilabel:`Based on Timed Condition`.
+
+   Based on the selection for the :guilabel:`Trigger`, additional fields may populate.
+
+   Under the :guilabel:`Apply on` field, a record filter using a domain can be created. Ensure a
+   model has been selected before setting any domains on the :guilabel:`Apply on` field. Click
+   :guilabel:`Edit Domain` to set record parameters.
+
+   Under :guilabel:`Action To Do` drop-down field, select :guilabel:`Send SMS Text Message`. Next,
+   set the :guilabel:`SMS Template`, and choose whether the SMS message should be logged as a note,
+   by ticking the checkbox next to :guilabel:`Log as Note`.
+
+   .. image:: sms_essentials/automated-action-sms.png
+      :align: center
+      :alt: Automated action template with action to do, SMS template and log as note highlighted.
+
+   To implement the automated action, save it; either by navigating away, or manually saving it
+   (using the :guilabel:`☁️ (cloud)` icon).
+
 .. seealso::
    - :doc:`sms_campaign_settings`
    - :doc:`mailing_lists_blacklists`
+   - :doc:`../../../essentials/in_app_purchase`
