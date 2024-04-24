@@ -22,3 +22,4 @@ allow workers to trigger maintenance operations, feedback loops, quality issues,
    manufacturing/advanced_configuration
    manufacturing/workflows
    manufacturing/shop_floor
+   manufacturing/subcontracting
