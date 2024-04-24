@@ -30,5 +30,6 @@ and select a product to open the product form. In the :guilabel:`Sales` tab, ena
 .. toctree::
    :titlesonly:
 
+   configuration/epos_printers
    configuration/https
    configuration/epos_ssc
