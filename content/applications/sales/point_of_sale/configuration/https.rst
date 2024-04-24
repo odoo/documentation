@@ -2,8 +2,8 @@
 Secure connection (HTTPS)
 =========================
 
-If **Direct Devices** is enabled in a Point of Sale settings (for example, if you use an ePos
-printer), HTTP becomes the default protocol.
+If **Direct Devices** is enabled in a Point of Sale settings (for example, if you use an :doc:`ePos
+printer <epos_printers>`), HTTP becomes the default protocol.
 
 Force your Point of Sale to use a secure connection (HTTPS)
 ===========================================================
