@@ -1,6 +1,8 @@
-=======================
-Subcontracting overview
-=======================
+:show-content:
+
+==============
+Subcontracting
+==============
 
 .. |BoM| replace:: :abbr:`BoM (Bill of Materials)`
 
@@ -27,6 +29,24 @@ projects they accept or decline, and how many they work on at any given time.
 In Odoo, companies can configure their subcontracting workflows based on a variety of different
 factors, including how components are sourced, and what happens to finished products once they are
 manufactured.
+
+.. cards::
+
+   .. card:: Basic subcontracting
+      :target: subcontracting/subcontracting_basic
+
+      Subcontract products without supplying the subcontractor with components.
+
+   .. card:: Resupply subcontractor
+      :target: subcontracting/subcontracting_resupply
+
+      Ship components to a subcontractor each time a PO for a subcontracted product is confirmed.
+
+   .. card:: Dropship to subcontractor
+      :target: subcontracting/subcontracting_dropship
+
+      Dropship components to a subcontractor each time a PO for a subcontracted product is
+      confirmed.
 
 Configuration
 =============
@@ -58,13 +78,14 @@ In Odoo, there are three subcontracting workflows, the main difference between t
 subcontractor obtains the necessary components:
 
 - In the *basic* subcontracting workflow, the subcontractor is fully responsible for obtaining the
-  components. This workflow is outlined in the :doc:`subcontracting_basic` documentation.
+  components. This workflow is outlined in the :doc:`subcontracting/subcontracting_basic`
+  documentation.
 - In the *Resupply Subcontractor on Order* workflow, the contracting company sends the components
   from their warehouse to the subcontractor. This workflow is outlined in the
-  :doc:`subcontracting_resupply` documentation.
+  :doc:`subcontracting/subcontracting_resupply` documentation.
 - In the *Dropship Subcontractor on Order* workflow, the contracting company purchases the
   components from a vendor, and has them delivered directly to the subcontractor. This workflow is
-  outlined in the :doc:`subcontracting_dropship` documentation.
+  outlined in the :doc:`subcontracting/subcontracting_dropship` documentation.
 
 In addition to how a subcontractor obtains components, it is also necessary to consider why a
 product is being subcontracted, as well as what happens to products once they are manufactured by
@@ -103,3 +124,10 @@ equation:
 It is important to note that not every subcontracted product valuation will include all of these
 variables. For example, if the product is not dropshipped to the end customer, then there is no need
 to factor in the cost of dropshipping.
+
+.. toctree::
+   :titlesonly:
+
+   subcontracting/subcontracting_basic
+   subcontracting/subcontracting_resupply
+   subcontracting/subcontracting_dropship
