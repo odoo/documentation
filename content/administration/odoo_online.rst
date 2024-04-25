@@ -60,6 +60,8 @@ daily operations.
    - By checking :guilabel:`For testing purposes`, all external actions (emails, payments, delivery
      orders, etc.) are disabled by default on the duplicated database.
    - Duplicated databases expire automatically after 15 days.
+   - A maximum of five duplicates can be made per database. Under extraordinary circumstances,
+     contact `support <https://www.odoo.com/help>`_ to raise the limit.
 
 .. _odoo_online/rename:
 
