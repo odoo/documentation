@@ -740,7 +740,143 @@ It should be stored securely, and should be generated randomly e.g.
 
     $ python3 -c 'import base64, os; print(base64.b64encode(os.urandom(24)))'
 
-which will generate a 32 characters pseudorandom printable string.
+which generates a 32-character pseudorandom printable string.
+
+Reset the master password
+-------------------------
+
+There may be instances where the master password is misplaced, or compromised, and needs to be
+reset. The following process is for system administrators of an Odoo on-premise database detailing
+how to manually reset and re-encrypt the master password.
+
+.. seealso::
+   For more information about changing an Odoo.com account password, see this documentation:
+   :ref:`odoocom/change_password`.
+
+When creating a new on-premise database, a random master password is generated. Odoo recommends
+using this password to secure the database. This password is implemented by default, so there is a
+secure master password for any Odoo on-premise deployment.
+
+.. warning::
+   When creating an Odoo on-premise database the installation is accessible to anyone on the
+   internet, until this password is set to secure the database.
+
+The master password is specified in the Odoo configuration file (`odoo.conf` or `odoorc` (hidden
+file)). The Odoo master password is needed to modify, create, or delete a database through the
+graphical user interface (GUI).
+
+Locate configuration file
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+First, open the Odoo configuration file (`odoo.conf` or `odoorc` (hidden file)).
+
+.. tabs::
+
+   .. tab:: Windows
+
+      The configuration file is located at: `c:\\ProgramFiles\\Odoo{VERSION}\\server\\odoo.conf`
+
+   .. tab:: Linux
+
+      Depending on how Odoo is installed on the Linux machine, the configuration file is located in
+      one of two different places:
+
+      - Package installation: `/etc/odoo.conf`
+      - Source installation: `~/.odoorc`
+
+Change old password
+~~~~~~~~~~~~~~~~~~~
+
+Once the appropriate file has been opened, proceed to modify the old password in the configuration
+file to a temporary password.
+
+.. tabs::
+
+   .. group-tab:: Graphical user interface
+
+      After locating the configuration file, open it using a (:abbr:`GUI (graphical user
+      interface)`). This can be achieved by simply double clicking on the file. Then, the device
+      should have a default :abbr:`GUI (graphical user interface)` to open the file with.
+
+      Next, modify the master password line `admin_passwd = $pbkdf2-sha…` to `admin_passwd =
+      newpassword1234`, for example. This password can be anything, as long as it is saved
+      temporarily. Make sure to modify all characters after the `=`.
+
+      .. example::
+         The line appears like this:
+         `admin_passwd =
+         $pbkdf2-sh39dji295.59mptrfW.9z6HkA$w9j9AMVmKAP17OosCqDxDv2hjsvzlLpF8Rra8I7p/b573hji540mk/.3ek0lg%kvkol6k983mkf/40fjki79m`
+
+         The modified line appears like this: `admin_passwd = newpassword1234`
+
+   .. group-tab:: Command-line interface
+
+      Modify the master password line using the following Unix command detailed below.
+
+      Connect to the Odoo server's terminal via Secure Shell (SSH) protocol, and edit the
+      configuration file. To modify the configuration file, enter the following command:
+      :command:`sudo nano /etc/odoo.conf`
+
+      After opening the configuration file, modify the master password line `admin_passwd =
+      $pbkdf2-sha…` to `admin_passwd = newpassword1234`. This password can be anything, as long as
+      it is saved temporarily. Make sure to modify all characters after the `=`.
+
+      .. example::
+         The line appears like this:
+         `admin_passwd =
+         $pbkdf2-sh39dji295.59mptrfW.9z6HkA$w9j9AMVmKAP17OosCqDxDv2hjsvzlLpF8Rra8I7p/b573hji540mk/.3ek0lg%kvkol6k983mkf/40fjki79m`
+
+         The modified line appears like this: `admin_passwd = newpassword1234`
+
+.. important::
+   It is essential that the password is changed to something else, rather than triggering a new
+   password reset by adding a semicolon `;` at the beginning of the line. This ensures the database
+   is secure throughout the entire password reset process.
+
+Restart Odoo server
+~~~~~~~~~~~~~~~~~~~
+
+After setting the temporary password, a restart of the Odoo server is **required**.
+
+.. tabs::
+
+   .. group-tab:: Graphical user interface
+
+      To restart the Odoo server, first, type `services` into the Windows :guilabel:`Search` bar.
+      Then, select the :guilabel:`Services` application, and scroll down to the :guilabel:`Odoo`
+      service.
+
+      Next, right click on :guilabel:`Odoo`, and select :guilabel:`Start` or :guilabel:`Restart`.
+      This action manually restarts the Odoo server.
+
+   .. group-tab:: Command-line interface
+
+      Restart the Odoo server by typing the command: :command:`sudo service odoo15 restart`
+
+      .. note::
+         Change the number after `odoo` to fit the specific version the server is running on.
+
+Use web interface to re-encrypt password
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+First, navigate to `/web/database/manager` or `http://server_ip:port/web/database/manager` in a
+browser.
+
+.. note::
+   Replace `server_ip` with the IP address of the database. Replace `port` with the numbered port
+   the database is accessible from.
+
+Next, click :guilabel:`Set Master Password`, and type in the previously-selected temporary password
+into the :guilabel:`Master Password` field. Following this step, type in a :guilabel:`New Master
+Password`. The :guilabel:`New Master Password` is hashed (or encrypted), once the
+:guilabel:`Continue` button is clicked.
+
+At this point, the password has been successfully reset, and a hashed version of the new password
+now appears in the configuration file.
+
+.. seealso::
+   For more information on Odoo database security, see this documentation:
+   :ref:`db_manager_security`.
 
 Supported Browsers
 ==================

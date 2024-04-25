@@ -30,6 +30,8 @@ confirmation for the account deletion.
 To confirm the deletion, enter the :guilabel:`Password` and the :guilabel:`Login` for the account
 being deleted. Then, click the :guilabel:`Delete Account` button to confirm the deletion.
 
+.. _odoocom/change_password:
+
 Odoo.com account password change
 ================================
 
