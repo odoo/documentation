@@ -364,7 +364,7 @@ is generated for each POS order and added to its receipt. This allows the govern
 all revenue is declared.
 
 .. warning::
-   Only the FDM from **Boîtenoire.be** with the `FDM certificate number BMC01
+   Only the FDM from **Boîtenoire.be** with the `FDM certificate number BMC04
    <https://www.systemedecaisseenregistreuse.be/fr/systemes-certifies#FDM%20certifiés>`_ is
    supported by Odoo. `Contact the manufacturer (GCV BMC) <https://www.boîtenoire.be/contact>`_ to
    order one.
@@ -374,7 +374,7 @@ Configuration
 
 Before setting up your database to work with an FDM, ensure you have the following hardware:
 
-- a **Boîtenoire.be** (certificate number BMC01) FDM;
+- a **Boîtenoire.be** (certificate number BMC04) FDM;
 - an RS-232 serial null modem cable per FDM;
 - an RS-232 serial-to-USB adapter per FDM;
 - an :ref:`IoT Box <belgium/iotbox>` (one IoT box per FDM); and
