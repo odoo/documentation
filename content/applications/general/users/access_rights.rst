@@ -124,7 +124,7 @@ icon to remove a row.
      The model technical name can also be accessed in :ref:`developer mode <developer-mode>`.
 
      On a form, navigate to any field, and hover over the field name. A box of backend information
-     reveals itself with the specific Odoo :guilabel:`Object` name in the backend. This is the
+     reveals itself with the specific Odoo :guilabel:`Model` name in the backend. This is the
      technical name of the model that should be added.
 
      .. image:: access_rights/technical-info.png
