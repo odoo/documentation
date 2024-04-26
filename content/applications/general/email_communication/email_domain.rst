@@ -96,6 +96,8 @@ the :abbr:`DNS (Domain Name System)` zone of the domain name. The most common pr
 Check if the :abbr:`DKIM (DomainKeys Identified Mail)` record is valid with a free tool like `DKIM
 Core <https://dkimcore.org/tools/>`_. If a selector is asked, enter `odoo`.
 
+.. _email_communication/DMARC_compliant:
+
 Check the DMARC policy
 ======================
 
