@@ -1,4 +1,3 @@
-:nosearch:
 :show-content:
 :hide-page-toc:
 :show-toc:
@@ -12,8 +11,8 @@ movements. Conduct quality checks, automate quality inspection frequency, and cr
 when issues arise.
 
 .. seealso::
-   - `Odoo Tutorials: Managing Quality Checks
-     <https://www.odoo.com/slides/slide/managing-quality-checks-708>`_
+   - `Odoo Tutorials: Quality Overview
+     <https://www.odoo.com/slides/slide/quality-overview-5590>`_
 
 .. toctree::
    :titlesonly:
