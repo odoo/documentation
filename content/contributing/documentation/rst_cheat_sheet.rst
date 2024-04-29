@@ -216,18 +216,21 @@ Use the `command` markup to highlight a command.
 Icons
 -----
 
-Use the `icon` markup to add a class name of an icon. The icon set used is *Font Awesome*. It is
-recommended to accompany an icon with a :ref:`contributing/markups/guilabel` as a descriptor,
-however, it is not mandatory.
+Use the `icon` markup to add a class name of an icon. There are two icon sets used in Odoo:
+`FontAwesome4 <https://fontawesome.com/v4/icons/>`_ and :doc:`Odoo UI
+</developer/reference/user_interface/icons>`. It is recommended to accompany an icon with a
+:ref:`contributing/markups/guilabel` as a descriptor, however, it is not mandatory.
 
 .. list-table::
    :class: o-showcase-table
 
-   * - The graph view is represented by the :icon:`fa-bar-chart` :guilabel:`(bar chart)` icon.
+   * - The graph view is represented by the :icon:`fa-area-chart` :guilabel:`(area chart)` icon. The
+       pivot view is represented by the :icon:`oi-view-pivot` icon.
 
    * - .. code-block:: text
 
-          The graph view is represented by the :icon:`fa-bar-chart` :guilabel:`(bar chart)` icon.
+          The graph view is represented by the :icon:`fa-area-chart` :guilabel:`(area chart)` icon.
+          The pivot view is represented by the :icon:`oi-view-pivot` icon.
 
 .. _contributing/lists:
 
