@@ -115,12 +115,12 @@ def resolve(old_resolve, tree, docname, *args, **kwargs):
 def icon_role(name, rawtext, text, lineno, inliner, options=None, content=None):
     """ Implement an `icon` role for Odoo and Font Awesome icons. """
     for icon_class in text.split():
-        if not icon_class.startswith('fa-'):
+        if not (icon_class.startswith('fa-') or icon_class.startswith('oi-')):
             report_error = inliner.reporter.error(
                 f"'{icon_class}' is not a valid icon formatting class.", lineno=lineno
             )
             error_node = inliner.problematic(rawtext, rawtext, report_error)
             return [error_node], [report_error]
-    icon_html = f'<i class="{text}"></i>'
+    icon_html = f'<i class="oi {text}"></i>' if text.startswith('oi-') else f'<i class="{text}"></i>'
     node = nodes.raw('', icon_html, format='html')
     return [node], []
