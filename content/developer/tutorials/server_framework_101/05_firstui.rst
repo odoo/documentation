@@ -28,7 +28,7 @@ The XML files must be added to the same folders as the CSV files and defined sim
 updated, therefore all remarks made for CSV files hold true for XML files.
 When the data is linked to views, we add them to the ``views`` folder.
 
-In this chapter we will load our first action and menus though an XML file. Actions and menus are
+In this chapter, we will load our first action and menus through an XML file. Actions and menus are
 standard records in the database.
 
 .. note::
