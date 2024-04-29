@@ -67,15 +67,46 @@ The following table lists capabilities provided by Odoo when using the Amazon Co
    downloading monthly fees reports, handling disputes, or issuing refunds, **must** be managed from
    the *Amazon Seller Central*, as usual.
 
+.. warning::
+   As of February 19, 2024, in North American marketplaces, :abbr:`FBA (Fulfilled by Amazon)` orders
+   created with the *Amazon Connector*, do not get the customer's name passed onto the
+   sales/delivery order in Odoo. This is due to the fact that Amazon now calculates, and remits,
+   sales tax on behalf of sellers. In other words, personally identifiable customer information is
+   not transmitted to the seller any longer, after a :abbr:`FBA (Fulfilled by Amazon)` order.
+
 .. _amazon/supported-marketplaces:
 
 Supported marketplaces
 ======================
 
-The Amazon Connector supports all the current marketplaces.
-
 If a marketplace is not listed in your Amazon marketplaces, it's possible to :ref:`add a new
 marketplace <amazon/add-new-marketplace>`.
+
++-------------------------------+
+| **North America region**      |
++===============+===============+
+| Canada        | Amazon.ca     |
++---------------+---------------+
+| Mexico        | Amazon.com.mx |
++---------------+---------------+
+| US            | Amazon.com    |
++---------------+---------------+
+
++-------------------------------+
+| **Europe region**             |
++===============+===============+
+| Germany       | Amazon.de     |
++---------------+---------------+
+| Spain         | Amazon.es     |
++---------------+---------------+
+| France        | Amazon.fr     |
++---------------+---------------+
+| UK            | Amazon.co.uk  |
++---------------+---------------+
+| Italy         | Amazon.it     |
++---------------+---------------+
+| Netherlands   | Amazon.nl     |
++---------------+---------------+
 
 .. seealso::
    - :doc:`setup`
