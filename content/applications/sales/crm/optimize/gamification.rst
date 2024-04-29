@@ -9,13 +9,9 @@ through customizable challenges, goals, and rewards. Goals are created to target
 Configuration
 =============
 
-To install the *Gamification* module, navigate to the :menuselection:`Apps` application. Click into
-the :guilabel:`Search...` bar at the top of the page and remove the :guilabel:`Apps` filter. Type
-`Gamification` to search.
-
-If the :guilabel:`Gamification` module is **not** already installed, click :guilabel:`Install`.
-After completing the installation, return to the :menuselection:`Apps` application and search for
-`Gamification` again.
+To install the *CRM Gamification* module, navigate to the :menuselection:`Apps` application. Click
+into the :guilabel:`Search...` bar at the top of the page and remove the :guilabel:`Apps` filter.
+Type `CRM Gamification` to search.
 
 On the :guilabel:`CRM Gamification` module, click :guilabel:`Install`. This module features goals
 and challenges related to the *CRM* and *Sales* applications.
@@ -25,8 +21,8 @@ and challenges related to the *CRM* and *Sales* applications.
    :alt: View of the gamification module being installed in Odoo.
 
 .. note::
-   If both the *CRM* and *Sales* apps are installed, the *CRM Gamification* module is automatically
-   installed on the database.
+   If **both** the *CRM* and *Sales* apps are installed, the *CRM Gamification* module is
+   automatically installed on the database.
 
 To access the *Gamification Tools* menu, first enable :ref:`developer-mode`.
 
@@ -34,7 +30,7 @@ Next, navigate to :menuselection:`Settings app --> Gamification Tools`.
 
 .. image:: gamification/gamification-tools-menu.png
    :align: center
-   :alt: View if the gamification tools menu in Odoo Settings
+   :alt: View if the gamification tools menu in Odoo Settings.
 
 .. _crm/create-rewards:
 
@@ -71,8 +67,8 @@ The :guilabel:`Allowance to Grant` field determines when a badge can be granted,
   appropriate users from this drop-down list.
 - :guilabel:`People having some badges`: this badge can only be granted by users who have already
   been awarded a specific badge. If this option is selected it generates a new field,
-  :guilabel:`Required Badges`. Use this drop-down list to select the badge(s) a user must have before they
-  can award this badge to others.
+  :guilabel:`Required Badges`. Use this drop-down list to select the badge(s) a user must have
+  before they can award this badge to others.
 - :guilabel:`No one, assigned through challenges`: this badge cannot be manually granted, it can
   only be awarded through challenges.
 
@@ -107,6 +103,7 @@ necessary, click into the third field to further define the parameter.
 .. tip::
    To include all users with permissions in the *Sales* app, create a rule with the following
    parameters:
+
    - :guilabel:`Groups`
    - :guilabel:`is in`
    - `Sales/User: Own Documents Only`
