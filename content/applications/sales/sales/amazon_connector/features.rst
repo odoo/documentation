@@ -49,14 +49,21 @@ The connector is able to:
    downloading monthly fees reports, handling disputes, or issuing refunds must be managed from
    Amazon Seller Central, as usual.
 
+.. warning::
+   As of February 19, 2024, in North American marketplaces, :abbr:`FBA (Fulfilled by Amazon)` orders
+   created with the *Amazon Connector*, do not get the customer's name passed onto the
+   sales/delivery order in Odoo. This is due to the fact that Amazon now calculates, and remits,
+   sales tax on behalf of sellers. In other words, personally identifiable customer information is
+   not transmitted to the seller any longer, after a :abbr:`FBA (Fulfilled by Amazon)` order.
+
 .. _amazon/supported-marketplaces:
 
 Supported Marketplaces
 ======================
 
-The Amazon Connector currently supports 9 marketplaces.
-If a marketplace is not listed below, it may be possible for you to :ref:`add it as an unsupported
-marketplace <amazon/add-unsupported-marketplace>`.
+The *Amazon Connector* currently supports 9 marketplaces. If a marketplace is not listed below, it
+may be possible for you to :ref:`add it as an unsupported marketplace
+<amazon/add-unsupported-marketplace>`.
 
 +-------------------------------+
 | **North America region**      |
