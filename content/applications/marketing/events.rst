@@ -13,3 +13,4 @@ Events
    events/create_events
    events/sell_tickets
    events/track_manage_talks
+   events/event_templates
