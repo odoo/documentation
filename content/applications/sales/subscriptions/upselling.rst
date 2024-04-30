@@ -68,6 +68,10 @@ There is also a warning reminding the user that the recurring products are disco
 the prorated period of time, located beneath the initial subscription product in the
 :guilabel:`Order Lines` tab.
 
+.. important::
+   The prorated amount is **only** applied to *Service* product types. It is **not** applied to
+   *Consumable* or *Storable* product types, even if the message appears.
+
 From this new upsell quotation form, add new subscription products in the :guilabel:`Order Lines`
 tab, by clicking :guilabel:`Add a product`, and selecting the desired subscription product.
 
