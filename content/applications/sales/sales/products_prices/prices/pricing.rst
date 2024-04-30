@@ -49,8 +49,17 @@ modified at any time.
    :align: center
    :alt: How the pricelists page looks in Odoo Sales.
 
+.. important::
+   The order of the pricelists on the :guilabel:`Pricelists` page has an impact on how they are
+   applied. If several pricelists share the same criteria, **only** the first listed pricelist is
+   applied.
+
+   For example, for two pricelists with different rules, but same criteria (e.g., same website, same
+   country), only the *first* pricelist in the list is applied.
+
 .. note::
    The :guilabel:`Public Pricelist` is the default pricelist used with Odoo *Sales* and *eCommerce*.
+   This pricelist is applied by default, if there are no matching criteria.
 
 From the :guilabel:`Pricelists` page, either select the desired pricelist to edit, or click
 :guilabel:`New` to create a new pricelist, which reveals a blank pricelist form that can be
