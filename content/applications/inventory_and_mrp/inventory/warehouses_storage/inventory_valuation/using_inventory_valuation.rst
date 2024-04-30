@@ -21,7 +21,7 @@ To use Odoo to automatically generate a trail of inventory valuation entries, fi
 of the three options.
 
 .. seealso::
-   :ref:`Set up inventory valuation <inventory/management/inventory_valuation_config>`
+   :doc:`Set up inventory valuation <inventory_valuation_config>`
 
 In order to understand how moving products in and out of stock affects the company's overall value,
 consider the following product and stock moves scenario below.
