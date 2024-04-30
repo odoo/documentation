@@ -38,10 +38,10 @@ installing the Windows virtual IoT software for the first time.
 Download and initial installation
 ---------------------------------
 
-To begin the installation, navigate to the Odoo 16 or higher installation package for Enterprise or
-Community - Windows edition at `Odoo's download page <https://odoo.com/download>`_. Next, install
-and setup the Odoo :file:`.exe` file. After the instructions screen, click :guilabel:`Next` to start
-the installation and agree to the :abbr:`TOS (Terms of Service)`.
+To begin the installation, navigate to the Odoo 16 or higher installation package for Community -
+Windows edition at `Odoo's download page <https://odoo.com/download>`_. Next, install and setup the
+Odoo :file:`.exe` file. After the instructions screen, click :guilabel:`Next` to start the
+installation and agree to the :abbr:`TOS (Terms of Service)`.
 
 During the next step of the installation, select :guilabel:`Odoo IoT` from the :guilabel:`Select the
 type of install` drop-down menu.
