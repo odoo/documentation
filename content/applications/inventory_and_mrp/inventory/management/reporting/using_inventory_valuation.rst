@@ -2,8 +2,6 @@
 Using inventory valuation
 =========================
 
-.. _inventory/reporting/using_inventory_val:
-
 *Inventory valuation* is a quintessential accounting procedure that calculates the value of on-hand
 stock. Once determined, the inventory valuation amount is then incorporated into a company's overall
 value.
@@ -12,7 +10,7 @@ In Odoo, this process can be conducted manually— by warehouse employees physic
 products— or automatically through the database.
 
 .. seealso::
-   :ref:`Inventory valuation configuration<inventory/inventory_valuation_config>`
+   :doc:`inventory_valuation_config`
 
 Understand the basics of inventory valuation
 ============================================
