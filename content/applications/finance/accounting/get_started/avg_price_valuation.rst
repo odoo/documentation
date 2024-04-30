@@ -25,11 +25,14 @@ to reflect the change in inventory valuation. However, Odoo does **not** automat
 valuation <inventory/avg_price/leaving_inventory>`.
 
 .. note::
-   This document addresses a specific use case for theoretical purposes. Navigate :ref:`here
-   <inventory/inventory_valuation_config>` for instructions on how to set up and use |AVCO| in Odoo.
+   This document addresses a specific use case for theoretical purposes. For instructions on how to
+   set up and use |AVCO|, refer to the :doc:`inventory valuation configuration
+   <../../../inventory_and_mrp/inventory/management/reporting/inventory_valuation_config>`
+   doc.
 
 .. seealso::
-   - :ref:`Using inventory valuation <inventory/reporting/using_inventory_val>`
+   - :doc:`Using inventory valuation
+     <../../../inventory_and_mrp/inventory/management/reporting/using_inventory_valuation>`
    - :ref:`Other inventory valuation methods <inventory/inventory_valuation_config/costing_methods>`
 
 Configuration
@@ -41,7 +44,8 @@ product category page, set :guilabel:`Costing Method` to `Average Cost (AVCO)` a
 :guilabel:`Inventory Valuation` to `Automated`.
 
 .. seealso::
-   :ref:`Inventory valuation configuration <inventory/inventory_valuation_config>`
+   :doc:`Inventory valuation configuration
+   <../../../inventory_and_mrp/inventory/management/reporting/inventory_valuation_config>`
 
 Using average cost valuation
 ============================
