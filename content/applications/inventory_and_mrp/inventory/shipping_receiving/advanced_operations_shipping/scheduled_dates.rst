@@ -5,6 +5,7 @@ Scheduled delivery dates
 .. |MOs| replace:: :abbr:`MOs (Manufacturing Orders)`
 .. |BoM| replace:: :abbr:`BoM (Bill of Materials)`
 .. |BoMs| replace:: :abbr:`BoMs (Bills of Materials)`
+.. |RFQ| replace:: :abbr:`RFQ (Request for Quotation)`
 
 Accurately forecasting delivery dates is vital for fulfilling customer expectations. In Odoo, the
 *Inventory* app allows for comprehensive lead time configuration, allowing coordination and planning
@@ -20,38 +21,49 @@ process. Here's a summary of the types of lead times in Odoo:
    :align: center
    :alt: Show graphic of all lead times working together.
 
-- :ref:`Customer lead time <inventory/management/customer-lt>`: The default time frame for
+- :ref:`Customer lead time <inventory/shipping_receiving/customer-lt>`: default time frame for
   fulfilling customer orders. The customer lead time is the number of days from the date the sales
   order (SO) is confirmed to the date the products are shipped from the warehouse. This is also
   known as *delivery lead time*.
 
-- :ref:`Sales security lead time <inventory/management/sales-security-lt>`: moves the *scheduled
-  delivery date* forward by a specified number of days. This serves as a buffer to allow the team
+- :ref:`Sales security lead time <inventory/shipping_receiving/sales-security-lt>`: moves the
+  *scheduled delivery date* forward by a specified number of days. This serves as a buffer to allow
   ample time to prepare the outgoing shipment earlier, considering the possibility of delays in the
   fulfillment process.
 
-- :ref:`Purchase lead time <inventory/management/purchase-lt>`: the number of days from the
+- :ref:`Purchase lead time <inventory/shipping_receiving/purchase-lt>`: number of days from the
   confirmation of a purchase order (PO) to the receipt of products. It provides insight on the time
   it takes for products to arrive at the warehouse, facilitating effective scheduling and planning
   of supplier deliveries.
 
-- :ref:`Purchase security lead time <inventory/management/purchase-security-lt>`: advances the order
-  deadline on a :abbr:`PO (Purchase Order)` by a specified number of days. This proactive approach
-  of placing orders earlier mitigates the risk of vendor or shipping delays. Thus, for products that
-  are set to replenish to order, the need appears on the *Replenishment report* earlier, according
-  to the specified number of days.
+- :ref:`Purchase security lead time <inventory/shipping_receiving/purchase-security-lt>`: advances
+  the order deadline on a :abbr:`PO (Purchase Order)` by a specified number of days. This proactive
+  approach of placing orders earlier mitigates the risk of vendor or shipping delays. Thus, for
+  products that are set to replenish to order, the need appears on the *Replenishment report*
+  earlier, according to the specified number of days.
 
-- :ref:`Manufacturing lead time <inventory/management/manuf-lt>`: the number of days needed to
+- :ref:`Days to Purchase <inventory/shipping_receiving/days-to-purchase>`: days needed for the
+  vendor to receive a request for quotation (RFQ) and confirm it. It advances the deadline to
+  schedule a |RFQ| by a specified number of days.
+
+- :ref:`Manufacturing lead time <inventory/shipping_receiving/manuf-lt>`: number of days needed to
   complete a manufacturing order (MO) from the date of confirmation. This lead time includes
   weekends (non-working hours in Odoo), and is used to forecast an approximate production date for a
   finished good.
 
-- :ref:`Manufacturing security lead time <inventory/management/manuf-security-lt>`: moves the
-  scheduled date of the :abbr:`MO (Manufacturing Order)` forward by a specified number of days. When
-  used in conjunction with :ref:`replenish to order <inventory/management/products/strategies>`, the
-  security lead time makes the need appear earlier on the replenishment report.
+- :ref:`Days to prepare manufacturing order
+  <inventory/shipping_receiving/prepare-manufacturing-order>`: number of days needed to replenish
+  components, or manufacture sub-assemblies of the product. Either set one directly on the bill of
+  materials (BoM), or click *Compute* to sum up purchase and manufacturing lead times of components
+  in the |BoM|.
 
-.. _inventory/management/customer-lt:
+- :ref:`Manufacturing security lead time <inventory/shipping_receiving/manuf-security-lt>`: moves
+  the scheduled date of the :abbr:`MO (Manufacturing Order)` forward by a specified number of days.
+  When used in conjunction with :ref:`replenish to order
+  <inventory/management/products/strategies>`, the security lead time makes the need appear earlier
+  on the replenishment report.
+
+.. _inventory/shipping_receiving/customer-lt:
 
 Sales lead times
 ================
@@ -91,7 +103,7 @@ in the number of calendar days required to fulfill the delivery order from start
       :align: center
       :alt: Set *Customer Lead Time* on the product form.
 
-.. _inventory/management/sales-security-lt:
+.. _inventory/shipping_receiving/sales-security-lt:
 
 Sales security lead time
 ------------------------
@@ -142,7 +154,7 @@ and set the :guilabel:`Shipping Policy` to:
    delivery date is 5 days from today: April 7th. On the other hand, selecting :guilabel:`When all
    products are ready` configures the scheduled date to be 8 days from today: April 10th.
 
-.. _inventory/management/purchase-lt:
+.. _inventory/shipping_receiving/purchase-lt:
 
 Purchase lead times
 ===================
@@ -207,7 +219,7 @@ timeframe.
       :align: center
       :alt: Show expected *Scheduled Date* of arrival of the product from the vendor.
 
-.. _inventory/management/purchase-security-lt:
+.. _inventory/shipping_receiving/purchase-security-lt:
 
 Purchase security lead time
 ---------------------------
@@ -215,15 +227,15 @@ Purchase security lead time
 *Purchase security lead time* is set globally for the business in :menuselection:`Inventory app -->
 Configuration --> Settings`.
 
-On the configuration page, under the :guilabel:`Advanced Scheduling` heading, locate the box for
-:guilabel:`Security Lead Time for Purchase`, and click the checkbox to enable the feature.
+On the :guilabel:`Settings` page, under the :guilabel:`Advanced Scheduling` heading, tick the
+checkbox for :guilabel:`Security Lead Time for Purchase`.
 
 Next, enter the desired number of calendar days. By configuring the security lead time, a buffer is
-set to account for potential delays in supplier deliveries.
+set to account for potential delays in supplier deliveries. Then, click :guilabel:`Save`.
 
 .. example::
    Setting the :guilabel:`Security Lead Time for Purchase` to `2.00` days, pushes the
-   :guilabel:`Scheduled Date` of receipt back by one day. In that case, if a product is initially
+   :guilabel:`Scheduled Date` of receipt back by two days. In that case, if a product is initially
    scheduled to arrive on April 6th, with a two-day security lead time, the new scheduled date for
    the receipt would be April 8th.
 
@@ -231,7 +243,21 @@ set to account for potential delays in supplier deliveries.
       :align: center
       :alt: Set security lead time for purchase from the Inventory > Configuration > Settings.
 
-.. _inventory/management/manuf-lt:
+.. _inventory/shipping_receiving/days-to-purchase:
+
+Days to purchase
+----------------
+
+To set up the *days to purchase* lead time, go to :menuselection:`Inventory app --> Configuration
+--> Settings`. Under the :guilabel:`Advanced Scheduling` section, in the :guilabel:`Days to
+Purchase` field, specify the number of days required for the vendor to confirm a |RFQ| after
+receiving it from the company.
+
+.. image:: scheduled_dates/days-to-purchase.png
+   :align: center
+   :alt: Show "Days to Purchase" configuration in the Settings page.
+
+.. _inventory/shipping_receiving/manuf-lt:
 
 Manufacturing lead times
 ========================
@@ -258,7 +284,7 @@ of Materials`, and select the desired |BoM| to edit.
 On the |BoM| form, click the :guilabel:`Miscellaneous` tab. Change the value (in days) in the
 :guilabel:`Manuf. Lead Time` field to specify the calendar days needed to manufacture the product.
 
-.. image:: scheduled_dates/scheduled-dates-manuf-lead-time.png
+.. image:: scheduled_dates/set-manufacturing.png
    :align: center
    :alt: Manuf. Lead Time value specified on a product's Bill of Material form.
 
@@ -269,17 +295,6 @@ On the |BoM| form, click the :guilabel:`Miscellaneous` tab. Change the value (in
    If the |BoM| product is subcontracted, the :guilabel:`Manuf. Lead Time` can be used to determine
    the date at which components should be sent to the subcontractor.
 
-Change the value (in days) in the :guilabel:`Days to prepare Manufacturing Order` field to create
-and confirm |MOs| in advance, and have enough time to replenish components, or manufacture
-semi-finished products.
-
-.. tip::
-   Clicking :guilabel:`Compute`, located next to the :guilabel:`Days to prepare Manufacturing Order`
-   field, computes the days required to resupply all components listed on the |BoM| form, either by
-   buying or manufacturing the components or subassemblies.
-
-   *Purchase security lead times* that impact this specific |BoM| are also added to this value.
-
 Establish a :abbr:`MO (Manufacturing Order)` deadline, based on the *expected delivery date*,
 indicated in the :guilabel:`Scheduled Date` field of the :abbr:`DO (Delivery Order)`.
 
@@ -289,31 +304,57 @@ manufacturing lead time.
 
 This ensures the manufacturing process begins on time, in order to meet the delivery date.
 
-However, it's important to note that lead times are based on calendar days. Lead times do **not**
+However, it is important to note that lead times are based on calendar days. Lead times do **not**
 consider weekends, holidays, or *work center capacity* (:dfn:`the number of operations that can be
 performed at the work center simultaneously`).
 
 .. seealso::
-   - :ref:`Manufacturing planning <manufacturing/management/use_mps>`
-   - :ref:`Configure automatic MO scheduling with reordering rules
-     <inventory/management/reordering_rules>`
+   - :doc:`Manufacturing planning <../../../manufacturing/workflows/use_mps>`
+   - :doc:`Schedule MOs with reordering rules
+     <../../product_management/product_replenishment/reordering_rules>`
 
 .. example::
    A product's scheduled shipment date on the :abbr:`DO (Delivery Order)` is August 15th. The
    product requires 14 days to manufacture. So, the latest date to start the :abbr:`MO
    (Manufacturing Order)` to meet the commitment date is August 1st.
 
-.. _inventory/management/manuf-security-lt:
+.. _inventory/shipping_receiving/prepare-manufacturing-order:
+
+Days to prepare manufacturing order
+-----------------------------------
+
+Configure the days required to gather components to manufacture a product by going to its |BoM|. To
+do that, go to :menuselection:`Manufacturing app --> Products --> Bills of Materials`, and select
+the desired |BoM|.
+
+In the :guilabel:`Miscellaneous` tab of the |BoM|, specify the calendar days needed to obtain
+components of the product in the :guilabel:`Days to prepare Manufacturing Order` field. Doing so
+creates |MOs| in advance, and ensures there is enough time to either replenish components, or
+manufacture semi-finished products.
+
+.. tip::
+   Clicking :guilabel:`Compute`, located next to the :guilabel:`Days to prepare Manufacturing Order`
+   field, calculates the longest lead time among all the components listed on the |BoM|.
+
+   *Purchase security lead times* that impact this specific |BoM| are also added to this value.
+
+.. example::
+
+   A |BoM| has two components, one has a manufacturing lead time of two days, and the other has a
+   purchase lead time of four days. The :guilabel:`Days to prepare Manufacturing Order` is four
+   days.
+
+.. _inventory/shipping_receiving/manuf-security-lt:
 
 Manufacturing security lead time
 --------------------------------
 
 *Manufacturing security lead time* is set globally for the business in :menuselection:`Manufacturing
-app --> Configuration --> Settings`. Under the :guilabel:`Planning` heading, locate the box for
-:guilabel:`Security Lead Time`, and click the checkbox to enable the feature.
+app --> Configuration --> Settings`. Under the :guilabel:`Planning` heading, tick the checkbox for
+:guilabel:`Security Lead Time`.
 
 Next, enter the desired number of calendar days. By configuring the security lead time, a buffer is
-set to account for potential delays in the manufacturing process.
+set to account for potential delays in the manufacturing process. Then, click :guilabel:`Save`.
 
 .. image:: scheduled_dates/manuf-security.png
    :align: center
