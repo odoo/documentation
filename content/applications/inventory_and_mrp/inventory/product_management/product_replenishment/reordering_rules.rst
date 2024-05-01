@@ -211,8 +211,9 @@ advance.
    The current date is February 20th, and the *delivery date* on a sales order (in the
    :guilabel:`Other Info` tab) is March 3rd — twelve days from the current date.
 
-   The :ref:`vendor lead time <inventory/management/purchase-lt>` is four days, and the
-   :ref:`purchase security lead time <inventory/management/purchase-security-lt>` is one day.
+   The :ref:`vendor lead time <inventory/shipping_receiving/purchase-lt>` is four days, and the
+   :ref:`purchase security lead time <inventory/shipping_receiving/purchase-security-lt>` is one
+   day.
 
    When the :guilabel:`Visibility Days` field of the reordering rule is set to zero, the product
    appears on the replenishment dashboard five days before the delivery date, which, in this case,
