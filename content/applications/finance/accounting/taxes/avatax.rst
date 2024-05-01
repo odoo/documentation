@@ -1,3 +1,5 @@
+:show-content:
+
 ==================
 Avatax integration
 ==================
@@ -72,3 +74,9 @@ cross-reference data in Odoo and Avatax.
 
 .. seealso::
    - :doc:`fiscal_positions`
+   - :doc:`avatax/avatax_use`
+
+.. toctree::
+   :titlesonly:
+
+   avatax/avatax_use
