@@ -2,93 +2,129 @@
 Scrap inventory
 ===============
 
-In some cases, a product in inventory may be damaged or found to be defective. If it is not possible
-to repair or return the product, Odoo *Inventory* allows users to scrap it, ensuring that usable
-inventory counts remain accurate.
+.. |SP| replace:: :abbr:`SP (Scrap Order)`
+.. |SPs| replace:: :abbr:`SPs (Scrap Orders)`
 
-.. tip::
-   Scrap orders can be viewed by navigating to :menuselection:`Inventory --> Operations --> Scrap`.
-   Each scrap order shows the date and time the order was created, along with the product and
-   quantity that was scrapped.
+Sometimes, products in a company's warehouse stock might be found to be damaged or defective, past
+the point of being reparable. If it is not possible to repair the product, or return the product to
+a vendor, it can be scrapped.
 
-   To view the total quantity of each item scrapped, navigate to :menuselection:`Inventory -->
-   Configuration --> Locations`. Remove the :guilabel:`Internal` filter from the
-   :guilabel:`Search...` bar to display virtual locations. Finally, select the :guilabel:`Virtual
-   Locations/Scrap` location.
+Odoo *Inventory* allows users to scrap inventory, designating goods or materials that are no longer
+usable or sellable for disposal (or recycling).
 
-By default, scrapping a product removes it from physical inventory, and places it in a virtual
-location titled *Virtual Locations/Scrap*. A virtual location is **not** a physical space, but
-rather a designation in Odoo that is used to track items that are no longer in physical inventory.
+Scrapping inventory in a database helps stock counts remain accurate, by removing scrapped products
+from physical inventory, and placing it in a virtual scrap location (*Virtual Locations/Scrap*).
 
-.. admonition:: Learn more
+.. note::
+   *Virtual locations* in Odoo are **not** real, physical spaces in a warehouse. Rather, they are
+   designated locations in a database that provide tracking of items that shouldn't be counted in a
+   physical inventory.
 
    For more information about virtual locations, see the documentation about the different types of
    :ref:`locations <inventory/warehouses_storage/difference-warehouse-location>`.
 
+Configuration
+=============
+
+To use locations in warehouse, including a virtual scrap location, the *Storage Locations* feature
+must first be enabled.
+
+To do so, navigate to :menuselection:`Inventory app --> Configuration --> Settings`, and scroll down
+to the :guilabel:`Warehouse` section. Tick the checkbox next to :guilabel:`Storage Locations` to
+enable the feature, and click :guilabel:`Save`.
+
+.. image:: scrap_inventory/scrap-inventory-enabled-setting.png
+   :align: center
+   :alt: Enabled Storage Locations setting in Inventory app settings.
+
 Scrap from stock
 ================
 
-To scrap a product located in inventory, begin by navigating to :menuselection:`Inventory -->
-Operations --> Scrap`. On the :guilabel:`Scrap Orders` page, click :guilabel:`Create` to configure a
-new scrap order.
+To create a new scrap order (SP) for an in-stock product, navigate to :menuselection:`Inventory app
+--> Operations --> Scrap`, and click :guilabel:`New`. This opens a new |SP| form.
 
-On the scrap order, select the product being scrapped from the :guilabel:`Product` drop-down menu,
-then enter the quantity in the :guilabel:`Quantity` field. The :guilabel:`Source Location` defaults
-to the location where the product is stored, and the :guilabel:`Scrap Location` defaults to
-:guilabel:`Virtual Locations/Scrap`, but either of these can be changed by selecting a different
-location from their respective drop-down menus.
+Click the drop-down menu in the :guilabel:`Product` field, and select the product that should be
+scrapped from inventory. In the :guilabel:`Quantity` field, change the value to the quantity of the
+product that should be scrapped (by default, this value is set to `1.00`).
 
-.. image:: scrap_inventory/scrap-order.png
+.. image:: scrap_inventory/scrap-inventory-new-scrap-order.png
    :align: center
-   :alt: A new scrap order.
+   :alt: Filled out new scrap order form with product details.
 
-Finally, click :guilabel:`Validate` to scrap the product. The on-hand inventory count for the
-scrapped product updates to subtract the scrapped quantity.
+The :guilabel:`Source Location` defaults to the location where the product is currently stored. The
+:guilabel:`Scrap Location` defaults to the designated scrap location (:guilabel:`Virtual
+Locations/Scrap`). Either of these locations can be changed by selecting a different location from
+their respective drop-down menus.
 
-Scrap from a receipt, transfer, or delivery
-===========================================
+If the scrapping is tied to a specific existing operation, specify the operation in the
+:guilabel:`Source Document` field.
 
-It is also possible to scrap products during the receipt, transfer, and delivery operations. This
-can be necessary if any products are found to be defective when receiving them into inventory,
-transferring them from one location to another, or preparing them for delivery.
+The :guilabel:`Company` field displays the company whose warehouse this product belongs to. If a
+replenishment rule is set up for the product being scrapped, and if the product should be
+replenished, tick the checkbox for :guilabel:`Replenish Quantities`.
 
-To scrap a product during the receipt, transfer, or delivery operations, begin by navigating to the
-:menuselection:`Inventory` app. On the :guilabel:`Overview` page, select the :guilabel:`# TO
-PROCESS` button on the :guilabel:`Receipts`, :guilabel:`Internal Transfers`, or :guilabel:`Delivery
-Orders` card, depending on the type of operation the product is being scrapped from.
+Once ready, click :guilabel:`Validate` to complete the new |SP|. Once validated, a
+:guilabel:`Product Moves` smart button appears at the top of the form. Click the smart button to
+view the details of the scrap operation.
 
-.. note::
-   For the :guilabel:`Internal Transfers` card to appear on the :menuselection:`Overview` page of
-   the :menuselection:`Inventory` app, the :guilabel:`Storage Locations` setting must be enabled. To
-   do so, navigate to :menuselection:`Configuration --> Settings`, then enable the checkbox next to
-   :guilabel:`Storage Locations` under the :guilabel:`Warehouse` heading.
-
-Alternatively, a list of all delivery orders, receipts, and transfers can be viewed by navigating to
-:menuselection:`Inventory --> Operations --> Transfers`.
-
-Next, open a delivery order, receipt, or transfer from the corresponding page by clicking on it. A
-:guilabel:`Scrap` button appears at the top of the page. Click it to open the :guilabel:`Scrap`
-pop-up window.
-
-.. image:: scrap_inventory/scrap-pop-up.png
+.. image:: scrap_inventory/scrap-inventory-product-moves-button.png
    :align: center
-   :alt: The scrap pop-up in the Inventory app.
+   :alt: Product Moves smart button on new scrap order form.
 
-.. important::
-   The :guilabel:`Scrap` button will only appear on a receipt that has been validated. This is
-   because Odoo only allows products to be scrapped once they have been entered into inventory.
+.. tip::
+   To view the all-time total quantities of scrapped items, navigate to :menuselection:`Inventory
+   app --> Configuration --> Locations`. Click the :guilabel:`x (remove)` button on the
+   :guilabel:`Internal` filter in the :guilabel:`Search...` bar, to display virtual locations.
 
-On the :guilabel:`Scrap` pop-up window, select the product being scrapped from the
-:guilabel:`Product` drop-down menu. Then, enter the quantity in the :guilabel:`Quantity` field.
+   Select the :guilabel:`Virtual Locations/Scrap` location. From the :guilabel:`Scrap` location's
+   form, click the :guilabel:`Current Stock` smart button, at the top of the form.
 
-The :guilabel:`Source Location` defaults to the location where the product is stored, and the
-:guilabel:`Scrap Location` defaults to :guilabel:`Virtual Locations/Scrap`, but either of these can
-be changed by selecting a different location from their respective drop-down menus.
+   A list of all scrapped products, and their quantities, is displayed.
 
-Finally, click :guilabel:`Done` to scrap the product. After doing so, the :guilabel:`Scrap` pop-up
-window disappears and a :guilabel:`Scraps` smart button appears in the top right of the page. Click
-it to view all of the scrap orders created from that operation.
+   .. image:: scrap_inventory/scrap-inventory-current-stock.png
+      :align: center
+      :alt: Current Stock list of all scrapped products in virtual scrap location.
 
-.. image:: scrap_inventory/scraps-smart-button.png
+Scrap from an existing operation
+================================
+
+Scrap orders (SPs) can *also* be created from existing operations, such as receipts, delivery
+orders, and internal transfers, before they are entered into, or removed from, stock for an
+operation.
+
+To scrap a product during an operation, navigate to the :menuselection:`Inventory app`. From the
+:guilabel:`Inventory Overview`, click the :guilabel:`# To Process` button on an operation's task
+card (i.e. the :guilabel:`Receipts` task card).
+
+.. image:: scrap_inventory/scrap-inventory-receipts-task-card.png
    :align: center
-   :alt: The Scraps smart button.
+   :alt: # To Process button on Receipts task card on Inventory Overview page.
+
+Then, select an operation to process from the resulting list of existing orders. Doing so opens that
+operation's form.
+
+Click the :icon:`fa-cog` :guilabel:`(cog)` icon, and select :guilabel:`Scrap` from the resulting
+drop-down menu. This opens a :guilabel:`Scrap Products` pop-up window.
+
+.. image:: scrap_inventory/scrap-inventory-popup-window.png
+   :align: center
+   :alt: Scrap Products pop-up window on operation form.
+
+From this pop-up window, click the drop-down menu in the :guilabel:`Product` field, and select the
+products from the operation that should be scrapped. Adjust the value in the :guilabel:`Quantity`
+field, if necessary.
+
+If the :guilabel:`Product` selected is tracked using a lot or serial number, a
+:guilabel:`Lot/Serial` field appears. Specify the tracking number in that field.
+
+The :guilabel:`Source Location` and :guilabel:`Scrap Location` can be changed, if needed. If a
+replenishment rule is set up for the product being scrapped, and if the product should be
+replenished, tick the checkbox for :guilabel:`Replenish Quantities`.
+
+Once ready, click :guilabel:`Scrap Products`. A :guilabel:`Scraps` smart button appears at the top
+of the operation form. Click this smart button to view the details of all scrap orders created from
+this specific operation.
+
+.. image:: scrap_inventory/scrap-inventory-scraps-smart-button.png
+   :align: center
+   :alt: Scraps smart button showing all scrap orders from operation.
