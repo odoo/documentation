@@ -1,5 +1,5 @@
 ===============================
-Manage Warehouses and Locations
+Manage warehouses and locations
 ===============================
 
 Terminology
@@ -8,88 +8,108 @@ Terminology
 Warehouse
 ---------
 
-In Odoo, a *warehouse* is the actual building/place in which a company's items are stocked. Multiple
-warehouses can be set up in Odoo and the user can create moves between warehouses.
+In Odoo *Inventory*, a *warehouse* is a physical building or space where items are stored. By
+default, each Odoo database has one warehouse already pre-configured, with the address set as the
+company's address.
+
+Multiple warehouses can be set up in Odoo, and stock moves can be created between warehouses.
 
 .. _inventory/warehouses_storage/difference-warehouse-location:
 
 Location
 --------
 
-A **Location** is a specific space within the warehouse. It can be a sublocation of the warehouse
-(a shelf, a floor, an aisle, and so on). Therefore, a location is part of one warehouse only and it
-is not possible to link one location to multiple warehouses. In Odoo, as many locations can be
-configured as needed under one warehouse.
+In Odoo *Inventory*, a *location* is a specific space within a warehouse. This can be a shelf, room,
+aisle, rack, bin, etc. Locations allow for the storage of products in designated areas of the
+warehouse, to help track inventory accurately.
 
-There are three types of locations:
+A location is only part of *one* warehouse, and can **not** be linked to multiple warehouses. As
+many locations can be configured as needed under one warehouse.
 
-- The **Physical Locations** are internal locations that are part of the warehouses that the
-  company owns. They can be the loading and unloading areas of the warehouse, a shelf, a department,
-  etc.
+There are three types of locations in Odoo *Inventory*:
 
-- The **Partner Locations** are spaces within a customer and/or vendor's warehouse. They work the
-  same way as physical locations, with the only difference being that they are not owned by the
-  user's company.
+- **Physical Locations**: internal locations within a single warehouse owned by the company. This
+  can include shipping and loading docks, aisles, shelves, storage areas, and more.
+- **Partner Locations**: external locations, such as designated spaces in a customer or vendor's
+  warehouse. They are similar to physical locations, but they are **not** owned by the user's
+  company.
+- **Virtual Locations**: this type of location does not exist as a physical space, but products can
+  be "stored" here when they are not physically in an inventory yet. *Inventory Loss* and
+  *Procurements* are examples of virtual locations, for products that are lost or in transit to the
+  warehouse.
 
-- The **Virtual Locations** are places that do not exist, but in which products can be placed when
-  they are not physically in an inventory yet (or anymore). They come in handy when recording lost
-  products (**Inventory Loss**), or accounting for products that are on their way to the warehouse
-  (**Procurements**).
-
-In Odoo, locations are structured hierarchically. Locations can be structured as a tree, dependent
-on a parent-child relationship. This gives more detailed levels of analysis of the stock operations
-and the organization of the warehouses.
+Every location within a warehouse can serve as a parent location, and every parent location can have
+multiple locations within it, allowing for the creation of a hierarchical structure. This allows for
+more detailed levels of analysis of the stock operations and the organization of the warehouses.
 
 Configuration
 =============
 
-To activate locations, go to :menuselection:`Configuration --> Settings` and enable
-:guilabel:`Storage Locations`. Then, click :guilabel:`Save`.
+For companies with one warehouse, no additional settings are required to activate before editing the
+warehouse.
 
-.. image:: warehouses_locations/storage-location-warehouse-setting.png
+For companies with multiple warehouses, and to create locations within a warehouse, the *Storage
+Locations* feature must be enabled.
+
+To do so, navigate to :menuselection:`Inventory app --> Configuration --> Settings`, and scroll down
+to the :guilabel:`Warehouse` section. Tick the :guilabel:`Storage Locations` checkbox to enable the
+feature, and click :guilabel:`Save`.
+
+.. image:: warehouses_locations/warehouses-locations-enabled-setting.png
    :align: center
-   :alt: Enable the storage location feature in Odoo Inventory settings.
+   :alt: Storage Locations feature enabled in the Inventory app settings.
 
-.. important::
-   To manage several routes within the warehouses, also enable :guilabel:`Multi-Step Routes` and
-   check :doc:`/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_routes`.
+.. tip::
+   To manage warehouse *routes*, such as two-and-three-step receipts and deliveries, enable the
+   *Multi-Step Routes* feature from the *Inventory* app settings, as well. For more on routes, see
+   :doc:`use_routes`.
 
 Create a new warehouse
 ======================
 
-To create a warehouse, go to :menuselection:`Configuration --> Warehouse Management --> Warehouses`
-and click on :guilabel:`Create`.
+To create a new warehouse, navigate to :menuselection:`Inventory app --> Configuration -->
+Warehouses`, and click :guilabel:`New`. Doing so opens a blank warehouse creation form.
 
-Then, fill out a :guilabel:`Warehouse Name` and a :guilabel:`Short Name`. The short name is five
-characters maximum.
+Begin by assigning a :guilabel:`Warehouse Name`, and a :guilabel:`Short Name`. The :guilabel:`Short
+Name` field is limited to a **five** character maximum.
 
-.. image:: warehouses_locations/create-new-warehouse.png
+.. image:: warehouses_locations/warehouses-locations-new-warehouse.png
    :align: center
-   :alt: Short name field of a warehouse on Odoo Inventory.
+   :alt: New warehouse creation form name configuration fields.
 
 .. important::
    The :guilabel:`Short Name` appears on transfer orders and other warehouse documents. Odoo
-   recommends using an understandable one like "WH/[first letters of location]".
+   recommends using an understandable one like `WH/[first letters of location]`.
 
-Now, go back to the :guilabel:`Inventory` dashboard. There, new operations related to the newly
-created warehouse have been automatically generated.
+   For example, a warehouse named `Warehouse #2` might have the :guilabel:`Short Name` `WH2` (the
+   short name for the default warehouse in Odoo is `WH`).
 
-.. image:: warehouses_locations/new-transfer-types.png
+Once the warehouse is created, navigate back to the :menuselection:`Inventory` dashboard. New
+operations for the newly created warehouse are automatically generated there.
+
+For more on creating new warehouses, see :doc:`create_a_second_warehouse`.
+
+.. image:: warehouses_locations/warehouses-locations-new-wh-operations.png
    :align: center
-   :alt: Inventory app dashboard displaying new transfer types for the recently created warehouse.
+   :alt: Inventory app dashboard displaying new transfers for the new warehouse.
 
 .. note::
-   Adding a second warehouse will automatically activate the :guilabel:`Locations` setting.
+   Creating a second warehouse without first enabling the *Storage Locations* feature triggers a
+   :guilabel:`Warning` pop-up window. It indicates creating a second warehouse automatically
+   activates the *Storage Locations* setting.
 
 Create a new location
 =====================
 
-To create a location, go to :menuselection:`Configuration --> Warehouse Management --> Locations`
-and click on :guilabel:`Create`.
+To create a new location inside a warehouse, navigate to :menuselection:`Inventory app -->
+Configuration --> Locations`. Doing so opens a list of all existing locations. Click :guilabel:`New`
+to open a new location creation form.
 
-Then, fill out a :guilabel:`Location Name` and a :guilabel:`Parent Location` and click
-:guilabel:`Save`.
+In the :guilabel:`Location Name` field, assign a name for the new location. In the :guilabel:`Parent
+Location` field, assign the location that this new location exists in.
 
-.. image:: warehouses_locations/create-new-location.png
+For more on locations, see :doc:`use_locations`.
+
+.. image:: warehouses_locations/warehouses-locations-new-location.png
    :align: center
-   :alt: Create a new warehouse location in Odoo Inventory.
+   :alt: New warehouse location creation form.
