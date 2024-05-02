@@ -96,8 +96,8 @@ route with your browser.
 
 .. tip::
    The Odoo JavaScript files downloaded by the browser are minified. For debugging purpose, it's
-   easier when the files are not minified. Switch to
-   :ref:`debug mode with assets <developer-mode/url>` so that the files are not minified.
+   easier when the files are not minified. Switch to :ref:`debug mode with assets
+   <developer-mode/activation>` so that the files are not minified.
 
 2. Extract counter in a component
 =================================
