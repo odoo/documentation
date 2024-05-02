@@ -91,8 +91,8 @@ As a first exercise, let us modify the `Playground` component located in
 
 .. tip::
    The Odoo JavaScript files downloaded by the browser are minified. For debugging purpose, it's
-   easier when the files are not minified. Switch to
-   :ref:`debug mode with assets <developer-mode/url>` so that the files are not minified.
+   easier when the files are not minified. Switch to :ref:`debug mode with assets
+   <developer-mode/activation>` so that the files are not minified.
 
 This exercise showcases an important feature of Owl: the `reactivity system <{OWL_PATH}/doc/reference/reactivity.md>`_.
 The `useState` function wraps a value in a proxy so Owl can keep track of which component
