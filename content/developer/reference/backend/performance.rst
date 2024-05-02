@@ -40,7 +40,7 @@ including tests.
       #. Before starting a profiling session, the profiler must be enabled globally on the database.
          This can be done in two ways:
 
-         - Open the :ref:`developer mode tools <developer-mode/mode-tools>`, then toggle the
+         - Open the :ref:`developer mode tools <developer-mode/tools>`, then toggle the
            :guilabel:`Enable profiling` button. A wizard suggests a set of expiry times for the
            profiling. Click on :guilabel:`ENABLE PROFILING` to enable the profiler globally.
 
@@ -51,7 +51,7 @@ including tests.
 
       #. After the profiler is enabled on the database, users can enable it on their session. To do
          so, toggle the :guilabel:`Enable profiling` button in the :ref:`developer mode tools
-         <developer-mode/mode-tools>` again. By default, the recommended options :guilabel:`Record
+         <developer-mode/tools>` again. By default, the recommended options :guilabel:`Record
          sql` and :guilabel:`Record traces` are enabled. To learn more about the different options,
          head over to :ref:`performance/profiling/collectors`.
 
@@ -127,7 +127,7 @@ Analyse the results
 
 To browse the profiling results, make sure that the :ref:`profiler is enabled globally on the
 database <performance/profiling/enable>`, then open the :ref:`developer mode tools
-<developer-mode/mode-tools>` and click on the button in the top-right corner of the profiling
+<developer-mode/tools>` and click on the button in the top-right corner of the profiling
 section. A list view of the `ir.profile` records grouped by profiling session opens.
 
 .. image:: performance/profiling_web.png
@@ -172,7 +172,7 @@ Whereas the profiler is about the *when* of profiling, the collectors take care 
 
 Each collector specializes in collecting profiling data in its own format and manner. They can be
 individually enabled from the user interface through their dedicated toggle button in the
-:ref:`developer mode tools <developer-mode/mode-tools>`, or from Python code through their key or
+:ref:`developer mode tools <developer-mode/tools>`, or from Python code through their key or
 class.
 
 There are currently four collectors available in Odoo:
