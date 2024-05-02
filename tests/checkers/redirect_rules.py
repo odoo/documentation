@@ -5,7 +5,7 @@ import sphinxlint
 
 
 REDIRECT_RULE_RE = re.compile(r'^[ \t]*([\w\-/]+\.rst)[ \t]+([\w\-/]+\.rst)[ \t]*(?:#.*)?$')
-REDIRECTS_FILE_VERSION_RE = re.compile('(?:redirects/)?(?:saas-)?(\d\d\.\d)\.txt')
+REDIRECTS_FILE_VERSION_RE = re.compile(r'(?:redirects/)?(?:saas-)?(\d\d\.\d)\.txt')
 
 
 @sphinxlint.checker('.txt')
