@@ -273,17 +273,22 @@ Dependencies
 
          .. tab:: Debian/Ubuntu
 
-            For Debian-based systems, the packages are listed in the `debian/control
-            <{GITHUB_PATH}/debian/control>`_ file of the Odoo sources.
-
             On Debian/Ubuntu, the following commands should install the required packages:
 
             .. code-block:: console
 
-               $ cd /CommunityPath
-               $ sed -n -e '/^Depends:/,/^Pre/ s/ python3-\(.*\),/python3-\1/p' debian/control | sudo xargs apt-get install -y
+               $ cd odoo #CommunityPath
+               $ sudo ./setup/debinstall.sh
+
+            The `setup/debinstall.sh` script will parse the `debian/control` and install found
+            packages.
 
          .. tab:: Install with pip
+
+            .. warning::
+
+               Using pip may lead to security issue and broken dependencies, only do this if you
+               know what you rare doing.
 
             As some of the Python packages need a compilation step, they require system libraries to
             be installed.
