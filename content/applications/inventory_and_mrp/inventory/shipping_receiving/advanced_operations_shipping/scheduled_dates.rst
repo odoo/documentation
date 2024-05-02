@@ -2,6 +2,10 @@
 Scheduled delivery dates
 ========================
 
+.. |MOs| replace:: :abbr:`MOs (Manufacturing Orders)`
+.. |BoM| replace:: :abbr:`BoM (Bill of Materials)`
+.. |BoMs| replace:: :abbr:`BoMs (Bills of Materials)`
+
 Accurately forecasting delivery dates is vital for fulfilling customer expectations. In Odoo, the
 *Inventory* app allows for comprehensive lead time configuration, allowing coordination and planning
 of manufacturing orders, deliveries, and receptions.
@@ -233,7 +237,7 @@ Manufacturing lead times
 ========================
 
 Lead times can help simplify the procurement process for consumable materials and components used in
-manufactured products with bills of materials.
+manufactured products with bills of materials (BoMs).
 
 The :abbr:`MO (Manufacturing Order)` deadline, which is the deadline to begin the manufacturing
 process to complete the product by the scheduled delivery date, can be determined by configuring the
@@ -246,19 +250,35 @@ manufacturing lead times and manufacturing security lead times.
 Manufacturing lead time
 -----------------------
 
-Configure the manufacturing lead time directly on the product form, by navigating to
-:menuselection:`Manufacturing app --> Products --> Products`, and select the desired product.
+Manufacturing lead times for products are configured from a product's bill of materials (BoM) form.
 
-In the :guilabel:`Inventory` tab of the product, specify the calendar days needed to the manufacture
-the product in the :guilabel:`Manufacturing Lead Time` field.
+To add a lead time to a |BoM|, navigate to :menuselection:`Manufacturing app --> Products --> Bills
+of Materials`, and select the desired |BoM| to edit.
 
-.. example::
-   Specify a 14-day :guilabel:`Manufacturing Lead Time` for a product directly in the
-   :guilabel:`Inventory` tab of the product.
+On the |BoM| form, click the :guilabel:`Miscellaneous` tab. Change the value (in days) in the
+:guilabel:`Manuf. Lead Time` field to specify the calendar days needed to manufacture the product.
 
-   .. image:: scheduled_dates/set-manufacturing.png
-      :align: center
-      :alt: View of the manufacturing lead time configuration from the product form.
+.. image:: scheduled_dates/scheduled-dates-manuf-lead-time.png
+   :align: center
+   :alt: Manuf. Lead Time value specified on a product's Bill of Material form.
+
+.. note::
+   If the selected |BoM| is a multi-level |BoM|, the manufacturing lead times of the components are
+   added.
+
+   If the |BoM| product is subcontracted, the :guilabel:`Manuf. Lead Time` can be used to determine
+   the date at which components should be sent to the subcontractor.
+
+Change the value (in days) in the :guilabel:`Days to prepare Manufacturing Order` field to create
+and confirm |MOs| in advance, and have enough time to replenish components, or manufacture
+semi-finished products.
+
+.. tip::
+   Clicking :guilabel:`Compute`, located next to the :guilabel:`Days to prepare Manufacturing Order`
+   field, computes the days required to resupply all components listed on the |BoM| form, either by
+   buying or manufacturing the components or subassemblies.
+
+   *Purchase security lead times* that impact this specific |BoM| are also added to this value.
 
 Establish a :abbr:`MO (Manufacturing Order)` deadline, based on the *expected delivery date*,
 indicated in the :guilabel:`Scheduled Date` field of the :abbr:`DO (Delivery Order)`.
