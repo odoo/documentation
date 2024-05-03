@@ -157,5 +157,8 @@ creation (or adjustment) of the transaction.
 
 .. seealso::
    - :doc:`../avatax`
+   - :doc:`avalara_portal`
    - `US Tax Compliance: Avatax elearning video
      <https://www.odoo.com/slides/slide/us-tax-compliance-avatax-2858?fullscreen=1>`_
+   - :doc:`../fiscal_positions`
+
