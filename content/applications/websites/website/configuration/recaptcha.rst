@@ -5,6 +5,9 @@ reCAPTCHA v3 on forms
 Google's reCAPTCHA protects website forms against spam and abuse. It attempts to distinguish between
 human and bot submissions.
 
+.. warning::
+   reCAPTCHA v3 may not be compliant with local data protection regulations.
+
 .. note::
    reCAPTCHA v3 works in the background and does not interrupt visitors. However, if the check
    fails, visitors cannot submit the form.
