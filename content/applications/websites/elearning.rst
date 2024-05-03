@@ -227,9 +227,9 @@ The :guilabel:`Points Rewards` section lets you give a specific number of karma 
 how many tries they need to correctly answer the question. Then, create your questions and the
 possible answers by clicking on :guilabel:`Add a line`. A new window pops up, add the question by
 filling in the :guilabel:`Question Name` and add multiple answers by clicking on :guilabel:`Add a
-line`. Tick the :guilabel:`Is correct answer` to mark one or more answers as correct. You can also
-fill in the :guilabel:`Comment` field to display additional information when the answer is chosen by
-the participant.
+line`. Tick one of the :guilabel:`Is correct answer` checkboxes to mark one answer as correct. You
+can also fill in the :guilabel:`Comment` field to display additional information when the answer is
+chosen by the participant.
 
 .. _elearning/tags:
 
