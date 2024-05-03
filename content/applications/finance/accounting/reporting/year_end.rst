@@ -101,8 +101,9 @@ correctly reporting a balance of zero. If that is the case, set an :guilabel:`Al
 to the last day of the fiscal year by going to :menuselection:`Accounting --> Accounting --> Lock
 Dates`.
 
-.. warning::
-   Setting an :guilabel:`All Users Lock Date` is **irreversible** and cannot be removed.
+.. tip::
+   Install the :guilabel:`Irreversible Lock Date` (`account_lock`) module to make the :guilabel:`All
+   Users Lock Date` *irreversible* once set.
 
 .. note::
    A specific year-end closing entry is **optional** in order to close out the **profit and loss
