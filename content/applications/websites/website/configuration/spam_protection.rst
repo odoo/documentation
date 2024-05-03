@@ -6,10 +6,9 @@ Forms spam protection
 protect website forms against spam and abuse. They attempt to distinguish between human and bot
 submissions using non-interactive challenges based on telemetry and visitor behavior.
 
-.. tip::
-   **Cloudflare Turnstile is recommended** as it is possible to add an interactive check if the
-   automated check fails. Also, Google reCAPTCHA v3 is limited to `1 million assessments per month
-   per domain <https://developers.google.com/recaptcha/docs/faq#are-there-any-qps-or-daily-limits-on-my-use-of-recaptcha>`_.
+.. important::
+   We recommend using **Cloudflare Turnstile** as reCAPTCHA v3 may not be compliant with local data
+   protection regulations.
 
 .. note::
    All pages using the :guilabel:`Form`, :guilabel:`Newsletter Block`, :guilabel:`Newsletter Popup`
@@ -80,6 +79,9 @@ On Odoo
 
 reCAPTCHA v3 configuration
 ==========================
+
+.. warning::
+   reCAPTCHA v3 may not be compliant with local data protection regulations.
 
 On Google
 ---------
