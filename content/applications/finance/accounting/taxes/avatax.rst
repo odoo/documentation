@@ -397,6 +397,7 @@ menu, and select a category, or :guilabel:`Search More...` to find one that is n
 .. seealso::
    - :doc:`fiscal_positions`
    - :doc:`avatax/avatax_use`
+   - :doc:`avatax/avalara_portal`
    - `US Tax Compliance: Avatax elearning video
      <https://www.odoo.com/slides/slide/us-tax-compliance-avatax-2858?fullscreen=1>`_
 
@@ -404,3 +405,4 @@ menu, and select a category, or :guilabel:`Search More...` to find one that is n
    :titlesonly:
 
    avatax/avatax_use
+   avatax/avalara_portal
