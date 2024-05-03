@@ -134,7 +134,12 @@ Google Tag Manager
 
 :abbr:`GTM (Google Tag Manager)` is a tag management system that allows you to easily update
 measurement codes and related code fragments, collectively known as tags on your website or mobile
-app, directly through the code injector. To use GTM, proceed as follows:
+app, directly through the code injector.
+
+.. warning::
+   Google Tag Manager may not be compliant with local data protection regulations.
+
+To use GTM, proceed as follows:
 
 #. Create or sign in to a Google account by going to https://tagmanager.google.com/.
 
