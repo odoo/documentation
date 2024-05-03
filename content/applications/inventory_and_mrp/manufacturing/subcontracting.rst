@@ -126,9 +126,9 @@ variables. For example, if the product is not dropshipped to the end customer, t
 to factor in the cost of dropshipping.
 
 .. toctree::
-   :titlesonly:
 
    subcontracting/subcontracting_basic
+   subcontracting/basic_subcontracting_lead_times
    subcontracting/subcontracting_resupply
    subcontracting/resupply_subcontracting_lead_times
    subcontracting/subcontracting_dropship
