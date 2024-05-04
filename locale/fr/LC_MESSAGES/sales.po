@@ -24,7 +24,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-21 15:48+0000\n"
+"POT-Creation-Date: 2024-04-29 10:38+0000\n"
 "PO-Revision-Date: 2022-10-04 12:54+0000\n"
 "Last-Translator: Jolien De Paepe, 2024\n"
 "Language-Team: French (https://app.transifex.com/odoo/teams/41243/fr/)\n"
@@ -80,23 +80,22 @@ msgstr ""
 #: ../../content/applications/sales/crm/acquire_leads/convert.rst:9
 #: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:10
 #: ../../content/applications/sales/crm/optimize/gamification.rst:11
-#: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:9
+#: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:27
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:44
-#: ../../content/applications/sales/crm/track_leads/prospect_visits.rst:12
 #: ../../content/applications/sales/point_of_sale/configuration.rst:6
 #: ../../content/applications/sales/point_of_sale/employee_login.rst:13
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:13
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:13
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:12
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:20
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:15
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:14
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:12
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:19
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/vantiv.rst:17
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:12
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:16
 #: ../../content/applications/sales/point_of_sale/pricing/cash_rounding.rst:17
 #: ../../content/applications/sales/point_of_sale/pricing/fiscal_position.rst:16
 #: ../../content/applications/sales/point_of_sale/pricing/loyalty.rst:9
 #: ../../content/applications/sales/point_of_sale/pricing/pricelists.rst:12
-#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:52
+#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:53
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:20
 #: ../../content/applications/sales/point_of_sale/restaurant/bill_printing.rst:10
 #: ../../content/applications/sales/point_of_sale/restaurant/kitchen_printing.rst:10
@@ -787,7 +786,8 @@ msgstr ""
 "<http://odoo.com/gdpr>`_."
 
 #: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:59
-#: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:36
+#: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:94
+#: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:61
 msgid "Pricing"
 msgstr "Tarification"
 
@@ -842,17 +842,19 @@ msgstr ""
 "cliquez sur :guilabel:`Voir mes services`."
 
 #: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst-1
+#: ../../content/applications/sales/crm/optimize/lead_enrichment.rst-1
 msgid "Buy credits in the Odoo IAP settings."
 msgstr "Acheter des crédits via les paramètres Odoo IAP."
 
-#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:88
+#: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:87
+#: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:16
+#: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:78
 msgid ""
-"Users of Odoo Online (SaaS) Enterprise automatically have free trial credits"
-" in their database to test any IAP features."
+"Enterprise Odoo users with a valid subscription get free credits to test "
+":abbr:`IAP (In-App Purchase)` features before deciding to purchase more "
+"credits for the database. This includes demo/training databases, educational"
+" databases, and one-app-free databases."
 msgstr ""
-"Les utilisateurs d'Odoo Online (SaaS) Enterprise disposent automatiquement "
-"de crédits d'essai gratuits dans leur base de données pour tester toutes les"
-" fonctionnalités IAP."
 
 #: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:92
 msgid ":doc:`/applications/essentials/in_app_purchase`"
@@ -1108,59 +1110,255 @@ msgstr ""
 msgid "View of the badges page in Odoo"
 msgstr "Vue de la page badges dans Odoo"
 
+#: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:3
+msgid "Lead enrichment"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:5
+msgid ""
+"*Lead enrichment* is a service that provides business information for a "
+"contact attached to a lead. Lead enrichment is an In-App Purchase (IAP) that"
+" requires credits to use, and is available for existing leads in an Odoo "
+"database."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:9
+msgid ""
+"The information provided by lead enrichment can include general information "
+"about the business (including full business name and logo), social media "
+"accounts, :guilabel:`Company type`, :guilabel:`Founded` information, "
+":guilabel:`Sectors` information, the number of :guilabel:`Employees`, "
+":guilabel:`Estimated revenue`, :guilabel:`Phone` number, "
+":guilabel:`Timezone`, and :guilabel:`Technologies Used`."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:21
+msgid ""
+"The *leads* feature **must** be activated in the *CRM* settings page in "
+"order to use lead enrichment. To access the *CRM* settings, navigate to "
+":menuselection:`CRM app --> Configuration --> Settings`. Under the "
+":guilabel:`CRM` section activate the :guilabel:`Leads` option and click "
+":guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:27
+msgid "Lead enrichment set up"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:29
+msgid ""
+"To set up lead enrichment in the *CRM* application, navigate to "
+":menuselection:`CRM app --> Configuration --> Settings`. Then, under the "
+":guilabel:`Lead Generation` section, tick the checkbox next to "
+":guilabel:`Lead Enrichment`, and select either :guilabel:`Enrich leads on "
+"demand only` or :guilabel:`Enrich all leads automatically`. Click the "
+":guilabel:`Save` button to activate the changes."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_enrichment.rst-1
+msgid ""
+"CRM lead generation settings page, with lead enrichment activation highlighted, and enrich\n"
+"leads on demand only chosen."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:41
+msgid "Enrich leads"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:43
+msgid ""
+"Enrichment of leads is based on the domain of the email address of the "
+"customer set on the lead. There are two different ways that a lead can be "
+"enriched: *automatically* or *manually*."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:47
+msgid "Automatically enrich leads"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:49
+msgid ""
+"During set up, if :guilabel:`Enrich all leads automatically` was selected on"
+" the *CRM* :guilabel:`Settings` page, then no action needs to be taken by "
+"the user to enrich the lead. A scheduled action runs automatically, every "
+"sixty minutes, and enrichment occurs on leads, after a remote database is "
+"contacted."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:55
+msgid ""
+"To access the cron that runs for the automatic lead enrichment, activate "
+":ref:`developer mode <developer-mode>`, and navigate to "
+":menuselection:`Settings app --> Technical menu --> Automation section --> "
+"Scheduled Actions`. In the :guilabel:`Search...` bar, type in `CRM`. Click "
+"into the result labeled :guilabel:`CRM: enrich leads (IAP)`, and make any "
+"necessary adjustments. In the :guilabel:`Execute Every` field, enter a value"
+" greater than, or equal to, five minutes."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:62
+msgid ""
+"The following is an example of lead enrichment data that has been "
+"autocompleted successfully:"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:0
+msgid "Chatter showing lead enrichment data."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:69
+msgid "Manually enrich leads"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:71
+msgid ""
+"If the :guilabel:`Enrich leads on demand only` option was selected on the "
+"*CRM* :guilabel:`Settings` page, when activating :guilabel:`Lead "
+"Enrichment`, each lead that a user wishes to enrich **must** be manually "
+"enriched. This is achieved by clicking the :guilabel:`Enrich` button in the "
+"top menu of the lead."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:76
+msgid ""
+"The same information will be retrieved at the same :abbr:`IAP (In-App "
+"Puchase)` credit cost (one per enrichment). This method of enrichment is "
+"useful when every lead does not need to be enriched, or cost is an issue."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_enrichment.rst-1
+msgid "Manual enrich button feature highlighted on the CRM lead."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:85
+msgid ""
+"Manually enrich leads in bulk using the *list* view. First, navigate to "
+":menuselection:`CRM app --> Leads`, and click the list view button "
+"(:guilabel:`☰ (three horizontal lines)` icon). Next, tick the checkboxes for"
+" the leads that should be manually enriched. Finally, click the "
+":guilabel:`⚙️ Action` icon, and select :guilabel:`Enrich` from the resulting"
+" drop-down menu. This can also be achieved from the *My Pipeline* page. To "
+"do so, simply open the *CRM* app, or navigate to :menuselection:`CRM app -->"
+" Sales --> My Pipeline`. Either route reveals leads and opportunities on the"
+" :guilabel:`Pipeline` page."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:96
+msgid ""
+"Lead enrichment is an In-App Purchase (IAP) feature, and each enriched lead "
+"costs one credit."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:99
+msgid ""
+"See here for full pricing information: `Lead Generation by Odoo IAP "
+"<https://iap.odoo.com/iap/in-app-services/273>`_."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:102
+msgid ""
+"To buy credits, navigate to :menuselection:`CRM app --> Configuration --> "
+"Settings`. In the :guilabel:`Lead Generation` section, under the "
+":guilabel:`Lead Enrichment` feature, click on :guilabel:`Buy Credits`."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_enrichment.rst-1
+msgid "Buy credits from the lead enrichment settings."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:110
+msgid ""
+"Credits and balances may also be purchased by navigating to the "
+":menuselection:`Settings app`. In the :guilabel:`Contacts` section, under "
+"the :guilabel:`Odoo IAP` feature, click on :guilabel:`View My Services`."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:119
+#: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:83
+msgid ":doc:`../../../essentials/in_app_purchase`"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:122
+msgid ""
+"When collecting a company's contact information, make sure to be aware of "
+"the latest EU regulations. For more information about General Data "
+"Protection Regulation, refer to: `Odoo GDPR <http://odoo.com/gdpr>`__."
+msgstr ""
+
 #: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:3
-msgid "Enrich your contacts base with Partner Autocomplete"
-msgstr "Enrichir votre base de contacts avec l'Autocomplétion de partenaires"
+msgid "Enrich contacts with partner autocomplete"
+msgstr ""
 
 #: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:5
 msgid ""
-"Partner Autocomplete helps you to enrich your contacts database with "
-"corporate data. Select one of the companies suggested in the dropdown, and "
-"quickly get all the information you need."
+"*Partner autocomplete* enriches the contacts database with corporate data. "
+"In any module, enter the new company name into the :guilabel:`Customer` "
+"field (`partner_id` technical field), and select one of the companies "
+"suggested in the drop-down menu. Instantly get valuable company information "
+"full of hard-to-find data for a desired company."
 msgstr ""
-"L'Autocomplétion de partenaires vous aide à enrichir votre base de données "
-"de contacts avec des données d'entreprise. Sélectionnez l'une des sociétés "
-"suggérées dans la liste déroulante et obtenez rapidement toutes les "
-"informations dont vous avez besoin."
 
 #: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:11
 msgid ""
-"Go to :menuselection:`Settings --> Contacts` and activate the *Partner "
-"Autocomplete* feature."
+"A company **cannot** already be manually entered in the *Contacts* "
+"application prior to enriching it with data."
 msgstr ""
-"Allez aux :menuselection:`Paramètres --> Contacts` et activez la "
-"fonctionnalité *Autocomplétion de partenaires*."
+
+#: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:14
+msgid ""
+"The information provided by partner autocomplete can include general "
+"information about the business (including full business name and logo), "
+"social media accounts, :guilabel:`Company type`, :guilabel:`Founded` "
+"information, :guilabel:`Sectors` information, the number of "
+":guilabel:`Employees`, :guilabel:`Estimated revenue`, :guilabel:`Phone` "
+"number, :guilabel:`Timezone`, and :guilabel:`Technologies Used`."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:21
+msgid ""
+"When getting a company's contact information make sure to be aware of the "
+"latest EU regulations. For more information about General Data Protection "
+"Regulation refer to: `Odoo GDPR <http://odoo.com/gdpr>`_. In Odoo, "
+"individual contact information cannot be searched for with the partner "
+"autocomplete feature."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:29
+msgid ""
+"Go to :menuselection:`Settings app --> Contacts section`. Then, activate the"
+" :guilabel:`Partner Autocomplete` feature, by ticking the checkbox beside "
+"it, and clicking :guilabel:`Save`."
+msgstr ""
 
 #: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst-1
-msgid "View of settings page and the activations of the feature in Odoo"
+msgid "View of settings page and the activations of the feature in Odoo."
 msgstr ""
-"Vue de la page des paramètres et l'activation de la fonctionnalité dans Odoo"
 
-#: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:18
-msgid "Enrich your contacts with corporate data"
-msgstr "Enrichir vos contacts avec des données d'entreprise"
+#: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:37
+msgid "Enrich contacts with corporate data"
+msgstr ""
 
-#: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:22
+#: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:39
 msgid ""
-"From any module, once you start to create a new contact typing the name of "
-"it, the system will suggest a potential match. If you select it, the contact"
-" will be populated with corporate data."
+"From any module, as the user is typing in the name of a new company contact,"
+" Odoo reveals a large drop-down menu of potential match suggestions. If any "
+"are selected, the contact is then populated with corporate data related to "
+"that specific selection."
 msgstr ""
-"À partir de n'importe quel module, une fois que vous commencez à créer un "
-"nouveau contact en tapant son nom, le système vous proposera une "
-"correspondance potentielle. Si vous la sélectionnez, le contact sera "
-"renseigné avec les données de l'entreprise."
 
-#: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:23
-msgid ""
-"For example, after typing *Odoo*, you will get the following information:"
+#: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:43
+msgid "For example, after typing `Odoo`, the following information populates:"
 msgstr ""
-"Par exemple, après avoir tapé *Odoo*, vous obtiendrez les informations "
-"suivantes :"
 
 #: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst-1
 msgid "Creating a new contact in Odoo"
 msgstr "Créer un nouveau contact dans Odoo"
+
+#: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:49
+msgid ""
+"In the chatter, the following information populates about the company, after"
+" clicking on the desired pre-populated contact:"
+msgstr ""
 
 #: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst-1
 msgid ""
@@ -1170,56 +1368,499 @@ msgstr ""
 "Vue des informations sur Odoo qui s'affichent grâce à l'option "
 "d'autocomplétion dans Odoo"
 
-#: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:33
+#: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:57
 msgid ""
-"Partner Autocomplete also works if you enter a VAT number instead of a "
-"company name."
+"Partner Autocomplete also works if a :abbr:`VAT (value-added tax)` number is"
+" entered instead of company name."
 msgstr ""
-"L'Autocomplétion de partenaires fonctionne également si vous saisissez un "
-"numéro de TVA au lieu d'un nom de l'entreprise."
 
-#: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:39
+#: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:63
 msgid ""
 "*Partner Autocomplete* is an *In-App Purchase (IAP)* service, which requires"
-" prepaid credits to be used. Each request will consume one credit."
+" prepaid credits to be used. Each request consumes one credit."
 msgstr ""
-"Le service *Autocomplétion de partenaires* est un service *Achats In-App "
-"(IAP)* qui nécessite l'utilisation de crédits prépayés. Chaque demande "
-"consomme un crédit."
 
-#: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:41
+#: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:66
 msgid ""
-"To buy credits, go to :menuselection:`Settings --> Contacts --> Partner "
-"Autocomplete or Odoo IAP --> View My Services` and select a package."
+"To buy credits, go to :menuselection:`Settings app --> Contacts section`. "
+"Then, locate either the :guilabel:`Partner Autocomplete` feature and click "
+":guilabel:`Buy credits`, or locate the :guilabel:`Odoo IAP` feature and "
+"click :guilabel:`View My Services`. From the resulting page, select a "
+"desired package."
 msgstr ""
-"Pour acheter des crédits, accédez aux :menuselection:`Paramètres --> "
-"Contacts --> Autocomplétion de partenaires ou Odoo IAP --> Voir mes "
-"services` et sélectionnez un forfait."
 
-#: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:44
+#: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:72
 msgid ""
-"If you run out of credits, the only information that will be populated when "
+"If the database runs out of credits, the only information populated when "
 "clicking on the suggested company will be the website link and the logo."
 msgstr ""
-"Si vous n'avez plus de crédits, les seules informations qui seront "
-"renseignées lorsque vous cliquerez sur l'entreprise suggérée seront le lien "
-"du site web et le logo."
 
-#: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:46
-msgid ""
-"If you are on Odoo Online and you have the Enterprise version, you benefit "
-"from free trial credits to test the feature."
+#: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:75
+msgid "Learn about our `Privacy Policy <https://iap.odoo.com/privacy>`_."
 msgstr ""
-"Si vous êtes sur Odoo Online et vous avez la version Enterprise, vous "
-"bénéficiez de crédits d'essai gratuits pour tester la fonctionnalité."
 
-#: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:48
-msgid ""
-"Learn about our *Privacy Policy* `here "
-"<https://iap.odoo.com/privacy#header_2>`_."
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:3
+msgid "Utilize activities for sales teams"
 msgstr ""
-"Découvrez notre *Politique de confidentialité* `ici "
-"<https://iap.odoo.com/privacy#header_2>`_."
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:5
+msgid ""
+"*Activities* are follow-up tasks tied to a record in an *Odoo* database. "
+"Activities can be scheduled on any page of the database that contains a "
+"chatter thread, Kanban view, list view, or activities view of an "
+"application."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:13
+msgid ""
+"The summary view of activities for leads and opportunities in an Odoo "
+"database."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:13
+msgid "Planned Activities for Leads and Opportunities."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:16
+msgid "Activity types"
+msgstr "Types d'activité"
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:18
+msgid ""
+"A set of preconfigured activity types is available in the *CRM* app. To view"
+" the list of available activity types, navigate to the :menuselection:`CRM "
+"app --> Configuration --> Activity Types`."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:22
+msgid ""
+"Additional activity types are available within the database, and can be "
+"utilized through different applications. To access the complete list of "
+"activity types, go to the :menuselection:`Settings app`, then scroll to the "
+":guilabel:`Discuss` section, and click :guilabel:`Activity Types`."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:27
+msgid "The preconfigured activity types for the *CRM* app are as follows:"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:29
+msgid ""
+":guilabel:`Email`: adds a reminder to the chatter that prompts the "
+"salesperson to send an email."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:30
+msgid ""
+":guilabel:`Call`: opens a calendar link where the salesperson can schedule "
+"time to call the contact."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:32
+msgid ""
+":guilabel:`Meeting`: opens a calendar link where the salesperson can "
+"schedule time to have a meeting with the contact."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:34
+msgid ":guilabel:`To Do`: adds a general reminder task to the chatter."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:35
+msgid ""
+":guilabel:`Upload Document`: adds a link on the activity where an external "
+"document can be uploaded. Note that the *Documents* app is **not** required "
+"to utilize this activity type."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:39
+msgid ""
+"If other applications are installed, such as *Sales* or *Accounting*, other "
+"activity types are made available in the *CRM* app."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:43
+msgid "Create a new activity type"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:45
+msgid ""
+"To create a new activity type, click :guilabel:`New` at the top-left of the "
+"page to open a blank form."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:48
+msgid ""
+"At the top of the form, start by choosing a :guilabel:`Name` for the new "
+"activity type."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:51
+msgid "Activity settings"
+msgstr "Paramètres des activités"
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:54
+msgid "Action"
+msgstr "Action"
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:56
+msgid ""
+"The *Action* field specifies the intent of the activity. Some actions "
+"trigger specific behaviors after an activity is scheduled."
+msgstr ""
+"Le champ *Action* précise l'intention de l'activité. Certaines actions "
+"déclenchent des comportements spécifiques après avoir planifié une activité."
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:59
+msgid ""
+"If :guilabel:`Upload Document` is selected, a link to upload a document is "
+"added directly to the planned activity in the chatter."
+msgstr ""
+"Si vous sélectionnez :guilabel:`Charger un document`, un lien pour charger "
+"un document s'ajoute directement à l'activité planifiée dans le chatter."
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:61
+msgid ""
+"If either :guilabel:`Phonecall` or :guilabel:`Meeting` are selected, users "
+"have the option to open their calendar to schedule a time for this activity."
+msgstr ""
+"Si vous sélectionnez :guilabel:`Appel téléphonique` ou :guilabel:`Réunion`, "
+"les utilisateurs ont l'option d'ouvrir leur calendrier pour programmer une "
+"heure pour cette activité."
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:63
+msgid ""
+"If :guilabel:`Request Signature` is selected, a link is added to the planned"
+" activity in the chatter that opens a signature request pop-up window."
+msgstr ""
+"Si vous sélectionnez :guilabel:`Demander une signature`, un lien est ajouté "
+"à l'activité planifiée dans le chatter permettant d'ouvrir une fenêtre "
+"contextuelle de demande de signature."
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst-1
+msgid ""
+"The Activity settings on a new activity type with emphasis on the Action "
+"field."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:71
+msgid ""
+"The actions available to select on an activity type vary, depending on the "
+"applications currently installed in the database."
+msgstr ""
+"Les actions disponibles pour sélectionner un type d'activité varient en "
+"fonction des applications actuellement installées dans la base de données."
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:75
+msgid "Default user"
+msgstr "Utilisateur par défaut"
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:77
+msgid ""
+"To automatically assign this activity to a specific user when this activity "
+"type is scheduled, choose a name from the :guilabel:`Default User` drop-down"
+" menu. If this field is left blank, the activity is assigned to the user who"
+" creates the activity."
+msgstr ""
+"Pour assigner cette activité automatiquement à un utilisateur spécifique "
+"lorsque ce type d'activité est planifié, choisissez un nom dans le menu "
+"déroulant :guilabel:`Utilisateur par défaut`. Si ce champ est laissé vierge,"
+" l'activité est assignée à l'utilisateur qui a créé l'activité."
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:82
+msgid "Default summary"
+msgstr "Résumé par défaut"
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:84
+msgid ""
+"To include notes whenever this activity type is created, enter them into the"
+" :guilabel:`Default Summary` field."
+msgstr ""
+"Pour inclure des notes chaque fois que ce type d'activité est créé, "
+"saisissez-les dans le champ :guilabel:`Résumé par défaut`."
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:88
+msgid ""
+"The information in the :guilabel:`Default User` and :guilabel:`Default "
+"Summary` fields are included when an activity is created. However, they can "
+"be altered before the activity is scheduled or saved."
+msgstr ""
+"Les informations dans les champs :guilabel:`Utilisateur par défaut` et "
+":guilabel:`Résumé par défaut` sont incluses lors de la création d'une "
+"activité. Toutefois, elles peuvent être modifiées avant que l'activité ne "
+"soit planifiée ou enregistrée."
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:93
+msgid "Next activity"
+msgstr "Activité suivante"
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:95
+msgid ""
+"To automatically suggest, or trigger, a new activity after an activity has "
+"been marked complete, the :guilabel:`Chaining Type` must be set."
+msgstr ""
+"Pour suggérer ou déclencher automatiquement une nouvelle activité après "
+"qu'une activité a été marquée comme faite, vous devez définir le "
+":guilabel:`Type de chaînage`."
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:99
+msgid "Suggest next activity"
+msgstr "Suggérer l'activité suivante"
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:101
+msgid ""
+"In the :guilabel:`Chaining Type` field, select :guilabel:`Suggest Next "
+"Activity`. Upon doing so, the field underneath changes to: "
+":guilabel:`Suggest`. Click the :guilabel:`Suggest` field drop-down menu to "
+"select any activities to recommend as follow-up tasks to this activity type."
+msgstr ""
+"Dans le champ :guilabel:`Type de chaînage`, sélectionnez :guilabel:`Suggérer"
+" l'activité suivante`. Le champ situé en dessous devient alors "
+":guilabel:`Suggérer`. Cliquez sur le menu déroulant :guilabel:`Suggérer` "
+"pour sélectionner les activités à recommander comme tâches de suivi pour ce "
+"type d'activité."
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst-1
+msgid "The Next Activity section on a new activity type form."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:109
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:137
+msgid ""
+"In the :guilabel:`Schedule` field, choose a default deadline for these "
+"activities. To do so, configure a desired number of :guilabel:`Days`, "
+":guilabel:`Weeks`, or :guilabel:`Months`. Then, decide if it should occur "
+":guilabel:`after completion date` or :guilabel:`after previous activity "
+"deadline`."
+msgstr ""
+"Dans le champ :guilabel:`Planifier`, choisissez un délai par défaut pour ces"
+" activités. Pour ce faire, configurez un nombre souhaité de "
+":guilabel:`Jours`, :guilabel:`Semaines`, ou :guilabel:`Mois`. Puis décidez "
+"si elle doit avoir lieu :guilabel:`après la date d'achèvement` ou "
+":guilabel:`après la date de fin de l'activité précédente`."
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:114
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:142
+msgid ""
+"This :guilabel:`Schedule` field information can be altered before the "
+"activity is scheduled."
+msgstr ""
+"Vous pouvez modifier ce champ :guilabel:`Planifier` avant que l'activité ne "
+"soit planifiée."
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:116
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:144
+msgid "When all configurations are complete, click :guilabel:`Save`."
+msgstr ""
+"Lorsque toutes les configurations sont terminées, cliquez sur "
+":guilabel:`Enregistrer`."
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:119
+msgid ""
+"If an activity has the :guilabel:`Chaining Type` set to :guilabel:`Suggest "
+"Next Activity`, and has activities listed in the :guilabel:`Suggest` field, "
+"users are presented with recommendations for activities as next steps."
+msgstr ""
+"Si le :guilabel:`Type de chaînage` de l'activité est défini sur "
+":guilabel:`Suggérer l'activité suivante` et des activités sont répertoriées "
+"dans le champ :guilabel:`Suggérer`, les utilisateurs reçoivent des "
+"recommandations d'activités pour les étapes suivantes."
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:0
+msgid ""
+"A schedule activity pop-up with emphasis on the recommended activities."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:128
+msgid "Trigger next activity"
+msgstr "Déclencher l'activité suivante"
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:130
+msgid ""
+"Setting the :guilabel:`Chaining Type` to :guilabel:`Trigger Next Activity` "
+"immediately launches the next activity once the previous one is completed."
+msgstr ""
+"Le fait de définir le :guilabel:`Type de chaînage` sur :guilabel:`Déclencher"
+" l'activité suivante` permet de lancer immédiatement l'activité suivante une"
+" fois que la précédente est terminée."
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:133
+msgid ""
+"If :guilabel:`Trigger Next Activity` is selected in the :guilabel:`Chaining "
+"Type` field, the field beneath changes to: :guilabel:`Trigger`. From the "
+":guilabel:`Trigger` field drop-down menu, select the activity that should be"
+" launched once this activity is completed."
+msgstr ""
+"Si vous sélectionnez :guilabel:`Déclencher l'activité suivante` dans le "
+"champ :guilabel:`Type de chaînage`, le champ situé en dessous devient "
+":guilabel:`Déclencher`. Dans le menu déroulant du champ "
+":guilabel:`Déclencher`, sélectionnez l'activité qui doit être lancée une "
+"fois que cette activité est terminée."
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:147
+msgid ""
+"When an activity has the :guilabel:`Chaining Type` set to :guilabel:`Trigger"
+" Next Activity`, marking the activity as *Done* immediately launches the "
+"next activity listed in the :guilabel:`Trigger` field."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:152
+msgid "Activity tracking"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:154
+msgid ""
+"To keep the pipeline up to date with the most accurate view of the status of"
+" activities, as soon as a lead is interacted with, the associated activity "
+"should be marked as *Done*. This ensures the next activity can be scheduled "
+"as needed. It also prevents the pipeline from becoming cluttered with past "
+"due activities."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:159
+msgid ""
+"The pipeline is most effective when it is kept up-to-date and accurate to "
+"the interactions it is tracking."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:163
+msgid "Activity plans"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:165
+msgid ""
+"Activity types with the *Chaining Type* set to *Trigger New Activity* "
+"provide the opportunity to preplan a sequence of customized activities. Once"
+" an activity is marked as *Done*, the next activity is automatically "
+"scheduled."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:169
+msgid ""
+"The *Chaining Type* setting on an activity type provides the opportunity to "
+"preplan a sequence of events, that can aide in the sales process."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:173
+msgid ""
+"A salesperson adds a new lead to their pipeline, and schedules an *Email* "
+"activity for the following day. The email activity type is configured with "
+"the following settings:"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:176
+msgid ":guilabel:`Chaining Type`: `Suggest Next Activity`"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:177
+msgid ":guilabel:`Suggest`: `Call`, `Meeting`"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:178
+msgid ":guilabel:`Schedule`: `2 days after previous activity deadline`"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:180
+msgid ""
+"After sending an email to the lead, the salesperson clicks :guilabel:`DONE &"
+" SCHEDULE NEXT` on the :guilabel:`Schedule Activity` pop-up window. This "
+"opens a new pop-up window, where the suggested next activities are listed as"
+" recommendations for next steps."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:0
+msgid "Schedule an activity pop-up window with recommended activities."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:188
+msgid ""
+"The *suggested* or *triggered* activities may vary, depending on a variety "
+"of factors. See below for some suggested sequences:"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:193
+msgid "Sample #1"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:195
+msgid ""
+"A salesperson adds a lead to the pipeline and schedules an *email* activity."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:196
+msgid ""
+"The *email* activity suggests scheduling a *call* or a *meeting* within two "
+"days of the previous deadline."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:198
+msgid ""
+"Both the *call* and the *meeting* activities trigger a *create quote* "
+"activity."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:199
+msgid ""
+"After the quote is sent, a *follow-up on quote* activity is scheduled within"
+" five days."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:201
+msgid "Sample #2"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:203
+msgid ""
+"A lead is :doc:`added to the pipeline <../acquire_leads/generate_leads>` "
+"through the website's contact form. The salesmanager assigns a salesperson "
+"and schedules an activity for a *call*."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:206
+msgid ""
+"The *call* activity triggers an *upload document* activity, so the "
+"salesperson can send over a proposal after a successful phone call."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:208
+msgid ""
+"The *upload document* activity suggests scheduling a *request signature* "
+"activity or a *meeting*. The salesperson chooses to schedule a meeting."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:211
+msgid "Sample #3"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:213
+msgid ""
+"A salesmanager notices several of their salespeople are neglecting to "
+"follow-up on their leads in a timely manner. As a result, high-value targets"
+" are not receiving adequate attention."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:216
+msgid ""
+"The salesmanager creates a new activity type, titled *follow-up*, which is "
+"configured with the :guilabel:`Action` set to :guilabel:`Reminder`."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:218
+msgid ""
+"The salesmanager adds *follow-up* as the next activity triggered or "
+"suggested to all of their teams activities."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:220
+msgid ""
+"After a salesperson schedules an *email* activity, a *follow-up* activity is"
+" scheduled for the next day. After they schedule a *meeting* activity, a "
+"*follow-up* activity is scheduled two days later."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/utilize_activities.rst:225
+msgid ":doc:`Activities </applications/essentials/activities>`"
+msgstr ""
 
 #: ../../content/applications/sales/crm/performance.rst:5
 msgid "Analyze performance"
@@ -2180,91 +2821,6 @@ msgstr ""
 " pistes qui n'ont pas encore été assignées et qui correspondent au domaine "
 "spécifique de l'équipe."
 
-#: ../../content/applications/sales/crm/track_leads/prospect_visits.rst:3
-msgid "Track your prospects visits"
-msgstr "Suivre les visites de vos prospects"
-
-#: ../../content/applications/sales/crm/track_leads/prospect_visits.rst:5
-msgid ""
-"Tracking your website pages will give you much more information about the "
-"interests of your website visitors."
-msgstr ""
-"Le suivi des pages de votre site web vous donnera beaucoup plus "
-"d'informations sur les centres d'intérêt des visiteurs de votre site web."
-
-#: ../../content/applications/sales/crm/track_leads/prospect_visits.rst:8
-msgid ""
-"Every tracked page they visit will be recorded on your lead/opportunity if "
-"they use the contact form on your website."
-msgstr ""
-"Chaque page suivie qu'ils visitent sera enregistrée dans votre "
-"piste/opportunité s'ils utilisent le formulaire de contact de votre site "
-"web."
-
-#: ../../content/applications/sales/crm/track_leads/prospect_visits.rst:14
-msgid ""
-"To use this feature, install the free module *Lead Scoring* under your "
-"*Apps* page (only available in Odoo Enterprise)."
-msgstr ""
-"Pour utiliser cette fonctionnalité, installez le module gratuit *Notation "
-"des Pistes* depuis la page *Applications* (accessible uniquement dans la "
-"version Odoo Entreprise)."
-
-#: ../../content/applications/sales/crm/track_leads/prospect_visits.rst:21
-msgid "Track a webpage"
-msgstr "Suivre une page web"
-
-#: ../../content/applications/sales/crm/track_leads/prospect_visits.rst:23
-msgid ""
-"Go to any static page you want to track on your website and under the "
-"*Promote* tab you will find *Optimize SEO*"
-msgstr ""
-"Allez sur n'importe quelle page statique que vous voulez suivre sur votre "
-"site web et sous l'onglet *Promouvoir*, vous trouverez *Optimiser le "
-"référencement*."
-
-#: ../../content/applications/sales/crm/track_leads/prospect_visits.rst:29
-msgid "There you will see a *Track Page* checkbox to track this page."
-msgstr ""
-"Vous y verrez une case à cocher *Suivre la page* pour suivre cette page."
-
-#: ../../content/applications/sales/crm/track_leads/prospect_visits.rst:35
-msgid "See visited pages in your leads/opportunities"
-msgstr "Voir les pages visitées dans vos pistes/opportunités"
-
-#: ../../content/applications/sales/crm/track_leads/prospect_visits.rst:37
-msgid ""
-"Now each time a lead is created from the contact form it will keep track of "
-"the pages visited by that visitor. You have two ways to see those pages, on "
-"the top right corner of your lead/opportunity you can see a *Page Views* "
-"button but also further down you will see them in the chatter."
-msgstr ""
-"À présent, chaque fois qu'une piste est créée depuis le formulaire de "
-"contact, cette fonctionnalité gardera la trace des pages visitées par ce "
-"visiteur. Il y a deux manières de voir ces pages, dans le coin supérieur "
-"droit de votre piste/opportunité, vous trouverez un bouton *Pages vues*, "
-"mais aussi plus bas, dans le chatter."
-
-#: ../../content/applications/sales/crm/track_leads/prospect_visits.rst:43
-msgid ""
-"Both will update if the viewers comes back to your website and visits more "
-"pages."
-msgstr ""
-"Tous deux seront mis à jour si le visiteur revient sur votre site web et "
-"visite d'autres pages."
-
-#: ../../content/applications/sales/crm/track_leads/prospect_visits.rst:52
-msgid ""
-"The feature will not repeat multiple viewings of the same pages in the "
-"chatter."
-msgstr ""
-"Cette fonctionnalité ne répétera pas les affichages multiples des mêmes "
-"pages dans le chatter."
-
-#: ../../content/applications/sales/crm/track_leads/prospect_visits.rst:55
-msgid "Your customers will no longer be able to keep any secrets from you!"
-msgstr "Vos clients ne pourront plus avoir de secrets pour vous !"
-
 #: ../../content/applications/sales/point_of_sale.rst:6
 msgid "Point of Sale"
 msgstr "Point de Vente"
@@ -2723,100 +3279,152 @@ msgstr ""
 msgid "Making a product available in your POS."
 msgstr "Rendre un produit disponible dans votre PdV."
 
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:3
+msgid "ePOS printers"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:5
+msgid ""
+"ePOS printers are designed to work seamlessly with Point of Sale systems. "
+"Once connected, these devices automatically share information, allowing for "
+"direct printing of tickets from the POS system to the ePOS printer."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:10
+msgid ""
+"Epson printers using Wi-Fi/Ethernet connections and following the `EPOS SDK "
+"Javascript protocol "
+"<https://download4.epson.biz/sec_pubs/pos/reference_en/technology/epson_epos_sdk.html>`_"
+" are compatible with Odoo **without** needing an :doc:`IoT Box "
+"</applications/general/iot/devices/printer>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:14
+msgid ""
+"Thermal printers using ESC/POS or StarPRNT protocol are compatible **with** "
+"an :doc:`IoT Box </applications/general/iot/devices/printer>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:16
+msgid ""
+"Epson printers using only USB connections are compatible **with** an "
+":doc:`IoT Box </applications/general/iot/devices/printer>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:18
+msgid "Epson printers that connect via Bluetooth are **not compatible**."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:21
+msgid ":doc:`https`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:22
+#: ../../content/applications/sales/point_of_sale/configuration/https.rst:22
+msgid ":doc:`epos_ssc`"
+msgstr ":doc:`epos_ssc`"
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:25
+msgid "Directly supported ePOS printers"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:27
+msgid ""
+"The following ePOS printers are directly compatible with Odoo without "
+"needing an :doc:`IoT Box </applications/general/iot/devices/printer>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:30
+msgid "Epson TM-m30 i/ii/iii (Wi-Fi/Ethernet models only; Recommended)"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:31
+msgid "Epson TM-H6000IV-DT (Receipt printer only)"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:32
+msgid "Epson TM-T70II-DT"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:33
+msgid "Epson TM-T88V-DT"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:34
+msgid "Epson TM-L90-i"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:35
+msgid "Epson TM-T20II-i"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:36
+msgid "Epson TM-T70-i"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:37
+msgid "Epson TM-T82II-i"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:38
+msgid "Epson TM-T83II-i"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:39
+msgid "Epson TM-U220-i"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:40
+msgid "Epson TM-m10"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:41
+msgid "Epson TM-P20 (Wi-Fi® model)"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:42
+msgid "Epson TM-P60II (Receipt: Wi-Fi® model)"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:43
+msgid "Epson TM-P60II (Peeler: Wi-Fi® model)"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:44
+msgid "Epson TM-P80 (Wi-Fi® model)"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:47
+msgid "ePOS printers with IoT Box integration"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:49
+msgid ""
+"The following printers require an :doc:`IoT Box "
+"</applications/general/iot/devices/printer>` to be compatible with Odoo:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:52
+msgid "Epson TM-T20 family (incompatible ePOS software)"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:53
+msgid "Epson TM-T88 family (incompatible ePOS software)"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:54
+msgid "Epson TM-U220 family (incompatible ePOS software)"
+msgstr ""
+
 #: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:5
 msgid "Self-signed certificate for ePOS printers"
 msgstr "Certificat auto-signé pour les imprimantes ePOS"
 
 #: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:7
 msgid ""
-"ePOS printers are designed to work seamlessly with Point of Sale systems. "
-"Once connected, the two devices automatically share information, enabling "
-"the direct printing of tickets from the POS system to the ePOS printer."
-msgstr ""
-"Les imprimantes ePOS sont conçues pour fonctionner en toute transparence "
-"avec les systèmes de Point de Vente. Une fois connectés, les deux appareils "
-"partagent automatiquement les informations, permettant l'impression directe "
-"des tickets du système PdV vers l'imprimante ePOS."
-
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:12
-msgid ""
-"These `Epson ePOS printers <https://c4b.epson-"
-"biz.com/modules/community/index.php?content_id=91>`_ are compatible with "
-"Odoo:"
-msgstr ""
-"Ces `imprimantes Epson ePOS <https://c4b.epson-"
-"biz.com/modules/community/index.php?content_id=91>`_ sont compatibles avec "
-"Odoo :"
-
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:15
-msgid "TM-H6000IV-DT (Receipt printer only)"
-msgstr "TM-H6000IV-DT (Imprimante de reçus uniquement)"
-
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:16
-msgid "TM-T70II-DT"
-msgstr "TM-T70II-DT"
-
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:17
-msgid "TM-T88V-DT"
-msgstr "TM-T88V-DT"
-
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:18
-msgid "TM-L90-i"
-msgstr "TM-L90-i"
-
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:19
-msgid "TM-T20II-i"
-msgstr "TM-T20II-i"
-
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:20
-msgid "TM-T70-i"
-msgstr "TM-T70-i"
-
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:21
-msgid "TM-T82II-i"
-msgstr "TM-T82II-i"
-
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:22
-msgid "TM-T83II-i"
-msgstr "TM-T83II-i"
-
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:23
-msgid "TM-T88V-i"
-msgstr "TM-T88V-i"
-
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:24
-msgid "TM-U220-i"
-msgstr "TM-U220-i"
-
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:25
-msgid "TM-m10"
-msgstr "TM-m10"
-
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:26
-msgid "TM-m30"
-msgstr "TM-m30"
-
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:27
-msgid "TM-P20 (Wi-Fi® model)"
-msgstr "TM-P20 (modèle Wi-Fi®)"
-
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:28
-msgid "TM-P60II (Receipt: Wi-Fi® model)"
-msgstr "TM-P60II (Reçus : modèle Wi-Fi®)"
-
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:29
-msgid "TM-P60II (Peeler: Wi-Fi® model)"
-msgstr "TM-P60II (Peeler : modèle Wi-Fi®)"
-
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:30
-msgid "TM-P80 (Wi-Fi® model)"
-msgstr "TM-P80 (modèle Wi-Fi®)"
-
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:32
-msgid ""
-"To work with Odoo, some models that can be used without an :doc:`IoT box "
-"</applications/general/iot/config/connect>` may require :doc:`the HTTPS "
-"protocol <https>` to establish a secure connection between the browser and "
+"To work with Odoo, some printer models that can be used without an :doc:`IoT"
+" box </applications/general/iot/config/connect>` may require :doc:`the HTTPS"
+" protocol <https>` to establish a secure connection between the browser and "
 "the printer. However, trying to reach the printer's IP address using HTTPS "
 "leads to a warning page on most web browsers. In that case, you can "
 "temporarily :ref:`force the connection <epos_ssc/instructions>`, which "
@@ -2824,7 +3432,7 @@ msgid ""
 "long as the browser window stays open."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:40
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:15
 msgid ""
 "The connection is lost after closing the browser window. Therefore, this "
 "method should only be used as a **workaround** or as a pre-requisite for the"
@@ -2835,11 +3443,11 @@ msgstr ""
 "**contournement** ou comme un prérequis pour les :ref:`instructions "
 "suivantes <epos_ssc/instructions>`."
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:47
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:22
 msgid "Generate, export, and import self-signed certificates"
 msgstr "Générer, exporter et importer des certificats auto-signés"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:49
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:24
 msgid ""
 "For a long-term solution, you must generate a **self-signed certificate**. "
 "Then, export and import it into your browser."
@@ -2848,7 +3456,7 @@ msgstr ""
 "signé**. Ensuite, vous pouvez l'exporter et l'importer dans votre "
 "navigateur."
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:53
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:28
 msgid ""
 "**Generating** an SSL certificate should only be done **once**. If you "
 "create another certificate, devices using the previous one will lose HTTPS "
@@ -2858,17 +3466,17 @@ msgstr ""
 "fois**. Si vous créez un autre certificat, les appareils utilisant le "
 "précédent perdront l'accès HTTPS."
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:58
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:33
 msgid "Windows 10 & Linux OS"
 msgstr "Windows 10 & Linux OS"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:62
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:191
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:37
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:166
 msgid "Generate a self-signed certificate"
 msgstr "Générer un certificat auto-signé"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:64
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:193
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:39
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:168
 msgid ""
 "Navigate to the ePOS' IP address (e.g., `https://192.168.1.25`) and force "
 "the connection by clicking :guilabel:`Advanced` and :guilabel:`Proceed to "
@@ -2884,13 +3492,13 @@ msgstr ""
 "Page d'avertissement sur la confidentialité de la connexion dans Google "
 "Chrome"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:72
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:201
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:47
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:176
 msgid "Warning page on Google Chrome, Windows 10"
 msgstr "Page d'avertissement dans Google Chrome, Windows 10"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:74
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:203
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:49
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:178
 msgid ""
 "Then, sign in using your printer credentials to access the ePOS printer "
 "settings. To sign in, enter `epson` in the :guilabel:`ID` field and your "
@@ -2901,8 +3509,8 @@ msgstr ""
 "`epson` dans le champ :guilabel:`ID` et le numéro de série de votre "
 "imprimante dans le champ :guilabel:`Mot de passe`."
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:78
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:207
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:53
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:182
 msgid ""
 "Click :guilabel:`Certificate List` in the :guilabel:`Authentication` "
 "section, and click :guilabel:`create` to generate a new **Self-Signed "
@@ -2921,8 +3529,8 @@ msgstr ""
 ":guilabel:`Créer` et :guilabel:`Réinitialiser` ou redémarrez l'imprimante "
 "manuellement."
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:85
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:214
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:60
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:189
 msgid ""
 "The self-signed certificate is generated. Reload the page and click "
 ":guilabel:`SSL/TLS` in the :guilabel:`Security` section to ensure "
@@ -2934,13 +3542,13 @@ msgstr ""
 "que le **Certificat auto-signé** est correctement sélectionné dans la "
 "section :guilabel:`Certificat du serveur`."
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:89
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:218
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:64
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:193
 msgid "Export a self-signed certificate"
 msgstr "Exporter un certificat auto-signé"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:91
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:220
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:66
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:195
 msgid ""
 "The export process is heavily dependent on the :abbr:`OS (Operating System)`"
 " and the browser. Start by accessing your ePOS printer settings on your web "
@@ -2954,14 +3562,14 @@ msgstr ""
 "`https://192.168.1.25`). Forcez ensuite la connexion comme il est expliqué "
 "dans l'onglet **Générer un certificat autosigné**."
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:96
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:156
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:225
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:71
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:131
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:200
 msgid "If you are using **Google Chrome**,"
 msgstr "Si vous utilisez **Google Chrome**,"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:98
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:227
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:73
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:202
 msgid ""
 "click :guilabel:`Not secure` next to the search bar, and "
 ":guilabel:`Certificate is not valid`;"
@@ -2975,14 +3583,14 @@ msgstr ""
 "Le bouton dans la navigateur Google Chrome signalant que la Connexion à "
 "l'imprimante n'est pas sécurisée."
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:104
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:233
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:79
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:208
 msgid "go to the :guilabel:`Details` tab and click :guilabel:`Export`;"
 msgstr ""
 "allez à l'onglet :guilabel:`Détails` et cliquez sur :guilabel:`Exporter` ;"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:105
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:234
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:80
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:209
 msgid ""
 "add `.crt` at the end of the file name to ensure it has the correct "
 "extension;"
@@ -2990,8 +3598,8 @@ msgstr ""
 "ajoutez `.crt` à la fin du nom de fichier pour vous assurer qu'il a "
 "l'extension correcte ;"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:106
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:235
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:81
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:210
 msgid ""
 "select :guilabel:`Base64-encoded ASCII, single certificate`, at the bottom "
 "of the pop-up window;"
@@ -2999,14 +3607,14 @@ msgstr ""
 "sélectionnez :guilabel:`ASCII encodé en Base64, certificat unique`, en bas "
 "de la fenêtre contextuelle ;"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:108
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:125
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:237
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:254
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:83
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:100
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:212
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:229
 msgid "save, and the certificate is exported."
 msgstr "enregistrez et le certificat est exporté."
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:111
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:86
 msgid ""
 "Make sure that the certificate ends with the extension `.crt`. Otherwise, "
 "some browsers might not see the file during the import process."
@@ -3015,20 +3623,20 @@ msgstr ""
 "certains navigateurs risquent de ne pas voir le fichier pendant la procédure"
 " d'importation."
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:114
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:168
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:243
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:89
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:143
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:218
 msgid "If you are using **Mozilla Firefox**,"
 msgstr "Si vous utilisez **Mozilla Firefox**,"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:116
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:245
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:91
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:220
 msgid "click the **lock-shaped** icon on the left of the address bar;"
 msgstr ""
 "cliquez sur l'icône en forme de **cadenas** à gauche de la barre d'adresse ;"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:117
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:246
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:92
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:221
 msgid ""
 "go to :menuselection:`Connection not secure --> More information --> "
 "Security tab --> View certificate`;"
@@ -3042,22 +3650,22 @@ msgstr ""
 "Le bouton dans le navigateur Mozilla Firefox signalant que la connexion "
 "n'est pas sécurisée."
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:123
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:252
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:98
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:227
 msgid "scroll down to the :guilabel:`Miscellaneous` section;"
 msgstr "descendez jusqu'à la section :guilabel:`Divers` ;"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:124
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:253
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:99
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:228
 msgid "click :guilabel:`PEM (cert)` in the :guilabel:`Download` section;"
 msgstr ""
 "cliquez sur :guilabel:`PEM (cert)` dans la section :guilabel:`Télécharger` ;"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:127
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:102
 msgid "Import a self-signed certificate"
 msgstr "Importer un certificat auto-signé"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:129
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:104
 msgid ""
 "The import process is heavily dependent on the :abbr:`OS (Operating System)`"
 " and the browser."
@@ -3065,11 +3673,11 @@ msgstr ""
 "La procédure d'importation dépend fortement du système d'exploitation et du "
 "navigateur."
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:134
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:109
 msgid "Windows 10"
 msgstr "Windows 10"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:136
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:111
 msgid ""
 "Windows 10 manages certificates, which means that self-signed certificates "
 "must be imported from the certification file rather than the browser. To do "
@@ -3079,14 +3687,14 @@ msgstr ""
 "signés doivent être importés depuis le fichier de certification plutôt que "
 "depuis le navigateur. Procédez comme suit :"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:139
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:114
 msgid ""
 "open the Windows File Explorer and locate the downloaded certification file;"
 msgstr ""
 "ouvrez l'explorateur de fichiers de Windows et localisez le fichier de "
 "certification téléchargé ;"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:140
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:115
 msgid ""
 "right-click on the certification file and click :guilabel:`Install "
 "Certificate`;"
@@ -3094,7 +3702,7 @@ msgstr ""
 "cliquez droit sur le fichier de certification et cliquez sur "
 ":guilabel:`Installer le certificat` ;"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:142
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:117
 msgid ""
 "select where to install the certificate and for whom - either for the "
 ":guilabel:`Current User` or all users (:guilabel:`Local Machine`). Then, "
@@ -3104,7 +3712,7 @@ msgstr ""
 "l':guilabel:`utilisateur actuel`, soit pour tous les utilisateurs "
 "(:guilabel:`Ordinateur local`). Cliquez ensuite sur :guilabel:`Suivant` ;"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:145
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:120
 msgid ""
 "on the `Certificate Store` screen, tick :guilabel:`Place all certificates in"
 " the following store`, click :guilabel:`Browse...`, and select "
@@ -3115,27 +3723,27 @@ msgstr ""
 "et sélectionnez :guilabel:`Autorités de certification racines de confiance` "
 ";"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:151
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:126
 msgid "click :guilabel:`Finish`, accept the pop-up security window;"
 msgstr ""
 "cliquez sur :guilabel:`Terminer`, acceptez la fenêtre contextuelle de "
 "sécurité ;"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:152
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:127
 msgid "restart the computer to make sure that the changes are applied."
 msgstr ""
 "redémarrez l'ordinateur pour vous assurer que tous les changements sont "
 "appliqués."
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:154
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:129
 msgid "Linux"
 msgstr "Linux"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:158
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:133
 msgid "open Chrome;"
 msgstr "ouvrez Chrome ;"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:159
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:134
 msgid ""
 "go to :menuselection:`Settings --> Privacy and security --> Security --> "
 "Manage certificates`;"
@@ -3143,7 +3751,7 @@ msgstr ""
 "allez à :menuselection:`Paramètres --> Confidentialité et sécurité --> "
 "Sécurité --> Gérer les certificats` ;"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:161
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:136
 msgid ""
 "go to the :guilabel:`Authorities` tab, click :guilabel:`Import`, and select "
 "the exported certification file;"
@@ -3151,24 +3759,24 @@ msgstr ""
 "allez à l'onglet :guilabel:`Autorités`, cliquez sur :guilabel:`Importer` et "
 "sélectionnez le fichier de certification importé ;"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:163
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:138
 msgid "accept all warnings;"
 msgstr "acceptez tous les avertissements ;"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:164
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:139
 msgid "click :guilabel:`ok`;"
 msgstr "cliquez sur :guilabel:`ok` ;"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:165
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:175
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:140
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:150
 msgid "restart your browser."
 msgstr "redémarrez votre navigateur."
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:170
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:145
 msgid "open Firefox;"
 msgstr "ouvrez Firefox ;"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:171
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:146
 msgid ""
 "go to :menuselection:`Settings --> Privacy & Security --> Security --> View "
 "Certificates... --> Import`;"
@@ -3176,19 +3784,19 @@ msgstr ""
 "allez à :menuselection:`Paramètres --> Confidentialité & Sécurité --> "
 "Sécurité --> Afficher les certificats... --> Importer` ; "
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:173
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:148
 msgid "select the exported certification file;"
 msgstr "sélectionnez le fichier de certification exporté ;"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:174
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:149
 msgid "tick the checkboxes and validate;"
 msgstr "cochez les cases à cocher et validez ;"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:177
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:152
 msgid "Mac OS"
 msgstr "Mac OS"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:179
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:154
 msgid ""
 "On Mac OS, you can secure the connection for all browsers by following these"
 " steps:"
@@ -3196,7 +3804,7 @@ msgstr ""
 "Sur Mac OS, vous pouvez sécuriser la connexion pour tous les navigateurs en "
 "suivant les étapes suivantes :"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:181
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:156
 msgid ""
 "open Safari and navigate to your printer's IP address. Doing so leads to a "
 "warning page;"
@@ -3204,7 +3812,7 @@ msgstr ""
 "ouvrez Safari et allez à l'adresse IP de votre imprimante. Une page "
 "d'avertissement s'affiche ;"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:182
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:157
 msgid ""
 "on the warning page,  go to :menuselection:`Show Details --> visit this "
 "website --> Visit Website`, validate;"
@@ -3212,13 +3820,13 @@ msgstr ""
 "sur la page d'avertissement, allez à :menuselection:`Afficher les détails "
 "--> visiter ce site web --> Visiter le site web`, validez ;"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:184
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:159
 msgid "reboot the printer so you can use it with any other browser."
 msgstr ""
 "redémarrez l'imprimante pour pouvoir l'utiliser avec n'importe quel autre "
 "navigateur."
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:186
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:161
 msgid ""
 "To generate and export an SSL certificate and send it to IOS devices, open "
 "**Google Chrome** or **Mozilla Firefox**. Then,"
@@ -3238,7 +3846,7 @@ msgstr ""
 "Bouton dans Google Chrome signalant que la connexion à l'imprimante n'est "
 "pas sécurisée"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:240
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:215
 msgid ""
 "Make sure that the certificate ends with the extension `.crt`. Otherwise, "
 "some browsers might not find the file during the import process."
@@ -3253,11 +3861,11 @@ msgstr ""
 "Le bouton dans Mozilla Firefox signalant que la connexion n'est pas "
 "sécurisée"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:256
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:231
 msgid "Android OS"
 msgstr "Android OS"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:258
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:233
 msgid ""
 "To import an SSL certificate into an Android device, first create and export"
 " it from a computer. Next, transfer the `.crt` file to the device using "
@@ -3268,22 +3876,22 @@ msgstr ""
 " `.crt` vers l'appareil par email, Bluetooth ou USB. Une fois le fichier sur"
 " l'appareil,"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:262
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:237
 msgid "open the settings and search for `certificate`;"
 msgstr "ouvrez les paramètres et recherchez le `certificat` ;"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:263
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:238
 msgid "click :guilabel:`Certificate AC` (Install from device storage);"
 msgstr ""
 "cliquez sur :guilabel:`Certificate AC` (Installer à partir du stockage de "
 "l'appareil) ;"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:264
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:239
 msgid "select the certificate file to install it on the device."
 msgstr ""
 "sélectionnez le fichier de certificat pour l'installer sur l'appareil."
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:267
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:242
 msgid ""
 "The specific steps for installing a certificate may vary depending on the "
 "version of Android and the device manufacturer."
@@ -3291,11 +3899,11 @@ msgstr ""
 "Les étapes spécifiques pour l'installation d'un certificat peuvent dépendre "
 "fortement de la version d'Android et du fabriquant de l'appareil."
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:270
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:245
 msgid "iOS"
 msgstr "iOS"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:272
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:247
 msgid ""
 "To import an SSL certificate into an iOS device, first create and export it "
 "from a computer. Then, transfer the `.crt` file to the device using email, "
@@ -3306,7 +3914,7 @@ msgstr ""
 " `.crt` vers l'appareil par email, Bluetooth ou n'importe quel service de "
 "partage de fichiers."
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:276
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:251
 msgid ""
 "Downloading this file triggers a warning pop-up window. Click "
 ":guilabel:`Allow` to download the configuration profile, and close the "
@@ -3316,30 +3924,30 @@ msgstr ""
 "d'avertissement. Cliquez sur :guilabel:`Autoriser` pour télécharger le "
 "profil de configuration et fermez la deuxième fenêtre contextuelle. Ensuite,"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:279
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:254
 msgid "go to the **Settings App** on the iOS device;"
 msgstr "allez à l'application **Paramètres** sur l'appareil iOS ;"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:280
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:255
 msgid "click :guilabel:`Profile Downloaded` under the user's details box;"
 msgstr ""
 "cliquez sur :guilabel:`Profil téléchargé` dans la boîte de détails de "
 "l'utilisateur ;"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:281
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:256
 msgid "locate the downloaded `.crt` file and select it;"
 msgstr "trouvez le fichier `.crt` téléchargé et sélectionnez-le ;"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:282
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:257
 msgid "click :guilabel:`Install` on the top right of the screen;"
 msgstr "cliquez sur :guilabel:`Installer` en haut à droite de l'écran ;"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:283
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:258
 msgid "if a passcode is set on the device, enter the passcode;"
 msgstr ""
 "si un mot de passe est configuré sur l'appareil, saisissez le mot de passe ;"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:284
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:259
 msgid ""
 "click :guilabel:`Install` on the top right of the certificate warning screen"
 " and the pop-up window;"
@@ -3347,11 +3955,11 @@ msgstr ""
 "cliquez sur :guilabel:`Installer` en haut à droite de l'écran "
 "d'avertissement du certificat et de la fenêtre contextuelle ;"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:286
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:261
 msgid "click :guilabel:`Done`."
 msgstr "cliquez sur :guilabel:`Terminé`."
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:290
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:265
 msgid ""
 "The certificate is installed, but it still needs to be authenticated. To do "
 "so,"
@@ -3359,7 +3967,7 @@ msgstr ""
 "Le certificat est installé, mais il doit toujours être authentifié. Pour ce "
 "faire,"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:292
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:267
 msgid ""
 "go to :menuselection:`Settings --> General --> About > Certificate Trust "
 "Settings`;"
@@ -3367,15 +3975,15 @@ msgstr ""
 "allez aux :menuselection:`Paramètres --> Général --> À propos > Paramètres "
 "de confiance du certificat` ;"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:293
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:268
 msgid "enable the installed certificate using the **slide button**;"
 msgstr "activez le certificat installé à l'aide du **bouton coulissant** ;"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:294
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:269
 msgid "click :guilabel:`Continue` on the pop-up window."
 msgstr "cliquez sur :guilabel:`Continuer` dans la fenêtre contextuelle."
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:297
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:272
 msgid ""
 "If you need to export SSL certificates from an operating system or web "
 "browser that has not been mentioned, search for `export SSL certificate` + "
@@ -3387,7 +3995,7 @@ msgstr ""
 "`exporter certificat SSL` + `le nom de votre navigateur ou système "
 "d'exploitation` dans votre moteur de recherche préféré."
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:300
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:275
 msgid ""
 "Similarly, to import SSL certificates from an unmentioned OS or browser, "
 "search for `import SSL certificate root authority` + `the name of your "
@@ -3398,11 +4006,11 @@ msgstr ""
 "autorité racine` + `le nom de votre navigateur ou système d'opération` dans "
 "votre moteur de recherche préféré."
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:305
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:280
 msgid "Check if the certificate was imported correctly"
 msgstr "Vérifiez si le certificat est correctement importé"
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:307
+#: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:282
 msgid ""
 "To confirm your printer's connection is secure, connect to its IP address "
 "using HTTPS. For example, navigate to `https://192.168.1.25` in your "
@@ -3424,11 +4032,9 @@ msgstr "Connexion sécurisée (HTTPS)"
 #: ../../content/applications/sales/point_of_sale/configuration/https.rst:5
 msgid ""
 "If **Direct Devices** is enabled in a Point of Sale settings (for example, "
-"if you use an ePos printer), HTTP becomes the default protocol."
+"if you use an :doc:`ePos printer <epos_printers>`), HTTP becomes the default"
+" protocol."
 msgstr ""
-"Si l'option **Périphériques connectés** est activée dans les paramètres d'un"
-" point de vente (par exemple, si vous utilisez une imprimante ePos), HTTP "
-"devient le protocole par défaut."
 
 #: ../../content/applications/sales/point_of_sale/configuration/https.rst:9
 msgid "Force your Point of Sale to use a secure connection (HTTPS)"
@@ -3463,10 +4069,6 @@ msgstr "**Clé**: `point_of_sale.enforce_https`"
 #: ../../content/applications/sales/point_of_sale/configuration/https.rst:19
 msgid "**Value**: `True`"
 msgstr "**Valeur**: `True`"
-
-#: ../../content/applications/sales/point_of_sale/configuration/https.rst:22
-msgid ":doc:`epos_ssc`"
-msgstr ":doc:`epos_ssc`"
 
 #: ../../content/applications/sales/point_of_sale/employee_login.rst:3
 msgid "Multi-employee management"
@@ -3676,10 +4278,10 @@ msgid ":doc:`payment_methods/terminals`."
 msgstr ":doc:`payment_methods/terminals`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods.rst:25
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:78
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:46
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:84
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:49
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:63
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:72
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:81
 msgid ""
 "Once the payment method is created, you can select it in your POS settings. "
 "To do so, go to the :ref:`POS' settings <configuration/settings>`, click "
@@ -3773,15 +4375,36 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:9
 msgid ""
-"Adyen works only with businesses processing **more** than **10 million "
-"annually** or invoicing a **minimum** of **1,000** transactions **per "
-"month**."
+"Adyen payment terminals do not require an :doc:`IoT Box "
+"</applications/general/iot>`."
 msgstr ""
-"Adyen travaille uniquement avec des entreprises qui traitent **plus** de "
-"**10 millions par an** ou qui facturent un **minimum** de **1.000** "
-"transactions **par mois**."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:15
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:10
+msgid ""
+"Adyen terminals can be used in many countries, but not worldwide. Check the "
+"`List of countries supported by Adyen <https://docs.adyen.com/point-of-"
+"sale/what-we-support/supported-languages/>`_."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:12
+msgid ""
+"Adyen works only with businesses processing more than **$10 million "
+"annually** or invoicing a minimum of **1,000 transactions per month**."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:16
+msgid ""
+"`List of payment methods supported by Adyen <https://docs.adyen.com/point-"
+"of-sale/what-we-support/payment-methods/>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:17
+msgid ""
+"`List of Adyen terminals <https://docs.adyen.com/point-of-sale/what-we-"
+"support/select-your-terminals/>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:22
 msgid ""
 "Start by creating your Adyen account on `Adyen's website "
 "<https://www.adyen.com/>`_. Then, board your terminal following the steps "
@@ -3791,19 +4414,17 @@ msgstr ""
 "<https://www.adyen.com/>`_. Ensuite, configurez votre terminal en suivant "
 "les étapes décrites sur l'écran de votre terminal."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:19
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:26
 msgid ""
 "`Adyen Docs - Payment terminal quickstart guides "
-"<https://docs.adyen.com/point-of-sale/user-manuals>`_."
+"<https://docs.adyen.com/point-of-sale/user-manuals>`_"
 msgstr ""
-"`Documentation Adyen - Guides de démarrage rapide du terminal de paiement "
-"<https://docs.adyen.com/point-of-sale/user-manuals>`_."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:25
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:31
 msgid "Generate an Adyen API key"
 msgstr "Générer une clé API Adyen"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:27
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:33
 msgid ""
 "The **Adyen API key** is used to authenticate requests from your Adyen "
 "terminal. To generate an API key, go to your :menuselection:`Adyen account "
@@ -3813,7 +4434,7 @@ msgid ""
 "payment method creation <adyen/method-creation>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:34
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:40
 msgid ""
 "`Adyen Docs - API credentials <https://docs.adyen.com/development-"
 "resources/api-credentials#generate-api-key>`_."
@@ -3821,17 +4442,17 @@ msgstr ""
 "`Adyen Docs - Identifiants API <https://docs.adyen.com/development-"
 "resources/api-credentials#generate-api-key>`_."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:40
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:46
 msgid "Locate the Adyen terminal identifier"
 msgstr "Localiser l'identifiant du terminal Adyen"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:42
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:48
 msgid ""
 "The **Adyen Terminal Identifier** is the terminal's serial number, which is "
 "used to identify the hardware."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:45
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:51
 msgid ""
 "To find this number, go to your :menuselection:`Adyen account --> Point of "
 "Sale --> Terminals`, select the terminal to link with, and save its serial "
@@ -3839,55 +4460,55 @@ msgid ""
 " at :ref:`the payment method creation <adyen/method-creation>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:51
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:57
 msgid "Set the Event URLs"
 msgstr "Définir les URLs d'événement"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:53
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:59
 msgid ""
 "For Odoo to know when a payment is made, you must configure the terminal "
 "**Event URLs**. To do so,"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:55
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:61
 msgid "Log in to `Adyen's website <https://www.adyen.com/>`_;"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:56
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:62
 msgid ""
 "Go to :menuselection:`Adyen's dashboard --> Point of Sale --> Terminals` and"
 " select the connected terminal;"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:58
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:64
 msgid "From the terminal settings, click :guilabel:`Integrations`;"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:59
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:65
 msgid ""
 "Set the :guilabel:`Switch to decrypted mode to edit this setting` field as "
 ":guilabel:`Decrypted`;"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:60
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:66
 msgid ""
 "Click the **pencil icon** button and enter your server address, followed by "
 "`/pos_adyen/notification` in the :guilabel:`Event URLs` field;"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:62
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:68
 msgid "Click :guilabel:`Save` at the bottom of the screen to save changes."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:67
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:37
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:73
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:40
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:53
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:15
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:63
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:22
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:72
 msgid "Configure the payment method"
 msgstr "Configuration du mode de paiement"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:69
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:75
 msgid ""
 "Enable the payment terminal :ref:`in the application settings "
 "<configuration/settings>` and :doc:`create the related payment method "
@@ -3895,22 +4516,22 @@ msgid ""
 "select :guilabel:`Adyen` in the :guilabel:`Use a Payment Terminal` field."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:73
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:79
 msgid ""
 "Finally, fill in the mandatory fields with your :ref:`Adyen API key "
 "<adyen/api>`, :ref:`Adyen Terminal Identifier <adyen/identifier>`, and "
 ":guilabel:`Adyen Merchant Account`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:83
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:51
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:89
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:54
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:68
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:86
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:87
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:93
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:96
 msgid "Pay with a payment terminal"
 msgstr "Payer avec un terminal de paiement"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:85
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:91
 msgid ""
 "When processing a payment, select :guilabel:`Adyen` as the payment method. "
 "Check the amount and click on :guilabel:`Send`. Once the payment is "
@@ -3940,7 +4561,7 @@ msgstr ""
 "Cette option ne sera disponible qu'après avoir reçu un message d'erreur vous"
 " informant que la connexion a échoué."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:94
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:100
 msgid "To cancel the payment request, click on :guilabel:`cancel`."
 msgstr "Pour annuler la demande de paiement, cliquez sur :guilabel:`annuler`."
 
@@ -3958,20 +4579,32 @@ msgstr ""
 "La connexion d'un terminal de paiement vous permet d'offrir un flux de "
 "paiement fluide à vos clients et facilite le travail de vos caissiers."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:8
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:9
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:9
 msgid ""
-"Please note that Ingenico is currently only available for customers in the "
-"Benelux."
+"Worldline payment terminals require an :doc:`IoT Box "
+"</applications/general/iot>`."
 msgstr ""
-"Attention : Ingenico n'est actuellement disponible que pour les clients du "
-"Benelux."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:15
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:15
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:10
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:10
+msgid ""
+"Worldline is currently only available in Belgium, the Netherlands and "
+"Luxembourg."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:11
+msgid ""
+"Odoo works with the Ingenico Lane/, Desk/, and Move/ payment terminals as "
+"they support the TLV communication protocol through TCP/IP."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:18
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:19
 msgid "Connect an IoT Box"
 msgstr "Connecter une IoT Box"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:17
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:20
 msgid ""
 "Connecting an Ingenico Payment Terminal to Odoo is a feature that requires "
 "an IoT Box. For more information on how to connect an IoT Box to your "
@@ -3979,11 +4612,11 @@ msgid ""
 "</applications/general/iot/config/connect>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:23
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:26
 msgid "Configure the Lane/5000 for Ingenico BENELUX"
 msgstr "Configurer le terminal Lane/5000 pour Ingenico BENELUX"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:25
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:28
 msgid ""
 "Click on the F button of the terminal, then go in the :menuselection:`PoS "
 "Menu --> Settings` and enter the settings password."
@@ -3991,7 +4624,7 @@ msgstr ""
 "Cliquez sur le bouton F du terminal, puis allez à :menuselection:`Menu PdV "
 "--> Paramètres` et saisissez le mot de passe des paramètres."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:28
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:31
 msgid ""
 "Now, click on connection change and TCP/IP. Type the IP of your *IoT Box* "
 "(you can find it on the form view of your IoT Box). Then, enter 9000 as "
@@ -4004,7 +4637,7 @@ msgstr ""
 "Une fois c'est fait, allez sur le formulaire de votre *IoT Box* dans Odoo et"
 " vérifiez que le terminal a bien été trouvé."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:39
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:42
 msgid ""
 "Enable the payment terminal :ref:`in the application settings "
 "<configuration/settings>` and :doc:`create the related payment method "
@@ -4014,7 +4647,7 @@ msgid ""
 "Device` field."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:53
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:56
 msgid ""
 "In your *PoS interface*, when processing a payment, select a *Payment "
 "Method* using a payment terminal. Check that the amount in the tendered "
@@ -4028,7 +4661,7 @@ msgstr ""
 "au terminal de paiement et cliquez sur *Envoyer*. Dès que le paiement est "
 "fait, le statut passe à *Paiement réussi*."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:62
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:65
 msgid ""
 "If you want to cancel the payment request, click on cancel. You can still "
 "retry to send the payment request."
@@ -4036,7 +4669,7 @@ msgstr ""
 "Si vous voulez annuler la demande de paiement, cliquez sur annuler. Vous "
 "pouvez toujours réessayer d'envoyer la demande de paiement."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:65
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:68
 msgid ""
 "If there is any issue with the payment terminal, you can still force the "
 "payment using the *Force Done*. This will allow you to validate the order in"
@@ -4047,7 +4680,7 @@ msgstr ""
 "permettra de valider la commande dans Odoo même si la connexion entre le "
 "terminal et Odoo rencontre des problèmes."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:71
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:74
 msgid ""
 "This option will only be available if you received an error message telling "
 "you the connection failed."
@@ -4055,7 +4688,7 @@ msgstr ""
 "Cette option ne sera disponible que si vous avez reçu un message d'erreur "
 "vous indiquant que la connexion a échoué."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:74
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:77
 msgid ""
 "Once your payment is processed, on the payment record, you’ll find the type "
 "of card that has been used and the transaction ID."
@@ -4191,7 +4824,7 @@ msgid "Paying with Six"
 msgstr "Payer avec Six"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:79
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:92
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:101
 msgid ""
 "Once your payment is processed, the type of card used and the transaction ID"
 " appear on the payment record."
@@ -4227,13 +4860,37 @@ msgstr "Stripe"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:9
 msgid ""
-":doc:`Use Stripe as payment provider. "
+"Stripe payment terminals do not require an :doc:`IoT Box "
+"</applications/general/iot>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:10
+msgid ""
+"Stripe terminals can be used in many countries, but not worldwide. Check the"
+" `global availability for Stripe Terminal "
+"<https://support.stripe.com/questions/global-availability-for-stripe-"
+"terminal>`_."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:12
+msgid ""
+"Stripe's integration works with `Stripe Terminal smart readers "
+"<https://docs.stripe.com/terminal/smart-readers>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:15
+msgid ""
+":doc:`Stripe as payment provider "
 "<../../../../finance/payment_providers/stripe>`"
 msgstr ""
-":doc:`Utiliser Stripe comme fournisseur de paiement. "
-"<../../../../finance/payment_providers/stripe>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:17
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:16
+msgid ""
+"`List of payment methods supported by Stripe "
+"<https://stripe.com/payments/payment-methods>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:24
 msgid ""
 "Activate **Stripe** in the settings by going to :menuselection:`Point of "
 "Sale --> Configuration --> Settings --> Payment Terminals` and enabling "
@@ -4243,11 +4900,11 @@ msgstr ""
 "Vente --> Configuration --> Paramètres --> Terminaux de paiement` et activez"
 " :guilabel:`Stripe`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:20
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:27
 msgid "Then, create the payment method:"
 msgstr "Créez ensuite le mode de paiement :"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:22
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:29
 msgid ""
 "Go to :menuselection:`Point of Sale --> Configuration --> Payment Methods`, "
 "click :guilabel:`Create`, and complete the :guilabel:`Method` field with "
@@ -4257,7 +4914,7 @@ msgstr ""
 "paiement`, cliquez sur :guilabel:`Créer` et complétez le champ "
 ":guilabel:`Mode` avec le nom de votre mode de paiement ;"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:24
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:31
 msgid ""
 "Set the :guilabel:`Journal` field as :guilabel:`Bank` and the :guilabel:`Use"
 " a Payment Terminal` field as :guilabel:`Stripe`;"
@@ -4265,7 +4922,7 @@ msgstr ""
 "Définissez le champ :guilabel:`Journal` comme :guilabel:`Bank` et le champ "
 ":guilabel:`Utiliser un terminal de paiement` comme :guilabel:`Stripe` ;"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:26
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:33
 msgid ""
 "Enter your payment terminal serial number in the :guilabel:`Stripe Serial "
 "Number` field;"
@@ -4273,7 +4930,7 @@ msgstr ""
 "Saisissez le numéro de série de votre terminal de paiement dans le champ "
 ":guilabel:`Numéro de série Stripe` ;"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:27
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:34
 msgid ""
 "Click :guilabel:`Don't forget to complete Stripe connect before using this "
 "payment method.`"
@@ -4285,7 +4942,7 @@ msgstr ""
 msgid "payment method creation form"
 msgstr "formulaire de création d'un mode de paiement"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:34
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:41
 msgid ""
 "Click :guilabel:`Identify Customer` to allow this payment method "
 "**exclusively** for identified customers. For any unidentified customers to "
@@ -4297,7 +4954,7 @@ msgstr ""
 "clients non identifiés puissent utiliser Stripe, ne cochez pas le champ "
 ":guilabel:`Identifier le client`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:37
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:44
 msgid ""
 "The :guilabel:`Outstanding Account` and the :guilabel:`Intermediary Account`"
 " can stay empty to use the default accounts."
@@ -4305,7 +4962,7 @@ msgstr ""
 "Le :guilabel:`Compte débiteur` et le :guilabel:`Compte intermédiaire` "
 "peuvent rester vides pour utiliser les comptes par défaut."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:39
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:46
 msgid ""
 "Find your payment terminal serial number under the device or on `Stripe's "
 "dashboard <https://dashboard.stripe.com>`_."
@@ -4314,11 +4971,11 @@ msgstr ""
 "l'appareil ou sur le `tableau de bord de Stripe "
 "<https://dashboard.stripe.com>`_."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:43
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:50
 msgid "Connect Stripe to Odoo"
 msgstr "Connecter Stripe à Odoo"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:45
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:52
 msgid ""
 "Click :guilabel:`Connect Stripe`. Doing so redirects you automatically to a "
 "configuration page. Fill in all the information to create your Stripe "
@@ -4342,7 +4999,7 @@ msgstr ""
 msgid "stripe connection form"
 msgstr "formulaire de connexion de Stripe"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:57
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:64
 msgid ""
 "When you use **Stripe** exclusively in Point of Sale, you only need the "
 "**Secret Key** to use your terminal."
@@ -4350,7 +5007,7 @@ msgstr ""
 "Si vous utilisez **Stripe** exclusivement dans le Point de Vente, vous avez "
 "uniquement besoin de la **Clé secrète** pour utiliser votre terminal."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:59
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:66
 msgid ""
 "When you use Stripe as **payment provider**, the :guilabel:`State` can stay "
 "set as :guilabel:`Disabled`."
@@ -4358,7 +5015,7 @@ msgstr ""
 "Si vous utilisez Stripe comme **fournisseur de paiement**, le "
 ":guilabel:`Statut` peut rester défini comme :guilabel:`Désactivé`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:61
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:68
 msgid ""
 "For databases hosted **On-Premise**, the :guilabel:`Connect Stripe` button "
 "does not work. To retrieve the API keys manually, log in to your `Stripe "
@@ -4371,11 +5028,11 @@ msgstr ""
 "<https://dashboard.stripe.com>`_, tapez `API` dans la barre de recherche et "
 "cliquez sur :guilabel:`Développeurs > API`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:67
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:74
 msgid "Configure the payment terminal"
 msgstr "Configurer le terminal de paiement"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:69
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:76
 msgid ""
 "Swipe right on your payment terminal, click :guilabel:`Settings`, enter the "
 "admin PIN code, validate and select your network."
@@ -4384,17 +5041,17 @@ msgstr ""
 ":guilabel:`Paramètres`, saisissez le code PIN administrateur, validez et "
 "sélectionnez votre réseau."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:73
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:80
 msgid "The device must be connected to a secured WI-FI network."
 msgstr "L'appareil doit être connecté à un réseau WI-FI sécurisé."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:74
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:81
 msgid "Your Odoo database and payment terminal must share the same network."
 msgstr ""
 "Votre base de données Odoo et votre terminal de paiement doivent partager le"
 " même réseau."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:75
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:82
 msgid ""
 "You must enter the admin PIN code to access your payment terminal settings. "
 "By default, this code is `07139`."
@@ -4402,11 +5059,11 @@ msgstr ""
 "Vous devez saisir le code PIN administrateur pour accéder aux paramètres de "
 "votre terminal de paiement. Par défaut, ce code est `07139`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:79
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:86
 msgid "Link the payment method to a POS"
 msgstr "Lier le mode de paiement à un PdV"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:81
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:88
 msgid ""
 "To add a **payment method** to your point of sale, go to "
 ":menuselection:`Point of Sale --> Configuration --> Settings`. Select the "
@@ -4420,7 +5077,7 @@ msgstr ""
 "mode de paiement pour **Stripe** dans le champ :guilabel:`Modes de "
 "paiement`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:88
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:95
 msgid ""
 "When processing a payment, select :guilabel:`Stripe` as the payment method. "
 "Check the amount and click :guilabel:`Send`. Once the payment is successful,"
@@ -4432,25 +5089,25 @@ msgstr ""
 "fois le paiement effectué, le statut passe à :guilabel:`Paiement réussi`. "
 "Pour annuler la demande de paiement, cliquez sur :guilabel:`annuler`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:97
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:104
 msgid "The terminal must have at least 10% battery level to use it."
 msgstr ""
 "Le terminal doit avoir un niveau de batterie d'au moins 10% pour pouvoir "
 "être utilisé."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:98
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:105
 msgid "The device does not work for payments under €0.50."
 msgstr "L'appareil ne fonctionne pas pour les paiements inférieurs à 0,50 €."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:101
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:108
 msgid "Troubleshooting"
 msgstr "Troubleshooting"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:104
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:111
 msgid "Payment terminal unavailable in your Stripe account"
 msgstr "Terminal de paiement indisponible dans votre compte Stripe"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:106
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:113
 msgid ""
 "If the payment terminal is unavailable in your Stripe account, you must add "
 "it manually:"
@@ -4458,7 +5115,7 @@ msgstr ""
 "Si le terminal de paiement n'est pas disponible dans votre compte Stripe, "
 "vous devez l'ajouter manuellement :"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:108
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:115
 msgid ""
 "Log into your `Stripe's dashboard <https://dashboard.stripe.com>`_ and go to"
 " :menuselection:`Stripe dashboard --> Payments --> Readers --> Locations`;"
@@ -4467,7 +5124,7 @@ msgstr ""
 "<https://dashboard.stripe.com>`_ et allez à :menuselection:`Tableau de bord "
 "Stripe --> Paiements --> Lecteurs --> Emplacements` ;"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:110
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:117
 msgid ""
 "Add a location by clicking the :guilabel:`+ New` button or selecting an "
 "already created location;"
@@ -4475,7 +5132,7 @@ msgstr ""
 "Ajoutez un emplacement en cliquant sur le bouton :guilabel:`+ Nouveau` ou en"
 " sélectionnant un emplacement déjà créé ;"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:111
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:118
 msgid ""
 "Click the :guilabel:`+ New` button in the :guilabel:`Readers` box and fill "
 "in the required information."
@@ -4483,7 +5140,7 @@ msgstr ""
 "Cliquez sur le bouton :guilabel:`+ Nouveau` dans la case "
 ":guilabel:`Lecteurs` et complétez les informations requises."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:115
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:122
 msgid ""
 "You must provide a **registration code**. To retrieve that code, swipe right"
 " on your device, enter the admin PIN code (by default: `07139`), validate, "
@@ -4576,11 +5233,14 @@ msgstr ""
 msgid "Worldline"
 msgstr "Worldline"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:9
-msgid "Please note that Worldline is currently only available in the Benelux."
-msgstr "Notez que Worldline n'est actuellement disponible qu'au Benelux."
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:11
+msgid ""
+"Odoo is compatible with Worldline terminals that use the CTEP protocol "
+"(e.g., the Yomani XR and Yoximo terminals). If you have any doubts, contact "
+"your payment provider to ensure your terminal's compatibility."
+msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:17
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:21
 msgid ""
 "Connecting a Worldline Payment Terminal to Odoo is a feature that requires "
 "an IoT Box. For more information on how to connect one to your database, "
@@ -4588,11 +5248,11 @@ msgid ""
 "</applications/general/iot/config/connect>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:22
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:26
 msgid "Configure the protocol"
 msgstr "Configurer le protocole"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:24
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:28
 msgid ""
 "From your terminal, click on :menuselection:`\".\" --> 3 --> stop --> 3 --> "
 "0 --> 9`. Enter the technician password **\"1235789\"** and click on "
@@ -4609,11 +5269,11 @@ msgstr ""
 "du ticket ECR* et *Jeu de caractères*). Finalement, appuyez trois fois sur "
 "**Stop** ; le terminal redémarrera automatiquement."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:31
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:35
 msgid "Set the IP address"
 msgstr "Définir l'adresse IP"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:33
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:37
 msgid ""
 "From your terminal, click on :menuselection:`\".\" --> 3 --> stop --> 3 --> "
 "0 --> 9`. Enter the technician password **\"1235789\"** and click on "
@@ -4627,15 +5287,15 @@ msgstr ""
 ":menuselection:`Changer --> TCP/IP` (écran *Configuration physique TCP*) "
 ":menuselection:`--> OK --> OK` (écran *Configuration client TCP*)."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:38
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:42
 msgid "Finally, set up the hostname and port number."
 msgstr "Finalement, configurez le nom d'hôte et le numéro de port."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:41
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:45
 msgid "Hostname"
 msgstr "Nom d'hôte"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:44
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:48
 msgid ""
 "To set up the hostname, enter your IoT box's IP address' sequence numbers "
 "and press **OK** at each \".\" until you reach the colon symbol."
@@ -4644,7 +5304,7 @@ msgstr ""
 "l'adresse IP de votre IoT Box et cliquez sur **OK** à chaque \".\" jusqu'au "
 "symbole des deux points."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:45
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:49
 msgid "Then, press **OK** twice."
 msgstr "Cliquez ensuite deux fois sur **OK**."
 
@@ -4660,7 +5320,7 @@ msgstr ""
 "Sur l'écran du *nom d'hôte*, tapez :menuselection:`10 --> OK --> 30 --> OK "
 "--> 19 --> OK --> 4 --> OK --> OK`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:53
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:57
 msgid ""
 "Your IoT box's IP address is available in your IoT Box application's "
 "database."
@@ -4668,11 +5328,11 @@ msgstr ""
 "L'adresse IP de votre IoT Box est disponible dans la base de données de "
 "votre application IoT Box."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:56
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:60
 msgid "Port number"
 msgstr "Numéro de port"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:58
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:62
 msgid ""
 "On the *Port number* screen, enter **9001** (or **9050** for Windows) and "
 "click on :menuselection:`OK` (*ECR protocol SSL no*) :menuselection:`--> "
@@ -4683,7 +5343,14 @@ msgstr ""
 ":menuselection:`--> OK`. Cliquez trois fois sur **Stop** ; le terminal "
 "redémarre automatiquement."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:65
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:67
+msgid ""
+"For **Windows** IoT devices, it is necessary to add a firewall exception. "
+"Follow the :ref:`additional instructions in the Windows IoT documentation "
+"<iot/windows/wordline>` to add the exception to Windows Firewall."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:74
 msgid ""
 "Enable the payment terminal :ref:`in the application settings "
 "<configuration/settings>` and :doc:`create the related payment method "
@@ -4693,11 +5360,11 @@ msgid ""
 "Device` field."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:79
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:88
 msgid "Technician password: `1235789`"
 msgstr "Mot de passe technicien : `1235789`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:80
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:89
 msgid ""
 "To reach Wordline's technical assistance, call `02 727 61 11` and choose "
 "\"merchant\". Your call is automatically transferred to the desired service."
@@ -4706,7 +5373,7 @@ msgstr ""
 "et choisissez \"marchand\". Votre appel sera automatiquement transféré vers "
 "le bon service."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:82
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:91
 msgid ""
 "Configure the cashier terminal if you have both a customer and a cashier "
 "terminal."
@@ -4714,21 +5381,21 @@ msgstr ""
 "Configurez le terminal de caisse si vous avez à la fois un terminal client "
 "et un terminal de caisse."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:83
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:92
 msgid ""
 "To avoid blocking the terminal, check the initial configuration beforehand."
 msgstr ""
 "Pour éviter de bloquer le terminal, vérifiez au préalable la configuration "
 "initiale."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:84
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:93
 msgid ""
 "Set a fixed IP to your IoT Box’s router to prevent losing the connexion."
 msgstr ""
 "Définissez une adresse IP fixe au routeur de votre IoT Box pour éviter de "
 "perdre la connexion."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:89
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:98
 msgid ""
 "When processing a payment, select *Worldline* as payment method. Check the "
 "amount and click on *Send*. Once the payment is successful, the status "
@@ -4738,7 +5405,7 @@ msgstr ""
 "paiement. Vérifiez le montant et cliquez sur *Envoyer*. Une fois le paiement"
 " effectué, le statut passe à *Paiement réussi*."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:99
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:108
 msgid ""
 "In case of connexion issues between Odoo and the payment terminal, force the"
 " payment by clicking on *Force Done*, which allows you to validate the "
@@ -4750,7 +5417,7 @@ msgstr ""
 "permet de valider la commande. Cette option n'est disponible qu'après avoir "
 "reçu un message d'erreur vous informant que la connexion a échoué."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:102
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:111
 msgid "To cancel the payment request, click on **cancel**."
 msgstr "Pour annuler la demande de paiement, cliquez sur **annuler**."
 
@@ -5669,11 +6336,15 @@ msgstr "Reçu du Point de Vente"
 msgid ":doc:`restaurant/bill_printing`"
 msgstr ":doc:`restaurant/bill_printing`"
 
-#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:24
+#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:22
+msgid ":doc:`configuration/epos_printers`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:25
 msgid "Reprint a receipt"
 msgstr "Réimprimer un reçu"
 
-#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:26
+#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:27
 msgid ""
 "From the POS interface, click :guilabel:`Orders`, open the dropdown "
 "selection menu next to the search bar, and change the default :guilabel:`All"
@@ -5690,7 +6361,7 @@ msgstr ""
 msgid "Print receipt button from the backend"
 msgstr "Bouton d'impression du reçu depuis le backend"
 
-#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:34
+#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:35
 msgid ""
 "You can filter the list of orders using the search bar. Type in your "
 "reference and click :guilabel:`Receipt Number`, :guilabel:`Date`, or "
@@ -5700,11 +6371,11 @@ msgstr ""
 "recherche. Tapez votre référence et cliquez sur :guilabel:`Numéro de reçu`, "
 ":guilabel:`Date`, ou :guilabel:`Client`."
 
-#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:40
+#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:41
 msgid "Invoices"
 msgstr "Factures clients"
 
-#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:42
+#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:43
 msgid ""
 "Point of Sale allows you to issue and print invoices for :ref:`registered "
 "customers <pos/customers>` upon payment and retrieve all past invoiced "
@@ -5714,7 +6385,7 @@ msgstr ""
 ":ref:`clients enregistrés <pos/customers>` lors du paiement et de récupérer "
 "toutes les commandes facturées antérieurement."
 
-#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:46
+#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:47
 msgid ""
 "An invoice created in a POS creates an entry into the corresponding "
 ":ref:`accounting journal <cheat_sheet/journals>`, previously :ref:`set up "
@@ -5724,7 +6395,7 @@ msgstr ""
 "comptable <cheat_sheet/journals>` correspondant, précédemment "
 ":ref:`configuré <receipts_invoices/invoice_configuration>`."
 
-#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:54
+#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:55
 msgid ""
 "To define what journals will be used for a specific POS, go to the "
 ":ref:`POS' settings <configuration/settings>` and scroll down to the "
@@ -5741,11 +6412,11 @@ msgstr ""
 msgid "accounting section in the POS settings"
 msgstr "section comptabilité dans les paramètres du point de vente"
 
-#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:63
+#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:64
 msgid "Invoice a customer"
 msgstr "Facturer un client"
 
-#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:65
+#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:66
 msgid ""
 "Upon processing a payment, click :guilabel:`Invoice` underneath the "
 "customer's name to issue an invoice for that order."
@@ -5753,7 +6424,7 @@ msgstr ""
 "Lors du traitement d'un paiement, cliquez sur :guilabel:`Facture` en dessous"
 " du nom du client afin d'émettre une facture pour cette commande."
 
-#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:68
+#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:69
 msgid ""
 "Select the payment method and click :guilabel:`Validate`. The **invoice** is"
 " automatically issued and ready to be downloaded and/or printed."
@@ -5762,7 +6433,7 @@ msgstr ""
 "**facture** est automatiquement émise et prête à être téléchargée et/ou "
 "imprimée."
 
-#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:72
+#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:73
 msgid ""
 "To be able to issue an invoice, a :ref:`customer <pos/customers>` must be "
 "selected."
@@ -5770,15 +6441,15 @@ msgstr ""
 "Pour pouvoir émettre une facture, vous devez sélectionner un :ref:`client "
 "<pos/customers>`."
 
-#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:75
+#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:76
 msgid "Retrieve invoices"
 msgstr "Récupérer des factures"
 
-#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:77
+#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:78
 msgid "To retrieve invoices from the **POS dashboard**,"
 msgstr "Pour récupérer des factures à partir du **tableau de bord du PdV**,"
 
-#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:79
+#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:80
 msgid ""
 "access all orders made through your POS by going to :menuselection:`Point of"
 " Sale --> Orders --> Orders`;"
@@ -5786,7 +6457,7 @@ msgstr ""
 "accédez à toutes les commandes passées par votre Point de vente en allant au"
 " :menuselection:`Point de vente --> Commandes --> Commandes`;"
 
-#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:81
+#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:82
 msgid ""
 "to access an order's invoice, open the **order form** by selecting the "
 "order, then click :guilabel:`Invoice`."
@@ -5799,7 +6470,7 @@ msgstr ""
 msgid "invoice smart button from an order form"
 msgstr "bouton intelligent de facture sur un formulaire de commande"
 
-#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:88
+#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:89
 msgid ""
 "**Invoiced orders** can be identified by the :guilabel:`Invoiced` status in "
 "the :guilabel:`Status` column."
@@ -5807,7 +6478,7 @@ msgstr ""
 "Les **Commandes facturées** peuvent être identifiées par le statut "
 ":guilabel:`Facturé` dans la colonne :guilabel:`Statut`."
 
-#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:90
+#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:91
 msgid ""
 "You can filter the list of orders to invoiced orders by clicking "
 ":guilabel:`Filters` and :guilabel:`Invoiced`."
@@ -5815,11 +6486,11 @@ msgstr ""
 "Vous pouvez filtrer la liste des commandes sur les commandes facturées en "
 "cliquant sur :guilabel:`Filtres` et :guilabel:`Facturé`."
 
-#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:94
+#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:95
 msgid "QR codes to generate invoices"
 msgstr "Codes QR pour générer des factures"
 
-#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:96
+#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:97
 msgid ""
 "Customers can also request an invoice by scanning the **QR code** printed on"
 " their receipt. Upon scanning, they must fill in a form with their billing "
@@ -5840,7 +6511,7 @@ msgstr ""
 msgid "order status change"
 msgstr "Changement du statut de la commande"
 
-#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:105
+#: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:106
 msgid ""
 "To use this feature, you have to enable QR codes on receipts by going to "
 ":menuselection:`Point of Sale --> Configuration --> Settings`. Then, select "
@@ -20000,25 +20671,31 @@ msgstr ""
 " un \"Délai après déclenchement*. Et comme l'action *Envoyer un email au "
 "client* a été choisie, un *Modèle d'email* peut être choisi."
 
-#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:54
+#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:55
 msgid ""
-"As a result, this alert will send a rating survey after one month, to the "
-"customers who have purchased that specific product. The survey will appear "
-"in the chatter of your respective subscription."
+"Sending a SMS text message in Odoo requires In-App Purchase (IAP) credit or "
+"tokens. For more information on :abbr:`IAP (In-App Purchase)`, visit "
+":doc:`../../essentials/in_app_purchase`. For more information on sending SMS"
+" messages, visit "
+":doc:`../../marketing/sms_marketing/essentials/sms_essentials`."
 msgstr ""
-"Par conséquent, cette alerte enverra une enquête d'évaluation après un mois,"
-" aux clients qui ont acheté ce produit spécifique. L'enquête apparaîtra dans"
-" le chatter de votre abonnement respectif."
+
+#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:60
+msgid ""
+"As a result, this alert sends a rating survey after one month, to the "
+"customers who have purchased that specific product. The survey appears in "
+"the chatter of your respective subscription."
+msgstr ""
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst-1
 msgid "Satisfaction survey in Odoo Subscriptions"
 msgstr "Enquête de satisfaction dans Odoo Abonnements"
 
-#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:63
+#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:68
 msgid "Modify an existing automatic alert"
 msgstr "Modifier une alerte automatique existante"
 
-#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:65
+#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:70
 msgid ""
 "By default, Odoo suggests you an automatic alert called *Take action on less"
 " satisfied clients*."
@@ -20030,7 +20707,7 @@ msgstr ""
 msgid "Modify an existing automatic alert in Odoo Subscriptions"
 msgstr "Modifier une alerte automatique existante dans Odoo Abonnements"
 
-#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:71
+#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:76
 msgid ""
 "This alert is applied to the *Rating Satisfaction* of your customers, and "
 "the action is triggered on *Timed condition*. If their satisfaction rate is "
@@ -20049,7 +20726,7 @@ msgstr ""
 "prises s'ils ne le sont pas. Elle contribue à maintenir un taux de rétention"
 " des clients très élevé."
 
-#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:79
+#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:84
 msgid ""
 "By editing the alert, you can modify the *Apply on*, the *Action* and "
 "*Activity* sections, and adapt them to your own needs."
@@ -20057,7 +20734,7 @@ msgstr ""
 "En éditant l'alerte, vous pouvez modifier l'action *Appliquer sur*, les "
 "sections *Action* et *Activité* et les adapter à vos propres besoins."
 
-#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:83
+#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:88
 #: ../../content/applications/sales/subscriptions/closing.rst:105
 #: ../../content/applications/sales/subscriptions/renewals.rst:80
 #: ../../content/applications/sales/subscriptions/reports.rst:120
@@ -20065,7 +20742,7 @@ msgstr ""
 msgid ":doc:`../subscriptions`"
 msgstr ":doc:`../subscriptions`"
 
-#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:84
+#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:89
 #: ../../content/applications/sales/subscriptions/closing.rst:106
 #: ../../content/applications/sales/subscriptions/renewals.rst:81
 #: ../../content/applications/sales/subscriptions/reports.rst:121
@@ -20073,13 +20750,17 @@ msgstr ":doc:`../subscriptions`"
 msgid ":doc:`plans`"
 msgstr ":doc:`plans`"
 
-#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:85
+#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:90
 #: ../../content/applications/sales/subscriptions/closing.rst:107
 #: ../../content/applications/sales/subscriptions/renewals.rst:82
 #: ../../content/applications/sales/subscriptions/reports.rst:122
 #: ../../content/applications/sales/subscriptions/upselling.rst:85
 msgid ":doc:`products`"
 msgstr ":doc:`products`"
+
+#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:91
+msgid ":doc:`../../essentials/in_app_purchase`"
+msgstr ""
 
 #: ../../content/applications/sales/subscriptions/closing.rst:3
 msgid "Close a subscription"
