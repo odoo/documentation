@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-20 10:19+0000\n"
+"POT-Creation-Date: 2024-04-29 08:05+0000\n"
 "PO-Revision-Date: 2024-04-04 12:26+0000\n"
 "Last-Translator: Larissa Manderfeld, 2024\n"
 "Language-Team: German (https://app.transifex.com/odoo/teams/41243/de/)\n"
@@ -148,6 +148,7 @@ msgstr ""
 ":guilabel:`Verwerfen`: verwirft alle im Pop-up-Fenster vorgenommenen "
 "Änderungen."
 
+#: ../../content/applications/essentials/activities.rst-1
 #: ../../content/applications/essentials/activities.rst-1
 msgid "View of CRM leads and the option to schedule an activity."
 msgstr "Ansicht von CRM-Leads und die Möglichkeit, eine Aktivität zu planen"
@@ -621,295 +622,494 @@ msgstr ":doc:`/applications/productivity/discuss/team_communication`"
 msgid "Export and import data"
 msgstr "Daten exportieren und importieren"
 
-#: ../../content/applications/essentials/export_import_data.rst:8
+#: ../../content/applications/essentials/export_import_data.rst:5
+msgid ""
+"In Odoo, it is sometimes necessary to export or import data for running "
+"reports, or for data modification. This document covers the export and "
+"import of data into and out of Odoo."
+msgstr ""
+"In Odoo ist es manchmal notwendig, Daten zu exportieren oder zu importieren,"
+" um Berichte zu erstellen oder Daten zu ändern. Dieses Dokument behandelt "
+"den Export und Import von Daten in und aus Odoo."
+
+#: ../../content/applications/essentials/export_import_data.rst:9
+msgid ""
+"Sometimes, users run into a 'time out' error, or a record does not process, "
+"due to its size. This can occur with large exports, or in cases where the "
+"import file is too large. To circumvent this limitation surrounding the size"
+" of the records, process exports or imports in smaller batches."
+msgstr ""
+
+#: ../../content/applications/essentials/export_import_data.rst:16
 msgid "Export data from Odoo"
 msgstr "Daten von Odoo exportieren"
 
-#: ../../content/applications/essentials/export_import_data.rst:10
+#: ../../content/applications/essentials/export_import_data.rst:18
 msgid ""
-"When working with a database, it sometimes is necessary to export your data "
-"in a distinct file. Doing so can help to do reporting over your activities "
-"(even if Odoo offers a precise and easy reporting tool with each available "
-"application)."
+"When working with a database, it is sometimes necessary to export data in a "
+"distinct file. Doing so can aid in reporting on activities, although, Odoo "
+"provides a precise and easy reporting tool with each available application."
 msgstr ""
-"Wenn Sie mit einer Datenbank arbeiten, ist es manchmal notwendig, Ihre Daten"
-" in eine separate Datei zu exportieren. Dies kann bei der Erstellung von "
-"Berichten über Ihre Aktivitäten hilfreich sein (auch wenn Odoo mit jeder "
-"verfügbaren Anwendung ein präzises und einfaches Berichtstool anbietet)."
-
-#: ../../content/applications/essentials/export_import_data.rst:14
-msgid ""
-"With Odoo, you can export the values from any field in any record. To do so,"
-" activate the list view on the items that need to be exported, click on "
-"*Action*, and, then, on *Export*."
-msgstr ""
-"Mit Odoo können Sie die Werte aus jedem Feld in jedem Datensatz exportieren."
-" Aktivieren Sie dazu die Listenansicht der Elemente, die exportiert werden "
-"sollen, klicken Sie auf *Aktion* und dann auf *Exportieren*."
-
-#: ../../content/applications/essentials/export_import_data.rst-1
-msgid "view of the different things to enable/click to export data"
-msgstr ""
-"Ansicht der verschiedenen Dinge, die Sie zum Exportieren von Daten "
-"aktivieren/anklicken müssen"
+"Wenn Sie mit einer Datenbank arbeiten, ist es manchmal notwendig, Daten in "
+"eine separate Datei zu exportieren. Dies kann bei der Erstellung von "
+"Berichten über Aktivitäten hilfreich sein. Odoo bietet jedoch mit jeder "
+"verfügbaren App ein präzises und einfaches Berichtstool."
 
 #: ../../content/applications/essentials/export_import_data.rst:22
 msgid ""
-"Pretty simple, this action still comes with some specificities. In fact, "
-"when clicking on *Export*, a pop-up window appears with several options for "
-"the data to export:"
+"With Odoo, the values can be exported from any field in any record. To do "
+"so, activate the list view (:guilabel:`☰ (three horizontal lines)` icon), on"
+" the items that need to be exported, and then select the records that should"
+" be exported. To select a record, tick the checkbox next to the "
+"corresponding record. Finally, click on :guilabel:`⚙️ Action`, and then "
+":guilabel:`Export`."
 msgstr ""
-"Diese Aktion ist zwar recht einfach, weist aber dennoch einige "
-"Besonderheiten auf. Wenn Sie nämlich auf *Exportieren* klicken, erscheint "
-"ein Pop-up-Fenster mit mehreren Optionen für die zu exportierenden Daten:"
+"Mit Odoo können die Werte aus jedem Feld in jedem Datensatz exportiert "
+"werden. Aktivieren Sie dazu die Listenansicht (:guilabel:`☰ (drei "
+"horizontale Linien)` Symbol), auf die zu exportierenden Elemente und wählen "
+"Sie dann die zu exportierenden Datensätze aus. Um einen Datensatz "
+"auszuwählen, markieren Sie das Kontrollkästchen neben dem entsprechenden "
+"Datensatz. Klicken Sie schließlich auf :guilabel:`⚙️ Aktion` und dann auf "
+":guilabel:`Exportieren`."
 
 #: ../../content/applications/essentials/export_import_data.rst-1
-msgid ""
-"overview of all the options to take into account when exporting data in Odoo"
+msgid "View of the different things to enable/click to export data."
 msgstr ""
-"Übersicht über alle Optionen, die beim Export von Daten in Odoo zu "
-"berücksichtigen sind"
 
-#: ../../content/applications/essentials/export_import_data.rst:30
+#: ../../content/applications/essentials/export_import_data.rst:31
 msgid ""
-"With the *I want to update data* option ticked, the system only shows the "
-"fields which can be imported. This is very helpful in case you want to "
-"update existing records. Basically, this works like a filter. Leaving the "
-"box unticked gives way more field options because it shows all the fields, "
-"not just the ones which can be imported."
+"When clicking on :guilabel:`Export`, an :guilabel:`Export Data` pop-over "
+"window appears, with several options for the data to export:"
 msgstr ""
-"Wenn die Option *Ich will Daten aktualisieren* aktiviert ist, zeigt das "
-"System nur die Felder an, die importiert werden können. Dies ist sehr "
-"hilfreich, wenn Sie bestehende Datensätze aktualisieren möchten. Im Grunde "
-"funktioniert dies wie ein Filter. Wenn Sie das Kästchen nicht ankreuzen, "
-"stehen Ihnen wesentlich mehr Feldoptionen zur Verfügung, da alle Felder "
-"angezeigt werden, nicht nur die, die importiert werden können."
 
-#: ../../content/applications/essentials/export_import_data.rst:36
+#: ../../content/applications/essentials/export_import_data.rst-1
+msgid "Overview of options to consider when exporting data in Odoo.."
+msgstr ""
+"Übersicht der Optionen, die beim Export von Daten in Odoo zu berücksichtigen"
+" sind"
+
+#: ../../content/applications/essentials/export_import_data.rst:38
 msgid ""
-"When exporting, you can choose between two formats: .csv and .xls. With "
-".csv, items are separated with a comma, while .xls holds information about "
-"all the worksheets in a file, including both content and formatting."
+"With the :guilabel:`I want to update data (import-compatable export)` option"
+" ticked, the system only shows the fields that can be imported. This is "
+"helpful in the case where the existing records need to be updated. This "
+"works like a filter. Leaving the box unticked, gives many more field options"
+" because it shows all the fields, not just the ones that can be imported."
 msgstr ""
-"Beim Exportieren können Sie zwischen zwei Formaten wählen: .csv und .xls. "
-"Bei .csv werden die Elemente durch ein Komma getrennt, während .xls "
-"Informationen zu allen Arbeitsblättern in einer Datei enthält, "
-"einschließlich Inhalt und Formatierung."
+"Wenn die Option :guilabel:`Ich will Daten aktualisieren (Import-kompatibler "
+"Export)` aktiviert ist, zeigt das System nur die Felder an, die importiert "
+"werden können. Dies ist hilfreich, wenn Sie bestehende Datensätze "
+"aktualisieren möchten. Das funktioniert dies wie ein Filter. Wenn Sie das "
+"Kästchen nicht ankreuzen, stehen Ihnen mehr Feldoptionen zur Verfügung, da "
+"alle Felder angezeigt werden, nicht nur die, die importiert werden können."
 
-#: ../../content/applications/essentials/export_import_data.rst:39
+#: ../../content/applications/essentials/export_import_data.rst:42
 msgid ""
-"Those are the items you may want to export. Use the arrows to display more "
-"sub-field options. Of course, you can use the search bar to find specific "
-"fields more easily. To use the search option more efficiently, display all "
-"the fields by clicking on all the arrows!"
+"When exporting, there is the option to export in two formats: `.csv` and "
+"`.xls`. With `.csv`, items are separated by a comma, while `.xls` holds "
+"information about all the worksheets in a file, including both content and "
+"formatting."
 msgstr ""
-"Dies sind die Elemente, die Sie exportieren möchten. Verwenden Sie die "
-"Pfeile, um weitere Optionen für Unterfelder anzuzeigen. Sie können natürlich"
-" auch die Suchleiste verwenden, um bestimmte Felder leichter zu finden. Um "
-"die Suchoption effizienter zu nutzen, zeigen Sie alle Felder an, indem Sie "
-"auf alle Pfeile klicken!"
-
-#: ../../content/applications/essentials/export_import_data.rst:44
-msgid "The + button is there to add fields to the \"to export\" list."
-msgstr ""
-"Mit der Schaltfläche + können Sie der Liste „Zu exportieren“ Felder "
-"hinzufügen."
 
 #: ../../content/applications/essentials/export_import_data.rst:45
 msgid ""
-"The \"handles\" next to the selected fields allow you to move the fields up "
-"and down to change the order in which they must be displayed in the exported"
-" file."
+"These are the items that can be exported. Use the :guilabel:`> (right "
+"arrow)` icon to display more sub-field options. Use the :guilabel:`Search` "
+"bar to find specific fields. To use the :guilabel:`Search` option more "
+"efficiently, click on all the :guilabel:`> (right arrows)` to display all "
+"fields."
 msgstr ""
-"Mit den „Griffen“ neben den ausgewählten Feldern können Sie die Felder nach "
-"oben und unten verschieben, um die Reihenfolge zu ändern, in der sie in der "
-"exportierten Datei angezeigt werden sollen."
-
-#: ../../content/applications/essentials/export_import_data.rst:48
-msgid "The trashcan is there if you need to remove fields."
-msgstr "Der Mülleimer ist da, wenn Sie Felder entfernen müssen."
+"Dies sind die Elemente, die exportiert werden können. Verwenden Sie das "
+"Symbol :guilabel:`> (Pfeil nach rechts)`, um weitere Optionen für "
+"Unterfelder anzuzeigen. Verwenden Sie die Leiste :guilabel:`Suchen`, um "
+"bestimmte Felder zu finden. Um die Option :guilabel:`Suchen` effizienter zu "
+"nutzen, klicken Sie auf alle :guilabel:`> (Pfeil nach rechts)`, um alle "
+"Felder anzuzeigen."
 
 #: ../../content/applications/essentials/export_import_data.rst:49
 msgid ""
-"For recurring reports, it might be interesting to save export presets. "
-"Select all the needed ones and click on the template bar. There, click on "
-"*New template* and give a name to yours. The next time you need to export "
-"the same list, simply select the related template."
+"The :guilabel:`+ (plus sign)` icon button is present to add fields to the "
+":guilabel:`Fields to export` list."
 msgstr ""
-"Für wiederkehrende Berichte kann es interessant sein, Exportvorgaben zu "
-"speichern. Wählen Sie alle benötigten Vorlagen aus und klicken Sie auf die "
-"Vorlagenleiste. Klicken Sie dort auf *Neue Vorlage* und geben Sie Ihrer "
-"Vorlage einen Namen. Wenn Sie das nächste Mal die gleiche Liste exportieren "
-"müssen, wählen Sie einfach die entsprechende Vorlage aus."
+"Mit der Symbolschaltfläche :guilabel:`+ (Pluszeichen)` können Sie Felder zur"
+" Liste :guilabel:`Zu exportierende Felder` hinzufügen."
+
+#: ../../content/applications/essentials/export_import_data.rst:51
+msgid ""
+"The :guilabel:`↕️ (up-down arrow)` to the left of the selected fields can be"
+" used to move the fields up and down, to change the order in which they are "
+"displayed in the exported file. Drag-and-drop using the :guilabel:`↕️ (up-"
+"down arrow)` icon."
+msgstr ""
+"Mit dem Symbol :guilabel:`↕️ (Pfeil nach oben/unten)` links neben den "
+"ausgewählten Feldern können Sie die Felder nach oben und unten verschieben, "
+"um die Reihenfolge zu ändern, in der sie in der exportierten Datei angezeigt"
+" werden. Ziehen Sie mithilfe des Symbols :guilabel:`↕️ (Pfeil nach "
+"oben/unten)`."
+
+#: ../../content/applications/essentials/export_import_data.rst:54
+msgid ""
+"The :guilabel:`🗑️ (trash can)` icon is used to remove fields. Click on the "
+":guilabel:`🗑️ (trash can)` icon to remove the field."
+msgstr ""
+"Das Symbol :guilabel:`🗑️ (Mülleimer)` wird verwendet, um Felder zu "
+"entfernen. Klicken Sie auf das Symbol :guilabel:`🗑️ (Mülleimer)`, um das "
+"Feld zu entfernen."
 
 #: ../../content/applications/essentials/export_import_data.rst:56
 msgid ""
-"It’s good to keep the field’s external identifier in mind. For example, "
-"*Related Company* is equal to *parent_id*. Doing so helps export only what "
-"you would like to import next."
+"For recurring reports, it is helpful to save export presets. Select all the "
+"needed fields, and click on the template drop-down menu. Once there, click "
+"on :guilabel:`New template`, and give a unique name to the export just "
+"created. The next time the same list needs to be exported, select the "
+"related template that was previously saved from the drop-down menu."
 msgstr ""
-"Es ist gut, wenn Sie den externen Bezeichner des Feldes im Hinterkopf "
-"behalten. Zum Beispiel ist *Zugehöriges Unternehmen* gleich *parent_id*. Auf"
-" diese Weise können Sie nur das exportieren, was Sie als nächstes "
-"importieren möchten."
 
-#: ../../content/applications/essentials/export_import_data.rst:63
+#: ../../content/applications/essentials/export_import_data.rst:62
+msgid ""
+"It is helpful to know the field's external identifier. For example, "
+":guilabel:`Related Company` in the export user interface is equal to "
+"*parent_id* (external identifier). This is helpful because then, the only "
+"data exported is what should be modified and re-imported."
+msgstr ""
+"Es ist hilfreich, die externe Kennung des Feldes zu kennen. Zum Beispiel ist"
+" :guilabel:`Zugehöriges Unternehmen` in der Export-Benutzeroberfläche gleich"
+" *parent_id* (externe Kennung). Dies ist hilfreich, weil dann nur die Daten "
+"exportiert werden, die geändert und wieder importiert werden sollen."
+
+#: ../../content/applications/essentials/export_import_data.rst:69
 msgid "Import data into Odoo"
 msgstr "Daten in Odoo importieren"
 
-#: ../../content/applications/essentials/export_import_data.rst:66
-msgid "How to start"
-msgstr "Loslegen"
-
-#: ../../content/applications/essentials/export_import_data.rst:68
+#: ../../content/applications/essentials/export_import_data.rst:71
 msgid ""
-"You can import data on any Odoo's business object using either Excel (.xlsx)"
-" or CSV (.csv) formats: contacts, products, bank statements, journal entries"
-" and even orders!"
+"Importing data into Odoo is extremely helpful during implementation, or in "
+"times where data needs to be updated in bulk. The following documentation "
+"covers how to import data into an Odoo database."
 msgstr ""
-"Sie können Daten zu jedem Odoo-Geschäftsobjekt entweder im Excel- (.xlsx) "
-"oder CSV-Format (.csv) importieren: Kontakte, Produkte, Kontoauszüge, "
-"Journalbuchungen und sogar Aufträgen!"
+"Das Importieren von Daten in Odoo ist äußerst hilfreich bei der "
+"Implementierung oder in Zeiten, in denen Daten in großen Mengen aktualisiert"
+" werden müssen. Die folgende Dokumentation beschreibt, wie Sie Daten in eine"
+" Odoo-Datenbank importieren können."
 
-#: ../../content/applications/essentials/export_import_data.rst:72
+#: ../../content/applications/essentials/export_import_data.rst:75
 msgid ""
-"Open the view of the object you want to populate and click on "
-":menuselection:`Favorites --> Import records`."
+"Imports are permanent and **cannot** be undone. However, it is possible to "
+"use filters (`created on` or `last modified`) to identify records changed or"
+" created by the import."
 msgstr ""
-"Öffnen Sie die Ansicht des Objekts, das Sie befüllen möchten, und klicken "
-"Sie auf :menuselection:`Favoriten --> Datensätze importieren`."
+"Importe sind permanent und **können** nicht rückgängig gemacht werden. Es "
+"ist jedoch möglich, Filter (`erstellt am` oder `letzte Änderung`) zu "
+"verwenden, um Datensätze zu identifizieren, die durch den Import geändert "
+"oder erstellt wurden."
 
-#: ../../content/applications/essentials/export_import_data.rst:78
+#: ../../content/applications/essentials/export_import_data.rst:79
 msgid ""
-"There you are provided with templates you can easily populate with your own "
-"data. Such templates can be imported in one click; The data mapping is "
-"already done."
+"Activating :ref:`developer mode <developer-mode>` changes the visible import"
+" settings in the left menu. Doing so reveals an :menuselection:`Advanced` "
+"menu. Included in this advanced menu are two options: :guilabel:`Track "
+"history during import` and :guilabel:`Allow matching with subfields`."
 msgstr ""
-"Dort werden Ihnen Vorlagen zur Verfügung gestellt, die Sie einfach mit Ihren"
-" eigenen Daten füllen können. Solche Vorlagen können mit einem Klick "
-"importiert werden; die Datenzuordnung ist bereits erledigt."
+"Wenn Sie den :ref:`Entwicklermodus <developer-mode>` aktivieren, werden die "
+"sichtbaren Importeinstellungen im linken Menü geändert. Dadurch wird ein "
+"Menü :menuselection:`Erweitert` angezeigt. In diesem erweiterten Menü finden"
+" Sie zwei Optionen: :guilabel:`Historie während des Imports verfolgen` und "
+":guilabel:`Übereinstimmung mit Unterfeldern zulassen`."
 
-#: ../../content/applications/essentials/export_import_data.rst:83
-msgid "How to adapt the template"
-msgstr "Wie die Vorlage angepasst wird"
-
-#: ../../content/applications/essentials/export_import_data.rst:85
-msgid "Add, remove and sort columns to fit at best your data structure."
-msgstr ""
-"Fügen Sie Spalten hinzu, entfernen Sie sie und sortieren Sie sie so, dass "
-"sie am besten zu Ihrer Datenstruktur passen."
-
-#: ../../content/applications/essentials/export_import_data.rst:86
-msgid "We advise to not remove the **ID** one (see why in the next section)."
-msgstr ""
-"Wir raten Ihnen, die **ID** nicht zu entfernen (warum, erfahren Sie im "
-"nächsten Abschnitt)."
+#: ../../content/applications/essentials/export_import_data.rst-1
+msgid "Advanced import options when developer mode is activated."
+msgstr "Erweiterte Importoptionen im aktivierten Entwicklermodus."
 
 #: ../../content/applications/essentials/export_import_data.rst:87
-#: ../../content/applications/essentials/export_import_data.rst:376
 msgid ""
-"Set a unique ID to every single record by dragging down the ID sequencing."
+"If the model uses openchatter, the :guilabel:`Track history during import` "
+"option sets up subscriptions and sends notifications during the import, but "
+"leads to a slower import."
 msgstr ""
-"Legen Sie für jeden einzelnen Datensatz eine eindeutige ID fest, indem Sie "
-"die ID-Sequenzierung nach unten ziehen."
+"Wenn das Modell openchatter verwendet, richtet die Option "
+":guilabel:`Historie während des Imports verfolgen` Abonnements ein und "
+"sendet Benachrichtigungen während des Imports, führt aber zu einem "
+"langsameren Import."
 
-#: ../../content/applications/essentials/export_import_data.rst:92
+#: ../../content/applications/essentials/export_import_data.rst:90
 msgid ""
-"When you add a new column, Odoo might not be able to map it automatically if"
-" its label doesn't fit any field in Odoo. Don't worry! You can map new "
-"columns manually when you test the import. Search the list for the "
-"corresponding field."
+"Should the :guilabel:`Allow matching with subfields` option be selected, "
+"then all subfields within a field are used to match under the "
+":guilabel:`Odoo Field` while importing."
 msgstr ""
-"Wenn Sie eine neue Spalte hinzufügen, ist Odoo möglicherweise nicht in der "
-"Lage, sie automatisch zuzuordnen, wenn ihre Bezeichnung zu keinem Feld in "
-"Odoo passt. Machen Sie sich keine Sorgen! Sie können neue Spalten manuell "
-"zuordnen, wenn Sie den Import testen. Suchen Sie in der Liste nach dem "
-"entsprechenden Feld."
+"Wenn die Option :guilabel:`Übereinstimmung mit Unterfeldern zulassen` "
+"aktiviert ist, werden beim Import alle Unterfelder innerhalb eines Feldes "
+"zum Abgleich unter dem :guilabel:`Odoo-Feld` verwendet."
+
+#: ../../content/applications/essentials/export_import_data.rst:94
+msgid "Get started"
+msgstr "Loslegen"
+
+#: ../../content/applications/essentials/export_import_data.rst:96
+msgid ""
+"Data can be imported on any Odoo business object using either Excel "
+"(`.xlsx`) or :abbr:`CSV (Comma-separated Values)` (`.csv`) formats. This "
+"includes: contacts, products, bank statements, journal entries, and orders."
+msgstr ""
+"Daten können für jedes Odoo-Geschäftsobjekt entweder in den Formaten Excel "
+"(`.xlsx`) oder :abbr:`CSV (Comma-separated Values)` (`.csv`) importiert "
+"werden. Dazu gehören: Kontakte, Produkte, Kontoauszüge, Journalbuchungen und"
+" Aufträge."
 
 #: ../../content/applications/essentials/export_import_data.rst:100
 msgid ""
-"Then, use this field's label in your file in order to make it work straight "
-"on the very next time."
+"Open the view of the object to which the data should be imported/populated, "
+"and click on :menuselection:`⭐ Favorites --> Import records`."
 msgstr ""
-"Verwenden Sie dann die Bezeichnung dieses Feldes in Ihrer Datei, damit es "
-"beim nächsten Mal direkt funktioniert."
+"Öffnen Sie die Ansicht des Objekts, in das die Daten importiert/aufgefüllt "
+"werden sollen, und klicken Sie auf :menuselection:`⭐ Favoriten --> "
+"Datensätze importieren`."
 
-#: ../../content/applications/essentials/export_import_data.rst:104
-msgid "How to import from another application"
-msgstr "Wie aus einer anderen App importiert wird"
-
-#: ../../content/applications/essentials/export_import_data.rst:106
-msgid ""
-"In order to re-create relationships between different records, you should "
-"use the unique identifier from the original application and map it to the "
-"**ID** (External ID) column in Odoo. When you import another record that "
-"links to the first one, use **XXX/ID** (XXX/External ID) to the original "
-"unique identifier. You can also find this record using its name but you will"
-" be stuck if at least 2 records have the same name."
+#: ../../content/applications/essentials/export_import_data.rst-1
+msgid "Favorites menu revealed with the import records option highlighted."
 msgstr ""
-"Um Beziehungen zwischen verschiedenen Datensätzen neu zu erstellen, sollten "
-"Sie den eindeutigen Bezeichner aus der ursprünglichen Anwendung verwenden "
-"und ihn der Spalte **ID** (Externe ID) in Odoo zuordnen. Wenn Sie einen "
-"weiteren Datensatz importieren, der mit dem ersten Datensatz verknüpft ist, "
-"verwenden Sie **XXX/ID** (XXX/Externe ID) für den ursprünglichen eindeutigen"
-" Bezeichner. Sie können diesen Datensatz auch über seinen Namen finden, aber"
-" Sie werden nicht weiterkommen, wenn mindestens 2 Datensätze denselben Namen"
-" haben."
+"Das Menü Favoriten wird angezeigt und die Option Datensätze importieren ist "
+"markiert."
 
-#: ../../content/applications/essentials/export_import_data.rst:114
+#: ../../content/applications/essentials/export_import_data.rst:107
 msgid ""
-"The **ID** will also be used to update the original import if you need to "
-"re-import modified data later, it's thus good practice to specify it "
-"whenever possible."
+"After clicking :guilabel:`Import records`, Odoo reveals a separate page with"
+" templates that can be downloaded and populated with the company's own data."
+" Such templates can be imported in one click, since the data mapping is "
+"already done. To download a template click :guilabel:`Import Template for "
+"Customers` at the center of the page."
 msgstr ""
-"Die **ID** wird auch verwendet, um den ursprünglichen Import zu "
-"aktualisieren, wenn Sie später geänderte Daten erneut importieren müssen. Es"
-" ist daher eine gute Praxis, sie wann immer möglich anzugeben."
 
-#: ../../content/applications/essentials/export_import_data.rst:120
-msgid "I cannot find the field I want to map my column to"
-msgstr "Ich kann das Feld, dem ich meine Spalte zuordnen möchte, nicht finden"
-
-#: ../../content/applications/essentials/export_import_data.rst:122
+#: ../../content/applications/essentials/export_import_data.rst:113
 msgid ""
-"Odoo tries to find with some heuristic, based on the first ten lines of the "
-"files, the type of field for each column inside your file. For example if "
-"you have a column only containing numbers, only the fields that are of type "
-"*Integer* will be displayed for you to choose from. While this behavior "
-"might be good and easy for most cases, it is also possible that it goes "
-"wrong or that you want to map your column to a field that is not proposed by"
-" default."
+"When importing a :abbr:`CSV (Comma-separated Values)` file, Odoo provides "
+":guilabel:`Formatting` options. These options do **not** appear when "
+"importing the proprietary Excel file type (`.xls`, `.xlsx`)."
 msgstr ""
-"Odoo versucht, anhand der ersten zehn Zeilen der Dateien mit einer Heuristik"
-" den Feldtyp für jede Spalte in Ihrer Datei zu finden. Wenn Sie zum Beispiel"
-" eine Spalte haben, die nur Zahlen enthält, werden nur die Felder vom Typ "
-"*Ganzzahl* zur Auswahl angezeigt. Obwohl dieses Verhalten in den meisten "
-"Fällen gut und einfach ist, ist es auch möglich, dass es schief geht oder "
-"dass Sie Ihre Spalte einem Feld zuordnen möchten, das nicht standardmäßig "
-"vorgeschlagen wird."
 
-#: ../../content/applications/essentials/export_import_data.rst:131
-msgid ""
-"If that happens, you just have to check the ** Show fields of relation "
-"fields (advanced)** option, you will then be able to choose from the "
-"complete list of fields for each column."
+#: ../../content/applications/essentials/export_import_data.rst:0
+msgid "Formatting options presented when a CVS file is imported in Odoo."
 msgstr ""
-"In diesem Fall müssen Sie nur die Option **Felder der Beziehungsfelder "
-"anzeigen (erweitert)** aktivieren, dann können Sie aus der vollständigen "
-"Liste der Felder für jede Spalte wählen."
 
-#: ../../content/applications/essentials/export_import_data.rst:139
-msgid "Where can I change the date import format?"
-msgstr "Wo kann ich das Format für den Datumsimport ändern?"
-
-#: ../../content/applications/essentials/export_import_data.rst:141
+#: ../../content/applications/essentials/export_import_data.rst:121
 msgid ""
-"Odoo can automatically detect if a column is a date, and it will try to "
-"guess the date format from a set of most commonly used date formats. While "
-"this process can work for many date formats, some date formats will not be "
-"recognized. This can cause confusion due to day-month inversions; it is "
-"difficult to guess which part of a date format is the day and which part is "
-"the month in a date such as '01-03-2016'."
+"Make necessary adjustments to the *Formatting* options, and ensure all "
+"columns in the :guilabel:`Odoo field` and :guilabel:`File Column` are free "
+"of errors. Finally, click :guilabel:`Import` to import the data."
+msgstr ""
+"Nehmen Sie die erforderlichen Anpassungen an den *Formatierungsoptionen* vor"
+" und stellen Sie sicher, dass alle Spalten in den Feldern :guilabel:`Odoo` "
+"und :guilabel:`Dateispalte` fehlerfrei sind. Klicken Sie schließlich auf "
+":guilabel:`Importieren`, um die Daten zu importieren."
+
+#: ../../content/applications/essentials/export_import_data.rst:126
+msgid "Adapt a template"
+msgstr "Eine Vorlage anpassen"
+
+#: ../../content/applications/essentials/export_import_data.rst:128
+msgid ""
+"Import templates are provided in the import tool of the most common data to "
+"import (contacts, products, bank statements, etc.). Open them with any "
+"spreadsheet software (*Microsoft Office*, *OpenOffice*, *Google Drive*, "
+"etc.)."
+msgstr ""
+"Im Import-Tool werden Importvorlagen für die am häufigsten zu importierenden"
+" Daten (Kontakte, Produkte, Kontoauszüge usw.) bereitgestellt. Sie können "
+"sie mit jeder Tabellenkalkulationssoftware (*Microsoft Office*, "
+"*OpenOffice*, *Google Drive*, etc.) öffnen."
+
+#: ../../content/applications/essentials/export_import_data.rst:132
+msgid "Once the template is downloaded, proceed to follow these steps:"
+msgstr ""
+"Sobald Sie die Vorlage heruntergeladen haben, folgen Sie diesen Schritten:"
+
+#: ../../content/applications/essentials/export_import_data.rst:134
+msgid "Add, remove, and sort columns to best fit the data structure."
+msgstr ""
+
+#: ../../content/applications/essentials/export_import_data.rst:135
+msgid ""
+"It is strongly advised to **not** remove the :guilabel:`External ID` (ID) "
+"column (see why in the next section)."
+msgstr ""
+"Es wird dringend empfohlen, die ID-Spalte :guilabel:`Externe ID` **nicht** "
+"zu entfernen (siehe warum im nächsten Abschnitt)."
+
+#: ../../content/applications/essentials/export_import_data.rst:137
+msgid ""
+"Set a unique ID to every record by dragging down the ID sequencing in the "
+":guilabel:`External ID` (ID) column."
+msgstr ""
+"Legen Sie für jeden Datensatz eine eindeutige ID fest, indem Sie die ID-"
+"Reihenfolge in der Spalte :guilabel:`Externe ID` (ID) nach unten ziehen."
+
+#: ../../content/applications/essentials/export_import_data.rst-1
+msgid ""
+"An animation of the mouse dragging down the ID column, so each record has a "
+"unique ID."
+msgstr ""
+"Eine Animation der Maus, die die ID-Spalte verschiebt, damit jeder Eintrag "
+"eine eigene ID hat."
+
+#: ../../content/applications/essentials/export_import_data.rst:145
+msgid ""
+"When a new column is added, Odoo may not be able to map it automatically, if"
+" its label does not fit any field within Odoo. However, new columns can be "
+"mapped manually when the import is tested. Search the drop-down menu for the"
+" corresponding field."
+msgstr ""
+"Wenn Sie eine neue Spalte hinzufügen, ist Odoo möglicherweise nicht in der "
+"Lage, sie automatisch zuzuordnen, wenn ihre Bezeichnung zu keinem Feld in "
+"Odoo passt. Sie können jedoch neue Spalten manuell zuordnen, wenn Sie den "
+"Import testen. Suchen Sie im Dropdown-Menü nach dem entsprechenden Feld."
+
+#: ../../content/applications/essentials/export_import_data.rst-1
+msgid "Drop-down menu expanded in the initial import screen on Odoo."
+msgstr ""
+
+#: ../../content/applications/essentials/export_import_data.rst:153
+msgid ""
+"Then, use this field's label in the import file to ensure future imports are"
+" successful."
+msgstr ""
+"Verwenden Sie dann die Bezeichnung dieses Feldes in der Importdatei, um "
+"sicherzustellen, dass zukünftige Importe erfolgreich sind."
+
+#: ../../content/applications/essentials/export_import_data.rst:156
+msgid ""
+"Another useful way to find out the proper column names to import is to "
+"export a sample file using the fields that should be imported. This way, if "
+"there is not a sample import template, the names are accurate."
+msgstr ""
+
+#: ../../content/applications/essentials/export_import_data.rst:161
+msgid "Import from another application"
+msgstr "Von anderer App importieren"
+
+#: ../../content/applications/essentials/export_import_data.rst:163
+msgid ""
+"The :guilabel:`External ID` (ID) is a unique identifier for the line item. "
+"Feel free to use one from previous software to facilitate the transition to "
+"Odoo."
+msgstr ""
+"Die :guilabel:`Externe ID` (ID) ist eine eindeutige Kennung für die "
+"Position. Sie können gerne die aus Ihrer vorherigen Software verwenden, um "
+"den Übergang zu Odoo zu erleichtern."
+
+#: ../../content/applications/essentials/export_import_data.rst:166
+msgid ""
+"Setting an ID is not mandatory when importing, but it helps in many cases:"
+msgstr ""
+"Die Angabe einer ID ist beim Importieren nicht zwingend erforderlich, aber "
+"in vielen Fällen hilfreich:"
+
+#: ../../content/applications/essentials/export_import_data.rst:168
+msgid ""
+"Update imports: import the same file several times without creating "
+"duplicates."
+msgstr ""
+"Importe aktualisieren: Importieren Sie dieselbe Datei mehrmals, ohne "
+"Duplikate zu erzeugen."
+
+#: ../../content/applications/essentials/export_import_data.rst:169
+msgid ":ref:`Import relation fields <export_import_data/relation-fields>`."
+msgstr ""
+":ref:`Beziehungsfelder importieren <export_import_data/relation-fields>`."
+
+#: ../../content/applications/essentials/export_import_data.rst:171
+msgid ""
+"To recreate relationships between different records, the unique identifier "
+"from the original application should be used to map it to the "
+":guilabel:`External ID` (ID) column in Odoo."
+msgstr ""
+"Um Beziehungen zwischen verschiedenen Datensätzen wiederherzustellen, "
+"sollten Sie die eindeutige Kennung aus der ursprünglichen App verwenden, um "
+"sie der ID-Spalte :guilabel:`Externe ID` in Odoo zuzuordnen."
+
+#: ../../content/applications/essentials/export_import_data.rst:174
+msgid ""
+"When another record is imported that links to the first one, use **XXX/ID** "
+"(XXX/External ID) for the original unique identifier. This record can also "
+"be found using its name."
+msgstr ""
+"Wenn ein weiterer Datensatz importiert wird, der mit dem ersten Datensatz "
+"verknüpft ist, verwenden Sie **XXX/ID** (XXX/Externe ID) für die "
+"ursprüngliche eindeutige Kennung. Dieser Datensatz kann auch über seinen "
+"Namen gefunden werden."
+
+#: ../../content/applications/essentials/export_import_data.rst:178
+msgid ""
+"It should be noted that there will be a conflict if two or more records have"
+" the same name."
+msgstr ""
+"Beachten Sie, dass es zu einem Konflikt kommt, wenn zwei oder mehr "
+"Datensätze denselben Namen haben."
+
+#: ../../content/applications/essentials/export_import_data.rst:180
+msgid ""
+"The :guilabel:`External ID` (ID) can also be used to update the original "
+"import, if modified data needs to be re-imported later, therefore, it is a "
+"good practice to specify it whenever possible."
+msgstr ""
+"Die :guilabel:`Externe ID` (ID) kann auch verwendet werden, um den "
+"ursprünglichen Import zu aktualisieren, wenn geänderte Daten später erneut "
+"importiert werden müssen. Es ist daher eine gute Praxis, sie anzugeben, wann"
+" immer dies möglich ist."
+
+#: ../../content/applications/essentials/export_import_data.rst:184
+msgid "Field missing to map column"
+msgstr "Fehlendes Feld für Spaltenzuordnung"
+
+#: ../../content/applications/essentials/export_import_data.rst:186
+msgid ""
+"Odoo heuristically tries to find the type of field for each column inside "
+"the imported file, based on the first ten lines of the files."
+msgstr ""
+"Odoo versucht heuristisch, den Feldtyp für jede Spalte in der importierten "
+"Datei zu finden, basierend auf den ersten zehn Zeilen der Dateien."
+
+#: ../../content/applications/essentials/export_import_data.rst:189
+msgid ""
+"For example, if there is a column only containing numbers, only the fields "
+"with the *integer* type are presented as options."
+msgstr ""
+
+#: ../../content/applications/essentials/export_import_data.rst:192
+msgid ""
+"While this behavior might be beneficial in most cases, it is also possible "
+"that it could fail, or the column may be mapped to a field that is not "
+"proposed by default."
+msgstr ""
+"Obwohl dieses Verhalten in den meisten Fällen vorteilhaft ist, ist es auch "
+"möglich, dass es fehlschlägt oder dass die Spalte einem Feld zugeordnet "
+"wird, das nicht standardmäßig vorgeschlagen wird."
+
+#: ../../content/applications/essentials/export_import_data.rst:195
+msgid ""
+"If this happens, check the :guilabel:`Show fields of relation fields "
+"(advanced) option`, then a complete list of fields becomes available for "
+"each column."
+msgstr ""
+"Wenn dies der Fall ist, aktivieren Sie die erweiterte Option "
+":guilabel:`Felder der Beziehungsfelder anzeigen`, dann wird für jede Spalte "
+"eine vollständige Liste von Feldern verfügbar."
+
+#: ../../content/applications/essentials/export_import_data.rst-1
+msgid "Searching for the field to match the tax column."
+msgstr "Suche des Felds zum Abgleich der Steuerspalte."
+
+#: ../../content/applications/essentials/export_import_data.rst:203
+msgid "Change data import format"
+msgstr ""
+
+#: ../../content/applications/essentials/export_import_data.rst:206
+msgid ""
+"Odoo can automatically detect if a column is a date, and tries to guess the "
+"date format from a set of most commonly used date formats. While this "
+"process can work for many date formats, some date formats are not "
+"recognizable. This can cause confusion, due to day-month inversions; it is "
+"difficult to guess which part of a date format is the day, and which part is"
+" the month, in a date, such as `01-03-2016`."
 msgstr ""
 "Odoo kann automatisch erkennen, ob es sich bei einer Spalte um ein Datum "
 "handelt, und es versucht, das Datumsformat aus einer Reihe der am häufigsten"
@@ -917,353 +1117,393 @@ msgstr ""
 "Datumsformate funktionieren, aber einige Datumsformate werden nicht erkannt."
 " Dies kann aufgrund von Tag-Monat-Invertierungen zu Verwirrung führen; es "
 "ist schwierig zu erraten, welcher Teil eines Datumsformats der Tag und "
-"welcher Teil der Monat in einem Datum wie „01-03-2016“ ist."
-
-#: ../../content/applications/essentials/export_import_data.rst:147
-msgid ""
-"To view which date format Odoo has found from your file you can check the "
-"**Date Format** that is shown when clicking on **Options** under the file "
-"selector. If this format is incorrect you can change it to your liking using"
-" the *ISO 8601* to define the format."
-msgstr ""
-"Um zu sehen, welches Datumsformat Odoo in Ihrer Datei gefunden hat, können "
-"Sie das **Datumsformat** überprüfen, das angezeigt wird, wenn Sie auf "
-"**Optionen** unter der Dateiauswahl klicken. Wenn dieses Format nicht "
-"korrekt ist, können Sie es nach Ihren Wünschen ändern, indem Sie das Format "
-"mit *ISO 8601* definieren."
-
-#: ../../content/applications/essentials/export_import_data.rst:152
-msgid ""
-"If you are importing an excel (.xls, .xlsx) file, you can use date cells to "
-"store dates as the display of dates in excel is different from the way it is"
-" stored. That way you will be sure that the date format is correct in Odoo "
-"whatever your locale date format is."
-msgstr ""
-"Wenn Sie eine Excel-Datei (.xls, .xlsx) importieren, können Sie Datumszellen"
-" zum Speichern von Datumsangaben verwenden, da die Anzeige von Datumsangaben"
-" in Excel anders ist als die Speicherung. Auf diese Weise können Sie sicher "
-"sein, dass das Datumsformat in Odoo korrekt ist, unabhängig vom Datumsformat"
-" Ihres Gebietsschemas."
-
-#: ../../content/applications/essentials/export_import_data.rst:157
-msgid "Can I import numbers with currency sign (e.g.: $32.00)?"
-msgstr "Kann ich Zahlen mit Währungszeichen importieren (z. B.: 32,00 $)?"
-
-#: ../../content/applications/essentials/export_import_data.rst:159
-msgid ""
-"Yes, we fully support numbers with parenthesis to represent negative sign as"
-" well as numbers with currency sign attached to them. Odoo also "
-"automatically detect which thousand/decimal separator you use (you can "
-"change those under **options**). If you use a currency symbol that is not "
-"known to Odoo, it might not be recognized as a number though and it will "
-"crash."
-msgstr ""
-"Ja, wir unterstützen Zahlen mit Klammern, um negative Vorzeichen "
-"darzustellen, sowie Zahlen mit angehängtem Währungszeichen. Odoo erkennt "
-"auch automatisch, welches Tausender-/Dezimaltrennzeichen Sie verwenden (Sie "
-"können dies unter **Optionen** ändern). Wenn Sie ein Währungssymbol "
-"verwenden, das Odoo nicht bekannt ist, wird es möglicherweise nicht als Zahl"
-" erkannt und es kommt zu einem Absturz."
-
-#: ../../content/applications/essentials/export_import_data.rst:164
-msgid ""
-"Examples of supported numbers (using thirty-two thousands as an example):"
-msgstr ""
-"Beispiele für unterstützte Zahlen (am Beispiel von zweiunddreißigtausend):"
-
-#: ../../content/applications/essentials/export_import_data.rst:166
-msgid "32.000,00"
-msgstr "32.000,00"
-
-#: ../../content/applications/essentials/export_import_data.rst:167
-msgid "32000,00"
-msgstr "32000,00"
-
-#: ../../content/applications/essentials/export_import_data.rst:168
-msgid "32,000.00"
-msgstr "32,000.00"
-
-#: ../../content/applications/essentials/export_import_data.rst:169
-msgid "-32000.00"
-msgstr "-32000.00"
-
-#: ../../content/applications/essentials/export_import_data.rst:170
-msgid "(32000.00)"
-msgstr "(32000.00)"
-
-#: ../../content/applications/essentials/export_import_data.rst:171
-msgid "$ 32.000,00"
-msgstr "$ 32.000,00"
-
-#: ../../content/applications/essentials/export_import_data.rst:172
-msgid "(32000.00 €)"
-msgstr "(32000.00 €)"
-
-#: ../../content/applications/essentials/export_import_data.rst:174
-msgid "Example that will not work:"
-msgstr "Beispiel, was nicht funktionieren wird:"
-
-#: ../../content/applications/essentials/export_import_data.rst:176
-msgid "ABC 32.000,00"
-msgstr "ABC 32.000,00"
-
-#: ../../content/applications/essentials/export_import_data.rst:177
-msgid "$ (32.000,00)"
-msgstr "$ (32.000,00)"
-
-#: ../../content/applications/essentials/export_import_data.rst:180
-msgid "What can I do when the Import preview table isn't displayed correctly?"
-msgstr ""
-"Was kann ich tun, wenn die Tabelle der Importvorschau nicht korrekt "
-"angezeigt wird?"
-
-#: ../../content/applications/essentials/export_import_data.rst:182
-msgid ""
-"By default the Import preview is set on commas as field separators and "
-"quotation marks as text delimiters. If your csv file does not have these "
-"settings, you can modify the File Format Options (displayed under the Browse"
-" CSV file bar after you select your file)."
-msgstr ""
-"Die Importvorschau ist standardmäßig auf Kommas als Feldtrenner und "
-"Anführungszeichen als Textbegrenzer eingestellt. Wenn Ihre csv-Datei nicht "
-"über diese Einstellungen verfügt, können Sie die Dateiformatoptionen ändern "
-"(angezeigt unter der Leiste CSV-Datei durchsuchen, nachdem Sie Ihre Datei "
-"ausgewählt haben)."
-
-#: ../../content/applications/essentials/export_import_data.rst:186
-msgid ""
-"Note that if your CSV file has a tabulation as separator, Odoo will not "
-"detect the separations. You will need to change the file format options in "
-"your spreadsheet application. See the following question."
-msgstr ""
-"Beachten Sie, dass Odoo die Trennungen nicht erkennt, wenn Ihre CSV-Datei "
-"eine Tabellierung als Trennzeichen enthält. Sie müssen die "
-"Dateiformatoptionen in Ihrer Tabellenkalkulationsanwendung ändern. Siehe die"
-" folgende Frage."
-
-#: ../../content/applications/essentials/export_import_data.rst:191
-msgid ""
-"How can I change the CSV file format options when saving in my spreadsheet "
-"application?"
-msgstr ""
-"Wie kann ich die Optionen für das CSV-Dateiformat beim Speichern in meiner "
-"Tabellenkalkulationsapp ändern?"
-
-#: ../../content/applications/essentials/export_import_data.rst:193
-msgid ""
-"If you edit and save CSV files in spreadsheet applications, your computer's "
-"regional settings will be applied for the separator and delimiter. We "
-"suggest you use OpenOffice or LibreOffice Calc as they will allow you to "
-"modify all three options (in :menuselection:`'Save As' dialog box --> Check "
-"the box 'Edit filter settings' --> Save`)."
-msgstr ""
-"Wenn Sie CSV-Dateien in Tabellenkalkulationsprogrammen bearbeiten und "
-"speichern, werden die regionalen Einstellungen Ihres Computers für das "
-"Trennzeichen und den Begrenzer übernommen. Wir empfehlen Ihnen, OpenOffice "
-"oder LibreOffice Calc zu verwenden, da Sie dort alle drei Optionen ändern "
-"können (in :menuselection:`Dialogfeld „Speichern als“ --> Feld "
-"„Filtereinstellungen bearbeiten“ ankreuzen --> Speichern`)."
-
-#: ../../content/applications/essentials/export_import_data.rst:198
-msgid ""
-"Microsoft Excel will allow you to modify only the encoding when saving (in "
-":menuselection:`'Save As' dialog box --> click 'Tools' dropdown list --> "
-"Encoding tab`)."
-msgstr ""
-"In Microsoft Excel können Sie beim Speichern nur die Codierung ändern (in "
-":menuselection:`Dialogfeld „Speichern als“ --> Drop-down-Liste „Tools“ --> "
-"Reiter „Codierung“ anklicken`)."
-
-#: ../../content/applications/essentials/export_import_data.rst:202
-msgid "What's the difference between Database ID and External ID?"
-msgstr "Was ist der Unterschied zwischen Datenbank-ID und externer ID?"
-
-#: ../../content/applications/essentials/export_import_data.rst:204
-msgid ""
-"Some fields define a relationship with another object. For example, the "
-"country of a contact is a link to a record of the 'Country' object. When you"
-" want to import such fields, Odoo will have to recreate links between the "
-"different records. To help you import such fields, Odoo provides three "
-"mechanisms. You must use one and only one mechanism per field you want to "
-"import."
-msgstr ""
-"Einige Felder definieren eine Beziehung zu einem anderen Objekt. Zum "
-"Beispiel ist das Land eines Kontakts eine Verknüpfung zu einem Datensatz des"
-" Objekts „Land“. Wenn Sie solche Felder importieren möchten, muss Odoo die "
-"Verknüpfungen zwischen den verschiedenen Datensätzen neu erstellen. Damit "
-"Sie solche Felder importieren können, bietet Odoo drei Mechanismen. Sie "
-"müssen für jedes Feld, das Sie importieren möchten, einen und nur einen "
-"Mechanismus verwenden."
-
-#: ../../content/applications/essentials/export_import_data.rst:209
-msgid ""
-"For example, to reference the country of a contact, Odoo proposes you 3 "
-"different fields to import:"
-msgstr ""
-"Wenn Sie z. B. das Land eines Kontakts referenzieren möchten, schlägt Odoo "
-"Ihnen 3 verschiedene Felder zum Importieren vor:"
-
-#: ../../content/applications/essentials/export_import_data.rst:211
-msgid "Country: the name or code of the country"
-msgstr "Land: der Name oder Code des Landes"
+"welcher Teil der Monat in einem Datum wie `01-03-2016` ist."
 
 #: ../../content/applications/essentials/export_import_data.rst:212
 msgid ""
-"Country/Database ID: the unique Odoo ID for a record, defined by the ID "
-"postgresql column"
+"When importing a :abbr:`CSV (Comma-separated Values)` file, Odoo provides "
+":guilabel:`Formatting` options."
 msgstr ""
-"Land/Datenbank-ID: die eindeutige Odoo-ID für einen Datensatz, definiert "
-"durch die Spalte „ID postgresql“"
 
-#: ../../content/applications/essentials/export_import_data.rst:213
+#: ../../content/applications/essentials/export_import_data.rst:215
 msgid ""
-"Country/External ID: the ID of this record referenced in another application"
-" (or the .XML file that imported it)"
+"To view which date format Odoo has found from the file, check the "
+":guilabel:`Date Format` that is shown when clicking on options under the "
+"file selector. If this format is incorrect, change it to the preferred "
+"format using *ISO 8601* to define the format."
 msgstr ""
-"Land/Externe ID: die ID dieses Datensatzes, auf den in einer anderen App "
-"verwiesen wird (oder die .XML-Datei, die ihn importiert hat)"
-
-#: ../../content/applications/essentials/export_import_data.rst:216
-msgid "For the country Belgium, you can use one of these 3 ways to import:"
-msgstr ""
-"Für das Land Belgien können Sie eine dieser 3 Möglichkeiten zum Import "
-"nutzen:"
-
-#: ../../content/applications/essentials/export_import_data.rst:218
-msgid "Country: Belgium"
-msgstr "Land: Belgien"
-
-#: ../../content/applications/essentials/export_import_data.rst:219
-msgid "Country/Database ID: 21"
-msgstr "Land/Datenbank-ID: 21"
+"Um zu sehen, welches Datumsformat Odoo in Ihrer Datei gefunden hat, können "
+"Sie das :guilabel:`Datumsformat` überprüfen, das angezeigt wird, wenn Sie "
+"auf Optionen unter der Dateiauswahl klicken. Wenn dieses Format nicht "
+"korrekt ist, können Sie es auf Ihr bevorzugtes Format ändern, indem Sie das "
+"Format mit *ISO 8601* definieren."
 
 #: ../../content/applications/essentials/export_import_data.rst:220
-msgid "Country/External ID: base.be"
-msgstr "Land/Externe ID: base.be"
-
-#: ../../content/applications/essentials/export_import_data.rst:222
 msgid ""
-"According to your need, you should use one of these 3 ways to reference "
-"records in relations. Here is when you should use one or the other, "
-"according to your need:"
+"*ISO 8601* is an international standard, covering the worldwide exchange, "
+"along with the communication of date and time-related data. For example, the"
+" date format should be `YYYY-MM-DD`. So, in the case of July 24th 1981, it "
+"should be written as `1981-07-24`."
 msgstr ""
-"Je nach Bedarf sollten Sie eine dieser 3 Möglichkeiten verwenden, um auf "
-"Datensätze in Beziehungen zu verweisen. Hier erfahren Sie, wann Sie je nach "
-"Bedarf die eine oder die andere Methode verwenden sollten:"
+"*ISO 8601* ist ein internationaler Standard, der den weltweiten Austausch "
+"und die Kommunikation von Datums- und Zeitangaben abdeckt. Zum Beispiel "
+"sollte das Datumsformat `JJJJ-MM-TT` sein. Im Falle des 24. Juli 1981 sollte"
+" es also als `1981-07-24` geschrieben werden."
 
 #: ../../content/applications/essentials/export_import_data.rst:225
 msgid ""
-"Use Country: This is the easiest way when your data come from CSV files that"
-" have been created manually."
+"When importing Excel files (`.xls`, `.xlsx`), consider using *date cells* to"
+" store dates. This maintains locale date formats for display, regardless of "
+"how the date is formatted in Odoo. When importing a :abbr:`CSV (Comma-"
+"separated Values)` file, use Odoo's :guilabel:`Formatting` section to select"
+" the date format columns to import."
 msgstr ""
-"Land verwenden: Dies ist der einfachste Weg, wenn Ihre Daten aus CSV-Dateien"
-" stammen, die manuell erstellt wurden."
 
-#: ../../content/applications/essentials/export_import_data.rst:227
-msgid ""
-"Use Country/Database ID: You should rarely use this notation. It's mostly "
-"used by developers as it's main advantage is to never have conflicts (you "
-"may have several records with the same name, but they always have a unique "
-"Database ID)"
+#: ../../content/applications/essentials/export_import_data.rst:231
+msgid "Import numbers with currency signs"
 msgstr ""
-"Land/Datenbank-ID verwenden: Sie sollten diese Bezeichnung nur selten "
-"verwenden. Sie wird hauptsächlich von Entwicklern verwendet, da ihr "
+
+#: ../../content/applications/essentials/export_import_data.rst:233
+msgid ""
+"Odoo fully supports numbers with parenthesis to represent negative signs, as"
+" well as numbers with currency signs attached to them. Odoo also "
+"automatically detects which thousand/decimal separator is used. If a "
+"currency symbol unknown to Odoo is used, it might not be recognized as a "
+"number, and the import crashes."
+msgstr ""
+"Odoo unterstützt Zahlen mit Klammern, um negative Vorzeichen darzustellen, "
+"sowie Zahlen mit angehängten Währungszeichen vollständig. Odoo erkennt "
+"außerdem automatisch, welches Tausender-/Dezimaltrennzeichen verwendet wird."
+" Wenn ein Odoo unbekanntes Währungssymbol verwendet wird, wird es "
+"möglicherweise nicht als Zahl erkannt und der Import stürzt ab."
+
+#: ../../content/applications/essentials/export_import_data.rst:239
+msgid ""
+"When importing a :abbr:`CSV (Comma-separated Values)` file, the "
+":guilabel:`Formatting` menu appears on the left-hand column. Under these "
+"options, the :guilabel:`Thousands Separator` can be changed."
+msgstr ""
+"Wenn Sie eine :abbr:`CSV (Comma-separated Values)`-Datei importieren, "
+"erscheint das Menü :guilabel:`Formatierung` in der linken Spalte. Unter "
+"diesen Optionen können Sie das :guilabel:`Tausendertrennzeichen` ändern."
+
+#: ../../content/applications/essentials/export_import_data.rst:243
+msgid ""
+"Examples of supported numbers (using 'thirty-two thousand' as the figure):"
+msgstr ""
+"Beispiele für unterstützte Zahlen (mit der Zahl „zweiunddreißigtausend“):"
+
+#: ../../content/applications/essentials/export_import_data.rst:245
+msgid "32.000,00"
+msgstr "32.000,00"
+
+#: ../../content/applications/essentials/export_import_data.rst:246
+msgid "32000,00"
+msgstr "32000,00"
+
+#: ../../content/applications/essentials/export_import_data.rst:247
+msgid "32,000.00"
+msgstr "32,000.00"
+
+#: ../../content/applications/essentials/export_import_data.rst:248
+msgid "-32000.00"
+msgstr "-32000.00"
+
+#: ../../content/applications/essentials/export_import_data.rst:249
+msgid "(32000.00)"
+msgstr "(32000.00)"
+
+#: ../../content/applications/essentials/export_import_data.rst:250
+msgid "$ 32.000,00"
+msgstr "$ 32.000,00"
+
+#: ../../content/applications/essentials/export_import_data.rst:251
+msgid "(32000.00 €)"
+msgstr "(32000.00 €)"
+
+#: ../../content/applications/essentials/export_import_data.rst:253
+msgid "Example that will not work:"
+msgstr "Beispiel, was nicht funktionieren wird:"
+
+#: ../../content/applications/essentials/export_import_data.rst:255
+msgid "ABC 32.000,00"
+msgstr "ABC 32.000,00"
+
+#: ../../content/applications/essentials/export_import_data.rst:256
+msgid "$ (32.000,00)"
+msgstr "$ (32.000,00)"
+
+#: ../../content/applications/essentials/export_import_data.rst:259
+msgid ""
+"A :guilabel:`() (parenthesis)` around the number indicates that the number "
+"is a negative value. The currency symbol **must** be placed within the "
+"parenthesis for Odoo to recognize it as a negative currency value."
+msgstr ""
+"Ein :guilabel:`() (Klammer)` um die Zahl zeigt an, dass die Zahl ein "
+"negativer Wert ist. Das Währungssymbol **muss** innerhalb der Klammer "
+"stehen, damit Odoo es als negativen Währungswert erkennt."
+
+#: ../../content/applications/essentials/export_import_data.rst:264
+msgid "Import preview table not displayed correctly"
+msgstr ""
+
+#: ../../content/applications/essentials/export_import_data.rst:266
+msgid ""
+"By default, the import preview is set on commas as field separators, and "
+"quotation marks as text delimiters. If the :abbr:`CSV (Comma-separated "
+"Values)` file does not have these settings, modify the "
+":guilabel:`Formatting` options (displayed under the :guilabel:`Import` "
+":abbr:`CSV (Comma-separated Values)` file bar after selecting the :abbr:`CSV"
+" (Comma-separated Values)` file)."
+msgstr ""
+"Die Importvorschau ist standardmäßig auf Kommas als Feldtrenner und "
+"Anführungszeichen als Textbegrenzer eingestellt. Wenn die :abbr:`CSV (Comma-"
+"separated Values)`-Datei nicht über diese Einstellungen verfügt, ändern Sie "
+"die :guilabel:`Formatierungsoptionen` (angezeigt unter der Leiste :abbr:`CSV"
+" (Comma-separated Values)`-Datei :guilabel:`Importieren` nach Auswahl der "
+":abbr:`CSV (Comma-separated Values)`-Datei)."
+
+#: ../../content/applications/essentials/export_import_data.rst:272
+msgid ""
+"If the :abbr:`CSV (Comma-separated Values)` file has a tabulation as a "
+"separator, Odoo does **not** detect the separations. The file format options"
+" need to be modified in the spreadsheet application. See the following "
+":ref:`Change CSV file format <export_import_data/change-csv>` section."
+msgstr ""
+"Wenn die :abbr:`CSV (Comma-separated Values)`-Datei eine Tabulatur als "
+"Trennzeichen hat, erkennt Odoo die Trennungen **nicht**. Die "
+"Dateiformatoptionen müssen in der Tabellenkalkulationsapp geändert werden. "
+"Siehe den folgenden Abschnitt :ref:`CSV-Dateiformat ändern "
+"<export_import_data/change-csv>`."
+
+#: ../../content/applications/essentials/export_import_data.rst:280
+msgid "Change CSV file format in spreadsheet application"
+msgstr "CSV-Dateiformat in der Tabellenkalkulationsapp ändern"
+
+#: ../../content/applications/essentials/export_import_data.rst:282
+msgid ""
+"When editing and saving :abbr:`CSV (Comma-separated Values)` files in "
+"spreadsheet applications, the computer's regional settings are applied for "
+"the separator and delimiter. Odoo suggests using *OpenOffice* or "
+"*LibreOffice*, as both applications allow modifications of all three options"
+" (from *LibreOffice* application, go to :menuselection:`'Save As' dialog box"
+" --> Check the box 'Edit filter settings' --> Save`)."
+msgstr ""
+
+#: ../../content/applications/essentials/export_import_data.rst:288
+msgid ""
+"Microsoft Excel can modify the encoding when saving (:menuselection:`'Save "
+"As' dialog box --> 'Tools' drop-down menu --> Encoding tab`)."
+msgstr ""
+"In Microsoft Excel können Sie beim Speichern die Codierung ändern (in "
+":menuselection:`Dialogfeld „Save as“ (Speichern als) --> Dropdown-Liste "
+"„Tools“ --> Reiter „Encoding“ (Codierung`)."
+
+#: ../../content/applications/essentials/export_import_data.rst:292
+msgid "Difference between Database ID and External ID"
+msgstr "Unterschied zwischen Datenbank-ID und externer ID"
+
+#: ../../content/applications/essentials/export_import_data.rst:294
+msgid ""
+"Some fields define a relationship with another object. For example, the "
+"country of a contact is a link to a record of the 'Country' object. When "
+"such fields are imported, Odoo has to recreate links between the different "
+"records. To help import such fields, Odoo provides three mechanisms."
+msgstr ""
+"Einige Felder definieren eine Beziehung zu einem anderen Objekt. Zum "
+"Beispiel ist das Land eines Kontakts eine Verknüpfung zu einem Datensatz des"
+" Objekts „Land“. Wenn solche Felder importiert werden, muss Odoo die "
+"Verknüpfungen zwischen den verschiedenen Datensätzen neu erstellen. Damit "
+"Sie solche Felder importieren können, bietet Odoo drei Mechanismen. "
+
+#: ../../content/applications/essentials/export_import_data.rst:299
+msgid "**Only one** mechanism should be used per field that is imported."
+msgstr ""
+
+#: ../../content/applications/essentials/export_import_data.rst:301
+msgid ""
+"For example, to reference the country of a contact, Odoo proposes three "
+"different fields to import:"
+msgstr ""
+"Wenn Sie z. B. das Land eines Kontakts referenzieren möchten, schlägt Odoo "
+"Ihnen drei verschiedene Felder zum Importieren vor:"
+
+#: ../../content/applications/essentials/export_import_data.rst:303
+msgid ":guilabel:`Country`: the name or code of the country"
+msgstr ":guilabel:`Land`: der Name oder Code des Landes"
+
+#: ../../content/applications/essentials/export_import_data.rst:304
+msgid ""
+":guilabel:`Country/Database ID`: the unique Odoo ID for a record, defined by"
+" the ID PostgreSQL column"
+msgstr ""
+
+#: ../../content/applications/essentials/export_import_data.rst:306
+msgid ""
+":guilabel:`Country/External ID`: the ID of this record referenced in another"
+" application (or the `.XML` file that imported it)"
+msgstr ""
+":guilabel:`Land/Externe ID`: die ID dieses Datensatzes, auf den in einer "
+"anderen App verwiesen wird (oder die .`.XML`-Datei, die ihn importiert hat)"
+
+#: ../../content/applications/essentials/export_import_data.rst:309
+msgid ""
+"For the country of Belgium, for example, use one of these three ways to "
+"import:"
+msgstr ""
+"Für das Land Belgien können Sie zum Beispiel eine dieser 3 Möglichkeiten zum"
+" Import nutzen:"
+
+#: ../../content/applications/essentials/export_import_data.rst:311
+msgid ":guilabel:`Country`: `Belgium`"
+msgstr ":guilabel:`Land`: `Belgien`"
+
+#: ../../content/applications/essentials/export_import_data.rst:312
+msgid ":guilabel:`Country/Database ID`: `21`"
+msgstr ":guilabel:`Land/Datenbank-ID`: `21`"
+
+#: ../../content/applications/essentials/export_import_data.rst:313
+msgid ":guilabel:`Country/External ID`: `base.be`"
+msgstr ""
+
+#: ../../content/applications/essentials/export_import_data.rst:315
+msgid ""
+"According to the company's need, use one of these three ways to reference "
+"records in relations. Here is an example when one or the other should be "
+"used, according to the need:"
+msgstr ""
+"Je nach Bedarf des Unternehmens sollten Sie eine dieser drei Möglichkeiten "
+"verwenden, um auf Datensätze in Beziehungen zu verweisen. Hier sehen Sie ein"
+" Beispiel, wann Sie je nach Bedarf die eine oder die andere Methode "
+"verwenden sollten:"
+
+#: ../../content/applications/essentials/export_import_data.rst:318
+msgid ""
+"Use :guilabel:`Country`: this is the easiest way when data comes from "
+":abbr:`CSV (Comma-separated Values)` files that have been created manually."
+msgstr ""
+":guilabel:`Land` verwenden: Dies ist der einfachste Weg, wenn Ihre Daten aus"
+" :abbr:`CSV (Comma-separated Values)`-Dateien stammen, die manuell erstellt "
+"wurden."
+
+#: ../../content/applications/essentials/export_import_data.rst:320
+msgid ""
+"Use :guilabel:`Country/Database ID`: this should rarely be used. It is "
+"mostly used by developers as the main advantage is to never have conflicts "
+"(there may be several records with the same name, but they always have a "
+"unique Database ID)"
+msgstr ""
+":guilabel:`Land/Datenbank-ID` verwenden: Dies sollte nur selten verwendet "
+"werden. Sie wird hauptsächlich von Entwicklern verwendet, da ihr "
 "Hauptvorteil darin besteht, dass es nie zu Konflikten kommt (Sie können "
 "mehrere Datensätze mit demselben Namen haben, aber sie haben immer eine "
 "eindeutige Datenbank-ID)."
 
-#: ../../content/applications/essentials/export_import_data.rst:230
+#: ../../content/applications/essentials/export_import_data.rst:323
 msgid ""
-"Use Country/External ID: Use External ID when you import data from a third "
-"party application."
+"Use :guilabel:`Country/External ID`: use *External ID* when importing data "
+"from a third-party application."
 msgstr ""
-"Land/externe ID verwenden: Verwenden Sie die externe ID, wenn Sie Daten aus "
-"einer App eines Drittanbieters importieren."
+":guilabel:`Land/externe ID` verwenden: Verwenden Sie die *externe ID*, wenn "
+"Sie Daten aus einer App eines Drittanbieters importieren."
 
-#: ../../content/applications/essentials/export_import_data.rst:232
+#: ../../content/applications/essentials/export_import_data.rst:326
 msgid ""
-"When you use External IDs, you can import CSV files with the \"External ID\""
-" column to define the External ID of each record you import. Then, you will "
-"be able to make a reference to that record with columns like "
-"\"Field/External ID\". The following two CSV files give you an example for "
-"Products and their Categories."
+"When *External IDs* are used, import :abbr:`CSV (Comma-separated Values)` "
+"files with the :guilabel:`External ID` (ID) column defining the *External "
+"ID* of each record that is imported. Then, a reference can be made to that "
+"record with columns, like `Field/External ID`. The following two :abbr:`CSV "
+"(Comma-separated Values)` files provide an example for products and their "
+"categories."
 msgstr ""
-"Wenn Sie externe IDs verwenden, können Sie CSV-Dateien mit der Spalte "
-"„Externe ID“ importieren, um die externe ID jedes Datensatzes zu definieren,"
-" den Sie importieren. Dann können Sie mit Spalten wie „Feld/Externe ID“ "
-"einen Verweis auf diesen Datensatz erstellen. Die folgenden zwei CSV-Dateien"
-" geben Ihnen ein Beispiel für Produkte und ihre Kategorien."
+"Wenn *Externe IDs* verwendet werden, importieren Sie :abbr:`CSV (Comma-"
+"separated Values)`-Dateien mit der Spalte :guilabel:`Externe ID` (ID), die "
+"die *Externe ID* jedes importierten Datensatzes definiert. Dann kann auf "
+"diesen Datensatz mit Spalten wie `Feld/Externe ID` verwiesen werden. Die "
+"folgenden zwei :abbr:`CSV (Comma-separated Values)`-Dateien liefern ein "
+"Beispiel für Produkte und ihre Kategorien."
 
-#: ../../content/applications/essentials/export_import_data.rst:237
+#: ../../content/applications/essentials/export_import_data.rst:331
 msgid ""
 ":download:`CSV file for categories "
-"<export_import_data/External_id_3rd_party_application_product_categories.csv>`."
+"<export_import_data/External_id_3rd_party_application_product_categories.csv>`"
 msgstr ""
-":download:`CSV-Datei für Kategorien "
-"<export_import_data/External_id_3rd_party_application_product_categories.csv>`."
 
-#: ../../content/applications/essentials/export_import_data.rst:240
+#: ../../content/applications/essentials/export_import_data.rst:333
 msgid ""
 ":download:`CSV file for Products "
-"<export_import_data/External_id_3rd_party_application_products.csv>`."
+"<export_import_data/External_id_3rd_party_application_products.csv>`"
 msgstr ""
 ":download:`CSV-Datei für Produkte "
-"<export_import_data/External_id_3rd_party_application_products.csv>`."
+"<export_import_data/External_id_3rd_party_application_products.csv>`"
 
-#: ../../content/applications/essentials/export_import_data.rst:244
-msgid "What can I do if I have multiple matches for a field?"
-msgstr "Was kann ich tun, wenn ich mehrere Treffer für ein Feld habe?"
-
-#: ../../content/applications/essentials/export_import_data.rst:246
-msgid ""
-"If for example you have two product categories with the child name "
-"\"Sellable\" (ie. \"Misc. Products/Sellable\" & \"Other "
-"Products/Sellable\"), your validation is halted but you may still import "
-"your data. However, we recommend you do not import the data because they "
-"will all be linked to the first 'Sellable' category found in the Product "
-"Category list (\"Misc. Products/Sellable\"). We recommend you modify one of "
-"the duplicates' values or your product category hierarchy."
+#: ../../content/applications/essentials/export_import_data.rst:339
+msgid "Import relation fields"
 msgstr ""
-"Wenn Sie z. B. zwei Produktkategorien mit dem untergeordneten Namen "
-"„Verkäuflich“ haben (d. h. „Sonstige Produkte/Verkäuflich“ & „Andere "
-"Produkte/Verkäuflich“), wird Ihre Validierung gestoppt, aber Sie können Ihre"
-" Daten trotzdem importieren. Wir empfehlen Ihnen jedoch, die Daten nicht zu "
-"importieren, da sie alle mit der ersten Kategorie „Verkäuflich“ in der "
-"Produktkategorienliste („Sonstige Produkte/Verkäuflich“) verknüpft werden. "
-"Wir empfehlen Ihnen, einen der Werte der Duplikate oder Ihre "
-"Produktkategorie-Hierarchie zu ändern."
 
-#: ../../content/applications/essentials/export_import_data.rst:252
+#: ../../content/applications/essentials/export_import_data.rst:341
 msgid ""
-"However if you do not wish to change your configuration of product "
-"categories, we recommend you use make use of the external ID for this field "
-"'Category'."
+"An Odoo object is always related to many other objects (e.g. a product is "
+"linked to product categories, attributes, vendors, etc.). To import those "
+"relations, the records of the related object need to be imported first, from"
+" their own list menu."
 msgstr ""
-"Wenn Sie jedoch Ihre Konfiguration der Produktkategorien nicht ändern "
-"möchten, empfehlen wir Ihnen, die externe ID für dieses Feld „Kategorie“ zu "
-"verwenden."
+"Ein Odoo-Objekt ist immer mit vielen anderen Objekten verbunden (z. B. ist "
+"ein Produkt mit Produktkategorien, Attributen, Lieferanten usw. verbunden). "
+"Um diese Beziehungen zu importieren, müssen zunächst die Datensätze der "
+"verknüpften Objekte aus deren eigenem Listenmenü importiert werden."
 
-#: ../../content/applications/essentials/export_import_data.rst:256
+#: ../../content/applications/essentials/export_import_data.rst:345
 msgid ""
-"How can I import a many2many relationship field (e.g. a customer that has "
-"multiple tags)?"
+"This can be achieved by using either the name of the related record, or its "
+"ID, depending on the circumstances. The ID is expected when two records have"
+" the same name. In such a case add `/ ID` at the end of the column title "
+"(e.g. for product attributes: `Product Attributes / Attribute / ID`)."
 msgstr ""
-"Wie kann ich ein many2many-Beziehungsfeld importieren (z. B. einen Kunden, "
-"der mehrere Stichwörter hat)?"
+"Dazu können Sie entweder den Namen des Bezugsdatensatzes oder seine ID "
+"verwenden, je nach den Umständen. Die ID wird erwartet, wenn zwei Datensätze"
+" den gleichen Namen haben. Fügen Sie in einem solchen Fall `/ ID` am Ende "
+"des Spaltentitels hinzu (z. B. für Produktattribute: `Produktattribute / "
+"Attribut / ID`)."
 
-#: ../../content/applications/essentials/export_import_data.rst:258
+#: ../../content/applications/essentials/export_import_data.rst:350
+msgid "Options for multiple matches on fields"
+msgstr ""
+
+#: ../../content/applications/essentials/export_import_data.rst:352
 msgid ""
-"The tags should be separated by a comma without any spacing. For example, if"
-" you want your customer to be linked to both tags 'Manufacturer' and "
-"'Retailer' then you will encode \"Manufacturer,Retailer\" in the same column"
-" of your CSV file."
+"If, for example, there are two product categories with the child name "
+"`Sellable` (e.g. `Misc. Products/Sellable` & `Other Products/Sellable`), the"
+" validation is halted, but the data may still be imported. However, Odoo "
+"recommends that the data is not imported because it will all be linked to "
+"the first `Sellable` category found in the *Product Category* list (`Misc. "
+"Products/Sellable`). Odoo, instead, recommends modifying one of the "
+"duplicate's values, or the product category hierarchy."
 msgstr ""
-"Die Stichwörter sollten durch ein Komma getrennt werden, ohne dass ein "
-"Zwischenraum entsteht. Wenn Sie z. B. möchten, dass Ihr Kunde mit den beiden"
-" Stichwörtern „Hersteller“ und „Händler“ verknüpft wird, codieren Sie "
-"„Hersteller, Händler“ in derselben Spalte Ihrer CSV-Datei."
 
-#: ../../content/applications/essentials/export_import_data.rst:262
+#: ../../content/applications/essentials/export_import_data.rst:359
+msgid ""
+"However, if the company does not wish to change the configuration of product"
+" categories, Odoo recommends making use of the *External ID* for this field,"
+" 'Category'."
+msgstr ""
+"Wenn das Unternehmen jedoch die Konfiguration der Produktkategorien nicht "
+"ändern möchte, empfiehlt Odoo die Verwendung der *Externen ID* für dieses "
+"Feld, „Kategorie“."
+
+#: ../../content/applications/essentials/export_import_data.rst:363
+msgid "Import many2many relationship fields"
+msgstr "many2many-Beziehungsfelder importieren"
+
+#: ../../content/applications/essentials/export_import_data.rst:365
+msgid ""
+"The tags should be separated by a comma, without any spacing. For example, "
+"if a customer needs to be linked to both tags: `Manufacturer` and `Retailer`"
+" then 'Manufacturer,Retailer' needs to be encoded in the same column of the "
+":abbr:`CSV (Comma-separated Values)` file."
+msgstr ""
+
+#: ../../content/applications/essentials/export_import_data.rst:369
 msgid ""
 ":download:`CSV file for Manufacturer, Retailer "
 "<export_import_data/m2m_customers_tags.csv>`"
@@ -1271,404 +1511,641 @@ msgstr ""
 ":download:`CSV-Datei für Hersteller, Händler "
 "<export_import_data/m2m_customers_tags.csv>`"
 
-#: ../../content/applications/essentials/export_import_data.rst:266
-msgid ""
-"How can I import a one2many relationship (e.g. several Order Lines of a "
-"Sales Order)?"
-msgstr ""
-"Wie kann ich eine one2many-Beziehung importieren (z. B. mehrere "
-"Auftragszeilen eines Verkaufsauftrags)?"
-
-#: ../../content/applications/essentials/export_import_data.rst:268
-msgid ""
-"If you want to import sales order having several order lines; for each order"
-" line, you need to reserve a specific row in the CSV file. The first order "
-"line will be imported on the same row as the information relative to order. "
-"Any additional lines will need an additional row that does not have any "
-"information in the fields relative to the order. As an example, here is "
-"``purchase.order_functional_error_line_cant_adpat.CSV`` file of some "
-"quotations you can import, based on demo data."
-msgstr ""
-"Wenn Sie einen Verkaufsauftrag mit mehreren Auftragszeilen importieren "
-"möchten, müssen Sie für jede Auftragszeile eine bestimmte Zeile in der CSV-"
-"Datei reservieren. Die erste Auftragszeile wird in dieselbe Zeile "
-"importiert, in der auch die Informationen zum Auftrag stehen. Für jede "
-"weitere Zeile wird eine zusätzliche Zeile benötigt, die keine Informationen "
-"in den Feldern für den Auftrag enthält. Als Beispiel sehen Sie hier die "
-"Datei ``purchase.order_functional_error_line_cant_adpat.CSV`` mit einigen "
-"Angeboten, die Sie auf der Grundlage von Demo-Daten importieren können."
-
-#: ../../content/applications/essentials/export_import_data.rst:275
-msgid ""
-":download:`File for some Quotations "
-"<export_import_data/purchase.order_functional_error_line_cant_adpat.csv>`."
-msgstr ""
-":download:`Datei für einige Angebote "
-"<export_import_data/purchase.order_functional_error_line_cant_adpat.csv>`."
-
-#: ../../content/applications/essentials/export_import_data.rst:277
-msgid ""
-"The following CSV file shows how to import purchase orders with their "
-"respective purchase order lines:"
-msgstr ""
-"Die folgende CSV-Datei zeigt, wie Sie Einkaufsaufträge mit den "
-"entsprechenden Einkaufsauftragszeilen importieren können:"
-
-#: ../../content/applications/essentials/export_import_data.rst:280
-msgid ""
-":download:`Purchase orders with their respective purchase order lines "
-"<export_import_data/o2m_purchase_order_lines.csv>`."
-msgstr ""
-":download:`Einkaufsaufträge mit den entsprechenden Einkaufsauftragszeilen "
-"<export_import_data/o2m_purchase_order_lines.csv>`."
-
-#: ../../content/applications/essentials/export_import_data.rst:282
-msgid ""
-"The following CSV file shows how to import customers and their respective "
-"contacts:"
-msgstr ""
-"Die folgende CSV-Datei zeigt, wie Sie Kunden und die entsprechenden Kontakte"
-" importieren können:"
-
-#: ../../content/applications/essentials/export_import_data.rst:284
-msgid ""
-":download:`Customers and their respective contacts "
-"<export_import_data/o2m_customers_contacts.csv>`."
-msgstr ""
-":download:`Kunden und deren entsprechenden Kontakte "
-"<export_import_data/o2m_customers_contacts.csv>`."
-
-#: ../../content/applications/essentials/export_import_data.rst:287
-msgid "Can I import several times the same record?"
-msgstr "Kann ich denselben Datensatz mehrmals importieren?"
-
-#: ../../content/applications/essentials/export_import_data.rst:289
-msgid ""
-"If you import a file that contains one of the column \"External ID\" or "
-"\"Database ID\", records that have already been imported will be modified "
-"instead of being created. This is very useful as it allows you to import "
-"several times the same CSV file while having made some changes in between "
-"two imports. Odoo will take care of creating or modifying each record "
-"depending if it's new or not."
-msgstr ""
-"Wenn Sie eine Datei importieren, die eine der Spalten „Externe ID“ oder "
-"„Datenbank-ID“ enthält, werden bereits importierte Datensätze geändert, "
-"anstatt sie neu zu erstellen. Dies ist sehr nützlich, da Sie so dieselbe "
-"CSV-Datei mehrmals importieren können, während Sie zwischen zwei Importen "
-"Änderungen vorgenommen haben. Odoo kümmert sich darum, jeden Datensatz zu "
-"erstellen oder zu ändern, je nachdem, ob er neu ist oder nicht."
-
-#: ../../content/applications/essentials/export_import_data.rst:294
-msgid ""
-"This feature allows you to use the Import/Export tool of Odoo to modify a "
-"batch of records in your favorite spreadsheet application."
-msgstr ""
-"Mit dieser Funktion können Sie das Import/Export-Tool von Odoo verwenden, um"
-" eine Reihe von Datensätzen in Ihrer bevorzugten Tabellenkalkulationsapp zu "
-"ändern."
-
-#: ../../content/applications/essentials/export_import_data.rst:298
-msgid "What happens if I do not provide a value for a specific field?"
-msgstr "Was passiert, wenn ich keinen Wert für ein bestimmtes Feld eingebe?"
-
-#: ../../content/applications/essentials/export_import_data.rst:300
-msgid ""
-"If you do not set all fields in your CSV file, Odoo will assign the default "
-"value for every non defined fields. But if you set fields with empty values "
-"in your CSV file, Odoo will set the EMPTY value in the field, instead of "
-"assigning the default value."
-msgstr ""
-"Wenn Sie nicht alle Felder in Ihrer CSV-Datei festlegen, weist Odoo für alle"
-" nicht definierten Felder den Standardwert zu. Wenn Sie jedoch Felder mit "
-"leeren Werten in Ihrer CSV-Datei festlegen, setzt Odoo den Wert LEER in das "
-"Feld, anstatt den Standardwert zuzuweisen."
-
-#: ../../content/applications/essentials/export_import_data.rst:305
-msgid "How to export/import different tables from an SQL application to Odoo?"
-msgstr ""
-"Wie exportiere/importiere ich verschiedene Tabellen aus einer SQL-Anwendung "
-"in Odoo?"
-
-#: ../../content/applications/essentials/export_import_data.rst:307
-msgid ""
-"If you need to import data from different tables, you will have to recreate "
-"relations between records belonging to different tables. (e.g. if you import"
-" companies and persons, you will have to recreate the link between each "
-"person and the company they work for)."
-msgstr ""
-"Wenn Sie Daten aus verschiedenen Tabellen importieren müssen, müssen Sie die"
-" Beziehungen zwischen Datensätzen, die zu verschiedenen Tabellen gehören, "
-"neu erstellen. (Wenn Sie z. B. Unternehmen und Personen importieren, müssen "
-"Sie die Verbindung zwischen jeder Person und dem Unternehmen, für die sie "
-"arbeitet, neu erstellen)."
-
-#: ../../content/applications/essentials/export_import_data.rst:311
-msgid ""
-"To manage relations between tables, you can use the \"External ID\" "
-"facilities of Odoo. The \"External ID\" of a record is the unique identifier"
-" of this record in another application. This \"External ID\" must be unique "
-"across all the records of all objects, so it's a good practice to prefix "
-"this \"External ID\" with the name of the application or table. (like "
-"'company_1', 'person_1' instead of '1')"
-msgstr ""
-"Um Beziehungen zwischen Tabellen zu verwalten, können Sie die Funktionen "
-"„Externe ID“ von Odoo nutzen. Die „Externe ID“ eines Datensatzes ist die "
-"eindeutige Kennung dieses Datensatzes in einer anderen Anwendung. Diese "
-"„Externe ID“ muss für alle Datensätze aller Objekte eindeutig sein, daher "
-"ist es eine gute Praxis, dieser „Externen ID“ den Namen der App oder Tabelle"
-" voranzustellen. (z. B. 'Unternehmen_1', 'Person_1' anstelle von '1')"
-
-#: ../../content/applications/essentials/export_import_data.rst:317
-msgid ""
-"As an example, suppose you have a SQL database with two tables you want to "
-"import: companies and persons. Each person belong to one company, so you "
-"will have to recreate the link between a person and the company he work for."
-" (If you want to test this example, here is a :download:`dump of such a "
-"PostgreSQL database <export_import_data/database_import_test.sql>`)"
-msgstr ""
-"Nehmen wir an, Sie haben eine SQL-Datenbank mit zwei Tabellen, die Sie "
-"importieren möchten: Unternehmen und Personen. Jede Person gehört zu einem "
-"Unternehmen, also müssen Sie die Verknüpfung zwischen einer Person und dem "
-"Unternehmen, für das sie arbeitet, neu erstellen. (Wenn Sie dieses Beispiel "
-"testen möchten, finden Sie hier einen :download:`Dump einer solchen "
-"PostgreSQL-Datenbank <export_import_data/database_import_test.sql>`)"
-
-#: ../../content/applications/essentials/export_import_data.rst:322
-msgid ""
-"We will first export all companies and their \"External ID\". In PSQL, write"
-" the following command:"
-msgstr ""
-"Zunächst exportieren wir alle Unternehmen und ihre „Externe ID“. Schreiben "
-"Sie in PSQL den folgenden Befehl:"
-
-#: ../../content/applications/essentials/export_import_data.rst:328
-msgid "This SQL command will create the following CSV file:"
-msgstr "Dieser SQL-Befehl erstellt die folgende CSV-Datei:"
-
-#: ../../content/applications/essentials/export_import_data.rst:337
-msgid ""
-"To create the CSV file for persons, linked to companies, we will use the "
-"following SQL command in PSQL:"
-msgstr ""
-"Um die CSV-Datei für Personen, die mit Unternehmen verknüpft sind, zu "
-"erstellen, verwenden wir den folgenden SQL-Befehl in PSQL:"
-
-#: ../../content/applications/essentials/export_import_data.rst:343
-msgid "It will produce the following CSV file:"
-msgstr "Die folgende CSV-Datei wird erstellt:"
-
-#: ../../content/applications/essentials/export_import_data.rst:353
-msgid ""
-"As you can see in this file, Fabien and Laurence are working for the Bigees "
-"company (company_1) and Eric is working for the Organi company. The relation"
-" between persons and companies is done using the External ID of the "
-"companies. We had to prefix the \"External ID\" by the name of the table to "
-"avoid a conflict of ID between persons and companies (person_1 and company_1"
-" who shared the same ID 1 in the original database)."
-msgstr ""
-"Wie Sie in dieser Datei sehen können, arbeiten Fabien und Laurence für das "
-"Unternehmen Bigees (Unternehmen_1) und Eric arbeitet für das Unternehmen "
-"Organi. Die Beziehung zwischen Personen und Unternehmen wird über die "
-"externe ID der Unternehmen hergestellt. Wir mussten der „Externen ID“ den "
-"Namen der Tabelle voranstellen, um einen ID-Konflikt zwischen Personen und "
-"Unternehmen zu vermeiden (Person_1 und Unternehmen_1, die in der "
-"ursprünglichen Datenbank die gleiche ID 1 hatten)."
-
-#: ../../content/applications/essentials/export_import_data.rst:359
-msgid ""
-"The two files produced are ready to be imported in Odoo without any "
-"modifications. After having imported these two CSV files, you will have 4 "
-"contacts and 3 companies. (the firsts two contacts are linked to the first "
-"company). You must first import the companies and then the persons."
-msgstr ""
-"Die beiden erzeugten Dateien können ohne Änderungen in Odoo importiert "
-"werden. Nachdem Sie diese beiden CSV-Dateien importiert haben, haben Sie 4 "
-"Kontakte und 3 Unternehmen. (die ersten beiden Kontakte sind mit dem ersten "
-"Unternehmen verknüpft). Sie müssen zuerst die Unternehmen und dann die "
-"Personen importieren."
-
-#: ../../content/applications/essentials/export_import_data.rst:364
-msgid "How to adapt an import template"
-msgstr "Wie eine Importvorlage angepasst wird"
-
-#: ../../content/applications/essentials/export_import_data.rst:366
-msgid ""
-"Import templates are provided in the import tool of the most common data to "
-"import (contacts, products, bank statements, etc.). You can open them with "
-"any spreadsheets software (Microsoft Office, OpenOffice, Google Drive, "
-"etc.)."
-msgstr ""
-"Im Import-Tool werden Importvorlagen für die am häufigsten zu importierenden"
-" Daten (Kontakte, Produkte, Kontoauszüge usw.) bereitgestellt. Sie können "
-"sie mit jeder Tabellenkalkulationssoftware (Microsoft Office, OpenOffice, "
-"Google Drive usw.) öffnen."
-
 #: ../../content/applications/essentials/export_import_data.rst:372
-msgid "How to customize the file"
-msgstr "Wie die Datei angepasst wird"
+msgid "Import one2many relationships"
+msgstr "one2many-Beziehungsfelder importieren"
 
 #: ../../content/applications/essentials/export_import_data.rst:374
 msgid ""
-"Remove columns you don't need. We advise to not remove the *ID* one (see why"
-" here below)."
+"If a company wants to import a sales order with several order lines, a "
+"specific row **must** be reserved in the :abbr:`CSV (Comma-separated "
+"Values)` file for each order line. The first order line is imported on the "
+"same row as the information relative to order. Any additional lines need an "
+"additional row that does not have any information in the fields relative to "
+"the order."
 msgstr ""
-"Entfernen Sie Spalten, die Sie nicht benötigen. Wir raten Ihnen jedoch, die "
-"*ID* nicht zu entfernen (siehe unten, warum)."
+"Wenn ein Unternehmen einen Verkaufsauftrag mit mehreren Auftragszeilen "
+"importieren möchte, muss in der :abbr:`CSV (Comma-separated Values)`-Datei "
+"für jede Auftragszeile eine eigene Zeile reserviert werden. Die erste "
+"Auftragszeile wird in dieselbe Zeile importiert, in der auch die "
+"Informationen zum Auftrag stehen. Alle weiteren Zeilen benötigen eine "
+"zusätzliche Zeile, die keine Informationen in den Feldern relativ zur "
+"Bestellung enthält."
 
-#: ../../content/applications/essentials/export_import_data.rst:381
+#: ../../content/applications/essentials/export_import_data.rst:379
 msgid ""
-"When you add a new column, Odoo might not be able to map it automatically if"
-" its label doesn't fit any field of the system. If so, find the "
-"corresponding field using the search."
+"As an example, here is a :abbr:`CSV (Comma-separated Values)` file of some "
+"quotations that can be imported, based on demo data:"
 msgstr ""
-"Wenn Sie eine neue Spalte hinzufügen, ist Odoo möglicherweise nicht in der "
-"Lage, sie automatisch zuzuordnen, wenn ihre Bezeichnung zu keinem Feld des "
-"Systems passt. Wenn dies der Fall ist, suchen Sie das entsprechende Feld "
-"über die Suche."
+"Als Beispiel finden Sie hier eine :abbr:`CSV (Comma-separated Values)`-Datei"
+" mit einigen Angeboten, die Sie auf der Grundlage von Demodaten importieren "
+"können:"
+
+#: ../../content/applications/essentials/export_import_data.rst:382
+msgid ""
+":download:`File for some Quotations "
+"<export_import_data/purchase.order_functional_error_line_cant_adpat.csv>`"
+msgstr ""
+
+#: ../../content/applications/essentials/export_import_data.rst:385
+msgid ""
+"The following :abbr:`CSV (Comma-separated Values)` file shows how to import "
+"purchase orders with their respective purchase order lines:"
+msgstr ""
+"Die folgende :abbr:`CSV (Comma-separated Values)`-Datei zeigt, wie Sie "
+"Bestellungen mit den entsprechenden Bestellzeilen importieren können:"
 
 #: ../../content/applications/essentials/export_import_data.rst:388
 msgid ""
-"Then, use the label you found in your import template in order to make it "
-"work straight away the very next time you try to import."
+":download:`Purchase orders with their respective purchase order lines "
+"<export_import_data/o2m_purchase_order_lines.csv>`"
 msgstr ""
-"Verwenden Sie dann die Bezeichnung, die Sie in Ihrer Importvorlage gefunden "
-"haben, damit es beim nächsten Importversuch sofort funktioniert."
+":download:`Bestellungen mit den entsprechenden Bestellzeilen "
+"<export_import_data/o2m_purchase_order_lines.csv>`."
 
-#: ../../content/applications/essentials/export_import_data.rst:392
-msgid "Why an “ID” column"
-msgstr "Warum eine „ID“-Spalte?"
+#: ../../content/applications/essentials/export_import_data.rst:391
+msgid ""
+"The following :abbr:`CSV (Comma-separated Values)` file shows how to import "
+"customers and their respective contacts:"
+msgstr ""
+"Die folgende :abbr:`CSV (Comma-separated Values)`-Datei zeigt, wie Sie "
+"Kunden mit den entsprechenden Kontakten importieren können:"
 
 #: ../../content/applications/essentials/export_import_data.rst:394
 msgid ""
-"The **ID** (External ID) is an unique identifier for the line item. Feel "
-"free to use the one of your previous software to ease the transition to "
-"Odoo."
+":download:`Customers and their respective contacts "
+"<export_import_data/o2m_customers_contacts.csv>`"
 msgstr ""
-"Die **ID** (Externe ID) ist ein eindeutiger Bezeichner für die Position. Sie"
-" können gerne die aus Ihrer vorherigen Software verwenden, um den Übergang "
-"zu Odoo zu erleichtern."
 
-#: ../../content/applications/essentials/export_import_data.rst:397
-msgid ""
-"Setting an ID is not mandatory when importing but it helps in many cases:"
-msgstr ""
-"Die Angabe einer ID ist beim Importieren nicht zwingend erforderlich, aber "
-"in vielen Fällen hilfreich:"
-
-#: ../../content/applications/essentials/export_import_data.rst:399
-msgid ""
-"Update imports: you can import the same file several times without creating "
-"duplicates;"
-msgstr ""
-"Aktualisierungsimporte: Sie können dieselbe Datei mehrmals importieren, ohne"
-" Duplikate zu erzeugen."
+#: ../../content/applications/essentials/export_import_data.rst:398
+msgid "Import records several times"
+msgstr "Datensätze mehrfach importieren"
 
 #: ../../content/applications/essentials/export_import_data.rst:400
-msgid "Import relation fields (see here below)."
-msgstr "Importieren Sie Beziehungsfelder (siehe weiter unten)."
-
-#: ../../content/applications/essentials/export_import_data.rst:403
-msgid "How to import relation fields"
-msgstr "Wie Beziehungsfelder importiert werden"
+msgid ""
+"If an imported file contains one of the columns: :guilabel:`External ID` or "
+":guilabel:`Database ID`, records that have already been imported are "
+"modified, instead of being created. This is extremely useful as it allows "
+"users to import the same :abbr:`CSV (Comma-separated Values)` file several "
+"times, while having made some changes in between two imports."
+msgstr ""
+"Wenn eine importierte Datei eine der Spalten :guilabel:`Externe ID` oder "
+":guilabel:`Datenbank-ID` enthält, werden bereits importierte Datensätze "
+"geändert, anstatt neu erstellt zu werden. Dies ist äußerst nützlich, da es "
+"Benutzern ermöglicht, dieselbe :abbr:`CSV (Comma-separated Values)`-Datei "
+"mehrmals zu importieren, während sie zwischen zwei Importen einige "
+"Änderungen vorgenommen haben."
 
 #: ../../content/applications/essentials/export_import_data.rst:405
 msgid ""
-"An Odoo object is always related to many other objects (e.g. a product is "
-"linked to product categories, attributes, vendors, etc.). To import those "
-"relations you need to import the records of the related object first from "
-"their own list menu."
+"Odoo takes care of creating or modifying each record, depending if it is new"
+" or not."
 msgstr ""
-"Ein Odoo-Objekt ist immer mit vielen anderen Objekten verbunden (z. B. ist "
-"ein Produkt mit Produktkategorien, Attributen, Lieferanten usw. verbunden). "
-"Um diese Beziehungen zu importieren, müssen Sie zunächst die Datensätze der "
-"verknüpften Objekte aus deren eigenem Listenmenü importieren."
+"Odoo kümmert sich darum, jeden Datensatz zu erstellen oder zu ändern, je "
+"nachdem, ob er neu ist oder nicht."
 
-#: ../../content/applications/essentials/export_import_data.rst:409
+#: ../../content/applications/essentials/export_import_data.rst:407
 msgid ""
-"You can do it using either the name of the related record or its ID. The ID "
-"is expected when two records have the same name. In such a case add \" / "
-"ID\" at the end of the column title (e.g. for product attributes: Product "
-"Attributes / Attribute / ID)."
+"This feature allows a company to use the *Import/Export tool* in Odoo to "
+"modify a batch of records in a spreadsheet application."
 msgstr ""
-"Sie können dazu den Namen des Bezugsdatensatzes oder seine ID verwenden. Die"
-" ID wird erwartet, wenn zwei Datensätze den gleichen Namen haben. Fügen Sie "
-"in einem solchen Fall „ / ID“ am Ende des Spaltentitels hinzu (z. B. für "
-"Produktattribute: Produktattribute / Attribut / ID)."
+"Mit dieser Funktion kann ein Unternehmen das *Import/Export-Tool* von Odoo "
+"verwenden, um eine Reihe von Datensätzen in einer Tabellenkalkulationsapp zu"
+" ändern."
+
+#: ../../content/applications/essentials/export_import_data.rst:411
+msgid "Value not provided for a specific field"
+msgstr ""
+
+#: ../../content/applications/essentials/export_import_data.rst:413
+msgid ""
+"If all fields are not set in the CSV file, Odoo assigns the default value "
+"for every non-defined field. But, if fields are set with empty values in the"
+" :abbr:`CSV (Comma-separated Values)` file, Odoo sets the empty value in the"
+" field, instead of assigning the default value."
+msgstr ""
+
+#: ../../content/applications/essentials/export_import_data.rst:418
+msgid "Export/import different tables from an SQL application to Odoo"
+msgstr ""
+"Verschiedene Tabellen aus einer SQL-Anwendung in Odoo "
+"importieren/exportieren"
+
+#: ../../content/applications/essentials/export_import_data.rst:420
+msgid ""
+"If data needs to be imported from different tables, relations need to be "
+"recreated between records belonging to different tables. For instance, if "
+"companies and people are imported, the link between each person and the "
+"company they work for needs to be recreated."
+msgstr ""
+"Wenn Daten aus verschiedenen Tabellen importiert werden müssen, müssen die "
+"Beziehungen zwischen Datensätzen, die zu verschiedenen Tabellen gehören, neu"
+" erstellt werden. Wenn zum Beispiel Unternehmen und Personen importiert "
+"werden, muss die Verknüpfung zwischen jeder Person und dem Unternehmen, für "
+"das sie arbeitet, neu erstellt werden."
+
+#: ../../content/applications/essentials/export_import_data.rst:424
+msgid ""
+"To manage relations between tables, use the `External ID` facilities of "
+"Odoo. The `External ID` of a record is the unique identifier of this record "
+"in another application. The `External ID` must be unique across all records "
+"of all objects. It is a good practice to prefix this `External ID` with the "
+"name of the application or table. (like, 'company_1', 'person_1' - instead "
+"of '1')"
+msgstr ""
+"Um Beziehungen zwischen Tabellen zu verwalten, können Sie die Funktionen "
+"`Externe ID` von Odoo nutzen. Die `Externe ID` eines Datensatzes ist die "
+"eindeutige Kennung dieses Datensatzes in einer anderen Anwendung. Diese "
+"`Externe ID` muss für alle Datensätze aller Objekte eindeutig sein. Daher "
+"ist es eine gute Vorgehensweise, dieser `Externen ID` den Namen der App oder"
+" Tabelle voranzustellen. (z. B. 'Unternehmen_1', 'Person_1' anstelle von "
+"'1')"
+
+#: ../../content/applications/essentials/export_import_data.rst:429
+msgid ""
+"As an example, suppose there is an SQL database with two tables that are to "
+"be imported: companies and people. Each person belongs to one company, so "
+"the link between a person and the company they work for must be recreated."
+msgstr ""
+"Nehmen wir an, es gibt eine SQL-Datenbank mit zwei Tabellen, die importiert "
+"werden sollen: Unternehmen und Personen. Jede Person gehört zu einem "
+"Unternehmen, also muss die Verknüpfung zwischen einer Person und dem "
+"Unternehmen, für das sie arbeitet, neu erstellt werden."
+
+#: ../../content/applications/essentials/export_import_data.rst:433
+msgid ""
+"Test this example, with a :download:`sample of a PostgreSQL database "
+"<export_import_data/database_import_test.sql>`."
+msgstr ""
+"Testen Sie dieses Beispiel mit einem :download:`Beispiel für eine "
+"PostgreSQL-Datenbank <export_import_data/database_import_test.sql>`."
+
+#: ../../content/applications/essentials/export_import_data.rst:436
+msgid ""
+"First, export all companies and their *External ID*. In PSQL, write the "
+"following command:"
+msgstr ""
+"Zunächst exportieren wir alle Unternehmen und ihre *Externe ID*. Schreiben "
+"Sie den folgenden Befehl in PSQL:"
+
+#: ../../content/applications/essentials/export_import_data.rst:442
+msgid ""
+"This SQL command creates the following :abbr:`CSV (Comma-separated Values)` "
+"file:"
+msgstr ""
+"Dieser SQL-Befehl erstellt die folgende :abbr:`CSV (Comma-separated "
+"Values)`-Datei:"
+
+#: ../../content/applications/essentials/export_import_data.rst:451
+msgid ""
+"To create the :abbr:`CSV (Comma-separated Values)` file for people linked to"
+" companies, use the following SQL command in PSQL:"
+msgstr ""
+"Um die :abbr:`CSV (Comma-separated Values)`-Datei für Personen, die mit "
+"Unternehmen verknüpft sind, zu erstellen, verwenden Sie den folgenden SQL-"
+"Befehl in PSQL:"
+
+#: ../../content/applications/essentials/export_import_data.rst:458
+msgid "It produces the following :abbr:`CSV (Comma-separated Values)` file:"
+msgstr ""
+
+#: ../../content/applications/essentials/export_import_data.rst:468
+msgid ""
+"In this file, Fabien and Laurence are working for the Bigees company "
+"(`company_1`), and Eric is working for the Organi company. The relation "
+"between people and companies is done using the *External ID* of the "
+"companies. The *External ID* is prefixed by the name of the table to avoid a"
+" conflict of ID between people and companies (`person_1` and `company_1`, "
+"who shared the same ID 1 in the original database)."
+msgstr ""
+"In dieser Datei arbeiten Fabien und Laurence für das Unternehmen Bigees "
+"(`company_1`) und Eric arbeitet für das Unternehmen Organi. Die Beziehung "
+"zwischen Personen und Unternehmen wird über die *externe ID* der Unternehmen"
+" hergestellt. Wir mussten der *externen ID* den Namen der Tabelle "
+"voranstellen, um einen ID-Konflikt zwischen Personen und Unternehmen zu "
+"vermeiden (`person_1` und `company_1`,, die in der ursprünglichen Datenbank "
+"die gleiche ID 1 hatten)."
+
+#: ../../content/applications/essentials/export_import_data.rst:474
+msgid ""
+"The two files produced are ready to be imported in Odoo without any "
+"modifications. After having imported these two :abbr:`CSV (Comma-separated "
+"Values)` files, there are four contacts and three companies (the first two "
+"contacts are linked to the first company). Keep in mind to first import the "
+"companies, and then the people."
+msgstr ""
+"Die beiden erzeugten Dateien können ohne Änderungen in Odoo importiert "
+"werden. Nachdem Sie diese beiden :abbr:`CSV (Comma-separated "
+"Values)`-Dateien importiert haben, haben Sie vier Kontakte und drei "
+"Unternehmen. (die ersten beiden Kontakte sind mit dem ersten Unternehmen "
+"verknüpft). Sie müssen zuerst die Unternehmen und dann die Personen "
+"importieren."
 
 #: ../../content/applications/essentials/in_app_purchase.rst:3
-msgid "In-App Purchase (IAP)"
-msgstr "In-App-Käufe (In-App Purchase, IAP)"
-
-#: ../../content/applications/essentials/in_app_purchase.rst:5
-msgid ""
-"In-App Purchases (IAP) gives access to additional services through Odoo. For"
-" instance, it allows you to send SMS Text Messages or to send Invoices by "
-"post directly from your database."
+msgid "In-app purchases (IAP)"
 msgstr ""
 
-#: ../../content/applications/essentials/in_app_purchase.rst:9
-msgid "Buying Credits"
-msgstr "Guthaben kaufen"
-
-#: ../../content/applications/essentials/in_app_purchase.rst:11
+#: ../../content/applications/essentials/in_app_purchase.rst:7
 msgid ""
-"Each IAP Service relies on prepaid credits to work and has its own pricing. "
-"To consult your current balance or to recharge your account, go to "
-":menuselection:`Settings --> Odoo IAP --> View my Services`."
+"In-app purchases (IAP) are optional services that enhance Odoo databases. "
+"Each service provides its own specific features and functionality. A full "
+"list of services is available on the `Odoo IAP Catalog "
+"<https://iap.odoo.com/iap/all-in-app-services>`_."
 msgstr ""
+"In-App-Käufe (IAP) sind optionale Dienste, die Odoo-Datenbanken erweitern. "
+"Jeder Service bietet seine eigenen spezifischen Merkmale und Funktionen. "
+"Eine vollständige Liste der Services finden Sie im `Odoo-IAP-Katalog "
+"<https://iap.odoo.com/iap/all-in-app-services>`_."
 
-#: ../../content/applications/essentials/in_app_purchase.rst:19
+#: ../../content/applications/essentials/in_app_purchase.rst-1
+msgid "The IAP catalog with various services available on IAP.Odoo.com."
+msgstr "Der auf IAP.Odoo.com verfügbare IAP-Katalog mit mehreren Services."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:16
 msgid ""
-"If you are on Odoo Online and have the Enterprise version, you benefit from "
-"free credits to test our IAP features."
+"The :guilabel:`SMS` service sends text messages to contacts directly from "
+"the database, and the :guilabel:`Documents Digitization` service digitizes "
+"scanned or PDF vendor bills, expenses, and resumes with optical character "
+"recognition (OCR) and artificial intelligence (AI)."
 msgstr ""
+"Der :guilabel:`SMS`-Service sendet Textnachrichten an Kontakte direkt aus "
+"der Datenbank, und der :guilabel:`Dokumentendigitalisierung`-Service "
+"digitalisiert gescannte oder im PDF-Format vorliegende "
+"Lieferantenrechnungen, Ausgaben und Lebensläufe mit optischer "
+"Zeichenerkennung (OCR) und künstlicher Intelligenz (KI)."
 
-#: ../../content/applications/essentials/in_app_purchase.rst:23
-msgid "IAP accounts"
-msgstr "IAP-Konten"
+#: ../../content/applications/essentials/in_app_purchase.rst:20
+msgid ""
+"|IAP| services do **not** need to be configured or set up before use. Odoo "
+"users can simply click on the service in the app to activate it. However, "
+"each service requires its own prepaid credits, and when they run out, users "
+"**must** :ref:`buy more <iap/buying_credits>` in order to keep using it."
+msgstr ""
+"|IAP|-Services müssen **nicht** vor der Verwendung konfiguriert oder "
+"eingerichtet werden. Odoo-Benutzer können einfach auf den Service in der App"
+" klicken, um ihn zu aktivieren. Allerdings benötigt jeder Service sein "
+"eigenes im Voraus bezahltes Guthaben, und wenn dieses aufgebraucht ist, "
+"**müssen** Sie :ref:`weiteres erwerben <iap/buying_credits>`, um den Service"
+" weiter nutzen zu können."
 
 #: ../../content/applications/essentials/in_app_purchase.rst:25
 msgid ""
-"Credits to use IAP services are stored on IAP accounts, which are specific "
-"to each service. By default, IAP accounts are common to all companies, but "
-"can be restricted to specific ones. Activate the :ref:`developer mode "
-"<developer-mode>`, then go to :menuselection:`Technical Settings --> IAP "
-"Account`."
+"Enterprise Odoo users with a valid subscription get free credits to test IAP"
+" features before deciding to purchase more credits for the database. This "
+"includes demo/training databases, educational databases, and one-app-free "
+"databases."
 msgstr ""
-"Guthaben für die Nutzung von IAP-Services werden auf IAP-Konten gespeichert,"
-" die für jeden Dienst spezifisch sind. Standardmäßig sind die IAP-Konten für"
-" alle Unternehmen gleich, können aber auf bestimmte Unternehmen beschränkt "
-"werden. Aktivieren Sie den :ref:`Entwicklermodus <developer-mode>` und gehen"
-" Sie dann zu :menuselection:`Technische Einstellungen --> IAP-Konto`."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:32
+msgid "IAP services"
+msgstr "IAP-Services"
 
 #: ../../content/applications/essentials/in_app_purchase.rst:34
 msgid ""
-"An IAP account can be disabled by appending `+disabled` to its token. "
-"Reverting this change will re-enable the account."
+"|IAP| services are provided by Odoo, as well as third-parties, and have a "
+"wide range of uses."
+msgstr ""
+"|IAP|-Services werden sowohl von Odoo als auch von Drittanbietern zur "
+"Verfügung gestellt und haben eine Vielzahl von Verwendungsmöglichkeiten."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:36
+msgid "The following |IAP| services are offered by Odoo:"
 msgstr ""
 
 #: ../../content/applications/essentials/in_app_purchase.rst:38
-msgid "IAP Portal"
-msgstr "IAP-Portal"
+msgid ""
+":guilabel:`Documents Digitization`: digitizes scanned or PDF vendor bills, "
+"expenses, and resumes with OCR and AI."
+msgstr ""
+":guilabel:`Dokumentdigitalisierung`: digitalisiert gescannte oder PDF-"
+"Lieferantenrechnungen, Ausgaben und Lebensläufe mit OCR und KI."
 
 #: ../../content/applications/essentials/in_app_purchase.rst:40
 msgid ""
-"The IAP Portal is a platform regrouping your IAP Services. It is accessible "
-"from :menuselection:`Settings app --> Odoo IAP --> View my Services`. From "
-"there, you can view your current balance, recharge your credits and set a "
-"reminder when your balance falls below a threshold."
+":guilabel:`Partner Autocomplete`: automatically populates contact records "
+"with corporate data."
 msgstr ""
 
-#: ../../content/applications/essentials/in_app_purchase.rst:48
-msgid "Get notified when credits are low"
-msgstr "Benachrichtigt werden, wenn das Guthaben zur Neige geht"
-
-#: ../../content/applications/essentials/in_app_purchase.rst:50
+#: ../../content/applications/essentials/in_app_purchase.rst:41
 msgid ""
-"To be notified when it’s time to recharge your credits, you can go to your "
-"IAP Portal through :menuselection:`Settings app --> Odoo IAP --> View my "
-"Services`, unfold a service and check the Receive threshold warning option. "
-"Then, you can provide a minimum amount of credits and email addresses. Now, "
-"every time that the limit is reached, an automatic reminder will be sent by "
-"email!"
+":guilabel:`SMS`: sends SMS text messages to contacts directly from the "
+"database."
+msgstr ""
+
+#: ../../content/applications/essentials/in_app_purchase.rst:42
+msgid ""
+":guilabel:`Lead Generation`: generates leads based on a set of criteria, and"
+" converts web visitors into quality leads and opportunities."
+msgstr ""
+":guilabel:`Lead-Generierung`: generiert Leads auf der Grundlage einer Reihe "
+"von Kriterien und konvertiert Webbesucher in hochwertige Leads und "
+"Verkaufschancen."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:44
+msgid ""
+":guilabel:`Snailmail`: sends customer invoices and follow-up reports by "
+"post, worldwide."
+msgstr ""
+
+#: ../../content/applications/essentials/in_app_purchase.rst:45
+msgid ""
+":guilabel:`Signer identification with itsme®️`: ask document signatories in "
+"Odoo *Sign* to provide their identity using the *itsme®* identity platform, "
+"which is available in Belgium and the Netherlands."
+msgstr ""
+
+#: ../../content/applications/essentials/in_app_purchase.rst:49
+msgid ""
+"For more information on every service currently available (offered from "
+"developers other than Odoo), visit the `Odoo IAP Catalog "
+"<https://iap.odoo.com/iap/all-in-app-services>`_."
+msgstr ""
+
+#: ../../content/applications/essentials/in_app_purchase.rst:53
+msgid "Use IAP services"
+msgstr "IAP-Services verwenden"
+
+#: ../../content/applications/essentials/in_app_purchase.rst:55
+msgid ""
+"|IAP| services are automatically integrated with Odoo, and do **not** "
+"require users to configure any settings. To use a service, simply interact "
+"with it wherever it appears in the database."
+msgstr ""
+"|IAP|-Services sind automatisch in Odoo integriert und erfordern **keine** "
+"Einstellungen. Um einen Service zu nutzen, interagieren Sie einfach mit ihm,"
+" wo immer er in der Datenbank erscheint."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:59
+msgid ""
+"The following flow focuses on the *SMS* |IAP| service being used from a "
+"contact's record."
+msgstr ""
+
+#: ../../content/applications/essentials/in_app_purchase.rst:61
+msgid ""
+"This can be done by clicking the :guilabel:`📱 SMS` icon within the database."
+msgstr ""
+
+#: ../../content/applications/essentials/in_app_purchase.rst-1
+msgid ""
+"The SMS icon on a typical contact information form located within an Odoo "
+"database."
+msgstr ""
+"Das SMS-Symbol auf einem typischen Kontaktformular in einer Odoo-Datenbank."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:67
+msgid ""
+"One way to utilize the *SMS* |IAP| service with Odoo is showcased in the "
+"following steps:"
+msgstr ""
+"Eine Möglichkeit, den |IAP|-Service *SMS* mit Odoo zu nutzen, wird in den "
+"folgenden Schritten gezeigt:"
+
+#: ../../content/applications/essentials/in_app_purchase.rst:69
+msgid ""
+"First, navigate to the :menuselection:`Contacts application`, and click on a"
+" contact with a mobile phone number entered in either the :guilabel:`Phone` "
+"or :guilabel:`Mobile` field of the contact form."
+msgstr ""
+
+#: ../../content/applications/essentials/in_app_purchase.rst:73
+msgid ""
+"Next, find the :guilabel:`📱 SMS` icon that appears to the right of the "
+":guilabel:`Phone` or :guilabel:`Mobile` fields. Click the :guilabel:`📱 SMS` "
+"icon, and a :guilabel:`Send SMS Text Message` pop-up window appears."
+msgstr ""
+
+#: ../../content/applications/essentials/in_app_purchase.rst:77
+msgid ""
+"Type a message in the :guilabel:`Message` field of the pop-up window. Then, "
+"click the :guilabel:`Send SMS` button. Odoo then sends the message, via SMS,"
+" to the contact, and logs what was sent in the *chatter* of the contact's "
+"form."
+msgstr ""
+
+#: ../../content/applications/essentials/in_app_purchase.rst:81
+msgid ""
+"Upon sending the SMS message, the prepaid credits for the *SMS* |IAP| "
+"service are automatically deducted from the existing credits. If there are "
+"not enough credits to send the message, Odoo prompts the user to purchase "
+"more."
+msgstr ""
+
+#: ../../content/applications/essentials/in_app_purchase.rst:86
+msgid ""
+"For more information on how to use various |IAP| services, and for more in-"
+"depth instructions related to SMS functionality in Odoo, review the "
+"documentation below:"
+msgstr ""
+
+#: ../../content/applications/essentials/in_app_purchase.rst:89
+msgid ":doc:`Lead mining <../sales/crm/acquire_leads/lead_mining>`"
+msgstr ""
+
+#: ../../content/applications/essentials/in_app_purchase.rst:90
+msgid ""
+":doc:`Enrich your contacts base with Partner Autocomplete "
+"<../sales/crm/optimize/partner_autocomplete>`"
+msgstr ""
+
+#: ../../content/applications/essentials/in_app_purchase.rst:92
+msgid ""
+":doc:`SMS essentials <../marketing/sms_marketing/essentials/sms_essentials>`"
+msgstr ""
+
+#: ../../content/applications/essentials/in_app_purchase.rst:97
+msgid "IAP credits"
+msgstr "IAP-Guthaben"
+
+#: ../../content/applications/essentials/in_app_purchase.rst:99
+msgid ""
+"Every time an |IAP| service is used, the prepaid credits for that service "
+"are spent. Odoo prompts the purchase of more credits when there are not "
+"enough credits left to continue using a service. Email alerts can also be "
+"set up for when :ref:`credits are low <in_app_purchase/low-credits>`."
+msgstr ""
+
+#: ../../content/applications/essentials/in_app_purchase.rst:103
+msgid ""
+"Credits are purchased in *Packs* from the `Odoo IAP Catalog "
+"<https://iap.odoo.com/iap/all-in-app-services>`_, and pricing is specific to"
+" each service."
+msgstr ""
+"Guthaben werden in *Packs* aus dem `Odoo-IAP-Katalog "
+"<https://iap.odoo.com/iap/all-in-app-services>`_ gekauft, und die Preise "
+"sind für jeden Dienst spezifisch."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:107
+msgid ""
+"The `SMS service <https://iap.odoo.com/iap/in-app-services/1>`_ has four "
+"packs available, in denominations of:"
+msgstr ""
+"Es gibt vier verfügbare Pakete für den `SMS-Service "
+"<https://iap.odoo.com/iap/in-app-services/1>`_, in Nennwerten von:"
+
+#: ../../content/applications/essentials/in_app_purchase.rst:110
+msgid ":guilabel:`Starter Pack`: 10 credits"
+msgstr ":guilabel:`Starter-Pack`: 10 Guthaben"
+
+#: ../../content/applications/essentials/in_app_purchase.rst:111
+msgid ":guilabel:`Standard Pack`: 100 credits"
+msgstr ":guilabel:`Standard-Pack`: 100 Guthaben"
+
+#: ../../content/applications/essentials/in_app_purchase.rst:112
+msgid ":guilabel:`Advanced Pack`: 500 credits"
+msgstr ""
+
+#: ../../content/applications/essentials/in_app_purchase.rst:113
+msgid ":guilabel:`Expert Pack`: 1,000 credits"
+msgstr ":guilabel:`Experten-Pack`: 1.000 Guthaben"
+
+#: ../../content/applications/essentials/in_app_purchase.rst-1
+msgid "Four different packs of credits for the SMS IAP service."
+msgstr ""
+
+#: ../../content/applications/essentials/in_app_purchase.rst:119
+msgid ""
+"The number of credits consumed depends on the length of the SMS and the "
+"country of destination."
+msgstr ""
+"Die Anzahl der verbrauchten Guthaben hängt von der Länge der SMS und dem "
+"Zielland ab."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:121
+msgid ""
+"For more information, refer to the :doc:`SMS Pricing and FAQ "
+"<../marketing/sms_marketing/pricing/pricing_and_faq>` documentation."
+msgstr ""
+
+#: ../../content/applications/essentials/in_app_purchase.rst:127
+msgid "Buy credits"
+msgstr "Guthaben kaufen"
+
+#: ../../content/applications/essentials/in_app_purchase.rst:129
+msgid ""
+"If there are not enough credits to perform a task, the database "
+"automatically prompts the purchase of more credits."
+msgstr ""
+"Wenn nicht genügend Guthaben für eine Aufgabe vorhanden sind, fordert die "
+"Datenbank automatisch zum Kauf weiterer Guthaben auf."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:132
+msgid ""
+"Users can check the current balance of credits for each service, and "
+"manually purchase more credits, by navigating to the "
+":menuselection:`Settings app --> Contacts section`, and beneath the "
+":guilabel:`Odoo IAP` setting, click :guilabel:`View My Services`."
+msgstr ""
+
+#: ../../content/applications/essentials/in_app_purchase.rst:136
+msgid ""
+"Doing so reveals a :guilabel:`My Services` page, listing the various |IAP| "
+"services in the database. From here, click an |IAP| service to open its "
+":guilabel:`Account Information` page, where additional credits can be "
+"purchased."
+msgstr ""
+
+#: ../../content/applications/essentials/in_app_purchase.rst:141
+msgid "Manually buy credits"
+msgstr "Guthaben manuell erwerben"
+
+#: ../../content/applications/essentials/in_app_purchase.rst:143
+msgid "To manually buy credits in Odoo, follow these steps:"
+msgstr ""
+"Durchlaufen Sie diese Schritte, um Guthaben manuell in Odoo zu erwerben:"
+
+#: ../../content/applications/essentials/in_app_purchase.rst:145
+msgid ""
+"First, go to the :menuselection:`Settings application` and type `IAP` in the"
+" :guilabel:`Search...` bar. Alternatively users can scroll down to the "
+":guilabel:`Contacts` section. Under the :guilabel:`Contacts` section, where "
+"it says :guilabel:`Odoo IAP`, click :guilabel:`View My Services`."
+msgstr ""
+
+#: ../../content/applications/essentials/in_app_purchase.rst-1
+msgid ""
+"The Settings app showing the Odoo IAP heading and View My Services button."
+msgstr ""
+"Die Einstellungen-App mit der Odoo-IAP-Überschrift und die Schaltfläche "
+"„Meine Services anzeigen“."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:154
+msgid ""
+"Doing so reveals an :guilabel:`IAP Account` page, listing the various |IAP| "
+"services in the database. From here, click an |IAP| service to open details "
+"about it; additional credits can be purchased from here."
+msgstr ""
+
+#: ../../content/applications/essentials/in_app_purchase.rst:158
+msgid ""
+"On the following page, click the :guilabel:`Buy Credit` button. Doing so "
+"loads a :guilabel:`Buy Credits for (IAP Account)` page in a new tab. From "
+"here, click :guilabel:`Buy` on the desired pack of credits. Then, follow the"
+" prompts to enter payment details, and confirm the order."
+msgstr ""
+
+#: ../../content/applications/essentials/in_app_purchase.rst-1
+msgid ""
+"The SMS service page on IAP.Odoo.com with four packs of credits available "
+"for purchase."
+msgstr ""
+"Die Seite des SMS-Service auf IAP.Odoo.com mit vier Guthaben-Packs für den "
+"Einkauf."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:166
+msgid ""
+"Once the transaction is complete, the credits are available for use in the "
+"database."
+msgstr ""
+"Sobald die Transaktion abgeschlossen ist, können Sie das Guthaben in der "
+"Datenbank verwenden."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:171
+msgid "Low-credit notification"
+msgstr "Benachrichtigung bei geringem Guthaben"
+
+#: ../../content/applications/essentials/in_app_purchase.rst:173
+msgid ""
+"It is possible to be notified when credits are low, in order to avoid "
+"running out of credits, while using an |IAP| service. To do that, follow "
+"this process:"
+msgstr ""
+"Sie können sich benachrichtigen lassen, wenn Ihr Guthaben zur Neige geht, um"
+" zu vermeiden, dass Ihnen das Guthaben ausgeht, während Sie einen "
+"|IAP|-Service nutzen. Gehen Sie dazu folgendermaßen vor:"
+
+#: ../../content/applications/essentials/in_app_purchase.rst:176
+msgid ""
+"Go to the :menuselection:`Settings application`, and type `IAP` in the "
+":guilabel:`Search...` bar. Under the :guilabel:`Contacts` section, where it "
+"says :guilabel:`Odoo IAP`, click :guilabel:`View My Services`."
+msgstr ""
+
+#: ../../content/applications/essentials/in_app_purchase.rst:180
+msgid ""
+"The available |IAP| accounts appear in a list view on the :guilabel:`IAP "
+"Account` page. From here, click on the desired |IAP| account to view that "
+"service's details."
+msgstr ""
+
+#: ../../content/applications/essentials/in_app_purchase.rst:183
+msgid ""
+"On the details page, tick the :guilabel:`Receive threshold warning` "
+"checkbox. Doing so reveals two fields on the form: :guilabel:`Warning "
+"Threshold` and :guilabel:`Contact Email`."
+msgstr ""
+
+#: ../../content/applications/essentials/in_app_purchase.rst:186
+msgid ""
+"In the :guilabel:`Warning Threshold` field, enter an amount of credits Odoo "
+"should use as the minimum threshold for this service. In the "
+":guilabel:`Contact Email` field, enter the email address that receives the "
+"notification."
+msgstr ""
+
+#: ../../content/applications/essentials/in_app_purchase.rst:190
+msgid ""
+"Odoo sends a low-credit alert to the :guilabel:`Contact Email` when the "
+"balance of credits falls below the amount listed as the :guilabel:`Warning "
+"Threshold`."
 msgstr ""
