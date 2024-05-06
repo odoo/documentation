@@ -44,8 +44,8 @@ Git
    basic knowledge of Git commands to proceed.
 
 To clone a Git repository, choose between cloning with HTTPS or SSH. In most cases, the best option
-is HTTPS. However, choose SSH to contribute to Odoo source code or when following the :doc:`Getting
-Started developer tutorial </developer/tutorials/server_framework_101>`.
+is HTTPS. However, choose SSH to contribute to Odoo source code or when following the
+:doc:`/developer/tutorials/server_framework_101` tutorial.
 
 .. tabs::
 

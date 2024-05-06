@@ -15,7 +15,7 @@ currently,
   update or delete properties, property types, or property tags.
 * If ``estate_account`` is installed then only agents allowed to interact
   with invoicing can confirm sales as that's necessary to :ref:`create an
-  invoice <tutorials/server_framework_101/13_other_module/create>`.
+  invoice <tutorials/server_framework_101_legacy/13_other_module/create>`.
 
 However:
 
@@ -139,8 +139,6 @@ Access Rights
     - Employees who are not at least real-estate agents will not see the
       real-estate application.
     - Real-estate agents will not be able to update the property types or tags.
-
-Access rights were first introduced in :doc:`server_framework_101/04_securityintro`.
 
 Access rights are a way to give users access to models *via* groups: associate
 an access right to a group, then all users with that group will have the access.

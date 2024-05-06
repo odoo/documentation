@@ -2,6 +2,12 @@
 Chapter 13: Interact With Other Modules
 =======================================
 
+.. danger::
+   This tutorial is outdated. We recommend reading :doc:`../server_framework_101` instead.
+
+.. seealso::
+   :doc:`Homepage of the tutorial <../server_framework_101_legacy>`
+
 In the :doc:`previous chapter <12_inheritance>`, we used inheritance to
 modify the behavior of a module. In our real estate scenario, we would like to go a step further
 and be able to generate invoices for our customers. Odoo provides an Invoicing module, so it
@@ -47,7 +53,7 @@ When the ``estate_account`` module appears in the list, go ahead and install it!
 the Invoicing application is installed as well. This is expected since your module depends on it.
 If you uninstall the Invoicing application, your module will be uninstalled as well.
 
-.. _tutorials/server_framework_101/13_other_module/create:
+.. _tutorials/server_framework_101_legacy/13_other_module/create:
 
 Invoice Creation
 ----------------
