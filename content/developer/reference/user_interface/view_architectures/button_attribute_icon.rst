@@ -1,5 +1,3 @@
-:nosearch:
-
 .. attribute:: icon
    :noindex:
 
