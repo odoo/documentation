@@ -42,6 +42,8 @@ for each click of the arrow, respectively.
 
 At any point, to return to a view containing the current day, click the :guilabel:`Today` button.
 
+.. _payroll/new-work-entry:
+
 Add a new work entry
 ====================
 
