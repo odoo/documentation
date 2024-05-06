@@ -1,5 +1,3 @@
-:nosearch:
-
 .. attribute:: column_invisible
    :noindex:
 
