@@ -1,5 +1,3 @@
-:nosearch:
-
 .. attribute:: required
    :noindex:
 

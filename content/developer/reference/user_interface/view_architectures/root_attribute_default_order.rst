@@ -1,5 +1,3 @@
-:nosearch:
-
 .. attribute:: default_order
    :noindex:
 
