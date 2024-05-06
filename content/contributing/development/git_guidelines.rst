@@ -2,6 +2,8 @@
 Git guidelines
 ==============
 
+.. _contributing/git_guidelines/configure_git:
+
 Configure your git
 ------------------
 
@@ -16,6 +18,8 @@ way towards making your commits more helpful:
 
 - Be sure to add your full name to your Github profile here. Please feel fancy
   and add your team, avatar, your favorite quote, and whatnot ;-)
+
+.. _contributing/git_guidelines/message_structure:
 
 Commit message structure
 ------------------------
@@ -41,6 +45,8 @@ description. Try to follow the preferred structure for your commit messages
   Fixes #123  (close related issue on Github)
   Closes #123  (close related PR on Github)
   opw-123 (related to ticket)
+
+.. _contributing/git_guidelines/commit_tag_module:
 
 Tag and module name
 -------------------
@@ -73,6 +79,8 @@ various to tell it is cross-modules. Unless really required or easier avoid
 modifying code across several modules in the same commit. Understanding module
 history may become difficult.
 
+.. _contributing/git_guidelines/commit_header:
+
 Commit message header
 ---------------------
 
@@ -85,6 +93,8 @@ Commit message header should make a valid sentence once concatenated with
 ``if applied, this commit will <header>``. For example ``[IMP] base: prevent to
 archive users linked to active partners`` is correct as it makes a valid sentence
 ``if applied, this commit will prevent users to archive...``.
+
+.. _contributing/git_guidelines/commit_body:
 
 Commit message full description
 -------------------------------
