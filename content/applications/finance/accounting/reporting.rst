@@ -40,6 +40,8 @@ of your organisation as at a particular date.
 
 .. image:: reporting/main_reports09.png
 
+.. _accounting/reporting/balance-sheet:
+
 Profit and Loss
 ---------------
 
@@ -48,6 +50,8 @@ organisation's net income, by deducting expenses from revenue for the
 report period.
 
 .. image:: reporting/main_reports10.png
+
+.. _accounting/reporting/executive-summary:
 
 Executive Summary
 -----------------
@@ -125,6 +129,8 @@ The **Aged Receivables** report shows the sales invoices that were awaiting
 payment during a selected month and several months prior.
 
 .. image:: reporting/main_reports07.png
+
+.. _accounting/reporting/cash-flow-statement:
 
 Cash Flow Statement
 -------------------

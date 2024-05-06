@@ -20,6 +20,8 @@ for use at a later date:
    - `Odoo Tutorials: Bank Configuration
      <https://www.odoo.com/slides/slide/bank-configuration-1880>`_
 
+.. _payments/register:
+
 Registering payment from an invoice or bill
 ===========================================
 
