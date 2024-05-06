@@ -86,7 +86,7 @@ The different :guilabel:`Program Types` available on the program form are:
 - :guilabel:`Next Order Coupons`: Generate and share single-use coupon codes that grant access to
   rewards on the customer's next order.
 - :guilabel:`Loyalty Cards`: When making purchases, the customer accumulates points to exchange for
-  rewards on future orders.
+  rewards on current and/or future orders.
 - :guilabel:`Promotions`: Set conditional rules for ordering products, which, when fulfilled, grant
   access to rewards for the customer.
 - :guilabel:`Discount Code`: Set codes which, when entered upon checkout, grant discounts to the
