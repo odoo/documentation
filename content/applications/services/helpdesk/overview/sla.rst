@@ -127,6 +127,8 @@ ticket is moved to the :guilabel:`Reach Stage`.
    :align: center
    :alt: View of a ticket's form with a failing and passing SLA in Odoo Helpdesk.
 
+.. _helpdesk/analyze-sla-performance:
+
 Analyze SLA performance
 =======================
 
