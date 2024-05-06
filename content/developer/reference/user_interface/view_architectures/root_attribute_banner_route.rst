@@ -1,5 +1,3 @@
-:nosearch:
-
 .. attribute:: banner_route
    :noindex:
 
