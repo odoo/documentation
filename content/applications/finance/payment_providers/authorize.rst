@@ -50,6 +50,8 @@ customer's card, but not charged yet.
 .. seealso::
    - :doc:`../payment_providers`
 
+.. _authorize/ach_payments:
+
 ACH payments (USA only)
 =======================
 
