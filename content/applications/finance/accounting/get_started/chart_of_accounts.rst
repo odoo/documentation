@@ -15,6 +15,8 @@ When browsing your chart of accounts, you can sort the accounts by :guilabel:`Co
 .. image:: chart_of_accounts/chart-of-accounts-sort.png
    :alt: Group the accounts by type in Odoo Accounting
 
+.. _chart-of-account/create:
+
 Configuration of an account
 ===========================
 
