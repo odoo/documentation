@@ -131,6 +131,19 @@ If the `from_filter` contains a full email address, and if the `mail.default.fro
 this address, then all of the email addresses that are different from `mail.default.from` will be
 encapsulated in `mail.default.from`.
 
+If the following configuration won't work configure the following settings:
+
+1. Go to the :menuselection:`Settings --> Discuss --> Alias Domain` and click on the arrow near the text field.
+
+2. Type a domain name from which you want to send your E-Mails into the `Domain` field (like `example.com`).
+
+3. Into the `Default From Alias` field type an e-mail sender user name (like `donotreply`).
+
+Now all mails will be send from the e-mail: `donotreply@example.com`. 
+
+Remember to add the whole e-mail address the the `FROM Filtering` field in the outgoing email server's configuration. 
+
+
 .. _email_communication/from_filter:
 
 Utilizing the "From" filter on an outgoing email server
