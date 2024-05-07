@@ -30,7 +30,7 @@ new one by clicking :guilabel:`New`.
 .. admonition:: Learn more
 
    For a complete guide on how to properly configure a new |BOM|, see the documentation on
-   :ref:`creating a bill of materials <manufacturing/management/bill-configuration>`.
+   :doc:`creating a bill of materials <../basic_setup/bill_configuration>`.
 
 On the |BOM|, click on the :guilabel:`Miscellaneous` tab, then enable the :guilabel:`Operation
 Dependencies` checkbox. This makes a new :guilabel:`Blocked By` option available in the settings of
