@@ -70,5 +70,4 @@ to finish adding operations, or :guilabel:`Save & New` to add more.
    The section above provides instructions for creating a basic |BOM| that allows a product to be
    manufactured in Odoo. However, it is by no means an exhaustive summary of all the options
    available when configuring a |BOM|. For more information about bills of materials, see the
-   documentation on how to :ref:`create a bill of materials
-   <manufacturing/management/bill-configuration>`.
+   documentation on how to :doc:`create a bill of materials <bill_configuration>`.
