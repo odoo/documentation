@@ -20,7 +20,7 @@ centralization of files attached to a specific area of your activity. For exampl
 :guilabel:`Human Resources`, your HR documents are automatically available in the HR workspace,
 while documents related to Payroll are automatically available in the Payroll sub-workspace . You
 can change the default workspace using the dropdown menu and edit its properties by clicking the
-internal link button (:guilabel:`➔`).
+:guilabel:`➔` (:guilabel:`Internal link`) icon.
 
 .. image:: documents/files-centralization.png
    :alt: Enable the centralization of files attached to a specific area of your activity.
@@ -41,14 +41,19 @@ internal link button (:guilabel:`➔`).
 Workspaces
 ==========
 
-Workspaces are hierarchical folders having their own set of tags and :ref:`actions
-<documents/workflow-actions>`. Default workspaces exist, but you can create your own by going to
-:menuselection:`Documents --> Configuration --> Workspaces` and clicking :guilabel:`New`. On the new
-page, fill in the following information:
+Workspaces are hierarchical folders having their own set of :ref:`tags <documents/tags>`
+and :ref:`actions <documents/workflow-actions>`. Default workspaces exist, but you can create your
+own by going to :menuselection:`Documents --> Configuration --> Workspaces` and clicking
+:guilabel:`New`. On the new page, fill in the following information:
 
 - :guilabel:`Name`
 - :guilabel:`Parent Workspace`: if you want to create a sub-workspace, select its :guilabel:`Parent
   Workspace`
+
+Three tabs are available: :ref:`Tags <documents/tags>`,
+:ref:`Access Rights <documents/access-rights>`, and :ref:`Description <documents/description>`.
+
+.. _documents/tags:
 
 Tags
 ----
@@ -56,24 +61,19 @@ Tags
 Tags are used within workspaces to add a level of differentiation between documents. They are
 organized per category, and filters can be used to sort them.
 
-Tags can be created from the :guilabel:`Tags` tab. Click :guilabel:`Add a line`, create the
-:guilabel:`Tag Category`, and :guilabel:`Name` your tags.
+From the :guilabel:`Tags` tab, click :guilabel:`Add a line`, create the :guilabel:`Tag Category`,
+and :guilabel:`Name` your tags.
 
 .. note::
    - The tags of a parent workspace apply to the child workspaces automatically;
-   - Tags can be created and modified by going to :menuselection:`Configuration --> Tags`;
-   - Tags can also be created or edited by clicking the gear icon :guilabel:`⚙` on the left menu.
+   - Tags can be created and modified by going to :menuselection:`Documents --> Configuration -->
+     Tags`;
+   - Tags can also be created or edited by clicking the :icon:`fa-cog` (:guilabel:`cog`) icon on
+     the left menu;
+   - An :ref:`email alias <documents/upload>` can be used to automatically send received documents
+     to a specific workspace based on the tag assigned.
 
-An **email alias** can be used to automatically send received documents to a specific workspace
-based on the tag assigned. To create an email alias:
-
-#. Select the tag and the corresponding workspace where the document should be directed in the left
-   column of your dashboard.
-
-#. Next to the :guilabel:`Upload` button, click the down arrow, and then click :guilabel:`Share`.
-
-#. In the new window, click :guilabel:`Download and Upload` and enter the email alias where
-   documents should be sent.
+.. _documents/access-rights:
 
 Access rights
 -------------
@@ -83,6 +83,12 @@ Workspaces`, open the workspace you want to edit, and go to the :guilabel:`Acces
 You can add :guilabel:`Write Groups` that can view, create, and edit the workspace's documents.
 You can also add :guilabel:`Read Groups` that can only view the workspace's documents.
 
+.. tip::
+   Enable :guilabel:`Own Documents Only` to limit :guilabel:`Read Groups` and
+   :guilabel:`Write Groups` to the documents of which they are owner.
+
+.. _documents/description:
+
 Description
 -----------
 
@@ -91,54 +97,63 @@ Configuration --> Workspaces`, opening the workspace you want to describe and go
 :guilabel:`Description` tab.
 
 .. note::
-   Workspaces can also be created and edited by clicking the gear icon :guilabel:`⚙` on the left
-   menu.
+   Workspaces can also be created and edited by clicking the :icon:`fa-cog` (:guilabel:`cog`) icon
+   on the left menu.
 
    .. image:: documents/sub-workspaces-creation.png
       :alt: Create sub-workspaces from the left menu
 
+.. _documents/management:
+
 Documents management
 ====================
 
-When selecting or opening a document, the right panel displays different options. On the top,
-additional options might be available: :guilabel:`Download`, :guilabel:`Share`, :guilabel:`Replace`,
-:guilabel:`Lock` or :guilabel:`Split`. It is also possible to :guilabel:`Open chatter` or use the
-:guilabel:`Move to trash` option.
+When selecting or opening a document, the right panel displays different options, including, for
+example: :icon:`fa-download` (:guilabel:`Download`), :icon:`fa-share-alt` (:guilabel:`Share this
+selection`), :icon:`fa-retweet` (:guilabel:`Replace`), :icon:`fa-unlock` (:guilabel:`Lock`),
+:icon:`fa-scissors` (:ref:`Split <documents/split>`), :icon:`fa-comments` (:guilabel:`Open chatter`),
+and :icon:`fa-trash` (:guilabel:`Move to trash`).
 
 .. image:: documents/right-panel-options.png
    :align: center
    :alt: right panel options
 
-Then, you can modify the name of your file by clicking on :guilabel:`Name`. A :guilabel:`Contact` or
-an :guilabel:`Owner` can be assigned. The related :guilabel:`Workspace` can be modified and it is
+To modify the name of your file, click on :guilabel:`Name`. A :guilabel:`Contact` or an
+:guilabel:`Owner` can be assigned. The related :guilabel:`Workspace` can be modified and it is
 possible to access the related :guilabel:`Journal Entry` or add :guilabel:`Tags`.
 
 .. note::
-   - The :guilabel:`Contact` is the person related to the document and assigned to it. He can only
-     view the document and not modify it. I.e.: an existing supplier in your database is the contact
-     for their bill.
-   - The person who creates a document is, by default :guilabel:`Owner` of it and has complete
-     rights to it. It is possible to replace the owner of a document. I.e., an employee
-     must be owner of a document to be able to see it in "My Profile".
+   - The :guilabel:`Contact` is a person related to the document who only has read
+     :ref:`access rights <documents/access-rights>` to the document, e.g., an existing supplier in
+     your database;
+   - The creator of a document is automatically assigned as its :guilabel:`Owner` and is granted
+     full access rights to it. To replace the owner of a document, select the required user from the
+     dropdown list in the :guilabel:`Owner` field.
+
+.. tip::
+   An employee must be a user and the owner of a document to view it in **My Profile**.
 
 Different :ref:`Actions <documents/workflow-actions>` are available at the bottom of the right
 panel, depending on the workspace where your document is stored.
 
+.. _documents/split:
+
 Split PDF documents
 -------------------
 
-Select the PDF you want to split, and click the scissors icon. A new view displays all the pages of
-the document.
+Select the PDF you want to split, and click the :icon:`fa-scissors` (:guilabel:`scissors`) icon. A
+new view displays all the pages of the document.
 
-By default, each page of the document will be split when clicking :guilabel:`Split`. To remove a
-split between two pages, click on the scissors icon.
+By default, all pages are split when you click :guilabel:`Split`. To remove a split between two
+pages, click the :icon:`fa-scissors` (:guilabel:`scissors`) icon.
 
 .. image:: documents/split-pdf.png
    :alt: split your documents
 
 .. tip::
-   To merge documents from your dashboard, select them and click the scissors icon. Click on the
-   scissors between the two documents and click :guilabel:`Split` to merge the documents.
+   To merge documents from your dashboard, select them and click the :icon:`fa-scissors`
+   (:guilabel:`scissors`) icon. Click on the scissors between the two documents and click
+   :guilabel:`Split` to merge the documents.
 
 Additional features
 -------------------
@@ -151,29 +166,35 @@ Request
 
 You can create "missing documents" and organize them as documents, to remind users to download them.
 
-Select the workspace where the file should be stored, click :guilabel:`Upload`, then
-:guilabel:`Request`. Add the :guilabel:`Document Name`, select the person you need it from in the
-:guilabel:`Request To` field, fill in the :guilabel:`Due Date In`, confirm the
-:guilabel:`Workspace`, the document should belong to, and add :guilabel:`Tags` and a
-:guilabel:`Note`, if needed. Then, click :guilabel:`Request`. A placeholder for the missing document
+Select the workspace where the file should be stored, click the arrow next to the :guilabel:`Upload`
+button, and select the :guilabel:`Request` option. Add the :guilabel:`Document Name`, choose the
+person you need it from in the :guilabel:`Request To` field, fill in the :guilabel:`Due Date In`,
+confirm the :guilabel:`Workspace` the document should belong to, and add :guilabel:`Tags` and a
+:guilabel:`Note` if needed. Then, click :guilabel:`Request`. A placeholder for the missing document
 is created in the workspace.
 
-When your document is available, click the placeholder to upload it.
+.. image:: documents/missing-doc.png
+   :alt: Placeholder for missing document
 
-You can see all missing documents by going to the **Activity** view and to the :guilabel:`Requested
+To upload the document, click the :icon:`fa-upload` (:guilabel:`Upload file`) icon in the document
+preview. By default, the requestor is set as the document's :guilabel:`Owner`.
+
+You can see all missing documents by going to the **Activity** view and the :guilabel:`Requested
 Document` column.
 
 .. tip::
-   From the :guilabel:`Activity` view, you can send a **reminder email** to users from whom you are
-   expecting a document. Go to the :guilabel:`Requested Document` column, click on ⋮ and
-   :guilabel:`Document Request: Reminder`.
+   - From the :guilabel:`Activity` view, you can send a **reminder email** to users from whom you
+     are expecting a document. Go to the :guilabel:`Requested Document` column, click on the
+     :icon:`fa-ellipsis-v` (:guilabel:`vertical ellipsis`) icon and :guilabel:`Document Request: Reminder`.
 
-   Click on a date to see the details of a specific request. You can update it by clicking on the
-   pen icon, :guilabel:`Preview` the content of the reminder email, or :guilabel:`Send Now` to send
-   a reminder email.
+   - Click on a date to see the details of a specific request. You can update it by clicking on the
+     :icon:`fa-pencil` (:guilabel:`pen`) icon, :guilabel:`Preview` the content of the reminder
+     email, or :guilabel:`Send Now` to send a reminder email.
 
-   .. image:: documents/reminder-email.png
-      :alt: send a reminder email from the Activity view
+      .. image:: documents/reminder-email.png
+         :alt: send a reminder email from the Activity view
+
+.. _documents/add-a-link:
 
 Add a link
 ~~~~~~~~~~
@@ -184,19 +205,74 @@ To add a link to your documents dashboard, click on :guilabel:`Add a Link`, ente
 Share
 ~~~~~
 
-You can create a share link to a document or all documents of a workspace. It allows anyone to
-download the file(s) or upload files to a workspace.
+You can make a document or a workspace accessible to anyone by sharing a URL.
 
-To do so, select the workspace or the document and click the arrow next to the :guilabel:`Upload`
-button then :guilabel:`Share`. On the pop-up, the share :guilabel:`URL` is displayed.
-:guilabel:`Copy` it to share it with anyone. :guilabel:`Name` the share link and set a validity date
-for the URL by filling in the :guilabel:`Valid Until` field. Tick the :guilabel:`Include Sub
-Folders` box if you also want to share a workspace's sub-folders. To let users upload their own
-documents, select :guilabel:`Download and Upload`.
+Share a document
+****************
+
+To generate a **share link** to a document, select the document, click the arrow next to the
+:guilabel:`Upload` button, and click :guilabel:`Share`.
+
+In the pop-up, you can :guilabel:`Name` the share link, set a validity date by filling in the
+:guilabel:`Valid Until` field, and if you own more than one site, select the :guilabel:`Website` you
+want so the right domain name is reflected in the URL.
+
+Click :guilabel:`Copy` or :guilabel:`Share` to send the URL to whomever you want.
+
+.. tip::
+   You can also generate a share URL by selecting the document, going to the right panel, and
+   clicking the :icon:`fa-share-alt` (:guilabel:`Share this selection`) icon.
+
+Share a workspace
+*****************
+
+You can share a link to a workspace and allow users to :guilabel:`Download` its content or
+:guilabel:`Download and Upload` files to it.
+
+To do so, go to the left column of your dashboard. In the :guilabel:`Workspace` section, select the
+workspace to share, and possibly one or several tags that will be automatically added to the
+uploaded documents. Then, click the arrow next to the :guilabel:`Upload` button and
+:guilabel:`Share`.
+
+In the pop-up, a share :guilabel:`URL` you can :guilabel:`Copy` is displayed. You can
+:guilabel:`Name` your share link, set a validity date by filling in the :guilabel:`Valid Until`
+field, tick the :guilabel:`Include Sub Folders` box if you want to share the workspace's
+sub-folders, and if you own more than one site, select the :guilabel:`Website` you
+want so the share link reflects the right domain name.
+
+Then, allow users to either :guilabel:`Download` files from your workspace, or to :ref:`Download and
+Upload <documents/upload>` files to it.
+
+.. Note::
+   - The links added to your workspace using the :ref:`Add a Link <documents/add-a-link>` option
+     cannot be shared and are, therefore, excluded.
+   - When tags are applied to a shared workspace, users can exclusively access the documents
+     associated with those tags.
+
+.. _documents/upload:
+
+Upload by email
+^^^^^^^^^^^^^^^
+
+Select the :guilabel:`Download and Upload` option to enable users to upload their files to your
+workspace using an :guilabel:`Email Alias`. To create the email alias, enter its name in the
+:guilabel:`Email Alias` field. The :doc:`domain name <../general/email_communication/email_servers>`
+should be set by default, but you can modify it by clicking it.
+
+The documents sent to this email alias are uploaded to the workspace using the chosen
+:ref:`tags <documents/tags>`.
 
 .. note::
-   It is possible to only share one or more documents (without their workspace) by selecting them
-   and clicking :guilabel:`Share`.
+   - By default, the :guilabel:`Document Owner` is the person who uploads a file to a workspace, but
+     you can select another user. You can also set a :guilabel:`Contact`, usually an external
+     person, such as a partner.
+   - Enable :guilabel:`Create a new activity` to automatically create an activity when a document is
+     uploaded. Select the :guilabel:`Activity type` from the dropdown list and set the
+     :guilabel:`Due Date In` field. You can also add a :guilabel:`Summary` and a
+     :guilabel:`Responsible` person assigned to the activity.
+
+.. tip::
+   Go to :menuselection:`Configuration --> Share & Emails` to see and manage your share links.
 
 New spreadsheet
 ~~~~~~~~~~~~~~~
@@ -266,9 +342,10 @@ pdf :guilabel:`value`.
 .. image:: documents/domain-condition-example.png
    :alt: Example of a workflow action's domain condition in Odoo Documents
 
-Click :guilabel:`Add New Rule` (plus icon) and :guilabel:`Add branch` to add conditions and
-sub-conditions. You can then specify if your rule should match :guilabel:`all` or :guilabel:`any`
-conditions. You can also edit the rule directly using the :guilabel:`Code editor`.
+Click the :icon:`fa-plus` (:guilabel:`Add New Rule`) icon and the :icon:`fa-sitemap`
+(:guilabel:`Add branch`) icon to add conditions and sub-conditions. You can then specify if your
+rule should match :guilabel:`all` or :guilabel:`any` conditions. You can also edit the rule directly
+using the :guilabel:`Code editor`.
 
 Configure the actions
 ---------------------
