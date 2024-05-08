@@ -121,6 +121,11 @@ def icon_role(name, rawtext, text, lineno, inliner, options=None, content=None):
             )
             error_node = inliner.problematic(rawtext, rawtext, report_error)
             return [error_node], [report_error]
-    icon_html = f'<i class="oi {text}"></i>' if text.startswith('oi-') else f'<i class="{text}"></i>'
+    if text.startswith('oi-'):
+        icon_html = f'<i class="oi {text}"></i>'
+    elif text.startswith('fa-'):
+        icon_html = f'<i class="fa {text}"></i>'
+    else:
+        icon_html = f'<i class="{text}"></i>'
     node = nodes.raw('', icon_html, format='html')
     return [node], []
