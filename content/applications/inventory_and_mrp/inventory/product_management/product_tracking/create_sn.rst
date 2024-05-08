@@ -18,7 +18,9 @@ In Odoo, serial numbers are assigned to products:
   receipt
 - in the :ref:`Open: Stock move window <inventory/product_management/stock-move-section>` on a
   receipt
-- when closing a manufacturing order
+- :doc:`during a manufacturing order
+  <../../../manufacturing/basic_setup/configure_manufacturing_product>` for a product tracked by
+  lot/serial numbers
 - when making an inventory adjustment
 
 .. _inventory/product_management/detailed-operations-popup:
