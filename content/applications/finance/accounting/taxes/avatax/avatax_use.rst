@@ -100,3 +100,62 @@ value. To recalculate the taxes, click :guilabel:`Compute taxes using Avatax`.
 
 .. tip::
    Tax calculation can even be done on negative subtotals and credit notes.
+
+Logging
+=======
+
+It is possible to log Avalara/*AvaTax* actions in Odoo for further analysis, or verification of
+functionality. Logging is accessible through the *AvaTax* settings.
+
+To start logging *AvaTax* actions, first, navigate to the :menuselection:`Accounting app -->
+Configuration --> Settings`.
+
+Then, in the :guilabel:`Taxes` section, under the :guilabel:`AvaTax` settings, click
+:guilabel:`Start logging for 30 minutes`.
+
+Upon starting the log process, Odoo will log all Avalara/*AvaTax* actions performed in the database.
+
+To view the logs, click on :guilabel:`Show logs` to the right of the :guilabel:`Start logging for 30
+minutes`. This reveals a detailed list of Avalara/*AvaTax* actions. This list is sortable by the
+following columns:
+
+- :guilabel:`Created on`: timestamp of the *AvaTax* calculation.
+- :guilabel:`Created by`: numeric value of the user in the database.
+- :guilabel:`Database name`: name of the database.
+- :guilabel:`Type`: two values can be chosen for this field, :guilabel:`Server` or
+  :guilabel:`Client`.
+- :guilabel:`Name`: Avalara service name. In this case, it will be *AvaTax*.
+- :guilabel:`Level`: by default, this will be `INFO`.
+- :guilabel:`Path`: indicates the path taken to make the calculation.
+- :guilabel:`Line`: indicates the line the calculation is made on.
+- :guilabel:`Function`: indicates the calculation taken on the line.
+
+.. image:: avatax_use/logging.png
+   :align: center
+   :alt: Avalara logging page with top row of list highlighted.
+
+Click into the log line to reveal another field, called :guilabel:`Message`.
+
+This field populates a raw transcription of the transaction, which involves the creation (or
+adjustment) of a sales invoice using the Avalara *AvaTax* API.
+
+The transaction includes details, such as addresses for shipping from and to, line items describing
+the products or services, tax codes, tax amounts, and other relevant information.
+
+The :guilabel:`Message` contains the calculated taxes for different jurisdictions and confirms the
+creation (or adjustment) of the transaction.
+
+.. tip::
+   Custom fields can be made using Odoo *Studio*. Click the :icon:`fa-ellipsis-v`
+   :guilabel:`(ellipsis)` menu to the far-right of the header row. Then click :icon:`fa-plus`
+   :guilabel:`Add custom field`. This action opens Odoo *Studio*.
+
+.. important::
+   Odoo *Studio* requires a *custom* pricing plan. Consult the database's customer success manager
+   for more information on switching plans. Or to see if Odoo *Studio* is included in the database's
+   current pricing plan. See this documentation: :doc:`../../../../studio`.
+
+.. seealso::
+   - :doc:`../avatax`
+   - `US Tax Compliance: Avatax elearning video
+     <https://www.odoo.com/slides/slide/us-tax-compliance-avatax-2858?fullscreen=1>`_
