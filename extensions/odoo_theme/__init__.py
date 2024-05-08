@@ -121,6 +121,6 @@ def icon_role(name, rawtext, text, lineno, inliner, options=None, content=None):
             )
             error_node = inliner.problematic(rawtext, rawtext, report_error)
             return [error_node], [report_error]
-    icon_html = f'<i class="{text}"></i>'
+    icon_html = f'<i class="fa {text}"></i>'
     node = nodes.raw('', icon_html, format='html')
     return [node], []
