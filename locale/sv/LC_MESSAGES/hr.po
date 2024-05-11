@@ -5,11 +5,12 @@
 # 
 # Translators:
 # Simon S, 2024
-# Martin Trigaux, 2024
 # Mikael Åkerberg <mikael.akerberg@mariaakerberg.com>, 2024
-# Chrille Hedberg <hedberg.chrille@gmail.com>, 2024
-# Jakob Krabbe <jakob.krabbe@vertel.se>, 2024
+# lynnliuying <lynn.liu1971@gmail.com>, 2024
 # Robert Frykelius <robert.frykelius@linserv.se>, 2024
+# Chrille Hedberg <hedberg.chrille@gmail.com>, 2024
+# Martin Trigaux, 2024
+# Jakob Krabbe <jakob.krabbe@vertel.se>, 2024
 # Anders Wallenquist <anders.wallenquist@vertel.se>, 2024
 # 
 #, fuzzy
@@ -4498,7 +4499,7 @@ msgstr "Inställningar tillgängliga för Fleet-applikationen."
 
 #: ../../content/applications/hr/fleet.rst:25
 msgid "End Date Contract Alert"
-msgstr ""
+msgstr "Varning för slutdatum för kontrakt"
 
 #: ../../content/applications/hr/fleet.rst:27
 msgid ""
@@ -4564,6 +4565,13 @@ msgid ""
 "the number specified in the :guilabel:`New Vehicle Request` field. Enter the"
 " specific number limit for existing available cars in this field."
 msgstr ""
+"Fältet :guilabel:`New Vehicle Request` sätter en gräns för hur många nya "
+"fordon som kan begäras baserat på fordonsparkens tillgänglighet. En anställd"
+" som fyller i lönekonfigurationsformuläret (efter att ha blivit erbjuden en "
+"tjänst) kommer *inte* att kunna begära en ny bil om antalet befintliga bilar"
+" är större än det antal som anges i fältet :guilabel:`New Vehicle Request`. "
+"Ange den specifika antalsgränsen för befintliga tillgängliga bilar i detta "
+"fält."
 
 #: ../../content/applications/hr/fleet.rst:55
 msgid ""
@@ -4588,6 +4596,10 @@ msgid ""
 "pre-loaded manufacturers, go to :menuselection:`Fleet app --> Configuration "
 "--> Manufacturers`."
 msgstr ""
+"Odoo *Fleet* är förkonfigurerad med sextiosex vanliga bil- och "
+"cykeltillverkare i databasen, tillsammans med deras logotyper. För att se de"
+" förinstallerade tillverkarna, gå till :menuselection:`Fleet app --> "
+"Configuration --> Manufacturers`."
 
 #: ../../content/applications/hr/fleet.rst:68
 msgid ""
@@ -4639,7 +4651,7 @@ msgstr ""
 
 #: ../../content/applications/hr/fleet.rst:98
 msgid "Preconfigured Models"
-msgstr ""
+msgstr "Förkonfigurerade modeller"
 
 #: ../../content/applications/hr/fleet.rst:100
 msgid ""
@@ -4659,7 +4671,7 @@ msgstr "BMW"
 
 #: ../../content/applications/hr/fleet.rst:103
 msgid "Eddy Merckx"
-msgstr ""
+msgstr "Eddy Merckx"
 
 #: ../../content/applications/hr/fleet.rst:103
 msgid "Mercedes"
@@ -4884,6 +4896,9 @@ msgid ""
 "If the manufacturer is not configured, type in the manufacturer and then "
 "click :guilabel:`Create` or :guilabel:`Create & Edit`."
 msgstr ""
+":guilabel:`Manufacturer`: välj tillverkare från rullgardinsmenyn. Om "
+"tillverkaren inte är konfigurerad, skriv in tillverkaren och klicka sedan på"
+" :guilabel:`Create` eller :guilabel:`Create & Edit`."
 
 #: ../../content/applications/hr/fleet.rst:147
 msgid ""
@@ -4893,6 +4908,12 @@ msgid ""
 "application since vehicles can be part of an employee's benefits. Adding "
 "additional vehicle types is not possible as it will affect payroll."
 msgstr ""
+":guilabel:`Vehicle Type`: välj en av två förkonfigurerade fordonstyper, "
+"antingen :guilabel:`Car` eller :guilabel:`Bike`, från rullgardinsmenyn. "
+"Fordonstyperna är hårdkodade i Odoo och är integrerade med "
+"*Payroll*-applikationen eftersom fordon kan vara en del av en anställds "
+"förmåner. Att lägga till ytterligare fordonstyper är inte möjligt eftersom "
+"det kommer att påverka lönerna."
 
 #: ../../content/applications/hr/fleet.rst:151
 msgid ""
@@ -4900,6 +4921,9 @@ msgid ""
 "from the drop-down menu. To create a new category, type in the category and "
 "then click :guilabel:`Create (new category)`."
 msgstr ""
+":guilabel:`Category`: välj den kategori som fordonet är kategoriserat under "
+"från rullgardinsmenyn. För att skapa en ny kategori, skriv in kategorin och "
+"klicka sedan på :guilabel:`Create (new category)`."
 
 #: ../../content/applications/hr/fleet.rst:156
 msgid ""
@@ -4966,6 +4990,8 @@ msgid ""
 ":guilabel:`Can be requested`: check this box if employees can request this "
 "model vehicle."
 msgstr ""
+":guilabel:`Kan begäras`: kryssa i denna ruta om anställda kan begära denna "
+"fordonsmodell."
 
 #: ../../content/applications/hr/fleet.rst:180
 msgid ""
@@ -4992,6 +5018,8 @@ msgid ""
 "Modifying the :guilabel:`CO2 Emissions` field will adjust the value in the "
 ":guilabel:`CO2 fee` field."
 msgstr ""
+"Om du ändrar fältet :guilabel:`CO2-utsläpp` kommer värdet i fältet "
+":guilabel:`CO2-avgift` att justeras."
 
 #: ../../content/applications/hr/fleet.rst:190
 msgid ""
@@ -5004,6 +5032,14 @@ msgid ""
 "only depreciates based on the *contract* linked to a specific vehicle and "
 "not on the general model."
 msgstr ""
+":guilabel:`Kostnad (avskriven)`: ange månadskostnaden för fordonet, som "
+"visas i lönekonfiguratorn som är tillgänglig för en framtida anställd när de"
+" erbjuds en arbetsposition. Detta värde påverkar brutto- och nettolönen för "
+"den medarbetare som tilldelas fordonet. Denna siffra skrivs av över tid "
+"enligt lokala skattelagar. :guilabel:`Kostnad (avskriven)` skrivs inte av "
+"automatiskt på *fordonsmodellen*, den skrivs endast av baserat på "
+"*kontraktet* kopplat till ett specifikt fordon och inte på den generella "
+"modellen."
 
 #: ../../content/applications/hr/fleet.rst:196
 msgid ""
@@ -5011,6 +5047,9 @@ msgid ""
 "(Depreciated)` and the :guilabel:`C02 fee` fields combined, and also is "
 "depreciated over time."
 msgstr ""
+":guilabel:`Total kostnad (avskriven)`: detta värde är den kombinerade "
+":guilabel:`Kostnad (avskriven)` och :guilabel:`C02-avgift` och skrivs också "
+"av över tid."
 
 #: ../../content/applications/hr/fleet.rst:200
 msgid "Engine"
@@ -5101,6 +5140,9 @@ msgid ""
 " from other vendors. The vendors that a vehicle can be purchased from also "
 "appear in the list of vendors used by the *Purchase* app."
 msgstr ""
+"Fordonsspecifika försäljare, såsom bilhandlare, listas inte separat från "
+"andra försäljare. De försäljare som ett fordon kan köpas från visas också i "
+"listan över försäljare som används av appen *Köp*."
 
 #: ../../content/applications/hr/fleet.rst:228
 msgid ""
@@ -5110,6 +5152,13 @@ msgid ""
 "the checkbox next to the vendor name, then click :guilabel:`Select`. There "
 "is no limit to the number of vendors that can be added to this list."
 msgstr ""
+"Den eller de leverantörer som fordonet kan köpas från kan läggas till på den"
+" här fliken. För att lägga till en leverantör klickar du på :guilabel:`Add` "
+"och ett popup-fönster öppnas med en lista över alla leverantörer som för "
+"närvarande finns i databasen. Välj den leverantör du vill lägga till genom "
+"att klicka i kryssrutan bredvid leverantörens namn och klicka sedan på "
+":guilabel:`Select`. Det finns ingen gräns för hur många leverantörer som kan"
+" läggas till i listan."
 
 #: ../../content/applications/hr/fleet.rst:233
 msgid ""
@@ -5119,6 +5168,12 @@ msgid ""
 "the window, or :guilabel:`Save & New` to add the current vendor and create "
 "another new vendor."
 msgstr ""
+"Om en försäljare inte finns i databasen, lägg till en försäljare genom att "
+"klicka på :guilabel:`Create`. Ett leverantörsformulär laddas. Ange "
+"informationen på fliken Leverantör och klicka sedan på :guilabel:`Spara & "
+"Stäng` för att lägga till leverantören och stänga fönstret, eller "
+":guilabel:`Spara & Ny` för att lägga till den aktuella leverantören och "
+"skapa ytterligare en ny leverantör."
 
 #: ../../content/applications/hr/fleet.rst-1
 msgid "Vendor form to fill out when adding a new vendor."
@@ -5126,7 +5181,7 @@ msgstr "Leverantörsformulär som ska fyllas i när en ny leverantör läggs til
 
 #: ../../content/applications/hr/fleet.rst:245
 msgid "Model Category"
-msgstr ""
+msgstr "Modell Kategori"
 
 #: ../../content/applications/hr/fleet.rst:247
 msgid ""
@@ -5148,7 +5203,7 @@ msgstr ""
 
 #: ../../content/applications/hr/fleet.rst:255
 msgid "Add a new model category"
-msgstr ""
+msgstr "Lägg till en ny modellkategori"
 
 #: ../../content/applications/hr/fleet.rst:257
 msgid ""
@@ -5156,6 +5211,9 @@ msgid ""
 " the bottom of the list. Type in the new category, then click "
 ":guilabel:`Save` to save the entry."
 msgstr ""
+"För att lägga till en ny kategori, klicka på :guilabel:`Create`. En ny "
+"postrad visas längst ner i listan. Skriv in den nya kategorin och klicka "
+"sedan på :guilabel:`Save` för att spara posten."
 
 #: ../../content/applications/hr/fleet.rst:260
 msgid ""
@@ -5166,6 +5224,12 @@ msgid ""
 "specific order, for example, by size, or the numbers of passengers the "
 "vehicle can carry."
 msgstr ""
+"Om du vill ändra hur kategorierna visas i listan klickar du på upp- och "
+"nedpilarna till vänster om den kategori som ska flyttas och drar sedan "
+"linjen till önskad position. Ordningen i listan påverkar inte databasen på "
+"något sätt. Det kan dock vara bättre att visa fordonskategorierna i en viss "
+"ordning, t.ex. efter storlek eller antalet passagerare som fordonet kan "
+"transportera."
 
 #: ../../content/applications/hr/fleet.rst-1
 msgid "List view of the models in the fleet."
@@ -5637,7 +5701,7 @@ msgstr ""
 #: ../../content/applications/hr/fleet/new_vehicle.rst:229
 #: ../../content/applications/hr/fleet/service.rst:240
 msgid "Misc"
-msgstr ""
+msgstr "Övrigt"
 
 #: ../../content/applications/hr/fleet/new_vehicle.rst:231
 msgid ""
@@ -6237,7 +6301,7 @@ msgstr ""
 
 #: ../../content/applications/hr/fleet/service.rst:231
 msgid "Sales"
-msgstr ""
+msgstr "Försäljning"
 
 #: ../../content/applications/hr/fleet/service.rst:233
 msgid ""
@@ -6493,7 +6557,7 @@ msgstr ""
 
 #: ../../content/applications/hr/fleet/service.rst:369
 msgid "Schedule activities"
-msgstr ""
+msgstr "Planera aktiviteter"
 
 #: ../../content/applications/hr/fleet/service.rst:371
 msgid ""
@@ -7749,7 +7813,7 @@ msgstr ""
 
 #: ../../content/applications/hr/lunch.rst:5
 msgid "Lunch"
-msgstr ""
+msgstr "Lunch"
 
 #: ../../content/applications/hr/lunch.rst:7
 msgid ""
@@ -7843,7 +7907,7 @@ msgstr ""
 
 #: ../../content/applications/hr/lunch.rst:56
 msgid "Vendors"
-msgstr ""
+msgstr "Leverantörer"
 
 #: ../../content/applications/hr/lunch.rst:58
 msgid ""
@@ -7923,7 +7987,7 @@ msgstr ""
 
 #: ../../content/applications/hr/lunch.rst:101
 msgid "Availability"
-msgstr ""
+msgstr "Tillgänglighet"
 
 #: ../../content/applications/hr/lunch.rst:103
 msgid ""
@@ -7944,7 +8008,7 @@ msgstr ""
 #: ../../content/applications/hr/lunch.rst:114
 #: ../../content/applications/hr/lunch/orders.rst:5
 msgid "Orders"
-msgstr ""
+msgstr "Order"
 
 #: ../../content/applications/hr/lunch.rst:116
 msgid ""
@@ -8104,7 +8168,7 @@ msgstr ""
 
 #: ../../content/applications/hr/lunch.rst:201
 msgid "Locations"
-msgstr ""
+msgstr "Platser"
 
 #: ../../content/applications/hr/lunch.rst:203
 msgid ""
@@ -8138,7 +8202,7 @@ msgstr ""
 
 #: ../../content/applications/hr/lunch.rst:221
 msgid "Products"
-msgstr ""
+msgstr "Produkter"
 
 #: ../../content/applications/hr/lunch.rst:223
 msgid ""
@@ -9232,7 +9296,7 @@ msgstr ""
 
 #: ../../content/applications/hr/lunch/user-accounts.rst:75
 msgid "Control Accounts"
-msgstr ""
+msgstr "Kontroll konton"
 
 #: ../../content/applications/hr/lunch/user-accounts.rst:77
 msgid ""
@@ -12319,7 +12383,7 @@ msgstr ""
 
 #: ../../content/applications/hr/payroll/contracts.rst:297
 msgid "Offers"
-msgstr ""
+msgstr "Erbjudanden"
 
 #: ../../content/applications/hr/payroll/contracts.rst:299
 msgid ""
@@ -20793,7 +20857,7 @@ msgstr ""
 
 #: ../../content/applications/hr/time_off.rst:619
 msgid "Management"
-msgstr ""
+msgstr "Administration"
 
 #: ../../content/applications/hr/time_off.rst:621
 msgid ""

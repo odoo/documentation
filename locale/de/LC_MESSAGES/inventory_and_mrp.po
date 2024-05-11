@@ -6,8 +6,10 @@
 # Translators:
 # Niki Waibel, 2023
 # Michael Hofer, 2023
-# Martin Trigaux, 2023
+# Jan Meyer, 2024
+# Martin Trigaux, 2024
 # Wil Odoo, 2024
+# Felix Schubert <felix.schubert@go-erp.com>, 2024
 # Larissa Manderfeld, 2024
 # 
 #, fuzzy
@@ -47,7 +49,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode.rst:15
 msgid "`Odoo Tutorials: Barcode <https://www.odoo.com/slides/barcode-30>`_"
-msgstr ""
+msgstr "`Odoo Tutorials: Barcode <https://www.odoo.com/slides/barcode-30>`_"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations.rst:5
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:5
@@ -429,7 +431,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:3
 msgid "Default barcode nomenclature"
-msgstr ""
+msgstr "Barcode-Standardnomenklatur"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:10
 msgid ""
@@ -439,6 +441,12 @@ msgid ""
 "list using a regular expression, and a barcode is successfully read by Odoo "
 "if its prefix and/or length matches the one defined in the barcode's rule."
 msgstr ""
+"*Barcode-Nomenklaturen* definieren, wie Barcodes erkannt und kategorisiert "
+"werden. Wenn ein Barcode gescannt wird, wird er mit der **ersten** Regel mit"
+" einem passenden Muster verknüpft. Die Mustersyntax wird in der "
+"Nomenklaturliste von Odoo mithilfe eines regulären Ausdrucks beschrieben. "
+"Ein Barcode wird von Odoo erfolgreich gelesen, wenn sein Präfix und/oder "
+"seine Länge mit der in der Regel des Barcodes definierten übereinstimmt."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:15
 msgid ""
@@ -448,6 +456,11 @@ msgid ""
 "nomenclature uses |UPC| and |EAN| encoding, and supports |UPC|/|EAN| "
 "conversion."
 msgstr ""
+"Odoo *Barcode* unterstützt UPC (Universal Product Code), EAN (European "
+"Article Number) und GS1-Codierung. Die vorkonfigurierten Nomenklaturen in "
+"Odoo sind die *Standardnomenklatur* und *GS1-Standardnomenklatur*. Die "
+"Standardnomenklatur verwendet die Kodierung |UPC| und |EAN| und unterstützt "
+"die Konvertierung |UPC|/|EAN|."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:21
 msgid ""
@@ -455,6 +468,10 @@ msgid ""
 "<https://www.gs1.org/standards/get-barcodes>`_ to use these barcodes. GS1 is"
 " the **only** official provider of |UPC|/|EAN| and GS1 |GTINs| in the world."
 msgstr ""
+"|UPC|- und |EAN|-Barcodes **müssen** bei `GS1 erworben werden "
+"<https://www.gs1.org/standards/get-barcodes>`_, um diese Barcodes zu "
+"verwenden. GS1 ist der **einzige** offizielle Anbieter von |UPC|/|EAN| und "
+"GS1 |GTINs| in der Welt."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:28
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:32
@@ -468,16 +485,24 @@ msgid ""
 "the checkbox next to :guilabel:`Barcode Scanner` to enable barcodes. Doing "
 "so installs the *Barcode* app in the database."
 msgstr ""
+"Um die Standardnomenklatur zu verwenden, navigieren Sie zu "
+":menuselection:`Lager --> Konfiguration --> Einstellungen`. Klicken Sie "
+"unter dem Abschnitt :guilabel:`Barcode` auf das Kontrollkästchen neben "
+":guilabel:`Barcode-Scanner`, um Barcodes zu aktivieren. Dadurch wird die "
+"*Barcode-App* in der Datenbank installiert."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:34
 msgid ""
 "Next, ensure that the :guilabel:`Default Nomenclature` setting is selected "
 "in the :guilabel:`Barcode Nomenclature` field. Then, click :guilabel:`Save`."
 msgstr ""
+"Stellen Sie als nächstes sicher, dass die Einstellung "
+":guilabel:`Standardnomenklatur` im Feld :guilabel:`Barcode-Nomenklatur` "
+"ausgewählt ist. Klicken Sie dann auf :guilabel:`Speichern`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst-1
 msgid "Enabled barcode setting with Default Nomenclature selected."
-msgstr ""
+msgstr "Aktivierte Barcode-Einstellung mit ausgewählter Standard-Nomenklatur."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:41
 msgid ""
@@ -485,6 +510,10 @@ msgid ""
 "Nomenclatures` settings can be accessed, via a hidden menu that is **only** "
 "discoverable after enabling :ref:`developer mode <developer-mode>`."
 msgstr ""
+"Sobald die Nomenklatur gespeichert und ausgewählt ist, können Sie über ein "
+"verstecktes Menü, das **nur** nach Aktivierung des :ref:`Entwicklermodus "
+"<developer-mode>` zu finden ist, auf die :menuselection:`Barcode-"
+"Nomenklaturen`-Einstellungen zugreifen."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:45
 msgid ""
@@ -492,12 +521,17 @@ msgid ""
 "--> Configuration --> Barcode Nomenclatures` menu, and select "
 ":guilabel:`Default Nomenclature`."
 msgstr ""
+"Sobald der Entwicklermodus aktiviert ist, navigieren Sie zu "
+":menuselection:`Lager --> Konfiguration --> Barcode-Nomenklaturen`, und "
+"wählen Sie :guilabel:`Standardnomenklatur`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:48
 msgid ""
 "From this page, the :guilabel:`Barcode Nomenclature` is specified at the top"
 " as the `Default Nomenclature`."
 msgstr ""
+"Auf dieser Seite wird die :guilabel:`Barcode-Nomenklatur` oben als "
+"`Standardnomenklatur` angegeben."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:51
 msgid ""
@@ -506,12 +540,19 @@ msgid ""
 "barcode should be automatically converted one way or another when trying to "
 "match a rule with the other encoding."
 msgstr ""
+"Darunter ist das Feld :guilabel:`UPC/EAN-Umwandlung` standardmäßig auf "
+":guilabel:`Immer` eingestellt. Diese Einstellung legt fest, ob ein "
+"|UPC|/|EAN|-Barcode automatisch in die eine oder andere Richtung konvertiert"
+" werden soll, wenn Sie versuchen, eine Regel mit der anderen Codierung "
+"abzugleichen."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:55
 msgid ""
 "The other available options for this field are :guilabel:`Never`, "
 ":guilabel:`EAN-13 to UPC-A`, and :guilabel:`UPC-A to EAN-13`."
 msgstr ""
+"Die anderen verfügbaren Optionen für dieses Feld sind :guilabel:`Nie`, "
+":guilabel:`EAN-13 in UPC-A`, und :guilabel:`UPC-A in EAN-13`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:59
 msgid ""
@@ -519,6 +560,9 @@ msgid ""
 " the :guilabel:`UPC/EAN Conversion` field **must** be set to "
 ":guilabel:`Always`."
 msgstr ""
+"Damit die |UPC|/|EAN|-Umwandlung bei jedem gescannten Barcode funktioniert, "
+"muss die Einstellung im Feld :guilabel:`UPC/EAN-Umwandlung` **auf "
+":guilabel:`Immer` gesetzt sein."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:62
 msgid ""
@@ -527,10 +571,15 @@ msgid ""
 "unchecked. This is because the :guilabel:`Default Nomenclature` uses |UPC| "
 "and |EAN| encoding, *not* GS1 encoding."
 msgstr ""
+"Das letzte Feld oben auf der Seite ist das Feld :guilabel:`Ist "
+"GS1-Nomenklatur`. Für die :guilabel:`Standardnomenklatur` sollte dieses Feld"
+" nicht angekreuzt sein. Das liegt daran, dass die "
+":guilabel:`Standardnomenklatur` die |UPC|- und |EAN|-Codierung verwendet, "
+"*nicht* die GS1-Codierung."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst-1
 msgid "Default Nomenclature page setting fields."
-msgstr ""
+msgstr "Einstellungsfelder der Seite Standardnomenklatur."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:70
 msgid ""
@@ -539,6 +588,10 @@ msgid ""
 " the *rules* and *barcode patterns* that Odoo supports for the default "
 "nomenclature."
 msgstr ""
+"Weiter unten auf der Seite finden Sie eine Liste mit der "
+":guilabel:`Regelbezeichnung`, dem  :guilabel:`Typ`, der "
+":guilabel:`Codierung` und dem :guilabel:`Barcodemuster` für die *Regeln* und"
+" *Barcodemuster*, die Odoo für die Standardnomenklatur unterstützt."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:74
 msgid ""
@@ -546,10 +599,13 @@ msgid ""
 "nomenclature-list>` contains all the information that can be condensed with "
 "a |UPC|/|EAN| barcode."
 msgstr ""
+"Die :ref:`Standardnomenklaturliste <barcode/operations/default-nomenclature-"
+"list>` enthält alle Informationen, die mit einem |UPC|/|EAN|-Barcode "
+"zusammengefasst werden können."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:80
 msgid "Use UPC/EAN barcodes in Odoo"
-msgstr ""
+msgstr "UPC/EAN-Barcode in Odoo verwenden"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:82
 msgid ""
@@ -557,6 +613,9 @@ msgid ""
 "**must** obtain `barcodes <https://www.gs1us.org/upcs-barcodes-prefixes/how-"
 "to-get-a-upc-barcode>`_ purchased directly from GS1."
 msgstr ""
+"Für die Produktidentifikation mit |UPC|/|EAN|-Barcodes in Odoo **müssen** "
+"Unternehmen die `Barcodes <https://www.gs1us.org/upcs-barcodes-prefixes/how-"
+"to-get-a-upc-barcode>`_ direkt von GS1 beziehen."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:86
 msgid ""
@@ -564,12 +623,18 @@ msgid ""
 "regions. |UPC| is used only in the United States and Canada, while |EAN| is "
 "used everywhere else globally."
 msgstr ""
+"Die Barcodeformate |UPC| und |EAN| werden überwiegend in ihren jeweiligen "
+"Regionen verwendet. |UPC| wird nur in den Vereinigten Staaten und Kanada "
+"verwendet, während |EAN| überall sonst auf der Welt verwendet wird."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:89
 msgid ""
 "A |UPC| is usually a 12-digit barcode used to identify most products, while "
 "|EAN| barcodes use 13-digit barcodes to identify products."
 msgstr ""
+"Ein |UPC| ist in der Regel ein 12-stelliger Barcode, der zur Identifizierung"
+" der meisten Produkte verwendet wird, während |EAN| Barcodes 13-stellige "
+"Barcodes zur Identifizierung von Produkten verwenden."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:92
 msgid ""
@@ -577,6 +642,10 @@ msgid ""
 "Odoo, by default, |UPC|/|EAN| barcodes are automatically converted one way "
 "or another when trying to match a rule with the other encoding."
 msgstr ""
+"|UPC|-Codes können in |EAN|-Codes umgewandelt werden, indem ihnen eine Null "
+"vorangestellt wird. In Odoo werden |UPC|/|EAN|-Barcodes standardmäßig "
+"automatisch in die eine oder andere Richtung umgewandelt, wenn Sie "
+"versuchen, eine Regel mit der anderen Codierung abzugleichen."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:96
 msgid ""
@@ -584,6 +653,9 @@ msgid ""
 "nomenclature-list>` to see a comprehensive list of all barcode patterns and "
 "rules to follow."
 msgstr ""
+"In der :ref:`Standard-Nomenklaturliste <barcode/operations/default-"
+"nomenclature-list>` finden Sie eine umfassende Liste aller Barcodemuster und"
+" der zu befolgenden Regeln."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:100
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:96
@@ -597,12 +669,19 @@ msgid ""
 "<barcode/operations/default-nomenclature-list>` automatically fills "
 "corresponding data in the Odoo database."
 msgstr ""
+"|UPC|- und |EAN|-Barcodes enthalten spezifische Informationen im Barcode. "
+"Wenn Sie diese Codes aus der :ref:`Standardnomenklaturliste "
+"<barcode/operations/default-nomenclature-list>` scannen, werden die "
+"entsprechenden Daten automatisch in die Odoo-Datenbank eingegeben."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:106
 msgid ""
 "Adding new barcode rules to this list ensures that non-standard (:dfn:`user-"
 "created`) formats are interpreted accurately."
 msgstr ""
+"Das Hinzufügen neuer Barcode-Regeln zu dieser Liste stellt sicher, dass "
+"nicht standardisierte (:dfn:`user-created`) Formate korrekt interpretiert "
+"werden."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:109
 msgid ""
@@ -611,6 +690,10 @@ msgid ""
 "Barcode Nomenclatures`. Select the :guilabel:`Default Nomenclature` list "
 "item."
 msgstr ""
+"Um neue Regeln zu erstellen, aktivieren Sie zunächst den "
+":ref:`Entwicklermodus <developer-mode>`. Navigieren Sie dann zu "
+":menuselection:`Lager --> Konfiguration --> Barcode-Nomenklaturen`. Wählen "
+"Sie das Listenelement :guilabel:`Standardnomenklatur`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:113
 msgid ""
@@ -618,22 +701,30 @@ msgid ""
 "at the bottom of the table, which opens a :guilabel:`Create Rules` pop-up "
 "window to create a new rule."
 msgstr ""
+"Wählen Sie auf der Seite :guilabel:`Standardnomenklatur` unten in der "
+"Tabelle die Option :guilabel:`Zeile hinzufügen`. Daraufhin öffnet sich ein "
+"Pop-up-Fenster :guilabel:`Regeln erstellen`, um eine neue Regel zu "
+"erstellen."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst-1
 msgid "Create Rules pop-up window on Default Nomenclature page."
-msgstr ""
+msgstr "Pop-up-Fenster „Regeln erstellen“ auf der Seite Standardnomenklatur."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:120
 msgid ""
 "The :guilabel:`Rule Name` field is used internally to identify what the "
 "barcode represents."
 msgstr ""
+"Das Feld :guilabel:`Regelbezeichnung` wird intern verwendet, um zu "
+"identifizieren, was der Barcode darstellt."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:122
 msgid ""
 "The :guilabel:`Sequence` field represents the priority of the rule; meaning "
 "the smaller the value, the higher the rule appears on the table."
 msgstr ""
+"Das Feld :guilabel:`Sequenz` steht für die Priorität der Regel. Das heißt, "
+"je kleiner der Wert, desto höher erscheint die Regel in der Tabelle."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:125
 msgid ""
@@ -641,6 +732,10 @@ msgid ""
 "information that can be understood by the system (e.g., :guilabel:`Package`,"
 " :guilabel:`Lot`, :guilabel:`Location`, :guilabel:`Coupon`, etc.)."
 msgstr ""
+"Das Barcodefeld :guilabel:`Typ` steht für verschiedene Klassifizierungen von"
+" Informationen, die vom System verstanden werden können (z. B. "
+":guilabel:`Packung`, :guilabel:`Los`, :guilabel:`Lagerort`, "
+":guilabel:`Gutschein`, usw.)."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:129
 msgid ""
@@ -649,6 +744,11 @@ msgid ""
 "available :guilabel:`Encoding` options are: :guilabel:`EAN-13`, "
 ":guilabel:`EAN-8`, :guilabel:`UPC-A`, and :guilabel:`GS1-28`."
 msgstr ""
+"Das Feld :guilabel:`Codierung` gibt an, welche Codierung der Barcode "
+"verwendet; diese Regel gilt **nur**, wenn der Barcode diese spezielle "
+"Codierung verwendet. Die verfügbaren :guilabel:`Codierungsoptionen` sind: "
+":guilabel:`EAN-13`, :guilabel:`EAN-8`, :guilabel:`UPC-A`, und "
+":guilabel:`GS1-28`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:133
 msgid ""
@@ -657,12 +757,18 @@ msgid ""
 "product. Odoo follows the sequential order of this table, and uses the first"
 " rule it matches, based on the sequence."
 msgstr ""
+"Das Feld :guilabel:`Barcodemuster` gibt an, wie die Buchstaben- oder "
+"Zahlenfolge vom System erkannt wird, um Informationen über das Produkt zu "
+"enthalten. Odoo folgt der sequentiellen Reihenfolge dieser Tabelle und "
+"verwendet die erste Regel, die auf der Grundlage der Sequenz gefunden wird."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:138
 msgid ""
 "Barcode patterns can also define how numerical values, such as weight or "
 "price, are encoded in the barcode."
 msgstr ""
+"Barcodemuster können auch festlegen, wie numerische Werte, wie z. B. Gewicht"
+" oder Preis, im Barcode codiert werden."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:141
 msgid ""
@@ -670,12 +776,17 @@ msgid ""
 " are encoded. *Floats* are also supported with the decimals, indicated by "
 "`D`, such as **{NNNDD}**."
 msgstr ""
+"Sie werden mit **{NNN}** angegeben, wobei `N` definiert, wo die Ziffern der "
+"Zahl codiert werden. *Gleitkommazahlen* werden auch mit Dezimalstellen "
+"unterstützt, die mit `D` gekennzeichnet sind, z. B. **{NNNDD}**."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:144
 msgid ""
 "In this case, the barcode field on the associated records **must** show "
 "these digits as zeros."
 msgstr ""
+"In diesem Fall **muss** das Barcode-Feld in den zugehörigen Datensätzen "
+"diese Ziffern als Nullen anzeigen."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:146
 msgid ""
@@ -683,6 +794,11 @@ msgid ""
 " save the rule, and instantly start creating another rule. Or, click "
 ":guilabel:`Save & Close` to save the rule, and return to the table of rules."
 msgstr ""
+"Nachdem Sie die Informationen eingegeben haben, klicken Sie auf die "
+"Schaltfläche :guilabel:`Speichern & Neu`, um die Regel zu speichern und "
+"sofort mit der Erstellung einer neuen Regel zu beginnen. Oder klicken Sie "
+"auf :guilabel:`Speichern & Schließen`, um die Regel zu speichern und zur "
+"Tabelle der Regeln zurückzukehren."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:151
 msgid ""
@@ -690,16 +806,22 @@ msgid ""
 "contain **any** number of characters - those characters being **any** number"
 " or type of character."
 msgstr ""
+"Wenn das Feld :guilabel:`Barcodemuster` `.*` enthält, bedeutet dies, dass es"
+" **beliebig** viele Zeichen enthalten kann – diese Zeichen können "
+"**beliebige** Zahlen oder Zeichentypen sein."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:157
 msgid "Default nomenclature list"
-msgstr ""
+msgstr "Standardnomenklaturliste"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:159
 msgid ""
 "The table below contains Odoo's list of :guilabel:`Default Nomenclature` "
 "rules. Barcode patterns are written in regular expressions."
 msgstr ""
+"Die folgende Tabelle enthält die Liste der Regeln für die "
+":guilabel:`Standardnomenklatur` von Odoo. Barcodemuster werden in regulären "
+"Ausdrücken geschrieben."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:166
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:173
@@ -726,7 +848,7 @@ msgstr "Barcodemuster"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:170
 msgid "Price Barcodes 2 Decimals"
-msgstr ""
+msgstr "Preis-Barcodes mit 2 Dezimalstellen"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:171
 msgid "Priced Product"
@@ -739,11 +861,11 @@ msgstr "EAN-13"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:173
 msgid "23.....{NNNDD}"
-msgstr ""
+msgstr "23.....{NNNDD}"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:174
 msgid "Discount Barcodes"
-msgstr ""
+msgstr "Rabattbarcode"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:175
 msgid "Discounted Product"
@@ -763,11 +885,11 @@ msgstr "Beliebige"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:177
 msgid "22{NN}"
-msgstr ""
+msgstr "22{NN}"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:178
 msgid "Weight Barcodes 3 Decimals"
-msgstr ""
+msgstr "Gewichtbarcodes mit 3 Dezimalstellen"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:179
 msgid "Weighted Product"
@@ -775,11 +897,11 @@ msgstr "Gewogenes Produkt"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:181
 msgid "21.....{NNDDD}"
-msgstr ""
+msgstr "21.....{NNDDD}"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:182
 msgid "Customer Barcodes"
-msgstr ""
+msgstr "Kunden-Barcodes"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:183
 msgid "Client"
@@ -787,11 +909,11 @@ msgstr "Client"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:185
 msgid "042"
-msgstr ""
+msgstr "042"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:186
 msgid "Coupon & Gift Card Barcodes"
-msgstr ""
+msgstr "Barcodes für Gutscheine & Geschenkkarten"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:187
 msgid "Coupon"
@@ -799,11 +921,11 @@ msgstr "Gutschein"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:189
 msgid "043|044"
-msgstr ""
+msgstr "043|044"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:190
 msgid "Cashier Barcodes"
-msgstr ""
+msgstr "Kassierer-Barcodes"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:191
 msgid "Cashier"
@@ -811,11 +933,11 @@ msgstr "Kassierer"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:193
 msgid "041"
-msgstr ""
+msgstr "041"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:194
 msgid "Location barcodes"
-msgstr ""
+msgstr "Lagerort-Barcodes"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:195
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:189
@@ -826,11 +948,11 @@ msgstr "Standort"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:197
 msgid "414"
-msgstr ""
+msgstr "414"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:198
 msgid "Package barcodes"
-msgstr ""
+msgstr "Paketbarcodes"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:199
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:175
@@ -839,11 +961,11 @@ msgstr "Paket"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:201
 msgid "PACK"
-msgstr ""
+msgstr "PACK"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:202
 msgid "Lot barcodes"
-msgstr ""
+msgstr "Los-Barcodes"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:203
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:191
@@ -863,7 +985,7 @@ msgstr "10"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:206
 msgid "Magnetic Credit Card"
-msgstr ""
+msgstr "Magnetkreditkarte"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:207
 msgid "Credit Card"
@@ -871,7 +993,7 @@ msgstr "Kreditkarte"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:209
 msgid "%.*"
-msgstr ""
+msgstr "%.*"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:210
 msgid "Product Barcodes"
@@ -885,11 +1007,11 @@ msgstr "Einheitsprodukt"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:213
 msgid ".*"
-msgstr ""
+msgstr ".*"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:216
 msgid ":doc:`gs1_nomenclature`"
-msgstr ""
+msgstr ":doc:`gs1_nomenclature`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:3
 msgid "GS1 barcode nomenclature"
@@ -3163,7 +3285,7 @@ msgstr "Einrichtung"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:3
 msgid "Barcode device troubleshooting"
-msgstr ""
+msgstr "Fehlerbehebung für Barcode-Gerät"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:5
 msgid ""
@@ -3172,22 +3294,31 @@ msgid ""
 "type of scanner, common issues may arise, in which the scanners do not work "
 "as intended, and Odoo returns errors to the device."
 msgstr ""
+"Odoo *Barcode* unterstützt drei Haupttypen von Barcode-Scannern: USB-"
+"Scanner, Bluetooth-Scanner und mobile Computer-Scanner. Bei der "
+"Konfiguration der einzelnen Scannertypen können häufig Probleme auftreten, "
+"bei denen die Scanner nicht wie vorgesehen funktionieren und Odoo Fehler an "
+"das Gerät zurückgibt."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:9
 msgid ""
 "Read the sections below to identify general and unique device issues, "
 "related to specific, popular types of scanners."
 msgstr ""
+"Lesen Sie die folgenden Abschnitte, um allgemeine und spezielle Probleme mit"
+" bestimmten, gängigen Scannertypen zu erkennen."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:13
 msgid "General issues"
-msgstr ""
+msgstr "Häufige Probleme"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:15
 msgid ""
 "Refer to the following sections below for common issues involving popular "
 "barcode scanner devices."
 msgstr ""
+"In den folgenden Abschnitten finden Sie häufige Probleme mit gängigen "
+"Barcode-Scannern."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:17
 msgid ""
@@ -3196,30 +3327,38 @@ msgid ""
 "to the :ref:`Screenless scanners <barcode/setup/screenless-scanners>` "
 "section for USB and bluetooth scanners."
 msgstr ""
+"Probleme im Zusammenhang mit bestimmten Geräten finden Sie im Abschnitt "
+":ref:`Android-Scanner <barcode/setup/android-scanners>` für mobile Computer-"
+"Scanner oder im Abschnitt :ref:`bildschirmlose Scanner "
+"<barcode/setup/screenless-scanners>` für USB- und Bluetooth-Scanner."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:22
 msgid "Barcode cannot be read"
-msgstr ""
+msgstr "Barcode kann nicht gelesen werden"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:24
 msgid ""
 "One common issue encountered when using barcode scanners is an error "
 "resulting from barcodes that cannot be read."
 msgstr ""
+"Ein häufig auftretendes Problem bei der Verwendung von Barcode-Scannern ist "
+"ein Fehler, der durch nicht lesbare Barcodes entsteht."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:27
 msgid "This can occur due to any of the following reasons:"
-msgstr ""
+msgstr "Dies kann aus einem der folgenden Gründe geschehen:"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:29
 msgid "The barcode is damaged."
-msgstr ""
+msgstr "Der Barcode ist beschädigt."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:30
 msgid ""
 "The device cannot read the required barcode type (some scanners can only "
 "read 2D barcodes)."
 msgstr ""
+"Das Gerät kann den gewünschten Barcodetyp nicht lesen (einige Scanner können"
+" nur 2D-Barcodes lesen)."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:31
 msgid ""
@@ -3227,16 +3366,21 @@ msgid ""
 "and the barcodes **must** be printed out to be scanned. This is most common "
 "with 1D barcodes."
 msgstr ""
+"Der gescannte Barcode wird auf einem Bildschirm angezeigt. Einige Scanner "
+"unterstützen dies nicht und die Barcodes **müssen** ausgedruckt werden, um "
+"gescannt zu werden. Dies ist bei 1D-Barcodes am häufigsten der Fall."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:33
 msgid ""
 "The device has no battery, or is broken. To rule this out, follow the "
 "troubleshooting instructions in the following sections."
 msgstr ""
+"Das Gerät hat keine Batterie oder ist defekt. Um dies auszuschließen, folgen"
+" Sie den Anweisungen zur Fehlerbehebung in den folgenden Abschnitten."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:37
 msgid "Odoo returns barcode error"
-msgstr ""
+msgstr "Odoo gibt Barcode-Fehler zurück"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:39
 msgid ""
@@ -3245,6 +3389,10 @@ msgid ""
 "this can cause Odoo *Barcode* to return a barcode error after scanning. This"
 " could be due to any of the following reasons:"
 msgstr ""
+"Alle Arten von Barcode-Scannern haben ihre eigene Geräte-„Sprache“, die sich"
+" darauf auswirkt, wie sie Barcode-Daten an Odoo *Barcode* ausgeben. Manchmal"
+" kann dies dazu führen, dass Odoo *Barcode* nach dem Scannen einen Barcode-"
+"Fehler zurückgibt. Dies kann einen der folgenden Gründe haben:"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:43
 msgid ""
@@ -3252,6 +3400,9 @@ msgid ""
 " scanner. To rule this out, ensure that the device is configured with the "
 "same keyboard layout."
 msgstr ""
+"Der Computer ist mit einer anderen Tastaturbelegung konfiguriert als der "
+"Barcode-Scanner. Um dies auszuschließen, vergewissern Sie sich, dass das "
+"Gerät mit demselben Tastaturlayout konfiguriert ist."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:46
 msgid ""
@@ -3259,12 +3410,18 @@ msgid ""
 "configure the scanner to send FR-BE keystrokes. The same logic applies if "
 "using a tablet instead of a computer."
 msgstr ""
+"Wenn der Computer zum Beispiel für die Verwendung einer DE-DE-Tastatur "
+"konfiguriert ist, konfigurieren Sie den Scanner so, dass er DE-DE-"
+"Tastenanschläge sendet. Die gleiche Logik gilt, wenn Sie ein Tablet anstelle"
+" eines Computers verwenden."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:49
 msgid ""
 "For more information on configuring keystrokes, refer to the :doc:`Barcode "
 "scanner setup <hardware>` documentation."
 msgstr ""
+"Weitere Informationen zur Konfiguration der Tastenanschläge finden Sie in "
+"der Dokumentation :doc:`Einrichtung des Barcode-Scanners <hardware>`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:51
 msgid ""
@@ -3272,10 +3429,14 @@ msgid ""
 "scanner might interpret the barcode differently than intended. To rule this "
 "out, scan a test barcode to see how the scanner interprets the barcode."
 msgstr ""
+"Bei mobilen Computerscannern (wie z. B. Zebra-Geräten) kann es vorkommen, "
+"dass der Scanner den Barcode anders interpretiert als vorgesehen. Um dies "
+"auszuschließen, scannen Sie einen Testbarcode, um zu sehen, wie der Scanner "
+"den Barcode interpretiert."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:58
 msgid "Android scanners"
-msgstr ""
+msgstr "Android-Scanner"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:60
 msgid ""
@@ -3284,22 +3445,30 @@ msgid ""
 "configurations, it is recommended to first test a scanner's compatibility "
 "with Odoo."
 msgstr ""
+"Die neuesten Barcode-Scanner-Modelle mit Android und Google Chrome sollten "
+"mit Odoo funktionieren. Aufgrund der Vielfalt der Modelle und "
+"Konfigurationen empfiehlt es sich jedoch, zunächst die Kompatibilität eines "
+"Scanners mit Odoo zu testen."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:64
 msgid ""
 "The Zebra product line is recommended; specifically, the **Zebra TC21 (WiFi-"
 "only)**, and **Zebra TC26 (WiFi/cellular)**."
 msgstr ""
+"Wir empfehlen die Zebra-Produktlinie, insbesondere den **Zebra TC21 (nur "
+"WiFi)** und den **Zebra TC26 (WiFi/Mobil)**."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:68
 msgid ""
 "`Odoo Inventory & Barcode compatible hardware "
 "<https://www.odoo.com/app/inventory-hardware>`_"
 msgstr ""
+"`Odoo Lager & Barcode – kompatible Hardware "
+"<https://www.odoo.com/app/inventory-hardware>`_"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:71
 msgid "Barcode app does not give feedback"
-msgstr ""
+msgstr "Barcode-App gibt keine Rückmeldung"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:73
 msgid ""
@@ -3307,6 +3476,10 @@ msgid ""
 "full text. Since Odoo *Barcode* does not read this type of output, settings "
 "for each type of scanner **must** be configured correctly."
 msgstr ""
+"Standardmäßig verarbeiten Android-Barcode-Scanner den Barcode vor und senden"
+" dann einen vollständigen Text. Da Odoo *Barcode* diese Art von Ausgabe "
+"nicht lesen kann, müssen die Einstellungen für jeden Scannertyp **richtig** "
+"konfiguriert werden."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:77
 msgid ""
@@ -3314,10 +3487,14 @@ msgid ""
 " so, only detects *key events*. Refer to the following sections for "
 "configuration settings for the most popular devices."
 msgstr ""
+"Odoo *Barcode* geht davon aus, dass der Scanner wie eine analoge Tastatur "
+"funktioniert, und erkennt daher nur *Tastenereignisse*. In den folgenden "
+"Abschnitten finden Sie Konfigurationseinstellungen für die gängigsten "
+"Geräte."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:81
 msgid "Zebra TC21/TC26"
-msgstr ""
+msgstr "Zebra TC21/TC26"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:83
 #: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:76
@@ -3396,16 +3573,21 @@ msgid ""
 "Once the above steps have been taken, perform a test scan to ensure the "
 "Zebra scanner is working as intended."
 msgstr ""
+"Nachdem Sie alle diese Schritte durchgeführt haben, führen Sie einen "
+"Testscan durch, um sicherzustellen, dass der Zebra-Scanner wie vorgesehen "
+"funktioniert."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:110
 msgid "MUNBYN Android devices"
-msgstr ""
+msgstr "MUNBYN-Android-Geräte"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:112
 msgid ""
 "When using MUNBYN Android scanners, ensure the following configurations are "
 "set to prevent errors."
 msgstr ""
+"Wenn Sie MUNBYN-Android-Scanner verwenden, stellen Sie sicher, dass die "
+"folgenden Konfigurationen eingestellt sind, um Fehler zu vermeiden."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:114
 msgid ""
@@ -3413,44 +3595,63 @@ msgid ""
 "resulting page, locate the :guilabel:`Process mode` section, and select "
 ":guilabel:`Keyboard input`."
 msgstr ""
+"Klicken Sie auf dem Startbildschirm des Geräts auf "
+":menuselection:`AppSettings`. Suchen Sie auf der daraufhin angezeigten Seite"
+" den Abschnitt :guilabel:`Process mode` (Verarbeitungsmodus) und wählen Sie "
+":guilabel:`Keyboard input` (Tastatureingabe)."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst-1
 msgid "Process mode section on MUNBYN scanner's AppSettings page."
 msgstr ""
+"Abschnitt Bearbeitungsmodus auf der Seite AppSettings des MUNBYN-Scanners."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:122
 msgid ""
 "The selected *Process mode* controls how data is processed after barcode "
 "data has been read out."
 msgstr ""
+"Der ausgewählte *Verarbeitungsmodus* steuert, wie die Daten nach dem "
+"Auslesen der Barcode-Daten verarbeitet werden."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:124
 msgid ""
 "*Keyboard input* enters read-out data at the position of the cursor, the "
 "same as input data on an analogue keyboard would."
 msgstr ""
+"Die *Tastatureingabe* gibt die ausgelesenen Daten an der Position des "
+"Cursors ein, genau wie die Eingabe über eine analoge Tastatur."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:127
 msgid ""
 "Once the above steps have been taken, perform a test scan to ensure the "
 "MUNBYN Android scanner is working as intended."
 msgstr ""
+"Nachdem Sie die oben genannten Schritte durchgeführt haben, führen Sie einen"
+" Testscan durch, um sicherzustellen, dass der MUNBYN-Android-Scanner wie "
+"vorgesehen funktioniert."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:130
 msgid "Why is there no data output in the app after a successful scan?"
 msgstr ""
+"Warum werden nach einem erfolgreichen Scan keine Daten in der App "
+"ausgegeben?"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:132
 msgid ""
 "When scanning a barcode, the scanner might beep, indicating a successful "
 "scan, but there is no data output in the app."
 msgstr ""
+"Wenn Sie einen Barcode scannen, gibt der Scanner möglicherweise einen "
+"Piepton aus, der einen erfolgreichen Scan anzeigt, aber es werden keine "
+"Daten in der App ausgegeben."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:135
 msgid ""
 "To fix this issue, adjust the output method to *keyboard analogue* in the "
 "*Scanner* app on the device."
 msgstr ""
+"Um dieses Problem zu beheben, stellen Sie in der *Scanner-App* auf dem Gerät"
+" die Ausgabemethode auf *Tastatur analog* ein."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:138
 msgid ""
@@ -3526,7 +3727,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:186
 msgid "Screenless scanners"
-msgstr ""
+msgstr "Bildschirmlose Scanner"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:188
 msgid ""
@@ -3545,7 +3746,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:198
 msgid "NETUM devices"
-msgstr ""
+msgstr "NETUM-Geräte"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:200
 msgid ""
@@ -3565,7 +3766,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:211
 msgid ":doc:`../setup/hardware`"
-msgstr ""
+msgstr ":doc:`../setup/hardware`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:212
 #: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:165
@@ -5990,7 +6191,7 @@ msgstr "Produktverfolgung"
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/create_sn.rst:3
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/create_sn.rst:98
 msgid "Assign serial numbers"
-msgstr ""
+msgstr "Seriennummern zuweisen"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/create_sn.rst:5
 msgid ""
@@ -5999,12 +6200,18 @@ msgid ""
 "throughout the supply chain, which particularly benefits manufacturers "
 "providing after-sales services."
 msgstr ""
+"Die Zuweisung von Seriennummern zu einzelnen Produkten ermöglicht die "
+"Nachverfolgung von Eigenschaften, :doc:`Verfallsdaten <expiration_dates>` "
+"und Standorten in der gesamten Lieferkette, was vor allem Herstellern zugute"
+" kommt, die Kundendienstleistungen anbieten."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/create_sn.rst:10
 msgid ""
 "`Odoo Tutorials: Serial Numbers <https://www.youtube.com/watch?v=ZP-"
 "gMz2X5AY>`_"
 msgstr ""
+"`Odoo Tutorials: Seriennummern <https://www.youtube.com/watch?v=ZP-"
+"gMz2X5AY>`_"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/create_sn.rst:11
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/differences.rst:18
@@ -6014,19 +6221,23 @@ msgstr ":doc:`serial_numbers`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/create_sn.rst:13
 msgid "In Odoo, serial numbers are assigned to products:"
-msgstr ""
+msgstr "In Odoo werden den Produkten Seriennummern zugewiesen:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/create_sn.rst:15
 msgid ""
 "in the :ref:`Detailed Operations page "
 "<inventory/product_management/detailed-operations>` on a receipt"
 msgstr ""
+"auf der Seite :ref:`Detaillierte Vorgänge "
+"<inventory/product_management/detailed-operations>` auf einem Wareneingang"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/create_sn.rst:17
 msgid ""
 "by clicking the :ref:`Assign Serial Numbers "
 "<inventory/product_management/assign-sn>` button on a receipt"
 msgstr ""
+"durch Klicken auf die Schaltfläche :ref:`Seriennummern zuweisen "
+"<inventory/product_management/assign-sn>` auf einem Wareneingang"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/create_sn.rst:19
 msgid ""
@@ -6036,17 +6247,19 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/create_sn.rst:21
 msgid "when closing a manufacturing order"
-msgstr ""
+msgstr "beim Schließen eines Fertigungsauftrags"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/create_sn.rst:22
 msgid "when making an inventory adjustment"
-msgstr ""
+msgstr "bei einer Bestandsaufnahme"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/create_sn.rst:30
 msgid ""
 "Display the Detailed Operations smart button and bulleted list icon on a "
 "receipt."
 msgstr ""
+"Anzeige der intelligenten Schaltfläche „Detaillierte Vorgänge“ und das "
+"Symbol für die Aufzählungsliste auf einem Wareneingang."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/create_sn.rst:30
 msgid ""
@@ -6071,12 +6284,15 @@ msgstr ""
 msgid ""
 ":ref:`Enable serial numbers <inventory/product_management/enable-lots>`"
 msgstr ""
+":ref:`Seriennummern aktivieren <inventory/product_management/enable-lots>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/create_sn.rst:43
 msgid ""
 ":ref:`Track products by serial numbers "
 "<inventory/product_management/configure-lots>`"
 msgstr ""
+":ref:`Produkte mittels Seriennummer verfolgen "
+"<inventory/product_management/configure-lots>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/create_sn.rst:47
 msgid ""
@@ -6099,7 +6315,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/create_sn.rst:62
 msgid "Detailed Operations"
-msgstr ""
+msgstr "Detaillierte Vorgänge"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/create_sn.rst:64
 msgid ""
@@ -6200,7 +6416,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/create_sn.rst:130
 msgid "Add a line"
-msgstr ""
+msgstr "Zeile hinzufügen"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/create_sn.rst:132
 msgid ""
@@ -6214,7 +6430,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/create_sn.rst:140
 msgid "Generate Serials"
-msgstr ""
+msgstr "Serien generieren"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/create_sn.rst:142
 msgid ""
@@ -6242,7 +6458,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/create_sn.rst:157
 msgid "Import Serials"
-msgstr ""
+msgstr "Seriennummern importieren"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/create_sn.rst:159
 msgid ""
@@ -8870,7 +9086,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:111
 msgid ":doc:`create_sn`"
-msgstr ""
+msgstr ":doc:`create_sn`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst-1
 msgid "Display the bulleted list icon and Detailed Operations smart buttons."
@@ -9304,13 +9520,15 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:3
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:69
 msgid "Product type"
-msgstr ""
+msgstr "Produkttyp"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:7
 msgid ""
 "Define *product types* in Odoo to track products in varying levels of "
 "detail."
 msgstr ""
+"Definieren Sie *Produkttypen in Odoo, um Produkte in verschiedenen "
+"Detailstufen zu verfolgen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:9
 msgid ""
@@ -9326,10 +9544,11 @@ msgid ""
 "`Odoo Tutorials: Product Type "
 "<https://www.youtube.com/watch?v=l6j0ZkP5mLM>`_"
 msgstr ""
+"`Odoo Tutorials: Produkttyp <https://www.youtube.com/watch?v=l6j0ZkP5mLM>`_"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:18
 msgid "Set product type"
-msgstr ""
+msgstr "Produkttyp einstellen"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:20
 msgid ""
@@ -9425,7 +9644,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:70
 msgid "Storable"
-msgstr ""
+msgstr "Lagerfähig"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:71
 msgid "Consumable"
@@ -9437,7 +9656,7 @@ msgstr "Bedienung"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:73
 msgid "Physical product"
-msgstr ""
+msgstr "Physisches Produkt"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:74
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:75
@@ -9468,81 +9687,83 @@ msgstr "Nein"
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:77
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:118
 msgid "On-hand quantity"
-msgstr ""
+msgstr "Vorrätige Menge"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:78
 msgid ":ref:`Yes* <inventory/product_management/on-hand-store>`"
-msgstr ""
+msgstr ":ref:`Ja* <inventory/product_management/on-hand-store>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:79
 msgid ":ref:`Yes* <inventory/product_management/on-hand-con>`"
-msgstr ""
+msgstr ":ref:`Ja* <inventory/product_management/on-hand-con>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:81
 msgid ""
 ":doc:`Inventory valuation "
 "<../../warehouses_storage/inventory_valuation/using_inventory_valuation>`"
 msgstr ""
+":doc:`Bestandsbewertung "
+"<../../warehouses_storage/inventory_valuation/using_inventory_valuation>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:86
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:139
 msgid "Create transfer"
-msgstr ""
+msgstr "Transfer erstellen"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:87
 msgid ":ref:`Yes* <inventory/product_management/transfer-store>`"
-msgstr ""
+msgstr ":ref:`Ja* <inventory/product_management/transfer-store>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:88
 msgid ":ref:`Yes* <inventory/product_management/transfer-con>`"
-msgstr ""
+msgstr ":ref:`Ja* <inventory/product_management/transfer-con>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:89
 msgid ":ref:`No* <inventory/product_management/transfer-serv>`"
-msgstr ""
+msgstr ":ref:`Nein* <inventory/product_management/transfer-serv>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:90
 msgid ":doc:`Lot/serial number tracking <differences>`"
-msgstr ""
+msgstr ":doc:`Verfolgung per Los-/Seriennummer <differences>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:94
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:163
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/integrating_landed_costs.rst:80
 msgid "Create purchase order"
-msgstr ""
+msgstr "Bestellung erstellen"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:96
 msgid ":ref:`Yes* <inventory/product_management/po>`"
-msgstr ""
+msgstr ":ref:`Ja* <inventory/product_management/po>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:98
 msgid "Can be manufactured or subcontracted"
-msgstr ""
+msgstr "Kann hergestellt oder an Unterauftragnehmer vergeben werden"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:99
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:100
 msgid ":ref:`Yes* <inventory/product_management/manufacture>`"
-msgstr ""
+msgstr ":ref:`Ja* <inventory/product_management/manufacture>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:102
 msgid "Can be in a kit"
-msgstr ""
+msgstr "Kann in einem Kit sein"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:106
 msgid "Placed in package"
-msgstr ""
+msgstr "Verpackt"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:108
 msgid ":ref:`Yes* <inventory/product_management/package>`"
-msgstr ""
+msgstr ":ref:`Ja* <inventory/product_management/package>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:110
 msgid "Appears on Inventory report"
-msgstr ""
+msgstr "Erscheint auf Lagerbericht"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:111
 msgid ":ref:`Yes <inventory/product_management/report>`"
-msgstr ""
+msgstr ":ref:`Ja <inventory/product_management/report>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:120
 msgid ""
@@ -9551,34 +9772,48 @@ msgid ""
 " :menuselection:`Inventory app --> Products --> Products`, and selecting the"
 " desired product."
 msgstr ""
+"Die vorrätigen und prognostizierten Mengen eines lagerfähigen Produkts, die "
+"auf eingehenden und ausgehenden Bestellungen basieren, werden im "
+"Produktformular angezeigt, auf das Sie zugreifen können, indem Sie zu "
+":menuselection:`Lager --> Produkte --> Produkte` gehen und das gewünschte "
+"Produkt auswählen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:128
 msgid "Show \"On Hand\" and \"Forecast\" smart buttons."
 msgstr ""
+"Anzeige der intelligenten Schaltflächen „Vorrätig“ und „Prognostiziert“"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:128
 msgid ""
 "Current and forecasted quantities are displayed in the **On Hand** and "
 "**Forecasted** smart buttons on the product form."
 msgstr ""
+"Aktuelle und prognostizierte Mengen werden in den Schaltflächen **Vorrätig**"
+" und **Prognostiziert** auf dem Produktformular angezeigt."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:133
 msgid ""
 "On the other hand, consumable products are regarded as always available, and"
 " they **cannot** be managed using reordering rules or lot/serial numbers."
 msgstr ""
+"Verbrauchsartikel hingegen gelten als immer verfügbar und können **nicht** "
+"mit Nachbestellregeln oder Los-/Seriennummern verwaltet werden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:141
 msgid ""
 "*Transfers* are any warehouse operation, such as receipts, internal or batch"
 " transfers, or deliveries."
 msgstr ""
+"*Transfers* sind alle Lageroperationen, wie z. B. Eingänge, interne oder "
+"Stapeltransfers oder Lieferungen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:144
 msgid ""
 "When creating a transfer for storable products in the *Inventory* app, "
 "transfers modify the on-hand quantity at each location."
 msgstr ""
+"Wenn Sie einen Transfer für lagerfähige Produkte in der *Lager-App* "
+"erstellen, ändern Transfers die Bestandsmenge an jedem Standort."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:147
 msgid ""
@@ -9586,12 +9821,17 @@ msgid ""
 "to `WH/Packing Zone` decreases the recorded quantity at `WH/Stock` and "
 "increases it at `WH/Packing Zone`."
 msgstr ""
+"Wenn Sie beispielsweise fünf Einheiten vom internen Lagerort `WH/Lager` nach"
+" `WH/Packzone` transferieren, verringert sich die erfasste Menge bei "
+"`WH/Bestand` und erhöht sich bei `WH/Packzone`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:152
 msgid ""
 "For consumable products, transfers can be created, but exact quantities at "
 "each storage location are not tracked."
 msgstr ""
+"Für Verbrauchsartikel können Transfers erstellt werden, aber die genauen "
+"Mengen an jedem Lagerort werden nicht nachverfolgt."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:157
 msgid ""
@@ -9599,32 +9839,42 @@ msgid ""
 "`linked to projects and tasks for deadline tracking "
 "<https://www.youtube.com/watch?v=fix2LGkv13c>`_."
 msgstr ""
+"Dienstleistungsprodukte können nicht in Transfers einbezogen werden, aber "
+"diese Produkte können `mit Projekten und Aufgaben zur Fristverfolgung "
+"<https://www.youtube.com/watch?v=fix2LGkv13c>`_ verknüpft werden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:165
 msgid ""
 "Both storable and consumable products can be included in a request for "
 "quotation in the *Purchase* app."
 msgstr ""
+"Sowohl lagerfähige als auch Verbrauchsartikel können in eine Angebotsanfrage"
+" in der *Einkaufsapp* aufgenommen werden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:168
 msgid ""
 "However, when receiving consumable products, their on-hand quantity does not"
 " change upon validating the receipt (e.g. `WH/IN`)."
 msgstr ""
+"Beim Empfang von Verbrauchsartikeln ändert sich die Bestandsmenge jedoch "
+"nicht, wenn Sie den Wareneingang validieren (z. B. `WH/IN`)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:174
 msgid "Manufacture or subcontract"
-msgstr ""
+msgstr "Herstellen oder an Unterauftragnehmer vergeben"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:176
 msgid ""
 "Storable and consumable products can be manufactured, subcontracted, or "
 "included in a bill of materials (BoM)."
 msgstr ""
+"Lagerfähige und Verbrauchsartikel können hergestellt, in Auftrag gegeben "
+"oder in eine Stückliste aufgenommen werden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:183
 msgid "Show \"Bill of Materials\" and \"Used In\" smart buttons."
 msgstr ""
+"Anzeige der intelligenten Schaltflächen „Stücklisten“ und „Verwendet in“."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/type.rst:183
 msgid ""
@@ -15463,7 +15713,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:29
 msgid "Carrier"
-msgstr ""
+msgstr "Transportunternehmen"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:30
 msgid "Region availability"
@@ -15471,13 +15721,13 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:31
 msgid "FedEx"
-msgstr ""
+msgstr "FedEx"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:32
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:34
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:36
 msgid "All"
-msgstr ""
+msgstr "Alle"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:33
 msgid ":doc:`DHL <dhl_credentials>`"
@@ -15493,7 +15743,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:38
 msgid "United States of America"
-msgstr ""
+msgstr "Vereinigte Staaten von Amerika"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:39
 msgid ":doc:`Sendcloud <sendcloud_shipping>`"
@@ -15509,23 +15759,23 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:42
 msgid "Belgium"
-msgstr ""
+msgstr "Belgien"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:43
 msgid "Easypost"
-msgstr ""
+msgstr "Easypost"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:44
 msgid "North America"
-msgstr ""
+msgstr "Nordamerika"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:45
 msgid "Shiprocket"
-msgstr ""
+msgstr "Shiprocket"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:46
 msgid "India"
-msgstr ""
+msgstr "Indien"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:51
 msgid ""
@@ -15907,7 +16157,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:278
 msgid "Troubleshooting"
-msgstr ""
+msgstr "Fehlerbehebung"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:280
 msgid ""
@@ -16015,7 +16265,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:10
 msgid ":doc:`third_party_shipper`"
-msgstr ""
+msgstr ":doc:`third_party_shipper`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:12
 msgid "To set up the UPS shipping connector in Odoo, complete these steps:"
@@ -24667,7 +24917,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_calendar.rst:169
 msgid "Views"
-msgstr ""
+msgstr "Ansichten"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_calendar.rst:171
 msgid ""
@@ -24682,7 +24932,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_calendar.rst:180
 msgid "Calendar view"
-msgstr ""
+msgstr "Kalenderansicht"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_calendar.rst:182
 msgid ""
@@ -24740,7 +24990,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_calendar.rst:214
 msgid "Kanban view"
-msgstr ""
+msgstr "Kanban-Ansicht"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_calendar.rst:216
 msgid ""
@@ -24824,7 +25074,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_calendar.rst:256
 msgid "List view"
-msgstr ""
+msgstr "Listenansicht"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_calendar.rst:258
 msgid ""
@@ -24873,7 +25123,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_calendar.rst:272
 msgid "Pivot view"
-msgstr ""
+msgstr "Pivot-Ansicht"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_calendar.rst:274
 msgid ""
@@ -24934,7 +25184,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_calendar.rst:301
 msgid "Graph view"
-msgstr ""
+msgstr "Grafikansicht"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_calendar.rst:303
 msgid ""
@@ -25005,7 +25255,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_calendar.rst:336
 msgid "Activity view"
-msgstr ""
+msgstr "Aktivitätsansicht"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_calendar.rst:338
 msgid ""
@@ -25394,7 +25644,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_setup.rst:66
 msgid "Equipment"
-msgstr ""
+msgstr "Ausrüstung"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_setup.rst:68
 msgid ""
@@ -25752,7 +26002,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration.rst:5
 msgid "Advanced configuration"
-msgstr ""
+msgstr "Erweiterte Konfiguration"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:3
 msgid "Use kits"
@@ -28551,7 +28801,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows.rst:5
 msgid "Workflows"
-msgstr ""
+msgstr "Arbeitsabläufe"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/manufacturing_backorders.rst:3
 msgid "Manufacturing backorders"
@@ -34051,19 +34301,19 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:144
 msgid "Billing Status"
-msgstr ""
+msgstr "Abrechnungsstatus"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:145
 msgid "On received quantities"
-msgstr ""
+msgstr "Auf erhaltene Mengen"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:146
 msgid "On ordered quantities"
-msgstr ""
+msgstr "Auf bestellte Mengen"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:147
 msgid "Nothing to Bill"
-msgstr ""
+msgstr "Nichts abzurechnen"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:148
 msgid "PO confirmed; no products received"
@@ -34075,7 +34325,7 @@ msgstr "*Nicht anwendbar*"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:150
 msgid "Waiting Bills"
-msgstr ""
+msgstr "Wartende Rechnungen"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:151
 msgid "All/some products received; bill not created"
@@ -34087,7 +34337,7 @@ msgstr "EA bestätigt"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:153
 msgid "Fully Billed"
-msgstr ""
+msgstr "Vollständig abgerechnet"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:154
 msgid "All/some products received; draft bill created"
@@ -34099,7 +34349,7 @@ msgstr "Rechnungsentwurf erstellt"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:158
 msgid ":doc:`manage`"
-msgstr ""
+msgstr ":doc:`manage`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:3
 msgid "Manage vendor bills"
@@ -37277,7 +37527,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/repairs.rst:8
 msgid "Repairs"
-msgstr ""
+msgstr "Reparaturen"
 
 #: ../../content/applications/inventory_and_mrp/repairs.rst:10
 msgid ""
