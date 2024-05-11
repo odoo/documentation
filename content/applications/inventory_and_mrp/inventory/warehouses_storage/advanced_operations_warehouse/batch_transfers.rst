@@ -12,7 +12,7 @@ the batch is taken to an output location, where the products are sorted into the
 delivery packages.
 
 .. seealso::
-   :ref:`Use Barcode app for pickings <inventory/management/barcode_picking>`
+   :ref:`Use Barcode app for pickings <inventory/warehouses_storage/barcode_picking>`
 
 Since orders *must* be sorted at the output location after being picked, this picking method suits
 businesses with a few products that are ordered often. Storing high-demand items in easily
@@ -197,7 +197,7 @@ Click :guilabel:`Discard` to cancel the validation, and return to the batch tran
    :align: center
    :alt: Show the *Create Backorder* pop-up.
 
-.. _inventory/management/barcode_picking:
+.. _inventory/warehouses_storage/barcode_picking:
 
 Process batch transfer: Barcode app
 ===================================
