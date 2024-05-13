@@ -49,16 +49,12 @@ is as follows:
 the purchase order have actually been received.
 
 To activate it, go to :menuselection:`Purchase app --> Configuration --> Settings`, and scroll down
-to the :guilabel:`Invoicing` section. Then, check the box next to :guilabel:`3-way matching:
-purchases, receptions, and bills`, and click :guilabel:`Save` to save changes.
+to the :guilabel:`Invoicing` section. Then, tick the checkbox next to :guilabel:`3-way matching`,
+and click :guilabel:`Save` to save changes.
 
 .. important::
    :guilabel:`3-way matching` is **only** intended to work with the :guilabel:`Bill Control` policy
    set to :guilabel:`Received quantities`.
-
-   .. image:: manage/manage-three-way-matching.png
-      :align: center
-      :alt: Activated three-way matching feature in purchase settings.
 
 Create and manage vendor bills on receipts
 ==========================================
@@ -153,12 +149,12 @@ Finally, click the :guilabel:`Create Bill` button to create a bill for the purch
 
 .. note::
    Clicking :guilabel:`Create Bill` before any products have been received will cause a
-   :guilabel:`User Error` pop-up to appear. The :guilabel:`Purchase Order` requires the receipt of
-   at least partial quantity of the items included on the order to create a vendor bill.
+   :guilabel:`User Error` pop-up message to appear. The :guilabel:`Purchase Order` requires the
+   receipt of at least partial quantity of the items included on the order to create a vendor bill.
 
-.. image:: manage/manage-user-error-popup.png
-   :align: center
-   :alt: User error pop-up for received quantities control policy.
+   .. image:: manage/manage-user-error-popup.png
+      :align: center
+      :alt: User error pop-up for received quantities control policy.
 
 Next, click the :guilabel:`Receipt` smart button to view the warehouse receipt form.
 
@@ -242,11 +238,11 @@ a separate page. This list of journal entries are all tied to their appropriate 
 
 .. image:: manage/manage-batch-billing.png
    :align: center
-   :alt: Batch billing register payment pop-up.
+   :alt: Batch billing register payment pop-up window.
 
 .. note::
    The :guilabel:`Register Payment` option for vendor bills in batches will only work for journal
    entries whose :guilabel:`Status` is set to :guilabel:`Posted`.
 
 .. seealso::
-   :doc:`/applications/inventory_and_mrp/purchase/manage_deals/control_bills`
+   :doc:`control_bills`
