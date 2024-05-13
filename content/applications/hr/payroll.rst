@@ -108,6 +108,10 @@ The contract template forms the basis of an offer, and can be modified for speci
 employees, when necessary. If a contract template is created or modified in the *Payroll*
 application, the changes are also reflected in the *Recruitment* application.
 
+.. important::
+   To access contract templates, the *Salary Configurator* (`hr_contract_salary`) module **must** be
+   :ref:`installed <general/install>`.
+
 To view all the current contract templates in the database, navigate to :menuselection:`Payroll app
 --> Configuration --> Contracts: Templates`.
 
@@ -383,7 +387,7 @@ by typing in the time.
    `2:00 PM` would be entered as `14:00`.
 
 If the working time should be in a two-week configuration, click the :guilabel:`Switch to 2 weeks
-calendar` button in the top left. This creates entries for an :guilabel:`Even week` and an
+calendar` button in the top-left. This creates entries for an :guilabel:`Even week` and an
 :guilabel:`Odd week`.
 
 .. image:: payroll/new-working-schedule.png
@@ -411,12 +415,13 @@ end of year bonus. Both the `Regular Pay` structure and `End of Year Bonus` stru
 within the `Employee` structure type.
 
 The different :guilabel:`Structure Types` can be seen by navigating to :menuselection:`Payroll app
---> Configuration --> Salary --> Structure Types`.
+--> Configuration --> Salary: Structure Types`.
 
-There are two default structure types configured in Odoo: :guilabel:`Employee` and
-:guilabel:`Worker`. Typically, :guilabel:`Employee` is used for salaried employees, which is why the
-wage type is :guilabel:`Monthly Fixed Wage`, and :guilabel:`Worker` is typically used for employees
-paid by the hour, so the wage type is :guilabel:`Hourly Wage`.
+Two default structure types are configured in Odoo: :guilabel:`Employee` and :guilabel:`Worker`.
+
+Typically, :guilabel:`Employee` is used for salaried employees, which is why the wage type is
+:guilabel:`Monthly Fixed Wage`, and :guilabel:`Worker` is typically used for employees paid by the
+hour, so the wage type is :guilabel:`Hourly Wage`.
 
 .. image:: payroll/structure-type.png
    :align: center
