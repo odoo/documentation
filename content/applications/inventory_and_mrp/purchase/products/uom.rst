@@ -1,11 +1,11 @@
-=================================================
-Purchase in different units of measure than sales
-=================================================
+=========================
+Purchase units of measure
+=========================
 
 When you purchase a product, it may happen that your vendor uses a different unit of measure than
-you do when you sell it. This can cause confusion between sales and purchase representatives. It is
-also time-consuming to convert measures manually every time. With Odoo, you can configure your
-product once and let Odoo handle the conversion.
+when it is sold. This can cause confusion between sales and purchase representatives. It is also
+time-consuming to convert measures manually every time. With Odoo, you can configure your product
+once and let Odoo handle the conversion.
 
 Consider the following examples:
 
@@ -70,14 +70,15 @@ and name the category.
    :align: center
    :alt: Create a new units of measure category in Odoo Purchase
 
-The next step is to create the two units of measures. To do so, go to :menuselection:`Configuration
---> Units of Measure`.
+The next step is to create the two units of measures. To do so, click into the :guilabel:`Unit of
+Measure Category` field and enter a name for the category. Then, under the :guilabel:`Units of
+Measure` tab, click :guilabel:`Add a line`.
 
 First, create the unit of measure used as the reference point for converting to other units of
-measure inside the category by clicking on *Create*. Name the unit and select the units of measure
-category you just created. For the *Type*, select *Reference Unit of Measure for this category
-type*. Enter the *Rounding Precision* you would like to use. The quantity computed by Odoo is always
-a multiple of this value.
+measure inside the category. Name the unit, and select the units of measure category you just
+created. For the *Type*, select *Reference Unit of Measure for this category type*. Enter the
+*Rounding Precision* you would like to use. The quantity computed by Odoo is always a multiple of
+this value.
 
 In the example, as you cannot purchase less than 1 roll and won't use fractions of a roll as a unit
 of measure, you can enter 1.
@@ -104,10 +105,6 @@ unit is smaller, the *Ratio* should be greater than 1. If the second unit is lar
 should be smaller than 1.
 
 For your curtain roll, the ratio should be set to 100.
-
-.. image:: uom/uom-second-unit.png
-   :align: center
-   :alt: Create a second unit of measure in Odoo Purchase
 
 You can now configure your product just as you would using Odoo's standard units of measure.
 
