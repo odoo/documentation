@@ -11,15 +11,15 @@ Tax calculation
 
 Automatically calculate taxes on Odoo quotations and invoices with AvaTax by confirming the
 documents during the sales flow. Alternatively, calculate the taxes manually by clicking the
-:guilabel:`Compute taxes using Avatax` button while these documents are in draft mode.
+:guilabel:`Compute Taxes` button, while these documents are in draft stage.
 
 .. tip::
-   Clicking the :guilabel:`Compute taxes using Avatax` button recalculates taxes if any product
-   lines are edited on the invoice.
+   Clicking the :guilabel:`Compute Taxes` button recalculates taxes, if any product lines are edited
+   on the invoice.
 
 .. image:: avatax_use/calculate-avatax.png
    :align: center
-   :alt: Sales quotation with the confirm and compute taxes using AvaTax buttons highlighted.
+   :alt: Sales quotation with the confirm and compute taxes button highlighted.
 
 The tax calculation is triggered during the following :ref:`automatic trigger
 <avatax/automatic-triggers>` and :ref:`manual trigger <avatax/manual-triggers>` circumstances.
@@ -43,8 +43,10 @@ Automatic triggers
 Manual triggers
 ---------------
 
-- :guilabel:`Compute taxes using Avatax` button at the bottom of the quote.
-- :guilabel:`Compute taxes using Avatax` button at the top of the invoice.
+- :guilabel:`Compute Taxes` button at the bottom of the quote.
+- :guilabel:`Compute Taxes` button at the top of the invoice.
+
+Use each of these buttons to manually re-calculate the sales tax.
 
 .. tip::
    Use the :guilabel:`Avalara Partner Code` field that is available on customer records, quotations,
@@ -94,9 +96,9 @@ AvaTax portal.
 Fixed price discounts
 =====================
 
-Add a fixed price discount to a valuable customer by click :guilabel:`Add a line` on the customer's
-invoice. Add the product discount and set the :guilabel:`Price` to either a positive or negative
-value. To recalculate the taxes, click :guilabel:`Compute taxes using Avatax`.
+Add a fixed price discount to a valuable customer, by clicking :guilabel:`Add a line` on the
+customer's invoice. Add the product discount, and set the :guilabel:`Price` to either a positive or
+negative value. To recalculate the taxes, click :guilabel:`Compute Taxes`.
 
 .. tip::
    Tax calculation can even be done on negative subtotals and credit notes.
