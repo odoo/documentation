@@ -11,9 +11,9 @@ transactions.
 
 .. important::
    *AvaTax* is only available for integration with databases/companies that have locations in the
-   United States and Canada. This means the fiscal position/country of a database can only be set to
-   the United States or Canada. For more information, reference this documentation:
-   :ref:`avatax/fiscal_country`.
+   United States, Canada, and Brazil. This means the fiscal position/country of a database can only
+   be set to the United States, Canada, or Brazil. For more information, reference this
+   documentation: :ref:`avatax/fiscal_country`.
 
 *AvaTax* accounts for location-based tax rates for each state, county, and city. It improves
 remittance accuracy by paying close attention to laws, rules, jurisdiction boundaries, and special
@@ -125,7 +125,7 @@ To set the :guilabel:`Fiscal Country`, navigate to :menuselection:`Accounting ap
    :doc:`../../fiscal_localizations`
 
 Under the :guilabel:`Taxes` section, set the :guilabel:`Fiscal Country` feature to :guilabel:`United
-States` or :guilabel:`Canada`. Then, click :guilabel:`Save`.
+States`, :guilabel:`Canada`, or :guilabel:`Brazil`. Then, click :guilabel:`Save`.
 
 Company settings
 ----------------
@@ -166,28 +166,50 @@ Next, ensure that the Odoo *AvaTax* module is installed. To do so, navigate to t
    * - :guilabel:`Avatax`
      - `account_avatax`
      - Default *AvaTax* module. This module adds the base *AvaTax* features for tax calculation.
+   * - :guilabel:`Avatax for geo localization`
+     - `account_avatax_geolocalize`
+     - This module includes the features required for integration of *AvaTax* into geo-localization
+       in Odoo.
    * - :guilabel:`Avatax for SO`
      - `account_avatax_sale`
      - Includes the information needed for tax calculation on sales orders in Odoo.
-   * - :guilabel:`Avatax for Subscriptions`
-     - `account_avatax_sale_subscription`
-     - This module includes the features required for tax calculation on subscriptions in Odoo.
-   * - :guilabel:`Account Avatax - Ecommerce`
-     - `website_sale_account_avatax`
-     - Includes tax calculation features for the checkout process on Odoo eCommerce.
-   * - :guilabel:`Account AvaTax - Ecommerce - Delivery`
-     - `website_sale_delivery_avatax`
-     - Includes tax calculation features for the delivery process on Odoo eCommerce.
+   * - :guilabel:`Avatax for Inventory`
+     - `account_avatax_stock`
+     - Includes tax calculation in Odoo Inventory.
+   * - :guilabel:`Amazon/Avatax Bridge`
+     - `sale_amazon_avatax`
+     - Includes tax calculation features between the *Amazon Connector* and Odoo.
+   * - :guilabel:`Avatax Brazil`
+     - `l10n_br_avatax`
+     - Includes information for tax calculation in the Brazil localization.
+   * - :guilabel:`Avatax Brazil for Services`
+     - `l10n_br_avatax_services`
+     - This module includes the required features for tax calculation for services in the Brazil
+       localization.
+   * - :guilabel:`Avatax Brazil Sale for Services`
+     - `l10n_br_edi_sale_services`
+     - This module includes the required features for tax calculation for the sale of services in
+       the Brazil localization. This includes electronic data interchange (EDI).
+   * - :guilabel:`Test SOs for the Brazilian AvaTax`
+     - `l10n_br_test_avatax_sale`
+     - This module includes the required features for test sales orders in the Brazil localization.
 
-Click the :guilabel:`Install` button on the module labeled :guilabel:`Avatax`: `account_avatax`.
+Click the :guilabel:`Install` button on the module labeled, :guilabel:`Avatax`: `account_avatax`.
 Doing so installs the following modules:
 
 - :guilabel:`Avatax`: `account_avatax`
 - :guilabel:`Avatax for SO`: `account_avatax_sale`
-- :guilabel:`Account Avatax - Ecommerce`: `website_sale_account_avatax`
+- :guilabel:`Avatax for Inventory`: `account_avatax_stock`
 
-Should *AvaTax* be needed for Odoo *Subscriptions*, or for delivery tax in Odoo *eCommerce*, then
-install those modules individually by clicking on :guilabel:`Install`.
+Should *AvaTax* be needed for geo-localization, or with the *Amazon Connector*, then install those
+modules individually by clicking on :guilabel:`Install` on :guilabel:`Avatax for geo localization`
+and :guilabel:`Amazon/Avatax Bridge`, respectively.
+
+.. seealso::
+   For localization specific *AvaTax* instructions, view the following :doc:`fiscal localization
+   <../../fiscal_localizations>` documentation:
+
+   - :doc:`../../fiscal_localizations/brazil`
 
 .. _avatax/credentials:
 
@@ -196,8 +218,12 @@ Odoo AvaTax settings
 
 To integrate the *AvaTax* :abbr:`API (application programming interface)` with Odoo, go to
 :menuselection:`Accounting app --> Configuration --> Settings` section. The :guilabel:`AvaTax`
-fields in the :guilabel:`Taxes` section is where the *AvaTax* configurations are made and the
+fields in the :guilabel:`Taxes` section is where the *AvaTax* configurations are made, and the
 credentials are entered in.
+
+First, tick the checkbox to the left of the :guilabel:`AvaTax` settings, to activate *AvaTax* on the
+database. This is a quick, convenient way to activate and deactivate *AvaTax* tax calculation on the
+Odoo database.
 
 .. image:: avatax/avatax-configuration-settings.png
    :align: center
@@ -359,6 +385,12 @@ Tax mapping
 
 The *AvaTax* integration is available on sale orders and invoices with the included *AvaTax* fiscal
 position.
+
+.. tip::
+   Additionally, there is a :guilabel:`Tax Mapping` tab and :guilabel:`Account Mapping` tab in the
+   :guilabel:`Automatic Tax Mapping (AvaTax)` fiscal position, where mapping for products can also
+   be configured. To access :guilabel:`Fiscal Positions` navigate to :menuselection:`Accounting app
+   --> Configuration --> Accounting: Fiscal Positions`.
 
 Product category mapping
 ~~~~~~~~~~~~~~~~~~~~~~~~
