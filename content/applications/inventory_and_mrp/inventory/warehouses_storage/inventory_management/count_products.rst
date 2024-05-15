@@ -117,6 +117,10 @@ adjustment is being made on, but can be changed to reflect whatever reference or
 
 Once ready, click :guilabel:`Apply` to apply the inventory adjustment.
 
+.. note::
+   Applying an inventory adjustment simultaneously creates a :doc:`stock move line (SML)
+   <../reporting/moves_history>` in the *Moves History* report for traceability.
+
 .. image:: count_products/apply-inventory-adjustment.png
    :align: center
    :alt: Apply all option applies the inventory adjustment once a reason is specified.
