@@ -214,3 +214,4 @@ event-creation process.
    events/event_templates
    events/event_booths
    events/event_tracks
+   events/registration_desk
