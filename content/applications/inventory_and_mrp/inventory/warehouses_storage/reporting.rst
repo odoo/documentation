@@ -8,3 +8,4 @@ Reporting
    :titlesonly:
 
    reporting/stock
+   reporting/moves_history
