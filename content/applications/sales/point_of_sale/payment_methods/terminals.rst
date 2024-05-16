@@ -26,6 +26,7 @@ Then, follow the corresponding documentation to configure your device:
 - :doc:`Stripe configuration <terminals/stripe>`
 - :doc:`Vantiv configuration <terminals/vantiv>`
 - :doc:`Worldline configuration <terminals/worldline>`
+- :doc:`Mercado Pago configuration <terminals/mercado_pago>`
 
 Once the terminal is configured, you can :doc:`create the corresponding payment method and add it to
 the POS <../payment_methods>`.
@@ -39,3 +40,4 @@ the POS <../payment_methods>`.
    terminals/stripe
    terminals/vantiv
    terminals/worldline
+   terminals/mercado_pago
