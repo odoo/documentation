@@ -1917,28 +1917,121 @@ The `filter` element can have the following attributes:
 
          <filter string="Creation Date" name="filter_create_date" date="create_date"/>
 
+   By default, these filters contain a dropdown with different sub-filters that allow you to filter based on months, quarters and years.
+   Additionally, you can create custom sub-filters that allow filtering using domains.
+   These custom filters must have the following attributes: `name`, `string` and `domain`.
+
+   .. example::
+      .. code-block:: xml
+
+         <filter string="Creation Date" name="filter_create_date" date="create_date">
+            <filter name="create_date_last_30_days" string="Last 30 Days" domain="[('create_date', '&gt;', datetime.datetime.combine(context_today() - relativedelta(days=30), datetime.time(23, 59, 59)).to_utc())]"/>
+         </filter>
+
+   Note that all custom filters defined this way are mutually exclusive with each other and with the other sub-filters.
+
    :requirement: Optional
    :type: str
    :default: `''`
+
+.. attribute:: start_month
+   :noindex:
+
+   The earliest month that will show up in the dropdown of a date filter, as an offset relative to the current month.
+
+   .. example::
+      .. code-block:: xml
+
+         <filter string="Creation Date" name="filter_create_date" date="create_date" start_month="-3"/>
+
+      If the current month is February, the earliest month selectable in the dropdown will be November.
+
+   :requirement: Optional
+   :type: int
+   :default: `-2`
+   :scope: Filters with a non-empty `date` attribute
+
+.. attribute:: end_month
+   :noindex:
+
+   The latest month that will show up in the dropdown of a date filter, as an offset relative to the current month.
+
+   .. example::
+      .. code-block:: xml
+
+         <filter string="Creation Date" name="filter_create_date" date="create_date" end_month="2"/>
+
+      If the current month is February, the latest month selectable in the dropdown will be March.
+
+   :requirement: Optional
+   :type: int
+   :default: `0`
+   :scope: Filters with a non-empty `date` attribute
+
+.. attribute:: start_year
+   :noindex:
+
+   The earliest year that will show up in the dropdown of a date filter, as an offset relative to the current year.
+
+   .. example::
+      .. code-block:: xml
+
+         <filter string="Creation Date" name="filter_create_date" date="create_date" start_year="-3"/>
+
+      If the current year is 2024, the earliest year selectable in the dropdown will be 2021.
+
+   :requirement: Optional
+   :type: int
+   :default: `-2`
+   :scope: Filters with a non-empty `date` attribute
+
+.. attribute:: end_year
+   :noindex:
+
+   The latest year that will show up in the dropdown of a date filter, as an offset relative to the current year.
+
+   .. example::
+      .. code-block:: xml
+
+         <filter string="Creation Date" name="filter_create_date" date="create_date" end_year="2"/>
+
+      If the current year is 2024, the latest year selectable in the dropdown will be 2025.
+
+   :requirement: Optional
+   :type: int
+   :default: `0`
+   :scope: Filters with a non-empty `date` attribute
 
 .. attribute:: default_period
    :noindex:
 
    The default period of the time-based filter (with a `date` attribute). It must be one of, or a
-   comma-separated list of, `today`, `this_week`, `this_month`, `last_month`,
-   `antepenultimate_month`, `fourth_quarter`, `third_quarter`, `second_quarter`, `first_quarter`,
-   `this_year`, `last_year` or `antepenultimate_year`.
+   comma-separated list of valid filter ids.
+
+   Valid filter ids include the following:
+
+   - `first_quarter`, `second_quarter`, `third_quarter` and `fourth_quarter`.
+   - One of `month`, `month-x` and `month+x`, where `x` is a non-zero integer value between `start_month` and `end_month`.
+   - One of `year`, `year-x` and `year+x`, where `x` is a non-zero integer value between `start_year` and `end_year`.
+   - The `name` of any custom filter defined within the filter, prepended with `custom_`.
 
    The filter must be in the default set of filters activated at the view initialization.
 
    .. example::
       .. code-block:: xml
 
-         <filter string="Creation Date" name="filter_create_date" date="create_date" default_period="this_year,last_year"/>
+         <filter string="Creation Date" name="filter_create_date" date="create_date" default_period="year,month-1"/>
+
+   .. example::
+      .. code-block:: xml
+
+         <filter string="Creation Date" name="filter_create_date" date="create_date" default_period="custom_create_date_last_30_days">
+            <filter name="create_date_last_30_days" string="Last 30 Days" domain="[('create_date', '&gt;', datetime.datetime.combine(context_today() - relativedelta(days=30), datetime.time(23, 59, 59)).to_utc())]"/>
+         </filter>
 
    :requirement: Optional
    :type: str
-   :default: `this_month`
+   :default: `month`, or the closest value to the current month if unavailable
    :scope: Filters with a non-empty `date` attribute
 
 .. include:: view_architectures/generic_attribute_invisible.rst
