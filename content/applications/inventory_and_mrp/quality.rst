@@ -19,3 +19,4 @@ when issues arise.
 
    quality/quality_management
    quality/quality_check_types
+   quality/quality_reporting
