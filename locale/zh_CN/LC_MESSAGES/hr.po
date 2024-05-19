@@ -970,7 +970,7 @@ msgstr ""
 
 #: ../../content/applications/hr/fleet.rst:46
 msgid "New Vehicle Request"
-msgstr ""
+msgstr "新车辆申请"
 
 #: ../../content/applications/hr/fleet.rst:48
 msgid ""
@@ -981,6 +981,8 @@ msgid ""
 "the number specified in the :guilabel:`New Vehicle Request` field. Enter the"
 " specific number limit for existing available cars in this field."
 msgstr ""
+":guilabel:`新车申请`字段根据车队的可用性，设置了申请新车的数量限制。如果现有车辆数量多于 :guilabel:`新车申请` "
+"字段中指定的数量，则填写工资配置表（获得职位后）的员工**不能**申请新车。请在此字段中输入现有可用汽车的具体数量限制。"
 
 #: ../../content/applications/hr/fleet.rst:55
 msgid ""
@@ -1003,6 +1005,8 @@ msgid ""
 "pre-loaded manufacturers, go to :menuselection:`Fleet app --> Configuration "
 "--> Manufacturers`."
 msgstr ""
+"Odoo *车队* 数据库中预装了 66 家常用汽车和自行车制造商及其标志。要查看预载的制造商，请访问 :menuselection:`车队应用程序 "
+"--> 配置 --> 制造商`。"
 
 #: ../../content/applications/hr/fleet.rst:68
 msgid ""
@@ -1013,6 +1017,8 @@ msgid ""
 "major bicycle manufacturer: Audi, BMW, Mercedes, Opel (cars), and Eddy "
 "Merckx (bicycle)."
 msgstr ""
+"制造商按字母顺序显示在列表视图中。每个制造商的卡片都列出了每个特定制造商配置的具体车型数量。Odoo 提供了 46 种预先配置的 :ref:`模型 "
+"<fleet/models>`，分别来自四家主要汽车制造商和一家主要自行车制造商： 奥迪、宝马、奔驰、欧宝（汽车）和 Eddy Merckx（自行车）。"
 
 #: ../../content/applications/hr/fleet.rst-1
 msgid "Manufacturer card with the amount of models listed."
@@ -1030,6 +1036,8 @@ msgid ""
 "manufacturer in the name field, and select an image to upload for the logo. "
 "When the information is entered, click :guilabel:`Save`."
 msgstr ""
+"要在数据库中添加新的制造商，请点击 :guilabel:`创建`。将加载制造商表单。只需要两项信息，即制造商的 :guilabel:`名称` "
+"和标志。在名称字段中键入制造商名称，并选择要上传的标志图像。输入信息后，点击 :guilabel:`保存`。"
 
 #: ../../content/applications/hr/fleet.rst:88
 msgid "Vehicle Models"
@@ -1046,16 +1054,19 @@ msgid ""
 " are part of a fleet, the model (and/or manufacturer) needs to be added to "
 "the database."
 msgstr ""
+"许多制造商生产多种车型。在向车队添加车辆时，指定要添加的车辆型号非常重要。Odoo "
+"预装了四个主要汽车制造商生产的汽车模型和一个自行车制造商生产的自行车模型：奥迪、宝马、奔驰、欧宝（汽车）和 Eddy "
+"Merckx（自行车）。如果车队中除了这些制造商的预配置车型外，还有其他车型，则需要将该车型（和/或制造商）添加到数据库中。"
 
 #: ../../content/applications/hr/fleet.rst:98
 msgid "Preconfigured Models"
-msgstr ""
+msgstr "预配置模型"
 
 #: ../../content/applications/hr/fleet.rst:100
 msgid ""
 "The following models are pre-loaded in Odoo and do not need to be added to "
 "the database:"
-msgstr ""
+msgstr "以下模型已预先加载到 Odoo 中，无需添加到数据库中："
 
 #: ../../content/applications/hr/fleet.rst:103
 msgid "AUDI"
@@ -1067,7 +1078,7 @@ msgstr "BMW"
 
 #: ../../content/applications/hr/fleet.rst:103
 msgid "Eddy Merckx"
-msgstr ""
+msgstr "Eddy Merckx"
 
 #: ../../content/applications/hr/fleet.rst:103
 msgid "Mercedes"
@@ -1087,7 +1098,7 @@ msgstr "Serie 1"
 
 #: ../../content/applications/hr/fleet.rst:105
 msgid "SanRemo76"
-msgstr ""
+msgstr "SanRemo76"
 
 #: ../../content/applications/hr/fleet.rst:105
 msgid "Class A"
@@ -1274,6 +1285,9 @@ msgid ""
 "some fields are specific to Belgian based companies, so not all fields or "
 "sections may be visible depending on the location of the company."
 msgstr ""
+"新的车辆模型可以很容易地添加到数据库中。要添加新模型，请导航至 :menuselection:`车队管理应用程序 --> 配置 --> 车辆模型`。点击"
+" :guilabel:`创建`，车辆模型表单将加载。在表单中输入以下信息，然后点击 "
+":guilabel:`保存`。请注意，有些字段是比利时公司特有的，因此并非所有字段或部分都可见，具体取决于公司所在地。"
 
 #: ../../content/applications/hr/fleet.rst:143
 msgid ":guilabel:`Model name`: enter the model name in the field."
@@ -1285,6 +1299,8 @@ msgid ""
 "If the manufacturer is not configured, type in the manufacturer and then "
 "click :guilabel:`Create` or :guilabel:`Create & Edit`."
 msgstr ""
+":guilabel:`制造商`：从下拉菜单中选择制造商。如果未配置制造商，请键入制造商，然后点击 :guilabel:`创建` 或 "
+":guilabel:`创建 & 编辑`。"
 
 #: ../../content/applications/hr/fleet.rst:147
 msgid ""
@@ -1294,19 +1310,22 @@ msgid ""
 "application since vehicles can be part of an employee's benefits. Adding "
 "additional vehicle types is not possible as it will affect payroll."
 msgstr ""
+":guilabel:`车辆类型`：从下拉菜单中选择两种预配置车辆类型之一，即 :guilabel:`汽车` 或 "
+":guilabel:`自行车`。车辆类型是 Odoo 中的硬编码，并与 *薪酬管理* "
+"应用程序整合，因为车辆可以是员工福利的一部分。无法添加其他车辆类型，因为这会影响薪资。"
 
 #: ../../content/applications/hr/fleet.rst:151
 msgid ""
 ":guilabel:`Category`: select the category the vehicle is categorized under "
 "from the drop-down menu. To create a new category, type in the category and "
 "then click :guilabel:`Create (new category)`."
-msgstr ""
+msgstr ":guilabel:`类别`：从下拉菜单中选择车辆所属类别。要创建新类别，请键入类别，然后点击 :guilabel:`创建（新类别）`。"
 
 #: ../../content/applications/hr/fleet.rst:156
 msgid ""
 "When the manufacturer is selected, the logo for the manufacturer will "
 "automatically load in the image box in the top right corner."
-msgstr ""
+msgstr "选择制造商后，制造商的标志会自动加载到右上角的图像框中。"
 
 #: ../../content/applications/hr/fleet.rst:160
 msgid "Information tab"
@@ -1359,7 +1378,7 @@ msgstr ""
 msgid ""
 ":guilabel:`Can be requested`: check this box if employees can request this "
 "model vehicle."
-msgstr ""
+msgstr ":guilabel:`可以申请`：如果员工可以申请此型号的车辆，请选中此复选框。"
 
 #: ../../content/applications/hr/fleet.rst:180
 msgid ""
@@ -1381,7 +1400,7 @@ msgstr ""
 msgid ""
 "Modifying the :guilabel:`CO2 Emissions` field will adjust the value in the "
 ":guilabel:`CO2 fee` field."
-msgstr ""
+msgstr "修改 :guilabel:`CO2 排放量` 字段将调整 :guilabel:`CO2 费用` 字段中的值。"
 
 #: ../../content/applications/hr/fleet.rst:190
 msgid ""
@@ -1394,6 +1413,7 @@ msgid ""
 "only depreciates based on the *contract* linked to a specific vehicle and "
 "not on the general model."
 msgstr ""
+":guilabel:`成本（折旧）`：输入车辆的月成本，该成本会显示在薪资配置器中，未来员工在获得工作职位时可使用该成本。该值会影响分配到该车辆的员工的毛工资和净工资。根据当地税法，该数字会随着时间的推移而折旧。:guilabel:`成本（折旧）`不会根据*车辆型号*自动折旧，只会根据与特定车辆相关的*合同*而非一般型号折旧。"
 
 #: ../../content/applications/hr/fleet.rst:196
 msgid ""
