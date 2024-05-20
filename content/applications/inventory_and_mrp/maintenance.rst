@@ -21,3 +21,4 @@ requirements.
    maintenance/maintenance_calendar
    maintenance/maintenance_requests
    maintenance/maintenance_setup
+   maintenance/maintenance_reporting
