@@ -1,3 +1,5 @@
+:show-content:
+
 ==========
 Appraisals
 ==========
@@ -167,29 +169,6 @@ document.
 
 .. note::
    In previous versions of Odoo, this section was referred to as :guilabel:`Surveys`.
-
-Tags
-----
-
-An additional feature of the *Appraisals* application is the ability to set :ref:`goals
-<appraisals/goals>` for employees. On each goal form, there is a field to add tags. The available
-tags are pulled from a list that is configured from the settings.
-
-To view a list of all existing goal tags, and to create new tags, go to the :guilabel:`Goal Tags`
-page, by navigating to :menuselection:`Appraisals application --> Configuration --> Tags`.
-
-All currently configured tags are presented in a list view.
-
-The *Appraisals* application does **not** have any pre-configured tags, so all tags need to be added
-from this list, or directly from the goal form.
-
-To create a new tag from the :guilabel:`Goal Tags` page, click the :guilabel:`New` button, and a
-blank line appears.
-
-Enter the name of the tag on the line. Then, press the enter key to save the tag, and create a new
-blank line. Repeat this for all tags that need to be added.
-
-The list of tags is automatically arranged in alphabetical order.
 
 Appraisals
 ==========
@@ -455,79 +434,7 @@ Next, click on the :guilabel:`Meeting` smart button, and the calendar loads. Fol
 directions above to create the meeting.
 
 .. note::
-   If no meetings are scheduled, the :guilabel:`Meeting` smart button says :guilabel:`No Meeting`.
-
-.. _appraisals/goals:
-
-Goals
-=====
-
-The ability to set goals for employees to work toward is an important feature of Odoo *Appraisals*.
-Goals are typically set during an appraisal, so the employee knows what they need to work toward
-before their next appraisal.
-
-To view all goals, navigate to :menuselection:`Appraisals application --> Goals`. This presents all
-the goals for every employee, in a default Kanban view.
-
-Each goal card contains the following information:
-
-- :guilabel:`Skill`: the name of the goal.
-- :guilabel:`Name`: the employee the goal is assigned to.
-- :guilabel:`Deadline`: the due date for the goal.
-- :guilabel:`Progress`: the percentage of competency set for the goal.
-- :guilabel:`Employee`: the profile icon of the employee the goal is assigned to.
-
-If a goal is completed, a :guilabel:`Done` banner appears in the top-right corner of the goal card.
-
-.. image:: appraisals/goals.png
-   :align: center
-   :alt: The goals Kanban view, with nine goal cards.
-
-.. note::
-   Every individual goal requires its own entry for each employee. If employees have the same goal,
-   a goal card for each employee appears on the list. For example, if both Bob and Sara have the
-   same goal of `Typing`, two cards appear in the Kanban view: one `Typing` goal for Bob, and
-   another `Typing` goal for Sara.
-
-New goal
---------
-
-To create a new goal, navigate to :menuselection:`Appraisals application --> Goals`, and click
-:guilabel:`New` to open a blank goal form.
-
-Enter the information on the card. The information requested is all the same information that
-appears on the :ref:`goal card <appraisals/goals>` in the Kanban view, with the addition of a
-:guilabel:`Tags` field and a :guilabel:`Description` tab.
-
-The current user populates the :guilabel:`Employee` field by default, and the :guilabel:`Manager`
-field populates with the manager set on the employee profile.
-
-Make any necessary changes to the form, and add any notes that might be useful to clarify the goal
-in the :guilabel:`Description` tab.
-
-.. image:: appraisals/new-goal.png
-   :align: center
-   :alt: A goal form filled out for a Python skill, set to 50% proficiency.
-
-Completed goals
----------------
-
-When a goal has been met, it is important to update the record. A goal can be marked as `Done` in
-one of two ways: from the main :guilabel:`Goals` dashboard, or from the individual goal card.
-
-To mark a goal as `Done` from the main :guilabel:`Goals` dashboard, click on the :guilabel:`⋮ (three
-dots)` icon in the top-right of a goal card.
-
-.. important::
-   The :guilabel:`⋮ (three dots)` icon **only** appears when the mouse hovers over the corner of a
-   goal card.
-
-Then, click :guilabel:`Mark as Done` from the resulting drop-down menu. A green :guilabel:`Done`
-banner appears in the top-right corner of the goal card.
-
-To mark a goal as `Done` from the goal card itself, click on a goal card to open that goal's form.
-Then, click the :guilabel:`Mark as Done` button in the top-left of the form. When clicked, a green
-:guilabel:`Done` banner appears in the top-right corner of the goal form.
+   If no meetings are scheduled, the :guilabel:`Meeting` smart button reads :guilabel:`No Meeting`.
 
 Reporting
 =========
@@ -589,3 +496,11 @@ Each skill has the following information listed:
 .. image:: appraisals/skills-report.png
    :align: center
    :alt: A report showing all the skills grouped by employee.
+
+.. seealso::
+   :doc:`appraisals/goals`
+
+.. toctree::
+   :titlesonly:
+
+   appraisals/goals
