@@ -241,6 +241,8 @@ Doing so breaks down all perishable products, their expiration dates, and the as
    :align: center
    :alt: Group by expiration dates on lots and serial numbers page.
 
+.. _inventory/product_management/expiration-alerts:
+
 Expiration alerts
 -----------------
 
