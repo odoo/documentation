@@ -4,11 +4,6 @@
 Attendances
 ===========
 
-.. toctree::
-   :titlesonly:
-
-   attendances/hardware
-
 Odoo's *Attendances* application functions as a time clock. Employees are able to check in and out
 of work using a dedicated device in kiosk mode, while users are also able to check in and out of
 work directly from the database. Managers can quickly see who is available at any given time, create
@@ -20,28 +15,26 @@ checking out of work earlier than expected.
 Access rights
 =============
 
-It is important to understand how the different access rights affect what users can access in the
-*Attendances* application.
+It is important to understand how the different access rights affect what options and features users
+can access in the *Attendances* application.
 
-Every user in the database is always able to access their own information on the dashboard and can
-check in and out directly from the database. Access to all the other features is determined by
-access rights.
+Every user in the database is able to check in and out directly from the database, without needing
+access to the *Attendances* application. Additionally, all users can access their own attendance
+records from their employee form in the *Employees* app.
 
-To see what access rights a user has, navigate to the :menuselection:`Settings application --> Users
-& Companies: Users`, and click on an individual user. The :guilabel:`Access Rights` tab is visible
-by default. Scroll down to the :guilabel:`Human Resources` section to see the setting. For the
+Access to both the *Attendances* application, and the various features within the application is
+determined by access rights.
+
+To see what access rights a user has, navigate to the :menuselection:`Settings app --> Users &
+Companies: Users`, and click on an individual user. The :guilabel:`Access Rights` tab is visible by
+default. Scroll down to the :guilabel:`Human Resources` section to see the setting. For the
 :guilabel:`Attendances` field, the options are either to leave the field blank or select
 :guilabel:`Administrator`.
 
 If the :guilabel:`Administrator` option is selected, the user has full access to the entire
 *Attendances* application, with no restrictions. They can view all employee attendance records,
-enter kiosk mode from the application, access all reporting metrics, and make modifications to the
-settings.
-
-If left blank, the user can only view their own information on the *Attendances* application
-dashboard and can view their own personal attendance records under the reporting feature. All other
-attendance records are hidden from view on the report. There is no access to either the kiosk mode
-or the configuration menu.
+enter *Kiosk mMode* from the application, access all reporting metrics, and make modifications to
+the settings. If left blank, the user does **not** have access to the *Attendances* application.
 
 .. _attendances/approvers:
 
@@ -157,92 +150,6 @@ time is not logged.
    option is not activated. The difference is that when :guilabel:`Count of Extra Hours` is
    activated, the extra hours can be :ref:`deducted from an approved time off request
    <time_off/deduct-extra-hours>`.
-
-.. _attendances/check-in:
-
-Check in and out via the database
-=================================
-
-Odoo's *Attendances* application allows users who are logged into the database to check in and out,
-without needing to go into the *Attendances* application, or use a kiosk. For some smaller
-companies, where every employee is also a user, this feature may be useful.
-
-A user can check in and out on the main database dashboard, as well as in any application. In the
-upper right corner of the top main menu, which is always visible regardless of what application the
-user is in, a :guilabel:`🔴 (red circle)` or :guilabel:`🟢 (green circle)` is visible. Click on the
-colored circle to reveal the attendance widget, enabling the user to check in and/or out.
-
-.. image:: attendances/top-menu.png
-   :align: center
-   :alt: Top right main menu with check in button highlighted.
-
-Check in
---------
-
-If the attendance widget circle is red, this indicates the user is not currently checked in. Click
-the :guilabel:`🔴 (red circle)` and the attendance widget appears, displaying a green
-:guilabel:`Check in ➡️` button.
-
-.. image:: attendances/check-in.png
-   :align: center
-   :alt: Top right main menu with check in button highlighted.
-
-When the user checks in from the database, the *Attendances* app logs the location details for the
-user, including the IP Address and GPS coordinates.
-
-.. important::
-   For the *Attendances* app to log the location details, the user must allow their computer to
-   access their location information.
-
-If the user has not checked in and out already during the current work day, this button is the only
-visible item in the widget. If the user has previously checked in and out, a :guilabel:`Total today`
-field appears above the button, and the total amount of time that has been logged for the day
-appears beneath that field, in an :guilabel:`HH:MM` (hours:minutes) format.
-
-Click the :guilabel:`Check in ➡️` button to check in. The :guilabel:`🔴 (red circle)` in the top
-menu changes to green, and the widget changes appearance as well. The widget updates to reflect that
-the user has checked in, by changing the green :guilabel:`Check in ➡️` button to a yellow
-:guilabel:`Check out ➡️` button.
-
-Click anywhere on the screen to close the attendance widget.
-
-Check out
----------
-
-If the user is checking out for the first time, :guilabel:`Since HH:MM (AM/PM)` appears at the top
-of the widget, with the time the user checked in populating the time field. Beneath that line,
-:guilabel:`HH:MM` is displayed, indicating the hours and minutes that have elapsed since checking
-in. As time passes, this value is updated to reflect the hours and minutes that have passed since
-the user checked in.
-
-If the user has previously checked in and out, additional fields are presented. A :guilabel:`Before
-HH:MM (AM/PM)` field appears in addition to the :guilabel:`Since HH:MM (AM/PM)` field. The time
-displayed in both of these fields are populated with the most recent check in time, and will match.
-Beneath the :guilabel:`Before HH:MM (AM/PM)` field, the previously logged hours are displayed, in an
-:guilabel:`HH:MM` (hours:minutes) format.
-
-In addition, beneath both of these fields, a :guilabel:`Total today` field appears. This field is
-the sum of both the :guilabel:`Before HH:MM (AM/PM)` and :guilabel:`Since HH:MM (AM/PM)` fields, and
-is the total time that will be logged for the user, if they were to log out at that moment.
-
-As time passes, both the :guilabel:`Since HH:MM (AM/PM)` and :guilabel:`Total today` fields are
-updated live. To check out, click the yellow :guilabel:`Check out ➡️` button. The attendance widget
-updates again, displaying the :guilabel:`Total today` field with the logged time, and the yellow
-:guilabel:`Check out ➡️` button changes to a green :guilabel:`Check in ➡️` button.
-
-When the user checks out from the database, the *Attendances* app logs the location details for the
-user. This information is **only** logged if the user allows their computer to access this
-information.
-
-.. image:: attendances/check-in-database-message.png
-   :align: center
-   :alt: The pop-up that appears when an employee checks in inside the database.
-
-.. tip::
-   There is no limit to the amount of times a user can check in and check out. Users are able to
-   check in and out without any time elapsing (a value of 00:00). Each time an employee logs in and
-   out, the information is stored and appears on the dashboard, including check ins and check outs
-   with no time value.
 
 .. _attendances/kiosk-mode-entry:
 
@@ -548,3 +455,13 @@ button and a pop-up appears. Select the desired spreadsheet, and click :guilabel
 .. image:: attendances/reporting.png
    :align: center
    :alt: The default report view, with all the optional view buttons highlighted.
+
+.. seealso::
+   - :doc:`attendances/check_in_check_out`
+   - :doc:`attendances/hardware`
+
+.. toctree::
+   :titlesonly:
+
+   attendances/check_in_check_out
+   attendances/hardware
