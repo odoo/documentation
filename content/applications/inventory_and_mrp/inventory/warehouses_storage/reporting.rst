@@ -9,3 +9,4 @@ Reporting
 
    reporting/stock
    reporting/moves_history
+   reporting/aging
