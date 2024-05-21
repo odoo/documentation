@@ -165,8 +165,8 @@ For the configuration:
 - :guilabel:`Website`: the website on which that file is *available*. If you want it available for
   *all* websites, leave it empty.
 
-The file is then available after checkout in the **purchase order** section found on the customer's
-portal.
+The file is then available after checkout in the :guilabel:`Sales Orders` section, found on the
+customer's portal.
 
 Product configuration
 =====================
