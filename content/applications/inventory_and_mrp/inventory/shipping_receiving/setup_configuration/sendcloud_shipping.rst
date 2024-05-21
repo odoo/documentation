@@ -1,10 +1,10 @@
-==========================================
-Set up Sendcloud shipping services in Odoo
-==========================================
+=======================
+Sendcloud configuration
+=======================
 
-Sendcloud is a shipping service aggregator that facilitates the integration of European
-shipping carriers with Odoo. Once integrated, users can select shipping carriers on inventory
-operations in their Odoo database.
+Sendcloud is a shipping service aggregator that facilitates the integration of European shipping
+carriers with Odoo. Once integrated, users can select shipping carriers on inventory operations in
+their Odoo database.
 
 .. seealso::
    `Sendcloud integration documentation <https://support.sendcloud.com/hc/en-us/articles
@@ -28,8 +28,10 @@ needed.
 
 .. important::
    Odoo integration of Sendcloud works on free Sendcloud plans *only* if a bank account is linked,
-   since Sendcloud won't ship for free. To use shipping rules or individual custom carrier contacts,
-   a paid plan of Sendcloud is required.
+   since Sendcloud won't ship for free. To use shipping rules, or individual custom carrier
+   contacts, a paid plan of Sendcloud is **required**.
+
+.. _inventory/shipping_receiving/sendcloud-warehouse-config:
 
 Warehouse configuration
 -----------------------
@@ -82,16 +84,27 @@ integration. After saving, the :guilabel:`Public and Secret Keys` are generated.
 Setup in Odoo
 =============
 
-Install the Sendcloud shipping module
--------------------------------------
+To ensure seamless Sendcloud integration with Odoo, :ref:`install
+<inventory/shipping_receiving/sendcloud-module>` and :ref:`link
+<inventory/shipping_receiving/link-sendcloud-module>` the Sendcloud shipping connector to the
+Sendcloud account. Then, :ref:`configure Odoo fields
+<inventory/shipping_receiving/sendcloud-shipping-info>`, so Sendcloud can accurately pull shipping
+data to generate labels.
 
-After the Sendcloud account is set up and configured, it's time to configure the Odoo database.
-To get started, go to Odoo's :guilabel:`Apps` module,  search for the :guilabel:`Sendcloud
-Shipping` integration, and install it.
+.. _inventory/shipping_receiving/sendcloud-module:
+
+Install Sendcloud shipping module
+---------------------------------
+
+After the Sendcloud account is set up and configured, it's time to configure the Odoo database. To
+get started, go to Odoo's :guilabel:`Apps` module, search for the `Sendcloud Shipping`
+integration, and install it.
 
 .. image:: sendcloud_shipping/sendcloud-mod.png
    :align: center
    :alt: Sendcloud Shipping module in the Odoo Apps module.
+
+.. _inventory/shipping_receiving/link-sendcloud-module:
 
 Sendcloud shipping connector configuration
 ------------------------------------------
@@ -160,10 +173,35 @@ After configuring and saving the form, follow these steps to load the shipping p
    Odoo has a built-in layer of protection against unwanted charges when using test environments.
    Within a test environment, if a shipping method is used to create labels, then those labels are
    immediately canceled after the creation — this occurs automatically. The test and production
-   environment settings can be toggled back and forth from the :guilabel:`Smart Buttons`.
+   environment settings can be toggled back and forth from their respective smart buttons.
 
-Generate a label with Sendcloud
--------------------------------
+.. _inventory/shipping_receiving/sendcloud-shipping-info:
+
+Shipping information
+--------------------
+
+To use Sendcloud to generate shipping labels, the following information **must** be filled out
+accurately and completely in Odoo:
+
+#. **Customer information**: when creating a quotation, ensure the selected :guilabel:`Customer` has
+   a valid phone number, email address, and shipping address.
+
+   To verify, select the :guilabel:`Customer` field to open their contact page. Here, add their
+   shipping address in the :guilabel:`Contact` field, along with their :guilabel:`Mobile` number and
+   :guilabel:`Email` address.
+
+#. **Product weight**: ensure all products in an order have a specified :guilabel:`Weight` in the
+   :guilabel:`Inventory` tab of their product form. Refer to the :ref:`Product weight section
+   <inventory/shipping_receiving/configure-weight>` of this article for detailed instructions.
+
+#. **Warehouse address**: ensure the warehouse name and address in Odoo match the :ref:`previously
+   defined warehouse <inventory/shipping_receiving/sendcloud-warehouse-config>` in the Sendcloud
+   setup. For details on warehouse configuration in Odoo, refer to the :ref:`warehouse configuration
+   section <inventory/shipping_receiving/configure-source-address>` of the third-party shipping
+   documentation.
+
+Generate labels with Sendcloud
+==============================
 
 When creating a quotation in Odoo, add shipping and a :guilabel:`Sendcloud shipping product`. Then,
 :guilabel:`Validate` the delivery. Shipping label documents are automatically generated in the
@@ -235,11 +273,10 @@ occupies when in transit. In other words it is the physical size of a package`).
    `Sendcloud: How to calculate & automate parcel volumetric weight <https://support.sendcloud.com/
    hc/en-us/articles/360059644051-How-to-calculate-automate-parcel-volumetric-weight>`_
 
-
 Unable to calculate shipping rate
 ---------------------------------
 
-First, verify that product being shipped has a weight that is supported by the selected shipping
+First, verify that the product being shipped has a weight that is supported by the selected shipping
 method. If this is set, then verify that the destination country (from the customer address) is
-supported by the carrier. The country of origin (warehouse address) should also be supported by
-the carrier.
+supported by the carrier. The country of origin (warehouse address) should also be supported by the
+carrier.
