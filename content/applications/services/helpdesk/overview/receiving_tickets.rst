@@ -11,7 +11,7 @@ Enable channel options to submit tickets
 ========================================
 
 Go to :menuselection:`Helpdesk app --> Configuration --> Helpdesk Teams`, and choose an existing
-team, or click :guilabel:`New` to :doc:`create a new team <getting_started>`.
+team, or click :guilabel:`New` to :doc:`create a new team <../../helpdesk>`.
 
 On the team's settings page, scroll down to the :guilabel:`Channels` and :guilabel:`Help Center`
 sections. Enable one or more channels by checking the respective boxes.
