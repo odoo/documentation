@@ -15,7 +15,7 @@ Configuration
 
 To activate any *Help Center* features (*Forums*, *eLearning*, or *Knowledge*) on a *Helpdesk* team,
 go to :menuselection:`Helpdesk app --> Configuration --> Helpdesk Teams` and select a team, or
-create a :doc:`new one <getting_started>`. Verify the :guilabel:`Visibility` of the team is set to
+create a :doc:`new one <../../helpdesk>`. Verify the :guilabel:`Visibility` of the team is set to
 :guilabel:`Invited portal users and all internal users (public)` in the :guilabel:`Visibility &
 Assignment` section.
 
@@ -32,7 +32,7 @@ enabled, the :guilabel:`Website Form` is automatically enabled, as well.
    active or accessible.
 
 .. seealso::
-   :doc:`Getting Started <getting_started>`
+   :doc:`Helpdesk Overview <../../helpdesk>`
 
 Knowledge
 =========
@@ -49,7 +49,7 @@ Enable Knowledge on a Helpdesk team
 -----------------------------------
 
 To enable the *Knowledge* feature on a *Helpdesk* team, go to :menuselection:`Helpdesk app -->
-Configuration --> Helpdesk Teams` and select a team, or create a :doc:`new one <getting_started>`.
+Configuration --> Helpdesk Teams` and select a team, or create a :doc:`new one <../../helpdesk>`.
 
 When a team has been selected or created, Odoo displays that team's detail form.
 
@@ -192,7 +192,7 @@ Enable forums on a Helpdesk team
 
 To enable :guilabel:`Community Forums` on a *Helpdesk* team, start by navigating to
 :menuselection:`Helpdesk app --> Configuration --> Helpdesk Teams` and select a team, or create a
-:doc:`new one <getting_started>`.
+:doc:`new one <../../helpdesk>`.
 
 Selecting or creating a team reveals that team's detail form. Scroll down to the :guilabel:`Help
 Center` section of features, and enable :guilabel:`Community Forum`, by checking the box beside it.
@@ -244,7 +244,7 @@ Enable eLearning courses on a Helpdesk team
 -------------------------------------------
 
 To enable *eLearning* courses on a *Helpdesk* team, go to :menuselection:`Helpdesk app -->
-Configuration --> Helpdesk Teams` and select a team, or create a :doc:`new one <getting_started>`.
+Configuration --> Helpdesk Teams` and select a team, or create a :doc:`new one <../../helpdesk>`.
 
 On the team's settings page, scroll to the :guilabel:`Help Center` section, and check the box next
 to :guilabel:`eLearning`. A new field appears below, labeled :guilabel:`Courses`.

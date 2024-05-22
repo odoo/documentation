@@ -26,7 +26,7 @@ Enable track and bill time on a helpdesk team
 
 To view and enable the *Track & Bill Time* features on a *Helpdesk* team, first navigate to
 :menuselection:`Helpdesk app --> Configuration --> Helpdesk Teams`. Then, select a team from the
-list, or create a :doc:`new one <../overview/getting_started>`. This reveals a team's settings page.
+list, or create a :doc:`new one <../../helpdesk>`. This reveals a team's settings page.
 
 On the team's settings page, scroll to the :guilabel:`Track & Bill Time` section. Check the boxes
 labeled :guilabel:`Timesheets` and :guilabel:`Time Billing`.
