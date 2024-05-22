@@ -362,6 +362,16 @@ Send GSTR-1
 
 #. The user can verify the :ref:`GSTR-1 <india/gstr-1_report>` report before uploading it to the
    **GST portal** by clicking :guilabel:`GSTR-1 Report`;
+
+#. The user can also get details to be submitted in **GSTR-1** in **Spreadsheet view** by clicking
+   on :guilabel:`Generate`;
+
+   .. image:: india/gst-gstr-1-generate.png
+      :alt: GSTR-1 generate
+
+   .. image:: india/gst-gstr-1-spreadsheet-view.png
+      :alt: GSTR-1 Spreadsheet View
+
 #. If the **GSTR-1** report is correct, then click :guilabel:`Push to GSTN` to send it to the **GST
    portal**. The status of the :guilabel:`GSTR-1` report changes to :guilabel:`Sending`;
 
