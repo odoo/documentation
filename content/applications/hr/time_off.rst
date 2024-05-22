@@ -680,6 +680,8 @@ To modify the request, make any desired changes to the form. All changes are aut
 It is also possible to approve or refuse the request from this form. Click the :guilabel:`Approve`
 button to approve, or the :guilabel:`Refuse` button to refuse the request.
 
+.. _time_off/manage-allocations:
+
 Manage allocations
 ------------------
 
