@@ -1223,6 +1223,13 @@ Many2many Tags (`many2many_tags`)
 
             <field name="category_id" widget="many2many_tags" options="{'color_field': 'color', 'no_edit_color': true}" />
 
+    - `edit_tags`: set to `true` to add the possibility to update tag related record by clicking on the tags.
+      (default: `false`).
+
+        .. code-block:: xml
+
+            <field name="category_id" widget="many2many_tags" options="{'edit_tags': true}" />
+
 Many2many Tags - Form View (`form.many2many_tags`)
     Specialization of `many2many_tags` widget for form views. It has some extra
     code to allow editing the color of a tag.
