@@ -1339,6 +1339,9 @@ msgid ""
 "servers easier, as you can clone the repositories added as submodules at the"
 " same time you clone your own repository."
 msgstr ""
+"실제로 사용자 지정 모듈은 다른 저장소의 모듈에 의존할 수 있습니다. Odoo의 경우에는 이 기능을 사용하면 다른 Git 저장소의 모듈을"
+" 저장소 브랜치에 추가할 수 있습니다. 하위 모듈을 통해 브랜치에 이와 같은 종속성을 추가하면 자체 저장소를 복제하는 동시에 하위 모듈로"
+" 추가된 저장소를 복제할 수 있으므로 코드 및 서버 배포를 더 쉽게 할 수 있습니다."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:19
 msgid ""
@@ -1488,6 +1491,9 @@ msgid ""
 ":code:`.`. The platform will ignore this folder and you can hand pick your "
 "modules by creating symlinks to them from another folder."
 msgstr ""
+"Zebra 프린터는 인쇄 시 ZPL (Zebra 프로그래밍 언어) 코드 형식에 매우 민감합니다. 프린터에서 아무 것도 인쇄되지 않거나 빈"
+" 라벨이 인쇄되는 경우 :ref:`개발자 모드 ` 에서 :menuselection:`설정 --> 기술 --> 사용자 인터페이스 --> "
+"보기` 에 액세스하여 프린터로 전송되는 보고서 형식을 변경한 후 해당 템플릿을 찾으세요."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:5
 msgid "Get started"
@@ -1545,6 +1551,9 @@ msgid ""
 "then take care to perform the update during which the instance will be held "
 "temporarily unavailable for maintenance reason."
 msgstr ""
+"양식 보기를 변경하는 것과 같이 모듈을 업데이트해야 하는 변경 사항이 자동으로 수행되도록 하려면 해당 모듈의 매니페스트 "
+"(*__manifest__.py*)에서 모듈의 버전 번호를 늘리도록 합니다. 그러면 플랫폼이 유지 관리상의 이유로 인스턴스를 일시적으로 "
+"사용할 수 없게 만들어 그 동안 업데이트를 수행합니다."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:43
 msgid ""
@@ -1561,6 +1570,8 @@ msgid ""
 "before the update. You still have access to the log of the failed update, so"
 " you can troubleshoot it."
 msgstr ""
+"커밋 변경 사항때문에 서버가 다시 시작되지 않거나 모듈 업데이트에 실패하는 경우, 서버는 자동으로 이전에 성공한 코드 수정 버전으로 "
+"되돌아가고 데이터베이스는 업데이트 전으로 롤백됩니다. 업데이트에 실패한 로그에도 계속 액세스할 수 있으므로 문제를 해결할 수 있습니다."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:53
 msgid ""
@@ -2279,6 +2290,12 @@ msgid ""
 "*www.mycompany.com*. Most domain managers have the feature to configure this"
 " redirection. This is commonly called a web redirection."
 msgstr ""
+"또한 데이터베이스에서 *mycompany.com* 와 *www.mycompany.com* 을 모두 작동하게 하려면 전자가 후자 쪽으로 "
+"리디렉션되도록 설정하여 주된 URL을 하나로 만드는 내용을 `SEO 모범 사례 "
+"<https://support.google.com/webmasters/answer/7451184?hl=en>`_ (*문서에 도달하기 위해"
+" URL을 한 버전으로 제공하기* 참조) 에서도 확인할 수 있습니다. 따라서 *mycompany.com*이 "
+"*www.mycompany.com*으로 리디렉션되도록 설정하기만 하면 됩니다. 대부분의 도메인 관리자에게 이와 같은 리디렉션을 환경 "
+"설정하는 기능이 있습니다. 일반적으로 웹 리디렉션이라고 지칭합니다."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:391
 msgid "**HTTPS/SSL**"
@@ -2699,6 +2716,9 @@ msgid ""
 "link is not available when there is already a build in progress for the "
 "branch."
 msgstr ""
+"각 브랜치에 대해 *연결* 링크를 사용하여 데이터베이스에 있는 마지막 빌드에 액세스하고 *Github* 링크를 사용하여 브랜치 코드로 "
+"이동할 수 있습니다. 프로덕션 브랜치가 아닌 다른 브랜치의 경우 *다시 빌드* 링크를 사용하여 브랜치의 최신 버전이 적용된 새 빌드를 "
+"생성할 수 있습니다. 브랜치에 대해 이미 빌드가 진행 중인 경우에는 마지막 링크는 사용할 수 없습니다."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:110
 msgid ""
@@ -3563,6 +3583,9 @@ msgid ""
 "field will be directly available. Otherwise you can manually update the "
 "module within the apps list."
 msgstr ""
+"변경 사항을 테스트한 후에는 브랜치를 Odoo.sh 인터페이스의 프로덕션 브랜치로 끌어서 놓아 프로덕션 브랜치의 변경 사항을 병합할 수 "
+"있습니다. 매니페스트에서 모듈 버전을 늘리면 플랫폼이 자동으로 모듈 업데이트를 하여 새 필드를 직접 사용할 수 있습니다. 그렇지 않으면 "
+"앱 목록 내에서 모듈을 수동으로 업데이트할 수 있습니다."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:426
 msgid "Use an external Python library"
@@ -3860,6 +3883,9 @@ msgid ""
 " same revision as the new build that was created, but always make sure to be"
 " in an editor of a build using the latest revision of your branch."
 msgstr ""
+"|MO| 내의 특정 작업지시서에 직접 액세스하는 경우 *작업 현장*은 작업지시서대로 수행되도록 설정된 작업장의 페이지로 기본 설정됩니다."
+" 페이지에는 |MO| 번호, 생산할 제품 및 단위 수, 작업 주문을 완료하는 데 필요한 단계가 나타나 있는 작업지시서 카드가 표시됩니다."
+" "
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:148
 msgid "Consoles"
@@ -4424,6 +4450,9 @@ msgid ""
 "upsell quotation by clicking the banner to update the subscription or `send "
 "a support ticket <https://www.odoo.com/help>`_ to resolve the issue."
 msgstr ""
+"월간 구독 요금제를 사용 중인 경우 사용자 추가 내역을 반영하도록 데이터베이스가 자동으로 업데이트됩니다. 연간 또는 다년 요금제를 "
+"사용하는 경우 데이터베이스에 만료 배너가 표시됩니다. 배너를 클릭하여 상향 판매 견적서를 생성하거나 `고객 지원 상담 "
+"<https://www.odoo.com/help>`_ 을 통해 문제를 해결할 수 있습니다."
 
 #: ../../content/administration/on_premise.rst:94
 msgid ""
@@ -5397,6 +5426,9 @@ msgid ""
 " allowing only trusted IPs in the firewall, and/or running a brute-force "
 "detection system such as `fail2ban` or equivalent."
 msgstr ""
+"서버에 대한 원격 SSH 액세스를 허용해야 하는 경우 '루트'뿐만 아니라 **모든** 계정에 강력한 비밀번호를 설정해야 합니다. 비밀번호"
+" 기반 인증은 전부 비활성화하고 공개 키 인증만 허용하는 것이 좋습니다. 또한 VPN을 통한 액세스를 제한하고 방화벽에서 신뢰할 수 있는"
+" IP만 허용하거나 'fail2ban' 또는 이에 상응하는 무차별 탐지 시스템 실행하는 것도 고려하도록 합니다."
 
 #: ../../content/administration/on_premise/deploy.rst:612
 msgid ""
@@ -7291,6 +7323,10 @@ msgid ""
 "the upgrade process can be found in your newly upgraded staging build by "
 "going to :file:`~/logs/upgrade.log`."
 msgstr ""
+"업그레이드 플랫폼에서 백업 업그레이드를 완료하고 브랜치에 업로드하면 **특수 모드**로 전환되며, 이는 브랜치에서 **커밋 푸시** 가 "
+"될 때마다 업그레이드된 백업에 대한 **복원 작업** 을 수행하며 **모든 사용자 지정 모듈 업데이트** 를 진행합니다. 이를 통해 "
+"업그레이드된 데이터베이스의 원본 복사본에서 사용자 지정 모듈을 테스트할 수 있습니다. 업그레이드 프로세스의 로그 파일은 새로 업그레이드된"
+" 스테이징 빌드 의 :file:`~/logs/upgrade.log` 에서 확인할 수 있습니다."
 
 #: ../../content/administration/upgrade.rst:129
 msgid ""
@@ -7300,6 +7336,9 @@ msgid ""
 "upgraded database is built as soon as it is transferred from the upgrade "
 "platform, and the upgrade mode is exited."
 msgstr ""
+"사용자 지정 모듈이 설치된 데이터베이스에서는 업그레이드를 하기 전에 반드시 Odoo 대상 버전의 해당 소스 코드가 최신 상태여야 합니다."
+" 그렇지 않은 경우 \"커밋 시 업데이트\" 모드를 건너뛰고, 업그레이드 플랫폼에서 전송되는 즉시 데이터베이스 업그레이드가 진행되며, "
+"업그레이드 모드는 종료됩니다."
 
 #: ../../content/administration/upgrade.rst:134
 msgid ""
@@ -7560,6 +7599,9 @@ msgid ""
 "report any problem encountered during the testing to fix it before upgrading"
 " your production database."
 msgstr ""
+"업그레이드된 테스트 데이터베이스를 테스트하는 동안 문제가 발생하는 경우에는 '향후 업그레이드와 관련된 문제에 대한 상담 요청 (업그레이드"
+" 테스트 중) <https://odoo.com/help?stage=migration>`_ 을 통해 Odoo에  지원 요청을 할 수 "
+"있습니다. 어떤 경우든 프로덕션 데이터베이스를 업그레이드하기 전에 테스트 중에 발생한 문제를 보고하여 문제를 해결하는 것이 중요합니다."
 
 #: ../../content/administration/upgrade.rst:252
 msgid ""
@@ -7614,6 +7656,10 @@ msgid ""
 "for an issue related to my future upgrade (I am testing an upgrade) "
 "<https://odoo.com/help?stage=migration>`_."
 msgstr ""
+":ref:`테스트 <upgrade/test_your_db>` 를 완료하여 업그레이드된 데이터베이스를 문제 없이 기본 데이터베이스로 사용할"
+" 수 있다고 확신할 경우 이제 가동 시작일을 계획할 차례입니다. '향후 업그레이드와 관련된 문제에 대한 상담 신청 제출 (업그레이드 "
+"테스트 중) <https://odoo.com/help?stage=migration>`_ 을 통해 Odoo의 업그레이드 지원 분석 담당자와"
+" 협력하여 계획을 수립할 수 있습니다."
 
 #: ../../content/administration/upgrade.rst:279
 msgid ""

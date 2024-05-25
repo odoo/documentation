@@ -3003,6 +3003,10 @@ msgid ""
 "external email server. Once all the information has been filled out, click "
 ":guilabel:`Test Connection`."
 msgstr ""
+"Odoo에서 시스템 관리자로 :menuselection:`설정 --> 일반 설정 --> 메일 및 채팅` 으로 이동하여 "
+":guilabel:`이메일 서버 사용자 지정` 옵션을 활성화합니다. 그런 다음 :guilabel:`저장` 을 클릭합니다. 다음으로, "
+":guilabel:`이메일 발신 서버` 를 클릭하고 :guilabel:`만들기` 를 클릭하면 Odoo에서 새로운 메일 발신 서버 기록을 "
+"생성합니다. 외부 이메일 서버의 SMTP 데이터를 참조하세요. 모든 정보를 입력한 후 :guilabel:`테스트 접속` 을 클릭합니다."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:68
 msgid ":doc:`google_oauth`"
@@ -3309,6 +3313,10 @@ msgid ""
 "not have another action attached to it like other aliases might, it is only "
 "used to collect replies."
 msgstr ""
+"Odoo에서 보낸 메시지에 대한 **응답 메시지** 인 경우에는 모델 별칭이 있으면 해당 별칭 또는 캐치올 별칭 "
+"(**catchall@**)을 통해 원본 메일 및 채팅 스레드 (및 전체 팔로워의 받은 편지함)로 라우팅됩니다. 모델에 사용자가 "
+"지정해놓은 계정 별칭이 없는 경우에는 캐치올 별칭 (`catchall@mycompany.odoo.com`)을 사용하여 회신합니다. 그러나"
+" 다른 계정 별칭과는 달리 캐치올 주소에는 다른 내용을 첨부할 수 없으며 응답 수집 목적으로만 사용할 수 있습니다."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:214
 msgid ""
@@ -3449,6 +3457,11 @@ msgid ""
 "a change is made then the system will not recognize the old alias, and the "
 "reply will not be received."
 msgstr ""
+"캐치올 및 바운스 별칭을 편집하려면 먼저 :ref:`개발자 모드 <developer-mode>` 를 활성화합니다. 그 다음 "
+":menuselection:`설정 --> 기술 --> 매개변수 --> 시스템 매개변수` 로 이동하여 별칭 "
+"(`mail.catchall.alias` 및 `mail.bounce.alias`)을 사용자 지정합니다. 이렇게 유형을 변경하려면 "
+"데이터베이스를 가동하기 전에 변경을 완료해야 합니다. 변경 후 고객이 응답을 보낼 경우 시스템에서는 이전 별칭을 인식하지 못하므로 응답이"
+" 수신되지 않습니다."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:270
 msgid ""
@@ -3487,11 +3500,11 @@ msgstr "다음과 같은 두 가지의 시스템 매개변수를 사용합니다
 
 #: ../../content/applications/general/email_communication/email_servers.rst:287
 msgid "`mail.gateway.loop.minutes` (120 minutes by default)"
-msgstr ""
+msgstr "`mail.gateway.loop.minutes` (기본값 120분)"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:288
 msgid "`mail.gateway.loop.threshold` (20 by default)"
-msgstr ""
+msgstr "`mail.gateway.loop.threshold` (기본값 20)"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:290
 msgid ""
@@ -3513,6 +3526,10 @@ msgid ""
 "the number of records this alias is allowed to create in the given period of"
 " time (value of `mail.gateway.loop.minutes`)."
 msgstr ""
+"Odoo 데이터베이스에 캐치올 이메일 주소 또는 별칭으로 이메일이 수신되면 Odoo는 시스템 매개변수 `mail.gateway.loop."
+" Minutes`에 정의되어 있는 지정 기간 동안 수신된 메일을 확인합니다. 수신된 이메일이 별칭으로 전송된 경우 Odoo는 "
+"`mail.gateway.loop.threshold` 시스템 매개변수를 참조하여 이 별칭이 주어진 기간 동안 생성할 수 있는 레코드 수 "
+"(`mail.incoming.limit.period` 값)로 값을 결정합니다. "
 
 #: ../../content/applications/general/email_communication/email_servers.rst:300
 msgid ""
@@ -3524,10 +3541,13 @@ msgid ""
 "specified time-frame, and will prevent a feedback loop from occurring if a "
 "duplicate email is detected."
 msgstr ""
+"또한, 캐치올 이메일 주소로 이메일을 수신할 경우, Odoo는 설정된 기간 동안 데이터베이스에 수신된 이메일을 참조합니다 (시스템 "
+"매개변수 `mail.incoming.limit.period` 값에 명시되어 있음). 그런 다음 Odoo는 수신된 이메일 중 지정된 기간 "
+"동안 수신 이메일과 일치하는 이메일이 있는지 확인하여 중복 이메일이 감지되면 순환 참조 오류가 발생하지 않도록 합니다. "
 
 #: ../../content/applications/general/email_communication/email_servers.rst:307
 msgid "Allow alias domain system parameter"
-msgstr ""
+msgstr "별칭 도메인 시스템 매개변수 허용하기"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:309
 msgid ""
@@ -3536,6 +3556,9 @@ msgid ""
 "the :ref:`developer mode <developer-mode>`. Then, go to "
 ":menuselection:`Settings app --> Technical --> Email section --> Aliases`."
 msgstr ""
+"Odoo 데이터베이스에 수신 별칭을 설정하여 이메일을 수신할 때 레코드를 생성합니다. Odoo 데이터베이스에 설정된 별칭을 보려면 먼저 "
+":ref:`개발자 모드 <developer-mode>`를 활성화하세요. 그런 다음 :menuselection:`설정 앱 --> 기술 "
+"--> 이메일 섹션 --> 별칭` 으로 이동합니다."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:313
 msgid ""
@@ -3545,6 +3568,9 @@ msgid ""
 "create a ticket, lead, opportunity, etc., eliminates false positives where "
 "email addresses with only the prefix alias (not the domain) are present."
 msgstr ""
+"시스템 매개변수인 `mail.catchall.domain.allowed`는 별칭 도메인으로 허용된 값으로, 쉼표로 구분되어 주소가 정확한"
+" 이메일을 별칭으로 필터합니다. 도메인 설정으로 별칭에서 상담, 영업제안, 영업기회 등을 생성하도록 설정할 경우, (도메인이 아닌) 별칭"
+" 접두사만 이메일 주소에 있는 경우에 대한 위양성 (false positive) 위험을 제거할 수 있습니다."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:318
 msgid ""
@@ -3553,6 +3579,8 @@ msgid ""
 "incoming email address. This is true in the sender, recipient, and :abbr:`CC"
 " (Carbon Copy)` email addresses of an incoming email."
 msgstr ""
+"어떤 경우에는 수신된 이메일 주소에 있는 별칭 접두사가 동일하고 도메인이 다른 경우에 Odoo데이터베이스에서 일치시키는 경우도 있습니다."
+" 수신 이메일의 보낸 사람, 받는 사람 및 이메일 :abbr:`CC (수신 참조)` 가 참인 경우입니다."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:323
 msgid ""
@@ -3562,6 +3590,9 @@ msgid ""
 "email as the full `commercial` alias (with a different domain), and "
 "therefore, creates a ticket/lead/opportunity/etc."
 msgstr ""
+"Odoo에서 보낸 사람, 받는 사람 또는 이메일 :abbr:`CC (수신 참조)` 에 별칭 접두사가 `commercial` 인 이메일을 "
+"수신하는 경우 (예: commercial@gmail.com, commercial@odoo.net), 데이터베이스에서 이메일에 대해 전체 "
+"별칭 `commercial` 을 가진 것으로 잘못 처리하여 (다른 도메인 포함) 상담, 영업제안, 영업기회 등을 생성하게 됩니다."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:328
 msgid ""
@@ -3571,6 +3602,10 @@ msgid ""
 " Parameters`. Click :guilabel:`Create`. Then, type in "
 "`mail.catchall.domain.allowed` for the :guilabel:`Key` field."
 msgstr ""
+"`mail.catchall.domain.allowed` 시스템 매개변수를 추가하려면 먼저 :ref:`개발자 모드 <developer-"
+"mode>` 를 활성화합니다. 그런 다음 :menuselection:`설정 앱 --> 기술 --> 매개변수 섹션 --> 시스템 매개변수`"
+" 로 이동합니다. :guilabel:`만들기` 를 클릭합니다. 그 다음 :guilabel:`키` 필드에 "
+"`mail.catchall.domain.allowed` 를 입력합니다."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:333
 msgid ""
@@ -3578,12 +3613,14 @@ msgid ""
 "comma(s) (if plural domains). Manually :guilabel:`Save`, and the system "
 "parameter takes immediate effect."
 msgstr ""
+"다음으로 :guilabel:`값` 필드에 도메인을 쉼표로 구분하여 추가합니다 (도메인이 여러 개 있는 경우). 수동으로 "
+":guilabel:`저장` 하면 시스템 매개변수가 즉시 적용됩니다."
 
 #: ../../content/applications/general/email_communication/email_servers.rst-1
 msgid ""
 "mail.catchall.domain.allowed system parameter set with key and value "
 "highlighted."
-msgstr ""
+msgstr "키와 값이 강조 표시되어 있는 mail.catchall.domain.allowed 시스템 매개 변수 설정"
 
 #: ../../content/applications/general/email_communication/faq.rst:3
 msgid "Email issues"
@@ -4292,6 +4329,11 @@ msgid ""
 "into the :guilabel:`Client ID` and :guilabel:`Client Secret` fields and "
 ":guilabel:`Save` the settings."
 msgstr ""
+"다음으로, :menuselection:`설정 --> 일반 설정` 으로 이동하여 :guilabel:`메일 및 채팅` 섹션에서 "
+":guilabel:`사용자 지정 이메일 서버` 또는 :guilabel:`외부 이메일 서버` 확인란이 선택되어 있는지 확인합니다. "
+"확인했습니다. 그러면 :guilabel:`Gmail 자격 증명` 또는 :guilabel:`Gmail 서버 사용` 에 대한 새로운 선택 "
+"항목이 입력됩니다. 그런 다음 각 값을 :guilabel:`클라이언트 ID` 및 :guilabel:`클라이언트 비밀` 에 복사하여 "
+"붙여넣고 설정을 :guilabel:`저장`합니다."
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:129
 msgid ""
@@ -4489,6 +4531,11 @@ msgid ""
 "to configure Mailjet in Odoo, which is covered in the :ref:`last section "
 "<maintain/mailjet-api/odoo-setup>`."
 msgstr ""
+"그런 다음 :abbr:`SMTP (단순 메일 전송 프로토콜)` 구성 설정을 메모장에 복사합니다. 해당 설정은 :guilabel:`환경 "
+"설정 (SMTP 전용)` 섹션에서 찾을 수 있습니다. 구성 설정 내용에는 서버 주소, 보안 옵션 (필요한 경우 :abbr:`SSL(보안 "
+"소켓 계층)`/:abbr:`TLS(전송 계층 보안)` 사용) 및 포트 번호가 포함된 :abbr:`SMTP(단순 메일 전송 프로토콜)` 이"
+" 있습니다. 이 설정은 Odoo에서 Mailjet을 구성하는 데 필요하며, :ref:`마지막 섹션 <maintain/mailjet-"
+"api/odoo-setup>`에서 다루고 있습니다."
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:32
 msgid ""
@@ -4534,6 +4581,10 @@ msgid ""
 " a Sender Domain or Address` link under the :guilabel:`Senders & Domains` "
 "section."
 msgstr ""
+"다음 단계는 Mailjet 계정 설정에 발신자 주소나 도메인을 추가하여 Mailjet 서버를 통해 이메일을 전송할 수 있도록 이메일 "
+"주소나 도메인을 승인받는 것입니다. 먼저 `Mailjet 계정 정보 <https://app.mailjet.com/account>`_ "
+"페이지로 이동합니다. 그 다음, :guilabel:`발신자 및 도메인` 섹션 아래에 있는 :guilabel:`발신자 도메인 또는 주소 "
+"추가` 링크를 클릭합니다."
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst-1
 msgid "Add a sender domain or address in the Mailjet interface."
@@ -4632,6 +4683,10 @@ msgid ""
 "Sender Domain or Address` link under the :guilabel:`Senders & Domains` "
 "section. Then, click on :guilabel:`Add domain` to add the custom domain."
 msgstr ""
+"Mailjet 계정에 전체 도메인을 추가하면 해당 도메인과 관련된 발신자 주소는 Mailjet 서버를 사용하여 이메일을 전송할 때 모두 "
+"자동으로 확인됩니다. 먼저 `Mailjet 계정 정보 <https://app.mailjet.com/account>`_ 페이지로 "
+"이동합니다. 그런 다음 :guilabel:`발신자 및 도메인` 섹션 아래에 있는 :guilabel:`발신자 도메인 또는 주소 추가` "
+"링크를 클릭합니다. 그런 다음 :guilabel:`도메인 추가` 를 클릭하여 사용자 지정 도메인을 추가합니다."
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:116
 msgid ""
@@ -4671,6 +4726,10 @@ msgid ""
 "information consists of the :guilabel:`Host` and :guilabel:`Value`. Paste "
 "these into the corresponding fields in the TXT record."
 msgstr ""
+"Mailjet 계정에서 TXT 레코드 정보를 가져온 후 도메인의 :abbr:`DNS (도메인 주소 시스템)` 에 TXT 레코드를 "
+"추가합니다. 이 프로세스는:abbr:`DNS (도메인 주소 시스템)` 공급자에 따라 다릅니다. 구체적인 설정 프로세스에 대해서는 "
+"공급자에게 문의합니다. TXT 레코드 정보는 :guilabel:`호스트` 및 :guilabel:`값` 으로 구성됩니다. 이 내용을 TXT"
+" 레코드의 해당 에 붙여넣습니다."
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:141
 msgid "Return to Mailjet account information"
@@ -6564,6 +6623,9 @@ msgid ""
 "can reach the database and that the server does not use a multi-database "
 "environment."
 msgstr ""
+":abbr:`IoT (사물 인터넷)` 박스가 데이터베이스에 연결되면 재시작될 수 있습니다. 이런 경우 데이터베이스에 나타날 때까지 최대 "
+"5분까지 소요될 수 있습니다. :abbr:`IoT (사물 인터넷)` 박스가 5분 후에도 계속 표시되지 않는 경우에는 :abbr:`IoT "
+"(사물 인터넷)` 박스가 데이터베이스에 연결되어 있는지 확인하고 서버가 다중 데이터베이스 환경에서 운영되고 있지 않는지 확인하세요. "
 
 #: ../../content/applications/general/iot/config/troubleshooting.rst:37
 msgid ""
@@ -7420,6 +7482,9 @@ msgid ""
 " Interface --> Views` in :ref:`developer mode <developer-mode>` and look for"
 " the corresponding template."
 msgstr ""
+"Zebra 프린터는 인쇄 시 ZPL (Zebra 프로그래밍 언어) 코드 형식에 매우 민감합니다. 프린터에서 아무 것도 인쇄되지 않거나 빈"
+" 라벨이 인쇄되는 경우 :ref:`개발자 모드 <developer-mode>` 에서 :menuselection:`설정 --> 기술 -->"
+" 사용자 인터페이스 --> 보기` 에 액세스하여 프린터로 전송되는 보고서 형식을 변경한 후 해당 템플릿을 찾으세요."
 
 #: ../../content/applications/general/iot/config/troubleshooting.rst:504
 msgid ""
@@ -7452,6 +7517,9 @@ msgid ""
 ":menuselection:`PoS app --> 3-Dot Menu on the PoS --> IoT Box section --> "
 "Edit`."
 msgstr ""
+":menuselection:`POS` 환경 설정에서 디바이스가 알맞게 선택되었는지 확인하고 모든 바코드 끝에 `엔터` 문자 (키코드 "
+"28)를 보내도록 바코드가 설정되어 있는지 확인합니다. 이렇게 하려면 :menuselection:`POS 앱 --> POS의 점 세 개 "
+"메뉴 --> IoT 박스 섹션 --> 편집` 으로 이동합니다."
 
 #: ../../content/applications/general/iot/config/troubleshooting.rst:526
 msgid "The barcode scanner is detected as a keyboard"
@@ -7488,6 +7556,9 @@ msgid ""
 "appropriate language of the barcode scanner on the *Barcode Scanner* form "
 "page."
 msgstr ""
+"바코드 스캐너와 페어링된 모바일 장치 또는 태블릿에서 :abbr:`IoT (사물 인터넷)` 박스를 통해 Odoo의 모바일 버전에 "
+"액세스하면 스캐너는 각 바코드 문자를 개별 스캔으로 처리할 수 있습니다. 이 경우 *바코드 스캐너* 양식 페이지에서 *키보드 레이아웃* "
+"옵션을 **반드시** 바코드 스캐너에 알맞은 언어로 입력해야 합니다."
 
 #: ../../content/applications/general/iot/config/troubleshooting.rst:548
 msgid ""
@@ -7656,13 +7727,14 @@ msgstr ""
 
 #: ../../content/applications/general/iot/config/updating_iot.rst:17
 msgid "Flashing the SD card on IoT box"
-msgstr ""
+msgstr "IoT 박스에서 SD 카드 플래시하기"
 
 #: ../../content/applications/general/iot/config/updating_iot.rst:20
 msgid ""
 "This update does **not** apply to the Windows :abbr:`IoT (Internet of "
 "Things)` box (Odoo 16 and higher)."
 msgstr ""
+"이 업데이트 내용은 Windows :abbr:`IoT (사물 인터넷)` 박스 (Odoo 16 이상)에는 적용되지 **않습니다**."
 
 #: ../../content/applications/general/iot/config/updating_iot.rst:23
 msgid ""
@@ -7670,6 +7742,8 @@ msgid ""
 " previous version of the Odoo Windows program, and then reinstall it using "
 "the most up-to-date installation package."
 msgstr ""
+"Windows :abbr:`IoT (사물 인터넷)`를 업데이트하려면 먼저 이전 버전의 Odoo Windows 프로그램을 삭제한 후 최신 "
+"설치 패키지를 사용하여 다시 설치하세요."
 
 #: ../../content/applications/general/iot/config/updating_iot.rst:26
 msgid ""
@@ -7677,6 +7751,8 @@ msgid ""
 "package for Enterprise or Community - Windows edition, at `Odoo's download "
 "page <https://odoo.com/download>`_."
 msgstr ""
+"설치를 시작하려면 'Odoo 다운로드 페이지 <https://odoo.com/download>`_ 에서 엔터프라이즈 또는 커뮤니티용 "
+"Windows Odoo 16 (또는 이상) 설치 패키지로 이동하세요."
 
 #: ../../content/applications/general/iot/config/updating_iot.rst:30
 msgid ""
@@ -7688,18 +7764,24 @@ msgid ""
 " update, or an update from the :abbr:`IoT (Internet of Things)` box home "
 "page, does not resolve issues."
 msgstr ""
+"경우에 따라서는 Odoo의 최신 :abbr:`IoT (사물 인터넷)` 이미지 업데이트를 활용하기 위해 :abbr:`IoT (사물 "
+"인터넷)` 박스에 있는 마이크로 SD 카드를 *Etcher* 소프트웨어로 다시 플래시해야 합니다. 즉 Odoo :abbr:`IoT (사물"
+" 인터넷)` 박스 소프트웨어를 새로운 :abbr:`IoT (사물 인터넷)` 박스의 인스턴스 또는 핸들러 업데이트를 할 때 업데이트하거나 "
+"또는 문제가 해결되지 않을 경우 :abbr:`IoT(사물 인터넷)` 박스 홈페이지에서 업데이트해야 할 수 있습니다."
 
 #: ../../content/applications/general/iot/config/updating_iot.rst:38
 msgid ""
 "It is often necessary to re-flash the :abbr:`IoT (Internet of Things)` box's"
 " image after upgrading the Odoo database to a new version."
 msgstr ""
+"Odoo 데이터베이스를 새 버전으로 업그레이드한 후에는 :abbr:`IoT (사물 인터넷)` 박스 이미지를 다시 플래시해야 하는 경우가 "
+"종종 있습니다."
 
 #: ../../content/applications/general/iot/config/updating_iot.rst:40
 msgid ""
 "A computer with a micro SD card reader/adapter is **required** to re-flash "
 "the micro SD card."
-msgstr ""
+msgstr "마이크로 SD 카드를 다시 플래시하려면 마이크로 SD 카드 리더나 어댑터가 있는 컴퓨터가 **반드시** 있어야 합니다."
 
 #: ../../content/applications/general/iot/config/updating_iot.rst:42
 msgid ""
@@ -7807,6 +7889,11 @@ msgid ""
 "this file, or it is always available at the `Odoo Download "
 "<https://odoo.com/download/>`_ page."
 msgstr ""
+":guilabel:`Odoo 야간 빌드` 페이지에서 :menuselection:`빌드 (안정화 버전) --> windows/` 로 "
+"이동하여 :file:`odoo_(version).latest.exe` 파일 옆의 날짜를 확인합니다. ; 여기서 *(버전)*은 Odoo "
+"버전 (예: 16.0, 17.0)과 같습니다. 최신 버전인 Windows 가상 :abbr:`IoT (사물 인터넷)` 박스를 사용하려면 이"
+" 파일을 선택하여 다운로드하거나 `Odoo 다운로드 <https://odoo.com/download/>`_ 페이지에서 언제든 사용할 수 "
+"있습니다."
 
 #: ../../content/applications/general/iot/config/updating_iot.rst:106
 msgid ""
@@ -7948,6 +8035,9 @@ msgid ""
 "ensure the :abbr:`IoT (Internet of Things)` system, and its processes, stay "
 "up-to-date."
 msgstr ""
+"백그라운드에서 :abbr:`IoT (사물 인터넷)` 박스는 Odoo 코드 버전을 사용하여 Odoo 데이터베이스를 실행하고 연결합니다. 이"
+" 코드를 업데이트해야 :abbr:`IoT (사물 인터넷)` 박스가 효과적으로 작동할 수 있습니다. :abbr:`IoT (사물 인터넷)` "
+"시스템과 해당 프로세스를 최신 상태로 유지하려면 이 작업을 정기적으로 수행해야 합니다."
 
 #: ../../content/applications/general/iot/config/updating_iot.rst:179
 msgid ""
@@ -8006,6 +8096,10 @@ msgid ""
 ":menuselection:`IoT app --> IoT Boxes`, and clicking on the :guilabel:`IP "
 "address` of the :abbr:`IoT (Internet of Things)` box."
 msgstr ""
+"Windows :abbr:`IoT (사물 인터넷)` (Odoo 16 이상) 및 물리적인 :abbr:`IoT (사물 인터넷)` 박스 모두 "
+"이 프로세스를  :abbr:`IoT (사물 인터넷)` 박스 홈페이지에서.직접 수행할 수 있습니다. :menuselection:`IoT 앱"
+" --> IoT 박스` 로 가서 :abbr:`IoT (사물 인터넷)` 박스 홈페이지로 이동한 후 :abbr:`IoT (사물 인터넷)` "
+"박스에 있는 :guilabel:`IP 주소`를 클릭합니다."
 
 #: ../../content/applications/general/iot/config/updating_iot.rst:214
 msgid ""
@@ -8032,6 +8126,10 @@ msgid ""
 " reached by going to :menuselection:`IoT App --> Select the IoT box --> "
 "Automatic drivers update`."
 msgstr ""
+":abbr:`IoT (사물 인터넷)` 박스가 다시 시작될 때마다 핸들러 업데이트도 자동으로 수행됩니다. 이 프로세스가 유일하게 적용되지 "
+"않는 예외는 Odoo 서버의 :abbr:`IoT (사물 인터넷)` 박스의 양식 보기에서 *자동 드라이버 업데이트* 선택이 취소된 "
+"경우입니다. 이 설정은 :menuselection:`IoT 앱 --> IoT 상자 선택 --> 자동 드라이버 업데이트` 로 이동하여 "
+"확인할 수 있습니다."
 
 #: ../../content/applications/general/iot/config/windows_iot.rst:3
 msgid "Connect Windows IoT Odoo"
@@ -8053,6 +8151,10 @@ msgid ""
 "should be noted that :abbr:`MRP (Material Requirement Planning)` devices are"
 " not compatible. *These include cameras or measurement tools.*"
 msgstr ""
+"Windows 가상 :abbr:`IoT (사물 인터넷)` 박스는 물리적 :abbr:`IoT (사물 인터넷)` 박스와 같은 방식으로 "
+"작동하며 동일한 대부분의 디바이스를 실행할 수 있습니다. 측량계나 프린터와 같은 모든 :abbr:`POS (Point of Sale)` "
+"디바이스가 이 기능과 함께 작동합니다. 결제 단말기도 작동하지만 :abbr:`MRP (자재 소요 계획)` 디바이스는 호환되지 않는다는 "
+"점에 주의합니다. *여기에는 카메라나 측정 도구가 포함됩니다.*"
 
 #: ../../content/applications/general/iot/config/windows_iot.rst:15
 msgid "Pre-requisites"
@@ -8316,6 +8418,10 @@ msgid ""
 "(Operating System)` or firewall program. Windows has their own firewall as "
 "do other virus protection programs."
 msgstr ""
+"방화벽으로 디바이스를 안전하게 보호합니다. 때로는 연결되어야 하는 경우에도 방화벽 때문에 차단이 되는 경우가 있습니다. 방화벽으로 인해 "
+"연결이 차단되어 Windows 가상 :abbr:`IoT (사물 인터넷)` 박스 소프트웨어가 :abbr:`LAN (로컬 영역 네트워크)` "
+"에 연결되지 않을 수 있습니다. :abbr:`OS (운영 체제)` 또는 방화벽 프로그램에서 예외 (네트워크 검색)를 적용하려면 현지 IT"
+" 지원 팀에 문의하세요. Windows에는 다른 바이러스 보안 프로그램과 마찬가지로 자체 방화벽이 있습니다."
 
 #: ../../content/applications/general/iot/config/windows_iot.rst:156
 msgid ""
@@ -8382,6 +8488,11 @@ msgid ""
 "while allowing the selected port to communicate. Click :guilabel:`Next` to "
 "continue."
 msgstr ""
+":menuselection:`작업` 페이지에서 :guilabel:`연결 허용` 을 선택한 후 :guilabel:`다음` 을 클릭합니다. "
+":menuselection:`규칙 환경 설정` 마법사 다음은 :guilabel:`프로필` 페이지가 있습니다. 이 페이지에서는 "
+"Windows 컴퓨터에서 작동 중인 네트워크에 적용되는 연결 유형을 선택합니다. 가장 좋은 방법은 :guilabel:`비공개` 전용 "
+"연결을 선택하는 것입니다. *비공개* 연결 방식으로 선택한 포트의 통신을 허용하면서 가장 안전하게 연결할 수 있습니다. 계속하려면 "
+":guilabel:`다음` 을 클릭합니다."
 
 #: ../../content/applications/general/iot/config/windows_iot.rst:194
 msgid ""
@@ -9123,6 +9234,9 @@ msgid ""
 ":guilabel:`IoT Triggers` tab, under the :guilabel:`Device` column, by "
 "selecting :guilabel:`Add a Line`."
 msgstr ""
+"프린터를 작업에 연결하려면 먼저 작업장에서 설정을 해야 합니다. 설정하려면 :menuselection:`앱 제조 --> 환경 설정 -->"
+" 작업장` 으로 이동합니다. 여기에서 프린터를 사용할 작업장을 선택합니다. 그 다음, :guilabel:`줄 추가` 를 선택하여 "
+":guilabel:`디바이스` 열 아래에 있는 :guilabel:`IoT 트리거` 탭에 장치를 추가합니다."
 
 #: ../../content/applications/general/iot/devices/printer.rst:82
 msgid ""
@@ -9556,6 +9670,9 @@ msgid ""
 "Alternatively, `send a support ticket <https://www.odoo.com/help>`_ to "
 "resolve the issue."
 msgstr ""
+"회사에서 월간 구독 요금제를 사용 중인 경우 사용자 추가 내역을 반영하도록 데이터베이스가 자동으로 업데이트됩니다. 회사가 연간 또는 다년"
+" 요금제를 사용하는 경우 데이터베이스에 만료 배너가 나타납니다. 배너를 클릭하여 구독을 업데이트하는 경우에는 상향 판매 견적서를 생성할 "
+"수 있습니다. 또는 `고객 지원 상담 <https://www.odoo.com/help>`_ 을 이용하여 문제를 해결할 수 있습니다."
 
 #: ../../content/applications/general/users.rst:55
 msgid "User type"
@@ -9673,6 +9790,10 @@ msgid ""
 "Alternatively, users can `send a support ticket "
 "<https://www.odoo.com/help>`_ to resolve the issue."
 msgstr ""
+"회사에서 월간 구독 요금제를 사용 중인 경우 사용자 추가 내역을 반영하도록 데이터베이스가 자동으로 업데이트됩니다. 회사가 연간 또는 다년"
+" 요금제를 사용하는 경우 데이터베이스에 만료 배너가 표시됩니다. 배너를 클릭하여 구독을 업데이트하는 경우에는 상향 판매 견적서를 생성할 "
+"수 있습니다. 또는 사용자가 `고객 지원 상담 <https://www.odoo.com/help>` 을 이용하여 문제를 해결할 수 "
+"있습니다."
 
 #: ../../content/applications/general/users.rst:122
 msgid ""
@@ -9794,6 +9915,10 @@ msgid ""
 ":guilabel:`Change Password` pop-up window that appears, and confirm the "
 "change by clicking :guilabel:`Change Password`."
 msgstr ""
+":menuselection:`설정 앱 --> 사용자 및 회사 --> 사용자` 로 이동하여 양식에 액세스할 사용자를 선택합니다. "
+":guilabel:`⚙️ 작업` 아이콘을 클릭하면 나타나는 드롭다운 메뉴에서 :guilabel:`비밀번호 변경` 을 선택합니다. 표시되는"
+" :guilabel:`비밀번호 변경` 팝업 창의 `새 비밀번호` 열에 새 비밀번호를 입력한 후 :guilabel:`비밀번호 변경` 을 "
+"클릭하여 변경 사항을 확인합니다."
 
 #: ../../content/applications/general/users.rst-1
 msgid "Change a user's password on Odoo."
@@ -10247,6 +10372,9 @@ msgid ""
 "column represents the technical name given to the model. For each model, "
 "enable the following options as appropriate:"
 msgstr ""
+":guilabel:`액세스 권한` 탭: 그룹에 부여된 액세스 권한 중 첫 번째 수준의 권한 (모델)이 표시됩니다. 이 그룹에 대한 액세스"
+" 권한을 연결하려면 :guilabel:`줄 추가` 를 클릭합니다. 이 탭에서 :guilabel:`모델` 열은 메뉴/모델의 일반명을 "
+"나타내고, :guilabel:`이름` 열은 모델에 지정된 기술명을 나타냅니다. 각 모델에 대해 다음 옵션을 알맞게 활성화합니다."
 
 #: ../../content/applications/general/users/access_rights.rst:114
 msgid ":guilabel:`Read`: users can see the object's existing values."
