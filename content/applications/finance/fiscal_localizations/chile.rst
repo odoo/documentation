@@ -617,7 +617,7 @@ Note` and select :guilabel:`Full Refund`, in this case the :abbr:`SII (Servicio 
 Internos)` reference code is automatically set to :guilabel:`Anula Documento de referencia`.
 
 .. image:: chile/credit-note-cancel-ref-doc.png
-   :alt: Credit note canceling the referenced document.
+   :alt: Credit note cancelling the referenced document.
    :align: center
 
 Correct referenced document
@@ -742,7 +742,7 @@ vendor.
    :align: center
 
 If you claim a vendor bill, the status changes from :guilabel:`Draft` to :guilabel:`Cancel`
-automatically. Considering this as best practice, all the claimed documents should be canceled as
+automatically. Considering this as best practice, all the claimed documents should be cancelled as
 they won't be valid for your accounting records.
 
 Electronic purchase invoice
@@ -1196,7 +1196,7 @@ on the client's original order.
    :alt: Selection of order for the refund process.
 
 When the return payment is validated, Odoo generates the necessary credit note, referencing the
-original receipt or invoice, partially or fully canceling the document.
+original receipt or invoice, partially or fully cancelling the document.
 
 .. seealso::
    `Smart tutorial - Electronic invoicing for point of sale

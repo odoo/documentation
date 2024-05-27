@@ -379,7 +379,7 @@ TD04 - Credit notes
 ~~~~~~~~~~~~~~~~~~~
 
 It is the standard scenario for all **credit notes** issued to **domestic** clients, when we need to
-formally acknowledge that the seller is reducing or canceling a previously issued invoice, for
+formally acknowledge that the seller is reducing or cancelling a previously issued invoice, for
 example, in case of overbilling, incorrect items, or overpayment. Just like invoices, they must be
 sent to the :abbr:`SdI (Sistema di Interscambio)`, their :guilabel:`Document Type` `TD04`
 

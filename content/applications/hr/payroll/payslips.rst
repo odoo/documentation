@@ -214,7 +214,7 @@ bank account, an error appears in a pop-up window, stating, *The employee bank a
 untrusted.* If this error appears, update the employee's bank account information on their
 :ref:`Employee Form <employees/private-info>`.
 
-If a payment needs to be canceled or refunded, click the corresponding :guilabel:`Cancel` or
+If a payment needs to be cancelled or refunded, click the corresponding :guilabel:`Cancel` or
 :guilabel:`Refund` button, located at the top-left of the screen.
 
 .. tip::

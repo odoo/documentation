@@ -32,7 +32,7 @@ If you selected :guilabel:`Pending` as **payment outcome**, you can change the s
 transaction straight from its form view. To access a transaction's form view, activate the
 :ref:`developer mode <developer-mode>`, and go to :menuselection:`Accounting / Website -->
 Configuration --> Payment Transactions`. Then, change the status of a transaction by clicking on the
-state bar (:guilabel:`Draft, Pending, Authorized, Confirmed, Canceled, Error`).
+state bar (:guilabel:`Draft, Pending, Authorized, Confirmed, Cancelled, Error`).
 
 .. image:: demo/demo-view-form.png
    :align: center

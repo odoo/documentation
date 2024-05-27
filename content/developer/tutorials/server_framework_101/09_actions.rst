@@ -1,6 +1,6 @@
-==================================
+=================================
 Chapter 9: Ready For Some Action?
-==================================
+=================================
 
 So far we have mostly built our module by declaring fields and views. We just introduced business
 logic in the :doc:`previous chapter <08_compute_onchange>` thanks to
@@ -30,7 +30,7 @@ Object Type
         :align: center
         :alt: Cancel and set to sold
 
-    A canceled property cannot be sold and a sold property cannot be canceled. For the sake of
+    A cancelled property cannot be sold and a sold property cannot be cancelled. For the sake of
     clarity, the ``state`` field has been added on the view.
 
     - You should be able to accept or refuse an offer:
@@ -99,8 +99,8 @@ and its
 
 .. exercise:: Cancel and set a property as sold.
 
-    - Add the buttons 'Cancel' and 'Sold' to the ``estate.property`` model. A canceled property
-      cannot be set as sold, and a sold property cannot be canceled.
+    - Add the buttons 'Cancel' and 'Sold' to the ``estate.property`` model. A cancelled property
+      cannot be set as sold, and a sold property cannot be cancelled.
 
       Refer to the first image of the **Goal** for the expected result.
 

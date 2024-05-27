@@ -251,17 +251,17 @@ Cancel (or keep) alternatives
 =============================
 
 Once the desired products have been chosen from the :guilabel:`Compare Order Lines` page, the
-remaining |RfQs|, from which no products were chosen, can be canceled.
+remaining |RfQs|, from which no products were chosen, can be cancelled.
 
 The cost in the :guilabel:`Total` column for each product that wasn't chosen is automatically set to
 `0`, indicated at the far-right of each corresponding row.
 
-Although they haven't been canceled yet, this indicates that each of those orders can be canceled
+Although they haven't been cancelled yet, this indicates that each of those orders can be cancelled
 without having an effect on the other live orders, once those orders have been confirmed.
 
 .. image:: calls_for_tenders/calls-for-tenders-zero-total.png
    :align: center
-   :alt: Canceled quotations in the Purchase app overview.
+   :alt: Cancelled quotations in the Purchase app overview.
 
 To confirm an |RfQ| for which products were selected, click into one, and click :guilabel:`Confirm
 Order`.
@@ -305,7 +305,7 @@ Alternatives` to cancel all other alternative |RfQs| linked with this order.
 Finally, click :guilabel:`Requests for Quotation` (in the breadcrumbs, at the top of the page) to
 navigate back to an overview of all |RfQs|.
 
-The canceled orders can be seen, greyed out and listed with a :guilabel:`Cancelled` status, under
+The cancelled orders can be seen, greyed out and listed with a :guilabel:`Cancelled` status, under
 the :guilabel:`Status` column at the far-right of their respective rows.
 
 Now that all product quantities have been ordered, the purchase process can be completed, and the

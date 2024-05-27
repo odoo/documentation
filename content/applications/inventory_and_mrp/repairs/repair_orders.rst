@@ -176,7 +176,7 @@ A new :guilabel:`Forecasted` column appears on the product lines under the :guil
 displaying the availability of all components needed for the repair.
 
 Once ready, click :guilabel:`Start Repair`. This moves the |RO| to the :guilabel:`Under Repair`
-stage (in the upper-right corner). If the |RO| should be canceled, click :guilabel:`Cancel Repair`.
+stage (in the upper-right corner). If the |RO| should be cancelled, click :guilabel:`Cancel Repair`.
 
 Once all products have been successfully repaired, the |RO| is completed. To register this in the
 database, click :guilabel:`End Repair`.

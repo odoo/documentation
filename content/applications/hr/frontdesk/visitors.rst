@@ -33,7 +33,7 @@ in:
 - :guilabel:`Duration`: the amount of time the guest has been checked in for.
 - :guilabel:`Station`: the location of where the guest checked in.
 - :guilabel:`Status`: the status of the guest. The options are :guilabel:`Checked-In`,
-  :guilabel:`Planned`, :guilabel:`Checked-Out`, or :guilabel:`Canceled`.
+  :guilabel:`Planned`, :guilabel:`Checked-Out`, or :guilabel:`Cancelled`.
 - :guilabel:`Email`\*: the guest's email address.
 
 \* These fields are not visible in the default :guilabel:`Visitor` list. These must be enabled

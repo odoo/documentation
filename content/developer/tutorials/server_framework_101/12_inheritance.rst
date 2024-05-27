@@ -17,7 +17,7 @@ Python Inheritance
 
     **Goal**: at the end of this section:
 
-    - It should not be possible to delete a property which is not new or canceled.
+    - It should not be possible to delete a property which is not new or cancelled.
 
     .. image:: 12_inheritance/unlink.gif
         :align: center
@@ -87,7 +87,7 @@ when you need to call the parent method with a modified recordset.
 
 .. exercise:: Add business logic to the CRUD methods.
 
-    - Prevent deletion of a property if its state is not 'New' or 'Canceled'
+    - Prevent deletion of a property if its state is not 'New' or 'Cancelled'
 
     Tip: create a new method with the :func:`~odoo.api.ondelete` decorator and remember that
     ``self`` can be a recordset with more than one record.

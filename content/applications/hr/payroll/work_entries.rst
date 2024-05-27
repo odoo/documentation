@@ -276,7 +276,7 @@ eliminates the need to redo work entries, cancel paychecks, and reissue paycheck
 The most common scenario when this situation occurs, is when payslips are processed a day or two
 before the pay period ends, and an employee is unexpectedly sick on one of the last days of the pay
 period. The employee puts in a time off request for a day that was already processed on a payslip as
-a regular work day. Instead of canceling the payslip, modifying the work entries, and reissuing the
+a regular work day. Instead of cancelling the payslip, modifying the work entries, and reissuing the
 paycheck, Odoo allows for those time off requests to be applied to the following pay period,
 instead.
 

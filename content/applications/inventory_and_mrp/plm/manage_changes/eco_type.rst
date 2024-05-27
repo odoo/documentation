@@ -66,7 +66,7 @@ the production |BOM| by enforcing at least one review of suggested changes befor
 a production |BOM|.
 
 For best practice, there should be at least one *verification* stage, which is a stage with a
-required approver, and one *closing* stage, which stores |ECOs| that have been either canceled or
+required approver, and one *closing* stage, which stores |ECOs| that have been either cancelled or
 approved for use as the next production |BOM|.
 
 Create stage

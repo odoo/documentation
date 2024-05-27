@@ -95,9 +95,9 @@ Selection Type` can be changed, as well. There are two options that can be activ
 selection:
 
 - :guilabel:`Select only one RfQ (exclusive)`: when a purchase order is confirmed, the remaining
-  purchase orders are canceled.
+  purchase orders are cancelled.
 - :guilabel:`Select multiple RfQ (non-exclusive)`: when a purchase order is confirmed, remaining
-  purchase orders are **not** canceled. Instead, multiple purchase orders are allowed.
+  purchase orders are **not** cancelled. Instead, multiple purchase orders are allowed.
 
 Under the :guilabel:`Data For New Quotations` section, the :guilabel:`Lines` and
 :guilabel:`Quantities` fields can be edited. Doing so sets how new quotations should be populated

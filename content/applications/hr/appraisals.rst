@@ -204,7 +204,7 @@ Each appraisal card displays the following information:
 - :guilabel:`Manager`: the employee's manager, indicated by the profile icon in the bottom-right
   corner of an appraisal card.
 - :guilabel:`Status banner`: the status of the appraisal. A banner appears if an appraisal is
-  marked as either :guilabel:`Canceled` or :guilabel:`Done`. If no banner is present, that means the
+  marked as either :guilabel:`Cancelled` or :guilabel:`Done`. If no banner is present, that means the
   appraisal has not happened, or has not been scheduled yet.
 
 To view the details of any appraisal, click on the card to open the appraisal form.
@@ -225,7 +225,7 @@ dashboard to load a blank appraisal form. Then, enter the following information 
   auto-populates after the employee is selected, if they have a manager set on their employee
   profile.
 - :guilabel:`Appraisal Date`: the current date is automatically entered in this field. This field is
-  automatically updated once the appraisal is completed or canceled, with the corresponding date of
+  automatically updated once the appraisal is completed or cancelled, with the corresponding date of
   completion or cancellation.
 - :guilabel:`Department`: select the employee's department from the drop-down menu. This field
   auto-populates after the employee is selected, if they have a department set on their employee

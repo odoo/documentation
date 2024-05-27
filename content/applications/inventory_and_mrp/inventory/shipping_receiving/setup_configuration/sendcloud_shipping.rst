@@ -168,11 +168,11 @@ After configuring and saving the form, follow these steps to load the shipping p
 .. tip::
    Sendcloud does not provide test keys when a company tests the sending of a package in Odoo. This
    means if a package is created, the configured Sendcloud account will be charged, unless the
-   associated package is canceled within 24 hours of creation.
+   associated package is cancelled within 24 hours of creation.
 
    Odoo has a built-in layer of protection against unwanted charges when using test environments.
    Within a test environment, if a shipping method is used to create labels, then those labels are
-   immediately canceled after the creation — this occurs automatically. The test and production
+   immediately cancelled after the creation — this occurs automatically. The test and production
    environment settings can be toggled back and forth from their respective smart buttons.
 
 .. _inventory/shipping_receiving/sendcloud-shipping-info:

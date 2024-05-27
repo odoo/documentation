@@ -102,17 +102,16 @@ The following codes are available when generating an e-Faktur.
 Correct an invoice that has been posted and downloaded: Replace Invoice feature
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Cancel the original wrong invoice in Odoo. For instance, we will change the Kode Transakski from 01
-   to 03 for the INV/2020/0001.
-#. Create a new invoice and set the canceled invoice in the *Replace Invoice* field. In this field,
+#. Cancel the original wrong invoice in Odoo. For instance, we will change the Kode Transakski from
+   01 to 03 for the INV/2020/0001.
+#. Create a new invoice and set the cancelled invoice in the *Replace Invoice* field. In this field,
    we can only select invoices in *Cancel* state from the same customer.
-#. As you validate, Odoo will automatically use the same e-Faktur serial number as the canceled and
+#. As you validate, Odoo will automatically use the same e-Faktur serial number as the cancelled and
    replaced invoice replacing the third digit of the original serial number with *1* (as requested
    to upload a replacement invoice in the e-Faktur app).
 
 .. image:: indonesia/indonesia-replace-invoice.png
    :align: center
-
 
 .. _localization_indonesia/reset_e-faktur:
 

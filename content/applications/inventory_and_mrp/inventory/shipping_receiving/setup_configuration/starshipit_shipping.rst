@@ -172,7 +172,7 @@ The chosen delivery service will populate in the :guilabel:`Service Name` field.
 
    Odoo has a built-in layer of protection against unwanted charges when using test environments.
    Within a test environment, if a shipping method is used to create labels, then those labels are
-   immediately canceled after creation — this occurs automatically. Please note that depending on
+   immediately cancelled after creation — this occurs automatically. Please note that depending on
    the shipping provider being used, the account might be charged for printing label, unless the
    order is cancelled manually on the couriers’s portal.
 

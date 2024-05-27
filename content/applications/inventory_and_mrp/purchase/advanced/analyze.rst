@@ -32,15 +32,15 @@ pre-configured filters are:
 
 #. All *Requests for Quotation*
 
-#. All *Purchase Orders*, except canceled ones
+#. All *Purchase Orders*, except cancelled ones
 
 #. *Confirmation Date Last Year* includes all orders that were confirmed the previous year,
-   canceled purchase orders included
+   cancelled purchase orders included
 
-#. *Order Date* includes all orders - request for quotations and purchases orders (canceled ones
+#. *Order Date* includes all orders - request for quotations and purchases orders (cancelled ones
    included) - depending on their date of creation
 
-#. *Confirmation Date* includes all confirmed orders, canceled ones included, depending on their
+#. *Confirmation Date* includes all confirmed orders, cancelled ones included, depending on their
    date of confirmation
 
 .. note::

@@ -6,7 +6,7 @@ In Odoo's *Lunch* application, it is required to have someone manage the orders,
 products. In addition, someone must be responsible for the orders, and notifying employees when
 their orders have arrived. This can be the same person.
 
-Orders can be :ref:`canceled <lunch/cancel>`, :ref:`sent to the vendor <lunch/send-orders>`,
+Orders can be :ref:`cancelled <lunch/cancel>`, :ref:`sent to the vendor <lunch/send-orders>`,
 :ref:`confirmed <lunch/confirm-orders>` upon arrival, and :ref:`employees can be notified
 <lunch/notify>`, either from the :ref:`Today's Orders <lunch/todays-orders>` dashboard, or the
 :ref:`Control Vendors <lunch/control_vendors>` dashboard.
@@ -58,14 +58,14 @@ Cancel orders
 
 All users can cancel an order, not just managers of the *Lunch* app.
 
-To cancel an order from a vendor, individual products **must** be canceled one at a time.
+To cancel an order from a vendor, individual products **must** be cancelled one at a time.
 
 On the :guilabel:`Today's Orders` dashboard, a :guilabel:`✖️ Cancel` button is shown at the
-far-right of each product line that can be canceled. Click the :guilabel:`✖️ Cancel` button to
+far-right of each product line that can be cancelled. Click the :guilabel:`✖️ Cancel` button to
 cancel the order for that individual product.
 
 .. note::
-   Only products with a red :guilabel:`Status` tag of :guilabel:`Ordered` can be canceled.
+   Only products with a red :guilabel:`Status` tag of :guilabel:`Ordered` can be cancelled.
 
 .. image:: management/cancel.png
    :align: center
@@ -171,7 +171,7 @@ The following information appears in the list:
 - :guilabel:`Company`: the company under which the order was placed. This only appears in a
   multi-company database.
 
-Orders can be :ref:`canceled <lunch/cancel>`, :ref:`sent to the vendor <lunch/send-orders>`,
+Orders can be :ref:`cancelled <lunch/cancel>`, :ref:`sent to the vendor <lunch/send-orders>`,
 :ref:`confirmed <lunch/confirm-orders>` upon arrival, and :ref:`employees can be notified
 <lunch/notify>` using the same method as on the :ref:`Today's Orders <lunch/todays-orders>`
 dashboard.
