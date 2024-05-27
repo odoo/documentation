@@ -467,11 +467,11 @@ there are two requirements for this:
 There are four different cancellation reasons. In Odoo, you can cancel invoices with the reasons *01
 Invoices sent with errors with a relation*, and *02 Invoices sent with errors without a relation*.
 
-The following sections break down the process of canceling invoices for each cancellation reason in
+The following sections break down the process of cancelling invoices for each cancellation reason in
 Odoo.
 
 .. important::
-   Odoo has certain limitations to canceling invoices in the |SAT|: The reasons 03 and 04
+   Odoo has certain limitations to cancelling invoices in the |SAT|: The reasons 03 and 04
    (*Operation did not take place* and *Nominative transactions related to a global invoice*,
    respectively) are not currently supported by Odoo. For this, you need to cancel the invoice
    directly in the |SAT|, and press :guilabel:`Retry` in the :guilabel:`SAT Status field`.
@@ -490,12 +490,12 @@ of the old invoice after the value. Finally, sign the new document.
 Next, navigate back to the old invoice, and notice the :guilabel:`Substituted By` field is now
 available. Click the :guilabel:`Request EDI Cancellation` button on the old invoice, and then click
 :guilabel:`Process Now` in the blue section that appears. The invoice status changes to
-:guilabel:`Canceled`, and a confirmation is logged in the chatter.
+:guilabel:`Cancelled`, and a confirmation is logged in the chatter.
 
-Now, the invoice should be canceled in the |SAT| as well. You can confirm this was done correctly,
+Now, the invoice should be cancelled in the |SAT| as well. You can confirm this was done correctly,
 by pressing :guilabel:`Retry` in the |SAT| status field.
 
-If the document was canceled more than 24 hours after its creation, you may need to ask the client
+If the document was cancelled more than 24 hours after its creation, you may need to ask the client
 to accept the cancellation in their “Buzón Tributario” directly from the `SAT website
 <https://www.sat.gob.mx/home>`_.
 

@@ -26,7 +26,7 @@ pop-up window. In the :guilabel:`Name:` field, assign a title to the new request
    :alt: New event creation pop-up window.
 
 Clicking :guilabel:`Create` on the pop-up window saves the new request with no additional details.
-If the request's creation should be canceled, click :guilabel:`Cancel`.
+If the request's creation should be cancelled, click :guilabel:`Cancel`.
 
 To add more details and schedule the request for a specific date and time, click :guilabel:`Edit`.
 

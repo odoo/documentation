@@ -758,9 +758,9 @@ Cancel an own check
 *******************
 
 To cancel an own check created in Odoo, navigate to :menuselection:`Accounting --> Vendors --> Own
-Checks` and select the check to be canceled, then click on the :guilabel:`Void Check` button. This
+Checks` and select the check to be cancelled, then click on the :guilabel:`Void Check` button. This
 will break the reconciliation with the vendor bills and the bank statements and leave the check in a
-**canceled** state.
+**cancelled** state.
 
 .. image:: argentina/empty-check-button.png
    :align: center

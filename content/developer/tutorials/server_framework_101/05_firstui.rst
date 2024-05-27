@@ -277,7 +277,7 @@ Note that the default ``active=False`` value was assigned to all existing record
 .. exercise:: Add state field.
 
     Add a ``state`` field to the ``estate.property`` model. Five values are possible: New,
-    Offer Received, Offer Accepted, Sold and Canceled. It must be required, should not be copied
+    Offer Received, Offer Accepted, Sold and Cancelled. It must be required, should not be copied
     and should have its default value set to 'New'.
 
     Make sure to use the correct type!

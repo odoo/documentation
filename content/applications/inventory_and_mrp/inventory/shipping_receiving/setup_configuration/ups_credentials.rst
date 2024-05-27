@@ -123,7 +123,7 @@ icon to add the following products to the app:
   services.
 - :guilabel:`Paperless Documents`: Enables the upload of document images to link to shipments.
 - :guilabel:`Shipping`: Enables UPS shipping services, such as preparing packages for shipment,
-  managing returns, and canceling scheduled shipments.
+  managing returns, and cancelling scheduled shipments.
 - :guilabel:`Rating`: Compare delivery services and shipping rates.
 
 Finally, click :guilabel:`Save` and accept UPS's terms and conditions.

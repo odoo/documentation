@@ -34,8 +34,8 @@ The following table lists capabilities provided by Odoo when using the Amazon Co
 +---------------------------+----------------------------+-------------------------------------+
 |                           | Fulfilled By Amazon (FBA)  | Fulfilled By Merchant (FBM)         |
 +===========================+============================+=====================================+
-| **Orders**                | Synchronize shipped and    | Synchronize unshipped and canceled  |
-|                           | canceled orders.           | orders.                             |
+| **Orders**                | Synchronize shipped and    | Synchronize unshipped and cancelled |
+|                           | cancelled orders.          | orders.                             |
 +---------------------------+----------------------------+-------------------------------------+
 | **Shipping**              | Shipping cost is computed  | Shipping cost is computed by Amazon |
 |                           | by Amazon, and included in | and included in the synchronized    |

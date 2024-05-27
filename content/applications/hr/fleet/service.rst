@@ -278,7 +278,7 @@ Each service listed displays the following information:
   add clarification.
 - :guilabel:`Cost`: the total cost of the service, or repair.
 - :guilabel:`Stage`: the status of the service, or repair. Options are :guilabel:`New`,
-  :guilabel:`Running`, :guilabel:`Done`, or :guilabel:`Canceled`.
+  :guilabel:`Running`, :guilabel:`Done`, or :guilabel:`Cancelled`.
 
 At the bottom of the :guilabel:`Cost` column, the total cost of all services and repairs are listed.
 

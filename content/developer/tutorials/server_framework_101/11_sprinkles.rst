@@ -8,7 +8,7 @@ Our real estate module now makes sense from a business perspective. We created
 :doc:`constraints <10_constraints>`. However our user interface is still a bit
 rough. We would like to add some colors to the list views and make some fields and buttons conditionally
 disappear. For example, the 'Sold' and 'Cancel' buttons should disappear when the property
-is sold or canceled since it is no longer allowed to change the state at this point.
+is sold or cancelled since it is no longer allowed to change the state at this point.
 
 This chapter covers a very small subset of what can be done in the views. Do not hesitate to
 read the reference documentation for a more complete overview.
@@ -303,7 +303,7 @@ should not be displayed to the user, we can use the ``invisible`` attribute to h
       there is no garden.
     - Make the 'Accept' and 'Refuse' buttons invisible once the offer state is set.
     - Do not allow adding an offer when the property state is 'Offer Accepted', 'Sold' or
-      'Canceled'. To do this use the ``readonly`` attribute.
+      'Cancelled'. To do this use the ``readonly`` attribute.
 
 .. warning::
 

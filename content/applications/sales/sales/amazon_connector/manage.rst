@@ -10,15 +10,15 @@ Orders are automatically fetched from Amazon, and synchronized in Odoo, at regul
 The synchronization is based on the Amazon status: only orders whose status has changed since the
 last synchronization are fetched from Amazon. This includes changes on either end (Amazon or Odoo).
 
-For *FBA* (Fulfilled by Amazon), only *Shipped* and *Canceled* orders are fetched.
+For *FBA* (Fulfilled by Amazon), only *Shipped* and *Cancelled* orders are fetched.
 
-For *FBM* (Fulfilled by Merchant), the same is done for *Unshipped* and *Canceled* orders. For each
+For *FBM* (Fulfilled by Merchant), the same is done for *Unshipped* and *Cancelled* orders. For each
 synchronized order, a sales order and customer are created in Odoo (if the customer is not already
 registered in the database).
 
 .. note::
-   When an order is canceled in Amazon, and was already synchronized in Odoo, the corresponding
-   sales order is automatically canceled in Odoo.
+   When an order is cancelled in Amazon, and was already synchronized in Odoo, the corresponding
+   sales order is automatically cancelled in Odoo.
 
 Force synchronization
 =====================

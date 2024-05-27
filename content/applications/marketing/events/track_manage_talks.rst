@@ -117,7 +117,7 @@ Upon selecting an attendee, Odoo reveals that specific attendee's detail form.
 
 From here, event badges can be sent manually, by selecting :guilabel:`Send By Email`. The
 :guilabel:`Attendee` can also be marked as :guilabel:`Attended`, or the registration can be
-canceled altogether via the :guilabel:`Cancel Registration` button.
+cancelled altogether via the :guilabel:`Cancel Registration` button.
 
 .. image:: track_manage_talks/events-send-email-button.png
    :align: center

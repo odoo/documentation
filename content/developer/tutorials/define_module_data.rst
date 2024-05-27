@@ -173,7 +173,7 @@ When the data to create is more complex it can be useful, or even necessary, to 
   Field              Values               Values
   ================== ==================== ======================
   name               Big Villa            Trailer home
-  state              New                  Canceled
+  state              New                  Cancelled
   description        A nice and big villa Home in a trailer park
   postcode           12345                54321
   date_availability  2020-02-02           1970-01-01

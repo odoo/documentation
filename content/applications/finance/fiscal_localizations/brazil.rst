@@ -549,7 +549,7 @@ A range of sequences that are assigned to sales journals can be invalidated with
 they are not currently used, **and** will not be used in the future. To do so, navigate to the
 journal, and click the :menuselection:`⚙️ (gear) icon --> Invalidate Number Range (BR)`. On the
 :guilabel:`Invalidate Number Range (BR)` wizard, add the :guilabel:`Initial Number` and
-:guilabel:`End Number` of the range that should be canceled, and enter an invalidation
+:guilabel:`End Number` of the range that should be cancelled, and enter an invalidation
 :guilabel:`Reason`.
 
 .. image:: brazil/range-number-invalidation.png
@@ -563,7 +563,7 @@ journal, and click the :menuselection:`⚙️ (gear) icon --> Invalidate Number 
    (NF-e).
 
 .. note::
-   The log of the canceled numbers along with the XML file are recorded in the chatter of the
+   The log of the cancelled numbers along with the XML file are recorded in the chatter of the
    journal.
 
 Vendor bills

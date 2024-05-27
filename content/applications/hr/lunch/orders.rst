@@ -193,7 +193,7 @@ the list, beneath all the lines, the overall total amount paid for all the order
 
 At the end of each product line with a status of :guilabel:`Ordered` or :guilabel:`Sent`, an
 :guilabel:`X Cancel` button appears. Click :guilabel:`X Cancel` to cancel that product order. Once a
-product order has been canceled, the money paid for that product is refunded, and appears in the
+product order has been cancelled, the money paid for that product is refunded, and appears in the
 user's account.
 
 At the end of each product line with a status of :guilabel:`Received`, a :guilabel:`Re-order` button
@@ -219,7 +219,7 @@ Entries with a negative figure listed in the :guilabel:`Amount` column represent
 in the *Lunch* app. These appear in a `$-XX.XX` format.
 
 Entries with a positive balance either represent funds added to the user's lunch account, or
-canceled orders that were eventually refunded to the user. These appear in a `$XX.XX` format.
+cancelled orders that were eventually refunded to the user. These appear in a `$XX.XX` format.
 
 .. image:: orders/my-account.png
    :align: center
