@@ -55,8 +55,7 @@ attributes, navigate to :menuselection:`Sales app --> Configuration --> Attribut
 
 .. note::
    The order of attributes on the :guilabel:`Attributes` page dictates how they appear on the
-   :guilabel:`Product Configurator`, :guilabel:`Point of Sale` dashboard, and :guilabel:`eCommerce`
-   pages.
+   *Product Configurator*, *Point of Sale* dashboard, and *eCommerce* pages.
 
 To create a new attribute from the :guilabel:`Attributes` page, click :guilabel:`New`. Doing so
 reveals a blank attributes form that can be customized and configured in a number of ways.
@@ -67,13 +66,55 @@ reveals a blank attributes form that can be customized and configured in a numbe
 
 First, create an :guilabel:`Attribute Name`, such as `Color` or `Size`.
 
-Next, in the optional :guilabel:`Category` field, select a category from a drop-down menu to group
-similar attributes under the same section for added specificity and organization.
+Next, select one of the options from the :guilabel:`Display Type` field. The :guilabel:`Display
+Type` determines how this product is shown on the online store, *Point of Sale* dashboard, and
+*Product Configurator*.
+
+The :guilabel:`Display Type` options are:
+
+- :guilabel:`Pills`: options appear as selectable buttons on the product page of the online store.
+- :guilabel:`Color`: options appear as small, colored squares, which reflect any HTML color codes
+- :guilabel:`Radio`: options appear in a bullet-style list on the product page of the online store.
+- :guilabel:`Select`: options appear in a drop-down menu on the product page of the online store.
+  set, on the product page of the online store.
+- :guilabel:`Multi-checkbox (option)`: options appear as selectable checkboxes on the product page
+  of the online store.
+
+.. image:: variants/display-types.png
+   :align: center
+   :alt: Display Types on Product Configurator on the online store in Odoo.
+
+The :guilabel:`Variant Creation Mode` field informs Odoo when to automatically create a new variant
+once an attribute is added to a product.
+
+.. note::
+   The :guilabel:`Variant Creation Mode` field **must** be set to :guilabel:`Never (option)` in
+   order for the :guilabel:`Multi-checkbox (option)` to work properly as the :guilabel:`Display
+   Type`.
+
+- :guilabel:`Instantly`: creates all possible variants as soon as attributes and values are added
+  to a product template.
+- :guilabel:`Dynamically`: creates variants **only** when corresponding attributes and values are
+  added to a sales order.
+- :guilabel:`Never (option)`: never automatically creates variants.
+
+.. warning::
+   Once added to a product, an attribute's :guilabel:`Variants Creation Mode` cannot be edited.
+
+The :guilabel:`eCommerce Filter Visibility` field determines whether or not these attribute options
+are visible to the customer on the front-end, as they shop on the online store.
+
+- :guilabel:`Visible`: the attribute values are visible to customers on the front-end.
+- :guilabel:`Hidden`: the attribute values are hidden from customers on the front-end.
+
+Lastly, in the optional :guilabel:`eCommerce Category` field, select a category from a drop-down
+menu to group similar attributes under the same section for added specificity and organization.
 
 .. note::
    To view the details related to the attribute category selected, click the internal link
-   :guilabel:`➡️ (arrow)` icon to the far-right of the :guilabel:`Category` field. Doing so reveals
-   that attribute category's detail form.
+   :icon:`fa-arrow-right` :guilabel:`(right arrow)` icon to the far-right of the
+   :guilabel:`eCommerce Category` field, once an option has been selected. Doing so reveals that
+   attribute category's detail form.
 
    .. image:: variants/attribute-category-internal-link.png
       :align: center
@@ -93,40 +134,6 @@ similar attributes under the same section for added specificity and organization
    Clicking :guilabel:`Create` creates the category, which can be modified later. Clicking
    :guilabel:`Create and edit...` creates the category and reveals a :guilabel:`Create Category`
    pop-up window, in which the new attribute category can be configured and customized.
-
-Beneath the :guilabel:`Category` field are the :guilabel:`Display Type` options. The
-:guilabel:`Display Type` determines how this product is shown on the online store, :guilabel:`Point
-of Sale` dashboard, and :guilabel:`Product Configurator`.
-
-The :guilabel:`Display Type` options are:
-
-- :guilabel:`Radio`: options appear in a bullet-style list on the product page of the online store.
-- :guilabel:`Pills`: options appear as selectable buttons on the product page of the online store.
-- :guilabel:`Select`: options appear in a drop-down menu on the product page of the online store.
-- :guilabel:`Color`: options appear as small, colored squares, which reflect any HTML color codes
-  set, on the product page of the online store.
-
-.. image:: variants/display-types.png
-   :align: center
-   :alt: Display Types on Product Configurator on the online store in Odoo.
-
-The :guilabel:`Variants Creation Mode` field informs Odoo when to automatically create a new variant
-once an attribute is added to a product.
-
-- :guilabel:`Instantly`: creates all possible variants as soon as attributes and values are added
-  to a product template.
-- :guilabel:`Dynamically`: creates variants **only** when corresponding attributes and values are
-  added to a sales order.
-- :guilabel:`Never (option)`: never automatically creates variants.
-
-.. warning::
-   Once added to a product, an attribute's :guilabel:`Variants Creation Mode` cannot be edited.
-
-Lastly, the :guilabel:`eCommerce Filter Visibility` field determines whether these attribute options
-are visible to the customer on the front-end, as they shop on the online store.
-
-- :guilabel:`Visible`: the attribute values are visible to customers on the front-end.
-- :guilabel:`Hidden`: the attribute values are hidden from customers on the front-end.
 
 Attribute values
 ----------------
