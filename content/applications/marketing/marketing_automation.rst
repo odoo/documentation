@@ -87,13 +87,14 @@ campaigns.
 
 To get started with a template, navigate to the :menuselection:`Marketing Automation` application,
 from the main Odoo dashboard, to open the :guilabel:`Campaigns` dashboard, which displays six
-campaign template cards:
+:doc:`campaign template <marketing_automation/campaign_templates>` cards:
 
 - | :guilabel:`🏷️ Tag Hot Contacts`
   | :guilabel:`Send a welcome email to contacts and tag them if they click it.`
 - | :guilabel:`✌️ Welcome Flow`
   | :guilabel:`Send a welcome email to new subscribers, remove the address that bounced.`
-- | :guilabel:`☑️ Double Opt-in`
+- | :icon:`fa-check-square` :doc:`Double Opt-in
+    <marketing_automation/campaign_templates/double_optin>`
   | :guilabel:`Send an email to new recipients to confirm their consent.`
 - | :guilabel:`🔍 Commercial prospection`
   | :guilabel:`Send a free catalog and follow-up according to reactions.`
@@ -210,3 +211,4 @@ Additionally, each activity within the workflow of a campaign displays its engag
    marketing_automation/workflow_activities
    marketing_automation/testing_running
    marketing_automation/understanding_metrics
+   marketing_automation/campaign_templates
