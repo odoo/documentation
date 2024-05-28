@@ -322,17 +322,31 @@ of our users. In that case, it could make sense to lazy load our dashboard, and 
 related assets, so we only pay the cost of loading the code when we actually want to
 look at it.
 
-To do that, we will need to create a new bundle containing all our dashboard assets,
-then use the `LazyComponent` (located in `@web/core/assets`).
+One way to do this is to use `LazyComponent` (from `@web/core/assets`) as an intermediate
+that will load an asset bundle before displaying our component.
+
+.. example::
+
+   :file:`example_action.js`:
+
+   .. code-block:: javascript
+
+      export class ExampleComponentLoader extends Component {
+          static components = { LazyComponent };
+          static template = xml`
+              <LazyComponent bundle="'example_module.example_assets'" Component="'ExampleComponent'" />
+          `;
+      }
+
+      registry.category("actions").add("example_module.example_action", ExampleComponentLoader);
 
 #. Move all dashboard assets into a sub folder :file:`/dashboard` to make it easier to
    add to a bundle.
 #. Create a `awesome_dashboard.dashboard` assets bundle containing all content of
-   the `/dashboard` folder.
-#. Modify :file:`dashboard.js` to register itself in the `lazy_components` registry, and not
-   in the `action` registry.
-#. Add in :file:`src/` a file :file:`dashboard_action` that imports `LazyComponent` and registers
-   it to the `action` registry
+   the :file:`/dashboard` folder.
+#. Modify :file:`dashboard.js` to register itself to the `lazy_components` registry instead of `actions`.
+#. In :file:`src/dashboard_action.js`, create an intermediate component that uses `LazyComponent` and
+   register it to the `actions` registry.
 
 9. Making our dashboard generic
 ===============================
