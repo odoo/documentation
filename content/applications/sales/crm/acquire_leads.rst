@@ -8,7 +8,6 @@ Acquire leads
    :titlesonly:
 
    acquire_leads/convert
-   acquire_leads/generate_leads
    acquire_leads/opportunities_form
    acquire_leads/email_manual
    acquire_leads/send_quotes
