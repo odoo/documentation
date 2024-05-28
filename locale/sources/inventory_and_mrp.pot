@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-29 08:05+0000\n"
+"POT-Creation-Date: 2024-05-28 08:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../../content/applications/inventory_and_mrp.rst:5
-msgid "Inventory & MRP"
+msgid "Supply Chain"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory.rst:8
@@ -945,6 +945,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:53
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/uom.rst:16
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/integrating_landed_costs.rst:11
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:65
 #: ../../content/applications/inventory_and_mrp/inventory/management/shipments_deliveries/delivery_three_steps.rst:18
 #: ../../content/applications/inventory_and_mrp/inventory/management/shipments_deliveries/receipts_three_steps.rst:16
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/resupply_warehouses.rst:11
@@ -4876,115 +4877,236 @@ msgstr ""
 msgid "The Inventory Valuation fields are located on the Product Categories form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:22
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:21
 msgid "Alternatively, automated inventory valuation is an integrated valuation method that updates the inventory value in real-time by creating journal entries whenever there are stock moves initiated between locations in a company's inventory."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:27
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:26
 msgid "Automated inventory valuation is a method recommended for expert accountants, given the extra steps involved in journal entry configuration. Even after the initial setup, the method will need to be periodically checked to ensure accuracy, and adjustments may be needed on an ongoing basis depending on the needs and priorities of the business."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:35
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:34
 msgid "Types of accounting"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:37
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:36
 msgid "Accounting entries will depend on the accounting mode: *Continental* or *Anglo-Saxon*."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:40
-msgid "Verify the accounting mode by activating the :ref:`developer-mode` and navigating to :menuselection:`Accounting --> Configuration --> Settings`."
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:39
+msgid "Verify the accounting mode by activating the :ref:`developer-mode` and navigating to :menuselection:`Accounting app --> Configuration --> Settings`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:43
-msgid "In *Anglo-Saxon* accounting, the costs of goods sold (COGS) are reported when products are sold or delivered. This means that the cost of a good is only recorded as an expense when a customer is invoiced for a product. *Interim Stock Accounts* are used for the input and output accounts, and are both *Asset Accounts* in the balance sheet."
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:42
+msgid "Then, in the search bar, look for :guilabel:`Anglo-Saxon Accounting`, to see if the feature is enabled. If it is **not** enabled, Continental accounting mode is in use."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:48
-msgid "In *Continental* accounting, the cost of a good is reported as soon as a product is received into stock. Additionally, a single *Expense* account is used for both input and output accounts in the balance sheet."
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:0
+msgid "Show the Anglo-Saxon accounting mode feature."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:55
-msgid "Costing methods"
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:49
+msgid "In *Anglo-Saxon* accounting, the costs of goods sold (COGS) are reported when products are sold or delivered. This means that the cost of a good is only recorded as an expense when a customer is invoiced for a product. So for **manual** valuation method, set the :guilabel:`Expense Account` to `Stock Valuation` for the current asset type; for **automatic** valuation method, set the the :guilabel:`Expense Account` to an *Expenses* or a *Cost of Revenue* type (e.g. `Cost of Production`, `Cost of Goods Sold`, etc.)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:57
-msgid "Below are the three costing methods that can be used in Odoo for inventory valuation."
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:56
+msgid "In *Continental* accounting, the cost of a good is reported as soon as a product is received into stock. Because of this, the :guilabel:`Expense Account` can be set to **either** *Expenses* or a *Cost of Revenue* type, however, it is more commonly set to an *Expenses* account."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:59
-msgid "**Standard Price**: is the default costing method in Odoo. The cost of the product is manually defined on the product form, and this cost is used to compute the valuation. Even if the purchase price on a purchase order differs, the valuation will still use the cost defined on the product form."
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:61
+msgid ":ref:`Details about configuring Expense and Stock accounts <inventory/management/config-inventory-valuation>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:63
-msgid "**Average Cost (AVCO)**: calculates the valuation of a product based on the average cost of that product, divided by the total number of available stock on-hand. With this costing method, inventory valuation is *dynamic*, and constantly adjusts based on the purchase price of products."
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:67
+msgid "Make changes to inventory valuation options by navigating to :menuselection:`Inventory app --> Configuration --> Product Categories`. In the :guilabel:`Inventory Valuation` section, select the desired :guilabel:`Costing Method` and :guilabel:`Inventory Valuation` options."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:66
-msgid "**First In First Out (FIFO)**: tracks the costs of incoming and outgoing items in real-time and uses the real price of the products to change the valuation. The oldest purchase price is used as the cost for the next good sold until an entire lot of that product is sold. When the next inventory lot moves up in the queue, an updated product cost is used based on the valuation of that specific lot. This method is arguably the most accurate inventory valuation method for a variety of reasons, however, it's highly sensitive to input data and human error."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:74
-msgid "Changing the costing method greatly impacts inventory valuation. It's highly recommended to consult an accountant first before making any adjustments here."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:78
-msgid "Configure automated inventory valuation in Odoo"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:80
-msgid "Make changes to inventory valuation options by navigating to :menuselection:`Inventory --> Configuration --> Product Categories`, and choose the category/categories where the automated valuation method should apply."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:85
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:72
 msgid "It is possible to use different valuation settings for different product categories."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:87
-msgid "Under the :guilabel:`Inventory Valuation` heading are two labels: :guilabel:`Costing Method` and :guilabel:`Inventory Valuation`. Pick the desired :guilabel:`Costing Method` using the drop-down menu (e.g. :guilabel:`Standard`, :guilabel:`Average Cost (AVCO)`, or :guilabel:`First In First Out (FIFO)`) and switch the :guilabel:`Inventory Valuation` to :guilabel:`Automated`."
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:-1
+msgid "Show inventory valuation configuration options."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:93
-msgid ":ref:`Using the inventory valuation<inventory/reporting/using_inventory_val>`"
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:81
+msgid "Costing method"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:96
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:83
+msgid "From the product category's configuration page, choose the desired :guilabel:`Costing Method`:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:85
+msgid ":guilabel:`Standard Price`: the default costing method in Odoo. The cost of the product is manually defined on the product form, and this cost is used to compute the valuation. Even if the purchase price on a purchase order differs, the valuation will still use the cost defined on the product form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:89
+msgid ":guilabel:`Average Cost (AVCO)`: calculates the valuation of a product based on the average cost of that product, divided by the total number of available stock on-hand. With this costing method, inventory valuation is *dynamic*, and constantly adjusts based on the purchase price of products."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:94
 msgid "When choosing :guilabel:`Average Cost (AVCO)` as the :guilabel:`Costing Method`, changing the numerical value in the :guilabel:`Cost` field for products in the respective product category creates a new record in the *Inventory Valuation* report to adjust the value of the product. The :guilabel:`Cost` amount will then automatically update based on the average purchase price both of inventory on hand and the costs accumulated from validated purchase orders."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:102
-msgid "When the :guilabel:`Costing Method` is changed, products already in stock that were using the :guilabel:`Standard` costing method **do not** change value; rather, the existing units keep their value, and any product moves from then on affect the average cost, and the cost of the product will change. If the value in the :guilabel:`Cost` field on a product form is changed manually, Odoo will generate a corresponding record in the *Inventory Valuation* report."
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:100
+msgid ":guilabel:`First In First Out (FIFO)`: tracks the costs of incoming and outgoing items in real-time and uses the real price of the products to change the valuation. The oldest purchase price is used as the cost for the next good sold until an entire lot of that product is sold. When the next inventory lot moves up in the queue, an updated product cost is used based on the valuation of that specific lot. This method is arguably the most accurate inventory valuation method for a variety of reasons, however, it is highly sensitive to input data and human error."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:108
-msgid "On the same screen, the :guilabel:`Account Stock Properties` fields will appear, as they are now required fields given the change to automated inventory valuation. These accounts are defined as follows:"
+msgid "Changing the costing method greatly impacts inventory valuation. It is highly recommended to consult an accountant first before making any adjustments here."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:112
-msgid ":guilabel:`Stock Valuation Account`: when automated inventory valuation is enabled on a product, this account will hold the current value of the products."
+msgid ":doc:`using_inventory_valuation`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:114
-msgid ":guilabel:`Stock Input Account`: counterpart journal items for all incoming stock moves will be posted in this account, unless there is a specific valuation account set on the source location. This is the default value for all products in a given category, and can also be set directly on each product."
+msgid "When the :guilabel:`Costing Method` is changed, products already in stock that were using the :guilabel:`Standard` costing method **do not** change value; rather, the existing units keep their value, and any product moves from then on affect the average cost, and the cost of the product will change. If the value in the :guilabel:`Cost` field on a product form is changed manually, Odoo will generate a corresponding record in the *Inventory Valuation* report."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:118
-msgid ":guilabel:`Stock Output Account`: counterpart journal items for all outgoing stock moves will be posted in this account, unless there is a specific valuation account set on the destination location. This is the default value for all products in a given category, and can also be set directly on each product."
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:123
+msgid "Inventory valuation"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:124
-msgid "Access reporting data generated by inventory valuation"
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:125
+msgid "Inventory valuation in Odoo can be set to be updated manually or automatically. While *Expense* accounts apply to both, the *Stock Input* and *Stock Output* accounts are only used for automated valuation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:126
-msgid "To start, go to :menuselection:`Accounting --> Reporting --> Balance Sheet`. At the top of the dashboard, change the :guilabel:`As of` field value to :guilabel:`Today`, and adjust the filtering :guilabel:`Options` to :guilabel:`Unfold All` in order to see all of the latest data displayed, all at once."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:131
-msgid "Under the parent :guilabel:`Current Assets` line item, look for the nested :guilabel:`Stock Valuation Account` line item, where the total valuation of all of the inventory on hand is displayed."
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:129
+msgid "Refer to the :ref:`Expense <inventory/management/expense-account>` and :ref:`Stock input/output <inventory/management/stock-account>` sections for details on configuring each account type."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:135
+msgid "Expense account"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:137
+msgid "To configure the *expense account*, go to the :guilabel:`Account Properties` section of the intended product category (:menuselection:`Inventory app --> Configuration --> Product Categories`). Then, choose an existing account from the :guilabel:`Expense Account` drop-down menu."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:141
+msgid "To ensure the chosen account is the correct :guilabel:`Type,` click the |external link| icon to the right of the account. Then, set the account type based on the information below."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:146
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:214
+msgid "Anglo-Saxon"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:150
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:177
+msgid "Automated"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:152
+msgid "In Anglo-Saxon accounting for automated inventory valuation, set the :guilabel:`Expense Account` to the `Expenses` account. Then, click the |external link| icon to the right of the account."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:156
+msgid "In the pop-up window, choose :guilabel:`Expenses` or :guilabel:`Cost of Revenue` from the :guilabel:`Type` drop-down menu."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:0
+msgid "Show **Expense Account** field, and external link icon."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:163
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:182
+msgid "Manual"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:165
+msgid "To configure the :guilabel:`Expense Account`, choose :guilabel:`Stock Valuation` from the field's drop-down menu. Verify the account's type by clicking the |external link| icon, and then ensure the :guilabel:`Type` is :guilabel:`Current Assets`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:0
+msgid "Show the **Expense Account** field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:173
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:232
+msgid "Continental"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:179
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:184
+msgid "Set the :guilabel:`Expense Account` to the :guilabel:`Expenses` or :guilabel:`Cost of Revenue` account type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:190
+msgid "Stock input/output (automated only)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:192
+msgid "To configure the :guilabel:`Stock Input Account` and :guilabel:`Stock Output Account`, go to :menuselection:`Inventory app --> Configuration --> Product Categories` and select the desired product category."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:196
+msgid "In the :guilabel:`Inventory Valuation` field, select :guilabel:`Automated`. Doing so makes the :guilabel:`Account Stock Properties` section appear. These accounts are defined as follows:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:199
+msgid ":guilabel:`Stock Valuation Account`: when automated inventory valuation is enabled on a product, this account will hold the current value of the products."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:201
+msgid ":guilabel:`Stock Journal`: accounting journal where entries are automatically posted when a product's inventory valuation changes."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:203
+msgid ":guilabel:`Stock Input Account`: counterpart journal items for all incoming stock moves will be posted in this account, unless there is a specific valuation account set on the source location. This is the default value for all products in a given category, and can also be set directly on each product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:207
+msgid ":guilabel:`Stock Output Account`: counterpart journal items for all outgoing stock moves will be posted in this account, unless there is a specific valuation account set on the destination location. This is the default value for all products in a given category, and can also be set directly on each product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:216
+msgid "In Anglo-Saxon accounting, the :guilabel:`Stock Input Account` and :guilabel:`Stock Output Account` are set to *different* :guilabel:`Current Assets` accounts. This way, delivering products and invoicing the customer balance the *Stock Output* account, while receiving products and billing vendors balance the *Stock Input* account."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:221
+msgid "To modify the account type, go to the click the |external link| icon to the right of the stock input/output account. In the pop-up window, choose :guilabel:`Current Assets` from the :guilabel:`Type` drop-down menu."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:0
+msgid "Display account setup page, highlighting the **Type** field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:229
+msgid "The *Stock Input* account is set to `Stock Interim (Received)`, a *Current Asset* account type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:234
+msgid "In Continental accounting, the :guilabel:`Stock Input Account` and :guilabel:`Stock Output Account` are set to **the same** :guilabel:`Current Assets` account. That way, one account can be balanced when items are bought and sold."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:239
+msgid "The stock input and output accounts are both set to `Stock Interim (Received)`, a :guilabel:`Current Assets` account type. They can also be set to the `Stock Interim (Delivered)`, as long as the input and output accounts are assigned to the **same** account."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:0
+msgid "Show the Stock Input and Output accounts."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:249
+msgid "Inventory valuation reporting"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:251
+msgid "To start, go to :menuselection:`Accounting --> Reporting --> Balance Sheet`. At the top of the dashboard, change the :guilabel:`As of` field value to :guilabel:`Today`, and adjust the filtering :guilabel:`Options` to :guilabel:`Unfold All` in order to see all of the latest data displayed, all at once."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:257
+msgid ":doc:`../../../../finance/accounting/get_started/cheat_sheet`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:259
+msgid "Under the parent :guilabel:`Current Assets` line item, look for the nested :guilabel:`Stock Valuation Account` line item, where the total valuation of all of the inventory on hand is displayed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:263
 msgid "Access more specific information with the :guilabel:`Stock Valuation Account` drop-down menu, by selecting either the :guilabel:`General Ledger` to see an itemized view of all of the journal entries, or by selecting :guilabel:`Journal Items` to review all of the individualized journal entries that were submitted to the account. As well, annotations to the :guilabel:`Balance Sheet` can be added by choosing :guilabel:`Annotate`, filling in the text box, and clicking :guilabel:`Save`."
 msgstr ""
 
@@ -4996,43 +5118,43 @@ msgstr ""
 msgid "Using inventory valuation"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:7
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:5
 msgid "*Inventory valuation* is a quintessential accounting procedure that calculates the value of on-hand stock. Once determined, the inventory valuation amount is then incorporated into a company's overall value."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:11
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:9
 msgid "In Odoo, this process can be conducted manually— by warehouse employees physically counting the products— or automatically through the database."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:15
-msgid ":ref:`Inventory valuation configuration<inventory/inventory_valuation_config>`"
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:13
+msgid ":doc:`inventory_valuation_config`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:18
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:16
 msgid "Understand the basics of inventory valuation"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:20
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:18
 msgid "In order to understand how moving products in and out of stock affects the company's overall value, consider the following product and stock moves scenario below."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:24
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:22
 msgid "Receive a product"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:26
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:24
 msgid "For example, consider an physical product, a simple *table*, which is categorized as `Office Furniture` in the product form's :guilabel:`Product Category` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:29
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:27
 msgid "Navigate to the the product category itself by going to :menuselection:`Inventory app --> Configuration --> Product Categories`, and on the form, set the :guilabel:`Costing Method` as `First In First Out (FIFO)` and the :guilabel:`Inventory Valuation` field as `Automated`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:34
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:32
 msgid "Alternatively access the :guilabel:`Product Categories` dashboard by clicking on the :guilabel:`internal link` arrow on the individual product's form, by hovering over the :guilabel:`Product Category` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:38
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:36
 msgid "Next, assume 10 tables are purchased at a price of $10.00, each. The :abbr:`PO (Purchase Order)` for those tables will show the subtotal of the purchase as $100, plus any additional costs or taxes."
 msgstr ""
 
@@ -5040,7 +5162,7 @@ msgstr ""
 msgid "Purchase order with 10 tables products valued at $10 each."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:45
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:43
 msgid "After selecting :guilabel:`Validate` on the :abbr:`PO (Purchase Order)`, use the :guilabel:`Valuation` smart button to view how the value of inventory was impacted."
 msgstr ""
 
@@ -5048,15 +5170,15 @@ msgstr ""
 msgid "Valuation smart button on a receipt."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:53
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:51
 msgid ":ref:`Developer mode <developer-mode>` must be turned on to see the *Valuation* smart button."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:56
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:54
 msgid "The :doc:`consignment </applications/inventory_and_mrp/inventory/management/misc/owned_stock>` feature allows ownership to items in stock. Thus, products owned by other companies are not accounted for in the host company's inventory valuation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:60
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:58
 msgid "The :guilabel:`Stock Valuation` dashboard then displays valuation of all products in the shipment, along with their quantities and valuation. In the example of 10 tables being purchased, the :guilabel:`Total Value` column of the dashboard would display a calculated valuation of $100."
 msgstr ""
 
@@ -5064,7 +5186,7 @@ msgstr ""
 msgid "Stock valuation page depicting the products within a shipment."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:68
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:66
 msgid "In Odoo, automatic inventory valuation records are also recorded in the *Accounting* app. To access these accounting entries, navigate to :menuselection:`Accounting --> Journal Entries`, and look for inventory valuation entries with the `STJ` prefix in the :guilabel:`Journal` and :guilabel:`Number` columns, respectively."
 msgstr ""
 
@@ -5072,11 +5194,11 @@ msgstr ""
 msgid "Accounting entry for the inventory valuation of 10 tables."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:78
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:76
 msgid "Deliver a product"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:80
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:78
 msgid "In the same logic, when a table is shipped to a customer and leaves the warehouse, the stock valuation decreases. The :guilabel:`Valuation` smart button on the :abbr:`DO (Delivery Order)`, likewise, displays the stock valuation record as it does on a :abbr:`PO (Purchase Order)`"
 msgstr ""
 
@@ -5084,11 +5206,11 @@ msgstr ""
 msgid "Decreased stock valuation after a product is shipped."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:87
 msgid "The inventory valuation report"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:91
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:89
 msgid "To view the current value of all products in the warehouse, go to :menuselection:`Inventory app --> Reporting --> Inventory Valuation`. The records in the table are organized by product, and selecting a product's drop-down menu displays detailed records with the :guilabel:`Date`, :guilabel:`Quantity`, and :guilabel:`Total Value` of the inventory."
 msgstr ""
 
@@ -5096,19 +5218,19 @@ msgstr ""
 msgid "Inventory valuation report showing multiple products."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:101
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:99
 msgid "The :guilabel:`Inventory At Date` button, located in the top-left corner of the :guilabel:`Stock Valuation` dashboard, shows the inventory valuation of products available during a prior specified date."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:106
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:104
 msgid "Update product unit price"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:108
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:106
 msgid "For any company: lead times, supply chain failures, and other risk factors can contribute to invisible costs. Although Odoo attempts to accurately represent the stock value, *manual valuation* serves as an additional tool to update the unit price of products."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:113
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:111
 msgid "Manual valuation is intended for products that can be purchased and received for a cost greater than 0, or have product categories set with :guilabel:`Costing Method` set as either `Average Cost (AVCO)` or `First In First Out (FIFO)`."
 msgstr ""
 
@@ -5116,11 +5238,11 @@ msgstr ""
 msgid "Add manual valuation of stock value to a product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:121
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:119
 msgid "Create manual valuation entries on the :guilabel:`Stock Valuation` dashboard by first navigating to :menuselection:`Inventory app --> Reporting --> Inventory Valuation`, and then click the little gray drop-down icon to the left of a product's name, to then reveal stock valuation line items below as well as a teal :guilabel:`+ (plus)` button on the right."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:124
 msgid "Click the teal :guilabel:`+ (plus)` button to open up the :guilabel:`Product Revaluation` form, where updates to the calculation of inventory valuation can be made, by increasing or decreasing the unit price of each product."
 msgstr ""
 
