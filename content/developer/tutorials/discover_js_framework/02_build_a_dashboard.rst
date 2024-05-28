@@ -331,8 +331,13 @@ then use the `LazyComponent` (located in `@web/core/assets`).
    the `/dashboard` folder.
 #. Modify :file:`dashboard.js` to register itself in the `lazy_components` registry, and not
    in the `action` registry.
-#. Add in :file:`src/` a file :file:`dashboard_action` that imports `LazyComponent` and registers
+#. Add in :file:`src/` a file :file:`dashboard_action.js` that imports `LazyComponent` and registers
    it to the `action` registry
+
+.. seealso::
+  - `Example: Use of LazyComponent in studio
+    <https://github.com/odoo/enterprise/blob/faece91a0c3fa758bd8f2d72b67dd0518c671e08/
+    web_studio/static/src/client_action/studio_action_loader.js#L9-L20>`_
 
 9. Making our dashboard generic
 ===============================
