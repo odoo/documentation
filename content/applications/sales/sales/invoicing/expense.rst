@@ -155,6 +155,35 @@ Upon clicking :guilabel:`Post Journal Entries`, that button disappears, and the 
 Distribution` column in the :guilabel:`Expense` tab is filled with the sales order that was
 initially configured to the expense in the :guilabel:`Customer to Reinvoice` field.
 
+.. important::
+   By default, the :guilabel:`Customer to Reinvoice` field is enabled for the :guilabel:`[TRANS &
+   ACC] Travel & Accommodation`, :guilabel:`[COMM] Communication`, :guilabel:`[FOOD] Meals`, and
+   :guilabel:`[MIL] Mileage` expense category.
+
+   It should be noted that **not** all of the default expense categories that come installed with
+   the *Expenses* application have reinvoicing policies activated. The setting may have to be
+   manually activated.
+
+   To do that, navigate to :menuselection:`Expenses app --> Configuration --> Expenses Categories`
+   to view a list of all expense categories in the database.
+
+   Look in the :guilabel:`Re-Invoice Expenses` column to see which selections have been made for
+   each expense category.
+
+   .. image:: expense/expense-categories-page.png
+      :align: center
+      :alt: The Re-Invoice Expenses column on the Expense Categories page in the Odoo Expenses app.
+
+   To modify an expense category, click the :icon:`fa-arrow-right` :guilabel:`(right arrow)` in the
+   :guilabel:`Category` field, to reveal that specific expense from.
+
+   Under the :guilabel:`Invoicing` section, in the :guilabel:`Re-Invoice Expenses` field, select
+   either :guilabel:`At cost` or :guilabel:`Sales price`.
+
+   .. image:: expense/reinvoice-expenses-field.png
+      :align: center
+      :alt: The Re-Invoice Expenses field on an Expense Category form in the Odoo Expenses app.
+
 Reinvoice expense
 =================
 
