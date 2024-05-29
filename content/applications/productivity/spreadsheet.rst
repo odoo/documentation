@@ -1,9 +1,9 @@
 :show-content:
 :hide-page-toc:
 
-===========
-Spreadsheet
-===========
+============
+Spreadsheets
+============
 
 .. toctree::
    :titlesonly:
@@ -12,12 +12,14 @@ Spreadsheet
    spreadsheet/functions
    spreadsheet/templates
 
-Spreadsheet lets you organize, analyze, and visualize your data in tabular form. Among others, you
-can:
+Spreadsheets allow users to organize, analyze, and visualize data by compiling data sets into
+tables.
 
-- :doc:`Insert and link your Odoo data (pivots, graphs, lists, and menus) <spreadsheet/insert>`.
-- :doc:`Use formulas and functions <spreadsheet/functions>`.
-- :doc:`Use default templates or create new ones <spreadsheet/templates>`.
+Various functions that can be performed within a spreadsheet are:
+
+- Insert and :doc:`link Odoo data <spreadsheet/insert>` (pivots, graphs, lists, and menus).
+- Use :doc:`formulas and functions <spreadsheet/functions>`.
+- Use default :doc:`templates <spreadsheet/templates>` or create new ones.
 - Format data.
 - Sort and filter data.
 
@@ -26,17 +28,20 @@ can:
 Glossary
 ========
 
-Some of Spreadsheet's main :abbr:`UI (user interface)` elements are highlighted and defined below.
+To better understand the various functions and areas of a spreadsheet, refer to the common :abbr:`UI
+(user interface)` elements below:
 
 .. image:: spreadsheet/ui-elements.png
    :align: center
    :alt: Spreadsheet main UI elements
 
-#. Menu bar
-#. Top bar
-#. Formula bar
-#. Filters button
-#. Row header
-#. Column header
-#. Cell menu
-#. Bottom bar
+#. Menu bar: the main menu options available for the entire spreadsheet.
+#. Top bar: the various functions that can be applied to a cell, row, column, or entire
+   spreadsheet.
+#. Formula bar: a field where a specific formula can be entered and applied to a cell, row, column,
+   or entire spreadsheet.
+#. Filters button: allows for the application of a filter to only present specific data.
+#. Row header: the name for the individual row.
+#. Column header: the name for the individual column.
+#. Cell menu: the various options that can be applied to an individual cell.
+#. Bottom bar: the navigational buttons to add and/or view the various sheets of the spreadsheet.
