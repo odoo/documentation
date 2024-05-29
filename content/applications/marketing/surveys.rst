@@ -1,4 +1,4 @@
-:nosearch:
+:show-content:
 
 =======
 Surveys
@@ -13,7 +13,7 @@ measure the satisfaction of customers and/or employees. This process yields valu
 shifting market trends.
 
 .. seealso::
-   - `Odoo Tutorials: Surveys <https://www.odoo.com/slides/surveys-62>`_
+   `Odoo Tutorials: Surveys <https://www.odoo.com/slides/surveys-62>`_
 
 Dashboard
 =========
@@ -190,6 +190,6 @@ and the columns depict the various activity types.
 
    surveys/create
    surveys/scoring
-   surveys/time_random
+   surveys/questions
    surveys/live_session
    surveys/analysis
