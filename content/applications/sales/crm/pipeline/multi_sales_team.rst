@@ -15,7 +15,7 @@ click :guilabel:`New`.
 On the creation page, set an :guilabel:`Email Alias` to automatically generate a lead/opportunity
 for this sales team every time a message is sent to that unique email address. Choose whether to
 accept emails from :guilabel:`Everyone`, :guilabel:`Authenticated Partners`, :guilabel:`Followers
-nly`, or :guilabel:`Authenticated Employees`.
+only`, or :guilabel:`Authenticated Employees`.
 
 Set an :guilabel:`Invoicing Target` if this team has specific monthly revenue goals.
 
