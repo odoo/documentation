@@ -10,3 +10,4 @@ Putaway & Removal Strategies
 
    strategies/putaway
    strategies/removal
+   strategies/storage_category
