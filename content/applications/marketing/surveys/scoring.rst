@@ -53,4 +53,4 @@ badges.
    :alt: Example of how a badge looks on the eLearning portion of the website.
 
 .. seealso::
-   :doc:`time_random`
+   :doc:`questions`
