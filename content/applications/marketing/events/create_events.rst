@@ -43,12 +43,25 @@ At the top of the event form are a series of smart buttons related to various ev
 will autopopulate with pertinent data once attendees begin to register, booths and sponsors sign on
 for the event, the event takes place, and so on.
 
+Primarily, these smart buttons are used as logistical portals to perform specific actions for the
+event. The numeric displays are primarily for quick reference points.
+
+While those visual metrics are useful, they can still be clicked, and used to navigate to
+specific event-related pages to modify and/or perform any desired actions.
+
 Beneath the smart buttons is the event form, which contains various fields and clickable tabs that
 serve to configure the initial, necessary details of the event.
 
 The following are fields found on an event form:
 
 - :guilabel:`Event Name`: the title of the event. This field is **required**.
+
+  .. note::
+     To the right of the entered :guilabel:`Event Name`, there is a language tooltip, represented by
+     an abbreviated language indicator (e.g. `EN`). When clicked, a :guilabel:`Translate: name`
+     pop-up window appears, displaying various pre-configured language translation options available
+     in the database.
+
 - :guilabel:`Date`: when the event is scheduled to take place. This field is auto-populated, but
   modifiable, and is **required**.
 - :guilabel:`Timezone`: the corresponding timezone related to the event. This field is
@@ -118,7 +131,10 @@ The following are fields found on an event form:
   in Odoo. If this field is left blank, the event can be published on *all* websites in the
   database. To learn more, refer to the :doc:`Multiple websites
   <../../websites/website/configuration/multi_website>` documentation.
-- :guilabel:`Venue`: enter the pertinent event venue details in this field.
+- :guilabel:`Venue`: enter event venue details. This field pulls pertinent information from the
+  *Contacts* application. Alternatively, :guilabel:`Venue` information can be manually added in this
+  field, as well. At the very least, there **must** be a venue name, address, city, zip code/region,
+  and country entered.
 - :guilabel:`Exhibition Map`: if desired, click the :guilabel:`Upload your file` button to upload an
   image of the event venue map.
 - :guilabel:`Limit Registrations`: if this checkbox is ticked, a limit to the amount of
