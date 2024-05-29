@@ -13,4 +13,5 @@ Advanced operations
    advanced_operations_warehouse/cross_dock
    advanced_operations_warehouse/stock_warehouses
    advanced_operations_warehouse/putaway
+   advanced_operations_warehouse/storage_category
    advanced_operations_warehouse/cluster_picking
