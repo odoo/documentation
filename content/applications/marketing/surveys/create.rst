@@ -73,7 +73,7 @@ Add a question
 To add a question to a survey, click :guilabel:`Add a question` in the :guilabel:`Questions` tab,
 and proceed to fill out the :guilabel:`Create Sections and Questions` pop-up window that appears.
 
-To learn how to create and customize questions, refer to the :doc:`create questions <time_random>`
+To learn how to create and customize questions, refer to the :doc:`create questions <questions>`
 documentation.
 
 .. important::
@@ -251,6 +251,9 @@ Lastly, in the :guilabel:`Live Session` section, there is the option to :guilabe
 answers`. If that option is enabled, participants who submit their answer quickly receive more
 points.
 
+.. seealso::
+   :doc:`live_session`
+
 Description tab
 ---------------
 
@@ -327,5 +330,5 @@ Those buttons are the following:
   survey form.
 
 .. seealso::
-   - :doc:`time_random`
+   - :doc:`questions`
    - :doc:`scoring`

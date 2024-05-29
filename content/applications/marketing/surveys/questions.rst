@@ -33,7 +33,7 @@ To reveal the :guilabel:`Mandatory Answer` column on the :guilabel:`Questions` t
 if questions require a mandatory answer or not, click the :guilabel:`(optional columns)` icon
 located to the far-right of the column titles.
 
-.. image:: time_random/slider-dropdown-mandatory-answer.png
+.. image:: questions/slider-dropdown-mandatory-answer.png
    :align: center
    :alt: The slider drop-down menu showing the Mandatory Answer option in Odoo Surveys.
 
@@ -83,7 +83,7 @@ Click :guilabel:`Discard` to discard the question entirely.
 Create Sections and Questions pop-up window
 -------------------------------------------
 
-.. image:: time_random/create-sections-questions-popup.png
+.. image:: questions/create-sections-questions-popup.png
    :align: center
    :alt: The Create Sections and Questions pop-up form in Odoo Surveys.
 
@@ -141,7 +141,7 @@ If the :guilabel:`Single Line Text Box` is selected as the :guilabel:`Question T
 :guilabel:`Answers` tab remains, although it only provides two checkbox options: :guilabel:`Input
 must be an email` and :guilabel:`Save as user nickname`.
 
-.. image:: time_random/single-line-answer-tab.png
+.. image:: questions/single-line-answer-tab.png
    :align: center
    :alt: The Single Line Text box question type answers tab in Odoo Surveys.
 
@@ -155,7 +155,7 @@ its nickname.
 For all other applicable :guilabel:`Question Type` options that provide answer options to the
 participant, the :guilabel:`Answers` tab appears the same.
 
-.. image:: time_random/multiple-choice-answer-options.png
+.. image:: questions/multiple-choice-answer-options.png
    :align: center
    :alt: The answer tab with a multiple choice answer option selected in Odoo Surveys.
 
@@ -190,7 +190,7 @@ Type`. If that's chosen, the :guilabel:`Answers` tab remains, but below the typi
 :guilabel:`Choices` section, there is a :guilabel:`Rows` section. That's because the
 :guilabel:`Matrix` option provides an answer table for participants to fill out.
 
-.. image:: time_random/matrix-answer-tab.png
+.. image:: questions/matrix-answer-tab.png
    :align: center
    :alt: The answer tab with a matrix question type selected in Odoo Surveys.
 
@@ -228,7 +228,7 @@ present in the :guilabel:`Answers` section.
 When enabled, two additional fields appear: :guilabel:`Comment Message` and :guilabel:`Comment is an
 answer`.
 
-.. image:: time_random/multiple-choice-options-tab.png
+.. image:: questions/multiple-choice-options-tab.png
    :align: center
    :alt: The answers section of the options tab when a multiple choice question type is selected.
 
@@ -246,7 +246,7 @@ If the selected :guilabel:`Question Type` is :guilabel:`Multiple Lines Text Box`
 :guilabel:`Placeholder` field appears in the :guilabel:`Answers` section of the :guilabel:`Options`
 tab.
 
-.. image:: time_random/multiple-lines-placeholder.png
+.. image:: questions/multiple-lines-placeholder.png
    :align: center
    :alt: The placeholder field when a multiple lines text box option is chosen in Odoo Surveys.
 
@@ -263,7 +263,7 @@ section of the :guilabel:`Options` tab: :guilabel:`Validate Entry` and :guilabel
 If the :guilabel:`Validate Entry` option is enabled, two additional fields appear beneath:
 :guilabel:`Min/Max Limits` and :guilabel:`Validation Error`.
 
-.. image:: time_random/single-line-validate-entry.png
+.. image:: questions/single-line-validate-entry.png
    :align: center
    :alt: The answers section of the option tab when a single line text box question type is chosen.
 
@@ -282,7 +282,7 @@ Constraints section
 The :guilabel:`Constraints` section in the :guilabel:`Options` tab is the same, regardless of the
 selected :guilabel:`Question Type`.
 
-.. image:: time_random/constraints-section.png
+.. image:: questions/constraints-section.png
    :align: center
    :alt: The Constraints section in the options tab in Odoo Surveys.
 
@@ -308,7 +308,7 @@ answer(s) (i.e. :guilabel:`Triggering Answers`) has been selected in a previous 
 There is only one field in the :guilabel:`Conditional Display` section: :guilabel:`Triggering
 Answers`.
 
-.. image:: time_random/conditional-display-section.png
+.. image:: questions/conditional-display-section.png
    :align: center
    :alt: The Conditional Display section of the options tab in the Odoo Surveys application.
 
@@ -325,7 +325,7 @@ supported by *Live Session* surveys.
 There is only one option available in the :guilabel:`Live Sessions` section: :guilabel:`Question
 Time Limit`.
 
-.. image:: time_random/live-sessions-section.png
+.. image:: questions/live-sessions-section.png
    :align: center
    :alt: The Live Sessions section of the Option tab in the Odoo Surveys application.
 
