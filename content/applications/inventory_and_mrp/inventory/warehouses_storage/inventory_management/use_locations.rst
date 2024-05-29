@@ -52,9 +52,9 @@ location serves its intended purpose in the database:
   :guilabel:`Inventory Loss`, :guilabel:`Production`, or :guilabel:`Transit Location` to categorize
   the location. For details on each location type, refer to the :ref:`Location Types section
   <inventory/warehouses_storage/location-type>`.
-- :guilabel:`Storage Category`: only available with the :ref:`Storage Categories
-  <inventory/warehouses_storage/storage-category>` feature enabled in :menuselection:`Inventory app
-  --> Configuration --> Settings`.
+- :guilabel:`Storage Category`: only available with the :doc:`Storage Categories
+  <../advanced_operations_warehouse/storage_category>` feature enabled in :menuselection:`Inventory
+  app --> Configuration --> Settings`.
 - :guilabel:`Company`: the company the location belongs to.
 - :guilabel:`Is a Scrap Location?`: tick this checkbox to allow for scrapped/damaged goods to be
   stored in this location.
