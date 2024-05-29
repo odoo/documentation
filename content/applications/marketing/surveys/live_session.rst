@@ -39,7 +39,7 @@ option is selected.
    survey **cannot** be used as a *Live Session* survey.
 
 With the desired survey radio button option selected, proceed to :doc:`create a survey
-<../surveys/create>` with :doc:`questions and sections <../surveys/time_random>`.
+<../surveys/create>` with :doc:`questions and sections <../surveys/questions>`.
 
 While creating questions for the *Live Session* survey, open the :guilabel:`Options` tab on the
 :guilabel:`Create Sections and Questions` pop-up form, in order to reveal the :guilabel:`Live
@@ -217,5 +217,5 @@ Repeat this process until the survey is complete.
 
 .. seealso::
    - :doc:`create`
-   - :doc:`time_random`
+   - :doc:`questions`
    - :doc:`scoring`
