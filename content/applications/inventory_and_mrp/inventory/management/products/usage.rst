@@ -164,6 +164,13 @@ For example, different packages for cans of soda can be configured as a 6-pack, 
 of 36. Each flavor of soda would need a `6`, `12`, and `36` can packaging configured on the
 individual product since packagings are product specific, not generic.
 
+.. tip::
+   Packaging can be used in conjunction with Odoo :ref:`Barcode <inventory/barcode/software>`. When
+   receiving products from suppliers, scanning the packaging barcode automatically adds the number
+   of units in the packaging to the internal count of the product.
+
+.. _inventory/management/packaging-setup:
+
 Set up packagings
 -----------------
 
@@ -210,6 +217,43 @@ and create another one in a fresh pop-up window.
       :alt: Show packaging and contained quantities, specified on the product page form in the
             Inventory tab.
 
+Partial reservation
+-------------------
+
+After :ref:`completing the packaging setup <inventory/management/packaging-setup>`, packagings can
+be reserved in full or partial quantities for outgoing shipments. Partial packaging flexibility
+expedites order fulfillment by allowing the immediate shipment of available items, while awaiting
+the rest.
+
+To configure packaging reservation methods, go to :menuselection:`Inventory app --> Configuration
+--> Product Categories`. Then, click :guilabel:`Create`, or select the desired product category.
+
+On the product category's form, in the :guilabel:`Logistics` section, :guilabel:`Reserve Packagings`
+can be set to :guilabel:`Reserve Only Full Packagings` or :guilabel:`Reserve Partial Packagings`.
+
+.. important::
+   To see the :guilabel:`Reserve Packaging` field, the :guilabel:`Product Packaging` feature
+   **must** be enabled. To enable this feature, go to :menuselection:`Inventory app -->
+   Configuration --> Settings`, scroll to the :guilabel:`Products` section, tick the
+   :guilabel:`Product Packagings` checkbox, and click :guilabel:`Save`.
+
+.. image:: usage/reserve-packaging.png
+   :align: center
+   :alt: Show Reserve Packagings field on the product categories page.
+
+.. example::
+   To better evaluate the options based on business needs, consider the following example:
+
+   - a product is sold in twelve units per packaging.
+   - an order demands two packagings.
+   - there are only twenty-two units in stock.
+
+   When :guilabel:`Reserve Only Full Packagings` is selected, only twelve units are reserved for the
+   order.
+
+   Conversely, when :guilabel:`Reserve Partial Packagings` is selected, twenty-two units are
+   reserved for the order.
+
 View all packagings
 -------------------
 
@@ -241,7 +285,3 @@ used for the product(s). The chosen packaging is displayed on the :abbr:`SO (Sal
       :align: center
       :alt: Assign packagings on the Sales Order Line.
 
-.. tip::
-   Packaging can be used in conjunction with Odoo :ref:`Barcode <inventory/barcode/software>`. When
-   receiving products from suppliers, scanning the packaging barcode automatically adds the number
-   of units in the packaging to the internal count of the product.
