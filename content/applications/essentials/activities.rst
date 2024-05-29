@@ -2,20 +2,22 @@
 Activities
 ==========
 
+.. |clock| replace:: :icon:`fa-clock-o` :guilabel:`(clock)` icon
+
 *Activities* are follow-up tasks tied to a record in an Odoo database.
 
 .. _activities/important:
 
-The icon used to display activities varies depending on the :ref:`activity type <activities/types>`:
+The icon used to display activities varies, depending on the :ref:`activity type
+<activities/types>`:
 
-- :guilabel:`🕘 (clock)`: the default icon, which appears if nothing is scheduled.
-- :guilabel:`📞 (phone)`: this icon appears if a phone call is scheduled.
-- :guilabel:`✉️ (envelope)`: this icon appears if an email is scheduled.
-- :guilabel:`✔️ (checkmark)`: this icon appears if a to-do is scheduled.
-- :guilabel:`(group of people)`: this icon appears if a meeting is scheduled.
-- :guilabel:`(arrow pointing up above a line)`: this icon appears if a document is scheduled to be
-  uploaded.
-- :guilabel:`(pencil in a box)`: this icon appears if a signature request is scheduled.
+- :icon:`fa-clock-o` :guilabel:`(clock)` icon: the default activities icon.
+- :icon:`fa-phone` :guilabel:`(phone)` icon: a phone call is scheduled.
+- :icon:`fa-envelope` :guilabel:`(envelope)` icon: an email is scheduled.
+- :icon:`fa-check` :guilabel:`(check)` icon: a "to-do" is scheduled.
+- :icon:`fa-users` :guilabel:`(people)` icon: a meeting is scheduled.
+- :icon:`fa-upload` :guilabel:`(upload)` icon: a document is scheduled to be uploaded.
+- :icon:`fa-pencil-square-o` :guilabel:`(request signature)` icon: a signature request is scheduled.
 
 Schedule activities
 ===================
@@ -44,13 +46,9 @@ Schedule Activity form <activities/form>`.
 Kanban view
 -----------
 
-Another way that activities are created is from the Kanban view in an application.
+Activities can also be created from the :icon:`oi-view-kanban` :guilabel:`(Kanban)` view.
 
-.. image:: activities/kanban.png
-   :align: center
-   :alt: The Kanban icon in the top menu, highlighted.
-
-To do so, click on the :guilabel:`🕘 (clock)` icon located at the bottom of an individual record.
+To do so, click on the |clock| located at the bottom of an individual record.
 
 Click :guilabel:`+ Schedule An Activity`, then proceed to :ref:`fill out the Schedule Activity form
 <activities/form>`.
@@ -60,28 +58,26 @@ Click :guilabel:`+ Schedule An Activity`, then proceed to :ref:`fill out the Sch
    :alt: Kanban view of the CRM pipeline and the option to schedule an activity.
 
 .. note::
-   If a record already has a scheduled activity, the :guilabel:`🕘 (clock)` icon is replaced by the
-   icon that represents the existing scheduled activity. Click on the activity type's icon to
-   schedule another activity.
+   If a record already has a scheduled activity, the |clock| is replaced by the icon that represents
+   the existing scheduled activity. Click on the activity type's icon to schedule another activity.
 
 .. _activities/list:
 
 List view
 ---------
 
-Activities can also be created from a list view.
+Activities can also be created from a :icon:`oi-view-list` :guilabel:`(list)` view.
 
-If the :guilabel:`Activities` column is hidden, reveal it using the :guilabel:`(additional options
-toggle)` icon in the far-right of the top row, represented by two horizontal lines with two dots.
+If the :guilabel:`Activities` column is hidden, reveal it using the :icon:`oi-settings-adjust`
+:guilabel:`(settings adjust)` icon in the far-right of the top row.
 
-Then, click on the :guilabel:`🕘 (clock)` icon for the record the activity is being added to, then
-click :guilabel:`+ Schedule an activity`. Proceed to :ref:`fill out the Schedule Activity form
-<activities/form>` that appears.
+Then, click on the |clock| for the record the activity is being added to, and click :guilabel:`+
+Schedule an activity`. Proceed to :ref:`fill out the Schedule Activity form <activities/form>` that
+appears.
 
 .. note::
-   If a record already has a scheduled activity, the :guilabel:`🕘 (clock)` icon is replaced by the
-   icon that represents the existing scheduled activity. Click on the activity type's icon to
-   schedule another activity.
+   If a record already has a scheduled activity, the |clock| is replaced by the icon that represents
+   the existing scheduled activity. Click on the activity type's icon to schedule another activity.
 
 .. image:: activities/schedule-list-activity.png
    :align: center
@@ -92,10 +88,10 @@ click :guilabel:`+ Schedule an activity`. Proceed to :ref:`fill out the Schedule
 Activity view
 -------------
 
-Most applications in Odoo have an *Activity* view available. If available, a :guilabel:`🕘 (clock)`
-activity icon is visible in the top-right of the main menu bar.
+Most applications in Odoo have an *Activity* view available. If available, a |clock| is visible in
+the top-right corner of the main menu bar, amongst the other view option icons.
 
-To open the activity view, click the :guilabel:`🕘 (clock)` activity icon.
+To open the activity view, click the |clock|.
 
 .. image:: activities/activities.png
    :align: center
@@ -114,12 +110,12 @@ If multiple activity types are scheduled for a record, a number appears in the b
 total number of scheduled activities.
 
 .. note::
-   Activity colors, and their relation to an activity's due date, is consistent throughout Odoo,
+   Activity colors, and their relation to an activity's due date, are consistent throughout Odoo,
    regardless of the activity type, or the view.
 
-To schedule an activity for a record, hover over the corresponding field, and a :guilabel:`➕ (plus
-sign)` appears. Click the :guilabel:`➕ (plus sign)`, and then :ref:`fill out the Schedule Activity
-form <activities/form>`.
+To schedule an activity for a record, hover over the corresponding field. Click the :icon:`fa-plus`
+:guilabel:`(plus)` icon that appears, and then :ref:`fill out the Schedule Activity form
+<activities/form>`.
 
 .. image:: activities/activity-view.png
    :align: center
@@ -140,12 +136,6 @@ Enter the following information on the form:
 - :guilabel:`Activity Type`: select the type of activity from the drop-down menu. The default
   options are: :guilabel:`Email`, :guilabel:`Call`, :guilabel:`Meeting`, or :guilabel:`To-Do`.
   Depending on what other applications are installed, additional options may be available.
-
-  .. note::
-     Individual applications have a list of dedicated :ref:`activity types <activities/types>`. For
-     example, installing the *Sales* application makes :guilabel:`Order Upsell` available, while
-     installing the *Sign* application makes :guilabel:`Request Signature` available.
-
 - :guilabel:`Summary`: enter a short title for the activity, such as `Discuss Proposal`.
 - :guilabel:`Due Date`: using the calendar popover, select the activity's deadline.
 - :guilabel:`Assigned to`: by default, the current user populates this field. To assign a different
@@ -187,11 +177,11 @@ buttons:
 All scheduled activities
 ========================
 
-To view a consolidated list of activities, organized by application, click the :guilabel:`🕘
-(clock)` icon in the header menu, located in the top-right.
+To view a consolidated list of activities, organized by application, click the |clock| in the header
+menu, located in the top-right corner.
 
 If any activities are scheduled, the number of activities appear in a red bubble on the
-:guilabel:`🕘 (clock)` icon.
+|clock|.
 
 All activities for each application are further divided into subsections, indicating where in the
 application the activity is to be completed. Each sub-section lists the number of scheduled
@@ -252,6 +242,11 @@ To view the currently configured types of activities in the database, navigate t
 
 Doing so reveals the :guilabel:`Activity Types` page, where the existing activity types are found.
 
+.. tip::
+   Individual applications have a list of *Activity Types* dedicated to that application. For
+   example, to view and edit the activities available for the *CRM* application, go to
+   :menuselection:`CRM app --> Configuration --> Activity Types`.
+
 .. image:: activities/activity-list.png
    :align: center
    :alt: The list of activity types already configured and available.
@@ -264,7 +259,7 @@ activity type form loads.
 
 Make any desired changes to the activity type form. The form automatically saves, but it can be
 saved manually at any time by clicking the :guilabel:`Save Manually` option, represented by a
-:guilabel:`(cloud upload)` icon, located in the top-left corner of the page.
+:icon:`fa-cloud-upload` :guilabel:`(cloud upload)` icon, located in the top-left corner of the page.
 
 Create new activity types
 -------------------------
@@ -347,3 +342,4 @@ It is possible to have another activity either suggested or triggered. To do so,
 .. seealso::
    - :doc:`../productivity/discuss`
    - :doc:`../productivity/discuss/team_communication`
+   - :doc:`../sales/crm/optimize/utilize_activities`
