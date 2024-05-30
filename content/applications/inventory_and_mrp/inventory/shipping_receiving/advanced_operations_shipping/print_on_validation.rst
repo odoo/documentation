@@ -41,7 +41,7 @@ package.
 
 .. seealso::
    - :ref:`Picking list <inventory/warehouses_storage/barcode_picking>`
-   - :doc:`Tracking label <labels>`
+   - :doc:`Tracking label <../setup_configuration/labels>`
 
 After :ref:`enabling the Delivery Slip setting <inventory/shipping_receiving/print_setup>` in the
 :guilabel:`Hardware` tab configuration options, clicking :guilabel:`Validate` on the desired
@@ -243,7 +243,7 @@ IoT-connected printer.
         other shipping information.
 
 .. seealso::
-   :doc:`Print carrier labels <labels>`
+   :doc:`Print carrier labels <../setup_configuration/labels>`
 
 .. _inventory/shipping_receiving/export-doc:
 
