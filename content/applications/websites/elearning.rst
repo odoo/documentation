@@ -184,6 +184,11 @@ Manage your content by going to :menuselection:`eLearning --> Courses --> Conten
    :align: center
    :alt: Create your content.
 
+.. note::
+   Alternatively, you can also manage your content from the :guilabel:`All Courses` dashboard, by
+   clicking the course's name. Then, select the content you want to manage or click :guilabel:`Add
+   Content` to create new content.
+
 Document tab
 ------------
 
