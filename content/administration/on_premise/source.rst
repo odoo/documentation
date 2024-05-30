@@ -290,7 +290,15 @@ Dependencies
          .. tab:: Install with pip
 
             .. warning::
+<<<<<<< HEAD
                Using pip may lead to security issues and broken dependencies; only do this if you
+||||||| parent of 03491d6a7 (temp)
+
+               Using pip may lead to security issue and broken dependencies, only do this if you
+=======
+
+               Using pip may lead to security issues and broken dependencies; only do this if you
+>>>>>>> 03491d6a7 (temp)
                know what you are doing.
 
             As some of the Python packages need a compilation step, they require system libraries to
