@@ -169,7 +169,7 @@ Policy` field to decide whether the added shipping charge on the sales order is 
 from the shipping carrier.
 
 .. seealso::
-   :ref:`Invoice cost of shipping <inventory/shipping/invoice>`
+   :doc:`Invoice cost of shipping <../advanced_operations_shipping/invoicing>`
 
 .. _inventory/shipping/sales-order:
 
