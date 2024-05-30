@@ -4,7 +4,7 @@ UPS integration
 
 UPS is a shipping carrier service that integrates with Odoo to coordinate shipping to all regions.
 Once integrated, users can create shipping methods that estimate shipping costs and :doc:`generate
-labels <../advanced_operations_shipping/labels>`.
+labels <labels>`.
 
 .. seealso::
    :doc:`third_party_shipper`
