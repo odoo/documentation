@@ -19,6 +19,8 @@ line chart overview of the :guilabel:`Untaxed Total` of POs (Purchase Orders) wi
 :guilabel:`Confirmation Date` for the current month, or of RFQs (Requests for Quotation) with a
 status of *Draft*, *Sent, or *Cancelled*.
 
+.. _purchase/vender-cost-report-filters:
+
 Add filters and groups
 ----------------------
 
@@ -82,8 +84,10 @@ measures to remove them, if desired.
 View results
 ============
 
-The vendor costs report is displayed in the *pivot* view, by default. Click :guilabel:`Insert in
-Spreadsheet` to add the pivot view into an editable spreadsheet format within the *Documents* app.
+After all of the :ref:`filters and measures have been selected
+<purchase/vender-cost-report-filters>`, the report generates in the pivot view. Click
+:guilabel:`Insert in Spreadsheet` to add the pivot view into an editable spreadsheet format within
+the *Documents* app.
 
 .. important::
    The :guilabel:`Insert in Spreadsheet` option is only available if the *Documents Spreadsheet*
