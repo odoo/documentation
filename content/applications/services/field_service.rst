@@ -15,3 +15,4 @@ Field Service
 
    field_service/onsite_interventions
    field_service/default_warehouse
+   field_service/planning_itinerary
