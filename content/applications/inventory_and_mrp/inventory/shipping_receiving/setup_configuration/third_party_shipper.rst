@@ -9,7 +9,7 @@ Third-party shipping carriers
 
 Users can link third-party shipping carriers to Odoo databases, in order to verify carriers'
 delivery to specific addresses, :doc:`automatically calculate shipping costs <delivery_method>`, and
-:doc:`generate shipping labels <../advanced_operations_shipping/labels>`.
+:doc:`generate shipping labels <labels>`.
 
 In Odoo, shipping carriers can be applied to a sales order (SO), invoice, or delivery order. For
 tips on resolving common issues when configuring shipping connectors, skip to the
@@ -116,7 +116,7 @@ The :guilabel:`Shipping Method` page contains details about the provider, includ
 
   .. important::
      Select :guilabel:`Get Rate and Create Shipment` to also :doc:`generate shipping labels
-     <../advanced_operations_shipping/labels>`.
+     <labels>`.
 
 - :guilabel:`Company`: if the shipping method should apply to a specific company, select it from the
   drop-down menu. Leave the field blank to apply the method to all companies.
@@ -266,7 +266,7 @@ shipping carrier. When the delivery method is set to :ref:`production mode
 provided.
 
 .. seealso::
-   :doc:`Generate shipping labels <../advanced_operations_shipping/labels>`
+   :doc:`Generate shipping labels <labels>`
 
 .. image:: third_party_shipper/delivery-info.png
    :align: center
