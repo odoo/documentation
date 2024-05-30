@@ -45,11 +45,13 @@ Another solution is to use one of the integrations with an existing shipping pro
 of using an integration is that delivery costs are automatically computed based on each order as
 well as generating shipping labels.
 
+
+
 .. seealso::
-   - :doc:`/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper`
-   - :doc:`/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials`
-   - :doc:`/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials`
-   - :doc:`/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels`
+   - :doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper`
+   - :doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials`
+   - :doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials`
+   - :doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels`
 
 Website availability
 ====================
