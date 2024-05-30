@@ -2,8 +2,6 @@
 Shipping cost invoicing
 =======================
 
-.. _inventory/shipping/invoice:
-
 Invoicing customers for shipping after delivery ensures accurate charges based on real-time shipping
 factors like distance, weight, and method.
 
@@ -122,4 +120,4 @@ Finally, invoice the customer the adjusted shipping cost by clicking :guilabel:`
 
 .. seealso::
    - :doc:`../setup_configuration/third_party_shipper`
-   - :doc:`labels`
+   - :doc:`../setup_configuration/labels`
