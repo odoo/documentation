@@ -119,5 +119,5 @@ The tracking label is found in PDF format in the chatter.
    Sample label generated from Odoo's shipping connector with FedEx.
 
 .. seealso::
-   - :doc:`invoicing`
-   - :doc:`multipack`
+   - :doc:`../advanced_operations_shipping/invoicing`
+   - :doc:`../advanced_operations_shipping/multipack`
