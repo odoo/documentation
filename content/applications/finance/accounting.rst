@@ -76,6 +76,8 @@ expense either when the transaction occurs (accrual basis) or when the payment i
 .. seealso::
    :doc:`Cash basis <accounting/taxes/cash_basis>`
 
+.. _accounting/multi-company:
+
 Multi-company
 =============
 
