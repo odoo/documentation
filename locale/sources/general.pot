@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo saas-16.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-30 06:30+0000\n"
+"POT-Creation-Date: 2024-05-31 07:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1123,107 +1123,75 @@ msgid "When editing the translations, the default language set in the database a
 msgstr ""
 
 #: ../../content/applications/general/developer_mode.rst:5
-msgid "Developer Mode (debug mode)"
+msgid "Developer mode (debug mode)"
 msgstr ""
 
 #: ../../content/applications/general/developer_mode.rst:7
-msgid "The developer mode (or debug mode) unlocks access to extra and advanced tools in Odoo. There are several ways to activate the developer mode: through the :ref:`settings <general/developer_mode/settings>`, the :ref:`browser extension <general/developer_mode/browser-extension>`, through the :ref:`command palette <general/developer_mode/command-palette>`  or the :ref:`URL <general/developer_mode/url>`."
+msgid "The developer mode, also known as debug mode, unlocks access to advanced :ref:`tools and settings <developer-mode/tools>` in Odoo."
 msgstr ""
 
-#: ../../content/applications/general/developer_mode.rst:17
-msgid "Activate through the Settings"
+#: ../../content/applications/general/developer_mode.rst:11
+msgid "Proceed with caution, as some developer tools and technical settings are considered advanced and may have associated risks. Only use them if you understand the implications and are confident in your actions."
 msgstr ""
 
-#: ../../content/applications/general/developer_mode.rst:19
-msgid "The debug mode can be activated in the Odoo database settings. Go to :menuselection:`Settings --> General Settings --> Developer Tools` and click on :guilabel:`Activate the developer mode`. At least one application needs to be installed for the :guilabel:`Developer Tools` section to appear in the :guilabel:`Settings` module."
+#: ../../content/applications/general/developer_mode.rst:16
+msgid "The developer mode is also available with :ref:`assets <frontend/framework/assets_debug_mode>`, which are used to debug JavaScript code, and with :ref:`tests assets <frontend/framework/tests_debug_mode>`, which are used to run test tours."
 msgstr ""
 
-#: ../../content/applications/general/developer_mode.rst:-1
-msgid "Overview of the debug options under settings in Odoo."
+#: ../../content/applications/general/developer_mode.rst:23
+msgid "Activation"
 msgstr ""
 
-#: ../../content/applications/general/developer_mode.rst:29
-msgid ":guilabel:`Activate the developer mode (with assets)` is used by developers; :guilabel:`Activate the developer mode (with tests assets)` is used by developers and testers."
+#: ../../content/applications/general/developer_mode.rst:25
+msgid "To activate it, open the :guilabel:`Settings` app, scroll down to the :guilabel:`Developer Tools` section, and click :guilabel:`Activate the developer mode`."
 msgstr ""
 
-#: ../../content/applications/general/developer_mode.rst:32
+#: ../../content/applications/general/developer_mode.rst:28
 msgid "Once activated, the :guilabel:`Deactivate the developer mode` option becomes available."
 msgstr ""
 
+#: ../../content/applications/general/developer_mode.rst:-1
+msgid "Activating the developer mode in the Settings app"
+msgstr ""
+
+#: ../../content/applications/general/developer_mode.rst:33
+msgid "To activate the developer mode **from anywhere in the database**, add `?debug=1` to the URL after `/web` (e.g., `https://example.odoo.com/web?debug=1#action=menu&cids=1`). To deactivate it, use `?debug=0` instead."
+msgstr ""
+
 #: ../../content/applications/general/developer_mode.rst:37
-msgid "Activate through the browser extension"
+msgid "Use `?debug=assets` to activate the developer mode with assets and `?debug=tests` to activate it with tests assets."
 msgstr ""
 
-#: ../../content/applications/general/developer_mode.rst:39
-msgid "Within a web browser, navigate to the browser settings and extensions and search for the `Odoo Debug` extension. Once the extension is installed, a new icon will be shown on the browser's toolbar."
+#: ../../content/applications/general/developer_mode.rst:41
+msgid "Open the **command palette** by pressing `Ctrl + K` or `Cmd ⌘ + K`, then type `debug` to activate the developer mode with assets or deactivate it."
 msgstr ""
 
-#: ../../content/applications/general/developer_mode.rst:43
-msgid "For the *Odoo Debug* extension, a single click enables a normal version of the mode, while a double click enables it with assets. To deactivate it, use a single click."
+#: ../../content/applications/general/developer_mode.rst:44
+msgid "Browser extension"
 msgstr ""
 
-#: ../../content/applications/general/developer_mode.rst:-1
-msgid "View of Odoo's debug icon in a Google Chrome toolbar."
+#: ../../content/applications/general/developer_mode.rst:46
+msgid "The `Odoo Debug <https://github.com/Droggol/OdooDebug>`_ browser extension adds an icon to toggle developer mode on or off from the browser's toolbar. It is available on the `Chrome Web Store <https://chromewebstore.google.com/detail/odoo-debug/hmdmhilocobgohohpdpolmibjklfgkbi>`_ and `Firefox Add-ons <https://addons.mozilla.org/firefox/addon/odoo-debug/>`_."
 msgstr ""
 
-#: ../../content/applications/general/developer_mode.rst:53
-msgid "Activate through the command palette"
+#: ../../content/applications/general/developer_mode.rst:54
+msgid "Developer tools and technical menu"
 msgstr ""
 
-#: ../../content/applications/general/developer_mode.rst:55
-msgid "In Odoo, the command palette tool has a command to activate the debug mode. First, open the command palette tool with the keyboard shortcut `ctrl+k` and then type `debug`. A command will show up to activate the debug mode."
-msgstr ""
-
-#: ../../content/applications/general/developer_mode.rst:-1
-msgid "Command palette with debug command."
-msgstr ""
-
-#: ../../content/applications/general/developer_mode.rst:68
-msgid "Activate through the URL"
-msgstr ""
-
-#: ../../content/applications/general/developer_mode.rst:70
-msgid "The debug mode can also be activated by adding an extra query string to the database's URL. In the URL, add `?debug=1` or `?debug=true` after `/web`. To deactivate the debug mode, change the value to `?debug=0` instead."
+#: ../../content/applications/general/developer_mode.rst:56
+msgid "Once the developer mode is activated, the developer tools can be accessed by clicking the :icon:`fa-bug` :guilabel:`(bug)` icon. The menu contains tools useful for understanding or editing technical data, such as a view's field, filters, or actions. The options available depend on where the menu is accessed from."
 msgstr ""
 
 #: ../../content/applications/general/developer_mode.rst:-1
-msgid "Overview of a URL with the debug mode command added."
+msgid "Accessing the developer tools"
 msgstr ""
 
-#: ../../content/applications/general/developer_mode.rst:79
-msgid "Additional modes are available for developers: `?debug=assets` enables the :ref:`assets mode <frontend/framework/assets_debug_mode>`, and `?debug=tests` enables the :ref:`tests mode <frontend/framework/tests_debug_mode>`."
-msgstr ""
-
-#: ../../content/applications/general/developer_mode.rst:86
-msgid "Locate the developer mode tools"
-msgstr ""
-
-#: ../../content/applications/general/developer_mode.rst:88
-msgid "Once developer mode is activated, the developer mode tools can be accessed from the :guilabel:`Open Developer Tools` button, the bug icon located in the header of the Odoo database."
+#: ../../content/applications/general/developer_mode.rst:64
+msgid "Database administrators can access the technical menu from the :guilabel:`Settings` app. It contains advanced database settings, such as ones related to the database structure, security, actions, etc."
 msgstr ""
 
 #: ../../content/applications/general/developer_mode.rst:-1
-msgid "Overview of a console page and the debug icon being shown in Odoo."
-msgstr ""
-
-#: ../../content/applications/general/developer_mode.rst:95
-msgid "This menu contains additional tools that are useful to understand or edit technical data, such as the views or actions of a page. On a page that has filters, actions, and view options, the developer mode tools contain some useful menu items such as:"
-msgstr ""
-
-#: ../../content/applications/general/developer_mode.rst:99
-msgid ":guilabel:`Edit Action`"
-msgstr ""
-
-#: ../../content/applications/general/developer_mode.rst:100
-msgid ":guilabel:`Manage Filters`"
-msgstr ""
-
-#: ../../content/applications/general/developer_mode.rst:101
-msgid "Edit the current view (e.g. Kanban, List, Graph, etc.)"
-msgstr ""
-
-#: ../../content/applications/general/developer_mode.rst:102
-msgid "See the :guilabel:`Fields View Get`"
+msgid "Accessing the technical menu"
 msgstr ""
 
 #: ../../content/applications/general/email_communication.rst:5
@@ -5128,7 +5096,7 @@ msgid "Download and initial installation"
 msgstr ""
 
 #: ../../content/applications/general/iot/config/windows_iot.rst:41
-msgid "To begin the installation, navigate to the Odoo 16 or higher installation package for Enterprise or Community - Windows edition at `Odoo's download page <https://odoo.com/download>`_. Next, install and setup the Odoo :file:`.exe` file. After the instructions screen, click :guilabel:`Next` to start the installation and agree to the :abbr:`TOS (Terms of Service)`."
+msgid "To begin the installation, navigate to the Odoo 16 or higher installation package for Community - Windows edition at `Odoo's download page <https://odoo.com/download>`_. Next, install and setup the Odoo :file:`.exe` file. After the instructions screen, click :guilabel:`Next` to start the installation and agree to the :abbr:`TOS (Terms of Service)`."
 msgstr ""
 
 #: ../../content/applications/general/iot/config/windows_iot.rst:46
@@ -5507,8 +5475,16 @@ msgstr ""
 msgid "Confirm the un-installation and follow the steps to uninstall through the Odoo uninstall guide."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices.rst:5
+#: ../../content/applications/general/iot/devices.rst:7
 msgid "Devices"
+msgstr ""
+
+#: ../../content/applications/general/iot/devices.rst:21
+msgid ":doc:`Worldline payment terminal <../../sales/point_of_sale/payment_methods/terminals/worldline>`"
+msgstr ""
+
+#: ../../content/applications/general/iot/devices.rst:23
+msgid ":doc:`Ingenico payment terminal <../../sales/point_of_sale/payment_methods/terminals/ingenico>`"
 msgstr ""
 
 #: ../../content/applications/general/iot/devices/camera.rst:3
