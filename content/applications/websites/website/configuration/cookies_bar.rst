@@ -2,75 +2,56 @@
 Cookies bar
 ===========
 
-Cookies are small text files sent to your device when you visit a website. They are processed and
-stored by your browser and contain information about your visit, such as login data, location,
-language, etc. There are two main types of cookies:
+**Cookies** are small text files sent to your device when you visit a website. They are processed
+and stored by your browser and track user information like login details, preferences, and browsing
+history. **Essential cookies** are necessary for the website to function, while **optional cookies**
+are used to analyze behavior or display ads.
 
-- Essential cookies, which are necessary for the website to function properly;
-- Non-essential or optional cookies, which are used to analyze your behavior or display
-  advertisements.
-
-.. image:: cookies_bar/popup.png
-   :width: 500
-   :alt: Example of a cookies bar with the popup layout.
-
-Notifying users about data collection, as well as its methods and purposes, is required by data
-protection laws such as `GDPR <https://gdpr.eu>`_. Cookies bars are commonly used to fulfill this
-obligation in a user-friendly and transparent manner. They are displayed immediately upon a user's
-first visit to inform them that the website uses cookies and let them decide whether they want to
-store non-essential cookies on their device.
+Data protection laws require notifying users about data collection methods and purposes.
+**Cookies bar** fulfill this obligation by informing users on their first visit and allowing them to
+decide whether to store all or only essential cookies on their device.
 
 Configuration
 =============
 
-To enable the cookies bar on your Odoo website, go to :menuselection:`Website --> Configuration` and
-enable :guilabel:`Cookies Bar` in the :guilabel:`Privacy` section.
+To enable the cookies bar on your website, go to :menuselection:`Website --> Configuration -->
+Settings` and enable :guilabel:`Cookies Bar` in the :guilabel:`Privacy` section.
 
-You can :ref:`customize the appearance of your cookies bar <cookies-bar/customization>` and :ref:`edit the content of
-the related Cookie Policy page <cookies-bar/policy>`.
+.. note::
+   The :ref:`Cookies Policy <cookies-bar/policy>` page (/cookie-policy`) is automatically created
+   when you enable the cookies bar.
 
 .. _cookies-bar/customization:
 
 Customization
 =============
 
-To adapt the display of the cookies bar, click :guilabel:`Edit` and select the :guilabel:`Cookies
-Bar` building block in the :guilabel:`Invisible Elements` at the bottom of the panel. Customize it
-using the options in the :guilabel:`Customize` tab in the edit panel. Three :guilabel:`Layouts` are
-available:
+To adapt the display of the cookies bar, click :guilabel:`Edit`, go to the
+:guilabel:`Invisible Elements` section at the bottom of the panel, and click
+:guilabel:`Cookies Bar`. You can modify the :guilabel:`Layout` and :guilabel:`Size` of the
+cookies bar, and enable :guilabel:`Backdrop` to gray out the page in the background when the cookies
+bar is displayed on the screen.
 
-- :guilabel:`Discrete`: thin bar
-- :guilabel:`Classic`: banner
-- :guilabel:`Popup`: you can change the popup's :guilabel:`Position` to the :guilabel:`Top`,
-  :guilabel:`Middle`, or :guilabel:`Bottom` of the screen.
-
-You can also:
-
-- modify the :guilabel:`Size` of the cookies bar;
-- enable :guilabel:`Backdrop` to gray out the page in the background when the cookies bar is
-  displayed on the screen;
-- further customize the appearance of the cookies bar using :guilabel:`Block` and/or
-  :guilabel:`Column` customization options, which are available after clicking anywhere in the
-  building block.
+Click anywhere in the building block to further customize the appearance of the cookies bar using
+:guilabel:`Block`, :guilabel:`Column` and/or :guilabel:`Inline Text` customization options.
 
 To edit the contents of the cookies bar (i.e., the consent message), click directly in the building
 block.
 
-.. image:: cookies_bar/customization.png
-   :alt: Odoo Website's edit panel to customize the cookies bar.
-
 .. _cookies-bar/policy:
 
-Cookie policy
-=============
+Cookies policy
+==============
 
 When you enable the cookies bar for your website, Odoo creates the **Cookie Policy** page
-(`/cookie-policy`) with the list of essential and optional cookies. To access it, click the
-:guilabel:`Cookie Policy` hyperlink in the cookies bar or open the page from :menuselection:`Website
---> Site --> Pages`.
+(`/cookie-policy`) containing a non-exhaustive list of cookies, with their purpose and examples. To
+access it, click the :guilabel:`Cookie Policy` hyperlink in the cookies bar or open the page from
+:menuselection:`Website --> Site --> Pages`.
 
-The contents of the page can be adapted based on your website's features and characteristics if
-needed.
+To adapt the content of the page according to your needs, click the :guilabel:`Edit` button.
 
 .. tip::
-   You could add a link providing access to this page, in your website's footer, for example.
+   You could add a link to this page in your website's footer, for example.
+
+.. seealso::
+   :doc:`Pages <../pages>`
