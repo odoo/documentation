@@ -315,6 +315,44 @@ product form.
    is added to a pricelist, it is also reflected on the product form via the :guilabel:`Extra
    Prices` smart button.
 
+.. _sales/discounts:
+
+Discounts
+=========
+
+The *Discounts* feature allows the ability to set a discount or increase the price on *individual
+items* in a sales order. This is calculated as a percentage of that product's sales price.
+
+To access discounts, navigate to the *Sales* app setting page (:menuselection:`Sales app -->
+Configuration --> Settings`), and click the :guilabel:`Discounts` checkbox, then click
+:guilabel:`Save`.
+
+.. image:: pricing/discounts-option.png
+   :align: center
+   :alt: Click the checkbox labeled Discounts to activate Discounts.
+
+After the setting has been activated, navigate to the desired quotation by going to
+:menuselection:`Sales app --> Orders --> Quotations` at the top of the page. Once there, click on
+the desired quote from the list.
+
+In the order lines section of the quotation form, a new column heading will appear labeled
+:guilabel:`Disc.%`. This column is used to set discounts on individual line items. Enter the desired
+discount for each product line and the new price will automatically be calculated in the quote
+:guilabel:`Total` at the bottom of the page.
+
+.. tip::
+   A discount can also be added directly to a sales order in the same way. Navigate to
+   :menuselection:`Sales app --> Orders --> Orders`, click on the desired sales order, and add the
+   discount to :guilabel:`Disc.%` as described above.
+
+.. image:: pricing/discount-on-sales-order.png
+   :align: center
+   :alt: The Dis.% heading will now appear in Order Lines.
+
+.. tip::
+   Positive values for :guilabel:`Disc.%` will apply a *discount*, while negative values can be
+   used to *increase* the price.
+
 .. _sales/advanced-price-rules:
 
 Advanced price rules
