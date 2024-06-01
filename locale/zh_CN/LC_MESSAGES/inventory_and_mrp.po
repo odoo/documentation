@@ -17,18 +17,18 @@
 # 山西清水欧度(QQ:54773801) <54773801@qq.com>, 2023
 # Gary Wei <Gary.wei@elico-corp.com>, 2024
 # Mandy Choy <mnc@odoo.com>, 2024
+# Chloe Wang, 2024
 # Martin Trigaux, 2024
 # Wil Odoo, 2024
-# Chloe Wang, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-29 10:38+0000\n"
+"POT-Creation-Date: 2024-05-30 07:20+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
-"Last-Translator: Chloe Wang, 2024\n"
+"Last-Translator: Wil Odoo, 2024\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/odoo/teams/41243/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,8 +37,8 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../content/applications/inventory_and_mrp.rst:5
-msgid "Inventory & MRP"
-msgstr "库存&MRP"
+msgid "Supply Chain"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode.rst:8
 msgid "Barcode"
@@ -1332,6 +1332,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:14
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:53
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/uom.rst:21
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:22
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/package.rst:38
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:13
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:19
@@ -1351,6 +1352,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/resupply_warehouses.rst:11
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations.rst:44
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/integrating_landed_costs.rst:11
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:65
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:23
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:11
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:15
@@ -3266,6 +3268,8 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:174
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:163
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:182
 msgid "Manual"
 msgstr "手动"
 
@@ -4175,11 +4179,12 @@ msgid ":doc:`lots`"
 msgstr ":doc:`lots` "
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/differences.rst:18
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:19
 msgid ":doc:`serial_numbers`"
 msgstr ":doc:`serial_numbers` "
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/differences.rst:21
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:22
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:28
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:20
 msgid "Enable lots & serial numbers"
 msgstr ""
@@ -4252,6 +4257,7 @@ msgid ""
 msgstr "序列号可以包含多种不同类型的字符：数字、字母、印刷符号或三种类型的混合字符。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/differences.rst:67
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:321
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:114
 msgid "Traceability"
 msgstr "追溯"
@@ -4764,6 +4770,7 @@ msgstr ""
 ":guilabel:`产品类别`上设置。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:226
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:190
 msgid ":doc:`../../warehouses_storage/advanced_operations_warehouse/removal`"
 msgstr ""
 
@@ -4853,117 +4860,422 @@ msgid "Expiration alert for product past the expiration date."
 msgstr "过期产品的过期提醒。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:3
-msgid "Use lots to manage groups of products"
-msgstr "使用批次管理产品组"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:5
-msgid ""
-"*Lots* are one of the two ways to identify and track products in Odoo. A lot"
-" usually indicates a specific batch of an item that was received, is "
-"currently stored, or was shipped from a warehouse, but can also pertain to a"
-" batch of products manufactured in-house, as well."
+msgid "Lot numbers"
 msgstr ""
-"*批次*是在 Odoo "
-"中识别和追踪产品的两种方法之一。批次通常表示收到的、目前储存的或从仓库发运的某一特定批次的物品，但也可表示内部生产的某一批次产品。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:9
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:8
 msgid ""
-"Manufacturers assign lot numbers to groups of products that have common "
-"properties; this can lead to multiple goods sharing the same lot number. "
-"This helps to identify a number of products in a single group, and allows "
-"for end-to-end traceability of these products through each step in their "
-"lifecycles."
+"*Lots* are one of the two ways to identify and track products in Odoo. They "
+"typically represent a specific batch of products that were received, stored,"
+" shipped, or manufactured in-house."
 msgstr ""
-"制造商为具有共同属性的产品组分配批号；这可能导致多种产品共享相同的批号。这有助于识别单个组中的多个产品，并允许对这些产品生命周期中的每个步骤进行端到端追溯。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:11
+msgid ""
+"Manufacturers assign lot numbers to groups of products sharing common "
+"properties, facilitating end-to-end traceability through their lifecycles."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:14
 msgid ""
-"Lots are useful for products that are manufactured or received in large "
-"quantities (such as clothes or food), and can be used to trace a product "
-"back to a group. This is especially useful when managing product recalls or "
-"expiration dates."
-msgstr "批次对大量生产或接收的产品（如服装或食品）非常适用，可用于追溯产品的组别。这在管理产品召回或过期日期时尤其有用。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:19
-msgid ""
-":doc:`/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers`"
+"Lots are useful for managing large quantities of manufactured or received "
+"products, aiding in tracing items back to their group, particularly for "
+"product recalls or :doc:`expiration dates <expiration_dates>`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:24
 msgid ""
-"To track products using lots, the *Lots & Serial Numbers* feature must be "
-"enabled. Go to the :menuselection:`Inventory app --> Configuration --> "
-"Settings`, scroll down to the :guilabel:`Traceability` section, and click "
-"the box next to :guilabel:`Lots & Serial Numbers`. Then, click the "
-":guilabel:`Save` button to save changes."
+"To track products by lots, enable the *Lots & Serial Numbers* feature. Then,"
+" configure each product to be tracked by serial numbers on the product form."
 msgstr ""
-"要使用批次追踪产品，必须启用*批次和序列号*功能。转到 :menuselection:`库存应用程序 --> 配置 --> 设置`，向下滚动到 "
-":guilabel:`追溯性` 部分，然后点击 :guilabel:`批次和序列号` 旁边的方框。然后，点击 :guilabel:`保存` "
-"按钮保存更改。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:30
+msgid ""
+"To track products using lots, enable the *Lots & Serial Numbers* feature. Go"
+" to the :menuselection:`Inventory app --> Configuration --> Settings`, "
+"scroll down to the :guilabel:`Traceability` section, and tick the checkbox "
+"next to :guilabel:`Lots & Serial Numbers`. Then, click :guilabel:`Save`."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:36
-msgid "Track products by lots"
-msgstr "按批次追踪产品"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:38
-msgid ""
-"Once the :guilabel:`Lots & Serial Numbers` setting has been activated, "
-"individual products can now be configured to be tracked using lots. To do "
-"this, go to the :menuselection:`Inventory app --> Products --> Products`, "
-"and choose a product."
+msgid ":doc:`Tracking expiration dates <expiration_dates>`"
 msgstr ""
-"激活 :guilabel:`批次和序列号` 设置后，现在可以配置使用批次追踪单个产品。要执行此操作，请转到 :menuselection:`库存应用程序"
-" --> 产品 --> 产品` 并选择一个产品。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:42
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:37
 msgid ""
-"Once on the product form, click :guilabel:`Edit` to make changes to the "
-"form. Then, click the :guilabel:`Inventory` tab. In the "
-":guilabel:`Traceability` section, click :guilabel:`By Lots`. Then, click "
-":guilabel:`Save` to save changes. Existing or new lot numbers can now be "
-"assigned to newly-received or manufactured batches of this product."
+":ref:`Print GS1 barcodes for lots and serial numbers "
+"<barcode/operations/gs1-lots>`"
 msgstr ""
-"进入产品表单后，点击 :guilabel:`编辑` 对表单进行更改。然后，点击 :guilabel:`库存` 选项卡。在 :guilabel:`追溯性`"
-" 部分，点击 :guilabel:`按批次`。然后，点击 :guilabel:`保存`，以保存更改。现在，可为新接收或生产的产品批次分配现有或新批号。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:46
+msgid "Track by lots"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:48
 msgid ""
+"Once the :guilabel:`Lots & Serial Numbers` feature is activated, configure "
+"individual products to be tracked using lots. To do this, go to "
+":menuselection:`Inventory app --> Products --> Products`, and choose a "
+"product to configure."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:52
+msgid ""
+"On the product form, go to the :guilabel:`Inventory` tab. In the "
+":guilabel:`Traceability` section, select the :guilabel:`By Lots` option in "
+"the :guilabel:`Tracking` field. Now, new or existing lot numbers can be "
+"assigned to newly-received or manufactured batches of this product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:57
+msgid ""
 "If a product has stock on-hand prior to activating tracking by lots or "
-"serial numbers, an inventory adjustment might need to be performed to assign"
-" lot numbers to the existing stock."
-msgstr "如果产品在激活批次或序列号追踪之前已有库存，则可能需要进行库存调整，以便为现有库存分配批次号。"
+"serial numbers, use an :doc:`inventory adjustment "
+"<../../warehouses_storage/inventory_management/count_products>` to assign "
+"lot numbers to existing products in stock."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst-1
 msgid "Enabled tracking by lots feature on product form."
 msgstr "在产品表单上启用按批次追踪功能。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:56
-msgid "Create new lots for products already in stock"
-msgstr "为库存产品创建新批次"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:58
-msgid ""
-"New lots can be created for products already in stock with no assigned lot "
-"number. To do this, go to the :menuselection:`Inventory app --> Products -->"
-" Lots/Serial Numbers`, and click :guilabel:`Create`. Doing so reveals a "
-"separate page where a new :guilabel:`Lot/Serial Number` is generated "
-"automatically."
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:66
+msgid "Assign lots for shipping and receiving"
 msgstr ""
-"可以为库存中未分配批次的产品创建新批次。要执行此操作，请进入 :menuselection:`库存应用程序 --> 产品 --> "
-"批次/序列号`（:guilabel:`库存应用程序` --> `产品` --> `批次/序列号`），然后点击 "
-":guilabel:`创建`。这样会显示一个单独页面，在该页面中会自动生成一个新的 :guilabel:`批次/序列号`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:64
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:68
+msgid ""
+"Assign new lot numbers to :ref:`incoming goods "
+"<inventory/product_management/assign-lots>` on the receipt form. When "
+"shipping :ref:`outgoing goods <inventory/product_management/assign-lots-"
+"delivery>`, select products with specific lot numbers on the delivery order "
+"form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:76
+msgid "On receipts"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:78
+msgid ""
+"Assigning new or existing lot numbers to incoming goods can be done directly"
+" on receipts."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:80
+msgid ""
+"To begin, go to the :menuselection:`Purchase` app to `create and confirm "
+"<https://www.youtube.com/watch?v=o_uI718P1Dc>`_ a |PO| for products tracked "
+"by lot numbers. Then, click the :guilabel:`Receipt` smart button that "
+"appears at the top of the page to navigate to the warehouse receipt form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:86
+msgid ""
+"Alternatively, navigate to an existing receipt by going to the "
+":menuselection:`Inventory` app, clicking the :guilabel:`Receipts` Kanban "
+"card, and choosing the desired receipt."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:90
+msgid ""
+"Clicking :guilabel:`Validate` before assigning a lot number triggers a "
+":guilabel:`User Error`, indicating that a lot number **must** be assigned "
+"before validating the receipt."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:0
+msgid "Add lot/serial number user error popup."
+msgstr "添加批号/序列号用户错误弹出窗口。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:97
+msgid ""
+"On the receipt form, on the product line in the :guilabel:`Operations` tab, "
+"select the :guilabel:`⦙≣ (bulleted list)` icon to the right of the product "
+"that is tracked by lot numbers."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:104
+msgid "Show the bulleted list icon on the product line."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:104
+msgid "The bulleted list icon on the product line."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:106
+msgid ""
+"Doing so opens the :guilabel:`Detailed Operations` pop-up window, where the "
+":guilabel:`Lot/Serial Number` and :guilabel:`Done` quantity are assigned."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:109
+msgid ""
+"The two ways to assign lot numbers are **manually** and **copy/paste**."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:112
+msgid "Manual assignment"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:114
+msgid ""
+"To manually assign lot numbers, click :guilabel:`Add a line`, and choose the"
+" location the products will be stored in under the :guilabel:`To` column. "
+"Then, type a new :guilabel:`Lot/Serial Number`, and specify the "
+":guilabel:`Done` quantity."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:119
+msgid ""
+"To assign multiple lot numbers, or store to multiple locations, click "
+":guilabel:`Add a line`, and type a new :guilabel:`Lot/Serial Number` for "
+"additional quantities. Repeat until the total in the :guilabel:`Done` column"
+" matches the :guilabel:`Quantity Done` at the top."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst-1
+msgid "Assign lot number detailed operations popup."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:128
+msgid "Copy and paste"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:130
+msgid ""
+"From a spreadsheet with all of the lot numbers received from the supplier "
+"(or manually chosen to assign upon receipt), click :guilabel:`Add a line`, "
+"and proceed to copy and paste the lot numbers, in the :guilabel:`Lot/Serial "
+"Number` column."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst-1
+msgid "List of lot numbers copied on excel spreadsheet."
+msgstr "在 excel 电子表格中复制批号清单。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:142
+msgid "Lot numbers copied to the lot number line."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:142
+msgid ""
+"Lot numbers copied to the lot number line, with each lot number on its own "
+"line."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:144
+msgid ""
+"After clicking away from the text field, Odoo automatically generates the "
+"necessary lot number lines. The quantities in the :guilabel:`Done` column "
+"match the first entry. Manually adjust the :guilabel:`To` locations and "
+":guilabel:`Done` quantities for each lot number, as needed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:148
+msgid ""
+"Once all product quantities have been assigned a lot number, click "
+":guilabel:`Confirm` to close the pop-up window. Then, click "
+":guilabel:`Validate` on the receipt form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:152
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:201
+msgid ""
+":ref:`Traceability report for lot numbers <inventory/product_management/lot-"
+"traceability>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:157
+msgid "On delivery orders"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:159
+msgid ""
+"Odoo makes it possible to specify which lot numbers for a product are chosen"
+" for outgoing shipment on a delivery order form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:162
+msgid ""
+"To begin, create or select an existing quotation from the "
+":menuselection:`Sales` app. After confirming the |SO|, the "
+":guilabel:`Delivery` smart button becomes available. Click the "
+":guilabel:`Delivery` smart button to view the warehouse receipt form for "
+"that specific |SO|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:167
+msgid ""
+"Alternatively, navigate to delivery orders by going to the "
+":menuselection:`Inventory` app, and clicking the :guilabel:`Delivery Orders`"
+" Kanban card."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:170
+msgid ""
+"Clicking the :guilabel:`Delivery` smart button opens the the delivery order "
+"form, where lot numbers are picked for delivery. In the "
+":guilabel:`Operations` tab, click the :guilabel:`⦙≣ (bulleted list)` icon to"
+" the right of the product that is tracked by lot numbers. Clicking that icon"
+" reveals a :guilabel:`Detailed Operations` pop-up window."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:175
+msgid ""
+"In the :guilabel:`Detailed Operations` pop-up window, a "
+":guilabel:`Lot/Serial Number` is chosen, with the full :guilabel:`Reserved` "
+"quantity taken from that specific lot (if there is enough stock in that "
+"particular lot)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:179
+msgid ""
+"If there is insufficient stock in that lot, or if partial quantities of the "
+":guilabel:`Demand` should be taken from multiple lots, change the quantity "
+"in the :guilabel:`Done` column to only include that specific part of the "
+"total quantity."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:184
+msgid ""
+"The lot automatically chosen for delivery orders varies, depending on the "
+"selected removal strategy (:abbr:`FIFO (First In, First Out)`, :abbr:`LIFO "
+"(Last In, First Out)`, or :abbr:`FEFO (First Expiry, First Out)`). It also "
+"depends on the ordered quantity, and whether the lot's on-hand quantity is "
+"enough to fulfill the order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:192
+msgid ""
+"Next, click :guilabel:`Add a line`, select a different :guilabel:`Lot/Serial"
+" Number`, apply the remaining :guilabel:`Done` quantities, and click "
+":guilabel:`Confirm` to close the pop-up window. Lastly, click the "
+":guilabel:`Validate` button to deliver the products."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst-1
+msgid "Detailed operations popup for source lot number on sales order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:204
+msgid "Lot management"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:206
+msgid ""
+"Manage and view existing lot numbers for products in the "
+":guilabel:`Lot/Serial Numbers` dashboard by going to "
+":menuselection:`Inventory app --> Products --> Lots/Serial Numbers`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:209
+msgid ""
+"By default, lot numbers are grouped by product, and selecting the drop-down "
+"menu for each product displays the existing lot numbers. Select a lot number"
+" to :ref:`modify or add details <inventory/product_management/edit-lot>` "
+"linked to the lot. Lot numbers can also be :ref:`created "
+"<inventory/product_management/create-new-lot>` from this page, by clicking "
+"the :guilabel:`New` button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:219
+msgid "Show the \"Lot/Serial Number\" dashboard."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:219
+msgid ""
+"Display lot numbers, grouped by products, on the **Lot/Serial Number** "
+"dashboard."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:224
+msgid "Modify lot"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:226
+msgid ""
+"Clicking a lot from the :guilabel:`Lot/Serial Number` dashboard reveals a "
+"separate page where additional information can be provided about the lot."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:230
+msgid ""
+"Odoo automatically generates a new :guilabel:`Lot/Serial Number` to follow "
+"the most recent number. However, it can be edited, by clicking the line "
+"under the :guilabel:`Lot/Serial Number` field, and changing the generated "
+"number to any desired one."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:234
+msgid "On the lot number form, the following fields can be modified:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:236
+msgid ""
+":guilabel:`Lot/Serial Number`: Change the lot number linked to the "
+":guilabel:`Product`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:237
+msgid ""
+":guilabel:`Internal Reference`: Records an alternative lot/serial number "
+"used within the warehouse that differs from the one used by the supplier "
+"manufacturer."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:239
+msgid ""
+":guilabel:`Company`: Specify the company where the lot number is available."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:240
+msgid ""
+":guilabel:`Description`: Add extra details about the lot or serial number in"
+" this text field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:243
+msgid ""
+"The :guilabel:`Product` and :guilabel:`Quantity` fields **cannot** be "
+"modified, as the lot numbers are linked with existing stock moves."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst-1
+msgid "Show the lot number form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:251
+msgid ":doc:`Set expiration dates for lots <expiration_dates>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:256
+msgid "Reserve lot number for a product"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:258
+msgid ""
+"To create a lot number for a product, begin by going to "
+":menuselection:`Inventory app --> Products --> Lot/Serial Numbers`, and "
+"click :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:262
+msgid ""
+"Creating a lot number reserves it for a product but **does not** assign it. "
+"To assign lot numbers, refer to the section on :ref:`assigning lot numbers "
+"on receipts <inventory/product_management/assign-lots>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:267
 msgid ""
 "While Odoo automatically generates a new :guilabel:`Lot/Serial Number` to "
 "follow the most recent number, it can be edited and changed to any desired "
-"number, by clicking the line under the :guilabel:`Lot/Serial Number` field, "
-"and changing the generated number."
+"number, by clicking the line under the :guilabel:`Lot/Serial Number` field "
+"on the lot form, and changing the generated number."
 msgstr ""
-"虽然 Odoo 会自动生成一个新的 :guilabel:`批次/序列号` 以跟随最新编号，但可通过点击 :guilabel:`批次/序列号` "
-"字段下的行并更改生成的编号，将其编辑和更改为任何所需的编号。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:68
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:271
 msgid ""
 "Once the new :guilabel:`Lot/Serial Number` is generated, click the blank "
 "field next to :guilabel:`Product` to reveal a drop-down menu. From this "
@@ -4972,408 +5284,102 @@ msgstr ""
 "生成新的 :guilabel:`批次/序列号` 后，点击 :guilabel:`产品` "
 "旁边的空白区域，显示一个下拉菜单。从该菜单中选择要分配新编号的产品。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:72
-msgid ""
-"This form also provides the option to adjust the :guilabel:`Quantity`, "
-"assign a unique :guilabel:`Internal Reference` number (for traceability "
-"purposes), and assign this specific lot or serial number configuration to a "
-"specific website in the :guilabel:`Website` field (if working in a multi-"
-"website environment)."
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:276
+msgid "The lot number, `0000011`, is created for the product, `Drawer Black`."
 msgstr ""
-"此表单还提供调整 :guilabel:`数量` 的选项，分配唯一的 :guilabel:`内部参考` 编号（用于可追溯性目的），并在 "
-":guilabel:`网站` 字段中将此特定批次或序列号配置分配给特定网站（如在多网站环境中工作）。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:77
-msgid ""
-"A detailed description of this specific lot or serial number can also be "
-"added in the :guilabel:`Description` tab below."
-msgstr "也可在下面的 :guilabel:`描述` 标签中添加对该特定批次或序列号的详细描述。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:80
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:81
-msgid ""
-"When all desired configurations are complete, click the :guilabel:`Save` "
-"button to save all changes."
-msgstr "完成所有所需配置后，点击 :guilabel:`保存` 按钮保存所有更改。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst-1
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:0
 msgid "New lot number creation form with assigned product."
 msgstr "带有指定产品的新批号创建表。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:86
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:282
 msgid ""
 "After a new lot number has been created, saved, and assigned to the desired "
-"product, navigate back to the product form in the :menuselection:`Inventory`"
-" app, by going to :menuselection:`Products --> Products`, and selecting the "
-"product to which this newly-created lot number was just assigned."
-msgstr ""
-"创建、保存新批次并将其分配给所需产品后，通过 :menuselection:`产品 --> 产品` 访问 :menuselection:`库存` "
-"应用程序中的产品表单，并选择刚刚分配新创建批次的产品。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:90
-msgid ""
-"On that product's detail form, click the :guilabel:`Lot/Serial Numbers` "
-"smart button to view the new lot number. When additional quantity of this "
-"product is received or manufactured, this new lot number can be selected and"
-" assigned to it."
-msgstr ""
-"在该产品的详细表格中，点击 :guilabel:`批次/序列号` 智能按钮查看新的批号。当收到或生产更多数量的该产品时，可选择并分配新的批号。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:95
-msgid "Manage lots for shipping and receiving"
-msgstr "管理送货和收货批次"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:97
-msgid ""
-"Lot numbers can be assigned for both **incoming** and **outgoing** goods. "
-"For incoming goods, lot numbers are assigned directly on the purchase order "
-"form. For outgoing goods, lot numbers are assigned directly on the sales "
-"order form."
-msgstr "可为**入库**和**出库**货物指定批号。对于入库货物，可直接在采购订单上分配批号。对于出库货物，则直接在销售订单上分配批号。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:102
-msgid "Manage lots on receipts"
-msgstr "管理收据批次"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:104
-msgid ""
-"Assigning lot numbers to **incoming** goods can be done directly from the "
-"purchase order (PO)."
-msgstr "可直接从采购订单（PO）中为**入库**货物分配批号。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:106
-msgid ""
-"To create a :abbr:`PO (purchase order)`, go to :menuselection:`Purchase app "
-"--> Create`. Doing so reveals a new, blank request for quotation (RFQ) form."
-msgstr ""
-"要创建一个 :abbr:`PO（采购订单）`，请转到 :menuselection:`采购应用程序 --> "
-"创建`。这样就会出现一个新的空白询价（RFQ）表单。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:109
-msgid ""
-"On this :abbr:`RFQ (request for quotation)`, fill out the necessary "
-"information by adding a :guilabel:`Vendor`, and adding the desired products "
-"to the :guilabel:`Product` lines, by clicking :guilabel:`Add a product` "
-"(under the :guilabel:`Products` tab)."
-msgstr ""
-"在此 :guilabel:`RFQ（询价单）`上，通过添加 :guilabel:`供应商`填写必要信息，并点击 :guilabel:`添加产品`（在 "
-":guilabel:`产品`选项卡下），在 :guilabel:`产品`行中添加所需的产品。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:113
-msgid ""
-"Choose the desired quantity of the product to order by changing the number "
-"in the :guilabel:`Quantity` column."
-msgstr "更改 :guilabel:`数量` 列中的数字，选择所需的订购产品数量。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:116
-msgid ""
-"Once the :abbr:`RFQ (request for quotation)` has been filled out, click "
-":guilabel:`Confirm Order`. When the :abbr:`RFQ (request for quotation)` is "
-"confirmed, it becomes a :guilabel:`Purchase Order`, and a "
-":guilabel:`Receipt` smart button appears. Click the :guilabel:`Receipt` "
-"smart button to be taken to the warehouse receipt form."
-msgstr ""
-"填写完 : abbr:`RFQ（询价单）`后，点击 :guilabel:`确认订单`。当 :abbr:`RFQ（询价单）`被确认后，它将成为一个 "
-":guilabel:`采购订单`，并出现一个 :guilabel:`收据` 智能按钮。点击 :guilabel:`收据` 智能按钮，进入仓库收据表格。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:122
-msgid ""
-"Clicking :guilabel:`Validate` before assigning a lot number to the ordered "
-"product quantities will result in a :guilabel:`User Error` pop-up. The pop-"
-"up requires entry of a lot or serial number for the ordered products. The "
-":abbr:`RFQ (request for quotation)` **cannot** be validated without a lot "
-"number being assigned."
-msgstr ""
-"在为订购的产品数量分配批号之前点击 :guilabel:`验证` 会弹出 :guilabel:`用户错误` "
-"窗口。弹出窗口要求输入订购产品的批号或序列号。在未指定批号的情况下，**无法**验证:abbr:`RFQ（询价单）`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst-1
-msgid "Add lot/serial number user error popup."
-msgstr "添加批号/序列号用户错误弹出窗口。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:131
-msgid ""
-"From here, click the :guilabel:`Additional Options` menu, represented by a "
-":guilabel:`hamburger (four horizontal lines)` icon, located to the right of "
-"the :guilabel:`Unit of Measure` column in the :guilabel:`Operations` tab). "
-"Clicking that icon reveals a :guilabel:`Detailed Operations` pop-up."
+"product, the lot number is saved as an existing lot number linked to the "
+"product, and can be selected when :ref:`assigning lot numbers to products on"
+" a receipt <inventory/product_management/assign-lots>`, or when making an "
+"inventory adjustment."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:135
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:288
 msgid ""
-"In this pop-up, configure a number of different fields, including the "
-"assignation of a lot number, under the :guilabel:`Lot/Serial Number Name` "
-"column, located at the bottom of the pop-up."
+"After creating the lot number, `0000011` appears as an option for `Drawer "
+"Black` when assigning lot numbers on the :guilabel:`Inventory Adjustment` "
+"page."
 msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:138
-msgid ""
-"There are two ways to assign lot numbers: **manually** and **copy/paste**."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:140
-msgid ""
-"**Manually assign lot numbers**: Click :guilabel:`Add a line` and choose the"
-" location the products will be stored in under the :guilabel:`To` column. "
-"Then, type a new :guilabel:`Lot Number Name` and set the :guilabel:`Done` "
-"quantity."
-msgstr ""
-"**手动分配批号**：点击:guilabel:`添加行`，并在 :guilabel:`至` 列下选择产品要存储的位置。然后，键入新的 "
-":guilabel:`批号名称`，并设置 :guilabel:`已完成`数量。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:0
-msgid "Assign lot number detailed operations popup."
+msgid "Show how to assign serial numbers on the Inventory Adjustment page."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:149
-msgid ""
-"If quantities should be processed in multiple locations and lots, click "
-":guilabel:`Add a line` and type a new :guilabel:`Lot Number Name` for "
-"additional quantities. Repeat until the :guilabel:`Quantity Done` matches "
-"the :guilabel:`Demand`."
-msgstr ""
-"如果要在多个位置和批次处理数量，请点击 :guilabel:`添加行`并输入新的 :guilabel:`批号名称`以添加数量。重复上述操作，直到 "
-":guilabel:`已完成数量` 与 :guilabel:`需求量` 一致。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:153
-msgid ""
-"**Copy/paste lot numbers from a spreadsheet**: Populate a spreadsheet with "
-"all of the lot numbers received from the supplier (or manually chosen to "
-"assign upon receipt). Then, copy and paste them in the :guilabel:`Lot/Serial"
-" Number Name` column. Odoo will automatically create the necessary number of"
-" lines based on the amount of numbers pasted in the column. From here, the "
-":guilabel:`To` locations and :guilabel:`Done` quantities can be manually "
-"entered in each of the lot number lines."
-msgstr ""
-"**从电子表格复制/粘贴批号**：在电子表格中填入从供应商处收到的所有批号（或在收到时手动选择分配的批号）。然后，将其复制并粘贴到 "
-":guilabel:`批次/序列号名称` 列。Odoo "
-"将根据粘贴在列中的编号数量，自动创建所需的行数。在此，:guilabel:`至`位置和:guilabel:`已完成`数量可手动输入到每个批号行中。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:0
-msgid "List of lot numbers copied on excel spreadsheet."
-msgstr "在 excel 电子表格中复制批号清单。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:163
-msgid ""
-"Once all product quantities have been assigned a lot number, click "
-":guilabel:`Confirm` to close the pop-up. Then, click :guilabel:`Validate`."
-msgstr "为所有产品数量分配批号后，点击 :guilabel:`确认` 关闭弹出窗口。然后，点击 :guilabel:`验证`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:166
-msgid ""
-"A :guilabel:`Traceability` smart button appears upon validating the receipt."
-" Click the :guilabel:`Traceability` smart button to see the updated "
-":guilabel:`Traceability Report`, which includes: a :guilabel:`Reference` "
-"document, the :guilabel:`Product` being traced, the :guilabel:`Lot/Serial #`"
-" assigned, and more."
-msgstr ""
-"验证收据后会出现 :guilabel:`可追溯性` 智能按钮。点击 :guilabel:`可追溯性` 智能按钮，查看更新后的 "
-":guilabel:`可追溯性报告`，其中包括：:guilabel:`参考` "
-"文档、正在追踪的:guilabel:`产品`、:guilabel:`批次/序列号` 分配等。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:172
-msgid "Manage lots on delivery orders"
-msgstr "管理送货订单批号"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:174
-msgid ""
-"Assigning lot numbers to **outgoing** goods can be done directly from the "
-"sales order (SO)."
-msgstr "可直接从销售订单（SO）中为**出库**货物分配批号。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:176
-msgid ""
-"To create an :abbr:`SO (sales order)`, go to the :menuselection:`Sales app "
-"--> Create`. Doing so reveals a new, blank quotation form."
-msgstr ""
-"要创建一个 :abbr:`SO（销售订单）`，请转到 :menuselection:`销售应用程序 --> 创建`。这样就会出现一个新的空白报价单。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:179
-msgid ""
-"On this blank quotation form, fill out the necessary information by adding a"
-" :guilabel:`Customer`, and adding products to the :guilabel:`Product` lines "
-"(in the :guilabel:`Order Lines` tab) by clicking :guilabel:`Add a product`."
-msgstr ""
-"在此空白报价表上，通过添加 :guilabel:`客户` 填写必要信息，并通过点击 :guilabel:`添加产品` 在 :guilabel:`产品` "
-"行（在 :guilabel:`订单行` 选项卡中）添加产品。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:183
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:221
-msgid ""
-"Then, choose the desired quantity to sell by changing the number in the "
-":guilabel:`Quantity` column."
-msgstr "然后，更改 :guilabel:`数量` 列中的数字，选择所需的销售数量。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:185
-msgid ""
-"Once the quotation has been filled out, click the :guilabel:`Confirm` button"
-" to confirm the quotation. When the quotation is confirmed, it becomes an "
-":abbr:`SO (sales order)`, and a :guilabel:`Delivery` smart button appears."
-msgstr ""
-"填写报价单后，点击 :guilabel:`确认` 按钮确认报价单。确认报价单后，报价单将变为 :abbr:`SO（销售订单）`，并出现 "
-":guilabel:`送货` 智能按钮。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:189
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:227
-msgid ""
-"Click the :guilabel:`Delivery` smart button to view the warehouse receipt "
-"form for that specific :abbr:`SO (sales order)`."
-msgstr "点击 :guilabel:`送货` 智能按钮，查看该特定 :abbr:`SO（销售订单）` 的仓单表格。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:192
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:132
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:230
-msgid ""
-"From here, click the :guilabel:`Additional Options` menu, represented by a "
-"`hamburger` icon (four horizontal lines, located to the right of the "
-":guilabel:`Unit of Measure` column in the :guilabel:`Operations` tab). "
-"Clicking that icon reveals a :guilabel:`Detailed Operations` pop-up."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:196
-msgid ""
-"In the pop-up, a :guilabel:`Lot/Serial Number` will be chosen by default, "
-"with the full :guilabel:`Reserved` quantity taken from that specific lot (if"
-" there is enough stock in that particular lot)."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:200
-msgid ""
-"If there is insufficient stock in that lot, or if partial quantities of the "
-":guilabel:`Demand` should be taken from multiple lots, change the quantity "
-"in the :guilabel:`Done` column to only include that specific part of the "
-"total quantity."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:205
-msgid ""
-"The lot automatically chosen for delivery orders varies, depending on the "
-"selected removal strategy (:abbr:`FIFO (First In, First Out)`, :abbr:`LIFO "
-"(Last In, First Out)`, or :abbr:`FEFO (First Expiry, First Out)`). It will "
-"also depend on the quantity ordered, and if there is enough quantity in one "
-"lot to fulfill the order."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:211
-msgid ""
-":doc:`/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal`"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:213
-msgid ""
-"Then, click :guilabel:`Add a line`, select an additional (different) "
-":guilabel:`Lot/Serial Number`, apply the rest of the :guilabel:`Done` "
-"quantities, and click :guilabel:`Confirm` to close the pop-up. Lastly, click"
-" the :guilabel:`Validate` button to deliver the products."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst-1
-msgid "Detailed operations popup for source lot number on sales order."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:221
-msgid ""
-"Upon validating the delivery order, a :guilabel:`Traceability` smart button "
-"appears. Click the :guilabel:`Traceability` smart button to see the updated "
-":guilabel:`Traceability Report`, which includes a :guilabel:`Reference` "
-"document, the :guilabel:`Product` being traced, the :guilabel:`Date`, and "
-"the :guilabel:`Lot/Serial #` assigned."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:226
-msgid ""
-"The :guilabel:`Traceability Report` can also include a :guilabel:`Reference`"
-" receipt from the previous purchase order, if the product quantities shared "
-"the same lot number."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:230
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:296
 msgid "Manage lots for different operations types"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:232
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:298
 msgid ""
-"In Odoo, the creation of new lots is only allowed upon **receiving** "
-"products from a purchase order, by default. **Existing** lot numbers cannot "
-"be used."
+"By default, new lots can only be created when receiving products, and "
+"existing lot numbers cannot be used. For sales orders, only existing lot "
+"numbers can be utilized, and new ones cannot be created on the delivery "
+"order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:235
-msgid ""
-"For sales orders, the opposite is true: new lot numbers cannot be created on"
-" the delivery order, only existing lot numbers can be used."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:238
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:302
 msgid ""
 "To change the ability to use new (or existing) lot numbers on any operation "
 "type, go to the :menuselection:`Inventory app --> Configuration --> "
-"Operations Types`, and select the desired :guilabel:`Operation Type`."
+"Operations Types`, and select the desired operation type."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:242
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:306
 msgid ""
-"For :guilabel:`Receipts`, found on the :menuselection:`Operations Types` "
-"page, the :guilabel:`Use Existing Lots/Serial Numbers` option can be "
-"enabled, by clicking :guilabel:`Edit`, and then clicking the checkbox beside"
-" the :guilabel:`Use Existing Lots/Serial Numbers` option (in the "
-":guilabel:`Traceability` section). Lastly, click the :guilabel:`Save` button"
-" to save the changes."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:247
-msgid ""
-"For :guilabel:`Delivery Orders`, the :guilabel:`Create New Lots/Serial "
-"Numbers` option can be enabled, by clicking :guilabel:`Edit`, and clicking "
-"the checkbox beside the :guilabel:`Create New Lots/Serial Numbers` option. "
-"Be sure to click the :guilabel:`Save` button to save all changes."
+"On the operation type form, under the :guilabel:`Lots/Serial Numbers` "
+"section, tick the :guilabel:`Create New` checkbox to enable new lot numbers "
+"to be created during this operation type. Choose :guilabel:`Use Existing "
+"ones` if only existing lot numbers can be selected."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst-1
 msgid "Enabled traceability setting on operations type form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:256
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:315
 msgid ""
 "For inter-warehouse transfers involving products tracked by lots, it can be "
 "useful to enable the :guilabel:`Use Existing Lots/Serial Numbers` option for"
 " warehouse receipts."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:260
-msgid "Lots traceability"
-msgstr "批次追踪"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:262
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:323
 msgid ""
 "Manufacturers and companies can refer to traceability reports to see the "
-"entire lifecycle of a product: where (and when) it came from, where it was "
-"stored, and who (and when) it went to."
+"entire lifecycle of a product: where it came from, when it arrived, where it"
+" was stored, who it went to (and when)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:265
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:326
 msgid ""
 "To see the full traceability of a product, or group by lots, go to the "
 ":menuselection:`Inventory app --> Products --> Lots/Serial Numbers`. Doing "
 "so reveals the :menuselection:`Lots/Serial Numbers` dashboard."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:269
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:330
 msgid ""
 "From here, products with lot numbers assigned to them will be listed by "
 "default, and can be expanded to show the lot numbers those products have "
 "assigned to them."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:272
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:333
 msgid ""
-"To group by lots (or serial numbers), begin by removing any filters in the "
-"search bar. Then, click the :guilabel:`Group By` drop-down, select "
+"To group by lots, begin by removing any filters in the :guilabel:`Search...`"
+" bar. Then, click the :guilabel:`Group By` drop-down menu, select "
 ":guilabel:`Add Custom Group`, and select :guilabel:`Lot/Serial Number` from "
 "the drop-down menu. Then, click :guilabel:`Apply`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:276
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:337
 msgid ""
 "Doing so displays all existing lots and serial numbers, and can be expanded "
 "to show all quantities of products with that assigned number."
@@ -5383,10 +5389,23 @@ msgstr ""
 msgid "Lots and serial numbers traceability report."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:284
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:319
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:345
+msgid "Traceability report"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:347
 msgid ""
-":doc:`/applications/inventory_and_mrp/inventory/product_management/product_tracking/differences`"
+"To view a full stock moves report for a lot number, select the lot number "
+"line from the :guilabel:`Lots/Serial Number` dashboard. On the lot number "
+"form, click the :guilabel:`Traceability` smart button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst-1
+msgid "Show the Traceability Report for a lot, that displays the stock moves."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:356
+msgid ":doc:`differences`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/package.rst:3
@@ -6030,6 +6049,12 @@ msgid ""
 "in the :guilabel:`Description` tab below."
 msgstr ""
 
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:81
+msgid ""
+"When all desired configurations are complete, click the :guilabel:`Save` "
+"button to save all changes."
+msgstr "完成所有所需配置后，点击 :guilabel:`保存` 按钮保存所有更改。"
+
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst-1
 msgid "New serial number created for existing product stock."
 msgstr ""
@@ -6115,6 +6140,15 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst-1
 msgid "User error popup prompting serial number entry."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:132
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:230
+msgid ""
+"From here, click the :guilabel:`Additional Options` menu, represented by a "
+"`hamburger` icon (four horizontal lines, located to the right of the "
+":guilabel:`Unit of Measure` column in the :guilabel:`Operations` tab). "
+"Clicking that icon reveals a :guilabel:`Detailed Operations` pop-up."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:136
@@ -6270,6 +6304,12 @@ msgid ""
 "tab), by clicking :guilabel:`Add a product`."
 msgstr ""
 
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:221
+msgid ""
+"Then, choose the desired quantity to sell by changing the number in the "
+":guilabel:`Quantity` column."
+msgstr "然后，更改 :guilabel:`数量` 列中的数字，选择所需的销售数量。"
+
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:223
 msgid ""
 "Once the quotation has been filled out, click the :guilabel:`Confirm` button"
@@ -6277,6 +6317,12 @@ msgid ""
 "becomes an :abbr:`SO (sales order)`, and a :guilabel:`Delivery` smart button"
 " appears."
 msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:227
+msgid ""
+"Click the :guilabel:`Delivery` smart button to view the warehouse receipt "
+"form for that specific :abbr:`SO (sales order)`."
+msgstr "点击 :guilabel:`送货` 智能按钮，查看该特定 :abbr:`SO（销售订单）` 的仓单表格。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:234
 msgid ""
@@ -6419,6 +6465,11 @@ msgid ""
 ":guilabel:`Location` and :guilabel:`Traceability` smart buttons to see all "
 "stock on-hand using that serial number, and any operations made using that "
 "serial number."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:319
+msgid ""
+":doc:`/applications/inventory_and_mrp/inventory/product_management/product_tracking/differences`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving.rst:5
@@ -9390,7 +9441,7 @@ msgstr ""
 "您需要写邮件至 xmlrequests@dhl.com 并且随附您账户的详细信息诸如账号, region区域, 地址, 等访问API 访问信息。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:3
-msgid "Set up Sendcloud shipping services in Odoo"
+msgid "Sendcloud configuration"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:5
@@ -9438,18 +9489,16 @@ msgstr ""
 msgid ""
 "Odoo integration of Sendcloud works on free Sendcloud plans *only* if a bank"
 " account is linked, since Sendcloud won't ship for free. To use shipping "
-"rules or individual custom carrier contacts, a paid plan of Sendcloud is "
-"required."
+"rules, or individual custom carrier contacts, a paid plan of Sendcloud is "
+"**required**."
 msgstr ""
-"Odoo 与 Sendcloud 的整合仅适用于已链接银行账户的免费 Sendcloud 计划，因为 Sendcloud "
-"不会免费发货。要使用发货规则或单个自定义承运商联系人，则需要 Sendcloud 的付费计划。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:35
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:37
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:174
 msgid "Warehouse configuration"
 msgstr "仓库配置"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:37
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:39
 msgid ""
 "Once logged into the Sendcloud account, navigate to :menuselection:`Settings"
 " --> Shipping --> Addresses`, and fill in the field for :guilabel:`Warehouse"
@@ -9462,7 +9511,7 @@ msgstr ""
 msgid "Adding addresses in the Sendcloud settings."
 msgstr "在 Sendcloud 设置中添加地址。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:44
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:46
 msgid ""
 "To allow Sendcloud to process returns as well, a :guilabel:`Return Address` "
 "is required. Under the :guilabel:`Miscellaneous section`, there is a field "
@@ -9508,24 +9557,24 @@ msgstr ""
 msgid ":guilabel:`Address`: `My Company (San Francisco)`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:61
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:63
 msgid ""
 "Notice how the inputs for the :guilabel:`Warehouse` field, for both the Odoo"
 " configuration and the Sendcloud configuration, are the exact same."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:65
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:67
 msgid "Generate Sendcloud credentials"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:67
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:69
 msgid ""
 "In the Sendcloud account, navigate to :menuselection:`Settings --> "
 "Integrations` in the menu on the right. Next, search for :guilabel:`Odoo "
 "Native`. Then, click on :guilabel:`Connect`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:70
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:72
 msgid ""
 "After clicking on :guilabel:`Connect`, the page redirects to the "
 ":guilabel:`Sendcloud API` settings page, where the :guilabel:`Public and "
@@ -9535,7 +9584,7 @@ msgid ""
 "`Odoo StealthyWood`)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:75
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:77
 msgid ""
 "Then, check the box next to :guilabel:`Service Points` and select the "
 "shipping services for this integration. After saving, the :guilabel:`Public "
@@ -9546,30 +9595,40 @@ msgstr ""
 msgid "Configuring the Sendcloud integration and receiving the credentials."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:83
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:85
 msgid "Setup in Odoo"
 msgstr "设置Odoo"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:86
-msgid "Install the Sendcloud shipping module"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:87
+msgid ""
+"To ensure seamless Sendcloud integration with Odoo, :ref:`install "
+"<inventory/shipping_receiving/sendcloud-module>` and :ref:`link "
+"<inventory/shipping_receiving/link-sendcloud-module>` the Sendcloud shipping"
+" connector to the Sendcloud account. Then, :ref:`configure Odoo fields "
+"<inventory/shipping_receiving/sendcloud-shipping-info>`, so Sendcloud can "
+"accurately pull shipping data to generate labels."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:88
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:97
+msgid "Install Sendcloud shipping module"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:99
 msgid ""
 "After the Sendcloud account is set up and configured, it's time to configure"
-" the Odoo database. To get started, go to Odoo's :guilabel:`Apps` module,  "
-"search for the :guilabel:`Sendcloud Shipping` integration, and install it."
+" the Odoo database. To get started, go to Odoo's :guilabel:`Apps` module, "
+"search for the `Sendcloud Shipping` integration, and install it."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst-1
 msgid "Sendcloud Shipping module in the Odoo Apps module."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:97
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:110
 msgid "Sendcloud shipping connector configuration"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:99
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:112
 msgid ""
 "Once installed, activate the :guilabel:`Sendcloud Shipping` module in "
 ":menuselection:`Inventory --> Configuration --> Settings`. The "
@@ -9579,7 +9638,7 @@ msgstr ""
 "安装后，在 :menuselection:`库存 --> 配置 --> 设置` 中激活 :guilabel:`Sendcloud 送货` "
 "模块。guilabel:`Sendcloud 连接器`设置位于:guilabel:`发货连接器`部分。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:103
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:116
 msgid ""
 "After activating the :guilabel:`Sendcloud Connector`, click on the "
 ":guilabel:`Sendcloud Shipping Methods` link below the listed connector. Once"
@@ -9588,75 +9647,75 @@ msgstr ""
 "激活 :guilabel:`Sendcloud 连接器` 后，点击列出的连接器下方的 :guilabel:`Sendcloud 送货方式` "
 "链接。进入:guilabel:`送货方式`页面后，点击:guilabel:`创建`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:108
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:121
 msgid ""
 ":guilabel:`Shipping Methods` can also be accessed by going to "
 ":menuselection:`Inventory --> Configuration --> Delivery --> Shipping "
 "Methods`."
 msgstr ":guilabel:`送货方式` 也可以通过 :menuselection:`库存 --> 配置 --> 送货 --> 送货方式` 访问。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:124
 msgid ""
 "Fill out the following fields in the :guilabel:`New Shipping Method` form:"
 msgstr "在 :guilabel:`新送货方式` 表单中填写以下字段："
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:113
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:126
 msgid ":guilabel:`Shipping Method`: type `Sendcloud DPD`."
 msgstr ":guilabel:`送货方式`：类型 `Sendcloud DPD`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:127
 msgid ""
 ":guilabel:`Provider`: select :guilabel:`Sendcloud` from the drop-down menu."
 msgstr ":guilabel:`供应商`：从下拉菜单中选择 :guilabel:`Sendcloud`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:115
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:128
 msgid ""
 ":guilabel:`Delivery Product`: set the product that was configured for this "
 "shipping method or create a new product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:117
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:130
 msgid ""
 "In the :guilabel:`SendCloud Configuration` tab, enter the "
 ":guilabel:`Sendcloud Public Key`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:118
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:131
 msgid ""
 "In the :guilabel:`SendCloud Configuration` tab, enter the "
 ":guilabel:`Sendcloud Secret Key`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:119
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:132
 msgid ""
 "Manually :guilabel:`Save` the form by clicking the cloud icon next to the "
 ":guilabel:`Shipping Methods / New` breadcrumbs."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:122
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:135
 msgid ""
 "After configuring and saving the form, follow these steps to load the "
 "shipping products:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:124
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:137
 msgid ""
 "In the :guilabel:`SendCloud Configuration` tab of the :guilabel:`New "
 "Shipping Method` form, click on the :guilabel:`Load your SendCloud shipping "
 "products` link."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:139
 msgid ""
 "Select the shipping products the company would like to use for deliveries "
 "and returns."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:127
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:140
 msgid "Click :guilabel:`Select`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:130
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:143
 msgid "Sample Sendcloud shipping products configured in Odoo:"
 msgstr ""
 
@@ -9680,7 +9739,7 @@ msgstr ""
 msgid ":guilabel:`Maximum Weight`: `31.50`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:138
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:151
 msgid ""
 ":guilabel:`Countries`: `Austria` `Belgium` `Bosnia` `Herzegovina` `Bulgaria`"
 " `Croatia` `Czech` `Republic` `Denmark` `Estonia` `Finland` `France` "
@@ -9718,7 +9777,7 @@ msgstr ""
 msgid "Example of shipping products configured in Odoo."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:156
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:169
 msgid ""
 "Sendcloud does not provide test keys when a company tests the sending of a "
 "package in Odoo. This means if a package is created, the configured "
@@ -9726,20 +9785,64 @@ msgid ""
 " within 24 hours of creation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:160
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:173
 msgid ""
 "Odoo has a built-in layer of protection against unwanted charges when using "
 "test environments. Within a test environment, if a shipping method is used "
 "to create labels, then those labels are immediately canceled after the "
 "creation — this occurs automatically. The test and production environment "
-"settings can be toggled back and forth from the :guilabel:`Smart Buttons`."
+"settings can be toggled back and forth from their respective smart buttons."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:166
-msgid "Generate a label with Sendcloud"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:181
+msgid "Shipping information"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:168
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:183
+msgid ""
+"To use Sendcloud to generate shipping labels, the following information "
+"**must** be filled out accurately and completely in Odoo:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:186
+msgid ""
+"**Customer information**: when creating a quotation, ensure the selected "
+":guilabel:`Customer` has a valid phone number, email address, and shipping "
+"address."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:189
+msgid ""
+"To verify, select the :guilabel:`Customer` field to open their contact page."
+" Here, add their shipping address in the :guilabel:`Contact` field, along "
+"with their :guilabel:`Mobile` number and :guilabel:`Email` address."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:193
+msgid ""
+"**Product weight**: ensure all products in an order have a specified "
+":guilabel:`Weight` in the :guilabel:`Inventory` tab of their product form. "
+"Refer to the :ref:`Product weight section "
+"<inventory/shipping_receiving/configure-weight>` of this article for "
+"detailed instructions."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:197
+msgid ""
+"**Warehouse address**: ensure the warehouse name and address in Odoo match "
+"the :ref:`previously defined warehouse "
+"<inventory/shipping_receiving/sendcloud-warehouse-config>` in the Sendcloud "
+"setup. For details on warehouse configuration in Odoo, refer to the "
+":ref:`warehouse configuration section "
+"<inventory/shipping_receiving/configure-source-address>` of the third-party "
+"shipping documentation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:204
+msgid "Generate labels with Sendcloud"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:206
 msgid ""
 "When creating a quotation in Odoo, add shipping and a :guilabel:`Sendcloud "
 "shipping product`. Then, :guilabel:`Validate` the delivery. Shipping label "
@@ -9749,40 +9852,40 @@ msgstr ""
 "在 Odoo 中创建报价单时，添加发货和 :guilabel:`Sendcloud "
 "发货产品`。然后，:guilabel:`验证`发货。发货标签文件会在聊天工具中自动生成，其中包括以下内容："
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:172
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:210
 msgid ":guilabel:`Shipping label(s)` depending on the number of packages."
 msgstr ":guilabel:`送货标签`，取决于包裹数量。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:173
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:211
 msgid ""
 ":guilabel:`Return label(s)` if the Sendcloud connector is configured for "
 "returns."
 msgstr ":guilabel:`退货标签`（如果 Sendcloud 连接器配置了退货标签）。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:174
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:212
 msgid ""
 ":guilabel:`Customs document(s)` should the destination country require them."
 msgstr ":guilabel:`海关文件`（如果目的地国家需要）。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:176
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:214
 msgid "Additionally, the tracking number is now available."
 msgstr "此外，现在还提供了追踪号码。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:179
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:217
 msgid ""
 "When return labels are created, Sendcloud will automatically charge the "
 "configured Sendcloud account."
 msgstr "创建退货标签时，Sendcloud 将自动向配置的 Sendcloud 账户收费。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:183
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:221
 msgid "FAQ"
 msgstr "FAQ"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:186
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:224
 msgid "Shipment is too heavy"
 msgstr "货物过重"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:188
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:226
 msgid ""
 "If the shipment is too heavy for the Sendcloud service that is configured, "
 "then the weight is split to simulate multiple packages. Products will need "
@@ -9792,7 +9895,7 @@ msgstr ""
 "如果发货重量超过配置的 Sendcloud 服务承载能力，则会将重量分割以模拟多个包裹。产品需要放在不同的 :guilabel:`包裹` 中，以便 "
 ":guilabel:`验证`转运和生成标签。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:192
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:230
 msgid ""
 ":guilabel:`Rules` can also be set up in Sendcloud to use other shipping "
 "methods when the weight is too heavy. However, note that these rules will "
@@ -9801,11 +9904,11 @@ msgid ""
 msgstr ""
 "在 Sendcloud 中还可以设置:guilabel:`规则`，在重量过重时使用其他运输方式。但请注意，这些规则不适用于销售订单上的运费计算。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:197
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:235
 msgid "Personal carrier contract"
 msgstr "个人运输合同"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:199
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:237
 msgid ""
 "Use custom prices from a direct carrier contract, via CSV upload, by first "
 "logging into Sendcloud, navigating to :menuselection:`Settings --> Carriers "
@@ -9818,7 +9921,7 @@ msgstr ""
 msgid "Navigate to the contracts section in Sendcloud."
 msgstr "导航至 Sendcloud 中的合同部分。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:207
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:245
 msgid ""
 "Under the :guilabel:`Contract prices` section, click :guilabel:`Download "
 "CSV` and fill out the contract prices in the :guilabel:`price` column of the"
@@ -9827,7 +9930,7 @@ msgstr ""
 "在 :guilabel:`合同价格` 部分，点击 :guilabel:`下载 CSV` 并在 CSV 文件模板的 :guilabel:`价格` "
 "列中填写合同价格。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:211
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:249
 msgid ""
 "Ensure the CSV file includes the correct prices to avoid any inaccuracies."
 msgstr "确保 CSV 文件包含正确的价格，以避免出现任何不准确的情况。"
@@ -9837,13 +9940,13 @@ msgid ""
 "Show sample contract CSV from Sendcloud, highlighting the price column."
 msgstr "显示来自 Sendcloud 的合同 CSV 示例，突出显示价格列。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:217
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:255
 msgid ""
 ":guilabel:`Upload` the completed CSV file to Sendcloud, then click "
 ":guilabel:`Save these prices`."
 msgstr ":guilabel:`上传` 已完成的 CSV 文件到 Sendcloud，然后点击 :guilabel:`保存价格`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:220
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:258
 msgid ""
 "`Sendcloud: How to upload contract prices with carriers "
 "<https://support.sendcloud.com/hc/en-us/articles/5163547066004>`_"
@@ -9851,11 +9954,11 @@ msgstr ""
 "`Sendcloud：如何上传与运营商的合同价格<https://support.sendcloud.com/hc/en-"
 "us/articles/5163547066004>`_"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:224
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:262
 msgid "Measuring volumetric weight"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:226
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:264
 msgid ""
 "Many carriers have several measures for weight. There is the actual weight "
 "of the products in the parcel, and there is the *volumetric weight* "
@@ -9864,13 +9967,13 @@ msgid ""
 msgstr ""
 "许多承运商对重量有多种衡量标准。一种是包裹中产品的实际重量，另一种是*体积重量*（:dfn:`体积重量是指包裹在运输过程中所占的体积。换言之，它是包裹的实际大小。）"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:231
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:269
 msgid ""
 "Check to see if selected carrier(s) already have defined formulas to compute"
 " the volumetric weight."
 msgstr "检查所选载体是否已经定义了计算体积重量的公式。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:235
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:273
 msgid ""
 "`Sendcloud: How to calculate & automate parcel volumetric weight "
 "<https://support.sendcloud.com/ hc/en-us/articles/360059644051-How-to-"
@@ -9880,19 +9983,18 @@ msgstr ""
 "us/articles/360059644051-How-to-calculate-automate-parcel-volumetric-"
 "weight>`_"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:240
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:277
 msgid "Unable to calculate shipping rate"
 msgstr "无法计算运费率"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:242
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:279
 msgid ""
-"First, verify that product being shipped has a weight that is supported by "
-"the selected shipping method. If this is set, then verify that the "
+"First, verify that the product being shipped has a weight that is supported "
+"by the selected shipping method. If this is set, then verify that the "
 "destination country (from the customer address) is supported by the carrier."
 " The country of origin (warehouse address) should also be supported by the "
 "carrier."
 msgstr ""
-"首先，确认所发运产品的重量符合所选发运方式的要求。如果已设置，则验证承运商是否支持目的地国家/地区（来自客户地址）。承运商也应支持来源国家/地区（仓库地址）。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:3
 msgid "Third-party shipping carriers"
@@ -13056,11 +13158,11 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/stock_warehouses.rst:180
 msgid "`WHA/Stock` : 1"
-msgstr ""
+msgstr "`WHA/Stock` : 1"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/stock_warehouses.rst:181
 msgid "`WHB/Stock` : 2"
-msgstr ""
+msgstr "`WHB/Stock` : 2"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/stock_warehouses.rst:182
 msgid ""
@@ -15576,6 +15678,7 @@ msgid "Create a new warehouse location in Odoo Inventory."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation.rst:5
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:123
 msgid "Inventory valuation"
 msgstr "库存计价"
 
@@ -15742,7 +15845,7 @@ msgid ""
 "The Inventory Valuation fields are located on the Product Categories form."
 msgstr "库存估价字段位于产品类别表单中。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:22
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:21
 msgid ""
 "Alternatively, automated inventory valuation is an integrated valuation "
 "method that updates the inventory value in real-time by creating journal "
@@ -15750,7 +15853,7 @@ msgid ""
 "company's inventory."
 msgstr "另外，自动存货估价是一种综合估价方法，每当公司存货在不同地点之间发生存货移动时，就会创建日记账分录，从而实时更新存货价值。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:27
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:26
 msgid ""
 "Automated inventory valuation is a method recommended for expert "
 "accountants, given the extra steps involved in journal entry configuration. "
@@ -15760,122 +15863,104 @@ msgid ""
 msgstr ""
 "鉴于日记账分录配置涉及额外步骤，建议专业会计师采用自动存货估价方法。即使在初始设置之后，也需要定期检查该方法，以确保准确性，并根据企业需求和优先事项不断进行调整。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:35
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:34
 msgid "Types of accounting"
 msgstr "会计类型"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:37
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:36
 msgid ""
 "Accounting entries will depend on the accounting mode: *Continental* or "
 "*Anglo-Saxon*."
-msgstr ""
+msgstr "会计分录取决于会计模式：*大陆*或*盎格鲁-撒克逊*。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:40
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:39
 msgid ""
 "Verify the accounting mode by activating the :ref:`developer-mode` and "
-"navigating to :menuselection:`Accounting --> Configuration --> Settings`."
-msgstr "激活 :ref:`开发者模式` 并导航至 :menuselection:`会计 --> 配置 --> 设置` 以验证会计模式。"
+"navigating to :menuselection:`Accounting app --> Configuration --> "
+"Settings`."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:43
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:42
+msgid ""
+"Then, in the search bar, look for :guilabel:`Anglo-Saxon Accounting`, to see"
+" if the feature is enabled. If it is **not** enabled, Continental accounting"
+" mode is in use."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:0
+msgid "Show the Anglo-Saxon accounting mode feature."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:49
 msgid ""
 "In *Anglo-Saxon* accounting, the costs of goods sold (COGS) are reported "
 "when products are sold or delivered. This means that the cost of a good is "
-"only recorded as an expense when a customer is invoiced for a product. "
-"*Interim Stock Accounts* are used for the input and output accounts, and are"
-" both *Asset Accounts* in the balance sheet."
+"only recorded as an expense when a customer is invoiced for a product. So "
+"for **manual** valuation method, set the :guilabel:`Expense Account` to "
+"`Stock Valuation` for the current asset type; for **automatic** valuation "
+"method, set the the :guilabel:`Expense Account` to an *Expenses* or a *Cost "
+"of Revenue* type (e.g. `Cost of Production`, `Cost of Goods Sold`, etc.)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:56
 msgid ""
 "In *Continental* accounting, the cost of a good is reported as soon as a "
-"product is received into stock. Additionally, a single *Expense* account is "
-"used for both input and output accounts in the balance sheet."
+"product is received into stock. Because of this, the :guilabel:`Expense "
+"Account` can be set to **either** *Expenses* or a *Cost of Revenue* type, "
+"however, it is more commonly set to an *Expenses* account."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:55
-msgid "Costing methods"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:57
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:61
 msgid ""
-"Below are the three costing methods that can be used in Odoo for inventory "
-"valuation."
+":ref:`Details about configuring Expense and Stock accounts "
+"<inventory/management/config-inventory-valuation>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:59
-msgid ""
-"**Standard Price**: is the default costing method in Odoo. The cost of the "
-"product is manually defined on the product form, and this cost is used to "
-"compute the valuation. Even if the purchase price on a purchase order "
-"differs, the valuation will still use the cost defined on the product form."
-msgstr ""
-"**标准价格**：是 Odoo "
-"的默认成本计算方法。产品成本在产品表单中手动定义，并使用该成本计算估值。即使采购订单上的采购价格不同，估价仍将使用产品表单上定义的成本。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:63
-msgid ""
-"**Average Cost (AVCO)**: calculates the valuation of a product based on the "
-"average cost of that product, divided by the total number of available stock"
-" on-hand. With this costing method, inventory valuation is *dynamic*, and "
-"constantly adjusts based on the purchase price of products."
-msgstr ""
-"**平均成本法（AVCO）**：根据产品的平均成本除以手头可用存货总数来计算产品估值。采用这种成本计算方法，存货估值是*动态*的，会根据产品的购买价格不断调整。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:66
-msgid ""
-"**First In First Out (FIFO)**: tracks the costs of incoming and outgoing "
-"items in real-time and uses the real price of the products to change the "
-"valuation. The oldest purchase price is used as the cost for the next good "
-"sold until an entire lot of that product is sold. When the next inventory "
-"lot moves up in the queue, an updated product cost is used based on the "
-"valuation of that specific lot. This method is arguably the most accurate "
-"inventory valuation method for a variety of reasons, however, it's highly "
-"sensitive to input data and human error."
-msgstr ""
-"**先进先出（FIFO）**：实时追踪进货和出货成本，并使用产品的实际价格来改变估价。最旧的进货价被用作下一个售出产品的成本，直到该产品整批售出。当下一个库存批次进入队列时，根据该特定批次的估值使用更新的产品成本。这种方法可以说是最准确的库存估值方法，不过，它对输入数据和人为误差非常敏感。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:74
-msgid ""
-"Changing the costing method greatly impacts inventory valuation. It's highly"
-" recommended to consult an accountant first before making any adjustments "
-"here."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:78
-msgid "Configure automated inventory valuation in Odoo"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:80
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:67
 msgid ""
 "Make changes to inventory valuation options by navigating to "
-":menuselection:`Inventory --> Configuration --> Product Categories`, and "
-"choose the category/categories where the automated valuation method should "
-"apply."
-msgstr "通过导航至 :menuselection:`库存 --> 配置 --> 产品类别` 更改库存估价选项，并选择自动估价方法应适用的类别。"
+":menuselection:`Inventory app --> Configuration --> Product Categories`. In "
+"the :guilabel:`Inventory Valuation` section, select the desired "
+":guilabel:`Costing Method` and :guilabel:`Inventory Valuation` options."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:85
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:72
 msgid ""
 "It is possible to use different valuation settings for different product "
 "categories."
 msgstr "不同的产品类别可以使用不同的估值设置。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:87
-msgid ""
-"Under the :guilabel:`Inventory Valuation` heading are two labels: "
-":guilabel:`Costing Method` and :guilabel:`Inventory Valuation`. Pick the "
-"desired :guilabel:`Costing Method` using the drop-down menu (e.g. "
-":guilabel:`Standard`, :guilabel:`Average Cost (AVCO)`, or :guilabel:`First "
-"In First Out (FIFO)`) and switch the :guilabel:`Inventory Valuation` to "
-":guilabel:`Automated`."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst-1
+msgid "Show inventory valuation configuration options."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:93
-msgid ""
-":ref:`Using the inventory "
-"valuation<inventory/reporting/using_inventory_val>`"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:81
+msgid "Costing method"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:96
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:83
+msgid ""
+"From the product category's configuration page, choose the desired "
+":guilabel:`Costing Method`:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:85
+msgid ""
+":guilabel:`Standard Price`: the default costing method in Odoo. The cost of "
+"the product is manually defined on the product form, and this cost is used "
+"to compute the valuation. Even if the purchase price on a purchase order "
+"differs, the valuation will still use the cost defined on the product form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:89
+msgid ""
+":guilabel:`Average Cost (AVCO)`: calculates the valuation of a product based"
+" on the average cost of that product, divided by the total number of "
+"available stock on-hand. With this costing method, inventory valuation is "
+"*dynamic*, and constantly adjusts based on the purchase price of products."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:94
 msgid ""
 "When choosing :guilabel:`Average Cost (AVCO)` as the :guilabel:`Costing "
 "Method`, changing the numerical value in the :guilabel:`Cost` field for "
@@ -15885,8 +15970,34 @@ msgid ""
 "purchase price both of inventory on hand and the costs accumulated from "
 "validated purchase orders."
 msgstr ""
+"选择 :guilabel:`平均成本（AVCO）` 作为 :guilabel:`成本计算方法` 时，更改相应产品类别中产品的 "
+":guilabel:`成本` 字段中的数值，将在 *库存估价* "
+"报告中创建新记录，以调整产品的价值。然后，:guilabel:`成本`金额将根据手头存货的平均采购价和有效采购订单的累计成本自动更新。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:102
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:100
+msgid ""
+":guilabel:`First In First Out (FIFO)`: tracks the costs of incoming and "
+"outgoing items in real-time and uses the real price of the products to "
+"change the valuation. The oldest purchase price is used as the cost for the "
+"next good sold until an entire lot of that product is sold. When the next "
+"inventory lot moves up in the queue, an updated product cost is used based "
+"on the valuation of that specific lot. This method is arguably the most "
+"accurate inventory valuation method for a variety of reasons, however, it is"
+" highly sensitive to input data and human error."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:108
+msgid ""
+"Changing the costing method greatly impacts inventory valuation. It is "
+"highly recommended to consult an accountant first before making any "
+"adjustments here."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:112
+msgid ":doc:`using_inventory_valuation`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:114
 msgid ""
 "When the :guilabel:`Costing Method` is changed, products already in stock "
 "that were using the :guilabel:`Standard` costing method **do not** change "
@@ -15896,22 +16007,126 @@ msgid ""
 "changed manually, Odoo will generate a corresponding record in the "
 "*Inventory Valuation* report."
 msgstr ""
+"当更改 :guilabel:`成本计算方法` 时，使用 :guilabel:`标准` "
+"成本计算方法的库存产品**不会**改变价值；相反，现有单位保持其价值，此后任何产品移动都会影响平均成本，产品的成本也会改变。如果手动更改产品表单中 "
+":guilabel:`成本` 字段的值，Odoo 将在 *存货估价* 报告中生成相应记录。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:108
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:125
 msgid ""
-"On the same screen, the :guilabel:`Account Stock Properties` fields will "
-"appear, as they are now required fields given the change to automated "
-"inventory valuation. These accounts are defined as follows:"
+"Inventory valuation in Odoo can be set to be updated manually or "
+"automatically. While *Expense* accounts apply to both, the *Stock Input* and"
+" *Stock Output* accounts are only used for automated valuation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:112
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:129
+msgid ""
+"Refer to the :ref:`Expense <inventory/management/expense-account>` and "
+":ref:`Stock input/output <inventory/management/stock-account>` sections for "
+"details on configuring each account type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:135
+msgid "Expense account"
+msgstr "支出科目"
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:137
+msgid ""
+"To configure the *expense account*, go to the :guilabel:`Account Properties`"
+" section of the intended product category (:menuselection:`Inventory app -->"
+" Configuration --> Product Categories`). Then, choose an existing account "
+"from the :guilabel:`Expense Account` drop-down menu."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:141
+msgid ""
+"To ensure the chosen account is the correct :guilabel:`Type,` click the "
+"|right arrow| icon to the right of the account. Then, set the account type "
+"based on the information below."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:146
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:214
+msgid "Anglo-Saxon"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:150
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:177
+msgid "Automated"
+msgstr "自动"
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:152
+msgid ""
+"In Anglo-Saxon accounting for automated inventory valuation, set the "
+":guilabel:`Expense Account` to the `Expenses` account. Then, click the "
+"|right arrow| icon to the right of the account."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:156
+msgid ""
+"In the pop-up window, choose :guilabel:`Expenses` or :guilabel:`Cost of "
+"Revenue` from the :guilabel:`Type` drop-down menu."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:0
+msgid "Show **Expense Account** field, and external link icon."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:165
+msgid ""
+"To configure the :guilabel:`Expense Account`, choose :guilabel:`Stock "
+"Valuation` from the field's drop-down menu. Verify the account's type by "
+"clicking the |right arrow| icon, and then ensure the :guilabel:`Type` is "
+":guilabel:`Current Assets`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:0
+msgid "Show the **Expense Account** field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:173
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:232
+msgid "Continental"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:179
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:184
+msgid ""
+"Set the :guilabel:`Expense Account` to the :guilabel:`Expenses` or "
+":guilabel:`Cost of Revenue` account type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:190
+msgid "Stock input/output (automated only)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:192
+msgid ""
+"To configure the :guilabel:`Stock Input Account` and :guilabel:`Stock Output"
+" Account`, go to :menuselection:`Inventory app --> Configuration --> Product"
+" Categories` and select the desired product category."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:196
+msgid ""
+"In the :guilabel:`Inventory Valuation` field, select :guilabel:`Automated`. "
+"Doing so makes the :guilabel:`Account Stock Properties` section appear. "
+"These accounts are defined as follows:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:199
 msgid ""
 ":guilabel:`Stock Valuation Account`: when automated inventory valuation is "
 "enabled on a product, this account will hold the current value of the "
 "products."
+msgstr ":guilabel:`库存估价账户`：当产品启用自动库存估价时，此账户将保存产品的当前价值。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:201
+msgid ""
+":guilabel:`Stock Journal`: accounting journal where entries are "
+"automatically posted when a product's inventory valuation changes."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:203
 msgid ""
 ":guilabel:`Stock Input Account`: counterpart journal items for all incoming "
 "stock moves will be posted in this account, unless there is a specific "
@@ -15919,8 +16134,9 @@ msgid ""
 "all products in a given category, and can also be set directly on each "
 "product."
 msgstr ""
+":guilabel:`库存输入账户`：除非源位置设置了特定的估价账户，否则所有入库库存移动的对应日记账项目都将记入此账户。这是特定类别中所有产品的默认值，也可直接在每个产品上设置。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:118
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:207
 msgid ""
 ":guilabel:`Stock Output Account`: counterpart journal items for all outgoing"
 " stock moves will be posted in this account, unless there is a specific "
@@ -15928,12 +16144,59 @@ msgid ""
 " for all products in a given category, and can also be set directly on each "
 "product."
 msgstr ""
+":guilabel:`库存输出账户`：除非目的地设置了特定的估价账户，否则所有出库库存移动的对应日记账项目都将记入此账户。这是指定类别中所有产品的默认值，也可直接在每个产品上设置。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:124
-msgid "Access reporting data generated by inventory valuation"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:216
+msgid ""
+"In Anglo-Saxon accounting, the :guilabel:`Stock Input Account` and "
+":guilabel:`Stock Output Account` are set to *different* :guilabel:`Current "
+"Assets` accounts. This way, delivering products and invoicing the customer "
+"balance the *Stock Output* account, while receiving products and billing "
+"vendors balance the *Stock Input* account."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:221
+msgid ""
+"To modify the account type, go to the click the |right arrow| icon to the "
+"right of the stock input/output account. In the pop-up window, choose "
+":guilabel:`Current Assets` from the :guilabel:`Type` drop-down menu."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:0
+msgid "Display account setup page, highlighting the **Type** field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:229
+msgid ""
+"The *Stock Input* account is set to `Stock Interim (Received)`, a *Current "
+"Asset* account type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:234
+msgid ""
+"In Continental accounting, the :guilabel:`Stock Input Account` and "
+":guilabel:`Stock Output Account` are set to **the same** :guilabel:`Current "
+"Assets` account. That way, one account can be balanced when items are bought"
+" and sold."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:239
+msgid ""
+"The stock input and output accounts are both set to `Stock Interim "
+"(Received)`, a :guilabel:`Current Assets` account type. They can also be set"
+" to the `Stock Interim (Delivered)`, as long as the input and output "
+"accounts are assigned to the **same** account."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:0
+msgid "Show the Stock Input and Output accounts."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:249
+msgid "Inventory valuation reporting"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:251
 msgid ""
 "To start, go to :menuselection:`Accounting --> Reporting --> Balance Sheet`."
 " At the top of the dashboard, change the :guilabel:`As of` field value to "
@@ -15941,15 +16204,21 @@ msgid ""
 ":guilabel:`Unfold All` in order to see all of the latest data displayed, all"
 " at once."
 msgstr ""
+"开始时，进入 :menuselection:`会计 --> 报告 --> 资产负债表`。在仪表盘顶部，将 :guilabel:`截至` 字段值更改为 "
+":guilabel:`今日`，并将 :guilabel:`选项` 筛选调整为 :guilabel:`展开全部`，以便一次性显示所有最新数据。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:131
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:257
+msgid ":doc:`../../../../finance/accounting/get_started/cheat_sheet`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:259
 msgid ""
 "Under the parent :guilabel:`Current Assets` line item, look for the nested "
 ":guilabel:`Stock Valuation Account` line item, where the total valuation of "
 "all of the inventory on hand is displayed."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:135
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:263
 msgid ""
 "Access more specific information with the :guilabel:`Stock Valuation "
 "Account` drop-down menu, by selecting either the :guilabel:`General Ledger` "
@@ -15996,9 +16265,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:24
-msgid ""
-":ref:`Set up inventory valuation "
-"<inventory/management/inventory_valuation_config>`"
+msgid ":doc:`Set up inventory valuation <inventory_valuation_config>`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:26
