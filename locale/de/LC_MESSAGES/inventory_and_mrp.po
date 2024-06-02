@@ -9,8 +9,8 @@
 # Wolfgang Taferner, 2022
 # Anja Funk <anja.funk@afimage.de>, 2022
 # Chris Egal <sodaswed@web.de>, 2022
-# Martin Trigaux, 2023
-# Wil Odoo, 2023
+# Martin Trigaux, 2024
+# Wil Odoo, 2024
 # Larissa Manderfeld, 2024
 # 
 #, fuzzy
@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-29 08:05+0000\n"
+"POT-Creation-Date: 2024-05-28 08:57+0000\n"
 "PO-Revision-Date: 2021-11-02 08:48+0000\n"
 "Last-Translator: Larissa Manderfeld, 2024\n"
 "Language-Team: German (https://app.transifex.com/odoo/teams/41243/de/)\n"
@@ -29,8 +29,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../content/applications/inventory_and_mrp.rst:5
-msgid "Inventory & MRP"
-msgstr "Lager & MRP"
+msgid "Supply Chain"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory.rst:8
 msgid "Inventory"
@@ -1584,6 +1584,7 @@ msgstr ":guilabel:`Los` im Pop-up für Detaillierte Vorgänge"
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:53
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/uom.rst:16
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/integrating_landed_costs.rst:11
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:65
 #: ../../content/applications/inventory_and_mrp/inventory/management/shipments_deliveries/delivery_three_steps.rst:18
 #: ../../content/applications/inventory_and_mrp/inventory/management/shipments_deliveries/receipts_three_steps.rst:16
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/resupply_warehouses.rst:11
@@ -10595,7 +10596,7 @@ msgstr ""
 "Die Felder für die Bestandsbewertung befinden sich auf dem Formular "
 "Produktkategorien."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:22
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:21
 msgid ""
 "Alternatively, automated inventory valuation is an integrated valuation "
 "method that updates the inventory value in real-time by creating journal "
@@ -10607,7 +10608,7 @@ msgstr ""
 "Journalbuchungen erstellt, sobald Bestandsbewegungen zwischen den Lagerorten"
 " eines Unternehmens eingeleitet werden."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:27
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:26
 msgid ""
 "Automated inventory valuation is a method recommended for expert "
 "accountants, given the extra steps involved in journal entry configuration. "
@@ -10622,11 +10623,11 @@ msgstr ""
 "Genauigkeit zu gewährleisten, und je nach den Bedürfnissen und Prioritäten "
 "des Unternehmens sind möglicherweise laufend Anpassungen erforderlich."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:35
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:34
 msgid "Types of accounting"
 msgstr "Buchhaltungsarten"
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:37
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:36
 msgid ""
 "Accounting entries will depend on the accounting mode: *Continental* or "
 "*Anglo-Saxon*."
@@ -10634,127 +10635,58 @@ msgstr ""
 "Die Buchungsposten richten sich nach dem Buchungsmodus: *Kontinental* oder "
 "*Angelsächsisch*."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:40
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:39
 msgid ""
 "Verify the accounting mode by activating the :ref:`developer-mode` and "
-"navigating to :menuselection:`Accounting --> Configuration --> Settings`."
+"navigating to :menuselection:`Accounting app --> Configuration --> "
+"Settings`."
 msgstr ""
-"Überprüfen Sie den Buchungsmodus, indem Sie den :ref:`Entwicklermodus` "
-"aktivieren und zu :menuselection:`Buchhaltung --> Konfiguration --> "
-"Einstellungen` navigieren."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:43
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:42
+msgid ""
+"Then, in the search bar, look for :guilabel:`Anglo-Saxon Accounting`, to see"
+" if the feature is enabled. If it is **not** enabled, Continental accounting"
+" mode is in use."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:0
+msgid "Show the Anglo-Saxon accounting mode feature."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:49
 msgid ""
 "In *Anglo-Saxon* accounting, the costs of goods sold (COGS) are reported "
 "when products are sold or delivered. This means that the cost of a good is "
-"only recorded as an expense when a customer is invoiced for a product. "
-"*Interim Stock Accounts* are used for the input and output accounts, and are"
-" both *Asset Accounts* in the balance sheet."
+"only recorded as an expense when a customer is invoiced for a product. So "
+"for **manual** valuation method, set the :guilabel:`Expense Account` to "
+"`Stock Valuation` for the current asset type; for **automatic** valuation "
+"method, set the the :guilabel:`Expense Account` to an *Expenses* or a *Cost "
+"of Revenue* type (e.g. `Cost of Production`, `Cost of Goods Sold`, etc.)."
 msgstr ""
-"In der *angelsächsischen* Buchführung werden die Herstellkosten des Umsatzes"
-" (HKU) ausgewiesen, wenn die Produkte verkauft oder geliefert werden. Das "
-"bedeutet, dass die Kosten einer Ware erst dann als Aufwand verbucht werden, "
-"wenn dem Kunden ein Produkt in Rechnung gestellt wird. Für die Eingangs- und"
-" Ausgangskonten werden *Zwischenbestandskonten* verwendet, die beide "
-"*Aktivkonten* in der Bilanz sind."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:56
 msgid ""
 "In *Continental* accounting, the cost of a good is reported as soon as a "
-"product is received into stock. Additionally, a single *Expense* account is "
-"used for both input and output accounts in the balance sheet."
+"product is received into stock. Because of this, the :guilabel:`Expense "
+"Account` can be set to **either** *Expenses* or a *Cost of Revenue* type, "
+"however, it is more commonly set to an *Expenses* account."
 msgstr ""
-"In der *Kontinentalen* Buchführung werden die Kosten einer Ware ausgewiesen,"
-" sobald das Produkt auf Lager geht. Außerdem wird ein einziges "
-"*Aufwandskonto* sowohl für Eingangs- als auch für Ausgangskonten in der "
-"Bilanz verwendet."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:55
-msgid "Costing methods"
-msgstr "Kalkulationsverfahren"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:57
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:61
 msgid ""
-"Below are the three costing methods that can be used in Odoo for inventory "
-"valuation."
+":ref:`Details about configuring Expense and Stock accounts "
+"<inventory/management/config-inventory-valuation>`"
 msgstr ""
-"Im Folgenden finden Sie die drei Kalkulationsmethoden, die in Odoo für die "
-"Bestandsbewertung verwendet werden können."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:59
-msgid ""
-"**Standard Price**: is the default costing method in Odoo. The cost of the "
-"product is manually defined on the product form, and this cost is used to "
-"compute the valuation. Even if the purchase price on a purchase order "
-"differs, the valuation will still use the cost defined on the product form."
-msgstr ""
-"**Standardpreis**: ist die Standardkalkulationsmethode in Odoo. Die Kosten "
-"des Produkts werden manuell auf dem Produktformular definiert, und diese "
-"Kosten werden für die Berechnung der Bewertung verwendet. Auch wenn der "
-"Einkaufspreis in einem Einkaufsauftrag abweicht, wird die Bewertung anhand "
-"der im Produktformular definierten Kosten vorgenommen."
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:63
-msgid ""
-"**Average Cost (AVCO)**: calculates the valuation of a product based on the "
-"average cost of that product, divided by the total number of available stock"
-" on-hand. With this costing method, inventory valuation is *dynamic*, and "
-"constantly adjusts based on the purchase price of products."
-msgstr ""
-"**Durchschnittskosten (AVCO)**: Berechnet die Bewertung eines Produkts auf "
-"der Grundlage der durchschnittlichen Kosten dieses Produkts, geteilt durch "
-"die Gesamtzahl der verfügbaren Bestände im Lager. Bei dieser "
-"Kalkulationsmethode ist die Bestandsbewertung *dynamisch* und wird ständig "
-"auf der Grundlage des Einkaufspreises der Produkte angepasst."
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:66
-msgid ""
-"**First In First Out (FIFO)**: tracks the costs of incoming and outgoing "
-"items in real-time and uses the real price of the products to change the "
-"valuation. The oldest purchase price is used as the cost for the next good "
-"sold until an entire lot of that product is sold. When the next inventory "
-"lot moves up in the queue, an updated product cost is used based on the "
-"valuation of that specific lot. This method is arguably the most accurate "
-"inventory valuation method for a variety of reasons, however, it's highly "
-"sensitive to input data and human error."
-msgstr ""
-"**First In First Out (FIFO)**: Verfolgt die Kosten der ein- und ausgehenden "
-"Artikel in Echtzeit und verwendet den tatsächlichen Preis der Produkte, um "
-"die Bewertung zu ändern. Der älteste Einkaufspreis wird als Kosten für die "
-"nächste verkaufte Ware verwendet, bis ein ganzes Los dieses Produkts "
-"verkauft ist. Wenn das nächste Lagerlos in der Warteschlange nachrückt, "
-"werden die aktualisierten Produktkosten auf der Grundlage der Bewertung "
-"dieses spezifischen Loses verwendet. Diese Methode ist aus einer Reihe von "
-"Gründen die wohl genaueste Methode zur Bestandsbewertung, allerdings ist sie"
-" sehr anfällig für Eingabedaten und menschliche Fehler."
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:74
-msgid ""
-"Changing the costing method greatly impacts inventory valuation. It's highly"
-" recommended to consult an accountant first before making any adjustments "
-"here."
-msgstr ""
-"Eine Änderung der Kalkulationsmethode hat erhebliche Auswirkungen auf die "
-"Bestandsbewertung. Es wird dringend empfohlen, zunächst einen Buchhalter zu "
-"konsultieren, bevor Sie hier Anpassungen vornehmen."
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:78
-msgid "Configure automated inventory valuation in Odoo"
-msgstr "Automatische Bestandsbewertung in Odoo konfigurieren"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:80
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:67
 msgid ""
 "Make changes to inventory valuation options by navigating to "
-":menuselection:`Inventory --> Configuration --> Product Categories`, and "
-"choose the category/categories where the automated valuation method should "
-"apply."
+":menuselection:`Inventory app --> Configuration --> Product Categories`. In "
+"the :guilabel:`Inventory Valuation` section, select the desired "
+":guilabel:`Costing Method` and :guilabel:`Inventory Valuation` options."
 msgstr ""
-"Nehmen Sie Änderungen an den Bestandsbewertungsoptionen vor, indem Sie auf "
-":menuselection:`Lager --> Konfiguration --> Produktkategorien` navigieren "
-"und die Kategorie(n) auswählen, für die die automatische Bewertungsmethode "
-"gelten soll."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:85
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:72
 msgid ""
 "It is possible to use different valuation settings for different product "
 "categories."
@@ -10762,30 +10694,37 @@ msgstr ""
 "Es ist möglich, unterschiedliche Bewertungseinstellungen für verschiedene "
 "Produktkategorien zu verwenden."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:87
-msgid ""
-"Under the :guilabel:`Inventory Valuation` heading are two labels: "
-":guilabel:`Costing Method` and :guilabel:`Inventory Valuation`. Pick the "
-"desired :guilabel:`Costing Method` using the drop-down menu (e.g. "
-":guilabel:`Standard`, :guilabel:`Average Cost (AVCO)`, or :guilabel:`First "
-"In First Out (FIFO)`) and switch the :guilabel:`Inventory Valuation` to "
-":guilabel:`Automated`."
-msgstr ""
-"Unter der Überschrift :guilabel:`Bestandsbewertung` befinden sich zwei "
-"Bezeichnungen: :guilabel:`Kalkulationsverfahren` und "
-":guilabel:`Bestandsbewertung`. Wählen Sie das gewünschte "
-":guilabel:`Kalkulationsverfahren` aus dem Drop-down-Menü (z. B. "
-":guilabel:`Standard`, :guilabel:`Durchschnittskosten (AVCO)` oder "
-":guilabel:`First In First Out (FIFO)`) und stellen Sie die "
-":guilabel:`Bestandsbewertung` auf :guilabel:`Automatisch`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:93
-msgid ""
-":ref:`Using the inventory "
-"valuation<inventory/reporting/using_inventory_val>`"
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst-1
+msgid "Show inventory valuation configuration options."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:96
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:81
+msgid "Costing method"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:83
+msgid ""
+"From the product category's configuration page, choose the desired "
+":guilabel:`Costing Method`:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:85
+msgid ""
+":guilabel:`Standard Price`: the default costing method in Odoo. The cost of "
+"the product is manually defined on the product form, and this cost is used "
+"to compute the valuation. Even if the purchase price on a purchase order "
+"differs, the valuation will still use the cost defined on the product form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:89
+msgid ""
+":guilabel:`Average Cost (AVCO)`: calculates the valuation of a product based"
+" on the average cost of that product, divided by the total number of "
+"available stock on-hand. With this costing method, inventory valuation is "
+"*dynamic*, and constantly adjusts based on the purchase price of products."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:94
 msgid ""
 "When choosing :guilabel:`Average Cost (AVCO)` as the :guilabel:`Costing "
 "Method`, changing the numerical value in the :guilabel:`Cost` field for "
@@ -10804,7 +10743,30 @@ msgstr ""
 "Einkaufspreises sowohl des Lagerbestands als auch der aus validierten "
 "Bestellungen kumulierten Kosten aktualisiert."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:102
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:100
+msgid ""
+":guilabel:`First In First Out (FIFO)`: tracks the costs of incoming and "
+"outgoing items in real-time and uses the real price of the products to "
+"change the valuation. The oldest purchase price is used as the cost for the "
+"next good sold until an entire lot of that product is sold. When the next "
+"inventory lot moves up in the queue, an updated product cost is used based "
+"on the valuation of that specific lot. This method is arguably the most "
+"accurate inventory valuation method for a variety of reasons, however, it is"
+" highly sensitive to input data and human error."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:108
+msgid ""
+"Changing the costing method greatly impacts inventory valuation. It is "
+"highly recommended to consult an accountant first before making any "
+"adjustments here."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:112
+msgid ":doc:`using_inventory_valuation`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:114
 msgid ""
 "When the :guilabel:`Costing Method` is changed, products already in stock "
 "that were using the :guilabel:`Standard` costing method **do not** change "
@@ -10823,18 +10785,118 @@ msgstr ""
 "auf einem Produktformular manuell geändert wird, erzeugt Odoo einen "
 "entsprechenden Eintrag im Bericht *Bestandsbewertung*."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:108
-msgid ""
-"On the same screen, the :guilabel:`Account Stock Properties` fields will "
-"appear, as they are now required fields given the change to automated "
-"inventory valuation. These accounts are defined as follows:"
-msgstr ""
-"Auf demselben Bildschirm erscheinen die Felder "
-":guilabel:`Buchhaltungseigenschaften für den Bestand`, da sie aufgrund der "
-"Umstellung auf die automatische Bestandsbewertung nun Pflichtfelder sind. "
-"Diese Konten sind wie folgt definiert:"
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:123
+msgid "Inventory valuation"
+msgstr "Lagerbewertung"
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:112
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:125
+msgid ""
+"Inventory valuation in Odoo can be set to be updated manually or "
+"automatically. While *Expense* accounts apply to both, the *Stock Input* and"
+" *Stock Output* accounts are only used for automated valuation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:129
+msgid ""
+"Refer to the :ref:`Expense <inventory/management/expense-account>` and "
+":ref:`Stock input/output <inventory/management/stock-account>` sections for "
+"details on configuring each account type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:135
+msgid "Expense account"
+msgstr "Auslagenkonto"
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:137
+msgid ""
+"To configure the *expense account*, go to the :guilabel:`Account Properties`"
+" section of the intended product category (:menuselection:`Inventory app -->"
+" Configuration --> Product Categories`). Then, choose an existing account "
+"from the :guilabel:`Expense Account` drop-down menu."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:141
+msgid ""
+"To ensure the chosen account is the correct :guilabel:`Type,` click the "
+"|external link| icon to the right of the account. Then, set the account type"
+" based on the information below."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:146
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:214
+msgid "Anglo-Saxon"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:150
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:177
+msgid "Automated"
+msgstr "Automatisch"
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:152
+msgid ""
+"In Anglo-Saxon accounting for automated inventory valuation, set the "
+":guilabel:`Expense Account` to the `Expenses` account. Then, click the "
+"|external link| icon to the right of the account."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:156
+msgid ""
+"In the pop-up window, choose :guilabel:`Expenses` or :guilabel:`Cost of "
+"Revenue` from the :guilabel:`Type` drop-down menu."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:0
+msgid "Show **Expense Account** field, and external link icon."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:163
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:182
+msgid "Manual"
+msgstr "Manuell"
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:165
+msgid ""
+"To configure the :guilabel:`Expense Account`, choose :guilabel:`Stock "
+"Valuation` from the field's drop-down menu. Verify the account's type by "
+"clicking the |external link| icon, and then ensure the :guilabel:`Type` is "
+":guilabel:`Current Assets`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:0
+msgid "Show the **Expense Account** field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:173
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:232
+msgid "Continental"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:179
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:184
+msgid ""
+"Set the :guilabel:`Expense Account` to the :guilabel:`Expenses` or "
+":guilabel:`Cost of Revenue` account type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:190
+msgid "Stock input/output (automated only)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:192
+msgid ""
+"To configure the :guilabel:`Stock Input Account` and :guilabel:`Stock Output"
+" Account`, go to :menuselection:`Inventory app --> Configuration --> Product"
+" Categories` and select the desired product category."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:196
+msgid ""
+"In the :guilabel:`Inventory Valuation` field, select :guilabel:`Automated`. "
+"Doing so makes the :guilabel:`Account Stock Properties` section appear. "
+"These accounts are defined as follows:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:199
 msgid ""
 ":guilabel:`Stock Valuation Account`: when automated inventory valuation is "
 "enabled on a product, this account will hold the current value of the "
@@ -10844,7 +10906,13 @@ msgstr ""
 " für ein Produkt aktiviert ist, enthält dieses Konto den aktuellen Wert der "
 "Produkte."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:201
+msgid ""
+":guilabel:`Stock Journal`: accounting journal where entries are "
+"automatically posted when a product's inventory valuation changes."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:203
 msgid ""
 ":guilabel:`Stock Input Account`: counterpart journal items for all incoming "
 "stock moves will be posted in this account, unless there is a specific "
@@ -10858,7 +10926,7 @@ msgstr ""
 "Standardwert für alle Produkte in dieser Kategorie. Er kann auch direkt für "
 "jedes Produkt festgelegt werden."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:118
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:207
 msgid ""
 ":guilabel:`Stock Output Account`: counterpart journal items for all outgoing"
 " stock moves will be posted in this account, unless there is a specific "
@@ -10872,11 +10940,57 @@ msgstr ""
 "Standardwert für alle Produkte in dieser Kategorie. Er kann auch direkt für "
 "jedes Produkt festgelegt werden."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:124
-msgid "Access reporting data generated by inventory valuation"
-msgstr "Auf durch Bestandsbewertung generierte Berichtsdaten zugreifen"
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:216
+msgid ""
+"In Anglo-Saxon accounting, the :guilabel:`Stock Input Account` and "
+":guilabel:`Stock Output Account` are set to *different* :guilabel:`Current "
+"Assets` accounts. This way, delivering products and invoicing the customer "
+"balance the *Stock Output* account, while receiving products and billing "
+"vendors balance the *Stock Input* account."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:221
+msgid ""
+"To modify the account type, go to the click the |external link| icon to the "
+"right of the stock input/output account. In the pop-up window, choose "
+":guilabel:`Current Assets` from the :guilabel:`Type` drop-down menu."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:0
+msgid "Display account setup page, highlighting the **Type** field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:229
+msgid ""
+"The *Stock Input* account is set to `Stock Interim (Received)`, a *Current "
+"Asset* account type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:234
+msgid ""
+"In Continental accounting, the :guilabel:`Stock Input Account` and "
+":guilabel:`Stock Output Account` are set to **the same** :guilabel:`Current "
+"Assets` account. That way, one account can be balanced when items are bought"
+" and sold."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:239
+msgid ""
+"The stock input and output accounts are both set to `Stock Interim "
+"(Received)`, a :guilabel:`Current Assets` account type. They can also be set"
+" to the `Stock Interim (Delivered)`, as long as the input and output "
+"accounts are assigned to the **same** account."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:0
+msgid "Show the Stock Input and Output accounts."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:249
+msgid "Inventory valuation reporting"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:251
 msgid ""
 "To start, go to :menuselection:`Accounting --> Reporting --> Balance Sheet`."
 " At the top of the dashboard, change the :guilabel:`As of` field value to "
@@ -10889,7 +11003,11 @@ msgstr ""
 ":guilabel:`Heute` und stellen Sie die Filterung :guilabel:`Optionen` auf "
 ":guilabel:`Alle ausklappen`, um alle aktuellen Daten auf einmal zu sehen."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:131
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:257
+msgid ":doc:`../../../../finance/accounting/get_started/cheat_sheet`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:259
 msgid ""
 "Under the parent :guilabel:`Current Assets` line item, look for the nested "
 ":guilabel:`Stock Valuation Account` line item, where the total valuation of "
@@ -10899,7 +11017,7 @@ msgstr ""
 "verschachtelte Position :guilabel:`Bestandsbewertungskonto`, in der die "
 "Gesamtbewertung des gesamten Lagerbestands angezeigt wird."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:135
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:263
 msgid ""
 "Access more specific information with the :guilabel:`Stock Valuation "
 "Account` drop-down menu, by selecting either the :guilabel:`General Ledger` "
@@ -10928,7 +11046,7 @@ msgstr ""
 msgid "Using inventory valuation"
 msgstr "Verwendung der Bestandsbewertung"
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:7
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:5
 msgid ""
 "*Inventory valuation* is a quintessential accounting procedure that "
 "calculates the value of on-hand stock. Once determined, the inventory "
@@ -10938,7 +11056,7 @@ msgstr ""
 " dem der Wert des Lagerbestands berechnet wird. Die ermittelte "
 "Bestandsbewertung wird dann in den Gesamtwert eines Unternehmens einbezogen."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:11
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:9
 msgid ""
 "In Odoo, this process can be conducted manually— by warehouse employees "
 "physically counting the products— or automatically through the database."
@@ -10947,17 +11065,15 @@ msgstr ""
 "Produkte physisch zählen – oder automatisch über die Datenbank durchgeführt "
 "werden."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:15
-msgid ""
-":ref:`Inventory valuation "
-"configuration<inventory/inventory_valuation_config>`"
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:13
+msgid ":doc:`inventory_valuation_config`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:18
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:16
 msgid "Understand the basics of inventory valuation"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:20
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:18
 msgid ""
 "In order to understand how moving products in and out of stock affects the "
 "company's overall value, consider the following product and stock moves "
@@ -10967,18 +11083,18 @@ msgstr ""
 "Gesamtwert des Unternehmens auswirkt, betrachten Sie das folgende Szenario "
 "mit Produkt- und Lagerbewegungen."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:24
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:22
 msgid "Receive a product"
 msgstr "Ein Produkt erhalten"
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:26
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:24
 msgid ""
 "For example, consider an physical product, a simple *table*, which is "
 "categorized as `Office Furniture` in the product form's :guilabel:`Product "
 "Category` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:29
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:27
 msgid ""
 "Navigate to the the product category itself by going to "
 ":menuselection:`Inventory app --> Configuration --> Product Categories`, and"
@@ -10986,14 +11102,14 @@ msgid ""
 "(FIFO)` and the :guilabel:`Inventory Valuation` field as `Automated`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:34
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:32
 msgid ""
 "Alternatively access the :guilabel:`Product Categories` dashboard by "
 "clicking on the :guilabel:`internal link` arrow on the individual product's "
 "form, by hovering over the :guilabel:`Product Category` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:38
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:36
 msgid ""
 "Next, assume 10 tables are purchased at a price of $10.00, each. The "
 ":abbr:`PO (Purchase Order)` for those tables will show the subtotal of the "
@@ -11007,7 +11123,7 @@ msgstr ""
 msgid "Purchase order with 10 tables products valued at $10 each."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:45
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:43
 msgid ""
 "After selecting :guilabel:`Validate` on the :abbr:`PO (Purchase Order)`, use"
 " the :guilabel:`Valuation` smart button to view how the value of inventory "
@@ -11018,13 +11134,13 @@ msgstr ""
 msgid "Valuation smart button on a receipt."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:53
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:51
 msgid ""
 ":ref:`Developer mode <developer-mode>` must be turned on to see the "
 "*Valuation* smart button."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:56
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:54
 msgid ""
 "The :doc:`consignment "
 "</applications/inventory_and_mrp/inventory/management/misc/owned_stock>` "
@@ -11037,7 +11153,7 @@ msgstr ""
 "anderen Unternehmen gehören, bei der Bestandsbewertung des Gastunternehmens "
 "nicht berücksichtigt."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:60
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:58
 msgid ""
 "The :guilabel:`Stock Valuation` dashboard then displays valuation of all "
 "products in the shipment, along with their quantities and valuation. In the "
@@ -11051,7 +11167,7 @@ msgstr ""
 "Bestandsbewertungszeile, auf der die Produkte einer Sendung dargestellt "
 "werden."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:68
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:66
 msgid ""
 "In Odoo, automatic inventory valuation records are also recorded in the "
 "*Accounting* app. To access these accounting entries, navigate to "
@@ -11064,11 +11180,11 @@ msgstr ""
 msgid "Accounting entry for the inventory valuation of 10 tables."
 msgstr "Buchhaltungseinträge für die Bestandsbewertung von 10 Tischen."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:78
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:76
 msgid "Deliver a product"
 msgstr "Ein Produkt liefern"
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:80
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:78
 msgid ""
 "In the same logic, when a table is shipped to a customer and leaves the "
 "warehouse, the stock valuation decreases. The :guilabel:`Valuation` smart "
@@ -11080,11 +11196,11 @@ msgstr ""
 msgid "Decreased stock valuation after a product is shipped."
 msgstr "Verminderte Bestandsbewertung, nachdem ein Produkt versendet wird."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:87
 msgid "The inventory valuation report"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:91
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:89
 msgid ""
 "To view the current value of all products in the warehouse, go to "
 ":menuselection:`Inventory app --> Reporting --> Inventory Valuation`. The "
@@ -11097,18 +11213,18 @@ msgstr ""
 msgid "Inventory valuation report showing multiple products."
 msgstr "Bestandsbewertungsbericht mit mehreren Produkten."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:101
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:99
 msgid ""
 "The :guilabel:`Inventory At Date` button, located in the top-left corner of "
 "the :guilabel:`Stock Valuation` dashboard, shows the inventory valuation of "
 "products available during a prior specified date."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:106
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:104
 msgid "Update product unit price"
 msgstr "Einzelpreis eines Produkts aktualisieren"
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:108
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:106
 msgid ""
 "For any company: lead times, supply chain failures, and other risk factors "
 "can contribute to invisible costs. Although Odoo attempts to accurately "
@@ -11121,7 +11237,7 @@ msgstr ""
 "Bewertung* als zusätzliches Werkzeug zur Aktualisierung des Stückpreises von"
 " Produkten."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:113
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:111
 msgid ""
 "Manual valuation is intended for products that can be purchased and received"
 " for a cost greater than 0, or have product categories set with "
@@ -11134,7 +11250,7 @@ msgid "Add manual valuation of stock value to a product."
 msgstr ""
 "Hinzufügen einer manuellen Bewertung des Bestandswerts zu einem Produkt."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:121
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:119
 msgid ""
 "Create manual valuation entries on the :guilabel:`Stock Valuation` dashboard"
 " by first navigating to :menuselection:`Inventory app --> Reporting --> "
@@ -11143,7 +11259,7 @@ msgid ""
 " well as a teal :guilabel:`+ (plus)` button on the right."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:124
 msgid ""
 "Click the teal :guilabel:`+ (plus)` button to open up the :guilabel:`Product"
 " Revaluation` form, where updates to the calculation of inventory valuation "
@@ -13163,6 +13279,9 @@ msgid ""
 "A *location* is a specific space within a warehouse. This can be a shelf, "
 "room, aisle, etc. There are three types of locations in Odoo:"
 msgstr ""
+"Ein *Lagerort* ist ein bestimmter Raum innerhalb eines Lagers. Das kann ein "
+"Regal, ein Raum, ein Gang usw. sein. Es gibt drei Arten von Standorten in "
+"Odoo:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/use_locations.rst:8
 msgid ""
@@ -13171,12 +13290,19 @@ msgid ""
 "shelf, or an area where operations take place, like loading and unloading "
 "bays."
 msgstr ""
+"*Physische Standorte* sind Bereiche innerhalb eines Lagers, die dem "
+"Unternehmen des Benutzers gehören. Dabei kann es sich um einen Bereich "
+"handeln, in dem Artikel gelagert werden, wie z. B. ein Gang oder ein Regal, "
+"oder um einen Bereich, in dem Vorgänge stattfinden, wie z. B. Lade- und "
+"Entladebuchten."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/use_locations.rst:11
 msgid ""
 "*Partner locations* are the same as physical locations except that they "
 "exist within the warehouse of a customer or vendor."
 msgstr ""
+"*Partnerlagerorte* sind dasselbe wie physische Standorte, mit der Ausnahme, "
+"dass sie sich im Lager eines Kunden oder Lieferanten befinden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/use_locations.rst:13
 msgid ""
@@ -13185,6 +13311,12 @@ msgid ""
 "not yet entered inventory, like products that are on the way to a warehouse,"
 " or items that are no longer in inventory due to loss or other factors."
 msgstr ""
+"*Virtuelle Standorte* sind Orte, die nicht physisch existieren, an denen "
+"aber Artikel platziert werden können, die sich nicht im Bestand befinden. "
+"Dabei kann es sich um Artikel handeln, die noch nicht in den Bestand "
+"aufgenommen wurden, wie z. B. Produkte, die auf dem Weg zu einem Lagerhaus "
+"sind, oder um Artikel, die aufgrund von Verlust oder anderen Faktoren nicht "
+"mehr im Bestand sind."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/use_locations.rst:19
 msgid ""
@@ -13193,10 +13325,15 @@ msgid ""
 "--> Settings`, scroll down to the :guilabel:`Warehouse` heading, and enable "
 "the :guilabel:`Storage Locations` checkbox."
 msgstr ""
+"Um Lagerorte verwenden zu können, muss die Einstellung :guilabel:`Lagerorte`"
+" aktiviert werden. Navigieren Sie dazu zu :menuselection:`Lager --> "
+"Konfiguration --> Einstellungen`, scrollen Sie nach unten zur Überschrift "
+":guilabel:`Lagerhaus` und aktivieren Sie das Kontrollkästchen "
+":guilabel:`Lagerorte`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/use_locations.rst:24
 msgid "Create a new location inside a warehouse"
-msgstr ""
+msgstr "Einen neuen Lagerort in einem Lagerhaus erstellen"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/use_locations.rst:26
 msgid ""
@@ -13204,45 +13341,61 @@ msgid ""
 ":menuselection:`Configuration --> Locations --> Create`. The new location "
 "form can then be configured as follows:"
 msgstr ""
+"Wählen Sie in der :menuselection:`Lagerapp` die Option "
+":menuselection:`Konfiguration --> Lagerorte --> Neu`. Das neue "
+"Lagerortformular kann dann wie folgt konfiguriert werden:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/use_locations.rst:29
 msgid ""
 ":guilabel:`Location Name`: the name that will be used to reference the "
 "location"
 msgstr ""
+":guilabel:`Lagerortname`: der Namen, der verwendet wird, um auf den Standort"
+" zu verweisen"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/use_locations.rst:30
 msgid ""
 ":guilabel:`Parent Location`: the location or warehouse that the new location"
 " exists within"
 msgstr ""
+":guilabel:`Übergeordneter Lagerort`: der Lagerort oder das Lagerhaus, in der"
+" sich der neue Lagerort befindet"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/use_locations.rst:31
 msgid ""
 ":guilabel:`Location Type`: choose the category that the location belongs to"
 msgstr ""
+":guilabel:`Lagerorttyp`: Wählen Sie die Kategorie aus, zu der der Lagerort "
+"gehört."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/use_locations.rst:32
 msgid ""
 ":guilabel:`Company`: the company that owns the warehouse that the location "
 "is inside of"
 msgstr ""
+":guilabel:`Unternehmen`: das Unternehmen, dem das Lagerhaus gehört, in dem "
+"sich der Lagerort befindet"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/use_locations.rst:33
 msgid ""
 ":guilabel:`Is a Scrap Location?`: check this box to allow for "
 "scrapped/damaged goods to be stored in this location"
 msgstr ""
+":guilabel:`Ist Lagerort für Ausschuss?`: Markieren Sie dieses Kästchen, um "
+"die Lagerung von verschrotteten/beschädigten Gütern an diesem Ort zu "
+"erlauben"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/use_locations.rst:35
 msgid ""
 ":guilabel:`Is a Return Location?`: check this box to allow products to be "
 "returned to this location"
 msgstr ""
+":guilabel:`Ist ein Lagerort für Retouren?`: Markieren Sie dieses Feld, um "
+"die Rückgabe von Produkten an diesen Ort zu erlauben."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/use_locations.rst:37
 msgid ":guilabel:`Barcode`: the barcode number assigned to the location"
-msgstr ""
+msgstr ":guilabel:`Barcode`: dem Lagerort zugeordnete Barcodenummer"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/use_locations.rst:38
 msgid ""
@@ -13253,11 +13406,11 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/use_locations.rst-1
 msgid "The form for creating a new location."
-msgstr ""
+msgstr "Das Formular zur Erstellung eines neuen Lagerorts."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/use_locations.rst:46
 msgid "Create location hierarchies"
-msgstr ""
+msgstr "Hierarchien für Lagerorte erstellen"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/use_locations.rst:48
 msgid ""
@@ -13267,6 +13420,12 @@ msgid ""
 "within it, allowing for the creation of a virtually infinite hierarchical "
 "structure."
 msgstr ""
+"Die Einstellung *Übergeordneter Lagerort* im Formular für neue Standorte "
+"ermöglicht es, dass ein Standort innerhalb eines Lagers oder eines anderen "
+"Standorts existiert. Jeder Standort kann als übergeordneter Lagerort dienen,"
+" und jeder übergeordnete Lagerort kann mehrere Standorte in sich vereinen, "
+"sodass eine praktisch unendliche hierarchische Struktur geschaffen werden "
+"kann."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/use_locations.rst:54
 msgid ""
@@ -13274,6 +13433,9 @@ msgid ""
 "aisle, which is located within a room, which is located within the overall "
 "warehouse."
 msgstr ""
+"Die Lagerorthierarchie könnte so organisiert sein, dass ein Regal in einem "
+"Gang liegt, der wiederum in einem Raum liegt, der wiederum im gesamten Lager"
+" liegt."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/use_locations.rst:57
 msgid ""
@@ -13282,6 +13444,10 @@ msgid ""
 "as the parent of the shelf. This can be adapted to a hierarchy of any "
 "magnitude."
 msgstr ""
+"Um die Hierarchie für Lagerorte im obigen Beispiel zu erstellen, legen Sie "
+"das Lager als übergeordnetes Element des Raums, den Raum als übergeordnetes "
+"Element des Gangs und den Gang als übergeordnetes Element des Regals fest. "
+"Dies kann an eine Hierarchie jeder Größenordnung angepasst werden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouse_replenishment_transfer.rst:3
 msgid "Transfer products between warehouses using replenishment"
@@ -14004,6 +14170,10 @@ msgid ""
 "two (or more) warehouses; in Odoo, pulling products from multiple warehouses"
 " to satisfy sales demands can be done using *virtual locations*."
 msgstr ""
+"Es kann vorkommen, dass Produkte, die in einem einzigen Verkaufsauftrag "
+"enthalten sind, aus zwei (oder mehr) Lagern bezogen werden. In Odoo können "
+"Sie Produkte aus mehreren Lagern abrufen, um die Verkaufsanforderungen zu "
+"erfüllen, indem Sie *virtuelle Lagerorte* verwenden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:14
 msgid ""
@@ -14011,6 +14181,9 @@ msgid ""
 "fulfill orders for multiple warehouses, has some limitations. Consider the "
 "following before proceeding:"
 msgstr ""
+"Die Lösung in diesem Dokument, die die Verwendung eines virtuellen Lagers "
+"zur Erfüllung von Aufträgen für mehrere Lager beschreibt, hat einige "
+"Einschränkungen. Beachten Sie die folgenden Punkte, bevor Sie fortfahren:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:17
 msgid ""
@@ -14018,6 +14191,10 @@ msgid ""
 "sales order, the virtual warehouse's address is indicated on the picking, "
 "packing, and delivery forms, **not** the actual warehouse's address."
 msgstr ""
+"Wenn das Feld :guilabel:`Lager` auf einem Verkaufsauftrag auf ein virtuelles"
+" Lager gesetzt wird, wird die Adresse des virtuellen Lagers auf den "
+"Kommissionier-, Verpackungs- und Lieferformularen angegeben, **nicht** die "
+"Adresse des tatsächlichen Lagers."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:20
 msgid ""
@@ -14026,6 +14203,10 @@ msgid ""
 "warehouses, but rather the sum of the stock in the locations whose warehouse"
 " ID is the virtual warehouse."
 msgstr ""
+"Jeder Standort hat eine `warehouse_id` (verstecktes Feld). Das bedeutet, "
+"dass der Bestand im virtuellen Lager **nicht** die Summe der Bestände der "
+"realen Lager ist, sondern die Summe der Bestände an den Standorten, deren "
+"Lager-ID das virtuelle Lager ist."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:25
 msgid ""
@@ -14040,16 +14221,22 @@ msgid ""
 "The output or packing zone on the various forms is incorrectly listed as the"
 " virtual warehouse's address."
 msgstr ""
+"Die Ausgabe- oder Verpackungszone auf den verschiedenen Formularen ist "
+"fälschlicherweise als Adresse des virtuellen Lagers angegeben."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:31
 msgid "There is no workaround for two or three-step deliveries."
 msgstr ""
+"Für Lieferungen in zwei oder drei Schritten gibt es keine Umgehungslösung."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:32
 msgid ""
 "Proceed **only** if setting a virtual warehouse's address as the output or "
 "packing zone makes sense for the company's workflow."
 msgstr ""
+"Gehen Sie **nur** dann vor, wenn es für den Arbeitsablauf Ihres Unternehmens"
+" sinnvoll ist, die Adresse eines virtuellen Lagers als Ausgabe- oder "
+"Verpackungszone festzulegen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:36
 msgid ""
@@ -14057,6 +14244,9 @@ msgid ""
 "following steps, the :guilabel:`Storage Locations` and :guilabel:`Multi-Step"
 " Routes` features **must** be enabled."
 msgstr ""
+"Um virtuelle Lagerorte in Lagerhäusern zu erstellen und mit den folgenden "
+"Schritten fortzufahren, **müssen** die Funktionen :guilabel:`Lagerorte` und "
+":guilabel:`Mehrstufige Routen` aktiviert werden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:39
 msgid ""
@@ -14065,10 +14255,15 @@ msgid ""
 ":guilabel:`Storage Locations` and :guilabel:`Multi-Step Routes` options. "
 "Then, :guilabel:`Save` the changes to finish."
 msgstr ""
+"Gehen Sie dazu zu :menuselection:`Lager --> Konfiguration --> "
+"Einstellungen`, scrollen Sie nach unten zum Abschnitt :guilabel:`Lagerhaus` "
+"und aktivieren Sie die Optionen :guilabel:`Lagerorte` und "
+":guilabel:`Mehrstufige Routen`. Speichern Sie die Änderungen, um sie "
+"abzuschließen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:47
 msgid "Create virtual parent location"
-msgstr ""
+msgstr "Übergeordneten virtuellen Lagerort erstellen"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:49
 msgid ""
@@ -14076,6 +14271,9 @@ msgid ""
 "acts as a *virtual* warehouse — the *parent* location of other physical "
 "warehouses."
 msgstr ""
+"Bevor Sie virtuelle Lagerorte anlegen, erstellen Sie ein neues Lagerhaus, "
+"das als *virtuelles* Lagerhaus fungiert – der *übergeordnete* Lagerort für "
+"andere physische Lagerhäuser."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:54
 msgid ""
@@ -14111,6 +14309,11 @@ msgid ""
 "other warehouse details can be changed under the :guilabel:`Warehouse "
 "Configuration` tab."
 msgstr ""
+"Um ein neues Lagerhaus zu erstellen, gehen Sie zu :menuselection:`Lager --> "
+"Konfiguration --> Lagerhäuser`, und klicken Sie auf :guilabel:`Neu`. Von "
+"hier aus können der :guilabel:`Name` und der :guilabel:`Kurzname` des "
+"Lagerhauses geändert werden, und andere Lagerdetails können im Reiter "
+":guilabel:`Lagerhauskonfiguration` geändert werden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:68
 msgid ""
@@ -14118,10 +14321,13 @@ msgid ""
 "Continue following the steps below to finish configuring the virtual parent "
 "warehouse."
 msgstr ""
+"Klicken Sie abschließend auf :guilabel:`Speichern`, um die Erstellung eines "
+"*regulären* Lagers zu beenden. Fahren Sie mit den folgenden Schritten fort, "
+"um die Konfiguration des virtuellen übergeordneten Lagers abzuschließen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst-1
 msgid "New warehouse form."
-msgstr ""
+msgstr "Neues Lagerhausformular."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:76
 msgid ""
@@ -14134,6 +14340,7 @@ msgid ""
 ":ref:`Incoming and outgoing shipments "
 "<inventory/receipts_delivery_one_step/wh>`"
 msgstr ""
+":ref:`Wareneingänge und -ausgänge <inventory/receipts_delivery_one_step/wh>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:78
 msgid ""
@@ -14143,12 +14350,14 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:83
 msgid "Create child warehouses"
-msgstr ""
+msgstr "Untergeordnete Lagerhäuser erstellen"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:85
 msgid ""
 "Create at least two *child* warehouses to link to the virtual warehouse."
 msgstr ""
+"Erstellen Sie mindestens zwei *untergeordnete* Lagerhäuser, die mit dem "
+"virtuellen Lager verbunden sind."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:88
 msgid ""
@@ -14156,6 +14365,10 @@ msgid ""
 "there needs to be at least **two** warehouses acting as child locations of "
 "the virtual parent location warehouse."
 msgstr ""
+"Um Bestand aus mehreren Lagerhäusern zu nehmen, um einen Verkaufsauftrag "
+"abzuschließen, muss es mindestens **zwei** Lagerhäuser geben, die als "
+"*untergeordnete Lagerorte* des *übergeordneten virtuellen Lagerorts* "
+"fungieren."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:91
 msgid ""
@@ -14164,6 +14377,10 @@ msgid ""
 "instructions <inventory/routes/virtual-wh>` to configure the physical stock "
 "locations."
 msgstr ""
+"Navigieren Sie dazu zu :menuselection:`Lager --> Konfiguration --> "
+"Lagerhäuser`, klicken Sie auf :guilabel:`Neu` und folgen Sie den "
+":ref:`vorangehende Anweisungen <inventory/routes/virtual-wh>`, um die "
+"physischen Lagerorte zu konfigurieren."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:0
 msgid "**Parent Warehouse**"
@@ -14175,7 +14392,7 @@ msgstr ":guilabel:`Lagerhaus`: `Virtuelles Lagerhaus`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:0
 msgid ":guilabel:`Location`: `VWH/Stock`"
-msgstr ""
+msgstr ":guilabel:`Lagerort`: `VWH/Stock`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:0
 msgid "**Child Warehouses**"
@@ -14187,12 +14404,14 @@ msgstr ":guilabel:`Lagerhäuser`: `Lagerhaus A` und `Lagerhaus B`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:0
 msgid ":guilabel:`Locations`: `WHA` and `WHB`"
-msgstr ""
+msgstr ":guilabel:`Lagerorte`: `WHA` und `WHB`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:0
 msgid ""
 "Graphic of child locations 'WHA' and 'WHB' tied to the parent location."
 msgstr ""
+"Grafik von untergeordneten Standorten „WHA“ und „WHB“ im Zusammenhang mit "
+"dem übergeordneten Lagerort."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:110
 msgid ""
@@ -14201,10 +14420,14 @@ msgid ""
 "point to :ref:`link the child warehouses <inventory/routes/link-to-vwh>` in "
 "the next section."
 msgstr ""
+"Während der virtuelle Lagerort später in „Ansicht“ geändert wird, muss der "
+":guilabel:`Lagerorttyp` **zu diesem Zeitpunkt :guilabel:`Interner Lagerort` "
+"sein, um :ref:`untergeordnete Lagerhäuser <inventory/routes/link-to-vwh>` im"
+" nächsten Abschnitt zu verknüpfen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:117
 msgid "Link child warehouses to virtual stock"
-msgstr ""
+msgstr "Unterlager mit virtuellen Beständen verknüpfen"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:119
 msgid ""
@@ -14212,6 +14435,10 @@ msgid ""
 "configured in the :ref:`previous step <inventory/routes/virtual-wh>`, "
 "navigate to :menuselection:`Inventory app --> Configuration --> Locations`."
 msgstr ""
+"Um physische Lagerhäuser als untergeordnete Standorte des virtuellen "
+"Standorts festzulegen, der im :ref:`vorherigen Schritt "
+"<inventory/routes/virtual-wh>` konfiguriert wurde, navigieren Sie zu "
+":menuselection:`Lager --> Konfiguration --> Lagerorte`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:123
 msgid ""
@@ -14219,6 +14446,9 @@ msgid ""
 ":guilabel:`Location` that was previously created to be a child location "
 "(e.g. `WHA`), and click :guilabel:`Edit`."
 msgstr ""
+"Entfernen Sie alle Filter aus der Suchleiste. Klicken Sie dann auf den "
+"physischen :guilabel:`Lagerort`, das zuvor als untergeordneter Ort erstellt "
+"wurde (z. B. `WHA`), und klicken Sie auf :guilabel:`Bearbeiten`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:126
 msgid ""
@@ -14226,6 +14456,10 @@ msgid ""
 "Locations` to the virtual warehouse's **stock location** (e.g. `VWH/Stock`) "
 "from the drop-down menu, and click :guilabel:`Save`."
 msgstr ""
+"Ändern Sie das Feld :guilabel:`Übergeordneter Standort` von "
+":guilabel:`Physische Standorte` auf den **Lagerstandort** des virtuellen "
+"Lagers (z. B. `VWH/Stock`) aus dem Dropdown-Menü und klicken Sie auf "
+":guilabel:`Speichern`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:131
 msgid ""
@@ -14234,14 +14468,22 @@ msgid ""
 "`VWH/Stock`) **must**  have its :guilabel:`Location Type` set to "
 ":guilabel:`Internal Location`."
 msgstr ""
+"Um den Lagerort des virtuellen Lagers im Dropdown-Menü "
+":guilabel:`Übergeordneter Lagerort` auszuwählen, muss der Lagerort des "
+"übergeordneten Lagers (z. B. `VWH/Stock`) **auf :guilabel:`Lagerorttyp` "
+"gesetzt sein."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst-1
 msgid "Set the child warehouse's *Parent Location* to the virtual warehouse."
 msgstr ""
+"Einstellung des *Übergeordneten Lagerort* des untergeordneten Lagerhauses "
+"auf virtuelles Lagerhaus."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:139
 msgid "Repeat the preceding steps to configure two or more child warehouses."
 msgstr ""
+"Wiederholen Sie die vorherigen Schritte, um zwei oder mehrere Unterlager zu "
+"konfigurieren."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:141
 msgid ""
@@ -14249,10 +14491,14 @@ msgid ""
 "orders using stock from child warehouses (e.g. `WHA` and `WHB`), if there is"
 " insufficient stock in any one location."
 msgstr ""
+"Sobald dies abgeschlossen ist, erfüllt das virtuelle, übergeordnete Lager "
+"(z. B. `VWH/Stock`) die Aufträge unter Verwendung der Bestände aus den "
+"untergeordneten Lagern (z. B. `WHA` und `WHB`), wenn der Bestand an einem "
+"Standort nicht ausreicht."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:145
 msgid "Set virtual stock location as 'view'"
-msgstr ""
+msgstr "Virtuellen Lagerort auf „Ansicht“ einstellen"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:147
 msgid ""
@@ -14260,12 +14506,17 @@ msgid ""
 ":guilabel:`View`, as it is a non-existent location used to group various "
 "physical warehouses together."
 msgstr ""
+"Setzen Sie den :guilabel:`Lagerorttyp` des virtuellen Lagerorts auf "
+":guilabel:`Ansicht`, da es sich um einen nicht existierenden Ort handelt, "
+"der dazu dient, verschiedene physische Lager zusammenzufassen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:150
 msgid ""
 "To do that, navigate to :menuselection:`Inventory app --> Configuration --> "
 "Locations`."
 msgstr ""
+"Gehen Sie dazu zur :menuselection:`Lagerapp --> Konfiguration  --> "
+"Lagerorte`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:152
 msgid ""
@@ -14273,6 +14524,9 @@ msgid ""
 ":ref:`previously created <inventory/routes/virtual-wh>`, from the "
 ":guilabel:`Locations` list."
 msgstr ""
+"Klicken Sie in der Liste der :guilabel:`Lagerorte` auf den Lagerort des "
+"virtuellen Lagers (z. B. `VWH/Stock`), der :ref:`zuvor erstellt wurde "
+"<inventory/routes/virtual-wh>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:155
 msgid ""
@@ -14280,6 +14534,9 @@ msgid ""
 "set the :guilabel:`Location Type` to :guilabel:`View`. :guilabel:`Save` the "
 "changes."
 msgstr ""
+"Setzen Sie im Standortformular unter der Überschrift :guilabel:`Zusätzliche "
+"Informationen` den :guilabel:`Lagerorttyp` auf :guilabel:`Ansicht`. "
+":guilabel:`Speichern` Sie die Änderungen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst-1
 msgid "Warehouse location types in location creation screen."
@@ -14290,14 +14547,17 @@ msgid ""
 "To view the total quantity across **all** linked child warehouses, go to the"
 " product form and click the :guilabel:`On Hand` smart button."
 msgstr ""
+"Um die Gesamtmenge in **allen** verknüpften untergeordneten Lagern "
+"anzuzeigen, gehen Sie zum Produktformular und klicken Sie auf die "
+"intelligente Schaltfläche :guilabel:`Vorrätig`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:0
 msgid "Display stock across all linked warehouses."
-msgstr ""
+msgstr "Anzeige des Bestands in allen Lagerhäusern."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:171
 msgid "Example: sell products from a virtual warehouse"
-msgstr ""
+msgstr "Beispiel: Produkte aus einem virtuellen Lager verkaufen"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:173
 msgid ""
@@ -14306,26 +14566,34 @@ msgid ""
 "least **one** product, with quantity on-hand in each warehouse, "
 "respectively."
 msgstr ""
+"Um Produkte aus mehreren Lagerhäusern über einen virtuellen übergeordneten "
+"Lagerort in diesem Ablauf zu verkaufen, müssen mindestens **zwei** "
+"Lagerhäuser in der Datenbank konfiguriert sein – mit jeweils mindestens "
+"**einem** Produkt und einer Menge, die in jedem Lagerhaus vorhanden ist."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:178
 msgid ""
 "The following product, `Toy soldier`, is available at each location with the"
 " quantities:"
 msgstr ""
+"Das folgende Produkt, `Spielzeugsoldat`, ist an jedem Standort mit den "
+"angegebenen Mengen erhältlich:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:180
 msgid "`WHA/Stock` : 1"
-msgstr ""
+msgstr "`WHA/Stock` : 1"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:181
 msgid "`WHB/Stock` : 2"
-msgstr ""
+msgstr "`WHB/Stock` : 2"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:182
 msgid ""
 "Warehouses `WHA` and `WHB` are child warehouses of the virtual warehouse "
 "`VWH`."
 msgstr ""
+"Lagerhäuser `WHA` und `WHB` sind untergeordnete Lagerhäuser des virtuellen "
+"Lagerhauses `VWH`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:184
 msgid ""
@@ -14334,6 +14602,11 @@ msgid ""
 "add a :guilabel:`Customer`, and click :guilabel:`Add a product` to add the "
 "two products stored in the two warehouses."
 msgstr ""
+"Erstellen Sie ein Angebot für das Produkt, indem Sie zur "
+":menuselection:`Verkaufsapp` navigieren und auf :guilabel:`Neu` klicken. "
+"Fügen Sie im Angebot einen :guilabel:`Kunden` hinzu und klicken Sie auf "
+":guilabel:`Produkt hinzufügen`, um die beiden Produkte aus den beiden Lagern"
+" hinzuzufügen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:188
 msgid ""
@@ -14342,12 +14615,19 @@ msgid ""
 "value to the virtual warehouse that was :ref:`previously created "
 "<inventory/routes/virtual-wh>`. Next, :guilabel:`Confirm` the sales order."
 msgstr ""
+"Klicken Sie dann im Verkaufsauftragsformular auf den Reiter "
+":guilabel:`Weitere Informationen`. Ändern Sie im Abschnitt "
+":guilabel:`Lieferung` den Wert des Feldes :guilabel:`Lagerhaus` in das "
+"virtuelle Lager, :ref:`das zuvor angelegt wurde <inventory/routes/virtual-"
+"wh>`. :guilabel:`Bestätigen` als nächstes den Verkaufsauftrag."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst-1
 msgid ""
 "Set virtual warehouse as the *Warehouse* field in sales order's *Other Info*"
 " tab."
 msgstr ""
+"Erstellung des virtuellen Lagers als Feld *Lagerhaus* imm Reiter *Weitere "
+"Informationen* des Verkaufsauftrags."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:196
 msgid ""
@@ -14356,6 +14636,11 @@ msgid ""
 "the :guilabel:`Warehouse` field value from the sales order. Both should list"
 " the virtual warehouse location."
 msgstr ""
+"Klicken Sie dann auf die intelligente Schaltfläche :guilabel:`Lieferung`. "
+"Vergewissern Sie sich im Formular für die Lagerlieferung, dass der Wert des "
+"Feldes :guilabel:`Lagerort (Quelle)` mit dem Wert des Feldes "
+":guilabel:`Lagerhaus` des Verkaufsauftrags übereinstimmt. In beiden Fällen "
+"sollte der Standort des virtuellen Lagers angegeben sein."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:200
 msgid ""
@@ -14364,6 +14649,11 @@ msgid ""
 ":guilabel:`From` column for each product match the child locations that are "
 "tied to the virtual parent location."
 msgstr ""
+"Bestätigen Sie schließlich im Formular für die Lagerlieferung im Reiter "
+":guilabel:`Detaillierte Vorgänge`, dass die Werte für :guilabel:`Lagerorte` "
+"in der Spalte :guilabel:`Von` für jedes Produkt mit den untergeordneten "
+"Lagerorten übereinstimmen, die an den virtuellen übergeordneten Lagerort "
+"gebunden sind."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst-1
 msgid "Delivery order with matching source and child locations."
@@ -14377,22 +14667,33 @@ msgid ""
 "order, **must** match for products in the sales order to be pulled from "
 "different warehouses."
 msgstr ""
+"Der :guilabel:`Lagerort (Quelle)` auf dem Formular der Lagerlieferung und "
+"das :guilabel:`Lagerhaus` im Reiter :guilabel:`Weitere Informationen` auf "
+"dem Verkaufsauftragsformular **müssen** übereinstimmen, damit die im "
+"Verkaufsauftrag enthaltenen Produkte aus verschiedenen Lagern bezogen werden"
+" können."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:213
 msgid ""
 "If the virtual warehouse is not in the :guilabel:`Source Location` field on "
 "the warehouse delivery form, retry product reservation by:"
 msgstr ""
+"Wenn das virtuelle Lagerhaus nicht im Feld :guilabel:`Quelllagerort` auf dem"
+" Lagerhaus-Lieferformular enthalten ist, versuchen Sie die "
+"Produktreservierung erneut, indem Sie:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:216
 msgid ""
 "Running the scheduler: turn on :ref:`developer mode <developer-mode>`, and "
 "then go to :menuselection:`Inventory app --> Operations --> Run Scheduler`."
 msgstr ""
+"Starten Sie den Planer: Schalten Sie den :ref:`Entwicklermodus <developer-"
+"mode>` ein, und gehen Sie dann zu :menuselection:`Lager --> Vorgänge --> "
+"Planer starten`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:218
 msgid "Clicking :guilabel:`Check Availability` on the delivery order."
-msgstr ""
+msgstr "im Lieferauftrag auf :guilabel:`Verfügbarkeit prüfen` klicken."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:219
 msgid ""
@@ -14400,6 +14701,10 @@ msgid ""
 "field on the sales order, then cancel it, and create a new sales order with "
 "the virtual warehouse set in the :guilabel:`Warehouse` field."
 msgstr ""
+"Wenn das virtuelle Lager **nicht** dem Feld :guilabel:`Lagerhaus` auf dem "
+"Verkaufsauftrag zugewiesen ist, dann stornieren Sie diesen und erstellen "
+"einen neuen Verkaufsauftrag mit dem virtuellen Lager im Feld "
+":guilabel:`Lagerhaus`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:222
 msgid ""
@@ -14408,6 +14713,11 @@ msgid ""
 " :ref:`previous section <inventory/routes/child-wh>` to ensure the correct "
 "settings."
 msgstr ""
+"Wenn das Feld :guilabel:`Lagerhaus` auf dem Verkaufsauftragsformular fehlt, "
+"sind die mehreren untergeordneten Lager möglicherweise nicht korrekt "
+"eingerichtet worden. Überprüfen Sie den :ref:`vorherigen Abschnitt "
+"<inventory/routes/child-wh>`, um die korrekten Einstellungen "
+"sicherzustellen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:227
 msgid ""
@@ -14416,6 +14726,10 @@ msgid ""
 "from the drop-down menu next to :guilabel:`Default Warehouse` on their "
 "employee form."
 msgstr ""
+"Um einen virtuellen *übergeordneten* Lagerort als Standardlager für "
+"Verkaufsaufträge zu verwenden, soll jeder Vertriebsmitarbeiter das virtuelle"
+" Lager aus dem Drop-down-Menü neben :guilabel:`Standardlagerhaus` in seinem "
+"Mitarbeiterformular zuweisen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:0
 msgid "Default warehouse location on employee form."
@@ -14423,7 +14737,7 @@ msgstr "Standard-Lagerort im Mitarbeitformular."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst:5
 msgid "Routes and push/pull rules"
-msgstr ""
+msgstr "Routen und Pull/Push-Regeln"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst:7
 msgid ""
@@ -14500,6 +14814,13 @@ msgid ""
 "boxes, and conveyor belts bring them to the shipping docks, ready to be "
 "delivered to customers."
 msgstr ""
+"Hier ist ein Beispiel für eine Abwicklungsroute. Morgens werden die Artikel "
+"für alle Aufträge, die im Laufe des Tages vorbereitet werden müssen, "
+"kommissioniert. Diese Artikel werden aus dem Lagerort entnommen und in den "
+"Kommissionierbereich gebracht, in dessen Nähe die Aufträge verpackt werden. "
+"Anschließend werden die Aufträge in die entsprechenden Kartons verpackt und "
+"über Förderbänder in die Nähe der Versanddocks gebracht, wo sie an die "
+"Kunden ausgeliefert werden können."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst-1
 msgid "View of a generic pull from rule when preparing deliveries."
@@ -14721,7 +15042,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst-1
 msgid "A pre-configured warehouse in Odoo Inventory."
-msgstr ""
+msgstr "Ein vorkonfiguriertes Lagerhaus in Odoo Lager."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst:134
 msgid ""
@@ -15070,7 +15391,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst:273
 msgid "Example flow"
-msgstr ""
+msgstr "Beispielablauf"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst:275
 msgid ""
@@ -15417,6 +15738,8 @@ msgid ""
 "When receiving a `Pallet` (:guilabel:`Package Type`) of `Lemonade cans`, it "
 "is redirected to `WH/Stock/Pallets/PAL1`."
 msgstr ""
+"Wenn Sie eine `Palette` (:guilabel:`Pakettyp`) mit `Limonade-Dosen` "
+"erhalten, wird sie zu `WH/Stock/Pallets/PAL1` umgeleitet."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:86
 msgid ""
@@ -15424,20 +15747,27 @@ msgid ""
 "receiving a `Box` of any item in this product category, items are redirected"
 " to `WH/Stock/Shelf 1`."
 msgstr ""
+"Die :guilabel:`Produktkategorie` von `Limonadendosen` ist `Alle/Getränke`, "
+"und wenn Sie eine `Kiste` mit einem Artikel dieser Produktkategorie "
+"erhalten, werden die Artikel nach `WH/Stock/Shelf 1` umgeleitet."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:88
 msgid "Any product on a `Pallet` is redirected to `WH/Stock/Pallets`"
 msgstr ""
+"Jedes Produkt auf einer `Palette` wird zu `WH/Stock/Pallets` umgeleitet."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:89
 msgid "The product `Lemonade can` is redirected to `WH/Stock/Shelf 2`"
 msgstr ""
+"Das Produkt `Limonadenbüchse` wird umgeleitet nach `WH/Stock/Shelf 2`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:90
 msgid ""
 "Items in the `All/drinks` product category are redirected to `WH/Stock/Small"
 " Refrigerator`."
 msgstr ""
+"Artikel in der Produktkategorie `Alle/Getränke` werden zu `WH/Stock/Small "
+"Refrigerator` umgeleitet."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:0
 msgid "Some examples of putaway rules."
@@ -15445,7 +15775,7 @@ msgstr "Andere Beispiele für Einlagerungsregeln."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:97
 msgid "Storage categories"
-msgstr ""
+msgstr "Lagerkategorien"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:99
 msgid ""
@@ -15453,6 +15783,10 @@ msgid ""
 "allow the user to define the quantity of products that can be stored in the "
 "location, and how the location will be selected with putaway rules."
 msgstr ""
+"Eine *Lagerkategorie* ist ein zusätzliches Standortattribut. Lagerkategorien"
+" ermöglichen es dem Benutzer, die Menge der Produkte zu definieren, die an "
+"dem Ort gelagert werden können und wie der Ort mit Einlagerungsregeln "
+"ausgewählt wird"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:106
 msgid ""
@@ -15460,28 +15794,38 @@ msgid ""
 "Configuration --> Settings`, and activate the :guilabel:`Storage Categories`"
 " feature in the :guilabel:`Warehouse` section. Then, click :guilabel:`Save`."
 msgstr ""
+"Um verschiedene Pakete zu verwenden, gehen Sie zunächst zu "
+":menuselection:`Lager --> Konfiguration --> Einstellungen` zum Abschnitt "
+":guilabel:`Lagerhaus` und aktivieren Sie die Einstellung "
+":guilabel:`Lagerkategorien`. Klicken Sie dann auf :guilabel:`Speichern`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:111
 msgid ""
 "The :guilabel:`Storage Locations` feature **must** be enabled to enable "
 ":guilabel:`Storage Categories`."
 msgstr ""
+"Die Funktion :guilabel:`Lagerorte` **muss** aktiviert sein, um "
+":guilabel:`Lagerkategorien` zu aktivieren."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:115
 msgid "Define storage category"
-msgstr ""
+msgstr "Lagerkategorie festlegen"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:117
 msgid ""
 "To create a storage category, go to :menuselection:`Inventory app --> "
 "Configuration --> Storage Categories` and click :guilabel:`Create`."
 msgstr ""
+"Um eine Lagerkategorie zu erstellen, gehen Sie zu :menuselection:`Lager --> "
+"Konfiguration --> Lagerkategorien` und klicken Sie auf :guilabel:`Neu`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:120
 msgid ""
 "On the storage category form, type a name for the :guilabel:`Storage "
 "Category` field."
 msgstr ""
+"Geben Sie im Formular der Lagerkategorie einen Namen für das Feld "
+":guilabel:`Lagerkategorie` ein."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:122
 msgid ""
@@ -15489,6 +15833,10 @@ msgid ""
 "package type. The :guilabel:`Allow New Product` field defines when the "
 "location is considered available to store a product:"
 msgstr ""
+"Es gibt verfügbare Optionen zur Begrenzung der Kapazität nach Gewicht, nach "
+"Produkt oder nach Pakettyp. Das Feld :guilabel:`Neues Produkt erlauben` legt"
+" fest, wann der Standort als verfügbar für die Lagerung eines Produkts "
+"angesehen wird:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:126
 msgid ""
@@ -15519,12 +15867,17 @@ msgid ""
 "Create putaway rules for pallet-stored items and ensure real-time storage "
 "capacity checks by creating the `High Frequency pallets` storage category."
 msgstr ""
+"Erstellen Sie Einlagerungsregeln für auf Paletten gelagerte Artikel und "
+"sorgen Sie für eine Überprüfung der Lagerkapazität in Echtzeit, indem Sie "
+"die Lagerkategorie `Häufig genutzte Paletten` anlegen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:136
 msgid ""
 "Name the :guilabel:`Storage Category`, and select :guilabel:`If all products"
 " are same` in the :guilabel:`Allow New Product` field."
 msgstr ""
+"Benennen Sie die :guilabel:`Lagerkategorie` und wählen Sie :guilabel:`Wenn "
+"alle Produkte gleich sind` im Feld :guilabel:`Neues Produkt erlauben`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:139
 msgid ""
@@ -15532,10 +15885,14 @@ msgid ""
 "specifying the number of packages for the designated :guilabel:`Package "
 "Type` and setting a maximum of `2.00` `Pallets` for a specific location."
 msgstr ""
+"Definieren Sie dann die Paketkapazität im Reiter :guilabel:`Kapazität nach "
+"Paket`, indem Sie die Anzahl der Pakete für den gewünschten "
+":guilabel:`Pakettyp` angeben und ein Maximum von `2,00` `Paletten` für einen"
+" bestimmten Standort festlegen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:0
 msgid "Create a storage category on the page."
-msgstr ""
+msgstr "Erstellung einer Lagerkategorie auf der Seite."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:147
 msgid ""
@@ -15552,12 +15909,18 @@ msgid ""
 ":guilabel:`Edit` and select the created category in the :guilabel:`Storage "
 "Category` field."
 msgstr ""
+"Navigieren Sie dazu zu dem Lagerort, indem Sie zu :menuselection:`Lager --> "
+"Konfiguration --> Lagerorte` gehen und den Lagerort auswählen. Klicken Sie "
+"auf :guilabel:`Bearbeiten` und wählen Sie die erstellte Kategorie im Feld "
+":guilabel:`Lagerkategorie`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:154
 msgid ""
 "Assign the `High Frequency pallets` storage category to the "
 "`WH/Stock/pallets/PAL 1` sub-location."
 msgstr ""
+"Weisen Sie die Lagerkategorie `Häufig benutzte Paletten` dem Unterstandort "
+"`WH/Stock/pallets/PAL 1` zu."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:0
 msgid ""
@@ -15577,6 +15940,9 @@ msgid ""
 "the `PAL1` and `PAL2` locations and :ref:`rework the putaway rules "
 "<inventory/routes/putaway-rule>` as follows:"
 msgstr ""
+"Um das obige Beispiel fortzusetzen, wenden Sie die `Häufig genutzte "
+"Paletten` auf die Standorte `PAL1` und `PAL2` an und :ref:`überarbeiten Sie "
+"die Einlagerungsregeln <inventory/routes/putaway-rule>` wie folgt:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:167
 msgid "Assume one pallet of lemonade cans is received:"
