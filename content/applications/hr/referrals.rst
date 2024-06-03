@@ -11,9 +11,9 @@ recruitment pipeline. Once enough referral points are earned, they can be exchan
 *Referrals* application integrates with the *Employees*, *Recruitment*, and *Website* applications,
 all of which must be installed in order for the *Referrals* application to function.
 
-The only configurations needed for the *Referrals* application *after* installation are related to
-the :ref:`rewards <referrals/rewards>`; everything else is pre-configured when Odoo *Referrals* is
-installed.
+The only configurations needed for the *Referrals* application *after* it has been installed, are
+related to the :doc:`rewards <referrals/rewards>`; everything else is pre-configured when Odoo
+*Referrals* is installed.
 
 Users with either :guilabel:`Referral User`, :guilabel:`Officer`, or :guilabel:`Administrator`
 access rights for the *Recruitment* application have access to the *Referrals* application. Only
@@ -238,71 +238,6 @@ check mark appears next to the stage.
    earned for each stage are done in the *Recruitment* application. Refer to the
    :ref:`Recruitment <recruitment/modify-stages>` documentation to modify the points for each stage.
 
-.. _referrals/rewards:
-
-Rewards
-=======
-
-Create rewards
---------------
-
-The rewards are the only configurations needed when setting up the *Referrals* application. Only
-users with :guilabel:`Administrator` rights for the *Recruitment* application can create or modify
-rewards. To add rewards, navigate to :menuselection:`Referrals app --> Configuration --> Rewards`.
-Click :guilabel:`New`, and a reward form loads. Enter the following information on the form:
-
-- :guilabel:`Product Name`: enter the name as it should appear for the reward.
-- :guilabel:`Cost`: enter the amount of points required to redeem the reward.
-- :guilabel:`Company`: using the drop-down menu, select the company the reward appears for. If a
-  reward is to be used for several companies, each company needs to have a record of the reward,
-  with the company listed on the form. This field only appears if in a multi-company environment.
-- :guilabel:`Gift Responsible`: select the person who will be responsible for procuring and
-  delivering the reward to the recipient, using the drop-down menu. This person is alerted when the
-  reward is bought in the *Referrals* application, so they know when to deliver the reward to the
-  recipient.
-- :guilabel:`Description`: type in the description for the reward. This will be visible on the
-  reward card, beneath the title.
-- :guilabel:`Photo`: add a photo of the reward, which appears on the rewards page. Hover over the
-  image square, and two icons appear, a :guilabel:`✏️ (pencil)` and a :guilabel:`🗑️ (garbage can)`.
-  Click the :guilabel:`✏️ (pencil)` icon, and a file explorer appears. Navigate to the photo file,
-  then click :guilabel:`Open` to select it.
-
-The only required fields are the :guilabel:`Product Name`, :guilabel:`Company` (if applicable), and
-:guilabel:`Description`.
-
-.. image:: referrals/rewards.png
-   :align: center
-   :alt: A filled out reward form with all details entered.
-
-.. important::
-   It is advised to enter a :guilabel:`Cost` and add a :guilabel:`Photo`. If a cost is not entered,
-   the default cost will be listed as zero, which would list the reward as free in the reward shop.
-   If a photo is not selected, a placeholder icon will be displayed on the rewards page.
-
-Redeem rewards
---------------
-
-To redeem points for a reward, click the :guilabel:`Rewards` button on the main Referrals dashboard.
-All the configured rewards are listed in individual reward cards. The points required to purchase
-the reward is listed in the top-right corner of the card. If the user has enough points to purchase
-a reward, a :guilabel:`🧺 (basket) Buy` button appears at the bottom of the reward card. If they do
-not have enough points for a reward, the reward card displays :guilabel:`You need another (x) points
-to buy this` instead of a buy button.
-
-Click the :guilabel:`🧺 (basket) Buy` button on a reward to purchase it. A :guilabel:`Confirmation`
-pop-up window appears, asking if the user is sure they want to purchase the reward. Click
-:guilabel:`OK` to purchase the item, or :guilabel:`Cancel` to close the window and cancel the
-purchase.
-
-After :guilabel:`OK` is clicked, the pop-up window closes, and the points used to purchase the
-reward are subtracted from the user's available points. The rewards presented are now updated to
-reflect the user's current available points.
-
-.. image:: referrals/redeem-rewards.png
-   :align: center
-   :alt: Buy button appears below a mug and backpack reward, while the bicycle reward states how
-         many more reward points are needed to redeem.
-
 .. _referrals/levels:
 
 Levels
@@ -470,8 +405,10 @@ spreadsheet from the drop-down menu, or select :guilabel:`New Spreadsheet`. Clic
    to use the :guilabel:`Insert in Spreadsheet` option.
 
 .. seealso::
-   :doc:`referrals/share_jobs`
+   - :doc:`referrals/share_jobs`
+   - :doc:`referrals/rewards`
 
 .. toctree::
 
    referrals/share_jobs
+   referrals/rewards
