@@ -547,136 +547,6 @@ clicking the *save manually* button, represented by a :guilabel:`(cloud upload)`
    :alt: An allocation request form filled out for an employee requesting an additional week of
          sick time.
 
-.. _time_off/approvals:
-
-Management
-==========
-
-Time off and allocation requests typically undergo an approval process before being granted.
-Requests either need one or two approvals, if any, depending on how the specific type of time off is
-configured. These are all housed under the :guilabel:`Management` section of the *Time Off*
-application.
-
-Only users who can approve allocation and time off requests have the :guilabel:`Management` section
-visible in the *Time Off* application.
-
-.. _time_off/manage-time-off:
-
-Manage time off
----------------
-
-To view time off requests that need approval, navigate to :menuselection:`Time Off app -->
-Management --> Time Off`. The only time off requests visible on this list are for employees the user
-has either :guilabel:`Time Off Officer` or :guilabel:`Administrator` access rights for in the *Time
-Off* application.
-
-The default filter in the :guilabel:`Time Off` list is `Waiting For Me`. This only presents time off
-requests that need to be approved for current employees on the user's team, with a status of either
-:guilabel:`To Approve` or :guilabel:`Second Approval`.
-
-The left side of the screen has various grouping options to narrow down the presented time off
-requests. Since only time off requests that need to be approved are shown, the only status options
-are :guilabel:`All`, :guilabel:`To Approve`, and :guilabel:`Second Approval`. The various
-departments the user is a member of, and manages employees under, also appear on the left side of
-the screen, under :guilabel:`Departments`.
-
-.. note::
-   If there are no requests that fall under one of the status options or departments, that status
-   or department is **not** visible on the left-side menu.
-
-To display time off requests for specific departments only, click on the :guilabel:`Department` on
-the left-hand side. Only requests within the selected department are then presented.
-
-The status column displays the status of each request, with the status highlighted in a specific
-color.
-
-The :guilabel:`To Approve` and :guilabel:`Second Approval` requests are highlighted in yellow and
-are the only ones that appear in the list by default. If the `Waiting For Me` filter is removed,
-then all statuses appear. :guilabel:`Approved` requests are highlighted in green, :guilabel:`To
-Submit` (drafts) requests are highlighted in blue, and the :guilabel:`Refused` requests are
-highlighted in gray.
-
-To approve a time off request, click the :guilabel:`👍 Approve` button at the end of the line. To
-validate a time off request that has already been approved, and is waiting on a second approval,
-click the :guilabel:`✔️ Validate` button at the end of the line. To refuse a request, click the
-:guilabel:`✖️ Refuse` button at the far end of the line.
-
-.. image:: time_off/time-off-requests.png
-   :align: center
-   :alt: Time off requests with the filter, groupings, and status sections highlighted.
-
-For more details, click anywhere on the time off request line (except for the :guilabel:`👍
-Approve`, :guilabel:`✔️ Validate`, and :guilabel:`✖️ Refuse` buttons) to load the time off request
-form. Depending on the rights of the user, changes can be made.
-
-To modify the request, make any desired changes to the form. All changes are automatically saved.
-
-It is also possible to approve or refuse the request from this form. Click the :guilabel:`Approve`
-button to approve, or the :guilabel:`Refuse` button to refuse the request.
-
-.. _time_off/manage-allocations:
-
-Manage allocations
-------------------
-
-To view allocations that need approval, navigate to :menuselection:`Time Off app --> Management -->
-Allocations`. The only allocations visible on this list are for employees the user has either
-:guilabel:`Time Off Officer` or :guilabel:`Administrator` access rights for in the *Time Off*
-application.
-
-The default filters that are configured to be in place when navigating to the
-:guilabel:`Allocations` list are :guilabel:`My Team` and :guilabel:`Active Employee`. This *only*
-presents employees on the user's team (who they manage) and active employees. Inactive users are not
-shown.
-
-The left side of the screen has various grouping options to narrow down the presented allocation
-requests.
-
-The :guilabel:`Status` options are :guilabel:`To Approve`, :guilabel:`Refused`, and
-:guilabel:`Approved`. Click on a specific :guilabel:`Status` to view only requests with that status.
-To view all allocation requests, click :guilabel:`All`.
-
-It is also possible to display allocation requests by department. Click on the
-:guilabel:`Department` in the left side of the screen to only present allocations for that specific
-department.
-
-.. note::
-   The groupings on the left side only present allocation requests that fall under the default
-   filters of :guilabel:`My Team` and :guilabel:`Active Employee`. Only the statuses for allocation
-   requests that fall under those filters are presented on the left side.
-
-   For example, if there are no requests with a status of :guilabel:`To Submit`, that status option
-   does not appear in the left-hand side.
-
-   All departments for the user's employees appear in the list. If there are no allocation requests
-   that fall under that department matching the pre-configured filters, the list is blank.
-
-   It is always possible to remove any of the pre-configured filters, by clicking the :guilabel:`✖️
-   (remove)` icon on the specific filter to remove it.
-
-The status column displays the status of each request, with the status highlighted in a specific
-color.
-
-The :guilabel:`To Approve` requests are highlighted in yellow, :guilabel:`Approved` requests are
-highlighted in green, and the :guilabel:`Refused` requests are highlighted in gray.
-
-To approve an allocation request, click the :guilabel:`✔ Validate` button at the end of the line.
-To refuse a request, click the :guilabel:`✖️ Refuse` button.
-
-.. image:: time_off/allocations.png
-   :align: center
-   :alt: Allocations with the filter, groupings, and status sections highlighted.
-
-If more details are needed, click anywhere on the allocation request line (except for the
-:guilabel:`✔ Validate` and :guilabel:`✖️ Refuse` buttons) to view the request in detail.
-
-Depending on the rights of the user, changes can be made to the allocation request form that
-appears. To modify the request, make any desired changes to the form. All changes are automatically
-saved.
-
-It is also possible to approve or refuse the request from this form. Click the :guilabel:`Validate`
-button to approve, or the :guilabel:`Refuse` button to refuse the request.
-
 Overview
 ========
 
@@ -899,9 +769,11 @@ detailed information on the reports, and their various options, refer to the :do
 <../essentials/reporting>` documentation.
 
 .. seealso::
-   :doc:`time_off/request_time_off`
+   - :doc:`time_off/request_time_off`
+   - :doc:`time_off/management`
 
 .. toctree::
    :titlesonly:
 
    time_off/request_time_off
+   time_off/management
