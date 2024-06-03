@@ -129,7 +129,7 @@ definition.
 
    - :guilabel:`New Leads`
    - :guilabel:`Time to Qualify a Lead`
-   - :guilabel:`Days to Close a Dead`
+   - :guilabel:`Days to Close a Deal`
    - :guilabel:`New Opportunities`
    - :guilabel:`New Sales Orders`
 
