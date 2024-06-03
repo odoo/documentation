@@ -2485,6 +2485,16 @@ Optional attributes can be added to the root element `kanban` to customize the v
    :type: str
    :default: `''`
 
+.. attribute:: can_open
+   :noindex:
+
+   By default, clicking on a kanban card opens the corresponding record in a form view.
+   This behavior can be disabled by setting the attribute `can_open` to `False`.
+
+   :requirement: Optional
+   :type: bool
+   :default: `True`
+
 .. include:: view_architectures/root_attribute_sample.rst
 
 .. include:: view_architectures/root_attribute_banner_route.rst

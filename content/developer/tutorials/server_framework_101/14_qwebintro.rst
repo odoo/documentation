@@ -45,7 +45,7 @@ looks like:
     <kanban>
         <templates>
             <t t-name="kanban-box">
-                <div class="oe_kanban_global_click">
+                <div>
                     <field name="name"/>
                 </div>
             </t>
@@ -58,8 +58,6 @@ Let's break down this example:
   least one root template ``kanban-box``, which will be rendered once for each record.
 - ``<t t-name="kanban-box">``: ``<t>`` is a placeholder element for QWeb directives. In this case,
   it is used to set the ``name`` of the template to ``kanban-box``
-- ``<div class="oe_kanban_global_click">``: the ``oe_kanban_global_click`` makes the ``<div>``
-  clickable to open the record.
 - ``<field name="name"/>``: this will add the ``name`` field to the view.
 
 .. exercise:: Make a minimal kanban view.
@@ -79,7 +77,7 @@ conditionally, we can use the ``t-if`` directive (see :ref:`reference/qweb/condi
         <field name="state"/>
         <templates>
             <t t-name="kanban-box">
-                <div class="oe_kanban_global_click">
+                <div>
                     <field name="name"/>
                     <div t-if="record.state.raw_value == 'new'">
                         This is new!
