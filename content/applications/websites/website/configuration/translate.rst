@@ -2,94 +2,95 @@
 Translations
 ============
 
-The contents of your website pages (i.e., text strings) can be translated into different languages
-directly on your website.
+Your website is displayed in the language that matches your visitor’s browser. If the browser’s
+language is not installed, the content is shown in the :ref:`default language <translate/default-language>`.
+When additional languages are installed, users can choose their preferred language using the
+:ref:`Language Selector <translate/language-selector>`.
 
-Your website is displayed in the language that matches the visitor's browser's language, unless that
-particular language has not been installed. In this case, the website is displayed in the
-:ref:`default language <translate/default-language>`. The visitor can still select another language
-in the language menu.
+The :ref:`Translate <translate/translate>` feature on your website allows automatic translation of
+standard terms and provides tools to translate custom content manually.
 
-Installing languages
-====================
+Install languages
+=================
 
-To translate your website, you first have to add the required languages:
-
-#. Go to your website.
-#. Scroll to the bottom of the page to the **language menu**.
-#. Click the language and select :guilabel:`Add a language`.
-
-   .. image:: translate/website-add-language.png
-      :alt: Add a language to your website.
-
-#. Click the :guilabel:`Languages` field and select the required language from the drop-down list.
-   Repeat this step for each additional language.
-#. Click the :guilabel:`Add` button.
-
-.. tip::
-   You can also edit your website's languages from the backend, in the :guilabel:`Settings`. Go to
-   :menuselection:`Website –> Configuration –> Settings` and add/remove the required languages in
-   the :guilabel:`Languages` field, in the :guilabel:`Website info` section.
+To allow translation of your website, you must first add the required languages.
 
 .. _translate/default-language:
 
 Default language
 ----------------
 
-If the language of the visitor's browser is not installed on your website, the content is displayed
-in the default language.
-
-To define a default language, go to :menuselection:`Website –> Configuration –> Settings`, and
-select a language in the :guilabel:`Default` field.
+When multiple languages are available on your website, you can set a default language to be used if
+the visitor’s browser language is not installed. To do so, go to :menuselection:`Website –->
+Configuration -–> Settings`, and select a language in the :guilabel:`Default` field.
 
 .. note::
-   This field is visible only if multiple languages are already configured for your website.
+  This field is only visible if multiple languages are installed on your website.
 
-Translating the contents
-========================
+.. _translate/language-selector:
 
-Once the languages have been added, you can translate the contents of your website. To do so, go to
-your website, select the language from the language menu and click the :guilabel:`Translate` button
-on the right part of the task bar to activate the **translation mode**.
+Language selector
+=================
 
-.. image:: translate/translate-button.png
-   :alt: Translate button
-
-As a result:
-
-- Text strings that have already been translated are highlighted in green;
-- Text strings that need to be translated are highlighted in yellow.
-
-.. image:: translate/website-translation-yellow.png
-   :alt: Text to be translated highlighted in yellow
-
-You can then replace the original text with the translation by clicking the block, editing its
-contents and saving.
-
-.. tip::
-   - Once the languages have been installed, you can also translate some items (e.g.,
-     the product's name and description) from the backend (e.g., in the product template). To do so,
-     click the language code (e.g., :guilabel:`EN`) next to the text you want to translate (e.g.,
-     the product name) and add the translation.
-
-     .. image:: translate/product-translation.png
-        :alt: Translate product-related items.
-
-   - You can also :doc:`export/import translations <../../../../developer/howtos/translations>`
-     to translate multiple items (e.g., product names and descriptions) in one go.
-
-Language selector menu
-======================
-
-To add a language selector menu:
+Your website’s visitors can switch languages using the :guilabel:`Language Selector`, available by
+default in the :guilabel:`Copyright` section at the bottom of the page. To edit the
+:guilabel:`Language Selector` menu:
 
 #. Go to your website and click :guilabel:`Edit`.
-#. Select the block where you want to add the language selector menu (e.g., the header).
-#. Select the :guilabel:`Customize` tab.
-#. In the :guilabel:`Navbar` section, set the :guilabel:`Language selector` field to either
-   :guilabel:`Dropdown` or :guilabel:`Inline`.
+#. Click the language selector available in the :guilabel:`Copyright` block, and go to the
+  :guilabel:`Copyright` section of the website builder.
+#. Set the :guilabel:`Language selector` field to either :guilabel:`Dropdown` or :guilabel:`Inline`.
+  Click :guilabel:`None` if you do not want to display the  :guilabel:`Language selector`.
 
-   .. image:: translate/language-selector.png
-      :alt: Add a language selector menu.
+  .. image:: translate/language-selector.png
+     :alt: Add a language selector menu.
 
 #. Click :guilabel:`Save`.
+
+.. tip::
+  You can also add the :guilabel:`Language selector` in the :guilabel:`Header` of your page. To do
+  so, click the :guilabel:`Header` block and go to the :guilabel:`Navbar` section to edit the
+  :guilabel:`Language selector`.
+
+.. _translate/translate:
+
+Translate your website
+======================
+
+Select your desired language from the :guilabel:`Language selector` to see your content in another
+language. Then, click the :guilabel:`Translate` button in the top-right corner to manually activate
+the translation mode so that you can translate what has not been translated automatically by Odoo.
+
+Translated text strings are highlighted in green; Text strings that were not translated
+automatically are highlighted in yellow.
+
+.. image:: translate/translated-text.png
+  :alt: Entering the translation mode
+
+In this mode, you can only translate texts. To change the page's structure, you must edit the master
+page. Each modification on the master page is automatically applied to all translated versions.
+
+.. note::
+  When a website supports multiple languages, the content is accessible through different URLs,
+  depending on the language selected.
+  `https://www.mywebsite.com/shop/product/my-product-1` --> URL to the master page, in English.
+  `https://www.mywebsite.com/fr_FR/shop/product/mon-produit-1` --> URL to the French version.
+
+To replace the original text with the translation, click the block, edit its contents, and save.
+
+.. tip::
+  Once the desired language is installed, you can translate some items from the backend (e.g., the
+  :guilabel:`product’s name` in the product template). To do so, click :guilabel:`EN` next to the
+  text you want to translate and add the translation.
+
+Block customization per language
+--------------------------------
+
+You can hide content (such as images or videos) that can not be translated. To do so,
+
+#. Click :guilabel:`Edit` and select an element of your website.
+#. Go to the :guilabel:`Text - Image` section and :guilabel:`Visibility`.
+#. Click :guilabel:`No condition` and select :guilabel:`Conditionally` instead.
+#. Go to :guilabel:`Languages` to configure the condition(s) to apply by selecting
+  :guilabel:`Visible for` or :guilabel:`Hidden for`, and click :guilabel:`Choose a record` to
+  decide which languages are impacted.
