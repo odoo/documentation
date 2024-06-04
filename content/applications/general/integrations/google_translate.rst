@@ -120,4 +120,4 @@ the right of the chatter. Then, select :guilabel:`Translate`. The content transl
    :alt: Google Translate present in an Odoo database's chatter.
 
 .. seealso::
-   :ref:`language/change-user-language`
+   :ref:`language/install`
