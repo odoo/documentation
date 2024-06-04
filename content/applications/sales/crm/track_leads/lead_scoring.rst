@@ -30,6 +30,20 @@ Specifically, Odoo's predictive lead scoring uses the *naive Bayes* probability 
    P(A | B) = \frac{P(A) \times P(B | A)}{P(B)}
    \end{equation}
 
+Breaking down the equation:
+
+- P(A|B) = The probability of a successful lead *in this case*
+- P(A) = The overall probability of a lead being successful regardless of the conditions
+- P(B|A) = The probability of this being the case given a lead is successful
+- P(B) = The probability of this being the case
+
+The term *in this case* refers to the variables that can affect a lead being successful in Odoo.
+This can include variables such as the assigned Salesperson, the source of the lead, the language of
+the lead, and other historical and demographic data.
+
+Which variables are considered in this calculation can be :ref:`configured
+<lead_scoring/configuration>` to tailor the calculation to each business's needs.
+
 The probability of success of each opportunity is displayed on the opportunity form, and it updates
 automatically as the opportunity progresses through the CRM pipeline.
 
@@ -39,6 +53,8 @@ automatically as the opportunity progresses through the CRM pipeline.
 
 When an opportunity moves to the next stage, its probability of success automatically increases
 according to the predictive lead scoring algorithm.
+
+.. _lead_scoring/configuration:
 
 Configuration
 -------------
