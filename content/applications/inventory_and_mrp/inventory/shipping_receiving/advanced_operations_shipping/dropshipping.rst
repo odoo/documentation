@@ -1,6 +1,8 @@
-=============================================================
-Use dropshipping to ship directly from suppliers to customers
-=============================================================
+============
+Dropshipping
+============
+
+.. |RfQ| replace:: :abbr:`RfQ (request for quotation)`
 
 Dropshipping is an order fulfillment strategy that allows sellers to have items shipped directly
 from suppliers to customers. Normally, a seller purchases a product from a supplier, stores it in
@@ -39,36 +41,36 @@ Finally, select the :guilabel:`Inventory` tab and enable the :guilabel:`Dropship
    :align: center
    :alt: Enable the Dropship option in the product inventory tab.
 
+.. note::
+   While it is not necessary to enable the :guilabel:`Buy` route in addition to the
+   :guilabel:`Dropship` route, enabling both provides the option of dropshipping the product or
+   purchasing it directly.
+
 Fulfill orders using dropshipping
 =================================
 
-When a customer completes an online purchase for a dropshipped product, a sales order will be
-automatically created with an associated request for quotation (:abbr:`RFQ (Request for Quotation)`)
-for the supplier. Sales orders can be viewed in the :menuselection:`Sales` app by selecting
-:menuselection:`Orders --> Orders`. Click the :guilabel:`Purchase` smart button at the top right of
-a sales order to view the associated :abbr:`RFQ (Request for Quotation)`.
-
-.. tip::
-   Dropship sales orders can also be created manually through the :menuselection:`Sales` app by
-   selecting :menuselection:`Orders --> Orders --> Create` and adding a product configured for
-   dropshipping.
+When a sales order is created for a dropshipped product, an associated request for quotation (RfQ)
+is automatically generated to purchase the product from the vendor. Sales orders can be viewed in
+the :menuselection:`Sales` app by selecting :menuselection:`Orders --> Orders`. Click the
+:guilabel:`Purchase` smart button at the top right of a sales order to view the associated
+:abbr:`RFQ (Request for Quotation)`.
 
 .. image:: dropshipping/dropship-sales-order.png
    :align: center
    :alt: A dropship sales order with the Purchase smart button in the top right corner.
 
-Once the :abbr:`RFQ (Request for Quotation)` is confirmed, it becomes a purchase order and a
+Once the :abbr:`RFQ (Request for Quotation)` is confirmed, it becomes a purchase order, and a
 dropship receipt is created and linked to it. The receipt can be viewed by clicking the
-:guilabel:`Receipt` smart button in the top right corner of the purchase order form.
+:guilabel:`Dropship` smart button in the top-right corner of the purchase order form.
 
 .. image:: dropshipping/dropship-purchase-order.png
    :align: center
    :alt: A dropship purchase order with the Receipt smart button in the top right corner.
 
-The dropship receipt will list the supplier in the :guilabel:`Receive From` section and the customer
-in the :guilabel:`Destination Location` section. Upon delivery of the product to the customer, click
-on the :guilabel:`Validate` button at the top left of the dropship receipt to confirm the delivered
-quantity.
+The dropship receipt displays :guilabel:`Partners/Vendors` in the :guilabel:`Source Location` field,
+and :guilabel:`Partners/Customers` in the :guilabel:`Destination Location` field. Upon delivery of
+the product to the customer, click on the :guilabel:`Validate` button at the top-left of the
+dropship receipt to confirm the delivered quantity.
 
 .. image:: dropshipping/validate-dropship-receipt.png
    :align: center
