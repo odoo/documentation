@@ -23,13 +23,18 @@ To translate your website, you first have to add the required languages:
       :alt: Add a language to your website.
 
 #. Click the :guilabel:`Languages` field and select the required language from the drop-down list.
-   Repeat this step for each additional language.
+   Ticking the :guilabel:`Websites to translate` checkboxes allows users to change your website’s
+   navigation to another language using the language selector.
+
 #. Click the :guilabel:`Add` button.
 
+Repeat the steps for each additional language.
+
 .. tip::
-   You can also edit your website's languages from the backend, in the :guilabel:`Settings`. Go to
-   :menuselection:`Website –> Configuration –> Settings` and add/remove the required languages in
-   the :guilabel:`Languages` field, in the :guilabel:`Website info` section.
+   - You might need  to refresh your page to see the new language.
+   - You can also edit your website's languages from the backend, in the :guilabel:`Settings`. Go to
+     :menuselection:`Website –> Configuration –> Settings` and add/remove the required languages in
+     the :guilabel:`Languages` field, in the :guilabel:`Website info` section.
 
 .. _translate/default-language:
 
@@ -77,6 +82,8 @@ contents and saving.
 
    - You can also :doc:`export/import translations <../../../../developer/howtos/translations>`
      to translate multiple items (e.g., product names and descriptions) in one go.
+
+.. _translate/language-selector:
 
 Language selector menu
 ======================
