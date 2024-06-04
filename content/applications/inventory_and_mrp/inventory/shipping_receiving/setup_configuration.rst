@@ -15,3 +15,4 @@ Setup and configuration
    setup_configuration/sendcloud_shipping
    setup_configuration/starshipit_shipping
    setup_configuration/ups_credentials
+   setup_configuration/zebra
