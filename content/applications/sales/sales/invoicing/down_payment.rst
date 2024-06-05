@@ -82,6 +82,8 @@ that was just configured in the :guilabel:`Create invoices` pop-up form appears 
    If :guilabel:`Based on Delivered Quantity (Manual)` is chosen as the :guilabel:`Invoicing
    Policy`, an invoice will **not** be able to be created.
 
+.. _sales/invoicing/50-percent-down-payments:
+
 Example: request 50% down payment
 =================================
 
@@ -141,7 +143,7 @@ From those buttons, the payment can be registered by clicking :guilabel:`Registe
    :alt: Showcase of the Register Payment button on a confirmed customer invoice.
 
 Doing so reveals a :guilabel:`Register Payment` pop-up form, which is auto-populated with the
-necessary information. Confirm the information provided is correct and make any necessary
+necessary information. Confirm the information provided is correct, and make any necessary
 adjustments. When ready, click the :guilabel:`Create Payment` button.
 
 .. image:: down_payment/register-payment-pop-up-window.png
@@ -209,11 +211,14 @@ At this point, the flow is now complete.
 
 .. important::
    If a down payment is used with a product that has a :guilabel:`Delivered quantities` invoicing
-   policy, the down payments will **not** be able to be deducted when it comes time to invoice the
-   customer.
+   policy, and the cost of the product *exceeds* the 50% down payment (as in most cases), a regular
+   invoice is created.
 
-   This is because, due to the invoicing policy, the product(s) would have to be delivered *before*
-   creating the final invoice.
+   However, for products that cost *less* than the 50% down payment, the down payments will **not**
+   be able to be deducted when it comes time to invoice the customer.
+
+   This is because the product(s) would have to be delivered *before* creating the final invoice due
+   to Odoo not allowing negative totals for invoices.
 
    If nothing has been delivered, a :guilabel:`Credit Note` is created, which cancels the draft
    invoice that was created after the down payment.
@@ -221,6 +226,76 @@ At this point, the flow is now complete.
    To utilize the :guilabel:`Credit Note` option, the *Inventory* application must be installed, in
    order to confirm the delivery. Otherwise, the delivered quantity can be entered manually directly
    on the sales order.
+
+.. _sales/invoicing/100-percent-down-payments:
+
+Example: request 100% down payment
+==================================
+
+The process of requesting a 100% down payment is similar to the process of setting up a :ref:`50%
+down payment <sales/invoicing/50-percent-down-payments>`, but with fewer steps.
+
+.. note::
+   A 100% down payment is **not** the same as a full payment of the sales order.
+
+   A sales order paid through the regular invoice process will not allow any additional invoices to
+   be generated, and **will not** display the *Create Invoice* button on the Sales Order.
+
+   Following this example **will** cause the *Create Invoice* button to be displayed on the Sales
+   Order. This is because Odoo expects another invoice to be created after the down payment
+   to complete payment of the sales order.
+
+The *Solar Panel Installation* product is being used in this example.
+
+To configure a 100% down payment, begin by navigating to :menuselection:`Sales app --> New`, and add
+a :guilabel:`Customer` to the quote.
+
+Next, click :guilabel:`Add a product` in the :guilabel:`Order Lines` tab, and select the
+`Solar Panel Installation` product.
+
+Upon clicking the :guilabel:`Confirm` button, the quotation turns into a sales order. At that point,
+an invoice can now be created by clicking :guilabel:`Create Invoice` in the top-left corner.
+
+On the :guilabel:`Create invoices` pop-up window that appears, select :guilabel:`Down payment
+(percentage)`, and type `100` in the :guilabel:`Down Payment Amount` field. Then, if desired, select
+an :guilabel:`Income Account` and :guilabel:`Customer Taxes` in their respective fields.
+
+.. note::
+   The :guilabel:`Income Account` and :guilabel:`Customer Taxes` fields are *not* required fields,
+   and they will *not* appear if they've already been preconfigured in previous down payment
+   requests.
+
+   For more information, check out the documentation on :ref:`customer taxes modification on down
+   payments <sales/invoicing/customer-tax-modification-down-payments>` and :ref:`income account
+   modification on down payments <sales/invoicing/income-account-modification>`.
+
+.. image:: down_payment/100p-down-payment-percentage.png
+   :align: center
+   :alt: The Down payment (percentage) option selected with 100% set as the Down Payment.
+
+Next, click :guilabel:`Create Draft Invoice` to create an invoice draft. This will also
+bring the draft invoice into view, which includes the :guilabel:`Down payment` as a
+:guilabel:`Product` in the :guilabel:`Invoice Lines` tab.
+
+The invoice can now be confirmed and posted by clicking :guilabel:`Confirm`. Confirming the
+invoice changes the status from :guilabel:`Draft` to :guilabel:`Posted`. It also reveals a new
+series of buttons at the top of the page.
+
+The payment can be registered by clicking the :guilabel:`Register Payment` button.
+
+Doing so reveals a :guilabel:`Register Payment` pop-up form, which is auto-populated with the
+necessary information. Confirm the information provided is correct and make any necessary
+adjustments. When ready, click the :guilabel:`Create Payment` button.
+
+
+After clicking :guilabel:`Create Payment`, Odoo reveals the customer invoice, now with a green
+:guilabel:`In Payment` banner in the upper-right corner.
+
+.. image:: down_payment/100p-invoice.png
+   :align: center
+   :alt: Customer Invoice with a green In Payment banner located in the upper-right corner.
+
+The process is now complete, and the 100% down payment has been successfully applied.
 
 .. _sales/invoicing/customer-tax-modification-down-payments:
 
