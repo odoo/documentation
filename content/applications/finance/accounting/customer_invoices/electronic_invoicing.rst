@@ -112,8 +112,8 @@ If not done yet, :ref:`install <general/install>` the :guilabel:`Peppol` module 
    - Peppol registration is **free** and available in Odoo Community
    - You can send **Customer Invoices** and **Credit Notes** and receive **Vendor Bills** and
      **Refunds** via Peppol.
-   - You can send in one of the following supported document formats: **BIS Billing 3.0, XRechnung
-     CIUS, NLCIUS**.
+   - You can send and receive in one of the following supported document formats:
+     **BIS Billing 3.0, XRechnung CIUS, NLCIUS**.
    - | The following **countries** are eligible for **Peppol registration in Odoo**:
      | Andorra, Albania, Austria, Bosnia and Herzegovina, Belgium, Bulgaria, Switzerland, Cyprus,
        Czech Republic, Germany, Denmark, Estonia, Spain, Finland, France, United Kingdom, Greece,
@@ -126,78 +126,101 @@ Registration
 
 Go to :menuselection:`Accounting --> Configuration --> Settings`. If you do not have the
 Peppol module installed, first tick the :guilabel:`Enable PEPPOL` checkbox and then **manually
-save**.
+save**. Click :guilabel:`Start sending via Peppol` to open the registration form.
 
-.. image:: electronic_invoicing/peppol-install.png
-   :alt: Peppol module installation
+.. note::
+   This registration form also pops up if you choose to :guilabel:`Send & Print` an
+   invoice via Peppol without completing the registration process.
+
+.. image:: electronic_invoicing/peppol-registration-settings.png
+   :alt: Peppol registration button
+
+You can register either as a sender or a receiver. A sender can only send invoices and credit notes
+on Odoo via Peppol, without ever registering as a Peppol participant on Odoo SMP. If you have an
+existing Peppol registration elsewhere that you want to keep, but want to send invoices from your
+Odoo database and receive other documents in another software, register as a **sender**.
+
+.. tip::
+   - You can always register as a sender first and register to receive documents later.
+   - When registering, you can specify if you would also like to receive documents.
+
+.. image:: electronic_invoicing/peppol-registration-wizard.png
+   :alt: Peppol registration form
 
 Fill in the following information:
 
-- :guilabel:`Peppol EAS`. This is the Peppol Electronic Address Scheme and usually depends on your
+- Check the receiver box if you want to register on Odoo SMP. If you are migrating from another
+  service provider, insert the :guilabel:`Migration key` from the previous provider (the field
+  becomes visible after you tick the checkbox).
+- :guilabel:`E-Address Scheme`: the Peppol Electronic Address Scheme usually depends on your
   company's country. Odoo often prefills this with the most commonly used EAS code in your country.
-  For example, the preferred EAS code for most companies in Belgium is 0208.
-- :guilabel:`Peppol Endpoint`. This is usually a Company Registry number or a VAT number.
-- :guilabel:`Phone Number`, including the country code (e.g., `+32` in Belgium)
-- :guilabel:`Primary contact email`
+  For example, the preferred EAS code for most companies in Belgium is `0208`.
+- :guilabel:`Endpoint`: this is usually a Company Registry number or a VAT number.
+- :guilabel:`Phone`: phone number including the country code (e.g., `+32` in Belgium).
+- :guilabel:`Email`: this is the email Odoo can use to contact you regarding your Peppol
+  registration.
+
+If you want to explore or demo Peppol, you can choose to register in :guilabel:`Demo` mode.
+Otherwise, select :guilabel:`Live`.
+
+.. tip::
+   - Selecting :guilabel:`Demo` simulates everything in Odoo. There is no sending, receiving, or
+     partner verification.
+   - For **advanced users only**, it is possible to run tests on Peppol's test network. The server
+     allows to register on Peppol and send/receive test invoices to/from other participants.
+     To do so, enable the :ref:`developer-mode`, open the **Settings** app, go to
+     :menuselection:`Technical --> System Parameters`, and search for `account_peppol.edi.mode`.
+     Click the parameter and change the :guilabel:`Value` to `test`. Go back to the Peppol setup
+     menu in the **Settings** app. The option :guilabel:`Test` is now available.
+
+   .. image:: electronic_invoicing/peppol-system-parameter.png
+      :alt: Peppol test mode parameter
 
 .. seealso::
    - `Peppol EAS - European Commision <https://ec.europa.eu/digital-building-blocks/wikis/display/DIGITAL/Code+lists/>`_
    - `Peppol Endpoint - OpenPeppol eDEC Code Lists <https://docs.peppol.eu/edelivery/codelists/>`_
      (open the "Participant Identifier Schemes" as HTML page)
 
-If you are migrating from another access point, insert the :guilabel:`Migration key` from the
-previous provider.
+When set up, request a verification code to be sent to you by clicking :guilabel:`Send a
+registration code by SMS`. A text message containing a code is sent to the phone number provided to
+finalize the verification process.
 
-.. image:: electronic_invoicing/peppol-settings.png
-   :alt: Configuration for peppol
-
-Finally, click :guilabel:`Validate registration`. If you want to explore or demo Peppol, you can
-choose to register in :guilabel:`Demo` mode. Otherwise, select :guilabel:`Live`.
-
-   .. image:: electronic_invoicing/peppol-demo-mode.png
-      :alt: Peppol demo mode selection
-
-.. note::
-   When testing Peppol, the system parameter `account_peppol.edi.mode` can be changed to `test`.
-   Then, a radio button appears with the option to register on the test server.
-
-   .. image:: electronic_invoicing/peppol-system-parameter.png
-      :alt: Peppol test mode parameter
-
-   .. image:: electronic_invoicing/peppol-test-mode-settings.png
-      :alt: Peppol test mode selection
-
-Now, you can request a verification code to be sent to you by clicking :guilabel:`Verify phone
-number`.
-
-.. image:: electronic_invoicing/peppol-registration-verify.png
-   :alt: phone validation request verification
-
-A text message containing a code is sent to the phone number provided to finalize the verification
-process.
-
-.. image:: electronic_invoicing/phone-registration.png
+.. image:: electronic_invoicing/peppol-phone-verification.png
    :alt: phone validation
 
-Once you enter the code and click :guilabel:`Confirm`, you can see that your registration is pending
-activation. From this point onwards, the default journal for receiving Vendor Bills can be set.
+Once you enter the code and click :guilabel:`Register`, your Peppol participant status is updated.
+If you chose to only send documents, then the status changes to :guilabel:`Can send but
+not receive`.
+If you opted to receive documents as well, the status changes to :guilabel:`Can send, pending
+registration to receive`. In that case, it should be automatically activated within a day.
 
-.. image:: electronic_invoicing/peppol-registration-pending.png
-   :alt: pending application
-
-It should be automatically activated within a day.
+Then, set the default journal for receiving vendor bills in the :guilabel:`Incoming Invoices
+Journal`.
 
 .. tip::
-   It is also possible to manually trigger the cron that checks the registration status by going to
-   :menuselection:`Settings --> Technical --> Scheduled Actions --> PEPPOL\: update participant
-   status`.
+   To manually trigger the cron that checks the registration status, enable the
+   :ref:`developer-mode`, then go to :menuselection:`Settings --> Technical --> Scheduled Actions`,
+   and search for the :guilabel:`PEPPOL: update participant status` action.
 
-Your application status should be updated soon after you are registered on the Peppol network.
+Your receiver application status should be updated soon after you are registered on the Peppol
+network.
 
-.. image:: electronic_invoicing/peppol-registration-active.png
-   :alt: active application
+.. image:: electronic_invoicing/peppol-receiver.png
+   :alt: receiver application
 
 All invoices and vendor bills can now be sent directly using the Peppol network.
+
+.. important::
+   To update the email that Odoo can use to contact you, modify the email and click
+   :guilabel:`Update contact details`.
+
+Configure Peppol services
+-------------------------
+
+Once you are registered on Odoo SMP, the :guilabel:`Configure Peppol Services` button
+becomes visible to allow you to enable or disable document formats that other participants
+can send you via Peppol. By default, all document formats supported by Odoo are enabled (depending
+on the installed modules).
 
 Contact verification
 --------------------
@@ -221,6 +244,13 @@ is set to Valid.
 It is possible to verify the Peppol participant status of several customers at once.
 To do so, go to :menuselection:`Accounting --> Customers --> Customers` and switch to the list view.
 Select the customers you want to verify and then click :menuselection:`Actions --> Verify Peppol`.
+
+If the participant is registered on the Peppol network but cannot receive the format you selected
+for them, the :guilabel:`Peppol endpoint validity` label changes to :guilabel:`Cannot
+receive this format`.
+
+.. image:: electronic_invoicing/peppol-participant-format.png
+   :alt: verify contact ubl format
 
 Send invoices
 -------------
