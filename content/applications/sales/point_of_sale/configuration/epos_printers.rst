@@ -32,7 +32,6 @@ The following ePOS printers are directly compatible with Odoo without needing an
 - Epson TM-T70II-DT
 - Epson TM-T88V-DT
 - Epson TM-L90-i
-- Epson TM-T20II-i
 - Epson TM-T70-i
 - Epson TM-T82II-i
 - Epson TM-T83II-i
