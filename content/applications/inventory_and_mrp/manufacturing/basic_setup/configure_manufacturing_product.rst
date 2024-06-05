@@ -24,6 +24,32 @@ checkbox in the :guilabel:`Routes` section. This tells Odoo the product can be m
    :align: center
    :alt: The Manufacturing route on the Inventory tab of a product page.
 
+.. _manufacturing/basic_setup/lot-serial-tracking:
+
+Lot/serial number tracking
+--------------------------
+
+The assignment of lots or serial numbers to newly manufactured products is optional. To optionally
+:doc:`assign lots or serial numbers <../../inventory/product_management/product_tracking/create_sn>`
+to newly manufactured products, go to the :guilabel:`Traceability` section in the
+:guilabel:`Inventory` tab. In the :guilabel:`Tracking` field, select :guilabel:`By Unique Serial
+Number` or :guilabel:`By Lots`.
+
+Doing so enables the *Lot/Serial Number* field on a manufacturing order, or the *Register
+Production* instruction on a work order card in the *Shop Floor* app.
+
+.. figure:: configure_manufacturing_product/lot-number-field.png
+   :align: center
+   :alt: "Lot/Serial Number" field on the MO.
+
+   **Lot/Serial Number** field on the MO.
+
+.. figure:: configure_manufacturing_product/register-production.png
+   :align: center
+   :alt: **Register Production** option to generate lot/serial number on a work order card.
+
+   **Register Production** option to generate lot/serial number on a work order card.
+
 Configure a bill of materials (BoM)
 ===================================
 
@@ -70,5 +96,4 @@ to finish adding operations, or :guilabel:`Save & New` to add more.
    The section above provides instructions for creating a basic |BOM| that allows a product to be
    manufactured in Odoo. However, it is by no means an exhaustive summary of all the options
    available when configuring a |BOM|. For more information about bills of materials, see the
-   documentation on how to :ref:`create a bill of materials
-   <manufacturing/management/bill-configuration>`.
+   documentation on how to :doc:`create a bill of materials <bill_configuration>`.

@@ -10,7 +10,7 @@ Engineering change orders
 .. _plm/eco:
 
 Utilize *engineering change orders* (*ECOs*) to track, implement, and revert change versions made to
-products, and :ref:`bills of materials <manufacturing/management/bill-configuration>`.
+products, and :doc:`bills of materials <../../manufacturing/basic_setup/bill_configuration>`.
 
 Engineering change orders can be created:
 

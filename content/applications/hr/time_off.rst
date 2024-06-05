@@ -1,3 +1,5 @@
+:show-content:
+
 ========
 Time Off
 ========
@@ -5,9 +7,10 @@ Time Off
 Odoo's *Time Off* application serves as a centralized hub for all time-off-related information. This
 application manages requests, balances, allocations, approvals, and reports.
 
-Users can :ref:`request time off <time_off/request-time-off>`, and see an overview of their requests
-and time off balances. Managers can :ref:`allocate time off <time_off/allocate>` to individuals,
-teams, or the whole company, and :ref:`approve time off requests <time_off/manage-time-off>`.
+Users can :doc:`request time off <../hr/time_off/request_time_off>`, and see an overview of their
+requests and time off balances. Managers can :ref:`allocate time off <time_off/allocate>` to
+individuals, teams, or the whole company, and :ref:`approve time off requests
+<time_off/manage-time-off>`.
 
 Detailed :ref:`reports <time_off/reporting>` can be run to see how much time off (and what kinds of
 time off) are being used, :ref:`accrual plans <time_off/accrual-plans>` can be created, and
@@ -493,75 +496,6 @@ information:
    :alt: A new allocation form with all the fields filled out for the annual two week vacation
          granted to all employees.
 
-.. _time_off/request-time-off:
-
-Request time off
-================
-
-Once an employee has been allocated time off, a request to use the time off can be submitted. Time
-off can be requested in one of two ways, either from the :ref:`dashboard <time_off/dashboard>` or
-from the :ref:`My Time Off <time_off/my-time-off>` view.
-
-To create a new request for time off, click the :guilabel:`New` button on either the main *Time Off*
-:guilabel:`Dashboard` or the :guilabel:`My Time Off` list view.
-
-.. note::
-   Both :guilabel:`New` buttons allow the user to request time off, but when requested from the
-   :guilabel:`Dashboard`, a :guilabel:`New Time Off` request form appears in a modal. When requested
-   from the :guilabel:`My Time Off` list view, the screen navigates to a new time off request page,
-   instead.
-
-Enter the following information on the :guilabel:`New Time Off` request form:
-
-- :guilabel:`Time Off Type`: select the type of time off being requested from the drop-down menu.
-- :guilabel:`Dates`: enter the dates that the time off falls under. There are two fields to
-  populate, the start and end dates. Click on either date field and a popover calendar appears.
-
-  Click on the start date, then click on the end date. The selected start and end dates are circled,
-  and the dates between them are highlighted (if applicable).
-
-  If the time off requested is for a single day, click on the start date, then click the same date
-  again for the end date.
-
-  When the correct dates are selected/highlighted, click the :guilabel:`Apply` button.
-
-  The selected dates now populate the two portions of the :guilabel:`Dates` field.
-
-  If the selected :guilabel:`Time Off Type` is configured to have the time off taken in hours, the
-  following two fields also appear:
-
-  - :guilabel:`Half Day`: if the time off request is for a half day, check this box. When this is
-    selected, the second date field disappears, and is replaced with a drop-down menu. From that
-    drop-down menu, select either :guilabel:`Morning` or :guilabel:`Afternoon` to indicate which
-    half of the day is being requested.
-  - :guilabel:`Custom Hours`: if the time off requested is not a whole or half day, check this box.
-    A :guilabel:`From` and :guilabel:`To` field appears beneath this option, if selected. Using the
-    drop-down menu, select the start and end time for the time off request.
-
-- :guilabel:`Duration`: this field updates automatically once the :guilabel:`Date` section is
-  completed. If the :guilabel:`Date` section is modified, this section automatically updates to
-  reflect the total time off requested. This field is in either hours or days, depending on how the
-  selected :guilabel:`Time Off Type` is configured.
-- :guilabel:`Description`: enter a description for the time off request. This should include any
-  details that managers and approvers may need in order to approve the request.
-- :guilabel:`Supporting Document`: this field only appears if the :guilabel:`Time Off Type` selected
-  allows for the attachments of documents. Click the :guilabel:`Attach File` button, and a file
-  explorer window appears.
-
-  Navigate to the desired files to attach, select them, then click the :guilabel:`Open` button. The
-  files then appear on the time off request form. Multiple documents can be attached, if necessary.
-
-If the request was created from the :guilabel:`Dashboard`, click the :guilabel:`Save & Close` button
-to save the information and submit the request.
-
-If the form was completed from the :guilabel:`My Time Off` list view, the information is
-automatically saved as it is entered. However, the form can be saved manually at any time by
-clicking the *save manually* button, represented by a :guilabel:`(cloud upload)` icon.
-
-.. image:: time_off/time-off-request.png
-   :align: center
-   :alt: A time off request form filled out for an employee home sick for two days with the flu.
-
 .. _time_off/request-allocation:
 
 Request allocation
@@ -679,6 +613,8 @@ To modify the request, make any desired changes to the form. All changes are aut
 
 It is also possible to approve or refuse the request from this form. Click the :guilabel:`Approve`
 button to approve, or the :guilabel:`Refuse` button to refuse the request.
+
+.. _time_off/manage-allocations:
 
 Manage allocations
 ------------------
@@ -846,12 +782,13 @@ Time off that has been validated appears in a solid color (in the color specifie
 to be approved appear with white stripes in the color. Refused time off requests have a colored line
 through the dates.
 
-New time off requests can be made from the dashboard. Click the :guilabel:`New` button at the top of
-the dashboard, and a :ref:`New Time Off <time_off/request-time-off>` modal appears.
+New time off requests can be made from the :guilabel:`Dashboard`. Click the :guilabel:`New` button
+at the top of the dashboard, and a :doc:`New Time Off <../hr/time_off/request_time_off>` pop-up
+window appears.
 
-New allocation requests can also be made from the dashboard. Click the :guilabel:`New Allocation
-Request` button at the top of the dashboard to request more time off, and a :ref:`New Allocation
-<time_off/request-allocation>` modal appears.
+New allocation requests can also be made from the :guilabel:`Dashboard`. Click the :guilabel:`New
+Allocation Request` button at the top of the :guilabel:`Dashboard` to request more time off, and a
+:ref:`New Allocation <time_off/request-allocation>` modal appears.
 
 .. image:: time_off/dashboard.png
    :align: center
@@ -869,8 +806,8 @@ The list includes the following information for each request: the :guilabel:`Tim
 :guilabel:`Description`, :guilabel:`Start Date`, :guilabel:`End Date`, :guilabel:`Duration`, and the
 :guilabel:`Status`.
 
-A new time off request can be made from this view. Click the :guilabel:`New` button to :ref:`request
-time off <time_off/request-time-off>`.
+A new time off request can be made from this view. Click the :guilabel:`New` button to :doc:`request
+time off <../hr/time_off/request_time_off>`.
 
 .. _time_off/my-allocations:
 
@@ -958,5 +895,13 @@ top-right corner of the page to view the data in that way. The various options a
 :guilabel:`Graph` (the default view), :guilabel:`List`, or :guilabel:`Pivot` table.
 
 When a selection has been made, additional options appear for that particular selection. For more
-detailed information on the reports and their various options, refer to the :doc:`reporting
+detailed information on the reports, and their various options, refer to the :doc:`reporting
 <../essentials/reporting>` documentation.
+
+.. seealso::
+   :doc:`time_off/request_time_off`
+
+.. toctree::
+   :titlesonly:
+
+   time_off/request_time_off

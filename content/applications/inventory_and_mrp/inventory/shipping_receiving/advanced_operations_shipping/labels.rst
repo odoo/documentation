@@ -9,6 +9,9 @@ Integrate Odoo with :doc:`third-party shipping carriers
 <../setup_configuration/third_party_shipper>` to automatically generate shipping labels that
 includes prices, destination addresses, tracking numbers, and barcodes.
 
+.. seealso::
+   :ref:`Automatically print shipping carrier labels <inventory/shipping_receiving/carrier-labels>`
+
 Configuration
 =============
 

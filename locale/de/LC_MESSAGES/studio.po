@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-25 16:01+0000\n"
+"POT-Creation-Date: 2024-05-31 09:59+0000\n"
 "PO-Revision-Date: 2024-03-30 23:40+0000\n"
 "Last-Translator: Wil Odoo, 2024\n"
 "Language-Team: German (https://app.transifex.com/odoo/teams/41243/de/)\n"
@@ -74,491 +74,628 @@ msgid "`Odoo Tutorials: Studio <https://www.odoo.com/slides/studio-31>`_"
 msgstr "`Odoo-Tutorials: Studio <https://www.odoo.com/slides/studio-31>`_"
 
 #: ../../content/applications/studio/automated_actions.rst:3
-msgid "Automated actions (automations)"
-msgstr "Automatisierte Aktionen (Automatisierungen)"
+msgid "Automation rules"
+msgstr ""
 
 #: ../../content/applications/studio/automated_actions.rst:5
 msgid ""
-"Automated actions are used to trigger automatic changes based on user "
-"actions (e.g., apply a modification when a field is set to a specific value)"
-" or on time conditions (e.g., archive a record 7 days after its last "
-"update)."
+"Automation rules are used to trigger automatic changes based on user actions"
+" (e.g., apply a modification when a field is set to a specific value), email"
+" events, time conditions (e.g., archive a record 7 days after its last "
+"update), or external events."
 msgstr ""
-"Automatisierte Aktionen werden verwendet, um automatische Änderungen auf der"
-" Grundlage von Benutzeraktionen (z. B. eine Änderung vornehmen, wenn ein "
-"Feld auf einen bestimmten Wert gesetzt wird) oder von Zeitbedingungen (z. B."
-" einen Datensatz 7 Tage nach seiner letzten Aktualisierung archivieren) "
-"auszulösen."
 
 #: ../../content/applications/studio/automated_actions.rst:9
-msgid ""
-"To create an automated action with Studio, go to :guilabel:`Automations` "
-"from anywhere within Studio."
+msgid "To create an automation rule with Studio, proceed as follows:"
 msgstr ""
-"Um eine automatisierte Aktion mit Studio zu erstellen, gehen Sie von einer "
-"beliebigen Stelle in Studio zu :guilabel:`Automatisierungen`."
+
+#: ../../content/applications/studio/automated_actions.rst:11
+msgid "Open Studio and click :guilabel:`Automations`, then :guilabel:`New`."
+msgstr ""
 
 #: ../../content/applications/studio/automated_actions.rst:12
 msgid ""
-"For every automated action you create, the following elements should be "
-"defined: the :ref:`studio/automated-actions/model`, the "
-":ref:`studio/automated-actions/trigger`, the :ref:`studio/automated-"
-"actions/apply-on`, and the :ref:`studio/automated-actions/action`."
+"Select the :ref:`studio/automated-actions/trigger` and, if necessary, fill "
+"in the fields that appear on the screen based on the chosen trigger."
 msgstr ""
-"Für jede automatisierte Aktion, die Sie erstellen, sollten die folgenden "
-"Elemente definiert werden: :ref:`studio/automated-actions/model`, "
-":ref:`studio/automated-actions/trigger`, :ref:`studio/automated-"
-"actions/apply-on` und :ref:`studio/automated-actions/action`."
+
+#: ../../content/applications/studio/automated_actions.rst:14
+msgid ""
+"Click :guilabel:`Add an action`, then select the :guilabel:`Type` of "
+":ref:`action <studio/automated-actions/action>` and fill in the fields that "
+"appear on the screen based on your selected action."
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:17
+msgid "Click :guilabel:`Save & Close` or :guilabel:`Save & New`."
+msgstr ""
+"Klicken Sie auf :guilabel:`Speichern & Schließen` oder :guilabel:`Speichern "
+"& Neu`."
 
 #: ../../content/applications/studio/automated_actions.rst:0
 msgid "Example of an automated action on the Subscription model"
 msgstr "Beispiel einer automatisierten Aktion im Abonnementmodell"
 
 #: ../../content/applications/studio/automated_actions.rst:25
-msgid "Model"
-msgstr "Modell"
-
-#: ../../content/applications/studio/automated_actions.rst:27
-msgid "Select the model where the automated action should be applied."
-msgstr ""
-"Wählen Sie das Modell, in dem die automatisierte Aktion angewendet werden "
-"soll."
-
-#: ../../content/applications/studio/automated_actions.rst:30
 msgid ""
-"The model you are on when you click on :guilabel:`Automations` is pre-"
-"selected by default."
+"To modify the :doc:`model <models_modules_apps>` of the automation rule, "
+"switch models before clicking :guilabel:`Automations` in Studio, or "
+":ref:`activate the developer mode <developer-mode>`, create or edit an "
+"automation rule, and select the :guilabel:`Model` in the "
+":guilabel:`Automation Rules` form."
 msgstr ""
-"Das Modell, in dem Sie sich befinden, wenn Sie auf "
-":guilabel:`Automatisierungen` klicken, ist standardmäßig vorausgewählt."
 
-#: ../../content/applications/studio/automated_actions.rst:35
+#: ../../content/applications/studio/automated_actions.rst:29
+msgid ""
+"You can also create automation rules from any kanban stage by clicking the "
+"gear icon (:guilabel:`⚙` ) next to the kanban stage name, then selecting "
+":guilabel:`Automations`. In this case, the :guilabel:`Trigger` is set to "
+":guilabel:`Stage is set to` by default, but you can change it if necessary."
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:0
+msgid "Create automations from a kanban stage"
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:40
 msgid "Trigger"
 msgstr "Auslöser"
 
-#: ../../content/applications/studio/automated_actions.rst:37
-msgid ""
-"Define when the automated action should be applied. Six triggers are "
-"available."
-msgstr ""
-"Legen Sie fest, wann die automatisierte Aktion ausgeführt werden soll. Es "
-"sind sechs Auslöser verfügbar."
-
 #: ../../content/applications/studio/automated_actions.rst:42
-msgid "On Creation"
-msgstr "Beim Erstellen"
-
-#: ../../content/applications/studio/automated_actions.rst:44
-msgid "The action is triggered when a record is created and then saved."
+msgid ""
+"The :guilabel:`Trigger` is used to define when the automation rule should be"
+" applied. The available triggers depend on the :doc:`model "
+"<models_modules_apps>`. Five trigger categories are available overall:"
 msgstr ""
-"Die Aktion wird ausgelöst, wenn ein Datensatz erstellt und dann gespeichert "
-"wird."
+
+#: ../../content/applications/studio/automated_actions.rst:46
+msgid ":ref:`studio/automated-actions/trigger/values-updated`"
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:47
+msgid ":ref:`studio/automated-actions/trigger/email-events`"
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:48
+msgid ":ref:`studio/automated-actions/trigger/values-timing-conditions`"
+msgstr ""
 
 #: ../../content/applications/studio/automated_actions.rst:49
-msgid "On Update"
-msgstr "Beim Aktualisieren"
-
-#: ../../content/applications/studio/automated_actions.rst:51
-msgid ""
-"The action is triggered when a previously saved record is edited and then "
-"saved."
+msgid ":ref:`studio/automated-actions/trigger/custom`"
 msgstr ""
-"Die Aktion wird ausgelöst, wenn ein vorher gespeicherter Datensatz "
-"bearbeitet und dann gespeichert wird."
+
+#: ../../content/applications/studio/automated_actions.rst:50
+msgid ":ref:`studio/automated-actions/trigger/external`"
+msgstr ""
 
 #: ../../content/applications/studio/automated_actions.rst:53
 msgid ""
-"Use :guilabel:`Trigger Fields` to specify which fields - and only those - "
-"trigger the action on their update."
+"You can also define a :guilabel:`Before Update Domain` to specify the "
+"conditions that must be met *before* the automation rule is triggered. In "
+"contrast, the conditions defined using the :ref:`Extra Conditions "
+"<studio/automated-actions/trigger/values-timing-conditions>` and :ref:`Apply"
+" on <studio/automated-actions/trigger/custom>` filters are checked *during* "
+"the execution of the automation rule."
 msgstr ""
-"Verwenden Sie :guilabel:`Auslöser-Felder`, um festzulegen, welche Felder – "
-"und nur diese – die Aktion bei ihrer Aktualisierung auslösen."
 
-#: ../../content/applications/studio/automated_actions.rst:55
+#: ../../content/applications/studio/automated_actions.rst:59
 msgid ""
-"To detect when a record changes from one state to another, define a "
-":guilabel:`Before Update Domain` filter, which checks if the condition is "
-"satisfied before the record is updated. Then set an :ref:`studio/automated-"
-"actions/apply-on` filter, which checks if the condition is met after the "
-"record is updated."
+"To define a :guilabel:`Before Update Domain`, :ref:`activate the developer "
+"mode <developer-mode>`, create or edit an automation rule, click "
+":guilabel:`Edit Domain`, then click :guilabel:`New Rule`."
 msgstr ""
-"Um zu erkennen, wann ein Datensatz von einem Zustand in einen anderen "
-"wechselt, definieren Sie einen Filter :guilabel:`Domain vor Aktualisierung`,"
-" der überprüft, ob die Bedingung erfüllt ist, bevor der Datensatz "
-"aktualisiert wird. Setzen Sie dann eine Filter :ref:`studio/automated-"
-"actions/apply-on`, der prüft, ob die Bedingung erfüllt ist, nachdem der "
-"Datensatz aktualisiert wurde."
 
-#: ../../content/applications/studio/automated_actions.rst:61
+#: ../../content/applications/studio/automated_actions.rst:63
 msgid ""
-"If you want the automated action to happen when an email address is set on a"
-" contact, define the :guilabel:`Before Update Domain` to `Email is not set`,"
-" and the :guilabel:`Apply on` domain to `Email is set`."
+"For example, if you want the automated action to happen when an email "
+"address is set on a contact that did not have an address before (in contrast"
+" to modifying their existing address), define the :guilabel:`Before Update "
+"Domain` to :guilabel:`Email is not set`, and the :guilabel:`Apply on` domain"
+" to :guilabel:`Email is set`."
 msgstr ""
-"Wenn Sie möchten, dass die automatisierte Aktion ausgeführt wird, wenn eine "
-"E-Mail-Adresse für einen Kontakt festgelegt wird, definieren Sie den "
-":guilabel:`Domain vor Aktualisierung` auf `E-Mail ist nicht gesetzt` und den"
-" Bereich :guilabel:`Anwenden auf` auf `E-Mail ist gesetzt`."
 
 #: ../../content/applications/studio/automated_actions.rst:0
-msgid "Example of an On Update trigger"
-msgstr "Beispiel eines „Beim Aktualisieren“-Auslöser"
-
-#: ../../content/applications/studio/automated_actions.rst:72
-msgid "On Creation & Update"
-msgstr "Beim Erstellen und Aktualisieren"
+msgid "Example of a trigger with a Before Update Domain"
+msgstr ""
 
 #: ../../content/applications/studio/automated_actions.rst:74
+msgid "Values Updated"
+msgstr "Werte aktualisiert"
+
+#: ../../content/applications/studio/automated_actions.rst:76
 msgid ""
-"The action is triggered when a record is created and saved or edited "
-"afterward and saved."
+"The triggers available in this category depend on the model and are based on"
+" common field changes, such as adding a specific tag (e.g., to a task) or "
+"setting the :guilabel:`User` field. Select the trigger, then select a value "
+"if required."
 msgstr ""
-"Die Aktion wird ausgelöst, wenn ein Datensatz erstellt oder danach "
-"bearbeitet und gespeichert wird."
 
-#: ../../content/applications/studio/automated_actions.rst:79
-msgid "On Deletion"
-msgstr "Beim Löschen"
+#: ../../content/applications/studio/automated_actions.rst-1
+msgid "Example of a Values Updated trigger"
+msgstr ""
 
-#: ../../content/applications/studio/automated_actions.rst:81
-msgid "The action is triggered when a record is deleted."
-msgstr "Die Aktion wird ausgelöst, wenn ein Datensatz gelöscht wird."
+#: ../../content/applications/studio/automated_actions.rst:86
+msgid "Email Events"
+msgstr "Veranstaltungsmails"
 
-#: ../../content/applications/studio/automated_actions.rst:84
+#: ../../content/applications/studio/automated_actions.rst:88
+msgid "Trigger automated actions upon receiving or sending emails."
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:93
+msgid "Timing Conditions"
+msgstr "Zeitliche Bedingungen"
+
+#: ../../content/applications/studio/automated_actions.rst:95
 msgid ""
-"This trigger is rarely used, as archiving records is usually preferred to "
-"deletion."
+"Trigger automated actions based on a date field. The following triggers are "
+"available:"
 msgstr ""
-"Dieser Auslöser wird nur selten verwendet, da die Archivierung von "
-"Datensätzen in der Regel der Löschung vorgezogen wird."
-
-#: ../../content/applications/studio/automated_actions.rst:89
-msgid "Based on Form Modification"
-msgstr "Auf Basis von Formularanpassungen"
-
-#: ../../content/applications/studio/automated_actions.rst:91
-msgid ""
-"The action is triggered when any change is done to a trigger field's value "
-"on the :ref:`Form view <studio/views/general/form>`, even before saving the "
-"record. This trigger only works on the user interface when a modification is"
-" made by a user. If the field is changed through another action and not by "
-"the user, the action will not run."
-msgstr ""
-"Die Aktion wird ausgelöst, wenn der Wert eines Auslöser-Feldes in der "
-":ref:`Formularansicht <studio/views/general/form>` geändert wird, noch bevor"
-" der Datensatz gespeichert wird. Dieser Auslöser funktioniert nur auf der "
-"Benutzeroberfläche, wenn ein Benutzer eine Änderung vornimmt. Wenn das Feld "
-"durch eine andere Aktion und nicht durch den Benutzer geändert wird, wird "
-"die Aktion nicht ausgeführt."
 
 #: ../../content/applications/studio/automated_actions.rst:97
 msgid ""
-"This trigger can only be used with the :ref:`Execute Python Code action "
-"<studio/automated-actions/action/python-code>`, so development is required."
+":guilabel:`Based on date field`: Select the field to be used next to the "
+":guilabel:`Delay` field."
 msgstr ""
-"Dieser Auslöser kann nur mit der :ref:`Aktion Python-Code ausführen "
-"<studio/automated-actions/action/python-code>` verwendet werden, daher ist "
-"eine Entwicklung erforderlich."
 
-#: ../../content/applications/studio/automated_actions.rst:103
-msgid "Based on Timed Condition"
-msgstr "Auf Basis zeitlicher Bedingung"
-
-#: ../../content/applications/studio/automated_actions.rst:105
+#: ../../content/applications/studio/automated_actions.rst:98
 msgid ""
-"The action is triggered when a trigger field's date or date & time value is "
-"reached."
+":guilabel:`After creation`: The action is triggered when a record is created"
+" and saved."
 msgstr ""
-"Die Aktion wird ausgelöst, wenn das Datum oder der Datum- und Zeitwert eines"
-" Auslöser-Felder erreicht wird."
+
+#: ../../content/applications/studio/automated_actions.rst:99
+msgid ""
+":guilabel:`After last update`: The action is triggered when an existing "
+"record is edited and saved."
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:102
+msgid "You can then define:"
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:104
+msgid ""
+"a :guilabel:`Delay`: Specify the number of minutes, hours, days, or months. "
+"To trigger the action before the trigger date, specify a negative number. If"
+" you selected the :guilabel:`Based on date field` trigger, you must also "
+"select the date field to be used to determine the delay."
+msgstr ""
 
 #: ../../content/applications/studio/automated_actions.rst:107
 msgid ""
-"To trigger the action after the :guilabel:`Trigger Date`, add a number of "
-"minutes, hours, days, or months under :guilabel:`Delay after trigger date`. "
-"To trigger the action before, add a negative number instead."
+":guilabel:`Extra Conditions`: Click :guilabel:`Add condition`, then specify "
+"the conditions to be met to trigger the automation rule. Click "
+":guilabel:`New Rule` to add another condition."
 msgstr ""
-"Um die Aktion nach dem :guilabel:`Auslösedatum` auszulösen, geben Sie unter "
-":guilabel:`Verzögerung nach Auslösedatum` eine Anzahl von Minuten, Stunden, "
-"Tagen oder Monaten ein. Um die Aktion vorher auszulösen, geben Sie "
-"stattdessen eine negative Zahl ein."
 
-#: ../../content/applications/studio/automated_actions.rst:112
+#: ../../content/applications/studio/automated_actions.rst:110
+msgid ""
+"The action is triggered when the delay is reached and the conditions are "
+"met."
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:113
 msgid ""
 "If you want to send a reminder email 30 minutes before the start of a "
 "calendar event, select the :guilabel:`Start (Calendar Event)` under "
-":guilabel:`Trigger Date` and set the :guilabel:`Delay after trigger date` to"
-" **-30** :guilabel:`Minutes`."
+":guilabel:`Trigger Date` and set the :guilabel:`Delay` to **-30** "
+":guilabel:`Minutes`."
 msgstr ""
-"Wenn Sie 30 Minuten vor Beginn eines Kalenderereignisses eine "
-"Erinnerungsmail senden möchten, wählen Sie unter :guilabel:`Start "
-"(Kalenderereignis)` das Feld :guilabel:`Auslösedatum` und setzen Sie die "
-":guilabel:`Verzögerung nach Auslösedatum` auf **-30** :guilabel:`Minuten`."
 
 #: ../../content/applications/studio/automated_actions.rst:0
-msgid "Example of a Based on Timed Condition trigger"
-msgstr "Beispeil eines Auslösers „Auf Basis zeitlicher Bedingung“ "
+msgid "Example of a Based on date field trigger"
+msgstr ""
 
 #: ../../content/applications/studio/automated_actions.rst:121
-msgid "By default, the scheduler checks for trigger dates every 4 hours."
-msgstr "Standardmäßig prüft der Planer alle 4 Stunden auf Auslösedaten."
-
-#: ../../content/applications/studio/automated_actions.rst:126
-msgid "Apply on"
-msgstr "Anwenden auf"
-
-#: ../../content/applications/studio/automated_actions.rst:128
 msgid ""
-"Define on which records of the model the automated action should be applied."
-" It works the same way as when you apply filters on a model."
+"By default, the scheduler checks for trigger dates every 4 hours, meaning "
+"lower granularity in time-based automations may not always be honored."
 msgstr ""
-"Legen Sie fest, auf welche Datensätze des Modells die automatische Aktion "
-"angewendet werden soll. Das funktioniert genauso, wie wenn Sie Filter auf "
-"ein Modell anwenden."
 
-#: ../../content/applications/studio/automated_actions.rst:134
-msgid "Action"
-msgstr "Aktion"
+#: ../../content/applications/studio/automated_actions.rst:127
+msgid "Custom"
+msgstr "Benutzerdefiniert"
+
+#: ../../content/applications/studio/automated_actions.rst:129
+msgid "Trigger automated actions:"
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:131
+msgid ":guilabel:`On save`: When the record is saved;"
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:132
+msgid ":guilabel:`On deletion`: When a record is deleted;"
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:133
+msgid ""
+":guilabel:`On UI change`: When a field's value is changed on the :ref:`Form "
+"view <studio/views/general/form>`, even before saving the record."
+msgstr ""
 
 #: ../../content/applications/studio/automated_actions.rst:136
 msgid ""
-"Determine what the automated action should do (server action). There are "
-"eight types of action to choose from."
+"For the :guilabel:`On save` and :guilabel:`On UI change` triggers, you "
+"**must** then select the field(s) to be used to trigger the automation rule "
+"in the :guilabel:`When updating` field."
 msgstr ""
-"Bestimmen Sie, was die automatisierte Aktion tun soll (Serveraktion). Sie "
-"haben die Wahl zwischen acht Arten von Aktionen."
 
-#: ../../content/applications/studio/automated_actions.rst:142
-msgid "Execute Python Code"
-msgstr "Python-Code ausführen"
-
-#: ../../content/applications/studio/automated_actions.rst:144
+#: ../../content/applications/studio/automated_actions.rst:140
 msgid ""
-"The action is used to execute Python code. The available variables are "
-"described on the :guilabel:`Python Code` tab, which is also used to write "
-"your code, or on the :guilabel:`Help` tab."
+"If no field is selected in the :guilabel:`When updating` field, the "
+"automated action may be executed multiple times per record."
 msgstr ""
-"Die Aktion wird verwendet, um Python-Code auszuführen. Die verfügbaren "
-"Variablen werden im Reiter :guilabel:`Python Code` beschrieben, die auch zum"
-" Schreiben Ihres Codes verwendet wird, oder im Reiter :guilabel:`Hilfe`."
+
+#: ../../content/applications/studio/automated_actions.rst:143
+msgid ""
+"Optionally, you can also define additional conditions to be met to trigger "
+"the automation rule in the :guilabel:`Apply on` field."
+msgstr ""
 
 #: ../../content/applications/studio/automated_actions.rst:147
 msgid ""
-"To allow the action to be run through the website, tick :guilabel:`Available"
-" on the Website` and add a :guilabel:`Website Path`."
+"The :guilabel:`On UI change` trigger can only be used with the "
+":ref:`studio/automated-actions/action/python-code` action and only works "
+"when a modification is made manually. The action is not executed if the "
+"field is changed through another automation rule."
 msgstr ""
-"Damit die Aktion über die Website ausgeführt werden kann, markieren Sie "
-":guilabel:`Verfügbar auf der Website` und fügen einen :guilabel:`Website-"
-"Pfad` hinzu."
-
-#: ../../content/applications/studio/automated_actions.rst:153
-msgid "Create a new Record"
-msgstr "Einen neuen Datensatz erstellen"
 
 #: ../../content/applications/studio/automated_actions.rst:155
-msgid "The action is used to create a new record on any model."
-msgstr ""
-"Die Aktion wird verwendet, um einen neuen Datensatz für ein beliebiges "
-"Modell zu erstellen."
+msgid "External"
+msgstr "Extern"
 
-#: ../../content/applications/studio/automated_actions.rst:158
+#: ../../content/applications/studio/automated_actions.rst:157
 msgid ""
-"Selecting a :guilabel:`Target Model` is only required if you want to target "
-"another model than the one you are on."
+"Trigger automated actions based on an external event using a webhook. A "
+"webhook is a method of communication between two systems where the source "
+"system sends an HTTP(S) request to a destination system based on a specific "
+"event. It usually includes a data payload containing information about the "
+"event that occurred."
 msgstr ""
-"Die Auswahl eines :guilabel:`Zielmodells` ist nur erforderlich, wenn Sie ein"
-" anderes Modell als das, auf dem Sie sich befinden, anvisieren möchten."
 
-#: ../../content/applications/studio/automated_actions.rst:161
+#: ../../content/applications/studio/automated_actions.rst:162
 msgid ""
-"To link the record that triggered the creation of the new record, select a "
-"field under :guilabel:`Link Field`. For example, you could create a contact "
-"automatically when a lead is turned into an opportunity."
+"To configure the :guilabel:`On webhook` trigger, copy the :guilabel:`URL` "
+"generated by Odoo into the destination system (i.e., the system receiving "
+"the request). Then, in the :guilabel:`Target Record` field, enter the code "
+"to run to define the record(s) to be updated using the automation rule."
 msgstr ""
-"Um den Datensatz zu verknüpfen, der die Erstellung des neuen Datensatzes "
-"ausgelöst hat, wählen Sie ein Feld unter :guilabel:`Link-Feld`. Sie könnten "
-"zum Beispiel automatisch einen Kontakt erstellen, wenn ein Lead in eine "
-"Verkaufschance umgewandelt wird."
-
-#: ../../content/applications/studio/automated_actions.rst:164
-msgid ""
-":guilabel:`Data to Write` tab: the tab is used to specify the new record's "
-"values. After selecting a :guilabel:`Field`, select its "
-":guilabel:`Evaluation Type`:"
-msgstr ""
-"Reiter :guilabel:`Zu schreibende Daten`: Der Reiter wird verwendet, um die "
-"Werte des neuen Datensatzes festzulegen. Nachdem Sie ein :guilabel:`Feld` "
-"ausgewählt haben, wählen Sie dessen :guilabel:`Bewertungstyp`:"
 
 #: ../../content/applications/studio/automated_actions.rst:167
 msgid ""
-":guilabel:`Value`: used to directly give the field's raw value in the "
-":guilabel:`Value` column."
+"The URL must be treated as **confidential**; sharing it online or without "
+"caution could potentially expose your system to malicious parties. Click the"
+" :guilabel:`Rotate Secret` button to change the URL's secret if necessary."
 msgstr ""
-":guilabel:`Wert`: wird verwendet, um den Rohwert des Feldes direkt in der "
-"Spalte :guilabel:`Wert` anzugeben."
-
-#: ../../content/applications/studio/automated_actions.rst:168
-msgid ""
-":guilabel:`Reference`: used to select the record under the "
-":guilabel:`Record` column and let Studio add the internal ID in the "
-":guilabel:`Value` column."
-msgstr ""
-":guilabel:`Referenz`: wird verwendet, um den Datensatz unter der Spalte "
-":guilabel:`Datensatz` auszuwählen und Studio die interne ID in der Spalte "
-":guilabel:`Wert` hinzufügen zu lassen."
 
 #: ../../content/applications/studio/automated_actions.rst:172
 msgid ""
-"If an automated action creates a new task in a project, you can assign it to"
-" a specific user by setting the :guilabel:`Field` to :guilabel:`Responsible "
-"User (Project)`, the :guilabel:`Evaluation Type` to :guilabel:`Reference`, "
-"and the :guilabel:`Record` to a specific user."
+"The code defined by default in the :guilabel:`Target Record` field works for"
+" webhooks coming from another Odoo database. It is used to determine the "
+"record(s) to be updated using the information in the payload."
 msgstr ""
-"Wenn eine automatisierte Aktion eine neue Aufgabe in einem Projekt erstellt,"
-" können Sie diese einem bestimmten Benutzer zuweisen, indem Sie das "
-":guilabel:`Feld` auf :guilabel:`Verantwortlicher Benutzer (Projekt)`, den "
-":guilabel:`Bewertungstyp` auf :guilabel:`Referenz` und den "
-":guilabel:`Datensatz` auf einen bestimmten Benutzer setzen."
 
-#: ../../content/applications/studio/automated_actions.rst:0
-msgid "Example of a Create a new Record action"
-msgstr "Beispiel für eine Aktion „Neuen Datensatz erstellen“"
-
-#: ../../content/applications/studio/automated_actions.rst:181
+#: ../../content/applications/studio/automated_actions.rst:175
 msgid ""
-":guilabel:`Python expression`: used to dynamically define the newly created "
-"record’s value for a field using Python code in the :guilabel:`Value` "
-"column."
+"If you wish to use the webhook's content for a purpose other than to find "
+"the record(s) (e.g., *create* a record), your only option is to use an "
+":ref:`studio/automated-actions/action/python-code` action. In this case, the"
+" :guilabel:`Target record` field must contain any valid code, but its result"
+" doesn't have any effect on the automated action itself."
 msgstr ""
-":guilabel:`Python-Ausdruck`: wird verwendet, um den Wert des neu erstellten "
-"Datensatzes für ein Feld dynamisch mit Python-Code in der Spalte "
-":guilabel:`Wert` zu definieren."
 
-#: ../../content/applications/studio/automated_actions.rst:187
-msgid "Update the Record"
-msgstr "Den Datensatz aktualisieren"
-
-#: ../../content/applications/studio/automated_actions.rst:189
+#: ../../content/applications/studio/automated_actions.rst:179
 msgid ""
-"The action is used to set value(s) for field(s) of any record on the current"
-" model."
+"The webhook content is available in the server action context as a `payload`"
+" variable (i.e., a dictionary that contains the GET parameters or POST JSON "
+"body of the incoming request)."
 msgstr ""
-"Die Aktion wird verwendet, um Werte für Felder eines beliebigen Datensatzes "
-"des aktuellen Modells zu setzen."
+
+#: ../../content/applications/studio/automated_actions.rst:182
+msgid ""
+"You can also choose to :guilabel:`Log Calls` to record the payloads "
+"received, e.g., to make sure the data sent by the source system matches the "
+"expected format and content. This also helps identify and diagnose any "
+"issues that may arise. To access the logs, click the :guilabel:`Logs` smart "
+"button at the top of the :guilabel:`Automation rules` form."
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:190
+msgid "Actions"
+msgstr "Aktionen"
 
 #: ../../content/applications/studio/automated_actions.rst:192
 msgid ""
-"The process to fill in the :guilabel:`Data to Write` tab is the same as "
-"described under :ref:`studio/automated-actions/action/new-record`."
+"Once you have defined the automation rule's :ref:`trigger <studio/automated-"
+"actions/trigger>`, click :guilabel:`Add an action` to define the action to "
+"be executed."
 msgstr ""
-"Der Prozess zum Ausfüllen des Reiters :guilabel:`Zu schreibende Daten` ist "
-"derselbe wie unter :ref:`studio/automated-actions/action/new-record` "
-"beschrieben."
 
-#: ../../content/applications/studio/automated_actions.rst:198
-msgid "Execute several actions"
-msgstr "Mehrere Aktionen ausführen"
-
-#: ../../content/applications/studio/automated_actions.rst:200
+#: ../../content/applications/studio/automated_actions.rst:196
 msgid ""
-"The action is used to trigger multiple actions at the same time. To do so, "
-"click on :guilabel:`Add a line` under the :guilabel:`Actions` tab. In the "
-":guilabel:`Child Actions` pop-up, click on :guilabel:`Create` and configure "
-"the action."
+"You can define multiple actions for the same trigger/automation rule. The "
+"actions are executed in the order they are defined. This means, for example,"
+" that if you define an :guilabel:`Update record` action and then a "
+":guilabel:`Send email` action, the email uses the updated values. However, "
+"if the :guilabel:`Send email` action is defined before the :guilabel:`Update"
+" record` action, the email uses the values set *before* the update action is"
+" run."
 msgstr ""
-"Die Aktion wird verwendet, um mehrere Aktionen gleichzeitig auszulösen. "
-"Klicken Sie dazu auf :guilabel:`Zeile hinzufügen` im Reiter "
-":guilabel:`Aktionen`. Klicken Sie im Pop-up-Fenster "
-":guilabel:`Untergeordnete Aktionen` auf :guilabel:`Erstellen` und "
-"konfigurieren Sie die Aktion."
 
-#: ../../content/applications/studio/automated_actions.rst:207
-msgid "Send Email"
-msgstr "E-Mail versenden"
+#: ../../content/applications/studio/automated_actions.rst:206
+msgid "Update Record"
+msgstr "Datensatz aktualisieren"
 
-#: ../../content/applications/studio/automated_actions.rst:209
+#: ../../content/applications/studio/automated_actions.rst:208
 msgid ""
-"The action is used to send an email to a contact linked to a specific "
-"record. To do so, select or create an :guilabel:`Email Template`."
+"This action allows to update one of the record's (related) fields. Click the"
+" :guilabel:`Update` field and, in the list that opens, select or search for "
+"the field to be updated; click the right arrow next to the field name to "
+"access the list of related fields if needed."
 msgstr ""
-"Die Aktion wird verwendet, um eine E-Mail an einen Kontakt zu senden, der "
-"mit einem bestimmten Datensatz verknüpft ist. Wählen Sie dazu eine "
-":guilabel:`E-Mail-Vorlage` aus oder erstellen Sie eine solche."
 
-#: ../../content/applications/studio/automated_actions.rst:215
-msgid "Add Followers"
-msgstr "Follower hinzufügen"
+#: ../../content/applications/studio/automated_actions.rst:212
+msgid ""
+"If you selected a :ref:`many2many field <studio/fields/relational-"
+"fields/many2many>`, choose whether the field must be updated by "
+":guilabel:`Adding`, :guilabel:`Removing`, or :guilabel:`Setting it to` the "
+"selected value or by :guilabel:`Clearing it`."
+msgstr ""
 
 #: ../../content/applications/studio/automated_actions.rst:217
-msgid "The action is used to subscribe existing contacts to the record."
-msgstr ""
-"Die Aktion wird verwendet, um bestehende Kontakte für den Datensatz zu "
-"abonnieren."
-
-#: ../../content/applications/studio/automated_actions.rst:222
-msgid "Create Next Activity"
-msgstr "Nächste Aktivität erstellen"
-
-#: ../../content/applications/studio/automated_actions.rst:224
 msgid ""
-"The action is used to schedule a new activity linked to the record. Use the "
-":guilabel:`Activity` tab to set it up as usual, but instead of the "
-":guilabel:`Assigned to` field, select an :guilabel:`Activity User Type`. "
-"Select :guilabel:`Specific User` and add the user under "
-":guilabel:`Responsible` if the activity should always be assigned to the "
-"same user. To dynamically target a user linked to the record, select "
-":guilabel:`Generic User From Record` instead and change the :guilabel:`User "
-"field name` if necessary."
+"If you want the automated action to remove a tag from the customer record, "
+"set the :guilabel:`Update` field to :guilabel:`Customer > Tags`, select "
+":guilabel:`By Removing`, then select the tag."
 msgstr ""
-"Die Aktion wird verwendet, um eine neue Aktivität zu planen, die mit dem "
-"Datensatz verknüpft ist. Verwenden Sie den Reiter :guilabel:`Aktivität`, um "
-"sie wie gewohnt einzurichten, aber wählen Sie anstelle des Feldes "
-":guilabel:`Zugewiesen an` einen :guilabel:`Aktivität-Benutzertyp`. Wählen "
-"Sie :guilabel:`Spezifischer Benutzer` und fügen Sie den Benutzer unter "
-":guilabel:`Verantwortlich` hinzu, wenn die Aktivität immer demselben "
-"Benutzer zugewiesen werden soll. Wenn Sie dynamisch einen mit dem Datensatz "
-"verknüpften Benutzer auswählen möchten, wählen Sie stattdessen "
-":guilabel:`Generischer Benutzer aus Datensatz` und ändern Sie ggf. den "
-":guilabel:`Benutzer-Feldname`."
-
-#: ../../content/applications/studio/automated_actions.rst:232
-msgid ""
-"After a lead is turned into an opportunity, you want your automated action "
-"to set up a call for the user responsible for the lead. To do so, set the "
-":guilabel:`Activity` to :guilabel:`Call` and set the :guilabel:`Activity "
-"User Type` to :guilabel:`Generic User From Record`."
-msgstr ""
-"Nachdem ein Lead in eine Verkaufschance umgewandelt wurde, möchten Sie, dass"
-" Ihre automatisierte Aktion einen Anruf für den Benutzer einrichtet, der für"
-" den Lead verantwortlich ist. Dazu setzen Sie :guilabel:`Aktivität` auf "
-":guilabel:`Anruf` und setzen das :guilabel:`Benutzertyp der Aktivität` auf "
-":guilabel:`Generischer Benutzer aus Datensatz`."
 
 #: ../../content/applications/studio/automated_actions.rst:0
-msgid "Example of a Create Next Activity action"
-msgstr "Beispiel für eine Aktion „Neue Aktivität erstellen“"
-
-#: ../../content/applications/studio/automated_actions.rst:243
-msgid "Send SMS Text Message"
-msgstr "SMS-Textnachricht versenden"
-
-#: ../../content/applications/studio/automated_actions.rst:245
-msgid ""
-"The action is used to send an SMS to a contact linked to the record. To do "
-"so, select or create an :guilabel:`SMS Template`."
+msgid "Example of an Update Record action"
 msgstr ""
-"Die Aktion wird verwendet, um eine SMS an einen Kontakt zu senden, der mit "
-"dem Datensatz verknüpft ist. Wählen Sie dazu eine :guilabel:`SMS-Vorlage` "
-"aus oder erstellen Sie eine solche."
 
-#: ../../content/applications/studio/automated_actions.rst:249
+#: ../../content/applications/studio/automated_actions.rst:225
 msgid ""
-"If you want sent messages to be logged in the Chatter, tick :guilabel:`Log "
-"as Note`."
+"Alternatively, you can also set a record's field dynamically using Python "
+"code. To do so, select :guilabel:`Compute` instead of :guilabel:`Update`, "
+"then enter the code to be used for computing the field's value. For example,"
+" if you want the automation rule to compute a custom :ref:`datetime field "
+"<studio/fields/simple-fields/date-time>` when a task's priority is set to "
+"`High` (by starring the task), you can define the trigger "
+":guilabel:`Priority is set to` to `High` and define the :guilabel:`Update "
+"Record` action as follows:"
 msgstr ""
-"Wenn Sie möchten, dass gesendete Nachrichten im Chatter protokolliert "
-"werden, markieren Sie :guilabel:`Als Notiz hinterlassen`."
+
+#: ../../content/applications/studio/automated_actions.rst:0
+msgid "Compute a custom datetime field using a Python expression"
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:236
+msgid "Create Activity"
+msgstr "Aktivität erstellen"
+
+#: ../../content/applications/studio/automated_actions.rst:238
+msgid ""
+"This action is used to schedule a new activity linked to the record. Select "
+"an :guilabel:`Activity Type`, enter a :guilabel:`Title` and description, "
+"then specify when you want the activity to be scheduled in the "
+":guilabel:`Due Date In` field, and select a :guilabel:`User type`:"
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:242
+msgid ""
+"To always assign the activity to the same user, select :guilabel:`Specific "
+"User` and add the user in the :guilabel:`Responsible` field;"
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:244
+msgid ""
+"To target a user linked to the record dynamically, select :guilabel:`Dynamic"
+" User (based on record)` and change the :guilabel:`User Field` if necessary."
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:248
+msgid ""
+"After a lead is turned into an opportunity, you want the automated action to"
+" set up a call for the user responsible for the lead. To do so, set the "
+":guilabel:`Activity Type` to :guilabel:`Call` and the :guilabel:`User Type` "
+"to :guilabel:`Dynamic User (based on record)`."
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:0
+msgid "Example of a Create Activity action"
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:256
+msgid "Send Email and Send SMS"
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:258
+msgid ""
+"These actions are used to send an email or a text message to a contact "
+"linked to a specific record. To do so, select or create an :guilabel:`Email "
+"Template` or an :guilabel:`SMS Template`, then, in the :guilabel:`Send Email"
+" As` or :guilabel:`Send SMS As` field, choose how you want to send the email"
+" or text message:"
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:263
+msgid ""
+":guilabel:`Email`: to send the message as an email to the recipients of the "
+":guilabel:`Email Template`."
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:265
+msgid ""
+":guilabel:`Message`: to post the message on the record and notify the "
+"record's followers."
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:266
+msgid ""
+":guilabel:`Note`: to send the message as an internal note visible to "
+"internal users in the chatter."
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:268
+msgid ""
+":guilabel:`SMS (without note)`: to send the message as a text message to the"
+" recipients of the :guilabel:`SMS template`."
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:270
+msgid ""
+":guilabel:`SMS (with note)`: to send the message as a text message to the "
+"recipients of the :guilabel:`SMS template` and post it as an internal note "
+"in the chatter."
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:272
+msgid ""
+":guilabel:`Note only`: to only post the message as an internal note in the "
+"chatter."
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:277
+msgid "Add Followers and Remove Followers"
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:279
+msgid ""
+"Use these actions to (un)subscribe existing contacts to/from the record."
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:282
+msgid "Create Record"
+msgstr "Datensatz erstellen"
+
+#: ../../content/applications/studio/automated_actions.rst:284
+msgid "This action is used to create a new record on any model."
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:286
+msgid ""
+"Select the required model in the :guilabel:`Record to Create` field; it "
+"contains the current model by default. Specify a :guilabel:`Name` for the "
+"record, and then, if you want to create the record on another model, select "
+"a field in the :guilabel:`Link Field` field to link the record that "
+"triggered the creation of the new record."
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:292
+msgid ""
+"The dropdown list related to the :guilabel:`Link Field` field only contains "
+":ref:`one2many fields <studio/fields/relational-fields/one2many>` existing "
+"on the current model that are linked to a :ref:`many2one field "
+"<studio/fields/relational-fields/many2one>` on the target model."
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:297
+msgid ""
+"You can create another automation rule with :ref:`studio/automated-"
+"actions/action/update-record` actions to update the fields of the new record"
+" if necessary. For example, you can use a :guilabel:`Create Record` action "
+"to create a new project task and then assign it to a specific user using an "
+":guilabel:`Update Record` action."
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:305
+msgid "Execute Code"
+msgstr "Code ausführen"
+
+#: ../../content/applications/studio/automated_actions.rst:307
+msgid ""
+"This action is used to execute Python code. You can write your code into the"
+" :guilabel:`Code` tab using the following variables:"
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:310
+msgid "`env`: environment on which the action is triggered"
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:311
+msgid ""
+"`model`: model of the record on which the action is triggered; is a void "
+"recordset"
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:312
+msgid "`record`: record on which the action is triggered; may be void"
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:313
+msgid ""
+"`records`: recordset of all records on which the action is triggered in "
+"multi-mode; this may be left empty"
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:315
+msgid "`time`, `datetime`, `dateutil`, `timezone`: useful Python libraries"
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:316
+msgid ""
+"`float_compare`: utility function to compare floats based on specific "
+"precision"
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:317
+msgid ""
+"`log(message, level='info')`: logging function to record debug information "
+"in ir.logging table"
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:319
+msgid "`_logger.info(message)`: logger to emit messages in server logs"
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:320
+msgid "`UserError`: exception class for raising user-facing warning messages"
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:321
+msgid "`Command`: x2many commands namespace"
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:322
+msgid "`action = {...}`: to return an action"
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:325
+msgid ""
+"The available variables are described both in the :guilabel:`Code` and "
+":guilabel:`Help` tabs."
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:328
+msgid "Send Webhook Notification"
+msgstr "Webhook-Benachrichtigung versenden"
+
+#: ../../content/applications/studio/automated_actions.rst:330
+msgid ""
+"This action allows to send a POST request with the values of the "
+":guilabel:`Fields` to the URL specified in the :guilabel:`URL` field."
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:333
+msgid ""
+"The :guilabel:`Sample Payload` provides a preview of the data included in "
+"the request using a random record's data or dummy data if no record is "
+"available."
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:339
+msgid "Execute Existing Actions"
+msgstr "Vorhandene Aktionen ausführen"
+
+#: ../../content/applications/studio/automated_actions.rst:341
+msgid ""
+"The action is used to trigger multiple actions (linked to the current model)"
+" at the same time. To do so, click on :guilabel:`Add a line`, then, in the "
+":guilabel:`Add: Child Actions` pop-up, select an existing action or click "
+":guilabel:`New` to create a new one."
+msgstr ""
 
 #: ../../content/applications/studio/fields.rst:3
 msgid "Fields and widgets"
@@ -1968,6 +2105,9 @@ msgid ""
 "reports/edit>` (e.g., invoices, quotations, etc.) or :ref:`create new ones "
 "<studio/pdf-reports/edit>`."
 msgstr ""
+"Mit Studio können Sie :ref:`vorhandene PDF-Berichte <studio/pdf-"
+"reports/edit>` (z. B. Rechnungen, Angebote usw.) bearbeiten oder :ref:`neue "
+"Berichte erstellen <studio/pdf-reports/edit>`."
 
 #: ../../content/applications/studio/pdf_reports.rst:11
 msgid "Default layout"
@@ -1980,6 +2120,11 @@ msgid ""
 " :guilabel:`Configure Document Layout`. Layout settings are company-specific"
 " but apply to all reports."
 msgstr ""
+"Das Standardlayout der Berichte wird außerhalb von Studio verwaltet. Gehen "
+"Sie zu :menuselection:`Einstellungen` zum Abschnitt :guilabel:`Unternehmen` "
+"und klicken Sie auf :guilabel:`Dokumentlayout konfigurieren`. Die "
+"Layouteinstellungen gelten für alle Berichte, aber nur für das aktuelle "
+"Unternehmen."
 
 #: ../../content/applications/studio/pdf_reports.rst:18
 msgid ""
@@ -1987,14 +2132,18 @@ msgid ""
 "report preview on the right, or download  a sample invoice PDF by clicking "
 ":guilabel:`Download PDF Preview`."
 msgstr ""
+"Wie sich die verschiedenen Einstellungen auf das Berichtslayout auswirken, "
+"können Sie in der Berichtsvorschau auf der rechten Seite sehen. Sie können "
+"auch eine Beispielrechnung im PDF-Format herunterladen, indem Sie auf "
+":guilabel:`PDF-Vorschau herunterladen` klicken."
 
 #: ../../content/applications/studio/pdf_reports.rst:21
 msgid "Use the following settings:"
-msgstr ""
+msgstr "Verwenden Sie folgende Einstellungen:"
 
 #: ../../content/applications/studio/pdf_reports.rst:25
 msgid ":guilabel:`Layout`: Four layouts are available:"
-msgstr ""
+msgstr ":guilabel:`Layout`: Es stehen vier Layouts zur Verfügung:"
 
 #: ../../content/applications/studio/pdf_reports.rst:29
 msgid "Light"
@@ -2035,6 +2184,10 @@ msgid ""
 "scripts). Go to the `Google Fonts website <https://fonts.google.com/>`_ to "
 "preview them."
 msgstr ""
+":guilabel:`Schriftart`: Es sind sieben Schriftarten verfügbar: Lato, Roboto,"
+" Open Sans, Montserrat, Oswald, Raleway und Tajawal (die arabische und "
+"lateinische Schriftarten unterstützt). Gehen Sie auf die `Google-Fonts-"
+"Website <https://fonts.google.com/>`_, um eine Vorschau zu sehen."
 
 #: ../../content/applications/studio/pdf_reports.rst:57
 msgid ""
@@ -2043,6 +2196,12 @@ msgid ""
 " model, which you can access by going to :menuselection:`Settings` and then "
 "clicking :guilabel:`Update Info` in the :guilabel:`Companies` section."
 msgstr ""
+":guilabel:`Unternehmenslogo`: Klicken Sie auf die Schaltfläche "
+":guilabel:`Bearbeiten`, um das Logo hochzuladen oder zu ändern. Dadurch wird"
+" das Logo dem Datensatz des Unternehmens im *Unternehmensmodell* "
+"hinzugefügt, auf das Sie zugreifen können, indem Sie auf "
+":menuselection:`Einstellungen` und dann im Abschnitt :guilabel:`Unternehmen`"
+" auf :guilabel:`Info aktualisieren` klicken."
 
 #: ../../content/applications/studio/pdf_reports.rst:64
 msgid ""
@@ -2050,11 +2209,14 @@ msgid ""
 "structure reports. The default colors are automatically generated based on "
 "the colors of the logo."
 msgstr ""
+":guilabel:`Farben`: Ändern Sie die in den Berichten verwendeten Primär- und "
+"Sekundärfarben, um Berichte zu strukturieren. Die Standardfarben werden "
+"automatisch auf der Grundlage der Farben des Logos generiert."
 
 #: ../../content/applications/studio/pdf_reports.rst:69
 msgid ""
 ":guilabel:`Layout background`: The following backgrounds are available:"
-msgstr ""
+msgstr ":guilabel:`Layout-Hintegrund`: Folgende Hintergründe sind verfügabr:"
 
 #: ../../content/applications/studio/pdf_reports.rst:71
 msgid ":guilabel:`Blank`: nothing is displayed."
@@ -2071,6 +2233,8 @@ msgstr ""
 #: ../../content/applications/studio/pdf_reports.rst:73
 msgid ":guilabel:`Custom`: upload a custom background image."
 msgstr ""
+":guilabel:`Benutzerdefiniert`: Laden Sie ein benutzerdefiniertes "
+"Hintergrundbild hoch."
 
 #: ../../content/applications/studio/pdf_reports.rst:77
 msgid ""
@@ -2078,6 +2242,9 @@ msgid ""
 ":ref:`external reports <studio/pdf-reports/header-footer/external>`. You can"
 " add multiple lines of text."
 msgstr ""
+":guilabel:`Slogan des Unternehmens`: Er wird in der Kopfzeile von "
+":ref:`externen Berichten <studio/pdf-reports/header-footer/external>` "
+"angezeigt. Sie können mehrere Textzeilen hinzufügen."
 
 #: ../../content/applications/studio/pdf_reports.rst:82
 msgid ""
@@ -2085,6 +2252,9 @@ msgid ""
 ":ref:`external reports <studio/pdf-reports/header-footer/external>`. You can"
 " add multiple lines of text."
 msgstr ""
+":guilabel:`Angaben zum Unternehmen`: Diese werden in der Kopfzeile von "
+":ref:`externen Berichten <studio/pdf-reports/header-footer/external>` "
+"angezeigt. Sie können mehrere Textzeilen hinzufügen."
 
 #: ../../content/applications/studio/pdf_reports.rst:87
 msgid ""
@@ -2093,6 +2263,10 @@ msgid ""
 "lines of text. You can also edit the footer using the :ref:`report editor "
 "<studio/pdf-reports/edit>`."
 msgstr ""
+":guilabel:`Fußzeile`: Dieser Text wird in der Fußzeile von :ref:`externen "
+"Berichte <studio/pdf-reports/header-footer/external>` verwendet. Sie können "
+"mehrere Textzeilen hinzufügen. Sie können die Fußzeile auch mit dem "
+":ref:`Berichtseditor <studio/pdf-reports/edit>` bearbeiten."
 
 #: ../../content/applications/studio/pdf_reports.rst:93
 msgid ""
@@ -2102,10 +2276,15 @@ msgid ""
 "individual reports in the :guilabel:`Paper format` field in :ref:`Studio "
 "<studio/pdf-reports/create>`."
 msgstr ""
+":guilabel:`Papierformat`: um das Standardpapierformat für Berichte "
+"festzulegen. Sie können :guilabel:`A4` (21 cm x 29,7 cm), :guilabel:`US "
+"Letter` (21,59 cm x 27,54 cm), oder :guilabel:`QR-Codeseite` wählen. Dies "
+"kann auch für einzelne Berichte im Feld :guilabel:`Papierformat` in "
+":ref:`Studio <studio/pdf-reports/create>` definiert werden."
 
 #: ../../content/applications/studio/pdf_reports.rst:101
 msgid "Creating new PDF reports"
-msgstr ""
+msgstr "Neue PDF-Berichte erstellen"
 
 #: ../../content/applications/studio/pdf_reports.rst:103
 msgid ""
@@ -2114,10 +2293,15 @@ msgid ""
 "in the popup window that opens, select the type of report. This is solely "
 "used to determine what is displayed in the header and footer:"
 msgstr ""
+"Um einen neuen Bericht für ein Modell zu erstellen, rufen Sie das Modell "
+"auf, klicken auf die Schaltfläche **Studio ein/aus** und dann auf "
+":guilabel:`Berichte`. Klicken Sie auf :guilabel:`Neu` und wählen Sie in dem "
+"sich öffnenden Pop-up-Fenster die Art des Berichts aus. Damit bestimmen Sie "
+"lediglich, was in der Kopf- und Fußzeile angezeigt wird:"
 
 #: ../../content/applications/studio/pdf_reports.rst:109
 msgid ":guilabel:`External`:"
-msgstr ""
+msgstr ":guilabel:`Extern`:"
 
 #: ../../content/applications/studio/pdf_reports.rst:111
 msgid ""
@@ -2125,34 +2309,46 @@ msgid ""
 "layout/logo>`, :ref:`tagline <studio/pdf-reports/default-layout/tagline>`, "
 "and :ref:`details <studio/pdf-reports/default-layout/details>`."
 msgstr ""
+"Die Kopfzeile zeigt das :ref:`Logo <studio/pdf-reports/default-"
+"layout/logo>`, den :ref:`Slogan <studio/pdf-reports/default-layout/tagline>`"
+" und :ref:`Details <studio/pdf-reports/default-layout/details>`."
 
 #: ../../content/applications/studio/pdf_reports.rst:114
 msgid ""
 "The footer displays the values set in the :ref:`Footer <studio/pdf-"
 "reports/default-layout/footer>` field and the page number."
 msgstr ""
+"Die Fußzeile zeigt die Werte an, die im Feld :ref:`Fußzeile <studio/pdf-"
+"reports/default-layout/footer>` und die Seitennummer an."
 
 #: ../../content/applications/studio/pdf_reports.rst:117
 msgid ""
 ":guilabel:`Internal`: The header displays the user's current date and time, "
 ":guilabel:`Company Name`, and page number. There is no footer."
 msgstr ""
+":guilabel:`Intern`: In der Kopfzeile werden das aktuelle Datum und die "
+"Uhrzeit des Benutzers, :guilabel:`Unternehmensname` und die Seitenzahl "
+"angezeigt. Es gibt keine Fußzeile."
 
 #: ../../content/applications/studio/pdf_reports.rst:120
 msgid ""
 ":guilabel:`Blank`: There is neither a header nor a footer. Click in the "
 "upper left corner of the page to edit the report."
 msgstr ""
+":guilabel:`Leer`: Es gibt weder Kopf- noch Fußzeile. Klicken Sie oben links "
+"auf der Seite, um den Bericht zu bearbeiten."
 
 #: ../../content/applications/studio/pdf_reports.rst:123
 msgid ""
 "Once you have created the report, you can start :ref:`editing it "
 "<studio/pdf-reports/edit>`."
 msgstr ""
+"Sobald Sie den Bericht erstellt haben, können Sie mit der :ref:`Bearbeitung "
+"<studio/pdf-reports/edit>` loslegen."
 
 #: ../../content/applications/studio/pdf_reports.rst:128
 msgid "Editing PDF reports"
-msgstr ""
+msgstr "PDF-Berichte bearbeiten"
 
 #: ../../content/applications/studio/pdf_reports.rst:130
 msgid ""
@@ -2161,12 +2357,19 @@ msgid ""
 " Select an existing report to open it or :ref:`create a new one <studio/pdf-"
 "reports/create>`."
 msgstr ""
+"Um auf die für ein Modell verfügbaren Berichte zuzugreifen, rufen Sie das "
+"Modell auf (z. B. Verkaufsaufträge), klicken Sie auf die Schaltfläche "
+"**Studio ein/aus** und dann auf :guilabel:`Berichte`. Wählen Sie einen "
+"vorhandenen Bericht aus, um ihn zu öffnen oder :ref:`erstellen Sie einen "
+"neuen Bericht <studio/pdf-reports/create>`."
 
 #: ../../content/applications/studio/pdf_reports.rst:135
 msgid ""
 "Alternatively, you can also open Studio, click :guilabel:`Reports`, and "
 "search for a specific report or model."
 msgstr ""
+"Alternativ können Sie auch Studio öffnen und auf :guilabel:`Berichte` "
+"klicken und nach einem bestimmten Bericht oder Modell suchen."
 
 #: ../../content/applications/studio/pdf_reports.rst:139
 msgid ""
@@ -2175,6 +2378,11 @@ msgid ""
 "pointer on the top right corner of the report, click the vertical ellipsis "
 "icon (:guilabel:`⋮`), and then select :guilabel:`Duplicate`."
 msgstr ""
+"Es wird dringend empfohlen, den Standardbericht zu **duplizieren** und "
+"Änderungen in der duplizierten Version vorzunehmen. Um einen Bericht zu "
+"duplizieren, bewegen Sie den Mauszeiger auf die obere rechte Ecke des "
+"Berichts, klicken auf das vertikale Ellipsen-Symbol (:guilabel:`⋮`) und "
+"wählen dann :guilabel:`Duplizieren`."
 
 #: ../../content/applications/studio/pdf_reports.rst:0
 msgid "Duplicating a PDF report"
@@ -2189,12 +2397,17 @@ msgid ""
 "Once you've selected or created a report, you can use the options in the "
 "left part of the screen to:"
 msgstr ""
+"Wenn Sie einen Bericht ausgewählt oder erstellt haben, können Sie die "
+"Optionen links im Bildschirm verwenden, um:"
 
 #: ../../content/applications/studio/pdf_reports.rst:152
 msgid ""
 "Change the :guilabel:`Report name`. The new name is applied everywhere (in "
 "Studio, under the :guilabel:`Print` button, and in the PDF file name)."
 msgstr ""
+"Den :guilabel:`Berichtnamen` zu ändern. Der neue Name wird überall "
+"übernommen (in Studio, unter der Schaltfläche :guilabel:`Drucken` und im "
+"Namen der PDF-Datei)"
 
 #: ../../content/applications/studio/pdf_reports.rst:154
 msgid ""
@@ -2202,12 +2415,17 @@ msgid ""
 "defined in the :ref:`default layout <studio/pdf-reports/default-"
 "layout/paper>` is used."
 msgstr ""
+"Ändern Sie das :guilabel:`Papierformat`. Wenn kein Wert ausgewählt wird, "
+"wird das in der :ref:`Standardlayout <studio/pdf-reports/default-"
+"layout/paper>` definierte Format verwendet."
 
 #: ../../content/applications/studio/pdf_reports.rst:156
 msgid ""
 ":guilabel:`Show in print menu`: to add the report in the :guilabel:`Print` "
 "menu available from the record."
 msgstr ""
+":guilabel:`Im Druckmenü anzeigen`: um den Bericht in das Menü "
+":guilabel:`Drucken` des Datensatzes aufzunehmen."
 
 #: ../../content/applications/studio/pdf_reports.rst:158
 msgid ""
@@ -2216,66 +2434,91 @@ msgid ""
 " the report any subsequent time. This is legally required for invoices and "
 "is mainly used in this case."
 msgstr ""
+":guilabel:`Erneut aus Anhang laden`: um den Bericht bei der ersten "
+"Erstellung als Anhang im Datensatz zu speichern und die ursprüngliche "
+"Version des Berichts bei jeder weiteren Erstellung erneut zu laden. Dies ist"
+" für Rechnungen gesetzlich vorgeschrieben und wird hauptsächlich in diesem "
+"Fall verwendet."
 
 #: ../../content/applications/studio/pdf_reports.rst:161
 msgid ""
 ":guilabel:`Limit visibility to groups`: to limit the availability of the PDF"
 " report to specific :doc:`user groups <../general/users/access_rights>`."
 msgstr ""
+":guilabel:`Sichtbarkeit auf Gruppen beschränken`: um die Verfügbarkeit des "
+"PDF-Berichts auf bestimmte :doc:`Benutzergruppen "
+"<../general/users/access_rights>` zu beschränken."
 
 #: ../../content/applications/studio/pdf_reports.rst:163
 msgid ""
 ":guilabel:`Edit sources`: to modify the report directly in the :ref:`XML "
 "file <studio/pdf-reports/XML-editing>`."
 msgstr ""
+":guilabel:`Quellen bearbeiten`: um den Bericht direkt in der :ref:`XML-Datei"
+" <studio/pdf-reports/XML-editing>` zu ändern."
 
 #: ../../content/applications/studio/pdf_reports.rst:165
 msgid ""
 ":guilabel:`Reset report`: to discard all changes made to the report and "
 "reset it to its standard version."
 msgstr ""
+":guilabel:`Bericht zurücksetzen`: um alle Änderungen an dem Bericht zu "
+"verwerfen und ihn auf seine Standardversion zurückzusetzen."
 
 #: ../../content/applications/studio/pdf_reports.rst:167
 msgid ":guilabel:`Print preview`: to generate and download a report preview."
 msgstr ""
+":guilabel:`Vorschau drucken`: um eine Berichtsvorschau zu generieren und "
+"herunterzuladen."
 
 #: ../../content/applications/studio/pdf_reports.rst:170
 msgid "Report editor"
-msgstr ""
+msgstr "Berichtseditor"
 
 #: ../../content/applications/studio/pdf_reports.rst:172
 msgid ""
 "The report editor allows you to modify the formatting and contents of the "
 "report."
 msgstr ""
+"Der Berichtseditor ermöglicht es Ihnen, die Formatierung und Inhalte des "
+"Berichts zu ändern."
 
 #: ../../content/applications/studio/pdf_reports.rst:175
 msgid ""
 "You can :guilabel:`Undo` or :guilabel:`Redo` changes using the related "
 "buttons or the shortcuts `CTRL Z` and `CTRL Y`."
 msgstr ""
+"Sie können Änderungen :guilabel:`Rückgängig` machen oder "
+":guilabel:`Wiederholen` mit den entsprechenden Schaltflächen oder den "
+"Tastenkombinationen `CTRL Z` und `CTRL Y` ändern."
 
 #: ../../content/applications/studio/pdf_reports.rst:178
 msgid ""
 "Changes are saved automatically when you leave the report or manually using "
 "the :guilabel:`Save` button."
 msgstr ""
+"Änderungen werden automatisch gespeichert, wenn Sie den Bericht verlassen "
+"oder manuell über die :guilabel:`Speichern`-Schaltfläche."
 
 #: ../../content/applications/studio/pdf_reports.rst:181
 msgid ""
 "You can reset the report to its standard version by clicking the "
 ":guilabel:`Reset report` button in the left part of the screen."
 msgstr ""
+"Sie können den Bericht auf seine Standardversion zurücksetzen, indem Sie "
+"links auf dem Bildschirm auf :guilabel:`Bericht zurücksetzen` drücken."
 
 #: ../../content/applications/studio/pdf_reports.rst:185
 msgid ""
 "Editing the header and footer of a report impacts all standard and custom "
 "reports."
 msgstr ""
+"Die Bearbeitung der Kopf- und Fußzeiel eines Berichts bestrifft alle "
+"Standard- und benutzerdefinierten Berichte."
 
 #: ../../content/applications/studio/pdf_reports.rst:188
 msgid "Conditional blocks"
-msgstr ""
+msgstr "Bedingte Blöcke"
 
 #: ../../content/applications/studio/pdf_reports.rst:190
 msgid ""
@@ -2283,39 +2526,49 @@ msgid ""
 "statements). These are used to show/hide content based on specific "
 "conditions. Click on the block to view the conditions."
 msgstr ""
+"Die gestrichelten Rechtecke stellen **Bedingte Blöcke** "
+"(*if/else*-Anweisungen) dar. Diese werden verwendet, um Inhalte auf der "
+"Grundlage bestimmter Bedingungen anzuzeigen/auszublenden. Klicken Sie auf "
+"den Block, um die Bedingungen anzuzeigen."
 
 #: ../../content/applications/studio/pdf_reports.rst-1
 msgid "View conditions applied to a block."
-msgstr ""
+msgstr "Anzeige der auf einen Block angewandten Bedingungen."
 
 #: ../../content/applications/studio/pdf_reports.rst:196
 msgid ""
 "Select a value to preview its corresponding output and edit it if necessary."
 msgstr ""
+"Wählen Sie eine Wert aus, um eine Vorschau des Endresulats zu sehen und "
+"gegebenenfalls zu bearbeiten."
 
 #: ../../content/applications/studio/pdf_reports.rst-1
 msgid "Preview the output of another condition."
-msgstr ""
+msgstr "Vorschau des Resultas einer anderen Bedingung."
 
 #: ../../content/applications/studio/pdf_reports.rst:202
 msgid ""
 "Conditions can only be edited in :ref:`XML <studio/pdf-reports/XML-"
 "editing>`."
 msgstr ""
+"Bedingungen können in :ref:`XML <studio/pdf-reports/XML-editing>` bearbeitet"
+" werden."
 
 #: ../../content/applications/studio/pdf_reports.rst:205
 msgid "Other content"
-msgstr ""
+msgstr "Anderer Inhalt"
 
 #: ../../content/applications/studio/pdf_reports.rst:207
 msgid "There are two types of text content in reports:"
-msgstr ""
+msgstr "Es gibt zwei Arten von Textinhalten in Berichten:"
 
 #: ../../content/applications/studio/pdf_reports.rst:209
 msgid ""
 "Static text, i.e., the text that's not highlighted in blue, which can be "
 "modified directly in the editor."
 msgstr ""
+"Statischer Text, d. h. der Text der nicht in Blau dargestellt wird, der "
+"direkt im Editor bearbeitet werden kann."
 
 #: ../../content/applications/studio/pdf_reports.rst:211
 msgid ""
@@ -2323,6 +2576,9 @@ msgid ""
 "by field values when the report is generated, e.g., the SO number or the "
 "quotation date."
 msgstr ""
+"Dynamischer Text, d. h. der Text, der in Blau dargestellt wurd, der  durch "
+"Feldwerte ersetzt werden kann, wenn der Bericht generiert wird, z. B. die "
+"Auftragsnummer oder das Angebotsdatum"
 
 #: ../../content/applications/studio/pdf_reports.rst:214
 msgid ""
@@ -2331,20 +2587,28 @@ msgid ""
 "<knowledge/powerbox>`, then type the command's name or select it from the "
 "list."
 msgstr ""
+"Sie können Inhalt (z. B. Felder, Listen, Tabellen, Bilder, Banner usw.) "
+"mittels Befehle zum Bericht hinzufügen. Geben Sie `/` ein, um die "
+":ref:`Powerbox <knowledge/powerbox>` zu öffnen, geben Sie dann den Namen des"
+" Befehls ein oder wählen Sie ihn aus der Liste aus."
 
 #: ../../content/applications/studio/pdf_reports.rst:218
 msgid "To add static text to the report, type the text where you want it."
 msgstr ""
+"Um dem Bericht statischen Text hinzuzufügen, geben Sie den gewünschten Text "
+"ein"
 
 #: ../../content/applications/studio/pdf_reports.rst:220
 msgid ""
 "For more advanced changes, you can :ref:`edit the report in the XML directly"
 " <studio/pdf-reports/XML-editing>`."
 msgstr ""
+"Für weitere Änderungen können Sie :ref:`den Bericht direkt in der XML "
+"bearbeiten <studio/pdf-reports/XML-editing>`."
 
 #: ../../content/applications/studio/pdf_reports.rst:226
 msgid "Add a field"
-msgstr ""
+msgstr "Ein Feld hinzufügen"
 
 #: ../../content/applications/studio/pdf_reports.rst:228
 msgid ""
@@ -2353,6 +2617,11 @@ msgid ""
 "to the field name to access the list of related fields if needed. Then, "
 "specify the default value and press `Enter`."
 msgstr ""
+"Um ein Feld hinzuzufügen, geben Sie `/` ein und wählen den Befehl "
+":guilabel:`Feld`. In der sich öffnenden Liste wählen Sie das Feld aus oder "
+"suchen es. Klicken Sie auf den Pfeil nach rechts neben dem Feldnamen, um bei"
+" Bedarf die Liste der verwandten Felder aufzurufen. Geben Sie dann den "
+"Standardwert an und drücken Sie `Enter`."
 
 #: ../../content/applications/studio/pdf_reports.rst-1
 msgid "Select a related field."
@@ -2360,7 +2629,7 @@ msgstr "Wählen Sie ein zugehöriges Feld aus."
 
 #: ../../content/applications/studio/pdf_reports.rst:236
 msgid "Add a data table"
-msgstr ""
+msgstr "Eine Datentabelle hinzuzufügen"
 
 #: ../../content/applications/studio/pdf_reports.rst:238
 msgid ""
@@ -2369,12 +2638,18 @@ msgid ""
 "the :guilabel:`Dynamic Table` command, and select the relation to be "
 "displayed in the table."
 msgstr ""
+"Datentabellen werden verwendet, um :ref:`relationale Felder "
+"<studio/fields/relational-fields>` anzuzeigen. Um eine Datentabelle "
+"hinzuzufügen, geben Sie `/` ein, wählen den Befehl :guilabel:`Dynamische "
+"Tabelle` und wählen die Relation, die in der Tabelle angezeigt werden soll."
 
 #: ../../content/applications/studio/pdf_reports.rst:243
 msgid ""
 "Only relations of type `one2many` or `many2many` can be displayed as data "
 "tables."
 msgstr ""
+"Nur Relationen vom Typ `one2many` oder `many2many` können als Datentabellen "
+"angezeigt werden."
 
 #: ../../content/applications/studio/pdf_reports.rst:245
 msgid ""
@@ -2382,10 +2657,13 @@ msgid ""
 "Position the cursor on top of the column, then click the purple rectangle "
 "and select an option."
 msgstr ""
+"Sobald die Tabelle hinzugefügt wurde, können Sie Spalten mit den "
+"Tabellentools hinzufügen. Positionieren Sie den Cursor oben auf der Spalte, "
+"klicken Sie auf das lilafarbene Rechteck und wählen Sie die Option"
 
 #: ../../content/applications/studio/pdf_reports.rst-1
 msgid "Add a column in a dynamic table."
-msgstr ""
+msgstr "Hinzufügen einer Spalte in eine dynamische Tabelle."
 
 #: ../../content/applications/studio/pdf_reports.rst:251
 msgid ""
@@ -2393,10 +2671,14 @@ msgid ""
 "field>` in the columns. The dialog box that opens shows the source object "
 "for the field (e.g., the *Tag* model) and the list of available fields."
 msgstr ""
+"Sie können dann das :ref:`Feld Ihrer Wahl <studio/pdf-reports/add-field>` in"
+" die Spalten einfügen. Das Dialogfeld, das sich öffnet, zeigt das "
+"Quellobjekt für das Feld (z. B. das *Stichwort*-Modell) und die Liste der "
+"verfügbaren Felder."
 
 #: ../../content/applications/studio/pdf_reports.rst-1
 msgid "List of available fields for the Tag model."
-msgstr ""
+msgstr "Liste der verfügbaren Felder für das Stichwort-Modell."
 
 #: ../../content/applications/studio/pdf_reports.rst:259
 msgid ""
@@ -2405,12 +2687,18 @@ msgid ""
 "add static content rows above or below the generated rows using the table "
 "tools."
 msgstr ""
+"Die Standardzeile geht automatisch über den Inhalt des Feldes und erzeugt "
+"für jeden Feldwert eine Zeile im Bericht (z .B. eine Zeile pro Stcihwort). "
+"Sie können mit den Tabellentools statische Inhaltszeilen über oder unter den"
+" generierten Zeilen hinzufügen."
 
 #: ../../content/applications/studio/pdf_reports.rst:262
 msgid ""
 "You can also add data tables by :ref:`modifying the report's XML "
 "<studio/pdf-reports/XML-editing>`."
 msgstr ""
+"Sie können Datentabellen auch hinzufügen, indem Sie :ref:`die XML des "
+"Berichts bearbeiten <studio/pdf-reports/XML-editing>`."
 
 #: ../../content/applications/studio/pdf_reports.rst:265
 msgid "Formatting"
@@ -2421,14 +2709,16 @@ msgid ""
 "To format text in the report, select it, then format it using the options in"
 " the :ref:`knowledge/text-editor`."
 msgstr ""
+"Um Text im Bericht zu formatieren, markieren Sie ihn und formatieren ihn "
+"dann mit den Optionen im :ref:`knowledge/text-editor`."
 
 #: ../../content/applications/studio/pdf_reports.rst:0
 msgid "Format text using the text editor."
-msgstr ""
+msgstr "Textformatierung mithilfe des Texteditors."
 
 #: ../../content/applications/studio/pdf_reports.rst:276
 msgid "Editing the report's XML"
-msgstr ""
+msgstr "XML von Berichten bearbeiten"
 
 #: ../../content/applications/studio/pdf_reports.rst:279
 msgid ""
@@ -2436,11 +2726,17 @@ msgid ""
 " <../../../administration/upgrade>`. If this happens, simply copy your "
 "changes from the old database into your upgraded database."
 msgstr ""
+"Die direkte Bearbeitung der XML-Datei kann bei :doc:`Upgrades "
+"<../../../administration/upgrade>` zu Berichtsproblemen führen. Sollte dies "
+"der Fall sein, kopieren Sie einfach Ihre Änderungen aus der alten Datenbank "
+"in die aktualisierte Datenbank."
 
 #: ../../content/applications/studio/pdf_reports.rst:283
 msgid ""
 "To edit the report's XML, click :guilabel:`Edit sources` in the left pane."
 msgstr ""
+"Um die XML des Berichts zu bearbeiten, klicken Sie links auf "
+":guilabel:`Quellen bearbeitens`."
 
 #: ../../content/applications/studio/pdf_reports.rst:286
 msgid "Examples"
@@ -2453,6 +2749,10 @@ msgid ""
 " XML. For example, with a sales order, you can find the following structure "
 "in the XML (simplified for documentation purposes):"
 msgstr ""
+"Manchmal werden Tabellen aufgrund ihrer komplexen Struktur nicht richtig als"
+" solche erkannt. In diesen Fällen können Sie sie trotzdem manuell in der "
+"XML-Datei des Berichts ändern. Bei einem Verkaufsauftrag zum Beispiel finden"
+" Sie im XML die folgende Struktur (zu Dokumentationszwecken vereinfacht):"
 
 #: ../../content/applications/studio/pdf_reports.rst:318
 msgid ""
@@ -2461,6 +2761,11 @@ msgid ""
 " section (with e.g., the column title) and another one in the body section "
 "with the field content (usually, with a `t-out` or `t-field` directive)."
 msgstr ""
+"Um eine Tabelle zu ändern, müssen Sie sicherstellen, dass jede Zeile die "
+"gleiche Anzahl von Datenzellen hat. Im obigen Fall müssen Sie beispielsweise"
+" eine Zelle in der Kopfzeile (z. B. mit dem Spaltentitel) und eine weitere "
+"Zelle im Hauptteil mit dem Feldinhalt hinzufügen (normalerweise mit einer "
+"`t-out`- oder `t-field`-Anweisung)."
 
 #: ../../content/applications/studio/pdf_reports.rst:344
 msgid ""
@@ -2468,16 +2773,22 @@ msgid ""
 "`Mozilla Developer Network website <https://developer.mozilla.org/en-"
 "US/docs/Learn/HTML/Tables/Basics>`_."
 msgstr ""
+"Zellen können mehrere Spalten oder Zeilen spammen. Weitere Informationen "
+"finden Sie auf der Website von `Mozilla Developer Network "
+"<https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics>`_."
 
 #: ../../content/applications/studio/pdf_reports.rst:347
 msgid ""
 "For example, you can modify the **Quotation/Order** report to add a column "
 "to display the product category in the main table:"
 msgstr ""
+"Sie können zum Beispiel den **Angebots-/Auftragsbericht** bearbeiten, um "
+"eine Spalte hinzuzufügen, um die Produktkategrie in der Haupttabelle "
+"anzuzeigen."
 
 #: ../../content/applications/studio/pdf_reports.rst:0
 msgid "Add a Product Category column in a SO."
-msgstr ""
+msgstr "Hinzufügen einer Produktkategorie in einem Verkaufsauftrag."
 
 #: ../../content/applications/studio/pdf_reports.rst:376
 msgid ""
@@ -2485,10 +2796,14 @@ msgid ""
 "you wish to access and display. As an example, let's add a table that "
 "details the tags on a sales order:"
 msgstr ""
+"Um eine Tabelle in XML hinzuzufügen, müssen Sie die Namen der Felder und "
+"Objekte kennen, auf die Sie zugreifen und die Sie anzeigen möchten. Fügen "
+"wir zum Beispiel eine Tabelle hinzu, in der die Stichwörter eines "
+"Verkaufsauftrags aufgeführt sind:"
 
 #: ../../content/applications/studio/pdf_reports.rst:0
 msgid "Add a data table in XML"
-msgstr ""
+msgstr "Eine Datentabelle in XML hinzuzufügen"
 
 #: ../../content/applications/studio/pdf_reports.rst:407
 msgid ""
@@ -2496,12 +2811,18 @@ msgid ""
 "<https://getbootstrap.com/docs/5.1/content/tables>`_, like the `table` class"
 " included in the example above."
 msgstr ""
+"Wenn Sie Tabellen manuell hinzufügen, verwenden Sie die `Bootstrap-Klassen "
+"<https://getbootstrap.com/docs/5.1/content/tables>`_, wie die Klasse `table`"
+" im obigen Beispiel."
 
 #: ../../content/applications/studio/pdf_reports.rst:413
 msgid ""
 "If you want to show/hide content based on specific conditions, you can "
 "manually add `if/else` control statements in the report XML."
 msgstr ""
+"Wenn Sie Inhalte auf der Grundlage bestimmter Bedingungen ein- oder "
+"ausblenden möchten, können Sie manuell „if/else“-Kontrollanweisungen in die "
+"Berichts-XML einfügen."
 
 #: ../../content/applications/studio/pdf_reports.rst:416
 msgid ""
@@ -2510,6 +2831,11 @@ msgid ""
 "evaluated as `True` or `False`. The table will not be displayed if there are"
 " no tags in the quotation."
 msgstr ""
+"Wenn Sie zum Beispiel eine benutzerdefinierte Datentabelle ausblenden "
+"möchten, wenn keine Tags vorhanden sind, können Sie das Attribut `t-if` "
+"verwenden, um die Bedingung zu definieren, die dann als `True` oder `False` "
+"ausgewertet wird. Die Tabelle wird nicht angezeigt, wenn keine Tags im Zitat"
+" vorhanden sind."
 
 #: ../../content/applications/studio/pdf_reports.rst:445
 msgid ""
@@ -2520,6 +2846,12 @@ msgid ""
 "attribute. As an example, let's show a quick message explaining that there "
 "are no tags on the quotation:"
 msgstr ""
+"Wenn Sie einen weiteren Block anzeigen möchten, falls die `t-if`-Anweisung "
+"als `False` ausgewertet wird, können Sie diesen mit der `t-else`-Anweisung "
+"angeben. Der `t-else`-Block muss in der Dokumentstruktur direkt auf den "
+"`t-if`-Block folgen. Es ist nicht notwendig, eine Bedingung im Attribut "
+"`t-else` anzugeben. Lassen Sie uns als Beispiel eine kurze Meldung anzeigen,"
+" die erklärt, dass es keine Tags im Zitat gibt:"
 
 #: ../../content/applications/studio/pdf_reports.rst:477
 msgid ""
@@ -2527,18 +2859,23 @@ msgid ""
 " sections are mutually exclusive and should be displayed as conditional "
 "blocks:"
 msgstr ""
+"Durch die Verwendung der Notation `t-if/t-else` erkennt der Berichtseditor, "
+"dass sich diese Abschnitte gegenseitig ausschließen und als bedingte Blöcke "
+"angezeigt werden sollten:"
 
 #: ../../content/applications/studio/pdf_reports.rst:0
 msgid "Output preview if there are tags."
-msgstr ""
+msgstr "Resultatsvorschau, wenn es Tags gibt."
 
 #: ../../content/applications/studio/pdf_reports.rst:483
 msgid "You can switch conditions using the editor to preview their output:"
 msgstr ""
+"Sie können die Bedingungen mit dem Editor umschalten, um eine Vorschau ihres"
+" Resultat zu erhalten:"
 
 #: ../../content/applications/studio/pdf_reports.rst:0
 msgid "Output preview if there are no tags."
-msgstr ""
+msgstr "Resultatsvorschau, wenn es keine Tags gibt."
 
 #: ../../content/applications/studio/pdf_reports.rst:488
 msgid ""
@@ -2546,6 +2883,10 @@ msgid ""
 "to add intermediary conditions. For example, this is how the title of sales "
 "order reports changes based on the condition of the underlying document."
 msgstr ""
+"Wenn Sie mehrere Optionen haben möchten, können Sie auch "
+"`t-elif`-Anweisungen verwenden, um Zwischenbedingungen hinzuzufügen. So "
+"ändert sich z. B. der Titel von Verkaufsauftragsberichten in Abhängigkeit "
+"von der Bedingung des zugrunde liegenden Dokuments."
 
 #: ../../content/applications/studio/pdf_reports.rst:501
 msgid ""
@@ -2554,6 +2895,11 @@ msgid ""
 " either `draft` or `sent`, then *Quotation* is used. If none of those "
 "conditions are met, the report's title is *Order*."
 msgstr ""
+"Der Titel *Pro-Forma-Rechnung* wird abhängig von einigen kontextuellen "
+"Bedingungen verwendet. Wenn diese Bedingungen nicht erfüllt sind und der "
+"Status des Dokuments entweder `Entwurf` oder `Gesendet` ist, wird *Angebot* "
+"verwendet. Wenn keine dieser Bedingungen erfüllt ist, lautet der Titel des "
+"Berichts *Auftrag*."
 
 #: ../../content/applications/studio/pdf_reports.rst:507
 msgid ""
@@ -2564,6 +2910,12 @@ msgid ""
 "directive and accompanying `t-options` attributes provides better sizing and"
 " positioning control."
 msgstr ""
+"Die Arbeit mit Bildern in einem Bericht kann eine Herausforderung sein, da "
+"die genaue Steuerung von Bildgröße und -verhalten nicht immer offensichtlich"
+" ist. Sie können Bildfelder mit dem Berichtseditor einfügen (:ref:`mit dem "
+"Befehl /Feld <studio/pdf-reports/add-field>`), aber das Einfügen in XML mit "
+"der `t-field`-Anweisung und den dazugehörigen Attributen `t-options` bietet "
+"eine bessere Kontrolle über Größe und Positionierung."
 
 #: ../../content/applications/studio/pdf_reports.rst:513
 msgid ""
@@ -2571,32 +2923,41 @@ msgid ""
 "product as a 64px-wide image (with an automatic height based on the image's "
 "aspect ratio)."
 msgstr ""
+"Der folgende Code gibt zum Beispiel das Feld `Bild_128` des Produkts der "
+"Zeile als 64px breites Bild aus (mit einer automatischen Höhe, die auf dem "
+"Seitenverhältnis des Bildes basiert)."
 
 #: ../../content/applications/studio/pdf_reports.rst:520
 msgid "The following options are available for image widgets:"
-msgstr ""
+msgstr "Die folgenden Optionen sind für Bildwidgets verfügbar:"
 
 #: ../../content/applications/studio/pdf_reports.rst:522
 msgid ""
 "`width`: width of the image, usually in pixels or CSS length units (e.g., "
 "`rem`) (leave empty for auto-width)."
 msgstr ""
+"`width`: Breite des Bildes, normalerweise in Pixeln oder CSS-Längeneinheiten"
+" (z. B. `rem`) (für automatische Breite leer lassen)."
 
 #: ../../content/applications/studio/pdf_reports.rst:524
 msgid ""
 "`height`: height of the image, usually in pixels or CSS length units (e.g., "
 "`rem`) (leave empty for auto-height)."
 msgstr ""
+"`height`: Höhe des Bildes, in der Regel in Pixeln oder CSS-Längeneinheiten "
+"(z. B. `rem`) (für automatische Höhe leer lassen)."
 
 #: ../../content/applications/studio/pdf_reports.rst:526
 msgid ""
 "`class`: CSS classes applied on the `img` tag; `Bootstrap classes "
 "<https://getbootstrap.com/docs/5.1/content/tables>`_ are available."
 msgstr ""
+"`class`: CSS-Klassen, die auf den `img`-Tag angewendet werden; `Bootstrap-"
+"Klassen <https://getbootstrap.com/docs/5.1/content/tables>`_ sind verfügbar."
 
 #: ../../content/applications/studio/pdf_reports.rst:528
 msgid "`alt`: alternative text of the image"
-msgstr ""
+msgstr "`alt`: alternativer Text des Bilds text of the image"
 
 #: ../../content/applications/studio/pdf_reports.rst:529
 msgid ""
@@ -2604,6 +2965,9 @@ msgid ""
 "with `Bootstrap classes "
 "<https://getbootstrap.com/docs/5.1/content/tables>`_."
 msgstr ""
+"`style`: Stilattribut; ermöglicht Ihnen, Stile einfacher als mit `Bootstrap-"
+"Klassen <https://getbootstrap.com/docs/5.1/content/tables>`_ zu "
+"überschreiben."
 
 #: ../../content/applications/studio/pdf_reports.rst:532
 msgid ""
@@ -2611,6 +2975,9 @@ msgid ""
 "within quotes, e.g., `t-options-width=\"'64px'\"` (or, alternatively, a "
 "valid Python expression)."
 msgstr ""
+"Diese Attribute müssen Strings enthalten, d. h. Text, der in "
+"Anführungszeichen eingeschlossen ist, z. B. `t-options-width=\"'64px'\"` "
+"(oder alternativ einen gültigen Python-Ausdruck)."
 
 #: ../../content/applications/studio/pdf_reports.rst:536
 msgid ""
@@ -2618,12 +2985,17 @@ msgid ""
 "directive on a `span` (for inline content) or `div` (for block content) "
 "node."
 msgstr ""
+"Das Bildwidget kann nicht für ein `img`-Tag verwendet werden. Setzen Sie "
+"stattdessen die `t-field`-Anweisung auf einen `span`- (für Inline-Inhalt) "
+"oder `div`-Knoten (für Blockinhalt)."
 
 #: ../../content/applications/studio/pdf_reports.rst:539
 msgid ""
 "For example, let's add a column with the product image in the quotation "
 "table:"
 msgstr ""
+"Fügen wir zum Beispiel eine Spalte mit dem Produktbild in die "
+"Angebotstabelle ein:"
 
 #: ../../content/applications/studio/pdf_reports.rst:567
 msgid ""
@@ -2631,10 +3003,14 @@ msgid ""
 "the Bootstrap classes used in `t-options-class` create a thumbnail-like "
 "border with rounded corners and a shadow."
 msgstr ""
+"Das Attribut `t-options-width` schränkt die Bildbreite auf 64 Pixel ein und "
+"die in `t-options-class` verwendeten Bootstrap-Klassen erzeugen einen "
+"Rahmen, der Miniaturbildern ähnelt, mit abgerundeten Ecken und einem "
+"Schatten."
 
 #: ../../content/applications/studio/pdf_reports.rst:0
 msgid "Add a column with the product image in the quotation table."
-msgstr ""
+msgstr "Fügen wir eine Spalte mit dem Produktbild in die Angebotstabelle ein:"
 
 #: ../../content/applications/studio/views.rst:3
 msgid "Views"
