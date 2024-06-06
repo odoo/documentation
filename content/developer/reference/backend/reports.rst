@@ -206,7 +206,7 @@ following attributes:
 ``margin_top``, ``margin_bottom``, ``margin_left``, ``margin_right``
     margin sizes in mm
 ``page_height``, ``page_width``
-    page dimensions in mm
+    page dimensions in mm. When settings the dimensions ``format`` must be set to ``custom``.
 ``orientation``
     Landscape or Portrait
 ``header_line``
