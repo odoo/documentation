@@ -34,7 +34,7 @@ can be done in a few steps:
       };
 
       // Register it to the views registry
-      registry.category("views").add("custom_kanban", customeKanbanView);
+      registry.category("views").add("custom_kanban", customKanbanView);
 
    In our custom kanban, we defined a new template. We can either inherit the kanban controller
    template and add our template pieces or we can define a completely new template.
