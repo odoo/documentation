@@ -15,6 +15,7 @@ To **print receipts** automatically once the payment is registered, enable the :
 Receipt Printing` setting.
 
 .. image:: receipts_invoices/receipt.png
+   :scale: 75%
    :alt: POS receipt
 
 .. seealso::
