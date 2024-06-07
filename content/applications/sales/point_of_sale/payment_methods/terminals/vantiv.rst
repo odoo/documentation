@@ -6,8 +6,8 @@ Connecting a Vantiv payment terminal allows you to offer a fluid payment flow to
 ease the work of your cashiers.
 
 .. note::
-   Please note MercuryPay only operates with US and Canadian banks, making
-   this procedure only suitable for North American businesses.
+   Please note MercuryPay only operates with US and Canadian banks, making this procedure only
+   suitable for North American businesses.
 
 .. warning::
    Vantiv card readers should be purchased exclusively from Vantiv, as certain Vantiv terminals
@@ -16,35 +16,30 @@ ease the work of your cashiers.
 Configuration
 =============
 
-Configure the Payment Method
+Configure the payment method
 ----------------------------
 
-First, go in the general settings of the POS app, and activate the
-Vantiv setting.
+Enable the payment terminal in the :guilabel:`Payment Terminals` section :ref:`of the application
+settings <configuration/settings>`.
 
-.. image:: vantiv/vantiv_01.png
-    :align: center
+Then, go to :menuselection:`Point of Sale --> Configuration --> Payment Methods`, and :doc:`create
+the related payment method <../../payment_methods>`. Set the journal type as :guilabel:`Bank` and
+select :guilabel:`Vantiv` in the :guilabel:`Use a Payment Terminal` field.
 
-Back in :menuselection:`Point of Sale --> Configuration --> Point of Sale`, go in the
-payments section and access your payment methods. Create a new payment
-method for Vantiv, select the payment terminal option Vantiv, and create
-new Vantiv credentials.
+Type the name you want to give to your :guilabel:`Vantiv Credentials` and click :guilabel:`Create
+and edit`. Enter your :guilabel:`Merchant ID` and :guilabel:`Merchant Password`, then click
+:guilabel:`Save & Close`.
 
-.. image:: vantiv/vantiv_02.png
-    :align: center
+.. image:: vantiv/vantiv-method.png
+   :alt: Vantiv payment method
 
-To create new Vantiv credentials, fill in your merchant ID and password,
-then save. Make sure the credentials you just created are selected, then
-save the payment method.
+Once the payment method is created, you can select it in your POS settings. To do so, go to the
+:ref:`POS' settings <configuration/settings>` and add the payment method under the
+:guilabel:`Payment` section.
 
-.. image:: vantiv/vantiv_03.png
-    :align: center
-
-Pay with a Payment Terminal
+Pay with a payment terminal
 ===========================
 
-In your PoS interface, at the moment of the payment, select your Vantiv
-payment method and… that’s all.
-
-.. image:: vantiv/vantiv_04.png
-    :align: center
+When processing a payment, select the related payment method. Check the amount and click on
+:guilabel:`Send`. Once the payment is successful, the status changes to :guilabel:`Payment
+Successful`.
