@@ -17,6 +17,8 @@ next to :guilabel:`Customer Addresses`, and click :guilabel:`Save`.
    :align: center
    :alt: Activate the Customer Addresses setting.
 
+.. _sales/send_quotations/contact-form-config:
+
 Contact form configuration
 ==========================
 
