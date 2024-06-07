@@ -13,3 +13,4 @@ Workflows
    workflows/manufacturing_backorders
    workflows/split_merge
    workflows/unbuild_orders
+   workflows/byproducts
