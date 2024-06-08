@@ -4,8 +4,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Sarah Park, 2024
 # Wil Odoo, 2024
+# Sarah Park, 2024
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-31 09:59+0000\n"
 "PO-Revision-Date: 2024-03-30 23:40+0000\n"
-"Last-Translator: Wil Odoo, 2024\n"
+"Last-Translator: Sarah Park, 2024\n"
 "Language-Team: Korean (https://app.transifex.com/odoo/teams/41243/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -417,6 +417,10 @@ msgid ""
 " record` action, the email uses the values set *before* the update action is"
 " run."
 msgstr ""
+"동일한 트리거/자동화 규칙에 대해 여러 개의 활동을 정의할 수 있습니다. 활동은 지정된 순서대로 실행됩니다. 예를 들어 "
+":guilabel:`레코드 업데이트` 활동을 지정한 다음 :guilabel:`이메일 보내기` 활동을 지정해 놓으면 이메일에서는 업데이트된"
+" 값을 사용합니다. 그러나 :guilabel:`이메일 보내기` 활동이 :guilabel:`레코드 업데이트` 활동 전으로 지정되어 있으면 "
+"이메일은 업데이트 작업이 실행되기 *전에* 설정된 값을 사용합니다."
 
 #: ../../content/applications/studio/automated_actions.rst:206
 msgid "Update Record"
@@ -460,6 +464,11 @@ msgid ""
 ":guilabel:`Priority is set to` to `High` and define the :guilabel:`Update "
 "Record` action as follows:"
 msgstr ""
+"또는 Python 코드를 사용하여 레코드의 필드를 동적으로 설정할 수도 있습니다. 설정하려면 :guilabel:`업데이트` 대신 "
+":guilabel:`계산` 을 선택한 다음 필드 값을 계산할 때 사용할 코드를 입력합니다요. 예를 들어, 작업 우선순위가 '높음' 으로 "
+"설정되어 있는 경우 (작업에 별표 표시) 자동화 규칙으로 사용자 정의 :ref:`날짜 및 시간 필드 "
+"<studio/fields/simple-fields/date-time>` 를 계산하도록 하려면, :guilabel:`우선순위 설정` 을 "
+"`높음` 으로 설정하고 :guilabel:`레코드 업데이트` 동작을 다음과 같이 지정할 수 있습니다."
 
 #: ../../content/applications/studio/automated_actions.rst:0
 msgid "Compute a custom datetime field using a Python expression"
@@ -513,6 +522,9 @@ msgid ""
 " As` or :guilabel:`Send SMS As` field, choose how you want to send the email"
 " or text message:"
 msgstr ""
+"이러한 활동으로 특정 레코드에 연결된 연락처로 이메일이나 문자 메시지를 보냅니다. 그진행하려면 :guilabel:`이메일 템플릿` 또는 "
+":guilabel:`SMS 템플릿` 을 선택하거나 생성한 다음 :guilabel:`다른 이름으로 이메일 보내기` 또는 "
+":guilabel:`다른 이름으로 SMS 보내기` 필드에서 이메일 또는 문자 메시지를 전송할 방법을 선택합니다."
 
 #: ../../content/applications/studio/automated_actions.rst:263
 msgid ""
@@ -576,6 +588,9 @@ msgid ""
 "a field in the :guilabel:`Link Field` field to link the record that "
 "triggered the creation of the new record."
 msgstr ""
+":guilabel:`만들 레코드` 필드에서 필요한 모델을 선택합니다. 기본적으로 현재 모델로 되어 있습니다. 레코드 "
+":guilabel:`이름` 을 지정한 다음, 다른 모델에서 레코드를 생성하려면 :guilabel:`필드 링크` 에서 필드를 선택하여 새 "
+"레코드가 만들어지도록 트리거하는 레코드에 연결합니다."
 
 #: ../../content/applications/studio/automated_actions.rst:292
 msgid ""
@@ -1124,6 +1139,11 @@ msgid ""
 "the same effects as described under :ref:`File <studio/fields/simple-"
 "fields/file>`."
 msgstr ""
+":guilabel:`이미지` 필드는 이미지를 업로드하고 :ref:`양식 보기 <studio/views/general/form>` 에 "
+"표시하는 데 사용됩니다. 이 필드 유형은 기본적으로 :guilabel:`이미지` 위젯이 선택되어 있는 :ref:`파일 필드 "
+"<studio/fields/simple-fields/file>`입니다. 따라서 :guilabel:`파일`, :guilabel:`PDF "
+"뷰어` 및 :guilabel:`서명` 위젯은 :ref:`파일 <studio/fields/simple-fields/file>` 에 설명된 "
+"내용과 효과가 동일합니다."
 
 #: ../../content/applications/studio/fields.rst:297
 msgid ""
@@ -1444,6 +1464,8 @@ msgid ""
 "information that can be linked with other tables. A model usually represents"
 " a business concept, such as a *sales order*, *contact*, or *product*."
 msgstr ""
+"모델을 통해 데이터베이스의 논리적 구조와 데이터를 저장하거나 구성 및 조작하는 방법을 정합니다. 즉, 모델은 다른 테이블과 연결할 수 "
+"있는 정보의 테이블입니다. 일반적으로 모델은 *판매 주문*, *연락처* 또는 *품목* 과 같은 비즈니스적인 개념을 나타냅니다."
 
 #: ../../content/applications/studio/models_modules_apps.rst:9
 msgid ""
@@ -1886,6 +1908,10 @@ msgid ""
 "individual reports in the :guilabel:`Paper format` field in :ref:`Studio "
 "<studio/pdf-reports/create>`."
 msgstr ""
+":guilabel:`용지 서식`: 보고서의 기본 용지 크기를 지정합니다. :guilabel:`A4` (21cm x 29.7cm), "
+":guilabel:`US 레터` (21.59cm x 27.54cm) 또는 :guilabel:`QR 코드 페이지` 중에서 선택할 수 "
+"있습니다. 이와 같이 :ref:`스튜디오 <studio/pdf-reports/create>` 의 :guilabel:`용지 서식` 필드에 "
+"있는 개별 보고서에 대해서도 지정할 수 있습니다."
 
 #: ../../content/applications/studio/pdf_reports.rst:101
 msgid "Creating new PDF reports"
@@ -2137,6 +2163,9 @@ msgid ""
 "to the field name to access the list of related fields if needed. Then, "
 "specify the default value and press `Enter`."
 msgstr ""
+"필드를 추가하려면 `/` 를 입력한 후 :guilabel:`필드` 명령어를 선택합니다. 목록이 열리면 필드를 선택하거나 검색합니다. "
+"필요한 경우 필드명 옆에 있는 오른쪽 화살표를 클릭하면 필드 목록에 액세스할 수 있습니다. 그런 다음 기본값을 지정하고 '엔터' 를 "
+"누릅니다."
 
 #: ../../content/applications/studio/pdf_reports.rst-1
 msgid "Select a related field."

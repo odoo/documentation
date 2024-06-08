@@ -7,9 +7,9 @@
 # Niki Waibel, 2023
 # Michael Hofer, 2023
 # Jan Meyer, 2024
+# Felix Schubert <felix.schubert@go-erp.com>, 2024
 # Martin Trigaux, 2024
 # Wil Odoo, 2024
-# Felix Schubert <felix.schubert@go-erp.com>, 2024
 # Larissa Manderfeld, 2024
 # 
 #, fuzzy
@@ -29,7 +29,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp.rst:5
 msgid "Supply Chain"
-msgstr ""
+msgstr "Lieferkette"
 
 #: ../../content/applications/inventory_and_mrp/barcode.rst:8
 msgid "Barcode"
@@ -5157,6 +5157,9 @@ msgid ""
 "four days, and the :ref:`purchase security lead time "
 "<inventory/shipping_receiving/purchase-security-lt>` is one day."
 msgstr ""
+"Die :ref:`Lieferantenvorlaufzeit <inventory/shipping_receiving/purchase-lt>`"
+" beträgt vier Tage und die :ref:`Sicherheitsvorlaufzeit des Einkaufs "
+"<inventory/shipping_receiving/purchase-security-lt>` beträgt einen Tag."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:218
 msgid ""
@@ -7594,7 +7597,7 @@ msgstr "Ablaufwarnung für abgelaufenes Produkt."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:3
 msgid "Lot numbers"
-msgstr ""
+msgstr "Losnummern"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:10
 msgid ""
@@ -7657,7 +7660,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:53
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:49
 msgid ":doc:`expiration_dates`"
-msgstr ""
+msgstr ":doc:`expiration_dates`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:56
 msgid ""
@@ -7742,7 +7745,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:109
 msgid "Manual assignment"
-msgstr ""
+msgstr "Manuelle Zuweisung"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:111
 msgid ""
@@ -11019,7 +11022,7 @@ msgstr "Einstellung der Option „Tarif erhalten und Sendung erstellen“."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:33
 msgid "Labels for multi-step"
-msgstr ""
+msgstr "Eitketten für mehrere Schritte"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:35
 msgid ""
@@ -11030,6 +11033,12 @@ msgid ""
 "that, go to :menuselection:`Inventory app --> Configuration --> Operations "
 "Types`, and choose the desired operation."
 msgstr ""
+"Für Unternehmen, die Lieferungen in :doc:`zwei "
+"<../daily_operations/receipts_delivery_two_steps>` oder :doc:`Drei Schritten"
+" <../daily_operations/delivery_three_steps>` verwenden, kann der Druck von "
+"Etiketten nach der Validierung des Kommissionier- oder Verpackungsvorgangs "
+"ausgelöst werden. Gehen Sie dazu zu :menuselection:`Lager --> Konfiguration "
+"--> Vorgangsarten`, und wählen Sie den gewünschten Vorgang."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:40
 msgid ""
@@ -11037,6 +11046,10 @@ msgid ""
 ":guilabel:`Print Label` checkbox. Enabling this feature ensures that the "
 "third-party shipping label is printed upon validating this operation."
 msgstr ""
+"Aktivieren Sie auf der Konfigurationsseite :guilabel:`Vorgangsart` das "
+"Kontrollkästchen :guilabel:`Etikett drucken`. Die Aktivierung dieser "
+"Funktion stellt sicher, dass das Versandetikett eines Drittanbieters bei der"
+" Validierung dieses Vorgangs gedruckt wird."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:45
 msgid ""
@@ -11088,6 +11101,10 @@ msgid ""
 "third-party carrier <inventory/shipping_receiving/validate-print-label>` in "
 "the :guilabel:`Carrier` field, and validate the |DO|."
 msgstr ""
+"Wenn nur die *Lagerapp* installiert ist, erstellen Sie Lieferaufträge direkt"
+" in der :menuselection:`Lagerapp` , :ref:`fügen Sie den Drittzusteller "
+"<inventory/shipping_receiving/validate-print-label>` in das Feld "
+":guilabel:`Transportunternehmen` ein und validieren Sie den Lieferauftrag."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:79
 msgid "Add shipping on quotation"
@@ -11517,55 +11534,65 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:3
 msgid "Printable delivery PDFs"
-msgstr ""
+msgstr "Druckbare Liefer-PDFs"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:5
 msgid ""
 "Automatically print delivery-related PDFs documents and labels in Odoo, "
 "containing package recipient details, contents, or handling instructions."
 msgstr ""
+"Drucken Sie in Odoo automatisch versandbezogene PDF-Dokumente und "
+"-Etiketten, die Angaben zum Empfänger, zum Inhalt oder zur Handhabung des "
+"Pakets enthalten."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:8
 msgid ""
 "The following PDFs can be configured to print upon validating an *Inventory*"
 " operation (e.g. receipt, picking, delivery orders, quality checks):"
 msgstr ""
+"Die folgenden PDFs können so konfiguriert werden, dass sie bei der "
+"Validierung eines *Lager*-Vorgangs (z. B. Wareneingang, Kommissionierung, "
+"Lieferaufträge, Qualitätsprüfungen) gedruckt werden:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:11
 msgid ":ref:`Delivery slip <inventory/shipping_receiving/delivery-slip>`"
-msgstr ""
+msgstr ":ref:`Lieferschein <inventory/shipping_receiving/delivery-slip>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:12
 msgid ":ref:`Return slip <inventory/shipping_receiving/return-slip>`"
-msgstr ""
+msgstr ":ref:`Retourenschein <inventory/shipping_receiving/return-slip>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:13
 msgid ""
 ":ref:`Product labels of items in the order "
 "<inventory/shipping_receiving/product-labels>`"
 msgstr ""
+":ref:`Produktetiketten der Artikel im Auftrag "
+"<inventory/shipping_receiving/product-labels>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:14
 msgid ""
 ":ref:`Lot and serial number labels <inventory/shipping_receiving/lot-sn-"
 "labels>`"
 msgstr ""
+":ref:`Etiketten für Los- und Seriennummern "
+"<inventory/shipping_receiving/lot-sn-labels>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:15
 msgid "Carrier labels"
-msgstr ""
+msgstr "Zustelleretiketten"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:16
 msgid "Export documents"
-msgstr ""
+msgstr "Exportdokumente"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:17
 msgid "Package Content"
-msgstr ""
+msgstr "Paketinhalt"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:18
 msgid "Package label"
-msgstr ""
+msgstr "Paketetiketten"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:22
 msgid ""
@@ -11573,6 +11600,9 @@ msgid ""
 "app --> Configuration --> Operations Types`, and select the desired "
 "operation type."
 msgstr ""
+"Um diese Formulare automatisch auszudrucken, navigieren Sie zu "
+":menuselection:`Lager --> Konfiguration --> Vorgangsarten`, und wählen Sie "
+"die gewünschte Vorgangsart."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:25
 msgid ""
@@ -11582,28 +11612,39 @@ msgid ""
 "Type`. For details on what each of the checkbox options do, jump to the "
 "related section."
 msgstr ""
+"Im Reiter :guilabel:`Hardware` kreuzen Sie jede der gewünschten Optionen im "
+"Abschnitt :guilabel:`Bei Validierung drucken` an, um das PDF der "
+"ausgewählten Dokumente automatisch nach der Validierung der "
+":guilabel:`Vorgangsart` herunterzuladen. Nähere Informationen zu den "
+"Funktionen der einzelnen Kontrollkästchen finden Sie im entsprechenden "
+"Abschnitt."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst-1
 msgid "Show the *Print on Validation* option in the \"Pick\" *Operation Type*."
 msgstr ""
+"Anzeige der Option „Bei Validierung drucken“ in der *Vorgangsart* "
+"„Kommissionieren“."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:36
 msgid "Delivery slip"
-msgstr ""
+msgstr "Lieferschein"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:38
 msgid ""
 "A *delivery slip* contains recipient and package details, usually placed "
 "inside (or attached to) the package."
 msgstr ""
+"Ein *Lieferschein* enthält Angaben zum Empfänger und zum Paket und wird in "
+"der Regel in das Paket gelegt (oder diesem beigefügt)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:42
 msgid ":ref:`Picking list <inventory/warehouses_storage/barcode_picking>`"
 msgstr ""
+":ref:`Kommissionierliste <inventory/warehouses_storage/barcode_picking>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:43
 msgid ":doc:`Tracking label <labels>`"
-msgstr ""
+msgstr ":doc:`Versandetiketten <labels>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:45
 msgid ""
@@ -11612,20 +11653,27 @@ msgid ""
 "configuration options, clicking :guilabel:`Validate` on the desired "
 "operation type downloads a PDF of the delivery slip."
 msgstr ""
+"Nach :ref:`Aktivierung der Lieferschein-Einstellung "
+"<inventory/shipping_receiving/print_setup>` in den Konfigurationsoptionen im"
+" Reiter :guilabel:`Hardware` können Sie durch Klicken auf "
+":guilabel:`Validierene` für die gewünschte Vorgangsart eine PDF-Datei des "
+"Lieferscheins herunterladen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:49
 msgid ""
 "The delivery slip shows products, quantities, the delivery order reference "
 "number, and the total order weight."
 msgstr ""
+"Auf dem Lieferschein sind Produkte, Mengen, die Referenznummer des "
+"Lieferauftrags und das Gesamtgewicht des Auftrags angegeben."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst-1
 msgid "Example delivery slip."
-msgstr ""
+msgstr "Beispiellieferschein."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:58
 msgid "Return slip"
-msgstr ""
+msgstr "Retourenschein"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:60
 msgid ""
@@ -11634,6 +11682,10 @@ msgid ""
 "details and customer information. It can also include specific return "
 "instructions for the customer."
 msgstr ""
+"Drucken Sie einen *Retourenschein*, den Sie einer Lieferung für "
+"Kundenretouren beifügen können. Er identifiziert die Retoure, verweist auf "
+"den Verkaufsauftrag und enthält Artikeldetails und Kundeninformationen. Er "
+"kann auch spezielle Retourenanweisungen für den Kunden enthalten."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:64
 msgid ""
@@ -11642,26 +11694,36 @@ msgid ""
 "configuration options, clicking :guilabel:`Validate` on the desired "
 "operation type downloads a PDF of the return slip."
 msgstr ""
+"Nach :ref:`Aktivierung der Retourenschein-Einstellung "
+"<inventory/shipping_receiving/print_setup>` in den Konfigurationsoptionen im"
+" Reiter :guilabel:`Hardware` können Sie durch Klicken auf "
+":guilabel:`Validierene` für die gewünschte Vorgangsart eine PDF-Datei des "
+"Retourenscheins herunterladen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:68
 msgid ""
 "The return slip displays the company's return address, along with barcodes "
 "for both the order and the return operation."
 msgstr ""
+"Der Retourenschein enthält die Rücksendeadresse des Unternehmens sowie "
+"Barcodes sowohl für den Auftrag als auch für die Retoure."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst-1
 msgid "Example return slip."
-msgstr ""
+msgstr "Beispielretourenschein."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:77
 msgid "Product labels"
-msgstr ""
+msgstr "Produktetiketten"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:79
 msgid ""
 "Print *product labels* to affix to items in an order, providing essential "
 "information, such as product name, barcode, and price."
 msgstr ""
+"Drucken Sie *Produktetiketten*, die Sie auf die Artikel in einem Auftrag "
+"kleben und mit wichtigen Informationen wie Produktname, Barcode und Preis "
+"versehen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:82
 msgid ""
@@ -11669,6 +11731,9 @@ msgid ""
 "app --> Configuration --> Operations Types`), in the :guilabel:`Hardware` "
 "tab, tick the :guilabel:`Product Labels` option."
 msgstr ""
+"Nachdem Sie zur gewünschten Vorgangsart navigiert haben "
+"(:menuselection:`Lager --> Konfiguration --> Vorgangsarten`), markieren Sie "
+"auf dem Reiter :guilabel:`Hardware` die Option :guilabel:`Produktetiketten`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:85
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:137
@@ -11676,42 +11741,55 @@ msgid ""
 "Doing so makes the :guilabel:`Print label as:` drop-down menu visible, where"
 " each product label can be printed as:"
 msgstr ""
+"Dadurch wird das Dropdown-Menü :guilabel:`Etikett drucken als:` sichtbar, in"
+" dem jedes Produktetikett als gedruckt werden kann:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:88
 msgid ""
 ":guilabel:`2 x 7 with price`: PDF displays product name, barcode, and price,"
 " fitting two rows and seven columns of product labels per page."
 msgstr ""
+":guilabel:`2 x 7 mit Preis`: PDF zeigt den Produktnamen, den Barcode und den"
+" Preis an, passend für zwei Zeilen und sieben Spalten von Produktetiketten "
+"pro Seite."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:0
 msgid "Example 2 x 7 with price."
-msgstr ""
+msgstr "Beispiel für 2 x 7 mit Preis"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:97
 msgid ""
 ":guilabel:`4 x 7 with price`: displays product name, barcode, and price, "
 "fitting four rows and seven columns of product labels per page."
 msgstr ""
+":guilabel:`4 x 7 mit Preis`: zeigt den Produktnamen, den Barcode und den "
+"Preis an, passend für vier Zeilen und sieben Spalten von Produktetiketten "
+"pro Seite."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:0
 msgid "Example 4 x 7 with price."
-msgstr ""
+msgstr "Beispiel für 4 x 7 mit Preis"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:106
 msgid ""
 ":guilabel:`4 x 12`: displays product name and barcode. Fits four rows and "
 "twelve columns of product labels per page."
 msgstr ""
+":guilabel:`4 x 12`: zeigt den Produktnamen und den Barcode an. Passt für "
+"vier Zeilen und zwölf Spalten von Produktetiketten pro Seite."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:0
 msgid "Example 4 x 12."
-msgstr ""
+msgstr "Beispiel für 4 x 12."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:115
 msgid ""
 ":guilabel:`4 x 12 with price`: displays product name, barcode, and price. "
 "Fits four rows and twelve columns of product labels per page."
 msgstr ""
+":guilabel:`4 x 12 mit Preis`: zeigt den Produktnamen, den Barcode und den "
+"Preis an. Passt für vier Zeilen und zwölf Spalten von Produktetiketten pro "
+"Seite."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:117
 msgid ""
@@ -11719,28 +11797,40 @@ msgid ""
 "(ZPL) containing the product name and barcode. Readable for Zebra printers "
 "to automatically print labels."
 msgstr ""
+":guilabel:`ZPL-Etiketten`: druckt Etiketten in der Zebra Programming "
+"Language (ZPL), die den Produktnamen und den Barcode enthalten. Lesbar für "
+"Zebra-Drucker zum automatischen Drucken von Etiketten."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:119
 msgid ""
 ":guilabel:`ZPL Labels with price`: prints labels in the :abbr:`ZPL (Zebra "
 "Programming Language)` containing the product name, barcode, and price."
 msgstr ""
+":guilabel:`ZPL-Etiketten mit Preis`: druckt Etiketten in der :abbr:`ZPL "
+"(Zebra Programming Language)`, die den Produktnamen, den Barcode und den "
+"Preis enthalten."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:123
 msgid ""
 "Product labels can be manually printed from any delivery order, by clicking "
 "the :guilabel:`Print Labels` button."
 msgstr ""
+"Produktetiketten können manuell aus jedem Lieferauftrag heraus gedruckt "
+"werden, indem Sie auf die Schaltfläche :guilabel:`Etiketten drucken` "
+"klicken."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:128
 msgid "Lot/SN Labels"
-msgstr ""
+msgstr "Los-/SN-Etiketten"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:130
 msgid ""
 "Print *lot/SN labels* to affix to items in an order, providing essential "
 "information, such as product name, lot or serial number, and the barcode."
 msgstr ""
+"Drucken Sie *Los-/Seriennummernetiketten*, die Sie auf die Artikel in einem "
+"Auftrag kleben und mit wichtigen Informationen wie Produktname, Los- oder "
+"Seriennummern und Barcode versehen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:133
 msgid ""
@@ -11749,6 +11839,10 @@ msgid ""
 " Types`). Then, in the :guilabel:`Hardware` tab, tick the :guilabel:`Lot/SN "
 "Labels` option."
 msgstr ""
+"Um diese PDF automatisch zu drucken, navigieren Sie zur Optionseite der "
+"entsprechenden Vorgangsart (:menuselection:`Lager --> Konfiguration --> "
+"Vorgangsarten`). Minarkieren Sie auf dem Reiter :guilabel:`Hardware` die "
+"Option :guilabel:`Los-/SN-Etiketten`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:140
 msgid ""
@@ -11756,14 +11850,18 @@ msgid ""
 "numbers in the order, including product name, lot/serial number, and "
 "barcode. Fits four rows and twelve columns per page."
 msgstr ""
+":guilabel:`4 x 12 - Eins pro Los/SN`: PDF mit Etiketten für eindeutige "
+"Los-/Seriennummern im Auftrag, einschließlich Produktname, Los-/Seriennummer"
+" und Barcode. Passt in vier Zeilen und zwölf Spalten pro Seite."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:0
 msgid "Order with only one unique set of lot/serial numbers."
-msgstr ""
+msgstr "Auftrag mit einem einzigen Satz Los-/Seriennummern."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:150
 msgid "Labels for an order with only one unique set of lot/serial numbers."
 msgstr ""
+"Etiketten für einen Auftrag mit einem einzigen Satz Los-/Seriennummern."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:152
 msgid ""
@@ -11771,6 +11869,9 @@ msgid ""
 "items, displaying the product name, lot/serial number, and barcode. Fits "
 "four rows and twelve columns per page."
 msgstr ""
+":guilabel:`4 x 12 - Eins pro Einheit`: PDF mit Etiketten, die der Menge der "
+"Artikel entsprechen und den Produktnamen, die Los-/Seriennummer und den "
+"Barcode enthalten. Passt in vier Zeilen und zwölf Spalten pro Seite."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:154
 msgid ""
@@ -11778,6 +11879,9 @@ msgid ""
 "Programming Language)`, containing the product name, lot/serial number, and "
 "barcode."
 msgstr ""
+":guilabel:`ZPL-Etiketten - Eins pro Los/SN`: druckt Etiketten in :abbr:`ZPL "
+"(Zebra Programming Language)`, die den Produktnamen, die Los-/Seriennummer "
+"und den Barcode enthalten."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:156
 msgid ""
@@ -11785,6 +11889,9 @@ msgid ""
 "items in :abbr:`ZPL (Zebra Programming Language)`, containing the product "
 "name, lot/serial number, and barcode."
 msgstr ""
+":guilabel:`ZPL-Etiketten - Eins pro Einheit`: druckt Etiketten mit der "
+"Anzahl Artikel in :abbr:`ZPL (Zebra Programming Language)`, die den "
+"Produktnamen, die Los-/Seriennummer und den Barcode enthalten."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:3
 msgid "Scheduled delivery dates"
@@ -11828,6 +11935,12 @@ msgid ""
 "date the products are shipped from the warehouse. This is also known as "
 "*delivery lead time*."
 msgstr ""
+":ref:`Kundenvorlaufzeit <inventory/shipping_receiving/customer-lt>`: Der "
+"Standardzeitrahmen für die Erfüllung von Kundenaufträgen. Die "
+"Kundenvorlaufzeit ist die Anzahl der Tage zwischen dem Datum der "
+"Auftragsbestätigung (Verkaufsauftrag) und dem Datum, an dem die Produkte aus"
+" dem Lager versandt werden. Dies wird auch als *Liefervorlaufzeit* "
+"bezeichnet."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:29
 msgid ""
@@ -11837,6 +11950,12 @@ msgid ""
 "shipment earlier, considering the possibility of delays in the fulfillment "
 "process."
 msgstr ""
+":ref:`Sicherheitsvorlaufzeit für den Verkauf "
+"<inventory/shipping_receiving/sales-security-lt>`: verschiebt das *geplante "
+"Lieferdatum* um eine bestimmte Anzahl von Tagen nach vorne. Dies dient als "
+"Puffer, um ausreichend Zeit zu haben, die ausgehende Sendung früher "
+"vorzubereiten und dabei mögliche Verzögerungen im Abwickungsprozess zu "
+"berücksichtigen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:34
 msgid ""
@@ -11846,6 +11965,11 @@ msgid ""
 " the warehouse, facilitating effective scheduling and planning of supplier "
 "deliveries."
 msgstr ""
+":ref:`Vorlaufzeit für Einkäufe <inventory/shipping_receiving/purchase-lt>`: "
+"die Anzahl der Tage von der Bestätigung einer Bestellung bis zum Erhalt der "
+"Produkte. Sie gibt Aufschluss darüber, wie lange es dauert, bis die Produkte"
+" im Lager eintreffen, und erleichtert so die effektive Planung von "
+"Lieferantenlieferungen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:39
 msgid ""
@@ -11856,6 +11980,13 @@ msgid ""
 "that are set to replenish to order, the need appears on the *Replenishment "
 "report* earlier, according to the specified number of days."
 msgstr ""
+":ref:`Sicherheitsvorlaufzeit des Einkaufs "
+"<inventory/shipping_receiving/purchase-security-lt>`: verschiebt die "
+"Bestellfrist für eine Bestellung um eine bestimmte Anzahl von Tagen. Dieser "
+"proaktive Ansatz, Bestellungen früher aufzugeben, mindert das Risiko von "
+"Verzögerungen bei Lieferanten oder beim Versand. So erscheint der Bedarf für"
+" Produkte, die auf Bestellung aufgefüllt werden sollen, entsprechend der "
+"angegebenen Anzahl von Tagen früher im *Auffüllbericht*."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:45
 msgid ""
@@ -11864,6 +11995,10 @@ msgid ""
 "confirm it. It advances the deadline to schedule a |RFQ| by a specified "
 "number of days."
 msgstr ""
+":ref:`Tage bis Einkauf <inventory/shipping_receiving/days-to-purchase>`: "
+"Tage, die der Lieferant benötigt, um eine Angebotsanfrage zu erhalten und zu"
+" bestätigen. Sie verschiebt die Frist für die Planung einer Anfrage um eine "
+"bestimmte Anzahl von Tagen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:49
 msgid ""
@@ -11873,6 +12008,11 @@ msgid ""
 "Odoo), and is used to forecast an approximate production date for a finished"
 " good."
 msgstr ""
+":ref:`Fertigungsdurchlaufzeit <inventory/shipping_receiving/manuf-lt>`: die "
+"Anzahl der Tage, die für die Fertigstellung eines Fertigungsauftrags ab dem "
+"Datum der Bestätigung benötigt werden. Diese Durchlaufzeit schließt "
+"Wochenenden (arbeitsfreie Zeiten in Odoo) ein und wird verwendet, um ein "
+"ungefähres Produktionsdatum für eine fertige Ware vorherzusagen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:54
 msgid ""
@@ -11883,6 +12023,12 @@ msgid ""
 "*Compute* to sum up purchase and manufacturing lead times of components in "
 "the |BoM|."
 msgstr ""
+":ref:`Tage bis Vorbereitung des Fertigungsauftrags "
+"<inventory/shipping_receiving/prepare-manufacturing-order>`: Anzahl der "
+"Tage, die benötigt werden, um Komponenten nachzuliefern oder Unterbaugruppen"
+" des Produkts herzustellen. Legen Sie entweder einen Wert direkt in der "
+"Stückliste fest oder klicken Sie auf *Berechnen*, um die Einkaufs- und "
+"Fertigungsvorlaufzeiten der Komponenten in der Stückliste hinzuzufügen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:60
 msgid ""
@@ -11893,6 +12039,12 @@ msgid ""
 "security lead time makes the need appear earlier on the replenishment "
 "report."
 msgstr ""
+":ref:`Sicherheitsvorlaufzeit für die Fertigung "
+"<inventory/shipping_receiving/manuf-security-lt>`: verschiebt das geplante "
+"Datum des :abbr:`FA (Fertigungsauftrag)` um eine bestimmte Anzahl von Tagen "
+"nach vorne. In Verbindung mit :ref:`Auffüllung nach Auftrag "
+"<inventory/management/products/strategies>` lässt die Sicherheitsvorlaufzeit"
+" den Bedarf früher auf dem Auffüllbericht erscheinen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:69
 msgid "Sales lead times"
@@ -12270,6 +12422,9 @@ msgid ""
 "On the :guilabel:`Settings` page, under the :guilabel:`Advanced Scheduling` "
 "heading, tick the checkbox for :guilabel:`Security Lead Time for Purchase`."
 msgstr ""
+"Suchen Sie auf der Einstellungsseite unter der Überschrift "
+":guilabel:`Erweiterte Planung` das Kästchen für "
+":guilabel:`Sicherheitsvorlaufzeit für den Einkauf`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:233
 msgid ""
@@ -12277,6 +12432,10 @@ msgid ""
 " lead time, a buffer is set to account for potential delays in supplier "
 "deliveries. Then, click :guilabel:`Save`."
 msgstr ""
+"Geben Sie dann die gewünschte Anzahl von Kalendertagen ein. Durch die "
+"Konfiguration der Sicherheitsvorlaufzeit wird ein Puffer eingerichtet, um "
+"mögliche Verzögerungen bei Lieferantenlieferungen zu berücksichtigen. "
+"Klicken Sie dann auf :guilabel:`Speichern`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:237
 msgid ""
@@ -12286,6 +12445,12 @@ msgid ""
 "two-day security lead time, the new scheduled date for the receipt would be "
 "April 8th."
 msgstr ""
+"Wenn Sie die :guilabel:`Sicherheitsvorlaufzeit für den Einkauf` auf `2,00` "
+"Tage setzen, verschiebt sich das :guilabel:`Geplante Datum` eines "
+"Wareneingangs um zwei Tage nach hinten. Wenn in diesem Fall ein Produkt "
+"ursprünglich für die Ankunft am 6. April vorgesehen ist, aber mit einer "
+"Sicherheitsvorlaufzeit von zwei Tagen, wäre das neue geplante Datum für den "
+"Wareneingang der 8. April."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:0
 msgid ""
@@ -12297,7 +12462,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:249
 msgid "Days to purchase"
-msgstr ""
+msgstr "Tage bis Einkauf"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:251
 msgid ""
@@ -12307,10 +12472,16 @@ msgid ""
 "number of days required for the vendor to confirm a |RFQ| after receiving it"
 " from the company."
 msgstr ""
+"Um die Vorlaufzeit von *Tage bis Einkauf* einzurichten, gehen Sie zu "
+":menuselection:`Lager --> Konfiguration --> Einstellungen`. Im Abschnitt "
+":guilabel:`Erweiterte Planung` geben Sie im Feld :guilabel:`Tage bis "
+"Einkauf` die Anzahl der Tage an, die der Lieferant benötigt, um eine "
+"Angebotsanfrage zu bestätigen, nachdem er sie vom Unternehmen erhalten hat."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst-1
 msgid "Show \"Days to Purchase\" configuration in the Settings page."
 msgstr ""
+"Anzeige der Konfiguration „Tage bis Einkauf“ auf der Einstellungsseite."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:263
 msgid "Manufacturing lead times"
@@ -12322,6 +12493,9 @@ msgid ""
 "materials and components used in manufactured products with bills of "
 "materials (BoMs)."
 msgstr ""
+"Durchlaufzeiten können dazu beitragen, den Beschaffungsprozess für "
+"Verbrauchsmaterialien und Komponenten, die in gefertigten Produkten mit "
+"Stücklisten verwendet werden, zu vereinfachen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:268
 msgid ""
@@ -12353,12 +12527,17 @@ msgid ""
 "Manufacturing lead times for products are configured from a product's bill "
 "of materials (BoM) form."
 msgstr ""
+"Die Fertigungsdurchlaufzeiten für Produkte werden über das "
+"Stücklistenformular eines Produkts konfiguriert."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:281
 msgid ""
 "To add a lead time to a |BoM|, navigate to :menuselection:`Manufacturing app"
 " --> Products --> Bills of Materials`, and select the desired |BoM| to edit."
 msgstr ""
+"Um eine Vorlaufzeit zu einer Stückliste hinzuzufügen, navigieren Sie zu "
+":menuselection:`Fertigung --> Produkte --> Stücklisten`, und wählen Sie die "
+"gewünschte Stückliste zur Bearbeitung aus."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:284
 msgid ""
@@ -12366,16 +12545,22 @@ msgid ""
 " (in days) in the :guilabel:`Manuf. Lead Time` field to specify the calendar"
 " days needed to manufacture the product."
 msgstr ""
+"Klicken Sie im Stücklistenformular auf den Reiter :guilabel:`Sonstiges`. "
+"Ändern Sie den Wert (in Tagen) im Feld :guilabel:`Fertigungsdurchlaufzeit` "
+"den Wert (in Tagen), um die Kalendertage anzugeben, die für die Herstellung "
+"des Produkts benötigt werden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst-1
 msgid "Manuf. Lead Time value specified on a product's Bill of Material form."
-msgstr ""
+msgstr "Wert der Fertigungsdurchlaufzeit auf der Stückliste eines Produkts."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:292
 msgid ""
 "If the selected |BoM| is a multi-level |BoM|, the manufacturing lead times "
 "of the components are added."
 msgstr ""
+"Wenn es sich bei der ausgewählten Stückliste um eine mehrstufige Stückliste "
+"handelt, werden die Fertigungsdurchlaufzeiten der Komponenten addiert."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:295
 msgid ""
@@ -12383,6 +12568,9 @@ msgid ""
 "be used to determine the date at which components should be sent to the "
 "subcontractor."
 msgstr ""
+"Wenn das Produkt an einen Zulieferer vergeben wird, kann die "
+":guilabel:`Fertigungsdurchlaufzeit` verwendet werden, um das Datum zu "
+"bestimmen, an dem die Komponenten an den Zulieferer geschickt werden sollen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:298
 msgid ""
@@ -12420,17 +12608,23 @@ msgid ""
 "capacity* (:dfn:`the number of operations that can be performed at the work "
 "center simultaneously`)."
 msgstr ""
+"Beachten Sie jedoch auch, dass die Durchlaufzeiten auf Kalendertagen "
+"basieren. Die Durchlaufzeiten berücksichtigen **nicht** Wochenenden, "
+"Feiertage oder die *Arbeitsplatzkapazität* (:dfn:`die Anzahl der Vorgänge, "
+"die an dem Arbeitsplatz gleichzeitig ausgeführt werden können`)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:312
 msgid ""
 ":doc:`Manufacturing planning <../../../manufacturing/workflows/use_mps>`"
-msgstr ""
+msgstr ":doc:`Fertigungsplanung <../../../manufacturing/workflows/use_mps>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:313
 msgid ""
 ":doc:`Schedule MOs with reordering rules "
 "<../../product_management/product_replenishment/reordering_rules>`"
 msgstr ""
+":doc:`Fertigungsaufträge mit Nachbestellregeln planen "
+"<../../product_management/product_replenishment/reordering_rules>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:317
 msgid ""
@@ -12446,7 +12640,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:324
 msgid "Days to prepare manufacturing order"
-msgstr ""
+msgstr "Tage zur Vorbereitung des Fertigungsauftrags"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:326
 msgid ""
@@ -12454,6 +12648,10 @@ msgid ""
 " going to its |BoM|. To do that, go to :menuselection:`Manufacturing app -->"
 " Products --> Bills of Materials`, and select the desired |BoM|."
 msgstr ""
+"Konfigurieren Sie die Tage, die benötigt werden, um die Komponenten für die "
+"Herstellung eines Produkts zu sammeln, indem Sie zu dessen Stückliste gehen."
+" Gehen Sie dazu zu :menuselection:`Fertigung --> Produkte --> Stücklisten` "
+"und wählen Sie die gewünschte Stückliste."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:330
 msgid ""
@@ -12463,6 +12661,12 @@ msgid ""
 "ensures there is enough time to either replenish components, or manufacture "
 "semi-finished products."
 msgstr ""
+"Im Reiter :guilabel:`Sonstiges` der Stückliste geben Sie im Feld "
+":guilabel:`Tage zur Vorbereitung des Fertigungsauftrags` die Kalendertage "
+"an, die für die Beschaffung der Komponenten des Produkts benötigt werden. "
+"Auf diese Weise erstellen Sie die Fertigungsaufträge im Voraus und stellen "
+"sicher, dass genügend Zeit zur Verfügung steht, um entweder Komponenten "
+"nachzuliefern oder halbfertige Produkte herzustellen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:336
 msgid ""
@@ -12470,12 +12674,18 @@ msgid ""
 " Manufacturing Order` field, calculates the longest lead time among all the "
 "components listed on the |BoM|."
 msgstr ""
+"Wenn Sie auf :guilabel:`Berechnen` klicken, das sich neben dem Feld "
+":guilabel:`Tage zur Vorbereitung des Fertigungsauftrags` befindet, wird die "
+"längste Vorlaufzeit aller auf der Stückliste aufgeführten Komponenten "
+"berechnet."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:339
 msgid ""
 "*Purchase security lead times* that impact this specific |BoM| are also "
 "added to this value."
 msgstr ""
+"*Sicherheitsvorlaufzeit des Einkaufs*, die sich auf dieses spezifische "
+"Stückliste auswirken, werden ebenfalls zu diesem Wert addiert."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:343
 msgid ""
@@ -12483,6 +12693,10 @@ msgid ""
 "and the other has a purchase lead time of four days. The :guilabel:`Days to "
 "prepare Manufacturing Order` is four days."
 msgstr ""
+"Eine Stückliste hat zwei Komponenten, von denen eine eine "
+"Fertigungsdurchlaufzeit von zwei Tagen und die andere eine Vorlaufzeit für "
+"den Einkauf von vier Tagen hat. Der :guilabel:`Tage zur Vorbereitung des "
+"Fertigungsauftrags` ist vier Tage."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:350
 msgid "Manufacturing security lead time"
@@ -12495,6 +12709,10 @@ msgid ""
 " :guilabel:`Planning` heading, tick the checkbox for :guilabel:`Security "
 "Lead Time`."
 msgstr ""
+"Die *Sicherheitsdurchlaufzeit* wird global für das Unternehmen unter "
+":menuselection:`Fertigung --> Konfiguration --> Einstellungen` eingestellt. "
+"Kreuzen Sie unter der Überschrift :guilabel:`Planung` das Kontrollkästchen "
+"für :guilabel:`Sicherheitsdurchlaufzeit` an."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:356
 msgid ""
@@ -12502,6 +12720,10 @@ msgid ""
 " lead time, a buffer is set to account for potential delays in the "
 "manufacturing process. Then, click :guilabel:`Save`."
 msgstr ""
+"Geben Sie dann die gewünschte Anzahl von Kalendertagen ein. Durch die "
+"Konfiguration der Sicherheitsvorlaufzeit wird ein Puffer eingerichtet, um "
+"mögliche Verzögerungen im Fertigungsprozess zu berücksichtigen. Klicken Sie "
+"dann auf :guilabel:`Speichern`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst-1
 msgid ""
@@ -12935,6 +13157,10 @@ msgid ""
 "directly into stock, and deliveries will be moved directly from stock to "
 "customers."
 msgstr ""
+"In Odoo *Lager* sind sowohl eingehende als auch ausgehende Sendungen "
+"standardmäßig so konfiguriert, dass sie in einem Schritt verarbeitet werden."
+" Das bedeutet, dass Einkäufe direkt im Lager eingehen und Lieferungen direkt"
+" aus dem Lager an die Kunden gehen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:16
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:30
@@ -12942,6 +13168,8 @@ msgid ""
 "Incoming and outgoing shipments do **not** need to be configured with the "
 "same amount of steps."
 msgstr ""
+"Eingehende und ausgehende Sendungen müssen **nicht** mit der gleichen Anzahl"
+" von Schritten konfiguriert werden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:18
 msgid ""
@@ -12949,6 +13177,9 @@ msgid ""
 "received directly in one step, and delivered in three steps (pick + pack + "
 "ship)."
 msgstr ""
+"Die Einstellungen eines Lagers können beispielsweise so konfiguriert werden,"
+" dass Produkte direkt in einem Schritt empfangen und in drei Schritten "
+"ausgeliefert werden können (Kommissionieren + Veroacken + Versenden)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:24
 msgid ""
@@ -12956,6 +13187,9 @@ msgid ""
 ":menuselection:`Inventory app --> Configuration --> Warehouses`, and select "
 "a warehouse to edit."
 msgstr ""
+"Um einstufige Eingänge und Lieferungen für ein Lager zu konfigurieren, "
+"navigieren Sie zu :menuselection:`Lager --> Konfiguration --> Lagerhäuser`, "
+"und wählen Sie ein Lager zur Bearbeitung aus."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:27
 msgid ""
@@ -12964,22 +13198,31 @@ msgid ""
 ":guilabel:`Outgoing Shipments` to :guilabel:`Deliver goods directly (1 "
 "step)`."
 msgstr ""
+"Setzen Sie im Reiter :guilabel:`Lagerhauskonfiguration` "
+":guilabel:`Wareneingänge` auf :guilabel:`Waren direkt erhalten (1 Schritt)`,"
+" und setzen Sie :guilabel:`Warenausgänge` auf :guilabel:`Waren direkt "
+"ausliefern (1 Schritt)`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst-1
 msgid "Incoming and outgoing shipments set to one-step on warehouse form."
-msgstr ""
+msgstr "Wareneingänge und -ausgänge mit einem Schritt im Lagerhausformular."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:36
 msgid ""
 "Since one-step receipt and delivery is the default for incoming and outgoing"
 " shipments in Odoo, the *Multi-Step Routes* feature is *not* required."
 msgstr ""
+"Da der Erhalt und die Lieferung in einem Schritt die Standardeinstellung für"
+" Warenein- und -ausgänge in Odoo ist, ist die Funktion *Mehrstufige Routen* "
+"*nicht* erforderlich."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:39
 msgid ""
 "However, for the :guilabel:`Shipments` settings to appear on a warehouse "
 "form, the feature **must** be enabled."
 msgstr ""
+"Damit die :guilabel:`Sendungen`-Einstellungen auf einem Lagerhausformular "
+"erscheinen, muss die Funktion jedoch **aktiviert** sein"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:42
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:41
@@ -12990,6 +13233,11 @@ msgid ""
 ":guilabel:`Save`. Doing so also activates the :guilabel:`Storage Locations` "
 "feature."
 msgstr ""
+"Um die Funktion *Mehrstufige Routen* zu aktivieren, navigieren Sie zu "
+":guilabel:`Lager --> Konfiguration --> Einstellungen`. Aktivieren Sie unter "
+"dem Abschnitt :guilabel:`Lagerhaus` das Kontrollkästchen neben "
+":guilabel:`Mehrstufige Routen` und klicken Sie auf :guilabel:`Speichern`. "
+"Dadurch wird auch die Funktion :guilabel:`Lagerorte` aktiviert."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:50
 msgid "Receive goods directly (1 step)"
@@ -13001,6 +13249,9 @@ msgid ""
 "location to warehouse stock in the database immediately upon validation of a"
 " purchase order (PO)."
 msgstr ""
+"Wenn Produkte in einem Schritt eingehen, werden sie sofort nach der "
+"Validierung einer Bestellung vom Standort des Lieferanten in den "
+"Lagerbestand in der Datenbank übertragen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:58
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:81
@@ -13009,16 +13260,21 @@ msgid ""
 ":guilabel:`New`. This opens a blank :guilabel:`Request for Quotation` (RfQ) "
 "form."
 msgstr ""
+"Um ein Angebot zu erstellen, navigieren Sie zur :menuselection:`Einkaufsapp`"
+" und klicken auf :guilabel:`Neu`. Dies öffnet ein leeres "
+":guilabel:`Angebotsanfrageformular`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:61
 msgid ""
 "Add a vendor in the :guilabel:`Supplier` field. Then, fill out the various "
 "fields on the |RfQ|, as necessary."
 msgstr ""
+"Fügen Sie einen Anbieter in das Feld :guilabel:`Lieferant` ein. Füllen Sie "
+"dann nach Bedarf die verschiedenen Felder auf der Anfrage aus."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst-1
 msgid "Filled out new request for quotation form."
-msgstr ""
+msgstr "Ausgefüllte neue Angebotsanfrage."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:68
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:91
@@ -13026,6 +13282,9 @@ msgid ""
 "Under the :guilabel:`Products` tab, click :guilabel:`Add a product`, and "
 "select a product to add to the |RfQ|."
 msgstr ""
+"Klicken Sie im Reiter :guilabel:`Produkte` auf :guilabel:`Produkt "
+"hinzufügen`, und wählen Sie ein Produkt aus, das Sie der Angebotsanfrage "
+"hinzufügen möchten."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:71
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:94
@@ -13033,6 +13292,9 @@ msgid ""
 "Once ready, click :guilabel:`Confirm Order`. This moves the |RfQ| to the "
 ":guilabel:`Purchase Order` stage."
 msgstr ""
+"Sobald Sie fertig sind, klicken Sie auf :guilabel:`Auftrag bestätigen`. "
+"Dadurch wird der Angebotsanfrage in die Phase :guilabel:`Bestellung` "
+"verschoben."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:74
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:97
@@ -13041,17 +13303,21 @@ msgid ""
 "the top of the form. Clicking the smart button opens the warehouse receipt "
 "(WH/IN) form."
 msgstr ""
+"Sobald die Bestellung bestätigt ist, erscheint eine intelligente "
+"Schaltfläche :guilabel:`Wareneingänge` am oberen Rand des Formulars. Wenn "
+"Sie auf diese Schaltfläche klicken, wird das Formular für den Lagerempfang "
+"(WH/IN) geöffnet."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst-1
 msgid "Receipt smart button on confirmed purchase order form."
-msgstr ""
+msgstr "Intelligente Schaltfläche erscheint auf der bestätigten Bestellung."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:82
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:113
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:171
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:249
 msgid "Process receipt"
-msgstr ""
+msgstr "Wareneingang verarbeiten"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:84
 msgid ""
@@ -13059,10 +13325,14 @@ msgid ""
 "the warehouse. To receive the products, click :guilabel:`Validate`. Once "
 "validated, the receipt moves to the :guilabel:`Done` stage."
 msgstr ""
+"Über das Formular für den Lagerempfang können Sie die bestellten Produkte im"
+" Lager empfangen. Um die Produkte zu empfangen, klicken Sie auf "
+":guilabel:`Validieren`. Sobald den Wareneingang validiert ist, geht sie in "
+"die Phase :guilabel:`Erledigt` über."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst-1
 msgid "Validated warehouse receipt in Done stage."
-msgstr ""
+msgstr "Validierter Wareneingang in der „Erledigt“-Phase."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:92
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:123
@@ -13071,6 +13341,10 @@ msgid ""
 " the |PO| form. On the product line, the quantity in the "
 ":guilabel:`Received` column now matches the ordered :guilabel:`Quantity`."
 msgstr ""
+"Klicken Sie zurück zur Bestellung (über die Brotkrümel, am oberen Rand des "
+"Formulars), um das Bestellformular anzuzeigen. In der Produktzeile stimmt "
+"die Menge in der Spalte :guilabel:`Erhalten` jetzt mit der bestellten "
+":guilabel:`Menge` überein."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:99
 msgid "Deliver goods directly (1 step)"
@@ -13082,11 +13356,14 @@ msgid ""
 " to the customer location in the database immediately upon validation of a "
 "sales order (SO)."
 msgstr ""
+"Wenn die Produkte in einem Schritt geliefert werden, werden sie unmittelbar "
+"nach der Validierung eines Verkaufsauftrags vom Lagerbestand zum "
+"Kundenstandort in der Datenbank verschoben."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:105
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:156
 msgid "Create sales order"
-msgstr ""
+msgstr "Verkaufsauftrag erstellen"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:107
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:158
@@ -13094,6 +13371,9 @@ msgid ""
 "To create a |SO|, navigate to the :menuselection:`Sales app`, and click "
 ":guilabel:`New`. This opens a blank sales quotation form."
 msgstr ""
+"Um einen Verkaufsauftrag zu erstellen, navigieren Sie zur "
+":menuselection:`Verkaufsapp` und klicken auf :guilabel:`Neu`. Dies öffnet "
+"ein leeres :guilabel:`Angebotsformular`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:110
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:161
@@ -13101,16 +13381,21 @@ msgid ""
 "Add a customer in the :guilabel:`Customer` field. Then, fill out the various"
 " fields on the sales quotation form, as necessary."
 msgstr ""
+"Fügen Sie einen Kunden in das Feld :guilabel:`Kunde` ein. Füllen Sie dann "
+"nach Bedarf die verschiedenen Felder auf dem Verkaufsauftrag aus."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst-1
 msgid "Filled out new sales quotation form."
-msgstr ""
+msgstr "Ausgefüllter neuer Verkaufsauftrag."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:117
 msgid ""
 "Under the :guilabel:`Product` tab, click :guilabel:`Add a product`, and "
 "select a product to add to the sales order quotation."
 msgstr ""
+"Klicken Sie im Reiter :guilabel:`Produkte` auf :guilabel:`Produkt "
+"hinzufügen`, und wählen Sie ein Produkt aus, das Sie dem Verkaufsauftrag "
+"hinzufügen möchten."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:120
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:171
@@ -13118,6 +13403,8 @@ msgid ""
 "Once ready, click :guilabel:`Confirm`. This moves the quotation to the "
 ":guilabel:`Sales Order` stage."
 msgstr ""
+"Sobald Sie fertig sind, klicken Sie auf :guilabel:`Bestätigen`. Dadurch wird"
+" das Angebot in die Phase :guilabel:`Verkaufsauftrag` verschoben."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:123
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:174
@@ -13126,15 +13413,21 @@ msgid ""
 "the top of the form. Clicking the smart button opens the warehouse delivery "
 "(WH/OUT) form."
 msgstr ""
+"Sobald der Verkaufsauftrag bestätigt ist, erscheint eine intelligente "
+"Schaltfläche :guilabel:`Lieferung` am oberen Rand des Formulars. Wenn Sie "
+"auf diese Schaltfläche klicken, wird das Formular für den Lagerlieferung "
+"(WH/OUT) geöffnet."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst-1
 msgid "Delivery smart button on confirmed sales order form."
 msgstr ""
+"Intelligente Schaltfläche „Lieferung“ in einem bestätigten "
+"Verkaufsauftragsformular."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:131
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:207
 msgid "Process delivery"
-msgstr ""
+msgstr "Lieferung verarbeiten"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:133
 msgid ""
@@ -13143,6 +13436,10 @@ msgid ""
 "in the :guilabel:`Quantity` field to match the ordered quantity in the "
 ":guilabel:`Demand` field."
 msgstr ""
+"Über das Formular Lagerlieferung können die vom Kunden bestellten Produkte "
+"aus dem Lager geliefert werden. Um die Produkte zu liefern, ändern Sie den "
+"Wert im Feld :guilabel:`Menge` so, dass er der bestellten Menge im Feld "
+":guilabel:`Bedarf` entspricht."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:137
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:225
@@ -13150,10 +13447,12 @@ msgid ""
 "Once ready, click :guilabel:`Validate`. Once validated, the delivery order "
 "moves to the :guilabel:`Done` stage."
 msgstr ""
+"Sobald Sie fertig sind, klicken Sie auf :guilabel:`Validieren`. Nach der "
+"Bestätigung geht der Lieferauftrag in die Phase :guilabel:`Erledigt` über."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst-1
 msgid "Validated delivery order in Done stage."
-msgstr ""
+msgstr "Validierter Lieferauftrag in der „Erledigt“-Phase."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:144
 msgid ""
@@ -13161,11 +13460,15 @@ msgid ""
 " the |SO| form. On the product line, the quantity in the "
 ":guilabel:`Delivered` column now matches the ordered :guilabel:`Quantity`."
 msgstr ""
+"Klicken Sie zurück zum Verkaufsauftrag (über die Brotkrümel, am oberen Rand "
+"des Formulars), um das Auftragsformular anzuzeigen. In der Produktzeile "
+"stimmt die Menge in der Spalte :guilabel:`Geliefert` jetzt mit der "
+"bestellten :guilabel:`Menge` überein."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:149
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:229
 msgid ":doc:`shipments_deliveries`"
-msgstr ""
+msgstr ":doc:`shipments_deliveries`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:3
 msgid "Process receipts and deliveries in two steps"
@@ -13177,6 +13480,9 @@ msgid ""
 "of the warehouse might require multi-step operations. In Odoo *Inventory*, "
 "this can be done using *Multi-Step Routes*."
 msgstr ""
+"Je nach den Bedürfnissen eines Unternehmens kann der Empfang und Versand von"
+" Produkten im und aus dem Lager mehrstufige Vorgänge erfordern. In Odoo "
+"*Lager* kann dies über *Mehrstufige Routen* erfolgen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:15
 msgid ""
@@ -13186,6 +13492,11 @@ msgid ""
 "freezers and refrigerators, secured locked areas, or special aisles and "
 "shelves."
 msgstr ""
+"Beim zweistufigen Wareneingangsprozess werden die Produkte in einem "
+"Eingangsbereich entgegengenommen und dann in den Bestand überführt. Diese "
+"Art von Prozess für eingehende Sendungen kann für Lager mit speziellen "
+"Lagerorten wie Gefrier- und Kühlschränken, gesicherten, abgeschlossenen "
+"Bereichen oder speziellen Gängen und Regalen von Vorteil sein."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:19
 msgid ""
@@ -13194,6 +13505,10 @@ msgid ""
 "products are *not* available for further processing, until they are "
 "transferred into stock."
 msgstr ""
+"Die Produkte können nach dem Lagerort sortiert werden, und die Mitarbeiter "
+"können alle Produkte, die für einen bestimmten Ort bestimmt sind, einlagern."
+" Die Produkte stehen *erst* dann für die weitere Verarbeitung zur Verfügung,"
+" wenn sie ins Lager gebracht werden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:23
 msgid ""
@@ -13201,6 +13516,9 @@ msgid ""
 "respective location in the warehouse, then transferred to an output location"
 " before being shipped to the customer."
 msgstr ""
+"Beim zweistufigen Lieferprozess werden die Produkte zunächst an ihrem "
+"jeweiligen Standort im Lager kommissioniert und dann an einen Ausgabeort "
+"gebracht, bevor sie an den Kunden versandt werden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:26
 msgid ""
@@ -13208,6 +13526,9 @@ msgid ""
 "Last In, First Out (LIFO), or First Expired, First Out (FEFO) removal "
 "strategy."
 msgstr ""
+"Dies kann für Unternehmen von Vorteil sein, die einer der folgenden "
+"Entnahmestrategien verwenden: First In, First Out (FIFO), Last In, First Out"
+" (LIFO) oder First Expired, First Out (FEFO)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:32
 msgid ""
@@ -13215,6 +13536,10 @@ msgid ""
 "received in two steps (input + stock), and delivered in three steps (pick + "
 "pack + ship)."
 msgstr ""
+"Die Einstellungen eines Lagers können beispielsweise so konfiguriert werden,"
+" dass Produkte direkt in zwei Schritten empfangen (Eingang + Bestand) und in"
+" drei Schritten ausgeliefert werden können (Kommissionieren + Verpacken + "
+"Versenden)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:38
 msgid ""
@@ -13222,10 +13547,14 @@ msgid ""
 "process in one step, by default. To change these settings, the *Multi-Step "
 "Routes* feature must be enabled."
 msgstr ""
+"In Odoo *Lager* sind sowohl eingehende als auch ausgehende Sendungen "
+"standardmäßig so konfiguriert, dass sie in einem Schritt verarbeitet werden."
+" Um diese Einstellungen zu ändern, muss die Funktion *Mehrstufige Routen* "
+"aktiviert sein."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst-1
 msgid "Enabled Multi-Step Routes feature in Inventory app settings."
-msgstr ""
+msgstr "Aktivierte mehrstufige Routen in den Lagereinstellungen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:50
 msgid ""
@@ -13233,6 +13562,9 @@ msgid ""
 "to :menuselection:`Inventory app --> Configuration --> Warehouses`, and "
 "select a warehouse to edit."
 msgstr ""
+"Um dann zweistufige Eingänge und Lieferungen für ein Lager zu konfigurieren,"
+" navigieren Sie zu :menuselection:`Lager --> Konfiguration --> Lagerhäuser`,"
+" und wählen Sie ein Lager zur Bearbeitung aus."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:53
 msgid ""
@@ -13241,10 +13573,14 @@ msgid ""
 "and set :guilabel:`Outgoing Shipments` to :guilabel:`Send goods in output "
 "and then deliver (2 steps)`."
 msgstr ""
+"Setzen Sie im Reiter :guilabel:`Lagerhauskonfiguration` "
+":guilabel:`Wareneingänge` auf :guilabel:`Waren im Eingangslager erhalten und"
+" dann Bestand (2 Schritte)` und :guilabel:`Warenausgänge` auf "
+":guilabel:`Waren ins Ausgangslager senden und dann liefern (2 Schritte)`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst-1
 msgid "Incoming and outgoing shipments set to two-step on warehouse form."
-msgstr ""
+msgstr "Wareneingänge und -ausgänge mit zwei Schritten im Lagerhausformular."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:62
 msgid ""
@@ -13252,22 +13588,30 @@ msgid ""
 " and *Output* warehouse locations in the database, named `WH/Input` and "
 "`WH/Output`, respectively."
 msgstr ""
+"Wenn Sie zweistufige Eingänge und Lieferungen auswählen, werden automatisch "
+"neue *Eingang*- und *Ausgang*-Lagerorte in der Datenbank angelegt, die "
+"`WH/Input` bzw. `WH/Output` heißen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:65
 msgid ""
 "To rename or edit these locations, navigate to :menuselection:`Inventory app"
 " --> Configuration --> Locations`, and select the desired location."
 msgstr ""
+"Um diese Orte umzubenennen oder zu bearbeiten, navigieren Sie zu "
+":menuselection:`Lager --> Konfiguration --> Lagerorte`, und wählen Sie den "
+"gewünschten Lagerort."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:68
 msgid ""
 "On the location's form, change the :guilabel:`Location Name`, and make any "
 "other necessary changes."
 msgstr ""
+"Ändern Sie im Formular des Lagerortes das :guilabel:`Lagerortname` und "
+"nehmen Sie alle anderen notwendigen Änderungen vor."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:72
 msgid "Process receipt in two steps (input + stock)"
-msgstr ""
+msgstr "Eingang in zwei Schritten verarbeiten (Eingang + Bestand)"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:74
 msgid ""
@@ -13276,20 +13620,26 @@ msgid ""
 "warehouse stock in the database, upon validation of a purchase order (PO), "
 "and a subsequent internal transfer."
 msgstr ""
+"Wenn Produkte in zwei Schritten eingehen, werden sie zunächst vom "
+"Lieferanten an einen Eingangsort gebracht. Anschließend werden sie nach der "
+"Validierung einer Bestellung und einem anschließenden internen Transfer vom "
+"Eingangslager zum Lagerbestand in der Datenbank bewegt."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:84
 msgid ""
 "Add a vendor in the :guilabel:`Vendor` field. Then, fill out the various "
 "fields on the |RfQ|, as necessary."
 msgstr ""
+"Fügen Sie einen Anbieter in das Feld :guilabel:`Lieferant` ein. Füllen Sie "
+"dann nach Bedarf die verschiedenen Felder auf der Anfrage aus."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst-1
 msgid "Filled out new Request for Quotation from vendor."
-msgstr ""
+msgstr "Ausgefüllte neue Angebotsanfrage vom Lieferanten."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst-1
 msgid "Delivery smart button for validated purchase order."
-msgstr ""
+msgstr "Intelligente Schaltfläche „Lieferung“ in eine validierte Bestellung."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:105
 msgid ""
@@ -13298,12 +13648,18 @@ msgid ""
 "be specified as the correct *input location* connected to the two-step "
 "warehouse."
 msgstr ""
+"Für Unternehmen mit mehreren Lagern, die unterschiedliche "
+"Stufenkonfigurationen haben, muss das Feld :guilabel:`Liefern an` auf dem "
+"Bestellformular **als der richtige *Eingangsort* angegeben werden, der mit "
+"dem zweistufigen Lager verbunden ist."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:109
 msgid ""
 "This can be done by selecting the warehouse from the drop-down menu that "
 "includes the `Receipts` label at the end of the name."
 msgstr ""
+"Wählen Sie dazu das Lager aus dem Dropdown-Menü aus, das am Ende des Namens "
+"die Bezeichnung `Wareneingänge` enthält."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:115
 msgid ""
@@ -13312,14 +13668,19 @@ msgid ""
 "validated, the receipt moves to the :guilabel:`Done` stage, and the products"
 " move to the :guilabel:`WH/Input` location."
 msgstr ""
+"Über das Formular für den Lagerempfang können Sie die bestellten Produkte im"
+" Lager empfangen. Um die Produkte zu empfangen, klicken Sie auf "
+":guilabel:`Validieren`. Sobald den Wareneingang validiert ist, geht sie in "
+"die Phase :guilabel:`Erledigt` über und die Produkte werden zum Lagerort "
+":guilabel:`WH/Input` bewegt."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst-1
 msgid "Receipt form for products ordered from vendor."
-msgstr ""
+msgstr "Wareneingangsformular für beim Lieferanten bestellte Produkte."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:128
 msgid "Process internal transfer"
-msgstr ""
+msgstr "Internen Transfer verarbeiten"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:130
 msgid ""
@@ -13334,6 +13695,9 @@ msgid ""
 "To view the internal transfer, navigate to the :menuselection:`Inventory "
 "app`, and locate the :guilabel:`Internal Transfers` task card."
 msgstr ""
+"Um den internen Transfer anzuzeigen, navigieren Sie zur "
+":menuselection:`Lagerapp`, und suchen Sie die Aufgabenkarte "
+":guilabel:`Interne Transfers`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:135
 msgid ""
@@ -13341,26 +13705,38 @@ msgid ""
 "of all internal transfers to process, and select the transfer associated "
 "with the previously validated receipt."
 msgstr ""
+"Klicken Sie auf der Aufgabenkarte auf die Schaltfläche :guilabel:`# Zu "
+"verarbeiten`, um eine Liste aller zu bearbeitenden internen Transfers "
+"anzuzeigen, und wählen Sie den Transfer aus, die mit dem zuvor bestätigten "
+"Wareneingang verbunden ist."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:138
 msgid ""
 "Once ready, click :guilabel:`Validate` to complete the transfer, and move "
 "the product from :guilabel:`WH/Input` to :guilabel:`WH/Stock`."
 msgstr ""
+"Klicken Sie erneut auf :guilabel:`Validieren`, um den Transfer abzuschließen"
+" und das Produkt von :guilabel:`WH/Input` nach :guilabel:`WH/Stock` zu "
+"verschieben."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:141
 msgid ""
 "Once the transfer is validated, the products enter inventory, and are "
 "available for customer deliveries or manufacturing orders."
 msgstr ""
+"Sobald der Transfer validiert ist, wird das Produkt in den Bestand "
+"aufgenommen und steht für Kundenlieferungen oder Fertigungsaufträge zur "
+"Verfügung."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst-1
 msgid "Internal transfer form for products ordered from vendor."
 msgstr ""
+"Formular für internen Transfer für beim Lieferanten bestellte Produkte."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:149
 msgid "Process delivery order in two steps (pick + ship)"
 msgstr ""
+"Lieferauftrag in zwei Schritten verarbeiten (Kommissionierung + Versand)"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:151
 msgid ""
@@ -13369,24 +13745,33 @@ msgid ""
 "location in the database, upon validation of a picking order, and a "
 "subsequent delivery order (DO)."
 msgstr ""
+"Wenn Produkte in zwei Schritten geliefert werden, werden sie zunächst vom "
+"Lagerbestand zum Ausgabeort gebracht. Dann bewegen sie sich vom Ausgabeort "
+"zu einem Kundenstandort in der Datenbank, nachdem ein Kommissionierauftrag "
+"und ein anschließender Lieferauftrag bestätigt wurden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst-1
 msgid "Filled out new sales order form."
-msgstr ""
+msgstr "Ausgefüllter neuer Verkaufsauftrag."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:168
 msgid ""
 "Under the :guilabel:`Order Lines` tab, click :guilabel:`Add a product`, and "
 "select a product to add to the sales order quotation."
 msgstr ""
+"Klicken Sie im Reiter :guilabel:`Auftragspositionen` auf :guilabel:`Produkt "
+"hinzufügen`, und wählen Sie ein Produkt aus, das Sie dem Verkaufsauftrag "
+"hinzufügen möchten."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst-1
 msgid "Delivery smart button on validated sales order form."
 msgstr ""
+"Intelligente Schaltfläche „Lieferung“ in einem validierten "
+"Verkaufsauftragsformular."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:182
 msgid "Process picking"
-msgstr ""
+msgstr "Kommissionierung verarbeiten"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:184
 msgid ""
@@ -13403,6 +13788,12 @@ msgid ""
 "dashboard. Alternatively, the picking order can also be accessed via the "
 ":guilabel:`Delivery` smart button at the top of the sales order form."
 msgstr ""
+"Um die Kommissionierung abzuschließen, navigieren Sie zur "
+":guilabel:`Lagerapp` und suchen Sie die Aufgabenkarte "
+":guilabel:`Kommissionieren` auf dem Dashboard :guilabel:`Lagerübersicht`. "
+"Alternativ können Sie den Kommissionierauftrag auch über die intelligente "
+"Schaltfläche :guilabel:`Lieferung` am oberen Rand des Auftragsformulars "
+"aufrufen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:190
 msgid ""
@@ -13410,6 +13801,9 @@ msgid ""
 "Process` button on the :guilabel:`Pick` task card. This reveals a list of "
 "all pickings to process."
 msgstr ""
+"Klicken Sie auf der Seite :guilabel:`Lagerübersicht` auf die Schaltfläche "
+":guilabel:`(#) Zu verarbeiten` auf der Karte :guilabel:`Kommissionieren`. "
+"Dies zeigt eine Liste aller zu verarbeitenden Kommissionierungen an."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:193
 msgid ""
@@ -13421,19 +13815,25 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst-1
 msgid "Picking order form for products included in sales order."
-msgstr ""
+msgstr "Formular für Kommissionierauftrag für Produkte in Verkaufsauftrag"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:200
 msgid ""
 "Manually set the quantity by changing the value in the :guilabel:`Quantity` "
 "column, to match the value in the :guilabel:`Demand` column."
 msgstr ""
+"Legen Sie die Menge manuell fest, indem Sie den Wert in der Spalte "
+":guilabel:`Menge` ändern, damit er mit dem Wert in der Spalte "
+":guilabel:`Bedarf` übereinstimmt."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:203
 msgid ""
 "Once ready, click :guilabel:`Validate` to complete the picking, and move the"
 " product from :guilabel:`WH/Stock` to :guilabel:`WH/Output.`"
 msgstr ""
+"Klicken Sie erneut auf :guilabel:`Validieren`, um die Kommissionierung "
+"abzuschließen und das Produkt von :guilabel:`WH/Stock` nach "
+":guilabel:`WH/Output` zu verschieben."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:209
 msgid ""
@@ -13441,6 +13841,10 @@ msgid ""
 "process. Clicking the :guilabel:`Delivery` smart button on the sales order "
 "form reveals the newly created delivery order."
 msgstr ""
+"Sobald die Kommissionierung validiert ist, wird ein Lieferauftrag erstellt, "
+"der dann bearbeitet werden kann. Wenn Sie auf die intelligente Schaltfläche "
+":guilabel:`Lieferung` auf dem Verkaufsauftragsformular klicken, wird der neu"
+" erstellte Lieferauftrag angezeigt."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:212
 msgid ""
@@ -13448,6 +13852,9 @@ msgid ""
 ":guilabel:`Inventory Overview` page, via the breadcrumbs, and locate the "
 ":guilabel:`Delivery Orders` task card."
 msgstr ""
+"Alternativ können Sie den Lieferauftrag auch anzeigen, indem Sie über die "
+"Brotkrümelnavigation zurück zur Seite :guilabel:`Lagerübersicht` navigieren "
+"und die Aufgabenkarte :guilabel:`Lieferaufträge` suchen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:215
 msgid ""
@@ -13455,16 +13862,22 @@ msgid ""
 "of all delivery orders to process, and select the order associated with the "
 "previously validated picking."
 msgstr ""
+"Klicken Sie auf der Aufgabenkarte auf die Schaltfläche :guilabel:`# Zu "
+"verarbeiten`, um eine Liste aller zu bearbeitenden Lieferaufträge "
+"anzuzeigen, und wählen Sie den Auftrag, der mit der zuvor bestätigten "
+"Kommissionierung verbunden ist."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst-1
 msgid "Delivery order form for products ordered by customer."
-msgstr ""
+msgstr "Lieferauftragsformular für vom Kunden bestellte Produkte."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:222
 msgid ""
 "To deliver the products, change the value in the :guilabel:`Quantity` field "
 "to match the ordered quantity in the :guilabel:`Demand` field."
 msgstr ""
+"Um die Produkte auszuliefern, ändern Sie den Wert im Feld :guilabel:`Menge` "
+"so, dass er der bestellten Menge im Feld :guilabel:`Bedarf` entspricht."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_three_steps.rst:3
 msgid "Process receipts in three steps"
@@ -15627,7 +16040,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:3
 msgid "Sendcloud configuration"
-msgstr ""
+msgstr "SendCloud-Konfiguration"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:5
 msgid ""
@@ -15689,6 +16102,11 @@ msgid ""
 "rules, or individual custom carrier contacts, a paid plan of Sendcloud is "
 "**required**."
 msgstr ""
+"Die Odoo-Integration von Sendcloud funktioniert bei kostenlosen Sendcloud-"
+"Tarifen *nur* wenn ein Bankkonto verknüpft ist, da Sendcloud nicht kostenlos"
+" versendet. Für die Verwendung von Versandregeln oder individuellen, "
+"benutzerdefinierten Zustellerkontakten ist ein kostenpflichtiger Plan von "
+"Sendcloud **erforderlich**."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:37
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:174
@@ -15827,10 +16245,17 @@ msgid ""
 "<inventory/shipping_receiving/sendcloud-shipping-info>`, so Sendcloud can "
 "accurately pull shipping data to generate labels."
 msgstr ""
+"Um eine nahtlose Integration von Sendcloud in Odoo zu gewährleisten, "
+":ref:`installieren <inventory/shipping_receiving/sendcloud-module>` und "
+":ref:`verknüpfen <inventory/shipping_receiving/link-sendcloud-module>` Sie "
+"den Sendcloud-Versandkonnektor mit dem Sendcloud-Konto. Dann "
+":ref:`Konfigurieren Sie die Odoo-Felder "
+"<inventory/shipping_receiving/sendcloud-shipping-info>`, damit Sendcloud die"
+" Versanddaten genau abrufen kann, um Etiketten zu erzeugen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:97
 msgid "Install Sendcloud shipping module"
-msgstr ""
+msgstr "Sendcloud-Versandmodul installieren"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:99
 msgid ""
@@ -15838,6 +16263,10 @@ msgid ""
 " the Odoo database. To get started, go to Odoo's :guilabel:`Apps` module, "
 "search for the `Sendcloud Shipping` integration, and install it."
 msgstr ""
+"Nachdem das Sendcloud-Konto eingerichtet und konfiguriert wurde, ist es an "
+"der Zeit, die Odoo-Datenbank zu konfigurieren. Um damit zu beginnen, gehen "
+"Sie zu Odoos :guilabel:`Apps`-Modul, suchen Sie nach der `Sendcloud-"
+"Versand`-Integration und installieren Sie es."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst-1
 msgid "Sendcloud Shipping module in the Odoo Apps module."
@@ -16052,16 +16481,25 @@ msgid ""
 "creation — this occurs automatically. The test and production environment "
 "settings can be toggled back and forth from their respective smart buttons."
 msgstr ""
+"Odoo verfügt über einen eingebauten Schutz gegen unerwünschte Gebühren bei "
+"der Verwendung von Testumgebungen. Wenn in einer Testumgebung eine "
+"Versandmethode zur Erstellung von Etiketten verwendet wird, werden diese "
+"Etiketten sofort nach der Erstellung storniert – dies geschieht automatisch."
+" Die Einstellungen für die Test- und Produktionsumgebung können über die "
+"entsprechenden intelligenten Schaltflächen umgeschaltet werden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:181
 msgid "Shipping information"
-msgstr ""
+msgstr "Versandinformationen"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:183
 msgid ""
 "To use Sendcloud to generate shipping labels, the following information "
 "**must** be filled out accurately and completely in Odoo:"
 msgstr ""
+"Um Sendcloud für die Erstellung von Versandetiketten zu verwenden, "
+"**müssen** die folgenden Informationen in Odoo genau und vollständig "
+"ausgefüllt werden:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:186
 msgid ""
@@ -16069,6 +16507,9 @@ msgid ""
 ":guilabel:`Customer` has a valid phone number, email address, and shipping "
 "address."
 msgstr ""
+"**Kundeninformationen**: Stellen Sie beim Erstellen eines Angebots sicher, "
+"dass der ausgewählte :guilabel:`Kunde` eine gültige Telefonnummer, E-Mail-"
+"Adresse und Lieferadresse hat."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:189
 msgid ""
@@ -16076,6 +16517,10 @@ msgid ""
 " Here, add their shipping address in the :guilabel:`Contact` field, along "
 "with their :guilabel:`Mobile` number and :guilabel:`Email` address."
 msgstr ""
+"Um dies zu überprüfen, wählen Sie das Feld :guilabel:`Kunde`, um die "
+"Kontaktseite zu öffnen. Geben Sie hier die Lieferadresse in das Feld "
+":guilabel:`Kontakt` ein, zusammen mit der :guilabel:`Mobiltelefonnummer` und"
+" der :guilabel:`E-Mail`-Adresse."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:193
 msgid ""
@@ -16085,6 +16530,11 @@ msgid ""
 "<inventory/shipping_receiving/configure-weight>` of this article for "
 "detailed instructions."
 msgstr ""
+"**Produktgewicht**: Stellen Sie sicher, dass alle Produkte in einem Auftrag "
+"ein bestimmtes :guilabel:`Gewicht` im Reiter :guilabel:`Lager` ihres "
+"Produktformulars haben. Detaillierte Anweisungen finden Sie im Abschnitt "
+":ref:`Produktgewicht <inventory/shipping_receiving/configure-weight>` in "
+"diesem Artikel."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:197
 msgid ""
@@ -16096,10 +16546,17 @@ msgid ""
 "<inventory/shipping_receiving/configure-source-address>` of the third-party "
 "shipping documentation."
 msgstr ""
+"**Lagerhausadresse**: Stellen Sie sicher, dass der Name und die Adresse des "
+"Lagers in Odoo mit dem :ref:`zuvor definierten Lager "
+"<inventory/shipping_receiving/sendcloud-warehouse-config>` in der Sendcloud-"
+"Einrichtung übereinstimmen. Einzelheiten zur Lagerkonfiguration in Odoo "
+"finden Sie im Abschnitt :ref:`Lagerhauskonfiguration "
+"<inventory/shipping_receiving/configure-source-address>` in der "
+"Dokumentation zum Versand von Drittanbietern."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:204
 msgid "Generate labels with Sendcloud"
-msgstr ""
+msgstr "Etiketten mit Sendcloud generieren"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:206
 msgid ""
@@ -16285,6 +16742,11 @@ msgid ""
 " The country of origin (warehouse address) should also be supported by the "
 "carrier."
 msgstr ""
+"Überprüfen Sie zunächst, ob das Gewicht des zu versendenden Produkts für die"
+" gewählte Versandmethode geeignet ist. Wenn dies der Fall ist, überprüfen "
+"Sie, ob das Zielland (von der Kundenadresse) vom Transportunternehmen "
+"unterstützt wird. Das Herkunftsland (Lageradresse) sollte ebenfalls vom "
+"Transportunternehmen unterstützt werden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:3
 msgid "Starshipit shipping"
@@ -23876,7 +24338,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations.rst:29
 msgid "There are three types of locations in Odoo *Inventory*:"
-msgstr ""
+msgstr "Es gibt drei Arten von Lagerorten in Odoo *Lager*:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations.rst:31
 msgid ""
@@ -24696,7 +25158,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:135
 msgid "Expense account"
-msgstr ""
+msgstr "Auslagenkonto"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:137
 msgid ""
@@ -24721,7 +25183,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:150
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:177
 msgid "Automated"
-msgstr ""
+msgstr "Automatisch"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:152
 msgid ""
@@ -25813,17 +26275,19 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fefo.rst:3
 msgid "FEFO removal"
-msgstr ""
+msgstr "FEFO-Entnahme"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fefo.rst:5
 msgid ""
 "The *First Expired, First Out* (FEFO) removal strategy targets products for "
 "removal based on their assigned removal dates."
 msgstr ""
+"Die Strategie *First Expired, First Out* (FEFO) zielt auf die Entnahme von "
+"Produkten auf der Grundlage der ihnen zugewiesenen Entnahmetermine ab."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fefo.rst:14
 msgid "Removal date"
-msgstr ""
+msgstr "Entnahmedatu"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fefo.rst:16
 msgid ""
@@ -25831,6 +26295,9 @@ msgid ""
 "which is set as a certain number of days before the product's *expiration "
 "date*."
 msgstr ""
+"Produkte **müssen** vor ihrem *Entnahmedatum* aus dem Bestand entfernt "
+"werden, das eine bestimmte Anzahl von Tagen vor dem *Verfallsdatum* des "
+"Produkts festgelegt ist."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fefo.rst:19
 msgid ""
@@ -25960,25 +26427,25 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fifo.rst:69
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/lifo.rst:35
 msgid "LOT1"
-msgstr ""
+msgstr "LOS1"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fefo.rst:91
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fifo.rst:70
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/lifo.rst:36
 msgid "LOT2"
-msgstr ""
+msgstr "LOS2"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fefo.rst:92
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fifo.rst:71
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/lifo.rst:37
 msgid "LOT3"
-msgstr ""
+msgstr "LOS3"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fefo.rst:93
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fifo.rst:72
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/lifo.rst:38
 msgid "On-hand stock"
-msgstr ""
+msgstr "Vorrätiger Bestand"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fefo.rst:94
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fifo.rst:73
@@ -25996,31 +26463,31 @@ msgstr "1"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fefo.rst:98
 msgid "April 4"
-msgstr ""
+msgstr "4. April"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fefo.rst:99
 msgid "April 10"
-msgstr ""
+msgstr "10. April"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fefo.rst:100
 msgid "April 15"
-msgstr ""
+msgstr "15. April"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fefo.rst:101
 msgid ":ref:`Removal date <inventory/warehouses_storage/exp-date>`"
-msgstr ""
+msgstr ":ref:`Entnahmedatum <inventory/warehouses_storage/exp-date>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fefo.rst:102
 msgid "February 26"
-msgstr ""
+msgstr "26. Februar"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fefo.rst:103
 msgid "March 4"
-msgstr ""
+msgstr "4. März"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fefo.rst:104
 msgid "March 9"
-msgstr ""
+msgstr "9. März"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fefo.rst:106
 msgid ""
@@ -26064,7 +26531,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fifo.rst:3
 msgid "FIFO removal"
-msgstr ""
+msgstr "FIFO-Entnahme"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fifo.rst:5
 msgid ""
@@ -26154,19 +26621,19 @@ msgstr "3"
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fifo.rst:76
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/lifo.rst:42
 msgid ":ref:`Created on <inventory/warehouses_storage/arrival_date>`"
-msgstr ""
+msgstr ":ref:`Erstellt am <inventory/warehouses_storage/arrival_date>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fifo.rst:77
 msgid "March 1"
-msgstr ""
+msgstr "1. März"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fifo.rst:78
 msgid "April 1"
-msgstr ""
+msgstr "1. April"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fifo.rst:79
 msgid "May 1"
-msgstr ""
+msgstr "1. Mai"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fifo.rst:81
 msgid ""
@@ -26419,7 +26886,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting.rst:5
 msgid "Reporting"
-msgstr ""
+msgstr "Berichtswesen"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/aging.rst:3
 msgid "Inventory aging report"
@@ -26959,7 +27426,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:42
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:66
 msgid "Search options"
-msgstr ""
+msgstr "Suchoptionen"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:44
 msgid ""
@@ -26970,7 +27437,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:49
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:70
 msgid "Filters"
-msgstr ""
+msgstr "Filter"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:51
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:72
@@ -27034,7 +27501,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:68
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:113
 msgid "Group By"
-msgstr ""
+msgstr "Gruppieren nach"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:70
 msgid ""
@@ -27087,7 +27554,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:87
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:125
 msgid "Favorites"
-msgstr ""
+msgstr "Favoriten"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:89
 msgid ""
@@ -27278,7 +27745,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:91
 msgid "`Configure PoS products <https://youtu.be/REbA3TBhFa4>`_"
-msgstr ""
+msgstr "`Kassenprodukte konfigurieren <https://youtu.be/REbA3TBhFa4>`_"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:93
 msgid ""
@@ -27325,7 +27792,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:111
 msgid ":doc:`../../product_management/product_tracking/type`"
-msgstr ""
+msgstr ":doc:`../../product_management/product_tracking/type`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:115
 msgid ""
@@ -30437,7 +30904,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:44
 msgid "Components"
-msgstr ""
+msgstr "Komponenten"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:46
 msgid ""
@@ -30499,7 +30966,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:85
 msgid "Operations"
-msgstr ""
+msgstr "Vorgänge"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:87
 msgid ""
@@ -30630,7 +31097,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:158
 msgid "Instructions"
-msgstr ""
+msgstr "Anweisungen"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:161
 msgid ""
@@ -30676,7 +31143,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:188
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Sonstiges"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:190
 msgid ""
@@ -30762,6 +31229,8 @@ msgid ""
 ":doc:`Lead times "
 "<../../inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates>`"
 msgstr ""
+":doc:`Vorlaufzeiten "
+"<../../inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates>`"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst-1
 msgid "Show the *Miscellaneous* tab of the BoM."
@@ -32108,7 +32577,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting.rst:5
 msgid "Subcontracting"
-msgstr ""
+msgstr "Unterauftragsvergabe"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting.rst:9
 msgid ""
@@ -37388,7 +37857,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/procurement_expenses_report.rst:106
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:85
 msgid "View results"
-msgstr ""
+msgstr "Ergebnisse ansehen"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/procurement_expenses_report.rst:108
 msgid ""
