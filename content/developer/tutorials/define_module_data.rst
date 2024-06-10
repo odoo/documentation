@@ -146,6 +146,10 @@ of features: use it for long lists of simple models, but prefer XML otherwise.
 .. exercise:: Add some standard Real Estate Property Types for the `estate` module: Residential,
   Commercial, Industrial and Land. These should always be installed.
 
+.. warning:: Make sure your file is named exactly as the content of the variable ``_name`` in your
+  target model. For example, if the model you're creating data for is ``res.partner``, then your
+  CSV file must be named :file:`res.partner.csv` (mind the . instead of underscores).
+
 XML
 ---
 
