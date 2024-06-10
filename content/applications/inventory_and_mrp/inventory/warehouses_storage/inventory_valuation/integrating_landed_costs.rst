@@ -74,8 +74,8 @@ When creating new vendor bills, this product can be added as an invoice line as 
 .. important::
    To apply a landed cost on a vendor bill, the products included in the original |PO| **must**
    belong to a *Product Category* with its *Force Removal Strategy* set to |FIFO|. The *Costing
-   Method* can be set to either |AVCO| or |FIFO|, and the valuation method can be :ref:`manual or
-   automatic <inventory/management/config-inventory-valuation>`.
+   Method* can be set to either |AVCO| or |FIFO|, and the valuation method can be :doc:`manual
+   <using_inventory_valuation>` or :doc:`automatic <inventory_valuation_config>`.
 
 Create purchase order
 =====================
