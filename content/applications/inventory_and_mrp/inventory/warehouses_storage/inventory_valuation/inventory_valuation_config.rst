@@ -1,6 +1,6 @@
-=================================
-Inventory valuation configuration
-=================================
+=============================
+Automatic inventory valuation
+=============================
 
 .. |right arrow| replace:: :icon:`fa-arrow-right` :guilabel:`(right arrow)`
 
@@ -9,78 +9,97 @@ be reflected in the company's accounting records to accurately show the value of
 all of its assets.
 
 By default, Odoo uses a periodic inventory valuation (also known as manual inventory valuation).
-This method implies that the accounting team posts journal entries based on the physical inventory
-of the company, and that warehouse employees take the time to count the stock. In Odoo, this method
-is reflected inside each product category, where the :guilabel:`Costing Method` field will be set to
-`Standard Price` by default, and the :guilabel:`Inventory Valuation` field will be set to `Manual`.
+This method implies that the accounting team manually posts journal entries, based on the physical
+inventory of the company, and warehouse employees take the time to count the stock. In Odoo, each
+product category reflects this, with the :guilabel:`Costing Method` set to :guilabel:`Standard
+Price`, and the :guilabel:`Inventory Valuation` (not visible by default) set to :guilabel:`Manual`.
 
 .. image:: inventory_valuation_config/inventory-valuation-fields.png
    :align: center
-   :alt: The Inventory Valuation fields are located on the Product Categories form.
+   :alt: The Costing Method field is located on the Product Categories form.
 
-Alternatively, automated inventory valuation is an integrated valuation method that updates the
-inventory value in real-time by creating journal entries whenever there are stock moves initiated
-between locations in a company's inventory.
+Alternatively, perpetual (automatic) inventory valuation creates real-time *journal entries* in the
+*Accounting* app whenever stock enters or leaves the company's warehouse.
 
-.. note::
-   Automated inventory valuation is a method recommended for expert accountants, given the extra
-   steps involved in journal entry configuration. Even after the initial setup, the method will
-   need to be periodically checked to ensure accuracy, and adjustments may be needed on an ongoing
-   basis depending on the needs and priorities of the business.
+This document is focused on the proper setup of automatic inventory valuation, which is an
+integrated valuation method that ensures journal entries in the *Accounting* app match stock
+valuation updates in the *Inventory* app. For an introduction of inventory valuation in Odoo, refer
+to the :doc:`using_inventory_valuation` documentation.
 
-.. _inventory/inventory_valuation_config/accounting:
+.. warning::
+   Switching to automatic inventory valuation **does not** create journal entries for existing
+   stock, potentially leading to discrepancies between stock valuation and accounting journals.
 
-Types of accounting
-===================
-
-Accounting entries will depend on the accounting mode: *Continental* or *Anglo-Saxon*.
-
-.. tip::
-   Verify the accounting mode by activating the :ref:`developer-mode` and navigating to
-   :menuselection:`Accounting app --> Configuration --> Settings`.
-
-   Then, in the search bar, look for :guilabel:`Anglo-Saxon Accounting`, to see if the feature is
-   enabled. If it is **not** enabled, Continental accounting mode is in use.
-
-   .. image:: inventory_valuation_config/anglo-saxon.png
-      :align: center
-      :alt: Show the Anglo-Saxon accounting mode feature.
-
-In *Anglo-Saxon* accounting, the costs of goods sold (COGS) are reported when products are sold or
-delivered. This means that the cost of a good is only recorded as an expense when a customer is
-invoiced for a product. So for **manual** valuation method, set the :guilabel:`Expense Account` to
-`Stock Valuation` for the current asset type; for **automatic** valuation method, set the the
-:guilabel:`Expense Account` to an *Expenses* or a *Cost of Revenue* type (e.g. `Cost of Production`,
-`Cost of Goods Sold`, etc.).
-
-In *Continental* accounting, the cost of a good is reported as soon as a product is received into
-stock. Because of this, the :guilabel:`Expense Account` can be set to **either** *Expenses* or a
-*Cost of Revenue* type, however, it is more commonly set to an *Expenses* account.
-
-.. seealso::
-   :ref:`Details about configuring Expense and Stock accounts
-   <inventory/management/config-inventory-valuation>`
+   To manually post journal entries for existing stock, navigate to :menuselection:`Inventory app
+   --> Reporting --> Valuation` for a list of current stock and its value. Then, :doc:`post a
+   journal entry <../../../../finance/accounting/vendor_bills>` for each existing item.
 
 Configuration
 =============
 
-Make changes to inventory valuation options by navigating to :menuselection:`Inventory app -->
-Configuration --> Product Categories`. In the :guilabel:`Inventory Valuation` section, select the
-desired :guilabel:`Costing Method` and :guilabel:`Inventory Valuation` options.
+To properly set up automatic inventory valuation, follow these steps in Odoo:
+
+#. :ref:`Install Accounting app and enable specific settings
+   <inventory/warehouses_storage/accounting-setup>`
+#. :ref:`Set Automatic inventory valuation on product categories
+   <inventory/warehouses_storage/valuation-on-product-category>`
+#. :ref:`Set costing method <inventory/warehouses_storage/costing_methods>`
+
+.. _inventory/warehouses_storage/accounting-setup:
+
+Accounting setup
+----------------
+
+To use automatic inventory valuation, install the *Accounting* app. Next, go to
+:menuselection:`Accounting app --> Configuration --> Settings`, and in the :guilabel:`Stock
+Valuation` section, tick the :guilabel:`Automatic Accounting` checkbox. Then, click
+:guilabel:`Save`.
 
 .. note::
-   It is possible to use different valuation settings for different product categories.
+   Enabling :guilabel:`Automatic Accounting` shows the previously invisible *Inventory Valuation*
+   field on a product category.
 
-.. image:: inventory_valuation_config/config-inventory-valuation.png
+.. image:: inventory_valuation_config/auto-accounting.png
    :align: center
-   :alt: Show inventory valuation configuration options.
+   :alt: Automatic Accounting feature in Stock Valuation section of Settings page.
 
-.. _inventory/inventory_valuation_config/costing_methods:
+Refer to the :ref:`Expense <inventory/warehouses_storage/expense-account>` and :ref:`Stock
+input/output <inventory/warehouses_storage/stock-account>` sections of documentation for details on
+configuring the accounting journals shown.
+
+.. _inventory/warehouses_storage/valuation-on-product-category:
+
+Product category setup
+----------------------
+
+After :ref:`enabling inventory valuation <inventory/warehouses_storage/accounting-setup>`, the next
+step is to set the product category to use automatic inventory valuation.
+
+Go to :menuselection:`Inventory app --> Configuration --> Product Categories`, and select the
+desired product category. In the :guilabel:`Inventory Valuation` section, set the
+:guilabel:`Inventory Valuation` field to :guilabel:`Automated`. Repeat this step for every product
+category intending to use automatic inventory valuation.
+
+.. note::
+   After enabling automatic accounting, each new stock move layer (SVL), that is created during
+   inventory valuation updates, generates a journal entry.
+
+.. image:: inventory_valuation_config/automated-inventory-valuation.png
+   :align: center
+   :alt: Inventory Valuation field on the product category, with its various stock accounts.
+
+.. _inventory/warehouses_storage/costing_methods:
 
 Costing method
---------------
+==============
 
-From the product category's configuration page, choose the desired :guilabel:`Costing Method`:
+After :ref:`enabling inventory valuation <inventory/warehouses_storage/accounting-setup>`, the
+*costing method* for calculating and recording inventory costs is defined on the product category in
+Odoo.
+
+Go to :menuselection:`Inventory app --> Configuration --> Product Categories` and select the desired
+product category. In the :guilabel:`Inventory Valuation` section, select the appropriate
+:guilabel:`Costing Method`:
 
 - :guilabel:`Standard Price`: the default costing method in Odoo. The cost of the product is
   manually defined on the product form, and this cost is used to compute the valuation. Even if the
@@ -114,29 +133,56 @@ From the product category's configuration page, choose the desired :guilabel:`Co
 When the :guilabel:`Costing Method` is changed, products already in stock that were using the
 :guilabel:`Standard` costing method **do not** change value; rather, the existing units keep their
 value, and any product moves from then on affect the average cost, and the cost of the product will
-change. If the value in the :guilabel:`Cost` field on a product form is changed manually, Odoo will
-generate a corresponding record in the *Inventory Valuation* report.
+change. If the value in the :guilabel:`Cost` field on a product form is changed manually, Odoo
+generates a corresponding record in the *Inventory Valuation* report.
 
-.. _inventory/management/config-inventory-valuation:
+.. note::
+   It is possible to use different valuation settings for different product categories.
 
-Inventory valuation
--------------------
+.. _inventory/warehouses_storage/accounting-types:
 
-Inventory valuation in Odoo can be set to be updated manually or automatically. While *Expense*
-accounts apply to both, the *Stock Input* and *Stock Output* accounts are only used for automated
-valuation.
+Types of accounting
+===================
 
-Refer to the :ref:`Expense <inventory/management/expense-account>` and :ref:`Stock input/output
-<inventory/management/stock-account>` sections for details on configuring each account type.
+With automated inventory valuation set up, the generated journal entries depend on the chosen
+accounting mode: *Continental* or *Anglo-Saxon*.
 
-.. _inventory/management/expense-account:
+.. tip::
+   Verify the accounting mode by activating the :ref:`developer-mode`, and navigating to
+   :menuselection:`Accounting app --> Configuration --> Settings`.
+
+   Then, in the :guilabel:`Search...` bar, look for `Anglo-Saxon Accounting`, to see if the feature
+   is enabled. If it is **not** enabled, *Continental* accounting mode is in use.
+
+   .. image:: inventory_valuation_config/anglo-saxon.png
+      :align: center
+      :alt: Show the Anglo-Saxon accounting mode feature.
+
+In *Anglo-Saxon* accounting, the costs of goods sold (COGS) are reported when products are sold or
+delivered. This means the cost of a good is only recorded as an expense when a customer is invoiced
+for a product.
+
+So, for **manual** valuation method, set the *Expense Account* to *Stock Valuation* for the current
+asset type; for **automatic** valuation method, set the *Expense Account* to an *Expenses* or a
+*Cost of Revenue* type (e.g. *Cost of Production*, *Cost of Goods Sold*, etc.).
+
+In *Continental* accounting, the cost of a good is reported as soon as a product is received into
+stock. Because of this, the *Expense Account* can be set to **either** *Expenses* or a *Cost of
+Revenue* type, however, it is more commonly set to an *Expenses* account.
+
+Refer to the :ref:`Expense <inventory/warehouses_storage/expense-account>` and :ref:`Stock
+input/output <inventory/warehouses_storage/stock-account>` sections for details on configuring each
+account type.
+
+.. _inventory/warehouses_storage/expense-account:
 
 Expense account
-~~~~~~~~~~~~~~~
+---------------
 
-To configure the *expense account*, go to the :guilabel:`Account Properties` section of the intended
-product category (:menuselection:`Inventory app --> Configuration --> Product Categories`). Then,
-choose an existing account from the :guilabel:`Expense Account` drop-down menu.
+To configure the *expense account*, which is used in both manual and automatic inventory valuation,
+go to the :guilabel:`Account Properties` section of the intended product category
+(:menuselection:`Inventory app --> Configuration --> Product Categories`). Then, choose an existing
+account from the :guilabel:`Expense Account` drop-down menu.
 
 To ensure the chosen account is the correct :guilabel:`Type,` click the |right arrow| icon to the
 right of the account. Then, set the account type based on the information below.
@@ -184,7 +230,7 @@ right of the account. Then, set the account type based on the information below.
             Set the :guilabel:`Expense Account` to the :guilabel:`Expenses` or :guilabel:`Cost of
             Revenue` account type.
 
-.. _inventory/management/stock-account:
+.. _inventory/warehouses_storage/stock-account:
 
 Stock input/output (automated only)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -248,25 +294,32 @@ In the :guilabel:`Inventory Valuation` field, select :guilabel:`Automated`. Doin
 Inventory valuation reporting
 =============================
 
-To start, go to :menuselection:`Accounting --> Reporting --> Balance Sheet`. At the top of the
-dashboard, change the :guilabel:`As of` field value to :guilabel:`Today`, and adjust the filtering
-:guilabel:`Options` to :guilabel:`Unfold All` in order to see all of the latest data displayed, all
-at once.
+To start, go to :menuselection:`Accounting app --> Reporting --> Balance Sheet`. Click the
+:guilabel:`Current Assets` line item to unfold the drop-down menu, and look for the nested
+:guilabel:`Stock Valuation`, :guilabel:`Stock Interim (Received)`, and :guilabel:`Stock Interim
+(Delivered)` lines.
+
+.. tip::
+   At the top of the dashboard, click the :guilabel:`As of [date]` button to display accounting
+   records up to a specified date.
 
 .. seealso::
-   :doc:`../../../../finance/accounting/get_started/cheat_sheet`
+   - :ref:`Stock accounts and what they do <inventory/warehouses_storage/stock-account>`
+   - :doc:`../../../../finance/accounting/get_started/cheat_sheet`
 
-Under the parent :guilabel:`Current Assets` line item, look for the nested :guilabel:`Stock
-Valuation Account` line item, where the total valuation of all of the inventory on hand is
-displayed.
-
-Access more specific information with the :guilabel:`Stock Valuation Account` drop-down menu, by
-selecting either the :guilabel:`General Ledger` to see an itemized view of all of the journal
-entries, or by selecting :guilabel:`Journal Items` to review all of the individualized journal
-entries that were submitted to the account. As well, annotations to the :guilabel:`Balance Sheet`
-can be added by choosing :guilabel:`Annotate`, filling in the text box, and clicking
-:guilabel:`Save`.
-
-.. image:: inventory_valuation_config/stock-valuation-breakdown-in-accounting.png
+.. image:: inventory_valuation_config/stock-balance-sheet.png
    :align: center
    :alt: See the full inventory valuation breakdown in Odoo Accounting app.
+
+Access more specific information by clicking the :icon:`fa-ellipsis-v` :guilabel:`(ellipsis)` icon
+to the right of the desired journal. Select :guilabel:`General Ledger` to see a list of all of the
+journal entries, where each line item's :icon:`fa-ellipsis-v` :guilabel:`(ellipsis)` icon can be
+clicked to reveal the :guilabel:`View Journal Entry` option to open the individualized journal
+entry.
+
+Additionally, annotations to the :guilabel:`Balance Sheet` can be added by choosing
+:guilabel:`Annotate`, filling in the text box, and clicking :guilabel:`Save`.
+
+.. image:: inventory_valuation_config/journals.png
+   :align: center
+   :alt: Show Stock Valuation journals in a list.
