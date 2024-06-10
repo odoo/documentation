@@ -73,8 +73,9 @@ When creating new vendor bills, this product can be added as an invoice line as 
 
 .. important::
    To apply a landed cost on a vendor bill, the products included in the original |PO| **must**
-   belong to a *Product Category* with its *Force Removal Strategy* set to |FIFO|, and its *Costing
-   Method* set to |AVCO|.
+   belong to a *Product Category* with its *Force Removal Strategy* set to |FIFO|. The *Costing
+   Method* can be set to either |AVCO| or |FIFO|, and the valuation method can be :ref:`manual or
+   automatic <inventory/management/config-inventory-valuation>`.
 
 Create purchase order
 =====================
@@ -100,8 +101,9 @@ In the :guilabel:`Bill Date` field, click the line to open a calendar popover me
 date on which this draft bill should be billed.
 
 Then, under the :guilabel:`Invoice Lines` tab, click :guilabel:`Add a line`, and click the drop-down
-menu in the :guilabel:`Product` column to select the previously created landed cost product. Click
-the :guilabel:`Save manually (cloud with arrow)` icon to update the draft bill.
+menu in the :guilabel:`Product` column to select the previously-created landed cost product. Click
+the :icon:`fa-cloud-upload` :guilabel:`(cloud with arrow)` icon to manually save and update the
+draft bill.
 
 .. image:: integrating_landed_costs/integrating-landed-costs-checkboxes.png
    :align: center
