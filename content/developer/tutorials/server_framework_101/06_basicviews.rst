@@ -96,12 +96,12 @@ elements (groups and notebooks) and interactive elements (buttons and fields):
                 <group>
                     <field name="last_seen"/>
                 </group>
-                <notebook>
-                    <page string="Description">
-                        <field name="description"/>
-                    </page>
-                </notebook>
             </group>
+            <notebook>
+                <page string="Description">
+                    <field name="description"/>
+                </page>
+            </notebook>
         </sheet>
     </form>
 
