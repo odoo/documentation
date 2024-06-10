@@ -32,7 +32,7 @@ valuation <inventory/avg_price/leaving_inventory>`.
 .. seealso::
    - :doc:`Using inventory valuation
      <../../../inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation>`
-   - :ref:`Other inventory valuation methods <inventory/inventory_valuation_config/costing_methods>`
+   - :ref:`Other inventory valuation methods <inventory/warehouses_storage/costing_methods>`
 
 Configuration
 =============
@@ -263,7 +263,7 @@ value** increases based on the vendor price of the products that have entered th
 account (called **stock input**) is credited and only reconciled once the vendor bill is received.
 
 .. seealso::
-   - :ref:`Anglo-Saxon vs. Continental <inventory/inventory_valuation_config/accounting>`
+   - :ref:`Anglo-Saxon vs. Continental <inventory/warehouses_storage/accounting-types>`
 
 The table below reflects journal entries and accounts. The *stock input* account stores the money
 intended to pay vendors when the vendor bill has not yet been received. To balance accounts when
