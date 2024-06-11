@@ -178,12 +178,67 @@ section, and other partner options, including :guilabel:`Partner Activation` and
 Review` configurations. These are **only** present when the *Enterprise Resellers* module is
 installed.
 
+To publish a list of all active partners on the website, a new webpage must be created first.
+
+To create a new webpage, navigate to :menuselection:`Website app --> Site --> Pages`, and click
+:guilabel:`New`. Hover over the :guilabel:`Blank Page` template, and click the :guilabel:`Use this
+template` button to create a new page.
+
+In the :guilabel:`New Page` pop-up window that appears, enter an appropriate title, like `Partners`,
+in the :guilabel:`Page Title` field. Then, click :guilabel:`Create`. In the :guilabel:`Edit` toolbar
+on the far-right of the page, click :guilabel:`Save`.
+
+Next, return to :menuselection:`CRM app --> Sales --> Customers`, and click the Kanban card for a
+partner. From that partner's contact form, click the :guilabel:`Go to Website` smart button at the
+top of the page to open that partner's webpage.
+
+Next, click :guilabel:`Edit` at the top-right of the partner's webpage, and use the :doc:`building
+blocks <../websites/website/web_design/building_blocks>` to add any additional design elements, or
+information about the partner.
+
+.. tip::
+   A company summary is a useful addition to this page.
+
+After making any necessary changes to the page, click :guilabel:`Save`. At the top of the page,
+slide the :guilabel:`Unpublished` toggle to the active, :guilabel:`Published` position.
+
+Repeat these steps for all partners.
+
 Membership tab
 --------------
 
-Finally, there is the :guilabel:`Membership` tab, which can help users manage any memberships that
-are being offered to this specific contact. It should be noted that this tab only appears when the
-*Members* applications is installed.
+Finally, there is the :guilabel:`Membership` tab on contact forms, which can help users manage any
+memberships that are being offered to this specific contact. It should be noted that this tab
+**only** appears when the *Members* application is installed.
+
+Activate membership
+~~~~~~~~~~~~~~~~~~~
+
+To activate a contact's membership, click :guilabel:`Buy Membership` in the :guilabel:`Membership`
+tab of a contact form. On the pop-up window that appears, select a :guilabel:`Membership` from the
+drop-down menu. Then, configure a :guilabel:`Member Price`. Click :guilabel:`Invoice Membership`
+when both fields are filled in.
+
+Alternatively, to offer a free membership, tick the :guilabel:`Free Member` checkbox, in the
+:guilabel;`Membership` tab of a contact form.
+
+To publish a list of all active members on the website, a new webpage must be created first. To
+create a new webpage, navigate to :menuselection:`Website app --> Site --> Pages`, and click
+:guilabel:`New`. Hover over the :guilabel:`Blank Page` template, and click the :guilabel:`Use this
+template` button to create a new page.
+
+In the :guilabel:`New Page` pop-up window, enter an appropriate title, like `Members`, in the
+:guilabel:`Page Title` field. Then, click :guilabel:`Create`. In the :guilabel:`Edit` toolbar on the
+far-right of the page, click :guilabel:`Save`.
+
+Return to :menuselection:`CRM app --> Sales --> Customers`, and click the Kanban card for a member.
+Click the :guilabel:`Go to Website` smart button at the top of the page to open the member's
+webpage.
+
+After making any necessary changes to the page, click :guilabel:`Save`. At the top of the page,
+slide the :guilabel:`Unpublished` toggle to the active, :guilabel:`Published` position.
+
+Repeat these steps for all members.
 
 Smart buttons
 =============
