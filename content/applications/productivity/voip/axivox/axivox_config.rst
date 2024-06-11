@@ -9,9 +9,9 @@ Odoo VoIP (Voice over Internet Protocol) can be set up to work together with `Ax
 <https://www.axivox.com/>`_. In that case, an Asterisk server is **not** necessary, as the
 infrastructure is hosted and managed by Axivox.
 
-To use this service, `contact Axivox <https://www.axivox.com/contact/>`_ to open an account. Before
-doing so, verify that Axivox covers the company's area, along with the areas the company's users
-wish to call.
+To use this service, `contact Axivox <https://www.axivox.com/en/contact/>`_ to open an account.
+Before doing so, verify that Axivox covers the company's area, along with the areas the company's
+users wish to call.
 
 Configuration
 =============
