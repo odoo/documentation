@@ -2690,10 +2690,8 @@ the kanban cards.
 Cards structure definition can be split into multiple templates for clarity, but at least one root
 template `kanban-box` must be defined.
 
-Two additional templates can be defined: `kanban-menu` and `kanban-tooltip`. If defined, the
-`kanban-menu` template is rendered inside a dropdown that can be toggled with a vertical ellipsis
-(:guilabel:`⋮`) on the top right of the card. The `kanban-tooltip` template is rendered inside a
-tooltip when hovering kanban cards.
+An additional template can be defined: `kanban-menu`. If defined, it is rendered inside a dropdown
+that can be toggled with a vertical ellipsis (:guilabel:`⋮`) on the top right of the card.
 
 The templates are written in :ref:`JavaScript QWeb <reference/qweb/javascript>`
 
