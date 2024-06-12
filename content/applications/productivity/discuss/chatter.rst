@@ -2,6 +2,9 @@
 Chatter
 =======
 
+.. |user| replace:: :icon:`fa-user-o` :guilabel:`(user)` icon
+.. |paperclip| replace:: :icon:`fa-paperclip` :guilabel:`(paperclip)` icon
+
 The *Chatter* feature is integrated throughout Odoo to streamline communication, maintain
 traceability, and provide accountability among team members. Chatter windows, known as *composers*,
 are located on almost every record within the database, and allow users to communicate with both
@@ -59,16 +62,16 @@ button to read :guilabel:`Following`. Click it again to :guilabel:`Unfollow`.
 Manage followers
 ----------------
 
-To add another user, or contact, as a follower, click the :guilabel:`👤 (user)` icon. This opens a
-drop-down list of the current followers. Click :guilabel:`Add Followers` to open an
-:guilabel:`Invite Follower` pop-up window.
+To add another user, or contact, as a follower, click the |user|. This opens a drop-down list of the
+current followers. Click :guilabel:`Add Followers` to open an :guilabel:`Invite Follower` pop-up
+window.
 
 Select one or more contacts from the :guilabel:`Recipients` drop-down list. To notify the contacts,
 tick the :guilabel:`Send Notification` checkbox. Edit the message template as desired, then click
 :guilabel:`Add Followers`.
 
-To remove followers, click the :guilabel:`👤 (user)` icon to open the current followers list. Find
-the name of the follower to be removed, and click the :guilabel:`x` icon.
+To remove followers, click the |user| to open the current followers list. Find the name of the
+follower to be removed, and click the :icon:`fa-remove` :guilabel:`(remove)` icon.
 
 .. _discuss/edit-subscription:
 
@@ -76,9 +79,9 @@ Edit follower subscription
 --------------------------
 
 The updates a follower receives can vary based on their subscription settings. To see the type of
-updates a follower is subscribed to, and to edit the list, click the :guilabel:`👤 (user)` icon.
-Find the appropriate follower in the list, then click the :guilabel:`✏️ (pencil)` icon. This opens
-the :guilabel:`Edit Subscription` pop-up window for the follower.
+updates a follower is subscribed to, and to edit the list, click the |user|. Find the appropriate
+follower in the list, then click the :icon:`fa-pencil` :guilabel:`(pencil)` icon. This opens the
+:guilabel:`Edit Subscription` pop-up window for the follower.
 
 The list of available subscription settings varies depending on the record type. For example, a
 follower of a *Helpdesk* ticket may be informed when the ticket is rated. This option would not be
@@ -158,8 +161,8 @@ Expand full composer
 The chatter composer can be expanded to a larger pop-up window, allowing for additional
 customizations.
 
-To open the full composer, click the :guilabel:`expand` icon in the bottom-right corner of the
-composer window.
+To open the full composer, click the :icon:`fa-expand` :guilabel:`(expand)` icon in the bottom-right
+corner of the composer window.
 
 .. figure:: chatter/chatter-expand-icon.png
    :align: center
@@ -177,7 +180,8 @@ from the drop-down menu in the :guilabel:`Load template` field.
 .. note::
    The number and type of templates available vary, based on the record the message is created from.
 
-Click :guilabel:`📎 Attachments` to add any files to the message, then click :guilabel:`Send`.
+Click :icon:`fa-paperclip` :guilabel:`(paperclip)` icon to add any files to the message, then click
+:guilabel:`Send`.
 
 .. image:: chatter/chatter-full-composer.png
    :align: center
@@ -193,8 +197,8 @@ information.
    When messages are edited after they have been sent, an updated message is **not** sent to the
    recipient.
 
-To edit a sent message, click the :guilabel:`... (ellipsis)` icon menu to the right of the message.
-Then, select :guilabel:`Edit`. Make any necessary adjustments to the message.
+To edit a sent message, click the :icon:`fa-ellipsis-h` :guilabel:`(ellipsis)` icon menu to the
+right of the message. Then, select :guilabel:`Edit`. Make any necessary adjustments to the message.
 
 .. image:: chatter/chatter-edit.png
    :align: center
@@ -217,12 +221,13 @@ keywords.
 
 First, select a record with a chatter thread. For example, to search a *CRM* opportunity, navigate
 to :menuselection:`CRM app --> Sales --> My Pipeline`, and click on the Kanban card of an
-opportunity to open it. Then, at the top-right, above the chatter composer, click the :guilabel:`🔍
-(magnifying glass)` icon to open the search bar.
+opportunity to open it. Then, at the top-right, above the chatter composer, click the
+:icon:`oi-search` :guilabel:`(search)` icon to open the search bar.
 
-Enter a keyword or phrase into the search bar, then hit :command:`Enter`, or click the :guilabel:`🔍
-(magnifying glass)` icon to the right of the search bar. Any messages or notes containing the
-keyword or phrase entered are listed below the search bar, with the keyword highlighted.
+Enter a keyword or phrase into the search bar, then hit :command:`Enter`, or click the
+:icon:`oi-search` :guilabel:`(search)` icon to the right of the search bar. Any messages or notes
+containing the keyword or phrase entered are listed below the search bar, with the keyword
+highlighted.
 
 To be taken directly to a particular message in the chatter thread, hover over the upper-right
 corner of the result to reveal a :guilabel:`Jump` button. Click this button to be directed to that
@@ -287,7 +292,8 @@ and are color-coded based on their due date.
    :alt: A chatter thread with planned activities with varying due dates.
 
 .. tip::
-   Click the :guilabel:`ℹ️ (info)` icon next to a planned activity to see additional details.
+   Click the :icon:`fa-info-circle` :guilabel:`(info)` icon next to a planned activity to see
+   additional details.
 
    .. image:: chatter/planned-activity-details.png
       :align: center
@@ -315,11 +321,11 @@ record.
 
 .. note::
    After a file has been added to a chatter thread, it can be downloaded by any user with access to
-   the thread. Click the :guilabel:`📎 (paperclip)` icon to make the files header visible, if
-   necessary. Then, click the download icon on the file to download it.
+   the thread. Click the |paperclip| to make the files header visible, if necessary. Then, click the
+   :icon:`fa-download` :guilabel:`(download)` icon the file to download it.
 
-To attach a file, click the :guilabel:`📎 (paperclip)` icon located at the top of the chatter
-composer of any record that contains a chatter thread.
+To attach a file, click the |paperclip| located at the top of the chatter composer of any record
+that contains a chatter thread.
 
 This opens a file explorer pop-up window. Navigate to the desired file, select it, then click
 :guilabel:`Open` to add it to the record. Alternatively, files can be dragged and dropped directly
@@ -331,13 +337,12 @@ heading.
 .. note::
    After at least one file has been added to a chatter record, a new button labeled
    :guilabel:`Attach files` appears below the :guilabel:`Files` heading. To attach any additional
-   files, this is the button that **must** be used, instead of the :guilabel:`📎 (paperclip)` icon
-   at the top of the chatter thread.
+   files, this is the button that **must** be used, instead of the |paperclip| at the top of the
+   chatter thread.
 
-   After the :guilabel:`Files` section heading appears in the thread, clicking the :guilabel:`📎
-   (paperclip)` icon no longer opens a file explorer pop-up window. Instead, clicking the
-   :guilabel:`📎 (paperclip)` icon toggles the :guilabel:`Files` section from visible to invisible
-   in the chatter thread.
+   After the :guilabel:`Files` section heading appears in the thread, clicking the |paperclip| no
+   longer opens a file explorer pop-up window. Instead, clicking the |paperclip| toggles the
+   :guilabel:`Files` section from visible to invisible in the chatter thread.
 
    .. image:: chatter/chatter-attach-files.png
       :align: center
@@ -399,9 +404,10 @@ changes.
 Translate a chatter message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To translate a user's text from another language, click the :guilabel:`... (ellipsis)` icon menu to
-the right of the chatter. Then, select :guilabel:`Translate`. The content translates to the
-language set in the :doc:`user's preferences <../../general/users/language/>`.
+To translate a user's text from another language, click the :icon:`fa-ellipsis-h`
+:guilabel:`(ellipsis)` menu to the right of the chatter. Then, select :guilabel:`Translate`. The
+content translates to the language set in the :doc:`user's preferences
+<../../general/users/language/>`.
 
 .. image:: chatter/chatter-translate-message.png
    :align: center
