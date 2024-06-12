@@ -12,3 +12,4 @@ Sales
     sales/point_of_sale
     sales/subscriptions
     sales/rental
+    sales/members
