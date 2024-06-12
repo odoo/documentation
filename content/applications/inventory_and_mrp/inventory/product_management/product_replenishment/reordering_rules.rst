@@ -3,8 +3,10 @@ Reordering rules
 ================
 
 .. _inventory/management/reordering_rules:
+.. |SO| replace:: :abbr:`SO (sales order)`
+.. |PO| replace:: :abbr:`PO (purchase order)`
 
-Reordering rules are used to keep forecasted stock levels above a certain threshold without
+*Reordering rules* are used to keep forecasted stock levels above a certain threshold without
 exceeding a specified upper limit. This is accomplished by specifying a minimum quantity that stock
 should not fall below and a maximum quantity that stock should not exceed.
 
@@ -92,6 +94,67 @@ For advanced usage of reordering rules, learn about the following reordering rul
 - :ref:`Trigger <inventory/product_management/trigger>`
 - :ref:`Visibility days <inventory/product_management/visibility-days>`
 - :ref:`Route <inventory/product_management/route>`
+
+0/0/1 reordering rule
+---------------------
+
+The *0/0/1* reordering rule is a specialty rule used to replenish a product that is not kept
+on-hand, each time a sales order (SO) is confirmed for that product.
+
+.. important::
+   The 0/0/1 reordering rule is similar to the *Replenish on Order (MTO)* route, in that both
+   workflows are used to replenish a product upon confirmation of an |SO|.
+
+   The main difference between the two methods is that the *Replenish on Order* route automatically
+   reserves the product for the |SO| that caused it to be replenished. This means the product
+   **cannot** be used for a different |SO|.
+
+   The 0/0/1 reordering rule does not have this limitation. A product replenished using the rule is
+   not reserved for any specific |SO|, and can be used as needed.
+
+   Another key difference is that replenishment orders created by the *Replenish on Order* route are
+   linked to the original |SO| by a smart button at the top of the order. When using the 0/0/1
+   reordering rule, a replenishment order is created, but is not linked to the original |SO|.
+
+   See the :doc:`Replenish on Order (MTO) <mto>` documentation for a full overview of the MTO route.
+
+To create a 0/0/1 reordering rule, navigate to :menuselection:`Inventory app --> Products -->
+Products`, and select a product.
+
+At the top of the product's page, click the :icon:`fa-refresh` :guilabel:`Reordering Rules` smart
+button to open the :guilabel:`Reordering Rules` page for the product. On the resulting page, click
+:guilabel:`New` to begin configuring a new reordering rule.
+
+In the :guilabel:`Location` field of the new reordering rule, select the location in which
+replenished products should be stored. By default, this location is set to :guilabel:`WH/Stock`.
+
+In the :guilabel:`Route` field, select the route the rule should use to replenish the item. For
+example, if the product should be purchased from a vendor, select the :guilabel:`Buy` route.
+
+In the :guilabel:`Min Quantity` field and :guilabel:`Max Quantity` field, leave the values set to
+`0.00`. In the :guilabel:`To Order` field, enter a value of `1.00`.
+
+.. image:: reordering_rules/001-rule.png
+   :align: center
+   :alt: A 0/0/1 reordering rule.
+
+With the reordering rule configured using these values, each time an |SO| causes the forecasted
+quantity of the product to fall below the :guilabel:`Min Quantity` of `0.00`, the selected
+:guilabel:`Route` is used to replenish the product in one-unit increments, back up to the
+:guilabel:`Max Quantity` of `0.00`.
+
+.. example::
+   A picture frame is configured with a 0/0/1 reordering rule that uses the *Buy* route. Zero units
+   of the picture frame are kept on-hand at any given time.
+
+   An |SO| is confirmed for one unit of the picture frame, which causes the forecasted quantity to
+   drop to `-1.00`. This triggers the reordering rule, which automatically creates a |PO| for one
+   unit of the picture frame.
+
+   Once the product is received from the vendor, the forecasted quantity of the picture frame
+   returns to `0.00`. There is now one picture frame on-hand, but it is not reserved for the |SO|
+   which triggered its purchase. It can be used to fulfill that |SO|, or reserved for a different
+   order.
 
 .. _inventory/product_management/trigger:
 
