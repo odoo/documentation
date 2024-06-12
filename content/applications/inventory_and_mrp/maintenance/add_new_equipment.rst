@@ -45,7 +45,7 @@ and configure the equipment as follows:
 Include additional product information
 --------------------------------------
 
-The :guilabel:`Product Information` tab at the bottom of the form can be used to provide further
+The :guilabel:`Product Information` tab at the bottom of the page can be used to provide further
 details about the piece of equipment:
 
 - :guilabel:`Vendor`: the vendor that the equipment was purchased from
@@ -64,24 +64,29 @@ details about the piece of equipment:
 Add maintenance details
 -----------------------
 
-The :guilabel:`Maintenance` tab includes information that can be useful to maintenance teams:
+The :guilabel:`Maintenance` tab at the bottom of the page provides information about the failure
+frequency of the piece of equipment:
 
-- :guilabel:`Preventive Maintenance Frequency`: specifies how often maintenance should be
-  performed to prevent equipment failure
-- :guilabel:`Maintenance Duration`: the amount of time required to fix the equipment when it fails
-- :guilabel:`Expected Mean Time Between Failure`: the average amount of time that the equipment is
-  expected to operate before failing
+- :guilabel:`Expected Mean Time Between Failure`: the average number of days the equipment is
+  expected to operate between failures. This number can be configured manually.
+- :guilabel:`Mean Time Between Failure`: the average number of days the equipment operates between
+  failures. This number is calculated automatically based on previous failures, and cannot
+  be configured manually.
+- :guilabel:`Estimated Next Failure`: the estimated date the equipment may experience its next
+  failure.
+  This date is calculated automatically based on the data in the :guilabel:`Mean Time Between
+  Failure` and :guilabel:`Latest Failure` fields, and cannot be configured manually.
+- :guilabel:`Latest Failure`: the most recent date on which the equipment failed. This date is based
+  on the creation date of the equipment's most recent maintenance request, and cannot be configured
+  manually.
+- :guilabel:`Mean Time To Repair`: the average number of days needed to repair the equipment. This
+  number is calculated automatically based on the duration of previous maintenance requests, and
+  cannot be configured manually.
 
 .. image:: add_new_equipment/new-equipment-maintenance.png
    :align: center
-   :alt: The maintenance tab for the new piece of equipment.
-
-.. Note::
-    The :guilabel:`Maintenance` tab also includes sections for :guilabel:`Mean Time Between Failure`,
-    :guilabel:`Estimated Next Failure`, :guilabel:`Latest Failure`,
-    and :guilabel:`Mean Time To Repair`. These values are calculated automatically based on
-    maintenance requests if any exist.
+   :alt: The maintenance tab for a piece of equipment.
 
 .. tip::
-    To see the maintenance requests for a piece of equipment, go to the page for the equipment and
-    select :guilabel:`Maintenance` in the top right corner of the form.
+   To see any open maintenance requests for a piece of equipment, go to the page for the equipment,
+   and click the :guilabel:`Maintenance` smart button at the top of the page.
