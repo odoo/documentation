@@ -24,7 +24,7 @@ In you alias config (:file:`/etc/aliases`):
 
 .. code-block:: text
 
-   email@address: "|/odoo-directory/addons/mail/static/scripts/odoo-mailgate.py -d <database-name> -u <userid> -p <password>"
+   email@address: "|/odoo-directory/addons/mail/static/scripts/odoo-mailgate-py3.py -d <database-name> -u <userid> -p <password>"
 
 .. note::
    Resources
@@ -39,7 +39,7 @@ For Exim
 
 .. code-block:: text
 
-   *: |/odoo-directory/addons/mail/static/scripts/odoo-mailgate.py -d <database-name> -u <userid> -p <password>
+   *: |/odoo-directory/addons/mail/static/scripts/odoo-mailgate-py3.py -d <database-name> -u <userid> -p <password>
 
 .. note::
    Resources
