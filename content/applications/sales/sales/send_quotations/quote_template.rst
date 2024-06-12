@@ -123,10 +123,14 @@ tab of a quotation template form. Doing so reveals a blank field in the :guilabe
 When clicked, a drop-down menu with existing products in the database appear. Select the desired
 product from the drop-down menu to add it to the quotation template.
 
+If the desired product isn't readily visible, type the name of the desired product in the
+:guilabel:`Product` field, and the option appears in the drop-down menu. Products can also be found
+by clicking :guilabel:`Search More...` from the drop-down menu.
+
 .. tip::
-   If the desired product isn't readily visible, type the name of the desired product in the
-   :guilabel:`Product` field, and the option appears in the drop-down menu. Products can also be
-   found by clicking :guilabel:`Search More...` from the drop-down menu.
+   In Odoo 17, it is now possible to add event-related products (booths and registrations) to
+   quotation templates. To do so, click the :guilabel:`Product` field, type in `Event`, and select
+   the desired event-related product from the resulting drop-down menu.
 
 .. note::
    When a product is added to a quotation template, the default :guilabel:`Quantity` is `1`, but
