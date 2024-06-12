@@ -201,24 +201,9 @@ when both fields are filled in.
 Alternatively, to offer a free membership, tick the :guilabel:`Free Member` checkbox, in the
 :guilabel:`Membership` tab of a contact form.
 
-Publish members directory
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-To publish a list of active members on the website, the *Online Members Directory* application must
-first be :ref:`installed <general/install>`. After installing the module, add the `/members` page to
-the website's menu by :doc:`editing the website menu <../websites/website/pages/menus>`.
-
-Publish individual members
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Return to :menuselection:`CRM app --> Sales --> Customers`, and click the Kanban card for a member.
-Click the :guilabel:`Go to Website` smart button at the top of the page to open the member's
-webpage.
-
-After making any necessary changes to the page, click :guilabel:`Save`. At the top of the page,
-slide the :guilabel:`Unpublished` toggle to the active, :guilabel:`Published` position.
-
-Repeat these steps for all members.
+.. seealso::
+   Follow the :doc:`Members documentation <../sales/members>` for more information on publishing
+   members on the website.
 
 Smart buttons
 =============
