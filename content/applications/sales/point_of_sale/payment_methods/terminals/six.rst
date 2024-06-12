@@ -10,6 +10,11 @@ ease the work of your cashiers.
    terminals, the firmware they run is different. Terminals received from Worldline are, therefore,
    not compatible with this integration.
 
+.. note::
+   Odoo is compatible with SIX terminals that use the TIM integration protocol and communicate
+   through TCP/IP (e.g., the Yomani XR and Yoximo terminals are commonly used in Switzerland). If
+   you have any doubts, contact your payment provider to ensure your terminal's compatibility.
+
 Configuration
 =============
 
