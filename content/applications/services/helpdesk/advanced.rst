@@ -10,3 +10,4 @@ Advanced
    advanced/after_sales
    advanced/close_tickets
    advanced/track_and_bill
+   advanced/canned_responses
