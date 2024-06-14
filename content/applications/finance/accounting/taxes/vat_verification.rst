@@ -17,7 +17,7 @@ Odoo's interface.
 VIES VAT number verification
 ============================
 
-To activate this feature, go to :menuselection:`Accounting --> Configuration --> Settings`. In the
+To activate this feature, install the module base_vat and then go to :menuselection:`Accounting --> Configuration --> Settings`. In the
 :guilabel:`Taxes` section, enable the :guilabel:`Verify VAT Numbers` feature, and click on
 :guilabel:`Save`.
 
