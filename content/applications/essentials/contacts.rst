@@ -175,34 +175,11 @@ Partner Assignment tab
 
 Next is the :guilabel:`Partner Assignment` tab, which by default, includes a :guilabel:`Geolocation`
 section, and other partner options, including :guilabel:`Partner Activation` and :guilabel:`Partner
-Review` configurations. These are **only** present when the *Enterprise Resellers* module is
-installed.
+Review` configurations. These are **only** present when the *Resellers* module is installed.
 
-To publish a list of all active partners on the website, a new webpage must be created first.
-
-To create a new webpage, navigate to :menuselection:`Website app --> Site --> Pages`, and click
-:guilabel:`New`. Hover over the :guilabel:`Blank Page` template, and click the :guilabel:`Use this
-template` button to create a new page.
-
-In the :guilabel:`New Page` pop-up window that appears, enter an appropriate title, like `Partners`,
-in the :guilabel:`Page Title` field. Then, click :guilabel:`Create`. In the :guilabel:`Edit` toolbar
-on the far-right of the page, click :guilabel:`Save`.
-
-Next, return to :menuselection:`CRM app --> Sales --> Customers`, and click the Kanban card for a
-partner. From that partner's contact form, click the :guilabel:`Go to Website` smart button at the
-top of the page to open that partner's webpage.
-
-Next, click :guilabel:`Edit` at the top-right of the partner's webpage, and use the :doc:`building
-blocks <../websites/website/web_design/building_blocks>` to add any additional design elements, or
-information about the partner.
-
-.. tip::
-   A company summary is a useful addition to this page.
-
-After making any necessary changes to the page, click :guilabel:`Save`. At the top of the page,
-slide the :guilabel:`Unpublished` toggle to the active, :guilabel:`Published` position.
-
-Repeat these steps for all partners.
+.. seealso::
+   Follow the :doc:`Resellers documentation <../sales/crm/track_leads/resellers>` for more
+   information on publishing partners on the website.
 
 Membership tab
 --------------
@@ -220,16 +197,17 @@ drop-down menu. Then, configure a :guilabel:`Member Price`. Click :guilabel:`Inv
 when both fields are filled in.
 
 Alternatively, to offer a free membership, tick the :guilabel:`Free Member` checkbox, in the
-:guilabel;`Membership` tab of a contact form.
+:guilabel:`Membership` tab of a contact form.
 
-To publish a list of all active members on the website, a new webpage must be created first. To
-create a new webpage, navigate to :menuselection:`Website app --> Site --> Pages`, and click
-:guilabel:`New`. Hover over the :guilabel:`Blank Page` template, and click the :guilabel:`Use this
-template` button to create a new page.
+Publish members directory
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In the :guilabel:`New Page` pop-up window, enter an appropriate title, like `Members`, in the
-:guilabel:`Page Title` field. Then, click :guilabel:`Create`. In the :guilabel:`Edit` toolbar on the
-far-right of the page, click :guilabel:`Save`.
+To publish a list of active members on the website, the *Online Members Directory* application must
+first be :ref:`installed <general/install>`. After installing the module, add the `/members` page to
+the website's menu by :doc:`editing the website menu <../websites/website/pages/menus>`.
+
+Publish individual members
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Return to :menuselection:`CRM app --> Sales --> Customers`, and click the Kanban card for a member.
 Click the :guilabel:`Go to Website` smart button at the top of the page to open the member's
