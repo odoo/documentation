@@ -315,9 +315,18 @@ Emails
 
 .. option:: --smtp-port <port>
 
-.. option:: --smtp-ssl
+.. option:: --smtp-ssl [encryption]
 
-    If set, odoo should use SSL/STARTSSL SMTP connections
+    Connection encryption, accepted values are:
+
+    * ``none``: regular TCP connection without encryption. Default when the flag is ommited.
+    * ``starttls``: regular TCP connection upgraded to TLS if the server supports the STARTTLS SMTP
+      command. The peer certificate is not verified. Default when the flag is present without value.
+    * ``starttls_strict``: same as ``starttls`` but with certificate verification.
+    * ``ssl``: immediate TLS connection. The peer certificate is not verified.
+    * ``ssl_strict``: same as ``ssl`` but with certificate verification.
+
+    Note: ``--smtp-ssl=encryption`` is not supported.
 
 .. option:: --smtp-user <name>
 
