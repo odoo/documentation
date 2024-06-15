@@ -204,6 +204,13 @@ msgid ""
 " on <studio/automated-actions/trigger/custom>` filters are checked *during* "
 "the execution of the automation rule."
 msgstr ""
+"Você também pode definir um :guilabel:`Antes da atualização do domínio` para"
+" especificar as condições que devem ser atendidas *antes* de a regra de "
+"automação ser acionada. Por outro lado, as condições definidas pelos filtros"
+" de :ref:`Condições adicionais <studio/automated-actions/trigger/values-"
+"timing-conditions>` e :ref:`Aplicar em <studio/automated-"
+"actions/trigger/custom>` são verificadas *durante* a execução da regra de "
+"automação."
 
 #: ../../content/applications/studio/automated_actions.rst:59
 msgid ""
@@ -211,6 +218,10 @@ msgid ""
 "mode <developer-mode>`, create or edit an automation rule, click "
 ":guilabel:`Edit Domain`, then click :guilabel:`New Rule`."
 msgstr ""
+"Para definir :guilabel:`Antes da atualização do domínio`, :ref:`ative o modo"
+" de desenvolvedor <developer-mode>`, crie ou edite uma regra de automação, "
+"clique em :guilabel:`Editar domínio` e, em seguida, clique em "
+":guilabel:`Nova regra`."
 
 #: ../../content/applications/studio/automated_actions.rst:63
 msgid ""
@@ -220,10 +231,16 @@ msgid ""
 "Domain` to :guilabel:`Email is not set`, and the :guilabel:`Apply on` domain"
 " to :guilabel:`Email is set`."
 msgstr ""
+"Por exemplo, se você quiser que a ação automatizada ocorra quando um "
+"endereço de e-mail for definido em um contato que não tinha um endereço "
+"antes (em contraste com a modificação do endereço existente), defina o "
+"domínio :guilabel:`Antes da atualização do domínio` como :guilabel:`O e-mail"
+" não está definido` e o domínio :guilabel:`Aplicar em` como :guilabel:`O "
+"e-mail está definido`."
 
 #: ../../content/applications/studio/automated_actions.rst:0
 msgid "Example of a trigger with a Before Update Domain"
-msgstr ""
+msgstr "Exemplo de um acionador com \"Antes da atualização do domínio\""
 
 #: ../../content/applications/studio/automated_actions.rst:74
 msgid "Values Updated"
@@ -236,10 +253,14 @@ msgid ""
 "setting the :guilabel:`User` field. Select the trigger, then select a value "
 "if required."
 msgstr ""
+"Os disparos disponíveis nessa categoria dependem do modelo e são baseados em"
+" alterações comuns de campo, como a adição de um marcador específico (por "
+"exemplo, a uma tarefa) ou a configuração do campo :guilabel:`Usuário`. "
+"Selecione o disparo e, em seguida, selecione um valor, se necessário."
 
 #: ../../content/applications/studio/automated_actions.rst-1
 msgid "Example of a Values Updated trigger"
-msgstr ""
+msgstr "Exemplo de um disparo \"Valores atualizados\""
 
 #: ../../content/applications/studio/automated_actions.rst:86
 msgid "Email Events"
@@ -247,7 +268,7 @@ msgstr "Eventos de e-mail"
 
 #: ../../content/applications/studio/automated_actions.rst:88
 msgid "Trigger automated actions upon receiving or sending emails."
-msgstr ""
+msgstr "Acionar ações automatizadas ao receber ou enviar e-mails."
 
 #: ../../content/applications/studio/automated_actions.rst:93
 msgid "Timing Conditions"
@@ -258,28 +279,36 @@ msgid ""
 "Trigger automated actions based on a date field. The following triggers are "
 "available:"
 msgstr ""
+"Acione ações automatizadas com base em um campo de data. Os seguintes "
+"disparos estão disponíveis:"
 
 #: ../../content/applications/studio/automated_actions.rst:97
 msgid ""
 ":guilabel:`Based on date field`: Select the field to be used next to the "
 ":guilabel:`Delay` field."
 msgstr ""
+":guilabel:`Com base no campo de data`: Selecione o campo a usar ao lado do "
+"campo :guilabel:`Atraso`."
 
 #: ../../content/applications/studio/automated_actions.rst:98
 msgid ""
 ":guilabel:`After creation`: The action is triggered when a record is created"
 " and saved."
 msgstr ""
+":guilabel:`Após a criação`: A ação é acionada quando um registro é criado e "
+"salvo."
 
 #: ../../content/applications/studio/automated_actions.rst:99
 msgid ""
 ":guilabel:`After last update`: The action is triggered when an existing "
 "record is edited and saved."
 msgstr ""
+":guilabel:`Após a última atualização`: A ação é acionada quando um registro "
+"existente é editado e salvo."
 
 #: ../../content/applications/studio/automated_actions.rst:102
 msgid "You can then define:"
-msgstr ""
+msgstr "Você pode então definir:"
 
 #: ../../content/applications/studio/automated_actions.rst:104
 msgid ""
@@ -288,6 +317,11 @@ msgid ""
 " you selected the :guilabel:`Based on date field` trigger, you must also "
 "select the date field to be used to determine the delay."
 msgstr ""
+":guilabel:`Atraso`: Especifique o número de minutos, horas, dias ou meses. "
+"Para acionar a ação antes da data do disparo, especifique um número "
+"negativo. Se você tiver selecionado o acionador :guilabel:`Com base no campo"
+" de data`, também deverá selecionar o campo de data a ser usado para "
+"determinar o atraso."
 
 #: ../../content/applications/studio/automated_actions.rst:107
 msgid ""
@@ -295,12 +329,17 @@ msgid ""
 "the conditions to be met to trigger the automation rule. Click "
 ":guilabel:`New Rule` to add another condition."
 msgstr ""
+":guilabel:`Condições adicionais`: Clique em :guilabel:`Adicionar condição` "
+"e, em seguida, especifique as condições a serem atendidas para acionar a "
+"regra de automação. Clique em :guilabel:`Nova regra` para adicionar outra "
+"condição."
 
 #: ../../content/applications/studio/automated_actions.rst:110
 msgid ""
 "The action is triggered when the delay is reached and the conditions are "
 "met."
 msgstr ""
+"A ação é acionada quando o atraso é atingido e as condições são atendidas."
 
 #: ../../content/applications/studio/automated_actions.rst:113
 msgid ""
@@ -309,16 +348,23 @@ msgid ""
 ":guilabel:`Trigger Date` and set the :guilabel:`Delay` to **-30** "
 ":guilabel:`Minutes`."
 msgstr ""
+"Se você quiser enviar um e-mail de lembrete 30 minutos antes do início de um"
+" evento de calendário, selecione :guilabel:`Início (Evento do calendário)` "
+"em :guilabel:`Data de disparo` e defina :guilabel:`Atraso` como **-30** "
+":guilabel:`Minutos`."
 
 #: ../../content/applications/studio/automated_actions.rst:0
 msgid "Example of a Based on date field trigger"
-msgstr ""
+msgstr "Exemplo de um disparo baseado no campo de data"
 
 #: ../../content/applications/studio/automated_actions.rst:121
 msgid ""
 "By default, the scheduler checks for trigger dates every 4 hours, meaning "
 "lower granularity in time-based automations may not always be honored."
 msgstr ""
+"Por padrão, o agendador verifica as datas de disparo a cada 4 horas, o que "
+"significa que a granularidade mais baixa em automações baseadas em tempo nem"
+" sempre pode ser honrada."
 
 #: ../../content/applications/studio/automated_actions.rst:127
 msgid "Custom"
@@ -326,21 +372,24 @@ msgstr "Personalizar"
 
 #: ../../content/applications/studio/automated_actions.rst:129
 msgid "Trigger automated actions:"
-msgstr ""
+msgstr "Acionar ações automatizadas:"
 
 #: ../../content/applications/studio/automated_actions.rst:131
 msgid ":guilabel:`On save`: When the record is saved;"
-msgstr ""
+msgstr ":guilabel:`Ao salvar`: Quando o registro é salvo;"
 
 #: ../../content/applications/studio/automated_actions.rst:132
 msgid ":guilabel:`On deletion`: When a record is deleted;"
-msgstr ""
+msgstr ":guilabel:`Ao excluir`: Quando um registro é excluído;"
 
 #: ../../content/applications/studio/automated_actions.rst:133
 msgid ""
 ":guilabel:`On UI change`: When a field's value is changed on the :ref:`Form "
 "view <studio/views/general/form>`, even before saving the record."
 msgstr ""
+":guilabel:`Ao alterar a IU`: Quando o valor de um campo é alterado na "
+":ref:`Visualização do formulário <studio/views/general/form>`, mesmo antes "
+"de salvar o registro."
 
 #: ../../content/applications/studio/automated_actions.rst:136
 msgid ""
@@ -348,18 +397,25 @@ msgid ""
 "**must** then select the field(s) to be used to trigger the automation rule "
 "in the :guilabel:`When updating` field."
 msgstr ""
+"Para os disparos :guilabel:`Ao salvar` e :guilabel:`Ao alterar a IU`, você "
+"**deve** então selecionar o(s) campo(s) a ser(em) usado(s) para acionar a "
+"regra de automação no campo :guilabel:`Ao atualizar`."
 
 #: ../../content/applications/studio/automated_actions.rst:140
 msgid ""
 "If no field is selected in the :guilabel:`When updating` field, the "
 "automated action may be executed multiple times per record."
 msgstr ""
+"Se nenhum campo for selecionado no campo :guilabel:`Ao atualizar`, a ação "
+"automatizada poderá ser executada várias vezes por registro."
 
 #: ../../content/applications/studio/automated_actions.rst:143
 msgid ""
 "Optionally, you can also define additional conditions to be met to trigger "
 "the automation rule in the :guilabel:`Apply on` field."
 msgstr ""
+"Opcionalmente, você também pode definir condições adicionais a serem "
+"atendidas para acionar a regra de automação no campo :guilabel:`Aplicar em`."
 
 #: ../../content/applications/studio/automated_actions.rst:147
 msgid ""
@@ -368,6 +424,10 @@ msgid ""
 "when a modification is made manually. The action is not executed if the "
 "field is changed through another automation rule."
 msgstr ""
+"O disparo :guilabel:`Ao alterar a IU` só pode ser usado com a ação "
+":ref:`studio/automated-actions/action/python-code` e só funciona quando uma "
+"modificação é feita manualmente. A ação não será executada se o campo for "
+"alterado por outra regra de automação."
 
 #: ../../content/applications/studio/automated_actions.rst:155
 msgid "External"
@@ -381,6 +441,11 @@ msgid ""
 "event. It usually includes a data payload containing information about the "
 "event that occurred."
 msgstr ""
+"Acione ações automatizadas com base em um evento externo usando webhooks. Um"
+" webhook é um método de comunicação entre dois sistemas em que o sistema de "
+"origem envia uma solicitação HTTP(S) a um sistema de destino com base em um "
+"evento específico; geralmente inclui uma carga de dados que contém "
+"informações sobre o evento ocorrido."
 
 #: ../../content/applications/studio/automated_actions.rst:162
 msgid ""
@@ -389,6 +454,11 @@ msgid ""
 "the request). Then, in the :guilabel:`Target Record` field, enter the code "
 "to run to define the record(s) to be updated using the automation rule."
 msgstr ""
+"Para configurar o disparo :guilabel:`Por webhook`, copie o :guilabel:`URL` "
+"gerado pelo Odoo no sistema de destino (ou seja, o sistema que está "
+"recebendo a solicitação). Em seguida, no campo :guilabel:`Registro-alvo`, "
+"digite o código a ser executado para definir o(s) registro(s) a ser(em) "
+"atualizado(s) pela regra de automação."
 
 #: ../../content/applications/studio/automated_actions.rst:167
 msgid ""
@@ -396,6 +466,9 @@ msgid ""
 "caution could potentially expose your system to malicious parties. Click the"
 " :guilabel:`Rotate Secret` button to change the URL's secret if necessary."
 msgstr ""
+"O URL deve ser tratado como **confidencial**; compartilhá-lo on-line ou sem "
+"cautela pode expor seu sistema a partes mal-intencionadas. Clique no botão "
+":guilabel:`Alternar segredo` para alterar o segredo do URL, se necessário."
 
 #: ../../content/applications/studio/automated_actions.rst:172
 msgid ""
@@ -403,6 +476,10 @@ msgid ""
 " webhooks coming from another Odoo database. It is used to determine the "
 "record(s) to be updated using the information in the payload."
 msgstr ""
+"O código definido por padrão no campo :guilabel:`Registro-alvo` funciona "
+"para webhooks provenientes de outro base de dados Odoo. Ele é usado para "
+"determinar o(s) registro(s) a ser(em) atualizado(s) pelas informações na "
+"carga útil."
 
 #: ../../content/applications/studio/automated_actions.rst:175
 msgid ""
@@ -412,6 +489,12 @@ msgid ""
 " :guilabel:`Target record` field must contain any valid code, but its result"
 " doesn't have any effect on the automated action itself."
 msgstr ""
+"Se quiser usar o conteúdo do webhook para uma finalidade diferente de "
+"localizar o(s) registro(s) (por exemplo, para *criar* um registro), sua "
+"única opção é usar uma ação :ref:`studio/automated-actions/action/python-"
+"code`. Nesse caso, o campo :guilabel:`Registro-alvo` deve conter qualquer "
+"código válido, mas seu resultado não tem nenhum efeito sobre a ação "
+"automatizada em si."
 
 #: ../../content/applications/studio/automated_actions.rst:179
 msgid ""
@@ -419,6 +502,9 @@ msgid ""
 " variable (i.e., a dictionary that contains the GET parameters or POST JSON "
 "body of the incoming request)."
 msgstr ""
+"O conteúdo do webhook está disponível no contexto da ação do servidor como "
+"uma variável `Carga útil` (ou seja, um dicionário que contém os parâmetros "
+"GET ou o corpo JSON POST da solicitação de entrada)."
 
 #: ../../content/applications/studio/automated_actions.rst:182
 msgid ""
@@ -428,6 +514,12 @@ msgid ""
 "issues that may arise. To access the logs, click the :guilabel:`Logs` smart "
 "button at the top of the :guilabel:`Automation rules` form."
 msgstr ""
+"Você também pode optar por :guilabel:`Registrar chamadas` para registrar as "
+"cargas úteis recebidas, por exemplo, para garantir que os dados enviados "
+"pelo sistema de origem correspondam ao formato e ao conteúdo esperados. Isso"
+" também ajuda a identificar e diagnosticar problemas que possam surgir. Para"
+" acessar os registros, clique no botão inteligente :guilabel:`Registros` na "
+"parte superior do formulário :guilabel:`Regras de automação`."
 
 #: ../../content/applications/studio/automated_actions.rst:190
 msgid "Actions"
@@ -439,6 +531,9 @@ msgid ""
 "actions/trigger>`, click :guilabel:`Add an action` to define the action to "
 "be executed."
 msgstr ""
+"Depois de definir o :ref:`disparo <studio/automated-actions/trigger>` da "
+"regra de automação, clique em :guilabel:`Adicionar uma ação` para definir a "
+"ação a ser executada."
 
 #: ../../content/applications/studio/automated_actions.rst:196
 msgid ""
@@ -450,6 +545,13 @@ msgid ""
 " record` action, the email uses the values set *before* the update action is"
 " run."
 msgstr ""
+"Você pode definir várias ações para a mesma regra de automação/disparo. As "
+"ações são executadas na ordem em que são definidas. Isso significa, por "
+"exemplo, que se você definir uma ação :guilabel:`Atualizar registro` e, em "
+"seguida, uma ação :guilabel:`Enviar e-mail`, o e-mail usará os valores "
+"atualizados. No entanto, se a ação :guilabel:`Enviar e-mail` for definida "
+"antes da ação :guilabel:`Atualizar registro`, o e-mail usará os valores "
+"definidos *antes* de a ação de atualização ser executada."
 
 #: ../../content/applications/studio/automated_actions.rst:206
 msgid "Update Record"
@@ -462,6 +564,10 @@ msgid ""
 "the field to be updated; click the right arrow next to the field name to "
 "access the list of related fields if needed."
 msgstr ""
+"Essa ação permite atualizar um dos campos (relacionados) do registro. Clique"
+" no campo :guilabel:`Atualizar` e, na lista que se abre, selecione ou "
+"pesquise o campo a ser atualizado; clique na seta para a direita ao lado do "
+"nome do campo para acessar a lista de campos relacionados, se necessário."
 
 #: ../../content/applications/studio/automated_actions.rst:212
 msgid ""
@@ -470,6 +576,10 @@ msgid ""
 ":guilabel:`Adding`, :guilabel:`Removing`, or :guilabel:`Setting it to` the "
 "selected value or by :guilabel:`Clearing it`."
 msgstr ""
+"Se você selecionou um campo :ref:`many2many <studio/fields/relational-"
+"fields/many2many>`, escolha se o campo deve ser atualizado ao "
+":guilabel:`Adicionar`, :guilabel:`Remover` ou :guilabel:`Definir` como o "
+"valor selecionado, ou ainda ao :guilabel:`Limpar`."
 
 #: ../../content/applications/studio/automated_actions.rst:217
 msgid ""
@@ -477,10 +587,14 @@ msgid ""
 "set the :guilabel:`Update` field to :guilabel:`Customer > Tags`, select "
 ":guilabel:`By Removing`, then select the tag."
 msgstr ""
+"Se quiser que a ação automatizada remova um marcador do registro do cliente,"
+" defina o campo :guilabel:`Atualização` como :guilabel:`Cliente > "
+"Marcadores`, selecione :guilabel:`Ao remover` e, em seguida, selecione o "
+"marcador."
 
 #: ../../content/applications/studio/automated_actions.rst:0
 msgid "Example of an Update Record action"
-msgstr ""
+msgstr "Exemplo de uma ação de atualização de registro"
 
 #: ../../content/applications/studio/automated_actions.rst:225
 msgid ""
@@ -493,10 +607,20 @@ msgid ""
 ":guilabel:`Priority is set to` to `High` and define the :guilabel:`Update "
 "Record` action as follows:"
 msgstr ""
+"Como alternativa, também é possível definir o campo de um registro "
+"dinamicamente usando código Python. Para fazer isso, selecione "
+":guilabel:`Calcular` em vez de :guilabel:`Atualizar` e, em seguida, insira o"
+" código a ser usado para calcular o valor do campo. Por exemplo, se quiser "
+"que a regra de automação calcule um campo :ref:`data e hora "
+"<studio/fields/simple-fields/date-time>` personalizado quando a prioridade "
+"de uma tarefa for definida como `Alta` (ao marcar a tarefa como estrela), "
+"você poderá definir o disparo :guilabel:`Prioridade está definida como` como"
+" `Alta` e definir a ação :guilabel:`Atualizar registro` da seguinte forma:"
 
 #: ../../content/applications/studio/automated_actions.rst:0
 msgid "Compute a custom datetime field using a Python expression"
 msgstr ""
+"Calcular um campo 'data e hora' personalizado com uma expressão Python"
 
 #: ../../content/applications/studio/automated_actions.rst:236
 msgid "Create Activity"
@@ -509,18 +633,29 @@ msgid ""
 "then specify when you want the activity to be scheduled in the "
 ":guilabel:`Due Date In` field, and select a :guilabel:`User type`:"
 msgstr ""
+"Essa ação é usada para agendar uma nova atividade vinculada ao registro. "
+"Selecione um :guilabel:`Tipo de atividade`, digite um :guilabel:`Título` e "
+"uma descrição e, em seguida, especifique quando deseja que a atividade seja "
+"agendada no campo :guilabel:`Vencimento em` e selecione um :guilabel:`Tipo "
+"de usuário`:"
 
 #: ../../content/applications/studio/automated_actions.rst:242
 msgid ""
 "To always assign the activity to the same user, select :guilabel:`Specific "
 "User` and add the user in the :guilabel:`Responsible` field;"
 msgstr ""
+"Para atribuir a atividade sempre ao mesmo usuário, selecione "
+":guilabel:`Usuário específico` e adicione o usuário no campo "
+":guilabel:`Responsável`;"
 
 #: ../../content/applications/studio/automated_actions.rst:244
 msgid ""
 "To target a user linked to the record dynamically, select :guilabel:`Dynamic"
 " User (based on record)` and change the :guilabel:`User Field` if necessary."
 msgstr ""
+"Para direcionar um usuário vinculado ao registro dinamicamente, selecione "
+":guilabel:`Usuário dinâmico (com base no registro)` e altere o "
+":guilabel:`Campo do usuário`, se necessário."
 
 #: ../../content/applications/studio/automated_actions.rst:248
 msgid ""
@@ -529,14 +664,19 @@ msgid ""
 ":guilabel:`Activity Type` to :guilabel:`Call` and the :guilabel:`User Type` "
 "to :guilabel:`Dynamic User (based on record)`."
 msgstr ""
+"Depois que um lead virar uma oportunidade, você quer que a ação automatizada"
+" configure uma chamada para o usuário responsável pelo lead. Para isso, "
+"defina o :guilabel:`Tipo de atividade` como :guilabel:`Ligação` e o "
+":guilabel:`Tipo de usuário` como :guilabel:`Usuário dinâmico (com base no "
+"registro)`."
 
 #: ../../content/applications/studio/automated_actions.rst:0
 msgid "Example of a Create Activity action"
-msgstr ""
+msgstr "Exemplo de uma ação Criar atividade"
 
 #: ../../content/applications/studio/automated_actions.rst:256
 msgid "Send Email and Send SMS"
-msgstr ""
+msgstr "Enviar e-mail e enviar SMS"
 
 #: ../../content/applications/studio/automated_actions.rst:258
 msgid ""
@@ -546,30 +686,43 @@ msgid ""
 " As` or :guilabel:`Send SMS As` field, choose how you want to send the email"
 " or text message:"
 msgstr ""
+"Essas ações são usadas para enviar um e-mail ou uma mensagem de texto a um "
+"contato vinculado a um registro específico. Para fazer isso, selecione ou "
+"crie um :guilabel:`Modelo de e-mail` ou um :guilabel:`Modelo de SMS` e, em "
+"seguida, no campo :guilabel:`Enviar e-mail como` ou :guilabel:`Enviar SMS "
+"como`, escolha como prefere enviar o e-mail ou a mensagem de texto:"
 
 #: ../../content/applications/studio/automated_actions.rst:263
 msgid ""
 ":guilabel:`Email`: to send the message as an email to the recipients of the "
 ":guilabel:`Email Template`."
 msgstr ""
+":guilabel:`E-mail`: para enviar a mensagem como um e-mail para os "
+"destinatários do :guilabel:`Modelo de e-mail`."
 
 #: ../../content/applications/studio/automated_actions.rst:265
 msgid ""
 ":guilabel:`Message`: to post the message on the record and notify the "
 "record's followers."
 msgstr ""
+":guilabel:`Mensagem`: para publicar a mensagem no registro e notificar os "
+"seguidores do registro."
 
 #: ../../content/applications/studio/automated_actions.rst:266
 msgid ""
 ":guilabel:`Note`: to send the message as an internal note visible to "
 "internal users in the chatter."
 msgstr ""
+":guilabel:`Nota`: para enviar a mensagem como uma nota interna visível para "
+"usuários internos no chatter."
 
 #: ../../content/applications/studio/automated_actions.rst:268
 msgid ""
 ":guilabel:`SMS (without note)`: to send the message as a text message to the"
 " recipients of the :guilabel:`SMS template`."
 msgstr ""
+":guilabel:`SMS (sem nota)`: para enviar a mensagem como uma mensagem de "
+"texto para os destinatários do :guilabel:`Modelo de SMS`."
 
 #: ../../content/applications/studio/automated_actions.rst:270
 msgid ""
@@ -577,21 +730,28 @@ msgid ""
 "recipients of the :guilabel:`SMS template` and post it as an internal note "
 "in the chatter."
 msgstr ""
+":guilabel:`SMS (com nota)`: para enviar a mensagem como uma mensagem de "
+"texto para os destinatários do :guilabel:`Modelo de SMS` e publicá-la como "
+"uma nota interna no chatter."
 
 #: ../../content/applications/studio/automated_actions.rst:272
 msgid ""
 ":guilabel:`Note only`: to only post the message as an internal note in the "
 "chatter."
 msgstr ""
+":guilabel:`Somente nota`: para publicar a mensagem apenas como uma nota "
+"interna no chatter."
 
 #: ../../content/applications/studio/automated_actions.rst:277
 msgid "Add Followers and Remove Followers"
-msgstr ""
+msgstr "Adicionar e remover seguidores"
 
 #: ../../content/applications/studio/automated_actions.rst:279
 msgid ""
 "Use these actions to (un)subscribe existing contacts to/from the record."
 msgstr ""
+"Use essas ações para inscrever ou cancelar a inscrição de contatos "
+"existentes no registro."
 
 #: ../../content/applications/studio/automated_actions.rst:282
 msgid "Create Record"
@@ -599,7 +759,7 @@ msgstr "Criar registro"
 
 #: ../../content/applications/studio/automated_actions.rst:284
 msgid "This action is used to create a new record on any model."
-msgstr ""
+msgstr "Essa ação é usada para criar um novo registro em qualquer modelo."
 
 #: ../../content/applications/studio/automated_actions.rst:286
 msgid ""
@@ -609,6 +769,11 @@ msgid ""
 "a field in the :guilabel:`Link Field` field to link the record that "
 "triggered the creation of the new record."
 msgstr ""
+"Selecione o modelo necessário no campo :guilabel:`Registro a criar`; por "
+"padrão, ele contém o modelo atual. Especifique um :guilabel:`Nome` para o "
+"registro e, em seguida, se quiser criar o registro em outro modelo, "
+"selecione um campo no campo :guilabel:`Vincular campo` para vincular o "
+"registro que acionou a criação do novo registro."
 
 #: ../../content/applications/studio/automated_actions.rst:292
 msgid ""
@@ -617,6 +782,10 @@ msgid ""
 "on the current model that are linked to a :ref:`many2one field "
 "<studio/fields/relational-fields/many2one>` on the target model."
 msgstr ""
+"A lista suspensa relacionada ao campo :guilabel:`Vincular campo` contém "
+"apenas :ref:`campos one2many <studio/fields/relational-fields/one2many>` "
+"existentes no modelo atual que estão vinculados a um :ref:`campo many2one "
+"<studio/fields/relational-fields/many2one>` no modelo de destino."
 
 #: ../../content/applications/studio/automated_actions.rst:297
 msgid ""
@@ -626,6 +795,12 @@ msgid ""
 "to create a new project task and then assign it to a specific user using an "
 ":guilabel:`Update Record` action."
 msgstr ""
+"É possível criar outra regra de automação com as ações "
+":ref:`studio/automated-actions/action/update-record` para atualizar os "
+"campos do novo registro, se necessário. Por exemplo, você pode usar uma ação"
+" :guilabel:`Criar registro` para criar uma nova tarefa de projeto e, em "
+"seguida, atribuí-la a um usuário específico usando a ação "
+":guilabel:`Atualizar registro`."
 
 #: ../../content/applications/studio/automated_actions.rst:305
 msgid "Execute Code"
@@ -636,64 +811,80 @@ msgid ""
 "This action is used to execute Python code. You can write your code into the"
 " :guilabel:`Code` tab using the following variables:"
 msgstr ""
+"Essa ação é usada para executar o código Python. Você pode escrever o código"
+" na aba :guilabel:`Código` usando as seguintes variáveis:"
 
 #: ../../content/applications/studio/automated_actions.rst:310
 msgid "`env`: environment on which the action is triggered"
-msgstr ""
+msgstr "`env`: ambiente no qual a ação é acionada"
 
 #: ../../content/applications/studio/automated_actions.rst:311
 msgid ""
 "`model`: model of the record on which the action is triggered; is a void "
 "recordset"
 msgstr ""
+"`model`: modelo do registro no qual a ação é acionada; é um conjunto de "
+"registros vazio"
 
 #: ../../content/applications/studio/automated_actions.rst:312
 msgid "`record`: record on which the action is triggered; may be void"
-msgstr ""
+msgstr "`record`: registro no qual a ação é acionada; pode ser nulo"
 
 #: ../../content/applications/studio/automated_actions.rst:313
 msgid ""
 "`records`: recordset of all records on which the action is triggered in "
 "multi-mode; this may be left empty"
 msgstr ""
+"`records`: conjunto de registros nos quais a ação é acionada no modo "
+"múltiplo; pode ser deixado em branco"
 
 #: ../../content/applications/studio/automated_actions.rst:315
 msgid "`time`, `datetime`, `dateutil`, `timezone`: useful Python libraries"
-msgstr ""
+msgstr "`time`, `datetime`, `dateutil`, `timezone`: bibliotecas Python úteis"
 
 #: ../../content/applications/studio/automated_actions.rst:316
 msgid ""
 "`float_compare`: utility function to compare floats based on specific "
 "precision"
 msgstr ""
+"`float_compare`: função utilitária para comparar valores de float com base "
+"em uma precisão específica"
 
 #: ../../content/applications/studio/automated_actions.rst:317
 msgid ""
 "`log(message, level='info')`: logging function to record debug information "
 "in ir.logging table"
 msgstr ""
+"`log(message, level='info')`: função de registro para registrar informações "
+"de depuração na tabela ir.logging"
 
 #: ../../content/applications/studio/automated_actions.rst:319
 msgid "`_logger.info(message)`: logger to emit messages in server logs"
 msgstr ""
+"`_logger.info(message)`: registrador para emitir mensagens nos registros do "
+"servidor"
 
 #: ../../content/applications/studio/automated_actions.rst:320
 msgid "`UserError`: exception class for raising user-facing warning messages"
 msgstr ""
+"`UserError`: classe de exceção para gerar mensagens de aviso voltadas para o"
+" usuário"
 
 #: ../../content/applications/studio/automated_actions.rst:321
 msgid "`Command`: x2many commands namespace"
-msgstr ""
+msgstr "`Command`: espaço de nome dos comandos x2many"
 
 #: ../../content/applications/studio/automated_actions.rst:322
 msgid "`action = {...}`: to return an action"
-msgstr ""
+msgstr "`action = {...}`: para retornar uma ação"
 
 #: ../../content/applications/studio/automated_actions.rst:325
 msgid ""
 "The available variables are described both in the :guilabel:`Code` and "
 ":guilabel:`Help` tabs."
 msgstr ""
+"As variáveis disponíveis são descritas nas abas :guilabel:`Código` e "
+":guilabel:`Ajuda`."
 
 #: ../../content/applications/studio/automated_actions.rst:328
 msgid "Send Webhook Notification"
@@ -704,6 +895,8 @@ msgid ""
 "This action allows to send a POST request with the values of the "
 ":guilabel:`Fields` to the URL specified in the :guilabel:`URL` field."
 msgstr ""
+"Essa ação permite enviar uma solicitação POST com os valores dos "
+":guilabel:`Campos` para o URL especificado no campo :guilabel:`URL`."
 
 #: ../../content/applications/studio/automated_actions.rst:333
 msgid ""
@@ -711,6 +904,9 @@ msgid ""
 "the request using a random record's data or dummy data if no record is "
 "available."
 msgstr ""
+"A :guilabel:`Amostra de carga` fornece uma visualização dos dados incluídos "
+"na solicitação usando dados de um registro aleatório ou dados fictícios, se "
+"não houver registro disponível."
 
 #: ../../content/applications/studio/automated_actions.rst:339
 msgid "Execute Existing Actions"
@@ -723,6 +919,11 @@ msgid ""
 ":guilabel:`Add: Child Actions` pop-up, select an existing action or click "
 ":guilabel:`New` to create a new one."
 msgstr ""
+"A ação é usada para disparar várias ações (vinculadas ao modelo atual) ao "
+"mesmo tempo. Para fazer isso, clique em :guilabel:`Adicionar uma linha` e, "
+"em seguida, na janela pop-up :guilabel:`Adicionar: Ações secundárias\", "
+"selecione uma ação existente ou clique em :guilabel:`Novo` para criar uma "
+"nova."
 
 #: ../../content/applications/studio/fields.rst:3
 msgid "Fields and widgets"
