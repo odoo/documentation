@@ -5579,12 +5579,13 @@ msgid ""
 "administrators of an Odoo on-premise database detailing how to manually "
 "reset and re-encrypt the master password."
 msgstr ""
+"在某些情况下，主密码可能被放错位置或泄露，需要重新设置。以下流程面向 Odoo 内部数据库的系统管理员，详细介绍了如何手动重置和重新加密主密码。"
 
 #: ../../content/administration/on_premise/deploy.rst:611
 msgid ""
 "For more information about changing an Odoo.com account password, see this "
 "documentation: :ref:`odoocom/change_password`."
-msgstr ""
+msgstr "有关更改 Odoo.com 帐户密码的更多信息，请参阅此文档： :ref:`odoocom/change_password`。"
 
 #: ../../content/administration/on_premise/deploy.rst:614
 msgid ""
@@ -5593,12 +5594,14 @@ msgid ""
 "password is implemented by default, so there is a secure master password for"
 " any Odoo on-premise deployment."
 msgstr ""
+"创建新的内部数据库时，会生成一个随机主密码。Odoo 建议使用该密码来保护数据库的安全。默认情况下会使用该密码，因此任何 Odoo "
+"本地安装都有一个安全的主密码。"
 
 #: ../../content/administration/on_premise/deploy.rst:619
 msgid ""
 "When creating an Odoo on-premise database the installation is accessible to "
 "anyone on the internet, until this password is set to secure the database."
-msgstr ""
+msgstr "创建 Odoo 本地安装数据库时，在设置密码以确保数据库安全之前，互联网上的任何人都可以访问安装的数据库。"
 
 #: ../../content/administration/on_premise/deploy.rst:622
 msgid ""
@@ -5606,16 +5609,18 @@ msgid ""
 " or `odoorc` (hidden file)). The Odoo master password is needed to modify, "
 "create, or delete a database through the graphical user interface (GUI)."
 msgstr ""
+"主密码在 Odoo 配置文件（`odoo.conf` 或 "
+"`odoorc`（隐藏文件））中指定。通过图形用户界面（GUI）修改、创建或删除数据库时，需要使用 Odoo 主密码。"
 
 #: ../../content/administration/on_premise/deploy.rst:627
 msgid "Locate configuration file"
-msgstr ""
+msgstr "找到配置文件"
 
 #: ../../content/administration/on_premise/deploy.rst:629
 msgid ""
 "First, open the Odoo configuration file (`odoo.conf` or `odoorc` (hidden "
 "file))."
-msgstr ""
+msgstr "首先，打开 Odoo 配置文件（`odoo.conf` 或`odoorc`（隐藏文件））。"
 
 #: ../../content/administration/on_premise/deploy.rst:633
 #: ../../content/administration/on_premise/packages.rst:148
@@ -5635,7 +5640,7 @@ msgstr "Windows"
 msgid ""
 "The configuration file is located at: "
 "`c:\\\\ProgramFiles\\\\Odoo{VERSION}\\\\server\\\\odoo.conf`"
-msgstr ""
+msgstr "配置文件位于 c:\\ProgramFiles\\Odoo{VERSION}\\server\\odoo.conf"
 
 #: ../../content/administration/on_premise/deploy.rst:637
 #: ../../content/administration/on_premise/packages.rst:25
@@ -5655,30 +5660,30 @@ msgstr "Linux"
 msgid ""
 "Depending on how Odoo is installed on the Linux machine, the configuration "
 "file is located in one of two different places:"
-msgstr ""
+msgstr "根据 Odoo 在 Linux 机器上的安装方式，配置文件位于两个不同位置之一："
 
 #: ../../content/administration/on_premise/deploy.rst:642
 msgid "Package installation: `/etc/odoo.conf`"
-msgstr ""
+msgstr "软件包安装：`/etc/odoo.conf"
 
 #: ../../content/administration/on_premise/deploy.rst:643
 msgid "Source installation: `~/.odoorc`"
-msgstr ""
+msgstr "源安装：`~/.odoorc`"
 
 #: ../../content/administration/on_premise/deploy.rst:646
 msgid "Change old password"
-msgstr ""
+msgstr "更改旧密码"
 
 #: ../../content/administration/on_premise/deploy.rst:648
 msgid ""
 "Once the appropriate file has been opened, proceed to modify the old "
 "password in the configuration file to a temporary password."
-msgstr ""
+msgstr "打开相应文件后，将配置文件中的旧密码修改为临时密码。"
 
 #: ../../content/administration/on_premise/deploy.rst:653
 #: ../../content/administration/on_premise/deploy.rst:701
 msgid "Graphical user interface"
-msgstr ""
+msgstr "图形用户界面"
 
 #: ../../content/administration/on_premise/deploy.rst:655
 msgid ""
@@ -5687,6 +5692,7 @@ msgid ""
 " on the file. Then, the device should have a default :abbr:`GUI (graphical "
 "user interface)` to open the file with."
 msgstr ""
+"找到配置文件后，使用图形用户界面打开文件。只需双击文件即可打开。然后，设备应该有一个默认的 :abbr:`GUI （图形用户界面）` 来打开文件。"
 
 #: ../../content/administration/on_premise/deploy.rst:659
 msgid ""
@@ -5695,6 +5701,8 @@ msgid ""
 "anything, as long as it is saved temporarily. Make sure to modify all "
 "characters after the `=`."
 msgstr ""
+"接下来，将主密码行 `admin_passwd = $pbkdf2-sha...` 修改为 `admin_passwd = "
+"newpassword1234`。这个密码可以是任何内容，只要是临时保存的。确保修改 `=` 后面的所有字符。"
 
 #: ../../content/administration/on_premise/deploy.rst:664
 #: ../../content/administration/on_premise/deploy.rst:683
@@ -5702,22 +5710,24 @@ msgid ""
 "The line appears like this: `admin_passwd = "
 "$pbkdf2-sh39dji295.59mptrfW.9z6HkA$w9j9AMVmKAP17OosCqDxDv2hjsvzlLpF8Rra8I7p/b573hji540mk/.3ek0lg%kvkol6k983mkf/40fjki79m`"
 msgstr ""
+"该行显示如下 `admin_passwd = "
+"$pbkdf2-sh39dji295.59mptrfW.9z6HkA$w9j9AMVmKAP17OosCqDxDv2hjsvzlLpF8Rra8I7p/b573hji540mk/.3ek0lg%kvkol6k983mkf/40fjki79m`."
 
 #: ../../content/administration/on_premise/deploy.rst:668
 #: ../../content/administration/on_premise/deploy.rst:687
 msgid "The modified line appears like this: `admin_passwd = newpassword1234`"
-msgstr ""
+msgstr "修改后的行显示如下：`admin_passwd = newpassword1234`"
 
 #: ../../content/administration/on_premise/deploy.rst:670
 #: ../../content/administration/on_premise/deploy.rst:710
 msgid "Command-line interface"
-msgstr ""
+msgstr "命令行界面"
 
 #: ../../content/administration/on_premise/deploy.rst:672
 msgid ""
 "Modify the master password line using the following Unix command detailed "
 "below."
-msgstr ""
+msgstr "使用下面的 Unix 命令修改主密码行。"
 
 #: ../../content/administration/on_premise/deploy.rst:674
 msgid ""
@@ -5725,6 +5735,8 @@ msgid ""
 "edit the configuration file. To modify the configuration file, enter the "
 "following command: :command:`sudo nano /etc/odoo.conf`"
 msgstr ""
+"通过安全外壳（SSH）协议连接到 Odoo 服务器的终端，然后编辑配置文件。要修改配置文件，请输入以下命令： :command:`sudo nano "
+"/etc/odoo.conf`。"
 
 #: ../../content/administration/on_premise/deploy.rst:678
 msgid ""
@@ -5733,6 +5745,8 @@ msgid ""
 "password can be anything, as long as it is saved temporarily. Make sure to "
 "modify all characters after the `=`."
 msgstr ""
+"打开配置文件后，将主密码行 `admin_passwd = $pbkdf2-sha...` 修改为 `admin_passwd = "
+"newpassword1234`。这个密码可以是任何内容，只要是临时保存的。确保修改 `=` 后面的所有字符。"
 
 #: ../../content/administration/on_premise/deploy.rst:690
 msgid ""
@@ -5740,17 +5754,17 @@ msgid ""
 "triggering a new password reset by adding a semicolon `;` at the beginning "
 "of the line. This ensures the database is secure throughout the entire "
 "password reset process."
-msgstr ""
+msgstr "必须将密码更改为其他内容，而不是在行首添加分号 `；`，从而触发新的密码重置。这样可以确保整个密码重置过程中数据库的安全。"
 
 #: ../../content/administration/on_premise/deploy.rst:695
 msgid "Restart Odoo server"
-msgstr ""
+msgstr "重启 Odoo 服务器"
 
 #: ../../content/administration/on_premise/deploy.rst:697
 msgid ""
 "After setting the temporary password, a restart of the Odoo server is "
 "**required**."
-msgstr ""
+msgstr "设置临时密码后，**需要**重启 Odoo 服务器。"
 
 #: ../../content/administration/on_premise/deploy.rst:703
 msgid ""
@@ -5758,40 +5772,46 @@ msgid ""
 ":guilabel:`Search` bar. Then, select the :guilabel:`Services` application, "
 "and scroll down to the :guilabel:`Odoo` service."
 msgstr ""
+"要重启 Odoo 服务器，首先在 Windows :guilabel:`搜索` 栏中输入 `服务`。然后，选择 :guilabel:`服务` "
+"应用程序，向下滚动到 :guilabel:`Odoo` 服务。"
 
 #: ../../content/administration/on_premise/deploy.rst:707
 msgid ""
 "Next, right click on :guilabel:`Odoo`, and select :guilabel:`Start` or "
 ":guilabel:`Restart`. This action manually restarts the Odoo server."
 msgstr ""
+"接下来，右键单击 :guilabel:`Odoo`，然后选择 :guilabel:`开始` 或 :guilabel:`重启`。此操作将手动重启 Odoo"
+" 服务器。"
 
 #: ../../content/administration/on_premise/deploy.rst:712
 msgid ""
 "Restart the Odoo server by typing the command: :command:`sudo service odoo15"
 " restart`"
-msgstr ""
+msgstr "重新启动 Odoo 服务器，键入指令：:command:`sudo service odoo15 restart`"
 
 #: ../../content/administration/on_premise/deploy.rst:715
 msgid ""
 "Change the number after `odoo` to fit the specific version the server is "
 "running on."
-msgstr ""
+msgstr "更改 `odoo` 后面的数字，以适应服务器运行的特定版本。"
 
 #: ../../content/administration/on_premise/deploy.rst:718
 msgid "Use web interface to re-encrypt password"
-msgstr ""
+msgstr "使用网络界面重新加密密码"
 
 #: ../../content/administration/on_premise/deploy.rst:720
 msgid ""
 "First, navigate to `/web/database/manager` or "
 "`http://server_ip:port/web/database/manager` in a browser."
 msgstr ""
+"首先，在浏览器中导航到 `/web/database/manager` 或 "
+"`http://server_ip:port/web/database/manager`。"
 
 #: ../../content/administration/on_premise/deploy.rst:724
 msgid ""
 "Replace `server_ip` with the IP address of the database. Replace `port` with"
 " the numbered port the database is accessible from."
-msgstr ""
+msgstr "将 `server_ip` 替换为数据库的 IP 地址。将 `port` 替换为数据库可访问的端口号。"
 
 #: ../../content/administration/on_premise/deploy.rst:727
 msgid ""
@@ -5801,18 +5821,20 @@ msgid ""
 ":guilabel:`New Master Password` is hashed (or encrypted), once the "
 ":guilabel:`Continue` button is clicked."
 msgstr ""
+"然后，点击 :guilabel:`设置主密码`，并在 :guilabel:`主密码` 字段中输入之前选择的临时密码。在此步骤之后，输入 "
+":guilabel:`新主密码`。点击 :guilabel:`继续` 按钮后，:guilabel:`新主密码` 将被散列（或加密）。"
 
 #: ../../content/administration/on_premise/deploy.rst:732
 msgid ""
 "At this point, the password has been successfully reset, and a hashed "
 "version of the new password now appears in the configuration file."
-msgstr ""
+msgstr "此时，密码已成功重置，新密码的散列版本已出现在配置文件中。"
 
 #: ../../content/administration/on_premise/deploy.rst:736
 msgid ""
 "For more information on Odoo database security, see this documentation: "
 ":ref:`db_manager_security`."
-msgstr ""
+msgstr "有关 Odoo 数据库安全性的更多信息，请参阅此文档：:ref:`db_manager_security`。"
 
 #: ../../content/administration/on_premise/deploy.rst:740
 msgid "Supported Browsers"
