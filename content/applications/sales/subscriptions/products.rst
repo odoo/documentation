@@ -67,6 +67,17 @@ Doing so reveals a blank product form, which can be configured and customized in
    The :guilabel:`Product Type` field is set to :guilabel:`Service` by default, as well. However,
    subscription products *can* be set to other types, if needed.
 
+.. important::
+   When creating a physical subscription product in the Odoo **Sales** application, the
+   :guilabel:`Invoicing Policy` must be set to :guilabel:`Ordered quantities`.
+
+   Setting it to :guilabel:`Delivered quantities` causes issues with invoice creation, and disrupts
+   the subscription process.
+
+   Similarly, when creating a physical subscription product in the Odoo **Subscriptions**
+   application, the :guilabel:`Invoicing Policy` must **not** be set to :guilabel:`Based on
+   Delivered Quantity (Manual)` for the same reasons.
+
 .. image:: products/subscription-product-form.png
    :align: center
    :alt: A basic subscription product form in Odoo Subscriptions application.
