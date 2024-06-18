@@ -123,7 +123,7 @@ available on Odoo.
 - :doc:`UK - Accounting <fiscal_localizations/united_kingdom>`
 - Ukraine - Accounting
 - :doc:`United States - Accounting <fiscal_localizations/united_states>`
-- Uruguay - Accounting
+- :doc:`Uruguay - Accounting <fiscal_localizations/uruguay>`
 - Venezuela - Accounting
 - :doc:`Vietnam - Accounting <fiscal_localizations/vietnam>`
 
@@ -163,4 +163,5 @@ available on Odoo.
    fiscal_localizations/united_arab_emirates
    fiscal_localizations/united_kingdom
    fiscal_localizations/united_states
+   fiscal_localizations/uruguay
    fiscal_localizations/employment_hero
