@@ -40,7 +40,6 @@ corner.
    the :guilabel:`Is Published` column to publish them all.
 
 .. image:: products/products-buttons.png
-   :align: center
    :alt: List and dropdown toggle buttons
 
 Product page design
@@ -105,7 +104,6 @@ configuration can be changed according to your needs.
    1024x1024.
 
 .. image:: products/products-layout.png
-   :align: center
    :alt: Product images layout
 
 Add content
@@ -121,7 +119,6 @@ page are available on the *whole* website, where **building blocks** put underne
 description are only displayed on the *product* page *(see image below)*.
 
 .. image:: products/products-blocks.png
-   :align: center
    :alt: Building blocks on product page
 
 Download link
@@ -138,7 +135,6 @@ the :guilabel:`Your URL` field.
    be downloaded *after* checkout.
 
 .. image:: products/products-media.png
-   :align: center
    :alt: Media and link buttons
 
 .. _ecommerce-digital-file:
@@ -147,14 +143,12 @@ Digital files
 -------------
 
 Should your product be sold with a certificate, manual user, or any other relevant document, it is
-possible to add a download link for customers at the end of the checkout. To do that, first enable
-:guilabel:`Digital Content` under :menuselection:`Website --> Configuration --> Settings --> Shop -
-Checkout Process`. Then, on the **product's template**, click on :menuselection:`More --> Digital
-Files` and :guilabel:`Create` a new file.
+possible to add a download link for customers at the end of the checkout. To do that, simply go on
+the desired product template and click on the :guilabel:`Documents` smart button on top of the
+template.
 
-.. image:: products/products-digital-files.png
-   :align: center
-   :alt: Digital Files menu
+.. image:: products/products-digital-files-documents.png
+   :alt: Documents smart button menu to download digital files
 
 For the configuration:
 
@@ -162,8 +156,14 @@ For the configuration:
 - :guilabel:`Type:` select if it is either a **file** or a **URL**. Accordingly, you either have a
   :guilabel:`File Content (base64)` field to upload your file, or a :guilabel:`URL` field to enter
   your URL.
-- :guilabel:`Website`: the website on which that file is *available*. If you want it available for
-  *all* websites, leave it empty.
+- :guilabel:`Sale: Visible at`: this allows you to share the document with your customers within a
+  sale. Leave it blank if you do not want to share this document with sales customer.
+  Select :guilabel:`Quotation` to send this document to your customers and so that it remains
+  accessible by them at any time (e.g. Product description files). :guilabel:`Confirmed order`
+  means that you send the document to your customers after they placed their order. (e.g. User
+  manual or digital content). :guilabel:`Inside quote` signifies that the document will be
+  included in the pdf of the quotation between the header pages and the quote table.
+- :guilabel:`Show on product page`: tick the box if you want it to be available on the product page.
 
 The file is then available after checkout in the :guilabel:`Sales Orders` section, found on the
 customer's portal.
@@ -180,7 +180,6 @@ Fields with multiple languages available are identifiable by their abbreviation 
 :abbr:`EN (English)`) next to their field.
 
 .. image:: products/products-field-translation.png
-   :align: center
    :alt: Field translation
 
 The **eCommerce-related** fields to translate are:
@@ -264,5 +263,4 @@ summary.
    on the **product's template**.
 
 .. image:: products/products-compare.png
-   :align: center
    :alt: Product comparison window
