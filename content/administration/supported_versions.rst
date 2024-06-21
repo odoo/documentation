@@ -50,7 +50,7 @@ This matrix shows the support status of every version.
      - November 2023
      - October 2026 (planned)
    * - Odoo saas~16.4
-     - |green|
+     - |red|
      - N/A
      - N/A
      - August 2023
