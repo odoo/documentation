@@ -272,9 +272,6 @@ Upgrading the production database
 
 Once the :ref:`tests <upgrade/test_your_db>` are completed and you are confident that the upgraded
 database can be used as your main database without any issues, it is time to plan the go-live day.
-It can be planned in coordination with Odoo's upgrade support analysts by `submitting a ticket for
-an issue related to my future upgrade (I am testing an upgrade)
-<https://odoo.com/help?stage=migration>`_.
 
 Your production database will be unavailable during its upgrade. Therefore, we recommend planning
 the upgrade at a time when the use of the database is minimal.
