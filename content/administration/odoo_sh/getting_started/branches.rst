@@ -404,7 +404,7 @@ In case the domain of your users email addresses use SPF (Sender Policy Framewor
 (DomainKeys Identified Mail), don't forget to authorize Odoo as a sending host in your domain name
 settings to increase the deliverability of your outgoing emails.
 The configuration steps are explained in the documentation about :ref:`SPF
-<email_communication/spf_compliant>` and :ref:`DKIM <email_communication/dkim_compliant>`.
+<email_domain/spf_compliant>` and :ref:`DKIM <email_domain/DKIM_compliant>`.
 
 .. Warning::
   Forgetting to configure your SPF or DKIM to authorize Odoo as a sending host can lead to the

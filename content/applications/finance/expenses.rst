@@ -200,6 +200,8 @@ Date`, and any other fields it can populate based on the scanned data, such as t
 the new entry to open the individual expense form, and make any changes needed. The scanned receipt
 appears in the chatter.
 
+.. _expenses/new_from_email:
+
 Automatically create new expenses from an email
 -----------------------------------------------
 

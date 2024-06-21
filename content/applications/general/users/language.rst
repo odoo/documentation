@@ -23,8 +23,6 @@ select a language to install and click on **LOAD.**
     If you check the "Websites to translate" checkbox you will have the option
     to change the navigation language on your website.
 
-.. _language/change-user-language:
-
 Change your language
 ====================
 

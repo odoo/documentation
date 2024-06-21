@@ -1,3 +1,5 @@
+.. _project/email_alias:
+
 ==========================================
 Create Project's Tasks from an Email Alias
 ==========================================

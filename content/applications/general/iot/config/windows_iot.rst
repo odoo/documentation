@@ -38,10 +38,10 @@ installing the Windows virtual IoT software for the first time.
 Download and initial installation
 ---------------------------------
 
-To begin the installation, navigate to the Odoo 16 or higher installation package for Community -
-Windows edition at `Odoo's download page <https://odoo.com/download>`_. Next, install and setup the
-Odoo :file:`.exe` file. After the instructions screen, click :guilabel:`Next` to start the
-installation and agree to the :abbr:`TOS (Terms of Service)`.
+To begin the installation, navigate to the Odoo 16 or higher installation package for Enterprise or
+Community - Windows edition at `Odoo's download page <https://odoo.com/download>`_. Next, install
+and setup the Odoo :file:`.exe` file. After the instructions screen, click :guilabel:`Next` to start
+the installation and agree to the :abbr:`TOS (Terms of Service)`.
 
 During the next step of the installation, select :guilabel:`Odoo IoT` from the :guilabel:`Select the
 type of install` drop-down menu.
@@ -182,7 +182,7 @@ Configure new rule
 On the :menuselection:`Rule Type` screen, select :guilabel:`Port`. Then click :guilabel:`Next`. From
 the :menuselection:`Protocol and Ports` page leave the rule application to :guilabel:`TCP`. Then,
 select :guilabel:`Specific Local Ports` for the :guilabel:`ports` option. In the text box, type in
-`8069, 443`. Finally, click :guilabel:`Next` to continue to the next step.
+`8069`. Finally click :guilabel:`Next` to continue to the next step.
 
 On the :menuselection:`Actions` page, select :guilabel:`Allow the connection` and click
 :guilabel:`Next`. The following page on the :menuselection:`Rule Configuration` wizard is the
@@ -196,14 +196,12 @@ add a brief description in the :guilabel:`Description` field. Click :guilabel:`F
 the :guilabel:`Rule Configuration` wizard. Now, the new rule is active and devices can connect to
 the Windows virtual :abbr:`IoT (Internet of Things)` box.
 
-.. _iot/windows/wordline:
-
 Worldline exception
 ~~~~~~~~~~~~~~~~~~~
 
 *Worldline* is a payment terminal that can be connected to Odoo's *PoS* (point of sale) system. It
 allows for a comprehensive and fluid payment experience for customers. Worldline is available in
-Belgium, the Netherlands, and Luxembourg.
+Benelux (coalition of Belgium, the Netherlands, and Luxembourg).
 
 When using the Windows IoT server to connect the Worldline payment terminal, it is necessary to
 create an exception in the Windows firewall so that a connection can be made between the Odoo

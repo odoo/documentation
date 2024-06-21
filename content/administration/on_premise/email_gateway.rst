@@ -1,3 +1,5 @@
+.. _email_gateway:
+
 =============
 Email gateway
 =============
@@ -47,5 +49,4 @@ For Exim
    - `Exim <https://www.exim.org/docs.html>`_
 
 .. tip::
-   If you don't have access/manage your email server, use :ref:`inbound messages
-   <email_communication/inbound_messages>`.
+   If you don't have access/manage your email server, use :ref:`incoming mail servers <email_servers_inbound/incoming_mail_servers>`.

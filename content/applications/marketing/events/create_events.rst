@@ -425,7 +425,7 @@ recipients to quickly register.
 
 .. tip::
    Sending emails from Odoo is subject to a daily limit, which, by default, is 200. To learn more
-   about daily limits, visit the :ref:`email_communication/daily_limit_mail` documentation.
+   about daily limits, visit the :ref:`email_issues/daily_limit_mail` documentation.
 
 .. seealso::
    :doc:`track_manage_talks`
