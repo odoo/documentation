@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-28 08:57+0000\n"
+"POT-Creation-Date: 2024-06-21 08:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3759,9 +3759,9 @@ msgstr ""
 #: ../../content/administration/on_premise/source.rst:176
 #: ../../content/administration/on_premise/source.rst:204
 #: ../../content/administration/on_premise/source.rst:235
-#: ../../content/administration/on_premise/source.rst:320
-#: ../../content/administration/on_premise/source.rst:389
-#: ../../content/administration/on_premise/source.rst:452
+#: ../../content/administration/on_premise/source.rst:324
+#: ../../content/administration/on_premise/source.rst:393
+#: ../../content/administration/on_premise/source.rst:456
 msgid "Windows"
 msgstr ""
 
@@ -3778,8 +3778,8 @@ msgstr ""
 #: ../../content/administration/on_premise/source.rst:195
 #: ../../content/administration/on_premise/source.rst:224
 #: ../../content/administration/on_premise/source.rst:267
-#: ../../content/administration/on_premise/source.rst:380
-#: ../../content/administration/on_premise/source.rst:442
+#: ../../content/administration/on_premise/source.rst:384
+#: ../../content/administration/on_premise/source.rst:446
 msgid "Linux"
 msgstr ""
 
@@ -4147,7 +4147,7 @@ msgid "Make sure that the `sudo` command is available and well configured and, o
 msgstr ""
 
 #: ../../content/administration/on_premise/packages.rst:57
-#: ../../content/administration/on_premise/source.rst:412
+#: ../../content/administration/on_premise/source.rst:416
 msgid "`wkhtmltopdf` is not installed through **pip** and must be installed manually in `version 0.12.5 <https://github.com/wkhtmltopdf/wkhtmltopdf/releases/tag/0.12.5>`_ for it to support headers and footers. Check out the `wkhtmltopdf wiki <https://github.com/odoo/odoo/wiki/Wkhtmltopdf>`_ for more details on the various versions."
 msgstr ""
 
@@ -4314,9 +4314,9 @@ msgstr ""
 #: ../../content/administration/on_premise/source.rst:182
 #: ../../content/administration/on_premise/source.rst:209
 #: ../../content/administration/on_premise/source.rst:249
-#: ../../content/administration/on_premise/source.rst:343
-#: ../../content/administration/on_premise/source.rst:401
-#: ../../content/administration/on_premise/source.rst:463
+#: ../../content/administration/on_premise/source.rst:347
+#: ../../content/administration/on_premise/source.rst:405
+#: ../../content/administration/on_premise/source.rst:467
 msgid "Mac OS"
 msgstr ""
 
@@ -4426,152 +4426,156 @@ msgid "Using **distribution packages** is the preferred way of installing depend
 msgstr ""
 
 #: ../../content/administration/on_premise/source.rst:276
-msgid "For Debian-based systems, the packages are listed in the `debian/control <https://github.com/odoo/odoo/blob/15.0/debian/control>`_ file of the Odoo sources."
+msgid "On Debian/Ubuntu, the following commands should install the required packages:"
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:279
-msgid "On Debian/Ubuntu, the following commands should install the required packages:"
+#: ../../content/administration/on_premise/source.rst:283
+msgid "The `setup/debinstall.sh` script will parse the `debian/control <https://github.com/odoo/odoo/blob/15.0/debian/control>` file and install the found packages."
 msgstr ""
 
 #: ../../content/administration/on_premise/source.rst:286
 msgid "Install with pip"
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:288
+#: ../../content/administration/on_premise/source.rst:289
+msgid "Using pip may lead to security issues and broken dependencies; only do this if you know what you are doing."
+msgstr ""
+
+#: ../../content/administration/on_premise/source.rst:292
 msgid "As some of the Python packages need a compilation step, they require system libraries to be installed."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:291
+#: ../../content/administration/on_premise/source.rst:295
 msgid "On Debian/Ubuntu, the following command should install these required libraries:"
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:297
+#: ../../content/administration/on_premise/source.rst:301
 msgid "Odoo dependencies are listed in the :file:`requirements.txt` file located at the root of the Odoo Community directory."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:301
+#: ../../content/administration/on_premise/source.rst:305
 msgid "The Python packages in :file:`requirements.txt` are based on their stable/LTS Debian/Ubuntu corresponding version at the moment of the Odoo release. For example, for Odoo 15.0, the `python3-babel` package version is 2.8.0 in Debian Bullseye and 2.6.0 in Ubuntu Focal. The lowest version is then chosen in the :file:`requirements.txt`."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:308
-#: ../../content/administration/on_premise/source.rst:330
-#: ../../content/administration/on_premise/source.rst:349
+#: ../../content/administration/on_premise/source.rst:312
+#: ../../content/administration/on_premise/source.rst:334
+#: ../../content/administration/on_premise/source.rst:353
 msgid "It can be preferable not to mix Python module packages between different instances of Odoo or with the system. However, it is possible to use `virtualenv <https://pypi.org/project/virtualenv/>`_ to create isolated Python environments."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:312
+#: ../../content/administration/on_premise/source.rst:316
 msgid "Navigate to the path of the Odoo Community installation (:file:`CommunityPath`) and run **pip** on the requirements file to install the requirements for the current user."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:322
+#: ../../content/administration/on_premise/source.rst:326
 msgid "Before installing the dependencies, download and install the `Build Tools for Visual Studio <https://visualstudio.microsoft.com/downloads/>`_. Select **C++ build tools** in the **Workloads** tab and install them when prompted."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:326
-#: ../../content/administration/on_premise/source.rst:345
+#: ../../content/administration/on_premise/source.rst:330
+#: ../../content/administration/on_premise/source.rst:349
 msgid "Odoo dependencies are listed in the `requirements.txt` file located at the root of the Odoo Community directory."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:334
+#: ../../content/administration/on_premise/source.rst:338
 msgid "Navigate to the path of the Odoo Community installation (`CommunityPath`) and run **pip** on the requirements file in a terminal **with Administrator privileges**:"
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:353
+#: ../../content/administration/on_premise/source.rst:357
 msgid "Navigate to the path of the Odoo Community installation (`CommunityPath`) and run **pip** on the requirements file:"
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:363
+#: ../../content/administration/on_premise/source.rst:367
 msgid "Non-Python dependencies must be installed with a package manager (`Homebrew <https://brew.sh/>`_, `MacPorts <https://www.macports.org>`_)."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:366
+#: ../../content/administration/on_premise/source.rst:370
 msgid "Download and install the **Command Line Tools**:"
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:372
+#: ../../content/administration/on_premise/source.rst:376
 msgid "Use the package manager to install non-Python dependencies."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:375
+#: ../../content/administration/on_premise/source.rst:379
 msgid "For languages using a **right-to-left interface** (such as Arabic or Hebrew), the `rtlcss` package is required."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:382
+#: ../../content/administration/on_premise/source.rst:386
 msgid "Download and install **nodejs** and **npm** with a package manager."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:383
-#: ../../content/administration/on_premise/source.rst:392
-#: ../../content/administration/on_premise/source.rst:405
+#: ../../content/administration/on_premise/source.rst:387
+#: ../../content/administration/on_premise/source.rst:396
+#: ../../content/administration/on_premise/source.rst:409
 msgid "Install `rtlcss`:"
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:391
+#: ../../content/administration/on_premise/source.rst:395
 msgid "Download and install `nodejs <https://nodejs.org/en/download>`_."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:398
+#: ../../content/administration/on_premise/source.rst:402
 msgid "Edit the system environment's variable `PATH` to add the folder where `rtlcss.cmd` is located (typically: :file:`C:\\\\Users\\\\<user>\\\\AppData\\\\Roaming\\\\npm\\\\`)."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:403
+#: ../../content/administration/on_premise/source.rst:407
 msgid "Download and install **nodejs** with a package manager (`Homebrew <https://brew.sh/>`_, `MacPorts <https://www.macports.org>`_)."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:420
+#: ../../content/administration/on_premise/source.rst:424
 msgid "Running Odoo"
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:422
+#: ../../content/administration/on_premise/source.rst:426
 msgid "Once all dependencies are set up, Odoo can be launched by running `odoo-bin`, the command-line interface of the server. It is located at the root of the Odoo Community directory."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:425
+#: ../../content/administration/on_premise/source.rst:429
 msgid "To configure the server, either specify :ref:`command-line arguments <reference/cmdline/server>` or a :ref:`configuration file <reference/cmdline/config>`."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:429
+#: ../../content/administration/on_premise/source.rst:433
 msgid "For the Enterprise edition, add the path to the `enterprise` add-ons to the `addons-path` argument. Note that it must come before the other paths in `addons-path` for add-ons to be loaded correctly."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:433
+#: ../../content/administration/on_premise/source.rst:437
 msgid "Common necessary configurations are:"
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:435
+#: ../../content/administration/on_premise/source.rst:439
 msgid "PostgreSQL user and password."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:436
+#: ../../content/administration/on_premise/source.rst:440
 msgid "Custom addon paths beyond the defaults to load custom modules."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:438
+#: ../../content/administration/on_premise/source.rst:442
 msgid "A typical way to run the server would be:"
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:449
-#: ../../content/administration/on_premise/source.rst:470
+#: ../../content/administration/on_premise/source.rst:453
+#: ../../content/administration/on_premise/source.rst:474
 msgid "Where `CommunityPath` is the path of the Odoo Community installation, and `mydb` is the name of the PostgreSQL database."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:459
+#: ../../content/administration/on_premise/source.rst:463
 msgid "Where `CommunityPath` is the path of the Odoo Community installation, `dbuser` is the PostgreSQL login, `dbpassword` is the PostgreSQL password, and `mydb` is the name of the PostgreSQL database."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:473
+#: ../../content/administration/on_premise/source.rst:477
 msgid "After the server has started (the INFO log `odoo.modules.loading: Modules loaded.` is printed), open http://localhost:8069 in a web browser and log into the Odoo database with the base administrator account: use `admin` as the email and, again, `admin` as the password."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:478
+#: ../../content/administration/on_premise/source.rst:482
 msgid "From there, create and manage new :doc:`users <../../applications/general/users>`."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:479
+#: ../../content/administration/on_premise/source.rst:483
 msgid "The user account used to log into Odoo's web interface differs from the :option:`--db_user <odoo-bin -r>` CLI argument."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:483
+#: ../../content/administration/on_premise/source.rst:487
 msgid ":doc:`The list of CLI arguments for odoo-bin </developer/reference/cli>`"
 msgstr ""
 
