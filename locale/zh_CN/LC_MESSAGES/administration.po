@@ -28,7 +28,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-30 07:20+0000\n"
+"POT-Creation-Date: 2024-06-21 15:46+0000\n"
 "PO-Revision-Date: 2023-01-13 14:30+0000\n"
 "Last-Translator: Chloe Wang, 2024\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/odoo/teams/41243/zh_CN/)\n"
@@ -553,8 +553,8 @@ msgid "Deactivated features"
 msgstr "已停用功能"
 
 #: ../../content/administration/neutralized_database.rst:24
-msgid "Here is a non-exhaustive list of the deactivated parameters:"
-msgstr "以下是已停用参数的不完全列表："
+msgid "Here is a non-exhaustive list of the deactivated features:"
+msgstr ""
 
 #: ../../content/administration/neutralized_database.rst:26
 msgid ""
@@ -582,7 +582,11 @@ msgstr "交货方式"
 msgid ":abbr:`IAP (In-App Purchase)` tokens"
 msgstr ":abbr:`IAP（应用内购买）` 令牌"
 
-#: ../../content/administration/neutralized_database.rst:34
+#: ../../content/administration/neutralized_database.rst:32
+msgid "website visibility (prevent search engines from indexing your site)"
+msgstr ""
+
+#: ../../content/administration/neutralized_database.rst:35
 msgid ""
 "**A red banner at the top of the screen is displayed on the neutralized "
 "database so that it can be seen immediately.**"
@@ -5869,9 +5873,9 @@ msgstr "首先，打开 Odoo 配置文件（`odoo.conf` 或`odoorc`（隐藏文�
 #: ../../content/administration/on_premise/source.rst:176
 #: ../../content/administration/on_premise/source.rst:204
 #: ../../content/administration/on_premise/source.rst:235
-#: ../../content/administration/on_premise/source.rst:320
-#: ../../content/administration/on_premise/source.rst:389
-#: ../../content/administration/on_premise/source.rst:452
+#: ../../content/administration/on_premise/source.rst:325
+#: ../../content/administration/on_premise/source.rst:394
+#: ../../content/administration/on_premise/source.rst:457
 msgid "Windows"
 msgstr "Windows"
 
@@ -5890,8 +5894,8 @@ msgstr "配置文件位于 c:\\ProgramFiles\\Odoo{VERSION}\\server\\odoo.conf"
 #: ../../content/administration/on_premise/source.rst:195
 #: ../../content/administration/on_premise/source.rst:224
 #: ../../content/administration/on_premise/source.rst:267
-#: ../../content/administration/on_premise/source.rst:380
-#: ../../content/administration/on_premise/source.rst:442
+#: ../../content/administration/on_premise/source.rst:385
+#: ../../content/administration/on_premise/source.rst:447
 msgid "Linux"
 msgstr "Linux"
 
@@ -6404,7 +6408,7 @@ msgid ""
 msgstr "确保 \"sudo \"命令可用且配置良好，然后执行以下命令安装 PostgreSQL 服务器："
 
 #: ../../content/administration/on_premise/packages.rst:57
-#: ../../content/administration/on_premise/source.rst:412
+#: ../../content/administration/on_premise/source.rst:417
 msgid ""
 "`wkhtmltopdf` is not installed through **pip** and must be installed "
 "manually in `version 0.12.6 "
@@ -6647,9 +6651,9 @@ msgstr "使用SSH克隆"
 #: ../../content/administration/on_premise/source.rst:182
 #: ../../content/administration/on_premise/source.rst:209
 #: ../../content/administration/on_premise/source.rst:249
-#: ../../content/administration/on_premise/source.rst:343
-#: ../../content/administration/on_premise/source.rst:401
-#: ../../content/administration/on_premise/source.rst:463
+#: ../../content/administration/on_premise/source.rst:348
+#: ../../content/administration/on_premise/source.rst:406
+#: ../../content/administration/on_premise/source.rst:468
 msgid "Mac OS"
 msgstr "Mac OS"
 
@@ -6811,40 +6815,46 @@ msgstr "使用 **发行版软件包** 是安装依赖包的首选方式。或者
 
 #: ../../content/administration/on_premise/source.rst:276
 msgid ""
-"For Debian-based systems, the packages are listed in the `debian/control "
-"<https://github.com/odoo/odoo/blob/16.0/debian/control>`_ file of the Odoo "
-"sources."
-msgstr ""
-
-#: ../../content/administration/on_premise/source.rst:279
-msgid ""
 "On Debian/Ubuntu, the following commands should install the required "
 "packages:"
 msgstr "在 Debian/Ubuntu 上，使用以下命令即可安装所需的软件包："
+
+#: ../../content/administration/on_premise/source.rst:283
+msgid ""
+"The `setup/debinstall.sh` script will parse the `debian/control "
+"<https://github.com/odoo/odoo/blob/16.0/debian/control>`_ file and install "
+"the found packages."
+msgstr ""
 
 #: ../../content/administration/on_premise/source.rst:286
 msgid "Install with pip"
 msgstr "使用 pip 安装"
 
-#: ../../content/administration/on_premise/source.rst:288
+#: ../../content/administration/on_premise/source.rst:290
+msgid ""
+"Using pip may lead to security issues and broken dependencies; only do this "
+"if you know what you are doing."
+msgstr ""
+
+#: ../../content/administration/on_premise/source.rst:293
 msgid ""
 "As some of the Python packages need a compilation step, they require system "
 "libraries to be installed."
 msgstr "由于某些 Python 软件包需要编译步骤，因此需要安装系统库。"
 
-#: ../../content/administration/on_premise/source.rst:291
+#: ../../content/administration/on_premise/source.rst:296
 msgid ""
 "On Debian/Ubuntu, the following command should install these required "
 "libraries:"
 msgstr "在 Debian/Ubuntu 上，使用以下命令即可安装这些所需的库："
 
-#: ../../content/administration/on_premise/source.rst:297
+#: ../../content/administration/on_premise/source.rst:302
 msgid ""
 "Odoo dependencies are listed in the :file:`requirements.txt` file located at"
 " the root of the Odoo Community directory."
 msgstr "Odoo 依赖项列在位于 Odoo 社区版目录根目录下的 :file:`requirements.txt` 文件中。"
 
-#: ../../content/administration/on_premise/source.rst:301
+#: ../../content/administration/on_premise/source.rst:306
 msgid ""
 "The Python packages in :file:`requirements.txt` are based on their "
 "stable/LTS Debian/Ubuntu corresponding version at the moment of the Odoo "
@@ -6856,9 +6866,9 @@ msgstr ""
 "对应版本。例如，对于 Odoo 15.0，`python3-babel` 软件包版本在 Debian Bullseye 中为 2.8.0，在 "
 "Ubuntu Focal 中为 2.6.0。然后在 :file:`requirements.txt` 中选择最低版本。"
 
-#: ../../content/administration/on_premise/source.rst:308
-#: ../../content/administration/on_premise/source.rst:330
-#: ../../content/administration/on_premise/source.rst:349
+#: ../../content/administration/on_premise/source.rst:313
+#: ../../content/administration/on_premise/source.rst:335
+#: ../../content/administration/on_premise/source.rst:354
 msgid ""
 "It can be preferable not to mix Python module packages between different "
 "instances of Odoo or with the system. However, it is possible to use "
@@ -6868,14 +6878,14 @@ msgstr ""
 "最好不要在 Odoo 的不同实例之间或与系统混合使用 Python 模块包。不过，可以使用 `virtualenv "
 "<https://pypi.org/project/virtualenv/>`_ 来创建隔离的 Python 环境。"
 
-#: ../../content/administration/on_premise/source.rst:312
+#: ../../content/administration/on_premise/source.rst:317
 msgid ""
 "Navigate to the path of the Odoo Community installation "
 "(:file:`CommunityPath`) and run **pip** on the requirements file to install "
 "the requirements for the current user."
 msgstr "导航至 Odoo 社区版安装路径（:file:`CommunityPath`），并在需求文件上运行 **pip** 为当前用户安装需求。"
 
-#: ../../content/administration/on_premise/source.rst:322
+#: ../../content/administration/on_premise/source.rst:327
 msgid ""
 "Before installing the dependencies, download and install the `Build Tools "
 "for Visual Studio <https://visualstudio.microsoft.com/downloads/>`_. Select "
@@ -6885,27 +6895,27 @@ msgstr ""
 "<https://visualstudio.microsoft.com/downloads/>`_\"。在 **Workloads** 选项卡中选择 "
 "**C++ 编译工具**，并按提示安装。"
 
-#: ../../content/administration/on_premise/source.rst:326
-#: ../../content/administration/on_premise/source.rst:345
+#: ../../content/administration/on_premise/source.rst:331
+#: ../../content/administration/on_premise/source.rst:350
 msgid ""
 "Odoo dependencies are listed in the `requirements.txt` file located at the "
 "root of the Odoo Community directory."
 msgstr "Odoo 依赖项列在位于 Odoo 社区版目录根目录下的`requirements.txt`文件中。"
 
-#: ../../content/administration/on_premise/source.rst:334
+#: ../../content/administration/on_premise/source.rst:339
 msgid ""
 "Navigate to the path of the Odoo Community installation (`CommunityPath`) "
 "and run **pip** on the requirements file in a terminal **with Administrator "
 "privileges**:"
 msgstr "导航至 Odoo 社区版安装路径（\"CommunityPath\"），并在**具有管理员权限**的终端上对需求文件运行 **pip**："
 
-#: ../../content/administration/on_premise/source.rst:353
+#: ../../content/administration/on_premise/source.rst:358
 msgid ""
 "Navigate to the path of the Odoo Community installation (`CommunityPath`) "
 "and run **pip** on the requirements file:"
 msgstr "导航至 Odoo 社区版安装路径（\"CommunityPath\"），并在需求文件上运行 **pip**："
 
-#: ../../content/administration/on_premise/source.rst:363
+#: ../../content/administration/on_premise/source.rst:368
 msgid ""
 "Non-Python dependencies must be installed with a package manager (`Homebrew "
 "<https://brew.sh/>`_, `MacPorts <https://www.macports.org>`_)."
@@ -6913,35 +6923,35 @@ msgstr ""
 "非 Python 依赖项必须使用软件包管理器安装（`Homebrew <https://brew.sh/>`_, `MacPorts "
 "<https://www.macports.org>`_）。"
 
-#: ../../content/administration/on_premise/source.rst:366
+#: ../../content/administration/on_premise/source.rst:371
 msgid "Download and install the **Command Line Tools**:"
 msgstr "下载并安装命令行工** ："
 
-#: ../../content/administration/on_premise/source.rst:372
+#: ../../content/administration/on_premise/source.rst:377
 msgid "Use the package manager to install non-Python dependencies."
 msgstr "使用软件包管理器安装非 Python 依赖项。"
 
-#: ../../content/administration/on_premise/source.rst:375
+#: ../../content/administration/on_premise/source.rst:380
 msgid ""
 "For languages using a **right-to-left interface** (such as Arabic or "
 "Hebrew), the `rtlcss` package is required."
 msgstr "对于使用**从右到左界面**的语言（如阿拉伯语或希伯来语），需要使用 `rtlcss` 软件包。"
 
-#: ../../content/administration/on_premise/source.rst:382
+#: ../../content/administration/on_premise/source.rst:387
 msgid "Download and install **nodejs** and **npm** with a package manager."
 msgstr "使用软件包管理器下载并安装 **nodejs** 和 **npm**。"
 
-#: ../../content/administration/on_premise/source.rst:383
-#: ../../content/administration/on_premise/source.rst:392
-#: ../../content/administration/on_premise/source.rst:405
+#: ../../content/administration/on_premise/source.rst:388
+#: ../../content/administration/on_premise/source.rst:397
+#: ../../content/administration/on_premise/source.rst:410
 msgid "Install `rtlcss`:"
 msgstr "安装 `rtlcss`："
 
-#: ../../content/administration/on_premise/source.rst:391
+#: ../../content/administration/on_premise/source.rst:396
 msgid "Download and install `nodejs <https://nodejs.org/en/download>`_."
 msgstr "下载并安装 `nodejs <https://nodejs.org/en/download>`_。"
 
-#: ../../content/administration/on_premise/source.rst:398
+#: ../../content/administration/on_premise/source.rst:403
 msgid ""
 "Edit the system environment's variable `PATH` to add the folder where "
 "`rtlcss.cmd` is located (typically: "
@@ -6950,7 +6960,7 @@ msgstr ""
 "编辑系统环境变量 `PATH` 以添加 `rtlcss.cmd` "
 "所在文件夹（通常为：:file:`C:\\Users\\\\1\\AppData\\\\Roaming\\npm\\`）。"
 
-#: ../../content/administration/on_premise/source.rst:403
+#: ../../content/administration/on_premise/source.rst:408
 msgid ""
 "Download and install **nodejs** with a package manager (`Homebrew "
 "<https://brew.sh/>`_, `MacPorts <https://www.macports.org>`_)."
@@ -6958,18 +6968,18 @@ msgstr ""
 "使用软件包管理器（`Homebrew <https://brew.sh/>`_, `MacPorts "
 "<https://www.macports.org>`_）下载并安装 **nodejs**。"
 
-#: ../../content/administration/on_premise/source.rst:420
+#: ../../content/administration/on_premise/source.rst:425
 msgid "Running Odoo"
 msgstr "运行 Odoo"
 
-#: ../../content/administration/on_premise/source.rst:422
+#: ../../content/administration/on_premise/source.rst:427
 msgid ""
 "Once all dependencies are set up, Odoo can be launched by running `odoo-"
 "bin`, the command-line interface of the server. It is located at the root of"
 " the Odoo Community directory."
 msgstr "一旦设置了所有依赖项，就可以通过运行服务器的命令行界面“odoo-bin”来启动Odoo。它位于Odoo社区目录的根目录。"
 
-#: ../../content/administration/on_premise/source.rst:425
+#: ../../content/administration/on_premise/source.rst:430
 msgid ""
 "To configure the server, either specify :ref:`command-line arguments "
 "<reference/cmdline/server>` or a :ref:`configuration file "
@@ -6978,7 +6988,7 @@ msgstr ""
 "要配置服务器，可指定 :ref:` 命令行参数 <reference/cmdline/server>` 或 :ref:` 配置文件 "
 "<reference/cmdline/config>`。"
 
-#: ../../content/administration/on_premise/source.rst:429
+#: ../../content/administration/on_premise/source.rst:434
 msgid ""
 "For the Enterprise edition, add the path to the `enterprise` add-ons to the "
 "`addons-path` argument. Note that it must come before the other paths in "
@@ -6987,30 +6997,30 @@ msgstr ""
 "对于企业版，请在 `addons-path` 参数中添加 `enterprise` 附加组件的路径。请注意，该路径必须位于 `addons-path` "
 "中其他路径之前，这样才能正确加载附加组件。"
 
-#: ../../content/administration/on_premise/source.rst:433
+#: ../../content/administration/on_premise/source.rst:438
 msgid "Common necessary configurations are:"
 msgstr "常见的必要配置有："
 
-#: ../../content/administration/on_premise/source.rst:435
+#: ../../content/administration/on_premise/source.rst:440
 msgid "PostgreSQL user and password."
 msgstr "PostgreSQL 用户和密码。"
 
-#: ../../content/administration/on_premise/source.rst:436
+#: ../../content/administration/on_premise/source.rst:441
 msgid "Custom addon paths beyond the defaults to load custom modules."
 msgstr "可以在默认路径之外设置自定义插件路径以加载自定义模块。"
 
-#: ../../content/administration/on_premise/source.rst:438
+#: ../../content/administration/on_premise/source.rst:443
 msgid "A typical way to run the server would be:"
 msgstr "运行服务器的典型方法是："
 
-#: ../../content/administration/on_premise/source.rst:449
-#: ../../content/administration/on_premise/source.rst:470
+#: ../../content/administration/on_premise/source.rst:454
+#: ../../content/administration/on_premise/source.rst:475
 msgid ""
 "Where `CommunityPath` is the path of the Odoo Community installation, and "
 "`mydb` is the name of the PostgreSQL database."
 msgstr "其中，\"CommunityPath \"是 Odoo 社区版的安装路径，\"mydb \"是 PostgreSQL 数据库的名称。"
 
-#: ../../content/administration/on_premise/source.rst:459
+#: ../../content/administration/on_premise/source.rst:464
 msgid ""
 "Where `CommunityPath` is the path of the Odoo Community installation, "
 "`dbuser` is the PostgreSQL login, `dbpassword` is the PostgreSQL password, "
@@ -7019,7 +7029,7 @@ msgstr ""
 "其中，\"CommunityPath \"是 Odoo 社区版的安装路径，\"dbuser \"是 PostgreSQL "
 "登录名，\"dbpassword \"是 PostgreSQL 密码，\"mydb \"是 PostgreSQL 数据库名称。"
 
-#: ../../content/administration/on_premise/source.rst:473
+#: ../../content/administration/on_premise/source.rst:478
 msgid ""
 "After the server has started (the INFO log `odoo.modules.loading: Modules "
 "loaded.` is printed), open http://localhost:8069 in a web browser and log "
@@ -7030,19 +7040,19 @@ msgstr ""
 "http://localhost:8069，使用基本管理员账户登录 Odoo 数据库：使用 `admin` 作为电子邮件，同样使用 `admin` "
 "作为密码。"
 
-#: ../../content/administration/on_premise/source.rst:478
+#: ../../content/administration/on_premise/source.rst:483
 msgid ""
 "From there, create and manage new :doc:`users "
 "<../../applications/general/users>`."
 msgstr "从那里，创建并管理新的 :doc:`用户 <.../../applications/general/users>`。"
 
-#: ../../content/administration/on_premise/source.rst:479
+#: ../../content/administration/on_premise/source.rst:484
 msgid ""
 "The user account used to log into Odoo's web interface differs from the "
 ":option:`--db_user <odoo-bin -r>` CLI argument."
 msgstr "用于登录 Odoo 网页界面的用户账户与 :option:`--db_user <odoo-bin -r>` CLI 参数不同。"
 
-#: ../../content/administration/on_premise/source.rst:483
+#: ../../content/administration/on_premise/source.rst:488
 msgid ""
 ":doc:`The list of CLI arguments for odoo-bin </developer/reference/cli>`"
 msgstr ":doc:`odoo-bin 的 CLI 参数列表</developer/reference/cli>`"
