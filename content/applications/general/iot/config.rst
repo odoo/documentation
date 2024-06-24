@@ -14,3 +14,4 @@ Configuration
    config/updating_iot
    config/troubleshooting
    config/windows_iot
+   config/ssh_connect
