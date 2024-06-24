@@ -264,9 +264,9 @@ Enter an alias in the :guilabel:`Email Alias` field. All documents sent to this 
 uploaded to the workspace using the chosen tags.
 
 .. note::
-   - Your **email server** must be configured to be able to create an **email alias**. If it isn't
-     configured yet, click :guilabel:`Choose or Configure Email Servers` and configure the
-     :doc:`mail server <../../applications/general/email_communication/email_servers>`.
+   - You need to have an alias domain set to be able to upload documents by email. If it isn't
+     existing yet, click :guilabel:`Choose or Configure Email Servers` and create an
+     :ref:`alias domain <email-outbound-alias-domain>`.
    - By default, the :guilabel:`Document Owner` is the person who uploads a file to a workspace, but
      you can select another user. You can also set a :guilabel:`Contact`, usually an external
      person, such as a partner.
