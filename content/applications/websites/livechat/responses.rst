@@ -4,7 +4,7 @@ Commands and canned responses
 
 In the Odoo *Live Chat* application, *commands* allow the user to perform specific actions both
 inside the chat window, and through other Odoo applications. The *Live Chat* app also includes
-*canned responses*. These are customized, pre-configured substitutions that allow users to replace
+*canned responses*. These are customized, preconfigured substitutions that allow users to replace
 shortcut entries in place of longer, well-thought out responses to some of the most common questions
 and comments.
 
@@ -14,17 +14,23 @@ throughout their conversations.
 Execute a command
 =================
 
-Live chat *commands* are keywords that trigger pre-configured actions. When a live chat *operator*
+Live chat *commands* are keywords that trigger preconfigured actions. When a live chat *operator*
 is participating in a conversation with a customer or website visitor, they can execute a command by
 typing `/`, followed by the command.
 
 Commands, and the resulting actions, are only visible in the conversation window for the live chat
-operator. A customer will not see any commands that an operator uses in a conversation from their
+operator. A customer does not see any commands that an operator uses in a conversation from their
 view of the chat.
 
-.. image:: responses/responses-ticket-link.png
-   :align: center
-   :alt: View of the chat window with a helpdesk ticket created in Odoo Live Chat.
+.. example::
+   During a conversation with a customer, a live chat operator executes the command to :ref:`create
+   a ticket <live-chat/ticket>`. After entering the command, `/ticket`, the system automatically
+   creates a ticket with the information from the conversation. It also includes a link to the new
+   ticket, so the operator can go there directly to add any additional information, if necessary.
+
+   .. image:: responses/responses-ticket-link.png
+      :align: center
+      :alt: View of the chat window with a helpdesk ticket created in Odoo Live Chat.
 
 More information about each available command can be found below.
 
@@ -45,32 +51,30 @@ entry types an operator can make is displayed.
    :alt: View of the message generated from using the /help command in Odoo Live Chat.
 
 .. seealso::
-  - :doc:`/applications/productivity/discuss`
-  - :doc:`/applications/productivity/discuss/team_communication`
+   - :doc:`/applications/productivity/discuss`
+   - :doc:`/applications/productivity/discuss/team_communication`
 
-Helpdesk & Helpdesk search
---------------------------
+Ticket & search tickets
+-----------------------
 
-The `/helpdesk` and `/helpdesk_search` commands allow operators to both create helpdesk tickets
-directly from a conversation, and search through existing tickets by keyword or ticket number.
+The `/ticket` and `/search_tickets` commands allow operators to create helpdesk tickets directly
+from a conversation, and search through existing tickets by keyword or ticket number.
 
 .. important::
-   The `/helpdesk` and `/helpdesk_search` commands can only be used if the *Helpdesk* app has been
-   installed, and *Live Chat* has been activated on a *Helpdesk* team. To activate :guilabel:`Live
-   Chat`, go to :menuselection:`Helpdesk application --> Configuration --> Teams`, and select a
-   team. Scroll to the :guilabel:`Channels` section and check the box labeled :guilabel:`Live Chat`.
+   The `/ticket` and `/search_tickets` commands can **only** be used if the *Helpdesk* app has been
+   installed, and *Live Chat* has been activated on a *Helpdesk* team. To activate *Live Chat*, go
+   to :menuselection:`Helpdesk app --> Configuration --> Helpdesk Teams`, and select a team. Scroll
+   to the :guilabel:`Channels` section, and check the box labeled, :guilabel:`Live Chat`.
+
+.. _live-chat/ticket:
 
 Create a ticket from a live chat
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If an operator types `/helpdesk` in the chat window, the conversation is used to create a *Helpdesk*
+If an operator types `/ticket` in the chat window, the conversation is used to create a *Helpdesk*
 ticket.
 
-.. important::
-   In version 16.3, the command to create a new ticket is `/ticket`. This only applies to databases
-   running version 16.3.
-
-After entering the `/helpdesk` command, type a title for the ticket into the chat window, then press
+After entering the `/ticket` command, type a title for the ticket into the chat window, then press
 `Enter`.
 
 .. image:: responses/helpdesk.png
@@ -85,22 +89,18 @@ The transcript from the conversation will be added to the new ticket, under the
 :guilabel:`Description` tab.
 
 To access the new ticket, click on the link in the chat window, or go to the
-:menuselection:`Helpdesk app` and click the :guilabel:`Tickets` button on the kanban card for the
+:menuselection:`Helpdesk app`, and click the :guilabel:`Tickets` button on the Kanban card for the
 appropriate team.
 
 Search for a ticket from a live chat
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If an operator types `/helpdesk_search` in the chat window, they can search through *Helpdesk*
-tickets by ticket number or keyword.
+If an operator types `/search_tickets` in the chat window, they can search through *Helpdesk*
+tickets, either by ticket number or keyword.
 
-.. important::
-   In version 16.3, the command to search through *Helpdesk* tickets is `/search_tickets`. This only
-   applies to databases running version 16.3.
-
-After entering the `/helpdesk_search` command, type a keyword or ticket number, then press `Enter`.
-If one or more related tickets are found, a list of links will be generated in the conversation
-window.
+After entering the `/search_tickets` command, type a keyword or ticket number, then press
+:kbd:`Enter`. If one or more related tickets are found, a list of links is generated in the
+conversation window.
 
 .. image:: responses/helpdesk-search.png
    :align: center
@@ -112,8 +112,8 @@ window.
 History
 -------
 
-If an operator types `/history` in the chat window, it will generate a list of the most recent pages
-the visitor has viewed on the website (up to 15).
+Typing `/history` in the chat window generates a list of the most recent pages the visitor has
+viewed on the website (up to fifteen pages).
 
 .. image:: responses/responses-history.png
    :align: center
@@ -160,9 +160,12 @@ end the conversation.
 Canned responses
 ================
 
-*Canned responses* are customizable inputs where a *shortcut* stands in for a longer response. An
-operator will enter the shortcut, and it will automatically be replaced by the expanded
-*substitution* response in the conversation.
+*Canned responses* are customizable inputs, where a typed shortcut populates a longer response. A
+user enters a keyword *shortcut*, which is then automatically replaced by the expanded
+*substitution* response. The shortcut is the keyword or key phrase that is to be replaced. The
+substitution is the longer message that replaces the shortcut.
+
+.. _livechat/created-canned-response:
 
 Create canned responses
 -----------------------
@@ -170,14 +173,19 @@ Create canned responses
 To create a new canned response, go to :menuselection:`Live Chat app --> Configuration --> Canned
 Responses --> New`.
 
-From here, type the shortcut command into the :guilabel:`Shortcut` field.
-
-Then, click into the :guilabel:`Substitution` field, and enter the custom message that will be sent
-to visitors in place of the shortcut. Click :guilabel:`Save`.
+Type a shortcut command in the :guilabel:`Shortcut` field. Next, click the :guilabel:`Substitution`
+field, and type the message that should replace the shortcut.
 
 .. tip::
-   Try to connect the shortcut to the topic of the substitution. The easier it is for the operators
-   to remember, the easier it will be to use the canned responses in conversations.
+   Try to connect the shortcut to the topic of the substitution. Not only does this make it easier
+   to use the responses, it prevents the list of responses from becoming disorganized and
+   overwhelming.
+
+In the :guilabel:`Description` field, add any information that provides context for this response,
+such as guidelines for when it should or should not be used.
+
+The :guilabel:`Last Used` field keeps track of the date and time each response was most recently
+used. This field **cannot** be edited.
 
 Use canned responses in a live chat conversation
 ------------------------------------------------
