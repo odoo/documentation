@@ -152,7 +152,7 @@ Electrónicos)` incoming email server.
 .. important::
    In order to receive your SII documents, it's necessary to set up your own email server. More
    information on how to do this can be found in this documentation:
-   :doc:`../../general/email_communication/email_servers`
+   :doc:`../../general/email_communication`
 
 Begin by clicking :guilabel:`Configure DTE Incoming Email`, then click :guilabel:`New` to add a
 server and fill in the following fields:
