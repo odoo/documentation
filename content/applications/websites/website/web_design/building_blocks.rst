@@ -13,6 +13,8 @@ pages. Four types of building blocks are available depending on their use:
 .. seealso::
    `Odoo Tutorial: Design your first webpage <https://www.odoo.com/slides/slide/design-your-first-web-page-1667?fullscreen=1>`_
 
+.. _websites/website/web_design/building_blocks:
+
 Adding a building block
 =======================
 
