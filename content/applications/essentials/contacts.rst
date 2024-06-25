@@ -1,3 +1,5 @@
+:show-content:
+
 ========
 Contacts
 ========
@@ -269,3 +271,8 @@ in the main contacts page, but they can still be searched for with the :guilabel
    - :doc:`Add different addresses in CRM <../sales/sales/send_quotations/different_addresses>`
    - `Odoo's eLearning Contacts tutorial
      <https://www.odoo.com/slides/slide/contacts-2527?fullscreen=1>`_
+
+.. toctree::
+   :titlesonly:
+
+   contacts/merge
