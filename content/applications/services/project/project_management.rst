@@ -13,6 +13,8 @@ into tasks, which are categorized on a whiteboard according to what production p
    `Odoo Tutorials: Kanban Project Management
    <https://www.odoo.com/slides/slide/kanban-project-management-1664>`_
 
+.. _project_management/configuration:
+
 Configuration
 =============
 
