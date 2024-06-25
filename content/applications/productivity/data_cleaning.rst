@@ -202,9 +202,117 @@ Click on the :icon:`fa-clone` :guilabel:`Duplicates` smart button to manage thes
 Recycle records
 ===============
 
+Use the recycle records feature to rid the database of old and outdated records.
+
 On the :guilabel:`Field Recycle Records` dashboard (:menuselection:`Data Cleaning app --> Recycle
 Records`), Odoo detects records that can be archived or deleted, by matching conditions within the
-records set by the recycle record's rules.
+records set by the :ref:`recycle record's rules <data_cleaning/recylce-rule>`.
+
+.. image:: data_cleaning/data-cleaning-recycle.png
+   :align: center
+   :alt: Field Recycle Records dashboard in the Data Cleaning application.
+
+The :guilabel:`RULE` sidebar lists each of the active recycle record rules, and displays the total
+number of records detected beside each rule.
+
+By default, the :guilabel:`All` option is selected. Records are displayed in the list view, with the
+following columns:
+
+- :guilabel:`Record ID`: the ID of the original record.
+- :guilabel:`Record Name`: the name or title of the original record.
+
+Select a specific rule in the :guilabel:`RULE` sidebar to filter the duplicate records.
+
+To recycle records, click on the :icon:`fa-check` :guilabel:`Validate` button on the row of the
+record.
+
+Upon doing so, the record is recycled, depending on how the rule is configured, to be either
+archived or deleted from the database.
+
+.. tip::
+   Discard groupings by clicking the :icon:`fa-times` :guilabel:`Discard` button. Upon doing so, the
+   record is hidden from the list and won't be detected by the recycle rule again in the future.
+
+   View discarded records by selecting the :guilabel:`Discarded` filter from the :ref:`Search...
+   <search/filters>` bar.
+
+.. _data_cleaning/recylce-rule:
+
+Recycle record rules
+--------------------
+
+The :guilabel:`Recycle Records Rules` page (:menuselection:`Data Cleaning app --> Configuration -->
+Rules: Recycle Records`) is where the conditions for records to be recycled can be set.
+
+These rules can be configured for each model in the database, and with varying levels of
+specificity.
+
+.. tip::
+   The recycle rules run once every day, by default, as part of a scheduled action chron (*Data
+   Recycle: Clean Records*). However, each rule can be :ref:`ran manually
+   <data-cleaning/run-recycle-rule>` anytime.
+
+By default, no recycle record rules exist. Select the :guilabel:`New` button to create a new rule.
+
+On the recycle record rule form, first choose a :guilabel:`Model` for this rule to target. Selecting
+a model updates the rule title to the chosen model.
+
+Optionally, configure a :guilabel:`Filter` to specify the records eligible for this rule. The number
+of eligible records is shown in the :icon:`oi-arrow-right` :guilabel:`# record(s)` link.
+
+Next, configure the field and time range for how the rule detects the records to recycle:
+
+- :guilabel:`Time Field`: select a field from the model to base the time (:dfn:`Delta`).
+- :guilabel:`Delta`: type the length of time, must be a whole number (e.g. `7`).
+- :guilabel:`Delta Unit`: select the unit of time (:guilabel:`Days`, :guilabel:`Weeks`,
+  :guilabel:`Months`, or :guilabel:`Years`).
+
+Then, select a :guilabel:`Recycle Mode`:
+
+- :guilabel:`Manual`: requires each detected record to be manually recycled, also enables the
+  :guilabel:`Notify Users` field.
+- :guilabel:`Automatic`: automatically merges recycles groupings, without notifying users.
+
+Lastly, select a :guilabel:`Recycle Action` to either :guilabel:`Archive` or :guilabel:`Delete`
+records. If :guilabel:`Delete` is selected, choose whether or not to :guilabel:`Include Archived`
+records in the rule.
+
+With the rule's configuration complete, either close the rule form, or :ref:`run the rule manually
+<data-cleaning/run-recycle-rule>` to instantly capture records to recycle.
+
+.. example::
+   A recycle rule can be configured to delete archived leads and opportunities that were last
+   updated a year ago with a specific lost reason by using the following configuration:
+
+   - :guilabel:`Model`: :guilabel:`Lead/Opportunity`
+   - :guilabel:`Filter`:
+
+     - `Active` `is` `not set`
+     - `Lost Reason` `is in` `Too expensive`
+
+   - :guilabel:`Time Field`: :guilabel:`Last Updated on (Lead/Opportunity)`
+   - :guilabel:`Delta`: `1`
+   - :guilabel:`Delta Unit`: :guilabel:`Years`
+   - :guilabel:`Recycle Mode`: :guilabel:`Automatic`
+   - :guilabel:`Recycle Action`: :guilabel:`Delete`
+   - :guilabel:`Include Archived`: :icon:`fa-check-square`
+
+   .. image:: data_cleaning/data-cleaning-recycle-rule.png
+      :align: center
+      :alt: Recycle records rule form for a lead/opportunity.
+
+.. _data-cleaning/run-recycle-rule:
+
+Manually run a recycle rule
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To manually run a specific recycle rule at any time, navigate to :menuselection:`Data Cleaning
+app --> Configuration --> Rules: Recycle Records`, and select the rule to run.
+
+Then, on the rule form, select the :guilabel:`Run Now` button on the top-left. Upon doing so,
+the :icon:`fa-bars` :guilabel:`Records` smart button displays the number of records captured.
+
+Click on the :icon:`fa-bars` :guilabel:`Records` smart button to manage these records.
 
 Field cleaning
 ==============
