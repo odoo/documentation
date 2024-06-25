@@ -314,12 +314,150 @@ the :icon:`fa-bars` :guilabel:`Records` smart button displays the number of reco
 
 Click on the :icon:`fa-bars` :guilabel:`Records` smart button to manage these records.
 
+.. _data-cleaning/field-cleaning:
+
 Field cleaning
 ==============
 
-On the :guilabel:`Field Cleaning Records* dashboard (:menuselection:`Data Cleaning app --> Field
+Use the field cleaning feature to maintain consistent formatting of names, phone numbers, IDs and
+more throughout a database.
+
+On the :guilabel:`Field Cleaning Records` dashboard (:menuselection:`Data Cleaning app --> Field
 Cleaning`), Odoo suggests formatting changes to data in fields of a record, to follow a convention
 set by the field cleaning rules.
+
+.. image:: data_cleaning/data-cleaning-field.png
+   :align: center
+   :alt: Field Cleaning Records dashboard in the Data Cleaning application.
+
+The :guilabel:`CLEANING RULE` sidebar lists each of the active cleaning rules, and displays the
+total number of records detected beside each rule.
+
+By default, the :guilabel:`All` rule is selected. Records are displayed in the list view, with the
+following columns:
+
+- :guilabel:`Record ID`: the ID of the original record.
+- :guilabel:`Record Name`: the name or title of the original record.
+- :guilabel:`Field`: the original record's field that contains the value to format.
+- :guilabel:`Current`: the current value in the field of the original record.
+- :guilabel:`Suggested`: the suggested formatted value in the field of the original record.
+
+To clean and format records, click on the :icon:`fa-check` :guilabel:`Validate` button on the row of
+the record.
+
+Upon doing so, the record is formatted and/or cleaned.
+
+.. tip::
+   Discard records by clicking the :icon:`fa-times` :guilabel:`Discard` button. Upon doing so, the
+   record is hidden from the list and won't be detected by the field cleaning rule again in the
+   future.
+
+   View discarded records by selecting the :guilabel:`Discarded` filter from the :ref:`Search...
+   <search/filters>` bar.
+
+
+.. _data_cleaning/field-cleaning-rule:
+
+Field cleaning rules
+--------------------
+
+The :guilabel:`Field Cleaning Rules` page (:menuselection:`Data Cleaning app --> Configuration -->
+Rules: Field Cleaning`) is where the conditions for fields to be cleaned and formatted can be set.
+
+These rules can be configured for each model in the database, and with varying levels of
+specificity.
+
+.. tip::
+   The field cleaning rules run once every day, by default, as part of a scheduled action chron
+   (*Data Cleaning: Clean Records*). However, each rule can be :ref:`ran manually
+   <data-cleaning/run-field-cleaning-rule>` anytime.
+
+By default, a :guilabel:`Contact` rule exists to format and clean up the *Contacts* app records.
+Select the :guilabel:`Contact` record to make edits, or select the :guilabel:`New` button to create
+a new rule.
+
+On the field cleaning rule form, first choose a :guilabel:`Model` for this rule to target. Selecting
+a model updates the rule title to the chosen model.
+
+Next, configure at least one rule by clicking :guilabel:`Add a line` in the :guilabel:`Rules`
+section.
+
+Upon doing so, a :guilabel:`Create Rules` popover window appears with the following fields to
+configure:
+
+- :guilabel:`Field To Clean`: select a field from the model to assign to an action.
+- :guilabel:`Action`: choose one of the following actions:
+
+  - :guilabel:`Trim Spaces`: reveals the :guilabel:`Trim` field to select the :guilabel:`All Spaces`
+    or :guilabel:`Superfluous Spaces` option. Leading, trailing, and successive spaces are
+    considered superfluous.
+
+    .. spoiler:: Trim examples
+
+        The contact name `Dr.  John   Doe` can be formatted with the following :guilabel:`Trim`
+        options:
+
+        - :guilabel:`All Spaces`: `DR.JohnDoe`
+        - :guilabel:`Superfluous Spaces`: `DR. John Doe`
+
+  - :guilabel:`Set Type Case`: reveals the :guilabel:`Case` field to select either :guilabel:`First
+    Letters to Uppercase`, :guilabel:`All Uppercase`, or :guilabel:`All Lowercase`.
+
+    .. spoiler:: Case examples
+
+       The lead/opportunity title `lumber inc, Lorraine douglas` can be formatted with the following
+       :guilabel:`Case` options:
+
+       - :guilabel:`First Letters to Uppercase`: `Lumber Inc, Lorraine Douglas`
+       - :guilabel:`All Uppercase`: `LUMBER INC, LORRAINE DOUGLAS`
+       - :guilabel:`All Lowercase`: `lumber inc, lorraine douglas`
+
+  - :guilabel:`Format Phone`: converts the phone number to an international country format.
+
+    .. spoiler:: Format Phone examples
+
+       - Belgium: `061928374` :icon:`fa-long-arrow-right` `+32 61 92 83 74`
+       - United States: `800 555-0101` :icon:`fa-long-arrow-right` `+1 800-555-0101`
+
+  - :guilabel:`Scrap HTML`: converts :abbr:`HTML (HyperText Markup Language)` to plain text.
+
+    .. spoiler:: Scrap HTML example
+
+       .. code-block:: html
+          :caption: HTML text
+
+          <h1>John Doe</h1>
+          <p>Lorem ipsum dolor sit <a href="https://example.com">amet</a>.</p>
+
+       .. code-block:: text
+          :caption: Plain text
+
+          **John Doe** Lorem ipsum dolor sit amet [1] .[1] https://example.com
+
+  Once a field and action are selected, click :guilabel:`Save` to close the :guilabel:`Create Rules`
+  popover window.
+
+Then, select a :guilabel:`Cleaning Mode`:
+
+- :guilabel:`Manual`: requires each detected field to be manually cleaned, also enables the
+  :guilabel:`Notify Users` field.
+- :guilabel:`Automatic`: automatically cleans fields without notifying users.
+
+With the rule's configuration complete, either close the rule form, or :ref:`run the rule manually
+<data-cleaning/run-field-cleaning-rule>` to instantly capture fields to clean.
+
+.. _data-cleaning/run-field-cleaning-rule:
+
+Manually run a field cleaning rule
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To manually run a specific field cleaning rule at any time, navigate to :menuselection:`Data
+Cleaning app --> Configuration --> Rules: Field Cleaning`, and select the rule to run.
+
+Then, on the rule form, select the :guilabel:`Clean` button on the top-left. Upon doing so,
+the :icon:`fa-bars` :guilabel:`Records` smart button displays the number of records captured.
+
+Click on the :icon:`fa-bars` :guilabel:`Records` smart button to manage these records.
 
 .. _data_cleaning/merge-action-manager:
 
