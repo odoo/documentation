@@ -51,10 +51,46 @@ To initialize the OSCU:
 
 .. Important::
    If your device has **already been initialized** (through another ERP, for example), enable the
-   :doc:`../../general/developer_mode`, go to the :guilabel:`eTIMS` tab, and enter the key
-   obtained through a previous initialization in the :guilabel:`Device Communication Key` field.
-   Click :guilabel:`Save manually`, then :guilabel:`Initialize OSCU` (which may take a moment to
-   become available).
+   :doc:`../../general/developer_mode`, go to the :guilabel:`eTIMS` tab, and enter the key obtained
+   through a previous initialization in the :guilabel:`Device Communication Key` field. Click
+   :guilabel:`Save manually`, then :guilabel:`Initialize OSCU` (which may take a moment to become
+   available).
+
+Once the **OSCU module** has been :ref:`initialized <kenya/initialization>`, an OSCU serial number
+is generated for each company on that database with its **country** set to :guilabel:`Kenya`. The
+serial number is generated based on the VAT number of the company (regardless of its validity). It
+is a unique and sequential serial number starting with the prefix `ODOO` followed by the company's
+**VAT number** and a sequence of numbers.
+
+Registering on eTIMS
+--------------------
+
+Taxpayers *must* sign up and create an account on the `KRA portal <https://etims.kra.go.ke/basic/login/indexLogin>`_.
+If you do not have an account yet:
+
+#. Sign up, enter your **PIN**, and verify that all information is correct, including your phone
+   number, email address, and postal address. Correct any errors on the `iTax page
+   <https://itax.kra.go.ke/KRA-Portal/>`_.
+#. An :abbr:`OTP (One-time Password)` is sent to the phone number provided. Unblock promotional
+   messages if you do not receive it.
+#. Upload the **business owner ID** *or* **director's ID** (as listed on iTax), along with the
+   filled-out and signed **commitment form** .
+#. On the **eTIMS dashboard**, click :guilabel:`Service request` at the top of the page. Select
+   :guilabel:`OSCU` as the **eTIMS type**, enter `Odoo KE LTD` as the third-party integrator, and
+   enter your company's OSCU serial number retrieved earlier.
+
+.. note::
+   Service request approvals are usually quick. If there's a delay, contact the eTIMS operation
+   or KRA office.
+
+.. admonition:: Commitment form
+
+   - Part 1: Fill in the taxpayer's information.
+   - Part 2: Fill in the business owner's *or* director's information.
+   - Part 3: Fill in your unique serial number found in Odoo.
+   - Part 4: Tick **OSCU**, enter Odoo KE LTD PIN `PO52112956W`, and enter the Odoo version you're
+     using (17.0 or onwards).
+   - Part 5: Check the mandatory boxes, enter a date, and sign.
 
 eTIMS codes
 -----------
