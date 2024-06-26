@@ -47,9 +47,9 @@ To configure the remaining tabs on the channel detail form (:ref:`Operators
 .. tip::
    The channel detail form for any channel can be accessed by navigating back to the
    :guilabel:`Website Live Chat Channels` dashboard, via the breadcrumbs. Find the Kanban card for
-   the appropriate live chat channel, hover over it, and then click on the :guilabel:`⋮ (three
-   dots)` icon to open the drop-down menu. Click :guilabel:`Configure Channel` to open the channel
-   detail form.
+   the appropriate live chat channel, hover over it, and then click on the :icon:`fa-ellipsis-v`
+   :guilabel:`(vertical ellipsis)` icon to open the drop-down menu. Click :guilabel:`Configure
+   Channel` to open the channel detail form.
 
 .. _livechat/operators-tab:
 
@@ -113,8 +113,8 @@ text bubble when the live chat button appears on the website.
 The :guilabel:`Livechat Button Color` alters the color of the live chat button as it appears on the
 website. To change the color, click on a color bubble to open the color selection window, then click
 and drag the circle along the color gradient. Click out of the selection window once complete. Click
-the :guilabel:`🔁 (refresh)` icon to the right of the color bubbles to reset the colors to the
-default selection.
+the :icon:`fa-refresh` :guilabel:`(refresh)` icon to the right of the color bubbles to reset the
+colors to the default selection.
 
 .. tip::
    Color selection, for the button or header, can be made manually using a slider or through RGB,
@@ -239,100 +239,12 @@ are redirected to a new chat window.
    :align: center
    :alt: View of the widget tab for Odoo Live Chat.
 
-Participate in a conversation
-=============================
-
-As explained above, *operators* are the users who respond to live chat requests from customers. The
-information below outlines the necessary steps for operators participating in live chat
-conversations on an Odoo database.
-
-Set an online chat name
------------------------
-
-Before participating in a live chat, operators may choose to update their *Online Chat Name*. This
-is the name that is displayed to site visitors in the live chat conversation.
-
-To update the :guilabel:`Online Chat Name`, click on the user avatar in the top-right corner of any
-page in the database. Select :guilabel:`My Profile` from the drop-down menu to open the profile
-page. On the right side of the :guilabel:`Preferences` tab, locate the :guilabel:`Online Chat Name`
-field, and enter a preferred name.
-
-If a user's :guilabel:`Online Chat Name` is not set, the name displayed defaults to the user's name
-that is designated on their profile page.
-
-.. example::
-   A user has their full name as their :guilabel:`User Name`, but they do not want to include their
-   last name in a live chat conversation. They would then set their :guilabel:`Online Chat Name` to
-   include only their first name.
-
-   .. image:: livechat/online-chat-name.png
-      :align: center
-      :alt: View of user profile in Odoo, emphasizing the Online Chat name field.
-
-Set online chat languages
--------------------------
-
-If an operator speaks multiple languages, they can add this information to their user profile. This
-information can then be used to determine what conversations the operator is assigned. A visitor's
-language is determined, via their browser's language settings.
-
-To add *Online Chat Languages*, click on the user avatar in the top-right corner of any page in the
-database. Select :guilabel:`My Profile` from the drop-down menu to open the profile page. On the
-right side of the :guilabel:`Preferences` tab, click into the :guilabel:`Online Chat Language`
-field, and select one or more languages from the drop-down menu.
-
-.. note::
-   Conversations are assigned to operators based on a number of criteria, including availability and
-   the number of ongoing conversations. While the operator's main language and additional languages
-   are taken into consideration, they do **not** supersede all other criteria.
-
-Join or leave a channel
------------------------
-
-To join a live chat channel, go to the :menuselection:`Live Chat app --> Channels`, and click the
-:guilabel:`Join` button on the Kanban card for the appropriate channel.
-
-Any channel where the user is currently active shows a :guilabel:`Leave` button. Click this button
-to disconnect from the channel.
-
-.. image:: livechat/leave-channel.png
-   :align: center
-   :alt: View of a channel form and the option to join a channel for Odoo Live Chat.
-
-.. important::
-   Operators that do not show any activity in Odoo for more than thirty minutes are considered
-   disconnected, and subsequently removed from the channel.
-
-Manage live chat requests
--------------------------
-
-When an operator is active in a channel, chat windows open in the bottom-right corner of the
-screen, no matter where they are in the database. They can participate in conversations without
-leaving their current location.
-
-.. tip::
-   Conversations can also be accessed by clicking the :guilabel:`(comments)` icon in the menu bar.
-   bar.
-
-   .. image:: livechat/menu-bar.png
-      :align: center
-      :alt: View of the menu bar in Odoo emphasizing the comments icon.
-
-Live chat conversations can also be viewed by navigating to :menuselection:`Discuss app`. New
-conversations appear in bold under the :guilabel:`LIVECHAT` heading, located along the left panel.
-
-.. image:: livechat/managing-chat-responses.png
-   :align: center
-   :alt: View of the discuss application with a message sent through live chat in Odoo.
-
-Click on a conversation in the left panel to select it. This opens the conversation. From this
-view, an operator can participate in the chat the same as they would in the normal chat window.
-
 .. seealso::
    - :doc:`../productivity/discuss`
    - :doc:`livechat/responses`
    - :doc:`livechat/ratings`
    - :doc:`livechat/chatbots`
+   - :doc:`livechat/participate`
 
 .. toctree::
    :titlesonly:
@@ -341,3 +253,4 @@ view, an operator can participate in the chat the same as they would in the norm
    livechat/responses
    livechat/chatbots
    livechat/reports
+   livechat/participate
