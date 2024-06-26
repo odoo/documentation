@@ -27,8 +27,9 @@ Comparing similar leads and opportunities
 
 To compare the details of similar leads/opportunities, navigate to :menuselection:`CRM app -->
 Pipeline` or :menuselection:`CRM app --> Leads`. Open a lead or opportunity, and click the
-Doing so opens a Kanban view that only displays similar leads/opportunities. Click on a card to view
-the details for the lead/opportunity, and confirm if they should be merged.
+:guilabel:`Similar Leads` smart button. Doing so opens a Kanban view that only displays similar
+leads/opportunities. Click on a card to view the details for the lead/opportunity, and confirm if
+they should be merged.
 
 Merging similar leads and opportunities
 =======================================
@@ -40,14 +41,15 @@ Merging similar leads and opportunities
    of which record was created first.
 
 After confirming that the leads/opportunities should be merged, return to the Kanban view using the
-breadcrumb link, or by clicking the :guilabel:`Similar Leads` smart button. Click the :guilabel:`≣
-(view list)` icon to change to list view.
+breadcrumb link, or by clicking the :guilabel:`Similar Leads` smart button. Click the
+:icon:`oi-view-list` :guilabel:`(list)` icon to change to list view.
 
 Check the box on the left of the page for the leads/opportunities to be merged. Then, click the
-:guilabel:`⚙️ Actions` icon at the top of the page, to reveal a drop-down menu. From that drop-down
-menu, select the :guilabel:`Merge` option to merge the selected opportunities or leads.
+:icon:`fa-cog` :guilabel:`Actions` icon at the top of the page, to reveal a drop-down menu. From
+that drop-down menu, select the :guilabel:`Merge` option to merge the selected opportunities or
+leads.
 
-When :guilabel:`Merge` is selected from the :guilabel:`⚙️ Actions` drop-down menu, a
+When :guilabel:`Merge` is selected from the :icon:`fa-cog` :guilabel:`Actions` drop-down menu, a
 :guilabel:`Merge` pop-up modal appears. In that pop-up modal, under the :guilabel:`Assign
 opportunities to` heading, select a :guilabel:`Salesperson` and :guilabel:`Sales Team` from the
 appropriate drop-down menus.
