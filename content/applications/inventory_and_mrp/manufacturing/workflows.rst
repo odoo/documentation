@@ -15,3 +15,4 @@ Workflows
    workflows/unbuild_orders
    workflows/byproducts
    workflows/allocation
+   workflows/continuous_improvement
