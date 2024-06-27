@@ -22,6 +22,7 @@ Then, follow the corresponding documentation to configure your device:
 
 - :doc:`Adyen configuration <terminals/adyen>`
 - :doc:`Ingenico configuration <terminals/ingenico>`
+- :doc:`Razorpay configuration <terminals/razorpay>`
 - :doc:`SIX configuration <terminals/six>`
 - :doc:`Stripe configuration <terminals/stripe>`
 - :doc:`Vantiv configuration <terminals/vantiv>`
@@ -35,6 +36,7 @@ the POS <../payment_methods>`.
 
    terminals/adyen
    terminals/ingenico
+   terminals/razorpay
    terminals/six
    terminals/stripe
    terminals/vantiv
