@@ -27,6 +27,17 @@ and select a product to open the product form. In the :guilabel:`Sales` tab, ena
 .. image:: configuration/pos-available.png
    :alt: Making a product available in your POS.
 
+Use POS product categories
+==========================
+
+:menuselection:`Point of Sales --> Configuration --> PoS Product Categories`.
+
+- Click :guilabel:`Create`.
+- Fill the :guilabel:`Category Name` field and :guilabel:`Save`.
+- To create parent/children categories, create a new category and assign it a :guilabel:`Parent
+  Category`.
+- :menuselection:`Point of Sales --> Product --> Sales --> Category`.
+
 .. toctree::
    :titlesonly:
 
