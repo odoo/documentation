@@ -8,9 +8,9 @@ You can upload any file (max 64MB per file on Odoo Online) and organize them in 
 
 .. seealso::
    - `Odoo Documents: product page <https://www.odoo.com/app/documents>`_
-   - `Odoo Tutorials: Documents basics [video]
-     <https://www.odoo.com/slides/slide/documents-basics-674>`_
-   - `Odoo Tutorials: Using Documents with your Accounting App [video] <https://www.odoo.com/slides/slide/using-documents-with-your-accounting-app-675?fullscreen=1#>`_
+   - `Odoo Tutorials: Documents basics <https://www.odoo.com/slides/slide/documents-basics-6841?fullscreen=1>`_
+   - `Odoo Tutorials: Using Documents with your Accounting App
+     <https://www.odoo.com/slides/slide/accounting-integration-and-workflow-actions-6853?fullscreen=1>`_
 
 Configuration
 =============
