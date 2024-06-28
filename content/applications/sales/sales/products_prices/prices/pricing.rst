@@ -353,6 +353,110 @@ discount for each product line and the new price will automatically be calculate
    Positive values for :guilabel:`Disc.%` will apply a *discount*, while negative values can be
    used to *increase* the price.
 
+Discount button
+---------------
+
+In Odoo 17, with the *Discounts* setting enabled, a :guilabel:`Discount` button appears at the
+bottom of sales orders.
+
+.. image:: pricing/discount-button-sales-order.png
+   :align: center
+   :alt: The discount button located at the bottom of a sales order form in the Odoo Sales app.
+
+When the :guilabel:`Discount` button on a sales order is clicked, a :guilabel:`Discount` pop-up
+window appears.
+
+.. image:: pricing/discount-popup.png
+   :align: center
+   :alt: The Discount pop-up window that appears when the Discount button is clicked.
+
+On this pop-up window, configure the :guilabel:`Discount` percentage, and select one of the
+following discount options: :ref:`On All Order Lines <sales/all-order-lines>`, :guilabel:`Global
+Discount <sales/global-discount>`, or :guilabel:`Fixed Amount <sales/fixed-amount>`.
+
+.. _sales/all-order-lines:
+
+On All Order Lines
+~~~~~~~~~~~~~~~~~~
+
+When the :guilabel:`On All Order Lines` option is selected, Odoo provides the ability to add the
+specified discount percentage (configured in the :guilabel:`Discount` field of the pop-up window)
+on all existing order lines of the sales order.
+
+.. image:: pricing/all-order-lines-option.png
+   :align: center
+   :alt: The Discount pop-up window with the 'On All Order Lines' option selected.
+
+Once that selection has been made, and a desired discount percentage has been entered in the
+:guilabel:`Discount` field, click :guilabel:`Apply`.
+
+Doing so closes the pop-up window, and returns to the sales order, which now shows that same
+designated discount has been applied to all order lines of the sales order.
+
+.. image:: pricing/all-order-lines-option-so.png
+   :align: center
+   :alt: The All Order Lines discount applied to every line on a sales order in the Odoo Sales app.
+
+.. _sales/global-discount:
+
+Global Discount
+~~~~~~~~~~~~~~~
+
+When the :guilabel:`Global Discount` option is selected, Odoo adds a discount product to the order,
+which has the cumulative value that is equivalent to the specified discount percentage (configured
+in the :guilabel:`Discount` field of the pop-up window).
+
+.. image:: pricing/global-discount-option.png
+   :align: center
+   :alt: The Discount pop-up window with the 'Global Discount' option selected.
+
+Once that selection has been made, and a desired discount percentage has been entered in the
+:guilabel:`Discount` field, click :guilabel:`Apply`.
+
+Doing so closes the pop-up window, and returns to the sales order, which now shows a new
+:guilabel:`Discount` line in the :guilabel:`Order Lines` tab.
+
+In this example, since the total of the order is $600, and there is a 30% global discount, that
+specific line is added to the sales order with a -180 value (which is 30% of $600).
+
+.. image:: pricing/global-discount-option-so.png
+   :align: center
+   :alt: The sales order with the applied global discount option in the Odoo Sales application.
+
+.. important::
+   Any product added (or removed) *after* the discount is added does not affect the discount value
+   on the order line.
+
+.. _sales/fixed-amount:
+
+Fixed Amount
+~~~~~~~~~~~~
+
+When the :guilabel:`Fixed Amount` option is selected, the percentage designation in the
+:guilabel:`Discount` field turns to a monetary value (e.g. dollars), wherein a specific amount must
+be entered. This configured value is added as a discount line on the sales order.
+
+.. image:: pricing/fixed-amount-option.png
+   :align: center
+   :alt: The Fixed Amount option selected on the Discount pop-up window in the Odoo Sales application.
+
+Once that selection has been made, and a desired fixed amount discount has been entered in the
+:guilabel:`Discount` field, click :guilabel:`Apply`.
+
+Doing so closes the pop-up window, and returns to the sales order, which now shows a
+:guilabel:`Discount` line in the :guilabel:`Order Lines` tab with that configured fixed amount
+discount applied to the order.
+
+.. image:: pricing/fixed-amount-option-so.png
+   :align: center
+   :alt: The Fixed Amount option selected on the Discount pop-up window in the Odoo Sales application.
+
+.. note::
+   It is more beneficial to add this kind of discount once **all** desired products have been added
+   to a sales order. If there are changes made to the sales order *after* the discount is added,
+   make sure to change the value on the :guilabel:`Discount` line, or remove the line and the
+   discount again.
+
 .. _sales/advanced-price-rules:
 
 Advanced price rules
