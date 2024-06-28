@@ -12,3 +12,4 @@ Basic setup
    basic_setup/one_step_manufacturing
    basic_setup/two_step_manufacturing
    basic_setup/three_step_manufacturing
+   basic_setup/mo_costs
