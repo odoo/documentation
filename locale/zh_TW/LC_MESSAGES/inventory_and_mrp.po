@@ -8,17 +8,17 @@
 # Benson <Benson.Dr@Gmail.com>, 2023
 # 敬雲 林 <chingyun@yuanchih-consult.com>, 2023
 # Martin Trigaux, 2023
-# Tony Ng, 2024
 # Wil Odoo, 2024
+# Tony Ng, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-30 07:20+0000\n"
+"POT-Creation-Date: 2024-06-21 15:46+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
-"Last-Translator: Wil Odoo, 2024\n"
+"Last-Translator: Tony Ng, 2024\n"
 "Language-Team: Chinese (Taiwan) (https://app.transifex.com/odoo/teams/41243/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1237,14 +1237,14 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/uom.rst:21
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:22
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/package.rst:38
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:13
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:19
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:18
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:17
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/label_type.rst:13
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:12
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/multipack.rst:11
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/delivery_three_steps.rst:18
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_three_steps.rst:16
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/delivery_method.rst:17
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:12
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:49
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/batch_transfers.rst:22
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/cluster_picking.rst:48
@@ -2467,12 +2467,12 @@ msgid ""
 "Odoo *Inventory* is both an inventory application and a warehouse management"
 " system. The app allows users to easily manage lead times, automate "
 "replenishment, configure advanced routes, and more."
-msgstr ""
+msgstr "Odoo *庫存* 既是庫存應用程序，也是倉庫管理系統。用戶可通過該應用程序輕鬆管理交貨時間、自動補貨、配置高級路線等。"
 
 #: ../../content/applications/inventory_and_mrp/inventory.rst:14
 msgid ""
 "`Odoo Tutorials: Inventory <https://www.odoo.com/slides/inventory-24>`_"
-msgstr ""
+msgstr "`Odoo 教學：庫存 <https://www.odoo.com/slides/inventory-24>`_"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management.rst:5
 msgid "Product management"
@@ -2480,11 +2480,11 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment.rst:5
 msgid "Product replenishment"
-msgstr ""
+msgstr "產品補貨"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/mto.rst:3
 msgid "Replenish on order (MTO)"
-msgstr ""
+msgstr "按訂單補貨（MTO）"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/mto.rst:9
 msgid ""
@@ -2497,10 +2497,12 @@ msgid ""
 "sales order is created, regardless of the current stock level of the product"
 " being ordered."
 msgstr ""
+"*按訂單補貨* 又稱 "
+"*MTO*（按訂單製造），是一種補貨策略，每次為某一產品建立銷售訂單時，都會為該產品建立一個訂單草稿。對於從供應商處採購的產品，會建立一個報價請求（或稱詢價單，RFQ），而對於內部製造的產品，銷售訂單會觸發製造訂單建立。無論訂購產品的目前庫存水平如何，每次建立銷售訂單時，都會一併建立報價請求或製造訂單。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/mto.rst:17
 msgid "Unarchive the Replenish on Order (MTO) route"
-msgstr ""
+msgstr "取消封存按訂單補貨（MTO）路線"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/mto.rst:19
 msgid ""
@@ -2508,6 +2510,8 @@ msgid ""
 "is a somewhat niche workflow that is only used by certain companies. "
 "However, it is easy to unarchive the route in just a few simple steps."
 msgstr ""
+"預設情況下，Odoo 會將 |MTO| 路線設定為 *封存* 。這是因為 |MTO| "
+"是一個有點小眾的工作流程，只有少數公司使用。不過，只需幾個簡單的步驟，就可取消封存此路線。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/mto.rst:23
 msgid ""
@@ -2516,10 +2520,12 @@ msgid ""
 "button and select the :guilabel:`Archived` option. This shows all routes "
 "that are currently archived."
 msgstr ""
+"要執行此操作，請先前往 :menuselection:`庫存 --> 配置 --> 路線`。在 :guilabel:`路線` 頁面，按一下 "
+":guilabel:`篩選器` 按鈕，並選擇 :guilabel:`已封存` 選項。系統會顯示目前已封存的所有路線。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/mto.rst-1
 msgid "The archived filter on the Routes page."
-msgstr ""
+msgstr "路線頁面上的已封存項目篩選器。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/mto.rst:31
 msgid ""
@@ -2527,10 +2533,12 @@ msgid ""
 " the :guilabel:`Action` button to reveal a drop-down menu. From the drop-"
 "down menu, select :guilabel:`Unarchive`."
 msgstr ""
+"選取 :guilabel:`按訂單補貨（MTO）` 旁邊的勾選方格，然後按一下 :guilabel:`操作` 按鈕，以顯示下拉式選單。在該選單中，選擇 "
+":guilabel:`取消封存`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/mto.rst-1
 msgid "The unarchive action on the Routes page."
-msgstr ""
+msgstr "路線頁面上的取消封存操作。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/mto.rst:38
 msgid ""
@@ -2539,14 +2547,16 @@ msgid ""
 "available routes, including :guilabel:`Replenish on Order (MTO)`, which is "
 "now selectable on the inventory tab of each product page."
 msgstr ""
+"最後，移除 :guilabel:`搜尋⋯` 列中的 :guilabel:`已封存` 篩選器。現在，:guilabel:`路線` "
+"頁面將顯示所有可用的路線，包括 :guilabel:`按訂單補貨（MTO）`。MTO 現在可於每個產品頁面的庫存分頁中選擇。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/mto.rst-1
 msgid "The MTO route appears on the Routes page after unarchiving it."
-msgstr ""
+msgstr "取消封存後，MTO 路線會出現在「路線」頁面上。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/mto.rst:47
 msgid "Configure a product to use the MTO route"
-msgstr ""
+msgstr "配置產品以使用 MTO 路線"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/mto.rst:49
 msgid ""
@@ -2555,6 +2565,8 @@ msgid ""
 ":menuselection:`Inventory --> Products --> Products`, then select an "
 "existing product, or click :guilabel:`Create` to configure a new one."
 msgstr ""
+"由於 |MTO| 路線已取消封存，現在可以正確配置產品，以使用按訂單補貨。要執行此操作，請先前往 :menuselection:`庫存 --> 產品 "
+"--> 產品`，然後選擇一個現有產品，或按一下 :guilabel:`建立`，配置一個新產品。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/mto.rst:53
 msgid ""
@@ -2562,6 +2574,8 @@ msgid ""
 ":guilabel:`Replenish on Order (MTO)` route in the :guilabel:`Routes` "
 "section, along with one other route."
 msgstr ""
+"在產品頁面上，選擇 :guilabel:`庫存` 分頁，並在 :guilabel:`路線` 部分啟用 :guilabel:`按訂單補貨（MTO）` "
+"路線以及另一條路線。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/mto.rst:57
 msgid ""
@@ -2570,10 +2584,12 @@ msgid ""
 " replenish the product when an order is placed for it (buy it, manufacture "
 "it, etc.)."
 msgstr ""
+"除非同時選擇了其他路線，否則 :guilabel:`按訂單補貨（MTO）` 路線是 **不會生效** 的。這是因為 Odoo "
+"需要知道在下訂單時，是如何補充產品（例如採購、製造等）。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/mto.rst-1
 msgid "Select the MTO route and a second route on the Inventory tab."
-msgstr ""
+msgstr "在庫存分頁上選擇 MTO 路線及第二條路線。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/mto.rst:65
 msgid ""
@@ -2582,16 +2598,18 @@ msgid ""
 "makes the :guilabel:`Purchase` tab appear alongside the other settings tabs "
 "below."
 msgstr ""
+"如果產品是從供應商處購買，以履行銷售訂單，請選取產品名稱下的 :guilabel:`可以採購` 勾選方格。這樣，:guilabel:`採購` "
+"分頁便會與下面的其他設定分頁一起出現。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/mto.rst:69
 msgid ""
 "Select the :guilabel:`Purchase` tab and specify a :guilabel:`Vendor` and the"
 " :guilabel:`Price` they sell the product for."
-msgstr ""
+msgstr "前往 :guilabel:`採購` 分頁，並指定 :guilabel:`供應商` 及其銷售產品的 :guilabel:`價格`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/mto.rst-1
 msgid "Enable \"Can be Purchased\" and specify a vendor."
-msgstr ""
+msgstr "啟用「可以採購」，並指定供應商。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/mto.rst:76
 msgid ""
@@ -2600,6 +2618,8 @@ msgid ""
 "smart button at the top of the screen, then click :guilabel:`Create` on the "
 ":guilabel:`Bill of Materials` page to configure a new |BOM| for the product."
 msgstr ""
+"如果產品是透過製造而獲得，請確保為其配置了物料清單（BOM）。要執行此操作，請按一下螢幕頂部的 :guilabel:`物料清單` 智能按鈕，然後按一下 "
+":guilabel:`物料清單` 頁面上的 :guilabel:`建立`，為產品配置新的 BOM。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/mto.rst:81
 msgid ""
@@ -2607,14 +2627,16 @@ msgid ""
 "on the :guilabel:`Components` tab, along with the operations required for "
 "the manufacturing workflow on the :guilabel:`Operations` tab."
 msgstr ""
+"在空白的 |BOM| 表單中，在 :guilabel:`組件` 分頁加入用於製造產品的組件，並在 :guilabel:`操作` "
+"分頁加入製造流程所需的操作。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/mto.rst:85
 msgid "Finally, click :guilabel:`Save` to save the |BOM|."
-msgstr ""
+msgstr "最後，按一下 :guilabel:`儲存`，以保存 |BOM|。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/mto.rst:88
 msgid "Fulfill a sales order using the MTO route"
-msgstr ""
+msgstr "使用 MTO 路線履行銷售訂單"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/mto.rst:90
 msgid ""
@@ -2623,12 +2645,14 @@ msgid ""
 " The type of order created depends on the second route selected in addition "
 "to |MTO|."
 msgstr ""
+"將產品配置為使用 |MTO| 路線後，每次確認包含該產品的銷售訂單時，都會為其建立補貨訂單。建立的訂單類型，會取決於除 |MTO| "
+"之外已選擇的第二條路線。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/mto.rst:94
 msgid ""
 "For example, if *Buy* was the second route selected, then a purchase order "
 "is created upon confirmation of a sales order."
-msgstr ""
+msgstr "例如，如果 *採購* 是選擇的第二個路線，那麼在確認銷售訂單後，會建立採購訂單。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/mto.rst:98
 msgid ""
@@ -2637,6 +2661,7 @@ msgid ""
 "there is enough stock of the product on-hand to fulfill the sales order, "
 "without buying or manufacturing additional units of it."
 msgstr ""
+"產品的 |MTO| 路線啟用後，在確認銷售訂單時，必然會建立補貨訂單。即使手上有足夠的產品庫存去履行銷售訂單，也是這種情況，無需購買或生產額外的產品。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/mto.rst:102
 msgid ""
@@ -2645,6 +2670,8 @@ msgid ""
 "navigating to the :menuselection:`Sales` app, then click :guilabel:`Create`,"
 " which opens a blank quotation form."
 msgstr ""
+"|MTO| 路線可與其他多種路線配合使用；本頁的工作流程將以 *採購* 路線為例。首先，請前往 :menuselection:`銷售` "
+"應用程式，然後按一下 :guilabel:`建立`，開啟一張空白報價表單。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/mto.rst:106
 msgid ""
@@ -2653,13 +2680,16 @@ msgid ""
 " product that has been configured to use the *MTO* and *Buy* routes. Click "
 ":guilabel:`Confirm` and the quotation is turned into a sales order."
 msgstr ""
+"在空白報價單上，加入 :guilabel:`客戶`，然後在 :guilabel:`訂單資料行` 分頁按一下 "
+":guilabel:`加入產品`，並輸入已配置為使用 *MTO* 及 *採購* 路線的產品。之後，按一下 "
+":guilabel:`確認`，報價單就會變成銷售訂單。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/mto.rst:110
 msgid ""
 "A :guilabel:`Purchase` smart button now appears in the top-right corner of "
 "the sales order. Clicking it opens the |RFQ| associated with the sales "
 "order."
-msgstr ""
+msgstr "現在，銷售訂單的右上角會出現一個 :guilabel:`採購` 智能按鈕。按下該按鈕可打開與銷售訂單相關聯的 |RFQ|（報價請求）。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/mto.rst:113
 msgid ""
@@ -2668,6 +2698,8 @@ msgid ""
 "the top of the purchase order. Once the products are received, click "
 ":guilabel:`Receive Products` to register them into inventory."
 msgstr ""
+"按一下 :guilabel:`確認訂單`，確認 |RFQ| 並將其轉換為採購訂單。採購訂單頂部會出現綠色的 :guilabel:`接收產品` "
+"按鈕。完成收貨後，請按一下 :guilabel:`接收產品`，將其登記至庫存記錄中。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/mto.rst:117
 msgid ""
@@ -2675,6 +2707,8 @@ msgid ""
 "navigating to :menuselection:`Sales --> Orders --> Orders`, and selecting "
 "the sales order."
 msgstr ""
+"按一下 :guilabel:`SO` 麵包屑，或前往 :menuselection:`銷售應用程式 --> 訂單 --> 訂單` "
+"並選擇銷售訂單，便可返回銷售訂單。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/mto.rst:120
 msgid ""
@@ -2682,10 +2716,11 @@ msgid ""
 " order to be taken to the delivery order. Once the products have been "
 "shipped to the customer, click :guilabel:`Validate` to confirm the delivery."
 msgstr ""
+"最後，按一下訂單右上方的 :guilabel:`送貨` 智能按鈕，進入交貨訂單。產品送達客戶後，按一下 :guilabel:`驗證` 確認完成送貨。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:3
 msgid "Reordering rules"
-msgstr ""
+msgstr "重新訂購規則"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:7
 msgid ""
@@ -2704,22 +2739,24 @@ msgid ""
 "created instead. This is the case regardless of the selected replenishment "
 "route."
 msgstr ""
+"你可根據用於補貨的路線，為每項產品配置重新訂購規則。如果產品使用 *購買* 路線，觸發重新訂購規則時會建立報價請求（RFQ）。如果產品使用 *製造* "
+"路線，便會建立製造訂單（MO）。無論選擇哪一種補貨路線，情況都是如此。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:17
 msgid ""
 "`Odoo Tutorials: Automatic Reordering Rules "
 "<https://www.youtube.com/watch?v=XEJZrCjoXaU>`_"
-msgstr ""
+msgstr "`Odoo 教學：自動重新訂購規則 <https://www.youtube.com/watch?v=XEJZrCjoXaU>`_"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:18
 msgid ""
 "`Odoo Tutorials: Manual Reordering Rules "
 "<https://www.youtube.com/watch?v=deIREJ1FFj4>`_"
-msgstr ""
+msgstr "`Odoo 教學：手動重新訂購規則 <https://www.youtube.com/watch?v=deIREJ1FFj4>`_"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:21
 msgid "Configure products for reordering rules"
-msgstr ""
+msgstr "為重新訂購規則配置產品"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:23
 msgid ""
@@ -2728,6 +2765,8 @@ msgid ""
 "Products --> Products`, then select an existing product, or create a new one"
 " by clicking :guilabel:`New`."
 msgstr ""
+"要對產品使用重新訂購規則，必須正確配置該產品。請先前往 :menuselection:`庫存應用程式 --> 產品 --> "
+"產品`，然後選擇一項現有產品，或按一下 :guilabel:`新增` 以建立一個新產品。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:27
 msgid ""
@@ -2739,7 +2778,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst-1
 msgid "Set the Product Type as Storable."
-msgstr ""
+msgstr "將產品類型設為可儲存。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:35
 msgid ""
@@ -2747,10 +2786,11 @@ msgid ""
 "from the :guilabel:`Routes` section. Doing so tells Odoo which route to use "
 "to replenish the product."
 msgstr ""
+"之後，按一下 :guilabel:`庫存` 分頁，並從 :guilabel:`路線` 部分選擇一個或多個路線。這樣，Odoo 就會知道使用哪條路線補貨。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst-1
 msgid "Select one or more routes on the Inventory tab."
-msgstr ""
+msgstr "在庫存分頁，選擇一條或多條路線。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:42
 msgid ""
@@ -2761,10 +2801,13 @@ msgid ""
 "that they sell the product for, so that Odoo knows which company the product"
 " should be purchased from."
 msgstr ""
+"如果使用 :guilabel:`購買` 路線重新訂購產品，請確認產品名稱下的 :guilabel:`可購買` 勾選方格已選取。這樣就會顯示 "
+":guilabel:`採購` 分頁。按一下 :guilabel:`採購` 分頁，指定至少一個供應商及其產品售價，以便 Odoo "
+"知道應從哪家公司購買產品。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst-1
 msgid "Specify a vendor and price on the Purchase tab."
-msgstr ""
+msgstr "在採購分頁，指定供應商和價格。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:51
 msgid ""
@@ -2773,6 +2816,8 @@ msgid ""
 "is necessary because Odoo only creates manufacturing orders for products "
 "with a :abbr:`BoM (Bill of Materials)`."
 msgstr ""
+"如果使用 :guilabel:`製造` 路線為產品進行補貨，產品至少需要有一張相關的物料清單（BoM）。這一點很重要，因為 Odoo 只會為設有 "
+":abbr:`BoM (物料清單 Bill of Materials)` 的產品建立製造訂單。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:55
 msgid ""
@@ -2781,14 +2826,15 @@ msgid ""
 "product form, then click :guilabel:`New` to configure a new :abbr:`BoM (Bill"
 " of Materials)`."
 msgstr ""
+"如果產品未有 BoM，請點選產品表單頂部的 :guilabel:`物料清單` 智能按鈕，然後按一下 :guilabel:`新增`，以配置新的 BoM。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst-1
 msgid "The Bill of Materials smart button on a product form."
-msgstr ""
+msgstr "產品表單上的「物料清單」智能按鈕。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:64
 msgid "Create new reordering rules"
-msgstr ""
+msgstr "建立新的重新訂購規則"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:66
 msgid ""
@@ -2796,45 +2842,47 @@ msgid ""
 "--> Configuration --> Reordering Rules`, then click :guilabel:`New`, and "
 "fill out the new line as follows:"
 msgstr ""
+"要建立新的重新訂購規則，請前往 :menuselection:`庫存應用程式 --> 配置 --> 重新訂購規則`，然後按一下 "
+":guilabel:`新增`，並依照以下方式填寫新資料行："
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:69
 msgid ":guilabel:`Product`: The product that is replenished by the rule."
-msgstr ""
+msgstr ":guilabel:`產品`：規則會補充的產品。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:70
 msgid ":guilabel:`Location`: The location where the product is stored."
-msgstr ""
+msgstr ":guilabel:`位置`：存放產品的位置。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:71
 msgid ""
 ":guilabel:`Min Quantity`: The minimum quantity that can be forecasted "
 "without the rule being triggered. When forecasted stock falls below this "
 "number, a replenishment order for the product is created."
-msgstr ""
+msgstr ":guilabel:`最小數量`：在不觸發規則的情況下，可預測的最小數量。當預測庫存低於此數量時，系統會建立該產品的補貨訂單。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:74
 msgid ""
 ":guilabel:`Max Quantity`: The maximum quantity that stock is replenished up "
 "to."
-msgstr ""
+msgstr ":guilabel:`最大數量`：庫存可補充至的最大數量。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:75
 msgid ""
 ":guilabel:`Multiple Quantity`: Specify if the product should be replenished "
 "in batches of a certain quantity (e.g., a product could be replenished in "
 "batches of 20)."
-msgstr ""
+msgstr ":guilabel:`數量倍數`：表示產品是否應按照一定數量，逐個批次補充（例如，產品可能需要按每批次 20 件的方式補充）。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:77
 msgid ""
 ":guilabel:`UoM`: The unit of measure used for reordering the product. This "
 "value can simply be `Units` or a specific unit of measurement for weight, "
 "length, etc."
-msgstr ""
+msgstr ":guilabel:`計量單位`：用於重新訂購產品的量度單位。此值可以是 `件`，也可以是重量、長度等的特定計量單位。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst-1
 msgid "The form for creating a new reordering rule."
-msgstr ""
+msgstr "建立新的重新訂購規則的表單。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:85
 msgid ""
@@ -2848,15 +2896,15 @@ msgstr ""
 msgid ""
 "For advanced usage of reordering rules, learn about the following reordering"
 " rule fields:"
-msgstr ""
+msgstr "有關重新訂購規則的進階用法，請參閱以下重新訂購規則欄位的說明："
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:92
 msgid ":ref:`Trigger <inventory/product_management/trigger>`"
-msgstr ""
+msgstr ":ref:`觸發器 <inventory/product_management/trigger>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:93
 msgid ":ref:`Visibility days <inventory/product_management/visibility-days>`"
-msgstr ""
+msgstr ":ref:`可見日數 <inventory/product_management/visibility-days>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:94
 msgid ":ref:`Preferred route <inventory/product_management/route>`"
@@ -3162,7 +3210,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:3
 msgid "Selecting a replenishment strategy"
-msgstr ""
+msgstr "選擇補貨策略"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:10
 msgid ""
@@ -3172,22 +3220,24 @@ msgid ""
 "the automatic creation of a |PO| or |MO|. The choice of which strategy to "
 "use depends on the business's manufacturing and delivery processes."
 msgstr ""
+"在 Odoo 中，有兩種自動補充庫存的策略： *重新排序規則* 和 *按訂單生產（MTO）* "
+"途徑。雖然這兩種策略略有不同，但它們都有類似的結果：觸發自動創建 |PO| 或 |MO|。選擇使用哪種策略，要取決於企業的製造和交付流程。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:16
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations.rst:6
 msgid "Terminology"
-msgstr ""
+msgstr "術語"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:19
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:56
 msgid "Replenishment report and reordering rules"
-msgstr ""
+msgstr "補貨報告及重新訂購規則"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:21
 msgid ""
 "The replenishment report is a list of all products that have a negative "
 "forecast quantity."
-msgstr ""
+msgstr "補貨報告列出了預測數量為負數的所有產品。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:23
 msgid ""
@@ -3197,29 +3247,31 @@ msgid ""
 "automatically generates a purchase order with the quantity needed to reach "
 "the maximum stock level."
 msgstr ""
+"*訂貨規則* 用於確保產品始終有最低庫存量，以便生產產品和/或履行銷售訂單。當產品庫存達到最低水平時，Odoo "
+"會自動生成採購訂單，其中包含達到最高庫存水平所需的數量。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:28
 msgid ""
 "Reordering rules can be created and managed in the replenishment report, or "
 "from the product form."
-msgstr ""
+msgstr "重新排序規則可在補貨報告或產品表單中建立和管理。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:33
 msgid "Make to order"
-msgstr ""
+msgstr "按訂單生產"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:35
 msgid ""
 "*Make to order (MTO)* is a procurement route that creates a draft purchase "
 "order (or manufacturing order) each time a sales order is confirmed, "
 "**regardless of the current stock level**."
-msgstr ""
+msgstr "*按訂單生產（MTO）* 是一種採購途徑，每次銷售訂單確認後，都會建立一份採購訂單（或製造訂單）草稿， **無論目前的庫存水平如何** 。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:38
 msgid ""
 "Unlike products replenished using reordering rules, Odoo automatically links"
 " the sales order to the |PO| or |MO| generated by the |MTO| route."
-msgstr ""
+msgstr "與使用重新訂購規則補充的產品不同，Odoo 會自動將銷售訂單連結至由 |MTO| 路線生成的 |PO| 或 |MO|。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:41
 msgid ""
@@ -3228,24 +3280,26 @@ msgid ""
 " reordering rules, Odoo generates a draft |PO| or |MO| when the product's "
 "forecasted stock falls below the set minimum quantity."
 msgstr ""
+"重新訂購規則與 |MTO| 的另一個分別是，使用 |MTO| 時，Odoo 會在確認 |SO| 後，立即生成草稿 |PO| 或 "
+"|MO|。而使用重新訂購規則時，當產品的預測庫存低於設定的最小數量時，Odoo 就會生成草稿 |PO| 或 |MO|。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:45
 msgid ""
 "In addition, Odoo automatically adds quantities to the |PO| or |MO| as the "
 "forecast changes, so long as the |PO| or |MO| is not confirmed."
-msgstr ""
+msgstr "此外，只要 |PO| 或 |MO| 未確認，Odoo 會在預測發生變化時，自動將數量加入至 |PO| 或 |MO| 中。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:48
 msgid ""
 "The |MTO| route is the best replenishment strategy for products that are "
 "customized, and/or for products that have no stock kept on-hand."
-msgstr ""
+msgstr "對於客製化產品及/或沒有庫存的產品， |MTO| 路線會是最佳的補貨策略。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:58
 msgid ""
 "To access the replenishment report, go to :menuselection:`Inventory app --> "
 "Operations --> Replenishment.`"
-msgstr ""
+msgstr "要存取補貨報告，請前往 :menuselection:`庫存應用程序 --> 操作 --> 補貨`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:61
 msgid ""
@@ -3254,6 +3308,8 @@ msgid ""
 "Odoo assumes the :guilabel:`Min Quantity` and :guilabel:`Max Quantity` stock"
 " are both `0.00`"
 msgstr ""
+"預設情況下，補貨報告概覽畫面會顯示每項需要手動重新訂購的產品。如果產品沒有特定規則，Odoo 會假定 :guilabel:`最小數量` 及 "
+":guilabel:`最大數量` 庫存均為 `0.00`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:66
 msgid ""
@@ -3263,6 +3319,8 @@ msgid ""
 "normally, but also takes into account the purchase/manufacturing lead time "
 "and security lead time."
 msgstr ""
+"對於未有設定重新訂購規則的產品，Odoo 會根據已確認的銷售訂單、送貨和收據，去計算預測。對於有固定重新訂購規則的產品，Odoo "
+"會正常計算預測，但也會考慮採購/製造的前置時間，以及安全前置時間。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:72
 msgid ""
@@ -3274,6 +3332,9 @@ msgid ""
 "found in the :guilabel:`Bill of Materials` smart button at the top of the "
 "form."
 msgstr ""
+"建立新的重新訂購規則之前，請確保產品表單已配置 *供應商* 或 *物料清單* 。要檢查這一點，請前往 :menuselection:`庫存應用程式 "
+"--> 產品 --> 產品`，然後選擇產品，以打開其產品表單。供應商（如已配置）會在 :guilabel:`採購` "
+"分頁列出，物料清單（如已配置）會在表單頂部的 :guilabel:`物料清單` 智能按鈕中。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:78
 msgid ""
@@ -3283,12 +3344,14 @@ msgid ""
 "tracked, so Odoo cannot account for a consumable product in the "
 "replenishment report."
 msgstr ""
+"在產品表單的 :guilabel:`一般資訊` 分頁中，:guilabel:`產品類型` **必須** 設為 "
+":guilabel:`可儲存產品`。根據定義，系統不會追蹤消耗性產品的庫存水平，因此 Odoo 無法在補貨報告中說明消耗性產品的情況。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst-1
 msgid ""
 "Replenishment report listing all items needing to be purchased to meet "
 "current needs."
-msgstr ""
+msgstr "補貨報告，列出要滿足目前需求而需要購買的所有物品。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:87
 msgid ""
@@ -3299,6 +3362,9 @@ msgid ""
 "and a :guilabel:`Max Quantity` can be configured in the corresponding "
 "columns on the :guilabel:`Replenishment` report page, as well."
 msgstr ""
+"要從補貨報告中建立新的重新訂購規則，請進入 :menuselection:`庫存應用程式 --> 操作 --> 補貨`，按一下 "
+":guilabel:`建立`，並從 :guilabel:`產品` 直欄的下拉式選單中選擇所需的產品。如有必要，還可在 :guilabel:`補貨` "
+"報告頁面的相應直欄中，配置 :guilabel:`最小數量` 及 :guilabel:`最大數量`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:93
 msgid ""
@@ -3307,10 +3373,12 @@ msgid ""
 "product to open its product form. Click the :guilabel:`Reordering Rules` "
 "smart button, click :guilabel:`Create`, and fill out the fields."
 msgstr ""
+"要在產品表單中建立新的重新訂購規則，請進入 :menuselection:`庫存應用程式 --> 產品 --> "
+"產品`，然後選擇一個產品，以打開其產品表單。按一下 :guilabel:`重新訂購規則` 智能按鈕，再按 :guilabel:`建立`，然後填寫欄位。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:98
 msgid "Replenishment report fields"
-msgstr ""
+msgstr "補貨報告欄位"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:100
 msgid ""
@@ -3319,45 +3387,49 @@ msgid ""
 "icon on the far right side of the report, then click the checkbox next to a "
 "field to make it visible."
 msgstr ""
+"以下欄位位於 :guilabel:`補貨` 報告中。如果這些欄位未有顯示，請按一下報告最右側的 :guilabel:`⋮ （其他選項）` "
+"圖示，然後按一下欄位旁邊的勾選方格，使其可見。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:104
 msgid ":guilabel:`Product`: the product that requires a replenishment."
-msgstr ""
+msgstr ":guilabel:`產品`：需要補貨的產品。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:105
 msgid ""
 ":guilabel:`Location`: the specific location where the product is stored."
-msgstr ""
+msgstr ":guilabel:`位置`：存放產品的具體位置。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:106
 msgid ":guilabel:`Warehouse`: the warehouse where the product is stored."
-msgstr ""
+msgstr ":guilabel:`倉庫`：存放產品的倉庫。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:107
 msgid ":guilabel:`On Hand`: the amount of product currently available."
-msgstr ""
+msgstr ":guilabel:`手上數量`：目前可用的產品數量。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:108
 msgid ""
 ":guilabel:`Forecast`: the amount of product available after all current "
 "orders (sales, manufacturing, purchase, etc.) are taken into account."
-msgstr ""
+msgstr ":guilabel:`預測`：考慮所有目前訂單後（銷售、製造、採購等），剩餘可用的產品數量。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:110
 msgid ""
 ":guilabel:`Preferred Route`: how the product is procured, either "
 ":guilabel:`Buy`, :guilabel:`Manufactured`, :guilabel:`Dropship`, etc."
 msgstr ""
+":guilabel:`首選路線`：產品的採購/獲取方式，可以是 "
+":guilabel:`購買`、:guilabel:`製造`、:guilabel:`廠商直送` 等。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:112
 msgid ":guilabel:`Vendor`: the company from which the product is acquired."
-msgstr ""
+msgstr ":guilabel:`供應商`：購買產品的公司。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:113
 msgid ""
 ":guilabel:`Bill of Materials`: the bill of materials for the product (if one"
 " is configured)."
-msgstr ""
+msgstr ":guilabel:`物料清單`：產品的物料清單（如果已配置）。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:114
 msgid ""
@@ -3366,26 +3438,28 @@ msgid ""
 "below the :guilabel:`Min Quantity`) or :guilabel:`Manual` (only when the "
 "replenishment is requested)."
 msgstr ""
+":guilabel:`觸發器`：如何建立補貨。可以是 :guilabel:`自動`（在 :guilabel:`庫存` 數量低於 "
+":guilabel:`最小數量` 時自動建立），也可以是 :guilabel:`手動`（只在收到補貨請求時建立）。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:117
 msgid ""
 ":guilabel:`Procurement Group`: the reference number for how the product is "
 "being acquired, such as a sales order, purchase order, or manufacturing "
 "order."
-msgstr ""
+msgstr ":guilabel:`採購組別`：產品採購方式的參考編號，如銷售訂單、採購訂單或製造訂單。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:119
 msgid ""
 ":guilabel:`Min Quantity`: the minimum amount of product that should be "
 "available. When inventory levels goes below this number, the replenishment "
 "is triggered."
-msgstr ""
+msgstr ":guilabel:`最小數量`：產品的最小可用數量。當庫存水平低於此數量時，將觸發補貨。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:121
 msgid ""
 ":guilabel:`Max Quantity`: the amount of product that should be available "
 "after replenishing the product."
-msgstr ""
+msgstr ":guilabel:`最大數量`：補貨後的可用產品數量。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:123
 msgid ""
@@ -3394,6 +3468,8 @@ msgid ""
 ":guilabel:`Multiple Quantity` is set to `5`, and only 3 are needed, 5 "
 "products are replenished."
 msgstr ""
+":guilabel:`數量倍數`：如果產品只可按特定數量訂購，請輸入每個訂購單位的數量。例如，如果 :guilabel:`數量倍數` 設為 "
+"`5`，但其實只需要 3 件，仍會補充 5 件貨品。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:126
 msgid ""
@@ -3401,14 +3477,16 @@ msgid ""
 "will be ordered, if the :guilabel:`Order Once` or :guilabel:`Automate "
 "Orders` button is clicked."
 msgstr ""
+":guilabel:`待訂購`：目前需要的產品數量。如果按下 :guilabel:` 訂購一次` 或 :guilabel:`自動下單` "
+"按鈕，則將訂購該數量的產品。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:128
 msgid ":guilabel:`UoM`: the unit of measure used to acquire the product."
-msgstr ""
+msgstr ":guilabel:`計量單位`：獲取產品時使用的量度單位。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:129
 msgid ":guilabel:`Company`: the company for which the product is acquired."
-msgstr ""
+msgstr "guilabel:`公司`：需要獲取產品的公司。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:131
 msgid ""
@@ -3418,6 +3496,8 @@ msgid ""
 "changing the value. To replenish a product manually, click :guilabel:`Order "
 "Once`."
 msgstr ""
+"預設情況下，:guilabel:`待訂購` 欄位中的數量是達到設定的 :guilabel:`最大數量` 所需的數量。但是，你可按下欄位修改此值，以調整 "
+":guilabel:`待訂購` 數量。要手動補充產品，請按 :guilabel:`訂購一次`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:135
 msgid ""
@@ -3425,6 +3505,8 @@ msgid ""
 ":guilabel:`Automate Orders` on the right-side of the line, represented by a "
 ":guilabel:`🔄 (circular arrow)` icon."
 msgstr ""
+"若想在 :guilabel:`補貨` 頁面自動補貨，請按一下資料行右側的 :guilabel:`自動訂單`（以 :guilabel:`🔄 "
+"（圓形循環箭頭）` 圖示表示）。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:138
 msgid ""
@@ -3432,6 +3514,7 @@ msgid ""
 "|PO|/|MO| every time the forecasted stock level falls below the set "
 ":guilabel:`Min Quantity` of the reordering rule."
 msgstr ""
+"按下此按鈕後，每當預測庫存水平低於重新排序規則設定的 :guilabel:`最小數量`，Odoo 便會自動生成草稿 |PO| 或 |MO|。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:141
 msgid ""
@@ -3439,12 +3522,13 @@ msgid ""
 "replenishment can be temporarily deactivated for a given period, by clicking"
 " the :guilabel:`🔕 (snooze)` icon on the far-right of the line."
 msgstr ""
+"在 :guilabel:`補貨` 頁面，按一下資料行最右邊的 :guilabel:`🔕 （休眠）` 圖示，可在指定時間內暫時停用重新排序規則或手動補貨。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst-1
 msgid ""
 "Snooze options to turn off notifications for reordering for a period of "
 "time."
-msgstr ""
+msgstr "暫停選項可在一段時間內關閉重新排序的通知。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:149
 msgid ""
@@ -3453,52 +3537,54 @@ msgid ""
 "created by an automated reordering rule has the |SO| reference number(s) "
 "that triggered the rule as the source document."
 msgstr ""
+"透過手動補貨建立的 |PO| 或 |MO|，會將 :guilabel:`補貨報告` 作為來源文件。由自動重新排序規則建立的 |PO| 或 "
+"|MO|，則以觸發該規則的 |SO| 參考編號作為來源文件。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst-1
 msgid ""
 "Quote request list shows which quotes are directly from the replenishment "
 "report."
-msgstr ""
+msgstr "報價請求清單顯示哪些報價是直接來自補貨報告。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:158
 msgid "Make to order (MTO) route"
-msgstr ""
+msgstr "按訂單生產（MTO）途程"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:160
 msgid ""
 "Since the |MTO| route is recommended for customized products, the route is "
 "hidden by default."
-msgstr ""
+msgstr "由於客製化產品推薦使用 |MTO| 路線，因此預設情況下，該路線是隱藏的。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:169
 msgid "To activate the |MTO| route in Odoo:"
-msgstr ""
+msgstr "若要在 Odoo 啟動 |MTO| 路線："
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:163
 msgid "Go to :menuselection:`Inventory app --> Configuration  --> Settings`."
-msgstr ""
+msgstr "前往 :menuselection:`庫存應用程式 --> 配置 --> 設定`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:164
 msgid ""
 "Activate the :guilabel:`Multi-Step Routes` setting, located under the "
 ":guilabel:`Warehouse` section, and click :guilabel:`Save`."
-msgstr ""
+msgstr "啟動位於 :guilabel:`倉庫` 部分下的 :guilabel:`多步驟路線` 設定，然後按一下 :guilabel:`儲存`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:166
 msgid ""
 "Then, go to :menuselection:`Inventory app --> Configuration  --> Routes`."
-msgstr ""
+msgstr "然後，前往 :menuselection:`庫存應用程式 --> 配置 --> 路線`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:167
 msgid ""
 "Click on :menuselection:`Filters --> Archived` to show archived routes."
-msgstr ""
+msgstr "按一下 :menuselection:`篩選器 --> 已封存` 以顯示已封存路線。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:168
 msgid ""
 "Select the checkbox next to :guilabel:`Replenish on Order (MTO)`, and click "
 "on :menuselection:`Action --> Unarchive`."
-msgstr ""
+msgstr "選擇 :guilabel:`按訂單補貨（MTO）` 旁邊的勾選方格，然後按一下 :menuselection:`動作 --> 取消封存`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:172
 msgid ""
@@ -3506,6 +3592,8 @@ msgid ""
 ":guilabel:`Storage Locations`. If these features aren't applicable to the "
 "warehouse, disable these settings after unarchiving the |MTO| route."
 msgstr ""
+"啟動 :guilabel:`多步驟路線` 設定，也會啟動 :guilabel:`存放位置`。如果這些功能不適用於倉庫，請在取消封存 |MTO| "
+"路線後，停用這些設定。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:176
 msgid ""
@@ -3513,12 +3601,15 @@ msgid ""
 ":menuselection:`Inventory app --> Products --> Products`, and click on the "
 "desired product to open its product form."
 msgstr ""
+"要將產品的採購路線設為 |MTO|，請前往 :menuselection:`庫存應用程式 --> 產品 --> "
+"產品`，然後按一下所需的產品，以打開其產品表單。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:179
 msgid ""
 "Then, click the :guilabel:`Inventory` tab, and in the :guilabel:`Routes` "
 "section of options, select :guilabel:`Replenish on Order (MTO)`."
 msgstr ""
+"然後，按一下 :guilabel:`庫存` 分頁，並在選項的 :guilabel:`路線` 部分，選擇 :guilabel:`按訂單補貨（MTO）`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:182
 msgid ""
@@ -3527,6 +3618,8 @@ msgid ""
 "route. Also, make sure a vendor is configured in the :guilabel:`Purchase` "
 "tab of the product form."
 msgstr ""
+"對於直接從供應商處購買的產品，除了 :guilabel:`按訂單補貨（MTO）` 路線外，請也確保選擇了 :guilabel:`購買` "
+"途徑。此外，請確保在產品表單的 :guilabel:`採購` 分頁中，配置了供應商。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:186
 msgid ""
@@ -3536,16 +3629,20 @@ msgid ""
 "which is accessible via the :guilabel:`Bill of Materials` smart button on "
 "the product form."
 msgstr ""
+"對於內部製造的產品，除了 :guilabel:`按訂單補貨（MTO）` 路線外，還要確保選擇了 :guilabel:`製造` "
+"路線。此外，請確保為產品配置了物料清單。你可透過產品表單上的 :guilabel:`物料清單` 智慧按鈕，存取該物料清單。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:192
 msgid ""
 "The |MTO| route cannot be selected alone. |MTO| **only** works if the "
 ":guilabel:`Manufacture` or :guilabel:`Buy` route is also selected."
 msgstr ""
+"請留意，|MTO| 路線不可單獨選擇。|MTO| **只會** 在同時選擇了 :guilabel:`製造` 及 :guilabel:`購買` "
+"路線時，才會有效。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst-1
 msgid "Replenish on Order selected on the product form."
-msgstr ""
+msgstr "產品表格，選取了按訂單補貨。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/uom.rst:3
 msgid "Units of measure"
@@ -5352,18 +5449,25 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:5
 msgid ""
 "In Odoo *Inventory*, *packaging* refers to disposable containers holding "
-"multiple units of a specific product. Each specific packaging **must** be "
-"defined on the individual product form."
+"multiple units of a specific product."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:8
 msgid ""
 "For example, different packages for cans of soda, such as a 6-pack, a "
-"12-pack, or a case of 36, need to be configured on the individual product "
-"form. This is because packagings are product specific — **not** generic."
+"12-pack, or a case of 36, **must** be configured on the individual product "
+"form. This is because packagings are product specific, not generic."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:15
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:13
+msgid ""
+"Packaging can be used in conjunction with Odoo :ref:`Barcode "
+"<inventory/barcode/software>`. When receiving products from suppliers, "
+"scanning the packaging barcode automatically adds the number of units in the"
+" packaging to the internal count of the product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:20
 msgid ""
 "To use packagings, navigate to :menuselection:`Inventory app --> "
 "Configuration --> Settings`. Then, under the :guilabel:`Products` heading, "
@@ -5375,64 +5479,64 @@ msgstr ""
 msgid "Enable packagings by selecting \"Product Packagings\"."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:24
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:31
 msgid "Create packaging"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:26
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:33
 msgid ""
 "Packagings can be created directly on the product form, or from the "
 ":guilabel:`Product Packagings` page."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:30
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:37
 msgid "From product form"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:32
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:39
 msgid ""
 "Create packagings on a product form by going to :menuselection:`Inventory "
 "app --> Products --> Products`, and select the desired product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:35
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:42
 msgid ""
 "Under the :guilabel:`Inventory` tab, scroll down to the "
 ":guilabel:`Packaging` section, and click :guilabel:`Add a line`. In the "
 "table, fill out the following fields:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:38
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:45
 msgid ""
 ":guilabel:`Packaging` (required): name of packaging that appears on "
 "sales/purchase orders as a packaging option for the product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:40
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:47
 msgid ""
 ":guilabel:`Contained quantity` (required): amount of product in the "
 "packaging."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:41
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:48
 msgid ""
 ":guilabel:`Unit of Measure` (required): measurement unit for quantifying the"
 " product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:42
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:49
 msgid ""
 ":guilabel:`Sales`: check this option for packagings intended for use on "
 "sales orders."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:43
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:50
 msgid ""
 ":guilabel:`Purchase`: check this option for packagings intended for use on "
 "purchase orders."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:46
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:53
 msgid ""
 "Access additional fields in the :guilabel:`Packaging` table below by "
 "clicking the :guilabel:`(sliders)` icon to the far-right of the column "
@@ -5444,21 +5548,21 @@ msgstr ""
 msgid "Show the additional options menu's icon: sliders."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:54
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:61
 msgid ""
 ":guilabel:`Barcode`: identifier for tracing packaging in stock moves or "
 "pickings, using the :ref:`Barcode app <barcode/operations/intro>`. Leave "
 "blank if not in use."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:56
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:63
 msgid ""
 ":guilabel:`Company`: indicates the packaging is only available at the "
 "selected company. Leave blank to make the packaging available across all "
 "companies."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:60
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:67
 msgid ""
 "To create a packaging type for six units of the product, `Grape Soda`, begin"
 " by clicking :guilabel:`Add a line`. In the line, name the "
@@ -5470,11 +5574,11 @@ msgstr ""
 msgid "Create 6-pack case for product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:69
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:76
 msgid "From product packagings page"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:71
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:78
 msgid ""
 "To view all packagings that have been created, go to "
 ":menuselection:`Inventory app --> Configuration --> Product Packagings`. "
@@ -5483,7 +5587,7 @@ msgid ""
 "packagings by clicking :guilabel:`New`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:77
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:84
 msgid ""
 "Two soda products, `Grape Soda` and `Diet Coke`, have three types of "
 "packagings configured. On the :guilabel:`Product Packagings` page, each "
@@ -5495,11 +5599,81 @@ msgstr ""
 msgid "List of different packagings for products."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:86
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:93
+msgid "Partial reservation"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:95
+msgid ""
+"After :ref:`completing the packaging setup "
+"<inventory/product_management/packaging-setup>`, packagings can be reserved "
+"in full or partial quantities for outgoing shipments. Partial packaging "
+"flexibility expedites order fulfillment by allowing the immediate shipment "
+"of available items, while awaiting the rest."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:100
+msgid ""
+"To configure packaging reservation methods, go to :menuselection:`Inventory "
+"app --> Configuration --> Product Categories`. Then, click :guilabel:`New`, "
+"or select the desired product category."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:103
+msgid ""
+"On the product category's form, in the :guilabel:`Logistics` section, "
+":guilabel:`Reserve Packagings` can be set to :guilabel:`Reserve Only Full "
+"Packagings` or :guilabel:`Reserve Partial Packagings`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:107
+msgid ""
+"To see the :guilabel:`Reserve Packaging` field, the :guilabel:`Product "
+"Packaging` feature **must** be enabled. To enable this feature, go to "
+":menuselection:`Inventory app --> Configuration --> Settings`, scroll to the"
+" :guilabel:`Products` section, tick the :guilabel:`Product Packagings` "
+"checkbox, and click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst-1
+msgid "Show Reserve Packagings field on the product categories page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:117
+msgid ""
+"To better evaluate the options based on business needs, consider the "
+"following example:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:119
+msgid "a product is sold in twelve units per packaging."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:120
+msgid "an order demands two packagings."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:121
+msgid "there are only twenty-two units in stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:123
+msgid ""
+"When :guilabel:`Reserve Only Full Packagings` is selected, only twelve units"
+" are reserved for the order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:126
+msgid ""
+"Conversely, when :guilabel:`Reserve Partial Packagings` is selected, twenty-"
+"two units are reserved for the order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:130
 msgid "Apply packagings"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:88
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:132
 msgid ""
 "When creating a sales order in the :menuselection:`Sales` app, specify the "
 "packagings that should be used for the product. The chosen packaging is "
@@ -5507,7 +5681,7 @@ msgid ""
 "field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:93
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:137
 msgid ""
 "18 cans of the product, `Grape Soda`, is packed using three 6-pack "
 "packagings."
@@ -5515,14 +5689,6 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:0
 msgid "Assign packagings on the Sales Order Line."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/packaging.rst:100
-msgid ""
-"Packaging can be used in conjunction with Odoo :ref:`Barcode "
-"<inventory/barcode/software>`. When receiving products from suppliers, "
-"scanning the packaging barcode automatically adds the number of units in the"
-" packaging to the internal count of the product."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:3
@@ -6144,12 +6310,10 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/cancel.rst:50
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:122
 msgid ":doc:`invoicing`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/cancel.rst:51
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:123
 msgid ":doc:`multipack`"
 msgstr ""
 
@@ -6288,30 +6452,30 @@ msgstr ""
 msgid "Shipping cost invoicing"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:7
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:5
 msgid ""
 "Invoicing customers for shipping after delivery ensures accurate charges "
 "based on real-time shipping factors like distance, weight, and method."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:10
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:8
 msgid "In Odoo, shipping costs can be invoiced in two ways:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:12
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:10
 msgid ""
 "Agree with the customer on a fixed cost and :ref:`include it in the sale "
 "order. <inventory/shipping/invoice-so>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:15
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:13
 msgid ""
 ":ref:`Invoice shipping costs to the customer post-delivery "
 "<inventory/shipping/invoice-shipping>`, reflecting the actual expenses "
 "incurred by the business."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:21
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:19
 msgid ""
 "To set prices to delivery methods, go to :menuselection:`Inventory app --> "
 "Configuration --> Settings`. Under the :guilabel:`Shipping` section, enable "
@@ -6322,12 +6486,12 @@ msgstr ""
 msgid "Enable the \"Delivery Methods\" feature in Settings."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:30
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:28
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/delivery_method.rst:30
 msgid "Add shipping method"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:32
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:30
 msgid ""
 "Next, configure the the price of each delivery method by going to "
 ":menuselection:`Inventory app --> Configuration --> Shipping Methods` and "
@@ -6335,13 +6499,13 @@ msgid ""
 "details about the shipping provider, including:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:36
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:34
 msgid ""
 ":guilabel:`Shipping Method` (*required*) the name of the delivery method "
 "(e.g. `flat-rate shipping`, `same day delivery`, etc.)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:38
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:36
 msgid ""
 ":guilabel:`Provider` (*required*): choose the delivery service, like FedEx, "
 "if using a third-party carrier Ensure the integration with the shipping "
@@ -6349,13 +6513,13 @@ msgid ""
 "menu."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:43
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:124
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:23
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:41
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:122
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:23
 msgid ":doc:`../setup_configuration/third_party_shipper`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:45
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:43
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/delivery_method.rst:61
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:121
 msgid ""
@@ -6364,7 +6528,7 @@ msgid ""
 "the method to all companies."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:46
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/delivery_method.rst:59
 msgid ""
 ":guilabel:`Website`: configure shipping methods for an e-commerce page. "
@@ -6372,31 +6536,31 @@ msgid ""
 "apply the method to all web pages."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:51
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:49
 msgid ""
 ":guilabel:`Delivery Product` (*required*): the product listed on the "
 ":ref:`sales order line <inventory/shipping/invoice-on-so>` as the delivery "
 "charge."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:53
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:51
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/delivery_method.rst:68
 msgid ""
 ":guilabel:`Free if order amount is above`: checking this box enables free "
 "shipping if the customer spends above the specified amount."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:59
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:57
 msgid "Invoice cost on sales order"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:61
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:59
 msgid ""
 "To invoice shipping costs on the sales order, before the item is delivered, "
 "go to the :menuselection:`Sales app` and select the desired sales order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:64
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:62
 msgid ""
 "On the sales order, click the :guilabel:`Add Shipping` button at the bottom-"
 "right corner."
@@ -6406,19 +6570,19 @@ msgstr ""
 msgid "Click \"Add Shipping\" button at the bottom right, near the total."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:70
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:68
 msgid ""
 "In the :guilabel:`Add a shipping method` pop-up window, choose the intended "
 "carrier in the :guilabel:`Shipping Method` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:73
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:71
 msgid ""
 "Then, click the :guilabel:`Get Rate` button to the calculate shipping price "
 "based on real-time shipping data Odoo's shipping carrier integration."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:76
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:74
 msgid ""
 "The :guilabel:`Cost` is automatically calculated using the weight of the "
 "items in the order. Finally, click the :guilabel:`Add` button to close the "
@@ -6429,7 +6593,7 @@ msgstr ""
 msgid "Calculate shipping by selecting a shipping method."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:85
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:83
 msgid ""
 "On the sales order, the delivery product appears in the :guilabel:`Order "
 "Lines` tab, with the :guilabel:`Unit Price` set as the shipping cost "
@@ -6440,7 +6604,7 @@ msgstr ""
 msgid "Show delivery product on the sales order line."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:93
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:91
 msgid ""
 "Finally, after the product is delivered, click the :guilabel:`Create "
 "invoice` button, and an invoice is created that includes the shipping cost "
@@ -6451,7 +6615,7 @@ msgstr ""
 msgid "Show \"Create Invoice\" button."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:100
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:98
 msgid ""
 "Then, click the :guilabel:`Create and View Invoice` button, and a draft "
 "invoice is generated, with the shipping cost included in the "
@@ -6462,18 +6626,18 @@ msgstr ""
 msgid "Show delivery product in the invoice line."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:110
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:108
 msgid "Invoice real shipping costs"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:112
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:110
 msgid ""
 "To modify the invoice to reflect the real cost of shipping, follow the steps"
 " :ref:`above <inventory/shipping/invoice-so>` to create an invoice with a "
 "delivery product with a :guilabel:`Unit Price` of zero."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:116
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:114
 msgid ""
 "Then, on a draft invoice, modify the :guilabel:`Unit Price` to reflect the "
 "real shipping cost. Finally, invoice the customer the adjusted shipping cost"
@@ -6484,9 +6648,9 @@ msgstr ""
 msgid "Show delivery product on the invoice line."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:125
-msgid ":doc:`labels`"
-msgstr ""
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:123
+msgid ":doc:`../setup_configuration/labels`"
+msgstr ":doc:`../setup_configuration/labels`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/label_type.rst:3
 msgid "Change shipping label size"
@@ -6589,174 +6753,6 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/label_type.rst-1
 msgid "Half page letter size FedEx shipping label."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:3
-msgid "Print shipping labels"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:7
-msgid ""
-"Integrate Odoo with :doc:`third-party shipping carriers "
-"<../setup_configuration/third_party_shipper>` to automatically generate "
-"shipping labels that includes prices, destination addresses, tracking "
-"numbers, and barcodes."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:14
-msgid ""
-"To generate labels for a third-party shipping carrier, first :doc:`install "
-"the third-party shipping connector "
-"<../setup_configuration/third_party_shipper>`. Then, configure and activate "
-"the :ref:`delivery method <inventory/shipping_receiving/configure-delivery-"
-"method>`, being sure to set the :guilabel:`Integration Level` to "
-":guilabel:`Get Rate and Create Shipment` to generate shipping labels. "
-"Finally, provide the company's :ref:`source address "
-"<inventory/shipping_receiving/configure-source-address>` and :ref:`product "
-"weights <inventory/shipping_receiving/configure-weight>`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst-1
-msgid "Set the \"Get Rate and Create Shipment\" option."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:30
-msgid "Print tracking labels"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:32
-msgid ""
-"Tracking labels are generated after the delivery order (DO) is validated."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:34
-msgid ""
-"When both the *Sales* and *Inventory* apps are installed, begin on the "
-":menuselection:`Sales app`, and proceed to the desired quotation to "
-":ref:`add the shipping cost <inventory/shipping_receiving/add-shipping-"
-"quote>`, confirm the sales order, and validate the |DO|."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:38
-msgid ""
-"If only the *Inventory* app is installed, create :abbr:`DOs (Delivery "
-"Orders)` directly in the :menuselection:`Inventory` app , :ref:`add the "
-"third-party carrier <inventory/shipping_receiving/validate-print-label>` in "
-"the :guilabel:`Carrier` field, and validate the |DO|."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:46
-msgid "Add shipping on quotation"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:48
-msgid ""
-"To generate a tracking label for an order, begin by creating a quotation in "
-":menuselection:`Sales app --> Orders --> Quotations`, clicking "
-":guilabel:`New`, and filling out the quotation form. Then, click the "
-":guilabel:`Add Shipping` button in the bottom-right corner of the quotation."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst-1
-msgid "Show the \"Add Shipping\" button on the quotation."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:56
-msgid ""
-"In the resulting pop-up window, select the intended carrier from the "
-":guilabel:`Shipping Method` drop-down menu. Clicking :guilabel:`Get Rate` "
-"displays the shipping cost for the customer, via the third-party carrier in "
-"the :guilabel:`Cost` field."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:61
-msgid ""
-"If clicking :guilabel:`Get Rate` results in an error, ensure the "
-":ref:`warehouse's address <inventory/shipping_receiving/configure-source-"
-"address>` and :ref:`weight of products in the order "
-"<inventory/shipping_receiving/configure-weight>` are properly configured."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:65
-msgid ""
-"Click :guilabel:`Add` to add the cost to the quotation, which is listed as "
-"the :ref:`configured delivery product "
-"<inventory/shipping_receiving/delivery-product>`. Finally, click "
-":guilabel:`Confirm` on the quotation, and click the :guilabel:`Delivery` "
-"smart button to access the |DO|."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst-1
-msgid "Show \"Get rate\" pop-up window."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:75
-msgid ""
-"For users who do not have the *Sales* app installed, the shipping carrier is"
-" specified in a delivery order's :guilabel:`Carrier` field of the "
-":guilabel:`Additional Info` tab."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:0
-msgid "Show the \"Additional Info\" tab of a delivery order."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:85
-msgid "Validate delivery order"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:87
-msgid ""
-"On a delivery order form, navigate to the :guilabel:`Additional Info` tab to"
-" ensure the third-party shipping carrier has been added to the "
-":guilabel:`Carrier` field."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:91
-msgid ""
-"If the *Sales* app is not installed, the third-party carrier is set in the "
-":guilabel:`Carrier` field."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:94
-msgid ""
-"After the items in the order have been packed, click :guilabel:`Validate` to"
-" get the shipping carrier's tracking number, and generate the shipping "
-"label."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:98
-msgid ""
-"Create or select an existing delivery order by going to the "
-":menuselection:`Inventory` app, and selecting the :guilabel:`Delivery "
-"Orders` card."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:101
-msgid ""
-"The :guilabel:`Tracking Reference` number is generated in the "
-":guilabel:`Additional Info` tab of the delivery order. Click the "
-":guilabel:`Tracking` smart button to access the tracking link from the "
-"shipping carrier's website."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:105
-msgid "The tracking label is found in PDF format in the chatter."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst-1
-msgid "Show generated shipping label in the chatter."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:112
-msgid ""
-"For multi-package shipping, one label is generated per package. Each label "
-"appears in the chatter."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:119
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/labels.rst:119
-msgid "Sample label generated from Odoo's shipping connector with FedEx."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/multipack.rst:3
@@ -8616,6 +8612,225 @@ msgstr ""
 msgid "Setup and configuration"
 msgstr ""
 
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:3
+msgid "Bpost integration"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:5
+msgid ""
+"Set up the *Bpost* shipping connector in Odoo to manage Bpost shipments to "
+"clients directly within Odoo. To configure it, complete these steps:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:8
+msgid "Create a Bpost account."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:9
+msgid ""
+"Get the :ref:`Account ID and passphrase <inventory/shipping/Bpost-account>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:10
+msgid "Set up the shipping method in Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:12
+msgid ""
+"Upon completion, it is possible to calculate the cost of shipping, based on "
+"package size and weight, have the charges applied directly to a Bpost "
+"business account, and automatically print Bpost tracking labels through "
+"Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:17
+msgid ":doc:`third_party_shipper`"
+msgstr ":doc:`third_party_shipper`"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:18
+msgid ":doc:`delivery_method`"
+msgstr ":doc:`delivery_method`"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:19
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:19
+msgid ":doc:`dhl_credentials`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:20
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:21
+msgid ":doc:`ups_credentials`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:23
+msgid "Bpost account setup"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:25
+msgid ""
+"To begin, go to the `Bpost website "
+"<https://parcel.bpost.be/en/home/business>`_ to create, or log into, the "
+"company's Bpost business account. When creating the Bpost account, have the "
+"company's VAT number and mobile phone number ready."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:29
+msgid ""
+"Follow the website's steps to complete registration, and sign up for "
+"shipping services."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:31
+msgid ""
+"After completing the setup, get the Bpost account ID and passphrase, by "
+"navigating to the :guilabel:`Shipping Manager` menu item."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:36
+msgid ""
+"On the :guilabel:`Shipping Manager` page, go to the :guilabel:`Admin` tab, "
+"then the :guilabel:`General Settings` tab, to find the :guilabel:`Account "
+"ID` and :guilabel:`Passphrase` needed to configure Odoo's shipping method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst-1
+msgid "In the *Admin* tab, show the Account ID and Passphrase."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:45
+msgid "Configure Bpost shipping method"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:47
+msgid ""
+"With those necessary credentials, configure the Bpost shipping method in "
+"Odoo by going to :menuselection:`Inventory app --> Configuration --> "
+"Shipping Methods`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:50
+msgid "On the :guilabel:`Shipping Methods` page, click :guilabel:`Create`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:52
+msgid ""
+"In the :guilabel:`Provider` field, select :guilabel:`Bpost` from the drop-"
+"down menu. Doing so reveals the :guilabel:`Bpost Configuration` tab at the "
+"bottom of the form, where the Bpost credentials can be entered."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:56
+msgid ""
+"For details on configuring the other fields on the shipping method, such as "
+":guilabel:`Delivery Product`, refer to the :doc:`Configure third-party "
+"carrier <third_party_shipper>` documentation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:60
+msgid ""
+"To generate Bpost :doc:`shipping labels <labels>` through Odoo, ensure the "
+":guilabel:`Integration Level` option is set to :guilabel:`Get Rate and "
+"Create Shipment`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:63
+msgid ""
+"In the :guilabel:`Bpost Configuration` tab, complete the following fields:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:65
+msgid ""
+":guilabel:`Bpost Account Number` (required field): enter the company's "
+"unique :ref:`account ID <inventory/shipping/bpost-account>` from the Bpost "
+"website."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:67
+msgid ""
+":guilabel:`Passphrase` (required field): enter the :ref:`passphrase "
+"<inventory/shipping/bpost-account>` from the Bpost website."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:69
+msgid ""
+":guilabel:`Bpost Delivery Nature`: select either :guilabel:`Domestic` or "
+":guilabel:`International` shipping services. Choosing :guilabel:`Domestic` "
+"shows the :guilabel:`Options` section, while :guilabel:`International` "
+"enables the :guilabel:`Bpost Shipment Type` and :guilabel:`Bpost Parcel "
+"Return Instructions` fields."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:73
+msgid ""
+":guilabel:`Bpost Package Type`: select the type of shipping service from the"
+" drop-down menu."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:75
+msgid ""
+"For `domestic delivery "
+"<https://help.shipmondo.com/en/articles/6092265-bpost-belgium-parcel-types-"
+"and-requirements>`_, the options are: :guilabel:`bpack 24h Pro`, "
+":guilabel:`bpack 24h business`, or :guilabel:`bpack Bus`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:80
+msgid ""
+"For `international delivery <https://www.bpost.be/en/business-parcels-"
+"send/international>`_, the options are: :guilabel:`bpack World Express Pro`,"
+" :guilabel:`bpack World Business`, or :guilabel:`bpack Europe Business`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:83
+msgid ""
+":guilabel:`Bpost Shipment Type` (required field): for international "
+"deliveries, declare the type of goods in the package as :guilabel:`SAMPLE`, "
+":guilabel:`GIFT`, :guilabel:`GOODS`, :guilabel:`DOCUMENTS`, or "
+":guilabel:`OTHER`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:86
+msgid ""
+":guilabel:`Bpost Parcel Return Address`: return address when an "
+"international shipment fails to deliver. Select from the drop-down menu: "
+":guilabel:`Destroy`, :guilabel:`Return to sender by air`, or "
+":guilabel:`Return to sender by road`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:89
+msgid ""
+":guilabel:`Label Type`: choose :guilabel:`A6` or :guilabel:`A4` label sizes "
+"from the drop-down menu."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:91
+msgid ""
+":guilabel:`Label Format`: choose :guilabel:`PDF` or :guilabel:`PNG` from the"
+" drop-down menu."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:93
+msgid ""
+"For domestic deliveries, these features are available in the "
+":guilabel:`Options` section:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:95
+msgid ""
+"Enable the :guilabel:`Delivery on Saturday` feature to include Saturdays as "
+"possible delivery dates. Depending on the :guilabel:`Bpost Package Type` "
+"selected, this option might incur additional costs to the company."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:98
+msgid ""
+"Enable the :guilabel:`Generate Return Label` feature to automatically print "
+"a return label upon validating the delivery order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst-1
+msgid "Show Bpost shipping method."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/delivery_method.rst:3
 msgid "Delivery methods"
 msgstr ""
@@ -8908,7 +9123,8 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/delivery_method.rst:172
-msgid ":ref:`Invoice cost of shipping <inventory/shipping/invoice>`"
+msgid ""
+":doc:`Invoice cost of shipping <../advanced_operations_shipping/invoicing>`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/delivery_method.rst:177
@@ -9018,6 +9234,182 @@ msgid ""
 "You need to write to xmlrequests@dhl.com along with your full Account "
 "details like account number, region, address, etc. to get API Access."
 msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:3
+msgid "Print shipping labels"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:7
+msgid ""
+"Integrate Odoo with :doc:`third-party shipping carriers "
+"<../setup_configuration/third_party_shipper>` to automatically generate "
+"shipping labels that includes prices, destination addresses, tracking "
+"numbers, and barcodes."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:14
+msgid ""
+"To generate labels for a third-party shipping carrier, first :doc:`install "
+"the third-party shipping connector "
+"<../setup_configuration/third_party_shipper>`. Then, configure and activate "
+"the :ref:`delivery method <inventory/shipping_receiving/configure-delivery-"
+"method>`, being sure to set the :guilabel:`Integration Level` to "
+":guilabel:`Get Rate and Create Shipment` to generate shipping labels. "
+"Finally, provide the company's :ref:`source address "
+"<inventory/shipping_receiving/configure-source-address>` and :ref:`product "
+"weights <inventory/shipping_receiving/configure-weight>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst-1
+msgid "Set the \"Get Rate and Create Shipment\" option."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:30
+msgid "Print tracking labels"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:32
+msgid ""
+"Tracking labels are generated after the delivery order (DO) is validated."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:34
+msgid ""
+"When both the *Sales* and *Inventory* apps are installed, begin on the "
+":menuselection:`Sales app`, and proceed to the desired quotation to "
+":ref:`add the shipping cost <inventory/shipping_receiving/add-shipping-"
+"quote>`, confirm the sales order, and validate the |DO|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:38
+msgid ""
+"If only the *Inventory* app is installed, create :abbr:`DOs (Delivery "
+"Orders)` directly in the :menuselection:`Inventory` app , :ref:`add the "
+"third-party carrier <inventory/shipping_receiving/validate-print-label>` in "
+"the :guilabel:`Carrier` field, and validate the |DO|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:46
+msgid "Add shipping on quotation"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:48
+msgid ""
+"To generate a tracking label for an order, begin by creating a quotation in "
+":menuselection:`Sales app --> Orders --> Quotations`, clicking "
+":guilabel:`New`, and filling out the quotation form. Then, click the "
+":guilabel:`Add Shipping` button in the bottom-right corner of the quotation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst-1
+msgid "Show the \"Add Shipping\" button on the quotation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:56
+msgid ""
+"In the resulting pop-up window, select the intended carrier from the "
+":guilabel:`Shipping Method` drop-down menu. Clicking :guilabel:`Get Rate` "
+"displays the shipping cost for the customer, via the third-party carrier in "
+"the :guilabel:`Cost` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:61
+msgid ""
+"If clicking :guilabel:`Get Rate` results in an error, ensure the "
+":ref:`warehouse's address <inventory/shipping_receiving/configure-source-"
+"address>` and :ref:`weight of products in the order "
+"<inventory/shipping_receiving/configure-weight>` are properly configured."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:65
+msgid ""
+"Click :guilabel:`Add` to add the cost to the quotation, which is listed as "
+"the :ref:`configured delivery product "
+"<inventory/shipping_receiving/delivery-product>`. Finally, click "
+":guilabel:`Confirm` on the quotation, and click the :guilabel:`Delivery` "
+"smart button to access the |DO|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst-1
+msgid "Show \"Get rate\" pop-up window."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:75
+msgid ""
+"For users who do not have the *Sales* app installed, the shipping carrier is"
+" specified in a delivery order's :guilabel:`Carrier` field of the "
+":guilabel:`Additional Info` tab."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:0
+msgid "Show the \"Additional Info\" tab of a delivery order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:85
+msgid "Validate delivery order"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:87
+msgid ""
+"On a delivery order form, navigate to the :guilabel:`Additional Info` tab to"
+" ensure the third-party shipping carrier has been added to the "
+":guilabel:`Carrier` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:91
+msgid ""
+"If the *Sales* app is not installed, the third-party carrier is set in the "
+":guilabel:`Carrier` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:94
+msgid ""
+"After the items in the order have been packed, click :guilabel:`Validate` to"
+" get the shipping carrier's tracking number, and generate the shipping "
+"label."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:98
+msgid ""
+"Create or select an existing delivery order by going to the "
+":menuselection:`Inventory` app, and selecting the :guilabel:`Delivery "
+"Orders` card."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:101
+msgid ""
+"The :guilabel:`Tracking Reference` number is generated in the "
+":guilabel:`Additional Info` tab of the delivery order. Click the "
+":guilabel:`Tracking` smart button to access the tracking link from the "
+"shipping carrier's website."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:105
+msgid "The tracking label is found in PDF format in the chatter."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst-1
+msgid "Show generated shipping label in the chatter."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:112
+msgid ""
+"For multi-package shipping, one label is generated per package. Each label "
+"appears in the chatter."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:119
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:119
+msgid "Sample label generated from Odoo's shipping connector with FedEx."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:122
+msgid ":doc:`../advanced_operations_shipping/invoicing`"
+msgstr ":doc:`../advanced_operations_shipping/invoicing`"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:123
+msgid ":doc:`../advanced_operations_shipping/multipack`"
+msgstr ":doc:`../advanced_operations_shipping/multipack`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:3
 msgid "Sendcloud configuration"
@@ -9557,7 +9949,7 @@ msgid ""
 "Users can link third-party shipping carriers to Odoo databases, in order to "
 "verify carriers' delivery to specific addresses, :doc:`automatically "
 "calculate shipping costs <delivery_method>`, and :doc:`generate shipping "
-"labels <../advanced_operations_shipping/labels>`."
+"labels <labels>`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:14
@@ -9568,16 +9960,8 @@ msgid ""
 "<inventory/shipping_receiving/third-party-troubles>` section."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:19
-msgid ":doc:`dhl_credentials`"
-msgstr ""
-
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:20
 msgid ":doc:`sendcloud_shipping`"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:21
-msgid ":doc:`ups_credentials`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:23
@@ -9789,7 +10173,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:118
 msgid ""
 "Select :guilabel:`Get Rate and Create Shipment` to also :doc:`generate "
-"shipping labels <../advanced_operations_shipping/labels>`."
+"shipping labels <labels>`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:123
@@ -10020,8 +10404,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:269
-msgid ""
-":doc:`Generate shipping labels <../advanced_operations_shipping/labels>`"
+msgid ":doc:`Generate shipping labels <labels>`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst-1
@@ -15394,7 +15777,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:112
 msgid ":doc:`using_inventory_valuation`"
-msgstr ""
+msgstr ":doc:`using_inventory_valuation`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:114
 msgid ""
@@ -15601,7 +15984,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:257
 msgid ":doc:`../../../../finance/accounting/get_started/cheat_sheet`"
-msgstr ""
+msgstr ":doc:`../../../../finance/accounting/get_started/cheat_sheet`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:259
 msgid ""
