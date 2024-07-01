@@ -60,6 +60,16 @@ The following table lists capabilities provided by Odoo when using the Amazon Co
 |                           |                            | status synchronized from Odoo.      |
 +---------------------------+----------------------------+-------------------------------------+
 
+.. important::
+   The stock synchronization does **not** currently support selling the same product as :abbr:`FBM
+   (Fulfilled By Merchant)` *and* :abbr:`FBA (Fulfilled By Amazon)`.
+
+   At times, when stock is sent for all products, it triggers a stock problem with Amazon, where
+   Amazon incorrectly thinks the FBA product has some quantity in FBM.
+
+   As a result, Amazon then sells it as FBM, instead of taking from their own warehouse. Odoo
+   developers are currently working on resolving this issue to avoid future discrepancies.
+
 .. note::
    The Amazon Connector is designed to synchronize the data of sales orders. Other actions, such as
    downloading monthly fees reports, handling disputes, or issuing refunds, **must** be managed from
