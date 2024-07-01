@@ -50,7 +50,7 @@ method should set the value of the computed field for every record in
 
 By convention, :attr:`~odoo.fields.Field.compute` methods are private, meaning that they cannot
 be called from the presentation tier, only from the business tier (see
-:ref:`tutorials/server_framework_101/01_architecture`). Private methods have a name starting with an
+:doc:`01_architecture_overview`). Private methods have a name starting with an
 underscore ``_``.
 
 Dependencies
