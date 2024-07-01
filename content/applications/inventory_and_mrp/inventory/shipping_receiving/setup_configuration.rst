@@ -14,3 +14,4 @@ Setup and configuration
    setup_configuration/ups_credentials
    setup_configuration/dhl_credentials
    setup_configuration/starshipit_shipping
+   setup_configuration/zebra
