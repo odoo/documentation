@@ -230,18 +230,30 @@ You can share a link to a workspace and allow users to :guilabel:`Download` its 
 :guilabel:`Download and Upload` files to it.
 
 To do so, go to the left column of your dashboard. In the :guilabel:`Workspace` section, select the
-workspace to share, and possibly one or several tags that will be automatically added to the
+workspace to share and possibly one or several tags that will be automatically added to the
 uploaded documents. Then, click the arrow next to the :guilabel:`Upload` button and
 :guilabel:`Share`.
 
 In the pop-up, a share :guilabel:`URL` you can :guilabel:`Copy` is displayed. You can
-:guilabel:`Name` your share link, set a validity date by filling in the :guilabel:`Valid Until`
-field, tick the :guilabel:`Include Sub Folders` box if you want to share the workspace's
-sub-folders, and if you own more than one site, select the :guilabel:`Website` you
-want so the share link reflects the right domain name.
+:guilabel:`Name` your share link and set a validity date by filling in the :guilabel:`Valid Until`
+field. If you own more than one site, select the :guilabel:`Website` you want so the share link
+reflects the right domain name.
 
-Then, allow users to either :guilabel:`Download` files from your workspace, or to :ref:`Download and
-Upload <documents/upload>` files to it.
+Switch on the :guilabel:`Allow upload` button to allow users to upload files from your workspace, and
+tick the :guilabel:`Upload by Email` checkbox to enable users to upload documents sent by email in
+the workspace.
+
+.. note::
+
+   Your email server must be configured to be able to create an email alias. If it isn't configured
+   yet:
+
+   #. Click :guilabel:`Choose or Configure Email Servers`.
+   #. In the :guilabel:`General Settings` page, scroll down to the  :guilabel:`Discuss` section.
+   #. Enter your email server details and :guilabel:`save`.
+
+Then, enter an alias in the :guilabel:`Email alias` field. All documents sent to this email address
+are uploaded to the workspace using the chosen tags.
 
 .. Note::
    - The links added to your workspace using the :ref:`Add a Link <documents/add-a-link>` option
