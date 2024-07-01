@@ -212,7 +212,7 @@ In the pop-up, you can :guilabel:`Name` the share link, set a validity date by f
 :guilabel:`Valid Until` field, and if you own more than one site, select the :guilabel:`Website` you
 want so the right domain name is reflected in the URL.
 
-Click :guilabel:`Copy` or :guilabel:`Share` to send the URL to whomever you want.
+Click :guilabel:`Copy` to send the URL to whomever you want.
 
 .. tip::
    You can also generate a share URL by selecting the document, going to the right panel, and
@@ -224,19 +224,15 @@ Share a workspace
 You can share a link to a workspace and allow users to :guilabel:`Download` its content or
 :guilabel:`Download and Upload` files to it.
 
-To do so, go to the left column of your dashboard. In the :guilabel:`Workspace` section, select the
-workspace to share, and possibly one or several tags that will be automatically added to the
-uploaded documents. Then, click the :icon:`fa-caret-down` (:guilabel:`down arrow`) next to the
-:guilabel:`Upload` button and :guilabel:`Share`.
+To do so, go to the left column of your dashboard and select the workspace you want to share. You
+can also choose one or more tags that will be automatically added to the uploaded documents. Then,
+click the :icon:`fa-caret-down` (:guilabel:`down arrow`) next to the :guilabel:`Upload` button and
+:guilabel:`Share`.
 
 In the pop-up, a share :guilabel:`URL` you can :guilabel:`Copy` is displayed. You can
-:guilabel:`Name` your share link, set a validity date by filling in the :guilabel:`Valid Until`
-field, tick the :guilabel:`Include Sub Folders` box if you want to share the workspace's
-sub-folders, and if you own more than one site, select the :guilabel:`Website` you
-want so the share link reflects the right domain name.
-
-Then, allow users to either :guilabel:`Download` files from your workspace, or to :ref:`Download and
-Upload <documents/upload>` files to it.
+:guilabel:`Name` your share link and set a validity date by filling in the :guilabel:`Valid Until`
+field. If you own more than one site, select the :guilabel:`Website` you want so the share link
+reflects the right domain name.
 
 .. Note::
    - The links added to your workspace using the :ref:`Add a Link <documents/add-a-link>` option
@@ -246,18 +242,21 @@ Upload <documents/upload>` files to it.
 
 .. _documents/upload:
 
-Upload by email
-^^^^^^^^^^^^^^^
+Files upload
+^^^^^^^^^^^^
 
-Select the :guilabel:`Download and Upload` option to enable users to upload their files to your
-workspace using an :guilabel:`Email Alias`. To create the email alias, enter its name in the
-:guilabel:`Email Alias` field. The :doc:`domain name <../general/email_communication/email_servers>`
-should be set by default, but you can modify it by clicking it.
+Toggle the :guilabel:`Allow upload` switch to allow users to upload files to your workspace.
 
-The documents sent to this email alias are uploaded to the workspace using the chosen
-:ref:`tags <documents/tags>`.
+Tick the :guilabel:`Upload by Email` checkbox to enable users to upload documents sent by email in
+the workspace.
+
+Enter an alias in the :guilabel:`Email Alias` field. All documents sent to this email address are
+uploaded to the workspace using the chosen tags.
 
 .. note::
+   - Your **email server** must be configured to be able to create an **email alias**. If it isn't
+     configured yet, click :guilabel:`Choose or Configure Email Servers` and configure the
+     :doc:`mail server <../../applications/general/email_communication/email_servers>`.
    - By default, the :guilabel:`Document Owner` is the person who uploads a file to a workspace, but
      you can select another user. You can also set a :guilabel:`Contact`, usually an external
      person, such as a partner.
