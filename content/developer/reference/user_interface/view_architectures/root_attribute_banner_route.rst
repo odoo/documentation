@@ -21,7 +21,7 @@
    .. example::
       .. code-block:: xml
 
-         <tree banner_route="/module_name/hello" />
+         <list banner_route="/module_name/hello" />
 
       .. code-block:: python
 

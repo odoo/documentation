@@ -72,7 +72,7 @@ Its fields are:
     model to present views for
 ``views``
     a list of ``(view_id, view_type)`` pairs. The second element of each pair
-    is the category of the view (tree, form, graph, ...) and the first is
+    is the category of the view (list, form, graph, ...) and the first is
     an optional database id (or ``False``). If no id is provided, the client
     should fetch the default view of the specified type for the requested
     model (this is automatically done by
@@ -105,7 +105,7 @@ list and form views::
     {
         "type": "ir.actions.act_window",
         "res_model": "res.partner",
-        "views": [[False, "tree"], [False, "form"]],
+        "views": [[False, "list"], [False, "form"]],
         "domain": [["customer", "=", true]],
     }
 
@@ -123,7 +123,7 @@ dialog::
 In-database window actions have a few different fields which should be ignored
 by clients, mostly to use in composing the ``views`` list:
 
-``view_mode`` (default= ``tree,form`` )
+``view_mode`` (default= ``list,form`` )
     comma-separated list of view types as a string (/!\\ No spaces /!\\). All of these types will be
     present in the generated ``views`` list (with at least a ``False`` view_id)
 ``view_ids``
@@ -139,7 +139,7 @@ by clients, mostly to use in composing the ``views`` list:
 
             <record model="ir.actions.act_window.view" id="test_action_tree">
                <field name="sequence" eval="1"/>
-               <field name="view_mode">tree</field>
+               <field name="view_mode">list</field>
                <field name="view_id" ref="view_test_tree"/>
                <field name="act_window_id" ref="test_action"/>
             </record>

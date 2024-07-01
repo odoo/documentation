@@ -72,7 +72,7 @@ In practice a many2one can be seen as a dropdown list in a form view.
     ========================= ========================= =========================
 
     - Add the menus as displayed in this section's **Goal**
-    - Add the field ``property_type_id`` into your ``estate.property`` model and its form, tree
+    - Add the field ``property_type_id`` into your ``estate.property`` model and its form, list
       and search views
 
     This exercise is a good recap of the previous chapters: you need to create a
@@ -179,7 +179,7 @@ operations like ``recs1 | recs2``.
     ========================= ========================= =========================
 
     - Add the menus as displayed in this section's **Goal**
-    - Add the field ``tag_ids`` to your ``estate.property`` model and in its form and tree views
+    - Add the field ``tag_ids`` to your ``estate.property`` model and in its form and list views
 
     Tip: in the view, use the ``widget="many2many_tags"`` attribute as demonstrated
     `here <https://github.com/odoo/odoo/blob/5bb8b927524d062be32f92eb326ef64091301de1/addons/crm_iap_lead_website/views/crm_reveal_views.xml#L36>`__.
@@ -196,7 +196,7 @@ One2many
 
     **Goal**: at the end of this section:
 
-    - a new ``estate.property.offer`` model should be created with the corresponding form and tree view.
+    - a new ``estate.property.offer`` model should be created with the corresponding form and list view.
     - offers should be added to the ``estate.property`` model:
 
     .. image:: 07_relations/property_offer.png
@@ -244,7 +244,7 @@ that accessing the data must be done in a loop::
     property_id               Many2one (``estate.property``)   required
     ========================= ================================ ============= =================
 
-    - Create a tree view and a form view with the ``price``, ``partner_id`` and ``status`` fields. No
+    - Create a list view and a form view with the ``price``, ``partner_id`` and ``status`` fields. No
       need to create an action or a menu.
     - Add the field ``offer_ids`` to your ``estate.property`` model and in its form view as
       depicted in this section's **Goal**.

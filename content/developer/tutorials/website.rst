@@ -698,10 +698,10 @@ let's also add views so we can see and edit a course's teacher:
         <field name="name">Academy courses: list</field>
         <field name="model">academy.courses</field>
         <field name="arch" type="xml">
-            <tree string="Courses">
+            <list string="Courses">
                 <field name="name"/>
                 <field name="teacher_id"/>
-            </tree>
+            </list>
         </field>
     </record>
     <record id="academy_course_form" model="ir.ui.view">
@@ -761,9 +761,9 @@ model:
                     <field name="name"/>
                     <field name="biography"/>
                     <field name="course_ids">
-                        <tree Sstring="Courses" editable="bottom">
+                        <list string="Courses" editable="bottom">
                             <field name="name"/>
-                        </tree>
+                        </list>
                     </field>
                 </sheet>
             </form>
