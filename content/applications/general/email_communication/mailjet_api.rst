@@ -33,8 +33,7 @@ port number. The settings are needed to configure Mailjet in Odoo, which is cove
    <https://documentation.mailjet.com/hc/articles/360043229473>`_
 
 .. important::
-   Odoo blocks `port 25` on Odoo Online and Odoo.sh databases. :ref:`See reference here
-   <email_servers/restriction>`.
+   Odoo blocks `port 25` on Odoo Online and Odoo.sh databases. :ref:`See reference here <email_servers_outbound/port_restriction>`.
 
 .. image:: mailjet_api/smtp-config.png
    :align: center
@@ -187,8 +186,7 @@ settings can be found on :menuselection:`Mailjet -->  Account Settings --> SMTP 
 Settings`.
 
 Then, if the Mailjet server is used for mass emailing, set the :guilabel:`Priority` value higher
-than that of any transactional email server(s). Finally, save the settings and :guilabel:`Test the
-Connection`.
+than that of any transactional email server(s). Finally, save the settings and :guilabel:`Test the Connection`.
 
 .. image:: mailjet_api/server-settings.png
    :align: center
@@ -201,17 +199,16 @@ Connection`.
    #. The :guilabel:`From Filter` needs to be set on the server configuration. It is recommended
       to set it as a domain and not a full email address. It should match the domain in the two
       proceeding steps. More information can be referenced :ref:`here
-      <email_communication/from_filter>`.
+      <email_servers_outbound/from_filtering>`.
    #. The :guilabel:`mail.default.from` system parameter must have the value
       `notifications\@yourdomain.com`.
    #. The :guilabel:`mail.default.from_filter` system parameter must have the value
       `yourdomain.com`. Replace `yourdomain` with the custom domain for the Odoo database. If there
       isn't one, then use the :guilabel:`mail.catchall.domain` system parameter.
 
-   For more information see :ref:`Using a default email address <email_communication/default>`.
+   For more information see :ref:`Using a default email address <email_servers_outbound/unique_outgoing_address>`.
 
-   The :guilabel:`System Parameters` can be accessed by activating the :ref:`developer mode
-   <developer-mode>`.
+   The :guilabel:`System Parameters` can be accessed by activating the :ref:`developer-mode`.
 
 Once the setup is complete, the Odoo database is ready to use the Mailjet email server for mass
 mailing or transactional emails!

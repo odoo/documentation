@@ -104,7 +104,7 @@ The following define possible reasons for a high bounce rate or low received rat
   likely to result in a high bounce rate and/or a low received rate.
 - Mailings sent using a *From* email address that differs from the sender's domain are likely to
   bounce with certain email providers due to failing :ref:`DMARC authentication
-  <email_communication/DMARC_compliant>`.
+  <email_domain/DMARC_policy>`.
 - Failing to :doc:`configure the proper DNS records
   <../../general/email_communication/email_domain>` can also result in a high bounce rate.
 

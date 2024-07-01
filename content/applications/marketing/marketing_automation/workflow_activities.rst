@@ -191,7 +191,7 @@ options are: :guilabel:`Hours`, :guilabel:`Days`, :guilabel:`Weeks`, and :guilab
 .. example::
    If the interval number is set to `0` and the interval type is set to :guilabel:`Hours`, the
    activity will be executed immediately after the trigger type occurs (at the next scheduled run of
-   the :ref:`Mail: Email Queue Manager cron <email_communication/email-sent-late>`).
+   the :ref:`Mail: Email Queue Manager cron <email_issues/execution_time_email>`).
 
 .. _marketing_automation/trigger-type:
 

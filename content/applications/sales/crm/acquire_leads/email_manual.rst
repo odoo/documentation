@@ -13,6 +13,8 @@ First, ensure the *Leads* feature is enabled in the database by navigating to :m
 app --> Configuration --> Settings`. Tick the :guilabel:`Leads` checkbox, then click
 :guilabel:`Save`.
 
+.. _crm/configure_email_alias:
+
 Configure email aliases
 =======================
 

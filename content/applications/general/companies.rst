@@ -65,8 +65,8 @@ company to edit it.
 
 .. tip::
    Activate the :ref:`developer mode <developer-mode>` to set social media accounts and
-   company-specific email system parameters. See this documentation on
-   :doc:`../marketing/social_marketing` and :ref:`email_servers/outbound`.
+   company-specific email parameters. See this documentation on
+   :doc:`../marketing/social_marketing` and :ref:`emails_servers`.
 
    Companies also have a :guilabel:`Parent Company` set on the company form in :ref:`developer mode
    <developer-mode>`.
@@ -119,7 +119,7 @@ appears.
 .. tip::
    Activate the :ref:`developer mode <developer-mode>` to set social media accounts and
    company-specific email system parameters. See this documentation on
-   :doc:`../marketing/social_marketing` and :ref:`email_servers/outbound`.
+   :doc:`../marketing/social_marketing` and :ref:`emails_servers`.
 
    Branches also have a :guilabel:`Parent Company` set on the branch form in :ref:`developer mode
    <developer-mode>`. Accounting and fiscal localizations for the branch are set on the

@@ -165,7 +165,7 @@ Then, create a new email server and check the box for :guilabel:`Outlook`. Next,
 :guilabel:`Name` (it can be anything) and the Microsoft Outlook email :guilabel:`Username`.
 
 If the :guilabel:`From Filter` field is empty, enter either a :ref:`domain or email address
-<email_communication/default>`.
+<email_servers_outbound/unique_outgoing_address>`.
 
 Then, click on :guilabel:`Connect your Outlook account`.
 
@@ -203,7 +203,7 @@ This address must also match the `{mail.default.from}@{mail.catchall.domain}` ke
 system parameters.
 
 .. seealso::
-   For more information on the from filter visit: :ref:`email_communication/default`.
+   For more information on the from filter visit: :ref: Our documentation on the From Filtering `email_servers_outbound/from_filtering`.
 
 .. note::
    The :guilabel:`System Parameters` can be accessed by activating :ref:`developer-mode` in the
@@ -244,7 +244,7 @@ so that only the user's email is sent from that server. In other words, only a u
 address that matches the set :guilabel:`FROM Filtering` is able to use this server.
 
 .. seealso::
-   For more information on the from filter visit: :ref:`email_communication/default`.
+   For more information on the from filter visit :ref: this documentation <email_servers_outbound/from_filtering>`.
 
 A :ref:`fallback server <azure_oauth/notifications>` must be setup to allow for the sending of
 :guilabel:`notifications`. The :guilabel:`FROM Filtering` for this server should have the value of
@@ -261,7 +261,7 @@ the `{mail.default.from}@{mail.catchall.domain}`.
 
    .. seealso::
       For more information on setting the mass-mailing email server visit
-      :ref:`email_communication/mass_mails`.
+      :ref:`email_servers_outbound/_external_smtp`.
 
 .. example::
    Multiple user outgoing mail server configuration:
@@ -288,6 +288,3 @@ new configuration. Check or Select the button next to :guilabel:`Outlook Oauth A
 enter the :guilabel:`Microsoft Outlook username`.  Click on :guilabel:`Connect your Outlook
 account`. Odoo will state: :guilabel:`Outlook Token Valid` Now :guilabel:`Test and Confirm` the
 account. The account should be ready to receive email to the Odoo database.
-
-.. seealso::
-   :doc:`email_servers`
