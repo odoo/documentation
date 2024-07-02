@@ -25,6 +25,7 @@ Then, follow the corresponding documentation to configure your device:
 - :doc:`SIX configuration <terminals/six>`
 - :doc:`Stripe configuration <terminals/stripe>`
 - :doc:`Vantiv configuration <terminals/vantiv>`
+- :doc:`Viva Wallet configuration <terminals/viva_wallet>`
 - :doc:`Worldline configuration <terminals/worldline>`
 
 Once the terminal is configured, you can :doc:`create the corresponding payment method and add it to
@@ -38,4 +39,5 @@ the POS <../payment_methods>`.
    terminals/six
    terminals/stripe
    terminals/vantiv
+   terminals/viva_wallet
    terminals/worldline
