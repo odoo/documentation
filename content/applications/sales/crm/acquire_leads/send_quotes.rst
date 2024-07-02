@@ -94,9 +94,41 @@ catalog. Then, select a product from the drop-down menu, or create a new one by 
 After selecting a product, update the :guilabel:`Quantity`, if necessary. Confirm the information in
 the remaining fields.
 
-To remove a line from the quotation, click the :guilabel:`🗑️ (trash can)` icon.
+To remove a line from the quotation, click the :icon:`fa-trash-o` :guilabel:`(trash can)` icon.
 
-Repeat the steps above until the quotation is complete.
+To organize products into sections click :guilabel:`Add a section` and type a name for the section.
+Then, click the :icon:`oi-draggable` :guilabel:`(drag)` icon to the left of the name and drag to
+move the section to the appropriate location. Move each product using the same method to finish
+organizing the quotation order lines.
+
+.. image:: send_quotes/product-sections.png
+   :align: center
+   :alt: Categories are used to create separate sections on the order lines of a quote.
+
+Product catalog
+~~~~~~~~~~~~~~~
+
+To quickly add numerous products to the quotation, click the :guilabel:`Catalog` button to open the
+product catalog.
+
+All products in the database are listed as cards and can be sorted in the left panel by
+:guilabel:`Product Category` and :guilabel:`Attributes`.
+
+.. image:: send_quotes/product-catalog.png
+   :align: center
+   :alt: The product catalog displays all products as cards.
+
+To add a product, click the :icon:`fa-shopping-cart` :guilabel:`Add` button on the product card.
+Set the quantity of the item using the :icon:`fa-plus` :guilabel:`(add)` or :icon:`fa-minus`
+:guilabel:`(subtract)` buttons, or type the quantity in the number field between the two buttons.
+To remove an item, click the :icon:`fa-trash` :guilabel:`Remove` button on the product card.
+
+.. image:: send_quotes/set-quantity.png
+   :align: center
+   :alt: The purple add and subtract buttons are used to set the quantity of an item.
+
+Once all product quantities are set, click the :guilabel:`Back to Quotation` button to return to the
+quotation. The items selected in the product catalog now appear in the :guilabel:`Order Lines` tab.
 
 Preview and send quotation
 ==========================
