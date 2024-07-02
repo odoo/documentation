@@ -1,11 +1,12 @@
 :nosearch:
 
-=====
-Tasks
-=====
+===============
+Task management
+===============
 
 .. toctree::
    :titlesonly:
 
-   tasks/email_alias
+   tasks/task_stages_statuses
+   tasks/task_creation
    tasks/recurring_tasks
