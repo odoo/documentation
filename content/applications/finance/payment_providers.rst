@@ -243,13 +243,13 @@ themselves. To modify them, go to :menuselection:`Accounting --> Configuration -
 Configuration --> Payment Methods`, then click on the payment method.
 
 To modify a payment method's icon, hover your mouse over the image in the upper-right corner of the
-payment method's form and click the pencil icon (:guilabel:`✎`).
+payment method's form and click the :icon:`fa-pencil` (:guilabel:`pencil`) icon.
 
 Select the :guilabel:`Brands` tab to view the brands that have been activated for the payment
 method. The brands and their related icons are displayed based on their sequence order; to reorder
 them, drag and drop them in the desired order. To modify a brand's icon, select the brand, then,
 in the popup window that opens, hover the mouse over the image in the upper-right corner and click
-the pencil icon (:guilabel:`✎`).
+the :icon:`fa-pencil` (:guilabel:`pencil`) icon.
 
 Advanced configuration
 ----------------------
@@ -366,6 +366,14 @@ Availability
 You can adapt the payment provider's availability by specifying the :guilabel:`Maximum amount`
 allowed and modifying the :guilabel:`Currencies` and :guilabel:`Countries` in the
 :guilabel:`Configuration` tab.
+
+.. tip::
+   To display an availability report for payment providers and payment methods, and to help diagnose
+   potential availability issues on the payment form, enable the :ref:`developer-mode`, then click
+   the :icon:`fa-bug` (:guilabel:`bug`) icon next to the :guilabel:`Choose a payment method`
+   heading on the payment form. The report includes a list of enabled payment providers and payment
+   methods, reasons for any payment providers or methods not being available, if applicable, and a
+   list of supported providers for each payment method.
 
 .. _payment_providers/currencies_countries:
 
