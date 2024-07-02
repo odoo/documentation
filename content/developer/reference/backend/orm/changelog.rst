@@ -4,6 +4,13 @@
 Changelog
 =========
 
+Odoo Online version 17.4
+========================
+
+- The internal operator `inselect` is removed. The alternative is to use `in`
+  with a Query or SQL object. `#171371 <https://github.com/odoo/odoo/pull/171371>`_.
+
+
 Odoo Online version 17.3
 ========================
 
