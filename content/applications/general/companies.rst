@@ -133,6 +133,8 @@ appears.
 
    For more information on pricing, see `Odoo's pricing <https://www.odoo.com/pricing-plan>`_ page.
 
+.. _general/employee-access:
+
 Employee access
 ===============
 
@@ -188,6 +190,8 @@ Document Layout` and edit the information as needed.
 :guilabel:`Company Details` can be edited on the document layout. By default, this field is
 populated from the company information listed, when navigating here: :menuselection:`Settings app
 --> Companies section --> Manage Companies`, and select a company from the list.
+
+.. _general/inter-company:
 
 Inter-company transactions
 ==========================

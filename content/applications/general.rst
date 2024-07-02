@@ -11,3 +11,4 @@ General settings
     general/email_communication
     general/integrations
     general/developer_mode
+    general/multi_company
