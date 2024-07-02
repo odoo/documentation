@@ -75,7 +75,7 @@ localization:
    * - :guilabel:`Ecuadorian Point of Sale`
      - `l10n_ec_edi_pos`
      - Includes all the technical and functional requirements to generate automatic electronic
-       invoices from a PoS sale.
+       invoices from a POS sale.
 
 .. note::
    When you install a database from scratch selecting `Ecuador` as the country, Odoo automatically
@@ -650,7 +650,85 @@ electronic invoice after the checkout is completed.
 After finishing the checkout process, a confirmed invoice is generated, ready to be sent manually or
 asynchronously to the SRI.
 
-Financial Reports
+Point of Sale electronic invoicing
+----------------------------------
+
+:ref:`Install <general/install>` the *Ecuadorian Module for Point of Sale* (`l10n_ec_edi_pos`)
+module to enable the following features and configurations:
+
+- Choose the SRI payment method in each payment method configuration.
+- Customers can manually input their identification type and identification number when creating a
+  new contact on *POS*.
+- Automatically generate a valid electronic invoice for Ecuador at the end of the checkout process.
+
+Configuration
+~~~~~~~~~~~~~
+
+Payment method
+**************
+
+To :doc:`create a payment method for a point of sale <../../sales/point_of_sale/payment_methods>`,
+go to :menuselection:`POS --> Configuration --> Payment Methods`. Then, set the :guilabel:`SRI
+Payment Method` in the payment method form.
+
+QR code POS receipt
+*******************
+
+To activate the functionality of a QR code on the POS receipt, navigate to :menuselection:`POS -->
+Configuration --> Settings` to find the :guilabel:`Activate QR Code` option.
+
+Enabling this allows the client to scan the code and access the invoice from the POS order from the
+Odoo portal.
+
+Invoicing flows
+~~~~~~~~~~~~~~~
+
+Type and identification number
+******************************
+
+The POS cashier will be able to :ref:`create a new contact for a customer <pos/customers>` who
+requests an invoice from the sale screen of an open POS session.
+
+The *Ecuadorian Module for Point of Sale* adds a new field to the contact creation form:
+:guilabel:`Identification Type`.
+
+.. note::
+   As the identification number length differs depending on the identification type, Odoo
+   automatically checks the :guilabel:`Tax ID` field upon saving the customer form. To manually
+   ensure the length is correct, know that the :guilabel:`RUC` and :guilabel:`Citizenship` types
+   require 13 and 10 digits respectively.
+
+Electronic invoice: anonymous end consumer
+******************************************
+
+When clients do not request an electronic invoice for their purchase, Odoo automatically sets the
+customer as :guilabel:`Consumidor Final` and generates an electronic invoice anyway.
+
+.. note::
+   If the client requests a credit note due to a return of this type of purchase, the credit note
+   should be made using the client's real contact information. Credit notes cannot be created to
+   *Consumidor Final*, and can be managed directly from the POS session.
+
+Electronic invoice: specific customer
+*************************************
+
+If a customer requests an invoice during the sales, it is possible to select or create a contact
+with their fiscal information. This ensures the invoice is generated with accurate customer details.
+
+.. note::
+   If the client requests a credit note due to a return of this type of purchase, the credit note
+   and return process can be managed directly from the POS session.
+
+Returns
+*******
+
+For electronic invoices, it is possible to manage the process to return products sold in a *Point of
+Sale* order.
+
+.. seealso::
+   :ref:`Return and refund products in Point of Sale <pos/refund>`
+
+Financial reports
 =================
 
 In Ecuador, there are fiscal reports that the company presents to SRI. Odoo supports two of the main
