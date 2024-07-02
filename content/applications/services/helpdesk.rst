@@ -1,5 +1,4 @@
 :show-content:
-:hide-page-toc:
 :show-toc:
 
 ========
@@ -144,8 +143,8 @@ Stages`.
 The default list view on the :guilabel:`Stages` page displays the stages currently available in
 *Helpdesk*. They are listed in the order they appear in the pipeline.
 
-To change the order of the stages, click the :guilabel:`(six square)` icon, to the left of the stage
-name, and drag it to the desired place on the list.
+To change the order of the stages, click the :icon:`oi-draggable` :guilabel:`(drag)` icon, to the
+left of the stage name, and drag it to the desired place on the list.
 
 .. image:: helpdesk/stages-list-buttons.png
    :align: center
@@ -179,7 +178,8 @@ customer when a ticket reaches that specific stage in the pipeline. Likewise, ad
    <https://iap-services.odoo.com/iap/sms/pricing>`_ for additional information.
 
 To select an existing email template, select it from the :guilabel:`Email Template` field. Click on
-the :guilabel:`→ (Internal Link)` icon to the right of the field to edit the chosen template.
+the :icon:`oi-arrow-right` :guilabel:`(right arrow)` icon to the right of the field to edit the
+chosen template.
 
 To create a new template, click the field, and enter a title for the new template. Then, select
 :guilabel:`Create and edit` from the drop-down menu that appears, and complete the form details.
@@ -227,8 +227,8 @@ Stages can be temporarily folded in the Kanban view of the tickets pipeline, as 
 View a specific team's pipeline by navigating to :menuselection:`Helpdesk app`, and clicking the
 team's Kanban card.
 
-Select a stage to fold temporarily, then click the :guilabel:`⚙️ (gear)` icon, and select
-:guilabel:`Fold`.
+Select a stage to fold temporarily, then click the :icon:`fa-gear` :guilabel:`(gear)` icon, and
+select :guilabel:`Fold` from the drop-down menu.
 
 .. image:: helpdesk/fold-stage-kanban.png
    :align: center
@@ -237,6 +237,23 @@ Select a stage to fold temporarily, then click the :guilabel:`⚙️ (gear)` ico
 .. important::
    Manually folding a stage from the Kanban view is temporary and does **not** close the tickets in
    the stage.
+
+Merge tickets
+=============
+
+If duplicate tickets are found in *Helpdesk*, they can be combined into a single ticket using the
+*merge* feature.
+
+.. important::
+   The *merge* feature is **only** accessible if the :doc:`Data Cleaning
+   <../productivity/data_cleaning>` application is installed on the database.
+
+To merge two or more tickets, navigate to :menuselection:`Helpdesk app --> Tickets --> All Tickets`.
+Identify the tickets to be merged, and tick the checkbox at the far-left of each ticket to select
+them. Then, click the :icon:`fa-cog` :guilabel:`Actions` icon, and select :guilabel:`Merge` from the
+drop-down menu. Doing so opens a new page where the selected tickets are listed with their
+:guilabel:`Similarity` rating. From here, click either :ref:`Merge <data_cleaning/merge-records>` to
+combine the tickets, or :guilabel:`DISCARD`.
 
 .. seealso::
    - `Odoo Tutorials: Helpdesk <https://www.odoo.com/slides/helpdesk-51>`_
