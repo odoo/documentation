@@ -36,10 +36,11 @@ Settings`, click :guilabel:`Update Info` in the :guilabel:`Companies` section, a
 
 To initialize the OSCU:
 
-#. Go to the :guilabel:`eTIMS` tab.
-#. Fill in the :guilabel:`eTIMS Branch Code` and :guilabel:`Serial Number` of the device.
+#. Go to :menuselection:`Settings --> General Settings` and scroll down to the :guilabel:`Kenya
+   eTIMS Integration` section.
 #. Set the :guilabel:`eTIMS Server Mode` to :guilabel:`Test` for the initialization.
-#. Tick the **user agreement** and click :guilabel:`Initialize OSCU`.
+#. Enter the :guilabel:`Serial Number` of the device and tick the two check boxes.
+#. Click :guilabel:`Initialize OSCU`.
 
 .. note::
    Three server modes are available:
@@ -51,10 +52,9 @@ To initialize the OSCU:
 
 .. Important::
    If your device has **already been initialized** (through another ERP, for example), enable the
-   :doc:`../../general/developer_mode`, go to the :guilabel:`eTIMS` tab, and enter the key obtained
-   through a previous initialization in the :guilabel:`Device Communication Key` field. Click
-   :guilabel:`Save manually`, then :guilabel:`Initialize OSCU` (which may take a moment to become
-   available).
+   :doc:`../../general/developer_mode`. Then, in the :guilabel:`Kenya eTIMS Integration` section,
+   enter the ID of the unit in the :guilabel:`Unit ID` field and the key obtained through a previous
+   initialization in the :guilabel:`CMC Key` field. Click :guilabel:`Save` when done.
 
 Once the **OSCU module** has been :ref:`initialized <kenya/initialization>`, an OSCU serial number
 is generated for each company on that database with its **country** set to :guilabel:`Kenya`. The
@@ -103,7 +103,7 @@ To fetch them manually, proceed as follows:
    :guilabel:`KE eTIMS: Fetch KRA standard codes`.
 #. Click the action in the list, then click :guilabel:`Run Manually` to fetch the codes.
 
-Go to :menuselection:`Accounting --> Vendors --> KE OSCU Codes` to view the complete list of
+Go to :menuselection:`Accounting --> Configuration --> KE OSCU Codes` to view the complete list of
 fetched OSCU codes.
 
 .. image:: kenya/oscu-codes.png
@@ -122,8 +122,8 @@ fetched from the KRA eTIMS API servers every day. To fetch them manually, procee
    :guilabel:`KE eTIMS: Fetch UNSPSC codes from eTIMS`.
 #. Click the action in the list, then click :guilabel:`Run Manually` to fetch the codes.
 
-Go to :menuselection:`Accounting --> Vendors --> KE UNSPSC Codes` to view the complete list of
-fetched UNSPSC codes.
+Go to the **product form**, and in the :guilabel:`Accounting` tab, click the :guilabel:`UNSPSC
+Category` field to view the complete list of fetched UNSPSC codes.
 
 Notices
 -------
@@ -136,7 +136,7 @@ Notices are **automatically** fetched from the KRA eTIMS API servers every day. 
    :guilabel:`KE eTIMS: Fetch KRA notices from eTIMS`.
 #. Click the action in the list, then click :guilabel:`Run Manually` to fetch the notices.
 
-Go to :menuselection:`Accounting --> Vendors --> KE OSCU Notices` to view the complete list of
+Go to :menuselection:`Accounting --> Configuration --> KE OSCU Notices` to view the complete list of
 fetched notices.
 
 Multi-company
@@ -152,10 +152,10 @@ all on a single Odoo database. The KRA identifies and differentiates the **main*
 its **subsidiaries** by using IDs. Furthermore, subsidiaries are classified as **branches** of the
 main company.
 
-To configure the company ID, open the **Settings** app, click :guilabel:`Update Info` in the
-:guilabel:`Companies` section, then click the :guilabel:`eTIMS` tab. The **main company** has a
-branch ID equal to `00` in a multi-company environment. Companies that are *not* the main company
-have a branch ID other than `00` and are assigned an ID by the KRA.
+To configure the company's ID, open the **Settings** app, click :guilabel:`Update Info` in the
+:guilabel:`Companies` section, and search for the :guilabel:`eTIMS Branch Code` field. The **main
+company** has a branch ID equal to `00` in a multi-company environment. Companies that are *not* the
+main company have a branch ID other than `00` and are assigned an ID by the KRA.
 
 To add a branch, go to the :guilabel:`Branches` tab in the **company settings** and click
 :guilabel:`Add a line`.
@@ -210,10 +210,10 @@ Insurance
 =========
 
 For **health service providers**, you can send insurance information about the main and branch
-companies and update it in eTIMS. To do so, open the **Settings** app, click :guilabel:`Update Info`
-in the :guilabel:`Companies` section, and in the :guilabel:`eTIMS` tab, fill in the fields related
-to your company: :guilabel:`Insurance Code`, :guilabel:`Insurance Name`, and :guilabel:`Insurance
-Rate`.
+companies and update it in eTIMS. To do so, go to :menuselection:`Accounting --> Configuration -->
+Settings`, scroll to the :guilabel:`Kenya eTIMS Integration` section, and fill in the
+:guilabel:`Code`, :guilabel:`Name`, and :guilabel:`Rate` fields. Click :guilabel:`Send Insurance
+Details` when done.
 
 .. _kenya/product-registration:
 
@@ -364,15 +364,15 @@ The KRA requires all BOMs to be sent to them. To send BOMs to eTIMS, the product
 *must* be :ref:`registered <kenya/product-registration>`. To access a product's BOM, click on the
 product and then click the :guilabel:`Bill of Materials` smart button.
 
-Fill in the KRA's required fields in the :guilabel:`KRA eTIMS details` section of the
-:guilabel:`Accounting` tab, then click :guilabel:`Send to eTIMS`. The successful sending of the
-BOM is confirmed in the chatter, where you can also find the sent information in an attached JSON
-file.
+Make sure the :ref:`KRA's required fields <kenya/product-registration>` are filled in the
+:guilabel:`KRA eTIMS details` section of the :guilabel:`Accounting` tab in the product form, and
+click :guilabel:`Send to eTIMS`. The successful sending of the BOM is confirmed in the chatter,
+where you can also find the sent information in an attached JSON file.
 
 Credit notes
 ============
 
 The KRA does not accept credit notes with quantities or prices higher than the initial invoice. When
-reversing the invoice, a KRA reason must be indicated: in the credit note form, go to the
+creating a credit note, a KRA reason must be indicated: In the credit note form, go to the
 :guilabel:`eTIMS Details` tab, select the :guilabel:`eTIMS Credit Note Reason`, and then select the
 invoice number in the :guilabel:`Reversal of` field.
