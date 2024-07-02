@@ -16,3 +16,4 @@ Workflows
    workflows/byproducts
    workflows/allocation
    workflows/continuous_improvement
+   workflows/oee
