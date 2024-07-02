@@ -18,8 +18,13 @@ To specify a sales order's invoice and delivery addresses, first go to :menusele
 
 On quotations and sales orders, there are now fields for :guilabel:`Invoice Address` and
 :guilabel:`Delivery Address`. If the customer has an invoice or delivery address listed on their
-contact record, the corresponding field will use that address by default, but any contact's address
-can be used instead.
+:ref:`contact record <sales/send_quotations/contact-form-config>`, the corresponding field uses that
+address, by default, but any contact's address can be used instead.
+
+.. seealso::
+   For more information, refer to the documentation on :ref:`Contact Form Configuration
+   <sales/send_quotations/contact-form-config>`.
+
 
 Invoice and deliver to different addresses
 ==========================================
