@@ -2,6 +2,11 @@
 France
 ======
 
+.. important::
+   You must :doc:`install <../../general/apps_modules>` the **France - Adding Mandatory Invoice
+   Mentions (Decree no. 2022-1299)** (`l10n_fr_invoice_addr`) module to comply with the `local
+   legislation <https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000046383394>`_.
+
 .. _france/fec:
 
 FEC - Fichier des Écritures Comptables
