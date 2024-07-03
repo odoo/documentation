@@ -45,6 +45,10 @@ corner of the opportunity.
    :align: center
    :alt: A lost opportunity with the lost banner added.
 
+.. note::
+   To mark an *inactive* (archived) opportunity as lost, set the :guilabel:`Probability` field to
+   `0` percent.
+
 .. _crm/lost-reasons:
 
 Create/edit lost reasons
