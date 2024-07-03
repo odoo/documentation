@@ -61,6 +61,14 @@ modified at any time.
    The :guilabel:`Public Pricelist` is the default pricelist used with Odoo *Sales* and *eCommerce*.
    This pricelist is applied by default, if there are no matching criteria.
 
+.. note::
+   In Odoo 17 (and above), it is no longer required to have a pricelist entered in the
+   :guilabel:`Pricelist` field on a quotation form in order to confirm it (i.e. turn it into a sales
+   order).
+
+   It should also be noted that, in Odoo 17 (and above), a chatter section can be found on pricelist
+   forms, which enhances the ability to communicate about them.
+
 From the :guilabel:`Pricelists` page, either select the desired pricelist to edit, or click
 :guilabel:`New` to create a new pricelist, which reveals a blank pricelist form that can be
 configured in a number of different ways.
@@ -76,7 +84,7 @@ Then, if working in a multi-company environment, select which company this price
 in the :guilabel:`Company` field. If this field is left blank, the pricelist is automatically
 applied to all companies in the database.
 
-Price rules tab
+Price Rules tab
 ---------------
 
 The :guilabel:`Price Rules` tab functionality on a pricelist form varies depending on the
@@ -86,8 +94,8 @@ The :guilabel:`Price Rules` tab functionality on a pricelist form varies dependi
 However, the :guilabel:`Time-based rules` tab and :guilabel:`Configuration` tab are always the same,
 regardless of the chosen :guilabel:`Pricelists` setting.
 
-Price rules tab (multiple prices per product)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Multiple prices per product
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 With the :guilabel:`Multiple prices per product` setting activated, the :guilabel:`Price Rules` tab
 on pricelist forms provides the option to add specific products, with a specific price, to a
@@ -114,8 +122,8 @@ limit to how many products can be added in the :guilabel:`Price Rules` tab of a 
 For more information, check out the following section: :ref:`Multiple prices per product
 <sales/multiple-prices-per-product>`.
 
-Price rules tab (advanced price rules)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Advanced price rules
+~~~~~~~~~~~~~~~~~~~~
 
 With the :guilabel:`Advanced price rules (discounts, formulas)` setting activated, the
 :guilabel:`Price Rules` tab on pricelist forms provides the option to configure detailed price rules
@@ -124,37 +132,52 @@ based on formulas.
 Check out the :ref:`Advanced price rules (discounts, formulas) <sales/advanced-price-rules>` section
 for detailed steps on how to add advanced price rules to a pricelist.
 
-Time-based rules tab
+Recurring Prices tab
 --------------------
 
-Time-based rules are used specifically with :doc:`subscription products
-</applications/sales/subscriptions/products>`. Be sure to check out the Odoo *Subscriptions*
-:doc:`documentation </applications/sales/subscriptions>`.
+Recurring prices are specifically used with :doc:`subscription products
+<../../../subscriptions/products>`.
 
-Under the :guilabel:`Time-based rules` tab, the same functionality of the :guilabel:`Price Rules`
-tab is present, with the only difference being that a repeating time period can be applied in the
-:guilabel:`Period` column.
+Under the :guilabel:`Recurring Prices` tab, the same functionality of the :guilabel:`Price Rules`
+tab is present. The only difference being that a recurring time period can be applied in the
+:guilabel:`Recurring Plan` column.
 
-After a :guilabel:`Product` and potential :guilabel:`Variant` are selected in the
-:guilabel:`Time-based rules` tab, select the blank field in the :guilabel:`Period` column to reveal
-a drop-down menu of pre-designated recurrence periods (e.g. `Monthly`, `Quarterly`, `Weekly`, etc.).
+Once :guilabel:`Products` and/or :guilabel:`Product Variants` are selected, click :guilabel:`Add a
+price rule`, and select the blank field in the :guilabel:`Recurring Plan` column to reveal a
+drop-down menu of pre-designated recurrence periods (e.g. `Monthly`, `Quarterly`, `Weekly`, etc.).
 
-New recurrence periods can also be directly created from this column, by typing in the new name for
-the :guilabel:`Period` and then selecting :guilabel:`Create` to create the time period, which can be
-edited later. Or, select :guilabel:`Create and edit...` to reveal a pop-up form, in which the new
-recurrence period can be directly configured.
+New recurrence periods can also be created from this column. To do so, type in the name for the new
+:guilabel:`Recurring Plan`, then select :guilabel:`Create` from the resulting drop-down menu to
+create the time period, which can be edited later.
+
+Or, select :guilabel:`Create and edit...` to reveal a :guilabel:`Create Recurring Plan` pop-up form.
+From this pop-up form, the new recurrence period can be configured, with specific
+:guilabel:`Details`, :guilabel:`Self-Service`, and :guilabel:`Pricing` options. When the
+configurations are complete, click the :guilabel:`Save & Close` button.
 
 .. image:: pricing/time-period-popup.png
    :align: center
    :alt: Custom time period pop-up form in Odoo Sales.
 
-From this :guilabel:`Create Period` pop-up form, add a :guilabel:`Name`, :guilabel:`Duration`, then
-a :guilabel:`Unit` (e.g. `Days`, `Weeks`, etc.). When finished, click :guilabel:`Save and Close`.
-
-Lastly, add the desired price for this time-based rule in the :guilabel:`Price` column.
+Lastly, add the desired price for this recurring price rule in the :guilabel:`Recurring Price`
+column.
 
 .. seealso::
-   :doc:`/applications/sales/subscriptions`
+   :doc:`../../../subscriptions`
+
+Rental rules tab
+----------------
+
+Under the :guilabel:`Rental rules` tab, specific price rules can be configured for various rental
+products, using the same methodology as the :guilabel:`Price Rules` and :guilabel:`Recurring Prices`
+tabs.
+
+To add a rental rule, click :guilabel:`Add a line`, and select a desired product in the
+:guilabel:`Products` column. Then, select any specific :guilabel:`Variants`, if necessary.
+
+Next, designate a :guilabel:`Period` of time for the rental rule (e.g. `Daily`, `Hourly`, etc.).
+
+Lastly, configure a :guilabel:`Price` for the rental rule in the respective column.
 
 Configuration tab
 -----------------
@@ -175,45 +198,24 @@ can be added in this field.
 
 Under the :guilabel:`Website` section, there are a few options that can be configured. In the
 :guilabel:`Website` field, this pricelist can be applied to a specific website, if working in a
-multi-website environment. If left blank, the pricelist will be applied to all websites in the
-database.
+multi-website environment. If left blank, the pricelist is applied to all websites in the database.
 
-Click the :guilabel:`Selectable` checkbox to have this pricelist as a selectable option for
-customers to choose as they shop. If the :guilabel:`Selectable` box is left unchecked, customers
-**cannot** select this pricelist for themselves as they shop.
+Tick the :guilabel:`Selectable` checkbox to have this pricelist as a selectable option for
+customers to choose as they shop. If the :guilabel:`Selectable` box is left unticked, customers
+**cannot** select this pricelist for themselves.
 
 Lastly, there is the option to add an :guilabel:`E-commerce Promotional Code`. To add a code, type
 in the desired promo code that, when entered during the checkout process, applies the pricelist to
 the customer, even if the customer does not fall into the previously-specified criteria.
 
-Show discount percentage to customers
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Then, in the :guilabel:`Discounts` section, there is a :guilabel:`Discount Policy` field with two
+options to choose from: :guilabel:`Discount included in the price` or :guilabel:`Show public price &
+discount to the customer`.
 
-With Odoo *Sales*, the option to show the public price *and* the computed discount percentage on the
-product catalog is available.
-
-To do that, navigate to :menuselection:`Sales app --> Configuration --> Settings`, and in the
-:guilabel:`Pricing` section, click the checkbox next to the :guilabel:`Discounts` feature, and then
-click :guilabel:`Save` to save all changes.
-
-After activating the :guilabel:`Discounts` feature, navigate to the pricelists page, either by
-clicking the :guilabel:`Pricelists` link from the :guilabel:`Settings` page, or by going to
-:menuselection:`Sales app --> Products --> Pricelists`.
-
-On the :guilabel:`Pricelists` page, select the desired pricelist to edit. On the pricelist form,
-click into the :guilabel:`Configuration` tab. In the :guilabel:`Configuration` tab, at the bottom, a
-:guilabel:`Discounts` section is now available.
-
-.. image:: pricing/configuration-discount-options.png
-   :align: center
-   :alt: What the discount options are on the configuration tab of a pricelist in Odoo Sales.
-
-The options available in this section are:
-
-- :guilabel:`Discount included in the price`: shows the customer only the final price with the
-  discount already included.
-- :guilabel:`Show public price & discount to the customer`: shows the customer the public price
-  *and* the discount they're earning.
+If :guilabel:`Discount included in the price` is selected, the price shown to the customer already
+accounts for the discount being applied. However, if :guilabel:`Show public price & discount to the
+customer` is selected, the customer sees the actual public price *and* how much they are saving with
+this pricelist discount.
 
 Customer pricelist application
 ==============================
@@ -236,6 +238,16 @@ the drop-down menu in the :guilabel:`Pricelist` field.
 .. image:: pricing/customer-form-pricelist-field.png
    :align: center
    :alt: The pricelist field in a customer detail form in Odoo Sales.
+
+.. note::
+   When a customer is added to the database, the default pricelist is automatically applied to them.
+   There is **no way** to have a blank *Pricelist* field on a contact form. Even if that field is
+   left blank, the default pricelist appears when that contact form is opened again.
+
+   However, when that contact is added to a quotation, and the *Pricelist* field is auto-populated
+   (based on the information from their contact form), that predetermined pricelist can be removed
+   from the *Pricelist* field, and the quotation can still be confirmed, and subsequently, turned
+   into a sales order.
 
 .. _sales/multiple-prices-per-product:
 
