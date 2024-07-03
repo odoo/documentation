@@ -21,8 +21,8 @@ electronic signatures. The key points of the ESL include:
 - **Certification Authorities (CAs)**: the law recognizes electronic signatures supported by digital certificates issued
   by accredited Certification Authorities (CAs).
 
-How Odoo Sign complies with Indian regulations
-==============================================
+How Odoo Sign complies with Chinese regulations
+===============================================
 
 Odoo Sign ensures full compliance with the Electronic Signature Law of China by incorporating the following features:
 
