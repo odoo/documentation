@@ -26,7 +26,13 @@ To begin, go to the `Bpost website <https://parcel.bpost.be/en/home/business>`_ 
 into, the company's Bpost business account. When creating the Bpost account, have the company's VAT
 number and mobile phone number ready.
 
-Follow the website's steps to complete registration, and sign up for shipping services.
+Follow the website's steps to complete registration, and sign up for shipping services. Doing so
+submits a request to enter a contractual business relationship between the company and Bpost.
+
+.. important::
+   Odoo **cannot** be integrated with `non-business Bpost
+   <https://bpost.freshdesk.com/support/solutions/articles/174847-account-id-and-passphrase>`_
+   accounts.
 
 After completing the setup, get the Bpost account ID and passphrase, by navigating to the
 :guilabel:`Shipping Manager` menu item.
