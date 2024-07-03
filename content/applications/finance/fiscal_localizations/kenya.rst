@@ -169,9 +169,6 @@ Then, go to the :guilabel:`Branches` tab and click :guilabel:`Populate from KRA`
    - The **OSCU** device must be :ref:`initialized independently <kenya/initialization>` for each
      branch.
 
-.. image:: kenya/branches.png
-   :alt: "Populate from KRA" button for branches.
-
 Contact branch ID
 -----------------
 
