@@ -172,7 +172,7 @@ German Tax Accounting Standards: Odoo's guide to GoBD Compliance
 
 **GoBD** stands for `Grundsätze zur ordnungsmäßigen Führung und Aufbewahrung von Büchern,
 Aufzeichnungen und Unterlagen in elektronischer Form sowie zum Datenzugriff
-<https://www.bundesfinanzministerium.de/Content/DE/Downloads/BMF_Schreiben/Weitere_Steuerthemen/Abgabenordnung/2019-11-28-GoBD.pdf>`_.
+<https://ao.bundesfinanzministerium.de/ao/2021/Anhaenge/BMF-Schreiben-und-gleichlautende-Laendererlasse/Anhang-64/anhang-64.html>`_.
 In short, it is a **guideline for the proper management and storage of books, records, and documents
 in electronic form, as well as for data access**, that is relevant for the German tax authority, tax
 declaration, and balance sheet.
