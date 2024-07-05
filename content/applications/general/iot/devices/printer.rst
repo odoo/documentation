@@ -450,6 +450,20 @@ corresponding template.
    `Zebra's instructions on printing ZPL files
    <https://supportcommunity.zebra.com/s/article/Print-a-zpl-file-using-the-Generic-Text-Printer>`_
 
+The printer appears multiple times
+----------------------------------
+
+If the printer appears multiple times on the :ref:`IoT box's <iot/iot-box/homepage>` or
+:ref:`Windows virtual IoT's <iot/windows-iot/homepage>` homepage and/or in the list of
+:guilabel:`Devices` on the :ref:`IoT system's form <iot/connect/IoT-form>`, the cause is usually the
+CUPS auto-discovery feature. This feature allows to list all detected printers together with all
+available drivers, creating one entry for each printer–driver pair.
+
+Simply select the entry that works best and ignore the others.
+
+.. note::
+   Workarounds exist to disable the CUPS auto-discovery feature.
+
 Barcode scanner issues
 ======================
 
