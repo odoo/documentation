@@ -18,6 +18,7 @@
 # Renaud de Colombel <rdecolombel@sgen.cfdt.fr>, 2024
 # Jolien De Paepe, 2024
 # Wil Odoo, 2024
+# Manon Rondou, 2024
 # 
 #, fuzzy
 msgid ""
@@ -26,7 +27,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-28 08:57+0000\n"
 "PO-Revision-Date: 2021-11-02 08:47+0000\n"
-"Last-Translator: Wil Odoo, 2024\n"
+"Last-Translator: Manon Rondou, 2024\n"
 "Language-Team: French (https://app.transifex.com/odoo/teams/41243/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -3275,6 +3276,12 @@ msgid ""
 "<https://www.odoo.sh>`_. Incoming and outgoing servers must be configured "
 "for on-premise databases."
 msgstr ""
+"Ce document est **principalement dédié aux utilisateurs d'Odoo sur serveur**"
+" qui ne bénéficient pas d'une solution prête à l'emploi pour envoyer et "
+"recevoir des e-mails dans Odoo, contrairement à `Odoo Online "
+"<https://www.odoo. com/trial>`_ et `Odoo.sh <https://www.odoo.sh>`_. Les "
+"serveurs de messagerie entrants et sortants doivent être configurés pour les"
+" bases de données sur serveur."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:31
 msgid ""
@@ -3357,14 +3364,22 @@ msgid ""
 "external email server. Once all the information has been filled out, click "
 ":guilabel:`Test Connection`."
 msgstr ""
+"En tant qu'administrateur du système, allez à :menuselection:`Paramètres -->"
+" Paramètres généraux --> Discussion` dans Odoo et activez l'option "
+":guilabel:`Serveurs de messagerie personnalisés`. Cliquez ensuite sur "
+":guilabel:`Enregistrer`. Ensuite, cliquez sur :guilabel:`Serveurs de "
+"messagerie sortants` et sur :guilabel:`Créer` pour créer un nouvel "
+"enregistrement de serveur de messagerie sortant dans Odoo. Référencez les "
+"données SMTP du serveur de messagerie externe. Une fois que toutes les "
+"informations ont été complétées, cliquez sur :guilabel:`Test de connexion`."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:68
 msgid ":doc:`google_oauth`"
-msgstr ""
+msgstr ":doc:`google_oauth`"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:69
 msgid ":doc:`azure_oauth`"
-msgstr ""
+msgstr ":doc:`azure_oauth`"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:72
 msgid ""
@@ -3643,6 +3658,10 @@ msgid ""
 " and Amazon SES, Mailgun, Sendgrid or :doc:`Mailjet <mailjet_api>` for mass "
 "mailings."
 msgstr ""
+"Dans Odoo, vous pouvez utiliser un serveur de messagerie séparé pour les "
+"emails transactionnels et les envois de masse. Par exemple, utilisez "
+"Postmark ou SendinBlue pour les emails transactionnels, et Amazon SES, "
+"Mailgun, Sendgrid ou :doc:`Mailjet <mailjet_api>` pour les envois de masse."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:184
 msgid ""
@@ -3710,6 +3729,14 @@ msgid ""
 "not have another action attached to it like other aliases might, it is only "
 "used to collect replies."
 msgstr ""
+"Les **réponses** aux messages envoyés depuis Odoo sont acheminées vers le "
+"fil de discussion d'origine (et vers la boîte de réception de tous ses "
+"abonnés) par l'alias du modèle, s'il y en a un, ou par l'alias catchall "
+"(**catchall@**). Les réponses aux messages de modèles qui n'ont pas d'alias "
+"personnalisé utiliseront l'alias catchall (`catchall@mycompany.odoo.com`). "
+"L'adresse catchall, cependant, n'est pas associée à une autre action, "
+"contrairement à d'autres alias ; elle est uniquement utilisée pour collecter"
+" des réponses."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:214
 msgid ""
@@ -3877,6 +3904,13 @@ msgid ""
 "a change is made then the system will not recognize the old alias, and the "
 "reply will not be received."
 msgstr ""
+"Pour modifier les alias catchall et bounce, activez d'abord le :ref:`mode "
+"développeur <developer-mode>`. Allez ensuite aux :menuselection:`Paramètres "
+"--> Technique --> Paramètres --> Paramètres système` pour personnaliser les "
+"alias (`mail.catchall.alias` & `mail.bounce.alias`). Ces changements doivent"
+" être effectués avant que la base de données ne soit mise en service. Si un "
+"client répond après un changement, le système ne reconnaîtra pas l'ancien "
+"alias et la réponse ne sera pas reçue."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:270
 msgid ""
@@ -3899,7 +3933,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers.rst:278
 msgid "Allow alias domain system parameter"
-msgstr ""
+msgstr "Autoriser les paramètres système de l'alias de domaine"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:280
 msgid ""
@@ -3908,6 +3942,11 @@ msgid ""
 "the :ref:`developer mode <developer-mode>`. Then, go to "
 ":menuselection:`Settings app --> Technical --> Email section --> Aliases`."
 msgstr ""
+"Les alias entrants sont définis dans la base de données Odoo pour créer des "
+"entrées à partir d'e-mails entrants. Pour voir les alias définis dans la "
+"base de données Odoo, activez d'abord le mode développeur :ref:`. "
+"<developer-mode>`. Ensuite, allez dans :menuselection:`Paramètres --> "
+"Technique --> Section email --> Alias`."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:284
 msgid ""
@@ -3917,6 +3956,13 @@ msgid ""
 "create a ticket, lead, opportunity, etc., eliminates false positives where "
 "email addresses with only the prefix alias (not the domain) are present."
 msgstr ""
+"Le paramètre système suivant, `mail.catchall.domain.allowed`, Le paramètre "
+"système suivant, `mail.catchall.domain.allowed`, défini avec des valeurs de "
+"domaine d'alias autorisées, séparées par des virgules, permet de filtrer les"
+" e-mails correctement adressés à des alias. En définissant le(s) domaine(s) "
+"pour lesquels l'alias peut créer un ticket, une piste, une opportunité, "
+"etc., cela permet d'éliminer les faux positifs lorsque les adresses e-mail "
+"ne contiennent que le préfixe de l'alias (et non le domaine)."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:289
 msgid ""
@@ -3925,6 +3971,11 @@ msgid ""
 "incoming email address. This is true in the sender, recipient, and :abbr:`CC"
 " (Carbon Copy)` email addresses of an incoming email."
 msgstr ""
+"Dans certains cas, la base de données Odoo affiche des correspondances "
+"lorsqu'un e-mail contient le même préfixe d'alias et un domaine différent "
+"dans l'adresse e-mail entrante C'est le cas pour les adresses e-mail "
+"d''expéditeurs, de destinataires et :abbr:`CC (\"Copie carbone\") d'e-mails "
+"entrants."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:294
 msgid ""
@@ -3934,6 +3985,12 @@ msgid ""
 "email as the full `commercial` alias (with a different domain), and "
 "therefore, creates a ticket/lead/opportunity/etc."
 msgstr ""
+"Lorsqu'Odoo reçoit des e-mails dont l'expéditeur, le destinataire ou "
+"l'adresse e-mail :abbr:`CC (Copie carbone) contient le préfixe d'alias "
+"`commercial` (par exemple commercial@gmail.com, commercial@odoo.net), la "
+"base de données le considère à tort l'e-mail comme l'alias complet "
+"`commercial` (avec un domaine différent), et crée donc un "
+"ticket/piste/opportunité/etc."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:299
 msgid ""
@@ -3943,6 +4000,11 @@ msgid ""
 " Parameters`. Click :guilabel:`Create`. Then, type in "
 "`mail.catchall.domain.allowed` for the :guilabel:`Key` field."
 msgstr ""
+"Pour ajouter le paramètre système `mail.catchall.domain.allowed`, activez "
+"tout d'abord le :ref:`mode développeur <developer-mode>`. Ensuite, allez "
+"dans :menuselection:`Paramètres --> Technique --> Paramètres --> Paramètres "
+"système`. Cliquez sur :guilabel:`Nouveau`. Puis saisissez "
+"`mail.catchall.domain.allowed` pour le champ :guilabel:`Clé`."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:304
 msgid ""
@@ -3950,12 +4012,18 @@ msgid ""
 "comma(s) (if plural domains). Manually :guilabel:`Save`, and the system "
 "parameter takes immediate effect."
 msgstr ""
+"Ensuite, pour le champ :guilabel:`Valeur`, ajoutez le(s) domaine(s) "
+"séparé(s) par une virgule ( dans le cas de plusieurs domaines). "
+":guilabel:`Sauvegardez` manuellement pour que le paramètre système soit "
+"immédiatement appliqué."
 
 #: ../../content/applications/general/email_communication/email_servers.rst-1
 msgid ""
 "mail.catchall.domain.allowed system parameter set with key and value "
 "highlighted."
 msgstr ""
+"Ensemble de paramètres système mail.catchall.domain.allowed avec clé et "
+"valeur mises en évidence."
 
 #: ../../content/applications/general/email_communication/faq.rst:3
 msgid "Email issues"
