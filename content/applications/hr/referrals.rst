@@ -22,6 +22,8 @@ the :ref:`reporting <referrals/reporting>` and configurations menus. For more in
 and access rights, refer to these documents: :doc:`../general/users` and
 :doc:`../general/users/access_rights`.
 
+.. _referrals/onboarding:
+
 Onboarding
 ==========
 
@@ -168,76 +170,6 @@ any changes, and revert to the original content.
    original image. To revert to the original image, the *Referrals* application must be *uninstalled
    then reinstalled.*
 
-Referral points
-===============
-
-The referral program is based on earning points that are then exchanged for rewards. On the main
-*Referrals* application dashboard, the top displays a summary of the user's current points. The left
-side of the summary displays the total points earned, and the right side displays the points that
-are available to spend.
-
-To see the various referrals and the points earned for each, click on one of the buttons directly
-beneath the avatars. The options are :guilabel:`Referrals`, :guilabel:`Ongoing`, and
-:guilabel:`Successful`.
-
-The current number of referrals who are still active in the recruitment pipeline, and have not yet
-been hired or refused, appear above the :guilabel:`Ongoing` button. The number of referrals who have
-been hired appear above the :guilabel:`Successful` button. The total number of referrals (both the
-ongoing and successful referrals combined) appear above the :guilabel:`Referrals` button.
-
-.. note::
-   To view the referrals associated with each of the categories, :guilabel:`Referrals`,
-   :guilabel:`Ongoing`, and :guilabel:`Successful`, click on the corresponding button. All the
-   referrals for that specific category are displayed.
-
-My referrals
-------------
-
-To see all the referrals (both ongoing and successful) click the :guilabel:`Referrals` button. A
-:guilabel:`My Referral` window loads. This screen displays all the referrals, with each referral in
-its own referral card.
-
-A successful referral displays a green :guilabel:`Hired` banner in the top-right corner of the card.
-Referrals that are in process display a purple :guilabel:`In Progress` banner in the top-right
-corner.
-
-Each referral card lists the name of the applicant, the subject/application title (as it appears on
-the applicant card in the *Recruitment* app), the name of the job position, the person responsible
-for filling the role (recruiter), and the points earned. For referrals that have been hired, the
-selected avatar also appears on the card.
-
-.. image:: referrals/referrals.png
-   :align: center
-   :alt: Two referral cards, one hired and one in-progress.
-
-Points
-~~~~~~
-
-The points that can be earned for a referral are the same across all job positions. Each stage of
-the recruitment process has corresponding points assigned to it. The stages listed correspond to the
-stages configured in the *Recruitment* application.
-
-On each individual referral card, beneath the points earned is a bar chart that displays how many
-points have been earned out of the total possible points that can be earned if the applicant is
-hired.
-
-Beneath the bar chart is a list of the various recruitment stages and the points earned when the
-referral moves to that stage. If a stage has been achieved and the points have been earned, a green
-check mark appears next to the stage.
-
-.. example::
-   The pre-configured point structure for referrals is as follows:
-
-   - :guilabel:`Initial Qualification`: 1 point
-   - :guilabel:`First Interview`: 20 points
-   - :guilabel:`Second Interview`: 9 points
-   - :guilabel:`Contract Proposal`: 5 points
-   - :guilabel:`Contract Signed`: 50 points
-
-   The total points earned for a referral that is hired is 85 points. Modifications of the points
-   earned for each stage are done in the *Recruitment* application. Refer to the
-   :ref:`Recruitment <recruitment/modify-stages>` documentation to modify the points for each stage.
-
 .. _referrals/levels:
 
 Levels
@@ -356,11 +288,13 @@ spreadsheet from the drop-down menu, or select :guilabel:`New Spreadsheet`. Clic
 
 .. seealso::
    - :doc:`referrals/share_jobs`
+   - :doc:`referrals/points`
    - :doc:`referrals/rewards`
    - :doc:`referrals/alerts`
 
 .. toctree::
 
    referrals/share_jobs
+   referrals/points
    referrals/rewards
    referrals/alerts
