@@ -107,10 +107,14 @@ Odoo uses the information in the :guilabel:`Recurring Plan` field to update the 
 accordingly.
 
 .. warning::
-   If there is no payment provider set up, Odoo does **not** create an invoice, and the customer is
-   not charged. Instead, the subscription is processed as a free recurring product, and is reflected
-   as such in the *chatter* of the subscription sales order. When this occurs, the following message
-   appears: `Automatic renewal succeeded. Free subscription. Next invoice:[date]. No email sent.`
+   If the product invoicing policy is set to *Based on Delivered Quantities (Manual)*, and the
+   delivered quantity is `0`, Odoo does **not** create an invoice, and the customer is not charged.
+
+   Instead, the subscription is processed as a free recurring product, and is reflected as such in
+   the *chatter* of the subscription sales order.
+
+   When this occurs, the following message appears: `Automatic renewal succeeded. Free subscription.
+   Next invoice:[date]. No email sent.`
 
 Once the invoice for the subscription sales order is created, the invoice can be viewed by clicking
 the :guilabel:`Invoices` smart button that appears at the top of the subscription sales order.
@@ -125,8 +129,8 @@ the :guilabel:`Payment Token` field, under the :guilabel:`Subscription` section.
    :align: center
    :alt: The Payment Token field under the Other Info tab on a subscription sales order form.
 
-If there is no :guilabel:`Payment Token` (i.e. payment provider is `Bank Transfer`), the invoice is
-created and sent to the customer. The payment **must** be registered manually in this case.
+If there is no :guilabel:`Payment Token`, the invoice is created, and sent to the customer. The
+payment **must** be registered manually in this case.
 
 Closing invoices
 ----------------
