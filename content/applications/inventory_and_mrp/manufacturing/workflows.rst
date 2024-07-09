@@ -17,3 +17,4 @@ Workflows
    workflows/allocation
    workflows/continuous_improvement
    workflows/oee
+   workflows/production_analysis
