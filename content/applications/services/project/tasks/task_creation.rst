@@ -19,6 +19,8 @@ following:
 Fill in the :guilabel:`Task Title` and add one or more :guilabel:`Assignees`, then click
 :guilabel:`Add`.
 
+.. _task_creation/task-configuration:
+
 Task configuration
 ------------------
 
