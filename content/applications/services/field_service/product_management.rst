@@ -1,10 +1,40 @@
-======================
+==================
+Product management
+==================
+
+When field service workers perform tasks on-site, they commonly use products to complete their work.
+Odoo Field Service allows them to record these products using the **product catalog** and **default
+warehouse** features. Doing so keeps your inventory up-to-date in real-time and automatically adds
+the products to the invoice.
+
+Product catalog
+===============
+
+To activate the product catalog for Field Service, go to :menuselection:`Field Service -->
+Configuration --> Settings` and enable the :guilabel:`Time and Material Invoicing` feature.
+
+To add products to a task, proceed as follows:
+
+#. Go to Field Service and open a task.
+#. Click the :guilabel:`Products` smart button.
+#. Click :guilabel:`Add` on a product card to add it to your task.
+#. If needed, adjust the number of products using the :guilabel:`-` and :guilabel:`+` buttons.
+
+Going back to your task, the smart button now displays the amount of products you added and the
+price. You can return to the product catalog at any time to edit the product selection.
+
+.. tip::
+   - To create and edit products from Field Service, go to :menuselection:`Field Service -->
+     Configuration --> Products`.
+   - To find your products more easily, use the search bar and filter your products by
+     :guilabel:`Product Category` and :guilabel:`Attributes`.
+
 User default warehouse
 ======================
 
-Setting up a **default warehouse** can be useful for field technicians who keep a supply in their
-van or those who always resupply from the same warehouse. It also allows field workers to switch
-between warehouses from their profiles.
+Setting up a **default warehouse** can be useful for field technicians who keep a supply on the go
+in their van or those who always resupply from the same warehouse. It also allows field workers to
+switch between warehouses from their profiles.
 
 Products in sales orders created during field interventions are always pulled from the default
 warehouse, keeping the inventory accurate.
@@ -44,7 +74,7 @@ To set up a default warehouse for a specific user, go to :menuselection:`Setting
 Manage users`, select a user, then go to the :guilabel:`Preferences` tab. Scroll down to
 :guilabel:`Inventory`, and select the default warehouse from the drop-down menu.
 
-.. image:: default_warehouse/user-default.png
+.. image:: product_management/user-default.png
    :alt: Selection of a default warehouse on a user profile.
 
 Use in field service tasks
