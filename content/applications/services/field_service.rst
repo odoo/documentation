@@ -14,6 +14,6 @@ Field Service
    :titlesonly:
 
    field_service/onsite_interventions
-   field_service/default_warehouse
+   field_service/product_management
    field_service/planning_itinerary
    field_service/worksheets
