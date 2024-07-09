@@ -148,7 +148,7 @@ products produced using the new |BoM|. If a defective product has already been s
 it may be necessary to repair (or update) that product.
 
 In such a case, the *Field Service* app can be used to schedule :doc:`onsite interventions
-<../../../services/field_service/onsite_interventions>`. These interventions allow service
+<../../../services/field_service/creating_tasks>`. These interventions allow service
 technicians (or other employees) to be sent to a customer's location to address an issue with a
 product.
 
