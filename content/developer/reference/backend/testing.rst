@@ -850,7 +850,8 @@ case there are two main tricks:
     - the tour continues as soon as you resume execution
   **Drawbacks**
     - page interaction is limited as all javascript is blocked
-    - a step property ``pause: true,`` in debug mode (debug=True).
+    
+- A step property ``pause: true,`` in debug mode (debug=True).
 
   The tour will stop at the end of the step. This allows inspecting
   and interacting with the page until the developer is ready to
