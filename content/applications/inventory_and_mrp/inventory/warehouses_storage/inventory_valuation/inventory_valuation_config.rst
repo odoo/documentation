@@ -27,12 +27,18 @@ valuation updates in the *Inventory* app. For an introduction of inventory valua
 to the :doc:`using_inventory_valuation` documentation.
 
 .. warning::
-   Switching to automatic inventory valuation **does not** create journal entries for existing
-   stock, potentially leading to discrepancies between stock valuation and accounting journals.
+   Switching from manual to automatic inventory valuation may cause discrepancies between stock
+   valuation and accounting journals.
 
-   To manually post journal entries for existing stock, navigate to :menuselection:`Inventory app
-   --> Reporting --> Valuation` for a list of current stock and its value. Then, :doc:`post a
-   journal entry <../../../../finance/accounting/vendor_bills>` for each existing item.
+   One `successful strategy <https://www.odoo.com/r/Kvfg>`_ for switching to automated valuation:
+
+   #. Clear existing stock (possibly with an :doc:`inventory adjustment
+      <../inventory_management/count_products>`)
+   #. Change the inventory valuation method to *Automatic*
+   #. Return the existing stock, with the original monetary value (using an inventory adjustment)
+
+   Once the existing stock is recovered, the Odoo *Accounting* app automatically generates the
+   journal entries to corresponding stock valuation records.
 
 Configuration
 =============
