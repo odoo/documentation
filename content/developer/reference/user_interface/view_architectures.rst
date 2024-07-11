@@ -1415,11 +1415,15 @@ The `field` element can have the following attributes:
 .. attribute:: width
    :noindex:
 
-   The width to apply to the field's column when there are no records in the list, as an absolute
-   width (e.g., `100px`).
-
-   .. important::
-      The width is set by the webclient when there are records in the list.
+   The list view always tries to optimize the available space among columns. For some field types,
+   this is done by enforcing a width, depending on the field type. For instance, we know exactly the
+   number of pixels required to display a date, so we can ensure that a column for a date field
+   doesn't take more space than what is strictly necessary, thus leaving the extra space for the
+   other columns. However, the framework can't guess the adequate width for every field types. For
+   instance, char fields can be used to encode large values, or 3-letter country codes. In the
+   latter case, one can set the width directly in the arch (e.g. `width="40px"`). It represents
+   the width (always in pixels) required to render the values inside the cells. The width of the
+   column will then be the sum of the given value and the cells' left and right paddings.
 
    :requirement: Optional
    :type: str
