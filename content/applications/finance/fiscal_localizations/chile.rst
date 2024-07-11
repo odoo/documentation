@@ -1231,6 +1231,10 @@ taxpayers, and that replaces the *Purchase and Sales Books*. This report is inte
 Register (CR) and the Sales Register (RV). Its purpose is to support the transactions related to
 VAT, improving its control and declaration.
 
+.. important::
+   The *Propuesta F29 (CL)* report in Odoo covers the basic legal requirements as a first proposal
+   for your final tax declaration.
+
 This record is supplied by the electronic tax documents (DTE's) that have been received by the
 :abbr:`SII (Servicio de Impuestos Internos)`.
 
