@@ -6254,7 +6254,7 @@ msgid ""
 " be enabled when Odoo is behind a reverse proxy"
 msgstr ""
 "Attiva il :option:`proxy mode <odoo-bin --proxy-mode>` in Odoo. Da attivare "
-"solamente se Odoo si trova dietro un reverse proxy."
+"solamente se Odoo si trova dietro un proxy invertito."
 
 #: ../../content/administration/on_premise/deploy.rst:269
 msgid "Set up the SSL termination proxy (`Nginx termination example`_)"
@@ -6671,6 +6671,12 @@ msgid ""
 "from, instead of letting the system fetch them all from the database "
 "backend."
 msgstr ""
+"Utilizza i filtri database appropriati ( :option:`--db-filter <odoo-bin "
+"--db-filter>`) per limitare la visibilità dei tuoi database secondo il nome "
+"host. Consulta la sezione :ref:`dbfilter`. Potresti anche utilizzare "
+":option:`-d <odoo-bin -d>` per fornire la tua lista (separata da virgole) di"
+" database disponibili da filtrare invece di lasciare che il sistema li "
+"recuperi tutti dal backend del database."
 
 #: ../../content/administration/on_premise/deploy.rst:581
 msgid ""
@@ -6681,6 +6687,12 @@ msgid ""
 ":option:`--no-database-list <odoo-bin --no-database-list>` command-line "
 "option)"
 msgstr ""
+"Una volta che il ``db_name`` e il ``dbfilter`` sono stati configurati e "
+"corrispondono ad un solo database per nome host, devi impostare l'opzione "
+"``list_db`` su ``Falso`` per evitare di elencare interamente i database e "
+"bloccare l'accesso alle pagine di gestione del database stesso (mostrato "
+"come opzione riga di comando :option:`--no-database-list <odoo-bin --no-"
+"database-list>`)"
 
 #: ../../content/administration/on_premise/deploy.rst:587
 msgid ""
@@ -6690,6 +6702,11 @@ msgid ""
 "using a dedicated non-privileged ``db_user``. See also "
 ":ref:`setup/deploy/odoo`."
 msgstr ""
+"Assicurati che l'utente PostgreSQL (:option:`--db_user <odoo-bin "
+"--db_user>`) *non* sia un super-user e che i tuoi database appartengano ad "
+"un utente diverso. Ad esempio, potrebbero appartenere dal super-user "
+"``postgres`` se stai utilizzando un ``db_user`` dedicato non privilegiato. "
+"Consulta anche la sezione :ref:`setup/deploy/odoo`."
 
 #: ../../content/administration/on_premise/deploy.rst:592
 msgid ""
@@ -6697,12 +6714,18 @@ msgid ""
 " via GitHub or by downloading the latest version from "
 "https://www.odoo.com/page/download or http://nightly.odoo.com"
 msgstr ""
+"Aggiorna regolarmente le installazioni installando le ultime versioni, sia "
+"tramite GitHub che scaricandole da https://www.odoo.com/page/download oppure"
+" http://nightly.odoo.com."
 
 #: ../../content/administration/on_premise/deploy.rst:596
 msgid ""
 "Configure your server in multi-process mode with proper limits matching your"
 " typical usage (memory/CPU/timeouts). See also :ref:`builtin_server`."
 msgstr ""
+"Configura il server in modalità multi-process con le limitazioni adatte che "
+"corrispondono all'uso tipico (memoria/CPU/timeout). Consulta anche la "
+"sezione  :ref:`builtin_server`."
 
 #: ../../content/administration/on_premise/deploy.rst:599
 msgid ""
@@ -6713,6 +6736,13 @@ msgid ""
 "enable the :option:`proxy mode <odoo-bin --proxy-mode>` option. See also "
 ":ref:`https_proxy`."
 msgstr ""
+"Esegui Odoo dietro un server web fornendo una terminazione HTTPS con un "
+"certificato SSL valido per evitare attacchi di tipo eavesdropping su "
+"comunicazioni in testo non crittografato. I certificati SSL sono economici "
+"ed esistono molte opzioni gratuite. Configura il proxy web per limitare la "
+"dimensione delle richieste, configura timeout appropriati e abilita "
+"l'opzione :option:`proxy mode <odoo-bin --proxy-mode>`. Consulta anche la "
+"sezione :ref:`https_proxy`."
 
 #: ../../content/administration/on_premise/deploy.rst:606
 msgid ""
@@ -6723,6 +6753,13 @@ msgid ""
 " allowing only trusted IPs in the firewall, and/or running a brute-force "
 "detection system such as `fail2ban` or equivalent."
 msgstr ""
+"Se hai bisogno di abilitare l'accesso SSH remoto ai tuoi server, assicurati "
+"di configurare una password forte per **tutti** gli account e non solo "
+"`root`. È fortemente consigliato disattivare completamente autenticazioni "
+"basate su password e consentire solo autenticazioni con chiave pubblica. "
+"Considera anche la possibilità di limitare l'accesso tramite un VPN, "
+"consentendo solo IP verificati nel firewall e/o eseguire un sistema di "
+"rilevamento brute-force come `fail2ban` o equivalenti."
 
 #: ../../content/administration/on_premise/deploy.rst:612
 msgid ""
@@ -6730,6 +6767,10 @@ msgid ""
 "prevent brute-force attacks and denial of service attacks. See also "
 ":ref:`login_brute_force` for specific measures."
 msgstr ""
+"Prendi in considerazione anche l'installazione di un limitatore di velocità "
+"appropriato sul proxy o firewall per evitare attacchi di tipo brute-force e "
+"denial of service. Consulta anche la sezione :ref:`login_brute_force` per "
+"misure specifiche."
 
 #: ../../content/administration/on_premise/deploy.rst:616
 msgid ""
@@ -6737,6 +6778,9 @@ msgid ""
 "of Service attacks (DDOS), but this is often an optional service, so you "
 "should consult with them."
 msgstr ""
+"Molti fornitori di rete forniscono la mitigazione automatica per attacchi di"
+" tipo Distributed Denial of Service (DDoS) ma si tratta spesso di un "
+"servizio opzionale quindi dovresti parlare con loro."
 
 #: ../../content/administration/on_premise/deploy.rst:620
 msgid ""
@@ -6744,6 +6788,9 @@ msgid ""
 "different machines than the production ones. And apply the same security "
 "precautions as for production."
 msgstr ""
+"Laddove possibile, ospita le istanze di dimostrazione/test/staging destinate"
+" al pubblico su vari dispositivi diversi da quelli di produzione. Applica le"
+" stesse misure di sicurezza utilizzate per la produzione."
 
 #: ../../content/administration/on_premise/deploy.rst:624
 msgid ""
@@ -6759,6 +6806,18 @@ msgid ""
 "systemd.html>`_ may also be useful to implement per-process network access "
 "control."
 msgstr ""
+"Se il server Odoo destinato al pubblico ha accesso a risorse o servizi di "
+"rete interni sensibili (ad es. tramite VLAN privata), implementa regole "
+"firewall appropriate per proteggere le risorse interne. In questo modo si "
+"garantisce che il server Odoo non possa essere utilizzato accidentalmente (o"
+" come risultato di azioni di utenti malintenzionati) per accedere o "
+"interrompere tali risorse interne. Generalmente, questo può essere "
+"effettuato applicando una regola DENY in uscita predefinita e in seguito "
+"autorizzando esplicitamente l'accesso solo a risorse interne di cui il "
+"server Odoo ha bisogno. È possibile utilizzare anche `Systemd IP traffic "
+"access control <http://0pointer.net/blog/ip-accounting-and-access-lists-"
+"with-systemd.html>`_  per implementare il controllo dell'accesso alla rete "
+"per processo."
 
 #: ../../content/administration/on_premise/deploy.rst:635
 msgid ""
@@ -6774,18 +6833,35 @@ msgid ""
 "CloudFlare usually maintain a public list of their IP address ranges for "
 "this purpose."
 msgstr ""
+"Se il server Odoo destinato al pubblico si trova dietro un Web Application "
+"Firewall, un bilanciatore di carico, un servizio di protezione DdoS "
+"trasparente (come CloudFlare) o un dispositivo simile a livello di rete, "
+"potresti voler evitare l'accesso diretto al sistema Odoo. In generale, è "
+"difficile mantenere segreti gli indirizzi IP dell'endpoint dei server Odoo. "
+"Ad esempio, possono apparire nei registri del server web quando si "
+"consultano i sistemi pubblici o nelle intestazioni delle e-mail inviate da "
+"Odoo. In una situazione simile, potresti voler configurare il firewall in "
+"modo che gli endpoint non siano accessibili pubblicamente ad eccezione gli "
+"indirizzi IP specifici del WAF, del bilanciatore o del servizio proxy. I "
+"fornitori di servizi come CloudFlare di solito mantengono un elenco pubblico"
+" degli intervali dell'indirizzo IP proprio per questo motivo."
 
 #: ../../content/administration/on_premise/deploy.rst:646
 msgid ""
 "If you are hosting multiple customers, isolate customer data and files from "
 "each other using containers or appropriate \"jail\" techniques."
 msgstr ""
+"Se sei l'host di più clienti, isola i dati e i file dei clienti utilizzando "
+"contenitori o tecniche \"jail\" appropriati."
 
 #: ../../content/administration/on_premise/deploy.rst:649
 msgid ""
 "Setup daily backups of your databases and filestore data, and copy them to a"
 " remote archiving server that is not accessible from the server itself."
 msgstr ""
+"Configura back-up giornalieri dei database e dei dati filestore per poi "
+"copiarli in un server di archiviazione remota che non è accessibile dal "
+"server stesso."
 
 #: ../../content/administration/on_premise/deploy.rst:652
 msgid ""
@@ -6794,10 +6870,14 @@ msgid ""
 "hardening review of the server should be conducted and is outside of the "
 "scope of this guide."
 msgstr ""
+"La distribuzione di Odoo su Linux è fortemente consigliata rispetto a "
+"Windows. Se scegli di utilizzare comunque una piattaforma Windows, è "
+"necessario condurre un'analisi approfondita del server in materia di "
+"sicurezza, che non rientra nell'ambito di questa guida."
 
 #: ../../content/administration/on_premise/deploy.rst:660
 msgid "Blocking Brute Force Attacks"
-msgstr ""
+msgstr "Bloccare attacchi Brute Force"
 
 #: ../../content/administration/on_premise/deploy.rst:662
 msgid ""
@@ -6806,56 +6886,72 @@ msgid ""
 "emits a log entry whenever a login attempt is performed, and reports the "
 "result: success or failure, along with the target login and source IP."
 msgstr ""
+"Per sviluppi su internet, gli attacchi di forza bruta alle password degli "
+"utenti sono molto comuni e questa minaccia non dovrebbe essere ignorata per "
+"i server Odoo. Ad ogni tentativo di accesso, Odoo crea una voce di registro "
+"e riporta il risultato: successo o fallimento, insieme al login di "
+"destinazione e all'IP di origine."
 
 #: ../../content/administration/on_premise/deploy.rst:666
 msgid "The log entries will have the following form."
-msgstr ""
+msgstr "Le voci di registro avranno la seguente struttura."
 
 #: ../../content/administration/on_premise/deploy.rst:668
 msgid "Failed login::"
-msgstr ""
+msgstr "Login non riuscito::"
 
 #: ../../content/administration/on_premise/deploy.rst:672
 msgid "Successful login::"
-msgstr ""
+msgstr "Accesso riuscito::"
 
 #: ../../content/administration/on_premise/deploy.rst:677
 msgid ""
 "These logs can be easily analyzed by an intrusion prevention system such as "
 "`fail2ban`."
 msgstr ""
+"I registri possono essere analizzati facilmente grazie ad un sistema di "
+"prevenzione intrusivo come `fail2ban`."
 
 #: ../../content/administration/on_premise/deploy.rst:679
 msgid ""
 "For example, the following fail2ban filter definition should match a failed "
 "login::"
 msgstr ""
+"Ad esempio, la definizione del seguente filtro fail2ban deve corrispondere "
+"ad un accesso non riuscito::"
 
 #: ../../content/administration/on_premise/deploy.rst:686
 msgid ""
 "This could be used with a jail definition to block the attacking IP on "
 "HTTP(S)."
 msgstr ""
+"Questo potrebbe essere utilizzato con una definizione jail per bloccare l'IP"
+" attaccato su HTTP(S)."
 
 #: ../../content/administration/on_premise/deploy.rst:688
 msgid ""
 "Here is what it could look like for blocking the IP for 15 minutes when 10 "
 "failed login attempts are detected from the same IP within 1 minute::"
 msgstr ""
+"Ecco come potrebbe apparire il blocco dell'IP per 15 minuti al momento "
+"dell'individuazione di 10 tentativi di accesso falliti dallo stesso "
+"indirizzo IP in 1 minuto:"
 
 #: ../../content/administration/on_premise/deploy.rst:702
 msgid "Database Manager Security"
-msgstr ""
+msgstr "Sicurezza gestione database"
 
 #: ../../content/administration/on_premise/deploy.rst:704
 msgid ":ref:`setup/deploy/odoo` mentioned ``admin_passwd`` in passing."
-msgstr ""
+msgstr ":ref:`setup/deploy/odoo` ha menzionato ``admin_passwd``."
 
 #: ../../content/administration/on_premise/deploy.rst:706
 msgid ""
 "This setting is used on all database management screens (to create, delete, "
 "dump or restore databases)."
 msgstr ""
+"L'impostazione viene utilizzata su tutte le pagine di gestione dei database "
+"(per creare, eliminare, eseguire il dump o ripristinare un database)."
 
 #: ../../content/administration/on_premise/deploy.rst:709
 msgid ""
@@ -6863,6 +6959,9 @@ msgid ""
 "``list_db`` configuration option to ``False``, to block access to all the "
 "database selection and management screens."
 msgstr ""
+"Se le pagine di gestione non sono accessibili, è necessario impostare "
+"l'opzione ``list_db`` su ``Falso`` per bloccare l'accesso a tutte le pagine "
+"di gestione e selezione del database.  "
 
 #: ../../content/administration/on_premise/deploy.rst:715
 msgid ""
@@ -6872,6 +6971,12 @@ msgid ""
 "production, and may even expose dangerous features to attackers. It is also "
 "not designed to handle large databases, and may trigger memory limits."
 msgstr ""
+"È fortemente consigliato disabilitare il Gestore di database per ogni "
+"sistema su internet! È concepito come uno strumento di "
+"sviluppo/dimostrazione per rendere più semplice e rapida la creazione e "
+"gestione di database. Non è progettato per l'uso in produzione e potrebbe "
+"esporre funzionalità agli utenti malintenzionati. Inoltre, non è progettato "
+"per gestire grandi database e potrebbe attivare limiti di memoria."
 
 #: ../../content/administration/on_premise/deploy.rst:721
 msgid ""
@@ -6879,6 +6984,9 @@ msgid ""
 "performed by the system administrator, including provisioning of new "
 "databases and automated backups."
 msgstr ""
+"Sui sistemi di produzione, le operazioni di gestione dei database devono "
+"essere sempre eseguite dall'amministratore di sistema compreso il "
+"provisioning di nuovi database e i backup automatici."
 
 #: ../../content/administration/on_premise/deploy.rst:724
 msgid ""
@@ -6887,6 +6995,10 @@ msgid ""
 "each request, otherwise users will be blocked as they won't be allowed to "
 "choose the database themselves."
 msgstr ""
+"Assicurati di configurare un parametro ``db_name`` appropriato (e a scelta, "
+"anche ``dbfilter``) così il sistema può determinare il database di "
+"destinazione per ogni richiesta, altrimenti gli utenti verranno bloccati in "
+"quanto non gli sarà consentito di scegliere in autonomia il database.  "
 
 #: ../../content/administration/on_premise/deploy.rst:729
 msgid ""
@@ -6895,6 +7007,11 @@ msgid ""
 "starting with ``/web/database`` except (maybe) ``/web/database/selector`` "
 "which displays the database-selection screen."
 msgstr ""
+"Se le pagine di gestione devono essere accessibili solo da una serie di "
+"dispositivi selezionati, utilizza le funzionalità del server proxy per "
+"bloccare l'accesso a tutti i percorsi che iniziano con ``/web/database`` "
+"eccetto (forse)  ``/web/database/selector`` che mostra la pagina di "
+"selezione dei database."
 
 #: ../../content/administration/on_premise/deploy.rst:733
 msgid ""
@@ -6902,18 +7019,24 @@ msgid ""
 "``admin_passwd`` setting must be changed from its ``admin`` default: this "
 "password is checked before allowing database-alteration operations."
 msgstr ""
+"Se la pagina di gestione del database deve essere accessibile, "
+"l'impostazione ``admin_passwd`` deve essere modificata dall'``admin`` "
+"predefinito: la password viene controllata prima di consentire operazioni di"
+" modifica del database. "
 
 #: ../../content/administration/on_premise/deploy.rst:737
 msgid "It should be stored securely, and should be generated randomly e.g."
 msgstr ""
+"La password deve essere conservata in modo sicuro e dovrebbe essere generata"
+" in maniera casuale, ad esempio."
 
 #: ../../content/administration/on_premise/deploy.rst:743
 msgid "which generates a 32-character pseudorandom printable string."
-msgstr ""
+msgstr "che genera una stringa stampabile pseudocasuale di 32 caratteri."
 
 #: ../../content/administration/on_premise/deploy.rst:746
 msgid "Reset the master password"
-msgstr ""
+msgstr "Ripristinare la password master"
 
 #: ../../content/administration/on_premise/deploy.rst:748
 msgid ""
@@ -6922,12 +7045,20 @@ msgid ""
 "administrators of an Odoo on-premise database detailing how to manually "
 "reset and re-encrypt the master password."
 msgstr ""
+"Potrebbero essevi istanze per le quali la password master è stata smarrita o"
+" è compromessa e deve essere reimpostata. Il seguente processo è per gli "
+"amministratori di sistema di un database Odoo on-premise e spiega in maniera"
+" dettagliata come resettare manualmente e ri-crittografare la password "
+"master."
 
 #: ../../content/administration/on_premise/deploy.rst:753
 msgid ""
 "For more information about changing an Odoo.com account password, see this "
 "documentation: :ref:`odoocom/change_password`."
 msgstr ""
+"Per maggiori informazioni relative alla modifica della password di un "
+"account Odoo.com, consulta la seguente documentazione: "
+":ref:`odoocom/change_password`."
 
 #: ../../content/administration/on_premise/deploy.rst:756
 msgid ""
@@ -6936,12 +7067,20 @@ msgid ""
 "password is implemented by default, so there is a secure master password for"
 " any Odoo on-premise deployment."
 msgstr ""
+"Quando viene creato un nuovo database on-premise, viene generata una "
+"password master casuale. Odoo consiglia di utilizzare la password per "
+"proteggere il database. La password viene implementata per impostazione "
+"predefinita, quindi esiste una password master sicura per ogni distribuzione"
+" Odoo on-premise."
 
 #: ../../content/administration/on_premise/deploy.rst:761
 msgid ""
 "When creating an Odoo on-premise database the installation is accessible to "
 "anyone on the internet, until this password is set to secure the database."
 msgstr ""
+"Al momento della creazione di un database Odoo on-premise, l'installazione è"
+" accessibile a chiunque su internet fino a quando viene configurata la "
+"password per proteggere il database. "
 
 #: ../../content/administration/on_premise/deploy.rst:764
 msgid ""
@@ -6949,16 +7088,22 @@ msgid ""
 " or `odoorc` (hidden file)). The Odoo master password is needed to modify, "
 "create, or delete a database through the graphical user interface (GUI)."
 msgstr ""
+"La password master viene specificata nel file di configurazione di Odoo "
+"(`odoo.conf` oppure `odoorc` (file nascosto)). La password master di Odoo è "
+"necessari aper modificare, creare o eliminare un database attraverso "
+"l'interfaccia utente grafica (GUI). "
 
 #: ../../content/administration/on_premise/deploy.rst:769
 msgid "Locate configuration file"
-msgstr ""
+msgstr "Individuare file di configurazione"
 
 #: ../../content/administration/on_premise/deploy.rst:771
 msgid ""
 "First, open the Odoo configuration file (`odoo.conf` or `odoorc` (hidden "
 "file))."
 msgstr ""
+"Per prima cosa, apri il file di configurazione Odoo (`odoo.conf` o `odoorc` "
+"(file nascosto))."
 
 #: ../../content/administration/on_premise/deploy.rst:775
 #: ../../content/administration/on_premise/packages.rst:148
@@ -6972,13 +7117,15 @@ msgstr ""
 #: ../../content/administration/on_premise/source.rst:397
 #: ../../content/administration/on_premise/source.rst:460
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 #: ../../content/administration/on_premise/deploy.rst:777
 msgid ""
 "The configuration file is located at: "
 "`c:\\\\ProgramFiles\\\\Odoo{VERSION}\\\\server\\\\odoo.conf`"
 msgstr ""
+"Il file di configurazione si trova in: "
+"`c:\\\\ProgramFiles\\\\Odoo{VERSION}\\\\server\\\\odoo.conf`"
 
 #: ../../content/administration/on_premise/deploy.rst:779
 #: ../../content/administration/on_premise/packages.rst:25
@@ -6992,36 +7139,41 @@ msgstr ""
 #: ../../content/administration/on_premise/source.rst:388
 #: ../../content/administration/on_premise/source.rst:450
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #: ../../content/administration/on_premise/deploy.rst:781
 msgid ""
 "Depending on how Odoo is installed on the Linux machine, the configuration "
 "file is located in one of two different places:"
 msgstr ""
+"In base al tipo di installazione di Odoo sul dispositivo Linux, il file di "
+"configurazione potrebbe essere situato in uno dei seguenti due posti:"
 
 #: ../../content/administration/on_premise/deploy.rst:784
 msgid "Package installation: `/etc/odoo.conf`"
-msgstr ""
+msgstr "Pacchetto installazione: `/etc/odoo.conf`"
 
 #: ../../content/administration/on_premise/deploy.rst:785
 msgid "Source installation: `~/.odoorc`"
-msgstr ""
+msgstr "Fonte installazione: `~/.odoorc`"
 
 #: ../../content/administration/on_premise/deploy.rst:788
 msgid "Change old password"
-msgstr ""
+msgstr "Modificare password vecchie"
 
 #: ../../content/administration/on_premise/deploy.rst:790
 msgid ""
 "Once the appropriate file has been opened, proceed to modify the old "
 "password in the configuration file to a temporary password."
 msgstr ""
+"Una volta che è stato aperto il file appropriato, procedi con la modifica "
+"della password precedente nel file di configurazione, sostituendola con una "
+"password temporanea."
 
 #: ../../content/administration/on_premise/deploy.rst:795
 #: ../../content/administration/on_premise/deploy.rst:843
 msgid "Graphical user interface"
-msgstr ""
+msgstr "Interfaccia utente grafica"
 
 #: ../../content/administration/on_premise/deploy.rst:797
 msgid ""
@@ -7030,6 +7182,11 @@ msgid ""
 " on the file. Then, the device should have a default :abbr:`GUI (graphical "
 "user interface)` to open the file with."
 msgstr ""
+"Dopo aver individuato il file di configurazione, aprilo utilizzando una "
+"(:abbr:`GUI (graphical user interface)`). È possibile farlo facendo "
+"semplicemente doppio clic sul file. In seguito, il dispositivo dovrebbe "
+"disporre di una :abbr:`GUI (graphical user interface)` predefinita tramite "
+"cui aprire il file."
 
 #: ../../content/administration/on_premise/deploy.rst:801
 msgid ""
@@ -7038,6 +7195,10 @@ msgid ""
 "anything, as long as it is saved temporarily. Make sure to modify all "
 "characters after the `=`."
 msgstr ""
+"Successivamente, modifica la riga della password master  `admin_passwd = "
+"$pbkdf2-sha…` in `admin_passwd = newpassword1234`, ad esempio. La password "
+"può essere di qualsiasi tipo purché sia salvato temporaneamente. Assicurati "
+"di modificare tutti i caratteri dopo il `=`."
 
 #: ../../content/administration/on_premise/deploy.rst:806
 #: ../../content/administration/on_premise/deploy.rst:825
@@ -7045,22 +7206,28 @@ msgid ""
 "The line appears like this: `admin_passwd = "
 "$pbkdf2-sh39dji295.59mptrfW.9z6HkA$w9j9AMVmKAP17OosCqDxDv2hjsvzlLpF8Rra8I7p/b573hji540mk/.3ek0lg%kvkol6k983mkf/40fjki79m`"
 msgstr ""
+"La riga appare come segue: `admin_passwd = "
+"$pbkdf2-sh39dji295.59mptrfW.9z6HkA$w9j9AMVmKAP17OosCqDxDv2hjsvzlLpF8Rra8I7p/b573hji540mk/.3ek0lg%kvkol6k983mkf/40fjki79m`"
+" "
 
 #: ../../content/administration/on_premise/deploy.rst:810
 #: ../../content/administration/on_premise/deploy.rst:829
 msgid "The modified line appears like this: `admin_passwd = newpassword1234`"
 msgstr ""
+"La riga modificata appare come segue: `admin_passwd = newpassword1234` "
 
 #: ../../content/administration/on_premise/deploy.rst:812
 #: ../../content/administration/on_premise/deploy.rst:852
 msgid "Command-line interface"
-msgstr ""
+msgstr "Interfaccia riga comando"
 
 #: ../../content/administration/on_premise/deploy.rst:814
 msgid ""
 "Modify the master password line using the following Unix command detailed "
 "below."
 msgstr ""
+"Modifica la riga della password master utilizzando il comando Unix descritto"
+" dettagliatamente in basso."
 
 #: ../../content/administration/on_premise/deploy.rst:816
 msgid ""
@@ -7068,6 +7235,10 @@ msgid ""
 "edit the configuration file. To modify the configuration file, enter the "
 "following command: :command:`sudo nano /etc/odoo.conf`"
 msgstr ""
+"Collegati al terminale del server Odoo tramite il protocollo Secure Shell "
+"(SSH) e modifica il file di configurazione. Per modificare il file di "
+"configurazione, inserisci il seguente comando: :command:`sudo nano "
+"/etc/odoo.conf`"
 
 #: ../../content/administration/on_premise/deploy.rst:820
 msgid ""
@@ -7076,6 +7247,10 @@ msgid ""
 "password can be anything, as long as it is saved temporarily. Make sure to "
 "modify all characters after the `=`."
 msgstr ""
+"Dopo aver aperto il file di configurazione, modifica la riga della password "
+"master  `admin_passwd = $pbkdf2-sha…` in `admin_passwd = newpassword1234`. "
+"La password può essere di qualsiasi tipo purché sia salvato temporaneamente."
+" Assicurati di modificare tutti i caratteri dopo `=`."
 
 #: ../../content/administration/on_premise/deploy.rst:832
 msgid ""
@@ -7084,57 +7259,73 @@ msgid ""
 "of the line. This ensures the database is secure throughout the entire "
 "password reset process."
 msgstr ""
+"È fondamentale che la password venga modificata invece di procedere con il "
+"ripristino aggiungendo il punto e virgola `;` all'inizio della riga. Questo "
+"garantisce che il database venga protetto durante l'intero processo di "
+"ripristino della password."
 
 #: ../../content/administration/on_premise/deploy.rst:837
 msgid "Restart Odoo server"
-msgstr ""
+msgstr "Riavviare il server Odoo"
 
 #: ../../content/administration/on_premise/deploy.rst:839
 msgid ""
 "After setting the temporary password, a restart of the Odoo server is "
 "**required**."
 msgstr ""
+"Dopo aver configurato la password temporanea, è richiesto il **riavvio** del"
+" server Odoo."
 
 #: ../../content/administration/on_premise/deploy.rst:845
 msgid ""
 "To restart the Odoo server, first, type `services` into the Windows "
 ":guilabel:`Search` bar. Then, select the :guilabel:`Services` application, "
 "and scroll down to the :guilabel:`Odoo` service."
-msgstr ""
+msgstr "Per prima cosa, al fine di riavviare il server Odoo,"
 
 #: ../../content/administration/on_premise/deploy.rst:849
 msgid ""
 "Next, right click on :guilabel:`Odoo`, and select :guilabel:`Start` or "
 ":guilabel:`Restart`. This action manually restarts the Odoo server."
 msgstr ""
+"In seguito, fai clic su :guilabel:`Odoo` e seleziona :guilabel:`Avvia` o "
+":guilabel:`Riavvia`. L'azione riavvia manualmente il server Odoo."
 
 #: ../../content/administration/on_premise/deploy.rst:854
 msgid ""
 "Restart the Odoo server by typing the command: :command:`sudo service odoo15"
 " restart`"
 msgstr ""
+"Riavvia il server Odoo digitando il comando: :command:`sudo service odoo15 "
+"restart`"
 
 #: ../../content/administration/on_premise/deploy.rst:857
 msgid ""
 "Change the number after `odoo` to fit the specific version the server is "
 "running on."
 msgstr ""
+"Modifica il numero dopo `odoo` per adeguarti alla versione specifica del "
+"server."
 
 #: ../../content/administration/on_premise/deploy.rst:860
 msgid "Use web interface to re-encrypt password"
-msgstr ""
+msgstr "Utilizzare l'interfaccia web per ricrittografare la password"
 
 #: ../../content/administration/on_premise/deploy.rst:862
 msgid ""
 "First, navigate to `/web/database/manager` or "
 "`http://server_ip:port/web/database/manager` in a browser."
 msgstr ""
+"Per prima cosa, vai su `/web/database/manager` oppure "
+"`http://server_ip:port/web/database/manager` utilizzando un browser."
 
 #: ../../content/administration/on_premise/deploy.rst:866
 msgid ""
 "Replace `server_ip` with the IP address of the database. Replace `port` with"
 " the numbered port the database is accessible from."
 msgstr ""
+"Sostituisci `server_ip` con l'indirizzo IP del database. Sostituisci `port` "
+"con la porta numerata dalla quale è possibile accedere al database."
 
 #: ../../content/administration/on_premise/deploy.rst:869
 msgid ""
@@ -7144,64 +7335,81 @@ msgid ""
 ":guilabel:`New Master Password` is hashed (or encrypted), once the "
 ":guilabel:`Continue` button is clicked."
 msgstr ""
+"In seguito, fai clic su :guilabel:`Configura password master` e inserisci la"
+" password temporanea scelta in precedenza nel campo :guilabel:`Password "
+"master`. Dopo questo step, digita una :guilabel:`Nuova password master`. La "
+":guilabel:`Nuova password master` viene sottoposta a hash (oppure è "
+"crittografata) una volta cliccato il pulsante :guilabel:`Contina`."
 
 #: ../../content/administration/on_premise/deploy.rst:874
 msgid ""
 "At this point, the password has been successfully reset, and a hashed "
 "version of the new password now appears in the configuration file."
 msgstr ""
+"A questo punto, la password è stata reimpostata con successo e una versione "
+"con hash della nuova password apparirà nel file di configurazione."
 
 #: ../../content/administration/on_premise/deploy.rst:878
 msgid ""
 "For more information on Odoo database security, see this documentation: "
 ":ref:`db_manager_security`."
 msgstr ""
+"Per maggiori informazioni sulla sicurezza del database Odoo, consulta la "
+"documentazione: :ref:`db_manager_security`."
 
 #: ../../content/administration/on_premise/deploy.rst:882
 msgid "Supported Browsers"
-msgstr ""
+msgstr "Browser supportati"
 
 #: ../../content/administration/on_premise/deploy.rst:884
 msgid ""
 "Odoo supports all the major desktop and mobile browsers available on the "
 "market, as long as they are supported by their publishers."
 msgstr ""
+"Odoo supporta tutti i principali browser per desktop e dispositivi mobili "
+"disponibili sul mercato purché siano supportati dai distributori."
 
 #: ../../content/administration/on_premise/deploy.rst:887
 msgid "Here are the supported browsers:"
-msgstr ""
+msgstr "Di seguito, i browser supportati:"
 
 #: ../../content/administration/on_premise/deploy.rst:889
 msgid "Google Chrome"
-msgstr ""
+msgstr "Google Chrome"
 
 #: ../../content/administration/on_premise/deploy.rst:890
 msgid "Mozilla Firefox"
-msgstr ""
+msgstr "Mozilla Firefox"
 
 #: ../../content/administration/on_premise/deploy.rst:891
 msgid "Microsoft Edge"
-msgstr ""
+msgstr "Microsoft Edge"
 
 #: ../../content/administration/on_premise/deploy.rst:892
 msgid "Apple Safari"
-msgstr ""
+msgstr "Apple Safari"
 
 #: ../../content/administration/on_premise/deploy.rst:894
 msgid ""
 "Please make sure your browser is up-to-date and still supported by its "
 "publisher before filing a bug report."
 msgstr ""
+"Assicurati che il tuo browser sia aggiornato e ancora supportato "
+"dall'editore prima di compilare un report sui bug."
 
 #: ../../content/administration/on_premise/deploy.rst:899
 msgid "Since Odoo 13.0, ES6 is supported.  Therefore, IE support is dropped."
 msgstr ""
+"A partire da Odoo 13.0, anche ES6 è supportato. Tuttavia, IE non è pù "
+"supportato."
 
 #: ../../content/administration/on_premise/deploy.rst:902
 msgid ""
 "to have multiple Odoo installations use the same PostgreSQL database, or to "
 "provide more computing resources to both software."
 msgstr ""
+"per aver aver installazioni multiple di Odoo usa lo stesso database "
+"PostgreSQL o per fornire più risorse di calcolo a entrambi i software."
 
 #: ../../content/administration/on_premise/deploy.rst:905
 msgid ""
@@ -7209,6 +7417,9 @@ msgid ""
 "networks, but that is mostly for software which can only be used over UNIX "
 "sockets"
 msgstr ""
+"tecnicamente è possibile utilizzare uno strumento come  socat_ can per "
+"eseguire il proxy dei socket UNIX nelle reti ma questo riguarda "
+"principalmente i software che possono essere utilizzati solo su socket UNIX."
 
 #: ../../content/administration/on_premise/deploy.rst:909
 msgid ""
@@ -7219,28 +7430,40 @@ msgid ""
 "certificates are easier to deploy on a controlled environment than over the "
 "internet."
 msgstr ""
+"oppure essere accessibile solo tramite una rete interna con commutazione di "
+"pacchetto ma richiede commutazioni sicure, protezione contro `ARP spoofing`_"
+" e preclude l'utilizzo del Wi-Fi. Anche su reti sicure con commutazione di "
+"pacchetto, è consigliata la distribuzione su HTTPS ed è possibile avere "
+"costi ridotti in quanto è più semplice ottenere certificati \"auto-firmati\""
+" in un ambiente più controllato rispetto a internet."
 
 #: ../../content/administration/on_premise/email_gateway.rst:3
 msgid "Email gateway"
-msgstr ""
+msgstr "Gateway di posta elettronica"
 
 #: ../../content/administration/on_premise/email_gateway.rst:5
 msgid ""
 "The Odoo mail gateway allows you to inject directly all the received emails "
 "in Odoo."
 msgstr ""
+"Il gateway di posta elettronica ti permette di integrare tutte le e-mail "
+"ricevute direttamente in Odoo."
 
 #: ../../content/administration/on_premise/email_gateway.rst:7
 msgid ""
 "Its principle is straightforward: your SMTP server executes the \"mailgate\""
 " script for every new incoming email."
 msgstr ""
+"Il principio è molto semplice: il server SMTP esegue lo script \"mailgate\" "
+"per ogni nuova e-mail in entrata."
 
 #: ../../content/administration/on_premise/email_gateway.rst:10
 msgid ""
 "The script takes care of connecting to your Odoo database through XML-RPC, "
 "and send the emails via the `MailThread.message_process()` feature."
 msgstr ""
+"Lo script collega il tuo database Odoo attraverso il protocollo XML-RPC e "
+"invia le e-mail tramite la funzionalità `MailThread.message_process()`.  "
 
 #: ../../content/administration/on_premise/email_gateway.rst:14
 msgid "Prerequisites"
@@ -7248,23 +7471,23 @@ msgstr "Prerequisiti"
 
 #: ../../content/administration/on_premise/email_gateway.rst:16
 msgid "Administrator access to the Odoo database."
-msgstr ""
+msgstr "Accesso di tipo amministratore al database Odoo;"
 
 #: ../../content/administration/on_premise/email_gateway.rst:17
 msgid "Your own mail server such as Postfix or Exim."
-msgstr ""
+msgstr "Il proprio server e-mail come Postfix o Exim;"
 
 #: ../../content/administration/on_premise/email_gateway.rst:18
 msgid "Technical knowledge on how to configure an email server."
-msgstr ""
+msgstr "Conoscenza tecnica su come configurare un server e-mail."
 
 #: ../../content/administration/on_premise/email_gateway.rst:21
 msgid "For Postfix"
-msgstr ""
+msgstr "Per Postfix"
 
 #: ../../content/administration/on_premise/email_gateway.rst:23
 msgid "In you alias config (:file:`/etc/aliases`):"
-msgstr ""
+msgstr "Nel campo alias imposta (:file:`/etc/aliases`):"
 
 #: ../../content/administration/on_premise/email_gateway.rst:30
 #: ../../content/administration/on_premise/email_gateway.rst:45
@@ -7273,37 +7496,39 @@ msgstr "Risorse"
 
 #: ../../content/administration/on_premise/email_gateway.rst:32
 msgid "`Postfix <http://www.postfix.org/documentation.html>`_"
-msgstr ""
+msgstr "`Postfix <http://www.postfix.org/documentation.html>`_"
 
 #: ../../content/administration/on_premise/email_gateway.rst:33
 msgid "`Postfix aliases <http://www.postfix.org/aliases.5.html>`_"
-msgstr ""
+msgstr "`Alias Postfix <http://www.postfix.org/aliases.5.html>`_"
 
 #: ../../content/administration/on_premise/email_gateway.rst:34
 msgid "`Postfix virtual <http://www.postfix.org/virtual.8.html>`_"
-msgstr ""
+msgstr "`Postfix virtual <http://www.postfix.org/virtual.8.html>`_"
 
 #: ../../content/administration/on_premise/email_gateway.rst:38
 msgid "For Exim"
-msgstr ""
+msgstr "Per Exim"
 
 #: ../../content/administration/on_premise/email_gateway.rst:47
 msgid "`Exim <https://www.exim.org/docs.html>`_"
-msgstr ""
+msgstr "`Exim <https://www.exim.org/docs.html>`_"
 
 #: ../../content/administration/on_premise/email_gateway.rst:50
 msgid ""
 "If you don't have access/manage your email server, use :ref:`inbound "
 "messages <email_communication/inbound_messages>`."
 msgstr ""
+"Se non hai accesso o non gestisci il server e-mail, utilizza :ref:`messaggi "
+"in entrata <email_communication/inbound_messages>`."
 
 #: ../../content/administration/on_premise/geo_ip.rst:3
 msgid "Geo IP"
-msgstr ""
+msgstr "IP geo"
 
 #: ../../content/administration/on_premise/geo_ip.rst:6
 msgid "This documentation only applies to On-premise databases."
-msgstr ""
+msgstr "La presente documentazione riguarda solo i database on-premise."
 
 #: ../../content/administration/on_premise/geo_ip.rst:11
 msgid ""
@@ -7312,14 +7537,17 @@ msgid ""
 "two files called :file:`GeoLite2-City.mmdb` and "
 ":file:`GeoLite2-Country.mmdb`."
 msgstr ""
+"Scarica sia il database GeoLite2 City che Country  "
+"`<https://dev.maxmind.com/geoip/geoip2/geolite2/>`_.   Dovresti ottenere due"
+" file chiamati :file:`GeoLite2-City.mmdb` e :file:`GeoLite2-Country.mmdb`."
 
 #: ../../content/administration/on_premise/geo_ip.rst:15
 msgid "Move the files to the folder :file:`/usr/share/GeoIP/`."
-msgstr ""
+msgstr "Sposta i file nella cartella :file:`/usr/share/GeoIP/`."
 
 #: ../../content/administration/on_premise/geo_ip.rst:22
 msgid "Restart the server"
-msgstr ""
+msgstr "Riavvia il server"
 
 #: ../../content/administration/on_premise/geo_ip.rst:25
 msgid ""
@@ -7329,48 +7557,60 @@ msgid ""
 "Odoo command line interface. These options take the absolute path to the "
 "GeoIP database file and use it as the GeoIP database. For example:"
 msgstr ""
+"Se non vuoi/puoi spostare il database geoip in ``/usr/share/GeoIP/``, "
+"utilizza le opzioni :option:`--geoip-city-db <odoo-bin --geoip-city-db>` e "
+":option:`--geoip-country-db <odoo-bin --geoip-country-db>` dell'interfaccia "
+"della riga di comando di Odoo. Le opzioni prendono il percorso assoluto del "
+"file del database Odoo e lo utilizzano come database GeoIP. Ad esempio:"
 
 #: ../../content/administration/on_premise/geo_ip.rst:36
 msgid ":doc:`CLI documentation </developer/reference/cli>`."
-msgstr ""
+msgstr ":doc:`Documentazione CLI </developer/reference/cli>`."
 
 #: ../../content/administration/on_premise/geo_ip.rst:39
 msgid "Test GeoIP geolocation in your Odoo website"
-msgstr ""
+msgstr "Testare la geolocalizzazione GeoIP sul sito web Odoo"
 
 #: ../../content/administration/on_premise/geo_ip.rst:41
 msgid ""
 "Edit a web page to include some geo-ip information such as the country name "
 "of the current request IP address. To do so:"
 msgstr ""
+"Modifica una pagina web per integrare alcune informazioni geo-ip come il "
+"nome del Paese dell'indirizzo IP della richiesta corrente. Per farlo:"
 
 #: ../../content/administration/on_premise/geo_ip.rst:44
 msgid "Go to your website. Open the web page that you want to test ``GeoIP``."
 msgstr ""
+"Vai sul tuo sito web. Apri la pagina web sulla quale vuoi testare ``GeoIP``."
 
 #: ../../content/administration/on_premise/geo_ip.rst:45
 msgid "Choose :menuselection:`Customize --> HTML/CSS/JS Editor`."
-msgstr ""
+msgstr "Scegli :menuselection:`Personalizzare --> Editor HTML/CSS/JS`."
 
 #: ../../content/administration/on_premise/geo_ip.rst:46
 msgid "Add the following piece of XML in the page :"
-msgstr ""
+msgstr "Aggiungi la seguente parte XML alla pagina:"
 
 #: ../../content/administration/on_premise/geo_ip.rst:52
 msgid "Save and refresh the page."
-msgstr ""
+msgstr "Salva e ricarica la pagina."
 
 #: ../../content/administration/on_premise/geo_ip.rst:54
 msgid ""
 "Geo-ip is working if you read your country name displayed in bold in the "
 "middle of the page."
 msgstr ""
+"Geo-ip funziona se sei in grado di leggere il nome del tuo Paese, "
+"evidenziato al centro della pagina."
 
 #: ../../content/administration/on_premise/geo_ip.rst:56
 msgid ""
 "In case you read \"**geoip failure**\" instead then the geolocalization "
 "failed. The common causes are:"
 msgstr ""
+"Se leggi \"**geoip failure**\" significa che la geolocalizzazione non è "
+"riuscita. Le cause più comuni sono:"
 
 #: ../../content/administration/on_premise/geo_ip.rst:58
 msgid ""
@@ -7378,6 +7618,9 @@ msgid ""
 "network one. If you don't know, you can access your website using mobile "
 "data."
 msgstr ""
+"L'indirizzo IP di navigazione è il localhost (``127.0.0.1``) o la rete "
+"dell'area locale. Se non lo sai, puoi accedere al tuo sito web usando i dati"
+" mobili."
 
 #: ../../content/administration/on_premise/geo_ip.rst:60
 msgid ""
@@ -7385,16 +7628,21 @@ msgid ""
 "start Odoo with the proxy-mode enabled. See :option:`proxy mode <odoo-bin "
 "--proxy-mode>`."
 msgstr ""
+"Stai utilizzando un proxy invertito (apache, nginx) di fronte a Odoo ma non "
+"hai avviato Odoo con la modalità proxy attivata. Consulta la sezione "
+":option:`modalità proxy <odoo-bin --proxy-mode>`."
 
 #: ../../content/administration/on_premise/geo_ip.rst:62
 msgid ""
 "The GeoIP database is corrupt, missing or unaccessible. In such case a "
 "warning was logged in the server logs."
 msgstr ""
+"Il database GeoIP è corrotto, inesistente o inaccessibile. In questo caso è "
+"stato registrato un avviso nei log del server."
 
 #: ../../content/administration/on_premise/packages.rst:3
 msgid "Packaged installers"
-msgstr ""
+msgstr "Programmi di installazione"
 
 #: ../../content/administration/on_premise/packages.rst:5
 msgid ""
@@ -7402,6 +7650,9 @@ msgid ""
 "(Debian, Ubuntu, etc.), RPM-based Linux distributions (Fedora, CentOS, RHEL,"
 " etc.), and Windows for the Community and Enterprise editions."
 msgstr ""
+"Odoo fornisce programmi di installazione per distribuzioni Linux basate su "
+"Debian (Debian, Ubuntu, ecc.), distribuzioni Linux basate su RPM (Fedora, "
+"CentOS, RHEL, ecc.) e Windows per le edizioni Community ed Enterprise."
 
 #: ../../content/administration/on_premise/packages.rst:9
 msgid ""
@@ -7409,40 +7660,50 @@ msgid ""
 "requirements are available on the `nightly server "
 "<https://nightly.odoo.com>`_."
 msgstr ""
+"I pacchetti notturni **Community** ufficiali con tutti i requisiti di "
+"dipendenza sono disponibili sul `server notturno "
+"<https://nightly.odoo.com>`_."
 
 #: ../../content/administration/on_premise/packages.rst:13
 msgid "Nightly packages may be difficult to keep up to date."
-msgstr ""
+msgstr "I pacchetti notturni potrebbero essere difficili da aggiornare."
 
 #: ../../content/administration/on_premise/packages.rst:15
 msgid ""
 "Official **Community** and **Enterprise** packages can be downloaded from "
 "the `Odoo download page <https://www.odoo.com/page/download>`_."
 msgstr ""
+"I pacchetti **Community** ed **Enterprise** ufficiali possono essere "
+"scaricati dalla `pagina di download Odoo "
+"<https://www.odoo.com/page/download>`_."
 
 #: ../../content/administration/on_premise/packages.rst:19
 msgid ""
 "It is required to be logged in as a paying on-premise customer or partner to"
 " download the Enterprise packages."
 msgstr ""
+"Per scaricare i pacchetti Enterprise, è richiesto aver eseguito l'accesso "
+"come cliente pagante on-premise o come partner."
 
 #: ../../content/administration/on_premise/packages.rst:28
 #: ../../content/administration/on_premise/source.rst:116
 msgid "Prepare"
-msgstr ""
+msgstr "Preparazione"
 
 #: ../../content/administration/on_premise/packages.rst:30
 msgid ""
 "Odoo needs a `PostgreSQL <https://www.postgresql.org/>`_ server to run "
 "properly."
 msgstr ""
+"Odoo ha bisogno di un server `PostgreSQL <https://www.postgresql.org/>`_ per"
+" funzionare correttamente."
 
 #: ../../content/administration/on_premise/packages.rst:34
 #: ../../content/administration/on_premise/packages.rst:70
 #: ../../content/administration/on_premise/packages.rst:100
 #: ../../content/administration/on_premise/source.rst:278
 msgid "Debian/Ubuntu"
-msgstr ""
+msgstr "Debian/Ubuntu"
 
 #: ../../content/administration/on_premise/packages.rst:36
 msgid ""
@@ -7450,18 +7711,23 @@ msgid ""
 "PostgreSQL server on the same host as the Odoo instance. Execute the "
 "following command to install the PostgreSQL server:"
 msgstr ""
+"La configurazione predefinita per il pacchetto 'deb' Odoo prevede l'utilizzo"
+" del server PostgreSQL sullo stesso host dell'istanza Odoo. Esegui il "
+"seguente comando per installare il server PostgreSQL:"
 
 #: ../../content/administration/on_premise/packages.rst:44
 #: ../../content/administration/on_premise/packages.rst:80
 #: ../../content/administration/on_premise/packages.rst:132
 msgid "Fedora"
-msgstr ""
+msgstr "Fedora"
 
 #: ../../content/administration/on_premise/packages.rst:46
 msgid ""
 "Make sure that the `sudo` command is available and well configured and, only"
 " then, execute the following command to install the PostgreSQL server:"
 msgstr ""
+"Assicurati che il comando `sudo` sia disponibile e ben configurato e solo in"
+" seguito esegui il comando seguente per installare il server PostgreSQL:"
 
 #: ../../content/administration/on_premise/packages.rst:57
 #: ../../content/administration/on_premise/source.rst:420
@@ -7473,29 +7739,39 @@ msgid ""
 "<https://github.com/odoo/odoo/wiki/Wkhtmltopdf>`_ for more details on the "
 "various versions."
 msgstr ""
+"`wkhtmltopdf` non è installato tramite **pip** e deve essere installato "
+"manualmente nella `versione 0.12.6 "
+"<https://github.com/wkhtmltopdf/packaging/releases/tag/0.12.6.1-3>`_ per far"
+" sì che supporti intestazioni e pié di pagina. Consulta la `wiki relativa a "
+"wkhtmltopdf <https://github.com/odoo/odoo/wiki/Wkhtmltopdf>`_ per maggiori "
+"dettagli sulle varie versioni."
 
 #: ../../content/administration/on_premise/packages.rst:63
 msgid "Repository"
-msgstr ""
+msgstr "Repository"
 
 #: ../../content/administration/on_premise/packages.rst:65
 msgid ""
 "Odoo S.A. provides a repository that can be used to install the "
 "**Community** edition by executing the following commands:"
 msgstr ""
+"Odoo S.A. fornisce una repository che può essere utilizzata per installare "
+"l'edizione **Community** eseguendo i seguenti comandi:"
 
 #: ../../content/administration/on_premise/packages.rst:78
 msgid ""
 "Use the usual `apt-get upgrade` command to keep the installation up-to-date."
 msgstr ""
+"Utilizza il solito comando `apt-get upgrade` per aggiornare l'installazione."
 
 #: ../../content/administration/on_premise/packages.rst:90
 msgid "Currently, there is no nightly repository for the Enterprise edition."
 msgstr ""
+"Attualmente, non vi è una repository notturna per l'edizione Enterprise."
 
 #: ../../content/administration/on_premise/packages.rst:93
 msgid "Distribution package"
-msgstr ""
+msgstr "Pacchetto di distribuzione"
 
 #: ../../content/administration/on_premise/packages.rst:95
 msgid ""
@@ -7503,6 +7779,9 @@ msgid ""
 "**Enterprise** editions can be downloaded from the `Odoo download page "
 "<https://www.odoo.com/page/download>`_."
 msgstr ""
+"Invece di utilizzare la repository, i pacchetti per le edizioni "
+"**Community** ed **Enterprise** possono essere scaricati dalla `pagina di "
+"download Odoo <https://www.odoo.com/page/download>`_."
 
 #: ../../content/administration/on_premise/packages.rst:103
 msgid ""
@@ -7510,6 +7789,9 @@ msgid ""
 "<https://www.debian.org/releases/buster/>`_ and `Ubuntu 18.04 "
 "<https://releases.ubuntu.com/18.04>`_ or above."
 msgstr ""
+"Il pacchetto Odoo 17 'deb' attualmente supporta `Debian Buster "
+"<https://www.debian.org/releases/buster/>`_ e `Ubuntu 18.04 "
+"<https://releases.ubuntu.com/18.04>`_ o superiori."
 
 #: ../../content/administration/on_premise/packages.rst:107
 msgid ""
@@ -7517,6 +7799,9 @@ msgid ""
 "as a service, create the necessary PostgreSQL user, and automatically start "
 "the server:"
 msgstr ""
+"Una volta scaricato, esegui i seguenti comandi **come radice** per "
+"installare Odoo come servizio, crea l'utente PostgreSQL richiesto e avvia "
+"automaticamente il server:"
 
 #: ../../content/administration/on_premise/packages.rst:117
 msgid ""
@@ -7524,6 +7809,9 @@ msgid ""
 "does not exist in Debian Buster nor Ubuntu 18.04. If needed, install it "
 "manually with the following:"
 msgstr ""
+"Il pacchetto Debian `python3-xlwt` Debian, esportato in formato XLS, non "
+"esiste in Debian Buster né Ubuntu 18.04. Se necessario, installalo "
+"manualmente:"
 
 #: ../../content/administration/on_premise/packages.rst:124
 msgid ""
@@ -7531,16 +7819,22 @@ msgid ""
 " exist in Debian Buster nor Ubuntu 18.04, which could cause problems with "
 "the `l10n_mx_edi` module. If needed, install it manually with the following:"
 msgstr ""
+"Il pacchetto Python `num2words`, necessario per restituire quantità "
+"testuali, non esiste in Debian Buster né Ubuntu 18.04, il che potrebbe "
+"causare problemi con il modulo `l10n_mx_edi`. Se necessario, installalo "
+"manualmente: "
 
 #: ../../content/administration/on_premise/packages.rst:135
 msgid "Odoo 17 'rpm' package supports Fedora 36."
-msgstr ""
+msgstr "Il pacchetto Odoo 17 'rpm' supporta Fedora 36."
 
 #: ../../content/administration/on_premise/packages.rst:137
 msgid ""
 "Once downloaded, the package can be installed using the 'dnf' package "
 "manager:"
 msgstr ""
+"Una volta scaricato, il pacchetto può essere installato utilizzato il "
+"gestore di pacchetti 'dnf':"
 
 #: ../../content/administration/on_premise/packages.rst:151
 msgid ""
@@ -7549,6 +7843,10 @@ msgid ""
 "a number of limitations and risks associated with deploying Odoo on a "
 "Windows platform."
 msgstr ""
+"La versione Windows è proposta per facilitare i test o l'esecuzione di "
+"istanze locali per un solo utente ma la distribuzione in produzione è "
+"sconsigliata per via di una serie di limitazioni e rischi associati allo "
+"sviluppo di Odoo su una piattaforma Windows."
 
 #: ../../content/administration/on_premise/packages.rst:155
 msgid ""
@@ -7556,40 +7854,51 @@ msgid ""
 " (Community only) or the Windows installer from the `Odoo download page "
 "<https://www.odoo.com/page/download>`_ (any edition."
 msgstr ""
+"Scarica il programma di installazione dal `server notturno "
+"<https://nightly.odoo.com>`_ (solo Community) oppure il programma di "
+"installazione Windows  dalla `pagina di download di Odoo "
+"<https://www.odoo.com/page/download>`_ (qualsiasi edizione)."
 
 #: ../../content/administration/on_premise/packages.rst:158
 msgid "Execute the downloaded file."
-msgstr ""
+msgstr "Eseguire il file scaricato."
 
 #: ../../content/administration/on_premise/packages.rst:161
 msgid ""
 "On Windows 8 and later, a warning titled *Windows protected your PC* may be "
 "displayed. Click **More Info** and then **Run anyway** to proceed."
 msgstr ""
+"Su Windows 8 e superiori, potrebbe essere visualizzato l'avviso *Windows ha "
+"protetto il tuo PC*. Fai clic su **Maggiori informazioni** e avvia **Esegui "
+"comunque** per procedere."
 
 #: ../../content/administration/on_premise/packages.rst:164
 msgid ""
 "Accept the `UAC <https://en.wikipedia.org/wiki/User_Account_Control>`_ "
 "prompt."
 msgstr ""
+"Accetta il prompt `UAC "
+"<https://en.wikipedia.org/wiki/User_Account_Control>`_ prompt."
 
 #: ../../content/administration/on_premise/packages.rst:165
 msgid "Go through the installation steps."
-msgstr ""
+msgstr "Segui le fasi di installazione."
 
 #: ../../content/administration/on_premise/packages.rst:167
 msgid "Odoo launches automatically at the end of the installation."
-msgstr ""
+msgstr "Odoo si avvierà automaticamente al termine dell'installazione."
 
 #: ../../content/administration/on_premise/source.rst:3
 msgid "Source install"
-msgstr ""
+msgstr "Installare la fonte"
 
 #: ../../content/administration/on_premise/source.rst:5
 msgid ""
 "The source 'installation' is not about installing Odoo but running it "
 "directly from the source instead."
 msgstr ""
+"L'\"installazione\" dalla fonte non consiste nell'installazione di Odoo ma "
+"nell'eseguirlo direttamente."
 
 #: ../../content/administration/on_premise/source.rst:8
 msgid ""
