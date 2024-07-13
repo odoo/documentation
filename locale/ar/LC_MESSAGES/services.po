@@ -4569,6 +4569,12 @@ msgid ""
 ":guilabel:`Excluding Stages` will not be included in the calculation of the "
 ":abbr:`SLA (Service Level Agreement)` deadline."
 msgstr ""
+":guilabel:`الهدف` هو المرحلة التي يجب أن تصل إليها التذكرة، والوقت الذي تم "
+"تخصيصه للوصول إلى تلك المرحلة، من أجل استيفاء سياسة :abbr:`SLA (اتفاقية "
+"مستوى الخدمة)`. يمكن تحديد أي مرحلة مسندة إلى الفريق في حقل "
+":guilabel:`الوصول إلى المرحلة`. لن يتم تضمين الوقت المستغرق في المراحل التي "
+"تم تحديدها ضمن في :guilabel:`باستثناء المراحل` عند حساب الموعد النهائي لـ "
+":abbr:`SLA (اتفاقية مستوى الخدمة)`. "
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:73
 msgid ""
@@ -4579,10 +4585,16 @@ msgid ""
 "work on a ticket has begun, and would have `In Progress` as the "
 ":guilabel:`Reach Stage`."
 msgstr ""
+":abbr:`SLA (اتفاقية مستوى الخدمة)` التي تحمل عنوان `8 ساعات للإغلاق` تقوم "
+"بتتبع وقت العمل إلى حين انتهاء العمل في التذكرة، وسيتم اعتبار التذكرة "
+"`محلولة` عند وصولها إلى :guilabel:`مرحلة الوصول`. ومع ذلك، إذا كانت "
+":abbr:`SLA (اتفاقية مستوى الخدمة)` تحمل عنوان `يومين حتى البدء`، فإنها تتبع "
+"الوقت قبل بدء العمل على التذكرة، وستكون مرحلة `قيد التقدم` هي المرحلة المراد"
+" الوصول إليها في :guilabel:` مرحلة الوصول`. "
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:79
 msgid "Meeting SLA deadlines"
-msgstr ""
+msgstr "الالتزام بالمواعيد النهائية لاتفاقية مستوى الخدمة "
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:81
 msgid ""
@@ -4592,12 +4604,19 @@ msgid ""
 "The deadline is then added to the ticket, as well as a white tag indicating "
 "the name of the :abbr:`SLA (Service Level Agreement)` applied."
 msgstr ""
+"بمجرد أن يتم تحديد التذكرة على أنها متوافقة مع معايير سياسة :abbr:`SLA "
+"(اتفاقية مستوى الخدمة)`، يتم حساب الموعد النهائي لإنجازها. يعتمد الموعد "
+"النهائي على تاريخ إنشاء التذكرة وساعات العمل المستهدفة. تتم بعد ذلك إضافة "
+"الموعد النهائي إلى التذكرة، بالإضافة إلى علامة بيضاء تشير إلى اسم :abbr:`SLA"
+" (اتفاقية مستوى الخدمة)` المطبقة. "
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst-1
 msgid ""
 "View of a ticket's form emphasizing an open SLA deadline on a ticket in Odoo"
 " Helpdesk"
 msgstr ""
+"عرض استمارة التذكرة مع التركيز على الموعد النهائي لاتفاقية مستوى الخدمة "
+"(SLA) المفتوحة على التذكرة في تطبيق مكتب المساعدة لدى أودو "
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:91
 msgid ""
@@ -4605,6 +4624,9 @@ msgid ""
 "Agreement)`, the earliest occurring deadline will be displayed on the "
 "ticket. Once that deadline has passed, the next deadline will be displayed."
 msgstr ""
+"إذا كانت التذكرة تتوافق مع معايير أكثر من بند في :abbr:`SLA (اتفاقية مستوى "
+"الخدمة)`، فسيتم عرض أقرب موعد نهائي على التذكرة. بمجرد انقضاء هذا الموعد "
+"النهائي، سيتم عرض الموعد النهائي التالي. "
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:95
 msgid ""
@@ -4612,10 +4634,15 @@ msgid ""
 " :abbr:`SLA (Service Level Agreement)` tag turns green, and the "
 ":guilabel:`Deadline` field disappears from view on the."
 msgstr ""
+"بمجرد استيفاء التذكرة لسياسة :abbr:`SLA (اتفاقية مستوى الخدمة)`، تتحول علامة"
+" :abbr:`SLA (اتفاقية مستوى الخدمة)` إلى اللون الأخضر، ويختفي حقل "
+":guilabel:`الموعد النهائي` من نافذة العرض. "
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst-1
 msgid "View of a ticket's form emphasizing a satisfied SLA in Odoo Helpdesk"
 msgstr ""
+"عرض استمارة التذكرة مع التركيز على على اتفاقية مستوى الخدمة (SLA) في تطبيق "
+"مكتب المساعدة لدى أودو "
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:102
 msgid ""
@@ -4625,15 +4652,22 @@ msgid ""
 "Agreement)` has failed, the red tag will stay on the ticket, even after the "
 "ticket is moved to the :guilabel:`Reach Stage`."
 msgstr ""
+"إذا انقضى الموعد النهائي لـ :abbr:`SLA (اتفاقية مستوى الخدمة)` ولم تنتقل "
+"التذكرة إلى :guilabel:`مرحلة الوصول`، فستتحول علامة :abbr:`SLA (اتفاقية "
+"مستوى الخدمة)` إلى اللون الأحمر. بمجرد فشل :abbr:`SLA (اتفاقية مستوى "
+"الخدمة)`، ستبقى العلامة الحمراء على التذكرة، حتى بعد نقل التذكرة إلى "
+":guilabel:`مرحلة الوصول`. "
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst-1
 msgid ""
 "View of a ticket's form with a failing and passing SLA in Odoo Helpdesk"
 msgstr ""
+"عرض استمارة التذكرة مع اتفاقية مستوى الخدمة المستوفاة وغير المستوفاة في "
+"تطبيق مكتب المساعدة لدى أودو "
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:112
 msgid "Analyzing SLA performance"
-msgstr ""
+msgstr "تحليل أداء اتفاقية مستوى الخدمة "
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:114
 msgid ""
@@ -4642,10 +4676,15 @@ msgid ""
 "individual policies. Navigate to the report and corresponding pivot table by"
 " going to :menuselection:`Helpdesk --> Reporting --> SLA Status Analysis`."
 msgstr ""
+"يقوم تقرير :guilabel:`تحليل حالة اتفاقية مستوى الخدمة` بتتبع مدى سرعة "
+"استيفاء :abbr:`SLA (اتفاقية مستوى الخدمة)`، بالإضافة إلى معدل نجاح السياسات "
+"الفردية. انتقل إلى التقرير والجدول المحوري المقابل من خلال الذهاب إلى "
+":menuselection:`مكتب المساعدة --> التقارير --> تحليل حالة اتفاقية مستوى "
+"الخدمة`. "
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:120
 msgid "Using the Pivot view"
-msgstr ""
+msgstr "استخدام نافذة العرض المحورية "
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:122
 msgid ""
@@ -4653,10 +4692,15 @@ msgid ""
 "filtered to show the number of SLAs failed and the failure rate over the "
 "last 30 days, grouped by team."
 msgstr ""
+"يتم عرض التقرير في نافذة العرض :guilabel:`المحوري` افتراضياً، وتتم تصفيته "
+"لإظهار عدد اتفاقيات مستوى الخدمة الفاشلة ومعدل الفشل خلال آخر 30 يوم، مجمعة "
+"حسب الفريق. "
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst-1
 msgid "View of the SLA status analysis report in Odoo Helpdesk"
 msgstr ""
+"عرض تقرير تحليل حالة اتفاقية مستوى الخدمة (SLA) في تطبيق مكتب مساعدة لدى "
+"أودو "
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:129
 msgid ""
@@ -4668,6 +4712,12 @@ msgid ""
 "corresponding new column will emerge in the pivot table to show the relevant"
 " calculations."
 msgstr ""
+"لإضافة عدد اتفاقيات مستوى الخدمة التي تم استيفاؤها أو التي لا تزال قيد "
+"التنفيذ، اضغط على زر :guilabel:`المقاييس` للكشف عن قائمة منسدلة لمعايير "
+"إعداد التقارير، واختر من بين الخيارات المتاحة بناءً على القياسات المفضلة. في"
+" كل مرة يتم تحديد قياس فيها، ستظهر علامة صح في القائمة المنسدلة للإشارة إلى "
+"أنه قد تم تضمين هذا القياس، وسيظهر عمود جديد مطابق في الجدول المحوري لإظهار "
+"الحسابات ذات الصلة. "
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:135
 msgid ""
@@ -4675,10 +4725,13 @@ msgid ""
 "next to :guilabel:`Total`, and then select one of the groups. To remove one,"
 " click the minus :guilabel:` - ` button and deselect."
 msgstr ""
+"لإضافة مجموعة إلى صف أو عمود، اضغط على زر علامة الجمع :guilabel:` + ` بجوار "
+":guilabel:`المجموع`، ثم حدد إحدى المجموعات. لإزالة مجموعة، اضغط على زر علامة"
+" الطرح :guilabel:` - ` ثم قم بإلغاء التحديد. "
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:140
 msgid "Using the Graph view"
-msgstr ""
+msgstr "استخدام نافذة عرض الرسم البياني "
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:142
 msgid ""
@@ -4686,6 +4739,9 @@ msgid ""
 ":guilabel:`Bar`, :guilabel:`Line`, or :guilabel:`Pie` Chart. Toggle between "
 "these views by selecting the appropriate icon at the top of the chart."
 msgstr ""
+"يمكن أيضاً عرض تقرير :guilabel:`تحليل الحالة` على هيئة رسم بياني "
+":guilabel:`شريطي`، أو :guilabel:`خطي`، أو :guilabel:`دائري`. قم بالتبديل بين"
+" طرق العرض هذه عن طريق تحديد الرمز المناسب في أعلى الرسم البياني. "
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:148
 msgid "Bar Chart"
@@ -4694,6 +4750,8 @@ msgstr "مخطط شريطي"
 #: ../../content/applications/services/helpdesk/overview/sla.rst:0
 msgid "View of the SLA status analysis report in bar view"
 msgstr ""
+"عرض تقرير تحليل حالة اتفاقية مستوى الخدمة (SLA) في نافذة عرض الرسم البياني "
+"الشريطي. "
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:154
 msgid "Line Chart"
@@ -4702,6 +4760,8 @@ msgstr "رسم بياني خطي"
 #: ../../content/applications/services/helpdesk/overview/sla.rst:0
 msgid "View of the SLA status analysis report in line view"
 msgstr ""
+"عرض تقرير تحليل حالة اتفاقية مستوى الخدمة (SLA) في نافذة عرض الرسم البياني "
+"الخطي. "
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:160
 msgid "Pie Chart"
@@ -4710,6 +4770,8 @@ msgstr "مخطط بياني دائري "
 #: ../../content/applications/services/helpdesk/overview/sla.rst:0
 msgid "View of the SLA status analysis report in pie chart view"
 msgstr ""
+"عرض تقرير تحليل حالة اتفاقية مستوى الخدمة (SLA) في نافذة عرض الرسم البياني "
+"الدائري. "
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:167
 msgid ""
@@ -4717,10 +4779,13 @@ msgid ""
 ":guilabel:`Stacked`. This presents two or more groups to appear on top of "
 "each other instead of next to each other, making it easier to compare data."
 msgstr ""
+"يمكن عرض كل من :guilabel:`الرسم البياني الشريطي` و :guilabel:`الرسم البياني "
+"الخطي`:guilabel:`بطريقة مكدسة`. يؤدي ذلك إلى ظهور مجموعتين أو أكثر فوق بعضها"
+" البعض عوضاً عن ظهورها بجوار بعضها البعض، مما يسهل مقارنة البيانات. "
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:172
 msgid "Using the Cohort view"
-msgstr ""
+msgstr "استخدام نافذة العرض المجمعة "
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:174
 msgid ""
@@ -4729,20 +4794,26 @@ msgid ""
 ":guilabel:`Cohort` view, click the icon in the top right corner above the "
 "chart."
 msgstr ""
+"يتم استخدام طريقة العرض :guilabel:`المجمعة` لتتبع التغييرات في البيانات خلال"
+" فترة زمنية محددة. لعرض تقرير :guilabel:`تحليل الحالة` في نافذة العرض "
+":guilabel:`المجمعة`، اضغط على الأيقونة الموجودة في الزاوية العليا إلى يمين "
+"الرسم البياني. "
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst-1
 msgid "View of the SLA status analysis report in cohort view"
-msgstr ""
+msgstr "عرض تقرير تحليل حالة اتفاقية مستوى الخدمة في نافذة العرض المجمعة "
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:183
 msgid ":ref:`Reporting views <reporting/views>`"
-msgstr ""
+msgstr ":ref:`نوافذ عرض التقارير <reporting/views>` "
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:184
 msgid ""
 ":doc:`Allow customers to close their tickets "
 "</applications/services/helpdesk/advanced/close_tickets>`"
 msgstr ""
+":doc:`السماح للعملاء بإغلاق تذاكرهم الخاصة بأنفسهم "
+"</applications/services/helpdesk/advanced/close_tickets>` "
 
 #: ../../content/applications/services/project.rst:8
 msgid "Project"
@@ -4754,6 +4825,8 @@ msgid ""
 "assign activities to coworkers, and keep track of each project's "
 "profitability."
 msgstr ""
+"تطبيق المشاريع لدى أودو هو أداة لإدارة مشاريعك الجارية، مثل جدولة المهام، "
+"وإسناد الأنشطة إلى زملاء العمل، وتتبع ربحية كل مشروع. "
 
 #: ../../content/applications/services/project.rst:14
 #: ../../content/applications/services/timesheets.rst:11
@@ -4761,10 +4834,12 @@ msgid ""
 "`Odoo Tutorials: Project and Timesheets "
 "<https://www.odoo.com/slides/project-and-timesheets-21>`_"
 msgstr ""
+"`دروس أودو التعليمية: المشاريع والجداول الزمنية "
+"<https://www.odoo.com/slides/project-and-timesheets-21>`_ "
 
 #: ../../content/applications/services/project/project_management.rst:3
 msgid "Project management"
-msgstr ""
+msgstr "إدارة المشاريع "
 
 #: ../../content/applications/services/project/project_management.rst:5
 msgid ""
@@ -4772,6 +4847,9 @@ msgid ""
 "projects are broken down into tasks, which are categorized on a whiteboard "
 "according to what production phase they are in."
 msgstr ""
+"يستخدم تطبيق المشاريع لدى أودو نظام **كانبان** لإدارة المشاريع. هذا يعني أن "
+"كافة المشاريع مقسمة إلى مهام أصغر، والتي يتم تصنيفها على السبورة البيضاء "
+"وفقاً لمرحلة الإنتاج التي تمر بها. "
 
 #: ../../content/applications/services/project/project_management.rst:8
 msgid "Did you know?"
@@ -4782,12 +4860,16 @@ msgid ""
 "The word **Kanban** comes from Japanese and refers to the \"visual board\" "
 "management method."
 msgstr ""
+"كلمة **كانبان** تأتي من اللغة اليابانية وتشير إلى طريقة إدارة \"اللوحة "
+"المرئية\". "
 
 #: ../../content/applications/services/project/project_management.rst:13
 msgid ""
 "`Odoo Tutorials: Kanban Project Management "
 "<https://www.odoo.com/slides/slide/kanban-project-management-1664>`_"
 msgstr ""
+"`دروس أودو التعليمية: إدارة المشاريع على نافذة عرض كانبان "
+"<https://www.odoo.com/slides/slide/kanban-project-management-1664>`_ "
 
 #: ../../content/applications/services/project/project_management.rst:19
 msgid ""
@@ -4795,20 +4877,24 @@ msgid ""
 "project. Enter a :guilabel:`Name` for your project and click "
 ":guilabel:`Create Project`."
 msgstr ""
+"افتح تطبيق **المشاريع** ثم اضغط على :guilabel:`إنشاء` لبدء مشروع جديد. قم "
+"بإدخال :guilabel:`اسم` لمشروعك ثم اضغط على :guilabel:`إنشاء مشروع`. "
 
 #: ../../content/applications/services/project/project_management.rst:22
 msgid ""
 "You can customize your existing **projects** from the dashboard by clicking "
 "the drop-down toggle button (:guilabel:`⋮`) on your project's **card**."
 msgstr ""
+"يمكنك تخصيص **مشاريعك** الموجودة بالفعل من لوحة البيانات عن طريق الضغط على "
+"زر التبديل المنسدل (:guilabel:`⋮`) الموجود على **بطاقة** مشروعك. "
 
 #: ../../content/applications/services/project/project_management.rst-1
 msgid "Project card"
-msgstr ""
+msgstr "بطاقة المشروع "
 
 #: ../../content/applications/services/project/project_management.rst:29
 msgid "This enables a new menu divided into four parts:"
-msgstr ""
+msgstr "يؤدي ذلك إلى تمكين قائمة جديدة مقسمة إلى أربعة أجزاء: "
 
 #: ../../content/applications/services/project/project_management.rst:31
 msgid ""
@@ -4818,80 +4904,96 @@ msgid ""
 "such as :guilabel:`Documents`. All uploaded files can be found under this "
 "menu, as well as in the **Documents** app, under :guilabel:`Projects`;"
 msgstr ""
+":guilabel:`نافذة العرض`: ألقِ نظرة عامة على مكونات مشروعك، مثل "
+":guilabel:`المهام`، و :guilabel:`مؤشرات التقدم الرئيسية`، و "
+":guilabel:`تحديثات المشروع`. بناءً على التطبيقات التي قمت بتنشيطها، قد تتوفر"
+" المزيد من الخيارات، مثل :guilabel:`المستندات`. ستجد كافة الملفات التي تم "
+"تحميلها ضمن هذه القائمة، وكذلك في تطبيق **المستندات**، ضمن "
+":guilabel:`المشاريع`؛ "
 
 #: ../../content/applications/services/project/project_management.rst:35
 msgid ""
 ":guilabel:`Reporting`: analyze your project's progress and profitability "
 "through graphics and statistics;"
 msgstr ""
+":guilabel:`التقارير`: قم بتحليل مستوى تقدم مشروعك وربحيته من خلال الرسومات "
+"والإحصائيات؛ "
 
 #: ../../content/applications/services/project/project_management.rst:37
 msgid ""
 "**Color**: make a line of color appear on the left side of the card so that "
 "your project is more recognizable;"
 msgstr ""
+"**اللون**: اجعل خطاً من الألوان يظهر على الجانب الأيسر من البطاقة حتى يسهل "
+"التعرف على مشروعك؛ "
 
 #: ../../content/applications/services/project/project_management.rst:39
 msgid ":guilabel:`Settings`: you can change the following:"
-msgstr ""
+msgstr ":guilabel:`الإعدادات`: يمكنك تغيير التالي: "
 
 #: ../../content/applications/services/project/project_management.rst:41
 msgid "the :guilabel:`Name` of the project;"
-msgstr ""
+msgstr ":guilabel:`اسم` المشروع؛ "
 
 #: ../../content/applications/services/project/project_management.rst:42
 msgid "the :guilabel:`Name of the tasks` found under that project;"
-msgstr ""
+msgstr ":guilabel:`أسماء المهام` موجودة أسفل ذلك المشروع؛ "
 
 #: ../../content/applications/services/project/project_management.rst:43
 msgid "the :guilabel:`Customer` for whom the project is intended;"
-msgstr ""
+msgstr ":guilabel:`العميل` الشخص الذي يتم إنجاز المشؤوع من أجله؛ "
 
 #: ../../content/applications/services/project/project_management.rst:44
 msgid "the :guilabel:`Tags` used for filtering;"
-msgstr ""
+msgstr ":guilabel:`علامات التصنيف` المستخدَمة للتصفية؛ "
 
 #: ../../content/applications/services/project/project_management.rst:45
 msgid "the :guilabel:`Company` responsible for the project;"
-msgstr ""
+msgstr ":guilabel:`الشركة` مسؤولة عن تنفيذ المشروع؛ "
 
 #: ../../content/applications/services/project/project_management.rst:46
 msgid "the employee designated as :guilabel:`Project Manager`;"
-msgstr ""
+msgstr "الموظف المعيّن كـ :guilabel:`مدير المشروع`؛ "
 
 #: ../../content/applications/services/project/project_management.rst:47
 msgid "the :guilabel:`Planned Date` of the project;"
-msgstr ""
+msgstr ":guilabel:`التاريخ المخطط له` لإنجاز المشروع؛ "
 
 #: ../../content/applications/services/project/project_management.rst:48
 msgid "the total :guilabel:`Allocated Hours` for that project."
-msgstr ""
+msgstr "إجمالي :guilabel:`الساعات المخصصة` لذلك المشروع. "
 
 #: ../../content/applications/services/project/project_management.rst:50
 msgid ""
 "Additionally, you can mark the project as :guilabel:`Favorite`, allowing you"
 " to find it using the :guilabel:`My Favorites` filter on the Kanban view;"
 msgstr ""
+"إضافة إلى ذلك، يمكنك وضع علامة على المشروع على أنه :guilabel:`مفضل`، مما "
+"يتيح لك العثور عليه باستخدام فلتر :guilabel:`المفضلة` في نافذة عرض كانبان؛ "
 
 #: ../../content/applications/services/project/project_management.rst-1
 msgid "Project settings"
-msgstr ""
+msgstr "إعدادات المشروع "
 
 #: ../../content/applications/services/project/project_management.rst:58
 msgid ""
 "`Odoo Tutorials: Customize projects "
 "<https://www.odoo.com/slides/slide/customize-projects-3615?fullscreen=1>`_"
 msgstr ""
+"`دروس أودو التعليمية : تخصيص المشاريع "
+"<https://www.odoo.com/slides/slide/customize-projects-3615?fullscreen=1>`_ "
 
 #: ../../content/applications/services/project/project_management.rst:61
 msgid ""
 "Further settings are available under the :guilabel:`Settings` tab. Most of "
 "them are *only* available depending on the activated apps."
 msgstr ""
+"تتوفر المزيد من الإعدادات تحت علامة تبويب :guilabel:`الإعدادات`. معظمها متاح"
+" *فقط* بناءً على التطبيقات التي تم تفعيلها. "
 
 #: ../../content/applications/services/project/project_management.rst:65
 msgid "Scheduling activities"
-msgstr ""
+msgstr "جدولة الأنشطة "
 
 #: ../../content/applications/services/project/project_management.rst:67
 msgid ""
@@ -4904,12 +5006,22 @@ msgid ""
 "According to the :guilabel:`Activity Type`, you may have **additional "
 "options** available."
 msgstr ""
+"يمكنك جدولة **الأنشطة** لكل مشروع (مثل :guilabel:`مكالمة`، "
+":guilabel:`اجتماع`، وما إلى ذلك)، من خلال الضغط على أيقونة **الساعة** "
+"الموجودة في المشروع. يؤدي القيام بذلك إلى فتح قائمة بالأنشطة التي تمت "
+"جدولتها بالفعل ويتيح لك التخطيط للأنشطة **الجديدة** عن طريق الضغط على "
+":guilabel:`+ جدولة نشاط`. قم بتحديد :guilabel:`نوع النشاط` من النافذة "
+"المنبثقة ثم أدخِل :guilabel:`ملخص` هذا النشاط و :guilabel:`تاريخ الاستحقاق`،"
+" وقم بإسناده إلى موظف. وفقاً لـ :guilabel:`نوع النشاط`، قد تكون لديك "
+"**خيارات إضافية** متاحة. "
 
 #: ../../content/applications/services/project/project_management.rst:75
 msgid ""
 "If an activity is **already** scheduled, the icon may change to a **phone**,"
 " **group of people**, or other."
 msgstr ""
+"إذا تمت جدولة النشاط **بالفعل**، فقد تتغير الأيقونة إلى **هاتف** أو **مجموعة"
+" من الأشخاص** أو غير ذلك. "
 
 #: ../../content/applications/services/project/tasks.rst:5
 msgid "Tasks"
@@ -4917,7 +5029,7 @@ msgstr "المهام"
 
 #: ../../content/applications/services/project/tasks/email_alias.rst:3
 msgid "Create Project's Tasks from an Email Alias"
-msgstr ""
+msgstr "قم بإنشاء مهام المشروع من لقب البريد الإلكتروني "
 
 #: ../../content/applications/services/project/tasks/email_alias.rst:5
 msgid ""
@@ -4927,16 +5039,21 @@ msgid ""
 "structured work. It automatically creates a task in the first stage of a "
 "project."
 msgstr ""
+"عندما يكون لديك بالفعل عنوان بريد إلكتروني ييتذكره العملاء بسهولة، فليس من "
+"الجيد تغييره. عوضاً عن ذلك، قم بربط هذا العنوان بمشروعك وتحويل تلك المحادثات"
+" إلى عمل منظم. يقوم تلقائياً بإنشاء مهمة في المرحلة الأولى من المشروع. "
 
 #: ../../content/applications/services/project/tasks/email_alias.rst:11
 msgid "Set up an incoming email server"
-msgstr ""
+msgstr "إعداد خادم البريد الوارد "
 
 #: ../../content/applications/services/project/tasks/email_alias.rst:14
 msgid ""
 "On the *Settings* application, enable *External Email Servers* and define "
 "the incoming email alias you would like to use."
 msgstr ""
+"في تطبيق *الإعدادات*، قم بتمكين *خوادم البريد الإلكتروني الخارجية* وحدد لقب "
+"البريد الإلكتروني الوارد الذي ترغب في استخدامه. "
 
 #: ../../content/applications/services/project/tasks/email_alias.rst:15
 msgid ""
@@ -4948,7 +5065,7 @@ msgstr ""
 
 #: ../../content/applications/services/project/tasks/email_alias.rst:18
 msgid "Configure the email alias in your project"
-msgstr ""
+msgstr "قم بتهيئة لقب البريد الإلكتروني في مشروعك "
 
 #: ../../content/applications/services/project/tasks/email_alias.rst:22
 msgid ""
@@ -4957,34 +5074,44 @@ msgid ""
 "*Emails* tab, define the wanted email alias and choose the policy to receive"
 " a message."
 msgstr ""
+"الآن بعد أن قمت بإعداد خادم البريد الإلكتروني الوارد، اذهب إلى "
+":menuselection:`المشروع --> التهيئة --> المشاريع --> تحرير`. ضمن علامة تبويب"
+" *رسائل البريد الإلكتروني*، قم بتحدبد لقب البريد الإلكتروني المطلوب واختر "
+"السياسة لتلقي الرسالة. "
 
 #: ../../content/applications/services/project/tasks/email_alias.rst:23
 msgid "In addition, you can now directly set it when creating a new project."
-msgstr ""
+msgstr "إضافة إلى ذلك، يمكنك الآن ضبطه مباشرة عند إنشاء مشروع جديد. "
 
 #: ../../content/applications/services/project/tasks/email_alias.rst-1
 msgid ""
 "In the settings of your project, define the emails alias under the tab email"
 " in Odoo Project"
 msgstr ""
+"في إعدادات مشروعك، قم بتحديد اللقب لرسائل البريد الإلكتروني تحت علامة تبويب "
+"البريد الإلكتروني، في تطبيق المشاريع لدى أودو "
 
 #: ../../content/applications/services/project/tasks/email_alias.rst:30
 msgid ""
 "All the recipients of the email (To/Cc/Bcc) are automatically added as "
 "followers of the task."
 msgstr ""
+"تتم إضافة كافة مستلمي البريد الإلكتروني (المُرسَل إليه/نسخة/نسخة مخفية) "
+"تلقائياً كمتابعين للمهمة. "
 
 #: ../../content/applications/services/project/tasks/email_alias.rst:32
 msgid "The email can be seen under the name of your project on the dashboard."
-msgstr ""
+msgstr "يمكن رؤية البريد الإلكتروني تحت اسم مشروعك في لوحة البيانات. "
 
 #: ../../content/applications/services/project/tasks/email_alias.rst-1
 msgid "View of the email alias chosen on the dashboard view in Odoo Project"
 msgstr ""
+"عرض لقب البريد الإلكتروني الذي تم اختياره في نافذة عرض لوحة البيانات في "
+"تطبيق المشاريع لدى أودو "
 
 #: ../../content/applications/services/project/tasks/recurring_tasks.rst:3
 msgid "Recurring tasks"
-msgstr ""
+msgstr "المهام المتكررة "
 
 #: ../../content/applications/services/project/tasks/recurring_tasks.rst:5
 msgid ""
@@ -4992,12 +5119,17 @@ msgid ""
 "times: for example, weekly meetings or status reports. The **recurring "
 "tasks** feature allows you to automate the creation of those tasks."
 msgstr ""
+"عند التعامل مع مشروع ما، غالباً ما تحتاج إلى تنفيذ نفس المهمة عدة مرات: على "
+"سبيل المثال، الاجتماعات الأسبوعية أو تقارير الحالة. تتيح لك خاصية **المهام "
+"المتكررة** إمكانية إنشاء تلك المهام تلقائياً. "
 
 #: ../../content/applications/services/project/tasks/recurring_tasks.rst:10
 msgid ""
 "`Odoo Tutorials: Recurring tasks "
 "<https://www.odoo.com/slides/slide/recurring-tasks-1946>`_"
 msgstr ""
+"`دروس أودو التعليمية: المهام المتكررة "
+"<https://www.odoo.com/slides/slide/recurring-tasks-1946>`_ "
 
 #: ../../content/applications/services/project/tasks/recurring_tasks.rst:15
 msgid ""
@@ -5005,6 +5137,9 @@ msgid ""
 "--> Settings`, then activate :guilabel:`Recurring Tasks`, and "
 ":guilabel:`Save`."
 msgstr ""
+"لتمكين المهام المتكررة، اذهب إلى :menuselection:`المشروع --> التهيئة --> "
+"الإعدادات`، ثم قم بتفعيل خيار :guilabel:`المهام المتكررة`، واضغط على "
+":guilabel:`حفظ`. "
 
 #: ../../content/applications/services/project/tasks/recurring_tasks.rst:18
 msgid ""
@@ -5014,10 +5149,14 @@ msgid ""
 ":menuselection:`Settings --> Settings --> Task Management` and disabling "
 ":guilabel:`Recurring Tasks`."
 msgstr ""
+"يتم الآن تفعيل خاصية المهام المتكررة في كافة المشاريع الموجودة. يمكن إلغاء "
+"تفعيل هذه الخاصية في مشروع فردي من خلال الضغط على زر القائمة المنسدلة "
+":guilabel:`⋮` بجوار اسم المشروع، ثم الذهاب إلى :menuselection:`الإعدادات -->"
+" الإعدادات --> إدارة المهام` وتعطيل :guilabel:`المهام المتكررة`. "
 
 #: ../../content/applications/services/project/tasks/recurring_tasks.rst:24
 msgid "Set up task recurrence"
-msgstr ""
+msgstr "قم بإعداد وتيرة تكرار المهمة "
 
 #: ../../content/applications/services/project/tasks/recurring_tasks.rst:26
 msgid ""
@@ -5026,18 +5165,26 @@ msgid ""
 "frequency: :guilabel:`Days`, :guilabel:`Weeks`, :guilabel:`Months`, "
 ":guilabel:`Years`, and the number of repetitions."
 msgstr ""
+"في إحدى المهام الموجودة، اذهب إلى علامة تبويب :guilabel:`المتكررة`، ثم قم "
+"بتحديد خيار :guilabel:`متكررة`. ستكون هناك مجموعة من الخيارات التي تتيح لك "
+"ضبط وتيرة التكرار: :guilabel:`أيام`، :guilabel:`أسابيع`، :guilabel:`أشهر`، "
+":guilabel:`سنوات`، وعدد مرات التكرار. "
 
 #: ../../content/applications/services/project/tasks/recurring_tasks.rst:30
 msgid ""
 "On the scheduled recurrency date, a new task is created on your project "
 "dashboard with the following configuration:"
 msgstr ""
+"في تاريخ التكرار المجدول، يتم إنشاء مهمة جديدة على لوحة بيانات المشروع "
+"بالتهيئة التالية: "
 
 #: ../../content/applications/services/project/tasks/recurring_tasks.rst:33
 msgid ""
 ":guilabel:`Stage`: first stage of the project dashboard (:guilabel:`New` or "
 "equivalent);"
 msgstr ""
+":guilabel:`المرحلة`: المرحلة الأولى من لوحة بيانات المشروع "
+"(:guilabel:`جديدة` أو ما يعادلها)؛ "
 
 #: ../../content/applications/services/project/tasks/recurring_tasks.rst:34
 msgid ""
@@ -5045,34 +5192,43 @@ msgid ""
 ":guilabel:`Assignees`, :guilabel:`Customer`, :guilabel:`Tags`: copied from "
 "the original task;"
 msgstr ""
+":guilabel:`الاسم`، :guilabel:`الوصف`، :guilabel:`المشروع`، "
+":guilabel:`الأفراد المسند إليهم`، :guilabel:`العميل`، :guilabel:`علامات "
+"التصنيف`: يتم نسخها من المهمة الأصلية؛ "
 
 #: ../../content/applications/services/project/tasks/recurring_tasks.rst:36
 msgid ""
 ":guilabel:`Milestones`, :guilabel:`Deadline`, :guilabel:`Timesheets`, "
 ":guilabel:`Chatter`, :guilabel:`Activities`: those fields are not copied;"
 msgstr ""
+":guilabel:`مؤشرات التقدم`، :guilabel:`الموعد النهائي`، :guilabel:`الجداول "
+"الزمنية`، :guilabel:`الدردشة`، :guilabel:`الأنشطة`: لا يتم نسخ هذه الحقول؛ "
 
 #: ../../content/applications/services/project/tasks/recurring_tasks.rst:38
 msgid ""
 ":guilabel:`Subtasks`: copied from the original task, which becomes a parent "
 "of all the tasks in recurrence;"
 msgstr ""
+":guilabel:`المهام الفرعية`: يتم نسخها من المهمة الأصلية، والتي تصبح أصلًا "
+"لكافة المهام المتكررة؛ "
 
 #: ../../content/applications/services/project/tasks/recurring_tasks.rst:40
 msgid ""
 "A **smart button** on the task displays the total number of existing "
 "recurrences."
-msgstr ""
+msgstr "يعرض **الزر الذكي** الموجود في المهمة إجمالي عدد التكرارات الموجودة. "
 
 #: ../../content/applications/services/project/tasks/recurring_tasks.rst:43
 msgid ""
 "To see the task in your project dashboard before the scheduled date, "
 "consider setting up the recurrence date to a day earlier."
 msgstr ""
+"لرؤية المهمة في لوحة بيانات المشروع قبل التاريخ المجدول، يمكنك إعداد تاريخ "
+"التكرار ليكون قبله بيوم. "
 
 #: ../../content/applications/services/project/tasks/recurring_tasks.rst:47
 msgid "Edit or stop task recurrence"
-msgstr ""
+msgstr "تحرير أو إيقاف تكرار المهمة "
 
 #: ../../content/applications/services/project/tasks/recurring_tasks.rst:49
 msgid ""
@@ -5080,12 +5236,16 @@ msgid ""
 "choose whether you wish to apply your changes to this task only or to a "
 "sequence of tasks."
 msgstr ""
+"**لتحرير** التكرار، قم بفتح المهمة: تدعوك العارضة الزرقاء إلى اختيار ما إذا "
+"كنت ترغب في تطبيق التغييرات على هذه المهمة فحسب أو على سلسلة من المهام. "
 
 #: ../../content/applications/services/project/tasks/recurring_tasks.rst:52
 msgid ""
 "**To stop** the recurrence, open the task, then go to the "
 ":guilabel:`Recurrency` tab and uncheck :guilabel:`Recurrent`."
 msgstr ""
+"**لإيقاف** التكرار، قم بفتح المهمة، ثم اذهب إلى علامة تبويب "
+":guilabel:`التكرار` وقم بإلغاء تحديد :guilabel:`متكرر`. "
 
 #: ../../content/applications/services/timesheets.rst:8
 msgid "Timesheets"
@@ -5093,7 +5253,7 @@ msgstr "الجداول الزمنية "
 
 #: ../../content/applications/services/timesheets/overview/time_off.rst:3
 msgid "Create Timesheets upon Time Off Validation"
-msgstr ""
+msgstr "قم بإنشاء جداول زمنية عند تصديق الإجازات "
 
 #: ../../content/applications/services/timesheets/overview/time_off.rst:5
 msgid ""
@@ -5102,18 +5262,27 @@ msgid ""
 "does not leave place for forgetfulness and questions after hours that have "
 "not been timesheeted by the employee."
 msgstr ""
+"يقوم أودو تلقائياً بإعداد الجداول الزمنية للمشروع/المهام بناءً على طلبات "
+"الإجازة. يتيح لك ذلك إمكانية التحكم الشامل بشكل أفضل فيما يتعلق بالتحقق من "
+"صحة الجداول الزمنية، لأنه لا يترك مجالاً للنسيان والأسئلة بعد ساعات العمل "
+"التي لم تتم جدولتها من قِبَل الموظف. "
 
 #: ../../content/applications/services/timesheets/overview/time_off.rst:9
 msgid ""
 "Activate the :ref:`developer mode <developer-mode>`, go to *Timesheets*, and"
 " change the *Project* and *Task* set by default, if you like."
 msgstr ""
+"قم بتفعيل :ref: `وضع المطوِّر <developer-mode>` ثم اذهب إلى *الجداول "
+"الزمنية* وقم بتغيير *المشروع* و*المهمة* التي تم تعيينها افتراضياً، إذا أردت."
+" "
 
 #: ../../content/applications/services/timesheets/overview/time_off.rst-1
 msgid ""
 "View of Timesheets setting enabling the feature record time off in Odoo "
 "Timesheets"
 msgstr ""
+"عرض إعداد الجداول الزمنية لتفعيل خاصية تسجيل الإجازة في تطبيق الجداول "
+"الزمنية لدى أودو "
 
 #: ../../content/applications/services/timesheets/overview/time_off.rst:16
 msgid ""
@@ -5121,12 +5290,16 @@ msgid ""
 " or create the needed type, and decide if you would like the requests to be "
 "validated or not."
 msgstr ""
+"اذهب إلى :menuselection:`الإجازات --> التهيئة --> أنواع الإجازات`. قم بتحديد"
+" أو إنشاء النوع المطلوب، وقرر ما إذا كنت ترغب في تصديق الطلبات أم لا. "
 
 #: ../../content/applications/services/timesheets/overview/time_off.rst-1
 msgid ""
 "View of a time off types form emphasizing the time off requests and timesheets section in\n"
 "Odoo Time Off"
 msgstr ""
+"عرض لاستمارة أنواع الإجازات مع التركيز على قسم طلبات الإجازات والجداول الزمنية في \n"
+"تطبيق الإجازات لدى أودو "
 
 #: ../../content/applications/services/timesheets/overview/time_off.rst:26
 msgid ""
@@ -5135,16 +5308,21 @@ msgid ""
 "automatically allocated on *Timesheets*, under the respective project and "
 "task."
 msgstr ""
+"الآن، بمجرد قيام الموظف بطلب إجازة ويتم تصديق الطلب (أو قد لا يتم تصديقه، "
+"بناءً على الإعداد المحدد)، يتم تخصيص الوقت تلقائياً في *الجداول الزمنية*، "
+"تحت المشروع والمهمة المعينين. "
 
 #: ../../content/applications/services/timesheets/overview/time_off.rst:27
 msgid ""
 "On the example below, the user requested *Paid Time off* from July 13th to "
 "15th."
 msgstr ""
+"في المثال أدناه، قام المستخدم بطلب *إجازة مدفوعة الأجر* من تاريخ 13 إلى 15 "
+"يوليو. "
 
 #: ../../content/applications/services/timesheets/overview/time_off.rst-1
 msgid "View of the time off request form in Odoo Time Off"
-msgstr ""
+msgstr "عرض استمارة طلب الإجازة في تطبيق الإجازات لدى أودو "
 
 #: ../../content/applications/services/timesheets/overview/time_off.rst:33
 msgid ""
@@ -5153,12 +5331,17 @@ msgid ""
 "time is automatically allocated after the responsible person for validating "
 "does it so."
 msgstr ""
+"مع الأخذ بعين الاعتبار أن عملية التصديق غير مطلوبة، يتم عرض الإجازة التي تم "
+"طلبها تلقائياً في *الجداول الزمنية*. إذا كان لابد من تصديق طلب الإجازة، "
+"فسيتم تخصيص الوقت تلقائياً بعد قيام الشخص المسؤول عن التصديق بذلك. "
 
 #: ../../content/applications/services/timesheets/overview/time_off.rst-1
 msgid ""
 "Video of timesheets emphasizing the requested time off from the employee in "
 "Odoo Timesheets"
 msgstr ""
+"مقطع فيديو للجداول الزمنية يركز على الإجازة التي تم طلبها بواسطة الموظف في "
+"تطبيق الجداول الزمنية لدى أودو "
 
 #: ../../content/applications/services/timesheets/overview/time_off.rst:41
 msgid ""
@@ -5166,7 +5349,10 @@ msgid ""
 "all the aggregated data on that cell (day), and see details regarding the "
 "project/task."
 msgstr ""
+"اضغط على العدسة المكبرة، مع تحريك الفأرة فوق الخلية المعنية، للوصول إلى كافة"
+" البيانات المجمعة في تلك الخلية (اليوم)، والاطلاع على التفاصيل المتعلقة "
+"بالمشروع/المهمة. "
 
 #: ../../content/applications/services/timesheets/overview/time_off.rst-1
 msgid "View of the details of a project/task in Odoo Timeheets"
-msgstr ""
+msgstr "عرض تفاصيل المشروع/المهمة في تطبيق الجداول الزمنية لدى أودو "
