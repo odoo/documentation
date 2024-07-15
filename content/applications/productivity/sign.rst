@@ -119,8 +119,12 @@ Validity dates and reminders
 
 You can set **validity dates** on limited-duration agreement documents or send **automatic email
 reminders** to obtain signatures on time. From your dashboard, click :guilabel:`Send` on your
-document. On the new page, go to the :guilabel:`Options` section and fill in the :guilabel:`Valid
-Until` and :guilabel:`Reminder` fields.
+document. On the new page, go to the :guilabel:`Options` section, fill in the
+:guilabel:`Valid Until` field, toggle the :guilabel:`Reminder` switch, and click the value to edit
+the default number of days between reminders.
+
+.. image:: sign/reminder.png
+   :alt: Set the number of days between reminders
 
 Templates
 ---------
