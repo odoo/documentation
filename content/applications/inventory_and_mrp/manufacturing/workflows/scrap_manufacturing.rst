@@ -14,8 +14,8 @@ space, but rather a designation in Odoo that is used to track items that are no 
 inventory.
 
 .. seealso::
-   For more information, see the documentation about the different types of :ref:`locations
-   <inventory/warehouses_storage/difference-warehouse-location>`.
+   For more information, see the documentation about the different types of :doc:`locations
+   <../../inventory/warehouses_storage/inventory_management>`.
 
 Components can be scrapped from both the *Manufacturing* app and the *Shop Floor* module, before the
 associated manufacturing order (MO) is closed. Finished products can only be scrapped from the
