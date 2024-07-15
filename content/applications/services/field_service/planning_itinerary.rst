@@ -18,10 +18,8 @@ Displaying your itinerary on a map
 ==================================
 
 .. important::
-   For a field service task to be featured on the map, it needs:
-
-   - a :guilabel:`Planned Date`;
-   - a valid address linked to the customer’s profile.
+   For a field service task to be featured on the map, a **valid address** must be provided for the
+   customer.
 
 To display your tasks on a map, go to :menuselection:`Field Service --> My Tasks --> Map`. To create
 your itinerary, Odoo sorts out your field service tasks based on their :guilabel:`Planned Date` to
