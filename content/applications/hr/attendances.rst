@@ -16,4 +16,5 @@ managers can see who is available at any given time.
 .. toctree::
    :titlesonly:
 
+   attendances/check_in_check_out
    attendances/hardware
