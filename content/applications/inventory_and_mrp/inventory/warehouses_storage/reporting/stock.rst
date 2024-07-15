@@ -24,8 +24,7 @@ and :guilabel:`Category`, which shows products within a selected product categor
 
 .. note::
    The :guilabel:`Warehouse` grouping is only available when there are multiple warehouses in the
-   database. Refer to the :doc:`../inventory_management/create_a_second_warehouse` documentation for
-   more details.
+   database. Refer to the :doc:`../inventory_management/warehouses` documentation for more details.
 
 In the report itself, the columns represent:
 
