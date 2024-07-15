@@ -73,7 +73,7 @@ steps below to finish configuring the virtual parent warehouse.
    :alt: New warehouse form.
 
 .. seealso::
-   - :doc:`Warehouse configurations <../inventory_management/warehouses_locations>`
+   - :doc:`Warehouse configurations <../inventory_management/warehouses>`
    - :ref:`Incoming and outgoing shipments <inventory/receipts_delivery_one_step/wh>`
    - :doc:`Resupply from another warehouse <../inventory_management/resupply_warehouses>`
 
