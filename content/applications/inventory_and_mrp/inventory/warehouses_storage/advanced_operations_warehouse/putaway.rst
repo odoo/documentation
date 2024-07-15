@@ -93,6 +93,8 @@ match is found:
      :align: center
      :alt: Some examples of putaway rules.
 
+.. _inventory/warehouses_storage/storage-category:
+
 Storage categories
 ==================
 
