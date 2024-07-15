@@ -2,8 +2,6 @@
 Removal strategies (FIFO, LIFO, FEFO)
 =====================================
 
-.. _inventory/routes/strategies/removal:
-
 For companies with warehouses, **removal strategies** determine which products are taken from the
 warehouse, and when. Removal strategies are typically defined for specific picking operations. This
 helps companies to select the best products, optimize the distance workers need to travel when
