@@ -26,7 +26,7 @@ Once activated, you can:
 
 .. seealso::
    - :doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/delivery_method`
-   - :doc:`../../../inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations`
+   - :doc:`../../../inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses`
 
 Practical application
 =====================
