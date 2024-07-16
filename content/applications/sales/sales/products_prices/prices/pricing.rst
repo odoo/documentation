@@ -482,4 +482,4 @@ rule on a fresh form.
 
 .. seealso::
    - :doc:`/applications/sales/sales/products_prices/prices/currencies`
-   - :doc:`/applications/websites/ecommerce/managing_products/price_management`
+   - :doc:`/applications/websites/ecommerce/products/price_management`
