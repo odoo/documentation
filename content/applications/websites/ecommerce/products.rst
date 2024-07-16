@@ -1,6 +1,8 @@
-==================
-Product management
-==================
+:show-content:
+
+========
+Products
+========
 
 Odoo allows you to create, import, and manage your products' pages all within the **Website** app.
 
@@ -17,9 +19,9 @@ To add a product to your catalog, you can either do it in:
   :ref:`Import records <import-data>`.
 
 .. seealso::
-   - :doc:`../managing_products/catalog`
-   - :doc:`../../../sales/sales/products_prices/products/import`
-   - :doc:`Product-related documentation <../../../sales/sales>`
+   - :doc:`products/catalog`
+   - :doc:`../../sales/sales/products_prices/products/import`
+   - :doc:`Product-related documentation <../../sales/sales>`
 
 Publish
 -------
@@ -78,7 +80,7 @@ In the **website builder** window, click :guilabel:`Customize` to enable additio
    - To allow **wishlists**, the option must be enabled in :menuselection:`Website --> Configuration
      --> Settings --> Shop - Products`;
    - To access the :guilabel:`Variants` options, the :doc:`Product Variants
-     <../../../sales/sales/products_prices/products/variants>` option must first be enabled under
+     <../../sales/sales/products_prices/products/variants>` option must first be enabled under
      :menuselection:`Website --> Configuration --> Settings --> Shop - Products`.
 
 Layout
@@ -191,13 +193,13 @@ The **eCommerce-related** fields to translate are:
 
 .. note::
    Having untranslated content on a web page may be detrimental to the user experience and
-   :doc:`SEO <../../../websites/website/pages/seo>`.
+   :doc:`SEO <../../websites/website/pages/seo>`.
 .. note::
    To check the language(s) of your website, go to :menuselection:`Website --> Configuration -->
    Settings --> Website Info section`.
 
 .. seealso::
-   - :doc:`../../../websites/website/pages/seo`
+   - :doc:`../../websites/website/pages/seo`
 
 Website availability
 --------------------
@@ -244,7 +246,7 @@ If you are selling non-prepackaged kits (i.e., the kits are made of individual p
 recommend you read the related documentation to keep track of your stock.
 
 .. seealso::
-   :doc:`../../../inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping`
+   :doc:`../../inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping`
 
 Product comparison
 ==================
@@ -260,9 +262,17 @@ On the product page, scroll down to the :guilabel:`Specifications` section and c
 summary.
 
 .. note::
-   The :guilabel:`Product Comparison Tool` can only be used if :doc:`attributes <variants>` are set
-   on the **product's template**.
+   The :guilabel:`Product Comparison Tool` can only be used if :doc:`attributes <products/variants>`
+   are set on the **product's template**.
 
 .. image:: products/products-compare.png
    :align: center
    :alt: Product comparison window
+
+.. toctree::
+   :titlesonly:
+
+   products/catalog
+   products/variants
+   products/price_management
+   products/cross_upselling
