@@ -146,6 +146,3 @@ analysis.
 .. note::
    The Odoo *Social Marketing* app is integrated with other Odoo applications, such as *Sales*,
    *Invoicing*, *CRM*, and *Website*.
-
-.. seealso::
-   :doc:`/applications/marketing/social_marketing/essentials/social_essentials`
