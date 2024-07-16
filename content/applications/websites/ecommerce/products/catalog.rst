@@ -35,7 +35,7 @@ category, the option :guilabel:`Collapsable Category Recursive` appears and allo
    :alt: Categories options for your eCommerce website
 
 .. seealso::
-   :doc:`products`
+   :doc:`../products`
 
 .. _ecommerce-browsing:
 
