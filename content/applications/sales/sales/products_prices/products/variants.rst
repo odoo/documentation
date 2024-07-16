@@ -28,7 +28,7 @@ within the Odoo *Sales* application.
    other similar records in Odoo.
 
 .. seealso::
-   :doc:`/applications/websites/ecommerce/managing_products/variants`
+   :doc:`/applications/websites/ecommerce/products/variants`
 
 Configuration
 =============
