@@ -25,11 +25,11 @@ the :guilabel:`Shop - Checkout Process` section, look for :guilabel:`Add to Cart
 the options.
 
 .. note::
-   If a product has :doc:`optional products <../managing_products/cross_upselling>`, the **dialog
+   If a product has :doc:`optional products <../products/cross_upselling>`, the **dialog
    box** will always appear.
 
 .. seealso::
-   :doc:`../managing_products/catalog`
+   :doc:`../products/catalog`
 
 .. _cart/prevent-sale:
 
