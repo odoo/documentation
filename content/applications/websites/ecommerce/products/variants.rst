@@ -11,7 +11,7 @@ To use product variants, enable them under :menuselection:`Website --> Configura
 in the :guilabel:`Shop - Products` section.
 
 .. seealso::
-   - :doc:`../managing_products/products`
+   - :doc:`../products`
    - :doc:`../../../sales/sales/products_prices/products/variants`
    - :doc:`../../../sales/sales/products_prices/products/import`
 
