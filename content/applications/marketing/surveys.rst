@@ -15,6 +15,33 @@ shifting market trends.
 .. seealso::
    `Odoo Tutorials: Surveys <https://www.odoo.com/slides/surveys-62>`_
 
+.. cards::
+
+   .. card:: Create surveys
+      :target: surveys/create
+
+      Discover how to create surveys with Odoo.
+
+   .. card:: Scoring surveys
+      :target: surveys/scoring
+
+      Learn how to create and analyze survey scores with Odoo.
+
+   .. card:: Create questions
+      :target: surveys/questions
+
+      See how to create, configure, and customize all types of survey questions with Odoo.
+
+   .. card:: Live Session surveys
+      :target: surveys/live_session
+
+      Find out everything there is to know about Odoo's unique Live Session surveys.
+
+   .. card:: Survey analysis
+      :target: surveys/analysis
+
+      Explore the various ways to analyze surveys using Odoo's in-depth reporting pages.
+
 Dashboard
 =========
 
@@ -184,6 +211,53 @@ and the columns depict the various activity types.
 .. note::
    A new survey cannot be created in this view, as it is solely for the purpose of creating and
    viewing scheduled activities.
+
+Create surveys
+==============
+
+Learn about all the different options and configurations that can be utilized when creating a survey
+in Odoo.
+
+.. seealso::
+   :doc:`surveys/create`
+
+Scoring surveys
+===============
+
+Discover how to measure a survey participant's performance, or overall satisfaction, with Odoo's
+detailed (and fully customizable) survey scoring options.
+
+.. seealso::
+   :doc:`surveys/scoring`
+
+Create questions
+================
+
+With Odoo *Surveys*, there are many question types and options to choose from, providing the ability
+to create any kind of unique survey, questionnarire, and/or certification.
+
+.. seealso::
+   :doc:`surveys/questions`
+
+Live Session surveys
+====================
+
+The *Live Session* survey option available in Odoo can enhance in-person demonstrations and
+presentations, where participants' real-time responses can be used to dictate where the conversation
+goes next.
+
+.. seealso::
+   :doc:`surveys/live_session`
+
+Survey analysis
+===============
+
+Once the surveys start to come in, it is time to analyze the responses from your participants.
+Fortuantely, the in-depth reporting pages and options available in Odoo *Surveys* provide countless
+ways to examine everything related to surveys, and their submitted responses.
+
+.. seealso::
+   :doc:`surveys/analysis`
 
 .. toctree::
    :titlesonly:
