@@ -103,8 +103,7 @@ The following are fields found on an event form:
 
      This :guilabel:`Twitter Wall` field **only** appears on the event form if the *Social
      Marketing* app is installed, and an X account has been added as a stream on the application. To
-     learn more, check out the :doc:`Social marketing essentials
-     <../social_marketing/essentials/social_essentials>` documentation.
+     learn more, check out the :doc:`Social Marketing <../social_marketing>` documentation.
 
 - :guilabel:`Template`: choose a pre-configured event template from the resulting drop-down menu.
 
