@@ -1,79 +1,97 @@
-===========================
-Social marketing essentials
-===========================
+============
+Social posts
+============
 
-Odoo's *Social Marketing* application helps content marketers create and schedule posts, manage
-various social media accounts, analyze content effectiveness, and engage directly with social media
-followers in one, centralized location.
+The Odoo *Social Marketing* application provides various ways to create posts for any type of social
+media outlet.
 
-Social media accounts
-=====================
+Posts page
+==========
 
-In order to create social posts and analyze content with Odoo *Social Marketing*, social media
-accounts **must** be added as a *stream* on the application's main dashboard.
+To see a complete overview of posts, go to Odoo :menuselection:`Social Marketing app --> Posts`.
+Here, on the :guilabel:`Social Posts` page, every post that has been created and posted with Odoo
+can be seen and accessed.
 
-.. note::
-   Be aware that personal profiles **cannot** be added as a stream. The main use of Odoo *Social
-   Marketing* is to manage and analyze business accounts on social media platforms.
+There are four different view options for the :guilabel:`Social Posts` page data: *kanban*,
+*calendar*, *list*, and *pivot*.
 
-.. warning::
-   Odoo *Social Marketing* has some limitations in regards to social media accounts. For example,
-   Odoo **cannot** handle a large quantity of various pages (e.g. ~40 pages) under the same company.
-   The same limitations are present in a multi-company environment because of how the API is
-   constructed.
+The view options are located in the upper right corner of the :guilabel:`Posts` page, beneath the
+search bar.
 
-.. warning::
-   In multi-company environments, if every company doesn't activate a page at once, it will result
-   in a permission error.
+.. tabs::
 
-   For example, if Company 1 is the only company selected from the main Odoo dashboard, and
-   activates *Facebook Page 1* and *Facebook Page 2*, then those pages will be accesible on the
-   *Social Marketing* dashboard.
+   .. tab:: Kanban view
 
-   However, if on that same database, the user adds Company 2 from the company drop-down menu in the
-   header, and attempts to add those same streams, it results in a permission error.
+      By default, Odoo displays the posts in a kanban view. The information on this page can be
+      sorted even further, via the left sidebar, where all connected social accounts and posts can
+      be quickly seen, accessed, and analyzed.
 
-   .. image:: social_essentials/permission-error.png
-      :align: center
-      :alt: View of the permission error that appears when incorrectly attempting to add stream.
+      The kanban view is represented by an :guilabel:`inverted bar graph icon` in the upper-right
+      corner.
 
-Social media streams
---------------------
+      .. image:: social_posts/posts-page-kanban.png
+         :align: center
+         :alt: Kanban view of the posts page in the Odoo Social Marketing application.
 
-To add a social media business account as a stream, navigate to :menuselection:`Social Marketing
-app` and select the :guilabel:`Add A Stream` button located in the upper-left corner. Doing so
-reveals an :guilabel:`Add a Stream` pop-up window.
+   .. tab:: Calendar view
 
-.. image:: social_essentials/add-stream-social-popup.png
-   :align: center
-   :alt: View of the pop-up window that appears when Add a Stream is selected in Odoo.
+      The calendar view option displays a visual representation of posts in a calendar format of
+      when posts were published, or are scheduled to be published. This option provides a clear
+      overview of any planned day, week, or month, and Odoo displays all drafted, scheduled, and
+      published posts.
 
-In the :guilabel:`Add a Stream` pop-up window, choose to :guilabel:`Link a new account` for a
-business from any of the following popular social media platforms: :guilabel:`Facebook`,
-:guilabel:`Instagram`, :guilabel:`LinkedIn`, :guilabel:`Twitter`, and :guilabel:`YouTube`.
+      Clicking on a date reveals a blank social media post detail form, in which a social media
+      post can be created, and Odoo will post it on that specific date/time.
 
-After clicking the desired social media outlet from the :guilabel:`Add a Stream` pop-up window, Odoo
-navigates directly to that specific social media outlet's authorization page, where permission must
-be granted, in order for Odoo to add that particular social media account as a stream to the *Social
-Marketing* application.
+      The calendar view is represented by a :guilabel:`calendar icon` in the upper-right corner.
 
-.. image:: social_essentials/social-marketing-dashboard.png
-   :align: center
-   :alt: Sample of a populated social marketing dashboard with social media streams and content.
+      .. image:: social_posts/calendar-view.png
+         :align: center
+         :alt: Example of the calendar view in Odoo Social Marketing.
 
-Once permission is granted, Odoo navigates back to the :guilabel:`Feed` on the main
-:guilabel:`Social Marketing` dashboard, and a new column, with that account's posts, is added.
-Accounts/streams can be added at any time.
+   .. tab:: List view
 
-.. important::
-   A :guilabel:`Facebook` page can be added as long as the :guilabel:`Facebook` account that grants
-   permission is the administrator for the page. It should also be noted that different pages can be
-   added for different streams.
+      The list view option is similar to the kanban option, but instead of individual blocks, all
+      post information is displayed in a clear, list layout. Each line of the list displays the
+      :guilabel:`Social Accounts`, :guilabel:`Message`, and :guilabel:`Status` of every post.
 
-.. note::
-   :guilabel:`Instagram` accounts are added through a :guilabel:`Facebook` login because it uses the
-   same API. This means, an :guilabel:`Instagram` account needs to be linked to a
-   :guilabel:`Facebook` account in order for it to show up as a stream in Odoo.
+      There is also a helpful left sidebar that organizes all posts by :guilabel:`Status` and lists
+      all connected :guilabel:`Social Accounts`, as well.
+
+      The list view is represented by four vertical lines in the upper-right corner.
+
+      .. image:: social_posts/list-view.png
+         :align: center
+         :alt: View of the list option on the posts page in Odoo Social Marketing.
+
+   .. tab:: Pivot view
+
+      The pivot view option provides a fully customizable grid table, where different measures of
+      data can be added and analyzed.
+
+      .. image:: social_posts/pivot-view.png
+         :align: center
+         :alt: View of the pivot option on the posts page in Odoo Social Marketing.
+
+      The pivot view option provides numerous analytical options, allowing for in-depth, detailed
+      analysis of various posts and metrics.
+
+      Click on any :guilabel:`➕ (plus sign) icon` next to a line in the pivot table to reveal more
+      metric options to add to the grid.
+
+      While in the pivot view, the option to :guilabel:`Insert in Spreadsheet` is available, located
+      to the right of the :guilabel:`Measures` drop-down menu, in the upper-left corner of the
+      :guilabel:`Social Posts` page.
+
+      Next to the :guilabel:`Insert in Spreadsheet` are three options, specific to the pivot view.
+
+      From left to right, those options are:
+
+      - :guilabel:`Flip Axis`, which switches the *X* and *Y* axis in the grid table.
+      - :guilabel:`Expand All`, which expands each line in the grid, revealing more detailed
+        information related to it.
+      - :guilabel:`Download`, which, when clicked, instantly downloads the pivot table as a
+        spreadsheet.
 
 Posts
 -----
@@ -81,7 +99,7 @@ Posts
 Clicking on a post from a social media stream reveals a pop-up window, showcasing the content of
 that specific post, along with all the engagement data related to it (e.g. likes, comments, etc.).
 
-.. image:: social_essentials/social-post-popup.png
+.. image:: social_posts/social-post-popup.png
    :align: center
    :alt: Sample of a social media post's pop-up window in Odoo Social Marketing application.
 
@@ -101,14 +119,14 @@ click the :guilabel:`three vertical dots` icon to the right of that comment.
 
 Doing so reveals a drop-down menu with the option: :guilabel:`Create Lead`.
 
-.. image:: social_essentials/create-lead-drop-down.png
+.. image:: social_posts/create-lead-drop-down.png
    :align: center
    :alt: The drop-down menu beside a comment revealing the option to create a lead.
 
 Upon clicking :guilabel:`Create Lead` from the comment's drop-down menu, a :guilabel:`Conver Post to
 Lead` pop-up window appears.
 
-.. image:: social_essentials/convert-post-to-lead-popup.png
+.. image:: social_posts/convert-post-to-lead-popup.png
    :align: center
    :alt: The convert post to lead pop-up window that appears in Odoo Social Marketing.
 
@@ -123,7 +141,7 @@ Once the desired selection has been made, click the :guilabel:`Convert` button a
 :guilabel:`Convert Post to Lead` pop-up window. Doing so reveals a fresh lead detail form, where the
 necessary information can be entered and processed.
 
-.. image:: social_essentials/new-lead-detail-form-comments.png
+.. image:: social_posts/new-lead-detail-form-comments.png
    :align: center
    :alt: New lead detail form generated from a social media comment in Odoo Social Marketing.
 
@@ -136,7 +154,7 @@ displays and links that specific social media platform's KPIs (if the platform h
 To get redirected to the statistics and metrics related to any social media account's KPIs, click on
 the :guilabel:`Insights` link, located at the top of each stream.
 
-.. image:: social_essentials/social-marketing-insights-link.png
+.. image:: social_posts/social-marketing-insights-link.png
    :align: center
    :alt: Visual of how the Insights link appears on the dashboard of the Social Marketing app.
 
@@ -160,21 +178,21 @@ To create content for social media accounts, navigated to the :menuselection:`So
 and click :guilabel:`New Post` located in the upper-right corner of the *Social Marketing*
 dashboard.
 
-.. image:: social_essentials/new-post-button-social-marketing-dashboard.png
+.. image:: social_posts/new-post-button-social-marketing-dashboard.png
    :align: center
    :alt: New Post button on the main dashboard of the Odoo Social Marketing application.
 
 Or, navigate to :menuselection:`Social Marketing app --> Posts` and click the :guilabel:`New`
 button.
 
-.. image:: social_essentials/new-button-social-posts-page.png
+.. image:: social_posts/new-button-social-posts-page.png
    :align: center
    :alt: New button on the Social Posts page in the Odoo Social Marketing application.
 
 Either route reveals a blank social media post detail form that can be customized and configured in
 a number of different ways.
 
-.. image:: social_essentials/blank-post-detail-page.png
+.. image:: social_posts/blank-post-detail-page.png
    :align: center
    :alt: Blank social media post detail page in Odoo Social Marketing.
 
@@ -224,7 +242,7 @@ In the :guilabel:`Message` field, type in the desired message for the social pos
 click away from the :guilabel:`Message` field to reveal visual samples of how the post will look on
 all the previously selected social media accounts (and/or websites, as push notifications).
 
-.. image:: social_essentials/visual-samples-social-media-outlets-preview.png
+.. image:: social_posts/visual-samples-social-media-outlets-preview.png
    :align: center
    :alt: Sample social media post with visual samples of how it will appear on social media outlets.
 
@@ -248,7 +266,7 @@ upload it.
 After successfully uploading and attaching the desired image, Odoo reveals a new preview of the
 social media post, complete with the newly-added image, on the right side of the detail form.
 
-.. image:: social_essentials/attach-images-visual-social-post-sample.png
+.. image:: social_posts/attach-images-visual-social-post-sample.png
    :align: center
    :alt: Visualized samples of post with newly-attached images in Odoo Social Marketing.
 
@@ -266,7 +284,7 @@ To create a new campaign directly from the social media post detail form, start 
 the new campaign in the blank :guilabel:`Campaign` field, and select either :guilabel:`Create` or
 :guilabel:`Create and edit...`.
 
-.. image:: social_essentials/campaign-drop-down-menu-options.png
+.. image:: social_posts/campaign-drop-down-menu-options.png
    :align: center
    :alt: Drop-down menu options of Create or Create and edit in the Campaign field.
 
@@ -276,7 +294,7 @@ Clicking :guilabel:`Create and edit...` creates the campaign, and reveals a :gui
 Campaign` pop-up form, wherein the :guilabel:`Campaign Identifier`, :guilabel:`Responsible`, and
 :guilabel:`Tags` can be instantly configured.
 
-.. image:: social_essentials/create-campaign-popup.png
+.. image:: social_posts/create-campaign-popup.png
    :align: center
    :alt: Create campaign pop-up window that appears on a social media post detail form.
 
@@ -293,7 +311,7 @@ time.
 If :guilabel:`Schedule later` is selected, a new :guilabel:`Scheduled Date` field appears. Clicking
 the empty field reveals a pop-up calendar, in which a future date and time can be designated.
 
-.. image:: social_essentials/schedule-post-calendar-popup.png
+.. image:: social_posts/schedule-post-calendar-popup.png
    :align: center
    :alt: Schedule date pop-up window that appears on social media post detail form in Odoo.
 
@@ -315,7 +333,7 @@ If one (or multiple) :guilabel:`[Push Notification]` options are chosen in the :
 field, a specific :guilabel:`Push Notification Options` section appears at the bottom of the social
 media post detail form.
 
-.. image:: social_essentials/push-notification-options-section.png
+.. image:: social_posts/push-notification-options-section.png
    :align: center
    :alt: Push notification options section on a social media post detail form.
 
@@ -344,7 +362,7 @@ push notification.
    send it at the appropriate, pre-determined time, taking the visitor's location into
    consideration.
 
-   .. image:: social_essentials/push-notification-local-time.png
+   .. image:: social_posts/push-notification-local-time.png
       :align: center
       :alt: The Local Time option in the Push Notification Options section of features.
 
@@ -358,7 +376,7 @@ rule field.
 In this equation-like rule field, specifiy the specific criteria Odoo should take into account when
 sending this post to a particular target audience.
 
-.. image:: social_essentials/push-notification-condition.png
+.. image:: social_posts/push-notification-condition.png
    :align: center
    :alt: Push notification conditions set up to match a specific amount of records in the database.
 
@@ -373,160 +391,5 @@ Lastly, click the :guilabel:`🗑️ (trash can) icon` to delete any rule.
 The size of the specified target audience of recipients is represented by the number of
 :guilabel:`Records` displayed beneath the rules.
 
-Posts page
-==========
-
-To see a complete overview of posts, go to Odoo :menuselection:`Social Marketing app --> Posts`.
-Here, on the :guilabel:`Social Posts` page, every post that has been created and posted with Odoo
-can be seen and accessed.
-
-There are four different view options for the :guilabel:`Social Posts` page data: *kanban*,
-*calendar*, *list*, and *pivot*.
-
-The view options are located in the upper right corner of the :guilabel:`Posts` page, beneath the
-search bar.
-
-.. tabs::
-
-   .. tab:: Kanban view
-
-      By default, Odoo displays the posts in a kanban view. The information on this page can be
-      sorted even further, via the left sidebar, where all connected social accounts and posts can
-      be quickly seen, accessed, and analyzed.
-
-      The kanban view is represented by an :guilabel:`inverted bar graph icon` in the upper-right
-      corner.
-
-      .. image:: social_essentials/posts-page-kanban.png
-         :align: center
-         :alt: Kanban view of the posts page in the Odoo Social Marketing application.
-
-   .. tab:: Calendar view
-
-      The calendar view option displays a visual representation of posts in a calendar format of
-      when posts were published, or are scheduled to be published. This option provides a clear
-      overview of any planned day, week, or month, and Odoo displays all drafted, scheduled, and
-      published posts.
-
-      Clicking on a date reveals a blank social media post detail form, in which a social media
-      post can be created, and Odoo will post it on that specific date/time.
-
-      The calendar view is represented by a :guilabel:`calendar icon` in the upper-right corner.
-
-      .. image:: social_essentials/calendar-view.png
-         :align: center
-         :alt: Example of the calendar view in Odoo Social Marketing.
-
-   .. tab:: List view
-
-      The list view option is similar to the kanban option, but instead of individual blocks, all
-      post information is displayed in a clear, list layout. Each line of the list displays the
-      :guilabel:`Social Accounts`, :guilabel:`Message`, and :guilabel:`Status` of every post.
-
-      There is also a helpful left sidebar that organizes all posts by :guilabel:`Status` and lists
-      all connected :guilabel:`Social Accounts`, as well.
-
-      The list view is represented by four vertical lines in the upper-right corner.
-
-      .. image:: social_essentials/list-view.png
-         :align: center
-         :alt: View of the list option on the posts page in Odoo Social Marketing.
-
-   .. tab:: Pivot view
-
-      The pivot view option provides a fully customizable grid table, where different measures of
-      data can be added and analyzed.
-
-      .. image:: social_essentials/pivot-view.png
-         :align: center
-         :alt: View of the pivot option on the posts page in Odoo Social Marketing.
-
-      The pivot view option provides numerous analytical options, allowing for in-depth, detailed
-      analysis of various posts and metrics.
-
-      Click on any :guilabel:`➕ (plus sign) icon` next to a line in the pivot table to reveal more
-      metric options to add to the grid.
-
-      While in the pivot view, the option to :guilabel:`Insert in Spreadsheet` is available, located
-      to the right of the :guilabel:`Measures` drop-down menu, in the upper-left corner of the
-      :guilabel:`Social Posts` page.
-
-      Next to the :guilabel:`Insert in Spreadsheet` are three options, specific to the pivot view.
-
-      From left to right, those options are:
-
-      - :guilabel:`Flip Axis`, which switches the *X* and *Y* axis in the grid table.
-      - :guilabel:`Expand All`, which expands each line in the grid, revealing more detailed
-        information related to it.
-      - :guilabel:`Download`, which, when clicked, instantly downloads the pivot table as a
-        spreadsheet.
-
-Visitors
-========
-
-To see a complete overview of all the people who have visited the website(s) connected to the
-database, navigate to :menuselection:`Social Marketing app --> Visitors`.
-
-.. image:: social_essentials/visitors.png
-   :align: center
-   :alt: View of the Visitors page in the Odoo Social Marketing application.
-
-Here, Odoo provides a detailed layout of all the visitors' pertinent information in a default kanban
-view. If visitors already have contact information in the database, the option to send them an
-:guilabel:`Email` and/or an :guilabel:`SMS` is available.
-
-This same visitor data can also be viewed as a list or a graph. Those view options are located in
-the upper-right corner of the :guilabel:`Visitors` page.
-
-Social media page
-=================
-
-Another way to quickly link social media accounts to Odoo *Social Marketing* can be done on the
-:guilabel:`Social Media` page. To access the :guilabel:`Social Media` page, navigate to
-:menuselection:`Social Marketing app --> Configuration --> Social Media`.
-
-On the :guilabel:`Social Media` page there is a collection of all social media options, each
-complete with a :guilabel:`Link account` button: :guilabel:`Facebook`, :guilabel:`Instagram`,
-:guilabel:`LinkedIn`, :guilabel:`Twitter`, :guilabel:`YouTube`, and :guilabel:`Push Notifications`.
-
-.. image:: social_essentials/social-media-page.png
-   :align: center
-   :alt: View of the social media page in the Odoo Social Marketing application.
-
-Social accounts page
-====================
-
-To see a list of all social accounts and websites linked to the database, go to
-:menuselection:`Social Marketing app --> Configuration --> Social Accounts`. This :guilabel:`Social
-Accounts` display the :guilabel:`Name`, the :guilabel:`Handle/Short Name`, the :guilabel:`Social
-Media` platform, who it was :guilabel:`Created by`, and the :guilabel:`Company` to which it is
-associated.
-
-.. image:: social_essentials/social-accounts-page.png
-   :align: center
-   :alt: View of the social accounts page in the Odoo Social Marketing application.
-
-To edit/modify any of the social accounts on this page, simply select the desired account from the
-list on this page, and proceed to make any adjustments necessary.
-
-Social streams page
-===================
-
-To view a separate page with all the social media streams that have been added to the main *Social
-Marketing* dashboard, navigate to :menuselection:`Social Marketing app --> Configuration --> Social
-Streams`.
-
-.. image:: social_essentials/social-streams-page.png
-   :align: center
-   :alt: View of the social accounts page in the Odoo Social Marketing application.
-
-Here, the social stream information is organized in a list with the :guilabel:`Social Media`, the
-:guilabel:`Title` of the stream, the :guilabel:`Type` of the stream (e.g. :guilabel:`Posts`,
-:guilabel:`Keyword`, etc.), who it was :guilabel:`Created by`, and  the :guilabel:`Company` to which
-it is associated.
-
-To modify any stream's information, simply click the desired stream from the list, and proceed to
-make any necessary adjustments.
-
 .. seealso::
-   :doc:`/applications/marketing/social_marketing/essentials/social_campaigns`
+   :doc:`social_campaigns`
