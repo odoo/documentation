@@ -254,6 +254,7 @@ company.
    users/2fa
    users/access_rights
    users/portal
+   users/facebook
    users/google
    users/azure
    users/ldap
