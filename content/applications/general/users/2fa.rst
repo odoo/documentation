@@ -1,127 +1,125 @@
 =========================
-Two-factor Authentication
+Two-factor authentication
 =========================
 
-Two-factor authentication ("2FA") is a good way to improve the
-security of an account, to make it less likely that an other person
-will manage to log in instead of you.
+.. |2fa| replace:: :abbr:`2FA (two-factor authentication)`
+.. |QR| replace:: :abbr:`QR (Quick Response)` code
 
-Practically, it means storing a secret inside an *authenticator*
-(usually your cell phone) and exchanging a code from the authenticator
-when you try to log in.
+*Two-factor authentication (2FA)* is a way to improve security, and prevent unauthorized persons
+from accessing user accounts.
 
-This means an attacker needs *both* to have guessed (or found) your
-password and to access (or steal) your authenticator, a more difficult
-proposition than either one or the other.
+Practically, |2fa| means storing a secret inside an *authenticator*, usually on a mobile phone, and
+exchanging a code from the authenticator when trying to log in.
+
+This means an unauthorized user would need to guess the account password *and* have access to the
+authenticator, which is a more difficult proposition.
 
 Requirements
 ============
 
-.. note:: These lists are just examples, they are not endorsements of
-          any specific software.
+.. important::
+   These lists are just examples. They are **not** endorsements of any specific software.
 
-If you don't already have one, you will need to choose an
-authenticator.
+Phone-based authenticators are the easiest and most commonly used. Examples include:
 
-Phone-based authenticators are the easiest and most common so we will
-assume you'll pick and install one on your phone, examples include
-`Authy <https://authy.com/>`_, `FreeOTP
-<https://freeotp.github.io/>`_, `Google Authenticator
-<https://support.google.com/accounts/answer/1066447?hl=en>`_,
-`LastPass Authenticator <https://lastpass.com/auth/>`_, `Microsoft
-Authenticator
-<https://www.microsoft.com/en-gb/account/authenticator?cmp=h66ftb_42hbak>`_,
-...; password managers also commonly include :abbr:`2FA (two-factor
-authentication)` support e.g. `1Password
-<https://support.1password.com/one-time-passwords/>`_, `Bitwarden
-<https://bitwarden.com/help/article/authenticator-keys/>`_, ...
+- `Authy <https://authy.com/>`_
+- `FreeOTP <https://freeotp.github.io/>`_
+- `Google Authenticator <https://support.google.com/accounts/answer/1066447?hl=en>`_
+- `LastPass Authenticator <https://lastpass.com/auth/>`_
+- `Microsoft Authenticator
+  <https://www.microsoft.com/en-gb/account/authenticator?cmp=h66ftb_42hbak>`_
 
-For the sake of demonstration we will be using Google Authenticator
-(not because it is any good but because it is quite common).
+Password managers are another option. Common examples include:
 
-Setting up two-factor authentication
-====================================
-
-Once you have your authenticator of choice, go to the Odoo instance
-you want to setup :abbr:`2FA (two-factor authentication)`, then open
-:guilabel:`Preferences` (or :guilabel:`My Profile`):
-
-.. figure:: 2fa/preferences.png
-    :align: center
-
-Open the :guilabel:`Account Security` tab, then click the
-:guilabel:`Enable two-factor authentication` button:
-
-.. figure:: 2fa/sec_tab.png
-   :align: center
-
-Because this is a security-sensitive action, you will need to input
-your password:
-
-.. figure:: 2fa/sec_enhanced.png
-   :align: center
-
-After which you will see this screen with a barcode:
-
-.. figure:: 2fa/totp_scan.png
-   :align: center
-
-In most applications, you can simply *scan the barcode* via the
-authenticator of your choice, the authenticator will then take care of
-all the setup:
-
-.. figure:: 2fa/scan_barcode.jpg
-   :align: center
+- `1Password <https://support.1password.com/one-time-passwords/>`_
+- `Bitwarden <https://bitwarden.com/help/article/authenticator-keys/>`_,
 
 .. note::
+   The remainder of this document uses Google Authenticator as an example, as it is one of the most
+   commonly used. This is **not** an endorsement of the product.
 
-   If you can not scan the screen (e.g. because you are doing this
-   set-up on the same phone as the authenticator application), you can
-   click the provided link, or copy the secret to manually set-up your
-   authenticator:
+Two-factor authentication setup
+===============================
 
-   .. figure:: 2fa/secret_visible.png
+After selecting an authenticator, log in to Odoo, then click the profile avatar in the upper-right
+corner, and select :guilabel:`My Profile` from the resulting drop-down menu.
+
+Click the :guilabel:`Account Security` tab, then slide the :guilabel:`Two-Factor Authentication`
+toggle to *active*.
+
+.. figure:: 2fa/account-security.png
+   :align: center
+
+This generates a :guilabel:`Security Control` pop-up window that requires password confirmation to
+continue. Enter the appropriate password, then click :guilabel:`Confirm Password`. Next, a
+:guilabel:`Two-Factor Authentication Activation` pop-up window appears, with a |QR|.
+
+
+.. figure:: 2fa/qr-code.png
+   :align: center
+
+Using the desired authenticator application, scan the |QR| when prompted.
+
+.. tip::
+   If scanning the screen is not possible (e.g. the setup is being completed on the *same* device as
+   the authenticator application), clicking the provided :guilabel:`Cannot scan it?` link, or
+   copying the secret to manually set up the authenticator, is an alternative.
+
+   .. figure:: 2fa/secret-visible.png
       :align: center
 
-   .. figure:: 2fa/input_secret.png
+   .. figure:: 2fa/input-secret.png
       :align: center
 
-Once this is done, the authenticator should display a *verification
-code* with some useful identifying information (e.g. the domain and
-login for which the code is):
+Afterwards, the authenticator should display a *verification code*.
 
 .. figure:: 2fa/authenticator.png
    :align: center
 
-You can now input the code into the :guilabel:`Verification Code`
-field, then click the :guilabel:`Enable two-factor authentication`
-button.
+Enter the code into the :guilabel:`Verification Code` field, then click :guilabel:`Activate`.
 
-Congratulation, your account is now protected by two-factor
-authentication!
-
-.. figure:: 2fa/totp_enabled.png
+.. figure:: 2fa/2fa-enabled.png
    :align: center
 
 Logging in
 ==========
 
-You should now :guilabel:`Log out` to follow along.
+To confirm |2fa| setup is complete, log out of Odoo.
 
-On the login page, input the username and password of the account for
-which you set up :abbr:`2FA (two-factor authentication)`, rather than
-immediately enter Odoo you will now get a second log-in screen:
+On the login page, input the username and password, then click :guilabel:`Log in`. On the
+:guilabel:`Two-factor Authentication` page, input the code provided by the chosen authenticator in
+the :guilabel:`Authentication Code` field, then click :guilabel:`Log in`.
 
-.. figure:: 2fa/2fa_input.png
+.. image:: 2fa/2fa-login.png
    :align: center
+   :alt: The login page with 2fa enabled.
 
-Get your authenticator, input the code it provides for the domain and
-account, validate, and you're now in.
+.. danger::
+   If a user loses access to their authenticator, an administrator **must** deactivate |2fa| on the
+   account before the user can log in.
 
-And that's it. From now on, unless you disable :abbr:`2FA (two-factor
-authentication)` you will have a two-step log-in process rather than
-the old one-step process.
+Enforce two-factor authentication
+=================================
 
-.. danger:: Don't lose your authenticator, if you do, you will need an
-            *Odoo Administrator* to disable :abbr:`2FA (two-factor
-            authentication)` on the account.
+To enforce the use of |2fa| for all users, first navigate to :menuselection:`Main Odoo Dashboard -->
+Apps`. Remove the :guilabel:`Apps` filter from the :guilabel:`Search...` bar, then search for `2FA
+by mail`.
+
+Click :guilabel:`Install` on the Kanban card for the :guilabel:`2FA by mail` module.
+
+.. image:: 2fa/2FA-by-mail.png
+   :align: center
+   :alt: The 2FA by mail module in the Apps directory.
+
+After installation is complete, go to :guilabel:`Settings app: Permissions`. Tick the checkbox
+labeled, :guilabel:`Enforce two-factor authentication`. Then, use the radio buttons to choose
+whether to apply this setting to :guilabel:`Employees only`, or :guilabel:`All users`.
+
+.. note::
+   Selecting :guilabel:`All users` applies the setting to portal users, in addition to employees.
+
+.. image:: 2fa/enforce-settings.png
+   :align: center
+   :alt: The enforce two factor setting in the Settings application.
+
+Click :guilabel:`Save` to commit any unsaved changes.
