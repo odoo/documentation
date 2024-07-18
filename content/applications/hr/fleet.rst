@@ -85,6 +85,7 @@ When the information is entered, click :guilabel:`Save`.
    - :doc:`fleet/models`
    - :doc:`fleet/new_vehicle`
    - :doc:`fleet/service`
+   - :doc:`fleet/accidents`
 
 .. toctree::
    :titlesonly:
@@ -92,3 +93,4 @@ When the information is entered, click :guilabel:`Save`.
    fleet/models
    fleet/new_vehicle
    fleet/service
+   fleet/accidents
