@@ -38,8 +38,8 @@ can be filled out by following steps explained in the :doc:`Email Marketing doc
 <../email_marketing>`.
 
 Clicking :guilabel:`Send SMS` reveals a separate page with a blank SMS template form, which can be
-filled out by following steps explained in the :doc:`SMS essentials doc
-<../sms_marketing/essentials/sms_essentials>`.
+filled out by following steps explained in the :doc:`SMS Marketing doc
+<../sms_marketing>`.
 
 At the top of the mailing list form is a series of smart buttons that display a variety of metrics
 related to the specific mailing list. When any of the smart buttons are clicked, a separate page is
