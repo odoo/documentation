@@ -166,7 +166,7 @@ to the :guilabel:`Create Activities` pop-up window, in order to configure the :r
 <marketing_automation/trigger>`.
 
 .. seealso::
-   :doc:`Creating and configuring SMS templates <../sms_marketing/essentials/sms_essentials>`
+   :doc:`Creating and configuring SMS templates <../sms_marketing>`
 
 .. _marketing_automation/trigger:
 
