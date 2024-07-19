@@ -16,7 +16,7 @@ To enable :abbr:`SMS (Short Message Service)` campaigns in Odoo, make sure the *
 feature is activated by going to :menuselection:`Email Marketing --> Configuration --> Settings`,
 and then enable :guilabel:`Mailing Campaigns` and :guilabel:`Save` the changes.
 
-.. image:: sms_campaign_settings/sms-mailing-campaigns.png
+.. image:: marketing_campaigns/sms-mailing-campaigns.png
    :align: center
    :alt: View of the mailing campaigns setting in Odoo.
 
@@ -40,7 +40,7 @@ initially, there's only a single checkbox labeled: :guilabel:`Allow A/B Testing.
 
 When clicked, a series of other options appear.
 
-.. image:: sms_campaign_settings/ab-tests-sms.png
+.. image:: marketing_campaigns/ab-tests-sms.png
    :align: center
    :alt: The A/B Test tab is located on an Odoo SMS Marketing app campaign form.
 
@@ -74,7 +74,7 @@ To create, edit, or analyze any campaign, click :menuselection:`Campaigns` in th
 information related to the mailings associated with that campaign (e.g. number of emails, social
 posts, SMSs, and push notifications).
 
-.. image:: sms_campaign_settings/campaigns-page.png
+.. image:: marketing_campaigns/campaigns-page.png
    :align: center
    :alt: Dasbhoard view of different Campaigns in the Odoo SMS Marketing app, separated by stage.
 
@@ -85,7 +85,7 @@ Click :guilabel:`Create` to create a new campaign, and Odoo reveals a blank camp
 to fill out. Alternatively, select any previously-made campaign in order to duplicate, review, or
 edit its campaign template form.
 
-.. image:: sms_campaign_settings/sms-campaign-template.png
+.. image:: marketing_campaigns/sms-campaign-template.png
    :align: center
    :alt: View of an SMS campaign template in Odoo SMS marketing.
 
@@ -114,7 +114,7 @@ In order to send an :abbr:`SMS (Short Message Service)` in this fashion, navigat
 :menuselection:`Contacts` app, select the desired contact in the database, and click on the
 :guilabel:`SMS` icon on the contact form (next to the :guilabel:`Phone Number` field).
 
-.. image:: sms_campaign_settings/sms-contact-form.png
+.. image:: marketing_campaigns/sms-contact-form.png
    :align: center
    :alt: The SMS icon is located on an individual's contact form in Odoo Contacts.
 
@@ -122,7 +122,7 @@ To send a message to multiple contacts at once, navigate to the main :menuselect
 main dashboard, choose the :guilabel:`List View`, and select all the desired contacts to whom the
 message should be sent. Then, under :guilabel:`Action`, select :guilabel:`Send SMS`.
 
-.. image:: sms_campaign_settings/sms-contacts-action-send-message.png
+.. image:: marketing_campaigns/sms-contacts-action-send-message.png
    :align: center
    :alt: Select a number of contacts, click action, and select send multiple SMSs.
 
@@ -142,7 +142,7 @@ Next return to the :menuselection:`Settings app` and, in the now-visible header 
 choose :menuselection:`Technical --> SMS Templates` to begin setting up :abbr:`SMS (Short Message
 Service)` templates for future marketing campaigns.
 
-.. image:: sms_campaign_settings/sms-template-setting.png
+.. image:: marketing_campaigns/sms-template-setting.png
    :align: center
    :alt: Select the SMS Template option in the Technical dropdown on the Settings app.
 
@@ -152,7 +152,7 @@ to which recipients it applies.
 
 On this page, :abbr:`SMS (Short Message Service)` templates can be edited or created from scratch.
 
-.. image:: sms_campaign_settings/sms-template.png
+.. image:: marketing_campaigns/sms-template.png
    :align: center
    :alt: The SMS Templates page in Odoo is available after enabling developer mode in the General
          Settings
