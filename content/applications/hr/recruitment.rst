@@ -89,7 +89,7 @@ feature is enabled.
 
 .. seealso::
    For more information, refer to the :doc:`SMS pricing and FAQs
-   <../marketing/sms_marketing/pricing/pricing_and_faq>` documentation.
+   <../marketing/sms_marketing/pricing_and_faq>` documentation.
 
 .. _recruitment/cv-display:
 
