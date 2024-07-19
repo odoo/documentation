@@ -91,5 +91,5 @@ select :guilabel:`Process follow-ups`.
 
 .. seealso::
    - :doc:`/applications/essentials/in_app_purchase`
-   - :doc:`/applications/marketing/sms_marketing/pricing/pricing_and_faq`
+   - :doc:`/applications/marketing/sms_marketing/pricing_and_faq`
    - :doc:`../customer_invoices/snailmail`
