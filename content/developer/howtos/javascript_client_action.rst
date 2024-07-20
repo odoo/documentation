@@ -42,7 +42,7 @@ framework and use services, core components, hooks,...
 
       <?xml version="1.0" encoding="UTF-8" ?>
       <templates xml:space="preserve">
-          <t t-name="awesome_tshirt.clientaction">
+          <t t-name="my_module.clientaction">
               Hello world
           </t>
       </templates>
