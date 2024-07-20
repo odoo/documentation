@@ -9617,6 +9617,15 @@ msgid ""
 "the upgrade process can be found in your newly upgraded staging build by "
 "going to :file:`~/logs/upgrade.log`."
 msgstr ""
+"Nachdem die Upgrade-Plattform das Upgrade des Back-ups und das Hochladen "
+"abgeschlossen hat, befindet der Zweig sich jetzt in einem **besonderen "
+"Modus**: jedes Mal, wenn ein **Commit** auf den Zweig übertragen wird, "
+"findet ein **Wiederherstellungsvorgang** des aktualisierten Back-ups statt, "
+"und es erfolgt ein **Update aller benutzerdefinierten Module**. Auf diese "
+"Weise können Sie Ihre benutzerdefinierten Module mit einer unveränderten "
+"Kopie der aktualisierten Datenbank testen. Die Protokolldatei des Upgrade-"
+"Prozesses finden Sie unter :file:`~/logs/upgrade.log` in Ihrem neu "
+"aktualisierten Staging-Build."
 
 #: ../../content/administration/upgrade.rst:129
 msgid ""
@@ -9626,30 +9635,44 @@ msgid ""
 "upgraded database is built as soon as it is transferred from the upgrade "
 "platform, and the upgrade mode is exited."
 msgstr ""
+"Bei Datenbanken, in denen benutzerdefinierte Module installiert sind, muss "
+"deren Quellcode auf dem neuesten Stand der Zielversion von Odoo sein, bevor "
+"das Upgrade durchgeführt werden kann. Wenn dies nicht der Fall ist, wird der"
+" Modus „Update bei Commit“ übersprungen, die aktualisierte Datenbank wird "
+"erstellt, sobald sie von der Upgrade-Plattform übertragen wird, und der "
+"Upgrade-Modus wird beendet."
 
 #: ../../content/administration/upgrade.rst:134
 msgid ""
 "Check out the :doc:`/developer/howtos/upgrade_custom_db` page for more "
 "information."
 msgstr ""
+"Weitere Informationen finden Sie auf der Seite "
+":doc:`/developer/howtos/upgrade_custom_db`."
 
 #: ../../content/administration/upgrade.rst:138
 msgid ""
 "The standard upgrade process can be initiated by entering the following "
 "command line on the machine where the database is hosted:"
 msgstr ""
+"Der Standard-Upgrade-Prozess kann durch Eingabe der folgenden Befehlszeile "
+"auf dem Rechner, auf dem die Datenbank gehostet wird, eingeleitet werden:"
 
 #: ../../content/administration/upgrade.rst:145
 msgid ""
 "The following command can be used to display the general help and the main "
 "commands:"
 msgstr ""
+"Mit dem folgenden Befehl können Sie die allgemeine Hilfe und die wichtigsten"
+" Befehle anzeigen:"
 
 #: ../../content/administration/upgrade.rst:151
 msgid ""
 "An upgraded test database can also be requested via the `Upgrade page "
 "<https://upgrade.odoo.com/>`_."
 msgstr ""
+"Eine aktualisierte Testdatenbank kann auch über die `Upgrade-Seite "
+"<https://upgrade.odoo.com/>`_ angefordert werden."
 
 #: ../../content/administration/upgrade.rst:155
 msgid ""
@@ -9658,12 +9681,18 @@ msgid ""
 "performed. Check out the :doc:`/developer/howtos/upgrade_custom_db` page for"
 " more information."
 msgstr ""
+"Bei Datenbanken, in denen benutzerdefinierte Module installiert sind, muss "
+"deren Quellcode auf die Zielversion von Odoo aktualisiert werden, bevor das "
+"Upgrade durchgeführt werden kann. Weitere Informationen finden Sie auf der "
+"Seite :doc:`/developer/howtos/upgrade_custom_db`."
 
 #: ../../content/administration/upgrade.rst:160
 msgid ""
 "For security reasons, only the person who submitted the upgrade request can "
 "download it."
 msgstr ""
+"Aus Sicherheitsgründen kann nur die Person, die die Upgrade-Anfrage gestellt"
+" hat, diese herunterladen."
 
 #: ../../content/administration/upgrade.rst:161
 msgid ""
@@ -9671,6 +9700,9 @@ msgid ""
 " the upgrade server. Therefore, the upgraded database does not contain the "
 "production filestore."
 msgstr ""
+"Aus Speicherplatzgründen wird die Kopie der Datenbank ohne einen "
+"Dateispeicher an den Upgrade-Server übermittelt. Daher enthält die "
+"aktualisierte Datenbank nicht den Produktionsdateispeicher."
 
 #: ../../content/administration/upgrade.rst:163
 msgid ""
@@ -9689,7 +9721,7 @@ msgstr "Die aktualisierte Datenbank enthält:"
 
 #: ../../content/administration/upgrade.rst:168
 msgid "A `dump.sql` file containing the upgraded database"
-msgstr ""
+msgstr "Eine `dump.sql`-Datei, die die aktualisierte Datenbank enthält"
 
 #: ../../content/administration/upgrade.rst:169
 msgid ""
@@ -9711,6 +9743,8 @@ msgid ""
 "You can request multiple test databases if you wish to test an upgrade more "
 "than once."
 msgstr ""
+"Sie können mehrere Testdatenbanken anfordern, wenn Sie ein Upgrade mehr als "
+"einmal testen möchten."
 
 #: ../../content/administration/upgrade.rst:181
 msgid ""
@@ -9765,6 +9799,9 @@ msgid ""
 "synchronization, contact your bank synchronization provider to get sandbox "
 "credentials."
 msgstr ""
+"Die Bankensynchronisierung ist deaktiviert. Wenn Sie die Synchronisierung "
+"testen möchten, wenden Sie sich an Ihren Bankensynchronisationsanbieter, um "
+"Sandbox-Zugangsdaten zu erhalten."
 
 #: ../../content/administration/upgrade.rst:205
 msgid ""
@@ -9772,46 +9809,55 @@ msgid ""
 "to ensure they are working correctly and to get more familiar with the new "
 "version."
 msgstr ""
+"Es wird dringend empfohlen, so viele Ihrer Geschäftsabläufe wie möglich zu "
+"testen, um sicherzustellen, dass sie korrekt funktionieren und um sich mit "
+"der neuen Version vertraut zu machen."
 
 #: ../../content/administration/upgrade.rst:208
 msgid "Basic test checklist"
-msgstr ""
+msgstr "Checkliste für allgemeinen Test"
 
 #: ../../content/administration/upgrade.rst:210
 msgid ""
 "Are there views that are deactivated in your test database but active in "
 "your production database?"
 msgstr ""
+"Gibt es Ansichten, die in Ihrer Testdatenbank deaktiviert, aber in Ihrer "
+"Produktionsdatenbank aktiv sind?"
 
 #: ../../content/administration/upgrade.rst:212
 msgid "Are your usual views still displayed correctly?"
-msgstr ""
+msgstr "Werden Ihre üblichen Ansichten noch korrekt angezeigt?"
 
 #: ../../content/administration/upgrade.rst:213
 msgid "Are your reports (invoice, sales order, etc.) correctly generated?"
 msgstr ""
+"Werden Ihre Berichte (Rechnung, Verkaufsauftrag usw.) korrekt erstellt?"
 
 #: ../../content/administration/upgrade.rst:214
 msgid "Are your website pages working correctly?"
-msgstr ""
+msgstr "Funktionieren die Seiten Ihrer Website korrekt?"
 
 #: ../../content/administration/upgrade.rst:215
 msgid ""
 "Are you able to create and modify records? (sales orders, invoices, "
 "purchases, users, contacts, companies, etc.)"
 msgstr ""
+"Sind Sie in der Lage, Datensätze zu erstellen und zu ändern? "
+"(Verkaufsaufträge, Rechnungen, Einkäufe, Benutzer, Kontakte, Unternehmen "
+"usw.)"
 
 #: ../../content/administration/upgrade.rst:217
 msgid "Are there any issues with your mail templates?"
-msgstr ""
+msgstr "Gibt es Probleme mit Ihren E-Mail-Vorlagen?"
 
 #: ../../content/administration/upgrade.rst:218
 msgid "Are there any issues with saved translations?"
-msgstr ""
+msgstr "Gibt es Probleme mit gespeicherten Übersetzungen?"
 
 #: ../../content/administration/upgrade.rst:219
 msgid "Are your search filters still present?"
-msgstr ""
+msgstr "Sind Ihre Suchfilter noch vorhanden?"
 
 #: ../../content/administration/upgrade.rst:220
 msgid "Can you export your data?"
@@ -9823,6 +9869,10 @@ msgid ""
 " production data to verify everything is the same (product category, selling"
 " price, cost price, vendor, accounts, routes, etc.)."
 msgstr ""
+"Prüfen Sie ein zufälliges Produkt in Ihrem Produktkatalog und vergleichen "
+"Sie dessen Test- und Produktionsdaten, um sicherzustellen, dass alles "
+"übereinstimmt (Produktkategorie, Verkaufspreis, Einkaufspreis, Lieferant, "
+"Konten, Routen usw.)."
 
 #: ../../content/administration/upgrade.rst:227
 msgid "Buying this product (Purchase app)."
