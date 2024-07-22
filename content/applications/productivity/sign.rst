@@ -274,15 +274,15 @@ When a document needs to be signed by different parties, the signing order lets 
 order in which your recipients receive it for signature.
 
 After uploading a PDF with at least two signature fields with two different roles and clicking
-:guilabel:`Send`, toggle the :guilabel:`Specify Signing Order` button and search for the signer's
+:guilabel:`Send`, toggle the :guilabel:`Specify Signing Order` switch and search for the signer's
 name or email information to add them. You can decide on the signing order by typing **1** or **2**
 in the first column.
 
+.. image:: sign/specify-signing-order.png
+   :alt: Toggle the switch to specify the signing order.
+
 Each recipient receives the signature request notification only once the previous recipient has
 completed their action.
-
-.. seealso::
-   `Odoo Quick Tips: Sign order [video] <https://www.youtube.com/watch?v=2KUq7RPt1cU/>`_
 
 .. _sign/fields:
 
