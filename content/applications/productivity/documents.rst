@@ -4,8 +4,6 @@ Documents
 
 **Odoo Documents** allows you to store, view, and manage files within Odoo.
 
-You can upload any file (max 64MB per file on Odoo Online) and organize them in various workspaces.
-
 .. seealso::
    - `Odoo Documents: product page <https://www.odoo.com/app/documents>`_
    - `Odoo Tutorials: Documents basics [video] <https://www.odoo.com/slides/slide/documents-basics-6841?fullscreen=1>`_
@@ -110,17 +108,18 @@ example:
   down to the bottom of the right panel to see the :guilabel:`History` and :guilabel:`restore`,
   :guilabel:`download`, or :guilabel:`delete` the document;
 - :icon:`fa-unlock` (:guilabel:`Lock`);
-- :icon:`fa-scissors` (:ref:`Split <documents/split>`).
+- :icon:`fa-scissors` (:ref:`Split <documents/split>`);
+- :icon:`fa-comments` (:guilabel:`Open chatter`).
 
-You can also :icon:`fa-comments` :guilabel:`Open chatter` or delete the document by clicking the
-:icon:`fa-trash` (:guilabel:`Move to trash`) icon.
+To modify the name of your file, edit the :guilabel:`Name` field. Click the :icon:`fa-trash`
+(:guilabel:`Move to trash`) icon to delete your document.
 
 .. note::
-   Items moved to the trash are permanently deleted after 30 days.
+   Items moved to the trash are kept for 30 days in the :icon:`fa-trash` :guilabel:`Trash`
+   workspace, after which they are permanently deleted.
 
-To modify the name of your file, click on :guilabel:`Name`. A :guilabel:`Contact` or an
-:guilabel:`Owner` can be assigned. The related :guilabel:`Workspace` can be modified and it is
-possible to access the related :guilabel:`Journal Entry` or add :guilabel:`Tags`.
+A :guilabel:`Contact` or an :guilabel:`Owner` can be assigned. You can also modify the related
+:guilabel:`Workspace` and add :guilabel:`Tags`.
 
 .. note::
    - The :guilabel:`Contact` is a person related to the document who only has read
@@ -158,20 +157,26 @@ pages, click the :icon:`fa-scissors` (:guilabel:`scissors`) icon.
 Additional features
 -------------------
 
-Select a workspace and click the :icon:`fa-caret-down` (:guilabel:`down arrow`) next to the
-:guilabel:`Upload` button to access additional features:
+Select a workspace and click the :guilabel:`New` button to access additional features:
+
+Upload
+~~~~~~
+
+You can upload any file (max 64MB per file on Odoo Online) to your **Documents** app. Select the
+workspace where you want to upload your file, click the :guilabel:`New` button, then
+:icon:`fa-upload` :guilabel:`Upload`.
 
 Request
 ~~~~~~~
 
 You can request files and organize them as documents to remind users to download them.
 
-Select the workspace where the file should be stored, click the :icon:`fa-caret-down`
-(:guilabel:`down arrow`) next to the :guilabel:`Upload` button, then :guilabel:`Request`. Add the
-:guilabel:`Document Name` and select the person you need it from in the :guilabel:`Request To`
-field. You can also fill in the :guilabel:`Due Date In`, confirm the :guilabel:`Workspace` the
-document should belong to, and add :guilabel:`Tags` and a :guilabel:`Message`. Then, click
-:guilabel:`Request`. A placeholder for the missing document is created in the workspace.
+Select the workspace where the file should be stored, click the :guilabel:`New` button, then
+:icon:`fa-paper-plane-o` :guilabel:`Request`. Add the :guilabel:`Document Name` and select the
+person you need it from in the :guilabel:`Request To` field. You can also fill in the
+:guilabel:`Due Date In`, confirm the :guilabel:`Workspace` the document should belong to, and add
+:guilabel:`Tags` and a :guilabel:`Message`. Then, click :guilabel:`Request`. A placeholder for the
+missing document is created in the workspace.
 
 When your document is available, click the placeholder to upload it.
 
@@ -191,43 +196,48 @@ Document` column.
 
 .. _documents/add-a-link:
 
-Add a link
-~~~~~~~~~~
+Link
+~~~~
 
-To add a link to your documents dashboard, click :guilabel:`Add a Link`, enter the :guilabel:`URL`,
-and :guilabel:`Name` it.
+To add a link to your documents dashboard, click :icon:`fa-link` :guilabel:`Link`, enter the
+:guilabel:`URL`, and :guilabel:`Name` it.
+
+Spreadsheet
+~~~~~~~~~~~
+
+To create a new :doc:`spreadsheet <spreadsheet>`, click :guilabel:`Spreadsheet`. You can select
+a :guilabel:`Blank spreadsheet` or an :doc:`existing template <spreadsheet/templates>`.
 
 Share
-~~~~~
+-----
 
 You can make a document or a workspace accessible to anyone by sharing a URL.
 
 Share a document
-****************
+~~~~~~~~~~~~~~~~
 
-To generate a **share link** to a document, select the document, click the :icon:`fa-caret-down`
-(:guilabel:`down arrow`) next to the :guilabel:`Upload` button, and click :guilabel:`Share`.
+To generate a **share link** to a document, select the document and click the :guilabel:`Share`
+button.
 
 In the pop-up, you can :guilabel:`Name` the share link, set a validity date by filling in the
 :guilabel:`Valid Until` field, and if you own more than one site, select the :guilabel:`Website` you
 want so the right domain name is reflected in the URL.
 
-Click :guilabel:`Copy` to send the URL to whomever you want.
+Click :guilabel:`Copy Link & Close` to copy the URL to your clipboard.
 
 .. tip::
    You can also generate a share URL by selecting the document, going to the right panel, and
    clicking the :icon:`fa-share-alt` (:guilabel:`Share this selection`) icon.
 
 Share a workspace
-*****************
+~~~~~~~~~~~~~~~~~
 
 You can share a link to a workspace and allow users to :guilabel:`Download` its content or
 :guilabel:`Download and Upload` files to it.
 
 To do so, go to the left column of your dashboard and select the workspace you want to share. You
 can also choose one or more tags that will be automatically added to the uploaded documents. Then,
-click the :icon:`fa-caret-down` (:guilabel:`down arrow`) next to the :guilabel:`Upload` button and
-:guilabel:`Share`.
+click the :guilabel:`Share` button.
 
 In the pop-up, a share :guilabel:`URL` you can :guilabel:`Copy` is displayed. You can
 :guilabel:`Name` your share link and set a validity date by filling in the :guilabel:`Valid Until`
@@ -235,15 +245,15 @@ field. If you own more than one site, select the :guilabel:`Website` you want so
 reflects the right domain name.
 
 .. Note::
-   - The links added to your workspace using the :ref:`Add a Link <documents/add-a-link>` option
-     cannot be shared and are, therefore, excluded;
+   - The links added to your workspace using the :ref:`Link <documents/add-a-link>` option cannot be
+     shared and are, therefore, excluded.
    - When tags are applied to a shared workspace, users can exclusively access the documents
      associated with those tags.
 
 .. _documents/upload:
 
 Files upload
-^^^^^^^^^^^^
+************
 
 Toggle the :guilabel:`Allow upload` switch to allow users to upload files to your workspace.
 
@@ -270,12 +280,6 @@ uploaded to the workspace using the chosen tags.
    Select a line and click :guilabel:`Delete` to disable the URL. People who have received this
    link will no longer be able to access the document(s) or workspace.
 
-New spreadsheet
-~~~~~~~~~~~~~~~
-
-To create a new :doc:`spreadsheet <spreadsheet>`, click :guilabel:`New Spreadsheet`. You can select
-a :guilabel:`Blank spreadsheet` or an :doc:`existing template <spreadsheet/templates>`.
-
 .. _documents/workflow-actions:
 
 Workflow actions
@@ -300,7 +304,7 @@ Set the conditions
 ------------------
 
 Define the :guilabel:`Action Name` and then set the conditions that trigger the appearance of the
-:icon:`fa-play` (:guilabel:`play`) icon on the right-side panel when selecting a file.
+action button on the right-side panel when selecting a file.
 
 There are three basic types of conditions you can set:
 
@@ -325,9 +329,8 @@ Advanced condition type: domain
    It is recommended to have some knowledge of Odoo development to configure *Domain* filters
    properly.
 
-The :ref:`developer mode <developer-mode>` needs to be activated to access the :guilabel:`Domain`
-condition from the :guilabel:`Actions` tab. Once done, select the :guilabel:`Domain` condition type
-and click :guilabel:`New Rule`.
+The :ref:`developer mode <developer-mode>` needs to be activated to enable the :guilabel:`Domain`
+:guilabel:`Condition type`. Once done, click :guilabel:`New Rule`.
 
 To create a rule, you typically select a :guilabel:`field`, an :guilabel:`operator`, and a
 :guilabel:`value`. For example, if you want to add a workflow action to all the PDF files inside a
@@ -345,7 +348,7 @@ using the :guilabel:`Code editor`.
 Configure the actions
 ---------------------
 
-Select the :guilabel:`Actions` tab to set up your action. You can simultaneously:
+Go to the :guilabel:`Actions` section to set up your action. You can simultaneously:
 
 - **Move to Workspace**: move the file to any workspace;
 - **Create**: create one of the following items attached to the file in your database:
@@ -370,20 +373,20 @@ Select the :guilabel:`Actions` tab to set up your action. You can simultaneously
 
 - **Set Contact**: add a contact to the file, or replace an existing contact with a new one;
 - **Set Owner**: add an owner to the file, or replace an existing owner with a new one;
-- **Set Tags**: add, remove, and replace any number of tags;
+- **Set Tags**: add, remove, and replace any number of tags.
+
+To set up activities related to your actions, go to the :guilabel:`Activities` section:
+
 - **Activities - Mark all as Done**: mark all activities linked to the file as done;
 - **Activities - Schedule Activity**: create a new activity linked to the file as configured in
   the action. You can choose to set the activity on the document owner.
-
-.. image:: documents/workflow-action-example.png
-   :alt: Example of a workflow action Odoo Documents
 
 Digitize documents with AI and optical character recognition (OCR)
 ==================================================================
 
 Documents available in the Finance workspace can be digitized. Select the document to digitize,
-click :guilabel:`Create Bill`, :guilabel:`Create Customer Invoice`, or
-:guilabel:`Create credit note`, and then click :guilabel:`Send for Digitization`.
+click :guilabel:`Create Vendor Bill`, :guilabel:`Create Customer Invoice`, or
+:guilabel:`Create Customer Credit Note`, and then click :guilabel:`Send for Digitization`.
 
 .. seealso::
    :doc:`AI-powered document digitization <../finance/accounting/vendor_bills/invoice_digitization>`
