@@ -16,6 +16,8 @@ Go to :menuselection:`Accounting --> Configuration --> Settings --> Customer Pay
 Deposit multiple payments in batch
 ==================================
 
+.. _batch-payments/register-payments:
+
 Register payments
 -----------------
 
