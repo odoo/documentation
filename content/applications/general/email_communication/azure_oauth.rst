@@ -34,14 +34,14 @@ registration`. On the :guilabel:`Register an application` screen, rename the :gu
 and personal Microsoft accounts (e.g. Skype, Xbox)`.
 
 Under the :guilabel:`Redirect URL` section, select :guilabel:`Web` as the platform, and then input
-`https://<odoo base url>/microsoft_outlook/confirm` in the :guilabel:`URL` field. The Odoo base URL
-is the canonical domain at which your Odoo instance can be reached in the URL field.
+`https://<web base url>/microsoft_outlook/confirm` in the :guilabel:`URL` field. The `web.base.url`
+is subject to change depending on the URL used to log in to the database.
 
-.. example::
-   *mydatabase.odoo.com*, where *mydatabase* is the actual prefix of the database's subdomain,
-   assuming it's hosted on Odoo.com
+.. note::
+   The documentation about the :ref:`web.base.url <domain-name/web-base-url>` explains how to freeze
+   a unique URL. It is also possible to add different redirect URLs on the Microsoft app.
 
-After the URL has been added to the field, :guilabel:`Register` the application so it is created.
+After the URL has been added to the field, :guilabel:`Register` the application, so it is created.
 
 API permissions
 ---------------
