@@ -51,11 +51,13 @@ except under the following circumstances:
    Mitchell Admin has multiple companies enabled, but the current company is `My Company (Chicago)`.
    When he creates a new product record, the :guilabel:`Company` field is left blank by default.
 
-   When he creates a new sales team, the :guilabel:`Company` field automatically defaults to `My
+   When a new sales team is created, the :guilabel:`Company` field automatically defaults to `My
    Company (Chicago)`.
 
-Sharing data
-============
+.. _general/sharing-data:
+
+Share data
+==========
 
 In a |mcd|, certain records are able to be utilized by all of the companies (or several, based on
 permissions).
@@ -113,3 +115,26 @@ To keep their database from becoming overly complex, the furniture company does 
 entirely new company. Instead, they can take advantage of existing features, such as :doc:`analytic
 accounting <../finance/accounting/reporting/analytic_accounting>`, and multiple warehouses, to
 manage the new product line, without having to overly complicate transactions.
+
+Limitations
+===========
+
+In some instances, a |mcd| may *not* be the best option, due to potential limitations.
+
+Access rights
+-------------
+
+A user's access rights are configured on a database level. If a user has access to more than one
+company in a |mcd|, their access rights are the same across every company.
+
+Shared records
+--------------
+
+Individual records are either :ref:`shared <general/sharing-data>` between all companies, or belong
+to a single company.
+
+PDF Reports
+-----------
+
+Some customizations, specifically for PDF reports, apply to all companies. It is not always possible
+to separate reports for individual companies.
