@@ -84,184 +84,6 @@ Set a tax on each product in the :guilabel:`Vendor Taxes` and :guilabel:`Custome
 applicable. It is considered good practice to use a tax that is configured with :ref:`Tax Included
 in Price <taxes/included-in-price>`. Taxes will be automatically configured if this is set.
 
-.. _expenses/new:
-
-Record expenses
-===============
-
-Manually create a new expense
------------------------------
-
-To record a new expense, begin in the main :menuselection:`Expenses` app dashboard, which presents
-the default :guilabel:`My Expenses` view. This view can also be accessed from
-:menuselection:`Expenses app --> My Expenses --> My Expenses`.
-
-First, click :guilabel:`New`, and then fill out the various fields on the form.
-
-- :guilabel:`Description`: enter a short description for the expense in the :guilabel:`Description`
-  field. This should be short and informative, such as `lunch with client` or `hotel for
-  conference`.
-- :guilabel:`Category`: select the expense category from the drop-down menu that most closely
-  corresponds to the expense. For example, an airplane ticket would be appropriate for an expense
-  :guilabel:`Category` named :guilabel:`Air Travel`.
-- :guilabel:`Total`: Enter the total amount paid for the expense in one of two ways:
-
-  #. If the expense is for one single item/expense, and the category selected was for a single item,
-     enter the cost in the :guilabel:`Total` field (the :guilabel:`Quantity` field is hidden).
-  #. If the expense is for multiples of the same item/expense with a fixed price, the
-     :guilabel:`Unit Price` is displayed. Enter the quantity in the :guilabel:`Quantity` field, and
-     the total cost is automatically updated with the correct total (the :guilabel:`Unit Price` x
-     the :guilabel:`Quantity` = the total). Be advised, the word "total" does not appear, the total
-     cost simply appears below the :guilabel:`Quantity`.
-
-     .. example::
-        For example, in the case of mileage driven, the :guilabel:`Unit Price` is populated as the
-        cost *per mile*. Set the :guilabel:`Quantity` to the *number of miles* driven, and the total
-        is calculated.
-
-- :guilabel:`Included Taxes`: if taxes were configured on the expense category, the tax percentage
-  and amount appear automatically after entering either the :guilabel:`Total` or the
-  :guilabel:`Quantity`.
-
-  .. note::
-     When a tax is configured on an expense category, the :guilabel:`Included Taxes` value will
-     update in real time as the :guilabel:`Total` or :guilabel:`Quantity` is updated.
-
-- :guilabel:`Employee`: using the drop-down menu, select the employee this expense is for.
-- :guilabel:`Paid By`: click the radio button to indicate who paid for the expense and should be
-  reimbursed. If the employee paid for the expense (and should be reimbursed) select
-  :guilabel:`Employee (to reimburse)`. If the company paid directly instead (e.g. if the company
-  credit card was used to pay for the expense) select :guilabel:`Company`. Depending on the expense
-  category selected, this field may not appear.
-- :guilabel:`Bill Reference`: if there is any reference text that should be included for the
-  expense, enter it in this field.
-- :guilabel:`Expense Date`: using the calendar module, enter the date the expense was incurred. Use
-  the :guilabel:`< (left)` and :guilabel:`> (right)` arrows to navigate to the correct month, then
-  click on the specific day to enter the selection.
-- :guilabel:`Account`: select the expense account that this expense should be logged on from the
-  drop-down menu.
-- :guilabel:`Customer to Reinvoice`: if the expense is something that should be paid for by a
-  customer, select the :abbr:`SO (Sales Order)` and customer that will be invoiced for this expense
-  from the drop-down menu. All sales orders in the drop-down menu list both the :abbr:`SO (Sales
-  Order)` as well as the company the sales order is written for, but after the expense is saved, the
-  customer name disappears and only the :abbr:`SO (Sales Order)` is visible on the expense.
-
-  .. example::
-     A customer wishes to have an on-site meeting for a custom garden (design and installation) and
-     agrees to pay for the expenses associated with it (such as travel, hotel, meals, etc.). All
-     expenses tied to that meeting would indicate the sales order for the custom garden (which also
-     references the customer) as the :guilabel:`Customer to Reinvoice`.
-
-- :guilabel:`Analytic Distribution`: select the accounts the expense should be written against from
-  the drop-down menu for either :guilabel:`Projects`, :guilabel:`Departments`, or both. Multiple
-  accounts can be listed for each category, if needed. Adjust the percentage for each analytic
-  account by typing in the percentage value next to the account.
-- :guilabel:`Company`: if multiple companies are set up, select the company this expense should be
-  filed for from the drop-down menu. The current company automatically populates this field.
-- :guilabel:`Notes...`: if any notes are needed to clarify the expense, enter them in this field.
-
-.. image:: expenses/expense-filled-in.png
-   :align: center
-   :alt: A filled in expense form for a client lunch.
-
-Attach a receipt
-~~~~~~~~~~~~~~~~
-
-After the expense is created, the next step is to attach a receipt. Click the :guilabel:`Attach
-Receipt` button, and a file explorer appears. Navigate to the receipt to be attached, and click
-:guilabel:`Open`. The new receipt is recorded in the chatter, and the number of receipts will appear
-next to the :guilabel:`📎 (paperclip)` icon beneath the expense form. More than one receipt can be
-attached to an individual expense, as needed. The number of receipts attached to the expense will be
-noted on the paperclip icon.
-
-.. image:: expenses/receipt-icon.png
-   :align: center
-   :alt: Attach a receipt and it appears in the chatter.
-
-Create new expenses from a scanned receipt
-------------------------------------------
-
-Rather than manually inputting all of the information for an expense, expenses can be created by
-scanning a PDF receipt.
-
-First, in the main :guilabel:`Expenses` app dashboard view (this view can also be accessed from
-:menuselection:`Expenses app --> My Expenses --> My Expenses`), click :guilabel:`Scan`, and a file
-explorer pops up. Navigate to the receipt to be uploaded, click on it to select it, and then click
-:guilabel:`Open`.
-
-.. image:: expenses/scan.png
-   :align: center
-   :alt: Create an expense by scanning a receipt. Click Scan at the top of the Expenses dashboard
-         view.
-
-The receipt is scanned, and a new entry is created with today's date as the :guilabel:`Expense
-Date`, and any other fields it can populate based on the scanned data, such as the total. Click on
-the new entry to open the individual expense form, and make any changes needed. The scanned receipt
-appears in the chatter.
-
-Automatically create new expenses from an email
------------------------------------------------
-
-Instead of individually creating each expense in the *Expenses* app, expenses can be automatically
-created by sending an email to an email alias.
-
-To do so, first, an email alias needs to be configured. Go to :menuselection:`Expenses app -->
-Configuration --> Settings`. Ensure :guilabel:`Incoming Emails` is enabled.
-
-.. image:: expenses/email-alias.png
-   :align: center
-   :alt: Create the domain alias by clicking the link.
-
-.. note::
-   If the domain alias needs to be set up, :guilabel:`Setup your domain alias` will appear beneath
-   the incoming emails check box instead of the email address field. Refer to this documentation for
-   setup instructions and more information:
-   :doc:`/applications/websites/website/configuration/domain_names`. Once the domain alias is
-   configured, the email address field will be visible beneath the incoming emails section.
-
-Next, enter the email address to be used in the email field, and then click :guilabel:`Save`. Now
-that the email address has been entered, emails can be sent to that alias to create new expenses
-without having to be in the Odoo database.
-
-To submit an expense via email, create a new email and enter the product's *internal reference* code
-(if available) and the amount of the expense in the email subject. Next, attach the receipt to the
-email. Odoo creates the expense by taking the information in the email subject and combining it with
-the receipt.
-
-To check an expense categories internal reference, go to :menuselection:`Expenses app -->
-Configuration --> Expense Categories`. If an internal reference is listed on the expense category,
-it is listed in the :guilabel:`Internal Reference` column.
-
-.. image:: expenses/ref.png
-   :align: center
-   :alt: Internal reference numbers are listed in the main Expense Categories view.
-
-To add an internal reference on an expense category, click on the category to open the form. Enter
-the internal reference in the field. Beneath the :guilabel:`Internal Reference` field, this sentence
-appears: :guilabel:`Use this reference as a subject prefix when submitting by email.`
-
-.. image:: expenses/mileage-internal-reference.png
-   :align: center
-   :alt: Internal reference numbers are listed in the main Expense Products view.
-
-.. note::
-   For security purposes, only authenticated employee emails are accepted by Odoo when creating an
-   expense from an email. To confirm an authenticated employee email address, go to the employee
-   card in the :menuselection:`Employees` app, and refer to the :guilabel:`Work Email`
-
-   .. image:: expenses/authenticated-email-address.png
-      :align: center
-      :alt: Create the domain alias by clicking the link.
-
-.. example::
-   If submitting an expense via email for a $25.00 meal during a work trip, the email subject would
-   be `FOOD $25.00`.
-
-   Explanation:
-
-   - The :guilabel:`Internal Reference` for the expense category `Meals` is `FOOD`
-   - The :guilabel:`Cost` for the expense is `$25.00`
-
 .. _expenses/reimburse:
 
 Reimburse employees
@@ -334,12 +156,12 @@ and :guilabel:`Sales price`.
 Create an expense
 -----------------
 
-First, when :ref:`creating a new expense <expenses/new>`, the correct information needs to be
-entered to re-invoice a customer. Select the sales order the expense should appear on in the
-:guilabel:`Customer to Reinvoice` section, from the drop-down menu. Next, select the
-:guilabel:`Analytic Account` the expense should be posted to. After the expenses are created, the
-expense report needs to be :doc:`created <expenses/expense_reports>`, and :ref:`submitted
-<expenses/submit>`, as usual.
+First, when :doc:`creating a new expense <expenses/log_expenses>`, the correct information needs to
+be entered in order to re-invoice a customer. Select the *sales order* the expense will appear on in
+the :guilabel:`Customer to Reinvoice` section, from the drop-down menu. Next, select the
+:guilabel:`Analytic Account` the expense will be posted to. After the expense(s) are created, the
+expense report needs to be :doc:`created <expenses/expense_reports>` and :ref:`submitted
+<expenses/submit>` as usual.
 
 .. image:: expenses/reinvoice-expense.png
    :align: center
@@ -400,6 +222,7 @@ been invoiced for the expenses.
 
 .. seealso::
    - :doc:`expenses/approve_expenses`
+   - :doc:`expenses/log_expenses`
    - :doc:`expenses/post_expenses`
    - :doc:`expenses/expense_reports`
 
@@ -407,5 +230,6 @@ been invoiced for the expenses.
    :titlesonly:
 
    expenses/approve_expenses
+   expenses/log_expenses
    expenses/post_expenses
    expenses/expense_reports

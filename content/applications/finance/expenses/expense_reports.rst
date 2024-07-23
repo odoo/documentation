@@ -68,7 +68,7 @@ An :guilabel:`Add: Expense Lines` pop-up window appears, displaying all the avai
 a :guilabel:`To Submit` status) that can be added to the report.
 
 If a new expense needs to be added that does **not** appear on the list, click :guilabel:`New` to
-:ref:`create a new expense <expenses/new>` and add it to the report.
+:doc:`create a new expense <../expenses/log_expenses>` and add it to the report.
 
 Tick the checkbox next to each expense being added, then click :guilabel:`Select`.
 
