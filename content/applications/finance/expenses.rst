@@ -4,9 +4,9 @@
 Expenses
 ========
 
-Odoo **Expenses** streamlines the management of expenses. After an employee submits their expenses
-in Odoo, the expenses are reviewed by management and accounting teams. Once approved, payments can
-then be processed and disbursed back to the employee for reimbursement(s).
+Odoo *Expenses* streamlines the management of expenses. After an employee submits their expenses in
+Odoo, they are reviewed by management and accounting teams. Once approved, payments can then be
+processed, and disbursed back to the employee for reimbursement.
 
 .. seealso::
    `Odoo Expenses: product page <https://www.odoo.com/app/expenses>`_
@@ -62,16 +62,16 @@ report the actual cost when submitting an expense report.
    Here are some examples for when to set a specific :guilabel:`Cost` on a product vs. leaving the
    :guilabel:`Cost` at `0.00`:
 
-   - **Meals**: Set the :guilabel:`Cost` to `0.00`. When an employee logs an expense for a meal,
+   - **Meals**: set the :guilabel:`Cost` to `0.00`. When an employee logs an expense for a meal,
      they enter the actual amount of the bill and will be reimbursed for that amount. An expense for
      a meal costing $95.23 would equal a reimbursement for $95.23.
-   - **Mileage**: Set the :guilabel:`Cost` to `0.30`. When an employee logs an expense for
+   - **Mileage**: set the :guilabel:`Cost` to `0.30`. When an employee logs an expense for
      "mileage", they enter the number of miles driven in the :guilabel:`Quantity` field, and are
      reimbursed 0.30 per mile they entered. An expense for 100 miles would equal a reimbursement for
      $30.00.
-   - **Monthly Parking**: Set the :guilabel:`Cost` to `75.00`. When an employee logs an expense for
+   - **Monthly Parking**: set the :guilabel:`Cost` to `75.00`. When an employee logs an expense for
      "monthly parking", the reimbursement would be for $75.00.
-   - **Expenses**: Set the :guilabel:`Cost` to `0.00`. When an employee logs an expense that is not
+   - **Expenses**: set the :guilabel:`Cost` to `0.00`. When an employee logs an expense that is not
      a meal, mileage, or monthly parking, they use the generic :guilabel:`Expenses` product. An
      expense for a laptop costing $350.00 would be logged as an :guilabel:`Expenses` product, and
      the reimbursement would be for $350.00.
@@ -98,10 +98,10 @@ the default :guilabel:`My Expenses` view. This view can also be accessed from
 
 First, click :guilabel:`New`, and then fill out the various fields on the form.
 
-- :guilabel:`Description`: Enter a short description for the expense in the :guilabel:`Description`
+- :guilabel:`Description`: enter a short description for the expense in the :guilabel:`Description`
   field. This should be short and informative, such as `lunch with client` or `hotel for
   conference`.
-- :guilabel:`Category`: Select the expense category from the drop-down menu that most closely
+- :guilabel:`Category`: select the expense category from the drop-down menu that most closely
   corresponds to the expense. For example, an airplane ticket would be appropriate for an expense
   :guilabel:`Category` named :guilabel:`Air Travel`.
 - :guilabel:`Total`: Enter the total amount paid for the expense in one of two ways:
@@ -119,7 +119,7 @@ First, click :guilabel:`New`, and then fill out the various fields on the form.
         cost *per mile*. Set the :guilabel:`Quantity` to the *number of miles* driven, and the total
         is calculated.
 
-- :guilabel:`Included Taxes`: If taxes were configured on the expense category, the tax percentage
+- :guilabel:`Included Taxes`: if taxes were configured on the expense category, the tax percentage
   and amount appear automatically after entering either the :guilabel:`Total` or the
   :guilabel:`Quantity`.
 
@@ -127,20 +127,20 @@ First, click :guilabel:`New`, and then fill out the various fields on the form.
      When a tax is configured on an expense category, the :guilabel:`Included Taxes` value will
      update in real time as the :guilabel:`Total` or :guilabel:`Quantity` is updated.
 
-- :guilabel:`Employee`: Using the drop-down menu, select the employee this expense is for.
-- :guilabel:`Paid By`: Click the radio button to indicate who paid for the expense and should be
+- :guilabel:`Employee`: using the drop-down menu, select the employee this expense is for.
+- :guilabel:`Paid By`: click the radio button to indicate who paid for the expense and should be
   reimbursed. If the employee paid for the expense (and should be reimbursed) select
   :guilabel:`Employee (to reimburse)`. If the company paid directly instead (e.g. if the company
   credit card was used to pay for the expense) select :guilabel:`Company`. Depending on the expense
   category selected, this field may not appear.
-- :guilabel:`Bill Reference`: If there is any reference text that should be included for the
+- :guilabel:`Bill Reference`: if there is any reference text that should be included for the
   expense, enter it in this field.
-- :guilabel:`Expense Date`: Using the calendar module, enter the date the expense was incurred. Use
+- :guilabel:`Expense Date`: using the calendar module, enter the date the expense was incurred. Use
   the :guilabel:`< (left)` and :guilabel:`> (right)` arrows to navigate to the correct month, then
   click on the specific day to enter the selection.
-- :guilabel:`Account`: Select the expense account that this expense should be logged on from the
+- :guilabel:`Account`: select the expense account that this expense should be logged on from the
   drop-down menu.
-- :guilabel:`Customer to Reinvoice`: If the expense is something that should be paid for by a
+- :guilabel:`Customer to Reinvoice`: if the expense is something that should be paid for by a
   customer, select the :abbr:`SO (Sales Order)` and customer that will be invoiced for this expense
   from the drop-down menu. All sales orders in the drop-down menu list both the :abbr:`SO (Sales
   Order)` as well as the company the sales order is written for, but after the expense is saved, the
@@ -152,14 +152,13 @@ First, click :guilabel:`New`, and then fill out the various fields on the form.
      expenses tied to that meeting would indicate the sales order for the custom garden (which also
      references the customer) as the :guilabel:`Customer to Reinvoice`.
 
-- :guilabel:`Analytic Distribution`: Select the account(s) the expense should be written against
-  from the drop-down menu for either :guilabel:`Projects`, :guilabel:`Departments`, or both.
-  Multiple accounts can be listed for each category if needed. Adjust the percentage for each
-  analytic account by typing in the percentage value next to the account.
-- :guilabel:`Company`: If multiple companies are set up, select the company this expense should be
-  filed for from the drop-down menu. The current company will automatically populate this field.
-- :guilabel:`Notes...`: If any notes are needed in order to clarify the expense, enter them in the
-  notes field.
+- :guilabel:`Analytic Distribution`: select the accounts the expense should be written against from
+  the drop-down menu for either :guilabel:`Projects`, :guilabel:`Departments`, or both. Multiple
+  accounts can be listed for each category, if needed. Adjust the percentage for each analytic
+  account by typing in the percentage value next to the account.
+- :guilabel:`Company`: if multiple companies are set up, select the company this expense should be
+  filed for from the drop-down menu. The current company automatically populates this field.
+- :guilabel:`Notes...`: if any notes are needed to clarify the expense, enter them in this field.
 
 .. image:: expenses/expense-filled-in.png
    :align: center
@@ -263,110 +262,6 @@ appears: :guilabel:`Use this reference as a subject prefix when submitting by em
    - The :guilabel:`Internal Reference` for the expense category `Meals` is `FOOD`
    - The :guilabel:`Cost` for the expense is `$25.00`
 
-.. _expenses/report:
-
-Create an expense report
-========================
-
-When expenses are ready to submit (such as at the end of a business trip, or once a month), an
-*expense report* needs to be created. Go to the main :menuselection:`Expenses` app dashboard, which
-displays a default :guilabel:`My Expenses` view, or go to :menuselection:`Expenses app --> My
-Expenses --> My Expenses`.
-
-Expenses are color coded by status. Any expense with a status of :guilabel:`To Report` (expenses
-that still need to be added to an expense report) the text appears in blue. All other statuses
-(:guilabel:`To Submit`, :guilabel:`Submitted`, and :guilabel:`Approved`) the text appears in black.
-
-First, select each individual expense for the report by clicking the check box next to each entry,
-or quickly select all the expenses in the list by clicking the check box next to :guilabel:`Expense
-Date`.
-
-Another way to quickly add all expenses that are not on an expense report is to click
-:guilabel:`Create Report` without selecting any expenses, and Odoo will select all expenses with a
-status of :guilabel:`To Submit` that are not already on a report.
-
-.. image:: expenses/create-report.png
-   :align: center
-   :alt: Select the expenses to submit, then create the report.
-
-.. note::
-   Any expense can be selected from the :guilabel:`My Expenses` list, regardless of status. The
-   :guilabel:`Create Report` button is visible as long as there is a minimum of 1 expense with a
-   status of :guilabel:`To Report` selected. When the :guilabel:`Create Report` button is clicked,
-   only expenses with a status of :guilabel:`To Submit` that are *not* currently on another expense
-   report will appear in the newly created expense report.
-
-Once the expenses have been selected, click the :guilabel:`Create Report` button. The new report
-appears with all the expenses listed in the :guilabel:`Expense` tab. If there is a receipt attached
-to an individual expense, a :guilabel:`📎 (paperclip)` icon appears next to the :guilabel:`Customer
-to Reinvoice` and :guilabel:`Analytic Distribution` columns.
-
-When the report is created, the date range for the expenses appears in the :guilabel:`Expense Report
-Summary` field by default. It is recommended to edit this field with a short summary for each report
-to help keep expenses organized. Enter a short description for the expense report (such as `Client
-Trip NYC`, or `Repairs for Company Car`) in the :guilabel:`Expense Report Summary` field. Next,
-select a :guilabel:`Manager` from the drop-down menu to assign a manager to review the report. If
-needed, the :guilabel:`Journal` can be changed. Use the drop-down menu to select a different
-:guilabel:`Journal`.
-
-.. image:: expenses/expense-report-summary.png
-   :align: center
-   :alt: Enter a short description and select a manager for the report.
-
-If some expenses are not on the report that should be, they can still be added. Click :guilabel:`Add
-a line` at the bottom of the :guilabel:`Expense` tab. A pop up appears with all the available
-expenses that can be added to the report (with a status of :guilabel:`To Submit`). Click the check
-box next to each expense to add, then click :guilabel:`Select`. The items now appear on the report
-that was just created. If a new expense needs to be added that does *not* appear on the list, click
-:guilabel:`New` to create a new expense and add it to the report.
-
-.. image:: expenses/add-an-expense-line.png
-   :align: center
-   :alt: Add more expenses to the report before submitting.
-
-.. note::
-   Expense reports can be created in one of three places:
-
-   #. Go to the main :menuselection:`Expenses` app dashboard (also accessed by going to
-      :menuselection:`Expenses app --> My Expenses --> My Expenses`)
-   #. Go to :menuselection:`Expenses app --> My Expenses --> My Reports`
-   #. Go to :menuselection:`Expenses app --> Expense Reports`
-
-   In any of these views, click :guilabel:`New` to create a new expense report.
-
-.. _expenses/submit:
-
-Submit an expense report
-------------------------
-
-When an expense report is completed, the next step is to submit the report to a manager for
-approval. Reports must be individually submitted, and cannot be submitted in batches. Open the
-specific report from the list of expense reports (if the report is not already open). To view all
-expense reports, go to :menuselection:`Expenses app --> My Expenses --> My Reports`.
-
-If the list is large, grouping the results by status may be helpful since only reports that have a
-:guilabel:`To Submit` status need to be submitted, reports with an :guilabel:`Approved` or
-:guilabel:`Submitted` status do not.
-
-The :guilabel:`To Submit` expenses are easily identifiable not just from the :guilabel:`To Submit`
-status, but the text appears in blue, while the other expenses text appears in black.
-
-.. image:: expenses/expense-status.png
-   :align: center
-   :alt: Submit the report to the manager.
-
-.. note::
-   The status of each report is shown in the :guilabel:`Status` column on the right. If the
-   :guilabel:`Status` column is not visible, click the :guilabel:`Additional Options (two dots)`
-   icon at the end of the row, and enable :guilabel:`Status`.
-
-Click on a report to open it, then click :guilabel:`Submit To Manager`. After submitting a report,
-the next step is to wait for the manager to approve it.
-
-.. important::
-   The :ref:`expenses/approve`, :ref:`expenses/post`, and :ref:`expenses/reimburse` sections are
-   **only** for users with the *necessary rights*.
-
 .. _expenses/approve:
 
 Approve expenses
@@ -386,10 +281,10 @@ To see who has rights to approve, go to the main :menuselection:`Settings` app a
    :guilabel:`Administration` section (bottom right of the :guilabel:`Access Rights` tab) is set to
    one of three options:
 
-   - :guilabel:`None (blank)`: The user cannot access the *Settings* app at all.
-   - :guilabel:`Access Rights`: The user can only view the :guilabel:`User's & Companies` section of
+   - :guilabel:`None (blank)`: the user cannot access the *Settings* app at all.
+   - :guilabel:`Access Rights`: the user can only view the :guilabel:`User's & Companies` section of
      the *Settings* app.
-   - :guilabel:`Settings`: The user has access to the entire *Settings* app with no restrictions.
+   - :guilabel:`Settings`: the user has access to the entire *Settings* app with no restrictions.
 
    Please refer to :doc:`this document </applications/general/users>` to learn more about managing
    users and their access rights.
@@ -398,12 +293,12 @@ Click on an individual to view their card, which displays the :guilabel:`Access 
 default view. Scroll down to the :guilabel:`Human Resources` section. Under :guilabel:`Expenses`,
 there are four options:
 
-- :guilabel:`None (blank)`: A blank field means the user has no rights to view or approve expense
+- :guilabel:`None (blank)`: a blank field means the user has no rights to view or approve expense
   reports, and can only view their own.
-- :guilabel:`Team Approver`: The user can only view and approve expense reports for their own
+- :guilabel:`Team Approver`: the user can only view and approve expense reports for their own
   specific team.
-- :guilabel:`All Approver`: The user can view and approve any expense report.
-- :guilabel:`Administrator`: The user can view and approve any expense report, as well as access the
+- :guilabel:`All Approver`: the user can view and approve any expense report.
+- :guilabel:`Administrator`: the user can view and approve any expense report, as well as access the
   reporting and configuration menus in the *Expenses* app.
 
 Users who are able to approve expense reports (typically managers) can easily view all expense
@@ -416,18 +311,18 @@ reports with a status of :guilabel:`Refused` are hidden in the default view.
    :align: center
    :alt: Reports to validate are found on the Reports to Approve page.
 
-When viewing expense reports, there is a panel of filters that can be enabled or disabled on the
-left side. The three categories that filters can be applied on are :guilabel:`Status`,
+When viewing expense reports, there is a panel of filters that can be enabled (or disabled) on the
+left side. The three categories where filters can be applied on are :guilabel:`Status`,
 :guilabel:`Employee`, and :guilabel:`Company`. To view only expense reports with a particular
 status, enable the specific status filter to display the expense reports with only that status.
 Disable the specific status filter to hide the reports with that status. To view expense reports for
 a particular employee and/or company, enable the specific employee name filter and/or company filter
 in the :guilabel:`Employee` and :guilabel:`Company` sections.
 
-Reports can be approved in two ways (individually or several at once) and refused only one way. To
+Reports can be approved in two ways (individually or several at once), and refused only one way. To
 approve multiple expense reports at once, remain in the list view. First, select the reports to
-approve by clicking the check box next to each report, or click the box next to :guilabel:`Employee`
-to select all the reports in the list.
+approve by ticking the checkbox next to each report, or tick the checkbox next to
+:guilabel:`Employee` to select all the reports in the list.
 
 .. important::
    Only reports with a status of :guilabel:`Submitted` can be approved. It is recommended to only
@@ -435,7 +330,7 @@ to select all the reports in the list.
    :guilabel:`Submitted` filter enabled.
 
    If a report is selected that is unable to be approved, the :guilabel:`Approve Report` button
-   **will not appear**, indicating there is a problem with the selected report(s).
+   does **not** appear, indicating there is a problem with the selected report.
 
 Next, click the :guilabel:`Approve Report` button.
 
@@ -483,9 +378,9 @@ Post expenses in accounting
 ===========================
 
 Once an expense report is approved, the next step is to post the report to the accounting journal.
-To view all expense reports, go to :menuselection:`Expenses app --> Expense Reports`. To view only the
-expense reports that have been approved and need to be posted, adjust the filters on the left side
-so that only the :guilabel:`Approved` status is enabled.
+To view all expense reports, go to :menuselection:`Expenses app --> Expense Reports`. To view only
+the expense reports that have been approved and need to be posted, adjust the filters on the left
+side so that only the :guilabel:`Approved` status is enabled.
 
 .. image:: expenses/post-reports.png
    :align: center
@@ -493,8 +388,8 @@ so that only the :guilabel:`Approved` status is enabled.
 
 Just like approvals, expense reports can be posted in two ways (individually or several at once). To
 post multiple expense reports at once, remain in the list view. First, select the reports to post by
-clicking the check box next to each report, or click the box next to :guilabel:`Employee` to select
-all the reports in the list. Next, click :guilabel:`Post Entries`.
+ticking the checkbox next to each report, or tick the checkbox next to :guilabel:`Employee` to
+select all the reports in the list. Next, click :guilabel:`Post Entries`.
 
 .. image:: expenses/post-entries.png
    :align: center
@@ -532,8 +427,9 @@ Reports --> Reports To Pay`.
 
 Just like approvals and posting, expense reports can be paid in two ways (individually or several at
 once). To pay multiple expense reports at once, remain in the list view. First, select the reports
-to pay by clicking the check box next to each report, or click the box next to :guilabel:`Employee`
-to select all the reports in the list. Next, click :guilabel:`Register Payment`.
+to pay by ticking the checkbox next to each report, or tick the checkbox next to
+:guilabel:`Employee` to select all the reports in the list. Next, click :guilabel:`Register
+Payment`.
 
 .. image:: expenses/register-payment.png
    :align: center
@@ -567,7 +463,7 @@ If expenses are tracked on customer projects, expenses can be automatically char
 customer. This is done by creating an expense, referencing the :abbr:`SO (Sales Order)` the expense
 should be added to, and then creating the expense report. Next, managers approve the expense report,
 and the accounting department posts the journal entries. Finally, once the expense report is posted
-to a journal, the expense(s) appears on the :abbr:`SO (Sales Order)` that was referenced. The sales
+to a journal, the expenses appear on the :abbr:`SO (Sales Order)` that was referenced. The sales
 order can then be invoiced, thus invoicing the customer for the expense.
 
 Setup
@@ -589,11 +485,11 @@ Create an expense
 -----------------
 
 First, when :ref:`creating a new expense <expenses/new>`, the correct information needs to be
-entered in order to re-invoice a customer. Select the *sales order* the expense will appear on in
-the :guilabel:`Customer to Reinvoice` section, from the drop-down menu. Next, select the
-:guilabel:`Analytic Account` the expense will be posted to. After the expense(s) are created, the
-expense report needs to be :ref:`created <expenses/report>` and :ref:`submitted <expenses/submit>`
-as usual.
+entered to re-invoice a customer. Select the sales order the expense should appear on in the
+:guilabel:`Customer to Reinvoice` section, from the drop-down menu. Next, select the
+:guilabel:`Analytic Account` the expense should be posted to. After the expenses are created, the
+expense report needs to be :doc:`created <expenses/expense_reports>`, and :ref:`submitted
+<expenses/submit>`, as usual.
 
 .. image:: expenses/reinvoice-expense.png
    :align: center
@@ -609,11 +505,11 @@ as usual.
 Validate and post expenses
 --------------------------
 
-Only employees with permissions (typically managers or supervisors) can :ref:`approve expenses
+Only employees with permissions (typically, managers or supervisors) can :ref:`approve expenses
 <expenses/approve>`. Before approving an expense report, ensure the :guilabel:`Analytic
 Distribution` is set on every expense line of a report. If an :guilabel:`Analytic Distribution` is
-missing, assign the correct account(s) from the drop-down menu, and then click :guilabel:`Approve`
-or :guilabel:`Refuse`.
+missing, assign the correct accounts from the drop-down menu, and click :guilabel:`Approve` or
+:guilabel:`Refuse`.
 
 The accounting department is typically responsible for :ref:`posting journal entries
 <expenses/post>`. Once an expense report is approved, it can then be posted. The :abbr:`SO (Sales
@@ -651,3 +547,11 @@ Next, click :guilabel:`Create Invoice`, and select if the invoice is for a :guil
 invoice`, a :guilabel:`Down payment (percentage)`, or a :guilabel:`Down payment (fixed amount)` by
 clicking the radio button next to it. Then, click :guilabel:`Create Invoice`. The customer has now
 been invoiced for the expenses.
+
+.. seealso::
+   :doc:`expenses/expense_reports`
+
+.. toctree::
+   :titlesonly:
+
+   expenses/expense_reports
