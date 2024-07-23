@@ -26,9 +26,9 @@ only the :guilabel:`Approved` checkbox is ticked.
    status of :guilabel:`Refused`.
 
 Expense reports can be posted to accounting journals in two ways: :ref:`individually
-<expenses/individual-reports>` or :ref:`in bulk <expenses/multiple-reports>`.
+<expenses/post-individual>` or :ref:`in bulk <expenses/post-multiple>`.
 
-.. _expenses/individual-reports:
+.. _expenses/post-individual:
 
 Post individual reports
 -----------------------
@@ -47,7 +47,7 @@ After posting the expenses to an accounting journal, a :guilabel:`Journal Entry`
 appears at the top of the screen. Click the :guilabel:`Journal Entry` smart button, and the details
 for the journal entry appear, with a status of :guilabel:`Posted`.
 
-.. _expenses/multiple-reports:
+.. _expenses/post-multiple:
 
 Post multiple reports
 ---------------------
