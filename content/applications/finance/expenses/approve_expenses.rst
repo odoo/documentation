@@ -1,5 +1,5 @@
 ================
-Approve Expenses
+Approve expenses
 ================
 
 In Odoo, not just anyone can approve expense reports, only users with the necessary rights (or
