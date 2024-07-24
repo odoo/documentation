@@ -12,6 +12,7 @@ Setup and configuration
    setup_configuration/labels
    setup_configuration/bpost
    setup_configuration/dhl_credentials
+   setup_configuration/fedex
    setup_configuration/sendcloud_shipping
    setup_configuration/starshipit_shipping
    setup_configuration/ups_credentials
