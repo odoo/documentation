@@ -707,6 +707,14 @@ Date & Time (`datetime`)
 
             <field name="datetimefield" options="{'rounding': 10}" />
 
+    - `show_time`: when set to false, it hides the time part from the datetime field.
+      The field will still accept datetime values, but the time part will be hidden in
+      the UI (default: `true`).
+
+        .. code-block:: xml
+
+            <field name="datetimefield" widget="datetime" options="{'show_time': false}" />
+
 Date Range (`daterange`)
     This widget allows the user to select start and end date from a single picker.
 
