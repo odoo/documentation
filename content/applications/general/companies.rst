@@ -237,7 +237,7 @@ options:
 
 .. note::
    Products **must** be configured as :guilabel:`Can be sold` and shared between the companies. See
-   :doc:`../inventory_and_mrp/inventory/product_management/product_tracking/type`.
+   :doc:`../inventory_and_mrp/inventory/product_management/configure/type`.
 
 .. example::
    :guilabel:`Synchronize invoice/bills`: an invoice posted on `JS Store Belgium`, for `JS Store

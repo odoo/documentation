@@ -290,4 +290,4 @@ just one product per serial number.
    number.
 
 .. seealso::
-   :doc:`/applications/inventory_and_mrp/inventory/product_management/product_tracking/differences`
+   :doc:`../product_tracking`
