@@ -1,6 +1,6 @@
-=====================================
-Removal strategies (FIFO, LIFO, FEFO)
-=====================================
+===================
+Removal strategies
+===================
 
 For companies with warehouses, **removal strategies** determine which products are taken from the
 warehouse, and when. Removal strategies are typically defined for specific picking operations. This
@@ -23,7 +23,7 @@ To change the :guilabel:`Removal Strategy`, go to :menuselection:`Inventory app 
 drop-down menu and selecting the desired removal strategy. After selecting the new removal strategy,
 click :guilabel:`Save`.
 
-.. image:: removal/product-category-location.png
+.. image:: removal_strategies/product-category-location.png
    :align: center
    :alt: Change the Force Removal Strategy for either the Product Categories or Locations.
 
@@ -42,7 +42,7 @@ products are stored in their respective storage locations.
 .. note::
    Not all products have expiration dates, but in this example, expiration dates apply.
 
-.. image:: removal/entering-stocks.png
+.. image:: removal_strategies/entering-stocks.png
    :align: center
    :alt: Products entering stock via the receiving area.
 
@@ -68,16 +68,16 @@ Using the chosen removal strategy configured for those products (in this example
 picking area, then the packing area, and finally, to the shipping docks for delivery to the
 customer.
 
-.. image:: removal/packing-products.png
+.. image:: removal_strategies/packing-products.png
    :align: center
    :alt: Products being packed at the packing area for delivery, taking the expiration dates into
          account.
 
 .. note::
    To pick for delivery, the product's lot/serial number can be found on the transfer form. To learn
-   more about picking and shipping, refer to either the :ref:`Two-step delivery
-   <inventory/receipts_delivery_two_steps>` or :ref:`Three-step delivery
-   <inventory/delivery_three_steps>` documentation.
+   more about picking and shipping, refer to either the :doc:`Two-step delivery
+   <../shipping_receiving/daily_operations/receipts_delivery_two_steps>` or :doc:`Three-step
+   delivery <../shipping_receiving/daily_operations/delivery_three_steps>` documentation.
 
 How each removal strategy works
 ===============================
@@ -102,7 +102,7 @@ boxes from lot `00001` first, and then from the boxes in lot `00002`, since lot 
 stock first. The box from lot `00002` is taken next because it has the oldest receipt date after lot
 `00001`.
 
-.. image:: removal/fifo-nails-picking.png
+.. image:: removal_strategies/fifo-nails-picking.png
    :align: center
    :alt: The detailed operations for the transfer shows the nail lots to be removed.
 
@@ -130,7 +130,7 @@ customer orders seven boxes on June 8.
 Using the :abbr:`LIFO (Last In, First Out)` removal strategy, a transfer is requested for seven
 boxes of screws from lot `10003` because that lot is the last one to have entered the stock.
 
-.. image:: removal/lifo-nails.png
+.. image:: removal_strategies/lifo-nails.png
    :align: center
    :alt: The detailed operations shows which lots are being selected for the picking.
 
@@ -157,7 +157,7 @@ from lot `20002` and one from lot `20001`. All the boxes in lot `20002` are tran
 have the earliest expiration date. The transfer also requests one box from lot `20001` because it
 has the next closest expiration date after lot `20002`.
 
-.. image:: removal/egg-lots-removal.png
+.. image:: removal_strategies/egg-lots-removal.png
    :align: center
    :alt: The detailed operations for the transfer shows the lots to be removed.
 
@@ -169,11 +169,11 @@ To differentiate some units of products from others, the units need to be tracke
 Configuration --> Settings`. Then, activate the :guilabel:`Storage Locations`, :guilabel:`Multi-Step
 Routes`, and :guilabel:`Lots & Serial Numbers` settings. Click :guilabel:`Save` to save changes.
 
-.. image:: removal/traceability.png
+.. image:: removal_strategies/traceability.png
    :align: center
    :alt: :alt: Traceability settings.
 
-.. image:: removal/warehouse-settings.png
+.. image:: removal_strategies/warehouse-settings.png
    :align: center
    :alt: :alt: Warehouse settings.
 
@@ -194,10 +194,9 @@ strategies. For :abbr:`FEFO (First Expired, First Out)`, the expiration date is 
 date the product entered the stock.
 
 For example, imagine there are three lots of six-egg boxes (in this specific case, don't forget to
-use :doc:`units of measure
-</applications/inventory_and_mrp/inventory/product_management/product_replenishment/uom>`). Those
-three lots have the following numbers: :guilabel:`20001`, :guilabel:`20002`, and :guilabel:`20003`,
-each with five boxes in it.
+use :doc:`units of measure <../product_management/configure/uom>`). Those three lots have the
+following numbers: :guilabel:`20001`, :guilabel:`20002`, and :guilabel:`20003`, each with five boxes
+in it.
 
 :guilabel:`20001` entered the stock on the 1st of July and expires on the 15th of July,
 :guilabel:`20002` entered on the 2nd and expires on the 14th of July, and :guilabel:`20003` entered
@@ -232,7 +231,7 @@ To differentiate some units from others, the units need to be tracked, either by
 activate the :guilabel:`Storage Location`, :guilabel:`Multi-Step Routes`, and :guilabel:`Lots &
 Serial Numbers` settings.
 
-.. image:: removal/enabled-features.png
+.. image:: removal_strategies/enabled-features.png
    :align: center
    :alt: Removal strategy on a product category.
 
@@ -242,7 +241,7 @@ drop-down menus of all products assigned lots or serial numbers, filtered by *pr
 To change the category these products are filtered by, click :guilabel:`Product` (in the search bar,
 in the top right of the page) to remove the default filter, and select a new filter if desired.
 
-.. image:: removal/lot-serial.png
+.. image:: removal_strategies/lot-serial.png
    :align: center
    :alt: Click on Products, then Lots/Serial Numbers to display all the products with lots or serial
          numbers.
@@ -266,7 +265,7 @@ In this example, there are three lots of white shirts. The shirts are from the *
 category, where *FIFO* is set as the removal strategy. In the :guilabel:`Inventory Valuation
 Report`, the three different receipts are listed with the amounts.
 
-.. image:: removal/inventory-valuation.png
+.. image:: removal_strategies/inventory-valuation.png
    :align: center
    :alt: View of the lots of white shirts in the inventory valuation report.
 
@@ -285,7 +284,7 @@ the oldest lot numbers will be reserved thanks to the :abbr:`FIFO (First In, Fir
 All five shirts from lot `000001` and one shirt from lot `000002` will be selected to be sent to the
 customer.
 
-.. image:: removal/reserved-lots-fifo-strategy.png
+.. image:: removal_strategies/reserved-lots-fifo-strategy.png
    :align: center
    :alt: Two lots being reserved for a sales order with the FIFO strategy.
 
@@ -301,7 +300,7 @@ In this example, there are three lots of cinder blocks. The blocks are from the 
 Materials* category, where *FIFO* is set as the removal strategy. In the :guilabel:`Inventory
 Valuation Report`, the three different receipts are listed with the amounts.
 
-.. image:: removal/inventory-valuation-bricks.png
+.. image:: removal_strategies/inventory-valuation-bricks.png
    :align: center
    :alt: View of the lots of cinder blocks in the inventory valuation report.
 
@@ -316,7 +315,7 @@ product category form.
 Once on the product category form, under the :guilabel:`Logistics` section, change the
 :guilabel:`Force Removal Strategy` to :guilabel:`Last In First Out (LIFO)`.
 
-.. image:: removal/last-in-first-out.png
+.. image:: removal_strategies/last-in-first-out.png
    :align: center
    :alt: Last in first out (LIFO) strategy set up as forced removal strategy.
 
@@ -332,7 +331,7 @@ the newest lot numbers will be reserved thanks to the :abbr:`LIFO (Last In, Firs
 All four cinder blocks from lot `0000400` and one cinder block from lot `000030` will be selected to
 be sent to the customer.
 
-.. image:: removal/reserved-lots-lifo-strategy.png
+.. image:: removal_strategies/reserved-lots-lifo-strategy.png
    :align: center
    :alt: Two lots being reserved for sale with the LIFO strategy.
 
@@ -356,9 +355,8 @@ dates.
    If products are not removed from stock when they should be, lots that are past the expiration
    date may still be picked for delivery orders!
 
-.. note::
-   For more information about expiration dates, reference the :doc:`Expiration dates
-   <../../product_management/product_tracking/expiration_dates>` document.
+.. seealso::
+   :doc:`../product_management/product_tracking/expiration_dates`
 
 First, go to :menuselection:`Inventory app --> Configuration --> Settings` and ensure
 :guilabel:`Expiration Dates` is enabled. Once the :guilabel:`Expiration Dates` setting is enabled,
@@ -373,7 +371,7 @@ Lot `0000001` contains twenty tubes of hand cream, expiring on Sept 30, lot `000
 tubes of hand cream, expiring on November 30, and lot `0000003` contains ten tubes of hand cream,
 expiring on October 31.
 
-.. image:: removal/hand-cream-lots.png
+.. image:: removal_strategies/hand-cream-lots.png
    :align: center
    :alt: View the hand cream lot numbers and expiration dates in the inventory report.
 
@@ -382,7 +380,7 @@ to :menuselection:`Inventory app --> Products --> Lots/Serial Numbers`. Click :g
 enter the serial number, and select the product from the drop-down menu. Next, select the expiration
 date in the :guilabel:`Dates` tab. Finally, click :guilabel:`Save`.
 
-.. image:: removal/removal-date.png
+.. image:: removal_strategies/removal-date.png
    :align: center
    :alt: View of the removal date for 0000001.
 
@@ -394,7 +392,7 @@ product category form.
 Once on the product category form, under the :guilabel:`Logistics` section, change the
 :guilabel:`Force Removal Strategy` to :abbr:`FEFO (First Expired, First Out)`.
 
-.. image:: removal/fefo.png
+.. image:: removal_strategies/fefo.png
    :align: center
    :alt: FEFO forced removal strategy set on the product category.
 
@@ -411,6 +409,6 @@ Out)` strategy. All twenty tubes of hand cream from lot `0000001` and five from 
 be selected to be sent to the customer, detailed in the :guilabel:`Detailed Operations` tab in the
 sales order.
 
-.. image:: removal/pick-hand-cream.png
+.. image:: removal_strategies/pick-hand-cream.png
    :align: center
    :alt: Hand cream lot numbers selected for the sales order.

@@ -1,8 +1,6 @@
-=================================
-Process deliveries in three steps
-=================================
-
-.. _inventory/delivery_three_steps:
+===================
+Three-step delivery
+===================
 
 Some companies process large amounts of deliveries every day, many of which include multiple
 products or require special packaging. To make this efficient, a packing step is needed before
@@ -17,11 +15,10 @@ business.
 Configuration
 =============
 
-Odoo is configured by default to :ref:`receive and deliver goods in one step
-<inventory/receipts_delivery_one_step>`, so the settings need to be changed in order to utilize
-three step deliveries. First, make sure the *Multi-Step Routes* option is enabled in
-:menuselection:`Inventory --> Configuration --> Settings --> Warehouse`. Note that activating
-:guilabel:`Multi-Step Routes` will also activate *Storage Locations*.
+To change delivery settings from :doc:`one step <receipts_delivery_one_step>` to three steps, make
+sure the *Multi-Step Routes* option is enabled in :menuselection:`Inventory app --> Configuration
+--> Settings --> Warehouse`. Note that activating :guilabel:`Multi-Step Routes` will also activate
+*Storage Locations*.
 
 .. image:: delivery_three_steps/multi-step-routes.png
    :align: center
@@ -62,7 +59,7 @@ shows the picking order, packing order, and the delivery order associated with t
 Process a picking
 -----------------
 
-The picking, packing, and delivery orders will be created once the sales order is confirmed.  To
+The picking, packing, and delivery orders will be created once the sales order is confirmed. To
 view these transfers, go to :menuselection:`Inventory --> Operations --> Transfers`.
 
 .. image:: delivery_three_steps/three-step-delivery-transfers.png

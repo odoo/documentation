@@ -223,7 +223,7 @@ alerts will be created.
    Removal strategies can also be set on :guilabel:`Product Categories`.
 
 .. seealso::
-   :doc:`../../warehouses_storage/advanced_operations_warehouse/removal`
+   :doc:`../../shipping_receiving/removal_strategies`
 
 View expiration dates for lots & serial numbers
 ===============================================

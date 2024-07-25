@@ -15,7 +15,7 @@ tracking labels through Odoo.
 
 .. seealso::
    - :doc:`third_party_shipper`
-   - :doc:`delivery_method`
+   - :doc:`../setup_configuration`
    - :doc:`dhl_credentials`
    - :doc:`ups_credentials`
 
