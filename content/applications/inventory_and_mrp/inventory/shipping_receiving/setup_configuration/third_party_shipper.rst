@@ -8,8 +8,8 @@ Third-party shipping carriers
 .. _inventory/shipping/third_party:
 
 Users can link third-party shipping carriers to Odoo databases, in order to verify carriers'
-delivery to specific addresses, :doc:`automatically calculate shipping costs <delivery_method>`, and
-:doc:`generate shipping labels <labels>`.
+delivery to specific addresses, :doc:`automatically calculate shipping costs
+<../setup_configuration>`, and :doc:`generate shipping labels <labels>`.
 
 In Odoo, shipping carriers can be applied to a sales order (SO), invoice, or delivery order. For
 tips on resolving common issues when configuring shipping connectors, skip to the
@@ -68,8 +68,8 @@ to install it. Multiple third-party shipping connectors can be selected at once.
 :guilabel:`Save`.
 
 .. note::
-   :doc:`Delivery methods <delivery_method>` can also be integrated with operations in the *Sales*,
-   *eCommerce*, and *Website* apps. To install, refer to the :ref:`install apps and modules
+   :doc:`Delivery methods <../setup_configuration>` can also be integrated with operations in the
+   *Sales*, *eCommerce*, and *Website* apps. To install, refer to the :ref:`install apps and modules
    <general/install>` documentation.
 
 .. image:: third_party_shipper/shipping-connectors.png
@@ -90,10 +90,10 @@ delivery method.
    international shipping and one for domestic shipping.
 
    Additional delivery methods can be created for specific purposes, such as :doc:`packaging
-   <../../product_management/product_tracking/packaging>`.
+   <../../product_management/configure/packaging>`.
 
 .. seealso::
-   :doc:`Configure delivery methods <delivery_method>`
+   :doc:`Configure delivery methods <../setup_configuration>`
 
 .. note::
    Ensure the delivery method is published when it should be available on the *Website* app. To
