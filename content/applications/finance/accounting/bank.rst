@@ -36,6 +36,8 @@ follow the instructions.
 .. seealso::
    :doc:`bank/bank_synchronization`
 
+.. _bank_accounts/create:
+
 Create a bank account
 ---------------------
 
