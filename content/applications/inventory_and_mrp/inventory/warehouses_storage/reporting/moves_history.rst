@@ -82,7 +82,7 @@ relevant information
       - :guilabel:`Category`: group records by product category. To configure these, go to
         :menuselection:`Inventory app --> Configuration --> Products: Product Categories`.
       - :guilabel:`Batch Transfer`: group records by :doc:`batch
-        <../advanced_operations_warehouse/batch_transfers>`.
+        <../../shipping_receiving/picking_methods/batch>`.
 
    .. tab:: Favorites
 

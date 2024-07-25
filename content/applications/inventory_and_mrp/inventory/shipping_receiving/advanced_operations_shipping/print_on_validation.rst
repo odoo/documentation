@@ -291,9 +291,9 @@ and tick the :guilabel:`Package Contents` checkbox.
 
 .. important::
    If the option is not available, enable the :doc:`Packages
-   <../../product_management/product_tracking/package>` feature, by going to
-   :menuselection:`Inventory app --> Configuration --> Settings`, ticking the :guilabel:`Packages`
-   checkbox, and clicking :guilabel:`Save`.
+   <../../product_management/configure/package>` feature, by going to :menuselection:`Inventory app
+   --> Configuration --> Settings`, ticking the :guilabel:`Packages` checkbox, and clicking
+   :guilabel:`Save`.
 
 After enabling the feature in the :guilabel:`Hardware` tab, validating the operation prints a PDF of
 the package contents.
@@ -316,7 +316,7 @@ clicking the *Put in Pack* button.
 
 .. important::
    The :guilabel:`Put in Pack` button is available **only** when the :doc:`Packages
-   <../../product_management/product_tracking/package>` feature is enabled in
+   <../../product_management/configure/package>` feature is enabled in
    :menuselection:`Inventory app --> Configuration --> Settings`.
 
    After it is enabled, the :guilabel:`Put in Pack` button is available on all inventory operations
