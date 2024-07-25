@@ -370,9 +370,8 @@ Payment complements
 Payment policy
 **************
 
-One  addition of the Mexican localization is the :guilabel:`Payment Policy` field . `According to
-the SAT documentation <https://www.sat.gob.mx/consultas/92764/comprobante-de-recepcion-de-pagos>`_,
-there may be 2 types of payments:
+One  addition of the Mexican localization is the :guilabel:`Payment Policy` field. According to
+the SAT documentation, there are two types of payments:
 
 - `PUE` (Pago en una Sola Exhibición/Payment in a Single Exhibition)
 - `PPD` (Pago en Parcialidades o Diferido/Payment in Installements or Deferred)
