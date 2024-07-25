@@ -187,7 +187,7 @@ include that specific part of the total quantity.
    on-hand quantity is enough to fulfill the order.
 
 .. seealso::
-   :doc:`../../warehouses_storage/advanced_operations_warehouse/removal`
+   :doc:`../../shipping_receiving/removal_strategies`
 
 Next, click :guilabel:`Add a line`, select a different :guilabel:`Lot/Serial Number`, apply the
 remaining :guilabel:`Done` quantities, and click :guilabel:`Confirm` to close the pop-up window.
@@ -353,4 +353,4 @@ smart button.
    :alt: Show the Traceability Report for a lot, that displays the stock moves.
 
 .. seealso::
-   :doc:`differences`
+   :doc:`../product_tracking`

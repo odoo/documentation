@@ -111,7 +111,7 @@ stock on the *replenishment dashboard*, where the procurement manager can review
 lead times, and forecasted dates of arrival.
 
 .. seealso::
-   :doc:`strategies`
+   :doc:`../replenishment`
 
 .. tip::
    The :guilabel:`Replenishment` dashboard is accessible by going to :menuselection:`Inventory app
@@ -197,8 +197,7 @@ Visibility days
 ===============
 
 .. important::
-   Ensure :doc:`lead times <../../shipping_receiving/advanced_operations_shipping/scheduled_dates>`
-   are understood before proceeding with this section.
+   Ensure :doc:`lead times <lead_times>` are understood before proceeding with this section.
 
 When :ref:`manual reordering rules <inventory/product_management/manual-rr>` are assigned to a
 product, *visibility days* make the product appear on the replenishment dashboard

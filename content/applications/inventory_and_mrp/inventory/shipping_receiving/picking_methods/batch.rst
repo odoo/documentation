@@ -25,7 +25,7 @@ To activate the batch picking option, begin by going to :menuselection:`Inventor
 Configuration --> Settings`. Under the :guilabel:`Operations` section, check the :guilabel:`Batch
 Transfers` box.
 
-.. image:: batch_transfers/batch-transfer-checkbox.png
+.. image:: batch/batch-transfer-checkbox.png
    :align: center
    :alt: Enable the *Batch Transfers* in Inventory > Configuration > Settings.
 
@@ -33,7 +33,7 @@ Since batch picking is a method to optimize the *pick* operation in Odoo, the :g
 Locations` and :guilabel:`Multi-Step Routes` options under the :guilabel:`Warehouse` heading must
 also be checked on this settings page. When finished, click :guilabel:`Save`.
 
-.. image:: batch_transfers/locations-routes-checkbox.png
+.. image:: batch/locations-routes-checkbox.png
    :align: center
    :alt: Enable *Storage Locations* and *Multi-Step Routes* Inventory > Configuration > Settings.
 
@@ -45,10 +45,10 @@ From here, select the desired warehouse from the list. Then, from the radio opti
 (2 steps)` or :guilabel:`Pack goods, send goods in output and then deliver (3 steps)`.
 
 .. seealso::
-   - :ref:`Delivery in two steps <inventory/receipts_delivery_two_steps>`
-   - :ref:`Delivery in three steps <inventory/delivery_three_steps>`
+   - :doc:`Delivery in two steps <../daily_operations/receipts_delivery_two_steps>`
+   - :doc:`../daily_operations/delivery_three_steps`
 
-.. image:: batch_transfers/set-2-or-3-step-shipment.png
+.. image:: batch/set-2-or-3-step-shipment.png
    :align: center
    :alt: Set up 2-step or 3-step outgoing shipments.
 
@@ -81,7 +81,7 @@ Once the transfer records are selected, click :guilabel:`Confirm` to confirm the
    A new batch transfer assigned to the :guilabel:`Responsible`, `Joel Willis`, for the `Pick`
    :guilabel:`Operation Type`. The :guilabel:`Scheduled Date` is set to `August 11`.
 
-   .. image:: batch_transfers/batch-transfer-form.png
+   .. image:: batch/batch-transfer-form.png
       :align: center
       :alt: View of *Batch Transfers* form.
 
@@ -93,7 +93,7 @@ Once the transfer records are selected, click :guilabel:`Confirm` to confirm the
    them in the new transfer. Then, click the :guilabel:`Select` button to close the
    :guilabel:`Add:Transfers` window.
 
-   .. image:: batch_transfers/add-transfers-window.png
+   .. image:: batch/add-transfers-window.png
       :align: center
       :alt: Select multiple transfers from the *Add:Transfers* window.
 
@@ -106,7 +106,7 @@ Another method of creating batch transfers is available using the :guilabel:`Add
 a list. Navigate to the :menuselection:`Inventory app --> Operations` drop-down menu, and select any
 of the :guilabel:`Transfers` to open a filtered list of transfers.
 
-.. image:: batch_transfers/transfers-drop-down.png
+.. image:: batch/transfers-drop-down.png
    :align: center
    :alt: Show all transfer types in a drop-down menu: Receipts, Deliveries, Internal Transfers,
          Manufacturings, Batch Transfers, Dropships.
@@ -115,7 +115,7 @@ On the transfers list, select the checkbox to the left of the selected transfers
 Next, navigate to the :guilabel:`Actions ⚙️ (gear)` button, and click :guilabel:`Add to batch` from
 the resulting drop-down menu.
 
-.. image:: batch_transfers/add-to-batch.png
+.. image:: batch/add-to-batch.png
    :align: center
    :alt: Use *Add to batch* button, from the *Action* button's list.
 
@@ -129,7 +129,7 @@ To begin with a draft, select the :guilabel:`Draft` checkbox.
 
 Conclude the process by clicking :guilabel:`Confirm`.
 
-.. image:: batch_transfers/add-to-batch-window.png
+.. image:: batch/add-to-batch-window.png
    :align: center
    :alt: Show *Add to batch* window to create a batch transfer.
 
@@ -156,7 +156,7 @@ Finally, select :guilabel:`Validate` to complete the picking.
    because the :guilabel:`Done` column matches the value in the :guilabel:`Reserved` column.
    However, `0.00` quantities have been picked for the other product, `Cable Management Box`.
 
-   .. image:: batch_transfers/process-batch-transfer.png
+   .. image:: batch/process-batch-transfer.png
       :align: center
       :alt: Show batch transfer of products from two pickings in the *Detailed Operations* tab.
 
@@ -174,7 +174,7 @@ the products that have been picked, and are ready for the next step.
 
    Click the :guilabel:`Check Availability` button to search the stock again for available products.
 
-   .. image:: batch_transfers/operations-tab.png
+   .. image:: batch/operations-tab.png
       :align: center
       :alt: Show unavailable reserved quantities in the *Operations* tab.
 
@@ -193,7 +193,7 @@ Click :guilabel:`No Backorder` to finish the picking *without* creating another 
 
 Click :guilabel:`Discard` to cancel the validation, and return to the batch transfer form.
 
-.. image:: batch_transfers/create-backorder.png
+.. image:: batch/create-backorder.png
    :align: center
    :alt: Show the *Create Backorder* pop-up.
 
@@ -208,7 +208,7 @@ the :guilabel:`Batch Transfers` button.
 By default, confirmed batch pickings appear on the :guilabel:`Batch Transfers` page. On that page,
 click on the desired batch transfer to open the detailed list of products for the picking.
 
-.. image:: batch_transfers/barcode-batch-transfers.png
+.. image:: batch/barcode-batch-transfers.png
    :align: center
    :alt: Show list of to-do batch transfers in *Barcode* app.
 
@@ -230,7 +230,7 @@ quantities for the picking.
    barcode for the second cabinet, Odoo prompts the user to `Scan a serial number` to record the
    unique serial number for :ref:`product tracking <inventory/serial_numbers/configure>`.
 
-   .. image:: batch_transfers/barcode-products.png
+   .. image:: batch/barcode-products.png
       :align: center
       :alt: Display products to be picked in barcode view.
 

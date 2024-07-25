@@ -13,7 +13,8 @@ section, tick the :guilabel:`Storage Locations` checkbox. Then, click :guilabel:
 
 .. note::
    Typically, the :guilabel:`Storage Locations` feature is used with :doc:`Multi-Step Routes
-   <use_routes>`, which controls how products move between locations.
+   <../../shipping_receiving/daily_operations/use_routes>`, which controls how products move between
+   locations.
 
 .. image:: use_locations/enable-location.png
    :align: center
@@ -53,8 +54,8 @@ location serves its intended purpose in the database:
   the location. For details on each location type, refer to the :ref:`Location Types section
   <inventory/warehouses_storage/location-type>`.
 - :guilabel:`Storage Category`: only available with the :doc:`Storage Categories
-  <../advanced_operations_warehouse/storage_category>` feature enabled in :menuselection:`Inventory
-  app --> Configuration --> Settings`.
+  <../../shipping_receiving/daily_operations/storage_category>` feature enabled in
+  :menuselection:`Inventory app --> Configuration --> Settings`.
 - :guilabel:`Company`: the company the location belongs to.
 - :guilabel:`Is a Scrap Location?`: tick this checkbox to allow for scrapped/damaged goods to be
   stored in this location.
@@ -62,9 +63,10 @@ location serves its intended purpose in the database:
   location.
 - :guilabel:`Barcode`: used with the *Barcode* app, enter the barcode to :ref:`identify actions
   <barcode/setup/location>` at this location when scanned.
-- :guilabel:`Replenish Location`: used for :doc:`configuring routes <use_routes>`, tick this
-  checkbox to set the location as a destination for receiving products from *Buy*, *Manufacture*, or
-  other procurement routes, ensuring products are correctly supplied to the warehouse.
+- :guilabel:`Replenish Location`: used for :doc:`configuring routes
+  <../../shipping_receiving/daily_operations/use_routes>`, tick this checkbox to set the location as
+  a destination for receiving products from *Buy*, *Manufacture*, or other procurement routes,
+  ensuring products are correctly supplied to the warehouse.
 
 .. image:: use_locations/new-location.png
    :align: center
@@ -100,7 +102,7 @@ are: :guilabel:`First In First Out (FIFO)`, :guilabel:`Last In First Out (LIFO)`
 Location`, and :guilabel:`First Expiry First Out (FEFO)`.
 
 .. seealso::
-   :doc:`../advanced_operations_warehouse/removal`
+   :doc:`../../shipping_receiving/removal_strategies`
 
 Current stock at location
 =========================

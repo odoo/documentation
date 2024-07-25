@@ -1,8 +1,6 @@
-===========================================
-Process receipts and deliveries in one step
-===========================================
-
-.. _inventory/receipts_delivery_one_step:
+=============================
+One-step receipt and delivery
+=============================
 
 By default, incoming shipments are configured to be received directly into stock, and outgoing
 shipments are configured to be delivered directly from stock to the customer; the default setting

@@ -1,8 +1,6 @@
-============================================
-Process receipts and deliveries in two steps
-============================================
-
-.. _inventory/receipts_delivery_two_steps:
+=============================
+Two-step receipt and delivery
+=============================
 
 Depending on a company's business processes, multiple steps may be needed before receiving or
 shipping products. In the two-step receipt process, products are received in an input area, then
@@ -22,11 +20,11 @@ One situation where this would be useful is when using either a :abbr:`FIFO (Fir
 where the products that are being picked need to be selected based on their receipt date or
 expiration date.
 
-Odoo is configured by default to :ref:`receive and deliver goods in one step
-<inventory/receipts_delivery_one_step>`, so the settings need to be changed in order to utilize
-two-step receipts and deliveries. Incoming and outgoing shipments do not need to be set to have the
-same steps. For example, products can be received in two steps, but shipped in one step. In the
-following example, two steps will be used for both receipts and deliveries.
+Odoo is configured by default to :doc:`receive and deliver goods in one step
+<receipts_delivery_one_step>`, so the settings need to be changed in order to utilize two-step
+receipts and deliveries. Incoming and outgoing shipments do not need to be set to have the same
+steps. For example, products can be received in two steps, but shipped in one step. In the following
+example, two steps will be used for both receipts and deliveries.
 
 Configure multi-step routes
 ===========================

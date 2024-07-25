@@ -23,9 +23,9 @@ to *Reusable Box* **only** when configuring packages for :ref:`cluster pickings
 <inventory/warehouses_storage/cluster-pack>`.
 
 *Package type* is an optional feature used for :doc:`calculating shipping cost
-<../../shipping_receiving/setup_configuration/delivery_method>`, based on real shipping weight.
-Create package types to include the weight of the package itself (e.g. boxes, pallets, other
-shipping containers) in shipping cost calculations.
+<../../shipping_receiving/setup_configuration>`, based on real shipping weight. Create package types
+to include the weight of the package itself (e.g. boxes, pallets, other shipping containers) in
+shipping cost calculations.
 
 .. note::
    While packages are commonly used in the :doc:`three-step delivery route
@@ -120,7 +120,7 @@ calculate package weights for shipping costs.
 
 .. seealso::
    - :doc:`Shipping carriers <../../shipping_receiving/setup_configuration/third_party_shipper>`
-   - :doc:`../../shipping_receiving/setup_configuration/delivery_method`
+   - :doc:`../../shipping_receiving/setup_configuration`
 
 On the :guilabel:`Package Types` list, clicking :guilabel:`New` opens a blank package type form. The
 fields of the form are as follows:
@@ -186,4 +186,4 @@ following fields:
 
 .. seealso::
    :doc:`Using cluster packages
-   <../../warehouses_storage/advanced_operations_warehouse/cluster_picking>`
+   <../../shipping_receiving/picking_methods/cluster>`
