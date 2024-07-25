@@ -262,116 +262,6 @@ appears: :guilabel:`Use this reference as a subject prefix when submitting by em
    - The :guilabel:`Internal Reference` for the expense category `Meals` is `FOOD`
    - The :guilabel:`Cost` for the expense is `$25.00`
 
-.. _expenses/approve:
-
-Approve expenses
-================
-
-In Odoo, not just anyone can approve expense reports— only users with the necessary rights (or
-permissions) can. This means that a user must have at least *Team Approver* rights for the
-*Expenses* app. Employees with the necessary rights can review expense reports, approve or reject
-them, and provide feedback thanks to the integrated communication tool.
-
-To see who has rights to approve, go to the main :menuselection:`Settings` app and click on
-:guilabel:`Manage Users`.
-
-.. note::
-   If the *Settings* app is not available, then certain rights are not set on the account. Check the
-   :guilabel:`Access Rights` tab of a user's card in the :menuselection:`Settings` app. the
-   :guilabel:`Administration` section (bottom right of the :guilabel:`Access Rights` tab) is set to
-   one of three options:
-
-   - :guilabel:`None (blank)`: the user cannot access the *Settings* app at all.
-   - :guilabel:`Access Rights`: the user can only view the :guilabel:`User's & Companies` section of
-     the *Settings* app.
-   - :guilabel:`Settings`: the user has access to the entire *Settings* app with no restrictions.
-
-   Please refer to :doc:`this document </applications/general/users>` to learn more about managing
-   users and their access rights.
-
-Click on an individual to view their card, which displays the :guilabel:`Access Rights` tab in the
-default view. Scroll down to the :guilabel:`Human Resources` section. Under :guilabel:`Expenses`,
-there are four options:
-
-- :guilabel:`None (blank)`: a blank field means the user has no rights to view or approve expense
-  reports, and can only view their own.
-- :guilabel:`Team Approver`: the user can only view and approve expense reports for their own
-  specific team.
-- :guilabel:`All Approver`: the user can view and approve any expense report.
-- :guilabel:`Administrator`: the user can view and approve any expense report, as well as access the
-  reporting and configuration menus in the *Expenses* app.
-
-Users who are able to approve expense reports (typically managers) can easily view all expense
-reports they have access rights to. Go to :menuselection:`Expenses app --> Expense Reports`, and a
-list appears with all expense reports that have a status of either :guilabel:`To Submit`,
-:guilabel:`Submitted`, :guilabel:`Approved`, :guilabel:`Posted`, or :guilabel:`Done`. Expense
-reports with a status of :guilabel:`Refused` are hidden in the default view.
-
-.. image:: expenses/expense-reports-list.png
-   :align: center
-   :alt: Reports to validate are found on the Reports to Approve page.
-
-When viewing expense reports, there is a panel of filters that can be enabled (or disabled) on the
-left side. The three categories where filters can be applied on are :guilabel:`Status`,
-:guilabel:`Employee`, and :guilabel:`Company`. To view only expense reports with a particular
-status, enable the specific status filter to display the expense reports with only that status.
-Disable the specific status filter to hide the reports with that status. To view expense reports for
-a particular employee and/or company, enable the specific employee name filter and/or company filter
-in the :guilabel:`Employee` and :guilabel:`Company` sections.
-
-Reports can be approved in two ways (individually or several at once), and refused only one way. To
-approve multiple expense reports at once, remain in the list view. First, select the reports to
-approve by ticking the checkbox next to each report, or tick the checkbox next to
-:guilabel:`Employee` to select all the reports in the list.
-
-.. important::
-   Only reports with a status of :guilabel:`Submitted` can be approved. It is recommended to only
-   display the submitted reports by adjusting the status filter on the left side by only having the
-   :guilabel:`Submitted` filter enabled.
-
-   If a report is selected that is unable to be approved, the :guilabel:`Approve Report` button
-   does **not** appear, indicating there is a problem with the selected report.
-
-Next, click the :guilabel:`Approve Report` button.
-
-.. image:: expenses/approve-report.png
-   :align: center
-   :alt: Approve multiple reports by clicking the checkboxes next to each report.
-
-To approve an individual report, click on a report to go to a detailed view of that report. In this
-view, several options are presented: :guilabel:`Approve`, :guilabel:`Report in Next Payslip`,
-:guilabel:`Refuse`, or :guilabel:`Reset to draft`. Click :guilabel:`Approve` to approve the report.
-
-If :guilabel:`Refuse` is clicked, a pop-up window appears. Enter a brief explanation for the refusal
-in the :guilabel:`Reason to Refuse Expense` field, and then click :guilabel:`Refuse`.
-
-.. image:: expenses/refuse-expense.png
-   :align: center
-   :alt: Send messages in the chatter.
-
-Team managers can easily view all the expense reports for their team members. While in the
-:guilabel:`Expense Reports` view, click the drop-down arrow in the right-side of the search box, and
-click on :guilabel:`My Team` in the :guilabel:`Filters` section. This presents all the reports for
-the manager's team.
-
-.. image:: expenses/my-team-filter.png
-   :align: center
-   :alt: Select the My Team filter.
-
-.. tip::
-   If more information is needed, such as a missing receipt, communication is easy from the chatter.
-   In an individual report, simply click :guilabel:`Send message` to open the message text box. Type
-   in a message, tagging the proper person (if needed), and post it to the chatter by clicking
-   :guilabel:`Send`. The message is posted in the chatter, and the person tagged will be notified
-   via email of the message, as well as any followers.
-
-   The only people that can be tagged in a message are *followers*. To see who is a follower, click
-   on the :guilabel:`👤 (person)` icon to display the followers of the expense.
-
-   .. image:: expenses/chatter.png
-      :align: center
-      :alt: Send messages in the chatter.
-
 .. _expenses/reimburse:
 
 Reimburse employees
@@ -465,8 +355,8 @@ expense report needs to be :doc:`created <expenses/expense_reports>`, and :ref:`
 Validate and post expenses
 --------------------------
 
-Only employees with permissions (typically, managers or supervisors) can :ref:`approve expenses
-<expenses/approve>`. Before approving an expense report, ensure the :guilabel:`Analytic
+Only employees with permissions (typically managers or supervisors) can :doc:`approve expenses
+<expenses/approve_expenses>`. Before approving an expense report, ensure the :guilabel:`Analytic
 Distribution` is set on every expense line of a report. If an :guilabel:`Analytic Distribution` is
 missing, assign the correct accounts from the drop-down menu, and click :guilabel:`Approve` or
 :guilabel:`Refuse`.
@@ -509,11 +399,13 @@ clicking the radio button next to it. Then, click :guilabel:`Create Invoice`. Th
 been invoiced for the expenses.
 
 .. seealso::
+   - :doc:`expenses/approve_expenses`
    - :doc:`expenses/post_expenses`
    - :doc:`expenses/expense_reports`
 
 .. toctree::
    :titlesonly:
 
+   expenses/approve_expenses
    expenses/post_expenses
    expenses/expense_reports
