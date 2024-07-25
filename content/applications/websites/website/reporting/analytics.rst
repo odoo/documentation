@@ -1,3 +1,5 @@
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2661843431592536"
+     crossorigin="anonymous"></script>
 =================
 Website analytics
 =================
