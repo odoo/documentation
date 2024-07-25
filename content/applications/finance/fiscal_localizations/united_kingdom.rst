@@ -23,6 +23,10 @@ Reports` modules to get all the features of the UK localization.
      - `l10n_uk_reports`
      -  - Accounting reports for the UK
         - Allows sending the tax report via the MTD-VAT API to HMRC.
+   * - :guilabel:`UK BACS Payment Files`
+     - `account_bacs`
+     - Enables generating payment orders as required by the BACS Direct Debit and Direct Credit
+       standards.
 
 .. image:: united_kingdom/uk.png
    :align: center
@@ -123,8 +127,6 @@ each submission:
    During this process, the :guilabel:`Connect to HMRC` button no longer appears for other UK-based
    companies.
 
-.. _united-kingdom/employment-hero:
-
 BACS files
 ==========
 
@@ -200,6 +202,8 @@ tick :guilabel:`BACS Multi Mode` (payments in batch get individually processed).
 Click :guilabel:`Add a line` and :guilabel:`Select` the payments created earlier. Click
 :guilabel:`Validate` when done. Once validated, the BACS file is available in the chatter. You can
 also :guilabel:`Re-generate Export File` if you need a new BACS file for that batch payment order.
+
+.. _united-kingdom/employment-hero:
 
 Employment Hero payroll
 =======================
