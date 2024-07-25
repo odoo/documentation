@@ -56,8 +56,7 @@ Click the buttons to the right of each row item to access additional information
         :alt: Display *Moves History* page of to-do deliveries that reserved the product.
 
 - :icon:`fa-refresh` :guilabel:`Replenishment`: access the :doc:`reordering rules
-  <../../product_management/product_replenishment/reordering_rules>` page to replenish products at
-  the specific location.
+  <../replenishment/reordering_rules>` page to replenish products at the specific location.
 
 In the upper-left corner of the page, click the the :guilabel:`New` button to make an
 :doc:`inventory adjustment <../inventory_management/count_products>` to record quantities of a

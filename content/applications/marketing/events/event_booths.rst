@@ -20,8 +20,8 @@ To do that, navigate to :menuselection:`Events app --> Configuration --> Setting
 
 .. important::
    When the :guilabel:`Booth Management` setting is activated, a new :doc:`Product Type
-   <../../inventory_and_mrp/inventory/product_management/product_tracking/type>` becomes available
-   on all product forms: *Event Booth*.
+   <../../inventory_and_mrp/inventory/product_management/configure/type>` becomes available on all
+   product forms: *Event Booth*.
 
    This is important because every created booth **must** be assigned a *Booth Category* on their
    respective booth form, and every booth category **must** have an *Event Booth* product assigned
