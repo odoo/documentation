@@ -2,8 +2,8 @@
 Post expenses
 =============
 
-Once an expense report is :ref:`approved <expenses/approve>`, the next step is to post the expense
-report to the proper accounting journal.
+Once an expense report is :doc:`approved <../expenses/approve_expenses>`, the next step is to post
+the expense report to the proper accounting journal.
 
 .. important::
    To post expense reports to an accounting journal, the user **must** have the following
@@ -26,9 +26,9 @@ only the :guilabel:`Approved` checkbox is ticked.
    status of :guilabel:`Refused`.
 
 Expense reports can be posted to accounting journals in two ways: :ref:`individually
-<expenses/individual>` or :ref:`in bulk <expenses/multiple>`.
+<expenses/individual-reports>` or :ref:`in bulk <expenses/multiple-reports>`.
 
-.. _expenses/individual:
+.. _expenses/individual-reports:
 
 Post individual reports
 -----------------------
@@ -47,7 +47,7 @@ After posting the expenses to an accounting journal, a :guilabel:`Journal Entry`
 appears at the top of the screen. Click the :guilabel:`Journal Entry` smart button, and the details
 for the journal entry appear, with a status of :guilabel:`Posted`.
 
-.. _expenses/multiple:
+.. _expenses/multiple-reports:
 
 Post multiple reports
 ---------------------
