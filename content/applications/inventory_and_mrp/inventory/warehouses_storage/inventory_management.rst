@@ -23,9 +23,9 @@ Warehouses
 :doc:`Warehouses <inventory_management/warehouses>` represent a physical place, with a physical
 address, where a company's items are stored.
 
-Configure :doc:`routes <inventory_management/use_routes>` in a warehouse to control how products
-move to customers, from vendors, within the warehouse, or :doc:`between warehouses
-<inventory_management/resupply_warehouses>`.
+Configure :doc:`routes <../shipping_receiving/daily_operations/use_routes>` in a warehouse to
+control how products move to customers, from vendors, within the warehouse, or :doc:`between
+warehouses <replenishment/resupply_warehouses>`.
 
 Locations
 =========
@@ -138,7 +138,4 @@ provide helpful context, and distinguish between internal and external locations
    inventory_management/count_products
    inventory_management/cycle_counts
    inventory_management/scrap_inventory
-   inventory_management/resupply_warehouses
-   inventory_management/warehouse_replenishment_transfer
-   inventory_management/use_routes
 
