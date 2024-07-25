@@ -99,7 +99,7 @@ their capacities in the :guilabel:`Quantity` field.
 Capacity by package
 -------------------
 
-For companies using :doc:`packages <../../product_management/product_tracking/package>`, it becomes
+For companies using :doc:`packages <../../product_management/configure/package>`, it becomes
 possible to ensure real-time storage capacity checks, based on package types (e.g., crates, bins,
 boxes, etc.).
 

@@ -3,9 +3,9 @@ FedEx integration
 =================
 
 Integrating a FedEx account with Odoo's **Inventory** app makes it possible to :doc:`calculate
-shipping rates <delivery_method>`, and :doc:`generate shipping labels <labels>` within Odoo. This is
-accomplished by enabling the FedEx *shipping connector*, then configuring at least one *shipping
-method*.
+shipping rates <../setup_configuration>`, and :doc:`generate shipping labels <labels>` within Odoo.
+This is accomplished by enabling the FedEx *shipping connector*, then configuring at least one
+*shipping method*.
 
 .. note::
    This documentation contains configuration details specific to FedEx integration. See the

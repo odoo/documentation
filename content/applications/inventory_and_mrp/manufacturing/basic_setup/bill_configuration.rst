@@ -226,7 +226,7 @@ calculate costs, and define how components are consumed.
 .. seealso::
    - :doc:`Analytic distribution <../../../finance/accounting/reporting/analytic_accounting>`
    - :doc:`Lead times
-     <../../inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates>`
+     <../../inventory/warehouses_storage/replenishment/lead_times>`
 
 .. image:: bill_configuration/misc-tab.png
    :align: center

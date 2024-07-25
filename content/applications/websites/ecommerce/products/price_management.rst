@@ -53,11 +53,11 @@ Price per unit
 ==============
 
 It is possible to display a :doc:`price per unit
-</applications/inventory_and_mrp/inventory/product_management/product_replenishment/uom>` on the
-product page. To do that, go to :menuselection:`Website --> Configuration --> Settings` and enable
-:guilabel:`Product Reference Price` under the :guilabel:`Shop - Products` section. When enabled,
-ensure an amount is set in the :guilabel:`Base Unit Count` field of the **product template**, and in
-the :guilabel:`Sales Price`.
+<../../../inventory_and_mrp/inventory/product_management/configure/uom>` on the product page. To do
+that, go to :menuselection:`Website --> Configuration --> Settings` and enable :guilabel:`Product
+Reference Price` under the :guilabel:`Shop - Products` section. When enabled, ensure an amount is
+set in the :guilabel:`Base Unit Count` field of the **product template**, and in the
+:guilabel:`Sales Price`.
 
 .. image:: price_management/price-cost-per-unit.png
    :align: center
@@ -74,7 +74,7 @@ page.
    Pay attention that having the price per unit may be **mandatory** in some countries.
 
 .. seealso::
-   :doc:`/applications/inventory_and_mrp/inventory/product_management/product_replenishment/uom`
+   :doc:`../../../inventory_and_mrp/inventory/product_management/configure/uom`
 
 .. _ecommerce/pricelists:
 
