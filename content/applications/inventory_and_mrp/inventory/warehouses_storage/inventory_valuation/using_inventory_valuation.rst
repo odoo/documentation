@@ -57,9 +57,9 @@ valuation for the table was affected by this purchase.
    smart button.
 
 .. tip::
-   The :doc:`consignment </applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/owned_stock>`
-   feature allows ownership to items in stock. Thus, products owned by other companies are not
-   accounted for in the host company's inventory valuation.
+   The :doc:`consignment <../../shipping_receiving/daily_operations/owned_stock>` feature allows
+   ownership to items in stock. Thus, products owned by other companies are not accounted for in the
+   host company's inventory valuation.
 
 .. image:: using_inventory_valuation/valuation-smart-button.png
    :align: center

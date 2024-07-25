@@ -119,8 +119,8 @@ product. On the product form, switch to the :guilabel:`Inventory` tab, and under
 Lots` options.
 
 After enabling the features, assign lot or serial numbers to products using an :doc:`inventory
-adjustment <inventory_management/count_products>` or during :ref:`product reception
-<inventory/product_management/assign-lots>`.
+adjustment <../warehouses_storage/inventory_management/count_products>` or during :ref:`product
+reception <inventory/product_management/assign-lots>`.
 
 Locations and routes
 --------------------
@@ -169,9 +169,9 @@ the :guilabel:`Packages` feature.
    :alt: Enable the packages feature.
 
 .. seealso::
-   - :doc:`Packages <../product_management/product_tracking/package>`
-   - :doc:`2-step delivery <../shipping_receiving/daily_operations/receipts_delivery_two_steps>`
-   - :doc:`3-step delivery <../shipping_receiving/daily_operations/delivery_three_steps>`
+   - :doc:`Packages <../product_management/configure/package>`
+   - :doc:`2-step delivery <daily_operations/receipts_delivery_two_steps>`
+   - :doc:`3-step delivery <daily_operations/delivery_three_steps>`
 
 .. toctree::
    :titlesonly:
