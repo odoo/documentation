@@ -7,9 +7,9 @@ Product type
 Define *product types* in Odoo to track products in varying levels of detail.
 
 Classify products as *storable* to track stock counts, allowing users to trigger :doc:`reordering
-rules <../product_replenishment/reordering_rules>` for generating purchase orders. *Consumable*
-products are assumed to always be in stock, and *service* products are performed and served by the
-business.
+rules <../../warehouses_storage/replenishment/reordering_rules>` for generating purchase orders.
+*Consumable* products are assumed to always be in stock, and *service* products are performed and
+served by the business.
 
 .. seealso::
    `Odoo Tutorials: Product Type <https://www.youtube.com/watch?v=l6j0ZkP5mLM>`_
@@ -87,7 +87,7 @@ to detailed sections.
      - :ref:`Yes* <inventory/product_management/transfer-store>`
      - :ref:`Yes* <inventory/product_management/transfer-con>`
      - :ref:`No* <inventory/product_management/transfer-serv>`
-   * - :doc:`Lot/serial number tracking <differences>`
+   * - :doc:`Lot/serial number tracking <../product_tracking>`
      - Yes
      - No
      - No
