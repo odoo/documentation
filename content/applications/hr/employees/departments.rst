@@ -75,9 +75,9 @@ Each department has its own Kanban card on the main :guilabel:`Departments` :ico
   are requests to approve.
 - :guilabel:`New Applicants`: the number of :ref:`new applicants <recruitment/new>` for a position
   in this department. This **only** appears if there are new applicants.
-- :guilabel:`Expense Reports`: the number of employees in the department with :ref:`open expense
-  reports to approve <expenses/approve>`. This **only** appears if there are any expense reports
-  waiting for approval.
+- :guilabel:`Expense Reports`: the number of employees in the department with :doc:`open expense
+  reports to approve <../../finance/expenses/approve_expenses>`. This **only** appears if there are
+  any expense reports waiting for approval.
 - :guilabel:`Absence`: the number of absences for the current day.
 - Color bar: the selected color for the department appears as a vertical bar on the left side of the
   department card.
