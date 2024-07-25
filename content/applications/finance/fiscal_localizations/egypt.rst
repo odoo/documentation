@@ -175,7 +175,7 @@ Make sure your products are correctly configured so your e-invoices are valid:
 
 - :guilabel:`Product Type`: storable products, consumables, or services.
 - :guilabel:`Unit of Measure`: if you also use Odoo Inventory and have enabled :doc:`Units of
-  Measure <../../inventory_and_mrp/inventory/product_management/product_replenishment/uom>`.
+  Measure <../../inventory_and_mrp/inventory/product_management/configure/uom>`.
 - :guilabel:`Barcode`: **GS1** or **EGS** barcode
 - :guilabel:`ETA Item code` (under the :menuselection:`Accounting` tab): if the barcode doesn't
   match your ETA item code.

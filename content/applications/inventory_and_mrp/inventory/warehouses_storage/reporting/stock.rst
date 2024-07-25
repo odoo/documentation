@@ -53,8 +53,8 @@ Click the buttons to the right of each row item to access additional information
 - :guilabel:`History`: access the stock move history of the product, displaying information about
   the quantity and description of why the product was moved from one location to another.
 - :guilabel:`Replenishment`: access the :doc:`reordering rules
-  <../../product_management/product_replenishment/reordering_rules>` page for the product to create
-  or manage methods of procuring the product.
+  <../replenishment/reordering_rules>` page for the product to create or manage methods of procuring
+  the product.
 - :guilabel:`Locations`: break down of on-hand quantity at multiple storage locations. Only
   available when the product is stored in multiple locations.
 - :guilabel:`Forecast`: access the forecasted report to view on-hand, incoming, and outgoing
@@ -107,7 +107,7 @@ Search options
         *Expenses* app installed.
 
       .. seealso::
-         :doc:`../../product_management/product_tracking/type`
+         :doc:`../../product_management/configure/type`
 
    .. tab:: Group By
 
@@ -115,7 +115,7 @@ Search options
       search results.
 
       - :guilabel:`Product Type`: group items by :doc:`product type
-        <../../product_management/product_tracking/type>`.
+        <../../product_management/configure/type>`.
       - :guilabel:`Product Category`: group items by product category. To configure these, go to
         :menuselection:`Inventory app --> Configuration --> Products: Product Categories`.
       - :guilabel:`POS Product Category`: group items by :doc:`point of sale product categories
