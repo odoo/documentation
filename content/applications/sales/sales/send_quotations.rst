@@ -14,3 +14,4 @@ Send Quotations
    send_quotations/deadline
    send_quotations/different_addresses
    send_quotations/orders_and_variants
+   send_quotations/create_quotations
