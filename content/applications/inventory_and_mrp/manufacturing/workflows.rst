@@ -14,7 +14,4 @@ Workflows
    workflows/split_merge
    workflows/unbuild_orders
    workflows/byproducts
-   workflows/allocation
    workflows/continuous_improvement
-   workflows/oee
-   workflows/production_analysis
