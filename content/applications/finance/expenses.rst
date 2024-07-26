@@ -84,50 +84,6 @@ Set a tax on each product in the :guilabel:`Vendor Taxes` and :guilabel:`Custome
 applicable. It is considered good practice to use a tax that is configured with :ref:`Tax Included
 in Price <taxes/included-in-price>`. Taxes will be automatically configured if this is set.
 
-.. _expenses/reimburse:
-
-Reimburse employees
-===================
-
-After an expense report is posted to an accounting journal, the next step is to reimburse the
-employee. To view all the expense reports to pay, go to :menuselection:`Expenses app --> Expense
-Reports --> Reports To Pay`.
-
-.. image:: expenses/reports-to-pay.png
-   :align: center
-   :alt: View reports to pay by clicking on expense reports, then reports to pay.
-
-Just like approvals and posting, expense reports can be paid in two ways (individually or several at
-once). To pay multiple expense reports at once, remain in the list view. First, select the reports
-to pay by ticking the checkbox next to each report, or tick the checkbox next to
-:guilabel:`Employee` to select all the reports in the list. Next, click :guilabel:`Register
-Payment`.
-
-.. image:: expenses/register-payment.png
-   :align: center
-   :alt: Post multiple reports by selecting them, clicking the gear, and then post the entries.
-
-To pay an individual report, click on a report to go to a detailed view of that report. Click
-:guilabel:`Register Payment` to pay the employee.
-
-A :guilabel:`Register Payment` pop-up appears, and the :guilabel:`Journal`, :guilabel:`Payment
-Method`, and :guilabel:`Payment Date` can be modified, if needed. When the selections are correct,
-click :guilabel:`Create Payment` to send the payment to the employee.
-
-To pay an individual report, click on a report in the list view to go to a detailed view of that
-report. Click :guilabel:`Register Payment` to pay the employee. A :guilabel:`Register Payment`
-pop-up appears, but when paying an individual expense report instead of several at once, more
-options appear in the pop-up. In addition to the :guilabel:`Journal`, :guilabel:`Payment Method`,
-and :guilabel:`Payment Date` fields, a :guilabel:`Recipient Bank Account`, :guilabel:`Amount`, and
-:guilabel:`Memo` field appear. Select the employee's bank account from the drop-down menu to
-directly deposit the payment to their account. When all other selections are correct, click
-:guilabel:`Create Payment` to send the payment to the employee.
-
-.. image:: expenses/two-payment-posting-options.png
-   :align: center
-   :alt: Different options appear when registering an individual expense report versus multiple
-         expense reports at once.
-
 Re-invoice expenses to customers
 ================================
 
@@ -220,16 +176,19 @@ invoice`, a :guilabel:`Down payment (percentage)`, or a :guilabel:`Down payment 
 clicking the radio button next to it. Then, click :guilabel:`Create Invoice`. The customer has now
 been invoiced for the expenses.
 
+
 .. seealso::
-   - :doc:`expenses/approve_expenses`
    - :doc:`expenses/log_expenses`
-   - :doc:`expenses/post_expenses`
    - :doc:`expenses/expense_reports`
+   - :doc:`expenses/approve_expenses`
+   - :doc:`expenses/post_expenses`
+   - :doc:`expenses/reimburse`
 
 .. toctree::
    :titlesonly:
 
-   expenses/approve_expenses
    expenses/log_expenses
-   expenses/post_expenses
    expenses/expense_reports
+   expenses/approve_expenses
+   expenses/post_expenses
+   expenses/reimburse
