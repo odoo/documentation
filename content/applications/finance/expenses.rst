@@ -4,8 +4,8 @@
 Expenses
 ========
 
-Odoo *Expenses* streamlines the management of expenses. After an employee submits their expenses in
-Odoo, they are reviewed by management and accounting teams. Once approved, payments can then be
+Odoo **Expenses** streamlines the management of expenses. After an employee submits their expenses
+in Odoo, they are reviewed by management and accounting teams. Once approved, payments can then be
 processed, and disbursed back to the employee for reimbursement.
 
 .. seealso::
@@ -372,46 +372,6 @@ the manager's team.
       :align: center
       :alt: Send messages in the chatter.
 
-.. _expenses/post:
-
-Post expenses in accounting
-===========================
-
-Once an expense report is approved, the next step is to post the report to the accounting journal.
-To view all expense reports, go to :menuselection:`Expenses app --> Expense Reports`. To view only
-the expense reports that have been approved and need to be posted, adjust the filters on the left
-side so that only the :guilabel:`Approved` status is enabled.
-
-.. image:: expenses/post-reports.png
-   :align: center
-   :alt: View reports to post by clicking on expense reports, then reports to post.
-
-Just like approvals, expense reports can be posted in two ways (individually or several at once). To
-post multiple expense reports at once, remain in the list view. First, select the reports to post by
-ticking the checkbox next to each report, or tick the checkbox next to :guilabel:`Employee` to
-select all the reports in the list. Next, click :guilabel:`Post Entries`.
-
-.. image:: expenses/post-entries.png
-   :align: center
-   :alt: Post multiple reports at a time from the Expense Reports view, with the Approved filter.
-
-To post an individual report, click on a report to go to the detailed view of that report. In this
-view, several options are presented: :guilabel:`Post Journal Entries`, :guilabel:`Report In Next
-Payslip`, :guilabel:`Refuse`, or :guilabel:`Reset to Draft`. Click :guilabel:`Post Journal Entries`
-to post the report.
-
-If :guilabel:`Refuse` is clicked, a pop-up window appears. Enter a brief explanation for the refusal
-in the :guilabel:`Reason to Refuse Expense` field, and then click :guilabel:`Refuse`. Refused
-reports can be viewed by going to :menuselection:`Expenses app --> Expense Reports`, then adjusting
-the filters on the left so that only :guilabel:`Refused` is selected. This will only show the
-refused expense reports.
-
-.. important::
-   To post expense reports to an accounting journal, the user must have following access rights:
-
-   - Accounting: Accountant or Adviser
-   - Expenses: Manager
-
 .. _expenses/reimburse:
 
 Reimburse employees
@@ -511,10 +471,10 @@ Distribution` is set on every expense line of a report. If an :guilabel:`Analyti
 missing, assign the correct accounts from the drop-down menu, and click :guilabel:`Approve` or
 :guilabel:`Refuse`.
 
-The accounting department is typically responsible for :ref:`posting journal entries
-<expenses/post>`. Once an expense report is approved, it can then be posted. The :abbr:`SO (Sales
-Order)` is **only** updated *after the journal entries are posted*. One the journal entries are
-posted, the expenses now appear on the referenced :abbr:`SO (Sales Order)`.
+The accounting department is typically responsible for :doc:`posting journal entries
+<expenses/post_expenses>`. Once an expense report is approved, it can then be posted. The :abbr:`SO
+(Sales Order)` is **only** updated *after* the journal entries are posted. Once the journal entries
+are posted, the expenses now appear on the referenced :abbr:`SO (Sales Order)`.
 
 Invoice expenses
 ----------------
@@ -549,9 +509,11 @@ clicking the radio button next to it. Then, click :guilabel:`Create Invoice`. Th
 been invoiced for the expenses.
 
 .. seealso::
-   :doc:`expenses/expense_reports`
+   - :doc:`expenses/post_expenses`
+   - :doc:`expenses/expense_reports`
 
 .. toctree::
    :titlesonly:
 
+   expenses/post_expenses
    expenses/expense_reports
