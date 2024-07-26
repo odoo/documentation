@@ -17,7 +17,7 @@ expense reports, navigate to :menuselection:`Expenses app --> Expense Reports`. 
 **only** approved expense reports that need to be posted, adjust the filters on the left side, so
 only the :guilabel:`Approved` checkbox is ticked.
 
-.. image:: post-expenses/post-reports.png
+.. image:: post_expenses/post-reports.png
    :align: center
    :alt: View reports to post by clicking on expense reports, then reports to post.
 
@@ -70,6 +70,6 @@ checkbox next to each report being approved.
 
 Next, click the :guilabel:`Post Entries` button.
 
-.. image:: post-expenses/post-entries.png
+.. image:: post_expenses/post-entries.png
    :align: center
    :alt: Post multiple reports at a time from the Expense Reports view, with the Approved filter.
