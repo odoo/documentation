@@ -37,3 +37,5 @@ To close Studio, click :guilabel:`Close` in the upper right corner.
 
 .. seealso::
    `Odoo Tutorials: Studio <https://www.odoo.com/slides/studio-31>`_
+
+Test branch name
