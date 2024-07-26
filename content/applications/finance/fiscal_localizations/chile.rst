@@ -474,11 +474,7 @@ Invoice PDF Report
 ~~~~~~~~~~~~~~~~~~
 
 Once the invoice is accepted and validated by the SII and the PDF is printed, it includes the
-fiscal elements that indicate that the document is fiscally valid:
-
-.. image:: chile/Chile22.png
-   :align: center
-   :alt: Barcode and fiscal elements in the invoice report.
+fiscal elements that indicate that the document is fiscally valid.
 
 .. important::
    If you are hosted in Odoo SH or On-Premise, you should manually install the ``pdf417gen``
