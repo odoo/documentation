@@ -11,6 +11,8 @@ Expenses are color-coded by status. Any expense with a status of :guilabel:`To R
 that still need to be added to an expense report) is shown in blue text. All other statuses
 (:guilabel:`To Submit`, :guilabel:`Submitted`, and :guilabel:`Approved`) the text appears in black.
 
+.. _expenses/create_report:
+
 Create expense reports
 ======================
 
