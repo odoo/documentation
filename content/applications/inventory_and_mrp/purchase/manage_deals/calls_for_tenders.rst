@@ -1,5 +1,5 @@
 ================
-Alternative RfQs
+Call for tenders
 ================
 
 .. _purchase/manage_deals/alternative-rfqs:
@@ -9,9 +9,9 @@ Alternative RfQs
 .. |RfQ| replace:: :abbr:`RfQ (Request for Quotation)`
 .. |RfQs| replace:: :abbr:`RfQs (Requests for Quotation)`
 
-Sometimes, companies might want to request offers from multiple vendors at the same time, by
-inviting those vendors to submit offers for similar goods or services all at once. This helps
-companies to select the cheapest, fastest vendors, depending on their specific business needs.
+Sometimes, companies might want to invite vendors to submit offers for similar goods or services all
+at once. This helps companies select the cheapest, fastest vendors for their specific business
+needs.
 
 In Odoo, this can be done by creating alternative requests for quotation (RfQs) for different
 vendors. Once a response is received from each vendor, the product lines from each |RfQ| can be
@@ -32,60 +32,20 @@ Configuration --> Settings`. Under the :guilabel:`Orders` section, click the che
 
 Then, click :guilabel:`Save` to apply the change.
 
-Doing so enables the ability to create alternative |RfQs|, as well as *blanket orders*.
-
 .. image:: calls_for_tenders/calls-for-tenders-enabled-setting.png
    :align: center
    :alt: Purchase Agreements enabled in the Purchase app settings.
-
-.. tip::
-   To save time creating alternative |RfQs|, custom vendors, prices, and delivery lead times can be
-   set in the :guilabel:`Purchase` tab of a product form.
-
-   To do that, navigate to :menuselection:`Purchase app --> Products --> Products`, and select a
-   product to edit. On the product form, click the :guilabel:`Purchase` tab, and click
-   :guilabel:`Add a line`.
-
-   From the drop-down menu, choose a vendor to set under the :guilabel:`Vendor` column, then set a
-   :guilabel:`Price` and :guilabel:`Delivery Lead Time`, if necessary. Clicking the
-   :guilabel:`(optional columns drop-down toggle)` icon, at the top right of the header row,
-   provides additional column options to add to the line item.
 
 .. _purchase/manage_deals/create-rfq:
 
 Create an |RfQ|
 ===============
 
-To create a new |RfQ|, navigate to the :menuselection:`Purchase` app, and click :guilabel:`New`.
+To create a new |RfQ|, follow the instructions in the :doc:`rfq` documentation.
 
-On the blank |RfQ| form, add a vendor from the drop-down menu, next to the :guilabel:`Vendor` field.
-Then, click :guilabel:`Add a product`, in the :guilabel:`Products` tab, to select a product from the
-drop-down menu in the :guilabel:`Product` column.
-
-Then, set the desired quantity to purchase in the :guilabel:`Quantity` column, and change the
-purchase price in the :guilabel:`Unit Price` column, if necessary.
-
-Clicking the :guilabel:`(optional columns drop-down toggle)` icon, at the top right of the header
-row, provides additional column options to add to the line item.
-
-Repeat these steps to add as many column options in the :guilabel:`Products` tab as desired,
-including the :guilabel:`UoM` (Units of Measure) to purchase the products in, and the
-:guilabel:`Expected Arrival` date.
-
-Once ready, click :guilabel:`Send by Email`.
-
-This opens a :guilabel:`Compose Email` pop-up window, wherein the message to the vendor can be
-customized, and attachments can be added, if needed. Once ready, click :guilabel:`Send`.
-
-This sends an email to the vendor listed on the |RfQ| form.
-
-.. image:: calls_for_tenders/calls-for-tenders-compose-email.png
-   :align: center
-   :alt: Compose and send quotation email pop-up.
-
-.. note::
-   Sending emails to each vendor can be useful when creating alternative |RfQs|, because vendors can
-   confirm if their past prices still hold today, which helps companies choose the best offers.
+.. seealso::
+   `Odoo Tutorial: Purchase Basics and Your First Request for Quotation
+   <https://www.youtube.com/watch?v=o_uI718P1Dc>`_
 
 .. _purchase/manage_deals/create-alternatives:
 
@@ -124,12 +84,6 @@ pre-populated with the same products, quantities, and other details as the previ
 
 Once ready, create a second alternative quotation by clicking the :guilabel:`Alternatives` tab,
 followed by :guilabel:`Create Alternative`.
-
-.. note::
-   An option to :guilabel:`Compare Product Lines` also appears. Clicking this navigates to the
-   :guilabel:`Compare Order Lines` page, where alternative |RfQs| can be compared, side-by-side. For
-   more information on this, refer to the :ref:`Compare Product Lines
-   <purchase/manage_deals/compare-product-lines>` section.
 
 This opens the :guilabel:`Create alternative` pop-up window. Once again, choose a different vendor
 from the drop-down menu next to :guilabel:`Vendor`. For this particular |RfQ|, however, *uncheck*
@@ -191,8 +145,8 @@ found under the :guilabel:`Alternatives` tab.
 
 .. tip::
    If a large number of |POs| are being processed, and the previous |POs| can't be located, click
-   the :guilabel:`⬇️ (down arrow)` icon to the right of the search bar, at the top of the pop-up
-   window.
+   the :icon:`fa-chevron-down` :guilabel:`(chevron)` icon to the right of the search bar, at the top
+   of the pop-up window.
 
    Then, under the :guilabel:`Group By` section, click :guilabel:`Vendor`. Vendors are displayed in
    their own nested drop-down lists, and each vendor's list can be expanded to view open |POs| for
@@ -220,14 +174,6 @@ the :guilabel:`Compare Order Lines` page.
 The :guilabel:`Compare Order Lines` page, by default, groups by :guilabel:`Product`. Each product
 included in any of the |RfQs| is displayed in its own nested drop-down list, and features all of the
 |PO| numbers in the :guilabel:`Reference` column.
-
-Additional columns on this page include the :guilabel:`Vendor` from which products were ordered,
-:guilabel:`OTD`, the :guilabel:`Reference` number, the :guilabel:`Status` of the quotation (e.g.,
-:guilabel:`RFQ`, :guilabel:`RFQ Sent`, etc.), the product :guilabel:`Description`, the
-:guilabel:`Expected Arrival` date, the :guilabel:`Quantity` of products ordered from each vendor,
-the :guilabel:`Unit of Measure` used for each product (if any), the :guilabel:`Unit Price` per
-product, the :guilabel:`Total` price of the order, and the :guilabel:`Currency` applied to the
-order.
 
 .. note::
    To remove product lines from the :guilabel:`Compare Order Lines` page, click :guilabel:`Clear` at
@@ -263,25 +209,11 @@ without having an effect on the other live orders, once those orders have been c
    :align: center
    :alt: Cancelled quotations in the Purchase app overview.
 
-To confirm an |RfQ| for which products were selected, click into one, and click :guilabel:`Confirm
-Order`.
+To confirm an |RfQ| for which products were selected, click into an |RfQ|, and click
+:guilabel:`Confirm Order`.
 
-This causes a pop-up window reading :guilabel:`What about the alternative Requests for Quotations?`
-to appear. From the pop-up window, two options are presented: :guilabel:`Cancel Alternatives` and
-:guilabel:`Keep Alternatives`.
-
-If this |PO| should **not** be confirmed, click :guilabel:`Discard`.
-
-Selecting :guilabel:`Cancel Alternatives` automatically cancels the alternative |RfQs|. Selecting
-:guilabel:`Keep Alternatives` keeps the alternative |RfQs| open, so they can still be accessed, if
-any additional product quantities need to be ordered later.
-
-Once all products are ordered, :guilabel:`Cancel Alternatives` can be selected from whichever |PO|
-is open at that time.
-
-.. image:: calls_for_tenders/calls-for-tenders-keep-or-cancel.png
-   :align: center
-   :alt: Keep or cancel pop-up for alternative RFQs.
+This causes a :guilabel:`What about the alternative Requests for Quotations?` pop-up window
+to appear.
 
 To view a detailed form of one of the |RfQs| listed, click the line item for that quotation. This
 opens an :guilabel:`Open: Alternative POs` pop-up window, from which all details of that particular
@@ -289,20 +221,23 @@ opens an :guilabel:`Open: Alternative POs` pop-up window, from which all details
 
 Once ready, click :guilabel:`Close` to close the pop-up window.
 
-If all alternative |RfQs| should stay open, from the :guilabel:`What about the alternative Requests
-for Quotations?` pop-up window, click :guilabel:`Keep Alternatives`.
+In the :guilabel:`What about the alternative Requests for Quotations?` pop-up window, two options
+are presented: :guilabel:`Cancel Alternatives` and :guilabel:`Keep Alternatives`.
 
-Then, click :guilabel:`Requests for Quotation` (in the breadcrumbs, at the top of the page) to
-navigate back to an overview of all |RfQs|.
+If this |PO| should **not** be confirmed, click :guilabel:`Discard`.
 
-Click into the remaining |RfQs| that contain products that need to be ordered, and click
-:guilabel:`Confirm Order`.
+Selecting :guilabel:`Cancel Alternatives` automatically cancels the alternative |RfQs|. Selecting
+:guilabel:`Keep Alternatives` keeps the alternative |RfQs| open, so they can still be accessed, if
+any additional product quantities need to be ordered later.
 
-This opens the :guilabel:`What about the alternative Requests for Quotations?` pop-up window. If
-desired, and the remaining alternative |RfQs| are no longer needed, click :guilabel:`Cancel
-Alternatives` to cancel all other alternative |RfQs| linked with this order.
+Once all products are ordered, select :guilabel:`Cancel Alternatives` from whichever |PO|
+is open at that time.
 
-Finally, click :guilabel:`Requests for Quotation` (in the breadcrumbs, at the top of the page) to
+.. image:: calls_for_tenders/calls-for-tenders-keep-or-cancel.png
+   :align: center
+   :alt: Keep or cancel pop-up for alternative RFQs.
+
+Finally, using the breadcrumbs at the top of the page, click :guilabel:`Requests for Quotation` to
 navigate back to an overview of all |RfQs|.
 
 The cancelled orders can be seen, greyed out and listed with a :guilabel:`Cancelled` status, under
