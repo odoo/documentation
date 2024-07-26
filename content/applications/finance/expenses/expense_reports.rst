@@ -121,5 +121,6 @@ Click on a report to open it, then click :guilabel:`Submit To Manager`. After su
 the next step is to wait for the manager to approve it.
 
 .. important::
-   The :ref:`expenses/approve`, :ref:`expenses/post`, and :ref:`expenses/reimburse` sections are
-   **only** for users with the appropriate *access rights*.
+   :ref:`Approving <expenses/approve>`, :doc:`posting <../expenses/post_expenses>`, and
+   :ref:`reimbursing <expenses/reimburse>` expenses are **only** for users with the appropriate
+   :doc:`access rights <../../general/users/access_rights>`.
