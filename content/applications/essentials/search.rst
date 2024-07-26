@@ -188,7 +188,7 @@ Comparison
 
 Certain reporting dashboards include a :guilabel:`Comparison` section in the drop-down menus of
 their :guilabel:`Search...` bars. This includes the :doc:`Overall Equipment Effectiveness
-<../inventory_and_mrp/manufacturing/workflows/oee>` report for the *Manufacturing* app, and the
+<../inventory_and_mrp/manufacturing/reporting/oee>` report for the *Manufacturing* app, and the
 :doc:`Purchase <../inventory_and_mrp/purchase/advanced/analyze>` report for the *Purchase* app,
 among others.
 
