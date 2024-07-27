@@ -60,7 +60,7 @@ quotation is confirmed.
    - The offer is only available for **Odoo Online** databases.
    - The offer is limited to **one** domain name per client.
    - The offer is limited to the registration of a **new** domain name.
-   - The offer is available to *One App Free* plans. Ensure that your website contains enough
+   - The offer is also available to *One App Free* plans. Ensure that your website contains enough
      original content for Odoo to verify that your request is legitimate and respects `Odoo's
      Acceptable Use Policy <https://www.odoo.com/acceptable-use>`_. Given the high number of
      requests, it can take Odoo several days to review them.
