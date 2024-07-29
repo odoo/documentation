@@ -15,7 +15,7 @@ Configuration
 Go to the :ref:`application settings <configuration/settings>`, scroll down to the
 :guilabel:`Payment Terminals` section, and tick your terminal's checkbox.
 
-.. image:: terminals/settings-pt.png
+.. image:: terminals/payment-terminals.png
    :alt: checkbox in the settings to enable a payment terminal
 
 Then, follow the corresponding documentation to configure your device:
@@ -24,7 +24,6 @@ Then, follow the corresponding documentation to configure your device:
 - :doc:`Ingenico configuration <terminals/ingenico>`
 - :doc:`SIX configuration <terminals/six>`
 - :doc:`Stripe configuration <terminals/stripe>`
-- :doc:`Vantiv configuration <terminals/vantiv>`
 - :doc:`Viva Wallet configuration <terminals/viva_wallet>`
 - :doc:`Worldline configuration <terminals/worldline>`
 
@@ -38,6 +37,5 @@ the POS <../payment_methods>`.
    terminals/ingenico
    terminals/six
    terminals/stripe
-   terminals/vantiv
    terminals/viva_wallet
    terminals/worldline
