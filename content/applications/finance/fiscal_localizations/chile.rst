@@ -511,6 +511,9 @@ Once the invoice is accepted and validated by the :abbr:`SII (Servicio de Impues
 the PDF is printed, it includes the fiscal elements that indicate that the document is fiscally
 valid.
 
+.. image:: chile/accepted-invoice-fiscal-information.png
+   :alt: Fiscal elements and barcode printed in accepted invoices.
+
 .. important::
    If you are hosted in Odoo SH or On-Premise, you should manually install the `pdf417gen
    <https://pypi.org/project/pdf417gen/>`_ library. Use the following command to install it:
