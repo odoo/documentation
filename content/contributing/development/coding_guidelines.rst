@@ -725,14 +725,10 @@ they can and will be removed !
 Use translation method correctly
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Odoo uses a GetText-like method named "underscore" ``_( )`` to indicate that
-a static string used in the code needs to be translated at runtime using the
-language of the context. This pseudo-method is accessed within your code by
-importing as follows:
-
-.. code-block:: python
-
-    from odoo import _
+Odoo uses a GetText-like method named "underscore" ``_()`` to indicate that
+a static string used in the code needs to be translated at runtime.
+That method is available at ``self.env._`` using the language of the
+environment.
 
 A few very important rules must be followed when using it, in order for it to
 work and to avoid filling the translations with useless junk.
@@ -744,9 +740,11 @@ field.
 
 The method accepts optional positional or named parameter
 The rule is very simple: calls to the underscore method should always be in
-the form ``_('literal string')`` and nothing else:
+the form ``self.env._('literal string')`` and nothing else:
 
 .. code-block:: python
+
+    _ = self.env._
 
     # good: plain strings
     error = _('This record is locked!')

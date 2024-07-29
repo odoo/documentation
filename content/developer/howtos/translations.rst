@@ -74,8 +74,15 @@ code, Odoo cannot automatically export translatable terms so they
 must be marked explicitly for export. This is done by wrapping a literal
 string in a function call.
 
-In Python, the wrapping function is :func:`odoo._`::
+In Python, the wrapping function is :func:`odoo.api.Environment._`
+and :func:`odoo.tools.translate._`:
 
+.. code-block:: python
+
+    title = self.env._("Bank Accounts")
+
+    # old API for backward-compatibility
+    from odoo.tools import _
     title = _("Bank Accounts")
 
 In JavaScript, the wrapping function is generally :js:func:`odoo.web._t`:
@@ -90,10 +97,17 @@ In JavaScript, the wrapping function is generally :js:func:`odoo.web._t`:
     variables. For situations where strings are formatted, this means the
     format string must be marked, not the formatted string
 
-The lazy version of `_` and `_t` is :func:`odoo._lt` in python and
-:js:func:`odoo.web._lt` in javascript. The translation lookup is executed only
+The lazy version of `_` and `_t` is the :class:`odoo.tools.translate.LazyTranslate`
+factory in python and :js:func:`odoo.web._lt` in javascript.
+The translation lookup is executed only
 at rendering and can be used to declare translatable properties in class methods
 of global variables.
+
+.. code-block:: python
+
+    from odoo.tools import LazyTranslate
+    _lt = LazyTranslate(__name__)
+    LAZY_TEXT = _lt("some text")
 
 .. note::
 
@@ -114,6 +128,26 @@ of global variables.
             def _get_translation_frontend_modules_name(cls):
                 modules = super()._get_translation_frontend_modules_name()
                 return modules + ['your_module']
+
+Context
+-------
+
+To translate, the translation function needs to know the *language* and the
+*module* name. When using ``Environment._`` the language is known and you
+may pass the module name as a parameter, otherwise it's extracted from the
+caller.
+
+In case of ``odoo.tools.translate._``, the language and the module are
+extracted from the context. For this, we inspect the caller's local variables.
+The drawback of this method is that it is error-prone: we try to find the
+context variable or ``self.env``, however these may not exist if you use
+translations outside of model methods; i.e. it does not work inside regular
+functions or python comprehensions.
+
+Lazy translations are bound to the module during their creation and the
+language is resolved when evaluating using ``str()``.
+Note that you can also pass a lazy translation to ``Envionrment._``
+to translate it without any magic language resolution.
 
 Variables
 ---------
