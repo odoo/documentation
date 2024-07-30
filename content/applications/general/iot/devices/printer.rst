@@ -10,6 +10,13 @@ labels, orders, or even reports from the different Odoo apps. In addition, print
 assigned as an *action on a trigger* during the manufacturing process, or added onto a quality
 control point or a quality check.
 
+.. warning::
+   The **only** way to connect a printer directly to an Odoo database is through the use of an |iot|
+   box.
+
+   Without an |iot| box, printing can still occur, but it is managed through the printer itself,
+   which is not the recommended process.
+
 Connection
 ==========
 
