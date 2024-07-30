@@ -498,7 +498,7 @@ def _generate_alternate_urls(app, pagename, templatename, context, doctree):
             _root = app.config.project_root
         else:
             # Project root like .../documentation/_build/html/14.0/fr
-            _root = re.sub(rf'(/{app.config.version})?(/{app.config.language})?$', '', app.outdir)
+            _root = re.sub(rf'(/{app.config.version})?(/{app.config.language})?$', '', str(app.outdir))
         # If the canonical version is not set, assume that the project has a single version
         _canonical_version = app.config.canonical_version or app.config.version
         _version = _version or app.config.version
