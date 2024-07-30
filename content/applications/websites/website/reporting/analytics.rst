@@ -137,7 +137,9 @@ measurement codes and related code fragments, collectively known as tags on your
 app, directly through the code injector.
 
 .. warning::
-   Google Tag Manager may not be compliant with local data protection regulations.
+   - Some GTM tags use data layers (e.g., advanced eCommerce tracking data layers) to retrieve
+     variables and send them to Google Analytics. Data layers are currently not managed in Odoo.
+   - Google Tag Manager may not be compliant with local data protection regulations.
 
 To use GTM, proceed as follows:
 
