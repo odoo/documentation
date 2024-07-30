@@ -127,9 +127,10 @@ appears.
    menu, and go to :menuselection:`Settings app --> Accounting --> Fiscal Localization`.
 
 .. danger::
-   Adding a branch to a company triggers an upsell, should the database be in the *Standard* or
-   *One App Free* pricing plans. Adding one or more branches constitutes a multi-company database,
-   and needs to be moved to the *Custom* pricing plan.
+   If the database is on the standard *Paid* pricing plan, adding a branch to a company triggers an
+   upsell. Since adding one or more branches turns the database into a multi-company setup, it
+   will need to switch to the *Custom* pricing plan. This does not affect databases on the *One-app
+   free* plan.
 
    For more information on pricing, see `Odoo's pricing <https://www.odoo.com/pricing-plan>`_ page.
 
