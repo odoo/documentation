@@ -3,5 +3,5 @@ address you used to register on GitHub.
 
 .. code-block:: console
 
-   $ git config --global user.name “Your Name”
-   $ git config --global user.email “youremail@example.com”
+   $ git config --global user.name "Your Name"
+   $ git config --global user.email "youremail@example.com"
