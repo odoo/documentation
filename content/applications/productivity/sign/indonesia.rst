@@ -1,31 +1,37 @@
 :orphan:
 
-===========================
-Odoo Sign legality in China
-===========================
+===============================
+Odoo Sign legality in Indonesia
+===============================
 
 :doc:`Odoo Sign <../sign>` is your trusted partner for secure, efficient, and legally compliant
-electronic signatures in China.
+electronic signatures in Indonesia.
 
-Legal framework for electronic signatures in China
-==================================================
+Legal framework for electronic signatures in Indonesia
+======================================================
 
-In China, electronic signatures are regulated under the Electronic Signature Law (ESL) of the
-People's Republic of China, enacted in 2005 and amended in 2015. The law provides the foundation for
-the use and legal recognition of electronic signatures. The key points of the ESL include:
+In Indonesia, electronic signatures are regulated under the `Law of the Republic of Indonesia No. 11
+of 2008 on Electronic Information and Transactions
+<https://www.icnl.org/wp-content/uploads/Indonesia_elec.pdf>`_, Government Regulation No. 71 of 2019
+on Organization of Electronic system and Transactions, as well as the Minister of Communications and
+Informatics (MoCI) Regulation No. 11 of 2018 on Administration of Electronic Certification ("MoCI
+Regulation 11 of 2018"). The law governs transactions performed through electronic means and the use
+of electronic signatures. The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
 - **Reliability and security**: electronic signatures must be created with a secure method that can
   reliably identify the signatory and ensure the integrity of the signed document.
-- **Certification Authorities (CAs)**: the law recognizes electronic signatures supported by digital
-  certificates issued by accredited Certification Authorities (CAs).
+- **Certified e-signatures**: the law recognizes digital signature certificates that serve as proof
+  of identity of an individual for a certain purpose that can be used in special cases to provide
+  additional security. These certificates are issued by Certification Authorities and are required
+  by law for the signature of specific acts.
 
-How Odoo Sign complies with Chinese regulations
-===============================================
+How Odoo Sign complies with Indonesian regulations
+==================================================
 
-Odoo Sign ensures full compliance with the Electronic Signature Law of China by incorporating the
-following features:
+Odoo Sign ensures full compliance with the Electronic Signature Law of Indonesia by incorporating
+the following features:
 
 - **Secure signature creation**: Odoo Sign utilizes advanced cryptographic techniques to ensure the
   authenticity and integrity of electronic signatures.
@@ -53,7 +59,7 @@ Potential exceptions
 ====================
 
 While Odoo Sign is broadly applicable, there are certain exceptions where electronic signatures may
-not be suitable or legally recognized in China:
+not be suitable or legally recognized in Indonesia:
 
 - **Wills and trusts**: documents related to inheritance, wills, and trusts often require
   handwritten signatures.
@@ -64,7 +70,7 @@ not be suitable or legally recognized in China:
 .. admonition:: Disclaimer
 
    The information provided on this page is for general informational purposes only and does not
-   constitute legal advice. While Odoo Sign complies with the Electronic Signature Law of China,
+   constitute legal advice. While Odoo Sign complies with the Electronic Signature Law of Indonesia,
    users should consult with legal professionals to ensure specific document types and use cases
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
