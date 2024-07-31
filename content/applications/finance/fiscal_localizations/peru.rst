@@ -83,7 +83,7 @@ The chart of accounts for Peru is based on the most updated version of the :abbr
 Contable General Empresarial)`, which is grouped in several categories and is compatible with NIIF
 accounting.
 
-.. _peru/accounting-settings:
+.. _peru-accounting-settings:
 
 Accounting Settings
 -------------------
@@ -246,7 +246,7 @@ directly to its services and get the currency rate either automatically or manua
 Please refer to the next section in our documentation for more information about
 :doc:`multicurrencies <../accounting/get_started/multi_currency>`.
 
-.. _peru/master_data:
+.. _peru-master_data:
 
 Configure Master data
 ---------------------
@@ -320,7 +320,7 @@ document types available in Peru. By default, all the sales journals created use
 Electronic Data Interchange
 ***************************
 
-This  section indicates which EDI workflow is used in the invoice, for Peru we must select
+This section indicates which EDI workflow is used in the invoice, for Peru we must select
 “Peru UBL 2.1”.
 
 .. image:: peru/peru-journal-edi.png
@@ -407,6 +407,8 @@ OSE and the SUNAT. The following message is displayed at the top of the invoice:
 
 Asynchronous means that the document is not sent automatically after the invoice has been posted.
 
+.. _peru-electronic-invoice-status:
+
 Electronic Invoice Status
 *************************
 
@@ -453,7 +455,6 @@ If a validation error is received, you have two options:
   .. image:: peru/peru-errors.png
      :align: center
      :alt: List of common errors on invoices
-
 
 For more detail please refert to `Common errors in SUNAT
 <https://www.nubefact.com/codigos-error-sunat/>`_.
@@ -598,7 +599,7 @@ you can also create debit Notes. For this just use the button “Add Debit Note�
 
 By default the Debit Note is set in the document type.
 
-.. _peru/edg:
+.. _peru-edg:
 
 Electronic delivery guide 2.0
 -----------------------------
@@ -705,8 +706,8 @@ Configuration
      :guilabel:`l10n_pe` modules.
    - A second user **must** be added for the creation of electronic documents.
 
-After following the steps to configure the :ref:`electronic invoicing <peru/accounting-settings>`
-and the :ref:`master data <peru/master_data>`, :ref:`install <general/install>` the
+After following the steps to configure the :ref:`electronic invoicing <peru-accounting-settings>`
+and the :ref:`master data <peru-master_data>`, :ref:`install <general/install>` the
 :guilabel:`Peruvian - Electronic Delivery Note 2.0` module (`l10n_pe_edi_stock_20`).
 
 Next, you need to retrieve the *client ID* and *client secret* from |SUNAT|. To do so, follow the
@@ -870,3 +871,62 @@ Common errors
   Odoo currently throws an error with a traceback instead of a message that the credentials are not
   correctly configured in the database. If this occurs on your database, please verify your
   credentials.
+
+eCommerce electronic invoicing
+------------------------------
+
+First, :ref:`install <general/install>` the **Peruvian eCommerce** (`l10n_pe_website_sale`) module.
+
+The **Peruvian eCommerce** module enables the features and configurations to:
+
+- allow clients to create online accounts for **eCommerce** purposes;
+- support required fiscal fields in the **eCommerce** application;
+- receive payments for sales orders online;
+- generate electronic documents from the **eCommerce** application.
+
+.. note::
+   The **Peruvian eCommerce** module is dependent on the previous installation of the
+   **Invoicing** or **Accounting** app, as well as the **Website** app.
+
+.. _peru-ecommerce-configuration:
+
+Configuration
+~~~~~~~~~~~~~
+
+After configuring the Peruvian :ref:`electronic invoicing <peru-accounting-settings>` flow, complete
+the following configurations for the **eCommerce** flow:
+
+- :ref:`Client account registration <checkout-sign>`;
+- :ref:`Automatic invoice <handling/legal>`;
+- :doc:`../../websites/ecommerce/products`: Set the :guilabel:`Invoicing Policy` to
+  :guilabel:`Ordered quantities` and define the desired :guilabel:`Customer taxes`.
+- :doc:`../payment_providers`;
+- :doc:`../../websites/ecommerce/checkout_payment_shipping/shipping`: For each shipping method, set
+  the :guilabel:`Provider` field to :guilabel:`Fixed Price`. Then, set a :guilabel:`Fixed Price`
+  amount greater than `0.00` (not zero), as the shipping method price is added to the invoice line.
+
+.. note::
+   - `Mercado Pago <https://www.mercadopago.com/>`_ is an online payment provider supported in Odoo
+     that covers several countries, currencies, and payment methods in Latin America.
+   - Make sure to define a :guilabel:`Sales Price` on the :guilabel:`Delivery Product` of the
+     shipping method to prevent errors when validating the invoice with |SUNAT|.
+   - To offer free delivery, manually remove the :guilabel:`Delivery Product`, or at least use
+     `$0.01` (one cent) for the invoice to be validated with SUNAT.
+
+.. seealso::
+   :doc:`Set up the Mercado Pago payment provider. <../payment_providers/mercado_pago>`
+
+Invoicing flow for eCommerce
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Once the :ref:`configurations <peru-ecommerce-configuration>` are all set, fiscal input fields will
+be available during the checkout process for signed-in customers.
+
+When customers enter their fiscal data at checkout and complete a successful purchase, the invoice
+is generated with the corresponding |EDI| elements. The document type (Boleta/Factura) is selected
+based on their tax ID (RUC/DNI). The invoice must then :ref:`be sent to the OSE and the SUNAT
+<peru-electronic-invoice-status>`. By default, all published invoices are sent once a day through
+a scheduled action, but you can also send each invoice manually if needed.
+
+Once the invoice is validated with |SUNAT|, customers can download the :file:`.zip` with the CDR,
+XML, and PDF files directly from the customer portal by clicking the :guilabel:`Download` button.
