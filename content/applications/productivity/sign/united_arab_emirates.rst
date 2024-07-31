@@ -1,31 +1,34 @@
 :orphan:
 
-===========================
-Odoo Sign legality in China
-===========================
+==============================================
+Odoo Sign legality in the United Arab Emirates
+==============================================
 
 :doc:`Odoo Sign <../sign>` is your trusted partner for secure, efficient, and legally compliant
-electronic signatures in China.
+electronic signatures in the United Arab Emirates.
 
-Legal framework for electronic signatures in China
-==================================================
+Legal framework for electronic signatures in the United Arab Emirates
+=====================================================================
 
-In China, electronic signatures are regulated under the Electronic Signature Law (ESL) of the
-People's Republic of China, enacted in 2005 and amended in 2015. The law provides the foundation for
-the use and legal recognition of electronic signatures. The key points of the ESL include:
+In the United Arab Emirates, electronic signatures are regulated under the `Federal Decree by Law
+No. 46 of 2021 on Electronic Transactions and Trust Services <https://tdra.gov.ae/-/media/About/Others/FEDERAL-DECREELAW-NO-46-OF-2021--English.ashx#:~:text=This%20Decree%2DLaw%20aims%20to,Electronic%20Transactions%20across%20all%20sectors.>`_,
+`ADGM Electronic Transactions Regulations 202 <https://adgmen.thomsonreuters.com/sites/default/files/net_file_store/ADGM1547_23197_VER2021.pdf>`_,
+`DIFC Law No. 2 of 2017 <https://www.difc.ae/business/laws-and-regulations/legal-database/difc-laws/electronic-transactions-law-difc-law-no-2-2017>`_.
+The law governs transactions performed through electronic means and the use of digital signatures.
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
 - **Reliability and security**: electronic signatures must be created with a secure method that can
   reliably identify the signatory and ensure the integrity of the signed document.
-- **Certification Authorities (CAs)**: the law recognizes electronic signatures supported by digital
-  certificates issued by accredited Certification Authorities (CAs).
+- **Qualified electronic signature**: the law recognizes electronic signatures supported by digital
+  certificates issued by a qualified trust service provider.
 
-How Odoo Sign complies with Chinese regulations
+How Odoo Sign complies with Emirati regulations
 ===============================================
 
-Odoo Sign ensures full compliance with the Electronic Signature Law of China by incorporating the
-following features:
+Odoo Sign ensures full compliance with the Electronic Signature Law of the United Arab Emirates by
+incorporating the following features:
 
 - **Secure signature creation**: Odoo Sign utilizes advanced cryptographic techniques to ensure the
   authenticity and integrity of electronic signatures.
@@ -53,7 +56,7 @@ Potential exceptions
 ====================
 
 While Odoo Sign is broadly applicable, there are certain exceptions where electronic signatures may
-not be suitable or legally recognized in China:
+not be suitable or legally recognized in the United Arab Emirates:
 
 - **Wills and trusts**: documents related to inheritance, wills, and trusts often require
   handwritten signatures.
@@ -64,9 +67,9 @@ not be suitable or legally recognized in China:
 .. admonition:: Disclaimer
 
    The information provided on this page is for general informational purposes only and does not
-   constitute legal advice. While Odoo Sign complies with the Electronic Signature Law of China,
-   users should consult with legal professionals to ensure specific document types and use cases
-   meet all legal requirements. Compliance with additional industry-specific regulations may also be
-   necessary.
+   constitute legal advice. While Odoo Sign complies with the Electronic Signature Law of the United
+   Arab Emirates, users should consult with legal professionals to ensure specific document types
+   and use cases meet all legal requirements. Compliance with additional industry-specific
+   regulations may also be necessary.
 
-*Last updated: June 19, 2024*
+*Last updated: June 21, 2024*

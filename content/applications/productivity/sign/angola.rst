@@ -1,30 +1,33 @@
 :orphan:
 
-===========================
-Odoo Sign legality in China
-===========================
+============================
+Odoo Sign legality in Angola
+============================
 
 :doc:`Odoo Sign <../sign>` is your trusted partner for secure, efficient, and legally compliant
-electronic signatures in China.
+electronic signatures in Angola.
 
-Legal framework for electronic signatures in China
-==================================================
+Legal framework for electronic signatures in Angola
+===================================================
 
-In China, electronic signatures are regulated under the Electronic Signature Law (ESL) of the
-People's Republic of China, enacted in 2005 and amended in 2015. The law provides the foundation for
-the use and legal recognition of electronic signatures. The key points of the ESL include:
+In Angola, electronic signatures are regulated under the Presidential Decree 312/2018 and Executive
+Order 74/2019. The law establishes the legal basis for acknowledging electronic records, contracts,
+and digital signatures. The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
 - **Reliability and security**: electronic signatures must be created with a secure method that can
   reliably identify the signatory and ensure the integrity of the signed document.
-- **Certification Authorities (CAs)**: the law recognizes electronic signatures supported by digital
-  certificates issued by accredited Certification Authorities (CAs).
+- **Certified electronic signature**: digital signature generated using a digital certificate
+  supplied by a qualified provider. In some cases, only the certified electronic signature has legal
+  and juridical validity in Angola. In those cases, simple electronic signatures like the Odoo
+  Signature only work as a proof of the agreement to celebrate the corresponding transaction, which
+  will be submitted to the authority's criteria.
 
-How Odoo Sign complies with Chinese regulations
+How Odoo Sign complies with Angolan regulations
 ===============================================
 
-Odoo Sign ensures full compliance with the Electronic Signature Law of China by incorporating the
+Odoo Sign ensures full compliance with the Electronic Signature Law of Angola by incorporating the
 following features:
 
 - **Secure signature creation**: Odoo Sign utilizes advanced cryptographic techniques to ensure the
@@ -53,7 +56,7 @@ Potential exceptions
 ====================
 
 While Odoo Sign is broadly applicable, there are certain exceptions where electronic signatures may
-not be suitable or legally recognized in China:
+not be suitable or legally recognized in Angola:
 
 - **Wills and trusts**: documents related to inheritance, wills, and trusts often require
   handwritten signatures.
@@ -64,9 +67,9 @@ not be suitable or legally recognized in China:
 .. admonition:: Disclaimer
 
    The information provided on this page is for general informational purposes only and does not
-   constitute legal advice. While Odoo Sign complies with the Electronic Signature Law of China,
+   constitute legal advice. While Odoo Sign complies with the Electronic Signature Law of Angola,
    users should consult with legal professionals to ensure specific document types and use cases
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 19, 2024*
+*Last updated: June 21, 2024*
