@@ -84,7 +84,7 @@ Make your first contribution
 .. important::
    - Odoo development can be challenging for beginners. We recommend you to be knowledgeable enough
      to code a small module before contributing. If that is not the case, take some time to go
-     through the :doc:`developer tutorials </developer/howtos>` to fill in the gaps.
+     through the :doc:`developer tutorials </developer/tutorials>` to fill in the gaps.
    - Some steps of this guide require to be comfortable with Git. Here are some `tutorials
      <https://www.atlassian.com/git/tutorials>`_ and an `interactive training
      <https://learngitbranching.js.org/>`_ if you are stuck at some point.
