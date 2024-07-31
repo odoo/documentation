@@ -35,16 +35,15 @@ Manage the Github users who can access your project.
 
 There are three levels of users:
 
-* Admin: has access to all features of Odoo.sh and can change the project settings.
-* Developer: does not have access to the project settings nor to the production and staging databases.
-* Tester: it has the same access as the developer, plus access to the stagings branches. He can therefore read production data, but cannot modify it.
+- :guilabel:`Admin`: has access to all features of an Odoo.sh project.
 
-The developer group if for developers who can make modifications in your code but are not allowed
-to access the production data. Users of this group cannot connect to the production and staging
-databases using the *1-click connect* feature, but they can of course use their regular account on
-these databases if they have one, using their regular credentials.
+- :guilabel:`Tester`: has access to the *Staging* and *Development* databases and their tooling.
+  This role is for users conducting User Acceptance Tests. Testers can work with copies of
+  production data but cannot access the production database through the Odoo.sh tooling.
 
-In addition, they cannot use the webshell nor have access to the server logs.
+- :guilabel:`Developer`: has access only to the *Development* databases and their tooling. This
+  role is for developers who propose code modifications but are not allowed to access production
+  and staging databases through the Odoo.sh tooling.
 
 .. list-table::
    :header-rows: 1
@@ -187,7 +186,10 @@ In addition, they cannot use the webshell nor have access to the server logs.
      - |green|
 
 .. warning::
-   It is important to reflect these levels of restrictions within the repository on GitHub.
+   Those roles only apply to the usage of Odoo.sh. It is important to reflect the user roles
+   attribution within the repository on GitHub.  Please refer to the GitHub documentation section on
+   `Managing a branch protection rule <https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule>`_
+   for detailed guidance.
 
 .. |green| raw:: html
 
