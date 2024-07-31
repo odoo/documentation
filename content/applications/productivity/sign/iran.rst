@@ -1,30 +1,29 @@
 :orphan:
 
-===========================
-Odoo Sign legality in China
-===========================
+==========================
+Odoo Sign legality in Iran
+==========================
 
 :doc:`Odoo Sign <../sign>` is your trusted partner for secure, efficient, and legally compliant
-electronic signatures in China.
+electronic signatures in Iran.
 
-Legal framework for electronic signatures in China
-==================================================
+Legal framework for electronic signatures in Iran
+=================================================
 
-In China, electronic signatures are regulated under the Electronic Signature Law (ESL) of the
-People's Republic of China, enacted in 2005 and amended in 2015. The law provides the foundation for
-the use and legal recognition of electronic signatures. The key points of the ESL include:
+In Iran, electronic signatures are regulated under the `Iran Civil Code
+<https://faolex.fao.org/docs/pdf/ira206827.pdf>`_  and the `Electronic Commerce Act
+<https://wipolex-res.wipo.int/edocs/lexdocs/laws/en/ir/ir008en.html>`_. The law governs the use of
+electronic records and signatures. The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
 - **Reliability and security**: electronic signatures must be created with a secure method that can
   reliably identify the signatory and ensure the integrity of the signed document.
-- **Certification Authorities (CAs)**: the law recognizes electronic signatures supported by digital
-  certificates issued by accredited Certification Authorities (CAs).
 
-How Odoo Sign complies with Chinese regulations
+How Odoo Sign complies with Iranian regulations
 ===============================================
 
-Odoo Sign ensures full compliance with the Electronic Signature Law of China by incorporating the
+Odoo Sign ensures full compliance with the Electronic Signature Law of Iran by incorporating the
 following features:
 
 - **Secure signature creation**: Odoo Sign utilizes advanced cryptographic techniques to ensure the
@@ -53,7 +52,7 @@ Potential exceptions
 ====================
 
 While Odoo Sign is broadly applicable, there are certain exceptions where electronic signatures may
-not be suitable or legally recognized in China:
+not be suitable or legally recognized in Iran:
 
 - **Wills and trusts**: documents related to inheritance, wills, and trusts often require
   handwritten signatures.
@@ -64,9 +63,9 @@ not be suitable or legally recognized in China:
 .. admonition:: Disclaimer
 
    The information provided on this page is for general informational purposes only and does not
-   constitute legal advice. While Odoo Sign complies with the Electronic Signature Law of China,
+   constitute legal advice. While Odoo Sign complies with the Electronic Signature Law of Iran,
    users should consult with legal professionals to ensure specific document types and use cases
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 19, 2024*
+*Last updated: June 21, 2024*
