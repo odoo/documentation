@@ -22,7 +22,7 @@ To create a sub-task:
 #. Open the Project app, then go into your desired project.
 #. Click the task where you want to add the sub-task, then click the :guilabel:`Sub-tasks` tab.
 #. Click :guilabel:`Add a line`, then fill in the :guilabel:`Title`.
-#. Click the :icon:`fa-cloud-upload` (:guilabel:`cloud`) icon to save the task manually.
+#. Click the :icon:`fa-cloud-upload` (:guilabel:`save`) icon to save the task manually.
 
 .. tip::
    You can edit several fields of a sub-task directly from the parent task’s sub-task tab without
