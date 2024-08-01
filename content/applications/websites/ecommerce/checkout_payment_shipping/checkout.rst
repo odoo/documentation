@@ -89,9 +89,6 @@ The button can be found next to the :guilabel:`Add to Cart` button on the produc
    :align: center
    :alt: Buy now (express checkout) button
 
-.. seealso::
-   :ref:`Product page design: additional functions <ecommerce-functions>`
-
 .. _checkout-sign:
 
 Guest and signed-in checkout
