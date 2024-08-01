@@ -843,6 +843,19 @@ elements at the end of dialogs.
           <button string="Discard" special="cancel"/>
       </footer>
 
+When no `footer` element is specified, the view's standard buttons (like Save or Discard) will be
+present by default. It is also possible to avoid replacing the standard buttons in form or x2many
+dialogs by using the `replace` attribute. This attribute defaults to `True` if not specified but
+setting it to `False` (or 0) will make it so that the specified `footer` will be added next to the
+default buttons instead of replacing them.
+
+.. example::
+   .. code-block:: xml
+
+      <footer replace="0">
+          <button string="Custom added action" type="object" name="my_action" class="btn-primary"/>
+      </footer>
+
 .. _reference/view_architectures/form/button_container:
 
 Buttons container
