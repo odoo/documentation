@@ -20,6 +20,8 @@ To add a tax on a product, you can either set a tax in the :guilabel:`Customer T
    - :doc:`/applications/finance/accounting/taxes/avatax`
    - :doc:`/applications/finance/accounting/taxes/fiscal_positions`
 
+.. _ecommerce-price-management-tax-display:
+
 Tax display
 -----------
 
