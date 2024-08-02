@@ -100,6 +100,7 @@ def resolve(old_resolve, tree, docname, *args, **kwargs):
             for _subnode in _reference_node.parent.parent.children
         ):  # The node references a toc
             if 'show-content' not in tree.env.metadata[_node_docname]:
+                import pudb; pudb.set_trace();
                 _reference_node['refuri'] = '#'  # The page must not be accessible
 
     def _set_docname_as_class(_reference_node, _node_docname):
