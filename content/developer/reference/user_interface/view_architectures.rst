@@ -2801,6 +2801,15 @@ sorted on the string of the field.
    graph view aggregations are performed on database content, non-stored
    function fields can not be used in graph views
 
+
+In Graph views, a ``field`` can have a ``widget`` attribute to dictate its format.
+The widget should be a field formatter, of which the most interesting are
+``float_time``, and ``monetary``.
+
+.. code-block:: xml
+
+   <field name="working_hours_close" widget="float_time"/>
+
 .. _reference/view_architectures/pivot:
 
 Pivot
