@@ -2,7 +2,6 @@ from docutils import nodes
 from sphinx.locale import admonitionlabels
 from sphinx.writers.html5 import HTML5Translator
 
-
 # Translators inheritance chain:
 # Docutils Base HTML translator: https://sourceforge.net/p/docutils/code/HEAD/tree/trunk/docutils/docutils/writers/_html_base.py
 # └── Docutils Polyglot html5 translator: https://sourceforge.net/p/docutils/code/HEAD/tree/trunk/docutils/docutils/writers/html5_polyglot/__init__.py
@@ -109,7 +108,6 @@ class BootstrapTranslator(HTML5Translator):
     # admonition [name] -> alert-[name]
     # Enforce presence of [name]-title as class on the <p> containing the title
     def visit_admonition(self, node, name=''):
-        # type: (nodes.Node, unicode) -> None
         node_classes = ["alert"]
         if name:
             node_classes.append(ADMONITION_MAPPING[name])
@@ -121,7 +119,6 @@ class BootstrapTranslator(HTML5Translator):
     # overwritten
     # Appends alert-title class to <p> if parent is an Admonition.
     def visit_title(self, node):
-        # type: (nodes.Node) -> None
         if isinstance(node.parent, nodes.Admonition):
             self.body.append(self.starttag(node, 'p', CLASS='alert-title'))
         else:
@@ -147,18 +144,18 @@ class BootstrapTranslator(HTML5Translator):
     # overwritten
     # Ensure table class is present for tables
     def visit_table(self, node):
-        # type: (nodes.Node) -> None
-        self.generate_targets_for_table(node)
-
         # c/p of https://github.com/pydata/pydata-sphinx-theme/pull/509/files
         self._table_row_indices.append(0)
 
-        classes = [cls.strip(' \t\n')
-                   for cls in self.settings.table_style.split(',')]
+        atts = {}
+        classes = [cls.strip(' \t\n') for cls in self.settings.table_style.split(',')]
         classes.insert(0, "docutils")  # compat
         classes.insert(0, "table")  # compat
 
-        if 'align' in node:
-            classes.append('align-%s' % node['align'])
-        tag = self.starttag(node, 'table', CLASS=' '.join(classes))
+        # set align-default if align not specified to give a default style
+        classes.append('align-%s' % node.get('align', 'default'))
+
+        if 'width' in node:
+            atts['style'] = 'width: %s' % node['width']
+        tag = self.starttag(node, 'table', CLASS=' '.join(classes), **atts)
         self.body.append(tag)

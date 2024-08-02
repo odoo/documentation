@@ -598,8 +598,6 @@ which tends to be a huge amount.
                   asList(ids)
               )
           ))[0];
-          // count the number of fields fetched by default
-          record.size();
 
       .. code-tab:: go
 
