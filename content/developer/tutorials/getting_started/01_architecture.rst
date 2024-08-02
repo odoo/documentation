@@ -52,7 +52,7 @@ Everything in Odoo starts and ends with modules.
 Terminology: developers group their business features in Odoo *modules*. The main user-facing
 modules are flagged and exposed as *Apps*, but a majority of the modules aren't Apps. *Modules*
 may also be referred to as *addons* and the directories where the Odoo server finds them
-form the ``addons_path``.
+from the ``addons_path``.
 
 Composition of a module
 -----------------------
