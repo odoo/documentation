@@ -30,3 +30,4 @@ under the :guilabel:`Payments` section.
    :titlesonly:
 
    payment_methods/terminals
+   payment_methods/qr_code_payment
