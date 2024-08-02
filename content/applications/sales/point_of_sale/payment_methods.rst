@@ -29,4 +29,5 @@ under the :guilabel:`Payments` section.
 .. toctree::
    :titlesonly:
 
+   payment_methods/qr_code_payment
    payment_methods/terminals
