@@ -27,7 +27,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-21 08:31+0000\n"
+"POT-Creation-Date: 2024-07-23 07:52+0000\n"
 "PO-Revision-Date: 2021-11-02 08:48+0000\n"
 "Last-Translator: Chloe Wang, 2024\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/odoo/teams/41243/zh_CN/)\n"
@@ -2631,7 +2631,7 @@ msgstr "仓库管理"
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments.rst:5
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:3
 msgid "Inventory adjustments"
-msgstr ""
+msgstr "库存调整"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:5
 msgid ""
@@ -2642,46 +2642,47 @@ msgid ""
 "be made to reconcile the differences, and ensure that the recorded counts in"
 " the database match the actual counts in the warehouse."
 msgstr ""
+"在任何仓库管理系统中，数据库中记录的库存盘点可能并不总是与仓库中的实际库存盘点一致。这两种清点之间的差异可能是由于损坏、人为错误、盗窃或其他因素造成的。因此，必须进行库存调整以调节差异，确保数据库中记录的库存数量与仓库中的实际数量相符。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:12
 msgid "Inventory Adjustments page"
-msgstr ""
+msgstr "库存调整页面"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:14
 msgid ""
 "To view the *Inventory Adjustments* page, navigate to "
 ":menuselection:`Inventory app --> Operations --> Inventory Adjustments`."
-msgstr ""
+msgstr "要查看 *库存调整* 页面，请导航至 :menuselection:`库存应用程序 --> 操作 --> 库存调整`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst-1
 msgid "In stock products listed on the Inventory adjustments page."
-msgstr ""
+msgstr "库存调整页面上列出的库存产品。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:21
 msgid ""
 "On the :guilabel:`Inventory Adjustments` page, all products that are "
 "currently in stock are listed, with each product line containing the "
 "following information:"
-msgstr ""
+msgstr "在 :guilabel:`库存调整` 页面上，列出了当前库存的所有产品，每个产品系列包含以下信息："
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:24
 msgid ""
 ":guilabel:`Location`: the specific location in the warehouse where a product"
 " is stored."
-msgstr ""
+msgstr ":guilabel:`位置`：产品存放在仓库中的具体位置。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:25
 msgid ""
 ":guilabel:`Product`: the product whose quantity is listed on the inventory "
 "adjustment line."
-msgstr ""
+msgstr ":guilabel:`产品`：库存调整行中列出其数量的产品。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:26
 msgid ""
 ":guilabel:`Lot/Serial Number`: the tracking identifier assigned to the "
 "specific product listed. It can contain letters, numbers, or a combination "
 "of both."
-msgstr ""
+msgstr ":guilabel:`批次/序列号`：分配给所列特定产品的追踪标识符。它可以包含字母、数字或两者的组合。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:30
 msgid ""
@@ -2690,12 +2691,14 @@ msgid ""
 "identified product is displayed on its own product line with its own "
 "lot/serial number, displayed under the :guilabel:`Lot/Serial Number` column."
 msgstr ""
+"如果特定产品的库存数量超过 `1.00`，且分配给该产品的序列号（或批号）不止一个，则每个唯一标识的产品都会显示在自己的产品行中，并在 "
+":guilabel:`批次/序列号` 列下显示自己的批次/序列号。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:35
 msgid ""
 ":guilabel:`On Hand Quantity`: the quantity of the product currently recorded"
 " in the database."
-msgstr ""
+msgstr ":guilabel:`手头数量`：数据库中当前记录的产品数量。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:36
 msgid ""
@@ -2704,6 +2707,8 @@ msgid ""
 ":guilabel:`Ounces`), the default :abbr:`UoM (Unit of Measure)` is "
 ":guilabel:`Units`."
 msgstr ""
+":guilabel:`UoM`：产品的*计量单位*。除非另有规定（例如，以 :guilabel:`磅` 或 :guilabel:`盎司` 为单位），默认"
+" :abbr:`UoM （计量单位）` 为 :guilabel:`单位`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:39
 msgid ""
@@ -2711,6 +2716,7 @@ msgid ""
 "count. This field is left blank by default, but can be changed, depending on"
 " if it matches the :guilabel:`On Hand Quantity` or not."
 msgstr ""
+":guilabel:`已清点数量`：库存清点时清点的实际数量。该字段默认为空，但可以根据是否与 :guilabel:`库存数量` 匹配进行更改。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:42
 msgid ""
@@ -2719,20 +2725,21 @@ msgid ""
 "made. The difference is automatically calculated after every inventory "
 "adjustment."
 msgstr ""
+":guilabel:`差额`：库存调整后，:guilabel:`库存数量`与:guilabel:`已计算数量`之间的差额。每次库存调整后，差额都会自动计算。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:45
 msgid ""
 ":guilabel:`Scheduled Date`: the date at which a count should be made. If not"
 " otherwise specified, this date will default to the 31st of December of the "
 "current year."
-msgstr ""
+msgstr ":guilabel:`预定日期`：应进行计数的日期。如果未另行指定，该日期将默认为当年的 12 月 31 日。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:47
 msgid ""
 ":guilabel:`User`: the person assigned to the count in the database. This can"
 " either be the person physically counting the inventory, or applying the "
 "count in the database."
-msgstr ""
+msgstr ":guilabel:`用户`：数据库中指定的清点人员。可以是实际清点库存的人，也可以是在数据库中应用清点的人。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:49
 msgid ""
@@ -2741,6 +2748,8 @@ msgid ""
 ":guilabel:`Rental`), the default *Product Category* is set to "
 ":guilabel:`All`."
 msgstr ""
+":guilabel:`产品类别`：内部分配给特定产品的类别。除非另有说明（即 :guilabel:`消耗品` 或 :guilabel:`租赁`），默认 "
+"*产品类别* 设置为 :guilabel:`全部`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:52
 msgid ""
@@ -2749,19 +2758,20 @@ msgid ""
 "purchase orders, or manufacturing orders that might change the available "
 "quantity once fulfilled."
 msgstr ""
+":guilabel:`可用数量`：当前可用的特定产品数量，基于任何未完成/未完成的销售订单、采购订单或生产订单，这些订单一旦完成可能会改变可用数量。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:55
 msgid ""
 ":guilabel:`Accounting Date`: the date on which the adjustments will be "
 "accounted in the Odoo *Accounting* app."
-msgstr ""
+msgstr ":guilabel:`会计日期`：调整将在 Odoo *会计* 应用程序中入账的日期。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:57
 msgid ""
 ":guilabel:`Company`: the company whose database these inventory adjustments "
 "are being made on. The company is listed in the top right corner of the "
 "database, next to the user currently logged in."
-msgstr ""
+msgstr ":guilabel:`公司`：正在对其数据库进行库存调整的公司。该公司列在数据库的右上角，紧挨着当前登录的用户。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:61
 msgid ""
@@ -2770,10 +2780,12 @@ msgid ""
 "the form's top row, and select any desired column to reveal by clicking the "
 "checkbox next to that option."
 msgstr ""
+"某些列默认隐藏。要显示这些列，请点击表单顶行最右侧的 :guilabel:`其他选项` "
+"按钮（三个圆点图标），然后通过点击选项旁边的复选框选择要显示的列。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:66
 msgid "Create an inventory adjustment"
-msgstr ""
+msgstr "创建库存调整"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:68
 msgid ""
@@ -2781,6 +2793,7 @@ msgid ""
 "Adjustments` page, click :guilabel:`Create`. Doing so creates a new, blank "
 "inventory adjustment line at the bottom of the page."
 msgstr ""
+"要在:menuselection:`库存调整`页面创建新的库存调整，请点击:guilabel:`创建`。这样会在页面底部创建一个新的空白库存调整行。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:72
 msgid ""
@@ -2790,12 +2803,14 @@ msgid ""
 "number can also be chosen from the drop-down menu under the "
 ":guilabel:`Lot/Serial Number` column."
 msgstr ""
+"在此空白库存调整行上，点击 :guilabel:`产品` 列下的下拉菜单，选择一个产品。如果所选产品使用批号或序列号跟踪，也可从 "
+":guilabel:`批次/序列号` 列下的下拉菜单中选择所需的批次或序列号。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:77
 msgid ""
 "Next, set the value in the :guilabel:`Counted Quantity` column to the "
 "quantity counted for that product during the inventory adjustment process."
-msgstr ""
+msgstr "然后，将 :guilabel:`计算数量` 列中的值设置为库存调整过程中该产品的计算数量。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:81
 msgid ""
@@ -2804,6 +2819,8 @@ msgid ""
 "is recorded in the product's inventory adjustment history, so it should be "
 "set to reflect the actual quantity counted."
 msgstr ""
+"新库存调整的 :guilabel:`计算数量` 默认设置为 `0.00`。库存移动的 :guilabel:`已计算数量` "
+"会记录在产品的库存调整历史记录中，因此应设置为反映实际清点数量。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:85
 msgid ""
@@ -2814,13 +2831,15 @@ msgid ""
 "selecting a responsible :guilabel:`User` assigns a user to the specific "
 "inventory adjustment (for traceability purposes)."
 msgstr ""
+"在 :guilabel:`计算数量` 列的右侧，:guilabel:`预定日期` 和 :guilabel:`用户` 也可以通过各自的下拉菜单更改。更改 "
+":guilabel:`预定日期` 会更改库存调整处理的日期，选择负责的 :guilabel:`用户`，则为特定库存调整指定一个用户（已便追踪）。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:91
 msgid ""
 "Once all changes have been made to the new inventory adjustment line, click "
 "away from the line. Doing so saves the adjustment, and moves the line to the"
 " top of the page."
-msgstr ""
+msgstr "对新的库存调整行进行所有更改后，点击离开该行。这样做可以保存调整，并将该行移到页面顶部。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:94
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:156
@@ -2832,17 +2851,20 @@ msgid ""
 " quantities match, and haven't been changed at all, no value appears in the "
 ":guilabel:`Difference` column."
 msgstr ""
+"如果 :guilabel:`计算数量` 的值大于 :guilabel:`库存数量` 的值，则 :guilabel:`差异` 列中的值为 "
+"**绿色**。如果 :guilabel:`计算数量` 小于 :guilabel:`库存数量`，则 :guilabel:`差异` "
+"列中的值为**红色**。如果数量相匹配，且未作任何更改，则 :guilabel:`差异` 列中不显示任何值。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst-1
 msgid "Difference column on inventory adjustments page."
-msgstr ""
+msgstr "库存调整页面的差异栏。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:104
 msgid ""
 "At this stage, the count (:dfn:`inventory adjustment`) is recorded, but not "
 "yet applied. This means that the quantity on hand before the adjustment has "
 "not yet been updated to match the new, real counted quantity."
-msgstr ""
+msgstr "在此阶段，已记录计数（:dfn:`库存调整`），但尚未应用。这意味着调整前的库存数量尚未更新，以与新的实际计算数量相匹配。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:108
 msgid ""
@@ -2853,6 +2875,9 @@ msgid ""
 "an :guilabel:`Apply` button. Clicking this button instead causes an "
 ":guilabel:`Inventory Adjustment Reference / Reason` pop-up window to appear."
 msgstr ""
+"有两种方法可以应用新的库存调整。第一种方法是点击页面最右边一行的 :guilabel:`应用` "
+"按钮。第二种方法是点击该行最左边的复选框。这样做会在页面顶部显示新的按钮选项，其中一个是 :guilabel:`应用` 按钮。点击该按钮会弹出一个 "
+":guilabel:`库存调整参考/原因` 窗口。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:114
 msgid ""
@@ -2861,10 +2886,12 @@ msgid ""
 "Reason` field is pre-populated with the date the adjustment is being made "
 "on, but can be changed to reflect whatever reference or reason is desired."
 msgstr ""
+"在弹出菜单中，可为库存调整指定参考或原因。默认情况下，:guilabel:`库存参考/原因` "
+"字段预先填入调整日期，但也可以更改，以反映所需的参考或原因。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst:118
 msgid "Once ready, click :guilabel:`Apply` to apply the inventory adjustment."
-msgstr ""
+msgstr "准备就绪后，点击 :guilabel:`应用`，以应用库存调整。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/inventory_adjustments/count_products.rst-1
 msgid ""
@@ -3300,14 +3327,14 @@ msgid ""
 "A *lot* usually indicates a specific batch of an item that was received, is "
 "currently stored, or was shipped from a warehouse. However, it can also "
 "pertain to a batch of products manufactured in-house, as well."
-msgstr ""
+msgstr "*批次*通常表示已收到、目前储存或已从仓库发货的某一特定批次的物品。但是，它也可以指一批内部生产的产品。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/differences.rst:13
 msgid ""
 "A *serial number* is a unique identifier assigned incrementally (or "
 "sequentially) to an item or product, used to distinguish it from other items"
 " or products."
-msgstr ""
+msgstr "*序列号*是按增量（或顺序）分配给物品或产品的唯一标识符，用于将其与其他物品或产品区分开来。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/differences.rst:17
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:15
@@ -3329,13 +3356,13 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst:22
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:20
 msgid "Enable lots & serial numbers"
-msgstr ""
+msgstr "启用批次和序列号"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/differences.rst:23
 msgid ""
 "To track products using lots and serial numbers, the *Lots & Serial Numbers*"
 " feature must be enabled."
-msgstr ""
+msgstr "要使用批次和序列号追踪产品，必须启用*批次和序列号*功能。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/differences.rst:26
 msgid ""
@@ -3344,11 +3371,13 @@ msgid ""
 "the box next to :guilabel:`Lots & Serial Numbers`. Then, click the "
 ":guilabel:`Save` button to save changes."
 msgstr ""
+"要执行次操作，请进入 :menuselection:`库存应用程序 --> 配置 --> 设置`，向下滚动到 :guilabel:`追溯性` "
+"部分，并点击 :guilabel:`批量和序列号` 旁边的方框。然后，点击 :guilabel:`保存` 按钮，以保存更改。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/differences.rst-1
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/lots.rst-1
 msgid "Enabled lots and serial numbers feature in inventory settings."
-msgstr ""
+msgstr "在库存设置中启用批次和序列号功能。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/differences.rst:35
 msgid "When to use lots"
@@ -3764,7 +3793,7 @@ msgid ""
 "Expiration dates can also be generated for products manufactured in-house. "
 "To assign expiration dates to manufactured products, a manufacturing order "
 "(MO) needs to be completed."
-msgstr ""
+msgstr "也可以为内部生产的产品生成有效期。要为生产的产品指定有效期，需要填写制造订单（MO）。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:156
 msgid ""
@@ -3779,7 +3808,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst-1
 msgid "Manufacturing order for product with expiration date."
-msgstr ""
+msgstr "带有过期日期的产品制造订单。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:165
 msgid ""
@@ -3788,6 +3817,8 @@ msgid ""
 ":guilabel:`Bill of Material` for the :guilabel:`Product`, or manually adding"
 " materials to consume by clicking :guilabel:`Add a line`."
 msgstr ""
+"要制造产品，必须在 :guilabel:`产品` 列的行中有要消耗的材料。这可以通过为 :guilabel:`产品` 创建 "
+":guilabel:`物料清单` 或点击 :guilabel:`添加行` 手动添加要消耗的材料来实现。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/expiration_dates.rst:170
 msgid "Once ready, click :guilabel:`Confirm`."
@@ -4826,7 +4857,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:174
 msgid "Copy/paste serial numbers from a spreadsheet"
-msgstr ""
+msgstr "从电子表格中复制/粘贴序列号"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:176
 msgid ""
@@ -4837,6 +4868,8 @@ msgid ""
 "the necessary number of lines based on the amount of numbers pasted in the "
 "column."
 msgstr ""
+"要从现有电子表格中复制和粘贴序列号，首先要在电子表格中填入从供应商处收到的所有序列号（或在收到时手动选择的序列号）。然后，将它们复制并粘贴到 "
+":guilabel:`批次/序列号名称` 列。Odoo 将根据粘贴在列中的编号数量自动创建所需的行数。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:181
 msgid ""
@@ -5462,24 +5495,25 @@ msgid ""
 "pick orders in a warehouse, and depending on the situation, one method may "
 "be a better fit than the other."
 msgstr ""
+"批量转移是由多个分拣物组成的一组，而**波次转移**只包含不同分拣物的某些部分。这两种方法都用于在仓库中拣选订单，根据具体情况，一种方法可能比另一种方法更适合。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/misc/wave_transfers.rst:9
 msgid ""
 "To handle orders of a specific product category, or fetch products that are "
 "at the same location, wave transfers are the ideal method."
-msgstr ""
+msgstr "要处理特定产品类别的订单，或提取位于同一地点的产品，波次转移是最理想的方法。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/misc/wave_transfers.rst:12
 msgid ""
 "In Odoo, wave transfers are actually batch transfers with an extra step: "
 "transfers are split before being grouped in a batch."
-msgstr ""
+msgstr "在 Odoo 中，波次转移实际上是多了一个步骤的批量转移：在将转移分组为一个批次之前，先将其拆分。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/misc/wave_transfers.rst:18
 msgid ""
 "Before a wave transfer can be created, the :guilabel:`Batch Transfers` and "
 ":guilabel:`Wave Transfers` options must be activated."
-msgstr ""
+msgstr "在创建波次转移之前，必须激活 :guilabel:`批量转移` 和 :guilabel:`波次转移` 选项。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/misc/wave_transfers.rst:21
 msgid ""
@@ -5488,21 +5522,23 @@ msgid ""
 ":guilabel:`Wave Transfers`. Then, click :guilabel:`Save` to apply the "
 "settings."
 msgstr ""
+"首先，进入 :menuselection:`库存 --> 配置 --> 设置`。在 :guilabel:`操作` 部分，启用 "
+":guilabel:`批量转移` 和 :guilabel:`波次转移`。然后，点击 :guilabel:`保存` 应用设置。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/misc/wave_transfers.rst-1
 msgid ""
 "View of Odoo Inventory app settings to enable the wave transfers option."
-msgstr ""
+msgstr "查看 Odoo 清单应用程序设置，启用波次转移选项。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/misc/wave_transfers.rst:30
 msgid "Add products to a wave"
-msgstr ""
+msgstr "添加产品到波次中"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/misc/wave_transfers.rst:32
 msgid ""
 "Now that the settings are activated, start a wave transfer by adding "
 "products to a wave."
-msgstr ""
+msgstr "现在设置已激活，开始波次转移，将产品添加到波次中。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/misc/wave_transfers.rst:34
 msgid ""
@@ -5513,37 +5549,39 @@ msgid ""
 "icon in the corner of the operation type's card) and click "
 ":guilabel:`Operations`."
 msgstr ""
+"波次转移只能包含来自相同操作类型转账的产品线。要查看特定操作中的所有调拨和产品线，首先转到 :guilabel:`库存` "
+"仪表板，并找到所需操作类型的卡片。然后，打开选项菜单（操作类型卡片角落的三点图标）并点击 :guilabel:`操作`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/misc/wave_transfers.rst-1
 msgid "How to get an operation type's list of operations."
-msgstr ""
+msgstr "如何获取操作类型的操作列表。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/misc/wave_transfers.rst:43
 msgid ""
 "On the operations page, select the product lines you want to add in a new or"
 " existing wave. Then, click :guilabel:`Add to Wave`."
-msgstr ""
+msgstr "在操作页面，选择要添加到新波次或现有波次中的产品系列。然后，点击 :guilabel:`添加到波次`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/misc/wave_transfers.rst-1
 msgid "Select lines to add to the wave."
-msgstr ""
+msgstr "选择要添加到波次中的线条。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/misc/wave_transfers.rst:51
 msgid ""
 "Use the :guilabel:`Filters` in the search bar to group lines with the same "
 "product, location, carrier, etc..."
-msgstr ""
+msgstr "使用搜索栏中的 :guilabel:`筛选器` 对具有相同产品、地点、运营商等的行进行分组..."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/misc/wave_transfers.rst:54
 msgid "After that, a pop-up box appears."
-msgstr ""
+msgstr "之后，会出现一个弹窗。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/misc/wave_transfers.rst:56
 msgid ""
 "To add the selected lines to an existing wave transfer, select the "
 ":guilabel:`an existing wave transfer` option and select the existing wave "
 "transfer from the drop-down menu."
-msgstr ""
+msgstr "要将所选行添加到现有的波次转移中，请选择 :guilabel:`现有的波次转移` 选项，并从下拉菜单中选择现有的波次转移。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/misc/wave_transfers.rst:59
 msgid ""
@@ -5552,10 +5590,12 @@ msgid ""
 "optional :guilabel:`Responsible` field. Once the desired options are "
 "selected, click :guilabel:`Confirm` to add the product lines to a wave."
 msgstr ""
+"要创建新的波次转移，请选择 :guilabel:`新的波次转移` 选项。如果创建新的波次转移，也可在可选的 :guilabel:`负责人` "
+"字段中设置员工。选择所需选项后，点击 :guilabel:`确认` 将产品行添加到波次中。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/misc/wave_transfers.rst:64
 msgid "View wave transfers"
-msgstr ""
+msgstr "查看波次转移"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/misc/wave_transfers.rst:66
 msgid ""
@@ -5564,6 +5604,8 @@ msgid ""
 " can also be viewed in the :guilabel:`Barcode` app by going to "
 ":menuselection:`Barcode --> Batch Transfers`."
 msgstr ""
+"要查看所有波次转移及其状态，请访问 :menuselection:`库存 --> 操作 --> 波次转移`。也可在 :guilabel:`条形码` "
+"应用程序中查看波次转移，方法是进入 :menuselection:`条形码 --> 批次转移`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/planning.rst:5
 msgid "Planning"
@@ -6638,7 +6680,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst-1
 msgid "Select a preferred route from the drop-down."
-msgstr ""
+msgstr "从下拉菜单中选择首选路线。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/reordering_rules.rst:126
 msgid ""
@@ -6646,6 +6688,7 @@ msgid ""
 "for its reordering rule, the product is reordered using the selected route "
 "that is listed first on the :guilabel:`Inventory` tab of the product form."
 msgstr ""
+"如果产品启用了多个路线，但没有为其重新排序规则设置首选路线，则会使用产品表单的 :guilabel:`库存` 选项卡上最先列出的选定路线对产品重新排序。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/scrap_inventory.rst:3
 msgid "Scrap inventory"
@@ -6877,7 +6920,7 @@ msgstr "重新排序规则可在补货报告或产品表单中创建和管理。
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:33
 msgid "Make to order"
-msgstr ""
+msgstr "按订单生产"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:35
 msgid ""
@@ -6912,7 +6955,7 @@ msgstr "此外，只要 |PO| 或 |MO| 未确认，Odoo 会在预测发生变化�
 msgid ""
 "The |MTO| route is the best replenishment strategy for products that are "
 "customized, and/or for products that have no stock kept on-hand."
-msgstr ""
+msgstr "对于定制产品和/或没有库存的产品，|MTO| 路线是最佳补货策略。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:58
 msgid ""
@@ -7024,29 +7067,30 @@ msgstr ":guilabel:`仓库`：存放产品的仓库。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:107
 msgid ":guilabel:`On Hand`: the amount of product currently available."
-msgstr ""
+msgstr ":guilabel:`在手数量`：当前可用的产品数量。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:108
 msgid ""
 ":guilabel:`Forecast`: the amount of product available after all current "
 "orders (sales, manufacturing, purchase, etc.) are taken into account."
-msgstr ""
+msgstr ":guilabel:`预测`：在考虑所有当前订单（销售、制造、采购等）后，剩余的可用产品数量。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:110
 msgid ""
 ":guilabel:`Preferred Route`: how the product is procured, either "
 ":guilabel:`Buy`, :guilabel:`Manufactured`, :guilabel:`Dropship`, etc."
 msgstr ""
+":guilabel:`首选路线`：产品的采购方式，可以是 :guilabel:`购买`、:guilabel:`制造`、:guilabel:`直运`等。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:112
 msgid ":guilabel:`Vendor`: the company from which the product is acquired."
-msgstr ""
+msgstr ":guilabel:`供应商`：购买产品的公司。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:113
 msgid ""
 ":guilabel:`Bill of Materials`: the bill of materials for the product (if one"
 " is configured)."
-msgstr ""
+msgstr ":guilabel:`物料清单`：产品的物料清单（如果已配置）。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:114
 msgid ""
@@ -7143,7 +7187,7 @@ msgstr ""
 msgid ""
 "Snooze options to turn off notifications for reordering for a period of "
 "time."
-msgstr ""
+msgstr "暂停选项可在一段时间内关闭重新订购的通知。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:149
 msgid ""
@@ -7152,16 +7196,18 @@ msgid ""
 "created by an automated reordering rule has the |SO| reference number(s) "
 "that triggered the rule as the source document."
 msgstr ""
+"通过手动补货创建的 |PO| 或 |MO|， 会将 :guilabel:`补货报告` 作为源文件。由自动重新订购规则创建的 |PO| 或 "
+"|MO|，则以触发该规则的 |SO| 参考编号作为源文件。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst-1
 msgid ""
 "Quote request list shows which quotes are directly from the replenishment "
 "report."
-msgstr ""
+msgstr "报价请求列表显示哪些报价直接来自补货报告。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:158
 msgid "Make to order (MTO) route"
-msgstr ""
+msgstr "按订单生产（MTO）路线"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:160
 msgid ""
@@ -7242,6 +7288,8 @@ msgid ""
 "which is accessible via the :guilabel:`Bill of Materials` smart button on "
 "the product form."
 msgstr ""
+"对于内部制造的产品，除 :guilabel:`按订单补货（MTO）` 路线外，请确保选择了 :guilabel:`制造` "
+"路线。此外，请确保为产品配置了物料清单，可通过产品表单上的 :guilabel:`物料清单` 智能按钮访问。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst:191
 msgid "Finally, when all configurations are complete, click :guilabel:`Save`."
@@ -7252,10 +7300,11 @@ msgid ""
 "The |MTO| route cannot be selected alone. |MTO| **only** works if the "
 ":guilabel:`Manufacture` or :guilabel:`Buy` route is also selected."
 msgstr ""
+"不能单独选择 |MTO| 路线。只有同时选择 :guilabel:`制造` 或 :guilabel:`购买` 路线时，|MTO| **才**会起作用。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/strategies.rst-1
 msgid "Replenish on Order selected on the product form."
-msgstr ""
+msgstr "产品表格，选择了“按订单补货”。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/uom.rst:3
 msgid "Use different units of measure"
@@ -7288,11 +7337,11 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/uom.rst-1
 msgid "Enable Units of Measure in the Inventory settings."
-msgstr ""
+msgstr "在库存设置中启用计量单位。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/uom.rst:27
 msgid "Units of measure categories"
-msgstr ""
+msgstr "计量单位类别"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/uom.rst:29
 msgid ""
@@ -7305,7 +7354,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/uom.rst-1
 msgid "Set units of measure categories."
-msgstr ""
+msgstr "设置测量单位类别。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/uom.rst:38
 msgid ""
@@ -7314,6 +7363,8 @@ msgid ""
 " Measure Categories` page. Odoo uses the reference unit as a base for any "
 "new units."
 msgstr ""
+"每个计量单位类别都有一个参考单位。在 :guilabel:`计量单位类别`页面的 :guilabel:`计量单位`列中，参考单位以蓝色高亮显示。Odoo"
+" 使用参考单位作为任何新单位的基础。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/uom.rst:42
 msgid ""
@@ -7342,11 +7393,11 @@ msgstr ""
 msgid ""
 "Convert products from one unit to another as long as they belong to the same"
 " category."
-msgstr ""
+msgstr "将产品从一个单位转换到另一个单位，只要它们属于同一类别。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/uom.rst:60
 msgid "Specify a product's units of measure"
-msgstr ""
+msgstr "指定产品的计量单位"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/uom.rst:62
 msgid ""
@@ -7366,7 +7417,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/uom.rst:71
 msgid "Unit conversion"
-msgstr ""
+msgstr "单位换算"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/uom.rst:74
 msgid "Buy products in the Purchase UoM"
@@ -8539,13 +8590,13 @@ msgid ""
 "*Inventory valuation* is a quintessential accounting procedure that "
 "calculates the value of on-hand stock. Once determined, the inventory "
 "valuation amount is then incorporated into a company's overall value."
-msgstr ""
+msgstr "*存货估价*是计算手头存货价值的重要会计程序。一旦确定，存货估价金额就会被纳入公司的整体价值中。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:9
 msgid ""
 "In Odoo, this process can be conducted manually— by warehouse employees "
 "physically counting the products— or automatically through the database."
-msgstr ""
+msgstr "在 Odoo 中，这一过程可以由仓库员工手动清点产品，也可以通过数据库自动完成。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:13
 msgid ":doc:`inventory_valuation_config`"
@@ -8560,7 +8611,7 @@ msgid ""
 "In order to understand how moving products in and out of stock affects the "
 "company's overall value, consider the following product and stock moves "
 "scenario below."
-msgstr ""
+msgstr "为了了解产品进出库存对公司整体价值的影响，请考虑以下产品和库存移动的情景。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:22
 msgid "Receive a product"
@@ -8594,6 +8645,7 @@ msgid ""
 ":abbr:`PO (Purchase Order)` for those tables will show the subtotal of the "
 "purchase as $100, plus any additional costs or taxes."
 msgstr ""
+"接下来，假设以每张 $10 的价格购买了 10 张桌子。这些桌子的 :abbr:`采购订单（PO）`将显示采购小计 $100，外加附加费用或税金。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst-1
 msgid "Purchase order with 10 tables products valued at $10 each."
@@ -8663,7 +8715,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst-1
 msgid "Decreased stock valuation after a product is shipped."
-msgstr ""
+msgstr "产品发货后库存估值降低。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:87
 msgid "The inventory valuation report"
@@ -8680,7 +8732,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst-1
 msgid "Inventory valuation report showing multiple products."
-msgstr ""
+msgstr "显示多种产品的库存评估报告。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:99
 msgid ""
@@ -8691,7 +8743,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:104
 msgid "Update product unit price"
-msgstr ""
+msgstr "更新产品单价"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:106
 msgid ""
@@ -8700,6 +8752,8 @@ msgid ""
 "represent the stock value, *manual valuation* serves as an additional tool "
 "to update the unit price of products."
 msgstr ""
+"对任何公司而言，交货时间、供应链故障和其他风险因素都可能导致隐形成本。虽然 Odoo "
+"试图准确反映库存估值，但*手动估值*可以作为更新产品单价的额外工具。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:111
 msgid ""
@@ -10215,7 +10269,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/use_locations.rst:24
 msgid "Create a new location inside a warehouse"
-msgstr ""
+msgstr "在仓库内创建新位置"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/use_locations.rst:26
 msgid ""
@@ -11051,6 +11105,8 @@ msgid ""
 "configured in the :ref:`previous step <inventory/routes/virtual-wh>`, "
 "navigate to :menuselection:`Inventory app --> Configuration --> Locations`."
 msgstr ""
+"要将物理仓库设置为在 :ref:`上一步 <inventory/routes/virtual-wh>` 中配置的虚拟位置的子位置，请导航至 "
+":menuselection:`库存应用程序 --> 配置 --> 位置`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:123
 msgid ""
@@ -11058,6 +11114,7 @@ msgid ""
 ":guilabel:`Location` that was previously created to be a child location "
 "(e.g. `WHA`), and click :guilabel:`Edit`."
 msgstr ""
+"删除搜索栏中的任何筛选器。然后，点击先前创建为子位置（如 `WHA`）的物理仓库 :guilabel:`位置`，然后点击 :guilabel:`编辑`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:126
 msgid ""
@@ -11065,6 +11122,8 @@ msgid ""
 "Locations` to the virtual warehouse's **stock location** (e.g. `VWH/Stock`) "
 "from the drop-down menu, and click :guilabel:`Save`."
 msgstr ""
+"从下拉菜单中将 :guilabel:`母位置` 字段从 :guilabel:`实体位置` "
+"改为虚拟仓库的**库存位置**（例如，`VWH/Stock`），然后点击 :guilabel:`保存`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:131
 msgid ""
@@ -11073,14 +11132,16 @@ msgid ""
 "`VWH/Stock`) **must**  have its :guilabel:`Location Type` set to "
 ":guilabel:`Internal Location`."
 msgstr ""
+"要在 :guilabel:`母位置` 下拉菜单中选择虚拟仓库的库存位置，母仓库库存位置（如 `VWH/Stock`）**必须**将其 "
+":guilabel:`位置类型` 设置为 :guilabel:`内部位置`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst-1
 msgid "Set the child warehouse's *Parent Location* to the virtual warehouse."
-msgstr ""
+msgstr "将子仓库的*母位置*设置为虚拟仓库。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:139
 msgid "Repeat the preceding steps to configure two or more child warehouses."
-msgstr ""
+msgstr "重复前面的步骤，配置两个或更多子仓库。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:141
 msgid ""
@@ -11088,10 +11149,11 @@ msgid ""
 "orders using stock from child warehouses (e.g. `WHA` and `WHB`), if there is"
 " insufficient stock in any one location."
 msgstr ""
+"一旦完成，虚拟母仓库（如 `VWH/Stock`）会在任何一个地点库存不足时，使用子仓库（如 `WHA` 和 `WHB`）的库存来完成订单。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:145
 msgid "Set virtual stock location as 'view'"
-msgstr ""
+msgstr "将虚拟库存位置设置为 “视图”"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:147
 msgid ""
@@ -11099,12 +11161,13 @@ msgid ""
 ":guilabel:`View`, as it is a non-existent location used to group various "
 "physical warehouses together."
 msgstr ""
+"将虚拟库存位置的 :guilabel:`位置类型` 设置为 :guilabel:`视图`，因为它是一个不存在的位置，用于将各种物理仓库组合在一起。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:150
 msgid ""
 "To do that, navigate to :menuselection:`Inventory app --> Configuration --> "
 "Locations`."
-msgstr ""
+msgstr "要执行此操作，请导航至 :menuselection:`库存应用程序 --> 配置 --> 位置`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:152
 msgid ""
@@ -11112,6 +11175,8 @@ msgid ""
 ":ref:`previously created <inventory/routes/virtual-wh>`, from the "
 ":guilabel:`Locations` list."
 msgstr ""
+"从 :guilabel:`位置` 列表中点击 :ref:`之前创建 <inventory/routes/virtual-wh>` "
+"的虚拟仓库库存位置（例如 `VWH/Stock`）。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:155
 msgid ""
@@ -11119,24 +11184,26 @@ msgid ""
 "set the :guilabel:`Location Type` to :guilabel:`View`. :guilabel:`Save` the "
 "changes."
 msgstr ""
+"在位置表单的 :guilabel:`其他信息` 标题下，将 :guilabel:`位置类型` 设为 "
+":guilabel:`视图`。:guilabel:`保存` 更改。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst-1
 msgid "Warehouse location types in location creation screen."
-msgstr ""
+msgstr "位置创建屏幕中的仓库位置类型。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:163
 msgid ""
 "To view the total quantity across **all** linked child warehouses, go to the"
 " product form and click the :guilabel:`On Hand` smart button."
-msgstr ""
+msgstr "要查看**所有**链接子仓库的总数量，请转到产品表单并点击 :guilabel:`现有` 智能按钮。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:0
 msgid "Display stock across all linked warehouses."
-msgstr ""
+msgstr "显示所有链接仓库的库存。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:171
 msgid "Example: sell products from a virtual warehouse"
-msgstr ""
+msgstr "例如：从虚拟仓库销售产品"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:173
 msgid ""
@@ -11144,13 +11211,13 @@ msgid ""
 "the database must have at least **two** warehouses configured — with at "
 "least **one** product, with quantity on-hand in each warehouse, "
 "respectively."
-msgstr ""
+msgstr "要使用虚拟母位置从多个仓库销售产品，数据库必须至少配置**两个**仓库，每个仓库至少有**一种**产品和库存数量。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:178
 msgid ""
 "The following product, `Toy soldier`, is available at each location with the"
 " quantities:"
-msgstr ""
+msgstr "以下产品 `玩具士兵` 在每个地点都有供应，数量如下："
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:180
 msgid "`WHA/Stock` : 1"
@@ -11164,7 +11231,7 @@ msgstr "`WHB/Stock` : 2"
 msgid ""
 "Warehouses `WHA` and `WHB` are child warehouses of the virtual warehouse "
 "`VWH`."
-msgstr ""
+msgstr "仓库 `WHA` 和 `WHB` 是虚拟仓库 `VWH` 的子仓库。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:184
 msgid ""
@@ -11173,6 +11240,8 @@ msgid ""
 "add a :guilabel:`Customer`, and click :guilabel:`Add a product` to add the "
 "two products stored in the two warehouses."
 msgstr ""
+"通过导航至 :menuselection:`销售` 应用程序并点击 :guilabel:`创建` 来创建产品报价。在报价单上添加 "
+":guilabel:`客户` 并点击 :guilabel:`添加产品` 添加存储在两个仓库中的两种产品。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:188
 msgid ""
@@ -11181,12 +11250,15 @@ msgid ""
 "value to the virtual warehouse that was :ref:`previously created "
 "<inventory/routes/virtual-wh>`. Next, :guilabel:`Confirm` the sales order."
 msgstr ""
+"然后，点击销售订单表单上的 :guilabel:`其他信息` 选项卡。在 :guilabel:`送货` 部分，将 :guilabel:`仓库` "
+"字段值更改为 :ref:`之前创建 <inventory/routes/virtual-wh>` 的虚拟仓库。接下来，:guilabel:`确认` "
+"销售订单。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst-1
 msgid ""
 "Set virtual warehouse as the *Warehouse* field in sales order's *Other Info*"
 " tab."
-msgstr ""
+msgstr "将虚拟仓库设置为销售订单 *其他信息* 选项卡中的 *仓库* 字段。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:196
 msgid ""
@@ -11195,6 +11267,8 @@ msgid ""
 "the :guilabel:`Warehouse` field value from the sales order. Both should list"
 " the virtual warehouse location."
 msgstr ""
+"然后，点击 :guilabel:`送货` 智能按钮。在仓库交货表单中，确认 :guilabel:`源位置` 值与销售订单中的 "
+":guilabel:`仓库` 字段值相匹配。两者都应列出虚拟仓库位置。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:200
 msgid ""
@@ -11203,10 +11277,12 @@ msgid ""
 ":guilabel:`From` column for each product match the child locations that are "
 "tied to the virtual parent location."
 msgstr ""
+"最后，在仓库交付表单的 :guilabel:`详细操作` 选项卡下，确认每个产品的 :guilabel:`来自` 列中的 :guilabel:`位置` "
+"与绑定到虚拟母位置的子位置相匹配。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst-1
 msgid "Delivery order with matching source and child locations."
-msgstr ""
+msgstr "与源位置和子位置相匹配的送货单。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:209
 msgid ""
@@ -11215,22 +11291,26 @@ msgid ""
 "order, **must** match for products in the sales order to be pulled from "
 "different warehouses."
 msgstr ""
+"仓库交货单上的 :guilabel:`来源位置` 和销售订单上 :guilabel:`其他信息` 标签下的 :guilabel:`仓库` "
+"**必须**匹配，才能从不同仓库提取销售订单中的产品。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:213
 msgid ""
 "If the virtual warehouse is not in the :guilabel:`Source Location` field on "
 "the warehouse delivery form, retry product reservation by:"
-msgstr ""
+msgstr "如果虚拟仓库不在仓库交货表的 :guilabel:`来源位置` 字段中，请重新尝试产品预订："
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:216
 msgid ""
 "Running the scheduler: turn on :ref:`developer mode <developer-mode>`, and "
 "then go to :menuselection:`Inventory app --> Operations --> Run Scheduler`."
 msgstr ""
+"运行调度程序：打开 :ref:`开发者模式<developer-mode>`，然后转到 :menuselection:`库存应用程序 --> 操作 "
+"--> 运行调度程序`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:218
 msgid "Clicking :guilabel:`Check Availability` on the delivery order."
-msgstr ""
+msgstr "点击送货单上的 :guilabel:`检查可用性`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:219
 msgid ""
@@ -11238,6 +11318,8 @@ msgid ""
 "field on the sales order, then cancel it, and create a new sales order with "
 "the virtual warehouse set in the :guilabel:`Warehouse` field."
 msgstr ""
+"如果虚拟仓库**未**分配给销售订单上的 :guilabel:`仓库` 字段，则取消该订单，并在 :guilabel:`仓库` "
+"字段中设置虚拟仓库，创建新的销售订单。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:222
 msgid ""
@@ -11246,6 +11328,8 @@ msgid ""
 " :ref:`previous section <inventory/routes/child-wh>` to ensure the correct "
 "settings."
 msgstr ""
+"如果销售订单表中缺少 :guilabel:`仓库` 字段，则可能未正确设置多个子仓库。查看 :ref:`前部分 "
+"<inventory/routes/child-wh>` 以确保设置正确。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:227
 msgid ""
@@ -11254,10 +11338,11 @@ msgid ""
 "from the drop-down menu next to :guilabel:`Default Warehouse` on their "
 "employee form."
 msgstr ""
+"要使用虚拟*母*仓库作为销售订单的默认仓库，每个销售人员都应从其员工表单上 :guilabel:`默认仓库` 旁边的下拉菜单中指定虚拟仓库。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:0
 msgid "Default warehouse location on employee form."
-msgstr ""
+msgstr "员工表格上的默认仓库位置。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst:5
 msgid "Routes and push/pull rules"
@@ -12394,7 +12479,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst-1
 msgid ""
 "The detailed operations shows which lots are being selected for the picking."
-msgstr ""
+msgstr "详细操作显示哪些批次被选中进行拣货。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:140
 msgid "First Expired, First Out (FEFO)"
@@ -13678,26 +13763,26 @@ msgstr "发货设置"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:3
 msgid "Bpost integration"
-msgstr ""
+msgstr "Bpost 整合"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:5
 msgid ""
 "Set up the *Bpost* shipping connector in Odoo to manage Bpost shipments to "
 "clients directly within Odoo. To configure it, complete these steps:"
-msgstr ""
+msgstr "在 Odoo 中设置 *Bpost* 送货连接器，以便直接在 Odoo 中管理发往客户的 Bpost 货运。要进行配置，请完成以下步骤："
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:8
 msgid "Create a Bpost account."
-msgstr ""
+msgstr "创建 Bpost 账户。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:9
 msgid ""
 "Get the :ref:`Account ID and passphrase <inventory/shipping/Bpost-account>`."
-msgstr ""
+msgstr "获取 :ref:`账户 ID 和密码 <inventory/shipping/Bpost-account>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:10
 msgid "Set up the shipping method in Odoo."
-msgstr ""
+msgstr "在 Odoo 中设置送货方式。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:12
 msgid ""
@@ -13705,7 +13790,7 @@ msgid ""
 "package size and weight, have the charges applied directly to a Bpost "
 "business account, and automatically print Bpost tracking labels through "
 "Odoo."
-msgstr ""
+msgstr "完成后，可根据包裹大小和重量计算运输成本，将费用直接计入 Bpost 业务账户，并通过 Odoo 自动打印 Bpost 跟踪标签。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:17
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/delivery_method.rst:99
@@ -13714,19 +13799,19 @@ msgstr ":doc:`third_party_shipper` "
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:18
 msgid ":doc:`delivery_method`"
-msgstr ""
+msgstr ":doc:`delivery_method`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:19
 msgid ":doc:`dhl_credentials`"
-msgstr ""
+msgstr ":doc:`dhl_credentials`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:20
 msgid ":doc:`ups_credentials`"
-msgstr ""
+msgstr ":doc:`ups_credentials`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:23
 msgid "Bpost account setup"
-msgstr ""
+msgstr "设置 Bpost 账户"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:25
 msgid ""
@@ -13735,85 +13820,106 @@ msgid ""
 "company's Bpost business account. When creating the Bpost account, have the "
 "company's VAT number and mobile phone number ready."
 msgstr ""
+"首先，请访问 `Bpost 网站<https://parcel.bpost.be/en/home/business>`_，创建或登录公司的 Bpost "
+"业务账户。创建 Bpost 账户时，请准备好公司的增值税号和手机号码。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:29
 msgid ""
 "Follow the website's steps to complete registration, and sign up for "
-"shipping services."
+"shipping services. Doing so submits a request to enter a contractual "
+"business relationship between the company and Bpost."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:31
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:33
+msgid ""
+"Odoo **cannot** be integrated with `non-business Bpost "
+"<https://bpost.freshdesk.com/support/solutions/articles/174847-account-id-"
+"and-passphrase>`_ accounts."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:37
 msgid ""
 "After completing the setup, get the Bpost account ID and passphrase, by "
 "navigating to the :guilabel:`Shipping Manager` menu item."
-msgstr ""
+msgstr "完成设置后，通过导航至 :guilabel:`运输经理` 菜单项，获取 Bpost 帐户 ID 和密码。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:36
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:42
 msgid ""
 "On the :guilabel:`Shipping Manager` page, go to the :guilabel:`Admin` tab, "
 "then the :guilabel:`General Settings` tab, to find the :guilabel:`Account "
 "ID` and :guilabel:`Passphrase` needed to configure Odoo's shipping method."
 msgstr ""
+"在:guilabel:`发货管理器` 页面，转到:guilabel:`管理员` 选项卡，然后转到:guilabel:`常规设置` 选项卡，找到配置 "
+"Odoo 发货方式所需的:guilabel:`账户ID` 和:guilabel:`密码`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst-1
 msgid "In the *Admin* tab, show the Account ID and Passphrase."
-msgstr ""
+msgstr "在 *管理* 选项卡中，显示账户 ID 和密码。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:45
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:51
 msgid "Configure Bpost shipping method"
-msgstr ""
+msgstr "配置 Bpost 运输方式"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:47
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:53
 msgid ""
 "With those necessary credentials, configure the Bpost shipping method in "
 "Odoo by going to :menuselection:`Inventory app --> Configuration --> "
 "Shipping Methods`."
 msgstr ""
+"有了这些必要的凭证，请进入 :menuselection:`库存应用程序 --> 配置 --> 运输方式` 在 Odoo 中配置 Bpost 送货方法。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:56
 msgid "On the :guilabel:`Shipping Methods` page, click :guilabel:`Create`."
-msgstr ""
+msgstr "在 :guilabel:`运输方式` 页面，点击 :guilabel:`创建`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:52
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:58
 msgid ""
 "In the :guilabel:`Provider` field, select :guilabel:`Bpost` from the drop-"
 "down menu. Doing so reveals the :guilabel:`Bpost Configuration` tab at the "
 "bottom of the form, where the Bpost credentials can be entered."
 msgstr ""
+"在 :guilabel:`提供商` 字段中，从下拉菜单中选择 :guilabel:`Bpost`。这样就会显示表单底部的 "
+":guilabel:`Bpost 配置` 选项卡，可在此输入 Bpost 凭据。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:56
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:62
 msgid ""
 "For details on configuring the other fields on the shipping method, such as "
 ":guilabel:`Delivery Product`, refer to the :doc:`Configure third-party "
 "carrier <third_party_shipper>` documentation."
 msgstr ""
+"有关配置出货方式的其他字段（如 :guilabel:`交付产品` 字段）的详细信息，请参阅 "
+":doc:`配置第三方运营商<third_party_shipper> ` 文档。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:60
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:66
 msgid ""
 "To generate Bpost :doc:`shipping labels <../operation/labels>` through Odoo,"
 " ensure the :guilabel:`Integration Level` option is set to :guilabel:`Get "
 "Rate and Create Shipment`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:63
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:69
 msgid ""
 "In the :guilabel:`Bpost Configuration` tab, complete the following fields:"
-msgstr ""
+msgstr "在 :guilabel:`Bpost 配置` 选项卡中，填写以下字段："
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:65
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:71
 msgid ""
 ":guilabel:`Bpost Account Number` (required field): enter the company's "
 "unique :ref:`account ID <inventory/shipping/bpost-account>` from the Bpost "
 "website."
 msgstr ""
+":guilabel:`Bpost 帐号`（必填字段）：输入公司在 Bpost 网站上唯一的 :ref:`账户 ID "
+"<inventory/shipping/bpost-account>` 。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:67
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:73
 msgid ""
 ":guilabel:`Passphrase` (required field): enter the :ref:`passphrase "
 "<inventory/shipping/bpost-account>` from the Bpost website."
 msgstr ""
+":guilabel:`口令`（必填字段）：输入 Bpost 网站上的 :ref:`passphrase "
+"<inventory/shipping/bpost-account>` 口令。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:69
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:75
 msgid ""
 ":guilabel:`Bpost Delivery Nature`: select either :guilabel:`Domestic` or "
 ":guilabel:`International` shipping services. Choosing :guilabel:`Domestic` "
@@ -13821,78 +13927,94 @@ msgid ""
 "enables the :guilabel:`Bpost Shipment Type` and :guilabel:`Bpost Parcel "
 "Return Instructions` fields."
 msgstr ""
+":guilabel:`Bpost 送货性质`: 选择 :guilabel:`国内` 或 :guilabel:`国际` 运输服务。选择 "
+":guilabel:`国内` 会显示 :guilabel:`选项` 部分，而 :guilabel:`国际` 会启用 :guilabel:`Bpost "
+"运输类型` 和 :guilabel:`Bpost 包裹退回说明` 字段。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:73
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:79
 msgid ""
 ":guilabel:`Bpost Package Type`: select the type of shipping service from the"
 " drop-down menu."
-msgstr ""
+msgstr ":guilabel:`Bpost 包裹类型`：从下拉菜单中选择运输服务类型。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:75
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:81
 msgid ""
 "For `domestic delivery "
 "<https://help.shipmondo.com/en/articles/6092265-bpost-belgium-parcel-types-"
 "and-requirements>`_, the options are: :guilabel:`bpack 24h Pro`, "
 ":guilabel:`bpack 24h business`, or :guilabel:`bpack Bus`."
 msgstr ""
+"对于 `国内送货 <https://help.shipmondo.com/en/articles/6092265-bpost-belgium-"
+"parcel-types-and-requirements>`_，选项有：:guilabel:`bpack "
+"24小时专业版`、:guilabel:`bpack 24小时商务版`或 :guilabel:`bpack 商业版`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:80
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:86
 msgid ""
 "For `international delivery <https://www.bpost.be/en/business-parcels-"
 "send/international>`_, the options are: :guilabel:`bpack World Express Pro`,"
 " :guilabel:`bpack World Business`, or :guilabel:`bpack Europe Business`."
 msgstr ""
+"对于 `国际快递 <https://www.bpost.be/en/business-parcels-"
+"send/international>`_，选项包括： :guilabel:`bpack 全球快递专业版`、:guilabel:`bpack "
+"全球商务版` 或 :guilabel:`bpack 欧洲商务版`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:83
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:89
 msgid ""
 ":guilabel:`Bpost Shipment Type` (required field): for international "
 "deliveries, declare the type of goods in the package as :guilabel:`SAMPLE`, "
 ":guilabel:`GIFT`, :guilabel:`GOODS`, :guilabel:`DOCUMENTS`, or "
 ":guilabel:`OTHER`."
 msgstr ""
+":guilabel:`Bpost 快件类型`（必填字段）：对于国际快递，请将包裹中的货物类型声明为 "
+":guilabel:`样本`、:guilabel:`礼物`、:guilabel:`商品`、:guilabel:`文件` 或 "
+":guilabel:`其他`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:86
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:92
 msgid ""
 ":guilabel:`Bpost Parcel Return Address`: return address when an "
 "international shipment fails to deliver. Select from the drop-down menu: "
 ":guilabel:`Destroy`, :guilabel:`Return to sender by air`, or "
 ":guilabel:`Return to sender by road`."
 msgstr ""
+":guilabel:`Bpost "
+"包裹退回地址`：国际快件未能送达时的退回地址。从下拉菜单中选择：:guilabel:`销毁`、:guilabel:`空运退回发件人`或:guilabel:`陆运退回发件人`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:95
 msgid ""
 ":guilabel:`Label Type`: choose :guilabel:`A6` or :guilabel:`A4` label sizes "
 "from the drop-down menu."
-msgstr ""
+msgstr ":guilabel:`标签类型`：从下拉菜单中选择 :guilabel:`A6` 或 :guilabel:`A4` 标签尺寸。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:91
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:97
 msgid ""
 ":guilabel:`Label Format`: choose :guilabel:`PDF` or :guilabel:`PNG` from the"
 " drop-down menu."
-msgstr ""
+msgstr ":guilabel:`标签格式`：从下拉菜单中选择 :guilabel:`PDF` 或 :guilabel:`PNG`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:93
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:99
 msgid ""
 "For domestic deliveries, these features are available in the "
 ":guilabel:`Options` section:"
-msgstr ""
+msgstr "对于国内送货，这些功能可在 :guilabel:`选项` 部分中使用："
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:95
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:101
 msgid ""
 "Enable the :guilabel:`Delivery on Saturday` feature to include Saturdays as "
 "possible delivery dates. Depending on the :guilabel:`Bpost Package Type` "
 "selected, this option might incur additional costs to the company."
 msgstr ""
+"启用 :guilabel:`周六送货` 功能，将星期六作为可能的交货日期。根据所选的 :guilabel:`Bpost "
+"包裹类型`，该选项可能会给公司带来额外费用。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:98
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:104
 msgid ""
 "Enable the :guilabel:`Generate Return Label` feature to automatically print "
 "a return label upon validating the delivery order."
-msgstr ""
+msgstr "启用 :guilabel:`生成退货标签` 功能，在验证送货订单后自动打印退货标签。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst-1
 msgid "Show Bpost shipping method."
-msgstr ""
+msgstr "显示 Bpost 运输方式。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/delivery_method.rst:3
 msgid "How to setup a delivery method?"

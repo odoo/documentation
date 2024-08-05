@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-28 08:57+0000\n"
+"POT-Creation-Date: 2024-07-23 07:52+0000\n"
 "PO-Revision-Date: 2021-11-02 08:48+0000\n"
 "Last-Translator: Wil Odoo, 2024\n"
 "Language-Team: Polish (https://app.transifex.com/odoo/teams/41243/pl/)\n"
@@ -7232,10 +7232,18 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:168
+msgid ""
+"Packaging can be used in conjunction with Odoo :ref:`Barcode "
+"<inventory/barcode/software>`. When receiving products from suppliers, "
+"scanning the packaging barcode automatically adds the number of units in the"
+" packaging to the internal count of the product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:175
 msgid "Set up packagings"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:170
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:177
 msgid ""
 "To use packagings, ensure the :guilabel:`Product Packagings` feature is "
 "enabled. To do that, navigate to :menuselection:`Inventory app --> "
@@ -7244,20 +7252,20 @@ msgid ""
 ":guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:175
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:182
 msgid ""
 "In Odoo, product packagings are used on sales/purchase orders and inventory "
 "transfers."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:177
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:184
 msgid ""
 "Next, to create packagings, navigate to :menuselection:`Inventory app --> "
 "Products --> Products` and click on the desired product, then click "
 ":guilabel:`Edit` on the product page."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:180
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:187
 msgid ""
 "Under the :guilabel:`Inventory` tab, scroll down to the "
 ":guilabel:`Packaging` section, and click :guilabel:`Add a line`. Then, a "
@@ -7265,31 +7273,31 @@ msgid ""
 " should be entered:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:184
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:191
 msgid ""
 ":guilabel:`Packaging`: name of packaging that appears on sales/purchase "
 "orders as a packaging option for the product"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:186
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:193
 msgid ":guilabel:`Contained quantity`: amount of product in the packaging"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:187
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:194
 msgid ""
 ":guilabel:`Barcode`: identifier used with the :ref:`Barcode app "
 "<barcode/operations/intro>` to trace the packaging of a product during stock"
 " moves or pickings. Leave blank if not in use"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:189
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:196
 msgid ""
 ":guilabel:`Company`: indicates the packaging is only available at the "
 "selected company. Leave blank to make the packaging available across all "
 "companies."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:193
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:200
 msgid ""
 "Create a packaging type for 6 cans of the product, `Grape Soda`, by naming "
 "the :guilabel:`Packaging` to `6-pack` and setting the :guilabel:`Contained "
@@ -7301,7 +7309,7 @@ msgstr ""
 msgid "Create 6-pack case for product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:201
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:208
 msgid ""
 "When all the necessary information has been entered, either click "
 ":guilabel:`Save & Close` to save the packaging and return to the product "
@@ -7309,7 +7317,7 @@ msgid ""
 "another one in a fresh pop-up window."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:206
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:213
 msgid ""
 "View all product packagings in the :guilabel:`Inventory` tab of the product "
 "form."
@@ -7321,11 +7329,81 @@ msgid ""
 "Inventory tab."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:214
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:221
+msgid "Partial reservation"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:223
+msgid ""
+"After :ref:`completing the packaging setup <inventory/management/packaging-"
+"setup>`, packagings can be reserved in full or partial quantities for "
+"outgoing shipments. Partial packaging flexibility expedites order "
+"fulfillment by allowing the immediate shipment of available items, while "
+"awaiting the rest."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:228
+msgid ""
+"To configure packaging reservation methods, go to :menuselection:`Inventory "
+"app --> Configuration --> Product Categories`. Then, click "
+":guilabel:`Create`, or select the desired product category."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:231
+msgid ""
+"On the product category's form, in the :guilabel:`Logistics` section, "
+":guilabel:`Reserve Packagings` can be set to :guilabel:`Reserve Only Full "
+"Packagings` or :guilabel:`Reserve Partial Packagings`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:235
+msgid ""
+"To see the :guilabel:`Reserve Packaging` field, the :guilabel:`Product "
+"Packaging` feature **must** be enabled. To enable this feature, go to "
+":menuselection:`Inventory app --> Configuration --> Settings`, scroll to the"
+" :guilabel:`Products` section, tick the :guilabel:`Product Packagings` "
+"checkbox, and click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst-1
+msgid "Show Reserve Packagings field on the product categories page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:245
+msgid ""
+"To better evaluate the options based on business needs, consider the "
+"following example:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:247
+msgid "a product is sold in twelve units per packaging."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:248
+msgid "an order demands two packagings."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:249
+msgid "there are only twenty-two units in stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:251
+msgid ""
+"When :guilabel:`Reserve Only Full Packagings` is selected, only twelve units"
+" are reserved for the order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:254
+msgid ""
+"Conversely, when :guilabel:`Reserve Partial Packagings` is selected, twenty-"
+"two units are reserved for the order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:258
 msgid "View all packagings"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:216
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:260
 msgid ""
 "To view all packagings that have been created, go to "
 ":menuselection:`Inventory app --> Configuration --> Product Packagings`. "
@@ -7334,7 +7412,7 @@ msgid ""
 "packagings by clicking :guilabel:`Create`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:222
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:266
 msgid ""
 "Two soda products, `Grape Soda` and `Diet Coke`, have three types of "
 "packaging configured. On the :guilabel:`Product Packagings` page, each "
@@ -7346,11 +7424,11 @@ msgstr ""
 msgid "List of different packagings for products."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:231
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:275
 msgid "Apply packagings"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:233
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:277
 msgid ""
 "When creating a sales order in the :menuselection:`Sales` app, specify the "
 "packagings that should be used for the product(s). The chosen packaging is "
@@ -7358,7 +7436,7 @@ msgid ""
 "field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:238
+#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:282
 msgid ""
 "18 cans of the product, `Grape Soda`, is packed using three 6-pack "
 "packagings."
@@ -7366,14 +7444,6 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:0
 msgid "Assign packagings on the Sales Order Line."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:245
-msgid ""
-"Packaging can be used in conjunction with Odoo :ref:`Barcode "
-"<inventory/barcode/software>`. When receiving products from suppliers, "
-"scanning the packaging barcode automatically adds the number of units in the"
-" packaging to the internal count of the product."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting.rst:5
@@ -12924,6 +12994,232 @@ msgstr ""
 msgid "Shipping Setup"
 msgstr ""
 
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:3
+msgid "Bpost integration"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:5
+msgid ""
+"Set up the *Bpost* shipping connector in Odoo to manage Bpost shipments to "
+"clients directly within Odoo. To configure it, complete these steps:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:8
+msgid "Create a Bpost account."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:9
+msgid ""
+"Get the :ref:`Account ID and passphrase <inventory/shipping/Bpost-account>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:10
+msgid "Set up the shipping method in Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:12
+msgid ""
+"Upon completion, it is possible to calculate the cost of shipping, based on "
+"package size and weight, have the charges applied directly to a Bpost "
+"business account, and automatically print Bpost tracking labels through "
+"Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:17
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/delivery_method.rst:99
+msgid ":doc:`third_party_shipper`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:18
+msgid ":doc:`delivery_method`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:19
+msgid ":doc:`dhl_credentials`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:20
+msgid ":doc:`ups_credentials`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:23
+msgid "Bpost account setup"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:25
+msgid ""
+"To begin, go to the `Bpost website "
+"<https://parcel.bpost.be/en/home/business>`_ to create, or log into, the "
+"company's Bpost business account. When creating the Bpost account, have the "
+"company's VAT number and mobile phone number ready."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:29
+msgid ""
+"Follow the website's steps to complete registration, and sign up for "
+"shipping services. Doing so submits a request to enter a contractual "
+"business relationship between the company and Bpost."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:33
+msgid ""
+"Odoo **cannot** be integrated with `non-business Bpost "
+"<https://bpost.freshdesk.com/support/solutions/articles/174847-account-id-"
+"and-passphrase>`_ accounts."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:37
+msgid ""
+"After completing the setup, get the Bpost account ID and passphrase, by "
+"navigating to the :guilabel:`Shipping Manager` menu item."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:42
+msgid ""
+"On the :guilabel:`Shipping Manager` page, go to the :guilabel:`Admin` tab, "
+"then the :guilabel:`General Settings` tab, to find the :guilabel:`Account "
+"ID` and :guilabel:`Passphrase` needed to configure Odoo's shipping method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst-1
+msgid "In the *Admin* tab, show the Account ID and Passphrase."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:51
+msgid "Configure Bpost shipping method"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:53
+msgid ""
+"With those necessary credentials, configure the Bpost shipping method in "
+"Odoo by going to :menuselection:`Inventory app --> Configuration --> "
+"Shipping Methods`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:56
+msgid "On the :guilabel:`Shipping Methods` page, click :guilabel:`Create`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:58
+msgid ""
+"In the :guilabel:`Provider` field, select :guilabel:`Bpost` from the drop-"
+"down menu. Doing so reveals the :guilabel:`Bpost Configuration` tab at the "
+"bottom of the form, where the Bpost credentials can be entered."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:62
+msgid ""
+"For details on configuring the other fields on the shipping method, such as "
+":guilabel:`Delivery Product`, refer to the :doc:`Configure third-party "
+"carrier <third_party_shipper>` documentation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:66
+msgid ""
+"To generate Bpost :doc:`shipping labels <../operation/labels>` through Odoo,"
+" ensure the :guilabel:`Integration Level` option is set to :guilabel:`Get "
+"Rate and Create Shipment`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:69
+msgid ""
+"In the :guilabel:`Bpost Configuration` tab, complete the following fields:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:71
+msgid ""
+":guilabel:`Bpost Account Number` (required field): enter the company's "
+"unique :ref:`account ID <inventory/shipping/bpost-account>` from the Bpost "
+"website."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:73
+msgid ""
+":guilabel:`Passphrase` (required field): enter the :ref:`passphrase "
+"<inventory/shipping/bpost-account>` from the Bpost website."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:75
+msgid ""
+":guilabel:`Bpost Delivery Nature`: select either :guilabel:`Domestic` or "
+":guilabel:`International` shipping services. Choosing :guilabel:`Domestic` "
+"shows the :guilabel:`Options` section, while :guilabel:`International` "
+"enables the :guilabel:`Bpost Shipment Type` and :guilabel:`Bpost Parcel "
+"Return Instructions` fields."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:79
+msgid ""
+":guilabel:`Bpost Package Type`: select the type of shipping service from the"
+" drop-down menu."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:81
+msgid ""
+"For `domestic delivery "
+"<https://help.shipmondo.com/en/articles/6092265-bpost-belgium-parcel-types-"
+"and-requirements>`_, the options are: :guilabel:`bpack 24h Pro`, "
+":guilabel:`bpack 24h business`, or :guilabel:`bpack Bus`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:86
+msgid ""
+"For `international delivery <https://www.bpost.be/en/business-parcels-"
+"send/international>`_, the options are: :guilabel:`bpack World Express Pro`,"
+" :guilabel:`bpack World Business`, or :guilabel:`bpack Europe Business`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:89
+msgid ""
+":guilabel:`Bpost Shipment Type` (required field): for international "
+"deliveries, declare the type of goods in the package as :guilabel:`SAMPLE`, "
+":guilabel:`GIFT`, :guilabel:`GOODS`, :guilabel:`DOCUMENTS`, or "
+":guilabel:`OTHER`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:92
+msgid ""
+":guilabel:`Bpost Parcel Return Address`: return address when an "
+"international shipment fails to deliver. Select from the drop-down menu: "
+":guilabel:`Destroy`, :guilabel:`Return to sender by air`, or "
+":guilabel:`Return to sender by road`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:95
+msgid ""
+":guilabel:`Label Type`: choose :guilabel:`A6` or :guilabel:`A4` label sizes "
+"from the drop-down menu."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:97
+msgid ""
+":guilabel:`Label Format`: choose :guilabel:`PDF` or :guilabel:`PNG` from the"
+" drop-down menu."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:99
+msgid ""
+"For domestic deliveries, these features are available in the "
+":guilabel:`Options` section:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:101
+msgid ""
+"Enable the :guilabel:`Delivery on Saturday` feature to include Saturdays as "
+"possible delivery dates. Depending on the :guilabel:`Bpost Package Type` "
+"selected, this option might incur additional costs to the company."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:104
+msgid ""
+"Enable the :guilabel:`Generate Return Label` feature to automatically print "
+"a return label upon validating the delivery order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst-1
+msgid "Show Bpost shipping method."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/delivery_method.rst:3
 msgid "How to setup a delivery method?"
 msgstr ""
@@ -13027,10 +13323,6 @@ msgstr ""
 msgid ""
 "On the delivery, check the **Carrier Information**. The carrier is the "
 "chosen delivery method."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/delivery_method.rst:99
-msgid ":doc:`third_party_shipper`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/delivery_method.rst:100
