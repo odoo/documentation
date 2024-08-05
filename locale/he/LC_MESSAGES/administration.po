@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-30 07:20+0000\n"
+"POT-Creation-Date: 2024-07-23 10:38+0000\n"
 "PO-Revision-Date: 2023-01-13 14:30+0000\n"
 "Last-Translator: Orel Nahmany, 2024\n"
 "Language-Team: Hebrew (https://app.transifex.com/odoo/teams/41243/he/)\n"
@@ -509,7 +509,7 @@ msgid "Deactivated features"
 msgstr ""
 
 #: ../../content/administration/neutralized_database.rst:24
-msgid "Here is a non-exhaustive list of the deactivated parameters:"
+msgid "Here is a non-exhaustive list of the deactivated features:"
 msgstr ""
 
 #: ../../content/administration/neutralized_database.rst:26
@@ -538,7 +538,11 @@ msgstr ""
 msgid ":abbr:`IAP (In-App Purchase)` tokens"
 msgstr ""
 
-#: ../../content/administration/neutralized_database.rst:34
+#: ../../content/administration/neutralized_database.rst:32
+msgid "website visibility (prevent search engines from indexing your site)"
+msgstr ""
+
+#: ../../content/administration/neutralized_database.rst:35
 msgid ""
 "**A red banner at the top of the screen is displayed on the neutralized "
 "database so that it can be seen immediately.**"
@@ -691,7 +695,7 @@ msgstr ""
 #: ../../content/administration/odoo_online.rst:3
 #: ../../content/administration/supported_versions.rst:29
 #: ../../content/administration/upgrade.rst:81
-#: ../../content/administration/upgrade.rst:299
+#: ../../content/administration/upgrade.rst:296
 msgid "Odoo Online"
 msgstr ""
 
@@ -950,7 +954,7 @@ msgstr ""
 #: ../../content/administration/odoo_sh.rst:5
 #: ../../content/administration/supported_versions.rst:30
 #: ../../content/administration/upgrade.rst:111
-#: ../../content/administration/upgrade.rst:310
+#: ../../content/administration/upgrade.rst:307
 msgid "Odoo.sh"
 msgstr ""
 
@@ -3873,7 +3877,6 @@ msgstr ""
 #: ../../content/administration/supported_versions.rst:47
 #: ../../content/administration/supported_versions.rst:48
 #: ../../content/administration/supported_versions.rst:49
-#: ../../content/administration/supported_versions.rst:53
 #: ../../content/administration/supported_versions.rst:77
 #: ../../content/administration/supported_versions.rst:78
 #: ../../content/administration/supported_versions.rst:79
@@ -4115,7 +4118,7 @@ msgstr ""
 
 #: ../../content/administration/on_premise.rst:5
 #: ../../content/administration/upgrade.rst:136
-#: ../../content/administration/upgrade.rst:333
+#: ../../content/administration/upgrade.rst:330
 msgid "On-premise"
 msgstr ""
 
@@ -5429,9 +5432,9 @@ msgstr ""
 #: ../../content/administration/on_premise/source.rst:176
 #: ../../content/administration/on_premise/source.rst:204
 #: ../../content/administration/on_premise/source.rst:235
-#: ../../content/administration/on_premise/source.rst:320
-#: ../../content/administration/on_premise/source.rst:389
-#: ../../content/administration/on_premise/source.rst:452
+#: ../../content/administration/on_premise/source.rst:325
+#: ../../content/administration/on_premise/source.rst:394
+#: ../../content/administration/on_premise/source.rst:457
 msgid "Windows"
 msgstr ""
 
@@ -5450,8 +5453,8 @@ msgstr ""
 #: ../../content/administration/on_premise/source.rst:195
 #: ../../content/administration/on_premise/source.rst:224
 #: ../../content/administration/on_premise/source.rst:267
-#: ../../content/administration/on_premise/source.rst:380
-#: ../../content/administration/on_premise/source.rst:442
+#: ../../content/administration/on_premise/source.rst:385
+#: ../../content/administration/on_premise/source.rst:447
 msgid "Linux"
 msgstr ""
 
@@ -5932,7 +5935,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/administration/on_premise/packages.rst:57
-#: ../../content/administration/on_premise/source.rst:412
+#: ../../content/administration/on_premise/source.rst:417
 msgid ""
 "`wkhtmltopdf` is not installed through **pip** and must be installed "
 "manually in `version 0.12.6 "
@@ -6154,9 +6157,9 @@ msgstr ""
 #: ../../content/administration/on_premise/source.rst:182
 #: ../../content/administration/on_premise/source.rst:209
 #: ../../content/administration/on_premise/source.rst:249
-#: ../../content/administration/on_premise/source.rst:343
-#: ../../content/administration/on_premise/source.rst:401
-#: ../../content/administration/on_premise/source.rst:463
+#: ../../content/administration/on_premise/source.rst:348
+#: ../../content/administration/on_premise/source.rst:406
+#: ../../content/administration/on_premise/source.rst:468
 msgid "Mac OS"
 msgstr ""
 
@@ -6304,40 +6307,46 @@ msgstr ""
 
 #: ../../content/administration/on_premise/source.rst:276
 msgid ""
-"For Debian-based systems, the packages are listed in the `debian/control "
-"<https://github.com/odoo/odoo/blob/16.0/debian/control>`_ file of the Odoo "
-"sources."
-msgstr ""
-
-#: ../../content/administration/on_premise/source.rst:279
-msgid ""
 "On Debian/Ubuntu, the following commands should install the required "
 "packages:"
+msgstr ""
+
+#: ../../content/administration/on_premise/source.rst:283
+msgid ""
+"The `setup/debinstall.sh` script will parse the `debian/control "
+"<https://github.com/odoo/odoo/blob/16.0/debian/control>`_ file and install "
+"the found packages."
 msgstr ""
 
 #: ../../content/administration/on_premise/source.rst:286
 msgid "Install with pip"
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:288
+#: ../../content/administration/on_premise/source.rst:290
+msgid ""
+"Using pip may lead to security issues and broken dependencies; only do this "
+"if you know what you are doing."
+msgstr ""
+
+#: ../../content/administration/on_premise/source.rst:293
 msgid ""
 "As some of the Python packages need a compilation step, they require system "
 "libraries to be installed."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:291
+#: ../../content/administration/on_premise/source.rst:296
 msgid ""
 "On Debian/Ubuntu, the following command should install these required "
 "libraries:"
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:297
+#: ../../content/administration/on_premise/source.rst:302
 msgid ""
 "Odoo dependencies are listed in the :file:`requirements.txt` file located at"
 " the root of the Odoo Community directory."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:301
+#: ../../content/administration/on_premise/source.rst:306
 msgid ""
 "The Python packages in :file:`requirements.txt` are based on their "
 "stable/LTS Debian/Ubuntu corresponding version at the moment of the Odoo "
@@ -6346,9 +6355,9 @@ msgid ""
 "then chosen in the :file:`requirements.txt`."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:308
-#: ../../content/administration/on_premise/source.rst:330
-#: ../../content/administration/on_premise/source.rst:349
+#: ../../content/administration/on_premise/source.rst:313
+#: ../../content/administration/on_premise/source.rst:335
+#: ../../content/administration/on_premise/source.rst:354
 msgid ""
 "It can be preferable not to mix Python module packages between different "
 "instances of Odoo or with the system. However, it is possible to use "
@@ -6356,143 +6365,143 @@ msgid ""
 "Python environments."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:312
+#: ../../content/administration/on_premise/source.rst:317
 msgid ""
 "Navigate to the path of the Odoo Community installation "
 "(:file:`CommunityPath`) and run **pip** on the requirements file to install "
 "the requirements for the current user."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:322
+#: ../../content/administration/on_premise/source.rst:327
 msgid ""
 "Before installing the dependencies, download and install the `Build Tools "
 "for Visual Studio <https://visualstudio.microsoft.com/downloads/>`_. Select "
 "**C++ build tools** in the **Workloads** tab and install them when prompted."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:326
-#: ../../content/administration/on_premise/source.rst:345
+#: ../../content/administration/on_premise/source.rst:331
+#: ../../content/administration/on_premise/source.rst:350
 msgid ""
 "Odoo dependencies are listed in the `requirements.txt` file located at the "
 "root of the Odoo Community directory."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:334
+#: ../../content/administration/on_premise/source.rst:339
 msgid ""
 "Navigate to the path of the Odoo Community installation (`CommunityPath`) "
 "and run **pip** on the requirements file in a terminal **with Administrator "
 "privileges**:"
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:353
+#: ../../content/administration/on_premise/source.rst:358
 msgid ""
 "Navigate to the path of the Odoo Community installation (`CommunityPath`) "
 "and run **pip** on the requirements file:"
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:363
+#: ../../content/administration/on_premise/source.rst:368
 msgid ""
 "Non-Python dependencies must be installed with a package manager (`Homebrew "
 "<https://brew.sh/>`_, `MacPorts <https://www.macports.org>`_)."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:366
+#: ../../content/administration/on_premise/source.rst:371
 msgid "Download and install the **Command Line Tools**:"
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:372
+#: ../../content/administration/on_premise/source.rst:377
 msgid "Use the package manager to install non-Python dependencies."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:375
+#: ../../content/administration/on_premise/source.rst:380
 msgid ""
 "For languages using a **right-to-left interface** (such as Arabic or "
 "Hebrew), the `rtlcss` package is required."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:382
+#: ../../content/administration/on_premise/source.rst:387
 msgid "Download and install **nodejs** and **npm** with a package manager."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:383
-#: ../../content/administration/on_premise/source.rst:392
-#: ../../content/administration/on_premise/source.rst:405
+#: ../../content/administration/on_premise/source.rst:388
+#: ../../content/administration/on_premise/source.rst:397
+#: ../../content/administration/on_premise/source.rst:410
 msgid "Install `rtlcss`:"
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:391
+#: ../../content/administration/on_premise/source.rst:396
 msgid "Download and install `nodejs <https://nodejs.org/en/download>`_."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:398
+#: ../../content/administration/on_premise/source.rst:403
 msgid ""
 "Edit the system environment's variable `PATH` to add the folder where "
 "`rtlcss.cmd` is located (typically: "
 ":file:`C:\\\\Users\\\\<user>\\\\AppData\\\\Roaming\\\\npm\\\\`)."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:403
+#: ../../content/administration/on_premise/source.rst:408
 msgid ""
 "Download and install **nodejs** with a package manager (`Homebrew "
 "<https://brew.sh/>`_, `MacPorts <https://www.macports.org>`_)."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:420
+#: ../../content/administration/on_premise/source.rst:425
 msgid "Running Odoo"
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:422
+#: ../../content/administration/on_premise/source.rst:427
 msgid ""
 "Once all dependencies are set up, Odoo can be launched by running `odoo-"
 "bin`, the command-line interface of the server. It is located at the root of"
 " the Odoo Community directory."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:425
+#: ../../content/administration/on_premise/source.rst:430
 msgid ""
 "To configure the server, either specify :ref:`command-line arguments "
 "<reference/cmdline/server>` or a :ref:`configuration file "
 "<reference/cmdline/config>`."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:429
+#: ../../content/administration/on_premise/source.rst:434
 msgid ""
 "For the Enterprise edition, add the path to the `enterprise` add-ons to the "
 "`addons-path` argument. Note that it must come before the other paths in "
 "`addons-path` for add-ons to be loaded correctly."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:433
+#: ../../content/administration/on_premise/source.rst:438
 msgid "Common necessary configurations are:"
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:435
+#: ../../content/administration/on_premise/source.rst:440
 msgid "PostgreSQL user and password."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:436
+#: ../../content/administration/on_premise/source.rst:441
 msgid "Custom addon paths beyond the defaults to load custom modules."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:438
+#: ../../content/administration/on_premise/source.rst:443
 msgid "A typical way to run the server would be:"
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:449
-#: ../../content/administration/on_premise/source.rst:470
+#: ../../content/administration/on_premise/source.rst:454
+#: ../../content/administration/on_premise/source.rst:475
 msgid ""
 "Where `CommunityPath` is the path of the Odoo Community installation, and "
 "`mydb` is the name of the PostgreSQL database."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:459
+#: ../../content/administration/on_premise/source.rst:464
 msgid ""
 "Where `CommunityPath` is the path of the Odoo Community installation, "
 "`dbuser` is the PostgreSQL login, `dbpassword` is the PostgreSQL password, "
 "and `mydb` is the name of the PostgreSQL database."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:473
+#: ../../content/administration/on_premise/source.rst:478
 msgid ""
 "After the server has started (the INFO log `odoo.modules.loading: Modules "
 "loaded.` is printed), open http://localhost:8069 in a web browser and log "
@@ -6500,19 +6509,19 @@ msgid ""
 "the email and, again, `admin` as the password."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:478
+#: ../../content/administration/on_premise/source.rst:483
 msgid ""
 "From there, create and manage new :doc:`users "
 "<../../applications/general/users>`."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:479
+#: ../../content/administration/on_premise/source.rst:484
 msgid ""
 "The user account used to log into Odoo's web interface differs from the "
 ":option:`--db_user <odoo-bin -r>` CLI argument."
 msgstr ""
 
-#: ../../content/administration/on_premise/source.rst:483
+#: ../../content/administration/on_premise/source.rst:488
 msgid ""
 ":doc:`The list of CLI arguments for odoo-bin </developer/reference/cli>`"
 msgstr ""
@@ -6864,14 +6873,7 @@ msgstr ""
 msgid "Odoo saas~16.4"
 msgstr ""
 
-#: ../../content/administration/supported_versions.rst:56
-msgid "August 2023"
-msgstr ""
-
-#: ../../content/administration/supported_versions.rst:58
-msgid "Odoo saas~16.3"
-msgstr ""
-
+#: ../../content/administration/supported_versions.rst:53
 #: ../../content/administration/supported_versions.rst:59
 #: ../../content/administration/supported_versions.rst:65
 #: ../../content/administration/supported_versions.rst:71
@@ -6887,6 +6889,14 @@ msgstr ""
 #: ../../content/administration/supported_versions.rst:114
 #: ../../content/administration/supported_versions.rst:115
 msgid "|red|"
+msgstr ""
+
+#: ../../content/administration/supported_versions.rst:56
+msgid "August 2023"
+msgstr ""
+
+#: ../../content/administration/supported_versions.rst:58
+msgid "Odoo saas~16.3"
 msgstr ""
 
 #: ../../content/administration/supported_versions.rst:62
@@ -7551,20 +7561,17 @@ msgstr ""
 msgid ""
 "Once the :ref:`tests <upgrade/test_your_db>` are completed and you are "
 "confident that the upgraded database can be used as your main database "
-"without any issues, it is time to plan the go-live day. It can be planned in"
-" coordination with Odoo's upgrade support analysts by `submitting a ticket "
-"for an issue related to my future upgrade (I am testing an upgrade) "
-"<https://odoo.com/help?stage=migration>`_."
+"without any issues, it is time to plan the go-live day."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:279
+#: ../../content/administration/upgrade.rst:276
 msgid ""
 "Your production database will be unavailable during its upgrade. Therefore, "
 "we recommend planning the upgrade at a time when the use of the database is "
 "minimal."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:282
+#: ../../content/administration/upgrade.rst:279
 msgid ""
 "As the standard upgrade scripts and your database are constantly evolving, "
 "it is also recommended to frequently request another upgraded test database "
@@ -7573,47 +7580,47 @@ msgid ""
 "before upgrading the production database is also recommended.**"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:288
+#: ../../content/administration/upgrade.rst:285
 msgid "Going into production without first testing may lead to:"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:290
+#: ../../content/administration/upgrade.rst:287
 msgid "Users failing to adjust to the changes and new features"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:291
+#: ../../content/administration/upgrade.rst:288
 msgid ""
 "Business interruptions (e.g., no longer having the possibility to validate "
 "an action)"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:292
+#: ../../content/administration/upgrade.rst:289
 msgid ""
 "Poor customer experience (e.g., an eCommerce website that does not work "
 "correctly)"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:294
+#: ../../content/administration/upgrade.rst:291
 msgid ""
 "The process of upgrading a production database is similar to upgrading a "
 "test database with a few exceptions."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:301
+#: ../../content/administration/upgrade.rst:298
 msgid ""
 "The process is similar to :ref:`obtaining an upgraded test database "
 "<upgrade/request-test-database>`, except for the purpose option, which must "
 "be set to :guilabel:`Production` instead of :guilabel:`Test`."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:306
+#: ../../content/administration/upgrade.rst:303
 msgid ""
 "Once the upgrade is requested, the database will be unavailable until the "
 "upgrade is finished. Once the process is completed, it is impossible to "
 "revert to the previous version."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:312
+#: ../../content/administration/upgrade.rst:309
 msgid ""
 "The process is similar to :ref:`obtaining an upgraded test database "
 "<upgrade/request-test-database>` on the :guilabel:`Production` branch."
@@ -7623,7 +7630,7 @@ msgstr ""
 msgid "View from the upgrade tab"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:318
+#: ../../content/administration/upgrade.rst:315
 msgid ""
 "The process is **triggered as soon as a new commit is made** on the branch. "
 "This allows the upgrade process to be synchronized with the deployment of "
@@ -7631,7 +7638,7 @@ msgid ""
 "the upgrade process is triggered immediately."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:324
+#: ../../content/administration/upgrade.rst:321
 msgid ""
 "The database is unavailable throughout the process. If anything goes wrong, "
 "the platform automatically reverts the upgrade, as it would be for a regular"
@@ -7639,7 +7646,7 @@ msgid ""
 "created."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:328
+#: ../../content/administration/upgrade.rst:325
 msgid ""
 "The update of your custom modules must be successful to complete the entire "
 "upgrade process. Make sure the status of your staging upgrade is "
@@ -7648,14 +7655,14 @@ msgid ""
 ":doc:`/developer/howtos/upgrade_custom_db`."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:335
+#: ../../content/administration/upgrade.rst:332
 msgid ""
 "The command to upgrade a database to production is similar to the one of "
 "upgrading a test database except for the argument `test`, which must be "
 "replaced by `production`:"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:342
+#: ../../content/administration/upgrade.rst:339
 msgid ""
 "An upgraded production database can also be requested via the `Upgrade page "
 "<https://upgrade.odoo.com/>`_. Once the database is uploaded, any "
@@ -7664,7 +7671,7 @@ msgid ""
 "process."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:349
+#: ../../content/administration/upgrade.rst:346
 msgid ""
 "When requesting an upgraded database for production purposes, the copy is "
 "submitted without a filestore. Therefore, the upgraded database filestore "
@@ -7672,99 +7679,99 @@ msgid ""
 "version."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:353
+#: ../../content/administration/upgrade.rst:350
 msgid ""
 "In case of an issue with your production database, you can request the "
 "assistance of Odoo by `submitting a ticket for an issue related to my "
 "upgrade (production) <https://odoo.com/help?stage=post_upgrade>`_."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:360
+#: ../../content/administration/upgrade.rst:357
 msgid "Service-level agreement (SLA)"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:362
+#: ../../content/administration/upgrade.rst:359
 msgid ""
 "With Odoo Enterprise, upgrading a database to the most recent version of "
 "Odoo is **free**, including any support required to rectify potential "
 "discrepancies in the upgraded database."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:365
+#: ../../content/administration/upgrade.rst:362
 msgid ""
 "Information about the upgrade services included in the Enterprise Licence is"
 " available in the :ref:`Odoo Enterprise Subscription Agreement <upgrade>`. "
 "However, this section clarifies what upgrade services you can expect."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:370
+#: ../../content/administration/upgrade.rst:367
 msgid "Upgrade services covered by the SLA"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:372
+#: ../../content/administration/upgrade.rst:369
 msgid ""
 "Databases hosted on Odoo's cloud platforms (Odoo Online and Odoo.sh) or "
 "self-hosted (On-Premise) can benefit from upgrade services at all times for:"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:375
+#: ../../content/administration/upgrade.rst:372
 msgid "the upgrade of all **standard applications**;"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:376
+#: ../../content/administration/upgrade.rst:373
 msgid ""
 "the upgrade of all **customizations created with the Studio app**, as long "
 "as Studio is still installed and the respective subscription is still "
 "active; and"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:378
+#: ../../content/administration/upgrade.rst:375
 msgid ""
 "the upgrade of all **developments and customizations covered by a "
 "maintenance of customizations subscription**."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:381
+#: ../../content/administration/upgrade.rst:378
 msgid ""
 "Upgrade services are limited to the technical conversion and adaptation of a"
 " database (standard modules and data) to make it compatible with the version"
 " targeted by the upgrade."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:385
+#: ../../content/administration/upgrade.rst:382
 msgid "Upgrade services not covered by the SLA"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:387
+#: ../../content/administration/upgrade.rst:384
 msgid "The following upgrade-related services are **not** included:"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:389
+#: ../../content/administration/upgrade.rst:386
 msgid ""
 "the **cleaning** of pre-existing data and configurations while upgrading;"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:390
+#: ../../content/administration/upgrade.rst:387
 msgid ""
 "the upgrade of **custom modules created in-house or by third parties**, "
 "including Odoo partners;"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:391
+#: ../../content/administration/upgrade.rst:388
 msgid ""
 "lines of **code added to standard modules**, i.e., customizations created "
 "outside the Studio app, code entered manually, and :ref:`automated actions "
 "using Python code <studio/automated-actions/action>`; and"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:394
+#: ../../content/administration/upgrade.rst:391
 msgid "**training** on using the upgraded version's features and workflows."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:397
+#: ../../content/administration/upgrade.rst:394
 msgid ":doc:`Odoo.sh documentation <odoo_sh>`"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:398
+#: ../../content/administration/upgrade.rst:395
 msgid ":doc:`Supported Odoo versions <supported_versions>`"
 msgstr ""

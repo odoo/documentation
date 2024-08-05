@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-21 15:46+0000\n"
+"POT-Creation-Date: 2024-07-23 10:38+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
 "Last-Translator: Rasareeyar Lappiam, 2024\n"
 "Language-Team: Thai (https://app.transifex.com/odoo/teams/41243/th/)\n"
@@ -891,7 +891,6 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:189
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:189
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations.rst:17
 msgid "Location"
 msgstr "สถานที่"
 
@@ -1266,10 +1265,11 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/cluster_picking.rst:48
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/cross_dock.rst:18
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:21
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:104
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:106
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/wave_transfers.rst:16
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/resupply_warehouses.rst:11
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations.rst:44
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:8
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:12
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/integrating_landed_costs.rst:11
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:65
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:23
@@ -1713,6 +1713,12 @@ msgid ""
 "well. Once all products have been scanned, validate the transfer to proceed "
 "with the stock moves."
 msgstr ""
+"หากใช้เครื่องสแกนบาร์โค้ดหรือแอป Odoo บนมือถือ *เท่านั้น* "
+"บาร์โค้ดสำหรับการถ่ายโอนประเภทการดำเนินการที่เกี่ยวข้องแต่ละครั้งจะสามารถสแกนเพื่อประมวลผลได้อย่างง่ายดาย"
+" เมื่อสแกนแล้ว "
+"จะสามารถสแกนผลิตภัณฑ์ที่เป็นส่วนหนึ่งของการถ่ายโอนที่มีอยู่ได้ "
+"และสามารถเพิ่มผลิตภัณฑ์ใหม่ลงในการถ่ายโอนได้เช่นกัน "
+"เมื่อสแกนผลิตภัณฑ์ทั้งหมดแล้ว ให้ตรวจสอบการโอนเพื่อดำเนินการย้ายสต็อกต่อไป"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:85
 msgid ""
@@ -2474,6 +2480,11 @@ msgid ""
 "it appears on. To learn more about GS1 Company Prefixes, or purchase a "
 "license for a prefix, visit the GS1 Company Prefix page."
 msgstr ""
+"บริษัทต้องมีคำนำหน้าบริษัท GS1 จึงจะสร้าง GTIN สำหรับสินค้าได้ "
+"คำนำหน้านี้คือตัวเลขที่จะปรากฏที่จุดเริ่มต้นของ GTIN แต่ละรายการ "
+"และจะระบุบริษัทว่าเป็นเจ้าของบาร์โค้ดสำหรับผลิตภัณฑ์ใดๆ "
+"ก็ตามที่ปรากฏบนบาร์โค้ด หากต้องการเรียนรู้เพิ่มเติมเกี่ยวกับคำนำหน้าบริษัท "
+"GS1 หรือซื้อใบอนุญาตสำหรับคำนำหน้า โปรดไปที่หน้าคำนำหน้าบริษัท GS1"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:78
 msgid ""
@@ -3204,7 +3215,6 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/strategies.rst:16
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations.rst:6
 msgid "Terminology"
 msgstr ""
 
@@ -4030,6 +4040,14 @@ msgid ""
 " buttons to see all stock on-hand using that serial number. Any operations "
 "made using that lot or serial number can be found here, as well."
 msgstr ""
+"สำหรับข้อมูลเพิ่มเติมเกี่ยวกับหมายเลขล็อตหรือหมายเลขซีเรียลแต่ละรายการ "
+"ให้คลิกบรรทัดรายการสำหรับล็อตหรือหมายเลขซีเรียลเพื่อแสดงแบบฟอร์ม "
+":guilabel:`ล็อต` หรือ :guilabel:`หมายเลขซีเรียล` ของหมายเลขนั้น "
+"จากแบบฟอร์มนี้ คลิกปุ่มอัจฉริยะ :guilabel:`สถานที่` และ "
+":guilabel:`การตรวจสอบย้อนกลับ` "
+"เพื่อดูสินค้าคงเหลือทั้งหมดโดยใช้หมายเลขซีเรียลนั้น "
+"คุณสามารถดูการดำเนินการใดๆ "
+"ที่ทำโดยใช้ล็อตหรือหมายเลขซีเรียลนั้นได้ที่นี่เช่นกัน"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:3
 msgid "Expiration dates"
@@ -4427,6 +4445,12 @@ msgid ""
 "expiration date. Removal strategies can also be set on :guilabel:`Product "
 "Categories`."
 msgstr ""
+"หากต้องการขายผลิตภัณฑ์ที่เน่าเสียง่ายซึ่งมีวันหมดอายุ ต้องตั้งค่า "
+":guilabel:`กลยุทธ์การนำออก` สำหรับ :guilabel:`สถานที่` "
+"ที่เก็บผลิตภัณฑ์ไว้เป็น :abbr:`FEFO (First Expiry, First Out)` "
+"หากมีสต็อกผลิตภัณฑ์ที่เน่าเสียง่ายไม่เพียงพอในหนึ่งล็อต Odoo "
+"จะนำปริมาณที่เหลือที่ต้องการจากล็อตที่สองโดยอัตโนมัติโดยมีวันหมดอายุเร็วที่สุดถัดไป"
+" กลยุทธ์การกำจัดยังสามารถตั้งค่าได้ใน :guilabel:`หมวดหมู่สินค้า`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:226
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:190
@@ -6724,6 +6748,12 @@ msgid ""
 "flexibility for how each item is packaged, without the need to create "
 "multiple delivery orders."
 msgstr ""
+"ในบางกรณี "
+"ใบสั่งจัดส่งที่มีสินค้าหลายรายการอาจจำเป็นต้องจัดส่งเป็นพัสดุมากกว่าหนึ่งชิ้น"
+" นี่อาจจำเป็นหากสินค้ามีขนาดใหญ่เกินกว่าจะจัดส่งเป็นบรรจุภัณฑ์เดียวได้ "
+"หรือหากสินค้าบางรายการไม่สามารถบรรจุรวมกันได้ "
+"การจัดส่งคำสั่งซื้อจัดส่งเดียวในหลายแพ็คเกจทำให้วิธีการบรรจุสินค้าแต่ละรายการมีความยืดหยุ่น"
+" โดยไม่จำเป็นต้องสร้างคำสั่งซื้อจัดส่งหลายรายการ"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/multipack.rst:13
 msgid ""
@@ -8650,16 +8680,24 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:29
 msgid ""
 "Follow the website's steps to complete registration, and sign up for "
-"shipping services."
+"shipping services. Doing so submits a request to enter a contractual "
+"business relationship between the company and Bpost."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:31
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:33
+msgid ""
+"Odoo **cannot** be integrated with `non-business Bpost "
+"<https://bpost.freshdesk.com/support/solutions/articles/174847-account-id-"
+"and-passphrase>`_ accounts."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:37
 msgid ""
 "After completing the setup, get the Bpost account ID and passphrase, by "
 "navigating to the :guilabel:`Shipping Manager` menu item."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:36
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:42
 msgid ""
 "On the :guilabel:`Shipping Manager` page, go to the :guilabel:`Admin` tab, "
 "then the :guilabel:`General Settings` tab, to find the :guilabel:`Account "
@@ -8670,61 +8708,61 @@ msgstr ""
 msgid "In the *Admin* tab, show the Account ID and Passphrase."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:45
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:51
 msgid "Configure Bpost shipping method"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:47
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:53
 msgid ""
 "With those necessary credentials, configure the Bpost shipping method in "
 "Odoo by going to :menuselection:`Inventory app --> Configuration --> "
 "Shipping Methods`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:56
 msgid "On the :guilabel:`Shipping Methods` page, click :guilabel:`Create`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:52
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:58
 msgid ""
 "In the :guilabel:`Provider` field, select :guilabel:`Bpost` from the drop-"
 "down menu. Doing so reveals the :guilabel:`Bpost Configuration` tab at the "
 "bottom of the form, where the Bpost credentials can be entered."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:56
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:62
 msgid ""
 "For details on configuring the other fields on the shipping method, such as "
 ":guilabel:`Delivery Product`, refer to the :doc:`Configure third-party "
 "carrier <third_party_shipper>` documentation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:60
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:66
 msgid ""
 "To generate Bpost :doc:`shipping labels <labels>` through Odoo, ensure the "
 ":guilabel:`Integration Level` option is set to :guilabel:`Get Rate and "
 "Create Shipment`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:63
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:69
 msgid ""
 "In the :guilabel:`Bpost Configuration` tab, complete the following fields:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:65
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:71
 msgid ""
 ":guilabel:`Bpost Account Number` (required field): enter the company's "
 "unique :ref:`account ID <inventory/shipping/bpost-account>` from the Bpost "
 "website."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:67
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:73
 msgid ""
 ":guilabel:`Passphrase` (required field): enter the :ref:`passphrase "
 "<inventory/shipping/bpost-account>` from the Bpost website."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:69
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:75
 msgid ""
 ":guilabel:`Bpost Delivery Nature`: select either :guilabel:`Domestic` or "
 ":guilabel:`International` shipping services. Choosing :guilabel:`Domestic` "
@@ -8733,13 +8771,13 @@ msgid ""
 "Return Instructions` fields."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:73
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:79
 msgid ""
 ":guilabel:`Bpost Package Type`: select the type of shipping service from the"
 " drop-down menu."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:75
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:81
 msgid ""
 "For `domestic delivery "
 "<https://help.shipmondo.com/en/articles/6092265-bpost-belgium-parcel-types-"
@@ -8747,14 +8785,14 @@ msgid ""
 ":guilabel:`bpack 24h business`, or :guilabel:`bpack Bus`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:80
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:86
 msgid ""
 "For `international delivery <https://www.bpost.be/en/business-parcels-"
 "send/international>`_, the options are: :guilabel:`bpack World Express Pro`,"
 " :guilabel:`bpack World Business`, or :guilabel:`bpack Europe Business`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:83
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:89
 msgid ""
 ":guilabel:`Bpost Shipment Type` (required field): for international "
 "deliveries, declare the type of goods in the package as :guilabel:`SAMPLE`, "
@@ -8762,7 +8800,7 @@ msgid ""
 ":guilabel:`OTHER`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:86
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:92
 msgid ""
 ":guilabel:`Bpost Parcel Return Address`: return address when an "
 "international shipment fails to deliver. Select from the drop-down menu: "
@@ -8770,32 +8808,32 @@ msgid ""
 ":guilabel:`Return to sender by road`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:95
 msgid ""
 ":guilabel:`Label Type`: choose :guilabel:`A6` or :guilabel:`A4` label sizes "
 "from the drop-down menu."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:91
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:97
 msgid ""
 ":guilabel:`Label Format`: choose :guilabel:`PDF` or :guilabel:`PNG` from the"
 " drop-down menu."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:93
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:99
 msgid ""
 "For domestic deliveries, these features are available in the "
 ":guilabel:`Options` section:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:95
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:101
 msgid ""
 "Enable the :guilabel:`Delivery on Saturday` feature to include Saturdays as "
 "possible delivery dates. Depending on the :guilabel:`Bpost Package Type` "
 "selected, this option might incur additional costs to the company."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:98
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:104
 msgid ""
 "Enable the :guilabel:`Generate Return Label` feature to automatically print "
 "a return label upon validating the delivery order."
@@ -9804,19 +9842,76 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:217
 msgid ""
-"When return labels are created, Sendcloud will automatically charge the "
+"When return labels are created, Sendcloud automatically charges the "
 "configured Sendcloud account."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:221
+msgid "Shipping rules"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:223
+msgid ""
+"Optionally, create shipping rules to automatically generate shipping labels "
+"tailored to different product needs. For example, a shipping rule can be "
+"created for customers shipping expensive jewelry items to purchase "
+"insurance."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:227
+msgid ""
+"To use shipping rules, navigate to :menuselection:`Inventory app --> "
+"Configuration --> Delivery: Shipping Methods`, and select the intended "
+"`Sendcloud` shipping method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:230
+msgid ""
+"Under the :guilabel:`Sendcloud Configuration` tab, in the "
+":guilabel:`OPTIONS` section, choose the kind of shipments the shipping rules"
+" apply to, via the :guilabel:`Use Sendcloud shipping rules` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:234
+msgid ""
+"From here, choose either: :guilabel:`Shipping` to customers, "
+":guilabel:`Returns` from customers, or :guilabel:`Both`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst-1
+msgid "Use Shipping Rules field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:241
+msgid ""
+"Then, in the Sendcloud website, navigate to :menuselection:`Settings --> "
+"Shipping rules`. Create a new shipping rule by clicking :guilabel:`Create "
+"New`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:244
+msgid ""
+"In the :guilabel:`Actions` section, set a :guilabel:`Condition` to determine"
+" when the rule applies. Then, configure what to do when packages meet the "
+"condition."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:248
+msgid ""
+"`Create shipping rules on Sendcloud <https://support.sendcloud.com/hc/en-"
+"us/articles/10274470454292-How-to-create-shipping-rules#examples-smart-"
+"shipping-rules>`_"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:252
 msgid "FAQ"
 msgstr "คำถามที่พบบ่อย"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:224
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:255
 msgid "Shipment is too heavy"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:226
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:257
 msgid ""
 "If the shipment is too heavy for the Sendcloud service that is configured, "
 "then the weight is split to simulate multiple packages. Products will need "
@@ -9824,7 +9919,7 @@ msgid ""
 "transfer and generate labels."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:230
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:261
 msgid ""
 ":guilabel:`Rules` can also be set up in Sendcloud to use other shipping "
 "methods when the weight is too heavy. However, note that these rules will "
@@ -9832,11 +9927,11 @@ msgid ""
 "order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:235
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:266
 msgid "Personal carrier contract"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:237
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:268
 msgid ""
 "Use custom prices from a direct carrier contract, via CSV upload, by first "
 "logging into Sendcloud, navigating to :menuselection:`Settings --> Carriers "
@@ -9847,14 +9942,14 @@ msgstr ""
 msgid "Navigate to the contracts section in Sendcloud."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:245
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:276
 msgid ""
 "Under the :guilabel:`Contract prices` section, click :guilabel:`Download "
 "CSV` and fill out the contract prices in the :guilabel:`price` column of the"
 " CSV file template."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:249
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:280
 msgid ""
 "Ensure the CSV file includes the correct prices to avoid any inaccuracies."
 msgstr ""
@@ -9864,23 +9959,23 @@ msgid ""
 "Show sample contract CSV from Sendcloud, highlighting the price column."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:255
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:286
 msgid ""
 ":guilabel:`Upload` the completed CSV file to Sendcloud, then click "
 ":guilabel:`Save these prices`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:258
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:289
 msgid ""
 "`Sendcloud: How to upload contract prices with carriers "
 "<https://support.sendcloud.com/hc/en-us/articles/5163547066004>`_"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:262
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:293
 msgid "Measuring volumetric weight"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:264
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:295
 msgid ""
 "Many carriers have several measures for weight. There is the actual weight "
 "of the products in the parcel, and there is the *volumetric weight* "
@@ -9888,24 +9983,24 @@ msgid ""
 "transit. In other words it is the physical size of a package`)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:269
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:300
 msgid ""
 "Check to see if selected carrier(s) already have defined formulas to compute"
 " the volumetric weight."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:273
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:304
 msgid ""
 "`Sendcloud: How to calculate & automate parcel volumetric weight "
 "<https://support.sendcloud.com/ hc/en-us/articles/360059644051-How-to-"
 "calculate-automate-parcel-volumetric-weight>`_"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:277
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:308
 msgid "Unable to calculate shipping rate"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:279
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:310
 msgid ""
 "First, verify that the product being shipped has a weight that is supported "
 "by the selected shipping method. If this is set, then verify that the "
@@ -11870,84 +11965,84 @@ msgstr ""
 msgid "Some examples of putaway rules."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:97
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:99
 msgid "Storage categories"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:99
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:101
 msgid ""
 "A *storage category* is an extra location attribute. Storage categories "
 "allow the user to define the quantity of products that can be stored in the "
 "location, and how the location will be selected with putaway rules."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:106
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:108
 msgid ""
 "To enable storage categories, go to :menuselection:`Inventory app --> "
 "Configuration --> Settings`, and activate the :guilabel:`Storage Categories`"
 " feature in the :guilabel:`Warehouse` section. Then, click :guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:113
 msgid ""
 "The :guilabel:`Storage Locations` feature **must** be enabled to enable "
 ":guilabel:`Storage Categories`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:115
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:117
 msgid "Define storage category"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:117
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:119
 msgid ""
 "To create a storage category, go to :menuselection:`Inventory app --> "
 "Configuration --> Storage Categories` and click :guilabel:`Create`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:120
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:122
 msgid ""
 "On the storage category form, type a name for the :guilabel:`Storage "
 "Category` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:122
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:124
 msgid ""
 "Options are available to limit the capacity by weight, by product, or by "
 "package type. The :guilabel:`Allow New Product` field defines when the "
 "location is considered available to store a product:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:128
 msgid ""
 ":guilabel:`If location is empty`: a product can be added there only if the "
 "location is empty."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:127
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:129
 msgid ""
 ":guilabel:`If products are the same`: a product can be added there only if "
 "the same product is already there."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:129
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:131
 msgid ""
 ":guilabel:`Allow mixed products`: several different products can be stored "
 "in this location at the same time."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:133
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:135
 msgid ""
 "Create putaway rules for pallet-stored items and ensure real-time storage "
 "capacity checks by creating the `High Frequency pallets` storage category."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:136
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:138
 msgid ""
 "Name the :guilabel:`Storage Category`, and select :guilabel:`If all products"
 " are same` in the :guilabel:`Allow New Product` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:139
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:141
 msgid ""
 "Then, define package capacity in the :guilabel:`Capacity by Package` tab, "
 "specifying the number of packages for the designated :guilabel:`Package "
@@ -11958,13 +12053,13 @@ msgstr ""
 msgid "Create a storage category on the page."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:147
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:149
 msgid ""
 "Once the storage category settings are saved, the storage category can be "
 "linked to a location."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:149
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:151
 msgid ""
 "To do that, navigate to the location by going to :menuselection:`Inventory "
 "app --> Configuration --> Locations`, and select the location. Click "
@@ -11972,7 +12067,7 @@ msgid ""
 "Category` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:154
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:156
 msgid ""
 "Assign the `High Frequency pallets` storage category to the "
 "`WH/Stock/pallets/PAL 1` sub-location."
@@ -11984,33 +12079,33 @@ msgid ""
 "location."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:162
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:164
 msgid "Storage categories in putaway rules"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:164
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:166
 msgid ""
 "To continue the example from above, apply the `High Frequency Pallets` on "
 "the `PAL1` and `PAL2` locations and :ref:`rework the putaway rules "
 "<inventory/routes/putaway-rule>` as follows:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:167
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:169
 msgid "Assume one pallet of lemonade cans is received:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:169
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:171
 msgid ""
 "If PAL1 and PAL2 are empty, the pallet will be redirected to "
 "WH/Stock/Pallets/PAL1."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:170
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:172
 msgid ""
 "If PAL1 is full, the pallet will be redirected to WH/Stock/Pallets/PAL2."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:171
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/putaway.rst:173
 msgid ""
 "If PAL1 and 2 are full, the pallet will be redirected to WH/Stock/Pallets."
 msgstr ""
@@ -12023,7 +12118,7 @@ msgstr ""
 msgid "Removal strategies (FIFO, LIFO, FEFO)"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:7
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:5
 msgid ""
 "For companies with warehouses, **removal strategies** determine which "
 "products are taken from the warehouse, and when. Removal strategies are "
@@ -12033,7 +12128,7 @@ msgid ""
 "products with expiration dates."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:13
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:11
 msgid ""
 "Usually, *Removal Strategies* are defined in picking operations to select "
 "the best products to optimize the distance for the worker, for quality "
@@ -12041,7 +12136,7 @@ msgid ""
 "date."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:17
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:15
 msgid ""
 "When a product needs to be moved, Odoo finds available products that can be "
 "assigned to the transfer. The way Odoo assigns these products depends on the"
@@ -12049,7 +12144,7 @@ msgid ""
 "Category` or the :guilabel:`Location` dashboards."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:21
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:19
 msgid ""
 "To change the :guilabel:`Removal Strategy`, go to :menuselection:`Inventory "
 "app --> Configuration --> Locations` or :menuselection:`Product Categories`."
@@ -12066,11 +12161,11 @@ msgid ""
 "Locations."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:33
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:31
 msgid "What happens inside the warehouse?"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:35
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:33
 msgid ""
 "Most warehouses share the same important areas: receiving docks and sorting "
 "areas, storage locations, picking and packing areas, and shipping/loading "
@@ -12079,7 +12174,7 @@ msgid ""
 "effect on which products are taken, from where, and when."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:40
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:38
 msgid ""
 "In this example below, vendor trucks unload pallets of goods at the "
 "receiving docks. Then, operators scan the products in the receiving area, "
@@ -12087,7 +12182,7 @@ msgid ""
 " in their respective storage locations."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:45
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:43
 msgid ""
 "Not all products have expiration dates, but in this example, expiration "
 "dates apply."
@@ -12097,7 +12192,7 @@ msgstr ""
 msgid "Products entering stock via the receiving area."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:51
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:49
 msgid ""
 "In Odoo, receive products by navigating to the :menuselection:`Inventory` "
 "application, and in the kanban view, click on either the "
@@ -12109,7 +12204,7 @@ msgid ""
 "database."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:59
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:57
 msgid ""
 "Receiving products can also be done within the Odoo *Barcode* application. "
 "If using the *Barcode* app, scan the product(s), update the quantity, and "
@@ -12117,7 +12212,7 @@ msgid ""
 "the products can then be moved to their respective storage locations."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:64
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:62
 msgid ""
 "Continuing with the same example, below, imagine several sales orders are "
 "made for the products received earlier, that use expiration dates. In this "
@@ -12137,7 +12232,7 @@ msgid ""
 "account."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:79
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:77
 msgid ""
 "To pick for delivery, the product's lot/serial number can be found on the "
 "transfer form. To learn more about picking and shipping, refer to either the"
@@ -12145,21 +12240,21 @@ msgid ""
 ":ref:`Three-step delivery <inventory/delivery_three_steps>` documentation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:85
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:83
 msgid "How each removal strategy works"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:87
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:85
 msgid ""
 "Removal strategies determine which products are taken from the warehouse "
 "when orders are confirmed."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:90
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:88
 msgid "First In, First Out (FIFO)"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:90
 msgid ""
 "When using a :guilabel:`First In, First Out (FIFO)` strategy, demand for a "
 "product triggers a removal rule, which requests a transfer for the "
@@ -12167,20 +12262,20 @@ msgid ""
 "stock for the longest time)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:96
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:94
 msgid ""
 "For example, imagine there are three lots of nails in the warehouse, and "
 "have the corresponding lot numbers: `00001`, `00002`, `00003`. Each lot has "
 "five boxes of nails in it."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:99
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:97
 msgid ""
 "Lot `00001` entered the stock on May 23, lot `00002` on May 25, and lot "
 "`00003` on June 1. A customer orders six boxes on June 11."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:102
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:100
 msgid ""
 "Using the :abbr:`FIFO (First In, First Out)` removal strategy, a transfer "
 "request will pick the five boxes from lot `00001` first, and then from the "
@@ -12194,11 +12289,11 @@ msgid ""
 "The detailed operations for the transfer shows the nail lots to be removed."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:112
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:110
 msgid "Last In, First Out (LIFO)"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:112
 msgid ""
 "Similar to the :abbr:`FIFO (First In, First Out)` method, the "
 ":guilabel:`Last In, First Out (LIFO)` removal strategy moves products based "
@@ -12207,7 +12302,7 @@ msgid ""
 "removal."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:118
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:116
 msgid ""
 "Every time an order for products with the :abbr:`LIFO (Last In, First Out)` "
 "method is placed, a transfer is created for the lot/serial number that has "
@@ -12215,27 +12310,27 @@ msgid ""
 " the warehouse's inventory)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:123
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:121
 msgid ""
 "In many countries, the :abbr:`LIFO (Last In, First Out)` removal strategy in"
 " banned, since it can potentially result in old, expired, or obsolete "
 "products being delivered to customers."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:124
 msgid ""
 "For example, imagine there are three lots of boxes of screws in the "
 "warehouse, and have the corresponding lot numbers: `10001`, `10002`, and "
 "`10003`, each with 10 boxes of screws per lot."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:129
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:127
 msgid ""
 "Lot `10001` entered the stock on June 1, lot `10002` on June 3, and lot "
 "`10003` on June 6. A customer orders seven boxes on June 8."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:132
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:130
 msgid ""
 "Using the :abbr:`LIFO (Last In, First Out)` removal strategy, a transfer is "
 "requested for seven boxes of screws from lot `10003` because that lot is the"
@@ -12247,11 +12342,11 @@ msgid ""
 "The detailed operations shows which lots are being selected for the picking."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:140
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:138
 msgid "First Expired, First Out (FEFO)"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:142
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:140
 msgid ""
 "While the :abbr:`FIFO (First In, First Out)` and :abbr:`LIFO (Last In, First"
 " Out)` methods target products for removal based on date of entry into the "
@@ -12259,7 +12354,7 @@ msgid ""
 "products for removal based on their assigned expiration dates."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:146
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:144
 msgid ""
 "Using the :abbr:`FEFO (First Expired, First Out)` removal strategy, every "
 "sales order that includes products with this removal strategy assigned "
@@ -12267,21 +12362,21 @@ msgid ""
 "soonest to the order date."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:150
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:148
 msgid ""
 "As an example, imagine there are three lots of six-egg boxes. Those three "
 "lots have the following lot numbers: `20001`, `20002`, and `20003`, each "
 "with five boxes in it."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:153
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:151
 msgid ""
 "Lot `20001` entered the stock on July 1 and expires on July 15, lot `20002` "
 "entered on July 2 and expires on July 14, and lot `20003` entered on July 3 "
 "and expires on July 21. A customer orders six boxes on July 5."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:157
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:155
 msgid ""
 "Using the :abbr:`FEFO (First Expired, First Out)` method, a transfer is "
 "requested for the five boxes from lot `20002` and one from lot `20001`. All "
@@ -12294,11 +12389,11 @@ msgstr ""
 msgid "The detailed operations for the transfer shows the lots to be removed."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:167
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:165
 msgid "Using removal strategies"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:169
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:167
 msgid ""
 "To differentiate some units of products from others, the units need to be "
 "tracked, either by :guilabel:`Lot` or by :guilabel:`Serial Number`. To do "
@@ -12316,7 +12411,7 @@ msgstr ""
 msgid ":alt: Warehouse settings."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:183
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:181
 msgid ""
 "To use the :abbr:`FEFO (First Expired, First Out)` removal strategy, the "
 ":guilabel:`Expiration Dates` setting needs to be activated as well. To "
@@ -12326,7 +12421,7 @@ msgid ""
 ":guilabel:`Save` to save all changes."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:189
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:187
 msgid ""
 "Now, specific removal strategies can be defined on product categories. To do"
 " this, go to :menuselection:`Inventory app --> Configuration --> Product "
@@ -12335,7 +12430,7 @@ msgid ""
 "strategy."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:194
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:192
 msgid ""
 "The *First Expired, First Out* (FEFO) strategy is a bit different from the "
 "other two removal strategies. For :abbr:`FEFO (First Expired, First Out)`, "
@@ -12343,7 +12438,7 @@ msgid ""
 "stock."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:198
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:196
 msgid ""
 "For example, imagine there are three lots of six-egg boxes (in this specific"
 " case, don't forget to use :doc:`units of measure "
@@ -12352,7 +12447,7 @@ msgid ""
 ":guilabel:`20002`, and :guilabel:`20003`, each with five boxes in it."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:204
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:202
 msgid ""
 ":guilabel:`20001` entered the stock on the 1st of July and expires on the "
 "15th of July, :guilabel:`20002` entered on the 2nd and expires on the 14th "
@@ -12366,18 +12461,18 @@ msgid ""
 ":guilabel:`20002`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:213
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:211
 msgid ""
 "Basically, for every sales order of a product with the :abbr:`FEFO (First "
 "Expired, First Out)` strategy, a transfer is requested for the product that "
 "has the nearest expiration date from the order date."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:218
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:216
 msgid "Closest Location"
 msgstr "ตำแหน่งที่ใกล้ที่สุด"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:220
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:218
 msgid ""
 "The *Closest Location* strategy is completely different from the other "
 "removal strategies. It is not related to the date of entry in the warehouse,"
@@ -12385,7 +12480,7 @@ msgid ""
 "that do not deteriorate with time."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:224
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:222
 msgid ""
 "The aim is to avoid making the warehouse worker take a long journey to the "
 "bottom of the stock when the product is also located at a near location. "
@@ -12394,11 +12489,11 @@ msgid ""
 "alphabetic order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:230
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:228
 msgid "Use removal strategies"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:232
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:230
 msgid ""
 "To differentiate some units from others, the units need to be tracked, "
 "either by *lot* or by *serial number*. To do so, go to "
@@ -12411,7 +12506,7 @@ msgstr ""
 msgid "Removal strategy on a product category."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:241
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:239
 msgid ""
 "To view all products with lots/serial numbers assigned to them, navigate to "
 ":menuselection:`Inventory app --> Products --> Lots/Serial Numbers`. This "
@@ -12428,7 +12523,7 @@ msgid ""
 "numbers."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:252
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:250
 msgid ""
 "To view the serial numbers being selected for a sales order, go to the "
 ":guilabel:`Sales app` and select the sales order in question. In the sales "
@@ -12439,11 +12534,11 @@ msgid ""
 "for that specific product for the delivery order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:260
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:258
 msgid "FIFO (First In, First Out)"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:262
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:260
 msgid ""
 "The :abbr:`FIFO (First In, First Out)` removal strategy implies that "
 "products which enter a warehouse's stock first are removed first. Companies "
@@ -12452,7 +12547,7 @@ msgid ""
 "in stock."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:267
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:265
 msgid ""
 "In this example, there are three lots of white shirts. The shirts are from "
 "the *All/Clothes* category, where *FIFO* is set as the removal strategy. In "
@@ -12464,13 +12559,13 @@ msgstr ""
 msgid "View of the lots of white shirts in the inventory valuation report."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:275
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:273
 msgid ""
 "Lot `000001` contains five shirts, lot `000002` contains three shirts, and "
 "lot `000003` contains two shirts."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:278
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:276
 msgid ""
 "To see the removal strategy in action, go to the :menuselection:`Sales app` "
 "and click :guilabel:`Create` to create a sales order. Next, select a "
@@ -12482,7 +12577,7 @@ msgid ""
 " click :guilabel:`Confirm`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:285
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:283
 msgid ""
 "Once the sales order is confirmed, the delivery order will be created and "
 "linked to the picking, and the oldest lot numbers will be reserved thanks to"
@@ -12495,11 +12590,11 @@ msgstr ""
 msgid "Two lots being reserved for a sales order with the FIFO strategy."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:295
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:293
 msgid "LIFO (Last In, First Out)"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:297
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:295
 msgid ""
 "The :abbr:`LIFO (Last In, First Out)` removal strategy works in the "
 "**opposite** manner from the :abbr:`FIFO (First In, First Out)` strategy. "
@@ -12508,7 +12603,7 @@ msgid ""
 "time-sensitive factors, such as expiration dates."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:302
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:300
 msgid ""
 "In this example, there are three lots of cinder blocks. The blocks are from "
 "the *All/Building Materials* category, where *FIFO* is set as the removal "
@@ -12520,13 +12615,13 @@ msgstr ""
 msgid "View of the lots of cinder blocks in the inventory valuation report."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:310
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:308
 msgid ""
 "Lot `000020` contains three cinder blocks, lot `000030` contains five cinder"
 " blocks, and lot `0000400` contains four cinder blocks."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:313
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:311
 msgid ""
 "To see how the :abbr:`LIFO (Last In, First Out)` strategy works, first "
 "navigate to :menuselection:`Inventory app --> Configuration --> Product "
@@ -12535,7 +12630,7 @@ msgid ""
 " category form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:318
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:316
 msgid ""
 "Once on the product category form, under the :guilabel:`Logistics` section, "
 "change the :guilabel:`Force Removal Strategy` to :guilabel:`Last In First "
@@ -12546,7 +12641,7 @@ msgstr ""
 msgid "Last in first out (LIFO) strategy set up as forced removal strategy."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:325
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:323
 msgid ""
 "To see the removal strategy in action, go to the :menuselection:`Sales app` "
 "and click :guilabel:`Create` to create a sales order. Next, select a "
@@ -12558,7 +12653,7 @@ msgid ""
 " click :guilabel:`Confirm`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:332
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:330
 msgid ""
 "Once the sales order is confirmed, the delivery order will be created and "
 "linked to the picking, and the newest lot numbers will be reserved thanks to"
@@ -12571,11 +12666,11 @@ msgstr ""
 msgid "Two lots being reserved for sale with the LIFO strategy."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:344
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:342
 msgid "FEFO (First Expired, First Out)"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:346
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:344
 msgid ""
 "The :abbr:`FEFO (First Expired, First Out)` removal strategy differs from "
 "the :abbr:`FIFO (First In, First Out)` and :abbr:`LIFO (Last In, First Out)`"
@@ -12585,7 +12680,7 @@ msgid ""
 "used for perishable products, such as medicine, food, and beauty products."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:352
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:350
 msgid ""
 "Lots are picked based on their **removal date** from earliest to latest. "
 "Removal dates indicate how many days *before* the expiration date the "
@@ -12594,20 +12689,20 @@ msgid ""
 " removal dates."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:358
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:356
 msgid ""
 "If products are not removed from stock when they should be, lots that are "
 "past the expiration date may still be picked for delivery orders!"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:362
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:360
 msgid ""
 "For more information about expiration dates, reference the :doc:`Expiration "
 "dates <../../product_management/product_tracking/expiration_dates>` "
 "document."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:365
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:363
 msgid ""
 "First, go to :menuselection:`Inventory app --> Configuration --> Settings` "
 "and ensure :guilabel:`Expiration Dates` is enabled. Once the "
@@ -12616,7 +12711,7 @@ msgid ""
 "for lot numbers containing many products."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:370
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:368
 msgid ""
 "In this example, there are three lots of hand cream. The creams are from the"
 " *All/Health & Beauty* category, where *FEFO* is set as the removal "
@@ -12624,7 +12719,7 @@ msgid ""
 " receipts are listed with the amounts."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:374
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:372
 msgid ""
 "Lot `0000001` contains twenty tubes of hand cream, expiring on Sept 30, lot "
 "`0000002` contains ten tubes of hand cream, expiring on November 30, and lot"
@@ -12637,7 +12732,7 @@ msgid ""
 "report."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:382
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:380
 msgid ""
 "Expiration dates can be entered when validating the received products, or "
 "set on products by going to :menuselection:`Inventory app --> Products --> "
@@ -12650,7 +12745,7 @@ msgstr ""
 msgid "View of the removal date for 0000001."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:391
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:389
 msgid ""
 "To see how the :abbr:`FEFO (First Expired, First Out)` strategy works, first"
 " navigate to :menuselection:`Inventory app --> Configuration --> Product "
@@ -12659,7 +12754,7 @@ msgid ""
 "category form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:396
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:394
 msgid ""
 "Once on the product category form, under the :guilabel:`Logistics` section, "
 "change the :guilabel:`Force Removal Strategy` to :abbr:`FEFO (First Expired,"
@@ -12670,7 +12765,7 @@ msgstr ""
 msgid "FEFO forced removal strategy set on the product category."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:403
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:401
 msgid ""
 "Next, go to the :menuselection:`Sales app` and click :guilabel:`Create` to "
 "create a sales order. Next, select a :guilabel:`Customer` from the drop-down"
@@ -12681,7 +12776,7 @@ msgid ""
 " click :guilabel:`Save`, then click :guilabel:`Confirm`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:410
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst:408
 msgid ""
 "Once the sales order is confirmed, the delivery order will be created and "
 "linked to the picking, and the lot numbers expiring first will be reserved "
@@ -12822,9 +12917,7 @@ msgid "New warehouse form."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/stock_warehouses.rst:76
-msgid ""
-":doc:`Warehouse configurations "
-"<../inventory_management/warehouses_locations>`"
+msgid ":doc:`Warehouse configurations <../inventory_management/warehouses>`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/stock_warehouses.rst:77
@@ -13232,8 +13325,238 @@ msgid ""
 ":menuselection:`Barcode --> Batch Transfers`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:5
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:6
 msgid "Inventory management"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:8
+msgid ""
+"In the Odoo *Inventory* app, :doc:`warehouses "
+"<inventory_management/warehouses>` handle the broader organization and "
+"distribution of stock across different physical sites, while :doc:`locations"
+" <inventory_management/use_locations>` provide a more detailed breakdown "
+"within each warehouse for efficient item management."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:13
+msgid ""
+"This document serves as an introduction to the terminology and concepts "
+"necessary to master *Inventory*. For specific instructions and examples of "
+"how things work, refer to individual documentation pages."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:18
+msgid ""
+"`Odoo Tutorials: Warehouses & Locations "
+"<https://www.youtube.com/watch?v=zMvudZVLuUo>`_"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:21
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:3
+msgid "Warehouses"
+msgstr "คลังสินค้า"
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:23
+msgid ""
+":doc:`Warehouses <inventory_management/warehouses>` represent a physical "
+"place, with a physical address, where a company's items are stored."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:26
+msgid ""
+"Configure :doc:`routes <inventory_management/use_routes>` in a warehouse to "
+"control how products move to customers, from vendors, within the warehouse, "
+"or :doc:`between warehouses <inventory_management/resupply_warehouses>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:31
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:3
+msgid "Locations"
+msgstr "ตำแหน่ง"
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:33
+msgid ""
+":doc:`Locations <inventory_management/use_locations>` refer to specific "
+"areas within a warehouse, such as shelves, floors, or aisles. These are sub-"
+"divisions within a warehouse, and are unique to that warehouse. Users can "
+"create and manage numerous locations within a single warehouse to organize "
+"inventory more precisely."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:39
+msgid ":doc:`inventory_management/use_locations`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:40
+msgid ":doc:`inventory_management/count_products`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:41
+msgid ":doc:`inventory_management/cycle_counts`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:42
+msgid ":doc:`inventory_management/scrap_inventory`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:47
+msgid "Location types"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:49
+msgid ""
+"*Location types* in Odoo help categorize and manage where products are, and "
+"what actions need to be taken with them. By default, on the "
+":menuselection:`Inventory app --> Configuration --> Locations` page, only "
+"internal locations are displayed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:53
+msgid ""
+"To view the seven location types in Odoo, select any location, and in the "
+":guilabel:`Location Type` field, there are:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:56
+msgid ""
+":guilabel:`Vendor Location`: defines an area where products purchased from "
+"vendors originate. Items here are **not** in stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:59
+msgid ""
+":guilabel:`View`: used to organize and structure the warehouse hierarchy. "
+"For example, the view location `WH` (short for warehouse) groups all "
+"internal locations, such as `Stock`, receiving docks, quality checkpoints, "
+"and packing areas to show they all belong to the same warehouse."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:64
+msgid ""
+"View locations should **not** contain products, but it is possible to move "
+"them there."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:66
+msgid ""
+":guilabel:`Internal Location`: storage locations within the warehouse. Items"
+" stored in these locations are accounted for in :doc:`inventory valuation "
+"<inventory_valuation/using_inventory_valuation>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:70
+msgid ""
+":guilabel:`Customer Location`: where sold products are tracked; items here "
+"are no longer in stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:72
+msgid ""
+":guilabel:`Inventory Loss`: counterpart location to consume missing items or"
+" create stock, accounting for discrepancies."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:75
+msgid ""
+"In Odoo, examples of inventory loss locations are *Inventory Adjustment*, "
+"used to account for discrepancies during an inventory count, and *Scrap*, "
+"which is where damaged goods are sent to account for inventory losses."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:80
+msgid ""
+"`Virtual Locations/Inventory Adjustment` is a location with the "
+":guilabel:`Inventory Loss` type. The database shows `65` units in "
+"`WH/Stock`, but an inventory check reveals `60`. To correct the quantity, "
+"five units are moved from `WH/Stock` to `Virtual Locations/Inventory "
+"Adjustment`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:0
+msgid "Product ends up in Virtual Locations/Inventory Adjustment."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:89
+msgid ""
+":guilabel:`Production`: where raw materials are consumed, and "
+":doc:`manufactured products <../../manufacturing>` are created."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:92
+msgid ""
+":guilabel:`Transit Location`: used for inter-company or inter-warehouse "
+"operations to track products shipped between different addresses, such as "
+":ref:`Physical Locations/Inter-warehouse transit "
+"<inventory/warehouses_storage/interwarehouse-transit>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst-1
+msgid "List of locations in Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:103
+msgid "In Odoo, location types are color-coded:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:102
+msgid "**Red**: internal locations"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:103
+msgid "**Blue**: view locations"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:104
+msgid ""
+"**Black**: external locations (including inventory loss, vendor, and "
+"customer locations)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:107
+msgid "View locations in Odoo"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:109
+msgid ""
+"Odoo databases include pre-configured view locations to organize the "
+"hierarchy of locations. These provide helpful context, and distinguish "
+"between internal and external locations."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:112
+msgid ""
+"*Physical locations* serve as an umbrella for external locations, without "
+"changing a product's inventory value. (Inventory valuation changes occur "
+"when products move from internal to external locations)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:119
+msgid ""
+"When moving products in warehouses `WH` and `WH2`, the items are not in "
+"either warehouse, but still belong to the company. While in transit, they "
+"are placed in the `Inter-warehouse transit` location, a :guilabel:`Transit "
+"Location` type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:123
+msgid ""
+"This location is under the view location, `Physical Locations`, indicating "
+"that `Inter-warehouse transit` is outside of a warehouse, but still part of "
+"the company. Doing so does not affect the inventory valuation of the "
+"products."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:127
+msgid ""
+"*Partner locations* group customer and vendor locations (external locations)"
+" together. Transfers to these locations affect inventory valuation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:129
+msgid ""
+"*Virtual locations* are locations that do **not** exist physically, but it "
+"is where items that are not in inventory can be placed. These can be items "
+"that are no longer in inventory due to loss, or other factors."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:3
@@ -13249,6 +13572,12 @@ msgid ""
 "be made to reconcile the differences, and ensure that the recorded counts in"
 " the database match the actual counts in the warehouse."
 msgstr ""
+"ในระบบการจัดการคลังสินค้า "
+"จำนวนสินค้าคงคลังที่บันทึกไว้ในฐานข้อมูลอาจไม่ตรงกับจำนวนสินค้าคงคลังจริงในคลังสินค้าเสมอไป"
+" ความคลาดเคลื่อนระหว่างการนับทั้งสองอาจเกิดจากความเสียหาย "
+"ข้อผิดพลาดของมนุษย์ การโจรกรรม หรือปัจจัยอื่นๆ และด้วยเหตุนี้ "
+"ต้องมีการปรับปรุงสินค้าคงคลังเพื่อกระทบยอดความแตกต่าง "
+"และตรวจสอบให้แน่ใจว่าจำนวนที่บันทึกไว้ในฐานข้อมูลตรงกับจำนวนจริงในคลังสินค้า"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:12
 msgid "Inventory Adjustments page"
@@ -13682,235 +14011,6 @@ msgstr ""
 msgid ":doc:`cycle_counts`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:3
-msgid "Create a second warehouse"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:5
-msgid ""
-"A *warehouse* is a physical building or space where items are stored. In "
-"Odoo, it is possible to set up multiple warehouses and transfer stored items"
-" between them."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:8
-msgid ""
-"By default, the Odoo platform has one warehouse that is already configured, "
-"with the address set as the company's address. To create a second warehouse,"
-" select :menuselection:`Configuration --> Warehouses`, then click "
-":guilabel:`Create` and configure the form as follows:"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:12
-msgid ":guilabel:`Warehouse`: the full name of the warehouse"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:13
-msgid ""
-":guilabel:`Short Name`: the abbreviated code by which the warehouse is "
-"referred to; the short name for the default warehouse in Odoo is **WH**"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:15
-msgid ""
-":guilabel:`Company`: the company that owns the warehouse; this can be set as"
-" the company that owns the Odoo database or the company of a customer or "
-"vendor"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:17
-msgid ":guilabel:`Address`: the address where the warehouse is located"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:20
-msgid ""
-"The options below will only appear if the :guilabel:`Multi-Step Routes` "
-"checkbox is enabled in :menuselection:`Configuration --> Settings` under the"
-" :guilabel:`Warehouse` heading. For more information about routes and how "
-"they work in Odoo, see :ref:`Using Routes and Pull/Push Rules <use-routes>`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:25
-msgid ""
-":guilabel:`Incoming/Outgoing Shipments`: select the routes that incoming and"
-" outgoing shipments should follow"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:27
-msgid ""
-":guilabel:`Resupply Subcontractors`: allow subcontractors to be resupplied "
-"from this warehouse"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:28
-msgid ""
-":guilabel:`Manufacture to Resupply`: allow for items to be manufactured in "
-"this warehouse"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:29
-msgid ""
-":guilabel:`Manufacture`: select the route that should be followed when "
-"manufacturing goods inside the warehouse"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:31
-msgid ""
-":guilabel:`Buy to Resupply`: check the box to allow for purchased products "
-"to be delivered to the warehouse"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:33
-msgid ""
-":guilabel:`Resupply From`: select warehouses that can be used to resupply "
-"the warehouse being created"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst-1
-msgid "A filled out form for creating a new warehouse."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:41
-msgid ""
-"Creating a second warehouse will automatically enable the *Storage "
-"Locations* setting, which allows location tracking of products within a "
-"warehouse. To toggle this setting, navigate to :menuselection:`Configuration"
-" --> Settings` and click the checkbox under the :guilabel:`Warehouse` "
-"heading."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:46
-msgid ""
-"After filling out the form, click :guilabel:`Save` and the new warehouse "
-"will be created."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:49
-msgid "Add inventory to a new warehouse"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:51
-msgid ""
-"If a new warehouse is created that has existing inventory in it, the "
-"inventory counts should be added to Odoo so that the stock listed in the "
-"Odoo database reflects what is in the physical warehouse. To add inventory "
-"to a new warehouse, navigate to :menuselection:`Inventory --> Operations -->"
-" Inventory Adjustments`, and then click :guilabel:`Create`. The inventory "
-"adjustment form can then be filled out as follows:"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:57
-msgid ""
-":guilabel:`Inventory Reference`: the name or code that the inventory "
-"adjustment can be referred to by"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:59
-msgid ""
-":guilabel:`Locations`: the location(s) where the inventory is stored; "
-"include the new warehouse and any locations within it that inventory will be"
-" added to"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:61
-msgid ""
-":guilabel:`Products`: include all products that will be added to inventory "
-"or leave blank to select any product during the next step"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:63
-msgid ""
-":guilabel:`Include Exhausted Products`: include products with a quantity of "
-"zero; does not affect inventory adjustments for new warehouses since they "
-"have no existing inventory"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:65
-msgid ""
-":guilabel:`Accounting Date`: the date used by accounting teams for "
-"bookkeeping related to the inventory"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:67
-msgid ""
-":guilabel:`Company`: the company that owns the inventory; can be set as the "
-"user's company or as a customer or vendor"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:69
-msgid ""
-":guilabel:`Counted Quantities`: choose whether the counted quantities for "
-"products being added should default to stock on hand or zero; does not "
-"affect inventory adjustments for new warehouses since they have no existing "
-"inventory"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst-1
-msgid "A filled out form for an inventory adjustment."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:77
-msgid ""
-"Once the form is properly configured, click on :guilabel:`Start Inventory` "
-"to be taken to the next page where products can be added to the inventory "
-"adjustment. Add a new product by clicking on :guilabel:`Create` and then "
-"fill out the product line as follows:"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:81
-msgid ":guilabel:`Product`: the product being added to inventory"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:82
-msgid ""
-":guilabel:`Location`: the location where the product is currently stored in "
-"the new warehouse; this can be set as the overall warehouse or a location "
-"within the warehouse"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:84
-msgid ""
-":guilabel:`Lot/Serial Number`: the lot that the product belongs to or the "
-"serial number used to identify it"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:86
-msgid ""
-":guilabel:`On Hand`: the total quantity of the product stored in the "
-"location for which inventory is being adjusted; this should be zero for a "
-"new location or warehouse"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:88
-msgid ""
-":guilabel:`Counted`: the amount of the product that is being added to "
-"inventory"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:89
-msgid ""
-":guilabel:`Difference`: the difference between the *On Hand* and *Counted* "
-"values; this will automatically update to reflect the value entered in the "
-":guilabel:`Counted` column"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:91
-msgid ":guilabel:`UoM`: the unit of measure used for counting the product"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst-1
-msgid "Include a line for each product being added to inventory."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:97
-msgid ""
-"After adding all the products already stored in the new warehouse, click "
-":guilabel:`Validate Inventory` to complete the inventory adjustment. The "
-"values in the :guilabel:`On Hand` column will update to reflect those in the"
-" :guilabel:`Counted` column and the products added will appear in the "
-"inventory of the new warehouse."
-msgstr ""
-
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:3
 msgid "Cycle counts"
 msgstr ""
@@ -14178,6 +14278,13 @@ msgid ""
 " with a reordering rule or the make to order (MTO) route to replenish stock "
 "by moving the product from one warehouse to another."
 msgstr ""
+"หลังจากตั้งค่าคอนฟิกคลังสินค้าที่จะเติมวัสดุแล้ว "
+"ขณะนี้เส้นทางใหม่พร้อมใช้งานบนแบบฟอร์มผลิตภัณฑ์ทั้งหมด "
+"เส้นทางใหม่จะปรากฏเป็น :guilabel:`จัดหาผลิตภัณฑ์จาก [ชื่อคลังสินค้า]` "
+"ใต้แท็บ :guilabel:`สินค้าคงคลัง` ในแบบฟอร์มผลิตภัณฑ์ ใช้เส้นทาง "
+":guilabel:`จัดหาผลิตภัณฑ์จาก [ชื่อคลังสินค้า]` "
+"ด้วยกฎการเรียงลำดับใหม่หรือเส้นทางการผลิตตามสั่ง (MTO) "
+"เพื่อเติมสินค้าในสต็อกโดยการย้ายผลิตภัณฑ์จากคลังสินค้าหนึ่งไปยังอีกคลังสินค้าหนึ่ง"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/resupply_warehouses.rst-1
 msgid ""
@@ -14270,8 +14377,8 @@ msgstr "เรียนรู้เพิ่มเติม"
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:25
 msgid ""
 "For more information about virtual locations, see the documentation about "
-"the different types of :ref:`locations <inventory/management/difference-"
-"warehouse-location>`."
+"the different types of :ref:`location types "
+"<inventory/warehouses_storage/location-type>`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:29
@@ -14390,133 +14497,211 @@ msgstr ""
 msgid "The Scraps smart button."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:3
-msgid "Locations"
-msgstr "ตำแหน่ง"
-
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:5
 msgid ""
 "A *location* is a specific space within a warehouse. This can be a shelf, "
-"room, aisle, etc. There are three types of locations in Odoo:"
+"room, aisle, etc."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:8
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:10
 msgid ""
-"*Physical locations* are spaces within a warehouse owned by the user's "
-"company. These can be a an area where items are stored like an aisle or "
-"shelf, or an area where operations take place, like loading and unloading "
-"bays."
+"To create specific storage locations, enable the *Storage Locations* feature"
+" by going to :menuselection:`Inventory app --> Configuration --> Settings`. "
+"In the :guilabel:`Warehouses` section, tick the :guilabel:`Storage "
+"Locations` checkbox. Then, click :guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:11
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:15
 msgid ""
-"*Partner locations* are the same as physical locations except that they "
-"exist within the warehouse of a customer or vendor."
+"Typically, the :guilabel:`Storage Locations` feature is used with "
+":doc:`Multi-Step Routes <use_routes>`, which controls how products move "
+"between locations."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:13
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst-1
+msgid "Show Storage Locations feature."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:23
+msgid "Create new location"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:25
 msgid ""
-"*Virtual locations* are locations that do not exist physically, but where "
-"items that are not in inventory can be placed. These can be items that have "
-"not yet entered inventory, like products that are on the way to a warehouse,"
-" or items that are no longer in inventory due to loss or other factors."
+"After enabling *Storage Locations*, go to :menuselection:`Inventory app --> "
+"Configuration --> Locations`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:19
-msgid ""
-"In order to use locations, the :guilabel:`Storage Locations` setting must be"
-" enabled. To do so, navigate to :menuselection:`Inventory --> Configuration "
-"--> Settings`, scroll down to the :guilabel:`Warehouse` heading, and enable "
-"the :guilabel:`Storage Locations` checkbox."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:24
-msgid "Create a new location inside a warehouse"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:26
-msgid ""
-"Starting from the :menuselection:`Inventory` app, select "
-":menuselection:`Configuration --> Locations --> Create`. The new location "
-"form can then be configured as follows:"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:29
-msgid ""
-":guilabel:`Location Name`: the name that will be used to reference the "
-"location"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:30
-msgid ""
-":guilabel:`Parent Location`: the location or warehouse that the new location"
-" exists within"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:31
-msgid ""
-":guilabel:`Location Type`: choose the category that the location belongs to"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst-1
+msgid "List of internal locations."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:32
 msgid ""
-":guilabel:`Company`: the company that owns the warehouse that the location "
-"is inside of"
+"On this page, click :guilabel:`New`. The new location form can then be "
+"configured as follows:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:33
-msgid ""
-":guilabel:`Is a Scrap Location?`: check this box to allow for "
-"scrapped/damaged goods to be stored in this location"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:34
+msgid ":guilabel:`Location Name`: recognizable name of the location."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:35
 msgid ""
-":guilabel:`Is a Return Location?`: check this box to allow products to be "
-"returned to this location"
+":guilabel:`Parent Location`: the location within which the new location "
+"exists. After the location is created, it is listed on the "
+":guilabel:`Locations` page using a *location hierarchy*, to describe how a "
+"specific location fits within larger areas of the warehouse."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:37
-msgid ":guilabel:`Barcode`: the barcode number assigned to the location"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:38
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:40
 msgid ""
-":guilabel:`Removal Strategy`: the :ref:`strategy "
-"<inventory/routes/strategies/removal>` for how items should be taken from "
-"inventory"
+"In `WH/Stock/Zone A/Refrigerator 1`, \"Refrigerator 1\" is the location "
+"name, \"Zone A\" is the parent location, and everything before it is the "
+"path showing where this spot is within the warehouse."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:45
+msgid "Additional Information section"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:47
+msgid ""
+"In addition to the required fields above, configure the following location "
+"fields to ensure the location serves its intended purpose in the database:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:50
+msgid ""
+":guilabel:`Location Type`: from the drop-down menu, choose :guilabel:`Vendor"
+" Location`, :guilabel:`View`, :guilabel:`Internal Location`, "
+":guilabel:`Customer Location`, :guilabel:`Inventory Loss`, "
+":guilabel:`Production`, or :guilabel:`Transit Location` to categorize the "
+"location. For details on each location type, refer to the :ref:`Location "
+"Types section <inventory/warehouses_storage/location-type>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:55
+msgid ""
+":guilabel:`Storage Category`: only available with the :ref:`Storage "
+"Categories <inventory/warehouses_storage/storage-category>` feature enabled "
+"in :menuselection:`Inventory app --> Configuration --> Settings`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:58
+msgid ":guilabel:`Company`: the company the location belongs to."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:59
+msgid ""
+":guilabel:`Is a Scrap Location?`: tick this checkbox to allow for "
+"scrapped/damaged goods to be stored in this location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:61
+msgid ""
+":guilabel:`Is a Return Location?`: tick this checkbox to allow products to "
+"be returned to this location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:63
+msgid ""
+":guilabel:`Barcode`: used with the *Barcode* app, enter the barcode to "
+":ref:`identify actions <barcode/setup/location>` at this location when "
+"scanned."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:65
+msgid ""
+":guilabel:`Replenish Location`: used for :doc:`configuring routes "
+"<use_routes>`, tick this checkbox to set the location as a destination for "
+"receiving products from *Buy*, *Manufacture*, or other procurement routes, "
+"ensuring products are correctly supplied to the warehouse."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst-1
 msgid "The form for creating a new location."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:46
-msgid "Create location hierarchies"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:74
+msgid "Cyclic Counting section"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:76
 msgid ""
-"The *Parent Location* setting on the new location form allows for a location"
-" to exist within a warehouse or another location. Every location can serve "
-"as a parent location, and every parent location can have multiple locations "
-"within it, allowing for the creation of a virtually infinite hierarchical "
-"structure."
+"To schedule regular inventory counts at this location, set the "
+":guilabel:`Inventory Frequency (Days)` field to the desired interval. By "
+"default, it is set to `0` (no scheduled counts)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:54
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:79
 msgid ""
-"Location hierarchy could be organized so that a shelf is located within an "
-"aisle, which is located within a room, which is located within the overall "
-"warehouse."
+"For example, setting this field to `30`, schedules a count every thirty "
+"days. For more specifics on setting up and using this feature, refer to the "
+":doc:`Cycle Counts documentation <cycle_counts>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:57
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:82
 msgid ""
-"To create the location hierarchy in the example above, set the warehouse as "
-"the parent of the room, the room as the parent of the aisle, and the aisle "
-"as the parent of the shelf. This can be adapted to a hierarchy of any "
-"magnitude."
+"The :guilabel:`Last Effective Inventory` field displays the date the last "
+"inventory count at this location occurred. When scheduled inventory counts "
+"are enabled, the :guilabel:`Next Expected Inventory` field displays the date"
+" of the next inventory count."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:87
+msgid ""
+"With inventory counts scheduled to occur every `30` days, and the "
+":guilabel:`Last Effective Inventory` count occurring on July 16, the "
+":guilabel:`Next Expected Inventory` is August 15."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:0
+msgid "Show Cyclic Count section of the locations form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:95
+msgid "Logistics section"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:97
+msgid ""
+"In the :guilabel:`Logistics` section of the locations form, optionally "
+"select a :guilabel:`Removal Strategy` to determine the order and priority of"
+" how products are picked from inventory. The options are: :guilabel:`First "
+"In First Out (FIFO)`, :guilabel:`Last In First Out (LIFO)`, "
+":guilabel:`Closest Location`, and :guilabel:`First Expiry First Out (FEFO)`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:103
+msgid ":doc:`../advanced_operations_warehouse/removal`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:106
+msgid "Current stock at location"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:108
+msgid ""
+"To view the current stock at a single location, go to "
+":menuselection:`Inventory app --> Configuration --> Locations`, and select "
+"the desired location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:111
+msgid ""
+"Next, click the :guilabel:`Current Stock` smart button to get a list of all "
+"products at the location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:115
+msgid ""
+"A list of current stock at `Shelf 1` consists of `266` cabinets and `39` "
+"desks."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:0
+msgid "Show stock at Shelf 1."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_routes.rst:5
@@ -15097,6 +15282,11 @@ msgid ""
 "everything is ready to be processed so the customer can get the ordered "
 "items."
 msgstr ""
+"ตามที่อธิบายไว้ในการแนะนำเอกสาร ขั้นตอนสุดท้ายในกระบวนการ (สำหรับเส้นทางนี้ "
+"ใบสั่งจัดส่ง) จะเป็นขั้นตอนแรกที่จะถูกทริกเกอร์ ซึ่งจะทริกเกอร์กฎอื่นๆ "
+"จนกว่าเราจะไปถึงขั้นตอนแรกในกระบวนการ (ที่นี่ ขั้นตอนภายใน "
+"โอนจากสต็อกไปยังพื้นที่บรรจุ) "
+"ตอนนี้ทุกอย่างพร้อมสำหรับการประมวลผลเพื่อให้ลูกค้าได้รับสินค้าที่สั่ง"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_routes.rst:330
 msgid ""
@@ -15291,6 +15481,12 @@ msgid ""
 ":guilabel:`Validate` button in the top left of the page to register the "
 "quantities received."
 msgstr ""
+"เมื่อสินค้ามาถึงคลังสินค้าขาเข้า "
+"จะต้องดำเนินการรับสินค้าที่สร้างขึ้นสำหรับคลังสินค้านั้นด้วย "
+"กลับไปที่แดชบอร์ด :menuselection:`สินค้าคงคลัง` และเลือกปุ่ม :guilabel:`X "
+"เพื่อดำเนินการ` บนการ์ด :guilabel:`ใบเสร็จ` สำหรับคลังสินค้าที่เข้ามา "
+"จากนั้นใบเสร็จรับเงินที่สร้างขึ้นสำหรับการเติมสินค้า ในหน้าใบเสร็จ คลิกปุ่ม "
+":guilabel:`ตรวจสอบ` ที่ด้านซ้ายบนของหน้าเพื่อบันทึกปริมาณที่ได้รับ"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouse_replenishment_transfer.rst:109
 msgid ""
@@ -15377,148 +15573,152 @@ msgid ""
 "and receipt should be processed using the same method as detailed above."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations.rst:3
-msgid "Manage Warehouses and Locations"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations.rst:9
-msgid "Warehouse"
-msgstr "คลังสินค้า"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations.rst:11
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:5
 msgid ""
-"In Odoo, a **Warehouse** is the actual building/place in which a company's "
-"items are stocked. Multiple warehouses can be set up in Odoo and the user "
-"can create moves between warehouses."
+"In the Odoo *Inventory* app, a *warehouse* is a physical space with an "
+"address for storing items, such as a storage facility, distribution center, "
+"or physical store."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations.rst:19
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:8
 msgid ""
-"A **Location** is a specific space within the warehouse. It can be a "
-"sublocation of the warehouse (a shelf, a floor, an aisle, and so on). "
-"Therefore, a location is part of one warehouse only and it is not possible "
-"to link one location to multiple warehouses. In Odoo, as many locations can "
-"be configured as needed under one warehouse."
+"Each database has a pre-configured warehouse with the company's address. "
+"Users can set up multiple warehouses, and :doc:`create stock moves "
+"<use_routes>` between them."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations.rst:24
-msgid "There are three types of locations:"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations.rst:26
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:14
 msgid ""
-"The **Physical Locations** are internal locations that are part of the "
-"warehouses that the company owns. They can be the loading and unloading "
-"areas of the warehouse, a shelf, a department, etc."
+"To create or manage warehouses, go to :menuselection:`Inventory app --> "
+"Configuration --> Warehouses`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations.rst:30
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:17
 msgid ""
-"The **Partner Locations** are spaces within a customer and/or vendor's "
-"warehouse. They work the same way as physical locations, with the only "
-"difference being that they are not owned by the user's company."
+"Then, select an existing warehouse, or create a new one by clicking "
+":guilabel:`New`. Doing so opens the warehouse form, which contains the "
+"following fields:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations.rst:34
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:20
 msgid ""
-"The **Virtual Locations** are places that do not exist, but in which "
-"products can be placed when they are not physically in an inventory yet (or "
-"anymore). They come in handy when recording lost products (**Inventory "
-"Loss**), or accounting for products that are on their way to the warehouse "
-"(**Procurements**)."
+":guilabel:`Warehouse` (*required field*): the full name of the warehouse."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations.rst:39
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:21
 msgid ""
-"In Odoo, locations are structured hierarchically. Locations can be "
-"structured as a tree, dependent on a parent-child relationship. This gives "
-"more detailed levels of analysis of the stock operations and the "
-"organization of the warehouses."
+":guilabel:`Short Name` (*required field*): the abbreviated code for the "
+"warehouse (maximum five characters). The short name for the default "
+"warehouse in Odoo is `WH`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations.rst:46
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:25
 msgid ""
-"To activate locations, go to :menuselection:`Configuration --> Settings` and"
-" enable :guilabel:`Storage Locations`. Then, click :guilabel:`Save`."
+"The :guilabel:`Short Name` appears on warehouse documents, so it is "
+"recommended to use an memorable one, like \"WH[first letters of location]\" "
+"(e.g. `WHA`, `WHB`, etc.)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations.rst-1
-msgid "Enable the storage location feature in Odoo Inventory settings."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations.rst:54
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:28
 msgid ""
-"To manage several routes within the warehouses, also enable "
-":guilabel:`Multi-Step Routes` and check "
-":doc:`/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_routes`."
-msgstr ""
-"หากต้องการจัดการหลายเส้นทางภายในคลังสินค้า ให้เปิดใช้งาน "
-":guilabel:`เส้นทางหลายขั้นตอน` และตรวจสอบ "
-":doc:`/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_routes`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations.rst:58
-msgid "Create a new warehouse"
+":guilabel:`Address` (*required field*): the address of the warehouse. To "
+"change the warehouse address when creating two or more warehouses, hover "
+"over the field, and click the :icon:`fa-arrow-right` :guilabel:`(right "
+"arrow)`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations.rst:60
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:31
 msgid ""
-"To create a warehouse, go to :menuselection:`Configuration --> Warehouse "
-"Management --> Warehouses` and click on :guilabel:`Create`."
+":guilabel:`Company` (*required field*): the company that owns the warehouse;"
+" this can be set as the company that owns the Odoo database, or the company "
+"of a customer or vendor."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations.rst:63
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:33
 msgid ""
-"Then, fill out a :guilabel:`Warehouse Name` and a :guilabel:`Short Name`. "
-"The short name is five characters maximum."
+":guilabel:`Intrastat region`: :doc:`region name "
+"<../../../../finance/accounting/reporting/intrastat>` required for companies"
+" in the European Union."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations.rst-1
-msgid "Short name field of a warehouse on Odoo Inventory."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations.rst:71
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:38
 msgid ""
-"The :guilabel:`Short Name` appears on transfer orders and other warehouse "
-"documents. Odoo recommends using an understandable one like \"WH/[first "
-"letters of location]\"."
+"The options below are available **only** when the *Multi-Step Routes* "
+"feature is enabled in :menuselection:`Inventory app --> Configuration --> "
+"Settings`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations.rst:74
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:41
 msgid ""
-"Now, go back to the :guilabel:`Inventory` dashboard. There, new operations "
-"related to the newly created warehouse have been automatically generated."
+":guilabel:`Incoming Shipments`: select the option to receive products from "
+"the warehouse in :doc:`one "
+"<../../shipping_receiving/daily_operations/receipts_delivery_one_step>`, "
+":doc:`two "
+"<../../shipping_receiving/daily_operations/receipts_delivery_two_steps>`, or"
+" :doc:`three "
+"<../../shipping_receiving/daily_operations/receipts_three_steps>` steps."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations.rst-1
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:46
 msgid ""
-"Inventory app dashboard displaying new transfer types for the recently "
-"created warehouse."
+":guilabel:`Outgoing Shipments`: select the option to deliver products from "
+"the warehouse in :doc:`one "
+"<../../shipping_receiving/daily_operations/receipts_delivery_one_step>`, "
+":doc:`two "
+"<../../shipping_receiving/daily_operations/receipts_delivery_two_steps>`, or"
+" :doc:`three "
+"<../../shipping_receiving/daily_operations/delivery_three_steps>` steps."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations.rst:82
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:51
 msgid ""
-"Adding a second warehouse will automatically activate the "
-":guilabel:`Locations` setting."
+":guilabel:`Dropship Subcontractors`: available with the *Subcontracting* "
+"feature enabled in :menuselection:`Manufacturing app --> Configuration --> "
+"Settings`. Tick this checkbox to purchase components from vendors, and "
+"dropship them to subcontractors."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations.rst:85
-msgid "Create a new location"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations.rst:87
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:54
 msgid ""
-"To create a location, go to :menuselection:`Configuration --> Warehouse "
-"Management --> Locations` and click on :guilabel:`Create`."
+":guilabel:`Resupply Subcontractors`: available with the *Subcontracting* "
+"feature, tick this checkbox to supply subcontractors with raw materials "
+"stored in *this* specific warehouse."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations.rst:90
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:56
 msgid ""
-"Then, fill out a :guilabel:`Location Name` and a :guilabel:`Parent Location`"
-" and click :guilabel:`Save`."
+":guilabel:`Manufacture to Resupply`: tick this checkbox to allow for items "
+"to be manufactured in this warehouse."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations.rst-1
-msgid "Create a new warehouse location in Odoo Inventory."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:58
+msgid ""
+":guilabel:`Manufacture`: choose whether to manufacture products in :doc:`one"
+" <../../../manufacturing/management/one_step_manufacturing>`, :doc:`two "
+"<../../../manufacturing/management/two_step_manufacturing>`, or :doc:`three "
+"steps <../../../manufacturing/management/three_step_manufacturing>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:62
+msgid ""
+":guilabel:`Buy to Resupply`: tick this checkbox to allow for purchased "
+"products to be delivered to the warehouse."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:64
+msgid ""
+":guilabel:`Resupply From`: available with multiple warehouses in the "
+"database, select warehouses to pull stock *from* to fulfill orders."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:68
+msgid ""
+":doc:`Use inventory adjustments to add stock to new warehouses "
+"<count_products>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst-1
+msgid "Example warehouse form."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation.rst:5
@@ -15822,6 +16022,12 @@ msgid ""
 "purchase price both of inventory on hand and the costs accumulated from "
 "validated purchase orders."
 msgstr ""
+"เมื่อเลือก :guilabel:`Average Cost (AVCO)` เป็น :guilabel:`วิธีการคิดต้นทุน`"
+" การเปลี่ยนค่าตัวเลขในฟิลด์ :guilabel:`ต้นทุน` "
+"สำหรับผลิตภัณฑ์ในหมวดหมู่ผลิตภัณฑ์ที่เกี่ยวข้องจะสร้างบันทึกใหม่ใน "
+"*การประเมินมูลค่าสินค้าคงคลัง* เพื่อปรับมูลค่าของผลิตภัณฑ์ จากนั้นจำนวน "
+":guilabel:`ต้นทุน` "
+"จะอัปเดตโดยอัตโนมัติตามราคาซื้อเฉลี่ยของทั้งสินค้าคงคลังคงเหลือและต้นทุนที่สะสมจากใบสั่งซื้อที่ได้รับการตรวจสอบแล้ว"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:100
 msgid ""
@@ -16290,6 +16496,14 @@ msgid ""
 "reveal stock valuation line items below, as well as a teal :guilabel:`➕ "
 "(plus)` button on the right."
 msgstr ""
+"สร้างรายการประเมินมูลค่าด้วยตนเองบนแดชบอร์ด "
+":guilabel:`การประเมินมูลค่าสต็อก` โดยไปที่ :menuselection:`แอปสินค้าคงคลัง "
+"--> การรายงาน --> การประเมินค่า` ก่อน จากนั้น หากต้องการเปิดใช้งานฟีเจอร์ "
+"*การประเมินมูลค่าผลิตภัณฑ์ใหม่* ให้เลือก :menuselection:`จัดกลุ่มตาม --> "
+"ผลิตภัณฑ์` เพื่อจัดระเบียบบันทึกทั้งหมดตามผลิตภัณฑ์ คลิกที่ไอคอน "
+":guilabel:`▶️ (สามเหลี่ยมแบบเลื่อนลง)` สีเทา "
+"เพื่อแสดงรายการประเมินมูลค่าสต็อกด้านล่าง รวมถึงปุ่ม :guilabel:`➕ (บวก)` "
+"สีน้ำเงินอมเขียวที่ด้านขวา"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:133
 msgid ""
@@ -16851,6 +17065,13 @@ msgid ""
 "click :guilabel:`Save & Close` to finish adding operations, or "
 ":guilabel:`Save & New` to add more."
 msgstr ""
+"จากนั้นเลือกแท็บ :guilabel:`การดำเนินงาน` คลิก :guilabel:`เพิ่มบรรทัด` "
+"และหน้าต่างป๊อปอัป :guilabel:`สร้างการดำเนินงาน` จะปรากฏขึ้น ในฟิลด์ "
+":guilabel:`การดำเนินงาน` ให้ระบุชื่อของการดำเนินการที่จะเพิ่ม (เช่น ประกอบ "
+"ตัด และอื่นๆ) เลือกศูนย์งานที่จะดำเนินการจากเมนูแบบเลื่อนลง "
+":guilabel:`ศูนย์งาน` สุดท้าย คลิก :guilabel:`บันทึกและปิด` "
+"เพื่อเสร็จสิ้นการเพิ่มการดำเนินการ หรือ :guilabel:`บันทึกและสร้าง` "
+"เพื่อเพิ่ม"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/configure_manufacturing_product.rst:60
 msgid ""
@@ -17408,6 +17629,11 @@ msgid ""
 "manufactured, but the act of transferring them to and from inventory is not "
 "tracked."
 msgstr ""
+"Odoo *ระบบการผลิต* ช่วยให้ผู้ใช้สามารถผลิตผลิตภัณฑ์โดยใช้หนึ่ง สอง "
+"หรือสามขั้นตอน เมื่อใช้การผลิตแบบขั้นตอนเดียว Odoo จะสร้างใบสั่งผลิต (MO) "
+"แต่จะไม่สร้างการถ่ายโอนสำหรับการเคลื่อนย้ายส่วนประกอบออกจากสินค้าคงคลังหรือผลิตภัณฑ์สำเร็จรูปเข้าสต็อก"
+" การนับสินค้าคงคลังยังคงอัปเดตตามจำนวนส่วนประกอบที่ใช้และผลิตภัณฑ์ที่ผลิต "
+"แต่การดำเนินการโอนเข้าและออกจากสินค้าคงคลังจะไม่ถูกติดตาม"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/one_step_manufacturing.rst:16
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/three_step_manufacturing.rst:15
@@ -18803,6 +19029,12 @@ msgid ""
 "Inventory counts still update based on the number of products manufactured, "
 "but the act of transferring them to and from inventory is not tracked."
 msgstr ""
+"Odoo *ระบบการผลิต* ช่วยให้ผู้ใช้สามารถผลิตผลิตภัณฑ์โดยใช้หนึ่ง สอง "
+"หรือสามขั้นตอน เมื่อใช้การผลิตแบบสองขั้นตอน Odoo จะสร้างใบสั่งผลิต (MO) "
+"และการโอนย้ายส่วนประกอบ "
+"แต่จะไม่สร้างการโอนย้ายสำหรับการเคลื่อนย้ายผลิตภัณฑ์สำเร็จรูปไปยังสต็อก "
+"การนับสินค้าคงคลังยังคงอัปเดตตามจำนวนผลิตภัณฑ์ที่ผลิต "
+"แต่จะไม่มีการติดตามการโอนเข้าและออกจากสินค้าคงคลัง"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/two_step_manufacturing.rst:59
 msgid ""
@@ -19022,6 +19254,12 @@ msgid ""
 ":guilabel:`Manufacturing` module by selecting :menuselection:`Operations -->"
 " Work Orders`."
 msgstr ""
+"Odoo ระบบการผลิต ช่วยให้สามารถดำเนินการสั่งงานได้ที่ศูนย์งานเฉพาะ "
+"เมื่อมีการสร้างใบสั่งผลิตสำหรับผลิตภัณฑ์ ใบสั่งงานใดๆ ที่แสดงอยู่ในแท็บ "
+":guilabel:`การดำเนินงาน` ของสูตรการผลิต (BoM) "
+"จะถูกสร้างขึ้นโดยอัตโนมัติเช่นกัน และกำหนดให้กับศูนย์งานที่ระบุ "
+"สามารถจัดการใบสั่งงานได้ในโมดูล :guilabel:`ระบบการผลิต` โดยเลือก "
+":menuselection:`การดำเนินงาน -> ใบสั่งงาน`"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:11
 msgid ""
@@ -19308,6 +19546,11 @@ msgid ""
 "manufacturing operations can continue until the impacted work center is "
 "available again."
 msgstr ""
+"ด้วยเหตุนี้ จึงจำเป็นต้องทำให้ศูนย์งานไม่พร้อมใช้งานใน Odoo "
+"เพื่อให้แพลตฟอร์มกำหนดเส้นทางคำสั่งงานใหม่ไปยังศูนย์งานอื่นที่ดำเนินงานอยู่ "
+"เมื่อใช้ Odoo *ระบบการลา* "
+"คุณสามารถกำหนดให้ศูนย์งานไม่พร้อมใช้งานตามระยะเวลาที่กำหนดได้ "
+"การทำเช่นนี้ทำให้มั่นใจได้ว่าการดำเนินการด้านการผลิตสามารถดำเนินต่อไปได้จนกว่าศูนย์งานที่ได้รับผลกระทบจะพร้อมใช้งานอีกครั้ง"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:17
 msgid ""
@@ -19338,6 +19581,12 @@ msgid ""
 "should be the only one that appears on the page. Click the green "
 ":guilabel:`Install` button on the card to install the app."
 msgstr ""
+"จากนั้น ติดตั้งแอป *ระบบการลา* "
+"นี่คือแอปที่ใช้ในการกำหนดเวลาหยุดให้กับทรัพยากรทั้งหมดภายใน Odoo "
+"รวมถึงพนักงานและศูนย์งาน ไปที่ :menuselection:`แอป` จากนั้นพิมพ์ `ระบบการลา`"
+" ในแถบ :guilabel:`ค้นหา...` การ์ดสำหรับโมดูล :guilabel:`ระบบการลา` "
+"ควรเป็นเพียงการ์ดเดียวที่ปรากฏบนเพจ คลิกปุ่มสีเขียว :guilabel:`ติดตั้ง` "
+"บนการ์ดเพื่อติดตั้งแอป"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst-1
 msgid "The Time Off module installation card."
@@ -19351,6 +19600,12 @@ msgid ""
 " no second work center is configured, Odoo cannot route work orders away "
 "from the unavailable work center and they will pile up in its queue."
 msgstr ""
+"ขั้นตอนสุดท้ายคือการกำหนดค่าศูนย์งานอย่างเหมาะสม สำหรับขั้นตอนการทำงานนี้ "
+"จำเป็นต้องมีศูนย์งานอย่างน้อยสองแห่ง: ศูนย์หนึ่งที่ไม่พร้อมใช้งาน "
+"และศูนย์ที่สองที่ได้รับใบสั่งงานที่อีกศูนย์ไม่สามารถยอมรับได้ "
+"หากไม่มีการกำหนดค่าศูนย์งานแห่งที่สอง Odoo "
+"จะไม่สามารถกำหนดเส้นทางคำสั่งงานออกจากศูนย์งานที่ไม่พร้อมใช้งานได้ "
+"และงานเหล่านั้นจะกองซ้อนกันอยู่ในคิว"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst:44
 msgid ""
@@ -19625,6 +19880,12 @@ msgid ""
 "specified in the :guilabel:`Expected Duration` field of the work order that "
 "precedes it."
 msgstr ""
+"หากต้องการกำหนดเวลาใบสั่งงานของใบสั่งผลิต ให้คลิกปุ่ม :guilabel:`วางแผน` "
+"ที่ด้านบนของหน้า หลังจากดำเนินการดังกล่าว ช่อง "
+":guilabel:`วันที่เริ่มต้นที่กำหนดไว้` สำหรับแต่ละใบสั่งงานบนแท็บ "
+":guilabel:`ใบสั่งงาน` จะเติมวันที่และเวลาเริ่มต้นตามกำหนดการโดยอัตโนมัติ "
+"ใบสั่งงานที่ถูกบล็อกจะถูกกำหนดเวลาเมื่อสิ้นสุดระยะเวลาที่ระบุในฟิลด์ "
+":guilabel:`ระยะเวลาที่คาดหวัง` ของใบสั่งงานที่อยู่ก่อนหน้า"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/work_order_dependencies.rst-1
 msgid ""
@@ -19765,6 +20026,12 @@ msgid ""
 " which view is selected. It can be toggled on or off by clicking the "
 ":guilabel:`sidebar` button at the extreme left of the navigation bar."
 msgstr ""
+"ทางด้านซ้ายของโมดูลคือแผงผู้ปฏิบัติงาน "
+"ซึ่งแสดงพนักงานทั้งหมดที่ลงชื่อเข้าใช้แอป *พื้นที่ผลิต* ในปัจจุบัน "
+"และอนุญาตให้พนักงานใหม่ลงชื่อเข้าใช้ได้ "
+"แผงผู้ปฏิบัติงานจะพร้อมใช้งานในโมดูลเสมอ ไม่ว่ามุมมองใดก็ตาม เลือกแล้ว "
+"สามารถเปิดหรือปิดได้โดยคลิกปุ่ม :guilabel:`แถบด้านข้าง` "
+"ที่ด้านซ้ายสุดของแถบนำทาง"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst-1
 msgid ""
@@ -19974,6 +20241,11 @@ msgid ""
 " quality check must be completed from the |MO| card before the |MO| can be "
 "closed."
 msgstr ""
+"หากใบสั่งงานที่กำลังประมวลผลเป็นใบสั่งงานขั้นสุดท้ายสำหรับ |MO| ปุ่ม "
+":guilabel:`ปิดการผลิต` จะปรากฏที่ส่วนท้ายของการ์ดใบสั่งงาน การคลิก "
+":guilabel:`ปิดการผลิต` จะปิดทั้งใบสั่งงานและ |MO| "
+"เว้นแต่จะต้องมีการตรวจสอบคุณภาพสำหรับ |MO| ในกรณีนี้ "
+"จะต้องดำเนินการตรวจสอบคุณภาพให้เสร็จสิ้นจาก |MO| การ์ดก่อน |MO| สามารถปิดได้"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:158
 msgid ""
@@ -23513,6 +23785,11 @@ msgid ""
 "for other apps such as inventory). Then, select the *Purchase Unit of "
 "Measure* to be used for purchases."
 msgstr ""
+"หากต้องการระบุหน่วยวัดต่างๆ สำหรับการขายและการซื้อ "
+"ให้เปิดแอปการจัดซื้อและไปที่ :menuselection:`ผลิตภัณฑ์ --> ผลิตภัณฑ์` "
+"สร้างผลิตภัณฑ์หรือเลือกผลิตภัณฑ์ที่มีอยู่ ใต้แท็บ *ข้อมูลทั่วไป* "
+"ของผลิตภัณฑ์ ขั้นแรกให้เลือก *หน่วยวัด* ที่จะใช้สำหรับการขาย (รวมถึงแอปอื่นๆ"
+" เช่น สินค้าคงคลัง) จากนั้นเลือก *หน่วยวัดการซื้อ* ที่จะใช้สำหรับการซื้อ"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/uom.rst:47
 msgid ""
@@ -23725,6 +24002,13 @@ msgid ""
 "navigating to :menuselection:`Inventory`, clicking the :guilabel:`# To "
 "Process` button on an operation card, and selecting an order."
 msgstr ""
+"ในการประมวลผลการตรวจสอบคุณภาพ *คำแนะนำ* สำหรับคำสั่งซื้อ "
+"ให้เลือกใบสั่งผลิตหรือใบสั่งสินค้าคงคลัง (ใบเสร็จ การจัดส่ง การคืนสินค้า "
+"ฯลฯ) ที่ต้องการการตรวจสอบ สามารถเลือกใบสั่งผลิตได้โดยไปที่ "
+":menuselection:`ระบบการผลิต --> การดำเนินการ --> ใบสั่งผลิต` "
+"และคลิกที่คำสั่งซื้อ สามารถเลือกคำสั่งซื้อสินค้าคงคลังได้โดยไปที่ "
+":menuselection:`สินค้าคงคลัง` คลิกปุ่ม :guilabel:`# เพื่อดำเนินการ` "
+"บนการ์ดการดำเนินการและเลือกคำสั่งซื้อ"
 
 #: ../../content/applications/inventory_and_mrp/quality/quality_check_types/instructions_check.rst:42
 msgid ""
@@ -23826,6 +24110,12 @@ msgid ""
 "the recorded measurement must be within a certain *tolerance* of a *norm* "
 "value."
 msgstr ""
+"ใน Odoo *ระบบจัดการคุณภาพ* การตรวจสอบ *มาตรการ* "
+"เป็นหนึ่งในประเภทการตรวจสอบคุณภาพที่สามารถเลือกได้เมื่อสร้างการตรวจสอบคุณภาพหรือจุดควบคุมคุณภาพ"
+" (QCP) ใหม่ *มาตรการ* "
+"การตรวจสอบจะแจ้งให้ผู้ใช้วัดลักษณะเฉพาะของผลิตภัณฑ์และบันทึกการวัดใน Odoo "
+"เพื่อให้การตรวจสอบคุณภาพผ่าน การวัดที่บันทึกไว้จะต้องอยู่ภายใน *ค่าเผื่อ* "
+"ของค่า *ปกติ*"
 
 #: ../../content/applications/inventory_and_mrp/quality/quality_check_types/measure_check.rst:14
 msgid "Create a Measure quality check"
@@ -23996,6 +24286,13 @@ msgid ""
 ":menuselection:`Inventory`, clicking the :guilabel:`# To Process` button on "
 "an operation card, and selecting an order."
 msgstr ""
+"ในการดำเนินการเพื่อ *วัดผล* การตรวจสอบคุณภาพในคำสั่งซื้อ "
+"ให้เลือกใบสั่งผลิตหรือใบสั่งสินค้าคงคลัง (ใบเสร็จ การจัดส่ง การคืนสินค้า "
+"ฯลฯ) ที่ต้องมีการตรวจสอบ สามารถเลือกใบสั่งผลิตได้โดยไปที่ "
+":menuselection:`ระบบการผลิต --> การดำเนินการ --> ใบสั่งผลิต` "
+"และคลิกที่คำสั่งซื้อ สามารถเลือกคำสั่งซื้อสินค้าคงคลังได้โดยไปที่ "
+":menuselection:`สินค้าคงคลัง` คลิกปุ่ม :guilabel:`# เพื่อดำเนินการ` "
+"บนการ์ดการดำเนินการและเลือกคำสั่งซื้อ"
 
 #: ../../content/applications/inventory_and_mrp/quality/quality_check_types/measure_check.rst:101
 #: ../../content/applications/inventory_and_mrp/quality/quality_check_types/picture_check.rst:96
@@ -24798,6 +25095,14 @@ msgid ""
 " :ref:`quality control points <quality/quality_management/quality-control-"
 "points>`."
 msgstr ""
+"การใช้จุดควบคุมคุณภาพ (QCP) "
+"ทำให้สามารถสร้างการตรวจสอบคุณภาพโดยอัตโนมัติตามช่วงเวลาที่สม่ำเสมอได้ เมื่อ "
+"|QCP| สร้างการตรวจสอบคุณภาพ "
+"การตรวจสอบคุณภาพจะปรากฏในใบสั่งผลิตหรือสินค้าคงคลัง "
+"โดยที่พนักงานที่ประมวลผลคำสั่งซื้อจะได้รับแจ้งให้ดำเนินการให้เสร็จสิ้น "
+"สำหรับคำอธิบายแบบเต็มเกี่ยวกับวิธีการสร้างและกำหนดค่า |QCP| "
+"โปรดดูเอกสารประกอบใน :ref:`จุดควบคุมคุณภาพ "
+"<quality/quality_management/quality-control-points>`"
 
 #: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:18
 msgid ""
@@ -24976,6 +25281,13 @@ msgid ""
 ":menuselection:`Inventory`, clicking the :guilabel:`# To Process` button on "
 "an operation card, and selecting an order."
 msgstr ""
+"ในการประมวลผลการตรวจสอบคุณภาพในใบสั่ง "
+"ให้เลือกใบสั่งผลิตหรือใบสั่งสินค้าคงคลัง (ใบเสร็จ การจัดส่ง การส่งคืน ฯลฯ) "
+"ที่ต้องการการตรวจสอบ สามารถเลือกใบสั่งผลิตได้โดยไปที่ "
+":menuselection:`ระบบการผลิต --> การดำเนินการ --> ใบสั่งการผลิต` "
+"และคลิกที่คำสั่งซื้อ สามารถเลือกคำสั่งซื้อสินค้าคงคลังได้โดยไปที่ "
+":menuselection:`สินค้าคงคลัง` คลิกปุ่ม :guilabel:`# เพื่อดำเนินการ` "
+"บนการ์ดการดำเนินการ และเลือกคำสั่งซื้อ"
 
 #: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:108
 msgid ""

@@ -15,6 +15,7 @@
 # Renaud de Colombel <rdecolombel@sgen.cfdt.fr>, 2024
 # Eloïse Stilmant <est@odoo.com>, 2024
 # Jolien De Paepe, 2024
+# Manon Rondou, 2024
 # Wil Odoo, 2024
 # 
 #, fuzzy
@@ -22,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-30 07:20+0000\n"
+"POT-Creation-Date: 2024-07-23 10:38+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
 "Last-Translator: Wil Odoo, 2024\n"
 "Language-Team: French (https://app.transifex.com/odoo/teams/41243/fr/)\n"
@@ -3280,6 +3281,12 @@ msgid ""
 "<https://www.odoo.sh>`_. Incoming and outgoing servers must be configured "
 "for on-premise databases."
 msgstr ""
+"Ce document est **principalement dédié aux utilisateurs d'Odoo sur serveur**"
+" qui ne bénéficient pas d'une solution prête à l'emploi pour envoyer et "
+"recevoir des e-mails dans Odoo, contrairement à `Odoo Online "
+"<https://www.odoo. com/trial>`_ et `Odoo.sh <https://www.odoo.sh>`_. Les "
+"serveurs de messagerie entrants et sortants doivent être configurés pour les"
+" bases de données sur serveur."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:31
 msgid ""
@@ -3362,14 +3369,22 @@ msgid ""
 "external email server. Once all the information has been filled out, click "
 ":guilabel:`Test Connection`."
 msgstr ""
+"En tant qu'administrateur du système, allez à :menuselection:`Paramètres -->"
+" Paramètres généraux --> Discussion` dans Odoo et activez l'option "
+":guilabel:`Serveurs de messagerie personnalisés`. Cliquez ensuite sur "
+":guilabel:`Enregistrer`. Ensuite, cliquez sur :guilabel:`Serveurs de "
+"messagerie sortants` et sur :guilabel:`Créer` pour créer un nouvel "
+"enregistrement de serveur de messagerie sortant dans Odoo. Référencez les "
+"données SMTP du serveur de messagerie externe. Une fois que toutes les "
+"informations ont été complétées, cliquez sur :guilabel:`Test de connexion`."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:68
 msgid ":doc:`google_oauth`"
-msgstr ""
+msgstr ":doc:`google_oauth`"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:69
 msgid ":doc:`azure_oauth`"
-msgstr ""
+msgstr ":doc:`azure_oauth`"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:72
 msgid ""
@@ -3650,6 +3665,10 @@ msgid ""
 " and Amazon SES, Mailgun, Sendgrid or :doc:`Mailjet <mailjet_api>` for mass "
 "mailings."
 msgstr ""
+"Dans Odoo, vous pouvez utiliser un serveur de messagerie séparé pour les "
+"emails transactionnels et les envois de masse. Par exemple, utilisez "
+"Postmark ou SendinBlue pour les emails transactionnels, et Amazon SES, "
+"Mailgun, Sendgrid ou :doc:`Mailjet <mailjet_api>` pour les envois de masse."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:184
 msgid ""
@@ -3718,6 +3737,14 @@ msgid ""
 "not have another action attached to it like other aliases might, it is only "
 "used to collect replies."
 msgstr ""
+"Les **réponses** aux messages envoyés depuis Odoo sont acheminées vers le "
+"fil de discussion d'origine (et vers la boîte de réception de tous ses "
+"abonnés) par l'alias du modèle, s'il y en a un, ou par l'alias catchall "
+"(**catchall@**). Les réponses aux messages de modèles qui n'ont pas d'alias "
+"personnalisé utiliseront l'alias catchall (`catchall@mycompany.odoo.com`). "
+"L'adresse catchall, cependant, n'est pas associée à une autre action, "
+"contrairement à d'autres alias ; elle est uniquement utilisée pour collecter"
+" des réponses."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:214
 msgid ""
@@ -3885,6 +3912,13 @@ msgid ""
 "a change is made then the system will not recognize the old alias, and the "
 "reply will not be received."
 msgstr ""
+"Pour modifier les alias catchall et bounce, activez d'abord le :ref:`mode "
+"développeur <developer-mode>`. Allez ensuite aux :menuselection:`Paramètres "
+"--> Technique --> Paramètres --> Paramètres système` pour personnaliser les "
+"alias (`mail.catchall.alias` & `mail.bounce.alias`). Ces changements doivent"
+" être effectués avant que la base de données ne soit mise en service. Si un "
+"client répond après un changement, le système ne reconnaîtra pas l'ancien "
+"alias et la réponse ne sera pas reçue."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:270
 msgid ""
@@ -3930,11 +3964,11 @@ msgstr "Les deux paramètres système sont les suivants :"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:287
 msgid "`mail.gateway.loop.minutes` (120 minutes by default)"
-msgstr ""
+msgstr "`mail.gateway.loop.minutes` (120 minutes par défaut)"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:288
 msgid "`mail.gateway.loop.threshold` (20 by default)"
-msgstr ""
+msgstr "`mail.gateway.loop.threshold` (20 par défaut)"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:290
 msgid ""
@@ -3958,6 +3992,13 @@ msgid ""
 "the number of records this alias is allowed to create in the given period of"
 " time (value of `mail.gateway.loop.minutes`)."
 msgstr ""
+"Lorsqu'un e-mail arrive dans la base de données Odoo sur l'adresse e-mail "
+"catchall ou sur n'importe quel alias, Odoo vérifie l'e-mail reçu pendant la "
+"période indiquée dans le paramètre de système `mail.gateway.loop.minutes`. "
+"Si l'e-mail reçu a été envoyé à un alias, Odoo vérifiera le paramètre "
+"système `mail.gateway.loop.threshold` et déterminera la valeur et le nombre "
+"d'enregistrements que cet alias est autorisé à créer pendant la période "
+"donnée (valeur de `mail.gateway.loop.minutes`)."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:300
 msgid ""
@@ -3969,10 +4010,16 @@ msgid ""
 "specified time-frame, and will prevent a feedback loop from occurring if a "
 "duplicate email is detected."
 msgstr ""
+"De plus, lorsqu'un e-mail arrive à l'adresse email catchall, Odoo vérifiera "
+"les e-mails reçus dans la base de données pendant la période donnée (telle "
+"que précisée par la valeur du paramètre système : "
+"`mail.gateway.loop.minutes`). Odoo déterminera ensuite si l'un des e-mails "
+"reçus correspond à ou aux e-mails reçus au cours de la période donnée et "
+"préviendra une boucle de rétroaction s'il détecte un e-mail dupliqué."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:307
 msgid "Allow alias domain system parameter"
-msgstr ""
+msgstr "Autoriser les paramètres système de l'alias de domaine"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:309
 msgid ""
@@ -3981,6 +4028,11 @@ msgid ""
 "the :ref:`developer mode <developer-mode>`. Then, go to "
 ":menuselection:`Settings app --> Technical --> Email section --> Aliases`."
 msgstr ""
+"Les alias entrants sont définis dans la base de données Odoo pour créer des "
+"entrées à partir d'e-mails entrants. Pour voir les alias définis dans la "
+"base de données Odoo, activez d'abord le mode développeur :ref:`. "
+"<developer-mode>`. Ensuite, allez dans :menuselection:`Paramètres --> "
+"Technique --> Section email --> Alias`."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:313
 msgid ""
@@ -3990,6 +4042,13 @@ msgid ""
 "create a ticket, lead, opportunity, etc., eliminates false positives where "
 "email addresses with only the prefix alias (not the domain) are present."
 msgstr ""
+"Le paramètre système suivant, `mail.catchall.domain.allowed`, Le paramètre "
+"système suivant, `mail.catchall.domain.allowed`, défini avec des valeurs de "
+"domaine d'alias autorisées, séparées par des virgules, permet de filtrer les"
+" e-mails correctement adressés à des alias. En définissant le(s) domaine(s) "
+"pour lesquels l'alias peut créer un ticket, une piste, une opportunité, "
+"etc., cela permet d'éliminer les faux positifs lorsque les adresses e-mail "
+"ne contiennent que le préfixe de l'alias (et non le domaine)."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:318
 msgid ""
@@ -3998,6 +4057,11 @@ msgid ""
 "incoming email address. This is true in the sender, recipient, and :abbr:`CC"
 " (Carbon Copy)` email addresses of an incoming email."
 msgstr ""
+"Dans certains cas, la base de données Odoo affiche des correspondances "
+"lorsqu'un e-mail contient le même préfixe d'alias et un domaine différent "
+"dans l'adresse e-mail entrante C'est le cas pour les adresses e-mail "
+"d''expéditeurs, de destinataires et :abbr:`CC (\"Copie carbone\") d'e-mails "
+"entrants."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:323
 msgid ""
@@ -4007,6 +4071,12 @@ msgid ""
 "email as the full `commercial` alias (with a different domain), and "
 "therefore, creates a ticket/lead/opportunity/etc."
 msgstr ""
+"Lorsqu'Odoo reçoit des e-mails dont l'expéditeur, le destinataire ou "
+"l'adresse e-mail :abbr:`CC (Copie carbone) contient le préfixe d'alias "
+"`commercial` (par exemple commercial@gmail.com, commercial@odoo.net), la "
+"base de données le considère à tort l'e-mail comme l'alias complet "
+"`commercial` (avec un domaine différent), et crée donc un "
+"ticket/piste/opportunité/etc."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:328
 msgid ""
@@ -4016,6 +4086,11 @@ msgid ""
 " Parameters`. Click :guilabel:`Create`. Then, type in "
 "`mail.catchall.domain.allowed` for the :guilabel:`Key` field."
 msgstr ""
+"Pour ajouter le paramètre système `mail.catchall.domain.allowed`, activez "
+"tout d'abord le :ref:`mode développeur <developer-mode>`. Ensuite, allez "
+"dans :menuselection:`Paramètres --> Technique --> Paramètres --> Paramètres "
+"système`. Cliquez sur :guilabel:`Nouveau`. Puis saisissez "
+"`mail.catchall.domain.allowed` pour le champ :guilabel:`Clé`."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:333
 msgid ""
@@ -4023,12 +4098,18 @@ msgid ""
 "comma(s) (if plural domains). Manually :guilabel:`Save`, and the system "
 "parameter takes immediate effect."
 msgstr ""
+"Ensuite, pour le champ :guilabel:`Valeur`, ajoutez le(s) domaine(s) "
+"séparé(s) par une virgule ( dans le cas de plusieurs domaines). "
+":guilabel:`Sauvegardez` manuellement pour que le paramètre système soit "
+"immédiatement appliqué."
 
 #: ../../content/applications/general/email_communication/email_servers.rst-1
 msgid ""
 "mail.catchall.domain.allowed system parameter set with key and value "
 "highlighted."
 msgstr ""
+"Ensemble de paramètres système mail.catchall.domain.allowed avec clé et "
+"valeur mises en évidence."
 
 #: ../../content/applications/general/email_communication/faq.rst:3
 msgid "Email issues"
@@ -12988,104 +13069,86 @@ msgstr ""
 "<https://support.google.com/cloud/answer/6158849>`_"
 
 #: ../../content/applications/general/users/language.rst:3
-msgid "Change language"
-msgstr "Changer la langue"
+#: ../../content/applications/general/users/language.rst:30
+msgid "Change languages"
+msgstr ""
 
 #: ../../content/applications/general/users/language.rst:5
 msgid ""
-"Odoo provides you with the option to manage Odoo in different languages, and"
-" each user can use Odoo in his own language ."
+"You select the language of your database upon its creation. However, you can"
+" :ref:`add <language/add>` and :ref:`install <language/install>` additional "
+"languages to allow users to manage the database in another language or to "
+":doc:`translate <../../websites/website/configuration/translate>` your "
+"website."
 msgstr ""
-"Odoo vous permet de gérer Odoo dans différentes langues et chaque "
-"utilisateur peut utiliser Odoo dans sa propre langue."
 
-#: ../../content/applications/general/users/language.rst:9
-msgid "Load your desired language"
-msgstr "Ajouter la langue désirée"
+#: ../../content/applications/general/users/language.rst:13
+msgid "Add languages"
+msgstr "Ajouter des langues"
 
-#: ../../content/applications/general/users/language.rst:11
+#: ../../content/applications/general/users/language.rst:15
+msgid "To download additional languages:"
+msgstr ""
+
+#: ../../content/applications/general/users/language.rst:17
 msgid ""
-"The first thing to do is to load your desired language on your Odoo "
-"instance."
+"either click the profile icon in the upper-right corner, select "
+":menuselection:`My profile`, and click the :icon:`fa-globe` "
+"(:guilabel:`globe`) icon next to the :guilabel:`Language` field;"
 msgstr ""
-"La première chose à faire est d'ajouter la langue que vous désirez dans "
-"votre instance Odoo."
 
-#: ../../content/applications/general/users/language.rst:14
+#: ../../content/applications/general/users/language.rst:19
 msgid ""
-"From the general dashboard click on the **Settings** app; on the top left of"
-" the page select :menuselection:`Translations --> Load a Translation`, "
-"select a language to install and click on **LOAD.**"
+"or go to the **Settings** app, and click :guilabel:`Add Languages` in the "
+":guilabel:`Languages` section."
 msgstr ""
-"Depuis le tableau de bord général, cliquez sur l'application **Paramètres** "
-"dans le coin supérieur gauche de la page, sélectionnez "
-":menuselection:`Traductions --> Ajouter les langues`, sélectionnez une "
-"langue à installer, puis cliquez sur **AJOUTER.**"
 
-#: ../../content/applications/general/users/language.rst:23
+#: ../../content/applications/general/users/language.rst:22
 msgid ""
-"If you check the \"Websites to translate\" checkbox you will have the option"
-" to change the navigation language on your website."
+"You can then select the languages you want from the dropdown menu and click "
+":guilabel:`Add`."
 msgstr ""
-"Si vous cochez la case \"Traduire les sites web\", vous aurez la possibilité"
-" de changer la langue de navigation de votre site web."
 
-#: ../../content/applications/general/users/language.rst:27
-msgid "Change your language"
-msgstr "Modifier votre langue"
+#: ../../content/applications/general/users/language.rst:25
+msgid ":doc:`Translations <../../websites/website/configuration/translate>`"
+msgstr ""
 
-#: ../../content/applications/general/users/language.rst:29
+#: ../../content/applications/general/users/language.rst:32
 msgid ""
-"You can change the language to the installed language by going to the drop-"
-"down menu at the top right side of the screen, choose **Preferences**."
+"To select their preferred language, users can click the profile icon in the "
+"upper-right corner, go to :menuselection:`My profile`, and select a "
+":guilabel:`Language` in the dropdown list."
 msgstr ""
-"Pour modifier la langue installée, allez sur le menu déroulant situé dans le"
-" coin supérieur droit de l'écran et sélectionnez **Préférences**."
 
 #: ../../content/applications/general/users/language.rst:36
-msgid ""
-"Then change the Language setting to your installed language and click "
-"**SAVE.**"
-msgstr ""
-"Modifiez ensuite le paramètre de la langue que vous avez installée et "
-"cliquez sur **ENREGISTRER.**"
-
-#: ../../content/applications/general/users/language.rst:42
-msgid "Open a new menu to view the changes."
-msgstr "Ouvrez un nouveau menu pour voir les changements."
-
-#: ../../content/applications/general/users/language.rst:45
 msgid "Change another user's language"
 msgstr "Modifier la langue d'un autre utilisateur"
 
-#: ../../content/applications/general/users/language.rst:47
-msgid ""
-"Odoo also gives you the possibility for each user to choose his preferred "
-"language."
+#: ../../content/applications/general/users/language.rst:38
+msgid "To change the database language for a user:"
 msgstr ""
-"Odoo offre également à chaque utilisateur la possibilité de choisir sa "
-"langue préférée."
 
-#: ../../content/applications/general/users/language.rst:50
+#: ../../content/applications/general/users/language.rst:40
 msgid ""
-"To change the language for a different user, choose :menuselection:`Users "
-"--> Users` from the Settings app. Here you have a list of all users and you "
-"can choose the user who you'd like to change the language for. Select the "
-"user and click on **Edit** in the top left corner. Under Preferences you can"
-" change the Language to any previously installed language and click "
-"**SAVE.**"
+"Go to the :guilabel:`Settings` app and click :guilabel:`Manage Users` in the"
+" :guilabel:`Users` section."
 msgstr ""
-"Pour changer la langue d'un autre utilisateur, choisissez "
-":menuselection:`Utilisateurs --> Utilisateurs` depuis l'application "
-"Paramètres. Vous y trouvez la liste de tous les utilisateurs et vous pouvez "
-"choisir celui pour qui vous souhaitez changer la langue. Sélectionnez "
-"l'utilisateur et cliquez sur **Modifier** dans le coin supérieur gauche. "
-"Sous Préférences, vous pouvez changer la langue pour toute autre langue "
-"précédemment installée et cliquer sur **ENREGISTRER.**"
 
-#: ../../content/applications/general/users/language.rst:61
-msgid ":doc:`../../websites/website/configuration/translate`"
-msgstr ":doc:`../../websites/website/configuration/translate`"
+#: ../../content/applications/general/users/language.rst:43
+msgid "Click on the user whose language you want to change."
+msgstr ""
+
+#: ../../content/applications/general/users/language.rst:45
+msgid ""
+"Go to the :guilabel:`Preferences` tab and select a previously "
+":ref:`installed language <language/add>` from the :guilabel:`Language` "
+"dropdown menu."
+msgstr ""
+
+#: ../../content/applications/general/users/language.rst:49
+msgid ""
+"Emails and documents will be sent to the user in the selected language."
+msgstr ""
 
 #: ../../content/applications/general/users/ldap.rst:3
 msgid "Sign in with LDAP"
