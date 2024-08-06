@@ -692,7 +692,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:60
 msgid "Use GS1 barcodes in Odoo"
-msgstr ""
+msgstr "ใช้บาร์โค้ด GS1 ใน Odoo"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:62
 msgid ""
@@ -704,6 +704,12 @@ msgid ""
 "must adhere to GS1 conventions for accurate interpretation by global systems"
 " along the supply chain."
 msgstr ""
+"สำหรับการระบุผลิตภัณฑ์โดยใช้บาร์โค้ด GS1 ใน Odoo ธุรกิจจะได้รับ `GTIN เฉพาะ "
+"<https://www.gs1.org/standards/get-barcodes>`_ "
+"เป็นรหัสผลิตภัณฑ์ที่แตกต่างในระดับสากลที่ซื้อจาก GS1 |GTIN| "
+"นี้จะรวมกับรายละเอียดผลิตภัณฑ์เฉพาะตาม *รูปแบบบาร์โค้ด* ที่กำหนดโดย GS1 "
+"การจัดเรียงตัวเลขและตัวอักษรของรูปแบบบาร์โค้ดจะต้องเป็นไปตามข้อตกลงของ GS1 "
+"เพื่อให้ระบบทั่วโลกตลอดซัพพลายเชนตีความได้อย่างถูกต้อง"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:68
 msgid ""
@@ -731,6 +737,8 @@ msgid ""
 "For flexible-length barcode patterns not placed at the end of the GS1 "
 "barcode, use the FNC1 separator (`\\\\x1D`) to end the barcode."
 msgstr ""
+"สำหรับรูปแบบบาร์โค้ดที่มีความยาวยืดหยุ่นซึ่งไม่ได้วางไว้ที่ส่วนท้ายของบาร์โค้ด"
+" GS1 ให้ใช้ตัวคั่น FNC1 (`\\\\x1D`) เพื่อสิ้นสุดการใช้งานบาร์โค้ด"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:80
 msgid ""
@@ -738,6 +746,9 @@ msgid ""
 "of creating a 20-character lot number barcode, like `LOT00000000000000001`, "
 "use the FNC1 separator to make it shorter: `LOT001\\x1D`."
 msgstr ""
+"ตัวอย่าง: รูปแบบบาร์โค้ดสำหรับหมายเลขล็อตมีความยาว 20 ตัวอักษร "
+"แทนที่จะสร้างบาร์โค้ดหมายเลขล็อตที่มี 20 ตัวอักษร เช่น "
+"`LOT00000000000000001` ให้ใช้ตัวคั่น FNC1 เพื่อให้สั้นลง: `LOT001\\x1D`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:84
 msgid ""
@@ -747,14 +758,22 @@ msgid ""
 "<barcode/operations/gs1_usage>` for specific examples of combining |GTIN| to"
 " product information and configuring the workflow."
 msgstr ""
+"โปรดดูที่ :ref:`รายการระบบการตั้งชื่อ GS1 <barcode/operations/default-"
+"gs1-nomenclature-list>` "
+"เพื่อดูรายการรูปแบบบาร์โค้ดและกฎเกณฑ์ทั้งหมดที่ต้องปฏิบัติตาม หรือดู "
+":ref:`เอกสารการใช้งาน GS1 นี้ <barcode/operations/gs1_usage>` "
+"สำหรับตัวอย่างเฉพาะของการรวม |GTIN| "
+"กับข้อมูลผลิตภัณฑ์และการกำหนดค่าขั้นตอนการทำงาน"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:90
 msgid ":ref:`Lots workflow <barcode/operations/gs1-lots>`"
-msgstr ""
+msgstr ":ref:`ขั้นตอนการทำงานล็อต <barcode/operations/gs1-lots>`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:91
 msgid ":ref:`Non-unit quantities workflow <barcode/operations/quantity-ex>`"
 msgstr ""
+":ref:`ขั้นตอนการทำงานเกี่ยวกับปริมาณที่ไม่ใช่หน่วย "
+"<barcode/operations/quantity-ex>`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:96
 msgid "Create rules"
@@ -768,12 +787,18 @@ msgid ""
 "<barcode/operations/default-gs1-nomenclature-list>` auto-fills corresponding"
 " data in the Odoo database."
 msgstr ""
+"กฎ GS1 เป็นรูปแบบเฉพาะของข้อมูลที่อยู่ในบาร์โค้ด โดยเริ่มต้นด้วย |AI| "
+"และมีความยาวตัวอักษรที่กำหนดไว้ การสแกนบาร์โค้ด GS1 จาก :ref:`รายการ GS1 "
+"เริ่มต้น <barcode/operations/default-gs1-nomenclature-list>` "
+"จะกรอกข้อมูลที่เกี่ยวข้องลงในฐานข้อมูล Odoo โดยอัตโนมัติ"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:103
 msgid ""
 "Adding GS1 barcode rules in Odoo ensures accurate interpretation of unique, "
 "non-standard GS1 formats."
 msgstr ""
+"การเพิ่มกฎบาร์โค้ด GS1 ใน Odoo ช่วยให้ตีความรูปแบบ GS1 "
+"ที่ไม่ซ้ำใครและไม่เป็นมาตรฐานได้อย่างถูกต้อง"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:106
 msgid ""
@@ -782,6 +807,10 @@ msgid ""
 ":menuselection:`Inventory app --> Configuration --> Barcode Nomenclatures`. "
 "Then, select the :guilabel:`Default GS1 Nomenclature` list item."
 msgstr ""
+"ในการดำเนินการดังกล่าว ให้เริ่มด้วยการเปิดใช้งาน :ref:`โหมดนักพัฒนา "
+"<developer-mode>` และไปที่รายการ :guilabel:`การตั้งชื่อบาร์โค้ด` ใน "
+":menuselection:`แอปสินค้าคงคลัง --> การกำหนดค่า --> การตั้งชื่อบาร์โค้ด` "
+"จากนั้นเลือกรายการ :guilabel:`การตั้งชื่อ GS1 แบบเริ่มต้น`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:110
 msgid ""
@@ -815,16 +844,21 @@ msgid ""
 " make another rule or click :guilabel:`Save & Close` to save and return to "
 "the table of rules."
 msgstr ""
+"หลังจากกรอกข้อมูลแล้ว ให้คลิกปุ่ม :guilabel:`บันทึกและสร้าง` "
+"เพื่อสร้างกฎใหม่ หรือคลิก :guilabel:`บันทึกและปิด` "
+"เพื่อบันทึกและกลับไปยังตารางกฎ"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:126
 msgid "Barcode troubleshooting"
-msgstr ""
+msgstr "การแก้ไขปัญหาบาร์โค้ด"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:128
 msgid ""
 "Since GS1 barcodes are challenging to work with, here are some checks to try"
 " when the barcodes are not working as expected:"
 msgstr ""
+"เนื่องจากบาร์โค้ด GS1 ใช้งานยาก "
+"ต่อไปนี้คือการตรวจสอบที่ควรลองเมื่อบาร์โค้ดไม่ทำงานตามที่คาดหวัง:"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:131
 msgid ""
@@ -833,6 +867,10 @@ msgid ""
 "setup section <barcode/operations/set-up-barcode-nomenclature>` for more "
 "details."
 msgstr ""
+"ตรวจสอบให้แน่ใจว่าการตั้งค่า :guilabel:`การตั้งชื่อบาร์โค้ด` ถูกตั้งเป็น "
+":menuselection:`การตั้งชื่อ GS1 แบบเริ่มต้น` ไปที่ส่วน "
+":ref:`การตั้งค่าการตั้งชื่อ <barcode/operations/set-up-barcode-"
+"nomenclature>` เพื่อดูรายละเอียดเพิ่มเติม"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:134
 msgid ""
@@ -842,6 +880,11 @@ msgid ""
 "settings <barcode/operations/lot-setup>` and :ref:`on the product "
 "<barcode/operations/lot-setup-on-product>`."
 msgstr ""
+"ตรวจสอบให้แน่ใจว่าได้เปิดใช้งานฟิลด์ที่สแกนในบาร์โค้ดใน Odoo แล้ว "
+"ตัวอย่างเช่น หากต้องการสแกนบาร์โค้ดที่มีล็อตและหมายเลขซีเรียล "
+"โปรดตรวจสอบให้แน่ใจว่าได้เปิดใช้งานฟีเจอร์ :guilabel:`ล็อต & หมายเลขซีเรียล`"
+" ใน :ref:`การตั้งค่าของ Odoo <barcode/operations/lot-setup>` และ "
+":ref:`บนผลิตภัณฑ์ <barcode/operations/lot-setup-on-product>` แล้ว"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:138
 msgid ""
@@ -851,6 +894,12 @@ msgid ""
 "included in the final barcode. For more details on building GS1 barcodes, go"
 " to :ref:`this section <barcode/operations/create-GS1-barcode>`."
 msgstr ""
+"ละเว้นเครื่องหมายวรรคตอน เช่น วงเล็บ `()` หรือวงเล็บเหลี่ยม `[]` ระหว่าง "
+":abbr:`A.I. (Application Identifier)` และลำดับบาร์โค้ด "
+"เครื่องหมายวรรคตอนเหล่านี้มักใช้ในตัวอย่างเพื่อให้อ่านง่าย และ **ไม่ควรรวม**"
+" เครื่องหมายวรรคตอนเหล่านี้ไว้ในบาร์โค้ดขั้นสุดท้าย "
+"สำหรับรายละเอียดเพิ่มเติมเกี่ยวกับการสร้างบาร์โค้ด GS1 โปรดไปที่ "
+":ref:`ส่วนนี้ <barcode/operations/create-GS1-barcode>`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:142
 msgid ""
@@ -859,12 +908,18 @@ msgid ""
 " :ref:`This section <barcode/operations/create-new-rules>` details how to "
 "add new rules in the barcode nomenclature."
 msgstr ""
+"เมื่อบาร์โค้ดเดียวมีฟิลด์เข้ารหัสหลายฟิลด์ Odoo "
+"จะกำหนดให้ต้องระบุกฎทั้งหมดในการตั้งชื่อบาร์โค้ดเพื่อให้ Odoo "
+"อ่านบาร์โค้ดได้ :ref:`ในส่วนนี้ <barcode/operations/create-new-rules>` "
+"ให้รายละเอียดเกี่ยวกับวิธีการเพิ่มกฎใหม่ในการตั้งชื่อบาร์โค้ด"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:146
 msgid ""
 "Test barcodes containing multiple encoded fields, piece by piece, to figure "
 "out which field is causing the issue."
 msgstr ""
+"ทดสอบบาร์โค้ดที่มีฟิลด์เข้ารหัสหลายรายการทีละรายการ "
+"เพื่อหาว่าฟิลด์ใดที่ทำให้เกิดปัญหา"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:150
 msgid ""
@@ -872,6 +927,9 @@ msgid ""
 "start by scanning the |GTIN| alone. Then, test the |GTIN| with the lot "
 "number, and finally, try scanning the whole barcode."
 msgstr ""
+"เมื่อทำการทดสอบบาร์โค้ดที่มี |GTIN| หมายเลขล็อต และปริมาณ "
+"ให้เริ่มต้นด้วยการสแกน |GTIN| เพียงอย่างเดียว จากนั้นทดสอบ |GTIN| "
+"ด้วยหมายเลขล็อต และสุดท้ายลองสแกนบาร์โค้ดทั้งหมด"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:154
 msgid ""
@@ -879,6 +937,9 @@ msgid ""
 "<barcode/operations/create-new-rules>` to Odoo's default list to recognize "
 "GS1 barcodes with unique specifications."
 msgstr ""
+"หลังจากวินิจฉัยแล้วพบว่าฟิลด์ที่เข้ารหัสไม่เป็นที่รู้จัก :ref:`เพิ่มกฎใหม่ "
+"<barcode/operations/create-new-rules>` ลงในรายการเริ่มต้นของ Odoo "
+"เพื่อจดจำบาร์โค้ด GS1 ที่มีข้อกำหนดเฉพาะ"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:159
 msgid ""
@@ -887,10 +948,13 @@ msgid ""
 " necessary to ensure the rest of the fields in the barcode are interpreted "
 "correctly."
 msgstr ""
+"ในขณะที่ฟิลด์ใหม่จะถูกอ่าน ข้อมูลจะไม่เชื่อมโยงกับฟิลด์ที่มีอยู่แล้วใน Odoo "
+"หากไม่มีการปรับแต่งโดยนักพัฒนา อย่างไรก็ตาม "
+"จำเป็นต้องเพิ่มกฎใหม่เพื่อให้แน่ใจว่าฟิลด์ที่เหลือในบาร์โค้ดได้รับการตีความอย่างถูกต้อง"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:166
 msgid "GS1 nomenclature list"
-msgstr ""
+msgstr "รายการระบบการตั้งชื่อ GS1"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:168
 msgid ""
@@ -899,6 +963,10 @@ msgid ""
 "`check digit <https://www.gs1.org/services/check-digit-calculator>`_ as the "
 "final character."
 msgstr ""
+"ตารางด้านล่างนี้ประกอบด้วยรายการกฎ GS1 เริ่มต้นของ Odoo "
+"รูปแบบบาร์โค้ดจะเขียนด้วยนิพจน์ทั่วไป มีเพียงกฎสามข้อแรกเท่านั้นที่ต้องใช้ "
+"`หมายเลขเช็ค <https://www.gs1.org/services/check-digit-calculator>`_ "
+"เป็นตัวอักษรตัวสุดท้าย"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:173
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:38
@@ -922,11 +990,11 @@ msgstr "ประเภทเนื้อหา GS1"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:173
 msgid "Odoo field"
-msgstr ""
+msgstr "ฟิลด์ Odoo"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:175
 msgid "Serial Shipping Container Code"
-msgstr ""
+msgstr "รหัสตู้คอนเทนเนอร์ขนส่งแบบซีเรียล"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:175
 msgid "Package"
@@ -943,17 +1011,17 @@ msgstr "(00)(\\\\d{18})"
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:186
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:189
 msgid "Numeric identifier"
-msgstr ""
+msgstr "ตัวระบุตัวเลข"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:175
 msgid "Package name"
-msgstr ""
+msgstr "ชื่อแพ็คเกจ"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:177
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:40
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:168
 msgid "Global Trade Item Number (GTIN)"
-msgstr ""
+msgstr "Global Trade Item Number (GTIN)"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:177
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:180
@@ -970,11 +1038,11 @@ msgstr "(01)(\\\\d{14})"
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:40
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:168
 msgid ":guilabel:`Barcode` field on product form"
-msgstr ""
+msgstr "ฟิลด์ :guilabel:`บาร์โค้ด` บนแบบฟอร์มผลิตภัณฑ์"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:180
 msgid "GTIN of contained trade items"
-msgstr ""
+msgstr "GTIN ของรายการการค้าที่บรรจุอยู่"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:180
 msgid "(02)(\\\\d{14})"
@@ -987,7 +1055,7 @@ msgstr "บรรจุภัณฑ์"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:183
 msgid "Ship to / Deliver to global location"
-msgstr ""
+msgstr "จัดส่ง / ส่งไปยังที่ตั้งทั่วโลก"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:183
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:183
@@ -1001,7 +1069,7 @@ msgstr "(410)(\\\\d{13})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:186
 msgid "Ship / Deliver for forward"
-msgstr ""
+msgstr "จัดส่ง / ส่งเพื่อส่งต่อ"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:186
 msgid "(413)(\\\\d{13})"
@@ -1009,11 +1077,11 @@ msgstr "(413)(\\\\d{13})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:186
 msgid "Source location"
-msgstr ""
+msgstr "ตำแหน่งที่ตั้งแหล่งที่มา"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:189
 msgid "I.D. of a physical location"
-msgstr ""
+msgstr "รหัสสถานที่ตั้งจริง"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:189
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:189
@@ -1027,7 +1095,7 @@ msgstr "(414)(\\\\d{13})"
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:191
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:45
 msgid "Batch or lot number"
-msgstr ""
+msgstr "หมายเลขล็อตหรือชุด"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:191
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:191
@@ -1043,12 +1111,12 @@ msgstr "(10) ([!\"%-/0-9:-?A-Z_a-z]{0,20})"
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:194
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:225
 msgid "Alpha-numeric name"
-msgstr ""
+msgstr "ชื่อตัวอักษรและตัวเลข"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:194
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:194
 msgid "Serial number"
-msgstr ""
+msgstr "หมายเลขซีเรียล"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:194
 msgid "(21) ([!\"%-/0-9:-?A-Z_a-z]{0,20})"
@@ -1056,7 +1124,7 @@ msgstr "(21) ([!\"%-/0-9:-?A-Z_a-z]{0,20})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:197
 msgid "Packaging date (YYMMDD)"
-msgstr ""
+msgstr "วันที่บรรจุ (YYMMDD)"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:197
 msgid "Packaging Date"
@@ -1074,11 +1142,11 @@ msgstr "วันที่"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:197
 msgid "Pack date"
-msgstr ""
+msgstr "วันที่บรรจุ"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:200
 msgid "Best before date (YYMMDD)"
-msgstr ""
+msgstr "วันหมดอายุ (YYMMDD)"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:200
 msgid "Best before Date"
@@ -1090,11 +1158,11 @@ msgstr "(15)(\\\\d{6})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:200
 msgid "Best before date"
-msgstr ""
+msgstr "วันหมดอายุ"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:203
 msgid "Expiration date (YYMMDD)"
-msgstr ""
+msgstr "วันหมดอายุ (YYMMDD)"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:203
 msgid "Expiration Date"
@@ -1106,13 +1174,13 @@ msgstr "(17)(\\\\d{6})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:203
 msgid "Expiry date"
-msgstr ""
+msgstr "วันหมดอายุ"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:206
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:43
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:171
 msgid "Variable count of items"
-msgstr ""
+msgstr "จำนวนรายการตัวแปร"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:206
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:208
@@ -1146,11 +1214,11 @@ msgstr "ตัวชี้วัด"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:206
 msgid "UoM: Units"
-msgstr ""
+msgstr "UoM: หน่วย"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:208
 msgid "Count of trade items"
-msgstr ""
+msgstr "จำนวนรายการค้าขาย"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:208
 msgid "(37)(\\\\d{0,8})"
@@ -1158,11 +1226,11 @@ msgstr "(37)(\\\\d{0,8})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:208
 msgid "Qty in units for containers (AI 02)"
-msgstr ""
+msgstr "ปริมาณเป็นหน่วยต่อคอนเทนเนอร์ (AI 02)"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:211
 msgid "Net weight: kilograms (kg)"
-msgstr ""
+msgstr "น้ำหนักสุทธิ : กิโลกรัม (กก.)"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:211
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:171
@@ -1171,11 +1239,11 @@ msgstr "(310[0-5])(\\\\d{6})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:211
 msgid "Qty in kg"
-msgstr ""
+msgstr "ปริมาณเป็นกิโลกรัม"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:213
 msgid "Length in meters (m)"
-msgstr ""
+msgstr "ความยาวเป็นเมตร (ม.)"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:213
 msgid "(311[0-5])(\\\\d{6})"
@@ -1183,11 +1251,11 @@ msgstr "(311[0-5])(\\\\d{6})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:213
 msgid "Qty in m"
-msgstr ""
+msgstr "ปริมาณเป็นเมตร"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:215
 msgid "Net volume: liters (L)"
-msgstr ""
+msgstr "ปริมาตรสุทธิ : ลิตร (L)"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:215
 msgid "(315[0-5])(\\\\d{6})"
@@ -1195,11 +1263,11 @@ msgstr "(315[0-5])(\\\\d{6})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:215
 msgid "Qty in L"
-msgstr ""
+msgstr "ปริมาณเป็นลิตร"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:217
 msgid "Net volume: cubic meters (m\\ :sup:`3`)"
-msgstr ""
+msgstr "ปริมาตรสุทธิ : ลูกบาศก์เมตร (m\\ :sup:`3`)"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:217
 msgid "(316[0-5])(\\\\d{6})"
@@ -1207,11 +1275,11 @@ msgstr "(316[0-5])(\\\\d{6})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:217
 msgid "Qty in m\\ :sup:`3`"
-msgstr ""
+msgstr "ปริมาณใน m\\ :sup:`3`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:219
 msgid "Length in inches (in)"
-msgstr ""
+msgstr "ความยาวเป็นนิ้ว (นิ้ว)"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:219
 msgid "(321[0-5])(\\\\d{6})"
@@ -1219,11 +1287,11 @@ msgstr "(321[0-5])(\\\\d{6})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:219
 msgid "Qty in inches"
-msgstr ""
+msgstr "ปริมาณเป็นนิ้ว"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:221
 msgid "Net weight/volume: ounces (oz)"
-msgstr ""
+msgstr "น้ำหนักสุทธิ/ปริมาตร: ออนซ์ (oz)"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:221
 msgid "(357[0-5])(\\\\d{6})"
@@ -1231,11 +1299,11 @@ msgstr "(357[0-5])(\\\\d{6})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:221
 msgid "Qty in oz"
-msgstr ""
+msgstr "ปริมาณเป็นออนซ์"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:223
 msgid "Net volume: cubic feet (ft\\ :sup:`3`)"
-msgstr ""
+msgstr "ปริมาตรสุทธิ : ลูกบาศก์ฟุต (ft\\ :sup:`3`)"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:223
 msgid "(365[0-5])(\\\\d{6})"
@@ -1243,11 +1311,11 @@ msgstr "(365[0-5])(\\\\d{6})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:223
 msgid "Qty in ft\\ :sup:`3`"
-msgstr ""
+msgstr "ปริมาณเป็น ft\\ :sup:`3`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:225
 msgid "Packaging type"
-msgstr ""
+msgstr "ประเภทบรรจุภัณฑ์"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:225
 msgid "Packaging Type"
@@ -1265,7 +1333,7 @@ msgstr "ประเภทแพ็คเกจ"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:3
 msgid "GS1 barcode usage"
-msgstr ""
+msgstr "การใช้งานบาร์โค้ด GS1"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:10
 msgid ""
@@ -1274,6 +1342,10 @@ msgid ""
 "globally <barcode/operations/gs1>`, allowing scanners to understand and "
 "process supply chain data consistently."
 msgstr ""
+"บาร์โค้ด GS1 เป็นรูปแบบมาตรฐานที่เครื่องสแกนบาร์โค้ดสามารถตีความได้ "
+"โดยจะเข้ารหัสข้อมูลในโครงสร้างเฉพาะที่ได้รับการยอมรับทั่วโลก "
+"<barcode/operations/gs1>` "
+"ซึ่งช่วยให้เครื่องสแกนสามารถเข้าใจและประมวลผลข้อมูลในซัพพลายเชนได้อย่างสม่ำเสมอ"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:14
 msgid ""
@@ -1281,6 +1353,9 @@ msgid ""
 "identification and tracking in warehouse operations such as receiving, "
 "picking, and shipping."
 msgstr ""
+"Odoo *บาร์โค้ด* ตีความและพิมพ์บาร์โค้ด GS1 "
+"ทำให้สามารถระบุและติดตามผลิตภัณฑ์ได้โดยอัตโนมัติในขั้นตอนการปฏิบัติงานคลังสินค้า"
+" เช่น การรับ การเบิก และการจัดส่ง"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:17
 msgid ""
@@ -1288,6 +1363,8 @@ msgid ""
 "provided by the business to identify common warehouse items and automate "
 "certain warehouse workflows."
 msgstr ""
+"หัวข้อต่อไปนี้ประกอบด้วยตัวอย่างวิธีที่ Odoo ใช้บาร์โค้ด GS1 "
+"ที่จัดทำโดยธุรกิจเพื่อระบุรายการคลังสินค้าทั่วไปและทำให้ขั้นตอนการทำงานของคลังสินค้าบางส่วนเป็นอัตโนมัติ"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:21
 msgid ""
@@ -1296,18 +1373,22 @@ msgid ""
 "existing GS1 barcodes with product and supply chain information (also "
 "provided by GS1) to create barcodes in Odoo."
 msgstr ""
+"Odoo **ไม่** สร้างบาร์โค้ด GS1 บริษัทจะต้องซื้อหมายเลขสินค้าการค้าสากล "
+"(GTIN) ที่ไม่ซ้ำกันจาก GS1 จากนั้นจึงสามารถรวมบาร์โค้ด GS1 "
+"ที่มีอยู่กับข้อมูลผลิตภัณฑ์และซัพพลายเชน (ซึ่ง GS1 ให้มาด้วยเช่นกัน) "
+"เพื่อสร้างบาร์โค้ดใน Odoo"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:26
 msgid "`Purchase GTINs <https://www.gs1.org/standards/get-barcodes>`_"
-msgstr ""
+msgstr "`ซื้อ GTIN <https://www.gs1.org/standards/get-barcodes>`_"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:27
 msgid ":ref:`GS1 nomenclature <barcode/operations/gs1>`"
-msgstr ""
+msgstr ":ref:`การตั้งชื่อ GS1 <barcode/operations/gs1>`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:32
 msgid "Configure barcodes for product, quantity, and lots"
-msgstr ""
+msgstr "กำหนดค่าบาร์โค้ดสำหรับผลิตภัณฑ์ ปริมาณ และล็อต"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:34
 msgid ""
@@ -1315,6 +1396,8 @@ msgid ""
 "quantities, and the lot number, the following barcode patterns and "
 "Application Identifiers (A.I.) are used:"
 msgstr ""
+"ในการสร้างบาร์โค้ด GS1 ที่มีข้อมูลเกี่ยวกับผลิตภัณฑ์ ปริมาณ และหมายเลขล็อต "
+"จะใช้รูปแบบบาร์โค้ดและตัวระบุแอปพลิเคชัน (A.I.) ต่อไปนี้:"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:38
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:166
@@ -1329,7 +1412,7 @@ msgstr "A.I."
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:38
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:166
 msgid "Field in Odoo"
-msgstr ""
+msgstr "ฟิลด์ใน Odoo"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:40
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:168
@@ -1352,7 +1435,7 @@ msgstr "30"
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:43
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:171
 msgid ":guilabel:`Units` field on transfer form"
-msgstr ""
+msgstr "ฟิลด์ :guilabel:`หน่วย` บนแบบฟอร์มการโอน"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:45
 msgid "Lot Number"
@@ -1369,7 +1452,7 @@ msgstr "(10)([!\"%-/0-9:-?A-Z_a-z]{0,20})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:45
 msgid ":guilabel:`Lot` on Detailed Operations pop-up"
-msgstr ""
+msgstr ":guilabel:`ล็อต` บนป๊อปอัปการดำเนินการโดยละเอียด"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:52
 #: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:39
@@ -1414,6 +1497,11 @@ msgid ""
 "the box for :guilabel:`Lots & Serial Numbers` under the "
 ":guilabel:`Traceability` heading."
 msgstr ""
+"ขั้นแรก ให้ :ref:`เปิดใช้งานการติดตามผลิตภัณฑ์โดยใช้ล็อต "
+"<inventory/management/track_products_by_lots>` โดยไปที่ "
+":menuselection:`แอปสินค้าคงคลัง --> การกำหนดค่า --> การตั้งค่า` "
+"และทำเครื่องหมายที่ช่อง :guilabel:`ล็อต & หมายเลขซีเรียล` ภายใต้หัวข้อ "
+":guilabel:`การตรวจสอบย้อนกลับ`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:58
 msgid ""
@@ -1425,6 +1513,13 @@ msgid ""
 "<https://www.gs1.org/standards/get-barcodes>`_, which is a universally "
 "recognized identifying number that is provided by GS1."
 msgstr ""
+"จากนั้นตั้งค่าบาร์โค้ดของผลิตภัณฑ์โดยไปที่แบบฟอร์มผลิตภัณฑ์ที่ต้องการใน "
+":menuselection:`แอปสินค้าคงคลัง --> ผลิตภัณฑ์ --> ผลิตภัณฑ์` "
+"และเลือกผลิตภัณฑ์ ในแบบฟอร์มผลิตภัณฑ์ ให้คลิก :guilabel:`แก้ไข` "
+"จากนั้นในแท็บ :guilabel:`ข้อมูลทั่วไป` ให้กรอกข้อมูลในช่อง "
+":guilabel:`บาร์โค้ด` ด้วย `Global Trade Item Number (GTIN) "
+"<https://www.gs1.org/standards/get-barcodes>`_ "
+"ซึ่งเป็นหมายเลขประจำตัวที่ได้รับการยอมรับทั่วโลกซึ่งให้มาโดย GS1"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:66
 msgid ""
@@ -1432,6 +1527,9 @@ msgid ""
 "as it is only used to encode multiple barcodes into a single barcode that "
 "contains detailed information about the package contents."
 msgstr ""
+"บนแบบฟอร์มผลิตภัณฑ์ ให้ละเว้นรูปแบบบาร์โค้ดผลิตภัณฑ์ |AI| `01` "
+"สำหรับรูปแบบบาร์โค้ดผลิตภัณฑ์ |GTIN| "
+"เนื่องจากใช้เข้ารหัสบาร์โค้ดหลายอันให้เป็นบาร์โค้ดเดียวที่มีข้อมูลรายละเอียดเกี่ยวกับเนื้อหาในบรรจุภัณฑ์เท่านั้น"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:72
 msgid ""
@@ -1439,10 +1537,12 @@ msgid ""
 "|GTIN| `20611628936004` in the :guilabel:`Barcode` field on the product "
 "form."
 msgstr ""
+"หากต้องการบันทึกบาร์โค้ด GS1 สำหรับผลิตภัณฑ์ `Fuji Apple` ให้ป้อน |GTIN| 14 "
+"หลัก `20611628936004` ในช่อง :guilabel:`บาร์โค้ด` บนแบบฟอร์มผลิตภัณฑ์"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:0
 msgid "Enter 14-digit GTIN into the Barcode field on product form."
-msgstr ""
+msgstr "ป้อน GTIN 14 หลักลงในช่องบาร์โค้ดบนแบบฟอร์มผลิตภัณฑ์"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:80
 msgid ""
@@ -1453,10 +1553,16 @@ msgid ""
 "Scanner` section. Enter the 14-digit |GTIN| into the :guilabel:`Barcode` "
 "column, then click :guilabel:`Save`."
 msgstr ""
+"หากต้องการดูรายการผลิตภัณฑ์ *ทั้งหมด* และบาร์โค้ดที่เกี่ยวข้องในฐานข้อมูล "
+"Odoo ให้ไปที่ :menuselection:`แอปสินค้าคงคลัง --> การกำหนดค่า --> "
+"การตั้งค่า` ภายใต้หัวข้อ :guilabel:`บาร์โค้ด` ให้คลิกปุ่ม "
+":guilabel:`กำหนดค่าบาร์โค้ดผลิตภัณฑ์` ภายใต้หัวข้อ "
+":guilabel:`เครื่องสแกนบาร์โค้ด` ป้อน |GTIN| 14 หลักลงในคอลัมน์ "
+":guilabel:`บาร์โค้ด` จากนั้นคลิก :guilabel:`บันทึก`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:0
 msgid "View the Product Barcodes page from inventory settings."
-msgstr ""
+msgstr "ดูหน้าบาร์โค้ดผลิตภัณฑ์จากการตั้งค่าสินค้าคงคลัง"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:92
 msgid ""
@@ -1465,17 +1571,21 @@ msgid ""
 " the :guilabel:`Inventory` tab on the product form. Under "
 ":guilabel:`Tracking`, choose the :guilabel:`By Lots` radio button."
 msgstr ""
+"หลังจากเปิดใช้งานการติดตามตามล็อตและหมายเลขซีเรียลจากหน้าการตั้งค่าแล้ว "
+"ให้ระบุว่าฟีเจอร์นี้จะใช้กับผลิตภัณฑ์แต่ละชิ้นโดยไปที่แท็บ "
+":guilabel:`สินค้าคงคลัง` ในแบบฟอร์มผลิตภัณฑ์ ภายใต้ :guilabel:`การติดตาม` "
+"ให้เลือกปุ่มตัวเลือก :guilabel:`โดยล็อต`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst-1
 msgid ""
 "Enable product tracking by lots in the \"Inventory\" tab of the product "
 "form."
-msgstr ""
+msgstr "เปิดใช้งานการติดตามสินค้าตามล็อตในแท็บ \"สินค้าคงคลัง\" ของแบบฟอร์มสินค้า"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:101
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:176
 msgid "Scan barcode on receipt"
-msgstr ""
+msgstr "สแกนบาร์โค้ดบนใบเสร็จ"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:103
 msgid ""
@@ -1484,6 +1594,11 @@ msgid ""
 "manage the :ref:`receipt picking process <barcode/operations/scan-received-"
 "products>`."
 msgstr ""
+"เพื่อให้แน่ใจว่าการตีความล็อตใน Odoo "
+"บนบาร์โค้ดผลิตภัณฑ์ที่สแกนระหว่างการดำเนินการรับสินค้านั้นมีความแม่นยำ "
+"ให้ไปที่แอป :menuselection:`บาร์โค้ด` เพื่อจัดการ "
+":ref:`กระบวนการเบิกสินค้าจากใบเสร็จ <barcode/operations/scan-received-"
+"products>`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:107
 msgid ""
@@ -1494,6 +1609,12 @@ msgid ""
 "created directly through the :menuselection:`Barcode` app using the "
 ":guilabel:`Create` button."
 msgstr ""
+"จากแดชบอร์ด :guilabel:`การสแกนบาร์โค้ด` ให้คลิกปุ่ม :guilabel:`การดำเนินงาน`"
+" จากนั้นคลิกปุ่ม :guilabel:`ใบเสร็จ` "
+"เพื่อดูรายการใบเสร็จของผู้ขายที่ต้องดำเนินการ ใบเสร็จที่สร้างจาก :abbr:`POs "
+"(ใบสั่งซื้อ)` จะแสดงอยู่ "
+"แต่การดำเนินการใบเสร็จใหม่สามารถสร้างได้โดยตรงผ่านแอป "
+":menuselection:`บาร์โค้ด` โดยใช้ปุ่ม :guilabel:`สร้าง`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:112
 msgid ""
@@ -1502,12 +1623,18 @@ msgid ""
 "product then appears on the list. Use the :guilabel:`✏️ (pencil)` button to "
 "open a window and manually enter quantities for specific lot numbers."
 msgstr ""
+"ในรายการใบเสร็จรับเงิน ให้คลิกที่การดำเนินการคลังสินค้า (`WH/IN`) "
+"แล้วสแกนบาร์โค้ดของผลิตภัณฑ์และหมายเลขล็อตด้วยเครื่องสแกนบาร์โค้ด จากนั้น "
+"ผลิตภัณฑ์ที่สแกนจะปรากฏในรายการ ใช้ปุ่ม :guilabel:`✏️ (ดินสอ)` "
+"เพื่อเปิดหน้าต่างและป้อนปริมาณสำหรับหมายเลขล็อตเฉพาะด้วยตนเอง"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:118
 msgid ""
 "After placing a :abbr:`PO (Purchase Order)` for fifty apples, navigate to "
 "the associated receipt in the *Barcode* app."
 msgstr ""
+"หลังจากวาง :abbr:`PO (ใบสั่งซื้อ)` สำหรับแอปเปิล 50 ลูกแล้ว "
+"ให้ไปที่ใบเสร็จที่เกี่ยวข้องในแอป *บาร์โค้ด*"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:121
 msgid ""
@@ -1515,20 +1642,25 @@ msgid ""
 "testing with a barcode scanner, below is an example barcode for the fifty "
 "Fuji apples in Lot 2."
 msgstr ""
+"สแกนบาร์โค้ดที่มี |GTIN| ปริมาณ และหมายเลขล็อต "
+"สำหรับการทดสอบด้วยเครื่องสแกนบาร์โค้ด "
+"ด้านล่างนี้คือตัวอย่างบาร์โค้ดสำหรับแอปเปิลฟูจิ 50 ลูกในล็อต 2"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:129
 msgid "50 Fuji apples in Lot0002"
-msgstr ""
+msgstr "แอปเปิ้ลฟูจิ 50 ลูก ใน Lot0002"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:131
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:200
 msgid "2D Matrix"
-msgstr ""
+msgstr "2D เมทริกซ์"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:0
 msgid ""
 "2D matrix of GS1 barcode of 50 fuji apples with an assigned lot number."
 msgstr ""
+"เมทริกซ์ 2 มิติของบาร์โค้ด GS1 ของแอปเปิ้ลฟูจิ 50 ลูก "
+"พร้อมหมายเลขล็อตที่กำหนด"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:134
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:203
