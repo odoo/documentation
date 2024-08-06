@@ -7,28 +7,67 @@ Peru
 .. |RUS| replace:: :abbr:`RUS (Régimen Único Simplificado)`
 .. |EDI| replace:: :abbr:`EDI (Electronic Data Interchange)`
 
-Introduction
-============
+Modules
+=======
 
-The Peruvian localization has been improved and extended, in this version the next modules are
-available:
+:ref:`Install <general/install>` the following modules to utilize all the current features of the Peruvian localization.
 
-- **l10n_pe**: Adds accounting features for the Peruvian localization, which represent the minimal
-  configuration required for a company to operate in Peru and under the SUNAT regulations and
-  guidelines. The main elements included in this module are: Chart of account, taxes,
-  document types.
+.. list-table::
+   :header-rows: 1
 
-- **l10n_pe_edi**: includes all technical and functional requirements to generate and validate
-  Electronic Invoice, based on the SUNAT specification to create and process valid electronic
-  documents, for more technical detail you can access the
-  `SUNAT EDI specifications <https://cpe.sunat.gob.pe/node/88/>`_,
-  that keeps track of new changes and updates.
-  The features of this module are based on the resolutions published on the
-  `SUNAT Legislation <https://www.sunat.gob.pe/legislacion/general/index.html/>`_.
+   * - Name
+     - Technical name
+     - Description
+   * - :guilabel:`Chile - Accounting`
+     - `l10n_pe`
+     - Adds accounting features for the Peruvian localization, which represent the
+      minimal configuration required for a company to operate in Peru and under the
+       SUNAT regulations and guidelines. The main elements included in this module are:
+        Chart of account, taxes, document types.
+   * - :guilabel:`Peru - E-invoicing`
+     - `l10n_pe_edi`
+     - Includes all technical and functional requirements to generate and receive
+      electronic invoices online based on the SUNAT regulations.
+   * - :guilabel:`Peru - Accounting Reports`
+     - `l10n_pe_reports`
+     - 1st Set of Main Financial Reports:
+     	Registro de Ventas e Ingresos (RVIE) - 14.4
+	Registro de Compras Electrónico (RCE) - 8.4
+	Registro de Compras Electrónico - Información de Operaciones 
+	con Sujetos no Domiciliados (RCE) - 8.5
+
+	2nd Set of Financial Reports:
+	PLE 5.1 General Journal
+	PLE 5.3 Chart of Accounts
+	PLE 6.1 General Ledger
+
+	3rd Set of Financial Reports:
+	PLE 1.1 Libro de Caja
+	PLE 1.2 Libro de Bancos
+   * - :guilabel:`Peruvian - Electronic Delivery Note`
+     - `l10n_pe_edi_stock`
+     - The Delivery Guide (Guía de Remisión) is needed as proof that you are sending
+      goods between A and B.
+      It is only when a delivery order is validated that you can create the Delivery Guide.
+   * - :guilabel:`Peruvian eCommerce`
+     - `l10n_pe_website_sale`
+     - Be able to see Identification Type in eCommerce checkout form 
+     and generate electronic invoices.
+   * - :guilabel:`Peruvian - Point of Sale with PE Doc`
+     - `l10n_pe_pos`
+     - Contact fiscal information editable from PoS Session to generate 
+     electronic invoices and refunds.
+
+
+.. note::
+   - Odoo automatically installs the appropriate package for the company according to the country
+     selected at the creation of the database.
+   - The *Peruvian - Electronic Delivery Guide* module depends on the *Inventory* application to be installed.
+
 
 .. seealso::
    - `App Tour - Localización de Peru <https://youtu.be/Ic3mGovkf8Y>`_
-   - `Smart Tutorial - Localización de Peru <https://www.odoo.com/slides/smart-tutorial-localizacion-de-peru-133>`_
+   - `Smart Tutorial - Localización de Peru (videos for workflows and configurations) <https://www.odoo.com/slides/smart-tutorial-localizacion-de-peru-133>`_
 
 Configuration
 =============
