@@ -97,8 +97,8 @@ Install Sendcloud shipping module
 ---------------------------------
 
 After the Sendcloud account is set up and configured, it's time to configure the Odoo database. To
-get started, go to Odoo's :guilabel:`Apps` module, search for the `Sendcloud Shipping`
-integration, and install it.
+get started, go to Odoo's :guilabel:`Apps` module, search for the `Sendcloud Shipping` integration,
+and install it.
 
 .. image:: sendcloud_shipping/sendcloud-mod.png
    :align: center
@@ -214,8 +214,44 @@ chatter, which include the following:
 Additionally, the tracking number is now available.
 
 .. important::
-   When return labels are created, Sendcloud will automatically charge the configured Sendcloud
+   When return labels are created, Sendcloud automatically charges the configured Sendcloud
    account.
+
+Shipping rules
+--------------
+
+Optionally, create shipping rules to automatically generate shipping labels tailored to different
+product needs. For example, a shipping rule can be created for customers shipping expensive jewelry
+items to purchase insurance.
+
+.. note::
+   Shipping rules do **not** affect :ref:`shipping rate calculations
+   <inventory/shipping_receiving/third-party-rate>`, and are only used to improve the process of
+   :doc:`generating shipping labels <labels>`.
+
+To use shipping rules, navigate to :menuselection:`Inventory app --> Configuration --> Delivery:
+Shipping Methods`, and select the intended `Sendcloud` shipping method.
+
+Under the :guilabel:`Sendcloud Configuration` tab, in the :guilabel:`OPTIONS` section, choose the
+kind of shipments the shipping rules apply to, via the :guilabel:`Use Sendcloud shipping rules`
+field.
+
+From here, choose either: :guilabel:`Shipping` to customers, :guilabel:`Returns` from customers, or
+:guilabel:`Both`.
+
+.. image:: sendcloud_shipping/enable-shipping-rules.png
+   :align: center
+   :alt: Use Shipping Rules field.
+
+Then, in the Sendcloud website, navigate to :menuselection:`Settings --> Shipping rules`. Create a
+new shipping rule by clicking :guilabel:`Create New`.
+
+In the :guilabel:`Actions` section, set a :guilabel:`Condition` to determine when the rule applies.
+Then, configure what to do when packages meet the condition.
+
+.. seealso::
+   `Create shipping rules on Sendcloud
+   <https://support.sendcloud.com/hc/en-us/articles/10274470454292-How-to-create-shipping-rules#examples-smart-shipping-rules>`_
 
 FAQ
 ===

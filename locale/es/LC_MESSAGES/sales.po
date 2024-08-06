@@ -21,17 +21,17 @@
 # Iran Villalobos López, 2024
 # Braulio D. López Vázquez <bdl@odoo.com>, 2024
 # Wil Odoo, 2024
-# Fernanda Alvarez, 2024
 # Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2024
+# Fernanda Alvarez, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-21 15:46+0000\n"
+"POT-Creation-Date: 2024-07-23 10:38+0000\n"
 "PO-Revision-Date: 2022-10-04 12:54+0000\n"
-"Last-Translator: Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2024\n"
+"Last-Translator: Fernanda Alvarez, 2024\n"
 "Language-Team: Spanish (https://app.transifex.com/odoo/teams/41243/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -322,7 +322,7 @@ msgid ""
 "Lead` smart button. Click the :guilabel:`☰ (three vertical lines)` icon to "
 "change to list view."
 msgstr ""
-"Después de confirmar que los leads y las oportunidades deben fusionarse "
+"Después de confirmar que los leads y las oportunidades deben fusionarse, "
 "regrese a la vista de kanban con las migas de pan o haga clic en el botón "
 "inteligente :guilabel:`Lead similar`. Haga clic en el icono :guilabel:`☰ "
 "(tres líneas verticales)` para cambiar a la vista de lista."
@@ -848,11 +848,11 @@ msgid ""
 "credits for the database. This includes demo/training databases, educational"
 " databases, and one-app-free databases."
 msgstr ""
-"Los usuarios de Odoo Enterprise con una suscripción válida obtendrán "
+"Los usuarios de Odoo Enterprise que tengan una suscripción válida obtendrán "
 "créditos gratuitos para probar las funciones de compras dentro de la "
-"aplicación antes de que decidan comprar más créditos para la base de datos. "
-"Esto incluye bases de datos de demostración y capacitación, bases de datos "
-"educativas y bases de datos gratuitas de una sola aplicación."
+"aplicación antes de decidir si quieren comprar más créditos para la base de "
+"datos. Esto incluye bases de datos de demostración y capacitación, bases de "
+"datos educativas y bases de datos gratuitas de una sola aplicación."
 
 #: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:92
 msgid ":doc:`/applications/essentials/in_app_purchase`"
@@ -1745,8 +1745,8 @@ msgid ""
 "be altered before the activity is scheduled or saved."
 msgstr ""
 "La información en los campos :guilabel:`Usuario predeterminado` y "
-":guilabel:`Resumen predeterminado` se incluye en la actividad creada. Sin "
-"embargo, se pueden alterar antes de que la actividad se programe o se "
+":guilabel:`Resumen predeterminado` se incluye en la actividad creada, pero "
+"puede alterar estos campos antes de que la actividad se programe o se "
 "guarde."
 
 #: ../../content/applications/sales/crm/optimize/utilize_activities.rst:93
@@ -5556,6 +5556,10 @@ msgid ""
 "To do so, go to the :ref:`POS' settings <configuration/settings>` and add "
 "the payment method under the :guilabel:`Payment` section."
 msgstr ""
+"Ya que haya creado el método de pago, puede seleccionarlo en sus ajustes del"
+" punto de venta. Para hacerlo, vaya a los :ref:`ajustes del punto de venta "
+"<configuration/settings>` y agregue el método de pago en la sección "
+":guilabel:`Pago`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/vantiv.rst:43
 msgid ""
@@ -8071,9 +8075,9 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:29
 msgid ""
-":doc:`../../../inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations`"
+":doc:`../../../inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses`"
 msgstr ""
-":doc:`../../../inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations`"
+":doc:`../../../inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses`"
 
 #: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:34
 msgid ":ref:`Open a session <pos/session-start>` and make a sale."
@@ -8528,6 +8532,41 @@ msgstr ""
 "Amazon hace el envío según el estado de entrega sincronizado desde Odoo."
 
 #: ../../content/applications/sales/sales/amazon_connector/features.rst:64
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:20
+msgid ""
+"The stock synchronization does **not** currently support selling the same "
+"product as :abbr:`FBM (Fulfilled By Merchant)` *and* :abbr:`FBA (Fulfilled "
+"By Amazon)`."
+msgstr ""
+"La sincronización de existencias **no** es compatible para vender el mismo "
+"producto que :abbr:`FBM (Logística del comerciante)` *and* :abbr:`FBA "
+"(Logística de Amazon)`."
+
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:67
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:23
+msgid ""
+"At times, when stock is sent for all products, it triggers a stock problem "
+"with Amazon, where Amazon incorrectly thinks the :abbr:`FBM (Fulfilled By "
+"Merchant)` product has some quantity in :abbr:`FBM (Fulfilled By Merchant)`."
+msgstr ""
+"A veces, cuando las existencias se envían para todos los productos, se "
+"activa un problema de inventario con Amazon, donde Amazon piensa que el "
+"producto :abbr:`FBM (logística del comerciante)` tiene cantidades en "
+":abbr:`FBM (logística del comerciante)`."
+
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:71
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:27
+msgid ""
+"As a result, Amazon then sells it as :abbr:`FBM (Fulfilled By Merchant)`, "
+"instead of taking from their own warehouse. Odoo developers are currently "
+"working on resolving this issue to avoid future discrepancies."
+msgstr ""
+"Como resultado, Amazon lo vende como :abbr:`FBM (logística del "
+"comerciante)`, en lugar de tomar existencias de su propio almacén. Los "
+"desarrolladores de Odoo están trabajando para resolver este problema y así "
+"evitar discrepancias futuras."
+
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:76
 msgid ""
 "The Amazon Connector is designed to synchronize the data of sales orders. "
 "Other actions, such as downloading monthly fees reports, handling disputes, "
@@ -8539,7 +8578,7 @@ msgstr ""
 "gestionar disputas o emitir reembolsos, se **deben** gestionar desde la "
 "*Seller Central* de Amazon."
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:69
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:81
 msgid ""
 "As of February 19, 2024, in North American marketplaces, :abbr:`FBA "
 "(Fulfilled by Amazon)` orders created with the *Amazon Connector*, do not "
@@ -8557,11 +8596,11 @@ msgstr ""
 "identificable del cliente ya no se le comparte al vendedor luego de una "
 "orden :abbr:`FBA (Logística por Amazon)`."
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:78
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:90
 msgid "Supported marketplaces"
 msgstr "Marketplaces de Amazon compatibles"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:80
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:92
 msgid ""
 "If a marketplace is not listed in your Amazon marketplaces, it's possible to"
 " :ref:`add a new marketplace <amazon/add-new-marketplace>`."
@@ -8569,95 +8608,95 @@ msgstr ""
 "Si un marketplace de Amazon no aparece en la lista, es posible :ref:`agregar"
 " uno nuevo <amazon/add-new-marketplace>`."
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:84
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:96
 msgid "**North America region**"
 msgstr "**Norte América**"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:86
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:98
 msgid "Canada"
 msgstr "Canadá"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:86
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:98
 msgid "Amazon.ca"
 msgstr "Amazon.ca"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:88
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:100
 msgid "Mexico"
 msgstr "México"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:88
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:100
 msgid "Amazon.com.mx"
 msgstr "Amazon.com.mx"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:90
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:102
 msgid "US"
 msgstr "Estados Unidos"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:90
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:102
 msgid "Amazon.com"
 msgstr "Amazon.com"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:94
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:106
 msgid "**Europe region**"
 msgstr "**Europa**"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:96
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:108
 msgid "Germany"
 msgstr "Alemania"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:96
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:108
 msgid "Amazon.de"
 msgstr "Amazon.de"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:98
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:110
 msgid "Spain"
 msgstr "España"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:98
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:110
 msgid "Amazon.es"
 msgstr "Amazon.es"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:100
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:112
 msgid "France"
 msgstr "Francia"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:100
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:112
 msgid "Amazon.fr"
 msgstr "Amazon.fr"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:102
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:114
 msgid "UK"
 msgstr "Reino Unido"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:102
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:114
 msgid "Amazon.co.uk"
 msgstr "Amazon.co.uk"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:104
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:116
 msgid "Italy"
 msgstr "Italia"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:104
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:116
 msgid "Amazon.it"
 msgstr "Amazon.it"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:106
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:118
 msgid "Netherlands"
 msgstr "Países Bajos"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:106
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:118
 msgid "Amazon.nl"
 msgstr "Amazon.nl"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:110
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:175
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:122
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:187
 #: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:16
 #: ../../content/applications/sales/sales/ebay_connector/manage.rst:30
 #: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:8
 msgid ":doc:`setup`"
 msgstr ":doc:`setup`"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:111
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:123
 #: ../../content/applications/sales/sales/amazon_connector/setup.rst:155
 #: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:17
 #: ../../content/applications/sales/sales/ebay_connector/setup.rst:17
@@ -8711,7 +8750,7 @@ msgstr ""
 "crea una orden de venta y un cliente en Odoo (si el cliente aún no está "
 "registrado en la base de datos)."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:20
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:32
 msgid ""
 "When an order is canceled in Amazon, and was already synchronized in Odoo, "
 "the corresponding sales order is automatically canceled in Odoo."
@@ -8719,11 +8758,11 @@ msgstr ""
 "Cuando se cancela una orden en Amazon y ya se había sincronizado en Odoo, "
 "entonces la orden de venta correspondiente se cancela de forma automática."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:24
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:36
 msgid "Force synchronization"
 msgstr "Forzar sincronización"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:26
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:38
 msgid ""
 "In order to force the synchronization of an order, whose status has **not** "
 "changed since the previous synchronization, start by activating the "
@@ -8735,7 +8774,7 @@ msgstr ""
 "desarrollador <developer-mode>`. Esto incluye cambios tanto en Amazon como "
 "en Odoo."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:30
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:42
 msgid ""
 "Then, navigate to the Amazon account in Odoo (:menuselection:`Sales app --> "
 "Configuration --> Settings --> Connectors --> Amazon Sync --> Amazon "
@@ -8747,7 +8786,7 @@ msgstr ""
 "Cuentas de Amazon`) y modifique la fecha en :menuselection:`Seguimiento de "
 "órdenes --> Última sincronización de órdenes`."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:34
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:46
 msgid ""
 "Be sure to pick a date that occurs prior to the last status change of the "
 "desired order to synchronize and save. This will ensure synchronization "
@@ -8757,7 +8796,7 @@ msgstr ""
 "de la orden correspondiente para sincronizar y guarde, esto hará que la "
 "sincronización se realice de forma adecuada."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:39
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:51
 msgid ""
 "To immediately synchronize the orders of an Amazon account, switch to "
 ":ref:`developer mode <developer-mode>`, head to the Amazon account in Odoo, "
@@ -8770,11 +8809,11 @@ msgstr ""
 "Puede hacer lo mismo con las recolecciones si hace clic en "
 ":guilabel:`Sincronizar recolecciones`."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:44
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:56
 msgid "Manage deliveries in FBM"
 msgstr "Gestionar entregas en FBM"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:46
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:58
 msgid ""
 "Whenever an FBM (Fulfilled by Merchant) order is synchronized in Odoo, a "
 "picking is instantly created in the *Inventory* app, along with a sales "
@@ -8788,7 +8827,7 @@ msgstr ""
 "enviar todos los productos ordenados al cliente de una vez o enviarlos por "
 "partes con órdenes parciales."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:50
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:62
 msgid ""
 "When a picking related to the order is confirmed, a notification is then "
 "sent to Amazon, who, in turn, notifies the customer that the order (or a "
@@ -8798,7 +8837,7 @@ msgstr ""
 "notificación a Amazon, quien a su vez notifica al cliente que la orden (o "
 "parte de ella) está en camino."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:54
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:66
 msgid ""
 "Amazon requires users to provide a tracking reference with each delivery. "
 "This is needed to assign a carrier."
@@ -8806,7 +8845,7 @@ msgstr ""
 "Amazon necesita que los usuarios proporcionen una referencia de seguimiento "
 "para cada entrega, esta es necesaria para asignar un transportista."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:57
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:69
 msgid ""
 "If the carrier doesn't automatically provide a tracking reference, one must "
 "be set manually. This rule applies to all Amazon marketplaces."
@@ -8815,7 +8854,7 @@ msgstr ""
 "automática, entonces debe configurarse manualmente. Esta regla se aplica a "
 "todos los marketplaces de Amazon."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:61
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:73
 msgid ""
 "If the chosen carrier isn't supported by Odoo, a carrier with the same name "
 "can still be created (e.g. create a carrier named `easyship`). The name used"
@@ -8838,17 +8877,17 @@ msgstr ""
 "electrónico sobre la entrega y el transportista junto con la referencia de "
 "seguimiento."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:70
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:82
 msgid ""
 ":doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper`"
 msgstr ""
 ":doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper`"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:73
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:85
 msgid "Follow deliveries in FBA"
 msgstr "Seguimiento de entregas en FBA"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:75
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:87
 msgid ""
 "When an FBA (Fulfilled by Amazon) order is synchronized in Odoo, a stock "
 "move is recorded in the *Inventory* app for each sales order item. That way,"
@@ -8858,7 +8897,7 @@ msgstr ""
 "movimiento de existencias en la aplicación *Inventario* para cada artículo "
 "de la orden de venta. De esta manera, queda almacenado en el sistema."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:78
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:90
 msgid ""
 "Inventory managers can access these stock moves by navigating to "
 ":menuselection:`Inventory app --> Reporting --> Moves History`."
@@ -8867,7 +8906,7 @@ msgstr ""
 ":menuselection:`aplicación Inventario --> Reportes --> Historial de "
 "movimientos`."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:81
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:93
 msgid ""
 "For FBA orders, the stock move is automatically created in Odoo by the "
 "Amazon connector, thanks to the shipping status of Amazon. When sending new "
@@ -8881,7 +8920,7 @@ msgstr ""
 "recolección (orden de entrega) de forma manual para trasladar estos "
 "productos desde su almacén a la ubicación de Amazon."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:86
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:98
 msgid ""
 "To follow *Amazon (FBA)* stock in Odoo, make an inventory adjustment after "
 "replenishing stock. An automated replenishment from reordering rules can "
@@ -8892,7 +8931,7 @@ msgstr ""
 "activar un reabastecimiento automático desde las reglas de reordenamiento en"
 " la ubicación de Amazon."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:89
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:101
 msgid ""
 "The Amazon location is configurable by accessing the Amazon account managed "
 "in Odoo. To access Amazon accounts in Odoo navigate to :menuselection:`Sales"
@@ -8904,7 +8943,7 @@ msgstr ""
 ":menuselection:`aplicación Ventas --> Configuración --> Ajustes --> "
 "Conectores --> Sincronización con Amazon --> Cuentas de Amazon`."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:93
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:105
 msgid ""
 "All accounts of the same company use the same Amazon location, by default. "
 "However, it is possible to follow the stock filtered by marketplace."
@@ -8913,7 +8952,7 @@ msgstr ""
 "de forma predeterminada, pero es posible monitorear las existencias "
 "filtradas por marketplace."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:96
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:108
 msgid ""
 "To do that, first remove the marketplace, where the desired stock to follow "
 "separately can be found, from the list of synchronized marketplaces, which "
@@ -8926,7 +8965,7 @@ msgstr ""
 ":menuselection:`aplicación Ventas --> Configuración --> Ajustes --> "
 "Conectores --> Sincronización con Amazon --> Cuentas de Amazon`."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:101
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:113
 msgid ""
 "Next, create another registration for this account, and remove all "
 "marketplaces--- **except** the marketplace this is desired to be isolated "
@@ -8935,7 +8974,7 @@ msgstr ""
 "A continuación, cree otro registro para esta cuenta y elimine todos los "
 "marketplaces **excepto** el que desea aislar de los demás."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:104
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:116
 msgid ""
 "Lastly, assign another stock location to the second registration of the "
 "account."
@@ -8943,15 +8982,15 @@ msgstr ""
 "Por último, asigne otra ubicación de existencias al segundo registro de la "
 "cuenta."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:107
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:119
 msgid "Invoice and register payments"
 msgstr "Facturar y registrar pagos"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:110
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:122
 msgid "Issue invoices"
 msgstr "Emitir facturas"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:112
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:124
 msgid ""
 "Due to Amazon's policy of not sharing customer email addresses, it is "
 "**not** possible to send invoices directly to Amazon customers from Odoo. "
@@ -8963,7 +9002,7 @@ msgstr ""
 "directamente desde Odoo. Sin embargo, **sí** es posible cargar de forma "
 "manual las facturas generadas desde Odoo en el backend de Amazon."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:116
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:128
 msgid ""
 "Additionally, for B2B clients, it is currently required to manually retrieve"
 " VAT numbers from the Amazon back-end **before** creating an invoice in "
@@ -8973,7 +9012,7 @@ msgstr ""
 "identificación fiscal de forma manual desde el backend de Amazon **antes** "
 "de crear una factura en Odoo."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:120
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:132
 msgid ""
 "For :doc:`TaxCloud <../../../finance/accounting/taxes/taxcloud>` users: "
 "invoices created from Amazon sales orders are **not** synchronized with "
@@ -8985,15 +9024,15 @@ msgstr ""
 " de órdenes de ventas de Amazon **no** se sincronizan con TaxCloud, Amazon "
 "ya las incluye en su propio reporte de impuestos a TaxCloud."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:125
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:137
 msgid "TaxCloud integration will be decommissioned in Odoo 17+."
 msgstr "La integración con TaxCloud será descontinuada en Odoo 17."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:128
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:140
 msgid "Register payments"
 msgstr "Registrar pagos"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:130
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:142
 msgid ""
 "Since customers pay Amazon as an intermediary, creating a dedicated *Bank* "
 "journal (e.g. named `Amazon Payments`), with a dedicated *Bank and Cash* "
@@ -9003,7 +9042,7 @@ msgstr ""
 "cree un diario *bancario* (con el nombre `Pagos de Amazon`, por ejemplo) con"
 " una cuenta intermediaria *bancaria y de efectivo* específica."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:133
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:145
 msgid ""
 "Additionally, as Amazon makes a single monthly payment, selecting all the "
 "invoices linked to a single payment is necessary when registering payments."
@@ -9011,7 +9050,7 @@ msgstr ""
 "Además Amazon realiza un solo pago mensual, así que es necesario seleccionar"
 " todas las facturas vinculadas a un solo pago al registrar los pagos."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:136
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:148
 msgid ""
 "To do that, use the appropriate :guilabel:`Journal` dedicated to Amazon "
 "payments, and select :guilabel:`Batch Deposit` as the :guilabel:`Payment "
@@ -9021,7 +9060,7 @@ msgstr ""
 "pagos de Amazon y seleccione :guilabel:`Depósito por lotes` como "
 ":guilabel:`método de pago`."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:139
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:151
 msgid ""
 "Then, select all the generated payments, and click :menuselection:`Actions "
 "--> Create batch payment --> Validate`."
@@ -9029,7 +9068,7 @@ msgstr ""
 "Luego, seleccione todos los pagos generados y haga clic en "
 ":menuselection:`Acciones --> Crear pago por lotes --> Validar`."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:143
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:155
 msgid ""
 "This same action can be performed with vendor bills from Amazon dedicated to"
 " commissions."
@@ -9037,7 +9076,7 @@ msgstr ""
 "Puede realizar esta misma acción con las facturas de proveedores de Amazon "
 "destinadas a comisiones."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:145
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:157
 msgid ""
 "When the balance is received in the bank account at the end of the month, "
 "and the bank statements are recorded, credit the Amazon intermediary account"
@@ -9047,11 +9086,11 @@ msgstr ""
 "registrar los estados de cuenta bancarios, acredite la cuenta intermediaria "
 "de Amazon por el importe recibida."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:149
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:161
 msgid "Follow Amazon sales in sales reporting"
 msgstr "Llevar seguimiento de las ventas de Amazon en los reportes de venta"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:151
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:163
 msgid ""
 "On the Amazon account profile in Odoo , a sales team is set under the "
 ":guilabel:`Order Follow-up` tab."
@@ -9059,7 +9098,7 @@ msgstr ""
 "El perfil de la cuenta de Amazon en Odoo cuenta con un equipo de ventas "
 "establecido en la pestaña :guilabel:`Seguimiento de pedidos`."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:154
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:166
 msgid ""
 "This gives quick access to important metrics related to sales reporting. By "
 "default, the Amazon account's sales team is shared between all of the "
@@ -9069,7 +9108,7 @@ msgstr ""
 "los reportes de ventas. De forma predeterminada, el equipo de ventas de la "
 "cuenta de Amazon se comparte entre todas las cuentas de la empresa."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:157
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:169
 msgid ""
 "If desired, the sales team on the account can be changed for another, in "
 "order to perform a separate reporting for the sales of this account."
@@ -9077,11 +9116,11 @@ msgstr ""
 "Si lo desea, puede cambiar el equipo de ventas de la cuenta por otro para "
 "realizar un reporte separado para las ventas de esta cuenta."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:161
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:173
 msgid "It is also possible to perform reporting on a per-marketplace basis."
 msgstr "También es posible realizar reportes para cada marketplace."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:163
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:175
 msgid ""
 "First, remove the desired marketplace from the list of synchronized "
 "marketplaces."
@@ -9089,7 +9128,7 @@ msgstr ""
 "Primero debe eliminar el marketplace deseado de la lista de mercados "
 "sincronizados."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:165
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:177
 msgid ""
 "To access the list of synchronized marketplaces in Odoo, navigate to "
 ":menuselection:`Sales app --> Configuration --> Settings --> Connectors --> "
@@ -9099,7 +9138,7 @@ msgstr ""
 ":menuselection:`aplicación Ventas --> Configuración --> Ajustes --> "
 "Conectores --> Sincronización con Amazon --> Cuentas de Amazon`."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:168
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:180
 msgid ""
 "Then, create another registration for this account, and remove all other "
 "marketplaces **except** the one to isolate."
@@ -9107,7 +9146,7 @@ msgstr ""
 "Luego cree otro registro para esta cuenta y elimine todos los marketplaces "
 "**excepto** el que desea aislar."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:171
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:183
 msgid ""
 "Lastly, assign another sales team to one of the two registrations of the "
 "account."
@@ -9115,7 +9154,7 @@ msgstr ""
 "Por último, asigne otro equipo de ventas a uno de los dos registros de la "
 "cuenta."
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:174
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:186
 #: ../../content/applications/sales/sales/amazon_connector/setup.rst:154
 msgid ":doc:`features`"
 msgstr ":doc:`features`"
