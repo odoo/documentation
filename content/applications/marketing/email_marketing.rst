@@ -16,6 +16,7 @@ successful campaigns, and track their overall effectiveness in a single applicat
 .. seealso::
    - :doc:`/applications/marketing/email_marketing/mailing_lists`
    - :doc:`/applications/marketing/email_marketing/unsubscriptions`
+   - :doc:`/applications/marketing/email_marketing/analyze_metrics`
 
 Email marketing dashboard
 =========================
@@ -441,3 +442,4 @@ the mailing, as well.
 
    email_marketing/mailing_lists
    email_marketing/unsubscriptions
+   email_marketing/analyze_metrics
