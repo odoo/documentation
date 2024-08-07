@@ -524,7 +524,7 @@ chatter indicating the correct Government validation.
 .. warning::
    One credit is consumed on each cancellation request.
 
-Cancellation process
+Export invoices
 ********************
 
 When creating exportation invoices, take into account the next considerations:
