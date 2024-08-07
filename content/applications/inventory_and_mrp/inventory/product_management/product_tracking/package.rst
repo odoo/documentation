@@ -187,3 +187,17 @@ following fields:
 .. seealso::
    :doc:`Using cluster packages
    <../../warehouses_storage/advanced_operations_warehouse/cluster_picking>`
+
+View packages
+=============
+
+To view all packages go to :menuselection:`Inventory app --> Products --> Packages`. By default,
+packages are shown in kanban view, in their current storage location.
+
+.. tip::
+   Move packages between internal locations using drag-and-drop.
+
+.. image:: package/packages-kanban.png
+   :align: center
+   :alt: Packages dashboard.
+
