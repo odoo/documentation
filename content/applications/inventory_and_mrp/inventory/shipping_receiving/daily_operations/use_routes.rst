@@ -146,6 +146,9 @@ to only apply on a specific :guilabel:`Company`. This is useful for multi-compan
 example, a user can have a company and warehouse in Country A and a second company and warehouse in
 Country B.
 
+.. seealso::
+   :ref:`Applicable on packagings <inventory/product_management/packaging-route>`
+
 .. image:: use_routes/routes-example.png
    :align: center
    :alt: View of a route example applicable on product categories and warehouses.
