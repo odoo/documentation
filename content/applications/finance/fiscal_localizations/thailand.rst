@@ -135,6 +135,7 @@ which you want to activate PromptPay QR. Set the :guilabel:`Proxy Type` and fill
 :guilabel:`Proxy Value` field depending on the chosen type.
 
 .. important::
+   - The account holder's city is mandatory.
    - The :guilabel:`Include Reference` checkbox doesn't work for PromptPay QR codes.
 
 .. image:: thailand/qr-promptpay-bank.png
