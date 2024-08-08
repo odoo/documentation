@@ -331,3 +331,7 @@ Time Limit`.
 
 When the :guilabel:`Question Time Limit` option is enabled, designate how much time (in
 :guilabel:`seconds`) participants have to answer the question during a *Live Session* survey.
+
+.. note::
+   Survey text colors are directly linked to the colors used for the :doc:`website theme
+   <../../websites/website/web_design/themes>`.
