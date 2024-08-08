@@ -4,17 +4,17 @@
 Live Chat
 =========
 
-Odoo *Live Chat* allows users to communicate with website visitors in real-time. With *Live Chat*,
-leads can be qualified for their sales potential, support questions can be answered quickly, and
-issues can be directed to the appropriate team for further investigation or follow up. *Live Chat*
-also provides the opportunity for instant feedback from customers.
+Odoo **Live Chat** allows users to communicate with website visitors in real-time. With **Live
+Chat**, leads can be qualified for their sales potential, support questions can be answered quickly,
+and issues can be directed to the appropriate team for further investigation or follow up. **Live
+Chat** also provides the opportunity for instant feedback from customers.
 
 Enable Live Chat
 ================
 
-The *Live Chat* application can be installed multiple ways:
+The **Live Chat** application can be installed multiple ways:
 
-- Go to :menuselection:`Apps application --> Live Chat` and click :guilabel:`Install`.
+- Go to :menuselection:`Apps application`, search `Live Chat`, and click :guilabel:`Install`.
 - Go to the :menuselection:`Helpdesk app --> Configuration --> Helpdesk Teams` list view, select a
   team, and on the team's settings page, click the checkbox next to :guilabel:`Live Chat`, under the
   :guilabel:`Channels` section.
@@ -27,7 +27,7 @@ The *Live Chat* application can be installed multiple ways:
      :alt: View of the settings page and the live chat feature for Odoo Live Chat.
 
 .. note::
-   After the *Live Chat* application is installed, a live chat *Channel* is created by default.
+   After the **Live Chat** application is installed, a live chat *Channel* is created, by default.
 
 Create live chat channels
 =========================
@@ -73,14 +73,14 @@ live chat channel has been added as an operator by default.
    modal, adjust any information, as needed. Then, click :guilabel:`Save`, or click
    :guilabel:`Remove` to remove that operator from the channel.
 
-Click :guilabel:`Add` to reveal an :guilabel:`Add: Operators` modal.
+Click :guilabel:`Add` to reveal an :guilabel:`Add: Operators` pop-up window.
 
-In the modal, scroll to find the desired users, or enter their name in the :guilabel:`Search...`
-bar. Then, click the checkbox next to the users to be added, and click :guilabel:`Select`.
+In the pop-up window, scroll to find the desired users, or enter their name in the search bar. Then,
+tick the checkbox next to the users to be added, and click :guilabel:`Select`.
 
-New operators can be created and added to the list directly from this modal, as well, by clicking
-:guilabel:`New`, and filling out the :guilabel:`Create Operators` form. When the form is complete,
-click :guilabel:`Save & Close`, or :guilabel:`Save & New` for multiple record creations.
+New operators can be created and added to the list directly from this pop-up window, as well, by
+clicking :guilabel:`New`, and filling out the :guilabel:`Create Operators` form. When the form is
+complete, click :guilabel:`Save & Close`, or :guilabel:`Save & New` for multiple record creations.
 
 .. danger::
    Creating a new user can impact the status of an Odoo subscription, as the total number of users
@@ -101,7 +101,7 @@ settings for the live chat window.
 Livechat button
 ~~~~~~~~~~~~~~~
 
-The *Livechat Button* is the icon that appears in the bottom corner of the website.
+The *Livechat Button* is the icon that appears in the bottom-right corner of the website.
 
 .. image:: livechat/chat-button.png
    :align: center
@@ -122,7 +122,7 @@ colors to the default selection.
    the color bubbles are clicked. Different options are available, depending on the operating
    system.
 
-Livechat window
+Livechat Window
 ~~~~~~~~~~~~~~~
 
 The *Livechat Window* is the space where the live chat conversation with website visitors takes
@@ -150,12 +150,11 @@ Color` can be changed following the same steps as the :ref:`Livechat button
 Channel Rules tab
 -----------------
 
-The :guilabel:`Channel Rules` tab on the live chat channel detail form determines when the live chat
-window opens on the website, by configuring when a :guilabel:`URL Regex` action is triggered, such
-as a page visit.
+To configure which website user actions open the live chat window, go to the :guilabel:`Channel
+Rules` tab on the live chat channel detail form.
 
 To create a new channel rule, click :guilabel:`Add a line`. This opens the :guilabel:`Create Rules`
-modal.
+pop-up window.
 
 .. image:: livechat/create-rules.png
    :align: center
@@ -164,22 +163,22 @@ modal.
 Create new rules
 ~~~~~~~~~~~~~~~~
 
-Fill out the fields on the :guilabel:`Create Rules` modal, as instructed below. Then, click
+Fill out the fields on the :guilabel:`Create Rules` pop-up window as instructed below, then click
 :guilabel:`Save & Close`.
 
 .. tabs::
 
    .. tab:: Live Chat Button
 
-      The *Live Chat Button* is the icon that appears in the bottom corner of the website. Select
-      from one of the following display options:
+      The *Livechat Button* is the icon that appears in the bottom-right corner of the website.
+      Select from one of the following display options:
 
       - :guilabel:`Show`: displays the chat button on the page.
       - :guilabel:`Show with notification`: displays the chat button, as well as a floating text
         bubble next to the button.
-      - :guilabel:`Open automatically`: displays the button and automatically opens the chat window
+      - :guilabel:`Open automatically`: displays the button, and automatically opens the chat window
         after a specified amount of time (designated in the :guilabel:`Open automatically timer`
-        field, which is revealed when selecting this option).
+        field, that appears when this option is selected).
       - :guilabel:`Hide`: hides the chat button on the page.
 
    .. tab:: Chatbot
@@ -197,6 +196,12 @@ Fill out the fields on the :guilabel:`Create Rules` modal, as instructed below. 
       :guilabel:`URL Regex` field, input the relative URL of the page where the chat button should
       appear.
 
+      For example, to apply the rule to the URL, `https://mydatabse.odoo.com/shop`, enter `/shop`
+      to the :guilabel:`URL Regex` field.
+
+      To apply the rule to *all* pages on the database, enter `/` in the :guilabel:`URL Regex`
+      field.
+
    .. tab:: Open automatically timer
 
       This field designates the amount of time (in seconds) a page should be open before the chat
@@ -205,8 +210,8 @@ Fill out the fields on the :guilabel:`Create Rules` modal, as instructed below. 
 
    .. tab:: Country
 
-      If this channel should only be available to site visitors in specific countries, add them to
-      the :guilabel:`Country` field. If this field is left blank, the channel is available to all
+      If this channel should **only** be available to site visitors in specific countries, add them
+      to the :guilabel:`Country` field. If this field is left blank, the channel is available to all
       site visitors, regardless of location.
 
 .. note::
