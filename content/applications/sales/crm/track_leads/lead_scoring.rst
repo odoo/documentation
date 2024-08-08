@@ -2,7 +2,7 @@
 Assign leads with predictive lead scoring
 =========================================
 
-The Odoo *CRM* app can automatically assign leads/opportunities to sales teams and salespeople. A
+The Odoo **CRM** app can automatically assign leads/opportunities to sales teams and salespeople. A
 standard practice is to assign leads based on the probability of winning each lead. Companies can
 prioritize the leads that are more likely to result in successful deals by quickly assigning them
 to the appropriate salespeople.
@@ -13,7 +13,7 @@ lead scoring*.
 Predictive lead scoring
 =======================
 
-Predictive lead scoring is a machine-learning model that uses historical data from Odoo *CRM* to
+Predictive lead scoring is a machine-learning model that uses historical data from Odoo **CRM** to
 score open leads/opportunities.
 
 As a company processes opportunities through the CRM pipeline, Odoo collects data on which
@@ -30,24 +30,40 @@ Specifically, Odoo's predictive lead scoring uses the *naive Bayes* probability 
    P(A | B) = \frac{P(A) \times P(B | A)}{P(B)}
    \end{equation}
 
-The probability of success of each opportunity is displayed on the opportunity form, and it updates
-automatically as the opportunity progresses through the CRM pipeline.
+Breaking down the equation:
+
+- :math:`P(A|B)` = probability of a successful lead in this *case*
+- :math:`P(A)` = overall probability of a lead being successful, regardless of the conditions
+- :math:`P(B|A)` = probability of this being the *case*, given a lead is successful
+- :math:`P(B)` = probability of this being the *case*
+
+The term *case* refers to the variables that can affect a lead being successful in Odoo. This can
+include variables, such as the assigned salesperson, the source of the lead, the language of the
+lead, and other historical and demographic data.
+
+The variables considered in this calculation can be :ref:`configured <lead_scoring/configuration>`
+to tailor the calculation to each business's needs.
+
+The probability of success for each opportunity is displayed on the opportunity form, and updates
+automatically, as the opportunity progresses through the CRM pipeline.
 
 .. image:: lead_scoring/probability-opportunity-form.png
    :align: center
    :alt: The probability of success displayed on the opportunity form.
 
-When an opportunity moves to the next stage, its probability of success automatically increases
+When an opportunity moves to the next stage, its probability of success automatically increases,
 according to the predictive lead scoring algorithm.
+
+.. _lead_scoring/configuration:
 
 Configuration
 -------------
 
-Predictive lead scoring is always active in Odoo *CRM*. However, the variables used to calculate the
-probability of success can be customized in the settings.
+Predictive lead scoring is always active in Odoo **CRM**. However, the variables used to calculate
+the probability of success can be customized in the settings.
 
-To customize the variables used by predictive lead scoring, go to :menuselection:`CRM -->
-Configuration --> Settings`. Under :guilabel:`Predictive Lead Scoring`, click on the
+To customize the variables used by predictive lead scoring, go to :menuselection:`CRM app -->
+Configuration --> Settings`. Under :guilabel:`Predictive Lead Scoring`, click the
 :guilabel:`Update Probabilities` button.
 
 Then, click on the drop-down menu to choose which variables the predictive lead scoring feature
@@ -85,11 +101,12 @@ An opportunity's probability of success can be changed manually on the opportuni
 the probability number to edit it.
 
 .. important::
-   Manually changing the probability removes the automatic probability updates for that
-   opportunity. The probability will no longer update automatically as the opportunity moves
-   through each stage of the pipeline.
+   Manually changing the probability removes the automatic probability updates for that opportunity.
+   The probability no longer updates automatically, as the opportunity moves through each stage
+   of the pipeline.
 
-To reactivate automatic probability, click on the gear icon next to the probability percentage.
+To reactivate automatic probability, click on the :icon:`fa-cog` :guilabel:`(gear) icon next to the
+:guilabel:`Probability` percentage.
 
 .. image:: lead_scoring/probability-gear-icon.png
    :align: center
@@ -98,19 +115,19 @@ To reactivate automatic probability, click on the gear icon next to the probabil
 Assign leads based on probability
 =================================
 
-Odoo *CRM* can assign leads/opportunities to sales teams and salespeople based on specified rules.
-Create assignment rules based on the leads' probability of success to prioritize those that are
-more likely to result in deals.
+Odoo **CRM** can assign leads/opportunities to sales teams and salespeople, based on specified
+rules. Create assignment rules, based on the leads' probability of success, to prioritize those that
+are more likely to result in deals.
 
 Configure rule-based assignment
 -------------------------------
 
-To activate *rule-based assignment*, navigate to :menuselection:`CRM --> Configuration -->
-Settings`, and activate :guilabel:`Rule-Based Assignment`.
+To activate *Rule-Based Assignment*, navigate to :menuselection:`CRM app --> Configuration -->
+Settings`, and tick the :guilabel:`Rule-Based Assignment` checkbox. Then, click :guilabel:`Save`.
 
-The rule-based assignment feature can be set to run :guilabel:`Manually`, meaning an Odoo user must
-manually trigger the assignment, or :guilabel:`Repeatedly`, meaning Odoo will automatically trigger
-the assignment according to the chosen time period.
+The :guilabel:`Rule-Based Assignment`` feature can be set to run :guilabel:`Manually`, meaning an
+Odoo user **must** manually trigger the assignment, or :guilabel:`Repeatedly`, meaning Odoo will
+automatically trigger the assignment according to the chosen time period.
 
 To set up automatic lead assignment, select :guilabel:`Repeatedly` for the :guilabel:`Running`
 section. Then, customize how often Odoo will trigger the automatic assignment in the
@@ -120,18 +137,18 @@ section. Then, customize how often Odoo will trigger the automatic assignment in
    :align: center
    :alt: The Rule-Based Assignment setting in CRM settings.
 
-If rule-based assignment is set to run :guilabel:`Repeatedly`, the assignment can still be
-triggered manually using the circular arrow icon in the :guilabel:`Rule-Based Assignment` settings
-(or using the :guilabel:`Assign Leads` button on the sales team configuration page).
+If :guilabel:`Rule-Based Assignment` is set to run :guilabel:`Repeatedly`, the assignment can still
+be triggered manually using the circular arrow icon in the :guilabel:`Rule-Based Assignment`
+settings (or using the :guilabel:`Assign Leads` button on the sales team configuration page).
 
 Configure assignment rules
 --------------------------
 
 Next, configure the *assignment rules* for each sales team and/or salesperson. These rules
 determine which leads Odoo assigns to which people. To get started, navigate to :menuselection:`CRM
---> Configuration --> Sales Teams`, and select a sales team.
+app --> Configuration --> Sales Teams`, and select a sales team.
 
-On the sales team configuration form, under :guilabel:`Assignment Rules`, click on :guilabel:`Edit
+On the sales team configuration form, under :guilabel:`Assignment Rules`, click :guilabel:`Edit
 Domain` to configure the rules that Odoo uses to determine lead assignment for this sales team. The
 rules can include anything that may be relevant for this company or team, and any number of rules
 can be added.
@@ -163,7 +180,7 @@ configuration page, click on a team member in the :guilabel:`Members` tab, then 
 
 If automatic lead assignment is configured in the settings, both the sales team and individual team
 members have the option to :guilabel:`Skip auto assignment`. Check this box to omit a particular
-sales team or salesperson from being assigned leads automatically by Odoo's rule-based assignment
+sales team or salesperson from being assigned leads automatically by Odoo's Rule-Based Assignment
 feature. If :guilabel:`Skip auto assignment` is activated, the sales team or salesperson can still
 be assigned leads manually.
 
