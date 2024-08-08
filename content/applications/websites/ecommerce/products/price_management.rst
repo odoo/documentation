@@ -43,7 +43,6 @@ You can choose to display the type of pricing next to the product price by going
 :menuselection:`Edit --> Customize tab` and enabling :guilabel:`Tax Indication`.
 
 .. image:: price_management/price-tax-display-type.png
-   :align: center
    :alt: Tax type displayed on the product page
 
 .. seealso::
@@ -60,14 +59,12 @@ ensure an amount is set in the :guilabel:`Base Unit Count` field of the **produc
 the :guilabel:`Sales Price`.
 
 .. image:: price_management/price-cost-per-unit.png
-   :align: center
    :alt: Cost per unit pricing on the product template
 
 The price per unit of measure can be found above the :guilabel:`Add to Cart` button on the product
 page.
 
 .. image:: price_management/price-cost-per-unit-page.png
-   :align: center
    :alt: Cost per unit pricing on the product page
 
 .. note::
@@ -75,6 +72,14 @@ page.
 
 .. seealso::
    :doc:`/applications/inventory_and_mrp/inventory/product_management/product_replenishment/uom`
+
+Zero priced product
+-------------------
+
+By default, products having a 0€ price are displayed and can be purchased on your shop (for
+instance, providing free samples to your customers). However if you want to prevent their sale,
+go to :guilabel:`Configuration`--> :guilabel:`Settings` then in the :guilabel:`Shop-Products`
+section and tick the :guilabel:`Prevent Sale of Zero Priced Product` box.
 
 .. _ecommerce/pricelists:
 
@@ -86,6 +91,14 @@ website-specific prices - different from the price on the product template - bas
 group**, **currency**, **minimum quantity**, **period**, or **variant**. You can create as many
 pricelists as needed, but it is mandatory to have at least one pricelist configured per website. If
 no custom pricelists are added, Odoo defaults to the **Public Pricelist** for all websites.
+
+.. important::
+   **All pricelists need to be assigned a country group**. Each country group needs to have at least
+   one country in it. If it is meant for a continent, the country group needs to include all
+   countries from the continent. If it is meant for all the countries, the country group created
+   should regroup them all. **Without a country group, adequate prices cannot be displayed in the
+   case of multiple pricelists**.
+
 
 .. seealso::
    :doc:`/applications/sales/sales/products_prices/prices/pricing`
@@ -112,7 +125,6 @@ can select their corresponding pricelist anywhere on the :guilabel:`Shop` page f
 menu next to the **search bar**.
 
 .. image:: price_management/price-pricelists.png
-   :align: center
    :alt: Pricelists selection
 
 .. seealso::
@@ -127,7 +139,6 @@ If you have permanently reduced the price of a product, a popular means to attra
 the **new discounted price** next to it.
 
 .. image:: price_management/price-strikethrough.png
-   :align: center
    :alt: Price strikethrough
 
 To display a 'striked' price, enable the :guilabel:`Comparison Price` option under
