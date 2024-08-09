@@ -32,6 +32,8 @@ When clicked, a drop-down menu of settings will appear.
    :align: center
    :alt: Overview of events setting with the kanban view in Odoo Events.
 
+.. _events/create-event:
+
 Create a new event
 ==================
 
