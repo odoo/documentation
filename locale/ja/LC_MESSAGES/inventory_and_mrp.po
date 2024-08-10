@@ -4150,18 +4150,22 @@ msgid ""
 " at the top of the order. When using the 0/0/1 reordering rule, a "
 "replenishment order is created, but is not linked to the original |SO|."
 msgstr ""
+"もう一つの重要な違いは、*オーダ基準補充*ルートで作成された補充オーダーは、オーダの上部にあるスマートボタンによって、元の|SO| "
+"(販売オーダ)にリンクされるということです。0/0/1再オーダ規則を使用する場合、補充オーダは作成されますが、元の|SO| にはリンクされません。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:119
 msgid ""
 "See the :doc:`Replenish on Order (MTO) <mto>` documentation for a full "
 "overview of the MTO route."
-msgstr ""
+msgstr "オーダ基準補充(MTO)ルートの全容については、 :doc:`オーダ基準補充 (MTO) <mto>` ドキュメンテーションをご覧下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:121
 msgid ""
 "To create a 0/0/1 reordering rule, navigate to :menuselection:`Inventory app"
 " --> Products --> Products`, and select a product."
 msgstr ""
+" 0/0/1の再オーダ規則を作成するには、 :menuselection:`在庫アプリ --> プロダクト --> "
+"プロダクト`に移動し、プロダクトを選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:124
 msgid ""
@@ -4170,6 +4174,9 @@ msgid ""
 "Rules` page for the product. On the resulting page, click :guilabel:`New` to"
 " begin configuring a new reordering rule."
 msgstr ""
+"プロダクトのページの上部にある :icon:`fa-refresh` :guilabel:`再オーダ規則` スマートボタンをクリックして、プロダクトの "
+":guilabel:`再オーダ規則` ページを開きます。表示されたページで :guilabel:`新規` "
+"をクリックし、新しい再オーダ規則の設定を開始します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:128
 msgid ""
@@ -4177,6 +4184,8 @@ msgid ""
 "location in which replenished products should be stored. By default, this "
 "location is set to :guilabel:`WH/Stock`."
 msgstr ""
+"新しい再オーダ規則の :guilabel:`Location` フィールドで、補充されたプロダクトを保管する場所を選択します。デフォルトでは、この場所は"
+" :guilabel:`WH/在庫` に設定されています。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:131
 msgid ""
@@ -4184,6 +4193,8 @@ msgid ""
 "replenish the item. For example, if the product should be purchased from a "
 "vendor, select the :guilabel:`Buy` route."
 msgstr ""
+":guilabel:`ルート`フィールドで、規則が商品の補充に使用する規則を選択します。例えば、プロダクトを仕入先から購買する場合、 "
+":guilabel:`購買`ルートを選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:134
 msgid ""
@@ -4191,10 +4202,12 @@ msgid ""
 "leave the values set to `0.00`. In the :guilabel:`To Order` field, enter a "
 "value of `1.00`."
 msgstr ""
+":guilabel:`最小数量`フィールドと :guilabel:`最大数量`フィールドの値は `0.00` "
+"のままにしておきます。:guilabel:`オーダ予定`フィールドには`1.00`を入力します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst-1
 msgid "A 0/0/1 reordering rule."
-msgstr ""
+msgstr "A 0/0/1 再オーダ規則。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:141
 msgid ""
@@ -4204,13 +4217,16 @@ msgid ""
 "to replenish the product in one-unit increments, back up to the "
 ":guilabel:`Max Quantity` of `0.00`."
 msgstr ""
+"これらの値を使って再オーダ規則を設定すると、|SO|によってプロダクトの予測数量が :guilabel:`最小数量` の `0.00` "
+"を下回るたびに、選択された :guilabel:`ルート` を使ってプロダクトを1単位ずつ :guilabel:`最大数量` の `0.00` "
+"まで補充します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:147
 msgid ""
 "A picture frame is configured with a 0/0/1 reordering rule that uses the "
 "*Buy* route. Zero units of the picture frame are kept on-hand at any given "
 "time."
-msgstr ""
+msgstr "額縁には、*購買*ルートを使用する0/0/1の再オーダ規則が設定されています。手元には常に額縁の0ユニットが保管されています。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:150
 msgid ""
@@ -4218,6 +4234,7 @@ msgid ""
 "forecasted quantity to drop to `-1.00`. This triggers the reordering rule, "
 "which automatically creates a |PO| for one unit of the picture frame."
 msgstr ""
+"|SO|が額縁1個分確定され、予測数量が1.00`に下がります。これにより再オーダ規則がトリガされ、額縁1個分の|PO|(購買オーダ)が自動的に作成されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:154
 msgid ""
@@ -4226,6 +4243,7 @@ msgid ""
 "but it is not reserved for the |SO| which triggered its purchase. It can be "
 "used to fulfill that |SO|, or reserved for a different order."
 msgstr ""
+"プロダクトが仕入先から入荷すると、額縁の予測数量は`0.00`に戻ります。現在手元には額縁が1つありますが、購買のトリガとなった|SO|のために予約されているわけではありません。この額縁はその|SO|を満たすために使用することもできますし、別のオーダのために予約することもできます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_replenishment/reordering_rules.rst:162
 msgid "Trigger"
@@ -7779,10 +7797,11 @@ msgid ""
 "adjustment to assign lot or serial numbers to products that were not "
 "originally assigned lots."
 msgstr ""
+"ロット番号やシリアル番号を使用せずにプロダクトをOdooに保存した*後*、プロダクトのトラッキング設定を変更すると、記録に一貫性がなくなる可能性があります。このドキュメントでは、在庫調整を使用して、元々ロットが割当てられていないプロダクトにロット番号またはシリアル番号を割当てる方法を説明します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst-1
 msgid "Warning message: products in stock have no lot/serial number."
-msgstr ""
+msgstr "警告メッセージ: 在庫のプロダクトにロット/シリアル番号がありません。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:15
 msgid ""
@@ -7790,22 +7809,23 @@ msgid ""
 "to remove incorrect records *without* lot numbers, and another to save the "
 "quantities *with* the lot numbers."
 msgstr ""
+"このドキュメントでは、2つの在庫調整: ロット番号*なし*の不正な記録を削除する方法と、ロット番号*あり*の数量を保存する方法の概要を説明しています。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:19
 msgid ":doc:`Set up and use lot numbers <lots>`"
-msgstr ""
+msgstr ":doc:`ロット番号の設定と使用 <lots>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:20
 msgid ":doc:`Set up serial numbers <create_sn>`"
-msgstr ""
+msgstr ":doc:`シリアル番号の設定 <create_sn>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:21
 msgid ":doc:`Use serial numbers <serial_numbers>`"
-msgstr ""
+msgstr ":doc:`シリアル番号の使用 <serial_numbers>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:24
 msgid "Change on-hand quantity to zero"
-msgstr ""
+msgstr "手持数量をゼロに変更"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:26
 msgid ""
@@ -7813,6 +7833,8 @@ msgid ""
 "by navigating to :menuselection:`Inventory app --> Products --> Products`, "
 "and select the intended product."
 msgstr ""
+"プロダクトの設定をロットまたはシリアル番号でトラッキングするように変更するには、まず :menuselection:`在庫アプリ --> プロダクト "
+"--> プロダクト` に移動し、対象のプロダクトを選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:29
 msgid ""
@@ -7820,22 +7842,24 @@ msgid ""
 ":guilabel:`Update Quantity` page. In the :guilabel:`On Hand Quantity` "
 "column, change the value to zero."
 msgstr ""
+"次にプロダクトの :guilabel:`手持在庫` スマートボタンをクリックして :guilabel:`数量を更新` "
+"ページを開きます。guilabel:`手持数量`列で、値をゼロに変更します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:33
 msgid ""
 "If the product is stored in multiple locations, make sure the **total** on "
 "hand quantity at **all** locations is zero."
-msgstr ""
+msgstr "プロダクトが複数の場所に保管されている場合、**全て**の場所での**合計**手持数量がゼロであることを確認して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst-1
 msgid ""
 "Show the Inventory Adjustments model, highlighting the \"On Hand Quantity\" "
 "field."
-msgstr ""
+msgstr "在庫調整モデルを表示し、\"手持数量\"フィールドを強調表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:41
 msgid "Change traceability setting"
-msgstr ""
+msgstr "トレーサビリティ設定を変更する"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:43
 msgid ""
@@ -7845,15 +7869,19 @@ msgid ""
 "from :guilabel:`No Tracking` to :guilabel:`By Lots` or :guilabel:`By Unique "
 "Serial Number`."
 msgstr ""
+"プロダクトフォーム (:menuselection:`在庫アプリ --> プロダクト --> "
+"プロダクト`)に戻り、:guilabel:`在庫`タブに切り替えます。:guilabel:`トレーサビリティ`セクションで、 "
+":guilabel:`トラッキング`オプションを :guilabel:`トラッキングなし` から :guilabel:`ロット` または "
+":guilabel:`シリアル番号` に変更します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst-1
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies.rst-1
 msgid "Enable lots and serial numbers."
-msgstr ""
+msgstr "ロットとシリアル番号を有効にします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:56
 msgid "Restore on-hand quantity"
-msgstr ""
+msgstr "手持数量の復元"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:58
 msgid ""
@@ -7862,6 +7890,7 @@ msgid ""
 "quantities by clicking the :guilabel:`On Hand` smart button from the desired"
 " product form."
 msgstr ""
+"手動で手持数量をゼロに変更し、:guilabel:`追跡`設定をロット番号またはシリアル番号に変更した後、希望のプロダクトフォームから:guilabel:`手持数量`スマートボタンをクリックして数量を元に戻します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:62
 msgid ""
@@ -7873,14 +7902,18 @@ msgid ""
 ":guilabel:`Lot/Serial Number` field, and adjust the :guilabel:`On Hand "
 "Quantity` to its original value."
 msgstr ""
+" :guilabel:`数量を更新`ページで、手持数量がゼロに変更されていたため、 :guilabel:`手持在庫なし` "
+"警告がページに表示されます。ここから、左上にある :guilabel:`新規` ボタンをクリックして下さい。そうすることで、 "
+":guilabel:`数量を更新` ページに新しい変更可能な明細が表示されます。それから希望するロット番号を "
+":guilabel:`ロット/シリアル番号` フィールドに入力し :guilabel:`手持数量`をその元の値に戻して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:69
 msgid ":doc:`../../warehouses_storage/inventory_management/count_products`"
-msgstr ""
+msgstr ":doc:`../../warehouses_storage/inventory_management/count_products`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst-1
 msgid "Fill in the \"Lot/Serial Number\" and \"On Hand Quantity\" field."
-msgstr ""
+msgstr "\"ロット/シリアル番号\"と\"手持数量\"フィールドを入力します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:76
 msgid ""
@@ -7890,20 +7923,23 @@ msgid ""
 "Quantity` column. Then, click the :icon:`fa-history` :guilabel:`History` "
 "button on the far-right."
 msgstr ""
+"新しいロットやシリアル番号を割当てた後、元の数量を見つけ、それに応じて :guilabel:`手持数量` を調整するには、 "
+":guilabel:`手持数量` 列の :icon:`fa-pencil` :guilabel:`(鉛筆)` アイコンをクリックします。次に、右端の "
+":icon:`fa-history` :guilabel:`履歴` ボタンをクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst-1
 msgid "Show the \"History\" button on the Inventory Adjustments page."
-msgstr ""
+msgstr "在庫調整ページに \"履歴\" ボタンを表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:85
 msgid ""
 "The inventory adjustment that changed the on-hand quantity to zero is "
 "displayed in the :guilabel:`Quantity` field."
-msgstr ""
+msgstr "手持数量をゼロに変更した在庫調整は :guilabel:`数量`フィールドに表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:0
 msgid "Show the history entry."
-msgstr ""
+msgstr "履歴エントリを表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:3
 msgid "Use serial numbers to track products"
@@ -9107,6 +9143,7 @@ msgid ""
 " the :guilabel:`Dropship` route, enabling both provides the option of "
 "dropshipping the product or purchasing it directly."
 msgstr ""
+":guilabel:`直送`ルートに加えて、:guilabel:`購買`ルートを有効にする必要はありませんが、両方を有効にすることで、プロダクトを直送するか直接購買するかを選択することができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/dropshipping.rst:50
 msgid "Fulfill orders using dropshipping"
@@ -9121,6 +9158,10 @@ msgid ""
 "Click the :guilabel:`Purchase` smart button at the top right of a sales "
 "order to view the associated :abbr:`RFQ (Request for Quotation)`."
 msgstr ""
+"直送商品の販売オーダが作成されると、そのプロダクトを仕入先から購買するための見積依頼(RfQ)が自動的に作成されます。販売オーダは "
+":menuselection:`販売` アプリで :menuselection:`オーダ --> オーダ` "
+"を選択すると表示されます。販売オーダの右上にある :guilabel:`購買` スマートボタンをクリックすると、関連する "
+":abbr:`RFQ(見積依頼)` が表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/dropshipping.rst-1
 msgid ""
@@ -9135,6 +9176,8 @@ msgid ""
 "receipt can be viewed by clicking the :guilabel:`Dropship` smart button in "
 "the top-right corner of the purchase order form."
 msgstr ""
+" :abbr:`RFQ (見積依頼)`が確認されると、購買オーダとなり、直送入荷が作成され、リンクされます。入荷は購買オーダーフォームの右上にある "
+":guilabel:`直送` スマートボタンをクリックすると表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/dropshipping.rst-1
 msgid ""
@@ -9150,6 +9193,9 @@ msgid ""
 " customer, click on the :guilabel:`Validate` button at the top-left of the "
 "dropship receipt to confirm the delivered quantity."
 msgstr ""
+"直送入荷には、 :guilabel:`移動元ロケーション` フィールドに :guilabel:`取引先/仕入先` が、 "
+":guilabel:`移動先ロケーション` フィールドに :guilabel:`取引先/顧客` "
+"が表示されます。プロダクトが顧客に届いたら、直送入荷の左上にある :guilabel:`検証` ボタンをクリックし、届いた数量を確定します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/dropshipping.rst-1
 msgid "Validate the dropship receipt after delivery."
@@ -9398,7 +9444,7 @@ msgstr "顧客請求書の明細に配送プロダクトを表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing.rst:123
 msgid ":doc:`../setup_configuration/labels`"
-msgstr ""
+msgstr ":doc:`../setup_configuration/labels`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/label_type.rst:3
 msgid "Change shipping label size"
@@ -9734,55 +9780,55 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:3
 msgid "Printable delivery PDFs"
-msgstr ""
+msgstr "印刷可能な配送PDF"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:5
 msgid ""
 "Automatically print delivery-related PDFs documents and labels in Odoo, "
 "containing package recipient details, contents, or handling instructions."
-msgstr ""
+msgstr "Odooの配送関連PDFドキュメントやラベルを自動的に印刷し、梱包の受取人の詳細や内容物、取扱方法を記載することができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:8
 msgid ""
 "The following PDFs can be configured to print upon validating an *Inventory*"
 " operation (e.g. receipt, picking, delivery orders, quality checks):"
-msgstr ""
+msgstr "*在庫*オペレーション(入荷、ピッキング、配送オーダ、品質チェックなど)の検証時に、以下のPDFを印刷するように設定できます:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:11
 msgid ":ref:`Delivery slip <inventory/shipping_receiving/delivery-slip>`"
-msgstr ""
+msgstr ":ref:`配送伝票 <inventory/shipping_receiving/delivery-slip>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:12
 msgid ":ref:`Return slip <inventory/shipping_receiving/return-slip>`"
-msgstr ""
+msgstr ":ref:`返品伝票 <inventory/shipping_receiving/return-slip>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:13
 msgid ""
 ":ref:`Product labels of items in the order "
 "<inventory/shipping_receiving/product-labels>`"
-msgstr ""
+msgstr ":ref:`注文商品のプロダクトラベル <inventory/shipping_receiving/product-labels>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:14
 msgid ""
 ":ref:`Lot and serial number labels <inventory/shipping_receiving/lot-sn-"
 "labels>`"
-msgstr ""
+msgstr ":ref:`ロット・シリアル番号ラベル <inventory/shipping_receiving/lot-sn-labels>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:15
 msgid ":ref:`Carrier labels <inventory/shipping_receiving/carrier-labels>`"
-msgstr ""
+msgstr ":ref:`運送会社ラベル <inventory/shipping_receiving/carrier-labels>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:16
 msgid ":ref:`Export documents <inventory/shipping_receiving/export-doc>`"
-msgstr ""
+msgstr ":ref:`出荷ドキュメント <inventory/shipping_receiving/export-doc>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:17
 msgid ":ref:`Package content <inventory/shipping_receiving/package-content>`"
-msgstr ""
+msgstr ":ref:`梱包内容 <inventory/shipping_receiving/package-content>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:18
 msgid ":ref:`Package label <inventory/shipping_receiving/package-label>`"
-msgstr ""
+msgstr ":ref:`梱包ラベル <inventory/shipping_receiving/package-label>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:22
 msgid ""
@@ -9790,6 +9836,8 @@ msgid ""
 "app --> Configuration --> Operations Types`, and select the desired "
 "operation type."
 msgstr ""
+"これらのラベルを自動的に印刷するには :menuselection:`在庫アプリ --> 設定 --> "
+"オペレーションタイプ`に移動し、希望するオペレーションタイプを選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:25
 msgid ""
@@ -9799,28 +9847,31 @@ msgid ""
 "Type`. For details on what each of the checkbox options do, jump to the "
 "related section."
 msgstr ""
+":guilabel:`ハードウェア`タブで、 :guilabel:`検証時に印刷` セクションにある希望のオプションにチェックを入れると、 "
+":guilabel:`オペレーションタイプ` "
+"を検証済した後に、選択したドキュメントのPDFを自動的にダウンロードすることができます。各チェックボックスのオプションの詳細については、関連セクションにジャンプして下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst-1
 msgid "Show the *Print on Validation* option in the \"Pick\" *Operation Type*."
-msgstr ""
+msgstr "\"ピッキング\" *オペレーションタイプ*の*検証時に印刷* オプションを表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:37
 msgid "Delivery slip"
-msgstr ""
+msgstr "配送伝票"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:39
 msgid ""
 "A *delivery slip* contains recipient and package details, usually placed "
 "inside (or attached to) the package."
-msgstr ""
+msgstr "*配送伝票*には受取人と梱包の詳細が記載され、通常は梱包の内側に貼られます(または添付されます)。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:43
 msgid ":ref:`Picking list <inventory/warehouses_storage/barcode_picking>`"
-msgstr ""
+msgstr ":ref:`ピッキングリスト <inventory/warehouses_storage/barcode_picking>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:44
 msgid ":doc:`Tracking label <../setup_configuration/labels>`"
-msgstr ""
+msgstr ":doc:`追跡ラベル <../setup_configuration/labels>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:46
 msgid ""
@@ -9829,16 +9880,19 @@ msgid ""
 "configuration options, clicking :guilabel:`Validate` on the desired "
 "operation type downloads a PDF of the delivery slip."
 msgstr ""
+" :guilabel:`ハードウェア`タブ設定オプションで、 :ref:`配送伝票設定を有効化 "
+"<inventory/shipping_receiving/print_setup>` した後、希望するオペレーションタイプで "
+":guilabel:`検証` をクリックすると配送伝票のPDFがダウンロードされます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:50
 msgid ""
 "The delivery slip shows products, quantities, the delivery order reference "
 "number, and the total order weight."
-msgstr ""
+msgstr "配送伝票には、プロダクト、数量、配送オーダ参照番号、オーダ重量合計が記載されています。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst-1
 msgid "Example delivery slip."
-msgstr ""
+msgstr "配送伝票の例。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:60
 msgid "Return slip"
@@ -9851,6 +9905,7 @@ msgid ""
 "details and customer information. It can also include specific return "
 "instructions for the customer."
 msgstr ""
+"*返品伝票*を印刷し、顧客の返品梱包用に、配送に同梱します。伝票は返品を識別し、販売オーダにリンクし、商品の詳細と顧客情報が記載されています。また、顧客用に具体的な返品方法を記載することもできます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:66
 msgid ""
@@ -9859,26 +9914,29 @@ msgid ""
 "configuration options, clicking :guilabel:`Validate` on the desired "
 "operation type downloads a PDF of the return slip."
 msgstr ""
+":guilabel:`ハードウェア`タブの設定オプションで :ref:`返品伝票の設定を有効化 "
+"<inventory/shipping_receiving/print_setup>` した後、希望するオペレーションタイプで "
+":guilabel:`検証` をクリックすると、返品伝票のPDFがダウンロードされます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:70
 msgid ""
 "The return slip displays the company's return address, along with barcodes "
 "for both the order and the return operation."
-msgstr ""
+msgstr "返送伝票には、会社の返送先住所と、オーダと返送オペレーションの両方のバーコードが表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst-1
 msgid "Example return slip."
-msgstr ""
+msgstr "返品伝票の例。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:80
 msgid "Product labels"
-msgstr ""
+msgstr "プロダクトラベル"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:82
 msgid ""
 "Print *product labels* to affix to items in an order, providing essential "
 "information, such as product name, barcode, and price."
-msgstr ""
+msgstr "オーダ内の商品に貼る*プロダクトラベル*を印刷します。プロダクト名、バーコード、価格などの必要な情報が含まれています。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:85
 msgid ""
@@ -9886,6 +9944,9 @@ msgid ""
 "app --> Configuration --> Operations Types`), in the :guilabel:`Hardware` "
 "tab, tick the :guilabel:`Product Labels` option."
 msgstr ""
+"目的のオペレーションタイプ(:menuselection:`在庫アプリ --> 設定 --> "
+"オペレーションタイプ`)に移動した後、:guilabel:`ハードウェア`タブで "
+":guilabel:`プロダクトラベル`オプションにチェックを入れます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:88
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:141
@@ -9893,42 +9954,49 @@ msgid ""
 "Doing so makes the :guilabel:`Print label as:` drop-down menu visible, where"
 " each product label can be printed as:"
 msgstr ""
+"そうすると :guilabel:`ラベルを以下として印刷:` ドロップダウンメニューが表示され、各プロダクトラベルを次のように印刷することができます: "
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:91
 msgid ""
 ":guilabel:`2 x 7 with price`: PDF displays product name, barcode, and price,"
 " fitting two rows and seven columns of product labels per page."
 msgstr ""
+" :guilabel:`2 x 7 価格あり`: "
+"プロダクト名、バーコード、価格がPDFに表示され、1ページあたり2行7列のプロダクトラベルに適合します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:0
 msgid "Example 2 x 7 with price."
-msgstr ""
+msgstr "2 x 7 価格あり例。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:100
 msgid ""
 ":guilabel:`4 x 7 with price`: displays product name, barcode, and price, "
 "fitting four rows and seven columns of product labels per page."
 msgstr ""
+" :guilabel:`4 x 7 価格あり`: "
+"プロダクト名、バーコード、価格がPDFに表示され、1ページあたり4行7列のプロダクトラベルに適合します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:0
 msgid "Example 4 x 7 with price."
-msgstr ""
+msgstr " 4 x 7 価格あり例。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:109
 msgid ""
 ":guilabel:`4 x 12`: displays product name and barcode. Fits four rows and "
 "twelve columns of product labels per page."
-msgstr ""
+msgstr ":guilabel:`4 x 12`: プロダクト名とバーコードを表示します。1ページに4行12列のプロダクトラベルに適合します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:0
 msgid "Example 4 x 12."
-msgstr ""
+msgstr "4 x 12例。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:118
 msgid ""
 ":guilabel:`4 x 12 with price`: displays product name, barcode, and price. "
 "Fits four rows and twelve columns of product labels per page."
 msgstr ""
+" :guilabel:`4 x 12 価格あり`: "
+"プロダクト名、バーコード、価格がPDFに表示され、1ページあたり4行12列のプロダクトラベルに適合します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:120
 msgid ""
@@ -9936,18 +10004,22 @@ msgid ""
 "(ZPL) containing the product name and barcode. Readable for Zebra printers "
 "to automatically print labels."
 msgstr ""
+" :guilabel:`ZPLラベル`: プロダクト名とバーコードを含むZebraプログラミング言語 "
+"(ZP)のラベルを印刷します。Zebraプリンタが自動的にラベルを印刷する場合に読取り可能です。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:122
 msgid ""
 ":guilabel:`ZPL Labels with price`: prints labels in the :abbr:`ZPL (Zebra "
 "Programming Language)` containing the product name, barcode, and price."
 msgstr ""
+" :guilabel:`ZPLラベル価格あり`: :abbr:`ZPL "
+"(Zebraプログラミング言語)`でプロダクト名、バーコード、価格を含むラベルを印刷します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:126
 msgid ""
 "Product labels can be manually printed from any delivery order, by clicking "
 "the :guilabel:`Print Labels` button."
-msgstr ""
+msgstr "プロダクトラベルは :guilabel:`ラベルを印刷` ボタンをクリックすることで、配送オーダから手動で印刷することができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:132
 msgid "Lot/SN Labels"
@@ -9958,6 +10030,7 @@ msgid ""
 "Print *lot/SN labels* to affix to items in an order, providing essential "
 "information, such as product name, lot or serial number, and the barcode."
 msgstr ""
+"オーダ内のアイテムに貼る*ロット/シリアル番号ラベル*を印刷し、プロダクト名、ロットまたはシリアル番号、バーコードなどの重要な情報を提供します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:137
 msgid ""
@@ -9966,6 +10039,8 @@ msgid ""
 " Types`). Then, in the :guilabel:`Hardware` tab, tick the :guilabel:`Lot/SN "
 "Labels` option."
 msgstr ""
+"このPDFを自動的に印刷するには、目的のオペレーションタイプのオプションページ(:menuselection:`在庫アプリ --> 設定 --> "
+"オペレーションタイプ`)に移動します。次に、:guilabel:`ハードウェア`タブで、:guilabel:`ロット/シリアル番号ラベル`オプションにチェックを入れます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:144
 msgid ""
@@ -9973,14 +10048,16 @@ msgid ""
 "numbers in the order, including product name, lot/serial number, and "
 "barcode. Fits four rows and twelve columns per page."
 msgstr ""
+":guilabel:`4 x 12 - 1ロット/SN`: "
+"プロダクト名、ロット/シリアル番号、バーコードを含むオーダ内のユニークなロット/シリアル番号のラベル付きPDF。1ページに4行12列で収まります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:0
 msgid "Order with only one unique set of lot/serial numbers."
-msgstr ""
+msgstr "ロット/シリアル番号は一意のセットのみでオーダします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:154
 msgid "Labels for an order with only one unique set of lot/serial numbers."
-msgstr ""
+msgstr "ロット/シリアル番号が一意のセットしかないオーダのラベル。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:156
 msgid ""
@@ -9988,6 +10065,8 @@ msgid ""
 "items, displaying the product name, lot/serial number, and barcode. Fits "
 "four rows and twelve columns per page."
 msgstr ""
+" :guilabel:`4 x 12 - 単位ごとに１`： "
+"プロダクト名、ロット/シリアル番号、バーコードが表示された、アイテムの数量に合わせたラベル付きPDF。1ページに4行12列で収まります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:158
 msgid ""
@@ -9995,6 +10074,8 @@ msgid ""
 "Programming Language)`, containing the product name, lot/serial number, and "
 "barcode."
 msgstr ""
+":guilabel:`ZPLラベル - ロット/シリアル番号ごとに1`: :abbr:`ZPL "
+"(Zebraプログラミング言語)`で、プロダクト名、ロット/シリアル番号、バーコードを含むラベルを印刷します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:160
 msgid ""
@@ -10002,23 +10083,27 @@ msgid ""
 "items in :abbr:`ZPL (Zebra Programming Language)`, containing the product "
 "name, lot/serial number, and barcode."
 msgstr ""
+" :guilabel:`ZPLラベル - 1単位ごとに1`: :abbr:`ZPL "
+"(Zebraプログラミング言語)`で、プロダクト名、ロット/シリアル番号、バーコードを含む商品の数量分のラベルを印刷します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:166
 msgid "Carrier labels"
-msgstr ""
+msgstr "運送会社ラベル"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:168
 msgid ""
 "To automatically print a *carrier label* with the recipient address, "
 "tracking number, and carrier details for specific third-party shipping "
 "carriers, complete the following setup:"
-msgstr ""
+msgstr " 受取人の住所、追跡番号、特定のサードパーティ運送会社の詳細を含む*運送会社ラベル*を自動的に印刷するには、次の設定を完了します:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:171
 msgid ""
 "Tick the :guilabel:`Carrier Labels` checkbox in the :ref:`operation type "
 "settings <inventory/shipping_receiving/print_setup>`."
 msgstr ""
+":ref:`オペレーションタイプ設定 <inventory/shipping_receiving/print_setup>` の "
+":guilabel:`運送会社ラベル` チェックボックスにチェックを入れます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:173
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:258
@@ -10026,23 +10111,25 @@ msgid ""
 ":doc:`Connect a printer <../../../../general/iot/devices/printer>` to Odoo's"
 " *IoT* app."
 msgstr ""
+":doc:`プリンタを接続 <../../../../general/iot/devices/printer>` Odooの*IoT*アプリへ。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:174
 msgid ""
 ":ref:`Assign the carrier label to the printer "
 "<inventory/shipping_receiving/assign-printer>`."
 msgstr ""
+":ref:`運送会社ラベルをプリンタ<inventory/shipping_receiving/assign-printer>`に割当てます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:175
 msgid ""
 "Configure the shipping method's :ref:`label type "
 "<inventory/shipping_receiving/label-type>`."
-msgstr ""
+msgstr "配送方法の :ref:`ラベルタイプ <inventory/shipping_receiving/label-type>`を設定します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:180
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:262
 msgid "Assign printer"
-msgstr ""
+msgstr "プリンタの割当"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:182
 msgid ""
@@ -10052,10 +10139,14 @@ msgid ""
 "carrier label to the printer, by navigating to :menuselection:`IoT app --> "
 "Devices`, and selecting the desired printer."
 msgstr ""
+"Odooの*IoT*アプリにプリンタを接続する詳細については、 :doc:`プリンタを接続 "
+"<../../../general/iot/devices/printer>` "
+"ドキュメントを参照して下さい。接続が完了したら、:menuselection:`IoTアプリ --> "
+"デバイス`に移動し、希望のプリンタを選択して運送会社ラベルをプリンタに割当てます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst-1
 msgid "Show a list of IoT devices."
-msgstr ""
+msgstr "IoTデバイスのリストを表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:191
 msgid ""
@@ -10065,16 +10156,23 @@ msgid ""
 "In the :guilabel:`Search...` bar, type `Shipping`, and select "
 ":guilabel:`Shipping Labels`."
 msgstr ""
+"プリンタ設定フォームの :guilabel:`プリンタレポート` "
+"タブを開き、プリンタが自動的に印刷するドキュメントのタイプを設定します。guilabel:`明細を追加`をクリックして、:guilabel:`追加: "
+"レポート`ポップアップウィンドウを開きます: "
+"レポート`ポップアップウィンドウが開きます。:guilabel:`検索...`バーにタイプ`配送`と入力し、 "
+":guilabel:`出荷ラベル`を選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:197
 msgid ""
 "The :guilabel:`Shipping Documents` report is for :ref:`export documents "
 "<inventory/shipping_receiving/export-doc>`."
 msgstr ""
+" :guilabel:`配送ドキュメント` レポートは :ref:`エクスポートドキュメント "
+"<inventory/shipping_receiving/export-doc>`用です。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst-1
 msgid "Show carrier label report added to the *Printer Reports*."
-msgstr ""
+msgstr "*プリンタレポート*に追加された運送会社ラベルレポートを表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:204
 msgid ""
@@ -10082,20 +10180,22 @@ msgid ""
 ":guilabel:`Printer Reports` tab, ensure the :guilabel:`Report Type` matches "
 "the IoT-connected printer's type."
 msgstr ""
+":guilabel:`プリンタレポート` タブに :guilabel:`配送ラベル` レポートを追加した後、:guilabel:`レポートタイプ` が "
+"IoT 接続プリンタのタイプと一致することを確認して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:207
 msgid ""
 "For laser printers, set the :guilabel:`Report Type` to :guilabel:`PDF`."
-msgstr ""
+msgstr "レーザープリンタの場合、 :guilabel:`レポートタイプ` を :guilabel:`PDF` に設定します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:208
 msgid ""
 "For Zebra printers, set the :guilabel:`Report Type` to :guilabel:`Text`."
-msgstr ""
+msgstr "Zebraプリンタの場合は、 :guilabel:`レポートタイプ`を:guilabel:`テキスト` に設定します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:213
 msgid "Shipping carrier label type"
-msgstr ""
+msgstr "配送運送会社ラベルタイプ"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:215
 msgid ""
@@ -10104,6 +10204,9 @@ msgid ""
 ":menuselection:`Inventory app --> Configuration --> Shipping Methods`, and "
 "select the desired shipping method."
 msgstr ""
+" 次に、:doc:`サードパーティ配送コネクタ <../setup_configuration/third_party_shipper>` "
+"のセットアップを完了します。その後、 :menuselection:`在庫アプリ --> 設定 --> 配送方法` "
+"に進み、希望する配送方法を選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:219
 msgid ""
@@ -10112,65 +10215,70 @@ msgid ""
 ":ref:`report type assigned earlier <inventory/shipping_receiving/assign-"
 "printer>`:"
 msgstr ""
+"配送方法設定フォームの :guilabel:`[運送会社名] 設定` タブで、 :guilabel:`ラベルフォーマット` が先に割当てられた "
+":ref:`レポートタイプ <inventory/shipping_receiving/assign-printer>` "
+"と一致していることを確認します:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:223
 msgid ""
 "For laser printers, set the :guilabel:`Label Format` to :guilabel:`PDF`."
-msgstr ""
+msgstr "レーザープリンタの場合、 :guilabel:`ラベルフォーマット` を :guilabel:`PDF` に設定します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:224
 msgid ""
 "For Zebra printers, set the :guilabel:`Label Format` to :guilabel:`ZPL2`."
-msgstr ""
+msgstr "Zebraプリンタの場合は、 :guilabel:`ラベルフォーマット` を :guilabel:`ZPL2` に設定します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst-1
 msgid ""
 "Show the *Label Type* field on FedEx's shipping method configuration page."
-msgstr ""
+msgstr "FedExの配送方法設定ページに*ラベルタイプ*フィールドを表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:231
 msgid "Example carrier label"
-msgstr ""
+msgstr "運送会社ラベルの例"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:233
 msgid ""
 "After validating the operation, the carrier label is generated in the "
 "chatter, and printed using the IoT-connected printer."
-msgstr ""
+msgstr "オペレーション検証後、チャターで運送会社ラベルが生成され、IoT接続プリンタで印刷されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:0
 msgid "Show an example carrier label for FedEx."
-msgstr ""
+msgstr "FedExの運送会社ラベルの例を示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:242
 msgid ""
 "Carrier label for FedEx, containing the recipient address, tracking number, "
 "barcode, and other shipping information."
-msgstr ""
+msgstr "受取人の住所、追跡番号、バーコード、その他の配送情報が記載されたFedExの運送会社ラベル。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:246
 msgid ":doc:`Print carrier labels <../setup_configuration/labels>`"
-msgstr ""
+msgstr ":doc:`運送会社ラベルを印刷する <../setup_configuration/labels>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:251
 msgid "Export document"
-msgstr ""
+msgstr "輸出ドキュメント"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:253
 msgid ""
 "An *export document*, required by customs to ship packages from one country "
 "to another, can be automatically printed in Odoo by following these steps:"
-msgstr ""
+msgstr "ある国から別の国へ荷物を発送する際に税関で要求される*輸出ドキュメント*は、以下の手順でOdooで自動的に印刷することができます:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:256
 msgid ""
 "Tick the :guilabel:`Export Documents` checkbox in the :ref:`operation type "
 "settings <inventory/shipping_receiving/print_setup>`."
 msgstr ""
+":ref:`オペレーションタイプ設定 <inventory/shipping_receiving/print_setup>` の "
+":guilabel:`輸出ドキュメント` チェックボックスにチェックを入れます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:259
 msgid "Assign the export document to the printer."
-msgstr ""
+msgstr "輸出ドキュメントをプリンタに割当てます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:264
 msgid ""
@@ -10179,6 +10287,9 @@ msgid ""
 "compatible printer to the Odoo *IoT* app, go to :menuselection:`IoT app --> "
 "Devices`, and select the desired printer."
 msgstr ""
+":ref:`運送会社ラベル用プリンタ割当の説明 <inventory/shipping_receiving/assign-printer>` "
+"と同様に、互換性のあるプリンタをOdoo *IoT*アプリに接続した後、 :menuselection:`IoTアプリ --> "
+"デバイス`で希望のプリンタを選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:268
 msgid ""
@@ -10187,21 +10298,24 @@ msgid ""
 "up window that appears, add the :guilabel:`Shipping Documents` report to "
 "assign the export document to the printer."
 msgstr ""
+"プリンタ設定フォームで :guilabel:`プリンタレポート` タブを開き、 :guilabel:`明細を追加` "
+"をクリックします。表示される:guilabel:`追加: レポート`ポップアップウィンドウで、 :guilabel:`出荷ドキュメント` "
+"レポートを追加して、輸出ドキュメントをプリンタに割当てます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:0
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:278
 msgid "Export document for a shipment from the USA to Belgium."
-msgstr ""
+msgstr "米国からベルギーへの貨物の輸出ドキュメント。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:283
 msgid "Package content"
-msgstr ""
+msgstr "梱包内容"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:285
 msgid ""
 "A *package content* PDF includes the package's barcode, packed date, along "
 "with a list of contained products and quantities."
-msgstr ""
+msgstr "*梱包内容*のPDFには、梱包のバーコード、梱包日、同梱プロダクトと数量のリストが含まれます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:288
 msgid ""
@@ -10210,6 +10324,9 @@ msgid ""
 "Then, go to the :guilabel:`Hardware` tab, and tick the :guilabel:`Package "
 "Contents` checkbox."
 msgstr ""
+"このフォームを自動的に印刷するには、 :menuselection:`在庫アプリ --> 設定 --> オペレーションタイプ` "
+"に進み、希望するオペレーションタイプを選択します。次に:guilabel:`ハードウェア` タブを開き、 :guilabel:`梱包内容` "
+"チェックボックスにチェックを入れます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:293
 msgid ""
@@ -10218,31 +10335,34 @@ msgid ""
 ":menuselection:`Inventory app --> Configuration --> Settings`, ticking the "
 ":guilabel:`Packages` checkbox, and clicking :guilabel:`Save`."
 msgstr ""
+"このオプションが利用できない場合は、 :menuselection:`在庫アプリ --> 設定 --> 管理設定` で "
+":guilabel:`梱包`チェックボックスにチェックを入れ、 :guilabel:`保存`をクリックして :doc:`梱包 "
+"<../../product_management/product_tracking/package>` 機能を有効にして下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:298
 msgid ""
 "After enabling the feature in the :guilabel:`Hardware` tab, validating the "
 "operation prints a PDF of the package contents."
-msgstr ""
+msgstr ":guilabel:`ハードウェア`タブで機能を有効にした後、オペレーションを検証すると梱包内容のPDFが印刷されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:0
 msgid ""
 "Package contents form showing the package contents, barcode, and pack date."
-msgstr ""
+msgstr "梱包内容、バーコード、梱包日が記載された梱包内容フォーム。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:307
 msgid "Package contents showing the package contents, barcode, and pack date."
-msgstr ""
+msgstr "梱包内容、バーコード、梱包日を示す梱包内容。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:312
 msgid "Package label"
-msgstr ""
+msgstr "梱包ラベル"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:314
 msgid ""
 "A *package label* that shows the package's barcode and pack date can be "
 "configured to print upon clicking the *Put in Pack* button."
-msgstr ""
+msgstr "梱包のバーコードと梱包日を示す*梱包ラベル*は、*梱包する*ボタンをクリックすると印刷されるように設定できます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:318
 msgid ""
@@ -10250,6 +10370,9 @@ msgid ""
 ":doc:`Packages <../../product_management/product_tracking/package>` feature "
 "is enabled in :menuselection:`Inventory app --> Configuration --> Settings`."
 msgstr ""
+"この :guilabel:`梱包する` ボタンは、 :doc:梱包 "
+"<../../product_management/product_tracking/package>` 機能が "
+":menuselection:`在庫アプリ --> 設定 --> 管理設定` で有効になっている場合**のみ**使用できます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:322
 msgid ""
@@ -10257,6 +10380,8 @@ msgid ""
 "inventory operations (e.g. receipt, pickings, internal transfers, delivery "
 "orders, etc.)."
 msgstr ""
+"これを有効にすると、 :guilabel:`梱包する` "
+"ボタンは全ての在庫オペレーション(入荷、ピッキング、内部運送、配送オーダなど)で利用できるようになります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:325
 msgid ""
@@ -10267,10 +10392,15 @@ msgid ""
 "can be printed in :guilabel:`PDF` or :guilabel:`ZPL` file formats, as "
 "defined in the :guilabel:`Print label as` field."
 msgstr ""
+":guilabel:`梱包する`ボタンをクリックしたときに梱包ラベルを自動的に印刷するには、 :menuselection:`在庫アプリ --> 設定 "
+"--> "
+"オペレーションタイプ`に進みます。必要なオペレーションタイプを選択し、:guilabel:`ハードウェア`タブの:guilabel:`梱包ラベル`チェックボックスにチェックを入れます。ラベルは"
+" :guilabel:`ラベルを以下として印刷:` フィールドで定義された :guilabel:`PDF` または :guilabel:`ZPL` "
+"ファイル形式で印刷できます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/print_on_validation.rst:0
 msgid "PDF of package barcode and package date."
-msgstr ""
+msgstr "梱包バーコードと梱包日のPDF"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:3
 msgid "Scheduled delivery dates"
@@ -10308,6 +10438,8 @@ msgid ""
 "date the products are shipped from the warehouse. This is also known as "
 "*delivery lead time*."
 msgstr ""
+":ref:`顧客リードタイム <inventory/shipping_receiving/customer-lt>`: "
+"顧客のオーダを処理するためのデフォルトの時間枠です。顧客リードタイムは、販売オーダ(SO)が確定してからプロダクトが倉庫から出荷されるまでの日数です。これは、*配送リードタイム*としても知られています。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:29
 msgid ""
@@ -10317,6 +10449,9 @@ msgid ""
 "shipment earlier, considering the possibility of delays in the fulfillment "
 "process."
 msgstr ""
+" :ref:`販売セキュリティリードタイム <inventory/shipping_receiving/sales-security-lt>`: "
+"*配送予定日* "
+"を指定した日数分進めます。これは、フルフィルメントプロセスで遅延が発生する可能性を考慮し、出荷を早めに準備するための十分な時間を確保するためのバッファとして機能します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:34
 msgid ""
@@ -10326,6 +10461,8 @@ msgid ""
 " the warehouse, facilitating effective scheduling and planning of supplier "
 "deliveries."
 msgstr ""
+" :ref:`購買リードタイム <inventory/shipping_receiving/purchase-lt>`: "
+"購買オーダ(PO)が確定してからプロダクトが入荷するまでの日数。プロダクトが倉庫に到着するまでの時間を把握することができ、仕入先配送の効果的なスケジューリングとプランニングが容易になります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:39
 msgid ""
@@ -10336,6 +10473,8 @@ msgid ""
 "that are set to replenish to order, the need appears on the *Replenishment "
 "report* earlier, according to the specified number of days."
 msgstr ""
+":ref:`購買セキュリティリードタイム <inventory/shipping_receiving/purchase-security-lt>`: "
+":abbr:`PO(購買オーダ)`の発注期限を指定した日数分早めます。オーダを早めに発注するというこの積極的なアプローチにより、仕入や出荷の遅延のリスクを軽減します。このように、オーダに応じて補充するように設定されているプロダクトでは、指定された日数に従って、*補充レポート*に必要なものが早く表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:45
 msgid ""
@@ -10344,6 +10483,8 @@ msgid ""
 "confirm it. It advances the deadline to schedule a |RFQ| by a specified "
 "number of days."
 msgstr ""
+" :ref:`購買所要日数 <inventory/shipping_receiving/days-to-purchase>`: "
+"仕入先が見積依頼(RFQ)を受け取って確認するまでに必要な日数。|RFQ|のスケジュール期限を指定した日数分進めます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:49
 msgid ""
@@ -10353,6 +10494,8 @@ msgid ""
 "Odoo), and is used to forecast an approximate production date for a finished"
 " good."
 msgstr ""
+":ref:`製造リードタイム <inventory/shipping_receiving/manuf-lt>`: "
+"確認日から製造オーダ(MO)が完了するまでに必要な日数です。このリードタイムは週末(Odooでは非稼働時間)を含み、完成品のおおよその生産日を予測するために使用されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:54
 msgid ""
@@ -10363,6 +10506,9 @@ msgid ""
 "*Compute* to sum up purchase and manufacturing lead times of components in "
 "the |BoM|."
 msgstr ""
+":ref:`製造オーダ準備所要日数 <inventory/shipping_receiving/prepare-manufacturing-"
+"order>`: "
+"構成品の補充、またはプロダクトのサブアセンブリの製造に必要な日数です。部品表(BoM)に直接設定するか、*計算*をクリックして|BoM|内の部品の購買リードタイムと製造リードタイムを合計して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:60
 msgid ""
@@ -10373,6 +10519,10 @@ msgid ""
 "security lead time makes the need appear earlier on the replenishment "
 "report."
 msgstr ""
+" :ref:`製造セキュリティリードタイム <inventory/shipping_receiving/manuf-security-lt>`: "
+":abbr:`MO(製造オーダ)`の予定日を指定された日数分進めます。ref:`オーダ基準補充 "
+"<inventory/management/products/strategies>` "
+"と一緒に使用すると、安全リードタイムは補充レポート上で必要なものをより早く表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:69
 msgid "Sales lead times"
@@ -10674,6 +10824,8 @@ msgid ""
 "On the :guilabel:`Settings` page, under the :guilabel:`Advanced Scheduling` "
 "heading, tick the checkbox for :guilabel:`Security Lead Time for Purchase`."
 msgstr ""
+":guilabel:`設定`ページの :guilabel:`高度なスケジューリング` の下にある :guilabel:`購買セキュリティリードタイム` "
+"のチェックボックスにチェックを入れます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:233
 msgid ""
@@ -10681,6 +10833,8 @@ msgid ""
 " lead time, a buffer is set to account for potential delays in supplier "
 "deliveries. Then, click :guilabel:`Save`."
 msgstr ""
+"次に、希望する暦日数を入力します。安全リードタイムを設定することで、仕入先の納品が遅れる可能性を考慮したバッファが設定されます。次に "
+":guilabel:`保存` をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:237
 msgid ""
@@ -10690,6 +10844,8 @@ msgid ""
 "two-day security lead time, the new scheduled date for the receipt would be "
 "April 8th."
 msgstr ""
+":guilabel:`購買用セキュリティリードタイム`を`2.00`日に設定すると、 "
+":guilabel:`入荷予定日`が2日後倒しになります。この場合、プロダクトの入荷予定日が4月6日、安全リードタイムが2日の場合、新しい入荷予定日は4月8日となります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:0
 msgid ""
@@ -10699,7 +10855,7 @@ msgstr "在庫＞設定＞管理設定から購買の安全リードタイムを
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:249
 msgid "Days to purchase"
-msgstr ""
+msgstr "購買所要日数"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:251
 msgid ""
@@ -10709,10 +10865,12 @@ msgid ""
 "number of days required for the vendor to confirm a |RFQ| after receiving it"
 " from the company."
 msgstr ""
+" *購買所要日数*リードタイムを設定するには、 :menuselection:`在庫アプリ --> 設定 --> 管理設定` "
+"に進みます。:guilabel:`高度なスケジューリング`セクションの:guilabel:`購買所要日数`フィールドで、仕入先が会社から|RFQ|を受け取ってから確認するまでに必要な日数を指定します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst-1
 msgid "Show \"Days to Purchase\" configuration in the Settings page."
-msgstr ""
+msgstr "設定ページに\"購買所要日数\"設定を表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:263
 msgid "Manufacturing lead times"
@@ -10723,7 +10881,7 @@ msgid ""
 "Lead times can help simplify the procurement process for consumable "
 "materials and components used in manufactured products with bills of "
 "materials (BoMs)."
-msgstr ""
+msgstr "リードタイムは、部品表(BoM)のある製造プロダクトで使用される消耗品や構成品の調達プロセスを簡素化するのに役立ちます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:268
 msgid ""
@@ -10748,13 +10906,15 @@ msgstr "製造リードタイム"
 msgid ""
 "Manufacturing lead times for products are configured from a product's bill "
 "of materials (BoM) form."
-msgstr ""
+msgstr "プロダクトの製造リードタイムは、プロダクトの部品表(BoM)から設定されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:281
 msgid ""
 "To add a lead time to a |BoM|, navigate to :menuselection:`Manufacturing app"
 " --> Products --> Bills of Materials`, and select the desired |BoM| to edit."
 msgstr ""
+" |BoM|にリードタイムを追加するには、:menuselection:`製造アプリ --> プロダクト --> "
+"部品表`に移動し、編集したい|BoM|を選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:284
 msgid ""
@@ -10762,16 +10922,18 @@ msgid ""
 " (in days) in the :guilabel:`Manuf. Lead Time` field to specify the calendar"
 " days needed to manufacture the product."
 msgstr ""
+"|BoM| フォームの :guilabel:`その他` "
+"タブをクリックします。:guilabel:`製造リードタイム`フィールドの値(日数)を変更して、プロダクトの製造に必要な暦日数を指定します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst-1
 msgid "Manuf. Lead Time value specified on a product's Bill of Material form."
-msgstr ""
+msgstr " プロダクトの部品表に記載されている製造リードタイムの値。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:292
 msgid ""
 "If the selected |BoM| is a multi-level |BoM|, the manufacturing lead times "
 "of the components are added."
-msgstr ""
+msgstr " 選択された|BoM|が複数レベルの|BoM|である場合、構成品の製造リードタイムが追加されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:295
 msgid ""
@@ -10779,6 +10941,7 @@ msgid ""
 "be used to determine the date at which components should be sent to the "
 "subcontractor."
 msgstr ""
+" |BoM|プロダクトが外注されている場合、 :guilabel:`製造リードタイム`は、構成品を下請業者に送る日付を決定するために使用できます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:298
 msgid ""
@@ -10812,17 +10975,21 @@ msgid ""
 "capacity* (:dfn:`the number of operations that can be performed at the work "
 "center simultaneously`)."
 msgstr ""
+"しかし、リードタイムは暦日に基づいていることに注意することが重要です。リードタイムは、週末や休日、*作業区のキャパシティ* "
+"(:dfn:`作業区で同時に実行できる作業数`)は**考慮していません。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:312
 msgid ""
 ":doc:`Manufacturing planning <../../../manufacturing/workflows/use_mps>`"
-msgstr ""
+msgstr ":doc:`製造計画 <../../../manufacturing/workflows/use_mps>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:313
 msgid ""
 ":doc:`Schedule MOs with reordering rules "
 "<../../product_management/product_replenishment/reordering_rules>`"
 msgstr ""
+":doc:`再オーダ規則による購買オーダスケジューリング  "
+"<../../product_management/product_replenishment/reordering_rules>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:317
 msgid ""
@@ -10836,7 +11003,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:324
 msgid "Days to prepare manufacturing order"
-msgstr ""
+msgstr "製造オーダ準備所要日数"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:326
 msgid ""
@@ -10844,6 +11011,8 @@ msgid ""
 " going to its |BoM|. To do that, go to :menuselection:`Manufacturing app -->"
 " Products --> Bills of Materials`, and select the desired |BoM|."
 msgstr ""
+"あるプロダクトを製造するために構成品を集めるのに必要な日数を、そのプロダクトの|BoM|で設定します。そのためには "
+":menuselection:`製造アプリ --> プロダクト --> 部品表` に行き、必要な |BoM| を選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:330
 msgid ""
@@ -10853,6 +11022,9 @@ msgid ""
 "ensures there is enough time to either replenish components, or manufacture "
 "semi-finished products."
 msgstr ""
+"|BoM|の "
+":guilabel:`その他`タブで、:guilabel:`製造オーダ準備所要日数`フィールドにプロダクトの構成品を入手するのに必要な暦日数を指定します。こうすることで事前に"
+" |MO|を作成し、構成品の補充や半製品の製造に十分な時間を確保することができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:336
 msgid ""
@@ -10860,12 +11032,14 @@ msgid ""
 " Manufacturing Order` field, calculates the longest lead time among all the "
 "components listed on the |BoM|."
 msgstr ""
+":guilabel:`製造オーダ準備所要時間`フィールドの隣にある :guilabel:`計算`をクリックすると、 "
+"|BoM|にリストされた全ての構成品の中で最も長いリードタイムを計算します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:339
 msgid ""
 "*Purchase security lead times* that impact this specific |BoM| are also "
 "added to this value."
-msgstr ""
+msgstr "*この特定の|BoM|に影響を与える購買セキュリティリードタイム*もこの値に加算されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:343
 msgid ""
@@ -10873,6 +11047,7 @@ msgid ""
 "and the other has a purchase lead time of four days. The :guilabel:`Days to "
 "prepare Manufacturing Order` is four days."
 msgstr ""
+" |BoM|には2つの構成品があり、1つは製造リードタイムが2日、もう1つは購買リードタイムが4日です。:guilabel:`製造オーダ準備所要時間`は4日です。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:350
 msgid "Manufacturing security lead time"
@@ -10885,6 +11060,8 @@ msgid ""
 " :guilabel:`Planning` heading, tick the checkbox for :guilabel:`Security "
 "Lead Time`."
 msgstr ""
+"*製造セキュリティリードタイム*は :menuselection:`製造アプリ --> 設定 --> 管理設定` "
+"でそのビジネスに対して全体的に設定されます。:guilabel:`計画`の下にある、:guilabel:`セキュリティリードタイム`のチェックボックスにチェックを入れます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst:356
 msgid ""
@@ -10892,6 +11069,8 @@ msgid ""
 " lead time, a buffer is set to account for potential delays in the "
 "manufacturing process. Then, click :guilabel:`Save`."
 msgstr ""
+"次に、希望する暦日数を入力します。セキュリティリードタイムを設定することにより、製造工程における潜在的な遅延を考慮したバッファが設定されます。次に "
+":guilabel:`保存` をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/scheduled_dates.rst-1
 msgid ""
@@ -11244,13 +11423,15 @@ msgid ""
 "directly into stock, and deliveries will be moved directly from stock to "
 "customers."
 msgstr ""
+"Odoo "
+"*在庫*では、デフォルトで入庫と出庫がワンステップで処理されるように設定されています。つまり購買は在庫に直接入荷され、配送は在庫から顧客に直接移動されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:16
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:30
 msgid ""
 "Incoming and outgoing shipments do **not** need to be configured with the "
 "same amount of steps."
-msgstr ""
+msgstr "入荷と出荷配送は同じステップ数で設定する必要は**ありません**。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:18
 msgid ""
@@ -11258,6 +11439,7 @@ msgid ""
 "received directly in one step, and delivered in three steps (pick + pack + "
 "ship)."
 msgstr ""
+"例えば、倉庫の設定を行うことで、プロダクトを1つのステップで直接受け取り、3つのステップ(ピッキング＋梱包＋出荷)で配送することができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:24
 msgid ""
@@ -11265,6 +11447,8 @@ msgid ""
 ":menuselection:`Inventory app --> Configuration --> Warehouses`, and select "
 "a warehouse to edit."
 msgstr ""
+"倉庫のワンステップ入荷と配送を設定するには、 :menuselection:`在庫アプリ --> 設定 --> "
+"倉庫`に移動し、編集する倉庫を選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:27
 msgid ""
@@ -11273,22 +11457,23 @@ msgid ""
 ":guilabel:`Outgoing Shipments` to :guilabel:`Deliver goods directly (1 "
 "step)`."
 msgstr ""
+":guilabel:`倉庫設定`タブで、:guilabel:`入荷`を:guilabel:`直接入荷(1ステップ)`に設定し、:guilabel:`出荷`を:guilabel:`直接出荷(1ステップ)`に設定します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst-1
 msgid "Incoming and outgoing shipments set to one-step on warehouse form."
-msgstr ""
+msgstr "倉庫フォームで入出荷をワンステップに設定。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:36
 msgid ""
 "Since one-step receipt and delivery is the default for incoming and outgoing"
 " shipments in Odoo, the *Multi-Step Routes* feature is *not* required."
-msgstr ""
+msgstr " Odooでは入出荷が1ステップで完了するため、*複数ステップルート*機能は必要*ありません*。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:39
 msgid ""
 "However, for the :guilabel:`Shipments` settings to appear on a warehouse "
 "form, the feature **must** be enabled."
-msgstr ""
+msgstr "しかし、:guilabel:`運送`の設定を倉庫のフォームに表示するためには、この機能が有効になっている必要があります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:42
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:41
@@ -11299,6 +11484,10 @@ msgid ""
 ":guilabel:`Save`. Doing so also activates the :guilabel:`Storage Locations` "
 "feature."
 msgstr ""
+"*複数ステップルート*を有効にするには、 :menuselection:`在庫アプリ --> 設定 --> "
+"管理設定`に移動します。:guilabel:`倉庫` セクションで :guilabel:`複数ステップルート` "
+"の隣にあるチェックボックスにチェックを入れ、 :guilabel:`保存` をクリックします。そうすることで :guilabel:`保管場所` "
+"機能も有効化されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:50
 msgid "Receive goods directly (1 step)"
@@ -11309,7 +11498,7 @@ msgid ""
 "When products are received in one step, they will move from the vendor "
 "location to warehouse stock in the database immediately upon validation of a"
 " purchase order (PO)."
-msgstr ""
+msgstr "プロダクトがワンステップで入荷されると、購買オーダ(PO)の検証済と同時に、仕入先からデータベース内の倉庫在庫に即座に移動します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:58
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:81
@@ -11318,16 +11507,18 @@ msgid ""
 ":guilabel:`New`. This opens a blank :guilabel:`Request for Quotation` (RfQ) "
 "form."
 msgstr ""
+"|PO|(購買オーダ)を作成するには、 :menuselection:`購買アプリ` に移動し、 :guilabel:`新規` "
+"をクリックします。これにより空白の :guilabel:`見積依頼書` (RfQ) フォームが開きます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:61
 msgid ""
 "Add a vendor in the :guilabel:`Supplier` field. Then, fill out the various "
 "fields on the |RfQ|, as necessary."
-msgstr ""
+msgstr ":guilabel:`仕入先`フィールドに仕入先を追加します。その後、必要に応じて|RfQ|の様々なフィールドに記入して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst-1
 msgid "Filled out new request for quotation form."
-msgstr ""
+msgstr "新しい見積依頼フォームに記入。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:68
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:91
@@ -11335,6 +11526,7 @@ msgid ""
 "Under the :guilabel:`Products` tab, click :guilabel:`Add a product`, and "
 "select a product to add to the |RfQ|."
 msgstr ""
+":guilabel:`プロダクト`タブで、:guilabel:`プロダクトを追加`をクリックし、|RfQ|に追加するプロダクトを選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:71
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:94
@@ -11342,6 +11534,7 @@ msgid ""
 "Once ready, click :guilabel:`Confirm Order`. This moves the |RfQ| to the "
 ":guilabel:`Purchase Order` stage."
 msgstr ""
+"準備ができたら :guilabel:`オーダ確認` をクリックして下さい。これで|RfQ|は:guilabel:`購買オーダ`のステージに移されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:74
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:97
@@ -11350,17 +11543,19 @@ msgid ""
 "the top of the form. Clicking the smart button opens the warehouse receipt "
 "(WH/IN) form."
 msgstr ""
+" |PO|が確定されると、フォームの上部に :guilabel:`入荷` "
+"スマートボタンが表示されます。スマートボタンをクリックすると倉庫入荷(WH/IN)フォームが開きます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst-1
 msgid "Receipt smart button on confirmed purchase order form."
-msgstr ""
+msgstr "確定した購買オーダフォームの入荷スマートボタン。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:82
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:113
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:171
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:249
 msgid "Process receipt"
-msgstr ""
+msgstr "入荷処理"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:84
 msgid ""
@@ -11368,10 +11563,12 @@ msgid ""
 "the warehouse. To receive the products, click :guilabel:`Validate`. Once "
 "validated, the receipt moves to the :guilabel:`Done` stage."
 msgstr ""
+"倉庫入荷フォームから、オーダしたプロダクトを倉庫に入荷することができます。プロダクトを入荷するには :guilabel:`検証` "
+"をクリックします。検証済になると、入荷は :guilabel:`完了` ステージに移ります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst-1
 msgid "Validated warehouse receipt in Done stage."
-msgstr ""
+msgstr "完了段階で検証済の倉庫入荷。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:92
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:123
@@ -11380,6 +11577,8 @@ msgid ""
 " the |PO| form. On the product line, the quantity in the "
 ":guilabel:`Received` column now matches the ordered :guilabel:`Quantity`."
 msgstr ""
+"|PO|フォームを表示するには、(フォーム上部のパンくずを経由して)|PO|に戻るをクリックして下さい。プロダクト明細で、 "
+":guilabel:`入荷済` 列の数量がオーダされた :guilabel:`数量` と一致するようになりました。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:99
 msgid "Deliver goods directly (1 step)"
@@ -11391,11 +11590,12 @@ msgid ""
 " to the customer location in the database immediately upon validation of a "
 "sales order (SO)."
 msgstr ""
+"プロダクトがワンステップで納品される場合、販売オーダ(SO)の検証と同時に、プロダクトは倉庫在庫からデータベース内の顧客ロケーションに即座に移動します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:105
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:156
 msgid "Create sales order"
-msgstr ""
+msgstr "販売オーダを作成する"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:107
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:158
@@ -11403,30 +11603,33 @@ msgid ""
 "To create a |SO|, navigate to the :menuselection:`Sales app`, and click "
 ":guilabel:`New`. This opens a blank sales quotation form."
 msgstr ""
+"|SO|(販売オーダ)を作成するには、 :menuselection:`販売アプリ` に移動し、 :guilabel:`新規` "
+"をクリックします。空白の販売見積フォームが開きます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:110
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:161
 msgid ""
 "Add a customer in the :guilabel:`Customer` field. Then, fill out the various"
 " fields on the sales quotation form, as necessary."
-msgstr ""
+msgstr ":guilabel:`顧客`フィールドに顧客を追加します。その後、必要に応じて販売見積フォームの様々なフィールドに記入して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst-1
 msgid "Filled out new sales quotation form."
-msgstr ""
+msgstr "新規販売見積書を記入。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:117
 msgid ""
 "Under the :guilabel:`Product` tab, click :guilabel:`Add a product`, and "
 "select a product to add to the sales order quotation."
 msgstr ""
+" :guilabel:`プロダクト`タブで、:guilabel:`プロダクトの追加`をクリックし、販売オーダの見積に追加するプロダクトを選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:120
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:171
 msgid ""
 "Once ready, click :guilabel:`Confirm`. This moves the quotation to the "
 ":guilabel:`Sales Order` stage."
-msgstr ""
+msgstr "準備ができたら :guilabel:`確認` をクリックします。これで見積は :guilabel:`販売オーダ` のステージに移ります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:123
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:174
@@ -11435,15 +11638,17 @@ msgid ""
 "the top of the form. Clicking the smart button opens the warehouse delivery "
 "(WH/OUT) form."
 msgstr ""
+"|SO|が確定すると、フォームの上部に :guilabel:`配送` "
+"スマートボタンが表示されます。スマートボタンをクリックすると、倉庫配送(WH/OUT)フォームが開きます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst-1
 msgid "Delivery smart button on confirmed sales order form."
-msgstr ""
+msgstr "確認済販売オーダフォームの配送スマートボタン。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:131
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:207
 msgid "Process delivery"
-msgstr ""
+msgstr "配送処理"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:133
 msgid ""
@@ -11452,6 +11657,8 @@ msgid ""
 "in the :guilabel:`Quantity` field to match the ordered quantity in the "
 ":guilabel:`Demand` field."
 msgstr ""
+"倉庫配送フォームから、顧客が配送オーダしたプロダクトを倉庫から配送することができます。プロダクトを配送するには、 :guilabel:`数量` "
+"フィールドの値を :guilabel:`要求` フィールドのオーダ数量と一致するように変更します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:137
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:225
@@ -11459,10 +11666,11 @@ msgid ""
 "Once ready, click :guilabel:`Validate`. Once validated, the delivery order "
 "moves to the :guilabel:`Done` stage."
 msgstr ""
+"準備ができたら :guilabel:`検証` をクリックします。検証済になると、配送オーダは :guilabel:`完了` ステージに移ります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst-1
 msgid "Validated delivery order in Done stage."
-msgstr ""
+msgstr "完了ステージで検証済の配送オーダ。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:144
 msgid ""
@@ -11470,11 +11678,13 @@ msgid ""
 " the |SO| form. On the product line, the quantity in the "
 ":guilabel:`Delivered` column now matches the ordered :guilabel:`Quantity`."
 msgstr ""
+" |SO|フォームを表示するには(フォーム上部のパンくずを経由して)|SO|に戻るをクリックして下さい。プロダクト明細の :guilabel:`配送済`"
+" 列の数量がオーダされた :guilabel:`数量` と一致するようになりました。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:149
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:229
 msgid ":doc:`shipments_deliveries`"
-msgstr ""
+msgstr ":doc:`shipments_deliveries`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:3
 msgid "Process receipts and deliveries in two steps"
@@ -11486,6 +11696,8 @@ msgid ""
 "of the warehouse might require multi-step operations. In Odoo *Inventory*, "
 "this can be done using *Multi-Step Routes*."
 msgstr ""
+"企業のニーズによっては、プロダクトの入出荷に複数のステップが必要になる場合があります。Odoo "
+"*在庫*では、*複数ステップルート*を使用してこれを行うことができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:15
 msgid ""
@@ -11495,6 +11707,7 @@ msgid ""
 "freezers and refrigerators, secured locked areas, or special aisles and "
 "shelves."
 msgstr ""
+"2ステップ入荷処理では、プロダクトは入荷エリアで入荷され、その後在庫に転送されます。このような入荷プロセスは、冷凍庫や冷蔵庫、安全な施錠エリア、特別な通路や棚など、特定の保管場所を持つ倉庫にとって有益かもしれません。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:19
 msgid ""
@@ -11503,13 +11716,14 @@ msgid ""
 "products are *not* available for further processing, until they are "
 "transferred into stock."
 msgstr ""
+"プロダクトは保管場所に応じてソートすることができ、従業員は特定の場所に向かうプロダクトを全て在庫することができます。在庫に転送されるまでは、プロダクトはそれ以上処理できません。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:23
 msgid ""
 "In the two-step delivery process, products are first picked from their "
 "respective location in the warehouse, then transferred to an output location"
 " before being shipped to the customer."
-msgstr ""
+msgstr " 2ステップ配送処理では、プロダクトはまず倉庫のそれぞれの場所からピッキングされ、次に出荷場所に転送された後、顧客に出荷されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:26
 msgid ""
@@ -11517,6 +11731,7 @@ msgid ""
 "Last In, First Out (LIFO), or First Expired, First Out (FEFO) removal "
 "strategy."
 msgstr ""
+"これは、先入先出(FIFO)、後入先出(LIFO)、使用期限順先出、使用期限先出(FEFO)の払出方針を採用している企業にとって有益かもしれません。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:32
 msgid ""
@@ -11524,6 +11739,7 @@ msgid ""
 "received in two steps (input + stock), and delivered in three steps (pick + "
 "pack + ship)."
 msgstr ""
+"例えば、倉庫の設定は、プロダクトを2つのステップ(入荷＋在庫)で受け取り、3ステップ(ピッキング＋梱包＋出荷)で配送できるように設定できます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:38
 msgid ""
@@ -11531,10 +11747,11 @@ msgid ""
 "process in one step, by default. To change these settings, the *Multi-Step "
 "Routes* feature must be enabled."
 msgstr ""
+"Odoo*在庫*では、デフォルトで入出荷ともに1ステップで処理されるように設定されています。これらの設定を変更するには、*複数ステップルート*機能を有効にする必要があります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst-1
 msgid "Enabled Multi-Step Routes feature in Inventory app settings."
-msgstr ""
+msgstr "在庫アプリの設定でマルチステップルート機能を有効にしました。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:50
 msgid ""
@@ -11542,6 +11759,8 @@ msgid ""
 "to :menuselection:`Inventory app --> Configuration --> Warehouses`, and "
 "select a warehouse to edit."
 msgstr ""
+"次に、2ステップ入荷と配送用に倉庫を設定します。:menuselection:`在庫アプリ --> 設定 --> "
+"倉庫`に移動し、編集する倉庫を選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:53
 msgid ""
@@ -11550,10 +11769,11 @@ msgid ""
 "and set :guilabel:`Outgoing Shipments` to :guilabel:`Send goods in output "
 "and then deliver (2 steps)`."
 msgstr ""
+":guilabel:`倉庫設定`タブで、:guilabel:`入荷`を:guilabel:`入荷場所で受入後在庫(2ステップ)`に設定し、:guilabel:`出荷`を:guilabel:`出荷用置場に移動後配送(2ステップ)`に設定します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst-1
 msgid "Incoming and outgoing shipments set to two-step on warehouse form."
-msgstr ""
+msgstr "倉庫フォームで入出荷を2段階に設定。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:62
 msgid ""
@@ -11561,22 +11781,25 @@ msgid ""
 " and *Output* warehouse locations in the database, named `WH/Input` and "
 "`WH/Output`, respectively."
 msgstr ""
+"2段階の入荷と配送を選択すると、自動的にデータベースに新しい*入荷*と*出荷*の倉庫場所が作成され、それぞれ`WH/入荷`と`WH/出荷`という名前になります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:65
 msgid ""
 "To rename or edit these locations, navigate to :menuselection:`Inventory app"
 " --> Configuration --> Locations`, and select the desired location."
 msgstr ""
+"これらのロケーションの名前を変更したり編集したりするには、 :menuselection:`在庫アプリ --> 設定 --> "
+"ロケーション`に移動し、希望のロケーションを選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:68
 msgid ""
 "On the location's form, change the :guilabel:`Location Name`, and make any "
 "other necessary changes."
-msgstr ""
+msgstr "ロケーションフォームで、:guilabel:`ロケーション名` を変更し、その他必要な変更を加えます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:72
 msgid "Process receipt in two steps (input + stock)"
-msgstr ""
+msgstr "入荷を2ステップで処理(入力＋在庫)"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:74
 msgid ""
@@ -11585,20 +11808,22 @@ msgid ""
 "warehouse stock in the database, upon validation of a purchase order (PO), "
 "and a subsequent internal transfer."
 msgstr ""
+"プロダクトが2ステップで入荷されると、まず仕入先ロケーションから入荷ロケーションに移動されます。次に、購買オーダ(PO)の検証とそれに続く内部運送により、入荷ロケーションからデータベース内の倉庫在庫に移動されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:84
 msgid ""
 "Add a vendor in the :guilabel:`Vendor` field. Then, fill out the various "
 "fields on the |RfQ|, as necessary."
 msgstr ""
+":guilabel:`仕入先`フィールドに仕入先を追加します。その後、必要に応じて|RfQ|(見積依頼書)の様々なフィールドに記入して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst-1
 msgid "Filled out new Request for Quotation from vendor."
-msgstr ""
+msgstr "仕入先から新しい見積依頼書を記入。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst-1
 msgid "Delivery smart button for validated purchase order."
-msgstr ""
+msgstr "検証済購買オーダの配送スマートボタン。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:105
 msgid ""
@@ -11607,12 +11832,14 @@ msgid ""
 "be specified as the correct *input location* connected to the two-step "
 "warehouse."
 msgstr ""
+"異なるステップ設定を持つ複数の倉庫を持つビジネスでは、|PO|フォームの :guilabel:`配送先` フィールドは、2ステップ倉庫に接続された正しい"
+" *入荷場所*として指定される**必要があります**。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:109
 msgid ""
 "This can be done by selecting the warehouse from the drop-down menu that "
 "includes the `Receipts` label at the end of the name."
-msgstr ""
+msgstr "これは、名前の最後に`入荷`ラベルを含むドロップダウンメニューから倉庫を選択することで行うことができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:115
 msgid ""
@@ -11621,14 +11848,17 @@ msgid ""
 "validated, the receipt moves to the :guilabel:`Done` stage, and the products"
 " move to the :guilabel:`WH/Input` location."
 msgstr ""
+"倉庫入荷フォームから、オーダしたプロダクトを倉庫に入荷することができます。プロダクトを入荷するには :guilabel:`検証` "
+"をクリックします。検証済になると、入荷は :guilabel:`完了` ステージに移り、プロダクトは :guilabel:`WH/入荷` "
+"の場所に移動します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst-1
 msgid "Receipt form for products ordered from vendor."
-msgstr ""
+msgstr "仕入先に発注したプロダクトの入荷フォーム。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:128
 msgid "Process internal transfer"
-msgstr ""
+msgstr "内部運送の処理"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:130
 msgid ""
@@ -11640,7 +11870,7 @@ msgstr "入荷が確認されると、内部運送が作成され、処理でき
 msgid ""
 "To view the internal transfer, navigate to the :menuselection:`Inventory "
 "app`, and locate the :guilabel:`Internal Transfers` task card."
-msgstr ""
+msgstr "内部運送を見るには、 :menuselection:`在庫アプリ` に移動し、 :guilabel:`内部運送`タスクカードを探します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:135
 msgid ""
@@ -11648,26 +11878,29 @@ msgid ""
 "of all internal transfers to process, and select the transfer associated "
 "with the previously validated receipt."
 msgstr ""
+"タスクカードの :guilabel:`# 未処理` ボタンをクリックして、処理する内部運送のリストを表示し、検証済の入荷に関連する運送を選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:138
 msgid ""
 "Once ready, click :guilabel:`Validate` to complete the transfer, and move "
 "the product from :guilabel:`WH/Input` to :guilabel:`WH/Stock`."
 msgstr ""
+"準備ができたら :guilabel:`検証` をクリックして転送を完了し、プロダクトを :guilabel:`WH入荷`から "
+":guilabel:`WH/在庫` に移動します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:141
 msgid ""
 "Once the transfer is validated, the products enter inventory, and are "
 "available for customer deliveries or manufacturing orders."
-msgstr ""
+msgstr "転送が検証済になると、プロダクトは在庫に入り、顧客への配送や製造オーダが可能になります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst-1
 msgid "Internal transfer form for products ordered from vendor."
-msgstr ""
+msgstr "仕入先からオーダされたプロダクトの内部運送フォーム。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:149
 msgid "Process delivery order in two steps (pick + ship)"
-msgstr ""
+msgstr "配送オーダを2ステップで処理(ピッキング＋出荷)"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:151
 msgid ""
@@ -11676,24 +11909,26 @@ msgid ""
 "location in the database, upon validation of a picking order, and a "
 "subsequent delivery order (DO)."
 msgstr ""
+"プロダクトが2ステップで配送される場合、倉庫の在庫から出荷ロケーションに移動されます。次に、ピッキングオーダとそれに続く配送オーダ(DO)の検証時に、出荷ロケーションからデータベース内の顧客ロケーションに移動します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst-1
 msgid "Filled out new sales order form."
-msgstr ""
+msgstr " 新規販売オーダフォームに記入。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:168
 msgid ""
 "Under the :guilabel:`Order Lines` tab, click :guilabel:`Add a product`, and "
 "select a product to add to the sales order quotation."
 msgstr ""
+":guilabel:`オーダ明細`タブで、:guilabel:`プロダクトを追加`をクリックし、販売オーダ見積に追加するプロダクトを選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst-1
 msgid "Delivery smart button on validated sales order form."
-msgstr ""
+msgstr "検証済販売オーダフォームの配送スマートボタン。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:182
 msgid "Process picking"
-msgstr ""
+msgstr "ピッキングを処理"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:184
 msgid ""
@@ -11708,6 +11943,9 @@ msgid ""
 "dashboard. Alternatively, the picking order can also be accessed via the "
 ":guilabel:`Delivery` smart button at the top of the sales order form."
 msgstr ""
+"ピッキングを完了するには、 :guilabel:`在庫アプリ` に移動し、 :guilabel:`在庫概要`ダッシュボードで "
+":guilabel:`ピッキング` タスクカードを探します。また、販売オーダフォームの上部にある :guilabel:`配送` "
+"スマートボタンからもピッキングオーダにアクセスできます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:190
 msgid ""
@@ -11715,6 +11953,8 @@ msgid ""
 "Process` button on the :guilabel:`Pick` task card. This reveals a list of "
 "all pickings to process."
 msgstr ""
+":guilabel:`在庫概要` ページから、 :guilabel:`ピッキング` タスクカードの :guilabel:`# 未処理` "
+"ボタンをクリックします。これにより、全ての未処理のピッキングのリストが表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:193
 msgid ""
@@ -11724,19 +11964,21 @@ msgstr "販売オーダに関連付けられているピッキング(WH/ピッ�
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst-1
 msgid "Picking order form for products included in sales order."
-msgstr ""
+msgstr "販売オーダに含まれるプロダクトのピッキングオーダ。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:200
 msgid ""
 "Manually set the quantity by changing the value in the :guilabel:`Quantity` "
 "column, to match the value in the :guilabel:`Demand` column."
-msgstr ""
+msgstr ":guilabel:`要求`列の値に合わせて、:guilabel:`数量`列の値を変更することで、数量を手動で設定します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:203
 msgid ""
 "Once ready, click :guilabel:`Validate` to complete the picking, and move the"
 " product from :guilabel:`WH/Stock` to :guilabel:`WH/Output.`"
 msgstr ""
+"準備ができたら :guilabel:`検証` をクリックしてピッキングを完了し、プロダクトを :guilabel:`WH/在庫` から "
+":guilabel:`WH/出荷` に移動します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:209
 msgid ""
@@ -11744,6 +11986,8 @@ msgid ""
 "process. Clicking the :guilabel:`Delivery` smart button on the sales order "
 "form reveals the newly created delivery order."
 msgstr ""
+"ピッキングが検証済になると、配送オーダが作成され、処理できるようになります。販売オーダフォームの :guilabel:`配送` "
+"スマートボタンをクリックすると、新しく作成された配送オーダが表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:212
 msgid ""
@@ -11751,6 +11995,8 @@ msgid ""
 ":guilabel:`Inventory Overview` page, via the breadcrumbs, and locate the "
 ":guilabel:`Delivery Orders` task card."
 msgstr ""
+"また、配送オーダを見るには、パンくずリストで :guilabel:`在庫概要` ページに戻り、 :guilabel:`配送オーダ` "
+"タスクカードを探します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:215
 msgid ""
@@ -11758,16 +12004,20 @@ msgid ""
 "of all delivery orders to process, and select the order associated with the "
 "previously validated picking."
 msgstr ""
+"タスクカードの :guilabel:`# 未処理` "
+"ボタンをクリックして、処理する配送オーダのリストを表示し、検証済のピッキングに関連するオーダを選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst-1
 msgid "Delivery order form for products ordered by customer."
-msgstr ""
+msgstr "顧客がオーダしたプロダクト用の配送オーダフォーム。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:222
 msgid ""
 "To deliver the products, change the value in the :guilabel:`Quantity` field "
 "to match the ordered quantity in the :guilabel:`Demand` field."
 msgstr ""
+"プロダクトを配送するには、 :guilabel:`数量` フィールドの値を :guilabel:`要求` "
+"フィールドのオーダ数量と一致するように変更します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_three_steps.rst:3
 msgid "Process receipts in three steps"
@@ -13081,26 +13331,26 @@ msgstr "セットアップと設定"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:3
 msgid "Bpost integration"
-msgstr ""
+msgstr "Bpost統合"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:5
 msgid ""
 "Set up the *Bpost* shipping connector in Odoo to manage Bpost shipments to "
 "clients directly within Odoo. To configure it, complete these steps:"
-msgstr ""
+msgstr "Odooで*Bpost*配送コネクタを設定し、Odoo内で直接顧客へのBpost配送を管理することができます。設定方法は以下の通りです:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:8
 msgid "Create a Bpost account."
-msgstr ""
+msgstr "Bpostアカウントを作成します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:9
 msgid ""
 "Get the :ref:`Account ID and passphrase <inventory/shipping/Bpost-account>`."
-msgstr ""
+msgstr " :ref:`アカウントIDとパスフレーズを入手します <inventory/shipping/Bpost-account>`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:10
 msgid "Set up the shipping method in Odoo."
-msgstr ""
+msgstr "Odooで配送方法を設定します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:12
 msgid ""
@@ -13109,6 +13359,7 @@ msgid ""
 "business account, and automatically print Bpost tracking labels through "
 "Odoo."
 msgstr ""
+"完了後、梱包サイズと重量に基づいて送料を計算し、Bpostビジネスアカウントに直接料金を適用し、Odooを通してBpost追跡ラベルを自動的に印刷することができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:17
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:10
@@ -13117,7 +13368,7 @@ msgstr ":doc:`third_party_shipper`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:18
 msgid ":doc:`delivery_method`"
-msgstr ""
+msgstr ":doc:`delivery_method`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:19
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:19
@@ -13131,7 +13382,7 @@ msgstr ":doc:`ups_credentials`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:23
 msgid "Bpost account setup"
-msgstr ""
+msgstr "Bpostアカウント設定"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:25
 msgid ""
@@ -13140,6 +13391,7 @@ msgid ""
 "company's Bpost business account. When creating the Bpost account, have the "
 "company's VAT number and mobile phone number ready."
 msgstr ""
+"まず、Bpostのウェブサイト<https://parcel.bpost.be/en/home/business>`_にアクセスし、会社のBpostビジネスアカウントを作成するか、ログインします。Bpostアカウントを作成する際には、会社のVAT番号と携帯電話番号を用意して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:29
 msgid ""
@@ -13147,6 +13399,7 @@ msgid ""
 "shipping services. Doing so submits a request to enter a contractual "
 "business relationship between the company and Bpost."
 msgstr ""
+"ウェブサイトの手順に従って登録を完了し、配送サービスを申し込みます。これにより、会社とBpostとの間で契約上の取引関係を結ぶことになります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:33
 msgid ""
@@ -13154,12 +13407,15 @@ msgid ""
 "<https://bpost.freshdesk.com/support/solutions/articles/174847-account-id-"
 "and-passphrase>`_ accounts."
 msgstr ""
+"OdooはBpost "
+"<https://bpost.freshdesk.com/support/solutions/articles/174847-account-id-"
+"and-passphrase>`_の非ビジネスアカウントと統合することは**できません**。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:37
 msgid ""
 "After completing the setup, get the Bpost account ID and passphrase, by "
 "navigating to the :guilabel:`Shipping Manager` menu item."
-msgstr ""
+msgstr "設定が完了したら、:guilabel:`配送管理`メニューに移動して、BpostアカウントIDとパスフレーズを取得します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:42
 msgid ""
@@ -13167,14 +13423,17 @@ msgid ""
 "then the :guilabel:`General Settings` tab, to find the :guilabel:`Account "
 "ID` and :guilabel:`Passphrase` needed to configure Odoo's shipping method."
 msgstr ""
+":guilabel:`配送管理`ページで、 :guilabel:`管理`タブを開き、 "
+":guilabel:`一般設定`タブで、Odooの配送方法を設定するために必要な :guilabel:`アカウントID` と "
+":guilabel:`パスフレーズ` を確認します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst-1
 msgid "In the *Admin* tab, show the Account ID and Passphrase."
-msgstr ""
+msgstr "*管理*タブで、アカウントIDとパスフレーズを表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:51
 msgid "Configure Bpost shipping method"
-msgstr ""
+msgstr "Bpost配送方法を設定する"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:53
 msgid ""
@@ -13182,10 +13441,12 @@ msgid ""
 "Odoo by going to :menuselection:`Inventory app --> Configuration --> "
 "Shipping Methods`."
 msgstr ""
+"これらの必要な認証情報を使用して、Odooの :menuselection:`在庫アプリ --> 設定 --> "
+"配送方法`でBpost配送方法を設定します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:56
 msgid "On the :guilabel:`Shipping Methods` page, click :guilabel:`Create`."
-msgstr ""
+msgstr ":guilabel:`配送方法`ページで、 :guilabel:`作成` をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:58
 msgid ""
@@ -13193,6 +13454,8 @@ msgid ""
 "down menu. Doing so reveals the :guilabel:`Bpost Configuration` tab at the "
 "bottom of the form, where the Bpost credentials can be entered."
 msgstr ""
+":guilabel:`プロバイダー`フィールドで、ドロップダウンメニューから:guilabel:`Bpost`を選択します。そうすることで、フォームの下部に"
+" :guilabel:`Bpost設定` タブが表示され、Bpostの認証情報を入力することができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:62
 msgid ""
@@ -13200,6 +13463,8 @@ msgid ""
 ":guilabel:`Delivery Product`, refer to the :doc:`Configure third-party "
 "carrier <third_party_shipper>` documentation."
 msgstr ""
+"配送方法の他のフィールド、例えば :guilabel:`配送プロダクト` の設定の詳細については、 :doc:`サードパーティ運送会社を設定する "
+"<third_party_shipper>` ドキュメンテーションを参照して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:66
 msgid ""
@@ -13207,11 +13472,13 @@ msgid ""
 ":guilabel:`Integration Level` option is set to :guilabel:`Get Rate and "
 "Create Shipment`."
 msgstr ""
+"Bpostの :doc:`出荷ラベル <labels>` をOdooで作成するには、 :guilabel:`統合レベル` オプションが "
+":guilabel:`レートを取得して配送を作成` に設定されていることを確認して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:69
 msgid ""
 "In the :guilabel:`Bpost Configuration` tab, complete the following fields:"
-msgstr ""
+msgstr ":guilabel:`Bpost設定`タブで、以下のフィールドに記入して下さい:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:71
 msgid ""
@@ -13219,12 +13486,16 @@ msgid ""
 "unique :ref:`account ID <inventory/shipping/bpost-account>` from the Bpost "
 "website."
 msgstr ""
+":guilabel:`Bpostアカウント番号` (必須フィールド): Bpostウェブサイトから会社の一意の :ref:`アカウントID "
+"<inventory/shipping/bpost-account>` を入力して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:73
 msgid ""
 ":guilabel:`Passphrase` (required field): enter the :ref:`passphrase "
 "<inventory/shipping/bpost-account>` from the Bpost website."
 msgstr ""
+":guilabel:`パスフレーズ` (必須フィールド):  Bpostウェブサイトから :ref:`パスフレーズ "
+"<inventory/shipping/bpost-account>` を入力して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:75
 msgid ""
@@ -13234,12 +13505,16 @@ msgid ""
 "enables the :guilabel:`Bpost Shipment Type` and :guilabel:`Bpost Parcel "
 "Return Instructions` fields."
 msgstr ""
+":guilabel:`Bpost配送環境`: :guilabel:`国内` または :guilabel:`国際` "
+"の配送サービスを選択します。guilabel:`国内`を選択すると :guilabel:`オプション` セクションが表示され、 "
+":guilabel:`国際`を選択すると :guilabel:`Bpost配送タイプ` と :guilabel:`Bpost小包返送方法` "
+"フィールドが表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:79
 msgid ""
 ":guilabel:`Bpost Package Type`: select the type of shipping service from the"
 " drop-down menu."
-msgstr ""
+msgstr ":guilabel:`Bpost小包タイプ`: 配送サービスのタイプをドロップダウンメニューから選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:81
 msgid ""
@@ -16284,7 +16559,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/zebra.rst:49
 msgid "operation type"
-msgstr ""
+msgstr "オペレーションタイプ"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/zebra.rst:50
 msgid "package barcode"
@@ -16378,7 +16653,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/zebra.rst:150
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/zebra.rst:203
 msgid "Default"
-msgstr ""
+msgstr "デフォルト"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/zebra.rst:0
 msgid "Example barcode label with the product name cut off."
@@ -18713,7 +18988,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:21
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:3
 msgid "Warehouses"
-msgstr ""
+msgstr "倉庫"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:23
 msgid ""
@@ -31657,7 +31932,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_improvement.rst:54
 msgid "Helpdesk"
-msgstr ""
+msgstr "ヘルプデスク"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_improvement.rst:56
 msgid ""
@@ -31752,7 +32027,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_improvement.rst:111
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_improvement.rst:132
 msgid "PLM"
-msgstr ""
+msgstr "PLM"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_improvement.rst:113
 msgid ""
@@ -31802,7 +32077,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_improvement.rst:144
 msgid "Field Service"
-msgstr ""
+msgstr "フィールドサービス"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_improvement.rst:146
 msgid ""
@@ -31842,7 +32117,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_improvement.rst:169
 msgid "Surveys"
-msgstr ""
+msgstr "アンケート調査"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_improvement.rst:171
 msgid ""
@@ -32316,7 +32591,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/oee.rst:60
 msgid "Capacity"
-msgstr ""
+msgstr "能力"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/oee.rst:62
 msgid ""
@@ -33247,7 +33522,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:160
 msgid "Add a product"
-msgstr ""
+msgstr "プロダクト追加"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:162
 msgid ""
