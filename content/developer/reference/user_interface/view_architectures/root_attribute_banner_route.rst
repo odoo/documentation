@@ -10,13 +10,8 @@
    If the HTML contains a `<link>` tag for a stylesheet, it is removed from its original location
    and appended to the `<head>` section.
 
-   To interact with the backend, use `<a type="action">` tags. For more details, refer to the
-   documentation of the `_onActionClicked` method in `AbstractController
-   <{GITHUB_PATH}/addons/web/static/src/js/views/abstract_controller.js>`_.
-
-   Only views extending `AbstractView` and `AbstractController`, such as
-   :ref:`reference/view_architectures/form`, :ref:`reference/view_architectures/kanban`, and
-   :ref:`reference/view_architectures/list`, can use this attribute.
+   Use `<a type="action">` tags to interact with the backend, like with :ref:`action buttons
+   <reference/view_architectures/form/button>`.
 
    .. example::
       .. code-block:: xml
