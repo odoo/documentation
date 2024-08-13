@@ -22,7 +22,7 @@ Accounting onboarding banner
 
 The step-by-step Accounting onboarding banner is composed of four steps:
 
-.. image:: get_started/setup-accounting-onboarding.png
+.. image:: get_started/accounting-onboarding-banner.png
    :alt: Step-by-step onboarding banner in Odoo Accounting
 
 #. :ref:`accounting-setup-periods`
@@ -117,51 +117,34 @@ Invoicing app rather than the Accounting app.
 If you have Odoo Accounting installed on your database, you can reach it by going to
 :menuselection:`Accounting --> Customers --> Invoices`.
 
-The Invoicing onboarding banner is composed of four main steps:
+The Invoicing onboarding banner consists of four main steps:
 
-.. image:: get_started/setup-invoicing-onboarding.png
+.. image:: get_started/invoicing-onboarding-banner.png
    :alt: Step-by-step onboarding banner in Odoo Invoicing
 
 #. :ref:`invoicing-setup-company`
-#. :ref:`invoicing-setup-bank`
 #. :ref:`invoicing-setup-layout`
 #. :ref:`invoicing-setup-invoice`
+#. :ref:`invoicing-setup-payments`
 
 .. _invoicing-setup-company:
 
 Company Data
 ------------
 
-This form allows you to add your company’s details, such as the name, address, logo, website, phone
-number, email address, and Tax ID or VAT number. These details are then displayed on your
-documents, such as invoices.
-
-.. image:: get_started/setup_company.png
-   :alt: Add your company's details in Odoo Accounting and Odoo Invoicing
+Add your company’s details, such as the name, address, logo, website, phone number, email address,
+and Tax ID or VAT number. These details are then displayed on your documents, such as invoices.
 
 .. note::
    You can also change the company's details by going to :menuselection:`Settings --> General
    Settings`, scrolling down to the :guilabel:`Companies` section, and :guilabel:`Update Info`.
 
-.. _invoicing-setup-bank:
-
-Bank Account
-------------
-
-Use this button to create and link a bank account in Odoo. To add additional bank accounts, go to
-:guilabel:`Invoicing --> Configuration --> Add a Bank Account` and :ref:`configure the fields
-<bank_accounts/create>`.
-
-.. tip::
-   :doc:`Synchronize <bank/bank_synchronization>` your bank account(s) with your Odoo database to
-   automatically update your bank transactions.
-
 .. _invoicing-setup-layout:
 
-Invoice Layout
---------------
+Documents Layout
+----------------
 
-Use this button to customize the :ref:`default invoice layout <studio/pdf-reports/default-layout>`.
+Customize the :ref:`default invoice layout <studio/pdf-reports/default-layout>`.
 
 .. note::
    You can also change the invoice layout by going to :menuselection:`Settings --> General
@@ -170,15 +153,28 @@ Use this button to customize the :ref:`default invoice layout <studio/pdf-report
 
 .. _invoicing-setup-invoice:
 
-Invoice Creation
-----------------
+Create Invoice
+--------------
 
-This button takes you to the invoice creation view, where you can create your first invoice.
+Create your first invoice.
 
 .. tip::
    Add your **bank account number** and a link to your **General Terms & Condition** in the footer.
    This way, your contacts can find the full content of your GT&C online without having to print
    them on the invoices you issue.
+
+.. _invoicing-setup-payments:
+
+Online Payments
+---------------
+
+Get started with Stripe and enable secure integrated credit and debit card payments within Odoo.
+
+.. tip::
+   To use other payment providers, go to
+   :guilabel:`Invoicing --> Configuration --> Payment Providers` and
+   :doc:`enable the desired providers <../payment_providers>`.
+
 
 .. seealso::
    * :doc:`bank`
