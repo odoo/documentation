@@ -28,7 +28,7 @@ The following is a list of available shipping connectors in Odoo:
 
    * - Carrier
      - Region availability
-   * - FedEx
+   * - :doc:`FedEx <fedex>`
      - All
    * - :doc:`DHL <dhl_credentials>`
      - All
@@ -38,12 +38,14 @@ The following is a list of available shipping connectors in Odoo:
      - United States of America
    * - :doc:`Sendcloud <sendcloud_shipping>`
      - :ref:`EU* <inventory/shipping_receiving/sendcloud-eu>`
-   * - Bpost
+   * - :doc:`Bpost <bpost>`
      - Belgium
    * - Easypost
      - North America
    * - Shiprocket
      - India
+   * - :doc:`Starshipit <starshipit_shipping>`
+     - Australasia
 
 .. _inventory/shipping_receiving/sendcloud-eu:
 
