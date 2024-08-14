@@ -61,8 +61,11 @@ a form to provide details about the shipping provider, including:
   store <inventory/shipping/pickup>` options, refer to their respective sections below.
 - :guilabel:`Website`: configure shipping methods for an e-commerce page. Select the applicable
   website from the drop-down menu, or leave it blank to apply the method to all web pages.
-- :guilabel:`Company`: if the shipping method should apply to a specific company, select it from the
+- :guilabel:`Company`: If the shipping method should apply to a specific company, select it from the
   drop-down menu. Leave the field blank to apply the method to all companies.
+- :guilabel:`Routes`: select the applicable route(s) to define different delivery methods, such as
+  standard or express shipping, based on varying lead times. For more information, jump
+  to the :ref:`Set routes on shipping method <inventory/shipping_receiving/shipping-route>` section.
 
 .. _inventory/shipping_receiving/delivery-product:
 
@@ -173,6 +176,55 @@ from the shipping carrier.
 
 .. seealso::
    :doc:`Invoice cost of shipping <setup_configuration/invoicing>`
+
+.. _inventory/shipping_receiving/shipping-route:
+
+Route on shipping method
+------------------------
+
+Optionally, set different warehouse delivery processes for a shipping method by configuring
+different :doc:`routes <daily_operations/use_routes>` for it.
+
+.. example::
+   Configuring multiple routes per shipping method is helpful for adjusting warehouse delivery
+   processes based on:
+
+   - speed (e.g., use :doc:`one-step delivery <daily_operations/receipts_delivery_one_step>` for
+     express shipping, or :doc:`two-step <daily_operations/receipts_delivery_two_steps>` for
+     standard shipping).
+   - international shipping (e.g. use :doc:`three-step delivery
+     <daily_operations/delivery_three_steps>` to prepare documents for customs)
+   - in-store pickup or home delivery: ship from the central warehouse, or pick from the store's
+     stock, depending on customer selection.
+
+To set up routes, go to :menuselection:`Inventory app --> Configuration --> Routes`. Click
+:guilabel:`New`, or select the desired route.
+
+On the route form, in the :guilabel:`Applicable On` section, tick the :guilabel:`Shipping Methods`
+checkbox.
+
+.. figure:: setup_configuration/setup_configuration/shipping-route.png
+   :align: center
+   :alt: Routes form with the Shipping Methods checkbox selected.
+
+   Routes form with the Shipping Methods checkbox ticked.
+
+Then, go to :menuselection:`Inventory app --> Configuration --> Shipping Methods`, and select the
+desired shipping method.
+
+On the shipping method form, in the :guilabel:`Routes` field, select the available fulfillment
+routes from the drop-down menu.
+
+.. note::
+   If the desired route is not selectable, check that the *Shipping Methods* option is enabled in
+   the route's *Applicable On* section.
+
+.. figure:: setup_configuration/setup_configuration/set-routes.png
+   :align: center
+   :alt: Show set routes on shipping method form.
+
+   By default, most shipping methods are created with two routes available for standard or express
+   delivery.
 
 .. _inventory/shipping/sales-order:
 
