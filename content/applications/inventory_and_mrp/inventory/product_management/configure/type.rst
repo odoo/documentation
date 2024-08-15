@@ -78,8 +78,7 @@ to detailed sections.
      - :ref:`Yes* <inventory/product_management/on-hand-store>`
      - :ref:`Yes* <inventory/product_management/on-hand-con>`
      - No
-   * - :doc:`Inventory valuation
-       <../../warehouses_storage/inventory_valuation/using_inventory_valuation>`
+   * - :doc:`Inventory valuation <../inventory_valuation/using_inventory_valuation>`
      - Yes
      - No
      - No
