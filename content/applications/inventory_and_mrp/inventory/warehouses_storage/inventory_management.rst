@@ -65,7 +65,7 @@ field, there are:
 
 - :guilabel:`Internal Location`: storage locations within the warehouse. Items stored in these
   locations are accounted for in :doc:`inventory valuation
-  <inventory_valuation/using_inventory_valuation>`.
+  <../product_management/inventory_valuation/using_inventory_valuation>`.
 
 - :guilabel:`Customer Location`: where sold products are tracked; items here are no longer in stock.
 
