@@ -336,7 +336,6 @@ drop the taxes in the :ref:`order they should be computed <taxes/base-subsequent
 .. seealso::
   - :doc:`taxes/fiscal_positions`
   - :doc:`taxes/B2B_B2C`
-  - :doc:`taxes/taxcloud`
   - :doc:`reporting/tax_returns`
 
 .. toctree::
@@ -347,6 +346,5 @@ drop the taxes in the :ref:`order they should be computed <taxes/base-subsequent
    taxes/vat_verification
    taxes/fiscal_positions
    taxes/avatax
-   taxes/taxcloud
    taxes/eu_distance_selling
    taxes/B2B_B2C
