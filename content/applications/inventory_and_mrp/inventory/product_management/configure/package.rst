@@ -87,7 +87,7 @@ the above steps to place the :guilabel:`Product` in different packages. Once fin
 
 .. seealso::
    :doc:`Ship one order in multiple packages
-   <../../shipping_receiving/advanced_operations_shipping/multipack>`
+   <../../shipping_receiving/setup_configuration/multipack>`
 
 .. _inventory/warehouses_storage/put-in-pack:
 

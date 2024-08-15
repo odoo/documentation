@@ -131,8 +131,7 @@ The :guilabel:`Shipping Method` page contains details about the provider, includ
   |SO| or invoice.
 - :guilabel:`Invoicing Policy`: select and calculate an :guilabel:`Estimated cost` of shipping
   directly from the shipping carrier. If the :guilabel:`Real cost` of shipping is wanted instead,
-  refer to this :doc:`doc about invoicing real shipping costs
-  <../advanced_operations_shipping/invoicing>`.
+  refer to :doc:`Invoice real shipping costs <invoicing>` document.
 - :guilabel:`Margin on Rate`: specify an additional percentage amount added to the base shipping
   rate to cover extra costs, such as handling fees, packaging materials, exchange rates, etc.
 - :guilabel:`Free if order amount is above`: enables free shipping for orders surpassing a specified
@@ -253,8 +252,7 @@ cost through the shipping connector. Then, click the :guilabel:`Add` button to a
 charge to the |SO| or invoice.
 
 .. seealso::
-   :doc:`Charge customers for shipping after product delivery
-   <../advanced_operations_shipping/invoicing>`
+   :doc:`Charge customers for shipping after product delivery <invoicing>`
 
 .. _inventory/shipping_receiving/third-party-do:
 
