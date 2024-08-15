@@ -30,9 +30,9 @@ sites` can be made **website-specific**, but are by default available for *all* 
 
 .. seealso::
    - :doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration`
-   - :doc:`/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing`
-   - :doc:`/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/multipack`
-   - :doc:`/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/cancel`
+   - :doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing`
+   - :doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack`
+   - :doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/cancel`
 
 .. _ecommerce-shipping-providers:
 
