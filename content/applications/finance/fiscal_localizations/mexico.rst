@@ -370,18 +370,18 @@ Payment complements
 Payment policy
 **************
 
-One  addition of the Mexican localization is the :guilabel:`Payment Policy` field. According to
+One addition of the Mexican localization is the :guilabel:`Payment Policy` field. According to
 the SAT documentation, there are two types of payments:
 
 - `PUE` (Pago en una Sola Exhibición/Payment in a Single Exhibition)
 - `PPD` (Pago en Parcialidades o Diferido/Payment in Installements or Deferred)
 
    .. seealso::
-      :doc:`../../inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/integrating_landed_costs`
+      :doc:`../../inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs`
 
 The difference lies in the *Due Date* or *Payment Terms* of the invoice.
 
-To configure |PUE| invoices, navigatge to :menuselection:`Accounting --> Customers --> Invoices`,
+To configure |PUE| invoices, navigate to :menuselection:`Accounting --> Customers --> Invoices`,
 and either select an invoice :guilabel:`Due Date` within the same month, or choose a payment term
 that does not imply changing the due month (immediate payment, 15 days, 21 days, all falling within
 the current month).
@@ -908,7 +908,7 @@ Configuration
 ~~~~~~~~~~~~~
 
 In order to track the correct customs number for a specific invoice, Odoo uses :doc:`landed costs
-<../../inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/integrating_landed_costs>`.
+<../../inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs>`.
 Go to :menuselection:`Inventory --> Configuration --> Settings --> Valuation`. Make sure that
 :guilabel:`Landed Costs` is activated.
 
