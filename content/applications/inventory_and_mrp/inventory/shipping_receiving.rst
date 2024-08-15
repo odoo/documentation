@@ -12,4 +12,3 @@ Shipping and receiving
    shipping_receiving/reservation_methods
    shipping_receiving/picking_methods
    shipping_receiving/removal_strategies
-   shipping_receiving/advanced_operations_shipping
