@@ -22,18 +22,18 @@ can maintain control of tax-calculations in-house with this simple :abbr:`API (a
 programming interface)` integration.
 
 .. important::
-   Some limitations exist in Odoo while using *AvaTax* for tax calculation:
+   Some limitations exist in Odoo while using AvaTax for tax calculation:
 
-   - *AvaTax* is **not** supported in Odoo's *Point of Sale* app, because a dynamic tax calculation
-     model is excessive for transactions within a single delivery address, such as stores or
-     restaurants.
-   - *AvaTax* and Odoo use the company address and **not** the warehouse address.
-   - Exercise tax is **not** supported. This includes tobacco/vape taxes, fuel taxes, and other
+   - AvaTax is **not** supported in Odoo's **Point of Sale** app, because a dynamic tax
+     calculation model is excessive for transactions within a single delivery address, such as
+     stores or restaurants.
+   - AvaTax and Odoo use the company address, **not** the warehouse address.
+   - Excise tax is **not** supported. This includes tobacco/vape taxes, fuel taxes, and other
      specific industries.
 
 .. seealso::
    Avalara's support documents: `About AvaTax
-   <https://community.avalara.com/support/s/document-item?language=en_US&bundleId=dqa1657870670369_dqa1657870670369&topicId=About_AvaTax.html&_LANG=enus>`_
+   <https://community.avalara.com/support/s/document-item?language=en_US>`_
 
 Set up on AvaTax
 ================
@@ -47,7 +47,7 @@ connect with Avalara to purchase a license: `Avalara: Let's Talk
    :ref:`Odoo setup <avatax/credentials>`. In Odoo, this number is the :guilabel:`API ID`.
 
 Then, `create a basic company profile
-<https://community.avalara.com/support/s/document-item?bundleId=dqa1657870670369_dqa1657870670369&topicId=Create_a_Basic_company_profile.html&_LANG=enus>`_.
+<https://www.odoo.com/r/2k0>`_.
 
 Create basic company profile
 ----------------------------
@@ -57,15 +57,15 @@ products/services sold (and their sales locations), and customer tax exemptions,
 Follow the Avalara documentation for creating a basic company profile:
 
 #. `Add company information
-   <https://community.avalara.com/support/s/document-item?bundleId=dqa1657870670369_dqa1657870670369&topicId=Add_your_company_information.html&_LANG=enus>`_.
+   <https://www.odoo.com/r/XZDW>`_.
 #. `Tell us where the company collects and pays tax
-   <https://community.avalara.com/support/s/document-item?bundleId=dqa1657870670369_dqa1657870670369&topicId=Tell_us_where_you_collect_and_pay_tax.html&_LANG=enus>`_.
+   <https://www.odoo.com/r/E6g>`_.
 #. `Verify jurisdictions and activate the company
-   <https://community.avalara.com/support/s/document-item?bundleId=dqa1657870670369_dqa1657870670369&topicId=Verify_your_jurisdictions_and_activate_your_company.html&_LANG=enus>`_.
+   <https://www.odoo.com/r/NIy>`_.
 #. `Add other company locations for location-based filing
-   <https://community.avalara.com/support/s/document-item?bundleId=dqa1657870670369_dqa1657870670369&topicId=Add_other_company_locations_for_location-based_filing.html&_LANG=enus>`_.
+   <https://www.odoo.com/r/GF4>`_.
 #. `Add a marketplace to the company profile
-   <https://community.avalara.com/support/s/document-item?bundleId=dqa1657870670369_dqa1657870670369&topicId=Add_marketplace_transactions_to_your_company_profile.html&_LANG=enus>`_.
+   <https://www.odoo.com/r/QA5>`_.
 
 .. _avatax/create_avalara_credentials:
 
@@ -86,7 +86,7 @@ company would like to integrate.
 Log in to create the :guilabel:`License Key`. Go to :menuselection:`Settings --> License and API
 Keys`. Click :guilabel:`Generate License Key`.
 
-.. note::
+.. important::
    A warning appears stating: `If your business app is connected to Avalara solutions, the
    connection will be broken until you update the app with the new license key. This action cannot
    be undone.`
@@ -100,9 +100,9 @@ with *AvaTax* and Odoo, then click :guilabel:`Generate license key`.
 If this is an additional license key, ensure the previous connection can be broken. There is
 **only** one license key associated with each of the Avalara sandbox and production accounts.
 
-.. important::
-   Copy this key to a safe place. It is **strongly encouraged** to backup the license key for future
-   reference. This key cannot be retrieved after leaving this screen.
+.. warning::
+   Copy this key to a safe place. It is strongly encouraged to back up the license key for
+   future reference. This key **cannot** be retrieved after leaving this screen.
 
 Odoo configuration
 ==================
@@ -210,6 +210,7 @@ and :guilabel:`Amazon/Avatax Bridge`, respectively.
    <../../fiscal_localizations>` documentation:
 
    - :doc:`../../fiscal_localizations/brazil`
+   - :doc:`../../fiscal_localizations/united_states`
 
 .. _avatax/credentials:
 
@@ -424,7 +425,7 @@ menu, and select a category, or :guilabel:`Search More...` to find one that is n
 
 .. important::
    Mapping an :guilabel:`AvaTax Category` on either the *Product* or *Product Category* should be
-   completed for every *Product* or *Product Category*, depending the route that is chosen.
+   completed for every *Product* or *Product Category*, depending on the route that is chosen.
 
 .. seealso::
    - :doc:`fiscal_positions`
