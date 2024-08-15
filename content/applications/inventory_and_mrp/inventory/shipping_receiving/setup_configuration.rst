@@ -172,7 +172,7 @@ Policy` field to decide whether the added shipping charge on the sales order is 
 from the shipping carrier.
 
 .. seealso::
-   :doc:`Invoice cost of shipping <advanced_operations_shipping/invoicing>`
+   :doc:`Invoice cost of shipping <setup_configuration/invoicing>`
 
 .. _inventory/shipping/sales-order:
 
@@ -228,3 +228,9 @@ delivery order. To add or change the delivery method on the delivery itself, go 
    setup_configuration/starshipit_shipping
    setup_configuration/ups_credentials
    setup_configuration/zebra
+   setup_configuration/cancel
+   setup_configuration/invoicing
+   setup_configuration/label_type
+   setup_configuration/multipack
+   setup_configuration/print_on_validation
+
