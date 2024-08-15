@@ -33,7 +33,7 @@ to the :doc:`using_inventory_valuation` documentation.
    One `successful strategy <https://www.odoo.com/r/Kvfg>`_ for switching to automated valuation:
 
    #. Clear existing stock (possibly with an :doc:`inventory adjustment
-      <../inventory_management/count_products>`)
+      <../../warehouses_storage/inventory_management/count_products>`)
    #. Change the inventory valuation method to *Automatic*
    #. Return the existing stock, with the original monetary value (using an inventory adjustment)
 
