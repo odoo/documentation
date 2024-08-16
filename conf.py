@@ -253,7 +253,7 @@ languages_names = {
     'fr': 'FR',
     'it': 'IT',
     'ja': 'JA',
-    'ko': 'KO',
+    'ko': 'KR',
     'nl': 'NL',
     'pt_BR': 'PT',
     'ro': 'RO',
