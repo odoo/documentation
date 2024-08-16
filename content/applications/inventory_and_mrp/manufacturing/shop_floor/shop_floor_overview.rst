@@ -205,3 +205,55 @@ name in the panel.
 .. image:: shop_floor_overview/operator-panel.png
    :align: center
    :alt: The operator panel of the Shop Floor module, showing three employees signed in.
+
+MO/WO prioritization
+====================
+
+The **Shop Floor** module uses the *scheduled date* entered on |MOs| to prioritize the |MOs| and
+work orders that appear on the module's dashboard and work center pages. |MOs| and work orders
+scheduled sooner are more highly prioritized, and appear before orders which are scheduled further
+out.
+
+To specify the scheduled date on an |MO|, begin by navigating to :menuselection:`Manufacturing app
+--> Operations --> Manufacturing Orders`, and click :guilabel:`New` to create a new |MO|.
+
+Click on the :guilabel:`Scheduled Date` field to open a calendar popover window. By default, the
+:guilabel:`Scheduled Date` field, and its corresponding pop-up window, show the current date and
+time.
+
+Use the calendar to select the date on which processing should begin for the |MO|. In the two fields
+at the bottom of the popover window, enter the hour and minute at which processing should begin,
+using the 24-hour clock format.
+
+Finally, click :guilabel:`Apply` at the bottom of the popover window to set the date and time for
+the :guilabel:`Scheduled Date` field. Then, click the :guilabel:`Confirm` button at the top of the
+|MO| to confirm it.
+
+Once the |MO| is confirmed, it appears in the **Shop Floor** module, as long is it has the
+:guilabel:`Ready` status, which means all components are available.
+
+On the Odoo dashboard, click on the :menuselection:`Shop Floor` module to open it. The
+:guilabel:`All MO #` page of the dashboard displays *Ready* |MOs|, organized in order of their
+scheduled dates.
+
+At the top of the module, select a work center to see the work orders assigned to it. The page for
+each work center organizes work orders, based on the scheduled dates of their corresponding |MOs|.
+
+.. example::
+   Three |MOs| are confirmed for a *Bookcase* product:
+
+   - WH/MO/00411 has a :guilabel:`Scheduled Date` of August 16th.
+   - WH/MO/00412 has a :guilabel:`Scheduled Date` of August 20th.
+   - WH/MO/00413 has a :guilabel:`Scheduled Date` of August 18th.
+
+   On the :guilabel:`All MO #` page of the **Shop Floor** module, the cards for each |MO| appear in
+   this order: WH/MO/00411, WH/MO/00413, WH/MO/00412.
+
+   .. image:: shop_floor_overview/mo-order.png
+      :align: center
+      :alt: MOs in the Shop Floor module, ordered by their scheduled date.
+
+   Each |MO| requires one work order, carried out at :guilabel:`Assembly Station 1`. Clicking on the
+   :guilabel:`Assembly Station 1` button at the top of the screen opens the page for the work
+   center, which displays one card for each work order, appearing in the same order as their
+   corresponding |MOs|.
