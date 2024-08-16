@@ -232,7 +232,7 @@ languages_names = {
     'es': 'ES',
     'fr': 'FR',
     'it': 'IT',
-    'ko': 'KO',
+    'ko': 'KR',
     'nl': 'NL',
     'pt_BR': 'PT',
     'ro': 'RO',
