@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-26 06:37+0000\n"
+"POT-Creation-Date: 2024-05-28 08:57+0000\n"
 "PO-Revision-Date: 2022-03-18 15:03+0000\n"
 "Last-Translator: Wil Odoo, 2023\n"
 "Language-Team: Polish (https://app.transifex.com/odoo/teams/41243/pl/)\n"
@@ -40,10 +40,10 @@ msgstr ""
 #: ../../content/applications/websites/ecommerce.rst:14
 #: ../../content/applications/websites/website.rst:14
 msgid ""
-"Odoo offers a :ref:`free custom domain name <domain-name/odoo-register>` to "
-"all Odoo Online databases for one year. Visitors can then access your "
-"website with an address such as ``www.example.com`` rather than the default "
-"``example.odoo.com``."
+"Odoo offers a :ref:`free custom domain name <domain-name/register>` to all "
+"Odoo Online databases for one year. Visitors can then access your website "
+"with an address such as `www.example.com` rather than the default "
+"`example.odoo.com`."
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce.rst:19
@@ -51,12 +51,12 @@ msgid ":doc:`Website Documentation <website>`"
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce.rst:20
-#: ../../content/applications/websites/website.rst:20
+#: ../../content/applications/websites/website.rst:19
 msgid "`Odoo Tutorials: Website <https://www.odoo.com/slides/website-25>`_"
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce.rst:21
-#: ../../content/applications/websites/website.rst:21
+#: ../../content/applications/websites/website.rst:20
 msgid ""
 "`Odoo Tutorials: eCommerce <https://www.odoo.com/slides/ecommerce-26>`_"
 msgstr ""
@@ -1194,10 +1194,747 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/websites/website/configuration.rst:5
-#: ../../content/applications/websites/website/configuration/recaptcha.rst:16
+#: ../../content/applications/websites/website/configuration/recaptcha.rst:19
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:10
 msgid "Configuration"
 msgstr "Konfiguracja"
+
+#: ../../content/applications/websites/website/configuration/cdn.rst:3
+msgid "Set up a content delivery network (CDN)"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cdn.rst:8
+msgid "Deploying with KeyCDN"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cdn.rst:10
+msgid ""
+"A :abbr:`CDN (Content Delivery Network)` or *content distribution network*, "
+"is a geographically distributed network of servers that provides high speed "
+"internet content. The :abbr:`CDN (Content Delivery Network)` provides quick,"
+" high-quality content delivery for content-heavy websites."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cdn.rst:14
+msgid ""
+"This document will guide you through the setup of a KeyCDN_ account with an "
+"Odoo powered website."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cdn.rst:17
+msgid "Create a pull zone in the KeyCDN dashboard"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cdn.rst:19
+msgid ""
+"On the KeyCDN dashboard, start by navigating to the :menuselection:`Zones` "
+"menu item on the left. On the form, give a value to the :guilabel:`Zone "
+"Name`, which will appear as part of the :abbr:`CDN (Content Delivery "
+"Network)`'s :abbr:`URL (Uniform Resource Locator)`. Then, set the "
+":guilabel:`Zone Status` to :guilabel:`active` to engage the zone. For the "
+":guilabel:`Zone Type` set the value to :guilabel:`Pull`, and then, finally, "
+"under the :guilabel:`Pull Settings`, enter the :guilabel:`Origin URL`— this "
+"address should be the full Odoo database :abbr:`URL (Uniform Resource "
+"Locator)`."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cdn.rst:28
+msgid ""
+"Use ``https://yourdatabase.odoo.com`` and replace the *yourdatabase* "
+"subdomain prefix with the actual name of the database. A custom :abbr:`URL "
+"(Uniform Resource Locator)` can be used, as well, in place of the Odoo "
+"subdomain that was provided to the database."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cdn.rst-1
+msgid "KeyCDN's Zone configuration page."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cdn.rst:36
+msgid ""
+"Under the :guilabel:`General Settings` heading below the zone form, click "
+"the :guilabel:`Show all settings` button to expand the zone options. This "
+"should be the last option on the page. After expanding the "
+":guilabel:`General Settings` ensure that the :guilabel:`CORS` option is "
+":guilabel:`enabled`."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cdn.rst:41
+msgid ""
+"Next, scroll to the bottom of the zone configuration page and "
+":guilabel:`Save` the changes. KeyCDN will indicate that the new zone will be"
+" deployed. This can take about 10 minutes."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cdn.rst-1
+msgid "KeyCDN deploying the new Zone."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cdn.rst:49
+msgid ""
+"A new :guilabel:`Zone URL` has been generated for your Zone, in this example"
+" it is ``pulltest-xxxxx.kxcdn.com``. This value will differ for each "
+"database."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cdn.rst:52
+msgid ""
+"Copy this :guilabel:`Zone URL` to a text editor for later, as it will be "
+"used in the next steps."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cdn.rst:55
+msgid "Configure the Odoo instance with the new zone"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cdn.rst:57
+msgid ""
+"In the Odoo :guilabel:`Website` app, go to the :menuselection:`Settings` and"
+" then activate the :guilabel:`Content Delivery Network (CDN)` setting and "
+"copy/paste the :guilabel:`Zone URL` value from the earlier step into the "
+":guilabel:`CDN Base URL` field. This field is only visible and configurable "
+"when the :ref:`developer mode <developer-mode>` is activated."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cdn.rst:63
+msgid ""
+"Ensure that there are two *forward slashes* (`//`) before the :guilabel:`CDN"
+" Base URL` and one forward slash (`/`) after the :guilabel:`CDN Base URL`."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cdn.rst:66
+msgid ":guilabel:`Save` the settings when complete."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cdn.rst-1
+msgid "Activate the CDN setting in Odoo."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cdn.rst:72
+msgid ""
+"Now the website is using the CDN for the resources matching the "
+":guilabel:`CDN filters` regular expressions."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cdn.rst:75
+msgid ""
+"In the HTML of the Odoo website, the :abbr:`CDN (content delivery network)` "
+"integration is evidenced as working properly by checking the :abbr:`URL "
+"(Uniform Resource Locators)` of images. The *CDN Base URL* value can be seen"
+" by using your web browser's :guilabel:`Inspect` feature on the Odoo "
+"website. Look for it's record by searching within the :guilabel:`Network` "
+"tab inside of devtools."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cdn.rst-1
+msgid ""
+"The CDN Base URL can be seen using the inspect function on the Odoo website."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cdn.rst:85
+msgid ""
+"Prevent security issues by activating cross-origin resource sharing (CORS)"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cdn.rst:87
+msgid ""
+"A security restriction in some browsers (such as Mozilla Firefox and Google "
+"Chrome) prevents a remotely linked CSS file to fetch relative resources on "
+"this same external server."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cdn.rst:90
+msgid ""
+"If the :abbr:`CORS (Cross-Origin Resource Sharing)` option isn't enabled in "
+"the :guilabel:`CDN Zone`, the more obvious resulting problem on a standard "
+"Odoo website will be the lack of *Font Awesome* icons because the font file "
+"declared in the *Font Awesome* CSS won't be loaded from the remote server."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cdn.rst:95
+msgid ""
+"When these cross-origin resource issues occur, a security error message "
+"similar to the output below will appear in the web browser's developer "
+"console:"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cdn.rst:98
+msgid ""
+"``Font from origin 'http://pulltest-xxxxx.kxcdn.com' has been blocked from "
+"loading /shop:1 by Cross-Origin Resource Sharing policy: No 'Access-Control-"
+"Allow-Origin' header is present on the requested resource. Origin "
+"'http://yourdatabase.odoo.com' is therefore not allowed access.``"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cdn.rst-1
+msgid "Error message populated in the browser console."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cdn.rst:106
+msgid ""
+"Enabling the :abbr:`CORS (Cross-Origin Resource Sharing)` option in the "
+":abbr:`CDN (Content Delivery Network)` settings fixes this issue."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:3
+msgid "Domain names"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:5
+msgid ""
+"Domain names are text-based addresses identifying online locations, such as "
+"websites. They provide a more memorable and recognizable way for people to "
+"navigate the internet than numerical IP addresses."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:8
+msgid ""
+"**Odoo Online** and **Odoo.sh** databases use a **subdomain** of the "
+"`odoo.com` **domain** by default (e.g., `mycompany.odoo.com`)."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:11
+msgid ""
+"However, you can use a custom domain name instead by :ref:`registering a "
+"free domain name <domain-name/register>` (only available for Odoo Online "
+"databases) or by :ref:`configuring a domain name you already own <domain-"
+"name/existing>`."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:16
+msgid ""
+"`Odoo Tutorials: Register a free domain name [video] "
+"<https://www.odoo.com/slides/slide/register-a-free-domain-name-1663>`_"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:22
+msgid "Register a free domain name with Odoo"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:24
+msgid ""
+"To register a one-year free domain name for your Odoo Online database, sign "
+"in to your account and go to the `database manager "
+"<https://www.odoo.com/my/databases>`_. Click the gear icon (:guilabel:`⚙️`) "
+"next to the database name and select :guilabel:`Domain Names`."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst-1
+msgid "Accessing a database's domain names configuration"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:31
+msgid "Search for the desired domain name and check its availability."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst-1
+msgid "Searching for an available domain name"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:37
+msgid ""
+"Ensure the Website app is installed if the domain name registration option "
+"does not appear."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:39
+msgid ""
+"Select the desired domain name, fill in the :guilabel:`Domain Owner` form, "
+"and click :guilabel:`Register`. The chosen domain name is directly linked to"
+" the database."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst-1
+msgid "Filling in the domain owner information"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:45
+msgid ""
+"Next, you should :ref:`map your domain name to your Odoo website <domain-"
+"name/website-map>`."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:48
+msgid ""
+"A verification email from `noreply@domainnameverification.net` will be sent "
+"to the email address provided in the :guilabel:`Domain Owner` form. It is "
+"essential to verify your email address to keep the domain active and receive"
+" the renewal quote before expiration."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:52
+msgid ""
+"The domain name registration is free for the first year. After this period, "
+"Odoo will continue to manage the domain in partnership with **Gandi.net**, "
+"the domain name registrar, and you will be charged `Gandi.net's renewal rate"
+" <https://www.gandi.net/en/domain>`_. Odoo sends a renewal quotation every "
+"year to the email address mentioned in the :guilabel:`Domain Owner` form "
+"several weeks before the expiration date of the domain. The domain is "
+"renewed automatically when the quotation is confirmed."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:60
+msgid "The offer is only available for **Odoo Online** databases."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:61
+msgid "The offer is limited to **one** domain name per client."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:62
+msgid "The offer is limited to the registration of a **new** domain name."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:63
+msgid ""
+"The offer is available to *One App Free* plans. Ensure that your website "
+"contains enough original content for Odoo to verify that your request is "
+"legitimate and respects `Odoo's Acceptable Use Policy "
+"<https://www.odoo.com/acceptable-use>`_. Given the high number of requests, "
+"it can take Odoo several days to review them."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:71
+msgid "DNS records"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:73
+msgid ""
+"To manage your free domain name :abbr:`DNS (domain name system)` records, "
+"open the `database manager <https://www.odoo.com/my/databases>`_, click the "
+"gear icon (:guilabel:`⚙️`) next to the database name, select "
+":guilabel:`Domain Names`, and click :guilabel:`DNS`."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:77
+msgid ""
+":guilabel:`A`: the A record holds the IP address of the domain. It is "
+"automatically created and **cannot** be edited or deleted."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:79
+msgid ""
+":guilabel:`CNAME`: CNAME records forward one domain or subdomain to another "
+"domain. One is automatically created to map the `www.` subdomain to the "
+"database. If the database is renamed, the CNAME record **must** also be "
+"renamed."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:82
+msgid ""
+":guilabel:`MX`: MX records instruct servers on where to deliver emails."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:83
+msgid ""
+":guilabel:`TXT`: TXT records can be used for different purposes (e.g., to "
+"verify domain name ownership)."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:86
+msgid ""
+"Any modification to the DNS records can take up to **72 hours** to propagate"
+" worldwide on all servers."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:90
+msgid ""
+"`Submit a support ticket <https://www.odoo.com/help>`_ if you need "
+"assistance to manage your domain name."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:94
+msgid "Mailbox"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:96
+msgid ""
+"The one-year free domain name offer does **not** include a mailbox. There "
+"are two options to link your domain name with a mailbox."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:100
+msgid "Use a subdomain"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:102
+msgid ""
+"You can create a subdomain (e.g., `subdomain.yourdomain.com`) to use as an "
+"alias domain for the database. It allows users to create records in the "
+"database from emails received on their `email@subdomain.yourdomain.com` "
+"alias."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:106
+msgid ""
+"To do so, open the `database manager <https://www.odoo.com/my/databases>`_, "
+"click the gear icon (:guilabel:`⚙️`) next to the database name, and go to "
+":menuselection:`Domain Names --> DNS --> Add DNS record --> CNAME`. Next, "
+"enter the desired subdomain in the :guilabel:`Name` field (e.g., "
+"`subdomain`), the original database domain with a period at the end (e.g., "
+"`mycompany.odoo.com.`) in the :guilabel:`Content` field, and click "
+":guilabel:`Add record`."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:112
+msgid ""
+"Then, add the alias domain as your *own domain* by clicking :guilabel:`Use "
+"my own domain`, entering the alias domain (e.g., "
+"`subdomain.yourdomain.com`), clicking :guilabel:`Verify`, and then "
+":guilabel:`I confirm, it's done`."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:116
+msgid ""
+"Finally, go to your database and open the :guilabel:`Settings`. Enable "
+":guilabel:`Custom Email Servers`, enter the :guilabel:`Alias Domain` (e.g., "
+"`subdomain.yourdomain.com`) and click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:121
+msgid "Use an external email provider"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:123
+msgid ""
+"To use an external email provider, you should configure an MX record. To do "
+"so, open the `database manager <https://www.odoo.com/my/databases>`_, click "
+"the gear icon (:guilabel:`⚙️`) next to the database name, click "
+":menuselection:`Domain Names --> DNS --> Add DNS record --> MX`. The values "
+"you should enter for the :guilabel:`Name`, :guilabel:`Content`, and "
+":guilabel:`Priority` fields depend on the external email provider."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:130
+msgid ""
+"`Google Workspace: MX record values "
+"<https://support.google.com/a/answer/174125?hl=en>`_"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:131
+msgid ""
+"`Outlook and Exchange Online: Add an MX record for email "
+"<https://learn.microsoft.com/en-us/microsoft-365/admin/get-help-with-"
+"domains/create-dns-records-at-any-dns-hosting-"
+"provider?view=o365-worldwide#add-an-mx-record-for-email-outlook-exchange-"
+"online>`_"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:136
+msgid "Configure an existing domain name"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:138
+msgid ""
+"If you already have a domain name, you can use it for your Odoo website."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:141
+msgid ""
+"It is strongly recommended to follow **in order** these three steps to avoid"
+" any :ref:`SSL certificate validation <domain-name/ssl>` issues:"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:144
+msgid ":ref:`Add a CNAME record <domain-name/cname>`"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:145
+msgid ":ref:`Map your domain name to your Odoo database <domain-name/db-map>`"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:146
+msgid ""
+":ref:`Map your domain name to your Odoo website <domain-name/website-map>`"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:151
+msgid "Add a CNAME record"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:153
+msgid ""
+"Adding a CNAME record to forward your domain name to the address of your "
+"Odoo database is required."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:157
+#: ../../content/applications/websites/website/configuration/domain_names.rst:212
+msgid "Odoo Online"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:159
+msgid ""
+"The CNAME record's target address should be your database's address as "
+"defined at its creation (e.g., `mycompany.odoo.com`)."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:162
+#: ../../content/applications/websites/website/configuration/domain_names.rst:222
+msgid "Odoo.sh"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:164
+msgid ""
+"The CNAME record's target address should be the project's main address, "
+"which can be found on Odoo.sh by going to :menuselection:`Settings --> "
+"Project Name`, or a specific branch (production, staging or development) by "
+"going to :menuselection:`Branches --> select the branch --> Settings --> "
+"Custom domains`, and clicking :guilabel:`How to set up my domain?`. A "
+"message indicates which address your CNAME record should target."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:170
+msgid "The specific instructions depend on your DNS hosting service."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:173
+msgid ""
+"`GoDaddy: Add a CNAME record <https://www.godaddy.com/help/add-a-cname-"
+"record-19236>`_"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:174
+msgid ""
+"`Namecheap: How to create a CNAME record for your domain "
+"<https://www.namecheap.com/support/knowledgebase/article.aspx/9646/2237/how-"
+"to-create-a-cname-record-for-your-domain>`_"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:175
+msgid ""
+"`OVHcloud: Add a new DNS record "
+"<https://docs.ovh.com/us/en/domains/web_hosting_how_to_edit_my_dns_zone/#add-"
+"a-new-dns-record>`_"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:176
+msgid ""
+"`Cloudflare: Manage DNS records <https://support.cloudflare.com/hc/en-"
+"us/articles/360019093151>`_"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:180
+msgid ""
+"Odoo only supports subdomains. To use your naked domain name :dfn:`(a domain"
+" name without any subdomains or prefixes)` (`yourdomain.com`), create a "
+"redirection 301 to redirect visitors to `www.yourdomain.com`."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:185
+msgid ""
+"You own the domain name `yourdomain.com`, and your Odoo Online database's "
+"address is `mycompany.odoo.com`. You want to access your Odoo database "
+"primarily with the domain `www.yourdomain.com` and also with the naked "
+"domain `yourdomain.com`."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:189
+msgid ""
+"To do so, create a CNAME record for the `www` subdomain, with "
+"`mycompany.odoo.com` as the target. Next, create a redirect (301 permanent "
+"or visible redirect) to redirect visitors from `yourdomain.com` to "
+"`wwww.yourdomain.com`."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:196
+msgid "Map a domain name to an Odoo database"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:199
+msgid ""
+"Ensure you have :ref:`added a CNAME record <domain-name/cname>` to your "
+"domain name's DNS **before** mapping your domain name to your Odoo database."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:202
+msgid ""
+"Failing to do so may prevent the validation of the :ref:`SSL certificate "
+"<domain-name/ssl>` and could result in a *certificate name mismatch* error. "
+"Web browsers often display this as a warning, such as *\"Your connection is "
+"not private\"*."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:206
+msgid ""
+"If you encounter this error after mapping the domain name to your database, "
+"wait up to five days, as the validation may still happen. If not, you can "
+"`submit a support ticket <https://www.odoo.com/help>`_, including "
+"screenshots of your CNAME records."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:214
+msgid ""
+"Open the `database manager <https://www.odoo.com/my/databases>`_, click the "
+"gear icon (:guilabel:`⚙️`) next to the database name, and go to "
+":menuselection:`Domain Names --> Use my own domain`. Then, enter the domain "
+"name (e.g., `yourdomain.com`), click :guilabel:`Verify` and :guilabel:`I "
+"confirm, it's done`."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:0
+msgid "Mapping a domain name to an Odoo Online database"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:224
+msgid ""
+"On Odoo.sh, go to :menuselection:`Branches --> select your branch --> "
+"Settings --> Custom domains`, type the domain name to add, then click "
+":guilabel:`Add domain`."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:0
+msgid "Mapping a domain name to an Odoo.sh branch"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:231
+msgid ""
+":ref:`Odoo.sh branches: settings tab <odoosh-gettingstarted-branches-tabs-"
+"settings>`"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:236
+msgid "SSL encryption (HTTPS protocol)"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:238
+msgid ""
+"**SSL encryption** allows visitors to navigate a website through a secure "
+"connection, which appears as the *https://* protocol at the beginning of a "
+"web address rather than the non-secure *http://* protocol."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:242
+msgid ""
+"Odoo generates a separate SSL certificate for each domain :ref:`mapped to a "
+"database <domain-name/db-map>` using `Let's Encrypt's certificate authority "
+"and ACME protocol <https://letsencrypt.org/how-it-works/>`_."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:247
+msgid "Certificate generation may take up to 24 hours."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:248
+msgid ""
+"Several attempts to validate your certificate are made for five days after "
+"you map your domain name to your database."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:250
+msgid "If you use another service, you can keep using it or change to Odoo's."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:253
+msgid ""
+"No SSL certificate is generated for naked domains :dfn:`(domain names "
+"without any subdomains or prefixes)`."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:259
+msgid "Web base URL of a database"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:262
+msgid ""
+"If the Website app is installed on your database, skip this section and "
+"continue from the :ref:`Map a domain name to a website <domain-name/website-"
+"map>` section."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:265
+msgid ""
+"The *web base URL* or root URL of a database affects your main website "
+"address and all the links sent to your customers (e.g., quotations, portal "
+"links, etc.)."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:268
+msgid ""
+"To make your custom domain name the *web base URL* of your database, access "
+"your database using your custom domain name and log in as an administrator "
+":dfn:`(a user part of the Settings access right group under "
+"Administration)`."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:273
+msgid ""
+"If you access your database with the original Odoo address (e.g., "
+"`mycompany.odoo.com`), the *web base URL* of your database will be updated "
+"accordingly. To prevent the automatic update of the *web base URL* when an "
+"administrator logs in to the database, activate the :ref:`developer mode "
+"<developer-mode>`, go to :menuselection:`Settings --> Technical --> System "
+"Parameters --> New`, and enter `web.base.url.freeze` as the :guilabel:`Key` "
+"and `True` as the :guilabel:`Value`."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:280
+msgid ""
+"You can also set the web base URL manually. To do so, activate the "
+":ref:`developer mode <developer-mode>`, go to :menuselection:`Settings --> "
+"Technical --> System Parameters`, and search for the `web.base.url` key "
+"(create it if necessary) and enter the full address of your website as the "
+"value (e.g., `https://www.yourdomain.com`). The URL must include the "
+"protocol `https://` (or `http://`) and *not* end with a slash (`/`)."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:289
+msgid "Map a domain name to an Odoo website"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:291
+msgid ""
+"Mapping your domain name to your website is different than mapping it to "
+"your database:"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:293
+msgid ""
+"It defines your domain name as the main one for your website, helping search"
+" engines to index your website correctly."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:295
+msgid ""
+"It defines your domain name as the base URL for your database, including "
+"portal links sent by email to your customers."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:297
+msgid ""
+"If you have multiple websites, it maps your domain name to the appropriate "
+"website."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:299
+msgid ""
+"Go to :menuselection:`Website --> Configuration --> Settings`. If you have "
+"multiple websites, select the one you want to configure. In the "
+":guilabel:`Domain` field, enter the address of your website (e.g., "
+"`https://www.yourdomain.com`) and :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:304
+msgid ""
+"Mapping your domain name to your Odoo website prevents Google Search from "
+"indexing your original database address (e.g., `mycompany.odoo.com`)."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:307
+msgid ""
+"If both addresses are already indexed, it may take some time before the "
+"indexation of the second address is removed from Google Search. You can use "
+"the `Google Search Console <https://search.google.com/search-"
+"console/welcome>`_ to fix the issue."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:312
+msgid ""
+"If you have multiple websites and companies on your database, make sure to "
+"select the right :guilabel:`Company` under :menuselection:`Website --> "
+"Configuration --> Settings`. Doing so indicates Odoo which URL to use as the"
+" :ref:`base URL <domain-name/web-base-url>` according to the company in use."
+msgstr ""
 
 #: ../../content/applications/websites/website/configuration/multi_website.rst:3
 msgid "Multiple websites"
@@ -1351,12 +2088,12 @@ msgstr ""
 #: ../../content/applications/websites/website/configuration/multi_website.rst:122
 msgid ""
 "Geo IP is installed by default in Odoo Online. If you run Odoo on-premise, "
-"don’t forget to install *GeoIP* library. See :doc:`on-premise_geo-ip-"
-"installation`"
+"don’t forget to install *GeoIP* library. See "
+":doc:`/administration/on_premise/geo_ip`"
 msgstr ""
 
 #: ../../content/applications/websites/website/configuration/multi_website.rst:127
-msgid ":doc:`/administration/maintain/domain_names`"
+msgid ":doc:`domain_names`"
 msgstr ""
 
 #: ../../content/applications/websites/website/configuration/multi_website.rst:129
@@ -1638,108 +2375,6 @@ msgstr ""
 msgid "the domain to only display records available for the current website."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:3
-msgid "Geo IP Installation (On-Premises Database)"
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:6
-msgid "Installation"
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:9
-msgid ""
-"Please note that the installation depends on your computer's operating "
-"system and distribution. We will assume that a Linux operating system is "
-"being used."
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:15
-msgid "Install `geoip2 <https://pypi.org/project/geoip2/>`__ Python library"
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:17
-msgid ""
-"Download the `GeoLite2 City database "
-"<https://dev.maxmind.com/geoip/geoip2/geolite2/>`_. You should end up with a"
-" file called ``GeoLite2-City.mmdb``"
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:22
-msgid "Move the file to the folder ``/usr/share/GeoIP/``"
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:24
-msgid "Restart the server"
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:27
-msgid ""
-"If you can't/don't want to locate the geoip database in "
-"``/usr/share/GeoIP/``, you can use the ``--geoip-db`` option of the Odoo "
-"command line interface. This option takes the absolute path to the GeoIP "
-"database file and uses it as the GeoIP database. For example:"
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:36
-msgid ":doc:`CLI documentation </developer/reference/cli>`."
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:39
-msgid ""
-"``GeoIP`` Python library can also be used. However this version is "
-"discontinued since January 1.    See `GeoLite Legacy databases are now "
-"discontinued <https://support.maxmind.com/geolite-legacy-discontinuation-"
-"notice/>`_"
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:44
-msgid "How To Test GeoIP Geolocation In Your Odoo Website"
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:46
-msgid "Go to your website. Open the web page that you want to test ``GeoIP``."
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:47
-msgid "Choose :menuselection:`Customize --> HTML/CSS/JS Editor`."
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:48
-msgid "Add the following piece of XML in the page :"
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:54
-msgid ""
-"You should end up with a dictionary indicating the location of the IP "
-"address."
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:60
-msgid ""
-"If the curly braces are empty ``{}``, it can be for any of the following "
-"reasons :"
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:62
-msgid ""
-"The browsing IP address is the localhost (``127.0.0.1``) or a local area "
-"network one (``192.168.*.*``)"
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:64
-msgid ""
-"If a reversed proxy is used, make sure to configure it correctly. See "
-":option:`proxy mode <odoo-bin --proxy-mode>`"
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:66
-msgid "``geoip2`` is not installed or the GeoIP database file wasn't found"
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/on-premise_geo-ip-installation.rst:67
-msgid "The GeoIP database was unable to resolve the given IP address"
-msgstr ""
-
 #: ../../content/applications/websites/website/configuration/recaptcha.rst:3
 msgid "reCAPTCHA v3 on forms"
 msgstr ""
@@ -1752,46 +2387,51 @@ msgstr ""
 
 #: ../../content/applications/websites/website/configuration/recaptcha.rst:9
 msgid ""
+"reCAPTCHA v3 may not be compliant with local data protection regulations."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/recaptcha.rst:12
+msgid ""
 "reCAPTCHA v3 works in the background and does not interrupt visitors. "
 "However, if the check fails, visitors cannot submit the form."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/recaptcha.rst:13
+#: ../../content/applications/websites/website/configuration/recaptcha.rst:16
 msgid ""
 "`Google's reCAPTCHA v3 guide "
 "<https://developers.google.com/recaptcha/docs/v3>`_"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/recaptcha.rst:19
+#: ../../content/applications/websites/website/configuration/recaptcha.rst:22
 msgid "On Google"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/recaptcha.rst:21
+#: ../../content/applications/websites/website/configuration/recaptcha.rst:24
 msgid ""
 "Open `the reCAPTCHA website registration page "
 "<https://www.google.com/recaptcha/admin/create>`_. Log in or create a Google"
 " account if necessary."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/recaptcha.rst:24
+#: ../../content/applications/websites/website/configuration/recaptcha.rst:27
 msgid "On the website registration page:"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/recaptcha.rst:26
+#: ../../content/applications/websites/website/configuration/recaptcha.rst:29
 msgid "Give the website a :guilabel:`Label`."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/recaptcha.rst:27
+#: ../../content/applications/websites/website/configuration/recaptcha.rst:30
 msgid "Leave the :guilabel:`reCAPTCHA type` on :guilabel:`Score based (v3)`."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/recaptcha.rst:28
+#: ../../content/applications/websites/website/configuration/recaptcha.rst:31
 msgid ""
 "Enter one or more :guilabel:`Domains` (e.g., *example.com* or "
 "*subdomain.example.com*)."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/recaptcha.rst:29
+#: ../../content/applications/websites/website/configuration/recaptcha.rst:32
 msgid ""
 "Under :guilabel:`Google Cloud Platform`, a project is automatically selected"
 " if one was already created with the logged-in Google account. If not, one "
@@ -1799,11 +2439,11 @@ msgid ""
 "a project yourself or rename the automatically created project."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/recaptcha.rst:33
+#: ../../content/applications/websites/website/configuration/recaptcha.rst:36
 msgid "Agree to the terms of service."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/recaptcha.rst:34
+#: ../../content/applications/websites/website/configuration/recaptcha.rst:37
 msgid "Click :guilabel:`Submit`."
 msgstr ""
 
@@ -1811,60 +2451,60 @@ msgstr ""
 msgid "reCAPTCHA website registration example"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/recaptcha.rst:39
+#: ../../content/applications/websites/website/configuration/recaptcha.rst:42
 msgid ""
 "A new page with the generated keys is then displayed. Leave it open for "
 "convenience, as copying the keys to Odoo is required next."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/recaptcha.rst:43
+#: ../../content/applications/websites/website/configuration/recaptcha.rst:46
 msgid "On Odoo"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/recaptcha.rst:45
+#: ../../content/applications/websites/website/configuration/recaptcha.rst:48
 msgid ""
 "From the database dashboard, click :guilabel:`Settings`. Under "
 ":guilabel:`Integrations`, enable :guilabel:`reCAPTCHA` if needed."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/recaptcha.rst:49
+#: ../../content/applications/websites/website/configuration/recaptcha.rst:52
 msgid ""
 "Do not disable the :guilabel:`reCAPTCHA` feature or uninstall the "
 ":guilabel:`Google reCAPTCHA integration` module, as many other modules would"
 " also be removed."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/recaptcha.rst:52
+#: ../../content/applications/websites/website/configuration/recaptcha.rst:55
 msgid ""
 "Open the Google reCAPTCHA page, copy the :guilabel:`Site key`, and paste it "
 "into the :guilabel:`Site Key` field in Odoo."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/recaptcha.rst:54
+#: ../../content/applications/websites/website/configuration/recaptcha.rst:57
 msgid ""
 "Open the Google reCAPTCHA page, copy the :guilabel:`Secret key`, and paste "
 "it into the :guilabel:`Secret Key` field in Odoo."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/recaptcha.rst:56
+#: ../../content/applications/websites/website/configuration/recaptcha.rst:59
 msgid ""
 "Change the default :guilabel:`Minimum score` (`0.5`) if necessary, using a "
 "value between `1.0` and `0.0`. The higher the threshold is, the more "
 "difficult it is to pass the reCAPTCHA, and vice versa."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/recaptcha.rst:59
+#: ../../content/applications/websites/website/configuration/recaptcha.rst:62
 msgid "Click :guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/recaptcha.rst:61
+#: ../../content/applications/websites/website/configuration/recaptcha.rst:64
 msgid ""
 "All pages using the :guilabel:`Form`, :guilabel:`Newsletter Block`, and "
 ":guilabel:`Newsletter Popup` snippets on the website are now protected by "
 "reCAPTCHA."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/recaptcha.rst:65
+#: ../../content/applications/websites/website/configuration/recaptcha.rst:68
 msgid ""
 "If the reCAPTCHA check fails, the following error message is displayed:"
 msgstr ""
@@ -1873,14 +2513,14 @@ msgstr ""
 msgid "Google reCAPTCHA verification error message"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/recaptcha.rst:70
+#: ../../content/applications/websites/website/configuration/recaptcha.rst:73
 msgid ""
 "reCAPTCHA v3 is free for up to `1 million assessments per month "
 "<https://developers.google.com/recaptcha/docs/faq#are-there-any-qps-or-"
 "daily-limits-on-my-use-of-recaptcha>`_."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/recaptcha.rst:73
+#: ../../content/applications/websites/website/configuration/recaptcha.rst:76
 msgid ""
 "Analytics and additional settings are available on `Google's reCAPTCHA "
 "administration page <https://www.google.com/recaptcha/admin/>`_. For "
@@ -1889,7 +2529,7 @@ msgid ""
 "help you determine the right minimum score."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/recaptcha.rst:78
+#: ../../content/applications/websites/website/configuration/recaptcha.rst:81
 msgid ""
 "You can notify visitors that reCAPTCHA protects a form. To do so, open the "
 "website editor and navigate to the form. Then, click somewhere on the form, "
@@ -1950,88 +2590,253 @@ msgid ""
 "**Traduire** since we want to translate the website in French)."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/unsplash.rst:3
-msgid "Unsplash (free images)"
+#: ../../content/applications/websites/website/mail_groups.rst:3
+msgid "Mail groups"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/unsplash.rst:6
-msgid "Generate an Unsplash access key"
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/unsplash.rst:9
+#: ../../content/applications/websites/website/mail_groups.rst:5
 msgid ""
-"**As an Odoo Online user**, you are ready to use Unsplash. You won't need to"
-" follow this guide to set up Unsplash information since you will use our own"
-" Odoo Unsplash key in a transparent way."
+"The **mail groups** feature allows website visitors to have a public "
+"discussion by email. They can join a group to receive emails from other "
+"group members (i.e., website users who have subscribed to the group) and "
+"send new ones to all group members."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/unsplash.rst:13
-msgid "Generate an Unsplash access key for non-Odoo Online users"
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/unsplash.rst:15
-msgid "Create an account on `Unsplash.com <https://unsplash.com/join>`_."
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/unsplash.rst:17
+#: ../../content/applications/websites/website/mail_groups.rst:9
 msgid ""
-"Go to your `applications dashboard "
-"<https://unsplash.com/oauth/applications>`_ and click on **New "
-"Application**."
+"To activate the feature, :ref:`install <general/install>` the "
+":guilabel:`Website Mail Group` (`website_mail_group`) module."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/unsplash.rst:23
-msgid "Accept the conditions and click on **Accept terms**."
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/unsplash.rst:28
+#: ../../content/applications/websites/website/mail_groups.rst:13
 msgid ""
-"You will be prompted to insert an **Application name** and a "
-"**Description**. Please prefix your application name by \"**Odoo:** \" so "
-"that Unsplash can recognize it as an Odoo instance. Once done, click on "
-"**Create application**."
+"The **mail groups** feature is not to be confused with the "
+":doc:`../../marketing/email_marketing/mailing_lists` in the Email Marketing "
+"app."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/unsplash.rst:35
+#: ../../content/applications/websites/website/mail_groups.rst:19
+msgid "Configuring mail groups"
+msgstr ""
+
+#: ../../content/applications/websites/website/mail_groups.rst:21
+msgid "To configure mail groups, proceed as follows:"
+msgstr ""
+
+#: ../../content/applications/websites/website/mail_groups.rst:23
 msgid ""
-"You should be redirected to your application details page. Scroll down a bit"
-" to find your **access key**."
+"Configure a custom email alias domain by accessing the **General settings**,"
+" scrolling down to the :guilabel:`Discuss` section, enabling the "
+":guilabel:`Custom Email Server` feature, and entering the :guilabel:`Alias "
+"domain` (e.g., `@mycompany.com`)."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/unsplash.rst:42
+#: ../../content/applications/websites/website/mail_groups.rst:26
 msgid ""
-"**As a non-Odoo Online user**, you won't be able to register for a "
-"production Unsplash key and will be limited to your test key that has a "
-"restriction of 50 Unsplash requests per hour."
+"Go to :menuselection:`Website --> Groups --> Mailing List Groups`, then "
+"click :guilabel:`Create`."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/unsplash.rst:46
-msgid "Generate an Unsplash application ID"
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/unsplash.rst:49
-msgid "You should first create and set up your Unsplash application."
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/unsplash.rst:51
+#: ../../content/applications/websites/website/mail_groups.rst:27
 msgid ""
-"Go to your `applications dashboard "
-"<https://unsplash.com/oauth/applications>`_ and click on your newly created "
-"Unsplash application under **Your applications**."
+"Specify a :guilabel:`Group Name`, the :guilabel:`Email Alias`, and a "
+":guilabel:`Description`."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/unsplash.rst:57
+#: ../../content/applications/websites/website/mail_groups.rst:28
 msgid ""
-"You will be redirected to your application details page. The **application "
-"ID** will be visible in your browser's URL. The URL should be something like"
-" ``https://unsplash.com/oauth/applications/<application_id>``"
+"Enable :guilabel:`Moderate this group` and specify the "
+":guilabel:`Moderators` if you wish to :ref:`moderate messages "
+"<website/mailing_lists/moderate>` from this group. Alternatively, if the "
+"group is not moderated, you can define :guilabel:`Responsible users` who can"
+" manage the messages in the group."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/unsplash.rst:65
+#: ../../content/applications/websites/website/mail_groups.rst:32
 msgid ""
-"**As a non-Odoo Online user**, you won't be able to register for a "
-"production Unsplash key and will be limited to your test key that has a 50 "
-"Unsplash requests per hour restriction."
+"In the :guilabel:`Privacy` tab, define who can subscribe to the mail group:"
+msgstr ""
+
+#: ../../content/applications/websites/website/mail_groups.rst:34
+msgid ""
+":guilabel:`Everyone`: to make the mail group public so anyone can subscribe "
+"to it;"
+msgstr ""
+
+#: ../../content/applications/websites/website/mail_groups.rst:35
+msgid ""
+":guilabel:`Members only`: to only allow users defined as members to "
+"subscribe to the mail group;"
+msgstr ""
+
+#: ../../content/applications/websites/website/mail_groups.rst:36
+msgid ""
+":guilabel:`Selected group of users`: to only allow users from the "
+":guilabel:`Authorized group` to subscribe to the mail group."
+msgstr ""
+
+#: ../../content/applications/websites/website/mail_groups.rst:39
+msgid ""
+"If the mail group is moderated, you can automatically notify authors when "
+"their message is pending moderation by enabling :guilabel:`Automatic "
+"notification` in the :guilabel:`Notify Members` tab and writing the "
+":guilabel:`Notification message`."
+msgstr ""
+
+#: ../../content/applications/websites/website/mail_groups.rst:42
+msgid ""
+"If you wish to send out guidelines to new subscribers, enable "
+":guilabel:`Send guidelines to new subscribers` and write them in the "
+":guilabel:`Guidelines` tab. This is particularly useful when the mail group "
+"is moderated."
+msgstr ""
+
+#: ../../content/applications/websites/website/mail_groups.rst:47
+msgid "Using mail groups"
+msgstr ""
+
+#: ../../content/applications/websites/website/mail_groups.rst:50
+msgid "Subscribing/unsubscribing"
+msgstr ""
+
+#: ../../content/applications/websites/website/mail_groups.rst:52
+msgid ""
+"Based on the :ref:`configuration of the mail group "
+"<website/mailing_lists/configure_groups>`, users can subscribe to and "
+"unsubscribe from mail groups from the website page (`/groups` by default)."
+msgstr ""
+
+#: ../../content/applications/websites/website/mail_groups.rst-1
+msgid "Mail group web page."
+msgstr ""
+
+#: ../../content/applications/websites/website/mail_groups.rst:58
+msgid ""
+"Internal users can also do this from :menuselection:`Website --> Groups --> "
+"Mailing List Groups`, using the :guilabel:`Join` and :guilabel:`Leave` "
+"buttons."
+msgstr ""
+
+#: ../../content/applications/websites/website/mail_groups.rst:62
+msgid "Sending messages"
+msgstr ""
+
+#: ../../content/applications/websites/website/mail_groups.rst:64
+msgid ""
+"To send messages to a mail group, website users can email the :ref:`mail "
+"group's email address <website/mailing_lists/configure_groups>`. Internal "
+"users can also create messages directly from Odoo. To do so, go to "
+":menuselection:`Website --> Groups --> Mailing List Groups`, select the mail"
+" group, click the :guilabel:`Emails` smart button, and click "
+":guilabel:`Create`. Then, fill in the fields and click :guilabel:`Send`."
+msgstr ""
+
+#: ../../content/applications/websites/website/mail_groups.rst:71
+msgid ""
+"The list of messages can also be accessed by selecting the group from the "
+"`/groups` website page."
+msgstr ""
+
+#: ../../content/applications/websites/website/mail_groups.rst:73
+msgid ""
+"Group members can also unsubscribe from the group, access the mail group "
+"page, and send emails to the group using the URLs in the footer of any group"
+" email they have received."
+msgstr ""
+
+#: ../../content/applications/websites/website/mail_groups.rst:0
+msgid "URLs in the footer of a group email."
+msgstr ""
+
+#: ../../content/applications/websites/website/mail_groups.rst:82
+msgid "Moderating mail group messages"
+msgstr ""
+
+#: ../../content/applications/websites/website/mail_groups.rst:84
+msgid ""
+"If the :guilabel:`Moderate this group` feature has been enabled for the "
+":ref:`mail group <website/mailing_lists/configure_groups>`, one of the "
+":guilabel:`Moderators` must approve the group's messages before they are "
+"dispatched to the other members."
+msgstr ""
+
+#: ../../content/applications/websites/website/mail_groups.rst:88
+msgid ""
+"To moderate messages, go to :menuselection:`Website --> Groups --> Mailing "
+"List Groups`, select the mail group, and click the :guilabel:`To review` "
+"smart button. You can moderate messages using the buttons at the end of the "
+"message line or select a message to view its content and moderate it "
+"accordingly."
+msgstr ""
+
+#: ../../content/applications/websites/website/mail_groups.rst:0
+msgid "Moderation buttons in the message line."
+msgstr ""
+
+#: ../../content/applications/websites/website/mail_groups.rst:96
+msgid "The following actions are available:"
+msgstr ""
+
+#: ../../content/applications/websites/website/mail_groups.rst:98
+msgid ""
+":guilabel:`Accept`: to accept the email and send it to the mail group "
+"members."
+msgstr ""
+
+#: ../../content/applications/websites/website/mail_groups.rst:99
+msgid ""
+":guilabel:`Reject`: to reject the email. In the pop-up window that opens, "
+"click :guilabel:`Reject Silently` to reject the email without notifying the "
+"author, or specify an explanation for rejecting the message, then click "
+":guilabel:`Send & Reject` to reject the message and send the explanation to "
+"the author."
+msgstr ""
+
+#: ../../content/applications/websites/website/mail_groups.rst:103
+msgid ""
+":guilabel:`Whitelist`: to whitelist the author, i.e. automatically accept "
+"all of their emails. As a result, a :ref:`moderation rule "
+"<website/mailing_lists/moderate>` is created for the author's email address "
+"with the status :guilabel:`Always allow`."
+msgstr ""
+
+#: ../../content/applications/websites/website/mail_groups.rst:106
+msgid ""
+":guilabel:`Ban`: to blacklist the author, i.e. automatically discard all "
+"their emails. In the pop-up window that opens, click :guilabel:`Ban` to ban "
+"the author without notifying them, or specify an explanation, then click "
+":guilabel:`Send & Ban` to ban the author and send them the explanation. As a"
+" result, a :ref:`moderation rule <website/mailing_lists/moderate>` is "
+"created for the author's email address with the status :guilabel:`Permanent "
+"ban`."
+msgstr ""
+
+#: ../../content/applications/websites/website/mail_groups.rst:113
+msgid ""
+"Messages can also be moderated from the group's list of messages. Go to "
+":menuselection:`Website --> Groups --> Mailing List Groups`, select the mail"
+" group and click the :guilabel:`Emails` smart button."
+msgstr ""
+
+#: ../../content/applications/websites/website/mail_groups.rst:120
+msgid "Whitelisting/Blacklisting authors"
+msgstr ""
+
+#: ../../content/applications/websites/website/mail_groups.rst:122
+msgid ""
+"You can whitelist or blacklist an author either directly :ref:`from a mail "
+"group message <website/mailing_lists/moderate>`, or by creating a moderation"
+" rule. To do so, go to :menuselection:`Website --> Groups --> List "
+"Moderation Rulings` and click :guilabel:`Create`. Then, select the "
+":guilabel:`Group`, specify the author's :guilabel:`Email` and set the "
+":guilabel:`Status` field."
+msgstr ""
+
+#: ../../content/applications/websites/website/mail_groups.rst:129
+msgid ""
+"You can also access the mail group's moderation rules by going to "
+":menuselection:`Website --> Groups --> Mailing List Groups`, selecting the "
+"group, then clicking the :guilabel:`Moderations` smart button."
 msgstr ""
 
 #: ../../content/applications/websites/website/pages.rst:5
@@ -3081,6 +3886,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/websites/website/reporting/google_analytics.rst:0
+#: ../../content/applications/websites/website/reporting/google_analytics.rst:0
 msgid "Measurement ID in Google Analytics."
 msgstr ""
 
@@ -3250,11 +4056,4 @@ msgid ""
 "Integrated with :doc:`Google Analytics <google_analytics>`, those trackers "
 "allow you to see the number of clicks and visitors to keep you on top of "
 "your marketing campaigns."
-msgstr ""
-
-#: ../../content/applications/websites/website/reporting/link_tracker.rst:55
-msgid ""
-"The integration with the :doc:`CRM "
-"</applications/sales/crm/track_leads/prospect_visits>` application allows "
-"you to understand where your leads and opportunities are coming from."
 msgstr ""
