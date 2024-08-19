@@ -211,6 +211,7 @@ sphinx.transforms.i18n.docname_to_domain = (
 # is populated. If a version is passed to `versions` but is not listed here, it will not be shown.
 versions_names = {
     'master': "Master",
+    'saas-17.4': "Odoo Online",
     'saas-17.2': "Odoo Online",
     'saas-17.1': "Odoo Online",
     '17.0': "Odoo 17",
