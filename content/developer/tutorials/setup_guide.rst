@@ -78,7 +78,7 @@ GitHub.
    #. Once you have pushed your first change to the shared fork on **odoo-dev**, create a **draft**
       :abbr:`PR (Pull Request)` with your quadrigram in the title. This will enable you to share
       your upcoming work and receive feedback from your coaches. To ensure a continuous feedback
-      loop, push a new commit as soon as you complete a chapter of a tutorial.
+      loop, push a new commit as soon as you complete an exercise of a tutorial.
    #. At Odoo we use `Runbot <https://runbot.odoo.com>`_ extensively for our :abbr:`CI (Continuous
       Integration)` tests. When you push your changes to **odoo-dev**, Runbot creates a new build
       and tests your code. Once logged in, you will be able to see your branch on the `Tutorials

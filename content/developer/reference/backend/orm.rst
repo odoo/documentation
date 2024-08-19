@@ -518,6 +518,8 @@ behavior is desired:
   :class:`~odoo.fields.Many2one`
   :type: :class:`~odoo.addons.base.models.res_company`
 
+.. _reference/orm/recordsets:
+
 Recordsets
 ==========
 

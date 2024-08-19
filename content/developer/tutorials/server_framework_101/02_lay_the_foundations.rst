@@ -65,18 +65,14 @@ classes, fields are defined as class attributes. Each field is an instance of a 
 `odoo.fields` package. For example, `Char`, `Float`, `Boolean`, each designed to handle different
 types of data. When defining a field, developers can pass various arguments to finely control how
 data is handled and presented in Odoo. For example, `string` defines the label for the field in the
-user interface, `help` provides a tooltip  when hovering the field in the user interface, and
-`required` makes filling in the field mandatory.
+user interface, `help` provides a tooltip  when hovering the field in the user interface, `required`
+makes filling in the field mandatory, and `default` provides a default field value.
 
 Individual data entries are called **records**. They are based on the structure defined by models
 and contain the actual data for each field specified in the model. In Python, records are
 represented as instances of the model's class, allowing developers to interact with data using
 object-oriented programming techniques. For example, in a real estate application using a tenant
 model, each specific tenant (such as "Bafien Carpink") would be a separate record of that model.
-
-.. seealso::
-   For the full list of fields and their attributes, see the :ref:`reference documentation
-   <reference/orm/fields>`.
 
 .. example::
    Before we dive into creating our own models, let's take a look at a basic example of a model that
@@ -94,12 +90,12 @@ model, each specific tenant (such as "Bafien Carpink") would be a separate recor
 
           name = fields.Char(string="Name", required=True)
           description = fields.Text(string="Description")
-          price = fields.Float(string="Sale Price", required=True)
+          price = fields.Float(string="Sales Price", required=True)
           category = fields.Selection(
               string="Category",
               help="The category of the product; if none are suitable, select 'Other'.",
               selection=[
-                  ('apparel', "Clothing")
+                  ('apparel', "Clothing"),
                   ('electronics', "Electronics"),
                   ('home_decor', "Home Decor"),
                   ('other', "Other"),
@@ -116,11 +112,14 @@ model, each specific tenant (such as "Bafien Carpink") would be a separate recor
       - `category` is a `Selection` field with predefined options, each defined by a technical code
         and a corresponding label. Since it is required, a default value is provided.
 
+.. seealso::
+   For the full list of fields and their attributes, see the :ref:`reference documentation
+   <reference/orm/fields>`.
+
 Building on these new concepts, let's now create the first model for our real estate app. We'll
 create a model with some fields to represent real estate properties and their characteristics.
 
 .. exercise::
-
    #. Create a new :file:`real_estate_property.py` file at the root of the `real_estate` module.
    #. Update the :file:`real_estate/__init__.py` file to relatively import the
       :file:`real_estate_property.py` file, like so:
@@ -132,19 +131,20 @@ create a model with some fields to represent real estate properties and their ch
    #. Define a new model with `real.estate.property` as `_name` and a short `_description`.
    #. Add fields to represent the following characteristics:
 
-      - Name (required)
-      - Description
-      - Image (max 600x400 pixels)
-      - Active (default to true)
-      - State (new, offer received, under option, or sold; required; default to new)
-      - Type (house, apartment, office building, retail space, or warehouse; required; default to
+      - **Name** (required)
+      - **Description**
+      - **Image** (max 600x400 pixels)
+      - **Active** (whether the property listing is active; defaults to true)
+      - **State** (new, offer received, under option, or sold; required; defaults to new)
+      - **Type** (house, apartment, office building, retail space, or warehouse; required; defaults to
         house)
-      - Selling Price (without currency; with help text; required)
-      - Availability Date (default to creation date + two months)
-      - Floor Area (in square meters; with help text)
-      - Number of Bedrooms (default to two)
-      - Whether there is a garden
-      - Whether there is a garage
+      - **Selling Price** (without currency; with help text; required)
+      - **Availability Date**
+      - **Floor Area** (in square meters; with help text)
+      - **Number of Bedrooms** (defaults to two)
+      - **Garage** (whether there is a garage)
+      - **Garden** (whether there is a garden)
+      - **Garden Area** (in square meters; with help text)
 
    .. tip::
       - The class name doesn't matter, but the convention is to use the model's upper-cased `_name`
@@ -163,7 +163,6 @@ create a model with some fields to represent real estate properties and their ch
       :caption: `real_estate_property.py`
 
       from odoo import fields, models
-      from odoo.tools import date_utils
 
 
       class RealEstateProperty(models.Model):
@@ -200,15 +199,16 @@ create a model with some fields to represent real estate properties and their ch
           selling_price = fields.Float(
               string="Selling Price", help="The selling price excluding taxes.", required=True
           )
-          availability_date = fields.Date(
-              string="Availability Date", default=date_utils.add(fields.Date.today(), months=2)
-          )
+          availability_date = fields.Date(string="Availability Date")
           floor_area = fields.Integer(
               string="Floor Area", help="The floor area in square meters excluding the garden."
           )
           bedrooms = fields.Integer(string="Number of bedrooms", default=2)
-          has_garden = fields.Boolean(string="Garden")
           has_garage = fields.Boolean(string="Garage")
+          has_garden = fields.Boolean(string="Garden")
+          garden_area = fields.Integer(
+              string="Garden Area", help="The garden area excluding the building."
+          )
 
 Congrats, you have just defined the first model of our real estate app! However, the changes have
 not yet been applied to the database. To do so, you must add the `-u real_estate` argument to the
@@ -235,7 +235,6 @@ you created translate into a new SQL table. We will use `psql`, the CLI
 :dfn:`command-line interface` allowing to browse and interact with PostgreSQL databases.
 
 .. exercise::
-
    #. In your terminal, execute the command :command:`psql -d tutorials`.
    #. Enter the command :command:`\\d real_estate_property` to print the description of the
       `real_estate_property` table.
@@ -246,6 +245,7 @@ you created translate into a new SQL table. We will use `psql`, the CLI
 .. spoiler:: Solution
 
    .. code-block:: text
+      :caption: terminal
 
       $ psql -d tutorials
 
@@ -256,6 +256,7 @@ you created translate into a new SQL table. We will use `psql`, the CLI
        id                | integer                     |           | not null | nextval('real_estate_property_id_seq'::regclass)
        floor_area        | integer                     |           |          |
        bedrooms          | integer                     |           |          |
+       garden_area       | integer                     |           |          |
        create_uid        | integer                     |           |          |
        write_uid         | integer                     |           |          |
        name              | character varying           |           | not null |
@@ -264,8 +265,8 @@ you created translate into a new SQL table. We will use `psql`, the CLI
        availability_date | date                        |           |          |
        description       | text                        |           |          |
        active            | boolean                     |           |          |
-       has_garden        | boolean                     |           |          |
        has_garage        | boolean                     |           |          |
+       has_garden        | boolean                     |           |          |
        create_date       | timestamp without time zone |           |          |
        write_date        | timestamp without time zone |           |          |
        selling_price     | double precision            |           | not null |
@@ -343,9 +344,6 @@ The most common data operation is creating new records through the `record` and 
 elements, but other operations exist, such as `delete`, which deletes previously created records, or
 even `function`, which allows executing arbitrary code.
 
-.. seealso::
-   :doc:`Reference documentation for XML data files <../../reference/backend/data>`
-
 Some data operations require their data elements to be uniquely identified by the system. This is
 achieved by means of the `id` attribute, also known as the **XML ID** or **external identifier**. It
 provides a way for other elements to reference it with the `ref` attribute and links data elements
@@ -387,10 +385,12 @@ created from a data file so that records can be referenced by their full XML ID 
       - The `ref` attribute is used to reference other records by their XML ID and use their record
         ID as value.
 
+.. seealso::
+   :doc:`Reference documentation for XML data files <../../reference/backend/data>`
+
 Let's now load some default real estate properties in our database.
 
 .. exercise::
-
    #. Create a new :file:`real_estate_property_data.xml` file at the root of the `real_estate`
       module.
    #. Update the manifest to let the server know that it should load our data file. To do so, have
@@ -441,10 +441,12 @@ Let's now load some default real estate properties in our database.
               <field name="image" type="base64" file="real_estate/country_house.png"/>
               <field name="type">house</field>
               <field name="selling_price">745000</field>
+              <field name="availability_date">2024-08-01</field>
               <field name="floor_area">416</field>
               <field name="bedrooms">5</field>
-              <field name="has_garden">True</field>
               <field name="has_garage">True</field>
+              <field name="has_garden">True</field>
+              <field name="garden_area">2100</field>
           </record>
 
           <record id="real_estate.loft" model="real.estate.property">
@@ -456,8 +458,8 @@ Let's now load some default real estate properties in our database.
               <field name="availability_date">2025-01-01</field>
               <field name="floor_area">195</field>
               <field name="bedrooms">3</field>
-              <field name="has_garden">False</field>
               <field name="has_garage">True</field>
+              <field name="has_garden">False</field>
           </record>
 
           <record id="real_estate.mixed_use_commercial" model="real.estate.property">
@@ -469,8 +471,8 @@ Let's now load some default real estate properties in our database.
               <field name="availability_date">2024-10-02</field>
               <field name="floor_area">370</field>
               <field name="bedrooms">0</field>
-              <field name="has_garden">False</field>
               <field name="has_garage">False</field>
+              <field name="has_garden">False</field>
           </record>
 
       </odoo>
@@ -483,9 +485,6 @@ CSV data files
 In addition to XML data files, the server framework allows loading data files in CSV format. This
 format is often more convenient for describing records with simple field values belonging to the
 same model. It also loads faster, making it the go-to format when performance matters most.
-
-.. seealso::
-   :ref:`Reference documentation for CSV data files <reference/data/csvdatafiles>`
 
 .. example::
    See below for an example of how a subset of `country states can be loaded into Odoo
@@ -510,13 +509,15 @@ same model. It also loads faster, making it the go-to format when performance ma
       state_ca_yt,ca,"Yukon","YT"
 
    .. note::
-
       - The file name must match the model name.
       - The first line lists the model fields to populate.
       - XML IDs are specified via the special `id` field.
       - The `:id` suffix is used to reference other records by their XML ID and use their record ID
         as value.
       - Each subsequent line describes one new record.
+
+.. seealso::
+   :ref:`Reference documentation for CSV data files <reference/data/csvdatafiles>`
 
 In business applications like Odoo, one of the first questions to consider is who can access the
 data. By default, access to newly created models is restricted until it is explicitly granted.
@@ -532,7 +533,6 @@ began being logged at server start-up after creating the model:
    WARNING tutorials odoo.modules.loading: The models ['real.estate.property'] have no access rules [...]
 
 .. exercise::
-
    #. Create a new :file:`ir.model.access.csv` file at the root of the `real_estate` module.
    #. Declare it in the manifest as you did for the :file:`real_estate_property_data.xml` file.
    #. Grant access to the `real.estate.property` model to all administrators of the database by
@@ -550,7 +550,7 @@ began being logged at server start-up after creating the model:
 
 .. spoiler:: Solution
 
-   .. code-block:: py
+   .. code-block:: python
       :caption: `__manifest__.py`
       :emphasize-lines: 2
 

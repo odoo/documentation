@@ -813,6 +813,8 @@ In general in Odoo, when manipulating strings, prefer ``%`` over ``.format()``
 of position (when multiple variables have to be replaced). This makes the
 translation easier for the community translators.
 
+.. _contributing/coding_guidelines/model_members:
+
 Symbols and Conventions
 -----------------------
 
