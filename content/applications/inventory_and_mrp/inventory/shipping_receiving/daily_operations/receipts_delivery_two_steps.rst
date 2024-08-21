@@ -143,6 +143,8 @@ deliveries or manufacturing orders.
    :align: center
    :alt: Internal transfer form for products ordered from vendor.
 
+.. _inventory/shipping_receiving/two-step-delivery:
+
 Process delivery order in two steps (pick + ship)
 =================================================
 
