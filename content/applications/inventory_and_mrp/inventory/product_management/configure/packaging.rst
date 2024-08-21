@@ -167,6 +167,8 @@ warehouse. Next, in the :guilabel:`Applicable on` section, tick the :guilabel:`P
 
    Route with "Packagings" selected, with "Products" and "Warehouses" not selected.
 
+.. _inventory/product_management/route-on-packaging:
+
 Apply route on packaging
 ------------------------
 
