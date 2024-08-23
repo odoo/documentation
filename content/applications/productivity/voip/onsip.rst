@@ -91,12 +91,6 @@ Fill in the following fields with the associated credentials listed below:
 - :guilabel:`Voip Username` = OnSIP :guilabel:`Username`
 - :guilabel:`OnSIP Auth Username` = OnSIP :guilabel:`Auth Username`
 - :guilabel:`VoIP Secret` = OnSIP :guilabel:`SIP Password`
-- :guilabel:`External Device Number` = OnSIP :guilabel:`Ext.` (extension without the `x`)
-
-.. image:: onsip/onsip-creds.png
-   :align: center
-   :alt: OnSIP user credentials with username, auth username, SIP password, and extension
-         highlighted.
 
 .. tip::
    The OnSIP extension can be found in the *User* banner line above the tabs.
