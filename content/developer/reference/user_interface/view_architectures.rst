@@ -113,8 +113,6 @@ Optional attributes can be added to the root element `form` to customize the vie
    :type: bool
    :default: `False`
 
-.. include:: view_architectures/root_attribute_banner_route.rst
-
 .. _reference/view_architectures/form/semantic:
 
 Semantic components
@@ -1311,8 +1309,6 @@ Optional attributes can be added to the root element `tree` to customize the vie
    :default: `False`
 
 .. include:: view_architectures/root_attribute_sample.rst
-
-.. include:: view_architectures/root_attribute_banner_route.rst
 
 .. _reference/view_architectures/list/components:
 
@@ -2521,8 +2517,6 @@ Optional attributes can be added to the root element `kanban` to customize the v
    :type: str
 
 .. include:: view_architectures/root_attribute_sample.rst
-
-.. include:: view_architectures/root_attribute_banner_route.rst
 
 .. _reference/view_architectures/kanban/components:
 
