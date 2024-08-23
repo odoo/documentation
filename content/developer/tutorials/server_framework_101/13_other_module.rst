@@ -1,6 +1,6 @@
-=======================================
-Chapter 13: Interact With Other Modules
-=======================================
+================================
+Old: Interact With Other Modules
+================================
 
 In the :doc:`previous chapter <12_inheritance>`, we used inheritance to
 modify the behavior of a module. In our real estate scenario, we would like to go a step further
@@ -40,7 +40,7 @@ independently. When both are installed, the link module provides the new feature
     For now, it will be an empty shell.
 
     Tip: you already did this at the
-    :doc:`beginning of the tutorial <02_newapp>`. The process is very
+    :doc:`beginning of the tutorial <02_lay_the_foundations>`. The process is very
     similar.
 
 When the ``estate_account`` module appears in the list, go ahead and install it! You'll notice that

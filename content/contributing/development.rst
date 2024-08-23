@@ -151,7 +151,10 @@ navigate to the directory where you installed Odoo from sources and follow the g
    #. Select **<your_github_account>/odoo** or **<your_github_account>/enterprise** for the head
       repository. Replace `<your_github_account>` with the name of the GitHub account on which you
       created the fork or by **odoo-dev** if you work at Odoo.
-   #. Review your changes and click on the :guilabel:`Create pull request` button.
+   #. Click on :guilabel:`Create pull request` to create the :abbr:`PR (Pull Request)` and
+      automatically request a review from the code maintainers. If you wish to double-check your
+      changes first, or if you work at Odoo and follow an internal process for reviews, click on
+      :guilabel:`Create draft pull request`.
    #. Tick the :guilabel:`Allow edits from maintainer` checkbox. Skip this step if you work at Odoo.
    #. Complete the description and click on the :guilabel:`Create pull request` button again.
 

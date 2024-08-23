@@ -1,8 +1,8 @@
-========================================
-Chapter 8: Computed Fields And Onchanges
-========================================
+==================================
+Old: Computed Fields And Onchanges
+==================================
 
-The :doc:`relations between models <07_relations>` are a key component of
+The `relations between models <07_relations>` are a key component of
 any Odoo module. They are necessary for the modelization of any business case. However, we may want
 links between the fields within a given model. Sometimes the value of one field is determined from
 the values of other fields and other times we want to help the user with data entry.
@@ -50,7 +50,7 @@ method should set the value of the computed field for every record in
 
 By convention, :attr:`~odoo.fields.Field.compute` methods are private, meaning that they cannot
 be called from the presentation tier, only from the business tier (see
-:ref:`tutorials/server_framework_101/01_architecture`). Private methods have a name starting with an
+:doc:`01_architecture_overview`). Private methods have a name starting with an
 underscore ``_``.
 
 Dependencies

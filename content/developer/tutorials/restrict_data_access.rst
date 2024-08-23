@@ -140,8 +140,6 @@ Access Rights
       real-estate application.
     - Real-estate agents will not be able to update the property types or tags.
 
-Access rights were first introduced in :doc:`server_framework_101/04_securityintro`.
-
 Access rights are a way to give users access to models *via* groups: associate
 an access right to a group, then all users with that group will have the access.
 
