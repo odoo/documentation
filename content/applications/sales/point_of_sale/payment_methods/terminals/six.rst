@@ -6,56 +6,59 @@ Connecting a SIX payment terminal allows you to offer a fluid payment flow to yo
 ease the work of your cashiers.
 
 .. warning::
-   Even though Worldline has recently acquired SIX Payment Services and both companies use Yomani
-   payment terminals, the firmware they run is different. Terminals received from Worldline are
-   therefore not compatible with this integration.
+   Although Worldline has acquired SIX Payment Services and both entities utilize Yomani payment
+   terminals, their firmware differs. Terminals supplied by Worldline are, therefore, incompatible
+   with this integration.
 
 Configuration
 =============
 
-Install the POS IoT Six module
-------------------------------
+Prerequisites
+-------------
 
-To activate the POS IoT Six module, go to :guilabel:`Apps`, remove the :guilabel:`Apps` filter, and
-search for **POS IoT Six**. This module adds the necessary driver and interface to your database to
-detect Six terminals.
+#. Install the POS IoT Six module: :doc:`Activate the POS IoT Six module module
+   <../../../../general/apps_modules>` to enable the payment terminal.
 
-.. note::
-   This module replaces the **POS Six** module.
-
-Connect an IoT system
----------------------
-
-Connecting a Six payment terminal to Odoo is requires :doc:`using an IoT system
-</applications/general/iot>`.
-
-Configure the terminal ID
--------------------------
-
-Navigate to the IoT system's homepage, where you can find the  :guilabel:`Six payment terminal`
-field once your database server is connected to the IoT system. Click :guilabel:`Configure`, fill
-in the :guilabel:`Terminal ID` field with the ID received from Six, and click :guilabel:`Connect`.
-Your Six terminal ID should appear in the :guilabel:`Current Terminal Id` section.
-
-.. image:: six/terminal-id.png
-   :alt: Setting the Six terminal ID
-
-Odoo automatically restarts the IoT system when the Six terminal ID is configured. If your Six
-terminal is online, it will be automatically detected and connected to the database. Check the IoT
-system's homepage under the :guilabel:`Payments` section to confirm the connection.
-
-.. image:: six/id-configured.png
-   :alt: Confirming the connection to the Six payment terminal
+   .. note::
+      This module replaces the **POS Six** module.
+#. Connect an IoT system: :doc:`A Raspberry Pi or a virtual IoT system (for Windows OS only)
+   </applications/general/iot/connect>` is required to connect a SIX payment terminal to Odoo.
 
 .. _six/configure:
 
 Configure the payment method
 ----------------------------
 
-Enable the payment terminal :ref:`in the application settings <configuration/settings>` and
-:doc:`create the related payment method <../../payment_methods>`. Set the journal type as
-:guilabel:`Bank` and select :guilabel:`SIX IOT` in the :guilabel:`Use a Payment Terminal` field.
-Then, select your terminal device in the :guilabel:`Payment Terminal Device` field.
+#. Enable the payment terminal :ref:`in the application settings <configuration/settings>` and
+   :doc:`create a payment method for SIX terminals <../../payment_methods>`.
+#. Set the journal type as :guilabel:`Bank`.
+#. Fill in the :guilabel:`Outstanding Account` field.
+#. Select :guilabel:`Terminal` in the :guilabel:`Integration` field.
+#. Select :guilabel:`SIX IOT` in the :guilabel:`Integrate with` field.
+#. Click :guilabel:`Setup Six Terminal`.
 
 .. image:: six/new-payment-method.png
    :alt: Creating a new payment method for the SIX payment terminal
+   :scale: 45 %
+
+In the modal window,
+
+#. Click the :guilabel:`IoT Box` field and select the IoT system from the dropdown menu.
+#. Enter the :guilabel:`Six Terminal ID (TID)` provided by SIX.
+#. Select the :guilabel:`Terminal Device` from dropdown menu.
+#. Finally, click :guilabel:`Add Terminal`.
+
+.. image:: six/terminal-wizard.png
+   :alt: Configuring the Terminal ID for the SIX payment terminal
+
+.. note::
+   Ensure the SIX terminal is online and connected to the same network as the IoT system.
+
+Link the payment method to a POS
+--------------------------------
+
+Once the payment method is created, it can be selected in the POS settings. To do so,
+
+#. Go to the :ref:`POS' settings <configuration/settings>`.
+#. Add the payment method under the :guilabel:`Payment methods` field within the :guilabel:`Payment`
+   section.
