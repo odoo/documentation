@@ -26,24 +26,20 @@ would break the hash chain.
 
 .. _data-inalterability/lock:
 
-Lock entries with hash
-======================
+Lock posted entries with hash
+=============================
 
 To start using the hashing function, go to :menuselection:`Accounting --> Configuration > Journals`.
 Open the journal for which you want to activate the feature, go to the :guilabel:`Advanced Settings`
-tab, and enable :guilabel:`Lock Sent Invoices with Hash` for sale journals, or
-:guilabel:`Lock Entries Manually` for purchase and general journals.
-
-For sale journals, the entry is automatically locked once it is sent. You can also click on the
-button :guilabel:`Lock` on the invoice to lock it without sending it. For sale, purchase, and
-general journals, the locking is always done manually using the same button.
+tab, and enable :guilabel:`Lock Posted Invoices with Hash`.
+This feature is available for sale, purchase, and general journals.
 
 To compute the hash of an entry, Odoo retrieves the predecessor entries of the chain (i.e., the
 entries with the same sequence prefix) and hashes them in a continuous way from the last hashed
 entry to the new entry to hash.
 
 .. warning::
-   Once you lock an entry in a locked journal, you cannot disable the feature anymore, nor edit any
+   Once you post an entry in a locked journal, you cannot disable the feature anymore, nor edit any
    locked entry.
 
 .. _data-inalterability/report:
