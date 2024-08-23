@@ -29,24 +29,6 @@ Connect an IoT box
 Connecting a Six payment terminal to Odoo is requires :doc:`using a Raspberry Pi or virtual (for
 Windows OS only) IoT box </applications/general/iot/config/connect>`.
 
-Configure the terminal ID
--------------------------
-
-Navigate to your IoT Box homepage, where you can find the  :guilabel:`Six payment terminal` field
-once your database server is connected to the IoT box. Click :guilabel:`Configure`, fill in the
-:guilabel:`Terminal ID` field with the ID received from Six, and click :guilabel:`Connect`. Your
-Six terminal ID should appear in the :guilabel:`Current Terminal Id` section.
-
-.. image:: six/terminal-id.png
-   :alt: Setting the Six terminal ID
-
-Odoo automatically restarts the IoT box when the Six terminal ID is configured. If your Six terminal
-is online, it will be automatically detected and connected to the database. Check the IoT box
-homepage under the :guilabel:`Payments` section to confirm the connection.
-
-.. image:: six/id-configured.png
-   :alt: Confirming the connection to the Six payment terminal
-
 .. _six/configure:
 
 Configure the payment method
@@ -55,10 +37,25 @@ Configure the payment method
 Enable the payment terminal :ref:`in the application settings <configuration/settings>` and
 :doc:`create the related payment method <../../payment_methods>`. Set the journal type as
 :guilabel:`Bank` and select :guilabel:`SIX IOT` in the :guilabel:`Use a Payment Terminal` field.
-Then, select your terminal device in the :guilabel:`Payment Terminal Device` field.
+Then, select :guilabel:`Setup Six Terminal`.
 
 .. image:: six/new-payment-method.png
    :alt: Creating a new payment method for the SIX payment terminal
+
+Ensure your Six terminal is online and connected to the same network as the IoT box.
+Select your :guilabel:`IoT Box` and fill in the :guilabel:`Six Terminal ID (TID)` with the ID received from Six.
+After a short amount of time the Six terminal should appear in the
+:guilabel:`Terminal Device` dropdown.
+
+.. note::
+   If you receive a notification with the message :guilabel:`Failed to save Six Terminal ID to IoT Box`,
+   please ensure that your computer is on the same network as the IoT box and that you can access it's
+   homepage.
+
+Finally, select :guilabel:`Add Terminal`.
+
+.. image:: six/terminal-wizard.png
+   :alt: Configuring the Terminal ID for the SIX payment terminal
 
 Once the payment method is created, you can select it in your POS settings. To do so, go to the
 :ref:`POS' settings <configuration/settings>`, click :guilabel:`Edit`, and add the payment method
