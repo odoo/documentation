@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-23 13:30+0000\n"
+"POT-Creation-Date: 2024-08-21 11:43+0000\n"
 "PO-Revision-Date: 2024-03-30 23:40+0000\n"
 "Last-Translator: Wil Odoo, 2024\n"
 "Language-Team: Slovenian (https://app.transifex.com/odoo/teams/41243/sl/)\n"
@@ -68,7 +68,7 @@ msgstr ""
 #: ../../content/applications/hr/attendances.rst:59
 #: ../../content/applications/hr/attendances/kiosks.rst:22
 #: ../../content/applications/hr/frontdesk.rst:15
-#: ../../content/applications/hr/time_off.rst:31
+#: ../../content/applications/hr/time_off.rst:30
 msgid "Configuration"
 msgstr "Nastavitve"
 
@@ -84,7 +84,7 @@ msgstr ""
 #: ../../content/applications/hr/fleet.rst:13
 #: ../../content/applications/hr/lunch.rst:15
 #: ../../content/applications/hr/payroll.rst:15
-#: ../../content/applications/hr/recruitment.rst:35
+#: ../../content/applications/hr/recruitment.rst:34
 msgid "Settings"
 msgstr "Nastavitve"
 
@@ -1079,7 +1079,7 @@ msgstr ""
 #: ../../content/applications/hr/frontdesk.rst:210
 #: ../../content/applications/hr/payroll/reporting.rst:3
 #: ../../content/applications/hr/referrals.rst:261
-#: ../../content/applications/hr/time_off.rst:477
+#: ../../content/applications/hr/time_off.rst:494
 msgid "Reporting"
 msgstr "Poročanje"
 
@@ -1512,7 +1512,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/hr/attendances.rst:117
-#: ../../content/applications/hr/time_off.rst:433
+#: ../../content/applications/hr/time_off.rst:450
 msgid "Overview"
 msgstr "Pregled"
 
@@ -2692,8 +2692,9 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/hr/employees/departments.rst:61
+#: ../../content/applications/hr/fleet/accidents.rst:142
 #: ../../content/applications/hr/fleet/service.rst:329
-#: ../../content/applications/hr/recruitment.rst:175
+#: ../../content/applications/hr/recruitment.rst:174
 msgid "Kanban view"
 msgstr ""
 
@@ -2747,8 +2748,9 @@ msgstr ""
 #: ../../content/applications/hr/employees/departments.rst:78
 msgid ""
 ":guilabel:`Expense Reports`: the number of employees in the department with "
-":ref:`open expense reports to approve <expenses/approve>`. This **only** "
-"appears if there are any expense reports waiting for approval."
+":doc:`open expense reports to approve "
+"<../../finance/expenses/approve_expenses>`. This **only** appears if there "
+"are any expense reports waiting for approval."
 msgstr ""
 
 #: ../../content/applications/hr/employees/departments.rst:81
@@ -3067,7 +3069,7 @@ msgstr ""
 
 #: ../../content/applications/hr/employees/new_employee.rst:110
 #: ../../content/applications/hr/payroll.rst:874
-#: ../../content/applications/hr/recruitment.rst:419
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:38
 msgid "Resumé"
 msgstr "Delovne izkušnje"
 
@@ -4003,6 +4005,513 @@ msgstr ""
 
 #: ../../content/applications/hr/fleet.rst:87
 msgid ":doc:`fleet/service`"
+msgstr ""
+
+#: ../../content/applications/hr/fleet.rst:88
+msgid ":doc:`fleet/accidents`"
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:3
+msgid "Accidents"
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:5
+msgid ""
+"When managing a fleet, accidents are inevitable. Tracking accidents is "
+"crucial for understanding vehicle maintenance costs and identifying safe "
+"drivers."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:8
+msgid ""
+"Odoo's *Fleet* app offers multiple ways to track accidents. Below are step-"
+"by-step instructions for only **one** method to monitor accidents and repair"
+" costs."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:12
+msgid "Structure"
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:14
+msgid ""
+"For this example, to track accidents, two :ref:`service types <fleet/new-"
+"type>` are created: `Accident - Driver's Fault` and `Accident - No Fault`."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:17
+msgid ""
+"This tracks various repairs associated with accidents, organized by who was "
+"at fault."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:19
+msgid ""
+"When an accident occurs, a service record is created. The specific repairs "
+"needed for the accident are logged in the *Description* of the service "
+"record, and the details about the accident are logged in the *Notes* "
+"section."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:23
+msgid ""
+"With this organizational structure, it is possible to view all accidents "
+"organized by fault, car, driver, or cost."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:27
+msgid "To manage accidents, the creation of service records is **required**."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:29
+msgid ""
+"Refer to the :doc:`service` documentation for detailed instructions on "
+"creating service records in Odoo's *Fleet* app."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:33
+msgid "Log accidents and repairs"
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:35
+msgid ""
+"To log an accident, and initiate the repair process, the first step is to "
+":ref:`create a service record <fleet/service-form>` detailing the specific "
+"repairs needed."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:39
+msgid ""
+"Some accidents require multiple repairs with several different vendors. For "
+"these scenarios, a separate service record is needed for each vendor "
+"performing repairs. To keep records organized, it is recommended to keep the"
+" *Notes* field identical, as well as attaching the same important "
+"documentation, such as a police report."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:44
+msgid ""
+"Navigate to :menuselection:`Fleet app --> Fleet --> Services` to view the "
+"main :guilabel:`Services` dashboard. Click :guilabel:`New` in the top-left "
+"corner, and a blank service form loads."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:47
+#: ../../content/applications/hr/fleet/service.rst:380
+#: ../../content/applications/hr/frontdesk.rst:33
+#: ../../content/applications/hr/lunch/products.rst:12
+#: ../../content/applications/hr/payroll.rst:894
+#: ../../content/applications/hr/payroll/work_entries.rst:56
+#: ../../content/applications/hr/time_off.rst:221
+msgid "Enter the following information on the form:"
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:49
+msgid ""
+":guilabel:`Description`: enter the description of repairs needed to fully "
+"repair the vehicle, such as `Bodywork`, `Windshield Replacement`, or "
+"`Replacement Bumper, Tires, and Windows`."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:51
+msgid ""
+":guilabel:`Service Type`: for this example, select either `Accident - "
+"Driver's Fault` or `Accident - No Fault`, depending on the situation."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:54
+msgid ""
+"When entering either of these two :guilabel:`Service Types` for the first "
+"time, type in the new service type, then click :guilabel:`Create (new "
+"service type)`. A :guilabel:`Create Service Type` pop-up window appears, "
+"with the new service type populating the :guilabel:`Name` field. In the "
+":guilabel:`Category` field, select :guilabel:`Service` from the drop-down "
+"menu, then click the :guilabel:`Save & Close` button."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:60
+msgid ""
+"Once an accident service type has been added to the database, it is "
+"available to select from the drop-down menu in the :guilabel:`Service Type` "
+"field."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:62
+msgid ""
+":guilabel:`Date`: using the calendar popover window, select the date the "
+"accident occurred. Navigate to the desired month using the :icon:`fa-"
+"chevron-left` :icon:`fa-chevron-right` :guilabel:`(arrow)` icons, then click"
+" the date to select it."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:65
+msgid ""
+":guilabel:`Cost`: leave this field blank, as the repair cost is not yet "
+"known."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:66
+msgid ""
+":guilabel:`Vendor`: select the vendor performing the repairs using the drop-"
+"down menu. If the vendor has not already been entered in the system, type in"
+" the vendor name, and click either :guilabel:`Create` to add them, or "
+":guilabel:`Create and edit...` to :ref:`add and configure the vendor "
+"<fleet/new-vendor>`."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:70
+msgid ""
+":guilabel:`Vehicle`: select the vehicle that was in the accident from the "
+"drop-down menu. When the vehicle is selected, the :guilabel:`Driver` field "
+"is populated, and the unit of measure for the :guilabel:`Odometer Value` "
+"field appears."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:73
+msgid ""
+":guilabel:`Driver`: the current driver listed for the selected vehicle "
+"populates this field when the :guilabel:`Vehicle` is selected. If a "
+"different driver was operating the vehicle when the accident occurred, "
+"select the correct driver from the drop-down menu."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:76
+msgid ""
+":guilabel:`Odometer Value`: enter the odometer reading when the accident "
+"occurred. The units of measure are either in kilometers (:guilabel:`km`) or "
+"miles (:guilabel:`mi`), depending on how the selected vehicle was "
+"configured."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:79
+msgid ""
+":guilabel:`NOTES`: enter the specific details of the accident at the bottom "
+"of the service form, such as `Hit a deer` or `Rear-ended at an intersection "
+"while stopped`."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:82
+msgid ""
+"Odoo provides the ability to attach any important paperwork, such as repair "
+"estimates and police reports, to the service record. To do so, click the "
+":icon:`fa-paperclip` :guilabel:`(paperclip)` icon, located in the *chatter* "
+"of the form, and a file explorer pop-up window appears. Navigate to the "
+"desired record, and click :guilabel:`Open` to upload the file."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:88
+msgid ""
+"Once a file is added to a service record, a :guilabel:`Files` section "
+"appears in the *chatter*. To attach more records, click :icon:`fa-plus-"
+"square` :guilabel:`Attach files` to add more documents."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst-1
+msgid "Enter the information for an accident repair."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:97
+msgid "Service stages"
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:99
+msgid "In Odoo's *Fleet* app, there are four default service stages:"
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:103
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:18
+msgid "New"
+msgstr "Novo"
+
+#: ../../content/applications/hr/fleet/accidents.rst:105
+msgid ""
+"The default stage when a service record is created. The service has been "
+"requested, but repairs have not begun. The :guilabel:`Cost` field for this "
+"stage remains zero."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:108
+msgid "Running"
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:110
+msgid ""
+"The repair is in-process, but not yet complete. The estimate for repairs is "
+"listed in the :guilabel:`Cost` field."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:113
+msgid "Completed"
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:115
+msgid ""
+"All repairs listed on the service form have been completed. The "
+":guilabel:`Cost` field is updated to reflect the final total cost charged "
+"for the repairs."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:118
+msgid "Cancelled"
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:120
+msgid "The service request has been cancelled."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:122
+msgid ""
+"During the repair process, change the service status to reflect the "
+"vehicle's current state in one of two ways: on the individual :ref:`service "
+"record <fleet/service_record>`, or in the :ref:`Kanban service view "
+"<fleet/Kanban>`."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:129
+msgid "Service record"
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:131
+msgid ""
+"Open the main *Services* dashboard, by navigating to :menuselection:`Fleet "
+"app --> Fleet --> Services`. Next, click on the individual service record to"
+" open the detailed service form. Click the desired stage in the top-right "
+"corner, above the service form, to change the status."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst-1
+msgid "The stages as seen from the service form."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:144
+msgid ""
+"Open the main *Services* dashboard, by navigating to :menuselection:`Fleet "
+"app --> Fleet --> Services`. First, click the :icon:`oi-view-kanban` "
+":guilabel:`Kanban` icon in the top-right of the screen, which organizes all "
+"repairs by vehicle."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:148
+msgid ""
+"Next, remove the default :guilabel:`Service Type` filter in the search bar. "
+"Upon doing so, all services appear in a Kanban view, organized by their "
+"respective :guilabel:`Status`."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:151
+msgid "Drag-and-drop the service record to the desired stage."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst-1
+msgid ""
+"The Kanban view of stages, with a card being dragged and dropped to the "
+"Running stage."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:158
+msgid "Accident reporting"
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:160
+msgid ""
+"One of the main reasons to track accidents using the method outlined in this"
+" document is the ability to view the total accident cost, determine the "
+"safest drivers, and calculate the actual total cost for specific vehicles."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:164
+msgid ""
+"The main :ref:`Services dashboard <fleet/services_dashboard>` displays all "
+"the various accident information, while the :ref:`Reporting dashboard "
+"<fleet/reporting_dashboard>` displays the total cost for specific vehicles."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:171
+msgid "Services dashboard"
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:173
+msgid ""
+"Navigate to :menuselection:`Fleet app --> Fleet --> Services` to view the "
+":guilabel:`Services` dashboard. All service records are displayed in a "
+":icon:`oi-view-list` :guilabel:`(List)` view, grouped alphabetically, by "
+":guilabel:`Service Type`."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:177
+msgid ""
+"The two service types created for accident tracking appear in the list: "
+":guilabel:`Accident - Driver Fault` and :guilabel:`Accident - No Fault`."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:180
+msgid ""
+"Each grouping displays the number of records within each type, and lists the"
+" individual records beneath each grouping title."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:184
+msgid ""
+"In this example, there are six accidents where the driver was at fault, and "
+"four accidents that were not the driver's fault. This dashboard also "
+"displays the estimated total :guilabel:`Cost` for all the accidents in each "
+"group."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:188
+msgid ""
+"An estimated `$19,164.81` dollars are for driver-caused accident repairs, "
+"and an estimated `$2,548.21` dollars are for no-fault accidents."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:0
+msgid "Accident services, with the total costs highlighted."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:196
+msgid ""
+"The total :guilabel:`Cost` calculates **all** costs on the repair form, "
+"including estimated costs, as well as final repair costs. This number may "
+"not be accurate, if there are any repairs in the *Running* stage, and the "
+"final bill has not yet been calculated."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:203
+msgid "Reporting dashboard"
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:205
+msgid ""
+"Navigate to :menuselection:`Fleet app --> Reporting --> Costs` to view the "
+":menuselection:`Cost Analysis` report. This report displays a  :icon:`fa-"
+"bar-chart` :guilabel:`(Bar Chart)` of all :guilabel:`Contract` and "
+":guilabel:`Service` costs for the current year, organized by month "
+"(:guilabel:`Date : (year)`), by default. The :guilabel:`Sum`, represented by"
+" a gray dotted line, is the combined total of both the :guilabel:`Contract` "
+"and :guilabel:`Service` costs."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:211
+msgid ""
+"To view the total cost by vehicle, click the :icon:`fa-caret-down` "
+":guilabel:`(down arrow)` icon at the right of the search bar, revealing a "
+"drop-down menu. Click :guilabel:`Vehicle` in the :icon:`oi-group` "
+":guilabel:`Group By` column, and the data is organized by vehicle."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:215
+msgid ""
+"This displays the true cost for each vehicle, including both the contract "
+"cost (such as the monthly vehicle lease cost) and all service costs, "
+"including all accidents. Hover over a column to reveal a data popover "
+"window, which displays the vehicle name and the total cost. This allows for "
+"a more complete view of the vehicle cost."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst-1
+msgid "The Cost Analysis report, displaying total costs by vehicle."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:224
+msgid ""
+"To view the individual cost details for both contract costs and repairs, "
+"click the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon in the top-right "
+"corner of the :guilabel:`Cost Analysis` dashboard. This displays each "
+"vehicle on a separate line, and displays the :guilabel:`Contract` cost and "
+":guilabel:`Service` cost, as well as the :guilabel:`Total` cost."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst-1
+msgid ""
+"The Cost Analysis report, displaying the contract and service costs separately, as well as\n"
+"the total."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:235
+msgid ""
+"The :icon:`oi-view-pivot` :guilabel:`(Pivot)` view organizes the data by "
+"vehicle, by default, therefore grouping the data by :guilabel:`Vehicle` is "
+"not required. If this filer is already activated, it does not affect the "
+"presented data."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:240
+msgid "Manage accident repairs"
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:242
+msgid ""
+"For companies with multiple employees, who manage a large fleet of vehicles,"
+" displaying only service records in the :guilabel:`New` and "
+":guilabel:`Running` stages can be time-saving, if there are a large number "
+"of records in the *Services* dashboard."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:246
+msgid ""
+"Navigate to :menuselection:`Fleet app --> Fleet --> Services`, where all "
+"service requests are organized by :guilabel:`Service Type`. Next, click the "
+":icon:`fa-caret-down` :guilabel:`(down arrow)` icon at the right of the "
+"search bar, revealing a drop-down menu. Click :guilabel:`Add Custom Filter` "
+"in the :icon:`fa-filter` :guilabel:`Filters` column, and a :guilabel:`Add "
+"Custom Filter` pop-up window appears."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:252
+msgid "Three drop-down fields need to be configured on the pop-up window."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:254
+msgid "In the first field, scroll down, and select :guilabel:`Stage`."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:256
+msgid "Leave the second field set to :guilabel:`=`."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:258
+msgid "Select :guilabel:`Running` from the drop-down menu in the last field."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:260
+msgid ""
+"Next, click the :icon:`fa-plus` :guilabel:`(plus)` icon to the right of the "
+"last field, and an identical rule appears beneath the current rule."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:263
+msgid ""
+"Then, change :guilabel:`Running` to :guilabel:`New` in the third field of "
+"the second rule, leaving the other fields as-is."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:266
+msgid ""
+"Click the :guilabel:`Add` button at the bottom to add the new custom filter."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst-1
+msgid ""
+"The filter settings to be added to only display new and running services."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:272
+msgid ""
+"This slight modification only presents services in the :guilabel:`New` and "
+":guilabel:`Running` stages. This is a helpful report for a company managing "
+"a high number of repairs at any given time."
+msgstr ""
+
+#: ../../content/applications/hr/fleet/accidents.rst:275
+msgid ""
+"To have this report appear as the default report when opening the "
+":guilabel:`Services` dashboard, click the :icon:`fa-caret-down` "
+":guilabel:`(down arrow)` icon at the far-right of the search bar. Next, "
+"click :guilabel:`Save current search`, beneath the :icon:`fa-star` "
+":guilabel:`Favorites` column, which reveals another drop-down column beneath"
+" it. Tick the checkbox beside :guilabel:`Default Filter`, then click "
+":guilabel:`Save`. Then, this customized :guilabel:`Services` dashboard "
+"appears, by default, anytime the :guilabel:`Services` dashboard is accessed."
 msgstr ""
 
 #: ../../content/applications/hr/fleet/models.rst:3
@@ -5830,15 +6339,6 @@ msgid ""
 "may appear differently. For example, a :guilabel:`📞 (phone)` appears if a "
 "phone call is scheduled, or an :guilabel:`✉️ (envelope)` appears if an email"
 " is scheduled."
-msgstr ""
-
-#: ../../content/applications/hr/fleet/service.rst:380
-#: ../../content/applications/hr/frontdesk.rst:33
-#: ../../content/applications/hr/lunch/products.rst:12
-#: ../../content/applications/hr/payroll.rst:894
-#: ../../content/applications/hr/payroll/work_entries.rst:56
-#: ../../content/applications/hr/time_off.rst:222
-msgid "Enter the following information on the form:"
 msgstr ""
 
 #: ../../content/applications/hr/fleet/service.rst:382
@@ -9464,7 +9964,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/hr/payroll.rst:556
-#: ../../content/applications/hr/time_off.rst:261
+#: ../../content/applications/hr/time_off.rst:256
 msgid "Rules"
 msgstr "Pravila"
 
@@ -9709,7 +10209,7 @@ msgid "A new salary attachment form filled in."
 msgstr ""
 
 #: ../../content/applications/hr/payroll.rst:688
-#: ../../content/applications/hr/recruitment.rst:168
+#: ../../content/applications/hr/recruitment.rst:167
 msgid "Salary package configurator"
 msgstr ""
 
@@ -10929,7 +11429,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/hr/payroll/contracts.rst:343
-#: ../../content/applications/hr/time_off.rst:268
+#: ../../content/applications/hr/time_off.rst:263
 msgid "Fill out the following fields on the form:"
 msgstr ""
 
@@ -13002,11 +13502,11 @@ msgstr ""
 msgid ":ref:`Configure work entries <payroll/work-entries-config>`"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:6
+#: ../../content/applications/hr/recruitment.rst:5
 msgid "Recruitment"
 msgstr "Kadrovanje"
 
-#: ../../content/applications/hr/recruitment.rst:8
+#: ../../content/applications/hr/recruitment.rst:7
 msgid ""
 "Odoo keeps all job applicants organized with a pre-configured series of "
 "steps and stages that each applicant goes through. Each stage has a specific"
@@ -13015,7 +13515,7 @@ msgid ""
 "is referred to as the 'applicant flow.'"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:13
+#: ../../content/applications/hr/recruitment.rst:12
 msgid ""
 "When an applicant applies for a job position, an *applicant card* is "
 "automatically created in Odoo's *Recruitment* app for that specific job "
@@ -13023,7 +13523,7 @@ msgid ""
 "recruitment team moves their card from one stage to the next."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:17
+#: ../../content/applications/hr/recruitment.rst:16
 msgid ""
 ":ref:`Stages can be configured <recruitment/modify-stages>` so that an email"
 " is automatically sent out using a set, pre-configured template as soon as "
@@ -13031,7 +13531,7 @@ msgid ""
 "each stage in the applicant flow."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:21
+#: ../../content/applications/hr/recruitment.rst:20
 msgid ""
 "The applicant flow explained in this document is the default flow in Odoo, "
 "and goes through the applicant flow when using the *Recruitment* "
@@ -13039,7 +13539,7 @@ msgid ""
 "modified to suit the specific recruitment flow for any business."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:26
+#: ../../content/applications/hr/recruitment.rst:25
 msgid ""
 "The applicant flow with all its stages are universal and applies to all job "
 "positions, unless specified. :ref:`A specific stage can be configured "
@@ -13049,7 +13549,7 @@ msgid ""
 "visible on all job positions."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:37
+#: ../../content/applications/hr/recruitment.rst:36
 msgid ""
 "Before creating a job position in Odoo, configure the necessary settings for"
 " the *Recruitment* app. To view and edit the settings, navigate to "
@@ -13058,38 +13558,38 @@ msgid ""
 "to save all the changes."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:43
+#: ../../content/applications/hr/recruitment.rst:42
 msgid "Job posting"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:45
+#: ../../content/applications/hr/recruitment.rst:44
 msgid ""
 "The :guilabel:`Job Posting` section of the *Recruitment* app settings has "
 "only one selection to make. If job positions are to be posted to the "
 "company's website, enable the :guilabel:`Online Posting` option."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:50
+#: ../../content/applications/hr/recruitment.rst:49
 msgid ""
 "The :guilabel:`Online Posting` is only available if the *Website* "
 "application is also installed."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:53
+#: ../../content/applications/hr/recruitment.rst:52
 msgid "Recruitment process"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:55
+#: ../../content/applications/hr/recruitment.rst:54
 msgid ""
 "The :guilabel:`Recruitment process` section of the settings page specifies "
 "what the database can and cannot do during the recruitment process."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:59
+#: ../../content/applications/hr/recruitment.rst:58
 msgid "Send interview survey"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:61
+#: ../../content/applications/hr/recruitment.rst:60
 msgid ""
 "Odoo is capable of having a survey sent to an applicant to gather more "
 "information about them. Surveys can be thought of as exams, or "
@@ -13097,7 +13597,7 @@ msgid ""
 "recruitment team with valuable insights into the applicant"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:65
+#: ../../content/applications/hr/recruitment.rst:64
 msgid ""
 "Enable the :guilabel:`Send Interview Survey` option to send surveys to "
 "applicants. Once enabled, an :icon:`fa-arrow-right` :guilabel:`Interview "
@@ -13106,7 +13606,7 @@ msgid ""
 "surveys."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:70
+#: ../../content/applications/hr/recruitment.rst:69
 msgid ""
 "This list includes all surveys that were created in the database, not just "
 "surveys used in the *Recruitment* app. If no surveys have been created, the "
@@ -13114,24 +13614,24 @@ msgid ""
 "options to create a survey from several pre-configured survey templates."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:76
+#: ../../content/applications/hr/recruitment.rst:75
 msgid ""
 "For more detailed information about surveys, refer to the :doc:`survey "
 "essentials <../marketing/surveys/create>` documentation."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:80
+#: ../../content/applications/hr/recruitment.rst:79
 msgid ""
 "Enabling the :guilabel:`Send Interview Survey` option will install the "
 "*Surveys* application once the settings are saved, if it is not installed "
 "already."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:84
+#: ../../content/applications/hr/recruitment.rst:83
 msgid "Send SMS"
 msgstr "Pošlji SMS"
 
-#: ../../content/applications/hr/recruitment.rst:86
+#: ../../content/applications/hr/recruitment.rst:85
 msgid ""
 "It is possible to send text messages to applicants directly through the "
 "*Recruitment* app. To do so, enable the :guilabel:`Send SMS` option. This "
@@ -13140,24 +13640,24 @@ msgid ""
 "when the feature is enabled."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:92
+#: ../../content/applications/hr/recruitment.rst:91
 msgid ""
 "For more information, refer to the :doc:`SMS pricing and FAQs "
-"<../marketing/sms_marketing/pricing/pricing_and_faq>` documentation."
+"<../marketing/sms_marketing/pricing_and_faq>` documentation."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:98
+#: ../../content/applications/hr/recruitment.rst:97
 msgid "CV display"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:100
+#: ../../content/applications/hr/recruitment.rst:99
 msgid ""
 "When applicants submit an application, one of the default required fields is"
 " a resumé, or :abbr:`CV (curriculum vitae)`. All resumés are stored in the "
 "*Documents* application, and are accessible on the applicant's card."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:104
+#: ../../content/applications/hr/recruitment.rst:103
 msgid ""
 "A resumé has the option to appear on the applicant's form, which can be "
 "viewed by clicking on the applicant's card. The resumé appears on the right-"
@@ -13166,20 +13666,20 @@ msgid ""
 "downloaded."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:109
+#: ../../content/applications/hr/recruitment.rst:108
 msgid ""
 "Enable the :guilabel:`CV Display` option to show the resumé on the "
 "applicant's card by default, and in addition to the document link. When "
 "enabled, the resumé appears on the right side of the applicant's card."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:114
+#: ../../content/applications/hr/recruitment.rst:113
 msgid ""
 "For the resumé to appear on the right-side, the browser window must be in "
 "full-screen mode (where the browser spans the entire screen)."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:117
+#: ../../content/applications/hr/recruitment.rst:116
 msgid ""
 "If the browser window is set to a size smaller than the entire width of the "
 "screen (not full-screen), then the resumé does not appear on the right-side."
@@ -13191,11 +13691,11 @@ msgstr ""
 msgid "The resumé on an applicant's card, appearing on the right side."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:128
+#: ../../content/applications/hr/recruitment.rst:127
 msgid "CV digitization (OCR)"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:130
+#: ../../content/applications/hr/recruitment.rst:129
 msgid ""
 "When an application is submitted using any of the available methods, such as"
 " an online application submission, emailing a resume to the job position "
@@ -13205,18 +13705,18 @@ msgid ""
 "the :guilabel:`CV Digitization (OCR)` option."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:136
+#: ../../content/applications/hr/recruitment.rst:135
 msgid ""
 "When enabled, additional options appear. Click on the corresponding radio "
 "button to select one of the following options:"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:139
+#: ../../content/applications/hr/recruitment.rst:138
 msgid ""
 ":guilabel:`Do not digitize`: this option turns off resumé digitization."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:140
+#: ../../content/applications/hr/recruitment.rst:139
 msgid ""
 ":guilabel:`Digitize on demand only`: this option only digitizes resumes when"
 " requested. A :guilabel:`Digitize document` buttons appears on applicant "
@@ -13224,13 +13724,13 @@ msgid ""
 "updated."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:143
+#: ../../content/applications/hr/recruitment.rst:142
 msgid ""
 ":guilabel:`Digitize automatically`: this option automatically digitizes all "
 "resumés when they are submitted."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:146
+#: ../../content/applications/hr/recruitment.rst:145
 msgid ""
 "Beneath these options are two additional links. Click the :icon:`fa-arrow-"
 "right` :guilabel:`Buy credits` button to purchase credits for CV "
@@ -13238,28 +13738,28 @@ msgid ""
 "to view a list of all current services, and their remaining credit balances."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:151
+#: ../../content/applications/hr/recruitment.rst:150
 msgid ""
 "For more information on document digitization and :abbr:`IAP's (in-app "
 "purchases)`, refer to the :doc:`In-app purchase (IAP) "
 "<../essentials/in_app_purchase>` documentation."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:155
+#: ../../content/applications/hr/recruitment.rst:154
 msgid ""
 "The :guilabel:`Do not digitize` option for :guilabel:`CV digitization (OCR)`"
 " at first may seem like a redundancy. It seems to be the same as disabling "
 "the :guilabel:`CV digitization (OCR)` option."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:159
+#: ../../content/applications/hr/recruitment.rst:158
 msgid ""
 "When the :guilabel:`CV digitization (OCR)` option is enabled, a module is "
 "installed so that resumés can be scanned. Disabling this option would "
 "uninstall the module."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:162
+#: ../../content/applications/hr/recruitment.rst:161
 msgid ""
 "If at some point, there is a desire to temporarily stop digitizing resumés, "
 "the :guilabel:`Do not digitize` option is selected. The reason this option "
@@ -13268,7 +13768,7 @@ msgid ""
 "options."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:170
+#: ../../content/applications/hr/recruitment.rst:169
 msgid ""
 "When sending an offer to an applicant, an expiration date can be set on the "
 "offer. Enter the number of days an offer is valid for in the "
@@ -13276,7 +13776,7 @@ msgid ""
 "applicant has not accepted the offer, the offer is no longer available."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:177
+#: ../../content/applications/hr/recruitment.rst:176
 msgid ""
 "To access the Kanban view for a job position, navigate to the main "
 ":menuselection:`Recruitment app` dashboard, which is the default view when "
@@ -13291,39 +13791,39 @@ msgid ""
 "Main dashboard view of job position card, showing new applications button."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:186
+#: ../../content/applications/hr/recruitment.rst:185
 msgid ""
 "Inside the job application, the Kanban stages appear, with all the "
 "applicants populated in their respective columns, indicating what stage they"
 " are currently in. There are six default stages in Odoo:"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:190
+#: ../../content/applications/hr/recruitment.rst:189
 msgid ":ref:`New <recruitment/new>`"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:191
+#: ../../content/applications/hr/recruitment.rst:190
 msgid ":ref:`Initial Qualification <recruitment/initial-qualification>`"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:192
+#: ../../content/applications/hr/recruitment.rst:191
 msgid ":ref:`First Interview <recruitment/first-interview>`"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:193
+#: ../../content/applications/hr/recruitment.rst:192
 msgid ":ref:`Second Interview <recruitment/second-interview>`"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:194
+#: ../../content/applications/hr/recruitment.rst:193
 msgid ":doc:`Contract Proposal <recruitment/offer_job_positions>`"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:195
+#: ../../content/applications/hr/recruitment.rst:194
 msgid ""
 ":ref:`Contract Signed <recruitment/offer_job_positions/contract-signed>`"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:197
+#: ../../content/applications/hr/recruitment.rst:196
 msgid ""
 "The last column, :guilabel:`Contract Signed`, is folded by default. Folded "
 "columns appear gray, and the applicants in it are hidden from view. To "
@@ -13336,29 +13836,29 @@ msgstr ""
 msgid "Expand a folded column by clicking on it in the Kanban view."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:206
+#: ../../content/applications/hr/recruitment.rst:205
 msgid ""
 "Each stage has a color-coded bar beneath the stage name, providing status "
 "information for the applicant's in that specific stage. The status colors "
 "are:"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:209
+#: ../../content/applications/hr/recruitment.rst:208
 msgid ":guilabel:`Green`: the applicant is ready to move to the next stage."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:210
+#: ../../content/applications/hr/recruitment.rst:209
 msgid ""
 ":guilabel:`Red`: the applicant is blocked from moving to the next stage."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:211
+#: ../../content/applications/hr/recruitment.rst:210
 msgid ""
 ":guilabel:`Gray`: the applicant is still in progress in the current stage "
 "and is neither ready nor blocked from the next stage."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:214
+#: ../../content/applications/hr/recruitment.rst:213
 msgid ""
 "The status for each card is set manually. To set the status, click on the "
 "small circle in the lower-left of the applicant card. A status pop-up window"
@@ -13370,28 +13870,28 @@ msgstr ""
 msgid "The applicant card statuses, and status bar."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:223
+#: ../../content/applications/hr/recruitment.rst:222
 msgid ""
 "The names for the three status colors (`In Progress`, `Blocked`, and `Ready "
 "for Next Stage`) :ref:`can be modified <recruitment/modify-stages>`, if "
 "desired."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:229
+#: ../../content/applications/hr/recruitment.rst:228
 msgid "Customize stages"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:231
+#: ../../content/applications/hr/recruitment.rst:230
 msgid ""
 "Stages can be modified, added, or deleted to best meet the needs of the "
 "particular hiring steps of a business."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:235
+#: ../../content/applications/hr/recruitment.rst:234
 msgid "New stage"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:237
+#: ../../content/applications/hr/recruitment.rst:236
 msgid ""
 "To create a new stage, click on :icon:`fa-plus` :guilabel:`Stage` and a new "
 "column appears. Enter the title for the new stage in the :guilabel:`Stage "
@@ -13404,12 +13904,12 @@ msgstr ""
 msgid "The plus sign to click to add a new column to the Kanban stages."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:249
+#: ../../content/applications/hr/recruitment.rst:248
 #: ../../content/applications/hr/recruitment/schedule_interviews.rst:223
 msgid "Modify stage"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:251
+#: ../../content/applications/hr/recruitment.rst:250
 msgid ""
 "To modify the settings of a stage, hover over the name of the stage, and a "
 ":icon:`fa-cog` :guilabel:`(gear)` icon appears in the upper right hand side "
@@ -13425,25 +13925,25 @@ msgid ""
 "displays when clicked."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:265
+#: ../../content/applications/hr/recruitment.rst:264
 msgid "Edit stage form"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:267
+#: ../../content/applications/hr/recruitment.rst:266
 msgid ""
 "The :guilabel:`Edit: (Stage)` form is where the stage's settings are "
 "configured. The only required field is the :guilabel:`Stage Name`."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:270
+#: ../../content/applications/hr/recruitment.rst:269
 msgid "The fields to be populated or modified are:"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:272
+#: ../../content/applications/hr/recruitment.rst:271
 msgid ":guilabel:`Stage Name`: type in a name for the stage."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:273
+#: ../../content/applications/hr/recruitment.rst:272
 msgid ""
 ":guilabel:`Email Template`: select an email template to be used from the "
 "drop-down menu. If a template is selected, when the applicant card enters "
@@ -13451,13 +13951,13 @@ msgid ""
 "selected template."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:276
+#: ../../content/applications/hr/recruitment.rst:275
 msgid ""
 ":guilabel:`Folded in Kanban`: check the box to have the stage appear folded "
 "(hidden) at all times in the default view."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:278
+#: ../../content/applications/hr/recruitment.rst:277
 msgid ""
 ":guilabel:`Hired Stage`: check the box if this stage indicates that the "
 "applicant is hired. When an applicant's card enters this stage, the card "
@@ -13465,14 +13965,14 @@ msgid ""
 "is checked, this stage is used to determine the hire date of an applicant."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:282
+#: ../../content/applications/hr/recruitment.rst:281
 msgid ""
 ":guilabel:`Job Specific`: if the stage only applies to specific job "
 "positions, select the job positions from the drop-down menu. Multiple job "
 "positions can be selected."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:284
+#: ../../content/applications/hr/recruitment.rst:283
 msgid ""
 ":guilabel:`Show in Referrals`: check the box if this stage should be seen in"
 " the *Referrals* application, and allow the referrer to accrue points when a"
@@ -13482,7 +13982,7 @@ msgid ""
 "must be installed in order to use this option."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:289
+#: ../../content/applications/hr/recruitment.rst:288
 msgid ""
 ":guilabel:`Tooltips` section: there are three pre-configured status labels "
 "(colored circles) for each applicant's card, indicating its status. These "
@@ -13493,17 +13993,17 @@ msgid ""
 ":guilabel:`Ready for Next Stage` (green)."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:294
+#: ../../content/applications/hr/recruitment.rst:293
 msgid ""
 ":guilabel:`Requirements`: enter any internal notes for this stage explaining"
 " any requirements of the stage."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:298
+#: ../../content/applications/hr/recruitment.rst:297
 msgid "Delete stage"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:300
+#: ../../content/applications/hr/recruitment.rst:299
 msgid ""
 "If a stage is no longer needed, the stage can be deleted. To delete a stage,"
 " hover over the name of the stage, and a :icon:`fa-cog` :guilabel:`(gear)` "
@@ -13514,7 +14014,7 @@ msgid ""
 " column."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:307
+#: ../../content/applications/hr/recruitment.rst:306
 msgid ""
 "If there are applicants currently in the stage being deleted, an error pops "
 "up when attempting to delete the stage. The records currently in the stage "
@@ -13522,32 +14022,32 @@ msgid ""
 " the stage can be deleted."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:312
+#: ../../content/applications/hr/recruitment.rst:311
 msgid "Email templates"
 msgstr "Predloge e-pošte"
 
-#: ../../content/applications/hr/recruitment.rst:314
+#: ../../content/applications/hr/recruitment.rst:313
 msgid ""
 "To communicate with the applicant, Odoo has several pre-configured email "
 "templates that can be used. The pre-configured email templates and when to "
 "use them are as follows:"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:317
+#: ../../content/applications/hr/recruitment.rst:316
 msgid ""
 ":guilabel:`Recruitment: Applicant Acknowledgement`: this template is used to"
 " let the applicant know that their application was received. This email is "
 "automatically sent out once the applicant is in the :guilabel:`New` stage."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:320
+#: ../../content/applications/hr/recruitment.rst:319
 msgid ""
 ":guilabel:`Recruitment: Interest`: this template is used to let the "
 "applicant know that their application caught the recruiter's attention, and "
 "they have been shortlisted for either a phone call or an interview."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:323
+#: ../../content/applications/hr/recruitment.rst:322
 msgid ""
 ":guilabel:`Recruitment: Schedule Interview`: this template is used to let "
 "the applicant know that they have passed the :guilabel:`Initial "
@@ -13556,27 +14056,27 @@ msgid ""
 " the :guilabel:`Initial Qualification` stage."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:327
+#: ../../content/applications/hr/recruitment.rst:326
 msgid ""
 ":guilabel:`Recruitment: Not interested anymore`: this template is used when "
 "an applicant communicates that they are no longer interested in the "
 "position, and thanks them for their time and consideration."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:330
+#: ../../content/applications/hr/recruitment.rst:329
 msgid ""
 ":guilabel:`Recruitment: Refuse`: this template is used when an applicant is "
 "no longer being considered for the position."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:334
+#: ../../content/applications/hr/recruitment.rst:333
 msgid ""
 "Email templates can be created, modified, and deleted to suit the needs of a"
 " business. For more information on email templates, refer to the "
 ":doc:`../general/companies/email_template` document."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:337
+#: ../../content/applications/hr/recruitment.rst:336
 msgid ""
 "To manually send an email, click :guilabel:`Send message` in the chatter. A "
 "text box appears, as well as the applicant's email address."
@@ -13586,7 +14086,7 @@ msgstr ""
 msgid "Send an email from the chatter."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:344
+#: ../../content/applications/hr/recruitment.rst:343
 msgid ""
 "Click the :icon:`fa-expand` :guilabel:`(expand)` full composer icon in the "
 "bottom right corner of the :guilabel:`Send Message` tab in the chatter. A "
@@ -13597,14 +14097,14 @@ msgid ""
 "default."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:350
+#: ../../content/applications/hr/recruitment.rst:349
 msgid ""
 "To use a pre-configured email template, click the field next to "
 ":guilabel:`Load template` in the bottom section of the window. Select the "
 "email template to use from the drop-down menu."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:353
+#: ../../content/applications/hr/recruitment.rst:352
 msgid ""
 "Pre-configured email templates may contain dynamic placeholders so unique "
 "information can be populated in the email for a more personalized message to"
@@ -13613,7 +14113,7 @@ msgid ""
 "change."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:359
+#: ../../content/applications/hr/recruitment.rst:358
 msgid ""
 "Only the email templates that are configured for the model load. There are "
 "other email templates pre-configured in Odoo, but if they are not configured"
@@ -13621,7 +14121,7 @@ msgid ""
 "available templates."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:363
+#: ../../content/applications/hr/recruitment.rst:362
 msgid ""
 "If any attachments are to be added, click the :guilabel:`Attachments` button"
 " in the lower left corner. Navigate to the file to be attached, then click "
@@ -13629,7 +14129,7 @@ msgid ""
 "close` :guilabel:`(delete)` icon to the right of the attachment."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:367
+#: ../../content/applications/hr/recruitment.rst:366
 msgid ""
 "If any changes need to be made to the email, edit the body of the email. If "
 "the edits should be saved to be used in the future, the email can be saved "
@@ -13638,300 +14138,39 @@ msgid ""
 "applicant. The email then appears in the chatter."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:373
-msgid "Stage flow"
-msgstr ""
-
-#: ../../content/applications/hr/recruitment.rst:375
-msgid ""
-"In order to move an applicant's card from one stage to another, the "
-"applicant's card can either be dragged and dropped in the Kanban view to the"
-" desired stage, or the stage can be modified on the applicant's card."
-msgstr ""
-
-#: ../../content/applications/hr/recruitment.rst:379
-msgid ""
-"To change the stage on the applicant's card, click on the applicant's card "
-"in the Kanban view to go to a detailed view of the card. The current stage "
-"for the card is highlighted at the top, above the card."
-msgstr ""
-
-#: ../../content/applications/hr/recruitment.rst:383
-msgid ""
-"Click the desired stage for the card, and the stage changes. A log note "
-"indicating the stage change appears in the chatter. Navigate back to the "
-"Kanban view by clicking on :guilabel:`Applications` in the breadcrumb menu "
-"in the top-left, and the applicant's card now appears in the new stage."
-msgstr ""
-
 #: ../../content/applications/hr/recruitment.rst-1
-msgid ""
-"Change the stage of an applicant by clicking on the desired stage at the top of the\n"
-"applicant's card."
-msgstr ""
-
-#: ../../content/applications/hr/recruitment.rst:395
-msgid "New"
-msgstr "Novo"
-
-#: ../../content/applications/hr/recruitment.rst:398
-msgid ""
-"The following information is based on Odoo's default recruitment pipeline "
-"flow. Be advised that if modifications are made to create a customized "
-"recruitment pipeline flow, it will vary from the following information."
-msgstr ""
-
-#: ../../content/applications/hr/recruitment.rst:402
-msgid ""
-"All applicants appear in the :guilabel:`New` stage, whether submitted online"
-" or if the applicant is manually entered by a recruiter."
-msgstr ""
-
-#: ../../content/applications/hr/recruitment.rst:405
-msgid ""
-"When the applicant's card is created, Odoo automatically populates the "
-":guilabel:`Subject/Application`, the applicant's :guilabel:`Name`, "
-":guilabel:`Email`, :guilabel:`Mobile` number, and :guilabel:`LinkedIn "
-"Profile` on the applicant's card. This information is required when applying"
-" for a job position, by default."
-msgstr ""
-
-#: ../../content/applications/hr/recruitment.rst:411
-msgid ""
-"If the website application form is modified, different fields may be "
-"populated based on what information is requested on the website."
-msgstr ""
-
-#: ../../content/applications/hr/recruitment.rst:414
-msgid ""
-"If the applicant entered any information in the :guilabel:`Short "
-"Introduction` section of the online application, it will populate in the "
-":guilabel:`Application Summary` tab at the bottom of the applicant's card."
-msgstr ""
-
-#: ../../content/applications/hr/recruitment.rst:421
-msgid ""
-"If a resumé was attached to the online application, the resumé would appear "
-"in the attachments section of the chatter, and is also stored in the "
-"*Documents* application. To find the recruitment documents stored in the "
-"*Documents* application, navigate to the main :menuselection:`Documents` "
-"dashboard, and click the folder labeled :guilabel:`Recruitment` on the left-"
-"hand side. All recruitment documents are stored within that folder."
-msgstr ""
-
-#: ../../content/applications/hr/recruitment.rst:427
-msgid ""
-"If the :ref:`CV Display <recruitment/cv-display>` option was enabled in the "
-":ref:`Settings <recruitment/settings>` menu, the resumé appears on the "
-"applicant's card, on the right-hand side."
-msgstr ""
-
-#: ../../content/applications/hr/recruitment.rst:431
-msgid "Send interview"
-msgstr ""
-
-#: ../../content/applications/hr/recruitment.rst:433
-msgid ""
-"At any point in the hiring process, an *interview* can be sent to the "
-"applicant to obtain more information. These interviews are custom-made, and "
-"can be formatted in a variety of ways."
-msgstr ""
-
-#: ../../content/applications/hr/recruitment.rst:436
-msgid ""
-"The *Surveys* application is used to send these *interviews*, therefore the "
-"*Surveys* application must be installed to send an interview to an "
-"applicant."
-msgstr ""
-
-#: ../../content/applications/hr/recruitment.rst:439
-msgid ""
-"Odoo uses the term *interview*, but these can be thought of as "
-"questionnaires, surveys, tests, certifications, etc. Custom interviews can "
-"be formatted to suit each individual job positions needs. For more "
-"information on creating and editing interview forms, refer to the "
-":doc:`../hr/recruitment/new_job` documentation."
-msgstr ""
-
-#: ../../content/applications/hr/recruitment.rst:445
-msgid ""
-"A job position for a computer programmer could have an interview in the form"
-" of a programming quiz to determine the skill level of the applicant. A job "
-"position for a restaurant server could have a questionnaire inquiring about "
-"the applicant's availability, if the desired applicant needs to be available"
-" on weekend evenings."
-msgstr ""
-
-#: ../../content/applications/hr/recruitment.rst:450
-msgid ""
-"To send an interview to an applicant, click on an applicant's card to "
-"navigate to a detailed view of the applicant's card. At the top-left of the "
-"applicant's card, click the :guilabel:`Send Interview` button."
-msgstr ""
-
-#: ../../content/applications/hr/recruitment.rst:454
-msgid ""
-"If the applicant's card has an email address on file, a :guilabel:`Send an "
-"interview` pop-up window appears, with all the information populated."
-msgstr ""
-
-#: ../../content/applications/hr/recruitment.rst:458
-msgid ""
-"In order to send an email to an applicant, there must be an email address on"
-" the applicant's card. If an email address is not entered on the applicant's"
-" card, when :guilabel:`Send Interview` is clicked, an "
-":guilabel:`Edit:(Applicant)` pop-up window appears on top of the "
-":guilabel:`Send an interview` pop-up window. Enter the email address in the "
-":guilabel:`email` field, then click :guilabel:`Save & Close`. Once the "
-"applicant's information is saved, the :guilabel:`Edit: (Applicant)` closes "
-"and the :guilabel:`Send an interview` pop-up window remains."
-msgstr ""
-
-#: ../../content/applications/hr/recruitment.rst:465
-msgid ""
-"Email templates use dynamic placeholders to personalize the email to the "
-"applicant and the job position. Add any additional recipients for the survey"
-" if more people should receive the email. If an email is in the database as "
-"a contact, add that contact in the :guilabel:`Recipients` field. If an email"
-" should be sent to someone who is not in the database as a contact, and they"
-" should **not** be added as a contact, add their email in the "
-":guilabel:`Additional emails` field."
-msgstr ""
-
-#: ../../content/applications/hr/recruitment.rst:471
-msgid ""
-"If any attachments need to be added, click the :guilabel:`Attachments` "
-"button and a file explorer window appears. Navigate to the desired file, "
-"then click :guilabel:`Open` to attach it to the email. The attachment loads,"
-" and is listed above the :guilabel:`Attachments` button."
-msgstr ""
-
-#: ../../content/applications/hr/recruitment.rst:475
-msgid ""
-"If the emailed interview must be completed by a specific date, select a date"
-" for the :guilabel:`Answer deadline` in the lower-right area of the pop-up "
-"window. Click on the line next to :guilabel:`Answer deadline`, and a "
-"calendar selector appears. Use the :icon:`fa-chevron-left` "
-":guilabel:`(left)`  and :icon:`fa-chevron-right` :guilabel:`(right)` arrows "
-"on either side of the month to navigate to the desired month, then click on "
-"the :guilabel:`day` to select the date."
-msgstr ""
-
-#: ../../content/applications/hr/recruitment.rst:481
-msgid ""
-"The :guilabel:`Mail Template` field is pre-populated based on the "
-"configuration for the interview. A different template can be chosen from the"
-" drop-down menu if desired. If a new template is selected, the new email "
-"template loads in the email body."
-msgstr ""
-
-#: ../../content/applications/hr/recruitment.rst:485
-msgid ""
-"To send the email with the interview link to the applicant, click "
-":guilabel:`Send` at the bottom of the email pop-up."
-msgstr ""
-
-#: ../../content/applications/hr/recruitment.rst-1
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst-1
 msgid ""
 "Send a custom survey, also referred to as an interview form, to an applicant using a\n"
 "pre-configured template."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:496
-msgid "Initial qualification"
+#: ../../content/applications/hr/recruitment.rst:377
+msgid ":doc:`recruitment/new_job`"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:498
-msgid ""
-"If an applicant seems to be a good potential candidate, they are moved to "
-"the :guilabel:`Initial Qualification` stage. This could be for a number of "
-"reasons, such as they have the relevant experience, education, or "
-"certifications the position requires."
+#: ../../content/applications/hr/recruitment.rst:378
+msgid ":doc:`recruitment/add-new-applicants`"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:502
-msgid ""
-"This stage is to quickly sort candidates that have potential, and those that"
-" do not meet the requirements. No automatic actions, such as emails, are set"
-" for this stage. This stage simply informs the recruitment team to "
-"potentially set up a phone call or an interview with the candidate."
+#: ../../content/applications/hr/recruitment.rst:379
+msgid ":doc:`recruitment/schedule_interviews`"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:509
-msgid "First interview"
+#: ../../content/applications/hr/recruitment.rst:380
+msgid ":doc:`recruitment/offer_job_positions`"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:511
-msgid ""
-"After an applicant has passed the :guilabel:`Initial Qualification` stage, "
-"they can be moved to the :guilabel:`First Interview` stage in the job "
-"position Kanban view. To move the applicant to the next stage, drag and drop"
-" the applicant's card to the :guilabel:`First Interview` stage, or click on "
-"the :guilabel:`First Interview` stage button at the top of the individual "
-"applicant's card."
+#: ../../content/applications/hr/recruitment.rst:381
+msgid ":doc:`recruitment/refuse_applicant`"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst-1
-msgid ""
-"An applicant's card moves from one stage to another by using the click and "
-"drag method."
+#: ../../content/applications/hr/recruitment.rst:382
+msgid ":doc:`recruitment/source_analysis`"
 msgstr ""
 
-#: ../../content/applications/hr/recruitment.rst:521
-msgid ""
-"The :guilabel:`First Interview` stage can be modified, so when the "
-"applicant's card moves to the :guilabel:`First Interview` stage, an email is"
-" automatically sent to the applicant, stating an interview is requested, and"
-" :ref:`requests the applicant to schedule their interview "
-"<recruitment/schedule_interviews/applicant-scheduled>`."
-msgstr ""
-
-#: ../../content/applications/hr/recruitment.rst:526
-msgid ""
-":ref:`Edit <recruitment/edit-stage>` the :guilabel:`First Interview` stage, "
-"and select the :guilabel:`Recruitment: Schedule Interview` for the "
-":guilabel:`Email Template` field, to automate this action."
-msgstr ""
-
-#: ../../content/applications/hr/recruitment.rst:533
-msgid "Second interview"
-msgstr ""
-
-#: ../../content/applications/hr/recruitment.rst:535
-msgid ""
-"After an applicant has passed the :guilabel:`First Interview` stage, they "
-"can be moved to the :guilabel:`Second Interview` stage. To move the "
-"applicant to the next stage, drag and drop the applicant's card to the "
-":guilabel:`Second Interview` stage, or click on the :guilabel:`Second "
-"Interview` stage button at the top of the individual applicant's card."
-msgstr ""
-
-#: ../../content/applications/hr/recruitment.rst:540
-msgid ""
-"When the applicant's card moves to the :guilabel:`Second Interview` stage, "
-"there are no automatic activities or emails configured. The recruiter can "
-"now :doc:`schedule a second interview <recruitment/schedule_interviews>` "
-"with the applicant, following the same process as the first interview."
-msgstr ""
-
-#: ../../content/applications/hr/recruitment.rst:546
-msgid "recruitment/new_job"
-msgstr ""
-
-#: ../../content/applications/hr/recruitment.rst:547
-msgid "recruitment/add-new-applicants"
-msgstr ""
-
-#: ../../content/applications/hr/recruitment.rst:548
-msgid "recruitment/schedule_interviews"
-msgstr ""
-
-#: ../../content/applications/hr/recruitment.rst:549
-msgid "recruitment/offer_job_positions"
-msgstr ""
-
-#: ../../content/applications/hr/recruitment.rst:550
-msgid "recruitment/refuse_applicant"
+#: ../../content/applications/hr/recruitment.rst:383
+msgid ":doc:`recruitment/recruitment_analysis`"
 msgstr ""
 
 #: ../../content/applications/hr/recruitment/add-new-applicants.rst:3
@@ -14789,31 +15028,579 @@ msgstr ""
 msgid "Hired banner in the top right corner of applicant card."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/offer_job_positions.rst:150
+#: ../../content/applications/hr/recruitment/offer_job_positions.rst:152
 msgid "Create employee"
 msgstr "Ustvari zaposlenega"
 
-#: ../../content/applications/hr/recruitment/offer_job_positions.rst:152
+#: ../../content/applications/hr/recruitment/offer_job_positions.rst:154
 msgid ""
 "Once the applicant has been hired, the next step is to create their employee"
 " record. Click the :guilabel:`Create Employee` button in the top-left corner"
 " of the hired applicant's form."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/offer_job_positions.rst:155
+#: ../../content/applications/hr/recruitment/offer_job_positions.rst:157
 msgid ""
 "An employee form appears, with information from the applicant's card, and "
 "the employee contract."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/offer_job_positions.rst:157
+#: ../../content/applications/hr/recruitment/offer_job_positions.rst:159
 msgid ""
 "Fill out the rest of the employee form. For detailed information on the "
 "fields, refer to the :doc:`../employees/new_employee` documentation."
 msgstr ""
 
-#: ../../content/applications/hr/recruitment/offer_job_positions.rst:160
+#: ../../content/applications/hr/recruitment/offer_job_positions.rst:162
 msgid "Once completed, the employee record is saved in the *Employees* app."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:3
+msgid "Recruitment flow"
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:5
+msgid ""
+"When a prospective employee applies for a job in Odoo, there is a "
+"preconfigured process from the :ref:`initial inquiry <recruitment/new>` to "
+"the :ref:`creating of a new employee <recruitment/new-employee>` once hired."
+" The following outlines the default recruitment process for Odoo's "
+"*Recruitment* application."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:11
+msgid ""
+"The following is based on Odoo's default recruitment pipeline. Be advised "
+"that if :ref:`modifications are made <recruitment/customize-stages>` to the "
+"pipeline, the process differs."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:20
+msgid ""
+"At the start of the process, all applicants appear in the :guilabel:`New` "
+"stage on the :guilabel:`Applications` page, whether submitted online or if "
+"the applicant is :doc:`manually entered by a recruiter <add-new-"
+"applicants>`."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:24
+msgid ""
+"When the applicant's card is created, Odoo automatically populates the "
+":guilabel:`Subject/Application`, the :guilabel:`Applicant's Name`, "
+":guilabel:`Email`, and :guilabel:`Mobile` number, on the applicant's card. "
+"This information is required when applying for a job position, by default."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:30
+msgid ""
+"If the website application form is modified, different fields may be "
+"populated, based on what information is requested on the website."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:33
+msgid ""
+"If the applicant entered any information in the *Short Introduction* section"
+" of the online application, it populates the :guilabel:`Application Summary`"
+" tab at the bottom of the applicant's card."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:40
+msgid ""
+"If a resumé was attached to the online application, it appears in the "
+":guilabel:`Files` section of the chatter, and is also stored in the "
+"*Documents* application."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:43
+msgid ""
+"To find the recruitment documents, navigate to the main "
+":menuselection:`Documents app` dashboard, and click the "
+":guilabel:`Recruitment` folder on the left-hand side. All recruitment "
+"documents are stored within that folder."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:47
+msgid ""
+"If the :ref:`CV Display <recruitment/cv-display>` option was enabled in the "
+":ref:`Settings <recruitment/settings>` of the *Recruitment* app, the resumé "
+"appears on the applicant's card, on the right-hand side."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:52
+msgid ""
+"Depending on the browser zoom level, or size of the browser screen, the "
+"resumé may appear below the main applicant card information as a PDF link."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:56
+msgid "Send interview"
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:58
+msgid ""
+"At any point in the hiring process, an interview can be sent to the "
+"applicant to obtain more information. These interviews are custom-made, and "
+"can be formatted in a variety of ways."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:61
+msgid ""
+"The *Surveys* application is **required** to send interviews to an "
+"applicant, so it **must** be installed."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:64
+msgid ""
+"Odoo uses the term *interview*, but these can be thought of as "
+"questionnaires, surveys, tests, certifications, etc. Custom interviews can "
+"be formatted to suit each individual job position's needs. For more "
+"information on creating and editing interviews, refer to the "
+":doc:`../../hr/recruitment/new_job` documentation."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:70
+msgid ""
+"A job position for a computer programmer could have an interview in the form"
+" of a programming quiz to determine the skill level of the applicant. A job "
+"position for a restaurant server could have a questionnaire inquiring about "
+"the applicant's availability, if the desired applicant needs to be available"
+" on weekend evenings."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:75
+msgid ""
+"To send an interview to an applicant, first click the applicant's card from "
+"the :guilabel:`Applications` page, to view the detailed applicant "
+"information. At the top-left of the applicant's card, click the "
+":guilabel:`Send Interview` button."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:79
+msgid ""
+"If the applicant's card has an email address on file, a :guilabel:`Send an "
+"interview` pop-up window appears, with the :guilabel:`Recipients`, "
+":guilabel:`Subject`, and email body populated."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:83
+msgid ""
+"To send an email to an applicant, there **must** be an :guilabel:`Email` "
+"address on the applicant's card."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:86
+msgid ""
+"If an email address is not entered on the applicant's card, when the "
+":guilabel:`Send Interview` button is clicked, an :guilabel:`Edit: "
+"(Applicant's Name)` pop-up window appears, *on top of* the :guilabel:`Send "
+"an interview` pop-up window."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:90
+msgid ""
+"Enter the email address in the :guilabel:`Email` field, then click "
+":guilabel:`Save & Close`."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:92
+msgid ""
+"Once the applicant's information is saved, the :guilabel:`Edit: (Applicant's"
+" Name)` pop-up window closes, and the :guilabel:`Send an interview` pop-up "
+"window remains."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:95
+msgid ""
+"Sometimes, preconfigured email templates in Odoo use dynamic placeholders, "
+"which are automatically filled with specific data when the email is sent. "
+"For example, if a placeholder for the applicant's name is used, it is "
+"replaced with the actual name of the applicant in the email. For more "
+"detailed information on email templates, refer to the "
+":doc:`../../general/companies/email_template` documentation."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:101
+msgid ""
+"Add the email addresses of any additional recipients for the survey in the "
+":guilabel:`Additional emails` field, if more people should receive the "
+"email. If an email address is in the database as a contact, add that contact"
+" in the :guilabel:`Recipients` field. If an email should be sent to someone "
+"who is not in the database as a contact, and they should **not** be added as"
+" a contact, add their email address in the :guilabel:`Additional emails` "
+"field."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:107
+msgid ""
+"If any attachments need to be added, click the :icon:`fa-paperclip` "
+":guilabel:`Attachments` button, and a file explorer window appears. Navigate"
+" to the desired file, and click :guilabel:`Open` to attach it to the email. "
+"The attachment loads, and is listed above the :icon:`fa-paperclip` "
+":guilabel:`Attachments` button."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:112
+msgid ""
+"If the emailed interview must be completed by a specific date, enter that "
+"date in the :guilabel:`Answer deadline` field, located in the lower-right "
+"area of the pop-up window."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:115
+msgid ""
+"To do so, click the empty field next to :guilabel:`Answer deadline`, and a "
+"calendar selector appears. Use the :icon:`fa-chevron-left` "
+":guilabel:`(left)` and :icon:`fa-chevron-right` :guilabel:`(right)` arrows, "
+"on either side of the month, to navigate to the desired month. Then, click "
+"on the desired day to select the date."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:120
+msgid ""
+"The :guilabel:`Mail Template` field is pre-populated, based on the "
+"configuration for the interview. A different template can be chosen from the"
+" drop-down menu, if desired. If a new template is selected, the new email "
+"template loads in the email body."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:124
+msgid ""
+"To send the email with the interview link to the applicant, click "
+":guilabel:`Send` at the bottom of the email pop-up window."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:135
+msgid "Initial qualification"
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:137
+msgid ""
+"If an applicant seems to be a good potential candidate, they are moved to "
+"the :guilabel:`Initial Qualification` stage."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:140
+msgid ""
+"This stage exists to quickly sort candidates that have potential, from those"
+" that do not meet the requirements. No automatic actions, such as emails, "
+"are set for this stage. This stage simply informs the recruitment team to "
+"potentially set up a phone call or an interview with the candidate."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:145
+msgid ""
+"In order to move an applicant's card from one stage to another, the "
+"applicant's card can either be dragged and dropped in the Kanban view of the"
+" :guilabel:`Applications` page to the desired stage, or the stage can be "
+"modified on the applicant's card."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:149
+msgid ""
+"To change the stage on the applicant's card, first click the desired "
+"applicant's card from the :guilabel:`Applications` page. The current stage "
+"for the card is highlighted at the top on a status bar, above the card."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:153
+msgid ""
+"Click the desired stage for the card, and the stage changes. A log note "
+"indicating the stage change appears in the chatter, as well."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:0
+msgid ""
+"Change the stage of an applicant by clicking on the desired stage at the top of the\n"
+"applicant's card."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:164
+msgid "First interview"
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:166
+msgid ""
+"After an applicant has passed the :guilabel:`Initial Qualification` stage, "
+"they can be manually moved to the :guilabel:`First Interview` stage on the "
+":guilabel:`Applications` page, while in Kanban view."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:170
+msgid ""
+"To move the applicant to the next stage, drag-and-drop the applicant's card "
+"to the :guilabel:`First Interview` stage."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:173
+msgid ""
+"Alternatively, open the desired applicant's card from the "
+":guilabel:`Applications` page, and click the :guilabel:`First Interview` "
+"stage on the status bar at the top of the individual applicant's card."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst-1
+msgid ""
+"An applicant's card moves from one stage to another by using the click and "
+"drag method."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:182
+msgid ""
+"The :guilabel:`First Interview` stage can be modified, so when the "
+"applicant's card moves to the :guilabel:`First Interview` stage, an email "
+"can be automatically sent to the applicant, stating an interview is "
+"requested. In this pre-configured email template, a link to the recruiting "
+"team's calendar appears, allowing the applicant to schedule their interview."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:187
+msgid ""
+":ref:`Edit <recruitment/edit-stage>` the :guilabel:`First Interview` stage, "
+"and select the :guilabel:`Recruitment: Schedule Interview` option in the "
+":guilabel:`Email Template` field, to automate this action."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:194
+msgid "Second interview"
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:196
+msgid ""
+"After an applicant has passed the :guilabel:`First Interview` stage, they "
+"can be moved to the :guilabel:`Second Interview` stage. To move the "
+"applicant to the next stage, drag-and-drop the applicant's card to the "
+":guilabel:`Second Interview` stage from the Kanban view of the "
+":guilabel:`Applications` page, or click on the :guilabel:`Second Interview` "
+"stage at the top of the individual applicant's card."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:202
+msgid ""
+"When the applicant's card moves to the :guilabel:`Second Interview` stage, "
+"there are no automatic activities or emails configured for this stage, by "
+"default. The recruiter can now :ref:`schedule a second interview "
+"<recruitment/schedule_interviews/recruitment-scheduled>` with the applicant,"
+" following the same process as the first interview."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:210
+msgid "Contract Proposal"
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:212
+msgid ""
+"After the applicant has completed the various interview processes, the next "
+"step is to :doc:`send the job offer <offer_job_positions>`."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:215
+msgid ""
+"Once the offer has been sent, drag-and-drop the applicant's card to the "
+":guilabel:`Contract Proposal` stage from the Kanban view of the "
+":guilabel:`Applications` page, or click on the :guilabel:`Contract Proposal`"
+" stage at the top of the individual applicant's card."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:220
+msgid "Contract Signed"
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:222
+msgid ""
+"Once the contract has been signed, and the applicant has been hired, the "
+"applicant's card moves to the :guilabel:`Contract Signed` stage."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:225
+msgid ""
+"Drag-and-drop the applicant's card to the :guilabel:`Contract Signed` stage "
+"from the Kanban view of the :guilabel:`Applications` page, or click the "
+":icon:`fa-ellipsis-h` :guilabel:`(ellipsis)` icon at the top of the "
+"individual applicant's card, then click :guilabel:`Contract Signed` on the "
+"status bar."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:231
+msgid "Refuse applicant"
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment-flow.rst:233
+msgid ""
+"At any point in the recruitment process, a candidate can be :doc:`refused "
+"<refuse_applicant>`."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment_analysis.rst:3
+msgid "Recruitment analysis"
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment_analysis.rst:5
+msgid ""
+"The *Recruitment Analysis* report allows recruiting departments to see which"
+" job positions have the most applicants, which have the most referrals, and "
+"how long it takes for applicants to move through the pipeline."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment_analysis.rst:9
+msgid ""
+"Knowing how many applicants each specific job position has, along with "
+"statistics about how many are hired and refused, can provide valuable "
+"insights. This information can assist the recruiting team to pivot their "
+"strategies to acquire the most desirable candidates."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment_analysis.rst:14
+msgid "Recruitment analysis report"
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment_analysis.rst:16
+msgid ""
+"Start by navigating to :menuselection:`Recruitment app --> Reporting --> "
+"Recruitment Analysis`. This presents a line chart of all applicants for the "
+"last year."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment_analysis.rst:19
+msgid ""
+"Three separate color-coded metrics are presented: :guilabel:`In Progress`, "
+":guilabel:`Hired`, and :guilabel:`Refused`."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment_analysis.rst:22
+msgid ""
+"Hover the cursor over a month of the chart, and a pop-up window appears, "
+"displaying the specific numbers for that month."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment_analysis.rst-1
+msgid "The default Recruitment Analysis report."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment_analysis.rst:30
+msgid "Pivot table view"
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment_analysis.rst:32
+msgid ""
+"For a more detailed view of the information in the :guilabel:`Recruitment "
+"Analysis` report, click the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon "
+"in the top-right corner. This displays all the information in a pivot table."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment_analysis.rst:36
+msgid ""
+"In this view, the job positions are displayed in the rows, and the columns "
+"display the total numbers of applicants, including how many of those "
+"applicants were hired or refused. The displayed information can be modified,"
+" if desired."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment_analysis.rst:40
+msgid ""
+"In this example, there are 17 total applicants. Out of that, three have been"
+" hired, and four refused. The :guilabel:`Experienced Developer` position has"
+" eight total applicants, two of which were hired, and two were refused."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment_analysis.rst-1
+msgid "The detailed pivot table view."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment_analysis.rst:49
+msgid "Use case: applicants with referrals"
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment_analysis.rst:51
+msgid ""
+"To get a better understanding of how effective the company's :doc:`referral "
+"program <../referrals>` is, the :guilabel:`Recruitment Analysis` report can "
+"be modified to show how many applicants were referred by current employees."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment_analysis.rst:55
+msgid ""
+"From the :icon:`oi-view-pivot` :guilabel:`(Pivot)` view of the "
+":guilabel:`Recruitment Analysis` report, first click the "
+":guilabel:`Measures` button to reveal a drop-down menu of options."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment_analysis.rst:58
+msgid ""
+"Click both :guilabel:`Has Referrer` and :guilabel:`Count`, to activate those"
+" two measures. Then, click :guilabel:`# Applicant`, :guilabel:`# Hired`, and"
+" :guilabel:`# Refused` to deactivate those default measures."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment_analysis.rst:62
+msgid ""
+"Now, the column displays the number of applicants that came from a referral "
+"in the :guilabel:`Has Referrer` column, and the total number of applicants "
+"in the :guilabel:`Count` column."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment_analysis.rst-1
+msgid ""
+"The detailed pivot table view displaying the number of referrals and the "
+"total applicants."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment_analysis.rst:69
+msgid ""
+"In this example, the :guilabel:`Experienced Developer` job position has the "
+"most applicants from referrals. Out of the eight applicants, six have "
+"applied through a referral from a current employee. Meanwhile, the "
+":guilabel:`Marketing and Community Manager` job position has the least "
+"amount of referrals out of the total applicants, only one out of six."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment_analysis.rst:75
+msgid "Hired through referrals"
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment_analysis.rst:77
+msgid ""
+"It is possible to modify this report even further to see how many referred "
+"applicants end up being hired."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment_analysis.rst:80
+msgid ""
+"To view this data, click on a :icon:`fa-plus-square` :guilabel:`[job "
+"position]` row, which reveals a drop-down menu. Then, click "
+":guilabel:`State` to show the various states applicants are currently in."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment_analysis.rst:85
+msgid ""
+"Only states that have applicants in them are shown for each job position. If"
+" a state does **not** have any applicants, it does not appear in the list."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment_analysis.rst:88
+msgid ""
+"To expand the other rows, and display the various states, click on the "
+":icon:`fa-plus-square` :guilabel:`[job position]` button."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment_analysis.rst-1
+msgid ""
+"The detailed pivot table view displaying applicants hired through referrals."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment_analysis.rst:95
+msgid ""
+"In this example, the :guilabel:`Experienced Developer` job position is the "
+"most successful in terms of referrals. Both of the hired employees came from"
+" internal referrals. Meanwhile, there have been no hired employees for the "
+":guilabel:`Chief Executive Officer` position, and the only hired employee "
+"for the :guilabel:`Marketing and Community Manager` was not referred by an "
+"employee."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/recruitment_analysis.rst:100
+msgid ""
+"In this scenario, it is possible to determine that the current software "
+"developers are providing the most referrals, with the highest success rate."
 msgstr ""
 
 #: ../../content/applications/hr/recruitment/refuse_applicant.rst:3
@@ -15689,6 +16476,157 @@ msgstr ""
 msgid ""
 "The applicant is also able to cancel or reschedule the interview, if "
 "necessary, with the :guilabel:`Cancel/Reschedule` button."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/source_analysis.rst:3
+msgid "Source analysis reporting"
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/source_analysis.rst:5
+msgid ""
+"Reporting is a critical tool used by recruiting departments to gain insights"
+" into the entire recruitment process."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/source_analysis.rst:8
+msgid ""
+"Determining where applicants come from can provide information about which "
+"sources have the best results. This information is determined by the *Source"
+" Analysis* report. With this data, recruitment teams can better pivot their "
+"recruiting strategies to gain better applicants, in both quantity and "
+"quality."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/source_analysis.rst:14
+msgid "Open report"
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/source_analysis.rst:16
+msgid ""
+"To access the *Source Analysis* report, navigate to "
+":menuselection:`Recruitment app --> Reporting --> Source Analysis`."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/source_analysis.rst:19
+msgid ""
+"This presents the data for the :icon:`fa-filter` :guilabel:`Last 365 Days "
+"Applicant`, in a default :icon:`fa-area-chart` :guilabel:`(Graph)` view, "
+"showing the amount of applicants by :guilabel:`Source`, and further "
+"separated by stage (:guilabel:`In Progress` and :guilabel:`Hired`)"
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/source_analysis.rst:23
+msgid ""
+"Hover the cursor over any column to view the specific numbers fort that "
+"column."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/source_analysis.rst-1
+msgid "The default bar chart of the source analysis information."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/source_analysis.rst:29
+msgid ""
+"To view more details, view the :guilabel:`Source Analysis` report in a pivot"
+" table. To do so, click the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon "
+"in the top-right corner. The data is presented in a pivot table, with rows "
+"populated by job positions, and columns populated stages."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/source_analysis.rst:34
+msgid "Source effectiveness report"
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/source_analysis.rst:36
+msgid ""
+"To identify which sources (e.g., job boards, social media, employee "
+"referrals, company website) produce the most hires, the pivot table view of "
+"the :guilabel:`Source Analysis` report can be configured to display further "
+"details."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/source_analysis.rst:40
+msgid ""
+"To expand this chart to show what specific sources the applicants came from,"
+" click the :icon:`fa-plus-square` :guilabel:`Total` box above the columns, "
+"to reveal a drop-down menu, and click :guilabel:`Source`."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/source_analysis.rst:44
+msgid ""
+"Each column is then grouped by the source, such as: :guilabel:`Search "
+"engine`, :guilabel:`Facebook`, :guilabel:`Newsletter`, etc. Each source "
+"displays a separate count for :guilabel:`Applicant`, :guilabel:`Hired`, and "
+":guilabel:`Refused`."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/source_analysis.rst:48
+msgid ""
+"This information, as presented, makes it difficult to view the specific "
+"numbers for each source. Click the :icon:`fa-exchange` :guilabel:`(Flip "
+"axis)` icon, to swap the information. After that, the rows represent the "
+"source, and the columns represent the job positions, further divided by "
+"stage."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/source_analysis.rst-1
+msgid "The axes flipped in the source analysis report, in pivot table view."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/source_analysis.rst:56
+msgid ""
+"In this view, the total number of applicants, hired employees, and refused "
+"applicants, are displayed for each source, as well as for each stage by job "
+"position."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/source_analysis.rst:60
+msgid "Medium"
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/source_analysis.rst:62
+msgid ""
+"Viewing the medium for the applicants can be beneficial to see which "
+"specific medium is more successful."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/source_analysis.rst:65
+msgid ""
+"*Mediums* are the specific methods the applicant used to discover and then "
+"apply for job positions, such as organic search, paid search, social media "
+"ad, email, etc."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/source_analysis.rst:68
+msgid ""
+"To further group the results by medium, click into one of the :icon:`fa-"
+"plus-square` :guilabel:`[Source]` rows. Click :guilabel:`Medium` in the "
+"resulting drop-down menu. The row presents the specific mediums, relevant to"
+" that specific source."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/source_analysis.rst:72
+msgid ""
+"Once :guilabel:`Medium` is selected for one source, clicking into another "
+"row automatically reveals the specific metrics for the mediums for that "
+"source."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/source_analysis.rst-1
+msgid "The sources rows, expanded to also show the medium for each source."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/source_analysis.rst:80
+msgid ""
+"The only mediums that appear for a source, are mediums that have been set on"
+" an applicant's form. If a medium has **not** been set for any applicants, "
+"the medium does not appear in the drop-down rows beneath the source."
+msgstr ""
+
+#: ../../content/applications/hr/recruitment/source_analysis.rst:84
+msgid ""
+"For example, if no applicants applied with the medium *Google Adwords*, that"
+" medium does **not** appear beneath the *Search engine* source row."
 msgstr ""
 
 #: ../../content/applications/hr/referrals.rst:5
@@ -16890,8 +17828,8 @@ msgstr "Odsotnost"
 
 #: ../../content/applications/hr/time_off.rst:7
 msgid ""
-"Odoo's *Time Off* application serves as a centralized hub for all time-off-"
-"related information. This application manages requests, balances, "
+"Odoo's **Time Off** application serves as a centralized hub for all time-"
+"off-related information. This application manages requests, balances, "
 "allocations, approvals, and reports."
 msgstr ""
 
@@ -16915,68 +17853,67 @@ msgstr ""
 #: ../../content/applications/hr/time_off.rst:20
 msgid ""
 "Be advised, only users with specific access rights can see all aspects of "
-"the *Time Off* application."
+"the **Time Off** app."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:23
+#: ../../content/applications/hr/time_off.rst:22
 msgid ""
-"All users can access the :guilabel:`My Time Off` and :guilabel:`Overview` "
-"sections of the *Time Off* application. All other sections require specific "
-"access rights."
+"All users can access the *My Time Off* and *Overview* sections of the **Time"
+" Off** app. All other sections require specific access rights."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:26
+#: ../../content/applications/hr/time_off.rst:25
 msgid ""
-"To better understand how access rights affect the *Time Off* application, "
-"refer to the :doc:`employees/new_employee` document, specifically the "
-"section about configuring the work information tab."
+"To better understand how access rights affect the **Time Off** app, refer to"
+" the :doc:`employees/new_employee` document, specifically the section about "
+"configuring the work information tab."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:33
+#: ../../content/applications/hr/time_off.rst:32
 msgid ""
 "In order to allocate time off to employees, and for employees to request and"
 " use their time off, the various time off types must be configured first, "
 "then allocated to employees (if allocation is required)."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:40
+#: ../../content/applications/hr/time_off.rst:39
 msgid "Time off types"
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:42
+#: ../../content/applications/hr/time_off.rst:41
 msgid ""
 "To view the currently configured time off types, navigate to "
 ":menuselection:`Time Off app --> Configuration --> Time Off Types`. The time"
 " off types are presented in a list view."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:45
+#: ../../content/applications/hr/time_off.rst:44
 msgid ""
-"The *Time Off* application comes with four pre-configured time off types: "
+"The **Time Off** app comes with four preconfigured time off types: "
 ":guilabel:`Paid Time Off`, :guilabel:`Sick Time Off`, :guilabel:`Unpaid`, "
 "and :guilabel:`Compensatory Days`. These can be modified to suit business "
-"needs or used as-is."
+"needs, or used as-is."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:50
+#: ../../content/applications/hr/time_off.rst:49
 msgid "Create time off type"
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:52
+#: ../../content/applications/hr/time_off.rst:51
 msgid ""
 "To create a new time off type, navigate to :menuselection:`Time Off app --> "
 "Configuration --> Time Off Types`. From here, click the :guilabel:`New` "
 "button to reveal a blank time off type form."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:55
+#: ../../content/applications/hr/time_off.rst:54
 msgid ""
 "Enter the name for the particular type of time off in the blank line at the "
 "top of the form, such as `Sick Time` or `Vacation`. Then, enter the "
 "following information on the form."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:59
+#: ../../content/applications/hr/time_off.rst:58
 msgid ""
 "The only **required** fields on the time off type form are the name of the "
 ":guilabel:`Time Off Type`, the :guilabel:`Take Time Off In`, and the "
@@ -16984,73 +17921,73 @@ msgid ""
 " and :guilabel:`Allocation Requests` sections **must** be configured."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:65
+#: ../../content/applications/hr/time_off.rst:64
 msgid "Time Off Requests section"
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:67
+#: ../../content/applications/hr/time_off.rst:66
 msgid ""
 ":guilabel:`Approval`: select what specific kind of approval is required for "
 "the time off type. The options are:"
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:70
+#: ../../content/applications/hr/time_off.rst:69
 msgid ""
-":guilabel:`No Validation`: no approvals are required when requesting this "
+":guilabel:`No Validation`: No approvals are required when requesting this "
 "type of time off. The time off request is automatically approved."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:72
+#: ../../content/applications/hr/time_off.rst:71
 msgid ""
-":guilabel:`By Time Off Officer`: only the specified :ref:`Time Off Officer "
+":guilabel:`By Time Off Officer`: Only the specified :ref:`Time Off Officer "
 "<time_off/time-off-officer>`, set on this form in the :guilabel:`Notified "
 "Time Off Officer` field, is required to approve the time off request. This "
-"option is selected by default."
+"option is selected, by default."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:75
+#: ../../content/applications/hr/time_off.rst:74
 msgid ""
-":guilabel:`By Employee's Approver`: only the employee's specified approver "
+":guilabel:`By Employee's Approver`: Only the employee's specified approver "
 "for time off, which is set on the *Work Information* tab on the "
 ":ref:`employee's form <employees/work-info-tab>`, is required to approve the"
 " time off request."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:78
+#: ../../content/applications/hr/time_off.rst:77
 msgid ""
-":guilabel:`By Employee's Approver and Time Off Officer`: both the employee's"
+":guilabel:`By Employee's Approver and Time Off Officer`: Both the employee's"
 " :ref:`specified time off approver<employees/work-info-tab>` and the "
 ":ref:`Time Off Officer <time_off/time-off-officer>` are required to approve "
 "the time off request."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:83
+#: ../../content/applications/hr/time_off.rst:82
 msgid "Allocation Requests section"
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:85
+#: ../../content/applications/hr/time_off.rst:84
 msgid ""
-":guilabel:`Requires allocation`: if the time off must be allocated to "
+":guilabel:`Requires allocation`: If the time off must be allocated to "
 "employees, select :guilabel:`Yes`. If the time off can be requested without "
 "time off being previously allocated, select :guilabel:`No Limit`. If "
 ":guilabel:`No Limit` is selected, the following options do not appear on the"
 " form."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:89
+#: ../../content/applications/hr/time_off.rst:88
 msgid ""
-":guilabel:`Employee Requests`: select :guilabel:`Extra Days Requests "
+":guilabel:`Employee Requests`: Select :guilabel:`Extra Days Requests "
 "Allowed` if the employee is able to request more time off than was "
 "allocated."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:92
+#: ../../content/applications/hr/time_off.rst:91
 msgid ""
 "If employees should **not** be able to make requests for more time off than "
 "what was allocated, select the :guilabel:`Not Allowed` option."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:96
+#: ../../content/applications/hr/time_off.rst:95
 msgid ""
 "Ten days are allocated to the employee for this particular type of time off,"
 " and the :guilabel:`Extra Days Requests Allowed` option is enabled. The "
@@ -17059,111 +17996,111 @@ msgid ""
 "option is enabled."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:102
+#: ../../content/applications/hr/time_off.rst:101
 msgid ""
 "It is important to note that requesting additional time off does **not** "
 "guarantee that time off is granted."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:105
+#: ../../content/applications/hr/time_off.rst:104
 msgid ""
-":guilabel:`Approval`: select the type of approvals required for the "
+":guilabel:`Approval`: Select the type of approvals required for the "
 "allocation of this particular time off type."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:108
+#: ../../content/applications/hr/time_off.rst:107
 msgid ""
 ":guilabel:`Approved by Time Off Officer` indicates the :ref:`Time Off "
 "Officer <time_off/time-off-officer>` set on this form must approve the "
 "allocation."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:110
+#: ../../content/applications/hr/time_off.rst:109
 msgid ""
 ":guilabel:`No validation needed` indicates that no approvals are required."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:113
+#: ../../content/applications/hr/time_off.rst:112
 msgid "Configuration section"
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:117
+#: ../../content/applications/hr/time_off.rst:116
 msgid ""
-":guilabel:`Notified Time Off Officer`: select the person who is notified and"
+":guilabel:`Notified Time Off Officer`: Select the person who is notified and"
 " responsible for approving requests and allocations for this specific type "
 "of time off."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:119
+#: ../../content/applications/hr/time_off.rst:118
 msgid ""
-":guilabel:`Take Time Off in`: select the format the time off is requested in"
+":guilabel:`Take Time Off in`: Select the format the time off is requested in"
 " from the drop-down menu."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:122
+#: ../../content/applications/hr/time_off.rst:121
 msgid "The options are:"
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:124
+#: ../../content/applications/hr/time_off.rst:123
 msgid ""
 ":guilabel:`Day`: if time off can only be requested in full day increments (8"
 " hours)."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:125
+#: ../../content/applications/hr/time_off.rst:124
 msgid ""
 ":guilabel:`Half Day`: if time off can only be requested in half day "
 "increments (4 hours)."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:126
+#: ../../content/applications/hr/time_off.rst:125
 msgid ":guilabel:`Hours`: if the time off can be taken in hourly increments."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:130
+#: ../../content/applications/hr/time_off.rst:129
 msgid ""
-":guilabel:`Deduct Extra Hours`: enable this option if the time off request "
-"should factor in any extra time accrued by the employee"
+":guilabel:`Deduct Extra Hours`: Enable this option if the time off request "
+"should factor in any extra time accrued by the employee."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:134
+#: ../../content/applications/hr/time_off.rst:133
 msgid ""
 "If an employee works two extra hours for the week, and requests five hours "
 "of time off, the request would be for three hours, since the two extra "
 "worked hours are used first, and deducted from the request."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:138
+#: ../../content/applications/hr/time_off.rst:137
 msgid ""
-":guilabel:`Allow To Attach Supporting Document`: enable this option to allow"
+":guilabel:`Allow To Attach Supporting Document`: Enable this option to allow"
 " the employee to attach documents to the time off request. This is useful in"
 " situations where documentation is required, such as long-term medical "
 "leave."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:141
+#: ../../content/applications/hr/time_off.rst:140
 msgid ""
-":guilabel:`Kind of Time Off`: select from the drop-down menu the type of "
-"time off this is, either :guilabel:`Worked Time` or :guilabel:`Absence`. "
-":guilabel:`Worked Time` indicates that the time off taken counts toward "
-"worked time for any type of accrual the employee is working towards, whereas"
-" :guilabel:`Absence` does not count toward any type of accrual."
+":guilabel:`Kind of Time Off`: From the drop-down menu, select the type of "
+"time off, either :guilabel:`Worked Time` or :guilabel:`Absence`. "
+":guilabel:`Worked Time` indicates the time off taken counts toward worked "
+"time for any type of accrual the employee is working towards, whereas "
+":guilabel:`Absence` does not count toward any type of accrual."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:145
+#: ../../content/applications/hr/time_off.rst:144
 msgid ""
-":guilabel:`Company`: if multiple companies are created in the database, and "
+":guilabel:`Company`: If multiple companies are created in the database, and "
 "this time off type only applies to one company, select the company from the "
 "drop-down menu. If this field is left blank, the time off type applies to "
 "all companies in the database. This field **only** appears in a multi-"
 "company database."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:151
+#: ../../content/applications/hr/time_off.rst:150
 msgid "Negative Cap section"
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:153
+#: ../../content/applications/hr/time_off.rst:152
 msgid ""
 "Enable the :guilabel:`Allow Negative Cap` option if employees are able to "
 "request more time off than they currently have, allowing a negative balance."
@@ -17171,19 +18108,19 @@ msgid ""
 " enter the maximum amount of negative time allowed, in days."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:158
+#: ../../content/applications/hr/time_off.rst:157
 msgid ""
 "Sara currently has three days of the time off type `Vacation`. She is "
 "planning a trip that requires five days of time off."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:161
+#: ../../content/applications/hr/time_off.rst:160
 msgid ""
 "The `Vacation` time off type has the :guilabel:`Allow Negative Cap` option "
 "enabled, and the :guilabel:`Amount in Negative` is set to five."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:164
+#: ../../content/applications/hr/time_off.rst:163
 msgid ""
 "These settings allow Sara to submit a request for five days of the "
 "`Vacation` time off type. If approved, her `Vacation` time off balance will "
@@ -17196,62 +18133,61 @@ msgid ""
 "off."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:173
+#: ../../content/applications/hr/time_off.rst:172
 msgid "Payroll section"
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:175
+#: ../../content/applications/hr/time_off.rst:174
 msgid ""
 "If the time off type should create :doc:`../hr/payroll/work_entries` in the "
-"*Payroll* application, select the :guilabel:`Work Entry Type` from the drop-"
-"down list."
+"**Payroll** app, select the :guilabel:`Work Entry Type` from the drop-down "
+"list."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:179
+#: ../../content/applications/hr/time_off.rst:178
 msgid "Timesheets section"
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:182
+#: ../../content/applications/hr/time_off.rst:181
 msgid ""
 "The :guilabel:`Timesheets` section only appears if the user is in developer "
 "mode. Refer to the :ref:`developer-mode` document for details on how to "
 "access the developer mode."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:185
+#: ../../content/applications/hr/time_off.rst:184
 msgid ""
 "When an employee takes time off, and is also using timesheets, Odoo creates "
-"entries in the *Timesheets* application for the time off. This section "
-"defines how they are entered."
+"entries in the **Timesheets** app for the time off. This section defines how"
+" they are entered."
+msgstr ""
+
+#: ../../content/applications/hr/time_off.rst:187
+msgid ""
+":guilabel:`Project`: Select the project the time off type entries appear in."
 msgstr ""
 
 #: ../../content/applications/hr/time_off.rst:188
 msgid ""
-":guilabel:`Project`: select the project that the time off type entries "
-"appear in."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:189
-msgid ""
-":guilabel:`Task`: select the task that appears in the timesheet for this "
+":guilabel:`Task`: Select the task that appears in the timesheet for this "
 "time off type. The default options are: :guilabel:`Time Off`, "
 ":guilabel:`Meeting`, or :guilabel:`Training`."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:193
+#: ../../content/applications/hr/time_off.rst:192
 msgid "Display Option section"
+msgstr ""
+
+#: ../../content/applications/hr/time_off.rst:194
+msgid ""
+":guilabel:`Color`: Select a color to be used in the **Time Off** app "
+"dashboard."
 msgstr ""
 
 #: ../../content/applications/hr/time_off.rst:195
 msgid ""
-":guilabel:`Color`: select a color to be used in the *Time Off* application "
+":guilabel:`Cover Image`: Select an icon to be used in the **Time Off** app "
 "dashboard."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:196
-msgid ""
-":guilabel:`Cover Image`: select an icon to be used in the *Time Off* "
-"application dashboard."
 msgstr ""
 
 #: ../../content/applications/hr/time_off.rst-1
@@ -17260,139 +18196,134 @@ msgid ""
 "off."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:206
+#: ../../content/applications/hr/time_off.rst:205
 msgid "Accrual plans"
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:208
+#: ../../content/applications/hr/time_off.rst:207
 msgid ""
 "Some time off is earned through an accrual plan, meaning that for every "
 "specified amount of time an employee works (hour, day, week, etc), they earn"
 " or *accrue* a specified amount of time off."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:212
+#: ../../content/applications/hr/time_off.rst:211
 msgid ""
 "If an employee accrues a vacation day for every week they work, they would "
 "earn 0.2 vacation days for each hour they work. At the end of a forty hour "
 "work week, they would earn one whole vacation day (8 hours)."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:217
+#: ../../content/applications/hr/time_off.rst:216
 msgid "Create accrual plan"
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:219
+#: ../../content/applications/hr/time_off.rst:218
 msgid ""
 "To create a new accrual plan, navigate to :menuselection:`Time Off app --> "
 "Configuration --> Accrual Plans`. Then, click the :guilabel:`New` button, "
 "which reveals a blank accrual plan form."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:224
-msgid ":guilabel:`Name`: enter the accrual plan name."
+#: ../../content/applications/hr/time_off.rst:223
+msgid ":guilabel:`Name`: Enter the accrual plan name."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:225
+#: ../../content/applications/hr/time_off.rst:224
 msgid ""
-":guilabel:`Accrued Gain Time`: select when the employee begins to accrue "
+":guilabel:`Accrued Gain Time`: Select when the employee begins to accrue "
 "time off, either :guilabel:`At the start of the accrual period` or "
 ":guilabel:`At the end of the accrual period`."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:227
+#: ../../content/applications/hr/time_off.rst:226
 msgid ""
-":guilabel:`Carry-Over Time`: select when the employee received previously "
+":guilabel:`Carry-Over Time`: Select when the employee received previously "
 "earned time. The options are:"
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:230
+#: ../../content/applications/hr/time_off.rst:229
 msgid ""
-":guilabel:`At the start of the year`: select this if the accrual rolls over "
+":guilabel:`At the start of the year`: Select this if the accrual rolls over "
 "on January 1 of the upcoming year."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:232
+#: ../../content/applications/hr/time_off.rst:231
 msgid ""
-":guilabel:`At the allocation date`: select this if the accrual rolls over as"
+":guilabel:`At the allocation date`: Select this if the accrual rolls over as"
 " soon as time is allocated to the employee."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:234
+#: ../../content/applications/hr/time_off.rst:233
 msgid ""
-":guilabel:`Other`: select this option if neither of the other two options "
+":guilabel:`Other`: Select this option if neither of the other two options "
 "are applicable. When selected, a :guilabel:`Carry-Over Date` field appears. "
 "Select the date using the two drop-down menus, one for the day and one for "
 "the month."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:238
+#: ../../content/applications/hr/time_off.rst:237
 msgid ""
-":guilabel:`Based on worked time`: enable this option if time off accrual is "
+":guilabel:`Based on worked time`: Enable this option if time off accrual is "
 "determined by the employee's worked hours. Days **not** considered as worked"
 " time do **not** contribute to the accrual plan in Odoo."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:241
+#: ../../content/applications/hr/time_off.rst:240
 msgid ""
-":guilabel:`Milestone Transition`: this selection determines when employees "
-"move up to a new milestone. If they qualify to change milestones in the "
-"middle of a pay period, select if the employee changes milestones "
+":guilabel:`Milestone Transition`: This field is **only** visible after a "
+"minimum of two :ref:`rules <time_off/rules>` have been configured on the "
+"accrual plan. This selection determines when employees move up to a new "
+"milestone. If they qualify to change milestones in the middle of a pay "
+"period, decide whether the employee changes milestones "
 ":guilabel:`Immediately` or :guilabel:`After this accrual's period` (after "
 "the current pay period)."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:247
+#: ../../content/applications/hr/time_off.rst:245
 msgid ""
-"The :guilabel:`Milestone Transition` field is **only** visible after a "
-"minimum of two :ref:`rules <time_off/rules>` have been configured on the "
-"accrual plan."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:250
-msgid ""
-":guilabel:`Company`: using the drop-down menu, select the company the "
-"accrual plan applies to. If left blank, the accrual plan can be used for all"
-" companies. This field only appears in a multi-company database."
+":guilabel:`Company`: This field **only** appears in a multi-company "
+"database. Using the drop-down menu, select the company the accrual plan "
+"applies to. If left blank, the accrual plan can be used for all companies."
 msgstr ""
 
 #: ../../content/applications/hr/time_off.rst-1
 msgid "An accrual plan form with all the entries filled out."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:263
+#: ../../content/applications/hr/time_off.rst:258
 msgid ""
 "Rules must be created in order for employees to accrue time off from the "
 "accrual plan."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:265
+#: ../../content/applications/hr/time_off.rst:260
 msgid ""
 "To create a new rule, click the :guilabel:`New Milestone` button in the gray"
 " :guilabel:`Rules` section, and a :guilabel:`Create Milestone` modal form "
 "appears."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:270
+#: ../../content/applications/hr/time_off.rst:265
 msgid ""
-":guilabel:`Employee accrue`: select the parameters for earned time off in "
+":guilabel:`Employee accrue`: Select the parameters for earned time off in "
 "this section."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:272
+#: ../../content/applications/hr/time_off.rst:267
 msgid ""
 "First, select either :guilabel:`Days` or :guilabel:`Hours` for the increment"
 " of accrued time using the drop-down menu."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:275
+#: ../../content/applications/hr/time_off.rst:270
 msgid ""
 "Next, enter the numerical amount of the selected parameter that is accrued. "
 "The numerical format is `X.XXXX`, so that partial days or hours can also be "
 "configured."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:278
+#: ../../content/applications/hr/time_off.rst:273
 msgid ""
 "Last, select how often the time is accrued using the drop-down menu. The "
 "default options are :guilabel:`Hourly`, :guilabel:`Daily`, "
@@ -17400,206 +18331,246 @@ msgid ""
 ":guilabel:`Twice a year`, and :guilabel:`Yearly`."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:282
+#: ../../content/applications/hr/time_off.rst:277
 msgid ""
 "Depending on which option is selected, additional fields may appear. For "
 "example, if :guilabel:`Twice a month` is selected, two additional fields "
-"appear, to specify the two days of each month that the milestone occurs."
+"appear, to specify the two days of each month the milestone occurs."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:285
+#: ../../content/applications/hr/time_off.rst:280
 msgid ""
-":guilabel:`Cap accrued time`: if there is a maximum amount of days the "
+":guilabel:`Cap accrued time`: If there is a maximum amount of days the "
 "employee can accrue with this plan, enable this option."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:288
+#: ../../content/applications/hr/time_off.rst:283
 msgid ""
 "When enabled, two additional fields appear beneath it. Select the type of "
 "time period from the drop-down menu, either :guilabel:`Days` or "
 ":guilabel:`Hours`."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:291
+#: ../../content/applications/hr/time_off.rst:286
 msgid ""
 "Then, enter a numerical value in the field to specify the maximum amount of "
 "time that can be accrued."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:293
+#: ../../content/applications/hr/time_off.rst:288
 msgid ""
-":guilabel:`Milestone reached`: enter the number and value of the time period"
+":guilabel:`Milestone reached`: Enter the number and value of the time period"
 " that must pass before the employee starts to accumulate time off. The first"
 " value is numerical; enter a number in the first field."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:297
+#: ../../content/applications/hr/time_off.rst:292
 msgid ""
 "Then, select the type of time period using the drop-down menu in the second "
 "field. The options are: :guilabel:`Days`, :guilabel:`Months`, or "
 ":guilabel:`Years`."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:299
+#: ../../content/applications/hr/time_off.rst:294
 msgid ""
 ":guilabel:`Carry over`: select how any unused time off is handled. The "
 "options are either:"
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:301
+#: ../../content/applications/hr/time_off.rst:296
 msgid ""
-":guilabel:`None. Accrued time reset to 0`: any unused time off is gone."
+":guilabel:`None. Accrued time reset to 0`: Any unused time off is gone."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:302
+#: ../../content/applications/hr/time_off.rst:297
 msgid ""
-":guilabel:`All accrued time carried over`: all unused time off is rolled "
+":guilabel:`All accrued time carried over`: All unused time off is rolled "
 "over to the next calendar year."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:304
+#: ../../content/applications/hr/time_off.rst:299
 msgid ""
-":guilabel:`Carry over with a maximum`: unused time off is rolled over to the"
+":guilabel:`Carry over with a maximum`: Unused time off is rolled over to the"
 " next calendar year, but there is a cap. An :guilabel:`Up to` field appears "
 "if this is selected. Enter the maximum number of :guilabel:`Days` that can "
 "roll over to the following year. Any time off beyond this parameter is lost."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:309
+#: ../../content/applications/hr/time_off.rst:305
 msgid ""
-"Once the form is completed, click :guilabel:`Save & Close` to save the form "
-"and close the modal, or click :guilabel:`Save & New` to save the form and "
-"create another milestone. Add as many milestones as desired."
+"If the :guilabel:`Carry over` field is set to :guilabel:`None. Accrued time "
+"reset to 0`, that rule *overrides* the :guilabel:`Carry-Over Time` set on "
+"the accrual plan."
+msgstr ""
+
+#: ../../content/applications/hr/time_off.rst:308
+msgid ""
+"If a company creates an accrual plan, granting employees time off "
+":guilabel:`At the start of the accrual period` (i.e., the beginning of the "
+"year), and sets the :guilabel:`Carry-Over Time` on the *accrual plan* to "
+":guilabel:`At the start of the year`, it allows unused vacation time to "
+"rollover to the following year."
+msgstr ""
+
+#: ../../content/applications/hr/time_off.rst:313
+msgid ""
+"Then, the company adds rules to the accrual plan, allocating five days of "
+"vacation, annually, on the first of the year (one week of vacation allocated"
+" on January 1st)."
+msgstr ""
+
+#: ../../content/applications/hr/time_off.rst:316
+msgid ""
+"If the :guilabel:`Carry over` field is set to :guilabel:`None. Accrual time "
+"reset to 0` on the :guilabel:`Create Milestone` pop-up for, any unused "
+"vacation time *does not* carry over, even though on the :guilabel:`Accrual "
+"Plan` form, the :guilabel:`Carry-Over Time` is set to :guilabel:`At the "
+"start of the year`."
+msgstr ""
+
+#: ../../content/applications/hr/time_off.rst:321
+msgid ""
+"The carry over set on the *rule* takes precedence over the carry over set on"
+" the *accrual plan form*."
+msgstr ""
+
+#: ../../content/applications/hr/time_off.rst:324
+msgid ""
+"Once the form is completed, click :guilabel:`Save & Close` to save the "
+":guilabel:`Create Milestone` form, and close the modal, or click "
+":guilabel:`Save & New` to save the form and create another milestone. Add as"
+" many milestones as desired."
 msgstr ""
 
 #: ../../content/applications/hr/time_off.rst-1
 msgid "A milestone form with all the entries filled out."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:320
+#: ../../content/applications/hr/time_off.rst:335
 msgid "Public holidays"
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:322
+#: ../../content/applications/hr/time_off.rst:337
 msgid ""
 "To observe public or national holidays, and provide extra days off as "
 "holidays to employees, configure the observed *public holidays* in Odoo."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:325
+#: ../../content/applications/hr/time_off.rst:340
 msgid ""
 "It is important to configure these days in Odoo, so employees are aware of "
 "the days they have off, and do not request time off on days that are already"
 " set as a public holiday (non-working days)."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:328
+#: ../../content/applications/hr/time_off.rst:343
 msgid ""
-"Additionally, all public holidays configured in the *Time Off* app are also "
-"reflected in any app that uses working schedules, such as *Calendar*, "
-"*Planning*, *Manufacturing*, and more."
+"Additionally, all public holidays configured in the **Time Off** app are "
+"also reflected in any app that uses working schedules, such as **Calendar**,"
+" **Planning**, **Manufacturing**, and more."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:331
+#: ../../content/applications/hr/time_off.rst:346
 msgid ""
 "Due to Odoo's integration with other apps that use working schedules, it is "
 "considered best practice to ensure *all* public holidays are configured."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:335
+#: ../../content/applications/hr/time_off.rst:350
 msgid "Create public holiday"
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:337
+#: ../../content/applications/hr/time_off.rst:352
 msgid ""
 "To create a public holiday, navigate to :menuselection:`Time Off app --> "
 "Configuration --> Public Holidays`."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:340
+#: ../../content/applications/hr/time_off.rst:355
 msgid "All currently configured public holidays appear in a list view."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:342
+#: ../../content/applications/hr/time_off.rst:357
 msgid ""
 "Click the :guilabel:`New` button, and a new line appears at the bottom of "
 "the list."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:344
-#: ../../content/applications/hr/time_off.rst:406
+#: ../../content/applications/hr/time_off.rst:359
+#: ../../content/applications/hr/time_off.rst:422
 msgid "Enter the following information on that new line:"
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:346
-msgid ":guilabel:`Name`: enter the name of the holiday."
+#: ../../content/applications/hr/time_off.rst:361
+msgid ":guilabel:`Name`: Enter the name of the holiday."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:347
+#: ../../content/applications/hr/time_off.rst:362
 msgid ""
-":guilabel:`Company`: if in a multi-company database, the current company "
-"populates this field by default. It is not possible to edit this field."
+":guilabel:`Company`: If in a multi-company database, the current company "
+"populates this field by default. It is **not** possible to edit this field."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:351
+#: ../../content/applications/hr/time_off.rst:366
 msgid ""
-"The :guilabel:`Company` field is hidden by default. To view this field, "
-"click the two dots in the top-right corner of the list, to the far-right of "
-"the column titles, and activate the :guilabel:`Company` selection from the "
-"drop-down menu that appears."
+"The :guilabel:`Company` field is hidden, by default. To view this field, "
+"click the :icon:`oi-settings-adjust` :guilabel:`(additional options)` icon "
+"in the top-right corner of the list, to the far-right of the column titles, "
+"and activate the :guilabel:`Company` selection from the drop-down menu that "
+"appears."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:355
+#: ../../content/applications/hr/time_off.rst:371
 msgid ""
-":guilabel:`Start Date`: using the date and time picker, select the date and "
-"time that the holiday starts. By default, this field is configured for the "
-"current date. The start time is set according to the start time for the "
-"company (according to the :ref:`working schedules <payroll/working-times>`)."
-" If the user's computer is set to a different time zone, the start time is "
-"adjusted according to the difference in the time zone, compared to the "
-"company's time zone."
+":guilabel:`Start Date`: Using the date and time picker, select the date and "
+"time the holiday starts, then click :icon:`fa-check` :guilabel:`Apply`. By "
+"default, this field is configured for the current date. The start time is "
+"set according to the start time for the company (according to the "
+":ref:`working schedules <payroll/working-times>`). If the user's computer is"
+" set to a different time zone, the start time is adjusted according, "
+"compared to the company's time zone."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:360
+#: ../../content/applications/hr/time_off.rst:376
 msgid ""
-":guilabel:`End Date`: using the date and time picker, select the date and "
-"time that the holiday ends. By default, this field is configured for the "
-"current date, and the time is set to the end time for the company (according"
-" to the :ref:`working schedules <payroll/working-times>`). If the user's "
-"computer is set to a different time zone, the start time is adjusted "
-"according to the difference in the time zone, compared to the company's time"
-" zone."
+":guilabel:`End Date`: Using the date and time picker, select the date and "
+"time the holiday ends, then click :icon:`fa-check` :guilabel:`Apply`. By "
+"default, this field is configured for the current date, and the time is set "
+"to the end time for the company (according to the :ref:`working schedules "
+"<payroll/working-times>`). If the user's computer is set to a different time"
+" zone, the start time is adjusted accordingly, compared to the company's "
+"time zone."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:367
+#: ../../content/applications/hr/time_off.rst:383
 msgid ""
 "A company located in San Francisco operates from 9:00 AM - 6:00 PM, with an "
 "eight hour work day and one hour lunch break."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:370
+#: ../../content/applications/hr/time_off.rst:386
 msgid ""
 "For a user in New York, with a computer time zone set to Eastern Standard "
 "Time, a created public holiday displays a start time of 12:00 PM - 9:00 PM, "
 "accounting for the three hour time zone difference."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:374
+#: ../../content/applications/hr/time_off.rst:390
 msgid ""
 "Similarly, a user located in Los Angeles, with a computer time zone set to "
 "Pacific Standard Time, sees a public holiday time as 9:00 AM - 6:00 PM."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:377
+#: ../../content/applications/hr/time_off.rst:393
 msgid ""
-":guilabel:`Working Hours`: if the holiday should only apply to employees who"
+":guilabel:`Working Hours`: If the holiday should only apply to employees who"
 " have a specific set of working hours, select the working hours from the "
 "drop-down menu. If left blank, the holiday applies to all employees."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:380
+#: ../../content/applications/hr/time_off.rst:396
 msgid ""
-":guilabel:`Work Entry Type`: if using the *Payroll* application, this field "
+":guilabel:`Work Entry Type`: If using the **Payroll** app, this field "
 "defines how the :ref:`work entries <payroll/work-entries>` for the holiday "
 "appear. Select the work entry type from the drop-down menu."
 msgstr ""
@@ -17608,18 +18579,18 @@ msgstr ""
 msgid "The list of public holidays in the configuration menu."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:389
+#: ../../content/applications/hr/time_off.rst:405
 msgid "Mandatory days"
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:391
+#: ../../content/applications/hr/time_off.rst:407
 msgid ""
 "Some companies have special days where specific departments, or the entire "
 "staff, is required to be present, and time off is not allowed on those "
 "specific days."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:394
+#: ../../content/applications/hr/time_off.rst:410
 msgid ""
 "These types of days are called *mandatory days* in Odoo. These can be "
 "configured to be company-wide, or department specific. When configured, "
@@ -17627,82 +18598,82 @@ msgid ""
 "off requests for these mandatory days."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:399
+#: ../../content/applications/hr/time_off.rst:415
 msgid "Create mandatory days"
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:401
+#: ../../content/applications/hr/time_off.rst:417
 msgid ""
 "No mandatory days are configured in Odoo by default. To create a mandatory "
 "day, navigate to :menuselection:`Time Off app --> Configuration --> "
 "Mandatory Days`."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:404
+#: ../../content/applications/hr/time_off.rst:420
 msgid ""
 "Click the :guilabel:`New` button in the top-left corner, and a blank line "
 "appears in the list."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:408
-msgid ":guilabel:`Name`: enter the name of the mandatory day."
+#: ../../content/applications/hr/time_off.rst:424
+msgid ":guilabel:`Name`: Enter the name of the mandatory day."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:409
+#: ../../content/applications/hr/time_off.rst:425
 msgid ""
-":guilabel:`Company`: if in a multi-company database, this field is visible, "
-"and the current company populates this field by default. Using the drop-down"
-" menu, select the company the mandatory day is for."
+":guilabel:`Company`: If in a multi-company database, this field is visible, "
+"and the current company populates this field, by default. Using the drop-"
+"down menu, select the company the mandatory day is for."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:412
+#: ../../content/applications/hr/time_off.rst:428
 msgid ""
-":guilabel:`Departments`: this column is hidden by default. First, click the "
-":guilabel:`(optional columns)` icon in the top-right corner, next to "
-":guilabel:`Colors`, and then click the checkbox next to "
+":guilabel:`Departments`: This column is hidden by default. First, click the "
+":icon:`oi-settings-adjust` :guilabel:`(additional options)` icon in the top-"
+"right corner, next to :guilabel:`Color`, and then tick the checkbox next to "
 ":guilabel:`Departments` to reveal that column."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:416
+#: ../../content/applications/hr/time_off.rst:433
 msgid ""
 "Next, select the desired departments from the drop-down menu. Multiple "
 "departments can be selected, and there is no limit to the amount of "
 "departments that can be added."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:419
+#: ../../content/applications/hr/time_off.rst:436
 msgid ""
 "If this field is left blank, the mandatory day applies to the entire "
 "company."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:420
+#: ../../content/applications/hr/time_off.rst:437
 msgid ""
-":guilabel:`Start Date`: using the calendar picker, select the date the "
+":guilabel:`Start Date`: Using the calendar picker, select the date the "
 "mandatory day starts."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:421
+#: ../../content/applications/hr/time_off.rst:438
 msgid ""
-":guilabel:`End Date`: using the calendar picker, select the date the "
+":guilabel:`End Date`: Using the calendar picker, select the date the "
 "mandatory day ends. If creating a single mandatory day, the end date should "
 "be the same as the start date."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:423
+#: ../../content/applications/hr/time_off.rst:440
 msgid ""
-":guilabel:`Color`: if desired, select a color from the available presented "
+":guilabel:`Color`: If desired, select a color from the available presented "
 "options. If no color is desired, select the `No color` option, represented "
 "by a white box with a red line diagonally across it. The selected color "
-"appears on the main *Time Off* application dashboard, in both the calendar "
-"and in the legend."
+"appears on the main **Time Off** app dashboard, in both the calendar and in "
+"the legend."
 msgstr ""
 
 #: ../../content/applications/hr/time_off.rst-1
 msgid "The Mandatory Days section with three configured days."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:435
+#: ../../content/applications/hr/time_off.rst:452
 msgid ""
 "To view a color-coded schedule of the user's time off, and/or of the team "
 "managed by them, navigate to :menuselection:`Time Off app --> Overview`. "
@@ -17710,7 +18681,7 @@ msgid ""
 "view."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:439
+#: ../../content/applications/hr/time_off.rst:456
 msgid ""
 "To change the time period displayed, click on the :guilabel:`Month` button "
 "to reveal a drop-down menu. Then, select either :guilabel:`Day`, "
@@ -17718,7 +18689,7 @@ msgid ""
 "corresponding view."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:443
+#: ../../content/applications/hr/time_off.rst:460
 msgid ""
 "To navigate forward or backward in time, in the selected increment "
 "(:guilabel:`Month`, :guilabel:`Week`, etc.), click the :guilabel:`← (left "
@@ -17726,44 +18697,44 @@ msgid ""
 " that specified amount of time."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:447
+#: ../../content/applications/hr/time_off.rst:464
 msgid ""
 "For example, if :guilabel:`Month` is selected, the arrows adjust the view by"
 " one month."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:449
+#: ../../content/applications/hr/time_off.rst:466
 msgid ""
 "To return to a view containing the current day, click the :guilabel:`Today` "
 "button at any time."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:451
+#: ../../content/applications/hr/time_off.rst:468
 msgid ""
 "Team members are listed alphabetically on individual lines, and their "
 "requested time off, regardless of the status (*validated* or *to approve*), "
 "is visible on the calendar."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:454
+#: ../../content/applications/hr/time_off.rst:471
 msgid ""
 "Each employee is color-coded. The employee's color is selected at random, "
 "and does *not* correspond to the type of time off they requested."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:457
+#: ../../content/applications/hr/time_off.rst:474
 msgid ""
 "The status of the time off is represented by the color detail of the "
 "request, either appearing solid (*validated*) or striped (*to approve*)."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:460
+#: ../../content/applications/hr/time_off.rst:477
 msgid ""
 "The number of days or hours requested is written on the request (if there is"
 " enough space)."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:462
+#: ../../content/applications/hr/time_off.rst:479
 msgid ""
 "At the bottom of the calendar, in the :guilabel:`Total` line, a bar graph "
 "shows how many people are projected to be out on any given day. The number "
@@ -17771,7 +18742,7 @@ msgid ""
 "highlighted days."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:466
+#: ../../content/applications/hr/time_off.rst:483
 msgid ""
 "Click on a time off entry to view the details for the specific time off "
 "entry. The total number of hours or days are listed, along with the start "
@@ -17783,7 +18754,7 @@ msgstr ""
 msgid "Overview of the user's team, with time off requests shown."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:479
+#: ../../content/applications/hr/time_off.rst:496
 msgid ""
 "The reporting feature allows users to view time off for their team, either "
 "by employee or type of time off. This allows users to see which employees "
@@ -17791,39 +18762,45 @@ msgid ""
 "types are being used."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:483
+#: ../../content/applications/hr/time_off.rst:500
 msgid ""
-"Any report can be added to a spreadsheet through the *Insert in Spreadsheet*"
-" button that appears in the top-left of a report. If the *Documents* "
-"application is installed, an option to add the report to a spreadsheet "
-"appears. If not, the report can be added to a *Dashboard*."
+"Any report can be added to a spreadsheet, when in either the :icon:`fa-area-"
+"chart` :guilabel:`(Graph)` or :icon:`oi-view-pivot` :guilabel:`(Pivot)` "
+"view, through the *Insert in Spreadsheet* button that appears in the top-"
+"left of the report."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:488
+#: ../../content/applications/hr/time_off.rst:505
+msgid ""
+"If the **Documents** app is installed, an option to add the report to a "
+"spreadsheet appears. If not, the report can be added to a *Dashboard*."
+msgstr ""
+
+#: ../../content/applications/hr/time_off.rst:509
 msgid "By employee"
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:490
+#: ../../content/applications/hr/time_off.rst:511
 msgid ""
 "To view a report of employee time off requests, navigate to "
 ":menuselection:`Time Off app --> Reporting --> by Employee`."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:493
+#: ../../content/applications/hr/time_off.rst:514
 msgid ""
 "The default report presents the current year's data in a list view, "
 "displaying all the employees in alphabetical order. Each employee's line is "
 "collapsed by default. To expand a line, click anywhere on the line."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:497
+#: ../../content/applications/hr/time_off.rst:518
 msgid ""
 "The view expands, and has the time off requests organized by time off type. "
 "Click anywhere on a time off type line to expand it, and view all the "
 "individual time off requests that fall under that type."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:500
+#: ../../content/applications/hr/time_off.rst:521
 msgid ""
 "The information shown in the list includes: the :guilabel:`Employee` name, "
 ":guilabel:`Number of Days` off requested, the :guilabel:`Start Date`, "
@@ -17834,19 +18811,17 @@ msgstr ""
 msgid "Report of time off, shown by each employee in a list view."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:508
+#: ../../content/applications/hr/time_off.rst:529
 msgid ""
 "The report can be displayed in other ways, as well. Click the corresponding "
 "button option in the top-right corner of the page to view the data in that "
-"specific way. The various options are a :guilabel:`List` (the default view),"
-" :guilabel:`Graph`, :guilabel:`Pivot` table, or :guilabel:`Calendar` view."
+"specific way. The various options are a :icon:`oi-view-list` "
+":guilabel:`(List)`, or default view, :icon:`fa-area-chart` "
+":guilabel:`(Graph)`, :icon:`oi-view-pivot` :guilabel:`(Pivot)` table, or "
+":icon:`fa-calendar` :guilabel:`(Calendar)` view."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst-1
-msgid "The various other views highlighted, for the employee time off report."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:517
+#: ../../content/applications/hr/time_off.rst:534
 msgid ""
 "When a selection has been made, additional options appear for that "
 "particular selection. For more detailed information on the reports and their"
@@ -17854,18 +18829,18 @@ msgid ""
 "documentation."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:522
+#: ../../content/applications/hr/time_off.rst:539
 msgid "By type"
 msgstr "Po vrsti"
 
-#: ../../content/applications/hr/time_off.rst:524
+#: ../../content/applications/hr/time_off.rst:541
 msgid ""
 "To view a list of all time off, organized by time off type, navigate to "
 ":menuselection:`Time Off app --> Reporting --> by Type`. This shows all time"
 " off requests in a default bar chart."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:527
+#: ../../content/applications/hr/time_off.rst:544
 msgid ""
 "Hover over a bar to view the :guilabel:`Duration (Days)` of that specific "
 "time off type."
@@ -17877,13 +18852,13 @@ msgid ""
 "highlighted in a red box."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:534
+#: ../../content/applications/hr/time_off.rst:551
 msgid ""
 "Click on a bar to go to a detailed list view of all the time off requests "
 "for that time off type."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:536
+#: ../../content/applications/hr/time_off.rst:553
 msgid ""
 "Each request is listed, with the following information displayed: the "
 ":guilabel:`Employee`, :guilabel:`Number of Days`, :guilabel:`Request Type`, "
@@ -17891,15 +18866,16 @@ msgid ""
 ":guilabel:`Description`."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:540
+#: ../../content/applications/hr/time_off.rst:557
 msgid ""
 "The report can be displayed in other ways, as well. Click the corresponding "
 "button option in the top-right corner of the page to view the data in that "
-"way. The various options are a :guilabel:`Graph` (the default view), "
-":guilabel:`List`, or :guilabel:`Pivot` table."
+"way. The various options are a :icon:`fa-area-chart` :guilabel:`(Graph)` "
+"(the default view), :icon:`oi-view-list` :guilabel:`(List)`, or :icon:`oi-"
+"view-pivot` :guilabel:`(Pivot)` table."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:544
+#: ../../content/applications/hr/time_off.rst:562
 msgid ""
 "When a selection has been made, additional options appear for that "
 "particular selection. For more detailed information on the reports, and "
@@ -17907,19 +18883,19 @@ msgid ""
 "<../essentials/reporting>` documentation."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:549
+#: ../../content/applications/hr/time_off.rst:567
 msgid ":doc:`time_off/allocations`"
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:550
+#: ../../content/applications/hr/time_off.rst:568
 msgid ":doc:`time_off/request_time_off`"
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:551
+#: ../../content/applications/hr/time_off.rst:569
 msgid ":doc:`time_off/my_time`"
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:552
+#: ../../content/applications/hr/time_off.rst:570
 msgid ":doc:`time_off/management`"
 msgstr ""
 
@@ -17936,11 +18912,10 @@ msgstr ""
 
 #: ../../content/applications/hr/time_off/allocations.rst:9
 msgid ""
-"The *Allocations* section of the *Time Off* app is **only** visible to users"
-" who have either :guilabel:`Time Off Officer` or :guilabel:`Administrator` "
-"access rights for the *Time Off* application. For more information on access"
-" rights, refer to the :doc:`access rights "
-"<../../general/users/access_rights/>` documentation."
+"The *Allocations* page of the **Time Off** app is **only** visible to users "
+"who have either *Time Off Officer* or *Administrator* access rights for the "
+"**Time Off** application. For more information on access rights, refer to "
+"the :doc:`access rights <../../general/users/access_rights/>` documentation."
 msgstr ""
 
 #: ../../content/applications/hr/time_off/allocations.rst:15
@@ -17973,13 +18948,13 @@ msgstr ""
 
 #: ../../content/applications/hr/time_off/allocations.rst:27
 msgid ""
-":guilabel:`Time Off Type`: using the drop-down menu, select the type of time"
+":guilabel:`Time Off Type`: Using the drop-down menu, select the type of time"
 " off that is being allocated to the employees."
 msgstr ""
 
 #: ../../content/applications/hr/time_off/allocations.rst:29
 msgid ""
-":guilabel:`Allocation Type`: select either :guilabel:`Regular Allocation` or"
+":guilabel:`Allocation Type`: Select either :guilabel:`Regular Allocation` or"
 " :guilabel:`Accrual Allocation`. If the allocation is **not** based on an "
 ":ref:`accrual plan <time_off/accrual-plans>`, select :guilabel:`Regular "
 "Allocation`."
@@ -17987,7 +18962,7 @@ msgstr ""
 
 #: ../../content/applications/hr/time_off/allocations.rst:32
 msgid ""
-":guilabel:`Accrual Plan`: if :guilabel:`Accrual Allocation` is selected for "
+":guilabel:`Accrual Plan`: If :guilabel:`Accrual Allocation` is selected for "
 "the :guilabel:`Allocation Type`, the :guilabel:`Accrual Plan` field appears."
 " Using the drop-down menu, select the accrual plan with which the allocation"
 " is associated. An accrual plan **must** be selected for an "
@@ -17996,7 +18971,7 @@ msgstr ""
 
 #: ../../content/applications/hr/time_off/allocations.rst:36
 msgid ""
-":guilabel:`Validity Period/Start Date`: if :guilabel:`Regular Allocation` is"
+":guilabel:`Validity Period/Start Date`: If :guilabel:`Regular Allocation` is"
 " selected for the :guilabel:`Allocation Type`, this field is labeled "
 ":guilabel:`Validity Period`. If :guilabel:`Accrual Allocation` is selected "
 "for the :guilabel:`Allocation Type`, this field is labeled :guilabel:`Start "
@@ -18024,50 +18999,93 @@ msgid ""
 "Type`, this second field is labeled :guilabel:`Run until`."
 msgstr ""
 
-#: ../../content/applications/hr/time_off/allocations.rst:51
+#: ../../content/applications/hr/time_off/allocations.rst:53
 msgid ""
-":guilabel:`Allocation`: enter the amount of time that is being allocated to "
+"If the :guilabel:`Start Date` entered is in the middle of a period of time, "
+"such as the middle of the month, Odoo applies the allocation to the "
+"beginning or end of the period, depending on the *Accrued Gain Time* entered"
+" on the :ref:`accrual plan <time_off/accrual-plans>` (either *At the start "
+"of the accrual period*, or *At the end of the accrual period*) instead of "
+"the specific date entered."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/allocations.rst:59
+msgid ""
+"For example, an allocation is created, and references an accrual plan that "
+"grants time *At the start of the accrual period*, monthly, on the first of "
+"the month."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/allocations.rst:62
+msgid ""
+"On the allocation form, the :guilabel:`Allocation Type` is set to "
+":guilabel:`Accrual Allocation`, and the :guilabel:`Start Date` entered is "
+"`06/16/24`."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/allocations.rst:65
+msgid ""
+"Odoo's **Time Off** app retroactively applies the allocation to the "
+"beginning of the time period entered in the :guilabel:`Start Date`."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/allocations.rst:68
+msgid ""
+"Therefore, this allocation accrues time from `06/01/24`, rather than "
+"`06/16/24`."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/allocations.rst:70
+msgid ""
+"Additionally, if on the accrual form, the allocation references an accrual "
+"plan that grants time *`At the end of the accrual period*, the allocation "
+"accrues time from `7/01/24` rather than `6/18/24`."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/allocations.rst:74
+msgid ""
+":guilabel:`Allocation`: Enter the amount of time that is being allocated to "
 "the employees. This field displays the time in either :guilabel:`Hours` or "
 ":guilabel:`Days`, depending on how the selected :ref:`Time Off Type "
 "<time_off/time-off-types>` is configured."
 msgstr ""
 
-#: ../../content/applications/hr/time_off/allocations.rst:54
+#: ../../content/applications/hr/time_off/allocations.rst:77
 msgid ""
-":guilabel:`Mode`: using the drop-down menu, select how the allocation is "
+":guilabel:`Mode`: Using the drop-down menu, select how the allocation is "
 "assigned. This selection determines who receives the time off allocation. "
 "The options are :guilabel:`By Employee`, :guilabel:`By Company`, "
 ":guilabel:`By Department`, or :guilabel:`By Employee Tag`."
 msgstr ""
 
-#: ../../content/applications/hr/time_off/allocations.rst:58
+#: ../../content/applications/hr/time_off/allocations.rst:81
 msgid ""
-"Depending on what is selected for the :guilabel:`Mode`, the following field "
-"is labeled either: :guilabel:`Employees`, :guilabel:`Company`, "
-":guilabel:`Department`, or :guilabel:`Employee Tag`."
+"Depending on what is selected for the :guilabel:`Mode`, the field beneath "
+":guilabel:`Mode` is labeled either: :guilabel:`Employees`, "
+":guilabel:`Company`, :guilabel:`Department`, or :guilabel:`Employee Tag`."
 msgstr ""
 
-#: ../../content/applications/hr/time_off/allocations.rst:61
+#: ../../content/applications/hr/time_off/allocations.rst:85
 msgid ""
 "Using the drop-down menu, indicate the specific employees, company, "
 "department, or employee tags receiving this time off."
 msgstr ""
 
-#: ../../content/applications/hr/time_off/allocations.rst:64
+#: ../../content/applications/hr/time_off/allocations.rst:88
 msgid ""
 "Multiple selections can be made for either :guilabel:`Employees` or "
 ":guilabel:`Employee Tag`."
 msgstr ""
 
-#: ../../content/applications/hr/time_off/allocations.rst:66
+#: ../../content/applications/hr/time_off/allocations.rst:90
 msgid ""
 "Only one selection can be made for the :guilabel:`Company` or "
 ":guilabel:`Department`."
 msgstr ""
 
-#: ../../content/applications/hr/time_off/allocations.rst:67
+#: ../../content/applications/hr/time_off/allocations.rst:91
 msgid ""
-":guilabel:`Add a reason...`: if any description or note is necessary to "
+":guilabel:`Add a reason...`: If any description or note is necessary to "
 "explain the time off allocation, enter it in this field at the bottom of the"
 " form."
 msgstr ""
@@ -18078,11 +19096,11 @@ msgid ""
 "granted to all employees."
 msgstr ""
 
-#: ../../content/applications/hr/time_off/allocations.rst:78
+#: ../../content/applications/hr/time_off/allocations.rst:102
 msgid "Request allocation"
 msgstr ""
 
-#: ../../content/applications/hr/time_off/allocations.rst:80
+#: ../../content/applications/hr/time_off/allocations.rst:104
 msgid ""
 "If an employee has used all their time off, or will run out of time off, "
 "they can request an allocation for additional time. Allocations can be "
@@ -18091,65 +19109,66 @@ msgid ""
 " view."
 msgstr ""
 
-#: ../../content/applications/hr/time_off/allocations.rst:84
+#: ../../content/applications/hr/time_off/allocations.rst:108
 msgid ""
 "To create a new allocation request, click either the :guilabel:`New "
-"Allocation Request` button on the main *Time Off* dashboard, or the "
+"Allocation Request` button on the main **Time Off** dashboard, or the "
 ":guilabel:`New` button in the :guilabel:`My Allocations` list view. Both "
 "buttons open a new allocation request form."
 msgstr ""
 
-#: ../../content/applications/hr/time_off/allocations.rst:89
+#: ../../content/applications/hr/time_off/allocations.rst:113
 msgid ""
 "Both options open a new allocation request form, but when requested from the"
-" :guilabel:`Dashboard`, the form appears in a pop-up window. When requested "
-"from the :guilabel:`My Allocations` list view, the screen navigates to a new"
-" allocation request page, instead."
+" :guilabel:`Dashboard`, the form appears in a pop-up window, and the "
+"*Validity Period* field does **not** appear. When requested from the "
+":guilabel:`My Allocations` list view, the screen navigates to a new "
+"allocation request page, instead of presenting a pop-up window."
 msgstr ""
 
-#: ../../content/applications/hr/time_off/allocations.rst:94
+#: ../../content/applications/hr/time_off/allocations.rst:118
 msgid "Enter the following information on the new allocation request form:"
 msgstr ""
 
-#: ../../content/applications/hr/time_off/allocations.rst:96
+#: ../../content/applications/hr/time_off/allocations.rst:120
 msgid ""
-":guilabel:`Time Off Type`: select the type of time off being requested for "
+":guilabel:`Time Off Type`: Select the type of time off being requested for "
 "the allocation from the drop-down menu. After a selection is made, the title"
 " updates with the time off type."
 msgstr ""
 
-#: ../../content/applications/hr/time_off/allocations.rst:98
+#: ../../content/applications/hr/time_off/allocations.rst:122
 msgid ""
-":guilabel:`Validity Period`: using the calendar selector, select a start and"
-" end date the allocation is valid for. By default, the current date "
-"populates the first field, and :guilabel:`No Limit` populates the second "
-"field. Adjust both of these dates, if desired."
+":guilabel:`Validity Period`: By default, the current date populates this "
+"field, and it is **not** able to be modified. This field **only** appears "
+"when requesting an allocatoin from the :guilabel:`My Allocations` view "
+"(:menuselection:`Time Off --> My Time --> My Allocations`)."
 msgstr ""
 
-#: ../../content/applications/hr/time_off/allocations.rst:101
+#: ../../content/applications/hr/time_off/allocations.rst:125
 msgid ""
-":guilabel:`Allocation`: enter the amount of time being requested in this "
+":guilabel:`Allocation`: Enter the amount of time being requested in this "
 "field. The format is presented in either :guilabel:`Days` or "
 ":guilabel:`Hours`, depending on how the :guilabel:`Time Off Type` is "
 "configured. Once this field is populated, the name of the allocation request"
 " is updated to include the amount of time being requested."
 msgstr ""
 
-#: ../../content/applications/hr/time_off/allocations.rst:105
+#: ../../content/applications/hr/time_off/allocations.rst:129
 msgid ""
-":guilabel:`Add a reason...`: enter a description for the allocation request."
-" This should include any details that approvers may need to approve the "
-"request."
+":guilabel:`Add a reason...`: Enter a description for the allocation request "
+"in this field. This should include any details that approvers may need to "
+"approve the request."
 msgstr ""
 
-#: ../../content/applications/hr/time_off/allocations.rst:108
+#: ../../content/applications/hr/time_off/allocations.rst:132
 msgid ""
 "If the request was created from the :guilabel:`Dashboard`, click the "
 ":guilabel:`Save & Close` button on the :guilabel:`New Allocation` pop-up "
 "window to save the information and submit the request."
 msgstr ""
 
-#: ../../content/applications/hr/time_off/allocations.rst:111
+#: ../../content/applications/hr/time_off/allocations.rst:135
 msgid ""
 "If the form was completed from the :guilabel:`My Allocations` list view, the"
 " information is automatically saved as it is entered. However, the form can "
